@@ -1,0 +1,74 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            felidae/package-lock.json
+            canidae/package-lock.json
+
+      - name: Build Felidae
+        working-directory: felidae
+        run: npm ci && npm run build
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/felidae/
+
+      - name: Build Canidae
+        working-directory: canidae
+        run: npm ci && npm run build
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/canidae/
+
+      - name: Assemble Pages output
+        run: |
+          mkdir -p _site/felidae _site/canidae
+          cp -r felidae/dist/. _site/felidae/
+          cp -r canidae/dist/. _site/canidae/
+          cat > _site/index.html << 'EOF'
+          <!doctype html>
+          <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Systema Naturae</title>
+              <meta http-equiv="refresh" content="0; url=felidae/">
+            </head>
+            <body>
+              <a href="felidae/">Felidae</a> · <a href="canidae/">Canidae</a>
+            </body>
+          </html>
+          EOF
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
