@@ -10,7 +10,7 @@ interface Props {
   pendingZoomId: React.MutableRefObject<string | null>;
   highlightedNodeIds?: Set<string> | null;
   colorTheme: ColorTheme;
-  specialNodeId?: string;
+  specialNodeId?: string | string[];
 }
 
 type AnnotatedNode = d3.HierarchyNode<TaxonNode> & { subfamily?: string };
@@ -35,7 +35,7 @@ function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
 }
 
 function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
-  if (node.data.rank === "FAMILY") return "#F5F5F5";
+  if (node.data.rank === "FAMILY" || node.data.rank === "TRIBE") return "#F5F5F5";
   if (node.data.rank === "SUBFAMILY") return theme.subfamilyColors[node.data.name] ?? "#888";
   if (node.data.rank === "BREED_GROUP") return theme.breedGroupColor;
   if (node.data.rank === "BREED") return `${theme.breedGroupColor}88`;
@@ -54,16 +54,17 @@ function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
   return node.data.rank === "SPECIES" ? `${sfColor}77` : sfColor;
 }
 
-function nodeR(d: d3.HierarchyNode<TaxonNode>, specialNodeId?: string): number {
+function nodeR(d: d3.HierarchyNode<TaxonNode>, specialSet: Set<string> | null): number {
   if (d.data.rank === "FAMILY") return 9;
   if (d.data.rank === "SUBFAMILY") return 7;
+  if (d.data.rank === "TRIBE") return 7;
   if (d.data.rank === "GENUS") return 5;
   if (d.data.rank === "HYBRID_GROUP") return 5;
   if (d.data.rank === "BREED_GROUP") return 4;
   if (d.data.rank === "HYBRID") return 3.5;
   if (d.data.rank === "BREED") return 2.5;
   if (d.data.rank === "SUBSPECIES") return 2.5;
-  if (specialNodeId && d.data.id === specialNodeId) return 4.5;
+  if (specialSet?.has(d.data.id)) return 4.5;
   return 3;
 }
 
@@ -139,6 +140,10 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
     const svg = svgRef.current;
     const container = containerRef.current;
     if (!svg || !container) return;
+
+    const specialSet: Set<string> | null = specialNodeId
+      ? new Set(Array.isArray(specialNodeId) ? specialNodeId : [specialNodeId])
+      : null;
 
     setTooltip(null);
     const W = container.clientWidth;
@@ -223,7 +228,7 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
 
       nodeG.filter(d => d.data.id === selectedId)
         .append("circle")
-        .attr("r", d => nodeR(d, specialNodeId) + 6)
+        .attr("r", d => nodeR(d, specialSet) + 6)
         .attr("fill", "none")
         .attr("stroke", "#fff")
         .attr("stroke-width", 1.5)
@@ -235,7 +240,7 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
         (d.data.subspeciesCount ?? 0) > 0 &&
         !d.children
       ).append("circle")
-        .attr("r", d => nodeR(d, specialNodeId) + 4)
+        .attr("r", d => nodeR(d, specialSet) + 4)
         .attr("fill", "none")
         .attr("stroke", "#888")
         .attr("stroke-width", 0.5)
@@ -243,17 +248,17 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
         .attr("opacity", 0.5);
 
       nodeG.append("circle")
-        .attr("r", d => nodeR(d, specialNodeId))
+        .attr("r", d => nodeR(d, specialSet))
         .attr("fill", d => fillColor(d as AnnotatedNode, colorTheme))
         .attr("stroke", d => {
           if (d.data.id === selectedId) return "#fff";
-          if (specialNodeId && d.data.id === specialNodeId && !d.children) return colorTheme.breedGroupColor;
+          if (specialSet?.has(d.data.id) && !d.children) return colorTheme.breedGroupColor;
           if (d.data.rank === "SUBSPECIES" && d.data.accepted === false) return "#777";
           return "none";
         })
         .attr("stroke-width", d => {
           if (d.data.id === selectedId) return 3;
-          if (specialNodeId && d.data.id === specialNodeId && !d.children) return 1.5;
+          if (specialSet?.has(d.data.id) && !d.children) return 1.5;
           if (d.data.rank === "SUBSPECIES" && d.data.accepted === false) return 1;
           return 0;
         })
@@ -263,16 +268,16 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
       nodeG.filter(d => d.data.rank !== "BREED")
         .append("text")
         .attr("dy", "0.32em")
-        .attr("x", d => d.x < Math.PI ? nodeR(d, specialNodeId) + 4 : -(nodeR(d, specialNodeId) + 4))
+        .attr("x", d => d.x < Math.PI ? nodeR(d, specialSet) + 4 : -(nodeR(d, specialSet) + 4))
         .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
         .text(d => d.data.commonName ?? d.data.name)
         .style("font-size", d => {
-          if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY") return "13px";
+          if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
           if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "8px";
           return "10px";
         })
         .style("font-style", d => ["GENUS", "SPECIES", "SUBSPECIES"].includes(d.data.rank) ? "italic" : "normal")
-        .style("font-weight", d => d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" ? "600" : "400")
+        .style("font-weight", d => d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
         .style("fill", d => {
           if (d.data.rank === "BREED_GROUP") return colorTheme.lineageColors[d.data.lineage ?? ""] ?? colorTheme.breedGroupColor;
           if (d.data.rank === "HYBRID_GROUP" || d.data.rank === "HYBRID") return colorTheme.hybridColor;
@@ -286,7 +291,7 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
         .style("pointer-events", "none");
 
       nodeG.append("circle")
-        .attr("r", d => Math.max(nodeR(d, specialNodeId) + 8, 14))
+        .attr("r", d => Math.max(nodeR(d, specialSet) + 8, 14))
         .attr("fill", "transparent")
         .attr("stroke", "none");
 
@@ -402,7 +407,7 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
 
       nodeG.filter(d => d.data.id === selectedId)
         .append("circle")
-        .attr("r", d => nodeR(d, specialNodeId) + 6)
+        .attr("r", d => nodeR(d, specialSet) + 6)
         .attr("fill", "none")
         .attr("stroke", "#fff")
         .attr("stroke-width", 1.5)
@@ -414,7 +419,7 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
         (d.data.subspeciesCount ?? 0) > 0 &&
         !d.children
       ).append("circle")
-        .attr("r", d => nodeR(d, specialNodeId) + 4)
+        .attr("r", d => nodeR(d, specialSet) + 4)
         .attr("fill", "none")
         .attr("stroke", "#888")
         .attr("stroke-width", 0.5)
@@ -422,17 +427,17 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
         .attr("opacity", 0.5);
 
       nodeG.append("circle")
-        .attr("r", d => nodeR(d, specialNodeId))
+        .attr("r", d => nodeR(d, specialSet))
         .attr("fill", d => fillColor(d as AnnotatedNode, colorTheme))
         .attr("stroke", d => {
           if (d.data.id === selectedId) return "#fff";
-          if (specialNodeId && d.data.id === specialNodeId && !d.children) return colorTheme.breedGroupColor;
+          if (specialSet?.has(d.data.id) && !d.children) return colorTheme.breedGroupColor;
           if (d.data.rank === "SUBSPECIES" && d.data.accepted === false) return "#777";
           return "none";
         })
         .attr("stroke-width", d => {
           if (d.data.id === selectedId) return 3;
-          if (specialNodeId && d.data.id === specialNodeId && !d.children) return 1.5;
+          if (specialSet?.has(d.data.id) && !d.children) return 1.5;
           if (d.data.rank === "SUBSPECIES" && d.data.accepted === false) return 1;
           return 0;
         })
@@ -441,16 +446,16 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
 
       nodeG.append("text")
         .attr("dy", "0.32em")
-        .attr("x", d => (d.children && d.parent ? -(nodeR(d, specialNodeId) + 4) : nodeR(d, specialNodeId) + 4))
+        .attr("x", d => (d.children && d.parent ? -(nodeR(d, specialSet) + 4) : nodeR(d, specialSet) + 4))
         .attr("text-anchor", d => (d.children && d.parent ? "end" : "start"))
         .text(d => d.data.commonName ?? d.data.name)
         .style("font-size", d => {
-          if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY") return "13px";
+          if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
           if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "8px";
           return "10px";
         })
         .style("font-style", d => ["GENUS", "SPECIES", "SUBSPECIES"].includes(d.data.rank) ? "italic" : "normal")
-        .style("font-weight", d => d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" ? "600" : "400")
+        .style("font-weight", d => d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
         .style("fill", d => {
           if (d.data.rank === "BREED_GROUP") return colorTheme.lineageColors[d.data.lineage ?? ""] ?? colorTheme.breedGroupColor;
           if (d.data.rank === "HYBRID_GROUP" || d.data.rank === "HYBRID") return colorTheme.hybridColor;
@@ -464,7 +469,7 @@ export default function FamilyTree({ data, layout, onSelect, selectedId, pending
         .style("pointer-events", "none");
 
       nodeG.append("circle")
-        .attr("r", d => Math.max(nodeR(d, specialNodeId) + 8, 14))
+        .attr("r", d => Math.max(nodeR(d, specialSet) + 8, 14))
         .attr("fill", "transparent")
         .attr("stroke", "none");
 
