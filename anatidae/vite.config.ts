@@ -7,5 +7,6 @@ export default defineConfig({
   base: process.env.VITE_BASE ?? '/',
   resolve: {
     alias: { '@shared': path.resolve(__dirname, '../shared/src') },
+    dedupe: ['react', 'react-dom'],
   },
 })

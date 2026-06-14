@@ -46,9 +46,14 @@ function ClassPanel({ node, onSelect }: { node: PortalNode; onSelect: (n: TaxonN
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>
         {node.name}
       </div>
-      <div style={{ fontSize: 12, color: "#666", marginBottom: 20 }}>
+      <div style={{ fontSize: 12, color: "#666", marginBottom: node.description ? 14 : 20 }}>
         {orders.length} {orders.length === 1 ? "order" : "orders"} · {families.length} {families.length === 1 ? "family" : "families"} in this collection
       </div>
+      {node.description && (
+        <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
+          {node.description}
+        </div>
+      )}
       <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>
         Orders
       </div>
@@ -93,9 +98,14 @@ function OrderPanel({ node, onSelect }: { node: PortalNode; onSelect: (n: TaxonN
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>
         {node.name}
       </div>
-      <div style={{ fontSize: 12, color: "#666", marginBottom: 20 }}>
+      <div style={{ fontSize: 12, color: "#666", marginBottom: node.description ? 14 : 20 }}>
         {families.length} {families.length === 1 ? "family" : "families"} in this collection
       </div>
+      {node.description && (
+        <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
+          {node.description}
+        </div>
+      )}
       <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>
         Families
       </div>

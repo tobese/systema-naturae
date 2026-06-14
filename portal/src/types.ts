@@ -6,5 +6,6 @@ export interface PortalNode extends TaxonNode {
   speciesTotal?: number;
   notableMembers?: string[];
   taxonomicNote?: string;
+  description?: string;
   children?: PortalNode[];
 }
