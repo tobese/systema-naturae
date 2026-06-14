@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   pages: write
@@ -22,7 +25,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: |
             felidae/package-lock.json
@@ -83,3 +86,11 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Summary
+        run: |
+          REPO=${{ github.event.repository.name }}
+          OWNER=${{ github.repository_owner }}
+          echo "### Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "- 🐱 [Felidae](https://${OWNER}.github.io/${REPO}/felidae/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🐕 [Canidae](https://${OWNER}.github.io/${REPO}/canidae/)" >> $GITHUB_STEP_SUMMARY
