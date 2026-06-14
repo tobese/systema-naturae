@@ -284,9 +284,9 @@ export default function App() {
           position: "fixed",
           bottom: 16,
           right: 16,
-          width: 52,
-          height: 60,
-          opacity: 0.55,
+          width: 76,
+          height: 88,
+          opacity: 0.75,
           pointerEvents: "none",
         }}
       />
