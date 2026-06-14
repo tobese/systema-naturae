@@ -277,19 +277,26 @@ export default function App() {
           </div>
         </div>
       </div>
-      <img
-        src={`${import.meta.env.BASE_URL}black-cat-studio.svg`}
-        alt="Black Cat Studio"
-        style={{
-          position: "fixed",
-          bottom: 16,
-          right: 16,
-          width: 76,
-          height: 88,
-          opacity: 0.75,
-          pointerEvents: "none",
-        }}
-      />
+      <div style={{
+        position: "fixed",
+        bottom: 16,
+        right: 16,
+        width: 96,
+        height: 110,
+        pointerEvents: "none",
+      }}>
+        <div style={{
+          position: "absolute",
+          inset: 6,
+          borderRadius: "50%",
+          background: "rgba(10,10,20,0.55)",
+        }} />
+        <img
+          src={`${import.meta.env.BASE_URL}black-cat-studio.svg`}
+          alt="Black Cat Studio"
+          style={{ width: "100%", height: "100%", position: "relative" }}
+        />
+      </div>
     </div>
   );
 }
