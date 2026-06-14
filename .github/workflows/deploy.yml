@@ -30,6 +30,7 @@ jobs:
           cache-dependency-path: |
             felidae/package-lock.json
             canidae/package-lock.json
+            equidae/package-lock.json
 
       - name: Install Felidae deps
         working-directory: felidae
@@ -54,11 +55,22 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/canidae/
 
+      - name: Install Equidae deps
+        working-directory: equidae
+        run: npm ci
+
+      - name: Build Equidae
+        working-directory: equidae
+        run: npm run build
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/equidae/
+
       - name: Assemble Pages output
         run: |
-          mkdir -p _site/felidae _site/canidae
+          mkdir -p _site/felidae _site/canidae _site/equidae
           cp -r felidae/dist/. _site/felidae/
           cp -r canidae/dist/. _site/canidae/
+          cp -r equidae/dist/. _site/equidae/
           cat > _site/index.html << 'EOF'
           <!doctype html>
           <html>
@@ -68,7 +80,7 @@ jobs:
               <meta http-equiv="refresh" content="0; url=felidae/">
             </head>
             <body>
-              <a href="felidae/">Felidae</a> · <a href="canidae/">Canidae</a>
+              <a href="felidae/">Felidae</a> · <a href="canidae/">Canidae</a> · <a href="equidae/">Equidae</a>
             </body>
           </html>
           EOF
@@ -94,3 +106,4 @@ jobs:
           echo "### Deployed" >> $GITHUB_STEP_SUMMARY
           echo "- 🐱 [Felidae](https://${OWNER}.github.io/${REPO}/felidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🐕 [Canidae](https://${OWNER}.github.io/${REPO}/canidae/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🐴 [Equidae](https://${OWNER}.github.io/${REPO}/equidae/)" >> $GITHUB_STEP_SUMMARY
