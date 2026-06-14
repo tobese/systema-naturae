@@ -28,15 +28,26 @@ jobs:
             felidae/package-lock.json
             canidae/package-lock.json
 
+      - name: Install Felidae deps
+        working-directory: felidae
+        run: npm ci
+
+      - name: Link shared node_modules
+        run: ln -s "$(pwd)/felidae/node_modules" shared/node_modules
+
       - name: Build Felidae
         working-directory: felidae
-        run: npm ci && npm run build
+        run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/felidae/
 
+      - name: Install Canidae deps
+        working-directory: canidae
+        run: npm ci
+
       - name: Build Canidae
         working-directory: canidae
-        run: npm ci && npm run build
+        run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/canidae/
 
