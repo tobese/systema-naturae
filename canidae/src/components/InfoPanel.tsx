@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { TaxonNode } from "@shared/types";
-import { SUBFAMILY_COLORS, LINEAGE_COLORS, BREED_GROUP_COLOR } from "../colors";
+import { SUBFAMILY_COLORS, LINEAGE_COLORS, BREED_GROUP_COLOR, HYBRID_COLOR } from "../colors";
 import { useWikipediaSummary } from "@shared/hooks/useWikipediaSummary";
 
 interface Props {
@@ -9,6 +9,13 @@ interface Props {
   findNodeById: (id: string) => TaxonNode | null;
   subfamilies?: TaxonNode[];
 }
+
+const NATURAL_HYBRIDS: Record<string, string> = {
+  "QLXL":  "Hybridises naturally with coyotes and eastern wolves across North America.",
+  "M66TP": "Hybridises naturally with coyotes (→ Coywolf) and gray wolves in eastern Canada.",
+  "QLXJ":  "Hybridises naturally with eastern wolves (→ Coywolf); rare crosses with domestic dogs.",
+  "QLXS":  "Debated hybrid origin — possibly a stabilised gray wolf × coyote cross.",
+};
 
 function countLeaves(node: TaxonNode): number {
   if (!node.children || node.children.length === 0) return 1;
@@ -167,6 +174,12 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         );
       })()}
 
+      {NATURAL_HYBRIDS[node.id] && (
+        <div style={{ fontSize: 12, color: "#8899bb", marginTop: 14, padding: "8px 10px", background: "#111820", borderRadius: 6, lineHeight: 1.5 }}>
+          <span style={{ color: "#556" }}>Natural hybrid: </span>{NATURAL_HYBRIDS[node.id]}
+        </div>
+      )}
+
       <div style={{ marginTop: 16 }}>
         <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>
           Links
@@ -176,6 +189,83 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         <LinkRow href={iucnUrl} label="IUCN Red List" />
         <LinkRow href={gbifUrl} label="GBIF" />
       </div>
+    </div>
+  );
+}
+
+function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
+  const { data: wiki, loading } = useWikipediaSummary(node.name);
+  const extract = wiki?.extract ?? null;
+  const wikiUrl = wiki?.content_urls?.desktop?.page;
+  const parents = (node.hybridParents ?? []).map(id => findNodeById(id)).filter(Boolean) as TaxonNode[];
+
+  return (
+    <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>
+        Hybrid
+      </div>
+      <div style={{ fontSize: 22, fontWeight: 600, color: HYBRID_COLOR, marginBottom: 2 }}>
+        {node.name}
+      </div>
+      {node.lineage && (
+        <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.lineage}</div>
+      )}
+
+      {loading && (
+        <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />
+      )}
+      {!loading && wiki?.thumbnail?.source && (
+        <img
+          src={wiki.thumbnail.source}
+          alt={node.name}
+          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }}
+        />
+      )}
+      {extract && (
+        <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>
+      )}
+
+      {parents.length > 0 && (
+        <div style={{ marginTop: 16 }}>
+          <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 8 }}>
+            Parent species
+          </div>
+          {parents.map(p => (
+            <button
+              key={p.id}
+              onClick={() => onSelect(p)}
+              style={{
+                display: "block",
+                width: "100%",
+                textAlign: "left",
+                background: "none",
+                border: "1px solid #1e2030",
+                borderRadius: 6,
+                padding: "7px 10px",
+                marginBottom: 6,
+                cursor: "pointer",
+                color: "#bbb",
+                fontSize: 13,
+                fontStyle: "italic",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = HYBRID_COLOR; e.currentTarget.style.color = "#fff"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "#1e2030"; e.currentTarget.style.color = "#bbb"; }}
+            >
+              {p.name}
+              {p.commonName && <span style={{ fontStyle: "normal", color: "#666", marginLeft: 8, fontSize: 12 }}>{p.commonName}</span>}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {wikiUrl && (
+        <div style={{ marginTop: 12 }}>
+          <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>
+            Links
+          </div>
+          <LinkRow href={wikiUrl} label="Wikipedia" />
+        </div>
+      )}
     </div>
   );
 }
@@ -341,6 +431,32 @@ export default function InfoPanel({ node, onSelect, findNodeById, subfamilies = 
   if (node.rank === "SPECIES") return <SpeciesPanel node={node} onSelect={onSelect} />;
   if (node.rank === "SUBSPECIES") return <SubspeciesPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
   if (node.rank === "BREED") return <BreedPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
+  if (node.rank === "HYBRID") return <HybridPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
+  if (node.rank === "HYBRID_GROUP") {
+    const hybrids = node.children ?? [];
+    return (
+      <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+        <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>
+          Hybrids
+        </div>
+        <div style={{ fontSize: 22, fontWeight: 600, color: HYBRID_COLOR, marginBottom: 4 }}>Hybrids</div>
+        <div style={{ fontSize: 13, color: "#aaa", marginTop: 4 }}>{hybrids.length} documented interspecies hybrids</div>
+        <div style={{ marginTop: 20 }}>
+          <ul style={{ padding: 0, margin: 0 }}>
+            {hybrids.map(h => (
+              <ClickableItem key={h.id} onClick={() => onSelect(h)}>
+                <div style={{ color: HYBRID_COLOR, fontSize: 13, fontWeight: 600 }}>{h.name}</div>
+                {h.lineage && <div style={{ color: "#666", fontSize: 12 }}>{h.lineage}</div>}
+              </ClickableItem>
+            ))}
+          </ul>
+        </div>
+        <div style={{ marginTop: 20, fontSize: 12, color: "#555", lineHeight: 1.6 }}>
+          Some Canis hybrids occur naturally in the wild. Dashed lines in the tree connect each hybrid to its parent species.
+        </div>
+      </div>
+    );
+  }
 
   const accent = accentFor(node);
   const isItalic = node.rank === "GENUS";

@@ -1,6 +1,7 @@
 import type { ColorTheme } from "@shared/types";
 
 export const BREED_GROUP_COLOR = "#8B7BA0";
+export const HYBRID_COLOR = "#C8A050";
 
 export const SUBFAMILY_COLORS: Record<string, string> = {
   Caninae: "#D4873A",
