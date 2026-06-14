@@ -36,6 +36,7 @@ jobs:
             suidae/package-lock.json
             phasianidae/package-lock.json
             anatidae/package-lock.json
+            cervidae/package-lock.json
             portal/package-lock.json
 
       - name: Install Felidae deps
@@ -121,6 +122,16 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/anatidae/
 
+      - name: Install Cervidae deps
+        working-directory: cervidae
+        run: npm ci
+
+      - name: Build Cervidae
+        working-directory: cervidae
+        run: npm run build
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/cervidae/
+
       - name: Install Portal deps
         working-directory: portal
         run: npm ci
@@ -133,7 +144,7 @@ jobs:
 
       - name: Assemble Pages output
         run: |
-          mkdir -p _site/felidae _site/canidae _site/equidae _site/giraffidae _site/caprinae _site/suidae _site/phasianidae _site/anatidae
+          mkdir -p _site/felidae _site/canidae _site/equidae _site/giraffidae _site/caprinae _site/suidae _site/phasianidae _site/anatidae _site/cervidae
           cp -r felidae/dist/. _site/felidae/
           cp -r canidae/dist/. _site/canidae/
           cp -r equidae/dist/. _site/equidae/
@@ -142,6 +153,7 @@ jobs:
           cp -r suidae/dist/. _site/suidae/
           cp -r phasianidae/dist/. _site/phasianidae/
           cp -r anatidae/dist/. _site/anatidae/
+          cp -r cervidae/dist/. _site/cervidae/
           cp -r portal/dist/. _site/
 
       - uses: actions/upload-pages-artifact@v3
@@ -171,4 +183,5 @@ jobs:
           echo "- 🐷 [Suidae](https://${OWNER}.github.io/${REPO}/suidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🐓 [Phasianidae](https://${OWNER}.github.io/${REPO}/phasianidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🦆 [Anatidae](https://${OWNER}.github.io/${REPO}/anatidae/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🦌 [Cervidae](https://${OWNER}.github.io/${REPO}/cervidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🌍 [Portal](https://${OWNER}.github.io/${REPO}/)" >> $GITHUB_STEP_SUMMARY
