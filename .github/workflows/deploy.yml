@@ -36,6 +36,7 @@ jobs:
             suidae/package-lock.json
             phasianidae/package-lock.json
             anatidae/package-lock.json
+            portal/package-lock.json
 
       - name: Install Felidae deps
         working-directory: felidae
@@ -120,6 +121,16 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/anatidae/
 
+      - name: Install Portal deps
+        working-directory: portal
+        run: npm ci
+
+      - name: Build Portal
+        working-directory: portal
+        run: npm run build
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+
       - name: Assemble Pages output
         run: |
           mkdir -p _site/felidae _site/canidae _site/equidae _site/giraffidae _site/caprinae _site/suidae _site/phasianidae _site/anatidae
@@ -131,19 +142,7 @@ jobs:
           cp -r suidae/dist/. _site/suidae/
           cp -r phasianidae/dist/. _site/phasianidae/
           cp -r anatidae/dist/. _site/anatidae/
-          cat > _site/index.html << 'EOF'
-          <!doctype html>
-          <html>
-            <head>
-              <meta charset="UTF-8">
-              <title>Systema Naturae</title>
-              <meta http-equiv="refresh" content="0; url=felidae/">
-            </head>
-            <body>
-              <a href="felidae/">Felidae</a> · <a href="canidae/">Canidae</a> · <a href="equidae/">Equidae</a> · <a href="giraffidae/">Giraffidae</a> · <a href="caprinae/">Caprinae</a> · <a href="suidae/">Suidae</a> · <a href="phasianidae/">Phasianidae</a> · <a href="anatidae/">Anatidae</a>
-            </body>
-          </html>
-          EOF
+          cp -r portal/dist/. _site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -172,3 +171,4 @@ jobs:
           echo "- 🐷 [Suidae](https://${OWNER}.github.io/${REPO}/suidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🐓 [Phasianidae](https://${OWNER}.github.io/${REPO}/phasianidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🦆 [Anatidae](https://${OWNER}.github.io/${REPO}/anatidae/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🌍 [Portal](https://${OWNER}.github.io/${REPO}/)" >> $GITHUB_STEP_SUMMARY
