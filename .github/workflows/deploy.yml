@@ -33,6 +33,7 @@ jobs:
             equidae/package-lock.json
             giraffidae/package-lock.json
             caprinae/package-lock.json
+            suidae/package-lock.json
 
       - name: Install Felidae deps
         working-directory: felidae
@@ -87,14 +88,25 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/caprinae/
 
+      - name: Install Suidae deps
+        working-directory: suidae
+        run: npm ci
+
+      - name: Build Suidae
+        working-directory: suidae
+        run: npm run build
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/suidae/
+
       - name: Assemble Pages output
         run: |
-          mkdir -p _site/felidae _site/canidae _site/equidae _site/giraffidae _site/caprinae
+          mkdir -p _site/felidae _site/canidae _site/equidae _site/giraffidae _site/caprinae _site/suidae
           cp -r felidae/dist/. _site/felidae/
           cp -r canidae/dist/. _site/canidae/
           cp -r equidae/dist/. _site/equidae/
           cp -r giraffidae/dist/. _site/giraffidae/
           cp -r caprinae/dist/. _site/caprinae/
+          cp -r suidae/dist/. _site/suidae/
           cat > _site/index.html << 'EOF'
           <!doctype html>
           <html>
@@ -104,7 +116,7 @@ jobs:
               <meta http-equiv="refresh" content="0; url=felidae/">
             </head>
             <body>
-              <a href="felidae/">Felidae</a> · <a href="canidae/">Canidae</a> · <a href="equidae/">Equidae</a> · <a href="giraffidae/">Giraffidae</a> · <a href="caprinae/">Caprinae</a>
+              <a href="felidae/">Felidae</a> · <a href="canidae/">Canidae</a> · <a href="equidae/">Equidae</a> · <a href="giraffidae/">Giraffidae</a> · <a href="caprinae/">Caprinae</a> · <a href="suidae/">Suidae</a>
             </body>
           </html>
           EOF
@@ -133,3 +145,4 @@ jobs:
           echo "- 🐴 [Equidae](https://${OWNER}.github.io/${REPO}/equidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🦒 [Giraffidae](https://${OWNER}.github.io/${REPO}/giraffidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🐐 [Caprinae](https://${OWNER}.github.io/${REPO}/caprinae/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 🐷 [Suidae](https://${OWNER}.github.io/${REPO}/suidae/)" >> $GITHUB_STEP_SUMMARY
