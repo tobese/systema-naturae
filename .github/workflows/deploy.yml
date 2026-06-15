@@ -30,13 +30,6 @@ jobs:
           cache-dependency-path: |
             felidae/package-lock.json
             canidae/package-lock.json
-            equidae/package-lock.json
-            giraffidae/package-lock.json
-            caprinae/package-lock.json
-            suidae/package-lock.json
-            phasianidae/package-lock.json
-            anatidae/package-lock.json
-            cervidae/package-lock.json
             portal/package-lock.json
 
       - name: Install Felidae deps
@@ -62,76 +55,6 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/canidae/
 
-      - name: Install Giraffidae deps
-        working-directory: giraffidae
-        run: npm ci
-
-      - name: Build Giraffidae
-        working-directory: giraffidae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/giraffidae/
-
-      - name: Install Equidae deps
-        working-directory: equidae
-        run: npm ci
-
-      - name: Build Equidae
-        working-directory: equidae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/equidae/
-
-      - name: Install Caprinae deps
-        working-directory: caprinae
-        run: npm ci
-
-      - name: Build Caprinae
-        working-directory: caprinae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/caprinae/
-
-      - name: Install Suidae deps
-        working-directory: suidae
-        run: npm ci
-
-      - name: Build Suidae
-        working-directory: suidae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/suidae/
-
-      - name: Install Phasianidae deps
-        working-directory: phasianidae
-        run: npm ci
-
-      - name: Build Phasianidae
-        working-directory: phasianidae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/phasianidae/
-
-      - name: Install Anatidae deps
-        working-directory: anatidae
-        run: npm ci
-
-      - name: Build Anatidae
-        working-directory: anatidae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/anatidae/
-
-      - name: Install Cervidae deps
-        working-directory: cervidae
-        run: npm ci
-
-      - name: Build Cervidae
-        working-directory: cervidae
-        run: npm run build
-        env:
-          VITE_BASE: /${{ github.event.repository.name }}/cervidae/
-
       - name: Install Portal deps
         working-directory: portal
         run: npm ci
@@ -144,16 +67,9 @@ jobs:
 
       - name: Assemble Pages output
         run: |
-          mkdir -p _site/felidae _site/canidae _site/equidae _site/giraffidae _site/caprinae _site/suidae _site/phasianidae _site/anatidae _site/cervidae
+          mkdir -p _site/felidae _site/canidae
           cp -r felidae/dist/. _site/felidae/
           cp -r canidae/dist/. _site/canidae/
-          cp -r equidae/dist/. _site/equidae/
-          cp -r giraffidae/dist/. _site/giraffidae/
-          cp -r caprinae/dist/. _site/caprinae/
-          cp -r suidae/dist/. _site/suidae/
-          cp -r phasianidae/dist/. _site/phasianidae/
-          cp -r anatidae/dist/. _site/anatidae/
-          cp -r cervidae/dist/. _site/cervidae/
           cp -r portal/dist/. _site/
 
       - uses: actions/upload-pages-artifact@v3
@@ -190,11 +106,4 @@ jobs:
           echo "### Deployed" >> $GITHUB_STEP_SUMMARY
           echo "- 🐱 [Felidae](https://${OWNER}.github.io/${REPO}/felidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🐕 [Canidae](https://${OWNER}.github.io/${REPO}/canidae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🐴 [Equidae](https://${OWNER}.github.io/${REPO}/equidae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🦒 [Giraffidae](https://${OWNER}.github.io/${REPO}/giraffidae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🐐 [Caprinae](https://${OWNER}.github.io/${REPO}/caprinae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🐷 [Suidae](https://${OWNER}.github.io/${REPO}/suidae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🐓 [Phasianidae](https://${OWNER}.github.io/${REPO}/phasianidae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🦆 [Anatidae](https://${OWNER}.github.io/${REPO}/anatidae/)" >> $GITHUB_STEP_SUMMARY
-          echo "- 🦌 [Cervidae](https://${OWNER}.github.io/${REPO}/cervidae/)" >> $GITHUB_STEP_SUMMARY
           echo "- 🌍 [Portal](https://${OWNER}.github.io/${REPO}/)" >> $GITHUB_STEP_SUMMARY
