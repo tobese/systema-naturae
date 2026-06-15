@@ -12,6 +12,7 @@ interface Props {
   onFocusFamily: (slug: string | null) => void;
   focusedFamilySlug: string | null;
   subfamilies?: TaxonNode[];
+  breadcrumbPath?: TaxonNode[];
 }
 
 // Strip parenthetical annotations like "(Älg)" or "(Wapiti)" before Wikipedia lookup
@@ -27,6 +28,8 @@ const NATURAL_HYBRIDS: Record<string, string> = {
   "3WSJW": "Hybridises naturally with Canada lynx where ranges overlap → Blynx.",
   "3WSJS": "Hybridises naturally with bobcat where ranges overlap → Blynx.",
 };
+
+const ALWAYS_SKIP_RANKS = new Set(["KINGDOM", "PHYLUM"]);
 
 function countLeaves(node: TaxonNode): number {
   if (!node.children || node.children.length === 0) return 1;
@@ -95,6 +98,34 @@ function ClickableItem({ children, onClick }: { children: React.ReactNode; onCli
   );
 }
 
+function PanelAncestors({ ancestors, onSelect }: { ancestors: TaxonNode[]; onSelect: (n: TaxonNode) => void }) {
+  if (ancestors.length === 0) return null;
+  return (
+    <div style={{
+      display: "flex", flexWrap: "wrap", alignItems: "center", gap: 2,
+      marginBottom: 10, fontSize: 10,
+    }}>
+      {ancestors.map((n, i) => (
+        <span key={n.id} style={{ display: "flex", alignItems: "center", gap: 2 }}>
+          {i > 0 && <span style={{ color: "#222", userSelect: "none" }}>›</span>}
+          <button
+            onClick={() => onSelect(n)}
+            style={{
+              background: "none", border: "none", padding: "1px 3px", borderRadius: 3,
+              cursor: "pointer", color: "#3a4a6a", fontSize: 10,
+              fontStyle: ["GENUS", "SPECIES", "SUBSPECIES"].includes(n.rank) ? "italic" : "normal",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.color = "#6688bb"; }}
+            onMouseLeave={e => { e.currentTarget.style.color = "#3a4a6a"; }}
+          >
+            {n.commonName ?? n.name}
+          </button>
+        </span>
+      ))}
+    </div>
+  );
+}
+
 // ─── Portal-level panels ──────────────────────────────────────────────────────
 
 function OverviewHomePanel({ onFocusFamily }: { onFocusFamily: (slug: string | null) => void }) {
@@ -150,11 +181,12 @@ function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
   );
 }
 
-function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+function OrderPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; ancestors: TaxonNode[] }) {
   const accent = accentForNode(node);
   const families = (node.children ?? []) as PortalNode[];
   return (
     <div style={{ padding: "20px" }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 10, color: accent, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Order</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
@@ -181,10 +213,12 @@ function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
   );
 }
 
-function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
+function FamilyPanel({ node, onFocusFamily, focusedFamilySlug, ancestors, onSelect }: {
   node: TaxonNode;
   onFocusFamily: (slug: string | null) => void;
   focusedFamilySlug: string | null;
+  ancestors: TaxonNode[];
+  onSelect: (n: TaxonNode) => void;
 }) {
   const pn = node as PortalNode;
   const { data: wiki } = useWikipediaSummary(node.name); // use scientific name — common names with & don't map to Wikipedia
@@ -192,6 +226,7 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
 
   return (
     <div style={{ padding: "20px" }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 10, color: "#F5F5F5", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Family</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 4 }}>{node.name}</div>
@@ -292,12 +327,13 @@ function FamilyHomePanel({ subfamilies, onSelect, focusedFamilySlug }: {
   );
 }
 
-function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+function SubfamilyPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; ancestors: TaxonNode[] }) {
   const accent = accentForNode(node);
   const species = collectLeaves(node).filter(l => l.rank === "SPECIES");
   const genera = (node.children ?? []).filter(c => c.rank === "GENUS");
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>
         {node.rank.toLowerCase()}
       </div>
@@ -321,11 +357,12 @@ function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Tax
   );
 }
 
-function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+function GenusPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; ancestors: TaxonNode[] }) {
   const accent = accentForNode(node);
   const species = collectLeaves(node).filter(l => l.rank === "SPECIES");
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Genus</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 4 }}>{node.name}</div>
       {node.commonName && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 12 }}>{node.commonName}</div>}
@@ -347,7 +384,7 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
   );
 }
 
-function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+function SpeciesPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; ancestors: TaxonNode[] }) {
   const accent = accentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
   const extract = wiki?.extract ?? null;
@@ -361,6 +398,7 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Species</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 2 }}>{node.name}</div>
       {node.commonName && <div style={{ fontSize: 16, color: "#aaa", marginBottom: 8 }}>{node.commonName}</div>}
@@ -452,7 +490,7 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
   );
 }
 
-function SubspeciesPanel({ node }: { node: TaxonNode }) {
+function SubspeciesPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; ancestors: TaxonNode[] }) {
   const accent = accentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
   const extract = wiki?.extract ?? null;
@@ -460,6 +498,7 @@ function SubspeciesPanel({ node }: { node: TaxonNode }) {
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Subspecies</div>
       <div style={{ fontSize: 20, fontWeight: 600, color: node.accepted === false ? "#666" : accent, fontStyle: "italic", marginBottom: 2 }}>
         {node.name}
@@ -486,11 +525,12 @@ function SubspeciesPanel({ node }: { node: TaxonNode }) {
   );
 }
 
-function BreedGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+function BreedGroupPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; ancestors: TaxonNode[] }) {
   const accent = accentForNode(node);
   const breeds = collectLeaves(node);
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>
         Breed group
       </div>
@@ -508,7 +548,7 @@ function BreedGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Ta
   );
 }
 
-function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
+function BreedPanel({ node, onSelect, findNodeById, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null; ancestors: TaxonNode[] }) {
   const theme = node.familySlug ? COLOR_REGISTRY[node.familySlug] : null;
   const accent = theme?.breedGroupColor ?? "#888";
   const coatAccent = theme?.coatTypeColor ?? "#5DB8C4";
@@ -518,6 +558,7 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Domestic breed</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 2 }}>{node.name}</div>
       {node.origin && <div style={{ fontSize: 16, color: "#aaa", marginBottom: 4 }}>{node.origin}</div>}
@@ -563,7 +604,7 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
   );
 }
 
-function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
+function HybridPanel({ node, onSelect, findNodeById, ancestors }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null; ancestors: TaxonNode[] }) {
   const theme = node.familySlug ? COLOR_REGISTRY[node.familySlug] : null;
   const accent = theme?.hybridColor ?? "#C8A050";
   const { data: wiki, loading } = useWikipediaSummary(node.name);
@@ -573,6 +614,7 @@ function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSele
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Hybrid</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 2 }}>{node.name}</div>
       {node.lineage && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.lineage}</div>}
@@ -620,6 +662,7 @@ export default function UnifiedInfoPanel({
   onFocusFamily,
   focusedFamilySlug,
   subfamilies = [],
+  breadcrumbPath = [],
 }: Props) {
   if (!node) {
     return focusedFamilySlug
@@ -627,28 +670,35 @@ export default function UnifiedInfoPanel({
       : <OverviewHomePanel onFocusFamily={onFocusFamily} />;
   }
 
+  // Compute ancestors: full path minus current node, filtering out meaningless ranks.
+  // When a family is focused, also skip CLASS and ORDER — the family context is shown in the header.
+  const ancestors = breadcrumbPath
+    .filter(n => !ALWAYS_SKIP_RANKS.has(n.rank))
+    .slice(0, -1); // remove the current node itself
+
   // Portal-level
   if (node.rank === "KINGDOM" || node.rank === "PHYLUM") return null;
   if (node.rank === "CLASS") return <ClassPanel node={node} onSelect={onSelect} />;
-  if (node.rank === "ORDER") return <OrderPanel node={node} onSelect={onSelect} />;
+  if (node.rank === "ORDER") return <OrderPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
   if (node.rank === "FAMILY") {
-    return <FamilyPanel node={node} onFocusFamily={onFocusFamily} focusedFamilySlug={focusedFamilySlug} />;
+    return <FamilyPanel node={node} onFocusFamily={onFocusFamily} focusedFamilySlug={focusedFamilySlug} ancestors={ancestors} onSelect={onSelect} />;
   }
 
   // Family-level
   if (node.rank === "SUBFAMILY" || node.rank === "TRIBE")
-    return <SubfamilyPanel node={node} onSelect={onSelect} />;
-  if (node.rank === "GENUS") return <GenusPanel node={node} onSelect={onSelect} />;
-  if (node.rank === "SPECIES") return <SpeciesPanel node={node} onSelect={onSelect} />;
-  if (node.rank === "SUBSPECIES") return <SubspeciesPanel node={node} />;
-  if (node.rank === "BREED_GROUP") return <BreedGroupPanel node={node} onSelect={onSelect} />;
-  if (node.rank === "BREED") return <BreedPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
+    return <SubfamilyPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
+  if (node.rank === "GENUS") return <GenusPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
+  if (node.rank === "SPECIES") return <SpeciesPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
+  if (node.rank === "SUBSPECIES") return <SubspeciesPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
+  if (node.rank === "BREED_GROUP") return <BreedGroupPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
+  if (node.rank === "BREED") return <BreedPanel node={node} onSelect={onSelect} findNodeById={findNodeById} ancestors={ancestors} />;
   if (node.rank === "HYBRID_GROUP") {
     const hybrids = node.children ?? [];
     const theme = node.familySlug ? COLOR_REGISTRY[node.familySlug] : null;
     const accent = theme?.hybridColor ?? "#C8A050";
     return (
       <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+        <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
         <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Hybrids</div>
         <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 4 }}>Hybrids</div>
         <div style={{ fontSize: 13, color: "#aaa", marginTop: 4 }}>{hybrids.length} documented interspecies hybrids</div>
@@ -666,7 +716,7 @@ export default function UnifiedInfoPanel({
       </div>
     );
   }
-  if (node.rank === "HYBRID") return <HybridPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
+  if (node.rank === "HYBRID") return <HybridPanel node={node} onSelect={onSelect} findNodeById={findNodeById} ancestors={ancestors} />;
 
   return null;
 }

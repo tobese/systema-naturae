@@ -7,7 +7,6 @@ import { annotatePortalLevels } from "./colors";
 import { useUnifiedTree } from "./hooks/useUnifiedTree";
 import { useUrlState } from "./hooks/useUrlState";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
-import Breadcrumb from "./components/Breadcrumb";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -292,9 +291,6 @@ export default function App() {
               onContinentClick={c => setHighlightedContinent(prev => prev === c ? null : c)}
             />
           )}
-          {breadcrumbPath.length > 1 && (
-            <Breadcrumb path={breadcrumbPath} onSelect={handleSelect} />
-          )}
           {selected && navContext && (
             <NodeNav
               parent={navContext.parent}
@@ -311,6 +307,7 @@ export default function App() {
               onFocusFamily={slug => setFocus(slug)}
               focusedFamilySlug={focusedFamilySlug}
               subfamilies={subfamiliesForPanel}
+              breadcrumbPath={breadcrumbPath}
             />
           </div>
         </div>

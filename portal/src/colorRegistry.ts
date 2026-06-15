@@ -94,6 +94,17 @@ const CERVIDAE_THEME: ColorTheme = {
   hybridColor: "#888",
 };
 
+const CETACEA_THEME: ColorTheme = {
+  subfamilyColors: { Mysticeti: "#1a6b8a", Odontoceti: "#0d4f6e" },
+  lineageColors: {
+    "Right whales": "#2196a6", "Rorquals": "#1565c0", "Gray whale": "#546e7a",
+    "Sperm whales": "#6a1b9a", "Beaked whales": "#37474f", "Dolphins": "#0288d1",
+    "Porpoises": "#00838f", "Monodontidae": "#00acc1", "River dolphins": "#2e7d32",
+  },
+  breedGroupColor: "#607d8b",
+  hybridColor: "#90a4ae",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -104,6 +115,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   phasianidae: PHASIANIDAE_THEME,
   anatidae:   ANATIDAE_THEME,
   cervidae:   CERVIDAE_THEME,
+  cetacea:    CETACEA_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
