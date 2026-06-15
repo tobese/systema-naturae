@@ -18,6 +18,7 @@ export function useUrlState(): {
   selectedNodeId: string | null;
   setFocus: (slug: string | null) => void;
   setSelectedNodeId: (id: string | null) => void;
+  navigateTo: (family: string | null, nodeId: string | null) => void;
 } {
   const [state, setState] = useState(parseUrl);
 
@@ -41,10 +42,17 @@ export function useUrlState(): {
     });
   }, []);
 
+  const navigateTo = useCallback((family: string | null, nodeId: string | null) => {
+    const url = buildUrl(family, nodeId);
+    history.pushState(null, "", url);
+    setState({ family, nodeId });
+  }, []);
+
   return {
     focusedFamilySlug: state.family,
     selectedNodeId: state.nodeId,
     setFocus,
     setSelectedNodeId,
+    navigateTo,
   };
 }

@@ -7,6 +7,7 @@ import { annotatePortalLevels } from "./colors";
 import { useUnifiedTree } from "./hooks/useUnifiedTree";
 import { useUrlState } from "./hooks/useUrlState";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
+import SearchBox from "./components/SearchBox";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -58,7 +59,7 @@ export default function App() {
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
   const pendingZoomId = useRef<string | null>(null);
 
-  const { focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId } = useUrlState();
+  const { focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo } = useUrlState();
 
   // selected node is fully URL-driven so browser back/forward and deep-links work correctly
   const selected = useMemo(
@@ -235,6 +236,7 @@ export default function App() {
               : `Animal taxonomy · ${familyCount} families`}
           </span>
         </div>
+        <SearchBox data={annotatedData} onNavigate={navigateTo} />
         <div style={{ display: "flex", gap: 6 }}>
           {inFamilyFocus && (
             <button
