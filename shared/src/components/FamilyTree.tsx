@@ -506,14 +506,14 @@ export default function FamilyTree({
           .attr("x2", ({ hybrid }) => posMap.get(hybrid.data.id)?.x ?? 0)
           .attr("y2", ({ hybrid }) => posMap.get(hybrid.data.id)?.y ?? 0);
 
-      lineAttrs(gSpecial.append("g").selectAll("line")
-        .data(hybridLinks).join<SVGLineElement>("line"))
+      lineAttrs(gSpecial.append("g").selectAll<SVGLineElement, HybridDatum>("line")
+        .data(hybridLinks).join("line"))
         .attr("stroke", colorTheme.hybridColor).attr("stroke-opacity", 0.35)
         .attr("stroke-width", 1).attr("stroke-dasharray", "4 4")
         .style("pointer-events", "none");
 
-      lineAttrs(gSpecial.append("g").selectAll("line")
-        .data(hybridLinks).join<SVGLineElement>("line"))
+      lineAttrs(gSpecial.append("g").selectAll<SVGLineElement, HybridDatum>("line")
+        .data(hybridLinks).join("line"))
         .attr("stroke", "transparent").attr("stroke-width", 10)
         .style("cursor", "pointer")
         .on("click", (event, d) => { event.stopPropagation(); onSelect(d.hybrid.data); });

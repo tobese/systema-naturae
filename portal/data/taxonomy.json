@@ -50,6 +50,24 @@
                   "appSlug": "mustelidae",
                   "speciesCount": 66,
                   "notableMembers": ["Eurasian Badger", "Wolverine", "European Pine Marten", "Eurasian Otter", "Honey Badger"]
+                },
+                {
+                  "id": "FAM_URSIDAE",
+                  "name": "Ursidae",
+                  "rank": "FAMILY",
+                  "commonName": "Bears",
+                  "appSlug": "ursidae",
+                  "speciesCount": 8,
+                  "notableMembers": ["Brown Bear", "Polar Bear", "Giant Panda", "American Black Bear", "Sun Bear"]
+                },
+                {
+                  "id": "FAM_PHOCIDAE",
+                  "name": "Phocidae",
+                  "rank": "FAMILY",
+                  "commonName": "True seals",
+                  "appSlug": "phocidae",
+                  "speciesCount": 18,
+                  "notableMembers": ["Harbour Seal", "Grey Seal", "Weddell Seal", "Leopard Seal", "Northern Elephant Seal"]
                 }
               ]
             },
@@ -341,6 +359,60 @@
                   "appSlug": "turdidae",
                   "speciesCount": 174,
                   "notableMembers": ["Common Blackbird", "Song Thrush", "Fieldfare", "Redwing", "Mistle Thrush"]
+                },
+                {
+                  "id": "FAM_FRINGILLIDAE",
+                  "name": "Fringillidae",
+                  "rank": "FAMILY",
+                  "commonName": "Finches",
+                  "appSlug": "fringillidae",
+                  "speciesCount": 230,
+                  "notableMembers": ["Common Chaffinch", "European Goldfinch", "Eurasian Bullfinch", "Common Crossbill", "Hawfinch"]
+                },
+                {
+                  "id": "FAM_MUSCICAPIDAE",
+                  "name": "Muscicapidae",
+                  "rank": "FAMILY",
+                  "commonName": "Old World flycatchers",
+                  "appSlug": "muscicapidae",
+                  "speciesCount": 324,
+                  "notableMembers": ["European Robin", "Common Nightingale", "Common Redstart", "European Pied Flycatcher", "Northern Wheatear"]
+                }
+              ]
+            },
+            {
+              "id": "STRIGIFORMES",
+              "name": "Strigiformes",
+              "rank": "ORDER",
+              "commonName": "Owls",
+              "description": "Nocturnal birds of prey with forward-facing eyes enclosed in a facial disc that acts as a parabolic sound reflector, asymmetrically positioned ears for precise sound triangulation, and silent flight enabled by specialised comb-edged feathers that suppress turbulence. Owls can strike prey in total darkness by sound alone. With around 250 species they occupy virtually every terrestrial habitat on Earth, from Arctic tundra to tropical rainforest.",
+              "children": [
+                {
+                  "id": "FAM_STRIGIDAE",
+                  "name": "Strigidae",
+                  "rank": "FAMILY",
+                  "commonName": "Owls",
+                  "appSlug": "strigidae",
+                  "speciesCount": 230,
+                  "notableMembers": ["Eurasian Eagle-owl", "Snowy Owl", "Tawny Owl", "Great Grey Owl", "Little Owl"]
+                }
+              ]
+            },
+            {
+              "id": "ACCIPITRIFORMES",
+              "name": "Accipitriformes",
+              "rank": "ORDER",
+              "commonName": "Hawks & eagles",
+              "description": "Diurnal birds of prey — the hawks, eagles, kites, harriers, and Old World vultures — united by a hooked bill, powerful talons, and keen binocular vision with up to eight times the resolving power of a human eye. Accipitridae is the largest raptor family with around 260 species. The order also includes the Osprey (Pandionidae) and the Secretary Bird (Sagittariidae).",
+              "children": [
+                {
+                  "id": "FAM_ACCIPITRIDAE",
+                  "name": "Accipitridae",
+                  "rank": "FAMILY",
+                  "commonName": "Hawks, eagles & kites",
+                  "appSlug": "accipitridae",
+                  "speciesCount": 260,
+                  "notableMembers": ["Golden Eagle", "White-tailed Eagle", "Northern Goshawk", "Red Kite", "Hen Harrier"]
                 }
               ]
             }
@@ -377,6 +449,33 @@
                   "appSlug": "geoemydidae",
                   "speciesCount": 70,
                   "notableMembers": ["European Pond Turtle", "Caspian Turtle", "Reeves' Turtle", "Chinese Three-striped Box Turtle", "Four-eyed Turtle"]
+                }
+              ]
+            },
+            {
+              "id": "SQUAMATA_ORDER",
+              "name": "Squamata",
+              "rank": "ORDER",
+              "commonName": "Lizards & snakes",
+              "description": "The largest order of reptiles with over 10,000 species — lizards, snakes, and amphisbaenians. Squamates are distinguished by their shed-able, overlapping scales and a unique jaw mechanism (cranial kinesis) that allows independent movement of multiple skull bones. Snakes evolved from lizards, losing their legs gradually; vestigial pelvic girdles persist in pythons and boas. The order contains the world's longest and heaviest reptiles (reticulated python, green anaconda) as well as the smallest (nano-chameleon).",
+              "children": [
+                {
+                  "id": "FAM_VIPERIDAE",
+                  "name": "Viperidae",
+                  "rank": "FAMILY",
+                  "commonName": "Vipers",
+                  "appSlug": "viperidae",
+                  "speciesCount": 370,
+                  "notableMembers": ["Common Adder", "Gaboon Viper", "Western Diamondback Rattlesnake", "Russell's Viper", "Puff Adder"]
+                },
+                {
+                  "id": "FAM_CHAMAELEONIDAE",
+                  "name": "Chamaeleonidae",
+                  "rank": "FAMILY",
+                  "commonName": "Chameleons",
+                  "appSlug": "chamaeleonidae",
+                  "speciesCount": 213,
+                  "notableMembers": ["Panther Chameleon", "Veiled Chameleon", "Jackson's Chameleon", "Parson's Chameleon", "Nano-chameleon"]
                 }
               ]
             }
@@ -453,6 +552,51 @@
               ]
             }
           ]
+        },
+        {
+          "id": "AMPHIBIA",
+          "name": "Amphibia",
+          "rank": "CLASS",
+          "commonName": "Amphibians",
+          "description": "Cold-blooded vertebrates that metamorphose from water-breathing larvae to air-breathing adults. Amphibians are the first vertebrates to have colonised land, yet most remain tied to fresh water for reproduction. With around 8,000 species they are the most threatened vertebrate class — around 41% of species are at risk of extinction, primarily due to the amphibian chytrid fungus *Batrachochytrium dendrobatidis*, habitat destruction, and climate change.",
+          "children": [
+            {
+              "id": "URODELA",
+              "name": "Urodela",
+              "rank": "ORDER",
+              "commonName": "Salamanders & newts",
+              "description": "Around 740 species of tailed amphibians — the salamanders, newts, and sirens — characterised by a lizard-like body plan retained through life. Most breathe through lungs as adults, though some (hellbenders, olms) are permanently aquatic and breathe primarily through skin. Salamanders are among the few vertebrates capable of true limb regeneration, regrowing lost limbs, tails, eyes, and even portions of the heart.",
+              "children": [
+                {
+                  "id": "FAM_SALAMANDRIDAE",
+                  "name": "Salamandridae",
+                  "rank": "FAMILY",
+                  "commonName": "Salamanders & newts",
+                  "appSlug": "salamandridae",
+                  "speciesCount": 121,
+                  "notableMembers": ["Fire Salamander", "Great Crested Newt", "Smooth Newt", "Alpine Salamander", "Iberian Ribbed Newt"]
+                }
+              ]
+            },
+            {
+              "id": "ANURA",
+              "name": "Anura",
+              "rank": "ORDER",
+              "commonName": "Frogs & toads",
+              "description": "The largest amphibian order with around 7,000 species. Frogs are defined by their tail-less adult body, long hind limbs, and ability to leap. They inhabit every continent except Antarctica and every environment from tropical rainforest to desert and high alpine meadow. The order includes the most endangered amphibians on Earth: more than 100 species are thought to have gone extinct since the 1970s due to chytridiomycosis.",
+              "children": [
+                {
+                  "id": "FAM_RANIDAE",
+                  "name": "Ranidae",
+                  "rank": "FAMILY",
+                  "commonName": "True frogs",
+                  "appSlug": "ranidae",
+                  "speciesCount": 370,
+                  "notableMembers": ["Common Frog", "American Bullfrog", "Marsh Frog", "Wood Frog", "Moor Frog"]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -471,6 +615,42 @@
           "appSlug": "tardigrada",
           "speciesCount": 1300,
           "notableMembers": ["Milnesium tardigradum", "Richtersius coronifer", "Hypsibius exemplaris", "Ramazzottius oberhaeuseri", "Echiniscus testudo"]
+        }
+      ]
+    },
+    {
+      "id": "ARTHROPODA",
+      "name": "Arthropoda",
+      "rank": "PHYLUM",
+      "commonName": "Arthropods",
+      "description": "The most species-rich phylum on Earth — over one million described species, representing roughly 80% of all known animal species. Arthropods are defined by a chitinous exoskeleton, a segmented body, and jointed appendages. The phylum includes insects, arachnids, crustaceans, and myriapods. Insects alone account for the majority of all described animal species, with conservative estimates placing the total insect species count at 5.5 million.",
+      "children": [
+        {
+          "id": "INSECTA",
+          "name": "Insecta",
+          "rank": "CLASS",
+          "commonName": "Insects",
+          "description": "The largest class of animals on Earth — over one million described species — with six legs, three body segments (head, thorax, abdomen), and typically two pairs of wings in the adult. Insects have colonised virtually every terrestrial and freshwater habitat. They are the primary pollinators of flowering plants, decomposers of organic matter, and the base of most terrestrial food webs. Insect biomass is declining at alarming rates — estimated losses of 75% in some European regions over 30 years.",
+          "children": [
+            {
+              "id": "HYMENOPTERA",
+              "name": "Hymenoptera",
+              "rank": "ORDER",
+              "commonName": "Bees, wasps & ants",
+              "description": "One of the largest insect orders, with over 150,000 described species. Hymenoptera includes the social insects par excellence — honey bees, bumblebees, paper wasps, and ants — as well as thousands of solitary species. Eusociality, where workers forego reproduction to aid the queen, evolved multiple times in this order. The order is distinguished by two pairs of membranous wings linked by hooks, and a narrow 'wasp waist' (petiole) connecting thorax and abdomen.",
+              "children": [
+                {
+                  "id": "FAM_APIDAE",
+                  "name": "Apidae",
+                  "rank": "FAMILY",
+                  "commonName": "Bees",
+                  "appSlug": "apidae",
+                  "speciesCount": 5700,
+                  "notableMembers": ["Western Honey Bee", "Buff-tailed Bumblebee", "Violet Carpenter Bee", "Red-tailed Bumblebee", "Great Yellow Bumblebee"]
+                }
+              ]
+            }
+          ]
         }
       ]
     }

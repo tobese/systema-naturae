@@ -353,6 +353,150 @@ const TURDIDAE_THEME: ColorTheme = {
   hybridColor:     "#a07840",
 };
 
+const URSIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Brown & Black Bears": "#8a5c28",
+    "Polar Bear":          "#d0cfc8",
+    "Giant Panda":         "#1a1a1a",
+    "Sun Bear":            "#4a3018",
+    "Sloth Bear":          "#3a2818",
+    "Spectacled Bear":     "#5a3820",
+  },
+  breedGroupColor: "#7a5030",
+  hybridColor:     "#a07848",
+};
+
+const PHOCIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Northern Seals":  "#607888",
+    "Elephant Seals":  "#8a7070",
+    "Antarctic Seals": "#3a6088",
+    "Monk Seals":      "#a07858",
+  },
+  breedGroupColor: "#5a7080",
+  hybridColor:     "#7a9098",
+};
+
+const FRINGILLIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Chaffinches":  "#c89040",
+    "Goldfinches":  "#e8b820",
+    "Siskins":      "#8ab830",
+    "Greenfinches": "#5a9830",
+    "Bullfinches":  "#c84040",
+    "Crossbills":   "#c83030",
+    "Hawfinches":   "#c87840",
+    "Linnets":      "#c06050",
+    "Redpolls":     "#a03030",
+  },
+  breedGroupColor: "#a09030",
+  hybridColor:     "#c0a840",
+};
+
+const MUSCICAPIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Robins & Chats": "#c85030",
+    "Nightingales":   "#8a6840",
+    "Redstarts":      "#c87030",
+    "Flycatchers":    "#5a7898",
+    "Wheatears":      "#a09870",
+  },
+  breedGroupColor: "#8a7050",
+  hybridColor:     "#b09060",
+};
+
+const STRIGIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Eagle-owls":  "#c89030",
+    "Wood Owls":   "#8a6030",
+    "Eared Owls":  "#a08040",
+    "Pygmy Owls":  "#7a6838",
+    "Scops Owls":  "#9a8858",
+    "Hawk Owls":   "#c0a060",
+  },
+  breedGroupColor: "#987840",
+  hybridColor:     "#b09850",
+};
+
+const ACCIPITRIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Goshawks & Sparrowhawks": "#5a7840",
+    "Buzzards":                "#a07830",
+    "Eagles":                  "#c89830",
+    "Sea Eagles":              "#5a8898",
+    "Harriers":                "#8a7098",
+    "Kites":                   "#c85030",
+    "Vultures":                "#6a5838",
+  },
+  breedGroupColor: "#8a6830",
+  hybridColor:     "#a08840",
+};
+
+const VIPERIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "True Vipers":  "#6a7840",
+    "Rattlesnakes": "#c89030",
+    "Pit Vipers":   "#8a6030",
+  },
+  breedGroupColor: "#7a7038",
+  hybridColor:     "#9a8848",
+};
+
+const CHAMAELEONIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "True Chameleons":         "#5aab70",
+    "Furcifer Chameleons":     "#c85898",
+    "Three-horned Chameleons": "#3a8858",
+    "Leaf Chameleons":         "#8aac30",
+    "Pygmy Chameleons":        "#5a9848",
+  },
+  breedGroupColor: "#5a9860",
+  hybridColor:     "#7ab870",
+};
+
+const SALAMANDRIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Fire Salamanders": "#e89020",
+    "Crested Newts":    "#2a6830",
+    "Smooth Newts":     "#5a9848",
+    "Asian Salamanders": "#c03828",
+  },
+  breedGroupColor: "#5a7838",
+  hybridColor:     "#7a9850",
+};
+
+const RANIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "European Frogs": "#5a8840",
+    "Water Frogs":    "#3a7830",
+    "American Frogs": "#7a9838",
+  },
+  breedGroupColor: "#4a7838",
+  hybridColor:     "#6a9848",
+};
+
+const APIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Honey Bees":     "#e8b820",
+    "Bumblebees":     "#e87820",
+    "Carpenter Bees": "#5a48a0",
+    "Orchid Bees":    "#30a870",
+  },
+  breedGroupColor: "#c09020",
+  hybridColor:     "#d0a830",
+};
+
 const TARDIGRADA_THEME: ColorTheme = {
   subfamilyColors: {
     "Eutardigrada":    "#c8a830",
@@ -393,9 +537,20 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   corvidae:        CORVIDAE_THEME,
   paridae:         PARIDAE_THEME,
   mustelidae:      MUSTELIDAE_THEME,
+  ursidae:         URSIDAE_THEME,
+  phocidae:        PHOCIDAE_THEME,
   testudinidae:    TESTUDINIDAE_THEME,
   geoemydidae:     GEOEMYDIDAE_THEME,
+  viperidae:       VIPERIDAE_THEME,
+  chamaeleonidae:  CHAMAELEONIDAE_THEME,
   turdidae:        TURDIDAE_THEME,
+  fringillidae:    FRINGILLIDAE_THEME,
+  muscicapidae:    MUSCICAPIDAE_THEME,
+  strigidae:       STRIGIDAE_THEME,
+  accipitridae:    ACCIPITRIDAE_THEME,
+  salamandridae:   SALAMANDRIDAE_THEME,
+  ranidae:         RANIDAE_THEME,
+  apidae:          APIDAE_THEME,
   tardigrada:      TARDIGRADA_THEME,
 };
 
