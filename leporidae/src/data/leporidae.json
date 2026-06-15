@@ -1,0 +1,87 @@
+{
+  "id": "FAM_LEPORIDAE",
+  "name": "Leporidae",
+  "rank": "FAMILY",
+  "commonName": "Rabbits & hares",
+  "familySlug": "leporidae",
+  "children": [
+    {
+      "id": "GENUS_ORYCTOLAGUS",
+      "name": "Oryctolagus",
+      "rank": "GENUS",
+      "lineage": "Rabbit",
+      "children": [
+        {
+          "id": "ORYCTOLAGUS_CUNICULUS",
+          "name": "Oryctolagus cuniculus",
+          "rank": "SPECIES",
+          "commonName": "European rabbit",
+          "lineage": "Rabbit",
+          "continents": ["Europe", "Africa", "Australia", "South America", "North America"],
+          "children": [
+            {
+              "id": "bg-rabbit-fancy",
+              "name": "Fancy",
+              "rank": "BREED_GROUP",
+              "lineage": "Rabbit",
+              "children": [
+                { "id": "breed-holland-lop", "name": "Holland Lop", "rank": "BREED", "origin": "Netherlands", "lineage": "Rabbit" },
+                { "id": "breed-mini-rex", "name": "Mini Rex", "rank": "BREED", "origin": "USA", "lineage": "Rabbit" },
+                { "id": "breed-netherland-dwarf", "name": "Netherland Dwarf", "rank": "BREED", "origin": "Netherlands", "lineage": "Rabbit" },
+                { "id": "breed-lionhead", "name": "Lionhead", "rank": "BREED", "origin": "Belgium", "lineage": "Rabbit" },
+                { "id": "breed-english-angora", "name": "English Angora", "rank": "BREED", "origin": "Turkey", "lineage": "Rabbit" }
+              ]
+            },
+            {
+              "id": "bg-rabbit-commercial",
+              "name": "Commercial",
+              "rank": "BREED_GROUP",
+              "lineage": "Rabbit",
+              "children": [
+                { "id": "breed-new-zealand-white", "name": "New Zealand White", "rank": "BREED", "origin": "USA", "lineage": "Rabbit" },
+                { "id": "breed-californian", "name": "Californian", "rank": "BREED", "origin": "USA", "lineage": "Rabbit" },
+                { "id": "breed-flemish-giant", "name": "Flemish Giant", "rank": "BREED", "origin": "Belgium", "lineage": "Rabbit" },
+                { "id": "breed-rex", "name": "Rex", "rank": "BREED", "origin": "France", "lineage": "Rabbit" },
+                { "id": "breed-american-chinchilla", "name": "American Chinchilla", "rank": "BREED", "origin": "USA", "lineage": "Rabbit" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LEPUS",
+      "name": "Lepus",
+      "rank": "GENUS",
+      "lineage": "Hare",
+      "children": [
+        { "id": "LEPUS_EUROPAEUS", "name": "Lepus europaeus", "rank": "SPECIES", "commonName": "European hare", "lineage": "Hare", "continents": ["Europe", "Asia"] },
+        { "id": "LEPUS_TIMIDUS", "name": "Lepus timidus", "rank": "SPECIES", "commonName": "Mountain hare", "lineage": "Hare", "continents": ["Europe", "Asia"] },
+        { "id": "LEPUS_AMERICANUS", "name": "Lepus americanus", "rank": "SPECIES", "commonName": "Snowshoe hare", "lineage": "Hare", "continents": ["North America"] },
+        { "id": "LEPUS_ARCTICUS", "name": "Lepus arcticus", "rank": "SPECIES", "commonName": "Arctic hare", "lineage": "Hare", "continents": ["North America"] },
+        { "id": "LEPUS_CAPENSIS", "name": "Lepus capensis", "rank": "SPECIES", "commonName": "Cape hare", "lineage": "Hare", "continents": ["Africa", "Asia"] },
+        { "id": "LEPUS_CALIFORNICUS", "name": "Lepus californicus", "rank": "SPECIES", "commonName": "Black-tailed jackrabbit", "lineage": "Hare", "continents": ["North America"] }
+      ]
+    },
+    {
+      "id": "GENUS_SYLVILAGUS",
+      "name": "Sylvilagus",
+      "rank": "GENUS",
+      "lineage": "Cottontail",
+      "children": [
+        { "id": "SYLVILAGUS_FLORIDANUS", "name": "Sylvilagus floridanus", "rank": "SPECIES", "commonName": "Eastern cottontail", "lineage": "Cottontail", "continents": ["North America", "South America"] },
+        { "id": "SYLVILAGUS_AUDUBONII", "name": "Sylvilagus audubonii", "rank": "SPECIES", "commonName": "Desert cottontail", "lineage": "Cottontail", "continents": ["North America"] },
+        { "id": "SYLVILAGUS_BACHMANI", "name": "Sylvilagus bachmani", "rank": "SPECIES", "commonName": "Brush rabbit", "lineage": "Cottontail", "continents": ["North America"] }
+      ]
+    },
+    {
+      "id": "GENUS_PENTALAGUS",
+      "name": "Pentalagus",
+      "rank": "GENUS",
+      "lineage": "Amami rabbit",
+      "children": [
+        { "id": "PENTALAGUS_FURNESSI", "name": "Pentalagus furnessi", "rank": "SPECIES", "commonName": "Amami rabbit", "lineage": "Amami rabbit", "continents": ["Asia"] }
+      ]
+    }
+  ]
+}

@@ -106,6 +106,18 @@ const BOVIDAE_THEME: ColorTheme = {
   hybridColor: "#C09060",
 };
 
+const LEPORIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Rabbit":       "#C8904A",
+    "Hare":         "#8BA878",
+    "Cottontail":   "#B87848",
+    "Amami rabbit": "#7A6090",
+  },
+  breedGroupColor: "#C0A070",
+  hybridColor:     "#B89060",
+};
+
 const CETACEA_THEME: ColorTheme = {
   subfamilyColors: { Mysticeti: "#1a6b8a", Odontoceti: "#0d4f6e" },
   lineageColors: {
@@ -129,6 +141,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   cervidae:   CERVIDAE_THEME,
   cetacea:    CETACEA_THEME,
   bovidae:    BOVIDAE_THEME,
+  leporidae:  LEPORIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
