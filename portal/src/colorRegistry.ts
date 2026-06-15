@@ -230,6 +230,79 @@ const LEMURIDAE_THEME: ColorTheme = {
   hybridColor:     "#b07858",
 };
 
+const MACROPODIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Great kangaroos": "#c87828",
+    "Wallabies":       "#8b6914",
+    "Rock-wallabies":  "#a05820",
+    "Tree-kangaroos":  "#4a6838",
+    "Pademelons":      "#7a5030",
+  },
+  breedGroupColor: "#906030",
+  hybridColor:     "#b08040",
+};
+
+const PICIDAE_THEME: ColorTheme = {
+  subfamilyColors: {
+    "Jynginae": "#8b6914",
+    "Picinae":  "#c0392b",
+  },
+  lineageColors: {
+    "Wrynecks":             "#8b6914",
+    "Green Woodpeckers":    "#5d8233",
+    "Black Woodpeckers":    "#2c3e50",
+    "Spotted Woodpeckers":  "#c0392b",
+    "Three-toed Woodpeckers": "#7f8c8d",
+    "True Woodpeckers":     "#a03020",
+  },
+  breedGroupColor: "#a04030",
+  hybridColor:     "#b05040",
+};
+
+const COLUMBIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Pigeons":       "#7d6e83",
+    "Doves":         "#c4a882",
+    "Green Pigeons": "#6b8e5e",
+  },
+  breedGroupColor: "#9b8ea0",
+  hybridColor:     "#b0a0b5",
+};
+
+const CORVIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Magpies":       "#3a5a7a",
+    "Crows & Ravens": "#1a1a2e",
+    "Jackdaws":      "#5a6878",
+    "Jays":          "#4a6ea8",
+    "Azure Magpies": "#5aace8",
+    "Nutcrackers":   "#6a5840",
+    "Choughs":       "#c03020",
+    "Siberian Jays": "#a07848",
+    "Blue Magpies":  "#1a78c8",
+    "Treepies":      "#b86830",
+  },
+  breedGroupColor: "#3a4a5a",
+  hybridColor:     "#5a6a7a",
+};
+
+const PARIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Great Tits":   "#c8b820",
+    "Blue Tits":    "#2a7ab8",
+    "Coal Tits":    "#3a3a3a",
+    "Marsh Tits":   "#8a7050",
+    "Crested Tits": "#6a5c8a",
+    "Ground Tit":   "#8a7848",
+  },
+  breedGroupColor: "#7a8898",
+  hybridColor:     "#9aaa68",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -251,6 +324,11 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   cercopithecidae: CERCOPITHECIDAE_THEME,
   cebidae:         CEBIDAE_THEME,
   lemuridae:       LEMURIDAE_THEME,
+  macropodidae:    MACROPODIDAE_THEME,
+  picidae:         PICIDAE_THEME,
+  columbidae:      COLUMBIDAE_THEME,
+  corvidae:        CORVIDAE_THEME,
+  paridae:         PARIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

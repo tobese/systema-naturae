@@ -1,0 +1,361 @@
+{
+  "id": "FAM_MACROPODIDAE",
+  "name": "Macropodidae",
+  "rank": "FAMILY",
+  "commonName": "Kangaroos & wallabies",
+  "familySlug": "macropodidae",
+  "children": [
+    {
+      "id": "GENUS_MACROPUS",
+      "name": "Macropus",
+      "rank": "GENUS",
+      "description": "The 'true' kangaroos in the strict modern sense — after extensive reclassification, this genus now contains only the two grey kangaroos. Both are grazers of open woodland and grassland and are among the most recognisable marsupials on Earth, with eastern and western species together numbering in the tens of millions.",
+      "lineage": "Great kangaroos",
+      "children": [
+        {
+          "id": "MACROPUS_GIGANTEUS",
+          "name": "Macropus giganteus",
+          "rank": "SPECIES",
+          "commonName": "Eastern Grey Kangaroo",
+          "lineage": "Great kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "MACROPUS_FULIGINOSUS",
+          "name": "Macropus fuliginosus",
+          "rank": "SPECIES",
+          "commonName": "Western Grey Kangaroo",
+          "lineage": "Great kangaroos",
+          "continents": ["Oceania"],
+          "subspeciesCount": 2,
+          "children": [
+            { "id": "MACROPUS_FUL_FULIGINOSUS", "name": "Macropus fuliginosus fuliginosus", "rank": "SUBSPECIES", "commonName": "Kangaroo Island Western Grey", "lineage": "Great kangaroos" },
+            { "id": "MACROPUS_FUL_MELANOPS", "name": "Macropus fuliginosus melanops", "rank": "SUBSPECIES", "commonName": "Mainland Western Grey", "lineage": "Great kangaroos" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_OSPHRANTER",
+      "name": "Osphranter",
+      "rank": "GENUS",
+      "description": "The wallaroos and the Red Kangaroo — the largest living marsupial. Osphranter was long lumped inside Macropus but reinstated as a distinct genus after molecular studies confirmed deep divergence. The Red Kangaroo is an icon of the arid interior; the wallaroos occupy rocky ranges and cliffs from the tropics to the south.",
+      "lineage": "Great kangaroos",
+      "children": [
+        {
+          "id": "OSPHRANTER_RUFUS",
+          "name": "Osphranter rufus",
+          "rank": "SPECIES",
+          "commonName": "Red Kangaroo",
+          "lineage": "Great kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "OSPHRANTER_ANTILOPINUS",
+          "name": "Osphranter antilopinus",
+          "rank": "SPECIES",
+          "commonName": "Antilopine Kangaroo",
+          "lineage": "Great kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "OSPHRANTER_ROBUSTUS",
+          "name": "Osphranter robustus",
+          "rank": "SPECIES",
+          "commonName": "Common Wallaroo",
+          "lineage": "Great kangaroos",
+          "continents": ["Oceania"],
+          "subspeciesCount": 3,
+          "children": [
+            { "id": "OSPHRANTER_ROB_ROBUSTUS", "name": "Osphranter robustus robustus", "rank": "SUBSPECIES", "commonName": "Eastern Wallaroo", "lineage": "Great kangaroos" },
+            { "id": "OSPHRANTER_ROB_ERUBESCENS", "name": "Osphranter robustus erubescens", "rank": "SUBSPECIES", "commonName": "Euro", "lineage": "Great kangaroos" },
+            { "id": "OSPHRANTER_ROB_ISABELLINUS", "name": "Osphranter robustus isabellinus", "rank": "SUBSPECIES", "commonName": "Barrow Island Wallaroo", "lineage": "Great kangaroos" }
+          ]
+        },
+        {
+          "id": "OSPHRANTER_BERNARDUS",
+          "name": "Osphranter bernardus",
+          "rank": "SPECIES",
+          "commonName": "Black Wallaroo",
+          "lineage": "Great kangaroos",
+          "continents": ["Oceania"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NOTAMACROPUS",
+      "name": "Notamacropus",
+      "rank": "GENUS",
+      "description": "The scrub wallabies — a diverse assemblage of medium-sized macropods distributed from coastal heathlands to tropical savannas. Previously buried inside the sprawling genus Macropus, molecular work elevated Notamacropus to full generic rank in 2019. Many are among Australia's most familiar wildlife but several island and coastal species face significant pressure.",
+      "lineage": "Wallabies",
+      "children": [
+        {
+          "id": "NOTAMACROPUS_AGILIS",
+          "name": "Notamacropus agilis",
+          "rank": "SPECIES",
+          "commonName": "Agile Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "NOTAMACROPUS_RUFOGRISEUS",
+          "name": "Notamacropus rufogriseus",
+          "rank": "SPECIES",
+          "commonName": "Red-necked Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"],
+          "subspeciesCount": 2,
+          "children": [
+            { "id": "NOTAMACROPUS_RUF_RUFOGRISEUS", "name": "Notamacropus rufogriseus rufogriseus", "rank": "SUBSPECIES", "commonName": "Bennett's Wallaby", "lineage": "Wallabies" },
+            { "id": "NOTAMACROPUS_RUF_BANKSIANUS", "name": "Notamacropus rufogriseus banksianus", "rank": "SUBSPECIES", "commonName": "Mainland Red-necked Wallaby", "lineage": "Wallabies" }
+          ]
+        },
+        {
+          "id": "NOTAMACROPUS_EUGENII",
+          "name": "Notamacropus eugenii",
+          "rank": "SPECIES",
+          "commonName": "Tammar Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "NOTAMACROPUS_PARMA",
+          "name": "Notamacropus parma",
+          "rank": "SPECIES",
+          "commonName": "Parma Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "NOTAMACROPUS_PARRYI",
+          "name": "Notamacropus parryi",
+          "rank": "SPECIES",
+          "commonName": "Whiptail Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "NOTAMACROPUS_DORSALIS",
+          "name": "Notamacropus dorsalis",
+          "rank": "SPECIES",
+          "commonName": "Black-striped Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_WALLABIA",
+      "name": "Wallabia",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Swamp Wallaby — the most genetically distinct of all macropods. Unlike every other member of the family, it does not share the standard macropod chromosome number, a distinction so dramatic that it cannot hybridise with any close relative. It has also been observed to begin a second pregnancy while still gestating the first.",
+      "lineage": "Wallabies",
+      "children": [
+        {
+          "id": "WALLABIA_BICOLOR",
+          "name": "Wallabia bicolor",
+          "rank": "SPECIES",
+          "commonName": "Swamp Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SETONIX",
+      "name": "Setonix",
+      "rank": "GENUS",
+      "description": "A monotypic genus and one of the smallest macropods. Setonix is most closely related to the pademelons (Thylogale) and shares with them a compact, stocky build suited to dense vegetation. Today it is essentially restricted to two small islands off Western Australia — Rottnest Island and Bald Island — though it once ranged across the mainland's south-west.",
+      "lineage": "Wallabies",
+      "children": [
+        {
+          "id": "SETONIX_BRACHYURUS",
+          "name": "Setonix brachyurus",
+          "rank": "SPECIES",
+          "commonName": "Quokka",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"],
+          "description": "The quokka's famously unguarded expression — a product of its relaxed jaw muscles — made it an internet celebrity. Dutch mariner Willem de Vlamingh mistook them for large rats in 1696, naming his landing spot 'Ratte nest' (Rottnest). Despite their approachable demeanour, quokkas are a threatened species; mainland populations cling on in scattered pockets of south-western Australia."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ONYCHOGALEA",
+      "name": "Onychogalea",
+      "rank": "GENUS",
+      "description": "The nailtail wallabies, named for a small horny spur at the tip of their tail whose function remains unknown. All three species were once widespread across Australia's interior grasslands; one — the crescent nailtail wallaby — is extinct, and the bridled nailtail wallaby is critically endangered, with fewer than 500 individuals surviving in central Queensland.",
+      "lineage": "Wallabies",
+      "children": [
+        {
+          "id": "ONYCHOGALEA_FRAENATA",
+          "name": "Onychogalea fraenata",
+          "rank": "SPECIES",
+          "commonName": "Bridled Nailtail Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "ONYCHOGALEA_UNGUIFERA",
+          "name": "Onychogalea unguifera",
+          "rank": "SPECIES",
+          "commonName": "Northern Nailtail Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "ONYCHOGALEA_LUNATA",
+          "name": "Onychogalea lunata",
+          "rank": "SPECIES",
+          "commonName": "†Crescent Nailtail Wallaby",
+          "lineage": "Wallabies",
+          "continents": ["Oceania"],
+          "extinct": true
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THYLOGALE",
+      "name": "Thylogale",
+      "rank": "GENUS",
+      "description": "The pademelons — compact, short-tailed macropods of forest edges and dense vegetation from eastern Australia through New Guinea. They bound on all four limbs through thick undergrowth rather than hopping on two, and their cryptic brown coats make them difficult to spot in the dim light of forest floors.",
+      "lineage": "Pademelons",
+      "children": [
+        {
+          "id": "THYLOGALE_THETIS",
+          "name": "Thylogale thetis",
+          "rank": "SPECIES",
+          "commonName": "Red-necked Pademelon",
+          "lineage": "Pademelons",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "THYLOGALE_STIGMATICA",
+          "name": "Thylogale stigmatica",
+          "rank": "SPECIES",
+          "commonName": "Red-legged Pademelon",
+          "lineage": "Pademelons",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "THYLOGALE_BILLARDIERII",
+          "name": "Thylogale billardierii",
+          "rank": "SPECIES",
+          "commonName": "Tasmanian Pademelon",
+          "lineage": "Pademelons",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "THYLOGALE_BRUNII",
+          "name": "Thylogale brunii",
+          "rank": "SPECIES",
+          "commonName": "Dusky Pademelon",
+          "lineage": "Pademelons",
+          "continents": ["Oceania"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PETROGALE",
+      "name": "Petrogale",
+      "rank": "GENUS",
+      "description": "The rock-wallabies — a spectacular radiation of 16 species that have evolved to navigate cliff faces and rocky outcrops with remarkable agility. Their feet have granulated, friction-pad soles and stiff hind claws that grip rough surfaces. Many species are now isolated on 'habitat islands' — isolated rock formations in an otherwise inhospitable landscape — and several are endangered.",
+      "lineage": "Rock-wallabies",
+      "children": [
+        {
+          "id": "PETROGALE_XANTHOPUS",
+          "name": "Petrogale xanthopus",
+          "rank": "SPECIES",
+          "commonName": "Yellow-footed Rock-wallaby",
+          "lineage": "Rock-wallabies",
+          "continents": ["Oceania"],
+          "subspeciesCount": 2,
+          "children": [
+            { "id": "PETROGALE_XAN_XANTHOPUS", "name": "Petrogale xanthopus xanthopus", "rank": "SUBSPECIES", "commonName": "South Australian Yellow-footed Rock-wallaby", "lineage": "Rock-wallabies" },
+            { "id": "PETROGALE_XAN_CELERIS", "name": "Petrogale xanthopus celeris", "rank": "SUBSPECIES", "commonName": "Queensland Yellow-footed Rock-wallaby", "lineage": "Rock-wallabies" }
+          ]
+        },
+        {
+          "id": "PETROGALE_PENICILLATA",
+          "name": "Petrogale penicillata",
+          "rank": "SPECIES",
+          "commonName": "Brush-tailed Rock-wallaby",
+          "lineage": "Rock-wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "PETROGALE_LATERALIS",
+          "name": "Petrogale lateralis",
+          "rank": "SPECIES",
+          "commonName": "Black-footed Rock-wallaby",
+          "lineage": "Rock-wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "PETROGALE_BRACHYOTIS",
+          "name": "Petrogale brachyotis",
+          "rank": "SPECIES",
+          "commonName": "Short-eared Rock-wallaby",
+          "lineage": "Rock-wallabies",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "PETROGALE_CONCINNA",
+          "name": "Petrogale concinna",
+          "rank": "SPECIES",
+          "commonName": "Nabarlek",
+          "lineage": "Rock-wallabies",
+          "continents": ["Oceania"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DENDROLAGUS",
+      "name": "Dendrolagus",
+      "rank": "GENUS",
+      "description": "The tree-kangaroos — an extraordinary reversal of the macropod body plan back to an arboreal life. Their ancestors were ground-dwelling hoppers; over millions of years the tree-kangaroos evolved stronger forelimbs, shorter and broader hind feet, and a long tail for balance as they returned to the canopy. Most species live in the rainforests of New Guinea; two are native to northern Queensland.",
+      "lineage": "Tree-kangaroos",
+      "children": [
+        {
+          "id": "DENDROLAGUS_LUMHOLTZI",
+          "name": "Dendrolagus lumholtzi",
+          "rank": "SPECIES",
+          "commonName": "Lumholtz's Tree-kangaroo",
+          "lineage": "Tree-kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "DENDROLAGUS_BENNETTIANUS",
+          "name": "Dendrolagus bennettianus",
+          "rank": "SPECIES",
+          "commonName": "Bennett's Tree-kangaroo",
+          "lineage": "Tree-kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "DENDROLAGUS_GOODFELLOWI",
+          "name": "Dendrolagus goodfellowi",
+          "rank": "SPECIES",
+          "commonName": "Goodfellow's Tree-kangaroo",
+          "lineage": "Tree-kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "DENDROLAGUS_MATSCHIEI",
+          "name": "Dendrolagus matschiei",
+          "rank": "SPECIES",
+          "commonName": "Matschie's Tree-kangaroo",
+          "lineage": "Tree-kangaroos",
+          "continents": ["Oceania"]
+        },
+        {
+          "id": "DENDROLAGUS_DORIANUS",
+          "name": "Dendrolagus dorianus",
+          "rank": "SPECIES",
+          "commonName": "Doria's Tree-kangaroo",
+          "lineage": "Tree-kangaroos",
+          "continents": ["Oceania"]
+        }
+      ]
+    }
+  ]
+}
