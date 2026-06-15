@@ -303,6 +303,29 @@ const PARIDAE_THEME: ColorTheme = {
   hybridColor:     "#9aaa68",
 };
 
+const TESTUDINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Mediterranean Tortoises": "#c8a030",
+    "Central Asian Tortoises":  "#a07830",
+    "Hinged-back Tortoises":    "#8a6828",
+    "Star Tortoises":           "#c8b840",
+  },
+  breedGroupColor: "#a08828",
+  hybridColor:     "#b89838",
+};
+
+const GEOEMYDIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "European Pond Turtles": "#4a7848",
+    "Asian Pond Turtles":    "#3a6858",
+    "Asian Box Turtles":     "#6a8838",
+  },
+  breedGroupColor: "#4a6840",
+  hybridColor:     "#6a8850",
+};
+
 const TURDIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
@@ -355,6 +378,8 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   columbidae:      COLUMBIDAE_THEME,
   corvidae:        CORVIDAE_THEME,
   paridae:         PARIDAE_THEME,
+  testudinidae:    TESTUDINIDAE_THEME,
+  geoemydidae:     GEOEMYDIDAE_THEME,
   turdidae:        TURDIDAE_THEME,
   tardigrada:      TARDIGRADA_THEME,
 };
