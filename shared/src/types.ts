@@ -12,6 +12,7 @@ export interface TaxonNode {
   coatType?: string;
   continents?: string[];
   accepted?: boolean;
+  familySlug?: string;
   children?: TaxonNode[];
 }
 
