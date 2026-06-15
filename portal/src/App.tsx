@@ -199,6 +199,16 @@ export default function App() {
     return n;
   }, []);
 
+  const totalSpecies = useMemo(() => {
+    let n = 0;
+    function walk(node: TaxonNode) {
+      if (node.rank === "SPECIES") n++;
+      node.children?.forEach(walk);
+    }
+    walk(treeData);
+    return n;
+  }, [treeData]);
+
   const btnBase: React.CSSProperties = {
     padding: "6px 14px",
     borderRadius: 6,
@@ -232,8 +242,8 @@ export default function App() {
           <span style={{ fontSize: 18, fontWeight: 600, letterSpacing: "-0.01em" }}>Systema Naturae</span>
           <span style={{ fontSize: 13, color: "#555" }}>
             {inFamilyFocus
-              ? (focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? "")
-              : `Animal taxonomy · ${familyCount} families`}
+              ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${totalSpecies.toLocaleString()} species`
+              : `Animal taxonomy · ${familyCount} families · ${totalSpecies.toLocaleString()} species`}
           </span>
         </div>
         <SearchBox data={annotatedData} onNavigate={navigateTo} />
