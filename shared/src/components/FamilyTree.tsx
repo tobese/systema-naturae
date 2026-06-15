@@ -155,6 +155,7 @@ export default function FamilyTree({
   const thumbnailCache = useRef<Map<string, string | null>>(new Map());
   const setupRef = useRef<Setup | null>(null);
   const prevLayoutRef = useRef<"radial" | "vertical" | null>(null);
+  const savedZoomRef = useRef<d3.ZoomTransform | null>(null);
 
   const attachTooltip = useCallback((
     sel: d3.Selection<SVGGElement, PNode, SVGGElement, unknown>,
@@ -216,6 +217,12 @@ export default function FamilyTree({
         gLinks: g.append("g").attr("class", "links").attr("fill", "none").attr("stroke-width", 1),
         gNodes: g.append("g").attr("class", "nodes"),
       };
+
+      // Restore zoom saved from previous render, or center the tree on first init.
+      // Without this, cleanup + re-init on every render dep change resets the viewport.
+      const restoredZoom = savedZoomRef.current ?? d3.zoomIdentity.translate(W / 2, H / 2);
+      savedZoomRef.current = null;
+      d3.select(svg).call(zoom.transform, restoredZoom);
     }
 
     const { zoom, gSpecial, gLinks, gNodes } = setupRef.current;
@@ -568,7 +575,10 @@ export default function FamilyTree({
     if (containerRef.current) ro.observe(containerRef.current);
     return () => {
       ro.disconnect();
-      // Tear down on unmount so a remount gets a fresh SVG
+      // Save zoom so the next render can restore it (cleanup runs on every dep change, not just unmount)
+      if (svgRef.current && setupRef.current) {
+        savedZoomRef.current = d3.zoomTransform(svgRef.current);
+      }
       if (svgRef.current) d3.select(svgRef.current).selectAll("*").remove();
       setupRef.current = null;
       prevLayoutRef.current = null;
