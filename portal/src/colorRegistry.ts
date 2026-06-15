@@ -94,6 +94,18 @@ const CERVIDAE_THEME: ColorTheme = {
   hybridColor: "#888",
 };
 
+const BOVIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Cattle":  "#C8973A",
+    "Zebu":    "#B07840",
+    "Buffalo": "#607858",
+    "Bison":   "#704830",
+  },
+  breedGroupColor: "#A08050",
+  hybridColor: "#C09060",
+};
+
 const CETACEA_THEME: ColorTheme = {
   subfamilyColors: { Mysticeti: "#1a6b8a", Odontoceti: "#0d4f6e" },
   lineageColors: {
@@ -116,6 +128,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   anatidae:   ANATIDAE_THEME,
   cervidae:   CERVIDAE_THEME,
   cetacea:    CETACEA_THEME,
+  bovidae:    BOVIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

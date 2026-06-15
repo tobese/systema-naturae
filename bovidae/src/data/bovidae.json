@@ -1,0 +1,302 @@
+{
+  "id": "FAM_BOVIDAE",
+  "name": "Bovidae",
+  "rank": "FAMILY",
+  "commonName": "Cattle & buffalo",
+  "familySlug": "bovidae",
+  "children": [
+    {
+      "id": "GENUS_BOS",
+      "name": "Bos",
+      "rank": "GENUS",
+      "lineage": "Cattle",
+      "children": [
+        {
+          "id": "BOS_TAURUS",
+          "name": "Bos taurus",
+          "rank": "SPECIES",
+          "commonName": "Domestic Cattle",
+          "lineage": "Cattle",
+          "continents": ["Africa", "Asia", "Europe", "North America", "South America", "Oceania"],
+          "children": [
+            {
+              "id": "bg-cattle-dairy",
+              "name": "Dairy",
+              "rank": "BREED_GROUP",
+              "lineage": "Cattle",
+              "children": [
+                { "id": "breed-holstein", "name": "Holstein", "rank": "BREED", "origin": "Netherlands / Germany", "lineage": "Cattle" },
+                { "id": "breed-jersey", "name": "Jersey", "rank": "BREED", "origin": "Channel Islands", "lineage": "Cattle" },
+                { "id": "breed-guernsey", "name": "Guernsey", "rank": "BREED", "origin": "Channel Islands", "lineage": "Cattle" },
+                { "id": "breed-ayrshire", "name": "Ayrshire", "rank": "BREED", "origin": "Scotland", "lineage": "Cattle" },
+                { "id": "breed-brown-swiss", "name": "Brown Swiss", "rank": "BREED", "origin": "Switzerland", "lineage": "Cattle" },
+                { "id": "breed-milking-shorthorn", "name": "Milking Shorthorn", "rank": "BREED", "origin": "England", "lineage": "Cattle" }
+              ]
+            },
+            {
+              "id": "bg-cattle-beef",
+              "name": "Beef",
+              "rank": "BREED_GROUP",
+              "lineage": "Cattle",
+              "children": [
+                { "id": "breed-hereford", "name": "Hereford", "rank": "BREED", "origin": "England", "lineage": "Cattle" },
+                { "id": "breed-angus", "name": "Angus", "rank": "BREED", "origin": "Scotland", "lineage": "Cattle" },
+                { "id": "breed-charolais", "name": "Charolais", "rank": "BREED", "origin": "France", "lineage": "Cattle" },
+                { "id": "breed-simmental", "name": "Simmental", "rank": "BREED", "origin": "Switzerland", "lineage": "Cattle" },
+                { "id": "breed-limousin", "name": "Limousin", "rank": "BREED", "origin": "France", "lineage": "Cattle" },
+                { "id": "breed-belgian-blue", "name": "Belgian Blue", "rank": "BREED", "origin": "Belgium", "lineage": "Cattle" }
+              ]
+            },
+            {
+              "id": "bg-cattle-heritage",
+              "name": "Heritage",
+              "rank": "BREED_GROUP",
+              "lineage": "Cattle",
+              "children": [
+                { "id": "breed-highland", "name": "Highland", "rank": "BREED", "origin": "Scotland", "lineage": "Cattle" },
+                { "id": "breed-dexter", "name": "Dexter", "rank": "BREED", "origin": "Ireland", "lineage": "Cattle" },
+                { "id": "breed-galloway", "name": "Galloway", "rank": "BREED", "origin": "Scotland", "lineage": "Cattle" },
+                { "id": "breed-shorthorn", "name": "Shorthorn", "rank": "BREED", "origin": "England", "lineage": "Cattle" },
+                { "id": "breed-longhorn", "name": "Texas Longhorn", "rank": "BREED", "origin": "United States", "lineage": "Cattle" },
+                { "id": "breed-aurochs-like", "name": "Heck Cattle", "rank": "BREED", "origin": "Germany", "lineage": "Cattle" }
+              ]
+            },
+            {
+              "id": "bg-cattle-tropical",
+              "name": "Tropical",
+              "rank": "BREED_GROUP",
+              "lineage": "Cattle",
+              "children": [
+                { "id": "breed-ankole", "name": "Ankole-Watusi", "rank": "BREED", "origin": "East Africa", "lineage": "Cattle" },
+                { "id": "breed-ndama", "name": "N'Dama", "rank": "BREED", "origin": "West Africa", "lineage": "Cattle" },
+                { "id": "breed-normande", "name": "Normande", "rank": "BREED", "origin": "France", "lineage": "Cattle" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "BOS_INDICUS",
+          "name": "Bos indicus",
+          "rank": "SPECIES",
+          "commonName": "Zebu",
+          "lineage": "Zebu",
+          "continents": ["Africa", "Asia", "South America"],
+          "children": [
+            {
+              "id": "bg-zebu-south-asian",
+              "name": "South Asian",
+              "rank": "BREED_GROUP",
+              "lineage": "Zebu",
+              "children": [
+                { "id": "breed-brahman", "name": "Brahman", "rank": "BREED", "origin": "India / Americas", "lineage": "Zebu" },
+                { "id": "breed-gir", "name": "Gir", "rank": "BREED", "origin": "India", "lineage": "Zebu" },
+                { "id": "breed-sahiwal", "name": "Sahiwal", "rank": "BREED", "origin": "Pakistan", "lineage": "Zebu" },
+                { "id": "breed-kankrej", "name": "Kankrej", "rank": "BREED", "origin": "India", "lineage": "Zebu" },
+                { "id": "breed-ongole", "name": "Ongole", "rank": "BREED", "origin": "India", "lineage": "Zebu" }
+              ]
+            },
+            {
+              "id": "bg-zebu-african",
+              "name": "African",
+              "rank": "BREED_GROUP",
+              "lineage": "Zebu",
+              "children": [
+                { "id": "breed-boran", "name": "Boran", "rank": "BREED", "origin": "Ethiopia / Kenya", "lineage": "Zebu" },
+                { "id": "breed-tuli", "name": "Tuli", "rank": "BREED", "origin": "Zimbabwe", "lineage": "Zebu" },
+                { "id": "breed-nguni", "name": "Nguni", "rank": "BREED", "origin": "Southern Africa", "lineage": "Zebu" },
+                { "id": "breed-maasai", "name": "Maasai", "rank": "BREED", "origin": "Kenya / Tanzania", "lineage": "Zebu" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "BOS_MUTUS",
+          "name": "Bos mutus",
+          "rank": "SPECIES",
+          "commonName": "Yak",
+          "lineage": "Cattle",
+          "subspeciesCount": 2,
+          "continents": ["Asia"],
+          "children": [
+            {
+              "id": "BOS_MUTUS_WILD",
+              "name": "Bos mutus mutus",
+              "rank": "SUBSPECIES",
+              "commonName": "Wild Yak",
+              "lineage": "Cattle"
+            },
+            {
+              "id": "BOS_GRUNNIENS",
+              "name": "Bos mutus grunniens",
+              "rank": "SUBSPECIES",
+              "commonName": "Domestic Yak",
+              "lineage": "Cattle"
+            }
+          ]
+        },
+        {
+          "id": "BOS_GAURUS",
+          "name": "Bos gaurus",
+          "rank": "SPECIES",
+          "commonName": "Gaur",
+          "lineage": "Cattle",
+          "continents": ["Asia"]
+        },
+        {
+          "id": "BOS_JAVANICUS",
+          "name": "Bos javanicus",
+          "rank": "SPECIES",
+          "commonName": "Banteng",
+          "lineage": "Cattle",
+          "continents": ["Asia"]
+        },
+        {
+          "id": "BOS_SAUVELI",
+          "name": "Bos sauveli",
+          "rank": "SPECIES",
+          "commonName": "Kouprey",
+          "lineage": "Cattle",
+          "continents": ["Asia"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BUBALUS",
+      "name": "Bubalus",
+      "rank": "GENUS",
+      "lineage": "Buffalo",
+      "children": [
+        {
+          "id": "BUBALUS_BUBALIS",
+          "name": "Bubalus bubalis",
+          "rank": "SPECIES",
+          "commonName": "Water Buffalo",
+          "lineage": "Buffalo",
+          "subspeciesCount": 2,
+          "continents": ["Asia", "Africa", "Europe", "Oceania"],
+          "children": [
+            {
+              "id": "BUBALUS_ARNEE",
+              "name": "Bubalus bubalis arnee",
+              "rank": "SUBSPECIES",
+              "commonName": "Wild Water Buffalo",
+              "lineage": "Buffalo"
+            },
+            {
+              "id": "BUBALUS_DOMESTIC",
+              "name": "Bubalus bubalis bubalis",
+              "rank": "SUBSPECIES",
+              "commonName": "Domestic Water Buffalo",
+              "lineage": "Buffalo"
+            }
+          ]
+        },
+        {
+          "id": "BUBALUS_MINDORENSIS",
+          "name": "Bubalus mindorensis",
+          "rank": "SPECIES",
+          "commonName": "Tamaraw",
+          "lineage": "Buffalo",
+          "continents": ["Asia"]
+        },
+        {
+          "id": "BUBALUS_DEPRESSICORNIS",
+          "name": "Bubalus depressicornis",
+          "rank": "SPECIES",
+          "commonName": "Lowland Anoa",
+          "lineage": "Buffalo",
+          "continents": ["Asia"]
+        },
+        {
+          "id": "BUBALUS_QUARLESI",
+          "name": "Bubalus quarlesi",
+          "rank": "SPECIES",
+          "commonName": "Mountain Anoa",
+          "lineage": "Buffalo",
+          "continents": ["Asia"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BISON",
+      "name": "Bison",
+      "rank": "GENUS",
+      "lineage": "Bison",
+      "children": [
+        {
+          "id": "BISON_BISON",
+          "name": "Bison bison",
+          "rank": "SPECIES",
+          "commonName": "American Bison",
+          "lineage": "Bison",
+          "subspeciesCount": 2,
+          "continents": ["North America"],
+          "children": [
+            {
+              "id": "BISON_BISON_BISON",
+              "name": "Bison bison bison",
+              "rank": "SUBSPECIES",
+              "commonName": "Plains Bison",
+              "lineage": "Bison"
+            },
+            {
+              "id": "BISON_ATHABASCAE",
+              "name": "Bison bison athabascae",
+              "rank": "SUBSPECIES",
+              "commonName": "Wood Bison",
+              "lineage": "Bison"
+            }
+          ]
+        },
+        {
+          "id": "BISON_BONASUS",
+          "name": "Bison bonasus",
+          "rank": "SPECIES",
+          "commonName": "European Bison",
+          "lineage": "Bison",
+          "continents": ["Europe"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SYNCERUS",
+      "name": "Syncerus",
+      "rank": "GENUS",
+      "lineage": "Buffalo",
+      "children": [
+        {
+          "id": "SYNCERUS_CAFFER",
+          "name": "Syncerus caffer",
+          "rank": "SPECIES",
+          "commonName": "African Buffalo",
+          "lineage": "Buffalo",
+          "subspeciesCount": 4,
+          "continents": ["Africa"],
+          "children": [
+            {
+              "id": "SYNCERUS_CAFFER_CAFFER",
+              "name": "Syncerus caffer caffer",
+              "rank": "SUBSPECIES",
+              "commonName": "Cape Buffalo",
+              "lineage": "Buffalo"
+            },
+            {
+              "id": "SYNCERUS_CAFFER_NANUS",
+              "name": "Syncerus caffer nanus",
+              "rank": "SUBSPECIES",
+              "commonName": "Forest Buffalo",
+              "lineage": "Buffalo"
+            },
+            {
+              "id": "SYNCERUS_CAFFER_BRACHYCEROS",
+              "name": "Syncerus caffer brachyceros",
+              "rank": "SUBSPECIES",
+              "commonName": "West African Savanna Buffalo",
+              "lineage": "Buffalo"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
