@@ -303,6 +303,19 @@ const PARIDAE_THEME: ColorTheme = {
   hybridColor:     "#9aaa68",
 };
 
+const TURDIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Blackbirds":     "#1a1a1a",
+    "Thrushes":       "#c8823a",
+    "Winter Thrushes": "#7a9858",
+    "Asian Thrushes": "#a06838",
+    "Forest Thrushes": "#5a7848",
+  },
+  breedGroupColor: "#8a6030",
+  hybridColor:     "#a07840",
+};
+
 const TARDIGRADA_THEME: ColorTheme = {
   subfamilyColors: {
     "Eutardigrada":    "#c8a830",
@@ -342,6 +355,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   columbidae:      COLUMBIDAE_THEME,
   corvidae:        CORVIDAE_THEME,
   paridae:         PARIDAE_THEME,
+  turdidae:        TURDIDAE_THEME,
   tardigrada:      TARDIGRADA_THEME,
 };
 
