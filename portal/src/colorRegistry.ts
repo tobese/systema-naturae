@@ -129,6 +129,55 @@ const CETACEA_THEME: ColorTheme = {
   hybridColor: "#90a4ae",
 };
 
+const LAMNIFORMES_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Great white": "#c8d0d8",
+    "Mako":        "#4a7090",
+    "Thresher":    "#5a8898",
+    "Basking":     "#8aaabb",
+    "Deepwater":   "#2a3858",
+  },
+  breedGroupColor: "#607888",
+  hybridColor:     "#8098b0",
+};
+
+const CARCHARHINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Bull":    "#8a6040",
+    "Tiger":   "#c8a030",
+    "Blue":    "#1a5898",
+    "Reef":    "#2a8870",
+    "Pelagic": "#1a6888",
+  },
+  breedGroupColor: "#507870",
+  hybridColor:     "#708898",
+};
+
+const SPHYRNIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Hammerhead": "#3a5898",
+    "Bonnethead": "#6878b8",
+  },
+  breedGroupColor: "#4a6898",
+  hybridColor:     "#8898c8",
+};
+
+const ORECTOLOBIFORMES_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Whale shark": "#1a5878",
+    "Nurse":       "#c8a060",
+    "Zebra":       "#8a7848",
+    "Wobbegong":   "#6a6840",
+    "Bamboo":      "#7a9860",
+  },
+  breedGroupColor: "#607848",
+  hybridColor:     "#9a9868",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -141,7 +190,11 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   cervidae:   CERVIDAE_THEME,
   cetacea:    CETACEA_THEME,
   bovidae:    BOVIDAE_THEME,
-  leporidae:  LEPORIDAE_THEME,
+  leporidae:       LEPORIDAE_THEME,
+  lamniformes:     LAMNIFORMES_THEME,
+  carcharhinidae:  CARCHARHINIDAE_THEME,
+  sphyrnidae:      SPHYRNIDAE_THEME,
+  orectolobiformes: ORECTOLOBIFORMES_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

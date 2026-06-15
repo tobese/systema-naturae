@@ -200,6 +200,78 @@
               ]
             }
           ]
+        },
+        {
+          "id": "CHONDRICHTHYES",
+          "name": "Chondrichthyes",
+          "rank": "CLASS",
+          "commonName": "Cartilaginous fish",
+          "description": "Fish with skeletons made entirely of cartilage rather than bone. The class includes sharks, rays, and chimaeras — over 1,100 species. Their evolutionary lineage stretches back more than 450 million years, making them among the oldest jawed vertebrates.",
+          "children": [
+            {
+              "id": "CARCHARHINIFORMES",
+              "name": "Carcharhiniformes",
+              "rank": "ORDER",
+              "commonName": "Ground sharks",
+              "description": "The largest order of sharks with around 270 species. Ground sharks are characterised by a nictitating membrane over the eye, two dorsal fins without spines, an anal fin, and five gill slits. The order includes many of the most familiar and ecologically important species.",
+              "children": [
+                {
+                  "id": "FAM_CARCHARHINIDAE",
+                  "name": "Carcharhinidae",
+                  "rank": "FAMILY",
+                  "commonName": "Requiem sharks",
+                  "appSlug": "carcharhinidae",
+                  "speciesCount": 57,
+                  "notableMembers": ["Tiger shark", "Bull shark", "Blue shark", "Oceanic whitetip", "Blacktip reef shark"]
+                },
+                {
+                  "id": "FAM_SPHYRNIDAE",
+                  "name": "Sphyrnidae",
+                  "rank": "FAMILY",
+                  "commonName": "Hammerhead sharks",
+                  "appSlug": "sphyrnidae",
+                  "speciesCount": 9,
+                  "notableMembers": ["Great hammerhead", "Scalloped hammerhead", "Smooth hammerhead", "Bonnethead", "Winghead shark"]
+                }
+              ]
+            },
+            {
+              "id": "LAMNIFORMES",
+              "name": "Lamniformes",
+              "rank": "ORDER",
+              "commonName": "Mackerel sharks",
+              "description": "Fifteen species of powerful, largely pelagic sharks including the great white, makos, and basking shark. Lamniformes are distinguished by their large mouths extending behind the eyes and lack of a nictitating membrane. Several species are endothermic, maintaining body temperature above the surrounding water.",
+              "children": [
+                {
+                  "id": "FAM_LAMNIFORMES",
+                  "name": "Lamniformes",
+                  "rank": "FAMILY",
+                  "commonName": "Mackerel sharks",
+                  "appSlug": "lamniformes",
+                  "speciesCount": 15,
+                  "notableMembers": ["Great white shark", "Shortfin mako", "Basking shark", "Common thresher", "Goblin shark"]
+                }
+              ]
+            },
+            {
+              "id": "ORECTOLOBIFORMES",
+              "name": "Orectolobiformes",
+              "rank": "ORDER",
+              "commonName": "Carpet sharks",
+              "description": "Around 45 species of bottom-dwelling and reef-associated sharks, plus the whale shark — the largest fish on Earth. Carpet sharks are typically flattened with cryptic patterning, though the filter-feeding whale shark and nurse sharks are notable exceptions. Most are confined to the Indo-Pacific.",
+              "children": [
+                {
+                  "id": "FAM_ORECTOLOBIFORMES",
+                  "name": "Orectolobiformes",
+                  "rank": "FAMILY",
+                  "commonName": "Carpet & nurse sharks",
+                  "appSlug": "orectolobiformes",
+                  "speciesCount": 45,
+                  "notableMembers": ["Whale shark", "Nurse shark", "Zebra shark", "Spotted wobbegong", "Tawny nurse shark"]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
