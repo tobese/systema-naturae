@@ -197,6 +197,8 @@ export default function FamilyTree({
 
     // ── Initialize persistent structure once ─────────────────────────────────
     if (!setupRef.current) {
+      // Clear any orphaned DOM from a previous aborted init (StrictMode timing edge case)
+      d3.select(svg).selectAll("*").remove();
       const defs = d3.select(svg).append("defs");
       const glowFilter = defs.append("filter").attr("id", "glow");
       glowFilter.append("feGaussianBlur").attr("stdDeviation", "3.5").attr("result", "coloredBlur");
