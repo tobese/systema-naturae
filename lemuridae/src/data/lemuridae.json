@@ -1,0 +1,102 @@
+{
+  "id": "FAM_LEMURIDAE",
+  "name": "Lemuridae",
+  "rank": "FAMILY",
+  "commonName": "True lemurs",
+  "familySlug": "lemuridae",
+  "children": [
+    {
+      "id": "GENUS_LEMUR",
+      "name": "Lemur",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the ring-tailed lemur, arguably the most recognisable of all lemurs. Ring-tailed lemurs are unusual among strepsirrhines in being highly terrestrial and living in female-dominated groups. Their boldly banded tails are held aloft during social encounters.",
+      "lineage": "True lemurs",
+      "children": [
+        {
+          "id": "LEMUR_CATTA",
+          "name": "Lemur catta",
+          "rank": "SPECIES",
+          "commonName": "Ring-tailed lemur",
+          "lineage": "True lemurs",
+          "continents": ["Africa"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EULEMUR",
+      "name": "Eulemur",
+      "rank": "GENUS",
+      "description": "The brown and collared lemurs form the largest genus of Lemuridae, with over a dozen species distributed across Madagascar's forests from humid east to dry west. Many show striking sexual dichromatism, with males and females bearing conspicuously different coat colours.",
+      "lineage": "True lemurs",
+      "children": [
+        { "id": "EULEMUR_FULVUS", "name": "Eulemur fulvus", "rank": "SPECIES", "commonName": "Brown lemur", "lineage": "True lemurs", "continents": ["Africa"] },
+        { "id": "EULEMUR_MACACO", "name": "Eulemur macaco", "rank": "SPECIES", "commonName": "Black lemur", "lineage": "True lemurs", "continents": ["Africa"] },
+        { "id": "EULEMUR_MONGOZ", "name": "Eulemur mongoz", "rank": "SPECIES", "commonName": "Mongoose lemur", "lineage": "True lemurs", "continents": ["Africa"] },
+        { "id": "EULEMUR_RUBRIVENTER", "name": "Eulemur rubriventer", "rank": "SPECIES", "commonName": "Red-bellied lemur", "lineage": "True lemurs", "continents": ["Africa"] },
+        { "id": "EULEMUR_CORONATUS", "name": "Eulemur coronatus", "rank": "SPECIES", "commonName": "Crowned lemur", "lineage": "True lemurs", "continents": ["Africa"] },
+        { "id": "EULEMUR_FLAVIFRONS", "name": "Eulemur flavifrons", "rank": "SPECIES", "commonName": "Blue-eyed black lemur", "lineage": "True lemurs", "continents": ["Africa"] },
+        { "id": "EULEMUR_COLLARIS", "name": "Eulemur collaris", "rank": "SPECIES", "commonName": "Collared brown lemur", "lineage": "True lemurs", "continents": ["Africa"] }
+      ]
+    },
+    {
+      "id": "GENUS_VARECIA",
+      "name": "Varecia",
+      "rank": "GENUS",
+      "description": "Ruffed lemurs are the largest of the true lemurs, with a distinctive ruff of long fur around the neck and face. They are unusual primates in building nests for their offspring and in their dispersed fission-fusion social system. Critical seed dispersers for large-fruited trees in Madagascar's rainforests.",
+      "lineage": "Ruffed lemurs",
+      "children": [
+        {
+          "id": "VARECIA_VARIEGATA",
+          "name": "Varecia variegata",
+          "rank": "SPECIES",
+          "commonName": "Black-and-white ruffed lemur",
+          "lineage": "Ruffed lemurs",
+          "continents": ["Africa"],
+          "subspeciesCount": 3,
+          "children": [
+            { "id": "VARECIA_VARIEGATA_VARIEGATA", "name": "Varecia variegata variegata", "rank": "SUBSPECIES", "commonName": "Black-and-white ruffed lemur", "lineage": "Ruffed lemurs" },
+            { "id": "VARECIA_VARIEGATA_EDITORUM", "name": "Varecia variegata editorum", "rank": "SUBSPECIES", "commonName": "Southern black-and-white ruffed lemur", "lineage": "Ruffed lemurs" },
+            { "id": "VARECIA_VARIEGATA_SUBCINCTA", "name": "Varecia variegata subcincta", "rank": "SUBSPECIES", "commonName": "White-belted ruffed lemur", "lineage": "Ruffed lemurs" }
+          ]
+        },
+        {
+          "id": "VARECIA_RUBRA",
+          "name": "Varecia rubra",
+          "rank": "SPECIES",
+          "commonName": "Red ruffed lemur",
+          "lineage": "Ruffed lemurs",
+          "continents": ["Africa"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_HAPALEMUR",
+      "name": "Hapalemur",
+      "rank": "GENUS",
+      "description": "Bamboo lemurs are the only primates to specialise almost exclusively on bamboo — including the highly toxic giant bamboo, which they detoxify through physiological adaptations. They are endemic to Madagascar and critically threatened by bamboo forest loss.",
+      "lineage": "Bamboo lemurs",
+      "children": [
+        { "id": "HAPALEMUR_GRISEUS", "name": "Hapalemur griseus", "rank": "SPECIES", "commonName": "Grey bamboo lemur", "lineage": "Bamboo lemurs", "continents": ["Africa"] },
+        { "id": "HAPALEMUR_AUREUS", "name": "Hapalemur aureus", "rank": "SPECIES", "commonName": "Golden bamboo lemur", "lineage": "Bamboo lemurs", "continents": ["Africa"] },
+        { "id": "HAPALEMUR_OCCIDENTALIS", "name": "Hapalemur occidentalis", "rank": "SPECIES", "commonName": "Western bamboo lemur", "lineage": "Bamboo lemurs", "continents": ["Africa"] }
+      ]
+    },
+    {
+      "id": "GENUS_PROLEMUR",
+      "name": "Prolemur",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the greater bamboo lemur, the largest of the bamboo specialists. Once thought extinct, rediscovered in 1986. Critically endangered with fewer than 100–200 individuals remaining in fragmented patches of southeastern Madagascar.",
+      "lineage": "Bamboo lemurs",
+      "children": [
+        {
+          "id": "PROLEMUR_SIMUS",
+          "name": "Prolemur simus",
+          "rank": "SPECIES",
+          "commonName": "Greater bamboo lemur",
+          "lineage": "Bamboo lemurs",
+          "continents": ["Africa"]
+        }
+      ]
+    }
+  ]
+}

@@ -178,6 +178,56 @@ const ORECTOLOBIFORMES_THEME: ColorTheme = {
   hybridColor:     "#9a9868",
 };
 
+const HOMINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Gorillas":     "#5a3a20",
+    "Chimpanzees":  "#8a6030",
+    "Orangutans":   "#c87830",
+    "Human":        "#c8b090",
+  },
+  breedGroupColor: "#a08060",
+  hybridColor:     "#c0a070",
+};
+
+const CERCOPITHECIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Macaques": "#7a8a40",
+    "Baboons":  "#b09040",
+    "Colobus":  "#3a5840",
+    "Guenons":  "#4a8870",
+    "Langurs":  "#8a6848",
+  },
+  breedGroupColor: "#6a7850",
+  hybridColor:     "#9aaa60",
+};
+
+const CEBIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Capuchins":       "#c87830",
+    "Squirrel monkeys": "#e0b040",
+    "Howler monkeys":  "#8a4030",
+    "Spider monkeys":  "#4a6830",
+    "Marmosets":       "#6a9860",
+    "Tamarins":        "#c05828",
+  },
+  breedGroupColor: "#6a8848",
+  hybridColor:     "#a0b860",
+};
+
+const LEMURIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "True lemurs":    "#c85838",
+    "Ruffed lemurs":  "#283858",
+    "Bamboo lemurs":  "#4a7840",
+  },
+  breedGroupColor: "#806040",
+  hybridColor:     "#b07858",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -195,6 +245,10 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   carcharhinidae:  CARCHARHINIDAE_THEME,
   sphyrnidae:      SPHYRNIDAE_THEME,
   orectolobiformes: ORECTOLOBIFORMES_THEME,
+  hominidae:       HOMINIDAE_THEME,
+  cercopithecidae: CERCOPITHECIDAE_THEME,
+  cebidae:         CEBIDAE_THEME,
+  lemuridae:       LEMURIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

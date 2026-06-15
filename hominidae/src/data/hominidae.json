@@ -1,0 +1,135 @@
+{
+  "id": "FAM_HOMINIDAE",
+  "name": "Hominidae",
+  "rank": "FAMILY",
+  "commonName": "Great apes",
+  "familySlug": "hominidae",
+  "children": [
+    {
+      "id": "GENUS_GORILLA",
+      "name": "Gorilla",
+      "rank": "GENUS",
+      "description": "The largest living primates, native to the forests of central Africa. Gorillas are highly social, living in groups led by a dominant silverback male, and are primarily terrestrial herbivores. Critically endangered due to habitat loss, poaching, and disease.",
+      "lineage": "Gorillas",
+      "continents": ["Africa"],
+      "children": [
+        {
+          "id": "GORILLA_GORILLA",
+          "name": "Gorilla gorilla",
+          "rank": "SPECIES",
+          "commonName": "Western gorilla",
+          "lineage": "Gorillas",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "children": [
+            { "id": "GORILLA_GORILLA_GORILLA", "name": "Gorilla gorilla gorilla", "rank": "SUBSPECIES", "commonName": "Western lowland gorilla", "lineage": "Gorillas" },
+            { "id": "GORILLA_GORILLA_DIEHLI", "name": "Gorilla gorilla diehli", "rank": "SUBSPECIES", "commonName": "Cross River gorilla", "lineage": "Gorillas" }
+          ]
+        },
+        {
+          "id": "GORILLA_BERINGEI",
+          "name": "Gorilla beringei",
+          "rank": "SPECIES",
+          "commonName": "Eastern gorilla",
+          "lineage": "Gorillas",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "children": [
+            { "id": "GORILLA_BERINGEI_BERINGEI", "name": "Gorilla beringei beringei", "rank": "SUBSPECIES", "commonName": "Mountain gorilla", "lineage": "Gorillas" },
+            { "id": "GORILLA_BERINGEI_GRAUERI", "name": "Gorilla beringei graueri", "rank": "SUBSPECIES", "commonName": "Eastern lowland gorilla", "lineage": "Gorillas" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PAN",
+      "name": "Pan",
+      "rank": "GENUS",
+      "description": "Humans' closest living relatives, sharing approximately 98.7% of DNA with Homo sapiens. Pan comprises two species — the common chimpanzee and the bonobo — both confined to the forests of central Africa and distinguished by markedly different social structures.",
+      "lineage": "Chimpanzees",
+      "continents": ["Africa"],
+      "children": [
+        {
+          "id": "PAN_TROGLODYTES",
+          "name": "Pan troglodytes",
+          "rank": "SPECIES",
+          "commonName": "Common chimpanzee",
+          "lineage": "Chimpanzees",
+          "continents": ["Africa"],
+          "subspeciesCount": 4,
+          "children": [
+            { "id": "PAN_TROGLODYTES_VERUS", "name": "Pan troglodytes verus", "rank": "SUBSPECIES", "commonName": "Western chimpanzee", "lineage": "Chimpanzees" },
+            { "id": "PAN_TROGLODYTES_ELLIOTI", "name": "Pan troglodytes ellioti", "rank": "SUBSPECIES", "commonName": "Nigeria-Cameroon chimpanzee", "lineage": "Chimpanzees" },
+            { "id": "PAN_TROGLODYTES_TROGLODYTES", "name": "Pan troglodytes troglodytes", "rank": "SUBSPECIES", "commonName": "Central chimpanzee", "lineage": "Chimpanzees" },
+            { "id": "PAN_TROGLODYTES_SCHWEINFURTHII", "name": "Pan troglodytes schweinfurthii", "rank": "SUBSPECIES", "commonName": "Eastern chimpanzee", "lineage": "Chimpanzees" }
+          ]
+        },
+        {
+          "id": "PAN_PANISCUS",
+          "name": "Pan paniscus",
+          "rank": "SPECIES",
+          "commonName": "Bonobo",
+          "lineage": "Chimpanzees",
+          "continents": ["Africa"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PONGO",
+      "name": "Pongo",
+      "rank": "GENUS",
+      "description": "The only great apes native to Asia, orangutans inhabit the tropical rainforests of Borneo and Sumatra. They are the most arboreal of the great apes and the most solitary, with a highly developed intelligence and exceptionally long inter-birth intervals.",
+      "lineage": "Orangutans",
+      "continents": ["Asia"],
+      "children": [
+        {
+          "id": "PONGO_PYGMAEUS",
+          "name": "Pongo pygmaeus",
+          "rank": "SPECIES",
+          "commonName": "Bornean orangutan",
+          "lineage": "Orangutans",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "children": [
+            { "id": "PONGO_PYGMAEUS_PYGMAEUS", "name": "Pongo pygmaeus pygmaeus", "rank": "SUBSPECIES", "commonName": "Northwest Bornean orangutan", "lineage": "Orangutans" },
+            { "id": "PONGO_PYGMAEUS_MORIO", "name": "Pongo pygmaeus morio", "rank": "SUBSPECIES", "commonName": "Northeast Bornean orangutan", "lineage": "Orangutans" },
+            { "id": "PONGO_PYGMAEUS_WURMBII", "name": "Pongo pygmaeus wurmbii", "rank": "SUBSPECIES", "commonName": "Central Bornean orangutan", "lineage": "Orangutans" }
+          ]
+        },
+        {
+          "id": "PONGO_ABELII",
+          "name": "Pongo abelii",
+          "rank": "SPECIES",
+          "commonName": "Sumatran orangutan",
+          "lineage": "Orangutans",
+          "continents": ["Asia"]
+        },
+        {
+          "id": "PONGO_TAPANULIENSIS",
+          "name": "Pongo tapanuliensis",
+          "rank": "SPECIES",
+          "commonName": "Tapanuli orangutan",
+          "lineage": "Orangutans",
+          "continents": ["Asia"]
+        }
+      ]
+    },
+    {
+      "id": "GENUS_HOMO",
+      "name": "Homo",
+      "rank": "GENUS",
+      "description": "A genus of great apes characterised by bipedal locomotion, reduced body hair, and exceptionally large brains relative to body size. Homo sapiens is the only surviving member and the most widely distributed primate, having colonised every continent on Earth.",
+      "lineage": "Human",
+      "children": [
+        {
+          "id": "HOMO_SAPIENS",
+          "name": "Homo sapiens",
+          "rank": "SPECIES",
+          "commonName": "Human",
+          "lineage": "Human",
+          "continents": ["Africa", "Europe", "Asia", "North America", "South America", "Oceania"]
+        }
+      ]
+    }
+  ]
+}
