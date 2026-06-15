@@ -365,7 +365,10 @@ function GenusPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect: 
       <PanelAncestors ancestors={ancestors} onSelect={onSelect} />
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Genus</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 4 }}>{node.name}</div>
-      {node.commonName && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 12 }}>{node.commonName}</div>}
+      {node.commonName && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.commonName}</div>}
+      {node.description && (
+        <div style={{ fontSize: 13, color: "#777", lineHeight: 1.7, marginBottom: 14 }}>{node.description}</div>
+      )}
       <div style={{ fontSize: 13, color: "#666", marginBottom: 16 }}>{species.length} {species.length === 1 ? "species" : "species"}</div>
       {species.length > 0 && (
         <>

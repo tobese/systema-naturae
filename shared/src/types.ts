@@ -13,6 +13,7 @@ export interface TaxonNode {
   continents?: string[];
   accepted?: boolean;
   familySlug?: string;
+  description?: string;
   children?: TaxonNode[];
 }
 

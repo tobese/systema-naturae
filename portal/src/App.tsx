@@ -299,6 +299,8 @@ export default function App() {
               siblings={navContext.siblings}
               index={navContext.index}
               onNavigate={handleSelect}
+              breadcrumbPath={breadcrumbPath}
+              colorTheme={colorTheme}
             />
           )}
           <div style={{ flex: 1, overflowY: "auto" }}>
