@@ -265,7 +265,7 @@ export default function App() {
 
       {/* Main */}
       <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
-        <div style={{ flex: 1, overflow: "hidden" }}>
+        <div style={{ flex: 1, overflow: "hidden", position: "relative" }}>
           <FamilyTree
             data={treeData}
             layout={layout}
@@ -276,6 +276,26 @@ export default function App() {
             colorTheme={colorTheme}
             focusedFamilySlug={focusedFamilySlug}
           />
+          <div style={{
+            position: "absolute",
+            bottom: 16,
+            right: 16,
+            width: 96,
+            height: 110,
+            pointerEvents: "none",
+          }}>
+            <div style={{
+              position: "absolute",
+              inset: 6,
+              borderRadius: "50%",
+              background: "rgba(10,10,20,0.55)",
+            }} />
+            <img
+              src={`${import.meta.env.BASE_URL}black-cat-studio.svg`}
+              alt="Black Cat Studio"
+              style={{ width: "100%", height: "100%", position: "relative" }}
+            />
+          </div>
         </div>
 
         {/* Sidebar */}
