@@ -303,6 +303,20 @@ const PARIDAE_THEME: ColorTheme = {
   hybridColor:     "#9aaa68",
 };
 
+const MUSTELIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Badgers":           "#c8c0a0",
+    "Honey Badger":      "#d0c8b0",
+    "Wolverine":         "#6a4828",
+    "Martens":           "#8a5c28",
+    "Weasels & Polecats": "#c8a060",
+    "Otters":            "#4a6858",
+  },
+  breedGroupColor: "#8a7048",
+  hybridColor:     "#a08858",
+};
+
 const TESTUDINIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
@@ -378,6 +392,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   columbidae:      COLUMBIDAE_THEME,
   corvidae:        CORVIDAE_THEME,
   paridae:         PARIDAE_THEME,
+  mustelidae:      MUSTELIDAE_THEME,
   testudinidae:    TESTUDINIDAE_THEME,
   geoemydidae:     GEOEMYDIDAE_THEME,
   turdidae:        TURDIDAE_THEME,
