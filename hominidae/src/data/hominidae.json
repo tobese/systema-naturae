@@ -118,7 +118,7 @@
       "id": "GENUS_HOMO",
       "name": "Homo",
       "rank": "GENUS",
-      "description": "A genus of great apes characterised by bipedal locomotion, reduced body hair, and exceptionally large brains relative to body size. Homo sapiens is the only surviving member and the most widely distributed primate, having colonised every continent on Earth.",
+      "description": "A genus of bipedal great apes with exceptionally large brains, arising in Africa roughly 2–3 million years ago. At least a dozen species are known from the fossil record, though only Homo sapiens survives today. Several archaic species — including Neanderthals and Denisovans — interbred with modern humans, leaving traces in living genomes.",
       "lineage": "Human",
       "children": [
         {
@@ -127,8 +127,48 @@
           "rank": "SPECIES",
           "commonName": "Human",
           "lineage": "Human",
-          "continents": ["Africa", "Europe", "Asia", "North America", "South America", "Oceania"]
-        }
+          "continents": ["Africa", "Europe", "Asia", "North America", "South America", "Oceania"],
+          "subspeciesCount": 2,
+          "children": [
+            { "id": "HOMO_SAPIENS_IDALTU", "name": "Homo sapiens idaltu", "rank": "SUBSPECIES", "commonName": "†Herto man", "lineage": "Human", "extinct": true },
+            { "id": "HOMO_SAPIENS_SAPIENS", "name": "Homo sapiens sapiens", "rank": "SUBSPECIES", "commonName": "Anatomically modern human", "lineage": "Human" }
+          ]
+        },
+        { "id": "HOMO_NEANDERTHALENSIS", "name": "Homo neanderthalensis", "rank": "SPECIES", "commonName": "†Neanderthal", "lineage": "Archaic humans", "continents": ["Europe", "Asia"], "extinct": true },
+        { "id": "HOMO_DENISOVA", "name": "Homo denisova", "rank": "SPECIES", "commonName": "†Denisovan", "lineage": "Archaic humans", "continents": ["Asia"], "extinct": true },
+        { "id": "HOMO_HEIDELBERGENSIS", "name": "Homo heidelbergensis", "rank": "SPECIES", "commonName": "†Heidelberg man", "lineage": "Archaic humans", "continents": ["Africa", "Europe", "Asia"], "extinct": true },
+        { "id": "HOMO_ERECTUS", "name": "Homo erectus", "rank": "SPECIES", "commonName": "†Java / Peking man", "lineage": "Archaic humans", "continents": ["Africa", "Asia"], "extinct": true },
+        { "id": "HOMO_HABILIS", "name": "Homo habilis", "rank": "SPECIES", "commonName": "†Handy man", "lineage": "Archaic humans", "continents": ["Africa"], "extinct": true },
+        { "id": "HOMO_FLORESIENSIS", "name": "Homo floresiensis", "rank": "SPECIES", "commonName": "†Hobbit", "lineage": "Archaic humans", "continents": ["Asia"], "extinct": true },
+        { "id": "HOMO_NALEDI", "name": "Homo naledi", "rank": "SPECIES", "commonName": "†Naledi man", "lineage": "Archaic humans", "continents": ["Africa"], "extinct": true }
+      ]
+    },
+    {
+      "id": "GENUS_AUSTRALOPITHECUS",
+      "name": "Australopithecus",
+      "rank": "GENUS",
+      "description": "Extinct bipedal hominins from Africa, living roughly 2–4 million years ago. Australopithecus walked upright but retained many ape-like features including small brains and long arms. The famous fossil 'Lucy' (A. afarensis) is among the best-known human ancestors, demonstrating that upright walking preceded the evolution of large brains.",
+      "lineage": "Australopithecines",
+      "continents": ["Africa"],
+      "extinct": true,
+      "children": [
+        { "id": "AUSTRALOPITHECUS_AFARENSIS", "name": "Australopithecus afarensis", "rank": "SPECIES", "commonName": "†Lucy's species", "lineage": "Australopithecines", "continents": ["Africa"], "extinct": true },
+        { "id": "AUSTRALOPITHECUS_AFRICANUS", "name": "Australopithecus africanus", "rank": "SPECIES", "commonName": "†Taung child's species", "lineage": "Australopithecines", "continents": ["Africa"], "extinct": true },
+        { "id": "AUSTRALOPITHECUS_SEDIBA", "name": "Australopithecus sediba", "rank": "SPECIES", "commonName": "†Sediba", "lineage": "Australopithecines", "continents": ["Africa"], "extinct": true },
+        { "id": "AUSTRALOPITHECUS_ANAMENSIS", "name": "Australopithecus anamensis", "rank": "SPECIES", "commonName": "†Anam man", "lineage": "Australopithecines", "continents": ["Africa"], "extinct": true }
+      ]
+    },
+    {
+      "id": "GENUS_PARANTHROPUS",
+      "name": "Paranthropus",
+      "rank": "GENUS",
+      "description": "The robust australopithecines — a side-branch of the human family tree with massively developed jaw muscles and large, flat molars adapted for grinding tough plant material. Despite their formidable chewing apparatus, they were not direct human ancestors but a parallel evolutionary experiment that eventually died out.",
+      "lineage": "Australopithecines",
+      "continents": ["Africa"],
+      "extinct": true,
+      "children": [
+        { "id": "PARANTHROPUS_BOISEI", "name": "Paranthropus boisei", "rank": "SPECIES", "commonName": "†Nutcracker man", "lineage": "Australopithecines", "continents": ["Africa"], "extinct": true },
+        { "id": "PARANTHROPUS_ROBUSTUS", "name": "Paranthropus robustus", "rank": "SPECIES", "commonName": "†Robust australopithecine", "lineage": "Australopithecines", "continents": ["Africa"], "extinct": true }
       ]
     }
   ]

@@ -181,10 +181,12 @@ const ORECTOLOBIFORMES_THEME: ColorTheme = {
 const HOMINIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
-    "Gorillas":     "#5a3a20",
-    "Chimpanzees":  "#8a6030",
-    "Orangutans":   "#c87830",
-    "Human":        "#c8b090",
+    "Gorillas":          "#5a3a20",
+    "Chimpanzees":       "#8a6030",
+    "Orangutans":        "#c87830",
+    "Human":             "#c8b090",
+    "Archaic humans":    "#7a7060",
+    "Australopithecines": "#4a3828",
   },
   breedGroupColor: "#a08060",
   hybridColor:     "#c0a070",
