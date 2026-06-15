@@ -303,6 +303,19 @@ const PARIDAE_THEME: ColorTheme = {
   hybridColor:     "#9aaa68",
 };
 
+const TARDIGRADA_THEME: ColorTheme = {
+  subfamilyColors: {
+    "Eutardigrada":    "#c8a830",
+    "Heterotardigrada": "#c05820",
+  },
+  lineageColors: {
+    "Eutardigrada":    "#c8a830",
+    "Heterotardigrada": "#c05820",
+  },
+  breedGroupColor: "#a08030",
+  hybridColor:     "#b09040",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -329,6 +342,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   columbidae:      COLUMBIDAE_THEME,
   corvidae:        CORVIDAE_THEME,
   paridae:         PARIDAE_THEME,
+  tardigrada:      TARDIGRADA_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
