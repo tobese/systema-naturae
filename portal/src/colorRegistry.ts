@@ -510,6 +510,224 @@ const TARDIGRADA_THEME: ColorTheme = {
   hybridColor:     "#b09040",
 };
 
+const MURIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Mice":                "#c8a060",
+    "Rats":                "#8a6040",
+    "Gerbils":             "#d0b870",
+    "Multimammate mice":   "#a07848",
+  },
+  breedGroupColor: "#b09050",
+  hybridColor:     "#c8b060",
+};
+
+const SCIURIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Tree Squirrels":   "#c87830",
+    "Ground Squirrels": "#a07840",
+    "Chipmunks":        "#e09030",
+    "Marmots":          "#8a6830",
+    "Flying Squirrels": "#4a7898",
+  },
+  breedGroupColor: "#b08040",
+  hybridColor:     "#c89050",
+};
+
+const CRICETIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Hamsters":      "#e0a030",
+    "Voles":         "#7a9040",
+    "Lemmings":      "#c84030",
+    "New World mice": "#6a8858",
+  },
+  breedGroupColor: "#a08040",
+  hybridColor:     "#c0a050",
+};
+
+const CASTORIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Beavers": "#8a6030",
+  },
+  breedGroupColor: "#7a5828",
+  hybridColor:     "#9a7040",
+};
+
+const CAVIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Capybara":   "#c89040",
+    "Guinea Pigs": "#d0a860",
+    "Maras":      "#b87038",
+    "Rock Cavies": "#8a7050",
+  },
+  breedGroupColor: "#b08848",
+  hybridColor:     "#c8a060",
+};
+
+const PTEROPODIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Flying Foxes": "#8a5030",
+    "Fruit Bats":   "#c87838",
+    "Blossom Bats": "#e09848",
+  },
+  breedGroupColor: "#a06830",
+  hybridColor:     "#c08848",
+};
+
+const VESPERTILIONIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Pipistrelles":     "#4a5888",
+    "Long-eared Bats":  "#3a4878",
+    "Noctules":         "#6a5898",
+    "Myotis Bats":      "#2a3868",
+  },
+  breedGroupColor: "#4a5070",
+  hybridColor:     "#6a7098",
+};
+
+const RHINOLOPHIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Horseshoe Bats": "#8a3850",
+  },
+  breedGroupColor: "#7a3048",
+  hybridColor:     "#a05068",
+};
+
+const PHYLLOSTOMIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Vampire Bats":      "#8a1a1a",
+    "Nectar Bats":       "#e8b020",
+    "Fruit Bats":        "#c87030",
+    "Spear-nosed Bats":  "#5a7038",
+  },
+  breedGroupColor: "#8a5028",
+  hybridColor:     "#b07040",
+};
+
+const ERINACEIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Hedgehogs": "#c8a870",
+    "Moonrats":  "#6a7850",
+  },
+  breedGroupColor: "#b09060",
+  hybridColor:     "#c8b078",
+};
+
+const SORICIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Red-toothed Shrews":   "#c04030",
+    "White-toothed Shrews": "#c8a860",
+    "Water Shrews":         "#2a6878",
+  },
+  breedGroupColor: "#9a6040",
+  hybridColor:     "#b07848",
+};
+
+const TALPIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "True Moles": "#4a3828",
+    "Desmans":    "#2a5878",
+  },
+  breedGroupColor: "#3a3030",
+  hybridColor:     "#5a5048",
+};
+
+const ELEPHANTIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "African Elephants": "#7a6040",
+    "Asian Elephants":   "#8a7050",
+  },
+  breedGroupColor: "#7a6848",
+  hybridColor:     "#9a8060",
+};
+
+const MANIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Asian Pangolins":   "#c8a030",
+    "African Pangolins": "#8a7028",
+  },
+  breedGroupColor: "#a89030",
+  hybridColor:     "#c0a840",
+};
+
+const BRADYPODIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Three-toed Sloths": "#8a9858",
+  },
+  breedGroupColor: "#7a8848",
+  hybridColor:     "#9ab060",
+};
+
+const MYRMECOPHAGIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Giant Anteater": "#c8a060",
+    "Tamanduas":      "#e0c080",
+    "Silky Anteater": "#f0d8a0",
+  },
+  breedGroupColor: "#c0a058",
+  hybridColor:     "#d8b870",
+};
+
+const DASYPODIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Nine-banded Armadillos":   "#b09050",
+    "Three-banded Armadillos":  "#c8a868",
+    "Giant Armadillo":          "#8a7038",
+    "Pichi":                    "#d0c090",
+  },
+  breedGroupColor: "#a89050",
+  hybridColor:     "#c0a860",
+};
+
+const DASYURIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Tasmanian Devil": "#1a1a1a",
+    "Quolls":          "#c87830",
+    "Dunnarts":        "#8a9070",
+    "Antechinuses":    "#7a6848",
+  },
+  breedGroupColor: "#6a5838",
+  hybridColor:     "#8a7850",
+};
+
+const VOMBATIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Wombats": "#9a8858",
+  },
+  breedGroupColor: "#8a7848",
+  hybridColor:     "#b0a068",
+};
+
+const DIDELPHIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Large Opossums":        "#c8a878",
+    "Mouse Opossums":        "#a08858",
+    "Short-tailed Opossums": "#8a7848",
+    "Water Opossums":        "#2a6878",
+  },
+  breedGroupColor: "#a09060",
+  hybridColor:     "#c0b070",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -552,6 +770,26 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   ranidae:         RANIDAE_THEME,
   apidae:          APIDAE_THEME,
   tardigrada:      TARDIGRADA_THEME,
+  muridae:         MURIDAE_THEME,
+  sciuridae:       SCIURIDAE_THEME,
+  cricetidae:      CRICETIDAE_THEME,
+  castoridae:      CASTORIDAE_THEME,
+  caviidae:        CAVIIDAE_THEME,
+  pteropodidae:    PTEROPODIDAE_THEME,
+  vespertilionidae: VESPERTILIONIDAE_THEME,
+  rhinolophidae:   RHINOLOPHIDAE_THEME,
+  phyllostomidae:  PHYLLOSTOMIDAE_THEME,
+  erinaceidae:     ERINACEIDAE_THEME,
+  soricidae:       SORICIDAE_THEME,
+  talpidae:        TALPIDAE_THEME,
+  elephantidae:    ELEPHANTIDAE_THEME,
+  manidae:         MANIDAE_THEME,
+  bradypodidae:    BRADYPODIDAE_THEME,
+  myrmecophagidae: MYRMECOPHAGIDAE_THEME,
+  dasypodidae:     DASYPODIDAE_THEME,
+  dasyuridae:      DASYURIDAE_THEME,
+  vombatidae:      VOMBATIDAE_THEME,
+  didelphidae:     DIDELPHIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
