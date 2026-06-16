@@ -128,6 +128,40 @@ function PanelAncestors({ ancestors, onSelect }: { ancestors: TaxonNode[]; onSel
 
 // ─── Portal-level panels ──────────────────────────────────────────────────────
 
+function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const pn = node as PortalNode;
+  const phyla = node.children ?? [];
+  const classes = phyla.flatMap(p => p.children ?? []);
+  return (
+    <div style={{ padding: "20px" }}>
+      <div style={{ fontSize: 10, color: "#8899bb", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Kingdom</div>
+      <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
+      <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
+      <div style={{ fontSize: 12, color: "#666", marginBottom: pn.description ? 14 : 20 }}>
+        {classes.length} {classes.length === 1 ? "class" : "classes"}
+      </div>
+      {pn.description && (
+        <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
+          {pn.description}
+        </div>
+      )}
+      <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>Classes</div>
+      {classes.map(c => (
+        <button key={c.id} onClick={() => onSelect(c)} style={{
+          display: "block", width: "100%", textAlign: "left",
+          background: "none", border: "none", borderBottom: "1px solid #1a1a2a",
+          padding: "8px 0", cursor: "pointer", color: "#8899bb", fontSize: 13,
+        }}>
+          {c.commonName ?? c.name}
+          <span style={{ float: "right", color: "#333", fontSize: 11 }}>
+            {(c.children ?? []).length} {(c.children ?? []).length === 1 ? "order" : "orders"}
+          </span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function OverviewHomePanel({ onFocusFamily }: { onFocusFamily: (slug: string | null) => void }) {
   void onFocusFamily;
   return (
@@ -680,7 +714,8 @@ export default function UnifiedInfoPanel({
     .slice(0, -1); // remove the current node itself
 
   // Portal-level
-  if (node.rank === "KINGDOM" || node.rank === "PHYLUM") return null;
+  if (node.rank === "KINGDOM") return <KingdomPanel node={node} onSelect={onSelect} />;
+  if (node.rank === "PHYLUM") return null;
   if (node.rank === "CLASS") return <ClassPanel node={node} onSelect={onSelect} />;
   if (node.rank === "ORDER") return <OrderPanel node={node} onSelect={onSelect} ancestors={ancestors} />;
   if (node.rank === "FAMILY") {
