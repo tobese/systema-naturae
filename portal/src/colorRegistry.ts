@@ -847,6 +847,17 @@ const DIDELPHIDAE_THEME: ColorTheme = {
   hybridColor:     "#c0b070",
 };
 
+const RALLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rails": "#6a9870", "Moorhens & Coots": "#3a6858" }, breedGroupColor: "#5a8868", hybridColor: "#8ab898" };
+const GRUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Palearctic Cranes": "#8898a8", "Steppe Cranes": "#c8b888" }, breedGroupColor: "#9898a0", hybridColor: "#b8b8c8" };
+const PODICIPEDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Large Grebes": "#c87838", "Small Grebes": "#a85828" }, breedGroupColor: "#b87030", hybridColor: "#d89860" };
+const SCOLOPACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Curlews & Godwits": "#c8a068", "Snipe & Woodcock": "#a07840", "Shanks & Tattlers": "#8a9870", "Small Waders": "#b89868" }, breedGroupColor: "#b89058", hybridColor: "#d0b888" };
+const ALCIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Razorbills": "#3a4858", "Guillemots": "#283848", "Small Auks": "#4a6080", "Puffins": "#e87828" }, breedGroupColor: "#3a5068", hybridColor: "#6a8098" };
+const PHALACROCORACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cormorants": "#2a4838", "Pygmy Cormorants": "#4a6848" }, breedGroupColor: "#3a5840", hybridColor: "#5a7858" };
+const STURNIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Starlings": "#6858a8", "Rosy Starlings": "#d888a8" }, breedGroupColor: "#7868b8", hybridColor: "#9888c8" };
+const ACROCEPHALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Reed Warblers": "#c89848", "Grasshopper Warblers": "#a87838", "Hippolais Warblers": "#d8b048" }, breedGroupColor: "#c09040", hybridColor: "#d8b868" };
+const REGULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kinglets": "#d8c040" }, breedGroupColor: "#c8b030", hybridColor: "#e8d060" };
+const GAVIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Northern Divers": "#4a6888" }, breedGroupColor: "#3a5878", hybridColor: "#6a88a8" };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -920,6 +931,16 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   phylloscopidae:  PHYLLOSCOPIDAE_THEME,
   laridae:         LARIDAE_THEME,
   ardeidae:        ARDEIDAE_THEME,
+  rallidae:        RALLIDAE_THEME,
+  gruidae:         GRUIDAE_THEME,
+  podicipedidae:   PODICIPEDIDAE_THEME,
+  scolopacidae:    SCOLOPACIDAE_THEME,
+  alcidae:         ALCIDAE_THEME,
+  phalacrocoracidae: PHALACROCORACIDAE_THEME,
+  sturnidae:       STURNIDAE_THEME,
+  acrocephalidae:  ACROCEPHALIDAE_THEME,
+  regulidae:       REGULIDAE_THEME,
+  gaviidae:        GAVIIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
