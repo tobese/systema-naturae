@@ -638,6 +638,33 @@
                   "appSlug": "muscicapidae",
                   "speciesCount": 324,
                   "notableMembers": ["European Robin", "Common Nightingale", "Common Redstart", "European Pied Flycatcher", "Northern Wheatear"]
+                },
+                {
+                  "id": "FAM_MOTACILLIDAE",
+                  "name": "Motacillidae",
+                  "rank": "FAMILY",
+                  "commonName": "Wagtails & pipits",
+                  "appSlug": "motacillidae",
+                  "speciesCount": 65,
+                  "notableMembers": ["White Wagtail", "Western Yellow Wagtail", "Grey Wagtail", "Meadow Pipit", "Tree Pipit"]
+                },
+                {
+                  "id": "FAM_HIRUNDINIDAE",
+                  "name": "Hirundinidae",
+                  "rank": "FAMILY",
+                  "commonName": "Swallows & martins",
+                  "appSlug": "hirundinidae",
+                  "speciesCount": 89,
+                  "notableMembers": ["Barn Swallow", "Common House Martin", "Sand Martin", "Eurasian Crag Martin"]
+                },
+                {
+                  "id": "FAM_PHYLLOSCOPIDAE",
+                  "name": "Phylloscopidae",
+                  "rank": "FAMILY",
+                  "commonName": "Leaf warblers & allies",
+                  "appSlug": "phylloscopidae",
+                  "speciesCount": 77,
+                  "notableMembers": ["Willow Warbler", "Common Chiffchaff", "Wood Warbler", "Eurasian Blackcap", "Common Whitethroat"]
                 }
               ]
             },
@@ -674,6 +701,42 @@
                   "appSlug": "accipitridae",
                   "speciesCount": 260,
                   "notableMembers": ["Golden Eagle", "White-tailed Eagle", "Northern Goshawk", "Red Kite", "Hen Harrier"]
+                }
+              ]
+            },
+            {
+              "id": "CHARADRIIFORMES",
+              "name": "Charadriiformes",
+              "rank": "ORDER",
+              "commonName": "Gulls, terns & waders",
+              "description": "A highly diverse order of shorebirds, gulls, terns, and auks united by a shared ancestry despite very different appearances and lifestyles. With over 350 species it is one of the largest bird orders. Most are associated with coastal and aquatic habitats and many make extraordinary migrations. Gulls and terns are among the most familiar seabirds of northern Europe, while the waders (sandpipers, plovers, snipe) are the defining birds of estuaries and mudflats.",
+              "children": [
+                {
+                  "id": "FAM_LARIDAE",
+                  "name": "Laridae",
+                  "rank": "FAMILY",
+                  "commonName": "Gulls & terns",
+                  "appSlug": "laridae",
+                  "speciesCount": 100,
+                  "notableMembers": ["Herring Gull", "Black-headed Gull", "Common Gull", "Common Tern", "Arctic Tern"]
+                }
+              ]
+            },
+            {
+              "id": "PELECANIFORMES",
+              "name": "Pelecaniformes",
+              "rank": "ORDER",
+              "commonName": "Herons, egrets & pelicans",
+              "description": "A diverse order of waterbirds that includes herons, egrets, bitterns, pelicans, ibises, and spoonbills. Herons and bitterns (Ardeidae) are the most widespread and familiar group, found on every continent except Antarctica. They are characterised by long legs, long necks, and dagger-like bills used to strike fish and amphibians with lightning speed.",
+              "children": [
+                {
+                  "id": "FAM_ARDEIDAE",
+                  "name": "Ardeidae",
+                  "rank": "FAMILY",
+                  "commonName": "Herons & bitterns",
+                  "appSlug": "ardeidae",
+                  "speciesCount": 72,
+                  "notableMembers": ["Grey Heron", "Great White Egret", "Purple Heron", "Great Bittern", "Little Bittern"]
                 }
               ]
             }
@@ -854,6 +917,123 @@
                   "appSlug": "ranidae",
                   "speciesCount": 370,
                   "notableMembers": ["Common Frog", "American Bullfrog", "Marsh Frog", "Wood Frog", "Moor Frog"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACTINOPTERYGII",
+          "name": "Actinopterygii",
+          "rank": "CLASS",
+          "commonName": "Ray-finned fish",
+          "description": "The largest class of vertebrates with over 30,000 species — nearly half of all vertebrate species on Earth. Ray-finned fish are defined by fins supported by bony spines (rays) rather than the fleshy lobed fins of lobe-finned fish. They range from the tiny 8-mm Paedocypris to the 3-metre Atlantic bluefin tuna, and occupy every aquatic habitat from deep ocean trenches to high-altitude glacial lakes. In Sweden, ray-finned fish dominate both marine and freshwater ecosystems.",
+          "children": [
+            {
+              "id": "CLUPEIFORMES",
+              "name": "Clupeiformes",
+              "rank": "ORDER",
+              "commonName": "Herrings & sprats",
+              "description": "Herrings, sardines, shad, and anchovies — small, schooling, silvery fish that form some of the largest fish populations on Earth. They occupy a critical position in marine food webs: filter-feeding on plankton and in turn being consumed by cod, salmon, tuna, seabirds, and whales. The Baltic herring (strömming) is the most important commercial fish in the Baltic Sea and the cornerstone of Swedish fish culture.",
+              "children": [
+                {
+                  "id": "FAM_CLUPEIDAE",
+                  "name": "Clupeidae",
+                  "rank": "FAMILY",
+                  "commonName": "Herrings & sprats",
+                  "appSlug": "clupeidae",
+                  "speciesCount": 200,
+                  "notableMembers": ["Atlantic Herring", "European Sprat", "Twaite Shad", "Pacific Herring"]
+                }
+              ]
+            },
+            {
+              "id": "SALMONIFORMES",
+              "name": "Salmoniformes",
+              "rank": "ORDER",
+              "commonName": "Salmon, trout & char",
+              "description": "Salmon and their relatives — cold-water fish of the Northern Hemisphere, distinguished by an adipose fin (a small fleshy fin between the dorsal fin and tail). Many are anadromous, born in rivers, growing to maturity at sea, and returning to their natal rivers to spawn. They are among the most ecologically important and culturally significant fish in the world.",
+              "children": [
+                {
+                  "id": "FAM_SALMONIDAE",
+                  "name": "Salmonidae",
+                  "rank": "FAMILY",
+                  "commonName": "Salmon, trout, char & grayling",
+                  "appSlug": "salmonidae",
+                  "speciesCount": 70,
+                  "notableMembers": ["Atlantic Salmon", "Brown Trout", "Arctic Char", "European Grayling", "Chinook Salmon"]
+                }
+              ]
+            },
+            {
+              "id": "ESOCIFORMES",
+              "name": "Esociformes",
+              "rank": "ORDER",
+              "commonName": "Pike",
+              "description": "Pike and mudminnows — freshwater predators of cold, clear northern lakes and rivers. Pike are the apex predators of European and North American freshwater ecosystems, sitting atop food webs that can include dozens of prey species. Their elongated, torpedo-shaped bodies and ambush hunting strategy make them extraordinarily effective predators.",
+              "children": [
+                {
+                  "id": "FAM_ESOCIDAE",
+                  "name": "Esocidae",
+                  "rank": "FAMILY",
+                  "commonName": "Pike",
+                  "appSlug": "esocidae",
+                  "speciesCount": 7,
+                  "notableMembers": ["Northern Pike", "Muskellunge", "Amur Pike"]
+                }
+              ]
+            },
+            {
+              "id": "PERCIFORMES_FISH",
+              "name": "Perciformes",
+              "rank": "ORDER",
+              "commonName": "Perch & allies",
+              "description": "Perch and their relatives — one of the most species-rich fish orders, including many of the most familiar freshwater and marine fish. Perciformes are typically characterised by spiny-rayed fins and a generalised body plan that has proven extraordinarily successful across a range of habitats from Arctic lakes to tropical reefs.",
+              "children": [
+                {
+                  "id": "FAM_PERCIDAE",
+                  "name": "Percidae",
+                  "rank": "FAMILY",
+                  "commonName": "Perch, zander & ruffe",
+                  "appSlug": "percidae",
+                  "speciesCount": 240,
+                  "notableMembers": ["European Perch", "Zander", "Walleye", "Yellow Perch", "Eurasian Ruffe"]
+                }
+              ]
+            },
+            {
+              "id": "GADIFORMES",
+              "name": "Gadiformes",
+              "rank": "ORDER",
+              "commonName": "Cod & allies",
+              "description": "Cod and their relatives — demersal fish of cold northern seas that have shaped human history through their extraordinary abundance and the exploitation that followed. The family Gadidae includes some of the most important food fish in the world. Baltic and North Sea cod stocks are ecologically critical but severely depleted.",
+              "children": [
+                {
+                  "id": "FAM_GADIDAE",
+                  "name": "Gadidae",
+                  "rank": "FAMILY",
+                  "commonName": "Cod & allies",
+                  "appSlug": "gadidae",
+                  "speciesCount": 22,
+                  "notableMembers": ["Atlantic Cod", "Alaska Pollock", "Haddock", "Whiting"]
+                }
+              ]
+            },
+            {
+              "id": "CYPRINIFORMES",
+              "name": "Cypriniformes",
+              "rank": "ORDER",
+              "commonName": "Carp & minnows",
+              "description": "The largest order of freshwater fish with over 4,300 species, including carp, roach, bream, chub, ide, and thousands of tropical species. Cypriniformes lack true teeth in the jaw but have pharyngeal teeth (in the throat) used to crush food. They are the dominant freshwater fish in Europe and Asia by species richness and abundance, forming the base of freshwater food webs.",
+              "children": [
+                {
+                  "id": "FAM_CYPRINIDAE",
+                  "name": "Cyprinidae",
+                  "rank": "FAMILY",
+                  "commonName": "Carp, roach, bream & relatives",
+                  "appSlug": "cyprinidae",
+                  "speciesCount": 3000,
+                  "notableMembers": ["Common Roach", "Common Bream", "Ide", "Common Rudd", "Common Carp"]
                 }
               ]
             }

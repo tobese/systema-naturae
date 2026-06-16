@@ -510,6 +510,125 @@ const TARDIGRADA_THEME: ColorTheme = {
   hybridColor:     "#b09040",
 };
 
+const CLUPEIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Herrings": "#8aaabb",
+    "Sprats":   "#6888a0",
+    "Shads":    "#4a7888",
+  },
+  breedGroupColor: "#7898a8",
+  hybridColor:     "#9ab8c8",
+};
+
+const SALMONIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Atlantic Salmon & Trout": "#e07830",
+    "Char":          "#c84848",
+    "Grayling":      "#8a6898",
+    "Pacific Salmon": "#e05828",
+  },
+  breedGroupColor: "#c06030",
+  hybridColor:     "#d88040",
+};
+
+const ESOCIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Pike": "#5a7838",
+  },
+  breedGroupColor: "#4a6830",
+  hybridColor:     "#6a9848",
+};
+
+const PERCIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Perch":  "#c87828",
+    "Zander": "#5a7898",
+    "Ruffe":  "#8a8850",
+  },
+  breedGroupColor: "#8a7040",
+  hybridColor:     "#a89060",
+};
+
+const GADIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Cod":     "#6888a8",
+    "Haddock": "#8898b8",
+    "Whiting": "#9aaac8",
+  },
+  breedGroupColor: "#7888a0",
+  hybridColor:     "#9aaabb",
+};
+
+const CYPRINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Roach":   "#c8a060",
+    "Bream":   "#a07840",
+    "Ide & Dace": "#d0b870",
+    "Rudd":    "#e0b030",
+    "Carp":    "#b88840",
+  },
+  breedGroupColor: "#b09050",
+  hybridColor:     "#c8a860",
+};
+
+const MOTACILLIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Wagtails": "#d0c830",
+    "Pipits":   "#b0a860",
+  },
+  breedGroupColor: "#c0b840",
+  hybridColor:     "#d8cc50",
+};
+
+const HIRUNDINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Swallows": "#1a3888",
+    "Martins":  "#3a5898",
+  },
+  breedGroupColor: "#2a4878",
+  hybridColor:     "#4a68a8",
+};
+
+const PHYLLOSCOPIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Leaf Warblers":  "#7ab840",
+    "Sylvia Warblers": "#5a9830",
+  },
+  breedGroupColor: "#6aa838",
+  hybridColor:     "#8ac850",
+};
+
+const LARIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Large Gulls":  "#d0d0c8",
+    "Hooded Gulls": "#b0b8c8",
+    "Sea Terns":    "#c0c8d8",
+  },
+  breedGroupColor: "#b8c0c8",
+  hybridColor:     "#d0d8e0",
+};
+
+const ARDEIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Grey Herons & Egrets": "#9ab0b8",
+    "Bitterns":             "#8a7840",
+    "Little Bitterns":      "#a09050",
+  },
+  breedGroupColor: "#8898a0",
+  hybridColor:     "#a0b0b8",
+};
+
 const MURIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
@@ -790,6 +909,17 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   dasyuridae:      DASYURIDAE_THEME,
   vombatidae:      VOMBATIDAE_THEME,
   didelphidae:     DIDELPHIDAE_THEME,
+  clupeidae:       CLUPEIDAE_THEME,
+  salmonidae:      SALMONIDAE_THEME,
+  esocidae:        ESOCIDAE_THEME,
+  percidae:        PERCIDAE_THEME,
+  gadidae:         GADIDAE_THEME,
+  cyprinidae:      CYPRINIDAE_THEME,
+  motacillidae:    MOTACILLIDAE_THEME,
+  hirundinidae:    HIRUNDINIDAE_THEME,
+  phylloscopidae:  PHYLLOSCOPIDAE_THEME,
+  laridae:         LARIDAE_THEME,
+  ardeidae:        ARDEIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
