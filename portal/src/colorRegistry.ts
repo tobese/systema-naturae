@@ -857,6 +857,31 @@ const STURNIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eur
 const ACROCEPHALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Reed Warblers": "#c89848", "Grasshopper Warblers": "#a87838", "Hippolais Warblers": "#d8b048" }, breedGroupColor: "#c09040", hybridColor: "#d8b868" };
 const REGULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kinglets": "#d8c040" }, breedGroupColor: "#c8b030", hybridColor: "#e8d060" };
 const GAVIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Northern Divers": "#4a6888" }, breedGroupColor: "#3a5878", hybridColor: "#6a88a8" };
+const FALCONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kestrels": "#7a8898", "True Falcons": "#4a6080" }, breedGroupColor: "#5a7090", hybridColor: "#8a9aaa" };
+const APODIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Typical Swifts": "#3a3848", "Alpine Swifts": "#5a5870" }, breedGroupColor: "#4a4858", hybridColor: "#6a6880" };
+const CUCULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Old World Cuckoos": "#7a8868", "Coucals": "#5a6848" }, breedGroupColor: "#6a7858", hybridColor: "#9a9878" };
+const CAPRIMULGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Old World Nightjars": "#a87848", "New World Nightjars": "#7a5838" }, breedGroupColor: "#906840", hybridColor: "#c09868" };
+const ALCEDINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "River Kingfishers": "#00909a", "Tree Kingfishers": "#e87028" }, breedGroupColor: "#007888", hybridColor: "#30a8b8" };
+const UPUPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hoopoes": "#c87838" }, breedGroupColor: "#b86828", hybridColor: "#d89858" };
+const CHARADRIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Golden Plovers": "#c8a848", "Lapwings": "#6a7858", "Ringed Plovers": "#b88840" }, breedGroupColor: "#b89040", hybridColor: "#d8c060" };
+const HAEMATOPODIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Oystercatchers": "#c04820" }, breedGroupColor: "#a03810", hybridColor: "#d06840" };
+const RECURVIROSTRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Avocets": "#7a9ab8", "Stilts": "#202030" }, breedGroupColor: "#204860", hybridColor: "#9ab8d0" };
+const STERCORARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Large Skuas": "#585848", "Small Skuas": "#3a3828" }, breedGroupColor: "#4a4838", hybridColor: "#706858" };
+const THRESKIORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Spoonbills": "#e8d8c8", "Ibises": "#7a6848" }, breedGroupColor: "#c8b8a0", hybridColor: "#f0e8d8" };
+const CICONIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "White Storks": "#e83020", "Black Storks": "#202838" }, breedGroupColor: "#a02010", hybridColor: "#d05040" };
+const SULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Gannets": "#f0e858", "Tropical Boobies": "#206090" }, breedGroupColor: "#d0c840", hybridColor: "#f8f0a0" };
+const PANDIONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Osprey": "#8a7040" }, breedGroupColor: "#786030", hybridColor: "#c0a860" };
+const SYLVIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sylvia Warblers": "#8a9870" }, breedGroupColor: "#7a8860", hybridColor: "#aab890" };
+const AEGITHALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Long-tailed Tits": "#e8b8b0" }, breedGroupColor: "#d0a098", hybridColor: "#f0d0c8" };
+const SITTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nuthatches": "#6888a8" }, breedGroupColor: "#587898", hybridColor: "#88a8c8" };
+const CERTHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Treecreepers": "#a87848" }, breedGroupColor: "#986838", hybridColor: "#c09868" };
+const TROGLODYTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurasian Wrens": "#a85830", "New World Wrens": "#784020" }, breedGroupColor: "#986040", hybridColor: "#c08060" };
+const BOMBYCILLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Waxwings": "#c89050" }, breedGroupColor: "#b88040", hybridColor: "#e8c080" };
+const EMBERIZIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurasian Buntings": "#d8b820", "Arctic Buntings": "#e8e8e0" }, breedGroupColor: "#c0a010", hybridColor: "#e8d040" };
+const PASSERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Old World Sparrows": "#b89060" }, breedGroupColor: "#a88050", hybridColor: "#d0b080" };
+const PRUNELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Accentors": "#7a8898" }, breedGroupColor: "#6a7888", hybridColor: "#9aaab8" };
+const ALAUDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Skylarks": "#d8b870", "Wood Larks": "#b89858", "Horned Larks": "#9a8040" }, breedGroupColor: "#c0a058", hybridColor: "#e8c888" };
+const LOCUSTELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grasshopper Warblers": "#8a9868", "River Warblers": "#6a7848" }, breedGroupColor: "#7a8858", hybridColor: "#aab880" };
 
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
@@ -941,6 +966,31 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   acrocephalidae:  ACROCEPHALIDAE_THEME,
   regulidae:       REGULIDAE_THEME,
   gaviidae:        GAVIIDAE_THEME,
+  falconidae:      FALCONIDAE_THEME,
+  apodidae:        APODIDAE_THEME,
+  cuculidae:       CUCULIDAE_THEME,
+  caprimulgidae:   CAPRIMULGIDAE_THEME,
+  alcedinidae:     ALCEDINIDAE_THEME,
+  upupidae:        UPUPIDAE_THEME,
+  charadriidae:    CHARADRIIDAE_THEME,
+  haematopodidae:  HAEMATOPODIDAE_THEME,
+  recurvirostridae: RECURVIROSTRIDAE_THEME,
+  stercorariidae:  STERCORARIIDAE_THEME,
+  threskiornithidae: THRESKIORNITHIDAE_THEME,
+  ciconiidae:      CICONIIDAE_THEME,
+  sulidae:         SULIDAE_THEME,
+  pandionidae:     PANDIONIDAE_THEME,
+  sylviidae:       SYLVIIDAE_THEME,
+  aegithalidae:    AEGITHALIDAE_THEME,
+  sittidae:        SITTIDAE_THEME,
+  certhiidae:      CERTHIIDAE_THEME,
+  troglodytidae:   TROGLODYTIDAE_THEME,
+  bombycillidae:   BOMBYCILLIDAE_THEME,
+  emberizidae:     EMBERIZIDAE_THEME,
+  passeridae:      PASSERIDAE_THEME,
+  prunellidae:     PRUNELLIDAE_THEME,
+  alaudidae:       ALAUDIDAE_THEME,
+  locustellidae:   LOCUSTELLIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
