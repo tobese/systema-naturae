@@ -883,16 +883,21 @@ const PRUNELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "A
 const ALAUDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Skylarks": "#d8b870", "Wood Larks": "#b89858", "Horned Larks": "#9a8040" }, breedGroupColor: "#c0a058", hybridColor: "#e8c888" };
 const LOCUSTELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grasshopper Warblers": "#8a9868", "River Warblers": "#6a7848" }, breedGroupColor: "#7a8858", hybridColor: "#aab880" };
 
-const BUFONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Toads": "#6a7858", "New World Toads": "#8a7040", "Tropical Toads": "#a08050" }, breedGroupColor: "#7a7848", hybridColor: "#9a9060" };
-const HYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Tree Frogs": "#5a9050", "New World Tree Frogs": "#78b048", "Australian Tree Frogs": "#98c068" }, breedGroupColor: "#68a058", hybridColor: "#88b870" };
-const DENDROBATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Poison Dart Frogs": "#2870b8", "Thumbnail Frogs": "#e8b820" }, breedGroupColor: "#3880c8", hybridColor: "#e8d040" };
-const MICROHYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Old World Narrow-mouthed Frogs": "#8a8850", "New World Narrow-mouthed Frogs": "#7a7840", "Malagasy Narrow-mouthed Frogs": "#9a9860" }, breedGroupColor: "#808048", hybridColor: "#a0a068" };
-const PLETHODONTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Woodland Salamanders": "#9a4830", "Cave Salamanders": "#d89858", "Brook Salamanders": "#7a3820" }, breedGroupColor: "#8a4028", hybridColor: "#c08050" };
-const AMBYSTOMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mole Salamanders": "#486880", "Axolotl": "#d8a868" }, breedGroupColor: "#3a5870", hybridColor: "#e8c080" };
-const CRYPTOBRANCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Giant Salamanders": "#6a5040", "Hellbender": "#8a7050" }, breedGroupColor: "#5a4030", hybridColor: "#9a8060" };
-const PROTEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cave Salamanders": "#e8d8c8", "Mudpuppies": "#a89080" }, breedGroupColor: "#c8b8a0", hybridColor: "#d8c8b8" };
-const CAECILIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tropical Caecilians": "#a87848", "Aquatic Caecilians": "#807048" }, breedGroupColor: "#906838", hybridColor: "#b08858" };
-
+const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
+const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
+const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
+const VARANIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Monitor Lizards": "#5a6840" }, breedGroupColor: "#4a5830", hybridColor: "#7a8858" };
+const GEKKONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "House Geckos": "#484838", "Day Geckos": "#389858", "Leaf-tailed Geckos": "#706848", "Ground Geckos": "#a89868" }, breedGroupColor: "#587848", hybridColor: "#88a870" };
+const SCINCIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Blue-tongued Skinks": "#5878a0", "Five-lined Skinks": "#4870a8", "Ground Skinks": "#8a7848", "Sandfish": "#d0b870" }, breedGroupColor: "#6880a0", hybridColor: "#90a8c0" };
+const AGAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bearded Dragons": "#c88040", "Agamas": "#e86820", "Flying Dragons": "#6898c0", "Thorny Devils": "#c07028" }, breedGroupColor: "#d07030", hybridColor: "#e8a860" };
+const IGUANIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Green Iguanas": "#408830", "Marine Iguanas": "#2a3828", "Desert Iguanas": "#c8a850", "Spiny-tailed Iguanas": "#607840" }, breedGroupColor: "#507838", hybridColor: "#80b060" };
+const ELAPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cobras & Mambas": "#2a2828", "Sea Snakes": "#206080", "Taipans & Brown Snakes": "#e8b820", "Kraits": "#404830" }, breedGroupColor: "#383028", hybridColor: "#807858" };
+const PYTHONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Asian Pythons": "#786040", "African Pythons": "#6a5030", "Australian Pythons": "#907850" }, breedGroupColor: "#806848", hybridColor: "#a09068" };
+const CHELONIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sea Turtles": "#3a8878" }, breedGroupColor: "#2a7868", hybridColor: "#5aa898" };
+const DERMOCHELYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Leatherback": "#2a3870" }, breedGroupColor: "#1a2860", hybridColor: "#4a5890" };
+const CROCODYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "True Crocodiles": "#3a5030", "Gharial": "#4a6840" }, breedGroupColor: "#304828", hybridColor: "#5a7848" };
+const ALLIGATORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Alligators": "#4a6038", "Caimans": "#3a5028" }, breedGroupColor: "#405830", hybridColor: "#608050" };
+const SPHENODONTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tuatara": "#6a7840" }, breedGroupColor: "#5a6830", hybridColor: "#8a9858" };
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -1001,15 +1006,21 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   prunellidae:     PRUNELLIDAE_THEME,
   alaudidae:       ALAUDIDAE_THEME,
   locustellidae:   LOCUSTELLIDAE_THEME,
-  bufonidae:        BUFONIDAE_THEME,
-  hylidae:          HYLIDAE_THEME,
-  dendrobatidae:    DENDROBATIDAE_THEME,
-  microhylidae:     MICROHYLIDAE_THEME,
-  plethodontidae:   PLETHODONTIDAE_THEME,
-  ambystomatidae:   AMBYSTOMATIDAE_THEME,
-  cryptobranchidae: CRYPTOBRANCHIDAE_THEME,
-  proteidae:        PROTEIDAE_THEME,
-  caeciliidae:      CAECILIIDAE_THEME,
+  colubridae:       COLUBRIDAE_THEME,
+  lacertidae:       LACERTIDAE_THEME,
+  anguidae:         ANGUIDAE_THEME,
+  varanidae:        VARANIDAE_THEME,
+  gekkonidae:       GEKKONIDAE_THEME,
+  scincidae:        SCINCIDAE_THEME,
+  agamidae:         AGAMIDAE_THEME,
+  iguanidae:        IGUANIDAE_THEME,
+  elapidae:         ELAPIDAE_THEME,
+  pythonidae:       PYTHONIDAE_THEME,
+  cheloniidae:      CHELONIIDAE_THEME,
+  dermochelyidae:   DERMOCHELYIDAE_THEME,
+  crocodylidae:     CROCODYLIDAE_THEME,
+  alligatoridae:    ALLIGATORIDAE_THEME,
+  sphenodontidae:   SPHENODONTIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
