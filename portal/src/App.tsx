@@ -10,6 +10,8 @@ import { useUrlState } from "./hooks/useUrlState";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import SearchBox from "./components/SearchBox";
 import NewsBell from "./components/NewsBell";
+import InfoModal from "./components/InfoModal";
+import CoverageModal from "./components/CoverageModal";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -56,6 +58,8 @@ function findNavContext(
 
 export default function App() {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
+  const [showInfo, setShowInfo] = useState(false);
+  const [showCoverage, setShowCoverage] = useState(false);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
@@ -310,6 +314,44 @@ export default function App() {
         </div>
         <SearchBox data={annotatedData} onNavigate={navigateTo} />
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          <button
+            onClick={() => setShowInfo(o => !o)}
+            title="About Systema Naturae"
+            style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 34,
+              height: 34,
+              padding: 0,
+              borderRadius: 6,
+              border: "1px solid",
+              borderColor: showInfo ? "#3a3d50" : "#1e2030",
+              background: showInfo ? "#1e2030" : "transparent",
+              color: showInfo ? "#c0c0d8" : "#444",
+              cursor: "pointer",
+              fontSize: 15,
+            }}
+            onMouseEnter={e => { if (!showInfo) e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { if (!showInfo) e.currentTarget.style.color = "#444"; }}
+          >
+            ⓘ
+          </button>
+          <button
+            onClick={() => setShowCoverage(o => !o)}
+            title="Taxonomy coverage"
+            style={{
+              ...btnBase,
+              borderColor: showCoverage ? "#3a3d50" : "#1e2030",
+              background: showCoverage ? "#1e2030" : "transparent",
+              color: showCoverage ? "#c0c0d8" : "#555",
+            }}
+            onMouseEnter={e => { if (!showCoverage) e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { if (!showCoverage) e.currentTarget.style.color = "#555"; }}
+          >
+            Coverage
+          </button>
           <NewsBell />
           {inFamilyFocus && (
             <button
@@ -417,6 +459,14 @@ export default function App() {
           </div>
         </div>
       </div>
+      {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
+      {showCoverage && (
+        <CoverageModal
+          data={annotatedData}
+          onClose={() => setShowCoverage(false)}
+          onFocusFamily={slug => { setFocus(slug); setShowCoverage(false); }}
+        />
+      )}
     </div>
   );
 }
