@@ -44,8 +44,61 @@ function buildHonorees(root: TaxonNode): Honoree[] {
     .sort((a, b) => a.person.localeCompare(b.person));
 }
 
+// Module-level cache — survives modal open/close
+const checkedNames = new Set<string>();
+const confirmedLinks = new Map<string, string>(); // person name → Wikipedia URL
+
+async function resolveWikiLinks(names: string[]): Promise<void> {
+  const toCheck = names.filter(n => !checkedNames.has(n));
+  if (toCheck.length === 0) return;
+
+  for (let i = 0; i < toCheck.length; i += 50) {
+    const batch = toCheck.slice(i, i + 50);
+
+    // Map URL slug → original person name
+    const slugToName = new Map<string, string>();
+    for (const name of batch) {
+      slugToName.set(name.replace(/ /g, "_"), name);
+    }
+
+    const titlesParam = [...slugToName.keys()].join("|");
+    try {
+      const resp = await fetch(
+        `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(titlesParam)}&format=json&origin=*&redirects=1`
+      );
+      const json = await resp.json();
+
+      // Track title → original name through normalization and redirects
+      const titleToName = new Map<string, string>(slugToName);
+      for (const norm of json.query?.normalized ?? []) {
+        const orig = slugToName.get(norm.from);
+        if (orig) titleToName.set(norm.to, orig);
+      }
+      for (const redir of json.query?.redirects ?? []) {
+        const orig = titleToName.get(redir.from);
+        if (orig) titleToName.set(redir.to, orig);
+      }
+
+      for (const page of Object.values<Record<string, unknown>>(json.query?.pages ?? {})) {
+        if (!page.missing) {
+          const title = page.title as string;
+          const orig = titleToName.get(title);
+          if (orig) {
+            confirmedLinks.set(orig, `https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, "_"))}`);
+          }
+        }
+      }
+
+      batch.forEach(n => checkedNames.add(n));
+    } catch {
+      batch.forEach(n => checkedNames.add(n));
+    }
+  }
+}
+
 export default function EponymModal({ data, onClose, onNavigate }: Props) {
   const [query, setQuery] = useState("");
+  const [wikiLinks, setWikiLinks] = useState<Map<string, string>>(new Map(confirmedLinks));
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -56,6 +109,11 @@ export default function EponymModal({ data, onClose, onNavigate }: Props) {
   }, [onClose]);
 
   const honorees = useMemo(() => buildHonorees(data), [data]);
+
+  useEffect(() => {
+    const names = honorees.map(h => h.person);
+    resolveWikiLinks(names).then(() => setWikiLinks(new Map(confirmedLinks)));
+  }, [honorees]);
 
   const filtered = useMemo(() => {
     if (!query.trim()) return honorees;
@@ -199,6 +257,7 @@ export default function EponymModal({ data, onClose, onNavigate }: Props) {
             }
 
             const { honoree } = item;
+            const wikiUrl = wikiLinks.get(honoree.person);
             return (
               <div
                 key={item.key}
@@ -214,11 +273,32 @@ export default function EponymModal({ data, onClose, onNavigate }: Props) {
                   width: 200,
                   flexShrink: 0,
                   fontSize: 13,
-                  color: "#c0c0d8",
                   paddingTop: 3,
                   lineHeight: 1.4,
                 }}>
-                  {honoree.person}
+                  {wikiUrl ? (
+                    <a
+                      href={wikiUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "#9aaacc",
+                        textDecoration: "none",
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.color = "#c0ccee";
+                        e.currentTarget.style.textDecoration = "underline";
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.color = "#9aaacc";
+                        e.currentTarget.style.textDecoration = "none";
+                      }}
+                    >
+                      {honoree.person}
+                    </a>
+                  ) : (
+                    <span style={{ color: "#c0c0d8" }}>{honoree.person}</span>
+                  )}
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 4, flex: 1 }}>
                   {honoree.species.map(sp => (
