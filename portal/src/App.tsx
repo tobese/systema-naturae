@@ -58,8 +58,13 @@ export default function App() {
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
   const pendingZoomId = useRef<string | null>(null);
+  const sidebarScrollRef = useRef<HTMLDivElement>(null);
 
   const { focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo } = useUrlState();
+
+  useEffect(() => {
+    sidebarScrollRef.current?.scrollTo({ top: 0, behavior: "instant" });
+  }, [selectedNodeId]);
 
   // selected node is fully URL-driven so browser back/forward and deep-links work correctly
   const selected = useMemo(
@@ -107,6 +112,16 @@ export default function App() {
       return;
     }
 
+    // Node is outside the currently focused family → navigate to its context
+    if (focusedFamilySlug && node.familySlug !== focusedFamilySlug) {
+      setExpandedSubspeciesIds(new Set());
+      setExpandedBreedIds(new Set());
+      setHighlightedContinent(null);
+      navigateTo(node.familySlug ?? null, node.id);
+      if (node.familySlug) pendingZoomId.current = node.id;
+      return;
+    }
+
     // SPECIES with subspecies/breeds → toggle expansion
     if (node.rank === "SPECIES") {
       const fullNode = walkFind(annotatedData, node.id);
@@ -130,9 +145,14 @@ export default function App() {
       }
     }
 
+    // Zoom to genus/order/class selections so the tree pans to the destination
+    if (node.rank !== "SPECIES" && node.rank !== "SUBSPECIES") {
+      pendingZoomId.current = node.id;
+    }
+
     // Toggle selection: clicking same node deselects
     setSelectedNodeId(selectedNodeId === node.id ? null : node.id);
-  }, [focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId]);
+  }, [focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo]);
 
   const handleCollapseFamily = useCallback(() => {
     setFocus(null);
@@ -333,7 +353,7 @@ export default function App() {
               colorTheme={colorTheme}
             />
           )}
-          <div style={{ flex: 1, overflowY: "auto" }}>
+          <div ref={sidebarScrollRef} style={{ flex: 1, overflowY: "auto" }}>
             <UnifiedInfoPanel
               node={selectedInTree}
               onSelect={handleSelect}
