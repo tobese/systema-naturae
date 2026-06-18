@@ -909,6 +909,16 @@ const CRYPTOBRANCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors:
 const PROTEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cave Salamanders": "#e8d8c8", "Mudpuppies": "#a89080" }, breedGroupColor: "#c8b8a8", hybridColor: "#e8e0d8" };
 const CAECILIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tropical Caecilians": "#a87848", "Aquatic Caecilians": "#5a7888" }, breedGroupColor: "#987040", hybridColor: "#c89860" };
 
+const THERAPHOSIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Old World Tarantulas": "#4a3050", "New World Tarantulas": "#c87030", "Australian Tarantulas": "#8a5028" }, breedGroupColor: "#7a5030", hybridColor: "#a07848" };
+const SALTICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Peacock Spiders": "#e84898", "Portia": "#4a5838", "Phidippus": "#c84030", "Hyllus": "#7a6848" }, breedGroupColor: "#905040", hybridColor: "#b87060" };
+const ARANEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Garden Spiders": "#8a9030", "Banded Spiders": "#c8a820", "Tropical Orb-weavers": "#6a7820" }, breedGroupColor: "#808030", hybridColor: "#a0a840" };
+const THERIDIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Widow Spiders": "#8a1a1a", "False Widows": "#583858", "House Spiders": "#5a5040" }, breedGroupColor: "#6a2828", hybridColor: "#9a4848" };
+const LYCOSIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Wolf Spiders": "#8a7040", "New World Wolf Spiders": "#a08050", "Semiaquatic Wolf Spiders": "#3a6858" }, breedGroupColor: "#806038", hybridColor: "#b08850" };
+const SICARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Brown Recluses": "#7a4020", "Six-eyed Sand Spiders": "#c8b068" }, breedGroupColor: "#7a5030", hybridColor: "#a07848" };
+const ATRACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sydney Funnel-webs": "#1a1a28", "Tree Funnel-webs": "#2a3840" }, breedGroupColor: "#1a2030", hybridColor: "#3a4858" };
+const BUTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "North African Scorpions": "#c8a020", "Middle Eastern Scorpions": "#e8c030", "American Scorpions": "#d89820", "African Forest Scorpions": "#7a6030" }, breedGroupColor: "#c09820", hybridColor: "#e8d040" };
+const SCORPIONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "African Giant Scorpions": "#3a5828", "Asian Forest Scorpions": "#2a4820" }, breedGroupColor: "#3a5020", hybridColor: "#5a7840" };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -1041,6 +1051,15 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   cryptobranchidae: CRYPTOBRANCHIDAE_THEME,
   proteidae:        PROTEIDAE_THEME,
   caeciliidae:      CAECILIIDAE_THEME,
+  theraphosidae:  THERAPHOSIDAE_THEME,
+  salticidae:     SALTICIDAE_THEME,
+  araneidae:      ARANEIDAE_THEME,
+  theridiidae:    THERIDIIDAE_THEME,
+  lycosidae:      LYCOSIDAE_THEME,
+  sicariidae:     SICARIIDAE_THEME,
+  atracidae:      ATRACIDAE_THEME,
+  buthidae:       BUTHIDAE_THEME,
+  scorpionidae:   SCORPIONIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
