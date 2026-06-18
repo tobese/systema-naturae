@@ -160,6 +160,11 @@ function TooltipBox({
           {node.commonName}
         </div>
       )}
+      {node.namedAfter && (
+        <div style={{ fontSize: 10, color: "#446655", marginTop: 6, fontStyle: "italic" }}>
+          Named after {node.namedAfter}
+        </div>
+      )}
     </div>
   );
 }
