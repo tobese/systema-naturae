@@ -17,7 +17,10 @@
           "rank": "SPECIES",
           "commonName": "Atlantic Cod",
           "lineage": "Cod",
-          "continents": ["Europe", "North America"],
+          "continents": [
+            "Europe",
+            "North America"
+          ],
           "subspeciesCount": 0,
           "description": "The fish that drove European colonisation of North America — the Grand Banks cod were the reason for Cabot's voyage. Baltic cod (torsk) is genetically distinct from North Sea cod. Eastern Baltic stock critically overfished; EU fishing quotas reduced to near-zero. Its recovery is one of European marine conservation's greatest challenges."
         },
@@ -27,9 +30,37 @@
           "rank": "SPECIES",
           "commonName": "Alaska Pollock",
           "lineage": "Cod",
-          "continents": ["Asia", "North America"],
+          "continents": [
+            "Asia",
+            "North America"
+          ],
           "subspeciesCount": 0,
           "description": "The world's largest single-species food fishery by volume — over 3 million tonnes caught annually in the Bering Sea. The fish in McDonald's Filet-O-Fish and most supermarket fish fingers. Arguably the most important fish in the global food system."
+        },
+        {
+          "id": "GADUS_MACROCEPHALUS",
+          "name": "Gadus macrocephalus",
+          "rank": "SPECIES",
+          "commonName": "Pacific Cod",
+          "lineage": "Cod",
+          "continents": [
+            "Asia",
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A demersal cod of the North Pacific from the Yellow Sea to California, supporting one of the world's largest groundfish fisheries. Shorter-lived and faster-growing than Atlantic cod, with a prominent chin barbel."
+        },
+        {
+          "id": "GADUS_OGAC",
+          "name": "Gadus ogac",
+          "rank": "SPECIES",
+          "commonName": "Greenland Cod",
+          "lineage": "Cod",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "An inshore cod of Arctic and subarctic coasts of Canada and Greenland, now often treated as a population of Pacific cod. Tolerant of cold, brackish coastal waters."
         }
       ]
     },
@@ -46,7 +77,10 @@
           "rank": "SPECIES",
           "commonName": "Haddock",
           "lineage": "Haddock",
-          "continents": ["Europe", "North America"],
+          "continents": [
+            "Europe",
+            "North America"
+          ],
           "subspeciesCount": 0,
           "description": "North Sea haddock populations have recovered well under sustainable fishing quotas. Feeds primarily on echinoderms, polychaetes, and bivalves on the seabed. More cold-tolerant than cod. Smoked haddock is a staple of British and Scandinavian cuisine."
         }
@@ -65,9 +99,187 @@
           "rank": "SPECIES",
           "commonName": "Whiting",
           "lineage": "Whiting",
-          "continents": ["Europe"],
+          "continents": [
+            "Europe"
+          ],
           "subspeciesCount": 0,
           "description": "Extremely abundant in the North Sea and Skagerrak, which form Sweden's western maritime border. An important food source for seabirds and larger fish. Soft flesh decomposes rapidly — must be consumed very fresh. Often bycatch in North Sea trawl fisheries."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_POLLACHIUS",
+      "name": "Pollachius",
+      "rank": "GENUS",
+      "description": "The pollocks and saithe — pelagic schooling gadids of the North Atlantic, important food and forage fish.",
+      "lineage": "Pollock",
+      "children": [
+        {
+          "id": "POLLACHIUS_VIRENS",
+          "name": "Pollachius virens",
+          "rank": "SPECIES",
+          "commonName": "Saithe",
+          "lineage": "Pollock",
+          "continents": [
+            "Europe",
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "Also called coalfish or coley, a fast-swimming North Atlantic pollock forming large schools. A major commercial fishery and increasingly marketed as a sustainable cod substitute."
+        },
+        {
+          "id": "POLLACHIUS_POLLACHIUS",
+          "name": "Pollachius pollachius",
+          "rank": "SPECIES",
+          "commonName": "European Pollock",
+          "lineage": "Pollock",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "The lythe or pollack of the northeast Atlantic, a popular sport fish around rocky reefs and wrecks. Distinguished from saithe by its protruding lower jaw and lack of a chin barbel."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MICROMESISTIUS",
+      "name": "Micromesistius",
+      "rank": "GENUS",
+      "description": "Blue whitings — small pelagic gadids fished in enormous quantities mainly for fishmeal and oil.",
+      "lineage": "Blue Whiting",
+      "children": [
+        {
+          "id": "MICROMESISTIUS_POUTASSOU",
+          "name": "Micromesistius poutassou",
+          "rank": "SPECIES",
+          "commonName": "Blue Whiting",
+          "lineage": "Blue Whiting",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small, abundant mesopelagic gadid of the northeast Atlantic and Mediterranean, one of the most heavily fished species in European waters, mostly reduced to fishmeal."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BOREOGADUS",
+      "name": "Boreogadus",
+      "rank": "GENUS",
+      "description": "The polar cod — a keystone forage fish of Arctic ecosystems with antifreeze proteins in its blood.",
+      "lineage": "Polar Cod",
+      "children": [
+        {
+          "id": "BOREOGADUS_SAIDA",
+          "name": "Boreogadus saida",
+          "rank": "SPECIES",
+          "commonName": "Polar Cod",
+          "lineage": "Polar Cod",
+          "continents": [
+            "Europe",
+            "Asia",
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small Arctic cod that lives among sea ice, producing antifreeze glycoproteins to survive sub-zero water. A critical link transferring energy from plankton to seals, whales and seabirds; vulnerable to sea-ice loss."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TRISOPTERUS",
+      "name": "Trisopterus",
+      "rank": "GENUS",
+      "description": "Small short-lived gadids of European shelf seas — poor cod, pouting and Norway pout.",
+      "lineage": "Pout",
+      "children": [
+        {
+          "id": "TRISOPTERUS_LUSCUS",
+          "name": "Trisopterus luscus",
+          "rank": "SPECIES",
+          "commonName": "Pouting",
+          "lineage": "Pout",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "Also called bib, a coppery, deep-bodied gadid of northeast Atlantic reefs and wrecks with a long chin barbel and dark blotch at the pectoral base."
+        },
+        {
+          "id": "TRISOPTERUS_ESMARKII",
+          "name": "Trisopterus esmarkii",
+          "rank": "SPECIES",
+          "commonName": "Norway Pout",
+          "lineage": "Pout",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small, abundant North Sea gadid forming the basis of a large industrial fishery for fishmeal and a key prey of cod, saithe and haddock.",
+          "namedAfter": "Hans Henrik Esmark"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MOLVA",
+      "name": "Molva",
+      "rank": "GENUS",
+      "description": "The lings — elongate, eel-like gadids of deep North Atlantic waters, prized as food fish.",
+      "lineage": "Ling",
+      "children": [
+        {
+          "id": "MOLVA_MOLVA",
+          "name": "Molva molva",
+          "rank": "SPECIES",
+          "commonName": "Common Ling",
+          "lineage": "Ling",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A large, slender gadid of deep rocky grounds in the northeast Atlantic, reaching over 2 m. An important commercial species sold fresh and salted."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BROSME",
+      "name": "Brosme",
+      "rank": "GENUS",
+      "description": "The tusk or cusk — a deep-water gadid with a single long dorsal fin.",
+      "lineage": "Tusk",
+      "children": [
+        {
+          "id": "BROSME_BROSME",
+          "name": "Brosme brosme",
+          "rank": "SPECIES",
+          "commonName": "Tusk",
+          "lineage": "Tusk",
+          "continents": [
+            "Europe",
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "Also called cusk, a solitary deep-water gadid of cold North Atlantic rocky bottoms, with a continuous single dorsal fin. Slow-growing and assessed as Near Threatened in places due to overfishing."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GADICULUS",
+      "name": "Gadiculus",
+      "rank": "GENUS",
+      "description": "The silvery pouts — tiny deep-water gadids with large eyes and fragile silvery scales.",
+      "lineage": "Silvery Pout",
+      "children": [
+        {
+          "id": "GADICULUS_ARGENTEUS",
+          "name": "Gadiculus argenteus",
+          "rank": "SPECIES",
+          "commonName": "Silvery Pout",
+          "lineage": "Silvery Pout",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small, big-eyed deep-shelf gadid of the eastern Atlantic and Mediterranean with delicate silvery scales, important prey for larger demersal fish."
         }
       ]
     }
