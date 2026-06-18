@@ -17,7 +17,10 @@
           "rank": "SPECIES",
           "commonName": "European Perch",
           "lineage": "Perch",
-          "continents": ["Europe", "Asia"],
+          "continents": [
+            "Europe",
+            "Asia"
+          ],
           "subspeciesCount": 0,
           "description": "The most abundant fish in Swedish lakes (abborre). Almost certainly the first fish caught by Swedish children. Introduced to Australia and New Zealand where it is highly invasive. Can live to 22 years in slow-growing, cold populations. Striped pattern and red fins make it unmistakeable."
         },
@@ -27,9 +30,24 @@
           "rank": "SPECIES",
           "commonName": "Yellow Perch",
           "lineage": "Perch",
-          "continents": ["North America"],
+          "continents": [
+            "North America"
+          ],
           "subspeciesCount": 0,
           "description": "The North American counterpart of the European perch and equally popular with anglers. State fish of several US states. One of the most commercially valuable freshwater fish in North America. The Great Lakes support major commercial yellow perch fisheries."
+        },
+        {
+          "id": "PERCA_SCHRENKII",
+          "name": "Perca schrenkii",
+          "rank": "SPECIES",
+          "commonName": "Balkhash Perch",
+          "lineage": "Perch",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "Endemic to Lake Balkhash and associated water bodies in Kazakhstan and Central Asia. Closely resembles the European perch but is restricted to the Balkhash–Alakol basin, where it is threatened by introduced predatory fish.",
+          "namedAfter": "Leopold von Schrenck"
         }
       ]
     },
@@ -46,7 +64,10 @@
           "rank": "SPECIES",
           "commonName": "Zander",
           "lineage": "Zander",
-          "continents": ["Europe", "Asia"],
+          "continents": [
+            "Europe",
+            "Asia"
+          ],
           "subspeciesCount": 0,
           "description": "Sweden's most prized freshwater table fish (gös). Expanding its range northward as Swedish lakes warm. Its reflective tapetum lucidum makes its eyes glow in darkness — an adaptation for hunting in murky water. The 'pike-perch' name is a misnomer; it is more closely related to perch."
         },
@@ -56,9 +77,47 @@
           "rank": "SPECIES",
           "commonName": "Walleye",
           "lineage": "Zander",
-          "continents": ["North America"],
+          "continents": [
+            "North America"
+          ],
           "subspeciesCount": 0,
           "description": "The most popular sport fish in Canada and a favourite of Great Lakes anglers. Named for its opaque, glassy eyes (caused by the tapetum lucidum). Supports major commercial fisheries. State or provincial fish of many jurisdictions."
+        },
+        {
+          "id": "SANDER_MARINUS",
+          "name": "Sander marinus",
+          "rank": "SPECIES",
+          "commonName": "Estuarine Perch",
+          "lineage": "Zander",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A brackish-water zander of the Black and Caspian Sea basins, tolerant of saline estuarine conditions unusual for the family. Less commercially exploited than the closely related zander."
+        },
+        {
+          "id": "SANDER_VOLGENSIS",
+          "name": "Sander volgensis",
+          "rank": "SPECIES",
+          "commonName": "Volga Pikeperch",
+          "lineage": "Zander",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "Native to the Volga, Danube and other eastern European rivers. Smaller than the zander, with which it often co-occurs, and lacking the large canine teeth of its relative."
+        },
+        {
+          "id": "SANDER_CANADENSIS",
+          "name": "Sander canadensis",
+          "rank": "SPECIES",
+          "commonName": "Sauger",
+          "lineage": "Zander",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "The North American counterpart of the Volga pikeperch, native to large turbid rivers of central North America. It hybridises with walleye to produce the 'saugeye', widely stocked by anglers."
         }
       ]
     },
@@ -75,9 +134,302 @@
           "rank": "SPECIES",
           "commonName": "Eurasian Ruffe",
           "lineage": "Ruffe",
-          "continents": ["Europe", "Asia", "North America"],
+          "continents": [
+            "Europe",
+            "Asia",
+            "North America"
+          ],
           "subspeciesCount": 0,
           "description": "Common in Swedish lakes and rivers but rarely targeted by anglers. A bottom-dweller of turbid, slow-flowing water. Introduced to the North American Great Lakes where it spread rapidly and is now considered highly invasive."
+        },
+        {
+          "id": "GYMNOCEPHALUS_BALONI",
+          "name": "Gymnocephalus baloni",
+          "rank": "SPECIES",
+          "commonName": "Balon's Ruffe",
+          "lineage": "Ruffe",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A Danube-basin ruffe distinguished only relatively recently from the Eurasian ruffe. It prefers deeper, slower stretches of large rivers.",
+          "namedAfter": "Eugene Balon"
+        },
+        {
+          "id": "GYMNOCEPHALUS_SCHRAETSER",
+          "name": "Gymnocephalus schraetser",
+          "rank": "SPECIES",
+          "commonName": "Schraetzer",
+          "lineage": "Ruffe",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A slender, striped ruffe endemic to the Danube basin, listed in the EU Habitats Directive. Sensitive to river regulation and damming."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PERCINA",
+      "name": "Percina",
+      "rank": "GENUS",
+      "description": "Logperch and larger darters of North America, distinguished from Etheostoma by their larger size, more elongate bodies and a more complete swim bladder. Many species are sensitive to siltation and habitat degradation.",
+      "lineage": "Darters",
+      "children": [
+        {
+          "id": "PERCINA_CAPRODES",
+          "name": "Percina caprodes",
+          "rank": "SPECIES",
+          "commonName": "Logperch",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "The largest and most widespread North American darter, named for its habit of flipping stones with its snout to feed on hidden invertebrates."
+        },
+        {
+          "id": "PERCINA_REX",
+          "name": "Percina rex",
+          "rank": "SPECIES",
+          "commonName": "Roanoke Logperch",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A federally endangered darter restricted to the Roanoke River drainage of Virginia, threatened by sedimentation and impoundment."
+        },
+        {
+          "id": "PERCINA_TANASI",
+          "name": "Percina tanasi",
+          "rank": "SPECIES",
+          "commonName": "Snail Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "Famous for the 1978 US Supreme Court case (TVA v. Hill) that halted the Tellico Dam under the Endangered Species Act. Feeds largely on aquatic snails in clean gravel shoals."
+        },
+        {
+          "id": "PERCINA_PHOXOCEPHALA",
+          "name": "Percina phoxocephala",
+          "rank": "SPECIES",
+          "commonName": "Slenderhead Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A slim darter of clear, gravel-bottomed streams across the central United States, intolerant of turbidity and siltation."
+        },
+        {
+          "id": "PERCINA_AURANTIACA",
+          "name": "Percina aurantiaca",
+          "rank": "SPECIES",
+          "commonName": "Tangerine Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A large, strikingly orange darter of clear upland streams in the Tennessee River system, one of the most colourful members of the genus."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ETHEOSTOMA",
+      "name": "Etheostoma",
+      "rank": "GENUS",
+      "description": "Darters — small, vividly coloured bottom-dwelling perch relatives endemic to North American freshwater streams. The genus is one of the most species-rich of all North American vertebrates, with many narrow-range endemics of high conservation concern.",
+      "lineage": "Darters",
+      "children": [
+        {
+          "id": "ETHEOSTOMA_CAERULEUM",
+          "name": "Etheostoma caeruleum",
+          "rank": "SPECIES",
+          "commonName": "Rainbow Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "One of the most brilliantly coloured North American fishes, the breeding male flushed with electric blue and orange. Inhabits clean, fast riffles of eastern US streams."
+        },
+        {
+          "id": "ETHEOSTOMA_SPECTABILE",
+          "name": "Etheostoma spectabile",
+          "rank": "SPECIES",
+          "commonName": "Orangethroat Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small, vividly coloured darter of small clear streams and springs in the central United States, a model species in studies of speciation and sexual selection."
+        },
+        {
+          "id": "ETHEOSTOMA_BLENNIOIDES",
+          "name": "Etheostoma blennioides",
+          "rank": "SPECIES",
+          "commonName": "Greenside Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A relatively large darter associated with beds of aquatic moss and algae in eastern North American rivers, the breeding male suffused with green."
+        },
+        {
+          "id": "ETHEOSTOMA_NIGRUM",
+          "name": "Etheostoma nigrum",
+          "rank": "SPECIES",
+          "commonName": "Johnny Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A widespread, adaptable darter of varied habitats across eastern North America, often the most common darter in a stream. Males guard eggs deposited on the undersides of stones."
+        },
+        {
+          "id": "ETHEOSTOMA_FONTICOLA",
+          "name": "Etheostoma fonticola",
+          "rank": "SPECIES",
+          "commonName": "Fountain Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A tiny endangered darter restricted to the spring-fed San Marcos and Comal rivers of Texas, dependent on constant clear, cool spring flow."
+        },
+        {
+          "id": "ETHEOSTOMA_WAPITI",
+          "name": "Etheostoma wapiti",
+          "rank": "SPECIES",
+          "commonName": "Boulder Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A federally endangered darter of the Elk River system in Tennessee and Alabama, named for its preference for boulder-strewn riffles."
+        },
+        {
+          "id": "ETHEOSTOMA_FLABELLARE",
+          "name": "Etheostoma flabellare",
+          "rank": "SPECIES",
+          "commonName": "Fantail Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small darter of fast riffles whose males develop fleshy knobs on the dorsal fin spines used in egg care. Widespread across eastern North America."
+        },
+        {
+          "id": "ETHEOSTOMA_OLMSTEDI",
+          "name": "Etheostoma olmstedi",
+          "rank": "SPECIES",
+          "commonName": "Tessellated Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A common darter of Atlantic slope streams from Canada to Florida, tolerant of a wide range of conditions and frequently studied in behavioural ecology."
+        },
+        {
+          "id": "ETHEOSTOMA_RUBRUM",
+          "name": "Etheostoma rubrum",
+          "rank": "SPECIES",
+          "commonName": "Bayou Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A threatened darter endemic to Bayou Pierre in Mississippi, restricted to clean gravel riffles in a single small drainage."
+        },
+        {
+          "id": "ETHEOSTOMA_SELLARE",
+          "name": "Etheostoma sellare",
+          "rank": "SPECIES",
+          "commonName": "Maryland Darter",
+          "lineage": "Darters",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "Possibly extinct, this darter was known only from a few sites in Maryland and has not been reliably seen since the late 1980s, making it one of the most imperilled North American fishes."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ZINGEL",
+      "name": "Zingel",
+      "rank": "GENUS",
+      "description": "Streber and zingel — elongate, bottom-dwelling perch relatives of the Danube and other central European river systems, adapted to fast-flowing, well-oxygenated water.",
+      "lineage": "Danube Perches",
+      "children": [
+        {
+          "id": "ZINGEL_ZINGEL",
+          "name": "Zingel zingel",
+          "rank": "SPECIES",
+          "commonName": "Zingel",
+          "lineage": "Danube Perches",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "An elongate, bottom-dwelling perch relative of the Danube and Dniester basins, listed under the EU Habitats Directive and sensitive to river regulation."
+        },
+        {
+          "id": "ZINGEL_STREBER",
+          "name": "Zingel streber",
+          "rank": "SPECIES",
+          "commonName": "Streber",
+          "lineage": "Danube Perches",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A slender Danubian perch relative of fast-flowing gravel reaches, threatened by damming and channelisation across central Europe."
+        },
+        {
+          "id": "ZINGEL_ASPER",
+          "name": "Zingel asper",
+          "rank": "SPECIES",
+          "commonName": "Apron",
+          "lineage": "Danube Perches",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "A critically endangered perch relative endemic to the Rhône basin in France, reduced to a few fragmented populations by dams and pollution."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ROMANICHTHYS",
+      "name": "Romanichthys",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing only the asprete, one of the most endangered fish in Europe, restricted to a few rivers in Romania.",
+      "lineage": "Darters",
+      "children": [
+        {
+          "id": "ROMANICHTHYS_VALSANICOLA",
+          "name": "Romanichthys valsanicola",
+          "rank": "SPECIES",
+          "commonName": "Asprete",
+          "lineage": "Danube Perches",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "One of Europe's most endangered fish and a living fossil, surviving only in a short stretch of the Vâlsan River in Romania, with a wild population numbering in the tens."
         }
       ]
     }
