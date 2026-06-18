@@ -40,6 +40,8 @@ shared/
     NodeNav.tsx                ← breadcrumb / sibling navigator
   data/
     pending-eponyms.json       ← species with namedAfter in families not yet imported
+portal/
+  data/enrichment-queue.json  ← agent work queue: 95 families needing more species
 ```
 
 ## Adding a new family — checklist
@@ -73,6 +75,25 @@ shared/
 
 - **Full sub-app** (`mammalia/carnivora/felidae/`, `mammalia/carnivora/canidae/`, …) — has `App.tsx`, `colors.ts`, `vite.config.ts`; runs standalone and in the portal.
 - **Data-only** (`aves/passeriformes/corvidae/`, `aves/piciformes/picidae/`, …) — only `src/data/<family>.json`; portal-only until a full app is built.
+
+## Enriching existing families (agent workflow)
+
+`portal/data/enrichment-queue.json` lists 95 families that need more species, ranked by class/order. Each entry contains:
+- `dataFile` — path to edit (relative to repo root)
+- `existingSpecies` — already-present species names (avoid duplicates)
+- `targetAdd` — number of notable species to add
+- `knownSpeciesCount` — real-world total for context
+
+**Workflow for one family:**
+1. Read the entry from `enrichment-queue.json`
+2. Read `<dataFile>` to understand the existing genus structure
+3. Add `targetAdd` well-known/notable SPECIES nodes (scientific name + commonName + continents + description + subspeciesCount; add `namedAfter` where applicable)
+4. Run `cd portal && sh scripts/buildData.sh` — must produce zero warnings
+5. Commit `<dataFile>` with message: `Add N species to FamilyName`
+6. Remove the completed entry from `enrichment-queue.json` and commit that separately
+7. Push
+
+Check `shared/data/pending-eponyms.json` — if the family's slug appears, add those species with `namedAfter` set and remove the entry.
 
 ## TaxonNode ranks
 
