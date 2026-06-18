@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: process.env.VITE_BASE ?? '/',
   resolve: {
-    alias: { '@shared': path.resolve(__dirname, '../shared/src') },
+    alias: { '@shared': path.resolve(__dirname, '../../../shared/src') },
   },
 })

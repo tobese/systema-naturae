@@ -28,29 +28,29 @@ jobs:
           node-version: 22
           cache: npm
           cache-dependency-path: |
-            felidae/package-lock.json
-            canidae/package-lock.json
+            mammalia/carnivora/felidae/package-lock.json
+            mammalia/carnivora/canidae/package-lock.json
             portal/package-lock.json
 
       - name: Install Felidae deps
-        working-directory: felidae
+        working-directory: mammalia/carnivora/felidae
         run: npm ci
 
       - name: Link shared node_modules
-        run: ln -s "$(pwd)/felidae/node_modules" shared/node_modules
+        run: ln -s "$(pwd)/mammalia/carnivora/felidae/node_modules" shared/node_modules
 
       - name: Build Felidae
-        working-directory: felidae
+        working-directory: mammalia/carnivora/felidae
         run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/felidae/
 
       - name: Install Canidae deps
-        working-directory: canidae
+        working-directory: mammalia/carnivora/canidae
         run: npm ci
 
       - name: Build Canidae
-        working-directory: canidae
+        working-directory: mammalia/carnivora/canidae
         run: npm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/canidae/
@@ -68,8 +68,8 @@ jobs:
       - name: Assemble Pages output
         run: |
           mkdir -p _site/felidae _site/canidae
-          cp -r felidae/dist/. _site/felidae/
-          cp -r canidae/dist/. _site/canidae/
+          cp -r mammalia/carnivora/felidae/dist/. _site/felidae/
+          cp -r mammalia/carnivora/canidae/dist/. _site/canidae/
           cp -r portal/dist/. _site/
 
       - uses: actions/upload-pages-artifact@v3

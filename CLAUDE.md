@@ -26,10 +26,12 @@ portal/
     SearchBox.tsx              ← global species search
     UnifiedInfoPanel.tsx       ← right-hand detail panel for selected node
     InfoModal.tsx              ← about/info overlay
-<family>/
+<class>/<order>/<family>/
   src/data/<family>.json      ← species data, grafted in at build time
   src/App.tsx                 ← standalone family viewer (full-app pattern only)
   src/colors.ts               ← ColorTheme (full-app pattern only)
+  (e.g. mammalia/carnivora/felidae/, aves/passeriformes/corvidae/)
+tardigrada/                   ← exception: no class in taxonomy, lives at root
 shared/
   src/types.ts                ← TaxonNode, ColorTheme interfaces
   src/components/
@@ -42,7 +44,7 @@ shared/
 
 ## Adding a new family — checklist
 
-1. **`<family>/src/data/<family>.json`** — species data.  
+1. **`<class>/<order>/<family>/src/data/<family>.json`** — species data.  
    Root: `{ id, name, rank: "FAMILY", commonName, children: [...] }`  
    Node fields: `lineage`, `continents[]`, `subspeciesCount`, `description`, `namedAfter`
 
@@ -56,7 +58,7 @@ shared/
 
 ## How the graft works
 
-`buildData.ts` walks `taxonomy.json`. When it hits a FAMILY node with `appSlug`, it reads `<root>/<appSlug>/src/data/<appSlug>.json`, stamps every descendant node with `familySlug: appSlug`, and splices the children in. `colorRegistry.ts` uses `familySlug` to look up the `ColorTheme` for rendering.
+`buildData.ts` walks `taxonomy.json`, tracking the current CLASS and ORDER as it descends. When it hits a FAMILY node with `appSlug`, it reads `<root>/<class>/<order>/<appSlug>/src/data/<appSlug>.json`, stamps every descendant node with `familySlug: appSlug`, and splices the children in. Tardigrada (no CLASS ancestor) resolves to `<root>/tardigrada/…`. `colorRegistry.ts` uses `familySlug` to look up the `ColorTheme` for rendering.
 
 ## Key TaxonNode fields
 
@@ -69,8 +71,8 @@ shared/
 
 ## Family patterns
 
-- **Full sub-app** (`anatidae/`, `felidae/`, `equidae/`, …) — has `App.tsx`, `colors.ts`, `vite.config.ts`; runs standalone and in the portal.
-- **Data-only** (`corvidae/`, `paridae/`, `picidae/`, `columbidae/`, `macropodidae/`, …) — only `src/data/<family>.json`; portal-only until a full app is built.
+- **Full sub-app** (`mammalia/carnivora/felidae/`, `mammalia/carnivora/canidae/`, …) — has `App.tsx`, `colors.ts`, `vite.config.ts`; runs standalone and in the portal.
+- **Data-only** (`aves/passeriformes/corvidae/`, `aves/piciformes/picidae/`, …) — only `src/data/<family>.json`; portal-only until a full app is built.
 
 ## TaxonNode ranks
 

@@ -42,10 +42,15 @@ function graftFamily(portalNode: TaxonNode, familyData: TaxonNode, slug: string)
   return { ...portalNode, familySlug: slug, children };
 }
 
-function processTree(node: TaxonNode): TaxonNode {
+function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}): TaxonNode {
+  let next = ctx;
+  if (node.rank === "CLASS") next = { cls: node.name.toLowerCase() };
+  if (node.rank === "ORDER") next = { ...ctx, ord: node.name.toLowerCase() };
+
   if (node.rank === "FAMILY" && node.appSlug) {
     const slug = node.appSlug as string;
-    const dataPath = resolve(root, slug, "src/data", `${slug}.json`);
+    const parts = [next.cls, next.ord, slug].filter(Boolean) as string[];
+    const dataPath = resolve(root, ...parts, "src/data", `${slug}.json`);
     try {
       const familyData = JSON.parse(readFileSync(dataPath, "utf-8")) as TaxonNode;
       return graftFamily(node, familyData, slug);
@@ -55,7 +60,7 @@ function processTree(node: TaxonNode): TaxonNode {
     }
   }
   if (node.children) {
-    return { ...node, children: node.children.map(processTree) };
+    return { ...node, children: node.children.map(c => processTree(c, next)) };
   }
   return node;
 }
