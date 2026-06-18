@@ -439,6 +439,16 @@ function SpeciesPanel({ node, onSelect, ancestors }: { node: TaxonNode; onSelect
       <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 10 }}>Species</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 2 }}>{node.name}</div>
       {node.commonName && <div style={{ fontSize: 16, color: "#aaa", marginBottom: 8 }}>{node.commonName}</div>}
+      {node.namedAfter && (
+        <div style={{
+          display: "inline-flex", alignItems: "center", gap: 5,
+          fontSize: 11, color: "#8899aa",
+          background: "#0d1118", border: "1px solid #1e2838", borderRadius: 4,
+          padding: "3px 8px", marginBottom: 8,
+        }}>
+          <span style={{ color: "#445566" }}>Named after</span> {node.namedAfter}
+        </div>
+      )}
       {node.lineage && (
         <div style={{ fontSize: 13, marginBottom: 4 }}>
           <span style={{ color: "#555" }}>Lineage: </span>

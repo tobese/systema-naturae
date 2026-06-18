@@ -155,11 +155,12 @@ export default function App() {
   }, [focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo]);
 
   const handleCollapseFamily = useCallback(() => {
+    if (focusedFamilyId) pendingZoomId.current = focusedFamilyId;
     setFocus(null);
     setExpandedSubspeciesIds(new Set());
     setExpandedBreedIds(new Set());
     setHighlightedContinent(null);
-  }, [setFocus]);
+  }, [setFocus, focusedFamilyId]);
 
   const selectedInTree = useMemo(
     () => selected ? (walkFind(treeData, selected.id) ?? selected) : null,
