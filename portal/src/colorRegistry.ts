@@ -898,6 +898,17 @@ const DERMOCHELYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: {
 const CROCODYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "True Crocodiles": "#3a5030", "Gharial": "#4a6840" }, breedGroupColor: "#304828", hybridColor: "#5a7848" };
 const ALLIGATORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Alligators": "#4a6038", "Caimans": "#3a5028" }, breedGroupColor: "#405830", hybridColor: "#608050" };
 const SPHENODONTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tuatara": "#6a7840" }, breedGroupColor: "#5a6830", hybridColor: "#8a9858" };
+
+const BUFONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Toads": "#6a7858", "New World Toads": "#8a7040", "Tropical Toads": "#a08050" }, breedGroupColor: "#7a7848", hybridColor: "#9a9868" };
+const HYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Tree Frogs": "#5a9050", "New World Tree Frogs": "#78b048", "Australian Tree Frogs": "#98c068" }, breedGroupColor: "#6aaa58", hybridColor: "#90c878" };
+const DENDROBATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Poison Dart Frogs": "#2870b8", "Thumbnail Frogs": "#e8b820" }, breedGroupColor: "#4878a8", hybridColor: "#70a8d8" };
+const MICROHYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Old World Narrow-mouthed Frogs": "#8a8850", "New World Narrow-mouthed Frogs": "#7a7840", "Malagasy Narrow-mouthed Frogs": "#a89858" }, breedGroupColor: "#888048", hybridColor: "#a8a868" };
+const PLETHODONTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Woodland Salamanders": "#9a4830", "Cave Salamanders": "#d89858", "Brook Salamanders": "#7a3820" }, breedGroupColor: "#8a4028", hybridColor: "#c07848" };
+const AMBYSTOMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mole Salamanders": "#486880", "Axolotl": "#d8a868" }, breedGroupColor: "#5a7888", hybridColor: "#78a0b8" };
+const CRYPTOBRANCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Giant Salamanders": "#6a5040", "Hellbender": "#8a7050" }, breedGroupColor: "#7a6048", hybridColor: "#9a8060" };
+const PROTEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cave Salamanders": "#e8d8c8", "Mudpuppies": "#a89080" }, breedGroupColor: "#c8b8a8", hybridColor: "#e8e0d8" };
+const CAECILIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tropical Caecilians": "#a87848", "Aquatic Caecilians": "#5a7888" }, breedGroupColor: "#987040", hybridColor: "#c89860" };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -1021,6 +1032,15 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   crocodylidae:     CROCODYLIDAE_THEME,
   alligatoridae:    ALLIGATORIDAE_THEME,
   sphenodontidae:   SPHENODONTIDAE_THEME,
+  bufonidae:        BUFONIDAE_THEME,
+  hylidae:          HYLIDAE_THEME,
+  dendrobatidae:    DENDROBATIDAE_THEME,
+  microhylidae:     MICROHYLIDAE_THEME,
+  plethodontidae:   PLETHODONTIDAE_THEME,
+  ambystomatidae:   AMBYSTOMATIDAE_THEME,
+  cryptobranchidae: CRYPTOBRANCHIDAE_THEME,
+  proteidae:        PROTEIDAE_THEME,
+  caeciliidae:      CAECILIIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
