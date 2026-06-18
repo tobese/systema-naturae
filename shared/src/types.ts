@@ -14,6 +14,7 @@ export interface TaxonNode {
   accepted?: boolean;
   familySlug?: string;
   description?: string;
+  namedAfter?: string;
   children?: TaxonNode[];
 }
 
