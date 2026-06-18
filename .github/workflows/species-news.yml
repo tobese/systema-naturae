@@ -1,0 +1,46 @@
+name: Update species news
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write  # to commit updated species-news.json
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: portal/package-lock.json
+
+      - name: Install portal deps
+        working-directory: portal
+        run: npm ci
+
+      - name: Fetch species news
+        working-directory: portal
+        run: npx tsx scripts/fetchSpeciesNews.ts
+        env:
+          IUCN_TOKEN: ${{ secrets.IUCN_TOKEN }}
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add portal/data/species-news.json
+          if git diff --staged --quiet; then
+            echo "No new species events — nothing to commit"
+          else
+            git commit -m "Update species news [$(date -u '+%Y-%m-%d')]"
+            git push
+          fi

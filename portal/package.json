@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx scripts/buildData.ts && vite",
-    "build": "tsx scripts/buildData.ts && vite build",
+    "dev": "sh scripts/buildData.sh && vite",
+    "build": "sh scripts/buildData.sh && vite build",
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "preview": "vite preview"

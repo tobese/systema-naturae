@@ -8,7 +8,7 @@ Interactive taxonomy portal. Each family lives in its own directory; the portal 
 cd portal && npm run dev          # rebuild unified taxonomy, start dev server
 cd portal && npm run build        # rebuild unified taxonomy, production build
 cd portal && npm run typecheck    # TypeScript check
-cd portal && npx tsx scripts/buildData.ts  # rebuild unified-taxonomy.json only (fast verify)
+cd portal && sh scripts/buildData.sh       # rebuild unified-taxonomy.json only (fast verify; auto-detects bun vs tsx)
 ```
 
 ## Architecture
@@ -37,7 +37,7 @@ shared/
 
 3. **`portal/src/colorRegistry.ts`** — add a `ColorTheme` constant and register it in `COLOR_REGISTRY` under the `appSlug` key.
 
-4. Run `cd portal && npx tsx scripts/buildData.ts` to verify — warns on missing data files, prints total node count.
+4. Run `cd portal && sh scripts/buildData.sh` to verify — warns on missing data files, prints total node count.
 
 ## How the graft works
 
