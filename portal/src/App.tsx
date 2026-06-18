@@ -12,6 +12,7 @@ import SearchBox from "./components/SearchBox";
 import NewsBell from "./components/NewsBell";
 import InfoModal from "./components/InfoModal";
 import CoverageModal from "./components/CoverageModal";
+import EponymModal from "./components/EponymModal";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -60,6 +61,7 @@ export default function App() {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
+  const [showEponyms, setShowEponyms] = useState(false);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
@@ -339,6 +341,20 @@ export default function App() {
             ⓘ
           </button>
           <button
+            onClick={() => setShowEponyms(o => !o)}
+            title="Species named after people"
+            style={{
+              ...btnBase,
+              borderColor: showEponyms ? "#3a3d50" : "#1e2030",
+              background: showEponyms ? "#1e2030" : "transparent",
+              color: showEponyms ? "#c0c0d8" : "#555",
+            }}
+            onMouseEnter={e => { if (!showEponyms) e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { if (!showEponyms) e.currentTarget.style.color = "#555"; }}
+          >
+            Eponyms
+          </button>
+          <button
             onClick={() => setShowCoverage(o => !o)}
             title="Taxonomy coverage"
             style={{
@@ -460,6 +476,13 @@ export default function App() {
         </div>
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
+      {showEponyms && (
+        <EponymModal
+          data={annotatedData}
+          onClose={() => setShowEponyms(false)}
+          onNavigate={(slug, nodeId) => { navigateTo(slug, nodeId); setShowEponyms(false); }}
+        />
+      )}
       {showCoverage && (
         <CoverageModal
           data={annotatedData}
