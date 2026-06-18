@@ -3,6 +3,7 @@ import FamilyTree from "@shared/components/FamilyTree";
 import HabitatMap from "@shared/components/HabitatMap";
 import NodeNav from "@shared/components/NodeNav";
 import type { TaxonNode } from "@shared/types";
+import type { PortalNode } from "./types";
 import { annotatePortalLevels } from "./colors";
 import { useUnifiedTree } from "./hooks/useUnifiedTree";
 import { useUrlState } from "./hooks/useUrlState";
@@ -60,7 +61,7 @@ export default function App() {
   const pendingZoomId = useRef<string | null>(null);
   const sidebarScrollRef = useRef<HTMLDivElement>(null);
 
-  const { focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo } = useUrlState();
+  const { focusedFamilySlug, focusedClassId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo } = useUrlState();
 
   useEffect(() => {
     sidebarScrollRef.current?.scrollTo({ top: 0, behavior: "instant" });
@@ -94,6 +95,17 @@ export default function App() {
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }
 
+    // CLASS node click → focus / unfocus (compresses other classes to 35% of arc)
+    if (node.rank === "CLASS") {
+      if (node.id === focusedClassId) {
+        setFocusedClass(null, null);
+      } else {
+        setFocusedClass(node.id, node.id);
+        pendingZoomId.current = node.id;
+      }
+      return;
+    }
+
     // FAMILY node click → focus / unfocus
     if (node.rank === "FAMILY") {
       const slug = node.familySlug ?? null;
@@ -103,7 +115,7 @@ export default function App() {
         setExpandedBreedIds(new Set());
         setHighlightedContinent(null);
       } else {
-        setFocus(slug);
+        navigateTo(slug, node.id);
         setExpandedSubspeciesIds(new Set());
         setExpandedBreedIds(new Set());
         setHighlightedContinent(null);
@@ -145,8 +157,9 @@ export default function App() {
       }
     }
 
-    // Zoom to genus/order/class selections so the tree pans to the destination
-    if (node.rank !== "SPECIES" && node.rank !== "SUBSPECIES") {
+    // Zoom to order-and-below so the tree pans to the destination (skip CLASS/PHYLUM — too jarring in overview)
+    const ZOOM_RANKS = new Set(["ORDER", "SUBFAMILY", "TRIBE", "GENUS", "BREED_GROUP", "HYBRID_GROUP"]);
+    if (ZOOM_RANKS.has(node.rank)) {
       pendingZoomId.current = node.id;
     }
 
@@ -162,6 +175,10 @@ export default function App() {
     setHighlightedContinent(null);
   }, [setFocus, focusedFamilyId]);
 
+  const handleCollapseClass = useCallback(() => {
+    setFocusedClass(null, null);
+  }, [setFocusedClass]);
+
   const selectedInTree = useMemo(
     () => selected ? (walkFind(treeData, selected.id) ?? selected) : null,
     [selected, treeData],
@@ -175,6 +192,11 @@ export default function App() {
   const focusedFamilyNode = useMemo(
     () => focusedFamilyId ? walkFind(annotatedData, focusedFamilyId) : null,
     [focusedFamilyId],
+  );
+
+  const focusedClassNode = useMemo(
+    () => focusedClassId ? walkFind(annotatedData, focusedClassId) : null,
+    [focusedClassId],
   );
 
   const breadcrumbPath = useMemo(
@@ -195,6 +217,7 @@ export default function App() {
       const tag = (e.target as HTMLElement).tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "A") return;
       if (e.key === "Escape" && focusedFamilySlug) { handleCollapseFamily(); return; }
+      if (e.key === "Escape" && focusedClassId) { handleCollapseClass(); return; }
       if (!selected || !navContext) return;
       const { parent, siblings, index } = navContext;
       if (e.key === "ArrowLeft") {
@@ -208,7 +231,7 @@ export default function App() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [selected, navContext, handleSelect, focusedFamilySlug, handleCollapseFamily]);
+  }, [selected, navContext, handleSelect, focusedFamilySlug, handleCollapseFamily, focusedClassId, handleCollapseClass]);
 
   const familyCount = useMemo(() => {
     let n = 0;
@@ -223,12 +246,12 @@ export default function App() {
   const totalSpecies = useMemo(() => {
     let n = 0;
     function walk(node: TaxonNode) {
-      if (node.rank === "SPECIES") n++;
+      if (node.rank === "FAMILY") { n += (node as PortalNode).speciesCount ?? 0; return; }
       node.children?.forEach(walk);
     }
-    walk(treeData);
+    walk(annotatedData);
     return n;
-  }, [treeData]);
+  }, []);
 
   const btnBase: React.CSSProperties = {
     padding: "6px 14px",
@@ -239,6 +262,21 @@ export default function App() {
   };
 
   const inFamilyFocus = focusedFamilySlug !== null;
+
+  const contextSpecies = useMemo(() => {
+    if (inFamilyFocus && focusedFamilyNode)
+      return (focusedFamilyNode as PortalNode).speciesCount ?? 0;
+    if (focusedClassId && focusedClassNode) {
+      let n = 0;
+      function walk(node: TaxonNode) {
+        if (node.rank === "FAMILY") { n += (node as PortalNode).speciesCount ?? 0; return; }
+        node.children?.forEach(walk);
+      }
+      walk(focusedClassNode);
+      return n;
+    }
+    return totalSpecies;
+  }, [inFamilyFocus, focusedFamilyNode, focusedClassId, focusedClassNode, totalSpecies]);
   const hasContinentData = selected?.rank === "SPECIES" || selected?.rank === "SUBSPECIES";
 
   return (
@@ -263,8 +301,10 @@ export default function App() {
           <span style={{ fontSize: 18, fontWeight: 600, letterSpacing: "-0.01em" }}>Systema Naturae</span>
           <span style={{ fontSize: 13, color: "#555" }}>
             {inFamilyFocus
-              ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${totalSpecies.toLocaleString()} species`
-              : `Animal taxonomy · ${familyCount} families · ${totalSpecies.toLocaleString()} species`}
+              ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
+              : focusedClassId
+                ? `${focusedClassNode?.commonName ?? focusedClassNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
+                : `Animal taxonomy · ${familyCount} families · ${contextSpecies.toLocaleString()} species`}
           </span>
         </div>
         <SearchBox data={annotatedData} onNavigate={navigateTo} />
@@ -275,6 +315,14 @@ export default function App() {
               style={{ ...btnBase, borderColor: "#303048", background: "#141420", color: "#8899cc", marginRight: 4 }}
             >
               ← All families
+            </button>
+          )}
+          {!inFamilyFocus && focusedClassId && (
+            <button
+              onClick={handleCollapseClass}
+              style={{ ...btnBase, borderColor: "#303048", background: "#141420", color: "#8899cc", marginRight: 4 }}
+            >
+              ← All classes
             </button>
           )}
           {(["radial", "vertical"] as const).map(l => (
@@ -306,6 +354,7 @@ export default function App() {
             highlightedNodeIds={highlightedNodeIds}
             colorTheme={colorTheme}
             focusedFamilySlug={focusedFamilySlug}
+            focusedClassId={focusedClassId}
           />
           <div style={{
             position: "absolute",
@@ -362,7 +411,6 @@ export default function App() {
               onFocusFamily={slug => setFocus(slug)}
               focusedFamilySlug={focusedFamilySlug}
               subfamilies={subfamiliesForPanel}
-              breadcrumbPath={breadcrumbPath}
             />
           </div>
         </div>

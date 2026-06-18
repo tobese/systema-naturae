@@ -12,6 +12,7 @@ interface Props {
   colorTheme: ColorTheme;
   specialNodeId?: string | string[];
   focusedFamilySlug?: string | null;
+  focusedClassId?: string | null;
 }
 
 type AnnotatedNode = d3.HierarchyNode<TaxonNode> & { subfamily?: string };
@@ -98,6 +99,32 @@ function remapAngles(nodes: PNode[], focusedFamilySlug: string): void {
   others.forEach(d => { d.x = ARC_FOCUS + ((d.x - oMin) / oSpan) * ARC_OTHER; });
 }
 
+// Same arc-redistribution logic as remapAngles, but keyed on ancestry rather than familySlug.
+function remapAnglesForClass(nodes: PNode[], focusedClassId: string): void {
+  const focused: PNode[] = [];
+  const others: PNode[] = [];
+  for (const d of nodes) {
+    let n: PNode | null = d;
+    let hit = false;
+    while (n) { if (n.data.id === focusedClassId) { hit = true; break; } n = n.parent as PNode | null; }
+    (hit ? focused : others).push(d);
+  }
+  if (focused.length === 0) return;
+
+  const fMin = Math.min(...focused.map(d => d.x));
+  const fMax = Math.max(...focused.map(d => d.x));
+  const fSpan = fMax - fMin || 1;
+  const oArr = others.map(d => d.x).sort((a, b) => a - b);
+  const oMin = oArr[0] ?? 0;
+  const oMax = oArr[oArr.length - 1] ?? (2 * Math.PI);
+  const oSpan = oMax - oMin || 1;
+
+  const ARC_FOCUS = 2 * Math.PI * 0.65;
+  const ARC_OTHER = 2 * Math.PI * 0.35;
+  focused.forEach(d => { d.x = ((d.x - fMin) / fSpan) * ARC_FOCUS; });
+  others.forEach(d => { d.x = ARC_FOCUS + ((d.x - oMin) / oSpan) * ARC_OTHER; });
+}
+
 const TOOLTIP_RANKS = new Set(["SPECIES", "SUBSPECIES", "BREED", "HYBRID"]);
 
 function TooltipBox({
@@ -147,7 +174,7 @@ interface Setup {
 
 export default function FamilyTree({
   data, layout, onSelect, selectedId, pendingZoomId,
-  highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug,
+  highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -266,6 +293,7 @@ export default function FamilyTree({
 
       // Focus+context: give the focused family 65% of the arc, others 35%
       if (focusedFamilySlug) remapAngles(ptNode.descendants(), focusedFamilySlug);
+      else if (focusedClassId) remapAnglesForClass(ptNode.descendants(), focusedClassId);
 
       nodeTransform = (d: PNode) => {
         const angle = d.x - Math.PI / 2;
@@ -569,7 +597,7 @@ export default function FamilyTree({
         }
       }
     }
-  }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, attachTooltip]);
+  }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId, attachTooltip]);
 
   useEffect(() => {
     render();

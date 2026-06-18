@@ -9,7 +9,23 @@ interface Props {
   colorTheme?: ColorTheme;
 }
 
-const SKIP_RANKS = new Set(["KINGDOM", "PHYLUM"]);
+const SKIP_RANKS = new Set(["KINGDOM"]);
+
+const RANK_COLORS: Record<string, string> = {
+  PHYLUM:      "#9b8ed4",
+  CLASS:       "#7a9fc2",
+  ORDER:       "#6baed6",
+  FAMILY:      "#41b7b0",
+  SUBFAMILY:   "#52b788",
+  TRIBE:       "#74c69d",
+  GENUS:       "#b5cd6a",
+  SPECIES:     "#e6a817",
+  SUBSPECIES:  "#e07b39",
+  BREED_GROUP: "#c06e8a",
+  BREED:       "#c06e8a",
+  HYBRID_GROUP:"#9d7fc4",
+  HYBRID:      "#9d7fc4",
+};
 
 function navColor(node: TaxonNode, theme: ColorTheme): string {
   if (node.rank === "FAMILY" || node.rank === "TRIBE") return "#e0e0e0";
@@ -53,6 +69,7 @@ export default function NodeNav({ siblings, index, onNavigate, breadcrumbPath, c
         const color = navColor(node, theme);
         const indent = i * 10;
         const label = node.commonName ?? node.name;
+        const rc = RANK_COLORS[node.rank];
 
         return (
           <div
@@ -108,13 +125,32 @@ export default function NodeNav({ siblings, index, onNavigate, breadcrumbPath, c
                 overflow: "hidden",
                 textOverflow: "ellipsis",
                 whiteSpace: "nowrap",
-                maxWidth: 220,
+                flex: 1,
               }}
               onMouseEnter={e => { if (!isSelected) e.currentTarget.style.color = "#aaa"; }}
               onMouseLeave={e => { if (!isSelected) e.currentTarget.style.color = "#556"; }}
             >
               {label}
             </button>
+            {rc && (
+              <span style={{
+                display: "inline-block",
+                fontSize: 8,
+                color: rc,
+                background: rc + "22",
+                border: `1px solid ${rc}44`,
+                textTransform: "uppercase",
+                letterSpacing: "0.07em",
+                borderRadius: 3,
+                padding: "1px 0",
+                flexShrink: 0,
+                marginLeft: 4,
+                minWidth: 58,
+                textAlign: "center",
+              }}>
+                {node.rank.replace("_", " ")}
+              </span>
+            )}
           </div>
         );
       })}
