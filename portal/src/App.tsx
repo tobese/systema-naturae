@@ -13,6 +13,8 @@ import NewsBell from "./components/NewsBell";
 import InfoModal from "./components/InfoModal";
 import CoverageModal from "./components/CoverageModal";
 import EponymModal from "./components/EponymModal";
+import InternationalDaysModal from "./components/InternationalDaysModal";
+import { useInternationalDays } from "./hooks/useInternationalDays";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -62,6 +64,8 @@ export default function App() {
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
   const [showEponyms, setShowEponyms] = useState(false);
+  const [showDays, setShowDays] = useState(false);
+  const { todaysDays } = useInternationalDays();
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
@@ -369,6 +373,44 @@ export default function App() {
             Coverage
           </button>
           <NewsBell />
+          <button
+            onClick={() => setShowDays(o => !o)}
+            title="International Nature Days"
+            style={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: 34,
+              height: 34,
+              padding: 0,
+              borderRadius: 6,
+              border: "1px solid",
+              borderColor: showDays ? "#3a3d50" : "#1e2030",
+              background: showDays ? "#1e2030" : "transparent",
+              color: showDays ? "#c0c0d8" : "#444",
+              cursor: "pointer",
+            }}
+            onMouseEnter={e => { if (!showDays) e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { if (!showDays) e.currentTarget.style.color = "#444"; }}
+          >
+            <svg width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z" />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+            {todaysDays.length > 0 && (
+              <span style={{
+                position: "absolute",
+                top: 5,
+                right: 5,
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                background: "#80b880",
+                border: "1.5px solid #0f1117",
+              }} />
+            )}
+          </button>
           {inFamilyFocus && (
             <button
               onClick={handleCollapseFamily}
@@ -476,6 +518,7 @@ export default function App() {
         </div>
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
+      {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} />}
       {showEponyms && (
         <EponymModal
           data={annotatedData}
