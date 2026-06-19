@@ -378,6 +378,8 @@ export default function FamilyTree({
     const nodeEnter = nodeSel.enter()
       .append("g")
       .attr("class", "tn")
+      .attr("data-id",   d => d.data.id)
+      .attr("data-rank", d => d.data.rank)
       .attr("transform", (d: PNode) => nodeTransform(d.parent ?? d))
       .style("opacity", 0)
       .style("cursor", "pointer");
