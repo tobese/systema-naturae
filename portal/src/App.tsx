@@ -259,13 +259,12 @@ export default function App() {
   }, []);
 
   const rankCounts = useMemo(() => {
-    const counts = { FAMILY: 0, GENUS: 0, SPECIES: 0, SUBSPECIES: 0, LEAVES: 0 };
+    const counts = { CLASS: 0, ORDER: 0, FAMILY: 0, LEAVES: 0 };
     const root = focusedClassId && focusedClassNode ? focusedClassNode : annotatedData;
     function walk(node: TaxonNode) {
-      if (node.rank === "FAMILY") counts.FAMILY++;
-      else if (node.rank === "GENUS") counts.GENUS++;
-      else if (node.rank === "SPECIES") counts.SPECIES++;
-      else if (node.rank === "SUBSPECIES") counts.SUBSPECIES++;
+      if (node.rank === "CLASS") counts.CLASS++;
+      else if (node.rank === "ORDER") counts.ORDER++;
+      else if (node.rank === "FAMILY") counts.FAMILY++;
       if (!node.children || node.children.length === 0) counts.LEAVES++;
       node.children?.forEach(walk);
     }
@@ -274,11 +273,10 @@ export default function App() {
   }, [focusedClassId, focusedClassNode]);
 
   const RANK_TIERS = [
-    { rank: "FAMILY" as const,     label: "Families",   color: "#4a7a9a", bg: "#0e1e2e" },
-    { rank: "GENUS" as const,      label: "Genera",     color: "#4a9a7a", bg: "#0d1e1a" },
-    { rank: "SPECIES" as const,    label: "Species",    color: "#9a7a3a", bg: "#1e1a0e" },
-    { rank: "SUBSPECIES" as const, label: "Subspecies", color: "#7a5a8a", bg: "#1a141e" },
-    { rank: "LEAVES" as const,     label: "leaves",     color: "#5a5a7a", bg: "#111118" },
+    { rank: "CLASS" as const,  label: "Classes",  color: "#7a6a4a", bg: "#1e1a0e" },
+    { rank: "ORDER" as const,  label: "Orders",   color: "#4a7a6a", bg: "#0e1e1a" },
+    { rank: "FAMILY" as const, label: "Families", color: "#4a6a9a", bg: "#0e1628" },
+    { rank: "LEAVES" as const, label: "total",    color: "#6a6a8a", bg: "#141420" },
   ];
 
   const btnBase: React.CSSProperties = {
