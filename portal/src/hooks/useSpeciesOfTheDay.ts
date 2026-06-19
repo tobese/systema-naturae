@@ -13,7 +13,7 @@ export interface SpeciesOfTheDay {
 }
 
 function collectSpecies(node: TaxonNode, out: SpeciesOfTheDay[]) {
-  if (node.rank === "SPECIES" && (node as any).familySlug) {
+  if (node.rank === "SPECIES" && (node as any).familySlug && node.commonName) {
     out.push({
       id: node.id,
       name: node.name,
