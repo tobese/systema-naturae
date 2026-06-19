@@ -259,23 +259,26 @@ export default function App() {
   }, []);
 
   const rankCounts = useMemo(() => {
-    const counts = { FAMILY: 0, GENUS: 0, SPECIES: 0, SUBSPECIES: 0 };
+    const counts = { FAMILY: 0, GENUS: 0, SPECIES: 0, SUBSPECIES: 0, LEAVES: 0 };
+    const root = focusedClassId && focusedClassNode ? focusedClassNode : annotatedData;
     function walk(node: TaxonNode) {
       if (node.rank === "FAMILY") counts.FAMILY++;
       else if (node.rank === "GENUS") counts.GENUS++;
       else if (node.rank === "SPECIES") counts.SPECIES++;
       else if (node.rank === "SUBSPECIES") counts.SUBSPECIES++;
+      if (!node.children || node.children.length === 0) counts.LEAVES++;
       node.children?.forEach(walk);
     }
-    walk(annotatedData);
+    walk(root);
     return counts;
-  }, []);
+  }, [focusedClassId, focusedClassNode]);
 
   const RANK_TIERS = [
     { rank: "FAMILY" as const,     label: "Families",   color: "#4a7a9a", bg: "#0e1e2e" },
     { rank: "GENUS" as const,      label: "Genera",     color: "#4a9a7a", bg: "#0d1e1a" },
     { rank: "SPECIES" as const,    label: "Species",    color: "#9a7a3a", bg: "#1e1a0e" },
     { rank: "SUBSPECIES" as const, label: "Subspecies", color: "#7a5a8a", bg: "#1a141e" },
+    { rank: "LEAVES" as const,     label: "leaves",     color: "#5a5a7a", bg: "#111118" },
   ];
 
   const btnBase: React.CSSProperties = {
@@ -329,11 +332,11 @@ export default function App() {
               <span style={{ fontSize: 13, color: "#555" }}>
                 {inFamilyFocus
                   ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
-                  : `${focusedClassNode?.commonName ?? focusedClassNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`}
+                  : (focusedClassNode?.commonName ?? focusedClassNode?.name ?? "")}
               </span>
             )}
           </div>
-          {!inFamilyFocus && !focusedClassId && (
+          {!inFamilyFocus && (
             <div style={{ display: "flex", alignItems: "center", marginTop: 5 }}>
               {RANK_TIERS.map(({ rank, label, color, bg }, i) => (
                 <div key={rank} style={{
