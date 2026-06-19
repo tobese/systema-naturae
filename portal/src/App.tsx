@@ -273,10 +273,10 @@ export default function App() {
   }, [focusedClassId, focusedClassNode]);
 
   const RANK_TIERS = [
-    { rank: "CLASS" as const,  label: "Classes",  color: "#7a6a4a", bg: "#1e1a0e" },
-    { rank: "ORDER" as const,  label: "Orders",   color: "#4a7a6a", bg: "#0e1e1a" },
-    { rank: "FAMILY" as const, label: "Families", color: "#4a6a9a", bg: "#0e1628" },
-    { rank: "LEAVES" as const, label: "total",    color: "#6a6a8a", bg: "#141420" },
+    { rank: "CLASS" as const,  label: "Classes",  singular: "Class",  color: "#7a6a4a", bg: "#1e1a0e" },
+    { rank: "ORDER" as const,  label: "Orders",   singular: "Order",  color: "#4a7a6a", bg: "#0e1e1a" },
+    { rank: "FAMILY" as const, label: "Families", singular: "Family", color: "#4a6a9a", bg: "#0e1628" },
+    { rank: "LEAVES" as const, label: "total",    singular: "total",  color: "#6a6a8a", bg: "#141420" },
   ];
 
   const btnBase: React.CSSProperties = {
@@ -336,7 +336,7 @@ export default function App() {
           </div>
           {!inFamilyFocus && (
             <div style={{ display: "flex", alignItems: "center", marginTop: 5 }}>
-              {RANK_TIERS.map(({ rank, label, color, bg }, i) => (
+              {RANK_TIERS.map(({ rank, label, singular, color, bg }, i) => (
                 <div key={rank} style={{
                   clipPath: i === 0
                     ? "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%)"
@@ -351,7 +351,7 @@ export default function App() {
                   letterSpacing: "0.02em",
                   whiteSpace: "nowrap",
                 }}>
-                  {rankCounts[rank].toLocaleString()} {label}
+                  {rankCounts[rank].toLocaleString()} {rankCounts[rank] === 1 ? singular : label}
                 </div>
               ))}
             </div>
