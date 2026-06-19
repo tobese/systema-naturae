@@ -42,6 +42,7 @@ function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
 }
 
 function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
+  if (node.data.rank === "KINGDOM") return "#c8a84a";
   if (node.data.rank === "FAMILY" || node.data.rank === "TRIBE") return "#F5F5F5";
   if (node.data.rank === "SUBFAMILY") return theme.subfamilyColors[node.data.name] ?? "#888";
   if (node.data.rank === "BREED_GROUP") return theme.breedGroupColor;
@@ -62,6 +63,7 @@ function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
 }
 
 function nodeR(d: d3.HierarchyNode<TaxonNode>, specialSet: Set<string> | null): number {
+  if (d.data.rank === "KINGDOM") return 16;
   if (d.data.rank === "FAMILY") return 9;
   if (d.data.rank === "SUBFAMILY") return 7;
   if (d.data.rank === "TRIBE") return 7;
@@ -430,11 +432,16 @@ export default function FamilyTree({
       .attr("r", d => nodeR(d, specialSet) + 6)
       .attr("opacity", d => d.data.id === selectedId ? 0.3 : 0);
 
-    // Subspecies hint ring visibility
+    // Subspecies hint ring visibility (also used as permanent crown ring for KINGDOM)
     merged.select<SVGCircleElement>("circle.subsp-ring")
       .attr("r", d => nodeR(d, specialSet) + 4)
-      .attr("opacity", d =>
-        d.data.rank === "SPECIES" && (d.data.subspeciesCount ?? 0) > 0 && !d.children ? 0.5 : 0);
+      .attr("stroke", d => d.data.rank === "KINGDOM" ? "#c8a84a" : "#888")
+      .attr("stroke-width", d => d.data.rank === "KINGDOM" ? 1.5 : 0.5)
+      .attr("stroke-dasharray", d => d.data.rank === "KINGDOM" ? null : "2 2")
+      .attr("opacity", d => {
+        if (d.data.rank === "KINGDOM") return 0.6;
+        return d.data.rank === "SPECIES" && (d.data.subspeciesCount ?? 0) > 0 && !d.children ? 0.5 : 0;
+      });
 
     // Main circle visual update
     merged.select<SVGCircleElement>("circle.main-circle")
@@ -464,14 +471,16 @@ export default function FamilyTree({
         .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
         .text(d => d.data.commonName ?? d.data.name)
         .style("font-size", d => {
+          if (d.data.rank === "KINGDOM") return "15px";
           if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
           if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "8px";
           return "10px";
         })
         .style("font-style", d => ["GENUS", "SPECIES", "SUBSPECIES"].includes(d.data.rank) ? "italic" : "normal")
         .style("font-weight", d =>
-          d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
+          d.data.rank === "KINGDOM" || d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
         .style("fill", d => {
+          if (d.data.rank === "KINGDOM") return "#c8a84a";
           if (d.data.rank === "BREED_GROUP")
             return colorTheme.lineageColors[d.data.lineage ?? ""] ?? colorTheme.breedGroupColor;
           if (d.data.rank === "HYBRID_GROUP" || d.data.rank === "HYBRID") return colorTheme.hybridColor;
@@ -488,14 +497,16 @@ export default function FamilyTree({
         .attr("text-anchor", d => (d.children && d.parent ? "end" : "start"))
         .text(d => d.data.commonName ?? d.data.name)
         .style("font-size", d => {
+          if (d.data.rank === "KINGDOM") return "15px";
           if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
           if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "8px";
           return "10px";
         })
         .style("font-style", d => ["GENUS", "SPECIES", "SUBSPECIES"].includes(d.data.rank) ? "italic" : "normal")
         .style("font-weight", d =>
-          d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
+          d.data.rank === "KINGDOM" || d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
         .style("fill", d => {
+          if (d.data.rank === "KINGDOM") return "#c8a84a";
           if (d.data.rank === "BREED_GROUP")
             return colorTheme.lineageColors[d.data.lineage ?? ""] ?? colorTheme.breedGroupColor;
           if (d.data.rank === "HYBRID_GROUP" || d.data.rank === "HYBRID") return colorTheme.hybridColor;
