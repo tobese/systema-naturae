@@ -15,6 +15,8 @@ import CoverageModal from "./components/CoverageModal";
 import EponymModal from "./components/EponymModal";
 import InternationalDaysModal from "./components/InternationalDaysModal";
 import { useInternationalDays } from "./hooks/useInternationalDays";
+import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
+import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -65,7 +67,9 @@ export default function App() {
   const [showCoverage, setShowCoverage] = useState(false);
   const [showEponyms, setShowEponyms] = useState(false);
   const [showDays, setShowDays] = useState(false);
+  const [showSotd, setShowSotd] = useState(false);
   const { todaysDays } = useInternationalDays();
+  const speciesOfTheDay = useSpeciesOfTheDay(annotatedData);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
@@ -319,6 +323,21 @@ export default function App() {
                   : `Animal taxonomy · ${familyCount} families · ${contextSpecies.toLocaleString()} species`}
             </span>
           </div>
+          {speciesOfTheDay && (
+            <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+              <span style={{ fontSize: 11, color: "#556" }}>✦</span>
+              <button
+                onClick={() => setShowSotd(true)}
+                style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 12, color: "#4a5070", letterSpacing: "0.01em" }}
+                onMouseEnter={e => { e.currentTarget.style.color = "#7080a0"; }}
+                onMouseLeave={e => { e.currentTarget.style.color = "#4a5070"; }}
+              >
+                {speciesOfTheDay.commonName ?? speciesOfTheDay.name}
+              </button>
+              <span style={{ fontSize: 12, color: "#222" }}>—</span>
+              <span style={{ fontSize: 12, color: "#333", fontStyle: "italic" }}>{speciesOfTheDay.name}</span>
+            </div>
+          )}
           {todaysDays.length > 0 && (
             <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
               <span style={{ fontSize: 11, color: "#5a9a5a" }}>🌿</span>
@@ -548,6 +567,13 @@ export default function App() {
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
       {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
+      {showSotd && speciesOfTheDay && (
+        <SpeciesOfTheDayModal
+          species={speciesOfTheDay}
+          onClose={() => setShowSotd(false)}
+          onNavigate={(slug, nodeId) => { navigateTo(slug, nodeId); setShowSotd(false); }}
+        />
+      )}
       {showEponyms && (
         <EponymModal
           data={annotatedData}
