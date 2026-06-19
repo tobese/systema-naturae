@@ -248,16 +248,6 @@ export default function App() {
     return () => window.removeEventListener("keydown", handler);
   }, [selected, navContext, handleSelect, focusedFamilySlug, handleCollapseFamily, focusedClassId, handleCollapseClass]);
 
-  const familyCount = useMemo(() => {
-    let n = 0;
-    function walk(node: TaxonNode) {
-      if (node.rank === "FAMILY") { n++; return; }
-      node.children?.forEach(walk);
-    }
-    walk(annotatedData);
-    return n;
-  }, []);
-
   const totalSpecies = useMemo(() => {
     let n = 0;
     function walk(node: TaxonNode) {
@@ -267,6 +257,26 @@ export default function App() {
     walk(annotatedData);
     return n;
   }, []);
+
+  const rankCounts = useMemo(() => {
+    const counts = { FAMILY: 0, GENUS: 0, SPECIES: 0, SUBSPECIES: 0 };
+    function walk(node: TaxonNode) {
+      if (node.rank === "FAMILY") counts.FAMILY++;
+      else if (node.rank === "GENUS") counts.GENUS++;
+      else if (node.rank === "SPECIES") counts.SPECIES++;
+      else if (node.rank === "SUBSPECIES") counts.SUBSPECIES++;
+      node.children?.forEach(walk);
+    }
+    walk(annotatedData);
+    return counts;
+  }, []);
+
+  const RANK_TIERS = [
+    { rank: "FAMILY" as const,     label: "Families",   color: "#4a7a9a", bg: "#0e1e2e" },
+    { rank: "GENUS" as const,      label: "Genera",     color: "#4a9a7a", bg: "#0d1e1a" },
+    { rank: "SPECIES" as const,    label: "Species",    color: "#9a7a3a", bg: "#1e1a0e" },
+    { rank: "SUBSPECIES" as const, label: "Subspecies", color: "#7a5a8a", bg: "#1a141e" },
+  ];
 
   const btnBase: React.CSSProperties = {
     padding: "6px 14px",
@@ -315,14 +325,36 @@ export default function App() {
         <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
             <span style={{ fontSize: 18, fontWeight: 600, letterSpacing: "-0.01em" }}>Systema Naturae</span>
-            <span style={{ fontSize: 13, color: "#555" }}>
-              {inFamilyFocus
-                ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
-                : focusedClassId
-                  ? `${focusedClassNode?.commonName ?? focusedClassNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
-                  : `Animal taxonomy · ${familyCount} families · ${contextSpecies.toLocaleString()} species`}
-            </span>
+            {(inFamilyFocus || focusedClassId) && (
+              <span style={{ fontSize: 13, color: "#555" }}>
+                {inFamilyFocus
+                  ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
+                  : `${focusedClassNode?.commonName ?? focusedClassNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`}
+              </span>
+            )}
           </div>
+          {!inFamilyFocus && !focusedClassId && (
+            <div style={{ display: "flex", alignItems: "center", marginTop: 5 }}>
+              {RANK_TIERS.map(({ rank, label, color, bg }, i) => (
+                <div key={rank} style={{
+                  clipPath: i === 0
+                    ? "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%)"
+                    : i === RANK_TIERS.length - 1
+                      ? "polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%)"
+                      : "polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%)",
+                  background: bg,
+                  marginLeft: i === 0 ? 0 : -1,
+                  padding: `3px 14px 3px ${i === 0 ? "10px" : "18px"}`,
+                  fontSize: 11,
+                  color,
+                  letterSpacing: "0.02em",
+                  whiteSpace: "nowrap",
+                }}>
+                  {rankCounts[rank].toLocaleString()} {label}
+                </div>
+              ))}
+            </div>
+          )}
           {speciesOfTheDay && (
             <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
               <span style={{ fontSize: 11, color: "#556" }}>✦</span>
