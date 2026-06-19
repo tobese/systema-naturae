@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
 
@@ -6,6 +6,8 @@ interface Props {
   data: TaxonNode;
   onClose: () => void;
   onFocusFamily: (slug: string) => void;
+  initialFamilySlug?: string | null;
+  initialClassId?: string | null;
 }
 
 interface FamilyCoverage {
@@ -73,12 +75,20 @@ function coverageDotColor(portalCount: number, totalCount?: number): string {
   return "#cc9944";
 }
 
-export default function CoverageModal({ data, onClose, onFocusFamily }: Props) {
+export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId }: Props) {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") { e.stopPropagation(); onClose(); } };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
+
+  useEffect(() => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "instant", block: "center" });
+    }
+  }, []);
 
   const classes = useMemo(() => buildCoverage(data), [data]);
 
@@ -161,9 +171,11 @@ export default function CoverageModal({ data, onClose, onFocusFamily }: Props) {
                 return s + f.totalCount;
               }, 0);
               const hasAllTotals = cls.families.every(f => f.totalCount !== undefined);
+              const isTargetClass = cls.id === initialClassId ||
+                (!initialClassId && initialFamilySlug && cls.families.some(f => f.appSlug === initialFamilySlug));
 
               return (
-                <div key={cls.id}>
+                <div key={cls.id} ref={isTargetClass ? targetRef : undefined}>
                   <div style={{
                     display: "flex",
                     alignItems: "baseline",
@@ -200,9 +212,11 @@ export default function CoverageModal({ data, onClose, onFocusFamily }: Props) {
                       const dotColor = coverageDotColor(fam.portalCount, fam.totalCount);
                       const bgColor = coverageColor(fam.portalCount, fam.totalCount);
                       const isClickable = !!fam.appSlug;
+                      const isSelected = !!initialFamilySlug && fam.appSlug === initialFamilySlug;
                       return (
                         <div
                           key={fam.id}
+                          ref={isSelected ? targetRef : undefined}
                           onClick={isClickable ? () => { onFocusFamily(fam.appSlug!); onClose(); } : undefined}
                           style={{
                             display: "flex",
@@ -211,8 +225,8 @@ export default function CoverageModal({ data, onClose, onFocusFamily }: Props) {
                             gap: 8,
                             padding: "6px 10px",
                             borderRadius: 6,
-                            border: `1px solid ${bgColor}`,
-                            background: `${bgColor}22`,
+                            border: isSelected ? "1px solid #5a7aaa" : `1px solid ${bgColor}`,
+                            background: isSelected ? "#1a2a3a" : `${bgColor}22`,
                             cursor: isClickable ? "pointer" : "default",
                             width: "calc(50% - 2px)",
                             boxSizing: "border-box",

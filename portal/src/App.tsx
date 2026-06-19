@@ -633,6 +633,8 @@ export default function App() {
           data={annotatedData}
           onClose={() => setShowCoverage(false)}
           onFocusFamily={slug => { setFocus(slug); setShowCoverage(false); }}
+          initialFamilySlug={focusedFamilySlug}
+          initialClassId={focusedClassId}
         />
       )}
     </div>
