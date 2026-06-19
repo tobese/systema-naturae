@@ -110,9 +110,9 @@ export default function App() {
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }
 
-    // KINGDOM/PHYLUM click → clear any focus, return to global view
+    // KINGDOM/PHYLUM click → clear class focus, select this node (single atomic update)
     if (node.rank === "KINGDOM" || node.rank === "PHYLUM") {
-      setFocusedClass(null, null);
+      setFocusedClass(null, node.id);
       return;
     }
 
@@ -269,6 +269,7 @@ export default function App() {
     const root = focusedClassId && focusedClassNode ? focusedClassNode : annotatedData;
     function walk(node: TaxonNode) {
       if (node.rank === "CLASS") counts.CLASS++;
+      else if (node.rank === "PHYLUM" && !node.children?.some(c => c.rank === "CLASS")) counts.CLASS++;
       else if (node.rank === "ORDER") counts.ORDER++;
       else if (node.rank === "FAMILY") counts.FAMILY++;
       if (!node.children || node.children.length === 0) counts.LEAVES++;
