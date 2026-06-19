@@ -308,15 +308,32 @@ export default function App() {
         borderBottom: "1px solid #1e2030",
         flexShrink: 0,
       }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-          <span style={{ fontSize: 18, fontWeight: 600, letterSpacing: "-0.01em" }}>Systema Naturae</span>
-          <span style={{ fontSize: 13, color: "#555" }}>
-            {inFamilyFocus
-              ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
-              : focusedClassId
-                ? `${focusedClassNode?.commonName ?? focusedClassNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
-                : `Animal taxonomy · ${familyCount} families · ${contextSpecies.toLocaleString()} species`}
-          </span>
+        <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+            <span style={{ fontSize: 18, fontWeight: 600, letterSpacing: "-0.01em" }}>Systema Naturae</span>
+            <span style={{ fontSize: 13, color: "#555" }}>
+              {inFamilyFocus
+                ? `${focusedFamilyNode?.commonName ?? focusedFamilyNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
+                : focusedClassId
+                  ? `${focusedClassNode?.commonName ?? focusedClassNode?.name ?? ""} · ${contextSpecies.toLocaleString()} species`
+                  : `Animal taxonomy · ${familyCount} families · ${contextSpecies.toLocaleString()} species`}
+            </span>
+          </div>
+          {todaysDays.length > 0 && (
+            <button
+              onClick={() => setShowDays(true)}
+              style={{ display: "flex", alignItems: "center", gap: 5, background: "none", border: "none", padding: 0, cursor: "pointer", textAlign: "left" }}
+            >
+              <span style={{ fontSize: 11, color: "#5a9a5a" }}>🌿</span>
+              <span style={{ fontSize: 12, color: "#4a7a4a", letterSpacing: "0.01em" }}>
+                {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric" })}
+              </span>
+              <span style={{ fontSize: 12, color: "#444" }}>·</span>
+              <span style={{ fontSize: 12, color: "#6aaa6a", letterSpacing: "0.01em" }}>
+                {todaysDays.map(d => d.title).join(" · ")}
+              </span>
+            </button>
+          )}
         </div>
         <SearchBox data={annotatedData} onNavigate={navigateTo} />
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
