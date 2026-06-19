@@ -297,8 +297,15 @@ export default function App() {
   const inFamilyFocus = focusedFamilySlug !== null;
 
   const contextSpecies = useMemo(() => {
-    if (inFamilyFocus && focusedFamilyNode)
-      return (focusedFamilyNode as PortalNode).speciesCount ?? 0;
+    if (inFamilyFocus && focusedFamilyNode) {
+      let n = 0;
+      function walkFamily(node: TaxonNode) {
+        if (node.rank === "SPECIES") { n++; return; }
+        node.children?.forEach(walkFamily);
+      }
+      walkFamily(focusedFamilyNode);
+      return n;
+    }
     if (focusedClassId && focusedClassNode) {
       let n = 0;
       function walk(node: TaxonNode) {
