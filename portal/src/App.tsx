@@ -110,6 +110,13 @@ export default function App() {
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }
 
+    // KINGDOM/PHYLUM click → clear any focus, return to global view
+    if (node.rank === "KINGDOM" || node.rank === "PHYLUM") {
+      setFocusedClass(null, null);
+      setSelectedNodeId(null);
+      return;
+    }
+
     // CLASS node click → focus / unfocus (compresses other classes to 35% of arc)
     if (node.rank === "CLASS") {
       if (node.id === focusedClassId) {
