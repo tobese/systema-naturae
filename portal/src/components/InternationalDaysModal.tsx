@@ -31,7 +31,7 @@ function ExternalIcon() {
   );
 }
 
-function DayEntry({ day, highlight }: { day: InternationalDay; highlight?: boolean }) {
+function DayEntry({ day, highlight, onNavigate }: { day: InternationalDay; highlight?: boolean; onNavigate?: (slug: string) => void }) {
   return (
     <div style={{
       padding: "14px 0",
@@ -54,7 +54,7 @@ function DayEntry({ day, highlight }: { day: InternationalDay; highlight?: boole
       <p style={{ margin: "0 0 8px", fontSize: 12.5, color: "#888", lineHeight: 1.55 }}>
         {day.description}
       </p>
-      <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
+      <div style={{ display: "flex", gap: 14, alignItems: "center", flexWrap: "wrap" }}>
         <a
           href={day.wikipediaUrl}
           target="_blank"
@@ -79,6 +79,20 @@ function DayEntry({ day, highlight }: { day: InternationalDay; highlight?: boole
             Official site
           </a>
         )}
+        {onNavigate && day.relatedFamilies?.map(fam => (
+          <button
+            key={fam.slug}
+            onClick={() => onNavigate(fam.slug)}
+            style={{ display: "flex", alignItems: "center", gap: 4, background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 11, color: "#7aaa7a" }}
+            onMouseEnter={e => { e.currentTarget.style.color = "#9acc9a"; }}
+            onMouseLeave={e => { e.currentTarget.style.color = "#7aaa7a"; }}
+          >
+            <svg width={11} height={11} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+            {fam.label} in portal
+          </button>
+        ))}
       </div>
     </div>
   );
@@ -86,9 +100,10 @@ function DayEntry({ day, highlight }: { day: InternationalDay; highlight?: boole
 
 interface Props {
   onClose: () => void;
+  onNavigate: (slug: string) => void;
 }
 
-export default function InternationalDaysModal({ onClose }: Props) {
+export default function InternationalDaysModal({ onClose, onNavigate }: Props) {
   const { days, todaysDays } = useInternationalDays();
 
   useEffect(() => {
@@ -182,7 +197,7 @@ export default function InternationalDaysModal({ onClose }: Props) {
                 Today — {formatMonthDay(todaysDays[0].monthDay)}
               </div>
               {todaysDays.map(day => (
-                <DayEntry key={day.id} day={day} highlight />
+                <DayEntry key={day.id} day={day} highlight onNavigate={onNavigate} />
               ))}
             </div>
           )}
@@ -202,7 +217,7 @@ export default function InternationalDaysModal({ onClose }: Props) {
                 {month}
               </div>
               {monthDays.map(day => (
-                <DayEntry key={day.id} day={day} highlight={todayIds.has(day.id)} />
+                <DayEntry key={day.id} day={day} highlight={todayIds.has(day.id)} onNavigate={onNavigate} />
               ))}
             </div>
           ))}

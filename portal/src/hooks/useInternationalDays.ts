@@ -1,6 +1,11 @@
 import { useMemo } from "react";
 import rawDays from "../../data/international-days.json";
 
+export interface RelatedFamily {
+  slug: string;
+  label: string;
+}
+
 export interface InternationalDay {
   id: string;
   monthDay: string;
@@ -8,6 +13,7 @@ export interface InternationalDay {
   description: string;
   wikipediaUrl: string;
   officialUrl?: string;
+  relatedFamilies?: RelatedFamily[];
 }
 
 export function useInternationalDays() {

@@ -320,19 +320,31 @@ export default function App() {
             </span>
           </div>
           {todaysDays.length > 0 && (
-            <button
-              onClick={() => setShowDays(true)}
-              style={{ display: "flex", alignItems: "center", gap: 5, background: "none", border: "none", padding: 0, cursor: "pointer", textAlign: "left" }}
-            >
+            <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
               <span style={{ fontSize: 11, color: "#5a9a5a" }}>🌿</span>
-              <span style={{ fontSize: 12, color: "#4a7a4a", letterSpacing: "0.01em" }}>
+              <button
+                onClick={() => setShowDays(true)}
+                style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 12, color: "#4a7a4a", letterSpacing: "0.01em" }}
+                onMouseEnter={e => { e.currentTarget.style.color = "#6a9a6a"; }}
+                onMouseLeave={e => { e.currentTarget.style.color = "#4a7a4a"; }}
+              >
                 {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric" })}
-              </span>
-              <span style={{ fontSize: 12, color: "#444" }}>·</span>
-              <span style={{ fontSize: 12, color: "#6aaa6a", letterSpacing: "0.01em" }}>
-                {todaysDays.map(d => d.title).join(" · ")}
-              </span>
-            </button>
+              </button>
+              <span style={{ fontSize: 12, color: "#333" }}>·</span>
+              {todaysDays.map((d, i) => (
+                <span key={d.id} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                  {i > 0 && <span style={{ fontSize: 12, color: "#333" }}>·</span>}
+                  <button
+                    onClick={() => d.relatedFamilies?.[0] ? setFocus(d.relatedFamilies[0].slug) : setShowDays(true)}
+                    style={{ background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 12, color: "#6aaa6a", letterSpacing: "0.01em" }}
+                    onMouseEnter={e => { e.currentTarget.style.color = "#8acc8a"; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = "#6aaa6a"; }}
+                  >
+                    {d.title}
+                  </button>
+                </span>
+              ))}
+            </div>
           )}
         </div>
         <SearchBox data={annotatedData} onNavigate={navigateTo} />
@@ -535,7 +547,7 @@ export default function App() {
         </div>
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
-      {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} />}
+      {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
       {showEponyms && (
         <EponymModal
           data={annotatedData}
