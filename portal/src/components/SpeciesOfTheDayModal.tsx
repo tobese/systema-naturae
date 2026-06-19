@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { SpeciesOfTheDay } from "../hooks/useSpeciesOfTheDay";
 
 const CONTINENT_NAMES: Record<string, string> = {
@@ -17,11 +17,32 @@ interface Props {
 }
 
 export default function SpeciesOfTheDayModal({ species, onClose, onNavigate }: Props) {
+  const [wikiUrl, setWikiUrl] = useState<string | null>(null);
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") { e.stopPropagation(); onClose(); } };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
+
+  useEffect(() => {
+    if (!species.namedAfter) { setWikiUrl(null); return; }
+    const slug = species.namedAfter.replace(/ /g, "_");
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(slug)}&format=json&origin=*&redirects=1`)
+      .then(r => r.json())
+      .then(json => {
+        const titleMap = new Map<string, string>([[slug, slug]]);
+        for (const n of json.query?.normalized ?? []) if (n.from === slug) titleMap.set(n.to, n.to);
+        for (const r of json.query?.redirects ?? []) if (titleMap.has(r.from)) titleMap.set(r.to, r.to);
+        for (const page of Object.values<Record<string, unknown>>(json.query?.pages ?? {})) {
+          if (!page.missing) {
+            const title = page.title as string;
+            setWikiUrl(`https://en.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, "_"))}`);
+          }
+        }
+      })
+      .catch(() => {});
+  }, [species.namedAfter]);
 
   const today = new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
 
@@ -111,7 +132,18 @@ export default function SpeciesOfTheDayModal({ species, onClose, onNavigate }: P
             {species.namedAfter && (
               <div style={{ fontSize: 12, color: "#555" }}>
                 <span style={{ color: "#3a3d50", marginRight: 8 }}>Named after</span>
-                {species.namedAfter}
+                {wikiUrl ? (
+                  <a
+                    href={wikiUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#9aaacc", textDecoration: "none" }}
+                    onMouseEnter={e => { e.currentTarget.style.color = "#c0ccee"; e.currentTarget.style.textDecoration = "underline"; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = "#9aaacc"; e.currentTarget.style.textDecoration = "none"; }}
+                  >
+                    {species.namedAfter}
+                  </a>
+                ) : species.namedAfter}
               </div>
             )}
           </div>
