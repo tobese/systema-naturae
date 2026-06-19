@@ -113,7 +113,6 @@ export default function App() {
     // KINGDOM/PHYLUM click → clear any focus, return to global view
     if (node.rank === "KINGDOM" || node.rank === "PHYLUM") {
       setFocusedClass(null, null);
-      setSelectedNodeId(null);
       return;
     }
 
