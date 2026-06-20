@@ -9,14 +9,14 @@
       "name": "Erithacus",
       "rank": "GENUS",
       "description": "The European Robin — arguably the most beloved bird in Britain and much of northern Europe. Its distinctive orange-red breast and round body, combined with its habit of following gardeners to collect exposed worms, has made it a national emblem. Robins are fiercely territorial year-round; both sexes hold winter territories and sing from them, making them one of the few European birds that sing readily in winter. Despite its tame appearance around humans, a Robin will vigorously attack its reflection and will fight conspecifics to the death over territory.",
-      "lineage": "Robins & Chats",
+      "lineage": "Robins",
       "children": [
         {
           "id": "ERITHACUS_RUBECULA",
           "name": "Erithacus rubecula",
           "rank": "SPECIES",
           "commonName": "European Robin",
-          "lineage": "Robins & Chats",
+          "lineage": "Robins",
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 8,
           "description": "The UK's unofficial national bird. Robins may use quantum entanglement in cryptochrome proteins to detect Earth's magnetic field — evidence for quantum biology in navigation. Northern populations are migratory; British birds are largely resident."
@@ -28,14 +28,14 @@
       "name": "Luscinia",
       "rank": "GENUS",
       "description": "Nightingales — celebrated above all other European birds for their song, which is delivered day and night and contains more distinct sound elements than almost any other bird. The Common Nightingale is a skulking, brown, utterly unimpressive bird to look at; it is purely the voice that has captivated poets and naturalists for millennia. Keats, Coleridge, and countless others wrote of it. Males arrive on breeding grounds in April and begin singing immediately, even before leaf cover makes them invisible.",
-      "lineage": "Nightingales",
+      "lineage": "Robins",
       "children": [
         {
           "id": "LUSCINIA_MEGARHYNCHOS",
           "name": "Luscinia megarhynchos",
           "rank": "SPECIES",
           "commonName": "Common Nightingale",
-          "lineage": "Nightingales",
+          "lineage": "Robins",
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 3,
           "description": "The most celebrated songbird in European culture. Its range in Britain has contracted southward as scrubby coppice habitat has been lost; southern England is now at the edge of its range. Winters in west Africa."
@@ -45,7 +45,7 @@
           "name": "Luscinia luscinia",
           "rank": "SPECIES",
           "commonName": "Thrush Nightingale",
-          "lineage": "Nightingales",
+          "lineage": "Robins",
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 0,
           "description": "Replaces the Common Nightingale in northeastern Europe and Scandinavia. Song is even more powerful and fluid, if slightly harsher. The two species hybridise where ranges overlap in a narrow contact zone."
@@ -53,21 +53,79 @@
       ]
     },
     {
-      "id": "GENUS_LUSCINIA_SVECICA",
+      "id": "GENUS_CYANECULA",
       "name": "Cyanecula",
       "rank": "GENUS",
       "description": "The Bluethroat — a small migratory chat with a dazzling metallic-blue throat patch in the male, marked with red or white depending on subspecies. It breeds in willowherb and willow scrub on boreal and Arctic tundra across Eurasia, and is a ground-dwelling insectivore. An outstanding mimic, Bluethroats regularly incorporate the songs of other species into their own. They are short-distance migrants compared to nightingales, wintering mainly in sub-Saharan Africa and the Indian subcontinent.",
-      "lineage": "Robins & Chats",
+      "lineage": "Chats",
       "children": [
         {
           "id": "CYANECULA_SVECICA",
           "name": "Cyanecula svecica",
           "rank": "SPECIES",
           "commonName": "Bluethroat",
-          "lineage": "Robins & Chats",
+          "lineage": "Chats",
           "continents": ["Europe", "Asia", "Africa", "North America"],
           "subspeciesCount": 11,
           "description": "The red-spotted form (nominate svecica) breeds in northern Scandinavia; the white-spotted form breeds from central Europe east to China. A scarce but regular migrant on British coasts."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_TARSIGER",
+      "name": "Tarsiger",
+      "rank": "GENUS",
+      "description": "Bush-robins — small, round-bodied chats of montane forest and dense scrub from the Himalayas to Japan. Males are often brilliantly coloured with blue, orange, and white markings, while females are brown and cryptic. They inhabit the forest floor and lower strata, hopping in deep shade and flicking their tails. Several species have highly restricted ranges in the Himalayan and Chinese mountains.",
+      "lineage": "Robins",
+      "children": [
+        {
+          "id": "TARSIGER_CYANURUS",
+          "name": "Tarsiger cyanurus",
+          "rank": "SPECIES",
+          "commonName": "Orange-flanked Bush-Robin",
+          "lineage": "Robins",
+          "continents": ["Asia", "Europe"],
+          "subspeciesCount": 3,
+          "description": "A boreal forest species breeding from Finland east through Siberia to Japan. The male's blue upperparts and vivid orange flanks are striking. Winters primarily in China and Southeast Asia; occasionally occurs as a vagrant in western Europe."
+        },
+        {
+          "id": "TARSIGER_CHRYSAEUS",
+          "name": "Tarsiger chrysaeus",
+          "rank": "SPECIES",
+          "commonName": "Golden Bush-Robin",
+          "lineage": "Robins",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "A Himalayan and southwestern Chinese montane specialist, breeding in dense undergrowth at high elevations. The male is spectacularly coloured in rich orange-gold and black. Altitudinal migrant, descending to lower elevations in winter."
+        },
+        {
+          "id": "TARSIGER_HYPERYTHRUS",
+          "name": "Tarsiger hyperythrus",
+          "rank": "SPECIES",
+          "commonName": "Rufous-breasted Bush-Robin",
+          "lineage": "Robins",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A skulking inhabitant of dense undergrowth in Himalayan and Chinese mountain forests. The male has rich rufous underparts contrasting with blue-grey upperparts. Poorly known due to its secretive habits in remote montane habitat."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CALLIOPE",
+      "name": "Calliope",
+      "rank": "GENUS",
+      "description": "Rubythroats — compact, ground-loving chats named for their brilliantly coloured throat patches. Most are Palearctic breeders wintering in South Asia and Africa. The genus name Calliope references the Greek Muse of epic poetry, reflecting the species' rich vocalizations. They hop along the ground in dense undergrowth, often very difficult to observe despite their vivid plumage.",
+      "lineage": "Robins",
+      "children": [
+        {
+          "id": "CALLIOPE_PECTORALIS",
+          "name": "Calliope pectoralis",
+          "rank": "SPECIES",
+          "commonName": "Himalayan Rubythroat",
+          "lineage": "Robins",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "A montane breeder of the Himalayas and Tibetan Plateau, nesting in rhododendron and juniper scrub above the treeline. The male has a brilliant red throat framed by white moustachial stripes. Winters at lower elevations in South Asia."
         }
       ]
     },
@@ -76,14 +134,14 @@
       "name": "Phoenicurus",
       "rank": "GENUS",
       "description": "Redstarts — small, robin-like chats defined by their chestnut-red tail, which they habitually quiver. The Common Redstart is a dazzling summer visitor to mature woodland, its black face, orange-red underparts, and rust tail making the male one of the most colourful small birds in Europe. The Black Redstart, by contrast, has colonised urban environments and is now a specialist of city-centre rooftops, railway yards, and coastal cliffs. Both species are aerial insectivores that winter in Africa.",
-      "lineage": "Redstarts",
+      "lineage": "Chats",
       "children": [
         {
           "id": "PHOENICURUS_PHOENICURUS",
           "name": "Phoenicurus phoenicurus",
           "rank": "SPECIES",
           "commonName": "Common Redstart",
-          "lineage": "Redstarts",
+          "lineage": "Chats",
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 2,
           "description": "A long-distance migrant that winters in the Sahel. Breeding males are among the most colourful small birds in Europe. Numbers fluctuate with Sahel rainfall during wintering season. Readily uses nest boxes."
@@ -93,10 +151,78 @@
           "name": "Phoenicurus ochruros",
           "rank": "SPECIES",
           "commonName": "Black Redstart",
-          "lineage": "Redstarts",
+          "lineage": "Chats",
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 5,
           "description": "An early spring arrival, often singing from rooftops at 4 AM. Colonised bomb-damaged urban sites in London after World War II. Song includes a distinctive sound resembling crumpling tin foil — unlike any other European bird."
+        },
+        {
+          "id": "PHOENICURUS_AUROREUS",
+          "name": "Phoenicurus auroreus",
+          "rank": "SPECIES",
+          "commonName": "Daurian Redstart",
+          "lineage": "Chats",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "One of the most abundant small birds in East Asia, breeding in open woodland and forest edge from Siberia to Japan. The male has a striking white wing patch, grey cap, and vivid orange underparts. A familiar garden bird across much of China, Japan, and Korea."
+        },
+        {
+          "id": "PHOENICURUS_FRONTALIS",
+          "name": "Phoenicurus frontalis",
+          "rank": "SPECIES",
+          "commonName": "Blue-fronted Redstart",
+          "lineage": "Chats",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A high-altitude specialist of the Himalayas and adjacent mountain ranges, breeding in open scrub and rocky slopes above the treeline. The male is stunning: deep blue above with a brilliant orange belly and, true to the name, a vivid blue forehead. Altitudinal migrant."
+        },
+        {
+          "id": "PHOENICURUS_SCHISTICEPS",
+          "name": "Phoenicurus schisticeps",
+          "rank": "SPECIES",
+          "commonName": "White-throated Redstart",
+          "lineage": "Chats",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A montane redstart of the Himalayas and Tibetan Plateau, distinguishable by its pure white throat contrasting with blue-black upperparts and chestnut belly. Breeds in alpine scrub and rocky terrain at considerable altitude. Poorly studied compared to more accessible relatives."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CHAIMARRORNIS",
+      "name": "Chaimarrornis",
+      "rank": "GENUS",
+      "description": "The White-capped Redstart is one of the most charismatic birds of Himalayan mountain streams. This monotypic genus combines the chestnut tail of a redstart with a gleaming white crown patch that makes it immediately identifiable on fast-flowing rivers. It is a specialist of boulder-strewn torrent edges from Afghanistan to China, where it bobs and curtsies on wet rocks while hunting aquatic invertebrates.",
+      "lineage": "Chats",
+      "children": [
+        {
+          "id": "CHAIMARRORNIS_LEUCOCEPHALUS",
+          "name": "Chaimarrornis leucocephalus",
+          "rank": "SPECIES",
+          "commonName": "White-capped Redstart",
+          "lineage": "Chats",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A jewel of Himalayan rivers, conspicuous on boulders in fast-flowing torrents from Afghanistan to southwestern China. The gleaming white cap and chestnut-and-black body are unmistakable. Performs an elegant bowing display, flaring its chestnut tail."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RHYACORNIS",
+      "name": "Rhyacornis",
+      "rank": "GENUS",
+      "description": "Stream-chats of montane rivers in Asia. These small, restless birds are specialists of fast-flowing streams, often perching on rocks in midstream and making short aerial sallies for insects over the water. The Plumbeous Water-Redstart is one of the most familiar birds of Himalayan rivers, where its slate-blue plumage and chestnut tail are unmistakable against the white water.",
+      "lineage": "Chats",
+      "children": [
+        {
+          "id": "RHYACORNIS_FULIGINOSA",
+          "name": "Rhyacornis fuliginosa",
+          "rank": "SPECIES",
+          "commonName": "Plumbeous Water-Redstart",
+          "lineage": "Chats",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "Among the most familiar birds along Himalayan rivers and streams, perching on midstream boulders and fanning its rufous tail. The male is slate-blue overall; the female is grey with a white tail base. Resident on mountain streams from Pakistan to southern China."
         }
       ]
     },
@@ -105,14 +231,14 @@
       "name": "Saxicola",
       "rank": "GENUS",
       "description": "Stonechats and whinchats — small, compact chats of open heath, bramble, and scrubland. Stonechats (and their close relative, the Whinchat) are conspicuous perchers, sitting upright on the tops of gorse and bramble stems and flicking their wings, delivering a hard 'tchak-tchak' call like two pebbles struck together. The Whinchat is a long-distance migrant that winters in sub-Saharan Africa, while the European Stonechat consists of several species, some of which are resident in milder Atlantic climates.",
-      "lineage": "Robins & Chats",
+      "lineage": "Chats",
       "children": [
         {
           "id": "SAXICOLA_RUBICOLA",
           "name": "Saxicola rubicola",
           "rank": "SPECIES",
           "commonName": "European Stonechat",
-          "lineage": "Robins & Chats",
+          "lineage": "Chats",
           "continents": ["Europe", "Africa"],
           "subspeciesCount": 2,
           "description": "A resident or partial migrant on heathlands, coastal scrub, and rough grassland. Numbers crash in severe winters when frost covers insect prey. Named for its call — two sharp clicks like stones knocked together."
@@ -122,10 +248,128 @@
           "name": "Saxicola rubetra",
           "rank": "SPECIES",
           "commonName": "Whinchat",
-          "lineage": "Robins & Chats",
+          "lineage": "Chats",
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 0,
           "description": "Disappearing from lowland Britain as hay meadows and rough grassland are converted to silage; populations have fallen over 50% since the 1990s. A bold white supercilium distinguishes it from the Stonechat."
+        },
+        {
+          "id": "SAXICOLA_MAURUS",
+          "name": "Saxicola maurus",
+          "rank": "SPECIES",
+          "commonName": "Siberian Stonechat",
+          "lineage": "Chats",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 4,
+          "description": "Formerly treated as a subspecies of the Common Stonechat but now recognised as a distinct species breeding across central and eastern Palearctic. Winters primarily across South Asia and East Africa. Males have a pure white half-collar and orange breast."
+        },
+        {
+          "id": "SAXICOLA_TORQUATUS",
+          "name": "Saxicola torquatus",
+          "rank": "SPECIES",
+          "commonName": "African Stonechat",
+          "lineage": "Chats",
+          "continents": ["Africa"],
+          "subspeciesCount": 7,
+          "description": "Widely distributed across sub-Saharan Africa and Madagascar, inhabiting grasslands, moorlands, and cultivated areas. Long treated as conspecific with European stonechats, it was split based on molecular and vocal evidence. Many subspecies show considerable plumage variation."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MYRMECOCICHLA",
+      "name": "Myrmecocichla",
+      "rank": "GENUS",
+      "description": "Ant-chats — a group of African chats that forage in open country and grassland, often near ant and termite colonies. They are generally dark, with bold white wing patches visible in flight. The genus name means 'ant-thrush'. Most species are residents of sub-Saharan African savannahs, where they perch conspicuously on termite mounds, fence posts, and bare earth, catching insects disturbed by passing animals or army ants.",
+      "lineage": "Chats",
+      "children": [
+        {
+          "id": "MYRMECOCICHLA_FORMICIVORA",
+          "name": "Myrmecocichla formicivora",
+          "rank": "SPECIES",
+          "commonName": "Southern Anteating Chat",
+          "lineage": "Chats",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "description": "An endemic of southern African grasslands and karoo, closely associated with areas disturbed by ant and termite activity. The male is sooty brown with a bold white shoulder patch; the female is plain brown. Excavates nest burrows in earth banks or uses old termite mounds."
+        },
+        {
+          "id": "MYRMECOCICHLA_AETHIOPS",
+          "name": "Myrmecocichla aethiops",
+          "rank": "SPECIES",
+          "commonName": "Northern Anteating Chat",
+          "lineage": "Chats",
+          "continents": ["Africa"],
+          "subspeciesCount": 3,
+          "description": "Distributed across the savannahs and grasslands of West and Central Africa, where it favours bare or lightly vegetated ground near termite mounds. Highly territorial and conspicuous, perching upright on elevated vantage points. Nests in burrows in the ground."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_COSSYPHA",
+      "name": "Cossypha",
+      "rank": "GENUS",
+      "description": "Robin-chats — a spectacular African genus renowned for their loud, melodious songs, often delivered at dawn and dusk. Many species are superb mimics, weaving the calls of other birds into complex medleys. The genus is characterised by vivid orange-rufous underparts, grey or black upperwings, and distinctive white or orange head patterns. Most are skulking forest inhabitants, heard far more easily than seen. They are among the most celebrated songsters of African forests.",
+      "lineage": "Robins",
+      "children": [
+        {
+          "id": "COSSYPHA_NATALENSIS",
+          "name": "Cossypha natalensis",
+          "rank": "SPECIES",
+          "commonName": "Red-capped Robin-Chat",
+          "lineage": "Robins",
+          "continents": ["Africa"],
+          "subspeciesCount": 4,
+          "description": "One of the most powerful songsters in African forests, delivering a rich, fluting song from deep cover, frequently before dawn. The orange-rufous cap and underparts contrast with blue-grey upperparts. Ranges from coastal East Africa to South Africa."
+        },
+        {
+          "id": "COSSYPHA_HEUGLINI",
+          "name": "Cossypha heuglini",
+          "rank": "SPECIES",
+          "commonName": "White-browed Robin-Chat",
+          "lineage": "Robins",
+          "continents": ["Africa"],
+          "subspeciesCount": 3,
+          "description": "A common and widely heard inhabitant of riverine forest and dense bush from West Africa to East Africa. Its dawn chorus of rich, liquid phrases delivered with great volume is one of the signature sounds of African woodland. Named after the German ornithologist Theodor von Heuglin.",
+          "namedAfter": "Theodor von Heuglin"
+        },
+        {
+          "id": "COSSYPHA_CAFFRA",
+          "name": "Cossypha caffra",
+          "rank": "SPECIES",
+          "commonName": "Cape Robin-Chat",
+          "lineage": "Robins",
+          "continents": ["Africa"],
+          "subspeciesCount": 5,
+          "description": "Among the most familiar garden birds in South Africa, where its melodious, clear song is a feature of suburban gardens, fynbos, and coastal scrub. Adapts readily to human-modified habitats. The orange breast and white supercilium are the key field marks."
+        },
+        {
+          "id": "COSSYPHA_POLIOPTERA",
+          "name": "Cossypha polioptera",
+          "rank": "SPECIES",
+          "commonName": "Grey-winged Robin-Chat",
+          "lineage": "Robins",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "description": "A forest specialist of montane and riparian woodland in central and eastern Africa. Distinguished from related species by its grey wing coverts. Secretive and difficult to observe, but its complex song carries well through dense vegetation."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_IRANIA",
+      "name": "Irania",
+      "rank": "GENUS",
+      "description": "The White-throated Robin is a monotypic genus breeding in rocky, shrub-covered slopes from Turkey and Iran east to Central Asia. The male is strikingly patterned with blue-grey upperparts, an orange breast, and a gleaming white throat. It is a long-distance migrant, wintering in East Africa. The genus name alludes to its Iranian breeding range. Despite the male's vivid colours, the species is surprisingly easy to overlook in the rocky terrain it prefers.",
+      "lineage": "Chats",
+      "children": [
+        {
+          "id": "IRANIA_GUTTURALIS",
+          "name": "Irania gutturalis",
+          "rank": "SPECIES",
+          "commonName": "White-throated Robin",
+          "lineage": "Chats",
+          "continents": ["Asia", "Africa", "Europe"],
+          "subspeciesCount": 0,
+          "description": "Breeds on rocky hillsides with scattered trees from Turkey and the Caucasus east through Iran to Central Asia. The male's combination of blue-grey, orange, and white is striking; the female is duller. Winters in eastern Africa, occasionally appearing as a vagrant in western Europe."
         }
       ]
     },
@@ -145,7 +389,87 @@
           "continents": ["Europe", "Asia", "Africa", "North America"],
           "subspeciesCount": 4,
           "description": "Has the widest breeding range of any Old World flycatcher. The white rump ('wheatear' derives from 'white arse') is the classic ID feature. First to arrive in spring in northern Britain, often appearing in March on bare moorland."
+        },
+        {
+          "id": "OENANTHE_HISPANICA",
+          "name": "Oenanthe hispanica",
+          "rank": "SPECIES",
+          "commonName": "Western Black-eared Wheatear",
+          "lineage": "Wheatears",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 2,
+          "description": "A Mediterranean wheatear breeding in open, stony terrain from Iberia and northwest Africa east to Turkey and the Middle East. Two male morphs exist: one with a black ear patch only, one with an entirely black face. Winters in the Sahel and East Africa."
+        },
+        {
+          "id": "OENANTHE_DESERTI",
+          "name": "Oenanthe deserti",
+          "rank": "SPECIES",
+          "commonName": "Desert Wheatear",
+          "lineage": "Wheatears",
+          "continents": ["Asia", "Africa", "Europe"],
+          "subspeciesCount": 3,
+          "description": "A true desert specialist, breeding in sandy and rocky deserts from the Sahara across the Arabian Peninsula to Central Asia. The male's black wings contrast sharply with white underparts and buff back. A regular if scarce autumn vagrant on British coasts."
+        },
+        {
+          "id": "OENANTHE_LEUCOPYGA",
+          "name": "Oenanthe leucopyga",
+          "rank": "SPECIES",
+          "commonName": "White-crowned Wheatear",
+          "lineage": "Wheatears",
+          "continents": ["Africa", "Asia"],
+          "subspeciesCount": 2,
+          "description": "A large, boldly patterned wheatear of rocky Saharan and Arabian deserts. Old males develop a distinctive white crown. Often tame around human settlements in remote desert areas, where it may nest in rocky walls and ancient ruins."
+        },
+        {
+          "id": "OENANTHE_MONACHA",
+          "name": "Oenanthe monacha",
+          "rank": "SPECIES",
+          "commonName": "Hooded Wheatear",
+          "lineage": "Wheatears",
+          "continents": ["Africa", "Asia"],
+          "subspeciesCount": 0,
+          "description": "A specialist of rocky wadis and desert hillsides in the Middle East and northeastern Africa. The male's contrasting black-and-white plumage is striking, with a white crown extending down the nape. Resident in its arid core range; highly adapted to extreme heat."
+        },
+        {
+          "id": "OENANTHE_ISABELLINA",
+          "name": "Oenanthe isabellina",
+          "rank": "SPECIES",
+          "commonName": "Isabelline Wheatear",
+          "lineage": "Wheatears",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "The largest and palest wheatear, a long-distance migrant breeding in open steppes and semi-desert from southeastern Europe across Central Asia. Sandy-buff plumage with a bold white rump. Regularly recorded as an autumn vagrant in northwestern Europe."
         }
+      ]
+    },
+    {
+      "id": "GENUS_MONTICOLA",
+      "name": "Monticola",
+      "rank": "GENUS",
+      "description": "Rock-thrushes — spectacular, thrush-sized chats of rocky mountains and open terrain. Males are among the most brilliantly coloured small birds in their ranges, typically combining blue, chestnut, and white. Despite their size and vivid plumage, rock-thrushes can be surprisingly difficult to locate in their rugged habitat. They are aerial and perch-and-drop insectivores, scanning from prominent rocks before dropping to the ground for prey.",
+      "lineage": "Chats",
+      "children": [
+        {
+          "id": "MONTICOLA_SAXATILIS",
+          "name": "Monticola saxatilis",
+          "rank": "SPECIES",
+          "commonName": "Rufous-tailed Rock-Thrush",
+          "lineage": "Chats",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "A spectacular montane migrant, the male combining blue head and back with orange-chestnut underparts. Breeds on rocky, open slopes from southern Europe east to Central Asia. Winters in sub-Saharan Africa; a rare but regular vagrant to northwest Europe."
+        },
+        {
+          "id": "MONTICOLA_SOLITARIUS",
+          "name": "Monticola solitarius",
+          "rank": "SPECIES",
+          "commonName": "Blue Rock-Thrush",
+          "lineage": "Chats",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 5,
+          "description": "The male is almost entirely deep blue, an extraordinary sight on Mediterranean sea cliffs and rocky hillsides. Widespread from Iberia and North Africa across Asia to Japan and the Philippines. Largely resident in warmer parts of its range; the national bird of Malta."
+        }
+
       ]
     },
     {
@@ -174,6 +498,67 @@
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 0,
           "description": "Replaces the Pied Flycatcher in central and eastern Europe. Distinguished by a complete white collar. Where both species breed, they are subject to intense character displacement — males have evolved more distinct plumage to reduce costly hybrid matings."
+        },
+        {
+          "id": "FICEDULA_PARVA",
+          "name": "Ficedula parva",
+          "rank": "SPECIES",
+          "commonName": "Red-breasted Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "The smallest flycatcher in the western Palearctic, with an orange-red throat in the male. Breeds in mature deciduous and mixed forest from eastern Europe to Siberia. A regular autumn passage migrant along European coastlines, often turning up in woodland."
+        },
+        {
+          "id": "FICEDULA_NARCISSINA",
+          "name": "Ficedula narcissina",
+          "rank": "SPECIES",
+          "commonName": "Narcissus Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "A beautifully coloured East Asian flycatcher, with the male bearing vivid yellow-orange underparts, black upperparts, and a striking white wing patch. Breeds in temperate and boreal forests of Japan, China, and Russia. Winters across Southeast Asia."
+        },
+        {
+          "id": "FICEDULA_MUGIMAKI",
+          "name": "Ficedula mugimaki",
+          "rank": "SPECIES",
+          "commonName": "Mugimaki Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A small East Asian flycatcher with the male's blue-black upperparts contrasting with bright orange underparts and a bold white supercilium. Breeds in boreal forests of Siberia and northeastern China; winters in Southeast Asia and the Philippines."
+        },
+        {
+          "id": "FICEDULA_STROPHIATA",
+          "name": "Ficedula strophiata",
+          "rank": "SPECIES",
+          "commonName": "Rufous-gorgeted Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "A Himalayan and Indochinese montane flycatcher distinguished by a small rusty-orange gorget on the throat. Breeds in dense forest undergrowth at middle elevations. Winters in the foothills of South and Southeast Asia."
+        },
+        {
+          "id": "FICEDULA_ZANTHOPYGIA",
+          "name": "Ficedula zanthopygia",
+          "rank": "SPECIES",
+          "commonName": "Yellow-rumped Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Named for the male's distinctive yellow rump, which contrasts with black upperparts and white wing patch. Breeds in deciduous and mixed forest across northeastern China and Russia; winters in Southeast Asia and Sundaland. Regular in Japan on spring migration."
+        },
+        {
+          "id": "FICEDULA_HODGSONII",
+          "name": "Ficedula hodgsonii",
+          "rank": "SPECIES",
+          "commonName": "Slaty-backed Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A montane flycatcher of the eastern Himalayas and southwestern China, inhabiting dense forest undergrowth. The male is slaty-blue above with a warm buff wash on the flanks. Named after Brian Houghton Hodgson, the pioneering 19th-century naturalist and diplomat in Nepal.",
+          "namedAfter": "Brian Houghton Hodgson"
         }
       ]
     },
@@ -193,6 +578,281 @@
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 6,
           "description": "One of Europe's most severely declining migrants. Causes are complex — thought to involve deterioration in wintering habitat in sub-Saharan Africa and declines in large flying insects at breeding sites."
+        },
+        {
+          "id": "MUSCICAPA_ADUSTA",
+          "name": "Muscicapa adusta",
+          "rank": "SPECIES",
+          "commonName": "African Dusky Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Africa"],
+          "subspeciesCount": 7,
+          "description": "A small, plain flycatcher of forest edges, gardens, and montane woodland widely distributed across sub-Saharan Africa and montane East Africa. One of several similar-looking small Muscicapa flycatchers requiring care in identification. A common resident in Afromontane gardens."
+        },
+        {
+          "id": "MUSCICAPA_CAERULESCENS",
+          "name": "Muscicapa caerulescens",
+          "rank": "SPECIES",
+          "commonName": "Ashy Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Africa"],
+          "subspeciesCount": 4,
+          "description": "A widespread flycatcher of savannah woodland and forest edges across sub-Saharan Africa. The pale grey-blue plumage and whitish underparts are distinctive. Typically sits quietly on an exposed low branch before making short sallies to catch insects."
+        },
+        {
+          "id": "MUSCICAPA_DAUURICA",
+          "name": "Muscicapa dauurica",
+          "rank": "SPECIES",
+          "commonName": "Asian Brown Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 4,
+          "description": "A widespread and common Asian flycatcher breeding across a huge range from the Urals to Japan. Very similar to the Spotted Flycatcher but slightly smaller and with a more prominent eye-ring. Winters in South and Southeast Asia. Increasingly regular as a vagrant in Europe."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CYANOPTILA",
+      "name": "Cyanoptila",
+      "rank": "GENUS",
+      "description": "Blue-and-white flycatchers of eastern Asia, combining brilliant cobalt-blue upperwings with white underparts in the male. The genus comprises two species that are among the most visually striking small passerines in East Asia. They breed in mature deciduous and mixed forest and are long-distance migrants to Southeast Asia and Sundaland. Males are unmistakable in breeding plumage; females are brown with a white belly.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "CYANOPTILA_CYANOMELANA",
+          "name": "Cyanoptila cyanomelana",
+          "rank": "SPECIES",
+          "commonName": "Blue-and-white Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "One of the most striking small birds in East Asia, with the male's cobalt-blue upperparts and jet-black throat contrasting with pure white underparts. Breeds in Japan, China, Korea, and eastern Russia; winters in Southeast Asia. The national bird has deep cultural resonance in Japan."
+        },
+        {
+          "id": "CYANOPTILA_CUMATILIS",
+          "name": "Cyanoptila cumatilis",
+          "rank": "SPECIES",
+          "commonName": "Zappey's Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Formerly treated as a subspecies of Blue-and-white Flycatcher, it was elevated to species status based on differences in male plumage — the throat is blue, not black — and genetic evidence. Breeds in central China and winters in Southeast Asia. Named after Charles Melville Zappey, an American collector.",
+          "namedAfter": "Charles Melville Zappey"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EUMYIAS",
+      "name": "Eumyias",
+      "rank": "GENUS",
+      "description": "Verditer flycatchers — medium-sized flycatchers of South and Southeast Asian forests, characterised by the male's brilliant turquoise-blue plumage. The Verditer Flycatcher is one of the most conspicuous birds of Himalayan foothills and montane forest, where the male perches openly and sallies repeatedly for insects. The genus includes several island and Sundaic species with restricted ranges.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "EUMYIAS_THALASSINUS",
+          "name": "Eumyias thalassinus",
+          "rank": "SPECIES",
+          "commonName": "Verditer Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "Impossible to overlook where it occurs: the male is entirely brilliant turquoise-green, one of the most vivid birds in the Himalayas. Perches conspicuously on treetops and makes long aerial sallies. Breeds in montane forest from the Himalayas to Indochina."
+        },
+        {
+          "id": "EUMYIAS_INDIGO",
+          "name": "Eumyias indigo",
+          "rank": "SPECIES",
+          "commonName": "Indigo Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "A Sundaic montane specialist found in the highland forests of Borneo, Java, and Sumatra. The deep indigo-blue male is among the most beautiful birds on these islands. Like other Eumyias, it perches conspicuously and makes aerial sallies for insects."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NILTAVA",
+      "name": "Niltava",
+      "rank": "GENUS",
+      "description": "Niltavas — spectacular flycatchers of Asian montane forests, with males combining brilliant cobalt-blue, violet, and orange in patterns of extraordinary beauty. The genus is centred on the Himalayas and ranges into Southeast Asia and southern China. They are forest understory specialists, foraging close to the ground in dense vegetation and making short sallies to catch insects. The Large Niltava and Vivid Niltava are among the most celebrated beauties of Asian ornithology.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "NILTAVA_GRANDIS",
+          "name": "Niltava grandis",
+          "rank": "SPECIES",
+          "commonName": "Large Niltava",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "The largest niltava, breeding from the Himalayas to Indochina in montane forests. The male is a stunning combination of brilliant blue upperparts and deep orange underparts. Inhabits the forest floor and lower strata; hunts by dropping onto insects from a low perch."
+        },
+        {
+          "id": "NILTAVA_SUNDARA",
+          "name": "Niltava sundara",
+          "rank": "SPECIES",
+          "commonName": "Rufous-bellied Niltava",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "A smaller niltava of the Himalayas and southwestern China. The male has a brilliant cobalt crown and shoulder patch contrasting with deep rufous underparts. Inhabits dense undergrowth in moist montane forest, where it can be surprisingly secretive despite vivid colouration."
+        },
+        {
+          "id": "NILTAVA_VIVIDA",
+          "name": "Niltava vivida",
+          "rank": "SPECIES",
+          "commonName": "Vivid Niltava",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "Restricted to montane forests of Taiwan, the Himalayas, and adjacent parts of China. The male's extremely vivid blue and deep orange plumage is considered among the most beautiful in Asian birds. Listed as of least concern but dependent on intact montane forest."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CYORNIS",
+      "name": "Cyornis",
+      "rank": "GENUS",
+      "description": "Forest-flycatchers — a diverse genus of blue-and-orange flycatchers distributed across South and Southeast Asia. Males of most species show vivid blue upperparts and orange or white underparts, making them among the most visually striking birds of Asian forests. The genus has been subject to significant taxonomic revision, with molecular studies revealing considerable cryptic diversity. Many species are restricted to particular islands or mountain ranges.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "CYORNIS_TICKELLIAE",
+          "name": "Cyornis tickelliae",
+          "rank": "SPECIES",
+          "commonName": "Tickell's Blue-Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 4,
+          "description": "A common and widespread flycatcher of South and Southeast Asian forests, with the male's bright blue upperparts and orange throat and breast unmistakable. Named after Samuel Richard Tickell, a 19th-century British army officer and naturalist who collected extensively in India.",
+          "namedAfter": "Samuel Richard Tickell"
+        },
+        {
+          "id": "CYORNIS_RUBECULOIDES",
+          "name": "Cyornis rubeculoides",
+          "rank": "SPECIES",
+          "commonName": "Blue-throated Blue-Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "A Himalayan and Indochinese species distinguishable from Tickell's Blue-Flycatcher by its blue (not orange) throat. Breeds in moist montane forest; winters in the lowlands of South and Southeast Asia. Often detected by its lively, liquid song."
+        },
+        {
+          "id": "CYORNIS_BANYUMAS",
+          "name": "Cyornis banyumas",
+          "rank": "SPECIES",
+          "commonName": "Hill Blue-Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 5,
+          "description": "A widespread species of hill and montane forest from the eastern Himalayas to Sundaland. Males show brilliant blue upperparts and deep orange underparts. One of several very similar Cyornis species in Southeast Asia, identification requiring careful attention to distribution and minor plumage differences."
+        }
+
+      ]
+    },
+    {
+      "id": "GENUS_ANTHIPES",
+      "name": "Anthipes",
+      "rank": "GENUS",
+      "description": "A small genus of forest flycatchers of South and Southeast Asia, closely related to Cyornis and sometimes merged with it. Males are typically blue above and white or buff below, with distinctive throat markings. They inhabit the understory of humid tropical and montane forests and are relatively poorly known compared to more accessible genera. Most species have limited ranges tied to particular mountain systems or biogeographic regions.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "ANTHIPES_MONILEGER",
+          "name": "Anthipes monileger",
+          "rank": "SPECIES",
+          "commonName": "White-gorgeted Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "A small flycatcher of dense forest undergrowth from the eastern Himalayas to Indochina, named for the white gorget (necklace) on the male's throat. A secretive bird that is heard more often than seen, frequenting shaded gullies and stream-side forest."
+        },
+        {
+          "id": "ANTHIPES_SOLITARIS",
+          "name": "Anthipes solitaris",
+          "rank": "SPECIES",
+          "commonName": "Rufous-browed Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 5,
+          "description": "Distributed across the mountains of Southeast Asia from the Thai-Malay Peninsula to the Philippines. Distinguished by the male's rufous supercilium contrasting with blue-grey upperparts. Inhabits cool, mossy montane forest at middle to high elevations."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RHINOMYIAS",
+      "name": "Rhinomyias",
+      "rank": "GENUS",
+      "description": "Jungle-flycatchers — a Sundaic genus of cryptic, brown flycatchers of lowland and montane rainforest undergrowth. Most are endemic to individual islands or small island groups in the Philippines, Sulawesi, and the Sundaic region. They are dull in colouration relative to other Muscicapidae but often have subtle facial patterns. Several species are of conservation concern due to small ranges and ongoing deforestation.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "RHINOMYIAS_BRUNNEATA",
+          "name": "Rhinomyias brunneata",
+          "rank": "SPECIES",
+          "commonName": "Brown-chested Jungle-Flycatcher",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A migratory jungle-flycatcher breeding in southern China and wintering across Southeast Asia into Sundaland. One of the few migratory members of its genus. Plain brown above with a buffy-white breast and diffuse brownish breast band. A forest floor specialist."
+        }
+
+      ]
+    },
+    {
+      "id": "GENUS_SAXICOLOIDES",
+      "name": "Saxicoloides",
+      "rank": "GENUS",
+      "description": "The Indian Robin is a familiar and beloved bird of open scrub, rocky ground, and gardens throughout most of the Indian subcontinent. The male, with his glistening blue-black upperparts and chestnut undertail coverts, constantly cocks and fans his tail in a characteristic display. The genus is monotypic, forming part of the diverse complex of south Asian ground-chats. Indian Robins are largely resident and thrive in degraded habitats, unlike many insectivorous birds.",
+      "lineage": "Chats",
+      "children": [
+        {
+          "id": "SAXICOLOIDES_FULICATUS",
+          "name": "Saxicoloides fulicatus",
+          "rank": "SPECIES",
+          "commonName": "Indian Robin",
+          "lineage": "Chats",
+          "continents": ["Asia"],
+          "subspeciesCount": 7,
+          "description": "One of the most commonly seen small birds across the Indian subcontinent, thriving in open scrubland, villages, and gardens. The male's distinctive habit of holding his tail erect and fanning the chestnut undertail coverts is an unmistakable behavioural signature. Highly adaptable."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CINCLIDIUM",
+      "name": "Cinclidium",
+      "rank": "GENUS",
+      "description": "Blue robins — jewel-like ground-robins of dense, humid Himalayan and montane Southeast Asian forest. The male Blue-fronted Robin is a remarkable deep blue colour. These are shy, ground-dwelling birds of the forest floor in montane and subalpine zones. They hop through deep leaf litter hunting invertebrates and are seldom seen, but their songs carry through the forest understorey.",
+      "lineage": "Robins",
+      "children": [
+        {
+          "id": "CINCLIDIUM_FRONTALE",
+          "name": "Cinclidium frontale",
+          "rank": "SPECIES",
+          "commonName": "Blue-fronted Robin",
+          "lineage": "Robins",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "A deep-forest ground-robin of the Himalayas and adjacent mountains, the male almost entirely deep blue. Secretive and difficult to observe despite vivid plumage. Inhabits moist montane forest with dense undergrowth, usually close to forest streams."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MYIOMELA",
+      "name": "Myiomela",
+      "rank": "GENUS",
+      "description": "A small genus of ground-flycatchers of Asian montane forests, related to and sometimes merged with Cinclidium. The male White-tailed Robin is among the more striking small birds of the Himalayan and Chinese montane forests, its deep blue plumage offset by distinctive white tail patches that flash as the bird hops along the forest floor. The genus inhabits moist, shaded forest undergrowth.",
+      "lineage": "Flycatchers",
+      "children": [
+        {
+          "id": "MYIOMELA_LEUCURA",
+          "name": "Myiomela leucura",
+          "rank": "SPECIES",
+          "commonName": "White-tailed Robin",
+          "lineage": "Flycatchers",
+          "continents": ["Asia"],
+          "subspeciesCount": 4,
+          "description": "A ground-dwelling flycatcher of the Himalayas and adjacent ranges in China and Indochina. The male's deep blue plumage and conspicuous white tail patches — flashed as the bird fans its tail — are diagnostic. Inhabits dense forest undergrowth, usually on steep hillsides."
         }
       ]
     }
