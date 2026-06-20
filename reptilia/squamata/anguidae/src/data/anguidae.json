@@ -2,104 +2,984 @@
   "id": "FAM_ANGUIDAE",
   "name": "Anguidae",
   "rank": "FAMILY",
-  "commonName": "Slow Worms & Glass Lizards",
+  "commonName": "Slow Worms, Glass Lizards & Alligator Lizards",
   "children": [
     {
-      "id": "GENUS_ANGUIS",
-      "name": "Anguis",
-      "rank": "GENUS",
-      "description": "Slow worms — legless lizards of Europe. The Slow Worm is one of the most familiar Swedish reptiles — a smooth copper-brown legless lizard found in gardens, allotments, and woodland edges across most of the country. It eats slugs and earthworms, making it a welcome garden guest. Legless lizards differ from snakes in having eyelids, external ear openings, and the ability to shed the tail.",
-      "lineage": "Slow Worms",
+      "id": "SUBFAM_ANGUINAE",
+      "name": "Anguinae",
+      "rank": "SUBFAMILY",
+      "description": "The Old World and North American legless or near-legless anguid lizards, including slow worms, European glass lizards, and Asian glass lizards.",
+      "lineage": "Anguidae",
       "children": [
         {
-          "id": "ANGUIS_FRAGILIS",
-          "name": "Anguis fragilis",
-          "rank": "SPECIES",
-          "commonName": "Slow Worm / kopparormen",
+          "id": "GENUS_ANGUIS",
+          "name": "Anguis",
+          "rank": "GENUS",
+          "description": "Slow worms of Europe and southwestern Asia. These smooth-scaled, copper-toned legless lizards are distinguished from snakes by their eyelids, external ear openings, and autotomous tails. They are fossorial and secretive, foraging on slugs, earthworms, and small invertebrates.",
           "lineage": "Slow Worms",
-          "continents": [
-            "Europe"
-          ],
-          "subspeciesCount": 0,
-          "description": "A legless lizard, not a snake; common in Swedish gardens and forest edges; eats slugs and earthworms; copper-brown with metallic sheen; Swedish name means 'copper snake'; can shed and partially regrow its tail; lives 20-30 years in the wild."
+          "children": [
+            {
+              "id": "ANGUIS_FRAGILIS",
+              "name": "Anguis fragilis",
+              "rank": "SPECIES",
+              "commonName": "Slow Worm",
+              "lineage": "Slow Worms",
+              "continents": ["Europe"],
+              "subspeciesCount": 0,
+              "description": "The most familiar legless lizard of northern and western Europe, widespread from Britain to western Russia. Its copper-brown, metallic-sheened body closely resembles a snake, but eyelids and ear openings confirm its lizard identity. A garden ally that feeds on slugs and earthworms; individuals may live 20–30 years in the wild."
+            },
+            {
+              "id": "ANGUIS_COLCHICA",
+              "name": "Anguis colchica",
+              "rank": "SPECIES",
+              "commonName": "Eastern Slow Worm",
+              "lineage": "Slow Worms",
+              "continents": ["Europe", "Asia"],
+              "subspeciesCount": 3,
+              "description": "Split from Anguis fragilis on molecular and morphological grounds; ranges from eastern Europe through the Caucasus to western Asia. Males often show blue spotting on the flanks, a feature rarer in the western species. It inhabits similar edge habitats to the Slow Worm but extends further into continental climates."
+            },
+            {
+              "id": "ANGUIS_GRAECA",
+              "name": "Anguis graeca",
+              "rank": "SPECIES",
+              "commonName": "Greek Slow Worm",
+              "lineage": "Slow Worms",
+              "continents": ["Europe"],
+              "subspeciesCount": 0,
+              "description": "Endemic to Greece and adjacent Balkan countries, recognised as a distinct species following phylogeographic analysis. It occupies montane scrub, woodland margins, and stone walls in the southern Balkans. Morphologically similar to A. fragilis but genetically well differentiated."
+            },
+            {
+              "id": "ANGUIS_CEPHALLONICA",
+              "name": "Anguis cephallonica",
+              "rank": "SPECIES",
+              "commonName": "Peloponnese Slow Worm",
+              "lineage": "Slow Worms",
+              "continents": ["Europe"],
+              "subspeciesCount": 0,
+              "description": "Described from the Ionian island of Cephallonia and the Peloponnese peninsula, Greece. It is the smallest member of the genus and shows a relatively uniform bronze dorsum. Island populations are isolated and show reduced genetic diversity."
+            },
+            {
+              "id": "ANGUIS_VERONENSIS",
+              "name": "Anguis veronensis",
+              "rank": "SPECIES",
+              "commonName": "Italian Slow Worm",
+              "lineage": "Slow Worms",
+              "continents": ["Europe"],
+              "subspeciesCount": 0,
+              "description": "Found across the Italian peninsula and some southern Alpine foothills, named after Verona. It was elevated to species status based on mitochondrial DNA divergence from A. fragilis. Adults are typically slender with a pale mid-dorsal stripe retained from juveniles."
+            },
+            {
+              "id": "ANGUIS_BILINEATA",
+              "name": "Anguis bilineata",
+              "rank": "SPECIES",
+              "commonName": "Southern Slow Worm",
+              "lineage": "Slow Worms",
+              "continents": ["Europe"],
+              "subspeciesCount": 0,
+              "description": "Distributed across the Iberian Peninsula and southern France, characterised by two pale lateral stripes on the dorsum. It prefers cooler, moister habitats such as scrub, heathland, and humid forest edges. Genetic data confirm deep divergence from the northern A. fragilis clade."
+            }
+          ]
         },
         {
-          "id": "ANGUIS_COLCHICA",
-          "name": "Anguis colchica",
-          "rank": "SPECIES",
-          "commonName": "Eastern Slow Worm",
-          "lineage": "Slow Worms",
-          "continents": [
-            "Europe",
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": "Recently split from A. fragilis; eastern distribution; virtually identical in appearance."
-        }
-      ]
-    },
-    {
-      "id": "GENUS_PSEUDOPUS",
-      "name": "Pseudopus",
-      "rank": "GENUS",
-      "description": "Large European glass lizards.",
-      "lineage": "Glass Lizards",
-      "children": [
-        {
-          "id": "PSEUDOPUS_APODUS",
-          "name": "Pseudopus apodus",
-          "rank": "SPECIES",
-          "commonName": "Scheltopusik / Pallas's Glass Lizard",
+          "id": "GENUS_PSEUDOPUS",
+          "name": "Pseudopus",
+          "rank": "GENUS",
+          "description": "Large, near-legless lizards of Europe and central Asia, bearing tiny vestigial hind-limb flaps near the cloaca. Formerly placed in Ophisaurus, Pseudopus apodus is one of the largest lizards on the European continent.",
           "lineage": "Glass Lizards",
-          "continents": [
-            "Europe",
-            "Asia"
-          ],
-          "subspeciesCount": 3,
-          "description": "Large legless lizard reaching 1.4 m; vestigial hind limb stubs visible near cloaca; crushes molluscs and beetles with powerful jaws; Balkan grasslands and steppe.",
-          "namedAfter": "Peter Simon Pallas"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_OPHISAURUS",
-      "name": "Ophisaurus",
-      "rank": "GENUS",
-      "description": "North American glass lizards.",
-      "lineage": "Glass Lizards",
-      "children": [
+          "children": [
+            {
+              "id": "PSEUDOPUS_APODUS",
+              "name": "Pseudopus apodus",
+              "rank": "SPECIES",
+              "commonName": "Scheltopusik / Pallas's Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Europe", "Asia"],
+              "subspeciesCount": 3,
+              "description": "The largest glass lizard, reaching 1.4 m; vestigial hind-limb stubs are clearly visible beside the cloaca. Powerful jaws crush hard-shelled prey including beetles, snails, and small vertebrates. Inhabits dry grasslands and scrub from the Balkans east through Central Asia.",
+              "namedAfter": "Peter Simon Pallas"
+            }
+          ]
+        },
         {
-          "id": "OPHISAURUS_VENTRALIS",
-          "name": "Ophisaurus ventralis",
-          "rank": "SPECIES",
-          "commonName": "Eastern Glass Lizard",
+          "id": "GENUS_OPHISAURUS",
+          "name": "Ophisaurus",
+          "rank": "GENUS",
+          "description": "North American glass lizards — slender, limbless or nearly limbless lizards whose tails shatter along fracture planes when seized by predators, giving the group its common name. They inhabit open pine flatwoods, grasslands, and damp meadows.",
           "lineage": "Glass Lizards",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": "Up to 1.1 m; breaks into pieces when grabbed, giving the group its name; can regenerate the tail only."
+          "children": [
+            {
+              "id": "OPHISAURUS_VENTRALIS",
+              "name": "Ophisaurus ventralis",
+              "rank": "SPECIES",
+              "commonName": "Eastern Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "The largest North American glass lizard, reaching over 1 m; a lateral groove separates rigid dorsal scales from softer ventral ones. When grabbed by a predator the tail shatters into multiple wriggling pieces, distracting attention while the animal escapes. Frequents moist grasslands, pine savannas, and coastal plain habitats in the southeastern USA."
+            },
+            {
+              "id": "OPHISAURUS_ATTENUATUS",
+              "name": "Ophisaurus attenuatus",
+              "rank": "SPECIES",
+              "commonName": "Slender Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 2,
+              "description": "Recognised by a dark mid-dorsal stripe and several parallel lateral stripes; the slenderest of the North American glass lizards. Ranges widely across the central and southeastern USA, favouring open grasslands, prairies, and sandy soils. It is diurnal and relies on speed and tail autotomy to escape predators."
+            },
+            {
+              "id": "OPHISAURUS_COMPRESSUS",
+              "name": "Ophisaurus compressus",
+              "rank": "SPECIES",
+              "commonName": "Island Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "A small, slender glass lizard restricted to the Florida peninsula and barrier islands; one of the shortest-bodied members of the genus. It inhabits sand scrub and coastal dune habitats, sheltering beneath leaf litter and fallen logs. The dorsum bears a distinctive dark mid-dorsal stripe with pale flanks."
+            },
+            {
+              "id": "OPHISAURUS_MIMICUS",
+              "name": "Ophisaurus mimicus",
+              "rank": "SPECIES",
+              "commonName": "Mimic Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Long confused with the Slender Glass Lizard and named for its mimicry of that species; restricted to the coastal plain of the southeastern USA. Adults lack mid-dorsal stripes that are prominent in juveniles. It prefers longleaf pine savannas and wet flatwoods, a habitat type now greatly reduced by development."
+            },
+            {
+              "id": "OPHISAURUS_KOELLIKERI",
+              "name": "Ophisaurus koellikeri",
+              "rank": "SPECIES",
+              "commonName": "Moroccan Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Africa"],
+              "subspeciesCount": 0,
+              "description": "The only African glass lizard, endemic to northwestern Morocco in rocky scrub and semi-arid hillsides. It was long placed in its own genus Hyalosaurus before molecular work confirmed placement in Ophisaurus. A secretive burrower, it is rarely encountered and poorly known.",
+              "namedAfter": "Albert von Kölliker"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_DOPASIA",
+          "name": "Dopasia",
+          "rank": "GENUS",
+          "description": "Asian glass lizards of South and Southeast Asia; formerly included within Ophisaurus. These slender, legless or near-legless lizards inhabit forest edges, grasslands, and agricultural margins across a wide band from India to Indonesia.",
+          "lineage": "Glass Lizards",
+          "children": [
+            {
+              "id": "DOPASIA_GRACILIS",
+              "name": "Dopasia gracilis",
+              "rank": "SPECIES",
+              "commonName": "Slender Asian Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Asia"],
+              "subspeciesCount": 0,
+              "description": "Widespread across South and Southeast Asia from India to the Malay Peninsula; one of the most frequently encountered members of the genus. Its slender, shiny body resembles a slow worm but with prominent lateral grooves. It inhabits moist forest floors, tea plantations, and rice-field margins."
+            },
+            {
+              "id": "DOPASIA_HARTI",
+              "name": "Dopasia harti",
+              "rank": "SPECIES",
+              "commonName": "Hart's Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Asia"],
+              "subspeciesCount": 0,
+              "description": "Found in southern China, Taiwan, and northern Vietnam; inhabits subtropical forest, scrub, and cultivated land. It was long placed in Ophisaurus before its transfer to Dopasia. Adults are brown to olive-grey with fine speckling and a distinct lateral fold.",
+              "namedAfter": "Charles Hart"
+            },
+            {
+              "id": "DOPASIA_SOKOLOVI",
+              "name": "Dopasia sokolovi",
+              "rank": "SPECIES",
+              "commonName": "Sokolov's Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Asia"],
+              "subspeciesCount": 0,
+              "description": "Described from Vietnam and adjacent Indochina; named in honour of the Russian herpetologist Vladimir Sokolov. Little studied, it is known from forest edges and montane grasslands at moderate elevations. Its biology is largely inferred from related species.",
+              "namedAfter": "Vladimir Sokolov"
+            },
+            {
+              "id": "DOPASIA_BUETTIKOFERI",
+              "name": "Dopasia buettikoferi",
+              "rank": "SPECIES",
+              "commonName": "Büttikoferi's Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Asia"],
+              "subspeciesCount": 0,
+              "description": "Recorded from Sumatra and neighbouring Indonesian islands; one of the larger Dopasia species. Named for the Swiss naturalist Johann Büttikofer, who collected extensively in the region. It inhabits humid lowland and hill forest, where it forages through leaf litter for invertebrates.",
+              "namedAfter": "Johann Büttikofer"
+            },
+            {
+              "id": "DOPASIA_LUDOVICI",
+              "name": "Dopasia ludovici",
+              "rank": "SPECIES",
+              "commonName": "Ludovic's Glass Lizard",
+              "lineage": "Glass Lizards",
+              "continents": ["Asia"],
+              "subspeciesCount": 0,
+              "description": "Found across a broad range in Southeast Asia including Myanmar, Thailand, and Laos; one of the more frequently recorded Dopasia. Adults reach a moderate size and bear a glossy brown dorsum with paler flanks. It is largely fossorial, burrowing in soft soil and leaf litter of moist lowland forests."
+            }
+          ]
         }
       ]
     },
     {
-      "id": "GENUS_ELGARIA",
-      "name": "Elgaria",
-      "rank": "GENUS",
-      "description": "Western North American alligator lizards.",
-      "lineage": "Alligator Lizards",
+      "id": "SUBFAM_DIPLOGLOSSINAE",
+      "name": "Diploglossinae",
+      "rank": "SUBFAMILY",
+      "description": "Caribbean and Central American anguid lizards, predominantly limbed or partially limbed, inhabiting forests and rocky outcrops across the West Indies and adjacent mainland.",
+      "lineage": "Anguidae",
       "children": [
         {
-          "id": "ELGARIA_MULTICARINATA",
-          "name": "Elgaria multicarinata",
-          "rank": "SPECIES",
-          "commonName": "Southern Alligator Lizard",
+          "id": "GENUS_DIPLOGLOSSUS",
+          "name": "Diploglossus",
+          "rank": "GENUS",
+          "description": "Galliwasp lizards of the Caribbean islands and Central America; stout-bodied, short-limbed, secretive lizards that live in leaf litter and under rocks. Several species are threatened by habitat loss and invasive predators.",
+          "lineage": "Galliwasps",
+          "children": [
+            {
+              "id": "DIPLOGLOSSUS_MONOTROPIS",
+              "name": "Diploglossus monotropis",
+              "rank": "SPECIES",
+              "commonName": "Hispaniolian Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "One of the larger galliwasps, found in Hispaniola's humid forests; stout-limbed with smooth overlapping scales. It is secretive and predominantly crepuscular, sheltering beneath bark and in root tangles by day. Little studied, its population status on deforested parts of Haiti is uncertain."
+            },
+            {
+              "id": "DIPLOGLOSSUS_PLEEI",
+              "name": "Diploglossus pleei",
+              "rank": "SPECIES",
+              "commonName": "Martinique Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to Martinique in the Lesser Antilles; a medium-sized galliwasp of forested hillsides and boulder-strewn ravines. Seriously threatened by habitat loss and introduced mongooses and rats. Named after the French naturalist and physician Auguste Plée.",
+              "namedAfter": "Auguste Plée"
+            },
+            {
+              "id": "DIPLOGLOSSUS_LESSONAE",
+              "name": "Diploglossus lessonae",
+              "rank": "SPECIES",
+              "commonName": "Lesser Antilles Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Recorded from several Lesser Antilles islands including Guadeloupe; a secretive leaf-litter dweller. Its smooth, glossy scales and short robust limbs are characteristic of the genus. Populations have declined markedly due to deforestation and predation by introduced mammals."
+            },
+            {
+              "id": "DIPLOGLOSSUS_BILOBATUS",
+              "name": "Diploglossus bilobatus",
+              "rank": "SPECIES",
+              "commonName": "Panama Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America", "South America"],
+              "subspeciesCount": 0,
+              "description": "Found in Panama and northwestern Colombia; one of the few galliwasps on the South American mainland. It inhabits moist tropical forest floors, foraging for invertebrates under fallen logs and root masses. Relatively little-studied compared to its Caribbean relatives."
+            },
+            {
+              "id": "DIPLOGLOSSUS_FASCIATUS",
+              "name": "Diploglossus fasciatus",
+              "rank": "SPECIES",
+              "commonName": "Banded Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Recognisable by pale transverse bands across a dark brown body; found in Jamaica and nearby cays. It is a ground-dwelling species of dense humid forest, burrowing into soil and leaf litter. The banded pattern may serve as disruptive camouflage among dappled forest-floor light."
+            },
+            {
+              "id": "DIPLOGLOSSUS_COSTATUS",
+              "name": "Diploglossus costatus",
+              "rank": "SPECIES",
+              "commonName": "Costa Rican Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "One of the mainland Central American galliwasps, recorded from Costa Rica and Panama in humid lowland forest. Adults are medium-sized with smooth, brown dorsal scales and pale undersides. Its secretive habits mean encounters are rare despite a presumably broad range."
+            },
+            {
+              "id": "DIPLOGLOSSUS_MILLEPUNCTATUS",
+              "name": "Diploglossus millepunctatus",
+              "rank": "SPECIES",
+              "commonName": "Malpelo Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["South America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to Malpelo Island, a small Colombian oceanic island in the Pacific; among the most isolated galliwasps. Named for the thousand-spotted dorsal pattern seen in some individuals. The island population is protected within a UNESCO World Heritage marine sanctuary."
+            },
+            {
+              "id": "DIPLOGLOSSUS_NIGROPUNCTATUS",
+              "name": "Diploglossus nigropunctatus",
+              "rank": "SPECIES",
+              "commonName": "Black-spotted Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Distributed across Cuba and associated cays; characterised by dark spotting on a brown or greyish dorsum. It inhabits dry and moist forests, as well as disturbed scrub, sheltering under rocks and bark. One of the more robust Cuban galliwasp species."
+            },
+            {
+              "id": "DIPLOGLOSSUS_OBSCURUS",
+              "name": "Diploglossus obscurus",
+              "rank": "SPECIES",
+              "commonName": "Guadeloupe Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Previously considered extinct and rediscovered on La Désirade islet off Guadeloupe in the 1990s; now a conservation priority. Its plain, dark-brown coloration makes it difficult to spot among leaf litter. Habitat destruction and introduced predators remain the principal threats."
+            },
+            {
+              "id": "DIPLOGLOSSUS_WARRENI",
+              "name": "Diploglossus warreni",
+              "rank": "SPECIES",
+              "commonName": "Warren's Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to St Lucia in the Lesser Antilles; a stocky galliwasp of humid forest ravines and lava boulder fields. Named after Edward Warren, an early collector in the Caribbean. Threatened by forest clearance and the spread of small Indian mongooses.",
+              "namedAfter": "Edward Warren"
+            },
+            {
+              "id": "DIPLOGLOSSUS_BUTLERI",
+              "name": "Diploglossus butleri",
+              "rank": "SPECIES",
+              "commonName": "Butler's Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Recorded from Jamaica; a relatively little-known galliwasp named in honour of the naturalist Arthur Butler. It inhabits moist montane forest at higher elevations than most Jamaican congeners. Little field data exist on its diet or reproductive biology.",
+              "namedAfter": "Arthur Butler"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_CELESTUS",
+          "name": "Celestus",
+          "rank": "GENUS",
+          "description": "A diverse genus of Caribbean galliwasps with limbs better developed than in Diploglossus; found throughout the Greater and Lesser Antilles. Several species are island endemics of conservation concern.",
+          "lineage": "Galliwasps",
+          "children": [
+            {
+              "id": "CELESTUS_OCCIDUUS",
+              "name": "Celestus occiduus",
+              "rank": "SPECIES",
+              "commonName": "Jamaican Giant Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Probably extinct; last confirmed record from Jamaica dates to the 19th century, with possible later sightings. One of the largest galliwasps, it was likely eliminated by introduced mongooses and rats. Its loss represents one of the Caribbean's significant reptile extinctions."
+            },
+            {
+              "id": "CELESTUS_ENNEAGRAMMUS",
+              "name": "Celestus enneagrammus",
+              "rank": "SPECIES",
+              "commonName": "Nine-striped Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found in Cuba; named for its nine longitudinal body stripes. It inhabits semi-arid rocky scrub and dry forest edges, sheltering in crevices and under bark. The strongly patterned coloration may help break up the body outline against streaked substrates."
+            },
+            {
+              "id": "CELESTUS_BARBOURI",
+              "name": "Celestus barbouri",
+              "rank": "SPECIES",
+              "commonName": "Barbour's Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from Hispaniola; named in honour of the distinguished American herpetologist Thomas Barbour. It is a forest-floor species sheltering under logs and rocks in montane cloud forest. Its biology is poorly documented despite being described over a century ago.",
+              "namedAfter": "Thomas Barbour"
+            },
+            {
+              "id": "CELESTUS_CRUSCULUS",
+              "name": "Celestus crusculus",
+              "rank": "SPECIES",
+              "commonName": "Cuban Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "One of several galliwasps endemic to Cuba; a medium-sized, limbed species of humid forests and riverine margins. It forages for invertebrates in leaf litter and soil. Relatively resilient to moderate habitat disturbance, it can persist in secondary vegetation."
+            },
+            {
+              "id": "CELESTUS_CURTISSI",
+              "name": "Celestus curtissi",
+              "rank": "SPECIES",
+              "commonName": "Curtiss's Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Known from Haiti and the Dominican Republic; named after Charles Curtiss. A secretive species of Hispaniolan lowland and foothill forest. Forest clearance for agriculture has severely reduced its habitat, placing it among the Caribbean's more vulnerable anguid lizards.",
+              "namedAfter": "Charles Curtiss"
+            },
+            {
+              "id": "CELESTUS_STENURUS",
+              "name": "Celestus stenurus",
+              "rank": "SPECIES",
+              "commonName": "Narrow-tailed Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to the southern peninsula of Haiti; distinguishable by its notably slender tail relative to body size. It inhabits remaining fragments of dry deciduous forest, one of the most threatened vegetation types in the Caribbean. Very little field ecology is documented."
+            },
+            {
+              "id": "CELESTUS_WARRENI",
+              "name": "Celestus warreni",
+              "rank": "SPECIES",
+              "commonName": "St Kitts Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found on St Kitts and Nevis; a short-limbed species of humid forest and scrub. Like many Lesser Antillean galliwasps it has suffered from introduced mammalian predators since the 17th century. Survey work suggests populations remain low but persistent in protected highland areas."
+            },
+            {
+              "id": "CELESTUS_ATELES",
+              "name": "Celestus ateles",
+              "rank": "SPECIES",
+              "commonName": "Puerto Rican Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to Puerto Rico and the Virgin Islands; a small, secretive galliwasp of moist limestone forest and ravines. Its small limbs are functional but rarely used for rapid locomotion; it tends to wriggle rather than run. Endangered by habitat conversion and invasive predators."
+            },
+            {
+              "id": "CELESTUS_COSTATUS",
+              "name": "Celestus costatus",
+              "rank": "SPECIES",
+              "commonName": "Ribbed Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Distributed across several of the Greater Antilles; named for the subtly ribbed texture of its dorsal scales. It favours moist forest and the edges of riparian woodland. Omnivorous; consumes invertebrates, small vertebrates, and soft plant matter."
+            },
+            {
+              "id": "CELESTUS_FOWLERI",
+              "name": "Celestus fowleri",
+              "rank": "SPECIES",
+              "commonName": "Fowler's Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from the Dominican Republic; named for the herpetologist Henry Fowler. A small galliwasp of dry-forest margins and rocky hillsides in southern Hispaniola. Population surveys are scarce and its conservation status has not been formally assessed.",
+              "namedAfter": "Henry Fowler"
+            },
+            {
+              "id": "CELESTUS_INTERMEDIUS",
+              "name": "Celestus intermedius",
+              "rank": "SPECIES",
+              "commonName": "Intermediate Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Occurs in Cuba's eastern provinces; morphologically intermediate between several Cuban Celestus species, hence its name. Found in both dry scrub and the edges of humid forest. A diurnal forager, it is active in warm weather and retreats underground during cooler months."
+            },
+            {
+              "id": "CELESTUS_MACROTUS",
+              "name": "Celestus macrotus",
+              "rank": "SPECIES",
+              "commonName": "Large-eared Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to Jamaica; named for its comparatively prominent ear openings. Found in humid montane forest of the Blue Mountains and associated limestone hills. Among Jamaica's larger Celestus species, it is rarely seen and poorly documented in the field."
+            },
+            {
+              "id": "CELESTUS_XERAMPELINUS",
+              "name": "Celestus xerampelinus",
+              "rank": "SPECIES",
+              "commonName": "Vine-coloured Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Known from Hispaniola; its name refers to the reddish-brown, dried-vine coloration of adults. It is a forest-floor species that relies on leaf litter and fallen wood for shelter and foraging. Probably viviparous, as is typical for galliwasps."
+            },
+            {
+              "id": "CELESTUS_DUNNI",
+              "name": "Celestus dunni",
+              "rank": "SPECIES",
+              "commonName": "Dunn's Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from Panama and Costa Rica; named for Emmett Reid Dunn, a prolific herpetologist of Central American fauna. A medium-sized galliwasp of humid lowland and premontane forest. Its mainland distribution sets it apart from the largely Caribbean Celestus radiation.",
+              "namedAfter": "Emmett Reid Dunn"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_WETMORENA",
+          "name": "Wetmorena",
+          "rank": "GENUS",
+          "description": "A monotypic genus of anguid lizard endemic to Hispaniola, named after the ornithologist Alexander Wetmore. Closely related to Celestus and Diploglossus, it is one of the rarer and less-studied Caribbean galliwasps.",
+          "lineage": "Galliwasps",
+          "children": [
+            {
+              "id": "WETMORENA_HAETIANA",
+              "name": "Wetmorena haetiana",
+              "rank": "SPECIES",
+              "commonName": "Haitian Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "The sole species in its genus, found in Hispaniola's remnant humid forests. Named for Haiti, reflecting the island where the type specimen was collected. A secretive burrower rarely encountered during surveys, and considered potentially vulnerable due to the island's severe deforestation.",
+              "namedAfter": "Alexander Wetmore"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_SAURESIA",
+          "name": "Sauresia",
+          "rank": "GENUS",
+          "description": "A small genus of diminutive Caribbean anguid lizards from Hispaniola, closely related to Celestus. These tiny, poorly known lizards inhabit leaf litter in humid forests.",
+          "lineage": "Galliwasps",
+          "children": [
+            {
+              "id": "SAURESIA_SEXLINEATA",
+              "name": "Sauresia sexlineata",
+              "rank": "SPECIES",
+              "commonName": "Six-lined Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "The best-known member of Sauresia; found in Hispaniola's lowland and foothill forests where it shelters in leaf litter. Distinguished by six pale dorsal lines on a brown ground colour. Poorly studied, but viviparous reproduction is presumed based on close relatives."
+            },
+            {
+              "id": "SAURESIA_LINEATA",
+              "name": "Sauresia lineata",
+              "rank": "SPECIES",
+              "commonName": "Lined Galliwasp",
+              "lineage": "Galliwasps",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "A second, smaller Hispaniolan Sauresia; similar in appearance but differing in scale counts and proportions. Like its congener it is a leaf-litter specialist of humid forest. Its population status is largely unknown; surveys are hampered by its cryptic habits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SUBFAM_GERRHONOTINAE",
+      "name": "Gerrhonotinae",
+      "rank": "SUBFAMILY",
+      "description": "The alligator lizards of North and Central America; limbed, keeled-scaled lizards named for their rough, 'armoured' appearance. They range from coniferous forests of western Canada to cloud forests of Central America.",
+      "lineage": "Anguidae",
+      "children": [
+        {
+          "id": "GENUS_ELGARIA",
+          "name": "Elgaria",
+          "rank": "GENUS",
+          "description": "Western North American alligator lizards; agile, keeled-scaled predators of rocky slopes, oak woodland, and chaparral from British Columbia to Mexico. They defend themselves vigorously with biting and tail autotomy.",
           "lineage": "Alligator Lizards",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 5,
-          "description": "Rough overlapping scales suggest armour plating; agile climber; defensive biting."
+          "children": [
+            {
+              "id": "ELGARIA_MULTICARINATA",
+              "name": "Elgaria multicarinata",
+              "rank": "SPECIES",
+              "commonName": "Southern Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 5,
+              "description": "The most widespread western alligator lizard, ranging from British Columbia to Baja California; keeled scales and a blocky head give it an armoured appearance. It is an agile predator of beetles, grasshoppers, spiders, and small vertebrates. Five subspecies are currently recognised across its extensive Pacific-slope range."
+            },
+            {
+              "id": "ELGARIA_COERULEUS",
+              "name": "Elgaria coeruleus",
+              "rank": "SPECIES",
+              "commonName": "Northern Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 4,
+              "description": "Ranges from British Columbia through the Pacific Northwest and Sierra Nevada; tolerates cooler temperatures than most lizards, remaining active even at low ambient temperatures. Its dorsum is brown to olive with irregular dark crossbands. Viviparous; gives birth to 2–15 live young in late summer."
+            },
+            {
+              "id": "ELGARIA_KINGII",
+              "name": "Elgaria kingii",
+              "rank": "SPECIES",
+              "commonName": "Madrean Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found in the Sky Island ranges of Arizona, New Mexico, and northern Mexico; inhabits rocky outcrops and canyon walls in pine-oak forest. Named for the explorer Philip Parker King. More arboreal than other Elgaria, it is an adept climber among boulders and fallen logs.",
+              "namedAfter": "Philip Parker King"
+            },
+            {
+              "id": "ELGARIA_PANAMINTINA",
+              "name": "Elgaria panamintina",
+              "rank": "SPECIES",
+              "commonName": "Panamint Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Restricted to the Panamint Range and adjacent ranges of the Mojave Desert in California; one of the rarest North American alligator lizards. It inhabits canyon floors and rocky slopes with riparian vegetation. Listed as a Species of Special Concern in California owing to its narrow range."
+            },
+            {
+              "id": "ELGARIA_COERULEA_SHASTENSIS",
+              "name": "Elgaria coerulea shastensis",
+              "rank": "SPECIES",
+              "commonName": "Shasta Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Sometimes treated as a full species, restricted to the Shasta County region of northern California. Distinguished from nearby E. coeruleus populations by colour pattern and scale count differences. Inhabits rocky forest edges and streamsides in montane terrain."
+            },
+            {
+              "id": "ELGARIA_VELAZQUEZI",
+              "name": "Elgaria velazquezi",
+              "rank": "SPECIES",
+              "commonName": "Velázquez's Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "A recently described species from the Transvolcanic Belt of Mexico; named after the herpetologist Julio Velázquez. It inhabits pine-oak forests at elevations between 1 800 and 2 500 m. Molecular data clearly differentiate it from the broader E. multicarinata complex.",
+              "namedAfter": "Julio Velázquez"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_ABRONIA",
+          "name": "Abronia",
+          "rank": "GENUS",
+          "description": "Arboreal alligator lizards of Mexico and Central America; largely tree-dwelling, with prehensile tails adapted for life in cloud forest bromeliads and mossy branches. Over 30 species are known, many described in the past two decades.",
+          "lineage": "Alligator Lizards",
+          "children": [
+            {
+              "id": "ABRONIA_GRAMINEA",
+              "name": "Abronia graminea",
+              "rank": "SPECIES",
+              "commonName": "Mexican Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Bright emerald-green, one of the most visually striking alligator lizards; inhabits cloud forest in Veracruz and Puebla, Mexico. Critically endangered by habitat loss and the international pet trade, which has driven massive illegal collection. Prehensile tail aids movement through bromeliad clusters."
+            },
+            {
+              "id": "ABRONIA_TAENIATA",
+              "name": "Abronia taeniata",
+              "rank": "SPECIES",
+              "commonName": "Striped Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 2,
+              "description": "Found in pine-oak cloud forests of Chiapas (Mexico) and Guatemala; brown with pale lateral stripes. One of the more widespread Abronia and the first described member of the genus. It spends most of its life in bromeliads and mossy tree crevices, descending to forage on the forest floor."
+            },
+            {
+              "id": "ABRONIA_CAMPBELLI",
+              "name": "Abronia campbelli",
+              "rank": "SPECIES",
+              "commonName": "Campbell's Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from high-altitude cloud forest in Guatemala; named for the herpetologist Jonathan Campbell. Its range is very restricted and it is threatened by cloud-forest clearance for subsistence agriculture. A small, dark species with keeled body scales.",
+              "namedAfter": "Jonathan Campbell"
+            },
+            {
+              "id": "ABRONIA_FIMBRIATA",
+              "name": "Abronia fimbriata",
+              "rank": "SPECIES",
+              "commonName": "Fringed Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to Oaxaca, Mexico; known from very few specimens collected in montane forest above 2 000 m. Named for the finely fringed edges of its dorsal scales, a subtle but diagnostic feature. Its extreme rarity in collections and restricted range make it one of the more imperilled Abronia."
+            },
+            {
+              "id": "ABRONIA_MIXTECA",
+              "name": "Abronia mixteca",
+              "rank": "SPECIES",
+              "commonName": "Mixtec Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From the Mixteca Alta highlands of Oaxaca, Mexico; named after the Mixtec indigenous people of the region. Occupies montane pine-oak forest between 2 000 and 2 800 m. Like other Oaxacan Abronia, it is under significant pressure from agricultural expansion."
+            },
+            {
+              "id": "ABRONIA_MATUDAI",
+              "name": "Abronia matudai",
+              "rank": "SPECIES",
+              "commonName": "Matuda's Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found in the Sierra Madre de Chiapas; named for the botanist Eizi Matuda, a collector of specimens in the region. A secretive arboreal species of humid montane forest above 1 500 m. First collected in the mid-20th century, it remains rarely encountered.",
+              "namedAfter": "Eizi Matuda"
+            },
+            {
+              "id": "ABRONIA_VASCONCELOSII",
+              "name": "Abronia vasconcelosii",
+              "rank": "SPECIES",
+              "commonName": "Vasconcelos' Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "A recently described Abronia from Oaxaca; named after a Mexican naturalist. Known from a handful of specimens taken in cloud forest remnants. Like many newly described Abronia, its conservation status has not been formally assessed despite presumed small range."
+            },
+            {
+              "id": "ABRONIA_AURITA",
+              "name": "Abronia aurita",
+              "rank": "SPECIES",
+              "commonName": "Eared Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From Chiapas, Mexico, and adjacent Guatemala; named for slightly enlarged temporal scale features giving an 'eared' impression. A brown-bodied species of high cloud forest, poorly known from field collections. Threatened by selective logging that removes the large bromeliads it uses for shelter."
+            },
+            {
+              "id": "ABRONIA_ANZUETOI",
+              "name": "Abronia anzuetoi",
+              "rank": "SPECIES",
+              "commonName": "Anzueto's Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from Guatemala; named after Alejandro Anzueto, a Guatemalan naturalist. Restricted to cloud forest remnants where it occupies bromeliads and mossy ledges. Deforestation for coffee cultivation has reduced its habitat significantly.",
+              "namedAfter": "Alejandro Anzueto"
+            },
+            {
+              "id": "ABRONIA_LEUROLEPIS",
+              "name": "Abronia leurolepis",
+              "rank": "SPECIES",
+              "commonName": "Smooth-scaled Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From Veracruz and Puebla, Mexico; distinguished by smoother, less strongly keeled body scales than most congeners. Inhabits mid-elevation cloud forest between 1 200 and 1 800 m. Its range overlaps partly with A. graminea but it occupies slightly lower elevations."
+            },
+            {
+              "id": "ABRONIA_CHISZARI",
+              "name": "Abronia chiszari",
+              "rank": "SPECIES",
+              "commonName": "Chiszar's Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from Guerrero, Mexico; named for the herpetologist David Chiszar. Inhabits tropical dry forest and transition zones at moderate elevations. Among the drier-habitat Abronia, it differs ecologically from the cloud-forest specialists of the genus.",
+              "namedAfter": "David Chiszar"
+            },
+            {
+              "id": "ABRONIA_MARTINDELCAMPOI",
+              "name": "Abronia martindelcampoi",
+              "rank": "SPECIES",
+              "commonName": "Martín del Campo's Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Endemic to the Sierra Juárez of Oaxaca, Mexico; named after the Mexican biologist Rafael Martín del Campo. A small, dark-bodied alligator lizard of high-altitude pine-fir forest. Very few specimens are known and its conservation status is poorly defined.",
+              "namedAfter": "Rafael Martín del Campo"
+            },
+            {
+              "id": "ABRONIA_OCHOTERENAI",
+              "name": "Abronia ochoterenai",
+              "rank": "SPECIES",
+              "commonName": "Ochoterena's Arboreal Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From Veracruz and Hidalgo, Mexico; named after the Mexican biologist Isaac Ochoterena. A mid-elevation cloud-forest specialist known from a modest number of museum specimens. Conservation status uncertain; the cloud forests of eastern Mexico where it occurs are heavily fragmented.",
+              "namedAfter": "Isaac Ochoterena"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_GERRHONOTUS",
+          "name": "Gerrhonotus",
+          "rank": "GENUS",
+          "description": "Alligator lizards of Texas, Mexico, and Central America; larger-bodied than Elgaria with prominent keeled scales and a distinct lateral fold. They inhabit rocky semi-arid terrain, canyon walls, and scrub.",
+          "lineage": "Alligator Lizards",
+          "children": [
+            {
+              "id": "GERRHONOTUS_LIOCEPHALUS",
+              "name": "Gerrhonotus liocephalus",
+              "rank": "SPECIES",
+              "commonName": "Texas Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 7,
+              "description": "The largest North American alligator lizard, reaching 65 cm; ranges from central Texas south through the Mexican Plateau. A keeled, armour-scaled predator of rocky canyons, cedar breaks, and limestone karst. Seven subspecies span its extensive range; the Texas population is now often treated separately."
+            },
+            {
+              "id": "GERRHONOTUS_INFERNALIS",
+              "name": "Gerrhonotus infernalis",
+              "rank": "SPECIES",
+              "commonName": "Big Bend Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Restricted to the Chihuahuan Desert region of Texas and northern Mexico, particularly the Big Bend country. Inhabits rocky hillsides with sparse desert scrub and canyon cliffs. Named for the harsh, infernal heat of its desert habitat; active during cooler morning and evening hours."
+            },
+            {
+              "id": "GERRHONOTUS_OPHIURUS",
+              "name": "Gerrhonotus ophiurus",
+              "rank": "SPECIES",
+              "commonName": "Snake-tailed Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found in the Pacific coastal ranges of Mexico from Sonora to Guerrero; its common name refers to the strikingly long, tapered tail proportional to body length. Inhabits rocky tropical dry forest and thorn scrub. Frequently encountered basking on rocky outcrops in the morning."
+            },
+            {
+              "id": "GERRHONOTUS_PARVUS",
+              "name": "Gerrhonotus parvus",
+              "rank": "SPECIES",
+              "commonName": "Small Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "One of the smaller Gerrhonotus, described from the mountains of central Mexico. Inhabits pine-oak forest and rocky outcrops at elevations above 1 500 m. Relatively few specimens are known, and its precise range and conservation status await further field survey."
+            },
+            {
+              "id": "GERRHONOTUS_LUGOI",
+              "name": "Gerrhonotus lugoi",
+              "rank": "SPECIES",
+              "commonName": "Lugo's Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from Durango and Sinaloa, Mexico; named after the herpetologist A. Lugo. An inhabitant of tropical dry forest and semi-arid scrub on the western slopes of the Sierra Madre Occidental. Distinguished from other Gerrhonotus by scale-count characters and colour pattern.",
+              "namedAfter": "A. Lugo"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_BARISIA",
+          "name": "Barisia",
+          "rank": "GENUS",
+          "description": "Montane alligator lizards of the Mexican highlands; viviparous, keeled-scaled lizards inhabiting pine-oak and fir forests above 1 500 m elevation across the Trans-Mexican Volcanic Belt and Sierra Madre.",
+          "lineage": "Alligator Lizards",
+          "children": [
+            {
+              "id": "BARISIA_IMBRICATA",
+              "name": "Barisia imbricata",
+              "rank": "SPECIES",
+              "commonName": "Mexican Highlands Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 2,
+              "description": "Widespread across the Trans-Mexican Volcanic Belt from Jalisco to Veracruz at elevations of 1 500–3 000 m. Its strongly keeled, overlapping (imbricate) scales give it a robustly armoured appearance. Viviparous; females retain eggs internally and give birth to 3–10 live young."
+            },
+            {
+              "id": "BARISIA_RUDICOLLIS",
+              "name": "Barisia rudicollis",
+              "rank": "SPECIES",
+              "commonName": "Rough-necked Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found in the highlands of central Mexico; distinguished by rough, heavily keeled neck scales giving the species its name. Inhabits humid montane forest and adjacent rocky clearings. Less studied than B. imbricata, with limited published natural-history data."
+            },
+            {
+              "id": "BARISIA_JONESI",
+              "name": "Barisia jonesi",
+              "rank": "SPECIES",
+              "commonName": "Jones's Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From the Sierra Madre del Sur and adjacent ranges in Oaxaca and Guerrero; named after the herpetologist Kenneth Jones. Inhabits cool, moist pine-oak forest at high elevations. Among the less frequently encountered Barisia, known from a relatively small number of specimens.",
+              "namedAfter": "Kenneth Jones"
+            },
+            {
+              "id": "BARISIA_LEVICOLLIS",
+              "name": "Barisia levicollis",
+              "rank": "SPECIES",
+              "commonName": "Smooth-necked Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found on the Pacific slopes and adjacent highlands of Guerrero, Mexico. Distinguished from B. rudicollis by smoother neck scales. Inhabits subtropical montane forest at moderate elevations and is viviparous like other members of the genus."
+            },
+            {
+              "id": "BARISIA_HERRERAE",
+              "name": "Barisia herrerae",
+              "rank": "SPECIES",
+              "commonName": "Herrera's Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Described from Hidalgo and Puebla, Mexico; named after the Mexican naturalist Alfonso Herrera. Found in pine-oak and pine-fir forest between 2 200 and 3 000 m. Recognised as distinct from B. imbricata on the basis of molecular and morphological characters.",
+              "namedAfter": "Alfonso Herrera"
+            }
+          ]
+        },
+        {
+          "id": "GENUS_MESASPIS",
+          "name": "Mesaspis",
+          "rank": "GENUS",
+          "description": "Cloud-forest alligator lizards of Central America and southern Mexico; viviparous, high-altitude specialists inhabiting oak-moss forests from Chiapas to Panama. They are among the highest-ranging lizards in Mesoamerica.",
+          "lineage": "Alligator Lizards",
+          "children": [
+            {
+              "id": "MESASPIS_MORELETII",
+              "name": "Mesaspis moreletii",
+              "rank": "SPECIES",
+              "commonName": "Morelot's Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found from Chiapas to Honduras; one of the most widespread Mesaspis. Named after the French naturalist Arthur Morelet, who explored Central America. Inhabits humid cloud forest and pine-oak forest between 1 500 and 3 000 m elevation.",
+              "namedAfter": "Arthur Morelet"
+            },
+            {
+              "id": "MESASPIS_GADOVII",
+              "name": "Mesaspis gadovii",
+              "rank": "SPECIES",
+              "commonName": "Gadow's Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From the highlands of Oaxaca and Chiapas, Mexico; named after the zoologist Hans Gadow, who studied Mexican reptiles. Inhabits cool, mossy cloud forest at elevations above 2 000 m. Its dark colouration and small size are adaptations to a cool, montane environment.",
+              "namedAfter": "Hans Gadow"
+            },
+            {
+              "id": "MESASPIS_MONTICOLA",
+              "name": "Mesaspis monticola",
+              "rank": "SPECIES",
+              "commonName": "Mountain Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 2,
+              "description": "Distributed from Guatemala to Costa Rica; the most southerly-ranging Mesaspis. Inhabits cool montane forest and páramo-like grasslands above 2 000 m. Viviparous; litters are small (2–5 young), a common trait in high-altitude viviparous lizards."
+            },
+            {
+              "id": "MESASPIS_UNICOLOR",
+              "name": "Mesaspis unicolor",
+              "rank": "SPECIES",
+              "commonName": "Uniform Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "From Chiapas and adjacent Guatemala; distinguished by its relatively plain, unpatterned dorsum compared to other Mesaspis. Found in pine-oak cloud forest between 1 800 and 2 800 m. Little published field data exist on its ecology, though it is presumed viviparous."
+            },
+            {
+              "id": "MESASPIS_VIRIDIFLAVA",
+              "name": "Mesaspis viridiflava",
+              "rank": "SPECIES",
+              "commonName": "Green-flanked Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "Found in the highlands of Chiapas, Mexico; characterised by greenish-yellow lateral flank coloration in adults. Inhabits humid montane forest and rocky clearings. Named for its distinctive flank coloration, it is among the more visually identifiable Mesaspis."
+            }
+          ]
+        },
+        {
+          "id": "GENUS_COLOPTYCHON",
+          "name": "Coloptychon",
+          "rank": "GENUS",
+          "description": "A monotypic genus of large Central American alligator lizard; the largest member of Gerrhonotinae, found in premontane and montane forest from Guatemala to western Panama.",
+          "lineage": "Alligator Lizards",
+          "children": [
+            {
+              "id": "COLOPTYCHON_RHOMBIFER",
+              "name": "Coloptychon rhombifer",
+              "rank": "SPECIES",
+              "commonName": "Ringed Alligator Lizard",
+              "lineage": "Alligator Lizards",
+              "continents": ["North America"],
+              "subspeciesCount": 0,
+              "description": "The largest alligator lizard in Central America, reaching over 60 cm; found from Guatemala to western Panama in humid montane forest. Its dorsum bears a distinctive pattern of dark rhomboid blotches, hence both its scientific and common names. Viviparous; females produce small litters of relatively large offspring."
+            }
+          ]
         }
       ]
     }
