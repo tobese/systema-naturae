@@ -613,6 +613,18 @@
           "name": "Anas zonorhyncha",
           "rank": "SPECIES",
           "lineage": "Dabbling Duck"
+        },
+        {
+          "id": "SP_ANAS_OUSTALETI",
+          "name": "Anas oustaleti",
+          "rank": "SPECIES",
+          "commonName": "Marianas Mallard",
+          "lineage": "Dabbling Duck",
+          "continents": [
+            "OC"
+          ],
+          "description": "An extinct mallard-type duck endemic to the Mariana Islands of the western Pacific, believed to have arisen from hybridisation between the Mallard and the Pacific Black Duck. It inhabited lowland wetlands and rice paddies and was last recorded in 1979 on Saipan; it is now considered extinct, driven to extinction by overhunting and wholesale habitat loss from military and agricultural development.",
+          "subspeciesCount": 0
         }
       ]
     },
@@ -1276,6 +1288,27 @@
       ]
     },
     {
+      "id": "GEN_CAMPTORHYNCHUS",
+      "name": "Camptorhynchus",
+      "rank": "GENUS",
+      "description": "An extinct monotypic genus containing the Labrador Duck, a sea duck that inhabited the Atlantic coast of North America and became the first North American bird species confirmed extinct in the modern era.",
+      "lineage": "Sea Duck",
+      "children": [
+        {
+          "id": "SP_CAMPTORHYNCHUS_LABRADORIUS",
+          "name": "Camptorhynchus labradorius",
+          "rank": "SPECIES",
+          "commonName": "Labrador Duck",
+          "lineage": "Sea Duck",
+          "continents": [
+            "NA"
+          ],
+          "description": "The Labrador Duck was a medium-sized sea duck of the Atlantic coast of North America, breeding in Labrador and wintering on sandy bays and estuaries from Nova Scotia to Chesapeake Bay, where it used its broad, flattened bill to filter molluscs and crustaceans from the shallows. It was never common and its decline was swift; the last confirmed individual was shot in 1875 off Long Island, New York. The causes of its extinction remain incompletely understood but likely include hunting and possibly low population densities even before European contact.",
+          "subspeciesCount": 0
+        }
+      ]
+    },
+    {
       "id": "3FNY",
       "name": "Callonetta",
       "rank": "GENUS",
@@ -1707,7 +1740,7 @@
       "id": "9HGXM",
       "name": "Mareca",
       "rank": "GENUS",
-      "description": "A genus of 5 dabbling ducks known as wigeons and the Falcated Duck, found across the Holarctic and South America, characterised by rounded heads, short bills, and a preference for grazing on short grass and aquatic vegetation.",
+      "description": "A genus of 6 dabbling ducks (including 1 extinct species) known as wigeons and the Falcated Duck, found across the Holarctic and South America, characterised by rounded heads, short bills, and a preference for grazing on short grass and aquatic vegetation.",
       "lineage": "Dabbling Duck",
       "children": [
         {
@@ -1748,6 +1781,19 @@
               "lineage": "Dabbling Duck"
             }
           ]
+        },
+        {
+          "id": "SP_MARECA_COUESI",
+          "name": "Mareca couesi",
+          "rank": "SPECIES",
+          "commonName": "Coues's Gadwall",
+          "lineage": "Dabbling Duck",
+          "continents": [
+            "OC"
+          ],
+          "description": "An extinct island gadwall endemic to Fanning Atoll (now Tabuaeran) in the central Pacific Ocean, known from a small number of specimens collected by the USS Tanager expedition in the 1870s. Closely related to the Gadwall, it represented a distinct island form that succumbed to hunting pressure and predation by introduced animals. Named after American army surgeon and naturalist Elliott Coues.",
+          "subspeciesCount": 0,
+          "namedAfter": "Elliott Coues"
         }
       ]
     },
@@ -1869,7 +1915,7 @@
       "id": "5P8Q",
       "name": "Mergus",
       "rank": "GENUS",
-      "description": "A genus of 4 large mergansers — including the Common Merganser and Red-breasted Merganser — found across the Holarctic, characterised by serrated bills for gripping fish and a long, streamlined body for underwater pursuit.",
+      "description": "A genus of 5 mergansers (including 1 extinct species) — including the Common Merganser and Red-breasted Merganser — found across the Holarctic, characterised by serrated bills for gripping fish and a long, streamlined body for underwater pursuit.",
       "lineage": "Merganser",
       "children": [
         {
@@ -1929,6 +1975,18 @@
           "rank": "SPECIES",
           "commonName": "Scaly-sided Merganser",
           "lineage": "Merganser"
+        },
+        {
+          "id": "SP_MERGUS_AUSTRALIS",
+          "name": "Mergus australis",
+          "rank": "SPECIES",
+          "commonName": "Auckland Islands Merganser",
+          "lineage": "Merganser",
+          "continents": [
+            "OC"
+          ],
+          "description": "An extinct merganser that was endemic to the Auckland Islands, a remote subantarctic archipelago south of New Zealand, where it inhabited freshwater streams and coastal shores. Essentially flightless, it fed on fish, crustaceans, and invertebrates using its serrated bill. Last recorded alive in 1902, it was exterminated by hunting from visiting sealers and whalers combined with predation by introduced pigs, cats, and rats.",
+          "subspeciesCount": 0
         }
       ]
     },
@@ -2193,6 +2251,27 @@
               "lineage": "Shelduck"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "GEN_RHODONESSA",
+      "name": "Rhodonessa",
+      "rank": "GENUS",
+      "description": "An extinct monotypic genus containing the Pink-headed Duck, a strikingly coloured diving duck of South Asian swamplands, last recorded in the wild in 1935 and now feared extinct.",
+      "lineage": "Teal/Other",
+      "children": [
+        {
+          "id": "SP_RHODONESSA_CARYOPHYLLACEA",
+          "name": "Rhodonessa caryophyllacea",
+          "rank": "SPECIES",
+          "commonName": "Pink-headed Duck",
+          "lineage": "Teal/Other",
+          "continents": [
+            "AS"
+          ],
+          "description": "The Pink-headed Duck was a large, distinctive diving duck of the tall-grass swamps, marshes, and pools of the Gangetic plains in India, Nepal, and Bangladesh, unmistakable for the male's deep rose-pink head and neck contrasting with dark brown body plumage. Once locally common, it was heavily hunted for sport and its populations collapsed through the 19th and early 20th centuries; the last reliable wild sightings were from Bihar, India in 1935, though unverified reports from Myanmar have periodically surfaced. It is regarded as critically endangered or extinct by the IUCN.",
+          "subspeciesCount": 0
         }
       ]
     },
@@ -2504,7 +2583,7 @@
       "id": "645G2",
       "name": "Tadorna",
       "rank": "GENUS",
-      "description": "A genus of 5 shelducks — large, goose-like ducks with striking patterned plumage — found from Western Europe to East Asia and Australia, often nesting in burrows and grazing on invertebrates along coasts and estuaries.",
+      "description": "A genus of 6 shelducks (including 1 probably extinct species) — large, goose-like ducks with striking patterned plumage — found from Western Europe to East Asia and Australia, often nesting in burrows and grazing on invertebrates along coasts and estuaries.",
       "lineage": "Shelduck",
       "children": [
         {
@@ -2538,6 +2617,18 @@
           "name": "Tadorna variegata",
           "rank": "SPECIES",
           "lineage": "Shelduck"
+        },
+        {
+          "id": "SP_TADORNA_CRISTATA",
+          "name": "Tadorna cristata",
+          "rank": "SPECIES",
+          "commonName": "Crested Shelduck",
+          "lineage": "Shelduck",
+          "continents": [
+            "AS"
+          ],
+          "description": "A critically endangered and probably extinct shelduck known from only a handful of specimens from Korea, Japan, and China collected between 1877 and 1916, plus a disputed sighting in the Russian Far East in 1964. The male is distinctive with a dark-green crested head, chestnut breast-band, and black-and-white body. Its breeding grounds were never reliably located, and it is believed to have been eliminated by hunting and the loss of coastal wetlands across East Asia.",
+          "subspeciesCount": 0
         }
       ]
     },
