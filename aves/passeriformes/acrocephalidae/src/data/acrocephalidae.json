@@ -8,7 +8,7 @@
       "id": "GENUS_ACROCEPHALUS",
       "name": "Acrocephalus",
       "rank": "GENUS",
-      "description": "Reed warblers — quintessential summer birds of Swedish reedbeds, combining remarkable vocal complexity with cryptic brown plumage and elusive habits that make them far more often heard than seen. The family name derives from Greek for 'pointed head', reflecting the flattened crown that gives these birds a characteristic profile as they slip through reed stems. The reed warbler's low, churring, repetitive song — mixing its own phrases with imitations of neighbouring species — emerges continuously from dense reedbeds all summer. The great reed warbler (trastsångare) is the largest European warbler and its powerful, frog-like song can drown out virtually everything else at a large Swedish reedbed. The marsh warbler is perhaps the most extraordinary of all: overwintering in Africa, it learns to mimic the calls of dozens of African species, incorporating over 200 different bird sounds into its astonishing vocal performance.",
+      "description": "Reed warblers — quintessential summer birds of reedbeds and marshy scrub across the Old World, combining remarkable vocal complexity with cryptic brown plumage and elusive habits that make them far more often heard than seen. The family name derives from Greek for 'pointed head', reflecting the flattened crown that gives these birds a characteristic profile as they slip through reed stems. The genus spans from Eurasian breeding species that winter in Africa to island endemics of the Pacific, Mascarene islands, and Indian Ocean.",
       "lineage": "Reed Warblers",
       "children": [
         {
@@ -40,25 +40,339 @@
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 0,
           "description": "The kärrsångare — one of the world's most accomplished vocal mimics, incorporating the songs and calls of over 200 species into its continuous, churring performance — the majority of which are African birds learned on its wintering grounds in eastern Africa. Ornithologists can trace a marsh warbler's winter range by listening to which African species it has learned to imitate. Breeds in tall herbaceous vegetation — nettles, willowherb, meadowsweet — rather than reedbeds. Arrives very late in Sweden (late May to June) and is one of the last warblers to depart in August."
-        }
-      ]
-    },
-    {
-      "id": "GENUS_LOCUSTELLA",
-      "name": "Locustella",
-      "rank": "GENUS",
-      "description": "Grasshopper warblers — skulking, mouse-like warblers defined by their extraordinary insect-like reeling songs that are produced by a specialised syrinx capable of generating a continuous, high-pitched trill at over 40 notes per second. The song of the grasshopper warbler (gräshoppsångare) is so convincingly insect-like that many people walk past singing males believing they are hearing a cricket or grasshopper. The birds themselves are almost never seen, creeping through dense low vegetation with their tail cocked and head low. They can rotate their head while singing, causing the volume to wax and wane as if the sound is moving. The grasshopper warbler is a declining breeding species in Sweden, affected by loss of overgrown young plantation, scrubby marshland edges, and other transitional habitats.",
-      "lineage": "Grasshopper Warblers",
-      "children": [
+        },
         {
-          "id": "LOCUSTELLA_NAEVIA",
-          "name": "Locustella naevia",
+          "id": "ACROCEPHALUS_MELANOPOGON",
+          "name": "Acrocephalus melanopogon",
           "rank": "SPECIES",
-          "commonName": "Common Grasshopper Warbler",
-          "lineage": "Grasshopper Warblers",
+          "commonName": "Moustached Warbler",
+          "lineage": "Reed Warblers",
           "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 3,
+          "description": "A small, richly marked reedbed warbler of Mediterranean and Central Asian wetlands, distinguished from similar species by its bold whitish supercilium, dark cap, and rustier flanks. Unlike many congeners it can remain year-round in mild wetlands rather than undertaking long migrations. Its song is a rich, melodious sequence resembling a nightingale, beginning with characteristic repeated 'loo' notes — a striking contrast to the churring songs of most reed warblers."
+        },
+        {
+          "id": "ACROCEPHALUS_SCHOENOBAENUS",
+          "name": "Acrocephalus schoenobaenus",
+          "rank": "SPECIES",
+          "commonName": "Sedge Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "A boldly streaked warbler with a prominent pale supercilium that colonises a broader range of wetland and rank vegetation than most reed warblers, including sedge beds, nettle patches, and riverside scrub. Males perform a distinctive song-flight, rising steeply then parachuting down while delivering a rapid, scratchy, highly variable song incorporating extensive mimicry. Before migrating to sub-Saharan Africa, individuals build up extraordinary fat reserves — effectively doubling their body weight — to power a non-stop trans-Saharan flight."
+        },
+        {
+          "id": "ACROCEPHALUS_STREAKED",
+          "name": "Acrocephalus sorghophilus",
+          "rank": "SPECIES",
+          "commonName": "Streaked Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A critically endangered reed warbler endemic to a small breeding area in reeds along the Songhua River in northeastern China, with wintering grounds thought to be in the Philippines. Heavily streaked above with a bold supercilium, it is threatened by drainage of wetlands and reed-cutting. Very few modern records exist and it remains one of Asia's least-known passerines, known from only scattered specimens and brief sight records."
+        },
+        {
+          "id": "ACROCEPHALUS_BISTRIGICEPS",
+          "name": "Acrocephalus bistrigiceps",
+          "rank": "SPECIES",
+          "commonName": "Black-browed Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "An East Asian reed warbler of reeds and tall grass in lowland wetlands from eastern Russia through China, Korea and Japan, wintering in Southeast Asia. It is distinguished by two conspicuous dark lateral crown stripes flanking a pale central crown stripe, giving a strongly patterned head. Its scratchy, repetitive song resembles that of other Acrocephalus but with characteristic introductory phrases; it is also a frequent Cuculus cuckoo host in parts of its range."
+        },
+        {
+          "id": "ACROCEPHALUS_TANGORUM",
+          "name": "Acrocephalus tangorum",
+          "rank": "SPECIES",
+          "commonName": "Manchurian Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A vulnerable reed warbler with a restricted breeding range in northeastern China and adjacent Russia, using reed beds in river valleys and lake margins. Long considered a race of other streaked Acrocephalus, it was elevated to full species status based on vocal and morphological differences. Its wintering grounds in Southeast Asia remain poorly documented, and little is known of its ecology relative to sympatric congeners."
+        },
+        {
+          "id": "ACROCEPHALUS_DUMETORUM",
+          "name": "Acrocephalus dumetorum",
+          "rank": "SPECIES",
+          "commonName": "Blyth's Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 0,
+          "namedAfter": "Edward Blyth",
+          "description": "Named for the British zoologist Edward Blyth, this unstreaked reed warbler breeds in scrubby willow and alder thickets across a broad band from Finland and the Baltic states east through Siberia to the Himalayas, wintering in the Indian subcontinent. Its song is a measured, deliberate repetition of each phrase two or three times — distinctly slower and less churring than its congeners — and it is a frequent vagrant to western Europe, particularly in autumn. It habitually flicks its wings and cocks its tail, useful fieldcraft clues distinguishing it from the similar marsh warbler."
+        },
+        {
+          "id": "ACROCEPHALUS_CONCINENS",
+          "name": "Acrocephalus concinens",
+          "rank": "SPECIES",
+          "commonName": "Blunt-winged Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "A compact, rounded-winged reed warbler of grassy and reedy marshes at the foot of the Himalayas, distributed from Pakistan and northern India east through Nepal, Bhutan, and into southern China. Its rounded wing tips — which give it its name — reflect a less migratory lifestyle compared to the pointed wings of long-distance migrants in the genus. Nests in low reed clumps and tall grass, often near cultivation, and is frequently overlooked among similar species."
+        },
+        {
+          "id": "ACROCEPHALUS_ORIENTALIS",
+          "name": "Acrocephalus orientalis",
+          "rank": "SPECIES",
+          "commonName": "Oriental Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "The eastern counterpart of the great reed warbler, rivalling it in size and sharing its powerful, frog-like song. Breeds in extensive reed beds from eastern Russia, China, Korea and Japan south to Southeast Asia, migrating to Southeast Asia and Australia for the southern winter. A regular vagrant to Europe, mostly in autumn. Like its western relative it is a polygynous species in which large males with long songs attract multiple females to their reedbed territories."
+        },
+        {
+          "id": "ACROCEPHALUS_STENTOREUS",
+          "name": "Acrocephalus stentoreus",
+          "rank": "SPECIES",
+          "commonName": "Clamorous Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia", "Africa", "Oceania"],
+          "subspeciesCount": 8,
+          "description": "A large, loud reed warbler with one of the broadest distributions in the genus, ranging from Egypt and the Middle East across South and Southeast Asia to Australia and the Pacific islands. Its name references the stentorian — thunderously loud — quality of its song, a coarse churring easily carrying across large reedbeds. The species complex contains considerable morphological variation across its range, and several island populations have been or are candidates for species separation. Resident or partially migratory depending on latitude."
+        },
+        {
+          "id": "ACROCEPHALUS_GRACILIROSTRIS",
+          "name": "Acrocephalus gracilirostris",
+          "rank": "SPECIES",
+          "commonName": "Lesser Swamp Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 7,
+          "description": "Africa's most widespread reed warbler, occupying papyrus swamps, reedbeds, and tall sedge beds from Ethiopia south to South Africa. The specific epithet refers to its slender bill. It is a resident species with a rich, bubbling song, and shows considerable subspecific variation across its extensive range, with some populations in highland East Africa treated as distinct by some authorities. An important host for Clamator and Cuculus cuckoos in many parts of Africa."
+        },
+        {
+          "id": "ACROCEPHALUS_BAETICATUS",
+          "name": "Acrocephalus baeticatus",
+          "rank": "SPECIES",
+          "commonName": "African Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 5,
+          "description": "A small, brown, unstreaked reed warbler closely resembling the Eurasian reed warbler and long treated as conspecific with it. Breeds across sub-Saharan Africa wherever suitable reedbed and tall grassland occur, and is largely resident or undertakes short intra-African migrations. Its song is a typical Acrocephalus churring but slightly faster and higher-pitched than its Eurasian relative. Hosts Cuculus cuckoos throughout much of its range."
+        },
+        {
+          "id": "ACROCEPHALUS_RUFESCENS",
+          "name": "Acrocephalus rufescens",
+          "rank": "SPECIES",
+          "commonName": "Greater Swamp Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Africa"],
           "subspeciesCount": 4,
-          "description": "The gräshoppsångare — one of Sweden's most cryptic and elusive summer visitors. Its reeling, insect-like song — a continuous 'srrrrrrrr' lasting minutes without pause — is produced mainly at dawn and dusk and sounds indistinguishable from a bush cricket to the uninitiated. Streaked brown above with a spotted breast; creeps through low dense vegetation like a mouse and virtually never flies unless flushed. Breeds in overgrown young forestry, marsh edges, and tall coastal heathland in southern and central Sweden. Arrives in May; sings through June before becoming largely silent and invisible."
+          "description": "A large, dark reed warbler specialising in papyrus swamps, one of Africa's most characteristic papyrus-zone birds. It occupies dense papyrus from Senegal east through the Congo basin to Kenya and Tanzania, and is notably reluctant to cross even short open-water gaps — a habit that promotes population isolation across the swamp archipelago of central Africa. Its loud, churring song rises above the papyrus rustling and is one of the defining sounds of lowland African swamp systems."
+        },
+        {
+          "id": "ACROCEPHALUS_AGRICOLA",
+          "name": "Acrocephalus agricola",
+          "rank": "SPECIES",
+          "commonName": "Paddyfield Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 3,
+          "description": "A small unstreaked reed warbler with a prominent supercilium that breeds in reedy wetlands from southeastern Europe east through Kazakhstan and Central Asia to Pakistan, wintering in the Indian subcontinent. Frequents rice fields, tall grass, and reedy ditches, and its name reflects its association with paddyfields in South Asia. Closely resembles the Blyth's reed warbler but has a shorter primary projection and a more prominent supercilium; it is a scarce but annual vagrant to western Europe."
+        },
+        {
+          "id": "ACROCEPHALUS_PALUDICOLA",
+          "name": "Acrocephalus paludicola",
+          "rank": "SPECIES",
+          "commonName": "Aquatic Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Europe", "Africa"],
+          "subspeciesCount": 0,
+          "description": "Europe's most threatened migrant passerine, this boldly streaked warbler of sedge-dominated fens has declined catastrophically through the drainage of its lowland European breeding marshes. It breeds only in a handful of sites in Poland, Belarus, Ukraine and a few other countries, and winters in West African coastal wetlands. Unusually for a passerine, males take no part in nest building or chick-rearing and instead compete polygynously; females alone raise the young. It is the target of intensive conservation efforts across its entire range."
+        },
+        {
+          "id": "ACROCEPHALUS_SCIRPACEUS_FUSCUS",
+          "name": "Acrocephalus scirpaceus fuscus",
+          "rank": "SPECIES",
+          "commonName": "Caspian Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "Sometimes treated as a full species, this eastern form of the Eurasian reed warbler breeds around the Caspian Sea and in Central Asia east to Afghanistan, and is slightly smaller and greyer than the nominate western population. Recent genetic work supports treating it as a separate species, Acrocephalus fuscus, though this treatment remains contested. It winters in East Africa and differs subtly in vocalisation and morphology from western scirpaceus."
+        },
+        {
+          "id": "ACROCEPHALUS_AUSTRALIS",
+          "name": "Acrocephalus australis",
+          "rank": "SPECIES",
+          "commonName": "Australian Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 3,
+          "description": "Australia's ubiquitous reedbed warbler, occupying fresh and brackish reed beds, tall sedge, and paperbark swamps across most of the continent and extending to New Guinea. A rich, repetitive 'quarty-quarty-quarty' or 'diddle-diddle-diddle' song is one of the characteristic sounds of Australian wetlands from October to March. It is partially migratory in the south and largely resident in the north. Long treated as a form of the oriental reed warbler, it is now regarded as a full species."
+        },
+        {
+          "id": "ACROCEPHALUS_VAUGHANI",
+          "name": "Acrocephalus vaughani",
+          "rank": "SPECIES",
+          "commonName": "Pitcairn Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "namedAfter": "Robert Vaughan",
+          "description": "An endangered island reed warbler endemic to Pitcairn Island in the South Pacific, one of the most remote inhabited islands on Earth. Named for Robert Vaughan, a naturalist associated with early Pacific collecting expeditions. The population is small, the island's forest is limited, and it faces threats from invasive cats, rats and habitat degradation. It belongs to a group of Pacific island Acrocephalus that colonised remote islands from Asian ancestors and often evolved into ground-foraging generalists."
+        },
+        {
+          "id": "ACROCEPHALUS_AEQUINOCTIALIS",
+          "name": "Acrocephalus aequinoctialis",
+          "rank": "SPECIES",
+          "commonName": "Bokikokiko",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 2,
+          "description": "The aptly named Bokikokiko — named for its call in Kiribati — is a reed warbler endemic to the central Pacific, breeding on several atolls of Kiribati including Christmas Island (Kiritimati). Unlike most reed warblers it occupies low scrub and coconut groves rather than reedbeds, reflecting the scarcity of wetland vegetation on coral atolls. It is one of many Acrocephalus that colonised Pacific islands and became locally adapted; its population on Kiritimati is estimated in the tens of thousands."
+        },
+        {
+          "id": "ACROCEPHALUS_CAFFER",
+          "name": "Acrocephalus caffer",
+          "rank": "SPECIES",
+          "commonName": "Tuamotu Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "A reed warbler endemic to the Tuamotu Archipelago of French Polynesia, where it inhabits scrub and dense vegetation on coral atolls. Like other Pacific island Acrocephalus, it has shifted away from obligate reedbed habitat to exploit the dominant low scrub vegetation of its atoll home. The species was long confused with related island forms but is now recognised as distinct. It faces predation pressure from introduced rats and habitat loss from coconut monocultures."
+        },
+        {
+          "id": "ACROCEPHALUS_FAMILIARIS",
+          "name": "Acrocephalus familiaris",
+          "rank": "SPECIES",
+          "commonName": "Millerbird",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 1,
+          "description": "A critically endangered Pacific reed warbler, the subspecies on Nihoa in the Hawaiian Northwest Islands is one of the rarest birds in the US, with a population of only a few hundred individuals on a tiny rugged islet. Its common name reflects its historical habit of gleaning insects from the undersides of 'millers' (certain moths). A translocation programme successfully established a second population on Laysan Island. Ground-foraging and inquisitive, it shows little fear of humans, a trait common to island birds that evolved without mammalian predators."
+        },
+        {
+          "id": "ACROCEPHALUS_REHSEI",
+          "name": "Acrocephalus rehsei",
+          "rank": "SPECIES",
+          "commonName": "Nauru Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "Endemic to the tiny island of Nauru in the central Pacific, this reed warbler lives in the remaining scrub, pandanus thickets and degraded forest on an island ravaged by phosphate mining. Though the island has lost most of its natural vegetation, the warbler persists in secondary scrub and gardens. It is one of the few bird species endemic to Nauru and is considered near-threatened. Little studied, its ecology and behaviour remain largely undescribed in modern literature."
+        },
+        {
+          "id": "ACROCEPHALUS_LUSCINIUS",
+          "name": "Acrocephalus luscinius",
+          "rank": "SPECIES",
+          "commonName": "Nightingale Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "One of several large Pacific island reed warblers, the nightingale reed warbler was formerly widespread on the Mariana Islands and Guam but is now extinct on Guam due to predation by the introduced brown tree snake. Surviving populations on Saipan and other northern Mariana islands face similar risks. These large, ground-foraging island warblers fill ecological niches occupied by thrushes on other island groups and were prominent in the native forest soundscape of Micronesia."
+        },
+        {
+          "id": "ACROCEPHALUS_SYRINX",
+          "name": "Acrocephalus syrinx",
+          "rank": "SPECIES",
+          "commonName": "Caroline Islands Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 3,
+          "description": "A reed warbler distributed across the Caroline Islands of Micronesia, inhabiting a variety of habitats from mangroves and coastal scrub to interior forest. Three subspecies are recognised across the archipelago, with some showing considerable size variation. Like other Micronesian island Acrocephalus it has radiated away from wetland dependence and forages actively through scrub and low forest. Its range across scattered atolls and high islands makes monitoring challenging."
+        },
+        {
+          "id": "ACROCEPHALUS_MENDANAE",
+          "name": "Acrocephalus mendanae",
+          "rank": "SPECIES",
+          "commonName": "Marquesas Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 4,
+          "description": "An endemic reed warbler of the Marquesas Islands of French Polynesia, one of the more species-rich island Acrocephalus complexes in the Pacific. Four subspecies occupy different islands in the archipelago, varying in size and bill length in a manner consistent with ecological character displacement. The Marquesas islands lack resident predatory mammals (beyond rats) and the warbler is a prominent insectivore in the native forest. Several island forms may merit full species status under a stricter phylogenetic species concept."
+        },
+        {
+          "id": "ACROCEPHALUS_KEREARAKO",
+          "name": "Acrocephalus kerearako",
+          "rank": "SPECIES",
+          "commonName": "Cook Islands Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 2,
+          "description": "Endemic to Mitiaro and Mauke in the Cook Islands, this small Pacific reed warbler inhabits makatea — raised coral limestone scrub — as well as gardens and secondary bush. Like most Pacific island reed warblers it feeds on insects gleaned from vegetation and is largely sedentary. Its song is a pleasant, varied warbling quite unlike the churring of its Eurasian relatives. Rat predation is considered its primary threat alongside habitat fragmentation on the small islands it occupies."
+        },
+        {
+          "id": "ACROCEPHALUS_TAITI",
+          "name": "Acrocephalus taiti",
+          "rank": "SPECIES",
+          "commonName": "Henderson Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "An endemic warbler of Henderson Island, an uninhabited raised coral atoll in the Pitcairn group and a UNESCO World Heritage Site. Henderson Island's isolation has preserved one of the world's most pristine raised coral island ecosystems, and the Henderson reed warbler is a prominent member of that ecosystem, foraging actively through dense Pisonia and pandanus scrub. Its population is threatened by introduced Polynesian rats, and periodic bleaching events affecting the island's vegetation. Named from the island itself, not a person."
+        },
+        {
+          "id": "ACROCEPHALUS_RIMATARAE",
+          "name": "Acrocephalus rimatarae",
+          "rank": "SPECIES",
+          "commonName": "Rimatara Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "A small reed warbler endemic to Rimatara in the Austral Islands of French Polynesia, and also successfully translocated to Atiu in the Cook Islands as part of a conservation programme. Rimatara is rat-free, which may explain why this species has maintained a healthy population while related forms on rat-infested islands have declined. Its translocation to Atiu in 2007 created a second population and was one of the early success stories of Pacific island warbler conservation."
+        },
+        {
+          "id": "ACROCEPHALUS_LUSCINIA",
+          "name": "Acrocephalus luscinia",
+          "rank": "SPECIES",
+          "commonName": "Guam Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "Extinct since the 1970s–1980s due to predation by the introduced brown tree snake on Guam, this large reed warbler was one of several Micronesian endemics eliminated by the catastrophic ecological impact of Boiga irregularis on Guam's forest birds. Museum specimens document a large, heavily built warbler that likely foraged on or near the ground in Guam's native limestone forest. Its extinction represents one of the most well-documented cases of biological invasion causing endemic bird loss."
+        },
+        {
+          "id": "ACROCEPHALUS_GRISELDIS",
+          "name": "Acrocephalus griseldis",
+          "rank": "SPECIES",
+          "commonName": "Basra Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "An endangered reed warbler that breeds in the extensive reed beds and marsh vegetation of the lower Tigris-Euphrates delta in Iraq and southwestern Iran, one of the world's most biodiverse wetland systems. It winters in East Africa, particularly in coastal Kenya and Tanzania. The draining of the Mesopotamian marshes under Saddam Hussein in the 1990s devastated its core breeding habitat; partial marsh restoration since 2003 has allowed some recovery but the population remains small and vulnerable. It is one of the world's least-known long-distance migrants."
+        },
+        {
+          "id": "ACROCEPHALUS_CINNAMOMEUS",
+          "name": "Acrocephalus cinnamomeus",
+          "rank": "SPECIES",
+          "commonName": "Cinnamon Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A small, warm cinnamon-brown reed warbler of East African papyrus swamps and tall reed beds, occurring from Uganda and Kenya south to Tanzania. Its rich tawny-cinnamon colouration above distinguishes it from the greyer African reed warbler in the same reedbeds. Resident and largely sedentary in papyrus-fringed lake margins and swamp edges, it sings a rapid, churring song from within the vegetation. Often treated as a subspecies of the African reed warbler but recognised as a full species based on vocal and morphological differences."
+        },
+        {
+          "id": "ACROCEPHALUS_NEWTONI",
+          "name": "Acrocephalus newtoni",
+          "rank": "SPECIES",
+          "commonName": "Madagascar Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "namedAfter": "Alfred Newton",
+          "description": "Named for the Cambridge ornithologist Alfred Newton, this is Madagascar's own reed warbler, occupying reed beds, freshwater marshes, and tall aquatic vegetation around highland lakes and lowland wetlands throughout the island. It is the only true reedbed Acrocephalus on Madagascar, occupying an ecological niche similar to that of the Eurasian reed warbler in European reedbeds. Resident and common wherever suitable wetland vegetation occurs, its churring song echoes from Malagasy reedbeds year-round."
+        },
+        {
+          "id": "ACROCEPHALUS_LONGIROSTRIS",
+          "name": "Acrocephalus longirostris",
+          "rank": "SPECIES",
+          "commonName": "Long-billed Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A critically endangered reed warbler known only from two museum specimens — one collected in 1867 in Cambodia and one reidentified from a misidentified specimen from Afghanistan — and a single bird trapped on a Thai island in 2006. This remarkable rediscovery confirmed the species was not extinct, but its breeding grounds remain completely unknown, making it one of the world's most mysterious birds. Its unusually long bill distinguishes it from all other Acrocephalus. Active searches across Southeast Asia have so far failed to locate a population."
+        },
+        {
+          "id": "ACROCEPHALUS_IMMACULA",
+          "name": "Acrocephalus immacula",
+          "rank": "SPECIES",
+          "commonName": "Rodrigues Reed Warbler",
+          "lineage": "Reed Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A small, plain reed warbler endemic to Rodrigues Island in the Mascarenes, now extinct, known only from sub-fossil bones and historical accounts. It likely occupied reed beds and scrub along the island's watercourses before habitat destruction and introduced predators (particularly rats and cats) drove it to extinction, probably in the late nineteenth or early twentieth century. Its bones were described in conjunction with the many other Rodrigues extinction-era fauna; it may have survived long enough to be observed by early settlers but was never formally collected."
         }
       ]
     },
@@ -66,7 +380,7 @@
       "id": "GENUS_HIPPOLAIS",
       "name": "Hippolais",
       "rank": "GENUS",
-      "description": "Hippolais warblers — medium-sized, active warblers of scrub and garden habitats with loud, complex songs that include mimicry of other species. The icterine warbler (härmsångare) is the most familiar member of the genus in Sweden: a yellow-green bird with a distinctively angular, peaked crown that breeds in parks, gardens, and mixed woodland edge throughout the country. Its song is a rich, tumbling medley of musical phrases, harsh notes, and imitated sounds delivered with great energy from prominent perches — one of the most complex and attractive warbler songs in Sweden. The Swedish name härmsångare ('mimic singer') perfectly captures the bird's talent for weaving snatches of other species' songs into its own performance. It is a short-distance migrant arriving late in May and departing early in August.",
+      "description": "Hippolais warblers — medium-sized, active warblers of scrub and garden habitats with loud, complex songs that include mimicry of other species. The icterine warbler (härmsångare) is the most familiar member of the genus in Sweden: a yellow-green bird with a distinctively angular, peaked crown that breeds in parks, gardens, and mixed woodland edge throughout the country. Its song is a rich, tumbling medley of musical phrases, harsh notes, and imitated sounds delivered with great energy from prominent perches — one of the most complex and attractive warbler songs in Sweden. The Swedish name härmsångare ('mimic singer') perfectly captures the bird's talent for weaving snatches of other species' songs into its own performance.",
       "lineage": "Hippolais Warblers",
       "children": [
         {
@@ -78,6 +392,370 @@
           "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 0,
           "description": "The härmsångare — a striking yellow-green warbler with a peaked crown and large bill, one of the most musically accomplished summer visitors to Swedish gardens and parks. Its loud, chaotic song mixes melodious phrases with harsh rattles and skilled imitations of other species — from spotted flycatcher to chaffinch — in a continuous, bubbling performance. Breeds widely in Sweden from Skåne to central Norrland in open woodland, parks, and shrubby gardens. Closely related to the melodious warbler, which replaces it in southwestern Europe and occasionally wanders to Scandinavia."
+        },
+        {
+          "id": "HIPPOLAIS_POLYGLOTTA",
+          "name": "Hippolais polyglotta",
+          "rank": "SPECIES",
+          "commonName": "Melodious Warbler",
+          "lineage": "Hippolais Warblers",
+          "continents": ["Europe", "Africa"],
+          "subspeciesCount": 0,
+          "description": "The western counterpart of the icterine warbler, replacing it in southwestern Europe from Iberia to southern France and Italy, and wintering in West Africa. The two species are so similar in appearance and ecology that their contact zone in central France and Germany was long debated; they occasionally hybridise there. The melodious warbler's song is a rich, rapid, liquid warbling, slightly softer and more musical than the harsher icterine. Its breeding habitat spans scrubby riverside vegetation, hedgerows, and overgrown vineyards."
+        },
+        {
+          "id": "HIPPOLAIS_OLIVETORUM",
+          "name": "Hippolais olivetorum",
+          "rank": "SPECIES",
+          "commonName": "Olive-tree Warbler",
+          "lineage": "Hippolais Warblers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "The largest member of the genus and one of the largest Old World warblers, a grey-brown, heavy-billed bird that breeds in Mediterranean olive groves, scrubby hillsides, and dry open woodland from Greece and Turkey east to the Levant. Its deep, resonant, grating song carries far on a hot afternoon and is unlike any other European warbler. It winters in East Africa, making a long migration across the Sahara, and is only occasionally recorded west of its core Balkan and Middle Eastern range."
+        },
+        {
+          "id": "HIPPOLAIS_PALLIDA",
+          "name": "Hippolais pallida",
+          "rank": "SPECIES",
+          "commonName": "Eastern Olivaceous Warbler",
+          "lineage": "Hippolais Warblers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 3,
+          "description": "A plain, grey-brown warbler of dry scrub, tamarisk, gardens, and riverside vegetation from southeastern Europe through the Middle East to Central Asia, wintering in East Africa. It was long combined with the western olivaceous warbler but is now treated as a separate species, differing in morphology, song, and migratory direction. Its song is a fast, dry, repetitive chatter delivered from dense cover; it constantly dips and pumps its tail — a useful identification feature when the bird itself is partially obscured."
+        },
+        {
+          "id": "HIPPOLAIS_OPACA",
+          "name": "Hippolais opaca",
+          "rank": "SPECIES",
+          "commonName": "Western Olivaceous Warbler",
+          "lineage": "Hippolais Warblers",
+          "continents": ["Europe", "Africa"],
+          "subspeciesCount": 0,
+          "description": "A plain, pale warbler of dry Mediterranean scrubland, olive groves, and semi-arid hillsides breeding in Iberia, northwestern Africa, and parts of the Canary Islands, wintering in the Sahel zone of West Africa. For many years lumped with the eastern olivaceous warbler, it is now considered a separate species based on differences in song, structure, and migration route. Like its eastern relative it constantly dips its tail, a habit that helps separate these birds from unrelated plain warblers in the field."
+        },
+        {
+          "id": "HIPPOLAIS_LANGUIDA",
+          "name": "Hippolais languida",
+          "rank": "SPECIES",
+          "commonName": "Upcher's Warbler",
+          "lineage": "Hippolais Warblers",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 0,
+          "namedAfter": "Henry Morris Upcher",
+          "description": "Named for Henry Morris Upcher, an English naturalist who collected in the Middle East in the 1880s, this grey-brown warbler breeds in dry rocky hillsides, semi-desert wadis, and rocky scrub from Turkey and the Levant east to Iran and Central Asia. Its most distinctive habit is an exaggerated tail-wagging and pumping action, far more pronounced than in related species. It winters in East Africa, and the breeding male delivers a rich, scratchy song from exposed boulders or scrub tops on dry hillsides."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_IDUNA",
+      "name": "Iduna",
+      "rank": "GENUS",
+      "description": "Iduna warblers — a group of small to medium-sized unstreaked warblers split from Hippolais following phylogenetic work showing they form a separate clade. They span Africa and Asia, typically inhabiting dry scrub, acacia thickets, and semi-arid scrubland, and share a general brownish-grey plumage with subtle differences in supercilium prominence, bill length, and tail-wagging behaviour. Several are part of a species complex whose boundaries remain debated.",
+      "lineage": "Iduna Warblers",
+      "children": [
+        {
+          "id": "IDUNA_CALIGATA",
+          "name": "Iduna caligata",
+          "rank": "SPECIES",
+          "commonName": "Booted Warbler",
+          "lineage": "Iduna Warblers",
+          "continents": ["Europe", "Asia", "Africa"],
+          "subspeciesCount": 2,
+          "description": "A tiny, compact Iduna of scrubby habitats from Finland and Russia east across Siberia to Central Asia, one of the smallest warblers to breed in northern Eurasia. It typically inhabits scrubby birch and willow, tall herbaceous vegetation, and overgrown field margins. The 'booted' name refers to feathering that extends slightly onto the tarsi. An active, tail-flicking bird with a short, rapid, chattering song, it winters in the Indian subcontinent and is a scarce but regular vagrant to western Europe in autumn."
+        },
+        {
+          "id": "IDUNA_RAMA",
+          "name": "Iduna rama",
+          "rank": "SPECIES",
+          "commonName": "Sykes's Warbler",
+          "lineage": "Iduna Warblers",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 0,
+          "namedAfter": "William Henry Sykes",
+          "description": "Named for British officer and naturalist William Henry Sykes, this arid-zone counterpart of the booted warbler breeds in semi-desert scrub, dry riverbeds, and acacia thickets from Iran and Afghanistan east to Pakistan and northwestern India, wintering in western India and East Africa. Long treated as conspecific with the booted warbler, it was separated based on differences in song, morphology and breeding range. Its song is faster and more scratchy than I. caligata and it shows slightly paler tones overall."
+        },
+        {
+          "id": "IDUNA_PALLIDA",
+          "name": "Iduna pallida",
+          "rank": "SPECIES",
+          "commonName": "Eastern Olivaceous Warbler",
+          "lineage": "Iduna Warblers",
+          "continents": ["Africa", "Asia"],
+          "subspeciesCount": 3,
+          "description": "A plain, pale Iduna of arid scrub, wadis, and riverine vegetation from North Africa through the Arabian Peninsula and East Africa south to Tanzania. Formerly treated within Hippolais, it belongs to a clade of drab, tail-pumping warblers adapted to hot, dry landscapes. Its song is a rapid, scratchy chatter delivered from dense low cover. Multiple subspecies occupy different parts of its broad African and Arabian range, with birds in East Africa sometimes treated as a separate species."
+        },
+        {
+          "id": "IDUNA_OPACA",
+          "name": "Iduna opaca",
+          "rank": "SPECIES",
+          "commonName": "African Reed Warbler",
+          "lineage": "Iduna Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A small, plain-faced Iduna of acacia and dry riverine scrub in sub-Saharan Africa, one of several confusingly similar arid-zone warblers in the genus. It tends to frequent drier habitats than true Acrocephalus reed warblers, foraging through low thorny scrub and thickets. Identification requires careful attention to supercilium length, primary projection, and the subtle differences in tail-pumping behaviour that characterise different Iduna species."
+        },
+        {
+          "id": "IDUNA_NANA",
+          "name": "Iduna nana",
+          "rank": "SPECIES",
+          "commonName": "Small White-throat",
+          "lineage": "Iduna Warblers",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "The smallest member of the genus, a delicate, pale warbler of semi-arid scrub, tamarisk and low thorn-bush from Kazakhstan and Central Asia south to northwestern India. Its specific epithet nana refers to its diminutive size. It is an active, tail-flicking species that sings a faint, rapid song from within dense low cover; its song is easily overlooked. The species winters in the Indian subcontinent and is very rarely recorded outside its core Central Asian and South Asian range."
+        },
+        {
+          "id": "IDUNA_LANGUIDA",
+          "name": "Iduna languida",
+          "rank": "SPECIES",
+          "commonName": "Basra Reed Warbler",
+          "lineage": "Iduna Warblers",
+          "continents": ["Asia", "Africa"],
+          "subspeciesCount": 0,
+          "description": "A large Iduna of freshwater marshes, reed beds and riverside vegetation in the Middle East, breeding in the marshes of Iraq and Iran and wintering in East Africa. It is one of the least-known members of the family, with limited data on its population size, though it was historically common in the extensive Mesopotamian marshes. The draining of the Iraqi marshes in the 1990s devastated its core breeding habitat, though partial restoration since 2003 has allowed some recovery. Larger and heavier than most congeners."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CHLOROPETA",
+      "name": "Chloropeta",
+      "rank": "GENUS",
+      "description": "African yellow warblers — a small genus of brightly coloured warblers endemic to sub-Saharan Africa, occupying tall grass, papyrus, reed beds, and forest edges near water. Their yellow underparts and greenish-olive upperparts make them among the most distinctively coloured members of the family, contrasting sharply with the drab browns of most Acrocephalus. They are closely associated with tall marsh vegetation and can be remarkably skulking despite their bright plumage.",
+      "lineage": "African Yellow Warblers",
+      "children": [
+        {
+          "id": "CHLOROPETA_NATALENSIS",
+          "name": "Chloropeta natalensis",
+          "rank": "SPECIES",
+          "commonName": "Yellow Warbler",
+          "lineage": "African Yellow Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 3,
+          "description": "The most widespread African yellow warbler, occupying tall grass, rank herbage, and reed-bed margins from Ethiopia south to South Africa. Its bright yellow underparts and olive-green upperparts make it distinctive when seen, though it moves skulkingly through tall grass stems and is more often heard than seen. The song is a rich, varied warbling delivered from within or just above the grass. Three subspecies span its range from the Ethiopian highlands to the Cape, varying in intensity of yellow colouration."
+        },
+        {
+          "id": "CHLOROPETA_GRACILIROSTRIS",
+          "name": "Chloropeta gracilirostris",
+          "rank": "SPECIES",
+          "commonName": "Papyrus Yellow Warbler",
+          "lineage": "African Yellow Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "description": "An endangered yellow warbler specialised to papyrus swamps around Lake Victoria and associated Albertine Rift lakes in Uganda, Rwanda, Democratic Republic of Congo, Kenya and Tanzania. It is threatened by the widespread conversion of papyrus swamps to agriculture and their degradation through pollution, livestock grazing, and papyrus harvesting. Its slender bill (gracilirostris) reflects adaptation to gleaning insects from papyrus stems. A globally threatened species dependent on a wetland type that is declining across its entire East African range."
+        },
+        {
+          "id": "CHLOROPETA_SIMILIS",
+          "name": "Chloropeta similis",
+          "rank": "SPECIES",
+          "commonName": "Mountain Yellow Warbler",
+          "lineage": "African Yellow Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "An altitudinal specialist found in dense tall grass, bracken brakes, and rank herbage at the edges of montane forest in East Africa, from the Rwenzori and Virunga mountains through highland Tanzania and Malawi. It occurs at higher elevations than its lowland relative Chloropeta natalensis and tends to occupy wetter, more overgrown clearings and forest margins. Despite its bright yellow appearance it is cryptic in behaviour, creeping through tall stems and rarely perching openly. Little-studied compared to most Afrotropical warblers."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CALAMONASTIDES",
+      "name": "Calamonastides",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing a single distinctive African reed warbler, related to Acrocephalus but placed in its own genus based on morphological and molecular distinctiveness. It inhabits papyrus swamps and reed beds in East Africa.",
+      "lineage": "African Reed Warblers",
+      "children": [
+        {
+          "id": "CALAMONASTIDES_GRACILIROSTRIS",
+          "name": "Calamonastides gracilirostris",
+          "rank": "SPECIES",
+          "commonName": "Papyrus Yellow Warbler",
+          "lineage": "African Reed Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "description": "A slender-billed warbler of papyrus swamps in the African Great Lakes region, sometimes treated within Chloropeta. It is a specialist of dense papyrus, where it forages through the tall stems in the manner of a reed warbler, probing for insects in the leaf sheaths and papyrus heads. Its papyrus-swamp habitat is among the most threatened wetland types in Africa, placing this species at elevated conservation risk. The genus name Calamonastides references its reed-warbler-like habits."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CALAMOCICHLA",
+      "name": "Calamocichla",
+      "rank": "GENUS",
+      "description": "African swamp warblers — a genus of large, heavily built reed warblers from sub-Saharan Africa, formerly placed within Acrocephalus. They occupy papyrus swamps, reed beds and tall riverine vegetation and are among the most robust members of the family. Their loud, churring songs are prominent in African wetland soundscapes.",
+      "lineage": "African Swamp Warblers",
+      "children": [
+        {
+          "id": "CALAMOCICHLA_RUFESCENS",
+          "name": "Calamocichla rufescens",
+          "rank": "SPECIES",
+          "commonName": "Greater Swamp Warbler",
+          "lineage": "African Swamp Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 4,
+          "description": "A large, dark brown swamp warbler specialising in papyrus and tall reed beds across central and East Africa, from Senegal east to Kenya and south to Angola. It is a prominent papyrus-zone bird whose loud, churring song is one of the defining sounds of lowland African swamps. Notably sedentary, it is reluctant to cross open water between swamp fragments, leading to population isolation across the papyrus archipelago of the Congo basin and Albertine Rift."
+        },
+        {
+          "id": "CALAMOCICHLA_GRACILIROSTRIS",
+          "name": "Calamocichla gracilirostris",
+          "rank": "SPECIES",
+          "commonName": "Lesser Swamp Warbler",
+          "lineage": "African Swamp Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 7,
+          "description": "Africa's most widespread and common swamp warbler, occupying papyrus, Phragmites reed beds, and tall sedge beds from Ethiopia south to South Africa. It shows considerable subspecific variation across its extensive range and has a rich, bubbling song that is a familiar wetland sound across the continent. An important Cuculus cuckoo host in many parts of Africa, with cuckoo egg mimicry having co-evolved with local warbler egg colouration in some populations."
+        },
+        {
+          "id": "CALAMOCICHLA_LOPEZI",
+          "name": "Calamocichla lopezi",
+          "rank": "SPECIES",
+          "commonName": "Cameroon Swamp Warbler",
+          "lineage": "African Swamp Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A montane swamp warbler restricted to highland marshes and bog edges in the Cameroon highlands and Bioko Island in the Gulf of Guinea, at elevations above 1,500 m. It inhabits rank grass, bracken, and sedge at bog margins rather than lowland papyrus, reflecting a distinct altitudinal niche from its congeners. Poorly known and seldom observed, it was long treated as a race of the greater swamp warbler but differs in size, structure and song from lowland relatives."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NESILLAS",
+      "name": "Nesillas",
+      "rank": "GENUS",
+      "description": "Malagasy brush warblers — a genus of five secretive, long-tailed warblers endemic to Madagascar and the Comoro Islands, occupying dense undergrowth in humid forest, coastal scrub, and degraded vegetation. They are among the most elusive passerines in Madagascar, far more often heard than seen, creeping through dense vegetation like diminutive bush-warblers. Their taxonomy has been revised several times and their relationships within Acrocephalidae are still being clarified.",
+      "lineage": "Malagasy Brush Warblers",
+      "children": [
+        {
+          "id": "NESILLAS_TYPICA",
+          "name": "Nesillas typica",
+          "rank": "SPECIES",
+          "commonName": "Madagascar Brush Warbler",
+          "lineage": "Malagasy Brush Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 4,
+          "description": "The most widespread and common Nesillas, found across most of Madagascar in humid coastal scrub, forest edges, mangroves, and degraded secondary vegetation from sea level to moderate elevations. It is a long-tailed, restless warbler that creeps through dense vegetation and sings a rich, chattering song from within cover. Four subspecies occupy different parts of Madagascar, varying in overall tone from grey-brown to rufescent. Despite its skulking habits it readily responds to pishing and often pops up briefly to investigate."
+        },
+        {
+          "id": "NESILLAS_LANTZII",
+          "name": "Nesillas lantzii",
+          "rank": "SPECIES",
+          "commonName": "Subdesert Brush Warbler",
+          "lineage": "Malagasy Brush Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "An endemic warbler of the spiny forest and subdesert scrub of southern Madagascar, one of the most arid-adapted members of the genus. It inhabits the distinctive succulent thickets of the Malagasy south, dominated by Didierea and Euphorbia, and shows morphological adaptations to drier conditions compared to its forest-dwelling relatives. The subdesert brush warbler is poorly known; its distribution is partly constrained by the extent of the unique spiny forest habitat, which itself faces clearance for charcoal and agriculture."
+        },
+        {
+          "id": "NESILLAS_MARIAE",
+          "name": "Nesillas mariae",
+          "rank": "SPECIES",
+          "commonName": "Comoro Brush Warbler",
+          "lineage": "Malagasy Brush Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "An endemic warbler of the Comoro Islands, a small archipelago between Madagascar and mainland Africa, where it occupies forest undergrowth, dense scrub, and degraded vegetation. Island populations of Nesillas show typical island-bird tendencies toward reduced dispersal and increased sedentariness, making them vulnerable to habitat loss. Little studied in comparison with Malagasy populations, the Comoro brush warbler is considered near-threatened given the small size of the islands and ongoing forest clearance."
+        },
+        {
+          "id": "NESILLAS_BREVICAUDATA",
+          "name": "Nesillas brevicaudata",
+          "rank": "SPECIES",
+          "commonName": "Anjouan Brush Warbler",
+          "lineage": "Malagasy Brush Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A critically endangered brush warbler endemic to Anjouan (Nzwani) in the Comoro Islands, with an extremely small population restricted to remaining forest fragments on a heavily deforested island. The species epithet brevicaudata refers to its short tail relative to Madagascar brush warblers. Surveys in the 2000s located very few individuals, and continued forest loss and degradation pose an existential threat. It is among the most endangered passerines in Africa and the western Indian Ocean."
+        },
+        {
+          "id": "NESILLAS_ALDABRANUS",
+          "name": "Nesillas aldabranus",
+          "rank": "SPECIES",
+          "commonName": "Aldabra Brush Warbler",
+          "lineage": "Malagasy Brush Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "Declared extinct in the 1980s, the Aldabra brush warbler was known from a tiny area of dense coastal scrub on Aldabra Atoll, Seychelles. It was last recorded in 1983, and despite the protected status of Aldabra — a UNESCO World Heritage Site — the species could not be saved, likely succumbing to introduced cats and black rats. It is one of the few twentieth-century extinctions of a bird on a currently well-protected island, highlighting how quickly small populations can collapse even in reserves."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BEBRORNIS",
+      "name": "Bebrornis",
+      "rank": "GENUS",
+      "description": "Indian Ocean island warblers — a small genus of reed warblers from the Seychelles and Rodrigues, sometimes merged into Acrocephalus. Both species are highly threatened island endemics that have been subjects of intensive conservation intervention, with the Seychelles warbler becoming a celebrated case study in island bird recovery.",
+      "lineage": "Indian Ocean Island Warblers",
+      "children": [
+        {
+          "id": "BEBRORNIS_RODERICANUS",
+          "name": "Bebrornis rodericanus",
+          "rank": "SPECIES",
+          "commonName": "Rodrigues Warbler",
+          "lineage": "Indian Ocean Island Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "An endangered reed warbler endemic to Rodrigues Island in the Mascarenes, one of the Indian Ocean's most isolated islands. With a population of only a few hundred birds in the 1990s, it recovered to several thousand following rat control and habitat restoration. It inhabits forest undergrowth and scrub, where it forages for insects in a manner more reminiscent of a bush warbler than a reed warbler. The Rodrigues warbler is one of several Mascarene endemics that have benefited from dedicated conservation management."
+        },
+        {
+          "id": "BEBRORNIS_SECHELLENSIS",
+          "name": "Bebrornis sechellensis",
+          "rank": "SPECIES",
+          "commonName": "Seychelles Warbler",
+          "lineage": "Indian Ocean Island Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "One of conservation biology's greatest success stories: the Seychelles warbler was reduced to just 26 individuals on a single island (Cousin) by the 1960s, but recovered to over 3,000 birds following habitat restoration and translocations to four other Seychelles islands. It is a model system for studies of cooperative breeding, kin selection, and sex ratio manipulation — females can adjust the sex of their offspring in response to ecological conditions. Now classified as near-threatened rather than critically endangered, it remains a symbol of what focused conservation can achieve."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_AMPHILAIS",
+      "name": "Amphilais",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing a single secretive Malagasy warbler of rank grass and scrub, whose affinities within Acrocephalidae were debated until molecular work confirmed its placement. Like Nesillas, it is an elusive ground-level creeper of Madagascar's humid habitats.",
+      "lineage": "Malagasy Warblers",
+      "children": [
+        {
+          "id": "AMPHILAIS_SEEBOHMI",
+          "name": "Amphilais seebohmi",
+          "rank": "SPECIES",
+          "commonName": "Grey Emu-tail",
+          "lineage": "Malagasy Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "namedAfter": "Henry Seebohm",
+          "description": "Named for the English ornithologist Henry Seebohm, the grey emu-tail is a cryptic, mouse-like warbler of rank grass, reeds, and marshy scrub in the central highlands of Madagascar. Its long, soft tail feathers with hair-like tips give it the 'emu-tail' English name. Like a Locustella, it creeps through dense low vegetation with cocked tail, rarely flying, and sings a thin, high-pitched insect-like song. Once considered related to grassbirds, molecular phylogeny confirmed its placement in Acrocephalidae, though its exact genus-level position remains under review."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THAMNORNIS",
+      "name": "Thamnornis",
+      "rank": "GENUS",
+      "description": "A monotypic genus of Madagascar, containing a single species of dry forest and spiny scrub. The genus was long of uncertain family placement but is now confirmed in Acrocephalidae. It occupies the unique xerophytic habitats of southwestern Madagascar.",
+      "lineage": "Malagasy Warblers",
+      "children": [
+        {
+          "id": "THAMNORNIS_CHLOROPETOIDES",
+          "name": "Thamnornis chloropetoides",
+          "rank": "SPECIES",
+          "commonName": "Thamnornis Warbler",
+          "lineage": "Malagasy Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "An enigmatic warbler of the spiny forest of southwestern Madagascar, one of the most habitat-specific birds in a country full of endemics. It moves quietly through dense Didierea and Euphorbia scrub in a manner recalling a whitethroat or bush warbler, and its song is a modest, subdued warbling quite unlike the churring of most Acrocephalidae. Its specific epithet chloropetoides refers to its superficial resemblance to Chloropeta yellow warblers. Long misplaced in other families, it was correctly assigned to Acrocephalidae only after molecular studies."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_RANDIA",
+      "name": "Randia",
+      "rank": "GENUS",
+      "description": "A monotypic genus of Madagascar, recently described and recognised as a distinct genus within Acrocephalidae. It inhabits dry forests and the ecotone between humid and dry zones in Madagascar.",
+      "lineage": "Malagasy Warblers",
+      "children": [
+        {
+          "id": "RANDIA_PSEUDOZOSTEROPS",
+          "name": "Randia pseudozosterops",
+          "rank": "SPECIES",
+          "commonName": "Rand's Warbler",
+          "lineage": "Malagasy Warblers",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A recently described warbler endemic to the transitional forest zone between humid and dry habitats in central-eastern Madagascar, named for Austin Loomer Rand, an American ornithologist who worked extensively in Madagascar. It superficially resembles a white-eye (Zosterops) in its olive-green plumage and eye ring, leading to its specific name pseudozosterops. Molecular studies confirmed it as an Acrocephalidae member, not related to white-eyes at all. Known from limited material, its ecology, population size and conservation status remain poorly documented."
         }
       ]
     }
