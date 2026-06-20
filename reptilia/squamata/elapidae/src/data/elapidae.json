@@ -9,64 +9,87 @@
       "name": "Naja",
       "rank": "GENUS",
       "description": "True cobras.",
-      "lineage": "Cobras & Mambas",
+      "lineage": "Cobras",
       "children": [
         {
           "id": "NAJA_NAJA",
           "name": "Naja naja",
           "rank": "SPECIES",
           "commonName": "Indian Cobra",
-          "lineage": "Cobras & Mambas",
-          "continents": [
-            "Asia"
-          ],
+          "lineage": "Cobras",
+          "continents": ["Asia"],
           "subspeciesCount": 0,
-          "description": "The iconic snake-charmer cobra; spreads hood by flattening neck ribs; potent neurotoxic and cytotoxic venom; responsible for thousands of deaths annually in South Asia."
+          "description": "The iconic snake-charmer cobra; spreads hood by flattening neck ribs; potent neurotoxic and cytotoxic venom responsible for thousands of deaths annually in South Asia. Venom varies regionally, with some populations producing predominantly cytotoxins. Listed on CITES Appendix II due to collection pressure for the live-snake trade."
         },
         {
           "id": "NAJA_MOSSAMBICA",
           "name": "Naja mossambica",
           "rank": "SPECIES",
           "commonName": "Mozambique Spitting Cobra",
-          "lineage": "Cobras & Mambas",
-          "continents": [
-            "Africa"
-          ],
+          "lineage": "Cobras",
+          "continents": ["Africa"],
           "subspeciesCount": 0,
-          "description": "Spits venom accurately into the eyes at up to 2.5 m; causes blindness."
-        }
-      ]
-    },
-    {
-      "id": "GENUS_DENDROASPIS",
-      "name": "Dendroaspis",
-      "rank": "GENUS",
-      "description": "Mambas — Africa's most feared snakes.",
-      "lineage": "Cobras & Mambas",
-      "children": [
-        {
-          "id": "DENDROASPIS_POLYLEPIS",
-          "name": "Dendroaspis polylepis",
-          "rank": "SPECIES",
-          "commonName": "Black Mamba",
-          "lineage": "Cobras & Mambas",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": "Fastest land snake at up to 20 km/h; among the most toxic; named for black mouth interior; highly alert and fast-moving; antivenom critical if bitten."
+          "description": "Spits venom accurately into the eyes at up to 2.5 m, causing severe inflammation and potential blindness if untreated. One of the most medically significant spitting cobras in sub-Saharan Africa. The venom contains potent cytotoxins capable of causing severe tissue necrosis around bite wounds."
         },
         {
-          "id": "DENDROASPIS_ANGUSTICEPS",
-          "name": "Dendroaspis angusticeps",
+          "id": "NAJA_KAOUTHIA",
+          "name": "Naja kaouthia",
           "rank": "SPECIES",
-          "commonName": "Green Mamba",
-          "lineage": "Cobras & Mambas",
-          "continents": [
-            "Africa"
-          ],
+          "commonName": "Monocled Cobra",
+          "lineage": "Cobras",
+          "continents": ["Asia"],
+          "subspeciesCount": 3,
+          "description": "Recognised by a single O-shaped hood mark, contrasting with the spectacled pattern of N. naja. Ranges across South and Southeast Asia in rice paddies, forests and urban margins. Venom is strongly neurotoxic; a major cause of snakebite mortality in Thailand and neighbouring countries."
+        },
+        {
+          "id": "NAJA_PHILIPPINENSIS",
+          "name": "Naja philippinensis",
+          "rank": "SPECIES",
+          "commonName": "Philippine Cobra",
+          "lineage": "Cobras",
+          "continents": ["Asia"],
           "subspeciesCount": 0,
-          "description": "Arboreal; vivid green; difficult to spot in canopy; neurotoxic venom."
+          "description": "Endemic to the northern Philippines; regarded as one of the most dangerous spitting cobras due to primarily neurotoxic venom that can cause respiratory failure rapidly. Capable of spitting venom up to 3 m with high accuracy. Populations are threatened by habitat loss and collection for the pet trade."
+        },
+        {
+          "id": "NAJA_PALLIDA",
+          "name": "Naja pallida",
+          "rank": "SPECIES",
+          "commonName": "Red Spitting Cobra",
+          "lineage": "Cobras",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "Distinctive reddish or salmon colouration makes this East African spitting cobra immediately recognisable. Inhabits arid and semi-arid scrubland from Sudan south to Tanzania. Its cytotoxic venom can be accurately projected into an attacker's eyes, causing intense pain and, without washing, permanent corneal damage."
+        },
+        {
+          "id": "NAJA_NIGRICOLLIS",
+          "name": "Naja nigricollis",
+          "rank": "SPECIES",
+          "commonName": "Black-necked Spitting Cobra",
+          "lineage": "Cobras",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "Widespread across sub-Saharan Africa in savanna and open woodland habitats. A proficient spitter, directing venom at the eyes of perceived threats from distances up to 2 m. The venom has both cytotoxic and neurotoxic components, and bite envenomations frequently produce severe local necrosis."
+        },
+        {
+          "id": "NAJA_MELANOLEUCA",
+          "name": "Naja melanoleuca",
+          "rank": "SPECIES",
+          "commonName": "Forest Cobra",
+          "lineage": "Cobras",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "The largest true cobra, reaching up to 3 m in length; found in West and Central African rainforests and forest edges. An agile climber and strong swimmer, it preys on a wide variety of vertebrates. Despite impressive size, it is rarely encountered due to secretive forest habits."
+        },
+        {
+          "id": "NAJA_HAJE",
+          "name": "Naja haje",
+          "rank": "SPECIES",
+          "commonName": "Egyptian Cobra",
+          "lineage": "Cobras",
+          "continents": ["Africa"],
+          "subspeciesCount": 3,
+          "description": "The Egyptian cobra is among the most historically significant venomous snakes, revered in ancient Egyptian culture and widely depicted in royal iconography. Distributed across North Africa and the Sahel in dry savanna and rocky terrain. Its strongly neurotoxic venom causes rapid paralysis; the species is thought to be responsible for Cleopatra's legendary death."
         }
       ]
     },
@@ -75,82 +98,67 @@
       "name": "Ophiophagus",
       "rank": "GENUS",
       "description": "The king cobra.",
-      "lineage": "Cobras & Mambas",
+      "lineage": "Cobras",
       "children": [
         {
           "id": "OPHIOPHAGUS_HANNAH",
           "name": "Ophiophagus hannah",
           "rank": "SPECIES",
           "commonName": "King Cobra",
-          "lineage": "Cobras & Mambas",
-          "continents": [
-            "Asia"
-          ],
+          "lineage": "Cobras",
+          "continents": ["Asia"],
           "subspeciesCount": 0,
-          "description": "World's longest venomous snake at up to 5.5 m; dietary specialist eating almost exclusively other snakes; builds a nest and guards eggs — rare maternal behaviour in snakes."
+          "description": "World's longest venomous snake at up to 5.5 m; dietary specialist eating almost exclusively other snakes; builds a nest and guards eggs — rare maternal behaviour in snakes. The genus name means 'snake-eater' in Greek. Despite a fearsome reputation, king cobras are generally shy and avoid human contact."
         }
       ]
     },
     {
-      "id": "GENUS_OXYURANUS",
-      "name": "Oxyuranus",
+      "id": "GENUS_DENDROASPIS",
+      "name": "Dendroaspis",
       "rank": "GENUS",
-      "description": "Taipans of Australia.",
-      "lineage": "Taipans & Brown Snakes",
+      "description": "Mambas — Africa's most feared snakes.",
+      "lineage": "Mambas",
       "children": [
         {
-          "id": "OXYURANUS_MICROLEPIDOTUS",
-          "name": "Oxyuranus microlepidotus",
+          "id": "DENDROASPIS_POLYLEPIS",
+          "name": "Dendroaspis polylepis",
           "rank": "SPECIES",
-          "commonName": "Inland Taipan",
-          "lineage": "Taipans & Brown Snakes",
-          "continents": [
-            "Australia"
-          ],
+          "commonName": "Black Mamba",
+          "lineage": "Mambas",
+          "continents": ["Africa"],
           "subspeciesCount": 0,
-          "description": "The most toxic snake venom of any land species; one bite delivers enough toxin to kill 250,000 mice; shy and rarely encountered; remote black-soil plains of central Queensland."
-        }
-      ]
-    },
-    {
-      "id": "GENUS_PSEUDONAJA",
-      "name": "Pseudonaja",
-      "rank": "GENUS",
-      "description": "Eastern brown snakes.",
-      "lineage": "Taipans & Brown Snakes",
-      "children": [
+          "description": "Fastest land snake at up to 20 km/h; among the most toxic in Africa; named for the black mouth interior rather than body colour. Highly alert and defensively aggressive when cornered. Untreated bites carry a near-100% fatality rate; antivenom is critical."
+        },
         {
-          "id": "PSEUDONAJA_TEXTILIS",
-          "name": "Pseudonaja textilis",
+          "id": "DENDROASPIS_ANGUSTICEPS",
+          "name": "Dendroaspis angusticeps",
           "rank": "SPECIES",
-          "commonName": "Eastern Brown Snake",
-          "lineage": "Taipans & Brown Snakes",
-          "continents": [
-            "Australia"
-          ],
+          "commonName": "Eastern Green Mamba",
+          "lineage": "Mambas",
+          "continents": ["Africa"],
           "subspeciesCount": 0,
-          "description": "Responsible for most snakebite deaths in Australia; common in agricultural areas; fast and defensive when provoked."
-        }
-      ]
-    },
-    {
-      "id": "GENUS_NOTECHIS",
-      "name": "Notechis",
-      "rank": "GENUS",
-      "description": "Tiger snakes.",
-      "lineage": "Taipans & Brown Snakes",
-      "children": [
+          "description": "Arboreal specialist of coastal East African forests; vivid green colouration provides near-perfect camouflage in forest canopy. Neurotoxic venom acts swiftly on the nervous system. Far more docile than the black mamba but still highly dangerous."
+        },
         {
-          "id": "NOTECHIS_SCUTATUS",
-          "name": "Notechis scutatus",
+          "id": "DENDROASPIS_JAMESONI",
+          "name": "Dendroaspis jamesoni",
           "rank": "SPECIES",
-          "commonName": "Tiger Snake",
-          "lineage": "Taipans & Brown Snakes",
-          "continents": [
-            "Australia"
-          ],
+          "commonName": "Jameson's Mamba",
+          "lineage": "Mambas",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "namedAfter": "Robert Jameson",
+          "description": "Named after the Scottish naturalist Robert Jameson, this mamba inhabits rainforest and forest edges of Central and West Africa. Largely arboreal and active by day, it feeds mainly on birds and small mammals. Two subspecies are recognised across its range."
+        },
+        {
+          "id": "DENDROASPIS_VIRIDIS",
+          "name": "Dendroaspis viridis",
+          "rank": "SPECIES",
+          "commonName": "Western Green Mamba",
+          "lineage": "Mambas",
+          "continents": ["Africa"],
           "subspeciesCount": 0,
-          "description": "Vivid banding; highly venomous; common near wetlands in southern Australia; procoagulant venom causes blood to clot uncontrollably."
+          "description": "Restricted to the coastal rainforest zone of West Africa from Senegal to Togo. Highly arboreal and largely bright green with yellow scale edges; easily confused with Jameson's mamba where ranges approach one another. Like all mambas, its venom is strongly neurotoxic."
         }
       ]
     },
@@ -167,11 +175,9 @@
           "rank": "SPECIES",
           "commonName": "Common Krait",
           "lineage": "Kraits",
-          "continents": [
-            "Asia"
-          ],
+          "continents": ["Asia"],
           "subspeciesCount": 0,
-          "description": "Nocturnal; responsible for many deaths in South Asia; neurotoxic venom acts fast; victims often feel only a pinprick then sleep and may not wake."
+          "description": "Nocturnal; responsible for many deaths in South Asia; neurotoxic venom acts fast; victims often feel only a pinprick then sleep and may not wake. A member of the 'Big Four' most medically important snakes in India. The species shelters by day under rocks, logs and in termite mounds."
         },
         {
           "id": "BUNGARUS_MULTICINCTUS",
@@ -179,33 +185,370 @@
           "rank": "SPECIES",
           "commonName": "Many-banded Krait",
           "lineage": "Kraits",
-          "continents": [
-            "Asia"
-          ],
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "Black and white bands; highly toxic neurovenom; alpha-bungarotoxin isolated from this species is one of the most widely used tools in neuroscience to block nicotinic acetylcholine receptors. Abundant in Taiwan and southern China, often in rice paddies and near water."
+        },
+        {
+          "id": "BUNGARUS_FASCIATUS",
+          "name": "Bungarus fasciatus",
+          "rank": "SPECIES",
+          "commonName": "Banded Krait",
+          "lineage": "Kraits",
+          "continents": ["Asia"],
           "subspeciesCount": 0,
-          "description": "Black and white bands; highly toxic; bungarotoxin used widely in neuroscience research."
+          "description": "The largest krait species, reaching up to 2.1 m; bold alternating black and yellow bands make it unmistakeable. Widespread across South and Southeast Asia in diverse habitats from forests to agricultural land. Despite potent venom, it is notably reluctant to bite and bites are uncommon."
+        },
+        {
+          "id": "BUNGARUS_CANDIDUS",
+          "name": "Bungarus candidus",
+          "rank": "SPECIES",
+          "commonName": "Malayan Krait",
+          "lineage": "Kraits",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Widespread through mainland and insular Southeast Asia; inhabits lowland forest, rubber plantations, and rice paddies. Venom is powerfully neurotoxic and fatality rates without antivenom can exceed 60%. Frequently enters human dwellings at night, elevating the risk of accidental envenomation."
+        },
+        {
+          "id": "BUNGARUS_CEYLONICUS",
+          "name": "Bungarus ceylonicus",
+          "rank": "SPECIES",
+          "commonName": "Ceylon Krait",
+          "lineage": "Kraits",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Endemic to Sri Lanka; inhabits highland forests and tea plantations. One of the most significant causes of fatal snakebite on the island. The species is closely related to B. caeruleus but shows distinct morphological and ecological differences."
         }
       ]
     },
     {
-      "id": "GENUS_LATICAUDA",
-      "name": "Laticauda",
+      "id": "GENUS_MICRURUS",
+      "name": "Micrurus",
       "rank": "GENUS",
-      "description": "Amphibious sea kraits.",
-      "lineage": "Sea Snakes",
+      "description": "New World coral snakes — the most species-rich elapid genus.",
+      "lineage": "Coral Snakes",
       "children": [
         {
-          "id": "LATICAUDA_COLUBRINA",
-          "name": "Laticauda colubrina",
+          "id": "MICRURUS_FULVIUS",
+          "name": "Micrurus fulvius",
           "rank": "SPECIES",
-          "commonName": "Yellow-lipped Sea Krait",
-          "lineage": "Sea Snakes",
-          "continents": [
-            "Asia",
-            "Australia"
-          ],
+          "commonName": "Eastern Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["North America"],
           "subspeciesCount": 0,
-          "description": "Amphibious; comes ashore to digest prey and lay eggs; potent venom but extremely docile; key prey for sea eagles on Pacific islands."
+          "description": "Brilliantly banded in red, yellow and black; the only coral snake native to the eastern United States, ranging from North Carolina to Florida. The mnemonic 'red touches yellow, kill a fellow' distinguishes it from harmless mimics. Its neurotoxic venom can cause respiratory paralysis; antivenom production was suspended in the US for years."
+        },
+        {
+          "id": "MICRURUS_TENER",
+          "name": "Micrurus tener",
+          "rank": "SPECIES",
+          "commonName": "Texas Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["North America"],
+          "subspeciesCount": 3,
+          "description": "Distributed across south-central United States and northeastern Mexico; a slender, fossorial species of sandy pine forests, rocky hillsides and brushy areas. Like all Micrurus, it is shy and secretive, using its small, fixed rear-facing fangs only under duress. Venom is neurotoxic and potentially lethal."
+        },
+        {
+          "id": "MICRURUS_CORALLINUS",
+          "name": "Micrurus corallinus",
+          "rank": "SPECIES",
+          "commonName": "Painted Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["South America"],
+          "subspeciesCount": 0,
+          "description": "Found in Atlantic Forest of southeastern Brazil and adjacent Argentina; one of the most striking coral snakes with vivid red, black and white tricolour banding. Secretive and fossorial; feeds mainly on other small snakes and amphisbaenians. A significant cause of snakebite envenomation in Brazil."
+        },
+        {
+          "id": "MICRURUS_LEMNISCATUS",
+          "name": "Micrurus lemniscatus",
+          "rank": "SPECIES",
+          "commonName": "South American Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["South America"],
+          "subspeciesCount": 5,
+          "description": "One of the most widespread Micrurus species, ranging from Colombia and Venezuela south through Amazonia into Bolivia and Brazil. Multiple subspecies reflect its vast range across diverse habitats. A burrowing predator of caecilians and other snakes, rarely seen unless disturbed in leaf litter."
+        },
+        {
+          "id": "MICRURUS_SURINAMENSIS",
+          "name": "Micrurus surinamensis",
+          "rank": "SPECIES",
+          "commonName": "Aquatic Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["South America"],
+          "subspeciesCount": 2,
+          "description": "Unusual among coral snakes for its semi-aquatic lifestyle along the margins of Amazonian rivers and streams. Feeds primarily on freshwater eels and elongate fish rather than other snakes. Strikingly banded in red, black and yellow; ranges from the Guianas through Amazonia."
+        },
+        {
+          "id": "MICRURUS_NIGROCINCTUS",
+          "name": "Micrurus nigrocinctus",
+          "rank": "SPECIES",
+          "commonName": "Central American Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["North America", "South America"],
+          "subspeciesCount": 7,
+          "description": "The most medically important coral snake in Central America, responsible for the majority of coral snake bites across the region. Found in diverse habitats from Mexico to northwestern Colombia. Several subspecies show distinct banding variants adapted to local environments."
+        },
+        {
+          "id": "MICRURUS_FRONTALIS",
+          "name": "Micrurus frontalis",
+          "rank": "SPECIES",
+          "commonName": "Southern Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["South America"],
+          "subspeciesCount": 4,
+          "description": "Widely distributed in South American cerrado, chaco and gallery forest from Brazil to Argentina and Uruguay. One of the largest Micrurus species, reaching 1.5 m. Powerful neurotoxic venom; multiple subspecies occupy distinct geographic regions within the broad range."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MICRUROIDES",
+      "name": "Micruroides",
+      "rank": "GENUS",
+      "description": "Sonoran coral snake — sole member of the genus.",
+      "lineage": "Coral Snakes",
+      "children": [
+        {
+          "id": "MICRUROIDES_EURYXANTHUS",
+          "name": "Micruroides euryxanthus",
+          "rank": "SPECIES",
+          "commonName": "Sonoran Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["North America"],
+          "subspeciesCount": 3,
+          "description": "Small, secretive coral snake of the Sonoran Desert in Arizona, New Mexico and northwestern Mexico; active at night and after summer rains. Unique defensive behaviour includes tucking its head, raising the tail and producing a cloaca-popping sound. Venom is neurotoxic but bites are extremely rare due to retiring habits."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CALLIOPHIS",
+      "name": "Calliophis",
+      "rank": "GENUS",
+      "description": "Asian coral snakes; use a unique non-blocking venom mechanism.",
+      "lineage": "Coral Snakes",
+      "children": [
+        {
+          "id": "CALLIOPHIS_BIVIRGATUS",
+          "name": "Calliophis bivirgatus",
+          "rank": "SPECIES",
+          "commonName": "Blue Malayan Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "One of the most visually striking elapids — uniformly iridescent deep blue-black above with a vivid scarlet head and tail. Found in lowland tropical rainforests of the Thai-Malay Peninsula, Sumatra and Borneo. Its venom acts via a unique mechanism, causing uncontrolled and sustained muscle contraction rather than paralysis."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SINOMICRURUS",
+      "name": "Sinomicrurus",
+      "rank": "GENUS",
+      "description": "East Asian coral snakes.",
+      "lineage": "Coral Snakes",
+      "children": [
+        {
+          "id": "SINOMICRURUS_MACCLELLANDI",
+          "name": "Sinomicrurus macclellandi",
+          "rank": "SPECIES",
+          "commonName": "MacClelland's Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 4,
+          "namedAfter": "John MacClelland",
+          "description": "Named for the British physician and naturalist John MacClelland who collected specimens in Assam in the 1830s. Distributed from northeast India through southern China, Taiwan and much of Southeast Asia. A secretive burrower of montane forests with the classic coral snake coloration of red, black and yellow."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MATICORA",
+      "name": "Maticora",
+      "rank": "GENUS",
+      "description": "Long-glanded blue Malayan coral snakes.",
+      "lineage": "Coral Snakes",
+      "children": [
+        {
+          "id": "MATICORA_INTESTINALIS",
+          "name": "Maticora intestinalis",
+          "rank": "SPECIES",
+          "commonName": "Long-glanded Coral Snake",
+          "lineage": "Coral Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 2,
+          "description": "Has proportionally the largest venom glands of any snake — extending one-quarter of the body length. Found in lowland forests of the Thai-Malay Peninsula, Sumatra and Borneo. Despite the enormous glands, bites are rare and human fatalities undocumented; prey is small snakes and amphisbaenians."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_OXYURANUS",
+      "name": "Oxyuranus",
+      "rank": "GENUS",
+      "description": "Taipans of Australia.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "OXYURANUS_MICROLEPIDOTUS",
+          "name": "Oxyuranus microlepidotus",
+          "rank": "SPECIES",
+          "commonName": "Inland Taipan",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "The most toxic snake venom of any land species; one bite delivers enough toxin to kill 250,000 mice; shy and rarely encountered in the remote black-soil plains of central Queensland. Its venom is a complex cocktail of paradoxine, oxylepitoxin and pseudonajatoxin, highly evolved to rapidly kill warm-blooded prey."
+        },
+        {
+          "id": "OXYURANUS_SCUTELLATUS",
+          "name": "Oxyuranus scutellatus",
+          "rank": "SPECIES",
+          "commonName": "Coastal Taipan",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 2,
+          "description": "The largest venomous snake in Australia, reaching up to 3 m; far more frequently encountered than the inland taipan and responsible for serious bites. Ranges along the north and east coast from Queensland to Western Australia. It can deliver multiple bites in a single attack and its venom causes severe coagulopathy and neurotoxicity."
+        },
+        {
+          "id": "OXYURANUS_TEMPORALIS",
+          "name": "Oxyuranus temporalis",
+          "rank": "SPECIES",
+          "commonName": "Central Ranges Taipan",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "The most recently described taipan, discovered in 2007 in the remote Central Ranges of Western Australia. It has been observed only a handful of times and is among the least-known large venomous snakes in the world. Presumed highly toxic based on its close relationship to other taipan species."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PSEUDONAJA",
+      "name": "Pseudonaja",
+      "rank": "GENUS",
+      "description": "Eastern brown snakes.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "PSEUDONAJA_TEXTILIS",
+          "name": "Pseudonaja textilis",
+          "rank": "SPECIES",
+          "commonName": "Eastern Brown Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Responsible for more snakebite deaths in Australia than any other species; common in agricultural areas where its rodent prey is abundant. Fast and defensively aggressive when provoked, rearing into a striking S-shape. Venom causes progressive coagulopathy; early antivenom administration is essential."
+        },
+        {
+          "id": "PSEUDONAJA_NUCHALIS",
+          "name": "Pseudonaja nuchalis",
+          "rank": "SPECIES",
+          "commonName": "Western Brown Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "The most widely distributed brown snake in Australia, inhabiting arid and semi-arid regions across the continent. Highly variable in pattern — individuals range from uniform brown to banded or speckled. Despite being less potent than the eastern brown snake per venom volume, large individuals can deliver medically serious bites."
+        },
+        {
+          "id": "PSEUDONAJA_MODESTA",
+          "name": "Pseudonaja modesta",
+          "rank": "SPECIES",
+          "commonName": "Ringed Brown Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "The smallest species in the genus, rarely exceeding 60 cm; a slender inhabitant of arid central Australia. Often has distinctive dark neck or body banding. Rarely encountered by humans due to its fossorial habits and remote, sandy-plain habitat."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NOTECHIS",
+      "name": "Notechis",
+      "rank": "GENUS",
+      "description": "Tiger snakes.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "NOTECHIS_SCUTATUS",
+          "name": "Notechis scutatus",
+          "rank": "SPECIES",
+          "commonName": "Tiger Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Vivid banding; highly venomous; common near wetlands and waterways in southern Australia. Procoagulant venom causes disseminated intravascular coagulation; antivenom is available and effective. Population on small islands show morphological adaptations to seasonal prey availability."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ACANTHOPHIS",
+      "name": "Acanthophis",
+      "rank": "GENUS",
+      "description": "Death adders — convergently evolved with true vipers.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "ACANTHOPHIS_ANTARCTICUS",
+          "name": "Acanthophis antarcticus",
+          "rank": "SPECIES",
+          "commonName": "Common Death Adder",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Remarkably viper-like in form through convergent evolution — broad triangular head, stout body and a thin worm-like tail tip used to lure prey. Relies on ambush rather than pursuit and has the fastest strike of any Australian snake. Potent neurotoxic venom; once had high fatality rates before antivenom availability."
+        },
+        {
+          "id": "ACANTHOPHIS_PRAELONGUS",
+          "name": "Acanthophis praelongus",
+          "rank": "SPECIES",
+          "commonName": "Northern Death Adder",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Inhabits tropical savannas and monsoon forests of northern Australia and southern New Guinea. The most slender death adder species, with a proportionally longer body than its southern relatives. An exceptionally effective ambush predator that remains motionless on the leaf litter for extended periods."
+        },
+        {
+          "id": "ACANTHOPHIS_PYRRHUS",
+          "name": "Acanthophis pyrrhus",
+          "rank": "SPECIES",
+          "commonName": "Desert Death Adder",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Adapted to Australia's arid interior, with reddish or sandy colouration that blends perfectly with red-sand desert. Capable of tolerating extreme temperature swings and desiccating conditions that challenge other reptiles. Rarely encountered due to its remote and inhospitable habitat."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PSEUDECHIS",
+      "name": "Pseudechis",
+      "rank": "GENUS",
+      "description": "Black snakes and mulga snakes of Australia and New Guinea.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "PSEUDECHIS_AUSTRALIS",
+          "name": "Pseudechis australis",
+          "rank": "SPECIES",
+          "commonName": "Mulga Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Australia's most widely distributed venomous snake; also holds the record for the largest venom output — up to 150 mg per milking. Inhabits a vast range of terrestrial habitats except dense wet forest. Its venom causes myotoxicity and anticoagulation and is resistant to tiger snake antivenom."
+        },
+        {
+          "id": "PSEUDECHIS_PORPHYRIACUS",
+          "name": "Pseudechis porphyriacus",
+          "rank": "SPECIES",
+          "commonName": "Red-bellied Black Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Iconic eastern Australian snake with gloss-black dorsum and vivid red to pink ventral scales. Associated with waterways, swamps and wet forest; a proficient swimmer and fisherman. Venom causes myotoxicity and local effects but bites are rarely fatal; the species is notably reluctant to bite."
+        },
+        {
+          "id": "PSEUDECHIS_PAPUANUS",
+          "name": "Pseudechis papuanus",
+          "rank": "SPECIES",
+          "commonName": "Papuan Black Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Distributed across southern New Guinea and the Torres Strait islands; inhabits seasonally flooded grasslands and savanna woodland. Considered responsible for a significant proportion of snakebite deaths in Papua New Guinea. Closely related to the mulga snake but adapted to more humid, lowland conditions."
         }
       ]
     },
@@ -222,15 +565,272 @@
           "rank": "SPECIES",
           "commonName": "Yellow-bellied Sea Snake",
           "lineage": "Sea Snakes",
-          "continents": [
-            "Asia",
-            "Africa",
-            "Australia",
-            "North America",
-            "South America"
-          ],
+          "continents": ["Asia", "Africa", "Australia", "North America", "South America"],
           "subspeciesCount": 0,
-          "description": "Widest geographic range of any non-marine snake; pelagic; cannot move on land at all; gives birth at sea."
+          "description": "Widest geographic range of any non-marine snake, spanning the entire tropical Indo-Pacific and eastern Pacific Ocean. Fully pelagic and incapable of movement on land; gives birth to live young at sea. Congregates along oceanic convergence slicks to ambush small fish."
+        },
+        {
+          "id": "HYDROPHIS_CYANOCINCTUS",
+          "name": "Hydrophis cyanocinctus",
+          "rank": "SPECIES",
+          "commonName": "Annulated Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "One of the most commonly encountered sea snakes in the Persian Gulf and Indo-Pacific coastal waters; conspicuous black and greenish-grey banding. Inhabits shallow coastal seas, estuaries and coral reefs. Its potent myotoxic venom can cause rhabdomyolysis in envenomated fishermen who handle fishing nets."
+        },
+        {
+          "id": "HYDROPHIS_CURTUS",
+          "name": "Hydrophis curtus",
+          "rank": "SPECIES",
+          "commonName": "Shaw's Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia", "Australia"],
+          "subspeciesCount": 0,
+          "description": "A robust-bodied sea snake with a distinctly small head disproportionate to its thick body; widespread in shallow Indo-Pacific coastal waters. Specialises in burrowing into soft sediment to locate and extract small eels and fish. A significant cause of fishermen bites in coastal South and Southeast Asia."
+        },
+        {
+          "id": "HYDROPHIS_ORNATUS",
+          "name": "Hydrophis ornatus",
+          "rank": "SPECIES",
+          "commonName": "Reef Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia", "Australia"],
+          "subspeciesCount": 0,
+          "description": "Strikingly patterned with dark and pale banding; found across the Indo-Pacific from the Persian Gulf to Australia. An active forager on coral reefs, probing crevices for small fish and eels. Frequently caught incidentally in trawl nets and gill nets throughout its range."
+        },
+        {
+          "id": "HYDROPHIS_SCHISTOSUS",
+          "name": "Hydrophis schistosus",
+          "rank": "SPECIES",
+          "commonName": "Beaked Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Responsible for more human sea snake envenomations than any other species, primarily in Sri Lanka, India and the Bay of Bengal where it is abundant in estuaries and rice-paddy irrigation channels. Its upturned snout tip is distinctive. Myotoxic and neurotoxic venom; fishermen frequently sustain bites when removing it from nets."
+        },
+        {
+          "id": "HYDROPHIS_SEMPERI",
+          "name": "Hydrophis semperi",
+          "rank": "SPECIES",
+          "commonName": "Garman's Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Remarkable as the only fully freshwater sea snake in the world; endemic to Lake Taal, a volcanic crater lake on Luzon island, Philippines. Physiologically adapted to freshwater, it cannot survive in marine conditions. The isolated lake population represents a fascinating example of rapid ecological specialisation."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LATICAUDA",
+      "name": "Laticauda",
+      "rank": "GENUS",
+      "description": "Amphibious sea kraits.",
+      "lineage": "Sea Snakes",
+      "children": [
+        {
+          "id": "LATICAUDA_COLUBRINA",
+          "name": "Laticauda colubrina",
+          "rank": "SPECIES",
+          "commonName": "Yellow-lipped Sea Krait",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia", "Australia"],
+          "subspeciesCount": 0,
+          "description": "Amphibious; comes ashore to digest prey, shed and lay eggs; potent venom but extremely docile. A key prey species for sea eagles on Pacific islands and subject to intensive collection for its skin in parts of Southeast Asia. Males are notably smaller than females, one of the more extreme examples of sexual dimorphism among snakes."
+        },
+        {
+          "id": "LATICAUDA_LATICAUDATA",
+          "name": "Laticauda laticaudata",
+          "rank": "SPECIES",
+          "commonName": "Blue-lipped Sea Krait",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "Distinguished from L. colubrina by its blue rather than yellow lip scales. Common on coral reefs and rocky shores across the western Pacific and Indian Ocean. Like other sea kraits, it hunts eels and fish in reef crevices by day and comes ashore at night to rest."
+        },
+        {
+          "id": "LATICAUDA_SEMIFASCIATA",
+          "name": "Laticauda semifasciata",
+          "rank": "SPECIES",
+          "commonName": "Chinese Sea Krait",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "The largest sea krait, reaching over 1.5 m; intensively harvested for its skin and meat in Japan and the Philippines. Historically used in traditional medicine and as a culinary delicacy in the Ryukyu Islands. Habitat degradation and overharvesting have caused population declines in parts of its range."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_AIPYSURUS",
+      "name": "Aipysurus",
+      "rank": "GENUS",
+      "description": "Olive sea snakes of the Australasian region.",
+      "lineage": "Sea Snakes",
+      "children": [
+        {
+          "id": "AIPYSURUS_LAEVIS",
+          "name": "Aipysurus laevis",
+          "rank": "SPECIES",
+          "commonName": "Olive Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "One of the largest sea snakes in Australian waters, reaching 2 m; found on coral reefs of the Great Barrier Reef, Timor Sea and Coral Sea. Known to approach divers with apparent curiosity, occasionally wrapping around limbs. Possesses photoreceptors in its skin allowing it to detect light even through the body scales."
+        },
+        {
+          "id": "AIPYSURUS_DUBOISII",
+          "name": "Aipysurus duboisii",
+          "rank": "SPECIES",
+          "commonName": "Dubois' Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia", "Australia"],
+          "subspeciesCount": 0,
+          "description": "Considered to have the most toxic venom of any sea snake; inhabits coral reefs and soft-sediment seabed across the Timor Sea, Coral Sea and western Pacific. Despite its highly toxic venom, bites are uncommon as the species is generally placid. Found at depths up to 80 m."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EMYDOCEPHALUS",
+      "name": "Emydocephalus",
+      "rank": "GENUS",
+      "description": "Turtle-headed sea snakes; specialist egg-eaters.",
+      "lineage": "Sea Snakes",
+      "children": [
+        {
+          "id": "EMYDOCEPHALUS_ANNULATUS",
+          "name": "Emydocephalus annulatus",
+          "rank": "SPECIES",
+          "commonName": "Annulated Sea Snake",
+          "lineage": "Sea Snakes",
+          "continents": ["Asia", "Australia"],
+          "subspeciesCount": 2,
+          "description": "Unique among sea snakes for feeding almost exclusively on the eggs of coral-reef fish; its venom apparatus is greatly reduced as a consequence. Found on coral reefs from the Ryukyu Islands through the Philippines to northern Australia. The blunt turtle-like head is a striking adaptation to prying fish eggs from reef crevices."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DEMANSIA",
+      "name": "Demansia",
+      "rank": "GENUS",
+      "description": "Whip snakes — fast, slender Australian elapids.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "DEMANSIA_PSAMMOPHIS",
+          "name": "Demansia psammophis",
+          "rank": "SPECIES",
+          "commonName": "Yellow-faced Whip Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 2,
+          "description": "The most commonly encountered whip snake in Australia; diurnal and extremely fast-moving, capable of catching lizards and frogs by pursuit. Slender build with characteristic yellow facial markings and a dark comma-shaped eye streak. Though venomous, bites cause only mild local symptoms in humans."
+        },
+        {
+          "id": "DEMANSIA_VESTIGIATA",
+          "name": "Demansia vestigiata",
+          "rank": "SPECIES",
+          "commonName": "Black Whip Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "The largest of the whip snakes, reaching about 1.5 m; found across tropical northern Australia in open woodland and rocky slopes. Dark olive to black colouration distinguishes it from other whip snakes. Active diurnal hunter of skinks and geckos; bites are medically mild."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_FURINA",
+      "name": "Furina",
+      "rank": "GENUS",
+      "description": "Australian naped snakes.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "FURINA_DIADEMA",
+          "name": "Furina diadema",
+          "rank": "SPECIES",
+          "commonName": "Red-naped Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Small nocturnal elapid of eastern Australia with a bright red or orange nape patch that contrasts with its grey-black body. Fossorial in habit; feeds almost exclusively on small skinks. Despite attractive colouration reminiscent of danger signals, the red nape is not associated with a potent bite for humans."
+        },
+        {
+          "id": "FURINA_ORNATA",
+          "name": "Furina ornata",
+          "rank": "SPECIES",
+          "commonName": "Orange-naped Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Strikingly patterned with a bold orange or reddish crown and nape marking; widespread across interior and northern Australia in arid to semi-arid habitats. Like other Furina, it is nocturnal, secretive and specialised on skink prey. Rarely seen despite its broad distribution."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CACOPHIS",
+      "name": "Cacophis",
+      "rank": "GENUS",
+      "description": "Crowned snakes of eastern Australia.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "CACOPHIS_SQUAMULOSUS",
+          "name": "Cacophis squamulosus",
+          "rank": "SPECIES",
+          "commonName": "Golden-crowned Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Small nocturnal elapid of coastal rainforest and moist eucalypt forest in Queensland and New South Wales; identified by a pale to golden crown stripe on a brown head. Feeds on skinks and their eggs. Although venomous, bites cause only mild localised pain and there are no recorded serious envenomations."
+        },
+        {
+          "id": "CACOPHIS_HARRIETTAE",
+          "name": "Cacophis harriettae",
+          "rank": "SPECIES",
+          "commonName": "White-crowned Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "namedAfter": "Harriet Scott",
+          "description": "Named in honour of Harriet Scott, the Australian botanical and zoological illustrator who documented fauna in 19th-century New South Wales. A slender, nocturnal crowned snake of dry sclerophyll forest in coastal Queensland and northeastern New South Wales. Feeds on small skinks and is completely harmless to humans in practice."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_SUTA",
+      "name": "Suta",
+      "rank": "GENUS",
+      "description": "Curl snakes and hooded snakes of Australia.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "SUTA_SUTA",
+          "name": "Suta suta",
+          "rank": "SPECIES",
+          "commonName": "Curl Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Named for its characteristic defensive posture of coiling tightly with the head in the centre; found across the arid and semi-arid interior of eastern Australia. Nocturnal and fossorial; feeds on small lizards and frogs. Though venomous, bites are uncommon and rarely produce more than local symptoms."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CRYPTOPHIS",
+      "name": "Cryptophis",
+      "rank": "GENUS",
+      "description": "Small-eyed snakes of Australia.",
+      "lineage": "Taipans",
+      "children": [
+        {
+          "id": "CRYPTOPHIS_NIGRESCENS",
+          "name": "Cryptophis nigrescens",
+          "rank": "SPECIES",
+          "commonName": "Eastern Small-eyed Snake",
+          "lineage": "Taipans",
+          "continents": ["Australia"],
+          "subspeciesCount": 0,
+          "description": "Uniformly glossy black with a pink-to-red belly; found in forest and woodland of eastern Australia from Queensland to Victoria. Nocturnal and shelters beneath rocks and logs by day. Despite its small eyes and retiring behaviour, its venom contains potent myotoxins that can cause serious muscle breakdown in envenomated victims."
         }
       ]
     }
