@@ -8,7 +8,7 @@
       "id": "GENUS_PLATALEA",
       "name": "Platalea",
       "rank": "GENUS",
-      "description": "Unmistakeable white waterbirds with spatula-shaped bills swept through shallow water. The Eurasian Spoonbill has colonised the Netherlands and Belgium and is now annual in southern Sweden; breeding is expected.",
+      "description": "Unmistakeable white waterbirds with spatula-shaped bills swept through shallow water in a distinctive side-to-side motion. Six species are distributed across every continent except Antarctica, from temperate European wetlands to tropical mangroves and Australian billabongs. The Roseate Spoonbill is the only pink-plumaged species; the Black-faced Spoonbill is one of the world's rarest birds.",
       "lineage": "Spoonbills",
       "children": [
         {
@@ -17,13 +17,59 @@
           "rank": "SPECIES",
           "commonName": "Eurasian Spoonbill",
           "lineage": "Spoonbills",
-          "continents": [
-            "Europe",
-            "Asia",
-            "Africa"
-          ],
+          "continents": ["Europe", "Asia", "Africa"],
           "subspeciesCount": 2,
           "description": "A tall white waterbird that feeds by sweeping its spatulate bill through shallow water, snapping shut on small fish and invertebrates. After colonising the Low Countries it is now annual in southern Sweden, with breeding anticipated."
+        },
+        {
+          "id": "PLATALEA_MINOR",
+          "name": "Platalea minor",
+          "rank": "SPECIES",
+          "commonName": "Black-faced Spoonbill",
+          "lineage": "Spoonbills",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "One of the world's rarest waterbirds, breeding on small rocky islets off the Korean Peninsula and wintering in coastal wetlands of Taiwan, Hong Kong, and Vietnam. Intensive conservation efforts have helped the population recover from a low of under 300 birds to over 6,000 today; IUCN status: Endangered."
+        },
+        {
+          "id": "PLATALEA_ALBA",
+          "name": "Platalea alba",
+          "rank": "SPECIES",
+          "commonName": "African Spoonbill",
+          "lineage": "Spoonbills",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A large, all-white spoonbill with a bare red face and pinkish bill, common in shallow freshwater wetlands and alkaline lakes across sub-Saharan Africa and Madagascar. It nests colonially in trees or reedbeds near water; IUCN status: Least Concern."
+        },
+        {
+          "id": "PLATALEA_AJAJA",
+          "name": "Platalea ajaja",
+          "rank": "SPECIES",
+          "commonName": "Roseate Spoonbill",
+          "lineage": "Spoonbills",
+          "continents": ["North America", "South America"],
+          "subspeciesCount": 0,
+          "description": "The only pink spoonbill in the world, its brilliant carmine-and-rose plumage derived from carotenoid pigments in its crustacean diet. Found in coastal mangroves, estuaries, and freshwater marshes from the southern United States to Argentina; its US population was hunted nearly to extinction for the millinery trade before recovering. IUCN status: Least Concern."
+        },
+        {
+          "id": "PLATALEA_REGIA",
+          "name": "Platalea regia",
+          "rank": "SPECIES",
+          "commonName": "Royal Spoonbill",
+          "lineage": "Spoonbills",
+          "continents": ["Oceania", "Asia"],
+          "subspeciesCount": 0,
+          "description": "A large, all-white spoonbill with a distinctive black bill and facial skin, breeding in Australasia and dispersing to New Guinea and Indonesia outside the breeding season. It forages in shallow coastal and freshwater wetlands; IUCN status: Least Concern."
+        },
+        {
+          "id": "PLATALEA_FLAVIPES",
+          "name": "Platalea flavipes",
+          "rank": "SPECIES",
+          "commonName": "Yellow-billed Spoonbill",
+          "lineage": "Spoonbills",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "An Australian endemic with a pale yellow bill and facial skin, inhabiting shallow inland wetlands, flooded grasslands, and occasionally coastal estuaries across the continent. It is nomadic, moving in response to rainfall and water availability; IUCN status: Least Concern."
         }
       ]
     },
@@ -31,7 +77,7 @@
       "id": "GENUS_PLEGADIS",
       "name": "Plegadis",
       "rank": "GENUS",
-      "description": "Dark, glossy waders with long decurved bills, expanding northward across Europe.",
+      "description": "Three species of dark, glossy ibises with long decurved bills and iridescent bronze-and-purple plumage. They inhabit freshwater marshes, flooded grasslands, and rice paddies across five continents. The Glossy Ibis has the widest range of any ibis and has been expanding northward across Europe; the Puna Ibis is a high-altitude specialist of the Andes.",
       "lineage": "Ibises",
       "children": [
         {
@@ -40,14 +86,389 @@
           "rank": "SPECIES",
           "commonName": "Glossy Ibis",
           "lineage": "Ibises",
-          "continents": [
-            "Europe",
-            "Asia",
-            "Africa",
-            "North America"
-          ],
+          "continents": ["Europe", "Asia", "Africa", "North America"],
           "subspeciesCount": 0,
-          "description": "A dark, glossy wader whose bronze-and-purple sheen catches the light as it probes wetland mud with a long decurved bill. Once a rarity, it is now a regular and increasing visitor to southern Sweden."
+          "description": "A dark, glossy wader whose bronze-and-purple sheen catches the light as it probes wetland mud with a long decurved bill. Once a rarity, it is now a regular and increasing visitor to southern Sweden, with a strongly expanding European range."
+        },
+        {
+          "id": "PLEGADIS_CHIHI",
+          "name": "Plegadis chihi",
+          "rank": "SPECIES",
+          "commonName": "White-faced Ibis",
+          "lineage": "Ibises",
+          "continents": ["North America", "South America"],
+          "subspeciesCount": 0,
+          "description": "Very similar to the Glossy Ibis but distinguished in breeding plumage by a white border around the bare red facial skin. It inhabits freshwater marshes and irrigated fields across western North America and southern South America; IUCN status: Least Concern."
+        },
+        {
+          "id": "PLEGADIS_RIDGWAYI",
+          "name": "Plegadis ridgwayi",
+          "rank": "SPECIES",
+          "commonName": "Puna Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America"],
+          "subspeciesCount": 0,
+          "namedAfter": "Robert Ridgway",
+          "description": "A high-altitude ibis of Andean puna wetlands, bogs, and shallow lakes from 3,000 to 4,600 m in Peru, Bolivia, Chile, and northwest Argentina. Named after the American ornithologist Robert Ridgway; IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THRESKIORNIS",
+      "name": "Threskiornis",
+      "rank": "GENUS",
+      "description": "Large, white ibises of the Old World tropics with bald black heads and long decurved bills, the genus taking its name from the ancient Greek for 'sacred bird'. The Sacred Ibis was revered and mummified in its millions in ancient Egypt. The family now has five species spread across Africa, Asia, and Australasia.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "THRESKIORNIS_AETHIOPICUS",
+          "name": "Threskiornis aethiopicus",
+          "rank": "SPECIES",
+          "commonName": "Sacred Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa", "Asia"],
+          "subspeciesCount": 3,
+          "description": "The iconic ibis of ancient Egypt, venerated and mummified in their millions as an embodiment of the god Thoth. Today it is common in sub-Saharan wetlands, rice paddies, and urban rubbish dumps; introduced populations have become invasive in France, Italy, and Israel. IUCN status: Least Concern."
+        },
+        {
+          "id": "THRESKIORNIS_MELANOCEPHALUS",
+          "name": "Threskiornis melanocephalus",
+          "rank": "SPECIES",
+          "commonName": "Black-headed Ibis",
+          "lineage": "Ibises",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A large white ibis with a bare black head, neck, and bill, widespread in wetlands from Pakistan and India through Southeast Asia to China and Japan. It nests colonially in trees with other waterbirds; IUCN status: Near Threatened due to wetland degradation and disturbance."
+        },
+        {
+          "id": "THRESKIORNIS_MOLUCCA",
+          "name": "Threskiornis molucca",
+          "rank": "SPECIES",
+          "commonName": "Australian White Ibis",
+          "lineage": "Ibises",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "A familiar, adaptable ibis of urban parks, tips, and inland wetlands across Australia, conspicuous in every major city where it forages in waste bins and outdoor dining areas. It has expanded dramatically into coastal urban areas following agricultural development; IUCN status: Least Concern."
+        },
+        {
+          "id": "THRESKIORNIS_SPINICOLLIS",
+          "name": "Threskiornis spinicollis",
+          "rank": "SPECIES",
+          "commonName": "Straw-necked Ibis",
+          "lineage": "Ibises",
+          "continents": ["Oceania"],
+          "subspeciesCount": 0,
+          "description": "An attractive Australian ibis with iridescent dark upperparts and distinctive straw-coloured plumes on the neck, found in inland grasslands, flooded pastures, and wetlands. It feeds predominantly on insects and is nomadic, following rainfall; IUCN status: Least Concern."
+        },
+        {
+          "id": "THRESKIORNIS_BERNIERI",
+          "name": "Threskiornis bernieri",
+          "rank": "SPECIES",
+          "commonName": "Madagascar Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A rare ibis restricted to the mangroves, coastal lagoons, and estuaries of western Madagascar, with a small population also on the Aldabra atoll. It has a bare black head and neck and white plumage like the Sacred Ibis, but is stockier and confined to coastal habitats. IUCN status: Endangered."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GERONTICUS",
+      "name": "Geronticus",
+      "rank": "GENUS",
+      "description": "Bald ibises — two species of scarce, iridescent ibises with bare, wrinkled facial skin, living in arid and mountain grassland habitats. The Northern Bald Ibis was once common across Europe and the Middle East but declined catastrophically and is now Critically Endangered; the Southern Bald Ibis is confined to upland South Africa.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "GERONTICUS_EREMITA",
+          "name": "Geronticus eremita",
+          "rank": "SPECIES",
+          "commonName": "Northern Bald Ibis",
+          "lineage": "Ibises",
+          "continents": ["Europe", "Africa", "Asia"],
+          "subspeciesCount": 0,
+          "description": "Once common across southern Europe and the Middle East, now reduced to a tiny wild population in Morocco and a tiny sedentary colony in Syria, plus reintroduced flocks in Europe. It nests on cliff ledges and forages in dry grasslands; intensive conservation work aims to restore migratory populations. IUCN status: Critically Endangered."
+        },
+        {
+          "id": "GERONTICUS_CALVUS",
+          "name": "Geronticus calvus",
+          "rank": "SPECIES",
+          "commonName": "Southern Bald Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A glossy black ibis with a bare red head, confined to montane grasslands and cliff faces in the Drakensberg region of South Africa and Lesotho. It forages in short grassland for invertebrates and nests colonially on cliff ledges; IUCN status: Vulnerable."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NIPPONIA",
+      "name": "Nipponia",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Crested Ibis — one of the most celebrated conservation success stories in Asia. Once ranging across Japan, Korea, Russia, and China, it was reduced to just seven wild birds in China's Shaanxi Province by 1981. Through captive breeding and strict protection, the population has rebounded to several thousand individuals.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "NIPPONIA_NIPPON",
+          "name": "Nipponia nippon",
+          "rank": "SPECIES",
+          "commonName": "Crested Ibis",
+          "lineage": "Ibises",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A magnificent white ibis with pink-flushed plumage, a red face, and drooping crest, once widespread across East Asia and extinct in Japan, Korea, and Russia. Reduced to seven birds by 1981, it is now recovering in China's Shaanxi forests through one of the most intensive ibis recovery programmes in the world. IUCN status: Endangered."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PSEUDIBIS",
+      "name": "Pseudibis",
+      "rank": "GENUS",
+      "description": "Three ibises of South and Southeast Asia, all associated with lowland forest and wetlands in increasingly fragmented habitat. The White-shouldered Ibis and Giant Ibis are among the most threatened large waterbirds on Earth, with tiny populations in the Mekong basin; the Red-naped Ibis is more widespread but still declining.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "PSEUDIBIS_PAPILLOSA",
+          "name": "Pseudibis papillosa",
+          "rank": "SPECIES",
+          "commonName": "Red-naped Ibis",
+          "lineage": "Ibises",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "A large, dark ibis of the Indian subcontinent with a distinctive bare red patch on the nape, found in dry and irrigated agricultural land, river banks, and marshes. It is largely sedentary and often associates with livestock; IUCN status: Least Concern."
+        },
+        {
+          "id": "PSEUDIBIS_DAVISONI",
+          "name": "Pseudibis davisoni",
+          "rank": "SPECIES",
+          "commonName": "White-shouldered Ibis",
+          "lineage": "Ibises",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "One of the world's most endangered waterbirds, restricted to a very small population in Cambodia, Kalimantan (Borneo), and possibly adjacent areas of Laos and Vietnam. It inhabits lowland forests and large river banks; fewer than 250 adults are estimated to survive. IUCN status: Critically Endangered."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THAUMATIBIS",
+      "name": "Thaumatibis",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Giant Ibis — the largest ibis on Earth and one of the rarest birds in Southeast Asia. It inhabits seasonally flooded forests, marshes, and river banks in the lowland forests of Cambodia and southern Laos. The Giant Ibis is a national symbol of Cambodia and the subject of intensive conservation efforts.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "THAUMATIBIS_GIGANTEA",
+          "name": "Thaumatibis gigantea",
+          "rank": "SPECIES",
+          "commonName": "Giant Ibis",
+          "lineage": "Ibises",
+          "continents": ["Asia"],
+          "subspeciesCount": 0,
+          "description": "The world's largest ibis, standing up to 100 cm tall with a wingspan over 150 cm, restricted to the northern plains of Cambodia and adjacent southern Laos. A national symbol of Cambodia, it inhabits large rivers, marshes, and seasonally flooded open forest; fewer than 1,000 individuals remain. IUCN status: Critically Endangered."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_BOSTRYCHIA",
+      "name": "Bostrychia",
+      "rank": "GENUS",
+      "description": "Forest ibises of sub-Saharan Africa — five species that inhabit the understorey of tropical rainforest and montane forest rather than open wetlands. Unlike most ibises, they forage on the forest floor for invertebrates and small vertebrates in dim light, and several species are poorly known. The Hadada Ibis is the most familiar, its loud calls ringing across African savanna and gardens at dawn.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "BOSTRYCHIA_HAGEDASH",
+          "name": "Bostrychia hagedash",
+          "rank": "SPECIES",
+          "commonName": "Hadada Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 3,
+          "description": "A large, bronzy-brown ibis whose deafening, repeated 'haa-haa-haa-de-dah' call is one of the defining sounds of urban and suburban Africa from South Africa to Ethiopia. It forages on lawns, golf courses, and riverbanks for earthworms and insects; IUCN status: Least Concern."
+        },
+        {
+          "id": "BOSTRYCHIA_CARUNCULATA",
+          "name": "Bostrychia carunculata",
+          "rank": "SPECIES",
+          "commonName": "Wattled Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "An Ethiopian endemic with a distinctive pendulous wattle dangling from the throat, found in highland grasslands, wetlands, and gorges above 1,500 m. It is the only ibis endemic to Ethiopia and is often seen on cliffs near rivers; IUCN status: Least Concern."
+        },
+        {
+          "id": "BOSTRYCHIA_OLIVACEA",
+          "name": "Bostrychia olivacea",
+          "rank": "SPECIES",
+          "commonName": "Olive Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 4,
+          "description": "A secretive, dark forest ibis of primary and secondary lowland rainforest in West and Central Africa, foraging on the shaded forest floor at dawn and dusk. It is rarely seen and poorly known; IUCN status: Least Concern."
+        },
+        {
+          "id": "BOSTRYCHIA_BOCAGEI",
+          "name": "Bostrychia bocagei",
+          "rank": "SPECIES",
+          "commonName": "São Tomé Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "namedAfter": "José Vicente Barbosa du Bocage",
+          "description": "A critically endangered forest ibis endemic to São Tomé Island in the Gulf of Guinea, named after the Portuguese zoologist José Vicente Barbosa du Bocage. Confined to dense primary forest in the southern part of the island; IUCN status: Critically Endangered."
+        },
+        {
+          "id": "BOSTRYCHIA_RARA",
+          "name": "Bostrychia rara",
+          "rank": "SPECIES",
+          "commonName": "Spot-breasted Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 0,
+          "description": "A small, dark ibis with white spots on the breast, inhabiting dense lowland rainforest from Sierra Leone east through the Congo Basin to Uganda. It forages on the forest floor and along shaded streams at night; IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_THERISTICUS",
+      "name": "Theristicus",
+      "rank": "GENUS",
+      "description": "Three ibises of South American grasslands, savannas, and wetlands, with buff, black, and grey patterning and long decurved bills. They inhabit open country from the Andes to the Pampas, foraging in dry and flooded grasslands for insects, frogs, and small vertebrates. The Buff-necked Ibis is one of the most familiar birds of the Brazilian Cerrado.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "THERISTICUS_CAUDATUS",
+          "name": "Theristicus caudatus",
+          "rank": "SPECIES",
+          "commonName": "Buff-necked Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America"],
+          "subspeciesCount": 2,
+          "description": "A striking ibis with a buff head and neck, white breast, and black belly, common in open habitats across South America from Venezuela and Colombia south to Argentina. It forages in dry grasslands and flooded fields for invertebrates and small vertebrates; IUCN status: Least Concern."
+        },
+        {
+          "id": "THERISTICUS_MELANOPIS",
+          "name": "Theristicus melanopis",
+          "rank": "SPECIES",
+          "commonName": "Black-faced Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America"],
+          "subspeciesCount": 2,
+          "description": "A large, pale ibis of open Andean foothills, Patagonian grasslands, and coastal pastures from Peru and Chile south to Tierra del Fuego. It forages in dry upland grasslands and is often seen walking in small groups; IUCN status: Least Concern."
+        },
+        {
+          "id": "THERISTICUS_CAERULESCENS",
+          "name": "Theristicus caerulescens",
+          "rank": "SPECIES",
+          "commonName": "Plumbeous Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America"],
+          "subspeciesCount": 0,
+          "description": "A dark, plumbeous-grey ibis of riparian grasslands, marshes, and wetland edges in central South America, from Bolivia and Brazil south to Argentina and Uruguay. It typically forages near water in small groups; IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_MESEMBRINIBIS",
+      "name": "Mesembrinibis",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Green Ibis — the most forest-associated of the New World ibises, its iridescent green plumage making it one of the most attractive. It inhabits forested streams, riverbanks, and swamp forest across Central and South America, foraging quietly along shaded water margins.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "MESEMBRINIBIS_CAYENNENSIS",
+          "name": "Mesembrinibis cayennensis",
+          "rank": "SPECIES",
+          "commonName": "Green Ibis",
+          "lineage": "Ibises",
+          "continents": ["North America", "South America"],
+          "subspeciesCount": 0,
+          "description": "A stocky, iridescent dark-green ibis of lowland tropical forest rivers and swampy woodland, found from Honduras south through the Amazon basin to Bolivia and southern Brazil. It forages along shaded stream banks at dawn and dusk for aquatic invertebrates, frogs, and fish; IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CERCIBIS",
+      "name": "Cercibis",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Sharp-tailed Ibis — a large, noisy ibis of South American savannas and wetlands with a distinctively long, pointed tail. It inhabits dry cerrado, savanna, and river margins in the Orinoco and Amazon basins.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "CERCIBIS_OXYCERCA",
+          "name": "Cercibis oxycerca",
+          "rank": "SPECIES",
+          "commonName": "Sharp-tailed Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America"],
+          "subspeciesCount": 0,
+          "description": "A large, glossy black ibis with an unusually long, pointed tail and loud calls, inhabiting seasonally flooded savannas, dry cerrado woodland, and riverine grasslands from Venezuela and Colombia south into Brazil. It is conspicuous but poorly studied; IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PHIMOSUS",
+      "name": "Phimosus",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Bare-faced Ibis — a slender, dark ibis of South American grasslands and wetlands with an entirely bare pink-red facial mask. Unlike most ibises, it is highly gregarious and nomadic, following rains across the South American interior.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "PHIMOSUS_INFUSCATUS",
+          "name": "Phimosus infuscatus",
+          "rank": "SPECIES",
+          "commonName": "Bare-faced Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America"],
+          "subspeciesCount": 5,
+          "description": "A medium-sized, brownish-black ibis with a bare pink face, inhabiting flooded grasslands, marshes, and rice paddies across a wide range from Colombia and Venezuela south to Argentina. Gregarious and nomadic, it often forms large flocks following seasonal rains; IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EUDOCIMUS",
+      "name": "Eudocimus",
+      "rank": "GENUS",
+      "description": "Two of the Americas' most conspicuous ibises — one brilliant white, the other blazing scarlet. The Scarlet Ibis is the national bird of Trinidad and Tobago and one of the most vividly coloured birds in the world; its colour comes entirely from carotenoid pigments in its crustacean diet. The two species interbreed where ranges overlap and some authorities treat them as a single species.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "EUDOCIMUS_ALBUS",
+          "name": "Eudocimus albus",
+          "rank": "SPECIES",
+          "commonName": "American White Ibis",
+          "lineage": "Ibises",
+          "continents": ["North America", "South America"],
+          "subspeciesCount": 0,
+          "description": "A common, gregarious ibis of coastal mangroves, estuaries, and freshwater marshes from the southeastern United States through the Caribbean and Central America to Colombia and Venezuela. It forms enormous roosts and breeding colonies; immatures are brown and white and take three years to attain adult plumage. IUCN status: Least Concern."
+        },
+        {
+          "id": "EUDOCIMUS_RUBER",
+          "name": "Eudocimus ruber",
+          "rank": "SPECIES",
+          "commonName": "Scarlet Ibis",
+          "lineage": "Ibises",
+          "continents": ["South America", "North America"],
+          "subspeciesCount": 0,
+          "description": "One of the most brilliantly coloured birds on Earth, its vivid scarlet plumage (except for black wingtips) derived entirely from the carotenoids in its diet of red crabs and invertebrates in coastal mudflats. The national bird of Trinidad and Tobago; enormous flocks create spectacular roost displays at sunset. IUCN status: Least Concern."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LOPHOTIBIS",
+      "name": "Lophotibis",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Madagascar Crested Ibis — a spectacular, largely nocturnal forest ibis endemic to Madagascar, with a fan-shaped white-and-chestnut crest and iridescent wing plumage. It inhabits primary and secondary humid forest and is the only forest ibis of Madagascar.",
+      "lineage": "Ibises",
+      "children": [
+        {
+          "id": "LOPHOTIBIS_CRISTATA",
+          "name": "Lophotibis cristata",
+          "rank": "SPECIES",
+          "commonName": "Madagascar Crested Ibis",
+          "lineage": "Ibises",
+          "continents": ["Africa"],
+          "subspeciesCount": 2,
+          "description": "A strikingly beautiful ibis endemic to Madagascar, with white head plumes, iridescent green wings, and chestnut body, inhabiting the floors and lower strata of humid forest. Largely nocturnal and terrestrial, it probes leaf litter for earthworms and invertebrates; threatened by deforestation. IUCN status: Near Threatened."
         }
       ]
     }
