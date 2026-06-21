@@ -28,9 +28,35 @@ function annotateSubfamily(node: AnnotatedNode, sf?: string): void {
   node.children?.forEach(c => annotateSubfamily(c as AnnotatedNode, next));
 }
 
+function classColor(node: AnnotatedNode, theme: ColorTheme): string | undefined {
+  const cls = node.data.className;
+  if (cls && theme.classPalette?.base?.[cls]) return theme.classPalette.base[cls];
+  return undefined;
+}
+
+function orderColor(node: AnnotatedNode, theme: ColorTheme): string | undefined {
+  const cls = node.data.className;
+  const ord = node.data.orderName;
+  if (!cls || !ord) return undefined;
+  const base = theme.classPalette?.base?.[cls];
+  if (!base) return undefined;
+  // Derive from class base by shifting lightness deterministically
+  const hash = ord.split("").reduce((s, c) => s + c.charCodeAt(0), 0);
+  const h = parseInt(base.slice(1, 3), 16);
+  const s2 = parseInt(base.slice(3, 5), 16);
+  const l = parseInt(base.slice(5, 7), 16);
+  const shift = (hash % 30) - 15;
+  const clamp = (n: number) => Math.max(0, Math.min(255, Math.round(n)));
+  return "#" + [h, s2, l].map((v, i) => clamp(v + (i === 2 ? shift : 0)).toString(16).padStart(2, "0")).join("");
+}
+
 function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
+  if (node.data.rank === "KINGDOM") return "#c8a84a";
+  if (node.data.rank === "CLASS") return classColor(node, theme) ?? "#666";
+  if (node.data.rank === "ORDER") return orderColor(node, theme) ?? classColor(node, theme) ?? "#666";
   if (node.data.rank === "BREED_GROUP" || node.data.rank === "BREED") return theme.breedGroupColor;
   if (node.data.rank === "HYBRID_GROUP" || node.data.rank === "HYBRID") return theme.hybridColor;
+  if (node.data.rank === "FAMILY") return classColor(node, theme) ?? "#666";
   if (node.data.rank === "SUBSPECIES") {
     const lineage = node.data.lineage ?? (node.parent as AnnotatedNode | undefined)?.data.lineage;
     return lineage && theme.lineageColors[lineage] ? theme.lineageColors[lineage] : "#555";
@@ -43,7 +69,10 @@ function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
 
 function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
   if (node.data.rank === "KINGDOM") return "#c8a84a";
-  if (node.data.rank === "FAMILY" || node.data.rank === "TRIBE") return "#F5F5F5";
+  if (node.data.rank === "CLASS") return classColor(node, theme) ?? "#666";
+  if (node.data.rank === "ORDER") return orderColor(node, theme) ?? classColor(node, theme) ?? "#666";
+  if (node.data.rank === "FAMILY") return "#F5F5F5";
+  if (node.data.rank === "TRIBE") return "#F5F5F5";
   if (node.data.rank === "SUBFAMILY") return theme.subfamilyColors[node.data.name] ?? "#888";
   if (node.data.rank === "BREED_GROUP") return theme.breedGroupColor;
   if (node.data.rank === "BREED") return `${theme.breedGroupColor}88`;
@@ -63,18 +92,21 @@ function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
 }
 
 function nodeR(d: d3.HierarchyNode<TaxonNode>, specialSet: Set<string> | null): number {
-  if (d.data.rank === "KINGDOM") return 18;
-  if (d.data.rank === "FAMILY") return 12;
-  if (d.data.rank === "SUBFAMILY") return 9;
-  if (d.data.rank === "TRIBE") return 9;
-  if (d.data.rank === "GENUS") return 6.5;
-  if (d.data.rank === "HYBRID_GROUP") return 6.5;
-  if (d.data.rank === "BREED_GROUP") return 5;
-  if (d.data.rank === "HYBRID") return 4;
-  if (d.data.rank === "BREED") return 3;
-  if (d.data.rank === "SUBSPECIES") return 3;
-  if (specialSet?.has(d.data.id)) return 5;
-  return 2.5;
+  if (d.data.rank === "KINGDOM") return 10;
+  if (d.data.rank === "PHYLUM") return 9;
+  if (d.data.rank === "CLASS") return 8;
+  if (d.data.rank === "ORDER") return 7;
+  if (d.data.rank === "FAMILY") return 5;
+  if (d.data.rank === "SUBFAMILY") return 4;
+  if (d.data.rank === "TRIBE") return 4;
+  if (d.data.rank === "GENUS") return 3;
+  if (d.data.rank === "HYBRID_GROUP") return 3;
+  if (d.data.rank === "BREED_GROUP") return 2.5;
+  if (d.data.rank === "HYBRID") return 2;
+  if (d.data.rank === "BREED") return 2;
+  if (d.data.rank === "SUBSPECIES") return 2;
+  if (specialSet?.has(d.data.id)) return 3;
+  return 1.5;
 }
 
 // After d3.tree() computes a balanced [0, 2π] layout, remap angles so

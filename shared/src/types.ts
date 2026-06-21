@@ -13,9 +13,25 @@ export interface TaxonNode {
   continents?: string[];
   accepted?: boolean;
   familySlug?: string;
+  className?: string;
+  orderName?: string;
   description?: string;
   namedAfter?: string;
   children?: TaxonNode[];
+}
+
+export interface ClassPalette {
+  base: Record<string, string>;
+  orders: Record<string, string>;
+}
+
+export interface ColorTheme {
+  subfamilyColors: Record<string, string>;
+  lineageColors: Record<string, string>;
+  breedGroupColor: string;
+  hybridColor: string;
+  coatTypeColor?: string;
+  classPalette?: ClassPalette;
 }
 
 export interface ColorTheme {
