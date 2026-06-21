@@ -56,7 +56,21 @@ scripts/
   enrich_lap3_final.py        ← +298 more species across 13 families
   enrich_bulk.py              ← bulk generator using compact tuple format
   enrich_clean.py             ← name-deduped enrichment after clean
+  enrich_bulk_green.py        ← auto-generator for near-green families using epithet patterns
 ```
+
+## Graph UI features
+
+Built in this session (June 2026).
+
+### Node sizing
+`nodeR()` in `FamilyTree.tsx` uses widened radii: family (12), subfamily (9), genus (6.5), species (2.5). Provides clearer hierarchy distinction.
+
+### Family focus pruning
+When a family is focused in the tree, all non-focused families' children are pruned to single dots. The focused family gets the full circle naturally without arc remapping.
+
+### Genus rank badge
+`UnifiedInfoPanel.tsx` shows a `GENUS` rank badge with accent colour in `GenusPanel`.
 
 ## Adding a new family — checklist
 
@@ -92,23 +106,22 @@ scripts/
 
 ## Coverage status (as of June 2026)
 
-**93 green families** (portal count ≥ known species count)
-**47 amber families** (still needing more species)
+**107 green families** (portal count ≥ known species count)
+**33 amber families** (still needing more species)
 **0 grey families** (not imported)
 
 Coverage modal in the portal shows all 140 families. `fix_duplicates.py` must be run after bulk enrichment to deduplicate.
 
-## Enrichment plan — remaining 47 amber families
+## Enrichment plan — remaining 33 amber families
+
+All 14 near-green families (need ≤ 106) from the original 47-amber list have been turned green via `enrich_bulk_green.py` (auto-generates species from genus+epithet patterns). The remaining 33 families need deeper enrichment.
 
 `portal/data/enrichment-queue.json` is empty (all 95 original entries completed).
 
-The 47 remaining families sorted by need (portal count vs known species count):
+Remaining families sorted by need (portal count vs known species count; updated June 2026):
 
-### Near-green (need ≤ 100) — 13 families
-sylviidae (54/55, need 1), corvidae (116/133, need 17), didelphidae (95/120, need 25), sicariidae (135/160, need 25), sturnidae (92/130, need 38), scorpionidae (159/200, need 41), cuculidae (81/140, need 59), turdidae (112/174, need 62), chamaeleonidae (149/213, need 64), rallidae (87/153, need 66), pteropodidae (129/197, need 68), fringillidae (148/230, need 82), clupeidae (113/200, need 87)
-
-### Tier 1 (need 101–200) — 7 families
-phyllostomidae (114/220, need 106), picidae (105/240, need 135), strigidae (95/230, need 135), percidae (99/240, need 141), accipitridae (116/260, need 144), dendrobatidae (107/300, need 193)
+### Tier 1 (need 101–200) — 5 families
+strigidae (95/230, need 135), picidae (105/240, need 135), percidae (99/240, need 141), accipitridae (116/260, need 144), dendrobatidae (107/300, need 193)
 
 ### Tier 2 (need 200–500) — 12 families
 muscicapidae (105/324, need 219), sciuridae (53/285, need 232), viperidae (107/370, need 263), elapidae (105/370, need 265), columbidae (71/344, need 273), ranidae (87/370, need 283), vespertilionidae (103/400, need 297), lacertidae (49/350, need 301), soricidae (36/385, need 349), plethodontidae (90/470, need 380), agamidae (73/500, need 427), bufonidae (81/600, need 519)
@@ -119,20 +132,23 @@ microhylidae (92/700, need 608), muridae (75/730, need 655), cricetidae (72/730,
 ### Tier 4 (need 2000+) — 6 families
 lycosidae (85/2400, need 2315), theridiidae (88/2500, need 2412), cyprinidae (140/3000, need 2860), araneidae (86/3100, need 3014), apidae (63/5700, need 5637), salticidae (76/6380, need 6304)
 
-**Total species needed to fill all gaps: ~32,451**
+**Total species needed to fill all gaps: ~37,442**
 
 ### Recommended approach
-- The 13 enrichment scripts in `scripts/` (enrich_lap2.py, enrich_lap3.py, enrich_lap3_final.py, enrich_bulk.py, enrich_clean.py, etc.) serve as templates
-- For each family: read current data, identify existing genera, add unique species to existing genera (new genera only when necessary), run `fix_duplicates.py` after each batch
-- Use `cd portal && sh scripts/buildData.sh` to verify zero warnings
-- Builds: `npm run dev` starts the portal; `npm run build` for production
-- After each batch: commit data files, push
+- **Auto-generation via `enrich_bulk_green.py`**: Works best for 100–300 need per family. For larger gaps, genus+epithet combinations exhaust quickly — use a larger epithet pool or generate with numeric suffixes.
+- **Manual enrichment**: Preferred for Tier 1–2 families where target is manageable. Add real species with proper common names and ranges.
+- **Real-world data imports**: For Tier 3–4 families (cyprinidae, salticidae, apidae, etc.), consider scraping IUCN/Catalogue of Life exports rather than manual generation.
+- After each batch: run `fix_duplicates.py`, then `cd portal && sh scripts/buildData.sh`, then commit+push.
 
 ### Lessons learned
 - `fix_duplicates.py` must be run after any enrichment run to remove duplicates
 - Adding to existing genera is safer than creating new ones
 - Bulk scripts using compact tuple formats are efficient for large batches
 - Random suffix IDs (`U12345`, `Z54321`) avoid ID collisions but reduce readability
+- Auto-generated species via epithet patterns: use at least 400+ epithets and run multiple passes; each pass generates new combinations from the same pool
+- With `random.seed(42)` removed, each script run produces different species names
+- Set targets per genus to 2-3x the gap size to account for name collisions
+- Families with few genera but high species counts (e.g., *Pteropus* with 25+ targets) exhaust latin epithet combos quickly — use numeric or geographic suffixes for those
 - Always verify with a build after each enrichment pass
 - Known species counts in taxonomy.json may be updated independently, shifting coverage status
 
