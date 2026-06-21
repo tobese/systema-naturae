@@ -14,6 +14,7 @@ import InfoModal from "./components/InfoModal";
 import CoverageModal from "./components/CoverageModal";
 import EponymModal from "./components/EponymModal";
 import InternationalDaysModal from "./components/InternationalDaysModal";
+import TaxonomySidebar from "./components/TaxonomySidebar";
 import { useInternationalDays } from "./hooks/useInternationalDays";
 import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
 import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
@@ -68,6 +69,7 @@ export default function App() {
   const [showEponyms, setShowEponyms] = useState(false);
   const [showDays, setShowDays] = useState(false);
   const [showSotd, setShowSotd] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
   const speciesOfTheDay = useSpeciesOfTheDay(annotatedData);
@@ -431,6 +433,30 @@ export default function App() {
             </div>
           )}
         </div>
+        <button
+          onClick={() => setShowSidebar(o => !o)}
+          title="Taxonomy sidebar"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: 34,
+            height: 34,
+            padding: 0,
+            borderRadius: 6,
+            border: "1px solid",
+            borderColor: showSidebar ? "#3a3d50" : "#1e2030",
+            background: showSidebar ? "#1e2030" : "transparent",
+            color: showSidebar ? "#c0c0d8" : "#444",
+            cursor: "pointer",
+            fontSize: 16,
+            marginRight: 6,
+          }}
+          onMouseEnter={e => { if (!showSidebar) e.currentTarget.style.color = "#888"; }}
+          onMouseLeave={e => { if (!showSidebar) e.currentTarget.style.color = "#444"; }}
+        >
+          ☰
+        </button>
         <SearchBox data={annotatedData} onNavigate={navigateTo} />
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
           <button
@@ -559,6 +585,24 @@ export default function App() {
 
       {/* Main */}
       <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
+        {showSidebar && (
+          <div style={{
+            width: 220,
+            borderRight: "1px solid #1e2030",
+            overflow: "hidden",
+            flexShrink: 0,
+          }}>
+            <TaxonomySidebar
+              data={annotatedData}
+              focusedClassId={focusedClassId}
+              focusedFamilySlug={focusedFamilySlug}
+              selectedId={selected?.id ?? null}
+              onSelect={handleSelect}
+              onFocusFamily={setFocus}
+              onFocusClass={setFocusedClass}
+            />
+          </div>
+        )}
         <div style={{ flex: 1, overflow: "hidden", position: "relative" }}>
           <FamilyTree
             data={treeData}
