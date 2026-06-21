@@ -14,32 +14,40 @@ interface TaxonNode {
   lineage?: string;
   familySlug?: string;
   appSlug?: string;
+  className?: string;
+  orderName?: string;
   [key: string]: unknown;
   children?: TaxonNode[];
 }
 
-function stampFamilySlug(node: TaxonNode, slug: string): TaxonNode {
+function stampFamilySlug(node: TaxonNode, slug: string, cls?: string, ord?: string): TaxonNode {
   return {
     ...node,
     familySlug: slug,
-    children: node.children?.map(c => stampFamilySlug(c, slug)),
+    className: cls,
+    orderName: ord,
+    children: node.children?.map(c => stampFamilySlug(c, slug, cls, ord)),
   };
 }
 
-function graftFamily(portalNode: TaxonNode, familyData: TaxonNode, slug: string): TaxonNode {
+function graftFamily(portalNode: TaxonNode, familyData: TaxonNode, slug: string, cls?: string, ord?: string): TaxonNode {
   let children: TaxonNode[];
 
   if (familyData.rank === "TRIBE") {
     // Caprinae: data root is TRIBE (Caprini) — skip wrapper, use its children directly
-    children = (familyData.children ?? []).map(c => stampFamilySlug(c, slug));
+    children = (familyData.children ?? []).map(c => stampFamilySlug(c, slug, cls, ord));
   } else {
     // All others: use the family data's children
-    children = (familyData.children ?? []).map(c => stampFamilySlug(c, slug));
+    children = (familyData.children ?? []).map(c => stampFamilySlug(c, slug, cls, ord));
   }
 
   // Keep the portal node's own id, rank, name, appSlug, speciesCount etc.
   // Stamp the FAMILY node itself with familySlug too
-  return { ...portalNode, familySlug: slug, children };
+  return { ...portalNode, familySlug: slug, className: cls, orderName: ord, children };
+}
+
+function stampClassOrder(node: TaxonNode, cls?: string, ord?: string): TaxonNode {
+  return { ...node, className: cls, orderName: ord };
 }
 
 function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}): TaxonNode {
@@ -53,16 +61,17 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
     const dataPath = resolve(root, ...parts, "src/data", `${slug}.json`);
     try {
       const familyData = JSON.parse(readFileSync(dataPath, "utf-8")) as TaxonNode;
-      return graftFamily(node, familyData, slug);
+      return graftFamily(node, familyData, slug, next.cls, next.ord);
     } catch (e) {
       console.warn(`  Warning: could not load ${dataPath}: ${(e as Error).message}`);
-      return node;
+      return stampClassOrder(node, next.cls, next.ord);
     }
   }
+  const stamped = stampClassOrder(node, next.cls, next.ord);
   if (node.children) {
-    return { ...node, children: node.children.map(c => processTree(c, next)) };
+    return { ...stamped, children: node.children.map(c => processTree(c, next)) };
   }
-  return node;
+  return stamped;
 }
 
 const taxonomyPath = resolve(portalRoot, "data/taxonomy.json");
