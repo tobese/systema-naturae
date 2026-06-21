@@ -63,45 +63,23 @@ function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
 }
 
 function nodeR(d: d3.HierarchyNode<TaxonNode>, specialSet: Set<string> | null): number {
-  if (d.data.rank === "KINGDOM") return 16;
-  if (d.data.rank === "FAMILY") return 9;
-  if (d.data.rank === "SUBFAMILY") return 7;
-  if (d.data.rank === "TRIBE") return 7;
-  if (d.data.rank === "GENUS") return 5;
-  if (d.data.rank === "HYBRID_GROUP") return 5;
-  if (d.data.rank === "BREED_GROUP") return 4;
-  if (d.data.rank === "HYBRID") return 3.5;
-  if (d.data.rank === "BREED") return 2.5;
-  if (d.data.rank === "SUBSPECIES") return 2.5;
-  if (specialSet?.has(d.data.id)) return 4.5;
-  return 3;
+  if (d.data.rank === "KINGDOM") return 18;
+  if (d.data.rank === "FAMILY") return 12;
+  if (d.data.rank === "SUBFAMILY") return 9;
+  if (d.data.rank === "TRIBE") return 9;
+  if (d.data.rank === "GENUS") return 6.5;
+  if (d.data.rank === "HYBRID_GROUP") return 6.5;
+  if (d.data.rank === "BREED_GROUP") return 5;
+  if (d.data.rank === "HYBRID") return 4;
+  if (d.data.rank === "BREED") return 3;
+  if (d.data.rank === "SUBSPECIES") return 3;
+  if (specialSet?.has(d.data.id)) return 5;
+  return 2.5;
 }
 
-// After d3.tree() computes a balanced [0, 2π] layout, remap angles so the
-// focused family's subtree takes 65% of the circle and everything else 35%.
-// This runs in-place on the HierarchyPointNode x values.
-function remapAngles(nodes: PNode[], focusedFamilySlug: string): void {
-  const focused = nodes.filter(d => d.data.familySlug === focusedFamilySlug);
-  const others  = nodes.filter(d => d.data.familySlug !== focusedFamilySlug);
-  if (focused.length === 0) return;
-
-  const fMin = Math.min(...focused.map(d => d.x));
-  const fMax = Math.max(...focused.map(d => d.x));
-  const fSpan = fMax - fMin || 1;
-
-  const oArr = others.map(d => d.x).sort((a, b) => a - b);
-  const oMin = oArr[0] ?? 0;
-  const oMax = oArr[oArr.length - 1] ?? (2 * Math.PI);
-  const oSpan = oMax - oMin || 1;
-
-  const ARC_FOCUS = 2 * Math.PI * 0.65;
-  const ARC_OTHER = 2 * Math.PI * 0.35;
-
-  focused.forEach(d => { d.x = ((d.x - fMin) / fSpan) * ARC_FOCUS; });
-  others.forEach(d => { d.x = ARC_FOCUS + ((d.x - oMin) / oSpan) * ARC_OTHER; });
-}
-
-// Same arc-redistribution logic as remapAngles, but keyed on ancestry rather than familySlug.
+// After d3.tree() computes a balanced [0, 2π] layout, remap angles so
+// descendants of the focused class take 65% of the circle and everything
+// else 35%. Runs in-place on the HierarchyPointNode x values.
 function remapAnglesForClass(nodes: PNode[], focusedClassId: string): void {
   const focused: PNode[] = [];
   const others: PNode[] = [];
@@ -265,8 +243,19 @@ export default function FamilyTree({
     const layoutChanged = prevLayoutRef.current !== null && prevLayoutRef.current !== layout;
     prevLayoutRef.current = layout;
 
+    // ── Prune: when a family is focused, collapse all other families ──────────
+    const prunedData: TaxonNode = focusedFamilySlug
+      ? (function prune(n: TaxonNode): TaxonNode {
+          if (n.rank === "FAMILY" && n.familySlug && n.familySlug !== focusedFamilySlug) {
+            return { ...n, children: undefined };
+          }
+          const next = (n.children ?? []).map(prune);
+          return next.length ? { ...n, children: next } : n;
+        })(data)
+      : data;
+
     // ── Compute layout ────────────────────────────────────────────────────────
-    const root = d3.hierarchy(data);
+    const root = d3.hierarchy(prunedData);
     annotateSubfamily(root as AnnotatedNode);
 
     let nodeTransform: (d: PNode) => string;
@@ -299,8 +288,13 @@ export default function FamilyTree({
       ptNode = root as PNode;
 
       // Focus+context: give the focused family 65% of the arc, others 35%
-      if (focusedFamilySlug) remapAngles(ptNode.descendants(), focusedFamilySlug);
-      else if (focusedClassId) remapAnglesForClass(ptNode.descendants(), focusedClassId);
+      // When focusedFamilySlug is set, pruning already clears other families' children,
+      // so the focused subtree naturally takes most of the circle — skip remapping.
+      if (focusedFamilySlug && !focusedClassId) {
+        // pruned: nop
+      } else if (focusedClassId) {
+        remapAnglesForClass(ptNode.descendants(), focusedClassId);
+      }
 
       nodeTransform = (d: PNode) => {
         const angle = d.x - Math.PI / 2;

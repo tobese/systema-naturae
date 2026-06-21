@@ -68,6 +68,7 @@ export default function App() {
   const [showEponyms, setShowEponyms] = useState(false);
   const [showDays, setShowDays] = useState(false);
   const [showSotd, setShowSotd] = useState(false);
+  const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
   const speciesOfTheDay = useSpeciesOfTheDay(annotatedData);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
@@ -81,6 +82,11 @@ export default function App() {
   useEffect(() => {
     sidebarScrollRef.current?.scrollTo({ top: 0, behavior: "instant" });
   }, [selectedNodeId]);
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 30000);
+    return () => clearInterval(id);
+  }, []);
 
   // selected node is fully URL-driven so browser back/forward and deep-links work correctly
   const selected = useMemo(
@@ -263,6 +269,18 @@ export default function App() {
     walk(annotatedData);
     return n;
   }, []);
+
+  const totalNodes = useMemo(() => {
+    let n = 0;
+    function walk(node: TaxonNode) { n++; node.children?.forEach(walk); }
+    walk(annotatedData);
+    return n;
+  }, []);
+
+  const formattedDatetime = now.toLocaleDateString("en-US", {
+    month: "short", day: "numeric", year: "numeric",
+    hour: "2-digit", minute: "2-digit",
+  });
 
   const rankCounts = useMemo(() => {
     const counts = { CLASS: 0, ORDER: 0, FAMILY: 0, LEAVES: 0 };
@@ -572,6 +590,21 @@ export default function App() {
               alt="Black Cat Studio"
               style={{ width: "100%", height: "100%", position: "relative" }}
             />
+          </div>
+          <div style={{
+            position: "absolute",
+            bottom: 10,
+            right: 118,
+            fontSize: 10,
+            color: "#2a2a3a",
+            fontFamily: "'SF Mono', 'SF Pro Text', monospace",
+            lineHeight: 1.5,
+            textAlign: "right",
+            pointerEvents: "none",
+            userSelect: "none",
+          }}>
+            <div>{formattedDatetime}</div>
+            <div>{totalNodes.toLocaleString()} nodes</div>
           </div>
         </div>
 
