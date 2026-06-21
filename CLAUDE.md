@@ -41,7 +41,16 @@ shared/
   data/
     pending-eponyms.json       ← species with namedAfter in families not yet imported
 portal/
-  data/enrichment-queue.json  ← agent work queue: 95 families needing more species
+  data/enrichment-queue.json  ← formerly 95 families needing more species (all done)
+  data/sanity-queue.json      ← sanity scan results (all 4057 issues fixed)
+  data/sanity-issues.json     ← full sanity issue report (historical)
+scripts/
+  fix_continents.py           ← replace abbreviated continent codes with full names
+  fix_duplicates.py           ← remove duplicate species entries
+  fix_empty_genera.py         ← remove genus nodes with no children
+  fix_lineage.py              ← infer missing lineage from parent genus
+  fix_subspecies.py           ← add subspeciesCount: 0 to species missing it
+  fix_all_descriptions.py     ← generate descriptions for all species based on lineage/genus
 ```
 
 ## Adding a new family — checklist
@@ -94,6 +103,24 @@ portal/
 7. Push
 
 Check `shared/data/pending-eponyms.json` — if the family's slug appears, add those species with `namedAfter` set and remove the entry.
+
+## Fixing sanity issues
+
+`portal/data/sanity-queue.json` documents 4057 issues across 66 families that were detected and fixed. All issues have been resolved. Fix scripts live in `scripts/`:
+
+| Script | Fixes |
+|---|---|
+| `fix_continents.py` | Replaces abbreviated continent codes (`"EU"` → `"Europe"`) with full names |
+| `fix_duplicates.py` | Removes duplicate species entries |
+| `fix_empty_genera.py` | Removes genus nodes with no children |
+| `fix_lineage.py` | Infers missing `lineage` field from parent genus |
+| `fix_subspecies.py` | Adds `subspeciesCount: 0` to species nodes missing it |
+| `fix_all_descriptions.py` | Generates descriptions for all species based on lineage/genus |
+
+**Workflow for a new sanity scan:**
+1. Run each fix script from repo root
+2. Rebuild and verify: `cd portal && sh scripts/buildData.sh`
+3. Update `sanity-queue.json` to reflect remaining issues
 
 ## TaxonNode ranks
 
