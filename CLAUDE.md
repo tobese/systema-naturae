@@ -51,6 +51,11 @@ scripts/
   fix_lineage.py              ← infer missing lineage from parent genus
   fix_subspecies.py           ← add subspeciesCount: 0 to species missing it
   fix_all_descriptions.py     ← generate descriptions for all species based on lineage/genus
+  enrich_lap2.py              ← 15 families, +687 species (Tier 2 families)
+  enrich_lap3.py              ← 12 easy-pick families, +223 species
+  enrich_lap3_final.py        ← +298 more species across 13 families
+  enrich_bulk.py              ← bulk generator using compact tuple format
+  enrich_clean.py             ← name-deduped enrichment after clean
 ```
 
 ## Adding a new family — checklist
@@ -85,24 +90,51 @@ scripts/
 - **Full sub-app** (`mammalia/carnivora/felidae/`, `mammalia/carnivora/canidae/`, …) — has `App.tsx`, `colors.ts`, `vite.config.ts`; runs standalone and in the portal.
 - **Data-only** (`aves/passeriformes/corvidae/`, `aves/piciformes/picidae/`, …) — only `src/data/<family>.json`; portal-only until a full app is built.
 
-## Enriching existing families (agent workflow)
+## Coverage status (as of June 2026)
 
-`portal/data/enrichment-queue.json` lists 95 families that need more species, ranked by class/order. Each entry contains:
-- `dataFile` — path to edit (relative to repo root)
-- `existingSpecies` — already-present species names (avoid duplicates)
-- `targetAdd` — number of notable species to add
-- `knownSpeciesCount` — real-world total for context
+**93 green families** (portal count ≥ known species count)
+**47 amber families** (still needing more species)
+**0 grey families** (not imported)
 
-**Workflow for one family:**
-1. Read the entry from `enrichment-queue.json`
-2. Read `<dataFile>` to understand the existing genus structure
-3. Add `targetAdd` well-known/notable SPECIES nodes (scientific name + commonName + continents + description + subspeciesCount; add `namedAfter` where applicable)
-4. Run `cd portal && sh scripts/buildData.sh` — must produce zero warnings
-5. Commit `<dataFile>` with message: `Add N species to FamilyName`
-6. Remove the completed entry from `enrichment-queue.json` and commit that separately
-7. Push
+Coverage modal in the portal shows all 140 families. `fix_duplicates.py` must be run after bulk enrichment to deduplicate.
 
-Check `shared/data/pending-eponyms.json` — if the family's slug appears, add those species with `namedAfter` set and remove the entry.
+## Enrichment plan — remaining 47 amber families
+
+`portal/data/enrichment-queue.json` is empty (all 95 original entries completed).
+
+The 47 remaining families sorted by need (portal count vs known species count):
+
+### Near-green (need ≤ 100) — 13 families
+sylviidae (54/55, need 1), corvidae (116/133, need 17), didelphidae (95/120, need 25), sicariidae (135/160, need 25), sturnidae (92/130, need 38), scorpionidae (159/200, need 41), cuculidae (81/140, need 59), turdidae (112/174, need 62), chamaeleonidae (149/213, need 64), rallidae (87/153, need 66), pteropodidae (129/197, need 68), fringillidae (148/230, need 82), clupeidae (113/200, need 87)
+
+### Tier 1 (need 101–200) — 7 families
+phyllostomidae (114/220, need 106), picidae (105/240, need 135), strigidae (95/230, need 135), percidae (99/240, need 141), accipitridae (116/260, need 144), dendrobatidae (107/300, need 193)
+
+### Tier 2 (need 200–500) — 12 families
+muscicapidae (105/324, need 219), sciuridae (53/285, need 232), viperidae (107/370, need 263), elapidae (105/370, need 265), columbidae (71/344, need 273), ranidae (87/370, need 283), vespertilionidae (103/400, need 297), lacertidae (49/350, need 301), soricidae (36/385, need 349), plethodontidae (90/470, need 380), agamidae (73/500, need 427), bufonidae (81/600, need 519)
+
+### Tier 3 (need 500–2000) — 10 families
+microhylidae (92/700, need 608), muridae (75/730, need 655), cricetidae (72/730, need 658), hylidae (91/1000, need 909), theraphosidae (66/1000, need 934), gekkonidae (96/1100, need 1004), buthidae (117/1200, need 1083), tardigrada (129/1300, need 1171), scincidae (116/1600, need 1484), colubridae (62/1900, need 1838)
+
+### Tier 4 (need 2000+) — 6 families
+lycosidae (85/2400, need 2315), theridiidae (88/2500, need 2412), cyprinidae (140/3000, need 2860), araneidae (86/3100, need 3014), apidae (63/5700, need 5637), salticidae (76/6380, need 6304)
+
+**Total species needed to fill all gaps: ~32,451**
+
+### Recommended approach
+- The 13 enrichment scripts in `scripts/` (enrich_lap2.py, enrich_lap3.py, enrich_lap3_final.py, enrich_bulk.py, enrich_clean.py, etc.) serve as templates
+- For each family: read current data, identify existing genera, add unique species to existing genera (new genera only when necessary), run `fix_duplicates.py` after each batch
+- Use `cd portal && sh scripts/buildData.sh` to verify zero warnings
+- Builds: `npm run dev` starts the portal; `npm run build` for production
+- After each batch: commit data files, push
+
+### Lessons learned
+- `fix_duplicates.py` must be run after any enrichment run to remove duplicates
+- Adding to existing genera is safer than creating new ones
+- Bulk scripts using compact tuple formats are efficient for large batches
+- Random suffix IDs (`U12345`, `Z54321`) avoid ID collisions but reduce readability
+- Always verify with a build after each enrichment pass
+- Known species counts in taxonomy.json may be updated independently, shifting coverage status
 
 ## Fixing sanity issues
 
