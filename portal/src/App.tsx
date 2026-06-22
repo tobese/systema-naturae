@@ -107,6 +107,11 @@ export default function App() {
     return find(annotatedData);
   }, [focusedFamilySlug]);
 
+  // On initial render with URL-driven focus, zoom to the focused family
+  if (!pendingZoomId.current && focusedFamilyId) {
+    pendingZoomId.current = focusedFamilyId;
+  }
+
   const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
     annotatedData,
     focusedFamilyId,
@@ -231,8 +236,8 @@ export default function App() {
   );
 
   const breadcrumbPath = useMemo(
-    () => selected ? getPathToNode(treeData, selected.id) : [],
-    [selected, treeData],
+    () => selected ? getPathToNode(annotatedData, selected.id) : [],
+    [selected, annotatedData],
   );
 
   const subfamiliesForPanel = useMemo(() => {

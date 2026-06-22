@@ -5,34 +5,41 @@ import { COLOR_REGISTRY } from "../colorRegistry";
 
 const CLASS_PALETTE = buildClassPalette();
 
-// Prune FAMILY nodes' children so only the focused family shows species.
-// Non-focused FAMILY nodes appear as leaves.
+// Overview mode: collapse all families to leaf nodes (no species shown).
+// Focused mode: return only the focused family subtree (rooted at the family).
 function pruneTree(
   node: TaxonNode,
   focusedFamilyId: string | null,
   expandedSubspeciesIds: Set<string>,
   expandedBreedIds: Set<string>,
-): TaxonNode {
-  if (node.rank === "FAMILY") {
-    if (!focusedFamilyId || node.id !== focusedFamilyId) {
+): TaxonNode | null {
+  if (!focusedFamilyId) {
+    if (node.rank === "FAMILY") {
       const { children: _c, ...rest } = node;
       return rest as TaxonNode;
     }
-    // Focused family: recurse with subspecies/breed collapse
-    return {
-      ...node,
-      children: node.children?.map(c =>
-        collapseSpeciesLevel(c, expandedSubspeciesIds, expandedBreedIds)
-      ),
-    };
+    if (!node.children) return node;
+    return { ...node, children: node.children.map(c => pruneTree(c, null, expandedSubspeciesIds, expandedBreedIds)).filter((c): c is TaxonNode => c !== null) };
   }
-  if (!node.children) return node;
-  return {
-    ...node,
-    children: node.children.map(c =>
-      pruneTree(c, focusedFamilyId, expandedSubspeciesIds, expandedBreedIds)
-    ),
-  };
+
+  // Focused mode: return only the focused family subtree (rooted at the family).
+  function find(n: TaxonNode): TaxonNode | null {
+    if (n.rank === "FAMILY") {
+      if (n.id !== focusedFamilyId) return null;
+      return {
+        ...n,
+        children: n.children?.map(c =>
+          collapseSpeciesLevel(c, expandedSubspeciesIds, expandedBreedIds)
+        ),
+      };
+    }
+    for (const c of n.children ?? []) {
+      const found = find(c);
+      if (found) return found;
+    }
+    return null;
+  }
+  return find(node);
 }
 
 // Within a focused family's subtree: collapse subspecies and breeds by default.
@@ -115,7 +122,7 @@ export function useUnifiedTree(
   findNodeById: (id: string) => TaxonNode | null;
 } {
   const treeData = useMemo(
-    () => pruneTree(annotatedData, focusedFamilyId, expandedSubspeciesIds, expandedBreedIds),
+    () => pruneTree(annotatedData, focusedFamilyId, expandedSubspeciesIds, expandedBreedIds) ?? annotatedData,
     [annotatedData, focusedFamilyId, expandedSubspeciesIds, expandedBreedIds],
   );
 

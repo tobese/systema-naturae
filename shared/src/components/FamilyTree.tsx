@@ -209,6 +209,8 @@ export default function FamilyTree({
   const savedZoomRef = useRef<d3.ZoomTransform | null>(null);
   const prevTreeKeyRef = useRef<string>("root");
 
+  const zoomAnchorRef = useRef<{ sx: number; sy: number } | null>(null);
+
   const attachTooltip = useCallback((
     sel: d3.Selection<SVGGElement, PNode, SVGGElement, unknown>,
   ) => {
@@ -327,12 +329,7 @@ export default function FamilyTree({
 
       ptNode = root as PNode;
 
-      // Focus+context: give the focused family 65% of the arc, others 35%
-      // When focusedFamilySlug is set, pruning already clears other families' children,
-      // so the focused subtree naturally takes most of the circle — skip remapping.
-      if (focusedFamilySlug && !focusedClassId) {
-        // pruned: nop
-      } else if (focusedClassId) {
+      if (focusedClassId) {
         remapAnglesForClass(ptNode.descendants(), focusedClassId);
       }
 
@@ -461,10 +458,19 @@ export default function FamilyTree({
     const merged = nodeEnter.merge(nodeSel);
 
     // Update click handler (refreshes stale closures on every render)
-    merged.on("click", (_, d) => onSelect(d.data));
+    merged.on("click", (_, d) => {
+      const cur = d3.zoomTransform(svg);
+      if (layout === "radial") {
+        const a = d.x - Math.PI / 2;
+        zoomAnchorRef.current = { sx: d.y * Math.cos(a) * cur.k + cur.x, sy: d.y * Math.sin(a) * cur.k + cur.y };
+      } else {
+        zoomAnchorRef.current = { sx: d.y * cur.k + cur.x, sy: d.x * cur.k + cur.y };
+      }
+      onSelect(d.data);
+    });
 
-    // Animate position + opacity
-    merged.transition().duration(DURATION)
+    // Animate position + opacity (instant on structure change to avoid layout-shift before zoom)
+    merged.transition().duration(layoutChanged ? 0 : DURATION)
       .attr("transform", nodeTransform)
       .style("opacity", nodeOpacity);
 
@@ -638,8 +644,8 @@ export default function FamilyTree({
     }
 
     const zoomTarget = pendingZoomId.current;
+    pendingZoomId.current = null;
     if (zoomTarget) {
-      pendingZoomId.current = null;
       const target = ptNode.descendants().find(d => d.data.id === zoomTarget);
       if (target) {
         const scale = 2.4;
@@ -648,16 +654,27 @@ export default function FamilyTree({
           const angle = target.x - Math.PI / 2;
           tx = target.y * Math.cos(angle);
           ty = target.y * Math.sin(angle);
-          d3.select(svg).transition().duration(700).call(
-            zoom.transform,
-            d3.zoomIdentity.translate(W / 2 - tx * scale, H / 2 - ty * scale).scale(scale),
-          );
         } else {
-          d3.select(svg).transition().duration(700).call(
-            zoom.transform,
-            d3.zoomIdentity.translate(W / 2 - target.y * scale, H / 2 - target.x * scale).scale(scale),
-          );
+          tx = target.y;
+          ty = target.x;
         }
+
+        // Keep the target node at its pre-click screen position while zooming
+        // (anchor persists across Strict Mode double-render — never cleared)
+        const anchor = zoomAnchorRef.current;
+        let sx: number, sy: number;
+        if (anchor) {
+          sx = anchor.sx; sy = anchor.sy;
+        } else {
+          const cur = d3.zoomTransform(svg);
+          sx = tx * cur.k + cur.x;
+          sy = ty * cur.k + cur.y;
+        }
+
+        d3.select(svg).transition().duration(700).call(
+          zoom.transform,
+          d3.zoomIdentity.translate(sx - tx * scale, sy - ty * scale).scale(scale),
+        );
       }
     }
   }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId, attachTooltip]);
