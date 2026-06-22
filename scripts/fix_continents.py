@@ -65,6 +65,9 @@ def main():
             with open(path, 'r') as f:
                 data = json.load(f)
             
+            if data.get("rank") != "FAMILY":
+                continue
+            
             fixed = fix_continents_in_node(data)
             if fixed > 0:
                 with open(path, 'w') as f:

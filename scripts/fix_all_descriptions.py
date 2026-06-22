@@ -82,6 +82,8 @@ for path in sorted(files):
     try:
         with open(path) as f:
             data = json.load(f)
+        if data.get("rank") != "FAMILY":
+            continue
         family = data.get("name", "")
         
         extra = {}
