@@ -900,6 +900,14 @@ const LANIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grey
 
 const ORIOLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurasian Orioles": "#e8c830", "Asian Orioles": "#e8b820", "African Orioles": "#d8a828", "Australasian Orioles": "#90a840", "Figbirds": "#78a058" }, breedGroupColor: "#d0b030", hybridColor: "#e8d060" };
 
+const REMIZIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurasian Penduline Tits": "#c8a050", "African Penduline Tits": "#889870" }, breedGroupColor: "#b09848", hybridColor: "#d0b870" };
+
+const CINCLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dippers": "#4a6070" }, breedGroupColor: "#3a5060", hybridColor: "#6a8098" };
+
+const PANURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bearded Reedling": "#c87838" }, breedGroupColor: "#b06828", hybridColor: "#e09858" };
+
+const CISTICOLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cetti's Warblers": "#a06848", "Cisticolas": "#8a8870", "Prinias": "#a89860" }, breedGroupColor: "#a08058", hybridColor: "#c8a878" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1197,6 +1205,10 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   locustellidae:   LOCUSTELLIDAE_THEME,
   laniidae:        LANIIDAE_THEME,
   oriolidae:       ORIOLIDAE_THEME,
+  remizidae:       REMIZIDAE_THEME,
+  cinclidae:       CINCLIDAE_THEME,
+  panuridae:       PANURIDAE_THEME,
+  cisticolidae:    CISTICOLIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
