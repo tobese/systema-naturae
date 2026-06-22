@@ -958,6 +958,166 @@ const SAGITTARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { 
 const CATHARTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "New World Vultures": "#403838" }, breedGroupColor: "#302828", hybridColor: "#605858" };
 const JACANIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Jacanas": "#886848" }, breedGroupColor: "#785838", hybridColor: "#a88868" };
 
+const ACANTHISITTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Acanthisittidae": "#889098" }, breedGroupColor: "#889098", hybridColor: "#a8b0b8" };
+const ACANTHIZIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Acanthizidae": "#90a060" }, breedGroupColor: "#90a060", hybridColor: "#a8b0b8" };
+const AEGITHINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Aegithinidae": "#c8a820" }, breedGroupColor: "#c8a820", hybridColor: "#a8b0b8" };
+const AEGOTHELIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Aegothelidae": "#889078" }, breedGroupColor: "#889078", hybridColor: "#a8b0b8" };
+const ALCIPPEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Alcippeidae": "#989068" }, breedGroupColor: "#989068", hybridColor: "#a8b0b8" };
+const ANHIMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Anhimidae": "#687870" }, breedGroupColor: "#687870", hybridColor: "#a8b0b8" };
+const ANSERANATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Anseranatidae": "#c0b8a0" }, breedGroupColor: "#c0b8a0", hybridColor: "#a8b0b8" };
+const APTERYGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Apterygidae": "#8a7a58" }, breedGroupColor: "#8a7a58", hybridColor: "#a8b0b8" };
+const ARAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Aramidae": "#788878" }, breedGroupColor: "#788878", hybridColor: "#a8b0b8" };
+const ARTAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Artamidae": "#406090" }, breedGroupColor: "#406090", hybridColor: "#a8b0b8" };
+const ATRICHORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Atrichornithidae": "#8a7860" }, breedGroupColor: "#8a7860", hybridColor: "#a8b0b8" };
+const BALAENICIPITIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Balaenicipitidae": "#788088" }, breedGroupColor: "#788088", hybridColor: "#a8b0b8" };
+const BERNIERIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bernieriidae": "#a0a068" }, breedGroupColor: "#a0a068", hybridColor: "#a8b0b8" };
+const BRACHYPTERACIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Brachypteraciidae": "#60a888" }, breedGroupColor: "#60a888", hybridColor: "#a8b0b8" };
+const BUCCONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bucconidae": "#887058" }, breedGroupColor: "#887058", hybridColor: "#a8b0b8" };
+const BUCEROTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bucerotidae": "#e8a820" }, breedGroupColor: "#e8a820", hybridColor: "#a8b0b8" };
+const BUCORVIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bucorvidae": "#484848" }, breedGroupColor: "#484848", hybridColor: "#a8b0b8" };
+const BUPHAGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Buphagidae": "#c87030" }, breedGroupColor: "#c87030", hybridColor: "#a8b0b8" };
+const CALCARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Calcariidae": "#a09870" }, breedGroupColor: "#a09870", hybridColor: "#a8b0b8" };
+const CALLAEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Callaeidae": "#486868" }, breedGroupColor: "#486868", hybridColor: "#a8b0b8" };
+const CALYPTOMENIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Calyptomenidae": "#30a840" }, breedGroupColor: "#30a840", hybridColor: "#a8b0b8" };
+const CALYPTOPHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Calyptophilidae": "#989068" }, breedGroupColor: "#989068", hybridColor: "#a8b0b8" };
+const CAMPEPHAGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Campephagidae": "#689098" }, breedGroupColor: "#689098", hybridColor: "#a8b0b8" };
+const CAPITONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Capitonidae": "#d86828" }, breedGroupColor: "#d86828", hybridColor: "#a8b0b8" };
+const CARIAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cariamidae": "#a09878" }, breedGroupColor: "#a09878", hybridColor: "#a8b0b8" };
+const CASUARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Casuariidae": "#5a6850" }, breedGroupColor: "#5a6850", hybridColor: "#a8b0b8" };
+const CETTIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cettiidae": "#a08858" }, breedGroupColor: "#a08858", hybridColor: "#a8b0b8" };
+const CHAETOPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Chaetopidae": "#789080" }, breedGroupColor: "#789080", hybridColor: "#a8b0b8" };
+const CHIONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Chionidae": "#d0d0d8" }, breedGroupColor: "#d0d0d8", hybridColor: "#a8b0b8" };
+const CHLOROPSEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Chloropseidae": "#40a858" }, breedGroupColor: "#40a858", hybridColor: "#a8b0b8" };
+const CINCLOSOMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cinclosomatidae": "#7888a0" }, breedGroupColor: "#7888a0", hybridColor: "#a8b0b8" };
+const CLIMACTERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Climacteridae": "#a07048" }, breedGroupColor: "#a07048", hybridColor: "#a8b0b8" };
+const CNEMOPHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cnemophilidae": "#88a040" }, breedGroupColor: "#88a040", hybridColor: "#a8b0b8" };
+const COLIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Coliidae": "#a09070" }, breedGroupColor: "#a09070", hybridColor: "#a8b0b8" };
+const CONOPOPHAGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Conopophagidae": "#b09868" }, breedGroupColor: "#b09868", hybridColor: "#a8b0b8" };
+const CORCORACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Corcoracidae": "#585850" }, breedGroupColor: "#585850", hybridColor: "#a8b0b8" };
+const COTINGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cotingidae": "#c04840" }, breedGroupColor: "#c04840", hybridColor: "#a8b0b8" };
+const CRACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cracidae": "#5a6840" }, breedGroupColor: "#5a6840", hybridColor: "#a8b0b8" };
+const DASYORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dasyornithidae": "#a08058" }, breedGroupColor: "#a08058", hybridColor: "#a8b0b8" };
+const DICAEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dicaeidae": "#c06048" }, breedGroupColor: "#c06048", hybridColor: "#a8b0b8" };
+const DICRURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dicruridae": "#283848" }, breedGroupColor: "#283848", hybridColor: "#a8b0b8" };
+const DONACOBIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Donacobiidae": "#706850" }, breedGroupColor: "#706850", hybridColor: "#a8b0b8" };
+const DROMADIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dromadidae": "#d0c8b0" }, breedGroupColor: "#d0c8b0", hybridColor: "#a8b0b8" };
+const DULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dulidae": "#a08838" }, breedGroupColor: "#a08838", hybridColor: "#a8b0b8" };
+const ELACHURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Elachuridae": "#8a7868" }, breedGroupColor: "#8a7868", hybridColor: "#a8b0b8" };
+const ERYTHROCERCIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Erythrocercidae": "#d89838" }, breedGroupColor: "#d89838", hybridColor: "#a8b0b8" };
+const EULACESTOMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eulacestomatidae": "#a08048" }, breedGroupColor: "#a08048", hybridColor: "#a8b0b8" };
+const EUPETIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eupetidae": "#5a6840" }, breedGroupColor: "#5a6840", hybridColor: "#a8b0b8" };
+const EURYLAIMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurylaimidae": "#889098" }, breedGroupColor: "#889098", hybridColor: "#a8b0b8" };
+const EURYPYGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurypygidae": "#a09848" }, breedGroupColor: "#a09848", hybridColor: "#a8b0b8" };
+const FALCUNCULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Falcunculidae": "#a8a030" }, breedGroupColor: "#a8a030", hybridColor: "#a8b0b8" };
+const FORMICARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Formicariidae": "#7a6850" }, breedGroupColor: "#7a6850", hybridColor: "#a8b0b8" };
+const FURNARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Furnariidae": "#a07848" }, breedGroupColor: "#a07848", hybridColor: "#a8b0b8" };
+const GALBULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Galbulidae": "#30a888" }, breedGroupColor: "#30a888", hybridColor: "#a8b0b8" };
+const GRALLARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grallariidae": "#887050" }, breedGroupColor: "#887050", hybridColor: "#a8b0b8" };
+const HELIORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Heliornithidae": "#687860" }, breedGroupColor: "#687860", hybridColor: "#a8b0b8" };
+const HEMIPROCNIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hemiprocnidae": "#6878a0" }, breedGroupColor: "#6878a0", hybridColor: "#a8b0b8" };
+const HYLIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hyliidae": "#68a058" }, breedGroupColor: "#68a058", hybridColor: "#a8b0b8" };
+const HYLIOTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hyliotidae": "#7088a0" }, breedGroupColor: "#7088a0", hybridColor: "#a8b0b8" };
+const HYLOCITREIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hylocitreidae": "#789068" }, breedGroupColor: "#789068", hybridColor: "#a8b0b8" };
+const HYPOCOLIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hypocoliidae": "#a8a080" }, breedGroupColor: "#a8a080", hybridColor: "#a8b0b8" };
+const IBIDORHYNCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ibidorhynchidae": "#b0a090" }, breedGroupColor: "#b0a090", hybridColor: "#a8b0b8" };
+const ICTERIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Icteriidae": "#c8a820" }, breedGroupColor: "#c8a820", hybridColor: "#a8b0b8" };
+const IFRITIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ifritidae": "#3868a8" }, breedGroupColor: "#3868a8", hybridColor: "#a8b0b8" };
+const INDICATORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Indicatoridae": "#889868" }, breedGroupColor: "#889868", hybridColor: "#a8b0b8" };
+const IRENIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Irenidae": "#2868a8" }, breedGroupColor: "#2868a8", hybridColor: "#a8b0b8" };
+const LEIOTHRICHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Leiothrichidae": "#d8a030" }, breedGroupColor: "#d8a030", hybridColor: "#a8b0b8" };
+const LEPTOSOMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Leptosomidae": "#7090a0" }, breedGroupColor: "#7090a0", hybridColor: "#a8b0b8" };
+const LYBIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lybiidae": "#c87020" }, breedGroupColor: "#c87020", hybridColor: "#a8b0b8" };
+const MACHAERIRHYNCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Machaerirhynchidae": "#c8a848" }, breedGroupColor: "#c8a848", hybridColor: "#a8b0b8" };
+const MACROSPHENIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Macrosphenidae": "#98a068" }, breedGroupColor: "#98a068", hybridColor: "#a8b0b8" };
+const MALACONOTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Malaconotidae": "#c87038" }, breedGroupColor: "#c87038", hybridColor: "#a8b0b8" };
+const MALURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Maluridae": "#3880c0" }, breedGroupColor: "#3880c0", hybridColor: "#a8b0b8" };
+const MEGAPODIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Megapodiidae": "#786050" }, breedGroupColor: "#786050", hybridColor: "#a8b0b8" };
+const MELAMPITTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Melampittidae": "#484040" }, breedGroupColor: "#484040", hybridColor: "#a8b0b8" };
+const MELANOCHARITIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Melanocharitidae": "#687050" }, breedGroupColor: "#687050", hybridColor: "#a8b0b8" };
+const MELANOPAREIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Melanopareiidae": "#a09060" }, breedGroupColor: "#a09060", hybridColor: "#a8b0b8" };
+const MELIPHAGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Meliphagidae": "#789048" }, breedGroupColor: "#789048", hybridColor: "#a8b0b8" };
+const MESITORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mesitornithidae": "#b09868" }, breedGroupColor: "#b09868", hybridColor: "#a8b0b8" };
+const MITROSPINGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mitrospingidae": "#689868" }, breedGroupColor: "#689868", hybridColor: "#a8b0b8" };
+const MODULATRICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Modulatricidae": "#908070" }, breedGroupColor: "#908070", hybridColor: "#a8b0b8" };
+const MOHOIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mohoidae": "#887860" }, breedGroupColor: "#887860", hybridColor: "#a8b0b8" };
+const MOHOUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mohouidae": "#a09068" }, breedGroupColor: "#a09068", hybridColor: "#a8b0b8" };
+const MOMOTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Momotidae": "#40a868" }, breedGroupColor: "#40a868", hybridColor: "#a8b0b8" };
+const MONARCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Monarchidae": "#3878a8" }, breedGroupColor: "#3878a8", hybridColor: "#a8b0b8" };
+const MUSOPHAGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Musophagidae": "#30a860" }, breedGroupColor: "#30a860", hybridColor: "#a8b0b8" };
+const NEOSITTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Neosittidae": "#788878" }, breedGroupColor: "#788878", hybridColor: "#a8b0b8" };
+const NESOSPINGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nesospingidae": "#787860" }, breedGroupColor: "#787860", hybridColor: "#a8b0b8" };
+const NICATORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nicatoridae": "#789048" }, breedGroupColor: "#789048", hybridColor: "#a8b0b8" };
+const NOTIOMYSTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Notiomystidae": "#689898" }, breedGroupColor: "#689898", hybridColor: "#a8b0b8" };
+const NYCTIBIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nyctibiidae": "#a09878" }, breedGroupColor: "#a09878", hybridColor: "#a8b0b8" };
+const OCEANITIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Oceanitidae": "#485868" }, breedGroupColor: "#485868", hybridColor: "#a8b0b8" };
+const ODONTOPHORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Odontophoridae": "#a09860" }, breedGroupColor: "#a09860", hybridColor: "#a8b0b8" };
+const OPISTHOCOMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Opisthocomidae": "#a08848" }, breedGroupColor: "#a08848", hybridColor: "#a8b0b8" };
+const OREOICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Oreoicidae": "#888860" }, breedGroupColor: "#888860", hybridColor: "#a8b0b8" };
+const ORTHONYCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Orthonychidae": "#786850" }, breedGroupColor: "#786850", hybridColor: "#a8b0b8" };
+const PACHYCEPHALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pachycephalidae": "#c89840" }, breedGroupColor: "#c89840", hybridColor: "#a8b0b8" };
+const PARADOXORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Paradoxornithidae": "#a08058" }, breedGroupColor: "#a08058", hybridColor: "#a8b0b8" };
+const PARAMYTHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Paramythiidae": "#6090a8" }, breedGroupColor: "#6090a8", hybridColor: "#a8b0b8" };
+const PARDALOTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pardalotidae": "#a8a050" }, breedGroupColor: "#a8a050", hybridColor: "#a8b0b8" };
+const PASSERELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Passerellidae": "#889070" }, breedGroupColor: "#889070", hybridColor: "#a8b0b8" };
+const PEDIONOMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pedionomidae": "#c0a870" }, breedGroupColor: "#c0a870", hybridColor: "#a8b0b8" };
+const PELLORNEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pellorneidae": "#887058" }, breedGroupColor: "#887058", hybridColor: "#a8b0b8" };
+const PETROICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Petroicidae": "#d04828" }, breedGroupColor: "#d04828", hybridColor: "#a8b0b8" };
+const PEUCEDRAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Peucedramidae": "#c8a828" }, breedGroupColor: "#c8a828", hybridColor: "#a8b0b8" };
+const PHAENICOPHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Phaenicophilidae": "#68a058" }, breedGroupColor: "#68a058", hybridColor: "#a8b0b8" };
+const PHAETHONTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Phaethontidae": "#e8e8e0" }, breedGroupColor: "#e8e8e0", hybridColor: "#a8b0b8" };
+const PHILEPITTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Philepittidae": "#60a028" }, breedGroupColor: "#60a028", hybridColor: "#a8b0b8" };
+const PHOENICULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Phoeniculidae": "#2888a0" }, breedGroupColor: "#2888a0", hybridColor: "#a8b0b8" };
+const PICATHARTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Picathartidae": "#d8c8a0" }, breedGroupColor: "#d8c8a0", hybridColor: "#a8b0b8" };
+const PIPRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pipridae": "#3858a0" }, breedGroupColor: "#3858a0", hybridColor: "#a8b0b8" };
+const PITTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pittidae": "#c84848" }, breedGroupColor: "#c84848", hybridColor: "#a8b0b8" };
+const PITYRIASIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pityriasidae": "#483830" }, breedGroupColor: "#483830", hybridColor: "#a8b0b8" };
+const PLATYLOPHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Platylophidae": "#506880" }, breedGroupColor: "#506880", hybridColor: "#a8b0b8" };
+const PLATYSTEIRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Platysteiridae": "#5880a0" }, breedGroupColor: "#5880a0", hybridColor: "#a8b0b8" };
+const PLOCEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ploceidae": "#c0a020" }, breedGroupColor: "#c0a020", hybridColor: "#a8b0b8" };
+const PLUVIANELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pluvianellidae": "#a0a8a0" }, breedGroupColor: "#a0a8a0", hybridColor: "#a8b0b8" };
+const PLUVIANIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pluvianidae": "#b0b8a0" }, breedGroupColor: "#b0b8a0", hybridColor: "#a8b0b8" };
+const PNOEPYGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pnoepygidae": "#a88860" }, breedGroupColor: "#a88860", hybridColor: "#a8b0b8" };
+const PODARGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Podargidae": "#a08868" }, breedGroupColor: "#a08868", hybridColor: "#a8b0b8" };
+const POMATOSTOMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pomatostomidae": "#887060" }, breedGroupColor: "#887060", hybridColor: "#a8b0b8" };
+const PROMEROPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Promeropidae": "#a09848" }, breedGroupColor: "#a09848", hybridColor: "#a8b0b8" };
+const PSITTACULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Psittaculidae": "#20a060" }, breedGroupColor: "#20a060", hybridColor: "#a8b0b8" };
+const PSOPHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Psophiidae": "#688898" }, breedGroupColor: "#688898", hybridColor: "#a8b0b8" };
+const PSOPHODIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Psophodidae": "#a09868" }, breedGroupColor: "#a09868", hybridColor: "#a8b0b8" };
+const PTILIOGONATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ptiliogonatidae": "#6070a0" }, breedGroupColor: "#6070a0", hybridColor: "#a8b0b8" };
+const RHAGOLOGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rhagologidae": "#a08860" }, breedGroupColor: "#a08860", hybridColor: "#a8b0b8" };
+const RHEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rheidae": "#a09878" }, breedGroupColor: "#a09878", hybridColor: "#a8b0b8" };
+const RHINOCRYPTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rhinocryptidae": "#686058" }, breedGroupColor: "#686058", hybridColor: "#a8b0b8" };
+const RHIPIDURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rhipiduridae": "#688898" }, breedGroupColor: "#688898", hybridColor: "#a8b0b8" };
+const RHODINOCICHLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rhodinocichlidae": "#d07050" }, breedGroupColor: "#d07050", hybridColor: "#a8b0b8" };
+const RHYNOCHETIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rhynochetidae": "#789098" }, breedGroupColor: "#789098", hybridColor: "#a8b0b8" };
+const ROSTRATULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rostratulidae": "#b09870" }, breedGroupColor: "#b09870", hybridColor: "#a8b0b8" };
+const SALPORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Salpornithidae": "#8a7860" }, breedGroupColor: "#8a7860", hybridColor: "#a8b0b8" };
+const SAPAYOIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sapayoidae": "#50a060" }, breedGroupColor: "#50a060", hybridColor: "#a8b0b8" };
+const SAROTHRURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sarothruridae": "#a07858" }, breedGroupColor: "#a07858", hybridColor: "#a8b0b8" };
+const SCOPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Scopidae": "#8a7850" }, breedGroupColor: "#8a7850", hybridColor: "#a8b0b8" };
+const SCOTOCERCIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Scotocercidae": "#a89878" }, breedGroupColor: "#a89878", hybridColor: "#a8b0b8" };
+const SEMNORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Semnornithidae": "#c89830" }, breedGroupColor: "#c89830", hybridColor: "#a8b0b8" };
+const SPINDALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Spindalidae": "#c8a028" }, breedGroupColor: "#c8a028", hybridColor: "#a8b0b8" };
+const STEATORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Steatornithidae": "#d8c8a0" }, breedGroupColor: "#d8c8a0", hybridColor: "#a8b0b8" };
+const STENOSTIRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Stenostiridae": "#6090c0" }, breedGroupColor: "#6090c0", hybridColor: "#a8b0b8" };
+const STRIGOPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Strigopidae": "#688868" }, breedGroupColor: "#688868", hybridColor: "#a8b0b8" };
+const STRUTHIONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Struthionidae": "#807060" }, breedGroupColor: "#807060", hybridColor: "#a8b0b8" };
+const TERETISTRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Teretistridae": "#c8a020" }, breedGroupColor: "#c8a020", hybridColor: "#a8b0b8" };
+const THAMNOPHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Thamnophilidae": "#586060" }, breedGroupColor: "#586060", hybridColor: "#a8b0b8" };
+const THINOCORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Thinocoridae": "#a0a878" }, breedGroupColor: "#a0a878", hybridColor: "#a8b0b8" };
+const TICHODROMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tichodromidae": "#a09070" }, breedGroupColor: "#a09070", hybridColor: "#a8b0b8" };
+const TIMALIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Timaliidae": "#a07048" }, breedGroupColor: "#a07048", hybridColor: "#a8b0b8" };
+const TINAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tinamidae": "#a09070" }, breedGroupColor: "#a09070", hybridColor: "#a8b0b8" };
+const TITYRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tityridae": "#688898" }, breedGroupColor: "#688898", hybridColor: "#a8b0b8" };
+const TODIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Todidae": "#50b060" }, breedGroupColor: "#50b060", hybridColor: "#a8b0b8" };
+const TROGONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Trogonidae": "#20a060" }, breedGroupColor: "#20a060", hybridColor: "#a8b0b8" };
+const TURNICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Turnicidae": "#a09060" }, breedGroupColor: "#a09060", hybridColor: "#a8b0b8" };
+const UROCYNCHRAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Urocynchramidae": "#a08868" }, breedGroupColor: "#a08868", hybridColor: "#a8b0b8" };
+const VANGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Vangidae": "#60a088" }, breedGroupColor: "#60a088", hybridColor: "#a8b0b8" };
+const VIDUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Viduidae": "#384848" }, breedGroupColor: "#384848", hybridColor: "#a8b0b8" };
+const ZELEDONIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Zeledoniidae": "#687050" }, breedGroupColor: "#687050", hybridColor: "#a8b0b8" };
+const ZOSTEROPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Zosteropidae": "#68a058" }, breedGroupColor: "#68a058", hybridColor: "#a8b0b8" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1295,6 +1455,165 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   anhingidae:       ANHINGIDAE_THEME,
   sagittariidae:    SAGITTARIIDAE_THEME,
   cathartidae:      CATHARTIDAE_THEME,
+  acanthisittidae:     ACANTHISITTIDAE_THEME,
+  acanthizidae:        ACANTHIZIDAE_THEME,
+  aegithinidae:        AEGITHINIDAE_THEME,
+  aegothelidae:        AEGOTHELIDAE_THEME,
+  alcippeidae:         ALCIPPEIDAE_THEME,
+  anhimidae:           ANHIMIDAE_THEME,
+  anseranatidae:       ANSERANATIDAE_THEME,
+  apterygidae:         APTERYGIDAE_THEME,
+  aramidae:            ARAMIDAE_THEME,
+  artamidae:           ARTAMIDAE_THEME,
+  atrichornithidae:    ATRICHORNITHIDAE_THEME,
+  balaenicipitidae:    BALAENICIPITIDAE_THEME,
+  bernieriidae:        BERNIERIIDAE_THEME,
+  brachypteraciidae:   BRACHYPTERACIIDAE_THEME,
+  bucconidae:          BUCCONIDAE_THEME,
+  bucerotidae:         BUCEROTIDAE_THEME,
+  bucorvidae:          BUCORVIDAE_THEME,
+  buphagidae:          BUPHAGIDAE_THEME,
+  calcariidae:         CALCARIIDAE_THEME,
+  callaeidae:          CALLAEIDAE_THEME,
+  calyptomenidae:      CALYPTOMENIDAE_THEME,
+  calyptophilidae:     CALYPTOPHILIDAE_THEME,
+  campephagidae:       CAMPEPHAGIDAE_THEME,
+  capitonidae:         CAPITONIDAE_THEME,
+  cariamidae:          CARIAMIDAE_THEME,
+  casuariidae:         CASUARIIDAE_THEME,
+  cettiidae:           CETTIIDAE_THEME,
+  chaetopidae:         CHAETOPIDAE_THEME,
+  chionidae:           CHIONIDAE_THEME,
+  chloropseidae:       CHLOROPSEIDAE_THEME,
+  cinclosomatidae:     CINCLOSOMATIDAE_THEME,
+  climacteridae:       CLIMACTERIDAE_THEME,
+  cnemophilidae:       CNEMOPHILIDAE_THEME,
+  coliidae:            COLIIDAE_THEME,
+  conopophagidae:      CONOPOPHAGIDAE_THEME,
+  corcoracidae:        CORCORACIDAE_THEME,
+  cotingidae:          COTINGIDAE_THEME,
+  cracidae:            CRACIDAE_THEME,
+  dasyornithidae:      DASYORNITHIDAE_THEME,
+  dicaeidae:           DICAEIDAE_THEME,
+  dicruridae:          DICRURIDAE_THEME,
+  donacobiidae:        DONACOBIIDAE_THEME,
+  dromadidae:          DROMADIDAE_THEME,
+  dulidae:             DULIDAE_THEME,
+  elachuridae:         ELACHURIDAE_THEME,
+  erythrocercidae:     ERYTHROCERCIDAE_THEME,
+  eulacestomatidae:    EULACESTOMATIDAE_THEME,
+  eupetidae:           EUPETIDAE_THEME,
+  eurylaimidae:        EURYLAIMIDAE_THEME,
+  eurypygidae:         EURYPYGIDAE_THEME,
+  falcunculidae:       FALCUNCULIDAE_THEME,
+  formicariidae:       FORMICARIIDAE_THEME,
+  furnariidae:         FURNARIIDAE_THEME,
+  galbulidae:          GALBULIDAE_THEME,
+  grallariidae:        GRALLARIIDAE_THEME,
+  heliornithidae:      HELIORNITHIDAE_THEME,
+  hemiprocnidae:       HEMIPROCNIDAE_THEME,
+  hyliidae:            HYLIIDAE_THEME,
+  hyliotidae:          HYLIOTIDAE_THEME,
+  hylocitreidae:       HYLOCITREIDAE_THEME,
+  hypocoliidae:        HYPOCOLIIDAE_THEME,
+  ibidorhynchidae:     IBIDORHYNCHIDAE_THEME,
+  icteriidae:          ICTERIIDAE_THEME,
+  ifritidae:           IFRITIDAE_THEME,
+  indicatoridae:       INDICATORIDAE_THEME,
+  irenidae:            IRENIDAE_THEME,
+  leiothrichidae:      LEIOTHRICHIDAE_THEME,
+  leptosomidae:        LEPTOSOMIDAE_THEME,
+  lybiidae:            LYBIIDAE_THEME,
+  machaerirhynchidae:  MACHAERIRHYNCHIDAE_THEME,
+  macrosphenidae:      MACROSPHENIDAE_THEME,
+  malaconotidae:       MALACONOTIDAE_THEME,
+  maluridae:           MALURIDAE_THEME,
+  megapodiidae:        MEGAPODIIDAE_THEME,
+  melampittidae:       MELAMPITTIDAE_THEME,
+  melanocharitidae:    MELANOCHARITIDAE_THEME,
+  melanopareiidae:     MELANOPAREIIDAE_THEME,
+  meliphagidae:        MELIPHAGIDAE_THEME,
+  mesitornithidae:     MESITORNITHIDAE_THEME,
+  mitrospingidae:      MITROSPINGIDAE_THEME,
+  modulatricidae:      MODULATRICIDAE_THEME,
+  mohoidae:            MOHOIDAE_THEME,
+  mohouidae:           MOHOUIDAE_THEME,
+  momotidae:           MOMOTIDAE_THEME,
+  monarchidae:         MONARCHIDAE_THEME,
+  musophagidae:        MUSOPHAGIDAE_THEME,
+  neosittidae:         NEOSITTIDAE_THEME,
+  nesospingidae:       NESOSPINGIDAE_THEME,
+  nicatoridae:         NICATORIDAE_THEME,
+  notiomystidae:       NOTIOMYSTIDAE_THEME,
+  nyctibiidae:         NYCTIBIIDAE_THEME,
+  oceanitidae:         OCEANITIDAE_THEME,
+  odontophoridae:      ODONTOPHORIDAE_THEME,
+  opisthocomidae:      OPISTHOCOMIDAE_THEME,
+  oreoicidae:          OREOICIDAE_THEME,
+  orthonychidae:       ORTHONYCHIDAE_THEME,
+  pachycephalidae:     PACHYCEPHALIDAE_THEME,
+  paradoxornithidae:   PARADOXORNITHIDAE_THEME,
+  paramythiidae:       PARAMYTHIIDAE_THEME,
+  pardalotidae:        PARDALOTIDAE_THEME,
+  passerellidae:       PASSERELLIDAE_THEME,
+  pedionomidae:        PEDIONOMIDAE_THEME,
+  pellorneidae:        PELLORNEIDAE_THEME,
+  petroicidae:         PETROICIDAE_THEME,
+  peucedramidae:       PEUCEDRAMIDAE_THEME,
+  phaenicophilidae:    PHAENICOPHILIDAE_THEME,
+  phaethontidae:       PHAETHONTIDAE_THEME,
+  philepittidae:       PHILEPITTIDAE_THEME,
+  phoeniculidae:       PHOENICULIDAE_THEME,
+  picathartidae:       PICATHARTIDAE_THEME,
+  pipridae:            PIPRIDAE_THEME,
+  pittidae:            PITTIDAE_THEME,
+  pityriasidae:        PITYRIASIDAE_THEME,
+  platylophidae:       PLATYLOPHIDAE_THEME,
+  platysteiridae:      PLATYSTEIRIDAE_THEME,
+  ploceidae:           PLOCEIDAE_THEME,
+  pluvianellidae:      PLUVIANELLIDAE_THEME,
+  pluvianidae:         PLUVIANIDAE_THEME,
+  pnoepygidae:         PNOEPYGIDAE_THEME,
+  podargidae:          PODARGIDAE_THEME,
+  pomatostomidae:      POMATOSTOMIDAE_THEME,
+  promeropidae:        PROMEROPIDAE_THEME,
+  psittaculidae:       PSITTACULIDAE_THEME,
+  psophiidae:          PSOPHIIDAE_THEME,
+  psophodidae:         PSOPHODIDAE_THEME,
+  ptiliogonatidae:     PTILIOGONATIDAE_THEME,
+  rhagologidae:        RHAGOLOGIDAE_THEME,
+  rheidae:             RHEIDAE_THEME,
+  rhinocryptidae:      RHINOCRYPTIDAE_THEME,
+  rhipiduridae:        RHIPIDURIDAE_THEME,
+  rhodinocichlidae:    RHODINOCICHLIDAE_THEME,
+  rhynochetidae:       RHYNOCHETIDAE_THEME,
+  rostratulidae:       ROSTRATULIDAE_THEME,
+  salpornithidae:      SALPORNITHIDAE_THEME,
+  sapayoidae:          SAPAYOIDAE_THEME,
+  sarothruridae:       SAROTHRURIDAE_THEME,
+  scopidae:            SCOPIDAE_THEME,
+  scotocercidae:       SCOTOCERCIDAE_THEME,
+  semnornithidae:      SEMNORNITHIDAE_THEME,
+  spindalidae:         SPINDALIDAE_THEME,
+  steatornithidae:     STEATORNITHIDAE_THEME,
+  stenostiridae:       STENOSTIRIDAE_THEME,
+  strigopidae:         STRIGOPIDAE_THEME,
+  struthionidae:       STRUTHIONIDAE_THEME,
+  teretistridae:       TERETISTRIDAE_THEME,
+  thamnophilidae:      THAMNOPHILIDAE_THEME,
+  thinocoridae:        THINOCORIDAE_THEME,
+  tichodromidae:       TICHODROMIDAE_THEME,
+  timaliidae:          TIMALIIDAE_THEME,
+  tinamidae:           TINAMIDAE_THEME,
+  tityridae:           TITYRIDAE_THEME,
+  todidae:             TODIDAE_THEME,
+  trogonidae:          TROGONIDAE_THEME,
+  turnicidae:          TURNICIDAE_THEME,
+  urocynchramidae:     UROCYNCHRAMIDAE_THEME,
+  vangidae:            VANGIDAE_THEME,
+  viduidae:            VIDUIDAE_THEME,
+  zeledoniidae:        ZELEDONIIDAE_THEME,
+  zosteropidae:        ZOSTEROPIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
