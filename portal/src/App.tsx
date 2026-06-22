@@ -121,6 +121,7 @@ export default function App() {
     // KINGDOM/PHYLUM click → clear class focus, select this node (single atomic update)
     if (node.rank === "KINGDOM" || node.rank === "PHYLUM") {
       setFocusedClass(null, node.id);
+      pendingZoomId.current = node.id;
       return;
     }
 
@@ -128,6 +129,7 @@ export default function App() {
     if (node.rank === "CLASS") {
       if (node.id === focusedClassId) {
         setFocusedClass(null, null);
+        pendingZoomId.current = node.id;
       } else {
         setFocusedClass(node.id, node.id);
         pendingZoomId.current = node.id;
