@@ -934,6 +934,30 @@ const BURHINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Th
 
 const GLAREOLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pratincoles": "#c8a060", "Coursers": "#d0b880" }, breedGroupColor: "#c0a870", hybridColor: "#d8c8a0" };
 
+const NUMIDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Guineafowl": "#607888" }, breedGroupColor: "#506878", hybridColor: "#8098a8" };
+const RAMPHASTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Large Toucans": "#e8a020", "Green Toucanets": "#30a860", "Aracaris": "#d86828" }, breedGroupColor: "#c89030", hybridColor: "#e8b860" };
+const MEGALAIMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Asian Barbets": "#40a860" }, breedGroupColor: "#309850", hybridColor: "#60c880" };
+const CACATUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "White Cockatoos": "#e8e8e0", "Galahs": "#e8a0a0", "Gang-gangs": "#8890a0", "Cockatiels": "#c0b080" }, breedGroupColor: "#d0d0c8", hybridColor: "#e8e8d8" };
+const DIOMEDEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Great Albatrosses": "#d0d8e0", "Mollymawks": "#a0b8c8", "Sooty Albatrosses": "#586878" }, breedGroupColor: "#b0c0d0", hybridColor: "#d0d8e8" };
+const MENURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lyrebirds": "#7a6850" }, breedGroupColor: "#6a5840", hybridColor: "#9a8870" };
+const MIMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mockingbirds": "#889098", "Thrashers": "#a08860" }, breedGroupColor: "#889098", hybridColor: "#a8b0b8" };
+const NECTARINIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sunbirds": "#3880b8", "Spiderhunters": "#789860" }, breedGroupColor: "#3880b8", hybridColor: "#70b0d8" };
+const PARADISAEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Paradisaea": "#e8a020", "Cicinnurus": "#d82838", "Lophorina": "#202838", "Seleucidis": "#d8a808" }, breedGroupColor: "#c88828", hybridColor: "#e8c060" };
+const PTILONORHYNCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bowerbirds": "#6878a0" }, breedGroupColor: "#586890", hybridColor: "#8898b8" };
+const PYCNONOTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bulbuls": "#886070" }, breedGroupColor: "#785060", hybridColor: "#a88898" };
+const ESTRILDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Waxbills & Munias": "#c87058" }, breedGroupColor: "#b06048", hybridColor: "#e09880" };
+const ICTERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "New World Blackbirds": "#283840" }, breedGroupColor: "#202830", hybridColor: "#485868" };
+const CARDINALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cardinals & Grosbeaks": "#c82028", "Buntings": "#2860a8" }, breedGroupColor: "#c02028", hybridColor: "#e06068" };
+const PARULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "New World Warblers": "#d8a820" }, breedGroupColor: "#c89810", hybridColor: "#e8c850" };
+const THRAUPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tanagers": "#2088c8" }, breedGroupColor: "#2078b0", hybridColor: "#60b0d8" };
+const TYRANNIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kingbirds": "#385878", "Phoebes": "#788898", "Empidonax Flycatchers": "#90a068", "Kiskadees": "#d8a020", "Vermilion Flycatchers": "#d82828" }, breedGroupColor: "#486888", hybridColor: "#7898b0" };
+const VIREONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Vireos": "#789860", "Peppershrikes": "#a89848" }, breedGroupColor: "#789860", hybridColor: "#a0b880" };
+const FREGATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Frigatebirds": "#202838" }, breedGroupColor: "#181828", hybridColor: "#384860" };
+const ANHINGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Darters": "#485848" }, breedGroupColor: "#384838", hybridColor: "#687868" };
+const SAGITTARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Secretarybirds": "#888888" }, breedGroupColor: "#787878", hybridColor: "#a8a8a8" };
+const CATHARTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "New World Vultures": "#403838" }, breedGroupColor: "#302828", hybridColor: "#605858" };
+const JACANIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Jacanas": "#886848" }, breedGroupColor: "#785838", hybridColor: "#a88868" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1248,6 +1272,29 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   pteroclidae:      PTEROCLIDAE_THEME,
   burhinidae:       BURHINIDAE_THEME,
   glareolidae:      GLAREOLIDAE_THEME,
+  jacanidae:        JACANIDAE_THEME,
+  numididae:        NUMIDIDAE_THEME,
+  ramphastidae:     RAMPHASTIDAE_THEME,
+  megalaimidae:     MEGALAIMIDAE_THEME,
+  cacatuidae:       CACATUIDAE_THEME,
+  diomedeidae:      DIOMEDEIDAE_THEME,
+  menuridae:        MENURIDAE_THEME,
+  mimidae:          MIMIDAE_THEME,
+  nectariniidae:    NECTARINIIDAE_THEME,
+  paradisaeidae:    PARADISAEIDAE_THEME,
+  ptilonorhynchidae: PTILONORHYNCHIDAE_THEME,
+  pycnonotidae:     PYCNONOTIDAE_THEME,
+  estrildidae:      ESTRILDIDAE_THEME,
+  icteridae:        ICTERIDAE_THEME,
+  cardinalidae:     CARDINALIDAE_THEME,
+  parulidae:        PARULIDAE_THEME,
+  thraupidae:       THRAUPIDAE_THEME,
+  tyrannidae:       TYRANNIDAE_THEME,
+  vireonidae:       VIREONIDAE_THEME,
+  fregatidae:       FREGATIDAE_THEME,
+  anhingidae:       ANHINGIDAE_THEME,
+  sagittariidae:    SAGITTARIIDAE_THEME,
+  cathartidae:      CATHARTIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
