@@ -207,6 +207,7 @@ export default function FamilyTree({
   const setupRef = useRef<Setup | null>(null);
   const prevLayoutRef = useRef<"radial" | "vertical" | null>(null);
   const savedZoomRef = useRef<d3.ZoomTransform | null>(null);
+  const prevTreeKeyRef = useRef<string>("root");
 
   const attachTooltip = useCallback((
     sel: d3.Selection<SVGGElement, PNode, SVGGElement, unknown>,
@@ -363,8 +364,11 @@ export default function FamilyTree({
       return highlightedNodeIds.has(d.data.id) ? 1 : 0.1;
     };
 
-    // Reset zoom on layout switch; center on first render
-    if (layoutChanged || prevLayoutRef.current === layout && !setupRef.current) {
+    // Auto-fit zoom when tree structure changes (focus switch, layout toggle, or first render)
+    const treeKey = `${focusedClassId ?? "all"}:${focusedFamilySlug ?? "all"}`;
+    const treeChanged = prevTreeKeyRef.current !== treeKey;
+    prevTreeKeyRef.current = treeKey;
+    if (layoutChanged || treeChanged) {
       d3.select(svg).call(zoom.transform, defaultTransform);
     }
 
