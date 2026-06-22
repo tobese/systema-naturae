@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
 
@@ -10,25 +10,48 @@ interface Props {
   initialClassId?: string | null;
 }
 
-interface FamilyCoverage {
+interface CoverageNode {
   id: string;
   name: string;
   commonName?: string;
+  rank: string;
   appSlug?: string;
   portalCount: number;
   totalCount?: number;
+  children?: CoverageNode[];
 }
 
 interface ClassCoverage {
   id: string;
   name: string;
   commonName?: string;
-  families: FamilyCoverage[];
+  families: CoverageNode[];
 }
 
 function countSpecies(node: TaxonNode): number {
   if (node.rank === "SPECIES") return 1;
   return (node.children ?? []).reduce((sum, c) => sum + countSpecies(c), 0);
+}
+
+function buildCoverageTree(node: TaxonNode): CoverageNode | null {
+  if (node.rank === "SPECIES" || node.rank === "SUBSPECIES") return null;
+  const pn = node as PortalNode;
+  const cn: CoverageNode = {
+    id: node.id,
+    name: node.name,
+    commonName: node.commonName,
+    rank: node.rank,
+    appSlug: pn.appSlug,
+    portalCount: countSpecies(node),
+    totalCount: pn.speciesCount,
+  };
+  const children = (node.children ?? [])
+    .map(buildCoverageTree)
+    .filter((c): c is CoverageNode => c !== null);
+  if (children.length > 0 && (cn.totalCount !== undefined || children.some(c => c.totalCount !== undefined))) {
+    cn.children = children;
+  }
+  return cn;
 }
 
 function buildCoverage(root: TaxonNode): ClassCoverage[] {
@@ -43,16 +66,8 @@ function buildCoverage(root: TaxonNode): ClassCoverage[] {
       return;
     }
     if (node.rank === "FAMILY") {
-      const pn = node as PortalNode;
-      const fam: FamilyCoverage = {
-        id: node.id,
-        name: node.name,
-        commonName: node.commonName,
-        appSlug: pn.appSlug,
-        portalCount: countSpecies(node),
-        totalCount: pn.speciesCount,
-      };
-      (currentClass ?? other).families.push(fam);
+      const tree = buildCoverageTree(node);
+      if (tree) (currentClass ?? other).families.push(tree);
       return;
     }
     (node.children ?? []).forEach(c => walk(c, currentClass));
@@ -63,16 +78,105 @@ function buildCoverage(root: TaxonNode): ClassCoverage[] {
   return classes;
 }
 
-function coverageColor(portalCount: number, totalCount?: number): string {
-  if (portalCount === 0) return "#333";
-  if (totalCount !== undefined && portalCount >= totalCount) return "#336644";
-  return "#7a5520";
-}
-
 function coverageDotColor(portalCount: number, totalCount?: number): string {
   if (portalCount === 0) return "#444";
   if (totalCount !== undefined && portalCount >= totalCount) return "#44aa66";
   return "#cc9944";
+}
+
+function CoverageRow({ node, depth, onFocusFamily, onClose, initiallyOpen }: {
+  node: CoverageNode;
+  depth: number;
+  onFocusFamily: (slug: string) => void;
+  onClose: () => void;
+  initiallyOpen: boolean;
+}) {
+  const [open, setOpen] = useState(initiallyOpen);
+  const hasChildren = !!node.children && node.children.length > 0;
+  const hasCoverage = node.totalCount !== undefined;
+
+  const dotColor = coverageDotColor(node.portalCount, node.totalCount);
+  const isClickable = !!node.appSlug && depth === 0;
+
+  return (
+    <div>
+      <div
+        onClick={() => {
+          if (hasChildren && !hasCoverage) setOpen(!open);
+          else if (hasChildren) setOpen(!open);
+          else if (isClickable) { onFocusFamily(node.appSlug!); onClose(); }
+        }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          padding: "5px 8px",
+          borderRadius: 5,
+          cursor: hasChildren || isClickable ? "pointer" : "default",
+          marginLeft: depth * 16,
+          background: "transparent",
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "#1a1c28"; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "transparent"; }}
+      >
+        {/* Chevron */}
+        <span style={{
+          width: 14,
+          flexShrink: 0,
+          color: "#555",
+          fontSize: 10,
+          textAlign: "center",
+          visibility: hasChildren ? "visible" : "hidden",
+        }}>
+          {open ? "▼" : "▶"}
+        </span>
+
+        {/* Dot */}
+        <span style={{
+          width: depth === 0 ? 7 : 5,
+          height: depth === 0 ? 7 : 5,
+          borderRadius: "50%",
+          background: dotColor,
+          flexShrink: 0,
+        }} />
+
+        {/* Name */}
+        <div style={{ minWidth: 0, flex: 1 }}>
+          <span style={{
+            fontSize: depth === 0 ? 12 : 11,
+            fontWeight: depth <= 1 ? 500 : 400,
+            color: depth === 0 ? "#c8c8d8" : "#a0a8b8",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            display: "block",
+          }}>
+            {node.commonName && ["FAMILY", "SUBFAMILY"].includes(node.rank) ? node.commonName : node.name}
+          </span>
+          {node.commonName && ["FAMILY", "SUBFAMILY"].includes(node.rank) && (
+            <span style={{ fontSize: 10, color: "#555", display: "block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              {node.name}
+            </span>
+          )}
+        </div>
+
+        {/* Count */}
+        <div style={{ flexShrink: 0, fontSize: depth === 0 ? 11 : 10, color: "#666", textAlign: "right" }}>
+          {node.portalCount.toLocaleString()}
+          {hasCoverage ? ` / ${node.totalCount!.toLocaleString()}` : depth === 0 ? " in portal" : ""}
+        </div>
+      </div>
+
+      {/* Children */}
+      {open && hasChildren && (
+        <div>
+          {node.children!.map(c => (
+            <CoverageRow key={c.id} node={c} depth={depth + 1} onFocusFamily={onFocusFamily} onClose={onClose} initiallyOpen={false} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId }: Props) {
@@ -83,12 +187,6 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
-
-  useEffect(() => {
-    if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: "instant", block: "center" });
-    }
-  }, []);
 
   const classes = useMemo(() => buildCoverage(data), [data]);
 
@@ -180,8 +278,8 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
                     display: "flex",
                     alignItems: "baseline",
                     justifyContent: "space-between",
-                    marginBottom: 10,
-                    paddingBottom: 8,
+                    marginBottom: 6,
+                    paddingBottom: 6,
                     borderBottom: "1px solid #181824",
                   }}>
                     <div>
@@ -203,71 +301,16 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
                     </div>
                   </div>
 
-                  <div style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: 4,
-                  }}>
-                    {cls.families.map(fam => {
-                      const dotColor = coverageDotColor(fam.portalCount, fam.totalCount);
-                      const bgColor = coverageColor(fam.portalCount, fam.totalCount);
-                      const isClickable = !!fam.appSlug;
-                      const isSelected = !!initialFamilySlug && fam.appSlug === initialFamilySlug;
-                      return (
-                        <div
-                          key={fam.id}
-                          ref={isSelected ? targetRef : undefined}
-                          onClick={isClickable ? () => { onFocusFamily(fam.appSlug!); onClose(); } : undefined}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                            gap: 8,
-                            padding: "6px 10px",
-                            borderRadius: 6,
-                            border: isSelected ? "1px solid #5a7aaa" : `1px solid ${bgColor}`,
-                            background: isSelected ? "#1a2a3a" : `${bgColor}22`,
-                            cursor: isClickable ? "pointer" : "default",
-                            width: "calc(50% - 2px)",
-                            boxSizing: "border-box",
-                            minWidth: 0,
-                          }}
-                          onMouseEnter={e => {
-                            if (isClickable) {
-                              (e.currentTarget as HTMLDivElement).style.background = `${bgColor}44`;
-                            }
-                          }}
-                          onMouseLeave={e => {
-                            (e.currentTarget as HTMLDivElement).style.background = `${bgColor}22`;
-                          }}
-                        >
-                          <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 0 }}>
-                            <span style={{
-                              width: 7,
-                              height: 7,
-                              borderRadius: "50%",
-                              background: dotColor,
-                              flexShrink: 0,
-                            }} />
-                            <div style={{ minWidth: 0 }}>
-                              <span style={{ fontSize: 12, fontWeight: 500, color: "#c8c8d8", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "block" }}>
-                                {fam.name}
-                              </span>
-                              {fam.commonName && (
-                                <span style={{ fontSize: 10, color: "#555", display: "block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                                  {fam.commonName}
-                                </span>
-                              )}
-                            </div>
-                          </div>
-                          <div style={{ flexShrink: 0, fontSize: 11, color: "#555", textAlign: "right" }}>
-                            {fam.portalCount.toLocaleString()}
-                            {fam.totalCount !== undefined ? ` of ${fam.totalCount.toLocaleString()}` : ""}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
+                  {cls.families.map(fam => (
+                    <CoverageRow
+                      key={fam.id}
+                      node={fam}
+                      depth={0}
+                      onFocusFamily={onFocusFamily}
+                      onClose={onClose}
+                      initiallyOpen={fam.appSlug === initialFamilySlug}
+                    />
+                  ))}
                 </div>
               );
             })}
