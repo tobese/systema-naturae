@@ -402,6 +402,7 @@ export default function FamilyTree({
 
     // Exit: shrink toward parent
     nodeSel.exit<PNode>()
+      .style("pointer-events", "none")
       .transition().duration(DURATION_EXIT)
       .style("opacity", 0)
       .attr("transform", (d: PNode) => nodeTransform(d.parent ?? d))
@@ -666,9 +667,6 @@ export default function FamilyTree({
       if (svgRef.current && setupRef.current) {
         savedZoomRef.current = d3.zoomTransform(svgRef.current);
       }
-      if (svgRef.current) d3.select(svgRef.current).selectAll("*").remove();
-      setupRef.current = null;
-      prevLayoutRef.current = null;
     };
   }, [render]);
 
