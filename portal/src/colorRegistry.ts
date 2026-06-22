@@ -918,6 +918,8 @@ const PROCELLARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: {
 
 const HYDROBATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Storm Petrels": "#3a4048" }, breedGroupColor: "#303840", hybridColor: "#5a6870" };
 
+const POLIOPTILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Gnatcatchers": "#6888a8", "Gnatwrens": "#8a7858" }, breedGroupColor: "#6888a8", hybridColor: "#90a8c0" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1224,6 +1226,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   phoenicopteridae: PHOENICOPTERIDAE_THEME,
   procellariidae:   PROCELLARIIDAE_THEME,
   hydrobatidae:     HYDROBATIDAE_THEME,
+  polioptilidae:    POLIOPTILIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
