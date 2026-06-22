@@ -506,14 +506,18 @@ export default function FamilyTree({
         .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
         .text(d => displayLabel(d.data))
         .style("font-size", d => {
-          if (d.data.rank === "KINGDOM") return "15px";
-          if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
-          if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "8px";
-          return "10px";
+          if (d.data.rank === "KINGDOM") return "14px";
+          if (d.data.rank === "PHYLUM") return "12px";
+          if (d.data.rank === "CLASS") return "11px";
+          if (d.data.rank === "ORDER") return "10px";
+          if (d.data.rank === "FAMILY") return "9px";
+          if (d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "8px";
+          if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "7px";
+          return "8px";
         })
         .style("font-style", d => ["GENUS", "SPECIES", "SUBSPECIES"].includes(d.data.rank) ? "italic" : "normal")
         .style("font-weight", d =>
-          d.data.rank === "KINGDOM" || d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
+          d.data.rank === "KINGDOM" || d.data.rank === "PHYLUM" || d.data.rank === "CLASS" || d.data.rank === "ORDER" || d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE" ? "600" : "400")
         .style("fill", d => {
           if (d.data.rank === "KINGDOM") return "#c8a84a";
           if (d.data.rank === "BREED_GROUP")
@@ -532,10 +536,14 @@ export default function FamilyTree({
         .attr("text-anchor", d => (d.children && d.parent ? "end" : "start"))
         .text(d => displayLabel(d.data))
         .style("font-size", d => {
-          if (d.data.rank === "KINGDOM") return "15px";
-          if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
-          if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "8px";
-          return "10px";
+          if (d.data.rank === "KINGDOM") return "14px";
+          if (d.data.rank === "PHYLUM") return "12px";
+          if (d.data.rank === "CLASS") return "11px";
+          if (d.data.rank === "ORDER") return "10px";
+          if (d.data.rank === "FAMILY") return "9px";
+          if (d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "8px";
+          if (d.data.rank === "SPECIES" || d.data.rank === "SUBSPECIES") return "7px";
+          return "8px";
         })
         .style("font-style", d => ["GENUS", "SPECIES", "SUBSPECIES"].includes(d.data.rank) ? "italic" : "normal")
         .style("font-weight", d =>
