@@ -956,6 +956,30 @@ const HOLOTHURIIDAE_THEME: ColorTheme = {
   hybridColor: "#C0A0E0",
 };
 
+const PAPILIONIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Swallowtails":              "#E89030",
+    "Apollos":                   "#D8C8C0",
+    "Scarce swallowtails":       "#E8C830",
+    "Festoons":                  "#E8A020",
+    "Swordtails":                "#30A070",
+    "Birdwings":                 "#E84838",
+    "Birdwings & cattlehearts":  "#D06030",
+    "Pipevine swallowtails":     "#8840A8",
+    "Kite swallowtails":         "#88B8C8",
+    "Mimic swallowtails":        "#C88040",
+    "Dragontails":               "#40A0B8",
+    "Kaiser-i-Hind":             "#30A060",
+    "Bhutan swallowtails":       "#888838",
+    "Luehdorfia":                "#C8A060",
+    "Sericinus":                 "#A88848",
+    "Hook-tip swallowtails":     "#B08030",
+  },
+  breedGroupColor: "#C87830",
+  hybridColor: "#E8A860",
+};
+
 const COTTIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
@@ -1090,6 +1114,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   gasterosteidae:  GASTEROSTEIDAE_THEME,
   anguillidae:     ANGUILLIDAE_THEME,
   cottidae:        COTTIDAE_THEME,
+  papilionidae:    PAPILIONIDAE_THEME,
   pleuronectidae:  PLEURONECTIDAE_THEME,
   motacillidae:    MOTACILLIDAE_THEME,
   hirundinidae:    HIRUNDINIDAE_THEME,
