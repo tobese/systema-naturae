@@ -912,6 +912,8 @@ const SPHENISCIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "
 
 const TROCHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bee Hummingbirds": "#30a060", "Hermits": "#a08850", "Giants & Topazes": "#c85828", "Mountain Gems": "#2870a0", "Brilliants": "#6848a8", "Emeralds": "#20a050", "Mangos & Caribs": "#c82038" }, breedGroupColor: "#40a060", hybridColor: "#70c888" };
 
+const PHOENICOPTERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Greater Flamingos": "#e87868", "Lesser Flamingos": "#e86050", "Andean Flamingos": "#e8a080" }, breedGroupColor: "#e87060", hybridColor: "#f0a898" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1215,6 +1217,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   cisticolidae:    CISTICOLIDAE_THEME,
   spheniscidae:    SPHENISCIDAE_THEME,
   trochilidae:     TROCHILIDAE_THEME,
+  phoenicopteridae: PHOENICOPTERIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
