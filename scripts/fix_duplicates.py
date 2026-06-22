@@ -44,6 +44,9 @@ def main():
             with open(path, 'r') as f:
                 data = json.load(f)
             
+            if data.get("rank") != "FAMILY":
+                continue
+            
             removed = remove_duplicates(data)
             if removed > 0:
                 with open(path, 'w') as f:

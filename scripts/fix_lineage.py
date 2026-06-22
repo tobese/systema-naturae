@@ -41,6 +41,9 @@ def main():
             with open(path, 'r') as f:
                 data = json.load(f)
             
+            if data.get("rank") != "FAMILY":
+                continue
+            
             fixed = fix_lineage(data)
             
             if fixed > 0:

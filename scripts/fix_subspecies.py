@@ -34,6 +34,9 @@ def main():
             with open(path, 'r') as f:
                 data = json.load(f)
             
+            if data.get("rank") != "FAMILY":
+                continue
+            
             added = 0
             def process(node):
                 nonlocal added

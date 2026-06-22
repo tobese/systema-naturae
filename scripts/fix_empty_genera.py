@@ -38,6 +38,9 @@ def main():
             with open(path, 'r') as f:
                 data = json.load(f)
             
+            if data.get("rank") != "FAMILY":
+                continue
+            
             removed = 0
             def process(node):
                 nonlocal removed
