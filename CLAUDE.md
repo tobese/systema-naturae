@@ -41,7 +41,6 @@ shared/
   data/
     pending-eponyms.json       ← species with namedAfter in families not yet imported
 portal/
-  data/enrichment-queue.json  ← formerly 95 families needing more species (all done)
   data/sanity-queue.json      ← sanity scan results (all 4057 issues fixed)
   data/sanity-issues.json     ← full sanity issue report (historical)
 scripts/
@@ -51,17 +50,11 @@ scripts/
   fix_lineage.py              ← infer missing lineage from parent genus
   fix_subspecies.py           ← add subspeciesCount: 0 to species missing it
   fix_all_descriptions.py     ← generate descriptions for all species based on lineage/genus
-  enrich_lap2.py              ← 15 families, +687 species (Tier 2 families)
-  enrich_lap3.py              ← 12 easy-pick families, +223 species
-  enrich_lap3_final.py        ← +298 more species across 13 families
-  enrich_bulk.py              ← bulk generator using compact tuple format
-  enrich_clean.py             ← name-deduped enrichment after clean
-  enrich_bulk_green.py        ← auto-generator for near-green families using epithet patterns
 ```
 
 ## Graph UI features
 
-Built in this session (June 2026).
+Built in this session (June 2026). Portal now contains **12,394 nodes** (8,956 real species across 140 families).
 
 ### Node sizing
 `nodeR()` in `FamilyTree.tsx` uses widened radii: family (12), subfamily (9), genus (6.5), species (2.5). Provides clearer hierarchy distinction.
@@ -106,51 +99,9 @@ When a family is focused in the tree, all non-focused families' children are pru
 
 ## Coverage status (as of June 2026)
 
-**107 green families** (portal count ≥ known species count)
-**33 amber families** (still needing more species)
-**0 grey families** (not imported)
+**Only real species are tracked** — all auto-generated species (43,030 across 59 families) have been stripped. The portal now contains **8,956 real species** across 140 families. Coverage numbers reflect only manually curated, real-world species.
 
-Coverage modal in the portal shows all 140 families. `fix_duplicates.py` must be run after bulk enrichment to deduplicate.
-
-## Enrichment plan — remaining 33 amber families
-
-All 14 near-green families (need ≤ 106) from the original 47-amber list have been turned green via `enrich_bulk_green.py` (auto-generates species from genus+epithet patterns). The remaining 33 families need deeper enrichment.
-
-`portal/data/enrichment-queue.json` is empty (all 95 original entries completed).
-
-Remaining families sorted by need (portal count vs known species count; updated June 2026):
-
-### Tier 1 (need 101–200) — 5 families
-strigidae (95/230, need 135), picidae (105/240, need 135), percidae (99/240, need 141), accipitridae (116/260, need 144), dendrobatidae (107/300, need 193)
-
-### Tier 2 (need 200–500) — 12 families
-muscicapidae (105/324, need 219), sciuridae (53/285, need 232), viperidae (107/370, need 263), elapidae (105/370, need 265), columbidae (71/344, need 273), ranidae (87/370, need 283), vespertilionidae (103/400, need 297), lacertidae (49/350, need 301), soricidae (36/385, need 349), plethodontidae (90/470, need 380), agamidae (73/500, need 427), bufonidae (81/600, need 519)
-
-### Tier 3 (need 500–2000) — 10 families
-microhylidae (92/700, need 608), muridae (75/730, need 655), cricetidae (72/730, need 658), hylidae (91/1000, need 909), theraphosidae (66/1000, need 934), gekkonidae (96/1100, need 1004), buthidae (117/1200, need 1083), tardigrada (129/1300, need 1171), scincidae (116/1600, need 1484), colubridae (62/1900, need 1838)
-
-### Tier 4 (need 2000+) — 6 families
-lycosidae (85/2400, need 2315), theridiidae (88/2500, need 2412), cyprinidae (140/3000, need 2860), araneidae (86/3100, need 3014), apidae (63/5700, need 5637), salticidae (76/6380, need 6304)
-
-**Total species needed to fill all gaps: ~37,442**
-
-### Recommended approach
-- **Auto-generation via `enrich_bulk_green.py`**: Works best for 100–300 need per family. For larger gaps, genus+epithet combinations exhaust quickly — use a larger epithet pool or generate with numeric suffixes.
-- **Manual enrichment**: Preferred for Tier 1–2 families where target is manageable. Add real species with proper common names and ranges.
-- **Real-world data imports**: For Tier 3–4 families (cyprinidae, salticidae, apidae, etc.), consider scraping IUCN/Catalogue of Life exports rather than manual generation.
-- After each batch: run `fix_duplicates.py`, then `cd portal && sh scripts/buildData.sh`, then commit+push.
-
-### Lessons learned
-- `fix_duplicates.py` must be run after any enrichment run to remove duplicates
-- Adding to existing genera is safer than creating new ones
-- Bulk scripts using compact tuple formats are efficient for large batches
-- Random suffix IDs (`U12345`, `Z54321`) avoid ID collisions but reduce readability
-- Auto-generated species via epithet patterns: use at least 400+ epithets and run multiple passes; each pass generates new combinations from the same pool
-- With `random.seed(42)` removed, each script run produces different species names
-- Set targets per genus to 2-3x the gap size to account for name collisions
-- Families with few genera but high species counts (e.g., *Pteropus* with 25+ targets) exhaust latin epithet combos quickly — use numeric or geographic suffixes for those
-- Always verify with a build after each enrichment pass
-- Known species counts in taxonomy.json may be updated independently, shifting coverage status
+Families auto-generated species were stripped from: accipitridae, agamidae, apidae, araneidae, asteriidae, bufonidae, buthidae, chamaeleonidae, clupeidae, colubridae, columbidae, corvidae, cricetidae, cuculidae, cyprinidae, dendrobatidae, didelphidae, echinidae, elapidae, fringillidae, gekkonidae, holothuriidae, hylidae, lacertidae, lycosidae, microhylidae, muridae, muscicapidae, percidae, phyllostomidae, picidae, plethodontidae, pteropodidae, rallidae, ranidae, salticidae, scincidae, sciuridae, scorpionidae, sicariidae, soricidae, strigidae, sturnidae, sylviidae, tardigrada, theraphosidae, theridiidae, turdidae, vespertilionidae, viperidae.
 
 ## Fixing sanity issues
 
