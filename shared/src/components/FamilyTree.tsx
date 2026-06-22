@@ -364,11 +364,12 @@ export default function FamilyTree({
       return highlightedNodeIds.has(d.data.id) ? 1 : 0.1;
     };
 
-    // Auto-fit zoom when tree structure changes (focus switch, layout toggle, or first render)
+    // Auto-fit zoom when tree structure changes and no pending zoom target.
     const treeKey = `${focusedClassId ?? "all"}:${focusedFamilySlug ?? "all"}`;
     const treeChanged = prevTreeKeyRef.current !== treeKey;
     prevTreeKeyRef.current = treeKey;
-    if (layoutChanged || treeChanged) {
+    const hasPendingZoom = pendingZoomId.current !== null;
+    if (!hasPendingZoom && (layoutChanged || treeChanged)) {
       d3.select(svg).call(zoom.transform, defaultTransform);
     }
 
