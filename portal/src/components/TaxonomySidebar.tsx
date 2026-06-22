@@ -244,7 +244,7 @@ function renderNode(
           whiteSpace: "nowrap",
           color: isFocusTarget ? "#e0e0f0" : isSelected ? "#d0d0e8" : isDeep ? "#6a7a8a" : "#b0b8c8",
           fontWeight: isFocusTarget ? 500 : 400,
-          fontSize: isClass ? 13 : isOrder ? 12 : isFamily ? 12 : 11,
+          fontSize: isClass ? 11 : isOrder ? 10 : isFamily ? 9 : 7,
         }}>
           {node.commonName && ["KINGDOM","PHYLUM","CLASS","ORDER","FAMILY"].includes(node.rank) ? node.commonName : node.name}
         </span>
