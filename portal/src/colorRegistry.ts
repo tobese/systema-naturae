@@ -423,6 +423,19 @@ const STRIGIDAE_THEME: ColorTheme = {
   hybridColor:     "#b09850",
 };
 
+const TYTONIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Barn Owls":  "#d4a574",
+    "Grass Owls": "#7a9860",
+    "Masked Owls": "#a08050",
+    "Sooty Owls": "#3a4a58",
+    "Bay Owls":   "#c07848",
+  },
+  breedGroupColor: "#b89060",
+  hybridColor:     "#d0a888",
+};
+
 const ACCIPITRIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
@@ -1100,6 +1113,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   fringillidae:    FRINGILLIDAE_THEME,
   muscicapidae:    MUSCICAPIDAE_THEME,
   strigidae:       STRIGIDAE_THEME,
+  tytonidae:       TYTONIDAE_THEME,
   accipitridae:    ACCIPITRIDAE_THEME,
   salamandridae:   SALAMANDRIDAE_THEME,
   ranidae:         RANIDAE_THEME,
