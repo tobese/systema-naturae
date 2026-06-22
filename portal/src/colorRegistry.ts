@@ -928,6 +928,8 @@ const MEROPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bee
 
 const CORACIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "True Rollers": "#2088c8", "Broad-billed Rollers": "#6870a8" }, breedGroupColor: "#2880b8", hybridColor: "#60a8d8" };
 
+const PTEROCLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sandgrouse": "#c8a870" }, breedGroupColor: "#b89860", hybridColor: "#e0c898" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1239,6 +1241,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   otididae:         OTIDIDAE_THEME,
   meropidae:        MEROPIDAE_THEME,
   coraciidae:       CORACIIDAE_THEME,
+  pteroclidae:      PTEROCLIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
