@@ -2,6 +2,8 @@
 
 Interactive taxonomy portal. Each family lives in its own directory; the portal aggregates them at build time.
 
+> Navigation architecture documented in [`docs/navigation.md`](docs/navigation.md).
+
 ## Commands
 
 ```bash
