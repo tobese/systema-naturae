@@ -919,6 +919,43 @@ const ATRACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Syd
 const BUTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "North African Scorpions": "#c8a020", "Middle Eastern Scorpions": "#e8c030", "American Scorpions": "#d89820", "African Forest Scorpions": "#7a6030" }, breedGroupColor: "#c09820", hybridColor: "#e8d040" };
 const SCORPIONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "African Giant Scorpions": "#3a5828", "Asian Forest Scorpions": "#2a4820" }, breedGroupColor: "#3a5020", hybridColor: "#5a7840" };
 
+const ASTERIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Asterias": "#E87040",
+    "Pisaster": "#E85020",
+    "Leptasterias": "#C06030",
+    "Henricia": "#F09060",
+    "Coscinasterias": "#D07050",
+  },
+  breedGroupColor: "#E87040",
+  hybridColor: "#F0A080",
+};
+
+const ECHINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Echinus": "#40A888",
+    "Strongylocentrotus": "#309878",
+    "Psammechinus": "#50B898",
+    "Paracentrotus": "#60C8A8",
+  },
+  breedGroupColor: "#40A888",
+  hybridColor: "#80D0B8",
+};
+
+const HOLOTHURIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Holothuria": "#A070C8",
+    "Actinopyga": "#9060B8",
+    "Bohadschia": "#B080D8",
+    "Pearsonothuria": "#C090E0",
+  },
+  breedGroupColor: "#A070C8",
+  hybridColor: "#C0A0E0",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -1060,6 +1097,9 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   atracidae:      ATRACIDAE_THEME,
   buthidae:       BUTHIDAE_THEME,
   scorpionidae:   SCORPIONIDAE_THEME,
+  asteriidae:     ASTERIIDAE_THEME,
+  echinidae:      ECHINIDAE_THEME,
+  holothuriidae:  HOLOTHURIIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

@@ -12,6 +12,9 @@ export const CLASS_PALETTE: Record<string, string> = {
   actinopterygii: "#3A8FA8",
   insecta:        "#C8A830",
   arachnida:      "#A84868",
+  asteroidea:     "#E87040",
+  echinoidea:     "#40A888",
+  holothuroidea:  "#A070C8",
 };
 
 // Tardigrada has no CLASS — use a neutral slate.
