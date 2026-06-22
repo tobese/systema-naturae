@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { TaxonNode } from "@shared/types";
+import type { PortalNode } from "../types";
 
 interface Props {
   data: TaxonNode;
@@ -143,6 +144,7 @@ function renderNode(
   const isClass = node.rank === "CLASS";
   const isOrder = node.rank === "ORDER";
   const isFamily = node.rank === "FAMILY";
+  const isSubfamily = node.rank === "SUBFAMILY" || node.rank === "TRIBE";
   const isDeep = depth >= 3; // genus+
 
   const classColor = node.className ? CLASS_COLORS[node.className] : undefined;
@@ -168,11 +170,14 @@ function renderNode(
     if (isClass) return `${countChildren(node, "ORDER")} orders`;
     if (isOrder) return `${countChildren(node, "FAMILY")} families`;
     if (isFamily) return `${countChildren(node, "GENUS")} genera`;
+    if (isSubfamily) return `${countChildren(node, "GENUS")} genera`;
     return undefined;
   })();
 
-  // Species count for families
-  const speciesCount = isFamily ? countChildren(node, "SPECIES") : 0;
+  // Species count (portal count, and known total if available)
+  const portalSpecies = node.rank === "SPECIES" ? 1 : countChildren(node, "SPECIES");
+  const pn = node as PortalNode;
+  const knownCount = pn.speciesCount;
 
   return (
     <div>
@@ -260,14 +265,14 @@ function renderNode(
             {childLabel}
           </span>
         )}
-        {isFamily && speciesCount > 0 && !isOpen && (
+        {(isFamily || isSubfamily) && portalSpecies > 0 && !isOpen && (
           <span style={{
             marginLeft: 3,
             fontSize: 10,
             color: "#3a4558",
             flexShrink: 0,
           }}>
-            · {speciesCount} sp.
+            · {portalSpecies}{knownCount !== undefined ? ` / ${knownCount}` : ""} sp.
           </span>
         )}
       </div>
