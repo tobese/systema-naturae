@@ -956,6 +956,26 @@ const HOLOTHURIIDAE_THEME: ColorTheme = {
   hybridColor: "#C0A0E0",
 };
 
+const PSITTACIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Ara":     "#D04030",
+    "Amazona": "#30A040",
+    "Anodorhynchus": "#2850A0",
+    "Aratinga": "#E8B030",
+    "Pyrrhura": "#60B048",
+    "Pionus":   "#6090A0",
+    "Forpus":   "#80C868",
+    "Psittacus":   "#B0A898",
+    "Poicephalus": "#C0A858",
+    "Eupsittula":  "#D8A020",
+    "Brotogeris":  "#50C070",
+    "Psittacara":  "#C89030",
+  },
+  breedGroupColor: "#30A040",
+  hybridColor: "#60C060",
+};
+
 const PAPILIONIDAE_THEME: ColorTheme = {
   subfamilyColors: {},
   lineageColors: {
@@ -1114,6 +1134,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   gasterosteidae:  GASTEROSTEIDAE_THEME,
   anguillidae:     ANGUILLIDAE_THEME,
   cottidae:        COTTIDAE_THEME,
+  psittacidae:     PSITTACIDAE_THEME,
   papilionidae:    PAPILIONIDAE_THEME,
   pleuronectidae:  PLEURONECTIDAE_THEME,
   motacillidae:    MOTACILLIDAE_THEME,
