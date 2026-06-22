@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (debbie)",
+      "options": {
+        "baseURL": "http://debbie:11434/v1"
+      },
+      "models": {
+        "llama3.2": { "name": "Llama 3.2" },
+        "qwen2.5-coder": { "name": "Qwen 2.5 Coder" }
+      }
+    }
+  }
+}

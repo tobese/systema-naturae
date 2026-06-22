@@ -17,6 +17,7 @@ export interface TaxonNode {
   orderName?: string;
   description?: string;
   namedAfter?: string;
+  iucnStatus?: string;
   children?: TaxonNode[];
 }
 

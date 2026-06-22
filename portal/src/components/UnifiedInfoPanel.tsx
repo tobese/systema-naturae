@@ -3,7 +3,7 @@ import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
 import { useWikipediaSummary } from "@shared/hooks/useWikipediaSummary";
 import { PORTAL_THEME } from "../colors";
-import { COLOR_REGISTRY } from "../colorRegistry";
+import { COLOR_REGISTRY, IUCN_COLORS } from "../colorRegistry";
 
 interface Props {
   node: TaxonNode | null;
@@ -429,9 +429,23 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
           display: "inline-flex", alignItems: "center", gap: 5,
           fontSize: 11, color: "#8899aa",
           background: "#0d1118", border: "1px solid #1e2838", borderRadius: 4,
-          padding: "3px 8px", marginBottom: 8,
+          padding: "3px 8px", marginBottom: 6,
         }}>
           <span style={{ color: "#445566" }}>Named after</span> {node.namedAfter}
+        </div>
+      )}
+      {node.iucnStatus && IUCN_COLORS[node.iucnStatus] && (
+        <div style={{
+          display: "inline-flex", alignItems: "center", gap: 5,
+          fontSize: 11, color: IUCN_COLORS[node.iucnStatus],
+          background: "#0d1118", border: `1px solid ${IUCN_COLORS[node.iucnStatus]}44`, borderRadius: 4,
+          padding: "3px 8px", marginBottom: 6,
+        }}>
+          <span style={{
+            display: "inline-block", width: 8, height: 8, borderRadius: "50%",
+            background: IUCN_COLORS[node.iucnStatus],
+          }} />
+          {node.iucnStatus}
         </div>
       )}
       {node.lineage && (

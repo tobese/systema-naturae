@@ -956,6 +956,69 @@ const HOLOTHURIIDAE_THEME: ColorTheme = {
   hybridColor: "#C0A0E0",
 };
 
+const COTTIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Freshwater sculpins": "#788850",
+    "Marine sculpins":     "#488090",
+    "Arctic sculpins":     "#6898B8",
+    "Tidepool sculpins":   "#A8A068",
+  },
+  breedGroupColor: "#688060",
+  hybridColor: "#88A880",
+};
+
+const PLEURONECTIDAE_THEME: ColorTheme = {
+  subfamilyColors: {
+    "Pleuronectinae":   "#6B8FA8",
+    "Poecilopsettinae": "#8BA88B",
+    "Rhombosoleinae":   "#A8986B",
+  },
+  lineageColors: {
+    "Plaice & flounders": "#7A9AB8",
+    "Dabs & witches":     "#5A8878",
+    "Long rough dabs":    "#889068",
+    "Halibut":            "#4A7898",
+    "Soles & flounders":  "#C8A878",
+  },
+  breedGroupColor: "#6B8FA8",
+  hybridColor: "#8AA8C8",
+};
+
+const ANGUILLIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Freshwater eels": "#3A8878",
+  },
+  breedGroupColor: "#3A8878",
+  hybridColor: "#5AA898",
+};
+
+const GASTEROSTEIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Typical sticklebacks":  "#7898B8",
+    "Ninespine sticklebacks": "#C87850",
+    "Sea sticklebacks":      "#68A0A0",
+    "Fourspine sticklebacks": "#A8B068",
+    "Brook sticklebacks":    "#887858",
+  },
+  breedGroupColor: "#7898B8",
+  hybridColor: "#8AA8C8",
+};
+
+export const IUCN_COLORS: Record<string, string> = {
+  EX: "#6B6B6B",
+  EW: "#9C9C9C",
+  CR: "#D82E2E",
+  EN: "#E87030",
+  VU: "#E8B820",
+  NT: "#B8B820",
+  LC: "#60B060",
+  DD: "#8888A8",
+  NE: "#AAAAAA",
+};
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
@@ -1024,6 +1087,10 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   percidae:        PERCIDAE_THEME,
   gadidae:         GADIDAE_THEME,
   cyprinidae:      CYPRINIDAE_THEME,
+  gasterosteidae:  GASTEROSTEIDAE_THEME,
+  anguillidae:     ANGUILLIDAE_THEME,
+  cottidae:        COTTIDAE_THEME,
+  pleuronectidae:  PLEURONECTIDAE_THEME,
   motacillidae:    MOTACILLIDAE_THEME,
   hirundinidae:    HIRUNDINIDAE_THEME,
   phylloscopidae:  PHYLLOSCOPIDAE_THEME,
