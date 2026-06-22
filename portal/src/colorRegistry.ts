@@ -896,6 +896,8 @@ const PRUNELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "A
 const ALAUDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Skylarks": "#d8b870", "Wood Larks": "#b89858", "Horned Larks": "#9a8040" }, breedGroupColor: "#c0a058", hybridColor: "#e8c888" };
 const LOCUSTELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grasshopper Warblers": "#8a9868", "River Warblers": "#6a7848" }, breedGroupColor: "#7a8858", hybridColor: "#aab880" };
 
+const LANIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grey Shrikes": "#a09888", "Red-backed Shrikes": "#c87840", "Masked Shrikes": "#d0a050", "Brown Shrikes": "#8a7050", "Long-tailed Shrikes": "#a08858" }, breedGroupColor: "#b09870", hybridColor: "#d0b890" };
+
 const COLUBRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "European Colubrids": "#5a8040", "New World Ratsnakes": "#a07030", "Asian Colubrids": "#708850", "King Snakes": "#e83820" }, breedGroupColor: "#6a7040", hybridColor: "#c89030" };
 const LACERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sand Lizards": "#9ab050", "European Wall Lizards": "#78a040", "Green Lizards": "#50a030" }, breedGroupColor: "#88a048", hybridColor: "#b8c870" };
 const ANGUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Slow Worms": "#c87838", "Glass Lizards": "#a86028", "Alligator Lizards": "#8a5020" }, breedGroupColor: "#b86830", hybridColor: "#d89050" };
@@ -1191,6 +1193,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   prunellidae:     PRUNELLIDAE_THEME,
   alaudidae:       ALAUDIDAE_THEME,
   locustellidae:   LOCUSTELLIDAE_THEME,
+  laniidae:        LANIIDAE_THEME,
   colubridae:       COLUBRIDAE_THEME,
   lacertidae:       LACERTIDAE_THEME,
   anguidae:         ANGUIDAE_THEME,
