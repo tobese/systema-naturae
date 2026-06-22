@@ -246,7 +246,7 @@ function renderNode(
           fontWeight: isFocusTarget ? 500 : 400,
           fontSize: isClass ? 13 : isOrder ? 12 : isFamily ? 12 : 11,
         }}>
-          {node.name}
+          {node.commonName && ["KINGDOM","PHYLUM","CLASS","ORDER","FAMILY"].includes(node.rank) ? node.commonName : node.name}
         </span>
 
         {/* Count badges */}

@@ -109,6 +109,13 @@ function nodeR(d: d3.HierarchyNode<TaxonNode>, specialSet: Set<string> | null): 
   return 1.5;
 }
 
+function displayLabel(node: TaxonNode): string {
+  if (["KINGDOM", "PHYLUM", "CLASS", "ORDER", "FAMILY"].includes(node.rank)) {
+    return node.commonName ?? node.name;
+  }
+  return node.name;
+}
+
 // After d3.tree() computes a balanced [0, 2π] layout, remap angles so
 // descendants of the focused class take 65% of the circle and everything
 // else 35%. Runs in-place on the HierarchyPointNode x values.
@@ -497,7 +504,7 @@ export default function FamilyTree({
       merged.select<SVGTextElement>("text")
         .attr("x", d => d.x < Math.PI ? nodeR(d, specialSet) + 4 : -(nodeR(d, specialSet) + 4))
         .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
-        .text(d => d.data.commonName ?? d.data.name)
+        .text(d => displayLabel(d.data))
         .style("font-size", d => {
           if (d.data.rank === "KINGDOM") return "15px";
           if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
@@ -523,7 +530,7 @@ export default function FamilyTree({
       merged.select<SVGTextElement>("text")
         .attr("x", d => (d.children && d.parent ? -(nodeR(d, specialSet) + 4) : nodeR(d, specialSet) + 4))
         .attr("text-anchor", d => (d.children && d.parent ? "end" : "start"))
-        .text(d => d.data.commonName ?? d.data.name)
+        .text(d => displayLabel(d.data))
         .style("font-size", d => {
           if (d.data.rank === "KINGDOM") return "15px";
           if (d.data.rank === "FAMILY" || d.data.rank === "SUBFAMILY" || d.data.rank === "TRIBE") return "13px";
