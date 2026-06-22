@@ -438,6 +438,13 @@ export default function FamilyTree({
       .attr("stroke-width", 0.5)
       .attr("stroke-dasharray", "2 2");
 
+    // IUCN status ring — hidden by default, shown for species with iucnStatus
+    nodeEnter.append("circle")
+      .attr("class", "iucn-ring")
+      .attr("r", d => nodeR(d, specialSet) + 2.5)
+      .attr("fill", "none")
+      .attr("stroke-width", 1.5);
+
     // Main circle
     nodeEnter.append("circle").attr("class", "main-circle");
 
@@ -489,6 +496,19 @@ export default function FamilyTree({
         if (d.data.rank === "KINGDOM") return 0.6;
         return d.data.rank === "SPECIES" && (d.data.subspeciesCount ?? 0) > 0 && !d.children ? 0.5 : 0;
       });
+
+    // IUCN status ring visibility
+    merged.select<SVGCircleElement>("circle.iucn-ring")
+      .attr("r", d => nodeR(d, specialSet) + 2.5)
+      .attr("stroke", d => {
+        if (d.data.rank !== "SPECIES" || !d.data.iucnStatus) return "none";
+        const colorMap: Record<string, string> = {
+          EX: "#6B6B6B", EW: "#9C9C9C", CR: "#D82E2E", EN: "#E87030",
+          VU: "#E8B820", NT: "#B8B820", LC: "#60B060", DD: "#8888A8", NE: "#AAAAAA",
+        };
+        return colorMap[d.data.iucnStatus] ?? "none";
+      })
+      .attr("opacity", d => d.data.rank === "SPECIES" && d.data.iucnStatus ? 0.7 : 0);
 
     // Main circle visual update
     merged.select<SVGCircleElement>("circle.main-circle")
