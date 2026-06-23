@@ -8,7 +8,7 @@ const root = resolve(__dirname, "../..");
 const portalRoot = resolve(__dirname, "..");
 
 const OLLAMA_URL = "http://localhost:11434/api/chat";
-const MODEL = process.env.OLLAMA_MODEL || "llama3.2:3b";
+const MODEL = process.env.OLLAMA_MODEL || "qwen2.5:3b";
 const OLLAMA_TIMEOUT = 300_000;
 
 interface Species {
@@ -230,7 +230,7 @@ async function main() {
   if (!slug) {
     console.log("Usage: npx tsx scripts/importFamily.ts <appSlug> [count]");
     console.log("  count defaults to the full gap");
-    console.log("  Set OLLAMA_MODEL env var to switch model (default: llama3.2:3b)");
+    console.log("  Set OLLAMA_MODEL env var to switch model (default: qwen2.5:3b)");
     console.log("  Available: qwen2.5:7b, qwen2.5:3b, llama3.2:3b");
     console.log("  Example: OLLAMA_MODEL=qwen2.5:7b npx tsx scripts/importFamily.ts tyrannidae 30");
     process.exit(1);

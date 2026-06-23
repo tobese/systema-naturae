@@ -14,3 +14,6 @@ typecheck:
 
 lint:
 	cd portal && npm run lint
+
+import:
+	OLLAMA_MODEL=qwen2.5:3b cd portal && npm run import $(ARGS)
