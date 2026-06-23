@@ -29,6 +29,6 @@ enrich:
 	  echo "=== Enriching $$cls ==="; \
 	  cd portal && npx tsx scripts/enrichFromWikipedia.ts --class $$cls; \
 	  cd portal && sh scripts/buildData.sh; \
-	  cd .. && git add -A aves/ $$cls/ portal/data/ && git commit -m "Enrich $$cls with Wikipedia" --allow-empty; \
+	  cd .. && git add -A $$cls/ portal/scripts/ portal/data/ && git commit -m "Enrich $$cls with Wikipedia" --allow-empty; \
 	done; \
 	git push
