@@ -109,7 +109,7 @@ function callOllama(prompt: string, _count: number, temperature = 0.5): string {
   });
 
   // Write prompt to temp file to avoid shell escaping issues
-  const tmpFile = resolve(process.env.HOME ?? "/tmp", ".ollama_prompt.json");
+  const tmpFile = resolve(process.env.HOME ?? "/tmp", `.ollama_prompt_${process.pid}.json`);
   writeFileSync(tmpFile, body, "utf-8");
 
   try {
