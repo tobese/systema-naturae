@@ -23,3 +23,6 @@ fetch:
 
 cache-gbif:
 	cd portal && npm run cache-gbif
+
+enrich:
+	cd portal && npm run enrich $(ARGS)
