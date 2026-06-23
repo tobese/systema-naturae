@@ -1,37 +1,46 @@
-# Coverage & Growth — UI status
+# Import plan — remaining bird gaps
 
-## Coverage tab
+## Current state
+- **19,611 nodes** in unified taxonomy
+- **254/254 IOC bird families** represented
+- **351 families** across all phyla
 
-| Feature | Status |
-|---|---|
-| Per-class progress bar | ✅ |
-| Sort: Gaps first / A–Z | ✅ |
-| Filter: All / Complete / Partial / Gaps | ✅ |
-| Family status tags: ✓ / -N / · | ✅ |
-| Clickable legend (filter shortcuts) | ✅ |
-| Monster-family footer note | ✅ |
-| **Collapsible classes** (default collapsed) | ✅ |
-| **Toggle all / Collapse all button** | ✅ |
-| **Traffic sign** (🟢/🟡/🔴 dot per class) | ✅ |
-| Search/filter by family name | ❌ |
-| Export to image | ❌ |
+## Batch 1: Fill small gaps (10 families, 205 species)
 
-## Growth tab
+Quick wins: each is a single `make import` call.
 
-| Feature | Status |
-|---|---|
-| D3 chart: cumulative species line + area | ✅ |
-| Per-batch bars (same y-scale as line) | ✅ |
-| Node count line (dashed, right axis) | ✅ |
-| Show/hide legend (cumulative / bars / nodes) | ✅ |
-| Interactive tooltips | ✅ |
-| Import log list below chart | ✅ |
-| **Fixed width** (760px both tabs) | ✅ |
-| Class-level filtering for the chart | ❌ (needs per-class data in import log) |
+| Slug | Gap | Est. time |
+|---|---|---|
+| grallariidae | 12 | ~2 min |
+| campephagidae | 13 | ~2 min |
+| lybiidae | 14 | ~2 min |
+| parulidae | 14 | ~2 min |
+| monarchidae | 14 | ~2 min |
+| icteridae | 16 | ~2 min |
+| pellorneidae | 16 | ~2 min |
+| rallidae | 28 | ~4 min |
+| turdidae | 36 | ~5 min |
+| vireonidae | 42 | ~6 min |
 
-## Birds
+## Batch 2: Monster families (15 families, 2,810 species)
 
-- **254/254 IOC families** represented (100%)
-- **19,577 total nodes** across 351 families
-- **10 monster families** (Tyrannidae–Pycnonotidae) have 100–400 species gaps — impractical to hand-fill
-- **~28 families** with gaps of 4–42 species — could be filled in a future swoop
+Impractical to fully hand-fill. Listed in Coverage modal footer as gaps.
+Can be partially filled for major-genus coverage.
+
+| Slug | Gap | Note |
+|---|---|---|
+| tyrannidae | 383 | Largest bird family |
+| thraupidae | 329 | ~100 genera |
+| trochilidae | 294 | 360+ species |
+| furnariidae | 265 | Ovenbirds + woodcreepers |
+| columbidae | 224 | Pigeons worldwide |
+| muscicapidae | 219 | Old World flycatchers |
+| thamnophilidae | 209 | Neotropical antbirds |
+| psittaculidae | 156 | Old World parrots |
+| meliphagidae | 146 | Australasian honeyeaters |
+| pycnonotidae | 110 | Afro-Asian bulbuls |
+| cisticolidae | 105 | Cisticolas |
+| nectariniidae | 98 | Sunbirds |
+| strigidae | 97 | Owls |
+| picidae | 90 | Woodpeckers |
+| accipitridae | 85 | Hawks & eagles |
