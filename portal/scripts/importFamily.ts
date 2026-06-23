@@ -264,11 +264,14 @@ function main() {
   console.log(`   ${currentCount}/${family.speciesCount} species — gap=${gap}, generating ${Math.min(toGenerate, gap)}`);
   console.log();
 
-  // Build prompt — keep it concise
-  const genusSummary = genera.map(g => `${g.name} (${g.children.length} spp)`).join(", ");
-  const prompt = `Generate ${Math.min(toGenerate, gap)} new species for ${family.name} (${family.commonName}), Order ${family.orderName}, Class ${family.className}.
+  // Build prompt — keep it concise. For large families, skip genus summary to avoid context overflow.
+  const isLarge = currentCount > 50;
+  const genusSummary = isLarge
+    ? `~${currentCount} species across ${genera.length} genera`
+    : genera.map(g => `${g.name} (${g.children.length} spp)`).join(", ");
+  const prompt = `Generate ${Math.min(toGenerate, gap)} NEW species for ${family.name} (${family.commonName}), Order ${family.orderName}, Class ${family.className}.
 
-Existing genera: ${genusSummary || "none"}
+${isLarge ? `Family has ${currentCount}/${family.speciesCount} species.` : `Existing genera: ${genusSummary}`}
 Existing lineages: ${[...existingLineages].join(", ") || "none"}
 Target total: ${family.speciesCount}
 
