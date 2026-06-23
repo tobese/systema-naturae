@@ -1,39 +1,15 @@
-import { useState, useEffect } from "react";
-import ImportTimeline from "./ImportTimeline";
+import { useEffect } from "react";
 
 interface Props {
   onClose: () => void;
 }
 
 export default function InfoModal({ onClose }: Props) {
-  const [tab, setTab] = useState<"about" | "growth">("about");
-
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
-
-  const TAB = (key: string, label: string) => (
-    <button
-      onClick={() => setTab(key as any)}
-      style={{
-        background: "none",
-        border: "none",
-        color: tab === key ? "#c0c0d8" : "#444",
-        fontSize: 11,
-        cursor: "pointer",
-        padding: "6px 0",
-        borderBottom: tab === key ? "1px solid #6a8aba" : "1px solid transparent",
-        letterSpacing: "0.06em",
-        textTransform: "uppercase" as const,
-      }}
-    >
-      {label}
-    </button>
-  );
-
-  const isWide = tab === "growth";
 
   return (
     <div
@@ -56,7 +32,7 @@ export default function InfoModal({ onClose }: Props) {
           border: "1px solid #1e2030",
           borderRadius: 10,
           width: "100%",
-          maxWidth: isWide ? 740 : 580,
+          maxWidth: 580,
           maxHeight: "80vh",
           overflowY: "auto",
           position: "relative",
@@ -88,15 +64,7 @@ export default function InfoModal({ onClose }: Props) {
           ×
         </button>
 
-        {/* Tabs */}
-        <div style={{ display: "flex", gap: 20, padding: "28px 32px 0" }}>
-          {TAB("about", "About")}
-          {TAB("growth", "Growth")}
-        </div>
-
-        {/* Content */}
-        {tab === "about" && (
-          <div style={{ padding: "28px 32px 32px" }}>
+        <div style={{ padding: "28px 32px 32px" }}>
             <div style={{ display: "flex", gap: 24, alignItems: "flex-start", marginBottom: 24 }}>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 10, color: "#6666aa", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>
@@ -156,13 +124,6 @@ export default function InfoModal({ onClose }: Props) {
               <span style={{ fontSize: 11, color: "#444" }}>Nature makes no leaps. — Linnaeus, <em>Philosophia Botanica</em>, 1751</span>
             </p>
           </div>
-        )}
-
-        {tab === "growth" && (
-          <div style={{ padding: "20px 32px 32px" }}>
-            <ImportTimeline />
-          </div>
-        )}
       </div>
     </div>
   );

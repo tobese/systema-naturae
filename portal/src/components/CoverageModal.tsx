@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
+import ImportTimeline from "./ImportTimeline";
 
 interface Props {
   data: TaxonNode;
@@ -180,6 +181,7 @@ function CoverageRow({ node, depth, onFocusFamily, onClose, initiallyOpen }: {
 }
 
 export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId }: Props) {
+  const [tab, setTab] = useState<"coverage" | "growth">("coverage");
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -189,8 +191,26 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
   }, [onClose]);
 
   const classes = useMemo(() => buildCoverage(data), [data]);
-
   const totalFamilies = useMemo(() => classes.reduce((sum, cls) => sum + cls.families.length, 0), [classes]);
+
+  const TAB = (key: string, label: string) => (
+    <button
+      onClick={() => setTab(key as any)}
+      style={{
+        background: "none",
+        border: "none",
+        color: tab === key ? "#c0c0d8" : "#444",
+        fontSize: 11,
+        cursor: "pointer",
+        padding: "6px 0",
+        borderBottom: tab === key ? "1px solid #6a8aba" : "1px solid transparent",
+        letterSpacing: "0.06em",
+        textTransform: "uppercase" as const,
+      }}
+    >
+      {label}
+    </button>
+  );
 
   return (
     <div
@@ -213,7 +233,7 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
           border: "1px solid #1e2030",
           borderRadius: 10,
           width: "100%",
-          maxWidth: 760,
+          maxWidth: tab === "growth" ? 740 : 760,
           maxHeight: "85vh",
           overflowY: "auto",
           position: "relative",
@@ -246,6 +266,13 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
           ×
         </button>
 
+        {/* Tabs */}
+        <div style={{ display: "flex", gap: 20, padding: "28px 32px 0" }}>
+          {TAB("coverage", "Coverage")}
+          {TAB("growth", "Growth")}
+        </div>
+
+        {tab === "coverage" && (
         <div style={{ padding: "28px 32px 32px" }}>
           <div style={{ marginBottom: 24 }}>
             <div style={{ fontSize: 10, color: "#6666aa", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>
@@ -336,6 +363,13 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
             </span>
           </div>
         </div>
+        )}
+
+        {tab === "growth" && (
+          <div style={{ padding: "20px 32px 32px" }}>
+            <ImportTimeline />
+          </div>
+        )}
       </div>
     </div>
   );
