@@ -123,89 +123,71 @@ function main() {
   const allSlugs = getAllAppSlugs();
   const totalNodes = countNodes();
 
-  // Group family data files by their first commit
-  const commitGroups = new Map<string, { commit: string; date: string; message: string; families: string[] }>();
-
-  for (const [slug, info] of firstCommits) {
-    if (!allSlugs.includes(slug)) continue; // skip families no longer in taxonomy
-    if (!commitGroups.has(info.commit)) {
-      commitGroups.set(info.commit, { ...info, families: [] });
-    }
-    commitGroups.get(info.commit)!.families.push(slug);
-  }
-
-  // For untracked families, try to find their first mention in git history
-  const tracked = new Set(firstCommits.keys());
-  const untracked = allSlugs.filter(s => !tracked.has(s));
-  if (untracked.length > 0) {
-    console.log(`  ${untracked.length} untracked families — finding earliest git mention…`);
-    // Check if each untracked slug ever appears in any commit
-    for (const slug of untracked) {
-      try {
-        const result = execSync(
-          `git log --all --oneline --diff-filter=A --format="%H %aI" -- '*${slug}*'`,
-          { cwd: root, encoding: "utf-8", timeout: 5000 },
-        ).trim();
-        if (result) {
-          const [hash, date] = result.split("\n")[0].split(" ");
-          // Check if this commit already has a group
-          if (!commitGroups.has(hash)) {
-            commitGroups.set(hash, { commit: hash, date: date || "2026-06-14T10:00:00", message: "", families: [] });
-          }
-          commitGroups.get(hash)!.families.push(slug);
-        } else {
-          // Fallback: use earliest repo commit
-          const key = "__initial__";
-          if (!commitGroups.has(key)) {
-            commitGroups.set(key, {
-              commit: "initial",
-              date: "2026-06-14T10:00:00",
-              message: "Initial families — from early portal commits",
-              families: [],
-            });
-          }
-          commitGroups.get(key)!.families.push(slug);
-        }
-      } catch {
-        const key = "__initial__";
-        if (!commitGroups.has(key)) {
-          commitGroups.set(key, {
-            commit: "initial", date: "2026-06-14T10:00:00",
-            message: "Initial families — from early portal commits",
-            families: [],
-          });
-        }
-        commitGroups.get(key)!.families.push(slug);
-      }
-    }
-  }
-
-  // Sort by date
-  const sorted = [...commitGroups.entries()]
-    .filter(([_, g]) => g.families.length > 0)
-    .sort((a, b) => a[1].date.localeCompare(b[1].date));
-
-  // Compute running totals
-  let speciesRunning = 0;
-  const events: ImportEvent[] = [];
-
   // Precompute species counts for all slugs
   const speciesCounts = new Map<string, number>();
   for (const [slug, p] of familyPaths) {
     speciesCounts.set(slug, countSpecies(p));
   }
 
-  for (const [, group] of sorted) {
+  // Map each family slug → its first commit date (YYYY-MM-DD)
+  const slugDays = new Map<string, string>();
+
+  for (const [slug, info] of firstCommits) {
+    if (!allSlugs.includes(slug)) continue;
+    slugDays.set(slug, info.date.slice(0, 10)); // truncate to YYYY-MM-DD
+  }
+
+  // For untracked families, try to find their first git mention
+  const tracked = new Set(firstCommits.keys());
+  const untracked = allSlugs.filter(s => !tracked.has(s));
+  if (untracked.length > 0) {
+    console.log(`  ${untracked.length} untracked families — finding earliest git mention…`);
+    for (const slug of untracked) {
+      try {
+        const result = execSync(
+          `git log --all --oneline --diff-filter=A --format="%aI" -- '*${slug}*'`,
+          { cwd: root, encoding: "utf-8", timeout: 5000 },
+        ).trim();
+        if (result) {
+          slugDays.set(slug, result.split("\n")[0].slice(0, 10));
+        } else {
+          slugDays.set(slug, "2026-06-14");
+        }
+      } catch {
+        slugDays.set(slug, "2026-06-14");
+      }
+    }
+  }
+
+  // Group by day
+  const dayGroups = new Map<string, { date: string; families: string[] }>();
+  for (const [slug, day] of slugDays) {
+    if (!dayGroups.has(day)) {
+      dayGroups.set(day, { date: day, families: [] });
+    }
+    dayGroups.get(day)!.families.push(slug);
+  }
+
+  // Sort days chronologically
+  const sortedDays = [...dayGroups.entries()]
+    .filter(([_, g]) => g.families.length > 0)
+    .sort((a, b) => a[0].localeCompare(b[0]));
+
+  // Compute running totals
+  let speciesRunning = 0;
+  const events: ImportEvent[] = [];
+
+  for (const [, group] of sortedDays) {
     const speciesAdded = group.families.reduce((sum, slug) => sum + (speciesCounts.get(slug) ?? 0), 0);
     speciesRunning += speciesAdded;
     events.push({
       date: group.date,
-      commit: group.commit,
-      message: group.message,
+      commit: "",
+      message: "",
       families: group.families.sort(),
       speciesAdded,
       speciesRunning,
-      nodes: totalNodes, // current total; retroactive approximation
+      nodes: totalNodes,
     });
   }
 
