@@ -21,7 +21,7 @@ interface ImportEvent {
 function getFamilyFirstCommits(): Map<string, { commit: string; date: string; message: string }> {
   const map = new Map<string, { commit: string; date: string; message: string }>();
   const log = execSync(
-    `git log --all --reverse --diff-filter=A --name-only --format="COMMIT %H %aI %s" -- 'aves/**/src/data/*.json'`,
+    `git log --all --reverse --diff-filter=A --name-only --format="COMMIT %H %aI %s" -- '*/src/data/*.json'`,
     { cwd: root, encoding: "utf-8" },
   );
 
@@ -34,8 +34,8 @@ function getFamilyFirstCommits(): Map<string, { commit: string; date: string; me
       currentCommit = parts[0];
       currentDate = parts[1];
       currentMessage = parts.slice(2).join(" ").replace(/"/g, "'");
-    } else if (line.startsWith("aves/")) {
-      const match = line.match(/aves\/[^/]+\/([^/]+)\/src\/data\//);
+    } else if (line.includes("/src/data/")) {
+      const match = line.match(/\/([^/]+)\/src\/data\//);
       if (match) {
         const appSlug = match[1];
         if (!map.has(appSlug)) {
@@ -51,7 +51,7 @@ function getFamilyFirstCommits(): Map<string, { commit: string; date: string; me
 function buildFamilyPathMap(): Map<string, string> {
   const map = new Map<string, string>();
   const result = execSync(
-    `find ${root}/aves -name "*.json" -path "*/src/data/*" -type f`,
+    `find ${root} -name "*.json" -path "*/src/data/*" -type f -not -path "*/node_modules/*"`,
     { encoding: "utf-8" },
   );
   for (const path of result.trim().split("\n")) {
@@ -134,17 +134,50 @@ function main() {
     commitGroups.get(info.commit)!.families.push(slug);
   }
 
-  // Also add families that have no git history (all existing ones from before this import tracking)
+  // For untracked families, try to find their first mention in git history
   const tracked = new Set(firstCommits.keys());
   const untracked = allSlugs.filter(s => !tracked.has(s));
   if (untracked.length > 0) {
-    // Put them as the very first entry
-    commitGroups.set("__initial__", {
-      commit: "initial",
-      date: "2026-06-22T10:00:00",
-      message: "Initial families — established before import tracking",
-      families: untracked,
-    });
+    console.log(`  ${untracked.length} untracked families — finding earliest git mention…`);
+    // Check if each untracked slug ever appears in any commit
+    for (const slug of untracked) {
+      try {
+        const result = execSync(
+          `git log --all --oneline --diff-filter=A --format="%H %aI" -- '*${slug}*'`,
+          { cwd: root, encoding: "utf-8", timeout: 5000 },
+        ).trim();
+        if (result) {
+          const [hash, date] = result.split("\n")[0].split(" ");
+          // Check if this commit already has a group
+          if (!commitGroups.has(hash)) {
+            commitGroups.set(hash, { commit: hash, date: date || "2026-06-14T10:00:00", message: "", families: [] });
+          }
+          commitGroups.get(hash)!.families.push(slug);
+        } else {
+          // Fallback: use earliest repo commit
+          const key = "__initial__";
+          if (!commitGroups.has(key)) {
+            commitGroups.set(key, {
+              commit: "initial",
+              date: "2026-06-14T10:00:00",
+              message: "Initial families — from early portal commits",
+              families: [],
+            });
+          }
+          commitGroups.get(key)!.families.push(slug);
+        }
+      } catch {
+        const key = "__initial__";
+        if (!commitGroups.has(key)) {
+          commitGroups.set(key, {
+            commit: "initial", date: "2026-06-14T10:00:00",
+            message: "Initial families — from early portal commits",
+            families: [],
+          });
+        }
+        commitGroups.get(key)!.families.push(slug);
+      }
+    }
   }
 
   // Sort by date
