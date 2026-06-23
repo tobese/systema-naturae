@@ -17,7 +17,10 @@
           "rank": "SPECIES",
           "commonName": "Great Bustard",
           "lineage": "Great Bustards",
-          "continents": ["Europe", "Asia"],
+          "continents": [
+            "Europe",
+            "Asia"
+          ],
           "subspeciesCount": 2,
           "description": "The heaviest flying bird on Earth, with males reaching 21 kg. Brown above, white below, with a grey head and neck. In display, the male inflates his throat sac, raises his tail, and transforms into a white feathery ball visible from kilometres away. Once widespread across Europe, now reduced to fragmented populations in Spain, Portugal, and Central Asia. Occasionally recorded in Sweden."
         }
@@ -36,7 +39,9 @@
           "rank": "SPECIES",
           "commonName": "Houbara Bustard",
           "lineage": "Houbara Bustards",
-          "continents": ["Africa"],
+          "continents": [
+            "Africa"
+          ],
           "subspeciesCount": 2,
           "description": "Found in North Africa and the Canary Islands. Sandy-brown above, white below, with a distinctive black-and-white neck ruff. The male's courtship display involves raising the ruff, drooping the wings, and striding in circles. Classified as Vulnerable due to hunting and habitat loss."
         },
@@ -46,7 +51,10 @@
           "rank": "SPECIES",
           "commonName": "Asian Houbara",
           "lineage": "Houbara Bustards",
-          "continents": ["Asia", "Africa"],
+          "continents": [
+            "Asia",
+            "Africa"
+          ],
           "subspeciesCount": 0,
           "description": "Formerly considered conspecific with the African Houbara. Ranges from the Middle East through Central Asia to China. Ecologically important in arid ecosystems. Subject to large-scale captive breeding and release programmes in Saudi Arabia and the UAE for falconry."
         }
@@ -65,9 +73,338 @@
           "rank": "SPECIES",
           "commonName": "Little Bustard",
           "lineage": "Little Bustards",
-          "continents": ["Europe", "Asia", "Africa"],
+          "continents": [
+            "Europe",
+            "Asia",
+            "Africa"
+          ],
           "subspeciesCount": 0,
           "description": "The smallest European bustard, at just 40-45 cm. Sandy-brown above, white below, with a distinctive black-and-white neck pattern in breeding males. Found in open grassland and farmland across southern Europe, North Africa, and Central Asia. Classified as Near Threatened due to agricultural intensification."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ARDEOTIS",
+      "name": "Ardeotis",
+      "rank": "GENUS",
+      "commonName": "Giant Bustards",
+      "description": "The largest bustards, found in Africa, Asia, and Australia. They are among the heaviest flying birds.",
+      "lineage": "Great Bustards",
+      "children": [
+        {
+          "id": "ARDEOTIS_KORI",
+          "name": "Ardeotis kori",
+          "rank": "SPECIES",
+          "commonName": "Kori Bustard",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "One of the heaviest flying birds, found in the savannas of eastern and southern Africa."
+        },
+        {
+          "id": "ARDEOTIS_ARABS",
+          "name": "Ardeotis arabs",
+          "rank": "SPECIES",
+          "commonName": "Arabian Bustard",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Africa",
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A large bustard found in the Sahel and Arabia."
+        },
+        {
+          "id": "ARDEOTIS_AUSTRALIS",
+          "name": "Ardeotis australis",
+          "rank": "SPECIES",
+          "commonName": "Australian Bustard",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Australia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A large bustard found across northern Australia."
+        },
+        {
+          "id": "ARDEOTIS_NIGRICEPS",
+          "name": "Ardeotis nigriceps",
+          "rank": "SPECIES",
+          "commonName": "Great Indian Bustard",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A critically endangered bustard found in India."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NEOTIS",
+      "name": "Neotis",
+      "rank": "GENUS",
+      "commonName": "African Bustards",
+      "description": "Medium to large bustards found in sub-Saharan Africa.",
+      "lineage": "Great Bustards",
+      "children": [
+        {
+          "id": "NEOTIS_CAFRA",
+          "name": "Neotis cafra",
+          "rank": "SPECIES",
+          "commonName": "Cafers Bustard",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard found in southern Africa."
+        },
+        {
+          "id": "NEOTIS_DENHAMI",
+          "name": "Neotis denhami",
+          "rank": "SPECIES",
+          "commonName": "Denham",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 2,
+          "description": "A bustard found in grasslands of sub-Saharan Africa."
+        },
+        {
+          "id": "NEOTIS_HEUGLINII",
+          "name": "Neotis heuglinii",
+          "rank": "SPECIES",
+          "commonName": "Heuglin",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard found in the Horn of Africa."
+        },
+        {
+          "id": "NEOTIS_LUDWIGII",
+          "name": "Neotis ludwigii",
+          "rank": "SPECIES",
+          "commonName": "Ludwig",
+          "lineage": "Great Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard found in southwestern Africa."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_EUPODOTIS",
+      "name": "Eupodotis",
+      "rank": "GENUS",
+      "commonName": "Small Bustards",
+      "description": "Small to medium bustards found in Africa.",
+      "lineage": "Little Bustards",
+      "children": [
+        {
+          "id": "EUPODOTIS_SENEGALENSIS",
+          "name": "Eupodotis senegalensis",
+          "rank": "SPECIES",
+          "commonName": "White-bellied Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard found in the Sahel and East Africa."
+        },
+        {
+          "id": "EUPODOTIS_CAERULESCENS",
+          "name": "Eupodotis caerulescens",
+          "rank": "SPECIES",
+          "commonName": "Blue Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard with blue-grey head and neck, endemic to South Africa."
+        },
+        {
+          "id": "EUPODOTIS_VIGORSII",
+          "name": "Eupodotis vigorsii",
+          "rank": "SPECIES",
+          "commonName": "Karoo Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard of the Karoo region in South Africa."
+        },
+        {
+          "id": "EUPODOTIS_RUFFCRISTA",
+          "name": "Eupodotis ruficrista",
+          "rank": "SPECIES",
+          "commonName": "Red-crested Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard with red crest, found in southern Africa."
+        },
+        {
+          "id": "EUPODOTIS_AFRA",
+          "name": "Eupodotis afra",
+          "rank": "SPECIES",
+          "commonName": "Black Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small black bustard endemic to South Africa."
+        },
+        {
+          "id": "EUPODOTIS_AFRAOIDES",
+          "name": "Eupodotis afraoides",
+          "rank": "SPECIES",
+          "commonName": "White-quilled Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard found in southern Africa."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LOPHOTIS",
+      "name": "Lophotis",
+      "rank": "GENUS",
+      "commonName": "Crested Bustards",
+      "description": "Small bustards with distinctive crests, found in Africa.",
+      "lineage": "Little Bustards",
+      "children": [
+        {
+          "id": "LOPHOTIS_RUFICRISTA",
+          "name": "Lophotis ruficrista",
+          "rank": "SPECIES",
+          "commonName": "Red-crested Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard with red crest, found in southern Africa."
+        },
+        {
+          "id": "LOPHOTIS_SAVILEI",
+          "name": "Lophotis savilei",
+          "rank": "SPECIES",
+          "commonName": "Savile",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard found in the Sahel."
+        },
+        {
+          "id": "LOPHOTIS_GINDIANA",
+          "name": "Lophotis gindiana",
+          "rank": "SPECIES",
+          "commonName": "Buff-crested Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard with buff crest, found in East Africa."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_AFROTIS",
+      "name": "Afrotis",
+      "rank": "GENUS",
+      "commonName": "Black Bustards",
+      "description": "Small black bustards from southern Africa.",
+      "lineage": "Little Bustards",
+      "children": [
+        {
+          "id": "AFROTIS_AFRA",
+          "name": "Afrotis afra",
+          "rank": "SPECIES",
+          "commonName": "Southern Black Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small black bustard from South Africa."
+        },
+        {
+          "id": "AFROTIS_AFRAOIDES",
+          "name": "Afrotis afraoides",
+          "rank": "SPECIES",
+          "commonName": "White-quilled Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard from southern Africa."
+        }
+      ]
+    },
+    {
+      "id": "GENUS_LOPHOTIS",
+      "name": "Lophotis",
+      "rank": "GENUS",
+      "commonName": "Crested Bustards",
+      "description": "Bustards with distinctive crests from Africa.",
+      "lineage": "Little Bustards",
+      "children": [
+        {
+          "id": "LOPHOTIS_RUFICRISTA",
+          "name": "Lophotis ruficrista",
+          "rank": "SPECIES",
+          "commonName": "Red-crested Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard with red crest from southern Africa."
+        },
+        {
+          "id": "LOPHOTIS_SAVILEI",
+          "name": "Lophotis savilei",
+          "rank": "SPECIES",
+          "commonName": "Savile's Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard from the Sahel."
+        },
+        {
+          "id": "LOPHOTIS_GINDIANA",
+          "name": "Lophotis gindiana",
+          "rank": "SPECIES",
+          "commonName": "Buff-crested Bustard",
+          "lineage": "Little Bustards",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": "A bustard with buff crest from East Africa."
         }
       ]
     }
