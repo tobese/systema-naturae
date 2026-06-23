@@ -8,6 +8,18 @@ const portalRoot = resolve(__dirname, "..");
 const GBIF_MATCH = "https://api.gbif.org/v1/species/match";
 const GBIF_SEARCH = "https://api.gbif.org/v1/species/search";
 const CLASS_ARG = process.argv[2] || "Aves";
+
+// Map portal class names → GBIF class names (GBIF doesn't use all the same names)
+const CLASS_NAME_MAP: Record<string, string> = {
+  actinopterygii: "Actinopterygii",  // GBIF key: 100198473 (fallback)
+  chondrichthyes: "Elasmobranchii",
+  // Echinoderm classes work as-is
+};
+
+// Pre-set class keys for classes GBIF's match API can't find
+const CLASS_KEY_OVERRIDE: Record<string, number> = {
+  actinopterygii: parseInt(process.env.GBIF_FISH_KEY || "177709486", 10),
+};
 const CACHE_PATH = resolve(portalRoot, `data/gbif-cache-${CLASS_ARG.toLowerCase()}.json`);
 const PAGE_SIZE = 100;
 const RATE_DELAY = 250;
@@ -37,13 +49,27 @@ function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
 async function main() {
   console.log(`📡 Downloading all ${CLASS_ARG} species from GBIF...\n`);
 
-  // 1. Get class key
-  console.log(`🔍 Fetching ${CLASS_ARG} class key...`);
-  const matchRes = await fetch(`${GBIF_MATCH}?name=${encodeURIComponent(CLASS_ARG)}&rank=CLASS`);
-  const matchData = await matchRes.json() as { usageKey?: number; status?: string };
-  const classKey = matchData.usageKey;
-  if (!classKey) { console.error(`❌ Could not find ${CLASS_ARG} in GBIF`); process.exit(1); }
-  console.log(`   Class key: ${classKey}\n`);
+  // 1. Get class key (check for fixed overrides and name mappings)
+  const gbifClassName = CLASS_NAME_MAP[CLASS_ARG.toLowerCase()] || CLASS_ARG;
+  let classKey = CLASS_KEY_OVERRIDE[CLASS_ARG.toLowerCase()];
+
+  if (!classKey) {
+    console.log(`🔍 Fetching ${gbifClassName} class key from GBIF...`);
+    try {
+      const matchRes = await fetch(`${GBIF_MATCH}?name=${encodeURIComponent(gbifClassName)}&rank=CLASS`);
+      const matchData = await matchRes.json() as { usageKey?: number; status?: string };
+      classKey = matchData.usageKey;
+    } catch {
+      // Fall through to error below
+    }
+  }
+
+  if (!classKey) {
+    console.error(`❌ Could not find a GBIF class key for "${CLASS_ARG}" (tried "${gbifClassName}")`);
+    console.error(`   To provide a key manually: GBIF_CLASS_KEY=12345 npx tsx scripts/cacheGbifData.ts ${CLASS_ARG}`);
+    process.exit(1);
+  }
+  console.log(`   Class: ${gbifClassName}, key: ${classKey}\n`);
 
   // 2. Get total count
   const countRes = await fetch(`${GBIF_SEARCH}?higherTaxonKey=${classKey}&rank=SPECIES&status=ACCEPTED&limit=1`);

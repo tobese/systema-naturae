@@ -87,9 +87,14 @@ interface GbifCache {
 }
 
 function tryLoadCache(className: string): GbifCache | null {
-  const path = resolve(portalRoot, `data/gbif-cache-${className.toLowerCase()}.json`);
+  // Map portal class names to GBIF cache file names
+  const cacheName: Record<string, string> = {
+    actinopterygii: "actinopterygii",  // Maps to cache key Actinopterygii
+    chondrichthyes: "elasmobranchii",
+  };
+  const cacheKey = cacheName[className.toLowerCase()] || className.toLowerCase();
+  const path = resolve(portalRoot, `data/gbif-cache-${cacheKey}.json`);
   if (!existsSync(path)) {
-    // Try legacy name
     const legacy = resolve(portalRoot, "data/gbif-cache.json");
     if (!existsSync(legacy)) return null;
     try { return JSON.parse(readFileSync(legacy, "utf-8")); } catch { return null; }
