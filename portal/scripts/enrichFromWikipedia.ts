@@ -67,7 +67,7 @@ interface FamilyFile {
   data: Record<string, unknown>;
 }
 
-function scanFiles(): FamilyFile[] {
+function scanFiles(classFilter?: string): FamilyFile[] {
   const families: FamilyFile[] = [];
 
   function processFile(fullPath: string) {
@@ -114,9 +114,11 @@ function scanFiles(): FamilyFile[] {
     } catch { /* permission denied, skip */ }
   }
 
-  // Walk all class directories, not just aves/
-  const classDirs = ["aves", "mammalia", "reptilia", "chondrichthyes", "amphibia", "actinopterygii",
-    "insecta", "arachnida", "asteroidea", "echinoidea", "holothuroidea", "tardigrada"];
+  // Walk class directories
+  const classDirs = classFilter
+    ? [classFilter]
+    : ["aves", "mammalia", "reptilia", "chondrichthyes", "amphibia", "actinopterygii",
+      "insecta", "arachnida", "asteroidea", "echinoidea", "holothuroidea", "tardigrada"];
   for (const dir of classDirs) {
     const fullDir = join(root, dir);
     if (existsSync(fullDir)) walkDir(fullDir);
@@ -184,12 +186,21 @@ async function enrichFamily(fam: FamilyFile): Promise<number> {
 }
 
 async function main() {
-  const onlySlug = process.argv[2]; // optional: limit to one family
+  // Parse arguments: optionally --class <classname> or <slug>
+  let classFilter = "";
+  let slugFilter = "";
+  for (let i = 2; i < process.argv.length; i++) {
+    if (process.argv[i] === "--class" && i + 1 < process.argv.length) {
+      classFilter = process.argv[++i].toLowerCase();
+    } else if (!slugFilter) {
+      slugFilter = process.argv[i];
+    }
+  }
 
   console.log("📖 Scanning family data files...");
-  const all = scanFiles();
-  const families = onlySlug
-    ? all.filter(f => f.slug === onlySlug)
+  const all = scanFiles(classFilter || undefined);
+  const families = slugFilter
+    ? all.filter(f => f.slug === slugFilter)
     : all;
 
   console.log(`   Found ${families.length} families with ${families.reduce((s, f) => s + f.toEnrich.length, 0)} species to enrich`);

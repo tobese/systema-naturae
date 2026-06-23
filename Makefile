@@ -25,4 +25,10 @@ cache-gbif:
 	cd portal && npm run cache-gbif
 
 enrich:
-	cd portal && npm run enrich $(ARGS)
+	@for cls in aves mammalia reptilia amphibia actinopterygii chondrichthyes insecta arachnida asteroidea echinoidea holothuroidea; do \
+	  echo "=== Enriching $$cls ==="; \
+	  cd portal && npx tsx scripts/enrichFromWikipedia.ts --class $$cls; \
+	  cd portal && sh scripts/buildData.sh; \
+	  cd .. && git add -A aves/ $$cls/ portal/data/ && git commit -m "Enrich $$cls with Wikipedia" --allow-empty; \
+	done; \
+	git push
