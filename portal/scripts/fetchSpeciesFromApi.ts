@@ -341,6 +341,8 @@ async function main() {
         commonName = `${genusName} ${speciesEpithet}`.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
       }
 
+      const sourcedFrom = (useWiki && description && description.length > 40 && !description.startsWith(sciName)) ? "wikipedia" : "generated";
+
       speciesChildren.push({
         id: nameToId(sciName),
         name: sciName,
@@ -350,6 +352,7 @@ async function main() {
         continents,
         subspeciesCount: 0,
         description,
+        sourcedFrom,
       });
     }
 
