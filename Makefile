@@ -20,3 +20,6 @@ import:
 
 fetch:
 	cd portal && npm run fetch $(ARGS)
+
+cache-gbif:
+	cd portal && npm run cache-gbif

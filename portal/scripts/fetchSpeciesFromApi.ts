@@ -78,6 +78,38 @@ function getOrderPath(slug: string, cls?: string, ord?: string): string {
   return resolve(root, slug);
 }
 
+// ---------- GBIF Cache ----------
+
+interface GbifCache {
+  downloadedAt: string;
+  speciesByFamily: Record<string, { gbifKey: number; species: { species: string; genus: string; family: string }[] }>;
+  familyKeyToName: Record<number, string>;
+}
+
+function tryLoadCache(className: string): GbifCache | null {
+  const path = resolve(portalRoot, `data/gbif-cache-${className.toLowerCase()}.json`);
+  if (!existsSync(path)) {
+    // Try legacy name
+    const legacy = resolve(portalRoot, "data/gbif-cache.json");
+    if (!existsSync(legacy)) return null;
+    try { return JSON.parse(readFileSync(legacy, "utf-8")); } catch { return null; }
+  }
+  try { return JSON.parse(readFileSync(path, "utf-8")); } catch { return null; }
+}
+
+function lookupFamilyInCache(cache: GbifCache, familyName: string): { gbifKey: number; species: { species: string; genus: string }[] } | null {
+  const entry = cache.speciesByFamily[familyName];
+  if (!entry) return null;
+  // Remove duplicates by species name
+  const seen = new Set<string>();
+  const unique = entry.species.filter(s => {
+    if (!s.species || seen.has(s.species)) return false;
+    seen.add(s.species);
+    return true;
+  });
+  return { gbifKey: entry.gbifKey, species: unique };
+}
+
 // ---------- GBIF API ----------
 
 async function getGbifFamilyKey(familyName: string): Promise<number> {
@@ -209,38 +241,55 @@ async function main() {
   console.log(`📦 ${family.name} (${family.className}/${family.orderName}/${family.appSlug})`);
   console.log(`   speciesCount in taxonomy: ${family.speciesCount}`);
 
-  // 1. Get GBIF family key
-  console.log("\n🔍 Looking up family in GBIF...");
-  let familyKey: number;
-  try {
-    familyKey = await getGbifFamilyKey(family.name);
-    console.log(`   GBIF taxon key: ${familyKey}`);
-  } catch (e) {
-    console.error(`   ❌ ${(e as Error).message}`);
-    process.exit(1);
+  // 1. Try local cache first
+  const cacheClass = family.className || "aves";
+  const cache = tryLoadCache(cacheClass);
+  let allSpecies: { species: string; genus: string }[] = [];
+  let fromCache = false;
+
+  if (cache) {
+    const cached = lookupFamilyInCache(cache, family.name);
+    if (cached) {
+      allSpecies = cached.species;
+      fromCache = true;
+      console.log(`   ✅ Found ${allSpecies.length} species in local cache (${cacheClass})`);
+    }
   }
 
-  // 2. Fetch species from GBIF
-  console.log("\n📡 Fetching species from GBIF...");
-  let species: GbifSpecies[];
-  try {
-    species = await fetchGbifSpecies(familyKey, maxSpecies ?? 999999);
-    console.log(`   Found ${species.length} accepted species`);
-  } catch (e) {
-    console.error(`   ❌ GBIF error: ${(e as Error).message}`);
-    process.exit(1);
+  // 2. Fall back to live GBIF API
+  if (!fromCache) {
+    console.log("\n🔍 Looking up family in GBIF...");
+    let familyKey: number;
+    try {
+      familyKey = await getGbifFamilyKey(family.name);
+      console.log(`   GBIF taxon key: ${familyKey}`);
+    } catch (e) {
+      console.error(`   ❌ ${(e as Error).message}`);
+      process.exit(1);
+    }
+
+    console.log("\n📡 Fetching species from GBIF...");
+    try {
+      const raw = await fetchGbifSpecies(familyKey, maxSpecies ?? 999999);
+      allSpecies = raw.map((s: GbifSpecies) => ({ species: s.species || s.species, genus: s.genus || "" }));
+      console.log(`   Found ${allSpecies.length} accepted species`);
+    } catch (e) {
+      console.error(`   ❌ GBIF error: ${(e as Error).message}`);
+      process.exit(1);
+    }
   }
 
-  if (species.length === 0) {
+  if (allSpecies.length === 0) {
     console.log("   No species found — exit");
     process.exit(0);
   }
 
   // 3. Group by genus
-  const genusMap = new Map<string, GbifSpecies[]>();
-  for (const sp of species) {
-    const sciName = parseScientificName(sp.scientificName);
+  const genusMap = new Map<string, { species: string; genus: string }[]>();
+  for (const sp of allSpecies) {
+    const sciName = sp.species || "";
     const genusName = sp.genus || sciName.split(" ")[0] || "Unknown";
+    if (!sciName || !sciName.includes(" ")) continue;
     if (!genusMap.has(genusName)) genusMap.set(genusName, []);
     genusMap.get(genusName)!.push(sp);
   }
@@ -251,14 +300,6 @@ async function main() {
 
   if (useWiki) {
     console.log("\n📖 Enriching with Wikipedia data...");
-    const allSciNames = species.map(s => parseScientificName(s.scientificName));
-    for (let i = 0; i < allSciNames.length; i++) {
-      const sci = allSciNames[i];
-      if (i > 0 && i % 20 === 0) console.log(`   ${i}/${allSciNames.length} (${wikiCount} wiki pages found)`);
-      await sleep(RATE_LIMIT_DELAY);
-    }
-    // We process Wikipedia in the build step below
-    console.log(`   Wikipedia lookups will happen during file generation`);
   }
 
   // 5. Build the family data file
@@ -268,7 +309,7 @@ async function main() {
     const speciesChildren: Record<string, unknown>[] = [];
 
     for (const sp of spp) {
-      const sciName = sp.species || parseScientificName(sp.scientificName);
+      const sciName = sp.species || "";
       if (!sciName || !sciName.includes(" ")) continue;
       const speciesEpithet = sciName.split(" ").slice(1).join("_") || "sp";
 
@@ -286,10 +327,8 @@ async function main() {
             description = extractDescription(wiki.extract);
             continents = inferContinents(wiki.extract);
             wikiCount++;
-          } else if (wiki && wiki.type === "https://mediawiki.org/wiki/Special:MyLanguage/Extension:PageAssessments") {
-            // no-op: Wikipedia returned a special page
           }
-        } catch (e) {
+        } catch {
           // Wikipedia failed silently — use defaults
         }
       }
@@ -346,7 +385,7 @@ async function main() {
 
   writeFileSync(dataFile, JSON.stringify(familyData, null, 2) + "\n");
 
-  const totalSpecies = species.length;
+  const totalSpecies = allSpecies.length;
   console.log(`\n✅ Wrote ${totalSpecies} species to ${dataFile}`);
   console.log(`   ${children.length} genera, ${wikiCount} Wikipedia pages used`);
 
