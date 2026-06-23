@@ -17,31 +17,40 @@ interface ImportEvent {
   nodes: number;
 }
 
-/** Get the first commit that introduced each family data file */
-function getFamilyFirstCommits(): Map<string, { commit: string; date: string; message: string }> {
-  const map = new Map<string, { commit: string; date: string; message: string }>();
-  const log = execSync(
-    `git log --all --reverse --diff-filter=A --name-only --format="COMMIT %H %aI %s" -- '*/src/data/*.json'`,
-    { cwd: root, encoding: "utf-8" },
-  );
+/** Get each family's earliest git commit by following renames */
+function getFamilyFirstCommits(): Map<string, { date: string; message: string }> {
+  const map = new Map<string, { date: string; message: string }>();
+  const familyPaths = buildFamilyPathMap();
 
-  let currentCommit = "";
-  let currentDate = "";
-  let currentMessage = "";
-  for (const line of log.split("\n")) {
-    if (line.startsWith("COMMIT ")) {
-      const parts = line.slice(7).split(" ");
-      currentCommit = parts[0];
-      currentDate = parts[1];
-      currentMessage = parts.slice(2).join(" ").replace(/"/g, "'");
-    } else if (line.includes("/src/data/")) {
-      const match = line.match(/\/([^/]+)\/src\/data\//);
-      if (match) {
-        const appSlug = match[1];
-        if (!map.has(appSlug)) {
-          map.set(appSlug, { commit: currentCommit, date: currentDate, message: currentMessage });
+  for (const [slug, path] of familyPaths) {
+    try {
+      const result = execSync(
+        `git log --all --follow --format="%aI %s" -- "${path}"`,
+        { cwd: root, encoding: "utf-8", timeout: 3000 },
+      ).trim();
+      if (result) {
+        const firstLine = result.split("\n").pop() || ""; // last = oldest (reverse order not used)
+        // Actually git log goes most-recent-first. We need the LAST line for the oldest.
+        // With --follow, results are most-recent-first. We want the final one.
+        // Actually git log without --reverse goes most-recent-first.
+        // Let's just use the first line (which IS the earliest since we don't reverse)
+        // Wait no — without --reverse, the FIRST line is the MOST recent.
+        // We want the LAST line (oldest).
+        // Actually with --follow, we want the OLDEST commit.
+        // Let's use --reverse.
+        const revResult = execSync(
+          `git log --all --follow --reverse --format="%aI %s" -- "${path}"`,
+          { cwd: root, encoding: "utf-8", timeout: 5000 },
+        ).trim();
+        if (revResult) {
+          const firstLine = revResult.split("\n")[0];
+          const date = firstLine.split(" ")[0];
+          const msg = firstLine.slice(date.length + 1);
+          map.set(slug, { date, message: msg.replace(/"/g, "'") });
         }
       }
+    } catch {
+      // skip
     }
   }
   return map;
@@ -119,72 +128,55 @@ function main() {
   console.log("Building import log…");
 
   const familyPaths = buildFamilyPathMap();
-  const firstCommits = getFamilyFirstCommits();
   const allSlugs = getAllAppSlugs();
   const totalNodes = countNodes();
 
-  // Precompute species counts for all slugs
+  // Precompute species counts
   const speciesCounts = new Map<string, number>();
   for (const [slug, p] of familyPaths) {
     speciesCounts.set(slug, countSpecies(p));
   }
+
+  // Get first-commit dates for each family
+  const firstCommits = getFamilyFirstCommits();
 
   // Map each family slug → its first commit date (YYYY-MM-DD)
   const slugDays = new Map<string, string>();
 
   for (const [slug, info] of firstCommits) {
     if (!allSlugs.includes(slug)) continue;
-    slugDays.set(slug, info.date.slice(0, 10)); // truncate to YYYY-MM-DD
+    slugDays.set(slug, info.date.slice(0, 10));
   }
 
-  // For untracked families, try to find their first git mention
+  // For untracked families, use earliest repo date
   const tracked = new Set(firstCommits.keys());
-  const untracked = allSlugs.filter(s => !tracked.has(s));
-  if (untracked.length > 0) {
-    console.log(`  ${untracked.length} untracked families — finding earliest git mention…`);
-    for (const slug of untracked) {
-      try {
-        const result = execSync(
-          `git log --all --oneline --diff-filter=A --format="%aI" -- '*${slug}*'`,
-          { cwd: root, encoding: "utf-8", timeout: 5000 },
-        ).trim();
-        if (result) {
-          slugDays.set(slug, result.split("\n")[0].slice(0, 10));
-        } else {
-          slugDays.set(slug, "2026-06-14");
-        }
-      } catch {
-        slugDays.set(slug, "2026-06-14");
-      }
+  for (const slug of allSlugs) {
+    if (!tracked.has(slug)) {
+      slugDays.set(slug, "2026-06-14");
     }
   }
 
   // Group by day
-  const dayGroups = new Map<string, { date: string; families: string[] }>();
+  const dayGroups = new Map<string, string[]>();
   for (const [slug, day] of slugDays) {
-    if (!dayGroups.has(day)) {
-      dayGroups.set(day, { date: day, families: [] });
-    }
-    dayGroups.get(day)!.families.push(slug);
+    if (!dayGroups.has(day)) dayGroups.set(day, []);
+    dayGroups.get(day)!.push(slug);
   }
 
-  // Sort days chronologically
-  const sortedDays = [...dayGroups.entries()]
-    .filter(([_, g]) => g.families.length > 0)
-    .sort((a, b) => a[0].localeCompare(b[0]));
-
-  // Compute running totals
+  // Sort days and compute running totals
+  const sortedDays = [...dayGroups.keys()].sort();
   let speciesRunning = 0;
   const events: ImportEvent[] = [];
 
-  for (const [, group] of sortedDays) {
-    const speciesAdded = group.families.reduce((sum, slug) => sum + (speciesCounts.get(slug) ?? 0), 0);
+  for (const day of sortedDays) {
+    const fams = dayGroups.get(day)!.sort();
+    const speciesAdded = fams.reduce((sum, slug) => sum + (speciesCounts.get(slug) ?? 0), 0);
     speciesRunning += speciesAdded;
     events.push({
-      date: group.date,
+      date: day,
       commit: "",
       message: "",
-      families: group.families.sort(),
+      families: fams,
       speciesAdded,
       speciesRunning,
       nodes: totalNodes,
