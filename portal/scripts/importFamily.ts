@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, rmSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
@@ -9,7 +9,7 @@ const portalRoot = resolve(__dirname, "..");
 
 const OLLAMA_URL = "http://localhost:11434/api/chat";
 const MODEL = process.env.OLLAMA_MODEL || "qwen2.5:3b";
-const OLLAMA_TIMEOUT = 300_000;
+const OLLAMA_TIMEOUT = 900_000;
 
 interface Species {
   id: string;
@@ -95,27 +95,33 @@ function getColorRegistryLineages(slug: string): Set<string> {
   return lines;
 }
 
-async function callOllama(prompt: string, _count: number, temperature = 0.5): Promise<string> {
+function callOllama(prompt: string, _count: number, temperature = 0.5): string {
   const systemMsg = "You are a taxonomy data generator. Output ONLY a valid JSON array of species objects. No markdown, no explanation, no code fences. Just the raw JSON array.";
 
-  const res = await fetch(OLLAMA_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    signal: AbortSignal.timeout(OLLAMA_TIMEOUT),
-    body: JSON.stringify({
-      model: MODEL,
-      messages: [
-        { role: "system", content: systemMsg },
-        { role: "user", content: prompt },
-      ],
-      stream: false,
-      temperature,
-    }),
+  const body = JSON.stringify({
+    model: MODEL,
+    messages: [
+      { role: "system", content: systemMsg },
+      { role: "user", content: prompt },
+    ],
+    stream: false,
+    temperature,
   });
 
-  if (!res.ok) throw new Error(`Ollama returned ${res.status}`);
-  const j = await res.json();
-  return j.message?.content ?? "";
+  // Write prompt to temp file to avoid shell escaping issues
+  const tmpFile = resolve(process.env.HOME ?? "/tmp", ".ollama_prompt.json");
+  writeFileSync(tmpFile, body, "utf-8");
+
+  try {
+    const result = execSync(
+      `curl -s --max-time ${Math.floor(OLLAMA_TIMEOUT / 1000)} -X POST ${OLLAMA_URL} -d @${tmpFile}`,
+      { encoding: "utf-8", timeout: OLLAMA_TIMEOUT + 10000 },
+    );
+    const parsed = JSON.parse(result);
+    return parsed.message?.content ?? "";
+  } finally {
+    try { rmSync(tmpFile); } catch { /* ok */ }
+  }
 }
 
 function extractJson(text: string): string {
@@ -223,7 +229,7 @@ function checkColorRegistry(slug: string, newLineages: Set<string>): string[] {
 
 // ---------- main ----------
 
-async function main() {
+function main() {
   const slug = process.argv[2];
   const requestedCount = process.argv[3] ? parseInt(process.argv[3], 10) : null;
 
@@ -281,7 +287,7 @@ ${Math.min(toGenerate, gap)} species, valid JSON only. Use genera not yet listed
   console.log("⏳ Calling Ollama...");
   let jsonText: string;
   try {
-    jsonText = await callOllama(prompt, Math.min(toGenerate, gap));
+    jsonText = callOllama(prompt, Math.min(toGenerate, gap));
   } catch (e) {
     console.error(`❌ Ollama error: ${(e as Error).message}`);
     process.exit(1);
@@ -291,7 +297,7 @@ ${Math.min(toGenerate, gap)} species, valid JSON only. Use genera not yet listed
   if (!jsonText.includes("[") || !jsonText.includes("]")) {
     console.log("  ⚠  Response didn't contain a JSON array, retrying with higher temperature...");
     try {
-      jsonText = await callOllama(prompt, Math.min(toGenerate, gap), 0.9);
+      jsonText = callOllama(prompt, Math.min(toGenerate, gap), 0.9);
     } catch (e) {
       console.error(`❌ Ollama error on retry: ${(e as Error).message}`);
       process.exit(1);
@@ -353,4 +359,4 @@ ${Math.min(toGenerate, gap)} species, valid JSON only. Use genera not yet listed
   }
 }
 
-main().catch(e => { console.error("Fatal:", e); process.exit(1); });
+main();
