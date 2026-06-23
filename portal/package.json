@@ -8,6 +8,7 @@
     "build": "sh scripts/buildData.sh && vite build",
     "typecheck": "tsc -b",
 "import": "npx tsx scripts/importFamily.ts",
+"fetch": "npx tsx scripts/fetchSpeciesFromApi.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "playwright test",

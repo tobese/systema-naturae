@@ -17,3 +17,6 @@ lint:
 
 import:
 	OLLAMA_MODEL=qwen2.5:3b cd portal && npm run import $(ARGS)
+
+fetch:
+	cd portal && npm run fetch $(ARGS)
