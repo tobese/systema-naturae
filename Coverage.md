@@ -1,10 +1,13 @@
 # Coverage & Import status
 
 ## Current portal state
-- **19,970 nodes** in unified taxonomy
+- **20,330 nodes** in unified taxonomy
 - **351 families** across all phyla
 - **254/254 IOC bird families** represented (100%)
 - **All bird gaps filled** with real data from GBIF + Wikipedia
+- **106 species** with Wikipedia-enriched descriptions, **8,581** with generated descriptions
+- **GBIF caches**: Aves (95MB), Mammalia (96MB), Reptilia (459MB), Amphibia (37MB), Elasmobranchii (13MB), Asteroidea (7MB), Echinoidea (10MB), Holothuroidea (6MB)
+- **Cache still needed**: Actinopterygii, Arachnida, Insecta (run `make cache-gbif`)
 
 ## Import tools
 
