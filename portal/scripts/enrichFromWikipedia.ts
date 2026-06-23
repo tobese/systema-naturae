@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, readdirSync, statSync } from "fs";
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "fs";
 import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
 
@@ -114,7 +114,13 @@ function scanFiles(): FamilyFile[] {
     } catch { /* permission denied, skip */ }
   }
 
-  walkDir(join(root, "aves"));
+  // Walk all class directories, not just aves/
+  const classDirs = ["aves", "mammalia", "reptilia", "chondrichthyes", "amphibia", "actinopterygii",
+    "insecta", "arachnida", "asteroidea", "echinoidea", "holothuroidea", "tardigrada"];
+  for (const dir of classDirs) {
+    const fullDir = join(root, dir);
+    if (existsSync(fullDir)) walkDir(fullDir);
+  }
   return families;
 }
 
