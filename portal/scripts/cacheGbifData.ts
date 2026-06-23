@@ -41,12 +41,12 @@ async function main() {
   console.log(`🔍 Fetching ${CLASS_ARG} class key...`);
   const matchRes = await fetch(`${GBIF_MATCH}?name=${encodeURIComponent(CLASS_ARG)}&rank=CLASS`);
   const matchData = await matchRes.json() as { usageKey?: number; status?: string };
-  const avesKey = matchData.usageKey;
-  if (!avesKey) { console.error("❌ Could not find Aves in GBIF"); process.exit(1); }
-  console.log(`   Class key: ${avesKey}\n`);
+  const classKey = matchData.usageKey;
+  if (!classKey) { console.error(`❌ Could not find ${CLASS_ARG} in GBIF`); process.exit(1); }
+  console.log(`   Class key: ${classKey}\n`);
 
   // 2. Get total count
-  const countRes = await fetch(`${GBIF_SEARCH}?higherTaxonKey=${avesKey}&rank=SPECIES&status=ACCEPTED&limit=1`);
+  const countRes = await fetch(`${GBIF_SEARCH}?higherTaxonKey=${classKey}&rank=SPECIES&status=ACCEPTED&limit=1`);
   const countData = await countRes.json() as { count?: number };
   const total = countData.count ?? 0;
   console.log(`📊 ${total.toLocaleString()} bird species in GBIF`);
@@ -56,22 +56,38 @@ async function main() {
   let offset = 0;
   const startTime = Date.now();
 
+  let retries = 0;
   while (offset < total) {
-    const url = `${GBIF_SEARCH}?higherTaxonKey=${avesKey}&rank=SPECIES&status=ACCEPTED&limit=${PAGE_SIZE}&offset=${offset}`;
+    const url = `${GBIF_SEARCH}?higherTaxonKey=${classKey}&rank=SPECIES&status=ACCEPTED&limit=${PAGE_SIZE}&offset=${offset}`;
+    let batch: GbifSpecies[] = [];
     try {
+      retries = 0;
       const res = await fetch(url);
-      const data = await res.json() as { results?: GbifSpecies[] };
-      const batch = data.results?.filter(r => r.species && r.genus && r.family) ?? [];
+      const data = await res.json() as { results?: GbifSpecies[]; count?: number };
+
+      // GBIF sometimes returns empty results past the real end of data
+      if (!data.results || data.results.length === 0) {
+        // If count is 0 but we're past the real data, the offset may be past the true end
+        console.log(`   ∅ Empty page at offset ${offset} — stopping (found ${species.length} total)`);
+        break;
+      }
+
+      batch = data.results.filter(r => r.species && r.genus && r.family);
+
       species.push(...batch);
       offset += PAGE_SIZE;
-      const pct = Math.min(100, Math.round(offset / total * 100));
+      const pct = Math.round(species.length / total * 100);
       const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
-      console.log(`   ${offset.toLocaleString().padStart(6)}/${total}  (${pct}%)  ${elapsed}s  -  ${batch.length} species in this page`);
+      console.log(`   ${species.length.toLocaleString().padStart(6)}/${total}  (${pct}%)  ${elapsed}s`);
       await sleep(RATE_DELAY);
-    } catch (e) {
-      console.log(`   ⚠  Failed at offset ${offset}, retrying in 2s...`);
-      await sleep(2000);
-      offset -= PAGE_SIZE; // retry this page
+    } catch {
+      retries++;
+      if (retries > 5) {
+        console.log(`   ❌ Failed ${retries} times at offset ${offset} — stopping`);
+        break;
+      }
+      console.log(`   ⚠  Retry ${retries}/5 at offset ${offset}...`);
+      await sleep(3000);
     }
   }
 
