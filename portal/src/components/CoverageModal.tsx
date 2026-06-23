@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
 import ImportTimeline from "./ImportTimeline";
+import importLog from "../../data/import-log.json";
 
 interface Props {
   data: TaxonNode;
@@ -84,10 +85,26 @@ function tagColor(pc: number, tc?: number): string {
   return "#cc9944";
 }
 
+/** Class-level traffic sign: green/all done, amber/mixed, red/all gapped */
+function classTraffic(families: CoverageNode[]): "green" | "amber" | "red" {
+  let hasComplete = false, hasGap = false;
+  for (const f of families) {
+    if (f.totalCount === undefined || f.totalCount === 0) continue;
+    if (f.portalCount >= f.totalCount) hasComplete = true;
+    else hasGap = true;
+  }
+  if (hasComplete && !hasGap) return "green";
+  if (hasComplete || hasGap) return "amber";
+  return "red";
+}
+
+const TRAFFIC_COLORS = { green: "#44aa66", amber: "#cc9944", red: "#d84848" };
+
 export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId }: Props) {
   const [tab, setTab] = useState<"coverage" | "growth">("coverage");
   const [sort, setSort] = useState<SortMode>("gaps");
   const [filter, setFilter] = useState<FilterMode>("all");
+  const [collapsed, setCollapsed] = useState<Set<string>>(() => new Set());
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -99,13 +116,31 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
   const classes = useMemo(() => buildCoverage(data), [data]);
   const totalFamilies = useMemo(() => classes.reduce((sum, cls) => sum + cls.families.length, 0), [classes]);
 
+  function toggleClass(id: string) {
+    setCollapsed(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }
+
+  const allCollapsed = classes.length > 0 && classes.every(c => collapsed.has(c.id));
+
+  function toggleAll() {
+    if (allCollapsed) {
+      setCollapsed(new Set());
+    } else {
+      setCollapsed(new Set(classes.map(c => c.id)));
+    }
+  }
+
   function sortedFamilies(families: CoverageNode[]): CoverageNode[] {
     let sorted = [...families];
     if (sort === "gaps") {
       sorted.sort((a, b) => {
         const ga = a.totalCount !== undefined ? a.totalCount - a.portalCount : Infinity;
         const gb = b.totalCount !== undefined ? b.totalCount - b.portalCount : Infinity;
-        return gb - ga; // biggest gaps first
+        return gb - ga;
       });
     } else {
       sorted.sort((a, b) => (a.commonName ?? a.name).localeCompare(b.commonName ?? b.name));
@@ -130,7 +165,7 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
     <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.72)", zIndex: 200, display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
       <div onClick={e => e.stopPropagation()} style={{
         background: "#0f1117", border: "1px solid #1e2030", borderRadius: 10,
-        width: "100%", maxWidth: tab === "growth" ? 740 : 760, maxHeight: "85vh",
+        width: "100%", maxWidth: 760, maxHeight: "85vh",
         overflowY: "auto", position: "relative",
       }}>
         <button onClick={onClose} title="Close" style={{
@@ -162,8 +197,13 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
                   {totalFamilies} families across {classes.length} classes
                 </div>
               </div>
-              {/* Sort + Filter controls */}
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                <button onClick={toggleAll} style={{
+                  background: "none", border: "1px solid #2a2d45", color: "#666",
+                  borderRadius: 4, fontSize: 10, padding: "3px 8px", cursor: "pointer",
+                }}>
+                  {allCollapsed ? "Expand all" : "Collapse all"}
+                </button>
                 <select value={sort} onChange={e => setSort(e.target.value as SortMode)} style={{
                   background: "#1a1c28", color: "#888", border: "1px solid #2a2d45",
                   borderRadius: 4, fontSize: 10, padding: "3px 6px", cursor: "pointer",
@@ -185,7 +225,6 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
 
             <div style={{ borderTop: "1px solid #1e2030", marginBottom: 24 }} />
 
-            {/* Filter legend */}
             <div style={{ display: "flex", gap: 16, marginBottom: 16, fontSize: 10 }}>
               {[
                 { key: "all", color: "#a0a8b8", label: "All" },
@@ -207,40 +246,55 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
               {classes.map(cls => {
                 const fams = sortedFamilies(cls.families);
                 if (fams.length === 0) return null;
+                const isOpen = !collapsed.has(cls.id);
                 const classPortal = cls.families.reduce((s, f) => s + f.portalCount, 0);
                 const classTotal = cls.families.reduce((s, f) => s + (f.totalCount ?? 0), 0);
                 const hasAllTotals = cls.families.some(f => f.totalCount !== undefined);
                 const classPct = classTotal > 0 ? classPortal / classTotal : 0;
+                const traffic = classTraffic(cls.families);
                 const isTargetClass = cls.id === initialClassId ||
                   (!initialClassId && initialFamilySlug && cls.families.some(f => f.appSlug === initialFamilySlug));
 
                 return (
                   <div key={cls.id} ref={isTargetClass ? targetRef : undefined}>
-                    <div style={{ marginBottom: 8 }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                        <div>
-                          <span style={{ fontSize: 13, fontWeight: 600, color: "#c0c0d8", letterSpacing: "0.03em" }}>
-                            {cls.commonName ?? cls.name}
-                          </span>
-                          {cls.commonName && (
-                            <span style={{ fontSize: 11, color: "#444", marginLeft: 8, fontStyle: "italic" }}>{cls.name}</span>
-                          )}
-                        </div>
-                        <div style={{ fontSize: 11, color: "#444" }}>
-                          {fams.length} {fams.length === 1 ? "family" : "families"}
-                          {" · "}
-                          {classPortal.toLocaleString()}{hasAllTotals && classTotal > 0 ? ` / ${classTotal.toLocaleString()}` : ""}
-                        </div>
+                    {/* Class header — clickable to toggle */}
+                    <div onClick={() => toggleClass(cls.id)}
+                      style={{
+                        display: "flex", alignItems: "center", gap: 8,
+                        cursor: "pointer", marginBottom: isOpen ? 8 : 0,
+                      }}
+                    >
+                      {/* Chevron */}
+                      <span style={{ width: 12, flexShrink: 0, color: "#555", fontSize: 10, textAlign: "center" }}>
+                        {isOpen ? "▼" : "▶"}
+                      </span>
+                      {/* Traffic sign */}
+                      <span style={{
+                        width: 8, height: 8, borderRadius: "50%",
+                        background: TRAFFIC_COLORS[traffic], flexShrink: 0,
+                      }} />
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <span style={{ fontSize: 13, fontWeight: 600, color: "#c0c0d8", letterSpacing: "0.03em" }}>
+                          {cls.commonName ?? cls.name}
+                        </span>
+                        {cls.commonName && (
+                          <span style={{ fontSize: 11, color: "#444", marginLeft: 8, fontStyle: "italic" }}>{cls.name}</span>
+                        )}
                       </div>
-                      {/* Mini progress bar */}
-                      {hasAllTotals && classTotal > 0 && (
-                        <div style={{ marginTop: 4, height: 3, background: "#181824", borderRadius: 2, overflow: "hidden" }}>
-                          <div style={{ width: `${Math.min(100, classPct * 100)}%`, height: "100%", background: classPct >= 1 ? "#44aa66" : "#cc9944", borderRadius: 2 }} />
-                        </div>
-                      )}
+                      <div style={{ fontSize: 11, color: "#444", flexShrink: 0 }}>
+                        {fams.length} · {classPortal.toLocaleString()}{hasAllTotals && classTotal > 0 ? ` / ${classTotal.toLocaleString()}` : ""}
+                      </div>
                     </div>
 
-                    {fams.map(fam => (
+                    {/* Mini progress bar */}
+                    {isOpen && hasAllTotals && classTotal > 0 && (
+                      <div style={{ marginTop: 2, marginBottom: 8, marginLeft: 20, height: 3, background: "#181824", borderRadius: 2, overflow: "hidden" }}>
+                        <div style={{ width: `${Math.min(100, classPct * 100)}%`, height: "100%", background: classPct >= 1 ? "#44aa66" : "#cc9944", borderRadius: 2 }} />
+                      </div>
+                    )}
+
+                    {/* Families (only when expanded) */}
+                    {isOpen && fams.map(fam => (
                       <CoverageRow key={fam.id} node={fam} depth={0}
                         onFocusFamily={onFocusFamily} onClose={onClose}
                         initiallyOpen={fam.appSlug === initialFamilySlug} />
@@ -262,6 +316,9 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
         {tab === "growth" && (
           <div style={{ padding: "20px 32px 32px" }}>
             <ImportTimeline />
+
+            {/* Import log list */}
+            <LogList />
           </div>
         )}
       </div>
@@ -304,19 +361,16 @@ function CoverageRow({ node, depth, onFocusFamily, onClose, initiallyOpen }: Row
         onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "#1a1c28"; }}
         onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "transparent"; }}
       >
-        {/* Chevron */}
         <span style={{ width: 14, flexShrink: 0, color: "#555", fontSize: 10, textAlign: "center", visibility: hasChildren ? "visible" : "hidden" }}>
           {open ? "▼" : "▶"}
         </span>
 
-        {/* Status tag */}
         <span style={{
           fontSize: depth === 0 ? 10 : 9, color: tcol,
           minWidth: depth === 0 ? 36 : 24, textAlign: "right" as const,
           fontFamily: "monospace", flexShrink: 0,
         }}>{tag}</span>
 
-        {/* Name */}
         <div style={{ minWidth: 0, flex: 1 }}>
           <span style={{
             fontSize: depth === 0 ? 12 : 11, fontWeight: depth <= 1 ? 500 : 400,
@@ -332,7 +386,6 @@ function CoverageRow({ node, depth, onFocusFamily, onClose, initiallyOpen }: Row
           )}
         </div>
 
-        {/* Count */}
         <div style={{ flexShrink: 0, fontSize: depth === 0 ? 11 : 10, color: "#666", textAlign: "right" }}>
           {node.portalCount.toLocaleString()}
           {hasCoverage ? ` / ${node.totalCount!.toLocaleString()}` : depth === 0 ? " in portal" : ""}
@@ -346,6 +399,46 @@ function CoverageRow({ node, depth, onFocusFamily, onClose, initiallyOpen }: Row
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+/* ---------- LogList ---------- */
+
+interface ImportEvent {
+  date: string;
+  speciesAdded: number;
+  speciesRunning: number;
+  families: string[];
+}
+
+function LogList() {
+  const data = (importLog as ImportEvent[]).filter(d => d.speciesRunning > 0).reverse();
+
+  return (
+    <div style={{ marginTop: 16, borderTop: "1px solid #1e2030", paddingTop: 14 }}>
+      <div style={{ fontSize: 10, color: "#6666aa", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>
+        Import log
+      </div>
+      <div style={{ maxHeight: 180, overflowY: "auto", fontSize: 10, lineHeight: 1.7 }}>
+        {data.map((d, i) => {
+          const date = new Date(d.date).toLocaleDateString("en-GB", { month: "short", day: "numeric" });
+          const famList = d.families.length > 5
+            ? d.families.slice(0, 5).join(", ") + ` +${d.families.length - 5}`
+            : d.families.join(", ");
+          return (
+            <div key={i} style={{ display: "flex", gap: 8, padding: "2px 4px", borderRadius: 3, color: "#666" }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#1a1c28")}
+              onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+            >
+              <span style={{ color: "#888", flexShrink: 0, width: 56 }}>{date}</span>
+              <span style={{ color: "#8aba6a", flexShrink: 0, width: 50, textAlign: "right" as const }}>+{d.speciesAdded}</span>
+              <span style={{ color: "#6a8aba", flexShrink: 0, width: 50, textAlign: "right" as const }}>{d.speciesRunning}</span>
+              <span style={{ color: "#555", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{famList}</span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
