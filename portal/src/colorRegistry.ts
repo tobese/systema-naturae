@@ -906,11 +906,11 @@ const CINCLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dip
 
 const PANURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bearded Reedling": "#c87838" }, breedGroupColor: "#b06828", hybridColor: "#e09858" };
 
-const CISTICOLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cetti's Warblers": "#a06848", "Cisticolas": "#8a8870", "Prinias": "#a89860" }, breedGroupColor: "#a08058", hybridColor: "#c8a878" };
+const CISTICOLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cetti's Warblers": "#a06848", "Cisticolas": "#8a8870", "Prinias": "#a89860", "Bush Warblers": "#a08868" }, breedGroupColor: "#a08058", hybridColor: "#c8a878" };
 
 const SPHENISCIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Great Penguins": "#607888", "Brush-tailed Penguins": "#4a7080", "Crested Penguins": "#c88838", "Yellow-eyed Penguins": "#c8a840", "Little Penguins": "#5888a0", "Banded Penguins": "#3a6070" }, breedGroupColor: "#4a6878", hybridColor: "#7898a8" };
 
-const TROCHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bee Hummingbirds": "#30a060", "Hermits": "#a08850", "Giants & Topazes": "#c85828", "Mountain Gems": "#2870a0", "Brilliants": "#6848a8", "Emeralds": "#20a050", "Mangos & Caribs": "#c82038" }, breedGroupColor: "#40a060", hybridColor: "#70c888" };
+const TROCHILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Bee Hummingbirds": "#30a060", "Hermits": "#a08850", "Giants & Topazes": "#c85828", "Mountain Gems": "#2870a0", "Brilliants": "#6848a8", "Emeralds": "#20a050", "Mangos & Caribs": "#c82038", "Trainbearers": "#d858a8", "Sunbeams": "#d8a830", "Incas": "#287088", "Violet-ears": "#3860a8", "JacobinS": "#40a0b8" }, breedGroupColor: "#40a060", hybridColor: "#70c888" };
 
 const PHOENICOPTERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Greater Flamingos": "#e87868", "Lesser Flamingos": "#e86050", "Andean Flamingos": "#e8a080" }, breedGroupColor: "#e87060", hybridColor: "#f0a898" };
 
@@ -949,8 +949,8 @@ const ESTRILDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "W
 const ICTERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "New World Blackbirds": "#283840" }, breedGroupColor: "#202830", hybridColor: "#485868" };
 const CARDINALIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cardinals & Grosbeaks": "#c82028", "Buntings": "#2860a8" }, breedGroupColor: "#c02028", hybridColor: "#e06068" };
 const PARULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "New World Warblers": "#d8a820" }, breedGroupColor: "#c89810", hybridColor: "#e8c850" };
-const THRAUPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tanagers": "#2088c8" }, breedGroupColor: "#2078b0", hybridColor: "#60b0d8" };
-const TYRANNIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kingbirds": "#385878", "Phoebes": "#788898", "Empidonax Flycatchers": "#90a068", "Kiskadees": "#d8a020", "Vermilion Flycatchers": "#d82828" }, breedGroupColor: "#486888", hybridColor: "#7898b0" };
+const THRAUPIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tangara Tanagers": "#2088c8", "Mountain Tanagers": "#c85828", "Thraupis Tanagers": "#3890a8" }, breedGroupColor: "#2078b0", hybridColor: "#60b0d8" };
+const TYRANNIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kingbirds": "#385878", "Phoebes": "#788898", "Empidonax Flycatchers": "#90a068", "Kiskadees": "#d8a020", "Vermilion Flycatchers": "#d82828", "Myiarchus Flycatchers": "#c89040", "Pewees": "#688898", "Kiskadees & Allies": "#d8a020" }, breedGroupColor: "#486888", hybridColor: "#7898b0" };
 const VIREONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Vireos": "#789860", "Peppershrikes": "#a89848" }, breedGroupColor: "#789860", hybridColor: "#a0b880" };
 const FREGATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Frigatebirds": "#202838" }, breedGroupColor: "#181828", hybridColor: "#384860" };
 const ANHINGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Darters": "#485848" }, breedGroupColor: "#384838", hybridColor: "#687868" };
@@ -1010,7 +1010,7 @@ const EURYLAIMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "
 const EURYPYGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Eurypygidae": "#a09848" }, breedGroupColor: "#a09848", hybridColor: "#a8b0b8" };
 const FALCUNCULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Falcunculidae": "#a8a030" }, breedGroupColor: "#a8a030", hybridColor: "#a8b0b8" };
 const FORMICARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Formicariidae": "#7a6850" }, breedGroupColor: "#7a6850", hybridColor: "#a8b0b8" };
-const FURNARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Furnariidae": "#a07848" }, breedGroupColor: "#a07848", hybridColor: "#a8b0b8" };
+const FURNARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Horneros": "#c09050", "Woodcreepers": "#886840", "Spinetails": "#a08058", "Xenops": "#989068", "Treehunters": "#788060" }, breedGroupColor: "#a07848", hybridColor: "#a8b0b8" };
 const GALBULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Galbulidae": "#30a888" }, breedGroupColor: "#30a888", hybridColor: "#a8b0b8" };
 const GRALLARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Grallariidae": "#887050" }, breedGroupColor: "#887050", hybridColor: "#a8b0b8" };
 const HELIORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Heliornithidae": "#687860" }, breedGroupColor: "#687860", hybridColor: "#a8b0b8" };
