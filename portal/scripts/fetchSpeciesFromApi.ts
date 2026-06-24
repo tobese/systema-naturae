@@ -64,17 +64,19 @@ function findFamily(slug: string): FamilyNode | null {
 }
 
 function getOrderPath(slug: string, cls?: string, ord?: string): string {
-  // Find the actual directory path
-  const result = execSync(
-    `find ${root}/aves -type d -name "${slug}" 2>/dev/null | head -1`,
-    { encoding: "utf-8", timeout: 5000 },
-  ).trim();
-  if (result) return result;
-  // Try with class/order
+  // Try with class/order first
   if (cls && ord) {
     const p = resolve(root, cls, ord, slug);
     if (existsSync(p)) return p;
   }
+  // Fall back: search under class directory
+  const searchDir = cls ? resolve(root, cls) : root;
+  const result = execSync(
+    `find ${searchDir} -type d -name "${slug}" 2>/dev/null | head -1`,
+    { encoding: "utf-8", timeout: 5000 },
+  ).trim();
+  if (result) return result;
+  // Last resort: try repo root
   return resolve(root, slug);
 }
 
