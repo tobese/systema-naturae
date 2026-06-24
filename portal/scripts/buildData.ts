@@ -21,11 +21,17 @@ interface TaxonNode {
 }
 
 function stampFamilySlug(node: TaxonNode, slug: string, cls?: string, ord?: string): TaxonNode {
+  // Detect extinct: name starts with † or description mentions "extinct"
+  const name = node.name || "";
+  const desc = (node.description as string) || "";
+  const isExtinct = name.startsWith("†") || /\bextinct\b/i.test(desc) || /\bfossil\b/i.test(desc);
+
   return {
     ...node,
     familySlug: slug,
     className: cls,
     orderName: ord,
+    extinct: isExtinct,
     children: node.children?.map(c => stampFamilySlug(c, slug, cls, ord)),
   };
 }
