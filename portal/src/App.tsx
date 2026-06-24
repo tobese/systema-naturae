@@ -78,6 +78,7 @@ export default function App() {
     showExtinct: false,
     collapseLarge: true,
     collapseThreshold: 15,
+    nodeScale: 1.0,
   });
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
@@ -646,6 +647,7 @@ export default function App() {
             focusedFamilySlug={focusedFamilySlug}
             focusedClassId={focusedClassId}
             collapseThreshold={options.collapseLarge ? options.collapseThreshold : 99999}
+            nodeScale={options.nodeScale}
           />
           <div style={{
             position: "absolute",
