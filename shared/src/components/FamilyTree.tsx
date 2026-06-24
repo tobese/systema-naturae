@@ -14,6 +14,7 @@ interface Props {
   focusedFamilySlug?: string | null;
   focusedClassId?: string | null;
   collapseThreshold?: number;
+  nodeScale?: number;
 }
 
 type AnnotatedNode = d3.HierarchyNode<TaxonNode> & { subfamily?: string };
@@ -200,7 +201,7 @@ interface Setup {
 export default function FamilyTree({
   data, layout, onSelect, selectedId, pendingZoomId,
   highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId,
-  collapseThreshold = 99999,
+  collapseThreshold = 99999, nodeScale = 1,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -299,6 +300,8 @@ export default function FamilyTree({
       : data;
 
     // ── Collapse large nodes (when not in family focus) ────────────────────────
+    const localScale = nodeScale;
+    const nr = (d: d3.HierarchyNode<TaxonNode>, s: Set<string> | null) => nodeR(d, s) * localScale;
     const thresh = collapseThreshold;
     function collapseNode(n: TaxonNode): TaxonNode {
       if (!n.children || n.children.length === 0) return n;
@@ -437,7 +440,7 @@ export default function FamilyTree({
     // Glow ring — always present, opacity controlled by selectedId
     nodeEnter.append("circle")
       .attr("class", "glow-ring")
-      .attr("r", d => nodeR(d, specialSet) + 6)
+      .attr("r", d => nr(d, specialSet) + 6)
       .attr("fill", "none")
       .attr("stroke", "#fff")
       .attr("stroke-width", 1.5)
@@ -446,7 +449,7 @@ export default function FamilyTree({
     // Subspecies hint ring — always present, opacity controlled
     nodeEnter.append("circle")
       .attr("class", "subsp-ring")
-      .attr("r", d => nodeR(d, specialSet) + 4)
+      .attr("r", d => nr(d, specialSet) + 4)
       .attr("fill", "none")
       .attr("stroke", "#888")
       .attr("stroke-width", 0.5)
@@ -455,7 +458,7 @@ export default function FamilyTree({
     // Collapse indicator ring — visible for collapsed nodes
     nodeEnter.append("circle")
       .attr("class", "collapse-ring")
-      .attr("r", d => nodeR(d, specialSet) + 3)
+      .attr("r", d => nr(d, specialSet) + 3)
       .attr("fill", "none")
       .attr("stroke", "#c89860")
       .attr("stroke-width", 2)
@@ -465,7 +468,7 @@ export default function FamilyTree({
     // IUCN status ring — hidden by default, shown for species with iucnStatus
     nodeEnter.append("circle")
       .attr("class", "iucn-ring")
-      .attr("r", d => nodeR(d, specialSet) + 2.5)
+      .attr("r", d => nr(d, specialSet) + 2.5)
       .attr("fill", "none")
       .attr("stroke-width", 1.5);
 
@@ -507,12 +510,12 @@ export default function FamilyTree({
 
     // Glow ring visibility
     merged.select<SVGCircleElement>("circle.glow-ring")
-      .attr("r", d => nodeR(d, specialSet) + 6)
+      .attr("r", d => nr(d, specialSet) + 6)
       .attr("opacity", d => d.data.id === selectedId ? 0.3 : 0);
 
     // Subspecies hint ring visibility (also used as permanent crown ring for KINGDOM)
     merged.select<SVGCircleElement>("circle.subsp-ring")
-      .attr("r", d => nodeR(d, specialSet) + 4)
+      .attr("r", d => nr(d, specialSet) + 4)
       .attr("stroke", d => d.data.rank === "KINGDOM" ? "#c8a84a" : "#888")
       .attr("stroke-width", d => d.data.rank === "KINGDOM" ? 1.5 : 0.5)
       .attr("stroke-dasharray", d => d.data.rank === "KINGDOM" ? null : "2 2")
@@ -523,12 +526,12 @@ export default function FamilyTree({
 
     // Collapse indicator ring
     merged.select<SVGCircleElement>("circle.collapse-ring")
-      .attr("r", d => nodeR(d, specialSet) + 3)
+      .attr("r", d => nr(d, specialSet) + 3)
       .attr("opacity", d => (d.data as any)._collapsed ? 0.8 : 0);
 
     // IUCN status ring visibility
     merged.select<SVGCircleElement>("circle.iucn-ring")
-      .attr("r", d => nodeR(d, specialSet) + 2.5)
+      .attr("r", d => nr(d, specialSet) + 2.5)
       .attr("stroke", d => {
         if (d.data.rank !== "SPECIES" || !d.data.iucnStatus) return "none";
         const colorMap: Record<string, string> = {
@@ -541,7 +544,7 @@ export default function FamilyTree({
 
     // Main circle visual update
     merged.select<SVGCircleElement>("circle.main-circle")
-      .attr("r", d => nodeR(d, specialSet))
+      .attr("r", d => nr(d, specialSet))
       .attr("fill", d => fillColor(d as AnnotatedNode, colorTheme))
       .attr("stroke", d => {
         if (d.data.id === selectedId) return "#fff";
@@ -563,7 +566,7 @@ export default function FamilyTree({
     // Text visual + positioning update
     if (layout === "radial") {
       merged.select<SVGTextElement>("text")
-        .attr("x", d => d.x < Math.PI ? nodeR(d, specialSet) + 4 : -(nodeR(d, specialSet) + 4))
+        .attr("x", d => d.x < Math.PI ? nr(d, specialSet) + 4 : -(nr(d, specialSet) + 4))
         .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
         .text(d => displayLabel(d.data))
         .style("font-size", d => {
@@ -592,7 +595,7 @@ export default function FamilyTree({
         });
     } else {
       merged.select<SVGTextElement>("text")
-        .attr("x", d => (d.children && d.parent ? -(nodeR(d, specialSet) + 4) : nodeR(d, specialSet) + 4))
+        .attr("x", d => (d.children && d.parent ? -(nr(d, specialSet) + 4) : nr(d, specialSet) + 4))
         .attr("text-anchor", d => (d.children && d.parent ? "end" : "start"))
         .text(d => displayLabel(d.data))
         .style("font-size", d => {
@@ -623,7 +626,7 @@ export default function FamilyTree({
 
     // Hit target radius update
     merged.select<SVGCircleElement>("circle.hit")
-      .attr("r", d => Math.max(nodeR(d, specialSet) + 8, 14));
+      .attr("r", d => Math.max(nr(d, specialSet) + 8, 14));
 
     // ── Special links (hybrid cross-links + rex coat-type lines) ─────────────
     // Full redraw on every update (these are rare and don't need animated transitions)
