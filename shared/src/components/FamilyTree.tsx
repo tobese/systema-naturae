@@ -452,6 +452,16 @@ export default function FamilyTree({
       .attr("stroke-width", 0.5)
       .attr("stroke-dasharray", "2 2");
 
+    // Collapse indicator ring — visible for collapsed nodes
+    nodeEnter.append("circle")
+      .attr("class", "collapse-ring")
+      .attr("r", d => nodeR(d, specialSet) + 3)
+      .attr("fill", "none")
+      .attr("stroke", "#c89860")
+      .attr("stroke-width", 2)
+      .attr("stroke-dasharray", "4 3")
+      .attr("opacity", d => (d.data as any)._collapsed ? 0.8 : 0);
+
     // IUCN status ring — hidden by default, shown for species with iucnStatus
     nodeEnter.append("circle")
       .attr("class", "iucn-ring")
@@ -510,6 +520,11 @@ export default function FamilyTree({
         if (d.data.rank === "KINGDOM") return 0.6;
         return d.data.rank === "SPECIES" && (d.data.subspeciesCount ?? 0) > 0 && !d.children ? 0.5 : 0;
       });
+
+    // Collapse indicator ring
+    merged.select<SVGCircleElement>("circle.collapse-ring")
+      .attr("r", d => nodeR(d, specialSet) + 3)
+      .attr("opacity", d => (d.data as any)._collapsed ? 0.8 : 0);
 
     // IUCN status ring visibility
     merged.select<SVGCircleElement>("circle.iucn-ring")
