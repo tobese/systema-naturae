@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
+import { gunzipSync } from "zlib";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
@@ -91,17 +92,27 @@ interface GbifCache {
 function tryLoadCache(className: string): GbifCache | null {
   // Map portal class names to GBIF cache file names
   const cacheName: Record<string, string> = {
-    actinopterygii: "actinopterygii",  // Maps to cache key Actinopterygii
+    actinopterygii: "actinopterygii",
     chondrichthyes: "elasmobranchii",
   };
   const cacheKey = cacheName[className.toLowerCase()] || className.toLowerCase();
-  const path = resolve(portalRoot, `data/gbif-cache-${cacheKey}.json`);
-  if (!existsSync(path)) {
-    const legacy = resolve(portalRoot, "data/gbif-cache.json");
-    if (!existsSync(legacy)) return null;
+  const rawPath = resolve(portalRoot, `data/gbif-cache-${cacheKey}.json`);
+  const gzPath = resolve(portalRoot, `data/gbif-cache-${cacheKey}.json.gz`);
+
+  // Try .json.gz first (compressed for git)
+  if (existsSync(gzPath)) {
+    try { return JSON.parse(gunzipSync(readFileSync(gzPath)).toString("utf-8")); } catch { return null; }
+  }
+  // Fall back to .json
+  if (existsSync(rawPath)) {
+    try { return JSON.parse(readFileSync(rawPath, "utf-8")); } catch { return null; }
+  }
+  // Legacy name
+  const legacy = resolve(portalRoot, "data/gbif-cache.json");
+  if (existsSync(legacy)) {
     try { return JSON.parse(readFileSync(legacy, "utf-8")); } catch { return null; }
   }
-  try { return JSON.parse(readFileSync(path, "utf-8")); } catch { return null; }
+  return null;
 }
 
 function lookupFamilyInCache(cache: GbifCache, familyName: string): { gbifKey: number; species: { species: string; genus: string }[] } | null {
