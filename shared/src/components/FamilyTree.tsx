@@ -327,7 +327,8 @@ export default function FamilyTree({
     let defaultTransform: d3.ZoomTransform;
 
     if (layout === "radial") {
-      const radius = Math.min(W, H) * 0.42;
+      const isFocused = !!(focusedClassId || focusedFamilySlug);
+      const radius = Math.min(W, H) * (isFocused ? 0.70 : 0.42);
 
       if (root.children) {
         const hybridGrp = root.children.find(c => c.data.rank === "HYBRID_GROUP");
