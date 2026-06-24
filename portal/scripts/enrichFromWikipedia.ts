@@ -114,7 +114,7 @@ function scanFiles(classFilter?: string): FamilyFile[] {
     } catch { /* permission denied, skip */ }
   }
 
-  // Walk class directories
+  // Walk class directories — also catch tardigrada (phylum at root) and any others
   const classDirs = classFilter
     ? [classFilter]
     : ["aves", "mammalia", "reptilia", "chondrichthyes", "amphibia", "actinopterygii",

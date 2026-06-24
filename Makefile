@@ -24,6 +24,9 @@ fetch:
 cache-gbif:
 	cd portal && npm run cache-gbif
 
+SHELL := /bin/zsh
+PATH := $(HOME)/.nvm/versions/node/v23.3.0/bin:/usr/local/bin:/opt/homebrew/bin:$(PATH)
+
 enrich:
 	@for cls in aves mammalia reptilia amphibia actinopterygii chondrichthyes insecta arachnida asteroidea echinoidea holothuroidea; do \
 	  echo "=== Enriching $$cls ==="; \
