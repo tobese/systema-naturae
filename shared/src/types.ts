@@ -18,6 +18,7 @@ export interface TaxonNode {
   description?: string;
   namedAfter?: string;
   iucnStatus?: string;
+  extinct?: boolean;
   children?: TaxonNode[];
 }
 
@@ -33,12 +34,4 @@ export interface ColorTheme {
   hybridColor: string;
   coatTypeColor?: string;
   classPalette?: ClassPalette;
-}
-
-export interface ColorTheme {
-  subfamilyColors: Record<string, string>;
-  lineageColors: Record<string, string>;
-  breedGroupColor: string;
-  hybridColor: string;
-  coatTypeColor?: string;
 }

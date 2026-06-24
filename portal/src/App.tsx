@@ -15,12 +15,22 @@ import CoverageModal from "./components/CoverageModal";
 import EponymModal from "./components/EponymModal";
 import InternationalDaysModal from "./components/InternationalDaysModal";
 import TaxonomySidebar from "./components/TaxonomySidebar";
+import OptionsPanel from "./components/OptionsPanel";
+import type { PortalOptions } from "./components/OptionsPanel";
 import { useInternationalDays } from "./hooks/useInternationalDays";
 import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
 import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
+
+function filterExtinct(node: TaxonNode): TaxonNode {
+  if (!node.children) return node;
+  const filtered = node.children
+    .filter(c => !c.extinct)
+    .map(c => filterExtinct(c));
+  return { ...node, children: filtered.length > 0 ? filtered : undefined };
+}
 
 function walkFind(node: TaxonNode, id: string): TaxonNode | null {
   if (node.id === id) return node;
@@ -64,6 +74,11 @@ function findNavContext(
 
 export default function App() {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
+  const [options, setOptions] = useState<PortalOptions>({
+    showExtinct: false,
+    collapseLarge: true,
+    collapseThreshold: 15,
+  });
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
   const [showEponyms, setShowEponyms] = useState(false);
@@ -119,6 +134,12 @@ export default function App() {
     expandedBreedIds,
     highlightedContinent,
   );
+
+  // Filter tree based on options
+  const filteredTreeData = useMemo(() => {
+    if (options.showExtinct) return treeData;
+    return filterExtinct(treeData);
+  }, [treeData, options.showExtinct]);
 
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }
@@ -518,6 +539,9 @@ export default function App() {
           >
             Coverage
           </button>
+          <div style={{ marginRight: 4 }}>
+            <OptionsPanel options={options} onChange={setOptions} />
+          </div>
           <NewsBell />
           <button
             onClick={() => setShowDays(o => !o)}
@@ -612,7 +636,7 @@ export default function App() {
         )}
         <div style={{ flex: 1, overflow: "hidden", position: "relative" }}>
           <FamilyTree
-            data={treeData}
+            data={filteredTreeData}
             layout={layout}
             onSelect={handleSelect}
             selectedId={selected?.id ?? null}
@@ -621,6 +645,7 @@ export default function App() {
             colorTheme={colorTheme}
             focusedFamilySlug={focusedFamilySlug}
             focusedClassId={focusedClassId}
+            collapseThreshold={options.collapseLarge ? options.collapseThreshold : 99999}
           />
           <div style={{
             position: "absolute",

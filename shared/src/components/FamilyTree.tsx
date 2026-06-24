@@ -13,6 +13,7 @@ interface Props {
   specialNodeId?: string | string[];
   focusedFamilySlug?: string | null;
   focusedClassId?: string | null;
+  collapseThreshold?: number;
 }
 
 type AnnotatedNode = d3.HierarchyNode<TaxonNode> & { subfamily?: string };
@@ -199,6 +200,7 @@ interface Setup {
 export default function FamilyTree({
   data, layout, onSelect, selectedId, pendingZoomId,
   highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId,
+  collapseThreshold = 99999,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -296,8 +298,20 @@ export default function FamilyTree({
         })(data)
       : data;
 
+    // ── Collapse large nodes (when not in family focus) ────────────────────────
+    const thresh = collapseThreshold;
+    function collapseNode(n: TaxonNode): TaxonNode {
+      if (!n.children || n.children.length === 0) return n;
+      if (n.children.length > thresh) {
+        return { ...n, children: undefined, _collapsed: true, _childCount: n.children.length } as unknown as TaxonNode;
+      }
+      const next = n.children.map(collapseNode);
+      return { ...n, children: next };
+    }
+    const collapsedData = collapseNode(prunedData);
+
     // ── Compute layout ────────────────────────────────────────────────────────
-    const root = d3.hierarchy(prunedData);
+    const root = d3.hierarchy(collapsedData);
     annotateSubfamily(root as AnnotatedNode);
 
     let nodeTransform: (d: PNode) => string;
