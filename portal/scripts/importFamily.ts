@@ -7,7 +7,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
 const portalRoot = resolve(__dirname, "..");
 
-const OLLAMA_URL = "http://localhost:11434/api/chat";
+const OLLAMA_HOST = process.env.OLLAMA_HOST || "localhost";
+const OLLAMA_URL = `http://${OLLAMA_HOST}:11434/api/chat`;
 const MODEL = process.env.OLLAMA_MODEL || "qwen2.5:3b";
 const OLLAMA_TIMEOUT = 900_000;
 
