@@ -288,10 +288,15 @@ export default function FamilyTree({
     const layoutChanged = prevLayoutRef.current !== null && prevLayoutRef.current !== layout;
     prevLayoutRef.current = layout;
 
-    // ── Prune: when a family is focused, collapse all other families ──────────
-    const prunedData: TaxonNode = focusedFamilySlug
+    // ── Prune: when a family or class is focused, collapse others ─────────────
+    const prunedData: TaxonNode = (focusedFamilySlug || focusedClassId)
       ? (function prune(n: TaxonNode): TaxonNode {
-          if (n.rank === "FAMILY" && n.familySlug && n.familySlug !== focusedFamilySlug) {
+          // Family focus: collapse other families
+          if (focusedFamilySlug && n.rank === "FAMILY" && n.familySlug && n.familySlug !== focusedFamilySlug) {
+            return { ...n, children: undefined };
+          }
+          // Class focus: collapse other classes (keep the focused class expanded)
+          if (!focusedFamilySlug && focusedClassId && n.rank === "CLASS" && n.id !== focusedClassId) {
             return { ...n, children: undefined };
           }
           const next = (n.children ?? []).map(prune);
@@ -729,7 +734,7 @@ export default function FamilyTree({
         );
       }
     }
-  }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId, attachTooltip]);
+  }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId, attachTooltip, nodeScale, collapseThreshold]);
 
   useEffect(() => {
     render();
