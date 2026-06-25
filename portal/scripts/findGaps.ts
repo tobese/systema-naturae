@@ -5,14 +5,6 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "../..");
 
-const enriched = new Set([
-  "apidae", "salticidae", "colubridae", "araneidae", "theridiidae",
-  "lycosidae", "cyprinidae", "scincidae", "tardigrada", "buthidae",
-  "gekkonidae", "theraphosidae", "hylidae", "cricetidae", "muridae",
-  "microhylidae", "bufonidae", "agamidae", "plethodontidae", "soricidae",
-  "ranidae"
-]);
-
 interface FamilyInfo {
   className: string;
   orderName: string;
@@ -34,26 +26,24 @@ function walk(node: any, className: string, orderName: string, results: FamilyIn
     orderName = node.name;
   }
   if (node.rank === "FAMILY" && node.appSlug && node.speciesCount != null) {
-    if (!enriched.has(node.appSlug)) {
-      let dataFilePath: string;
-      if (node.appSlug === "tardigrada") {
-        dataFilePath = join(root, "tardigrada", "src", "data", "tardigrada.json");
-      } else {
-        const cls = className.toLowerCase().replace(/\s+/g, "_");
-        const ord = orderName.toLowerCase().replace(/\s+/g, "_");
-        dataFilePath = join(root, cls, ord, node.appSlug, "src", "data", `${node.appSlug}.json`);
-      }
-      results.push({
-        className,
-        orderName,
-        appSlug: node.appSlug,
-        name: node.commonName || node.name,
-        speciesCount: node.speciesCount,
-        portalCount: 0,
-        gap: 0,
-        dataFilePath
-      });
+    let dataFilePath: string;
+    if (node.appSlug === "tardigrada") {
+      dataFilePath = join(root, "tardigrada", "src", "data", "tardigrada.json");
+    } else {
+      const cls = className.toLowerCase().replace(/\s+/g, "_");
+      const ord = orderName.toLowerCase().replace(/\s+/g, "_");
+      dataFilePath = join(root, cls, ord, node.appSlug, "src", "data", `${node.appSlug}.json`);
     }
+    results.push({
+      className,
+      orderName,
+      appSlug: node.appSlug,
+      name: node.commonName || node.name,
+      speciesCount: node.speciesCount,
+      portalCount: 0,
+      gap: 0,
+      dataFilePath
+    });
     return; // don't descend into family children in taxonomy
   }
   if (Array.isArray(children)) {
