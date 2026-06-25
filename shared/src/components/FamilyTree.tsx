@@ -54,6 +54,7 @@ function orderColor(node: AnnotatedNode, theme: ColorTheme): string | undefined 
 
 function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
   if (node.data.rank === "KINGDOM") return "#c8a84a";
+  if (node.data.rank === "PHYLUM") return "#9a8858";
   if (node.data.rank === "CLASS") return classColor(node, theme) ?? "#666";
   if (node.data.rank === "ORDER") return orderColor(node, theme) ?? classColor(node, theme) ?? "#666";
   if (node.data.rank === "BREED_GROUP" || node.data.rank === "BREED") return theme.breedGroupColor;
@@ -71,6 +72,7 @@ function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
 
 function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
   if (node.data.rank === "KINGDOM") return "#c8a84a";
+  if (node.data.rank === "PHYLUM") return "#9a8858";
   if (node.data.rank === "CLASS") return classColor(node, theme) ?? "#666";
   if (node.data.rank === "ORDER") return orderColor(node, theme) ?? classColor(node, theme) ?? "#666";
   if (node.data.rank === "FAMILY") return "#F5F5F5";
@@ -118,6 +120,29 @@ function displayLabel(node: TaxonNode): string {
   return node.name;
 }
 
+function childSummary(node: TaxonNode): string {
+  const children = node.children ?? [];
+  if (children.length === 0) return "";
+  const counts: Record<string, number> = {};
+  function walk(n: TaxonNode): void {
+    for (const c of n.children ?? []) {
+      counts[c.rank] = (counts[c.rank] || 0) + 1;
+      walk(c);
+    }
+  }
+  walk(node);
+  const rankLabels: Record<string, string> = {
+    PHYLUM: "phyla", CLASS: "classes", ORDER: "orders",
+    FAMILY: "families", SUBFAMILY: "subfamilies", TRIBE: "tribes",
+    GENUS: "genera", SPECIES: "species",
+  };
+  const parts: string[] = [];
+  for (const [rank, count] of Object.entries(counts)) {
+    parts.push(`${count} ${rankLabels[rank] ?? (rank.toLowerCase() + "s")}`);
+  }
+  return parts.join(" · ");
+}
+
 // After d3.tree() computes a balanced [0, 2π] layout, remap angles so
 // descendants of the focused class take 65% of the circle and everything
 // else 35%. Runs in-place on the HierarchyPointNode x values.
@@ -146,12 +171,101 @@ function remapAnglesForClass(nodes: PNode[], focusedClassId: string): void {
   others.forEach(d => { d.x = ARC_FOCUS + ((d.x - oMin) / oSpan) * ARC_OTHER; });
 }
 
-const TOOLTIP_RANKS = new Set(["SPECIES", "SUBSPECIES", "BREED", "HYBRID"]);
-
 function TooltipBox({
   node, x, y, imgUrl, containerW,
 }: { node: TaxonNode; x: number; y: number; imgUrl: string | null; containerW: number }) {
   const flipLeft = x > containerW - 220;
+  const isSpecies = ["SPECIES", "SUBSPECIES", "BREED", "HYBRID"].includes(node.rank);
+
+  function content() {
+    if (isSpecies) {
+      return (
+        <>
+          {imgUrl && (
+            <img src={imgUrl} alt="" style={{ width: "100%", height: "auto", borderRadius: 5, display: "block", marginBottom: 8 }} />
+          )}
+          <div style={{ fontStyle: "italic", fontSize: 11, color: "#555", lineHeight: 1.3 }}>
+            {node.name}
+          </div>
+          {node.commonName && (
+            <div style={{ fontSize: 13, color: "#ddd", fontWeight: 500, marginTop: 3 }}>
+              {node.commonName}
+            </div>
+          )}
+          {node.namedAfter && (
+            <div style={{ fontSize: 10, color: "#446655", marginTop: 6, fontStyle: "italic" }}>
+              Named after {node.namedAfter}
+            </div>
+          )}
+        </>
+      );
+    }
+
+    const summary = childSummary(node);
+
+    if (node.rank === "SUBFAMILY" || node.rank === "TRIBE") {
+      return (
+        <>
+          <div style={{ fontSize: 13, color: "#ddd", fontWeight: 600 }}>
+            {node.name}
+          </div>
+          {summary && (
+            <div style={{ fontSize: 10, color: "#888", marginTop: 4 }}>
+              {summary}
+            </div>
+          )}
+        </>
+      );
+    }
+
+    if (node.rank === "GENUS") {
+      return (
+        <>
+          <div style={{ fontStyle: "italic", fontSize: 12, color: "#ddd", fontWeight: 500 }}>
+            {node.name}
+          </div>
+          {node.commonName && (
+            <div style={{ fontSize: 12, color: "#888", marginTop: 2 }}>
+              {node.commonName}
+            </div>
+          )}
+          {summary && (
+            <div style={{ fontSize: 10, color: "#888", marginTop: 4 }}>
+              {summary}
+            </div>
+          )}
+        </>
+      );
+    }
+
+    // KINGDOM through FAMILY
+    const desc = node.description
+      ? node.description.slice(0, 100) + (node.description.length > 100 ? "…" : "")
+      : "";
+    return (
+      <>
+        <div style={{ fontSize: 13, color: "#ddd", fontWeight: 600 }}>
+          {node.commonName ?? node.name}
+        </div>
+        {node.commonName && (
+          <div style={{ fontStyle: "italic", fontSize: 11, color: "#555", marginTop: 2 }}>
+            {node.name}
+          </div>
+        )}
+        {desc && (
+          <div style={{ fontSize: 10, color: "#888", marginTop: 4, lineHeight: 1.3 }}>
+            {desc}
+          </div>
+        )}
+        {summary && (
+          <div style={{ fontSize: 10, color: "#888", marginTop: 4 }}>
+            {summary}
+          </div>
+        )}
+      </>
+    );
+  }
+
   return (
     <div style={{
       position: "absolute",
@@ -166,26 +280,7 @@ function TooltipBox({
       zIndex: 10,
       boxShadow: "0 4px 24px rgba(0,0,0,0.7)",
     }}>
-      {imgUrl && (
-        <img
-          src={imgUrl}
-          alt=""
-          style={{ width: "100%", height: "auto", borderRadius: 5, display: "block", marginBottom: 8 }}
-        />
-      )}
-      <div style={{ fontStyle: "italic", fontSize: 11, color: "#555", lineHeight: 1.3 }}>
-        {node.name}
-      </div>
-      {node.commonName && (
-        <div style={{ fontSize: 13, color: "#ddd", fontWeight: 500, marginTop: 3 }}>
-          {node.commonName}
-        </div>
-      )}
-      {node.namedAfter && (
-        <div style={{ fontSize: 10, color: "#446655", marginTop: 6, fontStyle: "italic" }}>
-          Named after {node.namedAfter}
-        </div>
-      )}
+      {content()}
     </div>
   );
 }
@@ -217,25 +312,25 @@ export default function FamilyTree({
   const attachTooltip = useCallback((
     sel: d3.Selection<SVGGElement, PNode, SVGGElement, unknown>,
   ) => {
-    sel.filter(d => TOOLTIP_RANKS.has(d.data.rank))
-      .on("mouseenter", (event: MouseEvent, d) => {
-        const [mx, my] = d3.pointer(event, containerRef.current!);
-        const hasCached = thumbnailCache.current.has(d.data.id);
-        const imgUrl = hasCached ? (thumbnailCache.current.get(d.data.id) ?? null) : null;
-        setTooltip({ node: d.data, x: mx, y: my, imgUrl });
-        if (!hasCached) {
-          const title = (d.data.commonName ?? d.data.name).replace(/\s*\([^)]*\)/g, "").trim().replace(/ /g, "_");
-          fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
-            .then(r => r.ok ? r.json() : null)
-            .then((json: { thumbnail?: { source: string } } | null) => {
-              const url = json?.thumbnail?.source ?? null;
-              thumbnailCache.current.set(d.data.id, url);
-              setTooltip(prev => prev?.node.id === d.data.id ? { ...prev, imgUrl: url } : prev);
-            })
-            .catch(() => thumbnailCache.current.set(d.data.id, null));
-        }
-      })
-      .on("mouseleave", () => setTooltip(null));
+    sel.on("mouseenter", (event: MouseEvent, d) => {
+      const [mx, my] = d3.pointer(event, containerRef.current!);
+      const hasCached = thumbnailCache.current.has(d.data.id);
+      const imgUrl = hasCached ? (thumbnailCache.current.get(d.data.id) ?? null) : null;
+      setTooltip({ node: d.data, x: mx, y: my, imgUrl });
+      const speciesRanks = ["SPECIES", "SUBSPECIES", "BREED", "HYBRID"];
+      if (!hasCached && speciesRanks.includes(d.data.rank)) {
+        const title = (d.data.commonName ?? d.data.name).replace(/\s*\([^)]*\)/g, "").trim().replace(/ /g, "_");
+        fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
+          .then(r => r.ok ? r.json() : null)
+          .then((json: { thumbnail?: { source: string } } | null) => {
+            const url = json?.thumbnail?.source ?? null;
+            thumbnailCache.current.set(d.data.id, url);
+            setTooltip(prev => prev?.node.id === d.data.id ? { ...prev, imgUrl: url } : prev);
+          })
+          .catch(() => thumbnailCache.current.set(d.data.id, null));
+      }
+    })
+    .on("mouseleave", () => setTooltip(null));
   }, []);
 
   const render = useCallback(() => {
