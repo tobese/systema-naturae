@@ -85,6 +85,8 @@ The ⓘ Coverage button opens a modal with sort/filter controls (Gaps first / A�
 
 5. **Check `shared/data/pending-eponyms.json`** — if the new family's `familySlug` appears there, add those species with their `namedAfter` field and remove the entry.
 
+6. **`portal/data/species-news.json`** — add a `family_added` event for the new family with `date` set to today, so the NewsBell in the header shows the addition.
+
 ## How the graft works
 
 `buildData.ts` walks `taxonomy.json`, tracking the current CLASS and ORDER as it descends. When it hits a FAMILY node with `appSlug`, it reads `<root>/<class>/<order>/<appSlug>/src/data/<appSlug>.json`, stamps every descendant node with `familySlug: appSlug`, and splices the children in. Tardigrada (no CLASS ancestor) resolves to `<root>/tardigrada/…`. `colorRegistry.ts` uses `familySlug` to look up the `ColorTheme` for rendering.
@@ -105,7 +107,7 @@ The ⓘ Coverage button opens a modal with sort/filter controls (Gaps first / A�
 
 ## Coverage status (as of June 2026)
 
-Portal contains **68,679 nodes** across **373 families**. All 254 IOC bird families are represented alongside 119 families from other classes. The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
+Portal contains **74,559 nodes** across **383 families**. All 254 IOC bird families are represented alongside 129 families from other classes. The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
 
 ## Fixing sanity issues
 
