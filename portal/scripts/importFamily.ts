@@ -342,7 +342,7 @@ ${Math.min(toGenerate, gap)} species, valid JSON only. Use genera not yet listed
   console.log();
   console.log("⏳ Rebuilding unified taxonomy...");
   try {
-    const out = execSync("sh scripts/buildData.sh 2>&1", { cwd: portalRoot, encoding: "utf-8", timeout: 60000 });
+    const out = execSync("sh scripts/buildData.sh 2>&1", { cwd: portalRoot, encoding: "utf-8", timeout: 180000 });
     const warnLine = out.split("\n").find(l => l.toLowerCase().includes("warn"));
     if (warnLine) console.log(`  ⚠  ${warnLine}`);
     const doneLine = out.split("\n").find(l => l.startsWith("Done"));

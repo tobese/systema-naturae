@@ -89,16 +89,6 @@ function walkFind(node: TaxonNode, id: string): TaxonNode | null {
   return null;
 }
 
-function buildHighlightIds(root: TaxonNode, continent: string): Set<string> {
-  const ids = new Set<string>();
-  function walk(n: TaxonNode) {
-    if (n.continents?.includes(continent)) ids.add(n.id);
-    n.children?.forEach(walk);
-  }
-  walk(root);
-  return ids;
-}
-
 function mergeThemes(base: ColorTheme, family: ColorTheme): ColorTheme {
   return {
     subfamilyColors: { ...base.subfamilyColors, ...family.subfamilyColors },
@@ -115,6 +105,7 @@ export function useUnifiedTree(
   expandedSubspeciesIds: Set<string>,
   expandedBreedIds: Set<string>,
   highlightedContinent: string | null,
+  highlightWikipedia: boolean,
 ): {
   treeData: TaxonNode;
   colorTheme: ColorTheme;
@@ -139,11 +130,32 @@ export function useUnifiedTree(
   }, [annotatedData, focusedFamilyId]);
 
   const highlightedNodeIds = useMemo<Set<string> | null>(() => {
-    if (!highlightedContinent || !focusedFamilyId) return null;
+    if (!focusedFamilyId) return null;
     const familyNode = walkFind(annotatedData, focusedFamilyId);
     if (!familyNode) return null;
-    return buildHighlightIds(familyNode, highlightedContinent);
-  }, [annotatedData, focusedFamilyId, highlightedContinent]);
+
+    const ids = new Set<string>();
+
+    if (highlightedContinent) {
+      const continent = highlightedContinent;
+      function walkContinent(n: TaxonNode) {
+        if (n.continents?.includes(continent)) ids.add(n.id);
+        n.children?.forEach(walkContinent);
+      }
+      walkContinent(familyNode);
+    }
+
+    if (highlightWikipedia) {
+      function walkWiki(n: TaxonNode) {
+        if (n.sourcedFrom === "wikipedia") ids.add(n.id);
+        n.children?.forEach(walkWiki);
+      }
+      walkWiki(familyNode);
+    }
+
+    if (ids.size === 0) return null;
+    return ids;
+  }, [annotatedData, focusedFamilyId, highlightedContinent, highlightWikipedia]);
 
   const findNodeById = useMemo(
     () => (id: string) => walkFind(annotatedData, id),
