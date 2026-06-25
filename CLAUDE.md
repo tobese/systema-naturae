@@ -57,7 +57,7 @@ scripts/
 
 ## Graph UI features
 
-Portal now contains **68,679 nodes** across **373 families** (all 254 IOC bird families represented). Coverage tab at ⓘ button shows per-class statistics with sort/filter controls, progress bars, and a growth timeline chart with node/species history.
+Portal now contains **110,827 nodes** across **383 families** (all 254 IOC bird families represented). Coverage tab at ⓘ button shows per-class statistics with sort/filter controls, progress bars, and a growth timeline chart with node/species history.
 
 ### Node sizing
 `nodeR()` in `FamilyTree.tsx` uses widened radii: family (12), subfamily (9), genus (6.5), species (2.5). Provides clearer hierarchy distinction.
@@ -107,7 +107,7 @@ The ⓘ Coverage button opens a modal with sort/filter controls (Gaps first / A�
 
 ## Coverage status (as of June 2026)
 
-Portal contains **74,559 nodes** across **383 families**. All 254 IOC bird families are represented alongside 129 families from other classes. The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
+Portal contains **110,827 nodes** across **383 families**. All 254 IOC bird families are represented alongside 129 families from other classes. The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
 
 ## Fixing sanity issues
 
@@ -131,3 +131,16 @@ Portal contains **74,559 nodes** across **383 families**. All 254 IOC bird famil
 
 `FAMILY` → `SUBFAMILY` → `GENUS` → `SPECIES` → `SUBSPECIES`  
 Also in use: `TRIBE`, `BREED_GROUP`, `BREED`, `HYBRID`
+
+## Network
+
+All machines on same switch under desk. **All machines run Ollama.**
+
+| Host | OS | User | Purpose |
+|---|---|---|---|
+| Macie | macOS | tb | Dev machine (this host) + Ollama |
+| Steamie | Windows 11 | opencode | Ollama server |
+| Biggie | Windows 10 | — | Ollama |
+| Debbie | Debian | — | Ollama |
+
+**Note:** Shell tools run as `tb` on Macie. If a host is unreachable via `.local` mDNS, try direct IP. SSH password for Steamie: `sshPassword!`

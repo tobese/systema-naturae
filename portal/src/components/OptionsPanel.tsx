@@ -5,6 +5,7 @@ export interface PortalOptions {
   collapseLarge: boolean;
   collapseThreshold: number;
   nodeScale: number;
+  highlightWikipedia: boolean;
 }
 
 interface Props {
@@ -58,6 +59,10 @@ export default function OptionsPanel({ options, onChange }: Props) {
 
             <LabelRow checked={options.showExtinct} onChange={() => toggle("showExtinct")}>
               Show extinct species
+            </LabelRow>
+
+            <LabelRow checked={options.highlightWikipedia} onChange={() => toggle("highlightWikipedia")}>
+              Highlight Wikipedia species
             </LabelRow>
 
             <LabelRow checked={options.collapseLarge} onChange={() => toggle("collapseLarge")}>

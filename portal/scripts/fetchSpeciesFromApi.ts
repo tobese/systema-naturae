@@ -131,11 +131,22 @@ function lookupFamilyInCache(cache: GbifCache, familyName: string): { gbifKey: n
 // ---------- GBIF API ----------
 
 async function getGbifFamilyKey(familyName: string): Promise<number> {
-  const url = `${GBIF_MATCH}?name=${encodeURIComponent(familyName)}&rank=FAMILY`;
-  const res = await fetch(url);
-  const data = await res.json();
-  if (!data.usageKey) throw new Error(`GBIF could not find family "${familyName}"`);
-  return data.usageKey;
+  // Try match API first
+  const matchRes = await fetch(`${GBIF_MATCH}?name=${encodeURIComponent(familyName)}&rank=FAMILY`);
+  const matchData = await matchRes.json();
+  if (matchData.usageKey && matchData.matchType !== "HIGHERRANK" && matchData.usageKey > 100) {
+    return matchData.usageKey;
+  }
+
+  // Fall back to search API for exact family match
+  const searchRes = await fetch(`${GBIF_SEARCH}?q=${encodeURIComponent(familyName)}&rank=FAMILY&limit=5`);
+  const searchData = await searchRes.json();
+  const results = searchData.results || [];
+  const exact = results.find((r: any) => r.canonicalName?.toLowerCase() === familyName.toLowerCase());
+  if (exact?.nubKey) return exact.nubKey;
+  if (exact?.key) return exact.key;
+
+  throw new Error(`GBIF could not find family "${familyName}" (match returned key=${matchData.usageKey}, matchType=${matchData.matchType})`);
 }
 
 async function fetchGbifSpecies(familyKey: number, limit = 300): Promise<GbifSpecies[]> {
@@ -439,7 +450,7 @@ async function main() {
   // 8. Rebuild
   console.log("\n⏳ Rebuilding unified taxonomy...");
   try {
-    const out = execSync("sh scripts/buildData.sh 2>&1", { cwd: portalRoot, encoding: "utf-8", timeout: 60000 });
+    const out = execSync("sh scripts/buildData.sh 2>&1", { cwd: portalRoot, encoding: "utf-8", timeout: 180000 });
     const doneLine = out.split("\n").find(l => l.startsWith("Done"));
     if (doneLine) console.log(`   ${doneLine}`);
   } catch (e) {

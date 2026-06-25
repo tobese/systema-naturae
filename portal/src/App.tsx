@@ -81,6 +81,7 @@ export default function App() {
     collapseLarge: true,
     collapseThreshold: 15,
     nodeScale: 1.0,
+    highlightWikipedia: false,
   });
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
@@ -145,6 +146,7 @@ export default function App() {
     expandedSubspeciesIds,
     expandedBreedIds,
     highlightedContinent,
+    options.highlightWikipedia,
   );
 
   // Filter tree based on options

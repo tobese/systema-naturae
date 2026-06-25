@@ -19,6 +19,7 @@ export interface TaxonNode {
   namedAfter?: string;
   iucnStatus?: string;
   extinct?: boolean;
+  sourcedFrom?: string;
   children?: TaxonNode[];
 }
 
