@@ -15,6 +15,8 @@ interface Props {
   focusedClassId?: string | null;
   collapseThreshold?: number;
   nodeScale?: number;
+  treeRotation?: number;
+  tooltipTargetId?: string | null;
 }
 
 type AnnotatedNode = d3.HierarchyNode<TaxonNode> & { subfamily?: string };
@@ -172,9 +174,10 @@ function remapAnglesForClass(nodes: PNode[], focusedClassId: string): void {
 }
 
 function TooltipBox({
-  node, x, y, imgUrl, containerW,
-}: { node: TaxonNode; x: number; y: number; imgUrl: string | null; containerW: number }) {
+  node, x, y, imgUrl, containerW, containerH,
+}: { node: TaxonNode; x: number; y: number; imgUrl: string | null; containerW: number; containerH: number }) {
   const flipLeft = x > containerW - 220;
+  const flipTop = y > containerH - 220;
   const isSpecies = ["SPECIES", "SUBSPECIES", "BREED", "HYBRID"].includes(node.rank);
 
   function content() {
@@ -270,7 +273,7 @@ function TooltipBox({
     <div style={{
       position: "absolute",
       left: flipLeft ? x - 196 : x + 16,
-      top: y + 8,
+      top: flipTop ? y - 200 : y + 8,
       width: 180,
       background: "#13131f",
       border: "1px solid #252535",
@@ -296,7 +299,7 @@ interface Setup {
 export default function FamilyTree({
   data, layout, onSelect, selectedId, pendingZoomId,
   highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId,
-  collapseThreshold = 99999, nodeScale = 1,
+  collapseThreshold = 99999, nodeScale = 1, treeRotation = 0, tooltipTargetId,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -312,6 +315,9 @@ export default function FamilyTree({
   const attachTooltip = useCallback((
     sel: d3.Selection<SVGGElement, PNode, SVGGElement, unknown>,
   ) => {
+    let longPressTimer: number | null = null;
+    let touchStartPos: { x: number; y: number } | null = null;
+
     sel.on("mouseenter", (event: MouseEvent, d) => {
       const [mx, my] = d3.pointer(event, containerRef.current!);
       const hasCached = thumbnailCache.current.has(d.data.id);
@@ -330,7 +336,46 @@ export default function FamilyTree({
           .catch(() => thumbnailCache.current.set(d.data.id, null));
       }
     })
-    .on("mouseleave", () => setTooltip(null));
+    .on("mouseleave", () => setTooltip(null))
+    .on("touchstart", (event: TouchEvent, d) => {
+      const touch = event.touches[0];
+      touchStartPos = { x: touch.clientX, y: touch.clientY };
+      longPressTimer = window.setTimeout(() => {
+        const container = containerRef.current!;
+        const rect = container.getBoundingClientRect();
+        const mx = touch.clientX - rect.left;
+        const my = touch.clientY - rect.top;
+        const hasCached = thumbnailCache.current.has(d.data.id);
+        const imgUrl = hasCached ? (thumbnailCache.current.get(d.data.id) ?? null) : null;
+        setTooltip({ node: d.data, x: mx, y: my, imgUrl });
+        const speciesRanks = ["SPECIES", "SUBSPECIES", "BREED", "HYBRID"];
+        if (!hasCached && speciesRanks.includes(d.data.rank)) {
+          const title = (d.data.commonName ?? d.data.name).replace(/\s*\([^)]*\)/g, "").trim().replace(/ /g, "_");
+          fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
+            .then(r => r.ok ? r.json() : null)
+            .then((json: { thumbnail?: { source: string } } | null) => {
+              const url = json?.thumbnail?.source ?? null;
+              thumbnailCache.current.set(d.data.id, url);
+              setTooltip(prev => prev?.node.id === d.data.id ? { ...prev, imgUrl: url } : prev);
+            })
+            .catch(() => thumbnailCache.current.set(d.data.id, null));
+        }
+      }, 500);
+    })
+    .on("touchend", () => {
+      if (longPressTimer) { clearTimeout(longPressTimer); longPressTimer = null; }
+      touchStartPos = null;
+      setTooltip(null);
+    })
+    .on("touchmove", (event: TouchEvent) => {
+      if (!touchStartPos) return;
+      const touch = event.touches[0];
+      const dx = touch.clientX - touchStartPos.x;
+      const dy = touch.clientY - touchStartPos.y;
+      if (Math.sqrt(dx * dx + dy * dy) > 10) {
+        if (longPressTimer) { clearTimeout(longPressTimer); longPressTimer = null; }
+      }
+    });
   }, []);
 
   const render = useCallback(() => {
@@ -421,6 +466,8 @@ export default function FamilyTree({
     let ptNode: PNode;
     let defaultTransform: d3.ZoomTransform;
 
+    const rotationRad = (treeRotation * Math.PI) / 180;
+
     if (layout === "radial") {
       const isFocused = !!(focusedClassId || focusedFamilySlug);
       const radius = Math.min(W, H) * (isFocused ? 0.70 : 0.42);
@@ -452,7 +499,7 @@ export default function FamilyTree({
       }
 
       nodeTransform = (d: PNode) => {
-        const angle = d.x - Math.PI / 2;
+        const angle = d.x - Math.PI / 2 + rotationRad;
         return `translate(${d.y * Math.cos(angle)},${d.y * Math.sin(angle)})`;
       };
       defaultTransform = d3.zoomIdentity.translate(W / 2, H / 2);
@@ -492,7 +539,7 @@ export default function FamilyTree({
     const linkKey = (d: PLink) => `${d.source.data.id}→${d.target.data.id}`;
 
     const linkPathFn = layout === "radial"
-      ? d3.linkRadial<PLink, PNode>().angle(n => n.x).radius(n => n.y)
+      ? d3.linkRadial<PLink, PNode>().angle(n => n.x + rotationRad).radius(n => n.y)
       : d3.linkHorizontal<PLink, PNode>().x(n => n.y).y(n => n.x);
 
     const linkSel = gLinks.selectAll<SVGPathElement, PLink>("path")
@@ -596,7 +643,7 @@ export default function FamilyTree({
     merged.on("click", (_, d) => {
       const cur = d3.zoomTransform(svg);
       if (layout === "radial") {
-        const a = d.x - Math.PI / 2;
+        const a = d.x - Math.PI / 2 + rotationRad;
         zoomAnchorRef.current = { sx: d.y * Math.cos(a) * cur.k + cur.x, sy: d.y * Math.sin(a) * cur.k + cur.y };
       } else {
         zoomAnchorRef.current = { sx: d.y * cur.k + cur.x, sy: d.x * cur.k + cur.y };
@@ -667,8 +714,14 @@ export default function FamilyTree({
     // Text visual + positioning update
     if (layout === "radial") {
       merged.select<SVGTextElement>("text")
-        .attr("x", d => d.x < Math.PI ? nr(d, specialSet) + 4 : -(nr(d, specialSet) + 4))
-        .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
+        .attr("x", d => {
+          const effectiveAngle = d.x + rotationRad;
+          return effectiveAngle < Math.PI ? nr(d, specialSet) + 4 : -(nr(d, specialSet) + 4);
+        })
+        .attr("text-anchor", d => {
+          const effectiveAngle = d.x + rotationRad;
+          return effectiveAngle < Math.PI ? "start" : "end";
+        })
         .text(d => displayLabel(d.data))
         .style("font-size", d => {
           if (d.data.rank === "KINGDOM") return "14px";
@@ -736,7 +789,7 @@ export default function FamilyTree({
     const posMap = new Map<string, { x: number; y: number }>();
     if (layout === "radial") {
       ptNode.descendants().forEach(d => {
-        const angle = d.x - Math.PI / 2;
+        const angle = d.x - Math.PI / 2 + rotationRad;
         posMap.set(d.data.id, { x: d.y * Math.cos(angle), y: d.y * Math.sin(angle) });
       });
     } else {
@@ -800,17 +853,17 @@ export default function FamilyTree({
     pendingZoomId.current = null;
     if (zoomTarget) {
       const target = ptNode.descendants().find(d => d.data.id === zoomTarget);
-      if (target) {
-        const scale = 2.4;
-        let tx: number, ty: number;
-        if (layout === "radial") {
-          const angle = target.x - Math.PI / 2;
-          tx = target.y * Math.cos(angle);
-          ty = target.y * Math.sin(angle);
-        } else {
-          tx = target.y;
-          ty = target.x;
-        }
+        if (target) {
+          const scale = 2.4;
+          let tx: number, ty: number;
+          if (layout === "radial") {
+            const angle = target.x - Math.PI / 2 + rotationRad;
+            tx = target.y * Math.cos(angle);
+            ty = target.y * Math.sin(angle);
+          } else {
+            tx = target.y;
+            ty = target.x;
+          }
 
         // Keep the target node at its pre-click screen position while zooming
         // (anchor persists across Strict Mode double-render — never cleared)
@@ -830,7 +883,40 @@ export default function FamilyTree({
         );
       }
     }
-  }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId, attachTooltip, nodeScale, collapseThreshold]);
+    // Keyboard-driven tooltip
+    if (tooltipTargetId) {
+      const target = ptNode.descendants().find(d => d.data.id === tooltipTargetId);
+      if (target) {
+        let tx: number, ty: number;
+        if (layout === "radial") {
+          const angle = target.x - Math.PI / 2 + rotationRad;
+          tx = target.y * Math.cos(angle);
+          ty = target.y * Math.sin(angle);
+        } else {
+          tx = target.y;
+          ty = target.x;
+        }
+        const cur = d3.zoomTransform(svg);
+        const sx = tx * cur.k + cur.x;
+        const sy = ty * cur.k + cur.y;
+        const hasCached = thumbnailCache.current.has(target.data.id);
+        const imgUrl = hasCached ? (thumbnailCache.current.get(target.data.id) ?? null) : null;
+        setTooltip({ node: target.data, x: sx, y: sy, imgUrl });
+        const speciesRanks = ["SPECIES", "SUBSPECIES", "BREED", "HYBRID"];
+        if (!hasCached && speciesRanks.includes(target.data.rank)) {
+          const title = (target.data.commonName ?? target.data.name).replace(/\s*\([^)]*\)/g, "").trim().replace(/ /g, "_");
+          fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
+            .then(r => r.ok ? r.json() : null)
+            .then((json: { thumbnail?: { source: string } } | null) => {
+              const url = json?.thumbnail?.source ?? null;
+              thumbnailCache.current.set(target.data.id, url);
+              setTooltip(prev => prev?.node.id === target.data.id ? { ...prev, imgUrl: url } : prev);
+            })
+            .catch(() => thumbnailCache.current.set(target.data.id, null));
+        }
+      }
+    }
+  }, [data, layout, onSelect, selectedId, pendingZoomId, highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId, attachTooltip, nodeScale, collapseThreshold, treeRotation, tooltipTargetId]);
 
   useEffect(() => {
     render();
@@ -855,6 +941,7 @@ export default function FamilyTree({
           y={tooltip.y}
           imgUrl={tooltip.imgUrl}
           containerW={containerRef.current?.clientWidth ?? 800}
+          containerH={containerRef.current?.clientHeight ?? 600}
         />
       )}
     </div>

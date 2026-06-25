@@ -20,6 +20,8 @@ import type { PortalOptions } from "./components/OptionsPanel";
 import { useInternationalDays } from "./hooks/useInternationalDays";
 import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
 import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
+import StatisticsHeader from "./components/StatisticsHeader";
+import WheelOfNature from "./components/WheelOfNature";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -85,6 +87,7 @@ export default function App() {
   const [showEponyms, setShowEponyms] = useState(false);
   const [showDays, setShowDays] = useState(false);
   const [showSotd, setShowSotd] = useState(false);
+  const [showWheel, setShowWheel] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
@@ -92,6 +95,8 @@ export default function App() {
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
+  const [treeRotation, setTreeRotation] = useState(0);
+  const [tooltipTargetId, setTooltipTargetId] = useState<string | null>(null);
   const pendingZoomId = useRef<string | null>(null);
   const sidebarScrollRef = useRef<HTMLDivElement>(null);
 
@@ -105,6 +110,12 @@ export default function App() {
     const id = setInterval(() => setNow(new Date()), 30000);
     return () => clearInterval(id);
   }, []);
+
+  useEffect(() => {
+    if (!tooltipTargetId) return;
+    const t = setTimeout(() => setTooltipTargetId(null), 2000);
+    return () => clearTimeout(t);
+  }, [tooltipTargetId]);
 
   // selected node is fully URL-driven so browser back/forward and deep-links work correctly
   const selected = useMemo(
@@ -276,20 +287,43 @@ export default function App() {
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "A") return;
       if (e.key === "Escape" && focusedFamilySlug) { handleCollapseFamily(); return; }
       if (e.key === "Escape" && focusedClassId) { handleCollapseClass(); return; }
+      if (e.key === "c" || e.key === "C" || e.key === "Home") {
+        if (selectedNodeId) {
+          pendingZoomId.current = selectedNodeId;
+          setTooltipTargetId(selectedNodeId);
+          setTreeRotation(r => r); // force re-render
+        }
+        return;
+      }
+      if ((e.key === "q" || e.key === "Q") && layout === "radial") {
+        e.preventDefault();
+        setTreeRotation(r => r - 15);
+        return;
+      }
+      if ((e.key === "e" || e.key === "E") && layout === "radial") {
+        e.preventDefault();
+        setTreeRotation(r => r + 15);
+        return;
+      }
       if (!selected || !navContext) return;
       const { parent, siblings, index } = navContext;
+      let nextNode: TaxonNode | null = null;
       if (e.key === "ArrowLeft") {
-        if (siblings.length > 1) handleSelect(siblings[(index - 1 + siblings.length) % siblings.length]);
+        if (siblings.length > 1) nextNode = siblings[(index - 1 + siblings.length) % siblings.length];
       } else if (e.key === "ArrowRight") {
-        if (siblings.length > 1) handleSelect(siblings[(index + 1) % siblings.length]);
+        if (siblings.length > 1) nextNode = siblings[(index + 1) % siblings.length];
       } else if (e.key === "ArrowUp" && parent) {
         e.preventDefault();
-        handleSelect(parent);
+        nextNode = parent;
+      }
+      if (nextNode) {
+        handleSelect(nextNode);
+        setTooltipTargetId(nextNode.id);
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [selected, navContext, handleSelect, focusedFamilySlug, handleCollapseFamily, focusedClassId, handleCollapseClass]);
+  }, [selected, navContext, handleSelect, focusedFamilySlug, handleCollapseFamily, focusedClassId, handleCollapseClass, selectedNodeId, layout]);
 
   const totalSpecies = useMemo(() => {
     let n = 0;
@@ -540,6 +574,21 @@ export default function App() {
           >
             Coverage
           </button>
+          <button
+            onClick={() => setShowWheel(true)}
+            title="Wheel of Nature"
+            style={{
+              ...btnBase,
+              border: "1px solid",
+              borderColor: showWheel ? "#3a3d50" : "#1e2030",
+              background: showWheel ? "#1e2030" : "transparent",
+              color: showWheel ? "#c0c0d8" : "#555",
+            }}
+            onMouseEnter={e => { if (!showWheel) e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { if (!showWheel) e.currentTarget.style.color = "#555"; }}
+          >
+            Wheel
+          </button>
           <div style={{ marginRight: 4 }}>
             <OptionsPanel options={options} onChange={setOptions} />
           </div>
@@ -648,6 +697,8 @@ export default function App() {
             focusedClassId={focusedClassId}
             collapseThreshold={options.collapseLarge ? options.collapseThreshold : 99999}
             nodeScale={options.nodeScale}
+            treeRotation={treeRotation}
+            tooltipTargetId={tooltipTargetId}
           />
           <div style={{
             position: "absolute",
@@ -702,14 +753,17 @@ export default function App() {
             />
           )}
           {selected && navContext && (
-            <NodeNav
-              parent={navContext.parent}
-              siblings={navContext.siblings}
-              index={navContext.index}
-              onNavigate={handleSelect}
-              breadcrumbPath={breadcrumbPath}
-              colorTheme={colorTheme}
-            />
+            <>
+              <StatisticsHeader path={breadcrumbPath} onSelect={handleSelect} />
+              <NodeNav
+                parent={navContext.parent}
+                siblings={navContext.siblings}
+                index={navContext.index}
+                onNavigate={handleSelect}
+                breadcrumbPath={breadcrumbPath}
+                colorTheme={colorTheme}
+              />
+            </>
           )}
           <div ref={sidebarScrollRef} style={{ flex: 1, overflowY: "auto" }}>
             <UnifiedInfoPanel
@@ -746,6 +800,13 @@ export default function App() {
           onFocusFamily={slug => { setFocus(slug); setShowCoverage(false); }}
           initialFamilySlug={focusedFamilySlug}
           initialClassId={focusedClassId}
+        />
+      )}
+      {showWheel && (
+        <WheelOfNature
+          data={annotatedData}
+          onClose={() => setShowWheel(false)}
+          onNavigate={(slug, nodeId) => { navigateTo(slug, nodeId); setShowWheel(false); }}
         />
       )}
     </div>
