@@ -3,15 +3,14 @@
   "model": "ollama-local/llama3.2-3b",
   "small_model": "ollama-local/llama3.2-3b",
   "provider": {
-    "ollama": {
+    "ollama-debbie": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama (debbie)",
       "options": {
         "baseURL": "http://debbie:11434/v1"
       },
       "models": {
-        "llama3.2": { "name": "Llama 3.2" },
-        "qwen2.5-coder": { "name": "Qwen 2.5 Coder" }
+        "qwen2.5-7b": { "name": "Qwen 2.5 7B" }
       }
     },
     "ollama-local": {
@@ -26,6 +25,17 @@
         "qwen2.5-7b":  { "id": "qwen2.5:7b",  "name": "Qwen 2.5 7B" }
       }
     },
+    "ollama-steamie": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (steamie)",
+      "options": {
+        "baseURL": "http://steamie.local:11434/v1"
+      },
+      "models": {
+        "qwen3.6":    { "id": "qwen3.6:latest", "name": "Qwen 3.6" },
+        "llama3.2":   { "name": "Llama 3.2" }
+      }
+    },
     "ollama-biggie": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama (biggie)",
@@ -33,12 +43,7 @@
         "baseURL": "http://biggie:11434/v1"
       },
       "models": {
-        "gemma3":      { "name": "Gemma 3" },
-        "llama3.2":    { "name": "Llama 3.2" },
-        "qwen2.5-7b":  { "id": "qwen2.5:7b", "name": "Qwen 2.5 7B" },
-        "qwen2.5-14b": { "id": "qwen2.5:14b", "name": "Qwen 2.5 14B" },
-        "mistral":     { "name": "Mistral" },
-        "deepseek-coder-v2": { "name": "DeepSeek Coder V2" }
+        "qwen3.6": { "name": "Qwen 3.6" }
       }
     }
   }

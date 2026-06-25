@@ -1,7 +1,11 @@
-.PHONY: dev build data typecheck lint
+.PHONY: dev dev-daemon build data typecheck lint
 
 dev:
 	cd portal && npm run dev
+
+dev-daemon:
+	cd portal && nohup npx vite --host > /tmp/vite-dev.log 2>&1 &
+	@echo "Vite started (PID $$$$!) — log: /tmp/vite-dev.log"
 
 build:
 	cd portal && npm run build
