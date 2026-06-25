@@ -57,7 +57,7 @@ scripts/
 
 ## Graph UI features
 
-Portal now contains **19,577 nodes** across **351 families** (all 254 IOC bird families represented). Coverage tab at ⓘ button shows per-class statistics with sort/filter controls, progress bars, and a growth timeline chart with node/species history.
+Portal now contains **68,679 nodes** across **373 families** (all 254 IOC bird families represented). Coverage tab at ⓘ button shows per-class statistics with sort/filter controls, progress bars, and a growth timeline chart with node/species history.
 
 ### Node sizing
 `nodeR()` in `FamilyTree.tsx` uses widened radii: family (12), subfamily (9), genus (6.5), species (2.5). Provides clearer hierarchy distinction.
@@ -105,7 +105,7 @@ The ⓘ Coverage button opens a modal with sort/filter controls (Gaps first / A�
 
 ## Coverage status (as of June 2026)
 
-Portal contains **19,577 nodes** across **351 families**. All 254 IOC bird families are represented alongside 97 families from other classes. The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
+Portal contains **68,679 nodes** across **373 families**. All 254 IOC bird families are represented alongside 119 families from other classes. The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
 
 ## Fixing sanity issues
 

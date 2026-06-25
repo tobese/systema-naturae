@@ -83,12 +83,10 @@ async function main() {
   const startTime = Date.now();
 
   let retries = 0;
-  let lastGoodOffset = -1;
   while (offset < total) {
     const url = `${GBIF_SEARCH}?higherTaxonKey=${classKey}&rank=SPECIES&status=ACCEPTED&limit=${PAGE_SIZE}&offset=${offset}`;
     let batch: GbifSpecies[] = [];
     try {
-      if (offset !== lastGoodOffset) retries = 0; // only reset when we move to a new offset
       const res = await fetch(url);
       const data = await res.json() as { results?: GbifSpecies[]; count?: number };
 
@@ -103,7 +101,7 @@ async function main() {
 
       species.push(...batch);
       offset += PAGE_SIZE;
-      lastGoodOffset = offset - PAGE_SIZE; // track which offset we just processed
+      retries = 0; // reset retry count ONLY after successful page
       const pct = Math.round(species.length / total * 100);
       const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
       console.log(`   ${species.length.toLocaleString().padStart(6)}/${total}  (${pct}%)  ${elapsed}s`);
