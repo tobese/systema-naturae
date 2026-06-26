@@ -96,7 +96,7 @@ function getColorRegistryLineages(slug: string): Set<string> {
   return lines;
 }
 
-function callOllama(prompt: string, _count: number, temperature = 0.5): string {
+async function callOllama(prompt: string, _count: number, temperature = 0.5): Promise<string> {
   const systemMsg = "You are a taxonomy data generator. Output ONLY a valid JSON array of species objects. No markdown, no explanation, no code fences. Just the raw JSON array.";
 
   const body = JSON.stringify({
@@ -109,19 +109,37 @@ function callOllama(prompt: string, _count: number, temperature = 0.5): string {
     temperature,
   });
 
-  // Write prompt to temp file to avoid shell escaping issues
-  const tmpFile = resolve(process.env.HOME ?? "/tmp", `.ollama_prompt_${process.pid}.json`);
-  writeFileSync(tmpFile, body, "utf-8");
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), OLLAMA_TIMEOUT);
+
+  let elapsed = 0;
+  const interval = setInterval(() => {
+    elapsed += 10;
+    process.stdout.write(`   ⏱️  ${elapsed}s...\r`);
+  }, 10000);
 
   try {
-    const result = execSync(
-      `curl -s --max-time ${Math.floor(OLLAMA_TIMEOUT / 1000)} -X POST ${OLLAMA_URL} -d @${tmpFile}`,
-      { encoding: "utf-8", timeout: OLLAMA_TIMEOUT + 10000 },
-    );
-    const parsed = JSON.parse(result);
+    const response = await fetch(OLLAMA_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body,
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const parsed = await response.json() as { message?: { content?: string } };
     return parsed.message?.content ?? "";
   } finally {
-    try { rmSync(tmpFile); } catch { /* ok */ }
+    clearTimeout(timeoutId);
+    clearInterval(interval);
+    if (elapsed > 0) {
+      console.log();
+    }
   }
 }
 
@@ -230,7 +248,7 @@ function checkColorRegistry(slug: string, newLineages: Set<string>): string[] {
 
 // ---------- main ----------
 
-function main() {
+async function main() {
   const slug = process.argv[2];
   const requestedCount = process.argv[3] ? parseInt(process.argv[3], 10) : null;
 
@@ -300,7 +318,7 @@ Exactly ${chunkNum} species, valid JSON only. Use genera not yet listed to maxim
     console.log("   ⏳ Calling Ollama...");
     let jsonText: string;
     try {
-      jsonText = callOllama(prompt, chunkNum);
+      jsonText = await callOllama(prompt, chunkNum);
     } catch (e) {
       console.error(`   ❌ Ollama error: ${(e as Error).message}`);
       break;
@@ -310,7 +328,7 @@ Exactly ${chunkNum} species, valid JSON only. Use genera not yet listed to maxim
     if (!jsonText.includes("[") || !jsonText.includes("]")) {
       console.log("   ⚠  Response didn't contain a JSON array, retrying with higher temperature...");
       try {
-        jsonText = callOllama(prompt, chunkNum, 0.9);
+        jsonText = await callOllama(prompt, chunkNum, 0.9);
       } catch (e) {
         console.error(`   ❌ Ollama error on retry: ${(e as Error).message}`);
         break;
@@ -328,7 +346,7 @@ Exactly ${chunkNum} species, valid JSON only. Use genera not yet listed to maxim
     if (chunkSpecies.length === 0) {
       console.log("   ⚠  No new species in this chunk. Retrying with higher temperature...");
       try {
-        jsonText = callOllama(prompt, chunkNum, 0.9);
+        jsonText = await callOllama(prompt, chunkNum, 0.9);
         chunkSpecies = parseSpecies(jsonText, activeExistingNames);
       } catch {
         break;
@@ -398,4 +416,7 @@ Exactly ${chunkNum} species, valid JSON only. Use genera not yet listed to maxim
   }
 }
 
-main();
+main().catch(err => {
+  console.error("❌ Unhandled rejection in main:", err);
+  process.exit(1);
+});
