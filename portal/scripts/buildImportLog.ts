@@ -20,39 +20,42 @@ interface ImportEvent {
 /** Get each family's earliest git commit by following renames */
 function getFamilyFirstCommits(): Map<string, { date: string; message: string }> {
   const map = new Map<string, { date: string; message: string }>();
-  const familyPaths = buildFamilyPathMap();
 
-  for (const [slug, path] of familyPaths) {
-    try {
-      const result = execSync(
-        `git log --all --follow --format="%aI %s" -- "${path}"`,
-        { cwd: root, encoding: "utf-8", timeout: 3000 },
-      ).trim();
-      if (result) {
-        const firstLine = result.split("\n").pop() || ""; // last = oldest (reverse order not used)
-        // Actually git log goes most-recent-first. We need the LAST line for the oldest.
-        // With --follow, results are most-recent-first. We want the final one.
-        // Actually git log without --reverse goes most-recent-first.
-        // Let's just use the first line (which IS the earliest since we don't reverse)
-        // Wait no — without --reverse, the FIRST line is the MOST recent.
-        // We want the LAST line (oldest).
-        // Actually with --follow, we want the OLDEST commit.
-        // Let's use --reverse.
-        const revResult = execSync(
-          `git log --all --follow --reverse --format="%aI %s" -- "${path}"`,
-          { cwd: root, encoding: "utf-8", timeout: 5000 },
-        ).trim();
-        if (revResult) {
-          const firstLine = revResult.split("\n")[0];
-          const date = firstLine.split(" ")[0];
-          const msg = firstLine.slice(date.length + 1);
-          map.set(slug, { date, message: msg.replace(/"/g, "'") });
+  try {
+    const output = execSync(
+      `git log --reverse --name-only --format="DATE:%aI %s"`,
+      { cwd: root, encoding: "utf-8", maxBuffer: 10 * 1024 * 1024 }
+    );
+
+    let currentDate = "";
+    let currentMsg = "";
+
+    for (const line of output.split("\n")) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+
+      if (trimmed.startsWith("DATE:")) {
+        const parts = trimmed.slice(5).split(" ");
+        currentDate = parts[0];
+        currentMsg = parts.slice(1).join(" ");
+        continue;
+      }
+
+      // Match family data files like standard sub-apps or root tardigrada
+      if (trimmed.endsWith(".json") && trimmed.includes("/src/data/")) {
+        const match = trimmed.match(/\/src\/data\/([^/]+)\.json$/);
+        if (match) {
+          const slug = match[1];
+          if (!map.has(slug)) {
+            map.set(slug, { date: currentDate, message: currentMsg.replace(/"/g, "'") });
+          }
         }
       }
-    } catch {
-      // skip
     }
+  } catch (e) {
+    console.error("Error fetching git log:", e);
   }
+
   return map;
 }
 
