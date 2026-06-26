@@ -15,6 +15,17 @@ export const CLASS_PALETTE: Record<string, string> = {
   asteroidea:     "#E87040",
   echinoidea:     "#40A888",
   holothuroidea:  "#A070C8",
+  
+  // Cnidaria
+  scyphozoa:      "#9D4EDD",
+  cubozoa:        "#00B4D8",
+  staurozoa:      "#1B4D3E",
+  anthozoa:       "#F26419",
+  hydrozoa:       "#4361EE",
+
+  // Ctenophora
+  tentaculata:    "#30A0B0",
+  nuda:           "#2C82C9"
 };
 
 // Tardigrada has no CLASS — use a neutral slate.

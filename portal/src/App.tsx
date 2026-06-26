@@ -22,6 +22,7 @@ import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
 import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import StatisticsHeader from "./components/StatisticsHeader";
 import WheelOfNature from "./components/WheelOfNature";
+import BookView from "./components/BookView";
 import rawJson from "../data/unified-taxonomy.json";
 
 const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
@@ -106,6 +107,8 @@ export default function App() {
   const [showSotd, setShowSotd] = useState(false);
   const [showWheel, setShowWheel] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+  const [viewMode, setViewMode] = useState<"graph" | "book">("graph");
+  const [showRightSidebar, setShowRightSidebar] = useState(true);
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
   const speciesOfTheDay = useSpeciesOfTheDay(annotatedData);
@@ -402,6 +405,7 @@ export default function App() {
       let n = 0;
       function walkFamily(node: TaxonNode) {
         if (node.rank === "SPECIES") { n++; return; }
+        if (node.speciesList) { n += node.speciesList.length; }
         node.children?.forEach(walkFamily);
       }
       walkFamily(focusedFamilyNode);
@@ -665,7 +669,23 @@ export default function App() {
               ← All classes
             </button>
           )}
-          {(["radial", "vertical"] as const).map(l => (
+          {/* View Mode */}
+          {(["graph", "book"] as const).map(v => (
+            <button
+              key={v}
+              onClick={() => setViewMode(v)}
+              style={{
+                ...btnBase,
+                borderColor: viewMode === v ? "#3a3d50" : "#1e2030",
+                background: viewMode === v ? "#1e2030" : "transparent",
+                color: viewMode === v ? "#e0e0e0" : "#555",
+              }}
+            >
+              {v === "graph" ? "📊 Graph" : "📖 Book"}
+            </button>
+          ))}
+          {/* Graph Layout */}
+          {viewMode === "graph" && (["radial", "vertical"] as const).map(l => (
             <button
               key={l}
               onClick={() => setLayout(l)}
@@ -679,6 +699,21 @@ export default function App() {
               {l === "radial" ? "⊕ Radial" : "⇒ Vertical"}
             </button>
           ))}
+          {/* Toggle Details Panel */}
+          <button
+            onClick={() => setShowRightSidebar(o => !o)}
+            title="Toggle details panel"
+            style={{
+              ...btnBase,
+              borderColor: showRightSidebar ? "#3a3d50" : "#1e2030",
+              background: showRightSidebar ? "#1e2030" : "transparent",
+              color: showRightSidebar ? "#c0c0d8" : "#555",
+            }}
+            onMouseEnter={e => { if (!showRightSidebar) e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { if (!showRightSidebar) e.currentTarget.style.color = "#555"; }}
+          >
+            {showRightSidebar ? "→ Panel" : "← Panel"}
+          </button>
         </div>
       </div>
 
@@ -703,97 +738,111 @@ export default function App() {
           </div>
         )}
         <div style={{ flex: 1, overflow: "hidden", position: "relative" }}>
-          <FamilyTree
-            data={filteredTreeData}
-            layout={layout}
-            onSelect={handleSelect}
-            selectedId={selected?.id ?? null}
-            pendingZoomId={pendingZoomId}
-            highlightedNodeIds={highlightedNodeIds}
-            colorTheme={colorTheme}
-            focusedFamilySlug={focusedFamilySlug}
-            focusedClassId={focusedClassId}
-            collapseThreshold={options.collapseLarge ? options.collapseThreshold : 99999}
-            nodeScale={options.nodeScale}
-            treeRotation={treeRotation}
-            tooltipTargetId={tooltipTargetId}
-          />
-          <div style={{
-            position: "absolute",
-            bottom: 16,
-            right: 16,
-            width: 96,
-            height: 110,
-            pointerEvents: "none",
-          }}>
-            <div style={{
-              position: "absolute",
-              inset: 6,
-              borderRadius: "50%",
-              background: "rgba(10,10,20,0.55)",
-            }} />
-            <img
-              src={`${import.meta.env.BASE_URL}black-cat-studio.svg`}
-              alt="Black Cat Studio"
-              style={{ width: "100%", height: "100%", position: "relative" }}
+          {viewMode === "graph" ? (
+            <FamilyTree
+              data={filteredTreeData}
+              layout={layout}
+              onSelect={handleSelect}
+              selectedId={selected?.id ?? null}
+              pendingZoomId={pendingZoomId}
+              highlightedNodeIds={highlightedNodeIds}
+              colorTheme={colorTheme}
+              focusedFamilySlug={focusedFamilySlug}
+              focusedClassId={focusedClassId}
+              collapseThreshold={options.collapseLarge ? options.collapseThreshold : 99999}
+              nodeScale={options.nodeScale}
+              treeRotation={treeRotation}
+              tooltipTargetId={tooltipTargetId}
             />
-          </div>
-          <div style={{
-            position: "absolute",
-            bottom: 10,
-            right: 118,
-            fontSize: 10,
-            color: "#2a2a3a",
-            fontFamily: "'SF Mono', 'SF Pro Text', monospace",
-            lineHeight: 1.5,
-            textAlign: "right",
-            pointerEvents: "none",
-            userSelect: "none",
-          }}>
-            <div>{formattedDatetime}</div>
-            <div>{totalNodes.toLocaleString()} nodes</div>
-          </div>
+          ) : (
+            <BookView
+              data={filteredTreeData}
+              selectedId={selected?.id ?? null}
+              onSelect={handleSelect}
+            />
+          )}
+          {viewMode === "graph" && (
+            <>
+              <div style={{
+                position: "absolute",
+                bottom: 16,
+                right: 16,
+                width: 96,
+                height: 110,
+                pointerEvents: "none",
+              }}>
+                <div style={{
+                  position: "absolute",
+                  inset: 6,
+                  borderRadius: "50%",
+                  background: "rgba(10,10,20,0.55)",
+                }} />
+                <img
+                  src={`${import.meta.env.BASE_URL}black-cat-studio.svg`}
+                  alt="Black Cat Studio"
+                  style={{ width: "100%", height: "100%", position: "relative" }}
+                />
+              </div>
+              <div style={{
+                position: "absolute",
+                bottom: 10,
+                right: 118,
+                fontSize: 10,
+                color: "#2a2a3a",
+                fontFamily: "'SF Mono', 'SF Pro Text', monospace",
+                lineHeight: 1.5,
+                textAlign: "right",
+                pointerEvents: "none",
+                userSelect: "none",
+              }}>
+                <div>{formattedDatetime}</div>
+                <div>{totalNodes.toLocaleString()} nodes</div>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Sidebar */}
-        <div style={{
-          width: 380,
-          borderLeft: "1px solid #1e2030",
-          display: "flex",
-          flexDirection: "column",
-          flexShrink: 0,
-        }}>
-          {inFamilyFocus && hasContinentData && (
-            <HabitatMap
-              selectedContinents={selected?.continents ?? []}
-              highlightedContinent={highlightedContinent}
-              onContinentClick={c => setHighlightedContinent(prev => prev === c ? null : c)}
-            />
-          )}
-          {selected && navContext && (
-            <>
-              <StatisticsHeader path={breadcrumbPath} onSelect={handleSelect} />
-              <NodeNav
-                parent={navContext.parent}
-                siblings={navContext.siblings}
-                index={navContext.index}
-                onNavigate={handleSelect}
-                breadcrumbPath={breadcrumbPath}
-                colorTheme={colorTheme}
+        {showRightSidebar && (
+          <div style={{
+            width: 380,
+            borderLeft: "1px solid #1e2030",
+            display: "flex",
+            flexDirection: "column",
+            flexShrink: 0,
+          }}>
+            {inFamilyFocus && hasContinentData && (
+              <HabitatMap
+                selectedContinents={selected?.continents ?? []}
+                highlightedContinent={highlightedContinent}
+                onContinentClick={c => setHighlightedContinent(prev => prev === c ? null : c)}
               />
-            </>
-          )}
-          <div ref={sidebarScrollRef} style={{ flex: 1, overflowY: "auto" }}>
-            <UnifiedInfoPanel
-              node={selectedInTree}
-              onSelect={handleSelect}
-              findNodeById={findNodeById}
-              onFocusFamily={slug => setFocus(slug)}
-              focusedFamilySlug={focusedFamilySlug}
-              subfamilies={subfamiliesForPanel}
-            />
+            )}
+            {selected && navContext && (
+              <>
+                <StatisticsHeader path={breadcrumbPath} onSelect={handleSelect} />
+                <NodeNav
+                  parent={navContext.parent}
+                  siblings={navContext.siblings}
+                  index={navContext.index}
+                  onNavigate={handleSelect}
+                  breadcrumbPath={breadcrumbPath}
+                  colorTheme={colorTheme}
+                />
+              </>
+            )}
+            <div ref={sidebarScrollRef} style={{ flex: 1, overflowY: "auto" }}>
+              <UnifiedInfoPanel
+                node={selectedInTree}
+                onSelect={handleSelect}
+                findNodeById={findNodeById}
+                onFocusFamily={slug => setFocus(slug)}
+                focusedFamilySlug={focusedFamilySlug}
+                subfamilies={subfamiliesForPanel}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
       {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
