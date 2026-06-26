@@ -82,6 +82,10 @@ function collapseSpeciesLevel(
 
 function walkFind(node: TaxonNode, id: string): TaxonNode | null {
   if (node.id === id) return node;
+  if (node.speciesList) {
+    const foundSp = node.speciesList.find(s => s.id === id);
+    if (foundSp) return foundSp;
+  }
   for (const child of node.children ?? []) {
     const found = walkFind(child, id);
     if (found) return found;

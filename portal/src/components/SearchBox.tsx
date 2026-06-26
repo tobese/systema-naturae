@@ -15,6 +15,11 @@ function buildIndex(node: TaxonNode, entries: SearchEntry[] = []): SearchEntry[]
   if (!SKIP_RANKS.has(node.rank)) {
     entries.push({ id: node.id, name: node.name, commonName: node.commonName, rank: node.rank, familySlug: node.familySlug });
   }
+  if (node.speciesList) {
+    for (const sp of node.speciesList) {
+      entries.push({ id: sp.id, name: sp.name, commonName: sp.commonName, rank: sp.rank, familySlug: sp.familySlug });
+    }
+  }
   for (const child of node.children ?? []) buildIndex(child, entries);
   return entries;
 }

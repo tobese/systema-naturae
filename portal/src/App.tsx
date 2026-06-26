@@ -36,6 +36,10 @@ function filterExtinct(node: TaxonNode): TaxonNode {
 
 function walkFind(node: TaxonNode, id: string): TaxonNode | null {
   if (node.id === id) return node;
+  if (node.speciesList) {
+    const foundSp = node.speciesList.find(s => s.id === id);
+    if (foundSp) return foundSp;
+  }
   for (const child of node.children ?? []) {
     const found = walkFind(child, id);
     if (found) return found;
@@ -47,6 +51,10 @@ function getPathToNode(root: TaxonNode, targetId: string): TaxonNode[] {
   function walk(node: TaxonNode, path: TaxonNode[]): TaxonNode[] | null {
     const next = [...path, node];
     if (node.id === targetId) return next;
+    if (node.speciesList) {
+      const foundSp = node.speciesList.find(s => s.id === targetId);
+      if (foundSp) return [...next, foundSp];
+    }
     for (const child of node.children ?? []) {
       const found = walk(child, next);
       if (found) return found;
@@ -65,6 +73,14 @@ function findNavContext(
     const children = node.children ?? [];
     const idx = children.findIndex(c => c.id === targetId);
     if (idx !== -1) return { parent: node, siblings: children, index: idx };
+    if (node.speciesList) {
+      const spIdx = node.speciesList.findIndex(s => s.id === targetId);
+      if (spIdx !== -1) {
+        const allSiblings = [...children, ...node.speciesList];
+        const combinedIdx = children.length + spIdx;
+        return { parent: node, siblings: allSiblings, index: combinedIdx };
+      }
+    }
     for (const child of children) {
       const found = walk(child);
       if (found) return found;

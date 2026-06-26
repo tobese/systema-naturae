@@ -30,12 +30,30 @@ const NATURAL_HYBRIDS: Record<string, string> = {
 
 
 function countLeaves(node: TaxonNode): number {
-  if (!node.children || node.children.length === 0) return 1;
-  return node.children.reduce((s, c) => s + countLeaves(c), 0);
+  if ((!node.children || node.children.length === 0) && (!node.speciesList || node.speciesList.length === 0)) {
+    return 1;
+  }
+  let total = 0;
+  if (node.children) {
+    total += node.children.reduce((s, c) => s + countLeaves(c), 0);
+  }
+  if (node.speciesList) {
+    total += node.speciesList.length;
+  }
+  return total;
 }
 function collectLeaves(node: TaxonNode): TaxonNode[] {
-  if (!node.children || node.children.length === 0) return [node];
-  return node.children.flatMap(collectLeaves);
+  const list: TaxonNode[] = [];
+  if (node.speciesList) {
+    list.push(...node.speciesList);
+  }
+  if (!node.children || node.children.length === 0) {
+    if (!node.speciesList || node.speciesList.length === 0) {
+      return [node];
+    }
+    return list;
+  }
+  return [...list, ...node.children.flatMap(collectLeaves)];
 }
 
 function accentForNode(node: TaxonNode): string {
@@ -381,7 +399,10 @@ function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Tax
 
 function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const accent = accentForNode(node);
-  const species = collectLeaves(node).filter(l => l.rank === "SPECIES");
+  const physicalSpecies = collectLeaves(node).filter(l => l.rank === "SPECIES");
+  const flatSpecies = node.speciesList ?? [];
+  const allSpecies = [...physicalSpecies, ...flatSpecies].sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
       <div style={{ fontSize: 10, color: accent, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Genus</div>
@@ -390,12 +411,12 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
       {node.description && (
         <div style={{ fontSize: 13, color: "#777", lineHeight: 1.7, marginBottom: 14 }}>{node.description}</div>
       )}
-      <div style={{ fontSize: 13, color: "#666", marginBottom: 16 }}>{species.length} {species.length === 1 ? "species" : "species"}</div>
-      {species.length > 0 && (
+      <div style={{ fontSize: 13, color: "#666", marginBottom: 16 }}>{allSpecies.length} {allSpecies.length === 1 ? "species" : "species"}</div>
+      {allSpecies.length > 0 && (
         <>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#555", marginBottom: 8 }}>Species</div>
           <ul style={{ padding: 0, margin: 0 }}>
-            {species.map(s => (
+            {allSpecies.map(s => (
               <ClickableItem key={s.id} onClick={() => onSelect(s)}>
                 <div style={{ color: "#bbb", fontStyle: "italic", fontSize: 13 }}>{s.name}</div>
                 {s.commonName && <div style={{ color: "#666", fontSize: 12 }}>{s.commonName}</div>}
