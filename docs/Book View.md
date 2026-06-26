@@ -48,12 +48,8 @@ KINGDOM Animalia
 
 ## Open issues (taxonomy sidebar inspired this)
 
-- **PHYLUM level**: 3 phyla exist (Chordata, Arthropoda, Tardigrada) but CLASS is the more
-  intuitive entry point. Tardigrada has no CLASS, so skipping PHYLUM puts it awkwardly at
-  the KINGDOM level. Decide whether to show/hide/bridge PHYLUM in sidebar and book view.
-- **name vs commonName**: Higher ranks (CLASS–FAMILY) inconsistent — some render Latin
-  (`Mammalia`), others English (`Mammals`). Propose: KINGDOM–FAMILY show `commonName`
-  primary with `name` secondary; GENUS–SPECIES show `name` (Latin) only.
+- **PHYLUM level**: 3 phyla exist (Chordata, Arthropoda, Tardigrada) but CLASS is the more intuitive entry point. Tardigrada has no CLASS, so skipping PHYLUM puts it awkwardly at the KINGDOM level. Decide whether to show/hide/bridge PHYLUM in sidebar and book view.
+- **name vs commonName**: Higher ranks (CLASS–FAMILY) inconsistent — some render Latin (`Mammalia`), others English (`Mammals`). Propose: KINGDOM–FAMILY show `commonName` primary with `name` secondary; GENUS–SPECIES show `name` (Latin) only.
 
 ## Stretch
 
