@@ -22,7 +22,7 @@ const CLASS_KEY_OVERRIDE: Record<string, number> = {
 };
 const CACHE_PATH = resolve(portalRoot, `data/gbif-cache-${CLASS_ARG.toLowerCase()}.json`);
 const PAGE_SIZE = 100;
-const RATE_DELAY = 250;
+const RATE_DELAY = 50;
 
 interface GbifSpecies {
   species: string;
