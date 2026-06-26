@@ -18,18 +18,25 @@ FAMILIES=(
 export OLLAMA_MODEL="qwen2.5:3b"
 
 echo "=== Starting Automated Batch Import of 10 Small-Gap Families ==="
+GLOBAL_START=$SECONDS
+COUNT=0
+TOTAL_FAMILIES=${#FAMILIES[@]}
 
 for family in "${FAMILIES[@]}"; do
+  COUNT=$((COUNT + 1))
   echo ""
   echo "--------------------------------------------------------"
-  echo "Processing family: $family"
+  echo "[$COUNT/$TOTAL_FAMILIES] Processing family: $family"
   echo "--------------------------------------------------------"
   
-  # 1. Run local import with qwen2.5:7b
+  FAMILY_START=$SECONDS
+  
+  # 1. Run local import with qwen2.5:3b
   npx tsx scripts/importFamily.ts "$family"
   
   if [ $? -eq 0 ]; then
-    echo "✅ Successfully imported $family."
+    FAMILY_DURATION=$(( SECONDS - FAMILY_START ))
+    echo "✅ Successfully imported $family in ${FAMILY_DURATION}s."
     
     # 2. Run sanity-fixing suite on the updated codebase
     echo "🧹 Running sanity fixes..."
@@ -52,5 +59,8 @@ for family in "${FAMILIES[@]}"; do
   fi
 done
 
+GLOBAL_DURATION=$(( SECONDS - GLOBAL_START ))
+GLOBAL_MINS=$(( GLOBAL_DURATION / 60 ))
+GLOBAL_SECS=$(( GLOBAL_DURATION % 60 ))
 echo ""
-echo "=== Batch Import Completed! ==="
+echo "=== Batch Import Completed in ${GLOBAL_MINS}m ${GLOBAL_SECS}s! ==="
