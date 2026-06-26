@@ -13,6 +13,7 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 - [x] **Touch: multi-finger zoom & rotate** — handled by D3 zoom. ✅ Already works.
 - [x] **Center on current node** — `C` / `Home` key re-centres the viewport on the selected node.
 - [x] **Rotate tree on desktop** — `Q` / `E` keys rotate the radial layout by 15° increments.
+- [ ] **Improve genus-centering zoom** — refine zoom scale/level when centering on genus nodes.
 
 ### Statistics Header
 **Status:** Shipped.  
@@ -31,6 +32,7 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 - [x] Add touch equivalent — 500ms long-press on nodes.
 - [x] Optional: rich preview with Wikipedia thumbnail. — Fetched lazily from Wikipedia REST API.
 - [x] Optional: keyboard-triggered tooltip during arrow-key navigation — shown for 2s after arrow-key nav.
+- [ ] **Fade-in thumbnails** — animate/fade in Wikipedia hover previews instead of sudden flash.
 
 ---
 
@@ -46,6 +48,19 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 - [x] Random species selection + side-panel opening via "View species".
 - [x] "Spin again" button.
 - [x] Modal overlay.
+
+### Book View
+**Status:** Queued.  
+**Doc:** [`Book View.md`](./Book%20View.md)
+
+- [ ] **Recursive Book View** — toggleable nested expandable taxonomy sections styled with the portal theme.
+- [ ] **Bookmarks & Anchor Links** — deep linking per section.
+- [ ] **Search highlights** — scrolling to and opening the relevant section on search matches.
+
+### Search Visualization
+**Status:** Queued.
+
+- [ ] **Pulsing Search Matches** — replace simple 10% opacity dimming with an active, pulsing glow on matching nodes.
 
 ---
 
