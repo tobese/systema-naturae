@@ -18,6 +18,7 @@ interface TaxonNode {
   orderName?: string;
   [key: string]: unknown;
   children?: TaxonNode[];
+  speciesList?: TaxonNode[];
 }
 
 function stampFamilySlug(node: TaxonNode, slug: string, cls?: string, ord?: string): TaxonNode {
@@ -80,17 +81,73 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
   return stamped;
 }
 
+function compressTreeNodes(node: TaxonNode): TaxonNode {
+  const processedChildren = node.children?.map(compressTreeNodes);
+
+  if (node.rank === "GENUS") {
+    const physicalChildren: TaxonNode[] = [];
+    const speciesList: TaxonNode[] = [];
+
+    if (processedChildren) {
+      for (const child of processedChildren) {
+        if (child.rank === "SPECIES") {
+          const desc = (child.description as string) || "";
+          const isMinimal = !desc || desc.toLowerCase().includes("a species in the genus");
+          const hasChildren = child.children && child.children.length > 0;
+
+          if (isMinimal && !hasChildren) {
+            const leanChild = { ...child };
+            delete leanChild.children;
+            speciesList.push(leanChild);
+          } else {
+            physicalChildren.push(child);
+          }
+        } else {
+          physicalChildren.push(child);
+        }
+      }
+    }
+
+    const updatedNode = { ...node };
+    if (physicalChildren.length > 0) {
+      updatedNode.children = physicalChildren;
+    } else {
+      delete updatedNode.children;
+    }
+
+    if (speciesList.length > 0) {
+      updatedNode.speciesList = speciesList;
+    }
+
+    return updatedNode;
+  }
+
+  const updatedNode = { ...node };
+  if (processedChildren) {
+    updatedNode.children = processedChildren;
+  }
+  return updatedNode;
+}
+
 const taxonomyPath = resolve(portalRoot, "data/taxonomy.json");
 const outputPath = resolve(portalRoot, "data/unified-taxonomy.json");
 
 console.log("Building unified-taxonomy.json…");
 const taxonomy = JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode;
-const unified = processTree(taxonomy);
+const uncompressed = processTree(taxonomy);
+const unified = compressTreeNodes(uncompressed);
 writeFileSync(outputPath, JSON.stringify(unified, null, 2));
 
 // Count nodes
-let nodeCount = 0;
-function count(n: TaxonNode) { nodeCount++; n.children?.forEach(count); }
+let physicalCount = 0;
+let flatSpeciesCount = 0;
+function count(n: TaxonNode) {
+  physicalCount++;
+  if (n.speciesList) {
+    flatSpeciesCount += n.speciesList.length;
+  }
+  n.children?.forEach(count);
+}
 count(unified);
 
-console.log(`Done. ${nodeCount} total nodes → data/unified-taxonomy.json`);
+console.log(`Done. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → data/unified-taxonomy.json`);

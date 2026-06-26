@@ -21,6 +21,7 @@ export interface TaxonNode {
   extinct?: boolean;
   sourcedFrom?: string;
   children?: TaxonNode[];
+  speciesList?: TaxonNode[];
 }
 
 export interface ClassPalette {
