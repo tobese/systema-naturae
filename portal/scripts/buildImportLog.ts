@@ -80,6 +80,9 @@ function countSpecies(path: string): number {
     let count = 0;
     function walk(node: Record<string, unknown>) {
       if (node.rank === "SPECIES") count++;
+      if (Array.isArray(node.speciesList)) {
+        count += node.speciesList.length;
+      }
       for (const child of (node.children ?? []) as Record<string, unknown>[]) walk(child);
     }
     walk(data);

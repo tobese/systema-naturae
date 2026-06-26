@@ -1324,6 +1324,70 @@ const GASTEROSTEIDAE_THEME: ColorTheme = {
   hybridColor: "#8AA8C8",
 };
 
+const PLEUROBRACHIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Pleurobrachia": "#33C1B1",
+    "Hormiphora": "#269BB0",
+    "Tinerfe": "#1D7B8C",
+  },
+  breedGroupColor: "#33C1B1",
+  hybridColor: "#8AA8C8",
+};
+
+const MERTENSIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Mertensia": "#52D1DC",
+    "Callianira": "#0D5C75",
+    "Charistephane": "#08A4BD",
+  },
+  breedGroupColor: "#52D1DC",
+  hybridColor: "#8AA8C8",
+};
+
+const BOLINOPSIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Bolinopsis": "#4EA8DE",
+    "Mnemiopsis": "#560BAD",
+    "Lesueuria": "#4895EF",
+  },
+  breedGroupColor: "#4EA8DE",
+  hybridColor: "#8AA8C8",
+};
+
+const CESTIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Cestum": "#B5179E",
+    "Velamen": "#7209B7",
+  },
+  breedGroupColor: "#B5179E",
+  hybridColor: "#8AA8C8",
+};
+
+const COELOPLANIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Coeloplana": "#3F37C9",
+    "Vallicula": "#4CC9F0",
+  },
+  breedGroupColor: "#3F37C9",
+  hybridColor: "#8AA8C8",
+};
+
+const BEROIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: {
+    "Beroe": "#F72585",
+    "Neis": "#7209B7",
+    "Maotianoascus": "#3F37C9",
+  },
+  breedGroupColor: "#F72585",
+  hybridColor: "#8AA8C8",
+};
+
 export const IUCN_COLORS: Record<string, string> = {
   EX: "#6B6B6B",
   EW: "#9C9C9C",
@@ -1725,6 +1789,12 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   lamnidae:       LAMNIDAE_THEME,
   pipidae:        PIPIDAE_THEME,
   pelobatidae:    PELOBATIDAE_THEME,
+  pleurobrachiidae: PLEUROBRACHIIDAE_THEME,
+  mertensiidae:   MERTENSIIDAE_THEME,
+  bolinopsidae:   BOLINOPSIDAE_THEME,
+  cestidae:       CESTIDAE_THEME,
+  coeloplanidae:  COELOPLANIDAE_THEME,
+  beroidae:       BEROIDAE_THEME,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

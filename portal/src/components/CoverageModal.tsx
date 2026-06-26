@@ -32,7 +32,11 @@ interface ClassCoverage {
 
 function countSpecies(node: TaxonNode): number {
   if (node.rank === "SPECIES") return 1;
-  return (node.children ?? []).reduce((sum, c) => sum + countSpecies(c), 0);
+  let count = (node.children ?? []).reduce((sum, c) => sum + countSpecies(c), 0);
+  if (node.speciesList) {
+    count += node.speciesList.length;
+  }
+  return count;
 }
 
 function buildCoverageTree(node: TaxonNode): CoverageNode | null {
@@ -66,6 +70,34 @@ function buildCoverage(root: TaxonNode): ClassCoverage[] {
     (node.children ?? []).forEach(c => walk(c, currentClass));
   }
   walk(root, null);
+
+  const CLASS_RANK: Record<string, number> = {
+    "mammalia": 1,
+    "aves": 2,
+    "reptilia": 3,
+    "amphibia": 4,
+    "chondrichthyes": 5,
+    "actinopterygii": 6,
+    "cephalopoda": 7,
+    "asteroidea": 8,
+    "echinoidea": 9,
+    "holothuroidea": 10,
+    "scyphozoa": 11,
+    "cubozoa": 12,
+    "staurozoa": 13,
+    "anthozoa": 14,
+    "hydrozoa": 15,
+    "tentaculata": 16,
+    "nuda": 17,
+    "arachnida": 18,
+    "insecta": 19
+  };
+  classes.sort((a, b) => {
+    const rA = CLASS_RANK[a.name.toLowerCase()] ?? 999;
+    const rB = CLASS_RANK[b.name.toLowerCase()] ?? 999;
+    return rA - rB;
+  });
+
   if (other.families.length > 0) classes.push(other);
   return classes;
 }
@@ -75,13 +107,15 @@ type FilterMode = "all" | "complete" | "partial" | "gaps";
 
 function statusText(pc: number, tc?: number): string {
   if (pc === 0) return "·";
-  if (tc !== undefined && pc >= tc) return "✓";
-  return `-${((tc ?? pc) - pc).toLocaleString()}`;
+  if (tc === undefined) return "";
+  if (pc >= tc) return "✓";
+  return `-${(tc - pc).toLocaleString()}`;
 }
 
 function tagColor(pc: number, tc?: number): string {
   if (pc === 0) return "#444";
-  if (tc !== undefined && pc >= tc) return "#44aa66";
+  if (tc === undefined) return "transparent";
+  if (pc >= tc) return "#44aa66";
   return "#cc9944";
 }
 
@@ -104,7 +138,16 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
   const [tab, setTab] = useState<"coverage" | "growth">("coverage");
   const [sort, setSort] = useState<SortMode>("gaps");
   const [filter, setFilter] = useState<FilterMode>("all");
-  const [collapsed, setCollapsed] = useState<Set<string>>(() => new Set());
+  const [collapsed, setCollapsed] = useState<Set<string>>(() => {
+    const initialCollapsed = new Set<string>();
+    const classesList = buildCoverage(data);
+    for (const cls of classesList) {
+      if (classTraffic(cls.families) === "green") {
+        initialCollapsed.add(cls.id);
+      }
+    }
+    return initialCollapsed;
+  });
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
