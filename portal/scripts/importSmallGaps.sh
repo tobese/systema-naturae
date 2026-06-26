@@ -3,16 +3,16 @@
 
 # The list of 10 families that have small remaining species gaps
 FAMILIES=(
-  "pelobatidae"
-  "dendrobatidae"
-  "echinidae"
-  "sepiidae"
+  "grallariidae"
+  "eublepharidae"
+  "lacertidae"
+  "chamaeleonidae"
   "colubridae"
   "scincidae"
-  "chamaeleonidae"
-  "lacertidae"
-  "eublepharidae"
-  "grallariidae"
+  "sepiidae"
+  "echinidae"
+  "dendrobatidae"
+  "pelobatidae"
 )
 
 export OLLAMA_MODEL="qwen2.5:3b"

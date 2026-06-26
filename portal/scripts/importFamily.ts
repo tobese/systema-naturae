@@ -260,19 +260,29 @@ function main() {
     process.exit(0);
   }
 
-  const toGenerate = requestedCount ?? gap;
+  const totalToGenerate = Math.min(requestedCount ?? gap, gap);
+  const CHUNK_SIZE = 3;
+  const newSpecies: Species[] = [];
+  const activeExistingNames = new Set(existingNames);
+
   console.log(`📦 ${family.name} (${family.className}/${family.orderName}/${family.appSlug})`);
-  console.log(`   ${currentCount}/${family.speciesCount} species — gap=${gap}, generating ${Math.min(toGenerate, gap)}`);
+  console.log(`   ${currentCount}/${family.speciesCount} species — gap=${gap}, generating ${totalToGenerate} in chunks of ${CHUNK_SIZE}`);
   console.log();
 
-  // Build prompt — keep it concise. For large families, skip genus summary to avoid context overflow.
-  const isLarge = currentCount > 50;
-  const genusSummary = isLarge
-    ? `~${currentCount} species across ${genera.length} genera`
-    : genera.map(g => `${g.name} (${g.children.length} spp)`).join(", ");
-  const prompt = `Generate ${Math.min(toGenerate, gap)} NEW species for ${family.name} (${family.commonName}), Order ${family.orderName}, Class ${family.className}.
+  while (newSpecies.length < totalToGenerate) {
+    const chunkNum = Math.min(CHUNK_SIZE, totalToGenerate - newSpecies.length);
+    console.log(`   --- Chunk: generating species ${newSpecies.length + 1} to ${newSpecies.length + chunkNum} of ${totalToGenerate} ---`);
 
-${isLarge ? `Family has ${currentCount}/${family.speciesCount} species.` : `Existing genera: ${genusSummary}`}
+    // Build prompt — keep it concise. For large families, skip genus summary to avoid context overflow.
+    const isLarge = (currentCount + newSpecies.length) > 50;
+    const genusSummary = isLarge
+      ? `~${currentCount + newSpecies.length} species across ${genera.length} genera`
+      : genera.map(g => `${g.name} (${g.children.length + newSpecies.filter(s => s.name.startsWith(g.name)).length} spp)`).join(", ");
+
+    const prompt = `Generate exactly ${chunkNum} NEW, distinct, real species for ${family.name} (${family.commonName}), Order ${family.orderName}, Class ${family.className}.
+Do NOT repeat any existing species or species generated in previous steps.
+
+${isLarge ? `Family has ${currentCount + newSpecies.length}/${family.speciesCount} species.` : `Existing genera: ${genusSummary}`}
 Existing lineages: ${[...existingLineages].join(", ") || "none"}
 Target total: ${family.speciesCount}
 
@@ -285,32 +295,58 @@ Return a JSON array where each object has:
 - id: "GENUS_EPITHET" all caps
 - rank: "SPECIES"
 
-${Math.min(toGenerate, gap)} species, valid JSON only. Use genera not yet listed to maximize diversity.`;
+Exactly ${chunkNum} species, valid JSON only. Use genera not yet listed to maximize diversity.`;
 
-  console.log("⏳ Calling Ollama...");
-  let jsonText: string;
-  try {
-    jsonText = callOllama(prompt, Math.min(toGenerate, gap));
-  } catch (e) {
-    console.error(`❌ Ollama error: ${(e as Error).message}`);
-    process.exit(1);
-  }
-
-  // Retry with higher temperature if parsing fails
-  if (!jsonText.includes("[") || !jsonText.includes("]")) {
-    console.log("  ⚠  Response didn't contain a JSON array, retrying with higher temperature...");
+    console.log("   ⏳ Calling Ollama...");
+    let jsonText: string;
     try {
-      jsonText = callOllama(prompt, Math.min(toGenerate, gap), 0.9);
+      jsonText = callOllama(prompt, chunkNum);
     } catch (e) {
-      console.error(`❌ Ollama error on retry: ${(e as Error).message}`);
-      process.exit(1);
+      console.error(`   ❌ Ollama error: ${(e as Error).message}`);
+      break;
+    }
+
+    // Retry with higher temperature if parsing fails
+    if (!jsonText.includes("[") || !jsonText.includes("]")) {
+      console.log("   ⚠  Response didn't contain a JSON array, retrying with higher temperature...");
+      try {
+        jsonText = callOllama(prompt, chunkNum, 0.9);
+      } catch (e) {
+        console.error(`   ❌ Ollama error on retry: ${(e as Error).message}`);
+        break;
+      }
+    }
+
+    let chunkSpecies: Species[] = [];
+    try {
+      chunkSpecies = parseSpecies(jsonText, activeExistingNames);
+    } catch (e) {
+      console.warn(`   ⚠  Failed to parse chunk JSON: ${(e as Error).message}. Skipping this chunk.`);
+      continue;
+    }
+
+    if (chunkSpecies.length === 0) {
+      console.log("   ⚠  No new species in this chunk. Retrying with higher temperature...");
+      try {
+        jsonText = callOllama(prompt, chunkNum, 0.9);
+        chunkSpecies = parseSpecies(jsonText, activeExistingNames);
+      } catch {
+        break;
+      }
+      if (chunkSpecies.length === 0) {
+        break;
+      }
+    }
+
+    for (const s of chunkSpecies) {
+      newSpecies.push(s);
+      activeExistingNames.add(s.name);
     }
   }
 
-  const newSpecies = parseSpecies(jsonText, existingNames);
   if (newSpecies.length === 0) {
-    console.log("⚠  No new species generated (all duplicates?)");
-    process.exit(0);
+    console.log("❌ No new species generated at all.");
+    process.exit(1);
   }
 
   // Track new lineages for registry check
