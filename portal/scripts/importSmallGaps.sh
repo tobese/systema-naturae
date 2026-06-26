@@ -15,7 +15,7 @@ FAMILIES=(
   "grallariidae"
 )
 
-export OLLAMA_MODEL="qwen2.5:7b"
+export OLLAMA_MODEL="qwen2.5:3b"
 
 echo "=== Starting Automated Batch Import of 10 Small-Gap Families ==="
 

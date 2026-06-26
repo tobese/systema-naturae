@@ -282,7 +282,6 @@ Return a JSON array where each object has:
 - lineage: one of the existing lineages
 - continents: array of full continent names
 - subspeciesCount: integer
-- description: 2-3 sentence natural history blurb
 - id: "GENUS_EPITHET" all caps
 - rank: "SPECIES"
 
