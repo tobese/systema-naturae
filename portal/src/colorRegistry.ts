@@ -1388,6 +1388,87 @@ const BEROIDAE_THEME: ColorTheme = {
   hybridColor: "#8AA8C8",
 };
 
+// ── Cubozoa (Box jellyfish) ──
+const ALATINIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Alatina: "#28A0C8", Manokia: "#1A7898", Keesingia: "#3AB8D8" },
+  breedGroupColor: "#28A0C8",
+  hybridColor: "#58C8E8",
+};
+const CARUKIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Carukia: "#E84078", Malo: "#C82858", Gerongia: "#F05890", Morbakka: "#D83868" },
+  breedGroupColor: "#E84078",
+  hybridColor: "#F078A8",
+};
+const CARYBDEIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Carybdea: "#3848A8" },
+  breedGroupColor: "#3848A8",
+  hybridColor: "#6878C8",
+};
+const TAMOYIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Tamoya: "#E8A828" },
+  breedGroupColor: "#E8A828",
+  hybridColor: "#F0C858",
+};
+const TRIPEDALIIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Tripedalia: "#40B868", Copula: "#68D890" },
+  breedGroupColor: "#40B868",
+  hybridColor: "#78E0A0",
+};
+const CHIRODROPIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Chirodropus: "#C82820", Chironex: "#E04030", Chirodectes: "#A81810" },
+  breedGroupColor: "#C82820",
+  hybridColor: "#E86050",
+};
+const CHIROPSALMIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Chiropsalmus: "#E89828", Chiropsoides: "#C88018" },
+  breedGroupColor: "#E89828",
+  hybridColor: "#F0B858",
+};
+const CHIROPSELIDAE_THEME: ColorTheme = {
+  subfamilyColors: {},
+  lineageColors: { Chiropsella: "#8830B8", Meteorona: "#A048D8" },
+  breedGroupColor: "#8830B8",
+  hybridColor: "#B870E0",
+};
+
+// ── Scyphozoa (True jellyfish) ──
+const ATOLLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Atollidae": "#C83040" }, breedGroupColor: "#C83040", hybridColor: "#E06070" };
+const LINUCHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Linuchidae": "#5030A0" }, breedGroupColor: "#5030A0", hybridColor: "#8060C0" };
+const NAUSITHOIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nausithoidae": "#882040" }, breedGroupColor: "#882040", hybridColor: "#B85070" };
+const PARAPHYLLINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Paraphyllinidae": "#A02868" }, breedGroupColor: "#A02868", hybridColor: "#C85888" };
+const PERIPHYLLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Periphyllidae": "#701830" }, breedGroupColor: "#701830", hybridColor: "#A04860" };
+const CYANEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cyaneidae": "#E84028" }, breedGroupColor: "#E84028", hybridColor: "#F07058" };
+const DRYMONEMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Drymonematidae": "#20A090" }, breedGroupColor: "#20A090", hybridColor: "#50C0B0" };
+const PELAGIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pelagiidae": "#A840A8" }, breedGroupColor: "#A840A8", hybridColor: "#C870C8" };
+const PHACELLOPHORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Phacellophoridae": "#E87050" }, breedGroupColor: "#E87050", hybridColor: "#F09878" };
+const ULMARIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ulmaridae": "#4890C0" }, breedGroupColor: "#4890C0", hybridColor: "#78B8D8" };
+const ARCHIRHIZIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Archirhizidae": "#B89868" }, breedGroupColor: "#B89868", hybridColor: "#D0B890" };
+const CASSIOPEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cassiopeidae": "#88A828" }, breedGroupColor: "#88A828", hybridColor: "#B0D058" };
+const CATOSTYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Catostylidae": "#789048" }, breedGroupColor: "#789048", hybridColor: "#98B868" };
+const CEPHEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cepheidae": "#C0A070" }, breedGroupColor: "#C0A070", hybridColor: "#D8C098" };
+const LOBONEMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lobonematidae": "#E8A0A8" }, breedGroupColor: "#E8A0A8", hybridColor: "#F0C0C8" };
+const LYCHNORHIZIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lychnorhizidae": "#4878A0" }, breedGroupColor: "#4878A0", hybridColor: "#78A0C0" };
+const MASTIGIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mastigiidae": "#E88828" }, breedGroupColor: "#E88828", hybridColor: "#F0B058" };
+const RHIZOSTOMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rhizostomatidae": "#5878A0" }, breedGroupColor: "#5878A0", hybridColor: "#80A0C0" };
+const STOMOLOPHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Stomolophidae": "#C09840" }, breedGroupColor: "#C09840", hybridColor: "#D8B870" };
+const VERSURIGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Versurigidae": "#9890C8" }, breedGroupColor: "#9890C8", hybridColor: "#B8B0E0" };
+
+// ── Staurozoa (Stalked jellyfish) ──
+const CRATEROLOPHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Craterolophidae": "#48A060" }, breedGroupColor: "#48A060", hybridColor: "#78C090" };
+const HALICLYSTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Haliclystidae": "#A08040" }, breedGroupColor: "#A08040", hybridColor: "#C8A868" };
+const KISHINOUYEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kishinouyeidae": "#D8A830" }, breedGroupColor: "#D8A830", hybridColor: "#E8C860" };
+const KYOPODIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Kyopodiidae": "#B89868" }, breedGroupColor: "#B89868", hybridColor: "#D0B890" };
+const LIPKEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lipkeidae": "#B86838" }, breedGroupColor: "#B86838", hybridColor: "#D08858" };
+const LUCERNARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lucernariidae": "#78A880" }, breedGroupColor: "#78A880", hybridColor: "#98C8A0" };
+const TESSERANTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tesseranthidae": "#A09078" }, breedGroupColor: "#A09078", hybridColor: "#C0B098" };
+
 export const IUCN_COLORS: Record<string, string> = {
   EX: "#6B6B6B",
   EW: "#9C9C9C",
@@ -1401,6 +1482,43 @@ export const IUCN_COLORS: Record<string, string> = {
 };
 
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
+  alatinidae:    ALATINIDAE_THEME,
+  carukiidae:    CARUKIIDAE_THEME,
+  carybdeidae:   CARYBDEIDAE_THEME,
+  tamoyidae:     TAMOYIDAE_THEME,
+  tripedaliidae: TRIPEDALIIDAE_THEME,
+  chirodropidae: CHIRODROPIDAE_THEME,
+  chiropsalmidae: CHIROPSALMIDAE_THEME,
+  chiropsellidae: CHIROPSELIDAE_THEME,
+
+  atollidae:      ATOLLIDAE_THEME,
+  linuchidae:     LINUCHIDAE_THEME,
+  nausithoidae:   NAUSITHOIDAE_THEME,
+  paraphyllinidae: PARAPHYLLINIDAE_THEME,
+  periphyllidae:  PERIPHYLLIDAE_THEME,
+  cyaneidae:      CYANEIDAE_THEME,
+  drymonematidae: DRYMONEMATIDAE_THEME,
+  pelagiidae:     PELAGIIDAE_THEME,
+  phacellophoridae: PHACELLOPHORIDAE_THEME,
+  ulmaridae:      ULMARIDAE_THEME,
+  archirhizidae:  ARCHIRHIZIDAE_THEME,
+  cassiopeidae:   CASSIOPEIDAE_THEME,
+  catostylidae:   CATOSTYLIDAE_THEME,
+  cepheidae:      CEPHEIDAE_THEME,
+  lobonematidae:  LOBONEMATIDAE_THEME,
+  lychnorhizidae: LYCHNORHIZIDAE_THEME,
+  mastigiidae:    MASTIGIIDAE_THEME,
+  rhizostomatidae: RHIZOSTOMATIDAE_THEME,
+  stomolophidae:  STOMOLOPHIDAE_THEME,
+  versurigidae:   VERSURIGIDAE_THEME,
+
+  craterolophidae:  CRATEROLOPHIDAE_THEME,
+  haliclystidae:    HALICLYSTIDAE_THEME,
+  kishinouyeidae:   KISHINOUYEIDAE_THEME,
+  kyopodiidae:      KYOPODIIDAE_THEME,
+  lipkeidae:        LIPKEIDAE_THEME,
+  lucernariidae:    LUCERNARIIDAE_THEME,
+  tesseranthidae:   TESSERANTHIDAE_THEME,
   felidae:    FELIDAE_THEME,
   canidae:    CANIDAE_THEME,
   equidae:    EQUIDAE_THEME,
