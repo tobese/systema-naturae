@@ -34,6 +34,11 @@ export interface ColorTheme {
   lineageColors: Record<string, string>;
   breedGroupColor: string;
   hybridColor: string;
+  appSlug?: string;
+  className?: string;
+  orderName?: string;
+  name?: string;
+  mainColor?: string;
   coatTypeColor?: string;
   classPalette?: ClassPalette;
 }
