@@ -1625,6 +1625,558 @@ const hydrozoa_pentasmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupCol
 const hydrozoa_chondroplidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "chondroplidae", className: "Hydrozoa", orderName: "Unknown", name: "Chondroplidae", mainColor: "#3B82F6", lineageColors: { "chondroplidae": "#EC4899" } };
 const hydrozoa_inocaulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "inocaulidae", className: "Hydrozoa", orderName: "Unknown", name: "Inocaulidae", mainColor: "#EF4444", lineageColors: { "inocaulidae": "#14B8A6" } };
 
+
+// ── Anthozoa (549 families) ──
+const anthozoa_caryophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "caryophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Caryophylliidae", mainColor: "#EF4444", lineageColors: { "caryophylliidae": "#14B8A6" } };
+const anthozoa_merulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "merulinidae", className: "Anthozoa", orderName: "Scleractinia", name: "Merulinidae", mainColor: "#10B981", lineageColors: { "merulinidae": "#F97316" } };
+const anthozoa_acroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "acroporidae", className: "Anthozoa", orderName: "Scleractinia", name: "Acroporidae", mainColor: "#F59E0B", lineageColors: { "acroporidae": "#6366F1" } };
+const anthozoa_thecosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "thecosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Thecosmiliidae", mainColor: "#8B5CF6", lineageColors: { "thecosmiliidae": "#84CC16" } };
+const anthozoa_dendrophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "dendrophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Dendrophylliidae", mainColor: "#EC4899", lineageColors: { "dendrophylliidae": "#06B6D4" } };
+const anthozoa_poritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "poritidae", className: "Anthozoa", orderName: "Scleractinia", name: "Poritidae", mainColor: "#14B8A6", lineageColors: { "poritidae": "#D946EF" } };
+const anthozoa_latomeandridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "latomeandridae", className: "Anthozoa", orderName: "Scleractinia", name: "Latomeandridae", mainColor: "#F97316", lineageColors: { "latomeandridae": "#0EA5E9" } };
+const anthozoa_faviidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "faviidae", className: "Anthozoa", orderName: "Scleractinia", name: "Faviidae", mainColor: "#6366F1", lineageColors: { "faviidae": "#22C55E" } };
+const anthozoa_stylinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "stylinidae", className: "Anthozoa", orderName: "Scleractinia", name: "Stylinidae", mainColor: "#84CC16", lineageColors: { "stylinidae": "#EAB308" } };
+const anthozoa_flabellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "flabellidae", className: "Anthozoa", orderName: "Scleractinia", name: "Flabellidae", mainColor: "#06B6D4", lineageColors: { "flabellidae": "#A855F7" } };
+const anthozoa_comoseridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "comoseridae", className: "Anthozoa", orderName: "Scleractinia", name: "Comoseridae", mainColor: "#D946EF", lineageColors: { "comoseridae": "#FB923C" } };
+const anthozoa_turbinoliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "turbinoliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Turbinoliidae", mainColor: "#0EA5E9", lineageColors: { "turbinoliidae": "#2DD4BF" } };
+const anthozoa_pocilloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pocilloporidae", className: "Anthozoa", orderName: "Scleractinia", name: "Pocilloporidae", mainColor: "#22C55E", lineageColors: { "pocilloporidae": "#A3E635" } };
+const anthozoa_oculinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "oculinidae", className: "Anthozoa", orderName: "Scleractinia", name: "Oculinidae", mainColor: "#EAB308", lineageColors: { "oculinidae": "#38BDF8" } };
+const anthozoa_agariciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "agariciidae", className: "Anthozoa", orderName: "Scleractinia", name: "Agariciidae", mainColor: "#A855F7", lineageColors: { "agariciidae": "#3B82F6" } };
+const anthozoa_meandrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "meandrinidae", className: "Anthozoa", orderName: "Scleractinia", name: "Meandrinidae", mainColor: "#FB923C", lineageColors: { "meandrinidae": "#EF4444" } };
+const anthozoa_astrocoeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "astrocoeniidae", className: "Anthozoa", orderName: "Scleractinia", name: "Astrocoeniidae", mainColor: "#2DD4BF", lineageColors: { "astrocoeniidae": "#10B981" } };
+const anthozoa_thamnasteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "thamnasteriidae", className: "Anthozoa", orderName: "Scleractinia", name: "Thamnasteriidae", mainColor: "#A3E635", lineageColors: { "thamnasteriidae": "#F59E0B" } };
+const anthozoa_rhizangiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "rhizangiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Rhizangiidae", mainColor: "#38BDF8", lineageColors: { "rhizangiidae": "#8B5CF6" } };
+const anthozoa_rhipidogyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "rhipidogyridae", className: "Anthozoa", orderName: "Scleractinia", name: "Rhipidogyridae", mainColor: "#3B82F6", lineageColors: { "rhipidogyridae": "#EC4899" } };
+const anthozoa_actinastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "actinastreidae", className: "Anthozoa", orderName: "Scleractinia", name: "Actinastreidae", mainColor: "#EF4444", lineageColors: { "actinastreidae": "#14B8A6" } };
+const anthozoa_lobophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "lobophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Lobophylliidae", mainColor: "#10B981", lineageColors: { "lobophylliidae": "#F97316" } };
+const anthozoa_heterocoeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "heterocoeniidae", className: "Anthozoa", orderName: "Scleractinia", name: "Heterocoeniidae", mainColor: "#F59E0B", lineageColors: { "heterocoeniidae": "#6366F1" } };
+const anthozoa_cunnolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cunnolitidae", className: "Anthozoa", orderName: "Scleractinia", name: "Cunnolitidae", mainColor: "#8B5CF6", lineageColors: { "cunnolitidae": "#84CC16" } };
+const anthozoa_fungiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "fungiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Fungiidae", mainColor: "#EC4899", lineageColors: { "fungiidae": "#06B6D4" } };
+const anthozoa_stylophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "stylophyllidae", className: "Anthozoa", orderName: "Scleractinia", name: "Stylophyllidae", mainColor: "#14B8A6", lineageColors: { "stylophyllidae": "#D946EF" } };
+const anthozoa_montlivaltiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "montlivaltiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Montlivaltiidae", mainColor: "#F97316", lineageColors: { "montlivaltiidae": "#0EA5E9" } };
+const anthozoa_euphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "euphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Euphylliidae", mainColor: "#6366F1", lineageColors: { "euphylliidae": "#22C55E" } };
+const anthozoa_haplaraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "haplaraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Haplaraeidae", mainColor: "#84CC16", lineageColors: { "haplaraeidae": "#EAB308" } };
+const anthozoa_montastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "montastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Montastraeidae", mainColor: "#06B6D4", lineageColors: { "montastraeidae": "#A855F7" } };
+const anthozoa_amphiastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "amphiastreidae", className: "Anthozoa", orderName: "Scleractinia", name: "Amphiastreidae", mainColor: "#D946EF", lineageColors: { "amphiastreidae": "#FB923C" } };
+const anthozoa_dermosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "dermosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Dermosmiliidae", mainColor: "#0EA5E9", lineageColors: { "dermosmiliidae": "#2DD4BF" } };
+const anthozoa_columastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "columastreidae", className: "Anthozoa", orderName: "Scleractinia", name: "Columastreidae", mainColor: "#22C55E", lineageColors: { "columastreidae": "#A3E635" } };
+const anthozoa_reimaniphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "reimaniphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Reimaniphylliidae", mainColor: "#EAB308", lineageColors: { "reimaniphylliidae": "#38BDF8" } };
+const anthozoa_axosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "axosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Axosmiliidae", mainColor: "#A855F7", lineageColors: { "axosmiliidae": "#3B82F6" } };
+const anthozoa_cyathophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "cyathophoridae", className: "Anthozoa", orderName: "Scleractinia", name: "Cyathophoridae", mainColor: "#FB923C", lineageColors: { "cyathophoridae": "#EF4444" } };
+const anthozoa_acrosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "acrosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Acrosmiliidae", mainColor: "#2DD4BF", lineageColors: { "acrosmiliidae": "#10B981" } };
+const anthozoa_micrabaciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "micrabaciidae", className: "Anthozoa", orderName: "Scleractinia", name: "Micrabaciidae", mainColor: "#A3E635", lineageColors: { "micrabaciidae": "#F59E0B" } };
+const anthozoa_placosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "placosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Placosmiliidae", mainColor: "#38BDF8", lineageColors: { "placosmiliidae": "#8B5CF6" } };
+const anthozoa_actinacididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "actinacididae", className: "Anthozoa", orderName: "Scleractinia", name: "Actinacididae", mainColor: "#3B82F6", lineageColors: { "actinacididae": "#EC4899" } };
+const anthozoa_astrangiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "astrangiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Astrangiidae", mainColor: "#EF4444", lineageColors: { "astrangiidae": "#14B8A6" } };
+const anthozoa_deltocyathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "deltocyathidae", className: "Anthozoa", orderName: "Scleractinia", name: "Deltocyathidae", mainColor: "#10B981", lineageColors: { "deltocyathidae": "#F97316" } };
+const anthozoa_cladophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cladophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Cladophylliidae", mainColor: "#F59E0B", lineageColors: { "cladophylliidae": "#6366F1" } };
+const anthozoa_synastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "synastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Synastraeidae", mainColor: "#8B5CF6", lineageColors: { "synastraeidae": "#84CC16" } };
+const anthozoa_tropiastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "tropiastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Tropiastraeidae", mainColor: "#EC4899", lineageColors: { "tropiastraeidae": "#06B6D4" } };
+const anthozoa_calamophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "calamophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Calamophylliidae", mainColor: "#14B8A6", lineageColors: { "calamophylliidae": "#D946EF" } };
+const anthozoa_coryphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "coryphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Coryphylliidae", mainColor: "#F97316", lineageColors: { "coryphylliidae": "#0EA5E9" } };
+const anthozoa_fungiacyathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "fungiacyathidae", className: "Anthozoa", orderName: "Scleractinia", name: "Fungiacyathidae", mainColor: "#6366F1", lineageColors: { "fungiacyathidae": "#22C55E" } };
+const anthozoa_margarophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "margarophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Margarophylliidae", mainColor: "#84CC16", lineageColors: { "margarophylliidae": "#EAB308" } };
+const anthozoa_cladocoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cladocoridae", className: "Anthozoa", orderName: "Scleractinia", name: "Cladocoridae", mainColor: "#06B6D4", lineageColors: { "cladocoridae": "#A855F7" } };
+const anthozoa_diploastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "diploastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Diploastraeidae", mainColor: "#D946EF", lineageColors: { "diploastraeidae": "#FB923C" } };
+const anthozoa_plesiastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "plesiastreidae", className: "Anthozoa", orderName: "Scleractinia", name: "Plesiastreidae", mainColor: "#0EA5E9", lineageColors: { "plesiastreidae": "#2DD4BF" } };
+const anthozoa_pamiroseriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pamiroseriidae", className: "Anthozoa", orderName: "Scleractinia", name: "Pamiroseriidae", mainColor: "#22C55E", lineageColors: { "pamiroseriidae": "#A3E635" } };
+const anthozoa_plerogyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "plerogyridae", className: "Anthozoa", orderName: "Scleractinia", name: "Plerogyridae", mainColor: "#EAB308", lineageColors: { "plerogyridae": "#38BDF8" } };
+const anthozoa_epismiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "epismiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Epismiliidae", mainColor: "#A855F7", lineageColors: { "epismiliidae": "#3B82F6" } };
+const anthozoa_pachyseridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pachyseridae", className: "Anthozoa", orderName: "Scleractinia", name: "Pachyseridae", mainColor: "#FB923C", lineageColors: { "pachyseridae": "#EF4444" } };
+const anthozoa_psammocoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "psammocoridae", className: "Anthozoa", orderName: "Scleractinia", name: "Psammocoridae", mainColor: "#2DD4BF", lineageColors: { "psammocoridae": "#10B981" } };
+const anthozoa_pachyphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pachyphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Pachyphylliidae", mainColor: "#A3E635", lineageColors: { "pachyphylliidae": "#F59E0B" } };
+const anthozoa_procyclolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "procyclolitidae", className: "Anthozoa", orderName: "Scleractinia", name: "Procyclolitidae", mainColor: "#38BDF8", lineageColors: { "procyclolitidae": "#8B5CF6" } };
+const anthozoa_felixaraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "felixaraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Felixaraeidae", mainColor: "#3B82F6", lineageColors: { "felixaraeidae": "#EC4899" } };
+const anthozoa_amphiastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "amphiastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Amphiastraeidae", mainColor: "#EF4444", lineageColors: { "amphiastraeidae": "#14B8A6" } };
+const anthozoa_agathiphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "agathiphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Agathiphylliidae", mainColor: "#10B981", lineageColors: { "agathiphylliidae": "#F97316" } };
+const anthozoa_placophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "placophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Placophylliidae", mainColor: "#F59E0B", lineageColors: { "placophylliidae": "#6366F1" } };
+const anthozoa_conophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "conophylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Conophylliidae", mainColor: "#8B5CF6", lineageColors: { "conophylliidae": "#84CC16" } };
+const anthozoa_eugyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "eugyridae", className: "Anthozoa", orderName: "Scleractinia", name: "Eugyridae", mainColor: "#EC4899", lineageColors: { "eugyridae": "#06B6D4" } };
+const anthozoa_zardinophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "zardinophyllidae", className: "Anthozoa", orderName: "Scleractinia", name: "Zardinophyllidae", mainColor: "#14B8A6", lineageColors: { "zardinophyllidae": "#D946EF" } };
+const anthozoa_astraraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "astraraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Astraraeidae", mainColor: "#F97316", lineageColors: { "astraraeidae": "#0EA5E9" } };
+const anthozoa_astraeomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "astraeomorphidae", className: "Anthozoa", orderName: "Scleractinia", name: "Astraeomorphidae", mainColor: "#6366F1", lineageColors: { "astraeomorphidae": "#22C55E" } };
+const anthozoa_agatheliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "agatheliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Agatheliidae", mainColor: "#84CC16", lineageColors: { "agatheliidae": "#EAB308" } };
+const anthozoa_coscinaraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "coscinaraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Coscinaraeidae", mainColor: "#06B6D4", lineageColors: { "coscinaraeidae": "#A855F7" } };
+const anthozoa_asteroseriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "asteroseriidae", className: "Anthozoa", orderName: "Scleractinia", name: "Asteroseriidae", mainColor: "#D946EF", lineageColors: { "asteroseriidae": "#FB923C" } };
+const anthozoa_gardineriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "gardineriidae", className: "Anthozoa", orderName: "Scleractinia", name: "Gardineriidae", mainColor: "#0EA5E9", lineageColors: { "gardineriidae": "#2DD4BF" } };
+const anthozoa_leptastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "leptastreidae", className: "Anthozoa", orderName: "Scleractinia", name: "Leptastreidae", mainColor: "#22C55E", lineageColors: { "leptastreidae": "#A3E635" } };
+const anthozoa_oppelismiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "oppelismiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Oppelismiliidae", mainColor: "#EAB308", lineageColors: { "oppelismiliidae": "#38BDF8" } };
+const anthozoa_donacosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "donacosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Donacosmiliidae", mainColor: "#A855F7", lineageColors: { "donacosmiliidae": "#3B82F6" } };
+const anthozoa_guyniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "guyniidae", className: "Anthozoa", orderName: "Scleractinia", name: "Guyniidae", mainColor: "#FB923C", lineageColors: { "guyniidae": "#EF4444" } };
+const anthozoa_anthemiphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "anthemiphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Anthemiphylliidae", mainColor: "#2DD4BF", lineageColors: { "anthemiphylliidae": "#10B981" } };
+const anthozoa_protoheterastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "protoheterastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Protoheterastraeidae", mainColor: "#A3E635", lineageColors: { "protoheterastraeidae": "#F59E0B" } };
+const anthozoa_trochoidomeandridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "trochoidomeandridae", className: "Anthozoa", orderName: "Scleractinia", name: "Trochoidomeandridae", mainColor: "#38BDF8", lineageColors: { "trochoidomeandridae": "#8B5CF6" } };
+const anthozoa_solenocoeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "solenocoeniidae", className: "Anthozoa", orderName: "Scleractinia", name: "Solenocoeniidae", mainColor: "#3B82F6", lineageColors: { "solenocoeniidae": "#EC4899" } };
+const anthozoa_smilotrochiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "smilotrochiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Smilotrochiidae", mainColor: "#EF4444", lineageColors: { "smilotrochiidae": "#14B8A6" } };
+const anthozoa_phyllosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "phyllosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Phyllosmiliidae", mainColor: "#10B981", lineageColors: { "phyllosmiliidae": "#F97316" } };
+const anthozoa_negoporitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "negoporitidae", className: "Anthozoa", orderName: "Scleractinia", name: "Negoporitidae", mainColor: "#F59E0B", lineageColors: { "negoporitidae": "#6366F1" } };
+const anthozoa_intersmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "intersmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Intersmiliidae", mainColor: "#8B5CF6", lineageColors: { "intersmiliidae": "#84CC16" } };
+const anthozoa_schizocyathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "schizocyathidae", className: "Anthozoa", orderName: "Scleractinia", name: "Schizocyathidae", mainColor: "#EC4899", lineageColors: { "schizocyathidae": "#06B6D4" } };
+const anthozoa_archaeosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "archaeosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Archaeosmiliidae", mainColor: "#14B8A6", lineageColors: { "archaeosmiliidae": "#D946EF" } };
+const anthozoa_kobyastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "kobyastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Kobyastraeidae", mainColor: "#F97316", lineageColors: { "kobyastraeidae": "#0EA5E9" } };
+const anthozoa_cuifastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cuifastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Cuifastraeidae", mainColor: "#6366F1", lineageColors: { "cuifastraeidae": "#22C55E" } };
+const anthozoa_carolastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "carolastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Carolastraeidae", mainColor: "#84CC16", lineageColors: { "carolastraeidae": "#EAB308" } };
+const anthozoa_oulastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "oulastreidae", className: "Anthozoa", orderName: "Scleractinia", name: "Oulastreidae", mainColor: "#06B6D4", lineageColors: { "oulastreidae": "#A855F7" } };
+const anthozoa_volzeiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "volzeiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Volzeiidae", mainColor: "#D946EF", lineageColors: { "volzeiidae": "#FB923C" } };
+const anthozoa_opisthophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "opisthophyllidae", className: "Anthozoa", orderName: "Scleractinia", name: "Opisthophyllidae", mainColor: "#0EA5E9", lineageColors: { "opisthophyllidae": "#2DD4BF" } };
+const anthozoa_sylviellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "sylviellidae", className: "Anthozoa", orderName: "Scleractinia", name: "Sylviellidae", mainColor: "#22C55E", lineageColors: { "sylviellidae": "#A3E635" } };
+const anthozoa_stenocyathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "stenocyathidae", className: "Anthozoa", orderName: "Scleractinia", name: "Stenocyathidae", mainColor: "#EAB308", lineageColors: { "stenocyathidae": "#38BDF8" } };
+const anthozoa_misistellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "misistellidae", className: "Anthozoa", orderName: "Scleractinia", name: "Misistellidae", mainColor: "#A855F7", lineageColors: { "misistellidae": "#3B82F6" } };
+const anthozoa_hemiporitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "hemiporitidae", className: "Anthozoa", orderName: "Scleractinia", name: "Hemiporitidae", mainColor: "#FB923C", lineageColors: { "hemiporitidae": "#EF4444" } };
+const anthozoa_cycliphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "cycliphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Cycliphylliidae", mainColor: "#2DD4BF", lineageColors: { "cycliphylliidae": "#10B981" } };
+const anthozoa_andemantastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "andemantastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Andemantastraeidae", mainColor: "#A3E635", lineageColors: { "andemantastraeidae": "#F59E0B" } };
+const anthozoa_mussidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "mussidae", className: "Anthozoa", orderName: "Scleractinia", name: "Mussidae", mainColor: "#38BDF8", lineageColors: { "mussidae": "#8B5CF6" } };
+const anthozoa_parepismiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "parepismiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Parepismiliidae", mainColor: "#3B82F6", lineageColors: { "parepismiliidae": "#EC4899" } };
+const anthozoa_guembelastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "guembelastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Guembelastraeidae", mainColor: "#EF4444", lineageColors: { "guembelastraeidae": "#14B8A6" } };
+const anthozoa_pseudoturbinolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pseudoturbinolidae", className: "Anthozoa", orderName: "Scleractinia", name: "Pseudoturbinolidae", mainColor: "#10B981", lineageColors: { "pseudoturbinolidae": "#F97316" } };
+const anthozoa_microsolenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "microsolenidae", className: "Anthozoa", orderName: "Scleractinia", name: "Microsolenidae", mainColor: "#F59E0B", lineageColors: { "microsolenidae": "#6366F1" } };
+const anthozoa_hexapetalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "hexapetalidae", className: "Anthozoa", orderName: "Scleractinia", name: "Hexapetalidae", mainColor: "#8B5CF6", lineageColors: { "hexapetalidae": "#84CC16" } };
+const anthozoa_rayasmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "rayasmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Rayasmiliidae", mainColor: "#EC4899", lineageColors: { "rayasmiliidae": "#06B6D4" } };
+const anthozoa_smilostyliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "smilostyliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Smilostyliidae", mainColor: "#14B8A6", lineageColors: { "smilostyliidae": "#D946EF" } };
+const anthozoa_parasmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "parasmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Parasmiliidae", mainColor: "#F97316", lineageColors: { "parasmiliidae": "#0EA5E9" } };
+const anthozoa_rhipidastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "rhipidastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Rhipidastraeidae", mainColor: "#6366F1", lineageColors: { "rhipidastraeidae": "#22C55E" } };
+const anthozoa_eckastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "eckastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Eckastraeidae", mainColor: "#84CC16", lineageColors: { "eckastraeidae": "#EAB308" } };
+const anthozoa_gablonzeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "gablonzeriidae", className: "Anthozoa", orderName: "Scleractinia", name: "Gablonzeriidae", mainColor: "#06B6D4", lineageColors: { "gablonzeriidae": "#A855F7" } };
+const anthozoa_polystylidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "polystylidiidae", className: "Anthozoa", orderName: "Scleractinia", name: "Polystylidiidae", mainColor: "#D946EF", lineageColors: { "polystylidiidae": "#FB923C" } };
+const anthozoa_numidiaphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "numidiaphylliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Numidiaphylliidae", mainColor: "#0EA5E9", lineageColors: { "numidiaphylliidae": "#2DD4BF" } };
+const anthozoa_gigantostyliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "gigantostyliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Gigantostyliidae", mainColor: "#22C55E", lineageColors: { "gigantostyliidae": "#A3E635" } };
+const anthozoa_ellipsosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "ellipsosmiliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Ellipsosmiliidae", mainColor: "#EAB308", lineageColors: { "ellipsosmiliidae": "#38BDF8" } };
+const anthozoa_distichoflabellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "distichoflabellidae", className: "Anthozoa", orderName: "Scleractinia", name: "Distichoflabellidae", mainColor: "#A855F7", lineageColors: { "distichoflabellidae": "#3B82F6" } };
+const anthozoa_curtoseriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "curtoseriidae", className: "Anthozoa", orderName: "Scleractinia", name: "Curtoseriidae", mainColor: "#FB923C", lineageColors: { "curtoseriidae": "#EF4444" } };
+const anthozoa_pachyphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pachyphyllidae", className: "Anthozoa", orderName: "Scleractinia", name: "Pachyphyllidae", mainColor: "#2DD4BF", lineageColors: { "pachyphyllidae": "#10B981" } };
+const anthozoa_andrazelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "andrazelliidae", className: "Anthozoa", orderName: "Scleractinia", name: "Andrazelliidae", mainColor: "#A3E635", lineageColors: { "andrazelliidae": "#F59E0B" } };
+const anthozoa_corbariastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "corbariastraeidae", className: "Anthozoa", orderName: "Scleractinia", name: "Corbariastraeidae", mainColor: "#38BDF8", lineageColors: { "corbariastraeidae": "#8B5CF6" } };
+const anthozoa_anabaciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "anabaciidae", className: "Anthozoa", orderName: "Scleractinia", name: "Anabaciidae", mainColor: "#3B82F6", lineageColors: { "anabaciidae": "#EC4899" } };
+const anthozoa_archeoanthophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "archeoanthophyllidae", className: "Anthozoa", orderName: "Scleractinia", name: "Archeoanthophyllidae", mainColor: "#EF4444", lineageColors: { "archeoanthophyllidae": "#14B8A6" } };
+const anthozoa_nephtheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "nephtheidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Nephtheidae", mainColor: "#10B981", lineageColors: { "nephtheidae": "#F97316" } };
+const anthozoa_paramuriceidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "paramuriceidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Paramuriceidae", mainColor: "#F59E0B", lineageColors: { "paramuriceidae": "#6366F1" } };
+const anthozoa_sarcophytidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "sarcophytidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Sarcophytidae", mainColor: "#8B5CF6", lineageColors: { "sarcophytidae": "#84CC16" } };
+const anthozoa_gorgoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "gorgoniidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Gorgoniidae", mainColor: "#EC4899", lineageColors: { "gorgoniidae": "#06B6D4" } };
+const anthozoa_xeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "xeniidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Xeniidae", mainColor: "#14B8A6", lineageColors: { "xeniidae": "#D946EF" } };
+const anthozoa_alcyoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "alcyoniidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Alcyoniidae", mainColor: "#F97316", lineageColors: { "alcyoniidae": "#0EA5E9" } };
+const anthozoa_plexauridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "plexauridae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Plexauridae", mainColor: "#6366F1", lineageColors: { "plexauridae": "#22C55E" } };
+const anthozoa_melithaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "melithaeidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Melithaeidae", mainColor: "#84CC16", lineageColors: { "melithaeidae": "#EAB308" } };
+const anthozoa_clavulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "clavulariidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Clavulariidae", mainColor: "#06B6D4", lineageColors: { "clavulariidae": "#A855F7" } };
+const anthozoa_cladiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cladiellidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Cladiellidae", mainColor: "#D946EF", lineageColors: { "cladiellidae": "#FB923C" } };
+const anthozoa_siphonogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "siphonogorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Siphonogorgiidae", mainColor: "#0EA5E9", lineageColors: { "siphonogorgiidae": "#2DD4BF" } };
+const anthozoa_lemnaliadae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "lemnaliadae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Lemnaliadae", mainColor: "#22C55E", lineageColors: { "lemnaliadae": "#A3E635" } };
+const anthozoa_astrogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "astrogorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Astrogorgiidae", mainColor: "#EAB308", lineageColors: { "astrogorgiidae": "#38BDF8" } };
+const anthozoa_euplexauridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "euplexauridae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Euplexauridae", mainColor: "#A855F7", lineageColors: { "euplexauridae": "#3B82F6" } };
+const anthozoa_tubiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "tubiporidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Tubiporidae", mainColor: "#FB923C", lineageColors: { "tubiporidae": "#EF4444" } };
+const anthozoa_anthogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "anthogorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Anthogorgiidae", mainColor: "#2DD4BF", lineageColors: { "anthogorgiidae": "#10B981" } };
+const anthozoa_capnellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "capnellidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Capnellidae", mainColor: "#A3E635", lineageColors: { "capnellidae": "#F59E0B" } };
+const anthozoa_eunicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "eunicellidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Eunicellidae", mainColor: "#38BDF8", lineageColors: { "eunicellidae": "#8B5CF6" } };
+const anthozoa_pterogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pterogorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Pterogorgiidae", mainColor: "#3B82F6", lineageColors: { "pterogorgiidae": "#EC4899" } };
+const anthozoa_isididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "isididae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Isididae", mainColor: "#EF4444", lineageColors: { "isididae": "#14B8A6" } };
+const anthozoa_nidaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "nidaliidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Nidaliidae", mainColor: "#10B981", lineageColors: { "nidaliidae": "#F97316" } };
+const anthozoa_paralcyoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "paralcyoniidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Paralcyoniidae", mainColor: "#F59E0B", lineageColors: { "paralcyoniidae": "#6366F1" } };
+const anthozoa_plexaurellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "plexaurellidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Plexaurellidae", mainColor: "#8B5CF6", lineageColors: { "plexaurellidae": "#84CC16" } };
+const anthozoa_subergorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "subergorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Subergorgiidae", mainColor: "#EC4899", lineageColors: { "subergorgiidae": "#06B6D4" } };
+const anthozoa_keroeididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "keroeididae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Keroeididae", mainColor: "#14B8A6", lineageColors: { "keroeididae": "#D946EF" } };
+const anthozoa_victorgorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "victorgorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Victorgorgiidae", mainColor: "#F97316", lineageColors: { "victorgorgiidae": "#0EA5E9" } };
+const anthozoa_sinulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sinulariidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Sinulariidae", mainColor: "#6366F1", lineageColors: { "sinulariidae": "#22C55E" } };
+const anthozoa_acrophytidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "acrophytidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Acrophytidae", mainColor: "#84CC16", lineageColors: { "acrophytidae": "#EAB308" } };
+const anthozoa_cerveridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cerveridae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Cerveridae", mainColor: "#06B6D4", lineageColors: { "cerveridae": "#A855F7" } };
+const anthozoa_leptophytidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "leptophytidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Leptophytidae", mainColor: "#D946EF", lineageColors: { "leptophytidae": "#FB923C" } };
+const anthozoa_incrustatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "incrustatidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Incrustatidae", mainColor: "#0EA5E9", lineageColors: { "incrustatidae": "#2DD4BF" } };
+const anthozoa_acrossotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "acrossotidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Acrossotidae", mainColor: "#22C55E", lineageColors: { "acrossotidae": "#A3E635" } };
+const anthozoa_carijoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "carijoidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Carijoidae", mainColor: "#EAB308", lineageColors: { "carijoidae": "#38BDF8" } };
+const anthozoa_arulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "arulidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Arulidae", mainColor: "#A855F7", lineageColors: { "arulidae": "#3B82F6" } };
+const anthozoa_nephthyigorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "nephthyigorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Nephthyigorgiidae", mainColor: "#FB923C", lineageColors: { "nephthyigorgiidae": "#EF4444" } };
+const anthozoa_aquaumbridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "aquaumbridae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Aquaumbridae", mainColor: "#2DD4BF", lineageColors: { "aquaumbridae": "#10B981" } };
+const anthozoa_scleracidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "scleracidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Scleracidae", mainColor: "#A3E635", lineageColors: { "scleracidae": "#F59E0B" } };
+const anthozoa_acanthoaxiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "acanthoaxiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Acanthoaxiidae", mainColor: "#38BDF8", lineageColors: { "acanthoaxiidae": "#8B5CF6" } };
+const anthozoa_malacacanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "malacacanthidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Malacacanthidae", mainColor: "#3B82F6", lineageColors: { "malacacanthidae": "#EC4899" } };
+const anthozoa_rosgorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "rosgorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Rosgorgiidae", mainColor: "#EF4444", lineageColors: { "rosgorgiidae": "#14B8A6" } };
+const anthozoa_taiaroidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "taiaroidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Taiaroidae", mainColor: "#10B981", lineageColors: { "taiaroidae": "#F97316" } };
+const anthozoa_discophytidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "discophytidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Discophytidae", mainColor: "#F59E0B", lineageColors: { "discophytidae": "#6366F1" } };
+const anthozoa_skamnariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "skamnariidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Skamnariidae", mainColor: "#8B5CF6", lineageColors: { "skamnariidae": "#84CC16" } };
+const anthozoa_coelogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "coelogorgiidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Coelogorgiidae", mainColor: "#EC4899", lineageColors: { "coelogorgiidae": "#06B6D4" } };
+const anthozoa_corymbophytidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "corymbophytidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Corymbophytidae", mainColor: "#14B8A6", lineageColors: { "corymbophytidae": "#D946EF" } };
+const anthozoa_pseudonephtheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pseudonephtheidae", className: "Anthozoa", orderName: "Malacalcyonacea", name: "Pseudonephtheidae", mainColor: "#F97316", lineageColors: { "pseudonephtheidae": "#0EA5E9" } };
+const anthozoa_waagenophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "waagenophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Waagenophyllidae", mainColor: "#6366F1", lineageColors: { "waagenophyllidae": "#22C55E" } };
+const anthozoa_favositidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "favositidae", className: "Anthozoa", orderName: "Unknown", name: "Favositidae", mainColor: "#84CC16", lineageColors: { "favositidae": "#EAB308" } };
+const anthozoa_petalaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "petalaxidae", className: "Anthozoa", orderName: "Unknown", name: "Petalaxidae", mainColor: "#06B6D4", lineageColors: { "petalaxidae": "#A855F7" } };
+const anthozoa_streptelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "streptelasmatidae", className: "Anthozoa", orderName: "Unknown", name: "Streptelasmatidae", mainColor: "#D946EF", lineageColors: { "streptelasmatidae": "#FB923C" } };
+const anthozoa_durhaminidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "durhaminidae", className: "Anthozoa", orderName: "Unknown", name: "Durhaminidae", mainColor: "#0EA5E9", lineageColors: { "durhaminidae": "#2DD4BF" } };
+const anthozoa_cerianthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cerianthidae", className: "Anthozoa", orderName: "Unknown", name: "Cerianthidae", mainColor: "#22C55E", lineageColors: { "cerianthidae": "#A3E635" } };
+const anthozoa_lithostrotionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lithostrotionidae", className: "Anthozoa", orderName: "Unknown", name: "Lithostrotionidae", mainColor: "#EAB308", lineageColors: { "lithostrotionidae": "#38BDF8" } };
+const anthozoa_micheliniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "micheliniidae", className: "Anthozoa", orderName: "Unknown", name: "Micheliniidae", mainColor: "#A855F7", lineageColors: { "micheliniidae": "#3B82F6" } };
+const anthozoa_aulophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "aulophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Aulophyllidae", mainColor: "#FB923C", lineageColors: { "aulophyllidae": "#EF4444" } };
+const anthozoa_pachyporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pachyporidae", className: "Anthozoa", orderName: "Unknown", name: "Pachyporidae", mainColor: "#2DD4BF", lineageColors: { "pachyporidae": "#10B981" } };
+const anthozoa_phillipsastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "phillipsastreidae", className: "Anthozoa", orderName: "Unknown", name: "Phillipsastreidae", mainColor: "#A3E635", lineageColors: { "phillipsastreidae": "#F59E0B" } };
+const anthozoa_hapsiphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "hapsiphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Hapsiphyllidae", mainColor: "#38BDF8", lineageColors: { "hapsiphyllidae": "#8B5CF6" } };
+const anthozoa_plerophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "plerophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Plerophyllidae", mainColor: "#3B82F6", lineageColors: { "plerophyllidae": "#EC4899" } };
+const anthozoa_lophophyllidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "lophophyllidiidae", className: "Anthozoa", orderName: "Unknown", name: "Lophophyllidiidae", mainColor: "#EF4444", lineageColors: { "lophophyllidiidae": "#14B8A6" } };
+const anthozoa_cyathopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cyathopsidae", className: "Anthozoa", orderName: "Unknown", name: "Cyathopsidae", mainColor: "#10B981", lineageColors: { "cyathopsidae": "#F97316" } };
+const anthozoa_disphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "disphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Disphyllidae", mainColor: "#F59E0B", lineageColors: { "disphyllidae": "#6366F1" } };
+const anthozoa_kleopatrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "kleopatrinidae", className: "Anthozoa", orderName: "Unknown", name: "Kleopatrinidae", mainColor: "#8B5CF6", lineageColors: { "kleopatrinidae": "#84CC16" } };
+const anthozoa_arachnactidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "arachnactidae", className: "Anthozoa", orderName: "Unknown", name: "Arachnactidae", mainColor: "#EC4899", lineageColors: { "arachnactidae": "#06B6D4" } };
+const anthozoa_auloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "auloporidae", className: "Anthozoa", orderName: "Unknown", name: "Auloporidae", mainColor: "#14B8A6", lineageColors: { "auloporidae": "#D946EF" } };
+const anthozoa_laccophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "laccophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Laccophyllidae", mainColor: "#F97316", lineageColors: { "laccophyllidae": "#0EA5E9" } };
+const anthozoa_alveolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "alveolitidae", className: "Anthozoa", orderName: "Unknown", name: "Alveolitidae", mainColor: "#6366F1", lineageColors: { "alveolitidae": "#22C55E" } };
+const anthozoa_cyathophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cyathophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Cyathophyllidae", mainColor: "#84CC16", lineageColors: { "cyathophyllidae": "#EAB308" } };
+const anthozoa_polycoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "polycoeliidae", className: "Anthozoa", orderName: "Unknown", name: "Polycoeliidae", mainColor: "#06B6D4", lineageColors: { "polycoeliidae": "#A855F7" } };
+const anthozoa_botrucnidiferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "botrucnidiferidae", className: "Anthozoa", orderName: "Unknown", name: "Botrucnidiferidae", mainColor: "#D946EF", lineageColors: { "botrucnidiferidae": "#FB923C" } };
+const anthozoa_tetraporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "tetraporellidae", className: "Anthozoa", orderName: "Unknown", name: "Tetraporellidae", mainColor: "#0EA5E9", lineageColors: { "tetraporellidae": "#2DD4BF" } };
+const anthozoa_pentaphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pentaphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Pentaphyllidae", mainColor: "#22C55E", lineageColors: { "pentaphyllidae": "#A3E635" } };
+const anthozoa_ptenophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "ptenophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Ptenophyllidae", mainColor: "#EAB308", lineageColors: { "ptenophyllidae": "#38BDF8" } };
+const anthozoa_syringoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "syringoporidae", className: "Anthozoa", orderName: "Unknown", name: "Syringoporidae", mainColor: "#A855F7", lineageColors: { "syringoporidae": "#3B82F6" } };
+const anthozoa_cateniporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "cateniporidae", className: "Anthozoa", orderName: "Unknown", name: "Cateniporidae", mainColor: "#FB923C", lineageColors: { "cateniporidae": "#EF4444" } };
+const anthozoa_hadrophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "hadrophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Hadrophyllidae", mainColor: "#2DD4BF", lineageColors: { "hadrophyllidae": "#10B981" } };
+const anthozoa_antiphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "antiphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Antiphyllidae", mainColor: "#A3E635", lineageColors: { "antiphyllidae": "#F59E0B" } };
+const anthozoa_arachnophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "arachnophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Arachnophyllidae", mainColor: "#38BDF8", lineageColors: { "arachnophyllidae": "#8B5CF6" } };
+const anthozoa_endophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "endophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Endophyllidae", mainColor: "#3B82F6", lineageColors: { "endophyllidae": "#EC4899" } };
+const anthozoa_tryplasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tryplasmatidae", className: "Anthozoa", orderName: "Unknown", name: "Tryplasmatidae", mainColor: "#EF4444", lineageColors: { "tryplasmatidae": "#14B8A6" } };
+const anthozoa_bothrophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "bothrophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Bothrophyllidae", mainColor: "#10B981", lineageColors: { "bothrophyllidae": "#F97316" } };
+const anthozoa_geyerophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "geyerophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Geyerophyllidae", mainColor: "#F59E0B", lineageColors: { "geyerophyllidae": "#6366F1" } };
+const anthozoa_kyphophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "kyphophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Kyphophyllidae", mainColor: "#8B5CF6", lineageColors: { "kyphophyllidae": "#84CC16" } };
+const anthozoa_lophotichiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "lophotichiidae", className: "Anthozoa", orderName: "Unknown", name: "Lophotichiidae", mainColor: "#EC4899", lineageColors: { "lophotichiidae": "#06B6D4" } };
+const anthozoa_syringophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "syringophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Syringophyllidae", mainColor: "#14B8A6", lineageColors: { "syringophyllidae": "#D946EF" } };
+const anthozoa_lophophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "lophophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Lophophyllidae", mainColor: "#F97316", lineageColors: { "lophophyllidae": "#0EA5E9" } };
+const anthozoa_multithecoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "multithecoporidae", className: "Anthozoa", orderName: "Unknown", name: "Multithecoporidae", mainColor: "#6366F1", lineageColors: { "multithecoporidae": "#22C55E" } };
+const anthozoa_metriophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "metriophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Metriophyllidae", mainColor: "#84CC16", lineageColors: { "metriophyllidae": "#EAB308" } };
+const anthozoa_axophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "axophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Axophyllidae", mainColor: "#06B6D4", lineageColors: { "axophyllidae": "#A855F7" } };
+const anthozoa_spongiomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "spongiomorphidae", className: "Anthozoa", orderName: "Unknown", name: "Spongiomorphidae", mainColor: "#D946EF", lineageColors: { "spongiomorphidae": "#FB923C" } };
+const anthozoa_verbeekiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "verbeekiellidae", className: "Anthozoa", orderName: "Unknown", name: "Verbeekiellidae", mainColor: "#0EA5E9", lineageColors: { "verbeekiellidae": "#2DD4BF" } };
+const anthozoa_sinoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "sinoporidae", className: "Anthozoa", orderName: "Unknown", name: "Sinoporidae", mainColor: "#22C55E", lineageColors: { "sinoporidae": "#A3E635" } };
+const anthozoa_cyathaxoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cyathaxoniidae", className: "Anthozoa", orderName: "Unknown", name: "Cyathaxoniidae", mainColor: "#EAB308", lineageColors: { "cyathaxoniidae": "#38BDF8" } };
+const anthozoa_kepingophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "kepingophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Kepingophyllidae", mainColor: "#A855F7", lineageColors: { "kepingophyllidae": "#3B82F6" } };
+const anthozoa_heterophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "heterophylliidae", className: "Anthozoa", orderName: "Unknown", name: "Heterophylliidae", mainColor: "#FB923C", lineageColors: { "heterophylliidae": "#EF4444" } };
+const anthozoa_halysitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "halysitidae", className: "Anthozoa", orderName: "Unknown", name: "Halysitidae", mainColor: "#2DD4BF", lineageColors: { "halysitidae": "#10B981" } };
+const anthozoa_entelophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "entelophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Entelophyllidae", mainColor: "#A3E635", lineageColors: { "entelophyllidae": "#F59E0B" } };
+const anthozoa_diffingiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "diffingiidae", className: "Anthozoa", orderName: "Unknown", name: "Diffingiidae", mainColor: "#38BDF8", lineageColors: { "diffingiidae": "#8B5CF6" } };
+const anthozoa_agetolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "agetolitidae", className: "Anthozoa", orderName: "Unknown", name: "Agetolitidae", mainColor: "#3B82F6", lineageColors: { "agetolitidae": "#EC4899" } };
+const anthozoa_amplexidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "amplexidae", className: "Anthozoa", orderName: "Unknown", name: "Amplexidae", mainColor: "#EF4444", lineageColors: { "amplexidae": "#14B8A6" } };
+const anthozoa_zaphrentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "zaphrentidae", className: "Anthozoa", orderName: "Unknown", name: "Zaphrentidae", mainColor: "#10B981", lineageColors: { "zaphrentidae": "#F97316" } };
+const anthozoa_chonophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "chonophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Chonophyllidae", mainColor: "#F59E0B", lineageColors: { "chonophyllidae": "#6366F1" } };
+const anthozoa_expressophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "expressophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Expressophyllidae", mainColor: "#8B5CF6", lineageColors: { "expressophyllidae": "#84CC16" } };
+const anthozoa_theciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "theciidae", className: "Anthozoa", orderName: "Unknown", name: "Theciidae", mainColor: "#EC4899", lineageColors: { "theciidae": "#06B6D4" } };
+const anthozoa_cystiphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cystiphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Cystiphyllidae", mainColor: "#14B8A6", lineageColors: { "cystiphyllidae": "#D946EF" } };
+const anthozoa_timorphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "timorphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Timorphyllidae", mainColor: "#F97316", lineageColors: { "timorphyllidae": "#0EA5E9" } };
+const anthozoa_roemeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "roemeriidae", className: "Anthozoa", orderName: "Unknown", name: "Roemeriidae", mainColor: "#6366F1", lineageColors: { "roemeriidae": "#22C55E" } };
+const anthozoa_haimeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "haimeidae", className: "Anthozoa", orderName: "Unknown", name: "Haimeidae", mainColor: "#84CC16", lineageColors: { "haimeidae": "#EAB308" } };
+const anthozoa_spongophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "spongophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Spongophyllidae", mainColor: "#06B6D4", lineageColors: { "spongophyllidae": "#A855F7" } };
+const anthozoa_goniophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "goniophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Goniophyllidae", mainColor: "#D946EF", lineageColors: { "goniophyllidae": "#FB923C" } };
+const anthozoa_pseudopavonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pseudopavonidae", className: "Anthozoa", orderName: "Unknown", name: "Pseudopavonidae", mainColor: "#0EA5E9", lineageColors: { "pseudopavonidae": "#2DD4BF" } };
+const anthozoa_gorskyitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "gorskyitidae", className: "Anthozoa", orderName: "Unknown", name: "Gorskyitidae", mainColor: "#22C55E", lineageColors: { "gorskyitidae": "#A3E635" } };
+const anthozoa_stauriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "stauriidae", className: "Anthozoa", orderName: "Unknown", name: "Stauriidae", mainColor: "#EAB308", lineageColors: { "stauriidae": "#38BDF8" } };
+const anthozoa_stringophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "stringophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Stringophyllidae", mainColor: "#A855F7", lineageColors: { "stringophyllidae": "#3B82F6" } };
+const anthozoa_lykophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "lykophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Lykophyllidae", mainColor: "#FB923C", lineageColors: { "lykophyllidae": "#EF4444" } };
+const anthozoa_coenitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "coenitidae", className: "Anthozoa", orderName: "Unknown", name: "Coenitidae", mainColor: "#2DD4BF", lineageColors: { "coenitidae": "#10B981" } };
+const anthozoa_palaeocyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "palaeocyclidae", className: "Anthozoa", orderName: "Unknown", name: "Palaeocyclidae", mainColor: "#A3E635", lineageColors: { "palaeocyclidae": "#F59E0B" } };
+const anthozoa_columnariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "columnariidae", className: "Anthozoa", orderName: "Unknown", name: "Columnariidae", mainColor: "#38BDF8", lineageColors: { "columnariidae": "#8B5CF6" } };
+const anthozoa_lonsdaleiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "lonsdaleiidae", className: "Anthozoa", orderName: "Unknown", name: "Lonsdaleiidae", mainColor: "#3B82F6", lineageColors: { "lonsdaleiidae": "#EC4899" } };
+const anthozoa_zaphrentoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "zaphrentoididae", className: "Anthozoa", orderName: "Unknown", name: "Zaphrentoididae", mainColor: "#EF4444", lineageColors: { "zaphrentoididae": "#14B8A6" } };
+const anthozoa_mucophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "mucophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Mucophyllidae", mainColor: "#10B981", lineageColors: { "mucophyllidae": "#F97316" } };
+const anthozoa_kodonophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "kodonophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Kodonophyllidae", mainColor: "#F59E0B", lineageColors: { "kodonophyllidae": "#6366F1" } };
+const anthozoa_protozaphrentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "protozaphrentidae", className: "Anthozoa", orderName: "Unknown", name: "Protozaphrentidae", mainColor: "#8B5CF6", lineageColors: { "protozaphrentidae": "#84CC16" } };
+const anthozoa_palaeacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "palaeacidae", className: "Anthozoa", orderName: "Unknown", name: "Palaeacidae", mainColor: "#EC4899", lineageColors: { "palaeacidae": "#06B6D4" } };
+const anthozoa_cleistoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cleistoporidae", className: "Anthozoa", orderName: "Unknown", name: "Cleistoporidae", mainColor: "#14B8A6", lineageColors: { "cleistoporidae": "#D946EF" } };
+const anthozoa_tetradiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "tetradiidae", className: "Anthozoa", orderName: "Unknown", name: "Tetradiidae", mainColor: "#F97316", lineageColors: { "tetradiidae": "#0EA5E9" } };
+const anthozoa_endamplexidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "endamplexidae", className: "Anthozoa", orderName: "Unknown", name: "Endamplexidae", mainColor: "#6366F1", lineageColors: { "endamplexidae": "#22C55E" } };
+const anthozoa_paliphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "paliphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Paliphyllidae", mainColor: "#84CC16", lineageColors: { "paliphyllidae": "#EAB308" } };
+const anthozoa_calostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "calostylidae", className: "Anthozoa", orderName: "Unknown", name: "Calostylidae", mainColor: "#06B6D4", lineageColors: { "calostylidae": "#A855F7" } };
+const anthozoa_ekvasophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ekvasophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Ekvasophyllidae", mainColor: "#D946EF", lineageColors: { "ekvasophyllidae": "#FB923C" } };
+const anthozoa_tabulaconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "tabulaconidae", className: "Anthozoa", orderName: "Unknown", name: "Tabulaconidae", mainColor: "#0EA5E9", lineageColors: { "tabulaconidae": "#2DD4BF" } };
+const anthozoa_trachypsammidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "trachypsammidae", className: "Anthozoa", orderName: "Unknown", name: "Trachypsammidae", mainColor: "#22C55E", lineageColors: { "trachypsammidae": "#A3E635" } };
+const anthozoa_lichenariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lichenariidae", className: "Anthozoa", orderName: "Unknown", name: "Lichenariidae", mainColor: "#EAB308", lineageColors: { "lichenariidae": "#38BDF8" } };
+const anthozoa_lambelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "lambelasmatidae", className: "Anthozoa", orderName: "Unknown", name: "Lambelasmatidae", mainColor: "#A855F7", lineageColors: { "lambelasmatidae": "#3B82F6" } };
+const anthozoa_paiutitubulitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "paiutitubulitidae", className: "Anthozoa", orderName: "Unknown", name: "Paiutitubulitidae", mainColor: "#FB923C", lineageColors: { "paiutitubulitidae": "#EF4444" } };
+const anthozoa_ketophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ketophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Ketophyllidae", mainColor: "#2DD4BF", lineageColors: { "ketophyllidae": "#10B981" } };
+const anthozoa_pycnostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pycnostylidae", className: "Anthozoa", orderName: "Unknown", name: "Pycnostylidae", mainColor: "#A3E635", lineageColors: { "pycnostylidae": "#F59E0B" } };
+const anthozoa_ptychophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ptychophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Ptychophyllidae", mainColor: "#38BDF8", lineageColors: { "ptychophyllidae": "#8B5CF6" } };
+const anthozoa_paleocyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "paleocyclidae", className: "Anthozoa", orderName: "Unknown", name: "Paleocyclidae", mainColor: "#3B82F6", lineageColors: { "paleocyclidae": "#EC4899" } };
+const anthozoa_huadianophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "huadianophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Huadianophyllidae", mainColor: "#EF4444", lineageColors: { "huadianophyllidae": "#14B8A6" } };
+const anthozoa_mirandellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "mirandellidae", className: "Anthozoa", orderName: "Unknown", name: "Mirandellidae", mainColor: "#10B981", lineageColors: { "mirandellidae": "#F97316" } };
+const anthozoa_petraphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "petraphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Petraphyllidae", mainColor: "#F59E0B", lineageColors: { "petraphyllidae": "#6366F1" } };
+const anthozoa_koninckocariniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "koninckocariniidae", className: "Anthozoa", orderName: "Unknown", name: "Koninckocariniidae", mainColor: "#8B5CF6", lineageColors: { "koninckocariniidae": "#84CC16" } };
+const anthozoa_palaeosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "palaeosmiliidae", className: "Anthozoa", orderName: "Unknown", name: "Palaeosmiliidae", mainColor: "#EC4899", lineageColors: { "palaeosmiliidae": "#06B6D4" } };
+const anthozoa_auloheliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "auloheliidae", className: "Anthozoa", orderName: "Unknown", name: "Auloheliidae", mainColor: "#14B8A6", lineageColors: { "auloheliidae": "#D946EF" } };
+const anthozoa_kilbuchophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "kilbuchophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Kilbuchophyllidae", mainColor: "#F97316", lineageColors: { "kilbuchophyllidae": "#0EA5E9" } };
+const anthozoa_kielcephyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "kielcephyllidae", className: "Anthozoa", orderName: "Unknown", name: "Kielcephyllidae", mainColor: "#6366F1", lineageColors: { "kielcephyllidae": "#22C55E" } };
+const anthozoa_lindstroemiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "lindstroemiidae", className: "Anthozoa", orderName: "Unknown", name: "Lindstroemiidae", mainColor: "#84CC16", lineageColors: { "lindstroemiidae": "#EAB308" } };
+const anthozoa_schizophoritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "schizophoritidae", className: "Anthozoa", orderName: "Unknown", name: "Schizophoritidae", mainColor: "#06B6D4", lineageColors: { "schizophoritidae": "#A855F7" } };
+const anthozoa_petraiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "petraiidae", className: "Anthozoa", orderName: "Unknown", name: "Petraiidae", mainColor: "#D946EF", lineageColors: { "petraiidae": "#FB923C" } };
+const anthozoa_syringolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "syringolitidae", className: "Anthozoa", orderName: "Unknown", name: "Syringolitidae", mainColor: "#0EA5E9", lineageColors: { "syringolitidae": "#2DD4BF" } };
+const anthozoa_romingeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "romingeriidae", className: "Anthozoa", orderName: "Unknown", name: "Romingeriidae", mainColor: "#22C55E", lineageColors: { "romingeriidae": "#A3E635" } };
+const anthozoa_uraliniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "uraliniidae", className: "Anthozoa", orderName: "Unknown", name: "Uraliniidae", mainColor: "#EAB308", lineageColors: { "uraliniidae": "#38BDF8" } };
+const anthozoa_dorlodotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "dorlodotidae", className: "Anthozoa", orderName: "Unknown", name: "Dorlodotidae", mainColor: "#A855F7", lineageColors: { "dorlodotidae": "#3B82F6" } };
+const anthozoa_pseudogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudogorgiidae", className: "Anthozoa", orderName: "Unknown", name: "Pseudogorgiidae", mainColor: "#FB923C", lineageColors: { "pseudogorgiidae": "#EF4444" } };
+const anthozoa_calceolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "calceolidae", className: "Anthozoa", orderName: "Unknown", name: "Calceolidae", mainColor: "#2DD4BF", lineageColors: { "calceolidae": "#10B981" } };
+const anthozoa_fasciphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "fasciphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Fasciphyllidae", mainColor: "#A3E635", lineageColors: { "fasciphyllidae": "#F59E0B" } };
+const anthozoa_stereolasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "stereolasmatidae", className: "Anthozoa", orderName: "Unknown", name: "Stereolasmatidae", mainColor: "#38BDF8", lineageColors: { "stereolasmatidae": "#8B5CF6" } };
+const anthozoa_parastriatoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "parastriatoporidae", className: "Anthozoa", orderName: "Unknown", name: "Parastriatoporidae", mainColor: "#3B82F6", lineageColors: { "parastriatoporidae": "#EC4899" } };
+const anthozoa_fletcheriellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "fletcheriellidae", className: "Anthozoa", orderName: "Unknown", name: "Fletcheriellidae", mainColor: "#EF4444", lineageColors: { "fletcheriellidae": "#14B8A6" } };
+const anthozoa_holmophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "holmophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Holmophyllidae", mainColor: "#10B981", lineageColors: { "holmophyllidae": "#F97316" } };
+const anthozoa_lyoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lyoporidae", className: "Anthozoa", orderName: "Unknown", name: "Lyoporidae", mainColor: "#F59E0B", lineageColors: { "lyoporidae": "#6366F1" } };
+const anthozoa_neoroemeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "neoroemeriidae", className: "Anthozoa", orderName: "Unknown", name: "Neoroemeriidae", mainColor: "#8B5CF6", lineageColors: { "neoroemeriidae": "#84CC16" } };
+const anthozoa_trachypsammiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "trachypsammiidae", className: "Anthozoa", orderName: "Unknown", name: "Trachypsammiidae", mainColor: "#EC4899", lineageColors: { "trachypsammiidae": "#06B6D4" } };
+const anthozoa_pseudofavositidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pseudofavositidae", className: "Anthozoa", orderName: "Unknown", name: "Pseudofavositidae", mainColor: "#14B8A6", lineageColors: { "pseudofavositidae": "#D946EF" } };
+const anthozoa_lamottiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "lamottiidae", className: "Anthozoa", orderName: "Unknown", name: "Lamottiidae", mainColor: "#F97316", lineageColors: { "lamottiidae": "#0EA5E9" } };
+const anthozoa_plerodiffiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "plerodiffiidae", className: "Anthozoa", orderName: "Unknown", name: "Plerodiffiidae", mainColor: "#6366F1", lineageColors: { "plerodiffiidae": "#22C55E" } };
+const anthozoa_craspedophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "craspedophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Craspedophyllidae", mainColor: "#84CC16", lineageColors: { "craspedophyllidae": "#EAB308" } };
+const anthozoa_halliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "halliidae", className: "Anthozoa", orderName: "Unknown", name: "Halliidae", mainColor: "#06B6D4", lineageColors: { "halliidae": "#A855F7" } };
+const anthozoa_trachyporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "trachyporidae", className: "Anthozoa", orderName: "Unknown", name: "Trachyporidae", mainColor: "#D946EF", lineageColors: { "trachyporidae": "#FB923C" } };
+const anthozoa_digonophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "digonophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Digonophyllidae", mainColor: "#0EA5E9", lineageColors: { "digonophyllidae": "#2DD4BF" } };
+const anthozoa_proheliolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "proheliolitidae", className: "Anthozoa", orderName: "Unknown", name: "Proheliolitidae", mainColor: "#22C55E", lineageColors: { "proheliolitidae": "#A3E635" } };
+const anthozoa_ricordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "ricordiidae", className: "Anthozoa", orderName: "Unknown", name: "Ricordiidae", mainColor: "#EAB308", lineageColors: { "ricordiidae": "#38BDF8" } };
+const anthozoa_aurelianidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "aurelianidae", className: "Anthozoa", orderName: "Unknown", name: "Aurelianidae", mainColor: "#A855F7", lineageColors: { "aurelianidae": "#3B82F6" } };
+const anthozoa_exocoelactiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "exocoelactiidae", className: "Anthozoa", orderName: "Unknown", name: "Exocoelactiidae", mainColor: "#FB923C", lineageColors: { "exocoelactiidae": "#EF4444" } };
+const anthozoa_pennautlidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pennautlidae", className: "Anthozoa", orderName: "Unknown", name: "Pennautlidae", mainColor: "#2DD4BF", lineageColors: { "pennautlidae": "#10B981" } };
+const anthozoa_cyclastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cyclastraeidae", className: "Anthozoa", orderName: "Unknown", name: "Cyclastraeidae", mainColor: "#A3E635", lineageColors: { "cyclastraeidae": "#F59E0B" } };
+const anthozoa_palaeofavosiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "palaeofavosiporidae", className: "Anthozoa", orderName: "Unknown", name: "Palaeofavosiporidae", mainColor: "#38BDF8", lineageColors: { "palaeofavosiporidae": "#8B5CF6" } };
+const anthozoa_kozlowskiocystiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "kozlowskiocystiidae", className: "Anthozoa", orderName: "Unknown", name: "Kozlowskiocystiidae", mainColor: "#3B82F6", lineageColors: { "kozlowskiocystiidae": "#EC4899" } };
+const anthozoa_actinodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "actinodiscidae", className: "Anthozoa", orderName: "Unknown", name: "Actinodiscidae", mainColor: "#EF4444", lineageColors: { "actinodiscidae": "#14B8A6" } };
+const anthozoa_anisophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "anisophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Anisophyllidae", mainColor: "#10B981", lineageColors: { "anisophyllidae": "#F97316" } };
+const anthozoa_acervulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "acervulariidae", className: "Anthozoa", orderName: "Unknown", name: "Acervulariidae", mainColor: "#F59E0B", lineageColors: { "acervulariidae": "#6366F1" } };
+const anthozoa_vaughaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "vaughaniidae", className: "Anthozoa", orderName: "Unknown", name: "Vaughaniidae", mainColor: "#8B5CF6", lineageColors: { "vaughaniidae": "#84CC16" } };
+const anthozoa_taeniolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "taeniolitidae", className: "Anthozoa", orderName: "Unknown", name: "Taeniolitidae", mainColor: "#EC4899", lineageColors: { "taeniolitidae": "#06B6D4" } };
+const anthozoa_eridophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "eridophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Eridophyllidae", mainColor: "#14B8A6", lineageColors: { "eridophyllidae": "#D946EF" } };
+const anthozoa_pachythecalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pachythecalidae", className: "Anthozoa", orderName: "Unknown", name: "Pachythecalidae", mainColor: "#F97316", lineageColors: { "pachythecalidae": "#0EA5E9" } };
+const anthozoa_acrophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "acrophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Acrophyllidae", mainColor: "#6366F1", lineageColors: { "acrophyllidae": "#22C55E" } };
+const anthozoa_gerardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "gerardiidae", className: "Anthozoa", orderName: "Unknown", name: "Gerardiidae", mainColor: "#84CC16", lineageColors: { "gerardiidae": "#EAB308" } };
+const anthozoa_ptychodactidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "ptychodactidae", className: "Anthozoa", orderName: "Unknown", name: "Ptychodactidae", mainColor: "#06B6D4", lineageColors: { "ptychodactidae": "#A855F7" } };
+const anthozoa_paractidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "paractidae", className: "Anthozoa", orderName: "Unknown", name: "Paractidae", mainColor: "#D946EF", lineageColors: { "paractidae": "#FB923C" } };
+const anthozoa_ilyanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "ilyanthidae", className: "Anthozoa", orderName: "Unknown", name: "Ilyanthidae", mainColor: "#0EA5E9", lineageColors: { "ilyanthidae": "#2DD4BF" } };
+const anthozoa_trochosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "trochosmiliidae", className: "Anthozoa", orderName: "Unknown", name: "Trochosmiliidae", mainColor: "#22C55E", lineageColors: { "trochosmiliidae": "#A3E635" } };
+const anthozoa_pteroeididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pteroeididae", className: "Anthozoa", orderName: "Unknown", name: "Pteroeididae", mainColor: "#EAB308", lineageColors: { "pteroeididae": "#38BDF8" } };
+const anthozoa_telestidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "telestidae", className: "Anthozoa", orderName: "Unknown", name: "Telestidae", mainColor: "#A855F7", lineageColors: { "telestidae": "#3B82F6" } };
+const anthozoa_pseudocladochomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudocladochomidae", className: "Anthozoa", orderName: "Unknown", name: "Pseudocladochomidae", mainColor: "#FB923C", lineageColors: { "pseudocladochomidae": "#EF4444" } };
+const anthozoa_astrospiculariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "astrospiculariidae", className: "Anthozoa", orderName: "Unknown", name: "Astrospiculariidae", mainColor: "#2DD4BF", lineageColors: { "astrospiculariidae": "#10B981" } };
+const anthozoa_briaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "briaridae", className: "Anthozoa", orderName: "Unknown", name: "Briaridae", mainColor: "#A3E635", lineageColors: { "briaridae": "#F59E0B" } };
+const anthozoa_ainigmaptilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ainigmaptilidae", className: "Anthozoa", orderName: "Unknown", name: "Ainigmaptilidae", mainColor: "#38BDF8", lineageColors: { "ainigmaptilidae": "#8B5CF6" } };
+const anthozoa_plasmoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "plasmoporellidae", className: "Anthozoa", orderName: "Unknown", name: "Plasmoporellidae", mainColor: "#3B82F6", lineageColors: { "plasmoporellidae": "#EC4899" } };
+const anthozoa_bethanyphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "bethanyphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Bethanyphyllidae", mainColor: "#EF4444", lineageColors: { "bethanyphyllidae": "#14B8A6" } };
+const anthozoa_pycnolithidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pycnolithidae", className: "Anthozoa", orderName: "Unknown", name: "Pycnolithidae", mainColor: "#10B981", lineageColors: { "pycnolithidae": "#F97316" } };
+const anthozoa_campophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "campophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Campophyllidae", mainColor: "#F59E0B", lineageColors: { "campophyllidae": "#6366F1" } };
+const anthozoa_distichophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "distichophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Distichophyllidae", mainColor: "#8B5CF6", lineageColors: { "distichophyllidae": "#84CC16" } };
+const anthozoa_numidiaphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "numidiaphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Numidiaphyllidae", mainColor: "#EC4899", lineageColors: { "numidiaphyllidae": "#06B6D4" } };
+const anthozoa_amsdenoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "amsdenoididae", className: "Anthozoa", orderName: "Unknown", name: "Amsdenoididae", mainColor: "#14B8A6", lineageColors: { "amsdenoididae": "#D946EF" } };
+const anthozoa_combophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "combophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Combophyllidae", mainColor: "#F97316", lineageColors: { "combophyllidae": "#0EA5E9" } };
+const anthozoa_tropiastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tropiastreidae", className: "Anthozoa", orderName: "Unknown", name: "Tropiastreidae", mainColor: "#6366F1", lineageColors: { "tropiastreidae": "#22C55E" } };
+const anthozoa_funginellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "funginellidae", className: "Anthozoa", orderName: "Unknown", name: "Funginellidae", mainColor: "#84CC16", lineageColors: { "funginellidae": "#EAB308" } };
+const anthozoa_heliastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "heliastraeidae", className: "Anthozoa", orderName: "Unknown", name: "Heliastraeidae", mainColor: "#06B6D4", lineageColors: { "heliastraeidae": "#A855F7" } };
+const anthozoa_gardinariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "gardinariidae", className: "Anthozoa", orderName: "Unknown", name: "Gardinariidae", mainColor: "#D946EF", lineageColors: { "gardinariidae": "#FB923C" } };
+const anthozoa_eusmilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "eusmilidae", className: "Anthozoa", orderName: "Unknown", name: "Eusmilidae", mainColor: "#0EA5E9", lineageColors: { "eusmilidae": "#2DD4BF" } };
+const anthozoa_siderasteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "siderasteridae", className: "Anthozoa", orderName: "Unknown", name: "Siderasteridae", mainColor: "#22C55E", lineageColors: { "siderasteridae": "#A3E635" } };
+const anthozoa_alpinophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "alpinophylliidae", className: "Anthozoa", orderName: "Unknown", name: "Alpinophylliidae", mainColor: "#EAB308", lineageColors: { "alpinophylliidae": "#38BDF8" } };
+const anthozoa_cyclophyllopsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cyclophyllopsiidae", className: "Anthozoa", orderName: "Unknown", name: "Cyclophyllopsiidae", mainColor: "#A855F7", lineageColors: { "cyclophyllopsiidae": "#3B82F6" } };
+const anthozoa_carolastaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "carolastaeidae", className: "Anthozoa", orderName: "Unknown", name: "Carolastaeidae", mainColor: "#FB923C", lineageColors: { "carolastaeidae": "#EF4444" } };
+const anthozoa_caryophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "caryophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Caryophyllidae", mainColor: "#2DD4BF", lineageColors: { "caryophyllidae": "#10B981" } };
+const anthozoa_lithophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "lithophylliidae", className: "Anthozoa", orderName: "Unknown", name: "Lithophylliidae", mainColor: "#A3E635", lineageColors: { "lithophylliidae": "#F59E0B" } };
+const anthozoa_waiparaconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "waiparaconidae", className: "Anthozoa", orderName: "Unknown", name: "Waiparaconidae", mainColor: "#38BDF8", lineageColors: { "waiparaconidae": "#8B5CF6" } };
+const anthozoa_pseudocladochonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pseudocladochonidae", className: "Anthozoa", orderName: "Unknown", name: "Pseudocladochonidae", mainColor: "#3B82F6", lineageColors: { "pseudocladochonidae": "#EC4899" } };
+const anthozoa_arachnanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "arachnanthidae", className: "Anthozoa", orderName: "Unknown", name: "Arachnanthidae", mainColor: "#EF4444", lineageColors: { "arachnanthidae": "#14B8A6" } };
+const anthozoa_mycophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "mycophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Mycophyllidae", mainColor: "#10B981", lineageColors: { "mycophyllidae": "#F97316" } };
+const anthozoa_sterictophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "sterictophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Sterictophyllidae", mainColor: "#F59E0B", lineageColors: { "sterictophyllidae": "#6366F1" } };
+const anthozoa_muriceidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "muriceidae", className: "Anthozoa", orderName: "Unknown", name: "Muriceidae", mainColor: "#8B5CF6", lineageColors: { "muriceidae": "#84CC16" } };
+const anthozoa_pteroididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pteroididae", className: "Anthozoa", orderName: "Unknown", name: "Pteroididae", mainColor: "#EC4899", lineageColors: { "pteroididae": "#06B6D4" } };
+const anthozoa_pyrgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pyrgiidae", className: "Anthozoa", orderName: "Unknown", name: "Pyrgiidae", mainColor: "#14B8A6", lineageColors: { "pyrgiidae": "#D946EF" } };
+const anthozoa_periphaceloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "periphaceloporidae", className: "Anthozoa", orderName: "Unknown", name: "Periphaceloporidae", mainColor: "#F97316", lineageColors: { "periphaceloporidae": "#0EA5E9" } };
+const anthozoa_maasellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "maasellidae", className: "Anthozoa", orderName: "Unknown", name: "Maasellidae", mainColor: "#6366F1", lineageColors: { "maasellidae": "#22C55E" } };
+const anthozoa_coccoserididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "coccoserididae", className: "Anthozoa", orderName: "Unknown", name: "Coccoserididae", mainColor: "#84CC16", lineageColors: { "coccoserididae": "#EAB308" } };
+const anthozoa_thecostegitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "thecostegitidae", className: "Anthozoa", orderName: "Unknown", name: "Thecostegitidae", mainColor: "#06B6D4", lineageColors: { "thecostegitidae": "#A855F7" } };
+const anthozoa_porastriatoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "porastriatoporidae", className: "Anthozoa", orderName: "Unknown", name: "Porastriatoporidae", mainColor: "#D946EF", lineageColors: { "porastriatoporidae": "#FB923C" } };
+const anthozoa_pyrigiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pyrigiidae", className: "Anthozoa", orderName: "Unknown", name: "Pyrigiidae", mainColor: "#0EA5E9", lineageColors: { "pyrigiidae": "#2DD4BF" } };
+const anthozoa_billingsariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "billingsariidae", className: "Anthozoa", orderName: "Unknown", name: "Billingsariidae", mainColor: "#22C55E", lineageColors: { "billingsariidae": "#A3E635" } };
+const anthozoa_centristelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "centristelidae", className: "Anthozoa", orderName: "Unknown", name: "Centristelidae", mainColor: "#EAB308", lineageColors: { "centristelidae": "#38BDF8" } };
+const anthozoa_paleoalveolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "paleoalveolitidae", className: "Anthozoa", orderName: "Unknown", name: "Paleoalveolitidae", mainColor: "#A855F7", lineageColors: { "paleoalveolitidae": "#3B82F6" } };
+const anthozoa_cyrtophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "cyrtophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Cyrtophyllidae", mainColor: "#FB923C", lineageColors: { "cyrtophyllidae": "#EF4444" } };
+const anthozoa_endotheciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "endotheciidae", className: "Anthozoa", orderName: "Unknown", name: "Endotheciidae", mainColor: "#2DD4BF", lineageColors: { "endotheciidae": "#10B981" } };
+const anthozoa_cothoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cothoniidae", className: "Anthozoa", orderName: "Unknown", name: "Cothoniidae", mainColor: "#A3E635", lineageColors: { "cothoniidae": "#F59E0B" } };
+const anthozoa_kiziliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "kiziliidae", className: "Anthozoa", orderName: "Unknown", name: "Kiziliidae", mainColor: "#38BDF8", lineageColors: { "kiziliidae": "#8B5CF6" } };
+const anthozoa_adamanophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "adamanophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Adamanophyllidae", mainColor: "#3B82F6", lineageColors: { "adamanophyllidae": "#EC4899" } };
+const anthozoa_multisoleniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "multisoleniidae", className: "Anthozoa", orderName: "Unknown", name: "Multisoleniidae", mainColor: "#EF4444", lineageColors: { "multisoleniidae": "#14B8A6" } };
+const anthozoa_chonostegitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "chonostegitidae", className: "Anthozoa", orderName: "Unknown", name: "Chonostegitidae", mainColor: "#10B981", lineageColors: { "chonostegitidae": "#F97316" } };
+const anthozoa_lipoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lipoporidae", className: "Anthozoa", orderName: "Unknown", name: "Lipoporidae", mainColor: "#F59E0B", lineageColors: { "lipoporidae": "#6366F1" } };
+const anthozoa_septodaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "septodaeidae", className: "Anthozoa", orderName: "Unknown", name: "Septodaeidae", mainColor: "#8B5CF6", lineageColors: { "septodaeidae": "#84CC16" } };
+const anthozoa_neocolumnariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "neocolumnariidae", className: "Anthozoa", orderName: "Unknown", name: "Neocolumnariidae", mainColor: "#EC4899", lineageColors: { "neocolumnariidae": "#06B6D4" } };
+const anthozoa_bajgoliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "bajgoliidae", className: "Anthozoa", orderName: "Unknown", name: "Bajgoliidae", mainColor: "#14B8A6", lineageColors: { "bajgoliidae": "#D946EF" } };
+const anthozoa_fletcheriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "fletcheriidae", className: "Anthozoa", orderName: "Unknown", name: "Fletcheriidae", mainColor: "#F97316", lineageColors: { "fletcheriidae": "#0EA5E9" } };
+const anthozoa_ditoecholasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "ditoecholasmatidae", className: "Anthozoa", orderName: "Unknown", name: "Ditoecholasmatidae", mainColor: "#6366F1", lineageColors: { "ditoecholasmatidae": "#22C55E" } };
+const anthozoa_aphrophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "aphrophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Aphrophyllidae", mainColor: "#84CC16", lineageColors: { "aphrophyllidae": "#EAB308" } };
+const anthozoa_eupsammidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "eupsammidae", className: "Anthozoa", orderName: "Unknown", name: "Eupsammidae", mainColor: "#06B6D4", lineageColors: { "eupsammidae": "#A855F7" } };
+const anthozoa_pinacophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pinacophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Pinacophyllidae", mainColor: "#D946EF", lineageColors: { "pinacophyllidae": "#FB923C" } };
+const anthozoa_haplareidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "haplareidae", className: "Anthozoa", orderName: "Unknown", name: "Haplareidae", mainColor: "#0EA5E9", lineageColors: { "haplareidae": "#2DD4BF" } };
+const anthozoa_isastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "isastraeidae", className: "Anthozoa", orderName: "Unknown", name: "Isastraeidae", mainColor: "#22C55E", lineageColors: { "isastraeidae": "#A3E635" } };
+const anthozoa_margarophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "margarophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Margarophyllidae", mainColor: "#EAB308", lineageColors: { "margarophyllidae": "#38BDF8" } };
+const anthozoa_protoheterstraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "protoheterstraeidae", className: "Anthozoa", orderName: "Unknown", name: "Protoheterstraeidae", mainColor: "#A855F7", lineageColors: { "protoheterstraeidae": "#3B82F6" } };
+const anthozoa_phyllocoeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "phyllocoeniidae", className: "Anthozoa", orderName: "Unknown", name: "Phyllocoeniidae", mainColor: "#FB923C", lineageColors: { "phyllocoeniidae": "#EF4444" } };
+const anthozoa_euhellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "euhellidae", className: "Anthozoa", orderName: "Unknown", name: "Euhellidae", mainColor: "#2DD4BF", lineageColors: { "euhellidae": "#10B981" } };
+const anthozoa_mitrodendronidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "mitrodendronidae", className: "Anthozoa", orderName: "Unknown", name: "Mitrodendronidae", mainColor: "#A3E635", lineageColors: { "mitrodendronidae": "#F59E0B" } };
+const anthozoa_antheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "antheidae", className: "Anthozoa", orderName: "Unknown", name: "Antheidae", mainColor: "#38BDF8", lineageColors: { "antheidae": "#8B5CF6" } };
+const anthozoa_diploastreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "diploastreidae", className: "Anthozoa", orderName: "Unknown", name: "Diploastreidae", mainColor: "#3B82F6", lineageColors: { "diploastreidae": "#EC4899" } };
+const anthozoa_semperinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "semperinidae", className: "Anthozoa", orderName: "Unknown", name: "Semperinidae", mainColor: "#EF4444", lineageColors: { "semperinidae": "#14B8A6" } };
+const anthozoa_kophobelemnonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "kophobelemnonidae", className: "Anthozoa", orderName: "Unknown", name: "Kophobelemnonidae", mainColor: "#10B981", lineageColors: { "kophobelemnonidae": "#F97316" } };
+const anthozoa_evenkiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "evenkiellidae", className: "Anthozoa", orderName: "Unknown", name: "Evenkiellidae", mainColor: "#F59E0B", lineageColors: { "evenkiellidae": "#6366F1" } };
+const anthozoa_microbaciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "microbaciidae", className: "Anthozoa", orderName: "Unknown", name: "Microbaciidae", mainColor: "#8B5CF6", lineageColors: { "microbaciidae": "#84CC16" } };
+const anthozoa_cyathactidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cyathactidae", className: "Anthozoa", orderName: "Unknown", name: "Cyathactidae", mainColor: "#EC4899", lineageColors: { "cyathactidae": "#06B6D4" } };
+const anthozoa_tropiphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "tropiphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Tropiphyllidae", mainColor: "#14B8A6", lineageColors: { "tropiphyllidae": "#D946EF" } };
+const anthozoa_tryplasmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "tryplasmidae", className: "Anthozoa", orderName: "Unknown", name: "Tryplasmidae", mainColor: "#F97316", lineageColors: { "tryplasmidae": "#0EA5E9" } };
+const anthozoa_thamnoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "thamnoporidae", className: "Anthozoa", orderName: "Unknown", name: "Thamnoporidae", mainColor: "#6366F1", lineageColors: { "thamnoporidae": "#22C55E" } };
+const anthozoa_kophobelemnoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "kophobelemnoidae", className: "Anthozoa", orderName: "Unknown", name: "Kophobelemnoidae", mainColor: "#84CC16", lineageColors: { "kophobelemnoidae": "#EAB308" } };
+const anthozoa_chrysogorgidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "chrysogorgidae", className: "Anthozoa", orderName: "Unknown", name: "Chrysogorgidae", mainColor: "#06B6D4", lineageColors: { "chrysogorgidae": "#A855F7" } };
+const anthozoa_dendrogyriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "dendrogyriidae", className: "Anthozoa", orderName: "Unknown", name: "Dendrogyriidae", mainColor: "#D946EF", lineageColors: { "dendrogyriidae": "#FB923C" } };
+const anthozoa_distichophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "distichophylliidae", className: "Anthozoa", orderName: "Unknown", name: "Distichophylliidae", mainColor: "#0EA5E9", lineageColors: { "distichophylliidae": "#2DD4BF" } };
+const anthozoa_clisiophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "clisiophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Clisiophyllidae", mainColor: "#22C55E", lineageColors: { "clisiophyllidae": "#A3E635" } };
+const anthozoa_romanophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "romanophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Romanophyllidae", mainColor: "#EAB308", lineageColors: { "romanophyllidae": "#38BDF8" } };
+const anthozoa_bogambirolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "bogambirolitidae", className: "Anthozoa", orderName: "Unknown", name: "Bogambirolitidae", mainColor: "#A855F7", lineageColors: { "bogambirolitidae": "#3B82F6" } };
+const anthozoa_vojnovskytesidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "vojnovskytesidae", className: "Anthozoa", orderName: "Unknown", name: "Vojnovskytesidae", mainColor: "#FB923C", lineageColors: { "vojnovskytesidae": "#EF4444" } };
+const anthozoa_hawaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "hawaidae", className: "Anthozoa", orderName: "Unknown", name: "Hawaidae", mainColor: "#2DD4BF", lineageColors: { "hawaidae": "#10B981" } };
+const anthozoa_madreporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "madreporidae", className: "Anthozoa", orderName: "Unknown", name: "Madreporidae", mainColor: "#A3E635", lineageColors: { "madreporidae": "#F59E0B" } };
+const anthozoa_gerardidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "gerardidae", className: "Anthozoa", orderName: "Unknown", name: "Gerardidae", mainColor: "#38BDF8", lineageColors: { "gerardidae": "#8B5CF6" } };
+const anthozoa_primnozoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "primnozoanthidae", className: "Anthozoa", orderName: "Unknown", name: "Primnozoanthidae", mainColor: "#3B82F6", lineageColors: { "primnozoanthidae": "#EC4899" } };
+const anthozoa_parasitozoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "parasitozoanthidae", className: "Anthozoa", orderName: "Unknown", name: "Parasitozoanthidae", mainColor: "#EF4444", lineageColors: { "parasitozoanthidae": "#14B8A6" } };
+const anthozoa_dasmiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dasmiidae", className: "Anthozoa", orderName: "Unknown", name: "Dasmiidae", mainColor: "#10B981", lineageColors: { "dasmiidae": "#F97316" } };
+const anthozoa_pruvostastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pruvostastraeidae", className: "Anthozoa", orderName: "Unknown", name: "Pruvostastraeidae", mainColor: "#F59E0B", lineageColors: { "pruvostastraeidae": "#6366F1" } };
+const anthozoa_cyclophyllopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cyclophyllopsidae", className: "Anthozoa", orderName: "Unknown", name: "Cyclophyllopsidae", mainColor: "#8B5CF6", lineageColors: { "cyclophyllopsidae": "#84CC16" } };
+const anthozoa_thamnasterioidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "thamnasterioidae", className: "Anthozoa", orderName: "Unknown", name: "Thamnasterioidae", mainColor: "#EC4899", lineageColors: { "thamnasterioidae": "#06B6D4" } };
+const anthozoa_innaporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "innaporidae", className: "Anthozoa", orderName: "Unknown", name: "Innaporidae", mainColor: "#14B8A6", lineageColors: { "innaporidae": "#D946EF" } };
+const anthozoa_angoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "angoporidae", className: "Anthozoa", orderName: "Unknown", name: "Angoporidae", mainColor: "#F97316", lineageColors: { "angoporidae": "#0EA5E9" } };
+const anthozoa_dimorphophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "dimorphophylliidae", className: "Anthozoa", orderName: "Unknown", name: "Dimorphophylliidae", mainColor: "#6366F1", lineageColors: { "dimorphophylliidae": "#22C55E" } };
+const anthozoa_sinopathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "sinopathidae", className: "Anthozoa", orderName: "Unknown", name: "Sinopathidae", mainColor: "#84CC16", lineageColors: { "sinopathidae": "#EAB308" } };
+const anthozoa_latomaeandridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "latomaeandridae", className: "Anthozoa", orderName: "Unknown", name: "Latomaeandridae", mainColor: "#06B6D4", lineageColors: { "latomaeandridae": "#A855F7" } };
+const anthozoa_pleurosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pleurosmiliidae", className: "Anthozoa", orderName: "Unknown", name: "Pleurosmiliidae", mainColor: "#D946EF", lineageColors: { "pleurosmiliidae": "#FB923C" } };
+const anthozoa_aplosmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "aplosmiliidae", className: "Anthozoa", orderName: "Unknown", name: "Aplosmiliidae", mainColor: "#0EA5E9", lineageColors: { "aplosmiliidae": "#2DD4BF" } };
+const anthozoa_ellisitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "ellisitidae", className: "Anthozoa", orderName: "Unknown", name: "Ellisitidae", mainColor: "#22C55E", lineageColors: { "ellisitidae": "#A3E635" } };
+const anthozoa_acrocyathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "acrocyathidae", className: "Anthozoa", orderName: "Unknown", name: "Acrocyathidae", mainColor: "#EAB308", lineageColors: { "acrocyathidae": "#38BDF8" } };
+const anthozoa_flosmarinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "flosmarinidae", className: "Anthozoa", orderName: "Unknown", name: "Flosmarinidae", mainColor: "#A855F7", lineageColors: { "flosmarinidae": "#3B82F6" } };
+const anthozoa_brachiphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "brachiphylliidae", className: "Anthozoa", orderName: "Unknown", name: "Brachiphylliidae", mainColor: "#FB923C", lineageColors: { "brachiphylliidae": "#EF4444" } };
+const anthozoa_retiophylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "retiophylliidae", className: "Anthozoa", orderName: "Unknown", name: "Retiophylliidae", mainColor: "#2DD4BF", lineageColors: { "retiophylliidae": "#10B981" } };
+const anthozoa_thamnastraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "thamnastraeidae", className: "Anthozoa", orderName: "Unknown", name: "Thamnastraeidae", mainColor: "#A3E635", lineageColors: { "thamnastraeidae": "#F59E0B" } };
+const anthozoa_reimaniphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "reimaniphyllidae", className: "Anthozoa", orderName: "Unknown", name: "Reimaniphyllidae", mainColor: "#38BDF8", lineageColors: { "reimaniphyllidae": "#8B5CF6" } };
+const anthozoa_symphylliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "symphylliidae", className: "Anthozoa", orderName: "Unknown", name: "Symphylliidae", mainColor: "#3B82F6", lineageColors: { "symphylliidae": "#EC4899" } };
+const anthozoa_ceratocorallia: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "ceratocorallia", className: "Anthozoa", orderName: "Unknown", name: "Ceratocorallia", mainColor: "#EF4444", lineageColors: { "ceratocorallia": "#14B8A6" } };
+const anthozoa_gyrophyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "gyrophyllidae", className: "Anthozoa", orderName: "Unknown", name: "Gyrophyllidae", mainColor: "#10B981", lineageColors: { "gyrophyllidae": "#F97316" } };
+const anthozoa_primnoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "primnoidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Primnoidae", mainColor: "#F59E0B", lineageColors: { "primnoidae": "#6366F1" } };
+const anthozoa_ellisellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "ellisellidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Ellisellidae", mainColor: "#8B5CF6", lineageColors: { "ellisellidae": "#84CC16" } };
+const anthozoa_pennatulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pennatulidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Pennatulidae", mainColor: "#EC4899", lineageColors: { "pennatulidae": "#06B6D4" } };
+const anthozoa_chrysogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "chrysogorgiidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Chrysogorgiidae", mainColor: "#14B8A6", lineageColors: { "chrysogorgiidae": "#D946EF" } };
+const anthozoa_coralliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "coralliidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Coralliidae", mainColor: "#F97316", lineageColors: { "coralliidae": "#0EA5E9" } };
+const anthozoa_mopseidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "mopseidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Mopseidae", mainColor: "#6366F1", lineageColors: { "mopseidae": "#22C55E" } };
+const anthozoa_virgulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "virgulariidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Virgulariidae", mainColor: "#84CC16", lineageColors: { "virgulariidae": "#EAB308" } };
+const anthozoa_keratoisididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "keratoisididae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Keratoisididae", mainColor: "#06B6D4", lineageColors: { "keratoisididae": "#A855F7" } };
+const anthozoa_veretillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "veretillidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Veretillidae", mainColor: "#D946EF", lineageColors: { "veretillidae": "#FB923C" } };
+const anthozoa_helioporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "helioporidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Helioporidae", mainColor: "#0EA5E9", lineageColors: { "helioporidae": "#2DD4BF" } };
+const anthozoa_umbellulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "umbellulidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Umbellulidae", mainColor: "#22C55E", lineageColors: { "umbellulidae": "#A3E635" } };
+const anthozoa_kophobelemnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "kophobelemnidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Kophobelemnidae", mainColor: "#EAB308", lineageColors: { "kophobelemnidae": "#38BDF8" } };
+const anthozoa_sarcodictyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sarcodictyonidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Sarcodictyonidae", mainColor: "#A855F7", lineageColors: { "sarcodictyonidae": "#3B82F6" } };
+const anthozoa_renillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "renillidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Renillidae", mainColor: "#FB923C", lineageColors: { "renillidae": "#EF4444" } };
+const anthozoa_ifalukellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ifalukellidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Ifalukellidae", mainColor: "#2DD4BF", lineageColors: { "ifalukellidae": "#10B981" } };
+const anthozoa_spongiodermidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "spongiodermidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Spongiodermidae", mainColor: "#A3E635", lineageColors: { "spongiodermidae": "#F59E0B" } };
+const anthozoa_briareidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "briareidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Briareidae", mainColor: "#38BDF8", lineageColors: { "briareidae": "#8B5CF6" } };
+const anthozoa_parisididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "parisididae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Parisididae", mainColor: "#3B82F6", lineageColors: { "parisididae": "#EC4899" } };
+const anthozoa_aulopsammiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "aulopsammiidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Aulopsammiidae", mainColor: "#EF4444", lineageColors: { "aulopsammiidae": "#14B8A6" } };
+const anthozoa_parasphaerascleridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "parasphaerascleridae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Parasphaerascleridae", mainColor: "#10B981", lineageColors: { "parasphaerascleridae": "#F97316" } };
+const anthozoa_scleroptilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "scleroptilidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Scleroptilidae", mainColor: "#F59E0B", lineageColors: { "scleroptilidae": "#6366F1" } };
+const anthozoa_protoptilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "protoptilidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Protoptilidae", mainColor: "#8B5CF6", lineageColors: { "protoptilidae": "#84CC16" } };
+const anthozoa_echinoptilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "echinoptilidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Echinoptilidae", mainColor: "#EC4899", lineageColors: { "echinoptilidae": "#06B6D4" } };
+const anthozoa_anthoptilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "anthoptilidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Anthoptilidae", mainColor: "#14B8A6", lineageColors: { "anthoptilidae": "#D946EF" } };
+const anthozoa_balticinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "balticinidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Balticinidae", mainColor: "#F97316", lineageColors: { "balticinidae": "#0EA5E9" } };
+const anthozoa_stachyptilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "stachyptilidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Stachyptilidae", mainColor: "#6366F1", lineageColors: { "stachyptilidae": "#22C55E" } };
+const anthozoa_erythropodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "erythropodiidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Erythropodiidae", mainColor: "#84CC16", lineageColors: { "erythropodiidae": "#EAB308" } };
+const anthozoa_funiculinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "funiculinidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Funiculinidae", mainColor: "#06B6D4", lineageColors: { "funiculinidae": "#A855F7" } };
+const anthozoa_dendrobrachiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "dendrobrachiidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Dendrobrachiidae", mainColor: "#D946EF", lineageColors: { "dendrobrachiidae": "#FB923C" } };
+const anthozoa_cornulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cornulariidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Cornulariidae", mainColor: "#0EA5E9", lineageColors: { "cornulariidae": "#2DD4BF" } };
+const anthozoa_chunellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "chunellidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Chunellidae", mainColor: "#22C55E", lineageColors: { "chunellidae": "#A3E635" } };
+const anthozoa_chelidonisididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "chelidonisididae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Chelidonisididae", mainColor: "#EAB308", lineageColors: { "chelidonisididae": "#38BDF8" } };
+const anthozoa_pleurogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "pleurogorgiidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Pleurogorgiidae", mainColor: "#A855F7", lineageColors: { "pleurogorgiidae": "#3B82F6" } };
+const anthozoa_ideogorgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "ideogorgiidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Ideogorgiidae", mainColor: "#FB923C", lineageColors: { "ideogorgiidae": "#EF4444" } };
+const anthozoa_pseudumbellulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pseudumbellulidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Pseudumbellulidae", mainColor: "#2DD4BF", lineageColors: { "pseudumbellulidae": "#10B981" } };
+const anthozoa_isidoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "isidoidae", className: "Anthozoa", orderName: "Scleralcyonacea", name: "Isidoidae", mainColor: "#A3E635", lineageColors: { "isidoidae": "#F59E0B" } };
+const anthozoa_actiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "actiniidae", className: "Anthozoa", orderName: "Actiniaria", name: "Actiniidae", mainColor: "#38BDF8", lineageColors: { "actiniidae": "#8B5CF6" } };
+const anthozoa_hormathiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "hormathiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Hormathiidae", mainColor: "#3B82F6", lineageColors: { "hormathiidae": "#EC4899" } };
+const anthozoa_edwardsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "edwardsiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Edwardsiidae", mainColor: "#EF4444", lineageColors: { "edwardsiidae": "#14B8A6" } };
+const anthozoa_sagartiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "sagartiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Sagartiidae", mainColor: "#10B981", lineageColors: { "sagartiidae": "#F97316" } };
+const anthozoa_andvakiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "andvakiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Andvakiidae", mainColor: "#F59E0B", lineageColors: { "andvakiidae": "#6366F1" } };
+const anthozoa_actinostolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "actinostolidae", className: "Anthozoa", orderName: "Actiniaria", name: "Actinostolidae", mainColor: "#8B5CF6", lineageColors: { "actinostolidae": "#84CC16" } };
+const anthozoa_amphianthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "amphianthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Amphianthidae", mainColor: "#EC4899", lineageColors: { "amphianthidae": "#06B6D4" } };
+const anthozoa_halcampidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "halcampidae", className: "Anthozoa", orderName: "Actiniaria", name: "Halcampidae", mainColor: "#14B8A6", lineageColors: { "halcampidae": "#D946EF" } };
+const anthozoa_aiptasiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "aiptasiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Aiptasiidae", mainColor: "#F97316", lineageColors: { "aiptasiidae": "#0EA5E9" } };
+const anthozoa_sicyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sicyonidae", className: "Anthozoa", orderName: "Actiniaria", name: "Sicyonidae", mainColor: "#6366F1", lineageColors: { "sicyonidae": "#22C55E" } };
+const anthozoa_peachiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "peachiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Peachiidae", mainColor: "#84CC16", lineageColors: { "peachiidae": "#EAB308" } };
+const anthozoa_haloclavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "haloclavidae", className: "Anthozoa", orderName: "Actiniaria", name: "Haloclavidae", mainColor: "#06B6D4", lineageColors: { "haloclavidae": "#A855F7" } };
+const anthozoa_halcampoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "halcampoididae", className: "Anthozoa", orderName: "Actiniaria", name: "Halcampoididae", mainColor: "#D946EF", lineageColors: { "halcampoididae": "#FB923C" } };
+const anthozoa_kadosactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "kadosactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Kadosactinidae", mainColor: "#0EA5E9", lineageColors: { "kadosactinidae": "#2DD4BF" } };
+const anthozoa_isanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "isanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Isanthidae", mainColor: "#22C55E", lineageColors: { "isanthidae": "#A3E635" } };
+const anthozoa_halcuriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "halcuriidae", className: "Anthozoa", orderName: "Actiniaria", name: "Halcuriidae", mainColor: "#EAB308", lineageColors: { "halcuriidae": "#38BDF8" } };
+const anthozoa_phymanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "phymanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Phymanthidae", mainColor: "#A855F7", lineageColors: { "phymanthidae": "#3B82F6" } };
+const anthozoa_diadumenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "diadumenidae", className: "Anthozoa", orderName: "Actiniaria", name: "Diadumenidae", mainColor: "#FB923C", lineageColors: { "diadumenidae": "#EF4444" } };
+const anthozoa_condylanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "condylanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Condylanthidae", mainColor: "#2DD4BF", lineageColors: { "condylanthidae": "#10B981" } };
+const anthozoa_aliciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "aliciidae", className: "Anthozoa", orderName: "Actiniaria", name: "Aliciidae", mainColor: "#A3E635", lineageColors: { "aliciidae": "#F59E0B" } };
+const anthozoa_minyadidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "minyadidae", className: "Anthozoa", orderName: "Actiniaria", name: "Minyadidae", mainColor: "#38BDF8", lineageColors: { "minyadidae": "#8B5CF6" } };
+const anthozoa_stichodactylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "stichodactylidae", className: "Anthozoa", orderName: "Actiniaria", name: "Stichodactylidae", mainColor: "#3B82F6", lineageColors: { "stichodactylidae": "#EC4899" } };
+const anthozoa_actinodendridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "actinodendridae", className: "Anthozoa", orderName: "Actiniaria", name: "Actinodendridae", mainColor: "#EF4444", lineageColors: { "actinodendridae": "#14B8A6" } };
+const anthozoa_haliactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "haliactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Haliactinidae", mainColor: "#10B981", lineageColors: { "haliactinidae": "#F97316" } };
+const anthozoa_phelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "phelliidae", className: "Anthozoa", orderName: "Actiniaria", name: "Phelliidae", mainColor: "#F59E0B", lineageColors: { "phelliidae": "#6366F1" } };
+const anthozoa_actinernidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "actinernidae", className: "Anthozoa", orderName: "Actiniaria", name: "Actinernidae", mainColor: "#8B5CF6", lineageColors: { "actinernidae": "#84CC16" } };
+const anthozoa_boloceroididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "boloceroididae", className: "Anthozoa", orderName: "Actiniaria", name: "Boloceroididae", mainColor: "#EC4899", lineageColors: { "boloceroididae": "#06B6D4" } };
+const anthozoa_thalassianthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "thalassianthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Thalassianthidae", mainColor: "#14B8A6", lineageColors: { "thalassianthidae": "#D946EF" } };
+const anthozoa_bathyphelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "bathyphelliidae", className: "Anthozoa", orderName: "Actiniaria", name: "Bathyphelliidae", mainColor: "#F97316", lineageColors: { "bathyphelliidae": "#0EA5E9" } };
+const anthozoa_actinoscyphiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "actinoscyphiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Actinoscyphiidae", mainColor: "#6366F1", lineageColors: { "actinoscyphiidae": "#22C55E" } };
+const anthozoa_capneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "capneidae", className: "Anthozoa", orderName: "Actiniaria", name: "Capneidae", mainColor: "#84CC16", lineageColors: { "capneidae": "#EAB308" } };
+const anthozoa_acontiophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "acontiophoridae", className: "Anthozoa", orderName: "Actiniaria", name: "Acontiophoridae", mainColor: "#06B6D4", lineageColors: { "acontiophoridae": "#A855F7" } };
+const anthozoa_metridiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "metridiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Metridiidae", mainColor: "#D946EF", lineageColors: { "metridiidae": "#FB923C" } };
+const anthozoa_aiptasiomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "aiptasiomorphidae", className: "Anthozoa", orderName: "Actiniaria", name: "Aiptasiomorphidae", mainColor: "#0EA5E9", lineageColors: { "aiptasiomorphidae": "#2DD4BF" } };
+const anthozoa_octineonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "octineonidae", className: "Anthozoa", orderName: "Actiniaria", name: "Octineonidae", mainColor: "#22C55E", lineageColors: { "octineonidae": "#A3E635" } };
+const anthozoa_anthosactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "anthosactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Anthosactinidae", mainColor: "#EAB308", lineageColors: { "anthosactinidae": "#38BDF8" } };
+const anthozoa_liponematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "liponematidae", className: "Anthozoa", orderName: "Actiniaria", name: "Liponematidae", mainColor: "#A855F7", lineageColors: { "liponematidae": "#3B82F6" } };
+const anthozoa_isactinernidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "isactinernidae", className: "Anthozoa", orderName: "Actiniaria", name: "Isactinernidae", mainColor: "#FB923C", lineageColors: { "isactinernidae": "#EF4444" } };
+const anthozoa_harenactidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "harenactidae", className: "Anthozoa", orderName: "Actiniaria", name: "Harenactidae", mainColor: "#2DD4BF", lineageColors: { "harenactidae": "#10B981" } };
+const anthozoa_nemanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "nemanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Nemanthidae", mainColor: "#A3E635", lineageColors: { "nemanthidae": "#F59E0B" } };
+const anthozoa_oractiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "oractiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Oractiidae", mainColor: "#38BDF8", lineageColors: { "oractiidae": "#8B5CF6" } };
+const anthozoa_iosactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "iosactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Iosactinidae", mainColor: "#3B82F6", lineageColors: { "iosactinidae": "#EC4899" } };
+const anthozoa_galatheanthemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "galatheanthemidae", className: "Anthozoa", orderName: "Actiniaria", name: "Galatheanthemidae", mainColor: "#EF4444", lineageColors: { "galatheanthemidae": "#14B8A6" } };
+const anthozoa_preactiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "preactiniidae", className: "Anthozoa", orderName: "Actiniaria", name: "Preactiniidae", mainColor: "#10B981", lineageColors: { "preactiniidae": "#F97316" } };
+const anthozoa_limnactiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "limnactiniidae", className: "Anthozoa", orderName: "Actiniaria", name: "Limnactiniidae", mainColor: "#F59E0B", lineageColors: { "limnactiniidae": "#6366F1" } };
+const anthozoa_homostichanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "homostichanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Homostichanthidae", mainColor: "#8B5CF6", lineageColors: { "homostichanthidae": "#84CC16" } };
+const anthozoa_gonactiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "gonactiniidae", className: "Anthozoa", orderName: "Actiniaria", name: "Gonactiniidae", mainColor: "#EC4899", lineageColors: { "gonactiniidae": "#06B6D4" } };
+const anthozoa_ptychodactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "ptychodactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Ptychodactinidae", mainColor: "#14B8A6", lineageColors: { "ptychodactinidae": "#D946EF" } };
+const anthozoa_exocoelactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "exocoelactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Exocoelactinidae", mainColor: "#F97316", lineageColors: { "exocoelactinidae": "#0EA5E9" } };
+const anthozoa_polyopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "polyopidae", className: "Anthozoa", orderName: "Actiniaria", name: "Polyopidae", mainColor: "#6366F1", lineageColors: { "polyopidae": "#22C55E" } };
+const anthozoa_haliplanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "haliplanellidae", className: "Anthozoa", orderName: "Actiniaria", name: "Haliplanellidae", mainColor: "#84CC16", lineageColors: { "haliplanellidae": "#EAB308" } };
+const anthozoa_sagartiomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "sagartiomorphidae", className: "Anthozoa", orderName: "Actiniaria", name: "Sagartiomorphidae", mainColor: "#06B6D4", lineageColors: { "sagartiomorphidae": "#A855F7" } };
+const anthozoa_nevadneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "nevadneidae", className: "Anthozoa", orderName: "Actiniaria", name: "Nevadneidae", mainColor: "#D946EF", lineageColors: { "nevadneidae": "#FB923C" } };
+const anthozoa_andresiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "andresiidae", className: "Anthozoa", orderName: "Actiniaria", name: "Andresiidae", mainColor: "#0EA5E9", lineageColors: { "andresiidae": "#2DD4BF" } };
+const anthozoa_heteractidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "heteractidae", className: "Anthozoa", orderName: "Actiniaria", name: "Heteractidae", mainColor: "#22C55E", lineageColors: { "heteractidae": "#A3E635" } };
+const anthozoa_heteranthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "heteranthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Heteranthidae", mainColor: "#EAB308", lineageColors: { "heteranthidae": "#38BDF8" } };
+const anthozoa_sarcophinanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sarcophinanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Sarcophinanthidae", mainColor: "#A855F7", lineageColors: { "sarcophinanthidae": "#3B82F6" } };
+const anthozoa_antheomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "antheomorphidae", className: "Anthozoa", orderName: "Actiniaria", name: "Antheomorphidae", mainColor: "#FB923C", lineageColors: { "antheomorphidae": "#EF4444" } };
+const anthozoa_ostiactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ostiactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Ostiactinidae", mainColor: "#2DD4BF", lineageColors: { "ostiactinidae": "#10B981" } };
+const anthozoa_acricoactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "acricoactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Acricoactinidae", mainColor: "#A3E635", lineageColors: { "acricoactinidae": "#F59E0B" } };
+const anthozoa_spongiactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "spongiactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Spongiactinidae", mainColor: "#38BDF8", lineageColors: { "spongiactinidae": "#8B5CF6" } };
+const anthozoa_relicanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "relicanthidae", className: "Anthozoa", orderName: "Actiniaria", name: "Relicanthidae", mainColor: "#3B82F6", lineageColors: { "relicanthidae": "#EC4899" } };
+const anthozoa_halcampulactidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "halcampulactidae", className: "Anthozoa", orderName: "Actiniaria", name: "Halcampulactidae", mainColor: "#EF4444", lineageColors: { "halcampulactidae": "#14B8A6" } };
+const anthozoa_tetracoelactinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "tetracoelactinidae", className: "Anthozoa", orderName: "Actiniaria", name: "Tetracoelactinidae", mainColor: "#10B981", lineageColors: { "tetracoelactinidae": "#F97316" } };
+const anthozoa_mackenziidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mackenziidae", className: "Anthozoa", orderName: "Actiniaria", name: "Mackenziidae", mainColor: "#F59E0B", lineageColors: { "mackenziidae": "#6366F1" } };
+const anthozoa_sphenopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "sphenopidae", className: "Anthozoa", orderName: "Zoantharia", name: "Sphenopidae", mainColor: "#8B5CF6", lineageColors: { "sphenopidae": "#84CC16" } };
+const anthozoa_zoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "zoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Zoanthidae", mainColor: "#EC4899", lineageColors: { "zoanthidae": "#06B6D4" } };
+const anthozoa_parazoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "parazoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Parazoanthidae", mainColor: "#14B8A6", lineageColors: { "parazoanthidae": "#D946EF" } };
+const anthozoa_epizoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "epizoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Epizoanthidae", mainColor: "#F97316", lineageColors: { "epizoanthidae": "#0EA5E9" } };
+const anthozoa_hydrozoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "hydrozoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Hydrozoanthidae", mainColor: "#6366F1", lineageColors: { "hydrozoanthidae": "#22C55E" } };
+const anthozoa_neozoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "neozoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Neozoanthidae", mainColor: "#84CC16", lineageColors: { "neozoanthidae": "#EAB308" } };
+const anthozoa_abyssoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "abyssoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Abyssoanthidae", mainColor: "#06B6D4", lineageColors: { "abyssoanthidae": "#A855F7" } };
+const anthozoa_microzoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "microzoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Microzoanthidae", mainColor: "#D946EF", lineageColors: { "microzoanthidae": "#FB923C" } };
+const anthozoa_nanozoanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "nanozoanthidae", className: "Anthozoa", orderName: "Zoantharia", name: "Nanozoanthidae", mainColor: "#0EA5E9", lineageColors: { "nanozoanthidae": "#2DD4BF" } };
+const anthozoa_antipathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "antipathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Antipathidae", mainColor: "#22C55E", lineageColors: { "antipathidae": "#A3E635" } };
+const anthozoa_schizopathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "schizopathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Schizopathidae", mainColor: "#EAB308", lineageColors: { "schizopathidae": "#38BDF8" } };
+const anthozoa_aphanipathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "aphanipathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Aphanipathidae", mainColor: "#A855F7", lineageColors: { "aphanipathidae": "#3B82F6" } };
+const anthozoa_myriopathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "myriopathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Myriopathidae", mainColor: "#FB923C", lineageColors: { "myriopathidae": "#EF4444" } };
+const anthozoa_cladopathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "cladopathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Cladopathidae", mainColor: "#2DD4BF", lineageColors: { "cladopathidae": "#10B981" } };
+const anthozoa_stylopathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "stylopathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Stylopathidae", mainColor: "#A3E635", lineageColors: { "stylopathidae": "#F59E0B" } };
+const anthozoa_leiopathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "leiopathidae", className: "Anthozoa", orderName: "Antipatharia", name: "Leiopathidae", mainColor: "#38BDF8", lineageColors: { "leiopathidae": "#8B5CF6" } };
+const anthozoa_corallimorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "corallimorphidae", className: "Anthozoa", orderName: "Corallimorpharia", name: "Corallimorphidae", mainColor: "#3B82F6", lineageColors: { "corallimorphidae": "#EC4899" } };
+const anthozoa_discosomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "discosomidae", className: "Anthozoa", orderName: "Corallimorpharia", name: "Discosomidae", mainColor: "#EF4444", lineageColors: { "discosomidae": "#14B8A6" } };
+const anthozoa_sideractinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "sideractinidae", className: "Anthozoa", orderName: "Corallimorpharia", name: "Sideractinidae", mainColor: "#10B981", lineageColors: { "sideractinidae": "#F97316" } };
+const anthozoa_ricordeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "ricordeidae", className: "Anthozoa", orderName: "Corallimorpharia", name: "Ricordeidae", mainColor: "#F59E0B", lineageColors: { "ricordeidae": "#6366F1" } };
+const anthozoa_heliolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "heliolitidae", className: "Anthozoa", orderName: "Heliolitina", name: "Heliolitidae", mainColor: "#8B5CF6", lineageColors: { "heliolitidae": "#84CC16" } };
+const anthozoa_stelliporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "stelliporellidae", className: "Anthozoa", orderName: "Heliolitina", name: "Stelliporellidae", mainColor: "#EC4899", lineageColors: { "stelliporellidae": "#06B6D4" } };
+const anthozoa_palaeoporitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "palaeoporitidae", className: "Anthozoa", orderName: "Heliolitina", name: "Palaeoporitidae", mainColor: "#14B8A6", lineageColors: { "palaeoporitidae": "#D946EF" } };
+const anthozoa_plasmoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "plasmoporidae", className: "Anthozoa", orderName: "Heliolitina", name: "Plasmoporidae", mainColor: "#F97316", lineageColors: { "plasmoporidae": "#0EA5E9" } };
+const anthozoa_sibiriolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sibiriolitidae", className: "Anthozoa", orderName: "Heliolitina", name: "Sibiriolitidae", mainColor: "#6366F1", lineageColors: { "sibiriolitidae": "#22C55E" } };
+const anthozoa_pseudoplasmoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "pseudoplasmoporidae", className: "Anthozoa", orderName: "Heliolitina", name: "Pseudoplasmoporidae", mainColor: "#84CC16", lineageColors: { "pseudoplasmoporidae": "#EAB308" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -2198,6 +2750,555 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "pentasmiliidae": hydrozoa_pentasmiliidae,
   "chondroplidae": hydrozoa_chondroplidae,
   "inocaulidae": hydrozoa_inocaulidae,
+  "caryophylliidae": anthozoa_caryophylliidae,
+  "merulinidae": anthozoa_merulinidae,
+  "acroporidae": anthozoa_acroporidae,
+  "thecosmiliidae": anthozoa_thecosmiliidae,
+  "dendrophylliidae": anthozoa_dendrophylliidae,
+  "poritidae": anthozoa_poritidae,
+  "latomeandridae": anthozoa_latomeandridae,
+  "faviidae": anthozoa_faviidae,
+  "stylinidae": anthozoa_stylinidae,
+  "flabellidae": anthozoa_flabellidae,
+  "comoseridae": anthozoa_comoseridae,
+  "turbinoliidae": anthozoa_turbinoliidae,
+  "pocilloporidae": anthozoa_pocilloporidae,
+  "oculinidae": anthozoa_oculinidae,
+  "agariciidae": anthozoa_agariciidae,
+  "meandrinidae": anthozoa_meandrinidae,
+  "astrocoeniidae": anthozoa_astrocoeniidae,
+  "thamnasteriidae": anthozoa_thamnasteriidae,
+  "rhizangiidae": anthozoa_rhizangiidae,
+  "rhipidogyridae": anthozoa_rhipidogyridae,
+  "actinastreidae": anthozoa_actinastreidae,
+  "lobophylliidae": anthozoa_lobophylliidae,
+  "heterocoeniidae": anthozoa_heterocoeniidae,
+  "cunnolitidae": anthozoa_cunnolitidae,
+  "fungiidae": anthozoa_fungiidae,
+  "stylophyllidae": anthozoa_stylophyllidae,
+  "montlivaltiidae": anthozoa_montlivaltiidae,
+  "euphylliidae": anthozoa_euphylliidae,
+  "haplaraeidae": anthozoa_haplaraeidae,
+  "montastraeidae": anthozoa_montastraeidae,
+  "amphiastreidae": anthozoa_amphiastreidae,
+  "dermosmiliidae": anthozoa_dermosmiliidae,
+  "columastreidae": anthozoa_columastreidae,
+  "reimaniphylliidae": anthozoa_reimaniphylliidae,
+  "axosmiliidae": anthozoa_axosmiliidae,
+  "cyathophoridae": anthozoa_cyathophoridae,
+  "acrosmiliidae": anthozoa_acrosmiliidae,
+  "micrabaciidae": anthozoa_micrabaciidae,
+  "placosmiliidae": anthozoa_placosmiliidae,
+  "actinacididae": anthozoa_actinacididae,
+  "astrangiidae": anthozoa_astrangiidae,
+  "deltocyathidae": anthozoa_deltocyathidae,
+  "cladophylliidae": anthozoa_cladophylliidae,
+  "synastraeidae": anthozoa_synastraeidae,
+  "tropiastraeidae": anthozoa_tropiastraeidae,
+  "calamophylliidae": anthozoa_calamophylliidae,
+  "coryphylliidae": anthozoa_coryphylliidae,
+  "fungiacyathidae": anthozoa_fungiacyathidae,
+  "margarophylliidae": anthozoa_margarophylliidae,
+  "cladocoridae": anthozoa_cladocoridae,
+  "diploastraeidae": anthozoa_diploastraeidae,
+  "plesiastreidae": anthozoa_plesiastreidae,
+  "pamiroseriidae": anthozoa_pamiroseriidae,
+  "plerogyridae": anthozoa_plerogyridae,
+  "epismiliidae": anthozoa_epismiliidae,
+  "pachyseridae": anthozoa_pachyseridae,
+  "psammocoridae": anthozoa_psammocoridae,
+  "pachyphylliidae": anthozoa_pachyphylliidae,
+  "procyclolitidae": anthozoa_procyclolitidae,
+  "felixaraeidae": anthozoa_felixaraeidae,
+  "amphiastraeidae": anthozoa_amphiastraeidae,
+  "agathiphylliidae": anthozoa_agathiphylliidae,
+  "placophylliidae": anthozoa_placophylliidae,
+  "conophylliidae": anthozoa_conophylliidae,
+  "eugyridae": anthozoa_eugyridae,
+  "zardinophyllidae": anthozoa_zardinophyllidae,
+  "astraraeidae": anthozoa_astraraeidae,
+  "astraeomorphidae": anthozoa_astraeomorphidae,
+  "agatheliidae": anthozoa_agatheliidae,
+  "coscinaraeidae": anthozoa_coscinaraeidae,
+  "asteroseriidae": anthozoa_asteroseriidae,
+  "gardineriidae": anthozoa_gardineriidae,
+  "leptastreidae": anthozoa_leptastreidae,
+  "oppelismiliidae": anthozoa_oppelismiliidae,
+  "donacosmiliidae": anthozoa_donacosmiliidae,
+  "guyniidae": anthozoa_guyniidae,
+  "anthemiphylliidae": anthozoa_anthemiphylliidae,
+  "protoheterastraeidae": anthozoa_protoheterastraeidae,
+  "trochoidomeandridae": anthozoa_trochoidomeandridae,
+  "solenocoeniidae": anthozoa_solenocoeniidae,
+  "smilotrochiidae": anthozoa_smilotrochiidae,
+  "phyllosmiliidae": anthozoa_phyllosmiliidae,
+  "negoporitidae": anthozoa_negoporitidae,
+  "intersmiliidae": anthozoa_intersmiliidae,
+  "schizocyathidae": anthozoa_schizocyathidae,
+  "archaeosmiliidae": anthozoa_archaeosmiliidae,
+  "kobyastraeidae": anthozoa_kobyastraeidae,
+  "cuifastraeidae": anthozoa_cuifastraeidae,
+  "carolastraeidae": anthozoa_carolastraeidae,
+  "oulastreidae": anthozoa_oulastreidae,
+  "volzeiidae": anthozoa_volzeiidae,
+  "opisthophyllidae": anthozoa_opisthophyllidae,
+  "sylviellidae": anthozoa_sylviellidae,
+  "stenocyathidae": anthozoa_stenocyathidae,
+  "misistellidae": anthozoa_misistellidae,
+  "hemiporitidae": anthozoa_hemiporitidae,
+  "cycliphylliidae": anthozoa_cycliphylliidae,
+  "andemantastraeidae": anthozoa_andemantastraeidae,
+  "mussidae": anthozoa_mussidae,
+  "parepismiliidae": anthozoa_parepismiliidae,
+  "guembelastraeidae": anthozoa_guembelastraeidae,
+  "pseudoturbinolidae": anthozoa_pseudoturbinolidae,
+  "microsolenidae": anthozoa_microsolenidae,
+  "hexapetalidae": anthozoa_hexapetalidae,
+  "rayasmiliidae": anthozoa_rayasmiliidae,
+  "smilostyliidae": anthozoa_smilostyliidae,
+  "parasmiliidae": anthozoa_parasmiliidae,
+  "rhipidastraeidae": anthozoa_rhipidastraeidae,
+  "eckastraeidae": anthozoa_eckastraeidae,
+  "gablonzeriidae": anthozoa_gablonzeriidae,
+  "polystylidiidae": anthozoa_polystylidiidae,
+  "numidiaphylliidae": anthozoa_numidiaphylliidae,
+  "gigantostyliidae": anthozoa_gigantostyliidae,
+  "ellipsosmiliidae": anthozoa_ellipsosmiliidae,
+  "distichoflabellidae": anthozoa_distichoflabellidae,
+  "curtoseriidae": anthozoa_curtoseriidae,
+  "pachyphyllidae": anthozoa_pachyphyllidae,
+  "andrazelliidae": anthozoa_andrazelliidae,
+  "corbariastraeidae": anthozoa_corbariastraeidae,
+  "anabaciidae": anthozoa_anabaciidae,
+  "archeoanthophyllidae": anthozoa_archeoanthophyllidae,
+  "nephtheidae": anthozoa_nephtheidae,
+  "paramuriceidae": anthozoa_paramuriceidae,
+  "sarcophytidae": anthozoa_sarcophytidae,
+  "gorgoniidae": anthozoa_gorgoniidae,
+  "xeniidae": anthozoa_xeniidae,
+  "alcyoniidae": anthozoa_alcyoniidae,
+  "plexauridae": anthozoa_plexauridae,
+  "melithaeidae": anthozoa_melithaeidae,
+  "clavulariidae": anthozoa_clavulariidae,
+  "cladiellidae": anthozoa_cladiellidae,
+  "siphonogorgiidae": anthozoa_siphonogorgiidae,
+  "lemnaliadae": anthozoa_lemnaliadae,
+  "astrogorgiidae": anthozoa_astrogorgiidae,
+  "euplexauridae": anthozoa_euplexauridae,
+  "tubiporidae": anthozoa_tubiporidae,
+  "anthogorgiidae": anthozoa_anthogorgiidae,
+  "capnellidae": anthozoa_capnellidae,
+  "eunicellidae": anthozoa_eunicellidae,
+  "pterogorgiidae": anthozoa_pterogorgiidae,
+  "isididae": anthozoa_isididae,
+  "nidaliidae": anthozoa_nidaliidae,
+  "paralcyoniidae": anthozoa_paralcyoniidae,
+  "plexaurellidae": anthozoa_plexaurellidae,
+  "subergorgiidae": anthozoa_subergorgiidae,
+  "keroeididae": anthozoa_keroeididae,
+  "victorgorgiidae": anthozoa_victorgorgiidae,
+  "sinulariidae": anthozoa_sinulariidae,
+  "acrophytidae": anthozoa_acrophytidae,
+  "cerveridae": anthozoa_cerveridae,
+  "leptophytidae": anthozoa_leptophytidae,
+  "incrustatidae": anthozoa_incrustatidae,
+  "acrossotidae": anthozoa_acrossotidae,
+  "carijoidae": anthozoa_carijoidae,
+  "arulidae": anthozoa_arulidae,
+  "nephthyigorgiidae": anthozoa_nephthyigorgiidae,
+  "aquaumbridae": anthozoa_aquaumbridae,
+  "scleracidae": anthozoa_scleracidae,
+  "acanthoaxiidae": anthozoa_acanthoaxiidae,
+  "malacacanthidae": anthozoa_malacacanthidae,
+  "rosgorgiidae": anthozoa_rosgorgiidae,
+  "taiaroidae": anthozoa_taiaroidae,
+  "discophytidae": anthozoa_discophytidae,
+  "skamnariidae": anthozoa_skamnariidae,
+  "coelogorgiidae": anthozoa_coelogorgiidae,
+  "corymbophytidae": anthozoa_corymbophytidae,
+  "pseudonephtheidae": anthozoa_pseudonephtheidae,
+  "waagenophyllidae": anthozoa_waagenophyllidae,
+  "favositidae": anthozoa_favositidae,
+  "petalaxidae": anthozoa_petalaxidae,
+  "streptelasmatidae": anthozoa_streptelasmatidae,
+  "durhaminidae": anthozoa_durhaminidae,
+  "cerianthidae": anthozoa_cerianthidae,
+  "lithostrotionidae": anthozoa_lithostrotionidae,
+  "micheliniidae": anthozoa_micheliniidae,
+  "aulophyllidae": anthozoa_aulophyllidae,
+  "pachyporidae": anthozoa_pachyporidae,
+  "phillipsastreidae": anthozoa_phillipsastreidae,
+  "hapsiphyllidae": anthozoa_hapsiphyllidae,
+  "plerophyllidae": anthozoa_plerophyllidae,
+  "lophophyllidiidae": anthozoa_lophophyllidiidae,
+  "cyathopsidae": anthozoa_cyathopsidae,
+  "disphyllidae": anthozoa_disphyllidae,
+  "kleopatrinidae": anthozoa_kleopatrinidae,
+  "arachnactidae": anthozoa_arachnactidae,
+  "auloporidae": anthozoa_auloporidae,
+  "laccophyllidae": anthozoa_laccophyllidae,
+  "alveolitidae": anthozoa_alveolitidae,
+  "cyathophyllidae": anthozoa_cyathophyllidae,
+  "polycoeliidae": anthozoa_polycoeliidae,
+  "botrucnidiferidae": anthozoa_botrucnidiferidae,
+  "tetraporellidae": anthozoa_tetraporellidae,
+  "pentaphyllidae": anthozoa_pentaphyllidae,
+  "ptenophyllidae": anthozoa_ptenophyllidae,
+  "syringoporidae": anthozoa_syringoporidae,
+  "cateniporidae": anthozoa_cateniporidae,
+  "hadrophyllidae": anthozoa_hadrophyllidae,
+  "antiphyllidae": anthozoa_antiphyllidae,
+  "arachnophyllidae": anthozoa_arachnophyllidae,
+  "endophyllidae": anthozoa_endophyllidae,
+  "tryplasmatidae": anthozoa_tryplasmatidae,
+  "bothrophyllidae": anthozoa_bothrophyllidae,
+  "geyerophyllidae": anthozoa_geyerophyllidae,
+  "kyphophyllidae": anthozoa_kyphophyllidae,
+  "lophotichiidae": anthozoa_lophotichiidae,
+  "syringophyllidae": anthozoa_syringophyllidae,
+  "lophophyllidae": anthozoa_lophophyllidae,
+  "multithecoporidae": anthozoa_multithecoporidae,
+  "metriophyllidae": anthozoa_metriophyllidae,
+  "axophyllidae": anthozoa_axophyllidae,
+  "spongiomorphidae": anthozoa_spongiomorphidae,
+  "verbeekiellidae": anthozoa_verbeekiellidae,
+  "sinoporidae": anthozoa_sinoporidae,
+  "cyathaxoniidae": anthozoa_cyathaxoniidae,
+  "kepingophyllidae": anthozoa_kepingophyllidae,
+  "heterophylliidae": anthozoa_heterophylliidae,
+  "halysitidae": anthozoa_halysitidae,
+  "entelophyllidae": anthozoa_entelophyllidae,
+  "diffingiidae": anthozoa_diffingiidae,
+  "agetolitidae": anthozoa_agetolitidae,
+  "amplexidae": anthozoa_amplexidae,
+  "zaphrentidae": anthozoa_zaphrentidae,
+  "chonophyllidae": anthozoa_chonophyllidae,
+  "expressophyllidae": anthozoa_expressophyllidae,
+  "theciidae": anthozoa_theciidae,
+  "cystiphyllidae": anthozoa_cystiphyllidae,
+  "timorphyllidae": anthozoa_timorphyllidae,
+  "roemeriidae": anthozoa_roemeriidae,
+  "haimeidae": anthozoa_haimeidae,
+  "spongophyllidae": anthozoa_spongophyllidae,
+  "goniophyllidae": anthozoa_goniophyllidae,
+  "pseudopavonidae": anthozoa_pseudopavonidae,
+  "gorskyitidae": anthozoa_gorskyitidae,
+  "stauriidae": anthozoa_stauriidae,
+  "stringophyllidae": anthozoa_stringophyllidae,
+  "lykophyllidae": anthozoa_lykophyllidae,
+  "coenitidae": anthozoa_coenitidae,
+  "palaeocyclidae": anthozoa_palaeocyclidae,
+  "columnariidae": anthozoa_columnariidae,
+  "lonsdaleiidae": anthozoa_lonsdaleiidae,
+  "zaphrentoididae": anthozoa_zaphrentoididae,
+  "mucophyllidae": anthozoa_mucophyllidae,
+  "kodonophyllidae": anthozoa_kodonophyllidae,
+  "protozaphrentidae": anthozoa_protozaphrentidae,
+  "palaeacidae": anthozoa_palaeacidae,
+  "cleistoporidae": anthozoa_cleistoporidae,
+  "tetradiidae": anthozoa_tetradiidae,
+  "endamplexidae": anthozoa_endamplexidae,
+  "paliphyllidae": anthozoa_paliphyllidae,
+  "calostylidae": anthozoa_calostylidae,
+  "ekvasophyllidae": anthozoa_ekvasophyllidae,
+  "tabulaconidae": anthozoa_tabulaconidae,
+  "trachypsammidae": anthozoa_trachypsammidae,
+  "lichenariidae": anthozoa_lichenariidae,
+  "lambelasmatidae": anthozoa_lambelasmatidae,
+  "paiutitubulitidae": anthozoa_paiutitubulitidae,
+  "ketophyllidae": anthozoa_ketophyllidae,
+  "pycnostylidae": anthozoa_pycnostylidae,
+  "ptychophyllidae": anthozoa_ptychophyllidae,
+  "paleocyclidae": anthozoa_paleocyclidae,
+  "huadianophyllidae": anthozoa_huadianophyllidae,
+  "mirandellidae": anthozoa_mirandellidae,
+  "petraphyllidae": anthozoa_petraphyllidae,
+  "koninckocariniidae": anthozoa_koninckocariniidae,
+  "palaeosmiliidae": anthozoa_palaeosmiliidae,
+  "auloheliidae": anthozoa_auloheliidae,
+  "kilbuchophyllidae": anthozoa_kilbuchophyllidae,
+  "kielcephyllidae": anthozoa_kielcephyllidae,
+  "lindstroemiidae": anthozoa_lindstroemiidae,
+  "schizophoritidae": anthozoa_schizophoritidae,
+  "petraiidae": anthozoa_petraiidae,
+  "syringolitidae": anthozoa_syringolitidae,
+  "romingeriidae": anthozoa_romingeriidae,
+  "uraliniidae": anthozoa_uraliniidae,
+  "dorlodotidae": anthozoa_dorlodotidae,
+  "pseudogorgiidae": anthozoa_pseudogorgiidae,
+  "calceolidae": anthozoa_calceolidae,
+  "fasciphyllidae": anthozoa_fasciphyllidae,
+  "stereolasmatidae": anthozoa_stereolasmatidae,
+  "parastriatoporidae": anthozoa_parastriatoporidae,
+  "fletcheriellidae": anthozoa_fletcheriellidae,
+  "holmophyllidae": anthozoa_holmophyllidae,
+  "lyoporidae": anthozoa_lyoporidae,
+  "neoroemeriidae": anthozoa_neoroemeriidae,
+  "trachypsammiidae": anthozoa_trachypsammiidae,
+  "pseudofavositidae": anthozoa_pseudofavositidae,
+  "lamottiidae": anthozoa_lamottiidae,
+  "plerodiffiidae": anthozoa_plerodiffiidae,
+  "craspedophyllidae": anthozoa_craspedophyllidae,
+  "halliidae": anthozoa_halliidae,
+  "trachyporidae": anthozoa_trachyporidae,
+  "digonophyllidae": anthozoa_digonophyllidae,
+  "proheliolitidae": anthozoa_proheliolitidae,
+  "ricordiidae": anthozoa_ricordiidae,
+  "aurelianidae": anthozoa_aurelianidae,
+  "exocoelactiidae": anthozoa_exocoelactiidae,
+  "pennautlidae": anthozoa_pennautlidae,
+  "cyclastraeidae": anthozoa_cyclastraeidae,
+  "palaeofavosiporidae": anthozoa_palaeofavosiporidae,
+  "kozlowskiocystiidae": anthozoa_kozlowskiocystiidae,
+  "actinodiscidae": anthozoa_actinodiscidae,
+  "anisophyllidae": anthozoa_anisophyllidae,
+  "acervulariidae": anthozoa_acervulariidae,
+  "vaughaniidae": anthozoa_vaughaniidae,
+  "taeniolitidae": anthozoa_taeniolitidae,
+  "eridophyllidae": anthozoa_eridophyllidae,
+  "pachythecalidae": anthozoa_pachythecalidae,
+  "acrophyllidae": anthozoa_acrophyllidae,
+  "gerardiidae": anthozoa_gerardiidae,
+  "ptychodactidae": anthozoa_ptychodactidae,
+  "paractidae": anthozoa_paractidae,
+  "ilyanthidae": anthozoa_ilyanthidae,
+  "trochosmiliidae": anthozoa_trochosmiliidae,
+  "pteroeididae": anthozoa_pteroeididae,
+  "telestidae": anthozoa_telestidae,
+  "pseudocladochomidae": anthozoa_pseudocladochomidae,
+  "astrospiculariidae": anthozoa_astrospiculariidae,
+  "briaridae": anthozoa_briaridae,
+  "ainigmaptilidae": anthozoa_ainigmaptilidae,
+  "plasmoporellidae": anthozoa_plasmoporellidae,
+  "bethanyphyllidae": anthozoa_bethanyphyllidae,
+  "pycnolithidae": anthozoa_pycnolithidae,
+  "campophyllidae": anthozoa_campophyllidae,
+  "distichophyllidae": anthozoa_distichophyllidae,
+  "numidiaphyllidae": anthozoa_numidiaphyllidae,
+  "amsdenoididae": anthozoa_amsdenoididae,
+  "combophyllidae": anthozoa_combophyllidae,
+  "tropiastreidae": anthozoa_tropiastreidae,
+  "funginellidae": anthozoa_funginellidae,
+  "heliastraeidae": anthozoa_heliastraeidae,
+  "gardinariidae": anthozoa_gardinariidae,
+  "eusmilidae": anthozoa_eusmilidae,
+  "siderasteridae": anthozoa_siderasteridae,
+  "alpinophylliidae": anthozoa_alpinophylliidae,
+  "cyclophyllopsiidae": anthozoa_cyclophyllopsiidae,
+  "carolastaeidae": anthozoa_carolastaeidae,
+  "caryophyllidae": anthozoa_caryophyllidae,
+  "lithophylliidae": anthozoa_lithophylliidae,
+  "waiparaconidae": anthozoa_waiparaconidae,
+  "pseudocladochonidae": anthozoa_pseudocladochonidae,
+  "arachnanthidae": anthozoa_arachnanthidae,
+  "mycophyllidae": anthozoa_mycophyllidae,
+  "sterictophyllidae": anthozoa_sterictophyllidae,
+  "muriceidae": anthozoa_muriceidae,
+  "pteroididae": anthozoa_pteroididae,
+  "pyrgiidae": anthozoa_pyrgiidae,
+  "periphaceloporidae": anthozoa_periphaceloporidae,
+  "maasellidae": anthozoa_maasellidae,
+  "coccoserididae": anthozoa_coccoserididae,
+  "thecostegitidae": anthozoa_thecostegitidae,
+  "porastriatoporidae": anthozoa_porastriatoporidae,
+  "pyrigiidae": anthozoa_pyrigiidae,
+  "billingsariidae": anthozoa_billingsariidae,
+  "centristelidae": anthozoa_centristelidae,
+  "paleoalveolitidae": anthozoa_paleoalveolitidae,
+  "cyrtophyllidae": anthozoa_cyrtophyllidae,
+  "endotheciidae": anthozoa_endotheciidae,
+  "cothoniidae": anthozoa_cothoniidae,
+  "kiziliidae": anthozoa_kiziliidae,
+  "adamanophyllidae": anthozoa_adamanophyllidae,
+  "multisoleniidae": anthozoa_multisoleniidae,
+  "chonostegitidae": anthozoa_chonostegitidae,
+  "lipoporidae": anthozoa_lipoporidae,
+  "septodaeidae": anthozoa_septodaeidae,
+  "neocolumnariidae": anthozoa_neocolumnariidae,
+  "bajgoliidae": anthozoa_bajgoliidae,
+  "fletcheriidae": anthozoa_fletcheriidae,
+  "ditoecholasmatidae": anthozoa_ditoecholasmatidae,
+  "aphrophyllidae": anthozoa_aphrophyllidae,
+  "eupsammidae": anthozoa_eupsammidae,
+  "pinacophyllidae": anthozoa_pinacophyllidae,
+  "haplareidae": anthozoa_haplareidae,
+  "isastraeidae": anthozoa_isastraeidae,
+  "margarophyllidae": anthozoa_margarophyllidae,
+  "protoheterstraeidae": anthozoa_protoheterstraeidae,
+  "phyllocoeniidae": anthozoa_phyllocoeniidae,
+  "euhellidae": anthozoa_euhellidae,
+  "mitrodendronidae": anthozoa_mitrodendronidae,
+  "antheidae": anthozoa_antheidae,
+  "diploastreidae": anthozoa_diploastreidae,
+  "semperinidae": anthozoa_semperinidae,
+  "kophobelemnonidae": anthozoa_kophobelemnonidae,
+  "evenkiellidae": anthozoa_evenkiellidae,
+  "microbaciidae": anthozoa_microbaciidae,
+  "cyathactidae": anthozoa_cyathactidae,
+  "tropiphyllidae": anthozoa_tropiphyllidae,
+  "tryplasmidae": anthozoa_tryplasmidae,
+  "thamnoporidae": anthozoa_thamnoporidae,
+  "kophobelemnoidae": anthozoa_kophobelemnoidae,
+  "chrysogorgidae": anthozoa_chrysogorgidae,
+  "dendrogyriidae": anthozoa_dendrogyriidae,
+  "distichophylliidae": anthozoa_distichophylliidae,
+  "clisiophyllidae": anthozoa_clisiophyllidae,
+  "romanophyllidae": anthozoa_romanophyllidae,
+  "bogambirolitidae": anthozoa_bogambirolitidae,
+  "vojnovskytesidae": anthozoa_vojnovskytesidae,
+  "hawaidae": anthozoa_hawaidae,
+  "madreporidae": anthozoa_madreporidae,
+  "gerardidae": anthozoa_gerardidae,
+  "primnozoanthidae": anthozoa_primnozoanthidae,
+  "parasitozoanthidae": anthozoa_parasitozoanthidae,
+  "dasmiidae": anthozoa_dasmiidae,
+  "pruvostastraeidae": anthozoa_pruvostastraeidae,
+  "cyclophyllopsidae": anthozoa_cyclophyllopsidae,
+  "thamnasterioidae": anthozoa_thamnasterioidae,
+  "innaporidae": anthozoa_innaporidae,
+  "angoporidae": anthozoa_angoporidae,
+  "dimorphophylliidae": anthozoa_dimorphophylliidae,
+  "sinopathidae": anthozoa_sinopathidae,
+  "latomaeandridae": anthozoa_latomaeandridae,
+  "pleurosmiliidae": anthozoa_pleurosmiliidae,
+  "aplosmiliidae": anthozoa_aplosmiliidae,
+  "ellisitidae": anthozoa_ellisitidae,
+  "acrocyathidae": anthozoa_acrocyathidae,
+  "flosmarinidae": anthozoa_flosmarinidae,
+  "brachiphylliidae": anthozoa_brachiphylliidae,
+  "retiophylliidae": anthozoa_retiophylliidae,
+  "thamnastraeidae": anthozoa_thamnastraeidae,
+  "reimaniphyllidae": anthozoa_reimaniphyllidae,
+  "symphylliidae": anthozoa_symphylliidae,
+  "ceratocorallia": anthozoa_ceratocorallia,
+  "gyrophyllidae": anthozoa_gyrophyllidae,
+  "primnoidae": anthozoa_primnoidae,
+  "ellisellidae": anthozoa_ellisellidae,
+  "pennatulidae": anthozoa_pennatulidae,
+  "chrysogorgiidae": anthozoa_chrysogorgiidae,
+  "coralliidae": anthozoa_coralliidae,
+  "mopseidae": anthozoa_mopseidae,
+  "virgulariidae": anthozoa_virgulariidae,
+  "keratoisididae": anthozoa_keratoisididae,
+  "veretillidae": anthozoa_veretillidae,
+  "helioporidae": anthozoa_helioporidae,
+  "umbellulidae": anthozoa_umbellulidae,
+  "kophobelemnidae": anthozoa_kophobelemnidae,
+  "sarcodictyonidae": anthozoa_sarcodictyonidae,
+  "renillidae": anthozoa_renillidae,
+  "ifalukellidae": anthozoa_ifalukellidae,
+  "spongiodermidae": anthozoa_spongiodermidae,
+  "briareidae": anthozoa_briareidae,
+  "parisididae": anthozoa_parisididae,
+  "aulopsammiidae": anthozoa_aulopsammiidae,
+  "parasphaerascleridae": anthozoa_parasphaerascleridae,
+  "scleroptilidae": anthozoa_scleroptilidae,
+  "protoptilidae": anthozoa_protoptilidae,
+  "echinoptilidae": anthozoa_echinoptilidae,
+  "anthoptilidae": anthozoa_anthoptilidae,
+  "balticinidae": anthozoa_balticinidae,
+  "stachyptilidae": anthozoa_stachyptilidae,
+  "erythropodiidae": anthozoa_erythropodiidae,
+  "funiculinidae": anthozoa_funiculinidae,
+  "dendrobrachiidae": anthozoa_dendrobrachiidae,
+  "cornulariidae": anthozoa_cornulariidae,
+  "chunellidae": anthozoa_chunellidae,
+  "chelidonisididae": anthozoa_chelidonisididae,
+  "pleurogorgiidae": anthozoa_pleurogorgiidae,
+  "ideogorgiidae": anthozoa_ideogorgiidae,
+  "pseudumbellulidae": anthozoa_pseudumbellulidae,
+  "isidoidae": anthozoa_isidoidae,
+  "actiniidae": anthozoa_actiniidae,
+  "hormathiidae": anthozoa_hormathiidae,
+  "edwardsiidae": anthozoa_edwardsiidae,
+  "sagartiidae": anthozoa_sagartiidae,
+  "andvakiidae": anthozoa_andvakiidae,
+  "actinostolidae": anthozoa_actinostolidae,
+  "amphianthidae": anthozoa_amphianthidae,
+  "halcampidae": anthozoa_halcampidae,
+  "aiptasiidae": anthozoa_aiptasiidae,
+  "sicyonidae": anthozoa_sicyonidae,
+  "peachiidae": anthozoa_peachiidae,
+  "haloclavidae": anthozoa_haloclavidae,
+  "halcampoididae": anthozoa_halcampoididae,
+  "kadosactinidae": anthozoa_kadosactinidae,
+  "isanthidae": anthozoa_isanthidae,
+  "halcuriidae": anthozoa_halcuriidae,
+  "phymanthidae": anthozoa_phymanthidae,
+  "diadumenidae": anthozoa_diadumenidae,
+  "condylanthidae": anthozoa_condylanthidae,
+  "aliciidae": anthozoa_aliciidae,
+  "minyadidae": anthozoa_minyadidae,
+  "stichodactylidae": anthozoa_stichodactylidae,
+  "actinodendridae": anthozoa_actinodendridae,
+  "haliactinidae": anthozoa_haliactinidae,
+  "phelliidae": anthozoa_phelliidae,
+  "actinernidae": anthozoa_actinernidae,
+  "boloceroididae": anthozoa_boloceroididae,
+  "thalassianthidae": anthozoa_thalassianthidae,
+  "bathyphelliidae": anthozoa_bathyphelliidae,
+  "actinoscyphiidae": anthozoa_actinoscyphiidae,
+  "capneidae": anthozoa_capneidae,
+  "acontiophoridae": anthozoa_acontiophoridae,
+  "metridiidae": anthozoa_metridiidae,
+  "aiptasiomorphidae": anthozoa_aiptasiomorphidae,
+  "octineonidae": anthozoa_octineonidae,
+  "anthosactinidae": anthozoa_anthosactinidae,
+  "liponematidae": anthozoa_liponematidae,
+  "isactinernidae": anthozoa_isactinernidae,
+  "harenactidae": anthozoa_harenactidae,
+  "nemanthidae": anthozoa_nemanthidae,
+  "oractiidae": anthozoa_oractiidae,
+  "iosactinidae": anthozoa_iosactinidae,
+  "galatheanthemidae": anthozoa_galatheanthemidae,
+  "preactiniidae": anthozoa_preactiniidae,
+  "limnactiniidae": anthozoa_limnactiniidae,
+  "homostichanthidae": anthozoa_homostichanthidae,
+  "gonactiniidae": anthozoa_gonactiniidae,
+  "ptychodactinidae": anthozoa_ptychodactinidae,
+  "exocoelactinidae": anthozoa_exocoelactinidae,
+  "polyopidae": anthozoa_polyopidae,
+  "haliplanellidae": anthozoa_haliplanellidae,
+  "sagartiomorphidae": anthozoa_sagartiomorphidae,
+  "nevadneidae": anthozoa_nevadneidae,
+  "andresiidae": anthozoa_andresiidae,
+  "heteractidae": anthozoa_heteractidae,
+  "heteranthidae": anthozoa_heteranthidae,
+  "sarcophinanthidae": anthozoa_sarcophinanthidae,
+  "antheomorphidae": anthozoa_antheomorphidae,
+  "ostiactinidae": anthozoa_ostiactinidae,
+  "acricoactinidae": anthozoa_acricoactinidae,
+  "spongiactinidae": anthozoa_spongiactinidae,
+  "relicanthidae": anthozoa_relicanthidae,
+  "halcampulactidae": anthozoa_halcampulactidae,
+  "tetracoelactinidae": anthozoa_tetracoelactinidae,
+  "mackenziidae": anthozoa_mackenziidae,
+  "sphenopidae": anthozoa_sphenopidae,
+  "zoanthidae": anthozoa_zoanthidae,
+  "parazoanthidae": anthozoa_parazoanthidae,
+  "epizoanthidae": anthozoa_epizoanthidae,
+  "hydrozoanthidae": anthozoa_hydrozoanthidae,
+  "neozoanthidae": anthozoa_neozoanthidae,
+  "abyssoanthidae": anthozoa_abyssoanthidae,
+  "microzoanthidae": anthozoa_microzoanthidae,
+  "nanozoanthidae": anthozoa_nanozoanthidae,
+  "antipathidae": anthozoa_antipathidae,
+  "schizopathidae": anthozoa_schizopathidae,
+  "aphanipathidae": anthozoa_aphanipathidae,
+  "myriopathidae": anthozoa_myriopathidae,
+  "cladopathidae": anthozoa_cladopathidae,
+  "stylopathidae": anthozoa_stylopathidae,
+  "leiopathidae": anthozoa_leiopathidae,
+  "corallimorphidae": anthozoa_corallimorphidae,
+  "discosomidae": anthozoa_discosomidae,
+  "sideractinidae": anthozoa_sideractinidae,
+  "ricordeidae": anthozoa_ricordeidae,
+  "heliolitidae": anthozoa_heliolitidae,
+  "stelliporellidae": anthozoa_stelliporellidae,
+  "palaeoporitidae": anthozoa_palaeoporitidae,
+  "plasmoporidae": anthozoa_plasmoporidae,
+  "sibiriolitidae": anthozoa_sibiriolitidae,
+  "pseudoplasmoporidae": anthozoa_pseudoplasmoporidae,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

@@ -27,9 +27,16 @@ function getClasses(root: TaxonNode): { name: string; color: string; node: Taxon
   return classes;
 }
 
-function collectSpecies(node: TaxonNode): TaxonNode[] {
+function collectAllSpecies(node: TaxonNode): TaxonNode[] {
   if (node.rank === "SPECIES") return [node];
-  return (node.children ?? []).flatMap(collectSpecies);
+  const result: TaxonNode[] = [];
+  if (node.speciesList) {
+    result.push(...node.speciesList);
+  }
+  for (const child of node.children ?? []) {
+    result.push(...collectAllSpecies(child));
+  }
+  return result;
 }
 
 function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
@@ -70,11 +77,12 @@ export default function WheelOfNature({ data, onClose, onNavigate }: Props) {
       const effectiveAngle = (360 - (finalRotation % 360)) % 360;
       const sectorIndex = Math.floor(effectiveAngle / SECTOR_ANGLE) % SECTOR_COUNT;
       const winningClass = classes[sectorIndex];
-      const speciesList = collectSpecies(winningClass.node);
+      if (!winningClass) { setIsSpinning(false); return; }
+      const speciesList = collectAllSpecies(winningClass.node);
       const randomSpecies = speciesList[Math.floor(Math.random() * speciesList.length)];
       setWinner({ className: winningClass.name, species: randomSpecies ?? winningClass.node });
       setIsSpinning(false);
-    }, 4000);
+    }, 7000);
   }, [isSpinning, rotation, classes]);
 
   const goToSpecies = useCallback(() => {
@@ -83,9 +91,11 @@ export default function WheelOfNature({ data, onClose, onNavigate }: Props) {
     onClose();
   }, [winner, onNavigate, onClose]);
 
-  const wheelRadius = 160;
-  const cx = 200;
-  const cy = 200;
+  const wheelRadius = 240;
+  const cx = 260;
+  const cy = 260;
+  const SIZE = 520;
+  const CENTER_DOT = 22;
 
   return (
     <div
@@ -108,7 +118,7 @@ export default function WheelOfNature({ data, onClose, onNavigate }: Props) {
           border: "1px solid #1e2030",
           borderRadius: 16,
           width: "100%",
-          maxWidth: 520,
+          maxWidth: 700,
           position: "relative",
           padding: "32px",
           textAlign: "center",
@@ -143,12 +153,12 @@ export default function WheelOfNature({ data, onClose, onNavigate }: Props) {
           Wheel of Nature
         </div>
 
-        <div style={{ position: "relative", width: 400, height: 400, margin: "0 auto" }}>
-          <svg width={400} height={400} viewBox="0 0 400 400">
+        <div style={{ position: "relative", width: SIZE, height: SIZE, margin: "0 auto" }}>
+          <svg width={SIZE} height={SIZE} viewBox={`0 0 ${SIZE} ${SIZE}`}>
             <g
               style={{
                 transformOrigin: `${cx}px ${cy}px`,
-                transition: isSpinning ? "transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99)" : "none",
+                transition: isSpinning ? "transform 7s cubic-bezier(0.17, 0.67, 0.12, 0.99)" : "none",
                 transform: `rotate(${rotation}deg)`,
               }}
             >
@@ -156,7 +166,10 @@ export default function WheelOfNature({ data, onClose, onNavigate }: Props) {
                 const startAngle = i * SECTOR_ANGLE;
                 const endAngle = (i + 1) * SECTOR_ANGLE;
                 const midAngle = startAngle + SECTOR_ANGLE / 2;
-                const labelPos = polarToCartesian(cx, cy, wheelRadius * 0.65, midAngle);
+                const labelR = wheelRadius * 0.62;
+                const labelPos = polarToCartesian(cx, cy, labelR, midAngle);
+                const isRightSide = midAngle > 270 || midAngle < 90;
+                const labelRotation = isRightSide ? midAngle : midAngle + 180;
                 return (
                   <g key={cls.name}>
                     <path
@@ -173,28 +186,32 @@ export default function WheelOfNature({ data, onClose, onNavigate }: Props) {
                       fill="#ccc"
                       fontSize={10}
                       fontWeight={500}
-                      style={{ pointerEvents: "none" }}
+                      style={{
+                        pointerEvents: "none",
+                        transform: `rotate(${labelRotation}deg)`,
+                        transformOrigin: `${labelPos.x}px ${labelPos.y}px`,
+                      }}
                     >
                       {cls.name}
                     </text>
                   </g>
                 );
               })}
-              <circle cx={cx} cy={cy} r={18} fill="#0f1117" stroke="#2a3040" strokeWidth={2} />
-              <circle cx={cx} cy={cy} r={6} fill="#555" />
+              <circle cx={cx} cy={cy} r={CENTER_DOT} fill="#0f1117" stroke="#2a3040" strokeWidth={2} />
+              <circle cx={cx} cy={cy} r={8} fill="#555" />
             </g>
 
             {Array.from({ length: SECTOR_COUNT }).map((_, i) => {
               const angle = i * SECTOR_ANGLE;
-              const pos = polarToCartesian(cx, cy, wheelRadius + 6, angle);
+              const pos = polarToCartesian(cx, cy, wheelRadius + 8, angle);
               return (
-                <circle key={i} cx={pos.x} cy={pos.y} r={3} fill="#555" />
+                <circle key={i} cx={pos.x} cy={pos.y} r={3.5} fill="#555" />
               );
             })}
 
-            <g transform={`translate(${cx}, ${cy - wheelRadius - 24})`}>
-              <path d="M -8 0 L 8 0 L 0 20 Z" fill="#c8a84a" stroke="#a08030" strokeWidth={1} />
-              <circle cx={0} cy={0} r={5} fill="#c8a84a" stroke="#a08030" strokeWidth={1} />
+            <g transform={`translate(${cx}, ${cy - wheelRadius - 28})`}>
+              <path d="M -10 0 L 10 0 L 0 24 Z" fill="#c8a84a" stroke="#a08030" strokeWidth={1} />
+              <circle cx={0} cy={0} r={6} fill="#c8a84a" stroke="#a08030" strokeWidth={1} />
             </g>
           </svg>
         </div>

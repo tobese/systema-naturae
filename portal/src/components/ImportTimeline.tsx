@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import * as d3 from "d3";
 import importLog from "../../data/import-log.json";
 
@@ -12,21 +12,19 @@ interface ImportEvent {
   nodes: number;
 }
 
+interface DayPoint {
+  date: Date;
+  speciesRunning: number;
+}
+
 const W = 700;
 const H = 400;
-const M = { top: 28, right: 60, bottom: 56, left: 56 };
+const M = { top: 28, right: 20, bottom: 56, left: 56 };
 const IW = W - M.left - M.right;
 const IH = H - M.top - M.bottom;
 
-type Series = "cumulative" | "bars" | "nodes";
-
 export default function ImportTimeline() {
   const svgRef = useRef<SVGSVGElement>(null);
-  const [visible, setVisible] = useState<Record<Series, boolean>>({
-    cumulative: true, bars: true, nodes: true,
-  });
-
-  const toggle = (s: Series) => setVisible(v => ({ ...v, [s]: !v[s] }));
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -35,10 +33,24 @@ export default function ImportTimeline() {
 
     const firstDate = new Date(raw[0].date);
     const origin = new Date(firstDate.getTime() - 24 * 60 * 60 * 1000);
-    const data = [
-      { date: origin.toISOString(), speciesRunning: 0, speciesAdded: 0, nodes: 0, commit: "", message: "", families: [] },
-      ...raw,
-    ];
+
+    const events = [{ date: origin, speciesRunning: 0, speciesAdded: 0, nodes: 0, commit: "", message: "", families: [] as string[] } as ImportEvent, ...raw];
+
+    const dayPoints: DayPoint[] = [];
+    for (let i = 0; i < events.length - 1; i++) {
+      const a = events[i];
+      const b = events[i + 1];
+      const aDate = new Date(a.date);
+      const bDate = new Date(b.date);
+      const daysDiff = Math.round((bDate.getTime() - aDate.getTime()) / (24 * 60 * 60 * 1000));
+      const speciesDiff = b.speciesRunning - a.speciesRunning;
+      const dailyRate = daysDiff > 0 ? speciesDiff / daysDiff : speciesDiff;
+      for (let d = 0; d <= daysDiff; d++) {
+        const pointDate = new Date(aDate.getTime() + d * 24 * 60 * 60 * 1000);
+        const speciesRunning = a.speciesRunning + dailyRate * d;
+        dayPoints.push({ date: pointDate, speciesRunning: Math.round(speciesRunning) });
+      }
+    }
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
@@ -59,118 +71,45 @@ export default function ImportTimeline() {
 
     const g = svg.append("g").attr("transform", `translate(${M.left},${M.top})`);
 
-    const xDomain = d3.extent(data, d => new Date(d.date)) as [Date, Date];
+    const xDomain = d3.extent(dayPoints, d => d.date) as [Date, Date];
     const x = d3.scaleTime().domain(xDomain).range([0, IW]);
 
-    const maxSpecies = d3.max(data, d => d.speciesRunning)!;
-    const maxNodes = d3.max(data, d => d.nodes)!;
+    const maxSpecies = d3.max(dayPoints, d => d.speciesRunning)!;
     const ySpecies = d3.scaleLinear()
       .domain([0, maxSpecies * 1.05]).range([IH, 0]);
-    const yNodes = d3.scaleLinear()
-      .domain([0, maxNodes * 1.05]).range([IH, 0]);
 
-    // Grid lines (using species axis)
     g.append("g")
       .call(d3.axisLeft(ySpecies).ticks(6).tickSize(-IW).tickFormat(d3.format("~s")))
       .selectAll(".tick line")
       .attr("stroke", "#1e2030");
 
-    // X axis
     g.append("g")
       .attr("transform", `translate(0,${IH})`)
       .call(d3.axisBottom(x).ticks(6).tickFormat(d3.timeFormat("%b %d") as any))
       .selectAll("text")
       .attr("fill", "#666");
 
-    // Y axis label (species)
     g.append("text")
       .attr("x", -40).attr("y", 12)
       .attr("fill", "#444").attr("font-size", 10)
       .text("Species");
 
-    // Right Y axis (nodes)
-    const rightAxis = g.append("g")
-      .attr("transform", `translate(${IW},0)`)
-      .call(d3.axisRight(yNodes).ticks(5).tickFormat(d3.format("~s")))
-      .attr("color", "#665544");
+    const area = d3.area<DayPoint>()
+      .x(d => x(d.date)).y0(IH).y1(d => ySpecies(d.speciesRunning));
+    g.append("path").datum(dayPoints).attr("d", area)
+      .attr("fill", "url(#grad)").attr("opacity", 0.35);
 
-    rightAxis.selectAll(".tick text").attr("fill", "#887060");
+    const line = d3.line<DayPoint>()
+      .x(d => x(d.date)).y(d => ySpecies(d.speciesRunning));
+    g.append("path").datum(dayPoints).attr("d", line)
+      .attr("fill", "none").attr("stroke", "#6a8aba").attr("stroke-width", 2);
 
-    g.append("text")
-      .attr("x", IW + 46).attr("y", 12)
-      .attr("fill", "#665544").attr("font-size", 10)
-      .text("Nodes");
+    g.selectAll(".dot")
+      .data(dayPoints.filter(d => d.date >= firstDate))
+      .join("circle")
+      .attr("cx", d => x(d.date)).attr("cy", d => ySpecies(d.speciesRunning))
+      .attr("r", 2.5).attr("fill", "#6a8aba").attr("stroke", "#0f1117").attr("stroke-width", 1);
 
-    // Common bar settings
-    const barData = raw;
-    const barWidth = Math.max(8, IW / barData.length * 0.3);
-
-    // Bars (species per batch)
-    if (visible.bars) {
-      g.selectAll(".bar")
-        .data(barData)
-        .join("rect")
-        .attr("class", "bar")
-        .attr("x", d => x(new Date(d.date)) - barWidth / 2)
-        .attr("width", barWidth)
-        .attr("y", d => ySpecies(d.speciesRunning))
-        .attr("height", d => IH - ySpecies(d.speciesRunning))
-        .attr("fill", "#5a8aba")
-        .attr("opacity", 0.55)
-        .attr("rx", 2)
-        .on("mouseenter", function (_, d) {
-          d3.select(this).attr("opacity", 1);
-          tooltip.style("display", "block").html(formatTooltip(d));
-        })
-        .on("mousemove", function (e: MouseEvent) {
-          const rect = svgRef.current!.getBoundingClientRect();
-          tooltip
-            .style("left", `${e.clientX - rect.left + 14}px`)
-            .style("top", `${e.clientY - rect.top - 10}px`);
-        })
-        .on("mouseleave", function () {
-          d3.select(this).attr("opacity", 0.55);
-          tooltip.style("display", "none");
-        });
-    }
-
-    // Cumulative species area + line
-    if (visible.cumulative) {
-      const area = d3.area<typeof data[0]>()
-        .x(d => x(new Date(d.date))).y0(IH).y1(d => ySpecies(d.speciesRunning))
-        .curve(d3.curveStepAfter);
-      g.append("path").datum(data).attr("d", area)
-        .attr("fill", "url(#grad)").attr("opacity", 0.35);
-
-      const line = d3.line<typeof data[0]>()
-        .x(d => x(new Date(d.date))).y(d => ySpecies(d.speciesRunning))
-        .curve(d3.curveStepAfter);
-      g.append("path").datum(data).attr("d", line)
-        .attr("fill", "none").attr("stroke", "#6a8aba").attr("stroke-width", 2);
-
-      g.selectAll(".dot")
-        .data(raw)
-        .join("circle")
-        .attr("cx", d => x(new Date(d.date))).attr("cy", d => ySpecies(d.speciesRunning))
-        .attr("r", 3).attr("fill", "#6a8aba").attr("stroke", "#0f1117").attr("stroke-width", 1.5);
-    }
-
-    // Node count line
-    if (visible.nodes) {
-      const nodeLine = d3.line<typeof data[0]>()
-        .x(d => x(new Date(d.date))).y(d => yNodes(d.nodes))
-        .curve(d3.curveStepAfter);
-      g.append("path").datum(data).attr("d", nodeLine)
-        .attr("fill", "none").attr("stroke", "#c89860").attr("stroke-width", 1.5).attr("stroke-dasharray", "5,3");
-
-      g.selectAll(".node-dot")
-        .data(raw)
-        .join("circle")
-        .attr("cx", d => x(new Date(d.date))).attr("cy", d => yNodes(d.nodes))
-        .attr("r", 2.5).attr("fill", "#c89860").attr("stroke", "#0f1117").attr("stroke-width", 1);
-    }
-
-    // Tooltip
     const container = svgRef.current!.parentElement!;
     const tooltip = d3.select(container)
       .append("div")
@@ -181,35 +120,36 @@ export default function ImportTimeline() {
       .style("pointer-events", "none").style("z-index", "300")
       .style("max-width", "300px").style("line-height", "1.5");
 
-    function formatTooltip(d: ImportEvent): string {
-      const date = new Date(d.date).toLocaleDateString("en-GB", { month: "short", day: "numeric", year: "numeric" });
-      const msg = d.message.length > 60 ? d.message.slice(0, 60) + "…" : d.message;
-      const famList = d.families.length > 8
-        ? d.families.slice(0, 8).join(", ") + ` +${d.families.length - 8} more`
-        : d.families.join(", ");
-      return `
-        <div style="font-weight:600;color:#d0d0e0;margin-bottom:4px">${date}</div>
-        <div style="margin-bottom:6px;font-size:10px;color:#666">${msg}</div>
-        <div style="display:flex;gap:12px;margin-bottom:4px">
-          <span><b style="color:#8aba6a">+${d.speciesAdded.toLocaleString()}</b> species</span>
-          <span><b style="color:#6a8aba">${d.speciesRunning.toLocaleString()}</b> total</span>
-          <span><b style="color:#887060">${d.families.length}</b> families</span>
-        </div>
-        <div style="font-size:10px;color:#666">${famList}</div>
-      `;
-    }
-  }, [visible]);
+    const eventsByDate = new Map(events.filter(e => e.speciesRunning > 0).map(e => [e.date.slice(0, 10), e]));
+
+    g.selectAll(".dot")
+      .on("mouseenter", function (_, d) {
+        const dateStr = d.date.toISOString().slice(0, 10);
+        const ev = eventsByDate.get(dateStr);
+        d3.select(this).attr("r", 4).attr("stroke-width", 2);
+        let html = `<div style="font-weight:600;color:#d0d0e0;margin-bottom:4px">${d.date.toLocaleDateString("en-GB", { month: "short", day: "numeric", year: "numeric" })}</div>`;
+        html += `<div><b style="color:#6a8aba">${d.speciesRunning.toLocaleString()}</b> species total</div>`;
+        if (ev) {
+          html += `<div style="margin-top:4px"><b style="color:#8aba6a">+${ev.speciesAdded.toLocaleString()}</b> species this batch</div>`;
+          html += `<div style="font-size:10px;color:#666;margin-top:2px">${ev.families.length} families</div>`;
+        }
+        tooltip.style("display", "block").html(html);
+      })
+      .on("mousemove", function (e: MouseEvent) {
+        const rect = svgRef.current!.getBoundingClientRect();
+        tooltip
+          .style("left", `${e.clientX - rect.left + 14}px`)
+          .style("top", `${e.clientY - rect.top - 10}px`);
+      })
+      .on("mouseleave", function () {
+        d3.select(this).attr("r", 2.5).attr("stroke-width", 1);
+        tooltip.style("display", "none");
+      });
+  }, []);
 
   const data = (importLog as ImportEvent[]).filter(d => d.speciesRunning > 0);
   const totalSpecies = data.reduce((s, d) => Math.max(s, d.speciesRunning), 0);
-  const totalNodes = data.reduce((s, d) => Math.max(s, d.nodes), 0);
   const totalEvents = data.length;
-
-  const legend = [
-    { key: "cumulative" as Series, color: "#6a8aba", label: "Cumulative species" },
-    { key: "bars" as Series, color: "#5a8aba", label: "Per-batch species" },
-    { key: "nodes" as Series, color: "#c89860", label: "Nodes (total)" },
-  ];
 
   return (
     <div style={{ padding: "20px 0" }}>
@@ -219,10 +159,6 @@ export default function ImportTimeline() {
           <div style={{ color: "#8aba6a", fontSize: 18, fontWeight: 600 }}>{totalSpecies.toLocaleString()}</div>
         </div>
         <div>
-          <div style={{ color: "#444", fontSize: 10, marginBottom: 2 }}>NODES</div>
-          <div style={{ color: "#c89860", fontSize: 18, fontWeight: 600 }}>{totalNodes.toLocaleString()}</div>
-        </div>
-        <div>
           <div style={{ color: "#444", fontSize: 10, marginBottom: 2 }}>BATCHES</div>
           <div style={{ color: "#6a8aba", fontSize: 18, fontWeight: 600 }}>{totalEvents}</div>
         </div>
@@ -230,33 +166,6 @@ export default function ImportTimeline() {
 
       <div style={{ position: "relative" }}>
         <svg ref={svgRef} width={W} height={H} />
-      </div>
-
-      {/* Legend / toggles */}
-      <div style={{ display: "flex", gap: 18, justifyContent: "center", marginTop: 10 }}>
-        {legend.map(l => {
-          const on = visible[l.key];
-          return (
-            <div
-              key={l.key}
-              onClick={() => toggle(l.key)}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                cursor: "pointer",
-                opacity: on ? 1 : 0.3,
-                transition: "opacity 0.15s",
-              }}
-            >
-              <span style={{
-                width: 10, height: 10, borderRadius: "50%",
-                background: on ? l.color : "#333", display: "inline-block", flexShrink: 0,
-              }} />
-              <span style={{ fontSize: 11, color: on ? "#a0a8b8" : "#555" }}>{l.label}</span>
-            </div>
-          );
-        })}
       </div>
     </div>
   );
