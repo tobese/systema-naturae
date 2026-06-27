@@ -2,6 +2,8 @@ import { useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
 import { useWikipediaSummary } from "@shared/hooks/useWikipediaSummary";
+import { useWikiImages } from "@shared/hooks/useWikiImages";
+import ImageTabs from "@shared/components/ImageTabs";
 import { PORTAL_THEME } from "../colors";
 import { COLOR_REGISTRY, IUCN_COLORS } from "../colorRegistry";
 
@@ -432,11 +434,18 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
 function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const accent = accentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
+  const wikiImages = useWikiImages(node.name); // Wikidata cache keyed by binomial
   const extract = wiki?.extract ?? null;
   const wikiUrl = wiki?.content_urls?.desktop?.page;
   const iucnUrl = `https://www.iucnredlist.org/search?query=${encodeURIComponent(node.name)}`;
   const gbifUrl = `https://www.gbif.org/species/search?q=${encodeURIComponent(node.name)}`;
   const colUrl = `https://www.checklistbank.org/dataset/3LR/taxon/${node.id}`;
+
+  // Prefer Wikidata's Commons portrait (full resolution via Special:FilePath),
+  // fall back to the Wikipedia REST summary thumbnail.
+  const portrait = wikiImages?.portrait ?? wiki?.thumbnail?.source;
+  const rangeMap = wikiImages?.rangeMap;
+  const effectiveIucn = node.iucnStatus ?? wikiImages?.iucnStatus;
 
   const subspecies = (node.children ?? []).filter(c => c.rank === "SUBSPECIES");
   const breedGroups = (node.children ?? []).filter(c => c.rank === "BREED_GROUP");
@@ -455,18 +464,18 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
           <span style={{ color: "#445566" }}>Named after</span> {node.namedAfter}
         </div>
       )}
-      {node.iucnStatus && IUCN_COLORS[node.iucnStatus] && (
+      {effectiveIucn && IUCN_COLORS[effectiveIucn] && (
         <div style={{
           display: "inline-flex", alignItems: "center", gap: 5,
-          fontSize: 11, color: IUCN_COLORS[node.iucnStatus],
-          background: "#0d1118", border: `1px solid ${IUCN_COLORS[node.iucnStatus]}44`, borderRadius: 4,
+          fontSize: 11, color: IUCN_COLORS[effectiveIucn],
+          background: "#0d1118", border: `1px solid ${IUCN_COLORS[effectiveIucn]}44`, borderRadius: 4,
           padding: "3px 8px", marginBottom: 6,
         }}>
           <span style={{
             display: "inline-block", width: 8, height: 8, borderRadius: "50%",
-            background: IUCN_COLORS[node.iucnStatus],
+            background: IUCN_COLORS[effectiveIucn],
           }} />
-          {node.iucnStatus}
+          {effectiveIucn}
         </div>
       )}
       {node.lineage && (
@@ -482,11 +491,13 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
       )}
       {breedGroups.length === 0 && !node.children?.length && (node.subspeciesCount ?? 0) === 0 && null}
 
-      {loading && <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />}
-      {!loading && wiki?.thumbnail?.source && (
-        <img src={wiki.thumbnail.source} alt={node.commonName ?? node.name}
-          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }} />
-      )}
+      <ImageTabs
+        portrait={portrait}
+        rangeMap={rangeMap}
+        alt={node.commonName ?? node.name}
+        loading={loading && !portrait && !rangeMap}
+        accent={accent}
+      />
       {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
 
       {/* Breed groups */}
@@ -560,8 +571,14 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
 function SubspeciesPanel({ node }: { node: TaxonNode }) {
   const accent = accentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
+  // Subspecies are trinomials and aren't in the cache; fall back to the parent binomial.
+  const parentBinomial = node.name.trim().split(/\s+/).slice(0, 2).join(" ");
+  const wikiImages = useWikiImages(parentBinomial);
   const extract = wiki?.extract ?? null;
   const wikiUrl = wiki?.content_urls?.desktop?.page;
+
+  const portrait = wiki?.thumbnail?.source ?? wikiImages?.portrait;
+  const rangeMap = wikiImages?.rangeMap;
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
@@ -574,11 +591,13 @@ function SubspeciesPanel({ node }: { node: TaxonNode }) {
           Not recognized as a distinct subspecies by COL taxonomy
         </div>
       )}
-      {loading && <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />}
-      {!loading && wiki?.thumbnail?.source && (
-        <img src={wiki.thumbnail.source} alt={node.commonName ?? node.name}
-          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }} />
-      )}
+      <ImageTabs
+        portrait={portrait}
+        rangeMap={rangeMap}
+        alt={node.commonName ?? node.name}
+        loading={loading && !portrait && !rangeMap}
+        accent={accent}
+      />
       {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
       {wikiUrl && (
         <div style={{ marginTop: 16 }}>
