@@ -34,7 +34,7 @@ export default function ImportTimeline() {
     const firstDate = new Date(raw[0].date);
     const origin = new Date(firstDate.getTime() - 24 * 60 * 60 * 1000);
 
-    const events = [{ date: origin, speciesRunning: 0, speciesAdded: 0, nodes: 0, commit: "", message: "", families: [] as string[] } as ImportEvent, ...raw];
+    const events = [{ date: origin.toISOString(), speciesRunning: 0, speciesAdded: 0, nodes: 0, commit: "", message: "", families: [] as string[] } as unknown as ImportEvent, ...raw];
 
     const dayPoints: DayPoint[] = [];
     for (let i = 0; i < events.length - 1; i++) {
@@ -104,11 +104,7 @@ export default function ImportTimeline() {
     g.append("path").datum(dayPoints).attr("d", line)
       .attr("fill", "none").attr("stroke", "#6a8aba").attr("stroke-width", 2);
 
-    g.selectAll(".dot")
-      .data(dayPoints.filter(d => d.date >= firstDate))
-      .join("circle")
-      .attr("cx", d => x(d.date)).attr("cy", d => ySpecies(d.speciesRunning))
-      .attr("r", 2.5).attr("fill", "#6a8aba").attr("stroke", "#0f1117").attr("stroke-width", 1);
+    const dots = dayPoints.filter(d => d.date >= firstDate);
 
     const container = svgRef.current!.parentElement!;
     const tooltip = d3.select(container)
@@ -123,7 +119,11 @@ export default function ImportTimeline() {
     const eventsByDate = new Map(events.filter(e => e.speciesRunning > 0).map(e => [e.date.slice(0, 10), e]));
 
     g.selectAll(".dot")
-      .on("mouseenter", function (_, d) {
+      .data(dots)
+      .join("circle")
+      .attr("cx", d => x(d.date)).attr("cy", d => ySpecies(d.speciesRunning))
+      .attr("r", 2.5).attr("fill", "#6a8aba").attr("stroke", "#0f1117").attr("stroke-width", 1)
+      .on("mouseenter", function (_: unknown, d: DayPoint) {
         const dateStr = d.date.toISOString().slice(0, 10);
         const ev = eventsByDate.get(dateStr);
         d3.select(this).attr("r", 4).attr("stroke-width", 2);
