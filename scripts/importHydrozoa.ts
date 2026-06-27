@@ -141,7 +141,7 @@ const beforeRegistry = colorTs.substring(0, colorTs.lastIndexOf(registryMarker))
 const afterRegistry = colorTs.substring(colorTs.lastIndexOf(registryMarker));
 
 // Find the last entry before closing brace of COLOR_REGISTRY
-const registryEnd = afterRegistry.lastIndexOf("};");
+const registryEnd = afterRegistry.indexOf("};", registryMarker.length);
 const registryBody = afterRegistry.substring(registryMarker.length, registryEnd);
 const updatedRegistry = afterRegistry.substring(0, registryMarker.length) + registryBody + "\n" + registerLines.join("\n") + afterRegistry.substring(registryEnd);
 
