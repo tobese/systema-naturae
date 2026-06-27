@@ -1481,6 +1481,150 @@ export const IUCN_COLORS: Record<string, string> = {
   NE: "#AAAAAA",
 };
 
+
+// ── Hydrozoa (141 families) ──
+const hydrozoa_sertulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "sertulariidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Sertulariidae", mainColor: "#EF4444", lineageColors: { "sertulariidae": "#14B8A6" } };
+const hydrozoa_aglaopheniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "aglaopheniidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Aglaopheniidae", mainColor: "#10B981", lineageColors: { "aglaopheniidae": "#F97316" } };
+const hydrozoa_plumulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "plumulariidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Plumulariidae", mainColor: "#F59E0B", lineageColors: { "plumulariidae": "#6366F1" } };
+const hydrozoa_campanulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "campanulariidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Campanulariidae", mainColor: "#8B5CF6", lineageColors: { "campanulariidae": "#84CC16" } };
+const hydrozoa_sertularellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "sertularellidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Sertularellidae", mainColor: "#EC4899", lineageColors: { "sertularellidae": "#06B6D4" } };
+const hydrozoa_haleciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "haleciidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Haleciidae", mainColor: "#14B8A6", lineageColors: { "haleciidae": "#D946EF" } };
+const hydrozoa_halopterididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "halopterididae", className: "Hydrozoa", orderName: "Leptothecata", name: "Halopterididae", mainColor: "#F97316", lineageColors: { "halopterididae": "#0EA5E9" } };
+const hydrozoa_symplectoscyphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "symplectoscyphidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Symplectoscyphidae", mainColor: "#6366F1", lineageColors: { "symplectoscyphidae": "#22C55E" } };
+const hydrozoa_eirenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "eirenidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Eirenidae", mainColor: "#84CC16", lineageColors: { "eirenidae": "#EAB308" } };
+const hydrozoa_lafoeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "lafoeidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Lafoeidae", mainColor: "#06B6D4", lineageColors: { "lafoeidae": "#A855F7" } };
+const hydrozoa_zygophylacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "zygophylacidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Zygophylacidae", mainColor: "#D946EF", lineageColors: { "zygophylacidae": "#FB923C" } };
+const hydrozoa_hebellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "hebellidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Hebellidae", mainColor: "#0EA5E9", lineageColors: { "hebellidae": "#2DD4BF" } };
+const hydrozoa_kirchenpaueriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "kirchenpaueriidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Kirchenpaueriidae", mainColor: "#22C55E", lineageColors: { "kirchenpaueriidae": "#A3E635" } };
+const hydrozoa_aequoreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "aequoreidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Aequoreidae", mainColor: "#EAB308", lineageColors: { "aequoreidae": "#38BDF8" } };
+const hydrozoa_lovenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "lovenellidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Lovenellidae", mainColor: "#A855F7", lineageColors: { "lovenellidae": "#3B82F6" } };
+const hydrozoa_campanulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "campanulinidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Campanulinidae", mainColor: "#FB923C", lineageColors: { "campanulinidae": "#EF4444" } };
+const hydrozoa_syntheciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "syntheciidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Syntheciidae", mainColor: "#2DD4BF", lineageColors: { "syntheciidae": "#10B981" } };
+const hydrozoa_laodiceidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "laodiceidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Laodiceidae", mainColor: "#A3E635", lineageColors: { "laodiceidae": "#F59E0B" } };
+const hydrozoa_gonaxiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "gonaxiidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Gonaxiidae", mainColor: "#38BDF8", lineageColors: { "gonaxiidae": "#8B5CF6" } };
+const hydrozoa_schizotrichidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "schizotrichidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Schizotrichidae", mainColor: "#3B82F6", lineageColors: { "schizotrichidae": "#EC4899" } };
+const hydrozoa_phylactothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "phylactothecidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Phylactothecidae", mainColor: "#EF4444", lineageColors: { "phylactothecidae": "#14B8A6" } };
+const hydrozoa_staurothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "staurothecidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Staurothecidae", mainColor: "#10B981", lineageColors: { "staurothecidae": "#F97316" } };
+const hydrozoa_mitrocomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mitrocomidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Mitrocomidae", mainColor: "#F59E0B", lineageColors: { "mitrocomidae": "#6366F1" } };
+const hydrozoa_malagazziidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "malagazziidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Malagazziidae", mainColor: "#8B5CF6", lineageColors: { "malagazziidae": "#84CC16" } };
+const hydrozoa_thyroscyphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "thyroscyphidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Thyroscyphidae", mainColor: "#EC4899", lineageColors: { "thyroscyphidae": "#06B6D4" } };
+const hydrozoa_tiarannidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "tiarannidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Tiarannidae", mainColor: "#14B8A6", lineageColors: { "tiarannidae": "#D946EF" } };
+const hydrozoa_phialellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "phialellidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Phialellidae", mainColor: "#F97316", lineageColors: { "phialellidae": "#0EA5E9" } };
+const hydrozoa_bonneviellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "bonneviellidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Bonneviellidae", mainColor: "#6366F1", lineageColors: { "bonneviellidae": "#22C55E" } };
+const hydrozoa_tiaropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "tiaropsidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Tiaropsidae", mainColor: "#84CC16", lineageColors: { "tiaropsidae": "#EAB308" } };
+const hydrozoa_melicertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "melicertidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Melicertidae", mainColor: "#06B6D4", lineageColors: { "melicertidae": "#A855F7" } };
+const hydrozoa_dipleurosomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "dipleurosomatidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Dipleurosomatidae", mainColor: "#D946EF", lineageColors: { "dipleurosomatidae": "#FB923C" } };
+const hydrozoa_cirrholoveniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cirrholoveniidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Cirrholoveniidae", mainColor: "#0EA5E9", lineageColors: { "cirrholoveniidae": "#2DD4BF" } };
+const hydrozoa_octocannoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "octocannoididae", className: "Hydrozoa", orderName: "Leptothecata", name: "Octocannoididae", mainColor: "#22C55E", lineageColors: { "octocannoididae": "#A3E635" } };
+const hydrozoa_lineolariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lineolariidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Lineolariidae", mainColor: "#EAB308", lineageColors: { "lineolariidae": "#38BDF8" } };
+const hydrozoa_orchistomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "orchistomatidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Orchistomatidae", mainColor: "#A855F7", lineageColors: { "orchistomatidae": "#3B82F6" } };
+const hydrozoa_sugiuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "sugiuridae", className: "Hydrozoa", orderName: "Leptothecata", name: "Sugiuridae", mainColor: "#FB923C", lineageColors: { "sugiuridae": "#EF4444" } };
+const hydrozoa_teclaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "teclaiidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Teclaiidae", mainColor: "#2DD4BF", lineageColors: { "teclaiidae": "#10B981" } };
+const hydrozoa_clathrozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "clathrozoidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Clathrozoidae", mainColor: "#A3E635", lineageColors: { "clathrozoidae": "#F59E0B" } };
+const hydrozoa_wuvulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "wuvulidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Wuvulidae", mainColor: "#38BDF8", lineageColors: { "wuvulidae": "#8B5CF6" } };
+const hydrozoa_blackfordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "blackfordiidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Blackfordiidae", mainColor: "#3B82F6", lineageColors: { "blackfordiidae": "#EC4899" } };
+const hydrozoa_barcinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "barcinidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Barcinidae", mainColor: "#EF4444", lineageColors: { "barcinidae": "#14B8A6" } };
+const hydrozoa_palaequoreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "palaequoreidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Palaequoreidae", mainColor: "#10B981", lineageColors: { "palaequoreidae": "#F97316" } };
+const hydrozoa_phialuciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "phialuciidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Phialuciidae", mainColor: "#F59E0B", lineageColors: { "phialuciidae": "#6366F1" } };
+const hydrozoa_plumaleciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "plumaleciidae", className: "Hydrozoa", orderName: "Leptothecata", name: "Plumaleciidae", mainColor: "#8B5CF6", lineageColors: { "plumaleciidae": "#84CC16" } };
+const hydrozoa_stylasteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "stylasteridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Stylasteridae", mainColor: "#EC4899", lineageColors: { "stylasteridae": "#06B6D4" } };
+const hydrozoa_hydractiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "hydractiniidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Hydractiniidae", mainColor: "#14B8A6", lineageColors: { "hydractiniidae": "#D946EF" } };
+const hydrozoa_bougainvilliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "bougainvilliidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Bougainvilliidae", mainColor: "#F97316", lineageColors: { "bougainvilliidae": "#0EA5E9" } };
+const hydrozoa_pandeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "pandeidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Pandeidae", mainColor: "#6366F1", lineageColors: { "pandeidae": "#22C55E" } };
+const hydrozoa_corynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "corynidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Corynidae", mainColor: "#84CC16", lineageColors: { "corynidae": "#EAB308" } };
+const hydrozoa_corymorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "corymorphidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Corymorphidae", mainColor: "#06B6D4", lineageColors: { "corymorphidae": "#A855F7" } };
+const hydrozoa_eudendriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "eudendriidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Eudendriidae", mainColor: "#D946EF", lineageColors: { "eudendriidae": "#FB923C" } };
+const hydrozoa_tubulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "tubulariidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Tubulariidae", mainColor: "#0EA5E9", lineageColors: { "tubulariidae": "#2DD4BF" } };
+const hydrozoa_hydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "hydridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Hydridae", mainColor: "#22C55E", lineageColors: { "hydridae": "#A3E635" } };
+const hydrozoa_zancleidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "zancleidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Zancleidae", mainColor: "#EAB308", lineageColors: { "zancleidae": "#38BDF8" } };
+const hydrozoa_bythotiaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "bythotiaridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Bythotiaridae", mainColor: "#A855F7", lineageColors: { "bythotiaridae": "#3B82F6" } };
+const hydrozoa_oceaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "oceaniidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Oceaniidae", mainColor: "#FB923C", lineageColors: { "oceaniidae": "#EF4444" } };
+const hydrozoa_milleporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "milleporidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Milleporidae", mainColor: "#2DD4BF", lineageColors: { "milleporidae": "#10B981" } };
+const hydrozoa_cytaeididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cytaeididae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Cytaeididae", mainColor: "#A3E635", lineageColors: { "cytaeididae": "#F59E0B" } };
+const hydrozoa_candelabridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "candelabridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Candelabridae", mainColor: "#38BDF8", lineageColors: { "candelabridae": "#8B5CF6" } };
+const hydrozoa_cladonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cladonematidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Cladonematidae", mainColor: "#3B82F6", lineageColors: { "cladonematidae": "#EC4899" } };
+const hydrozoa_rathkeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "rathkeidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Rathkeidae", mainColor: "#EF4444", lineageColors: { "rathkeidae": "#14B8A6" } };
+const hydrozoa_protiaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "protiaridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Protiaridae", mainColor: "#10B981", lineageColors: { "protiaridae": "#F97316" } };
+const hydrozoa_proboscidactylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "proboscidactylidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Proboscidactylidae", mainColor: "#F59E0B", lineageColors: { "proboscidactylidae": "#6366F1" } };
+const hydrozoa_ptilocodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "ptilocodiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Ptilocodiidae", mainColor: "#8B5CF6", lineageColors: { "ptilocodiidae": "#84CC16" } };
+const hydrozoa_moerisiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "moerisiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Moerisiidae", mainColor: "#EC4899", lineageColors: { "moerisiidae": "#06B6D4" } };
+const hydrozoa_sphaerocorynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "sphaerocorynidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Sphaerocorynidae", mainColor: "#14B8A6", lineageColors: { "sphaerocorynidae": "#D946EF" } };
+const hydrozoa_solanderiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "solanderiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Solanderiidae", mainColor: "#F97316", lineageColors: { "solanderiidae": "#0EA5E9" } };
+const hydrozoa_cladocorynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cladocorynidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Cladocorynidae", mainColor: "#6366F1", lineageColors: { "cladocorynidae": "#22C55E" } };
+const hydrozoa_zancleopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "zancleopsidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Zancleopsidae", mainColor: "#84CC16", lineageColors: { "zancleopsidae": "#EAB308" } };
+const hydrozoa_hydrocorynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "hydrocorynidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Hydrocorynidae", mainColor: "#06B6D4", lineageColors: { "hydrocorynidae": "#A855F7" } };
+const hydrozoa_australomedusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "australomedusidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Australomedusidae", mainColor: "#D946EF", lineageColors: { "australomedusidae": "#FB923C" } };
+const hydrozoa_axoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "axoporidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Axoporidae", mainColor: "#0EA5E9", lineageColors: { "axoporidae": "#2DD4BF" } };
+const hydrozoa_pennariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pennariidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Pennariidae", mainColor: "#22C55E", lineageColors: { "pennariidae": "#A3E635" } };
+const hydrozoa_rosalindidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "rosalindidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Rosalindidae", mainColor: "#EAB308", lineageColors: { "rosalindidae": "#38BDF8" } };
+const hydrozoa_teissieridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "teissieridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Teissieridae", mainColor: "#A855F7", lineageColors: { "teissieridae": "#3B82F6" } };
+const hydrozoa_hydrichthyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "hydrichthyidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Hydrichthyidae", mainColor: "#FB923C", lineageColors: { "hydrichthyidae": "#EF4444" } };
+const hydrozoa_magapiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "magapiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Magapiidae", mainColor: "#2DD4BF", lineageColors: { "magapiidae": "#10B981" } };
+const hydrozoa_margelopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "margelopsidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Margelopsidae", mainColor: "#A3E635", lineageColors: { "margelopsidae": "#F59E0B" } };
+const hydrozoa_eucodoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "eucodoniidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Eucodoniidae", mainColor: "#38BDF8", lineageColors: { "eucodoniidae": "#8B5CF6" } };
+const hydrozoa_porpitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "porpitidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Porpitidae", mainColor: "#3B82F6", lineageColors: { "porpitidae": "#EC4899" } };
+const hydrozoa_halimedusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "halimedusidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Halimedusidae", mainColor: "#EF4444", lineageColors: { "halimedusidae": "#14B8A6" } };
+const hydrozoa_acaulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "acaulidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Acaulidae", mainColor: "#10B981", lineageColors: { "acaulidae": "#F97316" } };
+const hydrozoa_protohydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "protohydridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Protohydridae", mainColor: "#F59E0B", lineageColors: { "protohydridae": "#6366F1" } };
+const hydrozoa_clathrozoellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "clathrozoellidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Clathrozoellidae", mainColor: "#8B5CF6", lineageColors: { "clathrozoellidae": "#84CC16" } };
+const hydrozoa_rhysiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "rhysiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Rhysiidae", mainColor: "#EC4899", lineageColors: { "rhysiidae": "#06B6D4" } };
+const hydrozoa_boreohydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "boreohydridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Boreohydridae", mainColor: "#14B8A6", lineageColors: { "boreohydridae": "#D946EF" } };
+const hydrozoa_asyncorynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "asyncorynidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Asyncorynidae", mainColor: "#F97316", lineageColors: { "asyncorynidae": "#0EA5E9" } };
+const hydrozoa_cordylophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cordylophoridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Cordylophoridae", mainColor: "#6366F1", lineageColors: { "cordylophoridae": "#22C55E" } };
+const hydrozoa_pteronemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "pteronemidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Pteronemidae", mainColor: "#84CC16", lineageColors: { "pteronemidae": "#EAB308" } };
+const hydrozoa_tricyclusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "tricyclusidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Tricyclusidae", mainColor: "#06B6D4", lineageColors: { "tricyclusidae": "#A855F7" } };
+const hydrozoa_niobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "niobiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Niobiidae", mainColor: "#D946EF", lineageColors: { "niobiidae": "#FB923C" } };
+const hydrozoa_boeromedusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "boeromedusidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Boeromedusidae", mainColor: "#0EA5E9", lineageColors: { "boeromedusidae": "#2DD4BF" } };
+const hydrozoa_trichydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "trichydridae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Trichydridae", mainColor: "#22C55E", lineageColors: { "trichydridae": "#A3E635" } };
+const hydrozoa_paracorynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "paracorynidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Paracorynidae", mainColor: "#EAB308", lineageColors: { "paracorynidae": "#38BDF8" } };
+const hydrozoa_balellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "balellidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Balellidae", mainColor: "#A855F7", lineageColors: { "balellidae": "#3B82F6" } };
+const hydrozoa_tubiclavoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "tubiclavoididae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Tubiclavoididae", mainColor: "#FB923C", lineageColors: { "tubiclavoididae": "#EF4444" } };
+const hydrozoa_jeanbouilloniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "jeanbouilloniidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Jeanbouilloniidae", mainColor: "#2DD4BF", lineageColors: { "jeanbouilloniidae": "#10B981" } };
+const hydrozoa_heterastridiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "heterastridiidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Heterastridiidae", mainColor: "#A3E635", lineageColors: { "heterastridiidae": "#F59E0B" } };
+const hydrozoa_heterotentaculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "heterotentaculidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Heterotentaculidae", mainColor: "#38BDF8", lineageColors: { "heterotentaculidae": "#8B5CF6" } };
+const hydrozoa_similiclavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "similiclavidae", className: "Hydrozoa", orderName: "Anthoathecata", name: "Similiclavidae", mainColor: "#3B82F6", lineageColors: { "similiclavidae": "#EC4899" } };
+const hydrozoa_diphyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "diphyidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Diphyidae", mainColor: "#EF4444", lineageColors: { "diphyidae": "#14B8A6" } };
+const hydrozoa_prayidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "prayidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Prayidae", mainColor: "#10B981", lineageColors: { "prayidae": "#F97316" } };
+const hydrozoa_agalmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "agalmatidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Agalmatidae", mainColor: "#F59E0B", lineageColors: { "agalmatidae": "#6366F1" } };
+const hydrozoa_rhodaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "rhodaliidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Rhodaliidae", mainColor: "#8B5CF6", lineageColors: { "rhodaliidae": "#84CC16" } };
+const hydrozoa_abylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "abylidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Abylidae", mainColor: "#EC4899", lineageColors: { "abylidae": "#06B6D4" } };
+const hydrozoa_sphaeronectidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "sphaeronectidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Sphaeronectidae", mainColor: "#14B8A6", lineageColors: { "sphaeronectidae": "#D946EF" } };
+const hydrozoa_clausophyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "clausophyidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Clausophyidae", mainColor: "#F97316", lineageColors: { "clausophyidae": "#0EA5E9" } };
+const hydrozoa_stephanomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "stephanomiidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Stephanomiidae", mainColor: "#6366F1", lineageColors: { "stephanomiidae": "#22C55E" } };
+const hydrozoa_cordagalmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cordagalmatidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Cordagalmatidae", mainColor: "#84CC16", lineageColors: { "cordagalmatidae": "#EAB308" } };
+const hydrozoa_rhizophysidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "rhizophysidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Rhizophysidae", mainColor: "#06B6D4", lineageColors: { "rhizophysidae": "#A855F7" } };
+const hydrozoa_pyrostephidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pyrostephidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Pyrostephidae", mainColor: "#D946EF", lineageColors: { "pyrostephidae": "#FB923C" } };
+const hydrozoa_forskaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "forskaliidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Forskaliidae", mainColor: "#0EA5E9", lineageColors: { "forskaliidae": "#2DD4BF" } };
+const hydrozoa_erennidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "erennidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Erennidae", mainColor: "#22C55E", lineageColors: { "erennidae": "#A3E635" } };
+const hydrozoa_hippopodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "hippopodiidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Hippopodiidae", mainColor: "#EAB308", lineageColors: { "hippopodiidae": "#38BDF8" } };
+const hydrozoa_resomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "resomiidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Resomiidae", mainColor: "#A855F7", lineageColors: { "resomiidae": "#3B82F6" } };
+const hydrozoa_apolemiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "apolemiidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Apolemiidae", mainColor: "#FB923C", lineageColors: { "apolemiidae": "#EF4444" } };
+const hydrozoa_physophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "physophoridae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Physophoridae", mainColor: "#2DD4BF", lineageColors: { "physophoridae": "#10B981" } };
+const hydrozoa_physaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "physaliidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Physaliidae", mainColor: "#A3E635", lineageColors: { "physaliidae": "#F59E0B" } };
+const hydrozoa_tottonophyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "tottonophyidae", className: "Hydrozoa", orderName: "Siphonophorae", name: "Tottonophyidae", mainColor: "#38BDF8", lineageColors: { "tottonophyidae": "#8B5CF6" } };
+const hydrozoa_cuninidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cuninidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Cuninidae", mainColor: "#3B82F6", lineageColors: { "cuninidae": "#EC4899" } };
+const hydrozoa_solmarisidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "solmarisidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Solmarisidae", mainColor: "#EF4444", lineageColors: { "solmarisidae": "#14B8A6" } };
+const hydrozoa_aeginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "aeginidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Aeginidae", mainColor: "#10B981", lineageColors: { "aeginidae": "#F97316" } };
+const hydrozoa_solmundaeginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "solmundaeginidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Solmundaeginidae", mainColor: "#F59E0B", lineageColors: { "solmundaeginidae": "#6366F1" } };
+const hydrozoa_tetraplatiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "tetraplatiidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Tetraplatiidae", mainColor: "#8B5CF6", lineageColors: { "tetraplatiidae": "#84CC16" } };
+const hydrozoa_pseudaeginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pseudaeginidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Pseudaeginidae", mainColor: "#EC4899", lineageColors: { "pseudaeginidae": "#06B6D4" } };
+const hydrozoa_polypodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "polypodiidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Polypodiidae", mainColor: "#14B8A6", lineageColors: { "polypodiidae": "#D946EF" } };
+const hydrozoa_csiromedusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "csiromedusidae", className: "Hydrozoa", orderName: "Narcomedusae", name: "Csiromedusidae", mainColor: "#F97316", lineageColors: { "csiromedusidae": "#0EA5E9" } };
+const hydrozoa_rhopalonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "rhopalonematidae", className: "Hydrozoa", orderName: "Trachymedusae", name: "Rhopalonematidae", mainColor: "#6366F1", lineageColors: { "rhopalonematidae": "#22C55E" } };
+const hydrozoa_halicreatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "halicreatidae", className: "Hydrozoa", orderName: "Trachymedusae", name: "Halicreatidae", mainColor: "#84CC16", lineageColors: { "halicreatidae": "#EAB308" } };
+const hydrozoa_petasidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "petasidae", className: "Hydrozoa", orderName: "Trachymedusae", name: "Petasidae", mainColor: "#06B6D4", lineageColors: { "petasidae": "#A855F7" } };
+const hydrozoa_ptychogastriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ptychogastriidae", className: "Hydrozoa", orderName: "Trachymedusae", name: "Ptychogastriidae", mainColor: "#D946EF", lineageColors: { "ptychogastriidae": "#FB923C" } };
+const hydrozoa_olindiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "olindiidae", className: "Hydrozoa", orderName: "Limnomedusae", name: "Olindiidae", mainColor: "#0EA5E9", lineageColors: { "olindiidae": "#2DD4BF" } };
+const hydrozoa_geryoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "geryoniidae", className: "Hydrozoa", orderName: "Limnomedusae", name: "Geryoniidae", mainColor: "#22C55E", lineageColors: { "geryoniidae": "#A3E635" } };
+const hydrozoa_monobrachiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "monobrachiidae", className: "Hydrozoa", orderName: "Limnomedusae", name: "Monobrachiidae", mainColor: "#EAB308", lineageColors: { "monobrachiidae": "#38BDF8" } };
+const hydrozoa_microhydrulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "microhydrulidae", className: "Hydrozoa", orderName: "Limnomedusae", name: "Microhydrulidae", mainColor: "#A855F7", lineageColors: { "microhydrulidae": "#3B82F6" } };
+const hydrozoa_armorhydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "armorhydridae", className: "Hydrozoa", orderName: "Limnomedusae", name: "Armorhydridae", mainColor: "#FB923C", lineageColors: { "armorhydridae": "#EF4444" } };
+const hydrozoa_halammohydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "halammohydridae", className: "Hydrozoa", orderName: "Actinulida", name: "Halammohydridae", mainColor: "#2DD4BF", lineageColors: { "halammohydridae": "#10B981" } };
+const hydrozoa_otohydridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "otohydridae", className: "Hydrozoa", orderName: "Actinulida", name: "Otohydridae", mainColor: "#A3E635", lineageColors: { "otohydridae": "#F59E0B" } };
+const hydrozoa_pentasmiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pentasmiliidae", className: "Hydrozoa", orderName: "Unknown", name: "Pentasmiliidae", mainColor: "#38BDF8", lineageColors: { "pentasmiliidae": "#8B5CF6" } };
+const hydrozoa_chondroplidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "chondroplidae", className: "Hydrozoa", orderName: "Unknown", name: "Chondroplidae", mainColor: "#3B82F6", lineageColors: { "chondroplidae": "#EC4899" } };
+const hydrozoa_inocaulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "inocaulidae", className: "Hydrozoa", orderName: "Unknown", name: "Inocaulidae", mainColor: "#EF4444", lineageColors: { "inocaulidae": "#14B8A6" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -1913,6 +2057,147 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   cestidae:       CESTIDAE_THEME,
   coeloplanidae:  COELOPLANIDAE_THEME,
   beroidae:       BEROIDAE_THEME,
+  "sertulariidae": hydrozoa_sertulariidae,
+  "aglaopheniidae": hydrozoa_aglaopheniidae,
+  "plumulariidae": hydrozoa_plumulariidae,
+  "campanulariidae": hydrozoa_campanulariidae,
+  "sertularellidae": hydrozoa_sertularellidae,
+  "haleciidae": hydrozoa_haleciidae,
+  "halopterididae": hydrozoa_halopterididae,
+  "symplectoscyphidae": hydrozoa_symplectoscyphidae,
+  "eirenidae": hydrozoa_eirenidae,
+  "lafoeidae": hydrozoa_lafoeidae,
+  "zygophylacidae": hydrozoa_zygophylacidae,
+  "hebellidae": hydrozoa_hebellidae,
+  "kirchenpaueriidae": hydrozoa_kirchenpaueriidae,
+  "aequoreidae": hydrozoa_aequoreidae,
+  "lovenellidae": hydrozoa_lovenellidae,
+  "campanulinidae": hydrozoa_campanulinidae,
+  "syntheciidae": hydrozoa_syntheciidae,
+  "laodiceidae": hydrozoa_laodiceidae,
+  "gonaxiidae": hydrozoa_gonaxiidae,
+  "schizotrichidae": hydrozoa_schizotrichidae,
+  "phylactothecidae": hydrozoa_phylactothecidae,
+  "staurothecidae": hydrozoa_staurothecidae,
+  "mitrocomidae": hydrozoa_mitrocomidae,
+  "malagazziidae": hydrozoa_malagazziidae,
+  "thyroscyphidae": hydrozoa_thyroscyphidae,
+  "tiarannidae": hydrozoa_tiarannidae,
+  "phialellidae": hydrozoa_phialellidae,
+  "bonneviellidae": hydrozoa_bonneviellidae,
+  "tiaropsidae": hydrozoa_tiaropsidae,
+  "melicertidae": hydrozoa_melicertidae,
+  "dipleurosomatidae": hydrozoa_dipleurosomatidae,
+  "cirrholoveniidae": hydrozoa_cirrholoveniidae,
+  "octocannoididae": hydrozoa_octocannoididae,
+  "lineolariidae": hydrozoa_lineolariidae,
+  "orchistomatidae": hydrozoa_orchistomatidae,
+  "sugiuridae": hydrozoa_sugiuridae,
+  "teclaiidae": hydrozoa_teclaiidae,
+  "clathrozoidae": hydrozoa_clathrozoidae,
+  "wuvulidae": hydrozoa_wuvulidae,
+  "blackfordiidae": hydrozoa_blackfordiidae,
+  "barcinidae": hydrozoa_barcinidae,
+  "palaequoreidae": hydrozoa_palaequoreidae,
+  "phialuciidae": hydrozoa_phialuciidae,
+  "plumaleciidae": hydrozoa_plumaleciidae,
+  "stylasteridae": hydrozoa_stylasteridae,
+  "hydractiniidae": hydrozoa_hydractiniidae,
+  "bougainvilliidae": hydrozoa_bougainvilliidae,
+  "pandeidae": hydrozoa_pandeidae,
+  "corynidae": hydrozoa_corynidae,
+  "corymorphidae": hydrozoa_corymorphidae,
+  "eudendriidae": hydrozoa_eudendriidae,
+  "tubulariidae": hydrozoa_tubulariidae,
+  "hydridae": hydrozoa_hydridae,
+  "zancleidae": hydrozoa_zancleidae,
+  "bythotiaridae": hydrozoa_bythotiaridae,
+  "oceaniidae": hydrozoa_oceaniidae,
+  "milleporidae": hydrozoa_milleporidae,
+  "cytaeididae": hydrozoa_cytaeididae,
+  "candelabridae": hydrozoa_candelabridae,
+  "cladonematidae": hydrozoa_cladonematidae,
+  "rathkeidae": hydrozoa_rathkeidae,
+  "protiaridae": hydrozoa_protiaridae,
+  "proboscidactylidae": hydrozoa_proboscidactylidae,
+  "ptilocodiidae": hydrozoa_ptilocodiidae,
+  "moerisiidae": hydrozoa_moerisiidae,
+  "sphaerocorynidae": hydrozoa_sphaerocorynidae,
+  "solanderiidae": hydrozoa_solanderiidae,
+  "cladocorynidae": hydrozoa_cladocorynidae,
+  "zancleopsidae": hydrozoa_zancleopsidae,
+  "hydrocorynidae": hydrozoa_hydrocorynidae,
+  "australomedusidae": hydrozoa_australomedusidae,
+  "axoporidae": hydrozoa_axoporidae,
+  "pennariidae": hydrozoa_pennariidae,
+  "rosalindidae": hydrozoa_rosalindidae,
+  "teissieridae": hydrozoa_teissieridae,
+  "hydrichthyidae": hydrozoa_hydrichthyidae,
+  "magapiidae": hydrozoa_magapiidae,
+  "margelopsidae": hydrozoa_margelopsidae,
+  "eucodoniidae": hydrozoa_eucodoniidae,
+  "porpitidae": hydrozoa_porpitidae,
+  "halimedusidae": hydrozoa_halimedusidae,
+  "acaulidae": hydrozoa_acaulidae,
+  "protohydridae": hydrozoa_protohydridae,
+  "clathrozoellidae": hydrozoa_clathrozoellidae,
+  "rhysiidae": hydrozoa_rhysiidae,
+  "boreohydridae": hydrozoa_boreohydridae,
+  "asyncorynidae": hydrozoa_asyncorynidae,
+  "cordylophoridae": hydrozoa_cordylophoridae,
+  "pteronemidae": hydrozoa_pteronemidae,
+  "tricyclusidae": hydrozoa_tricyclusidae,
+  "niobiidae": hydrozoa_niobiidae,
+  "boeromedusidae": hydrozoa_boeromedusidae,
+  "trichydridae": hydrozoa_trichydridae,
+  "paracorynidae": hydrozoa_paracorynidae,
+  "balellidae": hydrozoa_balellidae,
+  "tubiclavoididae": hydrozoa_tubiclavoididae,
+  "jeanbouilloniidae": hydrozoa_jeanbouilloniidae,
+  "heterastridiidae": hydrozoa_heterastridiidae,
+  "heterotentaculidae": hydrozoa_heterotentaculidae,
+  "similiclavidae": hydrozoa_similiclavidae,
+  "diphyidae": hydrozoa_diphyidae,
+  "prayidae": hydrozoa_prayidae,
+  "agalmatidae": hydrozoa_agalmatidae,
+  "rhodaliidae": hydrozoa_rhodaliidae,
+  "abylidae": hydrozoa_abylidae,
+  "sphaeronectidae": hydrozoa_sphaeronectidae,
+  "clausophyidae": hydrozoa_clausophyidae,
+  "stephanomiidae": hydrozoa_stephanomiidae,
+  "cordagalmatidae": hydrozoa_cordagalmatidae,
+  "rhizophysidae": hydrozoa_rhizophysidae,
+  "pyrostephidae": hydrozoa_pyrostephidae,
+  "forskaliidae": hydrozoa_forskaliidae,
+  "erennidae": hydrozoa_erennidae,
+  "hippopodiidae": hydrozoa_hippopodiidae,
+  "resomiidae": hydrozoa_resomiidae,
+  "apolemiidae": hydrozoa_apolemiidae,
+  "physophoridae": hydrozoa_physophoridae,
+  "physaliidae": hydrozoa_physaliidae,
+  "tottonophyidae": hydrozoa_tottonophyidae,
+  "cuninidae": hydrozoa_cuninidae,
+  "solmarisidae": hydrozoa_solmarisidae,
+  "aeginidae": hydrozoa_aeginidae,
+  "solmundaeginidae": hydrozoa_solmundaeginidae,
+  "tetraplatiidae": hydrozoa_tetraplatiidae,
+  "pseudaeginidae": hydrozoa_pseudaeginidae,
+  "polypodiidae": hydrozoa_polypodiidae,
+  "csiromedusidae": hydrozoa_csiromedusidae,
+  "rhopalonematidae": hydrozoa_rhopalonematidae,
+  "halicreatidae": hydrozoa_halicreatidae,
+  "petasidae": hydrozoa_petasidae,
+  "ptychogastriidae": hydrozoa_ptychogastriidae,
+  "olindiidae": hydrozoa_olindiidae,
+  "geryoniidae": hydrozoa_geryoniidae,
+  "monobrachiidae": hydrozoa_monobrachiidae,
+  "microhydrulidae": hydrozoa_microhydrulidae,
+  "armorhydridae": hydrozoa_armorhydridae,
+  "halammohydridae": hydrozoa_halammohydridae,
+  "otohydridae": hydrozoa_otohydridae,
+  "pentasmiliidae": hydrozoa_pentasmiliidae,
+  "chondroplidae": hydrozoa_chondroplidae,
+  "inocaulidae": hydrozoa_inocaulidae,
 };
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
