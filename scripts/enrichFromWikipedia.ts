@@ -7,7 +7,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 
 const WIKI_URL = "https://en.wikipedia.org/api/rest_v1/page/summary";
-const RATE_LIMIT_MS = 150;
 
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
@@ -17,12 +16,14 @@ interface WikiSummary {
   description?: string;
 }
 
-async function fetchWiki(sciName: string): Promise<WikiSummary | null> {
+const BINOMIAL_RE = /^[A-Z][a-z]+ [a-z-]+$/;
+
+async function fetchWithRetry(sciName: string): Promise<WikiSummary | null> {
+  const url = `${WIKI_URL}/${encodeURIComponent(sciName.replace(/_/g, " "))}`;
   try {
-    const url = `${WIKI_URL}/${encodeURIComponent(sciName.replace(/_/g, " "))}`;
     const res = await fetch(url, { headers: { "User-Agent": "SystemaNaturae/1.0" } });
-    if (!res.ok) return null;
-    return await res.json() as WikiSummary;
+    if (res.ok) return await res.json() as WikiSummary;
+    return null;
   } catch {
     return null;
   }
@@ -35,31 +36,15 @@ function countSpecies(node: any): number {
   return n;
 }
 
-async function enrichNode(node: any, enriched: { ok: number; fail: number; skip: number }) {
+function collectSpecies(node: any, out: any[]) {
   if (!node) return;
   if (node.rank !== "SPECIES") {
-    for (const c of (node.children ?? [])) await enrichNode(c, enriched);
+    for (const c of (node.children ?? [])) collectSpecies(c, out);
     return;
   }
-
-  if (node.sourcedFrom === "wikipedia" && (node.description?.length ?? 0) > 40) {
-    enriched.skip++;
-    return;
-  }
-
-  await sleep(RATE_LIMIT_MS);
-  const wiki = await fetchWiki(node.name as string);
-
-  if (wiki && wiki.extract) {
-    const extract = wiki.extract.replace(/<[^>]+>/g, "").trim();
-    const firstSentence = extract.split(/(?<=[.!?])\s+/)[0] + ".";
-    node.description = firstSentence;
-    node.sourcedFrom = "wikipedia";
-    if (wiki.description && wiki.description.length < 80) node.commonName = wiki.description;
-    enriched.ok++;
-  } else {
-    enriched.fail++;
-  }
+  if (node.sourcedFrom === "wikipedia" && (node.description?.length ?? 0) > 40) return;
+  if (!BINOMIAL_RE.test(node.name as string)) return;
+  out.push(node);
 }
 
 function findDataFiles(slugs: string[]): Map<string, string> {
@@ -82,7 +67,6 @@ async function main() {
 
   if (slugs.length === 0) {
     console.error("Usage: npx tsx enrichFromWikipedia.ts <family-slug> [family-slug...]");
-    console.error("Provide one or more family appSlugs to enrich from Wikipedia.");
     process.exit(1);
   }
 
@@ -93,10 +77,10 @@ async function main() {
   }
 
   for (const slug of slugs) {
-    if (!files.has(slug)) console.warn(`  ⚠ No data file found for ${slug}`);
+    if (!files.has(slug)) console.warn(`  WARNING No data file found for ${slug}`);
   }
 
-  console.log(`Enriching ${files.size} families from Wikipedia…\n`);
+  console.log(`Enriching ${files.size} families from Wikipedia...\n`);
 
   let totalOk = 0;
   let totalFail = 0;
@@ -105,32 +89,51 @@ async function main() {
   for (const [slug, path] of files) {
     const data = JSON.parse(readFileSync(path, "utf-8"));
     const total = countSpecies(data);
-    const enriched = { ok: 0, fail: 0, skip: 0 };
 
-    // Pre-count candidates
-    function countCandidates(node: any) {
-      if (!node) return;
-      if (node.rank !== "SPECIES") { for (const c of (node.children ?? [])) countCandidates(c); return; }
-      if (node.sourcedFrom !== "wikipedia" || (node.description?.length ?? 0) <= 40) enriched.fail++;
-      else enriched.skip++;
+    const candidates: any[] = [];
+    collectSpecies(data, candidates);
+    let alreadyEnriched = 0;
+    (function walk(node: any) {
+      if (node.rank === "SPECIES" && node.sourcedFrom === "wikipedia" && (node.description?.length ?? 0) > 40) alreadyEnriched++;
+      for (const c of (node.children ?? [])) walk(c);
+    })(data);
+    const skip = alreadyEnriched;
+
+    let ok = 0;
+    let fail = 0;
+
+    for (let i = 0; i < candidates.length; i++) {
+      const node = candidates[i];
+      await sleep(2500);
+
+      const wiki = await fetchWithRetry(node.name as string);
+
+      if (wiki && wiki.extract) {
+        const extract = wiki.extract.replace(/<[^>]+>/g, "").trim();
+        const firstSentence = extract.split(/(?<=[.!?])\s+/)[0] + ".";
+        node.description = firstSentence;
+        node.sourcedFrom = "wikipedia";
+        if (wiki.description && wiki.description.length < 80) node.commonName = wiki.description;
+        ok++;
+        process.stdout.write(".");
+      } else {
+        fail++;
+        process.stdout.write("x");
+      }
+
+      if ((i + 1) % 50 === 0) process.stdout.write(` ${i + 1}/${candidates.length}\n`);
+      if ((i + 1) % 20 === 0) await sleep(5000);
     }
-    countCandidates(data);
-
-    const candidates = enriched.fail;
-    enriched.ok = 0;
-    enriched.fail = 0;
-
-    // Enrich
-    await enrichNode(data, enriched);
 
     writeFileSync(path, JSON.stringify(data, null, 2) + "\n");
 
-    totalOk += enriched.ok;
-    totalFail += enriched.fail;
-    totalSkip += enriched.skip;
+    totalOk += ok;
+    totalFail += fail;
+    totalSkip += skip;
 
-    const pct = candidates > 0 ? Math.round((enriched.ok / candidates) * 100) : 100;
-    console.log(`  ${slug}: ${enriched.ok} enriched, ${enriched.fail} failed, ${enriched.skip} skipped (${candidates} candidates, ${pct}%) — ${total} spp`);
+    const pct = candidates.length > 0 ? Math.round((ok / candidates.length) * 100) : 100;
+    process.stdout.write(`\n`);
+    console.log(`  ${slug}: ${ok} enriched, ${fail} failed, ${skip} skipped (${candidates.length} candidates, ${pct}%) — ${total} spp`);
   }
 
   console.log(`\nDone. ${totalOk} enriched, ${totalFail} failed, ${totalSkip} skipped across ${files.size} families.`);
