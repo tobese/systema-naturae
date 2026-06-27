@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, statSync } from "fs";
 import { execSync } from "child_process";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
@@ -154,11 +154,21 @@ function main() {
     slugDays.set(slug, info.date.slice(0, 10));
   }
 
-  // For untracked families, use earliest repo date
+  // For untracked families, use file mtime so uncommitted data gets accurate dates
   const tracked = new Set(firstCommits.keys());
   for (const slug of allSlugs) {
     if (!tracked.has(slug)) {
-      slugDays.set(slug, "2026-06-14");
+      const fp = familyPaths.get(slug);
+      if (fp) {
+        try {
+          const mtime = statSync(fp).mtime.toISOString().slice(0, 10);
+          slugDays.set(slug, mtime);
+        } catch {
+          slugDays.set(slug, "2026-06-14");
+        }
+      } else {
+        slugDays.set(slug, "2026-06-14");
+      }
     }
   }
 
@@ -172,27 +182,87 @@ function main() {
   // Sort days and compute running totals
   const sortedDays = [...dayGroups.keys()].sort();
   let speciesRunning = 0;
+  const autoDays = new Set<string>();
+
+  // Read existing import-log to preserve manual entries
+  const importLogPath = resolve(portalRoot, "data/import-log.json");
+  let existingLog: ImportEvent[] = [];
+  if (existsSync(importLogPath)) {
+    try {
+      existingLog = JSON.parse(readFileSync(importLogPath, "utf-8"));
+    } catch { /* ignore */ }
+  }
+
+  // Identify entries that git/mtime can derive — they get fresh data
+  // Entries with message or commit text are "manual" and get preserved
+  const manualEntries = new Map<string, ImportEvent>();
+  for (const entry of existingLog) {
+    if (entry.message || entry.commit) {
+      manualEntries.set(entry.date, entry);
+    }
+  }
+
   const events: ImportEvent[] = [];
 
   for (const day of sortedDays) {
+    autoDays.add(day);
     const fams = dayGroups.get(day)!.sort();
     const speciesAdded = fams.reduce((sum, slug) => sum + (speciesCounts.get(slug) ?? 0), 0);
     speciesRunning += speciesAdded;
+
+    const manual = manualEntries.get(day);
+    if (manual) {
+      // Preserve manual message/commit, merge families
+      events.push({
+        date: day,
+        commit: manual.commit || "",
+        message: manual.message || "",
+        families: [...new Set([...manual.families, ...fams])].sort(),
+        speciesAdded,
+        speciesRunning,
+        nodes: totalNodes,
+      });
+      manualEntries.delete(day);
+    } else {
+      events.push({
+        date: day,
+        commit: "",
+        message: "",
+        families: fams,
+        speciesAdded,
+        speciesRunning,
+        nodes: totalNodes,
+      });
+    }
+  }
+
+  // Append any manual entries for dates not covered by auto
+  for (const [day, entry] of manualEntries) {
     events.push({
       date: day,
-      commit: "",
-      message: "",
-      families: fams,
-      speciesAdded,
-      speciesRunning,
-      nodes: totalNodes,
+      commit: entry.commit || "",
+      message: entry.message || "",
+      families: entry.families,
+      speciesAdded: entry.speciesAdded,
+      speciesRunning: entry.speciesRunning,
+      nodes: entry.nodes || totalNodes,
     });
   }
 
-  const outPath = resolve(portalRoot, "data/import-log.json");
-  writeFileSync(outPath, JSON.stringify(events, null, 2));
+  // Re-sort by date
+  events.sort((a, b) => a.date.localeCompare(b.date));
+
+  // Fix speciesRunning for the appended manual entries (they break sequential sum)
+  // Recalculate running totals sequentially
+  let runningFix = 0;
+  for (const ev of events) {
+    runningFix += ev.speciesAdded;
+    ev.speciesRunning = runningFix;
+  }
+
+  writeFileSync(importLogPath, JSON.stringify(events, null, 2) + "\n");
   console.log(`  Wrote ${events.length} events to data/import-log.json`);
-  console.log(`  ${allSlugs.length} families tracked, ${speciesRunning} total species`);
+  console.log(`  ${allSlugs.length} families tracked, ${runningFix} total species`);
 }
 
 main();
