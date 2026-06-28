@@ -64,7 +64,7 @@ ALL RANKS (fallthrough)
 
 | Action | URL effect | Tree effect |
 |--------|-----------|-------------|
-| Click focused family | `?family=` removed | overview mode (143 families as dots) |
+| Click focused family | `?family=` removed | overview mode (1,114 families as dots) |
 | Click different family | `?family=<slug>&node=<id>` | prune to that family |
 | Click focused class | `?class=` removed | full tree, no compression |
 | Click different class | `?class=<id>&node=<id>` | remap angles: 65% focused class |
@@ -86,7 +86,7 @@ When focusing a new family (or unfocusing):
 ### Overview mode (`focusedFamilyId === null`)
 - Every FAMILY node is collapsed to a leaf (children stripped, only metadata kept).
 - All other nodes are kept normally.
-- Result: 143 families as dots, 0 species visible.
+- Result: 1,114 families as dots, 0 species visible.
 
 ### Focused mode (`focusedFamilyId` is set)
 - Walks the tree to find the matching FAMILY node.
