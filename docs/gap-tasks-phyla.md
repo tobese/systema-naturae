@@ -8,7 +8,7 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Chordata** | Chordates | 6 | 352 | 41,868 | 42,589 | 28,243 | 13,625 | 98.3% | 32.0% | > Gaps: 722 |
+| **Chordata** | Chordates | 6 | 352 | 42,223 | 42,589 | 28,462 | 13,761 | 99.1% | 32.3% | > Gaps: 388 |
 | **Mollusca** | Molluscs | 1 | 8 | 812 | 815 | 646 | 166 | 99.6% | 20.4% | > Gaps: 3 |
 | **Arthropoda** | Arthropods | 2 | 19 | 98,056 | 131,746 | 78,909 | 19,147 | 74.4% | 14.5% | > Gaps: 33690 |
 | **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
@@ -18,19 +18,19 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 ## Detail Breakdown & Checklists by Phylum
 
-### [ ] Phylum Chordata (Chordates) - 98.3% complete
+### [ ] Phylum Chordata (Chordates) - 99.1% complete
 
-- **Imported species:** 41,868 / 42,589
-- **Enriched species:** 13,625 / 42,589 (32.0%)
-- **Remaining gaps:** **722**
+- **Imported species:** 42,223 / 42,589
+- **Enriched species:** 13,761 / 42,589 (32.3%)
+- **Remaining gaps:** **388**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Aves | 254 | 11,138 | 11,522 | 1,440 | 96.7% | > Gaps: 384 |
 | Amphibia | 13 | 3,797 | 4,084 | 2,255 | 93.0% | > Gaps: 287 |
 | Actinopterygii | 16 | 10,614 | 10,661 | 3,649 | 99.6% | > Gaps: 47 |
+| Aves | 254 | 11,493 | 11,522 | 1,576 | 99.7% | > Gaps: 29 |
 | Reptilia | 23 | 7,299 | 7,302 | 5,106 | 100.0% | > Gaps: 3 |
 | Mammalia | 39 | 7,833 | 7,833 | 1,038 | 100.0% | ✓ Complete |
 | Chondrichthyes | 7 | 1,187 | 1,187 | 137 | 100.0% | ✓ Complete |

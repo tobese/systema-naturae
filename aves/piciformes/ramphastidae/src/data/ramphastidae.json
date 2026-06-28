@@ -5,17 +5,18 @@
   "commonName": "Toucans",
   "children": [
     {
-      "id": "GENUS_RAMPHASTOS",
-      "name": "Ramphastos",
+      "id": "GENUS_ANDIGENA",
+      "name": "Andigena",
       "rank": "GENUS",
-      "description": "The large toucans — the iconic toucans with enormous, colourful bills that can reach half the length of the body. The bill is surprisingly light, made of keratin sheathing a honeycomb of air-filled bone. It is used for reaching fruit on thin branches, display, and thermoregulation. Found across Central and South America.",
+      "commonName": "Mountain Toucans",
+      "description": "Colourful toucans of the high Andes, with bright bills and striking plumage patterns.",
       "lineage": "Large Toucans",
       "children": [
         {
-          "id": "RAMPHASTOS_TOCO",
-          "name": "Ramphastos toco",
+          "id": "ANDIGENA_LAMINIROSTRIS",
+          "name": "Andigena laminirostris",
           "rank": "SPECIES",
-          "commonName": "Toco Toucan",
+          "commonName": "Plate-billed Mountain Toucan",
           "lineage": "Large Toucans",
           "continents": [
             "South America"
@@ -25,13 +26,12 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "RAMPHASTOS_SULFURATUS",
-          "name": "Ramphastos sulfuratus",
+          "id": "ANDIGENA_HYPOGLAUCA",
+          "name": "Andigena hypoglauca",
           "rank": "SPECIES",
-          "commonName": "Keel-billed Toucan",
+          "commonName": "Grey-breasted Mountain Toucan",
           "lineage": "Large Toucans",
           "continents": [
-            "North America",
             "South America"
           ],
           "subspeciesCount": 2,
@@ -39,23 +39,46 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "RAMPHASTOS_VITELLINUS",
-          "name": "Ramphastos vitellinus",
+          "id": "ANDIGENA_NIGRIROSTRIS",
+          "name": "Andigena nigrirostris",
           "rank": "SPECIES",
-          "commonName": "Channel-billed Toucan",
+          "commonName": "Black-billed Mountain Toucan",
           "lineage": "Large Toucans",
           "continents": [
             "South America"
           ],
-          "subspeciesCount": 4,
+          "subspeciesCount": 2,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "RAMPHASTOS_BREVIS",
-          "name": "Ramphastos brevis",
+          "id": "ANDIGENA_CUCULLATA",
+          "name": "Andigena cucullata",
           "rank": "SPECIES",
-          "commonName": "Choco Toucan",
+          "commonName": "Hooded Mountain Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ANDIGENA",
+      "name": "Andigena",
+      "rank": "GENUS",
+      "commonName": "Mountain Toucans",
+      "description": "Colourful toucans from the high Andes.",
+      "lineage": "Large Toucans",
+      "children": [
+        {
+          "id": "ANDIGENA_LAMINIROSTRIS",
+          "name": "Andigena laminirostris",
+          "rank": "SPECIES",
+          "commonName": "Plate-billed Mountain Toucan",
           "lineage": "Large Toucans",
           "continents": [
             "South America"
@@ -65,42 +88,28 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "RAMPHASTOS_AMBIGUUS",
-          "name": "Ramphastos ambiguus",
+          "id": "ANDIGENA_HYPOGLAUCA",
+          "name": "Andigena hypoglauca",
           "rank": "SPECIES",
-          "commonName": "Black-mandibled Toucan",
+          "commonName": "Grey-breasted Mountain Toucan",
           "lineage": "Large Toucans",
           "continents": [
-            "South America",
-            "North America"
+            "South America"
           ],
-          "subspeciesCount": 3,
+          "subspeciesCount": 2,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "RAMPHASTOS_AURANTIIROSTRIS",
-          "name": "Ramphastos aurantiirostris",
+          "id": "ANDIGENA_NIGRIROSTRIS",
+          "name": "Andigena nigrirostris",
           "rank": "SPECIES",
-          "commonName": "Orange-billed Toucan",
+          "commonName": "Black-billed Mountain Toucan",
           "lineage": "Large Toucans",
           "continents": [
             "South America"
           ],
-          "subspeciesCount": 0,
-          "description": "A toucan with orange bill, found in the Guiana Shield.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "RAMPHASTOS_CULMINATUS",
-          "name": "Ramphastos culminatus",
-          "rank": "SPECIES",
-          "commonName": "Yellow-ridged Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
+          "subspeciesCount": 2,
           "description": null,
           "sourcedFrom": "wikipedia"
         }
@@ -113,20 +122,6 @@
       "description": "Green toucanets — small, green toucans found in montane forests from Mexico to Bolivia. Their bills are patterned in black, white, yellow, and chestnut. They travel in small flocks through the canopy, eating fruit and occasionally insects.",
       "lineage": "Green Toucanets",
       "children": [
-        {
-          "id": "AULACORHYNCHUS_PRUNATUS",
-          "name": "Aulacorhynchus prasinus",
-          "rank": "SPECIES",
-          "commonName": "Emerald Toucanet",
-          "lineage": "Green Toucanets",
-          "continents": [
-            "North America",
-            "South America"
-          ],
-          "subspeciesCount": 6,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
         {
           "id": "AULACORHYNCHUS_ALBIVITTIS",
           "name": "Aulacorhynchus albivittis",
@@ -141,6 +136,41 @@
           "sourcedFrom": "generated"
         },
         {
+          "id": "AULACORHYNCHUS_CAERULEOGULARIS",
+          "name": "Aulacorhynchus caeruleogularis",
+          "rank": "SPECIES",
+          "commonName": "Aulacorhynchus caeruleogularis",
+          "lineage": "Aulacorhynchus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Aulacorhynchus caeruleogularis — a species in the genus Aulacorhynchus, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "AULACORHYNCHUS_CALORYNCHUS",
+          "name": "Aulacorhynchus calorynchus",
+          "rank": "SPECIES",
+          "commonName": "Yellow-browed Toucanet",
+          "lineage": "Green Toucanets",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A toucanet with yellow eyebrow, found in the Andes.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "AULACORHYNCHUS_COERULEICINCTIS",
+          "name": "Aulacorhynchus coeruleicinctis",
+          "rank": "SPECIES",
+          "commonName": "Aulacorhynchus coeruleicinctis",
+          "lineage": "Aulacorhynchus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Aulacorhynchus coeruleicinctis — a species in the genus Aulacorhynchus, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
           "id": "AULACORHYNCHUS_DERBIANUS",
           "name": "Aulacorhynchus derbianus",
           "rank": "SPECIES",
@@ -150,19 +180,6 @@
             "South America"
           ],
           "subspeciesCount": 4,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "AULACORHYNCHUS_WHITELIANUS",
-          "name": "Aulacorhynchus whitelianus",
-          "rank": "SPECIES",
-          "commonName": "Tepui Toucanet",
-          "lineage": "Green Toucanets",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
@@ -180,6 +197,31 @@
           "sourcedFrom": "wikipedia"
         },
         {
+          "id": "AULACORHYNCHUS_HUALLAGAE",
+          "name": "Aulacorhynchus huallagae",
+          "rank": "SPECIES",
+          "commonName": "Aulacorhynchus huallagae",
+          "lineage": "Aulacorhynchus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Aulacorhynchus huallagae — a species in the genus Aulacorhynchus, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "AULACORHYNCHUS_PRUNATUS",
+          "name": "Aulacorhynchus prasinus",
+          "rank": "SPECIES",
+          "commonName": "Emerald Toucanet",
+          "lineage": "Green Toucanets",
+          "continents": [
+            "North America",
+            "South America"
+          ],
+          "subspeciesCount": 6,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
           "id": "AULACORHYNCHUS_SULCATUS",
           "name": "Aulacorhynchus sulcatus",
           "rank": "SPECIES",
@@ -193,17 +235,28 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "AULACORHYNCHUS_CALORYNCHUS",
-          "name": "Aulacorhynchus calorynchus",
+          "id": "AULACORHYNCHUS_WAGLERI",
+          "name": "Aulacorhynchus wagleri",
           "rank": "SPECIES",
-          "commonName": "Yellow-browed Toucanet",
+          "commonName": "Aulacorhynchus wagleri",
+          "lineage": "Aulacorhynchus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Aulacorhynchus wagleri — a species in the genus Aulacorhynchus, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "AULACORHYNCHUS_WHITELIANUS",
+          "name": "Aulacorhynchus whitelianus",
+          "rank": "SPECIES",
+          "commonName": "Tepui Toucanet",
           "lineage": "Green Toucanets",
           "continents": [
             "South America"
           ],
           "subspeciesCount": 0,
-          "description": "A toucanet with yellow eyebrow, found in the Andes.",
-          "sourcedFrom": "generated"
+          "description": null,
+          "sourcedFrom": "wikipedia"
         }
       ]
     },
@@ -241,6 +294,17 @@
           "sourcedFrom": "wikipedia"
         },
         {
+          "id": "PTEROGLOSSUS_BEAUHARNAESII",
+          "name": "Pteroglossus beauharnaesii",
+          "rank": "SPECIES",
+          "commonName": "Pteroglossus beauharnaesii",
+          "lineage": "Pteroglossus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Pteroglossus beauharnaesii — a species in the genus Pteroglossus, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
           "id": "PTEROGLOSSUS_BITORQUATUS",
           "name": "Pteroglossus bitorquatus",
           "rank": "SPECIES",
@@ -264,6 +328,28 @@
           ],
           "subspeciesCount": 3,
           "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PTEROGLOSSUS_ERYTHROPYGIUS",
+          "name": "Pteroglossus erythropygius",
+          "rank": "SPECIES",
+          "commonName": "Pteroglossus erythropygius",
+          "lineage": "Pteroglossus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Pteroglossus erythropygius — a species in the genus Pteroglossus, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PTEROGLOSSUS_FRANTZII",
+          "name": "Pteroglossus frantzii",
+          "rank": "SPECIES",
+          "commonName": "Pteroglossus frantzii",
+          "lineage": "Pteroglossus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Pteroglossus frantzii — a species in the genus Pteroglossus, family Ramphastidae.",
           "sourcedFrom": "wikipedia"
         },
         {
@@ -348,6 +434,141 @@
       ]
     },
     {
+      "id": "GENUS_RAMPHASTOS",
+      "name": "Ramphastos",
+      "rank": "GENUS",
+      "description": "The large toucans — the iconic toucans with enormous, colourful bills that can reach half the length of the body. The bill is surprisingly light, made of keratin sheathing a honeycomb of air-filled bone. It is used for reaching fruit on thin branches, display, and thermoregulation. Found across Central and South America.",
+      "lineage": "Large Toucans",
+      "children": [
+        {
+          "id": "RAMPHASTOS_AMBIGUUS",
+          "name": "Ramphastos ambiguus",
+          "rank": "SPECIES",
+          "commonName": "Black-mandibled Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America",
+            "North America"
+          ],
+          "subspeciesCount": 3,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_AURANTIIROSTRIS",
+          "name": "Ramphastos aurantiirostris",
+          "rank": "SPECIES",
+          "commonName": "Orange-billed Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A toucan with orange bill, found in the Guiana Shield.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "RAMPHASTOS_BREVIS",
+          "name": "Ramphastos brevis",
+          "rank": "SPECIES",
+          "commonName": "Choco Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_CITREOLAEMUS",
+          "name": "Ramphastos citreolaemus",
+          "rank": "SPECIES",
+          "commonName": "Ramphastos citreolaemus",
+          "lineage": "Ramphastos",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Ramphastos citreolaemus — a species in the genus Ramphastos, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_CULMINATUS",
+          "name": "Ramphastos culminatus",
+          "rank": "SPECIES",
+          "commonName": "Yellow-ridged Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_DICOLORUS",
+          "name": "Ramphastos dicolorus",
+          "rank": "SPECIES",
+          "commonName": "Ramphastos dicolorus",
+          "lineage": "Ramphastos",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Ramphastos dicolorus — a species in the genus Ramphastos, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_SULFURATUS",
+          "name": "Ramphastos sulfuratus",
+          "rank": "SPECIES",
+          "commonName": "Keel-billed Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "North America",
+            "South America"
+          ],
+          "subspeciesCount": 2,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_TOCO",
+          "name": "Ramphastos toco",
+          "rank": "SPECIES",
+          "commonName": "Toco Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_TUCANUS",
+          "name": "Ramphastos tucanus",
+          "rank": "SPECIES",
+          "commonName": "Ramphastos tucanus",
+          "lineage": "Ramphastos",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Ramphastos tucanus — a species in the genus Ramphastos, family Ramphastidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "RAMPHASTOS_VITELLINUS",
+          "name": "Ramphastos vitellinus",
+          "rank": "SPECIES",
+          "commonName": "Channel-billed Toucan",
+          "lineage": "Large Toucans",
+          "continents": [
+            "South America"
+          ],
+          "subspeciesCount": 4,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
       "id": "GENUS_SELENIDERA",
       "name": "Selenidera",
       "rank": "GENUS",
@@ -424,68 +645,6 @@
       ]
     },
     {
-      "id": "GENUS_ANDIGENA",
-      "name": "Andigena",
-      "rank": "GENUS",
-      "commonName": "Mountain Toucans",
-      "description": "Colourful toucans of the high Andes, with bright bills and striking plumage patterns.",
-      "lineage": "Large Toucans",
-      "children": [
-        {
-          "id": "ANDIGENA_LAMINIROSTRIS",
-          "name": "Andigena laminirostris",
-          "rank": "SPECIES",
-          "commonName": "Plate-billed Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "ANDIGENA_HYPOGLAUCA",
-          "name": "Andigena hypoglauca",
-          "rank": "SPECIES",
-          "commonName": "Grey-breasted Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "ANDIGENA_NIGRIROSTRIS",
-          "name": "Andigena nigrirostris",
-          "rank": "SPECIES",
-          "commonName": "Black-billed Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "ANDIGENA_CUCULLATA",
-          "name": "Andigena cucullata",
-          "rank": "SPECIES",
-          "commonName": "Hooded Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
       "id": "GENUS_SELENIDERA",
       "name": "Selenidera",
       "rank": "GENUS",
@@ -544,55 +703,6 @@
           ],
           "subspeciesCount": 0,
           "description": "The tawny-tufted toucanet is a near-passerine bird in the toucan family Ramphastidae. It is found in Brazil, Colombia, Venezuela, and possible Guyana.",
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_ANDIGENA",
-      "name": "Andigena",
-      "rank": "GENUS",
-      "commonName": "Mountain Toucans",
-      "description": "Colourful toucans from the high Andes.",
-      "lineage": "Large Toucans",
-      "children": [
-        {
-          "id": "ANDIGENA_LAMINIROSTRIS",
-          "name": "Andigena laminirostris",
-          "rank": "SPECIES",
-          "commonName": "Plate-billed Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "ANDIGENA_HYPOGLAUCA",
-          "name": "Andigena hypoglauca",
-          "rank": "SPECIES",
-          "commonName": "Grey-breasted Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "ANDIGENA_NIGRIROSTRIS",
-          "name": "Andigena nigrirostris",
-          "rank": "SPECIES",
-          "commonName": "Black-billed Mountain Toucan",
-          "lineage": "Large Toucans",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
           "sourcedFrom": "wikipedia"
         }
       ]

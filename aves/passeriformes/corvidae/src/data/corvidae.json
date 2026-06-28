@@ -5,102 +5,227 @@
   "commonName": "Crows, ravens & magpies",
   "children": [
     {
-      "id": "GENUS_PICA",
-      "name": "Pica",
+      "id": "GENUS_APHELOCOMA",
+      "name": "Aphelocoma",
       "rank": "GENUS",
-      "description": "The true magpies — unmistakable black-and-white birds with an extraordinarily long, iridescent green tail. Among the most intelligent animals on Earth, magpies pass the mirror self-recognition test, use tools, hold 'funerals' for dead companions, and cache food while watching for observers, then move the cache if they suspect they have been seen. The Eurasian Magpie has lived alongside humans for millennia and thrives in cities, gardens, and farmland across the entire Palearctic.",
-      "lineage": "Magpies",
+      "description": "Scrub-jays — crrestless, blue-and-grey jays of North and Central America, inhabiting scrubby oak woodland, chaparral, and semi-arid habitats. They are notable for their exceptional episodic memory: Western Scrub-Jays remember what, where, and when they cached food, and take account of whether a rival was watching when they hid it — a cognitive feat that implies an awareness of other minds.",
+      "lineage": "Scrub-Jays",
       "children": [
         {
-          "id": "PICA_PICA",
-          "name": "Pica pica",
+          "id": "APHELOCOMA_CALIFORNICA",
+          "name": "Aphelocoma californica",
           "rank": "SPECIES",
-          "commonName": "Eurasian magpie",
-          "lineage": "Magpies",
+          "commonName": "California Scrub-Jay",
+          "lineage": "Scrub-Jays",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "APHELOCOMA_COERULESCENS",
+          "name": "Aphelocoma coerulescens",
+          "rank": "SPECIES",
+          "commonName": "Florida Scrub-Jay",
+          "lineage": "Scrub-Jays",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "APHELOCOMA_INSOLENS",
+          "name": "Aphelocoma insolaris",
+          "rank": "SPECIES",
+          "commonName": "Interior Scrub-Jay",
+          "lineage": "Scrub-Jays",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A scrub-jay of the interior western United States, found in pinyon-juniper and scrub oak habitats from Oregon to Texas. Distinguished from the California scrub-jay by its duller plumage and more restricted blue markings.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "APHELOCOMA_INSULARIS",
+          "name": "Aphelocoma insularis",
+          "rank": "SPECIES",
+          "commonName": "Island Scrub-Jay",
+          "lineage": "Scrub-Jays",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "APHELOCOMA_ULTRAMARINA",
+          "name": "Aphelocoma ultramarina",
+          "rank": "SPECIES",
+          "commonName": "Aphelocoma ultramarina",
+          "lineage": "Aphelocoma",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Aphelocoma ultramarina — a species in the genus Aphelocoma, family Corvidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "APHELOCOMA_UNICOLOR",
+          "name": "Aphelocoma unicolor",
+          "rank": "SPECIES",
+          "commonName": "Aphelocoma unicolor",
+          "lineage": "Aphelocoma",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Aphelocoma unicolor — a species in the genus Aphelocoma, family Corvidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "APHELOCOMA_WOODHOUSEII",
+          "name": "Aphelocoma woodhouseii",
+          "rank": "SPECIES",
+          "commonName": "Woodhouse's Scrub-Jay",
+          "lineage": "Scrub-Jays",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "namedAfter": "Samuel Washington Woodhouse",
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CALOCITTA",
+      "name": "Calocitta",
+      "rank": "GENUS",
+      "description": "Calocitta — a genus of crows, ravens & magpies in the family Corvidae.",
+      "lineage": "Calocitta",
+      "children": [
+        {
+          "id": "CALOCITTA_COLLIEI",
+          "name": "Calocitta colliei",
+          "rank": "SPECIES",
+          "commonName": "Calocitta colliei",
+          "lineage": "Calocitta",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Calocitta colliei — a species in the genus Calocitta, family Corvidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CALOCITTA_FORMOSA",
+          "name": "Calocitta formosa",
+          "rank": "SPECIES",
+          "commonName": "Calocitta formosa",
+          "lineage": "Calocitta",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Calocitta formosa — a species in the genus Calocitta, family Corvidae.",
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_CISSA",
+      "name": "Cissa",
+      "rank": "GENUS",
+      "description": "Green magpies — small, brilliantly coloured corvids of South and Southeast Asian forests, with vivid emerald-green plumage (which fades to turquoise or blue in captivity due to a diet-dependent carotenoid pigment), bright red bill and legs, and a chestnut wing panel. They are secretive inhabitants of forest understorey and mid-storey, where their coloration provides effective camouflage against sunlit foliage.",
+      "lineage": "Green Magpies",
+      "children": [
+        {
+          "id": "CISSA_CHINENSIS",
+          "name": "Cissa chinensis",
+          "rank": "SPECIES",
+          "commonName": "Common Green Magpie",
+          "lineage": "Green Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 4,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CISSA_HYPOLEUCA",
+          "name": "Cissa hypoleuca",
+          "rank": "SPECIES",
+          "commonName": "Indochinese Green Magpie",
+          "lineage": "Green Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 5,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CISSA_JEFFERYI",
+          "name": "Cissa jefferyi",
+          "rank": "SPECIES",
+          "commonName": "Bornean Green Magpie",
+          "lineage": "Green Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CISSA_THALASSINA",
+          "name": "Cissa thalassina",
+          "rank": "SPECIES",
+          "commonName": "Javan Green Magpie",
+          "lineage": "Green Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_COLOEUS",
+      "name": "Coloeus",
+      "rank": "GENUS",
+      "description": "Jackdaws — compact, sociable corvids with pale eyes and a distinctive silver-grey nape. Among the most social corvids, they form long-term pair bonds, nest colonially, and regularly follow larger ungulates and humans to catch disturbed insects. The Eurasian Jackdaw's silver eye gives it an unusually expressive, inquisitive gaze.",
+      "lineage": "Jackdaws",
+      "children": [
+        {
+          "id": "COLOEUS_MONEDULA",
+          "name": "Coloeus monedula",
+          "rank": "SPECIES",
+          "commonName": "Eurasian Jackdaw",
+          "lineage": "Jackdaws",
           "continents": [
             "Europe",
-            "Australia"
-          ],
-          "subspeciesCount": 9,
-          "description": "The Eurasian magpie or common magpie is a resident breeding bird throughout the northern part of the Eurasian continent. It is one of several birds in the crow family (corvids) that are designated as magpies, and it belongs to the Holarctic radiation of \"monochrome\" magpies. In Europe, the term \"magpie\" is used by English speakers as a synonym for the Eurasian magpie; the only other species of magpie in Europe is the Iberian magpie, which is restricted to the Iberian Peninsula.",
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PICA_SERICA",
-          "name": "Pica serica",
-          "rank": "SPECIES",
-          "commonName": "Oriental Magpie",
-          "lineage": "Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 3,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PICA_BOTTANENSIS",
-          "name": "Pica bottanensis",
-          "rank": "SPECIES",
-          "commonName": "Black-rumped Magpie",
-          "lineage": "Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PICA_HUDSONIA",
-          "name": "Pica hudsonia",
-          "rank": "SPECIES",
-          "commonName": "Black-billed Magpie",
-          "lineage": "Magpies",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PICA_NUTTALLI",
-          "name": "Pica nuttalli",
-          "rank": "SPECIES",
-          "commonName": "Yellow-billed Magpie",
-          "lineage": "Magpies",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PICA_MAURITANICA",
-          "name": "Pica mauritanica",
-          "rank": "SPECIES",
-          "commonName": "Maghreb Magpie",
-          "lineage": "Magpies",
-          "continents": [
+            "Asia",
             "Africa"
           ],
-          "subspeciesCount": 0,
+          "subspeciesCount": 4,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "PICA_ASIRENSIS",
-          "name": "Pica asirensis",
+          "id": "COLOEUS_DAUURICUS",
+          "name": "Coloeus dauuricus",
           "rank": "SPECIES",
-          "commonName": "Asir Magpie",
-          "lineage": "Magpies",
+          "commonName": "Daurian Jackdaw",
+          "lineage": "Jackdaws",
           "continents": [
             "Asia"
           ],
-          "subspeciesCount": 0,
           "description": null,
+          "subspeciesCount": 0,
           "sourcedFrom": "wikipedia"
         }
       ]
@@ -113,112 +238,65 @@
       "lineage": "Crows & Ravens",
       "children": [
         {
-          "id": "CORVUS_CORAX",
-          "name": "Corvus corax",
+          "id": "APHELOCOMA_COERULESCENS",
+          "name": "Aphelocoma coerulescens",
           "rank": "SPECIES",
-          "commonName": "Common Raven",
+          "commonName": "Florida Scrub-Jay",
           "lineage": "Crows & Ravens",
           "continents": [
-            "Europe",
-            "Asia",
-            "Africa",
             "North America"
           ],
-          "subspeciesCount": 11,
+          "subspeciesCount": 0,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_CORONE",
-          "name": "Corvus corone",
+          "id": "APHELOCOMA_INSULARIS",
+          "name": "Aphelocoma insularis",
           "rank": "SPECIES",
-          "commonName": "Carrion crow",
+          "commonName": "Island Scrub-Jay",
           "lineage": "Crows & Ravens",
           "continents": [
-            "Europe",
             "North America"
           ],
-          "subspeciesCount": 2,
-          "description": "The carrion crow is a passerine bird of the family Corvidae, native to western Europe and the eastern Palearctic. Along with the hooded crow, the carrion crow occupies a similar ecological niche in Eurasia to the American crow in North America. The two species look very similar to one another, but can be differentiated by size, as the carrion crow is larger and of a stockier build compared to the American crow.",
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_CORNIX",
-          "name": "Corvus cornix",
-          "rank": "SPECIES",
-          "commonName": "Hooded crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Europe"
-          ],
-          "subspeciesCount": 4,
-          "description": "The hooded crow, also colloquially called just hoodie, is a Eurasian bird subspecies of the carrion crow in the genus Corvus. Widely distributed, it is found across Northern, Eastern, and Southeastern Europe, as well as parts of the Middle East. It is an ashy-grey bird with black head, throat, wings, tail, and thigh feathers, as well as a black bill, eyes, and feet.",
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_FRUGILEGUS",
-          "name": "Corvus frugilegus",
-          "rank": "SPECIES",
-          "commonName": "Rook (bird)",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Europe",
-            "Asia"
-          ],
-          "subspeciesCount": 2,
-          "description": "The rook is a member of the family Corvidae in the passerine order of birds. It is found in the Palearctic, its range extending from Scandinavia and western Europe to eastern Siberia. It is a large, gregarious, black-feathered bird, distinguished from similar species by the whitish featherless area on the face.",
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_DAUURICUS",
-          "name": "Corvus dauuricus",
-          "rank": "SPECIES",
-          "commonName": "Daurian Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Asia"
-          ],
-          "description": null,
           "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_MACRORHYNCHOS",
-          "name": "Corvus macrorhynchos",
-          "rank": "SPECIES",
-          "commonName": "Large-billed Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 11,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_TORQUATUS",
-          "name": "Corvus torquatus",
+          "id": "CORVUS_ALBICOLLIS",
+          "name": "Corvus albicollis",
           "rank": "SPECIES",
-          "commonName": "Collared Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Asia"
-          ],
-          "description": null,
+          "commonName": "Corvus albicollis",
+          "lineage": "Corvus",
+          "continents": [],
           "subspeciesCount": 0,
+          "description": "Corvus albicollis — a species in the genus Corvus, family Corvidae.",
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_SPLENDENS",
-          "name": "Corvus splendens",
+          "id": "CORVUS_ALBUS",
+          "name": "Corvus albus",
           "rank": "SPECIES",
-          "commonName": "House Crow",
+          "commonName": "Pied Crow",
           "lineage": "Crows & Ravens",
           "continents": [
-            "Asia",
             "Africa"
           ],
-          "subspeciesCount": 5,
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_BENNETTI",
+          "name": "Corvus bennetti",
+          "rank": "SPECIES",
+          "commonName": "Little Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Oceania"
+          ],
+          "subspeciesCount": 0,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
@@ -236,13 +314,108 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_OSSIFRAGUS",
-          "name": "Corvus ossifragus",
+          "id": "CORVUS_CAPENSIS",
+          "name": "Corvus capensis",
           "rank": "SPECIES",
-          "commonName": "Fish Crow",
+          "commonName": "Cape Crow",
           "lineage": "Crows & Ravens",
           "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_CAPITALIS",
+          "name": "Corvus capitalis",
+          "rank": "SPECIES",
+          "commonName": "Indian Jungle Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A large jungle crow of the Indian subcontinent, with a heavy bill and glossy black plumage.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_CELEBENSIS",
+          "name": "Corvus celebensis",
+          "rank": "SPECIES",
+          "commonName": "Sulawesi Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_CORAX",
+          "name": "Corvus corax",
+          "rank": "SPECIES",
+          "commonName": "Common Raven",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Europe",
+            "Asia",
+            "Africa",
             "North America"
+          ],
+          "subspeciesCount": 11,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_CORNIX",
+          "name": "Corvus cornix",
+          "rank": "SPECIES",
+          "commonName": "Hooded crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 4,
+          "description": "The hooded crow, also colloquially called just hoodie, is a Eurasian bird subspecies of the carrion crow in the genus Corvus. Widely distributed, it is found across Northern, Eastern, and Southeastern Europe, as well as parts of the Middle East. It is an ashy-grey bird with black head, throat, wings, tail, and thigh feathers, as well as a black bill, eyes, and feet.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_CORONE",
+          "name": "Corvus corone",
+          "rank": "SPECIES",
+          "commonName": "Carrion crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Europe",
+            "North America"
+          ],
+          "subspeciesCount": 2,
+          "description": "The carrion crow is a passerine bird of the family Corvidae, native to western Europe and the eastern Palearctic. Along with the hooded crow, the carrion crow occupies a similar ecological niche in Eurasia to the American crow in North America. The two species look very similar to one another, but can be differentiated by size, as the carrion crow is larger and of a stockier build compared to the American crow.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_CORONOIDES",
+          "name": "Corvus coronoides",
+          "rank": "SPECIES",
+          "commonName": "Australian Raven",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Oceania"
+          ],
+          "subspeciesCount": 2,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_CRASSIROSTRIS",
+          "name": "Corvus crassirostris",
+          "rank": "SPECIES",
+          "commonName": "Thick-billed Raven",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Africa"
           ],
           "subspeciesCount": 0,
           "description": null,
@@ -262,24 +435,37 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_MONEDULOIDES",
-          "name": "Corvus moneduloides",
+          "id": "CORVUS_CUBANUS",
+          "name": "Corvus cubanus",
           "rank": "SPECIES",
-          "commonName": "New Caledonian Crow",
+          "commonName": "Cuban Palm Crow",
+          "lineage": "True Crows",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A medium-sized crow endemic to Cuba and the Isla de la Juventud, where it inhabits palm savannas and forests. Its call is a distinctive, nasal 'caw' that differs notably from that of mainland North American crows.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_DAUURICUS",
+          "name": "Corvus dauuricus",
+          "rank": "SPECIES",
+          "commonName": "Daurian Crow",
           "lineage": "Crows & Ravens",
           "continents": [
-            "Oceania"
+            "Asia"
           ],
-          "subspeciesCount": 2,
           "description": null,
+          "subspeciesCount": 0,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_ALBUS",
-          "name": "Corvus albus",
+          "id": "CORVUS_EDITHIAE",
+          "name": "Corvus edithae",
           "rank": "SPECIES",
-          "commonName": "Pied Crow",
-          "lineage": "Crows & Ravens",
+          "commonName": "Somali Crow",
+          "lineage": "True Crows",
           "continents": [
             "Africa"
           ],
@@ -288,104 +474,10 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_CRASSIROSTRIS",
-          "name": "Corvus crassirostris",
+          "id": "CORVUS_ENCA",
+          "name": "Corvus enca",
           "rank": "SPECIES",
-          "commonName": "Thick-billed Raven",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_CAPENSIS",
-          "name": "Corvus capensis",
-          "rank": "SPECIES",
-          "commonName": "Cape Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_RUFICOLLIS",
-          "name": "Corvus ruficollis",
-          "rank": "SPECIES",
-          "commonName": "Brown-necked Raven",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Africa",
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_RHIPIDURUS",
-          "name": "Corvus rhipidurus",
-          "rank": "SPECIES",
-          "commonName": "Fan-tailed Raven",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Africa",
-            "Asia"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_CORONOIDES",
-          "name": "Corvus coronoides",
-          "rank": "SPECIES",
-          "commonName": "Australian Raven",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Oceania"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_BENNETTI",
-          "name": "Corvus bennetti",
-          "rank": "SPECIES",
-          "commonName": "Little Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Oceania"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_ORRU",
-          "name": "Corvus orru",
-          "rank": "SPECIES",
-          "commonName": "Torresian Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Oceania",
-            "Asia"
-          ],
-          "subspeciesCount": 3,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_TYPICUS",
-          "name": "Corvus typicus",
-          "rank": "SPECIES",
-          "commonName": "Piping Crow",
+          "commonName": "Slender-billed Crow",
           "lineage": "Crows & Ravens",
           "continents": [
             "Asia"
@@ -408,98 +500,64 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_KUBARYI",
-          "name": "Corvus kubaryi",
+          "id": "CORVUS_FRUGILEGUS",
+          "name": "Corvus frugilegus",
           "rank": "SPECIES",
-          "commonName": "Mariana Crow",
+          "commonName": "Rook (bird)",
           "lineage": "Crows & Ravens",
           "continents": [
-            "Oceania"
-          ],
-          "subspeciesCount": 0,
-          "namedAfter": "Jan Stanisław Kubary",
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_RUFIGULA",
-          "name": "Corvus rufigula",
-          "rank": "SPECIES",
-          "commonName": "Brown-necked Raven",
-          "lineage": "True Crows",
-          "continents": [
-            "Africa",
             "Europe",
             "Asia"
           ],
-          "subspeciesCount": 0,
-          "description": "A raven of arid and semi-arid regions from North Africa through the Middle East to Central Asia. Its brownish nape and neck distinguish it from the common raven.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_EDITHIAE",
-          "name": "Corvus edithae",
-          "rank": "SPECIES",
-          "commonName": "Somali Crow",
-          "lineage": "True Crows",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
+          "subspeciesCount": 2,
+          "description": "The rook is a member of the family Corvidae in the passerine order of birds. It is found in the Palearctic, its range extending from Scandinavia and western Europe to eastern Siberia. It is a large, gregarious, black-feathered bird, distinguished from similar species by the whitish featherless area on the face.",
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_CUBANUS",
-          "name": "Corvus cubanus",
+          "id": "CORVUS_FUSCICAPILLUS",
+          "name": "Corvus fuscicapillus",
           "rank": "SPECIES",
-          "commonName": "Cuban Palm Crow",
-          "lineage": "True Crows",
-          "continents": [
-            "North America"
-          ],
+          "commonName": "Brown-headed crow",
+          "lineage": "Corvus",
+          "continents": [],
           "subspeciesCount": 0,
-          "description": "A medium-sized crow endemic to Cuba and the Isla de la Juventud, where it inhabits palm savannas and forests. Its call is a distinctive, nasal 'caw' that differs notably from that of mainland North American crows.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_JAMAICENSIS",
-          "name": "Corvus jamaicensis",
-          "rank": "SPECIES",
-          "commonName": "Jamaican Crow",
-          "lineage": "True Crows",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
+          "description": "The brown-headed crow is a passerine bird of the genus Corvus in the family Corvidae. Endemic to Indonesia, it has a fragmented distribution in subtropical or tropical moist lowland forest and subtropical or tropical mangrove forest. It is threatened by habitat destruction and the IUCN has rated it as being \"Least Concern\".",
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_NASICUS",
-          "name": "Corvus nasicus",
+          "id": "CORVUS_HAITIENSIS",
+          "name": "Corvus haitiensis",
           "rank": "SPECIES",
-          "commonName": "Cuban Crow",
-          "lineage": "True Crows",
+          "commonName": "Haitian Crow",
+          "lineage": "Crows & Ravens",
           "continents": [
             "North America"
           ],
           "subspeciesCount": 0,
-          "description": null,
+          "description": "A small crow of Haiti, darker and glossier than the palm crow.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_HAWAIIENSIS",
+          "name": "Corvus hawaiiensis",
+          "rank": "SPECIES",
+          "commonName": "Hawaiian crow",
+          "lineage": "Corvus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "The Hawaiian crow or ʻalalā is a species of bird in the crow family, Corvidae, that is currently extinct in the wild, though reintroduction programs are underway. It is about the size of the carrion crow at 48–50 cm (19–20 in) in length, but with more rounded wings and a much thicker bill. It has soft, brownish-black plumage and long, bristly throat feathers; the feet, legs, and bill are black.",
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_LEUCOGNATHALUS",
-          "name": "Corvus leucognathalus",
+          "id": "CORVUS_IMPARATUS",
+          "name": "Corvus imparatus",
           "rank": "SPECIES",
-          "commonName": "White-necked Crow",
-          "lineage": "True Crows",
-          "continents": [
-            "North America"
-          ],
+          "commonName": "Corvus imparatus",
+          "lineage": "Corvus",
+          "continents": [],
           "subspeciesCount": 0,
-          "description": "A medium-sized crow of Hispaniola and Puerto Rico. The white base of the neck feathers (often concealed) and the bluish-white iris distinguish it from other Caribbean crows.",
-          "sourcedFrom": "generated"
+          "description": "Corvus imparatus — a species in the genus Corvus, family Corvidae.",
+          "sourcedFrom": "wikipedia"
         },
         {
           "id": "CORVUS_IMPERATUS",
@@ -512,58 +570,6 @@
           ],
           "subspeciesCount": 0,
           "description": "A large, powerful crow of the Himalayan foothills and mountain forests from Pakistan to Myanmar. Its deep, resonant call echoes through mountain valleys at dawn. Sometimes treated as a subspecies of the jungle crow, but morphological and vocal differences support full species status.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_VALIDUS",
-          "name": "Corvus validus",
-          "rank": "SPECIES",
-          "commonName": "Long-billed Crow",
-          "lineage": "True Crows",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CORVUS_MEKONGENSIS",
-          "name": "Corvus mekongensis",
-          "rank": "SPECIES",
-          "commonName": "Mekong Crow",
-          "lineage": "True Crows",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": "A recent species described from the Mekong River basin of Cambodia and Vietnam. Its ecology is poorly known but it is believed to favour riverine forest and agricultural areas in the Mekong floodplain.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_CAPITALIS",
-          "name": "Corvus capitalis",
-          "rank": "SPECIES",
-          "commonName": "Indian Jungle Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": "A large jungle crow of the Indian subcontinent, with a heavy bill and glossy black plumage.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_LEUCOGNATHUS",
-          "name": "Corvus leucognathus",
-          "rank": "SPECIES",
-          "commonName": "White-necked Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": "A crow of Hispaniola and Puerto Rico with white-based neck feathers, visible when ruffled.",
           "sourcedFrom": "generated"
         },
         {
@@ -593,6 +599,214 @@
           "sourcedFrom": "generated"
         },
         {
+          "id": "CORVUS_JAMAICENSIS",
+          "name": "Corvus jamaicensis",
+          "rank": "SPECIES",
+          "commonName": "Jamaican Crow",
+          "lineage": "True Crows",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_KUBARYI",
+          "name": "Corvus kubaryi",
+          "rank": "SPECIES",
+          "commonName": "Mariana Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Oceania"
+          ],
+          "subspeciesCount": 0,
+          "namedAfter": "Jan Stanisław Kubary",
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_LEUCOGNAPHALUS",
+          "name": "Corvus leucognaphalus",
+          "rank": "SPECIES",
+          "commonName": "White-necked crow",
+          "lineage": "Corvus",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "The white-necked crow is the largest of the four Caribbean corvids. It is endemic to the island of Hispaniola ; it was formerly also extant on Puerto Rico and Saint Croix in the United States Virgin Islands, but has been extirpated from both islands due to considerable forest clearance and hunting for meat.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_LEUCOGNATHALUS",
+          "name": "Corvus leucognathalus",
+          "rank": "SPECIES",
+          "commonName": "White-necked Crow",
+          "lineage": "True Crows",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A medium-sized crow of Hispaniola and Puerto Rico. The white base of the neck feathers (often concealed) and the bluish-white iris distinguish it from other Caribbean crows.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_LEUCOGNATHUS",
+          "name": "Corvus leucognathus",
+          "rank": "SPECIES",
+          "commonName": "White-necked Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": "A crow of Hispaniola and Puerto Rico with white-based neck feathers, visible when ruffled.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_LEVAILLANTII",
+          "name": "Corvus levaillantii",
+          "rank": "SPECIES",
+          "commonName": "Large-billed crow",
+          "lineage": "Corvus",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "The large-billed crow, formerly referred to widely as the jungle crow, is a widespread Asian species of crow. It is very adaptable and is able to survive on a wide range of food sources, making it capable of colonizing new areas, due to which it is often considered a nuisance, especially on islands. It has a large bill, which is the source of its scientific name macrorhynchos and it is sometimes known by the common name thick-billed crow.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_MACRORHYNCHOS",
+          "name": "Corvus macrorhynchos",
+          "rank": "SPECIES",
+          "commonName": "Large-billed Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 11,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_MEEKI",
+          "name": "Corvus meeki",
+          "rank": "SPECIES",
+          "commonName": "Corvus meeki",
+          "lineage": "Corvus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Corvus meeki — a species in the genus Corvus, family Corvidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_MEKONGENSIS",
+          "name": "Corvus mekongensis",
+          "rank": "SPECIES",
+          "commonName": "Mekong Crow",
+          "lineage": "True Crows",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A recent species described from the Mekong River basin of Cambodia and Vietnam. Its ecology is poorly known but it is believed to favour riverine forest and agricultural areas in the Mekong floodplain.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_MELLORI",
+          "name": "Corvus mellori",
+          "rank": "SPECIES",
+          "commonName": "Little raven",
+          "lineage": "Corvus",
+          "continents": [
+            "Australia"
+          ],
+          "subspeciesCount": 0,
+          "description": "The little raven is a species of the family Corvidae that is native to southeastern Australia. An adult individual is about 48–50 cm (19–19.5 in) in length, with completely black plumage, beak, and legs; as with all Australian species of Corvus, the black feathers have a grey base, and the iris of the adult bird is white. Although the little raven was first named by Gregory Mathews in 1912, it was only in 1967 that there was consensus to separate it from the Australian raven as a distinct species.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_MINOR",
+          "name": "Corvus minor",
+          "rank": "SPECIES",
+          "commonName": "Little Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A small crow of the Lesser Sunda Islands, one of the smallest Corvus species.",
+          "sourcedFrom": "generated"
+        },
+        {
+          "id": "CORVUS_MONEDULOIDES",
+          "name": "Corvus moneduloides",
+          "rank": "SPECIES",
+          "commonName": "New Caledonian Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Oceania"
+          ],
+          "subspeciesCount": 2,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_NASICUS",
+          "name": "Corvus nasicus",
+          "rank": "SPECIES",
+          "commonName": "Cuban Crow",
+          "lineage": "True Crows",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_ORRU",
+          "name": "Corvus orru",
+          "rank": "SPECIES",
+          "commonName": "Torresian Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Oceania",
+            "Asia"
+          ],
+          "subspeciesCount": 3,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_OSSIFRAGUS",
+          "name": "Corvus ossifragus",
+          "rank": "SPECIES",
+          "commonName": "Fish Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_PALMARUM",
+          "name": "Corvus palmarum",
+          "rank": "SPECIES",
+          "commonName": "Hispaniolan Palm Crow",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
           "id": "CORVUS_PHILIPPINUS",
           "name": "Corvus philippinus",
           "rank": "SPECIES",
@@ -619,6 +833,49 @@
           "sourcedFrom": "generated"
         },
         {
+          "id": "CORVUS_RHIPIDURUS",
+          "name": "Corvus rhipidurus",
+          "rank": "SPECIES",
+          "commonName": "Fan-tailed Raven",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Africa",
+            "Asia"
+          ],
+          "subspeciesCount": 2,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_RUFICOLLIS",
+          "name": "Corvus ruficollis",
+          "rank": "SPECIES",
+          "commonName": "Brown-necked Raven",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "Africa",
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_RUFIGULA",
+          "name": "Corvus rufigula",
+          "rank": "SPECIES",
+          "commonName": "Brown-necked Raven",
+          "lineage": "True Crows",
+          "continents": [
+            "Africa",
+            "Europe",
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A raven of arid and semi-arid regions from North Africa through the Middle East to Central Asia. Its brownish nape and neck distinguish it from the common raven.",
+          "sourcedFrom": "generated"
+        },
+        {
           "id": "CORVUS_SINALOAE",
           "name": "Corvus sinaloae",
           "rank": "SPECIES",
@@ -632,62 +889,50 @@
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_PALMARUM",
-          "name": "Corvus palmarum",
+          "id": "CORVUS_SPLENDENS",
+          "name": "Corvus splendens",
           "rank": "SPECIES",
-          "commonName": "Hispaniolan Palm Crow",
+          "commonName": "House Crow",
           "lineage": "Crows & Ravens",
           "continents": [
-            "North America"
+            "Asia",
+            "Africa"
           ],
-          "subspeciesCount": 0,
+          "subspeciesCount": 5,
           "description": null,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_HAITIENSIS",
-          "name": "Corvus haitiensis",
+          "id": "CORVUS_TORQUATUS",
+          "name": "Corvus torquatus",
           "rank": "SPECIES",
-          "commonName": "Haitian Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": "A small crow of Haiti, darker and glossier than the palm crow.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_MINOR",
-          "name": "Corvus minor",
-          "rank": "SPECIES",
-          "commonName": "Little Crow",
+          "commonName": "Collared Crow",
           "lineage": "Crows & Ravens",
           "continents": [
             "Asia"
           ],
-          "subspeciesCount": 0,
-          "description": "A small crow of the Lesser Sunda Islands, one of the smallest Corvus species.",
-          "sourcedFrom": "generated"
-        },
-        {
-          "id": "CORVUS_CELEBENSIS",
-          "name": "Corvus celebensis",
-          "rank": "SPECIES",
-          "commonName": "Sulawesi Crow",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
           "description": null,
+          "subspeciesCount": 0,
           "sourcedFrom": "wikipedia"
         },
         {
-          "id": "CORVUS_ENCA",
-          "name": "Corvus enca",
+          "id": "CORVUS_TRISTIS",
+          "name": "Corvus tristis",
           "rank": "SPECIES",
-          "commonName": "Slender-billed Crow",
+          "commonName": "Grey crow",
+          "lineage": "Corvus",
+          "continents": [
+            "Europe"
+          ],
+          "subspeciesCount": 0,
+          "description": "The gray crow, formerly known as the bare-faced crow, is about the same size as the Eurasian carrion crow but has somewhat different proportions and quite atypical feather pigmentation during the juvenile phase for a member of this genus.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_TYPICUS",
+          "name": "Corvus typicus",
+          "rank": "SPECIES",
+          "commonName": "Piping Crow",
           "lineage": "Crows & Ravens",
           "continents": [
             "Asia"
@@ -710,6 +955,19 @@
           "sourcedFrom": "wikipedia"
         },
         {
+          "id": "CORVUS_VALIDUS",
+          "name": "Corvus validus",
+          "rank": "SPECIES",
+          "commonName": "Long-billed Crow",
+          "lineage": "True Crows",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
           "id": "CORVUS_VIOLACEUS",
           "name": "Corvus violaceus",
           "rank": "SPECIES",
@@ -717,6 +975,30 @@
           "lineage": "Crows & Ravens",
           "continents": [
             "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CORVUS_WOODFORDI",
+          "name": "Corvus woodfordi",
+          "rank": "SPECIES",
+          "commonName": "White-billed crow",
+          "lineage": "Corvus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "The white-billed crow is a member of the crow family found on the Solomon Islands.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CYANOCORAX_AFFINIS",
+          "name": "Cyanocorax affinis",
+          "rank": "SPECIES",
+          "commonName": "Black-chested Jay",
+          "lineage": "Crows & Ravens",
+          "continents": [
+            "South America"
           ],
           "subspeciesCount": 0,
           "description": null,
@@ -799,528 +1081,6 @@
           "subspeciesCount": 0,
           "description": "A purplish jay of the Brazilian Amazon with a white belly.",
           "sourcedFrom": "generated"
-        },
-        {
-          "id": "CYANOCORAX_AFFINIS",
-          "name": "Cyanocorax affinis",
-          "rank": "SPECIES",
-          "commonName": "Black-chested Jay",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "APHELOCOMA_COERULESCENS",
-          "name": "Aphelocoma coerulescens",
-          "rank": "SPECIES",
-          "commonName": "Florida Scrub-Jay",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "APHELOCOMA_INSULARIS",
-          "name": "Aphelocoma insularis",
-          "rank": "SPECIES",
-          "commonName": "Island Scrub-Jay",
-          "lineage": "Crows & Ravens",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_COLOEUS",
-      "name": "Coloeus",
-      "rank": "GENUS",
-      "description": "Jackdaws — compact, sociable corvids with pale eyes and a distinctive silver-grey nape. Among the most social corvids, they form long-term pair bonds, nest colonially, and regularly follow larger ungulates and humans to catch disturbed insects. The Eurasian Jackdaw's silver eye gives it an unusually expressive, inquisitive gaze.",
-      "lineage": "Jackdaws",
-      "children": [
-        {
-          "id": "COLOEUS_MONEDULA",
-          "name": "Coloeus monedula",
-          "rank": "SPECIES",
-          "commonName": "Eurasian Jackdaw",
-          "lineage": "Jackdaws",
-          "continents": [
-            "Europe",
-            "Asia",
-            "Africa"
-          ],
-          "subspeciesCount": 4,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "COLOEUS_DAUURICUS",
-          "name": "Coloeus dauuricus",
-          "rank": "SPECIES",
-          "commonName": "Daurian Jackdaw",
-          "lineage": "Jackdaws",
-          "continents": [
-            "Asia"
-          ],
-          "description": null,
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_GARRULUS",
-      "name": "Garrulus",
-      "rank": "GENUS",
-      "description": "The Eurasian Jays — dazzlingly patterned corvids with a sky-blue wing panel, pinkish-brown body, and a raucous, scolding call that serves as a woodland alarm system. Jays are paramount seed dispersers: a single bird buries thousands of acorns each autumn in separate caches up to several kilometres from the source tree, and though it recovers most, enough forgotten caches germinate to drive oak forest regeneration across Europe.",
-      "lineage": "Jays",
-      "children": [
-        {
-          "id": "GARRULUS_GLANDARIUS",
-          "name": "Garrulus glandarius",
-          "rank": "SPECIES",
-          "commonName": "Eurasian Jay",
-          "lineage": "Jays",
-          "continents": [
-            "Europe",
-            "Asia",
-            "Africa"
-          ],
-          "subspeciesCount": 33,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "GARRULUS_LANCEOLATUS",
-          "name": "Garrulus lanceolatus",
-          "rank": "SPECIES",
-          "commonName": "Black-headed Jay",
-          "lineage": "Jays",
-          "continents": [
-            "Asia"
-          ],
-          "description": null,
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "GARRULUS_LIDTHI",
-          "name": "Garrulus lidthi",
-          "rank": "SPECIES",
-          "commonName": "Lidth's Jay",
-          "lineage": "Jays",
-          "continents": [
-            "Asia"
-          ],
-          "description": null,
-          "namedAfter": "Baron Georg Heinrich von Lidth de Jeude",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "GARRULUS_BISPECULARIS",
-          "name": "Garrulus bispecularis",
-          "rank": "SPECIES",
-          "commonName": "Plain-crowned Jay",
-          "lineage": "Old World Jays",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": "A cryptic species of the western and central Himalayas, formerly considered conspecific with the Eurasian jay but now recognised as distinct based on vocal and genetic evidence.",
-          "sourcedFrom": "generated"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_CYANOPICA",
-      "name": "Cyanopica",
-      "rank": "GENUS",
-      "description": "Azure-winged magpies — slender, long-tailed corvids with pale underparts and delicate sky-blue wings and tail. Unusually social for corvids, they breed cooperatively with helpers at the nest. They have a striking disjunct distribution: the Iberian Magpie in Portugal and Spain, and the Azure-winged Magpie from the Russian Far East to Japan and China — a distribution once attributed to human introduction but now confirmed as natural.",
-      "lineage": "Azure Magpies",
-      "children": [
-        {
-          "id": "CYANOPICA_CYANUS",
-          "name": "Cyanopica cyanus",
-          "rank": "SPECIES",
-          "commonName": "Azure-winged Magpie",
-          "lineage": "Azure Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 5,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CYANOPICA_COOKI",
-          "name": "Cyanopica cooki",
-          "rank": "SPECIES",
-          "commonName": "Iberian Magpie",
-          "lineage": "Azure Magpies",
-          "continents": [
-            "Europe"
-          ],
-          "description": null,
-          "namedAfter": "Thomas Cook",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_NUCIFRAGA",
-      "name": "Nucifraga",
-      "rank": "GENUS",
-      "description": "Nutcrackers — thickset corvids of mountain conifer forests, with a specialised sublingual pouch that can carry up to 90 pine seeds at once. The Spotted Nutcracker is the primary disperser of Swiss stone pine and Arolla pine across the Alps and Carpathians; without it, these trees could not colonise new ground above the existing treeline. The mutualism is so tight that the trees produce seeds too large for most birds other than nutcrackers to handle.",
-      "lineage": "Nutcrackers",
-      "children": [
-        {
-          "id": "NUCIFRAGA_CARYOCATACTES",
-          "name": "Nucifraga caryocatactes",
-          "rank": "SPECIES",
-          "commonName": "Spotted Nutcracker",
-          "lineage": "Nutcrackers",
-          "continents": [
-            "Europe",
-            "Asia"
-          ],
-          "subspeciesCount": 8,
-          "description": "Category:Animal taxa named by Carl Linnaeus.",
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "NUCIFRAGA_COLUMBIANA",
-          "name": "Nucifraga columbiana",
-          "rank": "SPECIES",
-          "commonName": "Clark's Nutcracker",
-          "lineage": "Nutcrackers",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_PYRRHOCORAX",
-      "name": "Pyrrhocorax",
-      "rank": "GENUS",
-      "description": "Choughs — sleek, all-black corvids with curved bills and buoyant, acrobatic flight that makes them the most aerial members of the family. They inhabit mountain cliffs, sea-cliffs, and upland pastures, probing the soil and dung for invertebrates with their specialised bills. Their high, ringing calls echo off cliff faces throughout their range from Ireland to China.",
-      "lineage": "Choughs",
-      "children": [
-        {
-          "id": "PYRRHOCORAX_PYRRHOCORAX",
-          "name": "Pyrrhocorax pyrrhocorax",
-          "rank": "SPECIES",
-          "commonName": "Red-billed Chough",
-          "lineage": "Choughs",
-          "continents": [
-            "Europe",
-            "Asia",
-            "Africa"
-          ],
-          "subspeciesCount": 8,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PYRRHOCORAX_GRACULUS",
-          "name": "Pyrrhocorax graculus",
-          "rank": "SPECIES",
-          "commonName": "Yellow-billed Chough",
-          "lineage": "Choughs",
-          "continents": [
-            "Europe",
-            "Asia"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_PERISOREUS",
-      "name": "Perisoreus",
-      "rank": "GENUS",
-      "description": "Siberian jays — small, fluffy corvids of the taiga, with soft grey-brown plumage and a rusty tail. They are year-round residents of boreal forest and have developed an extraordinary relationship with human hunters, following them through the forest to scavenge scraps — a behaviour that has made them symbols of the northern wilderness in Scandinavian folklore. They cache food year-round and retrieve caches with remarkable spatial memory during winter.",
-      "lineage": "Siberian Jays",
-      "children": [
-        {
-          "id": "PERISOREUS_INFAUSTUS",
-          "name": "Perisoreus infaustus",
-          "rank": "SPECIES",
-          "commonName": "Siberian Jay",
-          "lineage": "Siberian Jays",
-          "continents": [
-            "Europe",
-            "Asia"
-          ],
-          "subspeciesCount": 8,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "PERISOREUS_INTERNIGRANS",
-          "name": "Perisoreus internigrans",
-          "rank": "SPECIES",
-          "commonName": "Sichuan Jay",
-          "lineage": "Siberian Jays",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_UROCISSA",
-      "name": "Urocissa",
-      "rank": "GENUS",
-      "description": "Blue magpies — spectacular corvids of South and East Asian forests, with vivid cobalt-blue plumage, a white-tipped tail sometimes longer than the body, and a red or yellow bill. They are noisy, gregarious birds of forest edges and hillsides, often moving in small parties. Despite their dazzling appearance they behave much like other corvids — omnivorous, opportunistic, and bold.",
-      "lineage": "Blue Magpies",
-      "children": [
-        {
-          "id": "UROCISSA_ERYTHRORHYNCHA",
-          "name": "Urocissa erythrorhyncha",
-          "rank": "SPECIES",
-          "commonName": "Red-billed Blue Magpie",
-          "lineage": "Blue Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 5,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "UROCISSA_FLAVIROSTRIS",
-          "name": "Urocissa flavirostris",
-          "rank": "SPECIES",
-          "commonName": "Yellow-billed Blue Magpie",
-          "lineage": "Blue Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 4,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "UROCISSA_CAERULEA",
-          "name": "Urocissa caerulea",
-          "rank": "SPECIES",
-          "commonName": "Taiwan Blue Magpie",
-          "lineage": "Blue Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "UROCISSA_ORNATA",
-          "name": "Urocissa ornata",
-          "rank": "SPECIES",
-          "commonName": "Sri Lanka Blue Magpie",
-          "lineage": "Blue Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "UROCISSA_WHITEHEADI",
-          "name": "Urocissa whiteheadi",
-          "rank": "SPECIES",
-          "commonName": "White-winged Magpie",
-          "lineage": "Blue Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 2,
-          "namedAfter": "John Whitehead",
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_DENDROCITTA",
-      "name": "Dendrocitta",
-      "rank": "GENUS",
-      "description": "Treepies — long-tailed corvids of South and Southeast Asian woodlands with warm rufous and grey plumage. Unlike most corvids they are strongly arboreal, racing through canopy and clambering along branches in search of fruit, insects, eggs, and small vertebrates. Their loud, varied calls are a characteristic sound of the Indian subcontinent's forests and gardens.",
-      "lineage": "Treepies",
-      "children": [
-        {
-          "id": "DENDROCITTA_VAGABUNDA",
-          "name": "Dendrocitta vagabunda",
-          "rank": "SPECIES",
-          "commonName": "Rufous Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 8,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "DENDROCITTA_FORMOSAE",
-          "name": "Dendrocitta formosae",
-          "rank": "SPECIES",
-          "commonName": "Grey Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 7,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "DENDROCITTA_LEUCOGASTRA",
-          "name": "Dendrocitta leucogastra",
-          "rank": "SPECIES",
-          "commonName": "White-bellied Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "DENDROCITTA_OCCIPITALIS",
-          "name": "Dendrocitta occipitalis",
-          "rank": "SPECIES",
-          "commonName": "Sunda Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 2,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "DENDROCITTA_FRONTALIS",
-          "name": "Dendrocitta frontalis",
-          "rank": "SPECIES",
-          "commonName": "Collared Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "DENDROCITTA_CINERASCENS",
-          "name": "Dendrocitta cinerascens",
-          "rank": "SPECIES",
-          "commonName": "Bornean Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "DENDROCITTA_BAYLEII",
-          "name": "Dendrocitta bayleii",
-          "rank": "SPECIES",
-          "commonName": "Andaman Treepie",
-          "lineage": "Treepies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_CISSA",
-      "name": "Cissa",
-      "rank": "GENUS",
-      "description": "Green magpies — small, brilliantly coloured corvids of South and Southeast Asian forests, with vivid emerald-green plumage (which fades to turquoise or blue in captivity due to a diet-dependent carotenoid pigment), bright red bill and legs, and a chestnut wing panel. They are secretive inhabitants of forest understorey and mid-storey, where their coloration provides effective camouflage against sunlit foliage.",
-      "lineage": "Green Magpies",
-      "children": [
-        {
-          "id": "CISSA_CHINENSIS",
-          "name": "Cissa chinensis",
-          "rank": "SPECIES",
-          "commonName": "Common Green Magpie",
-          "lineage": "Green Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 4,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CISSA_HYPOLEUCA",
-          "name": "Cissa hypoleuca",
-          "rank": "SPECIES",
-          "commonName": "Indochinese Green Magpie",
-          "lineage": "Green Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 5,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CISSA_JEFFERYI",
-          "name": "Cissa jefferyi",
-          "rank": "SPECIES",
-          "commonName": "Bornean Green Magpie",
-          "lineage": "Green Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "CISSA_THALASSINA",
-          "name": "Cissa thalassina",
-          "rank": "SPECIES",
-          "commonName": "Javan Green Magpie",
-          "lineage": "Green Magpies",
-          "continents": [
-            "Asia"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
         }
       ]
     },
@@ -1354,51 +1114,6 @@
             "Asia"
           ],
           "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_PTILOSTOMUS",
-      "name": "Ptilostomus",
-      "rank": "GENUS",
-      "description": "A monotypic genus containing the Piapiac, a slender, long-tailed African corvid with a social lifestyle more reminiscent of mynas than typical crows. The Piapiac is unique among corvids in its association with large mammals, riding on the backs of cattle, camels, and elephants to pick ticks, flies, and disturbed insects from their hides.",
-      "lineage": "Piapiac",
-      "children": [
-        {
-          "id": "PTILOSTOMUS_AFER",
-          "name": "Ptilostomus afer",
-          "rank": "SPECIES",
-          "commonName": "Piapiac",
-          "lineage": "Piapiac",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_ZAVATTARIORNIS",
-      "name": "Zavattariornis",
-      "rank": "GENUS",
-      "description": "A monotypic genus known only from a tiny area of southern Ethiopia, containing one of the world's most enigmatic corvids. Stresemann's Bush Crow was unknown to science until 1938 and remains poorly understood, with a bizarrely restricted range that appears to be determined by specific climatic conditions rather than vegetation type.",
-      "lineage": "Bush Crows",
-      "children": [
-        {
-          "id": "ZAVATTARIORNIS_STRESEMANNI",
-          "name": "Zavattariornis stresemanni",
-          "rank": "SPECIES",
-          "commonName": "Stresemann's Bush Crow",
-          "lineage": "Bush Crows",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "namedAfter": "Erwin Stresemann",
           "description": null,
           "sourcedFrom": "wikipedia"
         }
@@ -1449,81 +1164,6 @@
           ],
           "subspeciesCount": 0,
           "description": "A brilliant green, blue, and yellow jay of southern Texas, Mexico, and Central America. No other North American bird shares its unique colour palette; its combination of emerald green back, blue crown, black bib, and bright yellow underparts makes it unmistakable at bird feeders in the Lower Rio Grande Valley.",
-          "sourcedFrom": "generated"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_APHELOCOMA",
-      "name": "Aphelocoma",
-      "rank": "GENUS",
-      "description": "Scrub-jays — crrestless, blue-and-grey jays of North and Central America, inhabiting scrubby oak woodland, chaparral, and semi-arid habitats. They are notable for their exceptional episodic memory: Western Scrub-Jays remember what, where, and when they cached food, and take account of whether a rival was watching when they hid it — a cognitive feat that implies an awareness of other minds.",
-      "lineage": "Scrub-Jays",
-      "children": [
-        {
-          "id": "APHELOCOMA_CALIFORNICA",
-          "name": "Aphelocoma californica",
-          "rank": "SPECIES",
-          "commonName": "California Scrub-Jay",
-          "lineage": "Scrub-Jays",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "APHELOCOMA_COERULESCENS",
-          "name": "Aphelocoma coerulescens",
-          "rank": "SPECIES",
-          "commonName": "Florida Scrub-Jay",
-          "lineage": "Scrub-Jays",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "APHELOCOMA_INSULARIS",
-          "name": "Aphelocoma insularis",
-          "rank": "SPECIES",
-          "commonName": "Island Scrub-Jay",
-          "lineage": "Scrub-Jays",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "APHELOCOMA_WOODHOUSEII",
-          "name": "Aphelocoma woodhouseii",
-          "rank": "SPECIES",
-          "commonName": "Woodhouse's Scrub-Jay",
-          "lineage": "Scrub-Jays",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "namedAfter": "Samuel Washington Woodhouse",
-          "description": null,
-          "sourcedFrom": "wikipedia"
-        },
-        {
-          "id": "APHELOCOMA_INSOLENS",
-          "name": "Aphelocoma insolaris",
-          "rank": "SPECIES",
-          "commonName": "Interior Scrub-Jay",
-          "lineage": "Scrub-Jays",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": "A scrub-jay of the interior western United States, found in pinyon-juniper and scrub oak habitats from Oregon to Texas. Distinguished from the California scrub-jay by its duller plumage and more restricted blue markings.",
           "sourcedFrom": "generated"
         }
       ]
@@ -1747,6 +1387,390 @@
       ]
     },
     {
+      "id": "GENUS_CYANOPICA",
+      "name": "Cyanopica",
+      "rank": "GENUS",
+      "description": "Azure-winged magpies — slender, long-tailed corvids with pale underparts and delicate sky-blue wings and tail. Unusually social for corvids, they breed cooperatively with helpers at the nest. They have a striking disjunct distribution: the Iberian Magpie in Portugal and Spain, and the Azure-winged Magpie from the Russian Far East to Japan and China — a distribution once attributed to human introduction but now confirmed as natural.",
+      "lineage": "Azure Magpies",
+      "children": [
+        {
+          "id": "CYANOPICA_CYANUS",
+          "name": "Cyanopica cyanus",
+          "rank": "SPECIES",
+          "commonName": "Azure-winged Magpie",
+          "lineage": "Azure Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 5,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "CYANOPICA_COOKI",
+          "name": "Cyanopica cooki",
+          "rank": "SPECIES",
+          "commonName": "Iberian Magpie",
+          "lineage": "Azure Magpies",
+          "continents": [
+            "Europe"
+          ],
+          "description": null,
+          "namedAfter": "Thomas Cook",
+          "subspeciesCount": 0,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_DENDROCITTA",
+      "name": "Dendrocitta",
+      "rank": "GENUS",
+      "description": "Treepies — long-tailed corvids of South and Southeast Asian woodlands with warm rufous and grey plumage. Unlike most corvids they are strongly arboreal, racing through canopy and clambering along branches in search of fruit, insects, eggs, and small vertebrates. Their loud, varied calls are a characteristic sound of the Indian subcontinent's forests and gardens.",
+      "lineage": "Treepies",
+      "children": [
+        {
+          "id": "DENDROCITTA_VAGABUNDA",
+          "name": "Dendrocitta vagabunda",
+          "rank": "SPECIES",
+          "commonName": "Rufous Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 8,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "DENDROCITTA_FORMOSAE",
+          "name": "Dendrocitta formosae",
+          "rank": "SPECIES",
+          "commonName": "Grey Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 7,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "DENDROCITTA_LEUCOGASTRA",
+          "name": "Dendrocitta leucogastra",
+          "rank": "SPECIES",
+          "commonName": "White-bellied Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "DENDROCITTA_OCCIPITALIS",
+          "name": "Dendrocitta occipitalis",
+          "rank": "SPECIES",
+          "commonName": "Sunda Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 2,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "DENDROCITTA_FRONTALIS",
+          "name": "Dendrocitta frontalis",
+          "rank": "SPECIES",
+          "commonName": "Collared Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "DENDROCITTA_CINERASCENS",
+          "name": "Dendrocitta cinerascens",
+          "rank": "SPECIES",
+          "commonName": "Bornean Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "DENDROCITTA_BAYLEII",
+          "name": "Dendrocitta bayleii",
+          "rank": "SPECIES",
+          "commonName": "Andaman Treepie",
+          "lineage": "Treepies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_GARRULUS",
+      "name": "Garrulus",
+      "rank": "GENUS",
+      "description": "The Eurasian Jays — dazzlingly patterned corvids with a sky-blue wing panel, pinkish-brown body, and a raucous, scolding call that serves as a woodland alarm system. Jays are paramount seed dispersers: a single bird buries thousands of acorns each autumn in separate caches up to several kilometres from the source tree, and though it recovers most, enough forgotten caches germinate to drive oak forest regeneration across Europe.",
+      "lineage": "Jays",
+      "children": [
+        {
+          "id": "GARRULUS_GLANDARIUS",
+          "name": "Garrulus glandarius",
+          "rank": "SPECIES",
+          "commonName": "Eurasian Jay",
+          "lineage": "Jays",
+          "continents": [
+            "Europe",
+            "Asia",
+            "Africa"
+          ],
+          "subspeciesCount": 33,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "GARRULUS_LANCEOLATUS",
+          "name": "Garrulus lanceolatus",
+          "rank": "SPECIES",
+          "commonName": "Black-headed Jay",
+          "lineage": "Jays",
+          "continents": [
+            "Asia"
+          ],
+          "description": null,
+          "subspeciesCount": 0,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "GARRULUS_LIDTHI",
+          "name": "Garrulus lidthi",
+          "rank": "SPECIES",
+          "commonName": "Lidth's Jay",
+          "lineage": "Jays",
+          "continents": [
+            "Asia"
+          ],
+          "description": null,
+          "namedAfter": "Baron Georg Heinrich von Lidth de Jeude",
+          "subspeciesCount": 0,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "GARRULUS_BISPECULARIS",
+          "name": "Garrulus bispecularis",
+          "rank": "SPECIES",
+          "commonName": "Plain-crowned Jay",
+          "lineage": "Old World Jays",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": "A cryptic species of the western and central Himalayas, formerly considered conspecific with the Eurasian jay but now recognised as distinct based on vocal and genetic evidence.",
+          "sourcedFrom": "generated"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_NUCIFRAGA",
+      "name": "Nucifraga",
+      "rank": "GENUS",
+      "description": "Nutcrackers — thickset corvids of mountain conifer forests, with a specialised sublingual pouch that can carry up to 90 pine seeds at once. The Spotted Nutcracker is the primary disperser of Swiss stone pine and Arolla pine across the Alps and Carpathians; without it, these trees could not colonise new ground above the existing treeline. The mutualism is so tight that the trees produce seeds too large for most birds other than nutcrackers to handle.",
+      "lineage": "Nutcrackers",
+      "children": [
+        {
+          "id": "NUCIFRAGA_CARYOCATACTES",
+          "name": "Nucifraga caryocatactes",
+          "rank": "SPECIES",
+          "commonName": "Spotted Nutcracker",
+          "lineage": "Nutcrackers",
+          "continents": [
+            "Europe",
+            "Asia"
+          ],
+          "subspeciesCount": 8,
+          "description": "Category:Animal taxa named by Carl Linnaeus.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "NUCIFRAGA_COLUMBIANA",
+          "name": "Nucifraga columbiana",
+          "rank": "SPECIES",
+          "commonName": "Clark's Nutcracker",
+          "lineage": "Nutcrackers",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PERISOREUS",
+      "name": "Perisoreus",
+      "rank": "GENUS",
+      "description": "Siberian jays — small, fluffy corvids of the taiga, with soft grey-brown plumage and a rusty tail. They are year-round residents of boreal forest and have developed an extraordinary relationship with human hunters, following them through the forest to scavenge scraps — a behaviour that has made them symbols of the northern wilderness in Scandinavian folklore. They cache food year-round and retrieve caches with remarkable spatial memory during winter.",
+      "lineage": "Siberian Jays",
+      "children": [
+        {
+          "id": "PERISOREUS_CANADENSIS",
+          "name": "Perisoreus canadensis",
+          "rank": "SPECIES",
+          "commonName": "Perisoreus canadensis",
+          "lineage": "Perisoreus",
+          "continents": [],
+          "subspeciesCount": 0,
+          "description": "Perisoreus canadensis — a species in the genus Perisoreus, family Corvidae.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PERISOREUS_INFAUSTUS",
+          "name": "Perisoreus infaustus",
+          "rank": "SPECIES",
+          "commonName": "Siberian Jay",
+          "lineage": "Siberian Jays",
+          "continents": [
+            "Europe",
+            "Asia"
+          ],
+          "subspeciesCount": 8,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PERISOREUS_INTERNIGRANS",
+          "name": "Perisoreus internigrans",
+          "rank": "SPECIES",
+          "commonName": "Sichuan Jay",
+          "lineage": "Siberian Jays",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PICA",
+      "name": "Pica",
+      "rank": "GENUS",
+      "description": "The true magpies — unmistakable black-and-white birds with an extraordinarily long, iridescent green tail. Among the most intelligent animals on Earth, magpies pass the mirror self-recognition test, use tools, hold 'funerals' for dead companions, and cache food while watching for observers, then move the cache if they suspect they have been seen. The Eurasian Magpie has lived alongside humans for millennia and thrives in cities, gardens, and farmland across the entire Palearctic.",
+      "lineage": "Magpies",
+      "children": [
+        {
+          "id": "PICA_PICA",
+          "name": "Pica pica",
+          "rank": "SPECIES",
+          "commonName": "Eurasian magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "Europe",
+            "Australia"
+          ],
+          "subspeciesCount": 9,
+          "description": "The Eurasian magpie or common magpie is a resident breeding bird throughout the northern part of the Eurasian continent. It is one of several birds in the crow family (corvids) that are designated as magpies, and it belongs to the Holarctic radiation of \"monochrome\" magpies. In Europe, the term \"magpie\" is used by English speakers as a synonym for the Eurasian magpie; the only other species of magpie in Europe is the Iberian magpie, which is restricted to the Iberian Peninsula.",
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PICA_SERICA",
+          "name": "Pica serica",
+          "rank": "SPECIES",
+          "commonName": "Oriental Magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 3,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PICA_BOTTANENSIS",
+          "name": "Pica bottanensis",
+          "rank": "SPECIES",
+          "commonName": "Black-rumped Magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PICA_HUDSONIA",
+          "name": "Pica hudsonia",
+          "rank": "SPECIES",
+          "commonName": "Black-billed Magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PICA_NUTTALLI",
+          "name": "Pica nuttalli",
+          "rank": "SPECIES",
+          "commonName": "Yellow-billed Magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "North America"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PICA_MAURITANICA",
+          "name": "Pica mauritanica",
+          "rank": "SPECIES",
+          "commonName": "Maghreb Magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PICA_ASIRENSIS",
+          "name": "Pica asirensis",
+          "rank": "SPECIES",
+          "commonName": "Asir Magpie",
+          "lineage": "Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
       "id": "GENUS_PODOCES",
       "name": "Podoces",
       "rank": "GENUS",
@@ -1778,6 +1802,164 @@
           ],
           "subspeciesCount": 0,
           "namedAfter": "Michael Biddulph",
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PTILOSTOMUS",
+      "name": "Ptilostomus",
+      "rank": "GENUS",
+      "description": "A monotypic genus containing the Piapiac, a slender, long-tailed African corvid with a social lifestyle more reminiscent of mynas than typical crows. The Piapiac is unique among corvids in its association with large mammals, riding on the backs of cattle, camels, and elephants to pick ticks, flies, and disturbed insects from their hides.",
+      "lineage": "Piapiac",
+      "children": [
+        {
+          "id": "PTILOSTOMUS_AFER",
+          "name": "Ptilostomus afer",
+          "rank": "SPECIES",
+          "commonName": "Piapiac",
+          "lineage": "Piapiac",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_PYRRHOCORAX",
+      "name": "Pyrrhocorax",
+      "rank": "GENUS",
+      "description": "Choughs — sleek, all-black corvids with curved bills and buoyant, acrobatic flight that makes them the most aerial members of the family. They inhabit mountain cliffs, sea-cliffs, and upland pastures, probing the soil and dung for invertebrates with their specialised bills. Their high, ringing calls echo off cliff faces throughout their range from Ireland to China.",
+      "lineage": "Choughs",
+      "children": [
+        {
+          "id": "PYRRHOCORAX_PYRRHOCORAX",
+          "name": "Pyrrhocorax pyrrhocorax",
+          "rank": "SPECIES",
+          "commonName": "Red-billed Chough",
+          "lineage": "Choughs",
+          "continents": [
+            "Europe",
+            "Asia",
+            "Africa"
+          ],
+          "subspeciesCount": 8,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "PYRRHOCORAX_GRACULUS",
+          "name": "Pyrrhocorax graculus",
+          "rank": "SPECIES",
+          "commonName": "Yellow-billed Chough",
+          "lineage": "Choughs",
+          "continents": [
+            "Europe",
+            "Asia"
+          ],
+          "subspeciesCount": 2,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_UROCISSA",
+      "name": "Urocissa",
+      "rank": "GENUS",
+      "description": "Blue magpies — spectacular corvids of South and East Asian forests, with vivid cobalt-blue plumage, a white-tipped tail sometimes longer than the body, and a red or yellow bill. They are noisy, gregarious birds of forest edges and hillsides, often moving in small parties. Despite their dazzling appearance they behave much like other corvids — omnivorous, opportunistic, and bold.",
+      "lineage": "Blue Magpies",
+      "children": [
+        {
+          "id": "UROCISSA_ERYTHRORHYNCHA",
+          "name": "Urocissa erythrorhyncha",
+          "rank": "SPECIES",
+          "commonName": "Red-billed Blue Magpie",
+          "lineage": "Blue Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 5,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "UROCISSA_FLAVIROSTRIS",
+          "name": "Urocissa flavirostris",
+          "rank": "SPECIES",
+          "commonName": "Yellow-billed Blue Magpie",
+          "lineage": "Blue Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 4,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "UROCISSA_CAERULEA",
+          "name": "Urocissa caerulea",
+          "rank": "SPECIES",
+          "commonName": "Taiwan Blue Magpie",
+          "lineage": "Blue Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "UROCISSA_ORNATA",
+          "name": "Urocissa ornata",
+          "rank": "SPECIES",
+          "commonName": "Sri Lanka Blue Magpie",
+          "lineage": "Blue Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 0,
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        },
+        {
+          "id": "UROCISSA_WHITEHEADI",
+          "name": "Urocissa whiteheadi",
+          "rank": "SPECIES",
+          "commonName": "White-winged Magpie",
+          "lineage": "Blue Magpies",
+          "continents": [
+            "Asia"
+          ],
+          "subspeciesCount": 2,
+          "namedAfter": "John Whitehead",
+          "description": null,
+          "sourcedFrom": "wikipedia"
+        }
+      ]
+    },
+    {
+      "id": "GENUS_ZAVATTARIORNIS",
+      "name": "Zavattariornis",
+      "rank": "GENUS",
+      "description": "A monotypic genus known only from a tiny area of southern Ethiopia, containing one of the world's most enigmatic corvids. Stresemann's Bush Crow was unknown to science until 1938 and remains poorly understood, with a bizarrely restricted range that appears to be determined by specific climatic conditions rather than vegetation type.",
+      "lineage": "Bush Crows",
+      "children": [
+        {
+          "id": "ZAVATTARIORNIS_STRESEMANNI",
+          "name": "Zavattariornis stresemanni",
+          "rank": "SPECIES",
+          "commonName": "Stresemann's Bush Crow",
+          "lineage": "Bush Crows",
+          "continents": [
+            "Africa"
+          ],
+          "subspeciesCount": 0,
+          "namedAfter": "Erwin Stresemann",
           "description": null,
           "sourcedFrom": "wikipedia"
         }
