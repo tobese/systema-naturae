@@ -106,6 +106,7 @@ scripts/                      ← repo-root scripts (mostly Wikipedia / class-le
   buildWikipediaDb.py          ← builds /Volumes/WikiDump/wiki-pages.sqlite from raw enwiki dump
   mergeWikiInfoboxes.ts        ← parses Wikipedia infoboxes from the SQLite DB → family JSONs
   fetchWikidataImages.ts       ← populates shared/data/wiki-images.json
+  mineCommonsCatRangeMaps.ts   ← Phase 1 of habitat-map upgrade: hits Commons API per cached commonsCat, mines range/distribution maps → wiki-images.json.rangeMaps[]
   tailWikiDbProgress.py        ← live progress tail for buildWikipediaDb.py
   watchWikipediaDump.sh        ← waits for the raw dump volume to mount, then runs build
   enrich_*.py                  ← many one-shot enrichment passes (tier1/2/34, near_green, lap2/3, final, …)
