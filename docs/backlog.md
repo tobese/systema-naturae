@@ -1,13 +1,13 @@
 # Backlog
 
-This is the living roadmap for the Systema Naturae portal. Items are grouped by theme and roughly prioritised.
+Living roadmap for the Systema Naturae portal. Items are grouped by theme and roughly prioritised.
 
 ---
 
 ## UI / Interaction
 
 ### Screen Handling — Touch & Desktop
-**Status:** Partially implemented.  
+**Status:** Mostly shipped.  
 **Doc:** [`Screen Handling.md`](./Screen%20Handling.md)
 
 - [x] **Touch: multi-finger zoom & rotate** — handled by D3 zoom. ✅ Already works.
@@ -23,6 +23,7 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 - [x] Integrated colour themes (`colorRegistry.ts`, `PORTAL_THEME`) per rank.
 - [x] Placement: new `StatisticsHeader.tsx` component above `NodeNav`.
 - [x] Deep paths scroll horizontally in narrow sidebars.
+- [ ] **Click pills to jump** — make rank pills clickable to navigate to that ancestor.
 
 ### Tooltip
 **Status:** Shipped.  
@@ -30,8 +31,8 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 
 - [x] Fix viewport clipping on small screens — vertical flip when near bottom edge.
 - [x] Add touch equivalent — 500ms long-press on nodes.
-- [x] Optional: rich preview with Wikipedia thumbnail. — Fetched lazily from Wikipedia REST API.
-- [x] Optional: keyboard-triggered tooltip during arrow-key navigation — shown for 2s after arrow-key nav.
+- [x] Rich preview with Wikipedia thumbnail — fetched lazily from Wikipedia REST API.
+- [x] Keyboard-triggered tooltip during arrow-key navigation — shown for 2s after arrow-key nav.
 - [ ] **Fade-in thumbnails** — animate/fade in Wikipedia hover previews instead of sudden flash.
 
 ---
@@ -48,12 +49,14 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 - [x] Random species selection + side-panel opening via "View species".
 - [x] "Spin again" button.
 - [x] Modal overlay.
+- [ ] Optional: tick audio while spinning.
+- [ ] Optional: cache last winner per session to avoid immediate repeats.
 
 ### Book View
-**Status:** Queued.  
+**Status:** Shipped.  
 **Doc:** [`Book View.md`](./Book%20View.md)
 
-- [ ] **Recursive Book View** — toggleable nested expandable taxonomy sections styled with the portal theme.
+- [x] **Recursive Book View** — toggleable nested expandable taxonomy sections in `BookView.tsx`.
 - [ ] **Bookmarks & Anchor Links** — deep linking per section.
 - [ ] **Search highlights** — scrolling to and opening the relevant section on search matches.
 
@@ -66,109 +69,79 @@ This is the living roadmap for the Systema Naturae portal. Items are grouped by 
 
 ## Infrastructure
 
-- [x] Keep docs in sync with code changes — updated CLAUDE.md node counts (110,827), added docs/README.md index.
-- [x] Add `docs/README.md` index — 7 docs files now indexed.
-- [x] Fix `buildData.sh` timeout — increased from 60s → 180s in `importFamily.ts` and `fetchSpeciesFromApi.ts` (build takes ~60-90s).
+- [x] Keep docs in sync with code — full audit done 2026-06-28; CLAUDE.md, Coverage.md, Import.md, navigation.md, missing-phyla.md and all feature docs refreshed against actual state (183,329 nodes / 1,114 families / 7 phyla).
+- [x] Add `docs/README.md` index.
+- [x] Fix `buildData.sh` timeout — increased from 60s → 180s in `importFamily.ts` and `fetchSpeciesFromApi.ts`.
+- [x] **Offline Wikipedia pipeline** — `buildWikipediaDb.py` builds `/Volumes/WikiDump/wiki-pages.sqlite`; `enrichFromWikipedia.ts` and `mergeWikiInfoboxes.ts` consume it. 52,655 species now carry `sourcedFrom: "wikipedia"`.
+- [x] **Gap-tracking daemon** — `portal/scripts/phylumProgressd.ts` (port 9876) records every `reportPhyla.ts` / `generateGapTasks.ts` POST so progress is graphable over time.
 
 ---
 
-## Archive
-
-Items that were proposed, decided against, or already shipped live here.
+## Archive — Shipped & Resolved
 
 ### Shipped 2026-06-25 — UI Polish Batch
 
 - **Tooltip clipping fix** — `TooltipBox` now receives `containerH` and flips upward when near the bottom edge.
-- **Touch long-press** — `attachTooltip` in `FamilyTree.tsx` now listens for `touchstart`/`touchend`/`touchmove` with a 500ms timer.
+- **Touch long-press** — `attachTooltip` in `FamilyTree.tsx` listens for `touchstart` / `touchend` / `touchmove` with a 500ms timer.
 - **Keyboard tooltip** — Arrow-key navigation in `App.tsx` sets `tooltipTargetId` for 2s; `FamilyTree.tsx` computes screen position and renders tooltip.
 - **Center on node** — `C` / `Home` keys set `pendingZoomId` and force re-render.
 - **Tree rotation** — `Q` / `E` keys adjust `treeRotation` state; `FamilyTree.tsx` adds `rotationRad` offset to radial layout angles, links, text anchors, click anchors, zoom targets, and special-link positions.
-- **Statistics Header** — New `StatisticsHeader.tsx` renders pill breadcrumb with `pillColor()` using `PORTAL_THEME` and `COLOR_REGISTRY`; sits above `NodeNav` in sidebar.
-- **Wheel of Nature** — New `WheelOfNature.tsx` modal with CSS-animated SVG wheel, 12 class sectors coloured from `CLASS_PALETTE`, random species selection, and navigation.
+- **Statistics Header** — `StatisticsHeader.tsx` renders pill breadcrumb with `pillColor()` using `PORTAL_THEME` and `COLOR_REGISTRY`; sits above `NodeNav` in sidebar.
+- **Wheel of Nature** — `WheelOfNature.tsx` modal with CSS-animated SVG wheel, 12 class sectors coloured from `CLASS_PALETTE`, random species selection, navigation.
 
 ### Shipped 2026-06-25 — Import Session (14K species)
 
-- **Removed `enriched` whitelist** from `findGaps.ts` — was hiding 21 families from gap reporting.
-- **GBIF cache re-fetch** (+13,977 species):
-  - `cichlidae` +2,446 | `nymphalidae` +7,583 | `lycosidae` +2,376 | `buthidae` +1,572
-  - `dendrobatidae` +16 (Ollama, partial)
-- **Portal:** 106,691 → 110,872 nodes (+4,181)
-- **Issues found:** Arachnida GBIF cache stale for some families; Ollama `qwen2.5:3b` cannot handle large prompts.
+- Removed `enriched` whitelist from `findGaps.ts` (was hiding 21 families).
+- GBIF cache re-fetch (+13,977 species): `cichlidae` +2,446 | `nymphalidae` +7,583 | `lycosidae` +2,376 | `buthidae` +1,572 | `dendrobatidae` +16.
 
 ### Shipped 2026-06-25 — Papilionidae Wikipedia Import
 
-- **Script:** `portal/scripts/importPapilionidaeWikipedia.ts` — fetches from GBIF, checks Wikipedia REST API, enriches with descriptions/continents
-- **Result:** ~500 species with `sourcedFrom: "wikipedia"` written to `insecta/lepidoptera/papilionidae/src/data/papilionidae.json`
-- **Scanner:** `portal/scripts/scanInsectWikipediaCoverage.ts` — partial scan of 8 insect families (see Insect Filtration section below)
+- `portal/scripts/importPapilionidaeWikipedia.ts` — fetches from GBIF, checks Wikipedia REST API, enriches with descriptions/continents.
+- Result: ~500 species with `sourcedFrom: "wikipedia"` written to `insecta/lepidoptera/papilionidae/src/data/papilionidae.json`.
 
 ### Shipped 2026-06-25 — Wikipedia Source Filter UI
 
-- **OptionsPanel** — new "Highlight Wikipedia species" checkbox in ⚙ gear menu
-- **useUnifiedTree** — merges `highlightedContinent` and `highlightWikipedia` into a single `highlightedNodeIds` set
-- **FamilyTree.tsx** — already dims non-highlighted leaf nodes to 0.1 opacity; no changes needed
-- **TaxonNode type** — added `sourcedFrom?: string` field
+- `OptionsPanel` — "Highlight Wikipedia species" checkbox in ⚙ gear menu.
+- `useUnifiedTree` — merges `highlightedContinent` and `highlightWikipedia` into a single `highlightedNodeIds` set.
+- `TaxonNode` type — added `sourcedFrom?: string` field.
+
+### Shipped 2026-06-27/28 — Cnidaria + Ctenophora bootstrap
+
+- `scripts/scoutPhylum.ts` + `scripts/importClass.ts` + `scripts/bootstrapClass.ts` workflow established for whole-phylum imports.
+- **Cnidaria** — 725 families (Anthozoa 549, Hydrozoa 141, Scyphozoa 20, Cubozoa 8, Staurozoa 7), 22,268 species — 100% complete.
+- **Ctenophora** — 6 families (Tentaculata 5, Nuda 1), 123 species — 100% complete.
+
+### Resolved — Insect Filtration & Ollama gap list
+
+The 2026-06-25 "Queued for Future Sessions" insect / Ollama gap list was fully cleared during the late-June bulk-import passes. The following families are now at or above target:
+
+`papilionidae`, `apidae`, `formicidae`, `vespidae`, `nymphalidae`, `libellulidae`, `carabidae`, `dendrobatidae`, `echinidae`, `sepiidae`, `colubridae`, `scincidae`, `chamaeleonidae`, `lacertidae`, `eublepharidae`, `grallariidae`, `cyprinidae`, `agelenidae`.
 
 ---
 
-## Queued for Future Sessions
+## Queued
 
-### Heavy Insect Fetch (80K+ species)
-- `carabidae` — 38,960 gap
-- `chrysomelidae` — 33,690 gap
-- Rebuild Insecta GBIF cache if stale
+### Heavy gap (Insecta)
 
-### Ollama with Larger Model
-- **Failed in this session** (`qwen2.5:3b` timed out on all but one):
-  - `dendrobatidae` — 74 remaining (partial: +16)
-  - `pelobatidae` — 82 gap
-  - `echinidae` — 57 gap
-  - `sepiidae` — 43 gap
-  - `colubridae` — 31 gap
-  - `scincidae` — 17 gap
-  - `chamaeleonidae` — 7 gap
-  - `lacertidae` — 5 gap
-  - `eublepharidae` — 5 gap
-  - `grallariidae` — 3 gap
-- **Requires:** `qwen2.5:7b` or `llama3.2` — current `3b` model cannot handle prompts for families with existing genus structures
-- **Network note:** Steamie (primary Ollama, Windows 11, user `opencode`) unreachable — "No route to host". Check Biggie (Windows 10), Debbie (Debian), or Macie (macOS) as fallbacks. All four machines run Ollama.
+- `chrysomelidae` — **gap 33,690** (have 1,310 / target 35,000). The single largest outstanding gap in the entire portal — ~98% of all remaining missing species. Likely needs a dedicated GBIF cache rebuild and a multi-pass import.
 
-### Wikipedia Source Filter
-- **Status:** Shipped.
-- **Implementation:** `highlightWikipedia` toggle in OptionsPanel (⚙ gear menu). When enabled, dims non-Wikipedia species to 10% opacity within the focused family.
-- **Files changed:** `OptionsPanel.tsx` (new toggle), `App.tsx` (state + prop), `useUnifiedTree.ts` (builds highlight set), `shared/src/types.ts` (added `sourcedFrom` field).
+### Medium gaps
 
-### Insect Filtration — Wikipedia Coverage Scan
-**Status:** Partial scan complete. Papilionidae import done.
+Pulled from `portal/data/gap-report.json` (28/06/2026):
 
-**Scripts:**
-- `portal/scripts/scanInsectWikipediaCoverage.ts` — scans GBIF + Wikipedia coverage per family
-- `portal/scripts/importPapilionidaeWikipedia.ts` — fetches + enriches from Wikipedia (DONE)
+| Family | Class | Have | Target | Gap |
+|---|---|---:|---:|---:|
+| `hylidae` | Amphibia | 766 | 1,000 | 234 |
+| `pelobatidae` | Amphibia | 50 | 100 | 50 |
+| `pleuronectidae` | Actinopterygii | 72 | 101 | 29 |
+| `nothobranchiidae` | Actinopterygii | 326 | 340 | 14 |
 
-**Results:**
+### Aves long-tail (62 families, all gap < 30)
 
-| Family | Target | GBIF | Wikipedia | Coverage | Status |
-|---|---|---|---|---|---|
-| `papilionidae` | 554 | 892 | ~296 | **33.2%** | ✅ Imported |
-| `apidae` | 6,526 | 6,526 | ~640 | **9.8%** | 📝 Queued |
-| `formicidae` | 15,057 | 15,057 | ~1,476 | **9.8%** | 📝 Queued |
-| `vespidae` | 5,000 | 2,069 | ~196 | **9.5%** | 📝 Queued |
-| `nymphalidae` | 7,583 | 7,583 | ? | **0%*** | ⚠️ Re-scan needed |
-| `libellulidae` | 1,126 | 1,126 | ? | **0%*** | ⚠️ Re-scan needed |
-| `carabidae` | 40,000 | 41,556 | ? | **?** | ⏳ Scan too slow |
-| `chrysomelidae` | 35,000 | ? | ? | **?** | ⏳ Not scanned |
+Most remaining bird gaps are tiny IOC top-ups — `sturnidae` (26), `cracidae` (24), `pachycephalidae` (18), `timaliidae` (18), `tityridae` (17), `rhipiduridae` (16), `tinamidae` (15), `trogonidae` (15), etc. Best tackled with a single Wikipedia-REST batch enrichment pass.
 
-*0% results may be API errors — needs re-scan with better error handling.
+### New phyla (per `missing-phyla.md`)
 
-**Plan:**
-1. Fix scanner script to handle rate limits and retry logic
-2. Re-scan `nymphalidae`, `libellulidae`, `carabidae`, `chrysomelidae`
-3. For families with >15% coverage: import Wikipedia-backed species only
-4. For families with 5–15% coverage: mixed import (Wikipedia + synthetic)
-5. For families with <5% coverage: full synthetic import, mark as such
-
-**Priority:** Medium — Papilionidae done. Next: re-scan the 0% families.
-
-### Data Quality
-- Re-fetch `cyprinidae` from live API (cache returned 1,795 vs target 3,000)
-- Re-fetch `vespidae` from live API (cache returned 2,069 vs target 5,000)
-- Re-fetch `agelenidae` from live API (cache returned 612 vs target 1,200)
+1. **Annelida** (~22,000 species) — segmented worms; recommended next phylum target.
+2. **Onychophora** (~200 species) — velvet worms; small enough for a 100% pass.
+3. **Porifera** (~8,500 species) — sponges.
