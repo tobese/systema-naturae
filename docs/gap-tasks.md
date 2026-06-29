@@ -8,12 +8,12 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 
 | Class | Size Sort Rank | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Mammalia** | 1 | 7,833 | 7,833 | 6,795 | 1,038 | 100.0% | 13.3% | [✓] Complete |
-| **Aves** | 2 | 11,493 | 11,522 | 9,917 | 1,576 | 99.7% | 13.7% | > Gaps: 51 |
-| **Reptilia** | 3 | 7,299 | 7,302 | 2,193 | 5,106 | 100.0% | 69.9% | > Gaps: 3 |
-| **Amphibia** | 4 | 3,797 | 4,084 | 1,542 | 2,255 | 93.0% | 55.2% | > Gaps: 287 |
+| **Mammalia** | 1 | 7,833 | 7,881 | 6,795 | 1,038 | 99.4% | 13.2% | > Gaps: 48 |
+| **Aves** | 2 | 11,493 | 11,691 | 9,917 | 1,576 | 98.3% | 13.5% | > Gaps: 220 |
+| **Reptilia** | 3 | 7,299 | 7,984 | 2,193 | 5,106 | 91.4% | 64.0% | > Gaps: 685 |
+| **Amphibia** | 4 | 3,797 | 3,800 | 1,542 | 2,255 | 99.9% | 59.3% | > Gaps: 3 |
 | **Chondrichthyes** | 5 | 1,187 | 1,187 | 1,050 | 137 | 100.0% | 11.5% | [✓] Complete |
-| **Actinopterygii** | 6 | 10,614 | 10,661 | 6,965 | 3,649 | 99.6% | 34.2% | > Gaps: 47 |
+| **Actinopterygii** | 6 | 10,614 | 10,785 | 6,965 | 3,649 | 98.4% | 33.8% | > Gaps: 171 |
 | **Cephalopoda** | 7 | 812 | 815 | 646 | 166 | 99.6% | 20.4% | > Gaps: 3 |
 | **Asteroidea** | 8 | 199 | 199 | 161 | 38 | 100.0% | 19.1% | [✓] Complete |
 | **Echinoidea** | 9 | 100 | 100 | 93 | 7 | 100.0% | 7.0% | [✓] Complete |
@@ -31,20 +31,65 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 
 ## Discrete Gap Checklists by Class
 
-### [x] Mammalia (100% complete)
+### [ ] Mammalia Gap Enrichment (99.4% imported, 13.2% enriched)
 
-All families in this class are fully imported into the portal. Nice!
+Remaining Gaps in Class: **48** species missing from portal.
 
-### [ ] Aves Gap Enrichment (99.7% imported, 13.7% enriched)
+- [ ] **Horseshoe bats** (`rhinolophidae`) (Gaps: **48** species missing - 100/148 imported, 77 empty, 23 enriched)
+- [x] **Anteaters** (`myrmecophagidae`) (Complete: 4/4 imported)
+- [x] **Armadillos** (`dasypodidae`) (Complete: 21/21 imported)
+- [x] **Bears** (`ursidae`) (Complete: 105/105 imported)
+- [x] **Beavers** (`castoridae`) (Complete: 2/2 imported)
+- [x] **Cats** (`felidae`) (Complete: 205/205 imported)
+- [x] **Cattle & buffalo** (`bovidae`) (Complete: 468/468 imported)
+- [x] **Deer** (`cervidae`) (Complete: 174/174 imported)
+- [x] **Dogs & wolves** (`canidae`) (Complete: 291/291 imported)
+- [x] **Echidnas** (`tachyglossidae`) (Complete: 8/8 imported)
+- [x] **Elephants** (`elephantidae`) (Complete: 3/3 imported)
+- [x] **Evening bats** (`vespertilionidae`) (Complete: 623/623 imported)
+- [x] **Fruit bats & flying foxes** (`pteropodidae`) (Complete: 230/230 imported)
+- [x] **Giraffes & okapi** (`giraffidae`) (Complete: 5/5 imported)
+- [x] **Great apes** (`hominidae`) (Complete: 21/21 imported)
+- [x] **Guinea pigs, capybara & maras** (`caviidae`) (Complete: 18/18 imported)
+- [x] **Hamsters, voles & lemmings** (`cricetidae`) (Complete: 1085/1085 imported)
+- [x] **Hedgehogs & moonrats** (`erinaceidae`) (Complete: 25/25 imported)
+- [x] **Horses & zebras** (`equidae`) (Complete: 9/9 imported)
+- [x] **Kangaroos & wallabies** (`macropodidae`) (Complete: 31/31 imported)
+- [x] **Mice, rats & gerbils** (`muridae`) (Complete: 1422/1422 imported)
+- [x] **Moles & desmans** (`talpidae`) (Complete: 51/51 imported)
+- [x] **New World leaf-nosed bats** (`phyllostomidae`) (Complete: 249/249 imported)
+- [x] **New World monkeys** (`cebidae`) (Complete: 130/130 imported)
+- [x] **Old World monkeys** (`cercopithecidae`) (Complete: 139/139 imported)
+- [x] **Opossums** (`didelphidae`) (Complete: 304/304 imported)
+- [x] **Pangolins** (`manidae`) (Complete: 8/8 imported)
+- [x] **Pigs & warthogs** (`suidae`) (Complete: 125/125 imported)
+- [x] **Quolls, Tasmanian devil & dunnarts** (`dasyuridae`) (Complete: 75/75 imported)
+- [x] **Rabbits & hares** (`leporidae`) (Complete: 92/92 imported)
+- [x] **Sheep & goats** (`caprinae`) (Complete: 62/62 imported)
+- [x] **Shrews** (`soricidae`) (Complete: 691/691 imported)
+- [x] **Squirrels, chipmunks & marmots** (`sciuridae`) (Complete: 524/524 imported)
+- [x] **Three-toed sloths** (`bradypodidae`) (Complete: 4/4 imported)
+- [x] **True lemurs** (`lemuridae`) (Complete: 22/22 imported)
+- [x] **True seals** (`phocidae`) (Complete: 95/95 imported)
+- [x] **Weasels, badgers & otters** (`mustelidae`) (Complete: 317/317 imported)
+- [x] **Whales, dolphins & porpoises** (`cetacea`) (Complete: 92/92 imported)
+- [x] **Wombats** (`vombatidae`) (Complete: 3/3 imported)
 
-Remaining Gaps in Class: **51** species missing from portal.
+### [ ] Aves Gap Enrichment (98.3% imported, 13.5% enriched)
 
+Remaining Gaps in Class: **220** species missing from portal.
+
+- [ ] **Rails & coots** (`rallidae`) (Gaps: **86** species missing - 200/286 imported, 196 empty, 4 enriched)
+- [ ] **Gulls & terns** (`laridae`) (Gaps: **54** species missing - 100/154 imported, 87 empty, 13 enriched)
+- [ ] **Thrushes** (`turdidae`) (Gaps: **21** species missing - 200/221 imported, 186 empty, 14 enriched)
 - [ ] **Tityras & becards** (`tityridae`) (Gaps: **17** species missing - 28/45 imported, 21 empty, 7 enriched)
 - [ ] **Vangas** (`vangidae`) (Gaps: **12** species missing - 28/40 imported, 23 empty, 5 enriched)
+- [ ] **Nightjars** (`caprimulgidae`) (Gaps: **7** species missing - 100/107 imported, 87 empty, 13 enriched)
 - [ ] **Parrotbills** (`paradoxornithidae`) (Gaps: **7** species missing - 30/37 imported, 18 empty, 12 enriched)
 - [ ] **Woodswallows & butcherbirds** (`artamidae`) (Gaps: **5** species missing - 19/24 imported, 16 empty, 3 enriched)
 - [ ] **Cockatoos** (`cacatuidae`) (Gaps: **4** species missing - 17/21 imported, 15 empty, 2 enriched)
 - [ ] **Quail-thrushes** (`cinclosomatidae`) (Gaps: **2** species missing - 10/12 imported, 9 empty, 1 enriched)
+- [ ] **Bushshrikes** (`malaconotidae`) (Gaps: **1** species missing - 50/51 imported, 43 empty, 7 enriched)
 - [ ] **Fulvettas** (`alcippeidae`) (Gaps: **1** species missing - 9/10 imported, 8 empty, 1 enriched)
 - [ ] **Leafbirds** (`chloropseidae`) (Gaps: **1** species missing - 12/13 imported, 9 empty, 3 enriched)
 - [ ] **Madagascan warblers** (`bernieriidae`) (Gaps: **1** species missing - 10/11 imported, 7 empty, 3 enriched)
@@ -77,7 +122,6 @@ Remaining Gaps in Class: **51** species missing from portal.
 - [x] **Bristlehead** (`pityriasidae`) (Complete: 1/1 imported)
 - [x] **Bulbuls** (`pycnonotidae`) (Complete: 184/184 imported)
 - [x] **Buntings** (`emberizidae`) (Complete: 45/45 imported)
-- [x] **Bushshrikes** (`malaconotidae`) (Complete: 50/50 imported)
 - [x] **Bustards** (`otididae`) (Complete: 26/26 imported)
 - [x] **Buttonquail** (`turnicidae`) (Complete: 18/18 imported)
 - [x] **Cardinals & grosbeaks** (`cardinalidae`) (Complete: 53/53 imported)
@@ -128,7 +172,6 @@ Remaining Gaps in Class: **51** species missing from portal.
 - [x] **Ground hornbills** (`bucorvidae`) (Complete: 2/2 imported)
 - [x] **Ground rollers** (`brachypteraciidae`) (Complete: 5/5 imported)
 - [x] **Guineafowl** (`numididae`) (Complete: 6/6 imported)
-- [x] **Gulls & terns** (`laridae`) (Complete: 100/100 imported)
 - [x] **Hamerkop** (`scopidae`) (Complete: 1/1 imported)
 - [x] **Hawaiian honeyeaters** (`mohoidae`) (Complete: 4/4 imported)
 - [x] **Hawks, eagles & kites** (`accipitridae`) (Complete: 365/365 imported)
@@ -186,7 +229,6 @@ Remaining Gaps in Class: **51** species missing from portal.
 - [x] **New Zealand wattlebirds** (`callaeidae`) (Complete: 3/3 imported)
 - [x] **New Zealand wrens** (`acanthisittidae`) (Complete: 4/4 imported)
 - [x] **Nicators** (`nicatoridae`) (Complete: 3/3 imported)
-- [x] **Nightjars** (`caprimulgidae`) (Complete: 100/100 imported)
 - [x] **Northern storm petrels** (`hydrobatidae`) (Complete: 18/18 imported)
 - [x] **Nuthatches** (`sittidae`) (Complete: 29/29 imported)
 - [x] **Oilbird** (`steatornithidae`) (Complete: 1/1 imported)
@@ -221,7 +263,6 @@ Remaining Gaps in Class: **51** species missing from portal.
 - [x] **Puerto Rican tanager** (`nesospingidae`) (Complete: 1/1 imported)
 - [x] **Puffbirds** (`bucconidae`) (Complete: 38/38 imported)
 - [x] **Rail-babbler** (`eupetidae`) (Complete: 1/1 imported)
-- [x] **Rails & coots** (`rallidae`) (Complete: 200/200 imported)
 - [x] **Reed warblers** (`acrocephalidae`) (Complete: 65/65 imported)
 - [x] **Rheas** (`rheidae`) (Complete: 2/2 imported)
 - [x] **Rockfowl** (`picathartidae`) (Complete: 2/2 imported)
@@ -258,7 +299,6 @@ Remaining Gaps in Class: **51** species missing from portal.
 - [x] **Tanagers & allies** (`thraupidae`) (Complete: 396/396 imported)
 - [x] **Tapaculos** (`rhinocryptidae`) (Complete: 63/63 imported)
 - [x] **Thrush-tanager** (`rhodinocichlidae`) (Complete: 1/1 imported)
-- [x] **Thrushes** (`turdidae`) (Complete: 200/200 imported)
 - [x] **Tits & chickadees** (`paridae`) (Complete: 65/65 imported)
 - [x] **Todies** (`todidae`) (Complete: 5/5 imported)
 - [x] **Toucan barbets** (`semnornithidae`) (Complete: 2/2 imported)
@@ -294,17 +334,19 @@ Remaining Gaps in Class: **51** species missing from portal.
 - [x] **Birds of paradise** (`paradisaeidae`) (Complete: 52/45 imported)
 - [x] **Toucans** (`ramphastidae`) (Complete: 50/43 imported)
 
-### [ ] Reptilia Gap Enrichment (100.0% imported, 69.9% enriched)
+### [ ] Reptilia Gap Enrichment (91.4% imported, 64.0% enriched)
 
-Remaining Gaps in Class: **3** species missing from portal.
+Remaining Gaps in Class: **685** species missing from portal.
 
+- [ ] **Colubrids** (`colubridae`) (Gaps: **348** species missing - 1900/2248 imported, 394 empty, 1506 enriched)
+- [ ] **Skinks** (`scincidae`) (Gaps: **276** species missing - 1600/1876 imported, 238 empty, 1362 enriched)
+- [ ] **Wall & Sand Lizards** (`lacertidae`) (Gaps: **58** species missing - 350/408 imported, 93 empty, 257 enriched)
 - [ ] **Vipers** (`viperidae`) (Gaps: **3** species missing - 367/370 imported, 84 empty, 283 enriched)
 - [x] **Agamas & Bearded Dragons** (`agamidae`) (Complete: 502/502 imported)
 - [x] **Alligators & Caimans** (`alligatoridae`) (Complete: 8/8 imported)
 - [x] **Boas** (`boidae`) (Complete: 140/140 imported)
 - [x] **Chameleons** (`chamaeleonidae`) (Complete: 213/213 imported)
 - [x] **Cobras, Mambas & Sea Snakes** (`elapidae`) (Complete: 419/419 imported)
-- [x] **Colubrids** (`colubridae`) (Complete: 1900/1900 imported)
 - [x] **Eyelid geckos** (`eublepharidae`) (Complete: 40/40 imported)
 - [x] **Geckos** (`gekkonidae`) (Complete: 1106/1106 imported)
 - [x] **Girdled lizards** (`cordylidae`) (Complete: 74/74 imported)
@@ -314,20 +356,16 @@ Remaining Gaps in Class: **3** species missing from portal.
 - [x] **Pond & river turtles** (`geoemydidae`) (Complete: 70/70 imported)
 - [x] **Pythons** (`pythonidae`) (Complete: 42/42 imported)
 - [x] **Sea Turtles** (`cheloniidae`) (Complete: 6/6 imported)
-- [x] **Skinks** (`scincidae`) (Complete: 1600/1600 imported)
 - [x] **Slow Worms & Glass Lizards** (`anguidae`) (Complete: 80/80 imported)
 - [x] **Tortoises** (`testudinidae`) (Complete: 58/58 imported)
 - [x] **True Crocodiles** (`crocodylidae`) (Complete: 16/16 imported)
 - [x] **Tuatara** (`sphenodontidae`) (Complete: 2/2 imported)
-- [x] **Wall & Sand Lizards** (`lacertidae`) (Complete: 350/350 imported)
 - [x] **Worm lizards** (`amphisbaenidae`) (Complete: 180/180 imported)
 
-### [ ] Amphibia Gap Enrichment (93.0% imported, 55.2% enriched)
+### [ ] Amphibia Gap Enrichment (99.9% imported, 59.3% enriched)
 
-Remaining Gaps in Class: **287** species missing from portal.
+Remaining Gaps in Class: **3** species missing from portal.
 
-- [ ] **Tree Frogs** (`hylidae`) (Gaps: **234** species missing - 766/1000 imported, 212 empty, 554 enriched)
-- [ ] **Spadefoot Toads** (`pelobatidae`) (Gaps: **50** species missing - 50/100 imported, 44 empty, 6 enriched)
 - [ ] **Clawed Frogs** (`pipidae`) (Gaps: **3** species missing - 52/55 imported, 27 empty, 25 enriched)
 - [x] **Caecilians** (`caeciliidae`) (Complete: 120/120 imported)
 - [x] **Giant Salamanders** (`cryptobranchidae`) (Complete: 3/3 imported)
@@ -337,6 +375,8 @@ Remaining Gaps in Class: **287** species missing from portal.
 - [x] **Narrow-mouthed Frogs** (`microhylidae`) (Complete: 737/737 imported)
 - [x] **Poison Dart Frogs** (`dendrobatidae`) (Complete: 300/300 imported)
 - [x] **Salamanders & newts** (`salamandridae`) (Complete: 121/121 imported)
+- [x] **Spadefoot Toads** (`pelobatidae`) (Complete: 50/50 imported)
+- [x] **Tree Frogs** (`hylidae`) (Complete: 766/766 imported)
 - [x] **True frogs** (`ranidae`) (Complete: 450/450 imported)
 - [x] **True Toads** (`bufonidae`) (Complete: 657/657 imported)
 
@@ -344,13 +384,13 @@ Remaining Gaps in Class: **287** species missing from portal.
 
 All families in this class are fully imported into the portal. Nice!
 
-### [ ] Actinopterygii Gap Enrichment (99.6% imported, 34.2% enriched)
+### [ ] Actinopterygii Gap Enrichment (98.4% imported, 33.8% enriched)
 
-Remaining Gaps in Class: **47** species missing from portal.
+Remaining Gaps in Class: **171** species missing from portal.
 
+- [ ] **Characins** (`characidae`) (Gaps: **128** species missing - 1196/1324 imported, 1075 empty, 121 enriched)
 - [ ] **Righteye flounders** (`pleuronectidae`) (Gaps: **29** species missing - 72/101 imported, 63 empty, 9 enriched)
 - [ ] **African killifishes** (`nothobranchiidae`) (Gaps: **14** species missing - 326/340 imported, 270 empty, 56 enriched)
-- [ ] **Characins** (`characidae`) (Gaps: **4** species missing - 1196/1200 imported, 1075 empty, 121 enriched)
 - [x] **Carp, roach, bream & relatives** (`cyprinidae`) (Complete: 3824/3824 imported)
 - [x] **Cichlids** (`cichlidae`) (Complete: 2446/2446 imported)
 - [x] **Cod & allies** (`gadidae`) (Complete: 30/30 imported)

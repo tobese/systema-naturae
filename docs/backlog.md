@@ -121,24 +121,28 @@ The 2026-06-25 "Queued for Future Sessions" insect / Ollama gap list was fully c
 
 ## Queued
 
-### Heavy gap (Insecta)
+### Heavy gap (Insecta) — ON HOLD
 
-- `chrysomelidae` — **gap 33,690** (have 1,310 / target 35,000). The single largest outstanding gap in the entire portal — ~98% of all remaining missing species. Likely needs a dedicated GBIF cache rebuild and a multi-pass import.
+- `chrysomelidae` — **gap 33,690** (have 1,310 / target 35,000). **Do not touch until explicitly requested.** The single largest outstanding gap — ~98% of all remaining missing species. Likely needs a dedicated GBIF cache rebuild and a multi-pass import.
 
-### Medium gaps
+### Bulk GBIF fill (2026-06-28)
 
-Pulled from `portal/data/gap-report.json` (28/06/2026):
+Targets aligned to GBIF accepted counts. Filled 16 families from GBIF (+2,900 species across colubridae, scincidae, characidae, rallidae, lacertidae, laridae, rhinolophidae, turdidae, viperidae, caprimulgidae, malaconotidae, bernieriidae, pleuronectidae, characidae). Portal: **166,869 species** (+1,376), **185,252 total nodes** (+1,487).
 
-| Family | Class | Have | Target | Gap |
-|---|---|---:|---:|---:|
-| `hylidae` | Amphibia | 766 | 1,000 | 234 |
-| `pelobatidae` | Amphibia | 50 | 100 | 50 |
-| `pleuronectidae` | Actinopterygii | 72 | 101 | 29 |
-| `nothobranchiidae` | Actinopterygii | 326 | 340 | 14 |
+### Remaining gaps (8 families)
 
-### Aves long-tail (62 families, all gap < 30)
+| Gap | Family | Class | Note |
+|---|---:|---|---|
+| 33,690 | `chrysomelidae` | Insecta | **ON HOLD** |
+| 17 | `tityridae` | Aves | No GBIF match |
+| 12 | `vangidae` | Aves | No GBIF match |
+| 7 | `paradoxornithidae` | Aves | No GBIF match |
+| 5 | `artamidae` | Aves | Portal exceeds GBIF |
+| 4 | `cacatuidae` | Aves | Portal exceeds GBIF |
+| 2 | `cinclosomatidae` | Aves | No GBIF match |
+| 2 | `ommastrephidae` | Cephalopoda | |
 
-Most remaining bird gaps are tiny IOC top-ups — `sturnidae` (26), `cracidae` (24), `pachycephalidae` (18), `timaliidae` (18), `tityridae` (17), `rhipiduridae` (16), `tinamidae` (15), `trogonidae` (15), etc. Best tackled with a single Wikipedia-REST batch enrichment pass.
+These 7 families (49 species) can't be filled from GBIF — no accepted species match in the GBIF backbone.
 
 ### New phyla (per `missing-phyla.md`)
 
