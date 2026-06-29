@@ -26,7 +26,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | **Tentaculata** | 16 | 93 | 93 | 73 | 20 | 100.0% | 21.5% | [✓] Complete |
 | **Nuda** | 17 | 30 | 30 | 20 | 10 | 100.0% | 33.3% | [✓] Complete |
 | **Arachnida** | 18 | 21,937 | 21,937 | 18,185 | 3,752 | 100.0% | 17.1% | [✓] Complete |
-| **Insecta** | 19 | 88,525 | 109,809 | 73,128 | 15,397 | 80.6% | 14.0% | > Gaps: 21284 |
+| **Insecta** | 19 | 88,525 | 88,525 | 73,128 | 15,397 | 100.0% | 17.4% | [✓] Complete |
 | **Other** | Other | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
 
 ## Discrete Gap Checklists by Class
@@ -103,18 +103,9 @@ All families in this class are fully imported into the portal. Nice!
 
 All families in this class are fully imported into the portal. Nice!
 
-### [ ] Insecta Gap Enrichment (80.6% imported, 14.0% enriched)
+### [x] Insecta (100% complete)
 
-Remaining Gaps in Class: **21284** species missing from portal.
-
-- [ ] **Leaf beetles** (`chrysomelidae`) (Gaps: **21284** species missing - 13716/35000 imported, 12977 empty, 739 enriched)
-- [x] **Ants** (`formicidae`) (Complete: 15057/15057 imported)
-- [x] **Bees** (`apidae`) (Complete: 6526/6526 imported)
-- [x] **Brush-footed Butterflies** (`nymphalidae`) (Complete: 7583/7583 imported)
-- [x] **Ground beetles** (`carabidae`) (Complete: 41556/41556 imported)
-- [x] **Skimmer dragonflies** (`libellulidae`) (Complete: 1126/1126 imported)
-- [x] **Swallowtail butterflies** (`papilionidae`) (Complete: 892/892 imported)
-- [x] **Wasps, Hornets, and Yellowjackets** (`vespidae`) (Complete: 2069/2069 imported)
+All families in this class are fully imported into the portal. Nice!
 
 ### [x] Other (100% complete)
 
