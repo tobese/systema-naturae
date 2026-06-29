@@ -9,7 +9,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | Class | Size Sort Rank | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Mammalia** | 1 | 7,897 | 7,897 | 6,859 | 1,038 | 100.0% | 13.1% | [✓] Complete |
-| **Aves** | 2 | 11,751 | 11,740 | 10,137 | 1,614 | 100.1% | 13.7% | > Gaps: 11 |
+| **Aves** | 2 | 11,754 | 11,740 | 10,137 | 1,617 | 100.1% | 13.8% | > Gaps: 8 |
 | **Reptilia** | 3 | 8,121 | 8,121 | 3,015 | 5,106 | 100.0% | 62.9% | [✓] Complete |
 | **Amphibia** | 4 | 3,797 | 3,797 | 1,542 | 2,255 | 100.0% | 59.4% | [✓] Complete |
 | **Chondrichthyes** | 5 | 1,187 | 1,187 | 1,050 | 137 | 100.0% | 11.5% | [✓] Complete |
@@ -35,12 +35,12 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 
 All families in this class are fully imported into the portal. Nice!
 
-### [ ] Aves Gap Enrichment (100.1% imported, 13.7% enriched)
+### [ ] Aves Gap Enrichment (100.1% imported, 13.8% enriched)
 
-Remaining Gaps in Class: **11** species missing from portal.
+Remaining Gaps in Class: **8** species missing from portal.
 
-- [ ] **Vangas** (`vangidae`) (Gaps: **6** species missing - 34/40 imported, 23 empty, 11 enriched)
 - [ ] **Tityras & becards** (`tityridae`) (Gaps: **3** species missing - 42/45 imported, 21 empty, 21 enriched)
+- [ ] **Vangas** (`vangidae`) (Gaps: **3** species missing - 37/40 imported, 23 empty, 14 enriched)
 - [ ] **Parrotbills** (`paradoxornithidae`) (Gaps: **2** species missing - 35/37 imported, 18 empty, 17 enriched)
 - [x] **Accentors** (`prunellidae`) (Complete: 13/13 imported)
 - [x] **African & green broadbills** (`calyptomenidae`) (Complete: 6/6 imported)
