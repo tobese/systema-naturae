@@ -8,7 +8,7 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Chordata** | Chordates | 6 | 352 | 42,223 | 42,589 | 28,462 | 13,761 | 99.1% | 32.3% | > Gaps: 388 |
+| **Chordata** | Chordates | 6 | 352 | 43,599 | 43,627 | 29,838 | 13,761 | 99.9% | 31.5% | > Gaps: 50 |
 | **Mollusca** | Molluscs | 1 | 8 | 812 | 815 | 646 | 166 | 99.6% | 20.4% | > Gaps: 3 |
 | **Arthropoda** | Arthropods | 2 | 19 | 98,056 | 131,746 | 78,909 | 19,147 | 74.4% | 14.5% | > Gaps: 33690 |
 | **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
@@ -18,22 +18,22 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 ## Detail Breakdown & Checklists by Phylum
 
-### [ ] Phylum Chordata (Chordates) - 99.1% complete
+### [ ] Phylum Chordata (Chordates) - 99.9% complete
 
-- **Imported species:** 42,223 / 42,589
-- **Enriched species:** 13,761 / 42,589 (32.3%)
-- **Remaining gaps:** **388**
+- **Imported species:** 43,599 / 43,627
+- **Enriched species:** 13,761 / 43,627 (31.5%)
+- **Remaining gaps:** **50**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Amphibia | 13 | 3,797 | 4,084 | 2,255 | 93.0% | > Gaps: 287 |
-| Actinopterygii | 16 | 10,614 | 10,661 | 3,649 | 99.6% | > Gaps: 47 |
-| Aves | 254 | 11,493 | 11,522 | 1,576 | 99.7% | > Gaps: 29 |
-| Reptilia | 23 | 7,299 | 7,302 | 5,106 | 100.0% | > Gaps: 3 |
-| Mammalia | 39 | 7,833 | 7,833 | 1,038 | 100.0% | ✓ Complete |
+| Aves | 254 | 11,712 | 11,740 | 1,576 | 99.8% | > Gaps: 28 |
+| Mammalia | 39 | 7,897 | 7,897 | 1,038 | 100.0% | ✓ Complete |
+| Reptilia | 23 | 8,121 | 8,121 | 5,106 | 100.0% | ✓ Complete |
 | Chondrichthyes | 7 | 1,187 | 1,187 | 137 | 100.0% | ✓ Complete |
+| Amphibia | 13 | 3,797 | 3,797 | 2,255 | 100.0% | ✓ Complete |
+| Actinopterygii | 16 | 10,885 | 10,885 | 3,649 | 100.0% | ✓ Complete |
 
 ### [ ] Phylum Mollusca (Molluscs) - 99.6% complete
 
