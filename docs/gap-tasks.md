@@ -9,7 +9,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | Class | Size Sort Rank | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Mammalia** | 1 | 7,897 | 7,897 | 6,859 | 1,038 | 100.0% | 13.1% | [✓] Complete |
-| **Aves** | 2 | 11,754 | 11,732 | 10,137 | 1,617 | 100.2% | 13.8% | [✓] Complete |
+| **Aves** | 2 | 11,754 | 11,732 | 10,077 | 1,677 | 100.2% | 14.3% | [✓] Complete |
 | **Reptilia** | 3 | 8,121 | 8,121 | 3,015 | 5,106 | 100.0% | 62.9% | [✓] Complete |
 | **Amphibia** | 4 | 3,797 | 3,797 | 1,542 | 2,255 | 100.0% | 59.4% | [✓] Complete |
 | **Chondrichthyes** | 5 | 1,187 | 1,187 | 1,050 | 137 | 100.0% | 11.5% | [✓] Complete |
