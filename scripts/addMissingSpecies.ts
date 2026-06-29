@@ -144,83 +144,38 @@ async function main() {
   const ROOT = resolve(import.meta.dirname, "..");
   const TAX = resolve(ROOT, "portal/data/taxonomy.json");
 
-  // === Tityridae ===
-  console.log("📦 Tityridae");
-  const tityridaeMissing = [
-    "Schiffornis major", "Schiffornis turdina", "Schiffornis stenorhyncha",
-    "Schiffornis veraepacis", "Schiffornis olivacea", "Schiffornis virescens",
-    "Schiffornis aenea",
-    "Pachyramphus homochrous", "Pachyramphus polychopterus",
-    "Pachyramphus albogriseus", "Pachyramphus minor", "Pachyramphus niger",
-    "Pachyramphus salvini",
-    "Xenopsaris albinucha",
-  ];
-  await addToFamily(
-    resolve(ROOT, "aves/passeriformes/tityridae/src/data/tityridae.json"),
-    TAX, tityridaeMissing, 45, "tityridae", "Tityridae"
-  );
+  // === Tityridae (3 remaining — all species with Wikipedia pages are already added) ===
+  console.log("\n📦 Tityridae — all Wikipedia-covered species already present");
 
   // === Vangidae ===
   console.log("\n📦 Vangidae");
   const vangidaeMissing = [
-    "Artamella viridis", "Calicalicus madagascariensis", "Calicalicus rufocarpalis",
-    "Cyanolanius madagascarinus", "Euryceros prevostii", "Falculea palliata",
-    "Hypositta corallirostris", "Leptopterus chabert", "Mystacornis crossleyi",
-    "Newtonia amphichroa", "Newtonia archboldi", "Newtonia brunneicauda",
-    "Newtonia fanovanae", "Newtonia lavarambo", "Oriolia bernieri",
-    "Pseudobias wardi", "Schetba rufa", "Tylas eduardi",
-    "Vanga curvirostris", "Xenopirostris damii", "Xenopirostris xenopirostris",
-    "Xenopirostris polleni", "Tephrodornis pondicerianus", "Tephrodornis virgatus",
-    "Tephrodornis affinis",
+    "Cyanolanius comorensis", "Newtonia lavarambo", "Newtonia microrhyncha",
+    "Tephrodornis affinis", "Tephrodornis sylvicola",
   ];
   await addToFamily(
     resolve(ROOT, "aves/passeriformes/vangidae/src/data/vangidae.json"),
     TAX, vangidaeMissing, 40, "vangidae", "Vangidae"
   );
 
-  // === Paradoxornithidae ===
-  console.log("\n📦 Paradoxornithidae");
-  const paradoxornithidaeMissing = [
-    "Chamaea fasciata",
-    "Paradoxornis alphonsianus", "Paradoxornis heudei",
-    "Paradoxornis nipalensis", "Paradoxornis paradoxus", "Paradoxornis unicolor",
-    "Paradoxornis webbianus",
-  ];
-  await addToFamily(
-    resolve(ROOT, "aves/passeriformes/paradoxornithidae/src/data/paradoxornithidae.json"),
-    TAX, paradoxornithidaeMissing, 37, "paradoxornithidae", "Paradoxornithidae"
-  );
+  // === Paradoxornithidae (2 remaining — all WP-covered species added) ===
+  console.log("\n📦 Paradoxornithidae — all Wikipedia-covered species already present");
 
-  // === Cinclosomatidae ===
-  console.log("\n📦 Cinclosomatidae");
-  const cinclosomatidaeMissing = [
-    "Cinclosoma alisteri", "Cinclosoma castaneothorax",
-  ];
-  await addToFamily(
-    resolve(ROOT, "aves/passeriformes/cinclosomatidae/src/data/cinclosomatidae.json"),
-    TAX, cinclosomatidaeMissing, 12, "cinclosomatidae", "Cinclosomatidae"
-  );
+  // === Cinclosomatidae (all done) ===
+  console.log("\n📦 Cinclosomatidae — done");
 
-  // === Alcippeidae ===
-  console.log("\n📦 Alcippeidae");
-  await addToFamily(
-    resolve(ROOT, "aves/passeriformes/alcippeidae/src/data/alcippeidae.json"),
-    TAX, ["Alcippe brunneicauda"], 10, "alcippeidae", "Alcippeidae"
-  );
+  // === Alcippeidae (all done) ===
+  console.log("\n📦 Alcippeidae — done");
 
   // === Ommastrephidae ===
   console.log("\n📦 Ommastrephidae");
   await addToFamily(
     resolve(ROOT, "cephalopoda/teuthida/ommastrephidae/src/data/ommastrephidae.json"),
-    TAX, ["Todarodes sagittatus"], 30, "ommastrephidae", "Ommastrephidae"
+    TAX, ["Todarodes sagittatus", "Illex illecebrosus", "Illex coindetii"], 30, "ommastrephidae", "Ommastrephidae"
   );
 
-  // === Architeuthidae ===
-  console.log("\n📦 Architeuthidae");
-  await addToFamily(
-    resolve(ROOT, "cephalopoda/teuthida/architeuthidae/src/data/architeuthidae.json"),
-    TAX, ["Architeuthis sanctipauli"], 2, "architeuthidae", "Architeuthidae"
-  );
+  // === Architeuthidae (all done) ===
+  console.log("\n📦 Architeuthidae — done");
 }
 
 main().catch(e => console.error("Fatal:", e));
