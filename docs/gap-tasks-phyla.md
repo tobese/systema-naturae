@@ -2,14 +2,14 @@
 
 This report aggregates the taxonomic database coverage gaps of the Systema Naturae portal at the **Phylum** level.
 
-*Generated automatically on: 28/06/2026*
+*Generated automatically on: 29/06/2026*
 
 ## Overview of Phylum Coverage
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Chordata** | Chordates | 6 | 352 | 43,599 | 43,627 | 29,838 | 13,761 | 99.9% | 31.5% | > Gaps: 50 |
-| **Mollusca** | Molluscs | 1 | 8 | 812 | 815 | 646 | 166 | 99.6% | 20.4% | > Gaps: 3 |
+| **Chordata** | Chordates | 6 | 352 | 43,638 | 43,627 | 29,839 | 13,799 | 100.0% | 31.6% | > Gaps: 11 |
+| **Mollusca** | Molluscs | 1 | 8 | 813 | 815 | 646 | 167 | 99.8% | 20.5% | > Gaps: 2 |
 | **Arthropoda** | Arthropods | 2 | 19 | 98,056 | 131,746 | 78,909 | 19,147 | 74.4% | 14.5% | > Gaps: 33690 |
 | **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
 | **Tardigrada** | Tardigrades | 1 | 1 | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
@@ -18,34 +18,34 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 ## Detail Breakdown & Checklists by Phylum
 
-### [ ] Phylum Chordata (Chordates) - 99.9% complete
+### [ ] Phylum Chordata (Chordates) - 100.0% complete
 
-- **Imported species:** 43,599 / 43,627
-- **Enriched species:** 13,761 / 43,627 (31.5%)
-- **Remaining gaps:** **50**
+- **Imported species:** 43,638 / 43,627
+- **Enriched species:** 13,799 / 43,627 (31.6%)
+- **Remaining gaps:** **11**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Aves | 254 | 11,712 | 11,740 | 1,576 | 99.8% | > Gaps: 28 |
 | Mammalia | 39 | 7,897 | 7,897 | 1,038 | 100.0% | ✓ Complete |
 | Reptilia | 23 | 8,121 | 8,121 | 5,106 | 100.0% | ✓ Complete |
 | Chondrichthyes | 7 | 1,187 | 1,187 | 137 | 100.0% | ✓ Complete |
 | Amphibia | 13 | 3,797 | 3,797 | 2,255 | 100.0% | ✓ Complete |
 | Actinopterygii | 16 | 10,885 | 10,885 | 3,649 | 100.0% | ✓ Complete |
+| Aves | 254 | 11,751 | 11,740 | 1,614 | 100.1% | ✓ Complete |
 
-### [ ] Phylum Mollusca (Molluscs) - 99.6% complete
+### [ ] Phylum Mollusca (Molluscs) - 99.8% complete
 
-- **Imported species:** 812 / 815
-- **Enriched species:** 166 / 815 (20.4%)
-- **Remaining gaps:** **3**
+- **Imported species:** 813 / 815
+- **Enriched species:** 167 / 815 (20.5%)
+- **Remaining gaps:** **2**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Cephalopoda | 8 | 812 | 815 | 166 | 99.6% | > Gaps: 3 |
+| Cephalopoda | 8 | 813 | 815 | 167 | 99.8% | > Gaps: 2 |
 
 ### [ ] Phylum Arthropoda (Arthropods) - 74.4% complete
 
