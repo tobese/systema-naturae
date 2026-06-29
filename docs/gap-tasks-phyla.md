@@ -8,9 +8,9 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Chordata** | Chordates | 6 | 352 | 43,641 | 43,619 | 29,779 | 13,862 | 100.1% | 31.8% | [✓] Complete |
+| **Chordata** | Chordates | 6 | 352 | 43,641 | 43,619 | 29,756 | 13,885 | 100.1% | 31.8% | [✓] Complete |
 | **Mollusca** | Molluscs | 1 | 8 | 813 | 813 | 646 | 167 | 100.0% | 20.5% | [✓] Complete |
-| **Arthropoda** | Arthropods | 2 | 19 | 110,462 | 110,462 | 91,313 | 19,149 | 100.0% | 17.3% | [✓] Complete |
+| **Arthropoda** | Arthropods | 2 | 19 | 110,462 | 110,462 | 91,297 | 19,165 | 100.0% | 17.3% | [✓] Complete |
 | **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
 | **Tardigrada** | Tardigrades | 1 | 1 | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
 | **Ctenophora** | Comb jellies | 2 | 6 | 123 | 123 | 93 | 30 | 100.0% | 24.4% | [✓] Complete |
@@ -21,14 +21,14 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 ### [x] Phylum Chordata (Chordates) - 100.1% complete
 
 - **Imported species:** 43,641 / 43,619
-- **Enriched species:** 13,862 / 43,619 (31.8%)
+- **Enriched species:** 13,885 / 43,619 (31.8%)
 - **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Mammalia | 39 | 7,897 | 7,897 | 1,038 | 100.0% | ✓ Complete |
+| Mammalia | 39 | 7,897 | 7,897 | 1,061 | 100.0% | ✓ Complete |
 | Reptilia | 23 | 8,121 | 8,121 | 5,106 | 100.0% | ✓ Complete |
 | Chondrichthyes | 7 | 1,187 | 1,187 | 137 | 100.0% | ✓ Complete |
 | Amphibia | 13 | 3,797 | 3,797 | 2,255 | 100.0% | ✓ Complete |
@@ -50,7 +50,7 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 ### [x] Phylum Arthropoda (Arthropods) - 100.0% complete
 
 - **Imported species:** 110,462 / 110,462
-- **Enriched species:** 19,149 / 110,462 (17.3%)
+- **Enriched species:** 19,165 / 110,462 (17.3%)
 - **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
@@ -58,7 +58,7 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | Insecta | 8 | 88,525 | 88,525 | 15,397 | 100.0% | ✓ Complete |
-| Arachnida | 11 | 21,937 | 21,937 | 3,752 | 100.0% | ✓ Complete |
+| Arachnida | 11 | 21,937 | 21,937 | 3,768 | 100.0% | ✓ Complete |
 
 ### [x] Phylum Echinodermata (Echinoderms) - 100.0% complete
 
