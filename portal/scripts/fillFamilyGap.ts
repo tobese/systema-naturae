@@ -35,6 +35,19 @@ function tryLoadCache(className: string): GbifCache | null {
   const gzPath = resolve(portalRoot, `data/gbif-cache-${cacheKey}.json.gz`);
 
   if (existsSync(gzPath)) {
+    try { return JSON.parse(gunzipSync(readFileSync(gzPath)).toString("utf-8")); } catch { /* fall through */ }
+  }
+  if (existsSync(rawPath)) {
+    try { return JSON.parse(readFileSync(rawPath, "utf-8")); } catch { return null; }
+  }
+  return null;
+}
+
+function tryLoadFamilyCache(familyName: string): GbifCache | null {
+  const slug = familyName.toLowerCase();
+  const rawPath = resolve(portalRoot, `data/gbif-cache-${slug}.json`);
+  const gzPath = resolve(portalRoot, `data/gbif-cache-${slug}.json.gz`);
+  if (existsSync(gzPath)) {
     try { return JSON.parse(gunzipSync(readFileSync(gzPath)).toString("utf-8")); } catch { return null; }
   }
   if (existsSync(rawPath)) {
@@ -167,11 +180,24 @@ async function main() {
     return;
   }
 
-  // 3. Load GBIF cache
-  const cache = tryLoadCache(className);
-  if (!cache) { console.error(`No GBIF cache for class "${className}"`); process.exit(1); }
+  // 3. Load GBIF cache — try class cache first, fall back to family-specific cache
+  let cache = tryLoadCache(className);
+  let cached = cache ? lookupFamilyInCache(cache, familyName) : null;
 
-  const cached = lookupFamilyInCache(cache, familyName);
+  // Fall back to family-specific cache if class cache missing or insufficient
+  if (!cached || cached.species.length < targetCount) {
+    const famCache = tryLoadFamilyCache(familyName);
+    if (famCache) {
+      const famCached = lookupFamilyInCache(famCache, familyName);
+      if (famCached && (!cached || famCached.species.length > cached.species.length)) {
+        console.log(`   Using family-specific cache (${famCached.species.length} spp vs class cache ${cached?.species.length ?? 0} spp)`);
+        cache = famCache;
+        cached = famCached;
+      }
+    }
+  }
+
+  if (!cache) { console.error(`No GBIF cache for class "${className}"`); process.exit(1); }
   if (!cached) { console.error(`Family "${familyName}" not found in GBIF cache`); process.exit(1); }
 
   console.log(`   GBIF cache: ${cached.species.length} species`);

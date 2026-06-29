@@ -26,7 +26,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | **Tentaculata** | 16 | 93 | 93 | 73 | 20 | 100.0% | 21.5% | [✓] Complete |
 | **Nuda** | 17 | 30 | 30 | 20 | 10 | 100.0% | 33.3% | [✓] Complete |
 | **Arachnida** | 18 | 21,937 | 21,937 | 18,185 | 3,752 | 100.0% | 17.1% | [✓] Complete |
-| **Insecta** | 19 | 76,119 | 109,809 | 60,724 | 15,395 | 69.3% | 14.0% | > Gaps: 33690 |
+| **Insecta** | 19 | 88,525 | 109,809 | 73,128 | 15,397 | 80.6% | 14.0% | > Gaps: 21284 |
 | **Other** | Other | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
 
 ## Discrete Gap Checklists by Class
@@ -103,11 +103,11 @@ All families in this class are fully imported into the portal. Nice!
 
 All families in this class are fully imported into the portal. Nice!
 
-### [ ] Insecta Gap Enrichment (69.3% imported, 14.0% enriched)
+### [ ] Insecta Gap Enrichment (80.6% imported, 14.0% enriched)
 
-Remaining Gaps in Class: **33690** species missing from portal.
+Remaining Gaps in Class: **21284** species missing from portal.
 
-- [ ] **Leaf beetles** (`chrysomelidae`) (Gaps: **33690** species missing - 1310/35000 imported, 573 empty, 737 enriched)
+- [ ] **Leaf beetles** (`chrysomelidae`) (Gaps: **21284** species missing - 13716/35000 imported, 12977 empty, 739 enriched)
 - [x] **Ants** (`formicidae`) (Complete: 15057/15057 imported)
 - [x] **Bees** (`apidae`) (Complete: 6526/6526 imported)
 - [x] **Brush-footed Butterflies** (`nymphalidae`) (Complete: 7583/7583 imported)
