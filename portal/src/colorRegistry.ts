@@ -4333,6 +4333,48 @@ const allomalorhagida_neocentrophyidae: ColorTheme = { subfamilyColors: {}, bree
 const allomalorhagida_cateriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cateriidae", className: "Allomalorhagida", orderName: "Anomoirhaga", name: "Cateriidae", mainColor: "#8B5CF6", lineageColors: { "cateriidae": "#84CC16" } };
 const allomalorhagida_franciscideridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "franciscideridae", className: "Allomalorhagida", orderName: "Anomoirhaga", name: "Franciscideridae", mainColor: "#EC4899", lineageColors: { "franciscideridae": "#06B6D4" } };
 
+
+// ── Pararotatoria (1 families) ──
+const pararotatoria_seisonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "seisonidae", className: "Pararotatoria", orderName: "Seisonacea", name: "Seisonidae", mainColor: "#EF4444", lineageColors: { "seisonidae": "#14B8A6" } };
+
+
+// ── Eurotatoria (35 families) ──
+const eurotatoria_notommatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "notommatidae", className: "Eurotatoria", orderName: "Ploima", name: "Notommatidae", mainColor: "#EF4444", lineageColors: { "notommatidae": "#14B8A6" } };
+const eurotatoria_dicranophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dicranophoridae", className: "Eurotatoria", orderName: "Ploima", name: "Dicranophoridae", mainColor: "#10B981", lineageColors: { "dicranophoridae": "#F97316" } };
+const eurotatoria_lecanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lecanidae", className: "Eurotatoria", orderName: "Ploima", name: "Lecanidae", mainColor: "#F59E0B", lineageColors: { "lecanidae": "#6366F1" } };
+const eurotatoria_brachionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "brachionidae", className: "Eurotatoria", orderName: "Ploima", name: "Brachionidae", mainColor: "#8B5CF6", lineageColors: { "brachionidae": "#84CC16" } };
+const eurotatoria_lepadellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "lepadellidae", className: "Eurotatoria", orderName: "Ploima", name: "Lepadellidae", mainColor: "#EC4899", lineageColors: { "lepadellidae": "#06B6D4" } };
+const eurotatoria_trichocercidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "trichocercidae", className: "Eurotatoria", orderName: "Ploima", name: "Trichocercidae", mainColor: "#14B8A6", lineageColors: { "trichocercidae": "#D946EF" } };
+const eurotatoria_synchaetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "synchaetidae", className: "Eurotatoria", orderName: "Ploima", name: "Synchaetidae", mainColor: "#F97316", lineageColors: { "synchaetidae": "#0EA5E9" } };
+const eurotatoria_proalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "proalidae", className: "Eurotatoria", orderName: "Ploima", name: "Proalidae", mainColor: "#6366F1", lineageColors: { "proalidae": "#22C55E" } };
+const eurotatoria_euchlanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "euchlanidae", className: "Eurotatoria", orderName: "Ploima", name: "Euchlanidae", mainColor: "#84CC16", lineageColors: { "euchlanidae": "#EAB308" } };
+const eurotatoria_trichotriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "trichotriidae", className: "Eurotatoria", orderName: "Ploima", name: "Trichotriidae", mainColor: "#06B6D4", lineageColors: { "trichotriidae": "#A855F7" } };
+const eurotatoria_mytilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "mytilinidae", className: "Eurotatoria", orderName: "Ploima", name: "Mytilinidae", mainColor: "#D946EF", lineageColors: { "mytilinidae": "#FB923C" } };
+const eurotatoria_epiphanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "epiphanidae", className: "Eurotatoria", orderName: "Ploima", name: "Epiphanidae", mainColor: "#0EA5E9", lineageColors: { "epiphanidae": "#2DD4BF" } };
+const eurotatoria_asplanchnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "asplanchnidae", className: "Eurotatoria", orderName: "Ploima", name: "Asplanchnidae", mainColor: "#22C55E", lineageColors: { "asplanchnidae": "#A3E635" } };
+const eurotatoria_lindiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lindiidae", className: "Eurotatoria", orderName: "Ploima", name: "Lindiidae", mainColor: "#EAB308", lineageColors: { "lindiidae": "#38BDF8" } };
+const eurotatoria_gastropodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "gastropodidae", className: "Eurotatoria", orderName: "Ploima", name: "Gastropodidae", mainColor: "#A855F7", lineageColors: { "gastropodidae": "#3B82F6" } };
+const eurotatoria_scaridiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "scaridiidae", className: "Eurotatoria", orderName: "Ploima", name: "Scaridiidae", mainColor: "#FB923C", lineageColors: { "scaridiidae": "#EF4444" } };
+const eurotatoria_ituridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ituridae", className: "Eurotatoria", orderName: "Ploima", name: "Ituridae", mainColor: "#2DD4BF", lineageColors: { "ituridae": "#10B981" } };
+const eurotatoria_asciaporrectidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "asciaporrectidae", className: "Eurotatoria", orderName: "Ploima", name: "Asciaporrectidae", mainColor: "#A3E635", lineageColors: { "asciaporrectidae": "#F59E0B" } };
+const eurotatoria_cotylegaleatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cotylegaleatidae", className: "Eurotatoria", orderName: "Ploima", name: "Cotylegaleatidae", mainColor: "#38BDF8", lineageColors: { "cotylegaleatidae": "#8B5CF6" } };
+const eurotatoria_microcodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "microcodidae", className: "Eurotatoria", orderName: "Ploima", name: "Microcodidae", mainColor: "#3B82F6", lineageColors: { "microcodidae": "#EC4899" } };
+const eurotatoria_clariaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "clariaidae", className: "Eurotatoria", orderName: "Ploima", name: "Clariaidae", mainColor: "#EF4444", lineageColors: { "clariaidae": "#14B8A6" } };
+const eurotatoria_birgeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "birgeidae", className: "Eurotatoria", orderName: "Ploima", name: "Birgeidae", mainColor: "#10B981", lineageColors: { "birgeidae": "#F97316" } };
+const eurotatoria_tetrasiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "tetrasiphonidae", className: "Eurotatoria", orderName: "Ploima", name: "Tetrasiphonidae", mainColor: "#F59E0B", lineageColors: { "tetrasiphonidae": "#6366F1" } };
+const eurotatoria_philodinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "philodinidae", className: "Eurotatoria", orderName: "Bdelloidea", name: "Philodinidae", mainColor: "#8B5CF6", lineageColors: { "philodinidae": "#84CC16" } };
+const eurotatoria_habrotrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "habrotrochidae", className: "Eurotatoria", orderName: "Bdelloidea", name: "Habrotrochidae", mainColor: "#EC4899", lineageColors: { "habrotrochidae": "#06B6D4" } };
+const eurotatoria_adinetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "adinetidae", className: "Eurotatoria", orderName: "Bdelloidea", name: "Adinetidae", mainColor: "#14B8A6", lineageColors: { "adinetidae": "#D946EF" } };
+const eurotatoria_philodinavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "philodinavidae", className: "Eurotatoria", orderName: "Bdelloidea", name: "Philodinavidae", mainColor: "#F97316", lineageColors: { "philodinavidae": "#0EA5E9" } };
+const eurotatoria_flosculariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "flosculariidae", className: "Eurotatoria", orderName: "Flosculariaceae", name: "Flosculariidae", mainColor: "#6366F1", lineageColors: { "flosculariidae": "#22C55E" } };
+const eurotatoria_testudinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "testudinellidae", className: "Eurotatoria", orderName: "Flosculariaceae", name: "Testudinellidae", mainColor: "#84CC16", lineageColors: { "testudinellidae": "#EAB308" } };
+const eurotatoria_trochosphaeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "trochosphaeridae", className: "Eurotatoria", orderName: "Flosculariaceae", name: "Trochosphaeridae", mainColor: "#06B6D4", lineageColors: { "trochosphaeridae": "#A855F7" } };
+const eurotatoria_hexarthridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "hexarthridae", className: "Eurotatoria", orderName: "Flosculariaceae", name: "Hexarthridae", mainColor: "#D946EF", lineageColors: { "hexarthridae": "#FB923C" } };
+const eurotatoria_conochilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "conochilidae", className: "Eurotatoria", orderName: "Flosculariaceae", name: "Conochilidae", mainColor: "#0EA5E9", lineageColors: { "conochilidae": "#2DD4BF" } };
+const eurotatoria_collothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "collothecidae", className: "Eurotatoria", orderName: "Collothecacea", name: "Collothecidae", mainColor: "#22C55E", lineageColors: { "collothecidae": "#A3E635" } };
+const eurotatoria_atrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "atrochidae", className: "Eurotatoria", orderName: "Collothecacea", name: "Atrochidae", mainColor: "#EAB308", lineageColors: { "atrochidae": "#38BDF8" } };
+const eurotatoria_filinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "filinidae", className: "Eurotatoria", orderName: "Unknown", name: "Filinidae", mainColor: "#A855F7", lineageColors: { "filinidae": "#3B82F6" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -7551,7 +7593,43 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "dracoderidae": allomalorhagida_dracoderidae,
   "neocentrophyidae": allomalorhagida_neocentrophyidae,
   "cateriidae": allomalorhagida_cateriidae,
-  "franciscideridae": allomalorhagida_franciscideridae,};
+  "franciscideridae": allomalorhagida_franciscideridae,
+  "seisonidae": pararotatoria_seisonidae,
+  "notommatidae": eurotatoria_notommatidae,
+  "dicranophoridae": eurotatoria_dicranophoridae,
+  "lecanidae": eurotatoria_lecanidae,
+  "brachionidae": eurotatoria_brachionidae,
+  "lepadellidae": eurotatoria_lepadellidae,
+  "trichocercidae": eurotatoria_trichocercidae,
+  "synchaetidae": eurotatoria_synchaetidae,
+  "proalidae": eurotatoria_proalidae,
+  "euchlanidae": eurotatoria_euchlanidae,
+  "trichotriidae": eurotatoria_trichotriidae,
+  "mytilinidae": eurotatoria_mytilinidae,
+  "epiphanidae": eurotatoria_epiphanidae,
+  "asplanchnidae": eurotatoria_asplanchnidae,
+  "lindiidae": eurotatoria_lindiidae,
+  "gastropodidae": eurotatoria_gastropodidae,
+  "scaridiidae": eurotatoria_scaridiidae,
+  "ituridae": eurotatoria_ituridae,
+  "asciaporrectidae": eurotatoria_asciaporrectidae,
+  "cotylegaleatidae": eurotatoria_cotylegaleatidae,
+  "microcodidae": eurotatoria_microcodidae,
+  "clariaidae": eurotatoria_clariaidae,
+  "birgeidae": eurotatoria_birgeidae,
+  "tetrasiphonidae": eurotatoria_tetrasiphonidae,
+  "philodinidae": eurotatoria_philodinidae,
+  "habrotrochidae": eurotatoria_habrotrochidae,
+  "adinetidae": eurotatoria_adinetidae,
+  "philodinavidae": eurotatoria_philodinavidae,
+  "flosculariidae": eurotatoria_flosculariidae,
+  "testudinellidae": eurotatoria_testudinellidae,
+  "trochosphaeridae": eurotatoria_trochosphaeridae,
+  "hexarthridae": eurotatoria_hexarthridae,
+  "conochilidae": eurotatoria_conochilidae,
+  "collothecidae": eurotatoria_collothecidae,
+  "atrochidae": eurotatoria_atrochidae,
+  "filinidae": eurotatoria_filinidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
