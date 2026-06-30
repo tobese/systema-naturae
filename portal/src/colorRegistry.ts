@@ -4417,6 +4417,408 @@ const palaeacanthocephala_paracanthocephalidae: ColorTheme = { subfamilyColors: 
 // ── Polyacanthocephala (1 families) ──
 const polyacanthocephala_polyacanthorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "polyacanthorhynchidae", className: "Polyacanthocephala", orderName: "Polyacanthorhynchida", name: "Polyacanthorhynchidae", mainColor: "#EF4444", lineageColors: { "polyacanthorhynchidae": "#14B8A6" } };
 
+
+// ── Phylactolaemata (7 families) ──
+const phylactolaemata_plumatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "plumatellidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Plumatellidae", mainColor: "#EF4444", lineageColors: { "plumatellidae": "#14B8A6" } };
+const phylactolaemata_fredericellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "fredericellidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Fredericellidae", mainColor: "#10B981", lineageColors: { "fredericellidae": "#F97316" } };
+const phylactolaemata_lophopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lophopodidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Lophopodidae", mainColor: "#F59E0B", lineageColors: { "lophopodidae": "#6366F1" } };
+const phylactolaemata_stephanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "stephanellidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Stephanellidae", mainColor: "#8B5CF6", lineageColors: { "stephanellidae": "#84CC16" } };
+const phylactolaemata_pectinatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pectinatellidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Pectinatellidae", mainColor: "#EC4899", lineageColors: { "pectinatellidae": "#06B6D4" } };
+const phylactolaemata_cristatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cristatellidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Cristatellidae", mainColor: "#14B8A6", lineageColors: { "cristatellidae": "#D946EF" } };
+const phylactolaemata_tapajosellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "tapajosellidae", className: "Phylactolaemata", orderName: "Plumatellida", name: "Tapajosellidae", mainColor: "#F97316", lineageColors: { "tapajosellidae": "#0EA5E9" } };
+
+
+// ── Stenolaemata (168 families) ──
+const stenolaemata_plagioeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "plagioeciidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Plagioeciidae", mainColor: "#EF4444", lineageColors: { "plagioeciidae": "#14B8A6" } };
+const stenolaemata_tubuliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "tubuliporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Tubuliporidae", mainColor: "#10B981", lineageColors: { "tubuliporidae": "#F97316" } };
+const stenolaemata_oncousoeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "oncousoeciidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Oncousoeciidae", mainColor: "#F59E0B", lineageColors: { "oncousoeciidae": "#6366F1" } };
+const stenolaemata_lichenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "lichenoporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Lichenoporidae", mainColor: "#8B5CF6", lineageColors: { "lichenoporidae": "#84CC16" } };
+const stenolaemata_cerioporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cerioporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Cerioporidae", mainColor: "#EC4899", lineageColors: { "cerioporidae": "#06B6D4" } };
+const stenolaemata_entalophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "entalophoridae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Entalophoridae", mainColor: "#14B8A6", lineageColors: { "entalophoridae": "#D946EF" } };
+const stenolaemata_crisiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "crisiidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Crisiidae", mainColor: "#F97316", lineageColors: { "crisiidae": "#0EA5E9" } };
+const stenolaemata_heteroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "heteroporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Heteroporidae", mainColor: "#6366F1", lineageColors: { "heteroporidae": "#22C55E" } };
+const stenolaemata_stomatoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "stomatoporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Stomatoporidae", mainColor: "#84CC16", lineageColors: { "stomatoporidae": "#EAB308" } };
+const stenolaemata_cytididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cytididae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Cytididae", mainColor: "#06B6D4", lineageColors: { "cytididae": "#A855F7" } };
+const stenolaemata_horneridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "horneridae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Horneridae", mainColor: "#D946EF", lineageColors: { "horneridae": "#FB923C" } };
+const stenolaemata_idmoneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "idmoneidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Idmoneidae", mainColor: "#0EA5E9", lineageColors: { "idmoneidae": "#2DD4BF" } };
+const stenolaemata_frondiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "frondiporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Frondiporidae", mainColor: "#22C55E", lineageColors: { "frondiporidae": "#A3E635" } };
+const stenolaemata_diaperoeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "diaperoeciidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Diaperoeciidae", mainColor: "#EAB308", lineageColors: { "diaperoeciidae": "#38BDF8" } };
+const stenolaemata_bereniceidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "bereniceidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Bereniceidae", mainColor: "#A855F7", lineageColors: { "bereniceidae": "#3B82F6" } };
+const stenolaemata_crisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "crisinidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Crisinidae", mainColor: "#FB923C", lineageColors: { "crisinidae": "#EF4444" } };
+const stenolaemata_multisparsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "multisparsidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Multisparsidae", mainColor: "#2DD4BF", lineageColors: { "multisparsidae": "#10B981" } };
+const stenolaemata_petaloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "petaloporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Petaloporidae", mainColor: "#A3E635", lineageColors: { "petaloporidae": "#F59E0B" } };
+const stenolaemata_theonoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "theonoidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Theonoidae", mainColor: "#38BDF8", lineageColors: { "theonoidae": "#8B5CF6" } };
+const stenolaemata_corynotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "corynotrypidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Corynotrypidae", mainColor: "#3B82F6", lineageColors: { "corynotrypidae": "#EC4899" } };
+const stenolaemata_actinoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "actinoporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Actinoporidae", mainColor: "#EF4444", lineageColors: { "actinoporidae": "#14B8A6" } };
+const stenolaemata_spiroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "spiroporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Spiroporidae", mainColor: "#10B981", lineageColors: { "spiroporidae": "#F97316" } };
+const stenolaemata_terviidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "terviidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Terviidae", mainColor: "#F59E0B", lineageColors: { "terviidae": "#6366F1" } };
+const stenolaemata_pustuloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pustuloporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Pustuloporidae", mainColor: "#8B5CF6", lineageColors: { "pustuloporidae": "#84CC16" } };
+const stenolaemata_densiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "densiporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Densiporidae", mainColor: "#EC4899", lineageColors: { "densiporidae": "#06B6D4" } };
+const stenolaemata_clausidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "clausidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Clausidae", mainColor: "#14B8A6", lineageColors: { "clausidae": "#D946EF" } };
+const stenolaemata_hederellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "hederellidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Hederellidae", mainColor: "#F97316", lineageColors: { "hederellidae": "#0EA5E9" } };
+const stenolaemata_crownoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "crownoporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Crownoporidae", mainColor: "#6366F1", lineageColors: { "crownoporidae": "#22C55E" } };
+const stenolaemata_sagenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "sagenellidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Sagenellidae", mainColor: "#84CC16", lineageColors: { "sagenellidae": "#EAB308" } };
+const stenolaemata_celluliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "celluliporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Celluliporidae", mainColor: "#06B6D4", lineageColors: { "celluliporidae": "#A855F7" } };
+const stenolaemata_cavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cavidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Cavidae", mainColor: "#D946EF", lineageColors: { "cavidae": "#FB923C" } };
+const stenolaemata_semiceidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "semiceidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Semiceidae", mainColor: "#0EA5E9", lineageColors: { "semiceidae": "#2DD4BF" } };
+const stenolaemata_leiosoeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "leiosoeciidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Leiosoeciidae", mainColor: "#22C55E", lineageColors: { "leiosoeciidae": "#A3E635" } };
+const stenolaemata_crisuliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "crisuliporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Crisuliporidae", mainColor: "#EAB308", lineageColors: { "crisuliporidae": "#38BDF8" } };
+const stenolaemata_cinctiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cinctiporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Cinctiporidae", mainColor: "#A855F7", lineageColors: { "cinctiporidae": "#3B82F6" } };
+const stenolaemata_corymboporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "corymboporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Corymboporidae", mainColor: "#FB923C", lineageColors: { "corymboporidae": "#EF4444" } };
+const stenolaemata_sulcocavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "sulcocavidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Sulcocavidae", mainColor: "#2DD4BF", lineageColors: { "sulcocavidae": "#10B981" } };
+const stenolaemata_annectocymidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "annectocymidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Annectocymidae", mainColor: "#A3E635", lineageColors: { "annectocymidae": "#F59E0B" } };
+const stenolaemata_reptariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "reptariidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Reptariidae", mainColor: "#38BDF8", lineageColors: { "reptariidae": "#8B5CF6" } };
+const stenolaemata_alyonushkidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "alyonushkidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Alyonushkidae", mainColor: "#3B82F6", lineageColors: { "alyonushkidae": "#EC4899" } };
+const stenolaemata_stigmatoechidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "stigmatoechidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Stigmatoechidae", mainColor: "#EF4444", lineageColors: { "stigmatoechidae": "#14B8A6" } };
+const stenolaemata_hastingsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "hastingsiidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Hastingsiidae", mainColor: "#10B981", lineageColors: { "hastingsiidae": "#F97316" } };
+const stenolaemata_siphoniotyphlidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "siphoniotyphlidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Siphoniotyphlidae", mainColor: "#F59E0B", lineageColors: { "siphoniotyphlidae": "#6366F1" } };
+const stenolaemata_diploclemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "diploclemidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Diploclemidae", mainColor: "#8B5CF6", lineageColors: { "diploclemidae": "#84CC16" } };
+const stenolaemata_canaliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "canaliporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Canaliporidae", mainColor: "#EC4899", lineageColors: { "canaliporidae": "#06B6D4" } };
+const stenolaemata_pseudidmoneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pseudidmoneidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Pseudidmoneidae", mainColor: "#14B8A6", lineageColors: { "pseudidmoneidae": "#D946EF" } };
+const stenolaemata_phaceloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "phaceloporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Phaceloporidae", mainColor: "#F97316", lineageColors: { "phaceloporidae": "#0EA5E9" } };
+const stenolaemata_calvetiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "calvetiidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Calvetiidae", mainColor: "#6366F1", lineageColors: { "calvetiidae": "#22C55E" } };
+const stenolaemata_flabellotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "flabellotrypidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Flabellotrypidae", mainColor: "#84CC16", lineageColors: { "flabellotrypidae": "#EAB308" } };
+const stenolaemata_anyutidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "anyutidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Anyutidae", mainColor: "#06B6D4", lineageColors: { "anyutidae": "#A855F7" } };
+const stenolaemata_crassodiscoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "crassodiscoporidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Crassodiscoporidae", mainColor: "#D946EF", lineageColors: { "crassodiscoporidae": "#FB923C" } };
+const stenolaemata_mecynoeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "mecynoeciidae", className: "Stenolaemata", orderName: "Cyclostomatida", name: "Mecynoeciidae", mainColor: "#0EA5E9", lineageColors: { "mecynoeciidae": "#2DD4BF" } };
+const stenolaemata_stenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "stenoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Stenoporidae", mainColor: "#22C55E", lineageColors: { "stenoporidae": "#A3E635" } };
+const stenolaemata_atactotoechidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "atactotoechidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Atactotoechidae", mainColor: "#EAB308", lineageColors: { "atactotoechidae": "#38BDF8" } };
+const stenolaemata_monticuliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "monticuliporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Monticuliporidae", mainColor: "#A855F7", lineageColors: { "monticuliporidae": "#3B82F6" } };
+const stenolaemata_dyscritellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "dyscritellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Dyscritellidae", mainColor: "#FB923C", lineageColors: { "dyscritellidae": "#EF4444" } };
+const stenolaemata_amplexoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "amplexoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Amplexoporidae", mainColor: "#2DD4BF", lineageColors: { "amplexoporidae": "#10B981" } };
+const stenolaemata_trematoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "trematoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Trematoporidae", mainColor: "#A3E635", lineageColors: { "trematoporidae": "#F59E0B" } };
+const stenolaemata_heterotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "heterotrypidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Heterotrypidae", mainColor: "#38BDF8", lineageColors: { "heterotrypidae": "#8B5CF6" } };
+const stenolaemata_leioclemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "leioclemidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Leioclemidae", mainColor: "#3B82F6", lineageColors: { "leioclemidae": "#EC4899" } };
+const stenolaemata_halloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "halloporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Halloporidae", mainColor: "#EF4444", lineageColors: { "halloporidae": "#14B8A6" } };
+const stenolaemata_eridotrypellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "eridotrypellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Eridotrypellidae", mainColor: "#10B981", lineageColors: { "eridotrypellidae": "#F97316" } };
+const stenolaemata_aisenvergiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "aisenvergiidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Aisenvergiidae", mainColor: "#F59E0B", lineageColors: { "aisenvergiidae": "#6366F1" } };
+const stenolaemata_diplotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "diplotrypidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Diplotrypidae", mainColor: "#8B5CF6", lineageColors: { "diplotrypidae": "#84CC16" } };
+const stenolaemata_dittoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "dittoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Dittoporidae", mainColor: "#EC4899", lineageColors: { "dittoporidae": "#06B6D4" } };
+const stenolaemata_crustoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "crustoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Crustoporidae", mainColor: "#14B8A6", lineageColors: { "crustoporidae": "#D946EF" } };
+const stenolaemata_batostomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "batostomellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Batostomellidae", mainColor: "#F97316", lineageColors: { "batostomellidae": "#0EA5E9" } };
+const stenolaemata_anisotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "anisotrypidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Anisotrypidae", mainColor: "#6366F1", lineageColors: { "anisotrypidae": "#22C55E" } };
+const stenolaemata_araxoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "araxoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Araxoporidae", mainColor: "#84CC16", lineageColors: { "araxoporidae": "#EAB308" } };
+const stenolaemata_dianulitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "dianulitidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Dianulitidae", mainColor: "#06B6D4", lineageColors: { "dianulitidae": "#A855F7" } };
+const stenolaemata_ulrichotrypellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ulrichotrypellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Ulrichotrypellidae", mainColor: "#D946EF", lineageColors: { "ulrichotrypellidae": "#FB923C" } };
+const stenolaemata_orbiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "orbiporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Orbiporidae", mainColor: "#0EA5E9", lineageColors: { "orbiporidae": "#2DD4BF" } };
+const stenolaemata_zozariellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "zozariellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Zozariellidae", mainColor: "#22C55E", lineageColors: { "zozariellidae": "#A3E635" } };
+const stenolaemata_hemieridotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "hemieridotrypidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Hemieridotrypidae", mainColor: "#EAB308", lineageColors: { "hemieridotrypidae": "#38BDF8" } };
+const stenolaemata_bimuroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "bimuroporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Bimuroporidae", mainColor: "#A855F7", lineageColors: { "bimuroporidae": "#3B82F6" } };
+const stenolaemata_coelotubuliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "coelotubuliporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Coelotubuliporidae", mainColor: "#FB923C", lineageColors: { "coelotubuliporidae": "#EF4444" } };
+const stenolaemata_ralfimartitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ralfimartitidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Ralfimartitidae", mainColor: "#2DD4BF", lineageColors: { "ralfimartitidae": "#10B981" } };
+const stenolaemata_maychellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "maychellinidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Maychellinidae", mainColor: "#A3E635", lineageColors: { "maychellinidae": "#F59E0B" } };
+const stenolaemata_pseudocampylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pseudocampylidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Pseudocampylidae", mainColor: "#38BDF8", lineageColors: { "pseudocampylidae": "#8B5CF6" } };
+const stenolaemata_nipponostenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "nipponostenoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Nipponostenoporidae", mainColor: "#3B82F6", lineageColors: { "nipponostenoporidae": "#EC4899" } };
+const stenolaemata_cycloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cycloporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Cycloporidae", mainColor: "#EF4444", lineageColors: { "cycloporidae": "#14B8A6" } };
+const stenolaemata_stenoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "stenoporellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Stenoporellidae", mainColor: "#10B981", lineageColors: { "stenoporellidae": "#F97316" } };
+const stenolaemata_helenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "helenoporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Helenoporidae", mainColor: "#F59E0B", lineageColors: { "helenoporidae": "#6366F1" } };
+const stenolaemata_mishulgellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "mishulgellidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Mishulgellidae", mainColor: "#8B5CF6", lineageColors: { "mishulgellidae": "#84CC16" } };
+const stenolaemata_astralochomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "astralochomidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Astralochomidae", mainColor: "#EC4899", lineageColors: { "astralochomidae": "#06B6D4" } };
+const stenolaemata_capillaporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "capillaporidae", className: "Stenolaemata", orderName: "Trepostomatida", name: "Capillaporidae", mainColor: "#14B8A6", lineageColors: { "capillaporidae": "#D946EF" } };
+const stenolaemata_fenestellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "fenestellidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Fenestellidae", mainColor: "#F97316", lineageColors: { "fenestellidae": "#0EA5E9" } };
+const stenolaemata_acanthocladiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "acanthocladiidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Acanthocladiidae", mainColor: "#6366F1", lineageColors: { "acanthocladiidae": "#22C55E" } };
+const stenolaemata_semicosciniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "semicosciniidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Semicosciniidae", mainColor: "#84CC16", lineageColors: { "semicosciniidae": "#EAB308" } };
+const stenolaemata_septoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "septoporidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Septoporidae", mainColor: "#06B6D4", lineageColors: { "septoporidae": "#A855F7" } };
+const stenolaemata_phylloporinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "phylloporinidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Phylloporinidae", mainColor: "#D946EF", lineageColors: { "phylloporinidae": "#FB923C" } };
+const stenolaemata_chainodictyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "chainodictyonidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Chainodictyonidae", mainColor: "#0EA5E9", lineageColors: { "chainodictyonidae": "#2DD4BF" } };
+const stenolaemata_chasmatoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "chasmatoporidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Chasmatoporidae", mainColor: "#22C55E", lineageColors: { "chasmatoporidae": "#A3E635" } };
+const stenolaemata_fenestraliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "fenestraliidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Fenestraliidae", mainColor: "#EAB308", lineageColors: { "fenestraliidae": "#38BDF8" } };
+const stenolaemata_fenestraporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "fenestraporidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Fenestraporidae", mainColor: "#A855F7", lineageColors: { "fenestraporidae": "#3B82F6" } };
+const stenolaemata_septatoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "septatoporidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Septatoporidae", mainColor: "#FB923C", lineageColors: { "septatoporidae": "#EF4444" } };
+const stenolaemata_enalloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "enalloporidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Enalloporidae", mainColor: "#2DD4BF", lineageColors: { "enalloporidae": "#10B981" } };
+const stenolaemata_admiratellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "admiratellidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Admiratellidae", mainColor: "#A3E635", lineageColors: { "admiratellidae": "#F59E0B" } };
+const stenolaemata_ralfinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ralfinidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Ralfinidae", mainColor: "#38BDF8", lineageColors: { "ralfinidae": "#8B5CF6" } };
+const stenolaemata_sardesoninidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "sardesoninidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Sardesoninidae", mainColor: "#3B82F6", lineageColors: { "sardesoninidae": "#EC4899" } };
+const stenolaemata_carnocladiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "carnocladiidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Carnocladiidae", mainColor: "#EF4444", lineageColors: { "carnocladiidae": "#14B8A6" } };
+const stenolaemata_polyporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "polyporidae", className: "Stenolaemata", orderName: "Fenestrida", name: "Polyporidae", mainColor: "#10B981", lineageColors: { "polyporidae": "#F97316" } };
+const stenolaemata_rhabdomesidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "rhabdomesidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Rhabdomesidae", mainColor: "#F59E0B", lineageColors: { "rhabdomesidae": "#6366F1" } };
+const stenolaemata_rhomboporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "rhomboporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Rhomboporidae", mainColor: "#8B5CF6", lineageColors: { "rhomboporidae": "#84CC16" } };
+const stenolaemata_arthrostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "arthrostylidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Arthrostylidae", mainColor: "#EC4899", lineageColors: { "arthrostylidae": "#06B6D4" } };
+const stenolaemata_rhinidictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "rhinidictyidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Rhinidictyidae", mainColor: "#14B8A6", lineageColors: { "rhinidictyidae": "#D946EF" } };
+const stenolaemata_ptilodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "ptilodictyidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Ptilodictyidae", mainColor: "#F97316", lineageColors: { "ptilodictyidae": "#0EA5E9" } };
+const stenolaemata_girtyporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "girtyporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Girtyporidae", mainColor: "#6366F1", lineageColors: { "girtyporidae": "#22C55E" } };
+const stenolaemata_escharoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "escharoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Escharoporidae", mainColor: "#84CC16", lineageColors: { "escharoporidae": "#EAB308" } };
+const stenolaemata_nikiforovellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "nikiforovellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Nikiforovellidae", mainColor: "#06B6D4", lineageColors: { "nikiforovellidae": "#A855F7" } };
+const stenolaemata_streblascoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "streblascoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Streblascoporidae", mainColor: "#D946EF", lineageColors: { "streblascoporidae": "#FB923C" } };
+const stenolaemata_stictoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "stictoporellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Stictoporellidae", mainColor: "#0EA5E9", lineageColors: { "stictoporellidae": "#2DD4BF" } };
+const stenolaemata_nematotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "nematotrypidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Nematotrypidae", mainColor: "#22C55E", lineageColors: { "nematotrypidae": "#A3E635" } };
+const stenolaemata_hyphasmoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "hyphasmoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Hyphasmoporidae", mainColor: "#EAB308", lineageColors: { "hyphasmoporidae": "#38BDF8" } };
+const stenolaemata_intraporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "intraporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Intraporidae", mainColor: "#A855F7", lineageColors: { "intraporidae": "#3B82F6" } };
+const stenolaemata_phaenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "phaenoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Phaenoporidae", mainColor: "#FB923C", lineageColors: { "phaenoporidae": "#EF4444" } };
+const stenolaemata_timanodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "timanodictyidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Timanodictyidae", mainColor: "#2DD4BF", lineageColors: { "timanodictyidae": "#10B981" } };
+const stenolaemata_goldfussitrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "goldfussitrypidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Goldfussitrypidae", mainColor: "#A3E635", lineageColors: { "goldfussitrypidae": "#F59E0B" } };
+const stenolaemata_maychellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "maychellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Maychellidae", mainColor: "#38BDF8", lineageColors: { "maychellidae": "#8B5CF6" } };
+const stenolaemata_palescharidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "palescharidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Palescharidae", mainColor: "#3B82F6", lineageColors: { "palescharidae": "#EC4899" } };
+const stenolaemata_lenaporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "lenaporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Lenaporidae", mainColor: "#EF4444", lineageColors: { "lenaporidae": "#14B8A6" } };
+const stenolaemata_worthenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "worthenoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Worthenoporidae", mainColor: "#10B981", lineageColors: { "worthenoporidae": "#F97316" } };
+const stenolaemata_mediaporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mediaporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Mediaporidae", mainColor: "#F59E0B", lineageColors: { "mediaporidae": "#6366F1" } };
+const stenolaemata_nicklesoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "nicklesoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Nicklesoporidae", mainColor: "#8B5CF6", lineageColors: { "nicklesoporidae": "#84CC16" } };
+const stenolaemata_virgatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "virgatellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Virgatellidae", mainColor: "#EC4899", lineageColors: { "virgatellidae": "#06B6D4" } };
+const stenolaemata_bactroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "bactroporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Bactroporidae", mainColor: "#14B8A6", lineageColors: { "bactroporidae": "#D946EF" } };
+const stenolaemata_mysticellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "mysticellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Mysticellidae", mainColor: "#F97316", lineageColors: { "mysticellidae": "#0EA5E9" } };
+const stenolaemata_pseudoascoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "pseudoascoporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Pseudoascoporidae", mainColor: "#6366F1", lineageColors: { "pseudoascoporidae": "#22C55E" } };
+const stenolaemata_medvedkellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "medvedkellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Medvedkellidae", mainColor: "#84CC16", lineageColors: { "medvedkellidae": "#EAB308" } };
+const stenolaemata_phragmopheridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "phragmopheridae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Phragmopheridae", mainColor: "#06B6D4", lineageColors: { "phragmopheridae": "#A855F7" } };
+const stenolaemata_streblotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "streblotrypidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Streblotrypidae", mainColor: "#D946EF", lineageColors: { "streblotrypidae": "#FB923C" } };
+const stenolaemata_kielceporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "kielceporidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Kielceporidae", mainColor: "#0EA5E9", lineageColors: { "kielceporidae": "#2DD4BF" } };
+const stenolaemata_murengoloclemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "murengoloclemidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Murengoloclemidae", mainColor: "#22C55E", lineageColors: { "murengoloclemidae": "#A3E635" } };
+const stenolaemata_tamaroclemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "tamaroclemidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Tamaroclemidae", mainColor: "#EAB308", lineageColors: { "tamaroclemidae": "#38BDF8" } };
+const stenolaemata_nudymiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "nudymiellidae", className: "Stenolaemata", orderName: "Cryptostomida", name: "Nudymiellidae", mainColor: "#A855F7", lineageColors: { "nudymiellidae": "#3B82F6" } };
+const stenolaemata_fistuliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "fistuliporidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Fistuliporidae", mainColor: "#FB923C", lineageColors: { "fistuliporidae": "#EF4444" } };
+const stenolaemata_hexagonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "hexagonellidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Hexagonellidae", mainColor: "#2DD4BF", lineageColors: { "hexagonellidae": "#10B981" } };
+const stenolaemata_cystodictyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cystodictyonidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Cystodictyonidae", mainColor: "#A3E635", lineageColors: { "cystodictyonidae": "#F59E0B" } };
+const stenolaemata_ceramoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ceramoporidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Ceramoporidae", mainColor: "#38BDF8", lineageColors: { "ceramoporidae": "#8B5CF6" } };
+const stenolaemata_goniocladiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "goniocladiidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Goniocladiidae", mainColor: "#3B82F6", lineageColors: { "goniocladiidae": "#EC4899" } };
+const stenolaemata_constellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "constellariidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Constellariidae", mainColor: "#EF4444", lineageColors: { "constellariidae": "#14B8A6" } };
+const stenolaemata_revalotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "revalotrypidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Revalotrypidae", mainColor: "#10B981", lineageColors: { "revalotrypidae": "#F97316" } };
+const stenolaemata_anolotichiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "anolotichiidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Anolotichiidae", mainColor: "#F59E0B", lineageColors: { "anolotichiidae": "#6366F1" } };
+const stenolaemata_xenotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "xenotrypidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Xenotrypidae", mainColor: "#8B5CF6", lineageColors: { "xenotrypidae": "#84CC16" } };
+const stenolaemata_rhinoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "rhinoporidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Rhinoporidae", mainColor: "#EC4899", lineageColors: { "rhinoporidae": "#06B6D4" } };
+const stenolaemata_acanthoceramoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "acanthoceramoporellidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Acanthoceramoporellidae", mainColor: "#14B8A6", lineageColors: { "acanthoceramoporellidae": "#D946EF" } };
+const stenolaemata_evactinoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "evactinoporidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Evactinoporidae", mainColor: "#F97316", lineageColors: { "evactinoporidae": "#0EA5E9" } };
+const stenolaemata_etherellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "etherellidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Etherellidae", mainColor: "#6366F1", lineageColors: { "etherellidae": "#22C55E" } };
+const stenolaemata_botrylloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "botrylloporidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Botrylloporidae", mainColor: "#84CC16", lineageColors: { "botrylloporidae": "#EAB308" } };
+const stenolaemata_actinotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "actinotrypidae", className: "Stenolaemata", orderName: "Cystoporida", name: "Actinotrypidae", mainColor: "#06B6D4", lineageColors: { "actinotrypidae": "#A855F7" } };
+const stenolaemata_eleidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "eleidae", className: "Stenolaemata", orderName: "Melicerititida", name: "Eleidae", mainColor: "#D946EF", lineageColors: { "eleidae": "#FB923C" } };
+const stenolaemata_esthonioporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "esthonioporidae", className: "Stenolaemata", orderName: "Esthonioporata", name: "Esthonioporidae", mainColor: "#0EA5E9", lineageColors: { "esthonioporidae": "#2DD4BF" } };
+const stenolaemata_theononidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "theononidae", className: "Stenolaemata", orderName: "Unknown", name: "Theononidae", mainColor: "#22C55E", lineageColors: { "theononidae": "#A3E635" } };
+const stenolaemata_nippostenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "nippostenoporidae", className: "Stenolaemata", orderName: "Unknown", name: "Nippostenoporidae", mainColor: "#EAB308", lineageColors: { "nippostenoporidae": "#38BDF8" } };
+const stenolaemata_nematoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "nematoporidae", className: "Stenolaemata", orderName: "Unknown", name: "Nematoporidae", mainColor: "#A855F7", lineageColors: { "nematoporidae": "#3B82F6" } };
+const stenolaemata_pseudocerioporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudocerioporidae", className: "Stenolaemata", orderName: "Unknown", name: "Pseudocerioporidae", mainColor: "#FB923C", lineageColors: { "pseudocerioporidae": "#EF4444" } };
+const stenolaemata_girtyoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "girtyoporidae", className: "Stenolaemata", orderName: "Unknown", name: "Girtyoporidae", mainColor: "#2DD4BF", lineageColors: { "girtyoporidae": "#10B981" } };
+const stenolaemata_semicosciniumidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "semicosciniumidae", className: "Stenolaemata", orderName: "Unknown", name: "Semicosciniumidae", mainColor: "#A3E635", lineageColors: { "semicosciniumidae": "#F59E0B" } };
+const stenolaemata_giryporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "giryporidae", className: "Stenolaemata", orderName: "Unknown", name: "Giryporidae", mainColor: "#38BDF8", lineageColors: { "giryporidae": "#8B5CF6" } };
+const stenolaemata_rhinidictyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "rhinidictyonidae", className: "Stenolaemata", orderName: "Unknown", name: "Rhinidictyonidae", mainColor: "#3B82F6", lineageColors: { "rhinidictyonidae": "#EC4899" } };
+const stenolaemata_arcticoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "arcticoporidae", className: "Stenolaemata", orderName: "Unknown", name: "Arcticoporidae", mainColor: "#EF4444", lineageColors: { "arcticoporidae": "#14B8A6" } };
+const stenolaemata_rhabdomesontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "rhabdomesontidae", className: "Stenolaemata", orderName: "Unknown", name: "Rhabdomesontidae", mainColor: "#10B981", lineageColors: { "rhabdomesontidae": "#F97316" } };
+const stenolaemata_cheilotrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cheilotrypidae", className: "Stenolaemata", orderName: "Unknown", name: "Cheilotrypidae", mainColor: "#F59E0B", lineageColors: { "cheilotrypidae": "#6366F1" } };
+const stenolaemata_phragmoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "phragmoporidae", className: "Stenolaemata", orderName: "Unknown", name: "Phragmoporidae", mainColor: "#8B5CF6", lineageColors: { "phragmoporidae": "#84CC16" } };
+const stenolaemata_vidronovellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "vidronovellidae", className: "Stenolaemata", orderName: "Unknown", name: "Vidronovellidae", mainColor: "#EC4899", lineageColors: { "vidronovellidae": "#06B6D4" } };
+const stenolaemata_kuzbassidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "kuzbassidae", className: "Stenolaemata", orderName: "Unknown", name: "Kuzbassidae", mainColor: "#14B8A6", lineageColors: { "kuzbassidae": "#D946EF" } };
+const stenolaemata_phragmophaeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "phragmophaeridae", className: "Stenolaemata", orderName: "Unknown", name: "Phragmophaeridae", mainColor: "#F97316", lineageColors: { "phragmophaeridae": "#0EA5E9" } };
+const stenolaemata_ascosoeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "ascosoeciidae", className: "Stenolaemata", orderName: "Unknown", name: "Ascosoeciidae", mainColor: "#6366F1", lineageColors: { "ascosoeciidae": "#22C55E" } };
+
+
+// ── Gymnolaemata (218 families) ──
+const gymnolaemata_cribrilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cribrilinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cribrilinidae", mainColor: "#EF4444", lineageColors: { "cribrilinidae": "#14B8A6" } };
+const gymnolaemata_calloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "calloporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Calloporidae", mainColor: "#10B981", lineageColors: { "calloporidae": "#F97316" } };
+const gymnolaemata_celleporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "celleporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Celleporidae", mainColor: "#F59E0B", lineageColors: { "celleporidae": "#6366F1" } };
+const gymnolaemata_onychocellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "onychocellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Onychocellidae", mainColor: "#8B5CF6", lineageColors: { "onychocellidae": "#84CC16" } };
+const gymnolaemata_smittinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "smittinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Smittinidae", mainColor: "#EC4899", lineageColors: { "smittinidae": "#06B6D4" } };
+const gymnolaemata_phidoloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "phidoloporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Phidoloporidae", mainColor: "#14B8A6", lineageColors: { "phidoloporidae": "#D946EF" } };
+const gymnolaemata_membraniporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "membraniporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Membraniporidae", mainColor: "#F97316", lineageColors: { "membraniporidae": "#0EA5E9" } };
+const gymnolaemata_candidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "candidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Candidae", mainColor: "#6366F1", lineageColors: { "candidae": "#22C55E" } };
+const gymnolaemata_bitectiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "bitectiporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bitectiporidae", mainColor: "#84CC16", lineageColors: { "bitectiporidae": "#EAB308" } };
+const gymnolaemata_bugulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "bugulidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bugulidae", mainColor: "#06B6D4", lineageColors: { "bugulidae": "#A855F7" } };
+const gymnolaemata_schizoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "schizoporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Schizoporellidae", mainColor: "#D946EF", lineageColors: { "schizoporellidae": "#FB923C" } };
+const gymnolaemata_adeonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "adeonidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Adeonidae", mainColor: "#0EA5E9", lineageColors: { "adeonidae": "#2DD4BF" } };
+const gymnolaemata_electridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "electridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Electridae", mainColor: "#22C55E", lineageColors: { "electridae": "#A3E635" } };
+const gymnolaemata_cellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cellariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cellariidae", mainColor: "#EAB308", lineageColors: { "cellariidae": "#38BDF8" } };
+const gymnolaemata_romancheinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "romancheinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Romancheinidae", mainColor: "#A855F7", lineageColors: { "romancheinidae": "#3B82F6" } };
+const gymnolaemata_microporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "microporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Microporellidae", mainColor: "#FB923C", lineageColors: { "microporellidae": "#EF4444" } };
+const gymnolaemata_microporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "microporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Microporidae", mainColor: "#2DD4BF", lineageColors: { "microporidae": "#10B981" } };
+const gymnolaemata_bryocryptellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "bryocryptellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bryocryptellidae", mainColor: "#A3E635", lineageColors: { "bryocryptellidae": "#F59E0B" } };
+const gymnolaemata_catenicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "catenicellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Catenicellidae", mainColor: "#38BDF8", lineageColors: { "catenicellidae": "#8B5CF6" } };
+const gymnolaemata_flustridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "flustridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Flustridae", mainColor: "#3B82F6", lineageColors: { "flustridae": "#EC4899" } };
+const gymnolaemata_escharinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "escharinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Escharinidae", mainColor: "#EF4444", lineageColors: { "escharinidae": "#14B8A6" } };
+const gymnolaemata_thalamoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "thalamoporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Thalamoporellidae", mainColor: "#10B981", lineageColors: { "thalamoporellidae": "#F97316" } };
+const gymnolaemata_lunulitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lunulitidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Lunulitidae", mainColor: "#F59E0B", lineageColors: { "lunulitidae": "#6366F1" } };
+const gymnolaemata_escharellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "escharellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Escharellidae", mainColor: "#8B5CF6", lineageColors: { "escharellidae": "#84CC16" } };
+const gymnolaemata_steginoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "steginoporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Steginoporellidae", mainColor: "#EC4899", lineageColors: { "steginoporellidae": "#06B6D4" } };
+const gymnolaemata_lanceoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lanceoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Lanceoporidae", mainColor: "#14B8A6", lineageColors: { "lanceoporidae": "#D946EF" } };
+const gymnolaemata_conescharellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "conescharellinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Conescharellinidae", mainColor: "#F97316", lineageColors: { "conescharellinidae": "#0EA5E9" } };
+const gymnolaemata_hippothoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "hippothoidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Hippothoidae", mainColor: "#6366F1", lineageColors: { "hippothoidae": "#22C55E" } };
+const gymnolaemata_chaperiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "chaperiidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Chaperiidae", mainColor: "#84CC16", lineageColors: { "chaperiidae": "#EAB308" } };
+const gymnolaemata_porinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "porinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Porinidae", mainColor: "#06B6D4", lineageColors: { "porinidae": "#A855F7" } };
+const gymnolaemata_exochellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "exochellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Exochellidae", mainColor: "#D946EF", lineageColors: { "exochellidae": "#FB923C" } };
+const gymnolaemata_arachnopusiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "arachnopusiidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Arachnopusiidae", mainColor: "#0EA5E9", lineageColors: { "arachnopusiidae": "#2DD4BF" } };
+const gymnolaemata_umbonulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "umbonulidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Umbonulidae", mainColor: "#22C55E", lineageColors: { "umbonulidae": "#A3E635" } };
+const gymnolaemata_petraliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "petraliidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Petraliidae", mainColor: "#EAB308", lineageColors: { "petraliidae": "#38BDF8" } };
+const gymnolaemata_cupuladriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cupuladriidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cupuladriidae", mainColor: "#A855F7", lineageColors: { "cupuladriidae": "#3B82F6" } };
+const gymnolaemata_lacernidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "lacernidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Lacernidae", mainColor: "#FB923C", lineageColors: { "lacernidae": "#EF4444" } };
+const gymnolaemata_antroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "antroporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Antroporidae", mainColor: "#2DD4BF", lineageColors: { "antroporidae": "#10B981" } };
+const gymnolaemata_beaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "beaniidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Beaniidae", mainColor: "#A3E635", lineageColors: { "beaniidae": "#F59E0B" } };
+const gymnolaemata_fenestrulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "fenestrulinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Fenestrulinidae", mainColor: "#38BDF8", lineageColors: { "fenestrulinidae": "#8B5CF6" } };
+const gymnolaemata_tessaradomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "tessaradomidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Tessaradomidae", mainColor: "#3B82F6", lineageColors: { "tessaradomidae": "#EC4899" } };
+const gymnolaemata_buffonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "buffonellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Buffonellidae", mainColor: "#EF4444", lineageColors: { "buffonellidae": "#14B8A6" } };
+const gymnolaemata_hippoporidridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "hippoporidridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Hippoporidridae", mainColor: "#10B981", lineageColors: { "hippoporidridae": "#F97316" } };
+const gymnolaemata_metrarabdotosidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "metrarabdotosidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Metrarabdotosidae", mainColor: "#F59E0B", lineageColors: { "metrarabdotosidae": "#6366F1" } };
+const gymnolaemata_aspidostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "aspidostomatidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Aspidostomatidae", mainColor: "#8B5CF6", lineageColors: { "aspidostomatidae": "#84CC16" } };
+const gymnolaemata_exechonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "exechonellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Exechonellidae", mainColor: "#EC4899", lineageColors: { "exechonellidae": "#06B6D4" } };
+const gymnolaemata_vinculariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "vinculariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Vinculariidae", mainColor: "#14B8A6", lineageColors: { "vinculariidae": "#D946EF" } };
+const gymnolaemata_gigantoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "gigantoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Gigantoporidae", mainColor: "#F97316", lineageColors: { "gigantoporidae": "#0EA5E9" } };
+const gymnolaemata_ellisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "ellisinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Ellisinidae", mainColor: "#6366F1", lineageColors: { "ellisinidae": "#22C55E" } };
+const gymnolaemata_trypostegidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "trypostegidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Trypostegidae", mainColor: "#84CC16", lineageColors: { "trypostegidae": "#EAB308" } };
+const gymnolaemata_bifaxariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "bifaxariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bifaxariidae", mainColor: "#06B6D4", lineageColors: { "bifaxariidae": "#A855F7" } };
+const gymnolaemata_cheiloporinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cheiloporinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cheiloporinidae", mainColor: "#D946EF", lineageColors: { "cheiloporinidae": "#FB923C" } };
+const gymnolaemata_monoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "monoporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Monoporellidae", mainColor: "#0EA5E9", lineageColors: { "monoporellidae": "#2DD4BF" } };
+const gymnolaemata_cleidochasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cleidochasmatidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cleidochasmatidae", mainColor: "#22C55E", lineageColors: { "cleidochasmatidae": "#A3E635" } };
+const gymnolaemata_quadricellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "quadricellariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Quadricellariidae", mainColor: "#EAB308", lineageColors: { "quadricellariidae": "#38BDF8" } };
+const gymnolaemata_watersiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "watersiporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Watersiporidae", mainColor: "#A855F7", lineageColors: { "watersiporidae": "#3B82F6" } };
+const gymnolaemata_colatooeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "colatooeciidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Colatooeciidae", mainColor: "#FB923C", lineageColors: { "colatooeciidae": "#EF4444" } };
+const gymnolaemata_margarettidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "margarettidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Margarettidae", mainColor: "#2DD4BF", lineageColors: { "margarettidae": "#10B981" } };
+const gymnolaemata_otionellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "otionellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Otionellidae", mainColor: "#A3E635", lineageColors: { "otionellidae": "#F59E0B" } };
+const gymnolaemata_selenariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "selenariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Selenariidae", mainColor: "#38BDF8", lineageColors: { "selenariidae": "#8B5CF6" } };
+const gymnolaemata_hippopodinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "hippopodinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Hippopodinidae", mainColor: "#3B82F6", lineageColors: { "hippopodinidae": "#EC4899" } };
+const gymnolaemata_stomachetosellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "stomachetosellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Stomachetosellidae", mainColor: "#EF4444", lineageColors: { "stomachetosellidae": "#14B8A6" } };
+const gymnolaemata_lekythoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "lekythoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Lekythoporidae", mainColor: "#10B981", lineageColors: { "lekythoporidae": "#F97316" } };
+const gymnolaemata_bryopastoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "bryopastoridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bryopastoridae", mainColor: "#F59E0B", lineageColors: { "bryopastoridae": "#6366F1" } };
+const gymnolaemata_batoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "batoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Batoporidae", mainColor: "#8B5CF6", lineageColors: { "batoporidae": "#84CC16" } };
+const gymnolaemata_macroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "macroporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Macroporidae", mainColor: "#EC4899", lineageColors: { "macroporidae": "#06B6D4" } };
+const gymnolaemata_sclerodomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "sclerodomidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Sclerodomidae", mainColor: "#14B8A6", lineageColors: { "sclerodomidae": "#D946EF" } };
+const gymnolaemata_orbituliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "orbituliporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Orbituliporidae", mainColor: "#F97316", lineageColors: { "orbituliporidae": "#0EA5E9" } };
+const gymnolaemata_pasytheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "pasytheidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Pasytheidae", mainColor: "#6366F1", lineageColors: { "pasytheidae": "#22C55E" } };
+const gymnolaemata_farciminariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "farciminariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Farciminariidae", mainColor: "#84CC16", lineageColors: { "farciminariidae": "#EAB308" } };
+const gymnolaemata_teuchoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "teuchoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Teuchoporidae", mainColor: "#06B6D4", lineageColors: { "teuchoporidae": "#A855F7" } };
+const gymnolaemata_scorioporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "scorioporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Scorioporidae", mainColor: "#D946EF", lineageColors: { "scorioporidae": "#FB923C" } };
+const gymnolaemata_myriaporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "myriaporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Myriaporidae", mainColor: "#0EA5E9", lineageColors: { "myriaporidae": "#2DD4BF" } };
+const gymnolaemata_ascosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "ascosiidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Ascosiidae", mainColor: "#22C55E", lineageColors: { "ascosiidae": "#A3E635" } };
+const gymnolaemata_calwelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "calwelliidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Calwelliidae", mainColor: "#EAB308", lineageColors: { "calwelliidae": "#38BDF8" } };
+const gymnolaemata_coscinopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "coscinopleuridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Coscinopleuridae", mainColor: "#A855F7", lineageColors: { "coscinopleuridae": "#3B82F6" } };
+const gymnolaemata_bicorniferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "bicorniferidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bicorniferidae", mainColor: "#FB923C", lineageColors: { "bicorniferidae": "#EF4444" } };
+const gymnolaemata_tetraplariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "tetraplariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Tetraplariidae", mainColor: "#2DD4BF", lineageColors: { "tetraplariidae": "#10B981" } };
+const gymnolaemata_aeteidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "aeteidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Aeteidae", mainColor: "#A3E635", lineageColors: { "aeteidae": "#F59E0B" } };
+const gymnolaemata_didymosellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "didymosellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Didymosellidae", mainColor: "#38BDF8", lineageColors: { "didymosellidae": "#8B5CF6" } };
+const gymnolaemata_foveolariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "foveolariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Foveolariidae", mainColor: "#3B82F6", lineageColors: { "foveolariidae": "#EC4899" } };
+const gymnolaemata_siphonicytaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "siphonicytaridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Siphonicytaridae", mainColor: "#EF4444", lineageColors: { "siphonicytaridae": "#14B8A6" } };
+const gymnolaemata_crepidacanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "crepidacanthidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Crepidacanthidae", mainColor: "#10B981", lineageColors: { "crepidacanthidae": "#F97316" } };
+const gymnolaemata_hiantoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "hiantoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Hiantoporidae", mainColor: "#F59E0B", lineageColors: { "hiantoporidae": "#6366F1" } };
+const gymnolaemata_hippaliosinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "hippaliosinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Hippaliosinidae", mainColor: "#8B5CF6", lineageColors: { "hippaliosinidae": "#84CC16" } };
+const gymnolaemata_calescharidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "calescharidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Calescharidae", mainColor: "#EC4899", lineageColors: { "calescharidae": "#06B6D4" } };
+const gymnolaemata_fatkullinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "fatkullinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Fatkullinidae", mainColor: "#14B8A6", lineageColors: { "fatkullinidae": "#D946EF" } };
+const gymnolaemata_skyloniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "skyloniidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Skyloniidae", mainColor: "#F97316", lineageColors: { "skyloniidae": "#0EA5E9" } };
+const gymnolaemata_chorizoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "chorizoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Chorizoporidae", mainColor: "#6366F1", lineageColors: { "chorizoporidae": "#22C55E" } };
+const gymnolaemata_eurystomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "eurystomellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Eurystomellidae", mainColor: "#84CC16", lineageColors: { "eurystomellidae": "#EAB308" } };
+const gymnolaemata_mamilloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "mamilloporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Mamilloporidae", mainColor: "#06B6D4", lineageColors: { "mamilloporidae": "#A855F7" } };
+const gymnolaemata_eminooeciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "eminooeciidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Eminooeciidae", mainColor: "#D946EF", lineageColors: { "eminooeciidae": "#FB923C" } };
+const gymnolaemata_lunulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lunulariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Lunulariidae", mainColor: "#0EA5E9", lineageColors: { "lunulariidae": "#2DD4BF" } };
+const gymnolaemata_chiplonkarinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "chiplonkarinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Chiplonkarinidae", mainColor: "#22C55E", lineageColors: { "chiplonkarinidae": "#A3E635" } };
+const gymnolaemata_atlantisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "atlantisinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Atlantisinidae", mainColor: "#EAB308", lineageColors: { "atlantisinidae": "#38BDF8" } };
+const gymnolaemata_petalostegidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "petalostegidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Petalostegidae", mainColor: "#A855F7", lineageColors: { "petalostegidae": "#3B82F6" } };
+const gymnolaemata_platyglenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "platyglenidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Platyglenidae", mainColor: "#FB923C", lineageColors: { "platyglenidae": "#EF4444" } };
+const gymnolaemata_pyrisinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pyrisinellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Pyrisinellidae", mainColor: "#2DD4BF", lineageColors: { "pyrisinellidae": "#10B981" } };
+const gymnolaemata_robertsonidridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "robertsonidridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Robertsonidridae", mainColor: "#A3E635", lineageColors: { "robertsonidridae": "#F59E0B" } };
+const gymnolaemata_scrupariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "scrupariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Scrupariidae", mainColor: "#38BDF8", lineageColors: { "scrupariidae": "#8B5CF6" } };
+const gymnolaemata_poricellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "poricellariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Poricellariidae", mainColor: "#3B82F6", lineageColors: { "poricellariidae": "#EC4899" } };
+const gymnolaemata_setosellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "setosellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Setosellidae", mainColor: "#EF4444", lineageColors: { "setosellidae": "#14B8A6" } };
+const gymnolaemata_phorioppniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "phorioppniidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Phorioppniidae", mainColor: "#10B981", lineageColors: { "phorioppniidae": "#F97316" } };
+const gymnolaemata_heliodomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "heliodomidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Heliodomidae", mainColor: "#F59E0B", lineageColors: { "heliodomidae": "#6366F1" } };
+const gymnolaemata_jaculinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "jaculinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Jaculinidae", mainColor: "#8B5CF6", lineageColors: { "jaculinidae": "#84CC16" } };
+const gymnolaemata_cymuloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cymuloporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cymuloporidae", mainColor: "#EC4899", lineageColors: { "cymuloporidae": "#06B6D4" } };
+const gymnolaemata_cyclicoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cyclicoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cyclicoporidae", mainColor: "#14B8A6", lineageColors: { "cyclicoporidae": "#D946EF" } };
+const gymnolaemata_vitrimurellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "vitrimurellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Vitrimurellidae", mainColor: "#F97316", lineageColors: { "vitrimurellidae": "#0EA5E9" } };
+const gymnolaemata_sinoflustridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sinoflustridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Sinoflustridae", mainColor: "#6366F1", lineageColors: { "sinoflustridae": "#22C55E" } };
+const gymnolaemata_pacificincolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "pacificincolidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Pacificincolidae", mainColor: "#84CC16", lineageColors: { "pacificincolidae": "#EAB308" } };
+const gymnolaemata_cryptosulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cryptosulidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cryptosulidae", mainColor: "#06B6D4", lineageColors: { "cryptosulidae": "#A855F7" } };
+const gymnolaemata_haplopomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "haplopomidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Haplopomidae", mainColor: "#D946EF", lineageColors: { "haplopomidae": "#FB923C" } };
+const gymnolaemata_taenioporinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "taenioporinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Taenioporinidae", mainColor: "#0EA5E9", lineageColors: { "taenioporinidae": "#2DD4BF" } };
+const gymnolaemata_phoceanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "phoceanidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Phoceanidae", mainColor: "#22C55E", lineageColors: { "phoceanidae": "#A3E635" } };
+const gymnolaemata_gemelliporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "gemelliporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Gemelliporellidae", mainColor: "#EAB308", lineageColors: { "gemelliporellidae": "#38BDF8" } };
+const gymnolaemata_brydonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "brydonellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Brydonellidae", mainColor: "#A855F7", lineageColors: { "brydonellidae": "#3B82F6" } };
+const gymnolaemata_hincksiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "hincksiporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Hincksiporidae", mainColor: "#FB923C", lineageColors: { "hincksiporidae": "#EF4444" } };
+const gymnolaemata_doryporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "doryporellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Doryporellidae", mainColor: "#2DD4BF", lineageColors: { "doryporellidae": "#10B981" } };
+const gymnolaemata_chlidoniopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "chlidoniopsidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Chlidoniopsidae", mainColor: "#A3E635", lineageColors: { "chlidoniopsidae": "#F59E0B" } };
+const gymnolaemata_inversiulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "inversiulidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Inversiulidae", mainColor: "#38BDF8", lineageColors: { "inversiulidae": "#8B5CF6" } };
+const gymnolaemata_epistomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "epistomiidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Epistomiidae", mainColor: "#3B82F6", lineageColors: { "epistomiidae": "#EC4899" } };
+const gymnolaemata_duvergieriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "duvergieriidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Duvergieriidae", mainColor: "#EF4444", lineageColors: { "duvergieriidae": "#14B8A6" } };
+const gymnolaemata_euthyrisellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "euthyrisellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Euthyrisellidae", mainColor: "#10B981", lineageColors: { "euthyrisellidae": "#F97316" } };
+const gymnolaemata_membranicellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "membranicellariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Membranicellariidae", mainColor: "#F59E0B", lineageColors: { "membranicellariidae": "#6366F1" } };
+const gymnolaemata_marcusadoreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "marcusadoreidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Marcusadoreidae", mainColor: "#8B5CF6", lineageColors: { "marcusadoreidae": "#84CC16" } };
+const gymnolaemata_urceoliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "urceoliporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Urceoliporidae", mainColor: "#EC4899", lineageColors: { "urceoliporidae": "#06B6D4" } };
+const gymnolaemata_actisecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "actisecidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Actisecidae", mainColor: "#14B8A6", lineageColors: { "actisecidae": "#D946EF" } };
+const gymnolaemata_tendridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "tendridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Tendridae", mainColor: "#F97316", lineageColors: { "tendridae": "#0EA5E9" } };
+const gymnolaemata_elementellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "elementellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Elementellidae", mainColor: "#6366F1", lineageColors: { "elementellidae": "#22C55E" } };
+const gymnolaemata_alysidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "alysidiidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Alysidiidae", mainColor: "#84CC16", lineageColors: { "alysidiidae": "#EAB308" } };
+const gymnolaemata_vicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "vicidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Vicidae", mainColor: "#06B6D4", lineageColors: { "vicidae": "#A855F7" } };
+const gymnolaemata_echinovadomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "echinovadomidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Echinovadomidae", mainColor: "#D946EF", lineageColors: { "echinovadomidae": "#FB923C" } };
+const gymnolaemata_mawatariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "mawatariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Mawatariidae", mainColor: "#0EA5E9", lineageColors: { "mawatariidae": "#2DD4BF" } };
+const gymnolaemata_leiosalpingidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "leiosalpingidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Leiosalpingidae", mainColor: "#22C55E", lineageColors: { "leiosalpingidae": "#A3E635" } };
+const gymnolaemata_powellithecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "powellithecidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Powellithecidae", mainColor: "#EAB308", lineageColors: { "powellithecidae": "#38BDF8" } };
+const gymnolaemata_dysnoetoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "dysnoetoporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Dysnoetoporidae", mainColor: "#A855F7", lineageColors: { "dysnoetoporidae": "#3B82F6" } };
+const gymnolaemata_schizorthosecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "schizorthosecidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Schizorthosecidae", mainColor: "#FB923C", lineageColors: { "schizorthosecidae": "#EF4444" } };
+const gymnolaemata_lekythoglenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "lekythoglenidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Lekythoglenidae", mainColor: "#2DD4BF", lineageColors: { "lekythoglenidae": "#10B981" } };
+const gymnolaemata_sfeniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "sfeniellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Sfeniellidae", mainColor: "#A3E635", lineageColors: { "sfeniellidae": "#F59E0B" } };
+const gymnolaemata_clathrolunulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "clathrolunulidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Clathrolunulidae", mainColor: "#38BDF8", lineageColors: { "clathrolunulidae": "#8B5CF6" } };
+const gymnolaemata_dhondtiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "dhondtiscidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Dhondtiscidae", mainColor: "#3B82F6", lineageColors: { "dhondtiscidae": "#EC4899" } };
+const gymnolaemata_euthyroididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "euthyroididae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Euthyroididae", mainColor: "#EF4444", lineageColors: { "euthyroididae": "#14B8A6" } };
+const gymnolaemata_prostomariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "prostomariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Prostomariidae", mainColor: "#10B981", lineageColors: { "prostomariidae": "#F97316" } };
+const gymnolaemata_rhabdozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "rhabdozoidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Rhabdozoidae", mainColor: "#F59E0B", lineageColors: { "rhabdozoidae": "#6366F1" } };
+const gymnolaemata_inversiscaphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "inversiscaphidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Inversiscaphidae", mainColor: "#8B5CF6", lineageColors: { "inversiscaphidae": "#84CC16" } };
+const gymnolaemata_eucrateidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "eucrateidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Eucrateidae", mainColor: "#EC4899", lineageColors: { "eucrateidae": "#06B6D4" } };
+const gymnolaemata_savignyellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "savignyellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Savignyellidae", mainColor: "#14B8A6", lineageColors: { "savignyellidae": "#D946EF" } };
+const gymnolaemata_granomuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "granomuridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Granomuridae", mainColor: "#F97316", lineageColors: { "granomuridae": "#0EA5E9" } };
+const gymnolaemata_chlidoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "chlidoniidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Chlidoniidae", mainColor: "#6366F1", lineageColors: { "chlidoniidae": "#22C55E" } };
+const gymnolaemata_mourellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "mourellinidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Mourellinidae", mainColor: "#84CC16", lineageColors: { "mourellinidae": "#EAB308" } };
+const gymnolaemata_fusicellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "fusicellariidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Fusicellariidae", mainColor: "#06B6D4", lineageColors: { "fusicellariidae": "#A855F7" } };
+const gymnolaemata_peedeesellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "peedeesellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Peedeesellidae", mainColor: "#D946EF", lineageColors: { "peedeesellidae": "#FB923C" } };
+const gymnolaemata_nephroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "nephroporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Nephroporidae", mainColor: "#0EA5E9", lineageColors: { "nephroporidae": "#2DD4BF" } };
+const gymnolaemata_neoeuthyroididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "neoeuthyroididae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Neoeuthyroididae", mainColor: "#22C55E", lineageColors: { "neoeuthyroididae": "#A3E635" } };
+const gymnolaemata_belluloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "belluloporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Belluloporidae", mainColor: "#EAB308", lineageColors: { "belluloporidae": "#38BDF8" } };
+const gymnolaemata_polliciporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "polliciporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Polliciporidae", mainColor: "#A855F7", lineageColors: { "polliciporidae": "#3B82F6" } };
+const gymnolaemata_pseudolepraliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudolepraliidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Pseudolepraliidae", mainColor: "#FB923C", lineageColors: { "pseudolepraliidae": "#EF4444" } };
+const gymnolaemata_acoraniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "acoraniidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Acoraniidae", mainColor: "#2DD4BF", lineageColors: { "acoraniidae": "#10B981" } };
+const gymnolaemata_jubellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "jubellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Jubellidae", mainColor: "#A3E635", lineageColors: { "jubellidae": "#F59E0B" } };
+const gymnolaemata_euoplozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "euoplozoidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Euoplozoidae", mainColor: "#38BDF8", lineageColors: { "euoplozoidae": "#8B5CF6" } };
+const gymnolaemata_mixtopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "mixtopeltidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Mixtopeltidae", mainColor: "#3B82F6", lineageColors: { "mixtopeltidae": "#EC4899" } };
+const gymnolaemata_concatenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "concatenellidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Concatenellidae", mainColor: "#EF4444", lineageColors: { "concatenellidae": "#14B8A6" } };
+const gymnolaemata_diedroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "diedroporidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Diedroporidae", mainColor: "#10B981", lineageColors: { "diedroporidae": "#F97316" } };
+const gymnolaemata_corynostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "corynostylidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Corynostylidae", mainColor: "#F59E0B", lineageColors: { "corynostylidae": "#6366F1" } };
+const gymnolaemata_bryobaculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "bryobaculidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Bryobaculidae", mainColor: "#8B5CF6", lineageColors: { "bryobaculidae": "#84CC16" } };
+const gymnolaemata_wawaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "wawaliidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Wawaliidae", mainColor: "#EC4899", lineageColors: { "wawaliidae": "#06B6D4" } };
+const gymnolaemata_cuvillieridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cuvillieridae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cuvillieridae", mainColor: "#14B8A6", lineageColors: { "cuvillieridae": "#D946EF" } };
+const gymnolaemata_cheilhorneropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cheilhorneropsidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Cheilhorneropsidae", mainColor: "#F97316", lineageColors: { "cheilhorneropsidae": "#0EA5E9" } };
+const gymnolaemata_borioplebidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "borioplebidae", className: "Gymnolaemata", orderName: "Cheilostomatida", name: "Borioplebidae", mainColor: "#6366F1", lineageColors: { "borioplebidae": "#22C55E" } };
+const gymnolaemata_alcyonidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "alcyonidiidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Alcyonidiidae", mainColor: "#84CC16", lineageColors: { "alcyonidiidae": "#EAB308" } };
+const gymnolaemata_vesiculariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "vesiculariidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Vesiculariidae", mainColor: "#06B6D4", lineageColors: { "vesiculariidae": "#A855F7" } };
+const gymnolaemata_arachnidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "arachnidiidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Arachnidiidae", mainColor: "#D946EF", lineageColors: { "arachnidiidae": "#FB923C" } };
+const gymnolaemata_terebriporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "terebriporidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Terebriporidae", mainColor: "#0EA5E9", lineageColors: { "terebriporidae": "#2DD4BF" } };
+const gymnolaemata_flustrellidridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "flustrellidridae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Flustrellidridae", mainColor: "#22C55E", lineageColors: { "flustrellidridae": "#A3E635" } };
+const gymnolaemata_vinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "vinellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Vinellidae", mainColor: "#EAB308", lineageColors: { "vinellidae": "#38BDF8" } };
+const gymnolaemata_ascodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "ascodictyidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Ascodictyidae", mainColor: "#A855F7", lineageColors: { "ascodictyidae": "#3B82F6" } };
+const gymnolaemata_nolellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "nolellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Nolellidae", mainColor: "#FB923C", lineageColors: { "nolellidae": "#EF4444" } };
+const gymnolaemata_triticellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "triticellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Triticellidae", mainColor: "#2DD4BF", lineageColors: { "triticellidae": "#10B981" } };
+const gymnolaemata_immergentiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "immergentiidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Immergentiidae", mainColor: "#A3E635", lineageColors: { "immergentiidae": "#F59E0B" } };
+const gymnolaemata_buskiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "buskiidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Buskiidae", mainColor: "#38BDF8", lineageColors: { "buskiidae": "#8B5CF6" } };
+const gymnolaemata_spathiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "spathiporidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Spathiporidae", mainColor: "#3B82F6", lineageColors: { "spathiporidae": "#EC4899" } };
+const gymnolaemata_victorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "victorellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Victorellidae", mainColor: "#EF4444", lineageColors: { "victorellidae": "#14B8A6" } };
+const gymnolaemata_penetrantiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "penetrantiidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Penetrantiidae", mainColor: "#10B981", lineageColors: { "penetrantiidae": "#F97316" } };
+const gymnolaemata_ropalonariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "ropalonariidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Ropalonariidae", mainColor: "#F59E0B", lineageColors: { "ropalonariidae": "#6366F1" } };
+const gymnolaemata_mimosellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "mimosellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Mimosellidae", mainColor: "#8B5CF6", lineageColors: { "mimosellidae": "#84CC16" } };
+const gymnolaemata_hislopiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "hislopiidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Hislopiidae", mainColor: "#EC4899", lineageColors: { "hislopiidae": "#06B6D4" } };
+const gymnolaemata_clavoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "clavoporidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Clavoporidae", mainColor: "#14B8A6", lineageColors: { "clavoporidae": "#D946EF" } };
+const gymnolaemata_orbignyoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "orbignyoporidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Orbignyoporidae", mainColor: "#F97316", lineageColors: { "orbignyoporidae": "#0EA5E9" } };
+const gymnolaemata_pherusellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "pherusellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Pherusellidae", mainColor: "#6366F1", lineageColors: { "pherusellidae": "#22C55E" } };
+const gymnolaemata_aethozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "aethozoidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Aethozoidae", mainColor: "#84CC16", lineageColors: { "aethozoidae": "#EAB308" } };
+const gymnolaemata_walkeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "walkeriidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Walkeriidae", mainColor: "#06B6D4", lineageColors: { "walkeriidae": "#A855F7" } };
+const gymnolaemata_paludicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "paludicellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Paludicellidae", mainColor: "#D946EF", lineageColors: { "paludicellidae": "#FB923C" } };
+const gymnolaemata_voigtellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "voigtellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Voigtellidae", mainColor: "#0EA5E9", lineageColors: { "voigtellidae": "#2DD4BF" } };
+const gymnolaemata_sundanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "sundanellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Sundanellidae", mainColor: "#22C55E", lineageColors: { "sundanellidae": "#A3E635" } };
+const gymnolaemata_haywardozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "haywardozoidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Haywardozoidae", mainColor: "#EAB308", lineageColors: { "haywardozoidae": "#38BDF8" } };
+const gymnolaemata_aeverrilliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "aeverrilliidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Aeverrilliidae", mainColor: "#A855F7", lineageColors: { "aeverrilliidae": "#3B82F6" } };
+const gymnolaemata_monobryozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "monobryozoidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Monobryozoidae", mainColor: "#FB923C", lineageColors: { "monobryozoidae": "#EF4444" } };
+const gymnolaemata_harmeriellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "harmeriellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Harmeriellidae", mainColor: "#2DD4BF", lineageColors: { "harmeriellidae": "#10B981" } };
+const gymnolaemata_benedeniporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "benedeniporidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Benedeniporidae", mainColor: "#A3E635", lineageColors: { "benedeniporidae": "#F59E0B" } };
+const gymnolaemata_panolicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "panolicellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Panolicellidae", mainColor: "#38BDF8", lineageColors: { "panolicellidae": "#8B5CF6" } };
+const gymnolaemata_farrellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "farrellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Farrellidae", mainColor: "#3B82F6", lineageColors: { "farrellidae": "#EC4899" } };
+const gymnolaemata_bathyalozoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "bathyalozoidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Bathyalozoidae", mainColor: "#EF4444", lineageColors: { "bathyalozoidae": "#14B8A6" } };
+const gymnolaemata_hypophorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "hypophorellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Hypophorellidae", mainColor: "#10B981", lineageColors: { "hypophorellidae": "#F97316" } };
+const gymnolaemata_pottsiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pottsiellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Pottsiellidae", mainColor: "#F59E0B", lineageColors: { "pottsiellidae": "#6366F1" } };
+const gymnolaemata_pachyzoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pachyzoidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Pachyzoidae", mainColor: "#8B5CF6", lineageColors: { "pachyzoidae": "#84CC16" } };
+const gymnolaemata_labiostomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "labiostomellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Labiostomellidae", mainColor: "#EC4899", lineageColors: { "labiostomellidae": "#06B6D4" } };
+const gymnolaemata_jebramellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "jebramellidae", className: "Gymnolaemata", orderName: "Ctenostomatida", name: "Jebramellidae", mainColor: "#14B8A6", lineageColors: { "jebramellidae": "#D946EF" } };
+const gymnolaemata_myrioporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "myrioporidae", className: "Gymnolaemata", orderName: "Unknown", name: "Myrioporidae", mainColor: "#F97316", lineageColors: { "myrioporidae": "#0EA5E9" } };
+const gymnolaemata_buchneriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "buchneriidae", className: "Gymnolaemata", orderName: "Unknown", name: "Buchneriidae", mainColor: "#6366F1", lineageColors: { "buchneriidae": "#22C55E" } };
+const gymnolaemata_rhamphostomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "rhamphostomellidae", className: "Gymnolaemata", orderName: "Unknown", name: "Rhamphostomellidae", mainColor: "#84CC16", lineageColors: { "rhamphostomellidae": "#EAB308" } };
+const gymnolaemata_calweliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "calweliidae", className: "Gymnolaemata", orderName: "Unknown", name: "Calweliidae", mainColor: "#06B6D4", lineageColors: { "calweliidae": "#A855F7" } };
+const gymnolaemata_penetrantriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "penetrantriidae", className: "Gymnolaemata", orderName: "Unknown", name: "Penetrantriidae", mainColor: "#D946EF", lineageColors: { "penetrantriidae": "#FB923C" } };
+const gymnolaemata_flustrellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "flustrellidae", className: "Gymnolaemata", orderName: "Unknown", name: "Flustrellidae", mainColor: "#0EA5E9", lineageColors: { "flustrellidae": "#2DD4BF" } };
+const gymnolaemata_schismoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "schismoporidae", className: "Gymnolaemata", orderName: "Unknown", name: "Schismoporidae", mainColor: "#22C55E", lineageColors: { "schismoporidae": "#A3E635" } };
+const gymnolaemata_peristomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "peristomellidae", className: "Gymnolaemata", orderName: "Unknown", name: "Peristomellidae", mainColor: "#EAB308", lineageColors: { "peristomellidae": "#38BDF8" } };
+const gymnolaemata_orbituloporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "orbituloporidae", className: "Gymnolaemata", orderName: "Unknown", name: "Orbituloporidae", mainColor: "#A855F7", lineageColors: { "orbituloporidae": "#3B82F6" } };
+const gymnolaemata_chaperiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "chaperiellidae", className: "Gymnolaemata", orderName: "Unknown", name: "Chaperiellidae", mainColor: "#FB923C", lineageColors: { "chaperiellidae": "#EF4444" } };
+const gymnolaemata_neoeuthyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "neoeuthyridae", className: "Gymnolaemata", orderName: "Unknown", name: "Neoeuthyridae", mainColor: "#2DD4BF", lineageColors: { "neoeuthyridae": "#10B981" } };
+const gymnolaemata_natanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "natanellidae", className: "Gymnolaemata", orderName: "Unknown", name: "Natanellidae", mainColor: "#A3E635", lineageColors: { "natanellidae": "#F59E0B" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -7701,7 +8103,400 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "pyrirhynchidae": palaeacanthocephala_pyrirhynchidae,
   "pyriproboscidae": palaeacanthocephala_pyriproboscidae,
   "paracanthocephalidae": palaeacanthocephala_paracanthocephalidae,
-  "polyacanthorhynchidae": polyacanthocephala_polyacanthorhynchidae,};
+  "polyacanthorhynchidae": polyacanthocephala_polyacanthorhynchidae,
+  "plumatellidae": phylactolaemata_plumatellidae,
+  "fredericellidae": phylactolaemata_fredericellidae,
+  "lophopodidae": phylactolaemata_lophopodidae,
+  "stephanellidae": phylactolaemata_stephanellidae,
+  "pectinatellidae": phylactolaemata_pectinatellidae,
+  "cristatellidae": phylactolaemata_cristatellidae,
+  "tapajosellidae": phylactolaemata_tapajosellidae,
+  "plagioeciidae": stenolaemata_plagioeciidae,
+  "tubuliporidae": stenolaemata_tubuliporidae,
+  "oncousoeciidae": stenolaemata_oncousoeciidae,
+  "lichenoporidae": stenolaemata_lichenoporidae,
+  "cerioporidae": stenolaemata_cerioporidae,
+  "entalophoridae": stenolaemata_entalophoridae,
+  "crisiidae": stenolaemata_crisiidae,
+  "heteroporidae": stenolaemata_heteroporidae,
+  "stomatoporidae": stenolaemata_stomatoporidae,
+  "cytididae": stenolaemata_cytididae,
+  "horneridae": stenolaemata_horneridae,
+  "idmoneidae": stenolaemata_idmoneidae,
+  "frondiporidae": stenolaemata_frondiporidae,
+  "diaperoeciidae": stenolaemata_diaperoeciidae,
+  "bereniceidae": stenolaemata_bereniceidae,
+  "crisinidae": stenolaemata_crisinidae,
+  "multisparsidae": stenolaemata_multisparsidae,
+  "petaloporidae": stenolaemata_petaloporidae,
+  "theonoidae": stenolaemata_theonoidae,
+  "corynotrypidae": stenolaemata_corynotrypidae,
+  "actinoporidae": stenolaemata_actinoporidae,
+  "spiroporidae": stenolaemata_spiroporidae,
+  "terviidae": stenolaemata_terviidae,
+  "pustuloporidae": stenolaemata_pustuloporidae,
+  "densiporidae": stenolaemata_densiporidae,
+  "clausidae": stenolaemata_clausidae,
+  "hederellidae": stenolaemata_hederellidae,
+  "crownoporidae": stenolaemata_crownoporidae,
+  "sagenellidae": stenolaemata_sagenellidae,
+  "celluliporidae": stenolaemata_celluliporidae,
+  "cavidae": stenolaemata_cavidae,
+  "semiceidae": stenolaemata_semiceidae,
+  "leiosoeciidae": stenolaemata_leiosoeciidae,
+  "crisuliporidae": stenolaemata_crisuliporidae,
+  "cinctiporidae": stenolaemata_cinctiporidae,
+  "corymboporidae": stenolaemata_corymboporidae,
+  "sulcocavidae": stenolaemata_sulcocavidae,
+  "annectocymidae": stenolaemata_annectocymidae,
+  "reptariidae": stenolaemata_reptariidae,
+  "alyonushkidae": stenolaemata_alyonushkidae,
+  "stigmatoechidae": stenolaemata_stigmatoechidae,
+  "hastingsiidae": stenolaemata_hastingsiidae,
+  "siphoniotyphlidae": stenolaemata_siphoniotyphlidae,
+  "diploclemidae": stenolaemata_diploclemidae,
+  "canaliporidae": stenolaemata_canaliporidae,
+  "pseudidmoneidae": stenolaemata_pseudidmoneidae,
+  "phaceloporidae": stenolaemata_phaceloporidae,
+  "calvetiidae": stenolaemata_calvetiidae,
+  "flabellotrypidae": stenolaemata_flabellotrypidae,
+  "anyutidae": stenolaemata_anyutidae,
+  "crassodiscoporidae": stenolaemata_crassodiscoporidae,
+  "mecynoeciidae": stenolaemata_mecynoeciidae,
+  "stenoporidae": stenolaemata_stenoporidae,
+  "atactotoechidae": stenolaemata_atactotoechidae,
+  "monticuliporidae": stenolaemata_monticuliporidae,
+  "dyscritellidae": stenolaemata_dyscritellidae,
+  "amplexoporidae": stenolaemata_amplexoporidae,
+  "trematoporidae": stenolaemata_trematoporidae,
+  "heterotrypidae": stenolaemata_heterotrypidae,
+  "leioclemidae": stenolaemata_leioclemidae,
+  "halloporidae": stenolaemata_halloporidae,
+  "eridotrypellidae": stenolaemata_eridotrypellidae,
+  "aisenvergiidae": stenolaemata_aisenvergiidae,
+  "diplotrypidae": stenolaemata_diplotrypidae,
+  "dittoporidae": stenolaemata_dittoporidae,
+  "crustoporidae": stenolaemata_crustoporidae,
+  "batostomellidae": stenolaemata_batostomellidae,
+  "anisotrypidae": stenolaemata_anisotrypidae,
+  "araxoporidae": stenolaemata_araxoporidae,
+  "dianulitidae": stenolaemata_dianulitidae,
+  "ulrichotrypellidae": stenolaemata_ulrichotrypellidae,
+  "orbiporidae": stenolaemata_orbiporidae,
+  "zozariellidae": stenolaemata_zozariellidae,
+  "hemieridotrypidae": stenolaemata_hemieridotrypidae,
+  "bimuroporidae": stenolaemata_bimuroporidae,
+  "coelotubuliporidae": stenolaemata_coelotubuliporidae,
+  "ralfimartitidae": stenolaemata_ralfimartitidae,
+  "maychellinidae": stenolaemata_maychellinidae,
+  "pseudocampylidae": stenolaemata_pseudocampylidae,
+  "nipponostenoporidae": stenolaemata_nipponostenoporidae,
+  "cycloporidae": stenolaemata_cycloporidae,
+  "stenoporellidae": stenolaemata_stenoporellidae,
+  "helenoporidae": stenolaemata_helenoporidae,
+  "mishulgellidae": stenolaemata_mishulgellidae,
+  "astralochomidae": stenolaemata_astralochomidae,
+  "capillaporidae": stenolaemata_capillaporidae,
+  "fenestellidae": stenolaemata_fenestellidae,
+  "acanthocladiidae": stenolaemata_acanthocladiidae,
+  "semicosciniidae": stenolaemata_semicosciniidae,
+  "septoporidae": stenolaemata_septoporidae,
+  "phylloporinidae": stenolaemata_phylloporinidae,
+  "chainodictyonidae": stenolaemata_chainodictyonidae,
+  "chasmatoporidae": stenolaemata_chasmatoporidae,
+  "fenestraliidae": stenolaemata_fenestraliidae,
+  "fenestraporidae": stenolaemata_fenestraporidae,
+  "septatoporidae": stenolaemata_septatoporidae,
+  "enalloporidae": stenolaemata_enalloporidae,
+  "admiratellidae": stenolaemata_admiratellidae,
+  "ralfinidae": stenolaemata_ralfinidae,
+  "sardesoninidae": stenolaemata_sardesoninidae,
+  "carnocladiidae": stenolaemata_carnocladiidae,
+  "polyporidae": stenolaemata_polyporidae,
+  "rhabdomesidae": stenolaemata_rhabdomesidae,
+  "rhomboporidae": stenolaemata_rhomboporidae,
+  "arthrostylidae": stenolaemata_arthrostylidae,
+  "rhinidictyidae": stenolaemata_rhinidictyidae,
+  "ptilodictyidae": stenolaemata_ptilodictyidae,
+  "girtyporidae": stenolaemata_girtyporidae,
+  "escharoporidae": stenolaemata_escharoporidae,
+  "nikiforovellidae": stenolaemata_nikiforovellidae,
+  "streblascoporidae": stenolaemata_streblascoporidae,
+  "stictoporellidae": stenolaemata_stictoporellidae,
+  "nematotrypidae": stenolaemata_nematotrypidae,
+  "hyphasmoporidae": stenolaemata_hyphasmoporidae,
+  "intraporidae": stenolaemata_intraporidae,
+  "phaenoporidae": stenolaemata_phaenoporidae,
+  "timanodictyidae": stenolaemata_timanodictyidae,
+  "goldfussitrypidae": stenolaemata_goldfussitrypidae,
+  "maychellidae": stenolaemata_maychellidae,
+  "palescharidae": stenolaemata_palescharidae,
+  "lenaporidae": stenolaemata_lenaporidae,
+  "worthenoporidae": stenolaemata_worthenoporidae,
+  "mediaporidae": stenolaemata_mediaporidae,
+  "nicklesoporidae": stenolaemata_nicklesoporidae,
+  "virgatellidae": stenolaemata_virgatellidae,
+  "bactroporidae": stenolaemata_bactroporidae,
+  "mysticellidae": stenolaemata_mysticellidae,
+  "pseudoascoporidae": stenolaemata_pseudoascoporidae,
+  "medvedkellidae": stenolaemata_medvedkellidae,
+  "phragmopheridae": stenolaemata_phragmopheridae,
+  "streblotrypidae": stenolaemata_streblotrypidae,
+  "kielceporidae": stenolaemata_kielceporidae,
+  "murengoloclemidae": stenolaemata_murengoloclemidae,
+  "tamaroclemidae": stenolaemata_tamaroclemidae,
+  "nudymiellidae": stenolaemata_nudymiellidae,
+  "fistuliporidae": stenolaemata_fistuliporidae,
+  "hexagonellidae": stenolaemata_hexagonellidae,
+  "cystodictyonidae": stenolaemata_cystodictyonidae,
+  "ceramoporidae": stenolaemata_ceramoporidae,
+  "goniocladiidae": stenolaemata_goniocladiidae,
+  "constellariidae": stenolaemata_constellariidae,
+  "revalotrypidae": stenolaemata_revalotrypidae,
+  "anolotichiidae": stenolaemata_anolotichiidae,
+  "xenotrypidae": stenolaemata_xenotrypidae,
+  "rhinoporidae": stenolaemata_rhinoporidae,
+  "acanthoceramoporellidae": stenolaemata_acanthoceramoporellidae,
+  "evactinoporidae": stenolaemata_evactinoporidae,
+  "etherellidae": stenolaemata_etherellidae,
+  "botrylloporidae": stenolaemata_botrylloporidae,
+  "actinotrypidae": stenolaemata_actinotrypidae,
+  "eleidae": stenolaemata_eleidae,
+  "esthonioporidae": stenolaemata_esthonioporidae,
+  "theononidae": stenolaemata_theononidae,
+  "nippostenoporidae": stenolaemata_nippostenoporidae,
+  "nematoporidae": stenolaemata_nematoporidae,
+  "pseudocerioporidae": stenolaemata_pseudocerioporidae,
+  "girtyoporidae": stenolaemata_girtyoporidae,
+  "semicosciniumidae": stenolaemata_semicosciniumidae,
+  "giryporidae": stenolaemata_giryporidae,
+  "rhinidictyonidae": stenolaemata_rhinidictyonidae,
+  "arcticoporidae": stenolaemata_arcticoporidae,
+  "rhabdomesontidae": stenolaemata_rhabdomesontidae,
+  "cheilotrypidae": stenolaemata_cheilotrypidae,
+  "phragmoporidae": stenolaemata_phragmoporidae,
+  "vidronovellidae": stenolaemata_vidronovellidae,
+  "kuzbassidae": stenolaemata_kuzbassidae,
+  "phragmophaeridae": stenolaemata_phragmophaeridae,
+  "ascosoeciidae": stenolaemata_ascosoeciidae,
+  "cribrilinidae": gymnolaemata_cribrilinidae,
+  "calloporidae": gymnolaemata_calloporidae,
+  "celleporidae": gymnolaemata_celleporidae,
+  "onychocellidae": gymnolaemata_onychocellidae,
+  "smittinidae": gymnolaemata_smittinidae,
+  "phidoloporidae": gymnolaemata_phidoloporidae,
+  "membraniporidae": gymnolaemata_membraniporidae,
+  "candidae": gymnolaemata_candidae,
+  "bitectiporidae": gymnolaemata_bitectiporidae,
+  "bugulidae": gymnolaemata_bugulidae,
+  "schizoporellidae": gymnolaemata_schizoporellidae,
+  "adeonidae": gymnolaemata_adeonidae,
+  "electridae": gymnolaemata_electridae,
+  "cellariidae": gymnolaemata_cellariidae,
+  "romancheinidae": gymnolaemata_romancheinidae,
+  "microporellidae": gymnolaemata_microporellidae,
+  "microporidae": gymnolaemata_microporidae,
+  "bryocryptellidae": gymnolaemata_bryocryptellidae,
+  "catenicellidae": gymnolaemata_catenicellidae,
+  "flustridae": gymnolaemata_flustridae,
+  "escharinidae": gymnolaemata_escharinidae,
+  "thalamoporellidae": gymnolaemata_thalamoporellidae,
+  "lunulitidae": gymnolaemata_lunulitidae,
+  "escharellidae": gymnolaemata_escharellidae,
+  "steginoporellidae": gymnolaemata_steginoporellidae,
+  "lanceoporidae": gymnolaemata_lanceoporidae,
+  "conescharellinidae": gymnolaemata_conescharellinidae,
+  "hippothoidae": gymnolaemata_hippothoidae,
+  "chaperiidae": gymnolaemata_chaperiidae,
+  "porinidae": gymnolaemata_porinidae,
+  "exochellidae": gymnolaemata_exochellidae,
+  "arachnopusiidae": gymnolaemata_arachnopusiidae,
+  "umbonulidae": gymnolaemata_umbonulidae,
+  "petraliidae": gymnolaemata_petraliidae,
+  "cupuladriidae": gymnolaemata_cupuladriidae,
+  "lacernidae": gymnolaemata_lacernidae,
+  "antroporidae": gymnolaemata_antroporidae,
+  "beaniidae": gymnolaemata_beaniidae,
+  "fenestrulinidae": gymnolaemata_fenestrulinidae,
+  "tessaradomidae": gymnolaemata_tessaradomidae,
+  "buffonellidae": gymnolaemata_buffonellidae,
+  "hippoporidridae": gymnolaemata_hippoporidridae,
+  "metrarabdotosidae": gymnolaemata_metrarabdotosidae,
+  "aspidostomatidae": gymnolaemata_aspidostomatidae,
+  "exechonellidae": gymnolaemata_exechonellidae,
+  "vinculariidae": gymnolaemata_vinculariidae,
+  "gigantoporidae": gymnolaemata_gigantoporidae,
+  "ellisinidae": gymnolaemata_ellisinidae,
+  "trypostegidae": gymnolaemata_trypostegidae,
+  "bifaxariidae": gymnolaemata_bifaxariidae,
+  "cheiloporinidae": gymnolaemata_cheiloporinidae,
+  "monoporellidae": gymnolaemata_monoporellidae,
+  "cleidochasmatidae": gymnolaemata_cleidochasmatidae,
+  "quadricellariidae": gymnolaemata_quadricellariidae,
+  "watersiporidae": gymnolaemata_watersiporidae,
+  "colatooeciidae": gymnolaemata_colatooeciidae,
+  "margarettidae": gymnolaemata_margarettidae,
+  "otionellidae": gymnolaemata_otionellidae,
+  "selenariidae": gymnolaemata_selenariidae,
+  "hippopodinidae": gymnolaemata_hippopodinidae,
+  "stomachetosellidae": gymnolaemata_stomachetosellidae,
+  "lekythoporidae": gymnolaemata_lekythoporidae,
+  "bryopastoridae": gymnolaemata_bryopastoridae,
+  "batoporidae": gymnolaemata_batoporidae,
+  "macroporidae": gymnolaemata_macroporidae,
+  "sclerodomidae": gymnolaemata_sclerodomidae,
+  "orbituliporidae": gymnolaemata_orbituliporidae,
+  "pasytheidae": gymnolaemata_pasytheidae,
+  "farciminariidae": gymnolaemata_farciminariidae,
+  "teuchoporidae": gymnolaemata_teuchoporidae,
+  "scorioporidae": gymnolaemata_scorioporidae,
+  "myriaporidae": gymnolaemata_myriaporidae,
+  "ascosiidae": gymnolaemata_ascosiidae,
+  "calwelliidae": gymnolaemata_calwelliidae,
+  "coscinopleuridae": gymnolaemata_coscinopleuridae,
+  "bicorniferidae": gymnolaemata_bicorniferidae,
+  "tetraplariidae": gymnolaemata_tetraplariidae,
+  "aeteidae": gymnolaemata_aeteidae,
+  "didymosellidae": gymnolaemata_didymosellidae,
+  "foveolariidae": gymnolaemata_foveolariidae,
+  "siphonicytaridae": gymnolaemata_siphonicytaridae,
+  "crepidacanthidae": gymnolaemata_crepidacanthidae,
+  "hiantoporidae": gymnolaemata_hiantoporidae,
+  "hippaliosinidae": gymnolaemata_hippaliosinidae,
+  "calescharidae": gymnolaemata_calescharidae,
+  "fatkullinidae": gymnolaemata_fatkullinidae,
+  "skyloniidae": gymnolaemata_skyloniidae,
+  "chorizoporidae": gymnolaemata_chorizoporidae,
+  "eurystomellidae": gymnolaemata_eurystomellidae,
+  "mamilloporidae": gymnolaemata_mamilloporidae,
+  "eminooeciidae": gymnolaemata_eminooeciidae,
+  "lunulariidae": gymnolaemata_lunulariidae,
+  "chiplonkarinidae": gymnolaemata_chiplonkarinidae,
+  "atlantisinidae": gymnolaemata_atlantisinidae,
+  "petalostegidae": gymnolaemata_petalostegidae,
+  "platyglenidae": gymnolaemata_platyglenidae,
+  "pyrisinellidae": gymnolaemata_pyrisinellidae,
+  "robertsonidridae": gymnolaemata_robertsonidridae,
+  "scrupariidae": gymnolaemata_scrupariidae,
+  "poricellariidae": gymnolaemata_poricellariidae,
+  "setosellidae": gymnolaemata_setosellidae,
+  "phorioppniidae": gymnolaemata_phorioppniidae,
+  "heliodomidae": gymnolaemata_heliodomidae,
+  "jaculinidae": gymnolaemata_jaculinidae,
+  "cymuloporidae": gymnolaemata_cymuloporidae,
+  "cyclicoporidae": gymnolaemata_cyclicoporidae,
+  "vitrimurellidae": gymnolaemata_vitrimurellidae,
+  "sinoflustridae": gymnolaemata_sinoflustridae,
+  "pacificincolidae": gymnolaemata_pacificincolidae,
+  "cryptosulidae": gymnolaemata_cryptosulidae,
+  "haplopomidae": gymnolaemata_haplopomidae,
+  "taenioporinidae": gymnolaemata_taenioporinidae,
+  "phoceanidae": gymnolaemata_phoceanidae,
+  "gemelliporellidae": gymnolaemata_gemelliporellidae,
+  "brydonellidae": gymnolaemata_brydonellidae,
+  "hincksiporidae": gymnolaemata_hincksiporidae,
+  "doryporellidae": gymnolaemata_doryporellidae,
+  "chlidoniopsidae": gymnolaemata_chlidoniopsidae,
+  "inversiulidae": gymnolaemata_inversiulidae,
+  "epistomiidae": gymnolaemata_epistomiidae,
+  "duvergieriidae": gymnolaemata_duvergieriidae,
+  "euthyrisellidae": gymnolaemata_euthyrisellidae,
+  "membranicellariidae": gymnolaemata_membranicellariidae,
+  "marcusadoreidae": gymnolaemata_marcusadoreidae,
+  "urceoliporidae": gymnolaemata_urceoliporidae,
+  "actisecidae": gymnolaemata_actisecidae,
+  "tendridae": gymnolaemata_tendridae,
+  "elementellidae": gymnolaemata_elementellidae,
+  "alysidiidae": gymnolaemata_alysidiidae,
+  "vicidae": gymnolaemata_vicidae,
+  "echinovadomidae": gymnolaemata_echinovadomidae,
+  "mawatariidae": gymnolaemata_mawatariidae,
+  "leiosalpingidae": gymnolaemata_leiosalpingidae,
+  "powellithecidae": gymnolaemata_powellithecidae,
+  "dysnoetoporidae": gymnolaemata_dysnoetoporidae,
+  "schizorthosecidae": gymnolaemata_schizorthosecidae,
+  "lekythoglenidae": gymnolaemata_lekythoglenidae,
+  "sfeniellidae": gymnolaemata_sfeniellidae,
+  "clathrolunulidae": gymnolaemata_clathrolunulidae,
+  "dhondtiscidae": gymnolaemata_dhondtiscidae,
+  "euthyroididae": gymnolaemata_euthyroididae,
+  "prostomariidae": gymnolaemata_prostomariidae,
+  "rhabdozoidae": gymnolaemata_rhabdozoidae,
+  "inversiscaphidae": gymnolaemata_inversiscaphidae,
+  "eucrateidae": gymnolaemata_eucrateidae,
+  "savignyellidae": gymnolaemata_savignyellidae,
+  "granomuridae": gymnolaemata_granomuridae,
+  "chlidoniidae": gymnolaemata_chlidoniidae,
+  "mourellinidae": gymnolaemata_mourellinidae,
+  "fusicellariidae": gymnolaemata_fusicellariidae,
+  "peedeesellidae": gymnolaemata_peedeesellidae,
+  "nephroporidae": gymnolaemata_nephroporidae,
+  "neoeuthyroididae": gymnolaemata_neoeuthyroididae,
+  "belluloporidae": gymnolaemata_belluloporidae,
+  "polliciporidae": gymnolaemata_polliciporidae,
+  "pseudolepraliidae": gymnolaemata_pseudolepraliidae,
+  "acoraniidae": gymnolaemata_acoraniidae,
+  "jubellidae": gymnolaemata_jubellidae,
+  "euoplozoidae": gymnolaemata_euoplozoidae,
+  "mixtopeltidae": gymnolaemata_mixtopeltidae,
+  "concatenellidae": gymnolaemata_concatenellidae,
+  "diedroporidae": gymnolaemata_diedroporidae,
+  "corynostylidae": gymnolaemata_corynostylidae,
+  "bryobaculidae": gymnolaemata_bryobaculidae,
+  "wawaliidae": gymnolaemata_wawaliidae,
+  "cuvillieridae": gymnolaemata_cuvillieridae,
+  "cheilhorneropsidae": gymnolaemata_cheilhorneropsidae,
+  "borioplebidae": gymnolaemata_borioplebidae,
+  "alcyonidiidae": gymnolaemata_alcyonidiidae,
+  "vesiculariidae": gymnolaemata_vesiculariidae,
+  "arachnidiidae": gymnolaemata_arachnidiidae,
+  "terebriporidae": gymnolaemata_terebriporidae,
+  "flustrellidridae": gymnolaemata_flustrellidridae,
+  "vinellidae": gymnolaemata_vinellidae,
+  "ascodictyidae": gymnolaemata_ascodictyidae,
+  "nolellidae": gymnolaemata_nolellidae,
+  "triticellidae": gymnolaemata_triticellidae,
+  "immergentiidae": gymnolaemata_immergentiidae,
+  "buskiidae": gymnolaemata_buskiidae,
+  "spathiporidae": gymnolaemata_spathiporidae,
+  "victorellidae": gymnolaemata_victorellidae,
+  "penetrantiidae": gymnolaemata_penetrantiidae,
+  "ropalonariidae": gymnolaemata_ropalonariidae,
+  "mimosellidae": gymnolaemata_mimosellidae,
+  "hislopiidae": gymnolaemata_hislopiidae,
+  "clavoporidae": gymnolaemata_clavoporidae,
+  "orbignyoporidae": gymnolaemata_orbignyoporidae,
+  "pherusellidae": gymnolaemata_pherusellidae,
+  "aethozoidae": gymnolaemata_aethozoidae,
+  "walkeriidae": gymnolaemata_walkeriidae,
+  "paludicellidae": gymnolaemata_paludicellidae,
+  "voigtellidae": gymnolaemata_voigtellidae,
+  "sundanellidae": gymnolaemata_sundanellidae,
+  "haywardozoidae": gymnolaemata_haywardozoidae,
+  "aeverrilliidae": gymnolaemata_aeverrilliidae,
+  "monobryozoidae": gymnolaemata_monobryozoidae,
+  "harmeriellidae": gymnolaemata_harmeriellidae,
+  "benedeniporidae": gymnolaemata_benedeniporidae,
+  "panolicellidae": gymnolaemata_panolicellidae,
+  "farrellidae": gymnolaemata_farrellidae,
+  "bathyalozoidae": gymnolaemata_bathyalozoidae,
+  "hypophorellidae": gymnolaemata_hypophorellidae,
+  "pottsiellidae": gymnolaemata_pottsiellidae,
+  "pachyzoidae": gymnolaemata_pachyzoidae,
+  "labiostomellidae": gymnolaemata_labiostomellidae,
+  "jebramellidae": gymnolaemata_jebramellidae,
+  "myrioporidae": gymnolaemata_myrioporidae,
+  "buchneriidae": gymnolaemata_buchneriidae,
+  "rhamphostomellidae": gymnolaemata_rhamphostomellidae,
+  "calweliidae": gymnolaemata_calweliidae,
+  "penetrantriidae": gymnolaemata_penetrantriidae,
+  "flustrellidae": gymnolaemata_flustrellidae,
+  "schismoporidae": gymnolaemata_schismoporidae,
+  "peristomellidae": gymnolaemata_peristomellidae,
+  "orbituloporidae": gymnolaemata_orbituloporidae,
+  "chaperiellidae": gymnolaemata_chaperiellidae,
+  "neoeuthyridae": gymnolaemata_neoeuthyridae,
+  "natanellidae": gymnolaemata_natanellidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
