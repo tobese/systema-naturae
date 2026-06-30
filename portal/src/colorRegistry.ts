@@ -2177,6 +2177,12 @@ const anthozoa_plasmoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColo
 const anthozoa_sibiriolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sibiriolitidae", className: "Anthozoa", orderName: "Heliolitina", name: "Sibiriolitidae", mainColor: "#6366F1", lineageColors: { "sibiriolitidae": "#22C55E" } };
 const anthozoa_pseudoplasmoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "pseudoplasmoporidae", className: "Anthozoa", orderName: "Heliolitina", name: "Pseudoplasmoporidae", mainColor: "#84CC16", lineageColors: { "pseudoplasmoporidae": "#EAB308" } };
 
+
+// ── Caudofoveata (3 families) ──
+const caudofoveata_chaetodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "chaetodermatidae", className: "Caudofoveata", orderName: "Chaetodermatida", name: "Chaetodermatidae", mainColor: "#EF4444", lineageColors: { "chaetodermatidae": "#14B8A6" } };
+const caudofoveata_prochaetodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "prochaetodermatidae", className: "Caudofoveata", orderName: "Chaetodermatida", name: "Prochaetodermatidae", mainColor: "#10B981", lineageColors: { "prochaetodermatidae": "#F97316" } };
+const caudofoveata_limifossoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "limifossoridae", className: "Caudofoveata", orderName: "Chaetodermatida", name: "Limifossoridae", mainColor: "#F59E0B", lineageColors: { "limifossoridae": "#6366F1" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -3299,7 +3305,10 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "plasmoporidae": anthozoa_plasmoporidae,
   "sibiriolitidae": anthozoa_sibiriolitidae,
   "pseudoplasmoporidae": anthozoa_pseudoplasmoporidae,
-};
+
+  "chaetodermatidae": caudofoveata_chaetodermatidae,
+  "prochaetodermatidae": caudofoveata_prochaetodermatidae,
+  "limifossoridae": caudofoveata_limifossoridae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {

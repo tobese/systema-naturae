@@ -8,20 +8,21 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Chordata** | Chordates | 6 | 352 | 43,641 | 43,619 | 29,756 | 13,885 | 100.1% | 31.8% | [✓] Complete |
+| **Chordata** | Chordates | 6 | 352 | 43,641 | 43,619 | 29,346 | 14,295 | 100.1% | 32.8% | [✓] Complete |
 | **Mollusca** | Molluscs | 1 | 8 | 813 | 813 | 646 | 167 | 100.0% | 20.5% | [✓] Complete |
 | **Arthropoda** | Arthropods | 2 | 19 | 110,462 | 110,462 | 91,297 | 19,165 | 100.0% | 17.3% | [✓] Complete |
 | **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
 | **Tardigrada** | Tardigrades | 1 | 1 | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
 | **Ctenophora** | Comb jellies | 2 | 6 | 123 | 123 | 93 | 30 | 100.0% | 24.4% | [✓] Complete |
 | **Cnidaria** | Cnidarians | 5 | 725 | 22,268 | 22,268 | 18,834 | 3,434 | 100.0% | 15.4% | [✓] Complete |
+| **Other** | Other Invertebrates | 1 | 3 | 143 | 143 | 143 | 0 | 100.0% | 0.0% | [✓] Complete |
 
 ## Detail Breakdown & Checklists by Phylum
 
 ### [x] Phylum Chordata (Chordates) - 100.1% complete
 
 - **Imported species:** 43,641 / 43,619
-- **Enriched species:** 13,885 / 43,619 (31.8%)
+- **Enriched species:** 14,295 / 43,619 (32.8%)
 - **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
@@ -29,10 +30,10 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | Mammalia | 39 | 7,897 | 7,897 | 1,061 | 100.0% | ✓ Complete |
-| Reptilia | 23 | 8,121 | 8,121 | 5,106 | 100.0% | ✓ Complete |
+| Reptilia | 23 | 8,121 | 8,121 | 5,481 | 100.0% | ✓ Complete |
 | Chondrichthyes | 7 | 1,187 | 1,187 | 137 | 100.0% | ✓ Complete |
 | Amphibia | 13 | 3,797 | 3,797 | 2,255 | 100.0% | ✓ Complete |
-| Actinopterygii | 16 | 10,885 | 10,885 | 3,649 | 100.0% | ✓ Complete |
+| Actinopterygii | 16 | 10,885 | 10,885 | 3,684 | 100.0% | ✓ Complete |
 | Aves | 254 | 11,754 | 11,732 | 1,677 | 100.2% | ✓ Complete |
 
 ### [x] Phylum Mollusca (Molluscs) - 100.0% complete
@@ -114,4 +115,16 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | Hydrozoa | 141 | 4,505 | 4,505 | 2,963 | 100.0% | ✓ Complete |
 | Anthozoa | 549 | 17,346 | 17,346 | 297 | 100.0% | ✓ Complete |
 | Staurozoa | 7 | 56 | 56 | 17 | 100.0% | ✓ Complete |
+
+### [x] Phylum Other (Other Invertebrates) - 100.0% complete
+
+- **Imported species:** 143 / 143
+- **Enriched species:** 0 / 143 (0.0%)
+- **Remaining gaps:** None! 100% complete
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Caudofoveata | 3 | 143 | 143 | 0 | 100.0% | ✓ Complete |
 

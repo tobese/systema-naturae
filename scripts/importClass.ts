@@ -9,6 +9,7 @@ const args = process.argv.slice(2);
 const className = args[0] || "Anthozoa";
 const classKey = parseInt(args[1] || "206", 10);
 const classId = args[2] || className.toUpperCase();
+const phylumId = args[3] || "CNIDARIA";
 
 const CACHE_PATH = resolve(root, "portal", "data", `gbif-cache-${className.toLowerCase()}.json`);
 const TAX_PATH = resolve(root, "portal", "data", "taxonomy.json");
@@ -68,17 +69,17 @@ console.log(`   Created ${dirCount} directories`);
 console.log(`\n📝 Updating taxonomy.json...`);
 const tax = JSON.parse(readFileSync(TAX_PATH, "utf-8"));
 
-function findCnidariaPhylum(node: any): any {
-  if (node.id === "CNIDARIA") return node;
+function findParentPhylum(node: any, targetId: string): any {
+  if (node.id === targetId) return node;
   for (const c of (node.children ?? [])) {
-    const found = findCnidariaPhylum(c);
+    const found = findParentPhylum(c, targetId);
     if (found) return found;
   }
   return null;
 }
 
-const cnidaria = findCnidariaPhylum(tax);
-if (!cnidaria) { console.error("CNIDARIA not found!"); process.exit(1); }
+const parentPhylum = findParentPhylum(tax, phylumId);
+if (!parentPhylum) { console.error(`${phylumId} not found!`); process.exit(1); }
 
 const totalSpeciesCount = Object.values(cache.speciesByFamily).reduce((s: number, v: any) => s + v.species.length, 0);
 
@@ -104,11 +105,11 @@ const classEntry = {
   })),
 };
 
-const clsIdx = cnidaria.children.findIndex((c: any) => c.id === classId);
+const clsIdx = parentPhylum.children.findIndex((c: any) => c.id === classId);
 if (clsIdx >= 0) {
-  cnidaria.children[clsIdx] = classEntry;
+  parentPhylum.children[clsIdx] = classEntry;
 } else {
-  cnidaria.children.push(classEntry);
+  parentPhylum.children.push(classEntry);
 }
 
 writeFileSync(TAX_PATH, JSON.stringify(tax, null, 2) + "\n");
