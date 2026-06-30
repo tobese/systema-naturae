@@ -2201,6 +2201,26 @@ const monoplacophora_cyclocyrtonellidae: ColorTheme = { subfamilyColors: {}, bre
 const monoplacophora_multifariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "multifariidae", className: "Monoplacophora", orderName: "Unknown", name: "Multifariidae", mainColor: "#EAB308", lineageColors: { "multifariidae": "#38BDF8" } };
 const monoplacophora_neopilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "neopilinidae", className: "Monoplacophora", orderName: "Neopilinida", name: "Neopilinidae", mainColor: "#A855F7", lineageColors: { "neopilinidae": "#3B82F6" } };
 
+
+// ── Scaphopoda (17 families) ──
+const scaphopoda_dentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "dentaliidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Dentaliidae", mainColor: "#EF4444", lineageColors: { "dentaliidae": "#14B8A6" } };
+const scaphopoda_gadilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "gadilinidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Gadilinidae", mainColor: "#10B981", lineageColors: { "gadilinidae": "#F97316" } };
+const scaphopoda_laevidentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "laevidentaliidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Laevidentaliidae", mainColor: "#F59E0B", lineageColors: { "laevidentaliidae": "#6366F1" } };
+const scaphopoda_fustiariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "fustiariidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Fustiariidae", mainColor: "#8B5CF6", lineageColors: { "fustiariidae": "#84CC16" } };
+const scaphopoda_prodentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "prodentaliidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Prodentaliidae", mainColor: "#EC4899", lineageColors: { "prodentaliidae": "#06B6D4" } };
+const scaphopoda_rhabdidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "rhabdidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Rhabdidae", mainColor: "#14B8A6", lineageColors: { "rhabdidae": "#D946EF" } };
+const scaphopoda_calliodentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "calliodentaliidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Calliodentaliidae", mainColor: "#F97316", lineageColors: { "calliodentaliidae": "#0EA5E9" } };
+const scaphopoda_anulidentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "anulidentaliidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Anulidentaliidae", mainColor: "#6366F1", lineageColors: { "anulidentaliidae": "#22C55E" } };
+const scaphopoda_omniglyptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "omniglyptidae", className: "Scaphopoda", orderName: "Dentaliida", name: "Omniglyptidae", mainColor: "#84CC16", lineageColors: { "omniglyptidae": "#EAB308" } };
+const scaphopoda_gadilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "gadilidae", className: "Scaphopoda", orderName: "Gadilida", name: "Gadilidae", mainColor: "#06B6D4", lineageColors: { "gadilidae": "#A855F7" } };
+const scaphopoda_entalinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "entalinidae", className: "Scaphopoda", orderName: "Gadilida", name: "Entalinidae", mainColor: "#D946EF", lineageColors: { "entalinidae": "#FB923C" } };
+const scaphopoda_pulsellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pulsellidae", className: "Scaphopoda", orderName: "Gadilida", name: "Pulsellidae", mainColor: "#0EA5E9", lineageColors: { "pulsellidae": "#2DD4BF" } };
+const scaphopoda_wemersoniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "wemersoniellidae", className: "Scaphopoda", orderName: "Gadilida", name: "Wemersoniellidae", mainColor: "#22C55E", lineageColors: { "wemersoniellidae": "#A3E635" } };
+const scaphopoda_loxoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "loxoporidae", className: "Scaphopoda", orderName: "Unknown", name: "Loxoporidae", mainColor: "#EAB308", lineageColors: { "loxoporidae": "#38BDF8" } };
+const scaphopoda_cadulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cadulidae", className: "Scaphopoda", orderName: "Unknown", name: "Cadulidae", mainColor: "#A855F7", lineageColors: { "cadulidae": "#3B82F6" } };
+const scaphopoda_baltodentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "baltodentaliidae", className: "Scaphopoda", orderName: "Unknown", name: "Baltodentaliidae", mainColor: "#FB923C", lineageColors: { "baltodentaliidae": "#EF4444" } };
+const scaphopoda_episiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "episiphonidae", className: "Scaphopoda", orderName: "Unknown", name: "Episiphonidae", mainColor: "#2DD4BF", lineageColors: { "episiphonidae": "#10B981" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -3341,7 +3361,24 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "shelbyoceridae": monoplacophora_shelbyoceridae,
   "cyclocyrtonellidae": monoplacophora_cyclocyrtonellidae,
   "multifariidae": monoplacophora_multifariidae,
-  "neopilinidae": monoplacophora_neopilinidae,};
+  "neopilinidae": monoplacophora_neopilinidae,
+  "dentaliidae": scaphopoda_dentaliidae,
+  "gadilinidae": scaphopoda_gadilinidae,
+  "laevidentaliidae": scaphopoda_laevidentaliidae,
+  "fustiariidae": scaphopoda_fustiariidae,
+  "prodentaliidae": scaphopoda_prodentaliidae,
+  "rhabdidae": scaphopoda_rhabdidae,
+  "calliodentaliidae": scaphopoda_calliodentaliidae,
+  "anulidentaliidae": scaphopoda_anulidentaliidae,
+  "omniglyptidae": scaphopoda_omniglyptidae,
+  "gadilidae": scaphopoda_gadilidae,
+  "entalinidae": scaphopoda_entalinidae,
+  "pulsellidae": scaphopoda_pulsellidae,
+  "wemersoniellidae": scaphopoda_wemersoniellidae,
+  "loxoporidae": scaphopoda_loxoporidae,
+  "cadulidae": scaphopoda_cadulidae,
+  "baltodentaliidae": scaphopoda_baltodentaliidae,
+  "episiphonidae": scaphopoda_episiphonidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
