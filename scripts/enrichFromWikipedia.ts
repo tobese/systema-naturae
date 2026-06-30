@@ -202,12 +202,15 @@ async function main() {
 
       for (const node of batch) {
         const r = result.get(node.name as string);
-        if (r) {
+        if (r && r.extract && r.extract.length > 20) {
           node.description = r.extract;
           node.sourcedFrom = "wikipedia";
           if (r.description) node.commonName = r.description;
           ok++;
         } else {
+          if (node.sourcedFrom === "wikipedia" && (!node.description || (node.description as string).length <= 20)) {
+            node.sourcedFrom = "generated";
+          }
           fail++;
         }
       }
