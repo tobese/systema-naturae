@@ -2183,6 +2183,24 @@ const caudofoveata_chaetodermatidae: ColorTheme = { subfamilyColors: {}, breedGr
 const caudofoveata_prochaetodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "prochaetodermatidae", className: "Caudofoveata", orderName: "Chaetodermatida", name: "Prochaetodermatidae", mainColor: "#10B981", lineageColors: { "prochaetodermatidae": "#F97316" } };
 const caudofoveata_limifossoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "limifossoridae", className: "Caudofoveata", orderName: "Chaetodermatida", name: "Limifossoridae", mainColor: "#F59E0B", lineageColors: { "limifossoridae": "#6366F1" } };
 
+
+// ── Monoplacophora (15 families) ──
+const monoplacophora_tryblidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tryblidiidae", className: "Monoplacophora", orderName: "Tryblidiida", name: "Tryblidiidae", mainColor: "#EF4444", lineageColors: { "tryblidiidae": "#14B8A6" } };
+const monoplacophora_proplinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "proplinidae", className: "Monoplacophora", orderName: "Tryblidiida", name: "Proplinidae", mainColor: "#10B981", lineageColors: { "proplinidae": "#F97316" } };
+const monoplacophora_archaeophialidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "archaeophialidae", className: "Monoplacophora", orderName: "Tryblidiida", name: "Archaeophialidae", mainColor: "#F59E0B", lineageColors: { "archaeophialidae": "#6366F1" } };
+const monoplacophora_peelipilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "peelipilinidae", className: "Monoplacophora", orderName: "Tryblidiida", name: "Peelipilinidae", mainColor: "#8B5CF6", lineageColors: { "peelipilinidae": "#84CC16" } };
+const monoplacophora_cyrtolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cyrtolitidae", className: "Monoplacophora", orderName: "Cyrtonellida", name: "Cyrtolitidae", mainColor: "#EC4899", lineageColors: { "cyrtolitidae": "#06B6D4" } };
+const monoplacophora_carcassonnellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "carcassonnellidae", className: "Monoplacophora", orderName: "Cyrtonellida", name: "Carcassonnellidae", mainColor: "#14B8A6", lineageColors: { "carcassonnellidae": "#D946EF" } };
+const monoplacophora_cyrtonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cyrtonellidae", className: "Monoplacophora", orderName: "Cyrtonellida", name: "Cyrtonellidae", mainColor: "#F97316", lineageColors: { "cyrtonellidae": "#0EA5E9" } };
+const monoplacophora_hypseloconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "hypseloconidae", className: "Monoplacophora", orderName: "Kirengellida", name: "Hypseloconidae", mainColor: "#6366F1", lineageColors: { "hypseloconidae": "#22C55E" } };
+const monoplacophora_kirengellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "kirengellidae", className: "Monoplacophora", orderName: "Kirengellida", name: "Kirengellidae", mainColor: "#84CC16", lineageColors: { "kirengellidae": "#EAB308" } };
+const monoplacophora_metoptomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "metoptomatidae", className: "Monoplacophora", orderName: "Unknown", name: "Metoptomatidae", mainColor: "#06B6D4", lineageColors: { "metoptomatidae": "#A855F7" } };
+const monoplacophora_palaeacmaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "palaeacmaeidae", className: "Monoplacophora", orderName: "Unknown", name: "Palaeacmaeidae", mainColor: "#D946EF", lineageColors: { "palaeacmaeidae": "#FB923C" } };
+const monoplacophora_shelbyoceridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "shelbyoceridae", className: "Monoplacophora", orderName: "Unknown", name: "Shelbyoceridae", mainColor: "#0EA5E9", lineageColors: { "shelbyoceridae": "#2DD4BF" } };
+const monoplacophora_cyclocyrtonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cyclocyrtonellidae", className: "Monoplacophora", orderName: "Unknown", name: "Cyclocyrtonellidae", mainColor: "#22C55E", lineageColors: { "cyclocyrtonellidae": "#A3E635" } };
+const monoplacophora_multifariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "multifariidae", className: "Monoplacophora", orderName: "Unknown", name: "Multifariidae", mainColor: "#EAB308", lineageColors: { "multifariidae": "#38BDF8" } };
+const monoplacophora_neopilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "neopilinidae", className: "Monoplacophora", orderName: "Neopilinida", name: "Neopilinidae", mainColor: "#A855F7", lineageColors: { "neopilinidae": "#3B82F6" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -3308,7 +3326,22 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
 
   "chaetodermatidae": caudofoveata_chaetodermatidae,
   "prochaetodermatidae": caudofoveata_prochaetodermatidae,
-  "limifossoridae": caudofoveata_limifossoridae,};
+  "limifossoridae": caudofoveata_limifossoridae,
+  "tryblidiidae": monoplacophora_tryblidiidae,
+  "proplinidae": monoplacophora_proplinidae,
+  "archaeophialidae": monoplacophora_archaeophialidae,
+  "peelipilinidae": monoplacophora_peelipilinidae,
+  "cyrtolitidae": monoplacophora_cyrtolitidae,
+  "carcassonnellidae": monoplacophora_carcassonnellidae,
+  "cyrtonellidae": monoplacophora_cyrtonellidae,
+  "hypseloconidae": monoplacophora_hypseloconidae,
+  "kirengellidae": monoplacophora_kirengellidae,
+  "metoptomatidae": monoplacophora_metoptomatidae,
+  "palaeacmaeidae": monoplacophora_palaeacmaeidae,
+  "shelbyoceridae": monoplacophora_shelbyoceridae,
+  "cyclocyrtonellidae": monoplacophora_cyclocyrtonellidae,
+  "multifariidae": monoplacophora_multifariidae,
+  "neopilinidae": monoplacophora_neopilinidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
