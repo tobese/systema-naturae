@@ -2375,6 +2375,449 @@ const cephalopoda_histioteuthidae: ColorTheme = { subfamilyColors: {}, breedGrou
 const cephalopoda_magnapinnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "magnapinnidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Magnapinnidae", mainColor: "#0EA5E9", lineageColors: { "magnapinnidae": "#2DD4BF" } };
 const cephalopoda_kelaenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "kelaenidae", className: "Cephalopoda", orderName: "Vampyromorpha", name: "Kelaenidae", mainColor: "#22C55E", lineageColors: { "kelaenidae": "#A3E635" } };
 
+
+// ── Bivalvia (440 families) ──
+const bivalvia_veneridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "veneridae", className: "Bivalvia", orderName: "Venerida", name: "Veneridae", mainColor: "#EF4444", lineageColors: { "veneridae": "#14B8A6" } };
+const bivalvia_cyrenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cyrenidae", className: "Bivalvia", orderName: "Venerida", name: "Cyrenidae", mainColor: "#10B981", lineageColors: { "cyrenidae": "#F97316" } };
+const bivalvia_mactridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mactridae", className: "Bivalvia", orderName: "Venerida", name: "Mactridae", mainColor: "#F59E0B", lineageColors: { "mactridae": "#6366F1" } };
+const bivalvia_ungulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "ungulinidae", className: "Bivalvia", orderName: "Venerida", name: "Ungulinidae", mainColor: "#8B5CF6", lineageColors: { "ungulinidae": "#84CC16" } };
+const bivalvia_vesicomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "vesicomyidae", className: "Bivalvia", orderName: "Venerida", name: "Vesicomyidae", mainColor: "#EC4899", lineageColors: { "vesicomyidae": "#06B6D4" } };
+const bivalvia_kalenteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "kalenteridae", className: "Bivalvia", orderName: "Venerida", name: "Kalenteridae", mainColor: "#14B8A6", lineageColors: { "kalenteridae": "#D946EF" } };
+const bivalvia_chamidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "chamidae", className: "Bivalvia", orderName: "Venerida", name: "Chamidae", mainColor: "#F97316", lineageColors: { "chamidae": "#0EA5E9" } };
+const bivalvia_arcticidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "arcticidae", className: "Bivalvia", orderName: "Venerida", name: "Arcticidae", mainColor: "#6366F1", lineageColors: { "arcticidae": "#22C55E" } };
+const bivalvia_glossidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "glossidae", className: "Bivalvia", orderName: "Venerida", name: "Glossidae", mainColor: "#84CC16", lineageColors: { "glossidae": "#EAB308" } };
+const bivalvia_neoleptonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "neoleptonidae", className: "Bivalvia", orderName: "Venerida", name: "Neoleptonidae", mainColor: "#06B6D4", lineageColors: { "neoleptonidae": "#A855F7" } };
+const bivalvia_mesodesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "mesodesmatidae", className: "Bivalvia", orderName: "Venerida", name: "Mesodesmatidae", mainColor: "#D946EF", lineageColors: { "mesodesmatidae": "#FB923C" } };
+const bivalvia_cyamiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cyamiidae", className: "Bivalvia", orderName: "Venerida", name: "Cyamiidae", mainColor: "#0EA5E9", lineageColors: { "cyamiidae": "#2DD4BF" } };
+const bivalvia_trapezidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "trapezidae", className: "Bivalvia", orderName: "Venerida", name: "Trapezidae", mainColor: "#22C55E", lineageColors: { "trapezidae": "#A3E635" } };
+const bivalvia_anatinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "anatinellidae", className: "Bivalvia", orderName: "Venerida", name: "Anatinellidae", mainColor: "#EAB308", lineageColors: { "anatinellidae": "#38BDF8" } };
+const bivalvia_sportellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sportellidae", className: "Bivalvia", orderName: "Venerida", name: "Sportellidae", mainColor: "#A855F7", lineageColors: { "sportellidae": "#3B82F6" } };
+const bivalvia_prilukiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "prilukiellidae", className: "Bivalvia", orderName: "Venerida", name: "Prilukiellidae", mainColor: "#FB923C", lineageColors: { "prilukiellidae": "#EF4444" } };
+const bivalvia_kelliellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "kelliellidae", className: "Bivalvia", orderName: "Venerida", name: "Kelliellidae", mainColor: "#2DD4BF", lineageColors: { "kelliellidae": "#10B981" } };
+const bivalvia_gaimardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "gaimardiidae", className: "Bivalvia", orderName: "Venerida", name: "Gaimardiidae", mainColor: "#A3E635", lineageColors: { "gaimardiidae": "#F59E0B" } };
+const bivalvia_senderzoniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "senderzoniellidae", className: "Bivalvia", orderName: "Venerida", name: "Senderzoniellidae", mainColor: "#38BDF8", lineageColors: { "senderzoniellidae": "#8B5CF6" } };
+const bivalvia_glauconomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "glauconomidae", className: "Bivalvia", orderName: "Venerida", name: "Glauconomidae", mainColor: "#3B82F6", lineageColors: { "glauconomidae": "#EC4899" } };
+const bivalvia_cyrenoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cyrenoididae", className: "Bivalvia", orderName: "Venerida", name: "Cyrenoididae", mainColor: "#EF4444", lineageColors: { "cyrenoididae": "#14B8A6" } };
+const bivalvia_cardiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cardiliidae", className: "Bivalvia", orderName: "Venerida", name: "Cardiliidae", mainColor: "#10B981", lineageColors: { "cardiliidae": "#F97316" } };
+const bivalvia_opokiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "opokiellidae", className: "Bivalvia", orderName: "Venerida", name: "Opokiellidae", mainColor: "#F59E0B", lineageColors: { "opokiellidae": "#6366F1" } };
+const bivalvia_isocyprinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "isocyprinidae", className: "Bivalvia", orderName: "Venerida", name: "Isocyprinidae", mainColor: "#8B5CF6", lineageColors: { "isocyprinidae": "#84CC16" } };
+const bivalvia_hemidonacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "hemidonacidae", className: "Bivalvia", orderName: "Venerida", name: "Hemidonacidae", mainColor: "#EC4899", lineageColors: { "hemidonacidae": "#06B6D4" } };
+const bivalvia_veniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "veniellidae", className: "Bivalvia", orderName: "Venerida", name: "Veniellidae", mainColor: "#14B8A6", lineageColors: { "veniellidae": "#D946EF" } };
+const bivalvia_lutetiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "lutetiidae", className: "Bivalvia", orderName: "Venerida", name: "Lutetiidae", mainColor: "#F97316", lineageColors: { "lutetiidae": "#0EA5E9" } };
+const bivalvia_tridacnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tridacnidae", className: "Bivalvia", orderName: "Venerida", name: "Tridacnidae", mainColor: "#6366F1", lineageColors: { "tridacnidae": "#22C55E" } };
+const bivalvia_babinkidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "babinkidae", className: "Bivalvia", orderName: "Venerida", name: "Babinkidae", mainColor: "#84CC16", lineageColors: { "babinkidae": "#EAB308" } };
+const bivalvia_galatheavalvidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "galatheavalvidae", className: "Bivalvia", orderName: "Venerida", name: "Galatheavalvidae", mainColor: "#06B6D4", lineageColors: { "galatheavalvidae": "#A855F7" } };
+const bivalvia_ptychomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ptychomyidae", className: "Bivalvia", orderName: "Venerida", name: "Ptychomyidae", mainColor: "#D946EF", lineageColors: { "ptychomyidae": "#FB923C" } };
+const bivalvia_lahilliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lahilliidae", className: "Bivalvia", orderName: "Venerida", name: "Lahilliidae", mainColor: "#0EA5E9", lineageColors: { "lahilliidae": "#2DD4BF" } };
+const bivalvia_euloxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "euloxidae", className: "Bivalvia", orderName: "Venerida", name: "Euloxidae", mainColor: "#22C55E", lineageColors: { "euloxidae": "#A3E635" } };
+const bivalvia_pectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Pectinidae", mainColor: "#EAB308", lineageColors: { "pectinidae": "#38BDF8" } };
+const bivalvia_aviculopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "aviculopectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Aviculopectinidae", mainColor: "#A855F7", lineageColors: { "aviculopectinidae": "#3B82F6" } };
+const bivalvia_propeamussiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "propeamussiidae", className: "Bivalvia", orderName: "Pectinida", name: "Propeamussiidae", mainColor: "#FB923C", lineageColors: { "propeamussiidae": "#EF4444" } };
+const bivalvia_spondylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "spondylidae", className: "Bivalvia", orderName: "Pectinida", name: "Spondylidae", mainColor: "#2DD4BF", lineageColors: { "spondylidae": "#10B981" } };
+const bivalvia_anomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "anomiidae", className: "Bivalvia", orderName: "Pectinida", name: "Anomiidae", mainColor: "#A3E635", lineageColors: { "anomiidae": "#F59E0B" } };
+const bivalvia_plicatulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "plicatulidae", className: "Bivalvia", orderName: "Pectinida", name: "Plicatulidae", mainColor: "#38BDF8", lineageColors: { "plicatulidae": "#8B5CF6" } };
+const bivalvia_monotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "monotidae", className: "Bivalvia", orderName: "Pectinida", name: "Monotidae", mainColor: "#3B82F6", lineageColors: { "monotidae": "#EC4899" } };
+const bivalvia_buchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "buchiidae", className: "Bivalvia", orderName: "Pectinida", name: "Buchiidae", mainColor: "#EF4444", lineageColors: { "buchiidae": "#14B8A6" } };
+const bivalvia_pterinopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pterinopectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Pterinopectinidae", mainColor: "#10B981", lineageColors: { "pterinopectinidae": "#F97316" } };
+const bivalvia_entoliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "entoliidae", className: "Bivalvia", orderName: "Pectinida", name: "Entoliidae", mainColor: "#F59E0B", lineageColors: { "entoliidae": "#6366F1" } };
+const bivalvia_dimyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "dimyidae", className: "Bivalvia", orderName: "Pectinida", name: "Dimyidae", mainColor: "#8B5CF6", lineageColors: { "dimyidae": "#84CC16" } };
+const bivalvia_deltopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "deltopectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Deltopectinidae", mainColor: "#EC4899", lineageColors: { "deltopectinidae": "#06B6D4" } };
+const bivalvia_neitheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "neitheidae", className: "Bivalvia", orderName: "Pectinida", name: "Neitheidae", mainColor: "#14B8A6", lineageColors: { "neitheidae": "#D946EF" } };
+const bivalvia_oxytomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "oxytomidae", className: "Bivalvia", orderName: "Pectinida", name: "Oxytomidae", mainColor: "#F97316", lineageColors: { "oxytomidae": "#0EA5E9" } };
+const bivalvia_streblochondriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "streblochondriidae", className: "Bivalvia", orderName: "Pectinida", name: "Streblochondriidae", mainColor: "#6366F1", lineageColors: { "streblochondriidae": "#22C55E" } };
+const bivalvia_euchondriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "euchondriidae", className: "Bivalvia", orderName: "Pectinida", name: "Euchondriidae", mainColor: "#84CC16", lineageColors: { "euchondriidae": "#EAB308" } };
+const bivalvia_cyclochlamydidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cyclochlamydidae", className: "Bivalvia", orderName: "Pectinida", name: "Cyclochlamydidae", mainColor: "#06B6D4", lineageColors: { "cyclochlamydidae": "#A855F7" } };
+const bivalvia_prospondylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "prospondylidae", className: "Bivalvia", orderName: "Pectinida", name: "Prospondylidae", mainColor: "#D946EF", lineageColors: { "prospondylidae": "#FB923C" } };
+const bivalvia_pleuronectitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pleuronectitidae", className: "Bivalvia", orderName: "Pectinida", name: "Pleuronectitidae", mainColor: "#0EA5E9", lineageColors: { "pleuronectitidae": "#2DD4BF" } };
+const bivalvia_terquemiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "terquemiidae", className: "Bivalvia", orderName: "Pectinida", name: "Terquemiidae", mainColor: "#22C55E", lineageColors: { "terquemiidae": "#A3E635" } };
+const bivalvia_hunanopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "hunanopectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Hunanopectinidae", mainColor: "#EAB308", lineageColors: { "hunanopectinidae": "#38BDF8" } };
+const bivalvia_tosapectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "tosapectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Tosapectinidae", mainColor: "#A855F7", lineageColors: { "tosapectinidae": "#3B82F6" } };
+const bivalvia_placunidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "placunidae", className: "Bivalvia", orderName: "Pectinida", name: "Placunidae", mainColor: "#FB923C", lineageColors: { "placunidae": "#EF4444" } };
+const bivalvia_heteropectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "heteropectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Heteropectinidae", mainColor: "#2DD4BF", lineageColors: { "heteropectinidae": "#10B981" } };
+const bivalvia_annuliconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "annuliconchidae", className: "Bivalvia", orderName: "Pectinida", name: "Annuliconchidae", mainColor: "#A3E635", lineageColors: { "annuliconchidae": "#F59E0B" } };
+const bivalvia_limatulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "limatulinidae", className: "Bivalvia", orderName: "Pectinida", name: "Limatulinidae", mainColor: "#38BDF8", lineageColors: { "limatulinidae": "#8B5CF6" } };
+const bivalvia_leiopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "leiopectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Leiopectinidae", mainColor: "#3B82F6", lineageColors: { "leiopectinidae": "#EC4899" } };
+const bivalvia_chaenocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "chaenocardiidae", className: "Bivalvia", orderName: "Pectinida", name: "Chaenocardiidae", mainColor: "#EF4444", lineageColors: { "chaenocardiidae": "#14B8A6" } };
+const bivalvia_cassianoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cassianoididae", className: "Bivalvia", orderName: "Pectinida", name: "Cassianoididae", mainColor: "#10B981", lineageColors: { "cassianoididae": "#F97316" } };
+const bivalvia_pseudomonotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pseudomonotidae", className: "Bivalvia", orderName: "Pectinida", name: "Pseudomonotidae", mainColor: "#F59E0B", lineageColors: { "pseudomonotidae": "#6366F1" } };
+const bivalvia_etheripectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "etheripectinidae", className: "Bivalvia", orderName: "Pectinida", name: "Etheripectinidae", mainColor: "#8B5CF6", lineageColors: { "etheripectinidae": "#84CC16" } };
+const bivalvia_entolioidesidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "entolioidesidae", className: "Bivalvia", orderName: "Pectinida", name: "Entolioidesidae", mainColor: "#EC4899", lineageColors: { "entolioidesidae": "#06B6D4" } };
+const bivalvia_dolponellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "dolponellidae", className: "Bivalvia", orderName: "Pectinida", name: "Dolponellidae", mainColor: "#14B8A6", lineageColors: { "dolponellidae": "#D946EF" } };
+const bivalvia_cardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cardiidae", className: "Bivalvia", orderName: "Cardiida", name: "Cardiidae", mainColor: "#F97316", lineageColors: { "cardiidae": "#0EA5E9" } };
+const bivalvia_tellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tellinidae", className: "Bivalvia", orderName: "Cardiida", name: "Tellinidae", mainColor: "#6366F1", lineageColors: { "tellinidae": "#22C55E" } };
+const bivalvia_semelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "semelidae", className: "Bivalvia", orderName: "Cardiida", name: "Semelidae", mainColor: "#84CC16", lineageColors: { "semelidae": "#EAB308" } };
+const bivalvia_psammobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "psammobiidae", className: "Bivalvia", orderName: "Cardiida", name: "Psammobiidae", mainColor: "#06B6D4", lineageColors: { "psammobiidae": "#A855F7" } };
+const bivalvia_donacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "donacidae", className: "Bivalvia", orderName: "Cardiida", name: "Donacidae", mainColor: "#D946EF", lineageColors: { "donacidae": "#FB923C" } };
+const bivalvia_solecurtidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "solecurtidae", className: "Bivalvia", orderName: "Cardiida", name: "Solecurtidae", mainColor: "#0EA5E9", lineageColors: { "solecurtidae": "#2DD4BF" } };
+const bivalvia_anthracosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "anthracosiidae", className: "Bivalvia", orderName: "Cardiida", name: "Anthracosiidae", mainColor: "#22C55E", lineageColors: { "anthracosiidae": "#A3E635" } };
+const bivalvia_ferganoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "ferganoconchidae", className: "Bivalvia", orderName: "Cardiida", name: "Ferganoconchidae", mainColor: "#EAB308", lineageColors: { "ferganoconchidae": "#38BDF8" } };
+const bivalvia_carbonicolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "carbonicolidae", className: "Bivalvia", orderName: "Cardiida", name: "Carbonicolidae", mainColor: "#A855F7", lineageColors: { "carbonicolidae": "#3B82F6" } };
+const bivalvia_tancrediidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "tancrediidae", className: "Bivalvia", orderName: "Cardiida", name: "Tancrediidae", mainColor: "#FB923C", lineageColors: { "tancrediidae": "#EF4444" } };
+const bivalvia_shaanxiconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "shaanxiconchidae", className: "Bivalvia", orderName: "Cardiida", name: "Shaanxiconchidae", mainColor: "#2DD4BF", lineageColors: { "shaanxiconchidae": "#10B981" } };
+const bivalvia_pterocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pterocardiidae", className: "Bivalvia", orderName: "Cardiida", name: "Pterocardiidae", mainColor: "#A3E635", lineageColors: { "pterocardiidae": "#F59E0B" } };
+const bivalvia_icanotiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "icanotiidae", className: "Bivalvia", orderName: "Cardiida", name: "Icanotiidae", mainColor: "#38BDF8", lineageColors: { "icanotiidae": "#8B5CF6" } };
+const bivalvia_quenstedtiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "quenstedtiidae", className: "Bivalvia", orderName: "Cardiida", name: "Quenstedtiidae", mainColor: "#3B82F6", lineageColors: { "quenstedtiidae": "#EC4899" } };
+const bivalvia_scrobiculariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "scrobiculariidae", className: "Bivalvia", orderName: "Cardiida", name: "Scrobiculariidae", mainColor: "#EF4444", lineageColors: { "scrobiculariidae": "#14B8A6" } };
+const bivalvia_sowerbyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "sowerbyidae", className: "Bivalvia", orderName: "Cardiida", name: "Sowerbyidae", mainColor: "#10B981", lineageColors: { "sowerbyidae": "#F97316" } };
+const bivalvia_unicardiopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "unicardiopsidae", className: "Bivalvia", orderName: "Cardiida", name: "Unicardiopsidae", mainColor: "#F59E0B", lineageColors: { "unicardiopsidae": "#6366F1" } };
+const bivalvia_unionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "unionidae", className: "Bivalvia", orderName: "Unionida", name: "Unionidae", mainColor: "#8B5CF6", lineageColors: { "unionidae": "#84CC16" } };
+const bivalvia_hyriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "hyriidae", className: "Bivalvia", orderName: "Unionida", name: "Hyriidae", mainColor: "#EC4899", lineageColors: { "hyriidae": "#06B6D4" } };
+const bivalvia_margaritiferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "margaritiferidae", className: "Bivalvia", orderName: "Unionida", name: "Margaritiferidae", mainColor: "#14B8A6", lineageColors: { "margaritiferidae": "#D946EF" } };
+const bivalvia_iridinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "iridinidae", className: "Bivalvia", orderName: "Unionida", name: "Iridinidae", mainColor: "#F97316", lineageColors: { "iridinidae": "#0EA5E9" } };
+const bivalvia_mycetopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "mycetopodidae", className: "Bivalvia", orderName: "Unionida", name: "Mycetopodidae", mainColor: "#6366F1", lineageColors: { "mycetopodidae": "#22C55E" } };
+const bivalvia_pachycardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "pachycardiidae", className: "Bivalvia", orderName: "Unionida", name: "Pachycardiidae", mainColor: "#84CC16", lineageColors: { "pachycardiidae": "#EAB308" } };
+const bivalvia_silesunionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "silesunionidae", className: "Bivalvia", orderName: "Unionida", name: "Silesunionidae", mainColor: "#06B6D4", lineageColors: { "silesunionidae": "#A855F7" } };
+const bivalvia_etheriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "etheriidae", className: "Bivalvia", orderName: "Unionida", name: "Etheriidae", mainColor: "#D946EF", lineageColors: { "etheriidae": "#FB923C" } };
+const bivalvia_tegulaedontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "tegulaedontidae", className: "Bivalvia", orderName: "Unionida", name: "Tegulaedontidae", mainColor: "#0EA5E9", lineageColors: { "tegulaedontidae": "#2DD4BF" } };
+const bivalvia_tamesnellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "tamesnellidae", className: "Bivalvia", orderName: "Unionida", name: "Tamesnellidae", mainColor: "#22C55E", lineageColors: { "tamesnellidae": "#A3E635" } };
+const bivalvia_unionellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "unionellidae", className: "Bivalvia", orderName: "Unionida", name: "Unionellidae", mainColor: "#EAB308", lineageColors: { "unionellidae": "#38BDF8" } };
+const bivalvia_sancticarolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sancticarolitidae", className: "Bivalvia", orderName: "Unionida", name: "Sancticarolitidae", mainColor: "#A855F7", lineageColors: { "sancticarolitidae": "#3B82F6" } };
+const bivalvia_monginaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "monginaiidae", className: "Bivalvia", orderName: "Unionida", name: "Monginaiidae", mainColor: "#FB923C", lineageColors: { "monginaiidae": "#EF4444" } };
+const bivalvia_trigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "trigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Trigoniidae", mainColor: "#2DD4BF", lineageColors: { "trigoniidae": "#10B981" } };
+const bivalvia_myophoriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "myophoriidae", className: "Bivalvia", orderName: "Trigoniida", name: "Myophoriidae", mainColor: "#A3E635", lineageColors: { "myophoriidae": "#F59E0B" } };
+const bivalvia_pterotrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pterotrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Pterotrigoniidae", mainColor: "#38BDF8", lineageColors: { "pterotrigoniidae": "#8B5CF6" } };
+const bivalvia_pseudocardiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pseudocardiniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Pseudocardiniidae", mainColor: "#3B82F6", lineageColors: { "pseudocardiniidae": "#EC4899" } };
+const bivalvia_myophorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "myophorellidae", className: "Bivalvia", orderName: "Trigoniida", name: "Myophorellidae", mainColor: "#EF4444", lineageColors: { "myophorellidae": "#14B8A6" } };
+const bivalvia_schizodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "schizodidae", className: "Bivalvia", orderName: "Trigoniida", name: "Schizodidae", mainColor: "#10B981", lineageColors: { "schizodidae": "#F97316" } };
+const bivalvia_vaugoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "vaugoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Vaugoniidae", mainColor: "#F59E0B", lineageColors: { "vaugoniidae": "#6366F1" } };
+const bivalvia_rutitrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "rutitrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Rutitrigoniidae", mainColor: "#8B5CF6", lineageColors: { "rutitrigoniidae": "#84CC16" } };
+const bivalvia_megatrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "megatrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Megatrigoniidae", mainColor: "#EC4899", lineageColors: { "megatrigoniidae": "#06B6D4" } };
+const bivalvia_pseudohyriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pseudohyriidae", className: "Bivalvia", orderName: "Trigoniida", name: "Pseudohyriidae", mainColor: "#14B8A6", lineageColors: { "pseudohyriidae": "#D946EF" } };
+const bivalvia_trigonioididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "trigonioididae", className: "Bivalvia", orderName: "Trigoniida", name: "Trigonioididae", mainColor: "#F97316", lineageColors: { "trigonioididae": "#0EA5E9" } };
+const bivalvia_trigonodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "trigonodidae", className: "Bivalvia", orderName: "Trigoniida", name: "Trigonodidae", mainColor: "#6366F1", lineageColors: { "trigonodidae": "#22C55E" } };
+const bivalvia_steinmanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "steinmanellidae", className: "Bivalvia", orderName: "Trigoniida", name: "Steinmanellidae", mainColor: "#84CC16", lineageColors: { "steinmanellidae": "#EAB308" } };
+const bivalvia_nippononaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "nippononaiidae", className: "Bivalvia", orderName: "Trigoniida", name: "Nippononaiidae", mainColor: "#06B6D4", lineageColors: { "nippononaiidae": "#A855F7" } };
+const bivalvia_iotrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "iotrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Iotrigoniidae", mainColor: "#D946EF", lineageColors: { "iotrigoniidae": "#FB923C" } };
+const bivalvia_plicatounionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "plicatounionidae", className: "Bivalvia", orderName: "Trigoniida", name: "Plicatounionidae", mainColor: "#0EA5E9", lineageColors: { "plicatounionidae": "#2DD4BF" } };
+const bivalvia_nakamuranaiadidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "nakamuranaiadidae", className: "Bivalvia", orderName: "Trigoniida", name: "Nakamuranaiadidae", mainColor: "#22C55E", lineageColors: { "nakamuranaiadidae": "#A3E635" } };
+const bivalvia_buchotrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "buchotrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Buchotrigoniidae", mainColor: "#EAB308", lineageColors: { "buchotrigoniidae": "#38BDF8" } };
+const bivalvia_frenguelliellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "frenguelliellidae", className: "Bivalvia", orderName: "Trigoniida", name: "Frenguelliellidae", mainColor: "#A855F7", lineageColors: { "frenguelliellidae": "#3B82F6" } };
+const bivalvia_prosogyrotrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "prosogyrotrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Prosogyrotrigoniidae", mainColor: "#FB923C", lineageColors: { "prosogyrotrigoniidae": "#EF4444" } };
+const bivalvia_utschamiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "utschamiellidae", className: "Bivalvia", orderName: "Trigoniida", name: "Utschamiellidae", mainColor: "#2DD4BF", lineageColors: { "utschamiellidae": "#10B981" } };
+const bivalvia_erugoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "erugoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Erugoniidae", mainColor: "#A3E635", lineageColors: { "erugoniidae": "#F59E0B" } };
+const bivalvia_eoschizodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "eoschizodidae", className: "Bivalvia", orderName: "Trigoniida", name: "Eoschizodidae", mainColor: "#38BDF8", lineageColors: { "eoschizodidae": "#8B5CF6" } };
+const bivalvia_laevitrigoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "laevitrigoniidae", className: "Bivalvia", orderName: "Trigoniida", name: "Laevitrigoniidae", mainColor: "#3B82F6", lineageColors: { "laevitrigoniidae": "#EC4899" } };
+const bivalvia_scaphellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "scaphellinidae", className: "Bivalvia", orderName: "Trigoniida", name: "Scaphellinidae", mainColor: "#EF4444", lineageColors: { "scaphellinidae": "#14B8A6" } };
+const bivalvia_groeberellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "groeberellidae", className: "Bivalvia", orderName: "Trigoniida", name: "Groeberellidae", mainColor: "#10B981", lineageColors: { "groeberellidae": "#F97316" } };
+const bivalvia_desertellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "desertellidae", className: "Bivalvia", orderName: "Trigoniida", name: "Desertellidae", mainColor: "#F59E0B", lineageColors: { "desertellidae": "#6366F1" } };
+const bivalvia_ostreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "ostreidae", className: "Bivalvia", orderName: "Ostreida", name: "Ostreidae", mainColor: "#8B5CF6", lineageColors: { "ostreidae": "#84CC16" } };
+const bivalvia_bakevelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "bakevelliidae", className: "Bivalvia", orderName: "Ostreida", name: "Bakevelliidae", mainColor: "#EC4899", lineageColors: { "bakevelliidae": "#06B6D4" } };
+const bivalvia_gryphaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "gryphaeidae", className: "Bivalvia", orderName: "Ostreida", name: "Gryphaeidae", mainColor: "#14B8A6", lineageColors: { "gryphaeidae": "#D946EF" } };
+const bivalvia_pinnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pinnidae", className: "Bivalvia", orderName: "Ostreida", name: "Pinnidae", mainColor: "#F97316", lineageColors: { "pinnidae": "#0EA5E9" } };
+const bivalvia_pteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "pteriidae", className: "Bivalvia", orderName: "Ostreida", name: "Pteriidae", mainColor: "#6366F1", lineageColors: { "pteriidae": "#22C55E" } };
+const bivalvia_halobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "halobiidae", className: "Bivalvia", orderName: "Ostreida", name: "Halobiidae", mainColor: "#84CC16", lineageColors: { "halobiidae": "#EAB308" } };
+const bivalvia_pterineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pterineidae", className: "Bivalvia", orderName: "Ostreida", name: "Pterineidae", mainColor: "#06B6D4", lineageColors: { "pterineidae": "#A855F7" } };
+const bivalvia_daonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "daonellidae", className: "Bivalvia", orderName: "Ostreida", name: "Daonellidae", mainColor: "#D946EF", lineageColors: { "daonellidae": "#FB923C" } };
+const bivalvia_isognomonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "isognomonidae", className: "Bivalvia", orderName: "Ostreida", name: "Isognomonidae", mainColor: "#0EA5E9", lineageColors: { "isognomonidae": "#2DD4BF" } };
+const bivalvia_posidoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "posidoniidae", className: "Bivalvia", orderName: "Ostreida", name: "Posidoniidae", mainColor: "#22C55E", lineageColors: { "posidoniidae": "#A3E635" } };
+const bivalvia_cassianellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cassianellidae", className: "Bivalvia", orderName: "Ostreida", name: "Cassianellidae", mainColor: "#EAB308", lineageColors: { "cassianellidae": "#38BDF8" } };
+const bivalvia_flemingostreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "flemingostreidae", className: "Bivalvia", orderName: "Ostreida", name: "Flemingostreidae", mainColor: "#A855F7", lineageColors: { "flemingostreidae": "#3B82F6" } };
+const bivalvia_margaritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "margaritidae", className: "Bivalvia", orderName: "Ostreida", name: "Margaritidae", mainColor: "#FB923C", lineageColors: { "margaritidae": "#EF4444" } };
+const bivalvia_vulsellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "vulsellidae", className: "Bivalvia", orderName: "Ostreida", name: "Vulsellidae", mainColor: "#2DD4BF", lineageColors: { "vulsellidae": "#10B981" } };
+const bivalvia_aulacomyellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "aulacomyellidae", className: "Bivalvia", orderName: "Ostreida", name: "Aulacomyellidae", mainColor: "#A3E635", lineageColors: { "aulacomyellidae": "#F59E0B" } };
+const bivalvia_malleidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "malleidae", className: "Bivalvia", orderName: "Ostreida", name: "Malleidae", mainColor: "#38BDF8", lineageColors: { "malleidae": "#8B5CF6" } };
+const bivalvia_pergamidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pergamidiidae", className: "Bivalvia", orderName: "Ostreida", name: "Pergamidiidae", mainColor: "#3B82F6", lineageColors: { "pergamidiidae": "#EC4899" } };
+const bivalvia_arctostreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "arctostreidae", className: "Bivalvia", orderName: "Ostreida", name: "Arctostreidae", mainColor: "#EF4444", lineageColors: { "arctostreidae": "#14B8A6" } };
+const bivalvia_pulvinitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pulvinitidae", className: "Bivalvia", orderName: "Ostreida", name: "Pulvinitidae", mainColor: "#10B981", lineageColors: { "pulvinitidae": "#F97316" } };
+const bivalvia_anningellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "anningellidae", className: "Bivalvia", orderName: "Ostreida", name: "Anningellidae", mainColor: "#F59E0B", lineageColors: { "anningellidae": "#6366F1" } };
+const bivalvia_kochiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "kochiidae", className: "Bivalvia", orderName: "Ostreida", name: "Kochiidae", mainColor: "#8B5CF6", lineageColors: { "kochiidae": "#84CC16" } };
+const bivalvia_rhombopteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "rhombopteriidae", className: "Bivalvia", orderName: "Ostreida", name: "Rhombopteriidae", mainColor: "#EC4899", lineageColors: { "rhombopteriidae": "#06B6D4" } };
+const bivalvia_chondrodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "chondrodontidae", className: "Bivalvia", orderName: "Ostreida", name: "Chondrodontidae", mainColor: "#14B8A6", lineageColors: { "chondrodontidae": "#D946EF" } };
+const bivalvia_aviculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "aviculidae", className: "Bivalvia", orderName: "Ostreida", name: "Aviculidae", mainColor: "#F97316", lineageColors: { "aviculidae": "#0EA5E9" } };
+const bivalvia_eligmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "eligmidae", className: "Bivalvia", orderName: "Ostreida", name: "Eligmidae", mainColor: "#6366F1", lineageColors: { "eligmidae": "#22C55E" } };
+const bivalvia_arcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "arcidae", className: "Bivalvia", orderName: "Arcida", name: "Arcidae", mainColor: "#84CC16", lineageColors: { "arcidae": "#EAB308" } };
+const bivalvia_glycymerididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "glycymerididae", className: "Bivalvia", orderName: "Arcida", name: "Glycymerididae", mainColor: "#06B6D4", lineageColors: { "glycymerididae": "#A855F7" } };
+const bivalvia_limopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "limopsidae", className: "Bivalvia", orderName: "Arcida", name: "Limopsidae", mainColor: "#D946EF", lineageColors: { "limopsidae": "#FB923C" } };
+const bivalvia_philobryidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "philobryidae", className: "Bivalvia", orderName: "Arcida", name: "Philobryidae", mainColor: "#0EA5E9", lineageColors: { "philobryidae": "#2DD4BF" } };
+const bivalvia_parallelodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "parallelodontidae", className: "Bivalvia", orderName: "Arcida", name: "Parallelodontidae", mainColor: "#22C55E", lineageColors: { "parallelodontidae": "#A3E635" } };
+const bivalvia_cucullaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cucullaeidae", className: "Bivalvia", orderName: "Arcida", name: "Cucullaeidae", mainColor: "#EAB308", lineageColors: { "cucullaeidae": "#38BDF8" } };
+const bivalvia_noetiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "noetiidae", className: "Bivalvia", orderName: "Arcida", name: "Noetiidae", mainColor: "#A855F7", lineageColors: { "noetiidae": "#3B82F6" } };
+const bivalvia_frejidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "frejidae", className: "Bivalvia", orderName: "Arcida", name: "Frejidae", mainColor: "#FB923C", lineageColors: { "frejidae": "#EF4444" } };
+const bivalvia_glyptarcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "glyptarcidae", className: "Bivalvia", orderName: "Arcida", name: "Glyptarcidae", mainColor: "#2DD4BF", lineageColors: { "glyptarcidae": "#10B981" } };
+const bivalvia_cuspidariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cuspidariidae", className: "Bivalvia", orderName: "Unknown", name: "Cuspidariidae", mainColor: "#A3E635", lineageColors: { "cuspidariidae": "#F59E0B" } };
+const bivalvia_pholadomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pholadomyidae", className: "Bivalvia", orderName: "Unknown", name: "Pholadomyidae", mainColor: "#38BDF8", lineageColors: { "pholadomyidae": "#8B5CF6" } };
+const bivalvia_sanguinolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "sanguinolitidae", className: "Bivalvia", orderName: "Unknown", name: "Sanguinolitidae", mainColor: "#3B82F6", lineageColors: { "sanguinolitidae": "#EC4899" } };
+const bivalvia_thraciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "thraciidae", className: "Bivalvia", orderName: "Unknown", name: "Thraciidae", mainColor: "#EF4444", lineageColors: { "thraciidae": "#14B8A6" } };
+const bivalvia_verticordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "verticordiidae", className: "Bivalvia", orderName: "Unknown", name: "Verticordiidae", mainColor: "#10B981", lineageColors: { "verticordiidae": "#F97316" } };
+const bivalvia_poromyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "poromyidae", className: "Bivalvia", orderName: "Unknown", name: "Poromyidae", mainColor: "#F59E0B", lineageColors: { "poromyidae": "#6366F1" } };
+const bivalvia_periplomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "periplomatidae", className: "Bivalvia", orderName: "Unknown", name: "Periplomatidae", mainColor: "#8B5CF6", lineageColors: { "periplomatidae": "#84CC16" } };
+const bivalvia_pandoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pandoridae", className: "Bivalvia", orderName: "Unknown", name: "Pandoridae", mainColor: "#EC4899", lineageColors: { "pandoridae": "#06B6D4" } };
+const bivalvia_laternulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "laternulidae", className: "Bivalvia", orderName: "Unknown", name: "Laternulidae", mainColor: "#14B8A6", lineageColors: { "laternulidae": "#D946EF" } };
+const bivalvia_megadesmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "megadesmidae", className: "Bivalvia", orderName: "Unknown", name: "Megadesmidae", mainColor: "#F97316", lineageColors: { "megadesmidae": "#0EA5E9" } };
+const bivalvia_lyonsiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "lyonsiellidae", className: "Bivalvia", orderName: "Unknown", name: "Lyonsiellidae", mainColor: "#6366F1", lineageColors: { "lyonsiellidae": "#22C55E" } };
+const bivalvia_myochamidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "myochamidae", className: "Bivalvia", orderName: "Unknown", name: "Myochamidae", mainColor: "#84CC16", lineageColors: { "myochamidae": "#EAB308" } };
+const bivalvia_lyonsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "lyonsiidae", className: "Bivalvia", orderName: "Unknown", name: "Lyonsiidae", mainColor: "#06B6D4", lineageColors: { "lyonsiidae": "#A855F7" } };
+const bivalvia_grammysiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "grammysiidae", className: "Bivalvia", orderName: "Unknown", name: "Grammysiidae", mainColor: "#D946EF", lineageColors: { "grammysiidae": "#FB923C" } };
+const bivalvia_clavagellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "clavagellidae", className: "Bivalvia", orderName: "Unknown", name: "Clavagellidae", mainColor: "#0EA5E9", lineageColors: { "clavagellidae": "#2DD4BF" } };
+const bivalvia_cetoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cetoconchidae", className: "Bivalvia", orderName: "Unknown", name: "Cetoconchidae", mainColor: "#22C55E", lineageColors: { "cetoconchidae": "#A3E635" } };
+const bivalvia_parilimyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "parilimyidae", className: "Bivalvia", orderName: "Unknown", name: "Parilimyidae", mainColor: "#EAB308", lineageColors: { "parilimyidae": "#38BDF8" } };
+const bivalvia_praeostreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "praeostreidae", className: "Bivalvia", orderName: "Unknown", name: "Praeostreidae", mainColor: "#A855F7", lineageColors: { "praeostreidae": "#3B82F6" } };
+const bivalvia_protocuspidariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "protocuspidariidae", className: "Bivalvia", orderName: "Unknown", name: "Protocuspidariidae", mainColor: "#FB923C", lineageColors: { "protocuspidariidae": "#EF4444" } };
+const bivalvia_spheniopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "spheniopsidae", className: "Bivalvia", orderName: "Unknown", name: "Spheniopsidae", mainColor: "#2DD4BF", lineageColors: { "spheniopsidae": "#10B981" } };
+const bivalvia_euciroidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "euciroidae", className: "Bivalvia", orderName: "Unknown", name: "Euciroidae", mainColor: "#A3E635", lineageColors: { "euciroidae": "#F59E0B" } };
+const bivalvia_orthonotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "orthonotidae", className: "Bivalvia", orderName: "Unknown", name: "Orthonotidae", mainColor: "#38BDF8", lineageColors: { "orthonotidae": "#8B5CF6" } };
+const bivalvia_penicillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "penicillidae", className: "Bivalvia", orderName: "Unknown", name: "Penicillidae", mainColor: "#3B82F6", lineageColors: { "penicillidae": "#EC4899" } };
+const bivalvia_halonymphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "halonymphidae", className: "Bivalvia", orderName: "Unknown", name: "Halonymphidae", mainColor: "#EF4444", lineageColors: { "halonymphidae": "#14B8A6" } };
+const bivalvia_solenomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "solenomorphidae", className: "Bivalvia", orderName: "Unknown", name: "Solenomorphidae", mainColor: "#10B981", lineageColors: { "solenomorphidae": "#F97316" } };
+const bivalvia_burmesiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "burmesiidae", className: "Bivalvia", orderName: "Unknown", name: "Burmesiidae", mainColor: "#F59E0B", lineageColors: { "burmesiidae": "#6366F1" } };
+const bivalvia_carydiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "carydiidae", className: "Bivalvia", orderName: "Unknown", name: "Carydiidae", mainColor: "#8B5CF6", lineageColors: { "carydiidae": "#84CC16" } };
+const bivalvia_cleidothaeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cleidothaeridae", className: "Bivalvia", orderName: "Unknown", name: "Cleidothaeridae", mainColor: "#EC4899", lineageColors: { "cleidothaeridae": "#06B6D4" } };
+const bivalvia_allodesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "allodesmatidae", className: "Bivalvia", orderName: "Unknown", name: "Allodesmatidae", mainColor: "#14B8A6", lineageColors: { "allodesmatidae": "#D946EF" } };
+const bivalvia_myodakryotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "myodakryotidae", className: "Bivalvia", orderName: "Unknown", name: "Myodakryotidae", mainColor: "#F97316", lineageColors: { "myodakryotidae": "#0EA5E9" } };
+const bivalvia_streblopterinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "streblopterinellidae", className: "Bivalvia", orderName: "Unknown", name: "Streblopterinellidae", mainColor: "#6366F1", lineageColors: { "streblopterinellidae": "#22C55E" } };
+const bivalvia_arhouriellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "arhouriellidae", className: "Bivalvia", orderName: "Unknown", name: "Arhouriellidae", mainColor: "#84CC16", lineageColors: { "arhouriellidae": "#EAB308" } };
+const bivalvia_ucumariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "ucumariidae", className: "Bivalvia", orderName: "Unknown", name: "Ucumariidae", mainColor: "#06B6D4", lineageColors: { "ucumariidae": "#A855F7" } };
+const bivalvia_lipanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "lipanellidae", className: "Bivalvia", orderName: "Unknown", name: "Lipanellidae", mainColor: "#D946EF", lineageColors: { "lipanellidae": "#FB923C" } };
+const bivalvia_lunulicardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lunulicardiidae", className: "Bivalvia", orderName: "Unknown", name: "Lunulicardiidae", mainColor: "#0EA5E9", lineageColors: { "lunulicardiidae": "#2DD4BF" } };
+const bivalvia_actinodontophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "actinodontophoridae", className: "Bivalvia", orderName: "Unknown", name: "Actinodontophoridae", mainColor: "#22C55E", lineageColors: { "actinodontophoridae": "#A3E635" } };
+const bivalvia_yunanniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "yunanniidae", className: "Bivalvia", orderName: "Unknown", name: "Yunanniidae", mainColor: "#EAB308", lineageColors: { "yunanniidae": "#38BDF8" } };
+const bivalvia_saharopteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "saharopteridae", className: "Bivalvia", orderName: "Unknown", name: "Saharopteridae", mainColor: "#A855F7", lineageColors: { "saharopteridae": "#3B82F6" } };
+const bivalvia_bentholyonsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "bentholyonsiidae", className: "Bivalvia", orderName: "Unknown", name: "Bentholyonsiidae", mainColor: "#FB923C", lineageColors: { "bentholyonsiidae": "#EF4444" } };
+const bivalvia_clistoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "clistoconchidae", className: "Bivalvia", orderName: "Unknown", name: "Clistoconchidae", mainColor: "#2DD4BF", lineageColors: { "clistoconchidae": "#10B981" } };
+const bivalvia_praelamellodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "praelamellodontidae", className: "Bivalvia", orderName: "Unknown", name: "Praelamellodontidae", mainColor: "#A3E635", lineageColors: { "praelamellodontidae": "#F59E0B" } };
+const bivalvia_pholadomyacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pholadomyacidae", className: "Bivalvia", orderName: "Unknown", name: "Pholadomyacidae", mainColor: "#38BDF8", lineageColors: { "pholadomyacidae": "#8B5CF6" } };
+const bivalvia_dattidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "dattidae", className: "Bivalvia", orderName: "Unknown", name: "Dattidae", mainColor: "#3B82F6", lineageColors: { "dattidae": "#EC4899" } };
+const bivalvia_binipectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "binipectinidae", className: "Bivalvia", orderName: "Unknown", name: "Binipectinidae", mainColor: "#EF4444", lineageColors: { "binipectinidae": "#14B8A6" } };
+const bivalvia_petricolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "petricolidae", className: "Bivalvia", orderName: "Unknown", name: "Petricolidae", mainColor: "#10B981", lineageColors: { "petricolidae": "#F97316" } };
+const bivalvia_syncyclonemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "syncyclonemidae", className: "Bivalvia", orderName: "Unknown", name: "Syncyclonemidae", mainColor: "#F59E0B", lineageColors: { "syncyclonemidae": "#6366F1" } };
+const bivalvia_amblemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "amblemidae", className: "Bivalvia", orderName: "Unknown", name: "Amblemidae", mainColor: "#8B5CF6", lineageColors: { "amblemidae": "#84CC16" } };
+const bivalvia_isocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "isocardiidae", className: "Bivalvia", orderName: "Unknown", name: "Isocardiidae", mainColor: "#EC4899", lineageColors: { "isocardiidae": "#06B6D4" } };
+const bivalvia_kinerkaellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "kinerkaellidae", className: "Bivalvia", orderName: "Unknown", name: "Kinerkaellidae", mainColor: "#14B8A6", lineageColors: { "kinerkaellidae": "#D946EF" } };
+const bivalvia_cardilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cardilidae", className: "Bivalvia", orderName: "Unknown", name: "Cardilidae", mainColor: "#F97316", lineageColors: { "cardilidae": "#0EA5E9" } };
+const bivalvia_erodonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "erodonidae", className: "Bivalvia", orderName: "Unknown", name: "Erodonidae", mainColor: "#6366F1", lineageColors: { "erodonidae": "#22C55E" } };
+const bivalvia_lithodomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "lithodomidae", className: "Bivalvia", orderName: "Unknown", name: "Lithodomidae", mainColor: "#84CC16", lineageColors: { "lithodomidae": "#EAB308" } };
+const bivalvia_cyrtorostridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cyrtorostridae", className: "Bivalvia", orderName: "Unknown", name: "Cyrtorostridae", mainColor: "#06B6D4", lineageColors: { "cyrtorostridae": "#A855F7" } };
+const bivalvia_entolioididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "entolioididae", className: "Bivalvia", orderName: "Unknown", name: "Entolioididae", mainColor: "#D946EF", lineageColors: { "entolioididae": "#FB923C" } };
+const bivalvia_acanthopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "acanthopectinidae", className: "Bivalvia", orderName: "Unknown", name: "Acanthopectinidae", mainColor: "#0EA5E9", lineageColors: { "acanthopectinidae": "#2DD4BF" } };
+const bivalvia_leptochondriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "leptochondriidae", className: "Bivalvia", orderName: "Unknown", name: "Leptochondriidae", mainColor: "#22C55E", lineageColors: { "leptochondriidae": "#A3E635" } };
+const bivalvia_pleurodesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pleurodesmatidae", className: "Bivalvia", orderName: "Unknown", name: "Pleurodesmatidae", mainColor: "#EAB308", lineageColors: { "pleurodesmatidae": "#38BDF8" } };
+const bivalvia_rzehakiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "rzehakiidae", className: "Bivalvia", orderName: "Unknown", name: "Rzehakiidae", mainColor: "#A855F7", lineageColors: { "rzehakiidae": "#3B82F6" } };
+const bivalvia_mecynodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "mecynodontidae", className: "Bivalvia", orderName: "Unknown", name: "Mecynodontidae", mainColor: "#FB923C", lineageColors: { "mecynodontidae": "#EF4444" } };
+const bivalvia_pollicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pollicidae", className: "Bivalvia", orderName: "Unknown", name: "Pollicidae", mainColor: "#2DD4BF", lineageColors: { "pollicidae": "#10B981" } };
+const bivalvia_cercomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cercomyidae", className: "Bivalvia", orderName: "Unknown", name: "Cercomyidae", mainColor: "#A3E635", lineageColors: { "cercomyidae": "#F59E0B" } };
+const bivalvia_lithiotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "lithiotidae", className: "Bivalvia", orderName: "Unknown", name: "Lithiotidae", mainColor: "#38BDF8", lineageColors: { "lithiotidae": "#8B5CF6" } };
+const bivalvia_monopteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "monopteriidae", className: "Bivalvia", orderName: "Unknown", name: "Monopteriidae", mainColor: "#3B82F6", lineageColors: { "monopteriidae": "#EC4899" } };
+const bivalvia_plicatostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "plicatostylidae", className: "Bivalvia", orderName: "Unknown", name: "Plicatostylidae", mainColor: "#EF4444", lineageColors: { "plicatostylidae": "#14B8A6" } };
+const bivalvia_atomodesmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "atomodesmidae", className: "Bivalvia", orderName: "Unknown", name: "Atomodesmidae", mainColor: "#10B981", lineageColors: { "atomodesmidae": "#F97316" } };
+const bivalvia_eurydesmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "eurydesmidae", className: "Bivalvia", orderName: "Unknown", name: "Eurydesmidae", mainColor: "#F59E0B", lineageColors: { "eurydesmidae": "#6366F1" } };
+const bivalvia_dictyoptychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "dictyoptychidae", className: "Bivalvia", orderName: "Unknown", name: "Dictyoptychidae", mainColor: "#8B5CF6", lineageColors: { "dictyoptychidae": "#84CC16" } };
+const bivalvia_pitchleriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pitchleriidae", className: "Bivalvia", orderName: "Unknown", name: "Pitchleriidae", mainColor: "#EC4899", lineageColors: { "pitchleriidae": "#06B6D4" } };
+const bivalvia_permanomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "permanomiidae", className: "Bivalvia", orderName: "Unknown", name: "Permanomiidae", mainColor: "#14B8A6", lineageColors: { "permanomiidae": "#D946EF" } };
+const bivalvia_eritropidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "eritropidae", className: "Bivalvia", orderName: "Unknown", name: "Eritropidae", mainColor: "#F97316", lineageColors: { "eritropidae": "#0EA5E9" } };
+const bivalvia_lahillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "lahillidae", className: "Bivalvia", orderName: "Unknown", name: "Lahillidae", mainColor: "#6366F1", lineageColors: { "lahillidae": "#22C55E" } };
+const bivalvia_margaritariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "margaritariidae", className: "Bivalvia", orderName: "Unknown", name: "Margaritariidae", mainColor: "#84CC16", lineageColors: { "margaritariidae": "#EAB308" } };
+const bivalvia_lamellodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "lamellodontidae", className: "Bivalvia", orderName: "Unknown", name: "Lamellodontidae", mainColor: "#06B6D4", lineageColors: { "lamellodontidae": "#A855F7" } };
+const bivalvia_nyassidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "nyassidae", className: "Bivalvia", orderName: "Unknown", name: "Nyassidae", mainColor: "#D946EF", lineageColors: { "nyassidae": "#FB923C" } };
+const bivalvia_saharopteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "saharopteriidae", className: "Bivalvia", orderName: "Unknown", name: "Saharopteriidae", mainColor: "#0EA5E9", lineageColors: { "saharopteriidae": "#2DD4BF" } };
+const bivalvia_lamellotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "lamellotidae", className: "Bivalvia", orderName: "Unknown", name: "Lamellotidae", mainColor: "#22C55E", lineageColors: { "lamellotidae": "#A3E635" } };
+const bivalvia_prospondylidea: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "prospondylidea", className: "Bivalvia", orderName: "Unknown", name: "Prospondylidea", mainColor: "#EAB308", lineageColors: { "prospondylidea": "#38BDF8" } };
+const bivalvia_deltopectenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "deltopectenidae", className: "Bivalvia", orderName: "Unknown", name: "Deltopectenidae", mainColor: "#A855F7", lineageColors: { "deltopectenidae": "#3B82F6" } };
+const bivalvia_dreisseniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "dreisseniidae", className: "Bivalvia", orderName: "Unknown", name: "Dreisseniidae", mainColor: "#FB923C", lineageColors: { "dreisseniidae": "#EF4444" } };
+const bivalvia_solenomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "solenomyidae", className: "Bivalvia", orderName: "Unknown", name: "Solenomyidae", mainColor: "#2DD4BF", lineageColors: { "solenomyidae": "#10B981" } };
+const bivalvia_evyanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "evyanidae", className: "Bivalvia", orderName: "Unknown", name: "Evyanidae", mainColor: "#A3E635", lineageColors: { "evyanidae": "#F59E0B" } };
+const bivalvia_melliterycidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "melliterycidae", className: "Bivalvia", orderName: "Unknown", name: "Melliterycidae", mainColor: "#38BDF8", lineageColors: { "melliterycidae": "#8B5CF6" } };
+const bivalvia_xylophaginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "xylophaginidae", className: "Bivalvia", orderName: "Unknown", name: "Xylophaginidae", mainColor: "#3B82F6", lineageColors: { "xylophaginidae": "#EC4899" } };
+const bivalvia_glyphaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "glyphaeidae", className: "Bivalvia", orderName: "Unknown", name: "Glyphaeidae", mainColor: "#EF4444", lineageColors: { "glyphaeidae": "#14B8A6" } };
+const bivalvia_eurydesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "eurydesmatidae", className: "Bivalvia", orderName: "Unknown", name: "Eurydesmatidae", mainColor: "#10B981", lineageColors: { "eurydesmatidae": "#F97316" } };
+const bivalvia_umburridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "umburridae", className: "Bivalvia", orderName: "Unknown", name: "Umburridae", mainColor: "#F59E0B", lineageColors: { "umburridae": "#6366F1" } };
+const bivalvia_baidiostracidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "baidiostracidae", className: "Bivalvia", orderName: "Unknown", name: "Baidiostracidae", mainColor: "#8B5CF6", lineageColors: { "baidiostracidae": "#84CC16" } };
+const bivalvia_ornithopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "ornithopectinidae", className: "Bivalvia", orderName: "Unknown", name: "Ornithopectinidae", mainColor: "#EC4899", lineageColors: { "ornithopectinidae": "#06B6D4" } };
+const bivalvia_paracyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "paracyclidae", className: "Bivalvia", orderName: "Unknown", name: "Paracyclidae", mainColor: "#14B8A6", lineageColors: { "paracyclidae": "#D946EF" } };
+const bivalvia_falcatodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "falcatodontidae", className: "Bivalvia", orderName: "Unknown", name: "Falcatodontidae", mainColor: "#F97316", lineageColors: { "falcatodontidae": "#0EA5E9" } };
+const bivalvia_catamarcaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "catamarcaiidae", className: "Bivalvia", orderName: "Unknown", name: "Catamarcaiidae", mainColor: "#6366F1", lineageColors: { "catamarcaiidae": "#22C55E" } };
+const bivalvia_clinopisthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "clinopisthidae", className: "Bivalvia", orderName: "Unknown", name: "Clinopisthidae", mainColor: "#84CC16", lineageColors: { "clinopisthidae": "#EAB308" } };
+const bivalvia_claraiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "claraiidae", className: "Bivalvia", orderName: "Unknown", name: "Claraiidae", mainColor: "#06B6D4", lineageColors: { "claraiidae": "#A855F7" } };
+const bivalvia_ischyrodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ischyrodontidae", className: "Bivalvia", orderName: "Unknown", name: "Ischyrodontidae", mainColor: "#D946EF", lineageColors: { "ischyrodontidae": "#FB923C" } };
+const bivalvia_crassatellopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "crassatellopsidae", className: "Bivalvia", orderName: "Unknown", name: "Crassatellopsidae", mainColor: "#0EA5E9", lineageColors: { "crassatellopsidae": "#2DD4BF" } };
+const bivalvia_eodonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "eodonidae", className: "Bivalvia", orderName: "Unknown", name: "Eodonidae", mainColor: "#22C55E", lineageColors: { "eodonidae": "#A3E635" } };
+const bivalvia_tusayanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "tusayanidae", className: "Bivalvia", orderName: "Unknown", name: "Tusayanidae", mainColor: "#EAB308", lineageColors: { "tusayanidae": "#38BDF8" } };
+const bivalvia_antijaniridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "antijaniridae", className: "Bivalvia", orderName: "Unknown", name: "Antijaniridae", mainColor: "#A855F7", lineageColors: { "antijaniridae": "#3B82F6" } };
+const bivalvia_similodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "similodontidae", className: "Bivalvia", orderName: "Unknown", name: "Similodontidae", mainColor: "#FB923C", lineageColors: { "similodontidae": "#EF4444" } };
+const bivalvia_ovatoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ovatoconchidae", className: "Bivalvia", orderName: "Unknown", name: "Ovatoconchidae", mainColor: "#2DD4BF", lineageColors: { "ovatoconchidae": "#10B981" } };
+const bivalvia_vlastidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "vlastidae", className: "Bivalvia", orderName: "Unknown", name: "Vlastidae", mainColor: "#A3E635", lineageColors: { "vlastidae": "#F59E0B" } };
+const bivalvia_montanariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "montanariidae", className: "Bivalvia", orderName: "Unknown", name: "Montanariidae", mainColor: "#38BDF8", lineageColors: { "montanariidae": "#8B5CF6" } };
+const bivalvia_prothyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "prothyridae", className: "Bivalvia", orderName: "Unknown", name: "Prothyridae", mainColor: "#3B82F6", lineageColors: { "prothyridae": "#EC4899" } };
+const bivalvia_natalissimidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "natalissimidae", className: "Bivalvia", orderName: "Unknown", name: "Natalissimidae", mainColor: "#EF4444", lineageColors: { "natalissimidae": "#14B8A6" } };
+const bivalvia_pernopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pernopectinidae", className: "Bivalvia", orderName: "Unknown", name: "Pernopectinidae", mainColor: "#10B981", lineageColors: { "pernopectinidae": "#F97316" } };
+const bivalvia_limipectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "limipectinidae", className: "Bivalvia", orderName: "Unknown", name: "Limipectinidae", mainColor: "#F59E0B", lineageColors: { "limipectinidae": "#6366F1" } };
+const bivalvia_praelucinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "praelucinidae", className: "Bivalvia", orderName: "Unknown", name: "Praelucinidae", mainColor: "#8B5CF6", lineageColors: { "praelucinidae": "#84CC16" } };
+const bivalvia_vacunellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "vacunellidae", className: "Bivalvia", orderName: "Unknown", name: "Vacunellidae", mainColor: "#EC4899", lineageColors: { "vacunellidae": "#06B6D4" } };
+const bivalvia_coxiconchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "coxiconchiidae", className: "Bivalvia", orderName: "Unknown", name: "Coxiconchiidae", mainColor: "#14B8A6", lineageColors: { "coxiconchiidae": "#D946EF" } };
+const bivalvia_anodontopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "anodontopsidae", className: "Bivalvia", orderName: "Unknown", name: "Anodontopsidae", mainColor: "#F97316", lineageColors: { "anodontopsidae": "#0EA5E9" } };
+const bivalvia_dualinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "dualinidae", className: "Bivalvia", orderName: "Unknown", name: "Dualinidae", mainColor: "#6366F1", lineageColors: { "dualinidae": "#22C55E" } };
+const bivalvia_afghanodesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "afghanodesmatidae", className: "Bivalvia", orderName: "Unknown", name: "Afghanodesmatidae", mainColor: "#84CC16", lineageColors: { "afghanodesmatidae": "#EAB308" } };
+const bivalvia_crenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "crenellidae", className: "Bivalvia", orderName: "Unknown", name: "Crenellidae", mainColor: "#06B6D4", lineageColors: { "crenellidae": "#A855F7" } };
+const bivalvia_pseudarcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pseudarcidae", className: "Bivalvia", orderName: "Unknown", name: "Pseudarcidae", mainColor: "#D946EF", lineageColors: { "pseudarcidae": "#FB923C" } };
+const bivalvia_pucamyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pucamyidae", className: "Bivalvia", orderName: "Unknown", name: "Pucamyidae", mainColor: "#0EA5E9", lineageColors: { "pucamyidae": "#2DD4BF" } };
+const bivalvia_matheriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "matheriidae", className: "Bivalvia", orderName: "Unknown", name: "Matheriidae", mainColor: "#22C55E", lineageColors: { "matheriidae": "#A3E635" } };
+const bivalvia_pseudocyrtodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pseudocyrtodontidae", className: "Bivalvia", orderName: "Unknown", name: "Pseudocyrtodontidae", mainColor: "#EAB308", lineageColors: { "pseudocyrtodontidae": "#38BDF8" } };
+const bivalvia_saikraconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "saikraconchidae", className: "Bivalvia", orderName: "Unknown", name: "Saikraconchidae", mainColor: "#A855F7", lineageColors: { "saikraconchidae": "#3B82F6" } };
+const bivalvia_manticulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "manticulidae", className: "Bivalvia", orderName: "Unknown", name: "Manticulidae", mainColor: "#FB923C", lineageColors: { "manticulidae": "#EF4444" } };
+const bivalvia_strabidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "strabidae", className: "Bivalvia", orderName: "Unknown", name: "Strabidae", mainColor: "#2DD4BF", lineageColors: { "strabidae": "#10B981" } };
+const bivalvia_konduriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "konduriidae", className: "Bivalvia", orderName: "Unknown", name: "Konduriidae", mainColor: "#A3E635", lineageColors: { "konduriidae": "#F59E0B" } };
+const bivalvia_oriocrassatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "oriocrassatellidae", className: "Bivalvia", orderName: "Unknown", name: "Oriocrassatellidae", mainColor: "#38BDF8", lineageColors: { "oriocrassatellidae": "#8B5CF6" } };
+const bivalvia_arenigomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "arenigomyidae", className: "Bivalvia", orderName: "Unknown", name: "Arenigomyidae", mainColor: "#3B82F6", lineageColors: { "arenigomyidae": "#EC4899" } };
+const bivalvia_myoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "myoconchidae", className: "Bivalvia", orderName: "Unknown", name: "Myoconchidae", mainColor: "#EF4444", lineageColors: { "myoconchidae": "#14B8A6" } };
+const bivalvia_pergamidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pergamidae", className: "Bivalvia", orderName: "Unknown", name: "Pergamidae", mainColor: "#10B981", lineageColors: { "pergamidae": "#F97316" } };
+const bivalvia_archaracidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "archaracidae", className: "Bivalvia", orderName: "Unknown", name: "Archaracidae", mainColor: "#F59E0B", lineageColors: { "archaracidae": "#6366F1" } };
+const bivalvia_septiferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "septiferidae", className: "Bivalvia", orderName: "Unknown", name: "Septiferidae", mainColor: "#8B5CF6", lineageColors: { "septiferidae": "#84CC16" } };
+const bivalvia_isolimeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "isolimeidae", className: "Bivalvia", orderName: "Unknown", name: "Isolimeidae", mainColor: "#EC4899", lineageColors: { "isolimeidae": "#06B6D4" } };
+const bivalvia_palaeocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "palaeocardiidae", className: "Bivalvia", orderName: "Unknown", name: "Palaeocardiidae", mainColor: "#14B8A6", lineageColors: { "palaeocardiidae": "#D946EF" } };
+const bivalvia_ephippiodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "ephippiodontidae", className: "Bivalvia", orderName: "Unknown", name: "Ephippiodontidae", mainColor: "#F97316", lineageColors: { "ephippiodontidae": "#0EA5E9" } };
+const bivalvia_chondrotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "chondrotidae", className: "Bivalvia", orderName: "Unknown", name: "Chondrotidae", mainColor: "#6366F1", lineageColors: { "chondrotidae": "#22C55E" } };
+const bivalvia_ichtyosarcolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "ichtyosarcolidae", className: "Bivalvia", orderName: "Unknown", name: "Ichtyosarcolidae", mainColor: "#84CC16", lineageColors: { "ichtyosarcolidae": "#EAB308" } };
+const bivalvia_cardiolariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cardiolariidae", className: "Bivalvia", orderName: "Unknown", name: "Cardiolariidae", mainColor: "#06B6D4", lineageColors: { "cardiolariidae": "#A855F7" } };
+const bivalvia_cadomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cadomiidae", className: "Bivalvia", orderName: "Unknown", name: "Cadomiidae", mainColor: "#D946EF", lineageColors: { "cadomiidae": "#FB923C" } };
+const bivalvia_lutetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lutetidae", className: "Bivalvia", orderName: "Unknown", name: "Lutetidae", mainColor: "#0EA5E9", lineageColors: { "lutetidae": "#2DD4BF" } };
+const bivalvia_coxiconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "coxiconchidae", className: "Bivalvia", orderName: "Unknown", name: "Coxiconchidae", mainColor: "#22C55E", lineageColors: { "coxiconchidae": "#A3E635" } };
+const bivalvia_saturnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "saturnidae", className: "Bivalvia", orderName: "Unknown", name: "Saturnidae", mainColor: "#EAB308", lineageColors: { "saturnidae": "#38BDF8" } };
+const bivalvia_bakevellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "bakevellidae", className: "Bivalvia", orderName: "Unknown", name: "Bakevellidae", mainColor: "#A855F7", lineageColors: { "bakevellidae": "#3B82F6" } };
+const bivalvia_rhaetomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "rhaetomyidae", className: "Bivalvia", orderName: "Unknown", name: "Rhaetomyidae", mainColor: "#FB923C", lineageColors: { "rhaetomyidae": "#EF4444" } };
+const bivalvia_ambonychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ambonychidae", className: "Bivalvia", orderName: "Unknown", name: "Ambonychidae", mainColor: "#2DD4BF", lineageColors: { "ambonychidae": "#10B981" } };
+const bivalvia_palaeolophidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "palaeolophidae", className: "Bivalvia", orderName: "Unknown", name: "Palaeolophidae", mainColor: "#A3E635", lineageColors: { "palaeolophidae": "#F59E0B" } };
+const bivalvia_radulopectinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "radulopectinidae", className: "Bivalvia", orderName: "Unknown", name: "Radulopectinidae", mainColor: "#38BDF8", lineageColors: { "radulopectinidae": "#8B5CF6" } };
+const bivalvia_cultelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cultelidae", className: "Bivalvia", orderName: "Unknown", name: "Cultelidae", mainColor: "#3B82F6", lineageColors: { "cultelidae": "#EC4899" } };
+const bivalvia_paraviculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "paraviculidae", className: "Bivalvia", orderName: "Unknown", name: "Paraviculidae", mainColor: "#EF4444", lineageColors: { "paraviculidae": "#14B8A6" } };
+const bivalvia_corbidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "corbidae", className: "Bivalvia", orderName: "Unknown", name: "Corbidae", mainColor: "#10B981", lineageColors: { "corbidae": "#F97316" } };
+const bivalvia_otapiriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "otapiriidae", className: "Bivalvia", orderName: "Unknown", name: "Otapiriidae", mainColor: "#F59E0B", lineageColors: { "otapiriidae": "#6366F1" } };
+const bivalvia_saffordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "saffordiidae", className: "Bivalvia", orderName: "Unknown", name: "Saffordiidae", mainColor: "#8B5CF6", lineageColors: { "saffordiidae": "#84CC16" } };
+const bivalvia_gariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "gariidae", className: "Bivalvia", orderName: "Unknown", name: "Gariidae", mainColor: "#EC4899", lineageColors: { "gariidae": "#06B6D4" } };
+const bivalvia_tanaodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "tanaodontidae", className: "Bivalvia", orderName: "Unknown", name: "Tanaodontidae", mainColor: "#14B8A6", lineageColors: { "tanaodontidae": "#D946EF" } };
+const bivalvia_laurskiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "laurskiidae", className: "Bivalvia", orderName: "Unknown", name: "Laurskiidae", mainColor: "#F97316", lineageColors: { "laurskiidae": "#0EA5E9" } };
+const bivalvia_cirravidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cirravidae", className: "Bivalvia", orderName: "Unknown", name: "Cirravidae", mainColor: "#6366F1", lineageColors: { "cirravidae": "#22C55E" } };
+const bivalvia_megadesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "megadesmatidae", className: "Bivalvia", orderName: "Unknown", name: "Megadesmatidae", mainColor: "#84CC16", lineageColors: { "megadesmatidae": "#EAB308" } };
+const bivalvia_palaeoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "palaeoconchidae", className: "Bivalvia", orderName: "Unknown", name: "Palaeoconchidae", mainColor: "#06B6D4", lineageColors: { "palaeoconchidae": "#A855F7" } };
+const bivalvia_spirodomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "spirodomidae", className: "Bivalvia", orderName: "Unknown", name: "Spirodomidae", mainColor: "#D946EF", lineageColors: { "spirodomidae": "#FB923C" } };
+const bivalvia_septocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "septocardiidae", className: "Bivalvia", orderName: "Unknown", name: "Septocardiidae", mainColor: "#0EA5E9", lineageColors: { "septocardiidae": "#2DD4BF" } };
+const bivalvia_palaeoneilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "palaeoneilidae", className: "Bivalvia", orderName: "Unknown", name: "Palaeoneilidae", mainColor: "#22C55E", lineageColors: { "palaeoneilidae": "#A3E635" } };
+const bivalvia_terraiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "terraiidae", className: "Bivalvia", orderName: "Unknown", name: "Terraiidae", mainColor: "#EAB308", lineageColors: { "terraiidae": "#38BDF8" } };
+const bivalvia_carditidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "carditidae", className: "Bivalvia", orderName: "Carditida", name: "Carditidae", mainColor: "#A855F7", lineageColors: { "carditidae": "#3B82F6" } };
+const bivalvia_astartidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "astartidae", className: "Bivalvia", orderName: "Carditida", name: "Astartidae", mainColor: "#FB923C", lineageColors: { "astartidae": "#EF4444" } };
+const bivalvia_crassatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "crassatellidae", className: "Bivalvia", orderName: "Carditida", name: "Crassatellidae", mainColor: "#2DD4BF", lineageColors: { "crassatellidae": "#10B981" } };
+const bivalvia_condylocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "condylocardiidae", className: "Bivalvia", orderName: "Carditida", name: "Condylocardiidae", mainColor: "#A3E635", lineageColors: { "condylocardiidae": "#F59E0B" } };
+const bivalvia_cardiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cardiniidae", className: "Bivalvia", orderName: "Carditida", name: "Cardiniidae", mainColor: "#38BDF8", lineageColors: { "cardiniidae": "#8B5CF6" } };
+const bivalvia_myophoricardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "myophoricardiidae", className: "Bivalvia", orderName: "Carditida", name: "Myophoricardiidae", mainColor: "#3B82F6", lineageColors: { "myophoricardiidae": "#EC4899" } };
+const bivalvia_aenigmoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "aenigmoconchidae", className: "Bivalvia", orderName: "Carditida", name: "Aenigmoconchidae", mainColor: "#EF4444", lineageColors: { "aenigmoconchidae": "#14B8A6" } };
+const bivalvia_archaeocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "archaeocardiidae", className: "Bivalvia", orderName: "Carditida", name: "Archaeocardiidae", mainColor: "#10B981", lineageColors: { "archaeocardiidae": "#F97316" } };
+const bivalvia_corbulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "corbulidae", className: "Bivalvia", orderName: "Myida", name: "Corbulidae", mainColor: "#F59E0B", lineageColors: { "corbulidae": "#6366F1" } };
+const bivalvia_dreissenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "dreissenidae", className: "Bivalvia", orderName: "Myida", name: "Dreissenidae", mainColor: "#8B5CF6", lineageColors: { "dreissenidae": "#84CC16" } };
+const bivalvia_pholadidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pholadidae", className: "Bivalvia", orderName: "Myida", name: "Pholadidae", mainColor: "#EC4899", lineageColors: { "pholadidae": "#06B6D4" } };
+const bivalvia_teredinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "teredinidae", className: "Bivalvia", orderName: "Myida", name: "Teredinidae", mainColor: "#14B8A6", lineageColors: { "teredinidae": "#D946EF" } };
+const bivalvia_myidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "myidae", className: "Bivalvia", orderName: "Myida", name: "Myidae", mainColor: "#F97316", lineageColors: { "myidae": "#0EA5E9" } };
+const bivalvia_xylophagaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "xylophagaidae", className: "Bivalvia", orderName: "Myida", name: "Xylophagaidae", mainColor: "#6366F1", lineageColors: { "xylophagaidae": "#22C55E" } };
+const bivalvia_pleuromyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "pleuromyidae", className: "Bivalvia", orderName: "Myida", name: "Pleuromyidae", mainColor: "#84CC16", lineageColors: { "pleuromyidae": "#EAB308" } };
+const bivalvia_ceratomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "ceratomyidae", className: "Bivalvia", orderName: "Myida", name: "Ceratomyidae", mainColor: "#06B6D4", lineageColors: { "ceratomyidae": "#A855F7" } };
+const bivalvia_raetomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "raetomyidae", className: "Bivalvia", orderName: "Myida", name: "Raetomyidae", mainColor: "#D946EF", lineageColors: { "raetomyidae": "#FB923C" } };
+const bivalvia_lucinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lucinidae", className: "Bivalvia", orderName: "Lucinida", name: "Lucinidae", mainColor: "#0EA5E9", lineageColors: { "lucinidae": "#2DD4BF" } };
+const bivalvia_thyasiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "thyasiridae", className: "Bivalvia", orderName: "Lucinida", name: "Thyasiridae", mainColor: "#22C55E", lineageColors: { "thyasiridae": "#A3E635" } };
+const bivalvia_mactromyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "mactromyidae", className: "Bivalvia", orderName: "Lucinida", name: "Mactromyidae", mainColor: "#EAB308", lineageColors: { "mactromyidae": "#38BDF8" } };
+const bivalvia_fimbriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "fimbriidae", className: "Bivalvia", orderName: "Lucinida", name: "Fimbriidae", mainColor: "#A855F7", lineageColors: { "fimbriidae": "#3B82F6" } };
+const bivalvia_nuculanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "nuculanidae", className: "Bivalvia", orderName: "Nuculanida", name: "Nuculanidae", mainColor: "#FB923C", lineageColors: { "nuculanidae": "#EF4444" } };
+const bivalvia_yoldiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "yoldiidae", className: "Bivalvia", orderName: "Nuculanida", name: "Yoldiidae", mainColor: "#2DD4BF", lineageColors: { "yoldiidae": "#10B981" } };
+const bivalvia_malletiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "malletiidae", className: "Bivalvia", orderName: "Nuculanida", name: "Malletiidae", mainColor: "#A3E635", lineageColors: { "malletiidae": "#F59E0B" } };
+const bivalvia_neilonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "neilonellidae", className: "Bivalvia", orderName: "Nuculanida", name: "Neilonellidae", mainColor: "#38BDF8", lineageColors: { "neilonellidae": "#8B5CF6" } };
+const bivalvia_tindariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "tindariidae", className: "Bivalvia", orderName: "Nuculanida", name: "Tindariidae", mainColor: "#3B82F6", lineageColors: { "tindariidae": "#EC4899" } };
+const bivalvia_bathyspinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "bathyspinulidae", className: "Bivalvia", orderName: "Nuculanida", name: "Bathyspinulidae", mainColor: "#EF4444", lineageColors: { "bathyspinulidae": "#14B8A6" } };
+const bivalvia_sareptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "sareptidae", className: "Bivalvia", orderName: "Nuculanida", name: "Sareptidae", mainColor: "#10B981", lineageColors: { "sareptidae": "#F97316" } };
+const bivalvia_cucullellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cucullellidae", className: "Bivalvia", orderName: "Nuculanida", name: "Cucullellidae", mainColor: "#F59E0B", lineageColors: { "cucullellidae": "#6366F1" } };
+const bivalvia_isoarcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "isoarcidae", className: "Bivalvia", orderName: "Nuculanida", name: "Isoarcidae", mainColor: "#8B5CF6", lineageColors: { "isoarcidae": "#84CC16" } };
+const bivalvia_siliculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "siliculidae", className: "Bivalvia", orderName: "Nuculanida", name: "Siliculidae", mainColor: "#EC4899", lineageColors: { "siliculidae": "#06B6D4" } };
+const bivalvia_polidevciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "polidevciidae", className: "Bivalvia", orderName: "Nuculanida", name: "Polidevciidae", mainColor: "#14B8A6", lineageColors: { "polidevciidae": "#D946EF" } };
+const bivalvia_pristiglomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pristiglomidae", className: "Bivalvia", orderName: "Nuculanida", name: "Pristiglomidae", mainColor: "#F97316", lineageColors: { "pristiglomidae": "#0EA5E9" } };
+const bivalvia_lametilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "lametilidae", className: "Bivalvia", orderName: "Nuculanida", name: "Lametilidae", mainColor: "#6366F1", lineageColors: { "lametilidae": "#22C55E" } };
+const bivalvia_phaseolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "phaseolidae", className: "Bivalvia", orderName: "Nuculanida", name: "Phaseolidae", mainColor: "#84CC16", lineageColors: { "phaseolidae": "#EAB308" } };
+const bivalvia_mytilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "mytilidae", className: "Bivalvia", orderName: "Mytilida", name: "Mytilidae", mainColor: "#06B6D4", lineageColors: { "mytilidae": "#A855F7" } };
+const bivalvia_goniophorinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "goniophorinidae", className: "Bivalvia", orderName: "Mytilida", name: "Goniophorinidae", mainColor: "#D946EF", lineageColors: { "goniophorinidae": "#FB923C" } };
+const bivalvia_modiolopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "modiolopsidae", className: "Bivalvia", orderName: "Mytilida", name: "Modiolopsidae", mainColor: "#0EA5E9", lineageColors: { "modiolopsidae": "#2DD4BF" } };
+const bivalvia_inoceramidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "inoceramidae", className: "Bivalvia", orderName: "Myalinida", name: "Inoceramidae", mainColor: "#22C55E", lineageColors: { "inoceramidae": "#A3E635" } };
+const bivalvia_ambonychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "ambonychiidae", className: "Bivalvia", orderName: "Myalinida", name: "Ambonychiidae", mainColor: "#EAB308", lineageColors: { "ambonychiidae": "#38BDF8" } };
+const bivalvia_naiaditidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "naiaditidae", className: "Bivalvia", orderName: "Myalinida", name: "Naiaditidae", mainColor: "#A855F7", lineageColors: { "naiaditidae": "#3B82F6" } };
+const bivalvia_prokopievskiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "prokopievskiidae", className: "Bivalvia", orderName: "Myalinida", name: "Prokopievskiidae", mainColor: "#FB923C", lineageColors: { "prokopievskiidae": "#EF4444" } };
+const bivalvia_myalinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "myalinidae", className: "Bivalvia", orderName: "Myalinida", name: "Myalinidae", mainColor: "#2DD4BF", lineageColors: { "myalinidae": "#10B981" } };
+const bivalvia_kolymiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "kolymiidae", className: "Bivalvia", orderName: "Myalinida", name: "Kolymiidae", mainColor: "#A3E635", lineageColors: { "kolymiidae": "#F59E0B" } };
+const bivalvia_anadontellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "anadontellidae", className: "Bivalvia", orderName: "Myalinida", name: "Anadontellidae", mainColor: "#38BDF8", lineageColors: { "anadontellidae": "#8B5CF6" } };
+const bivalvia_atomodesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "atomodesmatidae", className: "Bivalvia", orderName: "Myalinida", name: "Atomodesmatidae", mainColor: "#3B82F6", lineageColors: { "atomodesmatidae": "#EC4899" } };
+const bivalvia_mysidiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "mysidiellidae", className: "Bivalvia", orderName: "Myalinida", name: "Mysidiellidae", mainColor: "#EF4444", lineageColors: { "mysidiellidae": "#14B8A6" } };
+const bivalvia_retroceramidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "retroceramidae", className: "Bivalvia", orderName: "Myalinida", name: "Retroceramidae", mainColor: "#10B981", lineageColors: { "retroceramidae": "#F97316" } };
+const bivalvia_lunulacardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lunulacardiidae", className: "Bivalvia", orderName: "Myalinida", name: "Lunulacardiidae", mainColor: "#F59E0B", lineageColors: { "lunulacardiidae": "#6366F1" } };
+const bivalvia_alatoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "alatoconchidae", className: "Bivalvia", orderName: "Myalinida", name: "Alatoconchidae", mainColor: "#8B5CF6", lineageColors: { "alatoconchidae": "#84CC16" } };
+const bivalvia_ramonalinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "ramonalinidae", className: "Bivalvia", orderName: "Myalinida", name: "Ramonalinidae", mainColor: "#EC4899", lineageColors: { "ramonalinidae": "#06B6D4" } };
+const bivalvia_lasaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lasaeidae", className: "Bivalvia", orderName: "Galeommatida", name: "Lasaeidae", mainColor: "#14B8A6", lineageColors: { "lasaeidae": "#D946EF" } };
+const bivalvia_galeommatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "galeommatidae", className: "Bivalvia", orderName: "Galeommatida", name: "Galeommatidae", mainColor: "#F97316", lineageColors: { "galeommatidae": "#0EA5E9" } };
+const bivalvia_basterotiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "basterotiidae", className: "Bivalvia", orderName: "Galeommatida", name: "Basterotiidae", mainColor: "#6366F1", lineageColors: { "basterotiidae": "#22C55E" } };
+const bivalvia_montacutidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "montacutidae", className: "Bivalvia", orderName: "Galeommatida", name: "Montacutidae", mainColor: "#84CC16", lineageColors: { "montacutidae": "#EAB308" } };
+const bivalvia_sphaeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "sphaeriidae", className: "Bivalvia", orderName: "Sphaeriida", name: "Sphaeriidae", mainColor: "#06B6D4", lineageColors: { "sphaeriidae": "#A855F7" } };
+const bivalvia_neomiodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "neomiodontidae", className: "Bivalvia", orderName: "Sphaeriida", name: "Neomiodontidae", mainColor: "#D946EF", lineageColors: { "neomiodontidae": "#FB923C" } };
+const bivalvia_limnocyrenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "limnocyrenidae", className: "Bivalvia", orderName: "Sphaeriida", name: "Limnocyrenidae", mainColor: "#0EA5E9", lineageColors: { "limnocyrenidae": "#2DD4BF" } };
+const bivalvia_kijidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "kijidae", className: "Bivalvia", orderName: "Sphaeriida", name: "Kijidae", mainColor: "#22C55E", lineageColors: { "kijidae": "#A3E635" } };
+const bivalvia_sibireconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "sibireconchidae", className: "Bivalvia", orderName: "Sphaeriida", name: "Sibireconchidae", mainColor: "#EAB308", lineageColors: { "sibireconchidae": "#38BDF8" } };
+const bivalvia_limidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "limidae", className: "Bivalvia", orderName: "Limida", name: "Limidae", mainColor: "#A855F7", lineageColors: { "limidae": "#3B82F6" } };
+const bivalvia_nuculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "nuculidae", className: "Bivalvia", orderName: "Nuculida", name: "Nuculidae", mainColor: "#FB923C", lineageColors: { "nuculidae": "#EF4444" } };
+const bivalvia_praenuculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "praenuculidae", className: "Bivalvia", orderName: "Nuculida", name: "Praenuculidae", mainColor: "#2DD4BF", lineageColors: { "praenuculidae": "#10B981" } };
+const bivalvia_thoraliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "thoraliidae", className: "Bivalvia", orderName: "Nuculida", name: "Thoraliidae", mainColor: "#A3E635", lineageColors: { "thoraliidae": "#F59E0B" } };
+const bivalvia_antactinodiontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "antactinodiontidae", className: "Bivalvia", orderName: "Nuculida", name: "Antactinodiontidae", mainColor: "#38BDF8", lineageColors: { "antactinodiontidae": "#8B5CF6" } };
+const bivalvia_radiolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "radiolitidae", className: "Bivalvia", orderName: "Hippuritida", name: "Radiolitidae", mainColor: "#3B82F6", lineageColors: { "radiolitidae": "#EC4899" } };
+const bivalvia_epidiceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "epidiceratidae", className: "Bivalvia", orderName: "Hippuritida", name: "Epidiceratidae", mainColor: "#EF4444", lineageColors: { "epidiceratidae": "#14B8A6" } };
+const bivalvia_monopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "monopleuridae", className: "Bivalvia", orderName: "Hippuritida", name: "Monopleuridae", mainColor: "#10B981", lineageColors: { "monopleuridae": "#F97316" } };
+const bivalvia_hippuritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "hippuritidae", className: "Bivalvia", orderName: "Hippuritida", name: "Hippuritidae", mainColor: "#F59E0B", lineageColors: { "hippuritidae": "#6366F1" } };
+const bivalvia_diceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "diceratidae", className: "Bivalvia", orderName: "Hippuritida", name: "Diceratidae", mainColor: "#8B5CF6", lineageColors: { "diceratidae": "#84CC16" } };
+const bivalvia_caprinuloideidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "caprinuloideidae", className: "Bivalvia", orderName: "Hippuritida", name: "Caprinuloideidae", mainColor: "#EC4899", lineageColors: { "caprinuloideidae": "#06B6D4" } };
+const bivalvia_antillocaprinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "antillocaprinidae", className: "Bivalvia", orderName: "Hippuritida", name: "Antillocaprinidae", mainColor: "#14B8A6", lineageColors: { "antillocaprinidae": "#D946EF" } };
+const bivalvia_requieniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "requieniidae", className: "Bivalvia", orderName: "Hippuritida", name: "Requieniidae", mainColor: "#F97316", lineageColors: { "requieniidae": "#0EA5E9" } };
+const bivalvia_plagioptychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "plagioptychidae", className: "Bivalvia", orderName: "Hippuritida", name: "Plagioptychidae", mainColor: "#6366F1", lineageColors: { "plagioptychidae": "#22C55E" } };
+const bivalvia_caprotinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "caprotinidae", className: "Bivalvia", orderName: "Hippuritida", name: "Caprotinidae", mainColor: "#84CC16", lineageColors: { "caprotinidae": "#EAB308" } };
+const bivalvia_caprinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "caprinidae", className: "Bivalvia", orderName: "Hippuritida", name: "Caprinidae", mainColor: "#06B6D4", lineageColors: { "caprinidae": "#A855F7" } };
+const bivalvia_lyrodesmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "lyrodesmatidae", className: "Bivalvia", orderName: "Hippuritida", name: "Lyrodesmatidae", mainColor: "#D946EF", lineageColors: { "lyrodesmatidae": "#FB923C" } };
+const bivalvia_caprinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "caprinulidae", className: "Bivalvia", orderName: "Hippuritida", name: "Caprinulidae", mainColor: "#0EA5E9", lineageColors: { "caprinulidae": "#2DD4BF" } };
+const bivalvia_ichthyosarcolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "ichthyosarcolitidae", className: "Bivalvia", orderName: "Hippuritida", name: "Ichthyosarcolitidae", mainColor: "#22C55E", lineageColors: { "ichthyosarcolitidae": "#A3E635" } };
+const bivalvia_polyconitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "polyconitidae", className: "Bivalvia", orderName: "Hippuritida", name: "Polyconitidae", mainColor: "#EAB308", lineageColors: { "polyconitidae": "#38BDF8" } };
+const bivalvia_trechmannellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "trechmannellidae", className: "Bivalvia", orderName: "Hippuritida", name: "Trechmannellidae", mainColor: "#A855F7", lineageColors: { "trechmannellidae": "#3B82F6" } };
+const bivalvia_solenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "solenidae", className: "Bivalvia", orderName: "Adapedonta", name: "Solenidae", mainColor: "#FB923C", lineageColors: { "solenidae": "#EF4444" } };
+const bivalvia_pharidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pharidae", className: "Bivalvia", orderName: "Adapedonta", name: "Pharidae", mainColor: "#2DD4BF", lineageColors: { "pharidae": "#10B981" } };
+const bivalvia_hiatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hiatellidae", className: "Bivalvia", orderName: "Adapedonta", name: "Hiatellidae", mainColor: "#A3E635", lineageColors: { "hiatellidae": "#F59E0B" } };
+const bivalvia_edmondiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "edmondiidae", className: "Bivalvia", orderName: "Adapedonta", name: "Edmondiidae", mainColor: "#38BDF8", lineageColors: { "edmondiidae": "#8B5CF6" } };
+const bivalvia_pachydomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pachydomidae", className: "Bivalvia", orderName: "Adapedonta", name: "Pachydomidae", mainColor: "#3B82F6", lineageColors: { "pachydomidae": "#EC4899" } };
+const bivalvia_ctenodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "ctenodontidae", className: "Bivalvia", orderName: "Solemyida", name: "Ctenodontidae", mainColor: "#EF4444", lineageColors: { "ctenodontidae": "#14B8A6" } };
+const bivalvia_solemyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "solemyidae", className: "Bivalvia", orderName: "Solemyida", name: "Solemyidae", mainColor: "#10B981", lineageColors: { "solemyidae": "#F97316" } };
+const bivalvia_nucinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "nucinellidae", className: "Bivalvia", orderName: "Solemyida", name: "Nucinellidae", mainColor: "#F59E0B", lineageColors: { "nucinellidae": "#6366F1" } };
+const bivalvia_manzanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "manzanellidae", className: "Bivalvia", orderName: "Solemyida", name: "Manzanellidae", mainColor: "#8B5CF6", lineageColors: { "manzanellidae": "#84CC16" } };
+const bivalvia_palaeomutelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "palaeomutelidae", className: "Bivalvia", orderName: "Actinodontida", name: "Palaeomutelidae", mainColor: "#EC4899", lineageColors: { "palaeomutelidae": "#06B6D4" } };
+const bivalvia_amnigeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "amnigeniidae", className: "Bivalvia", orderName: "Actinodontida", name: "Amnigeniidae", mainColor: "#14B8A6", lineageColors: { "amnigeniidae": "#D946EF" } };
+const bivalvia_cycloconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cycloconchidae", className: "Bivalvia", orderName: "Actinodontida", name: "Cycloconchidae", mainColor: "#F97316", lineageColors: { "cycloconchidae": "#0EA5E9" } };
+const bivalvia_actinodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "actinodontidae", className: "Bivalvia", orderName: "Actinodontida", name: "Actinodontidae", mainColor: "#6366F1", lineageColors: { "actinodontidae": "#22C55E" } };
+const bivalvia_redoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "redoniidae", className: "Bivalvia", orderName: "Actinodontida", name: "Redoniidae", mainColor: "#84CC16", lineageColors: { "redoniidae": "#EAB308" } };
+const bivalvia_intihuarellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "intihuarellidae", className: "Bivalvia", orderName: "Actinodontida", name: "Intihuarellidae", mainColor: "#06B6D4", lineageColors: { "intihuarellidae": "#A855F7" } };
+const bivalvia_zadimerodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "zadimerodiidae", className: "Bivalvia", orderName: "Actinodontida", name: "Zadimerodiidae", mainColor: "#D946EF", lineageColors: { "zadimerodiidae": "#FB923C" } };
+const bivalvia_modiomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "modiomorphidae", className: "Bivalvia", orderName: "Modiomorphida", name: "Modiomorphidae", mainColor: "#0EA5E9", lineageColors: { "modiomorphidae": "#2DD4BF" } };
+const bivalvia_palaeopharidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "palaeopharidae", className: "Bivalvia", orderName: "Modiomorphida", name: "Palaeopharidae", mainColor: "#22C55E", lineageColors: { "palaeopharidae": "#A3E635" } };
+const bivalvia_cypricardiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cypricardiniidae", className: "Bivalvia", orderName: "Modiomorphida", name: "Cypricardiniidae", mainColor: "#EAB308", lineageColors: { "cypricardiniidae": "#38BDF8" } };
+const bivalvia_hippopodiumidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "hippopodiumidae", className: "Bivalvia", orderName: "Modiomorphida", name: "Hippopodiumidae", mainColor: "#A855F7", lineageColors: { "hippopodiumidae": "#3B82F6" } };
+const bivalvia_megalodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "megalodontidae", className: "Bivalvia", orderName: "Megalodontida", name: "Megalodontidae", mainColor: "#FB923C", lineageColors: { "megalodontidae": "#EF4444" } };
+const bivalvia_dicerocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "dicerocardiidae", className: "Bivalvia", orderName: "Megalodontida", name: "Dicerocardiidae", mainColor: "#2DD4BF", lineageColors: { "dicerocardiidae": "#10B981" } };
+const bivalvia_pachyrismatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pachyrismatidae", className: "Bivalvia", orderName: "Megalodontida", name: "Pachyrismatidae", mainColor: "#A3E635", lineageColors: { "pachyrismatidae": "#F59E0B" } };
+const bivalvia_ceratomyopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ceratomyopsidae", className: "Bivalvia", orderName: "Megalodontida", name: "Ceratomyopsidae", mainColor: "#38BDF8", lineageColors: { "ceratomyopsidae": "#8B5CF6" } };
+const bivalvia_prosocoelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "prosocoelidae", className: "Bivalvia", orderName: "Megalodontida", name: "Prosocoelidae", mainColor: "#3B82F6", lineageColors: { "prosocoelidae": "#EC4899" } };
+const bivalvia_wallowaconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "wallowaconchidae", className: "Bivalvia", orderName: "Megalodontida", name: "Wallowaconchidae", mainColor: "#EF4444", lineageColors: { "wallowaconchidae": "#14B8A6" } };
+const bivalvia_congeriomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "congeriomorphidae", className: "Bivalvia", orderName: "Megalodontida", name: "Congeriomorphidae", mainColor: "#10B981", lineageColors: { "congeriomorphidae": "#F97316" } };
+const bivalvia_plethocardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "plethocardiidae", className: "Bivalvia", orderName: "Megalodontida", name: "Plethocardiidae", mainColor: "#F59E0B", lineageColors: { "plethocardiidae": "#6366F1" } };
+const bivalvia_beichuaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "beichuaniidae", className: "Bivalvia", orderName: "Megalodontida", name: "Beichuaniidae", mainColor: "#8B5CF6", lineageColors: { "beichuaniidae": "#84CC16" } };
+const bivalvia_cyrtodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cyrtodontidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Cyrtodontidae", mainColor: "#EC4899", lineageColors: { "cyrtodontidae": "#06B6D4" } };
+const bivalvia_praecardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "praecardiidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Praecardiidae", mainColor: "#14B8A6", lineageColors: { "praecardiidae": "#D946EF" } };
+const bivalvia_pichleriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pichleriidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Pichleriidae", mainColor: "#F97316", lineageColors: { "pichleriidae": "#0EA5E9" } };
+const bivalvia_cardiolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cardiolidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Cardiolidae", mainColor: "#6366F1", lineageColors: { "cardiolidae": "#22C55E" } };
+const bivalvia_antipleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "antipleuridae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Antipleuridae", mainColor: "#84CC16", lineageColors: { "antipleuridae": "#EAB308" } };
+const bivalvia_spanilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "spanilidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Spanilidae", mainColor: "#06B6D4", lineageColors: { "spanilidae": "#A855F7" } };
+const bivalvia_buchiolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "buchiolidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Buchiolidae", mainColor: "#D946EF", lineageColors: { "buchiolidae": "#FB923C" } };
+const bivalvia_stolidotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "stolidotidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Stolidotidae", mainColor: "#0EA5E9", lineageColors: { "stolidotidae": "#2DD4BF" } };
+const bivalvia_slavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "slavidae", className: "Bivalvia", orderName: "Cyrtodontida", name: "Slavidae", mainColor: "#22C55E", lineageColors: { "slavidae": "#A3E635" } };
+const bivalvia_gastrochaenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "gastrochaenidae", className: "Bivalvia", orderName: "Gastrochaenida", name: "Gastrochaenidae", mainColor: "#EAB308", lineageColors: { "gastrochaenidae": "#38BDF8" } };
+const bivalvia_fordillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "fordillidae", className: "Bivalvia", orderName: "Fordillida", name: "Fordillidae", mainColor: "#A855F7", lineageColors: { "fordillidae": "#3B82F6" } };
+const bivalvia_camyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "camyidae", className: "Bivalvia", orderName: "Fordillida", name: "Camyidae", mainColor: "#FB923C", lineageColors: { "camyidae": "#EF4444" } };
+const bivalvia_nucularcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "nucularcidae", className: "Bivalvia", orderName: "Afghanodesmatida", name: "Nucularcidae", mainColor: "#2DD4BF", lineageColors: { "nucularcidae": "#10B981" } };
+const bivalvia_tironuculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "tironuculidae", className: "Bivalvia", orderName: "Afghanodesmatida", name: "Tironuculidae", mainColor: "#A3E635", lineageColors: { "tironuculidae": "#F59E0B" } };
+const bivalvia_colpomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "colpomyidae", className: "Bivalvia", orderName: "Colpomyida", name: "Colpomyidae", mainColor: "#38BDF8", lineageColors: { "colpomyidae": "#8B5CF6" } };
+const bivalvia_tuarangiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "tuarangiidae", className: "Bivalvia", orderName: "Tuarangiida", name: "Tuarangiidae", mainColor: "#3B82F6", lineageColors: { "tuarangiidae": "#EC4899" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -3680,7 +4123,447 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "cycloteuthidae": cephalopoda_cycloteuthidae,
   "histioteuthidae": cephalopoda_histioteuthidae,
   "magnapinnidae": cephalopoda_magnapinnidae,
-  "kelaenidae": cephalopoda_kelaenidae,};
+  "kelaenidae": cephalopoda_kelaenidae,
+  "veneridae": bivalvia_veneridae,
+  "cyrenidae": bivalvia_cyrenidae,
+  "mactridae": bivalvia_mactridae,
+  "ungulinidae": bivalvia_ungulinidae,
+  "vesicomyidae": bivalvia_vesicomyidae,
+  "kalenteridae": bivalvia_kalenteridae,
+  "chamidae": bivalvia_chamidae,
+  "arcticidae": bivalvia_arcticidae,
+  "glossidae": bivalvia_glossidae,
+  "neoleptonidae": bivalvia_neoleptonidae,
+  "mesodesmatidae": bivalvia_mesodesmatidae,
+  "cyamiidae": bivalvia_cyamiidae,
+  "trapezidae": bivalvia_trapezidae,
+  "anatinellidae": bivalvia_anatinellidae,
+  "sportellidae": bivalvia_sportellidae,
+  "prilukiellidae": bivalvia_prilukiellidae,
+  "kelliellidae": bivalvia_kelliellidae,
+  "gaimardiidae": bivalvia_gaimardiidae,
+  "senderzoniellidae": bivalvia_senderzoniellidae,
+  "glauconomidae": bivalvia_glauconomidae,
+  "cyrenoididae": bivalvia_cyrenoididae,
+  "cardiliidae": bivalvia_cardiliidae,
+  "opokiellidae": bivalvia_opokiellidae,
+  "isocyprinidae": bivalvia_isocyprinidae,
+  "hemidonacidae": bivalvia_hemidonacidae,
+  "veniellidae": bivalvia_veniellidae,
+  "lutetiidae": bivalvia_lutetiidae,
+  "tridacnidae": bivalvia_tridacnidae,
+  "babinkidae": bivalvia_babinkidae,
+  "galatheavalvidae": bivalvia_galatheavalvidae,
+  "ptychomyidae": bivalvia_ptychomyidae,
+  "lahilliidae": bivalvia_lahilliidae,
+  "euloxidae": bivalvia_euloxidae,
+  "pectinidae": bivalvia_pectinidae,
+  "aviculopectinidae": bivalvia_aviculopectinidae,
+  "propeamussiidae": bivalvia_propeamussiidae,
+  "spondylidae": bivalvia_spondylidae,
+  "anomiidae": bivalvia_anomiidae,
+  "plicatulidae": bivalvia_plicatulidae,
+  "monotidae": bivalvia_monotidae,
+  "buchiidae": bivalvia_buchiidae,
+  "pterinopectinidae": bivalvia_pterinopectinidae,
+  "entoliidae": bivalvia_entoliidae,
+  "dimyidae": bivalvia_dimyidae,
+  "deltopectinidae": bivalvia_deltopectinidae,
+  "neitheidae": bivalvia_neitheidae,
+  "oxytomidae": bivalvia_oxytomidae,
+  "streblochondriidae": bivalvia_streblochondriidae,
+  "euchondriidae": bivalvia_euchondriidae,
+  "cyclochlamydidae": bivalvia_cyclochlamydidae,
+  "prospondylidae": bivalvia_prospondylidae,
+  "pleuronectitidae": bivalvia_pleuronectitidae,
+  "terquemiidae": bivalvia_terquemiidae,
+  "hunanopectinidae": bivalvia_hunanopectinidae,
+  "tosapectinidae": bivalvia_tosapectinidae,
+  "placunidae": bivalvia_placunidae,
+  "heteropectinidae": bivalvia_heteropectinidae,
+  "annuliconchidae": bivalvia_annuliconchidae,
+  "limatulinidae": bivalvia_limatulinidae,
+  "leiopectinidae": bivalvia_leiopectinidae,
+  "chaenocardiidae": bivalvia_chaenocardiidae,
+  "cassianoididae": bivalvia_cassianoididae,
+  "pseudomonotidae": bivalvia_pseudomonotidae,
+  "etheripectinidae": bivalvia_etheripectinidae,
+  "entolioidesidae": bivalvia_entolioidesidae,
+  "dolponellidae": bivalvia_dolponellidae,
+  "cardiidae": bivalvia_cardiidae,
+  "tellinidae": bivalvia_tellinidae,
+  "semelidae": bivalvia_semelidae,
+  "psammobiidae": bivalvia_psammobiidae,
+  "donacidae": bivalvia_donacidae,
+  "solecurtidae": bivalvia_solecurtidae,
+  "anthracosiidae": bivalvia_anthracosiidae,
+  "ferganoconchidae": bivalvia_ferganoconchidae,
+  "carbonicolidae": bivalvia_carbonicolidae,
+  "tancrediidae": bivalvia_tancrediidae,
+  "shaanxiconchidae": bivalvia_shaanxiconchidae,
+  "pterocardiidae": bivalvia_pterocardiidae,
+  "icanotiidae": bivalvia_icanotiidae,
+  "quenstedtiidae": bivalvia_quenstedtiidae,
+  "scrobiculariidae": bivalvia_scrobiculariidae,
+  "sowerbyidae": bivalvia_sowerbyidae,
+  "unicardiopsidae": bivalvia_unicardiopsidae,
+  "unionidae": bivalvia_unionidae,
+  "hyriidae": bivalvia_hyriidae,
+  "margaritiferidae": bivalvia_margaritiferidae,
+  "iridinidae": bivalvia_iridinidae,
+  "mycetopodidae": bivalvia_mycetopodidae,
+  "pachycardiidae": bivalvia_pachycardiidae,
+  "silesunionidae": bivalvia_silesunionidae,
+  "etheriidae": bivalvia_etheriidae,
+  "tegulaedontidae": bivalvia_tegulaedontidae,
+  "tamesnellidae": bivalvia_tamesnellidae,
+  "unionellidae": bivalvia_unionellidae,
+  "sancticarolitidae": bivalvia_sancticarolitidae,
+  "monginaiidae": bivalvia_monginaiidae,
+  "trigoniidae": bivalvia_trigoniidae,
+  "myophoriidae": bivalvia_myophoriidae,
+  "pterotrigoniidae": bivalvia_pterotrigoniidae,
+  "pseudocardiniidae": bivalvia_pseudocardiniidae,
+  "myophorellidae": bivalvia_myophorellidae,
+  "schizodidae": bivalvia_schizodidae,
+  "vaugoniidae": bivalvia_vaugoniidae,
+  "rutitrigoniidae": bivalvia_rutitrigoniidae,
+  "megatrigoniidae": bivalvia_megatrigoniidae,
+  "pseudohyriidae": bivalvia_pseudohyriidae,
+  "trigonioididae": bivalvia_trigonioididae,
+  "trigonodidae": bivalvia_trigonodidae,
+  "steinmanellidae": bivalvia_steinmanellidae,
+  "nippononaiidae": bivalvia_nippononaiidae,
+  "iotrigoniidae": bivalvia_iotrigoniidae,
+  "plicatounionidae": bivalvia_plicatounionidae,
+  "nakamuranaiadidae": bivalvia_nakamuranaiadidae,
+  "buchotrigoniidae": bivalvia_buchotrigoniidae,
+  "frenguelliellidae": bivalvia_frenguelliellidae,
+  "prosogyrotrigoniidae": bivalvia_prosogyrotrigoniidae,
+  "utschamiellidae": bivalvia_utschamiellidae,
+  "erugoniidae": bivalvia_erugoniidae,
+  "eoschizodidae": bivalvia_eoschizodidae,
+  "laevitrigoniidae": bivalvia_laevitrigoniidae,
+  "scaphellinidae": bivalvia_scaphellinidae,
+  "groeberellidae": bivalvia_groeberellidae,
+  "desertellidae": bivalvia_desertellidae,
+  "ostreidae": bivalvia_ostreidae,
+  "bakevelliidae": bivalvia_bakevelliidae,
+  "gryphaeidae": bivalvia_gryphaeidae,
+  "pinnidae": bivalvia_pinnidae,
+  "pteriidae": bivalvia_pteriidae,
+  "halobiidae": bivalvia_halobiidae,
+  "pterineidae": bivalvia_pterineidae,
+  "daonellidae": bivalvia_daonellidae,
+  "isognomonidae": bivalvia_isognomonidae,
+  "posidoniidae": bivalvia_posidoniidae,
+  "cassianellidae": bivalvia_cassianellidae,
+  "flemingostreidae": bivalvia_flemingostreidae,
+  "margaritidae": bivalvia_margaritidae,
+  "vulsellidae": bivalvia_vulsellidae,
+  "aulacomyellidae": bivalvia_aulacomyellidae,
+  "malleidae": bivalvia_malleidae,
+  "pergamidiidae": bivalvia_pergamidiidae,
+  "arctostreidae": bivalvia_arctostreidae,
+  "pulvinitidae": bivalvia_pulvinitidae,
+  "anningellidae": bivalvia_anningellidae,
+  "kochiidae": bivalvia_kochiidae,
+  "rhombopteriidae": bivalvia_rhombopteriidae,
+  "chondrodontidae": bivalvia_chondrodontidae,
+  "aviculidae": bivalvia_aviculidae,
+  "eligmidae": bivalvia_eligmidae,
+  "arcidae": bivalvia_arcidae,
+  "glycymerididae": bivalvia_glycymerididae,
+  "limopsidae": bivalvia_limopsidae,
+  "philobryidae": bivalvia_philobryidae,
+  "parallelodontidae": bivalvia_parallelodontidae,
+  "cucullaeidae": bivalvia_cucullaeidae,
+  "noetiidae": bivalvia_noetiidae,
+  "frejidae": bivalvia_frejidae,
+  "glyptarcidae": bivalvia_glyptarcidae,
+  "cuspidariidae": bivalvia_cuspidariidae,
+  "pholadomyidae": bivalvia_pholadomyidae,
+  "sanguinolitidae": bivalvia_sanguinolitidae,
+  "thraciidae": bivalvia_thraciidae,
+  "verticordiidae": bivalvia_verticordiidae,
+  "poromyidae": bivalvia_poromyidae,
+  "periplomatidae": bivalvia_periplomatidae,
+  "pandoridae": bivalvia_pandoridae,
+  "laternulidae": bivalvia_laternulidae,
+  "megadesmidae": bivalvia_megadesmidae,
+  "lyonsiellidae": bivalvia_lyonsiellidae,
+  "myochamidae": bivalvia_myochamidae,
+  "lyonsiidae": bivalvia_lyonsiidae,
+  "grammysiidae": bivalvia_grammysiidae,
+  "clavagellidae": bivalvia_clavagellidae,
+  "cetoconchidae": bivalvia_cetoconchidae,
+  "parilimyidae": bivalvia_parilimyidae,
+  "praeostreidae": bivalvia_praeostreidae,
+  "protocuspidariidae": bivalvia_protocuspidariidae,
+  "spheniopsidae": bivalvia_spheniopsidae,
+  "euciroidae": bivalvia_euciroidae,
+  "orthonotidae": bivalvia_orthonotidae,
+  "penicillidae": bivalvia_penicillidae,
+  "halonymphidae": bivalvia_halonymphidae,
+  "solenomorphidae": bivalvia_solenomorphidae,
+  "burmesiidae": bivalvia_burmesiidae,
+  "carydiidae": bivalvia_carydiidae,
+  "cleidothaeridae": bivalvia_cleidothaeridae,
+  "allodesmatidae": bivalvia_allodesmatidae,
+  "myodakryotidae": bivalvia_myodakryotidae,
+  "streblopterinellidae": bivalvia_streblopterinellidae,
+  "arhouriellidae": bivalvia_arhouriellidae,
+  "ucumariidae": bivalvia_ucumariidae,
+  "lipanellidae": bivalvia_lipanellidae,
+  "lunulicardiidae": bivalvia_lunulicardiidae,
+  "actinodontophoridae": bivalvia_actinodontophoridae,
+  "yunanniidae": bivalvia_yunanniidae,
+  "saharopteridae": bivalvia_saharopteridae,
+  "bentholyonsiidae": bivalvia_bentholyonsiidae,
+  "clistoconchidae": bivalvia_clistoconchidae,
+  "praelamellodontidae": bivalvia_praelamellodontidae,
+  "pholadomyacidae": bivalvia_pholadomyacidae,
+  "dattidae": bivalvia_dattidae,
+  "binipectinidae": bivalvia_binipectinidae,
+  "petricolidae": bivalvia_petricolidae,
+  "syncyclonemidae": bivalvia_syncyclonemidae,
+  "amblemidae": bivalvia_amblemidae,
+  "isocardiidae": bivalvia_isocardiidae,
+  "kinerkaellidae": bivalvia_kinerkaellidae,
+  "cardilidae": bivalvia_cardilidae,
+  "erodonidae": bivalvia_erodonidae,
+  "lithodomidae": bivalvia_lithodomidae,
+  "cyrtorostridae": bivalvia_cyrtorostridae,
+  "entolioididae": bivalvia_entolioididae,
+  "acanthopectinidae": bivalvia_acanthopectinidae,
+  "leptochondriidae": bivalvia_leptochondriidae,
+  "pleurodesmatidae": bivalvia_pleurodesmatidae,
+  "rzehakiidae": bivalvia_rzehakiidae,
+  "mecynodontidae": bivalvia_mecynodontidae,
+  "pollicidae": bivalvia_pollicidae,
+  "cercomyidae": bivalvia_cercomyidae,
+  "lithiotidae": bivalvia_lithiotidae,
+  "monopteriidae": bivalvia_monopteriidae,
+  "plicatostylidae": bivalvia_plicatostylidae,
+  "atomodesmidae": bivalvia_atomodesmidae,
+  "eurydesmidae": bivalvia_eurydesmidae,
+  "dictyoptychidae": bivalvia_dictyoptychidae,
+  "pitchleriidae": bivalvia_pitchleriidae,
+  "permanomiidae": bivalvia_permanomiidae,
+  "eritropidae": bivalvia_eritropidae,
+  "lahillidae": bivalvia_lahillidae,
+  "margaritariidae": bivalvia_margaritariidae,
+  "lamellodontidae": bivalvia_lamellodontidae,
+  "nyassidae": bivalvia_nyassidae,
+  "saharopteriidae": bivalvia_saharopteriidae,
+  "lamellotidae": bivalvia_lamellotidae,
+  "prospondylidea": bivalvia_prospondylidea,
+  "deltopectenidae": bivalvia_deltopectenidae,
+  "dreisseniidae": bivalvia_dreisseniidae,
+  "solenomyidae": bivalvia_solenomyidae,
+  "evyanidae": bivalvia_evyanidae,
+  "melliterycidae": bivalvia_melliterycidae,
+  "xylophaginidae": bivalvia_xylophaginidae,
+  "glyphaeidae": bivalvia_glyphaeidae,
+  "eurydesmatidae": bivalvia_eurydesmatidae,
+  "umburridae": bivalvia_umburridae,
+  "baidiostracidae": bivalvia_baidiostracidae,
+  "ornithopectinidae": bivalvia_ornithopectinidae,
+  "paracyclidae": bivalvia_paracyclidae,
+  "falcatodontidae": bivalvia_falcatodontidae,
+  "catamarcaiidae": bivalvia_catamarcaiidae,
+  "clinopisthidae": bivalvia_clinopisthidae,
+  "claraiidae": bivalvia_claraiidae,
+  "ischyrodontidae": bivalvia_ischyrodontidae,
+  "crassatellopsidae": bivalvia_crassatellopsidae,
+  "eodonidae": bivalvia_eodonidae,
+  "tusayanidae": bivalvia_tusayanidae,
+  "antijaniridae": bivalvia_antijaniridae,
+  "similodontidae": bivalvia_similodontidae,
+  "ovatoconchidae": bivalvia_ovatoconchidae,
+  "vlastidae": bivalvia_vlastidae,
+  "montanariidae": bivalvia_montanariidae,
+  "prothyridae": bivalvia_prothyridae,
+  "natalissimidae": bivalvia_natalissimidae,
+  "pernopectinidae": bivalvia_pernopectinidae,
+  "limipectinidae": bivalvia_limipectinidae,
+  "praelucinidae": bivalvia_praelucinidae,
+  "vacunellidae": bivalvia_vacunellidae,
+  "coxiconchiidae": bivalvia_coxiconchiidae,
+  "anodontopsidae": bivalvia_anodontopsidae,
+  "dualinidae": bivalvia_dualinidae,
+  "afghanodesmatidae": bivalvia_afghanodesmatidae,
+  "crenellidae": bivalvia_crenellidae,
+  "pseudarcidae": bivalvia_pseudarcidae,
+  "pucamyidae": bivalvia_pucamyidae,
+  "matheriidae": bivalvia_matheriidae,
+  "pseudocyrtodontidae": bivalvia_pseudocyrtodontidae,
+  "saikraconchidae": bivalvia_saikraconchidae,
+  "manticulidae": bivalvia_manticulidae,
+  "strabidae": bivalvia_strabidae,
+  "konduriidae": bivalvia_konduriidae,
+  "oriocrassatellidae": bivalvia_oriocrassatellidae,
+  "arenigomyidae": bivalvia_arenigomyidae,
+  "myoconchidae": bivalvia_myoconchidae,
+  "pergamidae": bivalvia_pergamidae,
+  "archaracidae": bivalvia_archaracidae,
+  "septiferidae": bivalvia_septiferidae,
+  "isolimeidae": bivalvia_isolimeidae,
+  "palaeocardiidae": bivalvia_palaeocardiidae,
+  "ephippiodontidae": bivalvia_ephippiodontidae,
+  "chondrotidae": bivalvia_chondrotidae,
+  "ichtyosarcolidae": bivalvia_ichtyosarcolidae,
+  "cardiolariidae": bivalvia_cardiolariidae,
+  "cadomiidae": bivalvia_cadomiidae,
+  "lutetidae": bivalvia_lutetidae,
+  "coxiconchidae": bivalvia_coxiconchidae,
+  "saturnidae": bivalvia_saturnidae,
+  "bakevellidae": bivalvia_bakevellidae,
+  "rhaetomyidae": bivalvia_rhaetomyidae,
+  "ambonychidae": bivalvia_ambonychidae,
+  "palaeolophidae": bivalvia_palaeolophidae,
+  "radulopectinidae": bivalvia_radulopectinidae,
+  "cultelidae": bivalvia_cultelidae,
+  "paraviculidae": bivalvia_paraviculidae,
+  "corbidae": bivalvia_corbidae,
+  "otapiriidae": bivalvia_otapiriidae,
+  "saffordiidae": bivalvia_saffordiidae,
+  "gariidae": bivalvia_gariidae,
+  "tanaodontidae": bivalvia_tanaodontidae,
+  "laurskiidae": bivalvia_laurskiidae,
+  "cirravidae": bivalvia_cirravidae,
+  "megadesmatidae": bivalvia_megadesmatidae,
+  "palaeoconchidae": bivalvia_palaeoconchidae,
+  "spirodomidae": bivalvia_spirodomidae,
+  "septocardiidae": bivalvia_septocardiidae,
+  "palaeoneilidae": bivalvia_palaeoneilidae,
+  "terraiidae": bivalvia_terraiidae,
+  "carditidae": bivalvia_carditidae,
+  "astartidae": bivalvia_astartidae,
+  "crassatellidae": bivalvia_crassatellidae,
+  "condylocardiidae": bivalvia_condylocardiidae,
+  "cardiniidae": bivalvia_cardiniidae,
+  "myophoricardiidae": bivalvia_myophoricardiidae,
+  "aenigmoconchidae": bivalvia_aenigmoconchidae,
+  "archaeocardiidae": bivalvia_archaeocardiidae,
+  "corbulidae": bivalvia_corbulidae,
+  "dreissenidae": bivalvia_dreissenidae,
+  "pholadidae": bivalvia_pholadidae,
+  "teredinidae": bivalvia_teredinidae,
+  "myidae": bivalvia_myidae,
+  "xylophagaidae": bivalvia_xylophagaidae,
+  "pleuromyidae": bivalvia_pleuromyidae,
+  "ceratomyidae": bivalvia_ceratomyidae,
+  "raetomyidae": bivalvia_raetomyidae,
+  "lucinidae": bivalvia_lucinidae,
+  "thyasiridae": bivalvia_thyasiridae,
+  "mactromyidae": bivalvia_mactromyidae,
+  "fimbriidae": bivalvia_fimbriidae,
+  "nuculanidae": bivalvia_nuculanidae,
+  "yoldiidae": bivalvia_yoldiidae,
+  "malletiidae": bivalvia_malletiidae,
+  "neilonellidae": bivalvia_neilonellidae,
+  "tindariidae": bivalvia_tindariidae,
+  "bathyspinulidae": bivalvia_bathyspinulidae,
+  "sareptidae": bivalvia_sareptidae,
+  "cucullellidae": bivalvia_cucullellidae,
+  "isoarcidae": bivalvia_isoarcidae,
+  "siliculidae": bivalvia_siliculidae,
+  "polidevciidae": bivalvia_polidevciidae,
+  "pristiglomidae": bivalvia_pristiglomidae,
+  "lametilidae": bivalvia_lametilidae,
+  "phaseolidae": bivalvia_phaseolidae,
+  "mytilidae": bivalvia_mytilidae,
+  "goniophorinidae": bivalvia_goniophorinidae,
+  "modiolopsidae": bivalvia_modiolopsidae,
+  "inoceramidae": bivalvia_inoceramidae,
+  "ambonychiidae": bivalvia_ambonychiidae,
+  "naiaditidae": bivalvia_naiaditidae,
+  "prokopievskiidae": bivalvia_prokopievskiidae,
+  "myalinidae": bivalvia_myalinidae,
+  "kolymiidae": bivalvia_kolymiidae,
+  "anadontellidae": bivalvia_anadontellidae,
+  "atomodesmatidae": bivalvia_atomodesmatidae,
+  "mysidiellidae": bivalvia_mysidiellidae,
+  "retroceramidae": bivalvia_retroceramidae,
+  "lunulacardiidae": bivalvia_lunulacardiidae,
+  "alatoconchidae": bivalvia_alatoconchidae,
+  "ramonalinidae": bivalvia_ramonalinidae,
+  "lasaeidae": bivalvia_lasaeidae,
+  "galeommatidae": bivalvia_galeommatidae,
+  "basterotiidae": bivalvia_basterotiidae,
+  "montacutidae": bivalvia_montacutidae,
+  "sphaeriidae": bivalvia_sphaeriidae,
+  "neomiodontidae": bivalvia_neomiodontidae,
+  "limnocyrenidae": bivalvia_limnocyrenidae,
+  "kijidae": bivalvia_kijidae,
+  "sibireconchidae": bivalvia_sibireconchidae,
+  "limidae": bivalvia_limidae,
+  "nuculidae": bivalvia_nuculidae,
+  "praenuculidae": bivalvia_praenuculidae,
+  "thoraliidae": bivalvia_thoraliidae,
+  "antactinodiontidae": bivalvia_antactinodiontidae,
+  "radiolitidae": bivalvia_radiolitidae,
+  "epidiceratidae": bivalvia_epidiceratidae,
+  "monopleuridae": bivalvia_monopleuridae,
+  "hippuritidae": bivalvia_hippuritidae,
+  "diceratidae": bivalvia_diceratidae,
+  "caprinuloideidae": bivalvia_caprinuloideidae,
+  "antillocaprinidae": bivalvia_antillocaprinidae,
+  "requieniidae": bivalvia_requieniidae,
+  "plagioptychidae": bivalvia_plagioptychidae,
+  "caprotinidae": bivalvia_caprotinidae,
+  "caprinidae": bivalvia_caprinidae,
+  "lyrodesmatidae": bivalvia_lyrodesmatidae,
+  "caprinulidae": bivalvia_caprinulidae,
+  "ichthyosarcolitidae": bivalvia_ichthyosarcolitidae,
+  "polyconitidae": bivalvia_polyconitidae,
+  "trechmannellidae": bivalvia_trechmannellidae,
+  "solenidae": bivalvia_solenidae,
+  "pharidae": bivalvia_pharidae,
+  "hiatellidae": bivalvia_hiatellidae,
+  "edmondiidae": bivalvia_edmondiidae,
+  "pachydomidae": bivalvia_pachydomidae,
+  "ctenodontidae": bivalvia_ctenodontidae,
+  "solemyidae": bivalvia_solemyidae,
+  "nucinellidae": bivalvia_nucinellidae,
+  "manzanellidae": bivalvia_manzanellidae,
+  "palaeomutelidae": bivalvia_palaeomutelidae,
+  "amnigeniidae": bivalvia_amnigeniidae,
+  "cycloconchidae": bivalvia_cycloconchidae,
+  "actinodontidae": bivalvia_actinodontidae,
+  "redoniidae": bivalvia_redoniidae,
+  "intihuarellidae": bivalvia_intihuarellidae,
+  "zadimerodiidae": bivalvia_zadimerodiidae,
+  "modiomorphidae": bivalvia_modiomorphidae,
+  "palaeopharidae": bivalvia_palaeopharidae,
+  "cypricardiniidae": bivalvia_cypricardiniidae,
+  "hippopodiumidae": bivalvia_hippopodiumidae,
+  "megalodontidae": bivalvia_megalodontidae,
+  "dicerocardiidae": bivalvia_dicerocardiidae,
+  "pachyrismatidae": bivalvia_pachyrismatidae,
+  "ceratomyopsidae": bivalvia_ceratomyopsidae,
+  "prosocoelidae": bivalvia_prosocoelidae,
+  "wallowaconchidae": bivalvia_wallowaconchidae,
+  "congeriomorphidae": bivalvia_congeriomorphidae,
+  "plethocardiidae": bivalvia_plethocardiidae,
+  "beichuaniidae": bivalvia_beichuaniidae,
+  "cyrtodontidae": bivalvia_cyrtodontidae,
+  "praecardiidae": bivalvia_praecardiidae,
+  "pichleriidae": bivalvia_pichleriidae,
+  "cardiolidae": bivalvia_cardiolidae,
+  "antipleuridae": bivalvia_antipleuridae,
+  "spanilidae": bivalvia_spanilidae,
+  "buchiolidae": bivalvia_buchiolidae,
+  "stolidotidae": bivalvia_stolidotidae,
+  "slavidae": bivalvia_slavidae,
+  "gastrochaenidae": bivalvia_gastrochaenidae,
+  "fordillidae": bivalvia_fordillidae,
+  "camyidae": bivalvia_camyidae,
+  "nucularcidae": bivalvia_nucularcidae,
+  "tironuculidae": bivalvia_tironuculidae,
+  "colpomyidae": bivalvia_colpomyidae,
+  "tuarangiidae": bivalvia_tuarangiidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
