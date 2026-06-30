@@ -2278,6 +2278,103 @@ const polyplacophora_mesochitonidae: ColorTheme = { subfamilyColors: {}, breedGr
 const polyplacophora_camptochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "camptochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Camptochitonidae", mainColor: "#22C55E", lineageColors: { "camptochitonidae": "#A3E635" } };
 const polyplacophora_solenocarididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "solenocarididae", className: "Polyplacophora", orderName: "Unknown", name: "Solenocarididae", mainColor: "#EAB308", lineageColors: { "solenocarididae": "#38BDF8" } };
 
+
+// ── Cephalopoda (11 orders) ──
+const cephalopoda_octopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "octopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Octopodidae", mainColor: "#3B82F6", lineageColors: { "octopodidae": "#EC4899" } };
+const cephalopoda_alloposidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "alloposidae", className: "Cephalopoda", orderName: "Octopoda", name: "Alloposidae", mainColor: "#EF4444", lineageColors: { "alloposidae": "#14B8A6" } };
+const cephalopoda_amphitretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "amphitretidae", className: "Cephalopoda", orderName: "Octopoda", name: "Amphitretidae", mainColor: "#10B981", lineageColors: { "amphitretidae": "#F97316" } };
+const cephalopoda_idioctopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "idioctopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Idioctopodidae", mainColor: "#F59E0B", lineageColors: { "idioctopodidae": "#6366F1" } };
+const cephalopoda_opisthoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "opisthoteuthidae", className: "Cephalopoda", orderName: "Octopoda", name: "Opisthoteuthidae", mainColor: "#8B5CF6", lineageColors: { "opisthoteuthidae": "#84CC16" } };
+const cephalopoda_cirroctopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cirroctopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Cirroctopodidae", mainColor: "#EC4899", lineageColors: { "cirroctopodidae": "#06B6D4" } };
+const cephalopoda_bathypolypodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "bathypolypodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Bathypolypodidae", mainColor: "#14B8A6", lineageColors: { "bathypolypodidae": "#D946EF" } };
+const cephalopoda_megaleledonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "megaleledonidae", className: "Cephalopoda", orderName: "Octopoda", name: "Megaleledonidae", mainColor: "#F97316", lineageColors: { "megaleledonidae": "#0EA5E9" } };
+const cephalopoda_eledonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "eledonidae", className: "Cephalopoda", orderName: "Octopoda", name: "Eledonidae", mainColor: "#6366F1", lineageColors: { "eledonidae": "#22C55E" } };
+const cephalopoda_enteroctopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "enteroctopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Enteroctopodidae", mainColor: "#84CC16", lineageColors: { "enteroctopodidae": "#EAB308" } };
+const cephalopoda_stauroteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "stauroteuthidae", className: "Cephalopoda", orderName: "Octopoda", name: "Stauroteuthidae", mainColor: "#06B6D4", lineageColors: { "stauroteuthidae": "#A855F7" } };
+const cephalopoda_cirroteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cirroteuthidae", className: "Cephalopoda", orderName: "Octopoda", name: "Cirroteuthidae", mainColor: "#D946EF", lineageColors: { "cirroteuthidae": "#FB923C" } };
+const cephalopoda_tremoctopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "tremoctopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Tremoctopodidae", mainColor: "#0EA5E9", lineageColors: { "tremoctopodidae": "#2DD4BF" } };
+const cephalopoda_argonautidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "argonautidae", className: "Cephalopoda", orderName: "Octopoda", name: "Argonautidae", mainColor: "#22C55E", lineageColors: { "argonautidae": "#A3E635" } };
+const cephalopoda_palaeololiginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "palaeololiginidae", className: "Cephalopoda", orderName: "Octopoda", name: "Palaeololiginidae", mainColor: "#EAB308", lineageColors: { "palaeololiginidae": "#38BDF8" } };
+const cephalopoda_palaeoctopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "palaeoctopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Palaeoctopodidae", mainColor: "#A855F7", lineageColors: { "palaeoctopodidae": "#3B82F6" } };
+const cephalopoda_ocythoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "ocythoidae", className: "Cephalopoda", orderName: "Octopoda", name: "Ocythoidae", mainColor: "#FB923C", lineageColors: { "ocythoidae": "#EF4444" } };
+const cephalopoda_muensterellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "muensterellidae", className: "Cephalopoda", orderName: "Octopoda", name: "Muensterellidae", mainColor: "#2DD4BF", lineageColors: { "muensterellidae": "#10B981" } };
+const cephalopoda_patelloctopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "patelloctopodidae", className: "Cephalopoda", orderName: "Octopoda", name: "Patelloctopodidae", mainColor: "#A3E635", lineageColors: { "patelloctopodidae": "#F59E0B" } };
+const cephalopoda_loliginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "loliginidae", className: "Cephalopoda", orderName: "Teuthida", name: "Loliginidae", mainColor: "#38BDF8", lineageColors: { "loliginidae": "#8B5CF6" } };
+const cephalopoda_ommastrephidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "ommastrephidae", className: "Cephalopoda", orderName: "Teuthida", name: "Ommastrephidae", mainColor: "#3B82F6", lineageColors: { "ommastrephidae": "#EC4899" } };
+const cephalopoda_architeuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "architeuthidae", className: "Cephalopoda", orderName: "Teuthida", name: "Architeuthidae", mainColor: "#EF4444", lineageColors: { "architeuthidae": "#14B8A6" } };
+const cephalopoda_sepiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "sepiidae", className: "Cephalopoda", orderName: "Sepiida", name: "Sepiidae", mainColor: "#10B981", lineageColors: { "sepiidae": "#F97316" } };
+const cephalopoda_sepiolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "sepiolidae", className: "Cephalopoda", orderName: "Sepiida", name: "Sepiolidae", mainColor: "#F59E0B", lineageColors: { "sepiolidae": "#6366F1" } };
+const cephalopoda_sepiadariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "sepiadariidae", className: "Cephalopoda", orderName: "Sepiida", name: "Sepiadariidae", mainColor: "#8B5CF6", lineageColors: { "sepiadariidae": "#84CC16" } };
+const cephalopoda_belosaepiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "belosaepiidae", className: "Cephalopoda", orderName: "Sepiida", name: "Belosaepiidae", mainColor: "#EC4899", lineageColors: { "belosaepiidae": "#06B6D4" } };
+const cephalopoda_vasseuriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "vasseuriidae", className: "Cephalopoda", orderName: "Sepiida", name: "Vasseuriidae", mainColor: "#14B8A6", lineageColors: { "vasseuriidae": "#D946EF" } };
+const cephalopoda_belosepiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "belosepiellidae", className: "Cephalopoda", orderName: "Sepiida", name: "Belosepiellidae", mainColor: "#F97316", lineageColors: { "belosepiellidae": "#0EA5E9" } };
+const cephalopoda_nautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "nautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Nautilidae", mainColor: "#6366F1", lineageColors: { "nautilidae": "#22C55E" } };
+const cephalopoda_rutoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "rutoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Rutoceratidae", mainColor: "#84CC16", lineageColors: { "rutoceratidae": "#EAB308" } };
+const cephalopoda_aturiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "aturiidae", className: "Cephalopoda", orderName: "Nautilida", name: "Aturiidae", mainColor: "#06B6D4", lineageColors: { "aturiidae": "#A855F7" } };
+const cephalopoda_hercoglossidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "hercoglossidae", className: "Cephalopoda", orderName: "Nautilida", name: "Hercoglossidae", mainColor: "#D946EF", lineageColors: { "hercoglossidae": "#FB923C" } };
+const cephalopoda_trigonoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "trigonoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Trigonoceratidae", mainColor: "#0EA5E9", lineageColors: { "trigonoceratidae": "#2DD4BF" } };
+const cephalopoda_cymatoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cymatoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Cymatoceratidae", mainColor: "#22C55E", lineageColors: { "cymatoceratidae": "#A3E635" } };
+const cephalopoda_koninckioceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "koninckioceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Koninckioceratidae", mainColor: "#EAB308", lineageColors: { "koninckioceratidae": "#38BDF8" } };
+const cephalopoda_tainoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "tainoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Tainoceratidae", mainColor: "#A855F7", lineageColors: { "tainoceratidae": "#3B82F6" } };
+const cephalopoda_liroceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "liroceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Liroceratidae", mainColor: "#FB923C", lineageColors: { "liroceratidae": "#EF4444" } };
+const cephalopoda_grypoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "grypoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Grypoceratidae", mainColor: "#2DD4BF", lineageColors: { "grypoceratidae": "#10B981" } };
+const cephalopoda_domatoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "domatoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Domatoceratidae", mainColor: "#A3E635", lineageColors: { "domatoceratidae": "#F59E0B" } };
+const cephalopoda_solenochilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "solenochilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Solenochilidae", mainColor: "#38BDF8", lineageColors: { "solenochilidae": "#8B5CF6" } };
+const cephalopoda_scyphoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "scyphoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Scyphoceratidae", mainColor: "#3B82F6", lineageColors: { "scyphoceratidae": "#EC4899" } };
+const cephalopoda_ephippioceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "ephippioceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Ephippioceratidae", mainColor: "#EF4444", lineageColors: { "ephippioceratidae": "#14B8A6" } };
+const cephalopoda_rhiphaeoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "rhiphaeoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Rhiphaeoceratidae", mainColor: "#10B981", lineageColors: { "rhiphaeoceratidae": "#F97316" } };
+const cephalopoda_thrincoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "thrincoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Thrincoceratidae", mainColor: "#F59E0B", lineageColors: { "thrincoceratidae": "#6366F1" } };
+const cephalopoda_gzheloceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "gzheloceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Gzheloceratidae", mainColor: "#8B5CF6", lineageColors: { "gzheloceratidae": "#84CC16" } };
+const cephalopoda_paracenoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "paracenoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Paracenoceratidae", mainColor: "#EC4899", lineageColors: { "paracenoceratidae": "#06B6D4" } };
+const cephalopoda_mosquoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "mosquoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Mosquoceratidae", mainColor: "#14B8A6", lineageColors: { "mosquoceratidae": "#D946EF" } };
+const cephalopoda_permonautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "permonautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Permonautilidae", mainColor: "#F97316", lineageColors: { "permonautilidae": "#0EA5E9" } };
+const cephalopoda_neptunoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "neptunoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Neptunoceratidae", mainColor: "#6366F1", lineageColors: { "neptunoceratidae": "#22C55E" } };
+const cephalopoda_clydonautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "clydonautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Clydonautilidae", mainColor: "#84CC16", lineageColors: { "clydonautilidae": "#EAB308" } };
+const cephalopoda_temnocheilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "temnocheilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Temnocheilidae", mainColor: "#06B6D4", lineageColors: { "temnocheilidae": "#A855F7" } };
+const cephalopoda_cenoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cenoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Cenoceratidae", mainColor: "#D946EF", lineageColors: { "cenoceratidae": "#FB923C" } };
+const cephalopoda_centroceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "centroceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Centroceratidae", mainColor: "#0EA5E9", lineageColors: { "centroceratidae": "#2DD4BF" } };
+const cephalopoda_aipoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "aipoceratidae", className: "Cephalopoda", orderName: "Nautilida", name: "Aipoceratidae", mainColor: "#22C55E", lineageColors: { "aipoceratidae": "#A3E635" } };
+const cephalopoda_syringonautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "syringonautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Syringonautilidae", mainColor: "#EAB308", lineageColors: { "syringonautilidae": "#38BDF8" } };
+const cephalopoda_pleuronautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "pleuronautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Pleuronautilidae", mainColor: "#A855F7", lineageColors: { "pleuronautilidae": "#3B82F6" } };
+const cephalopoda_pseudonautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudonautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Pseudonautilidae", mainColor: "#FB923C", lineageColors: { "pseudonautilidae": "#EF4444" } };
+const cephalopoda_aktubonautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "aktubonautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Aktubonautilidae", mainColor: "#2DD4BF", lineageColors: { "aktubonautilidae": "#10B981" } };
+const cephalopoda_siberionautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "siberionautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Siberionautilidae", mainColor: "#A3E635", lineageColors: { "siberionautilidae": "#F59E0B" } };
+const cephalopoda_gonionautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "gonionautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Gonionautilidae", mainColor: "#38BDF8", lineageColors: { "gonionautilidae": "#8B5CF6" } };
+const cephalopoda_paranautilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "paranautilidae", className: "Cephalopoda", orderName: "Nautilida", name: "Paranautilidae", mainColor: "#3B82F6", lineageColors: { "paranautilidae": "#EC4899" } };
+const cephalopoda_vampyroteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "vampyroteuthidae", className: "Cephalopoda", orderName: "Vampyromorphida", name: "Vampyroteuthidae", mainColor: "#EF4444", lineageColors: { "vampyroteuthidae": "#14B8A6" } };
+const cephalopoda_spirulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "spirulidae", className: "Cephalopoda", orderName: "Spirulida", name: "Spirulidae", mainColor: "#10B981", lineageColors: { "spirulidae": "#F97316" } };
+const cephalopoda_groenlandibelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "groenlandibelidae", className: "Cephalopoda", orderName: "Spirulida", name: "Groenlandibelidae", mainColor: "#F59E0B", lineageColors: { "groenlandibelidae": "#6366F1" } };
+const cephalopoda_belemnosidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "belemnosidae", className: "Cephalopoda", orderName: "Spirulida", name: "Belemnosidae", mainColor: "#8B5CF6", lineageColors: { "belemnosidae": "#84CC16" } };
+const cephalopoda_belopteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "belopteridae", className: "Cephalopoda", orderName: "Spirulida", name: "Belopteridae", mainColor: "#EC4899", lineageColors: { "belopteridae": "#06B6D4" } };
+const cephalopoda_bathyteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "bathyteuthidae", className: "Cephalopoda", orderName: "Bathyteuthida", name: "Bathyteuthidae", mainColor: "#14B8A6", lineageColors: { "bathyteuthidae": "#D946EF" } };
+const cephalopoda_chtenopterygidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "chtenopterygidae", className: "Cephalopoda", orderName: "Bathyteuthida", name: "Chtenopterygidae", mainColor: "#F97316", lineageColors: { "chtenopterygidae": "#0EA5E9" } };
+const cephalopoda_idiosepiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "idiosepiidae", className: "Cephalopoda", orderName: "Idiosepida", name: "Idiosepiidae", mainColor: "#6366F1", lineageColors: { "idiosepiidae": "#22C55E" } };
+const cephalopoda_australiteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "australiteuthidae", className: "Cephalopoda", orderName: "Myopsida", name: "Australiteuthidae", mainColor: "#84CC16", lineageColors: { "australiteuthidae": "#EAB308" } };
+const cephalopoda_pholidoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pholidoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Pholidoteuthidae", mainColor: "#06B6D4", lineageColors: { "pholidoteuthidae": "#A855F7" } };
+const cephalopoda_lepidoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "lepidoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Lepidoteuthidae", mainColor: "#D946EF", lineageColors: { "lepidoteuthidae": "#FB923C" } };
+const cephalopoda_mastigoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "mastigoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Mastigoteuthidae", mainColor: "#0EA5E9", lineageColors: { "mastigoteuthidae": "#2DD4BF" } };
+const cephalopoda_octopoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "octopoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Octopoteuthidae", mainColor: "#22C55E", lineageColors: { "octopoteuthidae": "#A3E635" } };
+const cephalopoda_promachoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "promachoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Promachoteuthidae", mainColor: "#EAB308", lineageColors: { "promachoteuthidae": "#38BDF8" } };
+const cephalopoda_pyroteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "pyroteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Pyroteuthidae", mainColor: "#A855F7", lineageColors: { "pyroteuthidae": "#3B82F6" } };
+const cephalopoda_brachioteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "brachioteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Brachioteuthidae", mainColor: "#FB923C", lineageColors: { "brachioteuthidae": "#EF4444" } };
+const cephalopoda_cranchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "cranchiidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Cranchiidae", mainColor: "#2DD4BF", lineageColors: { "cranchiidae": "#10B981" } };
+const cephalopoda_gonatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "gonatidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Gonatidae", mainColor: "#A3E635", lineageColors: { "gonatidae": "#F59E0B" } };
+const cephalopoda_lycoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "lycoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Lycoteuthidae", mainColor: "#38BDF8", lineageColors: { "lycoteuthidae": "#8B5CF6" } };
+const cephalopoda_lampadioteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "lampadioteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Lampadioteuthidae", mainColor: "#3B82F6", lineageColors: { "lampadioteuthidae": "#EC4899" } };
+const cephalopoda_onychoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "onychoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Onychoteuthidae", mainColor: "#EF4444", lineageColors: { "onychoteuthidae": "#14B8A6" } };
+const cephalopoda_psychroteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "psychroteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Psychroteuthidae", mainColor: "#10B981", lineageColors: { "psychroteuthidae": "#F97316" } };
+const cephalopoda_batoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "batoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Batoteuthidae", mainColor: "#F59E0B", lineageColors: { "batoteuthidae": "#6366F1" } };
+const cephalopoda_enoploteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "enoploteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Enoploteuthidae", mainColor: "#8B5CF6", lineageColors: { "enoploteuthidae": "#84CC16" } };
+const cephalopoda_joubiniteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "joubiniteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Joubiniteuthidae", mainColor: "#EC4899", lineageColors: { "joubiniteuthidae": "#06B6D4" } };
+const cephalopoda_neoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "neoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Neoteuthidae", mainColor: "#14B8A6", lineageColors: { "neoteuthidae": "#D946EF" } };
+const cephalopoda_ancistrocheiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "ancistrocheiridae", className: "Cephalopoda", orderName: "Oegopsida", name: "Ancistrocheiridae", mainColor: "#F97316", lineageColors: { "ancistrocheiridae": "#0EA5E9" } };
+const cephalopoda_thysanoteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "thysanoteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Thysanoteuthidae", mainColor: "#6366F1", lineageColors: { "thysanoteuthidae": "#22C55E" } };
+const cephalopoda_chiroteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "chiroteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Chiroteuthidae", mainColor: "#84CC16", lineageColors: { "chiroteuthidae": "#EAB308" } };
+const cephalopoda_cycloteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cycloteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Cycloteuthidae", mainColor: "#06B6D4", lineageColors: { "cycloteuthidae": "#A855F7" } };
+const cephalopoda_histioteuthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "histioteuthidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Histioteuthidae", mainColor: "#D946EF", lineageColors: { "histioteuthidae": "#FB923C" } };
+const cephalopoda_magnapinnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "magnapinnidae", className: "Cephalopoda", orderName: "Oegopsida", name: "Magnapinnidae", mainColor: "#0EA5E9", lineageColors: { "magnapinnidae": "#2DD4BF" } };
+const cephalopoda_kelaenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "kelaenidae", className: "Cephalopoda", orderName: "Vampyromorpha", name: "Kelaenidae", mainColor: "#22C55E", lineageColors: { "kelaenidae": "#A3E635" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -3489,7 +3586,101 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "cobcrephoridae": polyplacophora_cobcrephoridae,
   "mesochitonidae": polyplacophora_mesochitonidae,
   "camptochitonidae": polyplacophora_camptochitonidae,
-  "solenocarididae": polyplacophora_solenocarididae,};
+  "solenocarididae": polyplacophora_solenocarididae,
+  "octopodidae": cephalopoda_octopodidae,
+  "alloposidae": cephalopoda_alloposidae,
+  "amphitretidae": cephalopoda_amphitretidae,
+  "idioctopodidae": cephalopoda_idioctopodidae,
+  "opisthoteuthidae": cephalopoda_opisthoteuthidae,
+  "cirroctopodidae": cephalopoda_cirroctopodidae,
+  "bathypolypodidae": cephalopoda_bathypolypodidae,
+  "megaleledonidae": cephalopoda_megaleledonidae,
+  "eledonidae": cephalopoda_eledonidae,
+  "enteroctopodidae": cephalopoda_enteroctopodidae,
+  "stauroteuthidae": cephalopoda_stauroteuthidae,
+  "cirroteuthidae": cephalopoda_cirroteuthidae,
+  "tremoctopodidae": cephalopoda_tremoctopodidae,
+  "argonautidae": cephalopoda_argonautidae,
+  "palaeololiginidae": cephalopoda_palaeololiginidae,
+  "palaeoctopodidae": cephalopoda_palaeoctopodidae,
+  "ocythoidae": cephalopoda_ocythoidae,
+  "muensterellidae": cephalopoda_muensterellidae,
+  "patelloctopodidae": cephalopoda_patelloctopodidae,
+  "loliginidae": cephalopoda_loliginidae,
+  "ommastrephidae": cephalopoda_ommastrephidae,
+  "architeuthidae": cephalopoda_architeuthidae,
+  "sepiidae": cephalopoda_sepiidae,
+  "sepiolidae": cephalopoda_sepiolidae,
+  "sepiadariidae": cephalopoda_sepiadariidae,
+  "belosaepiidae": cephalopoda_belosaepiidae,
+  "vasseuriidae": cephalopoda_vasseuriidae,
+  "belosepiellidae": cephalopoda_belosepiellidae,
+  "nautilidae": cephalopoda_nautilidae,
+  "rutoceratidae": cephalopoda_rutoceratidae,
+  "aturiidae": cephalopoda_aturiidae,
+  "hercoglossidae": cephalopoda_hercoglossidae,
+  "trigonoceratidae": cephalopoda_trigonoceratidae,
+  "cymatoceratidae": cephalopoda_cymatoceratidae,
+  "koninckioceratidae": cephalopoda_koninckioceratidae,
+  "tainoceratidae": cephalopoda_tainoceratidae,
+  "liroceratidae": cephalopoda_liroceratidae,
+  "grypoceratidae": cephalopoda_grypoceratidae,
+  "domatoceratidae": cephalopoda_domatoceratidae,
+  "solenochilidae": cephalopoda_solenochilidae,
+  "scyphoceratidae": cephalopoda_scyphoceratidae,
+  "ephippioceratidae": cephalopoda_ephippioceratidae,
+  "rhiphaeoceratidae": cephalopoda_rhiphaeoceratidae,
+  "thrincoceratidae": cephalopoda_thrincoceratidae,
+  "gzheloceratidae": cephalopoda_gzheloceratidae,
+  "paracenoceratidae": cephalopoda_paracenoceratidae,
+  "mosquoceratidae": cephalopoda_mosquoceratidae,
+  "permonautilidae": cephalopoda_permonautilidae,
+  "neptunoceratidae": cephalopoda_neptunoceratidae,
+  "clydonautilidae": cephalopoda_clydonautilidae,
+  "temnocheilidae": cephalopoda_temnocheilidae,
+  "cenoceratidae": cephalopoda_cenoceratidae,
+  "centroceratidae": cephalopoda_centroceratidae,
+  "aipoceratidae": cephalopoda_aipoceratidae,
+  "syringonautilidae": cephalopoda_syringonautilidae,
+  "pleuronautilidae": cephalopoda_pleuronautilidae,
+  "pseudonautilidae": cephalopoda_pseudonautilidae,
+  "aktubonautilidae": cephalopoda_aktubonautilidae,
+  "siberionautilidae": cephalopoda_siberionautilidae,
+  "gonionautilidae": cephalopoda_gonionautilidae,
+  "paranautilidae": cephalopoda_paranautilidae,
+  "vampyroteuthidae": cephalopoda_vampyroteuthidae,
+  "spirulidae": cephalopoda_spirulidae,
+  "groenlandibelidae": cephalopoda_groenlandibelidae,
+  "belemnosidae": cephalopoda_belemnosidae,
+  "belopteridae": cephalopoda_belopteridae,
+  "bathyteuthidae": cephalopoda_bathyteuthidae,
+  "chtenopterygidae": cephalopoda_chtenopterygidae,
+  "idiosepiidae": cephalopoda_idiosepiidae,
+  "australiteuthidae": cephalopoda_australiteuthidae,
+  "pholidoteuthidae": cephalopoda_pholidoteuthidae,
+  "lepidoteuthidae": cephalopoda_lepidoteuthidae,
+  "mastigoteuthidae": cephalopoda_mastigoteuthidae,
+  "octopoteuthidae": cephalopoda_octopoteuthidae,
+  "promachoteuthidae": cephalopoda_promachoteuthidae,
+  "pyroteuthidae": cephalopoda_pyroteuthidae,
+  "brachioteuthidae": cephalopoda_brachioteuthidae,
+  "cranchiidae": cephalopoda_cranchiidae,
+  "gonatidae": cephalopoda_gonatidae,
+  "lycoteuthidae": cephalopoda_lycoteuthidae,
+  "lampadioteuthidae": cephalopoda_lampadioteuthidae,
+  "onychoteuthidae": cephalopoda_onychoteuthidae,
+  "psychroteuthidae": cephalopoda_psychroteuthidae,
+  "batoteuthidae": cephalopoda_batoteuthidae,
+  "enoploteuthidae": cephalopoda_enoploteuthidae,
+  "joubiniteuthidae": cephalopoda_joubiniteuthidae,
+  "neoteuthidae": cephalopoda_neoteuthidae,
+  "ancistrocheiridae": cephalopoda_ancistrocheiridae,
+  "thysanoteuthidae": cephalopoda_thysanoteuthidae,
+  "chiroteuthidae": cephalopoda_chiroteuthidae,
+  "cycloteuthidae": cephalopoda_cycloteuthidae,
+  "histioteuthidae": cephalopoda_histioteuthidae,
+  "magnapinnidae": cephalopoda_magnapinnidae,
+  "kelaenidae": cephalopoda_kelaenidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
