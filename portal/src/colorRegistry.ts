@@ -2818,6 +2818,915 @@ const bivalvia_tironuculidae: ColorTheme = { subfamilyColors: {}, breedGroupColo
 const bivalvia_colpomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "colpomyidae", className: "Bivalvia", orderName: "Colpomyida", name: "Colpomyidae", mainColor: "#38BDF8", lineageColors: { "colpomyidae": "#8B5CF6" } };
 const bivalvia_tuarangiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "tuarangiidae", className: "Bivalvia", orderName: "Tuarangiida", name: "Tuarangiidae", mainColor: "#3B82F6", lineageColors: { "tuarangiidae": "#EC4899" } };
 
+
+// ── Gastropoda (906 families) ──
+const gastropoda_camaenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "camaenidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Camaenidae", mainColor: "#EF4444", lineageColors: { "camaenidae": "#14B8A6" } };
+const gastropoda_clausiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "clausiliidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Clausiliidae", mainColor: "#10B981", lineageColors: { "clausiliidae": "#F97316" } };
+const gastropoda_streptaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "streptaxidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Streptaxidae", mainColor: "#F59E0B", lineageColors: { "streptaxidae": "#6366F1" } };
+const gastropoda_achatinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "achatinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Achatinidae", mainColor: "#8B5CF6", lineageColors: { "achatinidae": "#84CC16" } };
+const gastropoda_charopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "charopidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Charopidae", mainColor: "#EC4899", lineageColors: { "charopidae": "#06B6D4" } };
+const gastropoda_bulimulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "bulimulidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Bulimulidae", mainColor: "#14B8A6", lineageColors: { "bulimulidae": "#D946EF" } };
+const gastropoda_helicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "helicidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Helicidae", mainColor: "#F97316", lineageColors: { "helicidae": "#0EA5E9" } };
+const gastropoda_enidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "enidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Enidae", mainColor: "#6366F1", lineageColors: { "enidae": "#22C55E" } };
+const gastropoda_ariophantidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "ariophantidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Ariophantidae", mainColor: "#84CC16", lineageColors: { "ariophantidae": "#EAB308" } };
+const gastropoda_helicarionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "helicarionidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Helicarionidae", mainColor: "#06B6D4", lineageColors: { "helicarionidae": "#A855F7" } };
+const gastropoda_urocoptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "urocoptidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Urocoptidae", mainColor: "#D946EF", lineageColors: { "urocoptidae": "#FB923C" } };
+const gastropoda_hygromiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "hygromiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Hygromiidae", mainColor: "#0EA5E9", lineageColors: { "hygromiidae": "#2DD4BF" } };
+const gastropoda_urocyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "urocyclidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Urocyclidae", mainColor: "#22C55E", lineageColors: { "urocyclidae": "#A3E635" } };
+const gastropoda_achatinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "achatinellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Achatinellidae", mainColor: "#EAB308", lineageColors: { "achatinellidae": "#38BDF8" } };
+const gastropoda_succineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "succineidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Succineidae", mainColor: "#A855F7", lineageColors: { "succineidae": "#3B82F6" } };
+const gastropoda_geomitridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "geomitridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Geomitridae", mainColor: "#FB923C", lineageColors: { "geomitridae": "#EF4444" } };
+const gastropoda_xanthonychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "xanthonychidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Xanthonychidae", mainColor: "#2DD4BF", lineageColors: { "xanthonychidae": "#10B981" } };
+const gastropoda_gastrocoptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "gastrocoptidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Gastrocoptidae", mainColor: "#A3E635", lineageColors: { "gastrocoptidae": "#F59E0B" } };
+const gastropoda_polygyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "polygyridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Polygyridae", mainColor: "#38BDF8", lineageColors: { "polygyridae": "#8B5CF6" } };
+const gastropoda_spiraxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "spiraxidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Spiraxidae", mainColor: "#3B82F6", lineageColors: { "spiraxidae": "#EC4899" } };
+const gastropoda_chronidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "chronidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Chronidae", mainColor: "#EF4444", lineageColors: { "chronidae": "#14B8A6" } };
+const gastropoda_microcystidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "microcystidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Microcystidae", mainColor: "#10B981", lineageColors: { "microcystidae": "#F97316" } };
+const gastropoda_vertiginidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "vertiginidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Vertiginidae", mainColor: "#F59E0B", lineageColors: { "vertiginidae": "#6366F1" } };
+const gastropoda_endodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "endodontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Endodontidae", mainColor: "#8B5CF6", lineageColors: { "endodontidae": "#84CC16" } };
+const gastropoda_trochomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "trochomorphidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Trochomorphidae", mainColor: "#EC4899", lineageColors: { "trochomorphidae": "#06B6D4" } };
+const gastropoda_oxychilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "oxychilidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Oxychilidae", mainColor: "#14B8A6", lineageColors: { "oxychilidae": "#D946EF" } };
+const gastropoda_gastrodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "gastrodontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Gastrodontidae", mainColor: "#F97316", lineageColors: { "gastrodontidae": "#0EA5E9" } };
+const gastropoda_rhytididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "rhytididae", className: "Gastropoda", orderName: "Stylommatophora", name: "Rhytididae", mainColor: "#6366F1", lineageColors: { "rhytididae": "#22C55E" } };
+const gastropoda_cerastidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cerastidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Cerastidae", mainColor: "#84CC16", lineageColors: { "cerastidae": "#EAB308" } };
+const gastropoda_pristilomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pristilomatidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Pristilomatidae", mainColor: "#06B6D4", lineageColors: { "pristilomatidae": "#A855F7" } };
+const gastropoda_punctidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "punctidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Punctidae", mainColor: "#D946EF", lineageColors: { "punctidae": "#FB923C" } };
+const gastropoda_cerionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cerionidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Cerionidae", mainColor: "#0EA5E9", lineageColors: { "cerionidae": "#2DD4BF" } };
+const gastropoda_holospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "holospiridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Holospiridae", mainColor: "#22C55E", lineageColors: { "holospiridae": "#A3E635" } };
+const gastropoda_pupillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pupillidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Pupillidae", mainColor: "#EAB308", lineageColors: { "pupillidae": "#38BDF8" } };
+const gastropoda_vitrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "vitrinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Vitrinidae", mainColor: "#A855F7", lineageColors: { "vitrinidae": "#3B82F6" } };
+const gastropoda_amastridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "amastridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Amastridae", mainColor: "#FB923C", lineageColors: { "amastridae": "#EF4444" } };
+const gastropoda_bothriembryontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "bothriembryontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Bothriembryontidae", mainColor: "#2DD4BF", lineageColors: { "bothriembryontidae": "#10B981" } };
+const gastropoda_euconulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "euconulidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Euconulidae", mainColor: "#A3E635", lineageColors: { "euconulidae": "#F59E0B" } };
+const gastropoda_diapheridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "diapheridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Diapheridae", mainColor: "#38BDF8", lineageColors: { "diapheridae": "#8B5CF6" } };
+const gastropoda_agriolimacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "agriolimacidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Agriolimacidae", mainColor: "#3B82F6", lineageColors: { "agriolimacidae": "#EC4899" } };
+const gastropoda_acavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "acavidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Acavidae", mainColor: "#EF4444", lineageColors: { "acavidae": "#14B8A6" } };
+const gastropoda_plectopylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "plectopylidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Plectopylidae", mainColor: "#10B981", lineageColors: { "plectopylidae": "#F97316" } };
+const gastropoda_valloniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "valloniidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Valloniidae", mainColor: "#F59E0B", lineageColors: { "valloniidae": "#6366F1" } };
+const gastropoda_oleacinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "oleacinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Oleacinidae", mainColor: "#8B5CF6", lineageColors: { "oleacinidae": "#84CC16" } };
+const gastropoda_limacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "limacidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Limacidae", mainColor: "#EC4899", lineageColors: { "limacidae": "#06B6D4" } };
+const gastropoda_scolodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "scolodontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Scolodontidae", mainColor: "#14B8A6", lineageColors: { "scolodontidae": "#D946EF" } };
+const gastropoda_orthalicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "orthalicidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Orthalicidae", mainColor: "#F97316", lineageColors: { "orthalicidae": "#0EA5E9" } };
+const gastropoda_partulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "partulidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Partulidae", mainColor: "#6366F1", lineageColors: { "partulidae": "#22C55E" } };
+const gastropoda_amphibulimidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "amphibulimidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Amphibulimidae", mainColor: "#84CC16", lineageColors: { "amphibulimidae": "#EAB308" } };
+const gastropoda_strophocheilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "strophocheilidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Strophocheilidae", mainColor: "#06B6D4", lineageColors: { "strophocheilidae": "#A855F7" } };
+const gastropoda_odontostomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "odontostomidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Odontostomidae", mainColor: "#D946EF", lineageColors: { "odontostomidae": "#FB923C" } };
+const gastropoda_zonitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "zonitidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Zonitidae", mainColor: "#0EA5E9", lineageColors: { "zonitidae": "#2DD4BF" } };
+const gastropoda_dyakiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "dyakiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Dyakiidae", mainColor: "#22C55E", lineageColors: { "dyakiidae": "#A3E635" } };
+const gastropoda_discidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "discidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Discidae", mainColor: "#EAB308", lineageColors: { "discidae": "#38BDF8" } };
+const gastropoda_chondrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "chondrinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Chondrinidae", mainColor: "#A855F7", lineageColors: { "chondrinidae": "#3B82F6" } };
+const gastropoda_eucalodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "eucalodiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Eucalodiidae", mainColor: "#FB923C", lineageColors: { "eucalodiidae": "#EF4444" } };
+const gastropoda_ferussaciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ferussaciidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Ferussaciidae", mainColor: "#2DD4BF", lineageColors: { "ferussaciidae": "#10B981" } };
+const gastropoda_lauriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "lauriidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Lauriidae", mainColor: "#A3E635", lineageColors: { "lauriidae": "#F59E0B" } };
+const gastropoda_filholiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "filholiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Filholiidae", mainColor: "#38BDF8", lineageColors: { "filholiidae": "#8B5CF6" } };
+const gastropoda_strobilopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "strobilopsidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Strobilopsidae", mainColor: "#3B82F6", lineageColors: { "strobilopsidae": "#EC4899" } };
+const gastropoda_truncatellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "truncatellinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Truncatellinidae", mainColor: "#EF4444", lineageColors: { "truncatellinidae": "#14B8A6" } };
+const gastropoda_oreohelicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "oreohelicidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Oreohelicidae", mainColor: "#10B981", lineageColors: { "oreohelicidae": "#F97316" } };
+const gastropoda_epiphragmophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "epiphragmophoridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Epiphragmophoridae", mainColor: "#F59E0B", lineageColors: { "epiphragmophoridae": "#6366F1" } };
+const gastropoda_orculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "orculidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Orculidae", mainColor: "#8B5CF6", lineageColors: { "orculidae": "#84CC16" } };
+const gastropoda_elonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "elonidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Elonidae", mainColor: "#EC4899", lineageColors: { "elonidae": "#06B6D4" } };
+const gastropoda_simpulopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "simpulopsidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Simpulopsidae", mainColor: "#14B8A6", lineageColors: { "simpulopsidae": "#D946EF" } };
+const gastropoda_milacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "milacidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Milacidae", mainColor: "#F97316", lineageColors: { "milacidae": "#0EA5E9" } };
+const gastropoda_pleurodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "pleurodontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Pleurodontidae", mainColor: "#6366F1", lineageColors: { "pleurodontidae": "#22C55E" } };
+const gastropoda_athoracophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "athoracophoridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Athoracophoridae", mainColor: "#84CC16", lineageColors: { "athoracophoridae": "#EAB308" } };
+const gastropoda_arionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "arionidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Arionidae", mainColor: "#06B6D4", lineageColors: { "arionidae": "#A855F7" } };
+const gastropoda_labyrinthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "labyrinthidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Labyrinthidae", mainColor: "#D946EF", lineageColors: { "labyrinthidae": "#FB923C" } };
+const gastropoda_cepolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cepolidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Cepolidae", mainColor: "#0EA5E9", lineageColors: { "cepolidae": "#2DD4BF" } };
+const gastropoda_solaropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "solaropsidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Solaropsidae", mainColor: "#22C55E", lineageColors: { "solaropsidae": "#A3E635" } };
+const gastropoda_trissexodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "trissexodontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Trissexodontidae", mainColor: "#EAB308", lineageColors: { "trissexodontidae": "#38BDF8" } };
+const gastropoda_megaspiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "megaspiridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Megaspiridae", mainColor: "#A855F7", lineageColors: { "megaspiridae": "#3B82F6" } };
+const gastropoda_philomycidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "philomycidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Philomycidae", mainColor: "#FB923C", lineageColors: { "philomycidae": "#EF4444" } };
+const gastropoda_thysanophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "thysanophoridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Thysanophoridae", mainColor: "#2DD4BF", lineageColors: { "thysanophoridae": "#10B981" } };
+const gastropoda_canariellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "canariellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Canariellidae", mainColor: "#A3E635", lineageColors: { "canariellidae": "#F59E0B" } };
+const gastropoda_sagdidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "sagdidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Sagdidae", mainColor: "#38BDF8", lineageColors: { "sagdidae": "#8B5CF6" } };
+const gastropoda_sphincterochilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "sphincterochilidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Sphincterochilidae", mainColor: "#3B82F6", lineageColors: { "sphincterochilidae": "#EC4899" } };
+const gastropoda_azecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "azecidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Azecidae", mainColor: "#EF4444", lineageColors: { "azecidae": "#14B8A6" } };
+const gastropoda_helicodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "helicodiscidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Helicodiscidae", mainColor: "#10B981", lineageColors: { "helicodiscidae": "#F97316" } };
+const gastropoda_cochlicopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cochlicopidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Cochlicopidae", mainColor: "#F59E0B", lineageColors: { "cochlicopidae": "#6366F1" } };
+const gastropoda_helicodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "helicodontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Helicodontidae", mainColor: "#8B5CF6", lineageColors: { "helicodontidae": "#84CC16" } };
+const gastropoda_agardhiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "agardhiellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Agardhiellidae", mainColor: "#EC4899", lineageColors: { "agardhiellidae": "#06B6D4" } };
+const gastropoda_cystopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cystopeltidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Cystopeltidae", mainColor: "#14B8A6", lineageColors: { "cystopeltidae": "#D946EF" } };
+const gastropoda_archaeozonitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "archaeozonitidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Archaeozonitidae", mainColor: "#F97316", lineageColors: { "archaeozonitidae": "#0EA5E9" } };
+const gastropoda_spelaeodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "spelaeodiscidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Spelaeodiscidae", mainColor: "#6366F1", lineageColors: { "spelaeodiscidae": "#22C55E" } };
+const gastropoda_ariolimacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "ariolimacidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Ariolimacidae", mainColor: "#84CC16", lineageColors: { "ariolimacidae": "#EAB308" } };
+const gastropoda_parmacellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "parmacellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Parmacellidae", mainColor: "#06B6D4", lineageColors: { "parmacellidae": "#A855F7" } };
+const gastropoda_haplotrematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "haplotrematidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Haplotrematidae", mainColor: "#D946EF", lineageColors: { "haplotrematidae": "#FB923C" } };
+const gastropoda_epirobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "epirobiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Epirobiidae", mainColor: "#0EA5E9", lineageColors: { "epirobiidae": "#2DD4BF" } };
+const gastropoda_testacellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "testacellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Testacellidae", mainColor: "#22C55E", lineageColors: { "testacellidae": "#A3E635" } };
+const gastropoda_dorcasiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "dorcasiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Dorcasiidae", mainColor: "#EAB308", lineageColors: { "dorcasiidae": "#38BDF8" } };
+const gastropoda_fauxulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "fauxulidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Fauxulidae", mainColor: "#A855F7", lineageColors: { "fauxulidae": "#3B82F6" } };
+const gastropoda_caryodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "caryodidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Caryodidae", mainColor: "#FB923C", lineageColors: { "caryodidae": "#EF4444" } };
+const gastropoda_zachrysiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "zachrysiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Zachrysiidae", mainColor: "#2DD4BF", lineageColors: { "zachrysiidae": "#10B981" } };
+const gastropoda_pyramidulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pyramidulidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Pyramidulidae", mainColor: "#A3E635", lineageColors: { "pyramidulidae": "#F59E0B" } };
+const gastropoda_clavatoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "clavatoridae", className: "Gastropoda", orderName: "Stylommatophora", name: "Clavatoridae", mainColor: "#38BDF8", lineageColors: { "clavatoridae": "#8B5CF6" } };
+const gastropoda_megomphicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "megomphicidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Megomphicidae", mainColor: "#3B82F6", lineageColors: { "megomphicidae": "#EC4899" } };
+const gastropoda_argnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "argnidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Argnidae", mainColor: "#EF4444", lineageColors: { "argnidae": "#14B8A6" } };
+const gastropoda_palaeostoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "palaeostoidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Palaeostoidae", mainColor: "#10B981", lineageColors: { "palaeostoidae": "#F97316" } };
+const gastropoda_anadromidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "anadromidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Anadromidae", mainColor: "#F59E0B", lineageColors: { "anadromidae": "#6366F1" } };
+const gastropoda_vidaliellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "vidaliellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Vidaliellidae", mainColor: "#8B5CF6", lineageColors: { "vidaliellidae": "#84CC16" } };
+const gastropoda_sculptariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "sculptariidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Sculptariidae", mainColor: "#EC4899", lineageColors: { "sculptariidae": "#06B6D4" } };
+const gastropoda_pagodulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pagodulinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Pagodulinidae", mainColor: "#14B8A6", lineageColors: { "pagodulinidae": "#D946EF" } };
+const gastropoda_pleurodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pleurodiscidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Pleurodiscidae", mainColor: "#F97316", lineageColors: { "pleurodiscidae": "#0EA5E9" } };
+const gastropoda_binneyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "binneyidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Binneyidae", mainColor: "#6366F1", lineageColors: { "binneyidae": "#22C55E" } };
+const gastropoda_subulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "subulinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Subulinidae", mainColor: "#84CC16", lineageColors: { "subulinidae": "#EAB308" } };
+const gastropoda_oopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "oopeltidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Oopeltidae", mainColor: "#06B6D4", lineageColors: { "oopeltidae": "#A855F7" } };
+const gastropoda_grandipatulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "grandipatulidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Grandipatulidae", mainColor: "#D946EF", lineageColors: { "grandipatulidae": "#FB923C" } };
+const gastropoda_anostomopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "anostomopsidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Anostomopsidae", mainColor: "#0EA5E9", lineageColors: { "anostomopsidae": "#2DD4BF" } };
+const gastropoda_anadenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "anadenidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Anadenidae", mainColor: "#22C55E", lineageColors: { "anadenidae": "#A3E635" } };
+const gastropoda_trichodiscinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "trichodiscinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Trichodiscinidae", mainColor: "#EAB308", lineageColors: { "trichodiscinidae": "#38BDF8" } };
+const gastropoda_cylindrellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cylindrellinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Cylindrellinidae", mainColor: "#A855F7", lineageColors: { "cylindrellinidae": "#3B82F6" } };
+const gastropoda_trigonochlamydidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "trigonochlamydidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Trigonochlamydidae", mainColor: "#FB923C", lineageColors: { "trigonochlamydidae": "#EF4444" } };
+const gastropoda_palaeoxestinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "palaeoxestinidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Palaeoxestinidae", mainColor: "#2DD4BF", lineageColors: { "palaeoxestinidae": "#10B981" } };
+const gastropoda_anthracopupidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "anthracopupidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Anthracopupidae", mainColor: "#A3E635", lineageColors: { "anthracopupidae": "#F59E0B" } };
+const gastropoda_draparnaudiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "draparnaudiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Draparnaudiidae", mainColor: "#38BDF8", lineageColors: { "draparnaudiidae": "#8B5CF6" } };
+const gastropoda_coelociontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "coelociontidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Coelociontidae", mainColor: "#3B82F6", lineageColors: { "coelociontidae": "#EC4899" } };
+const gastropoda_dendropupidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "dendropupidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Dendropupidae", mainColor: "#EF4444", lineageColors: { "dendropupidae": "#14B8A6" } };
+const gastropoda_grangerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "grangerellidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Grangerellidae", mainColor: "#10B981", lineageColors: { "grangerellidae": "#F97316" } };
+const gastropoda_scalaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "scalaxidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Scalaxidae", mainColor: "#F59E0B", lineageColors: { "scalaxidae": "#6366F1" } };
+const gastropoda_staffordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "staffordiidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Staffordiidae", mainColor: "#8B5CF6", lineageColors: { "staffordiidae": "#84CC16" } };
+const gastropoda_odontocycladidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "odontocycladidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Odontocycladidae", mainColor: "#EC4899", lineageColors: { "odontocycladidae": "#06B6D4" } };
+const gastropoda_boettgerillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "boettgerillidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Boettgerillidae", mainColor: "#14B8A6", lineageColors: { "boettgerillidae": "#D946EF" } };
+const gastropoda_aillyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "aillyidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Aillyidae", mainColor: "#F97316", lineageColors: { "aillyidae": "#0EA5E9" } };
+const gastropoda_humboldtianidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "humboldtianidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Humboldtianidae", mainColor: "#6366F1", lineageColors: { "humboldtianidae": "#22C55E" } };
+const gastropoda_macrocyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "macrocyclidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Macrocyclidae", mainColor: "#84CC16", lineageColors: { "macrocyclidae": "#EAB308" } };
+const gastropoda_papillodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "papillodermatidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Papillodermatidae", mainColor: "#06B6D4", lineageColors: { "papillodermatidae": "#A855F7" } };
+const gastropoda_spelaeoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "spelaeoconchidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Spelaeoconchidae", mainColor: "#D946EF", lineageColors: { "spelaeoconchidae": "#FB923C" } };
+const gastropoda_micractaeonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "micractaeonidae", className: "Gastropoda", orderName: "Stylommatophora", name: "Micractaeonidae", mainColor: "#0EA5E9", lineageColors: { "micractaeonidae": "#2DD4BF" } };
+const gastropoda_muricidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "muricidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Muricidae", mainColor: "#22C55E", lineageColors: { "muricidae": "#A3E635" } };
+const gastropoda_marginellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "marginellidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Marginellidae", mainColor: "#EAB308", lineageColors: { "marginellidae": "#38BDF8" } };
+const gastropoda_conidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "conidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Conidae", mainColor: "#A855F7", lineageColors: { "conidae": "#3B82F6" } };
+const gastropoda_columbellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "columbellidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Columbellidae", mainColor: "#FB923C", lineageColors: { "columbellidae": "#EF4444" } };
+const gastropoda_mangeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "mangeliidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Mangeliidae", mainColor: "#2DD4BF", lineageColors: { "mangeliidae": "#10B981" } };
+const gastropoda_raphitomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "raphitomidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Raphitomidae", mainColor: "#A3E635", lineageColors: { "raphitomidae": "#F59E0B" } };
+const gastropoda_nassariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "nassariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Nassariidae", mainColor: "#38BDF8", lineageColors: { "nassariidae": "#8B5CF6" } };
+const gastropoda_fasciolariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "fasciolariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Fasciolariidae", mainColor: "#3B82F6", lineageColors: { "fasciolariidae": "#EC4899" } };
+const gastropoda_cancellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cancellariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Cancellariidae", mainColor: "#EF4444", lineageColors: { "cancellariidae": "#14B8A6" } };
+const gastropoda_volutidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "volutidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Volutidae", mainColor: "#10B981", lineageColors: { "volutidae": "#F97316" } };
+const gastropoda_drilliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "drilliidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Drilliidae", mainColor: "#F59E0B", lineageColors: { "drilliidae": "#6366F1" } };
+const gastropoda_pseudomelatomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pseudomelatomidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Pseudomelatomidae", mainColor: "#8B5CF6", lineageColors: { "pseudomelatomidae": "#84CC16" } };
+const gastropoda_buccinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "buccinidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Buccinidae", mainColor: "#EC4899", lineageColors: { "buccinidae": "#06B6D4" } };
+const gastropoda_costellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "costellariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Costellariidae", mainColor: "#14B8A6", lineageColors: { "costellariidae": "#D946EF" } };
+const gastropoda_turridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "turridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Turridae", mainColor: "#F97316", lineageColors: { "turridae": "#0EA5E9" } };
+const gastropoda_mitridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "mitridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Mitridae", mainColor: "#6366F1", lineageColors: { "mitridae": "#22C55E" } };
+const gastropoda_terebridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "terebridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Terebridae", mainColor: "#84CC16", lineageColors: { "terebridae": "#EAB308" } };
+const gastropoda_cystiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cystiscidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Cystiscidae", mainColor: "#06B6D4", lineageColors: { "cystiscidae": "#A855F7" } };
+const gastropoda_borsoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "borsoniidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Borsoniidae", mainColor: "#D946EF", lineageColors: { "borsoniidae": "#FB923C" } };
+const gastropoda_olividae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "olividae", className: "Gastropoda", orderName: "Neogastropoda", name: "Olividae", mainColor: "#0EA5E9", lineageColors: { "olividae": "#2DD4BF" } };
+const gastropoda_clathurellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "clathurellidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Clathurellidae", mainColor: "#22C55E", lineageColors: { "clathurellidae": "#A3E635" } };
+const gastropoda_ancillariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "ancillariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Ancillariidae", mainColor: "#EAB308", lineageColors: { "ancillariidae": "#38BDF8" } };
+const gastropoda_pisaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "pisaniidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Pisaniidae", mainColor: "#A855F7", lineageColors: { "pisaniidae": "#3B82F6" } };
+const gastropoda_horaiclavidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "horaiclavidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Horaiclavidae", mainColor: "#FB923C", lineageColors: { "horaiclavidae": "#EF4444" } };
+const gastropoda_clavatulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "clavatulidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Clavatulidae", mainColor: "#2DD4BF", lineageColors: { "clavatulidae": "#10B981" } };
+const gastropoda_tudiclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "tudiclidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Tudiclidae", mainColor: "#A3E635", lineageColors: { "tudiclidae": "#F59E0B" } };
+const gastropoda_mitromorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "mitromorphidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Mitromorphidae", mainColor: "#38BDF8", lineageColors: { "mitromorphidae": "#8B5CF6" } };
+const gastropoda_prosiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "prosiphonidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Prosiphonidae", mainColor: "#3B82F6", lineageColors: { "prosiphonidae": "#EC4899" } };
+const gastropoda_colubrariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "colubrariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Colubrariidae", mainColor: "#EF4444", lineageColors: { "colubrariidae": "#14B8A6" } };
+const gastropoda_granulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "granulinidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Granulinidae", mainColor: "#10B981", lineageColors: { "granulinidae": "#F97316" } };
+const gastropoda_turbinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "turbinellidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Turbinellidae", mainColor: "#F59E0B", lineageColors: { "turbinellidae": "#6366F1" } };
+const gastropoda_harpidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "harpidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Harpidae", mainColor: "#8B5CF6", lineageColors: { "harpidae": "#84CC16" } };
+const gastropoda_volutomitridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "volutomitridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Volutomitridae", mainColor: "#EC4899", lineageColors: { "volutomitridae": "#06B6D4" } };
+const gastropoda_columbariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "columbariidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Columbariidae", mainColor: "#14B8A6", lineageColors: { "columbariidae": "#D946EF" } };
+const gastropoda_melongenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "melongenidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Melongenidae", mainColor: "#F97316", lineageColors: { "melongenidae": "#0EA5E9" } };
+const gastropoda_cochlespiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cochlespiridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Cochlespiridae", mainColor: "#6366F1", lineageColors: { "cochlespiridae": "#22C55E" } };
+const gastropoda_cominellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cominellidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Cominellidae", mainColor: "#84CC16", lineageColors: { "cominellidae": "#EAB308" } };
+const gastropoda_ptychatractidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "ptychatractidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Ptychatractidae", mainColor: "#06B6D4", lineageColors: { "ptychatractidae": "#A855F7" } };
+const gastropoda_eosiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "eosiphonidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Eosiphonidae", mainColor: "#D946EF", lineageColors: { "eosiphonidae": "#FB923C" } };
+const gastropoda_austrosiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "austrosiphonidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Austrosiphonidae", mainColor: "#0EA5E9", lineageColors: { "austrosiphonidae": "#2DD4BF" } };
+const gastropoda_pseudolividae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pseudolividae", className: "Gastropoda", orderName: "Neogastropoda", name: "Pseudolividae", mainColor: "#22C55E", lineageColors: { "pseudolividae": "#A3E635" } };
+const gastropoda_busyconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "busyconidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Busyconidae", mainColor: "#EAB308", lineageColors: { "busyconidae": "#38BDF8" } };
+const gastropoda_chauvetiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "chauvetiidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Chauvetiidae", mainColor: "#A855F7", lineageColors: { "chauvetiidae": "#3B82F6" } };
+const gastropoda_pholidotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pholidotomidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Pholidotomidae", mainColor: "#FB923C", lineageColors: { "pholidotomidae": "#EF4444" } };
+const gastropoda_colidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "colidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Colidae", mainColor: "#2DD4BF", lineageColors: { "colidae": "#10B981" } };
+const gastropoda_dolicholatiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "dolicholatiridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Dolicholatiridae", mainColor: "#A3E635", lineageColors: { "dolicholatiridae": "#F59E0B" } };
+const gastropoda_prodotiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "prodotiidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Prodotiidae", mainColor: "#38BDF8", lineageColors: { "prodotiidae": "#8B5CF6" } };
+const gastropoda_retimohniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "retimohniidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Retimohniidae", mainColor: "#3B82F6", lineageColors: { "retimohniidae": "#EC4899" } };
+const gastropoda_belomitridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "belomitridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Belomitridae", mainColor: "#EF4444", lineageColors: { "belomitridae": "#14B8A6" } };
+const gastropoda_purpurinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "purpurinidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Purpurinidae", mainColor: "#10B981", lineageColors: { "purpurinidae": "#F97316" } };
+const gastropoda_bellolividae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "bellolividae", className: "Gastropoda", orderName: "Neogastropoda", name: "Bellolividae", mainColor: "#F59E0B", lineageColors: { "bellolividae": "#6366F1" } };
+const gastropoda_babyloniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "babyloniidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Babyloniidae", mainColor: "#8B5CF6", lineageColors: { "babyloniidae": "#84CC16" } };
+const gastropoda_benthobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "benthobiidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Benthobiidae", mainColor: "#EC4899", lineageColors: { "benthobiidae": "#06B6D4" } };
+const gastropoda_echinofulguridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "echinofulguridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Echinofulguridae", mainColor: "#14B8A6", lineageColors: { "echinofulguridae": "#D946EF" } };
+const gastropoda_strepsiduridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "strepsiduridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Strepsiduridae", mainColor: "#F97316", lineageColors: { "strepsiduridae": "#0EA5E9" } };
+const gastropoda_perissityidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "perissityidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Perissityidae", mainColor: "#6366F1", lineageColors: { "perissityidae": "#22C55E" } };
+const gastropoda_conorbidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "conorbidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Conorbidae", mainColor: "#84CC16", lineageColors: { "conorbidae": "#EAB308" } };
+const gastropoda_pyramimitridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pyramimitridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Pyramimitridae", mainColor: "#06B6D4", lineageColors: { "pyramimitridae": "#A855F7" } };
+const gastropoda_cryptoconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cryptoconidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Cryptoconidae", mainColor: "#D946EF", lineageColors: { "cryptoconidae": "#FB923C" } };
+const gastropoda_fusiturridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "fusiturridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Fusiturridae", mainColor: "#0EA5E9", lineageColors: { "fusiturridae": "#2DD4BF" } };
+const gastropoda_charitodoronidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "charitodoronidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Charitodoronidae", mainColor: "#22C55E", lineageColors: { "charitodoronidae": "#A3E635" } };
+const gastropoda_maturifusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "maturifusidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Maturifusidae", mainColor: "#EAB308", lineageColors: { "maturifusidae": "#38BDF8" } };
+const gastropoda_marshallenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "marshallenidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Marshallenidae", mainColor: "#A855F7", lineageColors: { "marshallenidae": "#3B82F6" } };
+const gastropoda_pseudotritoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudotritoniidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Pseudotritoniidae", mainColor: "#FB923C", lineageColors: { "pseudotritoniidae": "#EF4444" } };
+const gastropoda_siphonaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "siphonaliidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Siphonaliidae", mainColor: "#2DD4BF", lineageColors: { "siphonaliidae": "#10B981" } };
+const gastropoda_speightiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "speightiidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Speightiidae", mainColor: "#A3E635", lineageColors: { "speightiidae": "#F59E0B" } };
+const gastropoda_coralliophilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "coralliophilidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Coralliophilidae", mainColor: "#38BDF8", lineageColors: { "coralliophilidae": "#8B5CF6" } };
+const gastropoda_marginellonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "marginellonidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Marginellonidae", mainColor: "#3B82F6", lineageColors: { "marginellonidae": "#EC4899" } };
+const gastropoda_taiomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "taiomidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Taiomidae", mainColor: "#EF4444", lineageColors: { "taiomidae": "#14B8A6" } };
+const gastropoda_buccinanopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "buccinanopsidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Buccinanopsidae", mainColor: "#10B981", lineageColors: { "buccinanopsidae": "#F97316" } };
+const gastropoda_bouchetispiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "bouchetispiridae", className: "Gastropoda", orderName: "Neogastropoda", name: "Bouchetispiridae", mainColor: "#F59E0B", lineageColors: { "bouchetispiridae": "#6366F1" } };
+const gastropoda_buccinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "buccinulidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Buccinulidae", mainColor: "#8B5CF6", lineageColors: { "buccinulidae": "#84CC16" } };
+const gastropoda_sarganidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "sarganidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Sarganidae", mainColor: "#EC4899", lineageColors: { "sarganidae": "#06B6D4" } };
+const gastropoda_johnwyattidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "johnwyattidae", className: "Gastropoda", orderName: "Neogastropoda", name: "Johnwyattidae", mainColor: "#14B8A6", lineageColors: { "johnwyattidae": "#D946EF" } };
+const gastropoda_pyramidellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pyramidellidae", className: "Gastropoda", orderName: "Unknown", name: "Pyramidellidae", mainColor: "#F97316", lineageColors: { "pyramidellidae": "#0EA5E9" } };
+const gastropoda_planorbidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "planorbidae", className: "Gastropoda", orderName: "Unknown", name: "Planorbidae", mainColor: "#6366F1", lineageColors: { "planorbidae": "#22C55E" } };
+const gastropoda_cerithiopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cerithiopsidae", className: "Gastropoda", orderName: "Unknown", name: "Cerithiopsidae", mainColor: "#84CC16", lineageColors: { "cerithiopsidae": "#EAB308" } };
+const gastropoda_epitoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "epitoniidae", className: "Gastropoda", orderName: "Unknown", name: "Epitoniidae", mainColor: "#06B6D4", lineageColors: { "epitoniidae": "#A855F7" } };
+const gastropoda_turritellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "turritellidae", className: "Gastropoda", orderName: "Unknown", name: "Turritellidae", mainColor: "#D946EF", lineageColors: { "turritellidae": "#FB923C" } };
+const gastropoda_triphoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "triphoridae", className: "Gastropoda", orderName: "Unknown", name: "Triphoridae", mainColor: "#0EA5E9", lineageColors: { "triphoridae": "#2DD4BF" } };
+const gastropoda_melanopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "melanopsidae", className: "Gastropoda", orderName: "Unknown", name: "Melanopsidae", mainColor: "#22C55E", lineageColors: { "melanopsidae": "#A3E635" } };
+const gastropoda_lymnaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lymnaeidae", className: "Gastropoda", orderName: "Unknown", name: "Lymnaeidae", mainColor: "#EAB308", lineageColors: { "lymnaeidae": "#38BDF8" } };
+const gastropoda_cerithiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cerithiidae", className: "Gastropoda", orderName: "Unknown", name: "Cerithiidae", mainColor: "#A855F7", lineageColors: { "cerithiidae": "#3B82F6" } };
+const gastropoda_bellerophontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "bellerophontidae", className: "Gastropoda", orderName: "Unknown", name: "Bellerophontidae", mainColor: "#FB923C", lineageColors: { "bellerophontidae": "#EF4444" } };
+const gastropoda_thiaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "thiaridae", className: "Gastropoda", orderName: "Unknown", name: "Thiaridae", mainColor: "#2DD4BF", lineageColors: { "thiaridae": "#10B981" } };
+const gastropoda_euomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "euomphalidae", className: "Gastropoda", orderName: "Unknown", name: "Euomphalidae", mainColor: "#A3E635", lineageColors: { "euomphalidae": "#F59E0B" } };
+const gastropoda_platyceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "platyceratidae", className: "Gastropoda", orderName: "Unknown", name: "Platyceratidae", mainColor: "#38BDF8", lineageColors: { "platyceratidae": "#8B5CF6" } };
+const gastropoda_pachychilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pachychilidae", className: "Gastropoda", orderName: "Unknown", name: "Pachychilidae", mainColor: "#3B82F6", lineageColors: { "pachychilidae": "#EC4899" } };
+const gastropoda_valvatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "valvatidae", className: "Gastropoda", orderName: "Unknown", name: "Valvatidae", mainColor: "#EF4444", lineageColors: { "valvatidae": "#14B8A6" } };
+const gastropoda_pleuroceridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pleuroceridae", className: "Gastropoda", orderName: "Unknown", name: "Pleuroceridae", mainColor: "#10B981", lineageColors: { "pleuroceridae": "#F97316" } };
+const gastropoda_architectonicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "architectonicidae", className: "Gastropoda", orderName: "Unknown", name: "Architectonicidae", mainColor: "#F59E0B", lineageColors: { "architectonicidae": "#6366F1" } };
+const gastropoda_physidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "physidae", className: "Gastropoda", orderName: "Unknown", name: "Physidae", mainColor: "#8B5CF6", lineageColors: { "physidae": "#84CC16" } };
+const gastropoda_lottiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "lottiidae", className: "Gastropoda", orderName: "Unknown", name: "Lottiidae", mainColor: "#EC4899", lineageColors: { "lottiidae": "#06B6D4" } };
+const gastropoda_loxonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "loxonematidae", className: "Gastropoda", orderName: "Unknown", name: "Loxonematidae", mainColor: "#14B8A6", lineageColors: { "loxonematidae": "#D946EF" } };
+const gastropoda_lophospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "lophospiridae", className: "Gastropoda", orderName: "Unknown", name: "Lophospiridae", mainColor: "#F97316", lineageColors: { "lophospiridae": "#0EA5E9" } };
+const gastropoda_soleniscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "soleniscidae", className: "Gastropoda", orderName: "Unknown", name: "Soleniscidae", mainColor: "#6366F1", lineageColors: { "soleniscidae": "#22C55E" } };
+const gastropoda_bucaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "bucaniidae", className: "Gastropoda", orderName: "Unknown", name: "Bucaniidae", mainColor: "#84CC16", lineageColors: { "bucaniidae": "#EAB308" } };
+const gastropoda_potamididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "potamididae", className: "Gastropoda", orderName: "Unknown", name: "Potamididae", mainColor: "#06B6D4", lineageColors: { "potamididae": "#A855F7" } };
+const gastropoda_paludomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "paludomidae", className: "Gastropoda", orderName: "Unknown", name: "Paludomidae", mainColor: "#D946EF", lineageColors: { "paludomidae": "#FB923C" } };
+const gastropoda_pseudozygopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pseudozygopleuridae", className: "Gastropoda", orderName: "Unknown", name: "Pseudozygopleuridae", mainColor: "#0EA5E9", lineageColors: { "pseudozygopleuridae": "#2DD4BF" } };
+const gastropoda_mathildidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "mathildidae", className: "Gastropoda", orderName: "Unknown", name: "Mathildidae", mainColor: "#22C55E", lineageColors: { "mathildidae": "#A3E635" } };
+const gastropoda_newtoniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "newtoniellidae", className: "Gastropoda", orderName: "Unknown", name: "Newtoniellidae", mainColor: "#EAB308", lineageColors: { "newtoniellidae": "#38BDF8" } };
+const gastropoda_plakobranchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "plakobranchidae", className: "Gastropoda", orderName: "Unknown", name: "Plakobranchidae", mainColor: "#A855F7", lineageColors: { "plakobranchidae": "#3B82F6" } };
+const gastropoda_coelostylinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "coelostylinidae", className: "Gastropoda", orderName: "Unknown", name: "Coelostylinidae", mainColor: "#FB923C", lineageColors: { "coelostylinidae": "#EF4444" } };
+const gastropoda_holopeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "holopeidae", className: "Gastropoda", orderName: "Unknown", name: "Holopeidae", mainColor: "#2DD4BF", lineageColors: { "holopeidae": "#10B981" } };
+const gastropoda_raphistomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "raphistomatidae", className: "Gastropoda", orderName: "Unknown", name: "Raphistomatidae", mainColor: "#A3E635", lineageColors: { "raphistomatidae": "#F59E0B" } };
+const gastropoda_oriostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "oriostomatidae", className: "Gastropoda", orderName: "Unknown", name: "Oriostomatidae", mainColor: "#38BDF8", lineageColors: { "oriostomatidae": "#8B5CF6" } };
+const gastropoda_patellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "patellidae", className: "Gastropoda", orderName: "Unknown", name: "Patellidae", mainColor: "#3B82F6", lineageColors: { "patellidae": "#EC4899" } };
+const gastropoda_euphemitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "euphemitidae", className: "Gastropoda", orderName: "Unknown", name: "Euphemitidae", mainColor: "#EF4444", lineageColors: { "euphemitidae": "#14B8A6" } };
+const gastropoda_palaeozygopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "palaeozygopleuridae", className: "Gastropoda", orderName: "Unknown", name: "Palaeozygopleuridae", mainColor: "#10B981", lineageColors: { "palaeozygopleuridae": "#F97316" } };
+const gastropoda_hemisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "hemisinidae", className: "Gastropoda", orderName: "Unknown", name: "Hemisinidae", mainColor: "#F59E0B", lineageColors: { "hemisinidae": "#6366F1" } };
+const gastropoda_orthonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "orthonematidae", className: "Gastropoda", orderName: "Unknown", name: "Orthonematidae", mainColor: "#8B5CF6", lineageColors: { "orthonematidae": "#84CC16" } };
+const gastropoda_semisulcospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "semisulcospiridae", className: "Gastropoda", orderName: "Unknown", name: "Semisulcospiridae", mainColor: "#EC4899", lineageColors: { "semisulcospiridae": "#06B6D4" } };
+const gastropoda_bulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "bulinidae", className: "Gastropoda", orderName: "Unknown", name: "Bulinidae", mainColor: "#14B8A6", lineageColors: { "bulinidae": "#D946EF" } };
+const gastropoda_cimidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cimidae", className: "Gastropoda", orderName: "Unknown", name: "Cimidae", mainColor: "#F97316", lineageColors: { "cimidae": "#0EA5E9" } };
+const gastropoda_nacellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "nacellidae", className: "Gastropoda", orderName: "Unknown", name: "Nacellidae", mainColor: "#6366F1", lineageColors: { "nacellidae": "#22C55E" } };
+const gastropoda_subulitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "subulitidae", className: "Gastropoda", orderName: "Unknown", name: "Subulitidae", mainColor: "#84CC16", lineageColors: { "subulitidae": "#EAB308" } };
+const gastropoda_murchisonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "murchisonellidae", className: "Gastropoda", orderName: "Unknown", name: "Murchisonellidae", mainColor: "#06B6D4", lineageColors: { "murchisonellidae": "#A855F7" } };
+const gastropoda_planaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "planaxidae", className: "Gastropoda", orderName: "Unknown", name: "Planaxidae", mainColor: "#D946EF", lineageColors: { "planaxidae": "#FB923C" } };
+const gastropoda_limapontiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "limapontiidae", className: "Gastropoda", orderName: "Unknown", name: "Limapontiidae", mainColor: "#0EA5E9", lineageColors: { "limapontiidae": "#2DD4BF" } };
+const gastropoda_rissoellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "rissoellidae", className: "Gastropoda", orderName: "Unknown", name: "Rissoellidae", mainColor: "#22C55E", lineageColors: { "rissoellidae": "#A3E635" } };
+const gastropoda_sinuitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "sinuitidae", className: "Gastropoda", orderName: "Unknown", name: "Sinuitidae", mainColor: "#EAB308", lineageColors: { "sinuitidae": "#38BDF8" } };
+const gastropoda_chilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "chilinidae", className: "Gastropoda", orderName: "Unknown", name: "Chilinidae", mainColor: "#A855F7", lineageColors: { "chilinidae": "#3B82F6" } };
+const gastropoda_trochonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "trochonematidae", className: "Gastropoda", orderName: "Unknown", name: "Trochonematidae", mainColor: "#FB923C", lineageColors: { "trochonematidae": "#EF4444" } };
+const gastropoda_hermaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "hermaeidae", className: "Gastropoda", orderName: "Unknown", name: "Hermaeidae", mainColor: "#2DD4BF", lineageColors: { "hermaeidae": "#10B981" } };
+const gastropoda_acroloxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "acroloxidae", className: "Gastropoda", orderName: "Unknown", name: "Acroloxidae", mainColor: "#A3E635", lineageColors: { "acroloxidae": "#F59E0B" } };
+const gastropoda_amathinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "amathinidae", className: "Gastropoda", orderName: "Unknown", name: "Amathinidae", mainColor: "#38BDF8", lineageColors: { "amathinidae": "#8B5CF6" } };
+const gastropoda_omalogyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "omalogyridae", className: "Gastropoda", orderName: "Unknown", name: "Omalogyridae", mainColor: "#3B82F6", lineageColors: { "omalogyridae": "#EC4899" } };
+const gastropoda_siliquariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "siliquariidae", className: "Gastropoda", orderName: "Unknown", name: "Siliquariidae", mainColor: "#EF4444", lineageColors: { "siliquariidae": "#14B8A6" } };
+const gastropoda_ophiletidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "ophiletidae", className: "Gastropoda", orderName: "Unknown", name: "Ophiletidae", mainColor: "#10B981", lineageColors: { "ophiletidae": "#F97316" } };
+const gastropoda_zygopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "zygopleuridae", className: "Gastropoda", orderName: "Unknown", name: "Zygopleuridae", mainColor: "#F59E0B", lineageColors: { "zygopleuridae": "#6366F1" } };
+const gastropoda_goniasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "goniasmatidae", className: "Gastropoda", orderName: "Unknown", name: "Goniasmatidae", mainColor: "#8B5CF6", lineageColors: { "goniasmatidae": "#84CC16" } };
+const gastropoda_litiopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "litiopidae", className: "Gastropoda", orderName: "Unknown", name: "Litiopidae", mainColor: "#EC4899", lineageColors: { "litiopidae": "#06B6D4" } };
+const gastropoda_helicotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "helicotomidae", className: "Gastropoda", orderName: "Unknown", name: "Helicotomidae", mainColor: "#14B8A6", lineageColors: { "helicotomidae": "#D946EF" } };
+const gastropoda_pterothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pterothecidae", className: "Gastropoda", orderName: "Unknown", name: "Pterothecidae", mainColor: "#F97316", lineageColors: { "pterothecidae": "#0EA5E9" } };
+const gastropoda_batillariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "batillariidae", className: "Gastropoda", orderName: "Unknown", name: "Batillariidae", mainColor: "#6366F1", lineageColors: { "batillariidae": "#22C55E" } };
+const gastropoda_archinacellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "archinacellidae", className: "Gastropoda", orderName: "Unknown", name: "Archinacellidae", mainColor: "#84CC16", lineageColors: { "archinacellidae": "#EAB308" } };
+const gastropoda_sinuopeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "sinuopeidae", className: "Gastropoda", orderName: "Unknown", name: "Sinuopeidae", mainColor: "#06B6D4", lineageColors: { "sinuopeidae": "#A855F7" } };
+const gastropoda_meekospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "meekospiridae", className: "Gastropoda", orderName: "Unknown", name: "Meekospiridae", mainColor: "#D946EF", lineageColors: { "meekospiridae": "#FB923C" } };
+const gastropoda_scaliolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "scaliolidae", className: "Gastropoda", orderName: "Unknown", name: "Scaliolidae", mainColor: "#0EA5E9", lineageColors: { "scaliolidae": "#2DD4BF" } };
+const gastropoda_discohelicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "discohelicidae", className: "Gastropoda", orderName: "Unknown", name: "Discohelicidae", mainColor: "#22C55E", lineageColors: { "discohelicidae": "#A3E635" } };
+const gastropoda_pseudomelaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pseudomelaniidae", className: "Gastropoda", orderName: "Unknown", name: "Pseudomelaniidae", mainColor: "#EAB308", lineageColors: { "pseudomelaniidae": "#38BDF8" } };
+const gastropoda_omphalotrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "omphalotrochidae", className: "Gastropoda", orderName: "Unknown", name: "Omphalotrochidae", mainColor: "#A855F7", lineageColors: { "omphalotrochidae": "#3B82F6" } };
+const gastropoda_palaeostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "palaeostylidae", className: "Gastropoda", orderName: "Unknown", name: "Palaeostylidae", mainColor: "#FB923C", lineageColors: { "palaeostylidae": "#EF4444" } };
+const gastropoda_procerithiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "procerithiidae", className: "Gastropoda", orderName: "Unknown", name: "Procerithiidae", mainColor: "#2DD4BF", lineageColors: { "procerithiidae": "#10B981" } };
+const gastropoda_cylindrobullinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cylindrobullinidae", className: "Gastropoda", orderName: "Unknown", name: "Cylindrobullinidae", mainColor: "#A3E635", lineageColors: { "cylindrobullinidae": "#F59E0B" } };
+const gastropoda_acteonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "acteonellidae", className: "Gastropoda", orderName: "Unknown", name: "Acteonellidae", mainColor: "#38BDF8", lineageColors: { "acteonellidae": "#8B5CF6" } };
+const gastropoda_plesiotrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "plesiotrochidae", className: "Gastropoda", orderName: "Unknown", name: "Plesiotrochidae", mainColor: "#3B82F6", lineageColors: { "plesiotrochidae": "#EC4899" } };
+const gastropoda_orbitestellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "orbitestellidae", className: "Gastropoda", orderName: "Unknown", name: "Orbitestellidae", mainColor: "#EF4444", lineageColors: { "orbitestellidae": "#14B8A6" } };
+const gastropoda_provannidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "provannidae", className: "Gastropoda", orderName: "Unknown", name: "Provannidae", mainColor: "#10B981", lineageColors: { "provannidae": "#F97316" } };
+const gastropoda_lesueurillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lesueurillidae", className: "Gastropoda", orderName: "Unknown", name: "Lesueurillidae", mainColor: "#F59E0B", lineageColors: { "lesueurillidae": "#6366F1" } };
+const gastropoda_craspedostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "craspedostomatidae", className: "Gastropoda", orderName: "Unknown", name: "Craspedostomatidae", mainColor: "#8B5CF6", lineageColors: { "craspedostomatidae": "#84CC16" } };
+const gastropoda_onychochilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "onychochilidae", className: "Gastropoda", orderName: "Unknown", name: "Onychochilidae", mainColor: "#EC4899", lineageColors: { "onychochilidae": "#06B6D4" } };
+const gastropoda_modulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "modulidae", className: "Gastropoda", orderName: "Unknown", name: "Modulidae", mainColor: "#14B8A6", lineageColors: { "modulidae": "#D946EF" } };
+const gastropoda_donaldinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "donaldinidae", className: "Gastropoda", orderName: "Unknown", name: "Donaldinidae", mainColor: "#F97316", lineageColors: { "donaldinidae": "#0EA5E9" } };
+const gastropoda_acmaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "acmaeidae", className: "Gastropoda", orderName: "Unknown", name: "Acmaeidae", mainColor: "#6366F1", lineageColors: { "acmaeidae": "#22C55E" } };
+const gastropoda_juliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "juliidae", className: "Gastropoda", orderName: "Unknown", name: "Juliidae", mainColor: "#84CC16", lineageColors: { "juliidae": "#EAB308" } };
+const gastropoda_pectinodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pectinodontidae", className: "Gastropoda", orderName: "Unknown", name: "Pectinodontidae", mainColor: "#06B6D4", lineageColors: { "pectinodontidae": "#A855F7" } };
+const gastropoda_cornirostridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cornirostridae", className: "Gastropoda", orderName: "Unknown", name: "Cornirostridae", mainColor: "#D946EF", lineageColors: { "cornirostridae": "#FB923C" } };
+const gastropoda_straparollinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "straparollinidae", className: "Gastropoda", orderName: "Unknown", name: "Straparollinidae", mainColor: "#0EA5E9", lineageColors: { "straparollinidae": "#2DD4BF" } };
+const gastropoda_pycnomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pycnomphalidae", className: "Gastropoda", orderName: "Unknown", name: "Pycnomphalidae", mainColor: "#22C55E", lineageColors: { "pycnomphalidae": "#A3E635" } };
+const gastropoda_clisospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "clisospiridae", className: "Gastropoda", orderName: "Unknown", name: "Clisospiridae", mainColor: "#EAB308", lineageColors: { "clisospiridae": "#38BDF8" } };
+const gastropoda_yochelcionellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "yochelcionellidae", className: "Gastropoda", orderName: "Unknown", name: "Yochelcionellidae", mainColor: "#A855F7", lineageColors: { "yochelcionellidae": "#3B82F6" } };
+const gastropoda_volvatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "volvatellidae", className: "Gastropoda", orderName: "Unknown", name: "Volvatellidae", mainColor: "#FB923C", lineageColors: { "volvatellidae": "#EF4444" } };
+const gastropoda_diastomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "diastomatidae", className: "Gastropoda", orderName: "Unknown", name: "Diastomatidae", mainColor: "#2DD4BF", lineageColors: { "diastomatidae": "#10B981" } };
+const gastropoda_glacidorbidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "glacidorbidae", className: "Gastropoda", orderName: "Unknown", name: "Glacidorbidae", mainColor: "#A3E635", lineageColors: { "glacidorbidae": "#F59E0B" } };
+const gastropoda_protorculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "protorculidae", className: "Gastropoda", orderName: "Unknown", name: "Protorculidae", mainColor: "#38BDF8", lineageColors: { "protorculidae": "#8B5CF6" } };
+const gastropoda_oxynoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "oxynoidae", className: "Gastropoda", orderName: "Unknown", name: "Oxynoidae", mainColor: "#3B82F6", lineageColors: { "oxynoidae": "#EC4899" } };
+const gastropoda_stenothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "stenothecidae", className: "Gastropoda", orderName: "Unknown", name: "Stenothecidae", mainColor: "#EF4444", lineageColors: { "stenothecidae": "#14B8A6" } };
+const gastropoda_cryptaulacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cryptaulacidae", className: "Gastropoda", orderName: "Unknown", name: "Cryptaulacidae", mainColor: "#10B981", lineageColors: { "cryptaulacidae": "#F97316" } };
+const gastropoda_burnupiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "burnupiidae", className: "Gastropoda", orderName: "Unknown", name: "Burnupiidae", mainColor: "#F59E0B", lineageColors: { "burnupiidae": "#6366F1" } };
+const gastropoda_nerineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "nerineidae", className: "Gastropoda", orderName: "Unknown", name: "Nerineidae", mainColor: "#8B5CF6", lineageColors: { "nerineidae": "#84CC16" } };
+const gastropoda_parhedylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "parhedylidae", className: "Gastropoda", orderName: "Unknown", name: "Parhedylidae", mainColor: "#EC4899", lineageColors: { "parhedylidae": "#06B6D4" } };
+const gastropoda_lepetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lepetidae", className: "Gastropoda", orderName: "Unknown", name: "Lepetidae", mainColor: "#14B8A6", lineageColors: { "lepetidae": "#D946EF" } };
+const gastropoda_coreospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "coreospiridae", className: "Gastropoda", orderName: "Unknown", name: "Coreospiridae", mainColor: "#F97316", lineageColors: { "coreospiridae": "#0EA5E9" } };
+const gastropoda_spirostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "spirostylidae", className: "Gastropoda", orderName: "Unknown", name: "Spirostylidae", mainColor: "#6366F1", lineageColors: { "spirostylidae": "#22C55E" } };
+const gastropoda_costasiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "costasiellidae", className: "Gastropoda", orderName: "Unknown", name: "Costasiellidae", mainColor: "#84CC16", lineageColors: { "costasiellidae": "#EAB308" } };
+const gastropoda_gyrodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "gyrodidae", className: "Gastropoda", orderName: "Unknown", name: "Gyrodidae", mainColor: "#06B6D4", lineageColors: { "gyrodidae": "#A855F7" } };
+const gastropoda_dialidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "dialidae", className: "Gastropoda", orderName: "Unknown", name: "Dialidae", mainColor: "#D946EF", lineageColors: { "dialidae": "#FB923C" } };
+const gastropoda_hyalogyrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "hyalogyrinidae", className: "Gastropoda", orderName: "Unknown", name: "Hyalogyrinidae", mainColor: "#0EA5E9", lineageColors: { "hyalogyrinidae": "#2DD4BF" } };
+const gastropoda_protoculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "protoculidae", className: "Gastropoda", orderName: "Unknown", name: "Protoculidae", mainColor: "#22C55E", lineageColors: { "protoculidae": "#A3E635" } };
+const gastropoda_amphibolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "amphibolidae", className: "Gastropoda", orderName: "Unknown", name: "Amphibolidae", mainColor: "#EAB308", lineageColors: { "amphibolidae": "#38BDF8" } };
+const gastropoda_streptacididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "streptacididae", className: "Gastropoda", orderName: "Unknown", name: "Streptacididae", mainColor: "#A855F7", lineageColors: { "streptacididae": "#3B82F6" } };
+const gastropoda_damilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "damilinidae", className: "Gastropoda", orderName: "Unknown", name: "Damilinidae", mainColor: "#FB923C", lineageColors: { "damilinidae": "#EF4444" } };
+const gastropoda_omphalocirridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "omphalocirridae", className: "Gastropoda", orderName: "Unknown", name: "Omphalocirridae", mainColor: "#2DD4BF", lineageColors: { "omphalocirridae": "#10B981" } };
+const gastropoda_gordenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "gordenellidae", className: "Gastropoda", orderName: "Unknown", name: "Gordenellidae", mainColor: "#A3E635", lineageColors: { "gordenellidae": "#F59E0B" } };
+const gastropoda_neolepetopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "neolepetopsidae", className: "Gastropoda", orderName: "Unknown", name: "Neolepetopsidae", mainColor: "#38BDF8", lineageColors: { "neolepetopsidae": "#8B5CF6" } };
+const gastropoda_campanilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "campanilidae", className: "Gastropoda", orderName: "Unknown", name: "Campanilidae", mainColor: "#3B82F6", lineageColors: { "campanilidae": "#EC4899" } };
+const gastropoda_cassiopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cassiopidae", className: "Gastropoda", orderName: "Unknown", name: "Cassiopidae", mainColor: "#EF4444", lineageColors: { "cassiopidae": "#14B8A6" } };
+const gastropoda_eoacmaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "eoacmaeidae", className: "Gastropoda", orderName: "Unknown", name: "Eoacmaeidae", mainColor: "#10B981", lineageColors: { "eoacmaeidae": "#F97316" } };
+const gastropoda_maclureadae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "maclureadae", className: "Gastropoda", orderName: "Unknown", name: "Maclureadae", mainColor: "#F59E0B", lineageColors: { "maclureadae": "#6366F1" } };
+const gastropoda_paraturbinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "paraturbinidae", className: "Gastropoda", orderName: "Unknown", name: "Paraturbinidae", mainColor: "#8B5CF6", lineageColors: { "paraturbinidae": "#84CC16" } };
+const gastropoda_paskentanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "paskentanidae", className: "Gastropoda", orderName: "Unknown", name: "Paskentanidae", mainColor: "#EC4899", lineageColors: { "paskentanidae": "#06B6D4" } };
+const gastropoda_amphimelaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "amphimelaniidae", className: "Gastropoda", orderName: "Unknown", name: "Amphimelaniidae", mainColor: "#14B8A6", lineageColors: { "amphimelaniidae": "#D946EF" } };
+const gastropoda_lepetopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "lepetopsidae", className: "Gastropoda", orderName: "Unknown", name: "Lepetopsidae", mainColor: "#F97316", lineageColors: { "lepetopsidae": "#0EA5E9" } };
+const gastropoda_nerinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "nerinellidae", className: "Gastropoda", orderName: "Unknown", name: "Nerinellidae", mainColor: "#6366F1", lineageColors: { "nerinellidae": "#22C55E" } };
+const gastropoda_tubinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "tubinidae", className: "Gastropoda", orderName: "Unknown", name: "Tubinidae", mainColor: "#84CC16", lineageColors: { "tubinidae": "#EAB308" } };
+const gastropoda_palaeotrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "palaeotrochidae", className: "Gastropoda", orderName: "Unknown", name: "Palaeotrochidae", mainColor: "#06B6D4", lineageColors: { "palaeotrochidae": "#A855F7" } };
+const gastropoda_xylodisculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "xylodisculidae", className: "Gastropoda", orderName: "Unknown", name: "Xylodisculidae", mainColor: "#D946EF", lineageColors: { "xylodisculidae": "#FB923C" } };
+const gastropoda_desbruyeresiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "desbruyeresiidae", className: "Gastropoda", orderName: "Unknown", name: "Desbruyeresiidae", mainColor: "#0EA5E9", lineageColors: { "desbruyeresiidae": "#2DD4BF" } };
+const gastropoda_goniospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "goniospiridae", className: "Gastropoda", orderName: "Unknown", name: "Goniospiridae", mainColor: "#22C55E", lineageColors: { "goniospiridae": "#A3E635" } };
+const gastropoda_acteoninidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "acteoninidae", className: "Gastropoda", orderName: "Unknown", name: "Acteoninidae", mainColor: "#EAB308", lineageColors: { "acteoninidae": "#38BDF8" } };
+const gastropoda_metacerithiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "metacerithiidae", className: "Gastropoda", orderName: "Unknown", name: "Metacerithiidae", mainColor: "#A855F7", lineageColors: { "metacerithiidae": "#3B82F6" } };
+const gastropoda_rhodopetalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "rhodopetalidae", className: "Gastropoda", orderName: "Unknown", name: "Rhodopetalidae", mainColor: "#FB923C", lineageColors: { "rhodopetalidae": "#EF4444" } };
+const gastropoda_abyssochrysidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "abyssochrysidae", className: "Gastropoda", orderName: "Unknown", name: "Abyssochrysidae", mainColor: "#2DD4BF", lineageColors: { "abyssochrysidae": "#10B981" } };
+const gastropoda_strobeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "strobeidae", className: "Gastropoda", orderName: "Unknown", name: "Strobeidae", mainColor: "#A3E635", lineageColors: { "strobeidae": "#F59E0B" } };
+const gastropoda_carinopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "carinopeltidae", className: "Gastropoda", orderName: "Unknown", name: "Carinopeltidae", mainColor: "#38BDF8", lineageColors: { "carinopeltidae": "#8B5CF6" } };
+const gastropoda_acochlidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "acochlidiidae", className: "Gastropoda", orderName: "Unknown", name: "Acochlidiidae", mainColor: "#3B82F6", lineageColors: { "acochlidiidae": "#EC4899" } };
+const gastropoda_hokkaidoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "hokkaidoconchidae", className: "Gastropoda", orderName: "Unknown", name: "Hokkaidoconchidae", mainColor: "#EF4444", lineageColors: { "hokkaidoconchidae": "#14B8A6" } };
+const gastropoda_settsassiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "settsassiidae", className: "Gastropoda", orderName: "Unknown", name: "Settsassiidae", mainColor: "#10B981", lineageColors: { "settsassiidae": "#F97316" } };
+const gastropoda_brachytrematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "brachytrematidae", className: "Gastropoda", orderName: "Unknown", name: "Brachytrematidae", mainColor: "#F59E0B", lineageColors: { "brachytrematidae": "#6366F1" } };
+const gastropoda_scoliostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "scoliostomatidae", className: "Gastropoda", orderName: "Unknown", name: "Scoliostomatidae", mainColor: "#8B5CF6", lineageColors: { "scoliostomatidae": "#84CC16" } };
+const gastropoda_acmaeadae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "acmaeadae", className: "Gastropoda", orderName: "Unknown", name: "Acmaeadae", mainColor: "#EC4899", lineageColors: { "acmaeadae": "#06B6D4" } };
+const gastropoda_tubiferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "tubiferidae", className: "Gastropoda", orderName: "Unknown", name: "Tubiferidae", mainColor: "#14B8A6", lineageColors: { "tubiferidae": "#D946EF" } };
+const gastropoda_nerrhenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "nerrhenidae", className: "Gastropoda", orderName: "Unknown", name: "Nerrhenidae", mainColor: "#F97316", lineageColors: { "nerrhenidae": "#0EA5E9" } };
+const gastropoda_isospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "isospiridae", className: "Gastropoda", orderName: "Unknown", name: "Isospiridae", mainColor: "#6366F1", lineageColors: { "isospiridae": "#22C55E" } };
+const gastropoda_cheeneetnukiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cheeneetnukiidae", className: "Gastropoda", orderName: "Unknown", name: "Cheeneetnukiidae", mainColor: "#84CC16", lineageColors: { "cheeneetnukiidae": "#EAB308" } };
+const gastropoda_rubyspiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "rubyspiridae", className: "Gastropoda", orderName: "Unknown", name: "Rubyspiridae", mainColor: "#06B6D4", lineageColors: { "rubyspiridae": "#A855F7" } };
+const gastropoda_pseudunelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pseudunelidae", className: "Gastropoda", orderName: "Unknown", name: "Pseudunelidae", mainColor: "#D946EF", lineageColors: { "pseudunelidae": "#FB923C" } };
+const gastropoda_prostyliferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "prostyliferidae", className: "Gastropoda", orderName: "Unknown", name: "Prostyliferidae", mainColor: "#0EA5E9", lineageColors: { "prostyliferidae": "#2DD4BF" } };
+const gastropoda_latiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "latiidae", className: "Gastropoda", orderName: "Unknown", name: "Latiidae", mainColor: "#22C55E", lineageColors: { "latiidae": "#A3E635" } };
+const gastropoda_tjaernoeiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "tjaernoeiidae", className: "Gastropoda", orderName: "Unknown", name: "Tjaernoeiidae", mainColor: "#EAB308", lineageColors: { "tjaernoeiidae": "#38BDF8" } };
+const gastropoda_sphaerodomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sphaerodomidae", className: "Gastropoda", orderName: "Unknown", name: "Sphaerodomidae", mainColor: "#A855F7", lineageColors: { "sphaerodomidae": "#3B82F6" } };
+const gastropoda_crassimarginatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "crassimarginatidae", className: "Gastropoda", orderName: "Unknown", name: "Crassimarginatidae", mainColor: "#FB923C", lineageColors: { "crassimarginatidae": "#EF4444" } };
+const gastropoda_micromphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "micromphalidae", className: "Gastropoda", orderName: "Unknown", name: "Micromphalidae", mainColor: "#2DD4BF", lineageColors: { "micromphalidae": "#10B981" } };
+const gastropoda_ceritellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "ceritellidae", className: "Gastropoda", orderName: "Unknown", name: "Ceritellidae", mainColor: "#A3E635", lineageColors: { "ceritellidae": "#F59E0B" } };
+const gastropoda_codonocheilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "codonocheilidae", className: "Gastropoda", orderName: "Unknown", name: "Codonocheilidae", mainColor: "#38BDF8", lineageColors: { "codonocheilidae": "#8B5CF6" } };
+const gastropoda_clivunellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "clivunellidae", className: "Gastropoda", orderName: "Unknown", name: "Clivunellidae", mainColor: "#3B82F6", lineageColors: { "clivunellidae": "#EC4899" } };
+const gastropoda_trypanaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "trypanaxidae", className: "Gastropoda", orderName: "Unknown", name: "Trypanaxidae", mainColor: "#EF4444", lineageColors: { "trypanaxidae": "#14B8A6" } };
+const gastropoda_ptygmatididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "ptygmatididae", className: "Gastropoda", orderName: "Unknown", name: "Ptygmatididae", mainColor: "#10B981", lineageColors: { "ptygmatididae": "#F97316" } };
+const gastropoda_zemelanopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "zemelanopsidae", className: "Gastropoda", orderName: "Unknown", name: "Zemelanopsidae", mainColor: "#F59E0B", lineageColors: { "zemelanopsidae": "#6366F1" } };
+const gastropoda_hedylopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "hedylopsidae", className: "Gastropoda", orderName: "Unknown", name: "Hedylopsidae", mainColor: "#8B5CF6", lineageColors: { "hedylopsidae": "#84CC16" } };
+const gastropoda_platyhedylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "platyhedylidae", className: "Gastropoda", orderName: "Unknown", name: "Platyhedylidae", mainColor: "#EC4899", lineageColors: { "platyhedylidae": "#06B6D4" } };
+const gastropoda_pragoscutulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pragoscutulidae", className: "Gastropoda", orderName: "Unknown", name: "Pragoscutulidae", mainColor: "#14B8A6", lineageColors: { "pragoscutulidae": "#D946EF" } };
+const gastropoda_propupaspiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "propupaspiridae", className: "Gastropoda", orderName: "Unknown", name: "Propupaspiridae", mainColor: "#F97316", lineageColors: { "propupaspiridae": "#0EA5E9" } };
+const gastropoda_aitengidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "aitengidae", className: "Gastropoda", orderName: "Unknown", name: "Aitengidae", mainColor: "#6366F1", lineageColors: { "aitengidae": "#22C55E" } };
+const gastropoda_parvaplustridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "parvaplustridae", className: "Gastropoda", orderName: "Unknown", name: "Parvaplustridae", mainColor: "#84CC16", lineageColors: { "parvaplustridae": "#EAB308" } };
+const gastropoda_cerithiadae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cerithiadae", className: "Gastropoda", orderName: "Unknown", name: "Cerithiadae", mainColor: "#06B6D4", lineageColors: { "cerithiadae": "#A855F7" } };
+const gastropoda_pseudonerineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pseudonerineidae", className: "Gastropoda", orderName: "Unknown", name: "Pseudonerineidae", mainColor: "#D946EF", lineageColors: { "pseudonerineidae": "#FB923C" } };
+const gastropoda_plicatusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "plicatusidae", className: "Gastropoda", orderName: "Unknown", name: "Plicatusidae", mainColor: "#0EA5E9", lineageColors: { "plicatusidae": "#2DD4BF" } };
+const gastropoda_chuchlinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "chuchlinidae", className: "Gastropoda", orderName: "Unknown", name: "Chuchlinidae", mainColor: "#22C55E", lineageColors: { "chuchlinidae": "#A3E635" } };
+const gastropoda_perunelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "perunelidae", className: "Gastropoda", orderName: "Unknown", name: "Perunelidae", mainColor: "#EAB308", lineageColors: { "perunelidae": "#38BDF8" } };
+const gastropoda_ischnoptygmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "ischnoptygmatidae", className: "Gastropoda", orderName: "Unknown", name: "Ischnoptygmatidae", mainColor: "#A855F7", lineageColors: { "ischnoptygmatidae": "#3B82F6" } };
+const gastropoda_stomatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "stomatellidae", className: "Gastropoda", orderName: "Unknown", name: "Stomatellidae", mainColor: "#FB923C", lineageColors: { "stomatellidae": "#EF4444" } };
+const gastropoda_amphitomariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "amphitomariidae", className: "Gastropoda", orderName: "Unknown", name: "Amphitomariidae", mainColor: "#2DD4BF", lineageColors: { "amphitomariidae": "#10B981" } };
+const gastropoda_ladinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "ladinulidae", className: "Gastropoda", orderName: "Unknown", name: "Ladinulidae", mainColor: "#A3E635", lineageColors: { "ladinulidae": "#F59E0B" } };
+const gastropoda_cassianebalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cassianebalidae", className: "Gastropoda", orderName: "Unknown", name: "Cassianebalidae", mainColor: "#38BDF8", lineageColors: { "cassianebalidae": "#8B5CF6" } };
+const gastropoda_eunerineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "eunerineidae", className: "Gastropoda", orderName: "Unknown", name: "Eunerineidae", mainColor: "#3B82F6", lineageColors: { "eunerineidae": "#EC4899" } };
+const gastropoda_spanionematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "spanionematidae", className: "Gastropoda", orderName: "Unknown", name: "Spanionematidae", mainColor: "#EF4444", lineageColors: { "spanionematidae": "#14B8A6" } };
+const gastropoda_provalvatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "provalvatidae", className: "Gastropoda", orderName: "Unknown", name: "Provalvatidae", mainColor: "#10B981", lineageColors: { "provalvatidae": "#F97316" } };
+const gastropoda_archaeopragidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "archaeopragidae", className: "Gastropoda", orderName: "Unknown", name: "Archaeopragidae", mainColor: "#F59E0B", lineageColors: { "archaeopragidae": "#6366F1" } };
+const gastropoda_pollicinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pollicinidae", className: "Gastropoda", orderName: "Unknown", name: "Pollicinidae", mainColor: "#8B5CF6", lineageColors: { "pollicinidae": "#84CC16" } };
+const gastropoda_kuskokwimiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "kuskokwimiidae", className: "Gastropoda", orderName: "Unknown", name: "Kuskokwimiidae", mainColor: "#EC4899", lineageColors: { "kuskokwimiidae": "#06B6D4" } };
+const gastropoda_anozygidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "anozygidae", className: "Gastropoda", orderName: "Unknown", name: "Anozygidae", mainColor: "#14B8A6", lineageColors: { "anozygidae": "#D946EF" } };
+const gastropoda_maningrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "maningrididae", className: "Gastropoda", orderName: "Unknown", name: "Maningrididae", mainColor: "#F97316", lineageColors: { "maningrididae": "#0EA5E9" } };
+const gastropoda_tantulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tantulidae", className: "Gastropoda", orderName: "Unknown", name: "Tantulidae", mainColor: "#6366F1", lineageColors: { "tantulidae": "#22C55E" } };
+const gastropoda_trachoecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "trachoecidae", className: "Gastropoda", orderName: "Unknown", name: "Trachoecidae", mainColor: "#84CC16", lineageColors: { "trachoecidae": "#EAB308" } };
+const gastropoda_eustomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "eustomatidae", className: "Gastropoda", orderName: "Unknown", name: "Eustomatidae", mainColor: "#06B6D4", lineageColors: { "eustomatidae": "#A855F7" } };
+const gastropoda_maoraxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "maoraxidae", className: "Gastropoda", orderName: "Unknown", name: "Maoraxidae", mainColor: "#D946EF", lineageColors: { "maoraxidae": "#FB923C" } };
+const gastropoda_popenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "popenellidae", className: "Gastropoda", orderName: "Unknown", name: "Popenellidae", mainColor: "#0EA5E9", lineageColors: { "popenellidae": "#2DD4BF" } };
+const gastropoda_itieriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "itieriidae", className: "Gastropoda", orderName: "Unknown", name: "Itieriidae", mainColor: "#22C55E", lineageColors: { "itieriidae": "#A3E635" } };
+const gastropoda_heterosubulitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "heterosubulitidae", className: "Gastropoda", orderName: "Unknown", name: "Heterosubulitidae", mainColor: "#EAB308", lineageColors: { "heterosubulitidae": "#38BDF8" } };
+const gastropoda_schartiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "schartiidae", className: "Gastropoda", orderName: "Unknown", name: "Schartiidae", mainColor: "#A855F7", lineageColors: { "schartiidae": "#3B82F6" } };
+const gastropoda_diozoptyxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "diozoptyxidae", className: "Gastropoda", orderName: "Unknown", name: "Diozoptyxidae", mainColor: "#FB923C", lineageColors: { "diozoptyxidae": "#EF4444" } };
+const gastropoda_vernediidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "vernediidae", className: "Gastropoda", orderName: "Unknown", name: "Vernediidae", mainColor: "#2DD4BF", lineageColors: { "vernediidae": "#10B981" } };
+const gastropoda_bathyhedylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "bathyhedylidae", className: "Gastropoda", orderName: "Unknown", name: "Bathyhedylidae", mainColor: "#A3E635", lineageColors: { "bathyhedylidae": "#F59E0B" } };
+const gastropoda_imoglobidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "imoglobidae", className: "Gastropoda", orderName: "Unknown", name: "Imoglobidae", mainColor: "#38BDF8", lineageColors: { "imoglobidae": "#8B5CF6" } };
+const gastropoda_knightitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "knightitidae", className: "Gastropoda", orderName: "Unknown", name: "Knightitidae", mainColor: "#3B82F6", lineageColors: { "knightitidae": "#EC4899" } };
+const gastropoda_procarinariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "procarinariidae", className: "Gastropoda", orderName: "Unknown", name: "Procarinariidae", mainColor: "#EF4444", lineageColors: { "procarinariidae": "#14B8A6" } };
+const gastropoda_yuopisthonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "yuopisthonematidae", className: "Gastropoda", orderName: "Unknown", name: "Yuopisthonematidae", mainColor: "#10B981", lineageColors: { "yuopisthonematidae": "#F97316" } };
+const gastropoda_mcleaniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mcleaniellidae", className: "Gastropoda", orderName: "Unknown", name: "Mcleaniellidae", mainColor: "#F59E0B", lineageColors: { "mcleaniellidae": "#6366F1" } };
+const gastropoda_goniasmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "goniasmidae", className: "Gastropoda", orderName: "Unknown", name: "Goniasmidae", mainColor: "#8B5CF6", lineageColors: { "goniasmidae": "#84CC16" } };
+const gastropoda_conualeviidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "conualeviidae", className: "Gastropoda", orderName: "Unknown", name: "Conualeviidae", mainColor: "#EC4899", lineageColors: { "conualeviidae": "#06B6D4" } };
+const gastropoda_asteronotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "asteronotidae", className: "Gastropoda", orderName: "Unknown", name: "Asteronotidae", mainColor: "#14B8A6", lineageColors: { "asteronotidae": "#D946EF" } };
+const gastropoda_magilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "magilidae", className: "Gastropoda", orderName: "Unknown", name: "Magilidae", mainColor: "#F97316", lineageColors: { "magilidae": "#0EA5E9" } };
+const gastropoda_peraclididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "peraclididae", className: "Gastropoda", orderName: "Unknown", name: "Peraclididae", mainColor: "#6366F1", lineageColors: { "peraclididae": "#22C55E" } };
+const gastropoda_helminthoglyptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "helminthoglyptidae", className: "Gastropoda", orderName: "Unknown", name: "Helminthoglyptidae", mainColor: "#84CC16", lineageColors: { "helminthoglyptidae": "#EAB308" } };
+const gastropoda_ceriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "ceriidae", className: "Gastropoda", orderName: "Unknown", name: "Ceriidae", mainColor: "#06B6D4", lineageColors: { "ceriidae": "#A855F7" } };
+const gastropoda_triophidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "triophidae", className: "Gastropoda", orderName: "Unknown", name: "Triophidae", mainColor: "#D946EF", lineageColors: { "triophidae": "#FB923C" } };
+const gastropoda_diastomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "diastomidae", className: "Gastropoda", orderName: "Unknown", name: "Diastomidae", mainColor: "#0EA5E9", lineageColors: { "diastomidae": "#2DD4BF" } };
+const gastropoda_choristeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "choristeidae", className: "Gastropoda", orderName: "Unknown", name: "Choristeidae", mainColor: "#22C55E", lineageColors: { "choristeidae": "#A3E635" } };
+const gastropoda_carychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "carychiidae", className: "Gastropoda", orderName: "Unknown", name: "Carychiidae", mainColor: "#EAB308", lineageColors: { "carychiidae": "#38BDF8" } };
+const gastropoda_tricoliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "tricoliidae", className: "Gastropoda", orderName: "Unknown", name: "Tricoliidae", mainColor: "#A855F7", lineageColors: { "tricoliidae": "#3B82F6" } };
+const gastropoda_gymnodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "gymnodorididae", className: "Gastropoda", orderName: "Unknown", name: "Gymnodorididae", mainColor: "#FB923C", lineageColors: { "gymnodorididae": "#EF4444" } };
+const gastropoda_corillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "corillidae", className: "Gastropoda", orderName: "Unknown", name: "Corillidae", mainColor: "#2DD4BF", lineageColors: { "corillidae": "#10B981" } };
+const gastropoda_smeagolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "smeagolidae", className: "Gastropoda", orderName: "Unknown", name: "Smeagolidae", mainColor: "#A3E635", lineageColors: { "smeagolidae": "#F59E0B" } };
+const gastropoda_ferussinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ferussinidae", className: "Gastropoda", orderName: "Unknown", name: "Ferussinidae", mainColor: "#38BDF8", lineageColors: { "ferussinidae": "#8B5CF6" } };
+const gastropoda_placostylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "placostylidae", className: "Gastropoda", orderName: "Unknown", name: "Placostylidae", mainColor: "#3B82F6", lineageColors: { "placostylidae": "#EC4899" } };
+const gastropoda_chlamydephoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "chlamydephoridae", className: "Gastropoda", orderName: "Unknown", name: "Chlamydephoridae", mainColor: "#EF4444", lineageColors: { "chlamydephoridae": "#14B8A6" } };
+const gastropoda_systrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "systrophiidae", className: "Gastropoda", orderName: "Unknown", name: "Systrophiidae", mainColor: "#10B981", lineageColors: { "systrophiidae": "#F97316" } };
+const gastropoda_syrnolopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "syrnolopsidae", className: "Gastropoda", orderName: "Unknown", name: "Syrnolopsidae", mainColor: "#F59E0B", lineageColors: { "syrnolopsidae": "#6366F1" } };
+const gastropoda_pseudosacculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pseudosacculidae", className: "Gastropoda", orderName: "Unknown", name: "Pseudosacculidae", mainColor: "#8B5CF6", lineageColors: { "pseudosacculidae": "#84CC16" } };
+const gastropoda_megalomastomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "megalomastomidae", className: "Gastropoda", orderName: "Unknown", name: "Megalomastomidae", mainColor: "#EC4899", lineageColors: { "megalomastomidae": "#06B6D4" } };
+const gastropoda_poteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "poteriidae", className: "Gastropoda", orderName: "Unknown", name: "Poteriidae", mainColor: "#14B8A6", lineageColors: { "poteriidae": "#D946EF" } };
+const gastropoda_benedictiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "benedictiidae", className: "Gastropoda", orderName: "Unknown", name: "Benedictiidae", mainColor: "#F97316", lineageColors: { "benedictiidae": "#0EA5E9" } };
+const gastropoda_micromelaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "micromelaniidae", className: "Gastropoda", orderName: "Unknown", name: "Micromelaniidae", mainColor: "#6366F1", lineageColors: { "micromelaniidae": "#22C55E" } };
+const gastropoda_fossaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "fossaridae", className: "Gastropoda", orderName: "Unknown", name: "Fossaridae", mainColor: "#84CC16", lineageColors: { "fossaridae": "#EAB308" } };
+const gastropoda_pomatiasidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pomatiasidae", className: "Gastropoda", orderName: "Unknown", name: "Pomatiasidae", mainColor: "#06B6D4", lineageColors: { "pomatiasidae": "#A855F7" } };
+const gastropoda_melampodinae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "melampodinae", className: "Gastropoda", orderName: "Unknown", name: "Melampodinae", mainColor: "#D946EF", lineageColors: { "melampodinae": "#FB923C" } };
+const gastropoda_laginiopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "laginiopsidae", className: "Gastropoda", orderName: "Unknown", name: "Laginiopsidae", mainColor: "#0EA5E9", lineageColors: { "laginiopsidae": "#2DD4BF" } };
+const gastropoda_thyrophorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "thyrophorellidae", className: "Gastropoda", orderName: "Unknown", name: "Thyrophorellidae", mainColor: "#22C55E", lineageColors: { "thyrophorellidae": "#A3E635" } };
+const gastropoda_otoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "otoconchidae", className: "Gastropoda", orderName: "Unknown", name: "Otoconchidae", mainColor: "#EAB308", lineageColors: { "otoconchidae": "#38BDF8" } };
+const gastropoda_cloristellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cloristellidae", className: "Gastropoda", orderName: "Unknown", name: "Cloristellidae", mainColor: "#A855F7", lineageColors: { "cloristellidae": "#3B82F6" } };
+const gastropoda_chondropomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "chondropomidae", className: "Gastropoda", orderName: "Unknown", name: "Chondropomidae", mainColor: "#FB923C", lineageColors: { "chondropomidae": "#EF4444" } };
+const gastropoda_liareidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "liareidae", className: "Gastropoda", orderName: "Unknown", name: "Liareidae", mainColor: "#2DD4BF", lineageColors: { "liareidae": "#10B981" } };
+const gastropoda_trochaclisidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "trochaclisidae", className: "Gastropoda", orderName: "Unknown", name: "Trochaclisidae", mainColor: "#A3E635", lineageColors: { "trochaclisidae": "#F59E0B" } };
+const gastropoda_trachysmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "trachysmidae", className: "Gastropoda", orderName: "Unknown", name: "Trachysmidae", mainColor: "#38BDF8", lineageColors: { "trachysmidae": "#8B5CF6" } };
+const gastropoda_omalaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "omalaxidae", className: "Gastropoda", orderName: "Unknown", name: "Omalaxidae", mainColor: "#3B82F6", lineageColors: { "omalaxidae": "#EC4899" } };
+const gastropoda_eumetulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "eumetulidae", className: "Gastropoda", orderName: "Unknown", name: "Eumetulidae", mainColor: "#EF4444", lineageColors: { "eumetulidae": "#14B8A6" } };
+const gastropoda_cochlicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cochlicellidae", className: "Gastropoda", orderName: "Unknown", name: "Cochlicellidae", mainColor: "#10B981", lineageColors: { "cochlicellidae": "#F97316" } };
+const gastropoda_cortinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cortinellidae", className: "Gastropoda", orderName: "Unknown", name: "Cortinellidae", mainColor: "#F59E0B", lineageColors: { "cortinellidae": "#6366F1" } };
+const gastropoda_megalobulimidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "megalobulimidae", className: "Gastropoda", orderName: "Unknown", name: "Megalobulimidae", mainColor: "#8B5CF6", lineageColors: { "megalobulimidae": "#84CC16" } };
+const gastropoda_acanthinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "acanthinulidae", className: "Gastropoda", orderName: "Unknown", name: "Acanthinulidae", mainColor: "#EC4899", lineageColors: { "acanthinulidae": "#06B6D4" } };
+const gastropoda_rhytidopilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "rhytidopilidae", className: "Gastropoda", orderName: "Unknown", name: "Rhytidopilidae", mainColor: "#14B8A6", lineageColors: { "rhytidopilidae": "#D946EF" } };
+const gastropoda_pommerozygiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pommerozygiidae", className: "Gastropoda", orderName: "Unknown", name: "Pommerozygiidae", mainColor: "#F97316", lineageColors: { "pommerozygiidae": "#0EA5E9" } };
+const gastropoda_phallomedusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "phallomedusidae", className: "Gastropoda", orderName: "Unknown", name: "Phallomedusidae", mainColor: "#6366F1", lineageColors: { "phallomedusidae": "#22C55E" } };
+const gastropoda_protancylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "protancylidae", className: "Gastropoda", orderName: "Unknown", name: "Protancylidae", mainColor: "#84CC16", lineageColors: { "protancylidae": "#EAB308" } };
+const gastropoda_pragoserpulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pragoserpulinidae", className: "Gastropoda", orderName: "Unknown", name: "Pragoserpulinidae", mainColor: "#06B6D4", lineageColors: { "pragoserpulinidae": "#A855F7" } };
+const gastropoda_anoptychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "anoptychiidae", className: "Gastropoda", orderName: "Unknown", name: "Anoptychiidae", mainColor: "#D946EF", lineageColors: { "anoptychiidae": "#FB923C" } };
+const gastropoda_misurinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "misurinellidae", className: "Gastropoda", orderName: "Unknown", name: "Misurinellidae", mainColor: "#0EA5E9", lineageColors: { "misurinellidae": "#2DD4BF" } };
+const gastropoda_eucochlidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "eucochlidae", className: "Gastropoda", orderName: "Unknown", name: "Eucochlidae", mainColor: "#22C55E", lineageColors: { "eucochlidae": "#A3E635" } };
+const gastropoda_velainellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "velainellidae", className: "Gastropoda", orderName: "Unknown", name: "Velainellidae", mainColor: "#EAB308", lineageColors: { "velainellidae": "#38BDF8" } };
+const gastropoda_acanthonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "acanthonematidae", className: "Gastropoda", orderName: "Unknown", name: "Acanthonematidae", mainColor: "#A855F7", lineageColors: { "acanthonematidae": "#3B82F6" } };
+const gastropoda_weeksiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "weeksiidae", className: "Gastropoda", orderName: "Unknown", name: "Weeksiidae", mainColor: "#FB923C", lineageColors: { "weeksiidae": "#EF4444" } };
+const gastropoda_heteroneritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "heteroneritidae", className: "Gastropoda", orderName: "Unknown", name: "Heteroneritidae", mainColor: "#2DD4BF", lineageColors: { "heteroneritidae": "#10B981" } };
+const gastropoda_dalmateidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "dalmateidae", className: "Gastropoda", orderName: "Unknown", name: "Dalmateidae", mainColor: "#A3E635", lineageColors: { "dalmateidae": "#F59E0B" } };
+const gastropoda_fibulotyxisidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "fibulotyxisidae", className: "Gastropoda", orderName: "Unknown", name: "Fibulotyxisidae", mainColor: "#38BDF8", lineageColors: { "fibulotyxisidae": "#8B5CF6" } };
+const gastropoda_prisciphoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "prisciphoridae", className: "Gastropoda", orderName: "Unknown", name: "Prisciphoridae", mainColor: "#3B82F6", lineageColors: { "prisciphoridae": "#EC4899" } };
+const gastropoda_canterburyellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "canterburyellidae", className: "Gastropoda", orderName: "Unknown", name: "Canterburyellidae", mainColor: "#EF4444", lineageColors: { "canterburyellidae": "#14B8A6" } };
+const gastropoda_pianaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pianaridae", className: "Gastropoda", orderName: "Unknown", name: "Pianaridae", mainColor: "#10B981", lineageColors: { "pianaridae": "#F97316" } };
+const gastropoda_stuoraxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "stuoraxidae", className: "Gastropoda", orderName: "Unknown", name: "Stuoraxidae", mainColor: "#F59E0B", lineageColors: { "stuoraxidae": "#6366F1" } };
+const gastropoda_ampezzanildidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "ampezzanildidae", className: "Gastropoda", orderName: "Unknown", name: "Ampezzanildidae", mainColor: "#8B5CF6", lineageColors: { "ampezzanildidae": "#84CC16" } };
+const gastropoda_paraclididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "paraclididae", className: "Gastropoda", orderName: "Unknown", name: "Paraclididae", mainColor: "#EC4899", lineageColors: { "paraclididae": "#06B6D4" } };
+const gastropoda_thaisidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "thaisidae", className: "Gastropoda", orderName: "Unknown", name: "Thaisidae", mainColor: "#14B8A6", lineageColors: { "thaisidae": "#D946EF" } };
+const gastropoda_pleurotoceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pleurotoceratidae", className: "Gastropoda", orderName: "Unknown", name: "Pleurotoceratidae", mainColor: "#F97316", lineageColors: { "pleurotoceratidae": "#0EA5E9" } };
+const gastropoda_cyclonemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cyclonemidae", className: "Gastropoda", orderName: "Unknown", name: "Cyclonemidae", mainColor: "#6366F1", lineageColors: { "cyclonemidae": "#22C55E" } };
+const gastropoda_vermicularidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "vermicularidae", className: "Gastropoda", orderName: "Unknown", name: "Vermicularidae", mainColor: "#84CC16", lineageColors: { "vermicularidae": "#EAB308" } };
+const gastropoda_adeorbiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "adeorbiidae", className: "Gastropoda", orderName: "Unknown", name: "Adeorbiidae", mainColor: "#06B6D4", lineageColors: { "adeorbiidae": "#A855F7" } };
+const gastropoda_synceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "synceratidae", className: "Gastropoda", orderName: "Unknown", name: "Synceratidae", mainColor: "#D946EF", lineageColors: { "synceratidae": "#FB923C" } };
+const gastropoda_naricopsinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "naricopsinidae", className: "Gastropoda", orderName: "Unknown", name: "Naricopsinidae", mainColor: "#0EA5E9", lineageColors: { "naricopsinidae": "#2DD4BF" } };
+const gastropoda_johnwyattiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "johnwyattiidae", className: "Gastropoda", orderName: "Unknown", name: "Johnwyattiidae", mainColor: "#22C55E", lineageColors: { "johnwyattiidae": "#A3E635" } };
+const gastropoda_olivellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "olivellidae", className: "Gastropoda", orderName: "Unknown", name: "Olivellidae", mainColor: "#EAB308", lineageColors: { "olivellidae": "#38BDF8" } };
+const gastropoda_purpuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "purpuridae", className: "Gastropoda", orderName: "Unknown", name: "Purpuridae", mainColor: "#A855F7", lineageColors: { "purpuridae": "#3B82F6" } };
+const gastropoda_taurasinae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "taurasinae", className: "Gastropoda", orderName: "Unknown", name: "Taurasinae", mainColor: "#FB923C", lineageColors: { "taurasinae": "#EF4444" } };
+const gastropoda_purpurellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "purpurellidae", className: "Gastropoda", orderName: "Unknown", name: "Purpurellidae", mainColor: "#2DD4BF", lineageColors: { "purpurellidae": "#10B981" } };
+const gastropoda_yochelsoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "yochelsoniidae", className: "Gastropoda", orderName: "Unknown", name: "Yochelsoniidae", mainColor: "#A3E635", lineageColors: { "yochelsoniidae": "#F59E0B" } };
+const gastropoda_temnodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "temnodiscidae", className: "Gastropoda", orderName: "Unknown", name: "Temnodiscidae", mainColor: "#38BDF8", lineageColors: { "temnodiscidae": "#8B5CF6" } };
+const gastropoda_cymbulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cymbulariidae", className: "Gastropoda", orderName: "Unknown", name: "Cymbulariidae", mainColor: "#3B82F6", lineageColors: { "cymbulariidae": "#EC4899" } };
+const gastropoda_tripartellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tripartellidae", className: "Gastropoda", orderName: "Unknown", name: "Tripartellidae", mainColor: "#EF4444", lineageColors: { "tripartellidae": "#14B8A6" } };
+const gastropoda_helicostoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "helicostoidae", className: "Gastropoda", orderName: "Unknown", name: "Helicostoidae", mainColor: "#10B981", lineageColors: { "helicostoidae": "#F97316" } };
+const gastropoda_batillaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "batillaridae", className: "Gastropoda", orderName: "Unknown", name: "Batillaridae", mainColor: "#F59E0B", lineageColors: { "batillaridae": "#6366F1" } };
+const gastropoda_halolimnohelicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "halolimnohelicidae", className: "Gastropoda", orderName: "Unknown", name: "Halolimnohelicidae", mainColor: "#8B5CF6", lineageColors: { "halolimnohelicidae": "#84CC16" } };
+const gastropoda_kanamariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "kanamariidae", className: "Gastropoda", orderName: "Unknown", name: "Kanamariidae", mainColor: "#EC4899", lineageColors: { "kanamariidae": "#06B6D4" } };
+const gastropoda_orectospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "orectospiridae", className: "Gastropoda", orderName: "Unknown", name: "Orectospiridae", mainColor: "#14B8A6", lineageColors: { "orectospiridae": "#D946EF" } };
+const gastropoda_mathilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "mathilidae", className: "Gastropoda", orderName: "Unknown", name: "Mathilidae", mainColor: "#F97316", lineageColors: { "mathilidae": "#0EA5E9" } };
+const gastropoda_sakarahellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sakarahellidae", className: "Gastropoda", orderName: "Unknown", name: "Sakarahellidae", mainColor: "#6366F1", lineageColors: { "sakarahellidae": "#22C55E" } };
+const gastropoda_cassianaxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cassianaxidae", className: "Gastropoda", orderName: "Unknown", name: "Cassianaxidae", mainColor: "#84CC16", lineageColors: { "cassianaxidae": "#EAB308" } };
+const gastropoda_anastomopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "anastomopsidae", className: "Gastropoda", orderName: "Unknown", name: "Anastomopsidae", mainColor: "#06B6D4", lineageColors: { "anastomopsidae": "#A855F7" } };
+const gastropoda_monadeniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "monadeniidae", className: "Gastropoda", orderName: "Unknown", name: "Monadeniidae", mainColor: "#D946EF", lineageColors: { "monadeniidae": "#FB923C" } };
+const gastropoda_pavlodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pavlodiscidae", className: "Gastropoda", orderName: "Unknown", name: "Pavlodiscidae", mainColor: "#0EA5E9", lineageColors: { "pavlodiscidae": "#2DD4BF" } };
+const gastropoda_dolomitellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "dolomitellidae", className: "Gastropoda", orderName: "Unknown", name: "Dolomitellidae", mainColor: "#22C55E", lineageColors: { "dolomitellidae": "#A3E635" } };
+const gastropoda_temnocinclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "temnocinclidae", className: "Gastropoda", orderName: "Unknown", name: "Temnocinclidae", mainColor: "#EAB308", lineageColors: { "temnocinclidae": "#38BDF8" } };
+const gastropoda_zardinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "zardinellidae", className: "Gastropoda", orderName: "Unknown", name: "Zardinellidae", mainColor: "#A855F7", lineageColors: { "zardinellidae": "#3B82F6" } };
+const gastropoda_daminilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "daminilidae", className: "Gastropoda", orderName: "Unknown", name: "Daminilidae", mainColor: "#FB923C", lineageColors: { "daminilidae": "#EF4444" } };
+const gastropoda_leviathaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "leviathaniidae", className: "Gastropoda", orderName: "Unknown", name: "Leviathaniidae", mainColor: "#2DD4BF", lineageColors: { "leviathaniidae": "#10B981" } };
+const gastropoda_hypselostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hypselostomatidae", className: "Gastropoda", orderName: "Unknown", name: "Hypselostomatidae", mainColor: "#A3E635", lineageColors: { "hypselostomatidae": "#F59E0B" } };
+const gastropoda_volutodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "volutodermatidae", className: "Gastropoda", orderName: "Unknown", name: "Volutodermatidae", mainColor: "#38BDF8", lineageColors: { "volutodermatidae": "#8B5CF6" } };
+const gastropoda_pereiraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pereiraeidae", className: "Gastropoda", orderName: "Unknown", name: "Pereiraeidae", mainColor: "#3B82F6", lineageColors: { "pereiraeidae": "#EC4899" } };
+const gastropoda_berendinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "berendinellidae", className: "Gastropoda", orderName: "Unknown", name: "Berendinellidae", mainColor: "#EF4444", lineageColors: { "berendinellidae": "#14B8A6" } };
+const gastropoda_gyrotropidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "gyrotropidae", className: "Gastropoda", orderName: "Unknown", name: "Gyrotropidae", mainColor: "#10B981", lineageColors: { "gyrotropidae": "#F97316" } };
+const gastropoda_rhaphistomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "rhaphistomellidae", className: "Gastropoda", orderName: "Unknown", name: "Rhaphistomellidae", mainColor: "#F59E0B", lineageColors: { "rhaphistomellidae": "#6366F1" } };
+const gastropoda_fossarinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "fossarinidae", className: "Gastropoda", orderName: "Unknown", name: "Fossarinidae", mainColor: "#8B5CF6", lineageColors: { "fossarinidae": "#84CC16" } };
+const gastropoda_pleuroceriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pleuroceriidae", className: "Gastropoda", orderName: "Unknown", name: "Pleuroceriidae", mainColor: "#EC4899", lineageColors: { "pleuroceriidae": "#06B6D4" } };
+const gastropoda_zardinellopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "zardinellopsidae", className: "Gastropoda", orderName: "Unknown", name: "Zardinellopsidae", mainColor: "#14B8A6", lineageColors: { "zardinellopsidae": "#D946EF" } };
+const gastropoda_actaeoninidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "actaeoninidae", className: "Gastropoda", orderName: "Unknown", name: "Actaeoninidae", mainColor: "#F97316", lineageColors: { "actaeoninidae": "#0EA5E9" } };
+const gastropoda_bathysciadidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "bathysciadidae", className: "Gastropoda", orderName: "Unknown", name: "Bathysciadidae", mainColor: "#6366F1", lineageColors: { "bathysciadidae": "#22C55E" } };
+const gastropoda_aciculadae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "aciculadae", className: "Gastropoda", orderName: "Unknown", name: "Aciculadae", mainColor: "#84CC16", lineageColors: { "aciculadae": "#EAB308" } };
+const gastropoda_prisciophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "prisciophoridae", className: "Gastropoda", orderName: "Unknown", name: "Prisciophoridae", mainColor: "#06B6D4", lineageColors: { "prisciophoridae": "#A855F7" } };
+const gastropoda_echinichidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "echinichidae", className: "Gastropoda", orderName: "Unknown", name: "Echinichidae", mainColor: "#D946EF", lineageColors: { "echinichidae": "#FB923C" } };
+const gastropoda_lucmeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lucmeriidae", className: "Gastropoda", orderName: "Unknown", name: "Lucmeriidae", mainColor: "#0EA5E9", lineageColors: { "lucmeriidae": "#2DD4BF" } };
+const gastropoda_actaeonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "actaeonellidae", className: "Gastropoda", orderName: "Unknown", name: "Actaeonellidae", mainColor: "#22C55E", lineageColors: { "actaeonellidae": "#A3E635" } };
+const gastropoda_pyrifusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pyrifusidae", className: "Gastropoda", orderName: "Unknown", name: "Pyrifusidae", mainColor: "#EAB308", lineageColors: { "pyrifusidae": "#38BDF8" } };
+const gastropoda_rhytidophilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "rhytidophilidae", className: "Gastropoda", orderName: "Unknown", name: "Rhytidophilidae", mainColor: "#A855F7", lineageColors: { "rhytidophilidae": "#3B82F6" } };
+const gastropoda_raphistomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "raphistomidae", className: "Gastropoda", orderName: "Unknown", name: "Raphistomidae", mainColor: "#FB923C", lineageColors: { "raphistomidae": "#EF4444" } };
+const gastropoda_moreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "moreidae", className: "Gastropoda", orderName: "Unknown", name: "Moreidae", mainColor: "#2DD4BF", lineageColors: { "moreidae": "#10B981" } };
+const gastropoda_succineoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "succineoidae", className: "Gastropoda", orderName: "Unknown", name: "Succineoidae", mainColor: "#A3E635", lineageColors: { "succineoidae": "#F59E0B" } };
+const gastropoda_xantonychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "xantonychidae", className: "Gastropoda", orderName: "Unknown", name: "Xantonychidae", mainColor: "#38BDF8", lineageColors: { "xantonychidae": "#8B5CF6" } };
+const gastropoda_veronicelloidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "veronicelloidae", className: "Gastropoda", orderName: "Unknown", name: "Veronicelloidae", mainColor: "#3B82F6", lineageColors: { "veronicelloidae": "#EC4899" } };
+const gastropoda_showajidaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "showajidaiidae", className: "Gastropoda", orderName: "Unknown", name: "Showajidaiidae", mainColor: "#EF4444", lineageColors: { "showajidaiidae": "#14B8A6" } };
+const gastropoda_ylodisculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "ylodisculidae", className: "Gastropoda", orderName: "Unknown", name: "Ylodisculidae", mainColor: "#10B981", lineageColors: { "ylodisculidae": "#F97316" } };
+const gastropoda_tornatellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "tornatellinidae", className: "Gastropoda", orderName: "Unknown", name: "Tornatellinidae", mainColor: "#F59E0B", lineageColors: { "tornatellinidae": "#6366F1" } };
+const gastropoda_orthostomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "orthostomidae", className: "Gastropoda", orderName: "Unknown", name: "Orthostomidae", mainColor: "#8B5CF6", lineageColors: { "orthostomidae": "#84CC16" } };
+const gastropoda_chrysodomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "chrysodomidae", className: "Gastropoda", orderName: "Unknown", name: "Chrysodomidae", mainColor: "#EC4899", lineageColors: { "chrysodomidae": "#06B6D4" } };
+const gastropoda_hygromiinae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "hygromiinae", className: "Gastropoda", orderName: "Unknown", name: "Hygromiinae", mainColor: "#14B8A6", lineageColors: { "hygromiinae": "#D946EF" } };
+const gastropoda_fruiticicoiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "fruiticicoiidae", className: "Gastropoda", orderName: "Unknown", name: "Fruiticicoiidae", mainColor: "#F97316", lineageColors: { "fruiticicoiidae": "#0EA5E9" } };
+const gastropoda_gadinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "gadinidae", className: "Gastropoda", orderName: "Unknown", name: "Gadinidae", mainColor: "#6366F1", lineageColors: { "gadinidae": "#22C55E" } };
+const gastropoda_alectrionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "alectrionidae", className: "Gastropoda", orderName: "Unknown", name: "Alectrionidae", mainColor: "#84CC16", lineageColors: { "alectrionidae": "#EAB308" } };
+const gastropoda_cochlostomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cochlostomidae", className: "Gastropoda", orderName: "Unknown", name: "Cochlostomidae", mainColor: "#06B6D4", lineageColors: { "cochlostomidae": "#A855F7" } };
+const gastropoda_onobidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "onobidae", className: "Gastropoda", orderName: "Unknown", name: "Onobidae", mainColor: "#D946EF", lineageColors: { "onobidae": "#FB923C" } };
+const gastropoda_nodolargenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "nodolargenidae", className: "Gastropoda", orderName: "Unknown", name: "Nodolargenidae", mainColor: "#0EA5E9", lineageColors: { "nodolargenidae": "#2DD4BF" } };
+const gastropoda_merelinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "merelinidae", className: "Gastropoda", orderName: "Unknown", name: "Merelinidae", mainColor: "#22C55E", lineageColors: { "merelinidae": "#A3E635" } };
+const gastropoda_skeneadae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "skeneadae", className: "Gastropoda", orderName: "Unknown", name: "Skeneadae", mainColor: "#EAB308", lineageColors: { "skeneadae": "#38BDF8" } };
+const gastropoda_probittiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "probittiidae", className: "Gastropoda", orderName: "Unknown", name: "Probittiidae", mainColor: "#A855F7", lineageColors: { "probittiidae": "#3B82F6" } };
+const gastropoda_juramelanatriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "juramelanatriidae", className: "Gastropoda", orderName: "Unknown", name: "Juramelanatriidae", mainColor: "#FB923C", lineageColors: { "juramelanatriidae": "#EF4444" } };
+const gastropoda_cyclodontinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "cyclodontinidae", className: "Gastropoda", orderName: "Unknown", name: "Cyclodontinidae", mainColor: "#2DD4BF", lineageColors: { "cyclodontinidae": "#10B981" } };
+const gastropoda_hydrobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hydrobiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Hydrobiidae", mainColor: "#A3E635", lineageColors: { "hydrobiidae": "#F59E0B" } };
+const gastropoda_rissoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "rissoidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Rissoidae", mainColor: "#38BDF8", lineageColors: { "rissoidae": "#8B5CF6" } };
+const gastropoda_eulimidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "eulimidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Eulimidae", mainColor: "#3B82F6", lineageColors: { "eulimidae": "#EC4899" } };
+const gastropoda_naticidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "naticidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Naticidae", mainColor: "#EF4444", lineageColors: { "naticidae": "#14B8A6" } };
+const gastropoda_cypraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "cypraeidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Cypraeidae", mainColor: "#10B981", lineageColors: { "cypraeidae": "#F97316" } };
+const gastropoda_rissoinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "rissoinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Rissoinidae", mainColor: "#F59E0B", lineageColors: { "rissoinidae": "#6366F1" } };
+const gastropoda_tateidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "tateidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Tateidae", mainColor: "#8B5CF6", lineageColors: { "tateidae": "#84CC16" } };
+const gastropoda_assimineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "assimineidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Assimineidae", mainColor: "#EC4899", lineageColors: { "assimineidae": "#06B6D4" } };
+const gastropoda_annulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "annulariidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Annulariidae", mainColor: "#14B8A6", lineageColors: { "annulariidae": "#D946EF" } };
+const gastropoda_tornidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "tornidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Tornidae", mainColor: "#F97316", lineageColors: { "tornidae": "#0EA5E9" } };
+const gastropoda_cochliopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cochliopidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Cochliopidae", mainColor: "#6366F1", lineageColors: { "cochliopidae": "#22C55E" } };
+const gastropoda_bithyniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "bithyniidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Bithyniidae", mainColor: "#84CC16", lineageColors: { "bithyniidae": "#EAB308" } };
+const gastropoda_triviidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "triviidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Triviidae", mainColor: "#06B6D4", lineageColors: { "triviidae": "#A855F7" } };
+const gastropoda_pomatiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pomatiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pomatiidae", mainColor: "#D946EF", lineageColors: { "pomatiidae": "#FB923C" } };
+const gastropoda_ovulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "ovulidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Ovulidae", mainColor: "#0EA5E9", lineageColors: { "ovulidae": "#2DD4BF" } };
+const gastropoda_caecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "caecidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Caecidae", mainColor: "#22C55E", lineageColors: { "caecidae": "#A3E635" } };
+const gastropoda_littorinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "littorinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Littorinidae", mainColor: "#EAB308", lineageColors: { "littorinidae": "#38BDF8" } };
+const gastropoda_calyptraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "calyptraeidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Calyptraeidae", mainColor: "#A855F7", lineageColors: { "calyptraeidae": "#3B82F6" } };
+const gastropoda_pomatiopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pomatiopsidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pomatiopsidae", mainColor: "#FB923C", lineageColors: { "pomatiopsidae": "#EF4444" } };
+const gastropoda_moitessieriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "moitessieriidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Moitessieriidae", mainColor: "#2DD4BF", lineageColors: { "moitessieriidae": "#10B981" } };
+const gastropoda_cymatiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cymatiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Cymatiidae", mainColor: "#A3E635", lineageColors: { "cymatiidae": "#F59E0B" } };
+const gastropoda_cassidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cassidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Cassidae", mainColor: "#38BDF8", lineageColors: { "cassidae": "#8B5CF6" } };
+const gastropoda_zebinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "zebinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Zebinidae", mainColor: "#3B82F6", lineageColors: { "zebinidae": "#EC4899" } };
+const gastropoda_aporrhaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "aporrhaidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Aporrhaidae", mainColor: "#EF4444", lineageColors: { "aporrhaidae": "#14B8A6" } };
+const gastropoda_bythinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "bythinellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Bythinellidae", mainColor: "#10B981", lineageColors: { "bythinellidae": "#F97316" } };
+const gastropoda_vermetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "vermetidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Vermetidae", mainColor: "#F59E0B", lineageColors: { "vermetidae": "#6366F1" } };
+const gastropoda_vanikoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "vanikoridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Vanikoridae", mainColor: "#8B5CF6", lineageColors: { "vanikoridae": "#84CC16" } };
+const gastropoda_strombidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "strombidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Strombidae", mainColor: "#EC4899", lineageColors: { "strombidae": "#06B6D4" } };
+const gastropoda_lithoglyphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lithoglyphidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Lithoglyphidae", mainColor: "#14B8A6", lineageColors: { "lithoglyphidae": "#D946EF" } };
+const gastropoda_stenothyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "stenothyridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Stenothyridae", mainColor: "#F97316", lineageColors: { "stenothyridae": "#0EA5E9" } };
+const gastropoda_vitrinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "vitrinellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Vitrinellidae", mainColor: "#6366F1", lineageColors: { "vitrinellidae": "#22C55E" } };
+const gastropoda_capulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "capulidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Capulidae", mainColor: "#84CC16", lineageColors: { "capulidae": "#EAB308" } };
+const gastropoda_eratoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "eratoidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Eratoidae", mainColor: "#06B6D4", lineageColors: { "eratoidae": "#A855F7" } };
+const gastropoda_anabathridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "anabathridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Anabathridae", mainColor: "#D946EF", lineageColors: { "anabathridae": "#FB923C" } };
+const gastropoda_truncatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "truncatellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Truncatellidae", mainColor: "#0EA5E9", lineageColors: { "truncatellidae": "#2DD4BF" } };
+const gastropoda_pediculariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pediculariidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pediculariidae", mainColor: "#22C55E", lineageColors: { "pediculariidae": "#A3E635" } };
+const gastropoda_amnicolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "amnicolidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Amnicolidae", mainColor: "#EAB308", lineageColors: { "amnicolidae": "#38BDF8" } };
+const gastropoda_iravadiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "iravadiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Iravadiidae", mainColor: "#A855F7", lineageColors: { "iravadiidae": "#3B82F6" } };
+const gastropoda_eatoniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "eatoniellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Eatoniellidae", mainColor: "#FB923C", lineageColors: { "eatoniellidae": "#EF4444" } };
+const gastropoda_rostellariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "rostellariidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Rostellariidae", mainColor: "#2DD4BF", lineageColors: { "rostellariidae": "#10B981" } };
+const gastropoda_teinostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "teinostomatidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Teinostomatidae", mainColor: "#A3E635", lineageColors: { "teinostomatidae": "#F59E0B" } };
+const gastropoda_barleeiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "barleeiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Barleeiidae", mainColor: "#38BDF8", lineageColors: { "barleeiidae": "#8B5CF6" } };
+const gastropoda_velutinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "velutinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Velutinidae", mainColor: "#3B82F6", lineageColors: { "velutinidae": "#EC4899" } };
+const gastropoda_hipponicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "hipponicidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Hipponicidae", mainColor: "#EF4444", lineageColors: { "hipponicidae": "#14B8A6" } };
+const gastropoda_eocypraeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "eocypraeidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Eocypraeidae", mainColor: "#10B981", lineageColors: { "eocypraeidae": "#F97316" } };
+const gastropoda_cingulopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cingulopsidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Cingulopsidae", mainColor: "#F59E0B", lineageColors: { "cingulopsidae": "#6366F1" } };
+const gastropoda_pickworthiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pickworthiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pickworthiidae", mainColor: "#8B5CF6", lineageColors: { "pickworthiidae": "#84CC16" } };
+const gastropoda_ficidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "ficidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Ficidae", mainColor: "#EC4899", lineageColors: { "ficidae": "#06B6D4" } };
+const gastropoda_baicaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "baicaliidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Baicaliidae", mainColor: "#14B8A6", lineageColors: { "baicaliidae": "#D946EF" } };
+const gastropoda_bursidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "bursidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Bursidae", mainColor: "#F97316", lineageColors: { "bursidae": "#0EA5E9" } };
+const gastropoda_lironobidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "lironobidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Lironobidae", mainColor: "#6366F1", lineageColors: { "lironobidae": "#22C55E" } };
+const gastropoda_struthiolariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "struthiolariidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Struthiolariidae", mainColor: "#84CC16", lineageColors: { "struthiolariidae": "#EAB308" } };
+const gastropoda_xenophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "xenophoridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Xenophoridae", mainColor: "#06B6D4", lineageColors: { "xenophoridae": "#A855F7" } };
+const gastropoda_emmericiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "emmericiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Emmericiidae", mainColor: "#D946EF", lineageColors: { "emmericiidae": "#FB923C" } };
+const gastropoda_tonnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "tonnidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Tonnidae", mainColor: "#0EA5E9", lineageColors: { "tonnidae": "#2DD4BF" } };
+const gastropoda_elachisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "elachisinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Elachisinidae", mainColor: "#22C55E", lineageColors: { "elachisinidae": "#A3E635" } };
+const gastropoda_personidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "personidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Personidae", mainColor: "#EAB308", lineageColors: { "personidae": "#38BDF8" } };
+const gastropoda_atlantidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "atlantidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Atlantidae", mainColor: "#A855F7", lineageColors: { "atlantidae": "#3B82F6" } };
+const gastropoda_erhaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "erhaiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Erhaiidae", mainColor: "#FB923C", lineageColors: { "erhaiidae": "#EF4444" } };
+const gastropoda_charoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "charoniidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Charoniidae", mainColor: "#2DD4BF", lineageColors: { "charoniidae": "#10B981" } };
+const gastropoda_tomichiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "tomichiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Tomichiidae", mainColor: "#A3E635", lineageColors: { "tomichiidae": "#F59E0B" } };
+const gastropoda_ranellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ranellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Ranellidae", mainColor: "#38BDF8", lineageColors: { "ranellidae": "#8B5CF6" } };
+const gastropoda_haloceratidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "haloceratidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Haloceratidae", mainColor: "#3B82F6", lineageColors: { "haloceratidae": "#EC4899" } };
+const gastropoda_seraphsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "seraphsidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Seraphsidae", mainColor: "#EF4444", lineageColors: { "seraphsidae": "#14B8A6" } };
+const gastropoda_carinariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "carinariidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Carinariidae", mainColor: "#10B981", lineageColors: { "carinariidae": "#F97316" } };
+const gastropoda_pelycidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pelycidiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pelycidiidae", mainColor: "#F59E0B", lineageColors: { "pelycidiidae": "#6366F1" } };
+const gastropoda_zerotulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "zerotulidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Zerotulidae", mainColor: "#8B5CF6", lineageColors: { "zerotulidae": "#84CC16" } };
+const gastropoda_tylostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "tylostomatidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Tylostomatidae", mainColor: "#EC4899", lineageColors: { "tylostomatidae": "#06B6D4" } };
+const gastropoda_thersiteidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "thersiteidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Thersiteidae", mainColor: "#14B8A6", lineageColors: { "thersiteidae": "#D946EF" } };
+const gastropoda_hippochrenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "hippochrenidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Hippochrenidae", mainColor: "#F97316", lineageColors: { "hippochrenidae": "#0EA5E9" } };
+const gastropoda_clenchiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "clenchiellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Clenchiellidae", mainColor: "#6366F1", lineageColors: { "clenchiellidae": "#22C55E" } };
+const gastropoda_fontigentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "fontigentidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Fontigentidae", mainColor: "#84CC16", lineageColors: { "fontigentidae": "#EAB308" } };
+const gastropoda_purpuroideidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "purpuroideidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Purpuroideidae", mainColor: "#06B6D4", lineageColors: { "purpuroideidae": "#A855F7" } };
+const gastropoda_pterotracheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pterotracheidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pterotracheidae", mainColor: "#D946EF", lineageColors: { "pterotracheidae": "#FB923C" } };
+const gastropoda_palaeobaicaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "palaeobaicaliidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Palaeobaicaliidae", mainColor: "#0EA5E9", lineageColors: { "palaeobaicaliidae": "#2DD4BF" } };
+const gastropoda_laubierinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "laubierinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Laubierinidae", mainColor: "#22C55E", lineageColors: { "laubierinidae": "#A3E635" } };
+const gastropoda_lyocyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lyocyclidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Lyocyclidae", mainColor: "#EAB308", lineageColors: { "lyocyclidae": "#38BDF8" } };
+const gastropoda_rastodentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "rastodentidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Rastodentidae", mainColor: "#A855F7", lineageColors: { "rastodentidae": "#3B82F6" } };
+const gastropoda_caledoniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "caledoniellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Caledoniellidae", mainColor: "#FB923C", lineageColors: { "caledoniellidae": "#EF4444" } };
+const gastropoda_epigridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "epigridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Epigridae", mainColor: "#2DD4BF", lineageColors: { "epigridae": "#10B981" } };
+const gastropoda_falsicingulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "falsicingulidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Falsicingulidae", mainColor: "#A3E635", lineageColors: { "falsicingulidae": "#F59E0B" } };
+const gastropoda_thalassocyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "thalassocyonidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Thalassocyonidae", mainColor: "#38BDF8", lineageColors: { "thalassocyonidae": "#8B5CF6" } };
+const gastropoda_skeneopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "skeneopsidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Skeneopsidae", mainColor: "#3B82F6", lineageColors: { "skeneopsidae": "#EC4899" } };
+const gastropoda_lamelliphoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "lamelliphoridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Lamelliphoridae", mainColor: "#EF4444", lineageColors: { "lamelliphoridae": "#14B8A6" } };
+const gastropoda_bohaispiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "bohaispiridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Bohaispiridae", mainColor: "#10B981", lineageColors: { "bohaispiridae": "#F97316" } };
+const gastropoda_mesocochliopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mesocochliopidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Mesocochliopidae", mainColor: "#F59E0B", lineageColors: { "mesocochliopidae": "#6366F1" } };
+const gastropoda_calopiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "calopiidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Calopiidae", mainColor: "#8B5CF6", lineageColors: { "calopiidae": "#84CC16" } };
+const gastropoda_aclididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "aclididae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Aclididae", mainColor: "#EC4899", lineageColors: { "aclididae": "#06B6D4" } };
+const gastropoda_dilatilabridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "dilatilabridae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Dilatilabridae", mainColor: "#14B8A6", lineageColors: { "dilatilabridae": "#D946EF" } };
+const gastropoda_gigantocapulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "gigantocapulidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Gigantocapulidae", mainColor: "#F97316", lineageColors: { "gigantocapulidae": "#0EA5E9" } };
+const gastropoda_spirostyliferinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "spirostyliferinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Spirostyliferinidae", mainColor: "#6366F1", lineageColors: { "spirostyliferinidae": "#22C55E" } };
+const gastropoda_bellerophinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "bellerophinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Bellerophinidae", mainColor: "#84CC16", lineageColors: { "bellerophinidae": "#EAB308" } };
+const gastropoda_pugnellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pugnellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Pugnellidae", mainColor: "#06B6D4", lineageColors: { "pugnellidae": "#A855F7" } };
+const gastropoda_colombellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "colombellinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Colombellinidae", mainColor: "#D946EF", lineageColors: { "colombellinidae": "#FB923C" } };
+const gastropoda_palaeorissoinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "palaeorissoinidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Palaeorissoinidae", mainColor: "#0EA5E9", lineageColors: { "palaeorissoinidae": "#2DD4BF" } };
+const gastropoda_litthabitellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "litthabitellidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Litthabitellidae", mainColor: "#22C55E", lineageColors: { "litthabitellidae": "#A3E635" } };
+const gastropoda_emblandidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "emblandidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Emblandidae", mainColor: "#EAB308", lineageColors: { "emblandidae": "#38BDF8" } };
+const gastropoda_hydrococcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "hydrococcidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Hydrococcidae", mainColor: "#A855F7", lineageColors: { "hydrococcidae": "#3B82F6" } };
+const gastropoda_coelodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "coelodiscidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Coelodiscidae", mainColor: "#FB923C", lineageColors: { "coelodiscidae": "#EF4444" } };
+const gastropoda_falsobuvignidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "falsobuvignidae", className: "Gastropoda", orderName: "Littorinimorpha", name: "Falsobuvignidae", mainColor: "#2DD4BF", lineageColors: { "falsobuvignidae": "#10B981" } };
+const gastropoda_cyclophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cyclophoridae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Cyclophoridae", mainColor: "#A3E635", lineageColors: { "cyclophoridae": "#F59E0B" } };
+const gastropoda_diplommatinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "diplommatinidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Diplommatinidae", mainColor: "#38BDF8", lineageColors: { "diplommatinidae": "#8B5CF6" } };
+const gastropoda_viviparidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "viviparidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Viviparidae", mainColor: "#3B82F6", lineageColors: { "viviparidae": "#EC4899" } };
+const gastropoda_alycaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "alycaeidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Alycaeidae", mainColor: "#EF4444", lineageColors: { "alycaeidae": "#14B8A6" } };
+const gastropoda_pupinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pupinidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Pupinidae", mainColor: "#10B981", lineageColors: { "pupinidae": "#F97316" } };
+const gastropoda_ampullariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "ampullariidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Ampullariidae", mainColor: "#F59E0B", lineageColors: { "ampullariidae": "#6366F1" } };
+const gastropoda_neocyclotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "neocyclotidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Neocyclotidae", mainColor: "#8B5CF6", lineageColors: { "neocyclotidae": "#84CC16" } };
+const gastropoda_ampullinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "ampullinidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Ampullinidae", mainColor: "#EC4899", lineageColors: { "ampullinidae": "#06B6D4" } };
+const gastropoda_cochlostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cochlostomatidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Cochlostomatidae", mainColor: "#14B8A6", lineageColors: { "cochlostomatidae": "#D946EF" } };
+const gastropoda_aciculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "aciculidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Aciculidae", mainColor: "#F97316", lineageColors: { "aciculidae": "#0EA5E9" } };
+const gastropoda_megalomastomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "megalomastomatidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Megalomastomatidae", mainColor: "#6366F1", lineageColors: { "megalomastomatidae": "#22C55E" } };
+const gastropoda_maizaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "maizaniidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Maizaniidae", mainColor: "#84CC16", lineageColors: { "maizaniidae": "#EAB308" } };
+const gastropoda_craspedopomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "craspedopomatidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Craspedopomatidae", mainColor: "#06B6D4", lineageColors: { "craspedopomatidae": "#A855F7" } };
+const gastropoda_pliopholygidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pliopholygidae", className: "Gastropoda", orderName: "Architaenioglossa", name: "Pliopholygidae", mainColor: "#D946EF", lineageColors: { "pliopholygidae": "#FB923C" } };
+const gastropoda_trochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "trochidae", className: "Gastropoda", orderName: "Trochida", name: "Trochidae", mainColor: "#0EA5E9", lineageColors: { "trochidae": "#2DD4BF" } };
+const gastropoda_calliostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "calliostomatidae", className: "Gastropoda", orderName: "Trochida", name: "Calliostomatidae", mainColor: "#22C55E", lineageColors: { "calliostomatidae": "#A3E635" } };
+const gastropoda_skeneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "skeneidae", className: "Gastropoda", orderName: "Trochida", name: "Skeneidae", mainColor: "#EAB308", lineageColors: { "skeneidae": "#38BDF8" } };
+const gastropoda_turbinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "turbinidae", className: "Gastropoda", orderName: "Trochida", name: "Turbinidae", mainColor: "#A855F7", lineageColors: { "turbinidae": "#3B82F6" } };
+const gastropoda_solariellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "solariellidae", className: "Gastropoda", orderName: "Trochida", name: "Solariellidae", mainColor: "#FB923C", lineageColors: { "solariellidae": "#EF4444" } };
+const gastropoda_anomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "anomphalidae", className: "Gastropoda", orderName: "Trochida", name: "Anomphalidae", mainColor: "#2DD4BF", lineageColors: { "anomphalidae": "#10B981" } };
+const gastropoda_liotiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "liotiidae", className: "Gastropoda", orderName: "Trochida", name: "Liotiidae", mainColor: "#A3E635", lineageColors: { "liotiidae": "#F59E0B" } };
+const gastropoda_colloniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "colloniidae", className: "Gastropoda", orderName: "Trochida", name: "Colloniidae", mainColor: "#38BDF8", lineageColors: { "colloniidae": "#8B5CF6" } };
+const gastropoda_tegulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "tegulidae", className: "Gastropoda", orderName: "Trochida", name: "Tegulidae", mainColor: "#3B82F6", lineageColors: { "tegulidae": "#EC4899" } };
+const gastropoda_margaritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "margaritidae", className: "Gastropoda", orderName: "Trochida", name: "Margaritidae", mainColor: "#EF4444", lineageColors: { "margaritidae": "#14B8A6" } };
+const gastropoda_phasianellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "phasianellidae", className: "Gastropoda", orderName: "Trochida", name: "Phasianellidae", mainColor: "#10B981", lineageColors: { "phasianellidae": "#F97316" } };
+const gastropoda_conradiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "conradiidae", className: "Gastropoda", orderName: "Trochida", name: "Conradiidae", mainColor: "#F59E0B", lineageColors: { "conradiidae": "#6366F1" } };
+const gastropoda_microdomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "microdomatidae", className: "Gastropoda", orderName: "Trochida", name: "Microdomatidae", mainColor: "#8B5CF6", lineageColors: { "microdomatidae": "#84CC16" } };
+const gastropoda_areneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "areneidae", className: "Gastropoda", orderName: "Trochida", name: "Areneidae", mainColor: "#EC4899", lineageColors: { "areneidae": "#06B6D4" } };
+const gastropoda_elasmonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "elasmonematidae", className: "Gastropoda", orderName: "Trochida", name: "Elasmonematidae", mainColor: "#14B8A6", lineageColors: { "elasmonematidae": "#D946EF" } };
+const gastropoda_angariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "angariidae", className: "Gastropoda", orderName: "Trochida", name: "Angariidae", mainColor: "#F97316", lineageColors: { "angariidae": "#0EA5E9" } };
+const gastropoda_araeonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "araeonematidae", className: "Gastropoda", orderName: "Trochida", name: "Araeonematidae", mainColor: "#6366F1", lineageColors: { "araeonematidae": "#22C55E" } };
+const gastropoda_ataphridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "ataphridae", className: "Gastropoda", orderName: "Trochida", name: "Ataphridae", mainColor: "#84CC16", lineageColors: { "ataphridae": "#EAB308" } };
+const gastropoda_nododelphinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "nododelphinulidae", className: "Gastropoda", orderName: "Trochida", name: "Nododelphinulidae", mainColor: "#06B6D4", lineageColors: { "nododelphinulidae": "#A855F7" } };
+const gastropoda_proconulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "proconulidae", className: "Gastropoda", orderName: "Trochida", name: "Proconulidae", mainColor: "#D946EF", lineageColors: { "proconulidae": "#FB923C" } };
+const gastropoda_epulotrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "epulotrochidae", className: "Gastropoda", orderName: "Trochida", name: "Epulotrochidae", mainColor: "#0EA5E9", lineageColors: { "epulotrochidae": "#2DD4BF" } };
+const gastropoda_metriomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "metriomphalidae", className: "Gastropoda", orderName: "Trochida", name: "Metriomphalidae", mainColor: "#22C55E", lineageColors: { "metriomphalidae": "#A3E635" } };
+const gastropoda_tychobraheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "tychobraheidae", className: "Gastropoda", orderName: "Trochida", name: "Tychobraheidae", mainColor: "#EAB308", lineageColors: { "tychobraheidae": "#38BDF8" } };
+const gastropoda_sclarotrardidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sclarotrardidae", className: "Gastropoda", orderName: "Trochida", name: "Sclarotrardidae", mainColor: "#A855F7", lineageColors: { "sclarotrardidae": "#3B82F6" } };
+const gastropoda_chromodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "chromodorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Chromodorididae", mainColor: "#FB923C", lineageColors: { "chromodorididae": "#EF4444" } };
+const gastropoda_actinocyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "actinocyclidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Actinocyclidae", mainColor: "#2DD4BF", lineageColors: { "actinocyclidae": "#10B981" } };
+const gastropoda_discodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "discodorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Discodorididae", mainColor: "#A3E635", lineageColors: { "discodorididae": "#F59E0B" } };
+const gastropoda_polyceridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "polyceridae", className: "Gastropoda", orderName: "Nudibranchia", name: "Polyceridae", mainColor: "#38BDF8", lineageColors: { "polyceridae": "#8B5CF6" } };
+const gastropoda_facelinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "facelinidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Facelinidae", mainColor: "#3B82F6", lineageColors: { "facelinidae": "#EC4899" } };
+const gastropoda_goniodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "goniodorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Goniodorididae", mainColor: "#EF4444", lineageColors: { "goniodorididae": "#14B8A6" } };
+const gastropoda_dorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Dorididae", mainColor: "#10B981", lineageColors: { "dorididae": "#F97316" } };
+const gastropoda_arminidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "arminidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Arminidae", mainColor: "#F59E0B", lineageColors: { "arminidae": "#6366F1" } };
+const gastropoda_aeolidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "aeolidiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Aeolidiidae", mainColor: "#8B5CF6", lineageColors: { "aeolidiidae": "#84CC16" } };
+const gastropoda_dotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "dotidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Dotidae", mainColor: "#EC4899", lineageColors: { "dotidae": "#06B6D4" } };
+const gastropoda_trinchesiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "trinchesiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Trinchesiidae", mainColor: "#14B8A6", lineageColors: { "trinchesiidae": "#D946EF" } };
+const gastropoda_phyllidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "phyllidiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Phyllidiidae", mainColor: "#F97316", lineageColors: { "phyllidiidae": "#0EA5E9" } };
+const gastropoda_dendrodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "dendrodorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Dendrodorididae", mainColor: "#6366F1", lineageColors: { "dendrodorididae": "#22C55E" } };
+const gastropoda_tritoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "tritoniidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Tritoniidae", mainColor: "#84CC16", lineageColors: { "tritoniidae": "#EAB308" } };
+const gastropoda_eubranchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "eubranchidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Eubranchidae", mainColor: "#06B6D4", lineageColors: { "eubranchidae": "#A855F7" } };
+const gastropoda_cadlinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cadlinidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Cadlinidae", mainColor: "#D946EF", lineageColors: { "cadlinidae": "#FB923C" } };
+const gastropoda_cuthonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cuthonidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Cuthonidae", mainColor: "#0EA5E9", lineageColors: { "cuthonidae": "#2DD4BF" } };
+const gastropoda_myrrhinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "myrrhinidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Myrrhinidae", mainColor: "#22C55E", lineageColors: { "myrrhinidae": "#A3E635" } };
+const gastropoda_onchidorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "onchidorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Onchidorididae", mainColor: "#EAB308", lineageColors: { "onchidorididae": "#38BDF8" } };
+const gastropoda_flabellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "flabellinidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Flabellinidae", mainColor: "#A855F7", lineageColors: { "flabellinidae": "#3B82F6" } };
+const gastropoda_aegiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "aegiridae", className: "Gastropoda", orderName: "Nudibranchia", name: "Aegiridae", mainColor: "#FB923C", lineageColors: { "aegiridae": "#EF4444" } };
+const gastropoda_dendronotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "dendronotidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Dendronotidae", mainColor: "#2DD4BF", lineageColors: { "dendronotidae": "#10B981" } };
+const gastropoda_janolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "janolidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Janolidae", mainColor: "#A3E635", lineageColors: { "janolidae": "#F59E0B" } };
+const gastropoda_tethydidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "tethydidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Tethydidae", mainColor: "#38BDF8", lineageColors: { "tethydidae": "#8B5CF6" } };
+const gastropoda_coryphellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "coryphellidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Coryphellidae", mainColor: "#3B82F6", lineageColors: { "coryphellidae": "#EC4899" } };
+const gastropoda_corambidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "corambidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Corambidae", mainColor: "#EF4444", lineageColors: { "corambidae": "#14B8A6" } };
+const gastropoda_pseudovermidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pseudovermidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Pseudovermidae", mainColor: "#10B981", lineageColors: { "pseudovermidae": "#F97316" } };
+const gastropoda_bornellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "bornellidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Bornellidae", mainColor: "#F59E0B", lineageColors: { "bornellidae": "#6366F1" } };
+const gastropoda_cuthonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cuthonellidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Cuthonellidae", mainColor: "#8B5CF6", lineageColors: { "cuthonellidae": "#84CC16" } };
+const gastropoda_scyllaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "scyllaeidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Scyllaeidae", mainColor: "#EC4899", lineageColors: { "scyllaeidae": "#06B6D4" } };
+const gastropoda_paracoryphellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "paracoryphellidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Paracoryphellidae", mainColor: "#14B8A6", lineageColors: { "paracoryphellidae": "#D946EF" } };
+const gastropoda_akiodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "akiodorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Akiodorididae", mainColor: "#F97316", lineageColors: { "akiodorididae": "#0EA5E9" } };
+const gastropoda_rhodopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "rhodopidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Rhodopidae", mainColor: "#6366F1", lineageColors: { "rhodopidae": "#22C55E" } };
+const gastropoda_madrellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "madrellidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Madrellidae", mainColor: "#84CC16", lineageColors: { "madrellidae": "#EAB308" } };
+const gastropoda_calycidorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "calycidorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Calycidorididae", mainColor: "#06B6D4", lineageColors: { "calycidorididae": "#A855F7" } };
+const gastropoda_samlidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "samlidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Samlidae", mainColor: "#D946EF", lineageColors: { "samlidae": "#FB923C" } };
+const gastropoda_bathydorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "bathydorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Bathydorididae", mainColor: "#0EA5E9", lineageColors: { "bathydorididae": "#2DD4BF" } };
+const gastropoda_lomanotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "lomanotidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Lomanotidae", mainColor: "#22C55E", lineageColors: { "lomanotidae": "#A3E635" } };
+const gastropoda_glaucidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "glaucidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Glaucidae", mainColor: "#EAB308", lineageColors: { "glaucidae": "#38BDF8" } };
+const gastropoda_hancockiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "hancockiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Hancockiidae", mainColor: "#A855F7", lineageColors: { "hancockiidae": "#3B82F6" } };
+const gastropoda_unidentiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "unidentiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Unidentiidae", mainColor: "#FB923C", lineageColors: { "unidentiidae": "#EF4444" } };
+const gastropoda_piseinotecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "piseinotecidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Piseinotecidae", mainColor: "#2DD4BF", lineageColors: { "piseinotecidae": "#10B981" } };
+const gastropoda_murmaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "murmaniidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Murmaniidae", mainColor: "#A3E635", lineageColors: { "murmaniidae": "#F59E0B" } };
+const gastropoda_fionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "fionidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Fionidae", mainColor: "#38BDF8", lineageColors: { "fionidae": "#8B5CF6" } };
+const gastropoda_proctonotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "proctonotidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Proctonotidae", mainColor: "#3B82F6", lineageColors: { "proctonotidae": "#EC4899" } };
+const gastropoda_dironidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "dironidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Dironidae", mainColor: "#EF4444", lineageColors: { "dironidae": "#14B8A6" } };
+const gastropoda_babakinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "babakinidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Babakinidae", mainColor: "#10B981", lineageColors: { "babakinidae": "#F97316" } };
+const gastropoda_phylliroidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "phylliroidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Phylliroidae", mainColor: "#F59E0B", lineageColors: { "phylliroidae": "#6366F1" } };
+const gastropoda_okadaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "okadaiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Okadaiidae", mainColor: "#8B5CF6", lineageColors: { "okadaiidae": "#84CC16" } };
+const gastropoda_curnonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "curnonidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Curnonidae", mainColor: "#EC4899", lineageColors: { "curnonidae": "#06B6D4" } };
+const gastropoda_cumanotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cumanotidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Cumanotidae", mainColor: "#14B8A6", lineageColors: { "cumanotidae": "#D946EF" } };
+const gastropoda_flabellinopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "flabellinopsidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Flabellinopsidae", mainColor: "#F97316", lineageColors: { "flabellinopsidae": "#0EA5E9" } };
+const gastropoda_apataidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "apataidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Apataidae", mainColor: "#6366F1", lineageColors: { "apataidae": "#22C55E" } };
+const gastropoda_tergipedidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "tergipedidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Tergipedidae", mainColor: "#84CC16", lineageColors: { "tergipedidae": "#EAB308" } };
+const gastropoda_cadlinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cadlinellidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Cadlinellidae", mainColor: "#06B6D4", lineageColors: { "cadlinellidae": "#A855F7" } };
+const gastropoda_notaeolidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "notaeolidiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Notaeolidiidae", mainColor: "#D946EF", lineageColors: { "notaeolidiidae": "#FB923C" } };
+const gastropoda_hexabranchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "hexabranchidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Hexabranchidae", mainColor: "#0EA5E9", lineageColors: { "hexabranchidae": "#2DD4BF" } };
+const gastropoda_heroidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "heroidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Heroidae", mainColor: "#22C55E", lineageColors: { "heroidae": "#A3E635" } };
+const gastropoda_heterodorididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "heterodorididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Heterodorididae", mainColor: "#EAB308", lineageColors: { "heterodorididae": "#38BDF8" } };
+const gastropoda_calmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "calmidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Calmidae", mainColor: "#A855F7", lineageColors: { "calmidae": "#3B82F6" } };
+const gastropoda_embletoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "embletoniidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Embletoniidae", mainColor: "#FB923C", lineageColors: { "embletoniidae": "#EF4444" } };
+const gastropoda_doridoxidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "doridoxidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Doridoxidae", mainColor: "#2DD4BF", lineageColors: { "doridoxidae": "#10B981" } };
+const gastropoda_pleurolidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pleurolidiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Pleurolidiidae", mainColor: "#A3E635", lineageColors: { "pleurolidiidae": "#F59E0B" } };
+const gastropoda_abronicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "abronicidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Abronicidae", mainColor: "#38BDF8", lineageColors: { "abronicidae": "#8B5CF6" } };
+const gastropoda_doridomorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "doridomorphidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Doridomorphidae", mainColor: "#3B82F6", lineageColors: { "doridomorphidae": "#EC4899" } };
+const gastropoda_goniaeolididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "goniaeolididae", className: "Gastropoda", orderName: "Nudibranchia", name: "Goniaeolididae", mainColor: "#EF4444", lineageColors: { "goniaeolididae": "#14B8A6" } };
+const gastropoda_mandeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "mandeliidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Mandeliidae", mainColor: "#10B981", lineageColors: { "mandeliidae": "#F97316" } };
+const gastropoda_lemindidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lemindidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Lemindidae", mainColor: "#F59E0B", lineageColors: { "lemindidae": "#6366F1" } };
+const gastropoda_pinufiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pinufiidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Pinufiidae", mainColor: "#8B5CF6", lineageColors: { "pinufiidae": "#84CC16" } };
+const gastropoda_xenocratenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "xenocratenidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Xenocratenidae", mainColor: "#EC4899", lineageColors: { "xenocratenidae": "#06B6D4" } };
+const gastropoda_magallanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "magallanidae", className: "Gastropoda", orderName: "Nudibranchia", name: "Magallanidae", mainColor: "#14B8A6", lineageColors: { "magallanidae": "#D946EF" } };
+const gastropoda_neritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "neritidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Neritidae", mainColor: "#F97316", lineageColors: { "neritidae": "#0EA5E9" } };
+const gastropoda_helicinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "helicinidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Helicinidae", mainColor: "#6366F1", lineageColors: { "helicinidae": "#22C55E" } };
+const gastropoda_hydrocenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "hydrocenidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Hydrocenidae", mainColor: "#84CC16", lineageColors: { "hydrocenidae": "#EAB308" } };
+const gastropoda_neritopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "neritopsidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Neritopsidae", mainColor: "#06B6D4", lineageColors: { "neritopsidae": "#A855F7" } };
+const gastropoda_naticopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "naticopsidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Naticopsidae", mainColor: "#D946EF", lineageColors: { "naticopsidae": "#FB923C" } };
+const gastropoda_neritiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "neritiliidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Neritiliidae", mainColor: "#0EA5E9", lineageColors: { "neritiliidae": "#2DD4BF" } };
+const gastropoda_phenacolepadidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "phenacolepadidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Phenacolepadidae", mainColor: "#22C55E", lineageColors: { "phenacolepadidae": "#A3E635" } };
+const gastropoda_neritariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "neritariidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Neritariidae", mainColor: "#EAB308", lineageColors: { "neritariidae": "#38BDF8" } };
+const gastropoda_trachyspiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "trachyspiridae", className: "Gastropoda", orderName: "Cycloneritida", name: "Trachyspiridae", mainColor: "#A855F7", lineageColors: { "trachyspiridae": "#3B82F6" } };
+const gastropoda_proserpinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "proserpinidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Proserpinidae", mainColor: "#FB923C", lineageColors: { "proserpinidae": "#EF4444" } };
+const gastropoda_proserpinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "proserpinellidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Proserpinellidae", mainColor: "#2DD4BF", lineageColors: { "proserpinellidae": "#10B981" } };
+const gastropoda_delphinulopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "delphinulopsidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Delphinulopsidae", mainColor: "#A3E635", lineageColors: { "delphinulopsidae": "#F59E0B" } };
+const gastropoda_plagiothyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "plagiothyridae", className: "Gastropoda", orderName: "Cycloneritida", name: "Plagiothyridae", mainColor: "#38BDF8", lineageColors: { "plagiothyridae": "#8B5CF6" } };
+const gastropoda_otostomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "otostomidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Otostomidae", mainColor: "#3B82F6", lineageColors: { "otostomidae": "#EC4899" } };
+const gastropoda_fedaiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "fedaiellidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Fedaiellidae", mainColor: "#EF4444", lineageColors: { "fedaiellidae": "#14B8A6" } };
+const gastropoda_neridomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "neridomidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Neridomidae", mainColor: "#10B981", lineageColors: { "neridomidae": "#F97316" } };
+const gastropoda_tricolnaticopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "tricolnaticopsidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Tricolnaticopsidae", mainColor: "#F59E0B", lineageColors: { "tricolnaticopsidae": "#6366F1" } };
+const gastropoda_deianiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "deianiridae", className: "Gastropoda", orderName: "Cycloneritida", name: "Deianiridae", mainColor: "#8B5CF6", lineageColors: { "deianiridae": "#84CC16" } };
+const gastropoda_palaeonaricidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "palaeonaricidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Palaeonaricidae", mainColor: "#EC4899", lineageColors: { "palaeonaricidae": "#06B6D4" } };
+const gastropoda_scalaneritinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "scalaneritinidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Scalaneritinidae", mainColor: "#14B8A6", lineageColors: { "scalaneritinidae": "#D946EF" } };
+const gastropoda_pileolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pileolidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Pileolidae", mainColor: "#F97316", lineageColors: { "pileolidae": "#0EA5E9" } };
+const gastropoda_symmetrocapulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "symmetrocapulidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Symmetrocapulidae", mainColor: "#6366F1", lineageColors: { "symmetrocapulidae": "#22C55E" } };
+const gastropoda_globocornidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "globocornidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Globocornidae", mainColor: "#84CC16", lineageColors: { "globocornidae": "#EAB308" } };
+const gastropoda_parvulatopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "parvulatopsidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Parvulatopsidae", mainColor: "#06B6D4", lineageColors: { "parvulatopsidae": "#A855F7" } };
+const gastropoda_dawsonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "dawsonellidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Dawsonellidae", mainColor: "#D946EF", lineageColors: { "dawsonellidae": "#FB923C" } };
+const gastropoda_pseudorthonychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pseudorthonychiidae", className: "Gastropoda", orderName: "Cycloneritida", name: "Pseudorthonychiidae", mainColor: "#0EA5E9", lineageColors: { "pseudorthonychiidae": "#2DD4BF" } };
+const gastropoda_eotomariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "eotomariidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Eotomariidae", mainColor: "#22C55E", lineageColors: { "eotomariidae": "#A3E635" } };
+const gastropoda_gosseletinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "gosseletinidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Gosseletinidae", mainColor: "#EAB308", lineageColors: { "gosseletinidae": "#38BDF8" } };
+const gastropoda_pleurotomariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "pleurotomariidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Pleurotomariidae", mainColor: "#A855F7", lineageColors: { "pleurotomariidae": "#3B82F6" } };
+const gastropoda_murchisoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "murchisoniidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Murchisoniidae", mainColor: "#FB923C", lineageColors: { "murchisoniidae": "#EF4444" } };
+const gastropoda_phymatopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "phymatopleuridae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Phymatopleuridae", mainColor: "#2DD4BF", lineageColors: { "phymatopleuridae": "#10B981" } };
+const gastropoda_porcelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "porcelliidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Porcelliidae", mainColor: "#A3E635", lineageColors: { "porcelliidae": "#F59E0B" } };
+const gastropoda_pseudophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pseudophoridae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Pseudophoridae", mainColor: "#38BDF8", lineageColors: { "pseudophoridae": "#8B5CF6" } };
+const gastropoda_sinuspiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "sinuspiridae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Sinuspiridae", mainColor: "#3B82F6", lineageColors: { "sinuspiridae": "#EC4899" } };
+const gastropoda_phanerotrematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "phanerotrematidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Phanerotrematidae", mainColor: "#EF4444", lineageColors: { "phanerotrematidae": "#14B8A6" } };
+const gastropoda_ptychomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "ptychomphalidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Ptychomphalidae", mainColor: "#10B981", lineageColors: { "ptychomphalidae": "#F97316" } };
+const gastropoda_portlockiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "portlockiellidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Portlockiellidae", mainColor: "#F59E0B", lineageColors: { "portlockiellidae": "#6366F1" } };
+const gastropoda_luciellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "luciellidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Luciellidae", mainColor: "#8B5CF6", lineageColors: { "luciellidae": "#84CC16" } };
+const gastropoda_pithodeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pithodeidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Pithodeidae", mainColor: "#EC4899", lineageColors: { "pithodeidae": "#06B6D4" } };
+const gastropoda_wortheniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "wortheniellidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Wortheniellidae", mainColor: "#14B8A6", lineageColors: { "wortheniellidae": "#D946EF" } };
+const gastropoda_cirridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cirridae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Cirridae", mainColor: "#F97316", lineageColors: { "cirridae": "#0EA5E9" } };
+const gastropoda_schizogoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "schizogoniidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Schizogoniidae", mainColor: "#6366F1", lineageColors: { "schizogoniidae": "#22C55E" } };
+const gastropoda_ptychocaulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "ptychocaulidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Ptychocaulidae", mainColor: "#84CC16", lineageColors: { "ptychocaulidae": "#EAB308" } };
+const gastropoda_trochotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "trochotomidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Trochotomidae", mainColor: "#06B6D4", lineageColors: { "trochotomidae": "#A855F7" } };
+const gastropoda_zygitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "zygitidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Zygitidae", mainColor: "#D946EF", lineageColors: { "zygitidae": "#FB923C" } };
+const gastropoda_stuorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "stuorellidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Stuorellidae", mainColor: "#0EA5E9", lineageColors: { "stuorellidae": "#2DD4BF" } };
+const gastropoda_planitrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "planitrochidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Planitrochidae", mainColor: "#22C55E", lineageColors: { "planitrochidae": "#A3E635" } };
+const gastropoda_temnotropidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "temnotropidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Temnotropidae", mainColor: "#EAB308", lineageColors: { "temnotropidae": "#38BDF8" } };
+const gastropoda_plethospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "plethospiridae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Plethospiridae", mainColor: "#A855F7", lineageColors: { "plethospiridae": "#3B82F6" } };
+const gastropoda_catantostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "catantostomatidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Catantostomatidae", mainColor: "#FB923C", lineageColors: { "catantostomatidae": "#EF4444" } };
+const gastropoda_pseudoschizogoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pseudoschizogoniidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Pseudoschizogoniidae", mainColor: "#2DD4BF", lineageColors: { "pseudoschizogoniidae": "#10B981" } };
+const gastropoda_polytremariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "polytremariidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Polytremariidae", mainColor: "#A3E635", lineageColors: { "polytremariidae": "#F59E0B" } };
+const gastropoda_kittlidiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "kittlidiscidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Kittlidiscidae", mainColor: "#38BDF8", lineageColors: { "kittlidiscidae": "#8B5CF6" } };
+const gastropoda_farewelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "farewelliidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Farewelliidae", mainColor: "#3B82F6", lineageColors: { "farewelliidae": "#EC4899" } };
+const gastropoda_rhaphischismatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "rhaphischismatidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Rhaphischismatidae", mainColor: "#EF4444", lineageColors: { "rhaphischismatidae": "#14B8A6" } };
+const gastropoda_lancedelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "lancedelliidae", className: "Gastropoda", orderName: "Pleurotomariida", name: "Lancedelliidae", mainColor: "#10B981", lineageColors: { "lancedelliidae": "#F97316" } };
+const gastropoda_acteonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "acteonidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Acteonidae", mainColor: "#F59E0B", lineageColors: { "acteonidae": "#6366F1" } };
+const gastropoda_cylichnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cylichnidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Cylichnidae", mainColor: "#8B5CF6", lineageColors: { "cylichnidae": "#84CC16" } };
+const gastropoda_ringiculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "ringiculidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Ringiculidae", mainColor: "#EC4899", lineageColors: { "ringiculidae": "#06B6D4" } };
+const gastropoda_haminoeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "haminoeidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Haminoeidae", mainColor: "#14B8A6", lineageColors: { "haminoeidae": "#D946EF" } };
+const gastropoda_retusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "retusidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Retusidae", mainColor: "#F97316", lineageColors: { "retusidae": "#0EA5E9" } };
+const gastropoda_philinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "philinidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Philinidae", mainColor: "#6366F1", lineageColors: { "philinidae": "#22C55E" } };
+const gastropoda_aglajidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "aglajidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Aglajidae", mainColor: "#84CC16", lineageColors: { "aglajidae": "#EAB308" } };
+const gastropoda_scaphandridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "scaphandridae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Scaphandridae", mainColor: "#06B6D4", lineageColors: { "scaphandridae": "#A855F7" } };
+const gastropoda_tornatinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "tornatinidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Tornatinidae", mainColor: "#D946EF", lineageColors: { "tornatinidae": "#FB923C" } };
+const gastropoda_rhizoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "rhizoridae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Rhizoridae", mainColor: "#0EA5E9", lineageColors: { "rhizoridae": "#2DD4BF" } };
+const gastropoda_bullidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "bullidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Bullidae", mainColor: "#22C55E", lineageColors: { "bullidae": "#A3E635" } };
+const gastropoda_gastropteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "gastropteridae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Gastropteridae", mainColor: "#EAB308", lineageColors: { "gastropteridae": "#38BDF8" } };
+const gastropoda_aplustridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "aplustridae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Aplustridae", mainColor: "#A855F7", lineageColors: { "aplustridae": "#3B82F6" } };
+const gastropoda_alacuppidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "alacuppidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Alacuppidae", mainColor: "#FB923C", lineageColors: { "alacuppidae": "#EF4444" } };
+const gastropoda_diaphanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "diaphanidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Diaphanidae", mainColor: "#2DD4BF", lineageColors: { "diaphanidae": "#10B981" } };
+const gastropoda_laonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "laonidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Laonidae", mainColor: "#A3E635", lineageColors: { "laonidae": "#F59E0B" } };
+const gastropoda_eoscaphandridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "eoscaphandridae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Eoscaphandridae", mainColor: "#38BDF8", lineageColors: { "eoscaphandridae": "#8B5CF6" } };
+const gastropoda_cylindrobullidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cylindrobullidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Cylindrobullidae", mainColor: "#3B82F6", lineageColors: { "cylindrobullidae": "#EC4899" } };
+const gastropoda_philinoglossidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "philinoglossidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Philinoglossidae", mainColor: "#EF4444", lineageColors: { "philinoglossidae": "#14B8A6" } };
+const gastropoda_mnestiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "mnestiidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Mnestiidae", mainColor: "#10B981", lineageColors: { "mnestiidae": "#F97316" } };
+const gastropoda_antarctophilinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "antarctophilinidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Antarctophilinidae", mainColor: "#F59E0B", lineageColors: { "antarctophilinidae": "#6366F1" } };
+const gastropoda_colpodaspididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "colpodaspididae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Colpodaspididae", mainColor: "#8B5CF6", lineageColors: { "colpodaspididae": "#84CC16" } };
+const gastropoda_newnesiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "newnesiidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Newnesiidae", mainColor: "#EC4899", lineageColors: { "newnesiidae": "#06B6D4" } };
+const gastropoda_philinorbidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "philinorbidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Philinorbidae", mainColor: "#14B8A6", lineageColors: { "philinorbidae": "#D946EF" } };
+const gastropoda_gasteropteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "gasteropteridae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Gasteropteridae", mainColor: "#F97316", lineageColors: { "gasteropteridae": "#0EA5E9" } };
+const gastropoda_colinatydidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "colinatydidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Colinatydidae", mainColor: "#6366F1", lineageColors: { "colinatydidae": "#22C55E" } };
+const gastropoda_notodiaphanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "notodiaphanidae", className: "Gastropoda", orderName: "Cephalaspidea", name: "Notodiaphanidae", mainColor: "#84CC16", lineageColors: { "notodiaphanidae": "#EAB308" } };
+const gastropoda_fissurellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "fissurellidae", className: "Gastropoda", orderName: "Lepetellida", name: "Fissurellidae", mainColor: "#06B6D4", lineageColors: { "fissurellidae": "#A855F7" } };
+const gastropoda_scissurellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "scissurellidae", className: "Gastropoda", orderName: "Lepetellida", name: "Scissurellidae", mainColor: "#D946EF", lineageColors: { "scissurellidae": "#FB923C" } };
+const gastropoda_anatomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "anatomidae", className: "Gastropoda", orderName: "Lepetellida", name: "Anatomidae", mainColor: "#0EA5E9", lineageColors: { "anatomidae": "#2DD4BF" } };
+const gastropoda_haliotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "haliotidae", className: "Gastropoda", orderName: "Lepetellida", name: "Haliotidae", mainColor: "#22C55E", lineageColors: { "haliotidae": "#A3E635" } };
+const gastropoda_pseudococculinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "pseudococculinidae", className: "Gastropoda", orderName: "Lepetellida", name: "Pseudococculinidae", mainColor: "#EAB308", lineageColors: { "pseudococculinidae": "#38BDF8" } };
+const gastropoda_lepetodrilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "lepetodrilidae", className: "Gastropoda", orderName: "Lepetellida", name: "Lepetodrilidae", mainColor: "#A855F7", lineageColors: { "lepetodrilidae": "#3B82F6" } };
+const gastropoda_lepetellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "lepetellidae", className: "Gastropoda", orderName: "Lepetellida", name: "Lepetellidae", mainColor: "#FB923C", lineageColors: { "lepetellidae": "#EF4444" } };
+const gastropoda_larocheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "larocheidae", className: "Gastropoda", orderName: "Lepetellida", name: "Larocheidae", mainColor: "#2DD4BF", lineageColors: { "larocheidae": "#10B981" } };
+const gastropoda_pyropeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pyropeltidae", className: "Gastropoda", orderName: "Lepetellida", name: "Pyropeltidae", mainColor: "#A3E635", lineageColors: { "pyropeltidae": "#F59E0B" } };
+const gastropoda_caymanabyssiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "caymanabyssiidae", className: "Gastropoda", orderName: "Lepetellida", name: "Caymanabyssiidae", mainColor: "#38BDF8", lineageColors: { "caymanabyssiidae": "#8B5CF6" } };
+const gastropoda_cocculinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cocculinellidae", className: "Gastropoda", orderName: "Lepetellida", name: "Cocculinellidae", mainColor: "#3B82F6", lineageColors: { "cocculinellidae": "#EC4899" } };
+const gastropoda_sutilizonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "sutilizonidae", className: "Gastropoda", orderName: "Lepetellida", name: "Sutilizonidae", mainColor: "#EF4444", lineageColors: { "sutilizonidae": "#14B8A6" } };
+const gastropoda_osteopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "osteopeltidae", className: "Gastropoda", orderName: "Lepetellida", name: "Osteopeltidae", mainColor: "#10B981", lineageColors: { "osteopeltidae": "#F97316" } };
+const gastropoda_addisoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "addisoniidae", className: "Gastropoda", orderName: "Lepetellida", name: "Addisoniidae", mainColor: "#F59E0B", lineageColors: { "addisoniidae": "#6366F1" } };
+const gastropoda_bathyphytophilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "bathyphytophilidae", className: "Gastropoda", orderName: "Lepetellida", name: "Bathyphytophilidae", mainColor: "#8B5CF6", lineageColors: { "bathyphytophilidae": "#84CC16" } };
+const gastropoda_depressizonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "depressizonidae", className: "Gastropoda", orderName: "Lepetellida", name: "Depressizonidae", mainColor: "#EC4899", lineageColors: { "depressizonidae": "#06B6D4" } };
+const gastropoda_calliotropidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "calliotropidae", className: "Gastropoda", orderName: "Seguenziida", name: "Calliotropidae", mainColor: "#14B8A6", lineageColors: { "calliotropidae": "#D946EF" } };
+const gastropoda_seguenziidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "seguenziidae", className: "Gastropoda", orderName: "Seguenziida", name: "Seguenziidae", mainColor: "#F97316", lineageColors: { "seguenziidae": "#0EA5E9" } };
+const gastropoda_chilodontaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "chilodontaidae", className: "Gastropoda", orderName: "Seguenziida", name: "Chilodontaidae", mainColor: "#6366F1", lineageColors: { "chilodontaidae": "#22C55E" } };
+const gastropoda_seguenzioidea: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "seguenzioidea", className: "Gastropoda", orderName: "Seguenziida", name: "Seguenzioidea", mainColor: "#84CC16", lineageColors: { "seguenzioidea": "#EAB308" } };
+const gastropoda_eucyclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "eucyclidae", className: "Gastropoda", orderName: "Seguenziida", name: "Eucyclidae", mainColor: "#06B6D4", lineageColors: { "eucyclidae": "#A855F7" } };
+const gastropoda_eucycloscalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "eucycloscalidae", className: "Gastropoda", orderName: "Seguenziida", name: "Eucycloscalidae", mainColor: "#D946EF", lineageColors: { "eucycloscalidae": "#FB923C" } };
+const gastropoda_trochaclididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "trochaclididae", className: "Gastropoda", orderName: "Seguenziida", name: "Trochaclididae", mainColor: "#0EA5E9", lineageColors: { "trochaclididae": "#2DD4BF" } };
+const gastropoda_turcicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "turcicidae", className: "Gastropoda", orderName: "Seguenziida", name: "Turcicidae", mainColor: "#22C55E", lineageColors: { "turcicidae": "#A3E635" } };
+const gastropoda_cataegidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cataegidae", className: "Gastropoda", orderName: "Seguenziida", name: "Cataegidae", mainColor: "#EAB308", lineageColors: { "cataegidae": "#38BDF8" } };
+const gastropoda_choristellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "choristellidae", className: "Gastropoda", orderName: "Seguenziida", name: "Choristellidae", mainColor: "#A855F7", lineageColors: { "choristellidae": "#3B82F6" } };
+const gastropoda_pendromidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pendromidae", className: "Gastropoda", orderName: "Seguenziida", name: "Pendromidae", mainColor: "#FB923C", lineageColors: { "pendromidae": "#EF4444" } };
+const gastropoda_sabrinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "sabrinellidae", className: "Gastropoda", orderName: "Seguenziida", name: "Sabrinellidae", mainColor: "#2DD4BF", lineageColors: { "sabrinellidae": "#10B981" } };
+const gastropoda_eunemopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "eunemopsidae", className: "Gastropoda", orderName: "Seguenziida", name: "Eunemopsidae", mainColor: "#A3E635", lineageColors: { "eunemopsidae": "#F59E0B" } };
+const gastropoda_laubellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "laubellidae", className: "Gastropoda", orderName: "Seguenziida", name: "Laubellidae", mainColor: "#38BDF8", lineageColors: { "laubellidae": "#8B5CF6" } };
+const gastropoda_eudaroniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "eudaroniidae", className: "Gastropoda", orderName: "Seguenziida", name: "Eudaroniidae", mainColor: "#3B82F6", lineageColors: { "eudaroniidae": "#EC4899" } };
+const gastropoda_lanascalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "lanascalidae", className: "Gastropoda", orderName: "Seguenziida", name: "Lanascalidae", mainColor: "#EF4444", lineageColors: { "lanascalidae": "#14B8A6" } };
+const gastropoda_pseudoturcicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pseudoturcicidae", className: "Gastropoda", orderName: "Seguenziida", name: "Pseudoturcicidae", mainColor: "#10B981", lineageColors: { "pseudoturcicidae": "#F97316" } };
+const gastropoda_ellobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "ellobiidae", className: "Gastropoda", orderName: "Ellobiida", name: "Ellobiidae", mainColor: "#F59E0B", lineageColors: { "ellobiidae": "#6366F1" } };
+const gastropoda_trimusculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "trimusculidae", className: "Gastropoda", orderName: "Ellobiida", name: "Trimusculidae", mainColor: "#8B5CF6", lineageColors: { "trimusculidae": "#84CC16" } };
+const gastropoda_otinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "otinidae", className: "Gastropoda", orderName: "Ellobiida", name: "Otinidae", mainColor: "#EC4899", lineageColors: { "otinidae": "#06B6D4" } };
+const gastropoda_cavoliniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cavoliniidae", className: "Gastropoda", orderName: "Pteropoda", name: "Cavoliniidae", mainColor: "#14B8A6", lineageColors: { "cavoliniidae": "#D946EF" } };
+const gastropoda_limacinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "limacinidae", className: "Gastropoda", orderName: "Pteropoda", name: "Limacinidae", mainColor: "#F97316", lineageColors: { "limacinidae": "#0EA5E9" } };
+const gastropoda_cliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cliidae", className: "Gastropoda", orderName: "Pteropoda", name: "Cliidae", mainColor: "#6366F1", lineageColors: { "cliidae": "#22C55E" } };
+const gastropoda_creseidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "creseidae", className: "Gastropoda", orderName: "Pteropoda", name: "Creseidae", mainColor: "#84CC16", lineageColors: { "creseidae": "#EAB308" } };
+const gastropoda_pneumodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pneumodermatidae", className: "Gastropoda", orderName: "Pteropoda", name: "Pneumodermatidae", mainColor: "#06B6D4", lineageColors: { "pneumodermatidae": "#A855F7" } };
+const gastropoda_clionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "clionidae", className: "Gastropoda", orderName: "Pteropoda", name: "Clionidae", mainColor: "#D946EF", lineageColors: { "clionidae": "#FB923C" } };
+const gastropoda_heliconoididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "heliconoididae", className: "Gastropoda", orderName: "Pteropoda", name: "Heliconoididae", mainColor: "#0EA5E9", lineageColors: { "heliconoididae": "#2DD4BF" } };
+const gastropoda_cymbuliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cymbuliidae", className: "Gastropoda", orderName: "Pteropoda", name: "Cymbuliidae", mainColor: "#22C55E", lineageColors: { "cymbuliidae": "#A3E635" } };
+const gastropoda_peraclidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "peraclidae", className: "Gastropoda", orderName: "Pteropoda", name: "Peraclidae", mainColor: "#EAB308", lineageColors: { "peraclidae": "#38BDF8" } };
+const gastropoda_notobranchaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "notobranchaeidae", className: "Gastropoda", orderName: "Pteropoda", name: "Notobranchaeidae", mainColor: "#A855F7", lineageColors: { "notobranchaeidae": "#3B82F6" } };
+const gastropoda_cuvierinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "cuvierinidae", className: "Gastropoda", orderName: "Pteropoda", name: "Cuvierinidae", mainColor: "#FB923C", lineageColors: { "cuvierinidae": "#EF4444" } };
+const gastropoda_desmopteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "desmopteridae", className: "Gastropoda", orderName: "Pteropoda", name: "Desmopteridae", mainColor: "#2DD4BF", lineageColors: { "desmopteridae": "#10B981" } };
+const gastropoda_hyalocylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hyalocylidae", className: "Gastropoda", orderName: "Pteropoda", name: "Hyalocylidae", mainColor: "#A3E635", lineageColors: { "hyalocylidae": "#F59E0B" } };
+const gastropoda_cliopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cliopsidae", className: "Gastropoda", orderName: "Pteropoda", name: "Cliopsidae", mainColor: "#38BDF8", lineageColors: { "cliopsidae": "#8B5CF6" } };
+const gastropoda_praecuvierinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "praecuvierinidae", className: "Gastropoda", orderName: "Pteropoda", name: "Praecuvierinidae", mainColor: "#3B82F6", lineageColors: { "praecuvierinidae": "#EC4899" } };
+const gastropoda_sphaerocinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "sphaerocinidae", className: "Gastropoda", orderName: "Pteropoda", name: "Sphaerocinidae", mainColor: "#EF4444", lineageColors: { "sphaerocinidae": "#14B8A6" } };
+const gastropoda_hydromylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "hydromylidae", className: "Gastropoda", orderName: "Pteropoda", name: "Hydromylidae", mainColor: "#10B981", lineageColors: { "hydromylidae": "#F97316" } };
+const gastropoda_thieleidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "thieleidae", className: "Gastropoda", orderName: "Pteropoda", name: "Thieleidae", mainColor: "#F59E0B", lineageColors: { "thieleidae": "#6366F1" } };
+const gastropoda_veronicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "veronicellidae", className: "Gastropoda", orderName: "Systellommatophora", name: "Veronicellidae", mainColor: "#8B5CF6", lineageColors: { "veronicellidae": "#84CC16" } };
+const gastropoda_onchidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "onchidiidae", className: "Gastropoda", orderName: "Systellommatophora", name: "Onchidiidae", mainColor: "#EC4899", lineageColors: { "onchidiidae": "#06B6D4" } };
+const gastropoda_rathouisiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "rathouisiidae", className: "Gastropoda", orderName: "Systellommatophora", name: "Rathouisiidae", mainColor: "#14B8A6", lineageColors: { "rathouisiidae": "#D946EF" } };
+const gastropoda_siphonariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "siphonariidae", className: "Gastropoda", orderName: "Siphonariida", name: "Siphonariidae", mainColor: "#F97316", lineageColors: { "siphonariidae": "#0EA5E9" } };
+const gastropoda_acroreiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "acroreiidae", className: "Gastropoda", orderName: "Siphonariida", name: "Acroreiidae", mainColor: "#6366F1", lineageColors: { "acroreiidae": "#22C55E" } };
+const gastropoda_aplysiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "aplysiidae", className: "Gastropoda", orderName: "Aplysiida", name: "Aplysiidae", mainColor: "#84CC16", lineageColors: { "aplysiidae": "#EAB308" } };
+const gastropoda_akeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "akeridae", className: "Gastropoda", orderName: "Aplysiida", name: "Akeridae", mainColor: "#06B6D4", lineageColors: { "akeridae": "#A855F7" } };
+const gastropoda_pleurobranchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pleurobranchidae", className: "Gastropoda", orderName: "Pleurobranchida", name: "Pleurobranchidae", mainColor: "#D946EF", lineageColors: { "pleurobranchidae": "#FB923C" } };
+const gastropoda_pleurobranchaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pleurobranchaeidae", className: "Gastropoda", orderName: "Pleurobranchida", name: "Pleurobranchaeidae", mainColor: "#0EA5E9", lineageColors: { "pleurobranchaeidae": "#2DD4BF" } };
+const gastropoda_asperspinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "asperspinidae", className: "Gastropoda", orderName: "Pleurobranchida", name: "Asperspinidae", mainColor: "#22C55E", lineageColors: { "asperspinidae": "#A3E635" } };
+const gastropoda_quijotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "quijotidae", className: "Gastropoda", orderName: "Pleurobranchida", name: "Quijotidae", mainColor: "#EAB308", lineageColors: { "quijotidae": "#38BDF8" } };
+const gastropoda_orthonychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "orthonychiidae", className: "Gastropoda", orderName: "Cyrtoneritida", name: "Orthonychiidae", mainColor: "#A855F7", lineageColors: { "orthonychiidae": "#3B82F6" } };
+const gastropoda_vltaviellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "vltaviellidae", className: "Gastropoda", orderName: "Cyrtoneritida", name: "Vltaviellidae", mainColor: "#FB923C", lineageColors: { "vltaviellidae": "#EF4444" } };
+const gastropoda_runcinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "runcinidae", className: "Gastropoda", orderName: "Runcinida", name: "Runcinidae", mainColor: "#2DD4BF", lineageColors: { "runcinidae": "#10B981" } };
+const gastropoda_ilbiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "ilbiidae", className: "Gastropoda", orderName: "Runcinida", name: "Ilbiidae", mainColor: "#A3E635", lineageColors: { "ilbiidae": "#F59E0B" } };
+const gastropoda_cocculinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cocculinidae", className: "Gastropoda", orderName: "Cocculinida", name: "Cocculinidae", mainColor: "#38BDF8", lineageColors: { "cocculinidae": "#8B5CF6" } };
+const gastropoda_bathysciadiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "bathysciadiidae", className: "Gastropoda", orderName: "Cocculinida", name: "Bathysciadiidae", mainColor: "#3B82F6", lineageColors: { "bathysciadiidae": "#EC4899" } };
+const gastropoda_teuthirostriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "teuthirostriidae", className: "Gastropoda", orderName: "Cocculinida", name: "Teuthirostriidae", mainColor: "#EF4444", lineageColors: { "teuthirostriidae": "#14B8A6" } };
+const gastropoda_peltospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "peltospiridae", className: "Gastropoda", orderName: "Neomphalida", name: "Peltospiridae", mainColor: "#10B981", lineageColors: { "peltospiridae": "#F97316" } };
+const gastropoda_melanodrymiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "melanodrymiidae", className: "Gastropoda", orderName: "Neomphalida", name: "Melanodrymiidae", mainColor: "#F59E0B", lineageColors: { "melanodrymiidae": "#6366F1" } };
+const gastropoda_neomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "neomphalidae", className: "Gastropoda", orderName: "Neomphalida", name: "Neomphalidae", mainColor: "#8B5CF6", lineageColors: { "neomphalidae": "#84CC16" } };
+const gastropoda_tylodinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "tylodinidae", className: "Gastropoda", orderName: "Umbraculida", name: "Tylodinidae", mainColor: "#EC4899", lineageColors: { "tylodinidae": "#06B6D4" } };
+const gastropoda_umbraculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "umbraculidae", className: "Gastropoda", orderName: "Umbraculida", name: "Umbraculidae", mainColor: "#14B8A6", lineageColors: { "umbraculidae": "#D946EF" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -4563,7 +5472,913 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "nucularcidae": bivalvia_nucularcidae,
   "tironuculidae": bivalvia_tironuculidae,
   "colpomyidae": bivalvia_colpomyidae,
-  "tuarangiidae": bivalvia_tuarangiidae,};
+  "tuarangiidae": bivalvia_tuarangiidae,
+  "camaenidae": gastropoda_camaenidae,
+  "clausiliidae": gastropoda_clausiliidae,
+  "streptaxidae": gastropoda_streptaxidae,
+  "achatinidae": gastropoda_achatinidae,
+  "charopidae": gastropoda_charopidae,
+  "bulimulidae": gastropoda_bulimulidae,
+  "helicidae": gastropoda_helicidae,
+  "enidae": gastropoda_enidae,
+  "ariophantidae": gastropoda_ariophantidae,
+  "helicarionidae": gastropoda_helicarionidae,
+  "urocoptidae": gastropoda_urocoptidae,
+  "hygromiidae": gastropoda_hygromiidae,
+  "urocyclidae": gastropoda_urocyclidae,
+  "achatinellidae": gastropoda_achatinellidae,
+  "succineidae": gastropoda_succineidae,
+  "geomitridae": gastropoda_geomitridae,
+  "xanthonychidae": gastropoda_xanthonychidae,
+  "gastrocoptidae": gastropoda_gastrocoptidae,
+  "polygyridae": gastropoda_polygyridae,
+  "spiraxidae": gastropoda_spiraxidae,
+  "chronidae": gastropoda_chronidae,
+  "microcystidae": gastropoda_microcystidae,
+  "vertiginidae": gastropoda_vertiginidae,
+  "endodontidae": gastropoda_endodontidae,
+  "trochomorphidae": gastropoda_trochomorphidae,
+  "oxychilidae": gastropoda_oxychilidae,
+  "gastrodontidae": gastropoda_gastrodontidae,
+  "rhytididae": gastropoda_rhytididae,
+  "cerastidae": gastropoda_cerastidae,
+  "pristilomatidae": gastropoda_pristilomatidae,
+  "punctidae": gastropoda_punctidae,
+  "cerionidae": gastropoda_cerionidae,
+  "holospiridae": gastropoda_holospiridae,
+  "pupillidae": gastropoda_pupillidae,
+  "vitrinidae": gastropoda_vitrinidae,
+  "amastridae": gastropoda_amastridae,
+  "bothriembryontidae": gastropoda_bothriembryontidae,
+  "euconulidae": gastropoda_euconulidae,
+  "diapheridae": gastropoda_diapheridae,
+  "agriolimacidae": gastropoda_agriolimacidae,
+  "acavidae": gastropoda_acavidae,
+  "plectopylidae": gastropoda_plectopylidae,
+  "valloniidae": gastropoda_valloniidae,
+  "oleacinidae": gastropoda_oleacinidae,
+  "limacidae": gastropoda_limacidae,
+  "scolodontidae": gastropoda_scolodontidae,
+  "orthalicidae": gastropoda_orthalicidae,
+  "partulidae": gastropoda_partulidae,
+  "amphibulimidae": gastropoda_amphibulimidae,
+  "strophocheilidae": gastropoda_strophocheilidae,
+  "odontostomidae": gastropoda_odontostomidae,
+  "zonitidae": gastropoda_zonitidae,
+  "dyakiidae": gastropoda_dyakiidae,
+  "discidae": gastropoda_discidae,
+  "chondrinidae": gastropoda_chondrinidae,
+  "eucalodiidae": gastropoda_eucalodiidae,
+  "ferussaciidae": gastropoda_ferussaciidae,
+  "lauriidae": gastropoda_lauriidae,
+  "filholiidae": gastropoda_filholiidae,
+  "strobilopsidae": gastropoda_strobilopsidae,
+  "truncatellinidae": gastropoda_truncatellinidae,
+  "oreohelicidae": gastropoda_oreohelicidae,
+  "epiphragmophoridae": gastropoda_epiphragmophoridae,
+  "orculidae": gastropoda_orculidae,
+  "elonidae": gastropoda_elonidae,
+  "simpulopsidae": gastropoda_simpulopsidae,
+  "milacidae": gastropoda_milacidae,
+  "pleurodontidae": gastropoda_pleurodontidae,
+  "athoracophoridae": gastropoda_athoracophoridae,
+  "arionidae": gastropoda_arionidae,
+  "labyrinthidae": gastropoda_labyrinthidae,
+  "cepolidae": gastropoda_cepolidae,
+  "solaropsidae": gastropoda_solaropsidae,
+  "trissexodontidae": gastropoda_trissexodontidae,
+  "megaspiridae": gastropoda_megaspiridae,
+  "philomycidae": gastropoda_philomycidae,
+  "thysanophoridae": gastropoda_thysanophoridae,
+  "canariellidae": gastropoda_canariellidae,
+  "sagdidae": gastropoda_sagdidae,
+  "sphincterochilidae": gastropoda_sphincterochilidae,
+  "azecidae": gastropoda_azecidae,
+  "helicodiscidae": gastropoda_helicodiscidae,
+  "cochlicopidae": gastropoda_cochlicopidae,
+  "helicodontidae": gastropoda_helicodontidae,
+  "agardhiellidae": gastropoda_agardhiellidae,
+  "cystopeltidae": gastropoda_cystopeltidae,
+  "archaeozonitidae": gastropoda_archaeozonitidae,
+  "spelaeodiscidae": gastropoda_spelaeodiscidae,
+  "ariolimacidae": gastropoda_ariolimacidae,
+  "parmacellidae": gastropoda_parmacellidae,
+  "haplotrematidae": gastropoda_haplotrematidae,
+  "epirobiidae": gastropoda_epirobiidae,
+  "testacellidae": gastropoda_testacellidae,
+  "dorcasiidae": gastropoda_dorcasiidae,
+  "fauxulidae": gastropoda_fauxulidae,
+  "caryodidae": gastropoda_caryodidae,
+  "zachrysiidae": gastropoda_zachrysiidae,
+  "pyramidulidae": gastropoda_pyramidulidae,
+  "clavatoridae": gastropoda_clavatoridae,
+  "megomphicidae": gastropoda_megomphicidae,
+  "argnidae": gastropoda_argnidae,
+  "palaeostoidae": gastropoda_palaeostoidae,
+  "anadromidae": gastropoda_anadromidae,
+  "vidaliellidae": gastropoda_vidaliellidae,
+  "sculptariidae": gastropoda_sculptariidae,
+  "pagodulinidae": gastropoda_pagodulinidae,
+  "pleurodiscidae": gastropoda_pleurodiscidae,
+  "binneyidae": gastropoda_binneyidae,
+  "subulinidae": gastropoda_subulinidae,
+  "oopeltidae": gastropoda_oopeltidae,
+  "grandipatulidae": gastropoda_grandipatulidae,
+  "anostomopsidae": gastropoda_anostomopsidae,
+  "anadenidae": gastropoda_anadenidae,
+  "trichodiscinidae": gastropoda_trichodiscinidae,
+  "cylindrellinidae": gastropoda_cylindrellinidae,
+  "trigonochlamydidae": gastropoda_trigonochlamydidae,
+  "palaeoxestinidae": gastropoda_palaeoxestinidae,
+  "anthracopupidae": gastropoda_anthracopupidae,
+  "draparnaudiidae": gastropoda_draparnaudiidae,
+  "coelociontidae": gastropoda_coelociontidae,
+  "dendropupidae": gastropoda_dendropupidae,
+  "grangerellidae": gastropoda_grangerellidae,
+  "scalaxidae": gastropoda_scalaxidae,
+  "staffordiidae": gastropoda_staffordiidae,
+  "odontocycladidae": gastropoda_odontocycladidae,
+  "boettgerillidae": gastropoda_boettgerillidae,
+  "aillyidae": gastropoda_aillyidae,
+  "humboldtianidae": gastropoda_humboldtianidae,
+  "macrocyclidae": gastropoda_macrocyclidae,
+  "papillodermatidae": gastropoda_papillodermatidae,
+  "spelaeoconchidae": gastropoda_spelaeoconchidae,
+  "micractaeonidae": gastropoda_micractaeonidae,
+  "muricidae": gastropoda_muricidae,
+  "marginellidae": gastropoda_marginellidae,
+  "conidae": gastropoda_conidae,
+  "columbellidae": gastropoda_columbellidae,
+  "mangeliidae": gastropoda_mangeliidae,
+  "raphitomidae": gastropoda_raphitomidae,
+  "nassariidae": gastropoda_nassariidae,
+  "fasciolariidae": gastropoda_fasciolariidae,
+  "cancellariidae": gastropoda_cancellariidae,
+  "volutidae": gastropoda_volutidae,
+  "drilliidae": gastropoda_drilliidae,
+  "pseudomelatomidae": gastropoda_pseudomelatomidae,
+  "buccinidae": gastropoda_buccinidae,
+  "costellariidae": gastropoda_costellariidae,
+  "turridae": gastropoda_turridae,
+  "mitridae": gastropoda_mitridae,
+  "terebridae": gastropoda_terebridae,
+  "cystiscidae": gastropoda_cystiscidae,
+  "borsoniidae": gastropoda_borsoniidae,
+  "olividae": gastropoda_olividae,
+  "clathurellidae": gastropoda_clathurellidae,
+  "ancillariidae": gastropoda_ancillariidae,
+  "pisaniidae": gastropoda_pisaniidae,
+  "horaiclavidae": gastropoda_horaiclavidae,
+  "clavatulidae": gastropoda_clavatulidae,
+  "tudiclidae": gastropoda_tudiclidae,
+  "mitromorphidae": gastropoda_mitromorphidae,
+  "prosiphonidae": gastropoda_prosiphonidae,
+  "colubrariidae": gastropoda_colubrariidae,
+  "granulinidae": gastropoda_granulinidae,
+  "turbinellidae": gastropoda_turbinellidae,
+  "harpidae": gastropoda_harpidae,
+  "volutomitridae": gastropoda_volutomitridae,
+  "columbariidae": gastropoda_columbariidae,
+  "melongenidae": gastropoda_melongenidae,
+  "cochlespiridae": gastropoda_cochlespiridae,
+  "cominellidae": gastropoda_cominellidae,
+  "ptychatractidae": gastropoda_ptychatractidae,
+  "eosiphonidae": gastropoda_eosiphonidae,
+  "austrosiphonidae": gastropoda_austrosiphonidae,
+  "pseudolividae": gastropoda_pseudolividae,
+  "busyconidae": gastropoda_busyconidae,
+  "chauvetiidae": gastropoda_chauvetiidae,
+  "pholidotomidae": gastropoda_pholidotomidae,
+  "colidae": gastropoda_colidae,
+  "dolicholatiridae": gastropoda_dolicholatiridae,
+  "prodotiidae": gastropoda_prodotiidae,
+  "retimohniidae": gastropoda_retimohniidae,
+  "belomitridae": gastropoda_belomitridae,
+  "purpurinidae": gastropoda_purpurinidae,
+  "bellolividae": gastropoda_bellolividae,
+  "babyloniidae": gastropoda_babyloniidae,
+  "benthobiidae": gastropoda_benthobiidae,
+  "echinofulguridae": gastropoda_echinofulguridae,
+  "strepsiduridae": gastropoda_strepsiduridae,
+  "perissityidae": gastropoda_perissityidae,
+  "conorbidae": gastropoda_conorbidae,
+  "pyramimitridae": gastropoda_pyramimitridae,
+  "cryptoconidae": gastropoda_cryptoconidae,
+  "fusiturridae": gastropoda_fusiturridae,
+  "charitodoronidae": gastropoda_charitodoronidae,
+  "maturifusidae": gastropoda_maturifusidae,
+  "marshallenidae": gastropoda_marshallenidae,
+  "pseudotritoniidae": gastropoda_pseudotritoniidae,
+  "siphonaliidae": gastropoda_siphonaliidae,
+  "speightiidae": gastropoda_speightiidae,
+  "coralliophilidae": gastropoda_coralliophilidae,
+  "marginellonidae": gastropoda_marginellonidae,
+  "taiomidae": gastropoda_taiomidae,
+  "buccinanopsidae": gastropoda_buccinanopsidae,
+  "bouchetispiridae": gastropoda_bouchetispiridae,
+  "buccinulidae": gastropoda_buccinulidae,
+  "sarganidae": gastropoda_sarganidae,
+  "johnwyattidae": gastropoda_johnwyattidae,
+  "pyramidellidae": gastropoda_pyramidellidae,
+  "planorbidae": gastropoda_planorbidae,
+  "cerithiopsidae": gastropoda_cerithiopsidae,
+  "epitoniidae": gastropoda_epitoniidae,
+  "turritellidae": gastropoda_turritellidae,
+  "triphoridae": gastropoda_triphoridae,
+  "melanopsidae": gastropoda_melanopsidae,
+  "lymnaeidae": gastropoda_lymnaeidae,
+  "cerithiidae": gastropoda_cerithiidae,
+  "bellerophontidae": gastropoda_bellerophontidae,
+  "thiaridae": gastropoda_thiaridae,
+  "euomphalidae": gastropoda_euomphalidae,
+  "platyceratidae": gastropoda_platyceratidae,
+  "pachychilidae": gastropoda_pachychilidae,
+  "valvatidae": gastropoda_valvatidae,
+  "pleuroceridae": gastropoda_pleuroceridae,
+  "architectonicidae": gastropoda_architectonicidae,
+  "physidae": gastropoda_physidae,
+  "lottiidae": gastropoda_lottiidae,
+  "loxonematidae": gastropoda_loxonematidae,
+  "lophospiridae": gastropoda_lophospiridae,
+  "soleniscidae": gastropoda_soleniscidae,
+  "bucaniidae": gastropoda_bucaniidae,
+  "potamididae": gastropoda_potamididae,
+  "paludomidae": gastropoda_paludomidae,
+  "pseudozygopleuridae": gastropoda_pseudozygopleuridae,
+  "mathildidae": gastropoda_mathildidae,
+  "newtoniellidae": gastropoda_newtoniellidae,
+  "plakobranchidae": gastropoda_plakobranchidae,
+  "coelostylinidae": gastropoda_coelostylinidae,
+  "holopeidae": gastropoda_holopeidae,
+  "raphistomatidae": gastropoda_raphistomatidae,
+  "oriostomatidae": gastropoda_oriostomatidae,
+  "patellidae": gastropoda_patellidae,
+  "euphemitidae": gastropoda_euphemitidae,
+  "palaeozygopleuridae": gastropoda_palaeozygopleuridae,
+  "hemisinidae": gastropoda_hemisinidae,
+  "orthonematidae": gastropoda_orthonematidae,
+  "semisulcospiridae": gastropoda_semisulcospiridae,
+  "bulinidae": gastropoda_bulinidae,
+  "cimidae": gastropoda_cimidae,
+  "nacellidae": gastropoda_nacellidae,
+  "subulitidae": gastropoda_subulitidae,
+  "murchisonellidae": gastropoda_murchisonellidae,
+  "planaxidae": gastropoda_planaxidae,
+  "limapontiidae": gastropoda_limapontiidae,
+  "rissoellidae": gastropoda_rissoellidae,
+  "sinuitidae": gastropoda_sinuitidae,
+  "chilinidae": gastropoda_chilinidae,
+  "trochonematidae": gastropoda_trochonematidae,
+  "hermaeidae": gastropoda_hermaeidae,
+  "acroloxidae": gastropoda_acroloxidae,
+  "amathinidae": gastropoda_amathinidae,
+  "omalogyridae": gastropoda_omalogyridae,
+  "siliquariidae": gastropoda_siliquariidae,
+  "ophiletidae": gastropoda_ophiletidae,
+  "zygopleuridae": gastropoda_zygopleuridae,
+  "goniasmatidae": gastropoda_goniasmatidae,
+  "litiopidae": gastropoda_litiopidae,
+  "helicotomidae": gastropoda_helicotomidae,
+  "pterothecidae": gastropoda_pterothecidae,
+  "batillariidae": gastropoda_batillariidae,
+  "archinacellidae": gastropoda_archinacellidae,
+  "sinuopeidae": gastropoda_sinuopeidae,
+  "meekospiridae": gastropoda_meekospiridae,
+  "scaliolidae": gastropoda_scaliolidae,
+  "discohelicidae": gastropoda_discohelicidae,
+  "pseudomelaniidae": gastropoda_pseudomelaniidae,
+  "omphalotrochidae": gastropoda_omphalotrochidae,
+  "palaeostylidae": gastropoda_palaeostylidae,
+  "procerithiidae": gastropoda_procerithiidae,
+  "cylindrobullinidae": gastropoda_cylindrobullinidae,
+  "acteonellidae": gastropoda_acteonellidae,
+  "plesiotrochidae": gastropoda_plesiotrochidae,
+  "orbitestellidae": gastropoda_orbitestellidae,
+  "provannidae": gastropoda_provannidae,
+  "lesueurillidae": gastropoda_lesueurillidae,
+  "craspedostomatidae": gastropoda_craspedostomatidae,
+  "onychochilidae": gastropoda_onychochilidae,
+  "modulidae": gastropoda_modulidae,
+  "donaldinidae": gastropoda_donaldinidae,
+  "acmaeidae": gastropoda_acmaeidae,
+  "juliidae": gastropoda_juliidae,
+  "pectinodontidae": gastropoda_pectinodontidae,
+  "cornirostridae": gastropoda_cornirostridae,
+  "straparollinidae": gastropoda_straparollinidae,
+  "pycnomphalidae": gastropoda_pycnomphalidae,
+  "clisospiridae": gastropoda_clisospiridae,
+  "yochelcionellidae": gastropoda_yochelcionellidae,
+  "volvatellidae": gastropoda_volvatellidae,
+  "diastomatidae": gastropoda_diastomatidae,
+  "glacidorbidae": gastropoda_glacidorbidae,
+  "protorculidae": gastropoda_protorculidae,
+  "oxynoidae": gastropoda_oxynoidae,
+  "stenothecidae": gastropoda_stenothecidae,
+  "cryptaulacidae": gastropoda_cryptaulacidae,
+  "burnupiidae": gastropoda_burnupiidae,
+  "nerineidae": gastropoda_nerineidae,
+  "parhedylidae": gastropoda_parhedylidae,
+  "lepetidae": gastropoda_lepetidae,
+  "coreospiridae": gastropoda_coreospiridae,
+  "spirostylidae": gastropoda_spirostylidae,
+  "costasiellidae": gastropoda_costasiellidae,
+  "gyrodidae": gastropoda_gyrodidae,
+  "dialidae": gastropoda_dialidae,
+  "hyalogyrinidae": gastropoda_hyalogyrinidae,
+  "protoculidae": gastropoda_protoculidae,
+  "amphibolidae": gastropoda_amphibolidae,
+  "streptacididae": gastropoda_streptacididae,
+  "damilinidae": gastropoda_damilinidae,
+  "omphalocirridae": gastropoda_omphalocirridae,
+  "gordenellidae": gastropoda_gordenellidae,
+  "neolepetopsidae": gastropoda_neolepetopsidae,
+  "campanilidae": gastropoda_campanilidae,
+  "cassiopidae": gastropoda_cassiopidae,
+  "eoacmaeidae": gastropoda_eoacmaeidae,
+  "maclureadae": gastropoda_maclureadae,
+  "paraturbinidae": gastropoda_paraturbinidae,
+  "paskentanidae": gastropoda_paskentanidae,
+  "amphimelaniidae": gastropoda_amphimelaniidae,
+  "lepetopsidae": gastropoda_lepetopsidae,
+  "nerinellidae": gastropoda_nerinellidae,
+  "tubinidae": gastropoda_tubinidae,
+  "palaeotrochidae": gastropoda_palaeotrochidae,
+  "xylodisculidae": gastropoda_xylodisculidae,
+  "desbruyeresiidae": gastropoda_desbruyeresiidae,
+  "goniospiridae": gastropoda_goniospiridae,
+  "acteoninidae": gastropoda_acteoninidae,
+  "metacerithiidae": gastropoda_metacerithiidae,
+  "rhodopetalidae": gastropoda_rhodopetalidae,
+  "abyssochrysidae": gastropoda_abyssochrysidae,
+  "strobeidae": gastropoda_strobeidae,
+  "carinopeltidae": gastropoda_carinopeltidae,
+  "acochlidiidae": gastropoda_acochlidiidae,
+  "hokkaidoconchidae": gastropoda_hokkaidoconchidae,
+  "settsassiidae": gastropoda_settsassiidae,
+  "brachytrematidae": gastropoda_brachytrematidae,
+  "scoliostomatidae": gastropoda_scoliostomatidae,
+  "acmaeadae": gastropoda_acmaeadae,
+  "tubiferidae": gastropoda_tubiferidae,
+  "nerrhenidae": gastropoda_nerrhenidae,
+  "isospiridae": gastropoda_isospiridae,
+  "cheeneetnukiidae": gastropoda_cheeneetnukiidae,
+  "rubyspiridae": gastropoda_rubyspiridae,
+  "pseudunelidae": gastropoda_pseudunelidae,
+  "prostyliferidae": gastropoda_prostyliferidae,
+  "latiidae": gastropoda_latiidae,
+  "tjaernoeiidae": gastropoda_tjaernoeiidae,
+  "sphaerodomidae": gastropoda_sphaerodomidae,
+  "crassimarginatidae": gastropoda_crassimarginatidae,
+  "micromphalidae": gastropoda_micromphalidae,
+  "ceritellidae": gastropoda_ceritellidae,
+  "codonocheilidae": gastropoda_codonocheilidae,
+  "clivunellidae": gastropoda_clivunellidae,
+  "trypanaxidae": gastropoda_trypanaxidae,
+  "ptygmatididae": gastropoda_ptygmatididae,
+  "zemelanopsidae": gastropoda_zemelanopsidae,
+  "hedylopsidae": gastropoda_hedylopsidae,
+  "platyhedylidae": gastropoda_platyhedylidae,
+  "pragoscutulidae": gastropoda_pragoscutulidae,
+  "propupaspiridae": gastropoda_propupaspiridae,
+  "aitengidae": gastropoda_aitengidae,
+  "parvaplustridae": gastropoda_parvaplustridae,
+  "cerithiadae": gastropoda_cerithiadae,
+  "pseudonerineidae": gastropoda_pseudonerineidae,
+  "plicatusidae": gastropoda_plicatusidae,
+  "chuchlinidae": gastropoda_chuchlinidae,
+  "perunelidae": gastropoda_perunelidae,
+  "ischnoptygmatidae": gastropoda_ischnoptygmatidae,
+  "stomatellidae": gastropoda_stomatellidae,
+  "amphitomariidae": gastropoda_amphitomariidae,
+  "ladinulidae": gastropoda_ladinulidae,
+  "cassianebalidae": gastropoda_cassianebalidae,
+  "eunerineidae": gastropoda_eunerineidae,
+  "spanionematidae": gastropoda_spanionematidae,
+  "provalvatidae": gastropoda_provalvatidae,
+  "archaeopragidae": gastropoda_archaeopragidae,
+  "pollicinidae": gastropoda_pollicinidae,
+  "kuskokwimiidae": gastropoda_kuskokwimiidae,
+  "anozygidae": gastropoda_anozygidae,
+  "maningrididae": gastropoda_maningrididae,
+  "tantulidae": gastropoda_tantulidae,
+  "trachoecidae": gastropoda_trachoecidae,
+  "eustomatidae": gastropoda_eustomatidae,
+  "maoraxidae": gastropoda_maoraxidae,
+  "popenellidae": gastropoda_popenellidae,
+  "itieriidae": gastropoda_itieriidae,
+  "heterosubulitidae": gastropoda_heterosubulitidae,
+  "schartiidae": gastropoda_schartiidae,
+  "diozoptyxidae": gastropoda_diozoptyxidae,
+  "vernediidae": gastropoda_vernediidae,
+  "bathyhedylidae": gastropoda_bathyhedylidae,
+  "imoglobidae": gastropoda_imoglobidae,
+  "knightitidae": gastropoda_knightitidae,
+  "procarinariidae": gastropoda_procarinariidae,
+  "yuopisthonematidae": gastropoda_yuopisthonematidae,
+  "mcleaniellidae": gastropoda_mcleaniellidae,
+  "goniasmidae": gastropoda_goniasmidae,
+  "conualeviidae": gastropoda_conualeviidae,
+  "asteronotidae": gastropoda_asteronotidae,
+  "magilidae": gastropoda_magilidae,
+  "peraclididae": gastropoda_peraclididae,
+  "helminthoglyptidae": gastropoda_helminthoglyptidae,
+  "ceriidae": gastropoda_ceriidae,
+  "triophidae": gastropoda_triophidae,
+  "diastomidae": gastropoda_diastomidae,
+  "choristeidae": gastropoda_choristeidae,
+  "carychiidae": gastropoda_carychiidae,
+  "tricoliidae": gastropoda_tricoliidae,
+  "gymnodorididae": gastropoda_gymnodorididae,
+  "corillidae": gastropoda_corillidae,
+  "smeagolidae": gastropoda_smeagolidae,
+  "ferussinidae": gastropoda_ferussinidae,
+  "placostylidae": gastropoda_placostylidae,
+  "chlamydephoridae": gastropoda_chlamydephoridae,
+  "systrophiidae": gastropoda_systrophiidae,
+  "syrnolopsidae": gastropoda_syrnolopsidae,
+  "pseudosacculidae": gastropoda_pseudosacculidae,
+  "megalomastomidae": gastropoda_megalomastomidae,
+  "poteriidae": gastropoda_poteriidae,
+  "benedictiidae": gastropoda_benedictiidae,
+  "micromelaniidae": gastropoda_micromelaniidae,
+  "fossaridae": gastropoda_fossaridae,
+  "pomatiasidae": gastropoda_pomatiasidae,
+  "melampodinae": gastropoda_melampodinae,
+  "laginiopsidae": gastropoda_laginiopsidae,
+  "thyrophorellidae": gastropoda_thyrophorellidae,
+  "otoconchidae": gastropoda_otoconchidae,
+  "cloristellidae": gastropoda_cloristellidae,
+  "chondropomidae": gastropoda_chondropomidae,
+  "liareidae": gastropoda_liareidae,
+  "trochaclisidae": gastropoda_trochaclisidae,
+  "trachysmidae": gastropoda_trachysmidae,
+  "omalaxidae": gastropoda_omalaxidae,
+  "eumetulidae": gastropoda_eumetulidae,
+  "cochlicellidae": gastropoda_cochlicellidae,
+  "cortinellidae": gastropoda_cortinellidae,
+  "megalobulimidae": gastropoda_megalobulimidae,
+  "acanthinulidae": gastropoda_acanthinulidae,
+  "rhytidopilidae": gastropoda_rhytidopilidae,
+  "pommerozygiidae": gastropoda_pommerozygiidae,
+  "phallomedusidae": gastropoda_phallomedusidae,
+  "protancylidae": gastropoda_protancylidae,
+  "pragoserpulinidae": gastropoda_pragoserpulinidae,
+  "anoptychiidae": gastropoda_anoptychiidae,
+  "misurinellidae": gastropoda_misurinellidae,
+  "eucochlidae": gastropoda_eucochlidae,
+  "velainellidae": gastropoda_velainellidae,
+  "acanthonematidae": gastropoda_acanthonematidae,
+  "weeksiidae": gastropoda_weeksiidae,
+  "heteroneritidae": gastropoda_heteroneritidae,
+  "dalmateidae": gastropoda_dalmateidae,
+  "fibulotyxisidae": gastropoda_fibulotyxisidae,
+  "prisciphoridae": gastropoda_prisciphoridae,
+  "canterburyellidae": gastropoda_canterburyellidae,
+  "pianaridae": gastropoda_pianaridae,
+  "stuoraxidae": gastropoda_stuoraxidae,
+  "ampezzanildidae": gastropoda_ampezzanildidae,
+  "paraclididae": gastropoda_paraclididae,
+  "thaisidae": gastropoda_thaisidae,
+  "pleurotoceratidae": gastropoda_pleurotoceratidae,
+  "cyclonemidae": gastropoda_cyclonemidae,
+  "vermicularidae": gastropoda_vermicularidae,
+  "adeorbiidae": gastropoda_adeorbiidae,
+  "synceratidae": gastropoda_synceratidae,
+  "naricopsinidae": gastropoda_naricopsinidae,
+  "johnwyattiidae": gastropoda_johnwyattiidae,
+  "olivellidae": gastropoda_olivellidae,
+  "purpuridae": gastropoda_purpuridae,
+  "taurasinae": gastropoda_taurasinae,
+  "purpurellidae": gastropoda_purpurellidae,
+  "yochelsoniidae": gastropoda_yochelsoniidae,
+  "temnodiscidae": gastropoda_temnodiscidae,
+  "cymbulariidae": gastropoda_cymbulariidae,
+  "tripartellidae": gastropoda_tripartellidae,
+  "helicostoidae": gastropoda_helicostoidae,
+  "batillaridae": gastropoda_batillaridae,
+  "halolimnohelicidae": gastropoda_halolimnohelicidae,
+  "kanamariidae": gastropoda_kanamariidae,
+  "orectospiridae": gastropoda_orectospiridae,
+  "mathilidae": gastropoda_mathilidae,
+  "sakarahellidae": gastropoda_sakarahellidae,
+  "cassianaxidae": gastropoda_cassianaxidae,
+  "anastomopsidae": gastropoda_anastomopsidae,
+  "monadeniidae": gastropoda_monadeniidae,
+  "pavlodiscidae": gastropoda_pavlodiscidae,
+  "dolomitellidae": gastropoda_dolomitellidae,
+  "temnocinclidae": gastropoda_temnocinclidae,
+  "zardinellidae": gastropoda_zardinellidae,
+  "daminilidae": gastropoda_daminilidae,
+  "leviathaniidae": gastropoda_leviathaniidae,
+  "hypselostomatidae": gastropoda_hypselostomatidae,
+  "volutodermatidae": gastropoda_volutodermatidae,
+  "pereiraeidae": gastropoda_pereiraeidae,
+  "berendinellidae": gastropoda_berendinellidae,
+  "gyrotropidae": gastropoda_gyrotropidae,
+  "rhaphistomellidae": gastropoda_rhaphistomellidae,
+  "fossarinidae": gastropoda_fossarinidae,
+  "pleuroceriidae": gastropoda_pleuroceriidae,
+  "zardinellopsidae": gastropoda_zardinellopsidae,
+  "actaeoninidae": gastropoda_actaeoninidae,
+  "bathysciadidae": gastropoda_bathysciadidae,
+  "aciculadae": gastropoda_aciculadae,
+  "prisciophoridae": gastropoda_prisciophoridae,
+  "echinichidae": gastropoda_echinichidae,
+  "lucmeriidae": gastropoda_lucmeriidae,
+  "actaeonellidae": gastropoda_actaeonellidae,
+  "pyrifusidae": gastropoda_pyrifusidae,
+  "rhytidophilidae": gastropoda_rhytidophilidae,
+  "raphistomidae": gastropoda_raphistomidae,
+  "moreidae": gastropoda_moreidae,
+  "succineoidae": gastropoda_succineoidae,
+  "xantonychidae": gastropoda_xantonychidae,
+  "veronicelloidae": gastropoda_veronicelloidae,
+  "showajidaiidae": gastropoda_showajidaiidae,
+  "ylodisculidae": gastropoda_ylodisculidae,
+  "tornatellinidae": gastropoda_tornatellinidae,
+  "orthostomidae": gastropoda_orthostomidae,
+  "chrysodomidae": gastropoda_chrysodomidae,
+  "hygromiinae": gastropoda_hygromiinae,
+  "fruiticicoiidae": gastropoda_fruiticicoiidae,
+  "gadinidae": gastropoda_gadinidae,
+  "alectrionidae": gastropoda_alectrionidae,
+  "cochlostomidae": gastropoda_cochlostomidae,
+  "onobidae": gastropoda_onobidae,
+  "nodolargenidae": gastropoda_nodolargenidae,
+  "merelinidae": gastropoda_merelinidae,
+  "skeneadae": gastropoda_skeneadae,
+  "probittiidae": gastropoda_probittiidae,
+  "juramelanatriidae": gastropoda_juramelanatriidae,
+  "cyclodontinidae": gastropoda_cyclodontinidae,
+  "hydrobiidae": gastropoda_hydrobiidae,
+  "rissoidae": gastropoda_rissoidae,
+  "eulimidae": gastropoda_eulimidae,
+  "naticidae": gastropoda_naticidae,
+  "cypraeidae": gastropoda_cypraeidae,
+  "rissoinidae": gastropoda_rissoinidae,
+  "tateidae": gastropoda_tateidae,
+  "assimineidae": gastropoda_assimineidae,
+  "annulariidae": gastropoda_annulariidae,
+  "tornidae": gastropoda_tornidae,
+  "cochliopidae": gastropoda_cochliopidae,
+  "bithyniidae": gastropoda_bithyniidae,
+  "triviidae": gastropoda_triviidae,
+  "pomatiidae": gastropoda_pomatiidae,
+  "ovulidae": gastropoda_ovulidae,
+  "caecidae": gastropoda_caecidae,
+  "littorinidae": gastropoda_littorinidae,
+  "calyptraeidae": gastropoda_calyptraeidae,
+  "pomatiopsidae": gastropoda_pomatiopsidae,
+  "moitessieriidae": gastropoda_moitessieriidae,
+  "cymatiidae": gastropoda_cymatiidae,
+  "cassidae": gastropoda_cassidae,
+  "zebinidae": gastropoda_zebinidae,
+  "aporrhaidae": gastropoda_aporrhaidae,
+  "bythinellidae": gastropoda_bythinellidae,
+  "vermetidae": gastropoda_vermetidae,
+  "vanikoridae": gastropoda_vanikoridae,
+  "strombidae": gastropoda_strombidae,
+  "lithoglyphidae": gastropoda_lithoglyphidae,
+  "stenothyridae": gastropoda_stenothyridae,
+  "vitrinellidae": gastropoda_vitrinellidae,
+  "capulidae": gastropoda_capulidae,
+  "eratoidae": gastropoda_eratoidae,
+  "anabathridae": gastropoda_anabathridae,
+  "truncatellidae": gastropoda_truncatellidae,
+  "pediculariidae": gastropoda_pediculariidae,
+  "amnicolidae": gastropoda_amnicolidae,
+  "iravadiidae": gastropoda_iravadiidae,
+  "eatoniellidae": gastropoda_eatoniellidae,
+  "rostellariidae": gastropoda_rostellariidae,
+  "teinostomatidae": gastropoda_teinostomatidae,
+  "barleeiidae": gastropoda_barleeiidae,
+  "velutinidae": gastropoda_velutinidae,
+  "hipponicidae": gastropoda_hipponicidae,
+  "eocypraeidae": gastropoda_eocypraeidae,
+  "cingulopsidae": gastropoda_cingulopsidae,
+  "pickworthiidae": gastropoda_pickworthiidae,
+  "ficidae": gastropoda_ficidae,
+  "baicaliidae": gastropoda_baicaliidae,
+  "bursidae": gastropoda_bursidae,
+  "lironobidae": gastropoda_lironobidae,
+  "struthiolariidae": gastropoda_struthiolariidae,
+  "xenophoridae": gastropoda_xenophoridae,
+  "emmericiidae": gastropoda_emmericiidae,
+  "tonnidae": gastropoda_tonnidae,
+  "elachisinidae": gastropoda_elachisinidae,
+  "personidae": gastropoda_personidae,
+  "atlantidae": gastropoda_atlantidae,
+  "erhaiidae": gastropoda_erhaiidae,
+  "charoniidae": gastropoda_charoniidae,
+  "tomichiidae": gastropoda_tomichiidae,
+  "ranellidae": gastropoda_ranellidae,
+  "haloceratidae": gastropoda_haloceratidae,
+  "seraphsidae": gastropoda_seraphsidae,
+  "carinariidae": gastropoda_carinariidae,
+  "pelycidiidae": gastropoda_pelycidiidae,
+  "zerotulidae": gastropoda_zerotulidae,
+  "tylostomatidae": gastropoda_tylostomatidae,
+  "thersiteidae": gastropoda_thersiteidae,
+  "hippochrenidae": gastropoda_hippochrenidae,
+  "clenchiellidae": gastropoda_clenchiellidae,
+  "fontigentidae": gastropoda_fontigentidae,
+  "purpuroideidae": gastropoda_purpuroideidae,
+  "pterotracheidae": gastropoda_pterotracheidae,
+  "palaeobaicaliidae": gastropoda_palaeobaicaliidae,
+  "laubierinidae": gastropoda_laubierinidae,
+  "lyocyclidae": gastropoda_lyocyclidae,
+  "rastodentidae": gastropoda_rastodentidae,
+  "caledoniellidae": gastropoda_caledoniellidae,
+  "epigridae": gastropoda_epigridae,
+  "falsicingulidae": gastropoda_falsicingulidae,
+  "thalassocyonidae": gastropoda_thalassocyonidae,
+  "skeneopsidae": gastropoda_skeneopsidae,
+  "lamelliphoridae": gastropoda_lamelliphoridae,
+  "bohaispiridae": gastropoda_bohaispiridae,
+  "mesocochliopidae": gastropoda_mesocochliopidae,
+  "calopiidae": gastropoda_calopiidae,
+  "aclididae": gastropoda_aclididae,
+  "dilatilabridae": gastropoda_dilatilabridae,
+  "gigantocapulidae": gastropoda_gigantocapulidae,
+  "spirostyliferinidae": gastropoda_spirostyliferinidae,
+  "bellerophinidae": gastropoda_bellerophinidae,
+  "pugnellidae": gastropoda_pugnellidae,
+  "colombellinidae": gastropoda_colombellinidae,
+  "palaeorissoinidae": gastropoda_palaeorissoinidae,
+  "litthabitellidae": gastropoda_litthabitellidae,
+  "emblandidae": gastropoda_emblandidae,
+  "hydrococcidae": gastropoda_hydrococcidae,
+  "coelodiscidae": gastropoda_coelodiscidae,
+  "falsobuvignidae": gastropoda_falsobuvignidae,
+  "cyclophoridae": gastropoda_cyclophoridae,
+  "diplommatinidae": gastropoda_diplommatinidae,
+  "viviparidae": gastropoda_viviparidae,
+  "alycaeidae": gastropoda_alycaeidae,
+  "pupinidae": gastropoda_pupinidae,
+  "ampullariidae": gastropoda_ampullariidae,
+  "neocyclotidae": gastropoda_neocyclotidae,
+  "ampullinidae": gastropoda_ampullinidae,
+  "cochlostomatidae": gastropoda_cochlostomatidae,
+  "aciculidae": gastropoda_aciculidae,
+  "megalomastomatidae": gastropoda_megalomastomatidae,
+  "maizaniidae": gastropoda_maizaniidae,
+  "craspedopomatidae": gastropoda_craspedopomatidae,
+  "pliopholygidae": gastropoda_pliopholygidae,
+  "trochidae": gastropoda_trochidae,
+  "calliostomatidae": gastropoda_calliostomatidae,
+  "skeneidae": gastropoda_skeneidae,
+  "turbinidae": gastropoda_turbinidae,
+  "solariellidae": gastropoda_solariellidae,
+  "anomphalidae": gastropoda_anomphalidae,
+  "liotiidae": gastropoda_liotiidae,
+  "colloniidae": gastropoda_colloniidae,
+  "tegulidae": gastropoda_tegulidae,
+  "margaritidae": gastropoda_margaritidae,
+  "phasianellidae": gastropoda_phasianellidae,
+  "conradiidae": gastropoda_conradiidae,
+  "microdomatidae": gastropoda_microdomatidae,
+  "areneidae": gastropoda_areneidae,
+  "elasmonematidae": gastropoda_elasmonematidae,
+  "angariidae": gastropoda_angariidae,
+  "araeonematidae": gastropoda_araeonematidae,
+  "ataphridae": gastropoda_ataphridae,
+  "nododelphinulidae": gastropoda_nododelphinulidae,
+  "proconulidae": gastropoda_proconulidae,
+  "epulotrochidae": gastropoda_epulotrochidae,
+  "metriomphalidae": gastropoda_metriomphalidae,
+  "tychobraheidae": gastropoda_tychobraheidae,
+  "sclarotrardidae": gastropoda_sclarotrardidae,
+  "chromodorididae": gastropoda_chromodorididae,
+  "actinocyclidae": gastropoda_actinocyclidae,
+  "discodorididae": gastropoda_discodorididae,
+  "polyceridae": gastropoda_polyceridae,
+  "facelinidae": gastropoda_facelinidae,
+  "goniodorididae": gastropoda_goniodorididae,
+  "dorididae": gastropoda_dorididae,
+  "arminidae": gastropoda_arminidae,
+  "aeolidiidae": gastropoda_aeolidiidae,
+  "dotidae": gastropoda_dotidae,
+  "trinchesiidae": gastropoda_trinchesiidae,
+  "phyllidiidae": gastropoda_phyllidiidae,
+  "dendrodorididae": gastropoda_dendrodorididae,
+  "tritoniidae": gastropoda_tritoniidae,
+  "eubranchidae": gastropoda_eubranchidae,
+  "cadlinidae": gastropoda_cadlinidae,
+  "cuthonidae": gastropoda_cuthonidae,
+  "myrrhinidae": gastropoda_myrrhinidae,
+  "onchidorididae": gastropoda_onchidorididae,
+  "flabellinidae": gastropoda_flabellinidae,
+  "aegiridae": gastropoda_aegiridae,
+  "dendronotidae": gastropoda_dendronotidae,
+  "janolidae": gastropoda_janolidae,
+  "tethydidae": gastropoda_tethydidae,
+  "coryphellidae": gastropoda_coryphellidae,
+  "corambidae": gastropoda_corambidae,
+  "pseudovermidae": gastropoda_pseudovermidae,
+  "bornellidae": gastropoda_bornellidae,
+  "cuthonellidae": gastropoda_cuthonellidae,
+  "scyllaeidae": gastropoda_scyllaeidae,
+  "paracoryphellidae": gastropoda_paracoryphellidae,
+  "akiodorididae": gastropoda_akiodorididae,
+  "rhodopidae": gastropoda_rhodopidae,
+  "madrellidae": gastropoda_madrellidae,
+  "calycidorididae": gastropoda_calycidorididae,
+  "samlidae": gastropoda_samlidae,
+  "bathydorididae": gastropoda_bathydorididae,
+  "lomanotidae": gastropoda_lomanotidae,
+  "glaucidae": gastropoda_glaucidae,
+  "hancockiidae": gastropoda_hancockiidae,
+  "unidentiidae": gastropoda_unidentiidae,
+  "piseinotecidae": gastropoda_piseinotecidae,
+  "murmaniidae": gastropoda_murmaniidae,
+  "fionidae": gastropoda_fionidae,
+  "proctonotidae": gastropoda_proctonotidae,
+  "dironidae": gastropoda_dironidae,
+  "babakinidae": gastropoda_babakinidae,
+  "phylliroidae": gastropoda_phylliroidae,
+  "okadaiidae": gastropoda_okadaiidae,
+  "curnonidae": gastropoda_curnonidae,
+  "cumanotidae": gastropoda_cumanotidae,
+  "flabellinopsidae": gastropoda_flabellinopsidae,
+  "apataidae": gastropoda_apataidae,
+  "tergipedidae": gastropoda_tergipedidae,
+  "cadlinellidae": gastropoda_cadlinellidae,
+  "notaeolidiidae": gastropoda_notaeolidiidae,
+  "hexabranchidae": gastropoda_hexabranchidae,
+  "heroidae": gastropoda_heroidae,
+  "heterodorididae": gastropoda_heterodorididae,
+  "calmidae": gastropoda_calmidae,
+  "embletoniidae": gastropoda_embletoniidae,
+  "doridoxidae": gastropoda_doridoxidae,
+  "pleurolidiidae": gastropoda_pleurolidiidae,
+  "abronicidae": gastropoda_abronicidae,
+  "doridomorphidae": gastropoda_doridomorphidae,
+  "goniaeolididae": gastropoda_goniaeolididae,
+  "mandeliidae": gastropoda_mandeliidae,
+  "lemindidae": gastropoda_lemindidae,
+  "pinufiidae": gastropoda_pinufiidae,
+  "xenocratenidae": gastropoda_xenocratenidae,
+  "magallanidae": gastropoda_magallanidae,
+  "neritidae": gastropoda_neritidae,
+  "helicinidae": gastropoda_helicinidae,
+  "hydrocenidae": gastropoda_hydrocenidae,
+  "neritopsidae": gastropoda_neritopsidae,
+  "naticopsidae": gastropoda_naticopsidae,
+  "neritiliidae": gastropoda_neritiliidae,
+  "phenacolepadidae": gastropoda_phenacolepadidae,
+  "neritariidae": gastropoda_neritariidae,
+  "trachyspiridae": gastropoda_trachyspiridae,
+  "proserpinidae": gastropoda_proserpinidae,
+  "proserpinellidae": gastropoda_proserpinellidae,
+  "delphinulopsidae": gastropoda_delphinulopsidae,
+  "plagiothyridae": gastropoda_plagiothyridae,
+  "otostomidae": gastropoda_otostomidae,
+  "fedaiellidae": gastropoda_fedaiellidae,
+  "neridomidae": gastropoda_neridomidae,
+  "tricolnaticopsidae": gastropoda_tricolnaticopsidae,
+  "deianiridae": gastropoda_deianiridae,
+  "palaeonaricidae": gastropoda_palaeonaricidae,
+  "scalaneritinidae": gastropoda_scalaneritinidae,
+  "pileolidae": gastropoda_pileolidae,
+  "symmetrocapulidae": gastropoda_symmetrocapulidae,
+  "globocornidae": gastropoda_globocornidae,
+  "parvulatopsidae": gastropoda_parvulatopsidae,
+  "dawsonellidae": gastropoda_dawsonellidae,
+  "pseudorthonychiidae": gastropoda_pseudorthonychiidae,
+  "eotomariidae": gastropoda_eotomariidae,
+  "gosseletinidae": gastropoda_gosseletinidae,
+  "pleurotomariidae": gastropoda_pleurotomariidae,
+  "murchisoniidae": gastropoda_murchisoniidae,
+  "phymatopleuridae": gastropoda_phymatopleuridae,
+  "porcelliidae": gastropoda_porcelliidae,
+  "pseudophoridae": gastropoda_pseudophoridae,
+  "sinuspiridae": gastropoda_sinuspiridae,
+  "phanerotrematidae": gastropoda_phanerotrematidae,
+  "ptychomphalidae": gastropoda_ptychomphalidae,
+  "portlockiellidae": gastropoda_portlockiellidae,
+  "luciellidae": gastropoda_luciellidae,
+  "pithodeidae": gastropoda_pithodeidae,
+  "wortheniellidae": gastropoda_wortheniellidae,
+  "cirridae": gastropoda_cirridae,
+  "schizogoniidae": gastropoda_schizogoniidae,
+  "ptychocaulidae": gastropoda_ptychocaulidae,
+  "trochotomidae": gastropoda_trochotomidae,
+  "zygitidae": gastropoda_zygitidae,
+  "stuorellidae": gastropoda_stuorellidae,
+  "planitrochidae": gastropoda_planitrochidae,
+  "temnotropidae": gastropoda_temnotropidae,
+  "plethospiridae": gastropoda_plethospiridae,
+  "catantostomatidae": gastropoda_catantostomatidae,
+  "pseudoschizogoniidae": gastropoda_pseudoschizogoniidae,
+  "polytremariidae": gastropoda_polytremariidae,
+  "kittlidiscidae": gastropoda_kittlidiscidae,
+  "farewelliidae": gastropoda_farewelliidae,
+  "rhaphischismatidae": gastropoda_rhaphischismatidae,
+  "lancedelliidae": gastropoda_lancedelliidae,
+  "acteonidae": gastropoda_acteonidae,
+  "cylichnidae": gastropoda_cylichnidae,
+  "ringiculidae": gastropoda_ringiculidae,
+  "haminoeidae": gastropoda_haminoeidae,
+  "retusidae": gastropoda_retusidae,
+  "philinidae": gastropoda_philinidae,
+  "aglajidae": gastropoda_aglajidae,
+  "scaphandridae": gastropoda_scaphandridae,
+  "tornatinidae": gastropoda_tornatinidae,
+  "rhizoridae": gastropoda_rhizoridae,
+  "bullidae": gastropoda_bullidae,
+  "gastropteridae": gastropoda_gastropteridae,
+  "aplustridae": gastropoda_aplustridae,
+  "alacuppidae": gastropoda_alacuppidae,
+  "diaphanidae": gastropoda_diaphanidae,
+  "laonidae": gastropoda_laonidae,
+  "eoscaphandridae": gastropoda_eoscaphandridae,
+  "cylindrobullidae": gastropoda_cylindrobullidae,
+  "philinoglossidae": gastropoda_philinoglossidae,
+  "mnestiidae": gastropoda_mnestiidae,
+  "antarctophilinidae": gastropoda_antarctophilinidae,
+  "colpodaspididae": gastropoda_colpodaspididae,
+  "newnesiidae": gastropoda_newnesiidae,
+  "philinorbidae": gastropoda_philinorbidae,
+  "gasteropteridae": gastropoda_gasteropteridae,
+  "colinatydidae": gastropoda_colinatydidae,
+  "notodiaphanidae": gastropoda_notodiaphanidae,
+  "fissurellidae": gastropoda_fissurellidae,
+  "scissurellidae": gastropoda_scissurellidae,
+  "anatomidae": gastropoda_anatomidae,
+  "haliotidae": gastropoda_haliotidae,
+  "pseudococculinidae": gastropoda_pseudococculinidae,
+  "lepetodrilidae": gastropoda_lepetodrilidae,
+  "lepetellidae": gastropoda_lepetellidae,
+  "larocheidae": gastropoda_larocheidae,
+  "pyropeltidae": gastropoda_pyropeltidae,
+  "caymanabyssiidae": gastropoda_caymanabyssiidae,
+  "cocculinellidae": gastropoda_cocculinellidae,
+  "sutilizonidae": gastropoda_sutilizonidae,
+  "osteopeltidae": gastropoda_osteopeltidae,
+  "addisoniidae": gastropoda_addisoniidae,
+  "bathyphytophilidae": gastropoda_bathyphytophilidae,
+  "depressizonidae": gastropoda_depressizonidae,
+  "calliotropidae": gastropoda_calliotropidae,
+  "seguenziidae": gastropoda_seguenziidae,
+  "chilodontaidae": gastropoda_chilodontaidae,
+  "seguenzioidea": gastropoda_seguenzioidea,
+  "eucyclidae": gastropoda_eucyclidae,
+  "eucycloscalidae": gastropoda_eucycloscalidae,
+  "trochaclididae": gastropoda_trochaclididae,
+  "turcicidae": gastropoda_turcicidae,
+  "cataegidae": gastropoda_cataegidae,
+  "choristellidae": gastropoda_choristellidae,
+  "pendromidae": gastropoda_pendromidae,
+  "sabrinellidae": gastropoda_sabrinellidae,
+  "eunemopsidae": gastropoda_eunemopsidae,
+  "laubellidae": gastropoda_laubellidae,
+  "eudaroniidae": gastropoda_eudaroniidae,
+  "lanascalidae": gastropoda_lanascalidae,
+  "pseudoturcicidae": gastropoda_pseudoturcicidae,
+  "ellobiidae": gastropoda_ellobiidae,
+  "trimusculidae": gastropoda_trimusculidae,
+  "otinidae": gastropoda_otinidae,
+  "cavoliniidae": gastropoda_cavoliniidae,
+  "limacinidae": gastropoda_limacinidae,
+  "cliidae": gastropoda_cliidae,
+  "creseidae": gastropoda_creseidae,
+  "pneumodermatidae": gastropoda_pneumodermatidae,
+  "clionidae": gastropoda_clionidae,
+  "heliconoididae": gastropoda_heliconoididae,
+  "cymbuliidae": gastropoda_cymbuliidae,
+  "peraclidae": gastropoda_peraclidae,
+  "notobranchaeidae": gastropoda_notobranchaeidae,
+  "cuvierinidae": gastropoda_cuvierinidae,
+  "desmopteridae": gastropoda_desmopteridae,
+  "hyalocylidae": gastropoda_hyalocylidae,
+  "cliopsidae": gastropoda_cliopsidae,
+  "praecuvierinidae": gastropoda_praecuvierinidae,
+  "sphaerocinidae": gastropoda_sphaerocinidae,
+  "hydromylidae": gastropoda_hydromylidae,
+  "thieleidae": gastropoda_thieleidae,
+  "veronicellidae": gastropoda_veronicellidae,
+  "onchidiidae": gastropoda_onchidiidae,
+  "rathouisiidae": gastropoda_rathouisiidae,
+  "siphonariidae": gastropoda_siphonariidae,
+  "acroreiidae": gastropoda_acroreiidae,
+  "aplysiidae": gastropoda_aplysiidae,
+  "akeridae": gastropoda_akeridae,
+  "pleurobranchidae": gastropoda_pleurobranchidae,
+  "pleurobranchaeidae": gastropoda_pleurobranchaeidae,
+  "asperspinidae": gastropoda_asperspinidae,
+  "quijotidae": gastropoda_quijotidae,
+  "orthonychiidae": gastropoda_orthonychiidae,
+  "vltaviellidae": gastropoda_vltaviellidae,
+  "runcinidae": gastropoda_runcinidae,
+  "ilbiidae": gastropoda_ilbiidae,
+  "cocculinidae": gastropoda_cocculinidae,
+  "bathysciadiidae": gastropoda_bathysciadiidae,
+  "teuthirostriidae": gastropoda_teuthirostriidae,
+  "peltospiridae": gastropoda_peltospiridae,
+  "melanodrymiidae": gastropoda_melanodrymiidae,
+  "neomphalidae": gastropoda_neomphalidae,
+  "tylodinidae": gastropoda_tylodinidae,
+  "umbraculidae": gastropoda_umbraculidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
