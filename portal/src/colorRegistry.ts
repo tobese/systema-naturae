@@ -3731,6 +3731,608 @@ const gastropoda_umbraculidae: ColorTheme = { subfamilyColors: {}, breedGroupCol
 // ── Eucycliophora (1 families) ──
 const eucycliophora_symbiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "symbiidae", className: "Eucycliophora", orderName: "Symbiida", name: "Symbiidae", mainColor: "#EF4444", lineageColors: { "symbiidae": "#14B8A6" } };
 
+
+// ── Micrognathozoa (1 families) ──
+const micrognathozoa_limnognathiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "limnognathiidae", className: "Micrognathozoa", orderName: "Limnognathida", name: "Limnognathiidae", mainColor: "#EF4444", lineageColors: { "limnognathiidae": "#14B8A6" } };
+
+
+// ── Palaeonemertea (7 families) ──
+const palaeonemertea_tubulanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tubulanidae", className: "Palaeonemertea", orderName: "Unknown", name: "Tubulanidae", mainColor: "#EF4444", lineageColors: { "tubulanidae": "#14B8A6" } };
+const palaeonemertea_carininidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "carininidae", className: "Palaeonemertea", orderName: "Unknown", name: "Carininidae", mainColor: "#10B981", lineageColors: { "carininidae": "#F97316" } };
+const palaeonemertea_callineridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "callineridae", className: "Palaeonemertea", orderName: "Unknown", name: "Callineridae", mainColor: "#F59E0B", lineageColors: { "callineridae": "#6366F1" } };
+const palaeonemertea_carinomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "carinomidae", className: "Palaeonemertea", orderName: "Unknown", name: "Carinomidae", mainColor: "#8B5CF6", lineageColors: { "carinomidae": "#84CC16" } };
+const palaeonemertea_carinomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "carinomellidae", className: "Palaeonemertea", orderName: "Unknown", name: "Carinomellidae", mainColor: "#EC4899", lineageColors: { "carinomellidae": "#06B6D4" } };
+const palaeonemertea_cephalotrichidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cephalotrichidae", className: "Palaeonemertea", orderName: "Archinemertea", name: "Cephalotrichidae", mainColor: "#14B8A6", lineageColors: { "cephalotrichidae": "#D946EF" } };
+const palaeonemertea_cephalotrichellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "cephalotrichellidae", className: "Palaeonemertea", orderName: "Archinemertea", name: "Cephalotrichellidae", mainColor: "#F97316", lineageColors: { "cephalotrichellidae": "#0EA5E9" } };
+
+
+// ── Pilidiophora (11 families) ──
+const pilidiophora_lineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "lineidae", className: "Pilidiophora", orderName: "Heteronemertea", name: "Lineidae", mainColor: "#EF4444", lineageColors: { "lineidae": "#14B8A6" } };
+const pilidiophora_valenciniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "valenciniidae", className: "Pilidiophora", orderName: "Heteronemertea", name: "Valenciniidae", mainColor: "#10B981", lineageColors: { "valenciniidae": "#F97316" } };
+const pilidiophora_gorgonorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "gorgonorhynchidae", className: "Pilidiophora", orderName: "Heteronemertea", name: "Gorgonorhynchidae", mainColor: "#F59E0B", lineageColors: { "gorgonorhynchidae": "#6366F1" } };
+const pilidiophora_polybrachiorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "polybrachiorhynchidae", className: "Pilidiophora", orderName: "Heteronemertea", name: "Polybrachiorhynchidae", mainColor: "#8B5CF6", lineageColors: { "polybrachiorhynchidae": "#84CC16" } };
+const pilidiophora_mixolineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "mixolineidae", className: "Pilidiophora", orderName: "Heteronemertea", name: "Mixolineidae", mainColor: "#EC4899", lineageColors: { "mixolineidae": "#06B6D4" } };
+const pilidiophora_panorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "panorhynchidae", className: "Pilidiophora", orderName: "Heteronemertea", name: "Panorhynchidae", mainColor: "#14B8A6", lineageColors: { "panorhynchidae": "#D946EF" } };
+const pilidiophora_hubrechtellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "hubrechtellidae", className: "Pilidiophora", orderName: "Unknown", name: "Hubrechtellidae", mainColor: "#F97316", lineageColors: { "hubrechtellidae": "#0EA5E9" } };
+const pilidiophora_hubrechtiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "hubrechtiidae", className: "Pilidiophora", orderName: "Unknown", name: "Hubrechtiidae", mainColor: "#6366F1", lineageColors: { "hubrechtiidae": "#22C55E" } };
+const pilidiophora_poliopsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "poliopsiidae", className: "Pilidiophora", orderName: "Unknown", name: "Poliopsiidae", mainColor: "#84CC16", lineageColors: { "poliopsiidae": "#EAB308" } };
+const pilidiophora_pussylineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pussylineidae", className: "Pilidiophora", orderName: "Unknown", name: "Pussylineidae", mainColor: "#06B6D4", lineageColors: { "pussylineidae": "#A855F7" } };
+const pilidiophora_paralineidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "paralineidae", className: "Pilidiophora", orderName: "Unknown", name: "Paralineidae", mainColor: "#D946EF", lineageColors: { "paralineidae": "#FB923C" } };
+
+
+// ── Craniata (6 families) ──
+const craniata_craniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "craniidae", className: "Craniata", orderName: "Craniida", name: "Craniidae", mainColor: "#EF4444", lineageColors: { "craniidae": "#14B8A6" } };
+const craniata_craniopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "craniopsidae", className: "Craniata", orderName: "Unknown", name: "Craniopsidae", mainColor: "#10B981", lineageColors: { "craniopsidae": "#F97316" } };
+const craniata_trimerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "trimerellidae", className: "Craniata", orderName: "Unknown", name: "Trimerellidae", mainColor: "#F59E0B", lineageColors: { "trimerellidae": "#6366F1" } };
+const craniata_adensuidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "adensuidae", className: "Craniata", orderName: "Unknown", name: "Adensuidae", mainColor: "#8B5CF6", lineageColors: { "adensuidae": "#84CC16" } };
+const craniata_zhuzhaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "zhuzhaiidae", className: "Craniata", orderName: "Unknown", name: "Zhuzhaiidae", mainColor: "#EC4899", lineageColors: { "zhuzhaiidae": "#06B6D4" } };
+const craniata_ussuniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "ussuniidae", className: "Craniata", orderName: "Unknown", name: "Ussuniidae", mainColor: "#14B8A6", lineageColors: { "ussuniidae": "#D946EF" } };
+
+
+// ── Phascolosomatidea (2 families) ──
+const phascolosomatidea_phascolosomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "phascolosomatidae", className: "Phascolosomatidea", orderName: "Phascolosomatiformes", name: "Phascolosomatidae", mainColor: "#EF4444", lineageColors: { "phascolosomatidae": "#14B8A6" } };
+const phascolosomatidea_aspidosiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "aspidosiphonidae", className: "Phascolosomatidea", orderName: "Aspidosiphoniformes", name: "Aspidosiphonidae", mainColor: "#10B981", lineageColors: { "aspidosiphonidae": "#F97316" } };
+
+
+// ── Sipunculidea (4 families) ──
+const sipunculidea_golfingiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "golfingiidae", className: "Sipunculidea", orderName: "Golfingiiformes", name: "Golfingiidae", mainColor: "#EF4444", lineageColors: { "golfingiidae": "#14B8A6" } };
+const sipunculidea_phascoliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "phascoliidae", className: "Sipunculidea", orderName: "Golfingiiformes", name: "Phascoliidae", mainColor: "#10B981", lineageColors: { "phascoliidae": "#F97316" } };
+const sipunculidea_themistidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "themistidae", className: "Sipunculidea", orderName: "Golfingiiformes", name: "Themistidae", mainColor: "#F59E0B", lineageColors: { "themistidae": "#6366F1" } };
+const sipunculidea_sipunculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "sipunculidae", className: "Sipunculidea", orderName: "Sipunculiformes", name: "Sipunculidae", mainColor: "#8B5CF6", lineageColors: { "sipunculidae": "#84CC16" } };
+
+
+// ── Sagittoidea (12 families) ──
+const sagittoidea_sagittidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "sagittidae", className: "Sagittoidea", orderName: "Aphragmophora", name: "Sagittidae", mainColor: "#EF4444", lineageColors: { "sagittidae": "#14B8A6" } };
+const sagittoidea_krohnittidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "krohnittidae", className: "Sagittoidea", orderName: "Aphragmophora", name: "Krohnittidae", mainColor: "#10B981", lineageColors: { "krohnittidae": "#F97316" } };
+const sagittoidea_pterokrohniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pterokrohniidae", className: "Sagittoidea", orderName: "Aphragmophora", name: "Pterokrohniidae", mainColor: "#F59E0B", lineageColors: { "pterokrohniidae": "#6366F1" } };
+const sagittoidea_bathybelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "bathybelidae", className: "Sagittoidea", orderName: "Aphragmophora", name: "Bathybelidae", mainColor: "#8B5CF6", lineageColors: { "bathybelidae": "#84CC16" } };
+const sagittoidea_pterosagittidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pterosagittidae", className: "Sagittoidea", orderName: "Aphragmophora", name: "Pterosagittidae", mainColor: "#EC4899", lineageColors: { "pterosagittidae": "#06B6D4" } };
+const sagittoidea_spadellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "spadellidae", className: "Sagittoidea", orderName: "Phragmophora", name: "Spadellidae", mainColor: "#14B8A6", lineageColors: { "spadellidae": "#D946EF" } };
+const sagittoidea_heterokrohniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "heterokrohniidae", className: "Sagittoidea", orderName: "Phragmophora", name: "Heterokrohniidae", mainColor: "#F97316", lineageColors: { "heterokrohniidae": "#0EA5E9" } };
+const sagittoidea_eukrohniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "eukrohniidae", className: "Sagittoidea", orderName: "Phragmophora", name: "Eukrohniidae", mainColor: "#6366F1", lineageColors: { "eukrohniidae": "#22C55E" } };
+const sagittoidea_krohnittellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "krohnittellidae", className: "Sagittoidea", orderName: "Phragmophora", name: "Krohnittellidae", mainColor: "#84CC16", lineageColors: { "krohnittellidae": "#EAB308" } };
+const sagittoidea_bathybelosidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "bathybelosidae", className: "Sagittoidea", orderName: "Unknown", name: "Bathybelosidae", mainColor: "#06B6D4", lineageColors: { "bathybelosidae": "#A855F7" } };
+const sagittoidea_bathyspadellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "bathyspadellidae", className: "Sagittoidea", orderName: "Unknown", name: "Bathyspadellidae", mainColor: "#D946EF", lineageColors: { "bathyspadellidae": "#FB923C" } };
+const sagittoidea_biphragmosagittidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "biphragmosagittidae", className: "Sagittoidea", orderName: "Unknown", name: "Biphragmosagittidae", mainColor: "#0EA5E9", lineageColors: { "biphragmosagittidae": "#2DD4BF" } };
+
+
+// ── Lingulata (34 families) ──
+const lingulata_obolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "obolidae", className: "Lingulata", orderName: "Lingulida", name: "Obolidae", mainColor: "#EF4444", lineageColors: { "obolidae": "#14B8A6" } };
+const lingulata_lingulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "lingulidae", className: "Lingulata", orderName: "Lingulida", name: "Lingulidae", mainColor: "#10B981", lineageColors: { "lingulidae": "#F97316" } };
+const lingulata_discinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "discinidae", className: "Lingulata", orderName: "Lingulida", name: "Discinidae", mainColor: "#F59E0B", lineageColors: { "discinidae": "#6366F1" } };
+const lingulata_acrothelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "acrothelidae", className: "Lingulata", orderName: "Lingulida", name: "Acrothelidae", mainColor: "#8B5CF6", lineageColors: { "acrothelidae": "#84CC16" } };
+const lingulata_zhanatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "zhanatellidae", className: "Lingulata", orderName: "Lingulida", name: "Zhanatellidae", mainColor: "#EC4899", lineageColors: { "zhanatellidae": "#06B6D4" } };
+const lingulata_disciniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "disciniidae", className: "Lingulata", orderName: "Lingulida", name: "Disciniidae", mainColor: "#14B8A6", lineageColors: { "disciniidae": "#D946EF" } };
+const lingulata_botsfordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "botsfordiidae", className: "Lingulata", orderName: "Lingulida", name: "Botsfordiidae", mainColor: "#F97316", lineageColors: { "botsfordiidae": "#0EA5E9" } };
+const lingulata_paterulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "paterulidae", className: "Lingulata", orderName: "Lingulida", name: "Paterulidae", mainColor: "#6366F1", lineageColors: { "paterulidae": "#22C55E" } };
+const lingulata_elkaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "elkaniidae", className: "Lingulata", orderName: "Lingulida", name: "Elkaniidae", mainColor: "#84CC16", lineageColors: { "elkaniidae": "#EAB308" } };
+const lingulata_trematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "trematidae", className: "Lingulata", orderName: "Lingulida", name: "Trematidae", mainColor: "#06B6D4", lineageColors: { "trematidae": "#A855F7" } };
+const lingulata_eoobolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "eoobolidae", className: "Lingulata", orderName: "Lingulida", name: "Eoobolidae", mainColor: "#D946EF", lineageColors: { "eoobolidae": "#FB923C" } };
+const lingulata_pseudolingulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pseudolingulidae", className: "Lingulata", orderName: "Lingulida", name: "Pseudolingulidae", mainColor: "#0EA5E9", lineageColors: { "pseudolingulidae": "#2DD4BF" } };
+const lingulata_lingulellotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "lingulellotretidae", className: "Lingulata", orderName: "Lingulida", name: "Lingulellotretidae", mainColor: "#22C55E", lineageColors: { "lingulellotretidae": "#A3E635" } };
+const lingulata_lingulasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lingulasmatidae", className: "Lingulata", orderName: "Lingulida", name: "Lingulasmatidae", mainColor: "#EAB308", lineageColors: { "lingulasmatidae": "#38BDF8" } };
+const lingulata_aulonotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "aulonotretidae", className: "Lingulata", orderName: "Lingulida", name: "Aulonotretidae", mainColor: "#A855F7", lineageColors: { "aulonotretidae": "#3B82F6" } };
+const lingulata_acrotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "acrotretidae", className: "Lingulata", orderName: "Unknown", name: "Acrotretidae", mainColor: "#FB923C", lineageColors: { "acrotretidae": "#EF4444" } };
+const lingulata_ephippelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ephippelasmatidae", className: "Lingulata", orderName: "Unknown", name: "Ephippelasmatidae", mainColor: "#2DD4BF", lineageColors: { "ephippelasmatidae": "#10B981" } };
+const lingulata_eoconulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "eoconulidae", className: "Lingulata", orderName: "Unknown", name: "Eoconulidae", mainColor: "#A3E635", lineageColors: { "eoconulidae": "#F59E0B" } };
+const lingulata_scaphelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "scaphelasmatidae", className: "Lingulata", orderName: "Unknown", name: "Scaphelasmatidae", mainColor: "#38BDF8", lineageColors: { "scaphelasmatidae": "#8B5CF6" } };
+const lingulata_biernatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "biernatidae", className: "Lingulata", orderName: "Unknown", name: "Biernatidae", mainColor: "#3B82F6", lineageColors: { "biernatidae": "#EC4899" } };
+const lingulata_ceratretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "ceratretidae", className: "Lingulata", orderName: "Unknown", name: "Ceratretidae", mainColor: "#EF4444", lineageColors: { "ceratretidae": "#14B8A6" } };
+const lingulata_torynelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "torynelasmatidae", className: "Lingulata", orderName: "Unknown", name: "Torynelasmatidae", mainColor: "#10B981", lineageColors: { "torynelasmatidae": "#F97316" } };
+const lingulata_linguliporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "linguliporidae", className: "Lingulata", orderName: "Unknown", name: "Linguliporidae", mainColor: "#F59E0B", lineageColors: { "linguliporidae": "#6366F1" } };
+const lingulata_curticiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "curticiidae", className: "Lingulata", orderName: "Unknown", name: "Curticiidae", mainColor: "#8B5CF6", lineageColors: { "curticiidae": "#84CC16" } };
+const lingulata_andobolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "andobolidae", className: "Lingulata", orderName: "Unknown", name: "Andobolidae", mainColor: "#EC4899", lineageColors: { "andobolidae": "#06B6D4" } };
+const lingulata_holmerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "holmerellidae", className: "Lingulata", orderName: "Unknown", name: "Holmerellidae", mainColor: "#14B8A6", lineageColors: { "holmerellidae": "#D946EF" } };
+const lingulata_dianabellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "dianabellidae", className: "Lingulata", orderName: "Unknown", name: "Dianabellidae", mainColor: "#F97316", lineageColors: { "dianabellidae": "#0EA5E9" } };
+const lingulata_dysoristidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "dysoristidae", className: "Lingulata", orderName: "Unknown", name: "Dysoristidae", mainColor: "#6366F1", lineageColors: { "dysoristidae": "#22C55E" } };
+const lingulata_curticidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "curticidae", className: "Lingulata", orderName: "Unknown", name: "Curticidae", mainColor: "#84CC16", lineageColors: { "curticidae": "#EAB308" } };
+const lingulata_anabolotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "anabolotretidae", className: "Lingulata", orderName: "Unknown", name: "Anabolotretidae", mainColor: "#06B6D4", lineageColors: { "anabolotretidae": "#A855F7" } };
+const lingulata_ptychopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ptychopeltidae", className: "Lingulata", orderName: "Unknown", name: "Ptychopeltidae", mainColor: "#D946EF", lineageColors: { "ptychopeltidae": "#FB923C" } };
+const lingulata_kyrshabaktellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "kyrshabaktellidae", className: "Lingulata", orderName: "Unknown", name: "Kyrshabaktellidae", mainColor: "#0EA5E9", lineageColors: { "kyrshabaktellidae": "#2DD4BF" } };
+const lingulata_acrotetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "acrotetidae", className: "Lingulata", orderName: "Unknown", name: "Acrotetidae", mainColor: "#22C55E", lineageColors: { "acrotetidae": "#A3E635" } };
+const lingulata_siphonotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "siphonotretidae", className: "Lingulata", orderName: "Siphonotretida", name: "Siphonotretidae", mainColor: "#EAB308", lineageColors: { "siphonotretidae": "#38BDF8" } };
+
+
+// ── Pterobranchia (39 families) ──
+const pterobranchia_dichograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "dichograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Dichograptidae", mainColor: "#EF4444", lineageColors: { "dichograptidae": "#14B8A6" } };
+const pterobranchia_diplograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "diplograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Diplograptidae", mainColor: "#10B981", lineageColors: { "diplograptidae": "#F97316" } };
+const pterobranchia_anisograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "anisograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Anisograptidae", mainColor: "#F59E0B", lineageColors: { "anisograptidae": "#6366F1" } };
+const pterobranchia_sigmagraptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "sigmagraptidae", className: "Pterobranchia", orderName: "Unknown", name: "Sigmagraptidae", mainColor: "#8B5CF6", lineageColors: { "sigmagraptidae": "#84CC16" } };
+const pterobranchia_monograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "monograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Monograptidae", mainColor: "#EC4899", lineageColors: { "monograptidae": "#06B6D4" } };
+const pterobranchia_glossograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "glossograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Glossograptidae", mainColor: "#14B8A6", lineageColors: { "glossograptidae": "#D946EF" } };
+const pterobranchia_dicranograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "dicranograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Dicranograptidae", mainColor: "#F97316", lineageColors: { "dicranograptidae": "#0EA5E9" } };
+const pterobranchia_cephalodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cephalodiscidae", className: "Pterobranchia", orderName: "Unknown", name: "Cephalodiscidae", mainColor: "#6366F1", lineageColors: { "cephalodiscidae": "#22C55E" } };
+const pterobranchia_dendrograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "dendrograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Dendrograptidae", mainColor: "#84CC16", lineageColors: { "dendrograptidae": "#EAB308" } };
+const pterobranchia_isograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "isograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Isograptidae", mainColor: "#06B6D4", lineageColors: { "isograptidae": "#A855F7" } };
+const pterobranchia_climacograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "climacograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Climacograptidae", mainColor: "#D946EF", lineageColors: { "climacograptidae": "#FB923C" } };
+const pterobranchia_wimanicrustidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "wimanicrustidae", className: "Pterobranchia", orderName: "Unknown", name: "Wimanicrustidae", mainColor: "#0EA5E9", lineageColors: { "wimanicrustidae": "#2DD4BF" } };
+const pterobranchia_lasiograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "lasiograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Lasiograptidae", mainColor: "#22C55E", lineageColors: { "lasiograptidae": "#A3E635" } };
+const pterobranchia_sinograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "sinograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Sinograptidae", mainColor: "#EAB308", lineageColors: { "sinograptidae": "#38BDF8" } };
+const pterobranchia_cyclograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cyclograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Cyclograptidae", mainColor: "#A855F7", lineageColors: { "cyclograptidae": "#3B82F6" } };
+const pterobranchia_didymograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "didymograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Didymograptidae", mainColor: "#FB923C", lineageColors: { "didymograptidae": "#EF4444" } };
+const pterobranchia_retiolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "retiolitidae", className: "Pterobranchia", orderName: "Unknown", name: "Retiolitidae", mainColor: "#2DD4BF", lineageColors: { "retiolitidae": "#10B981" } };
+const pterobranchia_phyllograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "phyllograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Phyllograptidae", mainColor: "#A3E635", lineageColors: { "phyllograptidae": "#F59E0B" } };
+const pterobranchia_abrograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "abrograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Abrograptidae", mainColor: "#38BDF8", lineageColors: { "abrograptidae": "#8B5CF6" } };
+const pterobranchia_hormograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "hormograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Hormograptidae", mainColor: "#3B82F6", lineageColors: { "hormograptidae": "#EC4899" } };
+const pterobranchia_dimorphograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "dimorphograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Dimorphograptidae", mainColor: "#EF4444", lineageColors: { "dimorphograptidae": "#14B8A6" } };
+const pterobranchia_acanthograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "acanthograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Acanthograptidae", mainColor: "#10B981", lineageColors: { "acanthograptidae": "#F97316" } };
+const pterobranchia_pseudotrigonograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pseudotrigonograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Pseudotrigonograptidae", mainColor: "#F59E0B", lineageColors: { "pseudotrigonograptidae": "#6366F1" } };
+const pterobranchia_mastigograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "mastigograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Mastigograptidae", mainColor: "#8B5CF6", lineageColors: { "mastigograptidae": "#84CC16" } };
+const pterobranchia_stolonodendridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "stolonodendridae", className: "Pterobranchia", orderName: "Unknown", name: "Stolonodendridae", mainColor: "#EC4899", lineageColors: { "stolonodendridae": "#06B6D4" } };
+const pterobranchia_atubariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "atubariidae", className: "Pterobranchia", orderName: "Unknown", name: "Atubariidae", mainColor: "#14B8A6", lineageColors: { "atubariidae": "#D946EF" } };
+const pterobranchia_eocephalodiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "eocephalodiscidae", className: "Pterobranchia", orderName: "Unknown", name: "Eocephalodiscidae", mainColor: "#F97316", lineageColors: { "eocephalodiscidae": "#0EA5E9" } };
+const pterobranchia_normalograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "normalograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Normalograptidae", mainColor: "#6366F1", lineageColors: { "normalograptidae": "#22C55E" } };
+const pterobranchia_cyrtograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cyrtograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Cyrtograptidae", mainColor: "#84CC16", lineageColors: { "cyrtograptidae": "#EAB308" } };
+const pterobranchia_pterograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pterograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Pterograptidae", mainColor: "#06B6D4", lineageColors: { "pterograptidae": "#A855F7" } };
+const pterobranchia_kinnegraptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "kinnegraptidae", className: "Pterobranchia", orderName: "Unknown", name: "Kinnegraptidae", mainColor: "#D946EF", lineageColors: { "kinnegraptidae": "#FB923C" } };
+const pterobranchia_dithecodendridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "dithecodendridae", className: "Pterobranchia", orderName: "Unknown", name: "Dithecodendridae", mainColor: "#0EA5E9", lineageColors: { "dithecodendridae": "#2DD4BF" } };
+const pterobranchia_neodiplograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "neodiplograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Neodiplograptidae", mainColor: "#22C55E", lineageColors: { "neodiplograptidae": "#A3E635" } };
+const pterobranchia_tetragraptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "tetragraptidae", className: "Pterobranchia", orderName: "Unknown", name: "Tetragraptidae", mainColor: "#EAB308", lineageColors: { "tetragraptidae": "#38BDF8" } };
+const pterobranchia_bryograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "bryograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Bryograptidae", mainColor: "#A855F7", lineageColors: { "bryograptidae": "#3B82F6" } };
+const pterobranchia_chaunograptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "chaunograptidae", className: "Pterobranchia", orderName: "Unknown", name: "Chaunograptidae", mainColor: "#FB923C", lineageColors: { "chaunograptidae": "#EF4444" } };
+const pterobranchia_rhabdopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "rhabdopleuridae", className: "Pterobranchia", orderName: "Rhabdopleurida", name: "Rhabdopleuridae", mainColor: "#2DD4BF", lineageColors: { "rhabdopleuridae": "#10B981" } };
+const pterobranchia_rhabdopleuritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "rhabdopleuritidae", className: "Pterobranchia", orderName: "Rhabdopleurida", name: "Rhabdopleuritidae", mainColor: "#A3E635", lineageColors: { "rhabdopleuritidae": "#F59E0B" } };
+const pterobranchia_rhabdopleuroididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "rhabdopleuroididae", className: "Pterobranchia", orderName: "Rhabdopleurida", name: "Rhabdopleuroididae", mainColor: "#38BDF8", lineageColors: { "rhabdopleuroididae": "#8B5CF6" } };
+
+
+// ── Rhynchonellata (407 families) ──
+const rhynchonellata_spiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "spiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spiriferidae", mainColor: "#EF4444", lineageColors: { "spiriferidae": "#14B8A6" } };
+const rhynchonellata_athyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "athyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Athyrididae", mainColor: "#10B981", lineageColors: { "athyrididae": "#F97316" } };
+const rhynchonellata_spiriferinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "spiriferinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spiriferinidae", mainColor: "#F59E0B", lineageColors: { "spiriferinidae": "#6366F1" } };
+const rhynchonellata_dalmanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "dalmanellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dalmanellidae", mainColor: "#8B5CF6", lineageColors: { "dalmanellidae": "#84CC16" } };
+const rhynchonellata_martiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "martiniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Martiniidae", mainColor: "#EC4899", lineageColors: { "martiniidae": "#06B6D4" } };
+const rhynchonellata_plectorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "plectorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Plectorthidae", mainColor: "#14B8A6", lineageColors: { "plectorthidae": "#D946EF" } };
+const rhynchonellata_orthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "orthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Orthidae", mainColor: "#F97316", lineageColors: { "orthidae": "#0EA5E9" } };
+const rhynchonellata_schizophoriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "schizophoriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Schizophoriidae", mainColor: "#6366F1", lineageColors: { "schizophoriidae": "#22C55E" } };
+const rhynchonellata_ambocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "ambocoeliidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ambocoeliidae", mainColor: "#84CC16", lineageColors: { "ambocoeliidae": "#EAB308" } };
+const rhynchonellata_spiriferellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "spiriferellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spiriferellidae", mainColor: "#06B6D4", lineageColors: { "spiriferellidae": "#A855F7" } };
+const rhynchonellata_enteletidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "enteletidae", className: "Rhynchonellata", orderName: "Unknown", name: "Enteletidae", mainColor: "#D946EF", lineageColors: { "enteletidae": "#FB923C" } };
+const rhynchonellata_atrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "atrypidae", className: "Rhynchonellata", orderName: "Unknown", name: "Atrypidae", mainColor: "#0EA5E9", lineageColors: { "atrypidae": "#2DD4BF" } };
+const rhynchonellata_spirigerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "spirigerellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spirigerellidae", mainColor: "#22C55E", lineageColors: { "spirigerellidae": "#A3E635" } };
+const rhynchonellata_elythidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "elythidae", className: "Rhynchonellata", orderName: "Unknown", name: "Elythidae", mainColor: "#EAB308", lineageColors: { "elythidae": "#38BDF8" } };
+const rhynchonellata_ingelarellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "ingelarellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ingelarellidae", mainColor: "#A855F7", lineageColors: { "ingelarellidae": "#3B82F6" } };
+const rhynchonellata_trigonotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "trigonotretidae", className: "Rhynchonellata", orderName: "Unknown", name: "Trigonotretidae", mainColor: "#FB923C", lineageColors: { "trigonotretidae": "#EF4444" } };
+const rhynchonellata_dolerorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "dolerorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dolerorthidae", mainColor: "#2DD4BF", lineageColors: { "dolerorthidae": "#10B981" } };
+const rhynchonellata_triplesiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "triplesiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Triplesiidae", mainColor: "#A3E635", lineageColors: { "triplesiidae": "#F59E0B" } };
+const rhynchonellata_retziellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "retziellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Retziellidae", mainColor: "#38BDF8", lineageColors: { "retziellidae": "#8B5CF6" } };
+const rhynchonellata_diplospirellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "diplospirellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Diplospirellidae", mainColor: "#3B82F6", lineageColors: { "diplospirellidae": "#EC4899" } };
+const rhynchonellata_clitambonitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "clitambonitidae", className: "Rhynchonellata", orderName: "Unknown", name: "Clitambonitidae", mainColor: "#EF4444", lineageColors: { "clitambonitidae": "#14B8A6" } };
+const rhynchonellata_rhipidomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "rhipidomellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhipidomellidae", mainColor: "#10B981", lineageColors: { "rhipidomellidae": "#F97316" } };
+const rhynchonellata_plaesiomyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "plaesiomyidae", className: "Rhynchonellata", orderName: "Unknown", name: "Plaesiomyidae", mainColor: "#F59E0B", lineageColors: { "plaesiomyidae": "#6366F1" } };
+const rhynchonellata_syringothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "syringothyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Syringothyrididae", mainColor: "#8B5CF6", lineageColors: { "syringothyrididae": "#84CC16" } };
+const rhynchonellata_koninckinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "koninckinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Koninckinidae", mainColor: "#EC4899", lineageColors: { "koninckinidae": "#06B6D4" } };
+const rhynchonellata_licharewiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "licharewiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Licharewiidae", mainColor: "#14B8A6", lineageColors: { "licharewiidae": "#D946EF" } };
+const rhynchonellata_brachythyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "brachythyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Brachythyrididae", mainColor: "#F97316", lineageColors: { "brachythyrididae": "#0EA5E9" } };
+const rhynchonellata_draboviidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "draboviidae", className: "Rhynchonellata", orderName: "Unknown", name: "Draboviidae", mainColor: "#6366F1", lineageColors: { "draboviidae": "#22C55E" } };
+const rhynchonellata_hesperorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "hesperorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hesperorthidae", mainColor: "#84CC16", lineageColors: { "hesperorthidae": "#EAB308" } };
+const rhynchonellata_pentameridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "pentameridae", className: "Rhynchonellata", orderName: "Unknown", name: "Pentameridae", mainColor: "#06B6D4", lineageColors: { "pentameridae": "#A855F7" } };
+const rhynchonellata_neoretziidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "neoretziidae", className: "Rhynchonellata", orderName: "Unknown", name: "Neoretziidae", mainColor: "#D946EF", lineageColors: { "neoretziidae": "#FB923C" } };
+const rhynchonellata_lissatrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "lissatrypidae", className: "Rhynchonellata", orderName: "Unknown", name: "Lissatrypidae", mainColor: "#0EA5E9", lineageColors: { "lissatrypidae": "#2DD4BF" } };
+const rhynchonellata_crenispiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "crenispiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Crenispiriferidae", mainColor: "#22C55E", lineageColors: { "crenispiriferidae": "#A3E635" } };
+const rhynchonellata_atrypinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "atrypinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Atrypinidae", mainColor: "#EAB308", lineageColors: { "atrypinidae": "#38BDF8" } };
+const rhynchonellata_eoorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "eoorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Eoorthidae", mainColor: "#A855F7", lineageColors: { "eoorthidae": "#3B82F6" } };
+const rhynchonellata_meristellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "meristellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Meristellidae", mainColor: "#FB923C", lineageColors: { "meristellidae": "#EF4444" } };
+const rhynchonellata_parastrophinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "parastrophinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Parastrophinidae", mainColor: "#2DD4BF", lineageColors: { "parastrophinidae": "#10B981" } };
+const rhynchonellata_spiriferellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "spiriferellinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spiriferellinidae", mainColor: "#A3E635", lineageColors: { "spiriferellinidae": "#F59E0B" } };
+const rhynchonellata_camerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "camerellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Camerellidae", mainColor: "#38BDF8", lineageColors: { "camerellidae": "#8B5CF6" } };
+const rhynchonellata_delthyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "delthyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Delthyrididae", mainColor: "#3B82F6", lineageColors: { "delthyrididae": "#EC4899" } };
+const rhynchonellata_platystrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "platystrophiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Platystrophiidae", mainColor: "#EF4444", lineageColors: { "platystrophiidae": "#14B8A6" } };
+const rhynchonellata_dicoelosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dicoelosiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dicoelosiidae", mainColor: "#10B981", lineageColors: { "dicoelosiidae": "#F97316" } };
+const rhynchonellata_punctospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "punctospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Punctospiriferidae", mainColor: "#F59E0B", lineageColors: { "punctospiriferidae": "#6366F1" } };
+const rhynchonellata_heterorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "heterorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Heterorthidae", mainColor: "#8B5CF6", lineageColors: { "heterorthidae": "#84CC16" } };
+const rhynchonellata_virgianidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "virgianidae", className: "Rhynchonellata", orderName: "Unknown", name: "Virgianidae", mainColor: "#EC4899", lineageColors: { "virgianidae": "#06B6D4" } };
+const rhynchonellata_protorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "protorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Protorthidae", mainColor: "#14B8A6", lineageColors: { "protorthidae": "#D946EF" } };
+const rhynchonellata_pennospiriferinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pennospiriferinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Pennospiriferinidae", mainColor: "#F97316", lineageColors: { "pennospiriferinidae": "#0EA5E9" } };
+const rhynchonellata_productorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "productorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Productorthidae", mainColor: "#6366F1", lineageColors: { "productorthidae": "#22C55E" } };
+const rhynchonellata_mentzeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "mentzeliidae", className: "Rhynchonellata", orderName: "Unknown", name: "Mentzeliidae", mainColor: "#84CC16", lineageColors: { "mentzeliidae": "#EAB308" } };
+const rhynchonellata_lepismatinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "lepismatinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Lepismatinidae", mainColor: "#06B6D4", lineageColors: { "lepismatinidae": "#A855F7" } };
+const rhynchonellata_skenidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "skenidiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Skenidiidae", mainColor: "#D946EF", lineageColors: { "skenidiidae": "#FB923C" } };
+const rhynchonellata_nisusiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "nisusiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Nisusiidae", mainColor: "#0EA5E9", lineageColors: { "nisusiidae": "#2DD4BF" } };
+const rhynchonellata_tetralobulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "tetralobulidae", className: "Rhynchonellata", orderName: "Unknown", name: "Tetralobulidae", mainColor: "#22C55E", lineageColors: { "tetralobulidae": "#A3E635" } };
+const rhynchonellata_giraldiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "giraldiellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Giraldiellidae", mainColor: "#EAB308", lineageColors: { "giraldiellidae": "#38BDF8" } };
+const rhynchonellata_sinucostidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sinucostidae", className: "Rhynchonellata", orderName: "Unknown", name: "Sinucostidae", mainColor: "#A855F7", lineageColors: { "sinucostidae": "#3B82F6" } };
+const rhynchonellata_spondylospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "spondylospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Spondylospiridae", mainColor: "#FB923C", lineageColors: { "spondylospiridae": "#EF4444" } };
+const rhynchonellata_bittnerulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "bittnerulidae", className: "Rhynchonellata", orderName: "Unknown", name: "Bittnerulidae", mainColor: "#2DD4BF", lineageColors: { "bittnerulidae": "#10B981" } };
+const rhynchonellata_cyrtiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "cyrtiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyrtiidae", mainColor: "#A3E635", lineageColors: { "cyrtiidae": "#F59E0B" } };
+const rhynchonellata_laballidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "laballidae", className: "Rhynchonellata", orderName: "Unknown", name: "Laballidae", mainColor: "#38BDF8", lineageColors: { "laballidae": "#8B5CF6" } };
+const rhynchonellata_stricklandiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "stricklandiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Stricklandiidae", mainColor: "#3B82F6", lineageColors: { "stricklandiidae": "#EC4899" } };
+const rhynchonellata_archaeorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "archaeorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Archaeorthidae", mainColor: "#EF4444", lineageColors: { "archaeorthidae": "#14B8A6" } };
+const rhynchonellata_choristitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "choristitidae", className: "Rhynchonellata", orderName: "Unknown", name: "Choristitidae", mainColor: "#10B981", lineageColors: { "choristitidae": "#F97316" } };
+const rhynchonellata_syntrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "syntrophiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Syntrophiidae", mainColor: "#F59E0B", lineageColors: { "syntrophiidae": "#6366F1" } };
+const rhynchonellata_hesperonomiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "hesperonomiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hesperonomiidae", mainColor: "#8B5CF6", lineageColors: { "hesperonomiidae": "#84CC16" } };
+const rhynchonellata_balatonospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "balatonospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Balatonospiridae", mainColor: "#EC4899", lineageColors: { "balatonospiridae": "#06B6D4" } };
+const rhynchonellata_retziidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "retziidae", className: "Rhynchonellata", orderName: "Unknown", name: "Retziidae", mainColor: "#14B8A6", lineageColors: { "retziidae": "#D946EF" } };
+const rhynchonellata_strophopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "strophopleuridae", className: "Rhynchonellata", orderName: "Unknown", name: "Strophopleuridae", mainColor: "#F97316", lineageColors: { "strophopleuridae": "#0EA5E9" } };
+const rhynchonellata_porambonitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "porambonitidae", className: "Rhynchonellata", orderName: "Unknown", name: "Porambonitidae", mainColor: "#6366F1", lineageColors: { "porambonitidae": "#22C55E" } };
+const rhynchonellata_cyrtinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cyrtinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyrtinidae", mainColor: "#84CC16", lineageColors: { "cyrtinidae": "#EAB308" } };
+const rhynchonellata_paraspiriferinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "paraspiriferinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Paraspiriferinidae", mainColor: "#06B6D4", lineageColors: { "paraspiriferinidae": "#A855F7" } };
+const rhynchonellata_protozygidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "protozygidae", className: "Rhynchonellata", orderName: "Unknown", name: "Protozygidae", mainColor: "#D946EF", lineageColors: { "protozygidae": "#FB923C" } };
+const rhynchonellata_rastelligeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "rastelligeridae", className: "Rhynchonellata", orderName: "Unknown", name: "Rastelligeridae", mainColor: "#0EA5E9", lineageColors: { "rastelligeridae": "#2DD4BF" } };
+const rhynchonellata_linoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "linoporellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Linoporellidae", mainColor: "#22C55E", lineageColors: { "linoporellidae": "#A3E635" } };
+const rhynchonellata_nucleospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "nucleospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Nucleospiridae", mainColor: "#EAB308", lineageColors: { "nucleospiridae": "#38BDF8" } };
+const rhynchonellata_gypidulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "gypidulidae", className: "Rhynchonellata", orderName: "Unknown", name: "Gypidulidae", mainColor: "#A855F7", lineageColors: { "gypidulidae": "#3B82F6" } };
+const rhynchonellata_finkelnburgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "finkelnburgiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Finkelnburgiidae", mainColor: "#FB923C", lineageColors: { "finkelnburgiidae": "#EF4444" } };
+const rhynchonellata_harknessellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "harknessellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Harknessellidae", mainColor: "#2DD4BF", lineageColors: { "harknessellidae": "#10B981" } };
+const rhynchonellata_paurorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "paurorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Paurorthidae", mainColor: "#A3E635", lineageColors: { "paurorthidae": "#F59E0B" } };
+const rhynchonellata_saukrodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "saukrodictyidae", className: "Rhynchonellata", orderName: "Unknown", name: "Saukrodictyidae", mainColor: "#38BDF8", lineageColors: { "saukrodictyidae": "#8B5CF6" } };
+const rhynchonellata_wangyuiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "wangyuiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Wangyuiidae", mainColor: "#3B82F6", lineageColors: { "wangyuiidae": "#EC4899" } };
+const rhynchonellata_orthidiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "orthidiellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Orthidiellidae", mainColor: "#EF4444", lineageColors: { "orthidiellidae": "#14B8A6" } };
+const rhynchonellata_paeckelmanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "paeckelmanellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Paeckelmanellidae", mainColor: "#10B981", lineageColors: { "paeckelmanellidae": "#F97316" } };
+const rhynchonellata_cyclospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cyclospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyclospiridae", mainColor: "#F59E0B", lineageColors: { "cyclospiridae": "#6366F1" } };
+const rhynchonellata_angusticardiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "angusticardiniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Angusticardiniidae", mainColor: "#8B5CF6", lineageColors: { "angusticardiniidae": "#84CC16" } };
+const rhynchonellata_mucrospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "mucrospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Mucrospiriferidae", mainColor: "#EC4899", lineageColors: { "mucrospiriferidae": "#06B6D4" } };
+const rhynchonellata_anoplothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "anoplothecidae", className: "Rhynchonellata", orderName: "Unknown", name: "Anoplothecidae", mainColor: "#14B8A6", lineageColors: { "anoplothecidae": "#D946EF" } };
+const rhynchonellata_chrustenoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "chrustenoporidae", className: "Rhynchonellata", orderName: "Unknown", name: "Chrustenoporidae", mainColor: "#F97316", lineageColors: { "chrustenoporidae": "#0EA5E9" } };
+const rhynchonellata_subrianidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "subrianidae", className: "Rhynchonellata", orderName: "Unknown", name: "Subrianidae", mainColor: "#6366F1", lineageColors: { "subrianidae": "#22C55E" } };
+const rhynchonellata_clarkellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "clarkellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Clarkellidae", mainColor: "#84CC16", lineageColors: { "clarkellidae": "#EAB308" } };
+const rhynchonellata_rhynchospirinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "rhynchospirinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhynchospirinidae", mainColor: "#06B6D4", lineageColors: { "rhynchospirinidae": "#A855F7" } };
+const rhynchonellata_carinatinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "carinatinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Carinatinidae", mainColor: "#D946EF", lineageColors: { "carinatinidae": "#FB923C" } };
+const rhynchonellata_ranorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "ranorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ranorthidae", mainColor: "#0EA5E9", lineageColors: { "ranorthidae": "#2DD4BF" } };
+const rhynchonellata_euorthisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "euorthisinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Euorthisinidae", mainColor: "#22C55E", lineageColors: { "euorthisinidae": "#A3E635" } };
+const rhynchonellata_hysterolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "hysterolitidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hysterolitidae", mainColor: "#EAB308", lineageColors: { "hysterolitidae": "#38BDF8" } };
+const rhynchonellata_crassumbidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "crassumbidae", className: "Rhynchonellata", orderName: "Unknown", name: "Crassumbidae", mainColor: "#A855F7", lineageColors: { "crassumbidae": "#3B82F6" } };
+const rhynchonellata_sarganostegidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "sarganostegidae", className: "Rhynchonellata", orderName: "Unknown", name: "Sarganostegidae", mainColor: "#FB923C", lineageColors: { "sarganostegidae": "#EF4444" } };
+const rhynchonellata_glyptorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "glyptorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Glyptorthidae", mainColor: "#2DD4BF", lineageColors: { "glyptorthidae": "#10B981" } };
+const rhynchonellata_nanorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "nanorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Nanorthidae", mainColor: "#A3E635", lineageColors: { "nanorthidae": "#F59E0B" } };
+const rhynchonellata_huenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "huenellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Huenellidae", mainColor: "#38BDF8", lineageColors: { "huenellidae": "#8B5CF6" } };
+const rhynchonellata_clorindidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "clorindidae", className: "Rhynchonellata", orderName: "Unknown", name: "Clorindidae", mainColor: "#3B82F6", lineageColors: { "clorindidae": "#EC4899" } };
+const rhynchonellata_phragmorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "phragmorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Phragmorthidae", mainColor: "#EF4444", lineageColors: { "phragmorthidae": "#14B8A6" } };
+const rhynchonellata_platyorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "platyorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Platyorthidae", mainColor: "#10B981", lineageColors: { "platyorthidae": "#F97316" } };
+const rhynchonellata_spinocyrtiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "spinocyrtiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spinocyrtiidae", mainColor: "#F59E0B", lineageColors: { "spinocyrtiidae": "#6366F1" } };
+const rhynchonellata_cyrtospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cyrtospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyrtospiriferidae", mainColor: "#8B5CF6", lineageColors: { "cyrtospiriferidae": "#84CC16" } };
+const rhynchonellata_parallelelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "parallelelasmatidae", className: "Rhynchonellata", orderName: "Unknown", name: "Parallelelasmatidae", mainColor: "#EC4899", lineageColors: { "parallelelasmatidae": "#06B6D4" } };
+const rhynchonellata_lycophoriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lycophoriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Lycophoriidae", mainColor: "#14B8A6", lineageColors: { "lycophoriidae": "#D946EF" } };
+const rhynchonellata_bohemiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "bohemiellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Bohemiellidae", mainColor: "#F97316", lineageColors: { "bohemiellidae": "#0EA5E9" } };
+const rhynchonellata_komiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "komiellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Komiellidae", mainColor: "#6366F1", lineageColors: { "komiellidae": "#22C55E" } };
+const rhynchonellata_davidsoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "davidsoniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Davidsoniidae", mainColor: "#84CC16", lineageColors: { "davidsoniidae": "#EAB308" } };
+const rhynchonellata_suessiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "suessiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Suessiidae", mainColor: "#06B6D4", lineageColors: { "suessiidae": "#A855F7" } };
+const rhynchonellata_anazygidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "anazygidae", className: "Rhynchonellata", orderName: "Unknown", name: "Anazygidae", mainColor: "#D946EF", lineageColors: { "anazygidae": "#FB923C" } };
+const rhynchonellata_cyrtinopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cyrtinopsidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyrtinopsidae", mainColor: "#0EA5E9", lineageColors: { "cyrtinopsidae": "#2DD4BF" } };
+const rhynchonellata_septatrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "septatrypidae", className: "Rhynchonellata", orderName: "Unknown", name: "Septatrypidae", mainColor: "#22C55E", lineageColors: { "septatrypidae": "#A3E635" } };
+const rhynchonellata_meristidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "meristidae", className: "Rhynchonellata", orderName: "Unknown", name: "Meristidae", mainColor: "#EAB308", lineageColors: { "meristidae": "#38BDF8" } };
+const rhynchonellata_cathaysiorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cathaysiorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cathaysiorthidae", mainColor: "#A855F7", lineageColors: { "cathaysiorthidae": "#3B82F6" } };
+const rhynchonellata_leioriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "leioriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Leioriidae", mainColor: "#FB923C", lineageColors: { "leioriidae": "#EF4444" } };
+const rhynchonellata_tyronellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "tyronellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Tyronellidae", mainColor: "#2DD4BF", lineageColors: { "tyronellidae": "#10B981" } };
+const rhynchonellata_portranellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "portranellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Portranellidae", mainColor: "#A3E635", lineageColors: { "portranellidae": "#F59E0B" } };
+const rhynchonellata_aenigmastrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "aenigmastrophiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Aenigmastrophiidae", mainColor: "#38BDF8", lineageColors: { "aenigmastrophiidae": "#8B5CF6" } };
+const rhynchonellata_chilcorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "chilcorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Chilcorthidae", mainColor: "#3B82F6", lineageColors: { "chilcorthidae": "#EC4899" } };
+const rhynchonellata_neospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "neospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Neospiriferidae", mainColor: "#EF4444", lineageColors: { "neospiriferidae": "#14B8A6" } };
+const rhynchonellata_verneuiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "verneuiliidae", className: "Rhynchonellata", orderName: "Unknown", name: "Verneuiliidae", mainColor: "#10B981", lineageColors: { "verneuiliidae": "#F97316" } };
+const rhynchonellata_reticulariinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "reticulariinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Reticulariinidae", mainColor: "#F59E0B", lineageColors: { "reticulariinidae": "#6366F1" } };
+const rhynchonellata_anomaloriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "anomaloriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Anomaloriidae", mainColor: "#8B5CF6", lineageColors: { "anomaloriidae": "#84CC16" } };
+const rhynchonellata_acrospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "acrospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Acrospiriferidae", mainColor: "#EC4899", lineageColors: { "acrospiriferidae": "#06B6D4" } };
+const rhynchonellata_dimegelasmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "dimegelasmidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dimegelasmidae", mainColor: "#14B8A6", lineageColors: { "dimegelasmidae": "#D946EF" } };
+const rhynchonellata_parallelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "parallelasmatidae", className: "Rhynchonellata", orderName: "Unknown", name: "Parallelasmatidae", mainColor: "#F97316", lineageColors: { "parallelasmatidae": "#0EA5E9" } };
+const rhynchonellata_rhactorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "rhactorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhactorthidae", mainColor: "#6366F1", lineageColors: { "rhactorthidae": "#22C55E" } };
+const rhynchonellata_filispiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "filispiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Filispiriferidae", mainColor: "#84CC16", lineageColors: { "filispiriferidae": "#EAB308" } };
+const rhynchonellata_cremnorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cremnorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cremnorthidae", mainColor: "#06B6D4", lineageColors: { "cremnorthidae": "#A855F7" } };
+const rhynchonellata_karpinskiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "karpinskiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Karpinskiidae", mainColor: "#D946EF", lineageColors: { "karpinskiidae": "#FB923C" } };
+const rhynchonellata_syringothyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "syringothyridae", className: "Rhynchonellata", orderName: "Unknown", name: "Syringothyridae", mainColor: "#0EA5E9", lineageColors: { "syringothyridae": "#2DD4BF" } };
+const rhynchonellata_hedeinopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "hedeinopsidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hedeinopsidae", mainColor: "#22C55E", lineageColors: { "hedeinopsidae": "#A3E635" } };
+const rhynchonellata_costispiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "costispiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Costispiriferidae", mainColor: "#EAB308", lineageColors: { "costispiriferidae": "#38BDF8" } };
+const rhynchonellata_zygospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "zygospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Zygospiridae", mainColor: "#A855F7", lineageColors: { "zygospiridae": "#3B82F6" } };
+const rhynchonellata_eudoxinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "eudoxinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Eudoxinidae", mainColor: "#FB923C", lineageColors: { "eudoxinidae": "#EF4444" } };
+const rhynchonellata_rectotrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "rectotrophiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rectotrophiidae", mainColor: "#2DD4BF", lineageColors: { "rectotrophiidae": "#10B981" } };
+const rhynchonellata_rhynchospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "rhynchospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhynchospiriferidae", mainColor: "#A3E635", lineageColors: { "rhynchospiriferidae": "#F59E0B" } };
+const rhynchonellata_adolfiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "adolfiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Adolfiidae", mainColor: "#38BDF8", lineageColors: { "adolfiidae": "#8B5CF6" } };
+const rhynchonellata_punctatrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "punctatrypidae", className: "Rhynchonellata", orderName: "Unknown", name: "Punctatrypidae", mainColor: "#3B82F6", lineageColors: { "punctatrypidae": "#EC4899" } };
+const rhynchonellata_xenomartiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "xenomartiniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Xenomartiniidae", mainColor: "#EF4444", lineageColors: { "xenomartiniidae": "#14B8A6" } };
+const rhynchonellata_oxopleciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "oxopleciidae", className: "Rhynchonellata", orderName: "Unknown", name: "Oxopleciidae", mainColor: "#10B981", lineageColors: { "oxopleciidae": "#F97316" } };
+const rhynchonellata_enallothecideidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "enallothecideidae", className: "Rhynchonellata", orderName: "Unknown", name: "Enallothecideidae", mainColor: "#F59E0B", lineageColors: { "enallothecideidae": "#6366F1" } };
+const rhynchonellata_proschizophoriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "proschizophoriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Proschizophoriidae", mainColor: "#8B5CF6", lineageColors: { "proschizophoriidae": "#84CC16" } };
+const rhynchonellata_dayiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "dayiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dayiidae", mainColor: "#EC4899", lineageColors: { "dayiidae": "#06B6D4" } };
+const rhynchonellata_protozeugidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "protozeugidae", className: "Rhynchonellata", orderName: "Unknown", name: "Protozeugidae", mainColor: "#14B8A6", lineageColors: { "protozeugidae": "#D946EF" } };
+const rhynchonellata_micromartiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "micromartiniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Micromartiniidae", mainColor: "#F97316", lineageColors: { "micromartiniidae": "#0EA5E9" } };
+const rhynchonellata_mystrophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "mystrophoridae", className: "Rhynchonellata", orderName: "Unknown", name: "Mystrophoridae", mainColor: "#6366F1", lineageColors: { "mystrophoridae": "#22C55E" } };
+const rhynchonellata_perissothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "perissothyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Perissothyrididae", mainColor: "#84CC16", lineageColors: { "perissothyrididae": "#EAB308" } };
+const rhynchonellata_ulbospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "ulbospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ulbospiriferidae", mainColor: "#06B6D4", lineageColors: { "ulbospiriferidae": "#A855F7" } };
+const rhynchonellata_gerkispiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "gerkispiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Gerkispiridae", mainColor: "#D946EF", lineageColors: { "gerkispiridae": "#FB923C" } };
+const rhynchonellata_fimbrispiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "fimbrispiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Fimbrispiriferidae", mainColor: "#0EA5E9", lineageColors: { "fimbrispiriferidae": "#2DD4BF" } };
+const rhynchonellata_echinospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "echinospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Echinospiriferidae", mainColor: "#22C55E", lineageColors: { "echinospiriferidae": "#A3E635" } };
+const rhynchonellata_eostrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "eostrophiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Eostrophiidae", mainColor: "#EAB308", lineageColors: { "eostrophiidae": "#38BDF8" } };
+const rhynchonellata_hemithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "hemithyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Hemithyrididae", mainColor: "#A855F7", lineageColors: { "hemithyrididae": "#3B82F6" } };
+const rhynchonellata_alphaneospiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "alphaneospiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Alphaneospiriferidae", mainColor: "#FB923C", lineageColors: { "alphaneospiriferidae": "#EF4444" } };
+const rhynchonellata_metathyrisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "metathyrisinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Metathyrisinidae", mainColor: "#2DD4BF", lineageColors: { "metathyrisinidae": "#10B981" } };
+const rhynchonellata_xestotrematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "xestotrematidae", className: "Rhynchonellata", orderName: "Unknown", name: "Xestotrematidae", mainColor: "#A3E635", lineageColors: { "xestotrematidae": "#F59E0B" } };
+const rhynchonellata_poramborthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "poramborthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Poramborthidae", mainColor: "#38BDF8", lineageColors: { "poramborthidae": "#8B5CF6" } };
+const rhynchonellata_amphidellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "amphidellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Amphidellidae", mainColor: "#3B82F6", lineageColors: { "amphidellidae": "#EC4899" } };
+const rhynchonellata_toxorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "toxorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Toxorthidae", mainColor: "#EF4444", lineageColors: { "toxorthidae": "#14B8A6" } };
+const rhynchonellata_syntrophopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "syntrophopsidae", className: "Rhynchonellata", orderName: "Unknown", name: "Syntrophopsidae", mainColor: "#10B981", lineageColors: { "syntrophopsidae": "#F97316" } };
+const rhynchonellata_glassiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "glassiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Glassiidae", mainColor: "#F59E0B", lineageColors: { "glassiidae": "#6366F1" } };
+const rhynchonellata_palaferellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "palaferellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Palaferellidae", mainColor: "#8B5CF6", lineageColors: { "palaferellidae": "#84CC16" } };
+const rhynchonellata_camerophorinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "camerophorinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Camerophorinidae", mainColor: "#EC4899", lineageColors: { "camerophorinidae": "#06B6D4" } };
+const rhynchonellata_dogdoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "dogdoidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dogdoidae", mainColor: "#14B8A6", lineageColors: { "dogdoidae": "#D946EF" } };
+const rhynchonellata_symmatrypidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "symmatrypidae", className: "Rhynchonellata", orderName: "Unknown", name: "Symmatrypidae", mainColor: "#F97316", lineageColors: { "symmatrypidae": "#0EA5E9" } };
+const rhynchonellata_uncitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "uncitidae", className: "Rhynchonellata", orderName: "Unknown", name: "Uncitidae", mainColor: "#6366F1", lineageColors: { "uncitidae": "#22C55E" } };
+const rhynchonellata_katuniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "katuniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Katuniidae", mainColor: "#84CC16", lineageColors: { "katuniidae": "#EAB308" } };
+const rhynchonellata_alimbellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "alimbellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Alimbellidae", mainColor: "#06B6D4", lineageColors: { "alimbellidae": "#A855F7" } };
+const rhynchonellata_kayserellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "kayserellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Kayserellidae", mainColor: "#D946EF", lineageColors: { "kayserellidae": "#FB923C" } };
+const rhynchonellata_plectorhynchellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "plectorhynchellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Plectorhynchellidae", mainColor: "#0EA5E9", lineageColors: { "plectorhynchellidae": "#2DD4BF" } };
+const rhynchonellata_niorhynicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "niorhynicidae", className: "Rhynchonellata", orderName: "Unknown", name: "Niorhynicidae", mainColor: "#22C55E", lineageColors: { "niorhynicidae": "#A3E635" } };
+const rhynchonellata_araratellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "araratellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Araratellidae", mainColor: "#EAB308", lineageColors: { "araratellidae": "#38BDF8" } };
+const rhynchonellata_glossinotoechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "glossinotoechiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Glossinotoechiidae", mainColor: "#A855F7", lineageColors: { "glossinotoechiidae": "#3B82F6" } };
+const rhynchonellata_cryptoporiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "cryptoporiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cryptoporiidae", mainColor: "#FB923C", lineageColors: { "cryptoporiidae": "#EF4444" } };
+const rhynchonellata_ladogiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ladogiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ladogiidae", mainColor: "#2DD4BF", lineageColors: { "ladogiidae": "#10B981" } };
+const rhynchonellata_notanopliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "notanopliidae", className: "Rhynchonellata", orderName: "Unknown", name: "Notanopliidae", mainColor: "#A3E635", lineageColors: { "notanopliidae": "#F59E0B" } };
+const rhynchonellata_prionorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "prionorhynchiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Prionorhynchiidae", mainColor: "#38BDF8", lineageColors: { "prionorhynchiidae": "#8B5CF6" } };
+const rhynchonellata_zaigunrostridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "zaigunrostridae", className: "Rhynchonellata", orderName: "Unknown", name: "Zaigunrostridae", mainColor: "#3B82F6", lineageColors: { "zaigunrostridae": "#EC4899" } };
+const rhynchonellata_bashkiriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "bashkiriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Bashkiriidae", mainColor: "#EF4444", lineageColors: { "bashkiriidae": "#14B8A6" } };
+const rhynchonellata_phaneroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "phaneroporidae", className: "Rhynchonellata", orderName: "Unknown", name: "Phaneroporidae", mainColor: "#10B981", lineageColors: { "phaneroporidae": "#F97316" } };
+const rhynchonellata_stricklandistrophiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "stricklandistrophiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Stricklandistrophiidae", mainColor: "#F59E0B", lineageColors: { "stricklandistrophiidae": "#6366F1" } };
+const rhynchonellata_kulumbellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "kulumbellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Kulumbellidae", mainColor: "#8B5CF6", lineageColors: { "kulumbellidae": "#84CC16" } };
+const rhynchonellata_spiropunctiferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "spiropunctiferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Spiropunctiferidae", mainColor: "#EC4899", lineageColors: { "spiropunctiferidae": "#06B6D4" } };
+const rhynchonellata_davidsoninidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "davidsoninidae", className: "Rhynchonellata", orderName: "Unknown", name: "Davidsoninidae", mainColor: "#14B8A6", lineageColors: { "davidsoninidae": "#D946EF" } };
+const rhynchonellata_thomasariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "thomasariidae", className: "Rhynchonellata", orderName: "Unknown", name: "Thomasariidae", mainColor: "#F97316", lineageColors: { "thomasariidae": "#0EA5E9" } };
+const rhynchonellata_tenellodermidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tenellodermidae", className: "Rhynchonellata", orderName: "Unknown", name: "Tenellodermidae", mainColor: "#6366F1", lineageColors: { "tenellodermidae": "#22C55E" } };
+const rhynchonellata_imbrexiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "imbrexiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Imbrexiidae", mainColor: "#84CC16", lineageColors: { "imbrexiidae": "#EAB308" } };
+const rhynchonellata_thecidellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "thecidellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Thecidellidae", mainColor: "#06B6D4", lineageColors: { "thecidellidae": "#A855F7" } };
+const rhynchonellata_palaeochoristitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "palaeochoristitidae", className: "Rhynchonellata", orderName: "Unknown", name: "Palaeochoristitidae", mainColor: "#D946EF", lineageColors: { "palaeochoristitidae": "#FB923C" } };
+const rhynchonellata_theodossiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "theodossiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Theodossiidae", mainColor: "#0EA5E9", lineageColors: { "theodossiidae": "#2DD4BF" } };
+const rhynchonellata_brachythyridinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "brachythyridinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Brachythyridinidae", mainColor: "#22C55E", lineageColors: { "brachythyridinidae": "#A3E635" } };
+const rhynchonellata_punctospiferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "punctospiferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Punctospiferidae", mainColor: "#EAB308", lineageColors: { "punctospiferidae": "#38BDF8" } };
+const rhynchonellata_skelidorygmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "skelidorygmidae", className: "Rhynchonellata", orderName: "Unknown", name: "Skelidorygmidae", mainColor: "#A855F7", lineageColors: { "skelidorygmidae": "#3B82F6" } };
+const rhynchonellata_athyrisinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "athyrisinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Athyrisinidae", mainColor: "#FB923C", lineageColors: { "athyrisinidae": "#EF4444" } };
+const rhynchonellata_rhipidiothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "rhipidiothyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhipidiothyrididae", mainColor: "#2DD4BF", lineageColors: { "rhipidiothyrididae": "#10B981" } };
+const rhynchonellata_labaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "labaiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Labaiidae", mainColor: "#A3E635", lineageColors: { "labaiidae": "#F59E0B" } };
+const rhynchonellata_ecnomiosidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ecnomiosidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ecnomiosidae", mainColor: "#38BDF8", lineageColors: { "ecnomiosidae": "#8B5CF6" } };
+const rhynchonellata_obolorugidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "obolorugidae", className: "Rhynchonellata", orderName: "Unknown", name: "Obolorugidae", mainColor: "#3B82F6", lineageColors: { "obolorugidae": "#EC4899" } };
+const rhynchonellata_cimicinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cimicinellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cimicinellidae", mainColor: "#EF4444", lineageColors: { "cimicinellidae": "#14B8A6" } };
+const rhynchonellata_rhenorensselaeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "rhenorensselaeriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhenorensselaeriidae", mainColor: "#10B981", lineageColors: { "rhenorensselaeriidae": "#F97316" } };
+const rhynchonellata_clathrithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "clathrithyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Clathrithyrididae", mainColor: "#F59E0B", lineageColors: { "clathrithyrididae": "#6366F1" } };
+const rhynchonellata_stringoephalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "stringoephalidae", className: "Rhynchonellata", orderName: "Unknown", name: "Stringoephalidae", mainColor: "#8B5CF6", lineageColors: { "stringoephalidae": "#84CC16" } };
+const rhynchonellata_enantiosphenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "enantiosphenidae", className: "Rhynchonellata", orderName: "Unknown", name: "Enantiosphenidae", mainColor: "#EC4899", lineageColors: { "enantiosphenidae": "#06B6D4" } };
+const rhynchonellata_brevicameridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "brevicameridae", className: "Rhynchonellata", orderName: "Unknown", name: "Brevicameridae", mainColor: "#14B8A6", lineageColors: { "brevicameridae": "#D946EF" } };
+const rhynchonellata_xenosariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "xenosariidae", className: "Rhynchonellata", orderName: "Unknown", name: "Xenosariidae", mainColor: "#F97316", lineageColors: { "xenosariidae": "#0EA5E9" } };
+const rhynchonellata_tuvaellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tuvaellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Tuvaellidae", mainColor: "#6366F1", lineageColors: { "tuvaellidae": "#22C55E" } };
+const rhynchonellata_rhipidothyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "rhipidothyridae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhipidothyridae", mainColor: "#84CC16", lineageColors: { "rhipidothyridae": "#EAB308" } };
+const rhynchonellata_kayseriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "kayseriidae", className: "Rhynchonellata", orderName: "Unknown", name: "Kayseriidae", mainColor: "#06B6D4", lineageColors: { "kayseriidae": "#A855F7" } };
+const rhynchonellata_didymothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "didymothyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Didymothyrididae", mainColor: "#D946EF", lineageColors: { "didymothyrididae": "#FB923C" } };
+const rhynchonellata_aratellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "aratellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Aratellidae", mainColor: "#0EA5E9", lineageColors: { "aratellidae": "#2DD4BF" } };
+const rhynchonellata_rozmanariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "rozmanariidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rozmanariidae", mainColor: "#22C55E", lineageColors: { "rozmanariidae": "#A3E635" } };
+const rhynchonellata_yangkongidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "yangkongidae", className: "Rhynchonellata", orderName: "Unknown", name: "Yangkongidae", mainColor: "#EAB308", lineageColors: { "yangkongidae": "#38BDF8" } };
+const rhynchonellata_antistrixidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "antistrixidae", className: "Rhynchonellata", orderName: "Unknown", name: "Antistrixidae", mainColor: "#A855F7", lineageColors: { "antistrixidae": "#3B82F6" } };
+const rhynchonellata_triathyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "triathyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Triathyrididae", mainColor: "#FB923C", lineageColors: { "triathyrididae": "#EF4444" } };
+const rhynchonellata_hyattidinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "hyattidinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hyattidinidae", mainColor: "#2DD4BF", lineageColors: { "hyattidinidae": "#10B981" } };
+const rhynchonellata_mongolospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "mongolospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Mongolospiridae", mainColor: "#A3E635", lineageColors: { "mongolospiridae": "#F59E0B" } };
+const rhynchonellata_cyclocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cyclocoeliidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyclocoeliidae", mainColor: "#38BDF8", lineageColors: { "cyclocoeliidae": "#8B5CF6" } };
+const rhynchonellata_tasmanorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "tasmanorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Tasmanorthidae", mainColor: "#3B82F6", lineageColors: { "tasmanorthidae": "#EC4899" } };
+const rhynchonellata_anomalorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "anomalorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Anomalorthidae", mainColor: "#EF4444", lineageColors: { "anomalorthidae": "#14B8A6" } };
+const rhynchonellata_whittardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "whittardiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Whittardiidae", mainColor: "#10B981", lineageColors: { "whittardiidae": "#F97316" } };
+const rhynchonellata_hypsomoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "hypsomoniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hypsomoniidae", mainColor: "#F59E0B", lineageColors: { "hypsomoniidae": "#6366F1" } };
+const rhynchonellata_mongolellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "mongolellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Mongolellidae", mainColor: "#8B5CF6", lineageColors: { "mongolellidae": "#84CC16" } };
+const rhynchonellata_praecyclothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "praecyclothyrididae", className: "Rhynchonellata", orderName: "Unknown", name: "Praecyclothyrididae", mainColor: "#EC4899", lineageColors: { "praecyclothyrididae": "#06B6D4" } };
+const rhynchonellata_elythynidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "elythynidae", className: "Rhynchonellata", orderName: "Unknown", name: "Elythynidae", mainColor: "#14B8A6", lineageColors: { "elythynidae": "#D946EF" } };
+const rhynchonellata_lazutkiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "lazutkiniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Lazutkiniidae", mainColor: "#F97316", lineageColors: { "lazutkiniidae": "#0EA5E9" } };
+const rhynchonellata_conispiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "conispiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Conispiriferidae", mainColor: "#6366F1", lineageColors: { "conispiriferidae": "#22C55E" } };
+const rhynchonellata_parazygidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "parazygidae", className: "Rhynchonellata", orderName: "Unknown", name: "Parazygidae", mainColor: "#84CC16", lineageColors: { "parazygidae": "#EAB308" } };
+const rhynchonellata_eoglossinotoechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "eoglossinotoechiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Eoglossinotoechiidae", mainColor: "#06B6D4", lineageColors: { "eoglossinotoechiidae": "#A855F7" } };
+const rhynchonellata_antezeilleridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "antezeilleridae", className: "Rhynchonellata", orderName: "Unknown", name: "Antezeilleridae", mainColor: "#D946EF", lineageColors: { "antezeilleridae": "#FB923C" } };
+const rhynchonellata_chilidonophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "chilidonophoridae", className: "Rhynchonellata", orderName: "Unknown", name: "Chilidonophoridae", mainColor: "#0EA5E9", lineageColors: { "chilidonophoridae": "#2DD4BF" } };
+const rhynchonellata_zhejiangellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "zhejiangellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Zhejiangellidae", mainColor: "#22C55E", lineageColors: { "zhejiangellidae": "#A3E635" } };
+const rhynchonellata_rhynchotretiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "rhynchotretiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhynchotretiidae", mainColor: "#EAB308", lineageColors: { "rhynchotretiidae": "#38BDF8" } };
+const rhynchonellata_rhynchotretradidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "rhynchotretradidae", className: "Rhynchonellata", orderName: "Unknown", name: "Rhynchotretradidae", mainColor: "#A855F7", lineageColors: { "rhynchotretradidae": "#3B82F6" } };
+const rhynchonellata_austrirhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "austrirhynchiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Austrirhynchiidae", mainColor: "#FB923C", lineageColors: { "austrirhynchiidae": "#EF4444" } };
+const rhynchonellata_hypsomyoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "hypsomyoniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Hypsomyoniidae", mainColor: "#2DD4BF", lineageColors: { "hypsomyoniidae": "#10B981" } };
+const rhynchonellata_parantiptychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "parantiptychiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Parantiptychiidae", mainColor: "#A3E635", lineageColors: { "parantiptychiidae": "#F59E0B" } };
+const rhynchonellata_conchidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "conchidiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Conchidiidae", mainColor: "#38BDF8", lineageColors: { "conchidiidae": "#8B5CF6" } };
+const rhynchonellata_cyclothyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cyclothyridae", className: "Rhynchonellata", orderName: "Unknown", name: "Cyclothyridae", mainColor: "#3B82F6", lineageColors: { "cyclothyridae": "#EC4899" } };
+const rhynchonellata_cardinirhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "cardinirhynchiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Cardinirhynchiidae", mainColor: "#EF4444", lineageColors: { "cardinirhynchiidae": "#14B8A6" } };
+const rhynchonellata_trigonorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "trigonorhynchiidae", className: "Rhynchonellata", orderName: "Unknown", name: "Trigonorhynchiidae", mainColor: "#10B981", lineageColors: { "trigonorhynchiidae": "#F97316" } };
+const rhynchonellata_dinorthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "dinorthidae", className: "Rhynchonellata", orderName: "Unknown", name: "Dinorthidae", mainColor: "#F59E0B", lineageColors: { "dinorthidae": "#6366F1" } };
+const rhynchonellata_aulidospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "aulidospiridae", className: "Rhynchonellata", orderName: "Unknown", name: "Aulidospiridae", mainColor: "#8B5CF6", lineageColors: { "aulidospiridae": "#84CC16" } };
+const rhynchonellata_tarfayidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "tarfayidae", className: "Rhynchonellata", orderName: "Unknown", name: "Tarfayidae", mainColor: "#EC4899", lineageColors: { "tarfayidae": "#06B6D4" } };
+const rhynchonellata_gwyniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "gwyniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Gwyniidae", mainColor: "#14B8A6", lineageColors: { "gwyniidae": "#D946EF" } };
+const rhynchonellata_skenidioidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "skenidioidae", className: "Rhynchonellata", orderName: "Unknown", name: "Skenidioidae", mainColor: "#F97316", lineageColors: { "skenidioidae": "#0EA5E9" } };
+const rhynchonellata_multispiriferidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "multispiriferidae", className: "Rhynchonellata", orderName: "Unknown", name: "Multispiriferidae", mainColor: "#6366F1", lineageColors: { "multispiriferidae": "#22C55E" } };
+const rhynchonellata_jacoburbirostridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "jacoburbirostridae", className: "Rhynchonellata", orderName: "Unknown", name: "Jacoburbirostridae", mainColor: "#84CC16", lineageColors: { "jacoburbirostridae": "#EAB308" } };
+const rhynchonellata_astraeleniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "astraeleniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Astraeleniidae", mainColor: "#06B6D4", lineageColors: { "astraeleniidae": "#A855F7" } };
+const rhynchonellata_meduanarostridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "meduanarostridae", className: "Rhynchonellata", orderName: "Unknown", name: "Meduanarostridae", mainColor: "#D946EF", lineageColors: { "meduanarostridae": "#FB923C" } };
+const rhynchonellata_pupiaoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pupiaoidae", className: "Rhynchonellata", orderName: "Unknown", name: "Pupiaoidae", mainColor: "#0EA5E9", lineageColors: { "pupiaoidae": "#2DD4BF" } };
+const rhynchonellata_parallelepipedorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "parallelepipedorhynchidae", className: "Rhynchonellata", orderName: "Unknown", name: "Parallelepipedorhynchidae", mainColor: "#22C55E", lineageColors: { "parallelepipedorhynchidae": "#A3E635" } };
+const rhynchonellata_triplesidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "triplesidae", className: "Rhynchonellata", orderName: "Unknown", name: "Triplesidae", mainColor: "#EAB308", lineageColors: { "triplesidae": "#38BDF8" } };
+const rhynchonellata_ktenopotamorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "ktenopotamorhynchidae", className: "Rhynchonellata", orderName: "Unknown", name: "Ktenopotamorhynchidae", mainColor: "#A855F7", lineageColors: { "ktenopotamorhynchidae": "#3B82F6" } };
+const rhynchonellata_lanceomyoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "lanceomyoniidae", className: "Rhynchonellata", orderName: "Unknown", name: "Lanceomyoniidae", mainColor: "#FB923C", lineageColors: { "lanceomyoniidae": "#EF4444" } };
+const rhynchonellata_jafarirhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "jafarirhynchidae", className: "Rhynchonellata", orderName: "Unknown", name: "Jafarirhynchidae", mainColor: "#2DD4BF", lineageColors: { "jafarirhynchidae": "#10B981" } };
+const rhynchonellata_eucharitinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "eucharitinidae", className: "Rhynchonellata", orderName: "Unknown", name: "Eucharitinidae", mainColor: "#A3E635", lineageColors: { "eucharitinidae": "#F59E0B" } };
+const rhynchonellata_aulacothyroideidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "aulacothyroideidae", className: "Rhynchonellata", orderName: "Unknown", name: "Aulacothyroideidae", mainColor: "#38BDF8", lineageColors: { "aulacothyroideidae": "#8B5CF6" } };
+const rhynchonellata_kellerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "kellerellidae", className: "Rhynchonellata", orderName: "Unknown", name: "Kellerellidae", mainColor: "#3B82F6", lineageColors: { "kellerellidae": "#EC4899" } };
+const rhynchonellata_terebratulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "terebratulidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Terebratulidae", mainColor: "#EF4444", lineageColors: { "terebratulidae": "#14B8A6" } };
+const rhynchonellata_zeilleriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "zeilleriidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Zeilleriidae", mainColor: "#10B981", lineageColors: { "zeilleriidae": "#F97316" } };
+const rhynchonellata_dielasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "dielasmatidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Dielasmatidae", mainColor: "#F59E0B", lineageColors: { "dielasmatidae": "#6366F1" } };
+const rhynchonellata_cancellothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cancellothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Cancellothyrididae", mainColor: "#8B5CF6", lineageColors: { "cancellothyrididae": "#84CC16" } };
+const rhynchonellata_notothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "notothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Notothyrididae", mainColor: "#EC4899", lineageColors: { "notothyrididae": "#06B6D4" } };
+const rhynchonellata_megathyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "megathyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Megathyrididae", mainColor: "#14B8A6", lineageColors: { "megathyrididae": "#D946EF" } };
+const rhynchonellata_terebratellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "terebratellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Terebratellidae", mainColor: "#F97316", lineageColors: { "terebratellidae": "#0EA5E9" } };
+const rhynchonellata_postepithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "postepithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Postepithyrididae", mainColor: "#6366F1", lineageColors: { "postepithyrididae": "#22C55E" } };
+const rhynchonellata_sellithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "sellithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Sellithyrididae", mainColor: "#84CC16", lineageColors: { "sellithyrididae": "#EAB308" } };
+const rhynchonellata_chlidonophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "chlidonophoridae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Chlidonophoridae", mainColor: "#06B6D4", lineageColors: { "chlidonophoridae": "#A855F7" } };
+const rhynchonellata_loboidothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "loboidothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Loboidothyrididae", mainColor: "#D946EF", lineageColors: { "loboidothyrididae": "#FB923C" } };
+const rhynchonellata_laqueidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "laqueidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Laqueidae", mainColor: "#0EA5E9", lineageColors: { "laqueidae": "#2DD4BF" } };
+const rhynchonellata_dallinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "dallinidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Dallinidae", mainColor: "#22C55E", lineageColors: { "dallinidae": "#A3E635" } };
+const rhynchonellata_lissajousithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "lissajousithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Lissajousithyrididae", mainColor: "#EAB308", lineageColors: { "lissajousithyrididae": "#38BDF8" } };
+const rhynchonellata_gillediidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "gillediidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Gillediidae", mainColor: "#A855F7", lineageColors: { "gillediidae": "#3B82F6" } };
+const rhynchonellata_pseudodielasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "pseudodielasmatidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Pseudodielasmatidae", mainColor: "#FB923C", lineageColors: { "pseudodielasmatidae": "#EF4444" } };
+const rhynchonellata_platidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "platidiidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Platidiidae", mainColor: "#2DD4BF", lineageColors: { "platidiidae": "#10B981" } };
+const rhynchonellata_kraussinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "kraussinidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Kraussinidae", mainColor: "#A3E635", lineageColors: { "kraussinidae": "#F59E0B" } };
+const rhynchonellata_cryptonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cryptonellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Cryptonellidae", mainColor: "#38BDF8", lineageColors: { "cryptonellidae": "#8B5CF6" } };
+const rhynchonellata_dyscoliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "dyscoliidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Dyscoliidae", mainColor: "#3B82F6", lineageColors: { "dyscoliidae": "#EC4899" } };
+const rhynchonellata_beecheriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "beecheriidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Beecheriidae", mainColor: "#EF4444", lineageColors: { "beecheriidae": "#14B8A6" } };
+const rhynchonellata_terebrataliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "terebrataliidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Terebrataliidae", mainColor: "#10B981", lineageColors: { "terebrataliidae": "#F97316" } };
+const rhynchonellata_lobothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "lobothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Lobothyrididae", mainColor: "#F59E0B", lineageColors: { "lobothyrididae": "#6366F1" } };
+const rhynchonellata_capillithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "capillithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Capillithyrididae", mainColor: "#8B5CF6", lineageColors: { "capillithyrididae": "#84CC16" } };
+const rhynchonellata_pygopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pygopidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Pygopidae", mainColor: "#EC4899", lineageColors: { "pygopidae": "#06B6D4" } };
+const rhynchonellata_angustothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "angustothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Angustothyrididae", mainColor: "#14B8A6", lineageColors: { "angustothyrididae": "#D946EF" } };
+const rhynchonellata_aulacothyropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "aulacothyropsidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Aulacothyropsidae", mainColor: "#F97316", lineageColors: { "aulacothyropsidae": "#0EA5E9" } };
+const rhynchonellata_kingenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "kingenidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Kingenidae", mainColor: "#6366F1", lineageColors: { "kingenidae": "#22C55E" } };
+const rhynchonellata_heterelasminidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "heterelasminidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Heterelasminidae", mainColor: "#84CC16", lineageColors: { "heterelasminidae": "#EAB308" } };
+const rhynchonellata_hegathyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "hegathyridae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Hegathyridae", mainColor: "#06B6D4", lineageColors: { "hegathyridae": "#A855F7" } };
+const rhynchonellata_frenulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "frenulinidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Frenulinidae", mainColor: "#D946EF", lineageColors: { "frenulinidae": "#FB923C" } };
+const rhynchonellata_cranaenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cranaenidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Cranaenidae", mainColor: "#0EA5E9", lineageColors: { "cranaenidae": "#2DD4BF" } };
+const rhynchonellata_gibbithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "gibbithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Gibbithyrididae", mainColor: "#22C55E", lineageColors: { "gibbithyrididae": "#A3E635" } };
+const rhynchonellata_boreiothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "boreiothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Boreiothyrididae", mainColor: "#EAB308", lineageColors: { "boreiothyrididae": "#38BDF8" } };
+const rhynchonellata_dictyothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "dictyothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Dictyothyrididae", mainColor: "#A855F7", lineageColors: { "dictyothyrididae": "#3B82F6" } };
+const rhynchonellata_mutationellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "mutationellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Mutationellidae", mainColor: "#FB923C", lineageColors: { "mutationellidae": "#EF4444" } };
+const rhynchonellata_plectoconchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "plectoconchidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Plectoconchidae", mainColor: "#2DD4BF", lineageColors: { "plectoconchidae": "#10B981" } };
+const rhynchonellata_eudesiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "eudesiidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Eudesiidae", mainColor: "#A3E635", lineageColors: { "eudesiidae": "#F59E0B" } };
+const rhynchonellata_cnismatocentridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cnismatocentridae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Cnismatocentridae", mainColor: "#38BDF8", lineageColors: { "cnismatocentridae": "#8B5CF6" } };
+const rhynchonellata_triadithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "triadithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Triadithyrididae", mainColor: "#3B82F6", lineageColors: { "triadithyrididae": "#EC4899" } };
+const rhynchonellata_muirwoodellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "muirwoodellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Muirwoodellidae", mainColor: "#EF4444", lineageColors: { "muirwoodellidae": "#14B8A6" } };
+const rhynchonellata_bouchardiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "bouchardiidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Bouchardiidae", mainColor: "#10B981", lineageColors: { "bouchardiidae": "#F97316" } };
+const rhynchonellata_praeargyrothecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "praeargyrothecidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Praeargyrothecidae", mainColor: "#F59E0B", lineageColors: { "praeargyrothecidae": "#6366F1" } };
+const rhynchonellata_hesperithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "hesperithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Hesperithyrididae", mainColor: "#8B5CF6", lineageColors: { "hesperithyrididae": "#84CC16" } };
+const rhynchonellata_zugmayeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "zugmayeriidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Zugmayeriidae", mainColor: "#EC4899", lineageColors: { "zugmayeriidae": "#06B6D4" } };
+const rhynchonellata_stringocephalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "stringocephalidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Stringocephalidae", mainColor: "#14B8A6", lineageColors: { "stringocephalidae": "#D946EF" } };
+const rhynchonellata_harpotothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "harpotothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Harpotothyrididae", mainColor: "#F97316", lineageColors: { "harpotothyrididae": "#0EA5E9" } };
+const rhynchonellata_mametothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "mametothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Mametothyrididae", mainColor: "#6366F1", lineageColors: { "mametothyrididae": "#22C55E" } };
+const rhynchonellata_gusarellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "gusarellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Gusarellidae", mainColor: "#84CC16", lineageColors: { "gusarellidae": "#EAB308" } };
+const rhynchonellata_antzeilleridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "antzeilleridae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Antzeilleridae", mainColor: "#06B6D4", lineageColors: { "antzeilleridae": "#A855F7" } };
+const rhynchonellata_cheniothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cheniothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Cheniothyrididae", mainColor: "#D946EF", lineageColors: { "cheniothyrididae": "#FB923C" } };
+const rhynchonellata_mosaethyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "mosaethyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Mosaethyrididae", mainColor: "#0EA5E9", lineageColors: { "mosaethyrididae": "#2DD4BF" } };
+const rhynchonellata_tchegemithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "tchegemithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Tchegemithyrididae", mainColor: "#22C55E", lineageColors: { "tchegemithyrididae": "#A3E635" } };
+const rhynchonellata_nucleatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "nucleatidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Nucleatidae", mainColor: "#EAB308", lineageColors: { "nucleatidae": "#38BDF8" } };
+const rhynchonellata_tegulithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "tegulithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Tegulithyrididae", mainColor: "#A855F7", lineageColors: { "tegulithyrididae": "#3B82F6" } };
+const rhynchonellata_weberithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "weberithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Weberithyrididae", mainColor: "#FB923C", lineageColors: { "weberithyrididae": "#EF4444" } };
+const rhynchonellata_tythothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "tythothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Tythothyrididae", mainColor: "#2DD4BF", lineageColors: { "tythothyrididae": "#10B981" } };
+const rhynchonellata_hercothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hercothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Hercothyrididae", mainColor: "#A3E635", lineageColors: { "hercothyrididae": "#F59E0B" } };
+const rhynchonellata_arzonellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "arzonellinidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Arzonellinidae", mainColor: "#38BDF8", lineageColors: { "arzonellinidae": "#8B5CF6" } };
+const rhynchonellata_labaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "labaidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Labaidae", mainColor: "#3B82F6", lineageColors: { "labaidae": "#EC4899" } };
+const rhynchonellata_tropidoleptidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tropidoleptidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Tropidoleptidae", mainColor: "#EF4444", lineageColors: { "tropidoleptidae": "#14B8A6" } };
+const rhynchonellata_meganterididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "meganterididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Meganterididae", mainColor: "#10B981", lineageColors: { "meganterididae": "#F97316" } };
+const rhynchonellata_orthotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "orthotomidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Orthotomidae", mainColor: "#F59E0B", lineageColors: { "orthotomidae": "#6366F1" } };
+const rhynchonellata_thaumatosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "thaumatosiidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Thaumatosiidae", mainColor: "#8B5CF6", lineageColors: { "thaumatosiidae": "#84CC16" } };
+const rhynchonellata_compositelasmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "compositelasmatidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Compositelasmatidae", mainColor: "#EC4899", lineageColors: { "compositelasmatidae": "#06B6D4" } };
+const rhynchonellata_alabushevothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "alabushevothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Alabushevothyrididae", mainColor: "#14B8A6", lineageColors: { "alabushevothyrididae": "#D946EF" } };
+const rhynchonellata_centronellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "centronellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Centronellidae", mainColor: "#F97316", lineageColors: { "centronellidae": "#0EA5E9" } };
+const rhynchonellata_trigonithyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "trigonithyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Trigonithyrididae", mainColor: "#6366F1", lineageColors: { "trigonithyrididae": "#22C55E" } };
+const rhynchonellata_juvavellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "juvavellidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Juvavellidae", mainColor: "#84CC16", lineageColors: { "juvavellidae": "#EAB308" } };
+const rhynchonellata_rhipidothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "rhipidothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Rhipidothyrididae", mainColor: "#06B6D4", lineageColors: { "rhipidothyrididae": "#A855F7" } };
+const rhynchonellata_spasskothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "spasskothyrididae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Spasskothyrididae", mainColor: "#D946EF", lineageColors: { "spasskothyrididae": "#FB923C" } };
+const rhynchonellata_cheirothyropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "cheirothyropsidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Cheirothyropsidae", mainColor: "#0EA5E9", lineageColors: { "cheirothyropsidae": "#2DD4BF" } };
+const rhynchonellata_inopinatarculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "inopinatarculidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Inopinatarculidae", mainColor: "#22C55E", lineageColors: { "inopinatarculidae": "#A3E635" } };
+const rhynchonellata_dienopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "dienopidae", className: "Rhynchonellata", orderName: "Terebratulida", name: "Dienopidae", mainColor: "#EAB308", lineageColors: { "dienopidae": "#38BDF8" } };
+const rhynchonellata_rhynchonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "rhynchonellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Rhynchonellidae", mainColor: "#A855F7", lineageColors: { "rhynchonellidae": "#3B82F6" } };
+const rhynchonellata_wellerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "wellerellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Wellerellidae", mainColor: "#FB923C", lineageColors: { "wellerellidae": "#EF4444" } };
+const rhynchonellata_stenoscismatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "stenoscismatidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Stenoscismatidae", mainColor: "#2DD4BF", lineageColors: { "stenoscismatidae": "#10B981" } };
+const rhynchonellata_basiliolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "basiliolidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Basiliolidae", mainColor: "#A3E635", lineageColors: { "basiliolidae": "#F59E0B" } };
+const rhynchonellata_cyclothyrididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cyclothyrididae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Cyclothyrididae", mainColor: "#38BDF8", lineageColors: { "cyclothyrididae": "#8B5CF6" } };
+const rhynchonellata_norellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "norellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Norellidae", mainColor: "#3B82F6", lineageColors: { "norellidae": "#EC4899" } };
+const rhynchonellata_tetrarhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tetrarhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Tetrarhynchiidae", mainColor: "#EF4444", lineageColors: { "tetrarhynchiidae": "#14B8A6" } };
+const rhynchonellata_allorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "allorhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Allorhynchidae", mainColor: "#10B981", lineageColors: { "allorhynchidae": "#F97316" } };
+const rhynchonellata_trigonirhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "trigonirhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Trigonirhynchiidae", mainColor: "#F59E0B", lineageColors: { "trigonirhynchiidae": "#6366F1" } };
+const rhynchonellata_pontisiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pontisiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Pontisiidae", mainColor: "#8B5CF6", lineageColors: { "pontisiidae": "#84CC16" } };
+const rhynchonellata_rhynchotrematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "rhynchotrematidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Rhynchotrematidae", mainColor: "#EC4899", lineageColors: { "rhynchotrematidae": "#06B6D4" } };
+const rhynchonellata_rhynchoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "rhynchoporidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Rhynchoporidae", mainColor: "#14B8A6", lineageColors: { "rhynchoporidae": "#D946EF" } };
+const rhynchonellata_psilocamaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "psilocamaridae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Psilocamaridae", mainColor: "#F97316", lineageColors: { "psilocamaridae": "#0EA5E9" } };
+const rhynchonellata_erymnariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "erymnariidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Erymnariidae", mainColor: "#6366F1", lineageColors: { "erymnariidae": "#22C55E" } };
+const rhynchonellata_dimerellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "dimerellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Dimerellidae", mainColor: "#84CC16", lineageColors: { "dimerellidae": "#EAB308" } };
+const rhynchonellata_notosariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "notosariidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Notosariidae", mainColor: "#06B6D4", lineageColors: { "notosariidae": "#A855F7" } };
+const rhynchonellata_petasmariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "petasmariidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Petasmariidae", mainColor: "#D946EF", lineageColors: { "petasmariidae": "#FB923C" } };
+const rhynchonellata_pugnacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pugnacidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Pugnacidae", mainColor: "#0EA5E9", lineageColors: { "pugnacidae": "#2DD4BF" } };
+const rhynchonellata_petasmatheridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "petasmatheridae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Petasmatheridae", mainColor: "#22C55E", lineageColors: { "petasmatheridae": "#A3E635" } };
+const rhynchonellata_acanthothirididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "acanthothirididae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Acanthothirididae", mainColor: "#EAB308", lineageColors: { "acanthothirididae": "#38BDF8" } };
+const rhynchonellata_cryptoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cryptoporidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Cryptoporidae", mainColor: "#A855F7", lineageColors: { "cryptoporidae": "#3B82F6" } };
+const rhynchonellata_frieleiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "frieleiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Frieleiidae", mainColor: "#FB923C", lineageColors: { "frieleiidae": "#EF4444" } };
+const rhynchonellata_leptocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "leptocoeliidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Leptocoeliidae", mainColor: "#2DD4BF", lineageColors: { "leptocoeliidae": "#10B981" } };
+const rhynchonellata_camarotoechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "camarotoechiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Camarotoechiidae", mainColor: "#A3E635", lineageColors: { "camarotoechiidae": "#F59E0B" } };
+const rhynchonellata_hemithirididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "hemithirididae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Hemithirididae", mainColor: "#38BDF8", lineageColors: { "hemithirididae": "#8B5CF6" } };
+const rhynchonellata_leiorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "leiorhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Leiorhynchidae", mainColor: "#3B82F6", lineageColors: { "leiorhynchidae": "#EC4899" } };
+const rhynchonellata_uncinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "uncinulidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Uncinulidae", mainColor: "#EF4444", lineageColors: { "uncinulidae": "#14B8A6" } };
+const rhynchonellata_austrirhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "austrirhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Austrirhynchidae", mainColor: "#10B981", lineageColors: { "austrirhynchidae": "#F97316" } };
+const rhynchonellata_septirhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "septirhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Septirhynchiidae", mainColor: "#F59E0B", lineageColors: { "septirhynchiidae": "#6366F1" } };
+const rhynchonellata_peregrinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "peregrinellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Peregrinellidae", mainColor: "#8B5CF6", lineageColors: { "peregrinellidae": "#84CC16" } };
+const rhynchonellata_sinorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "sinorhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Sinorhynchiidae", mainColor: "#EC4899", lineageColors: { "sinorhynchiidae": "#06B6D4" } };
+const rhynchonellata_atriboniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "atriboniidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Atriboniidae", mainColor: "#14B8A6", lineageColors: { "atriboniidae": "#D946EF" } };
+const rhynchonellata_paranorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "paranorellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Paranorellidae", mainColor: "#F97316", lineageColors: { "paranorellidae": "#0EA5E9" } };
+const rhynchonellata_septalariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "septalariidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Septalariidae", mainColor: "#6366F1", lineageColors: { "septalariidae": "#22C55E" } };
+const rhynchonellata_orthorhynchulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "orthorhynchulidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Orthorhynchulidae", mainColor: "#84CC16", lineageColors: { "orthorhynchulidae": "#EAB308" } };
+const rhynchonellata_hadrorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "hadrorhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Hadrorhynchiidae", mainColor: "#06B6D4", lineageColors: { "hadrorhynchiidae": "#A855F7" } };
+const rhynchonellata_ancistrorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ancistrorhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Ancistrorhynchidae", mainColor: "#D946EF", lineageColors: { "ancistrorhynchidae": "#FB923C" } };
+const rhynchonellata_rhynchotetradidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "rhynchotetradidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Rhynchotetradidae", mainColor: "#0EA5E9", lineageColors: { "rhynchotetradidae": "#2DD4BF" } };
+const rhynchonellata_eatoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "eatoniidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Eatoniidae", mainColor: "#22C55E", lineageColors: { "eatoniidae": "#A3E635" } };
+const rhynchonellata_aseptorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "aseptorhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Aseptorhynchiidae", mainColor: "#EAB308", lineageColors: { "aseptorhynchiidae": "#38BDF8" } };
+const rhynchonellata_machaerariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "machaerariidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Machaerariidae", mainColor: "#A855F7", lineageColors: { "machaerariidae": "#3B82F6" } };
+const rhynchonellata_amphipellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "amphipellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Amphipellidae", mainColor: "#FB923C", lineageColors: { "amphipellidae": "#EF4444" } };
+const rhynchonellata_phoenicitoechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "phoenicitoechiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Phoenicitoechiidae", mainColor: "#2DD4BF", lineageColors: { "phoenicitoechiidae": "#10B981" } };
+const rhynchonellata_halorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "halorellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Halorellidae", mainColor: "#A3E635", lineageColors: { "halorellidae": "#F59E0B" } };
+const rhynchonellata_ochotorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "ochotorhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Ochotorhynchiidae", mainColor: "#38BDF8", lineageColors: { "ochotorhynchiidae": "#8B5CF6" } };
+const rhynchonellata_oligorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "oligorhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Oligorhynchiidae", mainColor: "#3B82F6", lineageColors: { "oligorhynchiidae": "#EC4899" } };
+const rhynchonellata_hebetoechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "hebetoechiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Hebetoechiidae", mainColor: "#EF4444", lineageColors: { "hebetoechiidae": "#14B8A6" } };
+const rhynchonellata_lambdarinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "lambdarinidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Lambdarinidae", mainColor: "#10B981", lineageColors: { "lambdarinidae": "#F97316" } };
+const rhynchonellata_dispheniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "dispheniidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Dispheniidae", mainColor: "#F59E0B", lineageColors: { "dispheniidae": "#6366F1" } };
+const rhynchonellata_sphenotretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "sphenotretidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Sphenotretidae", mainColor: "#8B5CF6", lineageColors: { "sphenotretidae": "#84CC16" } };
+const rhynchonellata_apodosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "apodosiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Apodosiidae", mainColor: "#EC4899", lineageColors: { "apodosiidae": "#06B6D4" } };
+const rhynchonellata_tethyrhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "tethyrhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Tethyrhynchiidae", mainColor: "#14B8A6", lineageColors: { "tethyrhynchiidae": "#D946EF" } };
+const rhynchonellata_sapphicorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "sapphicorhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Sapphicorhynchidae", mainColor: "#F97316", lineageColors: { "sapphicorhynchidae": "#0EA5E9" } };
+const rhynchonellata_salanygolinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "salanygolinidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Salanygolinidae", mainColor: "#6366F1", lineageColors: { "salanygolinidae": "#22C55E" } };
+const rhynchonellata_yunnanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "yunnanellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Yunnanellidae", mainColor: "#84CC16", lineageColors: { "yunnanellidae": "#EAB308" } };
+const rhynchonellata_cardiarinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cardiarinidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Cardiarinidae", mainColor: "#06B6D4", lineageColors: { "cardiarinidae": "#A855F7" } };
+const rhynchonellata_pygmaellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pygmaellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Pygmaellidae", mainColor: "#D946EF", lineageColors: { "pygmaellidae": "#FB923C" } };
+const rhynchonellata_hypothyridinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "hypothyridinidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Hypothyridinidae", mainColor: "#0EA5E9", lineageColors: { "hypothyridinidae": "#2DD4BF" } };
+const rhynchonellata_triasorhynchiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "triasorhynchiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Triasorhynchiidae", mainColor: "#22C55E", lineageColors: { "triasorhynchiidae": "#A3E635" } };
+const rhynchonellata_obturamentellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "obturamentellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Obturamentellidae", mainColor: "#EAB308", lineageColors: { "obturamentellidae": "#38BDF8" } };
+const rhynchonellata_eumetabolotoechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "eumetabolotoechiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Eumetabolotoechiidae", mainColor: "#A855F7", lineageColors: { "eumetabolotoechiidae": "#3B82F6" } };
+const rhynchonellata_innaechiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "innaechiidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Innaechiidae", mainColor: "#FB923C", lineageColors: { "innaechiidae": "#EF4444" } };
+const rhynchonellata_tetracameridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "tetracameridae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Tetracameridae", mainColor: "#2DD4BF", lineageColors: { "tetracameridae": "#10B981" } };
+const rhynchonellata_platyterorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "platyterorhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Platyterorhynchidae", mainColor: "#A3E635", lineageColors: { "platyterorhynchidae": "#F59E0B" } };
+const rhynchonellata_nucinulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "nucinulidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Nucinulidae", mainColor: "#38BDF8", lineageColors: { "nucinulidae": "#8B5CF6" } };
+const rhynchonellata_chaniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "chaniellidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Chaniellidae", mainColor: "#3B82F6", lineageColors: { "chaniellidae": "#EC4899" } };
+const rhynchonellata_ancistorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "ancistorhynchidae", className: "Rhynchonellata", orderName: "Rhynchonellida", name: "Ancistorhynchidae", mainColor: "#EF4444", lineageColors: { "ancistorhynchidae": "#14B8A6" } };
+const rhynchonellata_thecidellinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "thecidellinidae", className: "Rhynchonellata", orderName: "Thecideida", name: "Thecidellinidae", mainColor: "#10B981", lineageColors: { "thecidellinidae": "#F97316" } };
+const rhynchonellata_thecideidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "thecideidae", className: "Rhynchonellata", orderName: "Thecideida", name: "Thecideidae", mainColor: "#F59E0B", lineageColors: { "thecideidae": "#6366F1" } };
+const rhynchonellata_thecospiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "thecospiridae", className: "Rhynchonellata", orderName: "Thecideida", name: "Thecospiridae", mainColor: "#8B5CF6", lineageColors: { "thecospiridae": "#84CC16" } };
+const rhynchonellata_thecospirellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "thecospirellidae", className: "Rhynchonellata", orderName: "Thecideida", name: "Thecospirellidae", mainColor: "#EC4899", lineageColors: { "thecospirellidae": "#06B6D4" } };
+const rhynchonellata_hungarithecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "hungarithecidae", className: "Rhynchonellata", orderName: "Thecideida", name: "Hungarithecidae", mainColor: "#14B8A6", lineageColors: { "hungarithecidae": "#D946EF" } };
+const rhynchonellata_bactryniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "bactryniidae", className: "Rhynchonellata", orderName: "Thecideida", name: "Bactryniidae", mainColor: "#F97316", lineageColors: { "bactryniidae": "#0EA5E9" } };
+
+
+// ── Hoplonemertea (38 families) ──
+const hoplonemertea_tetrastemmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "tetrastemmatidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Tetrastemmatidae", mainColor: "#EF4444", lineageColors: { "tetrastemmatidae": "#14B8A6" } };
+const hoplonemertea_amphiporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "amphiporidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Amphiporidae", mainColor: "#10B981", lineageColors: { "amphiporidae": "#F97316" } };
+const hoplonemertea_emplectonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "emplectonematidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Emplectonematidae", mainColor: "#F59E0B", lineageColors: { "emplectonematidae": "#6366F1" } };
+const hoplonemertea_oerstediidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "oerstediidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Oerstediidae", mainColor: "#8B5CF6", lineageColors: { "oerstediidae": "#84CC16" } };
+const hoplonemertea_cratenemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "cratenemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Cratenemertidae", mainColor: "#EC4899", lineageColors: { "cratenemertidae": "#06B6D4" } };
+const hoplonemertea_ototyphlonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "ototyphlonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Ototyphlonemertidae", mainColor: "#14B8A6", lineageColors: { "ototyphlonemertidae": "#D946EF" } };
+const hoplonemertea_prosorhochmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "prosorhochmidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Prosorhochmidae", mainColor: "#F97316", lineageColors: { "prosorhochmidae": "#0EA5E9" } };
+const hoplonemertea_neesiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "neesiidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Neesiidae", mainColor: "#6366F1", lineageColors: { "neesiidae": "#22C55E" } };
+const hoplonemertea_carcinonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "carcinonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Carcinonemertidae", mainColor: "#84CC16", lineageColors: { "carcinonemertidae": "#EAB308" } };
+const hoplonemertea_zygonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "zygonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Zygonemertidae", mainColor: "#06B6D4", lineageColors: { "zygonemertidae": "#A855F7" } };
+const hoplonemertea_prostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "prostomatidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Prostomatidae", mainColor: "#D946EF", lineageColors: { "prostomatidae": "#FB923C" } };
+const hoplonemertea_poseidonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "poseidonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Poseidonemertidae", mainColor: "#0EA5E9", lineageColors: { "poseidonemertidae": "#2DD4BF" } };
+const hoplonemertea_sacconemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "sacconemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Sacconemertidae", mainColor: "#22C55E", lineageColors: { "sacconemertidae": "#A3E635" } };
+const hoplonemertea_acteonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "acteonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Acteonemertidae", mainColor: "#EAB308", lineageColors: { "acteonemertidae": "#38BDF8" } };
+const hoplonemertea_malacobdellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "malacobdellidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Malacobdellidae", mainColor: "#A855F7", lineageColors: { "malacobdellidae": "#3B82F6" } };
+const hoplonemertea_potamonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "potamonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Potamonemertidae", mainColor: "#FB923C", lineageColors: { "potamonemertidae": "#EF4444" } };
+const hoplonemertea_plectonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "plectonemertidae", className: "Hoplonemertea", orderName: "Monostilifera", name: "Plectonemertidae", mainColor: "#2DD4BF", lineageColors: { "plectonemertidae": "#10B981" } };
+const hoplonemertea_drepanophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "drepanophoridae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Drepanophoridae", mainColor: "#A3E635", lineageColors: { "drepanophoridae": "#F59E0B" } };
+const hoplonemertea_pelagonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pelagonemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Pelagonemertidae", mainColor: "#38BDF8", lineageColors: { "pelagonemertidae": "#8B5CF6" } };
+const hoplonemertea_dinonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "dinonemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Dinonemertidae", mainColor: "#3B82F6", lineageColors: { "dinonemertidae": "#EC4899" } };
+const hoplonemertea_planktonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "planktonemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Planktonemertidae", mainColor: "#EF4444", lineageColors: { "planktonemertidae": "#14B8A6" } };
+const hoplonemertea_armaueriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "armaueriidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Armaueriidae", mainColor: "#10B981", lineageColors: { "armaueriidae": "#F97316" } };
+const hoplonemertea_balaenanemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "balaenanemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Balaenanemertidae", mainColor: "#F59E0B", lineageColors: { "balaenanemertidae": "#6366F1" } };
+const hoplonemertea_chuniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "chuniellidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Chuniellidae", mainColor: "#8B5CF6", lineageColors: { "chuniellidae": "#84CC16" } };
+const hoplonemertea_nectonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "nectonemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Nectonemertidae", mainColor: "#EC4899", lineageColors: { "nectonemertidae": "#06B6D4" } };
+const hoplonemertea_protopelagonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "protopelagonemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Protopelagonemertidae", mainColor: "#14B8A6", lineageColors: { "protopelagonemertidae": "#D946EF" } };
+const hoplonemertea_drepanophorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "drepanophorellidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Drepanophorellidae", mainColor: "#F97316", lineageColors: { "drepanophorellidae": "#0EA5E9" } };
+const hoplonemertea_paradrepanophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "paradrepanophoridae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Paradrepanophoridae", mainColor: "#6366F1", lineageColors: { "paradrepanophoridae": "#22C55E" } };
+const hoplonemertea_uniporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "uniporidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Uniporidae", mainColor: "#84CC16", lineageColors: { "uniporidae": "#EAB308" } };
+const hoplonemertea_coellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "coellidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Coellidae", mainColor: "#06B6D4", lineageColors: { "coellidae": "#A855F7" } };
+const hoplonemertea_siboganemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "siboganemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Siboganemertidae", mainColor: "#D946EF", lineageColors: { "siboganemertidae": "#FB923C" } };
+const hoplonemertea_phallonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "phallonemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Phallonemertidae", mainColor: "#0EA5E9", lineageColors: { "phallonemertidae": "#2DD4BF" } };
+const hoplonemertea_buergeriellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "buergeriellidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Buergeriellidae", mainColor: "#22C55E", lineageColors: { "buergeriellidae": "#A3E635" } };
+const hoplonemertea_drepanobandidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "drepanobandidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Drepanobandidae", mainColor: "#EAB308", lineageColors: { "drepanobandidae": "#38BDF8" } };
+const hoplonemertea_drepanogigantidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "drepanogigantidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Drepanogigantidae", mainColor: "#A855F7", lineageColors: { "drepanogigantidae": "#3B82F6" } };
+const hoplonemertea_brinkmanniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "brinkmanniidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Brinkmanniidae", mainColor: "#FB923C", lineageColors: { "brinkmanniidae": "#EF4444" } };
+const hoplonemertea_pachynemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "pachynemertidae", className: "Hoplonemertea", orderName: "Polystilifera", name: "Pachynemertidae", mainColor: "#2DD4BF", lineageColors: { "pachynemertidae": "#10B981" } };
+const hoplonemertea_drepanophoringiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "drepanophoringiidae", className: "Hoplonemertea", orderName: "Unknown", name: "Drepanophoringiidae", mainColor: "#A3E635", lineageColors: { "drepanophoringiidae": "#F59E0B" } };
+
+
+// ── Allomalorhagida (5 families) ──
+const allomalorhagida_pycnophyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "pycnophyidae", className: "Allomalorhagida", orderName: "Unknown", name: "Pycnophyidae", mainColor: "#EF4444", lineageColors: { "pycnophyidae": "#14B8A6" } };
+const allomalorhagida_dracoderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dracoderidae", className: "Allomalorhagida", orderName: "Anomoirhaga", name: "Dracoderidae", mainColor: "#10B981", lineageColors: { "dracoderidae": "#F97316" } };
+const allomalorhagida_neocentrophyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "neocentrophyidae", className: "Allomalorhagida", orderName: "Anomoirhaga", name: "Neocentrophyidae", mainColor: "#F59E0B", lineageColors: { "neocentrophyidae": "#6366F1" } };
+const allomalorhagida_cateriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cateriidae", className: "Allomalorhagida", orderName: "Anomoirhaga", name: "Cateriidae", mainColor: "#8B5CF6", lineageColors: { "cateriidae": "#84CC16" } };
+const allomalorhagida_franciscideridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "franciscideridae", className: "Allomalorhagida", orderName: "Anomoirhaga", name: "Franciscideridae", mainColor: "#EC4899", lineageColors: { "franciscideridae": "#06B6D4" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -6383,7 +6985,573 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "neomphalidae": gastropoda_neomphalidae,
   "tylodinidae": gastropoda_tylodinidae,
   "umbraculidae": gastropoda_umbraculidae,
-  "symbiidae": eucycliophora_symbiidae,};
+  "symbiidae": eucycliophora_symbiidae,
+  "limnognathiidae": micrognathozoa_limnognathiidae,
+  "tubulanidae": palaeonemertea_tubulanidae,
+  "carininidae": palaeonemertea_carininidae,
+  "callineridae": palaeonemertea_callineridae,
+  "carinomidae": palaeonemertea_carinomidae,
+  "carinomellidae": palaeonemertea_carinomellidae,
+  "cephalotrichidae": palaeonemertea_cephalotrichidae,
+  "cephalotrichellidae": palaeonemertea_cephalotrichellidae,
+  "lineidae": pilidiophora_lineidae,
+  "valenciniidae": pilidiophora_valenciniidae,
+  "gorgonorhynchidae": pilidiophora_gorgonorhynchidae,
+  "polybrachiorhynchidae": pilidiophora_polybrachiorhynchidae,
+  "mixolineidae": pilidiophora_mixolineidae,
+  "panorhynchidae": pilidiophora_panorhynchidae,
+  "hubrechtellidae": pilidiophora_hubrechtellidae,
+  "hubrechtiidae": pilidiophora_hubrechtiidae,
+  "poliopsiidae": pilidiophora_poliopsiidae,
+  "pussylineidae": pilidiophora_pussylineidae,
+  "paralineidae": pilidiophora_paralineidae,
+  "craniidae": craniata_craniidae,
+  "craniopsidae": craniata_craniopsidae,
+  "trimerellidae": craniata_trimerellidae,
+  "adensuidae": craniata_adensuidae,
+  "zhuzhaiidae": craniata_zhuzhaiidae,
+  "ussuniidae": craniata_ussuniidae,
+  "phascolosomatidae": phascolosomatidea_phascolosomatidae,
+  "aspidosiphonidae": phascolosomatidea_aspidosiphonidae,
+  "golfingiidae": sipunculidea_golfingiidae,
+  "phascoliidae": sipunculidea_phascoliidae,
+  "themistidae": sipunculidea_themistidae,
+  "sipunculidae": sipunculidea_sipunculidae,
+  "sagittidae": sagittoidea_sagittidae,
+  "krohnittidae": sagittoidea_krohnittidae,
+  "pterokrohniidae": sagittoidea_pterokrohniidae,
+  "bathybelidae": sagittoidea_bathybelidae,
+  "pterosagittidae": sagittoidea_pterosagittidae,
+  "spadellidae": sagittoidea_spadellidae,
+  "heterokrohniidae": sagittoidea_heterokrohniidae,
+  "eukrohniidae": sagittoidea_eukrohniidae,
+  "krohnittellidae": sagittoidea_krohnittellidae,
+  "bathybelosidae": sagittoidea_bathybelosidae,
+  "bathyspadellidae": sagittoidea_bathyspadellidae,
+  "biphragmosagittidae": sagittoidea_biphragmosagittidae,
+  "obolidae": lingulata_obolidae,
+  "lingulidae": lingulata_lingulidae,
+  "discinidae": lingulata_discinidae,
+  "acrothelidae": lingulata_acrothelidae,
+  "zhanatellidae": lingulata_zhanatellidae,
+  "disciniidae": lingulata_disciniidae,
+  "botsfordiidae": lingulata_botsfordiidae,
+  "paterulidae": lingulata_paterulidae,
+  "elkaniidae": lingulata_elkaniidae,
+  "trematidae": lingulata_trematidae,
+  "eoobolidae": lingulata_eoobolidae,
+  "pseudolingulidae": lingulata_pseudolingulidae,
+  "lingulellotretidae": lingulata_lingulellotretidae,
+  "lingulasmatidae": lingulata_lingulasmatidae,
+  "aulonotretidae": lingulata_aulonotretidae,
+  "acrotretidae": lingulata_acrotretidae,
+  "ephippelasmatidae": lingulata_ephippelasmatidae,
+  "eoconulidae": lingulata_eoconulidae,
+  "scaphelasmatidae": lingulata_scaphelasmatidae,
+  "biernatidae": lingulata_biernatidae,
+  "ceratretidae": lingulata_ceratretidae,
+  "torynelasmatidae": lingulata_torynelasmatidae,
+  "linguliporidae": lingulata_linguliporidae,
+  "curticiidae": lingulata_curticiidae,
+  "andobolidae": lingulata_andobolidae,
+  "holmerellidae": lingulata_holmerellidae,
+  "dianabellidae": lingulata_dianabellidae,
+  "dysoristidae": lingulata_dysoristidae,
+  "curticidae": lingulata_curticidae,
+  "anabolotretidae": lingulata_anabolotretidae,
+  "ptychopeltidae": lingulata_ptychopeltidae,
+  "kyrshabaktellidae": lingulata_kyrshabaktellidae,
+  "acrotetidae": lingulata_acrotetidae,
+  "siphonotretidae": lingulata_siphonotretidae,
+  "dichograptidae": pterobranchia_dichograptidae,
+  "diplograptidae": pterobranchia_diplograptidae,
+  "anisograptidae": pterobranchia_anisograptidae,
+  "sigmagraptidae": pterobranchia_sigmagraptidae,
+  "monograptidae": pterobranchia_monograptidae,
+  "glossograptidae": pterobranchia_glossograptidae,
+  "dicranograptidae": pterobranchia_dicranograptidae,
+  "cephalodiscidae": pterobranchia_cephalodiscidae,
+  "dendrograptidae": pterobranchia_dendrograptidae,
+  "isograptidae": pterobranchia_isograptidae,
+  "climacograptidae": pterobranchia_climacograptidae,
+  "wimanicrustidae": pterobranchia_wimanicrustidae,
+  "lasiograptidae": pterobranchia_lasiograptidae,
+  "sinograptidae": pterobranchia_sinograptidae,
+  "cyclograptidae": pterobranchia_cyclograptidae,
+  "didymograptidae": pterobranchia_didymograptidae,
+  "retiolitidae": pterobranchia_retiolitidae,
+  "phyllograptidae": pterobranchia_phyllograptidae,
+  "abrograptidae": pterobranchia_abrograptidae,
+  "hormograptidae": pterobranchia_hormograptidae,
+  "dimorphograptidae": pterobranchia_dimorphograptidae,
+  "acanthograptidae": pterobranchia_acanthograptidae,
+  "pseudotrigonograptidae": pterobranchia_pseudotrigonograptidae,
+  "mastigograptidae": pterobranchia_mastigograptidae,
+  "stolonodendridae": pterobranchia_stolonodendridae,
+  "atubariidae": pterobranchia_atubariidae,
+  "eocephalodiscidae": pterobranchia_eocephalodiscidae,
+  "normalograptidae": pterobranchia_normalograptidae,
+  "cyrtograptidae": pterobranchia_cyrtograptidae,
+  "pterograptidae": pterobranchia_pterograptidae,
+  "kinnegraptidae": pterobranchia_kinnegraptidae,
+  "dithecodendridae": pterobranchia_dithecodendridae,
+  "neodiplograptidae": pterobranchia_neodiplograptidae,
+  "tetragraptidae": pterobranchia_tetragraptidae,
+  "bryograptidae": pterobranchia_bryograptidae,
+  "chaunograptidae": pterobranchia_chaunograptidae,
+  "rhabdopleuridae": pterobranchia_rhabdopleuridae,
+  "rhabdopleuritidae": pterobranchia_rhabdopleuritidae,
+  "rhabdopleuroididae": pterobranchia_rhabdopleuroididae,
+  "spiriferidae": rhynchonellata_spiriferidae,
+  "athyrididae": rhynchonellata_athyrididae,
+  "spiriferinidae": rhynchonellata_spiriferinidae,
+  "dalmanellidae": rhynchonellata_dalmanellidae,
+  "martiniidae": rhynchonellata_martiniidae,
+  "plectorthidae": rhynchonellata_plectorthidae,
+  "orthidae": rhynchonellata_orthidae,
+  "schizophoriidae": rhynchonellata_schizophoriidae,
+  "ambocoeliidae": rhynchonellata_ambocoeliidae,
+  "spiriferellidae": rhynchonellata_spiriferellidae,
+  "enteletidae": rhynchonellata_enteletidae,
+  "atrypidae": rhynchonellata_atrypidae,
+  "spirigerellidae": rhynchonellata_spirigerellidae,
+  "elythidae": rhynchonellata_elythidae,
+  "ingelarellidae": rhynchonellata_ingelarellidae,
+  "trigonotretidae": rhynchonellata_trigonotretidae,
+  "dolerorthidae": rhynchonellata_dolerorthidae,
+  "triplesiidae": rhynchonellata_triplesiidae,
+  "retziellidae": rhynchonellata_retziellidae,
+  "diplospirellidae": rhynchonellata_diplospirellidae,
+  "clitambonitidae": rhynchonellata_clitambonitidae,
+  "rhipidomellidae": rhynchonellata_rhipidomellidae,
+  "plaesiomyidae": rhynchonellata_plaesiomyidae,
+  "syringothyrididae": rhynchonellata_syringothyrididae,
+  "koninckinidae": rhynchonellata_koninckinidae,
+  "licharewiidae": rhynchonellata_licharewiidae,
+  "brachythyrididae": rhynchonellata_brachythyrididae,
+  "draboviidae": rhynchonellata_draboviidae,
+  "hesperorthidae": rhynchonellata_hesperorthidae,
+  "pentameridae": rhynchonellata_pentameridae,
+  "neoretziidae": rhynchonellata_neoretziidae,
+  "lissatrypidae": rhynchonellata_lissatrypidae,
+  "crenispiriferidae": rhynchonellata_crenispiriferidae,
+  "atrypinidae": rhynchonellata_atrypinidae,
+  "eoorthidae": rhynchonellata_eoorthidae,
+  "meristellidae": rhynchonellata_meristellidae,
+  "parastrophinidae": rhynchonellata_parastrophinidae,
+  "spiriferellinidae": rhynchonellata_spiriferellinidae,
+  "camerellidae": rhynchonellata_camerellidae,
+  "delthyrididae": rhynchonellata_delthyrididae,
+  "platystrophiidae": rhynchonellata_platystrophiidae,
+  "dicoelosiidae": rhynchonellata_dicoelosiidae,
+  "punctospiriferidae": rhynchonellata_punctospiriferidae,
+  "heterorthidae": rhynchonellata_heterorthidae,
+  "virgianidae": rhynchonellata_virgianidae,
+  "protorthidae": rhynchonellata_protorthidae,
+  "pennospiriferinidae": rhynchonellata_pennospiriferinidae,
+  "productorthidae": rhynchonellata_productorthidae,
+  "mentzeliidae": rhynchonellata_mentzeliidae,
+  "lepismatinidae": rhynchonellata_lepismatinidae,
+  "skenidiidae": rhynchonellata_skenidiidae,
+  "nisusiidae": rhynchonellata_nisusiidae,
+  "tetralobulidae": rhynchonellata_tetralobulidae,
+  "giraldiellidae": rhynchonellata_giraldiellidae,
+  "sinucostidae": rhynchonellata_sinucostidae,
+  "spondylospiridae": rhynchonellata_spondylospiridae,
+  "bittnerulidae": rhynchonellata_bittnerulidae,
+  "cyrtiidae": rhynchonellata_cyrtiidae,
+  "laballidae": rhynchonellata_laballidae,
+  "stricklandiidae": rhynchonellata_stricklandiidae,
+  "archaeorthidae": rhynchonellata_archaeorthidae,
+  "choristitidae": rhynchonellata_choristitidae,
+  "syntrophiidae": rhynchonellata_syntrophiidae,
+  "hesperonomiidae": rhynchonellata_hesperonomiidae,
+  "balatonospiridae": rhynchonellata_balatonospiridae,
+  "retziidae": rhynchonellata_retziidae,
+  "strophopleuridae": rhynchonellata_strophopleuridae,
+  "porambonitidae": rhynchonellata_porambonitidae,
+  "cyrtinidae": rhynchonellata_cyrtinidae,
+  "paraspiriferinidae": rhynchonellata_paraspiriferinidae,
+  "protozygidae": rhynchonellata_protozygidae,
+  "rastelligeridae": rhynchonellata_rastelligeridae,
+  "linoporellidae": rhynchonellata_linoporellidae,
+  "nucleospiridae": rhynchonellata_nucleospiridae,
+  "gypidulidae": rhynchonellata_gypidulidae,
+  "finkelnburgiidae": rhynchonellata_finkelnburgiidae,
+  "harknessellidae": rhynchonellata_harknessellidae,
+  "paurorthidae": rhynchonellata_paurorthidae,
+  "saukrodictyidae": rhynchonellata_saukrodictyidae,
+  "wangyuiidae": rhynchonellata_wangyuiidae,
+  "orthidiellidae": rhynchonellata_orthidiellidae,
+  "paeckelmanellidae": rhynchonellata_paeckelmanellidae,
+  "cyclospiridae": rhynchonellata_cyclospiridae,
+  "angusticardiniidae": rhynchonellata_angusticardiniidae,
+  "mucrospiriferidae": rhynchonellata_mucrospiriferidae,
+  "anoplothecidae": rhynchonellata_anoplothecidae,
+  "chrustenoporidae": rhynchonellata_chrustenoporidae,
+  "subrianidae": rhynchonellata_subrianidae,
+  "clarkellidae": rhynchonellata_clarkellidae,
+  "rhynchospirinidae": rhynchonellata_rhynchospirinidae,
+  "carinatinidae": rhynchonellata_carinatinidae,
+  "ranorthidae": rhynchonellata_ranorthidae,
+  "euorthisinidae": rhynchonellata_euorthisinidae,
+  "hysterolitidae": rhynchonellata_hysterolitidae,
+  "crassumbidae": rhynchonellata_crassumbidae,
+  "sarganostegidae": rhynchonellata_sarganostegidae,
+  "glyptorthidae": rhynchonellata_glyptorthidae,
+  "nanorthidae": rhynchonellata_nanorthidae,
+  "huenellidae": rhynchonellata_huenellidae,
+  "clorindidae": rhynchonellata_clorindidae,
+  "phragmorthidae": rhynchonellata_phragmorthidae,
+  "platyorthidae": rhynchonellata_platyorthidae,
+  "spinocyrtiidae": rhynchonellata_spinocyrtiidae,
+  "cyrtospiriferidae": rhynchonellata_cyrtospiriferidae,
+  "parallelelasmatidae": rhynchonellata_parallelelasmatidae,
+  "lycophoriidae": rhynchonellata_lycophoriidae,
+  "bohemiellidae": rhynchonellata_bohemiellidae,
+  "komiellidae": rhynchonellata_komiellidae,
+  "davidsoniidae": rhynchonellata_davidsoniidae,
+  "suessiidae": rhynchonellata_suessiidae,
+  "anazygidae": rhynchonellata_anazygidae,
+  "cyrtinopsidae": rhynchonellata_cyrtinopsidae,
+  "septatrypidae": rhynchonellata_septatrypidae,
+  "meristidae": rhynchonellata_meristidae,
+  "cathaysiorthidae": rhynchonellata_cathaysiorthidae,
+  "leioriidae": rhynchonellata_leioriidae,
+  "tyronellidae": rhynchonellata_tyronellidae,
+  "portranellidae": rhynchonellata_portranellidae,
+  "aenigmastrophiidae": rhynchonellata_aenigmastrophiidae,
+  "chilcorthidae": rhynchonellata_chilcorthidae,
+  "neospiriferidae": rhynchonellata_neospiriferidae,
+  "verneuiliidae": rhynchonellata_verneuiliidae,
+  "reticulariinidae": rhynchonellata_reticulariinidae,
+  "anomaloriidae": rhynchonellata_anomaloriidae,
+  "acrospiriferidae": rhynchonellata_acrospiriferidae,
+  "dimegelasmidae": rhynchonellata_dimegelasmidae,
+  "parallelasmatidae": rhynchonellata_parallelasmatidae,
+  "rhactorthidae": rhynchonellata_rhactorthidae,
+  "filispiriferidae": rhynchonellata_filispiriferidae,
+  "cremnorthidae": rhynchonellata_cremnorthidae,
+  "karpinskiidae": rhynchonellata_karpinskiidae,
+  "syringothyridae": rhynchonellata_syringothyridae,
+  "hedeinopsidae": rhynchonellata_hedeinopsidae,
+  "costispiriferidae": rhynchonellata_costispiriferidae,
+  "zygospiridae": rhynchonellata_zygospiridae,
+  "eudoxinidae": rhynchonellata_eudoxinidae,
+  "rectotrophiidae": rhynchonellata_rectotrophiidae,
+  "rhynchospiriferidae": rhynchonellata_rhynchospiriferidae,
+  "adolfiidae": rhynchonellata_adolfiidae,
+  "punctatrypidae": rhynchonellata_punctatrypidae,
+  "xenomartiniidae": rhynchonellata_xenomartiniidae,
+  "oxopleciidae": rhynchonellata_oxopleciidae,
+  "enallothecideidae": rhynchonellata_enallothecideidae,
+  "proschizophoriidae": rhynchonellata_proschizophoriidae,
+  "dayiidae": rhynchonellata_dayiidae,
+  "protozeugidae": rhynchonellata_protozeugidae,
+  "micromartiniidae": rhynchonellata_micromartiniidae,
+  "mystrophoridae": rhynchonellata_mystrophoridae,
+  "perissothyrididae": rhynchonellata_perissothyrididae,
+  "ulbospiriferidae": rhynchonellata_ulbospiriferidae,
+  "gerkispiridae": rhynchonellata_gerkispiridae,
+  "fimbrispiriferidae": rhynchonellata_fimbrispiriferidae,
+  "echinospiriferidae": rhynchonellata_echinospiriferidae,
+  "eostrophiidae": rhynchonellata_eostrophiidae,
+  "hemithyrididae": rhynchonellata_hemithyrididae,
+  "alphaneospiriferidae": rhynchonellata_alphaneospiriferidae,
+  "metathyrisinidae": rhynchonellata_metathyrisinidae,
+  "xestotrematidae": rhynchonellata_xestotrematidae,
+  "poramborthidae": rhynchonellata_poramborthidae,
+  "amphidellidae": rhynchonellata_amphidellidae,
+  "toxorthidae": rhynchonellata_toxorthidae,
+  "syntrophopsidae": rhynchonellata_syntrophopsidae,
+  "glassiidae": rhynchonellata_glassiidae,
+  "palaferellidae": rhynchonellata_palaferellidae,
+  "camerophorinidae": rhynchonellata_camerophorinidae,
+  "dogdoidae": rhynchonellata_dogdoidae,
+  "symmatrypidae": rhynchonellata_symmatrypidae,
+  "uncitidae": rhynchonellata_uncitidae,
+  "katuniidae": rhynchonellata_katuniidae,
+  "alimbellidae": rhynchonellata_alimbellidae,
+  "kayserellidae": rhynchonellata_kayserellidae,
+  "plectorhynchellidae": rhynchonellata_plectorhynchellidae,
+  "niorhynicidae": rhynchonellata_niorhynicidae,
+  "araratellidae": rhynchonellata_araratellidae,
+  "glossinotoechiidae": rhynchonellata_glossinotoechiidae,
+  "cryptoporiidae": rhynchonellata_cryptoporiidae,
+  "ladogiidae": rhynchonellata_ladogiidae,
+  "notanopliidae": rhynchonellata_notanopliidae,
+  "prionorhynchiidae": rhynchonellata_prionorhynchiidae,
+  "zaigunrostridae": rhynchonellata_zaigunrostridae,
+  "bashkiriidae": rhynchonellata_bashkiriidae,
+  "phaneroporidae": rhynchonellata_phaneroporidae,
+  "stricklandistrophiidae": rhynchonellata_stricklandistrophiidae,
+  "kulumbellidae": rhynchonellata_kulumbellidae,
+  "spiropunctiferidae": rhynchonellata_spiropunctiferidae,
+  "davidsoninidae": rhynchonellata_davidsoninidae,
+  "thomasariidae": rhynchonellata_thomasariidae,
+  "tenellodermidae": rhynchonellata_tenellodermidae,
+  "imbrexiidae": rhynchonellata_imbrexiidae,
+  "thecidellidae": rhynchonellata_thecidellidae,
+  "palaeochoristitidae": rhynchonellata_palaeochoristitidae,
+  "theodossiidae": rhynchonellata_theodossiidae,
+  "brachythyridinidae": rhynchonellata_brachythyridinidae,
+  "punctospiferidae": rhynchonellata_punctospiferidae,
+  "skelidorygmidae": rhynchonellata_skelidorygmidae,
+  "athyrisinidae": rhynchonellata_athyrisinidae,
+  "rhipidiothyrididae": rhynchonellata_rhipidiothyrididae,
+  "labaiidae": rhynchonellata_labaiidae,
+  "ecnomiosidae": rhynchonellata_ecnomiosidae,
+  "obolorugidae": rhynchonellata_obolorugidae,
+  "cimicinellidae": rhynchonellata_cimicinellidae,
+  "rhenorensselaeriidae": rhynchonellata_rhenorensselaeriidae,
+  "clathrithyrididae": rhynchonellata_clathrithyrididae,
+  "stringoephalidae": rhynchonellata_stringoephalidae,
+  "enantiosphenidae": rhynchonellata_enantiosphenidae,
+  "brevicameridae": rhynchonellata_brevicameridae,
+  "xenosariidae": rhynchonellata_xenosariidae,
+  "tuvaellidae": rhynchonellata_tuvaellidae,
+  "rhipidothyridae": rhynchonellata_rhipidothyridae,
+  "kayseriidae": rhynchonellata_kayseriidae,
+  "didymothyrididae": rhynchonellata_didymothyrididae,
+  "aratellidae": rhynchonellata_aratellidae,
+  "rozmanariidae": rhynchonellata_rozmanariidae,
+  "yangkongidae": rhynchonellata_yangkongidae,
+  "antistrixidae": rhynchonellata_antistrixidae,
+  "triathyrididae": rhynchonellata_triathyrididae,
+  "hyattidinidae": rhynchonellata_hyattidinidae,
+  "mongolospiridae": rhynchonellata_mongolospiridae,
+  "cyclocoeliidae": rhynchonellata_cyclocoeliidae,
+  "tasmanorthidae": rhynchonellata_tasmanorthidae,
+  "anomalorthidae": rhynchonellata_anomalorthidae,
+  "whittardiidae": rhynchonellata_whittardiidae,
+  "hypsomoniidae": rhynchonellata_hypsomoniidae,
+  "mongolellidae": rhynchonellata_mongolellidae,
+  "praecyclothyrididae": rhynchonellata_praecyclothyrididae,
+  "elythynidae": rhynchonellata_elythynidae,
+  "lazutkiniidae": rhynchonellata_lazutkiniidae,
+  "conispiriferidae": rhynchonellata_conispiriferidae,
+  "parazygidae": rhynchonellata_parazygidae,
+  "eoglossinotoechiidae": rhynchonellata_eoglossinotoechiidae,
+  "antezeilleridae": rhynchonellata_antezeilleridae,
+  "chilidonophoridae": rhynchonellata_chilidonophoridae,
+  "zhejiangellidae": rhynchonellata_zhejiangellidae,
+  "rhynchotretiidae": rhynchonellata_rhynchotretiidae,
+  "rhynchotretradidae": rhynchonellata_rhynchotretradidae,
+  "austrirhynchiidae": rhynchonellata_austrirhynchiidae,
+  "hypsomyoniidae": rhynchonellata_hypsomyoniidae,
+  "parantiptychiidae": rhynchonellata_parantiptychiidae,
+  "conchidiidae": rhynchonellata_conchidiidae,
+  "cyclothyridae": rhynchonellata_cyclothyridae,
+  "cardinirhynchiidae": rhynchonellata_cardinirhynchiidae,
+  "trigonorhynchiidae": rhynchonellata_trigonorhynchiidae,
+  "dinorthidae": rhynchonellata_dinorthidae,
+  "aulidospiridae": rhynchonellata_aulidospiridae,
+  "tarfayidae": rhynchonellata_tarfayidae,
+  "gwyniidae": rhynchonellata_gwyniidae,
+  "skenidioidae": rhynchonellata_skenidioidae,
+  "multispiriferidae": rhynchonellata_multispiriferidae,
+  "jacoburbirostridae": rhynchonellata_jacoburbirostridae,
+  "astraeleniidae": rhynchonellata_astraeleniidae,
+  "meduanarostridae": rhynchonellata_meduanarostridae,
+  "pupiaoidae": rhynchonellata_pupiaoidae,
+  "parallelepipedorhynchidae": rhynchonellata_parallelepipedorhynchidae,
+  "triplesidae": rhynchonellata_triplesidae,
+  "ktenopotamorhynchidae": rhynchonellata_ktenopotamorhynchidae,
+  "lanceomyoniidae": rhynchonellata_lanceomyoniidae,
+  "jafarirhynchidae": rhynchonellata_jafarirhynchidae,
+  "eucharitinidae": rhynchonellata_eucharitinidae,
+  "aulacothyroideidae": rhynchonellata_aulacothyroideidae,
+  "kellerellidae": rhynchonellata_kellerellidae,
+  "terebratulidae": rhynchonellata_terebratulidae,
+  "zeilleriidae": rhynchonellata_zeilleriidae,
+  "dielasmatidae": rhynchonellata_dielasmatidae,
+  "cancellothyrididae": rhynchonellata_cancellothyrididae,
+  "notothyrididae": rhynchonellata_notothyrididae,
+  "megathyrididae": rhynchonellata_megathyrididae,
+  "terebratellidae": rhynchonellata_terebratellidae,
+  "postepithyrididae": rhynchonellata_postepithyrididae,
+  "sellithyrididae": rhynchonellata_sellithyrididae,
+  "chlidonophoridae": rhynchonellata_chlidonophoridae,
+  "loboidothyrididae": rhynchonellata_loboidothyrididae,
+  "laqueidae": rhynchonellata_laqueidae,
+  "dallinidae": rhynchonellata_dallinidae,
+  "lissajousithyrididae": rhynchonellata_lissajousithyrididae,
+  "gillediidae": rhynchonellata_gillediidae,
+  "pseudodielasmatidae": rhynchonellata_pseudodielasmatidae,
+  "platidiidae": rhynchonellata_platidiidae,
+  "kraussinidae": rhynchonellata_kraussinidae,
+  "cryptonellidae": rhynchonellata_cryptonellidae,
+  "dyscoliidae": rhynchonellata_dyscoliidae,
+  "beecheriidae": rhynchonellata_beecheriidae,
+  "terebrataliidae": rhynchonellata_terebrataliidae,
+  "lobothyrididae": rhynchonellata_lobothyrididae,
+  "capillithyrididae": rhynchonellata_capillithyrididae,
+  "pygopidae": rhynchonellata_pygopidae,
+  "angustothyrididae": rhynchonellata_angustothyrididae,
+  "aulacothyropsidae": rhynchonellata_aulacothyropsidae,
+  "kingenidae": rhynchonellata_kingenidae,
+  "heterelasminidae": rhynchonellata_heterelasminidae,
+  "hegathyridae": rhynchonellata_hegathyridae,
+  "frenulinidae": rhynchonellata_frenulinidae,
+  "cranaenidae": rhynchonellata_cranaenidae,
+  "gibbithyrididae": rhynchonellata_gibbithyrididae,
+  "boreiothyrididae": rhynchonellata_boreiothyrididae,
+  "dictyothyrididae": rhynchonellata_dictyothyrididae,
+  "mutationellidae": rhynchonellata_mutationellidae,
+  "plectoconchidae": rhynchonellata_plectoconchidae,
+  "eudesiidae": rhynchonellata_eudesiidae,
+  "cnismatocentridae": rhynchonellata_cnismatocentridae,
+  "triadithyrididae": rhynchonellata_triadithyrididae,
+  "muirwoodellidae": rhynchonellata_muirwoodellidae,
+  "bouchardiidae": rhynchonellata_bouchardiidae,
+  "praeargyrothecidae": rhynchonellata_praeargyrothecidae,
+  "hesperithyrididae": rhynchonellata_hesperithyrididae,
+  "zugmayeriidae": rhynchonellata_zugmayeriidae,
+  "stringocephalidae": rhynchonellata_stringocephalidae,
+  "harpotothyrididae": rhynchonellata_harpotothyrididae,
+  "mametothyrididae": rhynchonellata_mametothyrididae,
+  "gusarellidae": rhynchonellata_gusarellidae,
+  "antzeilleridae": rhynchonellata_antzeilleridae,
+  "cheniothyrididae": rhynchonellata_cheniothyrididae,
+  "mosaethyrididae": rhynchonellata_mosaethyrididae,
+  "tchegemithyrididae": rhynchonellata_tchegemithyrididae,
+  "nucleatidae": rhynchonellata_nucleatidae,
+  "tegulithyrididae": rhynchonellata_tegulithyrididae,
+  "weberithyrididae": rhynchonellata_weberithyrididae,
+  "tythothyrididae": rhynchonellata_tythothyrididae,
+  "hercothyrididae": rhynchonellata_hercothyrididae,
+  "arzonellinidae": rhynchonellata_arzonellinidae,
+  "labaidae": rhynchonellata_labaidae,
+  "tropidoleptidae": rhynchonellata_tropidoleptidae,
+  "meganterididae": rhynchonellata_meganterididae,
+  "orthotomidae": rhynchonellata_orthotomidae,
+  "thaumatosiidae": rhynchonellata_thaumatosiidae,
+  "compositelasmatidae": rhynchonellata_compositelasmatidae,
+  "alabushevothyrididae": rhynchonellata_alabushevothyrididae,
+  "centronellidae": rhynchonellata_centronellidae,
+  "trigonithyrididae": rhynchonellata_trigonithyrididae,
+  "juvavellidae": rhynchonellata_juvavellidae,
+  "rhipidothyrididae": rhynchonellata_rhipidothyrididae,
+  "spasskothyrididae": rhynchonellata_spasskothyrididae,
+  "cheirothyropsidae": rhynchonellata_cheirothyropsidae,
+  "inopinatarculidae": rhynchonellata_inopinatarculidae,
+  "dienopidae": rhynchonellata_dienopidae,
+  "rhynchonellidae": rhynchonellata_rhynchonellidae,
+  "wellerellidae": rhynchonellata_wellerellidae,
+  "stenoscismatidae": rhynchonellata_stenoscismatidae,
+  "basiliolidae": rhynchonellata_basiliolidae,
+  "cyclothyrididae": rhynchonellata_cyclothyrididae,
+  "norellidae": rhynchonellata_norellidae,
+  "tetrarhynchiidae": rhynchonellata_tetrarhynchiidae,
+  "allorhynchidae": rhynchonellata_allorhynchidae,
+  "trigonirhynchiidae": rhynchonellata_trigonirhynchiidae,
+  "pontisiidae": rhynchonellata_pontisiidae,
+  "rhynchotrematidae": rhynchonellata_rhynchotrematidae,
+  "rhynchoporidae": rhynchonellata_rhynchoporidae,
+  "psilocamaridae": rhynchonellata_psilocamaridae,
+  "erymnariidae": rhynchonellata_erymnariidae,
+  "dimerellidae": rhynchonellata_dimerellidae,
+  "notosariidae": rhynchonellata_notosariidae,
+  "petasmariidae": rhynchonellata_petasmariidae,
+  "pugnacidae": rhynchonellata_pugnacidae,
+  "petasmatheridae": rhynchonellata_petasmatheridae,
+  "acanthothirididae": rhynchonellata_acanthothirididae,
+  "cryptoporidae": rhynchonellata_cryptoporidae,
+  "frieleiidae": rhynchonellata_frieleiidae,
+  "leptocoeliidae": rhynchonellata_leptocoeliidae,
+  "camarotoechiidae": rhynchonellata_camarotoechiidae,
+  "hemithirididae": rhynchonellata_hemithirididae,
+  "leiorhynchidae": rhynchonellata_leiorhynchidae,
+  "uncinulidae": rhynchonellata_uncinulidae,
+  "austrirhynchidae": rhynchonellata_austrirhynchidae,
+  "septirhynchiidae": rhynchonellata_septirhynchiidae,
+  "peregrinellidae": rhynchonellata_peregrinellidae,
+  "sinorhynchiidae": rhynchonellata_sinorhynchiidae,
+  "atriboniidae": rhynchonellata_atriboniidae,
+  "paranorellidae": rhynchonellata_paranorellidae,
+  "septalariidae": rhynchonellata_septalariidae,
+  "orthorhynchulidae": rhynchonellata_orthorhynchulidae,
+  "hadrorhynchiidae": rhynchonellata_hadrorhynchiidae,
+  "ancistrorhynchidae": rhynchonellata_ancistrorhynchidae,
+  "rhynchotetradidae": rhynchonellata_rhynchotetradidae,
+  "eatoniidae": rhynchonellata_eatoniidae,
+  "aseptorhynchiidae": rhynchonellata_aseptorhynchiidae,
+  "machaerariidae": rhynchonellata_machaerariidae,
+  "amphipellidae": rhynchonellata_amphipellidae,
+  "phoenicitoechiidae": rhynchonellata_phoenicitoechiidae,
+  "halorellidae": rhynchonellata_halorellidae,
+  "ochotorhynchiidae": rhynchonellata_ochotorhynchiidae,
+  "oligorhynchiidae": rhynchonellata_oligorhynchiidae,
+  "hebetoechiidae": rhynchonellata_hebetoechiidae,
+  "lambdarinidae": rhynchonellata_lambdarinidae,
+  "dispheniidae": rhynchonellata_dispheniidae,
+  "sphenotretidae": rhynchonellata_sphenotretidae,
+  "apodosiidae": rhynchonellata_apodosiidae,
+  "tethyrhynchiidae": rhynchonellata_tethyrhynchiidae,
+  "sapphicorhynchidae": rhynchonellata_sapphicorhynchidae,
+  "salanygolinidae": rhynchonellata_salanygolinidae,
+  "yunnanellidae": rhynchonellata_yunnanellidae,
+  "cardiarinidae": rhynchonellata_cardiarinidae,
+  "pygmaellidae": rhynchonellata_pygmaellidae,
+  "hypothyridinidae": rhynchonellata_hypothyridinidae,
+  "triasorhynchiidae": rhynchonellata_triasorhynchiidae,
+  "obturamentellidae": rhynchonellata_obturamentellidae,
+  "eumetabolotoechiidae": rhynchonellata_eumetabolotoechiidae,
+  "innaechiidae": rhynchonellata_innaechiidae,
+  "tetracameridae": rhynchonellata_tetracameridae,
+  "platyterorhynchidae": rhynchonellata_platyterorhynchidae,
+  "nucinulidae": rhynchonellata_nucinulidae,
+  "chaniellidae": rhynchonellata_chaniellidae,
+  "ancistorhynchidae": rhynchonellata_ancistorhynchidae,
+  "thecidellinidae": rhynchonellata_thecidellinidae,
+  "thecideidae": rhynchonellata_thecideidae,
+  "thecospiridae": rhynchonellata_thecospiridae,
+  "thecospirellidae": rhynchonellata_thecospirellidae,
+  "hungarithecidae": rhynchonellata_hungarithecidae,
+  "bactryniidae": rhynchonellata_bactryniidae,
+  "tetrastemmatidae": hoplonemertea_tetrastemmatidae,
+  "amphiporidae": hoplonemertea_amphiporidae,
+  "emplectonematidae": hoplonemertea_emplectonematidae,
+  "oerstediidae": hoplonemertea_oerstediidae,
+  "cratenemertidae": hoplonemertea_cratenemertidae,
+  "ototyphlonemertidae": hoplonemertea_ototyphlonemertidae,
+  "prosorhochmidae": hoplonemertea_prosorhochmidae,
+  "neesiidae": hoplonemertea_neesiidae,
+  "carcinonemertidae": hoplonemertea_carcinonemertidae,
+  "zygonemertidae": hoplonemertea_zygonemertidae,
+  "prostomatidae": hoplonemertea_prostomatidae,
+  "poseidonemertidae": hoplonemertea_poseidonemertidae,
+  "sacconemertidae": hoplonemertea_sacconemertidae,
+  "acteonemertidae": hoplonemertea_acteonemertidae,
+  "malacobdellidae": hoplonemertea_malacobdellidae,
+  "potamonemertidae": hoplonemertea_potamonemertidae,
+  "plectonemertidae": hoplonemertea_plectonemertidae,
+  "drepanophoridae": hoplonemertea_drepanophoridae,
+  "pelagonemertidae": hoplonemertea_pelagonemertidae,
+  "dinonemertidae": hoplonemertea_dinonemertidae,
+  "planktonemertidae": hoplonemertea_planktonemertidae,
+  "armaueriidae": hoplonemertea_armaueriidae,
+  "balaenanemertidae": hoplonemertea_balaenanemertidae,
+  "chuniellidae": hoplonemertea_chuniellidae,
+  "nectonemertidae": hoplonemertea_nectonemertidae,
+  "protopelagonemertidae": hoplonemertea_protopelagonemertidae,
+  "drepanophorellidae": hoplonemertea_drepanophorellidae,
+  "paradrepanophoridae": hoplonemertea_paradrepanophoridae,
+  "uniporidae": hoplonemertea_uniporidae,
+  "coellidae": hoplonemertea_coellidae,
+  "siboganemertidae": hoplonemertea_siboganemertidae,
+  "phallonemertidae": hoplonemertea_phallonemertidae,
+  "buergeriellidae": hoplonemertea_buergeriellidae,
+  "drepanobandidae": hoplonemertea_drepanobandidae,
+  "drepanogigantidae": hoplonemertea_drepanogigantidae,
+  "brinkmanniidae": hoplonemertea_brinkmanniidae,
+  "pachynemertidae": hoplonemertea_pachynemertidae,
+  "drepanophoringiidae": hoplonemertea_drepanophoringiidae,
+  "pycnophyidae": allomalorhagida_pycnophyidae,
+  "dracoderidae": allomalorhagida_dracoderidae,
+  "neocentrophyidae": allomalorhagida_neocentrophyidae,
+  "cateriidae": allomalorhagida_cateriidae,
+  "franciscideridae": allomalorhagida_franciscideridae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
