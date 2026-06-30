@@ -4819,6 +4819,298 @@ const gymnolaemata_chaperiellidae: ColorTheme = { subfamilyColors: {}, breedGrou
 const gymnolaemata_neoeuthyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "neoeuthyridae", className: "Gymnolaemata", orderName: "Unknown", name: "Neoeuthyridae", mainColor: "#2DD4BF", lineageColors: { "neoeuthyridae": "#10B981" } };
 const gymnolaemata_natanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "natanellidae", className: "Gymnolaemata", orderName: "Unknown", name: "Natanellidae", mainColor: "#A3E635", lineageColors: { "natanellidae": "#F59E0B" } };
 
+
+// ── Hexactinellida (79 families) ──
+const hexactinellida_rossellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "rossellidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Rossellidae", mainColor: "#EF4444", lineageColors: { "rossellidae": "#14B8A6" } };
+const hexactinellida_euplectellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "euplectellidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Euplectellidae", mainColor: "#10B981", lineageColors: { "euplectellidae": "#F97316" } };
+const hexactinellida_leucopsacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "leucopsacidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Leucopsacidae", mainColor: "#F59E0B", lineageColors: { "leucopsacidae": "#6366F1" } };
+const hexactinellida_aulocalycidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "aulocalycidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Aulocalycidae", mainColor: "#8B5CF6", lineageColors: { "aulocalycidae": "#84CC16" } };
+const hexactinellida_toomeyospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "toomeyospongiidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Toomeyospongiidae", mainColor: "#EC4899", lineageColors: { "toomeyospongiidae": "#06B6D4" } };
+const hexactinellida_pyruspongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pyruspongiidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Pyruspongiidae", mainColor: "#14B8A6", lineageColors: { "pyruspongiidae": "#D946EF" } };
+const hexactinellida_pseudolanciculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "pseudolanciculidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Pseudolanciculidae", mainColor: "#F97316", lineageColors: { "pseudolanciculidae": "#0EA5E9" } };
+const hexactinellida_brachiospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "brachiospongiidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Brachiospongiidae", mainColor: "#6366F1", lineageColors: { "brachiospongiidae": "#22C55E" } };
+const hexactinellida_stauractinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "stauractinellidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Stauractinellidae", mainColor: "#84CC16", lineageColors: { "stauractinellidae": "#EAB308" } };
+const hexactinellida_lumectospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "lumectospongiidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Lumectospongiidae", mainColor: "#06B6D4", lineageColors: { "lumectospongiidae": "#A855F7" } };
+const hexactinellida_malumispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "malumispongiidae", className: "Hexactinellida", orderName: "Lyssacinosida", name: "Malumispongiidae", mainColor: "#D946EF", lineageColors: { "malumispongiidae": "#FB923C" } };
+const hexactinellida_euretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "euretidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Euretidae", mainColor: "#0EA5E9", lineageColors: { "euretidae": "#2DD4BF" } };
+const hexactinellida_farreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "farreidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Farreidae", mainColor: "#22C55E", lineageColors: { "farreidae": "#A3E635" } };
+const hexactinellida_craticulariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "craticulariidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Craticulariidae", mainColor: "#EAB308", lineageColors: { "craticulariidae": "#38BDF8" } };
+const hexactinellida_tretodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "tretodictyidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Tretodictyidae", mainColor: "#A855F7", lineageColors: { "tretodictyidae": "#3B82F6" } };
+const hexactinellida_cribrospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "cribrospongiidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Cribrospongiidae", mainColor: "#FB923C", lineageColors: { "cribrospongiidae": "#EF4444" } };
+const hexactinellida_aphrocallistidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "aphrocallistidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Aphrocallistidae", mainColor: "#2DD4BF", lineageColors: { "aphrocallistidae": "#10B981" } };
+const hexactinellida_plieolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "plieolitidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Plieolitidae", mainColor: "#A3E635", lineageColors: { "plieolitidae": "#F59E0B" } };
+const hexactinellida_dactylocalycidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "dactylocalycidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Dactylocalycidae", mainColor: "#38BDF8", lineageColors: { "dactylocalycidae": "#8B5CF6" } };
+const hexactinellida_auloplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "auloplacidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Auloplacidae", mainColor: "#3B82F6", lineageColors: { "auloplacidae": "#EC4899" } };
+const hexactinellida_uncinateridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "uncinateridae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Uncinateridae", mainColor: "#EF4444", lineageColors: { "uncinateridae": "#14B8A6" } };
+const hexactinellida_staurodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "staurodermatidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Staurodermatidae", mainColor: "#10B981", lineageColors: { "staurodermatidae": "#F97316" } };
+const hexactinellida_cystispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cystispongiidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Cystispongiidae", mainColor: "#F59E0B", lineageColors: { "cystispongiidae": "#6366F1" } };
+const hexactinellida_pileolitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "pileolitidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Pileolitidae", mainColor: "#8B5CF6", lineageColors: { "pileolitidae": "#84CC16" } };
+const hexactinellida_fieldingiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "fieldingiidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Fieldingiidae", mainColor: "#EC4899", lineageColors: { "fieldingiidae": "#06B6D4" } };
+const hexactinellida_pillaraspongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "pillaraspongiidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Pillaraspongiidae", mainColor: "#14B8A6", lineageColors: { "pillaraspongiidae": "#D946EF" } };
+const hexactinellida_stromatidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "stromatidiidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Stromatidiidae", mainColor: "#F97316", lineageColors: { "stromatidiidae": "#0EA5E9" } };
+const hexactinellida_wareembaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "wareembaiidae", className: "Hexactinellida", orderName: "Sceptrulophora", name: "Wareembaiidae", mainColor: "#6366F1", lineageColors: { "wareembaiidae": "#22C55E" } };
+const hexactinellida_sebargasiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "sebargasiidae", className: "Hexactinellida", orderName: "Unknown", name: "Sebargasiidae", mainColor: "#84CC16", lineageColors: { "sebargasiidae": "#EAB308" } };
+const hexactinellida_colospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "colospongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Colospongiidae", mainColor: "#06B6D4", lineageColors: { "colospongiidae": "#A855F7" } };
+const hexactinellida_celyphiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "celyphiidae", className: "Hexactinellida", orderName: "Unknown", name: "Celyphiidae", mainColor: "#D946EF", lineageColors: { "celyphiidae": "#FB923C" } };
+const hexactinellida_protospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "protospongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Protospongiidae", mainColor: "#0EA5E9", lineageColors: { "protospongiidae": "#2DD4BF" } };
+const hexactinellida_thaumastocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "thaumastocoeliidae", className: "Hexactinellida", orderName: "Unknown", name: "Thaumastocoeliidae", mainColor: "#22C55E", lineageColors: { "thaumastocoeliidae": "#A3E635" } };
+const hexactinellida_dictyospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "dictyospongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Dictyospongiidae", mainColor: "#EAB308", lineageColors: { "dictyospongiidae": "#38BDF8" } };
+const hexactinellida_cystothalamiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "cystothalamiidae", className: "Hexactinellida", orderName: "Unknown", name: "Cystothalamiidae", mainColor: "#A855F7", lineageColors: { "cystothalamiidae": "#3B82F6" } };
+const hexactinellida_hintzespongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "hintzespongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Hintzespongiidae", mainColor: "#FB923C", lineageColors: { "hintzespongiidae": "#EF4444" } };
+const hexactinellida_docodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "docodermatidae", className: "Hexactinellida", orderName: "Unknown", name: "Docodermatidae", mainColor: "#2DD4BF", lineageColors: { "docodermatidae": "#10B981" } };
+const hexactinellida_stereodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "stereodictyidae", className: "Hexactinellida", orderName: "Unknown", name: "Stereodictyidae", mainColor: "#A3E635", lineageColors: { "stereodictyidae": "#F59E0B" } };
+const hexactinellida_leptophragmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "leptophragmatidae", className: "Hexactinellida", orderName: "Unknown", name: "Leptophragmatidae", mainColor: "#38BDF8", lineageColors: { "leptophragmatidae": "#8B5CF6" } };
+const hexactinellida_cliefdenellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cliefdenellidae", className: "Hexactinellida", orderName: "Unknown", name: "Cliefdenellidae", mainColor: "#3B82F6", lineageColors: { "cliefdenellidae": "#EC4899" } };
+const hexactinellida_asthenospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "asthenospongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Asthenospongiidae", mainColor: "#EF4444", lineageColors: { "asthenospongiidae": "#14B8A6" } };
+const hexactinellida_dierespongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dierespongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Dierespongiidae", mainColor: "#10B981", lineageColors: { "dierespongiidae": "#F97316" } };
+const hexactinellida_titusvillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "titusvillidae", className: "Hexactinellida", orderName: "Unknown", name: "Titusvillidae", mainColor: "#F59E0B", lineageColors: { "titusvillidae": "#6366F1" } };
+const hexactinellida_hydnodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "hydnodictyidae", className: "Hexactinellida", orderName: "Unknown", name: "Hydnodictyidae", mainColor: "#8B5CF6", lineageColors: { "hydnodictyidae": "#84CC16" } };
+const hexactinellida_hemidiscellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "hemidiscellidae", className: "Hexactinellida", orderName: "Unknown", name: "Hemidiscellidae", mainColor: "#EC4899", lineageColors: { "hemidiscellidae": "#06B6D4" } };
+const hexactinellida_aglithodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "aglithodictyidae", className: "Hexactinellida", orderName: "Unknown", name: "Aglithodictyidae", mainColor: "#14B8A6", lineageColors: { "aglithodictyidae": "#D946EF" } };
+const hexactinellida_triactinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "triactinellidae", className: "Hexactinellida", orderName: "Unknown", name: "Triactinellidae", mainColor: "#F97316", lineageColors: { "triactinellidae": "#0EA5E9" } };
+const hexactinellida_titusvilliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "titusvilliidae", className: "Hexactinellida", orderName: "Unknown", name: "Titusvilliidae", mainColor: "#6366F1", lineageColors: { "titusvilliidae": "#22C55E" } };
+const hexactinellida_monoraphididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "monoraphididae", className: "Hexactinellida", orderName: "Unknown", name: "Monoraphididae", mainColor: "#84CC16", lineageColors: { "monoraphididae": "#EAB308" } };
+const hexactinellida_coeloscysphiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "coeloscysphiidae", className: "Hexactinellida", orderName: "Unknown", name: "Coeloscysphiidae", mainColor: "#06B6D4", lineageColors: { "coeloscysphiidae": "#A855F7" } };
+const hexactinellida_calypterellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "calypterellidae", className: "Hexactinellida", orderName: "Unknown", name: "Calypterellidae", mainColor: "#D946EF", lineageColors: { "calypterellidae": "#FB923C" } };
+const hexactinellida_multivasculatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "multivasculatidae", className: "Hexactinellida", orderName: "Unknown", name: "Multivasculatidae", mainColor: "#0EA5E9", lineageColors: { "multivasculatidae": "#2DD4BF" } };
+const hexactinellida_pattersoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "pattersoniidae", className: "Hexactinellida", orderName: "Unknown", name: "Pattersoniidae", mainColor: "#22C55E", lineageColors: { "pattersoniidae": "#A3E635" } };
+const hexactinellida_oncotoechidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "oncotoechidae", className: "Hexactinellida", orderName: "Unknown", name: "Oncotoechidae", mainColor: "#EAB308", lineageColors: { "oncotoechidae": "#38BDF8" } };
+const hexactinellida_teganiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "teganiidae", className: "Hexactinellida", orderName: "Unknown", name: "Teganiidae", mainColor: "#A855F7", lineageColors: { "teganiidae": "#3B82F6" } };
+const hexactinellida_keriogastrospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "keriogastrospongiidae", className: "Hexactinellida", orderName: "Unknown", name: "Keriogastrospongiidae", mainColor: "#FB923C", lineageColors: { "keriogastrospongiidae": "#EF4444" } };
+const hexactinellida_uphantenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "uphantenidae", className: "Hexactinellida", orderName: "Unknown", name: "Uphantenidae", mainColor: "#2DD4BF", lineageColors: { "uphantenidae": "#10B981" } };
+const hexactinellida_hyalostellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hyalostellidae", className: "Hexactinellida", orderName: "Unknown", name: "Hyalostellidae", mainColor: "#A3E635", lineageColors: { "hyalostellidae": "#F59E0B" } };
+const hexactinellida_rosellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "rosellidae", className: "Hexactinellida", orderName: "Unknown", name: "Rosellidae", mainColor: "#38BDF8", lineageColors: { "rosellidae": "#8B5CF6" } };
+const hexactinellida_cypellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "cypellidae", className: "Hexactinellida", orderName: "Unknown", name: "Cypellidae", mainColor: "#3B82F6", lineageColors: { "cypellidae": "#EC4899" } };
+const hexactinellida_hyalonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "hyalonematidae", className: "Hexactinellida", orderName: "Amphidiscosida", name: "Hyalonematidae", mainColor: "#EF4444", lineageColors: { "hyalonematidae": "#14B8A6" } };
+const hexactinellida_pheronematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "pheronematidae", className: "Hexactinellida", orderName: "Amphidiscosida", name: "Pheronematidae", mainColor: "#10B981", lineageColors: { "pheronematidae": "#F97316" } };
+const hexactinellida_pelicaspongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pelicaspongiidae", className: "Hexactinellida", orderName: "Amphidiscosida", name: "Pelicaspongiidae", mainColor: "#F59E0B", lineageColors: { "pelicaspongiidae": "#6366F1" } };
+const hexactinellida_stiodermatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "stiodermatidae", className: "Hexactinellida", orderName: "Amphidiscosida", name: "Stiodermatidae", mainColor: "#8B5CF6", lineageColors: { "stiodermatidae": "#84CC16" } };
+const hexactinellida_monorhaphididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "monorhaphididae", className: "Hexactinellida", orderName: "Amphidiscosida", name: "Monorhaphididae", mainColor: "#EC4899", lineageColors: { "monorhaphididae": "#06B6D4" } };
+const hexactinellida_ventriculitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "ventriculitidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Ventriculitidae", mainColor: "#14B8A6", lineageColors: { "ventriculitidae": "#D946EF" } };
+const hexactinellida_callodictyonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "callodictyonidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Callodictyonidae", mainColor: "#F97316", lineageColors: { "callodictyonidae": "#0EA5E9" } };
+const hexactinellida_camerospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "camerospongiidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Camerospongiidae", mainColor: "#6366F1", lineageColors: { "camerospongiidae": "#22C55E" } };
+const hexactinellida_becksiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "becksiidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Becksiidae", mainColor: "#84CC16", lineageColors: { "becksiidae": "#EAB308" } };
+const hexactinellida_callodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "callodictyidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Callodictyidae", mainColor: "#06B6D4", lineageColors: { "callodictyidae": "#A855F7" } };
+const hexactinellida_coeloptychiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "coeloptychiidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Coeloptychiidae", mainColor: "#D946EF", lineageColors: { "coeloptychiidae": "#FB923C" } };
+const hexactinellida_aulocystidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "aulocystidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Aulocystidae", mainColor: "#0EA5E9", lineageColors: { "aulocystidae": "#2DD4BF" } };
+const hexactinellida_cypelliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "cypelliidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Cypelliidae", mainColor: "#22C55E", lineageColors: { "cypelliidae": "#A3E635" } };
+const hexactinellida_diapleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "diapleuridae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Diapleuridae", mainColor: "#EAB308", lineageColors: { "diapleuridae": "#38BDF8" } };
+const hexactinellida_sporadopylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "sporadopylidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Sporadopylidae", mainColor: "#A855F7", lineageColors: { "sporadopylidae": "#3B82F6" } };
+const hexactinellida_coeloptychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "coeloptychidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Coeloptychidae", mainColor: "#FB923C", lineageColors: { "coeloptychidae": "#EF4444" } };
+const hexactinellida_calyptrellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "calyptrellidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Calyptrellidae", mainColor: "#2DD4BF", lineageColors: { "calyptrellidae": "#10B981" } };
+const hexactinellida_coscinoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "coscinoporidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Coscinoporidae", mainColor: "#A3E635", lineageColors: { "coscinoporidae": "#F59E0B" } };
+const hexactinellida_polyblastidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "polyblastidiidae", className: "Hexactinellida", orderName: "Lychniscosida", name: "Polyblastidiidae", mainColor: "#38BDF8", lineageColors: { "polyblastidiidae": "#8B5CF6" } };
+
+
+// ── Demospongiae (150 families) ──
+const demospongiae_microcionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "microcionidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Microcionidae", mainColor: "#EF4444", lineageColors: { "microcionidae": "#14B8A6" } };
+const demospongiae_hymedesmiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "hymedesmiidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Hymedesmiidae", mainColor: "#10B981", lineageColors: { "hymedesmiidae": "#F97316" } };
+const demospongiae_mycalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "mycalidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Mycalidae", mainColor: "#F59E0B", lineageColors: { "mycalidae": "#6366F1" } };
+const demospongiae_cladorhizidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "cladorhizidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Cladorhizidae", mainColor: "#8B5CF6", lineageColors: { "cladorhizidae": "#84CC16" } };
+const demospongiae_coelosphaeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "coelosphaeridae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Coelosphaeridae", mainColor: "#EC4899", lineageColors: { "coelosphaeridae": "#06B6D4" } };
+const demospongiae_myxillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "myxillidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Myxillidae", mainColor: "#14B8A6", lineageColors: { "myxillidae": "#D946EF" } };
+const demospongiae_acarnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "acarnidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Acarnidae", mainColor: "#F97316", lineageColors: { "acarnidae": "#0EA5E9" } };
+const demospongiae_tedaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "tedaniidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Tedaniidae", mainColor: "#6366F1", lineageColors: { "tedaniidae": "#22C55E" } };
+const demospongiae_latrunculiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "latrunculiidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Latrunculiidae", mainColor: "#84CC16", lineageColors: { "latrunculiidae": "#EAB308" } };
+const demospongiae_chondropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "chondropsidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Chondropsidae", mainColor: "#06B6D4", lineageColors: { "chondropsidae": "#A855F7" } };
+const demospongiae_crellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "crellidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Crellidae", mainColor: "#D946EF", lineageColors: { "crellidae": "#FB923C" } };
+const demospongiae_esperiopsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "esperiopsidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Esperiopsidae", mainColor: "#0EA5E9", lineageColors: { "esperiopsidae": "#2DD4BF" } };
+const demospongiae_isodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "isodictyidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Isodictyidae", mainColor: "#22C55E", lineageColors: { "isodictyidae": "#A3E635" } };
+const demospongiae_crambeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "crambeidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Crambeidae", mainColor: "#EAB308", lineageColors: { "crambeidae": "#38BDF8" } };
+const demospongiae_iotrochotidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "iotrochotidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Iotrochotidae", mainColor: "#A855F7", lineageColors: { "iotrochotidae": "#3B82F6" } };
+const demospongiae_podospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "podospongiidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Podospongiidae", mainColor: "#FB923C", lineageColors: { "podospongiidae": "#EF4444" } };
+const demospongiae_guitarridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "guitarridae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Guitarridae", mainColor: "#2DD4BF", lineageColors: { "guitarridae": "#10B981" } };
+const demospongiae_dendoricellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "dendoricellidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Dendoricellidae", mainColor: "#A3E635", lineageColors: { "dendoricellidae": "#F59E0B" } };
+const demospongiae_phellodermidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "phellodermidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Phellodermidae", mainColor: "#38BDF8", lineageColors: { "phellodermidae": "#8B5CF6" } };
+const demospongiae_desmacididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "desmacididae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Desmacididae", mainColor: "#3B82F6", lineageColors: { "desmacididae": "#EC4899" } };
+const demospongiae_coelocarteriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "coelocarteriidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Coelocarteriidae", mainColor: "#EF4444", lineageColors: { "coelocarteriidae": "#14B8A6" } };
+const demospongiae_desmoxyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "desmoxyidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Desmoxyidae", mainColor: "#10B981", lineageColors: { "desmoxyidae": "#F97316" } };
+const demospongiae_amphilectidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "amphilectidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Amphilectidae", mainColor: "#F59E0B", lineageColors: { "amphilectidae": "#6366F1" } };
+const demospongiae_plocamiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "plocamiidae", className: "Demospongiae", orderName: "Poecilosclerida", name: "Plocamiidae", mainColor: "#8B5CF6", lineageColors: { "plocamiidae": "#84CC16" } };
+const demospongiae_ancorinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "ancorinidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Ancorinidae", mainColor: "#EC4899", lineageColors: { "ancorinidae": "#06B6D4" } };
+const demospongiae_geodiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "geodiidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Geodiidae", mainColor: "#14B8A6", lineageColors: { "geodiidae": "#D946EF" } };
+const demospongiae_tetillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "tetillidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Tetillidae", mainColor: "#F97316", lineageColors: { "tetillidae": "#0EA5E9" } };
+const demospongiae_theonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "theonellidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Theonellidae", mainColor: "#6366F1", lineageColors: { "theonellidae": "#22C55E" } };
+const demospongiae_corallistidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "corallistidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Corallistidae", mainColor: "#84CC16", lineageColors: { "corallistidae": "#EAB308" } };
+const demospongiae_vulcanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "vulcanellidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Vulcanellidae", mainColor: "#06B6D4", lineageColors: { "vulcanellidae": "#A855F7" } };
+const demospongiae_pachastrellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "pachastrellidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Pachastrellidae", mainColor: "#D946EF", lineageColors: { "pachastrellidae": "#FB923C" } };
+const demospongiae_theneidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "theneidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Theneidae", mainColor: "#0EA5E9", lineageColors: { "theneidae": "#2DD4BF" } };
+const demospongiae_scleritodermidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "scleritodermidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Scleritodermidae", mainColor: "#22C55E", lineageColors: { "scleritodermidae": "#A3E635" } };
+const demospongiae_thoosidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "thoosidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Thoosidae", mainColor: "#EAB308", lineageColors: { "thoosidae": "#38BDF8" } };
+const demospongiae_azoricidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "azoricidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Azoricidae", mainColor: "#A855F7", lineageColors: { "azoricidae": "#3B82F6" } };
+const demospongiae_phymatellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "phymatellidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Phymatellidae", mainColor: "#FB923C", lineageColors: { "phymatellidae": "#EF4444" } };
+const demospongiae_phymaraphiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "phymaraphiniidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Phymaraphiniidae", mainColor: "#2DD4BF", lineageColors: { "phymaraphiniidae": "#10B981" } };
+const demospongiae_neopeltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "neopeltidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Neopeltidae", mainColor: "#A3E635", lineageColors: { "neopeltidae": "#F59E0B" } };
+const demospongiae_siphonidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "siphonidiidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Siphonidiidae", mainColor: "#38BDF8", lineageColors: { "siphonidiidae": "#8B5CF6" } };
+const demospongiae_pleromidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "pleromidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Pleromidae", mainColor: "#3B82F6", lineageColors: { "pleromidae": "#EC4899" } };
+const demospongiae_macandrewiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "macandrewiidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Macandrewiidae", mainColor: "#EF4444", lineageColors: { "macandrewiidae": "#14B8A6" } };
+const demospongiae_thrombidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "thrombidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Thrombidae", mainColor: "#10B981", lineageColors: { "thrombidae": "#F97316" } };
+const demospongiae_isoraphiniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "isoraphiniidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Isoraphiniidae", mainColor: "#F59E0B", lineageColors: { "isoraphiniidae": "#6366F1" } };
+const demospongiae_paelospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "paelospongiidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Paelospongiidae", mainColor: "#8B5CF6", lineageColors: { "paelospongiidae": "#84CC16" } };
+const demospongiae_spirasigmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "spirasigmidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Spirasigmidae", mainColor: "#EC4899", lineageColors: { "spirasigmidae": "#06B6D4" } };
+const demospongiae_cephaloraphiditidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cephaloraphiditidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Cephaloraphiditidae", mainColor: "#14B8A6", lineageColors: { "cephaloraphiditidae": "#D946EF" } };
+const demospongiae_costamorphiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "costamorphiidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Costamorphiidae", mainColor: "#F97316", lineageColors: { "costamorphiidae": "#0EA5E9" } };
+const demospongiae_scolioraphididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "scolioraphididae", className: "Demospongiae", orderName: "Tetractinellida", name: "Scolioraphididae", mainColor: "#6366F1", lineageColors: { "scolioraphididae": "#22C55E" } };
+const demospongiae_samidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "samidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Samidae", mainColor: "#84CC16", lineageColors: { "samidae": "#EAB308" } };
+const demospongiae_stupendidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "stupendidae", className: "Demospongiae", orderName: "Tetractinellida", name: "Stupendidae", mainColor: "#06B6D4", lineageColors: { "stupendidae": "#A855F7" } };
+const demospongiae_chalinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "chalinidae", className: "Demospongiae", orderName: "Haplosclerida", name: "Chalinidae", mainColor: "#D946EF", lineageColors: { "chalinidae": "#FB923C" } };
+const demospongiae_callyspongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "callyspongiidae", className: "Demospongiae", orderName: "Haplosclerida", name: "Callyspongiidae", mainColor: "#0EA5E9", lineageColors: { "callyspongiidae": "#2DD4BF" } };
+const demospongiae_niphatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "niphatidae", className: "Demospongiae", orderName: "Haplosclerida", name: "Niphatidae", mainColor: "#22C55E", lineageColors: { "niphatidae": "#A3E635" } };
+const demospongiae_phloeodictyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "phloeodictyidae", className: "Demospongiae", orderName: "Haplosclerida", name: "Phloeodictyidae", mainColor: "#EAB308", lineageColors: { "phloeodictyidae": "#38BDF8" } };
+const demospongiae_petrosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "petrosiidae", className: "Demospongiae", orderName: "Haplosclerida", name: "Petrosiidae", mainColor: "#A855F7", lineageColors: { "petrosiidae": "#3B82F6" } };
+const demospongiae_calcifibrospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "calcifibrospongiidae", className: "Demospongiae", orderName: "Haplosclerida", name: "Calcifibrospongiidae", mainColor: "#FB923C", lineageColors: { "calcifibrospongiidae": "#EF4444" } };
+const demospongiae_spongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "spongiidae", className: "Demospongiae", orderName: "Dictyoceratida", name: "Spongiidae", mainColor: "#2DD4BF", lineageColors: { "spongiidae": "#10B981" } };
+const demospongiae_thorectidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "thorectidae", className: "Demospongiae", orderName: "Dictyoceratida", name: "Thorectidae", mainColor: "#A3E635", lineageColors: { "thorectidae": "#F59E0B" } };
+const demospongiae_irciniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "irciniidae", className: "Demospongiae", orderName: "Dictyoceratida", name: "Irciniidae", mainColor: "#38BDF8", lineageColors: { "irciniidae": "#8B5CF6" } };
+const demospongiae_dysideidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "dysideidae", className: "Demospongiae", orderName: "Dictyoceratida", name: "Dysideidae", mainColor: "#3B82F6", lineageColors: { "dysideidae": "#EC4899" } };
+const demospongiae_verticillitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "verticillitidae", className: "Demospongiae", orderName: "Dictyoceratida", name: "Verticillitidae", mainColor: "#EF4444", lineageColors: { "verticillitidae": "#14B8A6" } };
+const demospongiae_parastylothalamiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "parastylothalamiidae", className: "Demospongiae", orderName: "Dictyoceratida", name: "Parastylothalamiidae", mainColor: "#10B981", lineageColors: { "parastylothalamiidae": "#F97316" } };
+const demospongiae_raspailiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "raspailiidae", className: "Demospongiae", orderName: "Axinellida", name: "Raspailiidae", mainColor: "#F59E0B", lineageColors: { "raspailiidae": "#6366F1" } };
+const demospongiae_axinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "axinellidae", className: "Demospongiae", orderName: "Axinellida", name: "Axinellidae", mainColor: "#8B5CF6", lineageColors: { "axinellidae": "#84CC16" } };
+const demospongiae_stelligeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "stelligeridae", className: "Demospongiae", orderName: "Axinellida", name: "Stelligeridae", mainColor: "#EC4899", lineageColors: { "stelligeridae": "#06B6D4" } };
+const demospongiae_heteroxyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "heteroxyidae", className: "Demospongiae", orderName: "Axinellida", name: "Heteroxyidae", mainColor: "#14B8A6", lineageColors: { "heteroxyidae": "#D946EF" } };
+const demospongiae_milleporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "milleporellidae", className: "Demospongiae", orderName: "Axinellida", name: "Milleporellidae", mainColor: "#F97316", lineageColors: { "milleporellidae": "#0EA5E9" } };
+const demospongiae_actinostromariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "actinostromariidae", className: "Demospongiae", orderName: "Axinellida", name: "Actinostromariidae", mainColor: "#6366F1", lineageColors: { "actinostromariidae": "#22C55E" } };
+const demospongiae_cladocoropsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "cladocoropsidae", className: "Demospongiae", orderName: "Axinellida", name: "Cladocoropsidae", mainColor: "#84CC16", lineageColors: { "cladocoropsidae": "#EAB308" } };
+const demospongiae_syringostrominidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "syringostrominidae", className: "Demospongiae", orderName: "Axinellida", name: "Syringostrominidae", mainColor: "#06B6D4", lineageColors: { "syringostrominidae": "#A855F7" } };
+const demospongiae_halichondriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "halichondriidae", className: "Demospongiae", orderName: "Suberitida", name: "Halichondriidae", mainColor: "#D946EF", lineageColors: { "halichondriidae": "#FB923C" } };
+const demospongiae_suberitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "suberitidae", className: "Demospongiae", orderName: "Suberitida", name: "Suberitidae", mainColor: "#0EA5E9", lineageColors: { "suberitidae": "#2DD4BF" } };
+const demospongiae_stylocordylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "stylocordylidae", className: "Demospongiae", orderName: "Suberitida", name: "Stylocordylidae", mainColor: "#22C55E", lineageColors: { "stylocordylidae": "#A3E635" } };
+const demospongiae_preperonidellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "preperonidellidae", className: "Demospongiae", orderName: "Agelasida", name: "Preperonidellidae", mainColor: "#EAB308", lineageColors: { "preperonidellidae": "#38BDF8" } };
+const demospongiae_agelasidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "agelasidae", className: "Demospongiae", orderName: "Agelasida", name: "Agelasidae", mainColor: "#A855F7", lineageColors: { "agelasidae": "#3B82F6" } };
+const demospongiae_solenolmiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "solenolmiidae", className: "Demospongiae", orderName: "Agelasida", name: "Solenolmiidae", mainColor: "#FB923C", lineageColors: { "solenolmiidae": "#EF4444" } };
+const demospongiae_stellispongiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "stellispongiellidae", className: "Demospongiae", orderName: "Agelasida", name: "Stellispongiellidae", mainColor: "#2DD4BF", lineageColors: { "stellispongiellidae": "#10B981" } };
+const demospongiae_hymerhabdiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "hymerhabdiidae", className: "Demospongiae", orderName: "Agelasida", name: "Hymerhabdiidae", mainColor: "#A3E635", lineageColors: { "hymerhabdiidae": "#F59E0B" } };
+const demospongiae_guadalupiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "guadalupiidae", className: "Demospongiae", orderName: "Agelasida", name: "Guadalupiidae", mainColor: "#38BDF8", lineageColors: { "guadalupiidae": "#8B5CF6" } };
+const demospongiae_auriculospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "auriculospongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Auriculospongiidae", mainColor: "#3B82F6", lineageColors: { "auriculospongiidae": "#EC4899" } };
+const demospongiae_virgolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "virgolidae", className: "Demospongiae", orderName: "Agelasida", name: "Virgolidae", mainColor: "#EF4444", lineageColors: { "virgolidae": "#14B8A6" } };
+const demospongiae_aphrosalpingidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "aphrosalpingidae", className: "Demospongiae", orderName: "Agelasida", name: "Aphrosalpingidae", mainColor: "#10B981", lineageColors: { "aphrosalpingidae": "#F97316" } };
+const demospongiae_radiotrabeculoporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "radiotrabeculoporidae", className: "Demospongiae", orderName: "Agelasida", name: "Radiotrabeculoporidae", mainColor: "#F59E0B", lineageColors: { "radiotrabeculoporidae": "#6366F1" } };
+const demospongiae_astroscleridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "astroscleridae", className: "Demospongiae", orderName: "Agelasida", name: "Astroscleridae", mainColor: "#8B5CF6", lineageColors: { "astroscleridae": "#84CC16" } };
+const demospongiae_girtyocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "girtyocoeliidae", className: "Demospongiae", orderName: "Agelasida", name: "Girtyocoeliidae", mainColor: "#EC4899", lineageColors: { "girtyocoeliidae": "#06B6D4" } };
+const demospongiae_intrasporeocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "intrasporeocoeliidae", className: "Demospongiae", orderName: "Agelasida", name: "Intrasporeocoeliidae", mainColor: "#14B8A6", lineageColors: { "intrasporeocoeliidae": "#D946EF" } };
+const demospongiae_maeandrostiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "maeandrostiidae", className: "Demospongiae", orderName: "Agelasida", name: "Maeandrostiidae", mainColor: "#F97316", lineageColors: { "maeandrostiidae": "#0EA5E9" } };
+const demospongiae_sestrostomellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sestrostomellidae", className: "Demospongiae", orderName: "Agelasida", name: "Sestrostomellidae", mainColor: "#6366F1", lineageColors: { "sestrostomellidae": "#22C55E" } };
+const demospongiae_tabasiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "tabasiidae", className: "Demospongiae", orderName: "Agelasida", name: "Tabasiidae", mainColor: "#84CC16", lineageColors: { "tabasiidae": "#EAB308" } };
+const demospongiae_cryptocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "cryptocoeliidae", className: "Demospongiae", orderName: "Agelasida", name: "Cryptocoeliidae", mainColor: "#06B6D4", lineageColors: { "cryptocoeliidae": "#A855F7" } };
+const demospongiae_ceratoporellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "ceratoporellidae", className: "Demospongiae", orderName: "Agelasida", name: "Ceratoporellidae", mainColor: "#D946EF", lineageColors: { "ceratoporellidae": "#FB923C" } };
+const demospongiae_pharetrospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pharetrospongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Pharetrospongiidae", mainColor: "#0EA5E9", lineageColors: { "pharetrospongiidae": "#2DD4BF" } };
+const demospongiae_catenispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "catenispongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Catenispongiidae", mainColor: "#22C55E", lineageColors: { "catenispongiidae": "#A3E635" } };
+const demospongiae_salzburgiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "salzburgiidae", className: "Demospongiae", orderName: "Agelasida", name: "Salzburgiidae", mainColor: "#EAB308", lineageColors: { "salzburgiidae": "#38BDF8" } };
+const demospongiae_exotubispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "exotubispongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Exotubispongiidae", mainColor: "#A855F7", lineageColors: { "exotubispongiidae": "#3B82F6" } };
+const demospongiae_noritubispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "noritubispongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Noritubispongiidae", mainColor: "#FB923C", lineageColors: { "noritubispongiidae": "#EF4444" } };
+const demospongiae_glomocystospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "glomocystospongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Glomocystospongiidae", mainColor: "#2DD4BF", lineageColors: { "glomocystospongiidae": "#10B981" } };
+const demospongiae_sphaeropontiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "sphaeropontiidae", className: "Demospongiae", orderName: "Agelasida", name: "Sphaeropontiidae", mainColor: "#A3E635", lineageColors: { "sphaeropontiidae": "#F59E0B" } };
+const demospongiae_palermocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "palermocoeliidae", className: "Demospongiae", orderName: "Agelasida", name: "Palermocoeliidae", mainColor: "#38BDF8", lineageColors: { "palermocoeliidae": "#8B5CF6" } };
+const demospongiae_globucatenulaiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "globucatenulaiidae", className: "Demospongiae", orderName: "Agelasida", name: "Globucatenulaiidae", mainColor: "#3B82F6", lineageColors: { "globucatenulaiidae": "#EC4899" } };
+const demospongiae_fissispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "fissispongiidae", className: "Demospongiae", orderName: "Agelasida", name: "Fissispongiidae", mainColor: "#EF4444", lineageColors: { "fissispongiidae": "#14B8A6" } };
+const demospongiae_olangocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "olangocoeliidae", className: "Demospongiae", orderName: "Agelasida", name: "Olangocoeliidae", mainColor: "#10B981", lineageColors: { "olangocoeliidae": "#F97316" } };
+const demospongiae_spongillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "spongillidae", className: "Demospongiae", orderName: "Spongillida", name: "Spongillidae", mainColor: "#F59E0B", lineageColors: { "spongillidae": "#6366F1" } };
+const demospongiae_potamolepidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "potamolepidae", className: "Demospongiae", orderName: "Spongillida", name: "Potamolepidae", mainColor: "#8B5CF6", lineageColors: { "potamolepidae": "#84CC16" } };
+const demospongiae_metaniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "metaniidae", className: "Demospongiae", orderName: "Spongillida", name: "Metaniidae", mainColor: "#EC4899", lineageColors: { "metaniidae": "#06B6D4" } };
+const demospongiae_lubomirskiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lubomirskiidae", className: "Demospongiae", orderName: "Spongillida", name: "Lubomirskiidae", mainColor: "#14B8A6", lineageColors: { "lubomirskiidae": "#D946EF" } };
+const demospongiae_malawispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "malawispongiidae", className: "Demospongiae", orderName: "Spongillida", name: "Malawispongiidae", mainColor: "#F97316", lineageColors: { "malawispongiidae": "#0EA5E9" } };
+const demospongiae_palaeospongillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "palaeospongillidae", className: "Demospongiae", orderName: "Spongillida", name: "Palaeospongillidae", mainColor: "#6366F1", lineageColors: { "palaeospongillidae": "#22C55E" } };
+const demospongiae_metschnikowiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "metschnikowiidae", className: "Demospongiae", orderName: "Spongillida", name: "Metschnikowiidae", mainColor: "#84CC16", lineageColors: { "metschnikowiidae": "#EAB308" } };
+const demospongiae_clionaidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "clionaidae", className: "Demospongiae", orderName: "Clionaida", name: "Clionaidae", mainColor: "#06B6D4", lineageColors: { "clionaidae": "#A855F7" } };
+const demospongiae_spirastrellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "spirastrellidae", className: "Demospongiae", orderName: "Clionaida", name: "Spirastrellidae", mainColor: "#D946EF", lineageColors: { "spirastrellidae": "#FB923C" } };
+const demospongiae_placospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "placospongiidae", className: "Demospongiae", orderName: "Clionaida", name: "Placospongiidae", mainColor: "#0EA5E9", lineageColors: { "placospongiidae": "#2DD4BF" } };
+const demospongiae_acanthochaetetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "acanthochaetetidae", className: "Demospongiae", orderName: "Clionaida", name: "Acanthochaetetidae", mainColor: "#22C55E", lineageColors: { "acanthochaetetidae": "#A3E635" } };
+const demospongiae_tethyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "tethyidae", className: "Demospongiae", orderName: "Tethyida", name: "Tethyidae", mainColor: "#EAB308", lineageColors: { "tethyidae": "#38BDF8" } };
+const demospongiae_timeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "timeidae", className: "Demospongiae", orderName: "Tethyida", name: "Timeidae", mainColor: "#A855F7", lineageColors: { "timeidae": "#3B82F6" } };
+const demospongiae_hemiasterellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "hemiasterellidae", className: "Demospongiae", orderName: "Tethyida", name: "Hemiasterellidae", mainColor: "#FB923C", lineageColors: { "hemiasterellidae": "#EF4444" } };
+const demospongiae_bubaridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "bubaridae", className: "Demospongiae", orderName: "Bubarida", name: "Bubaridae", mainColor: "#2DD4BF", lineageColors: { "bubaridae": "#10B981" } };
+const demospongiae_dictyonellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "dictyonellidae", className: "Demospongiae", orderName: "Bubarida", name: "Dictyonellidae", mainColor: "#A3E635", lineageColors: { "dictyonellidae": "#F59E0B" } };
+const demospongiae_desmanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "desmanthidae", className: "Demospongiae", orderName: "Bubarida", name: "Desmanthidae", mainColor: "#38BDF8", lineageColors: { "desmanthidae": "#8B5CF6" } };
+const demospongiae_polymastiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "polymastiidae", className: "Demospongiae", orderName: "Polymastiida", name: "Polymastiidae", mainColor: "#3B82F6", lineageColors: { "polymastiidae": "#EC4899" } };
+const demospongiae_aplysinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "aplysinidae", className: "Demospongiae", orderName: "Verongiida", name: "Aplysinidae", mainColor: "#EF4444", lineageColors: { "aplysinidae": "#14B8A6" } };
+const demospongiae_ianthellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "ianthellidae", className: "Demospongiae", orderName: "Verongiida", name: "Ianthellidae", mainColor: "#10B981", lineageColors: { "ianthellidae": "#F97316" } };
+const demospongiae_aplysinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "aplysinellidae", className: "Demospongiae", orderName: "Verongiida", name: "Aplysinellidae", mainColor: "#F59E0B", lineageColors: { "aplysinellidae": "#6366F1" } };
+const demospongiae_vauxiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "vauxiidae", className: "Demospongiae", orderName: "Verongiida", name: "Vauxiidae", mainColor: "#8B5CF6", lineageColors: { "vauxiidae": "#84CC16" } };
+const demospongiae_pseudoceratinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "pseudoceratinidae", className: "Demospongiae", orderName: "Verongiida", name: "Pseudoceratinidae", mainColor: "#EC4899", lineageColors: { "pseudoceratinidae": "#06B6D4" } };
+const demospongiae_ernstillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "ernstillidae", className: "Demospongiae", orderName: "Verongiida", name: "Ernstillidae", mainColor: "#14B8A6", lineageColors: { "ernstillidae": "#D946EF" } };
+const demospongiae_biemnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "biemnidae", className: "Demospongiae", orderName: "Biemnida", name: "Biemnidae", mainColor: "#F97316", lineageColors: { "biemnidae": "#0EA5E9" } };
+const demospongiae_rhabderemiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "rhabderemiidae", className: "Demospongiae", orderName: "Biemnida", name: "Rhabderemiidae", mainColor: "#6366F1", lineageColors: { "rhabderemiidae": "#22C55E" } };
+const demospongiae_darwinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "darwinellidae", className: "Demospongiae", orderName: "Dendroceratida", name: "Darwinellidae", mainColor: "#84CC16", lineageColors: { "darwinellidae": "#EAB308" } };
+const demospongiae_dictyodendrillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "dictyodendrillidae", className: "Demospongiae", orderName: "Dendroceratida", name: "Dictyodendrillidae", mainColor: "#06B6D4", lineageColors: { "dictyodendrillidae": "#A855F7" } };
+const demospongiae_hamacanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "hamacanthidae", className: "Demospongiae", orderName: "Merliida", name: "Hamacanthidae", mainColor: "#D946EF", lineageColors: { "hamacanthidae": "#FB923C" } };
+const demospongiae_merliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "merliidae", className: "Demospongiae", orderName: "Merliida", name: "Merliidae", mainColor: "#0EA5E9", lineageColors: { "merliidae": "#2DD4BF" } };
+const demospongiae_halisarcidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "halisarcidae", className: "Demospongiae", orderName: "Chondrillida", name: "Halisarcidae", mainColor: "#22C55E", lineageColors: { "halisarcidae": "#A3E635" } };
+const demospongiae_chondrillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "chondrillidae", className: "Demospongiae", orderName: "Chondrillida", name: "Chondrillidae", mainColor: "#EAB308", lineageColors: { "chondrillidae": "#38BDF8" } };
+const demospongiae_scopalinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "scopalinidae", className: "Demospongiae", orderName: "Scopalinida", name: "Scopalinidae", mainColor: "#A855F7", lineageColors: { "scopalinidae": "#3B82F6" } };
+const demospongiae_desmacellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "desmacellidae", className: "Demospongiae", orderName: "Desmacellida", name: "Desmacellidae", mainColor: "#FB923C", lineageColors: { "desmacellidae": "#EF4444" } };
+const demospongiae_vetulinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "vetulinidae", className: "Demospongiae", orderName: "Sphaerocladina", name: "Vetulinidae", mainColor: "#2DD4BF", lineageColors: { "vetulinidae": "#10B981" } };
+const demospongiae_lecanellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "lecanellidae", className: "Demospongiae", orderName: "Sphaerocladina", name: "Lecanellidae", mainColor: "#A3E635", lineageColors: { "lecanellidae": "#F59E0B" } };
+const demospongiae_leiodorellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "leiodorellidae", className: "Demospongiae", orderName: "Unknown", name: "Leiodorellidae", mainColor: "#38BDF8", lineageColors: { "leiodorellidae": "#8B5CF6" } };
+const demospongiae_calthropellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "calthropellidae", className: "Demospongiae", orderName: "Unknown", name: "Calthropellidae", mainColor: "#3B82F6", lineageColors: { "calthropellidae": "#EC4899" } };
+const demospongiae_choanitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "choanitidae", className: "Demospongiae", orderName: "Unknown", name: "Choanitidae", mainColor: "#EF4444", lineageColors: { "choanitidae": "#14B8A6" } };
+const demospongiae_sigmaxinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "sigmaxinellidae", className: "Demospongiae", orderName: "Unknown", name: "Sigmaxinellidae", mainColor: "#10B981", lineageColors: { "sigmaxinellidae": "#F97316" } };
+const demospongiae_nepheliospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "nepheliospongiidae", className: "Demospongiae", orderName: "Unknown", name: "Nepheliospongiidae", mainColor: "#F59E0B", lineageColors: { "nepheliospongiidae": "#6366F1" } };
+const demospongiae_newellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "newellidae", className: "Demospongiae", orderName: "Unknown", name: "Newellidae", mainColor: "#8B5CF6", lineageColors: { "newellidae": "#84CC16" } };
+const demospongiae_euskadiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "euskadiellidae", className: "Demospongiae", orderName: "Unknown", name: "Euskadiellidae", mainColor: "#EC4899", lineageColors: { "euskadiellidae": "#06B6D4" } };
+const demospongiae_neuroporidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "neuroporidae", className: "Demospongiae", orderName: "Unknown", name: "Neuroporidae", mainColor: "#14B8A6", lineageColors: { "neuroporidae": "#D946EF" } };
+const demospongiae_actinostromarianinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "actinostromarianinidae", className: "Demospongiae", orderName: "Unknown", name: "Actinostromarianinidae", mainColor: "#F97316", lineageColors: { "actinostromarianinidae": "#0EA5E9" } };
+const demospongiae_micricionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "micricionidae", className: "Demospongiae", orderName: "Unknown", name: "Micricionidae", mainColor: "#6366F1", lineageColors: { "micricionidae": "#22C55E" } };
+const demospongiae_chondrosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "chondrosiidae", className: "Demospongiae", orderName: "Chondrosiida", name: "Chondrosiidae", mainColor: "#84CC16", lineageColors: { "chondrosiidae": "#EAB308" } };
+const demospongiae_trachycladidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "trachycladidae", className: "Demospongiae", orderName: "Trachycladida", name: "Trachycladidae", mainColor: "#06B6D4", lineageColors: { "trachycladidae": "#A855F7" } };
+
+
+// ── Calcarea (49 families) ──
+const calcarea_grantiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "grantiidae", className: "Calcarea", orderName: "Leucosolenida", name: "Grantiidae", mainColor: "#EF4444", lineageColors: { "grantiidae": "#14B8A6" } };
+const calcarea_syconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "syconidae", className: "Calcarea", orderName: "Leucosolenida", name: "Syconidae", mainColor: "#10B981", lineageColors: { "syconidae": "#F97316" } };
+const calcarea_heteropiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "heteropiidae", className: "Calcarea", orderName: "Leucosolenida", name: "Heteropiidae", mainColor: "#F59E0B", lineageColors: { "heteropiidae": "#6366F1" } };
+const calcarea_amphoriscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "amphoriscidae", className: "Calcarea", orderName: "Leucosolenida", name: "Amphoriscidae", mainColor: "#8B5CF6", lineageColors: { "amphoriscidae": "#84CC16" } };
+const calcarea_leucosoleniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "leucosoleniidae", className: "Calcarea", orderName: "Leucosolenida", name: "Leucosoleniidae", mainColor: "#EC4899", lineageColors: { "leucosoleniidae": "#06B6D4" } };
+const calcarea_lelapiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lelapiidae", className: "Calcarea", orderName: "Leucosolenida", name: "Lelapiidae", mainColor: "#14B8A6", lineageColors: { "lelapiidae": "#D946EF" } };
+const calcarea_achramorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "achramorphidae", className: "Calcarea", orderName: "Leucosolenida", name: "Achramorphidae", mainColor: "#F97316", lineageColors: { "achramorphidae": "#0EA5E9" } };
+const calcarea_sycanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "sycanthidae", className: "Calcarea", orderName: "Leucosolenida", name: "Sycanthidae", mainColor: "#6366F1", lineageColors: { "sycanthidae": "#22C55E" } };
+const calcarea_jenkinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "jenkinidae", className: "Calcarea", orderName: "Leucosolenida", name: "Jenkinidae", mainColor: "#84CC16", lineageColors: { "jenkinidae": "#EAB308" } };
+const calcarea_clathrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "clathrinidae", className: "Calcarea", orderName: "Clathrinida", name: "Clathrinidae", mainColor: "#06B6D4", lineageColors: { "clathrinidae": "#A855F7" } };
+const calcarea_dendyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "dendyidae", className: "Calcarea", orderName: "Clathrinida", name: "Dendyidae", mainColor: "#D946EF", lineageColors: { "dendyidae": "#FB923C" } };
+const calcarea_leucettidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "leucettidae", className: "Calcarea", orderName: "Clathrinida", name: "Leucettidae", mainColor: "#0EA5E9", lineageColors: { "leucettidae": "#2DD4BF" } };
+const calcarea_leucascidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "leucascidae", className: "Calcarea", orderName: "Clathrinida", name: "Leucascidae", mainColor: "#22C55E", lineageColors: { "leucascidae": "#A3E635" } };
+const calcarea_leucaltidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "leucaltidae", className: "Calcarea", orderName: "Clathrinida", name: "Leucaltidae", mainColor: "#EAB308", lineageColors: { "leucaltidae": "#38BDF8" } };
+const calcarea_levinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "levinellidae", className: "Calcarea", orderName: "Clathrinida", name: "Levinellidae", mainColor: "#A855F7", lineageColors: { "levinellidae": "#3B82F6" } };
+const calcarea_lelapiellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "lelapiellidae", className: "Calcarea", orderName: "Clathrinida", name: "Lelapiellidae", mainColor: "#FB923C", lineageColors: { "lelapiellidae": "#EF4444" } };
+const calcarea_paramurrayonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "paramurrayonidae", className: "Calcarea", orderName: "Clathrinida", name: "Paramurrayonidae", mainColor: "#2DD4BF", lineageColors: { "paramurrayonidae": "#10B981" } };
+const calcarea_murrayonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "murrayonidae", className: "Calcarea", orderName: "Clathrinida", name: "Murrayonidae", mainColor: "#A3E635", lineageColors: { "murrayonidae": "#F59E0B" } };
+const calcarea_stellispongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "stellispongiidae", className: "Calcarea", orderName: "Unknown", name: "Stellispongiidae", mainColor: "#38BDF8", lineageColors: { "stellispongiidae": "#8B5CF6" } };
+const calcarea_endostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "endostomatidae", className: "Calcarea", orderName: "Unknown", name: "Endostomatidae", mainColor: "#3B82F6", lineageColors: { "endostomatidae": "#EC4899" } };
+const calcarea_astraeospongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "astraeospongiidae", className: "Calcarea", orderName: "Unknown", name: "Astraeospongiidae", mainColor: "#EF4444", lineageColors: { "astraeospongiidae": "#14B8A6" } };
+const calcarea_eiffeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "eiffeliidae", className: "Calcarea", orderName: "Unknown", name: "Eiffeliidae", mainColor: "#10B981", lineageColors: { "eiffeliidae": "#F97316" } };
+const calcarea_angullongiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "angullongiidae", className: "Calcarea", orderName: "Unknown", name: "Angullongiidae", mainColor: "#F59E0B", lineageColors: { "angullongiidae": "#6366F1" } };
+const calcarea_wewokellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "wewokellidae", className: "Calcarea", orderName: "Unknown", name: "Wewokellidae", mainColor: "#8B5CF6", lineageColors: { "wewokellidae": "#84CC16" } };
+const calcarea_sphaerocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "sphaerocoeliidae", className: "Calcarea", orderName: "Unknown", name: "Sphaerocoeliidae", mainColor: "#EC4899", lineageColors: { "sphaerocoeliidae": "#06B6D4" } };
+const calcarea_polyactinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "polyactinellidae", className: "Calcarea", orderName: "Unknown", name: "Polyactinellidae", mainColor: "#14B8A6", lineageColors: { "polyactinellidae": "#D946EF" } };
+const calcarea_spicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "spicidae", className: "Calcarea", orderName: "Unknown", name: "Spicidae", mainColor: "#F97316", lineageColors: { "spicidae": "#0EA5E9" } };
+const calcarea_phragmocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "phragmocoeliidae", className: "Calcarea", orderName: "Unknown", name: "Phragmocoeliidae", mainColor: "#6366F1", lineageColors: { "phragmocoeliidae": "#22C55E" } };
+const calcarea_barroisiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "barroisiidae", className: "Calcarea", orderName: "Unknown", name: "Barroisiidae", mainColor: "#84CC16", lineageColors: { "barroisiidae": "#EAB308" } };
+const calcarea_polytholosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "polytholosiidae", className: "Calcarea", orderName: "Unknown", name: "Polytholosiidae", mainColor: "#06B6D4", lineageColors: { "polytholosiidae": "#A855F7" } };
+const calcarea_polysolothiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "polysolothiidae", className: "Calcarea", orderName: "Unknown", name: "Polysolothiidae", mainColor: "#D946EF", lineageColors: { "polysolothiidae": "#FB923C" } };
+const calcarea_pisothalamiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "pisothalamiidae", className: "Calcarea", orderName: "Unknown", name: "Pisothalamiidae", mainColor: "#0EA5E9", lineageColors: { "pisothalamiidae": "#2DD4BF" } };
+const calcarea_amphorithalamiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "amphorithalamiidae", className: "Calcarea", orderName: "Unknown", name: "Amphorithalamiidae", mainColor: "#22C55E", lineageColors: { "amphorithalamiidae": "#A3E635" } };
+const calcarea_polyedridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "polyedridae", className: "Calcarea", orderName: "Unknown", name: "Polyedridae", mainColor: "#EAB308", lineageColors: { "polyedridae": "#38BDF8" } };
+const calcarea_annaecoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "annaecoeliidae", className: "Calcarea", orderName: "Unknown", name: "Annaecoeliidae", mainColor: "#A855F7", lineageColors: { "annaecoeliidae": "#3B82F6" } };
+const calcarea_peronidellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "peronidellidae", className: "Calcarea", orderName: "Unknown", name: "Peronidellidae", mainColor: "#FB923C", lineageColors: { "peronidellidae": "#EF4444" } };
+const calcarea_ascosymplegmatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "ascosymplegmatidae", className: "Calcarea", orderName: "Unknown", name: "Ascosymplegmatidae", mainColor: "#2DD4BF", lineageColors: { "ascosymplegmatidae": "#10B981" } };
+const calcarea_sphaeroverticillitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "sphaeroverticillitidae", className: "Calcarea", orderName: "Unknown", name: "Sphaeroverticillitidae", mainColor: "#A3E635", lineageColors: { "sphaeroverticillitidae": "#F59E0B" } };
+const calcarea_cystauletidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "cystauletidae", className: "Calcarea", orderName: "Unknown", name: "Cystauletidae", mainColor: "#38BDF8", lineageColors: { "cystauletidae": "#8B5CF6" } };
+const calcarea_stromatocoeliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "stromatocoeliidae", className: "Calcarea", orderName: "Unknown", name: "Stromatocoeliidae", mainColor: "#3B82F6", lineageColors: { "stromatocoeliidae": "#EC4899" } };
+const calcarea_leucosolenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "leucosolenidae", className: "Calcarea", orderName: "Unknown", name: "Leucosolenidae", mainColor: "#EF4444", lineageColors: { "leucosolenidae": "#14B8A6" } };
+const calcarea_trichogypsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "trichogypsidae", className: "Calcarea", orderName: "Unknown", name: "Trichogypsidae", mainColor: "#10B981", lineageColors: { "trichogypsidae": "#F97316" } };
+const calcarea_fahriyeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "fahriyeidae", className: "Calcarea", orderName: "Unknown", name: "Fahriyeidae", mainColor: "#F59E0B", lineageColors: { "fahriyeidae": "#6366F1" } };
+const calcarea_minchinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "minchinellidae", className: "Calcarea", orderName: "Lithonida", name: "Minchinellidae", mainColor: "#8B5CF6", lineageColors: { "minchinellidae": "#84CC16" } };
+const calcarea_elasmostomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "elasmostomatidae", className: "Calcarea", orderName: "Lithonida", name: "Elasmostomatidae", mainColor: "#EC4899", lineageColors: { "elasmostomatidae": "#06B6D4" } };
+const calcarea_baeriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "baeriidae", className: "Calcarea", orderName: "Baerida", name: "Baeriidae", mainColor: "#14B8A6", lineageColors: { "baeriidae": "#D946EF" } };
+const calcarea_trichogypsiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "trichogypsiidae", className: "Calcarea", orderName: "Baerida", name: "Trichogypsiidae", mainColor: "#F97316", lineageColors: { "trichogypsiidae": "#0EA5E9" } };
+const calcarea_petrobionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "petrobionidae", className: "Calcarea", orderName: "Baerida", name: "Petrobionidae", mainColor: "#6366F1", lineageColors: { "petrobionidae": "#22C55E" } };
+const calcarea_lepidoleuconidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "lepidoleuconidae", className: "Calcarea", orderName: "Baerida", name: "Lepidoleuconidae", mainColor: "#84CC16", lineageColors: { "lepidoleuconidae": "#EAB308" } };
+
+
+// ── Homoscleromorpha (2 families) ──
+const homoscleromorpha_plakinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "plakinidae", className: "Homoscleromorpha", orderName: "Homosclerophorida", name: "Plakinidae", mainColor: "#EF4444", lineageColors: { "plakinidae": "#14B8A6" } };
+const homoscleromorpha_oscarellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "oscarellidae", className: "Homoscleromorpha", orderName: "Homosclerophorida", name: "Oscarellidae", mainColor: "#10B981", lineageColors: { "oscarellidae": "#F97316" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -8496,7 +8788,287 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "orbituloporidae": gymnolaemata_orbituloporidae,
   "chaperiellidae": gymnolaemata_chaperiellidae,
   "neoeuthyridae": gymnolaemata_neoeuthyridae,
-  "natanellidae": gymnolaemata_natanellidae,};
+  "natanellidae": gymnolaemata_natanellidae,
+  "rossellidae": hexactinellida_rossellidae,
+  "euplectellidae": hexactinellida_euplectellidae,
+  "leucopsacidae": hexactinellida_leucopsacidae,
+  "aulocalycidae": hexactinellida_aulocalycidae,
+  "toomeyospongiidae": hexactinellida_toomeyospongiidae,
+  "pyruspongiidae": hexactinellida_pyruspongiidae,
+  "pseudolanciculidae": hexactinellida_pseudolanciculidae,
+  "brachiospongiidae": hexactinellida_brachiospongiidae,
+  "stauractinellidae": hexactinellida_stauractinellidae,
+  "lumectospongiidae": hexactinellida_lumectospongiidae,
+  "malumispongiidae": hexactinellida_malumispongiidae,
+  "euretidae": hexactinellida_euretidae,
+  "farreidae": hexactinellida_farreidae,
+  "craticulariidae": hexactinellida_craticulariidae,
+  "tretodictyidae": hexactinellida_tretodictyidae,
+  "cribrospongiidae": hexactinellida_cribrospongiidae,
+  "aphrocallistidae": hexactinellida_aphrocallistidae,
+  "plieolitidae": hexactinellida_plieolitidae,
+  "dactylocalycidae": hexactinellida_dactylocalycidae,
+  "auloplacidae": hexactinellida_auloplacidae,
+  "uncinateridae": hexactinellida_uncinateridae,
+  "staurodermatidae": hexactinellida_staurodermatidae,
+  "cystispongiidae": hexactinellida_cystispongiidae,
+  "pileolitidae": hexactinellida_pileolitidae,
+  "fieldingiidae": hexactinellida_fieldingiidae,
+  "pillaraspongiidae": hexactinellida_pillaraspongiidae,
+  "stromatidiidae": hexactinellida_stromatidiidae,
+  "wareembaiidae": hexactinellida_wareembaiidae,
+  "sebargasiidae": hexactinellida_sebargasiidae,
+  "colospongiidae": hexactinellida_colospongiidae,
+  "celyphiidae": hexactinellida_celyphiidae,
+  "protospongiidae": hexactinellida_protospongiidae,
+  "thaumastocoeliidae": hexactinellida_thaumastocoeliidae,
+  "dictyospongiidae": hexactinellida_dictyospongiidae,
+  "cystothalamiidae": hexactinellida_cystothalamiidae,
+  "hintzespongiidae": hexactinellida_hintzespongiidae,
+  "docodermatidae": hexactinellida_docodermatidae,
+  "stereodictyidae": hexactinellida_stereodictyidae,
+  "leptophragmatidae": hexactinellida_leptophragmatidae,
+  "cliefdenellidae": hexactinellida_cliefdenellidae,
+  "asthenospongiidae": hexactinellida_asthenospongiidae,
+  "dierespongiidae": hexactinellida_dierespongiidae,
+  "titusvillidae": hexactinellida_titusvillidae,
+  "hydnodictyidae": hexactinellida_hydnodictyidae,
+  "hemidiscellidae": hexactinellida_hemidiscellidae,
+  "aglithodictyidae": hexactinellida_aglithodictyidae,
+  "triactinellidae": hexactinellida_triactinellidae,
+  "titusvilliidae": hexactinellida_titusvilliidae,
+  "monoraphididae": hexactinellida_monoraphididae,
+  "coeloscysphiidae": hexactinellida_coeloscysphiidae,
+  "calypterellidae": hexactinellida_calypterellidae,
+  "multivasculatidae": hexactinellida_multivasculatidae,
+  "pattersoniidae": hexactinellida_pattersoniidae,
+  "oncotoechidae": hexactinellida_oncotoechidae,
+  "teganiidae": hexactinellida_teganiidae,
+  "keriogastrospongiidae": hexactinellida_keriogastrospongiidae,
+  "uphantenidae": hexactinellida_uphantenidae,
+  "hyalostellidae": hexactinellida_hyalostellidae,
+  "rosellidae": hexactinellida_rosellidae,
+  "cypellidae": hexactinellida_cypellidae,
+  "hyalonematidae": hexactinellida_hyalonematidae,
+  "pheronematidae": hexactinellida_pheronematidae,
+  "pelicaspongiidae": hexactinellida_pelicaspongiidae,
+  "stiodermatidae": hexactinellida_stiodermatidae,
+  "monorhaphididae": hexactinellida_monorhaphididae,
+  "ventriculitidae": hexactinellida_ventriculitidae,
+  "callodictyonidae": hexactinellida_callodictyonidae,
+  "camerospongiidae": hexactinellida_camerospongiidae,
+  "becksiidae": hexactinellida_becksiidae,
+  "callodictyidae": hexactinellida_callodictyidae,
+  "coeloptychiidae": hexactinellida_coeloptychiidae,
+  "aulocystidae": hexactinellida_aulocystidae,
+  "cypelliidae": hexactinellida_cypelliidae,
+  "diapleuridae": hexactinellida_diapleuridae,
+  "sporadopylidae": hexactinellida_sporadopylidae,
+  "coeloptychidae": hexactinellida_coeloptychidae,
+  "calyptrellidae": hexactinellida_calyptrellidae,
+  "coscinoporidae": hexactinellida_coscinoporidae,
+  "polyblastidiidae": hexactinellida_polyblastidiidae,
+  "microcionidae": demospongiae_microcionidae,
+  "hymedesmiidae": demospongiae_hymedesmiidae,
+  "mycalidae": demospongiae_mycalidae,
+  "cladorhizidae": demospongiae_cladorhizidae,
+  "coelosphaeridae": demospongiae_coelosphaeridae,
+  "myxillidae": demospongiae_myxillidae,
+  "acarnidae": demospongiae_acarnidae,
+  "tedaniidae": demospongiae_tedaniidae,
+  "latrunculiidae": demospongiae_latrunculiidae,
+  "chondropsidae": demospongiae_chondropsidae,
+  "crellidae": demospongiae_crellidae,
+  "esperiopsidae": demospongiae_esperiopsidae,
+  "isodictyidae": demospongiae_isodictyidae,
+  "crambeidae": demospongiae_crambeidae,
+  "iotrochotidae": demospongiae_iotrochotidae,
+  "podospongiidae": demospongiae_podospongiidae,
+  "guitarridae": demospongiae_guitarridae,
+  "dendoricellidae": demospongiae_dendoricellidae,
+  "phellodermidae": demospongiae_phellodermidae,
+  "desmacididae": demospongiae_desmacididae,
+  "coelocarteriidae": demospongiae_coelocarteriidae,
+  "desmoxyidae": demospongiae_desmoxyidae,
+  "amphilectidae": demospongiae_amphilectidae,
+  "plocamiidae": demospongiae_plocamiidae,
+  "ancorinidae": demospongiae_ancorinidae,
+  "geodiidae": demospongiae_geodiidae,
+  "tetillidae": demospongiae_tetillidae,
+  "theonellidae": demospongiae_theonellidae,
+  "corallistidae": demospongiae_corallistidae,
+  "vulcanellidae": demospongiae_vulcanellidae,
+  "pachastrellidae": demospongiae_pachastrellidae,
+  "theneidae": demospongiae_theneidae,
+  "scleritodermidae": demospongiae_scleritodermidae,
+  "thoosidae": demospongiae_thoosidae,
+  "azoricidae": demospongiae_azoricidae,
+  "phymatellidae": demospongiae_phymatellidae,
+  "phymaraphiniidae": demospongiae_phymaraphiniidae,
+  "neopeltidae": demospongiae_neopeltidae,
+  "siphonidiidae": demospongiae_siphonidiidae,
+  "pleromidae": demospongiae_pleromidae,
+  "macandrewiidae": demospongiae_macandrewiidae,
+  "thrombidae": demospongiae_thrombidae,
+  "isoraphiniidae": demospongiae_isoraphiniidae,
+  "paelospongiidae": demospongiae_paelospongiidae,
+  "spirasigmidae": demospongiae_spirasigmidae,
+  "cephaloraphiditidae": demospongiae_cephaloraphiditidae,
+  "costamorphiidae": demospongiae_costamorphiidae,
+  "scolioraphididae": demospongiae_scolioraphididae,
+  "samidae": demospongiae_samidae,
+  "stupendidae": demospongiae_stupendidae,
+  "chalinidae": demospongiae_chalinidae,
+  "callyspongiidae": demospongiae_callyspongiidae,
+  "niphatidae": demospongiae_niphatidae,
+  "phloeodictyidae": demospongiae_phloeodictyidae,
+  "petrosiidae": demospongiae_petrosiidae,
+  "calcifibrospongiidae": demospongiae_calcifibrospongiidae,
+  "spongiidae": demospongiae_spongiidae,
+  "thorectidae": demospongiae_thorectidae,
+  "irciniidae": demospongiae_irciniidae,
+  "dysideidae": demospongiae_dysideidae,
+  "verticillitidae": demospongiae_verticillitidae,
+  "parastylothalamiidae": demospongiae_parastylothalamiidae,
+  "raspailiidae": demospongiae_raspailiidae,
+  "axinellidae": demospongiae_axinellidae,
+  "stelligeridae": demospongiae_stelligeridae,
+  "heteroxyidae": demospongiae_heteroxyidae,
+  "milleporellidae": demospongiae_milleporellidae,
+  "actinostromariidae": demospongiae_actinostromariidae,
+  "cladocoropsidae": demospongiae_cladocoropsidae,
+  "syringostrominidae": demospongiae_syringostrominidae,
+  "halichondriidae": demospongiae_halichondriidae,
+  "suberitidae": demospongiae_suberitidae,
+  "stylocordylidae": demospongiae_stylocordylidae,
+  "preperonidellidae": demospongiae_preperonidellidae,
+  "agelasidae": demospongiae_agelasidae,
+  "solenolmiidae": demospongiae_solenolmiidae,
+  "stellispongiellidae": demospongiae_stellispongiellidae,
+  "hymerhabdiidae": demospongiae_hymerhabdiidae,
+  "guadalupiidae": demospongiae_guadalupiidae,
+  "auriculospongiidae": demospongiae_auriculospongiidae,
+  "virgolidae": demospongiae_virgolidae,
+  "aphrosalpingidae": demospongiae_aphrosalpingidae,
+  "radiotrabeculoporidae": demospongiae_radiotrabeculoporidae,
+  "astroscleridae": demospongiae_astroscleridae,
+  "girtyocoeliidae": demospongiae_girtyocoeliidae,
+  "intrasporeocoeliidae": demospongiae_intrasporeocoeliidae,
+  "maeandrostiidae": demospongiae_maeandrostiidae,
+  "sestrostomellidae": demospongiae_sestrostomellidae,
+  "tabasiidae": demospongiae_tabasiidae,
+  "cryptocoeliidae": demospongiae_cryptocoeliidae,
+  "ceratoporellidae": demospongiae_ceratoporellidae,
+  "pharetrospongiidae": demospongiae_pharetrospongiidae,
+  "catenispongiidae": demospongiae_catenispongiidae,
+  "salzburgiidae": demospongiae_salzburgiidae,
+  "exotubispongiidae": demospongiae_exotubispongiidae,
+  "noritubispongiidae": demospongiae_noritubispongiidae,
+  "glomocystospongiidae": demospongiae_glomocystospongiidae,
+  "sphaeropontiidae": demospongiae_sphaeropontiidae,
+  "palermocoeliidae": demospongiae_palermocoeliidae,
+  "globucatenulaiidae": demospongiae_globucatenulaiidae,
+  "fissispongiidae": demospongiae_fissispongiidae,
+  "olangocoeliidae": demospongiae_olangocoeliidae,
+  "spongillidae": demospongiae_spongillidae,
+  "potamolepidae": demospongiae_potamolepidae,
+  "metaniidae": demospongiae_metaniidae,
+  "lubomirskiidae": demospongiae_lubomirskiidae,
+  "malawispongiidae": demospongiae_malawispongiidae,
+  "palaeospongillidae": demospongiae_palaeospongillidae,
+  "metschnikowiidae": demospongiae_metschnikowiidae,
+  "clionaidae": demospongiae_clionaidae,
+  "spirastrellidae": demospongiae_spirastrellidae,
+  "placospongiidae": demospongiae_placospongiidae,
+  "acanthochaetetidae": demospongiae_acanthochaetetidae,
+  "tethyidae": demospongiae_tethyidae,
+  "timeidae": demospongiae_timeidae,
+  "hemiasterellidae": demospongiae_hemiasterellidae,
+  "bubaridae": demospongiae_bubaridae,
+  "dictyonellidae": demospongiae_dictyonellidae,
+  "desmanthidae": demospongiae_desmanthidae,
+  "polymastiidae": demospongiae_polymastiidae,
+  "aplysinidae": demospongiae_aplysinidae,
+  "ianthellidae": demospongiae_ianthellidae,
+  "aplysinellidae": demospongiae_aplysinellidae,
+  "vauxiidae": demospongiae_vauxiidae,
+  "pseudoceratinidae": demospongiae_pseudoceratinidae,
+  "ernstillidae": demospongiae_ernstillidae,
+  "biemnidae": demospongiae_biemnidae,
+  "rhabderemiidae": demospongiae_rhabderemiidae,
+  "darwinellidae": demospongiae_darwinellidae,
+  "dictyodendrillidae": demospongiae_dictyodendrillidae,
+  "hamacanthidae": demospongiae_hamacanthidae,
+  "merliidae": demospongiae_merliidae,
+  "halisarcidae": demospongiae_halisarcidae,
+  "chondrillidae": demospongiae_chondrillidae,
+  "scopalinidae": demospongiae_scopalinidae,
+  "desmacellidae": demospongiae_desmacellidae,
+  "vetulinidae": demospongiae_vetulinidae,
+  "lecanellidae": demospongiae_lecanellidae,
+  "leiodorellidae": demospongiae_leiodorellidae,
+  "calthropellidae": demospongiae_calthropellidae,
+  "choanitidae": demospongiae_choanitidae,
+  "sigmaxinellidae": demospongiae_sigmaxinellidae,
+  "nepheliospongiidae": demospongiae_nepheliospongiidae,
+  "newellidae": demospongiae_newellidae,
+  "euskadiellidae": demospongiae_euskadiellidae,
+  "neuroporidae": demospongiae_neuroporidae,
+  "actinostromarianinidae": demospongiae_actinostromarianinidae,
+  "micricionidae": demospongiae_micricionidae,
+  "chondrosiidae": demospongiae_chondrosiidae,
+  "trachycladidae": demospongiae_trachycladidae,
+  "grantiidae": calcarea_grantiidae,
+  "syconidae": calcarea_syconidae,
+  "heteropiidae": calcarea_heteropiidae,
+  "amphoriscidae": calcarea_amphoriscidae,
+  "leucosoleniidae": calcarea_leucosoleniidae,
+  "lelapiidae": calcarea_lelapiidae,
+  "achramorphidae": calcarea_achramorphidae,
+  "sycanthidae": calcarea_sycanthidae,
+  "jenkinidae": calcarea_jenkinidae,
+  "clathrinidae": calcarea_clathrinidae,
+  "dendyidae": calcarea_dendyidae,
+  "leucettidae": calcarea_leucettidae,
+  "leucascidae": calcarea_leucascidae,
+  "leucaltidae": calcarea_leucaltidae,
+  "levinellidae": calcarea_levinellidae,
+  "lelapiellidae": calcarea_lelapiellidae,
+  "paramurrayonidae": calcarea_paramurrayonidae,
+  "murrayonidae": calcarea_murrayonidae,
+  "stellispongiidae": calcarea_stellispongiidae,
+  "endostomatidae": calcarea_endostomatidae,
+  "astraeospongiidae": calcarea_astraeospongiidae,
+  "eiffeliidae": calcarea_eiffeliidae,
+  "angullongiidae": calcarea_angullongiidae,
+  "wewokellidae": calcarea_wewokellidae,
+  "sphaerocoeliidae": calcarea_sphaerocoeliidae,
+  "polyactinellidae": calcarea_polyactinellidae,
+  "spicidae": calcarea_spicidae,
+  "phragmocoeliidae": calcarea_phragmocoeliidae,
+  "barroisiidae": calcarea_barroisiidae,
+  "polytholosiidae": calcarea_polytholosiidae,
+  "polysolothiidae": calcarea_polysolothiidae,
+  "pisothalamiidae": calcarea_pisothalamiidae,
+  "amphorithalamiidae": calcarea_amphorithalamiidae,
+  "polyedridae": calcarea_polyedridae,
+  "annaecoeliidae": calcarea_annaecoeliidae,
+  "peronidellidae": calcarea_peronidellidae,
+  "ascosymplegmatidae": calcarea_ascosymplegmatidae,
+  "sphaeroverticillitidae": calcarea_sphaeroverticillitidae,
+  "cystauletidae": calcarea_cystauletidae,
+  "stromatocoeliidae": calcarea_stromatocoeliidae,
+  "leucosolenidae": calcarea_leucosolenidae,
+  "trichogypsidae": calcarea_trichogypsidae,
+  "fahriyeidae": calcarea_fahriyeidae,
+  "minchinellidae": calcarea_minchinellidae,
+  "elasmostomatidae": calcarea_elasmostomatidae,
+  "baeriidae": calcarea_baeriidae,
+  "trichogypsiidae": calcarea_trichogypsiidae,
+  "petrobionidae": calcarea_petrobionidae,
+  "lepidoleuconidae": calcarea_lepidoleuconidae,
+  "plakinidae": homoscleromorpha_plakinidae,
+  "oscarellidae": homoscleromorpha_oscarellidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
