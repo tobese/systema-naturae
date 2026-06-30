@@ -3727,6 +3727,10 @@ const gastropoda_neomphalidae: ColorTheme = { subfamilyColors: {}, breedGroupCol
 const gastropoda_tylodinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "tylodinidae", className: "Gastropoda", orderName: "Umbraculida", name: "Tylodinidae", mainColor: "#EC4899", lineageColors: { "tylodinidae": "#06B6D4" } };
 const gastropoda_umbraculidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "umbraculidae", className: "Gastropoda", orderName: "Umbraculida", name: "Umbraculidae", mainColor: "#14B8A6", lineageColors: { "umbraculidae": "#D946EF" } };
 
+
+// ── Eucycliophora (1 families) ──
+const eucycliophora_symbiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "symbiidae", className: "Eucycliophora", orderName: "Symbiida", name: "Symbiidae", mainColor: "#EF4444", lineageColors: { "symbiidae": "#14B8A6" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -6378,7 +6382,8 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "melanodrymiidae": gastropoda_melanodrymiidae,
   "neomphalidae": gastropoda_neomphalidae,
   "tylodinidae": gastropoda_tylodinidae,
-  "umbraculidae": gastropoda_umbraculidae,};
+  "umbraculidae": gastropoda_umbraculidae,
+  "symbiidae": eucycliophora_symbiidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
