@@ -2221,6 +2221,63 @@ const scaphopoda_cadulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor:
 const scaphopoda_baltodentaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "baltodentaliidae", className: "Scaphopoda", orderName: "Unknown", name: "Baltodentaliidae", mainColor: "#FB923C", lineageColors: { "baltodentaliidae": "#EF4444" } };
 const scaphopoda_episiphonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "episiphonidae", className: "Scaphopoda", orderName: "Unknown", name: "Episiphonidae", mainColor: "#2DD4BF", lineageColors: { "episiphonidae": "#10B981" } };
 
+
+// ── Polyplacophora (54 families) ──
+const polyplacophora_ischnochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "ischnochitonidae", className: "Polyplacophora", orderName: "Chitonida", name: "Ischnochitonidae", mainColor: "#EF4444", lineageColors: { "ischnochitonidae": "#14B8A6" } };
+const polyplacophora_chitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "chitonidae", className: "Polyplacophora", orderName: "Chitonida", name: "Chitonidae", mainColor: "#10B981", lineageColors: { "chitonidae": "#F97316" } };
+const polyplacophora_acanthochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "acanthochitonidae", className: "Polyplacophora", orderName: "Chitonida", name: "Acanthochitonidae", mainColor: "#F59E0B", lineageColors: { "acanthochitonidae": "#6366F1" } };
+const polyplacophora_tonicellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "tonicellidae", className: "Polyplacophora", orderName: "Chitonida", name: "Tonicellidae", mainColor: "#8B5CF6", lineageColors: { "tonicellidae": "#84CC16" } };
+const polyplacophora_mopaliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "mopaliidae", className: "Polyplacophora", orderName: "Chitonida", name: "Mopaliidae", mainColor: "#EC4899", lineageColors: { "mopaliidae": "#06B6D4" } };
+const polyplacophora_callistoplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "callistoplacidae", className: "Polyplacophora", orderName: "Chitonida", name: "Callistoplacidae", mainColor: "#14B8A6", lineageColors: { "callistoplacidae": "#D946EF" } };
+const polyplacophora_chaetopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "chaetopleuridae", className: "Polyplacophora", orderName: "Chitonida", name: "Chaetopleuridae", mainColor: "#F97316", lineageColors: { "chaetopleuridae": "#0EA5E9" } };
+const polyplacophora_cryptoplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "cryptoplacidae", className: "Polyplacophora", orderName: "Chitonida", name: "Cryptoplacidae", mainColor: "#6366F1", lineageColors: { "cryptoplacidae": "#22C55E" } };
+const polyplacophora_loricidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "loricidae", className: "Polyplacophora", orderName: "Chitonida", name: "Loricidae", mainColor: "#84CC16", lineageColors: { "loricidae": "#EAB308" } };
+const polyplacophora_schizochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "schizochitonidae", className: "Polyplacophora", orderName: "Chitonida", name: "Schizochitonidae", mainColor: "#06B6D4", lineageColors: { "schizochitonidae": "#A855F7" } };
+const polyplacophora_hemiarthridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "hemiarthridae", className: "Polyplacophora", orderName: "Chitonida", name: "Hemiarthridae", mainColor: "#D946EF", lineageColors: { "hemiarthridae": "#FB923C" } };
+const polyplacophora_choriplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "choriplacidae", className: "Polyplacophora", orderName: "Chitonida", name: "Choriplacidae", mainColor: "#0EA5E9", lineageColors: { "choriplacidae": "#2DD4BF" } };
+const polyplacophora_makarenkoplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "makarenkoplacidae", className: "Polyplacophora", orderName: "Chitonida", name: "Makarenkoplacidae", mainColor: "#22C55E", lineageColors: { "makarenkoplacidae": "#A3E635" } };
+const polyplacophora_schizoplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "schizoplacidae", className: "Polyplacophora", orderName: "Chitonida", name: "Schizoplacidae", mainColor: "#EAB308", lineageColors: { "schizoplacidae": "#38BDF8" } };
+const polyplacophora_ochmazochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "ochmazochitonidae", className: "Polyplacophora", orderName: "Chitonida", name: "Ochmazochitonidae", mainColor: "#A855F7", lineageColors: { "ochmazochitonidae": "#3B82F6" } };
+const polyplacophora_spinochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "spinochitonidae", className: "Polyplacophora", orderName: "Chitonida", name: "Spinochitonidae", mainColor: "#FB923C", lineageColors: { "spinochitonidae": "#EF4444" } };
+const polyplacophora_leptochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "leptochitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Leptochitonidae", mainColor: "#2DD4BF", lineageColors: { "leptochitonidae": "#10B981" } };
+const polyplacophora_gryphochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "gryphochitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Gryphochitonidae", mainColor: "#A3E635", lineageColors: { "gryphochitonidae": "#F59E0B" } };
+const polyplacophora_acutichitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "acutichitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Acutichitonidae", mainColor: "#38BDF8", lineageColors: { "acutichitonidae": "#8B5CF6" } };
+const polyplacophora_hanleyidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "hanleyidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Hanleyidae", mainColor: "#3B82F6", lineageColors: { "hanleyidae": "#EC4899" } };
+const polyplacophora_abyssochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "abyssochitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Abyssochitonidae", mainColor: "#EF4444", lineageColors: { "abyssochitonidae": "#14B8A6" } };
+const polyplacophora_protochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "protochitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Protochitonidae", mainColor: "#10B981", lineageColors: { "protochitonidae": "#F97316" } };
+const polyplacophora_cymatochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "cymatochitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Cymatochitonidae", mainColor: "#F59E0B", lineageColors: { "cymatochitonidae": "#6366F1" } };
+const polyplacophora_glyptochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "glyptochitonidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Glyptochitonidae", mainColor: "#8B5CF6", lineageColors: { "glyptochitonidae": "#84CC16" } };
+const polyplacophora_nierstraszellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "nierstraszellidae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Nierstraszellidae", mainColor: "#EC4899", lineageColors: { "nierstraszellidae": "#06B6D4" } };
+const polyplacophora_lepidopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "lepidopleuridae", className: "Polyplacophora", orderName: "Lepidopleurida", name: "Lepidopleuridae", mainColor: "#14B8A6", lineageColors: { "lepidopleuridae": "#D946EF" } };
+const polyplacophora_callochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "callochitonidae", className: "Polyplacophora", orderName: "Callochitonida", name: "Callochitonidae", mainColor: "#F97316", lineageColors: { "callochitonidae": "#0EA5E9" } };
+const polyplacophora_mattheviidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "mattheviidae", className: "Polyplacophora", orderName: "Chelodida", name: "Mattheviidae", mainColor: "#6366F1", lineageColors: { "mattheviidae": "#22C55E" } };
+const polyplacophora_preacanthochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "preacanthochitonidae", className: "Polyplacophora", orderName: "Chelodida", name: "Preacanthochitonidae", mainColor: "#84CC16", lineageColors: { "preacanthochitonidae": "#EAB308" } };
+const polyplacophora_robustidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "robustidae", className: "Polyplacophora", orderName: "Chelodida", name: "Robustidae", mainColor: "#06B6D4", lineageColors: { "robustidae": "#A855F7" } };
+const polyplacophora_echinochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "echinochitonidae", className: "Polyplacophora", orderName: "Chelodida", name: "Echinochitonidae", mainColor: "#D946EF", lineageColors: { "echinochitonidae": "#FB923C" } };
+const polyplacophora_scanochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "scanochitonidae", className: "Polyplacophora", orderName: "Chelodida", name: "Scanochitonidae", mainColor: "#0EA5E9", lineageColors: { "scanochitonidae": "#2DD4BF" } };
+const polyplacophora_helminthochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "helminthochitonidae", className: "Polyplacophora", orderName: "Septemchitonida", name: "Helminthochitonidae", mainColor: "#22C55E", lineageColors: { "helminthochitonidae": "#A3E635" } };
+const polyplacophora_septemchitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "septemchitonidae", className: "Polyplacophora", orderName: "Septemchitonida", name: "Septemchitonidae", mainColor: "#EAB308", lineageColors: { "septemchitonidae": "#38BDF8" } };
+const polyplacophora_gotlandochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "gotlandochitonidae", className: "Polyplacophora", orderName: "Septemchitonida", name: "Gotlandochitonidae", mainColor: "#A855F7", lineageColors: { "gotlandochitonidae": "#3B82F6" } };
+const polyplacophora_alastegidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "alastegidae", className: "Polyplacophora", orderName: "Septemchitonida", name: "Alastegidae", mainColor: "#FB923C", lineageColors: { "alastegidae": "#EF4444" } };
+const polyplacophora_strobilepidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "strobilepidae", className: "Polyplacophora", orderName: "Unknown", name: "Strobilepidae", mainColor: "#2DD4BF", lineageColors: { "strobilepidae": "#10B981" } };
+const polyplacophora_ivoechitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "ivoechitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Ivoechitonidae", mainColor: "#A3E635", lineageColors: { "ivoechitonidae": "#F59E0B" } };
+const polyplacophora_dycheiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "dycheiidae", className: "Polyplacophora", orderName: "Unknown", name: "Dycheiidae", mainColor: "#38BDF8", lineageColors: { "dycheiidae": "#8B5CF6" } };
+const polyplacophora_haeggochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "haeggochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Haeggochitonidae", mainColor: "#3B82F6", lineageColors: { "haeggochitonidae": "#EC4899" } };
+const polyplacophora_crassitudochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "crassitudochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Crassitudochitonidae", mainColor: "#EF4444", lineageColors: { "crassitudochitonidae": "#14B8A6" } };
+const polyplacophora_aulochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "aulochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Aulochitonidae", mainColor: "#10B981", lineageColors: { "aulochitonidae": "#F97316" } };
+const polyplacophora_olingechitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "olingechitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Olingechitonidae", mainColor: "#F59E0B", lineageColors: { "olingechitonidae": "#6366F1" } };
+const polyplacophora_litochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "litochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Litochitonidae", mainColor: "#8B5CF6", lineageColors: { "litochitonidae": "#84CC16" } };
+const polyplacophora_alastegiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "alastegiidae", className: "Polyplacophora", orderName: "Unknown", name: "Alastegiidae", mainColor: "#EC4899", lineageColors: { "alastegiidae": "#06B6D4" } };
+const polyplacophora_afossochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "afossochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Afossochitonidae", mainColor: "#14B8A6", lineageColors: { "afossochitonidae": "#D946EF" } };
+const polyplacophora_heterochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "heterochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Heterochitonidae", mainColor: "#F97316", lineageColors: { "heterochitonidae": "#0EA5E9" } };
+const polyplacophora_llandeilochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "llandeilochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Llandeilochitonidae", mainColor: "#6366F1", lineageColors: { "llandeilochitonidae": "#22C55E" } };
+const polyplacophora_permochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "permochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Permochitonidae", mainColor: "#84CC16", lineageColors: { "permochitonidae": "#EAB308" } };
+const polyplacophora_lekiskochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "lekiskochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Lekiskochitonidae", mainColor: "#06B6D4", lineageColors: { "lekiskochitonidae": "#A855F7" } };
+const polyplacophora_cobcrephoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "cobcrephoridae", className: "Polyplacophora", orderName: "Unknown", name: "Cobcrephoridae", mainColor: "#D946EF", lineageColors: { "cobcrephoridae": "#FB923C" } };
+const polyplacophora_mesochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "mesochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Mesochitonidae", mainColor: "#0EA5E9", lineageColors: { "mesochitonidae": "#2DD4BF" } };
+const polyplacophora_camptochitonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "camptochitonidae", className: "Polyplacophora", orderName: "Unknown", name: "Camptochitonidae", mainColor: "#22C55E", lineageColors: { "camptochitonidae": "#A3E635" } };
+const polyplacophora_solenocarididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "solenocarididae", className: "Polyplacophora", orderName: "Unknown", name: "Solenocarididae", mainColor: "#EAB308", lineageColors: { "solenocarididae": "#38BDF8" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -3378,7 +3435,61 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "loxoporidae": scaphopoda_loxoporidae,
   "cadulidae": scaphopoda_cadulidae,
   "baltodentaliidae": scaphopoda_baltodentaliidae,
-  "episiphonidae": scaphopoda_episiphonidae,};
+  "episiphonidae": scaphopoda_episiphonidae,
+  "ischnochitonidae": polyplacophora_ischnochitonidae,
+  "chitonidae": polyplacophora_chitonidae,
+  "acanthochitonidae": polyplacophora_acanthochitonidae,
+  "tonicellidae": polyplacophora_tonicellidae,
+  "mopaliidae": polyplacophora_mopaliidae,
+  "callistoplacidae": polyplacophora_callistoplacidae,
+  "chaetopleuridae": polyplacophora_chaetopleuridae,
+  "cryptoplacidae": polyplacophora_cryptoplacidae,
+  "loricidae": polyplacophora_loricidae,
+  "schizochitonidae": polyplacophora_schizochitonidae,
+  "hemiarthridae": polyplacophora_hemiarthridae,
+  "choriplacidae": polyplacophora_choriplacidae,
+  "makarenkoplacidae": polyplacophora_makarenkoplacidae,
+  "schizoplacidae": polyplacophora_schizoplacidae,
+  "ochmazochitonidae": polyplacophora_ochmazochitonidae,
+  "spinochitonidae": polyplacophora_spinochitonidae,
+  "leptochitonidae": polyplacophora_leptochitonidae,
+  "gryphochitonidae": polyplacophora_gryphochitonidae,
+  "acutichitonidae": polyplacophora_acutichitonidae,
+  "hanleyidae": polyplacophora_hanleyidae,
+  "abyssochitonidae": polyplacophora_abyssochitonidae,
+  "protochitonidae": polyplacophora_protochitonidae,
+  "cymatochitonidae": polyplacophora_cymatochitonidae,
+  "glyptochitonidae": polyplacophora_glyptochitonidae,
+  "nierstraszellidae": polyplacophora_nierstraszellidae,
+  "lepidopleuridae": polyplacophora_lepidopleuridae,
+  "callochitonidae": polyplacophora_callochitonidae,
+  "mattheviidae": polyplacophora_mattheviidae,
+  "preacanthochitonidae": polyplacophora_preacanthochitonidae,
+  "robustidae": polyplacophora_robustidae,
+  "echinochitonidae": polyplacophora_echinochitonidae,
+  "scanochitonidae": polyplacophora_scanochitonidae,
+  "helminthochitonidae": polyplacophora_helminthochitonidae,
+  "septemchitonidae": polyplacophora_septemchitonidae,
+  "gotlandochitonidae": polyplacophora_gotlandochitonidae,
+  "alastegidae": polyplacophora_alastegidae,
+  "strobilepidae": polyplacophora_strobilepidae,
+  "ivoechitonidae": polyplacophora_ivoechitonidae,
+  "dycheiidae": polyplacophora_dycheiidae,
+  "haeggochitonidae": polyplacophora_haeggochitonidae,
+  "crassitudochitonidae": polyplacophora_crassitudochitonidae,
+  "aulochitonidae": polyplacophora_aulochitonidae,
+  "olingechitonidae": polyplacophora_olingechitonidae,
+  "litochitonidae": polyplacophora_litochitonidae,
+  "alastegiidae": polyplacophora_alastegiidae,
+  "afossochitonidae": polyplacophora_afossochitonidae,
+  "heterochitonidae": polyplacophora_heterochitonidae,
+  "llandeilochitonidae": polyplacophora_llandeilochitonidae,
+  "permochitonidae": polyplacophora_permochitonidae,
+  "lekiskochitonidae": polyplacophora_lekiskochitonidae,
+  "cobcrephoridae": polyplacophora_cobcrephoridae,
+  "mesochitonidae": polyplacophora_mesochitonidae,
+  "camptochitonidae": polyplacophora_camptochitonidae,
+  "solenocarididae": polyplacophora_solenocarididae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
