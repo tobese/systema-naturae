@@ -22,7 +22,7 @@ interface FamilyInfo {
 function walk(node: any, className: string, orderName: string, results: FamilyInfo[]) {
   if (!node || typeof node !== "object") return;
   const children = node.children || [];
-  if (node.rank === "CLASS") {
+  if (node.rank === "CLASS" || (node.rank === "PHYLUM" && !className)) {
     className = node.name;
   }
   if (node.rank === "ORDER") {
