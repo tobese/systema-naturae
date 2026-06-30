@@ -2,18 +2,18 @@
 
 This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema Naturae portal. Each class with remaining gaps has a discrete checklist of its families.
 
-*Generated automatically on: 29/06/2026*
+*Generated automatically on: 30/06/2026*
 
 ## Overview of Taxonomic Class Coverage
 
 | Class | Size Sort Rank | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Mammalia** | 1 | 7,897 | 7,897 | 6,859 | 1,038 | 100.0% | 13.1% | [✓] Complete |
+| **Mammalia** | 1 | 7,897 | 7,897 | 6,836 | 1,061 | 100.0% | 13.4% | [✓] Complete |
 | **Aves** | 2 | 11,754 | 11,732 | 10,077 | 1,677 | 100.2% | 14.3% | [✓] Complete |
-| **Reptilia** | 3 | 8,121 | 8,121 | 3,015 | 5,106 | 100.0% | 62.9% | [✓] Complete |
+| **Reptilia** | 3 | 8,121 | 8,121 | 2,640 | 5,481 | 100.0% | 67.5% | [✓] Complete |
 | **Amphibia** | 4 | 3,797 | 3,797 | 1,542 | 2,255 | 100.0% | 59.4% | [✓] Complete |
 | **Chondrichthyes** | 5 | 1,187 | 1,187 | 1,050 | 137 | 100.0% | 11.5% | [✓] Complete |
-| **Actinopterygii** | 6 | 10,885 | 10,885 | 7,236 | 3,649 | 100.0% | 33.5% | [✓] Complete |
+| **Actinopterygii** | 6 | 10,885 | 10,885 | 7,201 | 3,684 | 100.0% | 33.8% | [✓] Complete |
 | **Cephalopoda** | 7 | 813 | 813 | 646 | 167 | 100.0% | 20.5% | [✓] Complete |
 | **Asteroidea** | 8 | 199 | 199 | 161 | 38 | 100.0% | 19.1% | [✓] Complete |
 | **Echinoidea** | 9 | 100 | 100 | 93 | 7 | 100.0% | 7.0% | [✓] Complete |
@@ -25,7 +25,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | **Hydrozoa** | 15 | 4,505 | 4,505 | 1,542 | 2,963 | 100.0% | 65.8% | [✓] Complete |
 | **Tentaculata** | 16 | 93 | 93 | 73 | 20 | 100.0% | 21.5% | [✓] Complete |
 | **Nuda** | 17 | 30 | 30 | 20 | 10 | 100.0% | 33.3% | [✓] Complete |
-| **Arachnida** | 18 | 21,937 | 21,937 | 18,185 | 3,752 | 100.0% | 17.1% | [✓] Complete |
+| **Arachnida** | 18 | 21,937 | 21,937 | 18,169 | 3,768 | 100.0% | 17.2% | [✓] Complete |
 | **Insecta** | 19 | 88,525 | 88,525 | 73,128 | 15,397 | 100.0% | 17.4% | [✓] Complete |
 | **Other** | Other | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
 

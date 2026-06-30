@@ -2,7 +2,7 @@
 
 This report aggregates the taxonomic database coverage gaps of the Systema Naturae portal at the **Phylum** level.
 
-*Generated automatically on: 29/06/2026*
+*Generated automatically on: 30/06/2026*
 
 ## Overview of Phylum Coverage
 
