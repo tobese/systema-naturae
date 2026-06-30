@@ -4375,6 +4375,48 @@ const eurotatoria_collothecidae: ColorTheme = { subfamilyColors: {}, breedGroupC
 const eurotatoria_atrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "atrochidae", className: "Eurotatoria", orderName: "Collothecacea", name: "Atrochidae", mainColor: "#EAB308", lineageColors: { "atrochidae": "#38BDF8" } };
 const eurotatoria_filinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "filinidae", className: "Eurotatoria", orderName: "Unknown", name: "Filinidae", mainColor: "#A855F7", lineageColors: { "filinidae": "#3B82F6" } };
 
+
+// ── Eoacanthocephala (4 families) ──
+const eoacanthocephala_neoechinorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "neoechinorhynchidae", className: "Eoacanthocephala", orderName: "Neoechinorhynchida", name: "Neoechinorhynchidae", mainColor: "#EF4444", lineageColors: { "neoechinorhynchidae": "#14B8A6" } };
+const eoacanthocephala_dendronucleatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "dendronucleatidae", className: "Eoacanthocephala", orderName: "Neoechinorhynchida", name: "Dendronucleatidae", mainColor: "#10B981", lineageColors: { "dendronucleatidae": "#F97316" } };
+const eoacanthocephala_tenuisentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "tenuisentidae", className: "Eoacanthocephala", orderName: "Neoechinorhynchida", name: "Tenuisentidae", mainColor: "#F59E0B", lineageColors: { "tenuisentidae": "#6366F1" } };
+const eoacanthocephala_quadrigyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "quadrigyridae", className: "Eoacanthocephala", orderName: "Gyracanthocephala", name: "Quadrigyridae", mainColor: "#8B5CF6", lineageColors: { "quadrigyridae": "#84CC16" } };
+
+
+// ── Archiacanthocephala (5 families) ──
+const archiacanthocephala_oligacanthorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "oligacanthorhynchidae", className: "Archiacanthocephala", orderName: "Oligacanthorhynchida", name: "Oligacanthorhynchidae", mainColor: "#EF4444", lineageColors: { "oligacanthorhynchidae": "#14B8A6" } };
+const archiacanthocephala_giganthorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "giganthorhynchidae", className: "Archiacanthocephala", orderName: "Gigantorhynchida", name: "Giganthorhynchidae", mainColor: "#10B981", lineageColors: { "giganthorhynchidae": "#F97316" } };
+const archiacanthocephala_gigantorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "gigantorhynchidae", className: "Archiacanthocephala", orderName: "Gigantorhynchida", name: "Gigantorhynchidae", mainColor: "#F59E0B", lineageColors: { "gigantorhynchidae": "#6366F1" } };
+const archiacanthocephala_moniliformidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "moniliformidae", className: "Archiacanthocephala", orderName: "Moniliformida", name: "Moniliformidae", mainColor: "#8B5CF6", lineageColors: { "moniliformidae": "#84CC16" } };
+const archiacanthocephala_apororhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "apororhynchidae", className: "Archiacanthocephala", orderName: "Apororhynchida", name: "Apororhynchidae", mainColor: "#EC4899", lineageColors: { "apororhynchidae": "#06B6D4" } };
+
+
+// ── Palaeacanthocephala (20 families) ──
+const palaeacanthocephala_echinorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "echinorhynchidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Echinorhynchidae", mainColor: "#EF4444", lineageColors: { "echinorhynchidae": "#14B8A6" } };
+const palaeacanthocephala_rhadinorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#F97316", appSlug: "rhadinorhynchidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Rhadinorhynchidae", mainColor: "#10B981", lineageColors: { "rhadinorhynchidae": "#F97316" } };
+const palaeacanthocephala_pomphorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#6366F1", appSlug: "pomphorhynchidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Pomphorhynchidae", mainColor: "#F59E0B", lineageColors: { "pomphorhynchidae": "#6366F1" } };
+const palaeacanthocephala_illiosentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#84CC16", appSlug: "illiosentidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Illiosentidae", mainColor: "#8B5CF6", lineageColors: { "illiosentidae": "#84CC16" } };
+const palaeacanthocephala_arhythmacanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#06B6D4", appSlug: "arhythmacanthidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Arhythmacanthidae", mainColor: "#EC4899", lineageColors: { "arhythmacanthidae": "#06B6D4" } };
+const palaeacanthocephala_cavisomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#D946EF", appSlug: "cavisomidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Cavisomidae", mainColor: "#14B8A6", lineageColors: { "cavisomidae": "#D946EF" } };
+const palaeacanthocephala_diplosentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#0EA5E9", appSlug: "diplosentidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Diplosentidae", mainColor: "#F97316", lineageColors: { "diplosentidae": "#0EA5E9" } };
+const palaeacanthocephala_heteracanthocephalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6366F1", hybridColor: "#22C55E", appSlug: "heteracanthocephalidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Heteracanthocephalidae", mainColor: "#6366F1", lineageColors: { "heteracanthocephalidae": "#22C55E" } };
+const palaeacanthocephala_fessisentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CC16", hybridColor: "#EAB308", appSlug: "fessisentidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Fessisentidae", mainColor: "#84CC16", lineageColors: { "fessisentidae": "#EAB308" } };
+const palaeacanthocephala_transvenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#A855F7", appSlug: "transvenidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Transvenidae", mainColor: "#06B6D4", lineageColors: { "transvenidae": "#A855F7" } };
+const palaeacanthocephala_isthmosacanthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#D946EF", hybridColor: "#FB923C", appSlug: "isthmosacanthidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Isthmosacanthidae", mainColor: "#D946EF", lineageColors: { "isthmosacanthidae": "#FB923C" } };
+const palaeacanthocephala_gymnorhadinorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "gymnorhadinorhynchidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Gymnorhadinorhynchidae", mainColor: "#0EA5E9", lineageColors: { "gymnorhadinorhynchidae": "#2DD4BF" } };
+const palaeacanthocephala_sauracanthorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "sauracanthorhynchidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Sauracanthorhynchidae", mainColor: "#22C55E", lineageColors: { "sauracanthorhynchidae": "#A3E635" } };
+const palaeacanthocephala_spinulacorpidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "spinulacorpidae", className: "Palaeacanthocephala", orderName: "Echinorhynchida", name: "Spinulacorpidae", mainColor: "#EAB308", lineageColors: { "spinulacorpidae": "#38BDF8" } };
+const palaeacanthocephala_polymorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "polymorphidae", className: "Palaeacanthocephala", orderName: "Polymorphida", name: "Polymorphidae", mainColor: "#A855F7", lineageColors: { "polymorphidae": "#3B82F6" } };
+const palaeacanthocephala_centrorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "centrorhynchidae", className: "Palaeacanthocephala", orderName: "Polymorphida", name: "Centrorhynchidae", mainColor: "#FB923C", lineageColors: { "centrorhynchidae": "#EF4444" } };
+const palaeacanthocephala_plagiorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "plagiorhynchidae", className: "Palaeacanthocephala", orderName: "Polymorphida", name: "Plagiorhynchidae", mainColor: "#2DD4BF", lineageColors: { "plagiorhynchidae": "#10B981" } };
+const palaeacanthocephala_pyrirhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "pyrirhynchidae", className: "Palaeacanthocephala", orderName: "Heteramorphida", name: "Pyrirhynchidae", mainColor: "#A3E635", lineageColors: { "pyrirhynchidae": "#F59E0B" } };
+const palaeacanthocephala_pyriproboscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "pyriproboscidae", className: "Palaeacanthocephala", orderName: "Unknown", name: "Pyriproboscidae", mainColor: "#38BDF8", lineageColors: { "pyriproboscidae": "#8B5CF6" } };
+const palaeacanthocephala_paracanthocephalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#3B82F6", hybridColor: "#EC4899", appSlug: "paracanthocephalidae", className: "Palaeacanthocephala", orderName: "Unknown", name: "Paracanthocephalidae", mainColor: "#3B82F6", lineageColors: { "paracanthocephalidae": "#EC4899" } };
+
+
+// ── Polyacanthocephala (1 families) ──
+const polyacanthocephala_polyacanthorhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EF4444", hybridColor: "#14B8A6", appSlug: "polyacanthorhynchidae", className: "Polyacanthocephala", orderName: "Polyacanthorhynchida", name: "Polyacanthorhynchidae", mainColor: "#EF4444", lineageColors: { "polyacanthorhynchidae": "#14B8A6" } };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
@@ -7629,7 +7671,37 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "conochilidae": eurotatoria_conochilidae,
   "collothecidae": eurotatoria_collothecidae,
   "atrochidae": eurotatoria_atrochidae,
-  "filinidae": eurotatoria_filinidae,};
+  "filinidae": eurotatoria_filinidae,
+  "neoechinorhynchidae": eoacanthocephala_neoechinorhynchidae,
+  "dendronucleatidae": eoacanthocephala_dendronucleatidae,
+  "tenuisentidae": eoacanthocephala_tenuisentidae,
+  "quadrigyridae": eoacanthocephala_quadrigyridae,
+  "oligacanthorhynchidae": archiacanthocephala_oligacanthorhynchidae,
+  "giganthorhynchidae": archiacanthocephala_giganthorhynchidae,
+  "gigantorhynchidae": archiacanthocephala_gigantorhynchidae,
+  "moniliformidae": archiacanthocephala_moniliformidae,
+  "apororhynchidae": archiacanthocephala_apororhynchidae,
+  "echinorhynchidae": palaeacanthocephala_echinorhynchidae,
+  "rhadinorhynchidae": palaeacanthocephala_rhadinorhynchidae,
+  "pomphorhynchidae": palaeacanthocephala_pomphorhynchidae,
+  "illiosentidae": palaeacanthocephala_illiosentidae,
+  "arhythmacanthidae": palaeacanthocephala_arhythmacanthidae,
+  "cavisomidae": palaeacanthocephala_cavisomidae,
+  "diplosentidae": palaeacanthocephala_diplosentidae,
+  "heteracanthocephalidae": palaeacanthocephala_heteracanthocephalidae,
+  "fessisentidae": palaeacanthocephala_fessisentidae,
+  "transvenidae": palaeacanthocephala_transvenidae,
+  "isthmosacanthidae": palaeacanthocephala_isthmosacanthidae,
+  "gymnorhadinorhynchidae": palaeacanthocephala_gymnorhadinorhynchidae,
+  "sauracanthorhynchidae": palaeacanthocephala_sauracanthorhynchidae,
+  "spinulacorpidae": palaeacanthocephala_spinulacorpidae,
+  "polymorphidae": palaeacanthocephala_polymorphidae,
+  "centrorhynchidae": palaeacanthocephala_centrorhynchidae,
+  "plagiorhynchidae": palaeacanthocephala_plagiorhynchidae,
+  "pyrirhynchidae": palaeacanthocephala_pyrirhynchidae,
+  "pyriproboscidae": palaeacanthocephala_pyriproboscidae,
+  "paracanthocephalidae": palaeacanthocephala_paracanthocephalidae,
+  "polyacanthorhynchidae": polyacanthocephala_polyacanthorhynchidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
