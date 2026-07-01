@@ -263,3 +263,12 @@ All machines on same switch under desk. **All machines run Ollama.**
 | Debbie | Debian | — | Ollama |
 
 **Note:** Shell tools run as `tb` on Macie. If a host is unreachable via `.local` mDNS, try direct IP. SSH password for Steamie: `sshPassword!`
+
+## Playwright tests
+
+Tests live in `portal/tests/`. Always use an isolated browser context when running Playwright — the default `test` fixture already provides one, but when launching directly via `browser.newContext()` pass `{ storageState: undefined }` to avoid leaking Google/other credentials. Run with:
+
+```bash
+cd portal && npx playwright test              # headless
+cd portal && npx playwright test --headed     # visible browser
+```

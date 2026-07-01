@@ -23,11 +23,8 @@ import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import StatisticsHeader from "./components/StatisticsHeader";
 import WheelOfNature from "./components/WheelOfNature";
 import BookView from "./components/BookView";
-import rawJson from "../data/unified-taxonomy.json";
-
-const annotatedData = annotatePortalLevels(rawJson as TaxonNode);
-
-function filterExtinct(node: TaxonNode): TaxonNode {
+function filterExtinct(node: TaxonNode | null): TaxonNode {
+  if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
   if (!node.children) return node;
   const filtered = node.children
     .filter(c => !c.extinct)
@@ -96,7 +93,7 @@ export default function App() {
   const [options, setOptions] = useState<PortalOptions>({
     showExtinct: false,
     collapseLarge: true,
-    collapseThreshold: 15,
+    collapseThreshold: 30,
     nodeScale: 1.0,
     highlightWikipedia: false,
   });
@@ -111,7 +108,20 @@ export default function App() {
   const [showRightSidebar, setShowRightSidebar] = useState(true);
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
-  const speciesOfTheDay = useSpeciesOfTheDay(annotatedData);
+  const [taxonomyData, setTaxonomyData] = useState<TaxonNode | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/data/unified-taxonomy.json")
+      .then(r => r.json())
+      .then(raw => {
+        setTaxonomyData(annotatePortalLevels(raw as TaxonNode));
+        setLoading(false);
+      })
+      .catch(e => { console.error("Failed to load taxonomy:", e); setLoading(false); });
+  }, []);
+
+  const speciesOfTheDay = useSpeciesOfTheDay(taxonomyData ?? undefined);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
   const [expandedBreedIds, setExpandedBreedIds] = useState<Set<string>>(new Set());
   const [highlightedContinent, setHighlightedContinent] = useState<string | null>(null);
@@ -123,6 +133,7 @@ export default function App() {
   const { focusedFamilySlug, focusedClassId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo } = useUrlState();
 
   useEffect(() => {
+    if (!sidebarScrollRef.current) return;
     sidebarScrollRef.current?.scrollTo({ top: 0, behavior: "instant" });
   }, [selectedNodeId]);
 
@@ -137,22 +148,24 @@ export default function App() {
     return () => clearTimeout(t);
   }, [tooltipTargetId]);
 
+  const showSplash = loading || !taxonomyData;
+
   // selected node is fully URL-driven so browser back/forward and deep-links work correctly
   const selected = useMemo(
-    () => (selectedNodeId ? walkFind(annotatedData, selectedNodeId) : null),
-    [selectedNodeId],
+    () => (selectedNodeId && taxonomyData ? walkFind(taxonomyData, selectedNodeId) : null),
+    [selectedNodeId, taxonomyData],
   );
 
   // Resolve focused family slug → node id
   const focusedFamilyId = useMemo(() => {
-    if (!focusedFamilySlug) return null;
+    if (!focusedFamilySlug || !taxonomyData) return null;
     function find(n: TaxonNode): string | null {
       if (n.rank === "FAMILY" && n.familySlug === focusedFamilySlug) return n.id;
       for (const c of n.children ?? []) { const r = find(c); if (r) return r; }
       return null;
     }
-    return find(annotatedData);
-  }, [focusedFamilySlug]);
+    return find(taxonomyData);
+  }, [focusedFamilySlug, taxonomyData]);
 
   // On initial render with URL-driven focus, zoom to the focused family
   if (!pendingZoomId.current && focusedFamilyId) {
@@ -160,7 +173,7 @@ export default function App() {
   }
 
   const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
-    annotatedData,
+    taxonomyData,
     focusedFamilyId,
     expandedSubspeciesIds,
     expandedBreedIds,
@@ -226,7 +239,7 @@ export default function App() {
 
     // SPECIES with subspecies/breeds → toggle expansion
     if (node.rank === "SPECIES") {
-      const fullNode = walkFind(annotatedData, node.id);
+      const fullNode = taxonomyData ? walkFind(taxonomyData, node.id) : null;
       const hasSubspecies = fullNode?.children?.some(c => c.rank === "SUBSPECIES") ?? false;
       const hasBreeds = fullNode?.children?.some(c => c.rank === "BREED_GROUP") ?? false;
 
@@ -255,7 +268,7 @@ export default function App() {
 
     // Toggle selection: clicking same node deselects
     setSelectedNodeId(selectedNodeId === node.id ? null : node.id);
-  }, [focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo]);
+  }, [focusedFamilySlug, selectedNodeId, setFocus, setSelectedNodeId, navigateTo, taxonomyData]);
 
   const handleCollapseFamily = useCallback(() => {
     if (focusedFamilyId) pendingZoomId.current = focusedFamilyId;
@@ -280,18 +293,18 @@ export default function App() {
   );
 
   const focusedFamilyNode = useMemo(
-    () => focusedFamilyId ? walkFind(annotatedData, focusedFamilyId) : null,
-    [focusedFamilyId],
+    () => focusedFamilyId && taxonomyData ? walkFind(taxonomyData, focusedFamilyId) : null,
+    [focusedFamilyId, taxonomyData],
   );
 
   const focusedClassNode = useMemo(
-    () => focusedClassId ? walkFind(annotatedData, focusedClassId) : null,
-    [focusedClassId],
+    () => focusedClassId && taxonomyData ? walkFind(taxonomyData, focusedClassId) : null,
+    [focusedClassId, taxonomyData],
   );
 
   const breadcrumbPath = useMemo(
-    () => selected ? getPathToNode(annotatedData, selected.id) : [],
-    [selected, annotatedData],
+    () => selected && taxonomyData ? getPathToNode(taxonomyData, selected.id) : [],
+    [selected, taxonomyData],
   );
 
   const subfamiliesForPanel = useMemo(() => {
@@ -352,16 +365,18 @@ export default function App() {
       if (node.rank === "FAMILY") { n += (node as PortalNode).speciesCount ?? 0; return; }
       node.children?.forEach(walk);
     }
-    walk(annotatedData);
+    if (!taxonomyData) return 0;
+    walk(taxonomyData);
     return n;
-  }, []);
+  }, [taxonomyData]);
 
   const totalNodes = useMemo(() => {
     let n = 0;
     function walk(node: TaxonNode) { n++; node.children?.forEach(walk); }
-    walk(annotatedData);
+    if (!taxonomyData) return 0;
+    walk(taxonomyData);
     return n;
-  }, []);
+  }, [taxonomyData]);
 
   const formattedDatetime = now.toLocaleDateString("en-US", {
     month: "short", day: "numeric", year: "numeric",
@@ -370,7 +385,8 @@ export default function App() {
 
   const rankCounts = useMemo(() => {
     const counts = { CLASS: 0, ORDER: 0, FAMILY: 0, LEAVES: 0 };
-    const root = focusedClassId && focusedClassNode ? focusedClassNode : annotatedData;
+    const root = focusedClassId && focusedClassNode ? focusedClassNode : taxonomyData;
+    if (!root) return counts;
     function walk(node: TaxonNode) {
       if (node.rank === "CLASS") counts.CLASS++;
       else if (node.rank === "PHYLUM" && !node.children?.some(c => c.rank === "CLASS")) counts.CLASS++;
@@ -423,6 +439,14 @@ export default function App() {
     return totalSpecies;
   }, [inFamilyFocus, focusedFamilyNode, focusedClassId, focusedClassNode, totalSpecies]);
   const hasContinentData = selected?.rank === "SPECIES" || selected?.rank === "SUBSPECIES";
+
+  if (showSplash) {
+    return <div style={{ background: "#0f1117", color: "#e2e8f0", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem" }}>
+      <div style={{ fontSize: "1.5rem", fontWeight: 300, letterSpacing: "0.15em", textTransform: "uppercase", opacity: 0.8 }}>Systema Naturæ</div>
+      <div style={{ width: 48, height: 48, border: "3px solid #1e293b", borderTopColor: "#60a5fa", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+      <div style={{ color: "#64748b", fontSize: "0.9rem" }}>Loading taxonomy tree…</div>
+    </div>;
+  }
 
   return (
     <div style={{
@@ -542,7 +566,7 @@ export default function App() {
         >
           ☰
         </button>
-        <SearchBox data={annotatedData} onNavigate={navigateTo} />
+        <SearchBox data={taxonomyData} onNavigate={navigateTo} />
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
           <button
             onClick={() => setShowInfo(o => !o)}
@@ -727,7 +751,7 @@ export default function App() {
             flexShrink: 0,
           }}>
             <TaxonomySidebar
-              data={annotatedData}
+              data={taxonomyData}
               focusedClassId={focusedClassId}
               focusedFamilySlug={focusedFamilySlug}
               selectedId={selected?.id ?? null}
@@ -855,14 +879,14 @@ export default function App() {
       )}
       {showEponyms && (
         <EponymModal
-          data={annotatedData}
+          data={taxonomyData}
           onClose={() => setShowEponyms(false)}
           onNavigate={(slug, nodeId) => { navigateTo(slug, nodeId); setShowEponyms(false); }}
         />
       )}
       {showCoverage && (
         <CoverageModal
-          data={annotatedData}
+          data={taxonomyData}
           onClose={() => setShowCoverage(false)}
           onFocusFamily={slug => { setFocus(slug); setShowCoverage(false); }}
           initialFamilySlug={focusedFamilySlug}
@@ -871,7 +895,7 @@ export default function App() {
       )}
       {showWheel && (
         <WheelOfNature
-          data={annotatedData}
+          data={taxonomyData}
           onClose={() => setShowWheel(false)}
           onNavigate={(slug, nodeId) => { navigateTo(slug, nodeId); setShowWheel(false); }}
         />
