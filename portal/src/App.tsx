@@ -110,6 +110,7 @@ export default function App() {
   const { todaysDays } = useInternationalDays();
   const [taxonomyData, setTaxonomyData] = useState<TaxonNode | null>(null);
   const [loading, setLoading] = useState(true);
+  const [treeReady, setTreeReady] = useState(false);
 
   useEffect(() => {
     fetch("/data/unified-taxonomy.json")
@@ -175,6 +176,7 @@ export default function App() {
   const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
     taxonomyData,
     focusedFamilyId,
+    focusedClassId,
     expandedSubspeciesIds,
     expandedBreedIds,
     highlightedContinent,
@@ -383,28 +385,17 @@ export default function App() {
     hour: "2-digit", minute: "2-digit",
   });
 
-  const rankCounts = useMemo(() => {
-    const counts = { CLASS: 0, ORDER: 0, FAMILY: 0, LEAVES: 0 };
-    const root = focusedClassId && focusedClassNode ? focusedClassNode : taxonomyData;
-    if (!root) return counts;
-    function walk(node: TaxonNode) {
-      if (node.rank === "CLASS") counts.CLASS++;
-      else if (node.rank === "PHYLUM" && !node.children?.some(c => c.rank === "CLASS")) counts.CLASS++;
-      else if (node.rank === "ORDER") counts.ORDER++;
-      else if (node.rank === "FAMILY") counts.FAMILY++;
-      if (!node.children || node.children.length === 0) counts.LEAVES++;
-      node.children?.forEach(walk);
-    }
-    walk(root);
-    return counts;
-  }, [focusedClassId, focusedClassNode]);
+  const RANK_ORDER = ["KINGDOM", "PHYLUM", "CLASS", "ORDER", "FAMILY", "GENUS", "SPECIES"];
 
-  const RANK_TIERS = [
-    { rank: "CLASS" as const,  label: "Classes",  singular: "Class",  color: "#7a6a4a", bg: "#1e1a0e" },
-    { rank: "ORDER" as const,  label: "Orders",   singular: "Order",  color: "#4a7a6a", bg: "#0e1e1a" },
-    { rank: "FAMILY" as const, label: "Families", singular: "Family", color: "#4a6a9a", bg: "#0e1628" },
-    { rank: "LEAVES" as const, label: "total",    singular: "total",  color: "#6a6a8a", bg: "#141420" },
-  ];
+  const RANK_COLORS: Record<string, string> = {
+    KINGDOM: "#c0a070", PHYLUM: "#9a8858", CLASS: "#7a9fc2",
+    ORDER: "#6a8a7a", FAMILY: "#F5F5F5", GENUS: "#b5cd6a", SPECIES: "#e6a817",
+  };
+
+  const RANK_LABELS: Record<string, string> = {
+    KINGDOM: "Kingdom", PHYLUM: "Phylum", CLASS: "Classes", ORDER: "Orders",
+    FAMILY: "Families", GENUS: "Genera", SPECIES: "Species",
+  };
 
   const btnBase: React.CSSProperties = {
     padding: "6px 14px",
@@ -442,9 +433,16 @@ export default function App() {
 
   if (showSplash) {
     return <div style={{ background: "#0f1117", color: "#e2e8f0", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1.5rem" }}>
+      <style>{`
+        @keyframes pulse-dot { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+        .pulse span { animation: pulse-dot 1.4s ease-in-out infinite; }
+        .pulse span:nth-child(2) { animation-delay: 0.2s; }
+        .pulse span:nth-child(3) { animation-delay: 0.4s; }
+      `}</style>
       <div style={{ fontSize: "1.5rem", fontWeight: 300, letterSpacing: "0.15em", textTransform: "uppercase", opacity: 0.8 }}>Systema Naturæ</div>
-      <div style={{ width: 48, height: 48, border: "3px solid #1e293b", borderTopColor: "#60a5fa", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
-      <div style={{ color: "#64748b", fontSize: "0.9rem" }}>Loading taxonomy tree…</div>
+      <div className="pulse" style={{ color: "#64748b", fontSize: "0.9rem" }}>
+        Loading<span>.</span><span>.</span><span>.</span>
+      </div>
     </div>;
   }
 
@@ -477,26 +475,61 @@ export default function App() {
               </span>
             )}
           </div>
-          {!inFamilyFocus && (
-            <div style={{ display: "flex", alignItems: "center", marginTop: 5 }}>
-              {RANK_TIERS.map(({ rank, label, singular, color, bg }, i) => (
-                <div key={rank} style={{
-                  clipPath: i === 0
-                    ? "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%)"
-                    : i === RANK_TIERS.length - 1
-                      ? "polygon(10px 0, 100% 0, 100% 100%, 10px 100%, 0 50%)"
-                      : "polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%)",
-                  background: bg,
-                  marginLeft: i === 0 ? 0 : -1,
-                  padding: `3px 14px 3px ${i === 0 ? "10px" : "18px"}`,
-                  fontSize: 11,
-                  color,
-                  letterSpacing: "0.02em",
-                  whiteSpace: "nowrap",
-                }}>
-                  {rankCounts[rank].toLocaleString()} {rankCounts[rank] === 1 ? singular : label}
-                </div>
-              ))}
+          {!inFamilyFocus && taxonomyData?.rankCounts && (
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              marginTop: 5,
+              background: "#141420",
+              borderRadius: 6,
+              padding: "3px 12px",
+              gap: 0,
+              flexWrap: "wrap",
+            }}>
+              {RANK_ORDER.filter(r => taxonomyData.rankCounts![r] > 0).map((rank, i) => {
+                const count = taxonomyData.rankCounts![rank];
+                const color = RANK_COLORS[rank] ?? "#888";
+                const isKingdom = rank === "KINGDOM";
+                const label = isKingdom
+                  ? "Kingdom: Animals"
+                  : `${RANK_LABELS[rank]}: ${count.toLocaleString()}`;
+
+                return (
+                  <span key={rank} style={{ display: "inline-flex", alignItems: "center" }}>
+                    {i > 0 && <span style={{ color: "#3a3a4a", fontSize: 11, margin: "0 6px", userSelect: "none" }}>&gt;</span>}
+                    {isKingdom ? (
+                      <button
+                        onClick={() => handleSelect(taxonomyData)}
+                        title="Reset to root overview"
+                        style={{
+                          background: "none",
+                          border: "none",
+                          padding: 0,
+                          cursor: "pointer",
+                          color: "#c0a070",
+                          fontSize: 11,
+                          fontWeight: 600,
+                          lineHeight: 1.4,
+                          transition: "color 0.15s",
+                        }}
+                        onMouseEnter={e => { e.currentTarget.style.color = "#e0c080"; }}
+                        onMouseLeave={e => { e.currentTarget.style.color = "#c0a070"; }}
+                      >
+                        {label}
+                      </button>
+                    ) : (
+                      <span style={{
+                        color,
+                        fontSize: 10,
+                        lineHeight: 1.4,
+                        opacity: 0.85,
+                      }}>
+                        {label}
+                      </span>
+                    )}
+                  </span>
+                );
+              })}
             </div>
           )}
           {speciesOfTheDay && (
@@ -708,21 +741,6 @@ export default function App() {
               {v === "graph" ? "📊 Graph" : "📖 Book"}
             </button>
           ))}
-          {/* Graph Layout */}
-          {viewMode === "graph" && (["radial", "vertical"] as const).map(l => (
-            <button
-              key={l}
-              onClick={() => setLayout(l)}
-              style={{
-                ...btnBase,
-                borderColor: layout === l ? "#3a3d50" : "#1e2030",
-                background: layout === l ? "#1e2030" : "transparent",
-                color: layout === l ? "#e0e0e0" : "#555",
-              }}
-            >
-              {l === "radial" ? "⊕ Radial" : "⇒ Vertical"}
-            </button>
-          ))}
           {/* Toggle Details Panel */}
           <button
             onClick={() => setShowRightSidebar(o => !o)}
@@ -743,24 +761,6 @@ export default function App() {
 
       {/* Main */}
       <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
-        {showSidebar && (
-          <div style={{
-            width: 220,
-            borderRight: "1px solid #1e2030",
-            overflow: "hidden",
-            flexShrink: 0,
-          }}>
-            <TaxonomySidebar
-              data={taxonomyData}
-              focusedClassId={focusedClassId}
-              focusedFamilySlug={focusedFamilySlug}
-              selectedId={selected?.id ?? null}
-              onSelect={handleSelect}
-              onFocusFamily={setFocus}
-              onFocusClass={setFocusedClass}
-            />
-          </div>
-        )}
         <div style={{ flex: 1, overflow: "hidden", position: "relative" }}>
           {viewMode === "graph" ? (
             <FamilyTree
@@ -777,6 +777,7 @@ export default function App() {
               nodeScale={options.nodeScale}
               treeRotation={treeRotation}
               tooltipTargetId={tooltipTargetId}
+              onReady={() => setTreeReady(true)}
             />
           ) : (
             <BookView
@@ -787,6 +788,85 @@ export default function App() {
           )}
           {viewMode === "graph" && (
             <>
+              {showSidebar && (
+                <div style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  bottom: 0,
+                  width: 220,
+                  background: "rgba(10,10,20,0.85)",
+                  borderRight: "1px solid #1e2030",
+                  overflow: "hidden",
+                  zIndex: 10,
+                }}>
+                  <div style={{
+                    position: "absolute",
+                    top: 4,
+                    right: 4,
+                    zIndex: 11,
+                  }}>
+                    <button
+                      onClick={() => setShowSidebar(false)}
+                      title="Close sidebar"
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: "#555",
+                        cursor: "pointer",
+                        fontSize: 14,
+                        padding: "2px 6px",
+                        borderRadius: 3,
+                        lineHeight: 1,
+                      }}
+                      onMouseEnter={e => { e.currentTarget.style.color = "#ccc"; }}
+                      onMouseLeave={e => { e.currentTarget.style.color = "#555"; }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <TaxonomySidebar
+                    data={taxonomyData}
+                    focusedClassId={focusedClassId}
+                    focusedFamilySlug={focusedFamilySlug}
+                    selectedId={selected?.id ?? null}
+                    onSelect={handleSelect}
+                    onFocusFamily={setFocus}
+                    onFocusClass={setFocusedClass}
+                  />
+                </div>
+              )}
+              <div style={{
+                position: "absolute",
+                bottom: 16,
+                left: 16,
+                display: "flex",
+                gap: 4,
+                background: "rgba(10,10,20,0.6)",
+                borderRadius: 6,
+                padding: 4,
+              }}>
+                {(["radial", "vertical"] as const).map(l => (
+                  <button
+                    key={l}
+                    onClick={() => setLayout(l)}
+                    style={{
+                      border: "none",
+                      borderRadius: 4,
+                      padding: "4px 10px",
+                      fontSize: 11,
+                      cursor: "pointer",
+                      background: layout === l ? "#2a2a3a" : "transparent",
+                      color: layout === l ? "#e0e0e0" : "#555",
+                      transition: "all 0.15s",
+                    }}
+                    onMouseEnter={e => { if (layout !== l) e.currentTarget.style.color = "#888"; }}
+                    onMouseLeave={e => { if (layout !== l) e.currentTarget.style.color = "#555"; }}
+                  >
+                    {l === "radial" ? "⊕ Radial" : "⇒ Vertical"}
+                  </button>
+                ))}
+              </div>
               <div style={{
                 position: "absolute",
                 bottom: 16,
@@ -822,6 +902,30 @@ export default function App() {
                 <div>{formattedDatetime}</div>
                 <div>{totalNodes.toLocaleString()} nodes</div>
               </div>
+              {!treeReady && (
+                <div style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "#0f1117",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "1.5rem",
+                  zIndex: 100,
+                }}>
+                  <style>{`
+                    @keyframes pulse-dot { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+                    .pulse-load span { animation: pulse-dot 1.4s ease-in-out infinite; }
+                    .pulse-load span:nth-child(2) { animation-delay: 0.2s; }
+                    .pulse-load span:nth-child(3) { animation-delay: 0.4s; }
+                  `}</style>
+                  <div style={{ fontSize: "1.5rem", fontWeight: 300, letterSpacing: "0.15em", textTransform: "uppercase", opacity: 0.8 }}>Systema Naturæ</div>
+                  <div className="pulse-load" style={{ color: "#64748b", fontSize: "0.9rem" }}>
+                    Rendering<span>.</span><span>.</span><span>.</span>
+                  </div>
+                </div>
+              )}
             </>
           )}
         </div>

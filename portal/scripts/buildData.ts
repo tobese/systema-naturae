@@ -92,7 +92,7 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
       for (const child of processedChildren) {
         if (child.rank === "SPECIES") {
           const desc = (child.description as string) || "";
-          const isMinimal = !desc || desc.toLowerCase().includes("a species in the genus");
+          const isMinimal = !desc || /a (\w+ )?species in the genus/i.test(desc);
           const hasChildren = child.children && child.children.length > 0;
 
           if (isMinimal && !hasChildren) {
@@ -136,18 +136,25 @@ console.log("Building unified-taxonomy.json…");
 const taxonomy = JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode;
 const uncompressed = processTree(taxonomy);
 const unified = compressTreeNodes(uncompressed);
-writeFileSync(outputPath, JSON.stringify(unified, null, 2));
 
-// Count nodes
+// Count nodes and stamp rankCounts on root
 let physicalCount = 0;
 let flatSpeciesCount = 0;
+const rankCounts: Record<string, number> = {};
 function count(n: TaxonNode) {
   physicalCount++;
+  rankCounts[n.rank] = (rankCounts[n.rank] || 0) + 1;
   if (n.speciesList) {
     flatSpeciesCount += n.speciesList.length;
+    for (const sp of n.speciesList) {
+      rankCounts[sp.rank] = (rankCounts[sp.rank] || 0) + 1;
+    }
   }
   n.children?.forEach(count);
 }
 count(unified);
+unified.rankCounts = rankCounts;
+
+writeFileSync(outputPath, JSON.stringify(unified, null, 2));
 
 console.log(`Done. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → data/unified-taxonomy.json`);

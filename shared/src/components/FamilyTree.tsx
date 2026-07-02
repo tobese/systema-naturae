@@ -17,6 +17,7 @@ interface Props {
   nodeScale?: number;
   treeRotation?: number;
   tooltipTargetId?: string | null;
+  onReady?: () => void;
 }
 
 type AnnotatedNode = d3.HierarchyNode<TaxonNode> & { subfamily?: string };
@@ -182,11 +183,13 @@ function TooltipBox({
 
   function content() {
     if (isSpecies) {
+      const rankLabel = node.rank === "SUBSPECIES" ? "Subspecies" : node.rank === "BREED" ? "Breed" : node.rank === "HYBRID" ? "Hybrid" : "Species";
       return (
         <>
           {imgUrl && (
             <img src={imgUrl} alt="" style={{ width: "100%", height: "auto", borderRadius: 5, display: "block", marginBottom: 8 }} />
           )}
+          <div style={{ fontSize: 9, color: "#6a7a8a", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>{rankLabel}</div>
           <div style={{ fontStyle: "italic", fontSize: 11, color: "#555", lineHeight: 1.3 }}>
             {node.name}
           </div>
@@ -204,11 +207,13 @@ function TooltipBox({
       );
     }
 
-    const summary = childSummary(node);
+    const summary = (node as any)._childSummary ?? childSummary(node);
 
     if (node.rank === "SUBFAMILY" || node.rank === "TRIBE") {
+      const rankLabel = node.rank === "TRIBE" ? "Tribe" : "Subfamily";
       return (
         <>
+          <div style={{ fontSize: 9, color: "#6a7a8a", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>{rankLabel}</div>
           <div style={{ fontSize: 13, color: "#ddd", fontWeight: 600 }}>
             {node.name}
           </div>
@@ -224,6 +229,7 @@ function TooltipBox({
     if (node.rank === "GENUS") {
       return (
         <>
+          <div style={{ fontSize: 9, color: "#6a7a8a", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>Genus</div>
           <div style={{ fontStyle: "italic", fontSize: 12, color: "#ddd", fontWeight: 500 }}>
             {node.name}
           </div>
@@ -242,11 +248,15 @@ function TooltipBox({
     }
 
     // KINGDOM through FAMILY
+    const rankLabel = node.rank === "KINGDOM" ? "Kingdom" : node.rank === "PHYLUM" ? "Phylum" : node.rank === "CLASS" ? "Class" : node.rank === "ORDER" ? "Order" : node.rank === "FAMILY" ? "Family" : "";
     const desc = node.description
       ? node.description.slice(0, 100) + (node.description.length > 100 ? "…" : "")
       : "";
     return (
       <>
+        {rankLabel && (
+          <div style={{ fontSize: 9, color: "#6a7a8a", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>{rankLabel}</div>
+        )}
         <div style={{ fontSize: 13, color: "#ddd", fontWeight: 600 }}>
           {node.commonName ?? node.name}
         </div>
@@ -299,7 +309,7 @@ interface Setup {
 export default function FamilyTree({
   data, layout, onSelect, selectedId, pendingZoomId,
   highlightedNodeIds, colorTheme, specialNodeId, focusedFamilySlug, focusedClassId,
-  collapseThreshold = 99999, nodeScale = 1, treeRotation = 0, tooltipTargetId,
+  collapseThreshold = 99999, nodeScale = 1, treeRotation = 0, tooltipTargetId, onReady,
 }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -309,6 +319,7 @@ export default function FamilyTree({
   const prevLayoutRef = useRef<"radial" | "vertical" | null>(null);
   const savedZoomRef = useRef<d3.ZoomTransform | null>(null);
   const prevTreeKeyRef = useRef<string>("root");
+  const readyCalledRef = useRef(false);
 
   const zoomAnchorRef = useRef<{ sx: number; sy: number } | null>(null);
 
@@ -920,6 +931,10 @@ export default function FamilyTree({
 
   useEffect(() => {
     render();
+    if (!readyCalledRef.current) {
+      readyCalledRef.current = true;
+      onReady?.();
+    }
     const ro = new ResizeObserver(render);
     if (containerRef.current) ro.observe(containerRef.current);
     return () => {

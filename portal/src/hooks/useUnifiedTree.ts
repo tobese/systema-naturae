@@ -8,18 +8,40 @@ const CLASS_PALETTE = buildClassPalette();
 // Overview mode: collapse all families to leaf nodes (no species shown).
 // Focused mode: return only the focused family subtree (rooted at the family).
 function pruneTree(
-  node: TaxonNode,
+  node: TaxonNode | null | undefined,
   focusedFamilyId: string | null,
+  focusedClassId: string | null,
   expandedSubspeciesIds: Set<string>,
   expandedBreedIds: Set<string>,
 ): TaxonNode | null {
+  if (!node) return null;
   if (!focusedFamilyId) {
-    if (node.rank === "FAMILY") {
-      const { children: _c, ...rest } = node;
-      return rest as TaxonNode;
-    }
     if (!node.children) return node;
-    return { ...node, children: node.children.map(c => pruneTree(c, null, expandedSubspeciesIds, expandedBreedIds)).filter((c): c is TaxonNode => c !== null) };
+
+    // Overview mode: strip children of ORDER so the graph only renders
+    // KINGDOM → PHYLUM → CLASS → ORDER. Families and lower ranks become
+    // reachable only when a class or family is focused.
+    // (Don't strip when a class is focused — FamilyTree handles class-focus pruning.)
+    if (node.rank === "ORDER" && !focusedClassId) {
+      let familyCount = 0;
+      for (const c of node.children) {
+        if (c.rank === "FAMILY") familyCount++;
+      }
+      return { ...node, children: undefined, _familyCount: familyCount } as unknown as TaxonNode;
+    }
+
+    const pruned = node.children.map(c => pruneTree(c, null, focusedClassId, expandedSubspeciesIds, expandedBreedIds)).filter((c): c is TaxonNode => c !== null);
+    let familyCount = 0;
+    if (node.rank === "KINGDOM" || node.rank === "PHYLUM" || node.rank === "CLASS") {
+      function walkCounts(n: TaxonNode): void {
+        for (const c of n.children ?? []) {
+          if (c.rank === "FAMILY") familyCount++;
+          walkCounts(c);
+        }
+      }
+      walkCounts(node);
+    }
+    return { ...node, children: pruned, _familyCount: familyCount } as unknown as TaxonNode;
   }
 
   // Focused mode: return only the focused family subtree (rooted at the family).
@@ -104,8 +126,9 @@ function mergeThemes(base: ColorTheme, family: ColorTheme): ColorTheme {
 }
 
 export function useUnifiedTree(
-  annotatedData: TaxonNode,
+  annotatedData: TaxonNode | null,
   focusedFamilyId: string | null,
+  focusedClassId: string | null,
   expandedSubspeciesIds: Set<string>,
   expandedBreedIds: Set<string>,
   highlightedContinent: string | null,
@@ -117,13 +140,13 @@ export function useUnifiedTree(
   findNodeById: (id: string) => TaxonNode | null;
 } {
   const treeData = useMemo(
-    () => pruneTree(annotatedData, focusedFamilyId, expandedSubspeciesIds, expandedBreedIds) ?? annotatedData,
-    [annotatedData, focusedFamilyId, expandedSubspeciesIds, expandedBreedIds],
+    () => (annotatedData ? (pruneTree(annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds) ?? annotatedData) : null) as unknown as TaxonNode,
+    [annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds],
   );
 
   const colorTheme = useMemo<ColorTheme>(() => {
     let theme = PORTAL_THEME;
-    if (focusedFamilyId) {
+    if (focusedFamilyId && annotatedData) {
       const familyNode = walkFind(annotatedData, focusedFamilyId);
       const slug = familyNode?.familySlug;
       if (slug && COLOR_REGISTRY[slug]) {
@@ -134,7 +157,7 @@ export function useUnifiedTree(
   }, [annotatedData, focusedFamilyId]);
 
   const highlightedNodeIds = useMemo<Set<string> | null>(() => {
-    if (!focusedFamilyId) return null;
+    if (!focusedFamilyId || !annotatedData) return null;
     const familyNode = walkFind(annotatedData, focusedFamilyId);
     if (!familyNode) return null;
 
@@ -162,7 +185,7 @@ export function useUnifiedTree(
   }, [annotatedData, focusedFamilyId, highlightedContinent, highlightWikipedia]);
 
   const findNodeById = useMemo(
-    () => (id: string) => walkFind(annotatedData, id),
+    () => (id: string) => annotatedData ? walkFind(annotatedData, id) : null,
     [annotatedData],
   );
 
