@@ -26,7 +26,7 @@ import-steamie:
 	OLLAMA_HOST=steamie.local OLLAMA_MODEL=qwen2.5-coder:7b OLLAMA_TIMEOUT=600000 cd portal && npm run import $(ARGS)
 
 import-biggie:
-	OLLAMA_HOST=biggie.local OLLAMA_MODEL=qwen2.5-coder:3b cd portal && npm run import $(ARGS)
+	OLLAMA_HOST=biggie.local OLLAMA_MODEL=qwen2.5-coder:3b OLLAMA_NUM_GPU=0 cd portal && npm run import $(ARGS)
 
 fetch:
 	cd portal && npm run fetch $(ARGS)

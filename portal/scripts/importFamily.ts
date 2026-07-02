@@ -8,8 +8,9 @@ const root = resolve(__dirname, "../..");
 const portalRoot = resolve(__dirname, "..");
 
 const OLLAMA_HOST = process.env.OLLAMA_HOST || "localhost";
-const OLLAMA_URL = `http://${OLLAMA_HOST}:11434/api/chat`;
+const OLLAMA_URL = `http://${OLLAMA_HOST}:11434/api/generate`;
 const MODEL = process.env.OLLAMA_MODEL || "qwen2.5:3b";
+const OLLAMA_NUM_GPU = process.env.OLLAMA_NUM_GPU;
 const OLLAMA_TIMEOUT = 900_000;
 
 interface Species {
@@ -97,16 +98,12 @@ function getColorRegistryLineages(slug: string): Set<string> {
 }
 
 async function callOllama(prompt: string, _count: number, temperature = 0.5): Promise<string> {
-  const systemMsg = "You are a taxonomy data generator. Output ONLY a valid JSON array of species objects. No markdown, no explanation, no code fences. Just the raw JSON array.";
-
   const body = JSON.stringify({
     model: MODEL,
-    messages: [
-      { role: "system", content: systemMsg },
-      { role: "user", content: prompt },
-    ],
+    prompt,
     stream: false,
     temperature,
+    ...(OLLAMA_NUM_GPU ? { options: { num_gpu: Number(OLLAMA_NUM_GPU) } } : {}),
   });
 
   const controller = new AbortController();
@@ -119,21 +116,13 @@ async function callOllama(prompt: string, _count: number, temperature = 0.5): Pr
   }, 10000);
 
   try {
-    const response = await fetch(OLLAMA_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body,
-      signal: controller.signal,
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const parsed = await response.json() as { message?: { content?: string } };
-    return parsed.message?.content ?? "";
+    const maxTimeSeconds = Math.max(1, Math.ceil(OLLAMA_TIMEOUT / 1000));
+    const output = execSync(
+      `curl -sS --max-time ${maxTimeSeconds} -X POST ${OLLAMA_URL} -H 'Content-Type: application/json' -d '${body.replace(/'/g, `'"'"'`)}'`,
+      { encoding: "utf-8", stdio: ["ignore", "pipe", "pipe"] },
+    );
+    const parsed = JSON.parse(output) as { response?: string };
+    return parsed.response ?? "";
   } finally {
     clearTimeout(timeoutId);
     clearInterval(interval);

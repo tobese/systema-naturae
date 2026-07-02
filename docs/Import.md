@@ -19,7 +19,7 @@ npx tsx scripts/fetchSpeciesFromApi.ts <slug> [limit]
 ```
 
 ### `portal/scripts/importFamily.ts` — LLM gap fill
-Uses local Ollama (`qwen2.5:7b` recommended) to generate descriptions and synthesise missing species for known gaps.
+Uses Ollama to generate descriptions and synthesise missing species for known gaps.
 
 ```bash
 cd portal
@@ -27,8 +27,9 @@ OLLAMA_MODEL=qwen2.5:7b npx tsx scripts/importFamily.ts <slug> [count]
 ```
 
 Environment:
-- `OLLAMA_HOST` — point at `Steamie.local`, `Biggie.local`, or `Debbie.local` to use a remote rig.
-- `OLLAMA_MODEL` — model to use; `qwen2.5:3b` is too small for families with rich existing structure.
+- `OLLAMA_HOST` — point at `localhost`, `steamie.taile27c11.ts.net`, `100.95.246.65`, or `100.101.65.92` as needed.
+- `OLLAMA_MODEL` — model to use; `qwen2.5-coder:3b` is the current Biggie default.
+- `OLLAMA_NUM_GPU` — set to `0` for the Biggie import path when using CPU-only generation.
 
 ### `portal/scripts/importPapilionidaeWikipedia.ts`
 Template for a **Wikipedia-first** importer that scans GBIF, only keeps species with a Wikipedia article, and enriches inline. Copy + adapt per family.
