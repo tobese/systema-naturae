@@ -13,7 +13,6 @@ interface Props {
   findNodeById: (id: string) => TaxonNode | null;
   onFocusFamily: (slug: string | null) => void;
   focusedFamilySlug: string | null;
-  subfamilies?: TaxonNode[];
 }
 
 // Strip parenthetical annotations like "(Älg)" or "(Wapiti)" before Wikipedia lookup
@@ -180,24 +179,6 @@ function PhylumPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonN
   );
 }
 
-function OverviewHomePanel({ onFocusFamily }: { onFocusFamily: (slug: string | null) => void }) {
-  void onFocusFamily;
-  return (
-    <div style={{ padding: "24px 20px", color: "#555" }}>
-      <div style={{ fontSize: 13, lineHeight: 1.7, marginBottom: 20 }}>
-        Explore the animal kingdom. The tree shows{" "}
-        <span style={{ color: "#e0e0e0", fontWeight: 500 }}>23 phyla → 61 classes → orders</span>.
-        Click any node to select it; click a class to focus it.
-      </div>
-      <div style={{ fontSize: 11, color: "#3a3a4a", lineHeight: 1.6 }}>
-        <div style={{ marginBottom: 6 }}>Golden nodes → phyla</div>
-        <div style={{ marginBottom: 6 }}>Colored nodes → classes (color by class)</div>
-        <div style={{ marginBottom: 6 }}>Derived-color nodes → orders</div>
-        <div style={{ marginBottom: 6 }}>Esc or ← All classes → collapse focused class</div>
-      </div>
-    </div>
-  );
-}
 
 function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const accent = accentForNode(node);
@@ -337,48 +318,6 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
 }
 
 // ─── Family-level panels ──────────────────────────────────────────────────────
-
-function FamilyHomePanel({ subfamilies, onSelect, focusedFamilySlug }: {
-  subfamilies: TaxonNode[];
-  onSelect: (n: TaxonNode) => void;
-  focusedFamilySlug: string | null;
-}) {
-  const theme = focusedFamilySlug ? COLOR_REGISTRY[focusedFamilySlug] : null;
-  return (
-    <div style={{ padding: "24px 20px", color: "#888", fontSize: 13, lineHeight: 1.6 }}>
-      <div style={{ fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#555", marginBottom: 16 }}>
-        Click any node to explore.
-      </div>
-      {subfamilies.length > 0 && theme && (
-        <div style={{ marginBottom: 20 }}>
-          <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#555", marginBottom: 8 }}>Subfamilies</div>
-          {subfamilies.map(sf => (
-            <button key={sf.id} onClick={() => onSelect(sf)} style={{
-              display: "block", width: "100%", textAlign: "left",
-              background: "none", border: "none", borderBottom: "1px solid #1a1a2a",
-              padding: "7px 0", cursor: "pointer",
-              color: theme.subfamilyColors[sf.name] ?? "#8899bb", fontSize: 13,
-            }}>
-              {sf.commonName ?? sf.name}
-              <span style={{ float: "right", color: "#333", fontSize: 11 }}>{countLeaves(sf)} spp.</span>
-            </button>
-          ))}
-        </div>
-      )}
-      {theme && Object.keys(theme.lineageColors).length > 0 && (
-        <div style={{ padding: "12px 14px", borderRadius: 8, background: "#111", fontSize: 12, lineHeight: 1.7 }}>
-          <div style={{ color: "#888", marginBottom: 6 }}>Lineage colours</div>
-          {Object.entries(theme.lineageColors).map(([name, color]) => (
-            <div key={name} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
-              <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: "50%", background: color }} />
-              <span style={{ color: "#ccc" }}>{name}</span>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
 
 function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const accent = accentForNode(node);
@@ -744,13 +683,8 @@ export default function UnifiedInfoPanel({
   findNodeById,
   onFocusFamily,
   focusedFamilySlug,
-  subfamilies = [],
 }: Props) {
-  if (!node) {
-    return focusedFamilySlug
-      ? <FamilyHomePanel subfamilies={subfamilies} onSelect={onSelect} focusedFamilySlug={focusedFamilySlug} />
-      : <OverviewHomePanel onFocusFamily={onFocusFamily} />;
-  }
+  if (!node) return null;
 
   // Portal-level
   if (node.rank === "KINGDOM") return <KingdomPanel node={node} onSelect={onSelect} />;

@@ -19,10 +19,14 @@ interface FamilyInfo {
   dataFilePath: string;
 }
 
-function walk(node: any, className: string, orderName: string, results: FamilyInfo[]) {
+function walk(node: any, className: string, orderName: string, results: FamilyInfo[], hasClass: boolean = false) {
   if (!node || typeof node !== "object") return;
   const children = node.children || [];
-  if (node.rank === "CLASS" || (node.rank === "PHYLUM" && !className)) {
+  if (node.rank === "CLASS") {
+    className = node.name;
+    hasClass = true;
+  }
+  if (node.rank === "PHYLUM" && !className) {
     className = node.name;
   }
   if (node.rank === "ORDER") {
@@ -30,9 +34,10 @@ function walk(node: any, className: string, orderName: string, results: FamilyIn
   }
   if (node.rank === "FAMILY" && node.appSlug && node.speciesCount != null) {
     let dataFilePath: string;
-    const cls = className ? className.toLowerCase().replace(/\s+/g, "_") : "";
+    const phylumDir = className ? className.toLowerCase().replace(/\s+/g, "_") : "";
     const ord = orderName ? orderName.toLowerCase().replace(/\s+/g, "_") : "";
-    const parts = [cls, ord, node.appSlug].filter(Boolean);
+    // Families under a CLASS use <class>/<order>/<family>; classless (e.g. Tardigrada) live at <appSlug>/ directly
+    const parts = hasClass ? [phylumDir, ord, node.appSlug].filter(Boolean) : [node.appSlug];
     dataFilePath = join(root, ...parts, "src", "data", `${node.appSlug}.json`);
     results.push({
       className,
@@ -51,7 +56,7 @@ function walk(node: any, className: string, orderName: string, results: FamilyIn
   }
   if (Array.isArray(children)) {
     for (const child of children) {
-      walk(child, className, orderName, results);
+      walk(child, className, orderName, results, hasClass);
     }
   }
 }
