@@ -1,10 +1,10 @@
 # Biggie — Task Runner
 
-**Host:** `Biggie.local` (IP TBD)
+**Host:** `Biggie.local` / Tailscale `100.95.246.65`
 **OS:** Windows 10
 **User:** TBD
 **Specs:** 32G RAM + 3G GPU
-**Ollama:** `qwen2.5:7b` or `llama3.2` (pull if not present)
+**Ollama:** `qwen2.5-coder:3b` (import path), `qwen3.6:latest`
 
 ## Setup
 
@@ -16,10 +16,7 @@ cd systema-naturae
 # Install Node.js dependencies
 cd portal && npm install && cd ..
 
-# Pull Ollama model
-ollama pull qwen2.5:7b
-# Or if 3G GPU is tight:
-# ollama pull llama3.2
+# Biggie currently serves qwen2.5-coder:3b and qwen3.6:latest
 ```
 
 ## Tasks
@@ -73,6 +70,6 @@ git push
 ## Notes
 
 - 32GB RAM is ample for large cache files and scans
-- 3G GPU may be tight for 7B models — use `llama3.2` (smaller) if Ollama runs out of VRAM
+- For importer calls, use `OLLAMA_NUM_GPU=0` against Biggie if needed
 - GBIF API has rate limits — expect 250ms+ between requests
 - Insecta cache rebuild may take 30-60 minutes
