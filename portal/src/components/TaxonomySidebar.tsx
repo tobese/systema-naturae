@@ -38,7 +38,7 @@ function countChildren(node: TaxonNode, rank: string): number {
 function defaultExpanded(data: TaxonNode): Set<string> {
   const s = new Set<string>();
   function walk(n: TaxonNode) {
-    if (n.rank === "KINGDOM" || n.rank === "CLASS") s.add(n.id);
+    if (n.rank === "KINGDOM" || n.rank === "PHYLUM" || n.rank === "CLASS") s.add(n.id);
     n.children?.forEach(walk);
   }
   walk(data);
@@ -70,7 +70,7 @@ export default function TaxonomySidebar({
     setExpanded(prev => {
       const next = new Set(prev);
       function walk(n: TaxonNode) {
-        if (n.id === focusedClassId || n.rank === "FAMILY" || n.rank === "ORDER") {
+        if (n.id === focusedClassId || n.rank === "FAMILY" || n.rank === "ORDER" || n.rank === "PHYLUM") {
           next.add(n.id);
         }
         n.children?.forEach(walk);
@@ -142,6 +142,7 @@ function renderNode(
   if (!node.children || node.children.length === 0) return null;
 
   const isClass = node.rank === "CLASS";
+  const isPhylum = node.rank === "PHYLUM";
   const isOrder = node.rank === "ORDER";
   const isFamily = node.rank === "FAMILY";
   const isSubfamily = node.rank === "SUBFAMILY" || node.rank === "TRIBE";
@@ -154,12 +155,12 @@ function renderNode(
   const isFocusTarget = (isClass && node.id === focusedClassId) || (isFamily && node.familySlug === focusedFamilySlug);
   const isSelected = node.id === selectedId;
 
-  // Show children for top-level containers and CLASS all the time.
+  // Show children for top-level containers, PHYLUM, and CLASS all the time.
   // For ORDER, only show when class is focused to avoid clutter.
   // For FAMILY, always show if open.
   // For genus+, only show when family is focused.
   const showChildren = (() => {
-    if (depth === 0 || isClass) return true; // kingdom/phylum root + all classes
+    if (depth === 0 || isPhylum || isClass) return true; // kingdom + phyla + classes
     if (isOrder) return focusedClassId !== null;
     if (isFamily) return true;
     return focusedFamilySlug !== null && node.familySlug === focusedFamilySlug;
@@ -167,6 +168,7 @@ function renderNode(
 
   // Child count label
   const childLabel = (() => {
+    if (isPhylum) return `${countChildren(node, "CLASS")} classes`;
     if (isClass) return `${countChildren(node, "ORDER")} orders`;
     if (isOrder) return `${countChildren(node, "FAMILY")} families`;
     if (isFamily) return `${countChildren(node, "GENUS")} genera`;

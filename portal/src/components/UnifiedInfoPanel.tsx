@@ -121,30 +121,29 @@ function ClickableItem({ children, onClick }: { children: React.ReactNode; onCli
 function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const pn = node as PortalNode;
   const phyla = node.children ?? [];
-  const classes = phyla.flatMap(p => p.children ?? []);
   return (
     <div style={{ padding: "20px" }}>
       <div style={{ fontSize: 10, color: "#8899bb", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Kingdom</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
       <div style={{ fontSize: 12, color: "#666", marginBottom: pn.description ? 14 : 20 }}>
-        {classes.length} {classes.length === 1 ? "class" : "classes"}
+        {phyla.length} {phyla.length === 1 ? "phylum" : "phyla"}
       </div>
       {pn.description && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
           {pn.description}
         </div>
       )}
-      <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>Classes</div>
-      {classes.map(c => (
-        <button key={c.id} onClick={() => onSelect(c)} style={{
+      <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>Phyla</div>
+      {phyla.map(p => (
+        <button key={p.id} onClick={() => onSelect(p)} style={{
           display: "block", width: "100%", textAlign: "left",
           background: "none", border: "none", borderBottom: "1px solid #1a1a2a",
           padding: "8px 0", cursor: "pointer", color: "#8899bb", fontSize: 13,
         }}>
-          {c.commonName ?? c.name}
+          {p.commonName ?? p.name}
           <span style={{ float: "right", color: "#333", fontSize: 11 }}>
-            {(c.children ?? []).length} {(c.children ?? []).length === 1 ? "order" : "orders"}
+            {(p.children ?? []).length} {(p.children ?? []).length === 1 ? "class" : "classes"}
           </span>
         </button>
       ))}
@@ -186,15 +185,15 @@ function OverviewHomePanel({ onFocusFamily }: { onFocusFamily: (slug: string | n
   return (
     <div style={{ padding: "24px 20px", color: "#555" }}>
       <div style={{ fontSize: 13, lineHeight: 1.7, marginBottom: 20 }}>
-        Explore the animal kingdom. Click any{" "}
-        <span style={{ color: "#e0e0e0", fontWeight: 500 }}>family node</span>{" "}
-        in the tree to expand its full species tree in place.
+        Explore the animal kingdom. The tree shows{" "}
+        <span style={{ color: "#e0e0e0", fontWeight: 500 }}>23 phyla → 61 classes → orders</span>.
+        Click any node to select it; click a class to focus it.
       </div>
       <div style={{ fontSize: 11, color: "#3a3a4a", lineHeight: 1.6 }}>
-        <div style={{ marginBottom: 6 }}>White nodes → clickable family entries</div>
-        <div style={{ marginBottom: 6 }}>Amber nodes → Mammalia orders</div>
-        <div style={{ marginBottom: 6 }}>Teal nodes → Aves orders</div>
-        <div style={{ marginBottom: 6 }}>Esc or ← All families → collapse family</div>
+        <div style={{ marginBottom: 6 }}>Golden nodes → phyla</div>
+        <div style={{ marginBottom: 6 }}>Colored nodes → classes (color by class)</div>
+        <div style={{ marginBottom: 6 }}>Derived-color nodes → orders</div>
+        <div style={{ marginBottom: 6 }}>Esc or ← All classes → collapse focused class</div>
       </div>
     </div>
   );
@@ -203,14 +202,14 @@ function OverviewHomePanel({ onFocusFamily }: { onFocusFamily: (slug: string | n
 function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const accent = accentForNode(node);
   const orders = node.children ?? [];
-  const families = orders.flatMap(o => o.children ?? []) as PortalNode[];
+  const familyCount = (node as any)._familyCount ?? orders.reduce((s, o) => s + (o.children?.length ?? 0), 0);
   return (
     <div style={{ padding: "20px" }}>
       <div style={{ fontSize: 10, color: accent, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Class</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
       <div style={{ fontSize: 12, color: "#666", marginBottom: (node as PortalNode).description ? 14 : 20 }}>
-        {orders.length} {orders.length === 1 ? "order" : "orders"} · {families.length} {families.length === 1 ? "family" : "families"}
+        {orders.length} {orders.length === 1 ? "order" : "orders"} · {familyCount} {familyCount === 1 ? "family" : "families"}
       </div>
       {(node as PortalNode).description && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
@@ -218,30 +217,34 @@ function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
         </div>
       )}
       <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>Orders</div>
-      {orders.map(o => (
-        <button key={o.id} onClick={() => onSelect(o)} style={{
-          display: "block", width: "100%", textAlign: "left",
-          background: "none", border: "none", borderBottom: "1px solid #1a1a2a",
-          padding: "8px 0", cursor: "pointer", color: "#8899bb", fontSize: 13,
-        }}>
-          {o.commonName ?? o.name}
-          <span style={{ float: "right", color: "#333", fontSize: 11 }}>
-            {(o.children ?? []).length} {(o.children ?? []).length === 1 ? "family" : "families"}
-          </span>
-        </button>
-      ))}
+      {orders.map(o => {
+        const oFamilyCount = (o as any)._familyCount ?? o.children?.length ?? 0;
+        return (
+          <button key={o.id} onClick={() => onSelect(o)} style={{
+            display: "block", width: "100%", textAlign: "left",
+            background: "none", border: "none", borderBottom: "1px solid #1a1a2a",
+            padding: "8px 0", cursor: "pointer", color: "#8899bb", fontSize: 13,
+          }}>
+            {o.commonName ?? o.name}
+            <span style={{ float: "right", color: "#333", fontSize: 11 }}>
+              {oFamilyCount} {oFamilyCount === 1 ? "family" : "families"}
+            </span>
+          </button>
+        );
+      })}
     </div>
   );
 }
 
 function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
   const families = (node.children ?? []) as PortalNode[];
+  const familyCount = (node as any)._familyCount ?? families.length;
   return (
     <div style={{ padding: "20px" }}>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
       <div style={{ fontSize: 12, color: "#666", marginBottom: (node as PortalNode).description ? 14 : 20 }}>
-        {families.length} {families.length === 1 ? "family" : "families"}
+        {familyCount} {familyCount === 1 ? "family" : "families"}
       </div>
       {(node as PortalNode).description && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
@@ -249,7 +252,7 @@ function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
         </div>
       )}
       <div style={{ fontSize: 11, color: "#444", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>Families</div>
-      {families.map(f => (
+      {families.length > 0 ? families.map(f => (
         <button key={f.id} onClick={() => onSelect(f)} style={{
           display: "block", width: "100%", textAlign: "left",
           background: "none", border: "none", borderBottom: "1px solid #1a1a2a",
@@ -258,7 +261,11 @@ function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
           {f.commonName ?? f.name}
           <span style={{ float: "right", color: "#333", fontSize: 11 }}>{f.speciesCount} spp.</span>
         </button>
-      ))}
+      )) : (
+        <div style={{ fontSize: 12, color: "#555", fontStyle: "italic" }}>
+          Families hidden in overview mode — focus a class to browse them.
+        </div>
+      )}
     </div>
   );
 }

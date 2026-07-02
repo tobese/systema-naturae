@@ -68,7 +68,7 @@ portal/
       OptionsPanel.tsx         ← ⚙ gear menu (theme toggle, Wikipedia highlight, etc.)
       SearchBox.tsx            ← global species search
       SpeciesOfTheDayModal.tsx ← daily rotation species spotlight
-      StatisticsHeader.tsx     ← arrow-pill breadcrumb (Phylum→Species) in sidebar
+      StatisticsHeader.tsx     ← breadcrumb / sibling navigator in sidebar
       TaxonomySidebar.tsx      ← sidebar container that hosts StatisticsHeader + NodeNav + UnifiedInfoPanel
       UnifiedInfoPanel.tsx     ← right-hand detail panel for selected node
       WheelOfNature.tsx        ← Tivoli-style spinning wheel: random species discovery
@@ -118,9 +118,7 @@ Makefile                       ← `make enrich` iterates the 11 enrichable clas
 
 ## Graph UI features
 
-Portal currently contains **54,977 physical nodes + 128,352 compressed species = 183,329 nodes represented**, totalling **165,138 species** across **1,114 families** in **19 classes** spanning **7 phyla** (Chordata, Arthropoda, Mollusca, Echinodermata, Tardigrada, Cnidaria, Ctenophora). All 254 IOC bird families are represented. The Coverage modal (ⓘ button) shows per-class statistics with sort/filter controls and a Growth timeline chart with node/species history.
-
-> **Node count math:** `buildData.ts` runs a compression step — minimal SPECIES nodes (no description or generic "a species in the genus X" placeholder, no children) under a GENUS get collapsed into a sibling-free `speciesList[]` array on that GENUS instead of remaining as physical tree nodes. Counting only `n.rank === 'SPECIES'` undercounts by ~128k. Add `speciesList` entries to get the true species total.
+The Coverage modal (ⓘ button) shows per-class statistics with sort/filter controls and a Growth timeline chart with node/species history. Rank counts (Phylum, Class, Order, etc.) are stamped on the root node at build time and displayed live in the top header bar.
 
 ### Node sizing
 `nodeR()` in `FamilyTree.tsx` uses widened radii: family (12), subfamily (9), genus (6.5), species (2.5). Provides clearer hierarchy distinction.
@@ -193,29 +191,12 @@ A 2026-06-01 enwiki dump lives on external volumes — see global `~/.config/ope
 2. **`scripts/mergeWikiInfoboxes.ts`** parses infoboxes out of the SQLite DB and merges descriptions/continents/IUCN into family JSONs.
 3. **`scripts/enrichFromWikipedia.ts`** (root) uses the SQLite DB when mounted, falling back to the Wikipedia REST API otherwise. `portal/scripts/enrichFromWikipedia.ts` is the REST-API-only sibling.
 
-`52,655 species` currently carry `sourcedFrom: "wikipedia"` — toggle the "Highlight Wikipedia species" checkbox in the ⚙ OptionsPanel to see them.
+Toggle the "Highlight Wikipedia species" checkbox in the ⚙ OptionsPanel to see which species carry `sourcedFrom: "wikipedia"`.
 
 ## Family patterns
 
 - **Full sub-app** (`mammalia/carnivora/felidae/`, `mammalia/carnivora/canidae/`, …) — has `App.tsx`, `colors.ts`, `vite.config.ts`; runs standalone and in the portal.
 - **Data-only** (`aves/passeriformes/corvidae/`, `aves/piciformes/picidae/`, …) — only `src/data/<family>.json`; portal-only until a full app is built.
-
-## Coverage status (as of June 2026)
-
-Portal contains **183,329 nodes represented** (54,977 physical + 128,352 compressed) across **1,114 families** in **19 classes**:
-
-| Class | Families | | Class | Families |
-|---|---|---|---|---|
-| Anthozoa | 549 | | Cubozoa | 8 |
-| Aves | 254 | | Insecta | 8 |
-| Hydrozoa | 141 | | Chondrichthyes | 7 |
-| Mammalia | 39 | | Staurozoa | 7 |
-| Reptilia | 23 | | Tentaculata | 5 |
-| Scyphozoa | 20 | | Asteroidea | 1 |
-| Actinopterygii | 16 | | Echinoidea | 1 |
-| Amphibia | 13 | | Holothuroidea | 1 |
-| Arachnida | 11 | | Nuda | 1 |
-| Cephalopoda | 8 | | Tardigrada (no class) | 1 |
 
 The Growth tab in the Coverage modal shows the import timeline with cumulative species/node growth, togglable series (cumulative species, per-batch bars, total nodes), and tooltips with batch details.
 
@@ -263,6 +244,8 @@ All machines on same switch under desk. **All machines run Ollama.**
 | Debbie | Debian | — | Ollama |
 
 **Note:** Shell tools run as `tb` on Macie. If a host is unreachable via `.local` mDNS, try direct IP. SSH password for Steamie: `sshPassword!`
+
+**Tailscale note:** Always use `localhost` (not `127.0.0.1` or `.local` hostnames) when accessing local dev servers — Tailscale routes interfere with non-localhost addresses.
 
 ## Playwright tests
 

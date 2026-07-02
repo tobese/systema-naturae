@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "sh scripts/buildData.sh && vite",
-    "build": "sh scripts/buildData.sh && vite build",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "typecheck": "tsc -b",
 "import": "npx tsx scripts/importFamily.ts",
 "fetch": "npx tsx scripts/fetchSpeciesFromApi.ts",

@@ -34,8 +34,9 @@ function dateToSeed(dateStr: string): number {
   return Math.abs(h);
 }
 
-export function useSpeciesOfTheDay(root: TaxonNode): SpeciesOfTheDay | null {
+export function useSpeciesOfTheDay(root: TaxonNode | undefined): SpeciesOfTheDay | null {
   return useMemo(() => {
+    if (!root) return null;
     const species: SpeciesOfTheDay[] = [];
     collectSpecies(root, species);
     if (species.length === 0) return null;

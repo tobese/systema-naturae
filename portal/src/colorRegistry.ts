@@ -1124,14 +1124,6 @@ const CORDYLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Gi
 const LIBELLULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Skimmers": "#48a0b0" }, breedGroupColor: "#3890a0", hybridColor: "#68c0d0" };
 const NOTHOBRANCHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "African Killifishes": "#e88848" }, breedGroupColor: "#d07838", hybridColor: "#f0a868" };
 
-const OCTOPODIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Octopuses": "#c86040" }, breedGroupColor: "#b05030", hybridColor: "#e08060" };
-const LOLIGINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Inshore Squids": "#7090b0" }, breedGroupColor: "#6080a0", hybridColor: "#90b0d0" };
-const OMMASTREPHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Flying Squids": "#b07090" }, breedGroupColor: "#a06080", hybridColor: "#d090b0" };
-const ARCHITEUTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Giant Squids": "#d0c8b0" }, breedGroupColor: "#c0b8a0", hybridColor: "#e8e0d0" };
-const SEPIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cuttlefish": "#60b0a0" }, breedGroupColor: "#50a090", hybridColor: "#80d0c0" };
-const NAUTILIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nautiluses": "#d0b080" }, breedGroupColor: "#c0a070", hybridColor: "#e8d0b0" };
-const VAMPYROTEUTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Vampire Squid": "#a03040" }, breedGroupColor: "#802030", hybridColor: "#c05060" };
-const SPIRULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ram\'s Horn Squid": "#a09888" }, breedGroupColor: "#908878", hybridColor: "#c0b8a8" };
 
 const SCYLORHINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Catsharks": "#6880a8" }, breedGroupColor: "#587098", hybridColor: "#88a0c8" };
 const DASYATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Whiptail Stingrays": "#887868" }, breedGroupColor: "#786858", hybridColor: "#a89878" };
@@ -2512,7 +2504,7 @@ const bivalvia_isognomonidae: ColorTheme = { subfamilyColors: {}, breedGroupColo
 const bivalvia_posidoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "posidoniidae", className: "Bivalvia", orderName: "Ostreida", name: "Posidoniidae", mainColor: "#22C55E", lineageColors: { "posidoniidae": "#A3E635" } };
 const bivalvia_cassianellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "cassianellidae", className: "Bivalvia", orderName: "Ostreida", name: "Cassianellidae", mainColor: "#EAB308", lineageColors: { "cassianellidae": "#38BDF8" } };
 const bivalvia_flemingostreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A855F7", hybridColor: "#3B82F6", appSlug: "flemingostreidae", className: "Bivalvia", orderName: "Ostreida", name: "Flemingostreidae", mainColor: "#A855F7", lineageColors: { "flemingostreidae": "#3B82F6" } };
-const bivalvia_margaritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "margaritidae", className: "Bivalvia", orderName: "Ostreida", name: "Margaritidae", mainColor: "#FB923C", lineageColors: { "margaritidae": "#EF4444" } };
+const bivalvia_margaritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#FB923C", hybridColor: "#EF4444", appSlug: "bivalvia_margaritidae", className: "Bivalvia", orderName: "Ostreida", name: "Margaritidae", mainColor: "#FB923C", lineageColors: { "margaritidae": "#EF4444" } };
 const bivalvia_vulsellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#2DD4BF", hybridColor: "#10B981", appSlug: "vulsellidae", className: "Bivalvia", orderName: "Ostreida", name: "Vulsellidae", mainColor: "#2DD4BF", lineageColors: { "vulsellidae": "#10B981" } };
 const bivalvia_aulacomyellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A3E635", hybridColor: "#F59E0B", appSlug: "aulacomyellidae", className: "Bivalvia", orderName: "Ostreida", name: "Aulacomyellidae", mainColor: "#A3E635", lineageColors: { "aulacomyellidae": "#F59E0B" } };
 const bivalvia_malleidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#38BDF8", hybridColor: "#8B5CF6", appSlug: "malleidae", className: "Bivalvia", orderName: "Ostreida", name: "Malleidae", mainColor: "#38BDF8", lineageColors: { "malleidae": "#8B5CF6" } };
@@ -6333,14 +6325,6 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   zeledoniidae:        ZELEDONIIDAE_THEME,
   zosteropidae:        ZOSTEROPIDAE_THEME,
 
-  octopodidae:      OCTOPODIDAE_THEME,
-  loliginidae:      LOLIGINIDAE_THEME,
-  ommastrephidae:   OMMASTREPHIDAE_THEME,
-  architeuthidae:   ARCHITEUTHIDAE_THEME,
-  sepiidae:         SEPIIDAE_THEME,
-  nautilidae:       NAUTILIDAE_THEME,
-  vampyroteuthidae: VAMPYROTEUTHIDAE_THEME,
-  spirulidae:       SPIRULIDAE_THEME,
   tachyglossidae:    TACHYGLOSSIDAE_THEME,
   cordylidae:        CORDYLIDAE_THEME,
 
@@ -7420,7 +7404,7 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "posidoniidae": bivalvia_posidoniidae,
   "cassianellidae": bivalvia_cassianellidae,
   "flemingostreidae": bivalvia_flemingostreidae,
-  "margaritidae": bivalvia_margaritidae,
+  "bivalvia_margaritidae": bivalvia_margaritidae,
   "vulsellidae": bivalvia_vulsellidae,
   "aulacomyellidae": bivalvia_aulacomyellidae,
   "malleidae": bivalvia_malleidae,

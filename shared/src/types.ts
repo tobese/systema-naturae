@@ -22,6 +22,7 @@ export interface TaxonNode {
   sourcedFrom?: string;
   children?: TaxonNode[];
   speciesList?: TaxonNode[];
+  rankCounts?: Record<string, number>;
 }
 
 export interface ClassPalette {
