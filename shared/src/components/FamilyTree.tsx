@@ -56,8 +56,8 @@ function orderColor(node: AnnotatedNode, theme: ColorTheme): string | undefined 
 }
 
 function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
-  if (node.data.rank === "KINGDOM") return "#c8a84a";
-  if (node.data.rank === "PHYLUM") return "#9a8858";
+  if (node.data.rank === "KINGDOM") return "#DBA630";
+  if (node.data.rank === "PHYLUM") return "#C4A040";
   if (node.data.rank === "CLASS") return classColor(node, theme) ?? "#666";
   if (node.data.rank === "ORDER") return orderColor(node, theme) ?? classColor(node, theme) ?? "#666";
   if (node.data.rank === "BREED_GROUP" || node.data.rank === "BREED") return theme.breedGroupColor;
@@ -74,12 +74,12 @@ function edgeColor(node: AnnotatedNode, theme: ColorTheme): string {
 }
 
 function fillColor(node: AnnotatedNode, theme: ColorTheme): string {
-  if (node.data.rank === "KINGDOM") return "#c8a84a";
-  if (node.data.rank === "PHYLUM") return "#9a8858";
+  if (node.data.rank === "KINGDOM") return "#DBA630";
+  if (node.data.rank === "PHYLUM") return "#C4A040";
   if (node.data.rank === "CLASS") return classColor(node, theme) ?? "#666";
   if (node.data.rank === "ORDER") return orderColor(node, theme) ?? classColor(node, theme) ?? "#666";
-  if (node.data.rank === "FAMILY") return "#F5F5F5";
-  if (node.data.rank === "TRIBE") return "#F5F5F5";
+  if (node.data.rank === "FAMILY") return "#F0E6D0";
+  if (node.data.rank === "TRIBE") return "#F0E6D0";
   if (node.data.rank === "SUBFAMILY") return theme.subfamilyColors[node.data.name] ?? "#888";
   if (node.data.rank === "BREED_GROUP") return theme.breedGroupColor;
   if (node.data.rank === "BREED") return `${theme.breedGroupColor}88`;
@@ -467,7 +467,7 @@ export default function FamilyTree({
       const next = n.children.map(collapseNode);
       return { ...n, children: next };
     }
-    const collapsedData = collapseNode(prunedData);
+    const collapsedData = focusedFamilySlug ? prunedData : collapseNode(prunedData);
 
     // ── Compute layout ────────────────────────────────────────────────────────
     const root = d3.hierarchy(collapsedData);
@@ -675,7 +675,7 @@ export default function FamilyTree({
     // Subspecies hint ring visibility (also used as permanent crown ring for KINGDOM)
     merged.select<SVGCircleElement>("circle.subsp-ring")
       .attr("r", d => nr(d, specialSet) + 4)
-      .attr("stroke", d => d.data.rank === "KINGDOM" ? "#c8a84a" : "#888")
+      .attr("stroke", d => d.data.rank === "KINGDOM" ? "#DBA630" : "#888")
       .attr("stroke-width", d => d.data.rank === "KINGDOM" ? 1.5 : 0.5)
       .attr("stroke-dasharray", d => d.data.rank === "KINGDOM" ? null : "2 2")
       .attr("opacity", d => {
@@ -709,13 +709,15 @@ export default function FamilyTree({
         if (d.data.id === selectedId) return "#fff";
         if (specialSet?.has(d.data.id) && !d.children) return colorTheme.breedGroupColor;
         if (d.data.rank === "SUBSPECIES" && d.data.accepted === false) return "#777";
-        return "none";
+        const fill = fillColor(d as AnnotatedNode, colorTheme);
+        const c = d3.color(fill);
+        return c ? c.darker(0.3).toString() : "#333";
       })
       .attr("stroke-width", d => {
         if (d.data.id === selectedId) return 3;
         if (specialSet?.has(d.data.id) && !d.children) return 1.5;
         if (d.data.rank === "SUBSPECIES" && d.data.accepted === false) return 1;
-        return 0;
+        return 0.6;
       })
       .attr("stroke-dasharray", d =>
         d.data.rank === "SUBSPECIES" && d.data.accepted === false ? "2 1.5" : null)

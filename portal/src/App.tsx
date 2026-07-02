@@ -105,7 +105,7 @@ export default function App() {
   const [showWheel, setShowWheel] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const [viewMode, setViewMode] = useState<"graph" | "book">("graph");
-  const [showRightSidebar, setShowRightSidebar] = useState(true);
+  const [showRightSidebar, setShowRightSidebar] = useState(false);
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
   const [taxonomyData, setTaxonomyData] = useState<TaxonNode | null>(null);
@@ -156,6 +156,11 @@ export default function App() {
     () => (selectedNodeId && taxonomyData ? walkFind(taxonomyData, selectedNodeId) : null),
     [selectedNodeId, taxonomyData],
   );
+
+  // Auto-show right panel when a node is selected
+  useEffect(() => {
+    if (selected) setShowRightSidebar(true);
+  }, [selected]);
 
   // Resolve focused family slug → node id
   const focusedFamilyId = useMemo(() => {
@@ -308,13 +313,6 @@ export default function App() {
     () => selected && taxonomyData ? getPathToNode(taxonomyData, selected.id) : [],
     [selected, taxonomyData],
   );
-
-  const subfamiliesForPanel = useMemo(() => {
-    if (!focusedFamilyId || !focusedFamilyNode) return [];
-    return (focusedFamilyNode.children ?? []).filter(
-      c => c.rank === "SUBFAMILY" || c.rank === "TRIBE",
-    );
-  }, [focusedFamilyId, focusedFamilyNode]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -575,30 +573,6 @@ export default function App() {
             </div>
           )}
         </div>
-        <button
-          onClick={() => setShowSidebar(o => !o)}
-          title="Taxonomy sidebar"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 34,
-            height: 34,
-            padding: 0,
-            borderRadius: 6,
-            border: "1px solid",
-            borderColor: showSidebar ? "#3a3d50" : "#1e2030",
-            background: showSidebar ? "#1e2030" : "transparent",
-            color: showSidebar ? "#c0c0d8" : "#444",
-            cursor: "pointer",
-            fontSize: 16,
-            marginRight: 6,
-          }}
-          onMouseEnter={e => { if (!showSidebar) e.currentTarget.style.color = "#888"; }}
-          onMouseLeave={e => { if (!showSidebar) e.currentTarget.style.color = "#444"; }}
-        >
-          ☰
-        </button>
         <SearchBox data={taxonomyData} onNavigate={navigateTo} />
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
           <button
@@ -741,21 +715,6 @@ export default function App() {
               {v === "graph" ? "📊 Graph" : "📖 Book"}
             </button>
           ))}
-          {/* Toggle Details Panel */}
-          <button
-            onClick={() => setShowRightSidebar(o => !o)}
-            title="Toggle details panel"
-            style={{
-              ...btnBase,
-              borderColor: showRightSidebar ? "#3a3d50" : "#1e2030",
-              background: showRightSidebar ? "#1e2030" : "transparent",
-              color: showRightSidebar ? "#c0c0d8" : "#555",
-            }}
-            onMouseEnter={e => { if (!showRightSidebar) e.currentTarget.style.color = "#888"; }}
-            onMouseLeave={e => { if (!showRightSidebar) e.currentTarget.style.color = "#555"; }}
-          >
-            {showRightSidebar ? "→ Panel" : "← Panel"}
-          </button>
         </div>
       </div>
 
@@ -836,6 +795,66 @@ export default function App() {
                   />
                 </div>
               )}
+              {/* Taxonomy sidebar toggle — top-left */}
+              <button
+                onClick={() => setShowSidebar(o => !o)}
+                title="Taxonomy sidebar"
+                style={{
+                  position: "absolute",
+                  top: 12,
+                  left: 12,
+                  zIndex: 20,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 36,
+                  height: 36,
+                  padding: 0,
+                  borderRadius: 6,
+                  border: "1px solid",
+                  borderColor: showSidebar ? "#4a4d60" : "#2a2a3a",
+                  background: showSidebar ? "#1e2030" : "rgba(15,17,23,0.7)",
+                  color: showSidebar ? "#e0e0e8" : "#777",
+                  cursor: "pointer",
+                  fontSize: 18,
+                  backdropFilter: "blur(4px)",
+                  transition: "border-color 0.15s, background 0.15s",
+                }}
+                onMouseEnter={e => { if (!showSidebar) { e.currentTarget.style.borderColor = "#3a3a4a"; e.currentTarget.style.color = "#999"; } }}
+                onMouseLeave={e => { if (!showSidebar) { e.currentTarget.style.borderColor = "#2a2a3a"; e.currentTarget.style.color = "#777"; } }}
+              >
+                ☰
+              </button>
+              {/* Details panel toggle — top-right */}
+              <button
+                onClick={() => setShowRightSidebar(o => !o)}
+                title="Toggle details panel"
+                style={{
+                  position: "absolute",
+                  top: 12,
+                  right: 12,
+                  zIndex: 20,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 36,
+                  height: 36,
+                  padding: 0,
+                  borderRadius: 6,
+                  border: "1px solid",
+                  borderColor: showRightSidebar ? "#4a4d60" : "#2a2a3a",
+                  background: showRightSidebar ? "#1e2030" : "rgba(15,17,23,0.7)",
+                  color: showRightSidebar ? "#e0e0e8" : "#777",
+                  cursor: "pointer",
+                  fontSize: 18,
+                  backdropFilter: "blur(4px)",
+                  transition: "border-color 0.15s, background 0.15s",
+                }}
+                onMouseEnter={e => { if (!showRightSidebar) { e.currentTarget.style.borderColor = "#3a3a4a"; e.currentTarget.style.color = "#999"; } }}
+                onMouseLeave={e => { if (!showRightSidebar) { e.currentTarget.style.borderColor = "#2a2a3a"; e.currentTarget.style.color = "#777"; } }}
+              >
+                ☰
+              </button>
               <div style={{
                 position: "absolute",
                 bottom: 16,
@@ -966,7 +985,6 @@ export default function App() {
                 findNodeById={findNodeById}
                 onFocusFamily={slug => setFocus(slug)}
                 focusedFamilySlug={focusedFamilySlug}
-                subfamilies={subfamiliesForPanel}
               />
             </div>
           </div>

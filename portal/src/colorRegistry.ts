@@ -1127,7 +1127,7 @@ const NOTHOBRANCHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors:
 
 const SCYLORHINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Catsharks": "#6880a8" }, breedGroupColor: "#587098", hybridColor: "#88a0c8" };
 const DASYATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Whiptail Stingrays": "#887868" }, breedGroupColor: "#786858", hybridColor: "#a89878" };
-const LABRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Wrasses": "#60b0c8", "Parrotfish": "#c8e060" }, breedGroupColor: "#50a0b8", hybridColor: "#80d0e0" };
+const LABRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Wrasses": "#60b0c8", "Parrotfish": "#c8e060" }, breedGroupColor: "#50a0b8", hybridColor: "#80d0e0", appSlug: "labridae", className: "Actinopterygii", orderName: "Perciformes", name: "Labridae", mainColor: "#50a0b8" };
 const SYNGNATHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Seahorses": "#d0a860", "Pipefish": "#88b8a0", "Seadragons": "#c08050" }, breedGroupColor: "#b89850", hybridColor: "#e0c880" };
 const CARABIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ground Beetles": "#3a3a3a" }, breedGroupColor: "#2a2a2a", hybridColor: "#5a5a5a" };
 const CHRYSOMELIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Leaf Beetles": "#c8a840" }, breedGroupColor: "#b89830", hybridColor: "#e0c860" };
@@ -5970,6 +5970,12 @@ const chromadorea_halenchidae: ColorTheme = { subfamilyColors: {}, breedGroupCol
 const chromadorea_etmolaimidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#0EA5E9", hybridColor: "#2DD4BF", appSlug: "etmolaimidae", className: "Chromadorea", orderName: "Unknown", name: "Etmolaimidae", mainColor: "#0EA5E9", lineageColors: { "etmolaimidae": "#2DD4BF" } };
 const chromadorea_rhaphidascarididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#22C55E", hybridColor: "#A3E635", appSlug: "rhaphidascarididae", className: "Chromadorea", orderName: "Unknown", name: "Rhaphidascarididae", mainColor: "#22C55E", lineageColors: { "rhaphidascarididae": "#A3E635" } };
 const chromadorea_traklosiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EAB308", hybridColor: "#38BDF8", appSlug: "traklosiidae", className: "Chromadorea", orderName: "Unknown", name: "Traklosiidae", mainColor: "#EAB308", lineageColors: { "traklosiidae": "#38BDF8" } };
+const cyclorhagida_semnoderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#A78BFA", appSlug: "semnoderidae", className: "Cyclorhagida", orderName: "Kentrorhagata", name: "Semnoderidae", mainColor: "#8B5CF6", lineageColors: { "Semnoderidae": "#A78BFA" } };
+const cyclorhagida_centroderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#EC4899", hybridColor: "#F472B6", appSlug: "centroderidae", className: "Cyclorhagida", orderName: "Kentrorhagata", name: "Centroderidae", mainColor: "#EC4899", lineageColors: { "Centroderidae": "#F472B6" } };
+const cyclorhagida_zelinkaderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#2DD4BF", appSlug: "zelinkaderidae", className: "Cyclorhagida", orderName: "Kentrorhagata", name: "Zelinkaderidae", mainColor: "#14B8A6", lineageColors: { "Zelinkaderidae": "#2DD4BF" } };
+const cyclorhagida_campyloderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#FB923C", appSlug: "campyloderidae", className: "Cyclorhagida", orderName: "Xenosomata", name: "Campyloderidae", mainColor: "#F97316", lineageColors: { "Campyloderidae": "#FB923C" } };
+const gordioida_nectonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#22D3EE", appSlug: "nectonematidae", className: "Gordioida", orderName: "Unknown", name: "Nectonematidae", mainColor: "#06B6D4", lineageColors: { "Nectonematidae": "#22D3EE" } };
+const gordioida_paragordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#34D399", appSlug: "paragordiidae", className: "Gordioida", orderName: "Unknown", name: "Paragordiidae", mainColor: "#10B981", lineageColors: { "Paragordiidae": "#34D399" } };
 
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
@@ -10767,7 +10773,13 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "halenchidae": chromadorea_halenchidae,
   "etmolaimidae": chromadorea_etmolaimidae,
   "rhaphidascarididae": chromadorea_rhaphidascarididae,
-  "traklosiidae": chromadorea_traklosiidae,};
+  "traklosiidae": chromadorea_traklosiidae,
+  "semnoderidae": cyclorhagida_semnoderidae,
+  "centroderidae": cyclorhagida_centroderidae,
+  "zelinkaderidae": cyclorhagida_zelinkaderidae,
+  "campyloderidae": cyclorhagida_campyloderidae,
+  "nectonematidae": gordioida_nectonematidae,
+  "paragordiidae": gordioida_paragordiidae,};
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {

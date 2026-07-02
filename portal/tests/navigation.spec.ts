@@ -250,6 +250,20 @@ test.describe('CROSS-FAMILY', () => {
   });
 });
 
+// ── FAMILY COLLAPSE ──────────────────────────────────────────────────────────
+
+test.describe('FAMILY COLLAPSE', () => {
+  test('family with >30 genera expands fully when focused (not collapsed to a dot)', async ({ page }) => {
+    // Labridae has 76 genus children — default collapse threshold is 30.
+    // Without the focusedFamilySlug guard, this would collapse to a single dot.
+    await page.goto('/?family=labridae&node=FAM_LABRIDAE');
+    await waitForTree(page);
+    await settle(800);
+    // At least 31 GENUS nodes must be in the tree — proves no collapse.
+    await expect(page.locator('[data-rank="GENUS"]').nth(30)).toBeAttached();
+  });
+});
+
 // ── KEYBOARD ─────────────────────────────────────────────────────────────────
 
 test.describe('KEYBOARD', () => {
