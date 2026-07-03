@@ -146,6 +146,8 @@ export default function App() {
     [selectedNodeId, taxonomyData],
   );
 
+  const lastAutoZoomFamilyId = useRef<string | null>(null);
+
   // Auto-show right panel when a node is selected
   useEffect(() => {
     if (selected) setShowRightSidebar(true);
@@ -162,10 +164,17 @@ export default function App() {
     return find(taxonomyData);
   }, [focusedFamilySlug, taxonomyData]);
 
-  // On initial render with URL-driven focus, zoom to the focused family
-  if (!pendingZoomId.current && focusedFamilyId) {
+  // When family focus changes, zoom to that family once.
+  useEffect(() => {
+    if (!focusedFamilyId) {
+      lastAutoZoomFamilyId.current = null;
+      return;
+    }
+    if (pendingZoomId.current) return;
+    if (lastAutoZoomFamilyId.current === focusedFamilyId) return;
     pendingZoomId.current = focusedFamilyId;
-  }
+    lastAutoZoomFamilyId.current = focusedFamilyId;
+  }, [focusedFamilyId]);
 
   const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
     taxonomyData,

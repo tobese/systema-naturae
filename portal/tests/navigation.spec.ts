@@ -166,6 +166,35 @@ test.describe('GENUS', () => {
     await expect(page).toHaveURL(hasParam('family'));
   });
 
+  test('centering a genus keeps it near the viewport center', async ({ page }) => {
+    await page.goto('?family=corvidae');
+    await waitForTree(page);
+    const genus = page.locator('[data-id="GENUS_PICA"]');
+    await click(genus);
+    await settle(900);
+
+    const centered = await genus.evaluate(el => {
+      const svg = el.ownerSVGElement as SVGSVGElement & { __zoom?: { k: number } } | null;
+      const circle = el.querySelector('circle.main-circle') as SVGCircleElement | null;
+      const nodeRect = circle?.getBoundingClientRect() ?? el.getBoundingClientRect();
+      const svgRect = svg?.getBoundingClientRect();
+      return {
+        genusCenterX: nodeRect.x + nodeRect.width / 2,
+        genusCenterY: nodeRect.y + nodeRect.height / 2,
+        svgCenterX: svgRect ? svgRect.x + svgRect.width / 2 : null,
+        svgCenterY: svgRect ? svgRect.y + svgRect.height / 2 : null,
+        zoom: svg?.__zoom?.k ?? 1,
+      };
+    });
+
+    expect(centered.svgCenterX).not.toBeNull();
+    expect(centered.svgCenterY).not.toBeNull();
+    expect(Math.abs(centered.genusCenterX - centered.svgCenterX!)).toBeLessThan(110);
+    expect(Math.abs(centered.genusCenterY - centered.svgCenterY!)).toBeLessThan(110);
+    expect(centered.zoom).toBeGreaterThan(1);
+    expect(centered.zoom).toBeLessThanOrEqual(3.4);
+  });
+
   test('clicking same genus again deselects it', async ({ page }) => {
     await page.goto('?family=corvidae');
     await waitForTree(page);

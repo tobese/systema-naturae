@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+import FadingImage from "@shared/components/FadingImage";
+
 interface Props {
   onClose: () => void;
 }
@@ -90,11 +92,14 @@ export default function InfoModal({ onClose }: Props) {
                 </table>
               </div>
               <div style={{ flexShrink: 0 }}>
-                <img
+                <FadingImage
                   src="/linnaeus.jpg"
                   alt="Carl Linnaeus, portrait by Alexander Roslin, 1775"
                   width={110}
-                  style={{ display: "block", borderRadius: 4, border: "1px solid #1e2030", filter: "brightness(0.88) contrast(1.05)" }}
+                  aspectRatio="1 / 1.25"
+                  borderRadius={4}
+                  background="#111118"
+                  objectFit="cover"
                 />
                 <div style={{ fontSize: 9, color: "#333", marginTop: 4, textAlign: "center" }}>A. Roslin, 1775</div>
               </div>

@@ -21,7 +21,6 @@ Living roadmap for the Systema Naturae portal.
 - [x] Integrated colour themes (`colorRegistry.ts`, `PORTAL_THEME`) per rank.
 - [x] Placement: `StatisticsHeader.tsx` above `NodeNav` in sidebar.
 - [x] Deep paths scroll horizontally in narrow sidebars.
-- [ ] **Click pills to jump** — make rank pills clickable to navigate to that ancestor.
 
 ### Tooltip
 **Status:** Shipped.
@@ -30,7 +29,10 @@ Living roadmap for the Systema Naturae portal.
 - [x] Touch equivalent — 500ms long-press on nodes.
 - [x] Rich preview with Wikipedia thumbnail — fetched lazily from REST API.
 - [x] Keyboard-triggered tooltip during arrow-key navigation.
-- [ ] **Fade-in thumbnails** — animate/fade in Wikipedia hover previews instead of sudden flash.
+- [ ] **Fade-in thumbnails** — make hover previews feel less abrupt.
+  - Fade the image in after load instead of popping it in.
+  - Keep the caption/text visible while the image resolves.
+  - Avoid layout shift when the thumbnail appears.
 
 ### Wheel of Nature
 **Status:** Shipped.
@@ -69,9 +71,13 @@ Living roadmap for the Systema Naturae portal.
 
 ## Data
 
-- [ ] **Background Wikipedia enrichment** — 38,860 of ~429k species enriched (9%). New phyla (Gastropoda, Bivalvia, Porifera, Annelida, etc.) have near-zero coverage. Needs per-class batched enrichment runs.
-- [ ] **Remaining micro-phyla** — Gastrotricha, Phoronida, Priapulida, Loricifera, Gnathostomulida, Entoprocta, Onychophora, Xenacoelomorpha return 0 classes from GBIF scout. Need manual taxonomy treatment (not handled by `importClass.ts` pipeline).
-- [ ] **Per-family chunk refinement** — split order chunks (`portal/data/orders/`) into per-family files for finer granularity and smaller initial load per focus.
+- [ ] **Wikipedia enrichment: high-volume classes** — batch the biggest zero/near-zero coverage classes first: Gastropoda, Bivalvia, Annelida, Bryozoa, Porifera, Platyhelminthes, Nematoda.
+- [ ] **Wikipedia enrichment: run strategy** — make the enrichment pass resumable per class so long runs can stop/start without losing progress.
+- [ ] **Wikipedia enrichment: quality** — keep empty or weak extracts out of `sourcedFrom=wikipedia` and surface only real descriptions.
+- [ ] **Micro-phyla scaffolding** — add manual taxonomy treatment for Gastrotricha, Phoronida, Priapulida, Loricifera, Gnathostomulida, Entoprocta, Onychophora, Xenacoelomorpha.
+- [ ] **Micro-phyla validation** — verify how each manual phylum should appear in `taxonomy.json`, gap reports, and the UI tree.
+- [ ] **Chunk refinement: per-family loading** — split `portal/data/orders/` into per-family files for finer-grained lazy loading.
+- [ ] **Chunk refinement: loader update** — teach the runtime manifest/loader to resolve family chunks instead of order chunks.
 
 ---
 
