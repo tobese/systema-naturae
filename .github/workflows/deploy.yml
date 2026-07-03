@@ -65,6 +65,10 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
 
+      - name: Copy data files to dist
+        working-directory: portal
+        run: cp -r data dist/data
+
       - name: Assemble Pages output
         run: |
           mkdir -p _site/felidae _site/canidae
