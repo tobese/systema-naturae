@@ -55,10 +55,12 @@ export function useTaxonomyLoader(): {
   const orderCache = useRef<Map<string, TaxonNode>>(new Map());
   const accessOrder = useRef<string[]>([]);
 
+  const base = import.meta.env.BASE_URL ?? "/";
+
   useEffect(() => {
     Promise.all([
-      fetch("/data/unified-taxonomy-skeleton.json").then(r => r.json()),
-      fetch("/data/order-manifest.json").then(r => r.json()),
+      fetch(`${base}data/unified-taxonomy-skeleton.json`).then(r => r.json()),
+      fetch(`${base}data/order-manifest.json`).then(r => r.json()),
     ])
       .then(([sk, mf]) => {
         setSkeleton(annotatePortalLevels(sk as TaxonNode));
@@ -80,7 +82,7 @@ export function useTaxonomyLoader(): {
 
     setInflightOrders(prev => new Set(prev).add(orderId));
 
-    fetch(`/data/orders/${orderId}.json`)
+    fetch(`${base}data/orders/${orderId}.json`)
       .then(r => r.json())
       .then((raw: TaxonNode) => {
         const annotated = annotatePortalLevels(raw);
