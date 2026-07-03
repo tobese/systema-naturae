@@ -76,9 +76,11 @@ test.describe('CLASS', () => {
 
 test.describe('FAMILY', () => {
   test('clicking Canidae from class focus sets family focus', async ({ page }) => {
-    // Mammalia orders all have ≤5 families — none are collapsed
+    // Orders are lazy-loaded — click CARNIVORA first to load its families
     await page.goto('/?class=MAMMALIA&node=MAMMALIA');
     await waitForTree(page);
+    await click(page.locator('[data-id="CARNIVORA"]'));
+    await page.waitForSelector('[data-id="FAM_CANIDAE"]', { timeout: 15_000 });
     await click(page.locator('[data-id="FAM_CANIDAE"]'));
     await expect(page).toHaveURL(/[?&]family=canidae/);
     await expect(page).toHaveURL(hasParam('node'));
@@ -244,6 +246,8 @@ test.describe('CROSS-FAMILY', () => {
   test('clicking a family from class focus navigates to that family', async ({ page }) => {
     await page.goto('/?class=MAMMALIA&node=MAMMALIA');
     await waitForTree(page);
+    await click(page.locator('[data-id="CARNIVORA"]'));
+    await page.waitForSelector('[data-id="FAM_CANIDAE"]', { timeout: 15_000 });
     await click(page.locator('[data-id="FAM_CANIDAE"]'));
     await expect(page).toHaveURL(/[?&]family=canidae/);
     await expect(page).not.toHaveURL(hasParam('class'));
@@ -326,7 +330,8 @@ test.describe('KEYBOARD', () => {
 
 test.describe('SEARCH', () => {
   test('searching and clicking a result navigates to that node', async ({ page }) => {
-    await page.goto('/');
+    // Load PASSERIFORMES first so Pica pica is in the search index
+    await page.goto('/?family=corvidae');
     await waitForTree(page);
     await page.locator('input[placeholder="Search…"]').fill('Pica pica');
     await settle(1000);

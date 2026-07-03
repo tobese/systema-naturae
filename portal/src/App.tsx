@@ -4,9 +4,9 @@ import HabitatMap from "@shared/components/HabitatMap";
 import NodeNav from "@shared/components/NodeNav";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "./types";
-import { annotatePortalLevels } from "./colors";
 import { useUnifiedTree } from "./hooks/useUnifiedTree";
 import { useUrlState } from "./hooks/useUrlState";
+import { useTaxonomyLoader } from "./hooks/useTaxonomyLoader";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import SearchBox from "./components/SearchBox";
 import NewsBell from "./components/NewsBell";
@@ -108,19 +108,8 @@ export default function App() {
   const [showRightSidebar, setShowRightSidebar] = useState(false);
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
-  const [taxonomyData, setTaxonomyData] = useState<TaxonNode | null>(null);
-  const [loading, setLoading] = useState(true);
   const [treeReady, setTreeReady] = useState(false);
-
-  useEffect(() => {
-    fetch("/data/unified-taxonomy.json")
-      .then(r => r.json())
-      .then(raw => {
-        setTaxonomyData(annotatePortalLevels(raw as TaxonNode));
-        setLoading(false);
-      })
-      .catch(e => { console.error("Failed to load taxonomy:", e); setLoading(false); });
-  }, []);
+  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader();
 
   const speciesOfTheDay = useSpeciesOfTheDay(taxonomyData ?? undefined);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
@@ -131,7 +120,7 @@ export default function App() {
   const pendingZoomId = useRef<string | null>(null);
   const sidebarScrollRef = useRef<HTMLDivElement>(null);
 
-  const { focusedFamilySlug, focusedClassId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo } = useUrlState();
+  const { focusedFamilySlug, focusedClassId, focusedOrderId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo } = useUrlState();
 
   useEffect(() => {
     if (!sidebarScrollRef.current) return;
@@ -186,7 +175,24 @@ export default function App() {
     expandedBreedIds,
     highlightedContinent,
     options.highlightWikipedia,
+    loadedOrders,
   );
+
+  // Deep-link: resolve family slug or order ID to load the parent order on startup
+  const deepLinkedOrders = useRef<Set<string>>(new Set());
+  useEffect(() => {
+    if (!manifest || loading) return;
+    let orderId: string | null = null;
+    if (focusedOrderId && manifest.orders[focusedOrderId]) {
+      orderId = focusedOrderId;
+    } else if (focusedFamilySlug) {
+      orderId = manifest.familyToOrder[focusedFamilySlug] ?? null;
+    }
+    if (orderId && !deepLinkedOrders.current.has(orderId)) {
+      deepLinkedOrders.current.add(orderId);
+      loadOrder(orderId);
+    }
+  }, [focusedFamilySlug, focusedOrderId, manifest, loading, loadOrder]);
 
   // Filter tree based on options
   const filteredTreeData = useMemo(() => {
@@ -265,6 +271,11 @@ export default function App() {
           return next;
         });
       }
+    }
+
+    // ORDER click → lazy-load the order's full subtree
+    if (node.rank === "ORDER" && node._dataFile && !loadedOrders.has(node.id)) {
+      loadOrder(node.id);
     }
 
     // Zoom to order-and-below so the tree pans to the destination (skip CLASS/PHYLUM — too jarring in overview)
@@ -573,7 +584,7 @@ export default function App() {
             </div>
           )}
         </div>
-        <SearchBox data={taxonomyData} onNavigate={navigateTo} />
+        <SearchBox data={taxonomyData} onNavigate={navigateTo} manifest={manifest} />
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
           <button
             onClick={() => setShowInfo(o => !o)}

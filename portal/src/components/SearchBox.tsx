@@ -39,12 +39,15 @@ const RANK_LABELS: Record<string, string> = {
   BREED_GROUP: "Breed Group", BREED: "Breed", HYBRID_GROUP: "Hybrid Group", HYBRID: "Hybrid",
 };
 
+import type { Manifest } from "../hooks/useTaxonomyLoader";
+
 interface Props {
   data: TaxonNode;
   onNavigate: (family: string | null, nodeId: string | null) => void;
+  manifest?: Manifest | null;
 }
 
-export default function SearchBox({ data, onNavigate }: Props) {
+export default function SearchBox({ data, onNavigate, manifest }: Props) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -56,13 +59,31 @@ export default function SearchBox({ data, onNavigate }: Props) {
   const results = useMemo(() => {
     if (query.trim().length < 2) return [];
     const q = query.trim();
-    return index
+    const fromTree = index
       .map(e => ({ entry: e, score: scoreMatch(e, q) }))
-      .filter(x => x.score > 0)
+      .filter(x => x.score > 0);
+
+    // Add results from manifest for families whose order isn't loaded yet
+    if (manifest) {
+      for (const [familySlug, orderId] of Object.entries(manifest.familyToOrder)) {
+        if (fromTree.some(x => x.entry.familySlug === familySlug)) continue;
+        const orderInfo = manifest.orders[orderId];
+        if (!orderInfo) continue;
+        const slugMatch = scoreMatch({ id: familySlug, name: familySlug, rank: "FAMILY", familySlug, commonName: undefined }, q);
+        if (slugMatch > 0) {
+          fromTree.push({
+            score: slugMatch - 0.5,
+            entry: { id: familySlug, name: familySlug, rank: "FAMILY", familySlug },
+          });
+        }
+      }
+    }
+
+    return fromTree
       .sort((a, b) => b.score - a.score)
       .slice(0, 8)
       .map(x => x.entry);
-  }, [index, query]);
+  }, [index, query, manifest]);
 
   useEffect(() => { setActiveIndex(0); }, [results]);
 
