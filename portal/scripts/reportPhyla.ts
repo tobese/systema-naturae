@@ -5,6 +5,39 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "../..");
 
+const taxonomyPath = join(root, "portal", "data", "taxonomy.json");
+if (!existsSync(taxonomyPath)) {
+  console.error(`Error: taxonomy.json not found at ${taxonomyPath}`);
+  process.exit(1);
+}
+const taxonomy = JSON.parse(readFileSync(taxonomyPath, "utf-8"));
+
+// Walk taxonomy.json to build class -> phylum mapping dynamically
+function buildPhylumMap(node: any, map: Map<string, { id: string; name: string; commonName: string; rank: number }>, currentPhylum?: { id: string; name: string; commonName: string; rank: number }): void {
+  if (node.rank === "PHYLUM") {
+    currentPhylum = {
+      id: node.id,
+      name: node.name,
+      commonName: node.commonName as string,
+      rank: 0,
+    };
+  }
+  if (node.rank === "CLASS" && currentPhylum) {
+    map.set(node.name, { ...currentPhylum });
+  }
+  if (node.children) {
+    for (const child of node.children) {
+      buildPhylumMap(child, map, currentPhylum);
+    }
+  }
+}
+
+const CLASS_TO_PHYLUM = new Map<string, { id: string; name: string; commonName: string; rank: number }>();
+buildPhylumMap(taxonomy, CLASS_TO_PHYLUM);
+
+// Tardigrada has no CLASS ancestor — its families carry className = ""
+CLASS_TO_PHYLUM.set("", { id: "TARDIGRADA", name: "Tardigrada", commonName: "Tardigrades", rank: 0 });
+
 const reportPath = join(root, "portal", "data", "gap-report.json");
 if (!existsSync(reportPath)) {
   console.error(`Error: Gap report file not found at ${reportPath}`);
@@ -13,39 +46,6 @@ if (!existsSync(reportPath)) {
 
 const rawReport = readFileSync(reportPath, "utf-8");
 const families = JSON.parse(rawReport);
-
-// Map class names to Phyla
-const CLASS_TO_PHYLUM: Record<string, { id: string; name: string; commonName: string; rank: number }> = {
-  "Mammalia": { id: "CHORDATA", name: "Chordata", commonName: "Chordates", rank: 1 },
-  "Aves": { id: "CHORDATA", name: "Chordata", commonName: "Chordates", rank: 1 },
-  "Reptilia": { id: "CHORDATA", name: "Chordata", commonName: "Chordates", rank: 1 },
-  "Amphibia": { id: "CHORDATA", name: "Chordata", commonName: "Chordates", rank: 1 },
-  "Chondrichthyes": { id: "CHORDATA", name: "Chordata", commonName: "Chordates", rank: 1 },
-  "Actinopterygii": { id: "CHORDATA", name: "Chordata", commonName: "Chordates", rank: 1 },
-  
-  "Cephalopoda": { id: "MOLLUSCA", name: "Mollusca", commonName: "Molluscs", rank: 2 },
-  
-  "Insecta": { id: "ARTHROPODA", name: "Arthropoda", commonName: "Arthropods", rank: 3 },
-  "Arachnida": { id: "ARTHROPODA", name: "Arthropoda", commonName: "Arthropods", rank: 3 },
-  
-  "Asteroidea": { id: "ECHINODERMATA", name: "Echinodermata", commonName: "Echinoderms", rank: 4 },
-  "Echinoidea": { id: "ECHINODERMATA", name: "Echinodermata", commonName: "Echinoderms", rank: 4 },
-  "Holothuroidea": { id: "ECHINODERMATA", name: "Echinodermata", commonName: "Echinoderms", rank: 4 },
-  
-  // Empty class name is Tardigrada
-  "": { id: "TARDIGRADA", name: "Tardigrada", commonName: "Tardigrades", rank: 5 },
-
-  // Ctenophora
-  "Tentaculata": { id: "CTENOPHORA", name: "Ctenophora", commonName: "Comb jellies", rank: 6 },
-  "Nuda": { id: "CTENOPHORA", name: "Ctenophora", commonName: "Comb jellies", rank: 6 },
-
-  // Cnidaria
-  "Anthozoa": { id: "CNIDARIA", name: "Cnidaria", commonName: "Cnidarians", rank: 7 },
-  "Hydrozoa": { id: "CNIDARIA", name: "Cnidaria", commonName: "Cnidarians", rank: 7 },
-  "Scyphozoa": { id: "CNIDARIA", name: "Cnidaria", commonName: "Cnidarians", rank: 7 },
-  "Cubozoa": { id: "CNIDARIA", name: "Cnidaria", commonName: "Cnidarians", rank: 7 },
-  "Staurozoa": { id: "CNIDARIA", name: "Cnidaria", commonName: "Cnidarians", rank: 7 }
-};
 
 interface PhylumStats {
   id: string;
@@ -72,7 +72,7 @@ const phylaGroups: Record<string, PhylumStats> = {};
 
 for (const f of families) {
   const className = f.className || "";
-  const phylumInfo = CLASS_TO_PHYLUM[className] || { id: "OTHER", name: "Other", commonName: "Other Invertebrates", rank: 99 };
+  const phylumInfo = CLASS_TO_PHYLUM.get(className) || { id: "OTHER", name: "Other", commonName: "Other Invertebrates", rank: 99 };
   const phylumId = phylumInfo.id;
   
   if (!phylaGroups[phylumId]) {
