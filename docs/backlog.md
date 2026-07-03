@@ -61,9 +61,28 @@ Living roadmap for the Systema Naturae portal.
 
 - [x] Offline Wikipedia pipeline — `buildWikipediaDb.py` → SQLite DB at `/Volumes/WikiDump/wiki-pages.sqlite`.
 - [x] Gap-tracking daemon — `phylumProgressd.ts` (port 9876) records POSTs from gap reports.
-- [x] 17 phyla, 4,796 families, 429,472 species (2026-06-30).
+- [x] 17 phyla, 4,797 families, 429,488 species (2026-07-03).
+- [x] On-demand data loading: skeleton (~307 KB) + per-order chunks (363 files) + LRU cache, replaces monolithic 375 MB `unified-taxonomy.json` fetch.
+- [ ] **Fix `reportPhyla.ts`** — hardcoded class list doesn't see Mollusca's 7 classes; discover classes dynamically from `taxonomy.json`.
 
 ---
+
+## Data
+
+- [ ] **Background Wikipedia enrichment** — 38,860 of ~429k species enriched (9%). New phyla (Gastropoda, Bivalvia, Porifera, Annelida, etc.) have near-zero coverage. Needs per-class batched enrichment runs.
+- [ ] **Remaining micro-phyla** — Gastrotricha, Phoronida, Priapulida, Loricifera, Gnathostomulida, Entoprocta, Onychophora, Xenacoelomorpha return 0 classes from GBIF scout. Need manual taxonomy treatment (not handled by `importClass.ts` pipeline).
+- [ ] **Per-family chunk refinement** — split order chunks (`portal/data/orders/`) into per-family files for finer granularity and smaller initial load per focus.
+
+---
+
+## Resolved — July 2026
+
+### 2026-07-02 — On-demand data loading architecture
+- Split `unified-taxonomy.json` (375 MB) into skeleton (~307 KB) + 363 per-order chunk files
+- Built `useTaxonomyLoader.ts` with LRU cache (max 3 orders), skeleton-first fetch, merge-on-focus
+- Generated `order-manifest.json` (444 KB) with `familyToOrder` reverse lookup
+- Deep-link support: `?family=` slug resolves to order and triggers lazy load
+- Old monolithic JSON retained for backward compat but no longer fetched
 
 ## Resolved — June 2026 Import Sessions
 
