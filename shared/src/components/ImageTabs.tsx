@@ -9,6 +9,7 @@
  * single image is shown directly. When neither exists, returns null.
  */
 import { useEffect, useState } from "react";
+import FadingImage from "./FadingImage";
 
 interface Props {
   portrait?: string;
@@ -53,20 +54,16 @@ export default function ImageTabs({ portrait, rangeMap, alt, loading, accent = "
         </div>
       )}
       {portrait && (tab === "photo" || !both) && (
-        <img
-          src={portrait}
-          alt={alt}
-          style={{ width: "100%", height: "auto", borderRadius: 6, display: "block" }}
-        />
+        <FadingImage src={portrait} alt={alt} borderRadius={6} aspectRatio="4 / 3" background="#1a1a2a" />
       )}
       {rangeMap && (tab === "range" || !both) && (
-        <img
+        <FadingImage
           src={rangeMap}
           alt={`${alt} — range map`}
-          style={{
-            width: "100%", height: "auto", borderRadius: 6, display: "block",
-            background: "#f5f5f5", // many IUCN range SVGs assume a light background
-          }}
+          borderRadius={6}
+          aspectRatio="4 / 3"
+          background="#f5f5f5"
+          objectFit="contain"
         />
       )}
     </div>

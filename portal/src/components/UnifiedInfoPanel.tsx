@@ -4,6 +4,7 @@ import type { PortalNode } from "../types";
 import { useWikipediaSummary } from "@shared/hooks/useWikipediaSummary";
 import { useWikiImages } from "@shared/hooks/useWikiImages";
 import ImageTabs from "@shared/components/ImageTabs";
+import FadingImage from "@shared/components/FadingImage";
 import { PORTAL_THEME } from "../colors";
 import { COLOR_REGISTRY, IUCN_COLORS } from "../colorRegistry";
 
@@ -595,11 +596,7 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
           )}
         </div>
       )}
-      {loading && <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />}
-      {!loading && wiki?.thumbnail?.source && (
-        <img src={wiki.thumbnail.source} alt={node.name}
-          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }} />
-      )}
+      <FadingImage src={wiki?.thumbnail?.source} alt={node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
       {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
       {node.wildParentId && (
         <div style={{ marginTop: 14 }}>
@@ -640,11 +637,7 @@ function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSele
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 2 }}>{node.name}</div>
       {node.lineage && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.lineage}</div>}
-      {loading && <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />}
-      {!loading && wiki?.thumbnail?.source && (
-        <img src={wiki.thumbnail.source} alt={node.name}
-          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }} />
-      )}
+      <FadingImage src={wiki?.thumbnail?.source} alt={node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
       {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
       {parents.length > 0 && (
         <div style={{ marginTop: 16 }}>

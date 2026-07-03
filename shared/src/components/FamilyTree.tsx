@@ -1,6 +1,7 @@
 import { useEffect, useRef, useCallback, useState } from "react";
 import * as d3 from "d3";
 import type { TaxonNode, ColorTheme } from "../types";
+import FadingImage from "./FadingImage";
 
 interface Props {
   data: TaxonNode;
@@ -187,7 +188,7 @@ function TooltipBox({
       return (
         <>
           {imgUrl && (
-            <img src={imgUrl} alt="" style={{ width: "100%", height: "auto", borderRadius: 5, display: "block", marginBottom: 8 }} />
+            <FadingImage src={imgUrl} alt="" borderRadius={5} marginBottom={8} aspectRatio="4 / 3" background="#141420" />
           )}
           <div style={{ fontSize: 9, color: "#6a7a8a", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>{rankLabel}</div>
           <div style={{ fontStyle: "italic", fontSize: 11, color: "#555", lineHeight: 1.3 }}>
@@ -304,6 +305,74 @@ interface Setup {
   gSpecial: d3.Selection<SVGGElement, unknown, null, undefined>;
   gLinks: d3.Selection<SVGGElement, unknown, null, undefined>;
   gNodes: d3.Selection<SVGGElement, unknown, null, undefined>;
+}
+
+type Bounds = { minX: number; minY: number; maxX: number; maxY: number };
+
+const GENUS_ZOOM_PADDING = 0.16;
+const GENUS_ZOOM_MIN_SCALE = 0.9;
+const GENUS_ZOOM_MAX_SCALE = 3.4;
+
+function mergeBounds(bounds: Bounds[], fallback: Bounds): Bounds {
+  if (bounds.length === 0) return fallback;
+  return bounds.reduce((acc, b) => ({
+    minX: Math.min(acc.minX, b.minX),
+    minY: Math.min(acc.minY, b.minY),
+    maxX: Math.max(acc.maxX, b.maxX),
+    maxY: Math.max(acc.maxY, b.maxY),
+  }));
+}
+
+function nodePoint(node: PNode, layout: "radial" | "vertical", rotationRad: number): { x: number; y: number } {
+  if (layout === "radial") {
+    const angle = node.x - Math.PI / 2 + rotationRad;
+    return { x: node.y * Math.cos(angle), y: node.y * Math.sin(angle) };
+  }
+  return { x: node.y, y: node.x };
+}
+
+function nodeBounds(node: PNode, layout: "radial" | "vertical", rotationRad: number, radius: number): Bounds {
+  const { x, y } = nodePoint(node, layout, rotationRad);
+  return { minX: x - radius, minY: y - radius, maxX: x + radius, maxY: y + radius };
+}
+
+function genusZoomBounds(target: PNode, layout: "radial" | "vertical", rotationRad: number, nr: (d: d3.HierarchyNode<TaxonNode>, s: Set<string> | null) => number): Bounds {
+  const parent = target.parent as PNode | null;
+  const siblings = parent?.children?.filter(n => n.data.rank === "GENUS") ?? [];
+  const genusRadius = nr(target, null) + 10;
+  const fallback = nodeBounds(target, layout, rotationRad, genusRadius);
+  const relevant: Bounds[] = [fallback];
+
+  for (const sibling of siblings) relevant.push(nodeBounds(sibling, layout, rotationRad, nr(sibling, null) + 8));
+
+  for (const descendant of target.descendants() as PNode[]) {
+    if (descendant === target) continue;
+    if (descendant.data.rank === "SPECIES" || descendant.data.rank === "SUBSPECIES" || descendant.data.rank === "BREED" || descendant.data.rank === "HYBRID") {
+      relevant.push(nodeBounds(descendant, layout, rotationRad, nr(descendant, null) + 4));
+    }
+  }
+
+  if (relevant.length === 1 && siblings.length === 0) {
+    const closestAncestor = parent?.parent as PNode | null;
+    if (closestAncestor) {
+      const cousins = (closestAncestor.children ?? []).filter(n => n.data.rank === "GENUS");
+      for (const cousin of cousins) relevant.push(nodeBounds(cousin, layout, rotationRad, nr(cousin, null) + 8));
+    }
+  }
+
+  return mergeBounds(relevant, fallback);
+}
+
+function targetTransformForBounds(bounds: Bounds, width: number, height: number): d3.ZoomTransform {
+  const boxW = Math.max(bounds.maxX - bounds.minX, 1);
+  const boxH = Math.max(bounds.maxY - bounds.minY, 1);
+  const scale = Math.max(
+    GENUS_ZOOM_MIN_SCALE,
+    Math.min(GENUS_ZOOM_MAX_SCALE, Math.min(width / (boxW * (1 + GENUS_ZOOM_PADDING)), height / (boxH * (1 + GENUS_ZOOM_PADDING)))),
+  );
+  const cx = (bounds.minX + bounds.maxX) / 2;
+  const cy = (bounds.minY + bounds.maxY) / 2;
+  return d3.zoomIdentity.translate(width / 2 - cx * scale, height / 2 - cy * scale).scale(scale);
 }
 
 export default function FamilyTree({
@@ -866,34 +935,32 @@ export default function FamilyTree({
     pendingZoomId.current = null;
     if (zoomTarget) {
       const target = ptNode.descendants().find(d => d.data.id === zoomTarget);
-        if (target) {
-          const scale = 2.4;
-          let tx: number, ty: number;
-          if (layout === "radial") {
-            const angle = target.x - Math.PI / 2 + rotationRad;
-            tx = target.y * Math.cos(angle);
-            ty = target.y * Math.sin(angle);
-          } else {
-            tx = target.y;
-            ty = target.x;
-          }
+      if (target) {
+        const svgSel = d3.select(svg);
+        svgSel.interrupt();
 
-        // Keep the target node at its pre-click screen position while zooming
-        // (anchor persists across Strict Mode double-render — never cleared)
-        const anchor = zoomAnchorRef.current;
-        let sx: number, sy: number;
-        if (anchor) {
-          sx = anchor.sx; sy = anchor.sy;
-        } else {
-          const cur = d3.zoomTransform(svg);
-          sx = tx * cur.k + cur.x;
-          sy = ty * cur.k + cur.y;
-        }
+        const transform = target.data.rank === "GENUS"
+          ? targetTransformForBounds(genusZoomBounds(target, layout, rotationRad, nr), W, H)
+          : (() => {
+              const scale = 2.4;
+              const { x: tx, y: ty } = nodePoint(target, layout, rotationRad);
 
-        d3.select(svg).transition().duration(700).call(
-          zoom.transform,
-          d3.zoomIdentity.translate(sx - tx * scale, sy - ty * scale).scale(scale),
-        );
+              // Keep the target node at its pre-click screen position while zooming
+              // (anchor persists across Strict Mode double-render — never cleared)
+              const anchor = zoomAnchorRef.current;
+              let sx: number, sy: number;
+              if (anchor) {
+                sx = anchor.sx; sy = anchor.sy;
+              } else {
+                const cur = d3.zoomTransform(svg);
+                sx = tx * cur.k + cur.x;
+                sy = ty * cur.k + cur.y;
+              }
+
+              return d3.zoomIdentity.translate(sx - tx * scale, sy - ty * scale).scale(scale);
+            })();
+
+        svgSel.transition().duration(700).call(zoom.transform, transform);
       }
     }
     // Keyboard-driven tooltip

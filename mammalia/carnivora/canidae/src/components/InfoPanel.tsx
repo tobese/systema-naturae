@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import { SUBFAMILY_COLORS, LINEAGE_COLORS, BREED_GROUP_COLOR, HYBRID_COLOR } from "../colors";
 import { useWikipediaSummary } from "@shared/hooks/useWikipediaSummary";
+import FadingImage from "@shared/components/FadingImage";
 
 interface Props {
   node: TaxonNode | null;
@@ -125,16 +126,7 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         </div>
       )}
 
-      {loading && (
-        <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />
-      )}
-      {!loading && wiki?.thumbnail?.source && (
-        <img
-          src={wiki.thumbnail.source}
-          alt={node.commonName ?? node.name}
-          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }}
-        />
-      )}
+      <FadingImage src={wiki?.thumbnail?.source} alt={node.commonName ?? node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
       {extract && (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>
       )}
@@ -293,16 +285,7 @@ function SubspeciesPanel({ node }: { node: TaxonNode; onSelect: (n: TaxonNode) =
         </div>
       )}
 
-      {loading && (
-        <div style={{ marginTop: 16, width: "100%", height: 120, background: "#1a1a2a", borderRadius: 6 }} />
-      )}
-      {!loading && wiki?.thumbnail?.source && (
-        <img
-          src={wiki.thumbnail.source}
-          alt={node.commonName ?? node.name}
-          style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }}
-        />
-      )}
+      <FadingImage src={wiki?.thumbnail?.source} alt={node.commonName ?? node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
       {extract && (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>
       )}
