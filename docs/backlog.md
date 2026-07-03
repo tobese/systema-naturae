@@ -63,7 +63,7 @@ Living roadmap for the Systema Naturae portal.
 - [x] Gap-tracking daemon — `phylumProgressd.ts` (port 9876) records POSTs from gap reports.
 - [x] 17 phyla, 4,797 families, 429,488 species (2026-07-03).
 - [x] On-demand data loading: skeleton (~307 KB) + per-order chunks (363 files) + LRU cache, replaces monolithic 375 MB `unified-taxonomy.json` fetch.
-- [ ] **Fix `reportPhyla.ts`** — hardcoded class list doesn't see Mollusca's 7 classes; discover classes dynamically from `taxonomy.json`.
+- [x] **Fix `reportPhyla.ts`** — hardcoded class list doesn't see Mollusca's 7 classes; discover classes dynamically from `taxonomy.json`.
 
 ---
 
@@ -76,6 +76,13 @@ Living roadmap for the Systema Naturae portal.
 ---
 
 ## Resolved — July 2026
+
+### 2026-07-03 — GH Pages deploy + test fixes
+- Fixed deploy workflow: copy `data/` into `dist/` for runtime fetch
+- Fixed `useTaxonomyLoader.ts`: use `import.meta.env.BASE_URL` for data path resolution on subpath deploy
+- Fixed test URLs: relative `?param=val` instead of `/?param=val` for baseURL compatibility
+- All 27 Playwright tests pass against live GH Pages site
+- Fixed `reportPhyla.ts`: dynamic class→phylum mapping from `taxonomy.json` instead of hardcoded list
 
 ### 2026-07-02 — On-demand data loading architecture
 - Split `unified-taxonomy.json` (375 MB) into skeleton (~307 KB) + 363 per-order chunk files
