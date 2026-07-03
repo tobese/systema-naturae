@@ -138,16 +138,24 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
   const [tab, setTab] = useState<"coverage" | "growth">("coverage");
   const [sort, setSort] = useState<SortMode>("gaps");
   const [filter, setFilter] = useState<FilterMode>("all");
-  const [collapsed, setCollapsed] = useState<Set<string>>(() => {
-    const initialCollapsed = new Set<string>();
-    const classesList = buildCoverage(data);
-    for (const cls of classesList) {
-      if (classTraffic(cls.families) === "green") {
-        initialCollapsed.add(cls.id);
-      }
-    }
-    return initialCollapsed;
-  });
+  const [coverageSummary, setCoverageSummary] = useState<ClassCoverage[] | null>(null);
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    fetch("/data/coverage-summary.json")
+      .then(r => r.json())
+      .then((summary: ClassCoverage[]) => {
+        setCoverageSummary(summary);
+        const initialCollapsed = new Set<string>();
+        for (const cls of summary) {
+          if (classTraffic(cls.families) === "green") {
+            initialCollapsed.add(cls.id);
+          }
+        }
+        setCollapsed(initialCollapsed);
+      })
+      .catch(() => setCoverageSummary(null));
+  }, []);
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -156,7 +164,7 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
 
-  const classes = useMemo(() => buildCoverage(data), [data]);
+  const classes = useMemo(() => coverageSummary ?? buildCoverage(data), [coverageSummary, data]);
   const totalFamilies = useMemo(() => classes.reduce((sum, cls) => sum + cls.families.length, 0), [classes]);
 
   function toggleClass(id: string) {

@@ -23,6 +23,9 @@ export interface TaxonNode {
   children?: TaxonNode[];
   speciesList?: TaxonNode[];
   rankCounts?: Record<string, number>;
+  _dataFile?: string;
+  _familyCount?: number;
+  _speciesCount?: number;
 }
 
 export interface ClassPalette {

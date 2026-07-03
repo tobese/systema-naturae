@@ -1,15 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
 
-function parseUrl(): { family: string | null; nodeId: string | null; classId: string | null } {
+function parseUrl(): { family: string | null; nodeId: string | null; classId: string | null; orderId: string | null } {
   const p = new URLSearchParams(window.location.search);
-  return { family: p.get("family"), nodeId: p.get("node"), classId: p.get("class") };
+  return { family: p.get("family"), nodeId: p.get("node"), classId: p.get("class"), orderId: p.get("order") };
 }
 
-function buildUrl(family: string | null, nodeId: string | null, classId: string | null = null): string {
+function buildUrl(family: string | null, nodeId: string | null, classId: string | null = null, orderId: string | null = null): string {
   const p = new URLSearchParams();
   if (classId) p.set("class", classId);
   if (family) p.set("family", family);
   if (nodeId) p.set("node", nodeId);
+  if (orderId) p.set("order", orderId);
   const qs = p.toString();
   return qs ? `?${qs}` : window.location.pathname;
 }
@@ -17,6 +18,7 @@ function buildUrl(family: string | null, nodeId: string | null, classId: string 
 export function useUrlState(): {
   focusedFamilySlug: string | null;
   focusedClassId: string | null;
+  focusedOrderId: string | null;
   selectedNodeId: string | null;
   setFocus: (slug: string | null) => void;
   setFocusedClass: (id: string | null, nodeId?: string | null) => void;
@@ -34,18 +36,18 @@ export function useUrlState(): {
   const setFocus = useCallback((slug: string | null) => {
     const url = buildUrl(slug, null, null);
     history.pushState(null, "", url);
-    setState({ family: slug, nodeId: null, classId: null });
+    setState({ family: slug, nodeId: null, classId: null, orderId: null });
   }, []);
 
   const setFocusedClass = useCallback((id: string | null, nodeId: string | null = null) => {
     const url = buildUrl(null, nodeId, id);
     history.pushState(null, "", url);
-    setState({ family: null, nodeId, classId: id });
+    setState({ family: null, nodeId, classId: id, orderId: null });
   }, []);
 
   const setSelectedNodeId = useCallback((id: string | null) => {
     setState(prev => {
-      const url = buildUrl(prev.family, id, prev.classId);
+      const url = buildUrl(prev.family, id, prev.classId, prev.orderId);
       history.pushState(null, "", url);
       return { ...prev, nodeId: id };
     });
@@ -54,12 +56,13 @@ export function useUrlState(): {
   const navigateTo = useCallback((family: string | null, nodeId: string | null) => {
     const url = buildUrl(family, nodeId, null);
     history.pushState(null, "", url);
-    setState({ family, nodeId, classId: null });
+    setState({ family, nodeId, classId: null, orderId: null });
   }, []);
 
   return {
     focusedFamilySlug: state.family,
     focusedClassId: state.classId,
+    focusedOrderId: state.orderId,
     selectedNodeId: state.nodeId,
     setFocus,
     setFocusedClass,

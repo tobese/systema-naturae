@@ -13,6 +13,7 @@ function pruneTree(
   focusedClassId: string | null,
   expandedSubspeciesIds: Set<string>,
   expandedBreedIds: Set<string>,
+  loadedOrders?: Set<string>,
 ): TaxonNode | null {
   if (!node) return null;
   if (!focusedFamilyId) {
@@ -21,8 +22,9 @@ function pruneTree(
     // Overview mode: strip children of ORDER so the graph only renders
     // KINGDOM → PHYLUM → CLASS → ORDER. Families and lower ranks become
     // reachable only when a class or family is focused.
+    // Exception: loaded orders keep their children visible.
     // (Don't strip when a class is focused — FamilyTree handles class-focus pruning.)
-    if (node.rank === "ORDER" && !focusedClassId) {
+    if (node.rank === "ORDER" && !focusedClassId && !loadedOrders?.has(node.id)) {
       let familyCount = 0;
       for (const c of node.children) {
         if (c.rank === "FAMILY") familyCount++;
@@ -30,7 +32,7 @@ function pruneTree(
       return { ...node, children: undefined, _familyCount: familyCount } as unknown as TaxonNode;
     }
 
-    const pruned = node.children.map(c => pruneTree(c, null, focusedClassId, expandedSubspeciesIds, expandedBreedIds)).filter((c): c is TaxonNode => c !== null);
+    const pruned = node.children.map(c => pruneTree(c, null, focusedClassId, expandedSubspeciesIds, expandedBreedIds, loadedOrders)).filter((c): c is TaxonNode => c !== null);
     let familyCount = 0;
     if (node.rank === "KINGDOM" || node.rank === "PHYLUM" || node.rank === "CLASS") {
       function walkCounts(n: TaxonNode): void {
@@ -133,6 +135,7 @@ export function useUnifiedTree(
   expandedBreedIds: Set<string>,
   highlightedContinent: string | null,
   highlightWikipedia: boolean,
+  loadedOrders?: Set<string>,
 ): {
   treeData: TaxonNode;
   colorTheme: ColorTheme;
@@ -140,8 +143,8 @@ export function useUnifiedTree(
   findNodeById: (id: string) => TaxonNode | null;
 } {
   const treeData = useMemo(
-    () => (annotatedData ? (pruneTree(annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds) ?? annotatedData) : null) as unknown as TaxonNode,
-    [annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds],
+    () => (annotatedData ? (pruneTree(annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, loadedOrders) ?? annotatedData) : null) as unknown as TaxonNode,
+    [annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, loadedOrders],
   );
 
   const colorTheme = useMemo<ColorTheme>(() => {
