@@ -131,13 +131,19 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
   return updatedNode;
 }
 
-const taxonomyPath = resolve(portalRoot, "data/taxonomy.json");
-const outputPath = resolve(portalRoot, "data/unified-taxonomy.json");
-const ordersDir = resolve(portalRoot, "data/orders");
-const skeletonPath = resolve(portalRoot, "data/unified-taxonomy-skeleton.json");
-const manifestPath = resolve(portalRoot, "data/order-manifest.json");
+// Variant build (e.g. the in-development plant mirror) writes to suffixed
+// outputs so it NEVER clobbers the live animal files. Defaults = animals.
+const VARIANT = process.env.SN_VARIANT || "";           // e.g. "plantae"
+const SUFFIX = VARIANT ? `-${VARIANT}` : "";
+const ORDERS_REL = `data/orders${SUFFIX}`;
 
-console.log("Building unified-taxonomy.json…");
+const taxonomyPath = resolve(portalRoot, process.env.SN_INPUT || "data/taxonomy.json");
+const outputPath = resolve(portalRoot, `data/unified-taxonomy${SUFFIX}.json`);
+const ordersDir = resolve(portalRoot, ORDERS_REL);
+const skeletonPath = resolve(portalRoot, `data/unified-taxonomy-skeleton${SUFFIX}.json`);
+const manifestPath = resolve(portalRoot, `data/order-manifest${SUFFIX}.json`);
+
+console.log(`Building unified-taxonomy${SUFFIX}.json from ${taxonomyPath}…`);
 const taxonomy = JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode;
 const uncompressed = processTree(taxonomy);
 const unified = compressTreeNodes(uncompressed);
@@ -240,7 +246,7 @@ function buildSkeleton(node: TaxonNode): TaxonNode {
       orderName: node.orderName,
       _familyCount: entry?.familyCount ?? 0,
       _speciesCount: entry?.speciesCount ?? 0,
-      _dataFile: `data/orders/${node.id}.json`,
+      _dataFile: `${ORDERS_REL}/${node.id}.json`,
     };
     return result;
   }
@@ -293,7 +299,7 @@ for (const [, entry] of orderMap) {
     orderId: entry.orderId,
     classSlug: entry.classSlug,
     orderSlug: entry.orderSlug,
-    file: `data/orders/${entry.orderId}.json`,
+    file: `${ORDERS_REL}/${entry.orderId}.json`,
     familyCount: entry.familyCount,
     speciesCount: entry.speciesCount,
     familySlugs: entry.familySlugs,
@@ -360,7 +366,7 @@ function walkCoverage(n: TaxonNode, classes: CoverageClass[]): void {
 }
 
 walkCoverage(unified, coverageClasses);
-const coveragePath = resolve(portalRoot, "data/coverage-summary.json");
+const coveragePath = resolve(portalRoot, `data/coverage-summary${SUFFIX}.json`);
 writeFileSync(coveragePath, JSON.stringify(coverageClasses, null, 2));
 console.log(`  Coverage summary: ${coverageClasses.length} classes, ${coverageClasses.reduce((s, c) => s + c.families.length, 0)} families → data/coverage-summary.json`);
 
