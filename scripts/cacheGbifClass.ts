@@ -1,4 +1,4 @@
-import { writeFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -6,7 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
 const GBIF_SEARCH = "https://api.gbif.org/v1/species/search";
-const RATE_MS = 150;
+const RATE_MS = 300;
+const MAX_RETRIES = 5;
 
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
@@ -30,14 +31,42 @@ interface GbifCache {
   speciesByFamily: Record<string, { gbifKey: number; species: SpeciesRecord[] }>;
 }
 
+async function fetchWithRetry(url: string, retries = MAX_RETRIES): Promise<any> {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 30000);
+      const res = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeout);
+      if (!res.ok) {
+        if (attempt < retries) {
+          const wait = Math.min(1000 * Math.pow(2, attempt), 15000);
+          console.warn(`  HTTP ${res.status}, retry ${attempt}/${retries} in ${wait}ms`);
+          await sleep(wait);
+          continue;
+        }
+        throw new Error(`HTTP ${res.status}`);
+      }
+      return await res.json();
+    } catch (e: any) {
+      if (attempt < retries) {
+        const wait = Math.min(1000 * Math.pow(2, attempt), 15000);
+        console.warn(`  ${e.message || e.cause?.message || e}, retry ${attempt}/${retries} in ${wait}ms`);
+        await sleep(wait);
+        continue;
+      }
+      throw e;
+    }
+  }
+}
+
 async function paginate(url: string): Promise<any[]> {
   const results: any[] = [];
   let offset = 0;
   const limit = 300;
   while (true) {
     const sep = url.includes("?") ? "&" : "?";
-    const res = await fetch(`${url}${sep}limit=${limit}&offset=${offset}`);
-    const data = await res.json();
+    const data = await fetchWithRetry(`${url}${sep}limit=${limit}&offset=${offset}`);
     if (!data.results?.length) break;
     for (const r of data.results) results.push(r);
     offset += limit;
@@ -47,8 +76,23 @@ async function paginate(url: string): Promise<any[]> {
   return results;
 }
 
-async function downloadClass(classKey: number, className: string): Promise<GbifCache> {
+async function downloadClass(classKey: number, className: string, resumePath?: string): Promise<GbifCache> {
   console.log(`\n📦 Downloading all ${className} species from GBIF (key=${classKey})...`);
+
+  // Resume from existing cache if requested
+  let speciesByFamily: Record<string, { gbifKey: number; species: SpeciesRecord[] }> = {};
+  let startIndex = 0;
+
+  if (resumePath && existsSync(resumePath)) {
+    try {
+      const existing = JSON.parse(readFileSync(resumePath, "utf-8")) as GbifCache;
+      speciesByFamily = existing.speciesByFamily;
+      startIndex = Object.keys(speciesByFamily).length;
+      console.log(`   Resuming from existing cache: ${startIndex} families already done`);
+    } catch (e) {
+      console.log(`   Could not load existing cache, starting fresh`);
+    }
+  }
 
   // Get all families for this class
   const families: FamilyInfo[] = [];
@@ -56,8 +100,7 @@ async function downloadClass(classKey: number, className: string): Promise<GbifC
   const limit = 200;
   while (true) {
     const url = `${GBIF_SEARCH}?higherTaxonKey=${classKey}&rank=FAMILY&status=ACCEPTED&limit=${limit}&offset=${offset}`;
-    const res = await fetch(url);
-    const data = await res.json();
+    const data = await fetchWithRetry(url);
     if (!data.results?.length) break;
     for (const r of data.results) {
       if (r.canonicalName) families.push({ name: r.canonicalName, gbifKey: r.nubKey || r.key, speciesCount: r.speciesCount ?? 0 });
@@ -66,46 +109,56 @@ async function downloadClass(classKey: number, className: string): Promise<GbifC
     if (offset >= (data.count ?? 0)) break;
     await sleep(RATE_MS);
   }
-  console.log(`   Found ${families.length} families`);
+  console.log(`   Found ${families.length} families total, ${families.length - startIndex} remaining`);
 
-  // Get ALL species for the class in one paginated pass
-  console.log(`   Downloading species (classKey=${classKey})...`);
-  const allSpecies = await paginate(`${GBIF_SEARCH}?higherTaxonKey=${classKey}&rank=SPECIES&status=ACCEPTED`);
-  console.log(`   Downloaded ${allSpecies.length} species records`);
+  // Download species per-family to avoid GBIF's 100k offset limit
+  console.log(`   Downloading species by family...`);
+  let totalSpecies = Object.values(speciesByFamily).reduce((s, e) => s + e.species.length, 0);
 
-  // Group by family
-  const familyMap = new Map<string, SpeciesRecord[]>();
-  for (const s of allSpecies) {
-    const fam = (s.family || s.higherClassificationMap?.family || "").replace(/\s+/g, "");
-    if (!fam) continue;
-    if (!familyMap.has(fam)) familyMap.set(fam, []);
-    familyMap.get(fam)!.push({
-      scientificName: s.scientificName || s.canonicalName || "",
-      canonicalName: s.canonicalName || "",
-      genus: s.genus || (s.canonicalName || "").split(" ")[0] || "",
-      species: s.species || s.canonicalName || "",
-      order: (s.order || s.higherClassificationMap?.order || "").replace(/\s+/g, ""),
-      family: fam,
-    });
-  }
+  for (let i = startIndex; i < families.length; i++) {
+    const fam = families[i];
 
-  // Build result — use species count from each family as gbifKey estimate
-  const speciesByFamily: Record<string, { gbifKey: number; species: SpeciesRecord[] }> = {};
-  let totalSpecies = 0;
-  for (const [famName, spp] of familyMap) {
-    const famInfo = families.find(f => f.name.toLowerCase() === famName.toLowerCase());
-    speciesByFamily[famName] = { gbifKey: famInfo?.gbifKey ?? 0, species: spp };
-    totalSpecies += spp.length;
+    // Skip if already cached
+    if (speciesByFamily[fam.name]) continue;
+
+    try {
+      const spp = await paginate(`${GBIF_SEARCH}?higherTaxonKey=${fam.gbifKey}&rank=SPECIES&status=ACCEPTED`);
+      speciesByFamily[fam.name] = { gbifKey: fam.gbifKey, species: spp.map(s => ({
+        scientificName: s.scientificName || s.canonicalName || "",
+        canonicalName: s.canonicalName || "",
+        genus: s.genus || (s.canonicalName || "").split(" ")[0] || "",
+        species: s.species || s.canonicalName || "",
+        order: (s.order || s.higherClassificationMap?.order || "").replace(/\s+/g, ""),
+        family: fam.name,
+      })) };
+      totalSpecies += spp.length;
+
+      // Save checkpoint every 10 families
+      if ((i + 1) % 10 === 0 || i === families.length - 1) {
+        if (resumePath) {
+          const partial: GbifCache = {
+            downloadedAt: new Date().toISOString(),
+            speciesByFamily,
+          };
+          writeFileSync(resumePath, JSON.stringify(partial, null, 2) + "\n");
+        }
+        console.log(`   ${i + 1}/${families.length} families done (${totalSpecies} species so far)`);
+      }
+    } catch (e: any) {
+      console.error(`   FAILED on family ${fam.name} (key ${fam.gbifKey}) after all retries: ${e.message}`);
+      console.error(`   Saving checkpoint and aborting. Resume by re-running with --resume`);
+      if (resumePath) {
+        const partial: GbifCache = {
+          downloadedAt: new Date().toISOString(),
+          speciesByFamily,
+        };
+        writeFileSync(resumePath, JSON.stringify(partial, null, 2) + "\n");
+      }
+      throw e;
+    }
   }
 
   console.log(`\n✅ ${totalSpecies} species across ${Object.keys(speciesByFamily).length} families`);
-
-  // Add empty entries for families with no species found (keep them for taxonomy completeness)
-  for (const fam of families) {
-    if (!speciesByFamily[fam.name]) {
-      speciesByFamily[fam.name] = { gbifKey: fam.gbifKey, species: [] };
-    }
-  }
 
   return {
     downloadedAt: new Date().toISOString(),
@@ -117,9 +170,11 @@ async function main() {
   const args = process.argv.slice(2);
   const className = args[0] || "Anthozoa";
   const classKey = parseInt(args[1] || "206", 10);
+  const useResume = args.includes("--resume");
 
-  const cache = await downloadClass(classKey, className);
   const outPath = resolve(root, "portal", "data", `gbif-cache-${className.toLowerCase()}.json`);
+
+  const cache = await downloadClass(classKey, className, useResume ? outPath : undefined);
   writeFileSync(outPath, JSON.stringify(cache, null, 2) + "\n");
   console.log(`\n   → Saved to portal/data/gbif-cache-${className.toLowerCase()}.json`);
 }

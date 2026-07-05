@@ -2,7 +2,7 @@
 
 This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema Naturae portal. Each class with remaining gaps has a discrete checklist of its families.
 
-*Generated automatically on: 02/07/2026*
+*Generated automatically on: 04/07/2026*
 
 ## Overview of Taxonomic Class Coverage
 
@@ -28,6 +28,18 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | **Arachnida** | 18 | 21,937 | 21,937 | 18,169 | 3,768 | 100.0% | 17.2% | [✓] Complete |
 | **Insecta** | 19 | 88,525 | 88,525 | 73,128 | 15,397 | 100.0% | 17.4% | [✓] Complete |
 | **Tardigrada** | Other | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
+| **Phoronida** | Other | 0 | 13 | 0 | 0 | 0.0% | 0.0% | > Gaps: 13 |
+| **Loricifera** | Other | 0 | 32 | 0 | 0 | 0.0% | 0.0% | > Gaps: 32 |
+| **Priapulimorpha** | Other | 0 | 109 | 0 | 0 | 0.0% | 0.0% | > Gaps: 109 |
+| **Halicryptomorpha** | Other | 0 | 34 | 0 | 0 | 0.0% | 0.0% | > Gaps: 34 |
+| **Seticoronaria** | Other | 0 | 2 | 0 | 0 | 0.0% | 0.0% | > Gaps: 2 |
+| **Entoprocta** | Other | 0 | 100 | 0 | 0 | 0.0% | 0.0% | > Gaps: 100 |
+| **Gnathostomulida** | Other | 0 | 294 | 0 | 0 | 0.0% | 0.0% | > Gaps: 294 |
+| **Onychophora** | Other | 0 | 232 | 0 | 0 | 0.0% | 0.0% | > Gaps: 232 |
+| **Gastrotricha** | Other | 0 | 926 | 0 | 0 | 0.0% | 0.0% | > Gaps: 926 |
+| **Xenoturbellida** | Other | 0 | 2 | 0 | 0 | 0.0% | 0.0% | > Gaps: 2 |
+| **Acoela** | Other | 0 | 223 | 0 | 0 | 0.0% | 0.0% | > Gaps: 223 |
+| **Nemertodermatida** | Other | 0 | 66 | 0 | 0 | 0.0% | 0.0% | > Gaps: 66 |
 | **Caudofoveata** | Other | 143 | 143 | 143 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Monoplacophora** | Other | 257 | 257 | 257 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Scaphopoda** | Other | 863 | 863 | 863 | 0 | 100.0% | 0.0% | [✓] Complete |
@@ -151,6 +163,130 @@ All families in this class are fully imported into the portal. Nice!
 ### [x] Tardigrada (100% complete)
 
 All families in this class are fully imported into the portal. Nice!
+
+### [ ] Phoronida Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **13** species missing from portal.
+
+- [ ] **Phoronids** (`phoronidae`) (Gaps: **13** species missing - 0/13 imported, 0 empty, 0 enriched)
+
+### [ ] Loricifera Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **32** species missing from portal.
+
+- [ ] **Pliciloricids** (`pliciloricidae`) (Gaps: **31** species missing - 0/31 imported, 0 empty, 0 enriched)
+- [ ] **Nanaloricids** (`nanaloricidae`) (Gaps: **1** species missing - 0/1 imported, 0 empty, 0 enriched)
+- [x] **Urnaloricids** (`urnaloricidae`) (Complete: 0/0 imported)
+
+### [ ] Priapulimorpha Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **109** species missing from portal.
+
+- [ ] **Priapulids** (`priapulidae`) (Gaps: **109** species missing - 0/109 imported, 0 empty, 0 enriched)
+- [x] **Meiopriapulids** (`meiopriapulidae`) (Complete: 0/0 imported)
+
+### [ ] Halicryptomorpha Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **34** species missing from portal.
+
+- [ ] **Halicryptids** (`halicryptidae`) (Gaps: **34** species missing - 0/34 imported, 0 empty, 0 enriched)
+
+### [ ] Seticoronaria Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **2** species missing from portal.
+
+- [ ] **Chaetostephanids** (`chaetostephanidae`) (Gaps: **2** species missing - 0/2 imported, 0 empty, 0 enriched)
+
+### [ ] Entoprocta Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **100** species missing from portal.
+
+- [ ] **Barentsiids** (`barentsiidae`) (Gaps: **46** species missing - 0/46 imported, 0 empty, 0 enriched)
+- [ ] **Pedicellinids** (`pedicellinidae`) (Gaps: **31** species missing - 0/31 imported, 0 empty, 0 enriched)
+- [ ] **Loxokalypodids** (`loxokalypodidae`) (Gaps: **17** species missing - 0/17 imported, 0 empty, 0 enriched)
+- [ ] **Loxosomatids** (`loxosomatidae`) (Gaps: **6** species missing - 0/6 imported, 0 empty, 0 enriched)
+
+### [ ] Gnathostomulida Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **294** species missing from portal.
+
+- [ ] **Problognathiids** (`problognathiidae`) (Gaps: **67** species missing - 0/67 imported, 0 empty, 0 enriched)
+- [ ] **Pterognathiids** (`pterognathiidae`) (Gaps: **63** species missing - 0/63 imported, 0 empty, 0 enriched)
+- [ ] **Rastrognathiids** (`rastrognathiidae`) (Gaps: **52** species missing - 0/52 imported, 0 empty, 0 enriched)
+- [ ] **Mesognathariids** (`mesognathariidae`) (Gaps: **40** species missing - 0/40 imported, 0 empty, 0 enriched)
+- [ ] **Gnathostomulids** (`gnathostomulidae`) (Gaps: **25** species missing - 0/25 imported, 0 empty, 0 enriched)
+- [ ] **Haplognathiids** (`haplognathiidae`) (Gaps: **23** species missing - 0/23 imported, 0 empty, 0 enriched)
+- [ ] **Agnathiellids** (`agnathiellidae`) (Gaps: **12** species missing - 0/12 imported, 0 empty, 0 enriched)
+- [ ] **Onychognathiids** (`onychognathiidae`) (Gaps: **8** species missing - 0/8 imported, 0 empty, 0 enriched)
+- [ ] **Gnathostomariids** (`gnathostomariidae`) (Gaps: **3** species missing - 0/3 imported, 0 empty, 0 enriched)
+- [ ] **Clausognathiids** (`clausognathiidae`) (Gaps: **1** species missing - 0/1 imported, 0 empty, 0 enriched)
+- [x] **Austrognathiids** (`austrognathiidae`) (Complete: 0/0 imported)
+- [x] **Paucidentulids** (`paucidentulidae`) (Complete: 0/0 imported)
+
+### [ ] Onychophora Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **232** species missing from portal.
+
+- [ ] **Peripatopsids** (`peripatopsidae`) (Gaps: **139** species missing - 0/139 imported, 0 empty, 0 enriched)
+- [ ] **Peripatids** (`peripatidae`) (Gaps: **93** species missing - 0/93 imported, 0 empty, 0 enriched)
+
+### [ ] Gastrotricha Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **926** species missing from portal.
+
+- [ ] **Chaetonotids** (`chaetonotidae`) (Gaps: **435** species missing - 0/435 imported, 0 empty, 0 enriched)
+- [ ] **Thaumastodermatids** (`thaumastodermatidae`) (Gaps: **184** species missing - 0/184 imported, 0 empty, 0 enriched)
+- [ ] **Turbanellids** (`turbanellidae`) (Gaps: **65** species missing - 0/65 imported, 0 empty, 0 enriched)
+- [ ] **Macrodasyids** (`macrodasyidae`) (Gaps: **61** species missing - 0/61 imported, 0 empty, 0 enriched)
+- [ ] **Dasydytids** (`dasydytidae`) (Gaps: **36** species missing - 0/36 imported, 0 empty, 0 enriched)
+- [ ] **Cephalodasyids** (`cephalodasyidae`) (Gaps: **35** species missing - 0/35 imported, 0 empty, 0 enriched)
+- [ ] **Xenotrichulids** (`xenotrichulidae`) (Gaps: **29** species missing - 0/29 imported, 0 empty, 0 enriched)
+- [ ] **Dactylopodolids** (`dactylopodolidae`) (Gaps: **20** species missing - 0/20 imported, 0 empty, 0 enriched)
+- [ ] **Planodasyids** (`planodasyidae`) (Gaps: **14** species missing - 0/14 imported, 0 empty, 0 enriched)
+- [ ] **Neogosseids** (`neogosseidae`) (Gaps: **12** species missing - 0/12 imported, 0 empty, 0 enriched)
+- [ ] **Lepidodasyids** (`lepidodasyidae`) (Gaps: **9** species missing - 0/9 imported, 0 empty, 0 enriched)
+- [ ] **Muselliferids** (`muselliferidae`) (Gaps: **7** species missing - 0/7 imported, 0 empty, 0 enriched)
+- [ ] **Dichaeturids** (`dichaeturidae`) (Gaps: **5** species missing - 0/5 imported, 0 empty, 0 enriched)
+- [ ] **Redudasyids** (`redudasyidae`) (Gaps: **4** species missing - 0/4 imported, 0 empty, 0 enriched)
+- [ ] **Xenodasyids** (`xenodasyidae`) (Gaps: **4** species missing - 0/4 imported, 0 empty, 0 enriched)
+- [ ] **Neodasyids** (`neodasyidae`) (Gaps: **3** species missing - 0/3 imported, 0 empty, 0 enriched)
+- [ ] **Proichthydiids** (`proichthydiidae`) (Gaps: **2** species missing - 0/2 imported, 0 empty, 0 enriched)
+- [ ] **Hummondasyids** (`hummondasyidae`) (Gaps: **1** species missing - 0/1 imported, 0 empty, 0 enriched)
+
+### [ ] Xenoturbellida Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **2** species missing from portal.
+
+- [ ] **Xenoturbellids** (`xenoturbellidae`) (Gaps: **2** species missing - 0/2 imported, 0 empty, 0 enriched)
+
+### [ ] Acoela Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **223** species missing from portal.
+
+- [ ] **Hofsteniids** (`hofsteniidae`) (Gaps: **94** species missing - 0/94 imported, 0 empty, 0 enriched)
+- [ ] **Antigonariids** (`antigonariidae`) (Gaps: **64** species missing - 0/64 imported, 0 empty, 0 enriched)
+- [ ] **Isodiametrids** (`isodiametridae`) (Gaps: **25** species missing - 0/25 imported, 0 empty, 0 enriched)
+- [ ] **Mecynostomids** (`mecynostomidae`) (Gaps: **25** species missing - 0/25 imported, 0 empty, 0 enriched)
+- [ ] **Convolutids** (`convolutidae`) (Gaps: **7** species missing - 0/7 imported, 0 empty, 0 enriched)
+- [ ] **Antroposthiids** (`antroposthiidae`) (Gaps: **4** species missing - 0/4 imported, 0 empty, 0 enriched)
+- [ ] **Otocelidids** (`otocelididae`) (Gaps: **3** species missing - 0/3 imported, 0 empty, 0 enriched)
+- [ ] **Actinoposthiids** (`actinoposthiidae`) (Gaps: **1** species missing - 0/1 imported, 0 empty, 0 enriched)
+- [x] **Dakuids** (`dakuidae`) (Complete: 0/0 imported)
+- [x] **Diopisthoporids** (`diopisthoporidae`) (Complete: 0/0 imported)
+- [x] **Hallangiids** (`hallangiidae`) (Complete: 0/0 imported)
+- [x] **Nadinids** (`nadinidae`) (Complete: 0/0 imported)
+- [x] **Paratomellids** (`paratomellidae`) (Complete: 0/0 imported)
+- [x] **Proporids** (`proporidae`) (Complete: 0/0 imported)
+- [x] **Sagittiferids** (`sagittiferidae`) (Complete: 0/0 imported)
+- [x] **Solenofilomorphids** (`solenofilomorphidae`) (Complete: 0/0 imported)
+- [x] **Tauridids** (`taurididae`) (Complete: 0/0 imported)
+
+### [ ] Nemertodermatida Gap Enrichment (0.0% imported, 0.0% enriched)
+
+Remaining Gaps in Class: **66** species missing from portal.
+
+- [ ] **Nemertodermatids** (`nemertodermatidae`) (Gaps: **66** species missing - 0/66 imported, 0 empty, 0 enriched)
+- [x] **Ascopariids** (`ascopariidae`) (Complete: 0/0 imported)
 
 ### [x] Caudofoveata (100% complete)
 

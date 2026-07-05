@@ -967,6 +967,74 @@ const ANHIMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Anh
 const ANSERANATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Anseranatidae": "#c0b8a0" }, breedGroupColor: "#c0b8a0", hybridColor: "#a8b0b8" };
 const APTERYGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Apterygidae": "#8a7a58" }, breedGroupColor: "#8a7a58", hybridColor: "#a8b0b8" };
 const ARAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Aramidae": "#788878" }, breedGroupColor: "#788878", hybridColor: "#a8b0b8" };
+const TRICHOPLACIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Trichoplacidae": "#7FB3A0" }, breedGroupColor: "#7FB3A0", hybridColor: "#a0c8b8" };
+const HOILUNGIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hoilungidae": "#7FB3A0" }, breedGroupColor: "#7FB3A0", hybridColor: "#a0c8b8" };
+const CLADTERTIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cladtertiidae": "#7FB3A0" }, breedGroupColor: "#7FB3A0", hybridColor: "#a0c8b8" };
+const POLYPLACOTOMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Polyplacotomidae": "#7FB3A0" }, breedGroupColor: "#7FB3A0", hybridColor: "#a0c8b8" };
+const PHORONIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Phoronidae": "#4C84A9" }, breedGroupColor: "#4C84A9", hybridColor: "#3E5F74" };
+const NANALORICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nanaloricidae": "#68A94C" }, breedGroupColor: "#68A94C", hybridColor: "#4F743E" };
+const PLICILORICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pliciloricidae": "#68A94C" }, breedGroupColor: "#68A94C", hybridColor: "#4F743E" };
+const URNALORICIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Urnaloricidae": "#68A94C" }, breedGroupColor: "#68A94C", hybridColor: "#4F743E" };
+const PRIAPULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Priapulidae": "#4CA97F" }, breedGroupColor: "#4CA97F", hybridColor: "#3E745C" };
+const MEIOPRIAPULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Meiopriapulidae": "#4CA97F" }, breedGroupColor: "#4CA97F", hybridColor: "#3E745C" };
+const HALICRYPTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Halicryptidae": "#4CA97F" }, breedGroupColor: "#4CA97F", hybridColor: "#3E745C" };
+const CHAETOSTEPHANIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Chaetostephanidae": "#4CA97F" }, breedGroupColor: "#4CA97F", hybridColor: "#3E745C" };
+const LOXOKALYPODIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Loxokalypodidae": "#4C4DA9" }, breedGroupColor: "#4C4DA9", hybridColor: "#3E3F74" };
+const BARENTSIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Barentsiidae": "#4C4DA9" }, breedGroupColor: "#4C4DA9", hybridColor: "#3E3F74" };
+const PEDICELLINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pedicellinidae": "#4C4DA9" }, breedGroupColor: "#4C4DA9", hybridColor: "#3E3F74" };
+const LOXOSOMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Loxosomatidae": "#4C4DA9" }, breedGroupColor: "#4C4DA9", hybridColor: "#3E3F74" };
+const HAPLOGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Haplognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const PTEROGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Pterognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const AGNATHIELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Agnathiellidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const AUSTROGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Austrognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const CLAUSOGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Clausognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const GNATHOSTOMARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Gnathostomariidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const GNATHOSTOMULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Gnathostomulidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const MESOGNATHARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mesognathariidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const ONYCHOGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Onychognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const PAUCIDENTULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Paucidentulidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const PROBLOGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Problognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const RASTROGNATHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Rastrognathiidae": "#884CA9" }, breedGroupColor: "#884CA9", hybridColor: "#613E74" };
+const PERIPATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Peripatidae": "#A96E4C" }, breedGroupColor: "#A96E4C", hybridColor: "#74523E" };
+const PERIPATOPSIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Peripatopsidae": "#A96E4C" }, breedGroupColor: "#A96E4C", hybridColor: "#74523E" };
+const CHAETONOTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Chaetonotidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const DASYDYTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dasydytidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const DICHAETURIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dichaeturidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const NEOGOSSEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Neogosseidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const PROICHTHYDIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Proichthydiidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const XENOTRICHULIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Xenotrichulidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const MUSELLIFERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Muselliferidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const CEPHALODASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Cephalodasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const DACTYLOPODOLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dactylopodolidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const HUMMONDASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hummondasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const LEPIDODASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lepidodasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const MACRODASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Macrodasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const NEODASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Neodasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const PLANODASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Planodasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const REDUDASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Redudasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const THAUMASTODERMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Thaumastodermatidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const TURBANELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Turbanellidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const XENODASYIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Xenodasyidae": "#4C57A9" }, breedGroupColor: "#4C57A9", hybridColor: "#3E4574" };
+const XENOTURBELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Xenoturbellidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const ACTINOPOSTHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Actinoposthiidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const ANTIGONARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Antigonariidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const ANTROPOSTHIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Antroposthiidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const CONVOLUTIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Convolutidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const DAKUIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Dakuidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const DIOPISTHOPORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Diopisthoporidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const HALLANGIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hallangiidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const HOFSTENIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Hofsteniidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const ISODIAMETRIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Isodiametridae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const MECYNOSTOMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mecynostomidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const NADINIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nadinidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const OTOCELIDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Otocelididae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const PARATOMELLIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Paratomellidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const PROPORIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Proporidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const SAGITTIFERIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Sagittiferidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const SOLENOFILOMORPHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Solenofilomorphidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const TAURIDIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Taurididae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const ASCOPARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Ascopariidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
+const NEMERTODERMATIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Nemertodermatidae": "#604CA9" }, breedGroupColor: "#604CA9", hybridColor: "#4A3E74" };
 const ARTAMIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Artamidae": "#406090" }, breedGroupColor: "#406090", hybridColor: "#a8b0b8" };
 const ATRICHORNITHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Atrichornithidae": "#8a7860" }, breedGroupColor: "#8a7860", hybridColor: "#a8b0b8" };
 const BALAENICIPITIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Balaenicipitidae": "#788088" }, breedGroupColor: "#788088", hybridColor: "#a8b0b8" };
@@ -10778,8 +10846,77 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "centroderidae": cyclorhagida_centroderidae,
   "zelinkaderidae": cyclorhagida_zelinkaderidae,
   "campyloderidae": cyclorhagida_campyloderidae,
-  "nectonematidae": gordioida_nectonematidae,
-  "paragordiidae": gordioida_paragordiidae,};
+   "nectonematidae": gordioida_nectonematidae,
+   "paragordiidae": gordioida_paragordiidae,
+   "trichoplacidae": TRICHOPLACIDAE_THEME,
+   "hoilungidae": HOILUNGIDAE_THEME,
+   "cladtertiidae": CLADTERTIIDAE_THEME,
+    "polyplacotomidae": POLYPLACOTOMIDAE_THEME,
+    "phoronidae": PHORONIDAE_THEME,
+    "nanaloricidae": NANALORICIDAE_THEME,
+    "pliciloricidae": PLICILORICIDAE_THEME,
+    "urnaloricidae": URNALORICIDAE_THEME,
+    "priapulidae": PRIAPULIDAE_THEME,
+    "meiopriapulidae": MEIOPRIAPULIDAE_THEME,
+    "halicryptidae": HALICRYPTIDAE_THEME,
+    "chaetostephanidae": CHAETOSTEPHANIDAE_THEME,
+    "loxokalypodidae": LOXOKALYPODIDAE_THEME,
+    "barentsiidae": BARENTSIIDAE_THEME,
+    "pedicellinidae": PEDICELLINIDAE_THEME,
+    "loxosomatidae": LOXOSOMATIDAE_THEME,
+    "haplognathiidae": HAPLOGNATHIIDAE_THEME,
+    "pterognathiidae": PTEROGNATHIIDAE_THEME,
+    "agnathiellidae": AGNATHIELLIDAE_THEME,
+    "austrognathiidae": AUSTROGNATHIIDAE_THEME,
+    "clausognathiidae": CLAUSOGNATHIIDAE_THEME,
+    "gnathostomariidae": GNATHOSTOMARIIDAE_THEME,
+    "gnathostomulidae": GNATHOSTOMULIDAE_THEME,
+    "mesognathariidae": MESOGNATHARIIDAE_THEME,
+    "onychognathiidae": ONYCHOGNATHIIDAE_THEME,
+    "paucidentulidae": PAUCIDENTULIDAE_THEME,
+    "problognathiidae": PROBLOGNATHIIDAE_THEME,
+    "rastrognathiidae": RASTROGNATHIIDAE_THEME,
+    "peripatidae": PERIPATIDAE_THEME,
+    "peripatopsidae": PERIPATOPSIDAE_THEME,
+    "chaetonotidae": CHAETONOTIDAE_THEME,
+    "dasydytidae": DASYDYTIDAE_THEME,
+    "dichaeturidae": DICHAETURIDAE_THEME,
+    "neogosseidae": NEOGOSSEIDAE_THEME,
+    "proichthydiidae": PROICHTHYDIIDAE_THEME,
+    "xenotrichulidae": XENOTRICHULIDAE_THEME,
+    "muselliferidae": MUSELLIFERIDAE_THEME,
+    "cephalodasyidae": CEPHALODASYIDAE_THEME,
+    "dactylopodolidae": DACTYLOPODOLIDAE_THEME,
+    "hummondasyidae": HUMMONDASYIDAE_THEME,
+    "lepidodasyidae": LEPIDODASYIDAE_THEME,
+    "macrodasyidae": MACRODASYIDAE_THEME,
+    "neodasyidae": NEODASYIDAE_THEME,
+    "planodasyidae": PLANODASYIDAE_THEME,
+    "redudasyidae": REDUDASYIDAE_THEME,
+    "thaumastodermatidae": THAUMASTODERMATIDAE_THEME,
+    "turbanellidae": TURBANELLIDAE_THEME,
+    "xenodasyidae": XENODASYIDAE_THEME,
+    "xenoturbellidae": XENOTURBELLIDAE_THEME,
+    "actinoposthiidae": ACTINOPOSTHIIDAE_THEME,
+    "antigonariidae": ANTIGONARIIDAE_THEME,
+    "antroposthiidae": ANTROPOSTHIIDAE_THEME,
+    "convolutidae": CONVOLUTIDAE_THEME,
+    "dakuidae": DAKUIDAE_THEME,
+    "diopisthoporidae": DIOPISTHOPORIDAE_THEME,
+    "hallangiidae": HALLANGIIDAE_THEME,
+    "hofsteniidae": HOFSTENIIDAE_THEME,
+    "isodiametridae": ISODIAMETRIDAE_THEME,
+    "mecynostomidae": MECYNOSTOMIDAE_THEME,
+    "nadinidae": NADINIDAE_THEME,
+    "otocelididae": OTOCELIDIDAE_THEME,
+    "paratomellidae": PARATOMELLIDAE_THEME,
+    "proporidae": PROPORIDAE_THEME,
+    "sagittiferidae": SAGITTIFERIDAE_THEME,
+    "solenofilomorphidae": SOLENOFILOMORPHIDAE_THEME,
+    "taurididae": TAURIDIDAE_THEME,
+    "ascopariidae": ASCOPARIIDAE_THEME,
+    "nemertodermatidae": NEMERTODERMATIDAE_THEME,};
+
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
   if (node.familySlug && COLOR_REGISTRY[node.familySlug]) {
