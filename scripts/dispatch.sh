@@ -20,6 +20,7 @@ REPO_PATH="${REPO_PATH:-$(cd "$(dirname "$0")/.." && pwd)}"  # path on each work
 DB_PORT=9880   # 9877 is taken by ocd modelsd
 PROGRESSD_PORT=9876
 LIVE_FLAG="${LIVE_FLAG:---live}"              # set LIVE_FLAG="" to skip Tier-2 REST
+PUSH_FLAG="${PUSH_FLAG:---push}"              # set PUSH_FLAG="" to keep writes local (SMB-mount model)
 
 # Worker hosts, in shard order. Macie itself is shard 0 (runs locally).
 # Format: "label:ssh_target" — ssh_target empty means run locally.
@@ -77,7 +78,7 @@ for k in "${!HOSTS[@]}"; do
   entry="${HOSTS[$k]}"
   label="${entry%%:*}"
   target="${entry#*:}"
-  cmd="cd '$REPO_PATH' && npx tsx scripts/enrichWorker.ts --shard $k/$N $LIVE_FLAG --db-url '$DB_URL' --progressd '$PD_URL'"
+  cmd="cd '$REPO_PATH' && npx tsx scripts/enrichWorker.ts --shard $k/$N $LIVE_FLAG $PUSH_FLAG --db-url '$DB_URL' --progressd '$PD_URL'"
   if [ -z "$target" ]; then
     echo "    [$label] shard $k/$N (local)"
     ( eval "$cmd" >"/tmp/enrich-$label.log" 2>&1 & )
@@ -92,3 +93,32 @@ echo "==> Watch progress: http://localhost:$PROGRESSD_PORT/  (or curl :$PROGRESS
 wait
 done_session
 echo "==> All shards finished."
+
+# Coordinator merge: each worker published its shard as origin/enrich/<id>-s<k>
+# (disjoint files). Merge them into main here so only ONE push hits main → one
+# Pages deploy, no worker-vs-worker push races.
+if [ -n "$PUSH_FLAG" ]; then
+  echo "==> Merging shard branches into main"
+  git fetch origin --quiet
+  merged=0
+  for k in $(seq 0 $((N - 1))); do
+    b="enrich/${PROGRESS_ID}-s${k}"
+    if git rev-parse --verify --quiet "origin/$b" >/dev/null 2>&1; then
+      if git merge --no-edit "origin/$b"; then
+        merged=$((merged + 1))
+      else
+        echo "!! merge conflict on $b — resolve manually, then: git push origin main"
+        exit 1
+      fi
+    fi
+  done
+  if [ "$merged" -gt 0 ]; then
+    git push origin main
+    echo "==> merged $merged shard branch(es) → main pushed (single deploy)"
+    for k in $(seq 0 $((N - 1))); do
+      git push origin --delete "enrich/${PROGRESS_ID}-s${k}" >/dev/null 2>&1 || true
+    done
+  else
+    echo "==> no shard branches found to merge"
+  fi
+fi

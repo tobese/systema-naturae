@@ -21,6 +21,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from "
 import { resolve, dirname, join, sep } from "path";
 import { fileURLToPath } from "url";
 import { hostname } from "os";
+import { spawnSync } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
@@ -40,6 +41,7 @@ const has = (flag: string) => argv.includes(flag);
 const [shardK, shardN] = arg("--shard", "0/1").split("/").map(Number);
 const LIMIT = Number(arg("--limit", "0")); // 0 = no limit; cap families (for dry-runs)
 const LIVE = has("--live");
+const PUSH = has("--push"); // commit this shard's files and publish as a branch
 const DB_URL = arg("--db-url", "http://localhost:9880").replace(/\/$/, "");
 const PROGRESSD = arg("--progressd", "http://localhost:9876").replace(/\/$/, "");
 const PROGRESS_ID = arg("--progress-id", "plant-enrich-2026-07-05");
@@ -204,6 +206,7 @@ async function main() {
   await postProgress(`${HOST}: starting shard ${shardK}/${shardN} — ${mine.length} fams, ${myCand} candidates`, 0);
 
   let ok = 0, apiCalls = 0;
+  const written: string[] = [];
 
   for (let fi = 0; fi < mine.length; fi++) {
     const fam = mine[fi];
@@ -255,7 +258,10 @@ async function main() {
       }
     }
 
-    if (famOk > 0) writeFileSync(fam.path, JSON.stringify(data, null, 2) + "\n");
+    if (famOk > 0) {
+      writeFileSync(fam.path, JSON.stringify(data, null, 2) + "\n");
+      written.push(fam.path);
+    }
     ok += famOk;
 
     const pct = myCand > 0 ? Math.round((ok / myCand) * 100) : 100;
@@ -268,6 +274,34 @@ async function main() {
   const final = `${HOST}: DONE — ${ok}/${myCand} enriched (+${apiCalls} API calls), shard ${shardK}/${shardN}`;
   console.log(`\n${final}`);
   await postProgress(final, 100);
+
+  if (PUSH && written.length > 0) await pushShard(written);
+  else if (PUSH) console.log(`[${HOST}] nothing enriched — no branch pushed`);
+}
+
+/**
+ * Commit only this shard's changed files and publish them as a per-shard
+ * remote branch (enrich/<id>-s<k>). The coordinator merges these disjoint
+ * branches into main, so N workers never race pushing to main directly.
+ */
+async function pushShard(files: string[]) {
+  const git = (...a: string[]) => spawnSync("git", a, { cwd: root, encoding: "utf-8" });
+  const branch = `enrich/${PROGRESS_ID}-s${shardK}`;
+  const msg = `enrich: shard ${shardK}/${shardN} (${HOST}) — ${files.length} families`;
+  // Commit the touched files on the current branch, then publish that commit
+  // under a per-shard ref (no branch switch → safe even on a shared checkout).
+  const add = git("add", "--", ...files);
+  if (add.status !== 0) return console.error(`[${HOST}] git add failed: ${add.stderr}`);
+  if (git("diff", "--cached", "--quiet").status === 0) {
+    console.log(`[${HOST}] enriched values unchanged — nothing to publish`);
+    return;
+  }
+  const commit = git("commit", "-m", msg);
+  if (commit.status !== 0) return console.error(`[${HOST}] git commit failed: ${commit.stdout}${commit.stderr}`);
+  const push = git("push", "-f", "origin", `HEAD:refs/heads/${branch}`);
+  if (push.status !== 0) return console.error(`[${HOST}] git push failed: ${push.stderr}`);
+  console.log(`[${HOST}] pushed ${files.length} files → origin/${branch}`);
+  await postProgress(`${HOST}: pushed shard ${shardK}/${shardN} → ${branch}`);
 }
 
 main().catch((e) => {
