@@ -181,6 +181,27 @@ async function postProgress() {
 }
 setInterval(() => { flush(); maybePush(); postProgress(); }, FLUSH_MS);
 
+// --- GBIF usage-key cache (merged into gbif-cache-{class}.json.usageKeys) ------
+const GBIF_KEYS_DIR = resolve(root, "portal", "data");
+const GBIF_CACHE_CLASSES = CLASSES.map(c => resolve(GBIF_KEYS_DIR, `gbif-cache-${c}.json`));
+let gbifKeysCache: Record<string, number | null> = {};
+
+function loadGbifKeysCache() {
+  const merged: Record<string, number | null> = {};
+  for (const p of GBIF_CACHE_CLASSES) {
+    if (!existsSync(p)) continue;
+    try {
+      const data: any = JSON.parse(readFileSync(p, "utf-8"));
+      const keys: Record<string, number | null> = data.usageKeys ?? {};
+      let n = 0;
+      for (const [k, v] of Object.entries(keys)) { merged[k] = v; n++; }
+      console.log(`[gbif-keys] loaded ${n} keys from ${p.split("/").pop()}`);
+    } catch (e) { console.error(`[gbif-keys] error loading ${p}: ${(e as Error).message}`); }
+  }
+  gbifKeysCache = merged;
+  console.log(`[gbif-keys] ${Object.keys(merged).length} total cached keys`);
+}
+
 // --- server-side GBIF enrichment loop (caches results locally) ---------------
 const GBIF_MATCH = "https://api.gbif.org/v1/species/match";
 const GBIF_DESCR = "https://api.gbif.org/v1/species";
@@ -188,6 +209,8 @@ const GBIF_UA = "SystemaNaturae/1.0 (https://github.com/tobese/systema-naturae; 
 const GBIF_CONCURRENCY = 8;
 
 async function gbifMatch(name: string): Promise<number | null> {
+  // Check local cache first
+  if (name in gbifKeysCache) return gbifKeysCache[name];
   try {
     const url = `${GBIF_MATCH}?name=${encodeURIComponent(name)}&strict=true`;
     const res = await fetch(url, { headers: { "User-Agent": GBIF_UA }, signal: AbortSignal.timeout(15000) });
@@ -266,6 +289,7 @@ const GBIF_RUN_MS = 30000;
 function scheduleGbif() {
   gbifEnrichBatch().catch(() => {}).then(() => setTimeout(scheduleGbif, GBIF_RUN_MS));
 }
+loadGbifKeysCache();
 if (pool.length > 0) setTimeout(scheduleGbif, 5000);
 
 // --- http --------------------------------------------------------------------
@@ -287,7 +311,14 @@ const server = createServer(async (req, res) => {
       const { worker = "anon", n = BATCH } = await body(req);
       const items = claim(worker, Math.min(Number(n) || BATCH, 200));
       if (items.length === 0) return send(204, {});
-      return send(200, { items: items.map(c => ({ id: c.id, name: c.name })), lease_ms: LEASE_MS });
+      return send(200, {
+        items: items.map(c => {
+          const binom = c.name.split(/\s+/).slice(0, 2).join(" ");
+          const gbifKey = binom in gbifKeysCache ? gbifKeysCache[binom] : undefined;
+          return gbifKey === undefined ? { id: c.id, name: c.name } : { id: c.id, name: c.name, gbifKey };
+        }),
+        lease_ms: LEASE_MS,
+      });
     }
     if (req.method === "POST" && req.url === "/submit") {
       const { worker = "anon", results = [] } = await body(req);
