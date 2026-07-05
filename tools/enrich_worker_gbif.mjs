@@ -44,9 +44,9 @@ async function gbifDescription(key) {
   return clean.length > 30 ? clean.slice(0, 500) : null;
 }
 
-async function lookupOne(name) {
+async function lookupOne(name, key) {
   try {
-    const key = await gbifMatch(name);
+    if (key === undefined) key = await gbifMatch(name);
     if (!key) return null;
     return await gbifDescription(key);
   } catch {
@@ -102,7 +102,7 @@ async function main() {
       for (;;) {
         const i = idx++;
         if (i >= items.length) break;
-        const desc = await lookupOne(names[i]);
+        const desc = await lookupOne(names[i], items[i].gbifKey);
         if (desc) hits++;
         results[i] = desc ? { id: items[i].id, description: desc, sourcedFrom: "gbif" } : { id: items[i].id };
         if (i > 0 && i % (CONCURRENCY * 5) === 0) await sleep(100);

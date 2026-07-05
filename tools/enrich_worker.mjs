@@ -83,7 +83,10 @@ async function main() {
         const binom = binomial(items[i].name);
         let desc = null;
         try {
-          const key = await gbifMatch(binom);
+          // Use server-provided cached key when present: number = known GBIF key,
+          // null = known no-match (skip), undefined = not cached (resolve now).
+          let key = items[i].gbifKey;
+          if (key === undefined) key = await gbifMatch(binom);
           if (key) desc = await gbifDescription(key);
         } catch {}
         if (desc) hits++;
