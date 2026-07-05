@@ -4,6 +4,8 @@ Interactive taxonomy portal. Each family lives in its own directory; the portal 
 
 > Navigation architecture documented in [`docs/navigation.md`](docs/navigation.md).
 
+> **⚠️ Animals vs Plants — two separate systems.** The live/deployed portal is **animals only** (`portal/data/taxonomy.json`). **Plants are a separate mirror still in development** (`magnoliopsida/`, `liliopsida/`, `taxonomy-plantae-snippet.json`, `color-registry-plantae.txt`, `species-news-plantae.json`, and the distributed enrichment in `scripts/enrichServe.ts` + `tools/enrich_worker.*`). **Do NOT graft plant nodes into `taxonomy.json` / the animal `unified-taxonomy.json`.** Intended structure: move animal class dirs into an `animalia/` subdir parallel to a `plantae/` subdir (clarity only). Whether to merge the two into one system is a **deferred future decision** — keep them separate until it's made.
+
 ## Commands
 
 ```bash
