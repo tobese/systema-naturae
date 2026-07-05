@@ -22,6 +22,9 @@ import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 import { createServer } from "http";
 
+const SQLITE_DB = "/Volumes/WikiDump/wiki-pages-plants.sqlite";
+const SQLITE_FALLBACK = "/Volumes/WikiDump/wiki-pages.sqlite";
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 const CLASSES = ["liliopsida", "magnoliopsida"];
@@ -66,7 +69,7 @@ for (const f of files) {
   trees.set(f, d);
   (function walk(n: any) {
     if (n.rank === "SPECIES") {
-      const done = n.sourcedFrom === "wikipedia" && (n.description?.length ?? 0) > 40;
+      const done = n.sourcedFrom === "none" || ((n.sourcedFrom === "wikipedia" || n.sourcedFrom === "gbif") && (n.description?.length ?? 0) > 40);
       if (!done && BINOMIAL_RE.test(n.name ?? "")) pool.push({ id: nextId++, name: n.name, file: f, node: n, status: 0 });
       return;
     }
@@ -78,6 +81,52 @@ let doneCount = 0;
 const dirty = new Set<string>();
 const perWorker = new Map<string, number>();
 console.log(`enrichServe: ${trees.size} families, ${total.toLocaleString()} candidates queued`);
+
+// --- server-side SQLite enrichment pass (no network calls) --------------------
+function enrichFromSqlite() {
+  // Dump extract for ALL pages from both DBs into memory in one shot
+  const extractByTitle = new Map<string, string>();
+  for (const dbPath of [SQLITE_DB, SQLITE_FALLBACK]) {
+    if (!existsSync(dbPath)) continue;
+    const r = spawnSync("sqlite3", ["-json", dbPath, "SELECT title, extract FROM pages WHERE extract IS NOT NULL AND length(extract) > 30;"], { encoding: "utf-8", timeout: 120000, maxBuffer: 200 * 1024 * 1024 });
+    if (r.status !== 0 || !r.stdout) continue;
+    try {
+      const rows = JSON.parse(r.stdout);
+      for (const row of rows) {
+        if (!extractByTitle.has(row.title)) {
+          const desc = row.extract.replace(/\n+/g, " ").trim();
+          const firstSentences = desc.split(/(?<=[.!?])\s+/).slice(0, 3).join(" ");
+          extractByTitle.set(row.title, firstSentences.length > 30 ? firstSentences : desc);
+        }
+      }
+    } catch {}
+  }
+  if (!extractByTitle.size) return;
+  console.log(`[sqlite] loaded ${extractByTitle.size} extracts from DB`);
+
+  // Match candidates in-memory
+  let matched = 0;
+  for (const c of pool) {
+    if (c.status !== 0) continue;
+    const b = c.name.split(/\s+/).slice(0, 2).join(" ");
+    if (!b) continue;
+    const desc = extractByTitle.get(b);
+    if (!desc) continue;
+    c.node.description = desc.slice(0, 500);
+    c.node.sourcedFrom = "wikipedia";
+    c.status = 2;
+    doneCount++;
+    matched++;
+    dirty.add(c.file);
+  }
+  console.log(`[sqlite] enriched ${matched} candidates from ${extractByTitle.size} extracts`);
+}
+if (existsSync(SQLITE_DB) || existsSync(SQLITE_FALLBACK)) {
+  console.log("enrichServe: running server-side SQLite pass…");
+  enrichFromSqlite();
+  flush();
+  console.log(`enrichServe: ${doneCount}/${total} enriched from SQLite, ${pool.filter(c => c.status === 0).length.toLocaleString()} remaining for workers`);
+}
 
 // --- queue ops ---------------------------------------------------------------
 let cursor = 0;
@@ -132,6 +181,93 @@ async function postProgress() {
 }
 setInterval(() => { flush(); maybePush(); postProgress(); }, FLUSH_MS);
 
+// --- server-side GBIF enrichment loop (caches results locally) ---------------
+const GBIF_MATCH = "https://api.gbif.org/v1/species/match";
+const GBIF_DESCR = "https://api.gbif.org/v1/species";
+const GBIF_UA = "SystemaNaturae/1.0 (https://github.com/tobese/systema-naturae; enrichServe)";
+const GBIF_CONCURRENCY = 8;
+
+async function gbifMatch(name: string): Promise<number | null> {
+  try {
+    const url = `${GBIF_MATCH}?name=${encodeURIComponent(name)}&strict=true`;
+    const res = await fetch(url, { headers: { "User-Agent": GBIF_UA }, signal: AbortSignal.timeout(15000) });
+    if (!res.ok) return null;
+    const data: any = await res.json();
+    return data.usageKey || null;
+  } catch { return null; }
+}
+
+async function gbifDescription(key: number): Promise<string | null> {
+  try {
+    const url = `${GBIF_DESCR}/${key}/descriptions`;
+    const res = await fetch(url, { headers: { "User-Agent": GBIF_UA }, signal: AbortSignal.timeout(15000) });
+    if (!res.ok) return null;
+    const data: any = await res.json();
+    if (!data.results?.length) return null;
+    const en = data.results.find((r: any) => r.language === "eng" || r.language?.startsWith("en"));
+    const anyLang = data.results.find((r: any) => r.description?.length > 20);
+    const best = en || anyLang;
+    if (!best?.description) return null;
+    const clean = best.description.replace(/\s+/g, " ").trim();
+    return clean.length > 30 ? clean.slice(0, 500) : null;
+  } catch { return null; }
+}
+
+async function gbifEnrichBatch() {
+  // Claim items from the pool directly (synthetic "server" worker)
+  sweep();
+  const batch: Cand[] = [];
+  let scanned = 0;
+  while (batch.length < 100 && scanned < pool.length) {
+    const c = pool[cursor];
+    cursor = (cursor + 1) % pool.length;
+    scanned++;
+    if (c.status === 0) { c.status = 1; c.at = Date.now(); c.worker = "server-gbif"; batch.push(c); }
+  }
+  if (!batch.length) return;
+
+  let written = 0;
+  let idx = 0;
+  await Promise.all(Array.from({ length: GBIF_CONCURRENCY }, async () => {
+    for (;;) {
+      const i = idx++;
+      if (i >= batch.length) break;
+      const c = batch[i];
+      const binom = c.name.split(/\s+/).slice(0, 2).join(" ");
+      let ok = false;
+      try {
+        const key = await gbifMatch(binom);
+        if (key) {
+          const desc = await gbifDescription(key);
+          if (desc) {
+            c.node.description = desc;
+            c.node.sourcedFrom = "gbif";
+            c.status = 2;
+            doneCount++;
+            written++;
+            dirty.add(c.file);
+            ok = true;
+          }
+        }
+      } catch {}
+      if (!ok) {
+        c.node.sourcedFrom = "none";
+        c.status = 2;
+        doneCount++;
+        dirty.add(c.file);
+      }
+    }
+  }));
+  if (written) console.log(`[server-gbif] batch ${batch.length} → +${written} enriched (total ${doneCount}/${total})`);
+}
+
+// Run a GBIF batch every 30s (between flush intervals)
+const GBIF_RUN_MS = 30000;
+function scheduleGbif() {
+  gbifEnrichBatch().catch(() => {}).then(() => setTimeout(scheduleGbif, GBIF_RUN_MS));
+}
+if (pool.length > 0) setTimeout(scheduleGbif, 5000);
+
 // --- http --------------------------------------------------------------------
 function body(req: any): Promise<any> {
   return new Promise((res) => { let b = ""; req.on("data", (c: any) => (b += c)); req.on("end", () => { try { res(JSON.parse(b || "{}")); } catch { res({}); } }); });
@@ -161,11 +297,13 @@ const server = createServer(async (req, res) => {
         if (!c || c.status === 2) continue;
         if (r.description && r.description.length > 20) {
           c.node.description = r.description;
-          c.node.sourcedFrom = "wikipedia";
+          c.node.sourcedFrom = r.sourcedFrom || "wikipedia";
           if (r.commonName) c.node.commonName = r.commonName;
           c.status = 2; doneCount++; dirty.add(c.file); written++;
         } else {
-          c.status = 0; c.worker = undefined; // no result → requeue
+          c.node.sourcedFrom = "none";
+          c.status = 2;
+          doneCount++; dirty.add(c.file);
         }
       }
       if (written) perWorker.set(worker, (perWorker.get(worker) ?? 0) + written);

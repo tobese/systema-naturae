@@ -39,7 +39,7 @@ function touchLRU(arr: string[], id: string): void {
   arr.push(id);
 }
 
-export function useTaxonomyLoader(): {
+export function useTaxonomyLoader(variant = ""): {
   taxonomyData: TaxonNode | null;
   loading: boolean;
   manifest: Manifest | null;
@@ -56,11 +56,12 @@ export function useTaxonomyLoader(): {
   const accessOrder = useRef<string[]>([]);
 
   const base = import.meta.env.BASE_URL ?? "/";
+  const suffix = variant ? `-${variant}` : "";
 
   useEffect(() => {
     Promise.all([
-      fetch(`${base}data/unified-taxonomy-skeleton.json`).then(r => r.json()),
-      fetch(`${base}data/order-manifest.json`).then(r => r.json()),
+      fetch(`${base}data/unified-taxonomy-skeleton${suffix}.json`).then(r => r.json()),
+      fetch(`${base}data/order-manifest${suffix}.json`).then(r => r.json()),
     ])
       .then(([sk, mf]) => {
         setSkeleton(annotatePortalLevels(sk as TaxonNode));
@@ -82,7 +83,8 @@ export function useTaxonomyLoader(): {
 
     setInflightOrders(prev => new Set(prev).add(orderId));
 
-    fetch(`${base}data/orders/${orderId}.json`)
+    const orderPath = manifest?.orders[orderId]?.file ?? `data/orders${suffix}/${orderId}.json`;
+    fetch(`${base}${orderPath}`)
       .then(r => r.json())
       .then((raw: TaxonNode) => {
         const annotated = annotatePortalLevels(raw);
@@ -109,7 +111,7 @@ export function useTaxonomyLoader(): {
           return next;
         });
       });
-  }, []);
+  }, [manifest, base, suffix]);
 
   const taxonomyData = useMemo(() => {
     if (!skeleton) return null;

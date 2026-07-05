@@ -9,4 +9,13 @@ export default defineConfig({
     alias: { '@shared': path.resolve(__dirname, '../shared/src') },
     dedupe: ['react', 'react-dom'],
   },
+  build: {
+    rollupOptions: {
+      // Multi-page: main portal + bare-bones (graph + side panels) variant.
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        bare: path.resolve(__dirname, 'bare.html'),
+      },
+    },
+  },
 })
