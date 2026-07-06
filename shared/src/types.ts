@@ -16,6 +16,9 @@ export interface TaxonNode {
   className?: string;
   orderName?: string;
   description?: string;
+  /** Native geographic range as curated text (e.g. from POWO taxonRemarks),
+   *  e.g. "E. Bolivia to WC. Brazil and N. Argentina". */
+  distribution?: string;
   namedAfter?: string;
   iucnStatus?: string;
   extinct?: boolean;
