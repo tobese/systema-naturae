@@ -121,20 +121,26 @@ def gbif_related_ipni(key):
     return ipni
 
 def powo_reconstruct(ipni):
+    """Return {"text": <summary or None>, "distribution": <native range or None>}.
+    Backward compatible with old cache entries that stored a bare string."""
     if ipni in fields_cache:
-        return fields_cache[ipni]
+        cached = fields_cache[ipni]
+        if isinstance(cached, dict):
+            return cached
+        return {"text": cached, "distribution": None}  # legacy string entry
     url = f"http://www.plantsoftheworldonline.org/api/2/taxon/{urllib.parse.quote(ipni)}?fields={POWO_FIELDS}"
-    text = None
+    result = None
     try:
         r = scraper().get(url, timeout=30)
         if r.status_code == 200:
             d = r.json()
-            text = build_summary(d)
+            remarks = (d.get("taxonRemarks") or "").strip() or None
+            result = {"text": build_summary(d), "distribution": remarks}
     except Exception:
         return None  # transient; don't poison cache
     with _lock:
-        fields_cache[ipni] = text
-    return text
+        fields_cache[ipni] = result
+    return result
 
 def build_summary(d):
     if not d:
@@ -223,9 +229,13 @@ def main():
         if not ipni:
             done["noipni"] += 1
             return
-        text = powo_reconstruct(ipni)
+        res = powo_reconstruct(ipni)
+        text = res.get("text") if res else None
+        dist = res.get("distribution") if res else None
         if text:
             node["description"] = text
+            if dist:
+                node["distribution"] = dist
             node["sourcedFrom"] = "powo"
             dirty.add(fp)
             done["powo"] += 1
