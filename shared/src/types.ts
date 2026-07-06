@@ -20,6 +20,9 @@ export interface TaxonNode {
   iucnStatus?: string;
   extinct?: boolean;
   sourcedFrom?: string;
+  /** Family-level enrichment coverage: "full" (all species enriched),
+   *  "partial" (some), or "empty" (none). Set on FAMILY nodes. */
+  enrichmentStatus?: "full" | "partial" | "empty";
   children?: TaxonNode[];
   speciesList?: TaxonNode[];
   rankCounts?: Record<string, number>;
