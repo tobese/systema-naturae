@@ -19,6 +19,10 @@ export interface TaxonNode {
   namedAfter?: string;
   iucnStatus?: string;
   extinct?: boolean;
+  /** Known only from the fossil record (never observed alive by humans).
+   *  Distinct from `extinct`, which marks taxa recorded in human history
+   *  that no longer exist. */
+  fossil?: boolean;
   sourcedFrom?: string;
   /** Family-level enrichment coverage: "full" (all species enriched),
    *  "partial" (some), or "empty" (none). Set on FAMILY nodes. */
