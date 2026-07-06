@@ -50,6 +50,11 @@ ap.add_argument("--concurrency", type=int, default=4)
 ap.add_argument("--save-every", type=int, default=2000)
 args = ap.parse_args()
 
+# When sharded, each process keeps its own cache files to avoid clobbering.
+if args.total > 1:
+    IPNI_CACHE_PATH = os.path.join(DATA, f"powo-ipni-cache.s{args.id}of{args.total}.json")
+    FIELDS_CACHE_PATH = os.path.join(DATA, f"powo-fields-cache.s{args.id}of{args.total}.json")
+
 _tls = threading.local()
 def scraper():
     if not hasattr(_tls, "s"):
