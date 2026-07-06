@@ -206,3 +206,100 @@ make import-biggie ARGS="<slug> 10"  # Biggie host
 make enrich          # loop Wikipedia enrichment over 11 classes, commit + push after each
 make cache-gbif      # rebuild GBIF cache for the current class
 ```
+
+---
+
+## 8. Tiered plant enrichment (2026-07, Liliopsida + Magnoliopsida)
+
+A newer, source-tiered pipeline used to fill descriptions on the two plant
+classes. Each species records its provenance in `sourcedFrom` (values:
+`wikipedia`, `gbif`, `powo`, `nzpcn`, `websearch`, or `none`). **For the licence
+and attribution owed to each source, see `docs/data-sources-attribution.md`.**
+
+Coverage after this work (plants): `none` 287,756 · `wikipedia` 75,360 ·
+`gbif` 13,675 · `powo` 5,083 · `websearch` 46 · (no `sourcedFrom`, hybrid names) 9,156.
+
+### Tier 1-2 — pull-queue (Wikipedia SQLite + GBIF)
+
+**`scripts/enrichServe.ts`** — a Macie-side HTTP pull-queue (port 9881), modelled
+on snedtankt's receive.py. Macie is the ONLY writer to the family JSONs; tailnet
+workers lease batches, enrich locally, and submit results (no git/ssh on workers,
+no write races). On start it runs a server-side Wikipedia SQLite pass, then a
+server-side GBIF loop, and serves any remaining candidates to workers.
+
+```bash
+npx tsx scripts/enrichServe.ts --port 9881
+```
+- `POST /claim {worker,n}` → `{items:[{id,name,gbifKey}], lease_ms}` (204 if empty).
+  `gbifKey` is included when cached (see Tier-2.5) so workers skip the match step.
+- `POST /submit {worker,results:[{id,description,sourcedFrom}]}` → `{written}`.
+- `GET /status` → counts. `GET /worker.py` / `/worker.mjs` → self-serve worker source.
+
+Workers (stdlib only, no npm): `tools/enrich_worker.mjs`, `tools/enrich_worker.py`
+(self-serve, GBIF API from the worker's own IP), and `tools/enrich_worker_gbif.mjs`
+(Macie-local). All honour the server-provided `gbifKey`.
+
+### Tier 2.5 — GBIF usageKey cache
+
+**`tools/cache_gbif_keys.mjs`** — resolves every plant binomial to a GBIF
+usageKey via `species/match` (129k unique binomials, 99.9% resolved). Shardable:
+
+```bash
+node tools/cache_gbif_keys.mjs --id 0 --total 4   # run 4 shards in parallel
+```
+
+**`tools/merge_gbif_keys.mjs`** — folds the flat key maps into
+`portal/data/gbif-cache-{class}.json` as a top-level `usageKeys` map and stamps
+`usageKey` onto per-species records. `enrichServe` loads `usageKeys` at startup
+and hands out `gbifKey` in `/claim`, so the whole pipeline skips redundant match
+calls. (The temp `gbif-keys-*.json` files are gitignored.)
+
+### Tier 3 — POWO (Plants of the World Online)
+
+**`tools/powo_enrich.py`** — bridges each `none` species that has a cached GBIF
+key through **GBIF `/related` → IPNI LSID → POWO `/api/2/taxon`**, then
+reconstructs a native-range / lifeform / climate summary and writes it with
+`sourcedFrom="powo"`. Needs `cloudscraper` (POWO is behind Cloudflare); Macie-only.
+Resumable via `powo-ipni-cache.json` + `powo-fields-cache.json` (gitignored).
+
+```bash
+python3 tools/powo_enrich.py --concurrency 10          # single balanced process
+python3 tools/powo_enrich.py --id 0 --total 4          # or shard (per-shard caches)
+python3 tools/powo_enrich.py --dry --limit 20          # test, no writes
+```
+Yield was ~5% of the 96,549 `none`-with-key candidates (the long tail is sparse:
+~13% have no IPNI, ~81% have IPNI but no usable POWO fields). Also captures the
+structured `distribution` (native range) field — see §9.
+
+### Tier 4 — web search (targeted only)
+
+For **near-complete families** (1-2 gap species), gap species were researched via
+web search across authoritative sources (POWO, NZPCN, Flora of Australia/China,
+ALA, IUCN, SANBI, herbaria, PBDB/IFPNI for fossils) and written with
+`sourcedFrom="websearch"`. High per-hit value but heterogeneous and partly
+non-open (see attribution doc) — used targeted, never bulk. Fossil-only taxa get
+`fossil: true`.
+
+Reports: `enrich-report-2026-07-05.md`, `enrich-family-report-2026-07-06.md`,
+`web-enrich-report-2026-07-06.md`.
+
+---
+
+## 9. Structured fields on species nodes
+
+Beyond `description`, enrichment sets these on `TaxonNode` (`shared/src/types.ts`):
+
+| Field | Meaning | Set by |
+|---|---|---|
+| `sourcedFrom` | provenance of the description | all enrichment tiers |
+| `distribution` | native range text, e.g. "E. Bolivia to WC. Brazil" | POWO tier (from `taxonRemarks`) — 5,052 species |
+| `enrichmentStatus` | family-level coverage: `full` / `partial` / `empty` | set on FAMILY nodes |
+| `fossil` | known only from the fossil record (never seen alive) | web-search tier |
+| `extinct` | recorded in human history but no longer exists | (reserved) |
+
+Notes:
+- `distribution` was deliberately kept as the curated native-range **string**, not
+  POWO's raw TDWG `locations` codes (noisy, level-mixed, native+introduced
+  conflated). See `distribution-notes-2026-07-06.md`.
+- Open item: the ~89k wiki/gbif species lack `distribution`; it can be backfilled
+  cheaply via the cached IPNI bridge as additive metadata (no `sourcedFrom` change).
