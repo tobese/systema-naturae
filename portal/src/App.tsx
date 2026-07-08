@@ -113,7 +113,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [viewMode, setViewMode] = useState<"graph" | "book">("graph");
   const [showRightSidebar, setShowRightSidebar] = useState(false);
   const [now, setNow] = useState(new Date());
-  const { todaysDays } = useInternationalDays();
+  const { todaysDays } = useInternationalDays(kingdom);
   const [treeReady, setTreeReady] = useState(false);
   const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(kingdom);
 
@@ -1019,7 +1019,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
         )}
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
-      {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
+      {showDays && <InternationalDaysModal kingdom={kingdom} onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
       {showSotd && speciesOfTheDay && (
         <SpeciesOfTheDayModal
           species={speciesOfTheDay}

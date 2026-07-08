@@ -99,12 +99,13 @@ function DayEntry({ day, highlight, onNavigate }: { day: InternationalDay; highl
 }
 
 interface Props {
+  kingdom?: string;
   onClose: () => void;
   onNavigate: (slug: string) => void;
 }
 
-export default function InternationalDaysModal({ onClose, onNavigate }: Props) {
-  const { days, todaysDays } = useInternationalDays();
+export default function InternationalDaysModal({ kingdom = "animalia", onClose, onNavigate }: Props) {
+  const { days, todaysDays } = useInternationalDays(kingdom);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") { e.stopPropagation(); onClose(); } };

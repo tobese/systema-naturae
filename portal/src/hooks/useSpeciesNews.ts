@@ -32,8 +32,21 @@ export function useSpeciesNews(kingdom = "animalia"): UseSpeciesNewsResult {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
-      .then((data: { updatedAt: string; events: NewsEvent[] }) => {
-        setEvents(data.events);
+      .then((data: { updatedAt?: string; events?: NewsEvent[] } | NewsEvent[]) => {
+        // Animal format: wrapped object; Plantae format: plain array
+        const rawEvents = Array.isArray(data) ? data : (data.events ?? []);
+        // Normalize plant entries (family -> familySlug, no id/source)
+        const normalized = rawEvents.map((e: any, i: number) => ({
+          id: e.id ?? `${e.type}-${e.family ?? e.familySlug}-${e.date}`,
+          date: e.date,
+          type: e.type,
+          name: e.name,
+          commonName: e.commonName ?? e.name,
+          familySlug: e.familySlug ?? e.family ?? "",
+          source: e.source ?? "portal",
+          url: e.url,
+        }));
+        setEvents(normalized);
       })
       .catch(() => {
         setEvents([]);

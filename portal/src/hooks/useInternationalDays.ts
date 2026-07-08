@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import rawDays from "../../data/international-days.json";
+import { useState, useMemo, useEffect } from "react";
+import baseDays from "../../data/international-days.json";
 
 export interface RelatedFamily {
   slug: string;
@@ -16,11 +16,32 @@ export interface InternationalDay {
   relatedFamilies?: RelatedFamily[];
 }
 
-export function useInternationalDays() {
-  const days = useMemo(
-    () => (rawDays as { updatedAt: string; days: InternationalDay[] }).days,
-    [],
-  );
+export function useInternationalDays(kingdom = "animalia") {
+  const [kingdomDays, setKingdomDays] = useState<InternationalDay[] | null>(null);
+
+  useEffect(() => {
+    if (kingdom === "animalia") {
+      setKingdomDays(null);
+      return;
+    }
+    const suffix = `-${kingdom}`;
+    fetch(`/data/international-days${suffix}.json`)
+      .then(r => (r.ok ? r.json() : null))
+      .then((data: any) => {
+        if (data && Array.isArray(data.days)) {
+          setKingdomDays(data.days as InternationalDay[]);
+        } else if (Array.isArray(data)) {
+          setKingdomDays(data as InternationalDay[]);
+        }
+      })
+      .catch(() => setKingdomDays(null));
+  }, [kingdom]);
+
+  const days = useMemo(() => {
+    const base = (baseDays as { updatedAt: string; days: InternationalDay[] }).days;
+    if (kingdom === "animalia" || !kingdomDays) return base;
+    return kingdomDays;
+  }, [kingdom, kingdomDays]);
 
   const todayMonthDay = useMemo(() => {
     const d = new Date();

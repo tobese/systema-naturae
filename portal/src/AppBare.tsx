@@ -75,17 +75,14 @@ function findNavContext(tree: TaxonNode, targetId: string): { parent: TaxonNode 
   return walk(tree) ?? { parent: null, siblings: [], index: 0 };
 }
 
-const VARIANT = new URLSearchParams(window.location.search).get("variant")
-  || (import.meta.env.VITE_VARIANT as string | undefined)
-  || "";
-
 import type { ColorTheme } from "@shared/types";
 
 interface AppBareProps {
+  kingdom?: string;
   colorRegistry: Record<string, ColorTheme>;
 }
 
-export default function AppBare({ colorRegistry }: AppBareProps) {
+export default function AppBare({ kingdom = "animalia", colorRegistry }: AppBareProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [showSidebar, setShowSidebar] = useState(true);
   const [showRightSidebar, setShowRightSidebar] = useState(false);
@@ -96,7 +93,7 @@ export default function AppBare({ colorRegistry }: AppBareProps) {
   const pendingZoomId = useRef<string | null>(null);
   const sidebarScrollRef = useRef<HTMLDivElement>(null);
 
-  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(VARIANT);
+  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(kingdom);
   const { focusedFamilySlug, focusedClassId, focusedOrderId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo } = useUrlState();
 
   const showSplash = loading || !taxonomyData;
