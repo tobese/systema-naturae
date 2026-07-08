@@ -156,7 +156,7 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
 
 // ── Build outputs: per-kingdom subdirs ──
 const kingdomOutDir = resolve(portalRoot, `data/kingdoms/${KINGDOM || "animalia"}`);
-const ORDERS_REL = `data/orders${dataSuffix}`;
+const ORDERS_REL = `orders${dataSuffix}`;
 
 const taxonomyPath = resolve(portalRoot, taxonomyInput);
 const outputPath = resolve(kingdomOutDir, `unified-taxonomy.json`);
@@ -187,12 +187,12 @@ function count(n: TaxonNode) {
 count(unified);
 unified.rankCounts = rankCounts;
 
+// ── Ensure kingdom output directory exists ──
+if (!existsSync(kingdomOutDir)) mkdirSync(kingdomOutDir, { recursive: true });
+
 // ── Still produce the monolithic unified-tree for backward compat ──
 writeFileSync(outputPath, JSON.stringify(unified, null, 2));
 console.log(`  Unified tree: ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species`);
-
-// ── Ensure kingdom output directory exists ──
-if (!existsSync(kingdomOutDir)) mkdirSync(kingdomOutDir, { recursive: true });
 
 // ── Extract per-order subtrees ──
 if (!existsSync(ordersDir)) mkdirSync(ordersDir, { recursive: true });
