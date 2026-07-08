@@ -1,5 +1,4 @@
-import { useState, useCallback, useMemo } from "react";
-import rawNews from "../../data/species-news.json";
+import { useState, useCallback, useEffect } from "react";
 
 const LS_KEY = "species-news-seen-at";
 
@@ -20,20 +19,28 @@ interface UseSpeciesNewsResult {
   markAllSeen: () => void;
 }
 
-export function useSpeciesNews(): UseSpeciesNewsResult {
+export function useSpeciesNews(kingdom = "animalia"): UseSpeciesNewsResult {
+  const [events, setEvents] = useState<NewsEvent[]>([]);
   const [seenAt, setSeenAt] = useState<string>(
     () => localStorage.getItem(LS_KEY) ?? "1970-01-01",
   );
 
-  const events = useMemo(
-    () => (rawNews as { updatedAt: string; events: NewsEvent[] }).events,
-    [],
-  );
+  useEffect(() => {
+    const suffix = kingdom === "animalia" ? "" : `-${kingdom}`;
+    fetch(`/data/species-news${suffix}.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data: { updatedAt: string; events: NewsEvent[] }) => {
+        setEvents(data.events);
+      })
+      .catch(() => {
+        setEvents([]);
+      });
+  }, [kingdom]);
 
-  const unreadCount = useMemo(
-    () => events.filter(e => e.date > seenAt).length,
-    [events, seenAt],
-  );
+  const unreadCount = events.filter(e => e.date > seenAt).length;
 
   const markAllSeen = useCallback(() => {
     const today = new Date().toISOString().split("T")[0];

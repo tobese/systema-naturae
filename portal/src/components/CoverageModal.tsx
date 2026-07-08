@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
 import ImportTimeline from "./ImportTimeline";
-import importLog from "../../data/import-log.json";
 
 interface Props {
   data: TaxonNode;
@@ -10,6 +9,7 @@ interface Props {
   onFocusFamily: (slug: string) => void;
   initialFamilySlug?: string | null;
   initialClassId?: string | null;
+  kingdom?: string;
 }
 
 interface CoverageNode {
@@ -140,16 +140,20 @@ function classTraffic(families: CoverageNode[]): "green" | "amber" | "red" {
 
 const TRAFFIC_COLORS = { green: "#44aa66", amber: "#cc9944", red: "#d84848" };
 
-export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId }: Props) {
+export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId, kingdom = "animalia" }: Props) {
   const [tab, setTab] = useState<"coverage" | "growth">("coverage");
   const [sort, setSort] = useState<SortMode>("gaps");
   const [filter, setFilter] = useState<FilterMode>("all");
   const [coverageSummary, setCoverageSummary] = useState<ClassCoverage[] | null>(null);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [importLogData, setImportLogData] = useState<ImportEvent[]>([]);
 
   useEffect(() => {
-    fetch("/data/coverage-summary.json")
-      .then(r => r.json())
+    fetch(`/data/kingdoms/${kingdom}/coverage-summary.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
       .then((summary: ClassCoverage[]) => {
         setCoverageSummary(summary);
         const initialCollapsed = new Set<string>();
@@ -161,7 +165,19 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
         setCollapsed(initialCollapsed);
       })
       .catch(() => setCoverageSummary(null));
-  }, []);
+  }, [kingdom]);
+
+  useEffect(() => {
+    const suffix = kingdom === "animalia" ? "" : `-${kingdom}`;
+    fetch(`/data/import-log${suffix}.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data: ImportEvent[]) => setImportLogData(data))
+      .catch(() => setImportLogData([]));
+  }, [kingdom]);
+
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -372,10 +388,10 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
 
         {tab === "growth" && (
           <div style={{ padding: "20px 32px 32px" }}>
-            <ImportTimeline />
+            <ImportTimeline kingdom={kingdom} />
 
             {/* Import log list */}
-            <LogList />
+            <LogList data={importLogData} />
           </div>
         )}
       </div>
@@ -469,8 +485,8 @@ interface ImportEvent {
   families: string[];
 }
 
-function LogList() {
-  const data = (importLog as ImportEvent[]).filter(d => d.speciesRunning > 0).reverse();
+function LogList({ data }: { data: ImportEvent[] }) {
+  const filtered = data.filter(d => d.speciesRunning > 0).reverse();
 
   return (
     <div style={{ marginTop: 16, borderTop: "1px solid #1e2030", paddingTop: 14 }}>
@@ -478,7 +494,7 @@ function LogList() {
         Import log
       </div>
       <div style={{ maxHeight: 180, overflowY: "auto", fontSize: 10, lineHeight: 1.7 }}>
-        {data.map((d, i) => {
+        {filtered.map((d, i) => {
           const date = new Date(d.date).toLocaleDateString("en-GB", { month: "short", day: "numeric" });
           const famList = d.families.length > 5
             ? d.families.slice(0, 5).join(", ") + ` +${d.families.length - 5}`
