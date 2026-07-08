@@ -7,6 +7,32 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
 const portalRoot = resolve(__dirname, "..");
 
+// ── Load kingdom configuration ──
+interface KingdomConfig {
+  label: string;
+  input: string;
+  rootDir: string;
+  dataSuffix: string;
+  speciesNews: string;
+  colorRegistry: string;
+}
+interface KingdomConfigFile {
+  kingdoms: Record<string, KingdomConfig>;
+}
+const KINGDOM = process.env.SN_KINGDOM || process.env.SN_VARIANT || "";
+const kingdomConfigPath = resolve(portalRoot, "data/kingdom-config.json");
+let kingdomConfig: KingdomConfig | undefined;
+if (existsSync(kingdomConfigPath)) {
+  const allConfigs = JSON.parse(readFileSync(kingdomConfigPath, "utf-8")) as KingdomConfigFile;
+  kingdomConfig = allConfigs.kingdoms[KINGDOM];
+}
+const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
+const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
+const unifiedTaxonomyPath = KINGDOM
+  ? resolve(portalRoot, `data/kingdoms/${KINGDOM}/unified-taxonomy.json`)
+  : resolve(portalRoot, "data/unified-taxonomy.json");
+const importLogPath = resolve(portalRoot, `data/import-log${dataSuffix}.json`);
+
 interface ImportEvent {
   date: string;
   commit: string;
@@ -94,10 +120,9 @@ function countSpecies(path: string): number {
 
 /** Count total nodes in the current unified taxonomy */
 function countNodes(): number {
-  const path = resolve(portalRoot, "data/unified-taxonomy.json");
-  if (!existsSync(path)) return 0;
+  if (!existsSync(unifiedTaxonomyPath)) return 0;
   try {
-    const data = JSON.parse(readFileSync(path, "utf-8"));
+    const data = JSON.parse(readFileSync(unifiedTaxonomyPath, "utf-8"));
     let count = 0;
     function walk(node: Record<string, unknown>) {
       count++;
@@ -112,7 +137,7 @@ function countNodes(): number {
 
 /** Get all unique appSlugs from the current taxonomy */
 function getAllAppSlugs(): string[] {
-  const path = resolve(portalRoot, "data/taxonomy.json");
+  const path = resolve(portalRoot, taxonomyInput);
   if (!existsSync(path)) return [];
   try {
     const data = JSON.parse(readFileSync(path, "utf-8"));
@@ -131,7 +156,7 @@ function getAllAppSlugs(): string[] {
 }
 
 function main() {
-  console.log("Building import log…");
+  console.log(`Building import log for kingdom: ${KINGDOM || "animalia (default)"}…`);
 
   const familyPaths = buildFamilyPathMap();
   const allSlugs = getAllAppSlugs();
@@ -185,7 +210,6 @@ function main() {
   const autoDays = new Set<string>();
 
   // Read existing import-log to preserve manual entries
-  const importLogPath = resolve(portalRoot, "data/import-log.json");
   let existingLog: ImportEvent[] = [];
   if (existsSync(importLogPath)) {
     try {
@@ -261,7 +285,7 @@ function main() {
   }
 
   writeFileSync(importLogPath, JSON.stringify(events, null, 2) + "\n");
-  console.log(`  Wrote ${events.length} events to data/import-log.json`);
+  console.log(`  Wrote ${events.length} events to data/import-log${dataSuffix}.json`);
   console.log(`  ${allSlugs.length} families tracked, ${runningFix} total species`);
 }
 
