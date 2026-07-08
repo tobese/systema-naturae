@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { useSpeciesNews, type NewsEvent } from "../hooks/useSpeciesNews";
-import { COLOR_REGISTRY } from "../colorRegistry";
+import { useColorRegistry } from "./ColorRegistryContext.tsx";
 
-function familyAccent(familySlug: string): string {
-  const theme = COLOR_REGISTRY[familySlug];
+function familyAccent(familySlug: string, registry: Record<string, { lineageColors?: Record<string, string> }>): string {
+  const theme = registry[familySlug];
   if (!theme) return "#556";
-  const colors = Object.values(theme.lineageColors);
+  const colors = Object.values(theme.lineageColors ?? {});
   return colors[0] ?? "#556";
 }
 
@@ -19,7 +19,8 @@ function BellIcon() {
 }
 
 function EventRow({ event }: { event: NewsEvent }) {
-  const accent = familyAccent(event.familySlug);
+  const registry = useColorRegistry();
+  const accent = familyAccent(event.familySlug, registry);
   const isExtinct = event.type === "extinction";
   const isAdded = event.type === "family_added";
   const label = event.commonName || event.name;
