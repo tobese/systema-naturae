@@ -16,10 +16,15 @@ interface Props {
   focusedFamilySlug: string | null;
 }
 
-// Strip parenthetical annotations like "(Älg)" or "(Wapiti)" before Wikipedia lookup
+// Strip parenthetical annotations and trailing authority before Wikipedia lookup
 function wikiTitle(commonName: string | undefined, fallback: string): string {
-  if (!commonName) return fallback;
-  return commonName.replace(/\s*\([^)]*\)/g, "").trim() || fallback;
+  if (commonName) {
+    const stripped = commonName.replace(/\s*\([^)]*\)/g, "").trim();
+    if (stripped) return stripped;
+  }
+  // When falling back to the scientific name, strip authority (keep only genus + species epithet)
+  const parts = fallback.trim().split(/\s+/);
+  return parts.length > 2 ? parts.slice(0, 2).join(" ") : fallback;
 }
 
 // Natural hybrid notes keyed by species node id (from felidae data)
@@ -445,7 +450,11 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
-      {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
+      {(extract || node.description) && (
+        <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
+          {extract ? extract.replace(/\(listen\)/g,'') : node.description}
+        </p>
+      )}
 
       {/* Breed groups */}
       {breedGroups.length > 0 && (

@@ -1,9 +1,7 @@
 import { useMemo } from "react";
 import type { TaxonNode, ColorTheme } from "@shared/types";
-import { PORTAL_THEME, buildClassPalette } from "../colors";
+import { PORTAL_THEME, buildClassPaletteFromTree } from "../colors";
 import { COLOR_REGISTRY } from "../colorRegistry";
-
-const CLASS_PALETTE = buildClassPalette();
 
 // Overview mode: collapse all families to leaf nodes (no species shown).
 // Focused mode: return only the focused family subtree (rooted at the family).
@@ -149,6 +147,7 @@ export function useUnifiedTree(
 
   const colorTheme = useMemo<ColorTheme>(() => {
     let theme = PORTAL_THEME;
+    const classPalette = annotatedData ? buildClassPaletteFromTree(annotatedData) : undefined;
     if (focusedFamilyId && annotatedData) {
       const familyNode = walkFind(annotatedData, focusedFamilyId);
       const slug = familyNode?.familySlug;
@@ -156,7 +155,7 @@ export function useUnifiedTree(
         theme = mergeThemes(PORTAL_THEME, COLOR_REGISTRY[slug]);
       }
     }
-    return { ...theme, classPalette: CLASS_PALETTE };
+    return { ...theme, classPalette };
   }, [annotatedData, focusedFamilyId]);
 
   const highlightedNodeIds = useMemo<Set<string> | null>(() => {

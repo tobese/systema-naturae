@@ -71,27 +71,33 @@ function buildCoverage(root: TaxonNode): ClassCoverage[] {
   }
   walk(root, null);
 
-  const CLASS_RANK: Record<string, number> = {
-    "mammalia": 1,
-    "aves": 2,
-    "reptilia": 3,
-    "amphibia": 4,
-    "chondrichthyes": 5,
-    "actinopterygii": 6,
-    "cephalopoda": 7,
-    "asteroidea": 8,
-    "echinoidea": 9,
-    "holothuroidea": 10,
-    "scyphozoa": 11,
-    "cubozoa": 12,
-    "staurozoa": 13,
-    "anthozoa": 14,
-    "hydrozoa": 15,
-    "tentaculata": 16,
-    "nuda": 17,
-    "arachnida": 18,
-    "insecta": 19
+  // Build dynamic class rank from tree order (pre-order traversal).
+  // Animal classes get their traditional ordering as a baseline;
+  // all other classes follow in tree order.
+  const CLASS_RANK: Record<string, number> = {};
+  let rankIdx = 20;
+  function assignRanks(node: TaxonNode) {
+    if (node.rank === "CLASS") {
+      const key = node.name.toLowerCase();
+      if (!CLASS_RANK[key]) {
+        CLASS_RANK[key] = rankIdx++;
+      }
+    }
+    for (const child of node.children ?? []) assignRanks(child);
+  }
+  assignRanks(root);
+  // Animal baseline ordering (overrides tree order for known classes)
+  const ANIMAL_BASELINE: Record<string, number> = {
+    "mammalia": 1, "aves": 2, "reptilia": 3, "amphibia": 4,
+    "chondrichthyes": 5, "actinopterygii": 6, "cephalopoda": 7,
+    "asteroidea": 8, "echinoidea": 9, "holothuroidea": 10,
+    "scyphozoa": 11, "cubozoa": 12, "staurozoa": 13,
+    "anthozoa": 14, "hydrozoa": 15, "tentaculata": 16,
+    "nuda": 17, "arachnida": 18, "insecta": 19,
   };
+  for (const [k, v] of Object.entries(ANIMAL_BASELINE)) {
+    CLASS_RANK[k] = v;
+  }
   classes.sort((a, b) => {
     const rA = CLASS_RANK[a.name.toLowerCase()] ?? 999;
     const rB = CLASS_RANK[b.name.toLowerCase()] ?? 999;
