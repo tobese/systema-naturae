@@ -6,6 +6,29 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../../");
 const portalRoot = resolve(__dirname, "..");
 
+// ── Load kingdom configuration ──
+interface KingdomConfig {
+  label: string;
+  input: string;
+  rootDir: string;
+  dataSuffix: string;
+  speciesNews: string;
+  colorRegistry: string;
+}
+interface KingdomConfigFile {
+  kingdoms: Record<string, KingdomConfig>;
+}
+const KINGDOM = process.env.SN_KINGDOM || process.env.SN_VARIANT || "";
+const kingdomConfigPath = resolve(portalRoot, "data/kingdom-config.json");
+let kingdomConfig: KingdomConfig | undefined;
+if (existsSync(kingdomConfigPath)) {
+  const allConfigs = JSON.parse(readFileSync(kingdomConfigPath, "utf-8")) as KingdomConfigFile;
+  kingdomConfig = allConfigs.kingdoms[KINGDOM];
+}
+const kingdomRootDir = kingdomConfig?.rootDir ?? "";
+const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
+const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
+
 interface TaxonNode {
   id: string;
   name: string;
@@ -67,7 +90,7 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
   if (node.rank === "FAMILY" && node.appSlug) {
     const slug = node.appSlug as string;
     const parts = [next.cls, next.ord, slug].filter(Boolean) as string[];
-    const dataPath = resolve(root, ...parts, "src/data", `${slug}.json`);
+    const dataPath = resolve(root, kingdomRootDir, ...parts, "src/data", `${slug}.json`);
     try {
       const familyData = JSON.parse(readFileSync(dataPath, "utf-8")) as TaxonNode;
       return graftFamily(node, familyData, slug, next.cls, next.ord);
@@ -131,19 +154,17 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
   return updatedNode;
 }
 
-// Variant build (e.g. the in-development plant mirror) writes to suffixed
-// outputs so it NEVER clobbers the live animal files. Defaults = animals.
-const VARIANT = process.env.SN_VARIANT || "";           // e.g. "plantae"
-const SUFFIX = VARIANT ? `-${VARIANT}` : "";
-const ORDERS_REL = `data/orders${SUFFIX}`;
+// ── Build outputs: per-kingdom subdirs ──
+const kingdomOutDir = resolve(portalRoot, `data/kingdoms/${KINGDOM || "animalia"}`);
+const ORDERS_REL = `data/orders${dataSuffix}`;
 
-const taxonomyPath = resolve(portalRoot, process.env.SN_INPUT || "data/taxonomy.json");
-const outputPath = resolve(portalRoot, `data/unified-taxonomy${SUFFIX}.json`);
-const ordersDir = resolve(portalRoot, ORDERS_REL);
-const skeletonPath = resolve(portalRoot, `data/unified-taxonomy-skeleton${SUFFIX}.json`);
-const manifestPath = resolve(portalRoot, `data/order-manifest${SUFFIX}.json`);
+const taxonomyPath = resolve(portalRoot, taxonomyInput);
+const outputPath = resolve(kingdomOutDir, `unified-taxonomy.json`);
+const ordersDir = resolve(kingdomOutDir, ORDERS_REL);
+const skeletonPath = resolve(kingdomOutDir, `unified-taxonomy-skeleton.json`);
+const manifestPath = resolve(kingdomOutDir, `order-manifest.json`);
 
-console.log(`Building unified-taxonomy${SUFFIX}.json from ${taxonomyPath}…`);
+console.log(`Building kingdom ${KINGDOM || "animalia"} → ${outputPath} from ${taxonomyPath}…`);
 const taxonomy = JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode;
 const uncompressed = processTree(taxonomy);
 const unified = compressTreeNodes(uncompressed);
@@ -169,6 +190,9 @@ unified.rankCounts = rankCounts;
 // ── Still produce the monolithic unified-tree for backward compat ──
 writeFileSync(outputPath, JSON.stringify(unified, null, 2));
 console.log(`  Unified tree: ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species`);
+
+// ── Ensure kingdom output directory exists ──
+if (!existsSync(kingdomOutDir)) mkdirSync(kingdomOutDir, { recursive: true });
 
 // ── Extract per-order subtrees ──
 if (!existsSync(ordersDir)) mkdirSync(ordersDir, { recursive: true });
@@ -246,7 +270,7 @@ function buildSkeleton(node: TaxonNode): TaxonNode {
       orderName: node.orderName,
       _familyCount: entry?.familyCount ?? 0,
       _speciesCount: entry?.speciesCount ?? 0,
-      _dataFile: `${ORDERS_REL}/${node.id}.json`,
+      _dataFile: `data/kingdoms/${KINGDOM || "animalia"}/${ORDERS_REL}/${node.id}.json`,
     };
     return result;
   }
@@ -299,7 +323,7 @@ for (const [, entry] of orderMap) {
     orderId: entry.orderId,
     classSlug: entry.classSlug,
     orderSlug: entry.orderSlug,
-    file: `${ORDERS_REL}/${entry.orderId}.json`,
+    file: `data/kingdoms/${KINGDOM || "animalia"}/${ORDERS_REL}/${entry.orderId}.json`,
     familyCount: entry.familyCount,
     speciesCount: entry.speciesCount,
     familySlugs: entry.familySlugs,
@@ -366,8 +390,8 @@ function walkCoverage(n: TaxonNode, classes: CoverageClass[]): void {
 }
 
 walkCoverage(unified, coverageClasses);
-const coveragePath = resolve(portalRoot, `data/coverage-summary${SUFFIX}.json`);
+const coveragePath = resolve(kingdomOutDir, `coverage-summary.json`);
 writeFileSync(coveragePath, JSON.stringify(coverageClasses, null, 2));
-console.log(`  Coverage summary: ${coverageClasses.length} classes, ${coverageClasses.reduce((s, c) => s + c.families.length, 0)} families → data/coverage-summary.json`);
+console.log(`  Coverage summary: ${coverageClasses.length} classes, ${coverageClasses.reduce((s, c) => s + c.families.length, 0)} families → ${coveragePath}`);
 
-console.log(`\nDone. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → data/unified-taxonomy.json`);
+console.log(`\nDone. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → ${outputPath}`);
