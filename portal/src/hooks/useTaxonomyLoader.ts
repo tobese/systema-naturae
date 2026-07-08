@@ -39,7 +39,7 @@ function touchLRU(arr: string[], id: string): void {
   arr.push(id);
 }
 
-export function useTaxonomyLoader(variant = ""): {
+export function useTaxonomyLoader(kingdom = "animalia"): {
   taxonomyData: TaxonNode | null;
   loading: boolean;
   manifest: Manifest | null;
@@ -56,12 +56,11 @@ export function useTaxonomyLoader(variant = ""): {
   const accessOrder = useRef<string[]>([]);
 
   const base = import.meta.env.BASE_URL ?? "/";
-  const suffix = variant ? `-${variant}` : "";
 
   useEffect(() => {
     Promise.all([
-      fetch(`${base}data/unified-taxonomy-skeleton${suffix}.json`).then(r => r.json()),
-      fetch(`${base}data/order-manifest${suffix}.json`).then(r => r.json()),
+      fetch(`${base}data/kingdoms/${kingdom}/unified-taxonomy-skeleton.json`).then(r => r.json()),
+      fetch(`${base}data/kingdoms/${kingdom}/order-manifest.json`).then(r => r.json()),
     ])
       .then(([sk, mf]) => {
         setSkeleton(annotatePortalLevels(sk as TaxonNode));
@@ -72,7 +71,7 @@ export function useTaxonomyLoader(variant = ""): {
         console.error("Failed to load taxonomy:", e);
         setLoading(false);
       });
-  }, []);
+  }, [kingdom, base]);
 
   const loadOrder = useCallback((orderId: string) => {
     if (orderCache.current.has(orderId)) {
@@ -83,7 +82,17 @@ export function useTaxonomyLoader(variant = ""): {
 
     setInflightOrders(prev => new Set(prev).add(orderId));
 
-    const orderPath = manifest?.orders[orderId]?.file ?? `data/orders${suffix}/${orderId}.json`;
+    const orderPath = manifest?.orders[orderId]?.file;
+    if (!orderPath) {
+      console.error(`Order ${orderId} not found in manifest`);
+      setInflightOrders(prev => {
+        const next = new Set(prev);
+        next.delete(orderId);
+        return next;
+      });
+      return;
+    }
+
     fetch(`${base}${orderPath}`)
       .then(r => r.json())
       .then((raw: TaxonNode) => {
@@ -111,7 +120,7 @@ export function useTaxonomyLoader(variant = ""): {
           return next;
         });
       });
-  }, [manifest, base, suffix]);
+  }, [manifest, base]);
 
   const taxonomyData = useMemo(() => {
     if (!skeleton) return null;

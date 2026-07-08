@@ -88,7 +88,11 @@ function findNavContext(
   return walk(tree) ?? { parent: null, siblings: [], index: 0 };
 }
 
-export default function App() {
+interface AppProps {
+  kingdom?: string;
+}
+
+export default function App({ kingdom = "animalia" }: AppProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [options, setOptions] = useState<PortalOptions>({
     showExtinct: false,
@@ -109,7 +113,7 @@ export default function App() {
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays();
   const [treeReady, setTreeReady] = useState(false);
-  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader();
+  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(kingdom);
 
   const speciesOfTheDay = useSpeciesOfTheDay(taxonomyData ?? undefined);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
@@ -509,7 +513,7 @@ export default function App() {
                 const color = RANK_COLORS[rank] ?? "#888";
                 const isKingdom = rank === "KINGDOM";
                 const label = isKingdom
-                  ? "Kingdom: Animals"
+                  ? `Kingdom: ${taxonomyData.commonName || taxonomyData.name}`
                   : `${RANK_LABELS[rank]}: ${count.toLocaleString()}`;
 
                 return (
