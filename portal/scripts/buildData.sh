@@ -1,5 +1,6 @@
 #!/bin/sh
 # Cross-runtime launcher: uses bun (cloud agents) or npx tsx (local Node.js)
+# Reads SN_KINGDOM env var to select kingdom (default: animalia)
 # TMPDIR=/tmp avoids IPC socket creation failure when /Volumes is unavailable
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 if command -v bun >/dev/null 2>&1; then
