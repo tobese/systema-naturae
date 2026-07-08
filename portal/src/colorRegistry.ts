@@ -1,5 +1,6 @@
 import type { TaxonNode, ColorTheme } from "@shared/types";
 import { PORTAL_THEME } from "./colors";
+export { IUCN_COLORS } from "./iucnColors";
 
 // Per-family ColorTheme objects — values sourced from each sub-app's colors.ts
 const FELIDAE_THEME: ColorTheme = {
@@ -1529,17 +1530,6 @@ const LIPKEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lip
 const LUCERNARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lucernariidae": "#78A880" }, breedGroupColor: "#78A880", hybridColor: "#98C8A0" };
 const TESSERANTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tesseranthidae": "#A09078" }, breedGroupColor: "#A09078", hybridColor: "#C0B098" };
 
-export const IUCN_COLORS: Record<string, string> = {
-  EX: "#6B6B6B",
-  EW: "#9C9C9C",
-  CR: "#D82E2E",
-  EN: "#E87030",
-  VU: "#E8B820",
-  NT: "#B8B820",
-  LC: "#60B060",
-  DD: "#8888A8",
-  NE: "#AAAAAA",
-};
 
 
 // ── Hydrozoa (141 families) ──

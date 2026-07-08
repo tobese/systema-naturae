@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import FamilyTree from "@shared/components/FamilyTree";
 import HabitatMap from "@shared/components/HabitatMap";
 import NodeNav from "@shared/components/NodeNav";
-import type { TaxonNode } from "@shared/types";
+import type { TaxonNode, ColorTheme } from "@shared/types";
 import type { PortalNode } from "./types";
 import { useUnifiedTree } from "./hooks/useUnifiedTree";
 import { useUrlState } from "./hooks/useUrlState";
@@ -23,6 +23,7 @@ import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import StatisticsHeader from "./components/StatisticsHeader";
 import WheelOfNature from "./components/WheelOfNature";
 import BookView from "./components/BookView";
+import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
 function filterExtinct(node: TaxonNode | null): TaxonNode {
   if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
   if (!node.children) return node;
@@ -90,9 +91,10 @@ function findNavContext(
 
 interface AppProps {
   kingdom?: string;
+  colorRegistry: Record<string, ColorTheme>;
 }
 
-export default function App({ kingdom = "animalia" }: AppProps) {
+export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [options, setOptions] = useState<PortalOptions>({
     showExtinct: false,
@@ -189,6 +191,7 @@ export default function App({ kingdom = "animalia" }: AppProps) {
     highlightedContinent,
     options.highlightWikipedia,
     loadedOrders,
+    colorRegistry,
   );
 
   // Deep-link: resolve family slug or order ID to load the parent order on startup
@@ -469,6 +472,7 @@ export default function App({ kingdom = "animalia" }: AppProps) {
   }
 
   return (
+    <ColorRegistryContext.Provider value={colorRegistry}>
     <div style={{
       display: "flex",
       flexDirection: "column",
@@ -1047,5 +1051,6 @@ export default function App({ kingdom = "animalia" }: AppProps) {
         />
       )}
     </div>
+    </ColorRegistryContext.Provider>
   );
 }

@@ -15,6 +15,7 @@ import { useUrlState } from "./hooks/useUrlState";
 import { useTaxonomyLoader } from "./hooks/useTaxonomyLoader";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import TaxonomySidebar from "./components/TaxonomySidebar";
+import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
 
 const OPTIONS = { showExtinct: false, collapseThreshold: 30, nodeScale: 1.0 };
 
@@ -78,7 +79,13 @@ const VARIANT = new URLSearchParams(window.location.search).get("variant")
   || (import.meta.env.VITE_VARIANT as string | undefined)
   || "";
 
-export default function AppBare() {
+import type { ColorTheme } from "@shared/types";
+
+interface AppBareProps {
+  colorRegistry: Record<string, ColorTheme>;
+}
+
+export default function AppBare({ colorRegistry }: AppBareProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [showSidebar, setShowSidebar] = useState(true);
   const [showRightSidebar, setShowRightSidebar] = useState(false);
@@ -127,7 +134,7 @@ export default function AppBare() {
   }, [focusedFamilyId]);
 
   const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
-    taxonomyData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, null, false, loadedOrders,
+    taxonomyData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, null, false, loadedOrders, colorRegistry,
   );
 
   const deepLinkedOrders = useRef<Set<string>>(new Set());
@@ -217,6 +224,7 @@ export default function AppBare() {
   }, [selected, navContext, handleSelect, focusedFamilySlug, handleCollapseFamily, focusedClassId, handleCollapseClass, layout]);
 
   return (
+    <ColorRegistryContext.Provider value={colorRegistry}>
     <div style={{ display: "flex", flexDirection: "column", height: "100vh", background: "#0f1117", color: "#e0e0e8" }}>
       <div style={{ display: "flex", flex: 1, overflow: "hidden" }}>
         <div style={{ flex: 1, overflow: "hidden", position: "relative" }}>
@@ -300,5 +308,6 @@ export default function AppBare() {
         )}
       </div>
     </div>
+    </ColorRegistryContext.Provider>
   );
 }

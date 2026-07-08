@@ -1,6 +1,6 @@
 import type { TaxonNode } from "@shared/types";
 import { PORTAL_THEME } from "../colors";
-import { COLOR_REGISTRY } from "../colorRegistry";
+import { useColorRegistry } from "./ColorRegistryContext.tsx";
 
 interface Props {
   path: TaxonNode[];
@@ -9,7 +9,7 @@ interface Props {
 
 const SKIP_RANKS = new Set(["KINGDOM"]);
 
-function pillColor(node: TaxonNode): string {
+function pillColor(node: TaxonNode, registry: Record<string, { subfamilyColors?: Record<string, string>; lineageColors?: Record<string, string> }>): string {
   if (node.rank === "PHYLUM") return "#9a8858";
   if (node.rank === "CLASS") return PORTAL_THEME.lineageColors[node.name] ?? "#7a9fc2";
   if (node.rank === "ORDER") {
@@ -25,9 +25,9 @@ function pillColor(node: TaxonNode): string {
   }
   if (node.rank === "FAMILY") return "#F5F5F5";
   if (node.familySlug) {
-    const theme = COLOR_REGISTRY[node.familySlug];
-    if (node.rank === "SUBFAMILY" || node.rank === "TRIBE") return theme?.subfamilyColors[node.name] ?? "#8899bb";
-    if (node.lineage) return theme?.lineageColors[node.lineage] ?? "#888";
+    const theme = registry[node.familySlug];
+    if (node.rank === "SUBFAMILY" || node.rank === "TRIBE") return theme?.subfamilyColors?.[node.name] ?? "#8899bb";
+    if (node.lineage) return theme?.lineageColors?.[node.lineage] ?? "#888";
   }
   if (node.rank === "GENUS") return "#b5cd6a";
   if (node.rank === "SPECIES" || node.rank === "SUBSPECIES") return "#e6a817";
@@ -39,6 +39,7 @@ function bgForColor(color: string): string {
 }
 
 export default function StatisticsHeader({ path, onSelect }: Props) {
+  const registry = useColorRegistry();
   const filtered = path.filter(n => !SKIP_RANKS.has(n.rank));
   if (filtered.length === 0) return null;
 
@@ -55,7 +56,7 @@ export default function StatisticsHeader({ path, onSelect }: Props) {
       `}</style>
       <div className="stats-header" style={{ display: "flex", alignItems: "center", gap: 6, minWidth: "max-content" }}>
         {filtered.map((node, i) => {
-          const color = pillColor(node);
+          const color = pillColor(node, registry);
           const isLast = i === filtered.length - 1;
           const label = node.commonName ?? node.name;
 

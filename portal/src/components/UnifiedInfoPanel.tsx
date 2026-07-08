@@ -6,7 +6,8 @@ import { useWikiImages } from "@shared/hooks/useWikiImages";
 import ImageTabs from "@shared/components/ImageTabs";
 import FadingImage from "@shared/components/FadingImage";
 import { PORTAL_THEME } from "../colors";
-import { COLOR_REGISTRY, IUCN_COLORS } from "../colorRegistry";
+import { IUCN_COLORS } from "../iucnColors";
+import { useColorRegistry } from "./ColorRegistryContext.tsx";
 
 interface Props {
   node: TaxonNode | null;
@@ -63,16 +64,17 @@ function collectLeaves(node: TaxonNode): TaxonNode[] {
   return [...list, ...node.children.flatMap(collectLeaves)];
 }
 
-function accentForNode(node: TaxonNode): string {
+function useAccentForNode(node: TaxonNode): string {
+  const registry = useColorRegistry();
   if (node.rank === "FAMILY") return "#F5F5F5";
   if (node.rank === "CLASS") return PORTAL_THEME.lineageColors[node.name] ?? "#C87941";
   if (node.rank === "ORDER") return PORTAL_THEME.lineageColors[node.name] ?? "#8899bb";
   if (node.familySlug) {
-    const theme = COLOR_REGISTRY[node.familySlug];
-    if (node.rank === "SUBFAMILY" || node.rank === "TRIBE") return theme?.subfamilyColors[node.name] ?? "#888";
+    const theme = registry[node.familySlug];
+    if (node.rank === "SUBFAMILY" || node.rank === "TRIBE") return theme?.subfamilyColors?.[node.name] ?? "#888";
     if (node.rank === "BREED_GROUP" || node.rank === "BREED") return theme?.breedGroupColor ?? "#888";
     if (node.rank === "HYBRID" || node.rank === "HYBRID_GROUP") return theme?.hybridColor ?? "#888";
-    if (node.lineage) return theme?.lineageColors[node.lineage] ?? "#888";
+    if (node.lineage) return theme?.lineageColors?.[node.lineage] ?? "#888";
   }
   return "#888";
 }
@@ -187,7 +189,7 @@ function PhylumPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonN
 
 
 function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
-  const accent = accentForNode(node);
+  const accent = useAccentForNode(node);
   const orders = node.children ?? [];
   const familyCount = (node as any)._familyCount ?? orders.reduce((s, o) => s + (o.children?.length ?? 0), 0);
   return (
@@ -326,7 +328,7 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
 // ─── Family-level panels ──────────────────────────────────────────────────────
 
 function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
-  const accent = accentForNode(node);
+  const accent = useAccentForNode(node);
   const species = collectLeaves(node).filter(l => l.rank === "SPECIES");
   const genera = (node.children ?? []).filter(c => c.rank === "GENUS");
   return (
@@ -352,7 +354,7 @@ function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Tax
 }
 
 function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
-  const accent = accentForNode(node);
+  const accent = useAccentForNode(node);
   const physicalSpecies = collectLeaves(node).filter(l => l.rank === "SPECIES");
   const flatSpecies = node.speciesList ?? [];
   const allSpecies = [...physicalSpecies, ...flatSpecies].sort((a, b) => a.name.localeCompare(b.name));
@@ -384,7 +386,7 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
 }
 
 function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
-  const accent = accentForNode(node);
+  const accent = useAccentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
   const wikiImages = useWikiImages(node.name); // Wikidata cache keyed by binomial
   const extract = wiki?.extract ?? null;
@@ -525,7 +527,7 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
 }
 
 function SubspeciesPanel({ node }: { node: TaxonNode }) {
-  const accent = accentForNode(node);
+  const accent = useAccentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
   // Subspecies are trinomials and aren't in the cache; fall back to the parent binomial.
   const parentBinomial = node.name.trim().split(/\s+/).slice(0, 2).join(" ");
@@ -566,7 +568,7 @@ function SubspeciesPanel({ node }: { node: TaxonNode }) {
 }
 
 function BreedGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
-  const accent = accentForNode(node);
+  const accent = useAccentForNode(node);
   const breeds = collectLeaves(node);
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
@@ -585,7 +587,8 @@ function BreedGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Ta
 }
 
 function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
-  const theme = node.familySlug ? COLOR_REGISTRY[node.familySlug] : null;
+  const registry = useColorRegistry();
+  const theme = node.familySlug ? registry[node.familySlug] : null;
   const accent = theme?.breedGroupColor ?? "#888";
   const coatAccent = theme?.coatTypeColor ?? "#5DB8C4";
   const { data: wiki, loading } = useWikipediaSummary(node.name);
@@ -635,7 +638,8 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
 }
 
 function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
-  const theme = node.familySlug ? COLOR_REGISTRY[node.familySlug] : null;
+  const registry = useColorRegistry();
+  const theme = node.familySlug ? registry[node.familySlug] : null;
   const accent = theme?.hybridColor ?? "#C8A050";
   const { data: wiki, loading } = useWikipediaSummary(node.name);
   const extract = wiki?.extract ?? null;
@@ -707,7 +711,8 @@ export default function UnifiedInfoPanel({
   if (node.rank === "BREED") return <BreedPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
   if (node.rank === "HYBRID_GROUP") {
     const hybrids = node.children ?? [];
-    const theme = node.familySlug ? COLOR_REGISTRY[node.familySlug] : null;
+    const registry = useColorRegistry();
+    const theme = node.familySlug ? registry[node.familySlug] : null;
     const accent = theme?.hybridColor ?? "#C8A050";
     return (
       <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
