@@ -18,7 +18,7 @@ function HomePanel() {
   return (
     <div style={{ padding: "24px 20px", color: "#555" }}>
       <div style={{ fontSize: 13, lineHeight: 1.7, marginBottom: 20 }}>
-        Explore the animal kingdom. Click any{" "}
+        Explore the natural world. Click any{" "}
         <span style={{ color: "#e0e0e0", fontWeight: 500 }}>family node</span>{" "}
         in the tree to open its dedicated app with the full species breakdown.
       </div>

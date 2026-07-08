@@ -6,6 +6,6 @@ import { COLOR_REGISTRY } from './colorRegistry.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <AppBare colorRegistry={COLOR_REGISTRY} />
+    <AppBare kingdom="animalia" colorRegistry={COLOR_REGISTRY} />
   </StrictMode>,
 )
