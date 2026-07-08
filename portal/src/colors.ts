@@ -58,16 +58,42 @@ export function buildClassPalette(): ClassPalette {
   return { base, orders: orderColorCache };
 }
 
-export function getClassColor(className?: string): string {
-  if (!className) return TARDIGRADA_COLOR;
-  return CLASS_PALETTE[className.toLowerCase()] ?? TARDIGRADA_COLOR;
+// Generate a class palette dynamically from the taxonomy tree.
+// Known animal classes keep their hardcoded colors; unknown classes get
+// a golden-angle hue distribution for visual separation.
+export function buildClassPaletteFromTree(root: TaxonNode): ClassPalette {
+  const base: Record<string, string> = { ...CLASS_PALETTE };
+  const seen = new Set<string>();
+  let idx = 0;
+  function walk(node: TaxonNode) {
+    if (node.rank === "CLASS") {
+      const key = node.name.toLowerCase();
+      seen.add(key);
+      if (!base[key]) {
+        // Golden angle ≈ 137.5° gives well-spaced hues
+        const hue = Math.round((idx * 137.508) % 360);
+        base[key] = `hsl(${hue}, 55%, 45%)`;
+        idx++;
+      }
+    }
+    for (const child of node.children ?? []) walk(child);
+  }
+  walk(root);
+  return { base, orders: orderColorCache };
 }
 
-export function getOrderColor(className: string, orderName: string): string {
+export function getClassColor(className?: string, palette?: Record<string, string>): string {
+  if (!className) return TARDIGRADA_COLOR;
+  const key = className.toLowerCase();
+  if (palette) return palette[key] ?? TARDIGRADA_COLOR;
+  return CLASS_PALETTE[key] ?? TARDIGRADA_COLOR;
+}
+
+export function getOrderColor(className: string, orderName: string, palette?: Record<string, string>): string {
   const key = `${className.toLowerCase()}/${orderName.toLowerCase()}`;
   if (orderColorCache[key]) return orderColorCache[key];
   const cls = className.toLowerCase();
-  const classColor = CLASS_PALETTE[cls] ?? TARDIGRADA_COLOR;
+  const classColor = (palette ? palette[cls] : undefined) ?? CLASS_PALETTE[cls] ?? TARDIGRADA_COLOR;
   const color = orderColorFromClass(classColor, orderName);
   orderColorCache[key] = color;
   return color;
