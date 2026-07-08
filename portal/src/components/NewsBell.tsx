@@ -70,8 +70,8 @@ function EventRow({ event }: { event: NewsEvent }) {
   );
 }
 
-export default function NewsBell() {
-  const { events, unreadCount, markAllSeen } = useSpeciesNews();
+export default function NewsBell({ kingdom = "animalia" }: { kingdom?: string }) {
+  const { events, unreadCount, markAllSeen } = useSpeciesNews(kingdom);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

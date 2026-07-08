@@ -1,6 +1,5 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
-import importLog from "../../data/import-log.json";
 
 interface ImportEvent {
   date: string;
@@ -23,12 +22,24 @@ const M = { top: 28, right: 20, bottom: 56, left: 56 };
 const IW = W - M.left - M.right;
 const IH = H - M.top - M.bottom;
 
-export default function ImportTimeline() {
+export default function ImportTimeline({ kingdom = "animalia" }: { kingdom?: string }) {
   const svgRef = useRef<SVGSVGElement>(null);
+  const [importLog, setImportLog] = useState<ImportEvent[]>([]);
+
+  useEffect(() => {
+    const suffix = kingdom === "animalia" ? "" : `-${kingdom}`;
+    fetch(`/data/import-log${suffix}.json`)
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data: ImportEvent[]) => setImportLog(data))
+      .catch(() => setImportLog([]));
+  }, [kingdom]);
 
   useEffect(() => {
     if (!svgRef.current) return;
-    const raw = (importLog as ImportEvent[]).filter(d => d.speciesRunning > 0);
+    const raw = importLog.filter(d => d.speciesRunning > 0);
     if (raw.length === 0) return;
 
     const firstDate = new Date(raw[0].date);
@@ -145,9 +156,11 @@ export default function ImportTimeline() {
         d3.select(this).attr("r", 2.5).attr("stroke-width", 1);
         tooltip.style("display", "none");
       });
-  }, []);
 
-  const data = (importLog as ImportEvent[]).filter(d => d.speciesRunning > 0);
+    return () => { tooltip.remove(); };
+  }, [importLog]);
+
+  const data = importLog.filter(d => d.speciesRunning > 0);
   const totalSpecies = data.reduce((s, d) => Math.max(s, d.speciesRunning), 0);
   const totalEvents = data.length;
 

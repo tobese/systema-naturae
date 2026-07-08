@@ -673,7 +673,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
           <div style={{ marginRight: 4 }}>
             <OptionsPanel options={options} onChange={setOptions} />
           </div>
-          <NewsBell />
+          <NewsBell kingdom={kingdom} />
           <button
             onClick={() => setShowDays(o => !o)}
             title="International Nature Days"
@@ -1041,6 +1041,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
           onFocusFamily={slug => { setFocus(slug); setShowCoverage(false); }}
           initialFamilySlug={focusedFamilySlug}
           initialClassId={focusedClassId}
+          kingdom={kingdom}
         />
       )}
       {showWheel && (
