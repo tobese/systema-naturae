@@ -26,7 +26,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | **Tentaculata** | 16 | 93 | 93 | 73 | 20 | 100.0% | 21.5% | [✓] Complete |
 | **Nuda** | 17 | 30 | 30 | 20 | 10 | 100.0% | 33.3% | [✓] Complete |
 | **Arachnida** | 18 | 21,937 | 21,937 | 18,169 | 3,768 | 100.0% | 17.2% | [✓] Complete |
-| **Insecta** | 19 | 88,525 | 88,525 | 73,128 | 15,397 | 100.0% | 17.4% | [✓] Complete |
+| **Insecta** | 19 | 186,174 | 186,174 | 170,777 | 15,397 | 100.0% | 8.3% | [✓] Complete |
 | **Tardigrada** | Other | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
 | **Phoronida** | Other | 13 | 13 | 0 | 13 | 100.0% | 100.0% | [✓] Complete |
 | **Loricifera** | Other | 32 | 32 | 0 | 32 | 100.0% | 100.0% | [✓] Complete |

@@ -81,8 +81,8 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.CLASS, 75);
   assert.equal(rc.ORDER, 383);
   assert.equal(rc.FAMILY, 5071);
-  assert.equal(rc.GENUS, 45368);
-  assert.equal(rc.SPECIES, 431649);
+  assert.equal(rc.GENUS, 57348);
+  assert.equal(rc.SPECIES, 529298);
 });
 
 test('root has exactly 32 phylum children', () => {
@@ -354,7 +354,7 @@ test('skeleton node type distribution', () => {
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 383,
-    FAMILY: 5071, GENUS: 45368, SPECIES: 431649,
+    FAMILY: 5071, GENUS: 57348, SPECIES: 529298,
     SUBFAMILY: 8, TRIBE: 10, SUBSPECIES: 851,
     BREED_GROUP: 25, BREED: 115, HYBRID_GROUP: 1, HYBRID: 4,
   });
@@ -362,11 +362,11 @@ test('skeleton root rankCounts snapshot', () => {
 
 test('manifest order count snapshot', () => {
   assert.equal(Object.keys(manifest.orders).length, 383);
-  // familyToOrder maps families that have order data files (4865).
-  // The remaining families (of 5071 total) are in the taxonomy but
-  // lack order files (Tardigrada inline families + data gaps).
+  // familyToOrder maps families that have order data files (5070).
+  // The remaining family (of 5071 total) is Tardigrada, inlined in the
+  // skeleton rather than a separate order file.
   const familyToOrderCount = Object.keys(manifest.familyToOrder).length;
-  assert.equal(familyToOrderCount, 4865);
+  assert.equal(familyToOrderCount, 5070);
 });
 
 test('manifest CARNIVORA entry snapshot', () => {
