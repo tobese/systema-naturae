@@ -98,18 +98,22 @@ for k in ("animalia","plantae"):
     print()
 
 print("="*60)
-print("  REVERSE: on-disk data files -> taxonomy")
+print("  REVERSE: on-disk data files -> taxonomy (both ways)")
 print("="*60)
-all_slugs=set()
+slugs_by_k={k:{f["appSlug"] for f in walk_fams(load_tax(k)) if f.get("appSlug")} for k in ("animalia","plantae")}
+resolved={"animalia":0,"plantae":0}
+orphans=[]
+for s in disk:
+    if s in slugs_by_k["animalia"]: resolved["animalia"]+=1
+    elif s in slugs_by_k["plantae"]: resolved["plantae"]+=1
+    else: orphans.append(s)
 for k in ("animalia","plantae"):
-    for f in walk_fams(load_tax(k)):
-        if f.get("appSlug"): all_slugs.add(f["appSlug"])
-orphans=sorted(s for s in disk if s not in all_slugs)
+    print(f"  ✓ {k}: {resolved[k]} on-disk data files resolve to a taxonomy appSlug")
 if orphans:
     issues_total+=len(orphans)
-    print(f"  ❌ orphan data files (on disk, in no taxonomy): {len(orphans)} — {orphans[:8]}")
+    print(f"  ❌ orphan data files (on disk, in NEITHER taxonomy): {len(orphans)} — {sorted(orphans)[:8]}")
 else:
-    print(f"  ✓ all {len(disk)} on-disk data files are referenced by a taxonomy appSlug")
+    print(f"  ✓ 0 orphans — all {len(disk)} on-disk data files referenced in some taxonomy")
 print()
 
 print("="*60)
