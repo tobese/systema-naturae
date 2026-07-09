@@ -29,7 +29,7 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | **Kinorhyncha** | Mud dragons | 2 | 10 | 362 | 362 | 362 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Chaetognatha** | Arrow worms | 1 | 12 | 141 | 141 | 141 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Nemertea** | Ribbon worms | 4 | 57 | 1,381 | 1,381 | 1,381 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Placozoa** | Placozoans | 2 | 4 | 5 | 4 | 0 | 5 | 125.0% | 125.0% | [✓] Complete |
+| **Placozoa** | Placozoans | 2 | 4 | 5 | 5 | 0 | 5 | 100.0% | 100.0% | [✓] Complete |
 | **Brachiopoda** | Lamp shells | 3 | 447 | 9,260 | 9,260 | 9,260 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Hemichordata** | Acorn worms | 1 | 39 | 457 | 457 | 457 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Rotifera** | Rotifers | 2 | 36 | 2,249 | 2,249 | 2,249 | 0 | 100.0% | 0.0% | [✓] Complete |
@@ -323,18 +323,18 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | Hoplonemertea | 38 | 754 | 754 | 0 | 100.0% | ✓ Complete |
 | Arhynchocoela | 1 | 1 | 1 | 0 | 100.0% | ✓ Complete |
 
-### [x] Phylum Placozoa (Placozoans) - 125.0% complete
+### [x] Phylum Placozoa (Placozoans) - 100.0% complete
 
-- **Imported species:** 5 / 4
-- **Enriched species:** 5 / 4 (125.0%)
+- **Imported species:** 5 / 5
+- **Enriched species:** 5 / 5 (100.0%)
 - **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
+| Uniplacotomia | 3 | 4 | 4 | 4 | 100.0% | ✓ Complete |
 | Polyplacotomia | 1 | 1 | 1 | 1 | 100.0% | ✓ Complete |
-| Uniplacotomia | 3 | 4 | 3 | 4 | 133.3% | ✓ Complete |
 
 ### [x] Phylum Brachiopoda (Lamp shells) - 100.0% complete
 
