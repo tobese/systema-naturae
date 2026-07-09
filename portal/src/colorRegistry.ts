@@ -6034,6 +6034,10 @@ const cyclorhagida_zelinkaderidae: ColorTheme = { subfamilyColors: {}, breedGrou
 const cyclorhagida_campyloderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#FB923C", appSlug: "campyloderidae", className: "Cyclorhagida", orderName: "Xenosomata", name: "Campyloderidae", mainColor: "#F97316", lineageColors: { "Campyloderidae": "#FB923C" } };
 const gordioida_nectonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#22D3EE", appSlug: "nectonematidae", className: "Gordioida", orderName: "Unknown", name: "Nectonematidae", mainColor: "#06B6D4", lineageColors: { "Nectonematidae": "#22D3EE" } };
 const gordioida_paragordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#34D399", appSlug: "paragordiidae", className: "Gordioida", orderName: "Unknown", name: "Paragordiidae", mainColor: "#10B981", lineageColors: { "Paragordiidae": "#34D399" } };
+const arhynchonemertidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#A78BFA", appSlug: "arhynchonemertidae", className: "Arhynchocoela", orderName: "Arhynchonemertea", name: "Arhynchonemertidae", mainColor: "#8B5CF6", lineageColors: { "Arhynchonemertidae": "#A78BFA" } };
+const gordioida_chordodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#A78BFA", appSlug: "chordodidae", className: "Gordioida", orderName: "Gordioidea", name: "Chordodidae", mainColor: "#8B5CF6", lineageColors: { "Chordodidae": "#A78BFA" } };
+const gordioida_gordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#2DD4BF", appSlug: "gordiidae", className: "Gordioida", orderName: "Gordioidea", name: "Gordiidae", mainColor: "#14B8A6", lineageColors: { "Gordiidae": "#2DD4BF" } };
+const cyclorhagida_echinoderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#FBBF24", appSlug: "echinoderidae", className: "Cyclorhagida", orderName: "Echinorhagata", name: "Echinoderidae", mainColor: "#F59E0B", lineageColors: { "Echinoderidae": "#FBBF24" } };
 
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   alatinidae:    ALATINIDAE_THEME,
@@ -10835,10 +10839,13 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "semnoderidae": cyclorhagida_semnoderidae,
   "centroderidae": cyclorhagida_centroderidae,
   "zelinkaderidae": cyclorhagida_zelinkaderidae,
-  "campyloderidae": cyclorhagida_campyloderidae,
-   "nectonematidae": gordioida_nectonematidae,
-   "paragordiidae": gordioida_paragordiidae,
-   "trichoplacidae": TRICHOPLACIDAE_THEME,
+   "campyloderidae": cyclorhagida_campyloderidae,
+   "echinoderidae": cyclorhagida_echinoderidae,
+    "nectonematidae": gordioida_nectonematidae,
+    "paragordiidae": gordioida_paragordiidae,
+    "chordodidae": gordioida_chordodidae,
+    "gordiidae": gordioida_gordiidae,
+    "trichoplacidae": TRICHOPLACIDAE_THEME,
    "hoilungidae": HOILUNGIDAE_THEME,
    "cladtertiidae": CLADTERTIIDAE_THEME,
     "polyplacotomidae": POLYPLACOTOMIDAE_THEME,
@@ -10905,7 +10912,8 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
     "solenofilomorphidae": SOLENOFILOMORPHIDAE_THEME,
     "taurididae": TAURIDIDAE_THEME,
     "ascopariidae": ASCOPARIIDAE_THEME,
-    "nemertodermatidae": NEMERTODERMATIDAE_THEME,};
+    "nemertodermatidae": NEMERTODERMATIDAE_THEME,
+    "arhynchonemertidae": ARHYNCHONEMERTIDAE_THEME,};
 
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

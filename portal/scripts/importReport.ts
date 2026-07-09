@@ -232,6 +232,7 @@ function printReport(before: Snapshot | null, after: Snapshot) {
 
   // ── Save to build-log for node counts ──
   const buildLog = {
+    timestamp: new Date().toISOString(),
     physicalNodes: current.totals.nodes || 23518,
     compressedSpecies: current.totals.compressed || 133614,
     totalNodes: current.totals.totalNodes || (current.totals.nodes + current.totals.compressed),
