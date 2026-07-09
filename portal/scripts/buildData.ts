@@ -12,7 +12,6 @@ interface KingdomConfig {
   input: string;
   rootDir: string;
   dataSuffix: string;
-  speciesNews: string;
   colorRegistry: string;
 }
 interface KingdomConfigFile {

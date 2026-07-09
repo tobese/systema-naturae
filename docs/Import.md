@@ -131,7 +131,6 @@ sh scripts/buildData.sh                  # rebuild unified-taxonomy.json
 npx tsx scripts/findGaps.ts              # → portal/data/gap-report.json
 npx tsx scripts/reportPhyla.ts           # → docs/gap-tasks-phyla.md
 npx tsx scripts/generateGapTasks.ts      # → docs/gap-tasks.md
-npx tsx scripts/buildImportLog.ts        # → portal/data/import-log.json (Growth chart)
 ```
 
 `reportPhyla.ts` and `generateGapTasks.ts` also POST progress to `http://localhost:9876` if `phylumProgressd.ts` is running:

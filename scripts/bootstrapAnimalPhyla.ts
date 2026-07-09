@@ -504,7 +504,6 @@ async function main() {
   console.log("  3. Update speciesCount in taxonomy.json for each family (from the GBIF output above)");
   console.log("  4. Rebuild: cd portal && sh scripts/buildData.sh");
   console.log("  5. Check pending-eponyms.json for any eponym species to add");
-  console.log("  6. Update species-news.json with family_added events");
 }
 
 main().catch(console.error);
