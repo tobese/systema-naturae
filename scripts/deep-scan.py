@@ -98,5 +98,20 @@ for k in ("animalia","plantae"):
     print()
 
 print("="*60)
+print("  REVERSE: on-disk data files -> taxonomy")
+print("="*60)
+all_slugs=set()
+for k in ("animalia","plantae"):
+    for f in walk_fams(load_tax(k)):
+        if f.get("appSlug"): all_slugs.add(f["appSlug"])
+orphans=sorted(s for s in disk if s not in all_slugs)
+if orphans:
+    issues_total+=len(orphans)
+    print(f"  ❌ orphan data files (on disk, in no taxonomy): {len(orphans)} — {orphans[:8]}")
+else:
+    print(f"  ✓ all {len(disk)} on-disk data files are referenced by a taxonomy appSlug")
+print()
+
+print("="*60)
 print(f"  TOTAL structural issues: {issues_total}")
 print("="*60)
