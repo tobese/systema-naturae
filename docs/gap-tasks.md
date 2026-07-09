@@ -58,7 +58,7 @@ This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema
 | **Pilidiophora** | Other | 505 | 505 | 505 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Hoplonemertea** | Other | 754 | 754 | 754 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Arhynchocoela** | Other | 1 | 1 | 1 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Uniplacotomia** | Other | 4 | 3 | 0 | 4 | 133.3% | 133.3% | [✓] Complete |
+| **Uniplacotomia** | Other | 4 | 4 | 0 | 4 | 100.0% | 100.0% | [✓] Complete |
 | **Polyplacotomia** | Other | 1 | 1 | 0 | 1 | 100.0% | 100.0% | [✓] Complete |
 | **Craniata** | Other | 101 | 101 | 101 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Lingulata** | Other | 718 | 718 | 718 | 0 | 100.0% | 0.0% | [✓] Complete |
