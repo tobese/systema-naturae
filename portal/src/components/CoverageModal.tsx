@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
-import ImportTimeline from "./ImportTimeline";
 
 interface Props {
   data: TaxonNode;
@@ -141,12 +140,10 @@ function classTraffic(families: CoverageNode[]): "green" | "amber" | "red" {
 const TRAFFIC_COLORS = { green: "#44aa66", amber: "#cc9944", red: "#d84848" };
 
 export default function CoverageModal({ data, onClose, onFocusFamily, initialFamilySlug, initialClassId, kingdom = "animalia" }: Props) {
-  const [tab, setTab] = useState<"coverage" | "growth">("coverage");
   const [sort, setSort] = useState<SortMode>("gaps");
   const [filter, setFilter] = useState<FilterMode>("all");
   const [coverageSummary, setCoverageSummary] = useState<ClassCoverage[] | null>(null);
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
-  const [importLogData, setImportLogData] = useState<ImportEvent[]>([]);
 
   useEffect(() => {
     fetch(`/data/kingdoms/${kingdom}/coverage-summary.json`)
@@ -165,17 +162,6 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
         setCollapsed(initialCollapsed);
       })
       .catch(() => setCoverageSummary(null));
-  }, [kingdom]);
-
-  useEffect(() => {
-    const suffix = kingdom === "animalia" ? "" : `-${kingdom}`;
-    fetch(`/data/import-log${suffix}.json`)
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then((data: ImportEvent[]) => setImportLogData(data))
-      .catch(() => setImportLogData([]));
   }, [kingdom]);
 
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -224,16 +210,6 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
     return sorted;
   }
 
-  const TAB = (key: string, label: string) => (
-    <button onClick={() => setTab(key as any)} style={{
-      background: "none", border: "none",
-      color: tab === key ? "#c0c0d8" : "#444",
-      fontSize: 11, cursor: "pointer", padding: "6px 0",
-      borderBottom: tab === key ? "1px solid #6a8aba" : "1px solid transparent",
-      letterSpacing: "0.06em", textTransform: "uppercase" as const,
-    }}>{label}</button>
-  );
-
   return (
     <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.72)", zIndex: 200, display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
       <div onClick={e => e.stopPropagation()} style={{
@@ -251,13 +227,7 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
           onMouseLeave={e => (e.currentTarget.style.color = "#444")}
         >×</button>
 
-        <div style={{ display: "flex", gap: 20, padding: "28px 32px 0" }}>
-          {TAB("coverage", "Coverage")}
-          {TAB("growth", "Growth")}
-        </div>
-
-        {tab === "coverage" && (
-          <div style={{ padding: "28px 32px 32px" }}>
+        <div style={{ padding: "28px 32px 32px" }}>
             <div style={{ marginBottom: 20, display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
               <div>
                 <div style={{ fontSize: 10, color: "#6666aa", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>
@@ -384,16 +354,6 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
               Families with speciesCounts of 150-400+ (Tyrannidae, Thraupidae, Trochilidae, Furnariidae, Columbidae, Muscicapidae, Thamnophilidae, Psittaculidae, Meliphagidae, Pycnonotidae) are shown with their remaining gaps. Full manual curation of such large families is not practical — major genera are represented.
             </div>
           </div>
-        )}
-
-        {tab === "growth" && (
-          <div style={{ padding: "20px 32px 32px" }}>
-            <ImportTimeline kingdom={kingdom} />
-
-            {/* Import log list */}
-            <LogList data={importLogData} />
-          </div>
-        )}
       </div>
     </div>
   );
@@ -472,46 +432,6 @@ function CoverageRow({ node, depth, onFocusFamily, onClose, initiallyOpen }: Row
           ))}
         </div>
       )}
-    </div>
-  );
-}
-
-/* ---------- LogList ---------- */
-
-interface ImportEvent {
-  date: string;
-  speciesAdded: number;
-  speciesRunning: number;
-  families: string[];
-}
-
-function LogList({ data }: { data: ImportEvent[] }) {
-  const filtered = data.filter(d => d.speciesRunning > 0).reverse();
-
-  return (
-    <div style={{ marginTop: 16, borderTop: "1px solid #1e2030", paddingTop: 14 }}>
-      <div style={{ fontSize: 10, color: "#6666aa", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>
-        Import log
-      </div>
-      <div style={{ maxHeight: 180, overflowY: "auto", fontSize: 10, lineHeight: 1.7 }}>
-        {filtered.map((d, i) => {
-          const date = new Date(d.date).toLocaleDateString("en-GB", { month: "short", day: "numeric" });
-          const famList = d.families.length > 5
-            ? d.families.slice(0, 5).join(", ") + ` +${d.families.length - 5}`
-            : d.families.join(", ");
-          return (
-            <div key={i} style={{ display: "flex", gap: 8, padding: "2px 4px", borderRadius: 3, color: "#666" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#1a1c28")}
-              onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
-            >
-              <span style={{ color: "#888", flexShrink: 0, width: 56 }}>{date}</span>
-              <span style={{ color: "#8aba6a", flexShrink: 0, width: 50, textAlign: "right" as const }}>+{d.speciesAdded}</span>
-              <span style={{ color: "#6a8aba", flexShrink: 0, width: 50, textAlign: "right" as const }}>{d.speciesRunning}</span>
-              <span style={{ color: "#555", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{famList}</span>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 }

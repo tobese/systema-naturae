@@ -9,7 +9,6 @@ import { useUrlState } from "./hooks/useUrlState";
 import { useTaxonomyLoader } from "./hooks/useTaxonomyLoader";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import SearchBox from "./components/SearchBox";
-import NewsBell from "./components/NewsBell";
 import InfoModal from "./components/InfoModal";
 import CoverageModal from "./components/CoverageModal";
 import EponymModal from "./components/EponymModal";
@@ -673,7 +672,6 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
           <div style={{ marginRight: 4 }}>
             <OptionsPanel options={options} onChange={setOptions} />
           </div>
-          <NewsBell kingdom={kingdom} />
           <button
             onClick={() => setShowDays(o => !o)}
             title="International Nature Days"

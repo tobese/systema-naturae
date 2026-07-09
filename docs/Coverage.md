@@ -57,5 +57,4 @@ sh scripts/buildData.sh                  # rebuild unified-taxonomy.json
 npx tsx scripts/findGaps.ts              # → portal/data/gap-report.json
 npx tsx scripts/reportPhyla.ts           # → docs/gap-tasks-phyla.md
 npx tsx scripts/generateGapTasks.ts      # → docs/gap-tasks.md
-npx tsx scripts/buildImportLog.ts        # → portal/data/import-log.json (Growth chart)
 ```

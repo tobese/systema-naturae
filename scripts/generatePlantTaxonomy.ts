@@ -1,5 +1,5 @@
 /**
- * Generate Plantae taxonomy.json entries, color themes, species-news events.
+ * Generate Plantae taxonomy.json entries and color themes.
  *
  * Usage: npx tsx scripts/generatePlantTaxonomy.ts
  */
@@ -112,7 +112,6 @@ function main() {
   };
 
   const colorLines: string[] = [];
-  const newsEntries: any[] = [];
 
   for (const phylum of PLANT_PHYLA) {
     const scout = loadScout(phylum.scoutFile);
@@ -158,9 +157,6 @@ function main() {
             colorLines.push(`const ${constName}: ColorTheme = ${JSON.stringify(theme)};`);
             colorLines.push(`colorRegistry.set("${slug}", ${constName});`);
           }
-
-          // News event
-          newsEntries.push({ type: "family_added", family: slug, name: fam.name, date: today });
         }
 
         if (orderChildren.length > 0) {
@@ -199,7 +195,6 @@ function main() {
   // Write outputs
   writeFileSync(resolve(portalRoot, "data", "taxonomy-plantae-snippet.json"), JSON.stringify(output, null, 2) + "\n");
   writeFileSync(resolve(portalRoot, "data", "color-registry-plantae.txt"), colorLines.join("\n") + "\n");
-  writeFileSync(resolve(portalRoot, "data", "species-news-plantae.json"), JSON.stringify(newsEntries, null, 2) + "\n");
 
   // Summary
   let totalFamilies = 0, totalSpp = 0;
@@ -215,11 +210,10 @@ function main() {
   }
   console.log(`Phyla with data: ${output.children.map((p: any) => p.name).join(", ")}`);
   console.log(`Families: ${totalFamilies}, Species: ~${totalSpp.toLocaleString()}`);
-  console.log(`Color themes: ${allFamilies.length}, News events: ${newsEntries.length}`);
+  console.log(`Color themes: ${allFamilies.length}`);
   console.log(`\nOutput files:
   portal/data/taxonomy-plantae-snippet.json
-  portal/data/color-registry-plantae.txt
-  portal/data/species-news-plantae.json`);
+  portal/data/color-registry-plantae.txt`);
 }
 
 main();
