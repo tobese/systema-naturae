@@ -397,6 +397,264 @@ test('CARNIVORA order structure snapshot', () => {
 });
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// ALL ORDER FILES (lightweight batch scan)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+console.log('\nALL ORDER FILES');
+
+const allOrderFiles = readdirSync(ORDERS_DIR).filter(f => f.endsWith('.json'));
+
+test('all 379 order files exist and are valid JSON', () => {
+  assert.equal(allOrderFiles.length, 379);
+  for (const file of allOrderFiles) {
+    const path = join(ORDERS_DIR, file);
+    const data = loadJson<OrderNode>(path);
+    assert.equal(data.rank, 'ORDER', `${file}: root rank mismatch`);
+    assert.ok(data.children, `${file}: missing children`);
+    assert.ok(data.children!.length > 0, `${file}: empty children`);
+  }
+});
+
+// Batch tests across all order files — single pass for performance
+{
+  let totalFamilies = 0;
+  let totalGenera = 0;
+  let totalSpecies = 0;
+  let totalSpeciesList = 0;
+  let emptyGenusCount = 0;
+  let familyMissingAppSlug = 0;
+  let genusMissingFamilySlug = 0;
+  let speciesMissingSubspeciesCount = 0;
+  let dupCount = 0;
+
+  for (const file of allOrderFiles) {
+    const orderData = loadJson<OrderNode>(join(ORDERS_DIR, file));
+
+    function scan(node: OrderNode) {
+      if (node.rank === 'FAMILY') {
+        totalFamilies++;
+        if (!node.appSlug) familyMissingAppSlug++;
+      }
+      if (node.rank === 'GENUS') {
+        totalGenera++;
+        if (!node.familySlug) genusMissingFamilySlug++;
+        const childCount = (node.children ?? []).length + (node.speciesList ?? []).length;
+        if (childCount === 0) emptyGenusCount++;
+        totalSpeciesList += node.speciesList?.length ?? 0;
+      }
+      if (node.rank === 'SPECIES') {
+        totalSpecies++;
+        if (typeof node.subspeciesCount !== 'number') speciesMissingSubspeciesCount++;
+      }
+      for (const child of node.children ?? []) scan(child);
+      for (const child of node.speciesList ?? []) scan(child);
+    }
+    scan(orderData);
+
+    // Check for duplicates across children + speciesList per genus
+    function checkDups(node: OrderNode) {
+      if (node.rank === 'GENUS') {
+        const childIds = new Set((node.children ?? []).filter(c => c.rank === 'SPECIES').map(c => c.id));
+        const listIds = new Set((node.speciesList ?? []).map(c => c.id));
+        for (const id of childIds) if (listIds.has(id)) dupCount++;
+      }
+      for (const child of node.children ?? []) checkDups(child);
+    }
+    checkDups(orderData);
+  }
+
+  test('total families across all orders is 5065 (incl. bulk-imported)', () => {
+    // 5066 total families in taxonomy; 5065 in order files (Tardigrada inline is the 1 difference).
+    // 4796 have dedicated data files (manifest.familyToOrder).
+    // 205 are bulk-imported (e.g., beetles) and exist only in order files without appSlug.
+    assert.equal(totalFamilies, 5065);
+  });
+
+  test('>=95% of FAMILY nodes have appSlug', () => {
+    const pct = (totalFamilies - familyMissingAppSlug) / totalFamilies;
+    assert.ok(pct >= 0.95, `only ${(pct*100).toFixed(1)}% of families have appSlug (${familyMissingAppSlug} missing)`);
+  });
+
+  test('all GENUS nodes have familySlug', () => {
+    assert.equal(genusMissingFamilySlug, 0, `${genusMissingFamilySlug} genera missing familySlug`);
+  });
+
+  test('no empty genus nodes (no children or speciesList)', () => {
+    assert.equal(emptyGenusCount, 0, `${emptyGenusCount} empty genera found`);
+  });
+
+  test('species compression is active (speciesList > 0)', () => {
+    assert.ok(totalSpeciesList > 100000, `only ${totalSpeciesList} speciesList entries (expected >100k)`);
+  });
+
+  test('no species duplicated across children + speciesList (all files)', () => {
+    assert.equal(dupCount, 0, `${dupCount} duplicated species found across all order files`);
+  });
+
+  test('most SPECIES have subspeciesCount (>=95%)', () => {
+    const pct = (totalSpecies - speciesMissingSubspeciesCount) / totalSpecies;
+    assert.ok(pct >= 0.95, `only ${(pct*100).toFixed(1)}% of species have subspeciesCount`);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// COVERAGE SUMMARY
+// ═══════════════════════════════════════════════════════════════════════════════
+
+console.log('\nCOVERAGE SUMMARY');
+
+interface CoverageFamily {
+  id: string; name: string; commonName?: string;
+  appSlug?: string; className?: string; orderName?: string;
+  portalCount: number; totalCount?: number;
+}
+interface CoverageClass {
+  id: string; name: string; commonName?: string;
+  families: CoverageFamily[];
+}
+
+const coverage = loadJson<CoverageClass[]>(join(DATA_DIR, 'coverage-summary.json'));
+
+test('coverage has 72 classes', () => {
+  assert.equal(coverage.length, 72);
+});
+
+test('coverage family count matches taxonomy', () => {
+  let familyCount = 0;
+  for (const cls of coverage) {
+    familyCount += cls.families.length;
+  }
+  assert.equal(familyCount, 5066);
+});
+
+test('every coverage family has portalCount and id prefix; >=99% have className', () => {
+  let missingClassName = 0;
+  for (const cls of coverage) {
+    for (const family of cls.families) {
+      assert.equal(typeof family.portalCount, 'number');
+      assert.ok(family.id.startsWith('FAM_'));
+      if (!family.className) missingClassName++;
+    }
+  }
+  // Tardigrada has no CLASS in taxonomy (lives at root), so its inline
+  // family may lack className in coverage summary.
+  assert.ok(missingClassName <= 1, `${missingClassName} coverage families missing className`);
+});
+
+test('coverage portalCount never exceeds totalCount', () => {
+  let violations = 0;
+  for (const cls of coverage) {
+    for (const family of cls.families) {
+      if (family.totalCount !== undefined && family.portalCount > family.totalCount) {
+        violations++;
+      }
+    }
+  }
+  assert.equal(violations, 0, `${violations} families where portalCount > totalCount`);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// TAXONOMY.JSON (source of truth)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+console.log('\nTAXONOMY.JSON');
+
+interface TaxonomyNode {
+  id: string; name: string; rank: string; commonName?: string;
+  children?: TaxonomyNode[];
+  appSlug?: string; speciesCount?: number;
+}
+
+const taxonomy = loadJson<TaxonomyNode>(resolve(import.meta.dirname, '..', 'data', 'taxonomy.json'));
+
+test('taxonomy root is KINGDOM Animalia', () => {
+  assert.equal(taxonomy.id, 'ANIMALIA');
+  assert.equal(taxonomy.rank, 'KINGDOM');
+});
+
+test('taxonomy has 31 phyla', () => {
+  const phyla = taxonomy.children?.filter(c => c.rank === 'PHYLUM') ?? [];
+  assert.equal(phyla.length, 31);
+});
+
+test('every FAMILY in taxonomy has speciesCount; >=95% have appSlug', () => {
+  let familyCount = 0;
+  let missingAppSlug = 0;
+  function walk(n: TaxonomyNode) {
+    if (n.rank === 'FAMILY') {
+      familyCount++;
+      assert.equal(typeof n.speciesCount, 'number', `FAMILY ${n.id} missing speciesCount`);
+      if (!n.appSlug) missingAppSlug++;
+    }
+    for (const c of n.children ?? []) walk(c);
+  }
+  walk(taxonomy);
+  assert.equal(familyCount, 5066);
+  const pct = (familyCount - missingAppSlug) / familyCount;
+  assert.ok(pct >= 0.95, `only ${(pct*100).toFixed(1)}% of taxonomy families have appSlug`);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CROSS-REFERENCE: taxonomy <-> coverage-summary
+// ═══════════════════════════════════════════════════════════════════════════════
+
+console.log('\nCROSS-REFERENCE');
+
+test('every taxonomy FAMILY appears in coverage-summary', () => {
+  const coverageFamilyIds = new Set<string>();
+  for (const cls of coverage) {
+    for (const family of cls.families) {
+      coverageFamilyIds.add(family.id);
+    }
+  }
+
+  let missing = 0;
+  function walk(n: TaxonomyNode) {
+    if (n.rank === 'FAMILY') {
+      if (!coverageFamilyIds.has(n.id)) missing++;
+    }
+    for (const c of n.children ?? []) walk(c);
+  }
+  walk(taxonomy);
+  assert.equal(missing, 0, `${missing} taxonomy families missing from coverage-summary`);
+});
+
+test('coverage-summary portalCount sums to skeleton rankCounts.SPECIES', () => {
+  let portalSum = 0;
+  for (const cls of coverage) {
+    for (const family of cls.families) {
+      portalSum += family.portalCount;
+    }
+  }
+  assert.equal(portalSum, skeleton.rankCounts!.SPECIES);
+});
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// BUILD OUTPUT SANITY
+// ═══════════════════════════════════════════════════════════════════════════════
+
+console.log('\nBUILD OUTPUT SANITY');
+
+test('unified-taxonomy.json exists and is large (>100MB)', () => {
+  const path = join(DATA_DIR, 'unified-taxonomy.json');
+  const stats = statSync(path);
+  assert.ok(stats.size > 100_000_000, `unified-taxonomy.json only ${(stats.size/1e6).toFixed(1)}MB`);
+});
+
+test('skeleton.json exists and is small (<10MB)', () => {
+  const path = join(DATA_DIR, 'unified-taxonomy-skeleton.json');
+  const stats = statSync(path);
+  assert.ok(stats.size < 10_000_000, `skeleton is ${(stats.size/1e6).toFixed(1)}MB`);
+});
+
+test('no empty order files', () => {
+  for (const file of allOrderFiles) {
+    const stats = statSync(join(ORDERS_DIR, file));
+    assert.ok(stats.size > 100, `${file} is suspiciously small (${stats.size} bytes)`);
+  }
+});
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // SUMMARY
 // ═══════════════════════════════════════════════════════════════════════════════
 

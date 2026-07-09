@@ -394,4 +394,12 @@ const coveragePath = resolve(kingdomOutDir, `coverage-summary.json`);
 writeFileSync(coveragePath, JSON.stringify(coverageClasses, null, 2));
 console.log(`  Coverage summary: ${coverageClasses.length} classes, ${coverageClasses.reduce((s, c) => s + c.families.length, 0)} families → ${coveragePath}`);
 
+const buildLog = {
+  timestamp: new Date().toISOString(),
+  physicalNodes: physicalCount,
+  compressedSpecies: flatSpeciesCount,
+  totalNodes: physicalCount + flatSpeciesCount,
+};
+writeFileSync(resolve(kingdomOutDir, "build-log.json"), JSON.stringify(buildLog, null, 2) + "\n");
+
 console.log(`\nDone. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → ${outputPath}`);

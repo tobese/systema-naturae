@@ -1266,6 +1266,7 @@ const PENIACEAE_THEME: ColorTheme = {"accent":"hsl(45.09600000001956, 55%, 40%)"
 const MESOTAENIACEAE_THEME: ColorTheme = {"accent":"hsl(182.6040000000212, 55%, 40%)","bg":"hsl(182.6040000000212, 25%, 92%)","bgAlt":"hsl(182.6040000000212, 20%, 96%)","border":"hsl(182.6040000000212, 30%, 70%)","familyTree":"hsl(212.6040000000212, 40%, 50%)","nodeFill":"hsl(182.6040000000212, 35%, 70%)","nodeStroke":"hsl(182.6040000000212, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
 const GONATOZYGACEAE_THEME: ColorTheme = {"accent":"hsl(320.1120000000228, 55%, 40%)","bg":"hsl(320.1120000000228, 25%, 92%)","bgAlt":"hsl(320.1120000000228, 20%, 96%)","border":"hsl(320.1120000000228, 30%, 70%)","familyTree":"hsl(350.1120000000228, 40%, 50%)","nodeFill":"hsl(320.1120000000228, 35%, 70%)","nodeStroke":"hsl(320.1120000000228, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
 const CHLOROKYBACEAE_THEME: ColorTheme = {"accent":"hsl(97.62000000002445, 55%, 40%)","bg":"hsl(97.62000000002445, 25%, 92%)","bgAlt":"hsl(97.62000000002445, 20%, 96%)","border":"hsl(97.62000000002445, 30%, 70%)","familyTree":"hsl(127.62000000002445, 40%, 50%)","nodeFill":"hsl(97.62000000002445, 35%, 70%)","nodeStroke":"hsl(97.62000000002445, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const ARCHAEFFRUCTACEAE_THEME: ColorTheme = {"accent":"hsl(45, 55%, 40%)","bg":"hsl(45, 25%, 92%)","bgAlt":"hsl(45, 20%, 96%)","border":"hsl(45, 30%, 70%)","familyTree":"hsl(75, 40%, 50%)","nodeFill":"hsl(45, 35%, 70%)","nodeStroke":"hsl(45, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
 
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "araucariaceae": ARAUCARIACEAE_THEME,
@@ -2534,4 +2535,5 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "mesotaeniaceae": MESOTAENIACEAE_THEME,
   "gonatozygaceae": GONATOZYGACEAE_THEME,
   "chlorokybaceae": CHLOROKYBACEAE_THEME,
+  "archaefructaceae": ARCHAEFFRUCTACEAE_THEME,
 };

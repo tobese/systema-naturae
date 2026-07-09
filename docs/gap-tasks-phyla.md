@@ -2,21 +2,21 @@
 
 This report aggregates the taxonomic database coverage gaps of the Systema Naturae portal at the **Phylum** level.
 
-*Generated automatically on: 04/07/2026*
+*Generated automatically on: 09/07/2026*
 
 ## Overview of Phylum Coverage
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Chordata** | Chordates | 6 | 352 | 43,641 | 43,641 | 29,346 | 14,295 | 100.0% | 32.8% | [✓] Complete |
-| **Phoronida** | Horseshoe worms | 1 | 1 | 0 | 13 | 0 | 0 | 0.0% | 0.0% | > Gaps: 13 |
-| **Loricifera** | Brush heads | 1 | 3 | 0 | 32 | 0 | 0 | 0.0% | 0.0% | > Gaps: 32 |
-| **Priapulida** | Penis worms | 3 | 4 | 0 | 145 | 0 | 0 | 0.0% | 0.0% | > Gaps: 145 |
-| **Entoprocta** | Goblet worms | 1 | 4 | 0 | 100 | 0 | 0 | 0.0% | 0.0% | > Gaps: 100 |
-| **Gnathostomulida** | Jaw worms | 1 | 12 | 0 | 294 | 0 | 0 | 0.0% | 0.0% | > Gaps: 294 |
-| **Onychophora** | Velvet worms | 1 | 2 | 0 | 232 | 0 | 0 | 0.0% | 0.0% | > Gaps: 232 |
-| **Gastrotricha** | Hairy backs | 1 | 18 | 0 | 926 | 0 | 0 | 0.0% | 0.0% | > Gaps: 926 |
-| **Xenacoelomorpha** | Xenacoelomorphs | 3 | 20 | 0 | 291 | 0 | 0 | 0.0% | 0.0% | > Gaps: 291 |
+| **Phoronida** | Horseshoe worms | 1 | 1 | 13 | 13 | 0 | 13 | 100.0% | 100.0% | [✓] Complete |
+| **Loricifera** | Brush heads | 1 | 3 | 32 | 32 | 0 | 32 | 100.0% | 100.0% | [✓] Complete |
+| **Priapulida** | Penis worms | 3 | 4 | 145 | 145 | 0 | 145 | 100.0% | 100.0% | [✓] Complete |
+| **Entoprocta** | Goblet worms | 1 | 4 | 100 | 100 | 0 | 100 | 100.0% | 100.0% | [✓] Complete |
+| **Gnathostomulida** | Jaw worms | 1 | 12 | 294 | 294 | 0 | 294 | 100.0% | 100.0% | [✓] Complete |
+| **Onychophora** | Velvet worms | 1 | 2 | 232 | 232 | 0 | 232 | 100.0% | 100.0% | [✓] Complete |
+| **Gastrotricha** | Hairy backs | 1 | 18 | 926 | 926 | 0 | 926 | 100.0% | 100.0% | [✓] Complete |
+| **Xenacoelomorpha** | Xenacoelomorphs | 3 | 20 | 291 | 291 | 0 | 291 | 100.0% | 100.0% | [✓] Complete |
 | **Arthropoda** | Arthropods | 2 | 19 | 110,462 | 110,462 | 91,297 | 19,165 | 100.0% | 17.3% | [✓] Complete |
 | **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
 | **Mollusca** | Molluscs | 7 | 1529 | 139,663 | 139,663 | 137,880 | 1,783 | 100.0% | 1.3% | [✓] Complete |
@@ -28,7 +28,8 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | **Sipuncula** | Peanut worms | 2 | 6 | 230 | 230 | 230 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Kinorhyncha** | Mud dragons | 2 | 10 | 362 | 362 | 362 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Chaetognatha** | Arrow worms | 1 | 12 | 141 | 141 | 141 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Nemertea** | Ribbon worms | 3 | 56 | 1,380 | 1,380 | 1,380 | 0 | 100.0% | 0.0% | [✓] Complete |
+| **Nemertea** | Ribbon worms | 4 | 57 | 1,381 | 1,381 | 1,381 | 0 | 100.0% | 0.0% | [✓] Complete |
+| **Placozoa** | Placozoans | 2 | 4 | 5 | 4 | 0 | 5 | 125.0% | 125.0% | [✓] Complete |
 | **Brachiopoda** | Lamp shells | 3 | 447 | 9,260 | 9,260 | 9,260 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Hemichordata** | Acorn worms | 1 | 39 | 457 | 457 | 457 | 0 | 100.0% | 0.0% | [✓] Complete |
 | **Rotifera** | Rotifers | 2 | 36 | 2,249 | 2,249 | 2,249 | 0 | 100.0% | 0.0% | [✓] Complete |
@@ -59,105 +60,105 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | Amphibia | 13 | 3,797 | 3,797 | 2,255 | 100.0% | ✓ Complete |
 | Actinopterygii | 16 | 10,885 | 10,885 | 3,684 | 100.0% | ✓ Complete |
 
-### [ ] Phylum Phoronida (Horseshoe worms) - 0.0% complete
+### [x] Phylum Phoronida (Horseshoe worms) - 100.0% complete
 
-- **Imported species:** 0 / 13
-- **Enriched species:** 0 / 13 (0.0%)
-- **Remaining gaps:** **13**
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Phoronida | 1 | 0 | 13 | 0 | 0.0% | > Gaps: 13 |
-
-### [ ] Phylum Loricifera (Brush heads) - 0.0% complete
-
-- **Imported species:** 0 / 32
-- **Enriched species:** 0 / 32 (0.0%)
-- **Remaining gaps:** **32**
+- **Imported species:** 13 / 13
+- **Enriched species:** 13 / 13 (100.0%)
+- **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Loricifera | 3 | 0 | 32 | 0 | 0.0% | > Gaps: 32 |
+| Phoronida | 1 | 13 | 13 | 13 | 100.0% | ✓ Complete |
 
-### [ ] Phylum Priapulida (Penis worms) - 0.0% complete
+### [x] Phylum Loricifera (Brush heads) - 100.0% complete
 
-- **Imported species:** 0 / 145
-- **Enriched species:** 0 / 145 (0.0%)
-- **Remaining gaps:** **145**
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Priapulimorpha | 2 | 0 | 109 | 0 | 0.0% | > Gaps: 109 |
-| Halicryptomorpha | 1 | 0 | 34 | 0 | 0.0% | > Gaps: 34 |
-| Seticoronaria | 1 | 0 | 2 | 0 | 0.0% | > Gaps: 2 |
-
-### [ ] Phylum Entoprocta (Goblet worms) - 0.0% complete
-
-- **Imported species:** 0 / 100
-- **Enriched species:** 0 / 100 (0.0%)
-- **Remaining gaps:** **100**
+- **Imported species:** 32 / 32
+- **Enriched species:** 32 / 32 (100.0%)
+- **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Entoprocta | 4 | 0 | 100 | 0 | 0.0% | > Gaps: 100 |
+| Loricifera | 3 | 32 | 32 | 32 | 100.0% | ✓ Complete |
 
-### [ ] Phylum Gnathostomulida (Jaw worms) - 0.0% complete
+### [x] Phylum Priapulida (Penis worms) - 100.0% complete
 
-- **Imported species:** 0 / 294
-- **Enriched species:** 0 / 294 (0.0%)
-- **Remaining gaps:** **294**
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Gnathostomulida | 12 | 0 | 294 | 0 | 0.0% | > Gaps: 294 |
-
-### [ ] Phylum Onychophora (Velvet worms) - 0.0% complete
-
-- **Imported species:** 0 / 232
-- **Enriched species:** 0 / 232 (0.0%)
-- **Remaining gaps:** **232**
+- **Imported species:** 145 / 145
+- **Enriched species:** 145 / 145 (100.0%)
+- **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Onychophora | 2 | 0 | 232 | 0 | 0.0% | > Gaps: 232 |
+| Priapulimorpha | 2 | 109 | 109 | 109 | 100.0% | ✓ Complete |
+| Halicryptomorpha | 1 | 34 | 34 | 34 | 100.0% | ✓ Complete |
+| Seticoronaria | 1 | 2 | 2 | 2 | 100.0% | ✓ Complete |
 
-### [ ] Phylum Gastrotricha (Hairy backs) - 0.0% complete
+### [x] Phylum Entoprocta (Goblet worms) - 100.0% complete
 
-- **Imported species:** 0 / 926
-- **Enriched species:** 0 / 926 (0.0%)
-- **Remaining gaps:** **926**
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Gastrotricha | 18 | 0 | 926 | 0 | 0.0% | > Gaps: 926 |
-
-### [ ] Phylum Xenacoelomorpha (Xenacoelomorphs) - 0.0% complete
-
-- **Imported species:** 0 / 291
-- **Enriched species:** 0 / 291 (0.0%)
-- **Remaining gaps:** **291**
+- **Imported species:** 100 / 100
+- **Enriched species:** 100 / 100 (100.0%)
+- **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Acoela | 17 | 0 | 223 | 0 | 0.0% | > Gaps: 223 |
-| Nemertodermatida | 2 | 0 | 66 | 0 | 0.0% | > Gaps: 66 |
-| Xenoturbellida | 1 | 0 | 2 | 0 | 0.0% | > Gaps: 2 |
+| Entoprocta | 4 | 100 | 100 | 100 | 100.0% | ✓ Complete |
+
+### [x] Phylum Gnathostomulida (Jaw worms) - 100.0% complete
+
+- **Imported species:** 294 / 294
+- **Enriched species:** 294 / 294 (100.0%)
+- **Remaining gaps:** None! 100% complete
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Gnathostomulida | 12 | 294 | 294 | 294 | 100.0% | ✓ Complete |
+
+### [x] Phylum Onychophora (Velvet worms) - 100.0% complete
+
+- **Imported species:** 232 / 232
+- **Enriched species:** 232 / 232 (100.0%)
+- **Remaining gaps:** None! 100% complete
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Onychophora | 2 | 232 | 232 | 232 | 100.0% | ✓ Complete |
+
+### [x] Phylum Gastrotricha (Hairy backs) - 100.0% complete
+
+- **Imported species:** 926 / 926
+- **Enriched species:** 926 / 926 (100.0%)
+- **Remaining gaps:** None! 100% complete
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Gastrotricha | 18 | 926 | 926 | 926 | 100.0% | ✓ Complete |
+
+### [x] Phylum Xenacoelomorpha (Xenacoelomorphs) - 100.0% complete
+
+- **Imported species:** 291 / 291
+- **Enriched species:** 291 / 291 (100.0%)
+- **Remaining gaps:** None! 100% complete
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Xenoturbellida | 1 | 2 | 2 | 2 | 100.0% | ✓ Complete |
+| Acoela | 17 | 223 | 223 | 223 | 100.0% | ✓ Complete |
+| Nemertodermatida | 2 | 66 | 66 | 66 | 100.0% | ✓ Complete |
 
 ### [x] Phylum Arthropoda (Arthropods) - 100.0% complete
 
@@ -309,8 +310,8 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 ### [x] Phylum Nemertea (Ribbon worms) - 100.0% complete
 
-- **Imported species:** 1,380 / 1,380
-- **Enriched species:** 0 / 1,380 (0.0%)
+- **Imported species:** 1,381 / 1,381
+- **Enriched species:** 0 / 1,381 (0.0%)
 - **Remaining gaps:** None! 100% complete
 
 #### Child Classes in this Phylum:
@@ -320,6 +321,20 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | Palaeonemertea | 7 | 121 | 121 | 0 | 100.0% | ✓ Complete |
 | Pilidiophora | 11 | 505 | 505 | 0 | 100.0% | ✓ Complete |
 | Hoplonemertea | 38 | 754 | 754 | 0 | 100.0% | ✓ Complete |
+| Arhynchocoela | 1 | 1 | 1 | 0 | 100.0% | ✓ Complete |
+
+### [x] Phylum Placozoa (Placozoans) - 125.0% complete
+
+- **Imported species:** 5 / 4
+- **Enriched species:** 5 / 4 (125.0%)
+- **Remaining gaps:** None! 100% complete
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Polyplacotomia | 1 | 1 | 1 | 1 | 100.0% | ✓ Complete |
+| Uniplacotomia | 3 | 4 | 3 | 4 | 133.3% | ✓ Complete |
 
 ### [x] Phylum Brachiopoda (Lamp shells) - 100.0% complete
 
