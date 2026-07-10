@@ -34,6 +34,7 @@ cd portal
 sh scripts/buildData.sh                  # rebuild animal unified taxonomy
 SN_KINGDOM=plantae sh scripts/buildData.sh  # rebuild plant unified taxonomy
 npx tsx scripts/findGaps.ts              # → portal/data/gap-report.json
+SN_KINGDOM=plantae npx tsx scripts/findGaps.ts  # → portal/data/gap-report-plantae.json
 npx tsx scripts/reportPhyla.ts           # → docs/gap-tasks-phyla.md
 npx tsx scripts/generateGapTasks.ts      # → docs/gap-tasks.md
 ```
