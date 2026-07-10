@@ -2,14 +2,13 @@ import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import FamilyTree from "@shared/components/FamilyTree";
 import HabitatMap from "@shared/components/HabitatMap";
 import NodeNav from "@shared/components/NodeNav";
-import type { TaxonNode } from "@shared/types";
+import type { TaxonNode, ColorTheme } from "@shared/types";
 import type { PortalNode } from "./types";
 import { useUnifiedTree } from "./hooks/useUnifiedTree";
 import { useUrlState } from "./hooks/useUrlState";
 import { useTaxonomyLoader } from "./hooks/useTaxonomyLoader";
 import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import SearchBox from "./components/SearchBox";
-import NewsBell from "./components/NewsBell";
 import InfoModal from "./components/InfoModal";
 import CoverageModal from "./components/CoverageModal";
 import EponymModal from "./components/EponymModal";
@@ -23,12 +22,22 @@ import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import StatisticsHeader from "./components/StatisticsHeader";
 import WheelOfNature from "./components/WheelOfNature";
 import BookView from "./components/BookView";
+import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
 function filterExtinct(node: TaxonNode | null): TaxonNode {
   if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
   if (!node.children) return node;
   const filtered = node.children
     .filter(c => !c.extinct)
     .map(c => filterExtinct(c));
+  return { ...node, children: filtered.length > 0 ? filtered : undefined };
+}
+
+function filterFossil(node: TaxonNode | null): TaxonNode {
+  if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
+  if (!node.children) return node;
+  const filtered = node.children
+    .filter(c => !c.fossil)
+    .map(c => filterFossil(c));
   return { ...node, children: filtered.length > 0 ? filtered : undefined };
 }
 
@@ -88,10 +97,16 @@ function findNavContext(
   return walk(tree) ?? { parent: null, siblings: [], index: 0 };
 }
 
-export default function App() {
+interface AppProps {
+  kingdom?: string;
+  colorRegistry: Record<string, ColorTheme>;
+}
+
+export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [options, setOptions] = useState<PortalOptions>({
     showExtinct: false,
+    showFossil: false,
     collapseLarge: true,
     collapseThreshold: 30,
     nodeScale: 1.0,
@@ -107,9 +122,9 @@ export default function App() {
   const [viewMode, setViewMode] = useState<"graph" | "book">("graph");
   const [showRightSidebar, setShowRightSidebar] = useState(false);
   const [now, setNow] = useState(new Date());
-  const { todaysDays } = useInternationalDays();
+  const { todaysDays } = useInternationalDays(kingdom);
   const [treeReady, setTreeReady] = useState(false);
-  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader();
+  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(kingdom);
 
   const speciesOfTheDay = useSpeciesOfTheDay(taxonomyData ?? undefined);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
@@ -185,6 +200,7 @@ export default function App() {
     highlightedContinent,
     options.highlightWikipedia,
     loadedOrders,
+    colorRegistry,
   );
 
   // Deep-link: resolve family slug or order ID to load the parent order on startup
@@ -205,9 +221,11 @@ export default function App() {
 
   // Filter tree based on options
   const filteredTreeData = useMemo(() => {
-    if (options.showExtinct) return treeData;
-    return filterExtinct(treeData);
-  }, [treeData, options.showExtinct]);
+    let data = treeData;
+    if (!options.showExtinct) data = filterExtinct(data);
+    if (!options.showFossil) data = filterFossil(data);
+    return data;
+  }, [treeData, options.showExtinct, options.showFossil]);
 
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }
@@ -465,6 +483,7 @@ export default function App() {
   }
 
   return (
+    <ColorRegistryContext.Provider value={colorRegistry}>
     <div style={{
       display: "flex",
       flexDirection: "column",
@@ -509,7 +528,7 @@ export default function App() {
                 const color = RANK_COLORS[rank] ?? "#888";
                 const isKingdom = rank === "KINGDOM";
                 const label = isKingdom
-                  ? "Kingdom: Animals"
+                  ? `Kingdom: ${taxonomyData.commonName || taxonomyData.name}`
                   : `${RANK_LABELS[rank]}: ${count.toLocaleString()}`;
 
                 return (
@@ -665,7 +684,6 @@ export default function App() {
           <div style={{ marginRight: 4 }}>
             <OptionsPanel options={options} onChange={setOptions} />
           </div>
-          <NewsBell />
           <button
             onClick={() => setShowDays(o => !o)}
             title="International Nature Days"
@@ -1011,7 +1029,7 @@ export default function App() {
         )}
       </div>
       {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
-      {showDays && <InternationalDaysModal onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
+      {showDays && <InternationalDaysModal kingdom={kingdom} onClose={() => setShowDays(false)} onNavigate={slug => { setFocus(slug); setShowDays(false); }} />}
       {showSotd && speciesOfTheDay && (
         <SpeciesOfTheDayModal
           species={speciesOfTheDay}
@@ -1033,6 +1051,7 @@ export default function App() {
           onFocusFamily={slug => { setFocus(slug); setShowCoverage(false); }}
           initialFamilySlug={focusedFamilySlug}
           initialClassId={focusedClassId}
+          kingdom={kingdom}
         />
       )}
       {showWheel && (
@@ -1043,5 +1062,6 @@ export default function App() {
         />
       )}
     </div>
+    </ColorRegistryContext.Provider>
   );
 }

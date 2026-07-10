@@ -55,4 +55,12 @@ export interface ColorTheme {
   mainColor?: string;
   coatTypeColor?: string;
   classPalette?: ClassPalette;
+  // Plant-specific UI theme properties
+  accent?: string;
+  bg?: string;
+  bgAlt?: string;
+  border?: string;
+  familyTree?: string;
+  nodeFill?: string;
+  nodeStroke?: string;
 }

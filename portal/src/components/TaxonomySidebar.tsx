@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type { TaxonNode } from "@shared/types";
 import type { PortalNode } from "../types";
+import { buildClassPaletteFromTree } from "../colors";
 
 interface Props {
   data: TaxonNode;
@@ -11,17 +12,6 @@ interface Props {
   onFocusFamily: (slug: string | null) => void;
   onFocusClass: (id: string | null) => void;
 }
-
-const CLASS_COLORS: Record<string, string> = {
-  mammalia: "#C87941",
-  aves: "#3A8090",
-  reptilia: "#4A8C5C",
-  chondrichthyes: "#5A78A0",
-  amphibia: "#7CB84A",
-  actinopterygii: "#3A8FA8",
-  insecta: "#C8A830",
-  arachnida: "#A84868",
-};
 
 function countChildren(node: TaxonNode, rank: string): number {
   let total = 0;
@@ -63,6 +53,7 @@ export default function TaxonomySidebar({
   onSelect,
 }: Props) {
   const [expanded, setExpanded] = useState<Set<string>>(() => defaultExpanded(data));
+  const classPalette = useMemo(() => buildClassPaletteFromTree(data).base, [data]);
 
   // Auto-expand focused class's children
   useEffect(() => {
@@ -124,7 +115,7 @@ export default function TaxonomySidebar({
       <div style={{ padding: "0 8px 6px 8px", fontSize: 10, color: "#4a4a5a", letterSpacing: "0.05em", textTransform: "uppercase" }}>
         Explorer
       </div>
-      {renderNode(data, expanded, focusedClassId, focusedFamilySlug, selectedId, onSelect, toggle, 0)}
+      {renderNode(data, expanded, focusedClassId, focusedFamilySlug, selectedId, onSelect, toggle, 0, classPalette)}
     </div>
   );
 }
@@ -138,6 +129,7 @@ function renderNode(
   onSelect: (node: TaxonNode) => void,
   toggle: (id: string) => void,
   depth: number,
+  classPalette: Record<string, string>,
 ): React.ReactNode {
   if (!node.children || node.children.length === 0) return null;
 
@@ -148,7 +140,7 @@ function renderNode(
   const isSubfamily = node.rank === "SUBFAMILY" || node.rank === "TRIBE";
   const isDeep = depth >= 3; // genus+
 
-  const classColor = node.className ? CLASS_COLORS[node.className] : undefined;
+  const classColor = node.className ? classPalette[node.className.toLowerCase()] : undefined;
   const accentColor = classColor ?? "#666";
   const isOpen = expanded.has(node.id);
   const hasChildren = node.children && node.children.length > 0;
@@ -293,7 +285,7 @@ function renderNode(
                   top: 0,
                 }} />
               )}
-              {renderNode(c, expanded, focusedClassId, focusedFamilySlug, selectedId, onSelect, toggle, depth + 1)}
+              {renderNode(c, expanded, focusedClassId, focusedFamilySlug, selectedId, onSelect, toggle, depth + 1, classPalette)}
             </div>
           ))}
         </div>

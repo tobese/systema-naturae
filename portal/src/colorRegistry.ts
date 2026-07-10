@@ -1,5 +1,6 @@
 import type { TaxonNode, ColorTheme } from "@shared/types";
 import { PORTAL_THEME } from "./colors";
+export { IUCN_COLORS } from "./iucnColors";
 
 // Per-family ColorTheme objects — values sourced from each sub-app's colors.ts
 const FELIDAE_THEME: ColorTheme = {
@@ -1529,17 +1530,6 @@ const LIPKEIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lip
 const LUCERNARIIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Lucernariidae": "#78A880" }, breedGroupColor: "#78A880", hybridColor: "#98C8A0" };
 const TESSERANTHIDAE_THEME: ColorTheme = { subfamilyColors: {}, lineageColors: { "Tesseranthidae": "#A09078" }, breedGroupColor: "#A09078", hybridColor: "#C0B098" };
 
-export const IUCN_COLORS: Record<string, string> = {
-  EX: "#6B6B6B",
-  EW: "#9C9C9C",
-  CR: "#D82E2E",
-  EN: "#E87030",
-  VU: "#E8B820",
-  NT: "#B8B820",
-  LC: "#60B060",
-  DD: "#8888A8",
-  NE: "#AAAAAA",
-};
 
 
 // ── Hydrozoa (141 families) ──
@@ -6044,8 +6034,423 @@ const cyclorhagida_zelinkaderidae: ColorTheme = { subfamilyColors: {}, breedGrou
 const cyclorhagida_campyloderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F97316", hybridColor: "#FB923C", appSlug: "campyloderidae", className: "Cyclorhagida", orderName: "Xenosomata", name: "Campyloderidae", mainColor: "#F97316", lineageColors: { "Campyloderidae": "#FB923C" } };
 const gordioida_nectonematidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#06B6D4", hybridColor: "#22D3EE", appSlug: "nectonematidae", className: "Gordioida", orderName: "Unknown", name: "Nectonematidae", mainColor: "#06B6D4", lineageColors: { "Nectonematidae": "#22D3EE" } };
 const gordioida_paragordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#10B981", hybridColor: "#34D399", appSlug: "paragordiidae", className: "Gordioida", orderName: "Unknown", name: "Paragordiidae", mainColor: "#10B981", lineageColors: { "Paragordiidae": "#34D399" } };
+const ARHYNCHONEMERTIDAE_THEME: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#A78BFA", appSlug: "arhynchonemertidae", className: "Arhynchocoela", orderName: "Arhynchonemertea", name: "Arhynchonemertidae", mainColor: "#8B5CF6", lineageColors: { "Arhynchonemertidae": "#A78BFA" } };
+const gordioida_chordodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8B5CF6", hybridColor: "#A78BFA", appSlug: "chordodidae", className: "Gordioida", orderName: "Gordioidea", name: "Chordodidae", mainColor: "#8B5CF6", lineageColors: { "Chordodidae": "#A78BFA" } };
+const gordioida_gordiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#14B8A6", hybridColor: "#2DD4BF", appSlug: "gordiidae", className: "Gordioida", orderName: "Gordioidea", name: "Gordiidae", mainColor: "#14B8A6", lineageColors: { "Gordiidae": "#2DD4BF" } };
+const cyclorhagida_echinoderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#F59E0B", hybridColor: "#FBBF24", appSlug: "echinoderidae", className: "Cyclorhagida", orderName: "Echinorhagata", name: "Echinoderidae", mainColor: "#F59E0B", lineageColors: { "Echinoderidae": "#FBBF24" } };
+
+const insecta_aderidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D4D", hybridColor: "#DC8888", appSlug: "aderidae", className: "Insecta", orderName: "Coleoptera", name: "Aderidae", mainColor: "#CB4D4D", lineageColors: { "Aderidae": "#DC8888" } };
+const insecta_amphientomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB71", hybridColor: "#88DCA0", appSlug: "amphientomidae", className: "Insecta", orderName: "Psocodea", name: "Amphientomidae", mainColor: "#4DCB71", lineageColors: { "Amphientomidae": "#88DCA0" } };
+const insecta_amphipsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#964DCB", hybridColor: "#B988DC", appSlug: "amphipsocidae", className: "Insecta", orderName: "Psocodea", name: "Amphipsocidae", mainColor: "#964DCB", lineageColors: { "Amphipsocidae": "#B988DC" } };
+const insecta_amphizoidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBBB4D", hybridColor: "#DCD288", appSlug: "amphizoidae", className: "Insecta", orderName: "Coleoptera", name: "Amphizoidae", mainColor: "#CBBB4D", lineageColors: { "Amphizoidae": "#DCD288" } };
+const insecta_anamorphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DB6CB", hybridColor: "#88CEDC", appSlug: "anamorphidae", className: "Insecta", orderName: "Coleoptera", name: "Anamorphidae", mainColor: "#4DB6CB", lineageColors: { "Anamorphidae": "#88CEDC" } };
+const insecta_ancistronidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D91", hybridColor: "#DC88B5", appSlug: "ancistronidae", className: "Insecta", orderName: "Psocodea", name: "Ancistronidae", mainColor: "#CB4D91", lineageColors: { "Ancistronidae": "#DC88B5" } };
+const insecta_andesembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6CCB4D", hybridColor: "#9DDC88", appSlug: "andesembiidae", className: "Insecta", orderName: "Embioptera", name: "Andesembiidae", mainColor: "#6CCB4D", lineageColors: { "Andesembiidae": "#9DDC88" } };
+const insecta_anisembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#524DCB", hybridColor: "#8C88DC", appSlug: "anisembiidae", className: "Insecta", orderName: "Embioptera", name: "Anisembiidae", mainColor: "#524DCB", lineageColors: { "Anisembiidae": "#8C88DC" } };
+const insecta_anobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB774D", hybridColor: "#DCA488", appSlug: "anobiidae", className: "Insecta", orderName: "Coleoptera", name: "Anobiidae", mainColor: "#CB774D", lineageColors: { "Anobiidae": "#DCA488" } };
+const insecta_anthicidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB9C", hybridColor: "#88DCBD", appSlug: "anthicidae", className: "Insecta", orderName: "Coleoptera", name: "Anthicidae", mainColor: "#4DCB9C", lineageColors: { "Anthicidae": "#88DCBD" } };
+const insecta_anthribidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#C14DCB", hybridColor: "#D588DC", appSlug: "anthribidae", className: "Insecta", orderName: "Coleoptera", name: "Anthribidae", mainColor: "#C14DCB", lineageColors: { "Anthribidae": "#D588DC" } };
+const insecta_archembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#B0CB4D", hybridColor: "#CADC88", appSlug: "archembiidae", className: "Insecta", orderName: "Embioptera", name: "Archembiidae", mainColor: "#B0CB4D", lineageColors: { "Archembiidae": "#CADC88" } };
+const insecta_archeocrypticidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D8CCB", hybridColor: "#88B2DC", appSlug: "archeocrypticidae", className: "Insecta", orderName: "Coleoptera", name: "Archeocrypticidae", mainColor: "#4D8CCB", lineageColors: { "Archeocrypticidae": "#88B2DC" } };
+const insecta_archipsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D67", hybridColor: "#DC8899", appSlug: "archipsocidae", className: "Insecta", orderName: "Psocodea", name: "Archipsocidae", mainColor: "#CB4D67", lineageColors: { "Archipsocidae": "#DC8899" } };
+const insecta_artematopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB57", hybridColor: "#88DC8F", appSlug: "artematopodidae", className: "Insecta", orderName: "Coleoptera", name: "Artematopodidae", mainColor: "#4DCB57", lineageColors: { "Artematopodidae": "#88DC8F" } };
+const insecta_asiopsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#7C4DCB", hybridColor: "#A888DC", appSlug: "asiopsocidae", className: "Insecta", orderName: "Psocodea", name: "Asiopsocidae", mainColor: "#7C4DCB", lineageColors: { "Asiopsocidae": "#A888DC" } };
+const insecta_attelabidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBA14D", hybridColor: "#DCC088", appSlug: "attelabidae", className: "Insecta", orderName: "Coleoptera", name: "Attelabidae", mainColor: "#CBA14D", lineageColors: { "Attelabidae": "#DCC088" } };
+const insecta_aulacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBC6", hybridColor: "#88DCD9", appSlug: "aulacidae", className: "Insecta", orderName: "Hymenoptera", name: "Aulacidae", mainColor: "#4DCBC6", lineageColors: { "Aulacidae": "#88DCD9" } };
+const insecta_australembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DAB", hybridColor: "#DC88C7", appSlug: "australembiidae", className: "Insecta", orderName: "Embioptera", name: "Australembiidae", mainColor: "#CB4DAB", lineageColors: { "Australembiidae": "#DC88C7" } };
+const insecta_belidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#86CB4D", hybridColor: "#AEDC88", appSlug: "belidae", className: "Insecta", orderName: "Coleoptera", name: "Belidae", mainColor: "#86CB4D", lineageColors: { "Belidae": "#AEDC88" } };
+const insecta_belohinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D61CB", hybridColor: "#8896DC", appSlug: "belohinidae", className: "Insecta", orderName: "Coleoptera", name: "Belohinidae", mainColor: "#4D61CB", lineageColors: { "Belohinidae": "#8896DC" } };
+const insecta_biphyllidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB5D4D", hybridColor: "#DC9388", appSlug: "biphyllidae", className: "Insecta", orderName: "Coleoptera", name: "Biphyllidae", mainColor: "#CB5D4D", lineageColors: { "Biphyllidae": "#DC9388" } };
+const insecta_bittacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB82", hybridColor: "#88DCAB", appSlug: "bittacidae", className: "Insecta", orderName: "Mecoptera", name: "Bittacidae", mainColor: "#4DCB82", lineageColors: { "Bittacidae": "#88DCAB" } };
+const insecta_boopiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A64DCB", hybridColor: "#C488DC", appSlug: "boopiidae", className: "Insecta", orderName: "Psocodea", name: "Boopiidae", mainColor: "#A64DCB", lineageColors: { "Boopiidae": "#C488DC" } };
+const insecta_boreidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CACB4D", hybridColor: "#DCDC88", appSlug: "boreidae", className: "Insecta", orderName: "Mecoptera", name: "Boreidae", mainColor: "#CACB4D", lineageColors: { "Boreidae": "#DCDC88" } };
+const insecta_boridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DA6CB", hybridColor: "#88C3DC", appSlug: "boridae", className: "Insecta", orderName: "Coleoptera", name: "Boridae", mainColor: "#4DA6CB", lineageColors: { "Boridae": "#88C3DC" } };
+const insecta_bostrichidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D81", hybridColor: "#DC88AB", appSlug: "bostrichidae", className: "Insecta", orderName: "Coleoptera", name: "Bostrichidae", mainColor: "#CB4D81", lineageColors: { "Bostrichidae": "#DC88AB" } };
+const insecta_bothrideridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#5CCB4D", hybridColor: "#92DC88", appSlug: "bothrideridae", className: "Insecta", orderName: "Coleoptera", name: "Bothrideridae", mainColor: "#5CCB4D", lineageColors: { "Bothrideridae": "#92DC88" } };
+const insecta_brachyceridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#624DCB", hybridColor: "#9688DC", appSlug: "brachyceridae", className: "Insecta", orderName: "Coleoptera", name: "Brachyceridae", mainColor: "#624DCB", lineageColors: { "Brachyceridae": "#9688DC" } };
+const insecta_brachypsectridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB874D", hybridColor: "#DCAF88", appSlug: "brachypsectridae", className: "Insecta", orderName: "Coleoptera", name: "Brachypsectridae", mainColor: "#CB874D", lineageColors: { "Brachypsectridae": "#DCAF88" } };
+const insecta_brentidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBAC", hybridColor: "#88DCC7", appSlug: "brentidae", className: "Insecta", orderName: "Coleoptera", name: "Brentidae", mainColor: "#4DCBAC", lineageColors: { "Brentidae": "#88DCC7" } };
+const insecta_buprestidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DC5", hybridColor: "#DC88D8", appSlug: "buprestidae", className: "Insecta", orderName: "Coleoptera", name: "Buprestidae", mainColor: "#CB4DC5", lineageColors: { "Buprestidae": "#DC88D8" } };
+const insecta_byrrhidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A0CB4D", hybridColor: "#C0DC88", appSlug: "byrrhidae", className: "Insecta", orderName: "Coleoptera", name: "Byrrhidae", mainColor: "#A0CB4D", lineageColors: { "Byrrhidae": "#C0DC88" } };
+const insecta_byturidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D7BCB", hybridColor: "#88A7DC", appSlug: "byturidae", className: "Insecta", orderName: "Coleoptera", name: "Byturidae", mainColor: "#4D7BCB", lineageColors: { "Byturidae": "#88A7DC" } };
+const insecta_caeciliusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D57", hybridColor: "#DC888F", appSlug: "caeciliusidae", className: "Insecta", orderName: "Psocodea", name: "Caeciliusidae", mainColor: "#CB4D57", lineageColors: { "Caeciliusidae": "#DC888F" } };
+const insecta_callirhipidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB68", hybridColor: "#88DC9A", appSlug: "callirhipidae", className: "Insecta", orderName: "Coleoptera", name: "Callirhipidae", mainColor: "#4DCB68", lineageColors: { "Callirhipidae": "#88DC9A" } };
+const insecta_cantharidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8C4DCB", hybridColor: "#B288DC", appSlug: "cantharidae", className: "Insecta", orderName: "Coleoptera", name: "Cantharidae", mainColor: "#8C4DCB", lineageColors: { "Cantharidae": "#B288DC" } };
+const insecta_caridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBB14D", hybridColor: "#DCCB88", appSlug: "caridae", className: "Insecta", orderName: "Coleoptera", name: "Caridae", mainColor: "#CBB14D", lineageColors: { "Caridae": "#DCCB88" } };
+const insecta_cerambycidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DC0CB", hybridColor: "#88D5DC", appSlug: "cerambycidae", className: "Insecta", orderName: "Coleoptera", name: "Cerambycidae", mainColor: "#4DC0CB", lineageColors: { "Cerambycidae": "#88D5DC" } };
+const insecta_cerophytidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D9B", hybridColor: "#DC88BC", appSlug: "cerophytidae", className: "Insecta", orderName: "Coleoptera", name: "Cerophytidae", mainColor: "#CB4D9B", lineageColors: { "Cerophytidae": "#DC88BC" } };
+const insecta_cerylonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#76CB4D", hybridColor: "#A4DC88", appSlug: "cerylonidae", className: "Insecta", orderName: "Coleoptera", name: "Cerylonidae", mainColor: "#76CB4D", lineageColors: { "Cerylonidae": "#A4DC88" } };
+const insecta_chelonariidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D51CB", hybridColor: "#888BDC", appSlug: "chelonariidae", className: "Insecta", orderName: "Coleoptera", name: "Chelonariidae", mainColor: "#4D51CB", lineageColors: { "Chelonariidae": "#888BDC" } };
+const insecta_choristidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB6D4D", hybridColor: "#DC9D88", appSlug: "choristidae", className: "Insecta", orderName: "Mecoptera", name: "Choristidae", mainColor: "#CB6D4D", lineageColors: { "Choristidae": "#DC9D88" } };
+const insecta_ciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB92", hybridColor: "#88DCB6", appSlug: "ciidae", className: "Insecta", orderName: "Coleoptera", name: "Ciidae", mainColor: "#4DCB92", lineageColors: { "Ciidae": "#88DCB6" } };
+const insecta_clambidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#B74DCB", hybridColor: "#CF88DC", appSlug: "clambidae", className: "Insecta", orderName: "Coleoptera", name: "Clambidae", mainColor: "#B74DCB", lineageColors: { "Clambidae": "#CF88DC" } };
+const insecta_cleridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#BACB4D", hybridColor: "#D1DC88", appSlug: "cleridae", className: "Insecta", orderName: "Coleoptera", name: "Cleridae", mainColor: "#BACB4D", lineageColors: { "Cleridae": "#D1DC88" } };
+const insecta_clothodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D95CB", hybridColor: "#88B8DC", appSlug: "clothodidae", className: "Insecta", orderName: "Embioptera", name: "Clothodidae", mainColor: "#4D95CB", lineageColors: { "Clothodidae": "#88B8DC" } };
+const insecta_coccinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D71", hybridColor: "#DC88A0", appSlug: "coccinellidae", className: "Insecta", orderName: "Coleoptera", name: "Coccinellidae", mainColor: "#CB4D71", lineageColors: { "Coccinellidae": "#DC88A0" } };
+const insecta_colpocephalidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB4D", hybridColor: "#88DC88", appSlug: "colpocephalidae", className: "Insecta", orderName: "Psocodea", name: "Colpocephalidae", mainColor: "#4DCB4D", lineageColors: { "Colpocephalidae": "#88DC88" } };
+const insecta_corylophidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#724DCB", hybridColor: "#A188DC", appSlug: "corylophidae", className: "Insecta", orderName: "Coleoptera", name: "Corylophidae", mainColor: "#724DCB", lineageColors: { "Corylophidae": "#A188DC" } };
+const insecta_crowsoniellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB974D", hybridColor: "#DCBA88", appSlug: "crowsoniellidae", className: "Insecta", orderName: "Coleoptera", name: "Crowsoniellidae", mainColor: "#CB974D", lineageColors: { "Crowsoniellidae": "#DCBA88" } };
+const insecta_cucujidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBBC", hybridColor: "#88DCD2", appSlug: "cucujidae", className: "Insecta", orderName: "Coleoptera", name: "Cucujidae", mainColor: "#4DCBBC", lineageColors: { "Cucujidae": "#88DCD2" } };
+const insecta_cupedidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DB5", hybridColor: "#DC88CD", appSlug: "cupedidae", className: "Insecta", orderName: "Coleoptera", name: "Cupedidae", mainColor: "#CB4DB5", lineageColors: { "Cupedidae": "#DC88CD" } };
+const insecta_curculionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#90CB4D", hybridColor: "#B5DC88", appSlug: "curculionidae", className: "Insecta", orderName: "Coleoptera", name: "Curculionidae", mainColor: "#90CB4D", lineageColors: { "Curculionidae": "#B5DC88" } };
+const insecta_dascillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D6BCB", hybridColor: "#889CDC", appSlug: "dascillidae", className: "Insecta", orderName: "Coleoptera", name: "Dascillidae", mainColor: "#4D6BCB", lineageColors: { "Dascillidae": "#889CDC" } };
+const insecta_dasydemellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB534D", hybridColor: "#DC8C88", appSlug: "dasydemellidae", className: "Insecta", orderName: "Psocodea", name: "Dasydemellidae", mainColor: "#CB534D", lineageColors: { "Dasydemellidae": "#DC8C88" } };
+const insecta_dermestidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB78", hybridColor: "#88DCA5", appSlug: "dermestidae", className: "Insecta", orderName: "Coleoptera", name: "Dermestidae", mainColor: "#4DCB78", lineageColors: { "Dermestidae": "#88DCA5" } };
+const insecta_derodontidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#9C4DCB", hybridColor: "#BD88DC", appSlug: "derodontidae", className: "Insecta", orderName: "Coleoptera", name: "Derodontidae", mainColor: "#9C4DCB", lineageColors: { "Derodontidae": "#BD88DC" } };
+const insecta_discolomatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBC14D", hybridColor: "#DCD688", appSlug: "discolomatidae", className: "Insecta", orderName: "Coleoptera", name: "Discolomatidae", mainColor: "#CBC14D", lineageColors: { "Discolomatidae": "#DCD688" } };
+const insecta_dryophthoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DB0CB", hybridColor: "#88CADC", appSlug: "dryophthoridae", className: "Insecta", orderName: "Coleoptera", name: "Dryophthoridae", mainColor: "#4DB0CB", lineageColors: { "Dryophthoridae": "#88CADC" } };
+const insecta_dryopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D8B", hybridColor: "#DC88B1", appSlug: "dryopidae", className: "Insecta", orderName: "Coleoptera", name: "Dryopidae", mainColor: "#CB4D8B", lineageColors: { "Dryopidae": "#DC88B1" } };
+const insecta_dytiscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#66CB4D", hybridColor: "#99DC88", appSlug: "dytiscidae", className: "Insecta", orderName: "Coleoptera", name: "Dytiscidae", mainColor: "#66CB4D", lineageColors: { "Dytiscidae": "#99DC88" } };
+const insecta_echinophthiriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#584DCB", hybridColor: "#9088DC", appSlug: "echinophthiriidae", className: "Insecta", orderName: "Psocodea", name: "Echinophthiriidae", mainColor: "#584DCB", lineageColors: { "Echinophthiriidae": "#9088DC" } };
+const insecta_ectopsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB7D4D", hybridColor: "#DCA888", appSlug: "ectopsocidae", className: "Insecta", orderName: "Psocodea", name: "Ectopsocidae", mainColor: "#CB7D4D", lineageColors: { "Ectopsocidae": "#DCA888" } };
+const insecta_elateridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBA2", hybridColor: "#88DCC1", appSlug: "elateridae", className: "Insecta", orderName: "Coleoptera", name: "Elateridae", mainColor: "#4DCBA2", lineageColors: { "Elateridae": "#88DCC1" } };
+const insecta_elipsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#C74DCB", hybridColor: "#D988DC", appSlug: "elipsocidae", className: "Insecta", orderName: "Psocodea", name: "Elipsocidae", mainColor: "#C74DCB", lineageColors: { "Elipsocidae": "#D988DC" } };
+const insecta_elmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#AACB4D", hybridColor: "#C6DC88", appSlug: "elmidae", className: "Insecta", orderName: "Coleoptera", name: "Elmidae", mainColor: "#AACB4D", lineageColors: { "Elmidae": "#C6DC88" } };
+const insecta_embiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D85CB", hybridColor: "#88AEDC", appSlug: "embiidae", className: "Insecta", orderName: "Embioptera", name: "Embiidae", mainColor: "#4D85CB", lineageColors: { "Embiidae": "#88AEDC" } };
+const insecta_embonychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D61", hybridColor: "#DC8895", appSlug: "embonychidae", className: "Insecta", orderName: "Embioptera", name: "Embonychidae", mainColor: "#CB4D61", lineageColors: { "Embonychidae": "#DC8895" } };
+const insecta_enderleinellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB5E", hybridColor: "#88DC93", appSlug: "enderleinellidae", className: "Insecta", orderName: "Psocodea", name: "Enderleinellidae", mainColor: "#4DCB5E", lineageColors: { "Enderleinellidae": "#88DC93" } };
+const insecta_endomychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#824DCB", hybridColor: "#AC88DC", appSlug: "endomychidae", className: "Insecta", orderName: "Coleoptera", name: "Endomychidae", mainColor: "#824DCB", lineageColors: { "Endomychidae": "#AC88DC" } };
+const insecta_epimetopidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBA74D", hybridColor: "#DCC488", appSlug: "epimetopidae", className: "Insecta", orderName: "Coleoptera", name: "Epimetopidae", mainColor: "#CBA74D", lineageColors: { "Epimetopidae": "#DCC488" } };
+const insecta_epipsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCACB", hybridColor: "#88DBDC", appSlug: "epipsocidae", className: "Insecta", orderName: "Psocodea", name: "Epipsocidae", mainColor: "#4DCACB", lineageColors: { "Epipsocidae": "#88DBDC" } };
+const insecta_erotylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DA5", hybridColor: "#DC88C3", appSlug: "erotylidae", className: "Insecta", orderName: "Coleoptera", name: "Erotylidae", mainColor: "#CB4DA5", lineageColors: { "Erotylidae": "#DC88C3" } };
+const insecta_eucinetidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#80CB4D", hybridColor: "#AADC88", appSlug: "eucinetidae", className: "Insecta", orderName: "Coleoptera", name: "Eucinetidae", mainColor: "#80CB4D", lineageColors: { "Eucinetidae": "#AADC88" } };
+const insecta_eucnemidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D5BCB", hybridColor: "#8892DC", appSlug: "eucnemidae", className: "Insecta", orderName: "Coleoptera", name: "Eucnemidae", mainColor: "#4D5BCB", lineageColors: { "Eucnemidae": "#8892DC" } };
+const insecta_eulichadidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB634D", hybridColor: "#DC9788", appSlug: "eulichadidae", className: "Insecta", orderName: "Coleoptera", name: "Eulichadidae", mainColor: "#CB634D", lineageColors: { "Eulichadidae": "#DC9788" } };
+const insecta_eupsilobiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB88", hybridColor: "#88DCAF", appSlug: "eupsilobiidae", className: "Insecta", orderName: "Coleoptera", name: "Eupsilobiidae", mainColor: "#4DCB88", lineageColors: { "Eupsilobiidae": "#88DCAF" } };
+const insecta_eurhynchidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#AD4DCB", hybridColor: "#C888DC", appSlug: "eurhynchidae", className: "Insecta", orderName: "Coleoptera", name: "Eurhynchidae", mainColor: "#AD4DCB", lineageColors: { "Eurhynchidae": "#C888DC" } };
+const insecta_euxestidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#C4CB4D", hybridColor: "#D8DC88", appSlug: "euxestidae", className: "Insecta", orderName: "Coleoptera", name: "Euxestidae", mainColor: "#C4CB4D", lineageColors: { "Euxestidae": "#D8DC88" } };
+const insecta_geotrupidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D9FCB", hybridColor: "#88BFDC", appSlug: "geotrupidae", className: "Insecta", orderName: "Coleoptera", name: "Geotrupidae", mainColor: "#4D9FCB", lineageColors: { "Geotrupidae": "#88BFDC" } };
+const insecta_glaphyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D7B", hybridColor: "#DC88A7", appSlug: "glaphyridae", className: "Insecta", orderName: "Coleoptera", name: "Glaphyridae", mainColor: "#CB4D7B", lineageColors: { "Glaphyridae": "#DC88A7" } };
+const insecta_glaresidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#56CB4D", hybridColor: "#8EDC88", appSlug: "glaresidae", className: "Insecta", orderName: "Coleoptera", name: "Glaresidae", mainColor: "#56CB4D", lineageColors: { "Glaresidae": "#8EDC88" } };
+const insecta_gliricolidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#684DCB", hybridColor: "#9A88DC", appSlug: "gliricolidae", className: "Insecta", orderName: "Psocodea", name: "Gliricolidae", mainColor: "#684DCB", lineageColors: { "Gliricolidae": "#9A88DC" } };
+const insecta_gyrinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB8D4D", hybridColor: "#DCB388", appSlug: "gyrinidae", className: "Insecta", orderName: "Coleoptera", name: "Gyrinidae", mainColor: "#CB8D4D", lineageColors: { "Gyrinidae": "#DCB388" } };
+const insecta_gyropidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBB2", hybridColor: "#88DCCB", appSlug: "gyropidae", className: "Insecta", orderName: "Psocodea", name: "Gyropidae", mainColor: "#4DCBB2", lineageColors: { "Gyropidae": "#88DCCB" } };
+const insecta_haematomyzidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DBF", hybridColor: "#DC88D4", appSlug: "haematomyzidae", className: "Insecta", orderName: "Psocodea", name: "Haematomyzidae", mainColor: "#CB4DBF", lineageColors: { "Haematomyzidae": "#DC88D4" } };
+const insecta_haematopinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#9ACB4D", hybridColor: "#BCDC88", appSlug: "haematopinidae", className: "Insecta", orderName: "Psocodea", name: "Haematopinidae", mainColor: "#9ACB4D", lineageColors: { "Haematopinidae": "#BCDC88" } };
+const insecta_haliplidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D75CB", hybridColor: "#88A3DC", appSlug: "haliplidae", className: "Insecta", orderName: "Coleoptera", name: "Haliplidae", mainColor: "#4D75CB", lineageColors: { "Haliplidae": "#88A3DC" } };
+const insecta_hamophthiriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D50", hybridColor: "#DC888A", appSlug: "hamophthiriidae", className: "Insecta", orderName: "Psocodea", name: "Hamophthiriidae", mainColor: "#CB4D50", lineageColors: { "Hamophthiriidae": "#DC888A" } };
+const insecta_helophoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB6E", hybridColor: "#88DC9E", appSlug: "helophoridae", className: "Insecta", orderName: "Coleoptera", name: "Helophoridae", mainColor: "#4DCB6E", lineageColors: { "Helophoridae": "#88DC9E" } };
+const insecta_hemipsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#934DCB", hybridColor: "#B788DC", appSlug: "hemipsocidae", className: "Insecta", orderName: "Psocodea", name: "Hemipsocidae", mainColor: "#934DCB", lineageColors: { "Hemipsocidae": "#B788DC" } };
+const insecta_heteroceridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBB74D", hybridColor: "#DCCF88", appSlug: "heteroceridae", className: "Insecta", orderName: "Coleoptera", name: "Heteroceridae", mainColor: "#CBB74D", lineageColors: { "Heteroceridae": "#DCCF88" } };
+const insecta_histeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DBACB", hybridColor: "#88D1DC", appSlug: "histeridae", className: "Insecta", orderName: "Coleoptera", name: "Histeridae", mainColor: "#4DBACB", lineageColors: { "Histeridae": "#88D1DC" } };
+const insecta_hoplopleuridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D95", hybridColor: "#DC88B8", appSlug: "hoplopleuridae", className: "Insecta", orderName: "Psocodea", name: "Hoplopleuridae", mainColor: "#CB4D95", lineageColors: { "Hoplopleuridae": "#DC88B8" } };
+const insecta_hybopthiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#70CB4D", hybridColor: "#9FDC88", appSlug: "hybopthiridae", className: "Insecta", orderName: "Psocodea", name: "Hybopthiridae", mainColor: "#70CB4D", lineageColors: { "Hybopthiridae": "#9FDC88" } };
+const insecta_hybosoridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4E4DCB", hybridColor: "#8988DC", appSlug: "hybosoridae", className: "Insecta", orderName: "Coleoptera", name: "Hybosoridae", mainColor: "#4E4DCB", lineageColors: { "Hybosoridae": "#8988DC" } };
+const insecta_hydraenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB734D", hybridColor: "#DCA288", appSlug: "hydraenidae", className: "Insecta", orderName: "Coleoptera", name: "Hydraenidae", mainColor: "#CB734D", lineageColors: { "Hydraenidae": "#DCA288" } };
+const insecta_hydrophilidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB98", hybridColor: "#88DCBA", appSlug: "hydrophilidae", className: "Insecta", orderName: "Coleoptera", name: "Hydrophilidae", mainColor: "#4DCB98", lineageColors: { "Hydrophilidae": "#88DCBA" } };
+const insecta_hydroscaphidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#BD4DCB", hybridColor: "#D388DC", appSlug: "hydroscaphidae", className: "Insecta", orderName: "Coleoptera", name: "Hydroscaphidae", mainColor: "#BD4DCB", lineageColors: { "Hydroscaphidae": "#D388DC" } };
+const insecta_jacobsoniidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#B4CB4D", hybridColor: "#CDDC88", appSlug: "jacobsoniidae", className: "Insecta", orderName: "Coleoptera", name: "Jacobsoniidae", mainColor: "#B4CB4D", lineageColors: { "Jacobsoniidae": "#CDDC88" } };
+const insecta_jurodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D8FCB", hybridColor: "#88B4DC", appSlug: "jurodidae", className: "Insecta", orderName: "Coleoptera", name: "Jurodidae", mainColor: "#4D8FCB", lineageColors: { "Jurodidae": "#88B4DC" } };
+const insecta_kateretidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D6A", hybridColor: "#DC889C", appSlug: "kateretidae", className: "Insecta", orderName: "Coleoptera", name: "Kateretidae", mainColor: "#CB4D6A", lineageColors: { "Kateretidae": "#DC889C" } };
+const insecta_lachesillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB54", hybridColor: "#88DC8D", appSlug: "lachesillidae", className: "Insecta", orderName: "Psocodea", name: "Lachesillidae", mainColor: "#4DCB54", lineageColors: { "Lachesillidae": "#88DC8D" } };
+const insecta_laemobothriidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#784DCB", hybridColor: "#A588DC", appSlug: "laemobothriidae", className: "Insecta", orderName: "Psocodea", name: "Laemobothriidae", mainColor: "#784DCB", lineageColors: { "Laemobothriidae": "#A588DC" } };
+const insecta_laemophloeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB9D4D", hybridColor: "#DCBE88", appSlug: "laemophloeidae", className: "Insecta", orderName: "Coleoptera", name: "Laemophloeidae", mainColor: "#CB9D4D", lineageColors: { "Laemophloeidae": "#DCBE88" } };
+const insecta_lampyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBC2", hybridColor: "#88DCD6", appSlug: "lampyridae", className: "Insecta", orderName: "Coleoptera", name: "Lampyridae", mainColor: "#4DCBC2", lineageColors: { "Lampyridae": "#88DCD6" } };
+const insecta_latridiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DAF", hybridColor: "#DC88C9", appSlug: "latridiidae", className: "Insecta", orderName: "Coleoptera", name: "Latridiidae", mainColor: "#CB4DAF", lineageColors: { "Latridiidae": "#DC88C9" } };
+const insecta_lepidopsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8ACB4D", hybridColor: "#B1DC88", appSlug: "lepidopsocidae", className: "Insecta", orderName: "Psocodea", name: "Lepidopsocidae", mainColor: "#8ACB4D", lineageColors: { "Lepidopsocidae": "#B1DC88" } };
+const insecta_limnichidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D65CB", hybridColor: "#8898DC", appSlug: "limnichidae", className: "Insecta", orderName: "Coleoptera", name: "Limnichidae", mainColor: "#4D65CB", lineageColors: { "Limnichidae": "#8898DC" } };
+const insecta_linognathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB594D", hybridColor: "#DC9088", appSlug: "linognathidae", className: "Insecta", orderName: "Psocodea", name: "Linognathidae", mainColor: "#CB594D", lineageColors: { "Linognathidae": "#DC9088" } };
+const insecta_liposcelididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB7E", hybridColor: "#88DCA9", appSlug: "liposcelididae", className: "Insecta", orderName: "Psocodea", name: "Liposcelididae", mainColor: "#4DCB7E", lineageColors: { "Liposcelididae": "#88DCA9" } };
+const insecta_lutrochidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A34DCB", hybridColor: "#C188DC", appSlug: "lutrochidae", className: "Insecta", orderName: "Coleoptera", name: "Lutrochidae", mainColor: "#A34DCB", lineageColors: { "Lutrochidae": "#C188DC" } };
+const insecta_lycidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBC84D", hybridColor: "#DCDA88", appSlug: "lycidae", className: "Insecta", orderName: "Coleoptera", name: "Lycidae", mainColor: "#CBC84D", lineageColors: { "Lycidae": "#DCDA88" } };
+const insecta_lymexylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DA9CB", hybridColor: "#88C6DC", appSlug: "lymexylidae", className: "Insecta", orderName: "Coleoptera", name: "Lymexylidae", mainColor: "#4DA9CB", lineageColors: { "Lymexylidae": "#88C6DC" } };
+const insecta_megalopodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D85", hybridColor: "#DC88AD", appSlug: "megalopodidae", className: "Insecta", orderName: "Coleoptera", name: "Megalopodidae", mainColor: "#CB4D85", lineageColors: { "Megalopodidae": "#DC88AD" } };
+const insecta_melandryidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#60CB4D", hybridColor: "#95DC88", appSlug: "melandryidae", className: "Insecta", orderName: "Coleoptera", name: "Melandryidae", mainColor: "#60CB4D", lineageColors: { "Melandryidae": "#95DC88" } };
+const insecta_meloidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#5E4DCB", hybridColor: "#9488DC", appSlug: "meloidae", className: "Insecta", orderName: "Coleoptera", name: "Meloidae", mainColor: "#5E4DCB", lineageColors: { "Meloidae": "#9488DC" } };
+const insecta_melolonthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB834D", hybridColor: "#DCAC88", appSlug: "melolonthidae", className: "Insecta", orderName: "Coleoptera", name: "Melolonthidae", mainColor: "#CB834D", lineageColors: { "Melolonthidae": "#DCAC88" } };
+const insecta_melyridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBA8", hybridColor: "#88DCC5", appSlug: "melyridae", className: "Insecta", orderName: "Coleoptera", name: "Melyridae", mainColor: "#4DCBA8", lineageColors: { "Melyridae": "#88DCC5" } };
+const insecta_menoponidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DC9", hybridColor: "#DC88DB", appSlug: "menoponidae", className: "Insecta", orderName: "Psocodea", name: "Menoponidae", mainColor: "#CB4DC9", lineageColors: { "Menoponidae": "#DC88DB" } };
+const insecta_meropeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A4CB4D", hybridColor: "#C2DC88", appSlug: "meropeidae", className: "Insecta", orderName: "Mecoptera", name: "Meropeidae", mainColor: "#A4CB4D", lineageColors: { "Meropeidae": "#C2DC88" } };
+const insecta_micromalthidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D7FCB", hybridColor: "#88AADC", appSlug: "micromalthidae", className: "Insecta", orderName: "Coleoptera", name: "Micromalthidae", mainColor: "#4D7FCB", lineageColors: { "Micromalthidae": "#88AADC" } };
+const insecta_microthoraciidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D5A", hybridColor: "#DC8891", appSlug: "microthoraciidae", className: "Insecta", orderName: "Psocodea", name: "Microthoraciidae", mainColor: "#CB4D5A", lineageColors: { "Microthoraciidae": "#DC8891" } };
+const insecta_monotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB64", hybridColor: "#88DC97", appSlug: "monotomidae", className: "Insecta", orderName: "Coleoptera", name: "Monotomidae", mainColor: "#4DCB64", lineageColors: { "Monotomidae": "#88DC97" } };
+const insecta_mordellidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#894DCB", hybridColor: "#B088DC", appSlug: "mordellidae", className: "Insecta", orderName: "Coleoptera", name: "Mordellidae", mainColor: "#894DCB", lineageColors: { "Mordellidae": "#B088DC" } };
+const insecta_murmidiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBAD4D", hybridColor: "#DCC888", appSlug: "murmidiidae", className: "Insecta", orderName: "Coleoptera", name: "Murmidiidae", mainColor: "#CBAD4D", lineageColors: { "Murmidiidae": "#DCC888" } };
+const insecta_mycetaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DC3CB", hybridColor: "#88D7DC", appSlug: "mycetaeidae", className: "Insecta", orderName: "Coleoptera", name: "Mycetaeidae", mainColor: "#4DC3CB", lineageColors: { "Mycetaeidae": "#88D7DC" } };
+const insecta_mycetophagidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D9F", hybridColor: "#DC88BF", appSlug: "mycetophagidae", className: "Insecta", orderName: "Coleoptera", name: "Mycetophagidae", mainColor: "#CB4D9F", lineageColors: { "Mycetophagidae": "#DC88BF" } };
+const insecta_mycteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#7ACB4D", hybridColor: "#A6DC88", appSlug: "mycteridae", className: "Insecta", orderName: "Coleoptera", name: "Mycteridae", mainColor: "#7ACB4D", lineageColors: { "Mycteridae": "#A6DC88" } };
+const insecta_myopsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D55CB", hybridColor: "#888DDC", appSlug: "myopsocidae", className: "Insecta", orderName: "Psocodea", name: "Myopsocidae", mainColor: "#4D55CB", lineageColors: { "Myopsocidae": "#888DDC" } };
+const insecta_nannochoristidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB694D", hybridColor: "#DC9B88", appSlug: "nannochoristidae", className: "Insecta", orderName: "Mecoptera", name: "Nannochoristidae", mainColor: "#CB694D", lineageColors: { "Nannochoristidae": "#DC9B88" } };
+const insecta_nemonychidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB8E", hybridColor: "#88DCB3", appSlug: "nemonychidae", className: "Insecta", orderName: "Coleoptera", name: "Nemonychidae", mainColor: "#4DCB8E", lineageColors: { "Nemonychidae": "#88DCB3" } };
+const insecta_neolinognathidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#B34DCB", hybridColor: "#CC88DC", appSlug: "neolinognathidae", className: "Insecta", orderName: "Psocodea", name: "Neolinognathidae", mainColor: "#B34DCB", lineageColors: { "Neolinognathidae": "#CC88DC" } };
+const insecta_nitidulidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#BECB4D", hybridColor: "#D4DC88", appSlug: "nitidulidae", className: "Insecta", orderName: "Coleoptera", name: "Nitidulidae", mainColor: "#BECB4D", lineageColors: { "Nitidulidae": "#D4DC88" } };
+const insecta_nosodendridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D99CB", hybridColor: "#88BBDC", appSlug: "nosodendridae", className: "Insecta", orderName: "Coleoptera", name: "Nosodendridae", mainColor: "#4D99CB", lineageColors: { "Nosodendridae": "#88BBDC" } };
+const insecta_noteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D74", hybridColor: "#DC88A2", appSlug: "noteridae", className: "Insecta", orderName: "Coleoptera", name: "Noteridae", mainColor: "#CB4D74", lineageColors: { "Noteridae": "#DC88A2" } };
+const insecta_notoligotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#50CB4D", hybridColor: "#8ADC88", appSlug: "notoligotomidae", className: "Insecta", orderName: "Embioptera", name: "Notoligotomidae", mainColor: "#50CB4D", lineageColors: { "Notoligotomidae": "#8ADC88" } };
+const insecta_ochodaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6F4DCB", hybridColor: "#9F88DC", appSlug: "ochodaeidae", className: "Insecta", orderName: "Coleoptera", name: "Ochodaeidae", mainColor: "#6F4DCB", lineageColors: { "Ochodaeidae": "#9F88DC" } };
+const insecta_oedemeridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB934D", hybridColor: "#DCB788", appSlug: "oedemeridae", className: "Insecta", orderName: "Coleoptera", name: "Oedemeridae", mainColor: "#CB934D", lineageColors: { "Oedemeridae": "#DCB788" } };
+const insecta_oligotomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBB8", hybridColor: "#88DCD0", appSlug: "oligotomidae", className: "Insecta", orderName: "Embioptera", name: "Oligotomidae", mainColor: "#4DCBB8", lineageColors: { "Oligotomidae": "#88DCD0" } };
+const insecta_omethidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DB9", hybridColor: "#DC88D0", appSlug: "omethidae", className: "Insecta", orderName: "Coleoptera", name: "Omethidae", mainColor: "#CB4DB9", lineageColors: { "Omethidae": "#DC88D0" } };
+const insecta_ommatidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#94CB4D", hybridColor: "#B7DC88", appSlug: "ommatidae", className: "Insecta", orderName: "Coleoptera", name: "Ommatidae", mainColor: "#94CB4D", lineageColors: { "Ommatidae": "#B7DC88" } };
+const insecta_orsodacnidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D6FCB", hybridColor: "#889FDC", appSlug: "orsodacnidae", className: "Insecta", orderName: "Coleoptera", name: "Orsodacnidae", mainColor: "#4D6FCB", lineageColors: { "Orsodacnidae": "#889FDC" } };
+const insecta_pachytroctidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4F4D", hybridColor: "#DC8A88", appSlug: "pachytroctidae", className: "Insecta", orderName: "Psocodea", name: "Pachytroctidae", mainColor: "#CB4F4D", lineageColors: { "Pachytroctidae": "#DC8A88" } };
+const insecta_paedembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB74", hybridColor: "#88DCA2", appSlug: "paedembiidae", className: "Insecta", orderName: "Embioptera", name: "Paedembiidae", mainColor: "#4DCB74", lineageColors: { "Paedembiidae": "#88DCA2" } };
+const insecta_panorpodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#994DCB", hybridColor: "#BB88DC", appSlug: "panorpodidae", className: "Insecta", orderName: "Mecoptera", name: "Panorpodidae", mainColor: "#994DCB", lineageColors: { "Panorpodidae": "#BB88DC" } };
+const insecta_paracaeciliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBBE4D", hybridColor: "#DCD388", appSlug: "paracaeciliidae", className: "Insecta", orderName: "Psocodea", name: "Paracaeciliidae", mainColor: "#CBBE4D", lineageColors: { "Paracaeciliidae": "#DCD388" } };
+const insecta_passandridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DB3CB", hybridColor: "#88CCDC", appSlug: "passandridae", className: "Insecta", orderName: "Coleoptera", name: "Passandridae", mainColor: "#4DB3CB", lineageColors: { "Passandridae": "#88CCDC" } };
+const insecta_pecaroecidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D8F", hybridColor: "#DC88B4", appSlug: "pecaroecidae", className: "Insecta", orderName: "Psocodea", name: "Pecaroecidae", mainColor: "#CB4D8F", lineageColors: { "Pecaroecidae": "#DC88B4" } };
+const insecta_pedicinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#6ACB4D", hybridColor: "#9BDC88", appSlug: "pedicinidae", className: "Insecta", orderName: "Psocodea", name: "Pedicinidae", mainColor: "#6ACB4D", lineageColors: { "Pedicinidae": "#9BDC88" } };
+const insecta_peripsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#544DCB", hybridColor: "#8D88DC", appSlug: "peripsocidae", className: "Insecta", orderName: "Psocodea", name: "Peripsocidae", mainColor: "#544DCB", lineageColors: { "Peripsocidae": "#8D88DC" } };
+const insecta_phengodidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB794D", hybridColor: "#DCA688", appSlug: "phengodidae", className: "Insecta", orderName: "Coleoptera", name: "Phengodidae", mainColor: "#CB794D", lineageColors: { "Phengodidae": "#DCA688" } };
+const insecta_philopteridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB9E", hybridColor: "#88DCBE", appSlug: "philopteridae", className: "Insecta", orderName: "Psocodea", name: "Philopteridae", mainColor: "#4DCB9E", lineageColors: { "Philopteridae": "#88DCBE" } };
+const insecta_philotarsidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#C34DCB", hybridColor: "#D788DC", appSlug: "philotarsidae", className: "Insecta", orderName: "Psocodea", name: "Philotarsidae", mainColor: "#C34DCB", lineageColors: { "Philotarsidae": "#D788DC" } };
+const insecta_pleocomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#AECB4D", hybridColor: "#C9DC88", appSlug: "pleocomidae", className: "Insecta", orderName: "Coleoptera", name: "Pleocomidae", mainColor: "#AECB4D", lineageColors: { "Pleocomidae": "#C9DC88" } };
+const insecta_polyplacidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D89CB", hybridColor: "#88B0DC", appSlug: "polyplacidae", className: "Insecta", orderName: "Psocodea", name: "Polyplacidae", mainColor: "#4D89CB", lineageColors: { "Polyplacidae": "#88B0DC" } };
+const insecta_prionoglarididae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D64", hybridColor: "#DC8898", appSlug: "prionoglarididae", className: "Insecta", orderName: "Psocodea", name: "Prionoglarididae", mainColor: "#CB4D64", lineageColors: { "Prionoglarididae": "#DC8898" } };
+const insecta_prostomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB5A", hybridColor: "#88DC91", appSlug: "prostomidae", className: "Insecta", orderName: "Coleoptera", name: "Prostomidae", mainColor: "#4DCB5A", lineageColors: { "Prostomidae": "#88DC91" } };
+const insecta_psephenidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#7F4DCB", hybridColor: "#A988DC", appSlug: "psephenidae", className: "Insecta", orderName: "Coleoptera", name: "Psephenidae", mainColor: "#7F4DCB", lineageColors: { "Psephenidae": "#A988DC" } };
+const insecta_pseudocaeciliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBA34D", hybridColor: "#DCC288", appSlug: "pseudocaeciliidae", className: "Insecta", orderName: "Psocodea", name: "Pseudocaeciliidae", mainColor: "#CBA34D", lineageColors: { "Pseudocaeciliidae": "#DCC288" } };
+const insecta_pseudomenoponidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBC8", hybridColor: "#88DCDA", appSlug: "pseudomenoponidae", className: "Insecta", orderName: "Psocodea", name: "Pseudomenoponidae", mainColor: "#4DCBC8", lineageColors: { "Pseudomenoponidae": "#88DCDA" } };
+const insecta_psocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DA9", hybridColor: "#DC88C5", appSlug: "psocidae", className: "Insecta", orderName: "Psocodea", name: "Psocidae", mainColor: "#CB4DA9", lineageColors: { "Psocidae": "#DC88C5" } };
+const insecta_psoquillidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#84CB4D", hybridColor: "#ADDC88", appSlug: "psoquillidae", className: "Insecta", orderName: "Psocodea", name: "Psoquillidae", mainColor: "#84CB4D", lineageColors: { "Psoquillidae": "#ADDC88" } };
+const insecta_psyllipsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D5FCB", hybridColor: "#8894DC", appSlug: "psyllipsocidae", className: "Insecta", orderName: "Psocodea", name: "Psyllipsocidae", mainColor: "#4D5FCB", lineageColors: { "Psyllipsocidae": "#8894DC" } };
+const insecta_pthiridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB5F4D", hybridColor: "#DC9488", appSlug: "pthiridae", className: "Insecta", orderName: "Psocodea", name: "Pthiridae", mainColor: "#CB5F4D", lineageColors: { "Pthiridae": "#DC9488" } };
+const insecta_ptiliidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB84", hybridColor: "#88DCAD", appSlug: "ptiliidae", className: "Insecta", orderName: "Coleoptera", name: "Ptiliidae", mainColor: "#4DCB84", lineageColors: { "Ptiliidae": "#88DCAD" } };
+const insecta_ptilocerembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#A94DCB", hybridColor: "#C588DC", appSlug: "ptilocerembiidae", className: "Insecta", orderName: "Embioptera", name: "Ptilocerembiidae", mainColor: "#A94DCB", lineageColors: { "Ptilocerembiidae": "#C588DC" } };
+const insecta_ptilodactylidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#C8CB4D", hybridColor: "#DADC88", appSlug: "ptilodactylidae", className: "Insecta", orderName: "Coleoptera", name: "Ptilodactylidae", mainColor: "#C8CB4D", lineageColors: { "Ptilodactylidae": "#DADC88" } };
+const insecta_ptinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DA3CB", hybridColor: "#88C2DC", appSlug: "ptinidae", className: "Insecta", orderName: "Coleoptera", name: "Ptinidae", mainColor: "#4DA3CB", lineageColors: { "Ptinidae": "#88C2DC" } };
+const insecta_pyrochroidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D7E", hybridColor: "#DC88A9", appSlug: "pyrochroidae", className: "Insecta", orderName: "Coleoptera", name: "Pyrochroidae", mainColor: "#CB4D7E", lineageColors: { "Pyrochroidae": "#DC88A9" } };
+const insecta_pythidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#5ACB4D", hybridColor: "#91DC88", appSlug: "pythidae", className: "Insecta", orderName: "Coleoptera", name: "Pythidae", mainColor: "#5ACB4D", lineageColors: { "Pythidae": "#91DC88" } };
+const insecta_ratemiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#654DCB", hybridColor: "#9888DC", appSlug: "ratemiidae", className: "Insecta", orderName: "Psocodea", name: "Ratemiidae", mainColor: "#654DCB", lineageColors: { "Ratemiidae": "#9888DC" } };
+const insecta_rhagophthalmidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB894D", hybridColor: "#DCB088", appSlug: "rhagophthalmidae", className: "Insecta", orderName: "Coleoptera", name: "Rhagophthalmidae", mainColor: "#CB894D", lineageColors: { "Rhagophthalmidae": "#DCB088" } };
+const insecta_rhipiceridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBAE", hybridColor: "#88DCC9", appSlug: "rhipiceridae", className: "Insecta", orderName: "Coleoptera", name: "Rhipiceridae", mainColor: "#4DCBAE", lineageColors: { "Rhipiceridae": "#88DCC9" } };
+const insecta_sabulopsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DC3", hybridColor: "#DC88D7", appSlug: "sabulopsocidae", className: "Insecta", orderName: "Psocodea", name: "Sabulopsocidae", mainColor: "#CB4DC3", lineageColors: { "Sabulopsocidae": "#DC88D7" } };
+const insecta_salpingidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#9ECB4D", hybridColor: "#BEDC88", appSlug: "salpingidae", className: "Insecta", orderName: "Coleoptera", name: "Salpingidae", mainColor: "#9ECB4D", lineageColors: { "Salpingidae": "#BEDC88" } };
+const insecta_scarabaeidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D79CB", hybridColor: "#88A5DC", appSlug: "scarabaeidae", className: "Insecta", orderName: "Coleoptera", name: "Scarabaeidae", mainColor: "#4D79CB", lineageColors: { "Scarabaeidae": "#88A5DC" } };
+const insecta_scirtidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D54", hybridColor: "#DC888D", appSlug: "scirtidae", className: "Insecta", orderName: "Coleoptera", name: "Scirtidae", mainColor: "#CB4D54", lineageColors: { "Scirtidae": "#DC888D" } };
+const insecta_scraptiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB6A", hybridColor: "#88DC9B", appSlug: "scraptiidae", className: "Insecta", orderName: "Coleoptera", name: "Scraptiidae", mainColor: "#4DCB6A", lineageColors: { "Scraptiidae": "#88DC9B" } };
+const insecta_silvanidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8F4DCB", hybridColor: "#B488DC", appSlug: "silvanidae", className: "Insecta", orderName: "Coleoptera", name: "Silvanidae", mainColor: "#8F4DCB", lineageColors: { "Silvanidae": "#B488DC" } };
+const insecta_smicripidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBB44D", hybridColor: "#DCCD88", appSlug: "smicripidae", className: "Insecta", orderName: "Coleoptera", name: "Smicripidae", mainColor: "#CBB44D", lineageColors: { "Smicripidae": "#DCCD88" } };
+const insecta_somaphantidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DBDCB", hybridColor: "#88D3DC", appSlug: "somaphantidae", className: "Insecta", orderName: "Psocodea", name: "Somaphantidae", mainColor: "#4DBDCB", lineageColors: { "Somaphantidae": "#88D3DC" } };
+const insecta_spercheidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D98", hybridColor: "#DC88BA", appSlug: "spercheidae", className: "Insecta", orderName: "Coleoptera", name: "Spercheidae", mainColor: "#CB4D98", lineageColors: { "Spercheidae": "#DC88BA" } };
+const insecta_sphaeritidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#74CB4D", hybridColor: "#A2DC88", appSlug: "sphaeritidae", className: "Insecta", orderName: "Coleoptera", name: "Sphaeritidae", mainColor: "#74CB4D", lineageColors: { "Sphaeritidae": "#A2DC88" } };
+const insecta_sphaeriusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D4FCB", hybridColor: "#8889DC", appSlug: "sphaeriusidae", className: "Insecta", orderName: "Coleoptera", name: "Sphaeriusidae", mainColor: "#4D4FCB", lineageColors: { "Sphaeriusidae": "#8889DC" } };
+const insecta_sphaeropsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB6F4D", hybridColor: "#DC9F88", appSlug: "sphaeropsocidae", className: "Insecta", orderName: "Psocodea", name: "Sphaeropsocidae", mainColor: "#CB6F4D", lineageColors: { "Sphaeropsocidae": "#DC9F88" } };
+const insecta_sphindidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB94", hybridColor: "#88DCB8", appSlug: "sphindidae", className: "Insecta", orderName: "Coleoptera", name: "Sphindidae", mainColor: "#4DCB94", lineageColors: { "Sphindidae": "#88DCB8" } };
+const insecta_staphylinidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#B94DCB", hybridColor: "#D088DC", appSlug: "staphylinidae", className: "Insecta", orderName: "Coleoptera", name: "Staphylinidae", mainColor: "#B94DCB", lineageColors: { "Staphylinidae": "#D088DC" } };
+const insecta_stenopsocidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#B8CB4D", hybridColor: "#CFDC88", appSlug: "stenopsocidae", className: "Insecta", orderName: "Psocodea", name: "Stenopsocidae", mainColor: "#B8CB4D", lineageColors: { "Stenopsocidae": "#CFDC88" } };
+const insecta_stenotrachelidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D93CB", hybridColor: "#88B7DC", appSlug: "stenotrachelidae", className: "Insecta", orderName: "Coleoptera", name: "Stenotrachelidae", mainColor: "#4D93CB", lineageColors: { "Stenotrachelidae": "#88B7DC" } };
+const insecta_synchroidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D6E", hybridColor: "#DC889E", appSlug: "synchroidae", className: "Insecta", orderName: "Coleoptera", name: "Synchroidae", mainColor: "#CB4D6E", lineageColors: { "Synchroidae": "#DC889E" } };
+const insecta_telegeusidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB50", hybridColor: "#88DC8A", appSlug: "telegeusidae", className: "Insecta", orderName: "Coleoptera", name: "Telegeusidae", mainColor: "#4DCB50", lineageColors: { "Telegeusidae": "#88DC8A" } };
+const insecta_tenebrionidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#754DCB", hybridColor: "#A388DC", appSlug: "tenebrionidae", className: "Insecta", orderName: "Coleoptera", name: "Tenebrionidae", mainColor: "#754DCB", lineageColors: { "Tenebrionidae": "#A388DC" } };
+const insecta_teratembiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB9A4D", hybridColor: "#DCBB88", appSlug: "teratembiidae", className: "Insecta", orderName: "Embioptera", name: "Teratembiidae", mainColor: "#CB9A4D", lineageColors: { "Teratembiidae": "#DCBB88" } };
+const insecta_teredidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCBBE", hybridColor: "#88DCD4", appSlug: "teredidae", className: "Insecta", orderName: "Coleoptera", name: "Teredidae", mainColor: "#4DCBBE", lineageColors: { "Teredidae": "#88DCD4" } };
+const insecta_tetratomidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4DB3", hybridColor: "#DC88CC", appSlug: "tetratomidae", className: "Insecta", orderName: "Coleoptera", name: "Tetratomidae", mainColor: "#CB4DB3", lineageColors: { "Tetratomidae": "#DC88CC" } };
+const insecta_throscidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#8ECB4D", hybridColor: "#B3DC88", appSlug: "throscidae", className: "Insecta", orderName: "Coleoptera", name: "Throscidae", mainColor: "#8ECB4D", lineageColors: { "Throscidae": "#B3DC88" } };
+const insecta_trachypachidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4D69CB", hybridColor: "#889BDC", appSlug: "trachypachidae", className: "Insecta", orderName: "Coleoptera", name: "Trachypachidae", mainColor: "#4D69CB", lineageColors: { "Trachypachidae": "#889BDC" } };
+const insecta_trichodectidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB554D", hybridColor: "#DC8E88", appSlug: "trichodectidae", className: "Insecta", orderName: "Psocodea", name: "Trichodectidae", mainColor: "#CB554D", lineageColors: { "Trichodectidae": "#DC8E88" } };
+const insecta_trinotonidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DCB7A", hybridColor: "#88DCA6", appSlug: "trinotonidae", className: "Insecta", orderName: "Psocodea", name: "Trinotonidae", mainColor: "#4DCB7A", lineageColors: { "Trinotonidae": "#88DCA6" } };
+const insecta_trogidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#9F4DCB", hybridColor: "#BF88DC", appSlug: "trogidae", className: "Insecta", orderName: "Coleoptera", name: "Trogidae", mainColor: "#9F4DCB", lineageColors: { "Trogidae": "#BF88DC" } };
+const insecta_trogiidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CBC44D", hybridColor: "#DCD788", appSlug: "trogiidae", className: "Insecta", orderName: "Psocodea", name: "Trogiidae", mainColor: "#CBC44D", lineageColors: { "Trogiidae": "#DCD788" } };
+const insecta_trogossitidae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#4DADCB", hybridColor: "#88C8DC", appSlug: "trogossitidae", className: "Insecta", orderName: "Coleoptera", name: "Trogossitidae", mainColor: "#4DADCB", lineageColors: { "Trogossitidae": "#88C8DC" } };
+const insecta_zopheridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "#CB4D88", hybridColor: "#DC88B0", appSlug: "zopheridae", className: "Insecta", orderName: "Coleoptera", name: "Zopheridae", mainColor: "#CB4D88", lineageColors: { "Zopheridae": "#DC88B0" } };
 
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
+  aderidae: insecta_aderidae,
+  amphientomidae: insecta_amphientomidae,
+  amphipsocidae: insecta_amphipsocidae,
+  amphizoidae: insecta_amphizoidae,
+  anamorphidae: insecta_anamorphidae,
+  ancistronidae: insecta_ancistronidae,
+  andesembiidae: insecta_andesembiidae,
+  anisembiidae: insecta_anisembiidae,
+  anobiidae: insecta_anobiidae,
+  anthicidae: insecta_anthicidae,
+  anthribidae: insecta_anthribidae,
+  archembiidae: insecta_archembiidae,
+  archeocrypticidae: insecta_archeocrypticidae,
+  archipsocidae: insecta_archipsocidae,
+  artematopodidae: insecta_artematopodidae,
+  asiopsocidae: insecta_asiopsocidae,
+  attelabidae: insecta_attelabidae,
+  aulacidae: insecta_aulacidae,
+  australembiidae: insecta_australembiidae,
+  belidae: insecta_belidae,
+  belohinidae: insecta_belohinidae,
+  biphyllidae: insecta_biphyllidae,
+  bittacidae: insecta_bittacidae,
+  boopiidae: insecta_boopiidae,
+  boreidae: insecta_boreidae,
+  boridae: insecta_boridae,
+  bostrichidae: insecta_bostrichidae,
+  bothrideridae: insecta_bothrideridae,
+  brachyceridae: insecta_brachyceridae,
+  brachypsectridae: insecta_brachypsectridae,
+  brentidae: insecta_brentidae,
+  buprestidae: insecta_buprestidae,
+  byrrhidae: insecta_byrrhidae,
+  byturidae: insecta_byturidae,
+  caeciliusidae: insecta_caeciliusidae,
+  callirhipidae: insecta_callirhipidae,
+  cantharidae: insecta_cantharidae,
+  caridae: insecta_caridae,
+  cerambycidae: insecta_cerambycidae,
+  cerophytidae: insecta_cerophytidae,
+  cerylonidae: insecta_cerylonidae,
+  chelonariidae: insecta_chelonariidae,
+  choristidae: insecta_choristidae,
+  ciidae: insecta_ciidae,
+  clambidae: insecta_clambidae,
+  cleridae: insecta_cleridae,
+  clothodidae: insecta_clothodidae,
+  coccinellidae: insecta_coccinellidae,
+  colpocephalidae: insecta_colpocephalidae,
+  corylophidae: insecta_corylophidae,
+  crowsoniellidae: insecta_crowsoniellidae,
+  cucujidae: insecta_cucujidae,
+  cupedidae: insecta_cupedidae,
+  curculionidae: insecta_curculionidae,
+  dascillidae: insecta_dascillidae,
+  dasydemellidae: insecta_dasydemellidae,
+  dermestidae: insecta_dermestidae,
+  derodontidae: insecta_derodontidae,
+  discolomatidae: insecta_discolomatidae,
+  dryophthoridae: insecta_dryophthoridae,
+  dryopidae: insecta_dryopidae,
+  dytiscidae: insecta_dytiscidae,
+  echinophthiriidae: insecta_echinophthiriidae,
+  ectopsocidae: insecta_ectopsocidae,
+  elateridae: insecta_elateridae,
+  elipsocidae: insecta_elipsocidae,
+  elmidae: insecta_elmidae,
+  embiidae: insecta_embiidae,
+  embonychidae: insecta_embonychidae,
+  enderleinellidae: insecta_enderleinellidae,
+  endomychidae: insecta_endomychidae,
+  epimetopidae: insecta_epimetopidae,
+  epipsocidae: insecta_epipsocidae,
+  erotylidae: insecta_erotylidae,
+  eucinetidae: insecta_eucinetidae,
+  eucnemidae: insecta_eucnemidae,
+  eulichadidae: insecta_eulichadidae,
+  eupsilobiidae: insecta_eupsilobiidae,
+  eurhynchidae: insecta_eurhynchidae,
+  euxestidae: insecta_euxestidae,
+  geotrupidae: insecta_geotrupidae,
+  glaphyridae: insecta_glaphyridae,
+  glaresidae: insecta_glaresidae,
+  gliricolidae: insecta_gliricolidae,
+  gyrinidae: insecta_gyrinidae,
+  gyropidae: insecta_gyropidae,
+  haematomyzidae: insecta_haematomyzidae,
+  haematopinidae: insecta_haematopinidae,
+  haliplidae: insecta_haliplidae,
+  hamophthiriidae: insecta_hamophthiriidae,
+  helophoridae: insecta_helophoridae,
+  hemipsocidae: insecta_hemipsocidae,
+  heteroceridae: insecta_heteroceridae,
+  histeridae: insecta_histeridae,
+  hoplopleuridae: insecta_hoplopleuridae,
+  hybopthiridae: insecta_hybopthiridae,
+  hybosoridae: insecta_hybosoridae,
+  hydraenidae: insecta_hydraenidae,
+  hydrophilidae: insecta_hydrophilidae,
+  hydroscaphidae: insecta_hydroscaphidae,
+  jacobsoniidae: insecta_jacobsoniidae,
+  jurodidae: insecta_jurodidae,
+  kateretidae: insecta_kateretidae,
+  lachesillidae: insecta_lachesillidae,
+  laemobothriidae: insecta_laemobothriidae,
+  laemophloeidae: insecta_laemophloeidae,
+  lampyridae: insecta_lampyridae,
+  latridiidae: insecta_latridiidae,
+  lepidopsocidae: insecta_lepidopsocidae,
+  limnichidae: insecta_limnichidae,
+  linognathidae: insecta_linognathidae,
+  liposcelididae: insecta_liposcelididae,
+  lutrochidae: insecta_lutrochidae,
+  lycidae: insecta_lycidae,
+  lymexylidae: insecta_lymexylidae,
+  megalopodidae: insecta_megalopodidae,
+  melandryidae: insecta_melandryidae,
+  meloidae: insecta_meloidae,
+  melolonthidae: insecta_melolonthidae,
+  melyridae: insecta_melyridae,
+  menoponidae: insecta_menoponidae,
+  meropeidae: insecta_meropeidae,
+  micromalthidae: insecta_micromalthidae,
+  microthoraciidae: insecta_microthoraciidae,
+  monotomidae: insecta_monotomidae,
+  mordellidae: insecta_mordellidae,
+  murmidiidae: insecta_murmidiidae,
+  mycetaeidae: insecta_mycetaeidae,
+  mycetophagidae: insecta_mycetophagidae,
+  mycteridae: insecta_mycteridae,
+  myopsocidae: insecta_myopsocidae,
+  nannochoristidae: insecta_nannochoristidae,
+  nemonychidae: insecta_nemonychidae,
+  neolinognathidae: insecta_neolinognathidae,
+  nitidulidae: insecta_nitidulidae,
+  nosodendridae: insecta_nosodendridae,
+  noteridae: insecta_noteridae,
+  notoligotomidae: insecta_notoligotomidae,
+  ochodaeidae: insecta_ochodaeidae,
+  oedemeridae: insecta_oedemeridae,
+  oligotomidae: insecta_oligotomidae,
+  omethidae: insecta_omethidae,
+  ommatidae: insecta_ommatidae,
+  orsodacnidae: insecta_orsodacnidae,
+  pachytroctidae: insecta_pachytroctidae,
+  paedembiidae: insecta_paedembiidae,
+  panorpodidae: insecta_panorpodidae,
+  paracaeciliidae: insecta_paracaeciliidae,
+  passandridae: insecta_passandridae,
+  pecaroecidae: insecta_pecaroecidae,
+  pedicinidae: insecta_pedicinidae,
+  peripsocidae: insecta_peripsocidae,
+  phengodidae: insecta_phengodidae,
+  philopteridae: insecta_philopteridae,
+  philotarsidae: insecta_philotarsidae,
+  pleocomidae: insecta_pleocomidae,
+  polyplacidae: insecta_polyplacidae,
+  prionoglarididae: insecta_prionoglarididae,
+  prostomidae: insecta_prostomidae,
+  psephenidae: insecta_psephenidae,
+  pseudocaeciliidae: insecta_pseudocaeciliidae,
+  pseudomenoponidae: insecta_pseudomenoponidae,
+  psocidae: insecta_psocidae,
+  psoquillidae: insecta_psoquillidae,
+  psyllipsocidae: insecta_psyllipsocidae,
+  pthiridae: insecta_pthiridae,
+  ptiliidae: insecta_ptiliidae,
+  ptilocerembiidae: insecta_ptilocerembiidae,
+  ptilodactylidae: insecta_ptilodactylidae,
+  ptinidae: insecta_ptinidae,
+  pyrochroidae: insecta_pyrochroidae,
+  pythidae: insecta_pythidae,
+  ratemiidae: insecta_ratemiidae,
+  rhagophthalmidae: insecta_rhagophthalmidae,
+  rhipiceridae: insecta_rhipiceridae,
+  sabulopsocidae: insecta_sabulopsocidae,
+  salpingidae: insecta_salpingidae,
+  scarabaeidae: insecta_scarabaeidae,
+  scirtidae: insecta_scirtidae,
+  scraptiidae: insecta_scraptiidae,
+  silvanidae: insecta_silvanidae,
+  smicripidae: insecta_smicripidae,
+  somaphantidae: insecta_somaphantidae,
+  spercheidae: insecta_spercheidae,
+  sphaeritidae: insecta_sphaeritidae,
+  sphaeriusidae: insecta_sphaeriusidae,
+  sphaeropsocidae: insecta_sphaeropsocidae,
+  sphindidae: insecta_sphindidae,
+  staphylinidae: insecta_staphylinidae,
+  stenopsocidae: insecta_stenopsocidae,
+  stenotrachelidae: insecta_stenotrachelidae,
+  synchroidae: insecta_synchroidae,
+  telegeusidae: insecta_telegeusidae,
+  tenebrionidae: insecta_tenebrionidae,
+  teratembiidae: insecta_teratembiidae,
+  teredidae: insecta_teredidae,
+  tetratomidae: insecta_tetratomidae,
+  throscidae: insecta_throscidae,
+  trachypachidae: insecta_trachypachidae,
+  trichodectidae: insecta_trichodectidae,
+  trinotonidae: insecta_trinotonidae,
+  trogidae: insecta_trogidae,
+  trogiidae: insecta_trogiidae,
+  trogossitidae: insecta_trogossitidae,
+  zopheridae: insecta_zopheridae,
   alatinidae:    ALATINIDAE_THEME,
   carukiidae:    CARUKIIDAE_THEME,
   carybdeidae:   CARYBDEIDAE_THEME,
@@ -10845,10 +11250,13 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "semnoderidae": cyclorhagida_semnoderidae,
   "centroderidae": cyclorhagida_centroderidae,
   "zelinkaderidae": cyclorhagida_zelinkaderidae,
-  "campyloderidae": cyclorhagida_campyloderidae,
-   "nectonematidae": gordioida_nectonematidae,
-   "paragordiidae": gordioida_paragordiidae,
-   "trichoplacidae": TRICHOPLACIDAE_THEME,
+   "campyloderidae": cyclorhagida_campyloderidae,
+   "echinoderidae": cyclorhagida_echinoderidae,
+    "nectonematidae": gordioida_nectonematidae,
+    "paragordiidae": gordioida_paragordiidae,
+    "chordodidae": gordioida_chordodidae,
+    "gordiidae": gordioida_gordiidae,
+    "trichoplacidae": TRICHOPLACIDAE_THEME,
    "hoilungidae": HOILUNGIDAE_THEME,
    "cladtertiidae": CLADTERTIIDAE_THEME,
     "polyplacotomidae": POLYPLACOTOMIDAE_THEME,
@@ -10915,7 +11323,8 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
     "solenofilomorphidae": SOLENOFILOMORPHIDAE_THEME,
     "taurididae": TAURIDIDAE_THEME,
     "ascopariidae": ASCOPARIIDAE_THEME,
-    "nemertodermatidae": NEMERTODERMATIDAE_THEME,};
+    "nemertodermatidae": NEMERTODERMATIDAE_THEME,
+    "arhynchonemertidae": ARHYNCHONEMERTIDAE_THEME,};
 
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

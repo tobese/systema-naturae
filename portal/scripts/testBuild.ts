@@ -3,8 +3,11 @@ import { readFileSync, existsSync } from "fs";
 import { resolve } from "path";
 
 const PORTAL = resolve(import.meta.dirname, "..");
-const UNIFIED = resolve(PORTAL, "data/unified-taxonomy.json");
-const MIN_NODES = 68000;
+const KINGDOM = process.env.SN_KINGDOM || "";
+const UNIFIED = KINGDOM
+  ? resolve(PORTAL, `data/kingdoms/${KINGDOM}/unified-taxonomy.json`)
+  : resolve(PORTAL, "data/unified-taxonomy.json");
+const MIN_NODES = KINGDOM ? 10000 : 68000;
 
 interface TreeNode {
   id?: string;
@@ -37,12 +40,14 @@ function main() {
   const checkSlugs = process.argv.slice(2);
 
   // 1. Run build
-  console.log("⏳ Building unified taxonomy...");
+  console.log(`⏳ Building unified taxonomy${KINGDOM ? ` for ${KINGDOM}` : ""}...`);
   const start = Date.now();
+  const env = KINGDOM ? { ...process.env, SN_KINGDOM: KINGDOM } : process.env;
   const out = execSync("sh scripts/buildData.sh", {
     cwd: PORTAL,
     encoding: "utf-8",
     timeout: 60000,
+    env,
   });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
 

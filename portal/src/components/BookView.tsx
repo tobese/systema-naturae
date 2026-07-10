@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type { TaxonNode } from "@shared/types";
-import { getClassColor, getOrderColor } from "../colors";
+import { getClassColor, getOrderColor, buildClassPaletteFromTree } from "../colors";
 
 interface BookViewProps {
   data: TaxonNode;
@@ -31,6 +31,7 @@ function findPathToNode(node: TaxonNode, targetId: string, currentPath: string[]
 
 export default function BookView({ data, selectedId, onSelect }: BookViewProps) {
   const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+  const classPalette = useMemo(() => buildClassPaletteFromTree(data).base, [data]);
 
   // Auto-expand parents when selectedId changes
   useEffect(() => {
@@ -106,9 +107,9 @@ export default function BookView({ data, selectedId, onSelect }: BookViewProps) 
     // Resolve color theme based on rank and lineage
     let color = "#888888";
     if (nextClassName) {
-      color = getClassColor(nextClassName);
+      color = getClassColor(nextClassName, classPalette);
       if (nextOrderName && node.rank !== "CLASS") {
-        color = getOrderColor(nextClassName, nextOrderName);
+        color = getOrderColor(nextClassName, nextOrderName, classPalette);
       }
     }
 

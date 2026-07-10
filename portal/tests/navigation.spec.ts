@@ -13,6 +13,25 @@ const waitForTree = (page: Page) => page.waitForSelector('[data-rank]', { timeou
 
 const hasParam = (p: string) => new RegExp(`[?&]${p}=`);
 
+// ── OVERVIEW ──────────────────────────────────────────────────────────────────
+
+test.describe('OVERVIEW', () => {
+  test('initial load renders phyla, classes and orders', async ({ page }) => {
+    await page.goto('');
+    await waitForTree(page);
+    await expect(page.locator('[data-rank="PHYLUM"]').first()).toBeAttached();
+    await expect(page.locator('[data-rank="CLASS"]').first()).toBeAttached();
+    await expect(page.locator('[data-rank="ORDER"]').first()).toBeAttached();
+  });
+
+  test('no class or family param in URL on initial load', async ({ page }) => {
+    await page.goto('');
+    await waitForTree(page);
+    await expect(page).not.toHaveURL(hasParam('class'));
+    await expect(page).not.toHaveURL(hasParam('family'));
+  });
+});
+
 // ── KINGDOM ───────────────────────────────────────────────────────────────────
 
 test.describe('KINGDOM', () => {
@@ -21,6 +40,20 @@ test.describe('KINGDOM', () => {
     await waitForTree(page);
     await click(page.locator('[data-rank="KINGDOM"]'));
     await expect(page).toHaveURL(hasParam('node'));
+    await expect(page).not.toHaveURL(hasParam('class'));
+    await expect(page).not.toHaveURL(hasParam('family'));
+  });
+
+  test('Animals root shows all 31 phyla (not collapsed by threshold)', async ({ page }) => {
+    await page.goto('');
+    await waitForTree(page);
+    await expect(page.locator('[data-rank="PHYLUM"]').nth(30)).toBeAttached();
+  });
+
+  test('Kingdom: Animals header button clears class focus', async ({ page }) => {
+    await page.goto('?class=AVES&node=AVES');
+    await waitForTree(page);
+    await page.getByRole('button', { name: 'Kingdom: Animals' }).click();
     await expect(page).not.toHaveURL(hasParam('class'));
     await expect(page).not.toHaveURL(hasParam('family'));
   });
@@ -69,6 +102,26 @@ test.describe('CLASS', () => {
     await click(page.locator('[data-rank="CLASS"]').filter({ hasText: 'Birds' }));
     await expect(page).toHaveURL(hasParam('class'));
     await expect(page).not.toHaveURL(hasParam('family'));
+  });
+});
+
+// ── CLASS FOCUSED ──────────────────────────────────────────────────────────────
+
+test.describe('CLASS FOCUSED', () => {
+  test('class-focused URL loads with orders visible', async ({ page }) => {
+    await page.goto('?class=MAMMALIA&node=MAMMALIA');
+    await waitForTree(page);
+    // Orders under Mammalia should be present — Carnivora is one
+    await expect(page.locator('[data-rank="ORDER"]').first()).toBeAttached();
+    await expect(page.locator('[data-id="CARNIVORA"]')).toBeAttached();
+    await expect(page).toHaveURL(hasParam('class'));
+    await expect(page).not.toHaveURL(hasParam('family'));
+  });
+
+  test('class-focused URL displays order count in sidebar', async ({ page }) => {
+    await page.goto('?class=MAMMALIA&node=MAMMALIA');
+    await waitForTree(page);
+    await expect(page.locator('[data-rank="ORDER"]').first()).toBeAttached();
   });
 });
 
