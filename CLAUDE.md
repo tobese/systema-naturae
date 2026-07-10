@@ -11,9 +11,18 @@ Interactive taxonomy portal. Each family lives in its own directory; the portal 
 ```bash
 cd portal && npm run dev          # rebuild unified taxonomy, start dev server
 cd portal && npm run build        # rebuild unified taxonomy, production build
+cd portal && npm run build:plantae # build the in-dev plant mirror (SN_KINGDOM=plantae)
+cd portal && npm run build:all    # build every kingdom in kingdom-config.json, then vite build
 cd portal && npm run typecheck    # TypeScript check
-cd portal && sh scripts/buildData.sh   # rebuild unified-taxonomy.json only (fast verify; auto-detects bun vs tsx)
+cd portal && sh scripts/buildData.sh   # rebuild animal unified-taxonomy.json only (fast verify; auto-detects bun vs tsx)
+cd portal && SN_KINGDOM=plantae sh scripts/buildData.sh  # rebuild plant unified-taxonomy only
 ```
+
+Kingdoms are declared in `portal/data/kingdom-config.json` (input file, output suffix,
+color registry per kingdom). `buildData.ts` selects the kingdom via `SN_KINGDOM`
+(default `animalia`) and reads the rest from that config. The npm `build:`/`dev:`
+scripts and `buildAllKingdoms.sh` all pass `NODE_OPTIONS=--max-old-space-size=8192`,
+which large kingdoms need to avoid OOM.
 
 ## Architecture
 
@@ -34,8 +43,9 @@ portal/
     namedafter-backup.json     ← backup before namedAfter merges
     build-log.json             ← buildData.ts run log
   scripts/
-    buildData.ts               ← grafts family data into unified tree + compresses minimal species into speciesList[]
+    buildData.ts               ← grafts family data into unified tree + compresses minimal species into speciesList[]; kingdom via SN_KINGDOM + kingdom-config.json
     buildData.sh               ← thin wrapper (auto-detects bun vs tsx)
+    buildAllKingdoms.sh        ← loops every kingdom in kingdom-config.json, runs buildData.sh with the 8GB heap
     cacheGbifData.ts           ← download GBIF class cache for fast lookups
     enrichFromWikipedia.ts     ← portal-side Wikipedia enrichment (REST API only; throttled, concurrent)
     fetchSpeciesFromApi.ts     ← GBIF + Wikipedia REST API import → family JSON
