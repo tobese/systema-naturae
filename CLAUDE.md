@@ -49,7 +49,7 @@ portal/
     cacheGbifData.ts           ← download GBIF class cache for fast lookups
     enrichFromWikipedia.ts     ← portal-side Wikipedia enrichment (REST API only; throttled, concurrent)
     fetchSpeciesFromApi.ts     ← GBIF + Wikipedia REST API import → family JSON
-    findGaps.ts                ← per-family gap report → gap-report.json
+    findGaps.ts                ← per-family gap report → gap-report.json (SN_KINGDOM=plantae → gap-report-plantae.json)
     generateGapTasks.ts        ← formats gap-report.json → docs/gap-tasks.md (+ POST to phylumProgressd)
     reportPhyla.ts             ← phylum-level gap roll-up → docs/gap-tasks-phyla.md (+ POST to phylumProgressd)
     importFamily.ts            ← LLM gap filling via local Ollama (qwen2.5:7b)
@@ -205,7 +205,7 @@ The Growth tab in the Coverage modal shows the import timeline with cumulative s
 
 ## Gap tracking
 
-- `portal/scripts/findGaps.ts` → `portal/data/gap-report.json` (per-family `have` / `speciesCount` / `gap`).
+- `portal/scripts/findGaps.ts` → `portal/data/gap-report.json` (per-family `have` / `speciesCount` / `gap`). Kingdom-aware: `SN_KINGDOM=plantae` reads `taxonomy-plantae-snippet.json` and writes `gap-report-plantae.json` (input/output resolved via `kingdom-config.json`, same as `buildData.ts`).
 - `portal/scripts/reportPhyla.ts` → `docs/gap-tasks-phyla.md` (phylum/class roll-up). Also POSTs to `localhost:9876` if `phylumProgressd.ts` is running.
 - `portal/scripts/generateGapTasks.ts` → `docs/gap-tasks.md` (per-family TODO list).
 - `portal/scripts/phylumProgressd.ts` — long-running daemon that records each POST so progress is graphable over time.
