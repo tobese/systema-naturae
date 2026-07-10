@@ -17,7 +17,7 @@ interface KingdomConfig {
 interface KingdomConfigFile {
   kingdoms: Record<string, KingdomConfig>;
 }
-const KINGDOM = process.env.SN_KINGDOM || process.env.SN_VARIANT || "";
+const KINGDOM = process.env.SN_KINGDOM || "";
 const kingdomConfigPath = resolve(portalRoot, "data/kingdom-config.json");
 let kingdomConfig: KingdomConfig | undefined;
 if (existsSync(kingdomConfigPath)) {
