@@ -32,6 +32,15 @@ function filterExtinct(node: TaxonNode | null): TaxonNode {
   return { ...node, children: filtered.length > 0 ? filtered : undefined };
 }
 
+function filterFossil(node: TaxonNode | null): TaxonNode {
+  if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
+  if (!node.children) return node;
+  const filtered = node.children
+    .filter(c => !c.fossil)
+    .map(c => filterFossil(c));
+  return { ...node, children: filtered.length > 0 ? filtered : undefined };
+}
+
 function walkFind(node: TaxonNode, id: string): TaxonNode | null {
   if (node.id === id) return node;
   if (node.speciesList) {
@@ -97,6 +106,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [options, setOptions] = useState<PortalOptions>({
     showExtinct: false,
+    showFossil: false,
     collapseLarge: true,
     collapseThreshold: 30,
     nodeScale: 1.0,
@@ -211,9 +221,11 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
 
   // Filter tree based on options
   const filteredTreeData = useMemo(() => {
-    if (options.showExtinct) return treeData;
-    return filterExtinct(treeData);
-  }, [treeData, options.showExtinct]);
+    let data = treeData;
+    if (!options.showExtinct) data = filterExtinct(data);
+    if (!options.showFossil) data = filterFossil(data);
+    return data;
+  }, [treeData, options.showExtinct, options.showFossil]);
 
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }

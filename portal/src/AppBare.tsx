@@ -17,12 +17,19 @@ import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import TaxonomySidebar from "./components/TaxonomySidebar";
 import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
 
-const OPTIONS = { showExtinct: false, collapseThreshold: 30, nodeScale: 1.0 };
+const OPTIONS = { showExtinct: false, showFossil: false, collapseThreshold: 30, nodeScale: 1.0 };
 
 function filterExtinct(node: TaxonNode | null): TaxonNode {
   if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
   if (!node.children) return node;
   const filtered = node.children.filter(c => !c.extinct).map(c => filterExtinct(c));
+  return { ...node, children: filtered.length > 0 ? filtered : undefined };
+}
+
+function filterFossil(node: TaxonNode | null): TaxonNode {
+  if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
+  if (!node.children) return node;
+  const filtered = node.children.filter(c => !c.fossil).map(c => filterFossil(c));
   return { ...node, children: filtered.length > 0 ? filtered : undefined };
 }
 
@@ -146,7 +153,12 @@ export default function AppBare({ kingdom = "animalia", colorRegistry }: AppBare
     }
   }, [focusedFamilySlug, focusedOrderId, manifest, loading, loadOrder]);
 
-  const filteredTreeData = useMemo(() => filterExtinct(treeData), [treeData]);
+  const filteredTreeData = useMemo(() => {
+    let data = treeData;
+    if (!OPTIONS.showExtinct) data = filterExtinct(data);
+    if (!OPTIONS.showFossil) data = filterFossil(data);
+    return data;
+  }, [treeData]);
 
   const handleSelect = useCallback((node: TaxonNode | null) => {
     if (!node) { setSelectedNodeId(null); return; }

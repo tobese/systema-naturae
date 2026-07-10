@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export interface PortalOptions {
   showExtinct: boolean;
+  showFossil: boolean;
   collapseLarge: boolean;
   collapseThreshold: number;
   nodeScale: number;
@@ -59,6 +60,10 @@ export default function OptionsPanel({ options, onChange }: Props) {
 
             <LabelRow checked={options.showExtinct} onChange={() => toggle("showExtinct")}>
               Show extinct species
+            </LabelRow>
+
+            <LabelRow checked={options.showFossil} onChange={() => toggle("showFossil")}>
+              Show fossil taxa
             </LabelRow>
 
             <LabelRow checked={options.highlightWikipedia} onChange={() => toggle("highlightWikipedia")}>

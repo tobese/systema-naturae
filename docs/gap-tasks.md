@@ -2,7 +2,7 @@
 
 This file tracks the taxonomic coverage gaps and enrichment tasks of the Systema Naturae portal. Each class with remaining gaps has a discrete checklist of its families.
 
-*Generated automatically on: 09/07/2026*
+*Generated automatically on: 10/07/2026*
 
 ## Overview of Taxonomic Class Coverage
 
