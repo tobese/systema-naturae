@@ -20,7 +20,10 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-const CACHE_PATH = resolve(root, "portal", "data", "wcvp-cache.json");
+const CACHE_PATHS = [
+  "/Volumes/MacieExternal/tmp/opencode/wcvp-cache.json",
+  resolve(root, "portal", "data", "wcvp-cache.json"),
+];
 
 interface WcvpEntry {
   ipniId: string;
@@ -116,7 +119,12 @@ function findDataFiles(baseDir: string): string[] {
 
 function main() {
   process.stdout.write("Loading WCVP cache... ");
-  const cache: WcvpCache = JSON.parse(readFileSync(CACHE_PATH, "utf-8"));
+  const cachePath = CACHE_PATHS.find(p => existsSync(p));
+  if (!cachePath) {
+    console.error("\n❌ WCVP cache not found. Run scripts/cacheWcvp.py first.");
+    process.exit(1);
+  }
+  const cache: WcvpCache = JSON.parse(readFileSync(cachePath, "utf-8"));
   const wcvp = cache.acceptedByFamily;
   console.log(`${Object.keys(wcvp).length} families, ${Object.values(wcvp).reduce((s, v) => s + v.length, 0)} species`);
 

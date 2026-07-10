@@ -21,7 +21,10 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-const CACHE_PATH = resolve(root, "portal", "data", "wcvp-cache.json");
+const CACHE_PATHS = [
+  "/Volumes/MacieExternal/tmp/opencode/wcvp-cache.json",
+  resolve(root, "portal", "data", "wcvp-cache.json"),
+];
 const TAX_PATH = resolve(root, "portal", "data", "taxonomy-plantae-snippet.json");
 
 interface WcvpSpecies {
@@ -71,7 +74,12 @@ function buildDescription(sp: WcvpSpecies, className: string): string {
 
 function main() {
   console.log("📦 Loading WCVP cache...");
-  const cache: WcvpCache = JSON.parse(readFileSync(CACHE_PATH, "utf-8"));
+  let cachePath = CACHE_PATHS.find(p => existsSync(p));
+  if (!cachePath) {
+    console.error("❌ WCVP cache not found. Run scripts/cacheWcvp.py first.");
+    process.exit(1);
+  }
+  const cache: WcvpCache = JSON.parse(readFileSync(cachePath, "utf-8"));
 
   console.log("📂 Loading plant taxonomy...");
   const tax = JSON.parse(readFileSync(TAX_PATH, "utf-8"));

@@ -37,6 +37,7 @@ import io
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 OUT_PATH = os.path.join(ROOT, "portal", "data", "wcvp-cache.json")
+EXTERNAL_PATH = "/Volumes/MacieExternal/tmp/opencode/wcvp-cache.json"
 
 WCVP_URL = "http://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip"
 LOCAL_ZIP = os.path.join(ROOT, "portal", "data", "wcvp_dwca.zip")
@@ -193,6 +194,16 @@ def main():
         json.dump(cache, f, indent=2, ensure_ascii=False)
         f.write("\n")
     os.replace(OUT_PATH + ".tmp", OUT_PATH)
+
+    # Also write to external volume if available
+    ext_dir = os.path.dirname(EXTERNAL_PATH)
+    if os.path.isdir(ext_dir):
+        tmp_ext = EXTERNAL_PATH + ".tmp"
+        with open(tmp_ext, "w", encoding="utf-8") as f:
+            json.dump(cache, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+        os.replace(tmp_ext, EXTERNAL_PATH)
+        print(f"  + {EXTERNAL_PATH}")
 
     fam_count = len(cache["acceptedByFamily"])
     sp_count = sum(len(v) for v in cache["acceptedByFamily"].values())
