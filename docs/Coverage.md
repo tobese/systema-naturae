@@ -18,14 +18,14 @@
 - **110,936 physical nodes** in the D3 taxonomy tree
 - **297,785 compressed flat species** in genus-level `speciesList` arrays
 - **408,721 total nodes represented** across the unified taxonomy
-- **43 classes**, **1,267 families** in phylum Tracheophyta (vascular plants)
-- **789 families** are scaffolded but have zero species (conifers, ferns, mosses, algae, etc.)
+- **43 classes**, **1,259 families** across all 7 plant phyla (657 in Tracheophyta / vascular plants)
+- **781 families** are scaffolded but have zero species (conifers, ferns, mosses, algae, etc.)
 
 ## Phylum Completion Snapshot
 
 (See [`gap-tasks-phyla.md`](./gap-tasks-phyla.md) for the auto-generated full breakdown.)
 
-All 32 animal phyla are at 100% completion. The plant kingdom has been bootstrapped with 478 of 1,267 families populated (~391k species), covering Magnoliopsida and Liliopsida; the remaining 789 families across ~40 non-flowering-plant classes await species import.
+All 32 animal phyla are at 100% completion. The plant kingdom has been bootstrapped with 478 of 1,259 families populated (~391k species), covering Magnoliopsida and Liliopsida; the remaining 781 families across ~40 non-flowering-plant classes await species import.
 
 ## Regenerating these stats
 
