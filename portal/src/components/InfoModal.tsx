@@ -118,7 +118,7 @@ export default function InfoModal({ onClose }: Props) {
                 By the 12th edition in 1768, the book had grown to 2,400 pages, naming some 7,700 plants and 6,200 animals. Every species in this portal traces its scientific name to the system Linnaeus built — the <em style={{ color: "#c0c0d8" }}>binomial nomenclature</em> that pairs a genus with a species epithet: <em style={{ color: "#c0c0d8" }}>Panthera leo</em>, <em style={{ color: "#c0c0d8" }}>Homo sapiens</em>, <em style={{ color: "#c0c0d8" }}>Milnesium tardigradum</em>.
               </p>
               <p style={{ margin: 0 }}>
-                This portal borrows his title and his structure. The same ranked hierarchy — kingdom, phylum, class, order, family, genus, species — organises everything here. The ambition is the same too: a single place where the diversity of animal life can be held, browsed, and understood.
+                This portal borrows his title and his structure. The same ranked hierarchy — kingdom, phylum, class, order, family, genus, species — organises everything here. The ambition is the same too: a single place where the diversity of life can be held, browsed, and understood.
               </p>
             </div>
 

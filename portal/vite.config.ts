@@ -11,10 +11,13 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      // Multi-page: main portal + bare-bones (graph + side panels) variant.
+      // Multi-page: main portal + per-kingdom entry points.
       input: {
         main: path.resolve(__dirname, 'index.html'),
         bare: path.resolve(__dirname, 'bare.html'),
+        'bare-plantae': path.resolve(__dirname, 'bare-plantae.html'),
+        animalia: path.resolve(__dirname, 'animalia.html'),
+        plantae: path.resolve(__dirname, 'plantae.html'),
       },
     },
   },

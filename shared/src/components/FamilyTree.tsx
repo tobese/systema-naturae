@@ -531,6 +531,10 @@ export default function FamilyTree({
     function collapseNode(n: TaxonNode): TaxonNode {
       if (!n.children || n.children.length === 0) return n;
       if (n.children.length > thresh) {
+        if (n.rank === "KINGDOM" || n.rank === "PHYLUM") {
+          const next = n.children.map(collapseNode);
+          return { ...n, children: next };
+        }
         return { ...n, children: undefined, _collapsed: true, _childCount: n.children.length } as unknown as TaxonNode;
       }
       const next = n.children.map(collapseNode);

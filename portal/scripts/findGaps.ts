@@ -4,6 +4,21 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "../..");
+const portalRoot = join(root, "portal");
+
+// ── Kingdom selection (mirrors buildData.ts) ──
+// SN_KINGDOM picks the kingdom (default: animalia). Input taxonomy + output
+// report path are derived from data/kingdom-config.json so gap analysis stays
+// consistent with the build.
+const KINGDOM = process.env.SN_KINGDOM || "";
+const kingdomConfigPath = join(portalRoot, "data", "kingdom-config.json");
+let kingdomConfig: { input?: string; dataSuffix?: string } | undefined;
+if (existsSync(kingdomConfigPath)) {
+  const allConfigs = JSON.parse(readFileSync(kingdomConfigPath, "utf-8"));
+  kingdomConfig = allConfigs.kingdoms?.[KINGDOM];
+}
+const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
+const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
 
 interface FamilyInfo {
   className: string;
@@ -104,7 +119,9 @@ function analyzeSpecies(data: any): { total: number; minimal: number; enriched: 
   return { total, minimal, enriched };
 }
 
-const taxonomy = JSON.parse(readFileSync(join(root, "portal", "data", "taxonomy.json"), "utf-8"));
+const taxonomyPath = join(portalRoot, taxonomyInput);
+const taxonomy = JSON.parse(readFileSync(taxonomyPath, "utf-8"));
+console.log(`Analyzing kingdom ${KINGDOM || "animalia"} from ${taxonomyPath}`);
 const results: FamilyInfo[] = [];
 walk(taxonomy, "", "", results);
 
@@ -124,8 +141,9 @@ for (const r of results) {
   r.trueGap = r.speciesCount - r.enrichedCount;
 }
 
-// Write the complete gap report to JSON
-const reportPath = join(root, "portal", "data", "gap-report.json");
+// Write the complete gap report to JSON (per-kingdom: gap-report.json,
+// gap-report-plantae.json, …)
+const reportPath = join(portalRoot, "data", `gap-report${dataSuffix}.json`);
 writeFileSync(reportPath, JSON.stringify(results, null, 2), "utf-8");
 console.log(`Wrote full gap report to ${reportPath}`);
 

@@ -51,10 +51,24 @@ export function commonsThumb(filename: string, width = 600): string {
   return `${COMMONS_BASE}${encodeURIComponent(filename)}?width=${width}`;
 }
 
+/** Strip trailing authority from a scientific name, keeping only genus + species epithet. */
+function stripAuthority(name: string): string {
+  // If it's already a bare binomial (no authority), return as-is
+  const parts = name.trim().split(/\s+/);
+  if (parts.length <= 2) return name.trim();
+  // Take first two words (genus + species epithet) and ignore author citation
+  return parts.slice(0, 2).join(" ");
+}
+
 /** Returns null if the binomial isn't in the cache or has no useful data. */
 export function useWikiImages(binomial: string | null | undefined): WikiImages | null {
   if (!binomial) return null;
-  const entry = cache[binomial];
+  // Try exact match first; fall back to stripped binomial (handles authority suffixes)
+  let entry = cache[binomial];
+  if (!entry || !entry.qid) {
+    const bare = stripAuthority(binomial);
+    if (bare !== binomial) entry = cache[bare];
+  }
   if (!entry || !entry.qid) return null;
 
   const portrait = entry.image ? commonsThumb(entry.image, 600) : undefined;

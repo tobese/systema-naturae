@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import type { TaxonNode } from "@shared/types";
-import { CLASS_PALETTE } from "../colors";
+import { buildClassPaletteFromTree } from "../colors";
 
 interface Props {
   data: TaxonNode;
@@ -12,13 +12,14 @@ const SECTOR_COUNT = 12;
 const SECTOR_ANGLE = 360 / SECTOR_COUNT;
 
 function getClasses(root: TaxonNode): { name: string; color: string; node: TaxonNode }[] {
+  const palette = buildClassPaletteFromTree(root).base;
   const classes: { name: string; color: string; node: TaxonNode }[] = [];
   for (const phylum of root.children ?? []) {
     for (const cls of phylum.children ?? []) {
       if (cls.rank === "CLASS") {
         classes.push({
           name: cls.commonName ?? cls.name,
-          color: CLASS_PALETTE[cls.name.toLowerCase()] ?? "#888",
+          color: palette[cls.name.toLowerCase()] ?? "#888",
           node: cls,
         });
       }

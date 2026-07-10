@@ -19,16 +19,6 @@ interface FamilyStat {
   trueGap: number;
 }
 
-interface ImportEvent {
-  date: string;
-  commit: string;
-  message: string;
-  families: string[];
-  speciesAdded: number;
-  speciesRunning: number;
-  nodes: number;
-}
-
 interface Snapshot {
   phyla: { name: string; classes: number; families: number; species: number; portal: number; enriched: number; }[];
   totals: { phyla: number; classes: number; orders: number; families: number; species: number; portal: number; enriched: number; nodes: number; compressed: number; totalNodes: number; };
@@ -219,90 +209,25 @@ function printReport(before: Snapshot | null, after: Snapshot) {
       console.log(table(famHeader, famRows, famWidths) + "\n");
     }
 
-    // Families where gap changed (informational print, delta handled by --update-log)
+    // Families where gap changed (informational)
     const beforeMap = new Map(before.families.map(f => [f.appSlug, f]));
     const changed = current.families.filter(f => {
       const b = beforeMap.get(f.appSlug);
       return b && (b.speciesCount !== f.speciesCount || b.portalCount !== f.portalCount || b.enrichedCount !== f.enrichedCount);
     });
     if (changed.length > 0) {
-      // delta is written to import-log.json via --update-log flag
+      console.log(`  Families with updated counts: ${changed.length}\n`);
     }
   }
 
   // ── Save to build-log for node counts ──
   const buildLog = {
+    timestamp: new Date().toISOString(),
     physicalNodes: current.totals.nodes || 23518,
     compressedSpecies: current.totals.compressed || 133614,
     totalNodes: current.totals.totalNodes || (current.totals.nodes + current.totals.compressed),
   };
   writeFileSync(join(portalRoot, "data/build-log.json"), JSON.stringify(buildLog, null, 2) + "\n");
-}
-
-// ── import-log delta writer ──
-
-function updateImportLog(before: Snapshot | null, after: Snapshot) {
-  const logPath = join(portalRoot, "data/import-log.json");
-  const today = new Date().toISOString().slice(0, 10);
-
-  // Determine delta families: new + changed
-  let deltaSlugs: string[] = [];
-  if (before) {
-    const beforeSet = new Set(before.families.map(f => f.appSlug));
-    const beforeMap = new Map(before.families.map(f => [f.appSlug, f]));
-    const newFams = after.families.filter(f => !beforeSet.has(f.appSlug)).map(f => f.appSlug);
-    const changedFams = after.families.filter(f => {
-      const b = beforeMap.get(f.appSlug);
-      return b && (b.speciesCount !== f.speciesCount || b.portalCount !== f.portalCount || b.enrichedCount !== f.enrichedCount);
-    }).map(f => f.appSlug);
-    deltaSlugs = [...new Set([...newFams, ...changedFams])].sort();
-  } else {
-    // No baseline: treat all families as delta
-    deltaSlugs = after.families.map(f => f.appSlug).sort();
-  }
-
-  if (deltaSlugs.length === 0) {
-    console.log("  No changes to log.\n");
-    return;
-  }
-
-  // Compute speciesAdded = sum of portalCount for delta families
-  const deltaPortal = after.families
-    .filter(f => deltaSlugs.includes(f.appSlug))
-    .reduce((sum, f) => sum + f.portalCount, 0);
-
-  // Read existing log
-  let log: ImportEvent[] = [];
-  if (existsSync(logPath)) {
-    try {
-      log = JSON.parse(readFileSync(logPath, "utf-8"));
-    } catch { /* start fresh */ }
-  }
-
-  // Find or create today's entry
-  const existingIdx = log.findIndex(e => e.date === today);
-  if (existingIdx >= 0) {
-    // Merge families (dedupe) and recompute speciesAdded for today
-    const existing = log[existingIdx];
-    const merged = [...new Set([...existing.families, ...deltaSlugs])].sort();
-    log[existingIdx].families = merged;
-    log[existingIdx].speciesAdded = deltaPortal;
-    log[existingIdx].speciesRunning = after.totals.portal;
-    log[existingIdx].nodes = after.totals.nodes;
-  } else {
-    log.push({
-      date: today,
-      commit: "",
-      message: "",
-      families: deltaSlugs,
-      speciesAdded: deltaPortal,
-      speciesRunning: after.totals.portal,
-      nodes: after.totals.nodes,
-    });
-  }
-
-  writeFileSync(logPath, JSON.stringify(log, null, 2) + "\n");
-  console.log(`  Updated import-log.json: ${deltaSlugs.length} families on ${today}\n`);
 }
 
 // ── main ──
@@ -311,12 +236,10 @@ function main() {
   const args = process.argv.slice(2);
   let prevPath = "";
   let savePath = "";
-  let updateLog = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--prev" && args[i + 1]) { prevPath = args[i + 1]; i++; }
     if (args[i] === "--save" && args[i + 1]) { savePath = args[i + 1]; i++; }
-    if (args[i] === "--update-log") { updateLog = true; }
   }
 
   const after = takeSnapshot();
@@ -331,10 +254,6 @@ function main() {
   if (savePath) {
     writeFileSync(savePath, JSON.stringify(after, null, 2) + "\n");
     console.log(`  Snapshot saved to ${savePath}\n`);
-  }
-
-  if (updateLog) {
-    updateImportLog(before, after);
   }
 }
 
