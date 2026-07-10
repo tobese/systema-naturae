@@ -61,13 +61,15 @@ jobs:
 
       - name: Build Portal
         working-directory: portal
-        run: npm run build
+        run: npm run build:all
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
 
       - name: Copy data files to dist
         working-directory: portal
-        run: cp -r data dist/data
+        # Exclude source caches (gbif/wcvp/powo) — they are build inputs, not
+        # runtime assets, and needlessly bloat the published site.
+        run: rsync -a --exclude='*cache*.json' --exclude='*cache*.json.gz' data/ dist/data/
 
       - name: Assemble Pages output
         run: |
