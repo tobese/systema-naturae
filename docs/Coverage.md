@@ -9,7 +9,7 @@
 - **593,222 total nodes represented** across the unified taxonomy
 - **529,298 total species** tracked in the portal
 - **5,071 families** across **75 classes** in **32 phyla** (all animal phyla)
-- **49,791 species** enriched with real descriptions (9.4% of total)
+- **49,804 species** enriched with real descriptions (9.4% of total)
 - **5,071 / 5,071 families** are at or above their `speciesCount` target (100%)
 - **GBIF caches** (`portal/data/gbif-cache-*.json[.gz]`): Aves, Mammalia, Reptilia, Amphibia, Elasmobranchii, Asteroidea, Echinoidea, Holothuroidea, Insecta, Arachnida, Actinopterygii, Cephalopoda, Anthozoa, Hydrozoa. Plus phylum scout: `gbif-scout-cnidaria.json`.
 
@@ -21,16 +21,16 @@
 
 ## Enrichment ceiling
 
-Enrichment means "has a real description (>20 chars, not boilerplate)." A Wikipedia pass was run across all 6 vertebrate classes (Aves, Actinopterygii, Mammalia, Reptilia, Amphibia, Chondrichthyes) in July 2026. It tagged 211 species as Wikipedia-sourced, but the enriched count was unchanged — those species already had descriptions from GBIF/POWO/other sources.
+Enrichment means "has a real description (>20 chars, not boilerplate)." A Wikipedia pass was run across all 6 vertebrate classes (Aves, Actinopterygii, Mammalia, Reptilia, Amphibia, Chondrichthyes) in July 2026. It tagged 211 species as Wikipedia-sourced, but the enriched count was unchanged — those species already had descriptions from GBIF/POWO/other sources. A follow-up pass on Insecta (213 families, 170k species) and Arachnida (11 families, 18k species) in July 2026 yielded only 13 new enrichments total, confirming the ceiling is real for all Animalia classes.
 
 **Animalia: 49,791 / 529,298 (9.4%)** — effectively at its ceiling for description enrichment.
 
 | Class | Species | Enriched | Rate | Notes |
 |---|---|---|---|---|
-| Insecta | 186,174 | 15,397 | 8.3% | Most species lack Wikipedia articles |
+| Insecta | 186,174 | 15,410 | 8.3% | Ceiling confirmed — 13 new from Wikipedia pass |
 | Gastropoda | 99,563 | 0 | 0.0% | Source-limited — no descriptive data available |
 | Bivalvia | 34,960 | 0 | 0.0% | Source-limited |
-| Arachnida | 21,937 | 3,768 | 17.2% | Partial Wikipedia coverage |
+| Arachnida | 21,937 | 3,768 | 17.2% | Ceiling confirmed — 0 new from Wikipedia pass |
 | Anthozoa | 17,346 | 297 | 1.7% | Mostly corals — sparse descriptions |
 | Chromadorea | 15,180 | 0 | 0.0% | Nematodes — source-limited |
 | Polychaeta | 14,028 | 0 | 0.0% | Marine worms — source-limited |
@@ -42,7 +42,7 @@ Enrichment means "has a real description (>20 chars, not boilerplate)." A Wikipe
 | Chondrichthyes | 1,187 | 140 | 11.8% | Sharks/rays — partial coverage |
 | Demospongiae | 8,893 | 8,893 | 100.0% | Fully enriched from Wikipedia |
 
-The 0% classes (Gastropoda, Bivalvia, Polychaeta, Nematoda, Bryozoa, Brachiopoda, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, and no GBIF descriptive content exists for these taxa. See [non-vertebrate-enrichment-plan.md](./non-vertebrate-enrichment-plan.md) for Phase 1/2/3 plan to address Insecta and Arachnida.
+The 0% classes (Gastropoda, Bivalvia, Polychaeta, Nematoda, Bryozoa, Brachiopoda, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, and no GBIF descriptive content exists for these taxa. The Wikipedia enrichment ceiling has been confirmed for all Animalia classes (see [non-vertebrate-enrichment-plan.md](./non-vertebrate-enrichment-plan.md)).
 
 **Plantae: ~347,581 / 435,114 (79.9%)** — at POWO/WCVP source ceiling. The ~20% unenriched is concentrated in mosses (Bryopsida 12k), liverworts (Jungermanniopsida 7k), hornworts, and algae — groups where neither POWO, WCVP, nor Wikipedia provide descriptions.
 
