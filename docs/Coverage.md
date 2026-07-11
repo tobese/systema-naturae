@@ -50,6 +50,44 @@ The 0% classes (Gastropoda, Bivalvia, Polychaeta, Nematoda, Bryozoa, Brachiopoda
 
 All 32 animal phyla are at 100% species-count completion. The plant kingdom has 1,022 of 1,259 families populated (~435k species); the remaining 237 families await species import — chiefly 48 Magnoliopsida (dicot) and 42 Polypodiopsida (fern) families, plus assorted red/green algae.
 
+## Description sources evaluated
+
+Species descriptions are only ever populated from sources that yield real,
+encyclopedic prose. Fabricated/boilerplate text is never written (see the
+July 2026 strip of ~591k template descriptions). Each `sourcedFrom` tag:
+
+| Source | Scope | Status | Notes |
+|--------|-------|--------|-------|
+| `wikipedia` | all kingdoms | **Primary.** ~132k species | Switched from the rate-limited live REST API to the **offline full-Wikipedia SQLite dump** (`/Volumes/WikiDump/wiki-pages.sqlite`, `pages.title→extract`) via `enrichFromWikipediaDB.ts`. No network/rate limit; a full `--all` pass enriches in ~1h and has *better* coverage than the API (no 404/429 losses). Idempotent — only fills empty descriptions. |
+| `powo` / `wcvp` | plants | Authoritative botanical. ~250k | Native-range/lifeform summaries via `tools/powo_enrich.py`. |
+| `gbif` (descriptions) | animals | **Evaluated and rejected for gap-filling.** | See below. |
+| `websearch`, `nzpcn` | manual | 65 + 1 | One-off hand-curated entries. |
+
+### GBIF species descriptions — evaluated, not used for gap-filling
+
+GBIF's `/species/{key}/descriptions` endpoint was assessed as a fallback for the
+~470k empty (obscure, mostly invertebrate) animal species. A dedicated,
+quality-gated importer exists — **`portal/scripts/enrichFromGbifDescriptions.ts`**
+(English-only; uses cached family GBIF keys for fast enumeration; strict gate
+rejecting specimen-catalog codes, type-description jargon, `Description/Remarks/
+Holotype/…` prefixes, and non-Latin script).
+
+Testing showed it is **not a viable quality source for our remaining gaps**:
+
+- **Cephalopoda** (1,898 empty): 2/1,898 passed the strict gate (0.1%), and even
+  those were poor ("(Figure 5 C) was collected, but the tentacles were in poor
+  condition…").
+- **Echinoidea** (living, 100 empty): 1/100, a data fragment ("Global maximum
+  size. Maximum test diameter 80 mm.").
+
+**Why:** GBIF description records for obscure taxa come from taxonomic treatment
+banks (Plazi) and OCR'd morphological monographs — specimen/holotype descriptions,
+not encyclopedic prose. Species with clean prose are already Wikipedia-covered
+(and skipped as non-empty). Net yield over Wikipedia is ~0.1% at marginal quality,
+so it is **kept as available tooling but intentionally not run broadly** —
+empty is preferred over specimen fragments. Wikipedia (offline dump) is the
+practical ceiling for animal descriptions.
+
 ## Regenerating these stats
 
 ```bash
