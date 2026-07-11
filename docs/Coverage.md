@@ -88,6 +88,24 @@ so it is **kept as available tooling but intentionally not run broadly** —
 empty is preferred over specimen fragments. Wikipedia (offline dump) is the
 practical ceiling for animal descriptions.
 
+### Other sources scouted (July 2026) — none viable for our gaps
+
+The ~568k empty species are overwhelmingly obscure invertebrates, protists, and
+microfungi. Candidate aggregators were probed empirically against a random
+sample of empty marine-invertebrate species (gastropods, bivalves, polychaetes,
+anthozoans, hydrozoans):
+
+| Source | Result | Verdict |
+|--------|--------|---------|
+| **EOL** (Encyclopedia of Life) | Control species (e.g. *Panthera leo*) resolve, but 4/4 obscure marine inverts had no EOL page; EOL's species text is itself largely Wikipedia-sourced | No incremental coverage — same ceiling as Wikipedia |
+| **WoRMS** | Taxonomy register only — names/authority/status/classification; distributions & vernaculars empty for obscure taxa, attributes are trait codes (e.g. "AMBI ecological group") | Not a prose source (useful only for validating names / filling empty marine *families*) |
+| **iNaturalist** | Obscure species miss; summaries that exist are Wikipedia mirrors | Redundant with the offline Wikipedia dump |
+| **AlgaeBase** | Potentially valuable for Chromista/algae, but the API is access-restricted (key required, non-bulk) | Deferred — revisit only if an API key is obtained |
+
+**Conclusion:** no open bulk prose source exists beyond Wikipedia (offline dump)
++ POWO. The remaining empties are genuinely undescribed in public aggregators;
+they are left empty rather than filled with specimen fragments or trait codes.
+
 ## Regenerating these stats
 
 ```bash
