@@ -362,15 +362,16 @@ async function main() {
         }
       }
 
+      // Don't fabricate descriptions — leave empty so enrichment can find real content
       if (!description) {
-        description = `${sciName} — a species in the genus ${genusName}, family ${family.name}. ${family.commonName ? `Also known as ${family.commonName.toLowerCase()}.` : ""}`;
+        description = "";
       }
 
       if (!commonName) {
-        commonName = `${genusName} ${speciesEpithet}`.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+        commonName = ""; // Don't fabricate common names — leave empty for enrichment to find real ones
       }
 
-      const sourcedFrom = (useWiki && description && description.length > 40 && !description.startsWith(sciName)) ? "wikipedia" : "generated";
+      const sourcedFrom = (useWiki && description && description.length > 40 && !description.startsWith(sciName)) ? "wikipedia" : "none";
 
       speciesChildren.push({
         id: nameToId(sciName),

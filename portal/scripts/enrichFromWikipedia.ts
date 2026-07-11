@@ -162,18 +162,18 @@ async function enrichFamily(fam: FamilyFile): Promise<number> {
       if (updateNode(fam.data)) enriched++;
     }
 
-    // Set sourcedFrom=generated for species where Wikipedia had nothing
+    // Tag sourcedFrom for species where Wikipedia had nothing (don't fabricate descriptions)
     let nonWikiIdx = 0;
-    function tagGenerated(n: Record<string, unknown>) {
+    function tagNonWiki(n: Record<string, unknown>) {
       if (n.rank === "SPECIES") {
-        if (n.sourcedFrom !== "wikipedia") n.sourcedFrom = "generated";
+        if (n.sourcedFrom !== "wikipedia") n.sourcedFrom = "none";
         nonWikiIdx++;
       }
-      for (const c of (n.children ?? []) as Record<string, unknown>[]) tagGenerated(c);
+      for (const c of (n.children ?? []) as Record<string, unknown>[]) tagNonWiki(c);
     }
     // Only tag at end of each batch if we're past the last window
     if (batchStart + CONCURRENCY >= total) {
-      tagGenerated(fam.data);
+      tagNonWiki(fam.data);
     }
 
     if (batchStart % (CONCURRENCY * 5) === 0 && batchStart > 0) {
