@@ -5,12 +5,16 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
+TAX_FILE = {"animalia":"taxonomy.json", "plantae":"taxonomy-plantae-snippet.json", "fungi":"taxonomy-fungi.json"}
+COLOR_FILE = {"animalia":"colorRegistry.ts", "plantae":"colorRegistryPlantae.ts", "fungi":"colorRegistryFungi.ts"}
+KINGDOMS = ("animalia","plantae","fungi")
+
 def load_tax(k):
-    p = REPO/"portal"/"data"/("taxonomy.json" if k=="animalia" else "taxonomy-plantae-snippet.json")
+    p = REPO/"portal"/"data"/TAX_FILE[k]
     return json.loads(p.read_text()) if p.exists() else None
 
 def colors_text(k):
-    p = REPO/"portal"/"src"/("colorRegistry.ts" if k=="animalia" else "colorRegistryPlantae.ts")
+    p = REPO/"portal"/"src"/COLOR_FILE[k]
     return p.read_text() if p.exists() else ""
 
 def registry_slugs(text):
@@ -59,9 +63,13 @@ disk = disk_index()
 print(f"Data files on disk: {len(disk)}\n")
 
 issues_total=0
-for k in ("animalia","plantae"):
-    print("="*60); print(f"  {k.upper()}"); print("="*60)
+for k in KINGDOMS:
     tax=load_tax(k)
+    if tax is None:
+        print("="*60); print(f"  {k.upper()}"); print("="*60)
+        print(f"  (skipped — {TAX_FILE[k]} not present yet)\n")
+        continue
+    print("="*60); print(f"  {k.upper()}"); print("="*60)
     fams=list(walk_fams(tax))
     slugs={f.get("appSlug") for f in fams if f.get("appSlug")}
     themes=registry_slugs(colors_text(k))
@@ -91,8 +99,8 @@ for k in ("animalia","plantae"):
     rep("themes not used by any family (orphan themes)", unused)
     rep("duplicate appSlugs in taxonomy", dups)
 
-    if k=="animalia":
-        # animalia uses on-disk data files
+    if k in ("animalia","fungi"):
+        # these kingdoms use on-disk data files
         missing_file=sorted(s for s in slugs if s not in disk)
         rep("appSlugs with NO data file on disk", missing_file)
     print()
@@ -100,14 +108,15 @@ for k in ("animalia","plantae"):
 print("="*60)
 print("  REVERSE: on-disk data files -> taxonomy (both ways)")
 print("="*60)
-slugs_by_k={k:{f["appSlug"] for f in walk_fams(load_tax(k)) if f.get("appSlug")} for k in ("animalia","plantae")}
-resolved={"animalia":0,"plantae":0}
+slugs_by_k={k:({f["appSlug"] for f in walk_fams(load_tax(k)) if f.get("appSlug")} if load_tax(k) else set()) for k in KINGDOMS}
+resolved={k:0 for k in KINGDOMS}
 orphans=[]
 for s in disk:
-    if s in slugs_by_k["animalia"]: resolved["animalia"]+=1
-    elif s in slugs_by_k["plantae"]: resolved["plantae"]+=1
-    else: orphans.append(s)
-for k in ("animalia","plantae"):
+    for k in KINGDOMS:
+        if s in slugs_by_k[k]: resolved[k]+=1; break
+    else:
+        orphans.append(s)
+for k in KINGDOMS:
     print(f"  ✓ {k}: {resolved[k]} on-disk data files resolve to a taxonomy appSlug")
 if orphans:
     issues_total+=len(orphans)
