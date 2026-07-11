@@ -59,7 +59,7 @@ July 2026 strip of ~591k template descriptions). Each `sourcedFrom` tag:
 | Source | Scope | Status | Notes |
 |--------|-------|--------|-------|
 | `wikipedia` | all kingdoms | **Primary.** ~132k species | Switched from the rate-limited live REST API to the **offline full-Wikipedia SQLite dump** (`/Volumes/WikiDump/wiki-pages.sqlite`, `pages.title→extract`) via `enrichFromWikipediaDB.ts`. No network/rate limit; a full `--all` pass enriches in ~1h and has *better* coverage than the API (no 404/429 losses). Idempotent — only fills empty descriptions. |
-| `powo` / `wcvp` | plants | Authoritative botanical. ~250k | Native-range/lifeform summaries via `tools/powo_enrich.py`. |
+| `powo` / `wcvp` | plants | Authoritative botanical. ~250k | Native-range/lifeform summaries via `tools/powo_enrich.py`. **At ceiling:** a July 2026 re-run on the 19,287 empty flowering-plant/monocot species with cached GBIF keys yielded only 75 (0.39%) — the rest had no IPNI match or no reconstructable POWO fields. |
 | `gbif` (descriptions) | animals | **Evaluated and rejected for gap-filling.** | See below. |
 | `websearch`, `nzpcn` | manual | 65 + 1 | One-off hand-curated entries. |
 
