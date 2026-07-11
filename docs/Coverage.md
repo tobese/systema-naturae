@@ -21,10 +21,30 @@
 
 ## Enrichment ceiling
 
-| Kingdom | Enriched | Total | Rate | Status |
+Enrichment means "has a real description (>20 chars, not boilerplate)." A Wikipedia pass was run across all 6 vertebrate classes (Aves, Actinopterygii, Mammalia, Reptilia, Amphibia, Chondrichthyes) in July 2026. It tagged 211 species as Wikipedia-sourced, but the enriched count was unchanged — those species already had descriptions from GBIF/POWO/other sources.
+
+**Animalia: 49,791 / 529,298 (9.4%)** — effectively at its ceiling for description enrichment.
+
+| Class | Species | Enriched | Rate | Notes |
 |---|---|---|---|---|
-| Animalia | 49,791 | 529,298 | 9.4% | Source-limited for invertebrates (Gastropoda 99k, Bivalvia 35k, etc. at 0%). Vertebrates have Wikipedia coverage where available. |
-| Plantae | 347,581 | 435,114 | 79.9% | At ceiling — remaining 20% is mosses/liverworts/hornworts/algae with no POWO/WCVP/Wikipedia descriptions available. |
+| Insecta | 186,174 | 15,397 | 8.3% | Most species lack Wikipedia articles |
+| Gastropoda | 99,563 | 0 | 0.0% | Source-limited — no descriptive data available |
+| Bivalvia | 34,960 | 0 | 0.0% | Source-limited |
+| Arachnida | 21,937 | 3,768 | 17.2% | Partial Wikipedia coverage |
+| Anthozoa | 17,346 | 297 | 1.7% | Mostly corals — sparse descriptions |
+| Chromadorea | 15,180 | 0 | 0.0% | Nematodes — source-limited |
+| Polychaeta | 14,028 | 0 | 0.0% | Marine worms — source-limited |
+| Aves | 11,754 | 1,888 | 16.1% | Best vertebrate coverage outside mammals |
+| Actinopterygii | 10,885 | 3,687 | 33.9% | Fish — decent Wikipedia coverage |
+| Reptilia | 8,121 | 5,488 | 67.6% | Strong Wikipedia coverage |
+| Mammalia | 7,897 | 1,075 | 13.6% | Most species already had descriptions |
+| Amphibia | 3,797 | 2,260 | 59.5% | Good coverage |
+| Chondrichthyes | 1,187 | 140 | 11.8% | Sharks/rays — partial coverage |
+| Demospongiae | 8,893 | 8,893 | 100.0% | Fully enriched from Wikipedia |
+
+The 0% classes (Gastropoda, Bivalvia, Polychaeta, Nematoda, Bryozoa, Brachiopoda, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, and no GBIF descriptive content exists for these taxa.
+
+**Plantae: ~347,581 / 435,114 (79.9%)** — at POWO/WCVP source ceiling. The ~20% unenriched is concentrated in mosses (Bryopsida 12k), liverworts (Jungermanniopsida 7k), hornworts, and algae — groups where neither POWO, WCVP, nor Wikipedia provide descriptions.
 
 ## Phylum Completion Snapshot
 
