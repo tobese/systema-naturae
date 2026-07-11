@@ -7,8 +7,9 @@ const root = resolve(__dirname, "../..");
 const portalRoot = resolve(__dirname, "..");
 
 const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary";
-const RATE_DELAY = 120; // ms between Wikipedia calls
-const CONCURRENCY = 3; // parallel Wikipedia requests
+const RATE_DELAY = 500; // ms between Wikipedia calls
+const CONCURRENCY = 2; // parallel Wikipedia requests
+const HEADERS = { "User-Agent": "systema-naturae/1.0 (enrichment; https://github.com/tb-Dev/systema-naturae)" };
 
 interface ApiResult {
   title: string;
@@ -44,19 +45,29 @@ function extractDescription(extract: string): string {
 
 async function fetchWiki(sciName: string): Promise<{ commonName: string; description: string; continents: string[] } | null> {
   const encoded = encodeURIComponent(sciName.replace(/ /g, "_"));
-  try {
-    const res = await fetch(`${WIKI_SUMMARY}/${encoded}`, { signal: AbortSignal.timeout(10000) });
-    if (!res.ok) return null;
-    const data = await res.json() as ApiResult;
-    if (!data.extract) return null;
-    return {
-      commonName: data.title !== sciName ? data.title : sciName,
-      description: extractDescription(data.extract),
-      continents: inferContinents(data.extract),
-    };
-  } catch {
-    return null;
+  const url = `${WIKI_SUMMARY}/${encoded}`;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(15000), headers: HEADERS });
+      if (res.status === 429) {
+        const waitMs = Math.min(Math.max(3000 * (attempt + 1), 5000), 15000);
+        await sleep(waitMs);
+        continue;
+      }
+      if (!res.ok) return null;
+      const data = await res.json() as ApiResult;
+      if (!data.extract) return null;
+      return {
+        commonName: data.title !== sciName ? data.title : sciName,
+        description: extractDescription(data.extract),
+        continents: inferContinents(data.extract),
+      };
+    } catch {
+      if (attempt < 2) { await sleep(3000); continue; }
+      return null;
+    }
   }
+  return null;
 }
 
 interface FamilyFile {
