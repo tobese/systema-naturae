@@ -637,6 +637,30 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
   );
 }
 
+function HybridGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const hybrids = node.children ?? [];
+  const registry = useColorRegistry();
+  const theme = node.familySlug ? registry[node.familySlug] : null;
+  const accent = theme?.hybridColor ?? "#C8A050";
+  return (
+    <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
+      <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 4 }}>Hybrids</div>
+      <div style={{ fontSize: 13, color: "#aaa", marginTop: 4 }}>{hybrids.length} documented interspecies hybrids</div>
+      <ul style={{ padding: 0, margin: 0, marginTop: 20 }}>
+        {hybrids.map(h => (
+          <ClickableItem key={h.id} onClick={() => onSelect(h)}>
+            <div style={{ color: accent, fontSize: 13, fontWeight: 600 }}>{h.name}</div>
+            {h.lineage && <div style={{ color: "#666", fontSize: 12 }}>{h.lineage}</div>}
+          </ClickableItem>
+        ))}
+      </ul>
+      <div style={{ marginTop: 20, fontSize: 12, color: "#555", lineHeight: 1.6 }}>
+        Interspecies hybrids exist only in captivity. Dashed lines connect each hybrid to its parent species.
+      </div>
+    </div>
+  );
+}
+
 function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
   const registry = useColorRegistry();
   const theme = node.familySlug ? registry[node.familySlug] : null;
@@ -709,29 +733,7 @@ export default function UnifiedInfoPanel({
   if (node.rank === "SUBSPECIES") return <SubspeciesPanel node={node} />;
   if (node.rank === "BREED_GROUP") return <BreedGroupPanel node={node} onSelect={onSelect} />;
   if (node.rank === "BREED") return <BreedPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
-  if (node.rank === "HYBRID_GROUP") {
-    const hybrids = node.children ?? [];
-    const registry = useColorRegistry();
-    const theme = node.familySlug ? registry[node.familySlug] : null;
-    const accent = theme?.hybridColor ?? "#C8A050";
-    return (
-      <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
-        <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 4 }}>Hybrids</div>
-        <div style={{ fontSize: 13, color: "#aaa", marginTop: 4 }}>{hybrids.length} documented interspecies hybrids</div>
-        <ul style={{ padding: 0, margin: 0, marginTop: 20 }}>
-          {hybrids.map(h => (
-            <ClickableItem key={h.id} onClick={() => onSelect(h)}>
-              <div style={{ color: accent, fontSize: 13, fontWeight: 600 }}>{h.name}</div>
-              {h.lineage && <div style={{ color: "#666", fontSize: 12 }}>{h.lineage}</div>}
-            </ClickableItem>
-          ))}
-        </ul>
-        <div style={{ marginTop: 20, fontSize: 12, color: "#555", lineHeight: 1.6 }}>
-          Interspecies hybrids exist only in captivity. Dashed lines connect each hybrid to its parent species.
-        </div>
-      </div>
-    );
-  }
+  if (node.rank === "HYBRID_GROUP") return <HybridGroupPanel node={node} onSelect={onSelect} />;
   if (node.rank === "HYBRID") return <HybridPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
 
   return null;
