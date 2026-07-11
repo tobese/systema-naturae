@@ -69,9 +69,16 @@ jobs:
 
       - name: Copy data files to dist
         working-directory: portal
-        # Exclude source caches (gbif/wcvp/powo) — they are build inputs, not
-        # runtime assets, and needlessly bloat the published site.
-        run: rsync -a --exclude='*cache*.json' --exclude='*cache*.json.gz' data/ dist/data/
+        # Exclude build/test-only artifacts — the app only ever fetches
+        # data/kingdoms/<kingdom>/{skeleton,manifest,coverage-summary,orders*/*}
+        # and data/international-days*.json at runtime.
+        run: |
+          rsync -a \
+            --exclude='*cache*.json' --exclude='*cache*.json.gz' \
+            --exclude='unified-taxonomy.json' --exclude='unified-taxonomy-plantae.json' \
+            --exclude='/orders/' --exclude='/orders-plantae/' \
+            --exclude='wcvp_dwca.zip' \
+            data/ dist/data/
 
       - name: Assemble Pages output
         run: |

@@ -146,7 +146,7 @@ export default function CoverageModal({ data, onClose, onFocusFamily, initialFam
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    fetch(`/data/kingdoms/${kingdom}/coverage-summary.json`)
+    fetch(`${import.meta.env.BASE_URL}data/kingdoms/${kingdom}/coverage-summary.json`)
       .then(r => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
