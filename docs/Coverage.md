@@ -42,7 +42,7 @@ Enrichment means "has a real description (>20 chars, not boilerplate)." A Wikipe
 | Chondrichthyes | 1,187 | 140 | 11.8% | Sharks/rays — partial coverage |
 | Demospongiae | 8,893 | 8,893 | 100.0% | Fully enriched from Wikipedia |
 
-The 0% classes (Gastropoda, Bivalvia, Polychaeta, Nematoda, Bryozoa, Brachiopoda, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, and no GBIF descriptive content exists for these taxa.
+The 0% classes (Gastropoda, Bivalvia, Polychaeta, Nematoda, Bryozoa, Brachiopoda, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, and no GBIF descriptive content exists for these taxa. See [non-vertebrate-enrichment-plan.md](./non-vertebrate-enrichment-plan.md) for Phase 1/2/3 plan to address Insecta and Arachnida.
 
 **Plantae: ~347,581 / 435,114 (79.9%)** — at POWO/WCVP source ceiling. The ~20% unenriched is concentrated in mosses (Bryopsida 12k), liverworts (Jungermanniopsida 7k), hornworts, and algae — groups where neither POWO, WCVP, nor Wikipedia provide descriptions.
 
