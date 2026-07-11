@@ -8,6 +8,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
 const portalRoot = resolve(__dirname, "..");
 
+// Kingdom awareness (mirrors buildData.ts): SN_KINGDOM selects which taxonomy
+// file this import reads/writes, so fungi/plantae imports never touch animalia.
+interface KingdomConfig { label: string; input: string; rootDir: string; dataSuffix: string; colorRegistry: string; }
+const SN_KINGDOM = process.env.SN_KINGDOM || "";
+let _kcfg: KingdomConfig | undefined;
+{
+  const p = resolve(portalRoot, "data/kingdom-config.json");
+  if (existsSync(p)) _kcfg = (JSON.parse(readFileSync(p, "utf-8")) as { kingdoms: Record<string, KingdomConfig> }).kingdoms[SN_KINGDOM];
+}
+const TAXONOMY_INPUT = _kcfg?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
+const TAXONOMY_PATH = resolve(portalRoot, TAXONOMY_INPUT);
+
 const GBIF_MATCH = "https://api.gbif.org/v1/species/match";
 const GBIF_SEARCH = "https://api.gbif.org/v1/species/search";
 const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary";
@@ -47,7 +59,7 @@ interface FamilyNode {
 function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
 
 function findFamily(slug: string): FamilyNode | null {
-  const tax = JSON.parse(readFileSync(resolve(portalRoot, "data/taxonomy.json"), "utf-8"));
+  const tax = JSON.parse(readFileSync(TAXONOMY_PATH, "utf-8"));
   let cls = "", ord = "";
   function walk(n: Record<string, unknown>): FamilyNode | null {
     if (n.rank === "CLASS") cls = (n.name as string).toLowerCase();
@@ -77,7 +89,9 @@ function getOrderPath(slug: string, cls?: string, ord?: string): string {
     { encoding: "utf-8", timeout: 5000 },
   ).trim();
   if (result) return result;
-  // Last resort: try repo root
+  // New family: use canonical class/order/slug path (mkdirSync creates it later)
+  if (cls && ord) return resolve(root, cls, ord, slug);
+  // Last resort: repo root
   return resolve(root, slug);
 }
 
@@ -428,7 +442,7 @@ async function main() {
 
   if (newCount !== currentCount || totalSpecies > currentCount) {
     console.log(`\n📊 Updating speciesCount: ${currentCount} → ${newCount}`);
-    const taxPath = resolve(portalRoot, "data/taxonomy.json");
+    const taxPath = TAXONOMY_PATH;
     const tax = JSON.parse(readFileSync(taxPath, "utf-8"));
 
     function updateCount(n: Record<string, unknown>) {
@@ -444,18 +458,23 @@ async function main() {
 
     if (updateCount(tax)) {
       writeFileSync(taxPath, JSON.stringify(tax, null, 2) + "\n");
-      console.log(`   Updated taxonomy.json`);
+      console.log(`   Updated ${TAXONOMY_INPUT}`);
     }
   }
 
-  // 8. Rebuild
-  console.log("\n⏳ Rebuilding unified taxonomy...");
-  try {
-    const out = execSync("sh scripts/buildData.sh 2>&1", { cwd: portalRoot, encoding: "utf-8", timeout: 180000 });
-    const doneLine = out.split("\n").find(l => l.startsWith("Done"));
-    if (doneLine) console.log(`   ${doneLine}`);
-  } catch (e) {
-    console.log(`   ⚠  Build issue: ${(e as Error).message.slice(0, 100)}`);
+  // 8. Rebuild (skip during batch imports via NO_BUILD=1; kingdom-aware)
+  if (process.env.NO_BUILD) {
+    console.log("\n⏭  NO_BUILD set — skipping rebuild (build once after batch).");
+  } else {
+    console.log("\n⏳ Rebuilding unified taxonomy...");
+    try {
+      const kEnv = SN_KINGDOM ? `SN_KINGDOM=${SN_KINGDOM} ` : "";
+      const out = execSync(`${kEnv}sh scripts/buildData.sh 2>&1`, { cwd: portalRoot, encoding: "utf-8", timeout: 180000 });
+      const doneLine = out.split("\n").find(l => l.startsWith("Done"));
+      if (doneLine) console.log(`   ${doneLine}`);
+    } catch (e) {
+      console.log(`   ⚠  Build issue: ${(e as Error).message.slice(0, 100)}`);
+    }
   }
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
