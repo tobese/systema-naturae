@@ -100,7 +100,7 @@ anthozoans, hydrozoans):
 | **EOL** (Encyclopedia of Life) | Control species (e.g. *Panthera leo*) resolve, but 4/4 obscure marine inverts had no EOL page; EOL's species text is itself largely Wikipedia-sourced | No incremental coverage — same ceiling as Wikipedia |
 | **WoRMS** | Taxonomy register only — names/authority/status/classification; distributions & vernaculars empty for obscure taxa, attributes are trait codes (e.g. "AMBI ecological group") | Not a prose source (useful only for validating names / filling empty marine *families*) |
 | **iNaturalist** | Obscure species miss; summaries that exist are Wikipedia mirrors | Redundant with the offline Wikipedia dump |
-| **AlgaeBase** | Potentially valuable for Chromista/algae, but the API is access-restricted (key required, non-bulk) | Deferred — revisit only if an API key is obtained |
+| **AlgaeBase** | Authoritative algae DB (diatoms, brown/red/green algae) — the "POWO equivalent" for Chromista + algal plants. API is key-gated (request at algaebase.org; non-bulk) | **Enricher built & ready** (`portal/scripts/enrichFromAlgaeBase.ts`), dormant until `ALGAEBASE_KEY` is set. Text-field extraction may need tuning against a live keyed response. |
 
 **Conclusion:** no open bulk prose source exists beyond Wikipedia (offline dump)
 + POWO. The remaining empties are genuinely undescribed in public aggregators;
