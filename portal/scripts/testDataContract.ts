@@ -347,7 +347,7 @@ test('skeleton node type distribution', () => {
   // are inlined in the skeleton instead of being in a separate order file.
   assert.deepStrictEqual(counts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 383,
-    FAMILY: 1, GENUS: 159, SPECIES: 57,
+    FAMILY: 1, GENUS: 159, SPECIES: 107,
   });
 });
 
