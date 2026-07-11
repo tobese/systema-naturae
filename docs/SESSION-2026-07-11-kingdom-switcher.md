@@ -129,3 +129,66 @@ Left alone: `gap-report*.json`, `sanity-*.json`, `snapshots/`, `namedafter-backu
 `build-log.json`, `insect-wikipedia-coverage.json`, `worms-candidates.json`,
 `gbif-scout-*.json` — all dev-tooling artifacts too, but only ~5.8MB combined, not worth the
 added exclude-list complexity.
+
+## `wcvp_dwca.zip` moved off the repo
+
+`portal/data/wcvp_dwca.zip` (84MB WCVP Darwin Core Archive from Kew — `wcvp_taxon.csv`,
+`wcvp_distribution.csv`, etc., the raw plant-import source dump `scripts/cacheWcvp.py` parses
+into `wcvp-cache.json`) moved to `/Volumes/MacieExternal/tmp/opencode/wcvp_dwca.zip`, matching
+the external-volume convention `cacheWcvp.py` already used for its derived cache. `LOCAL_ZIP`
+in that script now points there — confirmed it resolves and finds the file (no re-download from
+Kew's SFTP). The now-dead `--exclude='wcvp_dwca.zip'` was dropped from `deploy.yml`'s rsync.
+
+## Detailed project scan (2026-07-11)
+
+Ran `tsc -b`, full `eslint .`, and traced runtime behavior for real bugs vs. lint noise.
+
+### Fixed: crash bug in `UnifiedInfoPanel.tsx`
+
+`UnifiedInfoPanel` is a dispatcher component with ~10 early `return`s keyed off `node.rank`
+(KINGDOM, PHYLUM, CLASS, ORDER, FAMILY, SUBFAMILY/TRIBE, GENUS, SPECIES, SUBSPECIES,
+BREED_GROUP, BREED). The `HYBRID_GROUP` branch was inlined directly in the dispatcher body and
+called `useColorRegistry()` — a hook invoked only after several conditional early returns,
+violating React's Rules of Hooks. The component isn't `key`-ed by node id in either call site
+(`App.tsx:1024`, `AppBare.tsx:308`) and there's no error boundary anywhere in `src/` or
+`shared/src/`, so navigating from any other rank to a Hybrid Group node (real data — Equidae has
+one: Mule/Hinny/Zorse/Zedonk) would trigger a hooks-order mismatch and crash the info panel with
+no recovery.
+
+**Fixed** by extracting the branch into its own `HybridGroupPanel` component, matching the
+existing `BreedGroupPanel`/`HybridPanel` pattern already used for sibling ranks — the hook now
+runs unconditionally at that component's own top level.
+
+**Verified live** in Chrome dev server: navigated Species → Hybrids → Genus within Equidae
+(`?family=equidae&node=...`). Both transitions rendered cleanly, no console errors, Hybrids panel
+correctly showed all 4 hybrids with accent styling. `eslint src/components/UnifiedInfoPanel.tsx`
+confirms the `react-hooks/rules-of-hooks` error is gone (only pre-existing unrelated
+`no-explicit-any` warnings remain).
+
+### Fixed: `species-news.yml` ran a deleted script every Monday
+
+`Remove news and import-log features` (`40bf7bb10`, Jul 9) deleted
+`scripts/fetchSpeciesNews.ts` and `portal/data/species-news.json` as part of intentionally
+retiring that feature, but missed `.github/workflows/species-news.yml`, which still ran
+`npx tsx scripts/fetchSpeciesNews.ts` on a `0 6 * * 1` cron plus `workflow_dispatch`. That
+script no longer existed, so every scheduled run would fail immediately — currently masked by
+the same billing lock blocking `deploy.yml`, but would start failing loudly (or silently, since
+nobody watches a weekly cron for a removed feature) the moment billing is resolved. This also
+made the `[[project_iucn_token]]`-tracked `IUCN_TOKEN` secret pointless — it was being sourced
+specifically to unblock a workflow whose target script no longer exists.
+
+**Fixed**: deleted `.github/workflows/species-news.yml` outright, completing the Jul 9 cleanup.
+If the news feature comes back, it'll need a new script and workflow written together anyway.
+
+### Lint noise not chased (pre-existing, no behavior impact)
+
+- ~60 `@typescript-eslint/no-explicit-any` across one-off `scripts/` tooling — internal import/
+  enrichment scripts, not runtime code.
+- Two `'_c' is assigned a value but never used` in `useUnifiedTree.ts` — intentional
+  `const { children: _c, ...rest } = node` destructuring to drop a field; the `_`-prefix
+  no-unused-vars convention just isn't configured in this ESLint setup.
+- A batch of `react-hooks/set-state-in-effect` warnings across ~8 components (`App.tsx`,
+  `AppBare.tsx`, `BookView.tsx`, `SearchBox.tsx`, `SpeciesOfTheDayModal.tsx`,
+  `TaxonomySidebar.tsx`, `useInternationalDays.ts`) — a newer React-compiler lint rule flagging
+  a common, working pattern (`setState` directly in a `useEffect` body) that predates the rule
+  being added. Cosmetic/perf-advisory, not a correctness bug like the hooks-order one above.
