@@ -109,15 +109,21 @@ Both introduced 2026-07-08 ("kingdom-aware data layer"), both skip
 | `data/unified-taxonomy.json` + `data/unified-taxonomy-plantae.json` (legacy flat monoliths, pre-`data/kingdoms/` restructure) | 639M | No — unreferenced in `src/`; only read by local `testBuild.ts`/`testDataContract.ts` |
 | `data/kingdoms/*/unified-taxonomy.json` ("backward-compat" monolith `buildData.ts` still writes per kingdom) | 875M | No — same, test-only |
 | `data/orders/` + `data/orders-plantae/` (stale duplicates from before the `data/kingdoms/` split, last touched Jul 4 vs. Jul 11 for the current ones) | 500M | No — unreferenced |
-| `data/wcvp_dwca.zip` | 84M | No — raw import-time input |
+| `data/wcvp_dwca.zip` (raw WCVP Darwin Core Archive from Kew — the plant-import source dump `scripts/cacheWcvp.py` parses into `wcvp-cache.json`) | 84M | No — raw import-time input, only read by `cacheWcvp.py` |
 
 Confirmed each "No" by grepping `src/` and `scripts/` for every path — none of the five are
 fetched by the deployed app.
 
 **Fixed**: `.github/workflows/deploy.yml`'s rsync step now also excludes
-`unified-taxonomy.json`, `unified-taxonomy-plantae.json`, `/orders/`, `/orders-plantae/`, and
-`wcvp_dwca.zip`. Cuts the published `data/` payload from ~2.7GB to ~700MB with no functional
-change — faster artifact upload, faster Pages deploy.
+`unified-taxonomy.json`, `unified-taxonomy-plantae.json`, `/orders/`, and `/orders-plantae/`.
+Cuts the published `data/` payload from ~2.7GB to ~700MB with no functional change — faster
+artifact upload, faster Pages deploy.
+
+`data/wcvp_dwca.zip` no longer needs an exclude — it's been moved out of the repo entirely, to
+`/Volumes/MacieExternal/tmp/opencode/wcvp_dwca.zip` (same external-volume convention
+`cacheWcvp.py` already used for its derived `wcvp-cache.json` cache). `cacheWcvp.py`'s
+`LOCAL_ZIP` constant now points there so it still finds the cached zip instead of re-downloading
+it from Kew's SFTP.
 
 Left alone: `gap-report*.json`, `sanity-*.json`, `snapshots/`, `namedafter-backup.json`,
 `build-log.json`, `insect-wikipedia-coverage.json`, `worms-candidates.json`,
