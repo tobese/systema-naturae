@@ -5,9 +5,9 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-TAX_FILE = {"animalia":"taxonomy.json", "plantae":"taxonomy-plantae-snippet.json", "fungi":"taxonomy-fungi.json"}
-COLOR_FILE = {"animalia":"colorRegistry.ts", "plantae":"colorRegistryPlantae.ts", "fungi":"colorRegistryFungi.ts"}
-KINGDOMS = ("animalia","plantae","fungi")
+TAX_FILE = {"animalia":"taxonomy.json", "plantae":"taxonomy-plantae-snippet.json", "fungi":"taxonomy-fungi.json", "chromista":"taxonomy-chromista.json", "protozoa":"taxonomy-protozoa.json", "archaea":"taxonomy-archaea.json"}
+COLOR_FILE = {"animalia":"colorRegistry.ts", "plantae":"colorRegistryPlantae.ts", "fungi":"colorRegistryFungi.ts", "chromista":"colorRegistryChromista.ts", "protozoa":"colorRegistryProtozoa.ts", "archaea":"colorRegistryArchaea.ts"}
+KINGDOMS = ("animalia","plantae","fungi","chromista","protozoa","archaea")
 
 def load_tax(k):
     p = REPO/"portal"/"data"/TAX_FILE[k]
@@ -99,7 +99,7 @@ for k in KINGDOMS:
     rep("themes not used by any family (orphan themes)", unused)
     rep("duplicate appSlugs in taxonomy", dups)
 
-    if k in ("animalia","fungi"):
+    if k in ("animalia","fungi","chromista","protozoa","archaea"):
         # these kingdoms use on-disk data files
         missing_file=sorted(s for s in slugs if s not in disk)
         rep("appSlugs with NO data file on disk", missing_file)
