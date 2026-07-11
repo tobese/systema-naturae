@@ -1,51 +1,35 @@
 # Non-vertebrate enrichment plan
 
-*Created 11/07/2026*
+*Created 11/07/2026 · Updated 11/07/2026*
 
 ## Background
 
-After the July 2026 Wikipedia enrichment pass across all 6 vertebrate classes, Animalia enrichment sits at **49,791 / 529,298 (9.4%)**. The 0% classes (Gastropoda 99k, Bivalvia 35k, Nematoda 15k, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, and no GBIF descriptive content exists.
+After the July 2026 Wikipedia enrichment pass across all 6 vertebrate classes, Animalia enrichment sits at **49,804 / 529,298 (9.4%)**. The 0% classes (Gastropoda 99k, Bivalvia 35k, Nematoda 15k, etc.) are genuinely source-limited — no Wikipedia articles, no POWO/WCVP data, no GBIF descriptive content exists.
 
-GBIF caches for invertebrate classes are all empty/stale (2 species each — failed imports). No Insecta or Arachnida cache exists.
+GBIF caches for invertebrate classes are all empty/stale (2 species each — failed imports). No Insecta or Arachnida cache existed.
 
 ## Phase 1: Structural completeness (import names, accept minimal descriptions)
 
-**Goal:** Import species names from GBIF for the two largest partially-enriched classes (Insecta, Arachnida) to achieve structural completeness. Descriptions stay minimal/boilerplate.
+**Goal:** Build GBIF caches for Insecta and Arachnida to enable future enrichment passes.
 
-**Steps:**
-1. Build proper GBIF caches for Insecta and Arachnida via `scripts/cacheGbifClass.ts`
-   - Rate-limited (GBIF API), could take hours/days
-   - Cache output: `portal/data/gbif-cache-insecta.json`, `portal/data/gbif-cache-arachnida.json`
-2. Use `fillFamilyGap.ts` to import species names from rebuilt caches
-   - Fills speciesCount targets for families that are currently under-populated
-   - Descriptions will be minimal (GBIF provides taxonomy, not descriptions)
-3. Rebuild both kingdoms: `sh scripts/buildData.sh` + `SN_KINGDOM=plantae sh scripts/buildData.sh`
-4. Run `findGaps.ts` + `deep-scan.py` to verify
-5. Commit: `Import Insecta + Arachnida species from rebuilt GBIF caches`
+**Status:** In progress — GBIF caches building in background.
+- Arachnida: ~68% (PID from /tmp/gbif-arachnida.log)
+- Insecta: ~8% (PID from /tmp/gbif-insecta.log) — will take ~8-10h total
 
-**Estimated impact:**
-- Insecta: structural completeness (all families at speciesCount target)
-- Arachnida: same
-- No enrichment gain for most species (descriptions stay minimal)
-
-**Status:** Not yet started.
+**Note:** All Insecta/Arachnida families already have species data (213 and 11 families respectively). The caches are for future enrichment, not structural import.
 
 ## Phase 2a: Targeted enrichment for Insecta + Arachnida
 
-**Goal:** Run Wikipedia enrichment pass on Insecta and Arachnida — the two classes with partial Wikipedia coverage and non-trivial existing enrichment.
+**Goal:** Run Wikipedia enrichment pass on Insecta and Arachnida.
 
-**Steps:**
-1. `npx tsx scripts/enrichFromWikipedia.ts --class insecta`
-2. `sh scripts/buildData.sh` → commit
-3. `npx tsx scripts/enrichFromWikipedia.ts --class arachnida`
-4. `sh scripts/buildData.sh` → commit
-5. Run `findGaps.ts` to measure improvement
+**Status:** COMPLETE — ceiling confirmed.
 
-**Estimated impact:**
-- Insecta: 8.3% → ~12-15% (best case, depends on Wikipedia coverage for beetles/butterflies/hymenoptera)
-- Arachnida: 17.2% → ~25% (best case, depends on spider coverage)
+**Results (11/07/2026):**
+- **Arachnida:** 0 new enrichments (18,181 species checked, all source-limited)
+- **Insecta:** 13 new enrichments (170,778 species checked, 0.008% yield)
+- Combined: 13 new enrichments out of 188,959 species checked
 
-**Depends on:** Phase 1 (rebuilt caches for species names).
+**Conclusion:** The Wikipedia enrichment ceiling is confirmed for all Animalia classes. No class can be significantly improved through Wikipedia alone.
 
 ## Phase 3: Accept the ceiling
 
