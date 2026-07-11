@@ -20,6 +20,7 @@ import { useInternationalDays } from "./hooks/useInternationalDays";
 import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
 import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import StatisticsHeader from "./components/StatisticsHeader";
+import KingdomSwitcher from "./components/KingdomSwitcher";
 import WheelOfNature from "./components/WheelOfNature";
 import BookView from "./components/BookView";
 import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
@@ -511,6 +512,9 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
                   : (focusedClassNode?.commonName ?? focusedClassNode?.name ?? "")}
               </span>
             )}
+          </div>
+          <div style={{ marginTop: 6 }}>
+            <KingdomSwitcher current={kingdom} />
           </div>
           {!inFamilyFocus && taxonomyData?.rankCounts && (
             <div style={{

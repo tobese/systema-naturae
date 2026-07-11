@@ -25,7 +25,7 @@ export function useInternationalDays(kingdom = "animalia") {
       return;
     }
     const suffix = `-${kingdom}`;
-    fetch(`/data/international-days${suffix}.json`)
+    fetch(`${import.meta.env.BASE_URL}data/international-days${suffix}.json`)
       .then(r => (r.ok ? r.json() : null))
       .then((data: any) => {
         if (data && Array.isArray(data.days)) {

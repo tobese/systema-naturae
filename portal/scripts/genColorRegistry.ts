@@ -34,7 +34,8 @@ const seen = new Set<string>();
 function walk(n: Node) {
   if (n.rank === "FAMILY" && n.appSlug && !seen.has(n.appSlug)) {
     seen.add(n.appSlug);
-    families.push({ slug: n.appSlug, constName: n.appSlug.replace(/[^a-z0-9]+/gi, "_").toUpperCase() + "_THEME" });
+    const safe = n.appSlug.replace(/[^a-z0-9]+/gi, "_").toUpperCase();
+    families.push({ slug: n.appSlug, constName: (/^[0-9]/.test(safe) ? "F_" + safe : safe) + "_THEME" });
   }
   n.children?.forEach(walk);
 }
