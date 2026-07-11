@@ -40,7 +40,7 @@ OUT_PATH = os.path.join(ROOT, "portal", "data", "wcvp-cache.json")
 EXTERNAL_PATH = "/Volumes/MacieExternal/tmp/opencode/wcvp-cache.json"
 
 WCVP_URL = "http://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip"
-LOCAL_ZIP = os.path.join(ROOT, "portal", "data", "wcvp_dwca.zip")
+LOCAL_ZIP = "/Volumes/MacieExternal/tmp/opencode/wcvp_dwca.zip"
 TAXON_FILE = "wcvp_taxon.csv"
 DIST_FILE = "wcvp_distribution.csv"
 
