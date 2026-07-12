@@ -10,7 +10,14 @@
  * `Special:FilePath` which redirects to the actual upload URL and supports a
  * `?width=` thumbnail parameter.
  */
-import imagesCacheRaw from "../../data/wiki-images.json";
+import { useEffect, useState } from "react";
+
+// Loaded lazily via fetch() (see loadCache). Importing the JSON directly as a
+// module statically inlines ~43MB / ~148k entries into the JS graph above App,
+// which made Vite serialize a ~198MB ESM module and block first paint in dev for
+// 60–90s. Importing the *URL* instead keeps first paint instant; the data is
+// fetched on first use (non-critical: only portrait / range map / IUCN badge).
+import imagesUrl from "../../data/wiki-images.json?url";
 
 export interface WikiImageData {
   qid: string;
@@ -42,7 +49,27 @@ interface RawEntry {
   fetchedAt: string;
 }
 
-const cache = imagesCacheRaw as Record<string, RawEntry>;
+let cache: Record<string, RawEntry> | null = null;
+let cachePromise: Promise<Record<string, RawEntry>> | null = null;
+
+/** Fetch the sidecar JSON once, memoized across all call sites. */
+function loadCache(): Promise<Record<string, RawEntry>> {
+  if (!cachePromise) {
+    cachePromise = fetch(imagesUrl)
+      .then((r) => r.json() as Promise<Record<string, RawEntry>>)
+      .then((data) => {
+        cache = data;
+        return data;
+      });
+  }
+  return cachePromise;
+}
+
+// Eagerly start the fetch at module load (async, non-blocking — does not delay
+// first paint, unlike the old static import). By the time a user opens a species
+// panel, the ~43MB sidecar is normally resident, so the cached Wikidata portrait
+// is available synchronously again — keeping the species image instant.
+loadCache();
 
 const COMMONS_BASE = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 
@@ -62,7 +89,14 @@ function stripAuthority(name: string): string {
 
 /** Returns null if the binomial isn't in the cache or has no useful data. */
 export function useWikiImages(binomial: string | null | undefined): WikiImages | null {
-  if (!binomial) return null;
+  const [, force] = useState(0);
+  useEffect(() => {
+    if (!cache) {
+      loadCache().then(() => force((n) => n + 1));
+    }
+  }, [binomial]);
+
+  if (!cache || !binomial) return null;
   // Try exact match first; fall back to stripped binomial (handles authority suffixes)
   let entry = cache[binomial];
   if (!entry || !entry.qid) {
@@ -96,5 +130,5 @@ export function useWikiImages(binomial: string | null | undefined): WikiImages |
 
 /** Total count of cached entries (for debug / coverage display). */
 export function wikiImagesCacheSize(): number {
-  return Object.keys(cache).length;
+  return cache ? Object.keys(cache).length : 0;
 }
