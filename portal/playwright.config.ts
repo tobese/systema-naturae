@@ -11,6 +11,8 @@ export default defineConfig({
     command: 'npm run dev',
     url: 'http://localhost:5173',
     reuseExistingServer: true,
-    timeout: 60_000,
+    // `npm run dev` first runs buildData.sh (rebuilds the taxonomy) before Vite,
+    // which routinely exceeds the default 60s on a cold cache.
+    timeout: 180_000,
   },
 });
