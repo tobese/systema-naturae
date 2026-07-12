@@ -37,4 +37,4 @@ Hover tooltips for tree nodes, rendered by [`FamilyTree.tsx`](../../shared/src/c
 ## Related
 
 - [`navigation.md`](./navigation.md) — click vs. hover interaction model.
-- [`Screen Handling.md`](./Screen%20Handling.md) — touch interaction patterns.
+- [`Screen Handling`](./screen-handling.md) — touch interaction patterns.
