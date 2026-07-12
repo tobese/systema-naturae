@@ -279,8 +279,9 @@ ALA, IUCN, SANBI, herbaria, PBDB/IFPNI for fossils) and written with
 non-open (see attribution doc) — used targeted, never bulk. Fossil-only taxa get
 `fossil: true`.
 
-Reports: `enrich-report-2026-07-05.md`, `enrich-family-report-2026-07-06.md`,
-`web-enrich-report-2026-07-06.md`.
+Reports: [`enrich-report-2026-07-05.md`](./reports/enrich-report-2026-07-05.md),
+[`enrich-family-report-2026-07-06.md`](./reports/enrich-family-report-2026-07-06.md),
+[`web-enrich-report-2026-07-06.md`](./reports/web-enrich-report-2026-07-06.md).
 
 ---
 
@@ -299,6 +300,6 @@ Beyond `description`, enrichment sets these on `TaxonNode` (`shared/src/types.ts
 Notes:
 - `distribution` was deliberately kept as the curated native-range **string**, not
   POWO's raw TDWG `locations` codes (noisy, level-mixed, native+introduced
-  conflated). See `distribution-notes-2026-07-06.md`.
+  conflated). See [distribution-notes-2026-07-06.md](./reports/distribution-notes-2026-07-06.md).
 - Open item: the ~89k wiki/gbif species lack `distribution`; it can be backfilled
   cheaply via the cached IPNI bridge as additive metadata (no `sourcedFrom` change).
