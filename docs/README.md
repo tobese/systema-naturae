@@ -1,12 +1,24 @@
 # Docs
 
+## Index
+
 - [**Backlog**](./backlog.md) — Living roadmap and feature queue
-- [**Book View**](./Book%20View.md) — Alternative text-driven taxonomy browser concept
+- [**Book View**](./book-view.md) — Alternative text-driven taxonomy browser concept
 - [**Coverage**](./Coverage.md) — Taxonomy node coverage, portal statistics & gaps
-- [**Graph UI**](./Graph%20UI.md) — Layout, node sizing, colors, and side panels
+- [**Graph UI**](./graph-ui.md) — Layout, node sizing, colors, and side panels
 - [**Import**](./Import.md) — Family import workflow and scripts
 - [**Navigation**](./navigation.md) — Portal navigation architecture
-- [**Screen Handling**](./Screen%20Handling.md) — Touch & desktop screen handling
-- [**Statistics Header**](./Statistics%20header.md) — Statistics header component
+- [**Screen Handling**](./screen-handling.md) — Touch & desktop screen handling
+- [**Statistics Header**](./statistics-header.md) — Statistics header component
 - [**Tooltip**](./Tooltip.md) — Tooltip behavior and implementation
-- [**Wheel of Nature**](./Wheel%20of%20Nature.md) — Wheel of Nature game component
+- [**Wheel of Nature**](./wheel-of-nature.md) — Wheel of Nature game component
+
+## Reports
+
+Generated run reports (historical import/enrichment logs), moved out of the
+repo root:
+
+- [enrich-report-2026-07-05.md](./reports/enrich-report-2026-07-05.md)
+- [enrich-family-report-2026-07-06.md](./reports/enrich-family-report-2026-07-06.md)
+- [web-enrich-report-2026-07-06.md](./reports/web-enrich-report-2026-07-06.md)
+- [distribution-notes-2026-07-06.md](./reports/distribution-notes-2026-07-06.md)
