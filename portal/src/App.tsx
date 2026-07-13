@@ -106,12 +106,13 @@ interface AppProps {
 export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [options, setOptions] = useState<PortalOptions>({
-    showExtinct: false,
-    showFossil: false,
+    showExtinct: true,
+    showFossil: true,
     collapseLarge: true,
     collapseThreshold: 30,
     nodeScale: 1.0,
     highlightWikipedia: false,
+    highlightFossilExtinct: false,
   });
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
@@ -200,6 +201,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
     expandedBreedIds,
     highlightedContinent,
     options.highlightWikipedia,
+    options.highlightFossilExtinct,
     loadedOrders,
     colorRegistry,
   );
