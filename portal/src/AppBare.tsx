@@ -17,7 +17,7 @@ import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import TaxonomySidebar from "./components/TaxonomySidebar";
 import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
 
-const OPTIONS = { showExtinct: false, showFossil: false, collapseThreshold: 30, nodeScale: 1.0 };
+const OPTIONS = { showExtinct: true, showFossil: true, collapseThreshold: 30, nodeScale: 1.0, highlightWikipedia: false, highlightFossilExtinct: false };
 
 function filterExtinct(node: TaxonNode | null): TaxonNode {
   if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
@@ -138,7 +138,7 @@ export default function AppBare({ kingdom = "animalia", colorRegistry }: AppBare
   }, [focusedFamilyId]);
 
   const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
-    taxonomyData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, null, false, loadedOrders, colorRegistry,
+    taxonomyData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, null, false, false, loadedOrders, colorRegistry,
   );
 
   const deepLinkedOrders = useRef<Set<string>>(new Set());

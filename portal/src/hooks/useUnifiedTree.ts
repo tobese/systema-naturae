@@ -132,6 +132,7 @@ export function useUnifiedTree(
   expandedBreedIds: Set<string>,
   highlightedContinent: string | null,
   highlightWikipedia: boolean,
+  highlightFossilExtinct: boolean,
   loadedOrders: Set<string> | undefined,
   colorRegistry: Record<string, ColorTheme>,
 ): {
@@ -182,9 +183,17 @@ export function useUnifiedTree(
       walkWiki(familyNode);
     }
 
+    if (highlightFossilExtinct) {
+      function walkFossilExtinct(n: TaxonNode) {
+        if (n.fossil || n.extinct) ids.add(n.id);
+        n.children?.forEach(walkFossilExtinct);
+      }
+      walkFossilExtinct(familyNode);
+    }
+
     if (ids.size === 0) return null;
     return ids;
-  }, [annotatedData, focusedFamilyId, highlightedContinent, highlightWikipedia]);
+  }, [annotatedData, focusedFamilyId, highlightedContinent, highlightWikipedia, highlightFossilExtinct]);
 
   const findNodeById = useMemo(
     () => (id: string) => annotatedData ? walkFind(annotatedData, id) : null,

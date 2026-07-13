@@ -53,14 +53,15 @@ interface TaxonNode {
 function stampFamilySlug(node: TaxonNode, slug: string, cls?: string, ord?: string): TaxonNode {
   const name = node.name || "";
   const desc = node.description || "";
-  const isExtinct = name.startsWith("†") || /\bextinct\b/i.test(desc) || /\bfossil\b/i.test(desc);
+  const detectedExtinct = name.startsWith("†") || /\bextinct\b/i.test(desc) || /\bfossil\b/i.test(desc);
 
   return {
     ...node,
     familySlug: slug,
     className: cls,
     orderName: ord,
-    extinct: isExtinct,
+    extinct: node.extinct !== undefined ? node.extinct : detectedExtinct,
+    ...(node.fossil !== undefined ? { fossil: node.fossil } : {}),
     children: node.children?.map(c => stampFamilySlug(c, slug, cls, ord)),
   };
 }

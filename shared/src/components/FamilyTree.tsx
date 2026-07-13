@@ -540,7 +540,9 @@ export default function FamilyTree({
       const next = n.children.map(collapseNode);
       return { ...n, children: next };
     }
-    const collapsedData = focusedFamilySlug ? prunedData : collapseNode(prunedData);
+    // In class focus, skip collapseNode so the focused class expands to show
+    // its orders/families (other classes are already pruned to dots above).
+    const collapsedData = (focusedFamilySlug || focusedClassId) ? prunedData : collapseNode(prunedData);
 
     // ── Compute layout ────────────────────────────────────────────────────────
     const root = d3.hierarchy(collapsedData);
@@ -704,6 +706,13 @@ export default function FamilyTree({
       .attr("fill", "none")
       .attr("stroke-width", 1.5);
 
+    // Fossil / extinct ring — marks fossil or extinct taxa (higher ranks + extinct species)
+    nodeEnter.append("circle")
+      .attr("class", "fossil-ring")
+      .attr("r", d => nr(d, specialSet) + 4)
+      .attr("fill", "none")
+      .attr("stroke-width", 2);
+
     // Main circle
     nodeEnter.append("circle").attr("class", "main-circle");
 
@@ -773,6 +782,17 @@ export default function FamilyTree({
         return colorMap[d.data.iucnStatus] ?? "none";
       })
       .attr("opacity", d => d.data.rank === "SPECIES" && d.data.iucnStatus ? 0.7 : 0);
+
+    // Fossil / extinct ring visibility
+    merged.select<SVGCircleElement>("circle.fossil-ring")
+      .attr("r", d => nr(d, specialSet) + 4)
+      .attr("stroke", d => {
+        if (d.data.extinct) return "#C95B6B";
+        if (d.data.fossil) return "#C89860";
+        return "none";
+      })
+      .attr("stroke-dasharray", d => d.data.fossil && !d.data.extinct ? "3 2" : null)
+      .attr("opacity", d => (d.data.fossil || d.data.extinct) ? 0.9 : 0);
 
     // Main circle visual update
     merged.select<SVGCircleElement>("circle.main-circle")

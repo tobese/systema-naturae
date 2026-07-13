@@ -123,6 +123,28 @@ function ClickableItem({ children, onClick }: { children: React.ReactNode; onCli
   );
 }
 
+// Fossil / extinct badges (higher ranks + any extinct species)
+function StatusBadges({ node }: { node: TaxonNode }) {
+  const pn = node as PortalNode;
+  if (!pn.fossil && !pn.extinct) return null;
+  return (
+    <span style={{ display: "inline-flex", gap: 6, marginLeft: 6, verticalAlign: "middle" }}>
+      {pn.fossil && (
+        <span style={{
+          fontSize: 9, fontWeight: 700, letterSpacing: "0.06em",
+          color: "#1a1208", background: "#C89860", borderRadius: 4, padding: "2px 6px",
+        }}>FOSSIL</span>
+      )}
+      {pn.extinct && (
+        <span style={{
+          fontSize: 9, fontWeight: 700, letterSpacing: "0.06em",
+          color: "#1a0a0c", background: "#C95B6B", borderRadius: 4, padding: "2px 6px",
+        }}>EXTINCT</span>
+      )}
+    </span>
+  );
+}
+
 // ─── Portal-level panels ──────────────────────────────────────────────────────
 
 function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
@@ -133,6 +155,7 @@ function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
       <div style={{ fontSize: 10, color: "#8899bb", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Kingdom</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
+      <StatusBadges node={node} />
       <div style={{ fontSize: 12, color: "#666", marginBottom: pn.description ? 14 : 20 }}>
         {phyla.length} {phyla.length === 1 ? "phylum" : "phyla"}
       </div>
@@ -165,6 +188,7 @@ function PhylumPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonN
     <div style={{ padding: "20px" }}>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
+      <StatusBadges node={node} />
       {pn.description && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
           {pn.description}
@@ -197,6 +221,7 @@ function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
       <div style={{ fontSize: 10, color: accent, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Class</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
+      <StatusBadges node={node} />
       <div style={{ fontSize: 12, color: "#666", marginBottom: (node as PortalNode).description ? 14 : 20 }}>
         {orders.length} {orders.length === 1 ? "order" : "orders"} · {familyCount} {familyCount === 1 ? "family" : "families"}
       </div>
@@ -232,6 +257,7 @@ function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
     <div style={{ padding: "20px" }}>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
+      <StatusBadges node={node} />
       <div style={{ fontSize: 12, color: "#666", marginBottom: (node as PortalNode).description ? 14 : 20 }}>
         {familyCount} {familyCount === 1 ? "family" : "families"}
       </div>
@@ -363,6 +389,7 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
       <div style={{ fontSize: 10, color: accent, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>Genus</div>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 2 }}>{node.name}</div>
+      <StatusBadges node={node} />
       {node.commonName && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.commonName}</div>}
       {node.description && (
         <div style={{ fontSize: 13, color: "#777", lineHeight: 1.7, marginBottom: 14 }}>{node.description}</div>
