@@ -3,7 +3,8 @@ import { resolve, join } from 'path';
 import { strict as assert } from 'assert';
 
 const KINGDOM = 'animalia';
-const DATA_DIR = resolve(import.meta.dirname, '..', 'data', 'kingdoms', KINGDOM);
+const DATA_DIR = resolve(import.meta.dirname, '..', 'public', 'data', 'kingdoms', KINGDOM);
+const PRIVATE_DATA_DIR = resolve(import.meta.dirname, '..', 'data', 'kingdoms', KINGDOM);
 const ORDERS_DIR = join(DATA_DIR, 'orders');
 
 function loadJson<T = unknown>(path: string): T {
@@ -513,7 +514,7 @@ interface CoverageClass {
   families: CoverageFamily[];
 }
 
-const coverage = loadJson<CoverageClass[]>(join(DATA_DIR, 'coverage-summary.json'));
+const coverage = loadJson<CoverageClass[]>(join(PRIVATE_DATA_DIR, 'coverage-summary.json'));
 
 test('coverage has 75 classes', () => {
   assert.equal(coverage.length, 75);
@@ -636,7 +637,7 @@ test('coverage-summary portalCount sums to skeleton rankCounts.SPECIES', () => {
 console.log('\nBUILD OUTPUT SANITY');
 
 test('unified-taxonomy.json exists and is large (>100MB)', () => {
-  const path = join(DATA_DIR, 'unified-taxonomy.json');
+  const path = join(PRIVATE_DATA_DIR, 'unified-taxonomy.json');
   const stats = statSync(path);
   assert.ok(stats.size > 100_000_000, `unified-taxonomy.json only ${(stats.size/1e6).toFixed(1)}MB`);
 });
