@@ -244,9 +244,9 @@ All machines on same switch under desk. **All machines run Ollama.**
 | Macie | macOS | tb | Dev machine (this host) + Ollama + offline Wikipedia DB on external volumes |
 | Steamie | Windows 11 | opencode | Ollama server |
 | Biggie | Windows 10 | — | Ollama |
-| Debbie | Debian | — | Ollama |
+| Debbie | Debian | tommy | Ollama + hosts the Docker deploy of this portal (see [`docs/deploy-debbie.md`](docs/deploy-debbie.md)) |
 
-**Note:** Shell tools run as `tb` on Macie. If a host is unreachable via `.local` mDNS, try direct IP. SSH password for Steamie: `sshPassword!`
+**Note:** Shell tools run as `tb` on Macie. If a host is unreachable via `.local` mDNS, try direct IP — or Tailscale (`<host>.bearded-panga.ts.net`), which has stayed up even when LAN `.local` routing to Debbie was down. SSH password for Steamie: `sshPassword!`. Debbie SSH is user `tommy` with passwordless `sudo ALL`; credentials are in `~/docker-multi-machine/README.md` on Macie, not in this repo.
 
 **Tailscale note:** Always use `localhost` (not `127.0.0.1` or `.local` hostnames) when accessing local dev servers — Tailscale routes interfere with non-localhost addresses.
 
