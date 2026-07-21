@@ -155,11 +155,18 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
 }
 
 // ── Build outputs: per-kingdom subdirs ──
-const kingdomOutDir = resolve(portalRoot, `data/kingdoms/${KINGDOM || "animalia"}`);
+// The skeleton/manifest/orders are what the app fetches at runtime
+// (`${base}data/kingdoms/...`), so they're written under public/ where
+// `vite build` copies them into dist/ verbatim. The monolithic unified tree
+// and reporting files are build-time-only artifacts (used by test scripts,
+// never fetched by the browser), so they stay under the private data/ dir
+// to avoid bloating the production image with hundreds of MB of unused JSON.
+const kingdomOutDir = resolve(portalRoot, `public/data/kingdoms/${KINGDOM || "animalia"}`);
+const kingdomPrivateDir = resolve(portalRoot, `data/kingdoms/${KINGDOM || "animalia"}`);
 const ORDERS_REL = `orders${dataSuffix}`;
 
 const taxonomyPath = resolve(portalRoot, taxonomyInput);
-const outputPath = resolve(kingdomOutDir, `unified-taxonomy.json`);
+const outputPath = resolve(kingdomPrivateDir, `unified-taxonomy.json`);
 const ordersDir = resolve(kingdomOutDir, ORDERS_REL);
 const skeletonPath = resolve(kingdomOutDir, `unified-taxonomy-skeleton.json`);
 const manifestPath = resolve(kingdomOutDir, `order-manifest.json`);
@@ -187,8 +194,9 @@ function count(n: TaxonNode) {
 count(unified);
 unified.rankCounts = rankCounts;
 
-// ── Ensure kingdom output directory exists ──
+// ── Ensure kingdom output directories exist ──
 if (!existsSync(kingdomOutDir)) mkdirSync(kingdomOutDir, { recursive: true });
+if (!existsSync(kingdomPrivateDir)) mkdirSync(kingdomPrivateDir, { recursive: true });
 
 // ── Still produce the monolithic unified-tree for backward compat ──
 writeFileSync(outputPath, JSON.stringify(unified, null, 2));
@@ -390,7 +398,7 @@ function walkCoverage(n: TaxonNode, classes: CoverageClass[]): void {
 }
 
 walkCoverage(unified, coverageClasses);
-const coveragePath = resolve(kingdomOutDir, `coverage-summary.json`);
+const coveragePath = resolve(kingdomPrivateDir, `coverage-summary.json`);
 writeFileSync(coveragePath, JSON.stringify(coverageClasses, null, 2));
 console.log(`  Coverage summary: ${coverageClasses.length} classes, ${coverageClasses.reduce((s, c) => s + c.families.length, 0)} families → ${coveragePath}`);
 
@@ -400,6 +408,6 @@ const buildLog = {
   compressedSpecies: flatSpeciesCount,
   totalNodes: physicalCount + flatSpeciesCount,
 };
-writeFileSync(resolve(kingdomOutDir, "build-log.json"), JSON.stringify(buildLog, null, 2) + "\n");
+writeFileSync(resolve(kingdomPrivateDir, "build-log.json"), JSON.stringify(buildLog, null, 2) + "\n");
 
 console.log(`\nDone. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → ${outputPath}`);
