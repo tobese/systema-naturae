@@ -1,4 +1,4 @@
-.PHONY: dev dev-daemon build data typecheck lint
+.PHONY: dev dev-daemon build data typecheck lint docker
 
 dev:
 	cd portal && npm run dev
@@ -33,6 +33,9 @@ fetch:
 
 cache-gbif:
 	cd portal && npm run cache-gbif
+
+docker:
+	docker build -t systema-naturae .
 
 SHELL := /bin/zsh
 PATH := $(HOME)/.nvm/versions/node/v23.3.0/bin:/usr/local/bin:/opt/homebrew/bin:$(PATH)
