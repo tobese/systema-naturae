@@ -1,0 +1,68 @@
+import type { BookNode } from "../types";
+import { SpeciesEntry } from "./SpeciesEntry";
+
+function GenusSection({ genus, index }: { genus: BookNode; index: number }) {
+  const detailed = genus.children ?? [];
+  const stubs = genus.speciesList ?? [];
+  const totalCount = detailed.length + stubs.length;
+
+  return (
+    <div id={`genus-${genus.id}`} style={{ marginTop: "1.5rem" }}>
+      <h4
+        style={{
+          fontSize: "1rem",
+          fontStyle: "italic",
+          color: "var(--ink-soft)",
+          marginBottom: "0.3rem",
+        }}
+      >
+        {index}. {genus.name}
+        <span style={{ fontStyle: "normal", fontSize: "0.8rem", color: "var(--ink-faint)", marginLeft: "0.5rem" }}>
+          {totalCount} {totalCount === 1 ? "species" : "species"}
+        </span>
+      </h4>
+
+      {detailed.map((species) => (
+        <SpeciesEntry key={species.id} species={species} />
+      ))}
+
+      {stubs.length > 0 && (
+        <p style={{ fontSize: "0.85rem", color: "var(--ink-faint)", margin: "0.5rem 0 0", lineHeight: 1.7 }}>
+          Also in this genus: {stubs.map((s) => s.name).join(", ")}.
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function FamilySection({ family }: { family: BookNode }) {
+  const genera = family.children ?? [];
+  const stats = family.chapterStats;
+
+  return (
+    <section id={`family-${family.familySlug}`} style={{ marginTop: "3rem" }}>
+      <h3 style={{ fontSize: "1.4rem", borderBottom: "1px solid var(--rule-gold)", paddingBottom: "0.4rem" }}>
+        {family.name}
+        {family.commonName && (
+          <span style={{ fontFamily: "var(--font-body)", fontWeight: 400, fontSize: "1rem", color: "var(--ink-faint)" }}>
+            {" "}
+            — {family.commonName}
+          </span>
+        )}
+      </h3>
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", fontSize: "0.85rem", color: "var(--ink-faint)", marginTop: "0.3rem" }}>
+        <span>{family.speciesCount ?? 0} species</span>
+        {family.distribution && <span>{family.distribution}</span>}
+        {stats && (
+          <span>
+            {stats.enrichedCount} of {stats.speciesCount} entries fully described so far
+          </span>
+        )}
+      </div>
+
+      {genera.map((genus, i) => (
+        <GenusSection key={genus.id} genus={genus} index={i + 1} />
+      ))}
+    </section>
+  );
+}

@@ -1,0 +1,50 @@
+:root {
+  --paper: #f3ead4;
+  --paper-shadow: #d8caa4;
+  --ink: #2a2118;
+  --ink-soft: #4d4030;
+  --ink-faint: #7a6c53;
+  --rule-gold: #a3823a;
+  --mammalia: #7a1f2b;
+  --mammalia-soft: #a5453f;
+  --aves: #1f4d43;
+  --aves-soft: #3d7568;
+  --cover-bg: radial-gradient(ellipse at 30% 20%, #4a1620 0%, #2b0e14 45%, #170709 100%);
+  --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "EB Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}

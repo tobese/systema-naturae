@@ -1,0 +1,183 @@
+// Builds this prototype's curated data slice from the portal's already-built
+// order JSON files. Read-only against the portal — never writes back to it.
+// Re-run any time upstream data changes: `npm run extract-data`.
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = join(__dirname, "../../..");
+const ORDERS_DIR = join(REPO_ROOT, "portal/public/data/kingdoms/animalia/orders");
+const GAP_REPORT_PATH = join(REPO_ROOT, "portal/data/gap-report.json");
+const OUT_DIR = join(__dirname, "../public/data");
+
+interface TaxonNode {
+  id: string;
+  name: string;
+  rank: string;
+  commonName?: string;
+  description?: string;
+  distribution?: string;
+  namedAfter?: string;
+  continents?: string[];
+  subspeciesCount?: number;
+  extinct?: boolean;
+  fossil?: boolean;
+  sourcedFrom?: string;
+  familySlug?: string;
+  appSlug?: string;
+  speciesCount?: number;
+  children?: TaxonNode[];
+  speciesList?: TaxonNode[];
+  chapterStats?: { enrichedCount: number; speciesCount: number };
+}
+
+interface GapRow {
+  appSlug: string;
+  speciesCount: number;
+  enrichedCount: number;
+}
+
+// Part (Class) → Chapter (Order, numbered continuously within the Part) →
+// whitelisted Family slugs. Whitelist chosen from portal/data/gap-report.json
+// for genuine Wikipedia-derived enrichment coverage, favoring name-recognizable
+// groups (bears, cats, apes, crows, finches) over higher-but-obscure coverage
+// elsewhere (e.g. Squamata families score higher but read less like a "book").
+const PARTS: {
+  className: string;
+  title: string;
+  chapters: { orderFile: string; orderName: string; title: string; familySlugs: string[] }[];
+}[] = [
+  {
+    className: "Mammalia",
+    title: "Part I — Mammalia",
+    chapters: [
+      { orderFile: "CARNIVORA", orderName: "Carnivora", title: "Chapter 1 — Carnivora", familySlugs: ["felidae", "ursidae"] },
+      { orderFile: "PRIMATES", orderName: "Primates", title: "Chapter 2 — Primates", familySlugs: ["hominidae"] },
+    ],
+  },
+  {
+    className: "Aves",
+    title: "Part II — Aves",
+    chapters: [
+      { orderFile: "PASSERIFORMES", orderName: "Passeriformes", title: "Chapter 1 — Passeriformes", familySlugs: ["corvidae", "fringillidae"] },
+    ],
+  },
+];
+
+function readOrderFile(orderFile: string): TaxonNode {
+  return JSON.parse(readFileSync(join(ORDERS_DIR, `${orderFile}.json`), "utf-8"));
+}
+
+// Some enrichFromWikipedia.ts extracts are corrupted leftover MediaWiki markup
+// instead of real prose — category links ("Category:Taxa named by..."), raw
+// infobox templates ("{{Speciesbox | fossil_range = ...}}", disproportionately
+// common on fossil/extinct species whose articles open with a taxobox before
+// any prose), or article redirects ("#REDIRECT Foo"). No usable sentence to
+// salvage in any of these. Drop the description entirely so the UI's existing
+// stub-species fallback ("not yet described here") handles it honestly, rather
+// than rendering raw wikitext in the book.
+const CORRUPTION_MARKERS = ["Category:", "{{", "}}", "#REDIRECT"];
+
+function stripCorruptedDescriptions(node: TaxonNode): number {
+  let stripped = 0;
+  if (node.description && CORRUPTION_MARKERS.some((m) => node.description!.includes(m))) {
+    node.description = undefined;
+    stripped++;
+  }
+  for (const child of node.children ?? []) stripped += stripCorruptedDescriptions(child);
+  for (const s of node.speciesList ?? []) stripped += stripCorruptedDescriptions(s);
+  return stripped;
+}
+
+function loadGapStats(): Map<string, GapRow> {
+  const rows: GapRow[] = JSON.parse(readFileSync(GAP_REPORT_PATH, "utf-8"));
+  const map = new Map<string, GapRow>();
+  for (const row of rows) map.set(row.appSlug, row);
+  return map;
+}
+
+function findFamilies(order: TaxonNode, slugs: string[]): TaxonNode[] {
+  const found: TaxonNode[] = [];
+  const walk = (node: TaxonNode) => {
+    if (node.rank === "FAMILY" && node.familySlug && slugs.includes(node.familySlug)) {
+      found.push(node);
+      return; // don't descend into a matched family looking for nested families
+    }
+    for (const child of node.children ?? []) walk(child);
+  };
+  walk(order);
+  // preserve whitelist order, not tree-encounter order
+  return slugs
+    .map((slug) => found.find((f) => f.familySlug === slug))
+    .filter((f): f is TaxonNode => Boolean(f));
+}
+
+function main() {
+  const gapStats = loadGapStats();
+  mkdirSync(join(OUT_DIR, "chapters"), { recursive: true });
+
+  const skeleton = {
+    kingdom: "Animalia",
+    parts: [] as unknown[],
+  };
+
+  for (const part of PARTS) {
+    const partSkeleton = { title: part.title, className: part.className, chapters: [] as unknown[] };
+
+    for (const chapter of part.chapters) {
+      const order = readOrderFile(chapter.orderFile);
+      const families = findFamilies(order, chapter.familySlugs);
+
+      let strippedTotal = 0;
+      for (const family of families) strippedTotal += stripCorruptedDescriptions(family);
+      if (strippedTotal > 0) {
+        console.log(`    (stripped ${strippedTotal} corrupted "Category:" description${strippedTotal === 1 ? "" : "s"})`);
+      }
+
+      for (const family of families) {
+        const stats = gapStats.get(family.familySlug!);
+        if (stats) {
+          family.chapterStats = { enrichedCount: stats.enrichedCount, speciesCount: stats.speciesCount };
+        }
+      }
+
+      const chapterDoc = {
+        title: chapter.title,
+        orderName: chapter.orderName,
+        description: order.description ?? "",
+        families,
+      };
+      writeFileSync(
+        join(OUT_DIR, "chapters", `${chapter.orderFile}.json`),
+        JSON.stringify(chapterDoc, null, 2) + "\n",
+      );
+
+      partSkeleton.chapters.push({
+        title: chapter.title,
+        orderFile: chapter.orderFile,
+        orderName: chapter.orderName,
+        families: families.map((f) => ({
+          name: f.name,
+          commonName: f.commonName,
+          familySlug: f.familySlug,
+          speciesCount: f.speciesCount,
+          chapterStats: f.chapterStats,
+        })),
+      });
+
+      console.log(
+        `  ${chapter.title}: ${families.map((f) => f.familySlug).join(", ")} -> ${
+          join("public/data/chapters", chapter.orderFile + ".json")
+        }`,
+      );
+    }
+
+    skeleton.parts.push(partSkeleton);
+  }
+
+  writeFileSync(join(OUT_DIR, "book-skeleton.json"), JSON.stringify(skeleton, null, 2) + "\n");
+  console.log(`\nWrote ${join("public/data", "book-skeleton.json")}`);
+}
+
+main();
