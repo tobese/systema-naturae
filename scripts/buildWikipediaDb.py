@@ -51,12 +51,42 @@ def stream_index(path: str):
                 continue
 
 
+def strip_balanced_templates(text: str) -> str:
+    """Remove all {{...}} templates via brace-depth counting, so nested
+    sub-templates (e.g. {{fossil range|...}} inside {{Speciesbox|...}}) don't
+    break the match. A naive non-nesting regex (`\\{\\{[^{}]*\\}\\}`) only
+    strips the innermost template and leaves the rest of a multi-line
+    infobox's opening syntax ("{{Speciesbox | fossil_range = ...") as
+    visible text — this is what `find_infobox_span` already does correctly
+    for infobox parsing; this generalizes it to strip every top-level
+    template anywhere in the text, not just the first infobox match."""
+    out = []
+    i, n, depth = 0, len(text), 0
+    while i < n:
+        if text[i] == "{" and i + 1 < n and text[i + 1] == "{":
+            depth += 1
+            i += 2
+            continue
+        if text[i] == "}" and i + 1 < n and text[i + 1] == "}" and depth > 0:
+            depth -= 1
+            i += 2
+            continue
+        if depth == 0:
+            out.append(text[i])
+        i += 1
+    return "".join(out)
+
+
 def strip_wikitext(text: str) -> str:
     text = re.sub(r"<!--.*?-->", " ", text, flags=re.S)
     text = re.sub(r"<ref[^>]*>.*?</ref>", " ", text, flags=re.S | re.I)
     text = re.sub(r"<ref[^/]*/>", " ", text, flags=re.I)
     text = re.sub(r"<[^>]+>", " ", text)
-    text = re.sub(r"\{\{[^{}]*\}\}", " ", text)
+    text = strip_balanced_templates(text)
+    # Category/File/Image links carry no display text worth keeping — the
+    # general wikilink rule below would otherwise turn "[[Category:Foo]]"
+    # into the literal visible text "Category:Foo".
+    text = re.sub(r"\[\[(?:Category|File|Image):[^\]]*\]\]", " ", text, flags=re.I)
     text = re.sub(r"\[\[(?:[^\]|]+\|)?([^\]]+)\]\]", r"\1", text)
     text = re.sub(r"''+", "", text)
     text = re.sub(r"\s+", " ", text).strip()
@@ -65,6 +95,8 @@ def strip_wikitext(text: str) -> str:
 
 def extract_lead(text: str) -> str | None:
     if not text:
+        return None
+    if re.match(r"\s*#REDIRECT", text, re.I):
         return None
     text = re.split(r"\n==[^=]", text, maxsplit=1)[0]
     paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
@@ -171,6 +203,44 @@ def parse_infobox(text: str):
     return out or None
 
 
+REDIRECT_RE = re.compile(r"^\s*#REDIRECT\s*\[\[([^\]|]+)", re.IGNORECASE)
+
+
+def redirect_target(content: str) -> str | None:
+    """If `content` is a pure redirect page ("#REDIRECT [[Target]]"), return
+    the target title. Many species are only referenced in Wikipedia under
+    their common name (e.g. scientific-name page "Panthera leo" redirects to
+    "Lion"), so the row for the scientific name we actually look up by has no
+    prose of its own even though the real content exists one hop away."""
+    if not content:
+        return None
+    m = REDIRECT_RE.match(content)
+    return m.group(1).strip() if m else None
+
+
+def resolve_redirects(conn: sqlite3.Connection) -> int:
+    """For every row that's a pure redirect with no extract of its own,
+    backfill its extract from the redirect target's row (if that target is
+    also in the DB and itself has an extract). Returns the number resolved."""
+    rows = conn.execute(
+        "SELECT title, content FROM pages WHERE extract IS NULL AND content LIKE '#REDIRECT%'"
+    ).fetchall()
+    resolved = 0
+    updates = []
+    for title, content in rows:
+        target = redirect_target(content)
+        if not target:
+            continue
+        row = conn.execute("SELECT extract FROM pages WHERE title = ?", (target,)).fetchone()
+        if row and row[0]:
+            updates.append((row[0], title))
+    if updates:
+        conn.executemany("UPDATE pages SET extract = ? WHERE title = ?", updates)
+        conn.commit()
+        resolved = len(updates)
+    return resolved
+
+
 def build_targets(index_path: str, candidates: set[str]):
     titles = {}
     for offset, page_id, title in stream_index(index_path):
@@ -265,6 +335,8 @@ def main() -> int:
     parse_dump(dump_path, set(wanted), conn)
     conn.execute("CREATE INDEX IF NOT EXISTS idx_pages_title ON pages(title)")
     conn.commit()
+    resolved = resolve_redirects(conn)
+    print(f"Resolved {resolved} redirect pages to their target's extract.")
     print(f"DB written to {db_path}")
     return 0
 
