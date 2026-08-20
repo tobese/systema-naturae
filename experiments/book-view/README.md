@@ -26,7 +26,7 @@ articles open with a taxobox before any prose, or article redirects) instead
 of real prose. That's a display-layer cleanup done at extraction time — the
 portal's source data is never modified.
 
-## Curated scope (v5)
+## Curated scope (v6)
 
 Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae,
 Cercopithecidae, Cebidae, Lemuridae), Cetacea (whales, dolphins & porpoises),
@@ -41,19 +41,27 @@ Didelphimorphia); Didelphidae is the one family in this scope below the usual
 ~100%-enriched bar (120/304, 39%) but it's the only opossum family and the
 only remaining marsupial group, so it's included regardless.
 
-Part II — Aves: 22 chapters covering the ratites (Struthioniformes,
+Part II — Aves: **30 chapters, 63 families** — every order with a
+name-recognizable, reasonably-enriched family. Ratites (Struthioniformes,
 Rheiformes, Casuariiformes), penguins (Sphenisciformes), albatrosses
-(Procellariiformes), frigatebirds (Suliformes), herons/ibises/storks/pelicans
-(Pelecaniformes), raptors (Accipitriformes, Falconiformes), owls
-(Strigiformes), cranes/bustards (Gruiformes), gulls/skuas (Charadriiformes),
-parrots/cockatoos (Psittaciformes), pigeons (Columbiformes), waterfowl
-(Anseriformes), gamebirds (Galliformes), kingfishers (Coraciiformes),
-hornbills (Bucerotiformes), trogons (Trogoniformes), hummingbirds
-(Apodiformes), woodpeckers/toucans (Piciformes), and Passeriformes (crows,
-finches, birds of paradise) — 30 families total. Coverage ranges from
-tiny 100%-enriched families (Struthionidae, Rheidae, Casuariidae, Fregatidae)
-down to ~18% for Columbidae, following the same "recognizable over merely
-high-percentage" principle as Mammalia.
+(Procellariiformes), frigatebirds/cormorants/gannets/darters (Suliformes),
+herons/ibises/storks/pelicans (Pelecaniformes), raptors (Accipitriformes,
+Falconiformes), owls (Strigiformes), cranes/bustards/finfoots (Gruiformes),
+gulls/skuas/waders/auks (Charadriiformes), parrots/cockatoos
+(Psittaciformes), pigeons (Columbiformes), waterfowl + screamers + magpie
+goose (Anseriformes), gamebirds + megapodes (Galliformes), kingfishers +
+rollers (Coraciiformes), hornbills (Bucerotiformes), trogons (Trogoniformes),
+hummingbirds (Apodiformes), woodpeckers/toucans (Piciformes), flamingos
+(Phoenicopteriformes), loons (Gaviiformes), grebes (Podicipediformes),
+frogmouths/oilbird/treeswifts (Caprimulgiformes), hoopoes (Upupiformes), Kagu
+(Eurypygiformes), seriemas (Cariamiformes), cuckoo-roller (Leptosomiformes),
+and Passeriformes (crows, finches, birds of paradise, wagtails, drongos,
+cuckooshrikes, waxwings). Coverage ranges from tiny 100%-enriched families
+(Struthionidae, Rheidae, Casuariidae, Fregatidae, several 1-species
+Passeriformes families) down to ~18% for Columbidae, following the same
+"recognizable over merely high-percentage" principle as Mammalia — Aves as a
+class has unusually good Wikipedia coverage (36 families at 100%, 8 more at
+80%+ per `gap-report.json`), so this Part could still grow further.
 
 Part III — Chondrichthyes: Lamniformes (Lamnidae — great white, makos),
 Carcharhiniformes (Carcharhinidae — requiem sharks, Sphyrnidae — hammerheads).
