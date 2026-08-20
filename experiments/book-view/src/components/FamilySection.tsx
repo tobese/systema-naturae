@@ -35,8 +35,18 @@ function GenusSection({ genus, index }: { genus: BookNode; index: number }) {
   );
 }
 
+// Usually family.children are genera directly, but some families (e.g.
+// Cetacea, modeled with a SUBFAMILY/TRIBE layer between family and genus)
+// nest deeper — walk down past any non-genus rank to find the real genera.
+function collectGenera(node: BookNode): BookNode[] {
+  const children = node.children ?? [];
+  if (children.length === 0) return [];
+  if (children[0].rank === "GENUS") return children;
+  return children.flatMap(collectGenera);
+}
+
 export function FamilySection({ family }: { family: BookNode }) {
-  const genera = family.children ?? [];
+  const genera = collectGenera(family);
   const stats = family.chapterStats;
 
   return (
