@@ -41,6 +41,20 @@ Didelphimorphia); Didelphidae is the one family in this scope below the usual
 ~100%-enriched bar (120/304, 39%) but it's the only opossum family and the
 only remaining marsupial group, so it's included regardless.
 Part II — Aves: Passeriformes (Corvidae, Fringillidae).
+Part III — Chondrichthyes: Lamniformes (Lamnidae — great white, makos),
+Carcharhiniformes (Carcharhinidae — requiem sharks, Sphyrnidae — hammerheads).
+Part IV — Reptilia: Testudines (Testudinidae — tortoises, Cheloniidae — sea
+turtles, Dermochelyidae — leatherback).
+
+Note: dolphins were already in scope before this — Delphinidae is one of the
+families nested inside the Cetacea chapter (see the Cetacea note above).
+Lamnidae's raw species count (127) looks inflated for a family with ~5 living
+species; the rest are extinct fossil relatives (Otodus/Carcharocles-adjacent
+megalodon kin, etc.) with no description text to enrich, so `buildData.ts`'s
+extinct auto-detection (which keys off a `†` prefix or "extinct"/"fossil" in
+the description) never flags them — they show as plain, undaggered stub names
+in "Also in this genus" regardless of the extinct-species toggle. This is a
+pre-existing upstream tagging gap, not a book-view bug.
 
 Chosen from `portal/data/gap-report.json` for real Wikipedia-derived
 enrichment coverage, favoring name-recognizable groups over higher-but-obscure

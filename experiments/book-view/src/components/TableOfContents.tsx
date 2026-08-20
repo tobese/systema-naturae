@@ -3,6 +3,8 @@ import type { BookSkeleton } from "../types";
 const CLASS_ACCENT: Record<string, string> = {
   Mammalia: "var(--mammalia)",
   Aves: "var(--aves)",
+  Chondrichthyes: "var(--chondrichthyes)",
+  Reptilia: "var(--reptilia)",
 };
 
 export function TableOfContents({
