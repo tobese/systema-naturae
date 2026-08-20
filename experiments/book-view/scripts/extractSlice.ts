@@ -83,6 +83,7 @@ const PARTS: {
       { orderFile: "RODENTIA", orderName: "Rodentia", title: "Chapter 12 — Rodentia", familySlugs: ["caviidae", "castoridae"] },
       { orderFile: "PHOLIDOTA", orderName: "Pholidota", title: "Chapter 13 — Pholidota", familySlugs: ["manidae"] },
       { orderFile: "PILOSA", orderName: "Pilosa", title: "Chapter 14 — Pilosa", familySlugs: ["bradypodidae", "myrmecophagidae"] },
+      { orderFile: "DIDELPHIMORPHIA", orderName: "Didelphimorphia", title: "Chapter 15 — Didelphimorphia", familySlugs: ["didelphidae"] },
     ],
   },
   {
