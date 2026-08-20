@@ -66,23 +66,19 @@ const PARTS: {
   {
     className: "Mammalia",
     title: "Part I — Mammalia",
+    // Every order, every family - Mammalia's Wikipedia coverage (61.3% of
+    // all species class-wide, per gap-report.json - even better than
+    // Aves') is good enough to skip hand-curation entirely, same reasoning
+    // as the Aves Part below.
     chapters: [
-      { orderFile: "CARNIVORA", orderName: "Carnivora", title: "Chapter 1 — Carnivora", familySlugs: ["felidae", "ursidae"] },
-      { orderFile: "PRIMATES", orderName: "Primates", title: "Chapter 2 — Primates", familySlugs: ["hominidae", "cercopithecidae", "cebidae", "lemuridae"] },
-      { orderFile: "CETACEA", orderName: "Cetacea", title: "Chapter 3 — Cetacea", familySlugs: ["cetacea"] },
-      { orderFile: "PROBOSCIDEA", orderName: "Proboscidea", title: "Chapter 4 — Proboscidea", familySlugs: ["elephantidae"] },
-      { orderFile: "PERISSODACTYLA", orderName: "Perissodactyla", title: "Chapter 5 — Perissodactyla", familySlugs: ["equidae"] },
-      { orderFile: "DIPROTODONTIA", orderName: "Diprotodontia", title: "Chapter 6 — Diprotodontia", familySlugs: ["macropodidae", "vombatidae"] },
-      { orderFile: "LAGOMORPHA", orderName: "Lagomorpha", title: "Chapter 7 — Lagomorpha", familySlugs: ["leporidae"] },
-      { orderFile: "DASYUROMORPHIA", orderName: "Dasyuromorphia", title: "Chapter 8 — Dasyuromorphia", familySlugs: ["dasyuridae"] },
-      { orderFile: "ARTIODACTYLA", orderName: "Artiodactyla", title: "Chapter 9 — Artiodactyla", familySlugs: ["giraffidae", "caprinae"] },
-      { orderFile: "EULIPOTYPHLA", orderName: "Eulipotyphla", title: "Chapter 10 — Eulipotyphla", familySlugs: ["erinaceidae", "talpidae"] },
-      { orderFile: "CINGULATA", orderName: "Cingulata", title: "Chapter 11 — Cingulata", familySlugs: ["dasypodidae"] },
-      { orderFile: "RODENTIA", orderName: "Rodentia", title: "Chapter 12 — Rodentia", familySlugs: ["caviidae", "castoridae"] },
-      { orderFile: "PHOLIDOTA", orderName: "Pholidota", title: "Chapter 13 — Pholidota", familySlugs: ["manidae"] },
-      { orderFile: "PILOSA", orderName: "Pilosa", title: "Chapter 14 — Pilosa", familySlugs: ["bradypodidae", "myrmecophagidae"] },
-      { orderFile: "DIDELPHIMORPHIA", orderName: "Didelphimorphia", title: "Chapter 15 — Didelphimorphia", familySlugs: ["didelphidae"] },
-    ],
+      "ARTIODACTYLA", "CARNIVORA", "CETACEA", "CHIROPTERA", "CINGULATA",
+      "DASYUROMORPHIA", "DIDELPHIMORPHIA", "DIPROTODONTIA", "EULIPOTYPHLA",
+      "LAGOMORPHA", "MONOTREMATA", "PERISSODACTYLA", "PHOLIDOTA", "PILOSA",
+      "PRIMATES", "PROBOSCIDEA", "RODENTIA",
+    ].map((orderFile, i) => {
+      const orderName = orderFile[0] + orderFile.slice(1).toLowerCase();
+      return { orderFile, orderName, title: `Chapter ${i + 1} — ${orderName}`, familySlugs: "ALL" as const };
+    }),
   },
   {
     className: "Aves",
