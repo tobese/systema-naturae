@@ -1,5 +1,6 @@
 import type { ChapterDoc } from "../types";
 import { FamilySection } from "./FamilySection";
+import { useReadingWindow } from "../hooks/useReadingWindow";
 
 export function ChapterPage({
   chapter,
@@ -12,6 +13,9 @@ export function ChapterPage({
   partIntro: string;
   showPartIntro: boolean;
 }) {
+  const familySlugs = chapter.families.map((f) => f.familySlug).filter((s): s is string => Boolean(s));
+  const readingWindow = useReadingWindow(familySlugs);
+
   return (
     <article style={{ maxWidth: 680, margin: "0 auto", padding: "3rem 1.5rem 8rem" }}>
       {showPartIntro && (
@@ -41,7 +45,7 @@ export function ChapterPage({
       </header>
 
       {chapter.families.map((family) => (
-        <FamilySection key={family.id} family={family} />
+        <FamilySection key={family.id} family={family} readingWindow={readingWindow} />
       ))}
     </article>
   );

@@ -1,9 +1,14 @@
-// Builds this prototype's curated data slice from the portal's already-built
-// order JSON files. Read-only against the portal — never writes back to it.
+// Builds this prototype's small per-order "extension" sidecars (portrait
+// images, IUCN status, chapter stats, curated Family-level prose, and the
+// curated-Parts family whitelist) plus the Contents-page skeleton. Read-only
+// against the portal - never writes back to it, and no longer copies the
+// portal's species-tree data itself (that's symlinked in directly via
+// public/data/portal-orders, decorated client-side by src/lib/decorateChapter.ts).
 // Re-run any time upstream data changes: `npm run extract-data`.
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { FAMILY_INTROS } from "../src/familyIntros";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../../..");
@@ -26,21 +31,11 @@ interface TaxonNode {
   rank: string;
   commonName?: string;
   description?: string;
-  distribution?: string;
-  namedAfter?: string;
-  continents?: string[];
-  subspeciesCount?: number;
-  extinct?: boolean;
-  fossil?: boolean;
-  sourcedFrom?: string;
   familySlug?: string;
   appSlug?: string;
   speciesCount?: number;
   children?: TaxonNode[];
   speciesList?: TaxonNode[];
-  chapterStats?: { enrichedCount: number; speciesCount: number };
-  imageUrl?: string;
-  iucnStatus?: string;
 }
 
 interface GapRow {
@@ -92,7 +87,7 @@ const PARTS: {
   {
     className: "Aves",
     title: "Part II — Aves",
-    // Every order, every family — Aves' Wikipedia coverage (45.6% of all
+    // Every order, every family - Aves' Wikipedia coverage (45.6% of all
     // species class-wide, per gap-report.json) is good enough to skip
     // hand-curation entirely, unlike every other class in this book.
     chapters: [
@@ -132,27 +127,6 @@ function readOrderFile(orderFile: string): TaxonNode {
   return JSON.parse(readFileSync(join(ORDERS_DIR, `${orderFile}.json`), "utf-8"));
 }
 
-// Some enrichFromWikipedia.ts extracts are corrupted leftover MediaWiki markup
-// instead of real prose — category links ("Category:Taxa named by..."), raw
-// infobox templates ("{{Speciesbox | fossil_range = ...}}", disproportionately
-// common on fossil/extinct species whose articles open with a taxobox before
-// any prose), or article redirects ("#REDIRECT Foo"). No usable sentence to
-// salvage in any of these. Drop the description entirely so the UI's existing
-// stub-species fallback ("not yet described here") handles it honestly, rather
-// than rendering raw wikitext in the book.
-const CORRUPTION_MARKERS = ["Category:", "{{", "}}", "#REDIRECT"];
-
-function stripCorruptedDescriptions(node: TaxonNode): number {
-  let stripped = 0;
-  if (node.description && CORRUPTION_MARKERS.some((m) => node.description!.includes(m))) {
-    node.description = undefined;
-    stripped++;
-  }
-  for (const child of node.children ?? []) stripped += stripCorruptedDescriptions(child);
-  for (const s of node.speciesList ?? []) stripped += stripCorruptedDescriptions(s);
-  return stripped;
-}
-
 function loadGapStats(): Map<string, GapRow> {
   const rows: GapRow[] = JSON.parse(readFileSync(GAP_REPORT_PATH, "utf-8"));
   const map = new Map<string, GapRow>();
@@ -162,24 +136,6 @@ function loadGapStats(): Map<string, GapRow> {
 
 function loadWikiImages(): Record<string, WikiImageEntry> {
   return JSON.parse(readFileSync(WIKI_IMAGES_PATH, "utf-8"));
-}
-
-// Attaches a real Commons portrait + IUCN status to every SPECIES node that
-// has one in the Wikidata sidecar. Node-side, at extraction time, rather than
-// a runtime hook - keeps the app's own data self-contained and static.
-function attachImages(node: TaxonNode, images: Record<string, WikiImageEntry>): number {
-  let attached = 0;
-  if (node.rank === "SPECIES") {
-    const entry = images[node.name];
-    if (entry?.image) {
-      node.imageUrl = commonsThumb(entry.image);
-      attached++;
-    }
-    if (entry?.iucnStatus) node.iucnStatus = entry.iucnStatus;
-  }
-  for (const child of node.children ?? []) attached += attachImages(child, images);
-  for (const s of node.speciesList ?? []) attached += attachImages(s, images);
-  return attached;
 }
 
 function findFamilies(order: TaxonNode, slugs: string[] | "ALL"): TaxonNode[] {
@@ -199,10 +155,19 @@ function findFamilies(order: TaxonNode, slugs: string[] | "ALL"): TaxonNode[] {
     .filter((f): f is TaxonNode => Boolean(f));
 }
 
+// Collects every species scientific name under a family - used to slice
+// only the relevant entries out of the 43MB wiki-images.json sidecar rather
+// than shipping any of it to the browser.
+function collectSpeciesNames(node: TaxonNode, out: string[]): void {
+  if (node.rank === "SPECIES") out.push(node.name);
+  for (const child of node.children ?? []) collectSpeciesNames(child, out);
+  for (const s of node.speciesList ?? []) collectSpeciesNames(s, out);
+}
+
 function main() {
   const gapStats = loadGapStats();
   const wikiImages = loadWikiImages();
-  mkdirSync(join(OUT_DIR, "chapters"), { recursive: true });
+  mkdirSync(join(OUT_DIR, "extensions"), { recursive: true });
 
   const skeleton = {
     kingdom: "Animalia",
@@ -216,33 +181,43 @@ function main() {
       const order = readOrderFile(chapter.orderFile);
       const families = findFamilies(order, chapter.familySlugs);
 
-      let strippedTotal = 0;
-      for (const family of families) strippedTotal += stripCorruptedDescriptions(family);
-      if (strippedTotal > 0) {
-        console.log(`    (stripped ${strippedTotal} corrupted "Category:" description${strippedTotal === 1 ? "" : "s"})`);
-      }
-
+      const chapterStats: Record<string, { enrichedCount: number; speciesCount: number }> = {};
+      const familyDescriptions: Record<string, string> = {};
+      const images: Record<string, { imageUrl?: string; iucnStatus?: string }> = {};
       let imagesAttached = 0;
+
       for (const family of families) {
-        const stats = gapStats.get(family.familySlug!);
-        if (stats) {
-          family.chapterStats = { enrichedCount: stats.enrichedCount, speciesCount: stats.speciesCount };
+        const slug = family.familySlug!;
+        const stats = gapStats.get(slug);
+        if (stats) chapterStats[slug] = { enrichedCount: stats.enrichedCount, speciesCount: stats.speciesCount };
+        const intro = FAMILY_INTROS[slug];
+        if (intro) familyDescriptions[slug] = intro;
+
+        const speciesNames: string[] = [];
+        collectSpeciesNames(family, speciesNames);
+        for (const name of speciesNames) {
+          const entry = wikiImages[name];
+          if (!entry?.image && !entry?.iucnStatus) continue;
+          images[name] = {
+            ...(entry.image ? { imageUrl: commonsThumb(entry.image) } : {}),
+            ...(entry.iucnStatus ? { iucnStatus: entry.iucnStatus } : {}),
+          };
+          if (entry.image) imagesAttached++;
         }
-        imagesAttached += attachImages(family, wikiImages);
       }
       if (imagesAttached > 0) {
-        console.log(`    (attached ${imagesAttached} portrait image${imagesAttached === 1 ? "" : "s"})`);
+        console.log(`    (${imagesAttached} portrait image${imagesAttached === 1 ? "" : "s"})`);
       }
 
-      const chapterDoc = {
-        title: chapter.title,
-        orderName: chapter.orderName,
-        description: order.description ?? "",
-        families,
+      const extensions = {
+        includeFamilySlugs: chapter.familySlugs === "ALL" ? undefined : chapter.familySlugs,
+        images,
+        chapterStats,
+        familyDescriptions,
       };
       writeFileSync(
-        join(OUT_DIR, "chapters", `${chapter.orderFile}.json`),
-        JSON.stringify(chapterDoc, null, 2) + "\n",
+        join(OUT_DIR, "extensions", `${chapter.orderFile}.json`),
+        JSON.stringify(extensions, null, 2) + "\n",
       );
 
       partSkeleton.chapters.push({
@@ -254,13 +229,13 @@ function main() {
           commonName: f.commonName,
           familySlug: f.familySlug,
           speciesCount: f.speciesCount,
-          chapterStats: f.chapterStats,
+          chapterStats: chapterStats[f.familySlug!],
         })),
       });
 
       console.log(
         `  ${chapter.title}: ${families.map((f) => f.familySlug).join(", ")} -> ${
-          join("public/data/chapters", chapter.orderFile + ".json")
+          join("public/data/extensions", chapter.orderFile + ".json")
         }`,
       );
     }

@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from "react";
-import type { BookSkeleton, ChapterDoc } from "../types";
+import type { BookNode, BookSkeleton, ChapterDoc, ChapterExtensions } from "../types";
+import { decorateChapter } from "../lib/decorateChapter";
 
 // Mirrors portal/src/hooks/useTaxonomyLoader.ts's skeleton + on-demand-fetch +
 // LRU-cache pattern, at book "chapter" (= taxonomic order) granularity. The cap
@@ -51,10 +52,29 @@ export function useBookData(): {
         return;
       }
 
+      const chapterMeta = skeleton?.parts
+        .flatMap((p) => p.chapters)
+        .find((c) => c.orderFile === orderFile);
+
       setInflightChapters((prev) => new Set(prev).add(orderFile));
 
-      fetch(`${base}data/chapters/${orderFile}.json`)
-        .then((r) => r.json())
+      // Base species-tree data is the portal's own order file, symlinked in
+      // at public/data/portal-orders (never duplicated into this app's own
+      // data) - decorated client-side with a small extensions sidecar
+      // rather than a pre-built, pre-filtered copy. See README.md "Data
+      // architecture".
+      Promise.all([
+        fetch(`${base}data/portal-orders/${orderFile}.json`).then((r) => r.json() as Promise<BookNode>),
+        fetch(`${base}data/extensions/${orderFile}.json`).then((r) => r.json() as Promise<ChapterExtensions>),
+      ])
+        .then(([order, extensions]) =>
+          decorateChapter(
+            order,
+            extensions,
+            chapterMeta?.title ?? orderFile,
+            chapterMeta?.orderName ?? order.name,
+          ),
+        )
         .then((doc: ChapterDoc) => {
           if (chapterCache.current.size >= MAX_CACHED_CHAPTERS && accessOrder.current.length > 0) {
             const oldest = accessOrder.current.shift()!;
@@ -78,7 +98,7 @@ export function useBookData(): {
           });
         });
     },
-    [base],
+    [base, skeleton],
   );
 
   const isChapterLoading = useCallback((orderFile: string) => inflightChapters.has(orderFile), [inflightChapters]);
