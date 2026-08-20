@@ -57,40 +57,40 @@ was never rendered until now. `FAMILY` nodes have **no** `description` field
 anywhere in the portal's data, but do carry a `notableMembers: string[]`
 array. So: `FamilySection.tsx` now renders `genus.description` when present,
 and for Family, renders `family.description` when present (sourced from
-`src/familyIntros.ts` - hand-written, curated-Parts-only, ~30 entries) or
-falls back to a "Notable: ..." line from `notableMembers` when no prose
-exists yet. Aves' 254 families have no hand-written intros (not realistic to
-write by hand at that scale) — a follow-up LLM enrichment pass targeting
-`FAMILY`-rank `description` in the portal's own data (the same kind of pass
-that already produced the Order/Genus prose) would benefit every consumer,
-not just this app, and is a separate task from anything in `experiments/`.
+`src/familyIntros.ts` - hand-written, ~30 entries covering the small
+Chondrichthyes/Reptilia Parts) or falls back to a "Notable: ..." line from
+`notableMembers` when no prose exists yet. Mammalia's 39 and Aves' 254
+families have no hand-written intros (not realistic to write by hand at that
+scale) — a follow-up LLM enrichment pass targeting `FAMILY`-rank
+`description` in the portal's own data (the same kind of pass that already
+produced the Order/Genus prose) would benefit every consumer, not just this
+app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v8)
+## Curated scope (v9)
 
-Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae,
-Cercopithecidae, Cebidae, Lemuridae), Cetacea (whales, dolphins & porpoises),
-Proboscidea (Elephantidae), Perissodactyla (Equidae), Diprotodontia
-(Macropodidae, Vombatidae), Lagomorpha (Leporidae), Dasyuromorphia
-(Dasyuridae), Artiodactyla (Giraffidae, Caprinae), Eulipotyphla (Erinaceidae,
-Talpidae), Cingulata (Dasypodidae), Rodentia (Caviidae, Castoridae), Pholidota
-(Manidae), Pilosa (Bradypodidae, Myrmecophagidae), Didelphimorphia
-(Didelphidae) — 24 families across 15 chapters. All three marsupial orders
-present in the taxonomy are covered (Diprotodontia, Dasyuromorphia,
-Didelphimorphia); Didelphidae is the one family in this scope below the usual
-~100%-enriched bar (120/304, 39%) but it's the only opossum family and the
-only remaining marsupial group, so it's included regardless.
+Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
+treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
+~7,900 species, per `gap-report.json` — even better than Aves') was judged
+good enough to skip curation. Newly included beyond the original hand-picked
+set: full Artiodactyla (pigs, deer, cattle, not just giraffes/caprines), full
+Carnivora (dogs, weasels, seals, not just cats/bears), Chiroptera (bats -
+four families, ~1,400 species, ~20% of all mammal species), full Eulipotyphla
+(+shrews), Monotremata (echidnas - the platypus family isn't in the source
+taxonomy yet), and full Primates/Rodentia (squirrels, muridae, cricetidae).
+All three marsupial orders are covered (Diprotodontia, Dasyuromorphia,
+Didelphimorphia).
 
-Part II — Aves: **complete — all 37 orders, all 254 families.** Unlike every
-other Part, Aves is no longer hand-curated: `extractSlice.ts` special-cases
-`familySlugs: "ALL"` for this class (Aves' class-wide Wikipedia coverage,
-45.6% of ~11,750 species, was judged good enough to skip curation entirely —
-see the "more birds" progression below). The Passeriformes chapter alone
-carries 146 families and ~3,200 fully-enriched species entries in one
-continuous scroll; verified live in Chrome that it renders and scrolls
-without hanging (deep-scrolled past Corvidae into Fringillidae, real content
-throughout, no jank observed) — the app's "single continuously-scrollable
-spread per chapter" design, chosen for a curated handful of families, turned
-out to hold up fine even at full-order scale.
+Part II — Aves: **complete — all 37 orders, all 254 families.** Aves'
+class-wide Wikipedia coverage (45.6% of ~11,750 species) was judged good
+enough to skip curation entirely — see the "more birds" progression below.
+The Passeriformes chapter alone carries 146 families and ~3,200
+fully-enriched species entries; verified live in Chrome that it renders and
+scrolls without hanging (deep-scrolled past Corvidae into Fringillidae, real
+content throughout, no jank observed) — the app's "single
+continuously-scrollable spread per chapter" design, chosen for a curated
+handful of families, turned out to hold up fine even at full-order scale
+(see "Large chapters: scroll-driven collapse" below for how the DOM-weight
+side of that scale is actually handled).
 
 Part III — Chondrichthyes: Lamniformes (Lamnidae — great white, makos),
 Carcharhiniformes (Carcharhinidae — requiem sharks, Sphyrnidae — hammerheads).
@@ -107,10 +107,14 @@ turtles, Dermochelyidae — leatherback).
 Note: dolphins were already in scope before Chondrichthyes was added —
 Delphinidae is one of the families nested inside the Cetacea chapter.
 
-Chosen from `portal/data/gap-report.json` for real Wikipedia-derived
-enrichment coverage, favoring name-recognizable groups over higher-but-obscure
-coverage elsewhere in the tree (several Squamata families score 75-80%
-enriched vs. Hominidae's 57% — see the plan doc for the tradeoff).
+Chondrichthyes and Reptilia's families were chosen from
+`portal/data/gap-report.json` for real Wikipedia-derived enrichment
+coverage, favoring name-recognizable groups over higher-but-obscure coverage
+elsewhere in the tree (several Squamata families score 75-80% enriched vs.
+Testudines' ~50% — see the plan doc for the tradeoff). Now that Mammalia and
+Aves are complete, Chondrichthyes and Reptilia are the only two Parts still
+hand-curated - both have far lower class-wide coverage than Mammalia/Aves, so
+"every family" isn't a good default there yet.
 
 Note: Cetacea and Alcedinidae (kingfishers) are modeled in the source
 taxonomy with an extra SUBFAMILY(→TRIBE) layer between FAMILY and GENUS,
