@@ -60,14 +60,14 @@ and for Family, renders `family.description` when present (sourced from
 `src/familyIntros.ts` - ~30 hand-written entries from when
 Chondrichthyes/Reptilia were still small hand-curated Parts) or falls back
 to a "Notable: ..." line from `notableMembers` when no prose exists yet. Now
-that every Part is complete (all 323 families across the 4 classes), the
+that every Part is complete (352 families across 6 classes), the
 great majority have no hand-written intro and fall back to `notableMembers`
 - a follow-up LLM enrichment pass targeting `FAMILY`-rank `description` in
 the portal's own data (the same kind of pass that already produced the
 Order/Genus prose) would benefit every consumer, not just this
 app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v10) — every Part is now complete
+## Curated scope (v11) — 6 Parts, all complete
 
 Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
 treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
@@ -114,6 +114,26 @@ pythons, boas, and more. Squamata's order file is named
 the taxonomy), handled via a `nameOverrides` param on
 `extractSlice.ts`'s `allFamilyChapters()` helper so the chapter still
 displays as "Squamata."
+
+Part V — Amphibia: **complete — all 3 orders, all 13 families** (Anura -
+frogs & toads, Gymnophiona - caecilians, Urodela - salamanders & newts).
+62.3% class-wide coverage (~3,700 species), on par with Mammalia/Reptilia
+despite being the smallest class in the book by order count.
+
+Part VI — Actinopterygii: **complete — all 14 orders, all 16 families**
+(carp/goldfish, cichlids, characins, wrasses, seahorses & pipefish, salmon,
+killifish, sculpins, perch, herrings, flounders, tuna & mackerel,
+sticklebacks, cod, eels, pike). 45.1% class-wide coverage (~10,900 species),
+on par with Aves. Perciformes' order file is `PERCIFORMES_FISH.json` in the
+portal's data (another naming collision, same `nameOverrides` handling as
+Squamata above).
+
+These two were added as new Parts (not just more families in existing
+Parts) after surveying every remaining Animalia class in
+`gap-report.json` by class-wide enrichment % — Amphibia and Actinopterygii
+were the only two clearing the same coverage bar as the first four Parts;
+everything else (Insecta, Gastropoda, Arachnida, and the rest) sits at
+2-16% class-wide, mostly stub descriptions, not "book" material yet.
 
 Note: dolphins were already in scope before Chondrichthyes was added —
 Delphinidae is one of the families nested inside the Cetacea chapter.
