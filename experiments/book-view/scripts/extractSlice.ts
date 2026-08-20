@@ -131,6 +131,31 @@ const PARTS: {
       { SQUAMATA_ORDER: "Squamata" },
     ),
   },
+  {
+    className: "Amphibia",
+    title: "Part V — Amphibia",
+    // Every order, every family - 62.3% class-wide coverage (~3,700
+    // species), on par with Mammalia/Reptilia despite being a much smaller
+    // class overall (just 3 orders).
+    chapters: allFamilyChapters(["ANURA", "GYMNOPHIONA", "URODELA"]),
+  },
+  {
+    className: "Actinopterygii",
+    title: "Part VI — Actinopterygii",
+    // Every order, every family - 45.1% class-wide coverage, on par with
+    // Aves. Perciformes' order file is PERCIFORMES_FISH.json in the
+    // portal's data (another naming collision, same situation as
+    // Squamata/Reptilia above).
+    chapters: allFamilyChapters(
+      [
+        "ANGUILLIFORMES", "CHARACIFORMES", "CICHLIFORMES", "CLUPEIFORMES",
+        "CYPRINIFORMES", "CYPRINODONTIFORMES", "ESOCIFORMES", "GADIFORMES",
+        "PERCIFORMES_FISH", "PLEURONECTIFORMES", "SALMONIFORMES",
+        "SCOMBRIFORMES", "SCORPAENIFORMES", "SYNGNATHIFORMES",
+      ],
+      { PERCIFORMES_FISH: "Perciformes" },
+    ),
+  },
 ];
 
 function readOrderFile(orderFile: string): TaxonNode {
