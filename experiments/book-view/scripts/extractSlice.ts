@@ -56,14 +56,17 @@ interface WikiImageEntry {
 }
 
 // Part (Class) → Chapter (Order, numbered continuously within the Part) →
-// whitelisted Family slugs. Whitelist chosen from portal/data/gap-report.json
-// for genuine Wikipedia-derived enrichment coverage, favoring name-recognizable
-// groups (bears, cats, apes, crows, finches) over higher-but-obscure coverage
-// elsewhere (e.g. Squamata families score higher but read less like a "book").
+// whitelisted Family slugs, or "ALL" for every family in the order (used for
+// Aves, whose Wikipedia coverage is good enough class-wide to include every
+// family rather than hand-curate). Whitelists elsewhere are chosen from
+// portal/data/gap-report.json for genuine Wikipedia-derived enrichment
+// coverage, favoring name-recognizable groups (bears, cats, apes) over
+// higher-but-obscure coverage elsewhere (e.g. Squamata families score higher
+// but read less like a "book").
 const PARTS: {
   className: string;
   title: string;
-  chapters: { orderFile: string; orderName: string; title: string; familySlugs: string[] }[];
+  chapters: { orderFile: string; orderName: string; title: string; familySlugs: string[] | "ALL" }[];
 }[] = [
   {
     className: "Mammalia",
@@ -89,39 +92,24 @@ const PARTS: {
   {
     className: "Aves",
     title: "Part II — Aves",
+    // Every order, every family — Aves' Wikipedia coverage (45.6% of all
+    // species class-wide, per gap-report.json) is good enough to skip
+    // hand-curation entirely, unlike every other class in this book.
     chapters: [
-      { orderFile: "PASSERIFORMES", orderName: "Passeriformes", title: "Chapter 1 — Passeriformes", familySlugs: ["corvidae", "fringillidae", "paradisaeidae", "motacillidae", "dicruridae", "campephagidae", "bombycillidae", "troglodytidae", "paridae", "sittidae", "icteridae", "mimidae", "laniidae", "monarchidae", "nectariniidae", "ploceidae", "passeridae", "emberizidae", "leiothrichidae", "cisticolidae", "vangidae", "maluridae", "regulidae", "menuridae", "rhinocryptidae", "grallariidae"] },
-      { orderFile: "STRUTHIONIFORMES", orderName: "Struthioniformes", title: "Chapter 2 — Struthioniformes", familySlugs: ["struthionidae"] },
-      { orderFile: "RHEIFORMES", orderName: "Rheiformes", title: "Chapter 3 — Rheiformes", familySlugs: ["rheidae"] },
-      { orderFile: "CASUARIIFORMES", orderName: "Casuariiformes", title: "Chapter 4 — Casuariiformes", familySlugs: ["casuariidae"] },
-      { orderFile: "SPHENISCIFORMES", orderName: "Sphenisciformes", title: "Chapter 5 — Sphenisciformes", familySlugs: ["spheniscidae"] },
-      { orderFile: "PROCELLARIIFORMES", orderName: "Procellariiformes", title: "Chapter 6 — Procellariiformes", familySlugs: ["diomedeidae", "procellariidae"] },
-      { orderFile: "SULIFORMES", orderName: "Suliformes", title: "Chapter 7 — Suliformes", familySlugs: ["fregatidae", "anhingidae", "phalacrocoracidae", "sulidae"] },
-      { orderFile: "PELECANIFORMES", orderName: "Pelecaniformes", title: "Chapter 8 — Pelecaniformes", familySlugs: ["ardeidae", "threskiornithidae", "ciconiidae", "pelecanidae"] },
-      { orderFile: "ACCIPITRIFORMES", orderName: "Accipitriformes", title: "Chapter 9 — Accipitriformes", familySlugs: ["accipitridae", "cathartidae", "pandionidae"] },
-      { orderFile: "FALCONIFORMES", orderName: "Falconiformes", title: "Chapter 10 — Falconiformes", familySlugs: ["falconidae"] },
-      { orderFile: "STRIGIFORMES", orderName: "Strigiformes", title: "Chapter 11 — Strigiformes", familySlugs: ["strigidae", "tytonidae"] },
-      { orderFile: "GRUIFORMES", orderName: "Gruiformes", title: "Chapter 12 — Gruiformes", familySlugs: ["gruidae", "otididae", "heliornithidae"] },
-      { orderFile: "CHARADRIIFORMES", orderName: "Charadriiformes", title: "Chapter 13 — Charadriiformes", familySlugs: ["laridae", "stercorariidae", "haematopodidae", "recurvirostridae", "burhinidae", "scolopacidae", "alcidae", "jacanidae", "turnicidae", "glareolidae", "charadriidae", "pluvianellidae", "pluvianidae"] },
-      { orderFile: "PSITTACIFORMES", orderName: "Psittaciformes", title: "Chapter 14 — Psittaciformes", familySlugs: ["psittacidae", "psittaculidae", "cacatuidae"] },
-      { orderFile: "COLUMBIFORMES", orderName: "Columbiformes", title: "Chapter 15 — Columbiformes", familySlugs: ["columbidae"] },
-      { orderFile: "ANSERIFORMES", orderName: "Anseriformes", title: "Chapter 16 — Anseriformes", familySlugs: ["anatidae", "anhimidae", "anseranatidae"] },
-      { orderFile: "GALLIFORMES", orderName: "Galliformes", title: "Chapter 17 — Galliformes", familySlugs: ["phasianidae", "cracidae", "megapodiidae", "odontophoridae"] },
-      { orderFile: "CORACIIFORMES", orderName: "Coraciiformes", title: "Chapter 18 — Coraciiformes", familySlugs: ["alcedinidae", "coraciidae"] },
-      { orderFile: "BUCEROTIFORMES", orderName: "Bucerotiformes", title: "Chapter 19 — Bucerotiformes", familySlugs: ["bucerotidae"] },
-      { orderFile: "TROGONIFORMES", orderName: "Trogoniformes", title: "Chapter 20 — Trogoniformes", familySlugs: ["trogonidae"] },
-      { orderFile: "APODIFORMES", orderName: "Apodiformes", title: "Chapter 21 — Apodiformes", familySlugs: ["trochilidae", "apodidae"] },
-      { orderFile: "PICIFORMES", orderName: "Piciformes", title: "Chapter 22 — Piciformes", familySlugs: ["picidae", "ramphastidae", "bucconidae", "indicatoridae", "semnornithidae"] },
-      { orderFile: "PHOENICOPTERIFORMES", orderName: "Phoenicopteriformes", title: "Chapter 23 — Phoenicopteriformes", familySlugs: ["phoenicopteridae"] },
-      { orderFile: "GAVIIFORMES", orderName: "Gaviiformes", title: "Chapter 24 — Gaviiformes", familySlugs: ["gaviidae"] },
-      { orderFile: "PODICIPEDIFORMES", orderName: "Podicipediformes", title: "Chapter 25 — Podicipediformes", familySlugs: ["podicipedidae"] },
-      { orderFile: "CAPRIMULGIFORMES", orderName: "Caprimulgiformes", title: "Chapter 26 — Caprimulgiformes", familySlugs: ["podargidae", "steatornithidae", "hemiprocnidae", "caprimulgidae", "nyctibiidae"] },
-      { orderFile: "UPUPIFORMES", orderName: "Upupiformes", title: "Chapter 27 — Upupiformes", familySlugs: ["upupidae"] },
-      { orderFile: "EURYPYGIFORMES", orderName: "Eurypygiformes", title: "Chapter 28 — Eurypygiformes", familySlugs: ["rhynochetidae"] },
-      { orderFile: "CARIAMIFORMES", orderName: "Cariamiformes", title: "Chapter 29 — Cariamiformes", familySlugs: ["cariamidae"] },
-      { orderFile: "LEPTOSOMIFORMES", orderName: "Leptosomiformes", title: "Chapter 30 — Leptosomiformes", familySlugs: ["leptosomidae"] },
-      { orderFile: "CUCULIFORMES", orderName: "Cuculiformes", title: "Chapter 31 — Cuculiformes", familySlugs: ["cuculidae", "mesitornithidae"] },
-    ],
+      "ACCIPITRIFORMES", "ANSERIFORMES", "APODIFORMES", "APTERYGIFORMES",
+      "BUCEROTIFORMES", "CAPRIMULGIFORMES", "CARIAMIFORMES", "CASUARIIFORMES",
+      "CHARADRIIFORMES", "COLIIFORMES", "COLUMBIFORMES", "CORACIIFORMES",
+      "CUCULIFORMES", "EURYPYGIFORMES", "FALCONIFORMES", "GALLIFORMES",
+      "GAVIIFORMES", "GRUIFORMES", "LEPTOSOMIFORMES", "MUSOPHAGIFORMES",
+      "PASSERIFORMES", "PELECANIFORMES", "PHAETHONTIFORMES",
+      "PHOENICOPTERIFORMES", "PICIFORMES", "PODICIPEDIFORMES",
+      "PROCELLARIIFORMES", "PSITTACIFORMES", "PTEROCLIFORMES", "RHEIFORMES",
+      "SPHENISCIFORMES", "STRIGIFORMES", "STRUTHIONIFORMES", "SULIFORMES",
+      "TINAMIFORMES", "TROGONIFORMES", "UPUPIFORMES",
+    ].map((orderFile, i) => {
+      const orderName = orderFile[0] + orderFile.slice(1).toLowerCase();
+      return { orderFile, orderName, title: `Chapter ${i + 1} — ${orderName}`, familySlugs: "ALL" as const };
+    }),
   },
   {
     className: "Chondrichthyes",
@@ -194,16 +182,17 @@ function attachImages(node: TaxonNode, images: Record<string, WikiImageEntry>): 
   return attached;
 }
 
-function findFamilies(order: TaxonNode, slugs: string[]): TaxonNode[] {
+function findFamilies(order: TaxonNode, slugs: string[] | "ALL"): TaxonNode[] {
   const found: TaxonNode[] = [];
   const walk = (node: TaxonNode) => {
-    if (node.rank === "FAMILY" && node.familySlug && slugs.includes(node.familySlug)) {
+    if (node.rank === "FAMILY" && node.familySlug && (slugs === "ALL" || slugs.includes(node.familySlug))) {
       found.push(node);
       return; // don't descend into a matched family looking for nested families
     }
     for (const child of node.children ?? []) walk(child);
   };
   walk(order);
+  if (slugs === "ALL") return found; // tree-encounter order
   // preserve whitelist order, not tree-encounter order
   return slugs
     .map((slug) => found.find((f) => f.familySlug === slug))
