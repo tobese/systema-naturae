@@ -20,6 +20,8 @@ export interface BookNode {
   children?: BookNode[];
   speciesList?: BookNode[];
   chapterStats?: { enrichedCount: number; speciesCount: number };
+  imageUrl?: string;
+  iucnStatus?: string;
 }
 
 export interface SkeletonFamily {

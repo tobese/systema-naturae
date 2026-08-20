@@ -9,7 +9,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../../..");
 const ORDERS_DIR = join(REPO_ROOT, "portal/public/data/kingdoms/animalia/orders");
 const GAP_REPORT_PATH = join(REPO_ROOT, "portal/data/gap-report.json");
+const WIKI_IMAGES_PATH = join(REPO_ROOT, "shared/data/wiki-images.json");
 const OUT_DIR = join(__dirname, "../public/data");
+const COMMONS_FILEPATH = "https://commons.wikimedia.org/wiki/Special:FilePath/";
+
+// Same URL-construction convention as shared/src/hooks/useWikiImages.ts
+// (bare Commons filenames routed through Special:FilePath, which redirects
+// to the real upload and supports a ?width= thumbnail param).
+function commonsThumb(filename: string, width = 480): string {
+  return `${COMMONS_FILEPATH}${encodeURIComponent(filename)}?width=${width}`;
+}
 
 interface TaxonNode {
   id: string;
@@ -30,12 +39,20 @@ interface TaxonNode {
   children?: TaxonNode[];
   speciesList?: TaxonNode[];
   chapterStats?: { enrichedCount: number; speciesCount: number };
+  imageUrl?: string;
+  iucnStatus?: string;
 }
 
 interface GapRow {
   appSlug: string;
   speciesCount: number;
   enrichedCount: number;
+}
+
+interface WikiImageEntry {
+  qid: string;
+  image?: string;
+  iucnStatus?: string;
 }
 
 // Part (Class) → Chapter (Order, numbered continuously within the Part) →
@@ -97,6 +114,28 @@ function loadGapStats(): Map<string, GapRow> {
   return map;
 }
 
+function loadWikiImages(): Record<string, WikiImageEntry> {
+  return JSON.parse(readFileSync(WIKI_IMAGES_PATH, "utf-8"));
+}
+
+// Attaches a real Commons portrait + IUCN status to every SPECIES node that
+// has one in the Wikidata sidecar. Node-side, at extraction time, rather than
+// a runtime hook - keeps the app's own data self-contained and static.
+function attachImages(node: TaxonNode, images: Record<string, WikiImageEntry>): number {
+  let attached = 0;
+  if (node.rank === "SPECIES") {
+    const entry = images[node.name];
+    if (entry?.image) {
+      node.imageUrl = commonsThumb(entry.image);
+      attached++;
+    }
+    if (entry?.iucnStatus) node.iucnStatus = entry.iucnStatus;
+  }
+  for (const child of node.children ?? []) attached += attachImages(child, images);
+  for (const s of node.speciesList ?? []) attached += attachImages(s, images);
+  return attached;
+}
+
 function findFamilies(order: TaxonNode, slugs: string[]): TaxonNode[] {
   const found: TaxonNode[] = [];
   const walk = (node: TaxonNode) => {
@@ -115,6 +154,7 @@ function findFamilies(order: TaxonNode, slugs: string[]): TaxonNode[] {
 
 function main() {
   const gapStats = loadGapStats();
+  const wikiImages = loadWikiImages();
   mkdirSync(join(OUT_DIR, "chapters"), { recursive: true });
 
   const skeleton = {
@@ -135,11 +175,16 @@ function main() {
         console.log(`    (stripped ${strippedTotal} corrupted "Category:" description${strippedTotal === 1 ? "" : "s"})`);
       }
 
+      let imagesAttached = 0;
       for (const family of families) {
         const stats = gapStats.get(family.familySlug!);
         if (stats) {
           family.chapterStats = { enrichedCount: stats.enrichedCount, speciesCount: stats.speciesCount };
         }
+        imagesAttached += attachImages(family, wikiImages);
+      }
+      if (imagesAttached > 0) {
+        console.log(`    (attached ${imagesAttached} portrait image${imagesAttached === 1 ? "" : "s"})`);
       }
 
       const chapterDoc = {
