@@ -1,4 +1,5 @@
 import type { BookNode } from "../types";
+import type { ReadingWindow } from "../hooks/useReadingWindow";
 import { SpeciesEntry } from "./SpeciesEntry";
 import { useBookOptions } from "../hooks/useBookOptions";
 
@@ -35,6 +36,12 @@ function GenusSection({
         </span>
       </h4>
 
+      {genus.description && (
+        <p style={{ fontSize: "0.85rem", color: "var(--ink-soft)", margin: "0 0 0.6rem", lineHeight: 1.6 }}>
+          {genus.description}
+        </p>
+      )}
+
       {detailed.map((species) => (
         <SpeciesEntry key={species.id} species={species} />
       ))}
@@ -58,7 +65,7 @@ function collectGenera(node: BookNode): BookNode[] {
   return children.flatMap(collectGenera);
 }
 
-export function FamilySection({ family }: { family: BookNode }) {
+export function FamilySection({ family, readingWindow }: { family: BookNode; readingWindow: ReadingWindow }) {
   const { showExtinct } = useBookOptions();
   const genera = collectGenera(family)
     .filter((g) => showExtinct || !isExtinct(g))
@@ -71,30 +78,74 @@ export function FamilySection({ family }: { family: BookNode }) {
 
   if (genera.length === 0) return null;
 
-  return (
-    <section id={`family-${family.familySlug}`} style={{ marginTop: "3rem" }}>
-      <h3 style={{ fontSize: "1.4rem", borderBottom: "1px solid var(--rule-gold)", paddingBottom: "0.4rem" }}>
-        {family.name}
-        {family.commonName && (
-          <span style={{ fontFamily: "var(--font-body)", fontWeight: 400, fontSize: "1rem", color: "var(--ink-faint)" }}>
-            {" "}
-            — {family.commonName}
-          </span>
-        )}
-      </h3>
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", fontSize: "0.85rem", color: "var(--ink-faint)", marginTop: "0.3rem" }}>
-        <span>{family.speciesCount ?? 0} species</span>
-        {family.distribution && <span>{family.distribution}</span>}
-        {stats && (
-          <span>
-            {stats.enrichedCount} of {stats.speciesCount} entries fully described so far
-          </span>
-        )}
-      </div>
+  const slug = family.familySlug!;
+  const expanded = readingWindow.isExpanded(slug);
 
-      {genera.map((genus, i) => (
-        <GenusSection key={genus.id} genus={genus} index={i + 1} showExtinct={showExtinct} />
-      ))}
-    </section>
+  return (
+    <details
+      id={`family-${slug}`}
+      ref={readingWindow.registerSentinel(slug)}
+      open={expanded}
+      style={{ marginTop: "3rem" }}
+    >
+      <summary
+        style={{ cursor: "pointer", listStyle: "none" }}
+        onClick={(e) => {
+          // Only a genuine click on a currently-*collapsed* summary counts
+          // as a manual pin. The native `toggle` event fires for *any*
+          // open-attribute change (including React setting `open` from
+          // scroll position), so it can't tell a real click apart from the
+          // reading window opening this section on its own - using it here
+          // was a real bug: every family that ever became scroll-active got
+          // pinned open indefinitely, defeating the whole point of collapse.
+          if (!expanded) readingWindow.pin(slug);
+          else e.preventDefault(); // let scroll position keep deciding, not a stray close-click
+        }}
+      >
+        <h3
+          style={{
+            display: "inline",
+            fontSize: "1.4rem",
+            borderBottom: "1px solid var(--rule-gold)",
+            paddingBottom: "0.4rem",
+          }}
+        >
+          {family.name}
+          {family.commonName && (
+            <span style={{ fontFamily: "var(--font-body)", fontWeight: 400, fontSize: "1rem", color: "var(--ink-faint)" }}>
+              {" "}
+              — {family.commonName}
+            </span>
+          )}
+        </h3>
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", fontSize: "0.85rem", color: "var(--ink-faint)", marginTop: "0.3rem" }}>
+          <span>{family.speciesCount ?? 0} species</span>
+          {family.distribution && <span>{family.distribution}</span>}
+          {stats && (
+            <span>
+              {stats.enrichedCount} of {stats.speciesCount} entries fully described so far
+            </span>
+          )}
+        </div>
+      </summary>
+
+      {expanded && (
+        <div>
+          {family.description ? (
+            <p style={{ margin: "0.8rem 0 0", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--ink-soft)" }}>
+              {family.description}
+            </p>
+          ) : family.notableMembers && family.notableMembers.length > 0 ? (
+            <p style={{ margin: "0.8rem 0 0", fontSize: "0.85rem", fontStyle: "italic", color: "var(--ink-faint)" }}>
+              Notable: {family.notableMembers.join(", ")}
+            </p>
+          ) : null}
+
+          {genera.map((genus, i) => (
+            <GenusSection key={genus.id} genus={genus} index={i + 1} showExtinct={showExtinct} />
+          ))}
+        </div>
+      )}
+    </details>
   );
 }

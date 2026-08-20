@@ -5,26 +5,65 @@ by (not a replica of) Linnaeus's *Systema Naturae*. See
 `/Users/tb/.claude/plans/checkup-on-the-real-whimsical-marshmallow.md` for the
 full design rationale and background.
 
-This is **not** wired into the portal. It reads a curated, pre-extracted slice
-of the portal's already-built data (read-only) and stands entirely on its own.
+This is **not** wired into the portal, but it does read the portal's real data
+files directly (read-only, via a symlink) rather than a duplicated copy — see
+"Data architecture" below.
 
 ## Setup
 
 ```bash
 npm install
-npm run extract-data   # rebuilds public/data/*.json from the portal's output
+npm run extract-data   # rebuilds the small public/data/extensions/*.json sidecars
 npm run dev
 ```
 
-`extract-data` reads `portal/public/data/kingdoms/animalia/orders/*.json` and
-`portal/data/gap-report.json` from the repo root — re-run it any time the
-upstream portal data changes (e.g. after an enrichment pass). It also strips a
-handful of corrupted `description` fields where `enrichFromWikipedia.ts`'s
-extraction grabbed raw MediaWiki markup (category links, `{{Speciesbox|...}}`
-infobox templates — disproportionately common on fossil/extinct species whose
-articles open with a taxobox before any prose, or article redirects) instead
-of real prose. That's a display-layer cleanup done at extraction time — the
-portal's source data is never modified.
+`extract-data` runs `scripts/extractSlice.ts`, which reads
+`portal/public/data/kingdoms/animalia/orders/*.json`,
+`portal/data/gap-report.json`, and `shared/data/wiki-images.json` from the
+repo root and writes one small sidecar per chapter to
+`public/data/extensions/${orderFile}.json` (portrait images, IUCN status,
+`chapterStats`, curated Family-level prose, and — for curated Parts only —
+the family whitelist). Re-run it any time upstream portal data changes.
+
+## Data architecture
+
+`public/data/portal-orders` is a **symlink** to
+`portal/public/data/kingdoms/animalia/orders` — the app's base species-tree
+data is the portal's own build output, fetched directly at runtime, never
+duplicated into this app's own `public/` tree or committed to git. (This
+used to be a full pre-filtered copy per chapter; at Aves' full-order scale
+that copy was ~12MB of data that went stale the moment the portal rebuilt,
+with nothing keeping it in sync short of remembering to re-run
+`extract-data` — see git history on this file for the "before" version if
+curious.)
+
+At runtime, `src/hooks/useBookData.ts`'s `loadChapter` fetches the portal
+order file (via the symlink) and the matching small extensions sidecar in
+parallel, then `src/lib/decorateChapter.ts` merges them in one client-side
+tree walk: strips corrupted `enrichFromWikipedia.ts` extracts (raw
+`{{Speciesbox|...}}` markup, `Category:` links, `#REDIRECT` pages —
+disproportionately common on fossil/extinct species), attaches portrait
+images/IUCN status, injects Family-level `description` (see below), and
+- for curated Parts only - filters down to the whitelisted families.
+
+## Family/Genus/Order prose
+
+Checked directly against the portal's real data: `ORDER` nodes already carry
+real hand/AI-written `description` prose (rendered as-is, e.g. Carnivora:
+*"Despite the name, Carnivora is defined by shared ancestry..."*), and so do
+most `GENUS` nodes (e.g. Paridae's `Parus`: *"The great tits — large, bold
+members of the family..."*) - both were already in the data but Genus prose
+was never rendered until now. `FAMILY` nodes have **no** `description` field
+anywhere in the portal's data, but do carry a `notableMembers: string[]`
+array. So: `FamilySection.tsx` now renders `genus.description` when present,
+and for Family, renders `family.description` when present (sourced from
+`src/familyIntros.ts` - hand-written, curated-Parts-only, ~30 entries) or
+falls back to a "Notable: ..." line from `notableMembers` when no prose
+exists yet. Aves' 254 families have no hand-written intros (not realistic to
+write by hand at that scale) — a follow-up LLM enrichment pass targeting
+`FAMILY`-rank `description` in the portal's own data (the same kind of pass
+that already produced the Order/Genus prose) would benefit every consumer,
+not just this app, and is a separate task from anything in `experiments/`.
 
 ## Curated scope (v8)
 
@@ -91,11 +130,48 @@ heading, and genus numbering stays contiguous around whatever's hidden.
 
 ## Scaling notes
 
-`src/hooks/useBookData.ts` deliberately mirrors
-`portal/src/hooks/useTaxonomyLoader.ts`'s skeleton + on-demand-fetch + LRU-cache
-pattern, at Chapter (= taxonomic Order) granularity, even though this
-prototype only ever has 3 chapters. At full scale, `loadChapter` should fetch
-`portal/public/data/kingdoms/animalia/orders/${orderId}.json` directly instead
-of this app's own filtered `public/data/chapters/*.json`, and
-`extractSlice.ts`'s family whitelist goes away — the loading *pattern*
-wouldn't need to change, only the fetch target and the removal of filtering.
+`src/hooks/useBookData.ts` mirrors `portal/src/hooks/useTaxonomyLoader.ts`'s
+skeleton + on-demand-fetch + LRU-cache pattern, at Chapter (= taxonomic
+Order) granularity. Now that Aves fetches the portal's real order files
+directly (see "Data architecture"), the biggest single fetch is Passeriformes
+at ~5MB - well within what a lazy per-chapter fetch can absorb.
+
+## Large chapters: scroll-driven collapse
+
+Passeriformes alone carries 146 families and ~3,200 fully-enriched species -
+too many `SpeciesEntry` components (each with a lazy-loaded image,
+description, badges) to mount all at once in one continuous scroll.
+`src/hooks/useReadingWindow.ts` + `FamilySection.tsx` solve this with a
+scroll-driven "reading window": only the family currently crossing the top
+of the viewport, plus one before and one after, stay expanded (fully
+mounted) - everything else collapses to just its header
+(`<details>`/`<summary>`, always mounted; the body is conditionally
+rendered, a real unmount, not CSS-hide). One shared `IntersectionObserver`
+per `ChapterPage` instance drives it (a scrollspy watching a thin trigger
+band near the top of the viewport), not one observer per family.
+
+Clicking a collapsed family's header pins it open (via `readingWindow.pin`);
+a pin auto-releases once scrolled well past. Verified live in Chrome on
+Passeriformes: deep-scrolling through Corvidae → Turdidae → Fringillidae
+correctly collapses earlier families (mounted `<img>` count stays in the
+tens/hundreds, not thousands) and re-expands them scrolling back up.
+
+Two real bugs were found and fixed building this (both instructive if this
+pattern gets reused elsewhere in the app):
+1. **Observer-timing bug**: creating the `IntersectionObserver` inside a
+   `useEffect` meant it was still `null` the first time ref callbacks fired
+   (refs attach during commit, *before* effects run) - every family observed
+   nothing, so the window never advanced regardless of scroll position.
+   Fixed by queuing elements that mount before the observer exists and
+   flushing the queue once it's created.
+2. **Ref-churn perf bug**: an inline `ref={registerSentinel(slug)}` created a
+   new closure every render, so React detached+reattached every family's ref
+   on every render, each reattach re-triggering `.observe()` (which queues a
+   fresh notification) - at 145+ families this became a render loop that
+   froze the tab. Fixed by caching one stable callback per slug.
+3. **Over-eager pinning bug**: the native `toggle` event fires for *any*
+   `open` attribute change, including React setting it from scroll position
+   - not just real clicks - so every family that ever became scroll-active
+   got permanently pinned, and nothing ever collapsed. Fixed by pinning from
+   a `click` handler on `<summary>` instead of the `toggle` event, which
+   only fires for genuine user interaction.
