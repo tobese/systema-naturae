@@ -60,14 +60,14 @@ and for Family, renders `family.description` when present (sourced from
 `src/familyIntros.ts` - ~30 hand-written entries from when
 Chondrichthyes/Reptilia were still small hand-curated Parts) or falls back
 to a "Notable: ..." line from `notableMembers` when no prose exists yet. Now
-that every Part is complete (352 families across 6 classes), the
+that every Part is complete (382 families across 9 classes), the
 great majority have no hand-written intro and fall back to `notableMembers`
 - a follow-up LLM enrichment pass targeting `FAMILY`-rank `description` in
 the portal's own data (the same kind of pass that already produced the
 Order/Genus prose) would benefit every consumer, not just this
 app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v11) — 6 Parts, all complete
+## Curated scope (v12) — 9 Parts, all complete
 
 Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
 treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
@@ -128,12 +128,27 @@ on par with Aves. Perciformes' order file is `PERCIFORMES_FISH.json` in the
 portal's data (another naming collision, same `nameOverrides` handling as
 Squamata above).
 
-These two were added as new Parts (not just more families in existing
-Parts) after surveying every remaining Animalia class in
-`gap-report.json` by class-wide enrichment % — Amphibia and Actinopterygii
-were the only two clearing the same coverage bar as the first four Parts;
-everything else (Insecta, Gastropoda, Arachnida, and the rest) sits at
-2-16% class-wide, mostly stub descriptions, not "book" material yet.
+Part VII — Onychophora: **complete — the one order, both families**
+(Peripatidae, Peripatopsidae - velvet worms). 91.4% class-wide coverage,
+the best of any Part in the book, though tiny (~230 species). Order file is
+`ORD_EUONYCHOPHORA.json` in the portal's data - a *prefix*-style naming
+variant this time, unlike the *suffix* pattern in Squamata/Perciformes
+above; same `nameOverrides` mechanism handles either.
+
+Part VIII — Cubozoa: **complete — both orders, all 8 families** (box
+jellyfish, including the notorious Irukandji). 64.3% class-wide coverage,
+~56 species.
+
+Part IX — Scyphozoa: **complete — all 3 orders, all 20 families** (true
+jellyfish - lion's mane, moon, cannonball, upside-down). 46.6% class-wide
+coverage, ~305 species.
+
+These three plus Amphibia/Actinopterygii were found by surveying *every*
+remaining Animalia class in `gap-report.json` by class-wide enrichment %
+(not just the largest-by-species-count ones, which is how the first pass
+missed them) — everything else (Insecta, Gastropoda, Arachnida,
+Cephalopoda, and the rest) sits well below this book's quality bar,
+mostly stub descriptions, not "book" material yet.
 
 Note: dolphins were already in scope before Chondrichthyes was added —
 Delphinidae is one of the families nested inside the Cetacea chapter.

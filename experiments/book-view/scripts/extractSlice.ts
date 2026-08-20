@@ -156,6 +156,34 @@ const PARTS: {
       { PERCIFORMES_FISH: "Perciformes" },
     ),
   },
+  {
+    className: "Onychophora",
+    title: "Part VII — Onychophora",
+    // Every order, every family - velvet worms, 91.4% class-wide coverage
+    // (~230 species) - the best in the whole book, just very small (one
+    // order, two families). Order file is ORD_EUONYCHOPHORA.json in the
+    // portal's data (a prefix-style naming variant this time, not a suffix
+    // like Squamata/Perciformes above).
+    chapters: allFamilyChapters(
+      ["ORD_EUONYCHOPHORA"],
+      { ORD_EUONYCHOPHORA: "Euonychophora" },
+    ),
+  },
+  {
+    className: "Cubozoa",
+    title: "Part VIII — Cubozoa",
+    // Every order, every family - box jellyfish, 64.3% class-wide coverage
+    // (~56 species, 8 families) - includes the notorious Irukandji.
+    chapters: allFamilyChapters(["CARYBDEIDA", "CHIRODROPIDA"]),
+  },
+  {
+    className: "Scyphozoa",
+    title: "Part IX — Scyphozoa",
+    // Every order, every family - true jellyfish, 46.6% class-wide
+    // coverage (~305 species, 20 families across 3 orders) - includes the
+    // lion's mane, cannonball, and upside-down jellyfish.
+    chapters: allFamilyChapters(["SEMAEOSTOMEAE", "CORONATAE", "RHIZOSTOMEAE"]),
+  },
 ];
 
 function readOrderFile(orderFile: string): TaxonNode {
