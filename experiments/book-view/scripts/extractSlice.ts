@@ -93,6 +93,21 @@ const PARTS: {
       { orderFile: "PASSERIFORMES", orderName: "Passeriformes", title: "Chapter 1 — Passeriformes", familySlugs: ["corvidae", "fringillidae"] },
     ],
   },
+  {
+    className: "Chondrichthyes",
+    title: "Part III — Chondrichthyes",
+    chapters: [
+      { orderFile: "LAMNIFORMES", orderName: "Lamniformes", title: "Chapter 1 — Lamniformes", familySlugs: ["lamnidae"] },
+      { orderFile: "CARCHARHINIFORMES", orderName: "Carcharhiniformes", title: "Chapter 2 — Carcharhiniformes", familySlugs: ["carcharhinidae", "sphyrnidae"] },
+    ],
+  },
+  {
+    className: "Reptilia",
+    title: "Part IV — Reptilia",
+    chapters: [
+      { orderFile: "TESTUDINES", orderName: "Testudines", title: "Chapter 1 — Testudines", familySlugs: ["testudinidae", "cheloniidae", "dermochelyidae"] },
+    ],
+  },
 ];
 
 function readOrderFile(orderFile: string): TaxonNode {
