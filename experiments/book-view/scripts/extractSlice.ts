@@ -70,7 +70,12 @@ const PARTS: {
     title: "Part I — Mammalia",
     chapters: [
       { orderFile: "CARNIVORA", orderName: "Carnivora", title: "Chapter 1 — Carnivora", familySlugs: ["felidae", "ursidae"] },
-      { orderFile: "PRIMATES", orderName: "Primates", title: "Chapter 2 — Primates", familySlugs: ["hominidae"] },
+      { orderFile: "PRIMATES", orderName: "Primates", title: "Chapter 2 — Primates", familySlugs: ["hominidae", "cercopithecidae", "cebidae", "lemuridae"] },
+      { orderFile: "CETACEA", orderName: "Cetacea", title: "Chapter 3 — Cetacea", familySlugs: ["cetacea"] },
+      { orderFile: "PROBOSCIDEA", orderName: "Proboscidea", title: "Chapter 4 — Proboscidea", familySlugs: ["elephantidae"] },
+      { orderFile: "PERISSODACTYLA", orderName: "Perissodactyla", title: "Chapter 5 — Perissodactyla", familySlugs: ["equidae"] },
+      { orderFile: "DIPROTODONTIA", orderName: "Diprotodontia", title: "Chapter 6 — Diprotodontia", familySlugs: ["macropodidae", "vombatidae"] },
+      { orderFile: "LAGOMORPHA", orderName: "Lagomorpha", title: "Chapter 7 — Lagomorpha", familySlugs: ["leporidae"] },
     ],
   },
   {

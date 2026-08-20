@@ -26,15 +26,26 @@ articles open with a taxobox before any prose, or article redirects) instead
 of real prose. That's a display-layer cleanup done at extraction time — the
 portal's source data is never modified.
 
-## Curated scope (v1)
+## Curated scope (v2)
 
-Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae).
+Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae,
+Cercopithecidae, Cebidae, Lemuridae), Cetacea (whales, dolphins & porpoises),
+Proboscidea (Elephantidae), Perissodactyla (Equidae), Diprotodontia
+(Macropodidae, Vombatidae), Lagomorpha (Leporidae).
 Part II — Aves: Passeriformes (Corvidae, Fringillidae).
 
 Chosen from `portal/data/gap-report.json` for real Wikipedia-derived
 enrichment coverage, favoring name-recognizable groups over higher-but-obscure
 coverage elsewhere in the tree (several Squamata families score 75-80%
-enriched vs. Hominidae's 57% — see the plan doc for the tradeoff).
+enriched vs. Hominidae's 57% — see the plan doc for the tradeoff). The v2
+families were all at or near 100% enriched after the Mammalia-wide pass
+(`4d5c994c1`).
+
+Note: Cetacea is modeled in the source taxonomy as a single FAMILY-rank node
+with a SUBFAMILY→TRIBE layer before GENUS (Mysticeti/Odontoceti → Balaenidae/
+Delphinidae/etc. → genus), unlike every other curated family's flat
+FAMILY→GENUS→SPECIES shape. `FamilySection.tsx`'s `collectGenera()` walks past
+non-genus ranks to handle this.
 
 ## Scaling notes
 
