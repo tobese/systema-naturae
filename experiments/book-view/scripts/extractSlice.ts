@@ -51,13 +51,28 @@ interface WikiImageEntry {
 }
 
 // Part (Class) → Chapter (Order, numbered continuously within the Part) →
-// whitelisted Family slugs, or "ALL" for every family in the order (used for
-// Aves, whose Wikipedia coverage is good enough class-wide to include every
-// family rather than hand-curate). Whitelists elsewhere are chosen from
-// portal/data/gap-report.json for genuine Wikipedia-derived enrichment
-// coverage, favoring name-recognizable groups (bears, cats, apes) over
-// higher-but-obscure coverage elsewhere (e.g. Squamata families score higher
-// but read less like a "book").
+// whitelisted Family slugs, or "ALL" for every family in the order. All
+// four Parts currently use "ALL" - see allFamilyChapters() below - now that
+// every class in this book has good enough class-wide Wikipedia coverage
+// to skip hand-curation. A future Part with genuinely patchy coverage
+// should go back to an explicit familySlugs whitelist instead.
+// Builds a "every family in every listed order" chapter set - used for
+// classes whose Wikipedia coverage is good enough class-wide to skip
+// hand-curation. orderFile normally derives orderName by title-casing
+// (ARTIODACTYLA -> Artiodactyla); pass nameOverrides for the rare order
+// whose file name doesn't match its taxon name 1:1 (e.g. Squamata's order
+// file is SQUAMATA_ORDER.json, a naming collision elsewhere in the
+// taxonomy).
+function allFamilyChapters(
+  orderFiles: string[],
+  nameOverrides: Record<string, string> = {},
+): { orderFile: string; orderName: string; title: string; familySlugs: "ALL" }[] {
+  return orderFiles.map((orderFile, i) => {
+    const orderName = nameOverrides[orderFile] ?? orderFile[0] + orderFile.slice(1).toLowerCase();
+    return { orderFile, orderName, title: `Chapter ${i + 1} — ${orderName}`, familySlugs: "ALL" as const };
+  });
+}
+
 const PARTS: {
   className: string;
   title: string;
@@ -69,24 +84,21 @@ const PARTS: {
     // Every order, every family - Mammalia's Wikipedia coverage (61.3% of
     // all species class-wide, per gap-report.json - even better than
     // Aves') is good enough to skip hand-curation entirely, same reasoning
-    // as the Aves Part below.
-    chapters: [
+    // as the other Parts below.
+    chapters: allFamilyChapters([
       "ARTIODACTYLA", "CARNIVORA", "CETACEA", "CHIROPTERA", "CINGULATA",
       "DASYUROMORPHIA", "DIDELPHIMORPHIA", "DIPROTODONTIA", "EULIPOTYPHLA",
       "LAGOMORPHA", "MONOTREMATA", "PERISSODACTYLA", "PHOLIDOTA", "PILOSA",
       "PRIMATES", "PROBOSCIDEA", "RODENTIA",
-    ].map((orderFile, i) => {
-      const orderName = orderFile[0] + orderFile.slice(1).toLowerCase();
-      return { orderFile, orderName, title: `Chapter ${i + 1} — ${orderName}`, familySlugs: "ALL" as const };
-    }),
+    ]),
   },
   {
     className: "Aves",
     title: "Part II — Aves",
     // Every order, every family - Aves' Wikipedia coverage (45.6% of all
     // species class-wide, per gap-report.json) is good enough to skip
-    // hand-curation entirely, unlike every other class in this book.
-    chapters: [
+    // hand-curation entirely.
+    chapters: allFamilyChapters([
       "ACCIPITRIFORMES", "ANSERIFORMES", "APODIFORMES", "APTERYGIFORMES",
       "BUCEROTIFORMES", "CAPRIMULGIFORMES", "CARIAMIFORMES", "CASUARIIFORMES",
       "CHARADRIIFORMES", "COLIIFORMES", "COLUMBIFORMES", "CORACIIFORMES",
@@ -97,25 +109,27 @@ const PARTS: {
       "PROCELLARIIFORMES", "PSITTACIFORMES", "PTEROCLIFORMES", "RHEIFORMES",
       "SPHENISCIFORMES", "STRIGIFORMES", "STRUTHIONIFORMES", "SULIFORMES",
       "TINAMIFORMES", "TROGONIFORMES", "UPUPIFORMES",
-    ].map((orderFile, i) => {
-      const orderName = orderFile[0] + orderFile.slice(1).toLowerCase();
-      return { orderFile, orderName, title: `Chapter ${i + 1} — ${orderName}`, familySlugs: "ALL" as const };
-    }),
+    ]),
   },
   {
     className: "Chondrichthyes",
     title: "Part III — Chondrichthyes",
-    chapters: [
-      { orderFile: "LAMNIFORMES", orderName: "Lamniformes", title: "Chapter 1 — Lamniformes", familySlugs: ["lamnidae"] },
-      { orderFile: "CARCHARHINIFORMES", orderName: "Carcharhiniformes", title: "Chapter 2 — Carcharhiniformes", familySlugs: ["carcharhinidae", "sphyrnidae"] },
-    ],
+    // Every order, every family too - only 7 families total, and even the
+    // least-enriched (Orectolobiformes/Myliobatiformes) are still real
+    // Wikipedia-sourced content, not empty stubs.
+    chapters: allFamilyChapters([
+      "CARCHARHINIFORMES", "LAMNIFORMES", "MYLIOBATIFORMES", "ORECTOLOBIFORMES",
+    ]),
   },
   {
     className: "Reptilia",
     title: "Part IV — Reptilia",
-    chapters: [
-      { orderFile: "TESTUDINES", orderName: "Testudines", title: "Chapter 1 — Testudines", familySlugs: ["testudinidae", "cheloniidae", "dermochelyidae"] },
-    ],
+    // Every order, every family - Reptilia's class-wide coverage (71.3% of
+    // ~8,100 species) is the best of any Part in this book.
+    chapters: allFamilyChapters(
+      ["CROCODYLIA", "RHYNCHOCEPHALIA", "SQUAMATA_ORDER", "TESTUDINES"],
+      { SQUAMATA_ORDER: "Squamata" },
+    ),
   },
 ];
 

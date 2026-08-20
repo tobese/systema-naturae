@@ -57,16 +57,17 @@ was never rendered until now. `FAMILY` nodes have **no** `description` field
 anywhere in the portal's data, but do carry a `notableMembers: string[]`
 array. So: `FamilySection.tsx` now renders `genus.description` when present,
 and for Family, renders `family.description` when present (sourced from
-`src/familyIntros.ts` - hand-written, ~30 entries covering the small
-Chondrichthyes/Reptilia Parts) or falls back to a "Notable: ..." line from
-`notableMembers` when no prose exists yet. Mammalia's 39 and Aves' 254
-families have no hand-written intros (not realistic to write by hand at that
-scale) — a follow-up LLM enrichment pass targeting `FAMILY`-rank
-`description` in the portal's own data (the same kind of pass that already
-produced the Order/Genus prose) would benefit every consumer, not just this
+`src/familyIntros.ts` - ~30 hand-written entries from when
+Chondrichthyes/Reptilia were still small hand-curated Parts) or falls back
+to a "Notable: ..." line from `notableMembers` when no prose exists yet. Now
+that every Part is complete (all 323 families across the 4 classes), the
+great majority have no hand-written intro and fall back to `notableMembers`
+- a follow-up LLM enrichment pass targeting `FAMILY`-rank `description` in
+the portal's own data (the same kind of pass that already produced the
+Order/Genus prose) would benefit every consumer, not just this
 app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v9)
+## Curated scope (v10) — every Part is now complete
 
 Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
 treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
@@ -92,29 +93,30 @@ handful of families, turned out to hold up fine even at full-order scale
 (see "Large chapters: scroll-driven collapse" below for how the DOM-weight
 side of that scale is actually handled).
 
-Part III — Chondrichthyes: Lamniformes (Lamnidae — great white, makos),
-Carcharhiniformes (Carcharhinidae — requiem sharks, Sphyrnidae — hammerheads).
-Lamnidae's 122 extinct-fossil species (Otodus/Carcharocles-adjacent megalodon
-kin, etc.) and Carcharhinidae's 6 wholly-fossil genera are explicitly flagged
-`extinct: true` at the source (`chondrichthyes/*/src/data/*.json`) — this had
-to be done by hand since `buildData.ts`'s auto-detection only fires on
-description text, and these are almost all unenriched stub species with no
-description to detect from.
+Part III — Chondrichthyes: **complete — all 4 orders, all 7 families**
+(Carcharhiniformes, Lamniformes, Myliobatiformes, Orectolobiformes). Lowest
+class-wide coverage of any Part (26.9% of ~1,190 species) but still small
+enough (7 families total) that "every family" costs nothing to include.
+Lamnidae's 122 extinct-fossil species (Otodus/Carcharocles-adjacent
+megalodon kin, etc.) and Carcharhinidae's 6 wholly-fossil genera are
+explicitly flagged `extinct: true` at the source
+(`chondrichthyes/*/src/data/*.json`) — done by hand since `buildData.ts`'s
+auto-detection only fires on description text, and these are almost all
+unenriched stub species with no description to detect from.
 
-Part IV — Reptilia: Testudines (Testudinidae — tortoises, Cheloniidae — sea
-turtles, Dermochelyidae — leatherback).
+Part IV — Reptilia: **complete — all 4 orders, all 23 families**
+(Crocodylia, Rhynchocephalia, Squamata, Testudines). Best class-wide
+coverage of any Part in this book (71.3% of ~8,100 species) — Squamata alone
+(snakes, lizards, amphisbaenians) contributes 16 families: vipers,
+chameleons, colubrids, monitor lizards, geckos, skinks, cobras/elapids,
+pythons, boas, and more. Squamata's order file is named
+`SQUAMATA_ORDER.json` in the portal's data (a naming collision elsewhere in
+the taxonomy), handled via a `nameOverrides` param on
+`extractSlice.ts`'s `allFamilyChapters()` helper so the chapter still
+displays as "Squamata."
 
 Note: dolphins were already in scope before Chondrichthyes was added —
 Delphinidae is one of the families nested inside the Cetacea chapter.
-
-Chondrichthyes and Reptilia's families were chosen from
-`portal/data/gap-report.json` for real Wikipedia-derived enrichment
-coverage, favoring name-recognizable groups over higher-but-obscure coverage
-elsewhere in the tree (several Squamata families score 75-80% enriched vs.
-Testudines' ~50% — see the plan doc for the tradeoff). Now that Mammalia and
-Aves are complete, Chondrichthyes and Reptilia are the only two Parts still
-hand-curated - both have far lower class-wide coverage than Mammalia/Aves, so
-"every family" isn't a good default there yet.
 
 Note: Cetacea and Alcedinidae (kingfishers) are modeled in the source
 taxonomy with an extra SUBFAMILY(→TRIBE) layer between FAMILY and GENUS,
