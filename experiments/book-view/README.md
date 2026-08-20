@@ -26,7 +26,7 @@ articles open with a taxobox before any prose, or article redirects) instead
 of real prose. That's a display-layer cleanup done at extraction time — the
 portal's source data is never modified.
 
-## Curated scope (v3)
+## Curated scope (v4)
 
 Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae,
 Cercopithecidae, Cebidae, Lemuridae), Cetacea (whales, dolphins & porpoises),
@@ -34,9 +34,12 @@ Proboscidea (Elephantidae), Perissodactyla (Equidae), Diprotodontia
 (Macropodidae, Vombatidae), Lagomorpha (Leporidae), Dasyuromorphia
 (Dasyuridae), Artiodactyla (Giraffidae, Caprinae), Eulipotyphla (Erinaceidae,
 Talpidae), Cingulata (Dasypodidae), Rodentia (Caviidae, Castoridae), Pholidota
-(Manidae), Pilosa (Bradypodidae, Myrmecophagidae) — 23 families across 14
-chapters, essentially all of the Mammalia families that reached 100% Wikipedia
-enrichment in the class-wide pass.
+(Manidae), Pilosa (Bradypodidae, Myrmecophagidae), Didelphimorphia
+(Didelphidae) — 24 families across 15 chapters. All three marsupial orders
+present in the taxonomy are now covered (Diprotodontia, Dasyuromorphia,
+Didelphimorphia); Didelphidae is the one family in this scope below the usual
+~100%-enriched bar (120/304, 39%) but it's the only opossum family and the
+only remaining marsupial group, so it's included regardless.
 Part II — Aves: Passeriformes (Corvidae, Fringillidae).
 
 Chosen from `portal/data/gap-report.json` for real Wikipedia-derived
