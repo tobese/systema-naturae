@@ -1,5 +1,5 @@
 {
-  "title": "Chapter 9 — Accipitriformes",
+  "title": "Chapter 1 — Accipitriformes",
   "orderName": "Accipitriformes",
   "description": "Diurnal birds of prey — the hawks, eagles, kites, harriers, and Old World vultures — united by a hooked bill, powerful talons, and keen binocular vision with up to eight times the resolving power of a human eye. Accipitridae is the largest raptor family with around 260 species. The order also includes the Osprey (Pandionidae) and the Secretary Bird (Sagittariidae).",
   "families": [
@@ -7372,6 +7372,137 @@
       }
     },
     {
+      "id": "FAM_PANDIONIDAE",
+      "name": "Pandionidae",
+      "rank": "FAMILY",
+      "commonName": "Osprey",
+      "appSlug": "pandionidae",
+      "speciesCount": 2,
+      "notableMembers": [
+        "Osprey",
+        "Eastern Osprey"
+      ],
+      "familySlug": "pandionidae",
+      "className": "aves",
+      "orderName": "accipitriformes",
+      "children": [
+        {
+          "id": "GENUS_PANDION",
+          "name": "Pandion",
+          "rank": "GENUS",
+          "description": "One of the most cosmopolitan raptors, found on every continent except Antarctica. Adapted entirely for catching fish — reversible outer toe, spiny toe pads, closeable nostrils for diving. Sweden has one of Europe's largest osprey populations, over 4,000 pairs nesting on prominent dead snags above lakes and rivers.",
+          "lineage": "Osprey",
+          "children": [
+            {
+              "id": "SP_PANDION_CRISTATUS",
+              "name": "Pandion cristatus",
+              "rank": "SPECIES",
+              "commonName": "Eastern Osprey",
+              "lineage": "Osprey",
+              "continents": [
+                "Asia",
+                "Oceania"
+              ],
+              "subspeciesCount": 3,
+              "description": "The eastern osprey (Pandion haliaetus cristatus) is a diurnal, fish-eating bird of prey.",
+              "sourcedFrom": "wikipedia",
+              "familySlug": "pandionidae",
+              "className": "aves",
+              "orderName": "accipitriformes",
+              "extinct": false,
+              "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wild%20Pandion.jpg?width=480"
+            }
+          ],
+          "familySlug": "pandionidae",
+          "className": "aves",
+          "orderName": "accipitriformes",
+          "extinct": false,
+          "speciesList": [
+            {
+              "id": "PANDION_HALIAETUS",
+              "name": "Pandion haliaetus",
+              "rank": "SPECIES",
+              "commonName": "Osprey",
+              "lineage": "Osprey",
+              "continents": [
+                "Europe",
+                "Asia",
+                "Africa",
+                "North America",
+                "South America",
+                "Australia"
+              ],
+              "subspeciesCount": 4,
+              "description": "",
+              "sourcedFrom": "none",
+              "familySlug": "pandionidae",
+              "className": "aves",
+              "orderName": "accipitriformes",
+              "extinct": false,
+              "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Balbuzard%20pecheur%20Lac%20de%20Tunis.jpg?width=480",
+              "iucnStatus": "LC"
+            }
+          ]
+        }
+      ],
+      "chapterStats": {
+        "enrichedCount": 1,
+        "speciesCount": 2
+      }
+    },
+    {
+      "id": "FAM_SAGITTARIIDAE",
+      "name": "Sagittariidae",
+      "rank": "FAMILY",
+      "commonName": "Secretarybird",
+      "appSlug": "sagittariidae",
+      "speciesCount": 1,
+      "notableMembers": [
+        "Secretarybird"
+      ],
+      "familySlug": "sagittariidae",
+      "className": "aves",
+      "orderName": "accipitriformes",
+      "children": [
+        {
+          "id": "GENUS_SAGITTARIUS",
+          "name": "Sagittarius",
+          "rank": "GENUS",
+          "description": "A monotypic genus containing the singular secretarybird, a distinctive raptor of African savannas that hunts almost entirely on foot. Standing over a metre tall on long, crane-like legs, it is equally at home stalking through tall grass or soaring on thermals, and its unique morphology places it in its own family within Accipitriformes.",
+          "lineage": "Secretarybirds",
+          "familySlug": "sagittariidae",
+          "className": "aves",
+          "orderName": "accipitriformes",
+          "extinct": false,
+          "speciesList": [
+            {
+              "id": "SAGITTARIUS_SERPENTARIUS",
+              "name": "Sagittarius serpentarius",
+              "rank": "SPECIES",
+              "commonName": "Secretarybird",
+              "lineage": "Secretarybirds",
+              "continents": [
+                "Africa"
+              ],
+              "subspeciesCount": 0,
+              "description": "",
+              "sourcedFrom": "none",
+              "familySlug": "sagittariidae",
+              "className": "aves",
+              "orderName": "accipitriformes",
+              "extinct": false,
+              "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Secretario%20(Sagittarius%20serpentarius)%2C%20parque%20nacional%20de%20Amboseli%2C%20Kenia%2C%202024-05-23%2C%20DD%2013.jpg?width=480",
+              "iucnStatus": "EN"
+            }
+          ]
+        }
+      ],
+      "chapterStats": {
+        "enrichedCount": 0,
+        "speciesCount": 1
+      }
+    },
+    {
       "id": "FAM_CATHARTIDAE",
       "name": "Cathartidae",
       "rank": "FAMILY",
@@ -7596,85 +7727,6 @@
       "chapterStats": {
         "enrichedCount": 5,
         "speciesCount": 7
-      }
-    },
-    {
-      "id": "FAM_PANDIONIDAE",
-      "name": "Pandionidae",
-      "rank": "FAMILY",
-      "commonName": "Osprey",
-      "appSlug": "pandionidae",
-      "speciesCount": 2,
-      "notableMembers": [
-        "Osprey",
-        "Eastern Osprey"
-      ],
-      "familySlug": "pandionidae",
-      "className": "aves",
-      "orderName": "accipitriformes",
-      "children": [
-        {
-          "id": "GENUS_PANDION",
-          "name": "Pandion",
-          "rank": "GENUS",
-          "description": "One of the most cosmopolitan raptors, found on every continent except Antarctica. Adapted entirely for catching fish — reversible outer toe, spiny toe pads, closeable nostrils for diving. Sweden has one of Europe's largest osprey populations, over 4,000 pairs nesting on prominent dead snags above lakes and rivers.",
-          "lineage": "Osprey",
-          "children": [
-            {
-              "id": "SP_PANDION_CRISTATUS",
-              "name": "Pandion cristatus",
-              "rank": "SPECIES",
-              "commonName": "Eastern Osprey",
-              "lineage": "Osprey",
-              "continents": [
-                "Asia",
-                "Oceania"
-              ],
-              "subspeciesCount": 3,
-              "description": "The eastern osprey (Pandion haliaetus cristatus) is a diurnal, fish-eating bird of prey.",
-              "sourcedFrom": "wikipedia",
-              "familySlug": "pandionidae",
-              "className": "aves",
-              "orderName": "accipitriformes",
-              "extinct": false,
-              "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wild%20Pandion.jpg?width=480"
-            }
-          ],
-          "familySlug": "pandionidae",
-          "className": "aves",
-          "orderName": "accipitriformes",
-          "extinct": false,
-          "speciesList": [
-            {
-              "id": "PANDION_HALIAETUS",
-              "name": "Pandion haliaetus",
-              "rank": "SPECIES",
-              "commonName": "Osprey",
-              "lineage": "Osprey",
-              "continents": [
-                "Europe",
-                "Asia",
-                "Africa",
-                "North America",
-                "South America",
-                "Australia"
-              ],
-              "subspeciesCount": 4,
-              "description": "",
-              "sourcedFrom": "none",
-              "familySlug": "pandionidae",
-              "className": "aves",
-              "orderName": "accipitriformes",
-              "extinct": false,
-              "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Balbuzard%20pecheur%20Lac%20de%20Tunis.jpg?width=480",
-              "iucnStatus": "LC"
-            }
-          ]
-        }
-      ],
-      "chapterStats": {
-        "enrichedCount": 1,
-        "speciesCount": 2
       }
     }
   ]

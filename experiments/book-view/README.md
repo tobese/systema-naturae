@@ -26,7 +26,7 @@ articles open with a taxobox before any prose, or article redirects) instead
 of real prose. That's a display-layer cleanup done at extraction time — the
 portal's source data is never modified.
 
-## Curated scope (v7)
+## Curated scope (v8)
 
 Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae,
 Cercopithecidae, Cebidae, Lemuridae), Cetacea (whales, dolphins & porpoises),
@@ -41,25 +41,17 @@ Didelphimorphia); Didelphidae is the one family in this scope below the usual
 ~100%-enriched bar (120/304, 39%) but it's the only opossum family and the
 only remaining marsupial group, so it's included regardless.
 
-Part II — Aves: **31 chapters, 98 families** — essentially every order in
-the taxonomy, each carrying its name-recognizable and/or reasonably-enriched
-families. The full whitelist lives in `extractSlice.ts`'s `PARTS` constant
-(source of truth — don't duplicate the family-by-family list here, it grew
-too long to keep in sync by hand). Broad strokes: ratites, penguins,
-albatrosses/petrels, the pelican/heron/ibis/stork group, raptors, owls,
-cranes/bustards, the huge Charadriiformes wader/gull/auk group, parrots,
-pigeons, waterfowl, gamebirds, kingfishers/rollers, hornbills, trogons,
-hummingbirds/swifts, woodpeckers/toucans/puffbirds, flamingos, loons, grebes,
-nightjars/frogmouths/oilbird/potoos, hoopoes, Kagu, seriemas, cuckoo-roller,
-cuckoos, and a substantial slice of Passeriformes (crows, finches, birds of
-paradise, wrens, tits, sparrows, blackbirds, mockingbirds, shrikes,
-sunbirds, weavers, warbler-adjacent families, lyrebirds, tapaculos,
-antpittas, and more). Coverage ranges from 100%-enriched tiny families down
-to ~18% for Columbidae, following the same "recognizable over merely
-high-percentage" principle as Mammalia — Aves genuinely has much better
-Wikipedia coverage than most of the tree, so this Part could still grow
-further (~150 Aves families remain unlisted, mostly smaller/more obscure
-Passeriformes groups).
+Part II — Aves: **complete — all 37 orders, all 254 families.** Unlike every
+other Part, Aves is no longer hand-curated: `extractSlice.ts` special-cases
+`familySlugs: "ALL"` for this class (Aves' class-wide Wikipedia coverage,
+45.6% of ~11,750 species, was judged good enough to skip curation entirely —
+see the "more birds" progression below). The Passeriformes chapter alone
+carries 146 families and ~3,200 fully-enriched species entries in one
+continuous scroll; verified live in Chrome that it renders and scrolls
+without hanging (deep-scrolled past Corvidae into Fringillidae, real content
+throughout, no jank observed) — the app's "single continuously-scrollable
+spread per chapter" design, chosen for a curated handful of families, turned
+out to hold up fine even at full-order scale.
 
 Part III — Chondrichthyes: Lamniformes (Lamnidae — great white, makos),
 Carcharhiniformes (Carcharhinidae — requiem sharks, Sphyrnidae — hammerheads).
