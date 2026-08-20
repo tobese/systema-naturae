@@ -26,12 +26,17 @@ articles open with a taxobox before any prose, or article redirects) instead
 of real prose. That's a display-layer cleanup done at extraction time — the
 portal's source data is never modified.
 
-## Curated scope (v2)
+## Curated scope (v3)
 
 Part I — Mammalia: Carnivora (Felidae, Ursidae), Primates (Hominidae,
 Cercopithecidae, Cebidae, Lemuridae), Cetacea (whales, dolphins & porpoises),
 Proboscidea (Elephantidae), Perissodactyla (Equidae), Diprotodontia
-(Macropodidae, Vombatidae), Lagomorpha (Leporidae).
+(Macropodidae, Vombatidae), Lagomorpha (Leporidae), Dasyuromorphia
+(Dasyuridae), Artiodactyla (Giraffidae, Caprinae), Eulipotyphla (Erinaceidae,
+Talpidae), Cingulata (Dasypodidae), Rodentia (Caviidae, Castoridae), Pholidota
+(Manidae), Pilosa (Bradypodidae, Myrmecophagidae) — 23 families across 14
+chapters, essentially all of the Mammalia families that reached 100% Wikipedia
+enrichment in the class-wide pass.
 Part II — Aves: Passeriformes (Corvidae, Fringillidae).
 
 Chosen from `portal/data/gap-report.json` for real Wikipedia-derived
@@ -46,6 +51,16 @@ with a SUBFAMILY→TRIBE layer before GENUS (Mysticeti/Odontoceti → Balaenidae
 Delphinidae/etc. → genus), unlike every other curated family's flat
 FAMILY→GENUS→SPECIES shape. `FamilySection.tsx`'s `collectGenera()` walks past
 non-genus ranks to handle this.
+
+## Options
+
+A "Show extinct species" toggle sits in the top-right of the reading shell
+(`Breadcrumb.tsx`), default **off**. State lives in `src/context/BookOptions.tsx`
+(persisted to `localStorage`), read via `src/hooks/useBookOptions.ts`.
+`FamilySection.tsx` filters on the `extinct`/`fossil` flags at species and
+genus granularity — a genus that's entirely extinct (e.g. Felidae's
+*Smilodon*, *Proailurus*) disappears completely rather than showing an empty
+heading, and genus numbering stays contiguous around whatever's hidden.
 
 ## Scaling notes
 

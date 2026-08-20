@@ -1,9 +1,22 @@
 import type { BookNode } from "../types";
 import { SpeciesEntry } from "./SpeciesEntry";
+import { useBookOptions } from "../hooks/useBookOptions";
 
-function GenusSection({ genus, index }: { genus: BookNode; index: number }) {
-  const detailed = genus.children ?? [];
-  const stubs = genus.speciesList ?? [];
+function isExtinct(node: BookNode): boolean {
+  return Boolean(node.extinct || node.fossil);
+}
+
+function GenusSection({
+  genus,
+  index,
+  showExtinct,
+}: {
+  genus: BookNode;
+  index: number;
+  showExtinct: boolean;
+}) {
+  const detailed = (genus.children ?? []).filter((s) => showExtinct || !isExtinct(s));
+  const stubs = (genus.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
   const totalCount = detailed.length + stubs.length;
 
   return (
@@ -46,8 +59,17 @@ function collectGenera(node: BookNode): BookNode[] {
 }
 
 export function FamilySection({ family }: { family: BookNode }) {
-  const genera = collectGenera(family);
+  const { showExtinct } = useBookOptions();
+  const genera = collectGenera(family)
+    .filter((g) => showExtinct || !isExtinct(g))
+    .filter((g) => {
+      const detailed = (g.children ?? []).filter((s) => showExtinct || !isExtinct(s));
+      const stubs = (g.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
+      return detailed.length + stubs.length > 0;
+    });
   const stats = family.chapterStats;
+
+  if (genera.length === 0) return null;
 
   return (
     <section id={`family-${family.familySlug}`} style={{ marginTop: "3rem" }}>
@@ -71,7 +93,7 @@ export function FamilySection({ family }: { family: BookNode }) {
       </div>
 
       {genera.map((genus, i) => (
-        <GenusSection key={genus.id} genus={genus} index={i + 1} />
+        <GenusSection key={genus.id} genus={genus} index={i + 1} showExtinct={showExtinct} />
       ))}
     </section>
   );

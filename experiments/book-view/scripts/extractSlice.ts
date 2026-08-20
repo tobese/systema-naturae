@@ -76,6 +76,13 @@ const PARTS: {
       { orderFile: "PERISSODACTYLA", orderName: "Perissodactyla", title: "Chapter 5 — Perissodactyla", familySlugs: ["equidae"] },
       { orderFile: "DIPROTODONTIA", orderName: "Diprotodontia", title: "Chapter 6 — Diprotodontia", familySlugs: ["macropodidae", "vombatidae"] },
       { orderFile: "LAGOMORPHA", orderName: "Lagomorpha", title: "Chapter 7 — Lagomorpha", familySlugs: ["leporidae"] },
+      { orderFile: "DASYUROMORPHIA", orderName: "Dasyuromorphia", title: "Chapter 8 — Dasyuromorphia", familySlugs: ["dasyuridae"] },
+      { orderFile: "ARTIODACTYLA", orderName: "Artiodactyla", title: "Chapter 9 — Artiodactyla", familySlugs: ["giraffidae", "caprinae"] },
+      { orderFile: "EULIPOTYPHLA", orderName: "Eulipotyphla", title: "Chapter 10 — Eulipotyphla", familySlugs: ["erinaceidae", "talpidae"] },
+      { orderFile: "CINGULATA", orderName: "Cingulata", title: "Chapter 11 — Cingulata", familySlugs: ["dasypodidae"] },
+      { orderFile: "RODENTIA", orderName: "Rodentia", title: "Chapter 12 — Rodentia", familySlugs: ["caviidae", "castoridae"] },
+      { orderFile: "PHOLIDOTA", orderName: "Pholidota", title: "Chapter 13 — Pholidota", familySlugs: ["manidae"] },
+      { orderFile: "PILOSA", orderName: "Pilosa", title: "Chapter 14 — Pilosa", familySlugs: ["bradypodidae", "myrmecophagidae"] },
     ],
   },
   {
