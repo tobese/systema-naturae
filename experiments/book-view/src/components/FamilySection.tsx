@@ -9,12 +9,10 @@ function isExtinct(node: BookNode): boolean {
 
 function GenusSection({
   genus,
-  index,
   showExtinct,
   showStubs,
 }: {
   genus: BookNode;
-  index: number;
   showExtinct: boolean;
   showStubs: boolean;
 }) {
@@ -33,7 +31,7 @@ function GenusSection({
           marginBottom: "0.3rem",
         }}
       >
-        {index}. {genus.name}
+        {genus.name}
         <span style={{ fontStyle: "normal", fontSize: "0.8rem", color: "var(--ink-faint)", marginLeft: "0.5rem" }}>
           {totalCount} {totalCount === 1 ? "species" : "species"}
         </span>
@@ -151,8 +149,8 @@ export function FamilySection({ family, readingWindow }: { family: BookNode; rea
             </p>
           ) : null}
 
-          {genera.map((genus, i) => (
-            <GenusSection key={genus.id} genus={genus} index={i + 1} showExtinct={showExtinct} showStubs={showStubs} />
+          {genera.map((genus) => (
+            <GenusSection key={genus.id} genus={genus} showExtinct={showExtinct} showStubs={showStubs} />
           ))}
         </div>
       )}
