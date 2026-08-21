@@ -62,7 +62,8 @@ export default function App() {
             <ChapterPage
               chapter={activeChapterDoc}
               partTitle={activePart!.title}
-              partIntro={PART_INTROS[activePart!.className] ?? ""}
+              partIntro={PART_INTROS[activePart!.className] ?? activePart!.description ?? ""}
+              partCollage={activePart!.collage ?? []}
               showPartIntro={isFirstChapterOfPart}
             />
           )}

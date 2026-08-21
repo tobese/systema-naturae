@@ -37,14 +37,27 @@ with nothing keeping it in sync short of remembering to re-run
 `extract-data` — see git history on this file for the "before" version if
 curious.)
 
+**Second kingdom (2026-08-21):** `public/data/portal-plantae-orders` is the
+same pattern pointed at `portal/public/data/kingdoms/plantae/orders-plantae`
+(237 order files, each named `ORD_<SLUG>.json` uniformly — the portal's
+`order-manifest.json` supplies clean display names via `orderSlug`, so no
+`nameOverrides` guessing was needed the way it was for a handful of Animalia
+orders). Extension sidecars for Plantae chapters write to a separate
+`public/data/extensions-plantae/` directory so adding the kingdom never
+touched any already-verified Animalia output. Every skeleton `Part` and
+`Chapter` now carries a `kingdom: "Animalia" | "Plantae"` field (see
+`src/types.ts`), and `useBookData.ts`'s `loadChapter` picks the matching
+orders-symlink/extensions-dir pair from it.
+
 At runtime, `src/hooks/useBookData.ts`'s `loadChapter` fetches the portal
-order file (via the symlink) and the matching small extensions sidecar in
-parallel, then `src/lib/decorateChapter.ts` merges them in one client-side
-tree walk: strips corrupted `enrichFromWikipedia.ts` extracts (raw
-`{{Speciesbox|...}}` markup, `Category:` links, `#REDIRECT` pages —
-disproportionately common on fossil/extinct species), attaches portrait
-images/IUCN status, injects Family-level `description` (see below), and
-- for curated Parts only - filters down to the whitelisted families.
+order file (via the kingdom-appropriate symlink) and the matching small
+extensions sidecar in parallel, then `src/lib/decorateChapter.ts` merges
+them in one client-side tree walk: strips corrupted
+`enrichFromWikipedia.ts` extracts (raw `{{Speciesbox|...}}` markup,
+`Category:` links, `#REDIRECT` pages — disproportionately common on
+fossil/extinct species), attaches portrait images/IUCN status, injects
+Family-level `description` (see below), and - for curated Parts only -
+filters down to the whitelisted families.
 
 ## Family/Genus/Order prose
 
@@ -60,132 +73,190 @@ and for Family, renders `family.description` when present (sourced from
 `src/familyIntros.ts` - ~30 hand-written entries from when
 Chondrichthyes/Reptilia were still small hand-curated Parts) or falls back
 to a "Notable: ..." line from `notableMembers` when no prose exists yet. Now
-that every Part is complete or deliberately scoped (410 families across
-15 classes), the
-great majority have no hand-written intro and fall back to `notableMembers`
-- a follow-up LLM enrichment pass targeting `FAMILY`-rank `description` in
+that the book covers every class in both kingdoms (see "Scope" below), the
+vast majority of families have no hand-written intro and fall back to
+`notableMembers` (or nothing, for Plantae) - a follow-up LLM enrichment pass
+targeting `FAMILY`-rank `description` in
 the portal's own data (the same kind of pass that already produced the
 Order/Genus prose) would benefit every consumer, not just this
 app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v14) — 15 Parts (14 complete, 1 partial test case)
+**Plantae prose is real but thinner.** Species descriptions are POWO-sourced
+boilerplate (*"The native range of this species is China (Zhejiang). It is a
+tree and grows primarily in the temperate biome."*), and `GENUS` nodes carry
+a generic placeholder (*"Pinus — a genus of pinopsidas."*) rather than real
+prose like Animalia genera. `FAMILY` nodes have neither a `description` nor
+a `notableMembers` array at all - `FamilySection.tsx`'s existing fallback
+chain just renders no Family-level prose for any Plantae family (not
+broken, same graceful path an Animalia family without a `familyIntros.ts`
+entry already takes).
 
-Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
-treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
-~7,900 species, per `gap-report.json` — even better than Aves') was judged
-good enough to skip curation. Newly included beyond the original hand-picked
-set: full Artiodactyla (pigs, deer, cattle, not just giraffes/caprines), full
-Carnivora (dogs, weasels, seals, not just cats/bears), Chiroptera (bats -
-four families, ~1,400 species, ~20% of all mammal species), full Eulipotyphla
-(+shrews), Monotremata (echidnas - the platypus family isn't in the source
-taxonomy yet), and full Primates/Rodentia (squirrels, muridae, cricetidae).
-All three marsupial orders are covered (Diprotodontia, Dasyuromorphia,
-Didelphimorphia).
+## Class-level prose + species collage (added 2026-08-21)
 
-Part II — Aves: **complete — all 37 orders, all 254 families.** Aves'
-class-wide Wikipedia coverage (45.6% of ~11,750 species) was judged good
-enough to skip curation entirely — see the "more birds" progression below.
-The Passeriformes chapter alone carries 146 families and ~3,200
-fully-enriched species entries; verified live in Chrome that it renders and
-scrolls without hanging (deep-scrolled past Corvidae into Fringillidae, real
-content throughout, no jank observed) — the app's "single
-continuously-scrollable spread per chapter" design, chosen for a curated
-handful of families, turned out to hold up fine even at full-order scale
-(see "Large chapters: scroll-driven collapse" below for how the DOM-weight
-side of that scale is actually handled).
+Every Part already had a rendering slot for an intro paragraph
+(`ChapterPage.tsx`'s `showPartIntro` header, above "Chapter 1") - it just
+almost never had anything to show. `src/curatedParts.ts`'s `PART_INTROS` map
+had exactly 4 hand-written entries (Mammalia, Aves, Chondrichthyes, Reptilia)
+out of 118 Parts; everywhere else it silently rendered `""`. Checking the
+real source data directly: `CLASS.description` and `ORDER.description` both
+live in `portal/data/taxonomy.json` (Animalia) /
+`portal/data/taxonomy-plantae-snippet.json` (Plantae) - and **57 of 75
+Animalia classes (76%) plus 280 of 383 Animalia orders (73%)** had no
+`description` at all. Plantae, by contrast, was already essentially fully
+described (0/43 classes, 10/237 orders missing).
 
-Part III — Chondrichthyes: **complete — all 4 orders, all 7 families**
-(Carcharhiniformes, Lamniformes, Myliobatiformes, Orectolobiformes). Lowest
-class-wide coverage of any Part (26.9% of ~1,190 species) but still small
-enough (7 families total) that "every family" costs nothing to include.
-Lamnidae's 122 extinct-fossil species (Otodus/Carcharocles-adjacent
-megalodon kin, etc.) and Carcharhinidae's 6 wholly-fossil genera are
-explicitly flagged `extinct: true` at the source
-(`chondrichthyes/*/src/data/*.json`) — done by hand since `buildData.ts`'s
-auto-detection only fires on description text, and these are almost all
-unenriched stub species with no description to detect from.
+**`scripts/enrichHigherRanksFromWikipedia.ts`** (new, root-level, sibling to
+`scripts/enrichFromWikipedia.ts`) fills these in from the **live** Wikipedia
+API - not the offline SQLite dump, which turned out not to be a general
+mirror: `scripts/buildWikipediaDb.py` only ever imports pages matching a
+species-name candidate list, confirmed empty for `"Insecta"`,
+`"Coleoptera"`, `"Gastropoda"`, etc. At only ~347 remaining lookups
+(57+280+10), the live API alone is fast (`fetchBatch()` reuses
+`enrichFromWikipedia.ts`'s proven batch-of-50/1.5s-throttle mechanics,
+trying the scientific name first, then `commonName` as a fallback title -
+both CLASS and ORDER nodes already carry one, e.g. `Coleoptera` →
+`"Beetles"`). Idempotent, never fabricates (a miss is left empty). First
+run: **226/337 Animalia** filled, **0/10 Plantae** (the 10 remaining are
+obscure fossil algae orders genuinely absent from Wikipedia - correctly
+left empty rather than invented). Also strips a recurring Wikipedia-extract
+artifact (a stray leading `(;` or empty `()` where an IPA-pronunciation
+template got stripped) that showed up in a couple of results, e.g.
+`"Bivalvia () or..."` → `"Bivalvia or..."`.
 
-Part IV — Reptilia: **complete — all 4 orders, all 23 families**
-(Crocodylia, Rhynchocephalia, Squamata, Testudines). Best class-wide
-coverage of any Part in this book (71.3% of ~8,100 species) — Squamata alone
-(snakes, lizards, amphisbaenians) contributes 16 families: vipers,
-chameleons, colubrids, monitor lizards, geckos, skinks, cobras/elapids,
-pythons, boas, and more. Squamata's order file is named
-`SQUAMATA_ORDER.json` in the portal's data (a naming collision elsewhere in
-the taxonomy), handled via a `nameOverrides` param on
-`extractSlice.ts`'s `allFamilyChapters()` helper so the chapter still
-displays as "Squamata."
+This writes back into the two taxonomy source files directly - real,
+portal-wide data (the live deployed animal portal reads `taxonomy.json`
+too), so re-run `cd portal && sh scripts/buildData.sh &&
+SN_KINGDOM=plantae sh scripts/buildData.sh` afterward to graft the new
+descriptions into the generated order files before `npm run extract-data`
+picks them up.
 
-Part V — Amphibia: **complete — all 3 orders, all 13 families** (Anura -
-frogs & toads, Gymnophiona - caecilians, Urodela - salamanders & newts).
-62.3% class-wide coverage (~3,700 species), on par with Mammalia/Reptilia
-despite being the smallest class in the book by order count.
+**Book-view side:** `extractSlice.ts`'s `buildKingdomParts()` now also loads
+the relevant taxonomy file per kingdom (`loadClassDescriptions()`) and
+attaches each class's description to its Part's skeleton entry.
+`App.tsx` prefers the hand-written `PART_INTROS` entry when one exists,
+falling back to this real data otherwise - so the 4 original hand-written
+intros are untouched, not overwritten by a generic Wikipedia paragraph.
 
-Part VI — Actinopterygii: **complete — all 14 orders, all 16 families**
-(carp/goldfish, cichlids, characins, wrasses, seahorses & pipefish, salmon,
-killifish, sculpins, perch, herrings, flounders, tuna & mackerel,
-sticklebacks, cod, eels, pike). 45.1% class-wide coverage (~10,900 species),
-on par with Aves. Perciformes' order file is `PERCIFORMES_FISH.json` in the
-portal's data (another naming collision, same `nameOverrides` handling as
-Squamata above).
+**Species collage:** alongside the description, each Part's skeleton also
+carries a `collage: { name, commonName, imageUrl }[]` (a **9x9 plate, 81
+entries**) - species with *both* a real (non-stub) description *and* a
+portrait image, sampled evenly across every chapter in the Part
+(`collectCollageCandidates` + `sampleEvenly()` in `extractSlice.ts`,
+deterministic, no randomness, so `extract-data` output stays reproducible
+run to run). No new upstream data needed - this reuses the same per-chapter
+`images` map (sourced from `shared/data/wiki-images.json`)
+`extractSlice.ts` already built for species-level portraits. New
+`src/components/PartCollage.tsx` renders it as a strict 9-column CSS grid
+in the same `showPartIntro` header block, reusing `SpeciesEntry.tsx`'s
+`object-fit: contain` + paper-shadow-background treatment (see the
+shark-image-cropping fix above) so collage photos of elongated animals
+don't lose their nose/tail either.
 
-Part VII — Onychophora: **complete — the one order, both families**
-(Peripatidae, Peripatopsidae - velvet worms). 91.4% class-wide coverage,
-the best of any Part in the book, though tiny (~230 species). Order file is
-`ORD_EUONYCHOPHORA.json` in the portal's data - a *prefix*-style naming
-variant this time, unlike the *suffix* pattern in Squamata/Perciformes
-above; same `nameOverrides` mechanism handles either.
+**Curated placements for flagship Parts** (`src/collageOverrides.ts`,
+consumed by `extractSlice.ts`'s `buildCollage()`): a class can pin specific
+species at specific grid slots, with an optional `center` forced to index
+40 (the exact middle of the 9x9 grid, row-major) - everything else in the
+grid still auto-fills from the same real, evenly-sampled candidate pool.
+Every name in `collageOverrides.ts` was confirmed to exist with a real
+portrait image in the actual data before being added - none fabricated or
+assumed.
+- **Mammalia**: `Homo sapiens` centered, surrounded by *Gorilla gorilla*
+  (largest living primate), *Balaenoptera musculus* (blue whale - largest
+  animal ever known), *Suncus etruscus* (Etruscan shrew - smallest mammal
+  by mass), *Giraffa camelopardalis* (tallest living animal), *Acinonyx
+  jubatus* (cheetah - fastest land mammal), *Loxodonta africana* (African
+  bush elephant - largest land animal), *Physeter macrocephalus* (sperm
+  whale - deepest-diving mammal).
+- **Aves**: no natural "center" analog for birds the way a human centers
+  Mammalia, so this Part pins ten record-holders with no forced center -
+  *Struthio camelus* (ostrich, largest/heaviest bird), *Mellisuga minima*
+  (vervain hummingbird - among the smallest living birds; the actual
+  smallest, the bee hummingbird, has no portrait in the data, so this is
+  the honestly-labeled second-smallest rather than a misattributed claim),
+  *Falco peregrinus* (fastest animal alive, diving), *Diomedea exulans*
+  (largest wingspan of any living bird), *Haliaeetus leucocephalus* (bald
+  eagle), *Corvus corax* (common raven, most intelligent bird),
+  *Sterna paradisaea* (Arctic tern - longest migration of any animal),
+  *Pavo cristatus* (peacock), *Aptenodytes forsteri* (emperor penguin -
+  deepest-diving bird), *Apteryx australis* (kiwi).
 
-Part VIII — Cubozoa: **complete — both orders, all 8 families** (box
-jellyfish, including the notorious Irukandji). 64.3% class-wide coverage,
-~56 species.
+Verified live in Chrome: Mammalia's 9x9 grid shows all 7 pinned
+record-holders in row 1 with *Homo sapiens* exactly centered in row 5
+(confirmed both by array index 40 in `book-skeleton.json` and visually,
+flanked symmetrically); Aves' grid shows all 10 pinned birds across row 1.
+Insecta (a class with no override, previously zero intro at all) shows a
+real paragraph and a full 81-photo collage above Chapter 1; a genuinely
+tiny class with no image-bearing enriched species (Xenoturbellida, 2
+species) renders with no collage and no intro paragraph - clean
+degradation, not an error. 97/118 Parts now have a description, 89/118
+have a non-empty collage.
 
-Part IX — Scyphozoa: **complete — all 3 orders, all 20 families** (true
-jellyfish - lion's mane, moon, cannonball, upside-down). 46.6% class-wide
-coverage, ~305 species.
+## Scope (v16, 2026-08-21) — full parity with the portal, 118 Parts / 620 Chapters
 
-Part X — Phoronida: **complete — the one order, the one family**
-(Phoronidae - horseshoe worms). 100% class-wide coverage (all 13 known
-species) - tiny but fully described. Order file is `ORD_PHORONIDA.json`
-(another prefix-variant name).
+Through v15 this section hand-enumerated every Part, each with its own
+enrichment-% rationale for why it was (or wasn't) included — a curation
+model that made sense while the book covered a hand-picked subset of
+well-enriched classes. **That model is retired.** The goal is now explicit:
+cover the same ground as the portal itself. `scripts/extractSlice.ts` no
+longer has a hand-written `PARTS` array at all — `buildKingdomParts()`
+generates one Part per class and one Chapter per order **directly from each
+kingdom's `order-manifest.json`**, unconditionally, regardless of
+enrichment %. Every class with real, built species data in the portal is a
+Part in this book:
 
-Part XI — Nuda: **complete — the one order, the one family** (Beroidae -
-beroid comb jellies, predatory ctenophores with no tentacles). 33.3%
-class-wide coverage.
+- **Kingdom Animalia**: all 75 classes / 383 orders (was 15/55).
+- **Kingdom Plantae**: all 43 classes / 237 orders (was 7/21).
+- Combined: **118 Parts, 620 Chapters**, aggregate species totals verified
+  against `docs/Coverage.md`'s published kingdom figures (Animalia 527,703
+  vs. ~529,298 published; Plantae 435,111 vs. ~435,114 published — both
+  within rounding/snapshot-timing distance, confirming nothing was silently
+  dropped in the generation pass).
 
-Part XII — Tentaculata: **complete — all 4 orders, all 5 families** (sea
-gooseberries, creeping/lobed/ribbon comb jellies) - the other ctenophore
-class in this taxonomy's scheme (comb jellies are split across Nuda and
-Tentaculata rather than one unified class). 31.2% class-wide coverage.
+**Part numbering follows the manifest's own order**, which was verified to
+exactly match `taxonomy.json`'s real class sequence — so Part I is still
+Mammalia, but Part III is now Reptilia rather than Chondrichthyes (which
+becomes Part IV): the *previous* hand-picked ordering didn't follow the
+portal's real taxonomic sequence, the generated one does. Nothing in the
+app depends on a stable Part number (chapters load by `orderFile`, not Part
+index), so this reordering is purely cosmetic. Cephalopoda, previously
+Octopoda-only as a deliberate sparse-branch test case, now includes all 11
+orders like every other class — there's no more curated/uncurated
+distinction.
 
-Part XIII — Asteroidea: **complete — the one order, the one family**
-(Asteriidae - starfish, including the common starfish *Asterias rubens*).
-Only 18.6% class-wide coverage, below this book's usual bar, but included
-anyway for the same reason as Columbidae/Didelphidae earlier: unmistakably
-recognizable, and the 37 enriched species are real Wikipedia-sourced
-content, not filler.
+**Most of the newly added Parts are invisible by default** — this is
+expected, not a bug. Most of the 60 newly-added Animalia classes have very
+low Wikipedia-description enrichment (Insecta 8.3%, Gastropoda/Bivalvia 0%,
+Anthozoa 1.7%, per `docs/Coverage.md`), and `TableOfContents.tsx` already
+filters out any chapter/Part where every family reads `enrichedCount === 0`
+whenever "Show empty families" (below) is off. With default toggles, 102 of
+118 Parts show in Contents; toggling **Show empty families** on reveals all
+118. This is exactly the scenario the toggle was built and validated for
+last round (on Cephalopoda/Octopoda) — full parity at real-world data
+density needs it turned on to actually see everything.
 
-Part XIV — Holothuroidea: **complete — the one order, the one family**
-(Holothuriidae - sea cucumbers). 24% class-wide coverage.
+**Naming collisions no longer need special-casing.** The old
+`nameOverrides` mechanism (hand-typed per naming-collision order, e.g.
+`SQUAMATA_ORDER` → "Squamata") is gone — `buildKingdomParts()` always reads
+the display name from the manifest's own `orderSlug`, which already
+resolves every collision correctly (verified: `SQUAMATA_ORDER` →
+`orderSlug: "squamata"`, `PERCIFORMES_FISH` → `orderSlug: "perciformes"`).
 
-These eight (Amphibia, Actinopterygii, Onychophora, Cubozoa, Scyphozoa,
-Phoronida, Nuda, Tentaculata) plus Asteroidea/Holothuroidea were found by
-surveying *every* remaining Animalia class in `gap-report.json` by
-class-wide enrichment % directly (not sorted by species count, which is how
-the first survey pass missed the smaller ones) — everything else (Insecta,
-Gastropoda, Arachnida, Bivalvia, and dozens more) sits well below this
-book's quality bar, mostly stub descriptions, not "book" material yet.
-
-Part XV — Cephalopoda: **one order (Octopoda), all 19 families** - octopuses.
-Cephalopoda as a whole is only 20.1% class-wide (below the usual bar), so
-just this one order is included, not the other 10 orders/~75 families. This
-Part exists specifically as a **test case for the "Show stub species" and
-"Show empty families" options** (below) - 7 of Octopoda's 19 families have
-zero enriched species, a genuinely "sparse branch" to validate the toggles
-against before deciding whether to widen coverage further using them.
-
-Note: dolphins were already in scope before Chondrichthyes was added —
-Delphinidae is one of the families nested inside the Cetacea chapter.
+**Scale realities, verified live, not assumed:**
+- `COLEOPTERA.json` (beetles) is **79.7MB**, the single largest order file
+  in the portal — opened live in Chrome, loads in a few seconds on
+  localhost, renders real content (order description, 95 families, genus
+  prose, cited species descriptions), and the scroll-collapse reading
+  window still keeps only 2 of 95 families open at a time (~699 mounted
+  genus sections, not the full 41,556-species Carabidae family rendered
+  flat). Several Gastropoda/insect order files are 6-13MB; none of this
+  costs anything until a reader actually opens that specific chapter.
+- Production `npm run build` completes in ~4s and produces a 604MB `dist/`
+  (this was already true before this round at a smaller scale — Vite
+  copies the entire symlinked orders directories since it can't symlink a
+  subset; not a new cost introduced here, just now measured at full size).
+- Dolphins, Cetacea/Alcedinidae's extra SUBFAMILY→TRIBE layer
+  (`FamilySection.tsx`'s `collectGenera()` walks past it generically), and
+  every other structural note from earlier rounds still apply unchanged.
 
 Note: Cetacea and Alcedinidae (kingfishers) are modeled in the source
 taxonomy with an extra SUBFAMILY(→TRIBE) layer between FAMILY and GENUS,
@@ -226,11 +297,13 @@ independently persisted to `localStorage`), read via
   stub list need stubs visible to render anything below the header) -
   "Show empty families" alone mainly changes what's *listed* in Contents.
 
-Validated together against a deliberately "sparse branch" - Part XV
-Cephalopoda (Octopoda), 7 of 19 families with zero enrichment - confirmed
-live in Chrome: Contents lists 12/19 families by default, all 19 with
-"Show empty families" on; the chapter body mounts 11/19 `<details>` by
+Validated together against a deliberately "sparse branch" - Octopoda (then
+the whole of Part XV Cephalopoda), 7 of 19 families with zero enrichment -
+confirmed live in Chrome: Contents lists 12/19 families by default, all 19
+with "Show empty families" on; the chapter body mounts 11/19 `<details>` by
 default with zero stub-list paragraphs, 19/19 with both toggles on.
+Re-confirmed at full-book scale (v16): with default toggles, 102 of 118
+Parts appear in Contents; "Show empty families" reveals all 118.
 
 ## Scaling notes
 

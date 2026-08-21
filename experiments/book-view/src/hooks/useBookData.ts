@@ -59,13 +59,17 @@ export function useBookData(): {
       setInflightChapters((prev) => new Set(prev).add(orderFile));
 
       // Base species-tree data is the portal's own order file, symlinked in
-      // at public/data/portal-orders (never duplicated into this app's own
-      // data) - decorated client-side with a small extensions sidecar
-      // rather than a pre-built, pre-filtered copy. See README.md "Data
-      // architecture".
+      // (never duplicated into this app's own data) - decorated client-side
+      // with a small extensions sidecar rather than a pre-built, pre-filtered
+      // copy. See README.md "Data architecture". Both the orders symlink and
+      // the extensions sidecar are namespaced per kingdom (Plantae added
+      // alongside Animalia without touching either of Animalia's paths).
+      const kingdom = chapterMeta?.kingdom ?? "Animalia";
+      const ordersDir = kingdom === "Plantae" ? "portal-plantae-orders" : "portal-orders";
+      const extensionsDir = kingdom === "Plantae" ? "extensions-plantae" : "extensions";
       Promise.all([
-        fetch(`${base}data/portal-orders/${orderFile}.json`).then((r) => r.json() as Promise<BookNode>),
-        fetch(`${base}data/extensions/${orderFile}.json`).then((r) => r.json() as Promise<ChapterExtensions>),
+        fetch(`${base}data/${ordersDir}/${orderFile}.json`).then((r) => r.json() as Promise<BookNode>),
+        fetch(`${base}data/${extensionsDir}/${orderFile}.json`).then((r) => r.json() as Promise<ChapterExtensions>),
       ])
         .then(([order, extensions]) =>
           decorateChapter(

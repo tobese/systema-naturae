@@ -70,7 +70,7 @@ export function CoverSplash({ onOpen }: { onOpen: () => void }) {
             color: "rgba(230,208,160,0.85)",
           }}
         >
-          REGNUM ANIMALE
+          REGNUM ANIMALE ET VEGETABILE
         </div>
         <h1
           style={{
