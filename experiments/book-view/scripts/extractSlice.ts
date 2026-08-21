@@ -184,6 +184,47 @@ const PARTS: {
     // lion's mane, cannonball, and upside-down jellyfish.
     chapters: allFamilyChapters(["SEMAEOSTOMEAE", "CORONATAE", "RHIZOSTOMEAE"]),
   },
+  {
+    className: "Phoronida",
+    title: "Part X — Phoronida",
+    // Every order, every family - horseshoe worms, 100% class-wide
+    // coverage (all 13 known species) - tiny but complete. Order file is
+    // ORD_PHORONIDA.json in the portal's data (prefix variant again).
+    chapters: allFamilyChapters(["ORD_PHORONIDA"], { ORD_PHORONIDA: "Phoronida" }),
+  },
+  {
+    className: "Nuda",
+    title: "Part XI — Nuda",
+    // Every order, every family - one of the two classes of ctenophores
+    // (comb jellies) in this taxonomy's scheme; Nuda covers the Beroida
+    // (beroid comb jellies), predatory ctenophores with no tentacles.
+    // 33.3% class-wide coverage.
+    chapters: allFamilyChapters(["BEROIDA"]),
+  },
+  {
+    className: "Tentaculata",
+    title: "Part XII — Tentaculata",
+    // Every order, every family - the other ctenophore class: the
+    // tentacle-bearing comb jellies (sea gooseberries, creeping, lobed,
+    // ribbon forms). 31.2% class-wide coverage across 5 small families.
+    chapters: allFamilyChapters(["CYDIPPIDA", "PLATYCTENIDA", "LOBATA", "CESTIDA"]),
+  },
+  {
+    className: "Asteroidea",
+    title: "Part XIII — Asteroidea",
+    // Every order, every family - starfish. Only 18.6% class-wide coverage
+    // (below this book's usual bar) but included anyway for the same
+    // reason as Columbidae/Didelphidae earlier: unmistakably recognizable,
+    // and the single family here (Asteriidae) still carries real
+    // Wikipedia-sourced content for 37 species, not just stubs.
+    chapters: allFamilyChapters(["FORCIPULATIDA"]),
+  },
+  {
+    className: "Holothuroidea",
+    title: "Part XIV — Holothuroidea",
+    // Every order, every family - sea cucumbers, 24% class-wide coverage.
+    chapters: allFamilyChapters(["HOLOTHURIIDA"]),
+  },
 ];
 
 function readOrderFile(orderFile: string): TaxonNode {

@@ -60,14 +60,14 @@ and for Family, renders `family.description` when present (sourced from
 `src/familyIntros.ts` - ~30 hand-written entries from when
 Chondrichthyes/Reptilia were still small hand-curated Parts) or falls back
 to a "Notable: ..." line from `notableMembers` when no prose exists yet. Now
-that every Part is complete (382 families across 9 classes), the
+that every Part is complete (391 families across 14 classes), the
 great majority have no hand-written intro and fall back to `notableMembers`
 - a follow-up LLM enrichment pass targeting `FAMILY`-rank `description` in
 the portal's own data (the same kind of pass that already produced the
 Order/Genus prose) would benefit every consumer, not just this
 app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v12) — 9 Parts, all complete
+## Curated scope (v13) — 14 Parts, all complete
 
 Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
 treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
@@ -143,12 +143,38 @@ Part IX — Scyphozoa: **complete — all 3 orders, all 20 families** (true
 jellyfish - lion's mane, moon, cannonball, upside-down). 46.6% class-wide
 coverage, ~305 species.
 
-These three plus Amphibia/Actinopterygii were found by surveying *every*
-remaining Animalia class in `gap-report.json` by class-wide enrichment %
-(not just the largest-by-species-count ones, which is how the first pass
-missed them) — everything else (Insecta, Gastropoda, Arachnida,
-Cephalopoda, and the rest) sits well below this book's quality bar,
-mostly stub descriptions, not "book" material yet.
+Part X — Phoronida: **complete — the one order, the one family**
+(Phoronidae - horseshoe worms). 100% class-wide coverage (all 13 known
+species) - tiny but fully described. Order file is `ORD_PHORONIDA.json`
+(another prefix-variant name).
+
+Part XI — Nuda: **complete — the one order, the one family** (Beroidae -
+beroid comb jellies, predatory ctenophores with no tentacles). 33.3%
+class-wide coverage.
+
+Part XII — Tentaculata: **complete — all 4 orders, all 5 families** (sea
+gooseberries, creeping/lobed/ribbon comb jellies) - the other ctenophore
+class in this taxonomy's scheme (comb jellies are split across Nuda and
+Tentaculata rather than one unified class). 31.2% class-wide coverage.
+
+Part XIII — Asteroidea: **complete — the one order, the one family**
+(Asteriidae - starfish, including the common starfish *Asterias rubens*).
+Only 18.6% class-wide coverage, below this book's usual bar, but included
+anyway for the same reason as Columbidae/Didelphidae earlier: unmistakably
+recognizable, and the 37 enriched species are real Wikipedia-sourced
+content, not filler.
+
+Part XIV — Holothuroidea: **complete — the one order, the one family**
+(Holothuriidae - sea cucumbers). 24% class-wide coverage.
+
+These eight (Amphibia, Actinopterygii, Onychophora, Cubozoa, Scyphozoa,
+Phoronida, Nuda, Tentaculata) plus Asteroidea/Holothuroidea were found by
+surveying *every* remaining Animalia class in `gap-report.json` by
+class-wide enrichment % directly (not sorted by species count, which is how
+the first survey pass missed the smaller ones) — everything else (Insecta,
+Gastropoda, Arachnida, Cephalopoda, Bivalvia, and dozens more) sits well
+below this book's quality bar, mostly stub descriptions, not "book"
+material yet.
 
 Note: dolphins were already in scope before Chondrichthyes was added —
 Delphinidae is one of the families nested inside the Cetacea chapter.
