@@ -60,14 +60,15 @@ and for Family, renders `family.description` when present (sourced from
 `src/familyIntros.ts` - ~30 hand-written entries from when
 Chondrichthyes/Reptilia were still small hand-curated Parts) or falls back
 to a "Notable: ..." line from `notableMembers` when no prose exists yet. Now
-that every Part is complete (391 families across 14 classes), the
+that every Part is complete or deliberately scoped (410 families across
+15 classes), the
 great majority have no hand-written intro and fall back to `notableMembers`
 - a follow-up LLM enrichment pass targeting `FAMILY`-rank `description` in
 the portal's own data (the same kind of pass that already produced the
 Order/Genus prose) would benefit every consumer, not just this
 app, and is a separate task from anything in `experiments/`.
 
-## Curated scope (v13) — 14 Parts, all complete
+## Curated scope (v14) — 15 Parts (14 complete, 1 partial test case)
 
 Part I — Mammalia: **complete — all 17 orders, all 39 families.** Same
 treatment as Aves below: Mammalia's class-wide Wikipedia coverage (61.3% of
@@ -172,9 +173,16 @@ Phoronida, Nuda, Tentaculata) plus Asteroidea/Holothuroidea were found by
 surveying *every* remaining Animalia class in `gap-report.json` by
 class-wide enrichment % directly (not sorted by species count, which is how
 the first survey pass missed the smaller ones) — everything else (Insecta,
-Gastropoda, Arachnida, Cephalopoda, Bivalvia, and dozens more) sits well
-below this book's quality bar, mostly stub descriptions, not "book"
-material yet.
+Gastropoda, Arachnida, Bivalvia, and dozens more) sits well below this
+book's quality bar, mostly stub descriptions, not "book" material yet.
+
+Part XV — Cephalopoda: **one order (Octopoda), all 19 families** - octopuses.
+Cephalopoda as a whole is only 20.1% class-wide (below the usual bar), so
+just this one order is included, not the other 10 orders/~75 families. This
+Part exists specifically as a **test case for the "Show stub species" and
+"Show empty families" options** (below) - 7 of Octopoda's 19 families have
+zero enriched species, a genuinely "sparse branch" to validate the toggles
+against before deciding whether to widen coverage further using them.
 
 Note: dolphins were already in scope before Chondrichthyes was added —
 Delphinidae is one of the families nested inside the Cetacea chapter.
@@ -187,13 +195,42 @@ this generically.
 
 ## Options
 
-A "Show extinct species" toggle sits in the top-right of the reading shell
-(`Breadcrumb.tsx`), default **off**. State lives in `src/context/BookOptions.tsx`
-(persisted to `localStorage`), read via `src/hooks/useBookOptions.ts`.
-`FamilySection.tsx` filters on the `extinct`/`fossil` flags at species and
-genus granularity — a genus that's entirely extinct (e.g. Felidae's
-*Smilodon*, *Proailurus*) disappears completely rather than showing an empty
-heading, and genus numbering stays contiguous around whatever's hidden.
+A ⚙ button in the top-right of the reading shell (`Breadcrumb.tsx` →
+`src/components/OptionsPanel.tsx`) opens a small dropdown of three toggles,
+all default **off** - mirrors the portal's own `OptionsPanel.tsx` pattern
+(gear button → checkbox-row dropdown), restyled for book-view's paper
+palette. State lives in `src/context/BookOptions.tsx` (each toggle
+independently persisted to `localStorage`), read via
+`src/hooks/useBookOptions.ts`.
+
+- **Show extinct species** — `FamilySection.tsx` filters on the
+  `extinct`/`fossil` flags at species and genus granularity; a genus
+  that's entirely extinct (e.g. Felidae's *Smilodon*, *Proailurus*)
+  disappears completely rather than showing an empty heading, and genus
+  numbering stays contiguous around whatever's hidden.
+- **Show stub species** — reveals the plain "Also in this genus: ..." name
+  list for unenriched species (no real description). Off by default, a
+  genus whose species are *all* stubs disappears from the family entirely
+  rather than showing a bare "Also in this genus" line with nothing above
+  it.
+- **Show empty families** — reveals families with zero enriched species
+  (`chapterStats.enrichedCount === 0`). Off by default, both in the chapter
+  body (`FamilySection.tsx`) *and* in the Contents page
+  (`TableOfContents.tsx`, which now consumes `useBookOptions()` too) - a
+  chapter or Part that has no *non-empty* families left after filtering
+  disappears from Contents entirely, so the reading list only ever shows
+  destinations with something to actually read. Note the two toggles
+  interact in the chapter body: a family with zero enrichment has no
+  content to show at all unless *both* "Show empty families" and "Show
+  stub species" are on together (stats-only families with nothing but a
+  stub list need stubs visible to render anything below the header) -
+  "Show empty families" alone mainly changes what's *listed* in Contents.
+
+Validated together against a deliberately "sparse branch" - Part XV
+Cephalopoda (Octopoda), 7 of 19 families with zero enrichment - confirmed
+live in Chrome: Contents lists 12/19 families by default, all 19 with
+"Show empty families" on; the chapter body mounts 11/19 `<details>` by
+default with zero stub-list paragraphs, 19/19 with both toggles on.
 
 ## Scaling notes
 

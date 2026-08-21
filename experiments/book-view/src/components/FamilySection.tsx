@@ -11,13 +11,16 @@ function GenusSection({
   genus,
   index,
   showExtinct,
+  showStubs,
 }: {
   genus: BookNode;
   index: number;
   showExtinct: boolean;
+  showStubs: boolean;
 }) {
   const detailed = (genus.children ?? []).filter((s) => showExtinct || !isExtinct(s));
-  const stubs = (genus.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
+  const rawStubs = (genus.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
+  const stubs = showStubs ? rawStubs : [];
   const totalCount = detailed.length + stubs.length;
 
   return (
@@ -66,15 +69,22 @@ function collectGenera(node: BookNode): BookNode[] {
 }
 
 export function FamilySection({ family, readingWindow }: { family: BookNode; readingWindow: ReadingWindow }) {
-  const { showExtinct } = useBookOptions();
+  const { showExtinct, showStubs, showEmptyFamilies } = useBookOptions();
+  const stats = family.chapterStats;
+
+  // A family with zero enriched species is "empty" regardless of extinct/
+  // stub filtering below - hidden by default so the book doesn't fill up
+  // with bare headers once a class's coverage gets patchy (missing
+  // chapterStats means we can't confirm emptiness, so don't hide).
+  if (!showEmptyFamilies && stats && stats.enrichedCount === 0) return null;
+
   const genera = collectGenera(family)
     .filter((g) => showExtinct || !isExtinct(g))
     .filter((g) => {
       const detailed = (g.children ?? []).filter((s) => showExtinct || !isExtinct(s));
-      const stubs = (g.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
+      const stubs = (showStubs ? g.speciesList ?? [] : []).filter((s) => showExtinct || !isExtinct(s));
       return detailed.length + stubs.length > 0;
     });
-  const stats = family.chapterStats;
 
   if (genera.length === 0) return null;
 
@@ -142,7 +152,7 @@ export function FamilySection({ family, readingWindow }: { family: BookNode; rea
           ) : null}
 
           {genera.map((genus, i) => (
-            <GenusSection key={genus.id} genus={genus} index={i + 1} showExtinct={showExtinct} />
+            <GenusSection key={genus.id} genus={genus} index={i + 1} showExtinct={showExtinct} showStubs={showStubs} />
           ))}
         </div>
       )}
