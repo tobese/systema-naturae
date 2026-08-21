@@ -225,6 +225,19 @@ const PARTS: {
     // Every order, every family - sea cucumbers, 24% class-wide coverage.
     chapters: allFamilyChapters(["HOLOTHURIIDA"]),
   },
+  {
+    className: "Cephalopoda",
+    title: "Part XV — Cephalopoda",
+    // Deliberate test case for the showStubs/showEmptyFamilies options
+    // (see src/context/BookOptions.tsx) before deciding whether to widen
+    // further - Octopoda alone is a real "sparse branch": 19 families, 7
+    // with zero enrichment, ranging from Octopodidae (75/206, well
+    // covered) down to several single-species fossil-only families.
+    // Cephalopoda as a whole is only 20.1% class-wide - below this book's
+    // usual bar - so only this one order is included for now, not the
+    // other 10 orders / ~75 remaining families.
+    chapters: allFamilyChapters(["OCTOPODA"]),
+  },
 ];
 
 function readOrderFile(orderFile: string): TaxonNode {

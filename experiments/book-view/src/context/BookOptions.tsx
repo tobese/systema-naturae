@@ -1,33 +1,46 @@
 import { useState, type ReactNode } from "react";
 import { BookOptionsContext } from "./bookOptionsContext";
 
-const STORAGE_KEY = "book-view:show-extinct";
-
-function readStored(): boolean {
+function readStored(key: string): boolean {
   try {
-    return localStorage.getItem(STORAGE_KEY) === "true";
+    return localStorage.getItem(key) === "true";
   } catch {
     return false;
   }
 }
 
-export function BookOptionsProvider({ children }: { children: ReactNode }) {
-  const [showExtinct, setShowExtinct] = useState(readStored);
-
-  const toggleShowExtinct = () => {
-    setShowExtinct((prev) => {
+function usePersistedToggle(key: string): [boolean, () => void] {
+  const [value, setValue] = useState(() => readStored(key));
+  const toggle = () => {
+    setValue((prev) => {
       const next = !prev;
       try {
-        localStorage.setItem(STORAGE_KEY, String(next));
+        localStorage.setItem(key, String(next));
       } catch {
         // localStorage unavailable (private browsing, etc.) - option just won't persist
       }
       return next;
     });
   };
+  return [value, toggle];
+}
+
+export function BookOptionsProvider({ children }: { children: ReactNode }) {
+  const [showExtinct, toggleShowExtinct] = usePersistedToggle("book-view:show-extinct");
+  const [showStubs, toggleShowStubs] = usePersistedToggle("book-view:show-stubs");
+  const [showEmptyFamilies, toggleShowEmptyFamilies] = usePersistedToggle("book-view:show-empty-families");
 
   return (
-    <BookOptionsContext.Provider value={{ showExtinct, toggleShowExtinct }}>
+    <BookOptionsContext.Provider
+      value={{
+        showExtinct,
+        toggleShowExtinct,
+        showStubs,
+        toggleShowStubs,
+        showEmptyFamilies,
+        toggleShowEmptyFamilies,
+      }}
+    >
       {children}
     </BookOptionsContext.Provider>
   );
