@@ -1,16 +1,19 @@
-import type { ChapterDoc } from "../types";
+import type { ChapterDoc, CollageEntry } from "../types";
 import { FamilySection } from "./FamilySection";
+import { PartCollage } from "./PartCollage";
 import { useReadingWindow } from "../hooks/useReadingWindow";
 
 export function ChapterPage({
   chapter,
   partTitle,
   partIntro,
+  partCollage,
   showPartIntro,
 }: {
   chapter: ChapterDoc;
   partTitle: string;
   partIntro: string;
+  partCollage: CollageEntry[];
   showPartIntro: boolean;
 }) {
   const familySlugs = chapter.families.map((f) => f.familySlug).filter((s): s is string => Boolean(s));
@@ -21,17 +24,20 @@ export function ChapterPage({
       {showPartIntro && (
         <header style={{ marginBottom: "4rem", textAlign: "center" }}>
           <h1 style={{ fontSize: "2rem", letterSpacing: "0.04em" }}>{partTitle}</h1>
-          <p
-            style={{
-              marginTop: "1.25rem",
-              fontSize: "1.05rem",
-              lineHeight: 1.75,
-              color: "var(--ink-soft)",
-              textAlign: "left",
-            }}
-          >
-            {partIntro}
-          </p>
+          <PartCollage items={partCollage} />
+          {partIntro && (
+            <p
+              style={{
+                marginTop: "1.25rem",
+                fontSize: "1.05rem",
+                lineHeight: 1.75,
+                color: "var(--ink-soft)",
+                textAlign: "left",
+              }}
+            >
+              {partIntro}
+            </p>
+          )}
         </header>
       )}
 

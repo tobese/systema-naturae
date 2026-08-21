@@ -9,11 +9,40 @@ import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { FAMILY_INTROS } from "../src/familyIntros";
+import { COLLAGE_OVERRIDES } from "../src/collageOverrides";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../../..");
-const ORDERS_DIR = join(REPO_ROOT, "portal/public/data/kingdoms/animalia/orders");
-const GAP_REPORT_PATH = join(REPO_ROOT, "portal/data/gap-report.json");
+
+type Kingdom = "Animalia" | "Plantae";
+
+const ORDERS_DIRS: Record<Kingdom, string> = {
+  Animalia: join(REPO_ROOT, "portal/public/data/kingdoms/animalia/orders"),
+  Plantae: join(REPO_ROOT, "portal/public/data/kingdoms/plantae/orders-plantae"),
+};
+const GAP_REPORT_PATHS: Record<Kingdom, string> = {
+  Animalia: join(REPO_ROOT, "portal/data/gap-report.json"),
+  Plantae: join(REPO_ROOT, "portal/data/gap-report-plantae.json"),
+};
+// extensions output is namespaced per kingdom (extensions/ vs
+// extensions-plantae/) so adding Plantae never touches the already-verified
+// Animalia sidecar files.
+const EXTENSIONS_DIRS: Record<Kingdom, string> = {
+  Animalia: "extensions",
+  Plantae: "extensions-plantae",
+};
+const MANIFEST_PATHS: Record<Kingdom, string> = {
+  Animalia: join(REPO_ROOT, "portal/public/data/kingdoms/animalia/order-manifest.json"),
+  Plantae: join(REPO_ROOT, "portal/public/data/kingdoms/plantae/order-manifest.json"),
+};
+// Source of truth for CLASS-level `description` (see
+// scripts/enrichHigherRanksFromWikipedia.ts, which fills these in upstream) -
+// used for each Part's intro paragraph, same file taxonomy.json's ORDER
+// nodes are grafted from into the order files already read via ORDERS_DIRS.
+const TAXONOMY_PATHS: Record<Kingdom, string> = {
+  Animalia: join(REPO_ROOT, "portal/data/taxonomy.json"),
+  Plantae: join(REPO_ROOT, "portal/data/taxonomy-plantae-snippet.json"),
+};
 const WIKI_IMAGES_PATH = join(REPO_ROOT, "shared/data/wiki-images.json");
 const OUT_DIR = join(__dirname, "../public/data");
 const COMMONS_FILEPATH = "https://commons.wikimedia.org/wiki/Special:FilePath/";
@@ -50,202 +79,121 @@ interface WikiImageEntry {
   iucnStatus?: string;
 }
 
-// Part (Class) → Chapter (Order, numbered continuously within the Part) →
-// whitelisted Family slugs, or "ALL" for every family in the order. All
-// four Parts currently use "ALL" - see allFamilyChapters() below - now that
-// every class in this book has good enough class-wide Wikipedia coverage
-// to skip hand-curation. A future Part with genuinely patchy coverage
-// should go back to an explicit familySlugs whitelist instead.
-// Builds a "every family in every listed order" chapter set - used for
-// classes whose Wikipedia coverage is good enough class-wide to skip
-// hand-curation. orderFile normally derives orderName by title-casing
-// (ARTIODACTYLA -> Artiodactyla); pass nameOverrides for the rare order
-// whose file name doesn't match its taxon name 1:1 (e.g. Squamata's order
-// file is SQUAMATA_ORDER.json, a naming collision elsewhere in the
-// taxonomy).
-function allFamilyChapters(
-  orderFiles: string[],
-  nameOverrides: Record<string, string> = {},
-): { orderFile: string; orderName: string; title: string; familySlugs: "ALL" }[] {
-  return orderFiles.map((orderFile, i) => {
-    const orderName = nameOverrides[orderFile] ?? orderFile[0] + orderFile.slice(1).toLowerCase();
-    return { orderFile, orderName, title: `Chapter ${i + 1} — ${orderName}`, familySlugs: "ALL" as const };
+interface ManifestEntry {
+  classSlug: string;
+  orderSlug: string;
+}
+interface KingdomManifest {
+  orders: Record<string, ManifestEntry>;
+}
+
+const manifestCache: Partial<Record<Kingdom, KingdomManifest>> = {};
+function loadManifest(kingdom: Kingdom): KingdomManifest {
+  if (!manifestCache[kingdom]) {
+    manifestCache[kingdom] = JSON.parse(readFileSync(MANIFEST_PATHS[kingdom], "utf-8"));
+  }
+  return manifestCache[kingdom]!;
+}
+
+// No library needed - Part numbers only ever run into the low hundreds.
+function intToRoman(num: number): string {
+  const table: [number, string][] = [
+    [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
+    [100, "C"], [90, "XC"], [50, "L"], [40, "XL"],
+    [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
+  ];
+  let n = num;
+  let result = "";
+  for (const [value, symbol] of table) {
+    while (n >= value) {
+      result += symbol;
+      n -= value;
+    }
+  }
+  return result;
+}
+
+interface PartDef {
+  className: string;
+  kingdom: Kingdom;
+  title: string;
+  description?: string;
+  chapters: { orderFile: string; orderName: string; title: string; familySlugs: "ALL" }[];
+}
+
+// Walks a kingdom's taxonomy source file once, collecting each CLASS node's
+// `description` keyed by lowercased name (matches order-manifest.json's
+// classSlug convention). Most Animalia classes still have none (see
+// scripts/enrichHigherRanksFromWikipedia.ts for the upstream fill pass);
+// Plantae is already fully covered at CLASS rank.
+function loadClassDescriptions(kingdom: Kingdom): Map<string, string> {
+  const root: TaxonNode = JSON.parse(readFileSync(TAXONOMY_PATHS[kingdom], "utf-8"));
+  const map = new Map<string, string>();
+  const walk = (node: TaxonNode) => {
+    if (node.rank === "CLASS" && node.description) {
+      map.set(node.name.toLowerCase(), node.description);
+    }
+    for (const child of node.children ?? []) walk(child);
+  };
+  walk(root);
+  return map;
+}
+
+// Generates one Part per class and one Chapter per order, straight from the
+// portal's own order-manifest.json - every class with real built species
+// data becomes a Part, unconditionally (no enrichment-% curation bar
+// anymore; the showStubs/showEmptyFamilies options, validated last round on
+// Cephalopoda/Octopoda, are what make sparse/patchy classes safe to include
+// wholesale). The manifest's insertion order matches taxonomy.json's real
+// class order (verified directly), so Part numbering reads in the same
+// sequence as the portal's own tree. Also retires the old nameOverrides
+// mechanism entirely - orderSlug already resolves every known naming
+// collision (SQUAMATA_ORDER -> "squamata", PERCIFORMES_FISH ->
+// "perciformes", the various ORD_-prefixed Plantae files, etc.) without
+// needing a lookup table.
+function buildKingdomParts(kingdom: Kingdom): PartDef[] {
+  const manifest = loadManifest(kingdom);
+  const classDescriptions = loadClassDescriptions(kingdom);
+  const classOrder: string[] = [];
+  const orderIdsByClass = new Map<string, string[]>();
+  for (const [orderId, info] of Object.entries(manifest.orders)) {
+    if (!orderIdsByClass.has(info.classSlug)) {
+      orderIdsByClass.set(info.classSlug, []);
+      classOrder.push(info.classSlug);
+    }
+    orderIdsByClass.get(info.classSlug)!.push(orderId);
+  }
+
+  return classOrder.map((classSlug, classIndex) => {
+    const className = classSlug[0].toUpperCase() + classSlug.slice(1);
+    const chapters = orderIdsByClass.get(classSlug)!.map((orderFile, chapterIndex) => {
+      const orderSlug = manifest.orders[orderFile].orderSlug;
+      const orderName = orderSlug[0].toUpperCase() + orderSlug.slice(1);
+      return {
+        orderFile,
+        orderName,
+        title: `Chapter ${chapterIndex + 1} — ${orderName}`,
+        familySlugs: "ALL" as const,
+      };
+    });
+    return {
+      className,
+      kingdom,
+      title: `Part ${intToRoman(classIndex + 1)} — ${className}`,
+      description: classDescriptions.get(classSlug),
+      chapters,
+    };
   });
 }
 
-const PARTS: {
-  className: string;
-  title: string;
-  chapters: { orderFile: string; orderName: string; title: string; familySlugs: string[] | "ALL" }[];
-}[] = [
-  {
-    className: "Mammalia",
-    title: "Part I — Mammalia",
-    // Every order, every family - Mammalia's Wikipedia coverage (61.3% of
-    // all species class-wide, per gap-report.json - even better than
-    // Aves') is good enough to skip hand-curation entirely, same reasoning
-    // as the other Parts below.
-    chapters: allFamilyChapters([
-      "ARTIODACTYLA", "CARNIVORA", "CETACEA", "CHIROPTERA", "CINGULATA",
-      "DASYUROMORPHIA", "DIDELPHIMORPHIA", "DIPROTODONTIA", "EULIPOTYPHLA",
-      "LAGOMORPHA", "MONOTREMATA", "PERISSODACTYLA", "PHOLIDOTA", "PILOSA",
-      "PRIMATES", "PROBOSCIDEA", "RODENTIA",
-    ]),
-  },
-  {
-    className: "Aves",
-    title: "Part II — Aves",
-    // Every order, every family - Aves' Wikipedia coverage (45.6% of all
-    // species class-wide, per gap-report.json) is good enough to skip
-    // hand-curation entirely.
-    chapters: allFamilyChapters([
-      "ACCIPITRIFORMES", "ANSERIFORMES", "APODIFORMES", "APTERYGIFORMES",
-      "BUCEROTIFORMES", "CAPRIMULGIFORMES", "CARIAMIFORMES", "CASUARIIFORMES",
-      "CHARADRIIFORMES", "COLIIFORMES", "COLUMBIFORMES", "CORACIIFORMES",
-      "CUCULIFORMES", "EURYPYGIFORMES", "FALCONIFORMES", "GALLIFORMES",
-      "GAVIIFORMES", "GRUIFORMES", "LEPTOSOMIFORMES", "MUSOPHAGIFORMES",
-      "PASSERIFORMES", "PELECANIFORMES", "PHAETHONTIFORMES",
-      "PHOENICOPTERIFORMES", "PICIFORMES", "PODICIPEDIFORMES",
-      "PROCELLARIIFORMES", "PSITTACIFORMES", "PTEROCLIFORMES", "RHEIFORMES",
-      "SPHENISCIFORMES", "STRIGIFORMES", "STRUTHIONIFORMES", "SULIFORMES",
-      "TINAMIFORMES", "TROGONIFORMES", "UPUPIFORMES",
-    ]),
-  },
-  {
-    className: "Chondrichthyes",
-    title: "Part III — Chondrichthyes",
-    // Every order, every family too - only 7 families total, and even the
-    // least-enriched (Orectolobiformes/Myliobatiformes) are still real
-    // Wikipedia-sourced content, not empty stubs.
-    chapters: allFamilyChapters([
-      "CARCHARHINIFORMES", "LAMNIFORMES", "MYLIOBATIFORMES", "ORECTOLOBIFORMES",
-    ]),
-  },
-  {
-    className: "Reptilia",
-    title: "Part IV — Reptilia",
-    // Every order, every family - Reptilia's class-wide coverage (71.3% of
-    // ~8,100 species) is the best of any Part in this book.
-    chapters: allFamilyChapters(
-      ["CROCODYLIA", "RHYNCHOCEPHALIA", "SQUAMATA_ORDER", "TESTUDINES"],
-      { SQUAMATA_ORDER: "Squamata" },
-    ),
-  },
-  {
-    className: "Amphibia",
-    title: "Part V — Amphibia",
-    // Every order, every family - 62.3% class-wide coverage (~3,700
-    // species), on par with Mammalia/Reptilia despite being a much smaller
-    // class overall (just 3 orders).
-    chapters: allFamilyChapters(["ANURA", "GYMNOPHIONA", "URODELA"]),
-  },
-  {
-    className: "Actinopterygii",
-    title: "Part VI — Actinopterygii",
-    // Every order, every family - 45.1% class-wide coverage, on par with
-    // Aves. Perciformes' order file is PERCIFORMES_FISH.json in the
-    // portal's data (another naming collision, same situation as
-    // Squamata/Reptilia above).
-    chapters: allFamilyChapters(
-      [
-        "ANGUILLIFORMES", "CHARACIFORMES", "CICHLIFORMES", "CLUPEIFORMES",
-        "CYPRINIFORMES", "CYPRINODONTIFORMES", "ESOCIFORMES", "GADIFORMES",
-        "PERCIFORMES_FISH", "PLEURONECTIFORMES", "SALMONIFORMES",
-        "SCOMBRIFORMES", "SCORPAENIFORMES", "SYNGNATHIFORMES",
-      ],
-      { PERCIFORMES_FISH: "Perciformes" },
-    ),
-  },
-  {
-    className: "Onychophora",
-    title: "Part VII — Onychophora",
-    // Every order, every family - velvet worms, 91.4% class-wide coverage
-    // (~230 species) - the best in the whole book, just very small (one
-    // order, two families). Order file is ORD_EUONYCHOPHORA.json in the
-    // portal's data (a prefix-style naming variant this time, not a suffix
-    // like Squamata/Perciformes above).
-    chapters: allFamilyChapters(
-      ["ORD_EUONYCHOPHORA"],
-      { ORD_EUONYCHOPHORA: "Euonychophora" },
-    ),
-  },
-  {
-    className: "Cubozoa",
-    title: "Part VIII — Cubozoa",
-    // Every order, every family - box jellyfish, 64.3% class-wide coverage
-    // (~56 species, 8 families) - includes the notorious Irukandji.
-    chapters: allFamilyChapters(["CARYBDEIDA", "CHIRODROPIDA"]),
-  },
-  {
-    className: "Scyphozoa",
-    title: "Part IX — Scyphozoa",
-    // Every order, every family - true jellyfish, 46.6% class-wide
-    // coverage (~305 species, 20 families across 3 orders) - includes the
-    // lion's mane, cannonball, and upside-down jellyfish.
-    chapters: allFamilyChapters(["SEMAEOSTOMEAE", "CORONATAE", "RHIZOSTOMEAE"]),
-  },
-  {
-    className: "Phoronida",
-    title: "Part X — Phoronida",
-    // Every order, every family - horseshoe worms, 100% class-wide
-    // coverage (all 13 known species) - tiny but complete. Order file is
-    // ORD_PHORONIDA.json in the portal's data (prefix variant again).
-    chapters: allFamilyChapters(["ORD_PHORONIDA"], { ORD_PHORONIDA: "Phoronida" }),
-  },
-  {
-    className: "Nuda",
-    title: "Part XI — Nuda",
-    // Every order, every family - one of the two classes of ctenophores
-    // (comb jellies) in this taxonomy's scheme; Nuda covers the Beroida
-    // (beroid comb jellies), predatory ctenophores with no tentacles.
-    // 33.3% class-wide coverage.
-    chapters: allFamilyChapters(["BEROIDA"]),
-  },
-  {
-    className: "Tentaculata",
-    title: "Part XII — Tentaculata",
-    // Every order, every family - the other ctenophore class: the
-    // tentacle-bearing comb jellies (sea gooseberries, creeping, lobed,
-    // ribbon forms). 31.2% class-wide coverage across 5 small families.
-    chapters: allFamilyChapters(["CYDIPPIDA", "PLATYCTENIDA", "LOBATA", "CESTIDA"]),
-  },
-  {
-    className: "Asteroidea",
-    title: "Part XIII — Asteroidea",
-    // Every order, every family - starfish. Only 18.6% class-wide coverage
-    // (below this book's usual bar) but included anyway for the same
-    // reason as Columbidae/Didelphidae earlier: unmistakably recognizable,
-    // and the single family here (Asteriidae) still carries real
-    // Wikipedia-sourced content for 37 species, not just stubs.
-    chapters: allFamilyChapters(["FORCIPULATIDA"]),
-  },
-  {
-    className: "Holothuroidea",
-    title: "Part XIV — Holothuroidea",
-    // Every order, every family - sea cucumbers, 24% class-wide coverage.
-    chapters: allFamilyChapters(["HOLOTHURIIDA"]),
-  },
-  {
-    className: "Cephalopoda",
-    title: "Part XV — Cephalopoda",
-    // Deliberate test case for the showStubs/showEmptyFamilies options
-    // (see src/context/BookOptions.tsx) before deciding whether to widen
-    // further - Octopoda alone is a real "sparse branch": 19 families, 7
-    // with zero enrichment, ranging from Octopodidae (75/206, well
-    // covered) down to several single-species fossil-only families.
-    // Cephalopoda as a whole is only 20.1% class-wide - below this book's
-    // usual bar - so only this one order is included for now, not the
-    // other 10 orders / ~75 remaining families.
-    chapters: allFamilyChapters(["OCTOPODA"]),
-  },
-];
+const PARTS: PartDef[] = [...buildKingdomParts("Animalia"), ...buildKingdomParts("Plantae")];
 
-function readOrderFile(orderFile: string): TaxonNode {
-  return JSON.parse(readFileSync(join(ORDERS_DIR, `${orderFile}.json`), "utf-8"));
+function readOrderFile(kingdom: Kingdom, orderFile: string): TaxonNode {
+  return JSON.parse(readFileSync(join(ORDERS_DIRS[kingdom], `${orderFile}.json`), "utf-8"));
 }
 
-function loadGapStats(): Map<string, GapRow> {
-  const rows: GapRow[] = JSON.parse(readFileSync(GAP_REPORT_PATH, "utf-8"));
+function loadGapStats(kingdom: Kingdom): Map<string, GapRow> {
+  const rows: GapRow[] = JSON.parse(readFileSync(GAP_REPORT_PATHS[kingdom], "utf-8"));
   const map = new Map<string, GapRow>();
   for (const row of rows) map.set(row.appSlug, row);
   return map;
@@ -281,21 +229,119 @@ function collectSpeciesNames(node: TaxonNode, out: string[]): void {
   for (const s of node.speciesList ?? []) collectSpeciesNames(s, out);
 }
 
+interface CollageCandidate {
+  name: string;
+  commonName?: string;
+  imageUrl: string;
+}
+
+// Collects species that are genuinely "collage-worthy" - a real (non-stub)
+// description *and* a portrait image - from anywhere under a family.
+// speciesList (compressed stubs) is skipped: a collage entry with a photo
+// but no real description behind it isn't representative of this book's
+// content.
+function collectCollageCandidates(
+  node: TaxonNode,
+  wikiImages: Record<string, WikiImageEntry>,
+  out: CollageCandidate[],
+): void {
+  if (node.rank === "SPECIES") {
+    const entry = wikiImages[node.name];
+    if (entry?.image && (node.description?.length ?? 0) > 20) {
+      out.push({ name: node.name, commonName: node.commonName, imageUrl: commonsThumb(entry.image) });
+    }
+    return;
+  }
+  for (const child of node.children ?? []) collectCollageCandidates(child, wikiImages, out);
+}
+
+// Deterministic evenly-spaced sample (no randomness, so extract-data output
+// stays reproducible) - avoids every collage looking like "whatever family
+// happens to come first alphabetically."
+function sampleEvenly<T>(items: T[], count: number): T[] {
+  if (items.length <= count) return items;
+  const step = items.length / count;
+  const out: T[] = [];
+  for (let i = 0; i < count; i++) out.push(items[Math.floor(i * step)]);
+  return out;
+}
+
+const COLLAGE_SIZE = 81; // a 9x9 plate
+const COLLAGE_CENTER_INDEX = 40; // row-major middle of a 9x9 grid
+
+// Builds a Part's collage. Flagship classes with a src/collageOverrides.ts
+// entry get specific species pinned at specific slots (center + pinned list)
+// - everything else in the grid, and every class without an override, is
+// filled by the same deterministic even-sampling as before, just at 81
+// instead of 8. Pinning only actually lands `center` in the visual middle
+// when the class has enough real candidates to fill every slot before it
+// (true for any class this large, e.g. Mammalia's thousands of species) -
+// documented rather than defended against, since a flagship override on a
+// too-small class isn't a real scenario.
+function buildCollage(className: string, candidates: CollageCandidate[]): CollageCandidate[] {
+  const override = COLLAGE_OVERRIDES[className];
+  if (!override) return sampleEvenly(candidates, COLLAGE_SIZE);
+
+  const byName = new Map(candidates.map((c) => [c.name, c]));
+  const grid: (CollageCandidate | undefined)[] = new Array(COLLAGE_SIZE).fill(undefined);
+  const used = new Set<string>();
+
+  if (override.center) {
+    const c = byName.get(override.center);
+    if (c) {
+      grid[COLLAGE_CENTER_INDEX] = c;
+      used.add(c.name);
+    }
+  }
+
+  let slot = 0;
+  for (const name of override.pinned ?? []) {
+    const c = byName.get(name);
+    if (!c || used.has(c.name)) continue;
+    while (grid[slot] !== undefined) slot++;
+    grid[slot] = c;
+    used.add(c.name);
+  }
+
+  const remaining = candidates.filter((c) => !used.has(c.name));
+  const emptySlots = grid.filter((c) => c === undefined).length;
+  const filler = sampleEvenly(remaining, emptySlots);
+  let fillerIndex = 0;
+  for (let i = 0; i < grid.length && fillerIndex < filler.length; i++) {
+    if (grid[i] === undefined) grid[i] = filler[fillerIndex++];
+  }
+
+  return grid.filter((c): c is CollageCandidate => c !== undefined);
+}
+
 function main() {
-  const gapStats = loadGapStats();
+  const gapStatsByKingdom: Record<Kingdom, Map<string, GapRow>> = {
+    Animalia: loadGapStats("Animalia"),
+    Plantae: loadGapStats("Plantae"),
+  };
   const wikiImages = loadWikiImages();
   mkdirSync(join(OUT_DIR, "extensions"), { recursive: true });
+  mkdirSync(join(OUT_DIR, "extensions-plantae"), { recursive: true });
 
   const skeleton = {
-    kingdom: "Animalia",
     parts: [] as unknown[],
   };
 
   for (const part of PARTS) {
-    const partSkeleton = { title: part.title, className: part.className, chapters: [] as unknown[] };
+    const gapStats = gapStatsByKingdom[part.kingdom];
+    const extensionsDir = EXTENSIONS_DIRS[part.kingdom];
+    const partSkeleton = {
+      title: part.title,
+      className: part.className,
+      kingdom: part.kingdom,
+      description: part.description,
+      collage: [] as CollageCandidate[],
+      chapters: [] as unknown[],
+    };
+    const collageCandidates: CollageCandidate[] = [];
 
     for (const chapter of part.chapters) {
-      const order = readOrderFile(chapter.orderFile);
+      const order = readOrderFile(part.kingdom, chapter.orderFile);
       const families = findFamilies(order, chapter.familySlugs);
 
       const chapterStats: Record<string, { enrichedCount: number; speciesCount: number }> = {};
@@ -309,6 +355,8 @@ function main() {
         if (stats) chapterStats[slug] = { enrichedCount: stats.enrichedCount, speciesCount: stats.speciesCount };
         const intro = FAMILY_INTROS[slug];
         if (intro) familyDescriptions[slug] = intro;
+
+        collectCollageCandidates(family, wikiImages, collageCandidates);
 
         const speciesNames: string[] = [];
         collectSpeciesNames(family, speciesNames);
@@ -333,7 +381,7 @@ function main() {
         familyDescriptions,
       };
       writeFileSync(
-        join(OUT_DIR, "extensions", `${chapter.orderFile}.json`),
+        join(OUT_DIR, extensionsDir, `${chapter.orderFile}.json`),
         JSON.stringify(extensions, null, 2) + "\n",
       );
 
@@ -341,6 +389,7 @@ function main() {
         title: chapter.title,
         orderFile: chapter.orderFile,
         orderName: chapter.orderName,
+        kingdom: part.kingdom,
         families: families.map((f) => ({
           name: f.name,
           commonName: f.commonName,
@@ -352,10 +401,12 @@ function main() {
 
       console.log(
         `  ${chapter.title}: ${families.map((f) => f.familySlug).join(", ")} -> ${
-          join("public/data/extensions", chapter.orderFile + ".json")
+          join(`public/data/${extensionsDir}`, chapter.orderFile + ".json")
         }`,
       );
     }
+
+    partSkeleton.collage = buildCollage(part.className, collageCandidates);
 
     skeleton.parts.push(partSkeleton);
   }

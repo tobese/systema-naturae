@@ -55,17 +55,33 @@ export interface SkeletonChapter {
   title: string;
   orderFile: string;
   orderName: string;
+  kingdom: "Animalia" | "Plantae";
   families: SkeletonFamily[];
+}
+
+export interface CollageEntry {
+  name: string;
+  commonName?: string;
+  imageUrl: string;
 }
 
 export interface SkeletonPart {
   title: string;
   className: string;
+  kingdom: "Animalia" | "Plantae";
+  // Class-level intro paragraph, sourced from taxonomy.json's CLASS
+  // description (see scripts/enrichHigherRanksFromWikipedia.ts) - absent for
+  // classes the enrichment pass couldn't find a Wikipedia article for.
+  description?: string;
+  // A capped, evenly-sampled set of image-bearing, real-description species
+  // from across the whole class - see extractSlice.ts's collectCollageCandidates.
+  collage?: CollageEntry[];
   chapters: SkeletonChapter[];
 }
 
+// Kingdom membership lives per-part/per-chapter (see above) rather than as a
+// single top-level field, now that the book spans more than one kingdom.
 export interface BookSkeleton {
-  kingdom: string;
   parts: SkeletonPart[];
 }
 

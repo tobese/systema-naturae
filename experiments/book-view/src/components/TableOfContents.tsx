@@ -6,6 +6,17 @@ const CLASS_ACCENT: Record<string, string> = {
   Aves: "var(--aves)",
   Chondrichthyes: "var(--chondrichthyes)",
   Reptilia: "var(--reptilia)",
+  // Plantae classes all share one accent (--plantae) rather than inventing a
+  // distinct hue per class the way Animalia's core four have - only Aves
+  // etc. also get a dedicated color; the rest of Animalia's Parts already
+  // fall back to var(--ink) via the `?? "var(--ink)"` below, same pattern.
+  Pinopsida: "var(--plantae)",
+  Cycadopsida: "var(--plantae)",
+  Ginkgoopsida: "var(--plantae)",
+  Gnetopsida: "var(--plantae)",
+  Lycopodiopsida: "var(--plantae)",
+  Polypodiopsida: "var(--plantae)",
+  Takakiopsida: "var(--plantae)",
 };
 
 // A family with zero enriched species reads as "empty" here the same way
@@ -24,34 +35,55 @@ export function TableOfContents({
 }) {
   const { showEmptyFamilies } = useBookOptions();
 
+  // Pure derivation (no mutable variable reassigned across iterations,
+  // per the react-hooks/immutability lint rule) - each visible part is
+  // paired with whether it's the first part of a new kingdom, compared
+  // against the previous *visible* part (array index, not skeleton index)
+  // so a fully-filtered-out part never leaves a duplicate or missing
+  // "Kingdom" header.
+  const visibleParts = skeleton.parts
+    .map((part) => ({
+      part,
+      chapters: part.chapters
+        .map((chapter) => ({
+          ...chapter,
+          families: showEmptyFamilies ? chapter.families : chapter.families.filter((f) => !isEmpty(f)),
+        }))
+        .filter((chapter) => chapter.families.length > 0),
+    }))
+    .filter((entry) => entry.chapters.length > 0)
+    .map((entry, i, arr) => ({
+      ...entry,
+      showKingdomHeader: i === 0 || arr[i - 1].part.kingdom !== entry.part.kingdom,
+      isFirstKingdom: i === 0,
+    }));
+
   return (
     <div style={{ maxWidth: 680, margin: "0 auto", padding: "5rem 1.5rem 6rem" }}>
-      <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-        <p
-          style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            color: "var(--ink-faint)",
-            letterSpacing: "0.05em",
-          }}
-        >
-          Kingdom
-        </p>
-        <h1 style={{ fontSize: "2.6rem", letterSpacing: "0.06em" }}>{skeleton.kingdom}</h1>
-      </div>
-
-      {skeleton.parts.map((part) => {
-        const chapters = part.chapters
-          .map((chapter) => ({
-            ...chapter,
-            families: showEmptyFamilies ? chapter.families : chapter.families.filter((f) => !isEmpty(f)),
-          }))
-          .filter((chapter) => chapter.families.length > 0);
-
-        if (chapters.length === 0) return null;
-
+      {visibleParts.map(({ part, chapters, showKingdomHeader, isFirstKingdom }) => {
         return (
-          <section key={part.title} style={{ marginBottom: "3.5rem" }}>
+          <div key={part.title}>
+            {showKingdomHeader && (
+              <div
+                style={{
+                  textAlign: "center",
+                  margin: isFirstKingdom ? "0 0 4rem" : "6rem 0 4rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    fontStyle: "italic",
+                    color: "var(--ink-faint)",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Kingdom
+                </p>
+                <h1 style={{ fontSize: "2.6rem", letterSpacing: "0.06em" }}>{part.kingdom}</h1>
+              </div>
+            )}
+            <section style={{ marginBottom: "3.5rem" }}>
             <h2
               style={{
                 fontSize: "1.6rem",
@@ -95,7 +127,8 @@ export function TableOfContents({
                 </div>
               </button>
             ))}
-          </section>
+            </section>
+          </div>
         );
       })}
     </div>

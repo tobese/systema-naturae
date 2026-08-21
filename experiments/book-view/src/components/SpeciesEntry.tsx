@@ -79,7 +79,13 @@ export function SpeciesEntry({ species }: { species: BookNode }) {
           style={{
             width: 96,
             height: 96,
-            objectFit: "cover",
+            // "contain" (not "cover") so elongated animals - sharks, snakes,
+            // eels - never lose their head/tail to a center-crop; the
+            // tradeoff is letterboxing on non-square photos, which the
+            // paper-colored background below makes read as a deliberate
+            // plate border rather than an artifact.
+            objectFit: "contain",
+            background: "var(--paper-shadow)",
             borderRadius: "3px",
             border: "1px solid var(--paper-shadow)",
             boxShadow: "0 2px 6px rgba(42,33,24,0.15)",
