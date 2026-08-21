@@ -106,8 +106,8 @@ interface AppProps {
 export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [layout, setLayout] = useState<"radial" | "vertical">("radial");
   const [options, setOptions] = useState<PortalOptions>({
-    showExtinct: true,
-    showFossil: true,
+    showExtinct: false,
+    showFossil: false,
     collapseLarge: true,
     collapseThreshold: 30,
     nodeScale: 1.0,
