@@ -948,15 +948,67 @@
           "sourcedFrom": "none"
         },
         {
-          "id": "COLUMBA_DOMESTICA",
-          "name": "Columba domestica",
+          "id": "DOMESTIC_PIGEON",
+          "name": "Columba livia domestica",
           "rank": "SPECIES",
-          "commonName": "",
+          "commonName": "Domestic Pigeon",
           "lineage": "Columba",
-          "continents": [],
+          "continents": [
+            "North America",
+            "South America",
+            "Europe",
+            "Asia",
+            "Africa",
+            "Oceania"
+          ],
           "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none"
+          "description": "The domestic pigeon (Columba livia domestica) is a subspecies of rock dove selectively bred by humans for over 5,000 years for racing, exhibition, utility, and message-carrying. All domestic breeds descend from the wild rock dove.",
+          "sourcedFrom": "wikipedia",
+          "children": [
+            {
+              "id": "pigeon-breed-group-fancy",
+              "name": "Fancy",
+              "rank": "BREED_GROUP",
+              "lineage": "Columba",
+              "children": [
+                { "id": "fantail-pigeon", "name": "Fantail", "rank": "BREED", "origin": "India", "lineage": "Columba" },
+                { "id": "jacobin-pigeon", "name": "Jacobin", "rank": "BREED", "origin": "India", "lineage": "Columba" },
+                { "id": "pouter-pigeon", "name": "Pouter", "rank": "BREED", "origin": "England", "lineage": "Columba" },
+                { "id": "frillback-pigeon", "name": "Frillback", "rank": "BREED", "origin": "Asia Minor", "lineage": "Columba" }
+              ]
+            },
+            {
+              "id": "pigeon-breed-group-performance",
+              "name": "Performance",
+              "rank": "BREED_GROUP",
+              "lineage": "Columba",
+              "children": [
+                { "id": "birmingham-roller", "name": "Birmingham Roller", "rank": "BREED", "origin": "England", "lineage": "Columba" },
+                { "id": "tumbler-pigeon", "name": "Tumbler", "rank": "BREED", "origin": "England", "lineage": "Columba" },
+                { "id": "tippler-pigeon", "name": "Tippler", "rank": "BREED", "origin": "England", "lineage": "Columba" }
+              ]
+            },
+            {
+              "id": "pigeon-breed-group-utility",
+              "name": "Utility",
+              "rank": "BREED_GROUP",
+              "lineage": "Columba",
+              "children": [
+                { "id": "king-pigeon", "name": "King", "rank": "BREED", "origin": "United States", "lineage": "Columba" },
+                { "id": "mondain-pigeon", "name": "Mondain", "rank": "BREED", "origin": "France", "lineage": "Columba" },
+                { "id": "carneau-pigeon", "name": "Carneau", "rank": "BREED", "origin": "Belgium", "lineage": "Columba" }
+              ]
+            },
+            {
+              "id": "pigeon-breed-group-homing",
+              "name": "Homing",
+              "rank": "BREED_GROUP",
+              "lineage": "Columba",
+              "children": [
+                { "id": "racing-homer", "name": "Racing Homer", "rank": "BREED", "origin": "Belgium", "lineage": "Columba" }
+              ]
+            }
+          ]
         },
         {
           "id": "COLUMBA_EIMEENSIS",

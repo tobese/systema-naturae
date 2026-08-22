@@ -44,7 +44,11 @@ print(json.dumps(rows))
 
 async function fetchBatch(titles: string[]): Promise<Map<string, BatchResult>> {
   const local = lookupLocalBatch(titles);
-  const remote = titles.filter(t => !local.has(t));
+  // A local row with a null/empty extract (e.g. an unresolved redirect) is
+  // not usable data - only skip the live lookup for titles that actually
+  // have real content locally, otherwise they get silently "claimed" by the
+  // local map and never get a chance at the live API fallback.
+  const remote = titles.filter(t => !local.get(t)?.extract);
 
   if (remote.length === 0) return local;
 
@@ -78,7 +82,7 @@ async function fetchBatch(titles: string[]): Promise<Map<string, BatchResult>> {
     const lookup = new Map<string, number>();
     for (const [id, page] of Object.entries(pages)) {
       const p = page as any;
-      if (p.missing) continue;
+      if (p.missing !== undefined) continue;
       lookup.set(p.title, Number(id));
     }
 
@@ -96,7 +100,11 @@ async function fetchBatch(titles: string[]): Promise<Map<string, BatchResult>> {
         description: p.description?.length < 80 ? p.description : undefined,
       });
     }
-    for (const [k, v] of local) result.set(k, v);
+    // Only merge in local entries that actually have usable content - local
+    // still contains every title that had *any* DB row (including null-
+    // extract ones, e.g. unresolved redirects), and blindly copying those in
+    // would clobber the real extract we just fetched live for that same title.
+    for (const [k, v] of local) if (v.extract) result.set(k, v);
     return result;
   } catch {
     return local;
