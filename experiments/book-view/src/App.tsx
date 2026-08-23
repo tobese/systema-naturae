@@ -2,21 +2,29 @@ import { useEffect, useState } from "react";
 import { CoverSplash } from "./components/CoverSplash";
 import { TableOfContents } from "./components/TableOfContents";
 import { ChapterPage } from "./components/ChapterPage";
+import { KingdomIntroPage } from "./components/KingdomIntroPage";
 import { Breadcrumb } from "./components/Breadcrumb";
 import { useBookData } from "./hooks/useBookData";
 import { PART_INTROS } from "./curatedParts";
+import type { Kingdom } from "./types";
 
-type Phase = "cover" | "toc" | "chapter";
+type Phase = "cover" | "toc" | "kingdomIntro" | "chapter";
 
 export default function App() {
   const [phase, setPhase] = useState<Phase>("cover");
   const [activeOrderFile, setActiveOrderFile] = useState<string | null>(null);
+  const [activeKingdom, setActiveKingdom] = useState<Kingdom | null>(null);
   const { skeleton, loading, loadChapter, isChapterLoading, getChapter } = useBookData();
 
   const handleSelectChapter = (orderFile: string) => {
     setActiveOrderFile(orderFile);
     setPhase("chapter");
     loadChapter(orderFile);
+  };
+
+  const handleSelectKingdom = (kingdom: Kingdom) => {
+    setActiveKingdom(kingdom);
+    setPhase("kingdomIntro");
   };
 
   useEffect(() => {
@@ -45,12 +53,18 @@ export default function App() {
   return (
     <div>
       <Breadcrumb
-        partTitle={phase === "chapter" ? activePart?.title : undefined}
+        partTitle={
+          phase === "chapter" ? activePart?.title : phase === "kingdomIntro" ? activeKingdom ?? undefined : undefined
+        }
         chapterTitle={phase === "chapter" ? activeChapterMeta?.title : undefined}
         onHome={() => setPhase("toc")}
       />
 
-      {phase === "toc" && <TableOfContents skeleton={skeleton} onSelectChapter={handleSelectChapter} />}
+      {phase === "toc" && (
+        <TableOfContents skeleton={skeleton} onSelectChapter={handleSelectChapter} onSelectKingdom={handleSelectKingdom} />
+      )}
+
+      {phase === "kingdomIntro" && activeKingdom && <KingdomIntroPage kingdom={activeKingdom} />}
 
       {phase === "chapter" && activeOrderFile && (
         <>

@@ -10,6 +10,14 @@ export interface BookNode {
   description?: string;
   distribution?: string;
   namedAfter?: string;
+  // Populated on nearly every species (genus/group label, used for tree
+  // coloring elsewhere in the portal) - book-view only surfaces it for
+  // HYBRID nodes, where it's parentage in "A ♂ × B ♀" form instead (see
+  // SpeciesEntry.tsx's isHybrid check; e.g. Equidae's Hybrids).
+  lineage?: string;
+  // BREED nodes only - country/region of origin (see SpeciesEntry.tsx's
+  // breedGroups rendering).
+  origin?: string;
   continents?: string[];
   subspeciesCount?: number;
   extinct?: boolean;
@@ -51,11 +59,13 @@ export interface SkeletonFamily {
   chapterStats?: { enrichedCount: number; speciesCount: number };
 }
 
+export type Kingdom = "Animalia" | "Plantae" | "Fungi" | "Chromista" | "Protozoa" | "Archaea";
+
 export interface SkeletonChapter {
   title: string;
   orderFile: string;
   orderName: string;
-  kingdom: "Animalia" | "Plantae";
+  kingdom: Kingdom;
   families: SkeletonFamily[];
 }
 
@@ -68,7 +78,7 @@ export interface CollageEntry {
 export interface SkeletonPart {
   title: string;
   className: string;
-  kingdom: "Animalia" | "Plantae";
+  kingdom: Kingdom;
   // Class-level intro paragraph, sourced from taxonomy.json's CLASS
   // description (see scripts/enrichHigherRanksFromWikipedia.ts) - absent for
   // classes the enrichment pass couldn't find a Wikipedia article for.

@@ -1,6 +1,6 @@
 import type { CollageEntry } from "../types";
 
-// A 9x9 plate of representative species for a Part's intro, shown once
+// A 7x7 plate of representative species for a Part's intro, shown once
 // above "Chapter 1" alongside the Class-level description (see
 // ChapterPage.tsx's showPartIntro block). Candidates are pre-selected in
 // extractSlice.ts (collectCollageCandidates + buildCollage) - only species
@@ -17,9 +17,9 @@ export function PartCollage({ items }: { items: CollageEntry[] }) {
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(9, 1fr)",
-        gap: "0.35rem",
-        maxWidth: 620,
+        gridTemplateColumns: "repeat(7, 1fr)",
+        gap: "0.45rem",
+        maxWidth: 560,
         margin: "1.75rem auto 2.25rem",
       }}
     >
@@ -44,8 +44,8 @@ export function PartCollage({ items }: { items: CollageEntry[] }) {
           />
           <figcaption
             style={{
-              marginTop: "0.2rem",
-              fontSize: "0.55rem",
+              marginTop: "0.25rem",
+              fontSize: "0.65rem",
               fontStyle: "italic",
               color: "var(--ink-faint)",
               lineHeight: 1.2,
