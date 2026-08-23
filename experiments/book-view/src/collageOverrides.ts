@@ -1,5 +1,5 @@
 // Hand-curated collage placements for flagship Parts, keyed by className.
-// `center` is pinned to the exact middle of the 9x9 grid (index 40 of 81,
+// `center` is pinned to the exact middle of the 7x7 grid (index 24 of 49,
 // row-major); `pinned` fills other slots before the remaining grid is
 // auto-filled from real, image-bearing enriched species (see
 // extractSlice.ts's buildCollage()). All picks are verifiable real-world
