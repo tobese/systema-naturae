@@ -1,7 +1,8 @@
-import type { BookSkeleton, Kingdom, SkeletonFamily } from "../types";
+import type { BookSkeleton, Kingdom } from "../types";
 import { useBookOptions } from "../hooks/useBookOptions";
 import { ForeEdgeIndex } from "./ForeEdgeIndex";
 import { KINGDOM_INTROS } from "../kingdomIntros";
+import { isEmptyFamily } from "../lib/chapterVisibility";
 
 const CLASS_ACCENT: Record<string, string> = {
   Mammalia: "var(--mammalia)",
@@ -36,13 +37,6 @@ const KINGDOM_ACCENT: Record<string, string> = {
   Archaea: "var(--archaea)",
 };
 
-// A family with zero enriched species reads as "empty" here the same way
-// FamilySection.tsx treats it - missing chapterStats means we can't confirm
-// emptiness, so it stays visible rather than risk hiding real content.
-function isEmpty(family: SkeletonFamily): boolean {
-  return family.chapterStats !== undefined && family.chapterStats.enrichedCount === 0;
-}
-
 export function TableOfContents({
   skeleton,
   onSelectChapter,
@@ -65,7 +59,7 @@ export function TableOfContents({
       chapters: part.chapters
         .map((chapter) => ({
           ...chapter,
-          families: showEmptyFamilies ? chapter.families : chapter.families.filter((f) => !isEmpty(f)),
+          families: showEmptyFamilies ? chapter.families : chapter.families.filter((f) => !isEmptyFamily(f)),
         }))
         .filter((chapter) => chapter.families.length > 0),
     }))
