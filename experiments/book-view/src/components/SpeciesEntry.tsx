@@ -34,6 +34,48 @@ const IUCN_COLORS: Record<string, string> = {
   NE: "#c4c4c4",
 };
 
+// Some species in the tree carry an old/regional scientific name whose
+// Wikipedia-sourced description was written for the currently-accepted name
+// instead (no separate article exists for the synonym) - e.g. Felidae's
+// "Felis lanea" (a real 1877 synonym per GBIF/Wilson & Reeder) describing
+// "the cheetah (Acinonyx jubatus)". Detected here rather than at extract
+// time since it only needs the description text already on the node.
+// Restricted to the first 60 characters so a binomial mentioned deeper in
+// the prose (a related species, say) isn't mistaken for the entry's own
+// accepted name; excludes apostrophes so a restated common name in
+// parens - "Lontra weiri (Weir's otter)" - doesn't parse as a fake genus.
+const SYNONYM_RE = /^.{0,60}\(([A-Z][a-zà-ÿ-]+)\s+([a-zà-ÿ×-]+)\)/;
+
+function synonymTarget(species: BookNode): string | null {
+  if (!species.description) return null;
+  const m = SYNONYM_RE.exec(species.description);
+  if (!m) return null;
+  const [, genus, epithet] = m;
+  const ownGenus = species.name.split(" ")[0];
+  if (genus.toLowerCase() === ownGenus.toLowerCase()) return null;
+  return `${genus} ${epithet}`;
+}
+
+function SynonymTag({ of }: { of: string }) {
+  return (
+    <span
+      title={`This name is a synonym; the description above is sourced from ${of}`}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        fontSize: "0.7rem",
+        letterSpacing: "0.03em",
+        color: "var(--ink-faint)",
+        border: "1px solid var(--paper-shadow)",
+        borderRadius: "2px",
+        padding: "0.05rem 0.4rem",
+      }}
+    >
+      syn. of <em style={{ marginLeft: "0.25em" }}>{of}</em>
+    </span>
+  );
+}
+
 function IucnBadge({ code }: { code: string }) {
   const label = IUCN_LABELS[code];
   if (!label) return null;
@@ -129,6 +171,7 @@ export function SpeciesEntry({ species }: { species: BookNode }) {
       groups.length,
   );
   const dagger = species.extinct || species.fossil ? "† " : "";
+  const synonym = synonymTarget(species);
   const [hovering, setHovering] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
@@ -217,6 +260,7 @@ export function SpeciesEntry({ species }: { species: BookNode }) {
             </span>
           )}
           {species.iucnStatus && <IucnBadge code={species.iucnStatus} />}
+          {synonym && <SynonymTag of={synonym} />}
         </div>
 
         {species.description && (
