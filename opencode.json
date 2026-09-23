@@ -10,7 +10,9 @@
         "baseURL": "http://debbie:11434/v1"
       },
       "models": {
-        "qwen2.5-7b": { "name": "Qwen 2.5 7B" }
+        "qwen2.5-7b": {
+          "name": "Qwen 2.5 7B"
+        }
       }
     },
     "ollama-steamie": {
@@ -20,8 +22,13 @@
         "baseURL": "http://steamie.local:11434/v1"
       },
       "models": {
-        "qwen3.6":    { "id": "qwen3.6:latest", "name": "Qwen 3.6" },
-        "llama3.2":   { "name": "Llama 3.2" }
+        "qwen3.6": {
+          "id": "qwen3.6:latest",
+          "name": "Qwen 3.6"
+        },
+        "llama3.2": {
+          "name": "Llama 3.2"
+        }
       }
     },
     "ollama-biggie": {
@@ -31,8 +38,11 @@
         "baseURL": "http://biggie:11434/v1"
       },
       "models": {
-        "qwen3.6": { "name": "Qwen 3.6" }
+        "qwen3.6": {
+          "name": "Qwen 3.6"
+        }
       }
     }
-  }
+  },
+  "snapshot": false
 }
