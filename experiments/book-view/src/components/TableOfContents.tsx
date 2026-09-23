@@ -1,5 +1,8 @@
-import type { BookSkeleton, SkeletonFamily } from "../types";
+import type { BookSkeleton, Kingdom } from "../types";
 import { useBookOptions } from "../hooks/useBookOptions";
+import { ForeEdgeIndex } from "./ForeEdgeIndex";
+import { KINGDOM_INTROS } from "../kingdomIntros";
+import { isEmptyFamily } from "../lib/chapterVisibility";
 
 const CLASS_ACCENT: Record<string, string> = {
   Mammalia: "var(--mammalia)",
@@ -19,12 +22,20 @@ const CLASS_ACCENT: Record<string, string> = {
   Takakiopsida: "var(--plantae)",
 };
 
-// A family with zero enriched species reads as "empty" here the same way
-// FamilySection.tsx treats it - missing chapterStats means we can't confirm
-// emptiness, so it stays visible rather than risk hiding real content.
-function isEmpty(family: SkeletonFamily): boolean {
-  return family.chapterStats !== undefined && family.chapterStats.enrichedCount === 0;
-}
+// Fungi has 51 classes (all "-mycetes") - rather than hardcode each one into
+// CLASS_ACCENT like Plantae's handful, resolve by kingdom as a fallback
+// below CLASS_ACCENT so any future per-class override still wins. Also
+// doubles as the fore-edge index's per-kingdom tab color - Animalia has no
+// single dedicated hue (it splits by class via CLASS_ACCENT) so its tab
+// reads as plain ink, same as any animal class without its own accent.
+const KINGDOM_ACCENT: Record<string, string> = {
+  Animalia: "var(--ink)",
+  Plantae: "var(--plantae)",
+  Fungi: "var(--fungi)",
+  Chromista: "var(--chromista)",
+  Protozoa: "var(--protozoa)",
+  Archaea: "var(--archaea)",
+};
 
 export function TableOfContents({
   skeleton,
@@ -32,6 +43,7 @@ export function TableOfContents({
 }: {
   skeleton: BookSkeleton;
   onSelectChapter: (orderFile: string) => void;
+  onSelectKingdom: (kingdom: Kingdom) => void;
 }) {
   const { showEmptyFamilies } = useBookOptions();
 
@@ -47,7 +59,7 @@ export function TableOfContents({
       chapters: part.chapters
         .map((chapter) => ({
           ...chapter,
-          families: showEmptyFamilies ? chapter.families : chapter.families.filter((f) => !isEmpty(f)),
+          families: showEmptyFamilies ? chapter.families : chapter.families.filter((f) => !isEmptyFamily(f)),
         }))
         .filter((chapter) => chapter.families.length > 0),
     }))
@@ -58,37 +70,79 @@ export function TableOfContents({
       isFirstKingdom: i === 0,
     }));
 
+  // One fore-edge tab per kingdom, each carrying the ordered, deduped list
+  // of classes (Parts) it contains - the "next level" tags shown on click.
+  const edgeEntries = (() => {
+    const byKingdom = new Map<Kingdom, { className: string; title: string }[]>();
+    for (const { part } of visibleParts) {
+      const classes = byKingdom.get(part.kingdom) ?? [];
+      if (!classes.some((c) => c.className === part.className)) {
+        classes.push({ className: part.className, title: part.title });
+      }
+      byKingdom.set(part.kingdom, classes);
+    }
+    return [...byKingdom.entries()].map(([kingdom, classes]) => ({
+      kingdom,
+      color: KINGDOM_ACCENT[kingdom] ?? "var(--ink)",
+      classes,
+    }));
+  })();
+
   return (
     <div style={{ maxWidth: 680, margin: "0 auto", padding: "5rem 1.5rem 6rem" }}>
+      <ForeEdgeIndex entries={edgeEntries} />
       {visibleParts.map(({ part, chapters, showKingdomHeader, isFirstKingdom }) => {
         return (
-          <div key={part.title}>
+          <div key={part.title} id={showKingdomHeader ? `kingdom-${part.kingdom}` : undefined}>
             {showKingdomHeader && (
-              <div
-                style={{
-                  textAlign: "center",
-                  margin: isFirstKingdom ? "0 0 4rem" : "6rem 0 4rem",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontStyle: "italic",
-                    color: "var(--ink-faint)",
-                    letterSpacing: "0.05em",
-                  }}
-                >
-                  Kingdom
-                </p>
-                <h1 style={{ fontSize: "2.6rem", letterSpacing: "0.06em" }}>{part.kingdom}</h1>
-              </div>
+              <header style={{ margin: isFirstKingdom ? "0 0 3rem" : "6rem 0 3rem" }}>
+                <div style={{ textAlign: "center" }}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontStyle: "italic",
+                      color: "var(--ink-faint)",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    Kingdom
+                  </p>
+                  <h1 style={{ fontSize: "2.6rem", letterSpacing: "0.06em" }}>{part.kingdom}</h1>
+                  <div style={{ width: "70px", height: "1px", background: "var(--rule-gold)", margin: "1.5rem auto 2.5rem" }} />
+                </div>
+                {KINGDOM_INTROS[part.kingdom].map((paragraph, i) => (
+                  <p key={i} style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "var(--ink-soft)", marginBottom: "1.25rem" }}>
+                    {i === 0 ? (
+                      <>
+                        <span
+                          aria-hidden
+                          style={{
+                            fontFamily: "var(--font-display)",
+                            fontSize: "3.4rem",
+                            lineHeight: "2.5rem",
+                            float: "left",
+                            marginRight: "0.5rem",
+                            marginTop: "0.35rem",
+                            color: "var(--rule-gold)",
+                          }}
+                        >
+                          {paragraph.charAt(0)}
+                        </span>
+                        {paragraph.slice(1)}
+                      </>
+                    ) : (
+                      paragraph
+                    )}
+                  </p>
+                ))}
+              </header>
             )}
-            <section style={{ marginBottom: "3.5rem" }}>
+            <section id={`class-${part.kingdom}-${part.className}`} style={{ marginBottom: "3.5rem" }}>
             <h2
               style={{
                 fontSize: "1.6rem",
-                color: CLASS_ACCENT[part.className] ?? "var(--ink)",
-                borderBottom: `2px solid ${CLASS_ACCENT[part.className] ?? "var(--rule-gold)"}`,
+                color: CLASS_ACCENT[part.className] ?? KINGDOM_ACCENT[part.kingdom] ?? "var(--ink)",
+                borderBottom: `2px solid ${CLASS_ACCENT[part.className] ?? KINGDOM_ACCENT[part.kingdom] ?? "var(--rule-gold)"}`,
                 paddingBottom: "0.5rem",
                 marginBottom: "1.25rem",
               }}

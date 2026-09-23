@@ -49,6 +49,42 @@ touched any already-verified Animalia output. Every skeleton `Part` and
 `src/types.ts`), and `useBookData.ts`'s `loadChapter` picks the matching
 orders-symlink/extensions-dir pair from it.
 
+**Third kingdom (2026-08-21):** `public/data/portal-fungi-orders` follows
+the identical pattern, pointed at
+`portal/public/data/kingdoms/fungi/orders-fungi` (211 order files, same
+`ORD_<SLUG>.json` naming). Extension sidecars write to
+`public/data/extensions-fungi/`. `TableOfContents.tsx` colors every Fungi
+Part with a single shared `--fungi` accent (51 "-mycetes" classes, resolved
+by kingdom rather than hardcoding each class name the way Plantae's handful
+are).
+
+**Fourth kingdom (2026-08-21):** `public/data/portal-chromista-orders` /
+`public/data/extensions-chromista/`, pointed at
+`portal/public/data/kingdoms/chromista/orders-chromista` (176 order files,
+33 classes spanning diatoms, dinoflagellates, ciliates, oomycetes, and more
+— a taxonomically mixed grab-bag kingdom, but the manifest-driven generation
+doesn't care).
+
+**Fifth kingdom (2026-08-21):** `public/data/portal-protozoa-orders` /
+`public/data/extensions-protozoa/`, pointed at
+`portal/public/data/kingdoms/protozoa/orders-protozoa` (41 order files, 23
+classes — amoebae, slime molds, flagellates).
+
+**Sixth kingdom (2026-08-21) — all six done:**
+`public/data/portal-archaea-orders` / `public/data/extensions-archaea/`,
+pointed at `portal/public/data/kingdoms/archaea/orders-archaea` (52 order
+files, 30 classes — GTDB-style clades, many "families" only ever named as
+alphanumeric placeholder codes like `uba472` rather than Latin binomials,
+which the manifest-driven generation handles the same as any other slug).
+`kingdom` in `src/types.ts` is now `"Animalia" | "Plantae" | "Fungi" |
+"Chromista" | "Protozoa" | "Archaea"`, and both `useBookData.ts`'s
+orders/extensions lookup and `extractSlice.ts`'s per-kingdom path tables
+are `Record<Kingdom, string>` maps, so each kingdom after the first two is
+one map entry per table plus one `--<kingdom>` CSS var and one
+`KINGDOM_ACCENT` line — no conditional logic changes. All six kingdoms
+`kingdom-config.json` declares for the portal are now represented in the
+book.
+
 At runtime, `src/hooks/useBookData.ts`'s `loadChapter` fetches the portal
 order file (via the kingdom-appropriate symlink) and the matching small
 extensions sidecar in parallel, then `src/lib/decorateChapter.ts` merges
@@ -222,6 +258,24 @@ index), so this reordering is purely cosmetic. Cephalopoda, previously
 Octopoda-only as a deliberate sparse-branch test case, now includes all 11
 orders like every other class — there's no more curated/uncurated
 distinction.
+
+**Third kingdom added (2026-08-21):** **Kingdom Fungi**: all 51 classes /
+211 orders, 773 families, ~161,716 species per `gap-report-fungi.json` (no
+published Coverage.md figure to cross-check against yet — Fungi isn't
+tracked there the way Animalia/Plantae are).
+
+**Fourth kingdom added (2026-08-21):** **Kingdom Chromista**: all 33
+classes / 176 orders, 703 families, ~74,044 species per
+`gap-report-chromista.json` (same caveat — not in Coverage.md).
+
+**Fifth kingdom added (2026-08-21):** **Kingdom Protozoa**: all 23 classes
+/ 41 orders, 106 families, ~3,871 species per `gap-report-protozoa.json`.
+
+**Sixth (and final) kingdom added (2026-08-21):** **Kingdom Archaea**: all
+30 classes / 52 orders, 131 families, ~2,111 species per
+`gap-report-archaea.json`. Combined across all six kingdoms: **255 Parts,
+1,100 Chapters** — full parity with every kingdom the portal itself
+tracks (`portal/data/kingdom-config.json`).
 
 **Most of the newly added Parts are invisible by default** — this is
 expected, not a bug. Most of the 60 newly-added Animalia classes have very

@@ -78,3 +78,41 @@ Notes:
   commands (`tommy` is not in the `docker` group).
 - Credentials aren't stored in this repo. See `~/docker-multi-machine/README.md`
   on Macie.
+
+## Custom domain: systema-naturae.se (Cloudflare Tunnel)
+
+Set up 2026-09-11. The domain is registered at one.com but delegated to
+Cloudflare (nameservers `gerald.ns.cloudflare.com` / `lilith.ns.cloudflare.com`)
+under the `tommy.bergstrand@gmail.com` Cloudflare account (Zero Trust Free
+plan, zone on the Free plan).
+
+- **No port-forwarding** — Debbie isn't publicly exposed. A Cloudflare
+  Tunnel (`cloudflared` service in `gcloud-vm/docker-compose.yml`, already
+  present in the compose file before this) makes an outbound-only
+  connection to Cloudflare's edge.
+- **Tunnel**: named `debbie-systema-naturae` in the Cloudflare Zero Trust
+  dashboard (Networks → Tunnels & Mesh). Its **published application
+  routes** (public hostnames) point both `systema-naturae.se` and
+  `www.systema-naturae.se` at service `http://caddy:80` — this auto-created
+  the proxied CNAME DNS records (`<tunnel-id>.cfargotunnel.com`).
+- **SSL/TLS mode**: `Flexible` on the zone (dashboard → SSL/TLS →
+  Overview/Configure) — Cloudflare terminates TLS for visitors and speaks
+  plain HTTP to the origin, since the existing Caddyfile already has an
+  HTTP-only server block for `systema-naturae.se`/`www` that redirects `/`
+  → `/systema-naturae/` and reverse-proxies to `systema-naturae:80`. No
+  Caddyfile changes were needed.
+- **Token**: stored as `CLOUDFLARE_TUNNEL_TOKEN` in
+  `/home/agent/gcloud-vm/.env` on Debbie (not in git). The `cloudflared`
+  container reads it via `tunnel run --token ${CLOUDFLARE_TUNNEL_TOKEN}`.
+  Start/restart it with:
+  ```bash
+  ssh tommy@debbie.bearded-panga.ts.net \
+    "sudo bash -c 'cd /home/agent/gcloud-vm && docker compose up -d cloudflared'"
+  ```
+- **Rotating the token**: Cloudflare dashboard → Zero Trust → Networks →
+  Tunnels & Mesh → `debbie-systema-naturae` → get a new token from the
+  connector install page, update `.env`, then `docker compose up -d
+  --force-recreate cloudflared`.
+- **Verify**: `curl -sk --resolve systema-naturae.se:443:188.114.96.1
+  https://systema-naturae.se/systema-naturae/` should return `200` (root
+  `/` returns a `302` redirect into `/systema-naturae/`).

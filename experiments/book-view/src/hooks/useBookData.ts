@@ -9,6 +9,23 @@ import { decorateChapter } from "../lib/decorateChapter";
 // see experiments/book-view/README.md "Scaling notes".
 const MAX_CACHED_CHAPTERS = 8;
 
+const KINGDOM_ORDERS_DIRS: Record<string, string> = {
+  Animalia: "portal-orders",
+  Plantae: "portal-plantae-orders",
+  Fungi: "portal-fungi-orders",
+  Chromista: "portal-chromista-orders",
+  Protozoa: "portal-protozoa-orders",
+  Archaea: "portal-archaea-orders",
+};
+const KINGDOM_EXTENSIONS_DIRS: Record<string, string> = {
+  Animalia: "extensions",
+  Plantae: "extensions-plantae",
+  Fungi: "extensions-fungi",
+  Chromista: "extensions-chromista",
+  Protozoa: "extensions-protozoa",
+  Archaea: "extensions-archaea",
+};
+
 function touchLRU(arr: string[], id: string): void {
   const idx = arr.indexOf(id);
   if (idx !== -1) arr.splice(idx, 1);
@@ -62,11 +79,12 @@ export function useBookData(): {
       // (never duplicated into this app's own data) - decorated client-side
       // with a small extensions sidecar rather than a pre-built, pre-filtered
       // copy. See README.md "Data architecture". Both the orders symlink and
-      // the extensions sidecar are namespaced per kingdom (Plantae added
-      // alongside Animalia without touching either of Animalia's paths).
+      // the extensions sidecar are namespaced per kingdom (each new kingdom
+      // added alongside the others without touching any existing kingdom's
+      // paths).
       const kingdom = chapterMeta?.kingdom ?? "Animalia";
-      const ordersDir = kingdom === "Plantae" ? "portal-plantae-orders" : "portal-orders";
-      const extensionsDir = kingdom === "Plantae" ? "extensions-plantae" : "extensions";
+      const ordersDir = KINGDOM_ORDERS_DIRS[kingdom] ?? "portal-orders";
+      const extensionsDir = KINGDOM_EXTENSIONS_DIRS[kingdom] ?? "extensions";
       Promise.all([
         fetch(`${base}data/${ordersDir}/${orderFile}.json`).then((r) => r.json() as Promise<BookNode>),
         fetch(`${base}data/${extensionsDir}/${orderFile}.json`).then((r) => r.json() as Promise<ChapterExtensions>),
