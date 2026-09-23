@@ -20,6 +20,7 @@ function GenusSection({
   const rawStubs = (genus.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
   const stubs = showStubs ? rawStubs : [];
   const totalCount = detailed.length + stubs.length;
+  const isHybridGroup = genus.rank === "HYBRID_GROUP";
 
   return (
     <div id={`genus-${genus.id}`} style={{ marginTop: "1.5rem" }}>
@@ -33,7 +34,7 @@ function GenusSection({
       >
         {genus.name}
         <span style={{ fontStyle: "normal", fontSize: "0.8rem", color: "var(--ink-faint)", marginLeft: "0.5rem" }}>
-          {totalCount} {totalCount === 1 ? "species" : "species"}
+          {totalCount} {isHybridGroup ? (totalCount === 1 ? "hybrid" : "hybrids") : "species"}
         </span>
       </h4>
 

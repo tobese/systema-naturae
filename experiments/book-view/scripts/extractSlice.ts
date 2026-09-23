@@ -14,26 +14,43 @@ import { COLLAGE_OVERRIDES } from "../src/collageOverrides";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../../..");
 
-type Kingdom = "Animalia" | "Plantae";
+type Kingdom = "Animalia" | "Plantae" | "Fungi" | "Chromista" | "Protozoa" | "Archaea";
 
 const ORDERS_DIRS: Record<Kingdom, string> = {
   Animalia: join(REPO_ROOT, "portal/public/data/kingdoms/animalia/orders"),
   Plantae: join(REPO_ROOT, "portal/public/data/kingdoms/plantae/orders-plantae"),
+  Fungi: join(REPO_ROOT, "portal/public/data/kingdoms/fungi/orders-fungi"),
+  Chromista: join(REPO_ROOT, "portal/public/data/kingdoms/chromista/orders-chromista"),
+  Protozoa: join(REPO_ROOT, "portal/public/data/kingdoms/protozoa/orders-protozoa"),
+  Archaea: join(REPO_ROOT, "portal/public/data/kingdoms/archaea/orders-archaea"),
 };
 const GAP_REPORT_PATHS: Record<Kingdom, string> = {
   Animalia: join(REPO_ROOT, "portal/data/gap-report.json"),
   Plantae: join(REPO_ROOT, "portal/data/gap-report-plantae.json"),
+  Fungi: join(REPO_ROOT, "portal/data/gap-report-fungi.json"),
+  Chromista: join(REPO_ROOT, "portal/data/gap-report-chromista.json"),
+  Protozoa: join(REPO_ROOT, "portal/data/gap-report-protozoa.json"),
+  Archaea: join(REPO_ROOT, "portal/data/gap-report-archaea.json"),
 };
 // extensions output is namespaced per kingdom (extensions/ vs
-// extensions-plantae/) so adding Plantae never touches the already-verified
-// Animalia sidecar files.
+// extensions-plantae/ vs extensions-fungi/ vs extensions-chromista/ vs
+// extensions-protozoa/ vs extensions-archaea/) so adding a new kingdom
+// never touches an already-verified sidecar directory.
 const EXTENSIONS_DIRS: Record<Kingdom, string> = {
   Animalia: "extensions",
   Plantae: "extensions-plantae",
+  Fungi: "extensions-fungi",
+  Chromista: "extensions-chromista",
+  Protozoa: "extensions-protozoa",
+  Archaea: "extensions-archaea",
 };
 const MANIFEST_PATHS: Record<Kingdom, string> = {
   Animalia: join(REPO_ROOT, "portal/public/data/kingdoms/animalia/order-manifest.json"),
   Plantae: join(REPO_ROOT, "portal/public/data/kingdoms/plantae/order-manifest.json"),
+  Fungi: join(REPO_ROOT, "portal/public/data/kingdoms/fungi/order-manifest.json"),
+  Chromista: join(REPO_ROOT, "portal/public/data/kingdoms/chromista/order-manifest.json"),
+  Protozoa: join(REPO_ROOT, "portal/public/data/kingdoms/protozoa/order-manifest.json"),
+  Archaea: join(REPO_ROOT, "portal/public/data/kingdoms/archaea/order-manifest.json"),
 };
 // Source of truth for CLASS-level `description` (see
 // scripts/enrichHigherRanksFromWikipedia.ts, which fills these in upstream) -
@@ -42,6 +59,10 @@ const MANIFEST_PATHS: Record<Kingdom, string> = {
 const TAXONOMY_PATHS: Record<Kingdom, string> = {
   Animalia: join(REPO_ROOT, "portal/data/taxonomy.json"),
   Plantae: join(REPO_ROOT, "portal/data/taxonomy-plantae-snippet.json"),
+  Fungi: join(REPO_ROOT, "portal/data/taxonomy-fungi.json"),
+  Chromista: join(REPO_ROOT, "portal/data/taxonomy-chromista.json"),
+  Protozoa: join(REPO_ROOT, "portal/data/taxonomy-protozoa.json"),
+  Archaea: join(REPO_ROOT, "portal/data/taxonomy-archaea.json"),
 };
 const WIKI_IMAGES_PATH = join(REPO_ROOT, "shared/data/wiki-images.json");
 const OUT_DIR = join(__dirname, "../public/data");
@@ -186,7 +207,14 @@ function buildKingdomParts(kingdom: Kingdom): PartDef[] {
   });
 }
 
-const PARTS: PartDef[] = [...buildKingdomParts("Animalia"), ...buildKingdomParts("Plantae")];
+const PARTS: PartDef[] = [
+  ...buildKingdomParts("Animalia"),
+  ...buildKingdomParts("Plantae"),
+  ...buildKingdomParts("Fungi"),
+  ...buildKingdomParts("Chromista"),
+  ...buildKingdomParts("Protozoa"),
+  ...buildKingdomParts("Archaea"),
+];
 
 function readOrderFile(kingdom: Kingdom, orderFile: string): TaxonNode {
   return JSON.parse(readFileSync(join(ORDERS_DIRS[kingdom], `${orderFile}.json`), "utf-8"));
@@ -239,20 +267,29 @@ interface CollageCandidate {
 // description *and* a portrait image - from anywhere under a family.
 // speciesList (compressed stubs) is skipped: a collage entry with a photo
 // but no real description behind it isn't representative of this book's
-// content.
+// content. `overrideNames` (the current class's collageOverrides.ts pins,
+// if any) bypasses the description check - those species were individually
+// hand-verified as real and notable (see collageOverrides.ts), and some
+// (e.g. Homo sapiens, which has no species-level Wikipedia enrichment at
+// all - see README) or Wikipedia-sourced descriptions that a later portal
+// rebuild can blank out (e.g. Acinonyx jubatus) would otherwise silently
+// fail to qualify despite being the whole reason the override exists. A
+// portrait image is still required either way - no image, no collage entry.
 function collectCollageCandidates(
   node: TaxonNode,
   wikiImages: Record<string, WikiImageEntry>,
+  overrideNames: Set<string>,
   out: CollageCandidate[],
 ): void {
   if (node.rank === "SPECIES") {
     const entry = wikiImages[node.name];
-    if (entry?.image && (node.description?.length ?? 0) > 20) {
+    const qualifies = overrideNames.has(node.name) || (node.description?.length ?? 0) > 20;
+    if (entry?.image && qualifies) {
       out.push({ name: node.name, commonName: node.commonName, imageUrl: commonsThumb(entry.image) });
     }
     return;
   }
-  for (const child of node.children ?? []) collectCollageCandidates(child, wikiImages, out);
+  for (const child of node.children ?? []) collectCollageCandidates(child, wikiImages, overrideNames, out);
 }
 
 // Deterministic evenly-spaced sample (no randomness, so extract-data output
@@ -266,13 +303,13 @@ function sampleEvenly<T>(items: T[], count: number): T[] {
   return out;
 }
 
-const COLLAGE_SIZE = 81; // a 9x9 plate
-const COLLAGE_CENTER_INDEX = 40; // row-major middle of a 9x9 grid
+const COLLAGE_SIZE = 49; // a 7x7 plate
+const COLLAGE_CENTER_INDEX = 24; // row-major middle of a 7x7 grid
 
 // Builds a Part's collage. Flagship classes with a src/collageOverrides.ts
 // entry get specific species pinned at specific slots (center + pinned list)
 // - everything else in the grid, and every class without an override, is
-// filled by the same deterministic even-sampling as before, just at 81
+// filled by the same deterministic even-sampling as before, just at 49
 // instead of 8. Pinning only actually lands `center` in the visual middle
 // when the class has enough real candidates to fill every slot before it
 // (true for any class this large, e.g. Mammalia's thousands of species) -
@@ -318,10 +355,18 @@ function main() {
   const gapStatsByKingdom: Record<Kingdom, Map<string, GapRow>> = {
     Animalia: loadGapStats("Animalia"),
     Plantae: loadGapStats("Plantae"),
+    Fungi: loadGapStats("Fungi"),
+    Chromista: loadGapStats("Chromista"),
+    Protozoa: loadGapStats("Protozoa"),
+    Archaea: loadGapStats("Archaea"),
   };
   const wikiImages = loadWikiImages();
   mkdirSync(join(OUT_DIR, "extensions"), { recursive: true });
   mkdirSync(join(OUT_DIR, "extensions-plantae"), { recursive: true });
+  mkdirSync(join(OUT_DIR, "extensions-fungi"), { recursive: true });
+  mkdirSync(join(OUT_DIR, "extensions-chromista"), { recursive: true });
+  mkdirSync(join(OUT_DIR, "extensions-protozoa"), { recursive: true });
+  mkdirSync(join(OUT_DIR, "extensions-archaea"), { recursive: true });
 
   const skeleton = {
     parts: [] as unknown[],
@@ -339,6 +384,8 @@ function main() {
       chapters: [] as unknown[],
     };
     const collageCandidates: CollageCandidate[] = [];
+    const override = COLLAGE_OVERRIDES[part.className];
+    const overrideNames = new Set<string>([...(override?.pinned ?? []), ...(override?.center ? [override.center] : [])]);
 
     for (const chapter of part.chapters) {
       const order = readOrderFile(part.kingdom, chapter.orderFile);
@@ -356,7 +403,7 @@ function main() {
         const intro = FAMILY_INTROS[slug];
         if (intro) familyDescriptions[slug] = intro;
 
-        collectCollageCandidates(family, wikiImages, collageCandidates);
+        collectCollageCandidates(family, wikiImages, overrideNames, collageCandidates);
 
         const speciesNames: string[] = [];
         collectSpeciesNames(family, speciesNames);
