@@ -2,6 +2,7 @@ import type { ChapterDoc, CollageEntry } from "../types";
 import { FamilySection } from "./FamilySection";
 import { PartCollage } from "./PartCollage";
 import { useReadingWindow } from "../hooks/useReadingWindow";
+import { paragraphs } from "../lib/paragraphs";
 
 export function ChapterPage({
   chapter,
@@ -25,29 +26,30 @@ export function ChapterPage({
         <header style={{ marginBottom: "4rem", textAlign: "center" }}>
           <h1 style={{ fontSize: "2rem", letterSpacing: "0.04em" }}>{partTitle}</h1>
           <PartCollage items={partCollage} />
-          {partIntro && (
+          {paragraphs(partIntro).map((paragraph, i) => (
             <p
+              key={i}
               style={{
-                marginTop: "1.25rem",
+                marginTop: i === 0 ? "1.25rem" : "1rem",
                 fontSize: "1.05rem",
                 lineHeight: 1.75,
                 color: "var(--ink-soft)",
                 textAlign: "left",
               }}
             >
-              {partIntro}
+              {paragraph}
             </p>
-          )}
+          ))}
         </header>
       )}
 
       <header>
         <h2 style={{ fontSize: "1.7rem" }}>{chapter.title}</h2>
-        {chapter.description && (
-          <p style={{ marginTop: "0.9rem", fontSize: "1rem", lineHeight: 1.75, color: "var(--ink-soft)" }}>
-            {chapter.description}
+        {paragraphs(chapter.description).map((paragraph, i) => (
+          <p key={i} style={{ margin: i === 0 ? "0.9rem 0 0" : "0.8rem 0 0", fontSize: "1rem", lineHeight: 1.75, color: "var(--ink-soft)" }}>
+            {paragraph}
           </p>
-        )}
+        ))}
       </header>
 
       {chapter.families.map((family) => (

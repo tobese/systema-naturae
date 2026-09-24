@@ -1,12 +1,12 @@
 // Hand-written Family-level prose for the curated Parts (Mammalia,
-// Chondrichthyes, Reptilia). The portal's data has no `description` field
-// at FAMILY rank at all (confirmed empty across every family sampled) -
-// unlike Order and Genus, which the portal already enriches. Aves is out of
-// scope here: 254 families is a data-enrichment project, not something to
-// hand-write - see experiments/book-view/README.md "Data architecture".
+// Chondrichthyes, Reptilia). The portal's taxonomy.json now carries `description`
+// at FAMILY rank for families covered by the local-wiki enrichment pass
+// (felidae, canidae, ...) - those flow straight through the order files and
+// must NOT be listed here, or this sidecar would overwrite the longer prose.
+// This map is the fallback for families the portal hasn't enriched yet.
+// Aves is out of scope here: 254 families is a data-enrichment project, not
+// something to hand-write - see experiments/book-view/README.md "Data architecture".
 export const FAMILY_INTROS: Record<string, string> = {
-  felidae:
-    "The cat family - obligate carnivores built around retractable claws, acute night vision, and a stalk-and-ambush hunting style, ranging from the domestic cat to the tiger, the largest living cat.",
   ursidae:
     "Bears - large, plantigrade omnivores found on every continent but Africa and Australia, united by a stocky build, small eyes, and (in most species) a period of winter dormancy.",
   hominidae:

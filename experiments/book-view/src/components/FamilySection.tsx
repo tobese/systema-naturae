@@ -2,6 +2,7 @@ import type { BookNode } from "../types";
 import type { ReadingWindow } from "../hooks/useReadingWindow";
 import { SpeciesEntry } from "./SpeciesEntry";
 import { useBookOptions } from "../hooks/useBookOptions";
+import { paragraphs } from "../lib/paragraphs";
 
 function isExtinct(node: BookNode): boolean {
   return Boolean(node.extinct || node.fossil);
@@ -140,11 +141,12 @@ export function FamilySection({ family, readingWindow }: { family: BookNode; rea
 
       {expanded && (
         <div>
-          {family.description ? (
-            <p style={{ margin: "0.8rem 0 0", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--ink-soft)" }}>
-              {family.description}
+          {paragraphs(family.description).map((paragraph, i) => (
+            <p key={i} style={{ margin: "0.8rem 0 0", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--ink-soft)" }}>
+              {paragraph}
             </p>
-          ) : family.notableMembers && family.notableMembers.length > 0 ? (
+          ))}
+          {!family.description && family.notableMembers && family.notableMembers.length > 0 ? (
             <p style={{ margin: "0.8rem 0 0", fontSize: "0.85rem", fontStyle: "italic", color: "var(--ink-faint)" }}>
               Notable: {family.notableMembers.join(", ")}
             </p>
