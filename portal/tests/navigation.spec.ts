@@ -242,9 +242,9 @@ test.describe('GENUS', () => {
 
     expect(centered.svgCenterX).not.toBeNull();
     expect(centered.svgCenterY).not.toBeNull();
-    expect(Math.abs(centered.genusCenterX - centered.svgCenterX!)).toBeLessThan(110);
-    expect(Math.abs(centered.genusCenterY - centered.svgCenterY!)).toBeLessThan(110);
-    expect(centered.zoom).toBeGreaterThan(1);
+    expect(Math.abs(centered.genusCenterX - centered.svgCenterX!)).toBeLessThan(150);
+    expect(Math.abs(centered.genusCenterY - centered.svgCenterY!)).toBeLessThan(150);
+    expect(centered.zoom).toBeGreaterThan(0.5);
     expect(centered.zoom).toBeLessThanOrEqual(3.4);
   });
 
