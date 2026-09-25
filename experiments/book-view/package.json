@@ -9,7 +9,9 @@
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "preview": "vite preview",
-    "extract-data": "tsx scripts/extractSlice.ts"
+    "extract-data": "tsx scripts/extractSlice.ts",
+    "fetch-breed-images": "node scripts/fetchBreedImages.mjs",
+    "predev": "sh ../portal/scripts/ensureBookData.sh"
   },
   "dependencies": {
     "react": "^19.2.6",

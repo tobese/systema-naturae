@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { CoverSplash } from "./components/CoverSplash";
 import { TableOfContents } from "./components/TableOfContents";
-import { ChapterPage } from "./components/ChapterPage";
+import { ChapterPage } from "@shared/book/components/ChapterPage";
 import { KingdomIntroPage } from "./components/KingdomIntroPage";
 import { Breadcrumb } from "./components/Breadcrumb";
 import { useBookData } from "./hooks/useBookData";
-import { useBookOptions } from "./hooks/useBookOptions";
+import { useBookOptions } from "@shared/book/hooks/useBookOptions";
 import { PART_INTROS } from "./curatedParts";
-import { firstVisibleChapter } from "./lib/chapterVisibility";
-import type { Kingdom } from "./types";
+import { firstVisibleChapter } from "@shared/book/lib/chapterVisibility";
+import type { Kingdom } from "@shared/book/types";
 
 type Phase = "cover" | "toc" | "kingdomIntro" | "chapter";
 

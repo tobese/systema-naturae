@@ -15,9 +15,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Path aliases */
+    /* Path aliases - this app lives two levels deep (experiments/book-view),
+       unlike portal/ which is one level deep */
     "paths": {
-      "@shared/*": ["../shared/src/*"]
+      "@shared/*": ["../../shared/src/*"]
     },
 
     /* Linting */

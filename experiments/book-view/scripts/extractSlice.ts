@@ -6,7 +6,7 @@
 // public/data/portal-orders, decorated client-side by src/lib/decorateChapter.ts).
 // Re-run any time upstream data changes: `npm run extract-data`.
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
-import { join, dirname } from "path";
+import { join, dirname, resolve } from "path";
 import { fileURLToPath } from "url";
 import { FAMILY_INTROS } from "../src/familyIntros";
 import { COLLAGE_OVERRIDES } from "../src/collageOverrides";
@@ -65,7 +65,15 @@ const TAXONOMY_PATHS: Record<Kingdom, string> = {
   Archaea: join(REPO_ROOT, "portal/data/taxonomy-archaea.json"),
 };
 const WIKI_IMAGES_PATH = join(REPO_ROOT, "shared/data/wiki-images.json");
-const OUT_DIR = join(__dirname, "../public/data");
+const BREED_IMAGES_PATH = join(REPO_ROOT, "shared/data/breed-images.json");
+// Canonical output: the portal's public tree, alongside the per-order files
+// these sidecars decorate - so the portal's Book viewMode can serve them
+// itself. The standalone book app symlinks its public/data/{book-skeleton.json,
+// extensions*} here (same trick as its portal-orders symlinks), so both apps
+// read one copy and can't drift. SN_BOOK_OUT overrides the location.
+const OUT_DIR = process.env.SN_BOOK_OUT
+  ? resolve(process.env.SN_BOOK_OUT)
+  : join(REPO_ROOT, "portal/public/data/book");
 const COMMONS_FILEPATH = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 
 // Same URL-construction convention as shared/src/hooks/useWikiImages.ts
@@ -73,6 +81,13 @@ const COMMONS_FILEPATH = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 // to the real upload and supports a ?width= thumbnail param).
 function commonsThumb(filename: string, width = 480): string {
   return `${COMMONS_FILEPATH}${encodeURIComponent(filename)}?width=${width}`;
+}
+
+// Sidecar images are usually bare Commons filenames (routed through
+// Special:FilePath), but the breed fetcher's Wikipedia-REST fallback stores
+// already-absolute thumb URLs - those pass through untouched, never wrapped.
+function toThumb(image: string): string {
+  return /^https?:/.test(image) ? image : commonsThumb(image);
 }
 
 interface TaxonNode {
@@ -250,11 +265,14 @@ function findFamilies(order: TaxonNode, slugs: string[] | "ALL"): TaxonNode[] {
 
 // Collects every species scientific name under a family - used to slice
 // only the relevant entries out of the 43MB wiki-images.json sidecar rather
-// than shipping any of it to the browser.
-function collectSpeciesNames(node: TaxonNode, out: string[]): void {
-  if (node.rank === "SPECIES") out.push(node.name);
-  for (const child of node.children ?? []) collectSpeciesNames(child, out);
-  for (const s of node.speciesList ?? []) collectSpeciesNames(s, out);
+// than shipping any of it to the browser. BREED display names are collected
+// too: their portraits come from the separate breed-images.json sidecar
+// (breeds are common-name keyed), merged into the same per-chapter `images`
+// map at the point of use - see `images[name]` below.
+function collectImageKeys(node: TaxonNode, out: string[]): void {
+  if (node.rank === "SPECIES" || node.rank === "BREED") out.push(node.name);
+  for (const child of node.children ?? []) collectImageKeys(child, out);
+  for (const s of node.speciesList ?? []) collectImageKeys(s, out);
 }
 
 interface CollageCandidate {
@@ -285,7 +303,7 @@ function collectCollageCandidates(
     const entry = wikiImages[node.name];
     const qualifies = overrideNames.has(node.name) || (node.description?.length ?? 0) > 20;
     if (entry?.image && qualifies) {
-      out.push({ name: node.name, commonName: node.commonName, imageUrl: commonsThumb(entry.image) });
+      out.push({ name: node.name, commonName: node.commonName, imageUrl: toThumb(entry.image) });
     }
     return;
   }
@@ -361,6 +379,7 @@ function main() {
     Archaea: loadGapStats("Archaea"),
   };
   const wikiImages = loadWikiImages();
+  const breedImages: Record<string, WikiImageEntry> = JSON.parse(readFileSync(BREED_IMAGES_PATH, "utf-8"));
   mkdirSync(join(OUT_DIR, "extensions"), { recursive: true });
   mkdirSync(join(OUT_DIR, "extensions-plantae"), { recursive: true });
   mkdirSync(join(OUT_DIR, "extensions-fungi"), { recursive: true });
@@ -406,12 +425,12 @@ function main() {
         collectCollageCandidates(family, wikiImages, overrideNames, collageCandidates);
 
         const speciesNames: string[] = [];
-        collectSpeciesNames(family, speciesNames);
+        collectImageKeys(family, speciesNames);
         for (const name of speciesNames) {
-          const entry = wikiImages[name];
+          const entry = wikiImages[name] ?? breedImages[name];
           if (!entry?.image && !entry?.iucnStatus) continue;
           images[name] = {
-            ...(entry.image ? { imageUrl: commonsThumb(entry.image) } : {}),
+            ...(entry.image ? { imageUrl: toThumb(entry.image) } : {}),
             ...(entry.iucnStatus ? { iucnStatus: entry.iucnStatus } : {}),
           };
           if (entry.image) imagesAttached++;

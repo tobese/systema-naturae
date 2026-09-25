@@ -1,8 +1,8 @@
-import type { BookSkeleton, Kingdom } from "../types";
-import { useBookOptions } from "../hooks/useBookOptions";
+import type { BookSkeleton, Kingdom } from "@shared/book/types";
+import { useBookOptions } from "@shared/book/hooks/useBookOptions";
 import { ForeEdgeIndex } from "./ForeEdgeIndex";
 import { KINGDOM_INTROS } from "../kingdomIntros";
-import { isEmptyFamily } from "../lib/chapterVisibility";
+import { isEmptyFamily } from "@shared/book/lib/chapterVisibility";
 
 const CLASS_ACCENT: Record<string, string> = {
   Mammalia: "var(--mammalia)",

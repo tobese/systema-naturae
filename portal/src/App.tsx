@@ -22,7 +22,7 @@ import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
 import StatisticsHeader from "./components/StatisticsHeader";
 import KingdomSwitcher from "./components/KingdomSwitcher";
 import WheelOfNature from "./components/WheelOfNature";
-import BookView from "./components/BookView";
+import { BookReadingPane } from "./components/BookReadingPane";
 import { ColorRegistryContext } from "./components/ColorRegistryContext.tsx";
 function filterExtinct(node: TaxonNode | null): TaxonNode {
   if (!node) return { id: "", name: "", rank: "PHYLUM", children: [] } as unknown as TaxonNode;
@@ -165,10 +165,13 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
 
   const lastAutoZoomFamilyId = useRef<string | null>(null);
 
-  // Auto-show right panel when a node is selected
+  // Auto-show right panel when a node is selected. Graph-only: the panel is a
+  // graph affordance (HabitatMap / NodeNav / UnifiedInfoPanel) and in book mode
+  // it would steal 380px from the reading column for no purpose - selecting a
+  // species while reading should not pop a graph panel over the text.
   useEffect(() => {
-    if (selected) setShowRightSidebar(true);
-  }, [selected]);
+    if (selected && viewMode === "graph") setShowRightSidebar(true);
+  }, [selected, viewMode]);
 
   // Resolve focused family slug → node id
   const focusedFamilyId = useMemo(() => {
@@ -783,10 +786,17 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
               onReady={() => setTreeReady(true)}
             />
           ) : (
-            <BookView
-              data={filteredTreeData}
-              selectedId={selected?.id ?? null}
-              onSelect={handleSelect}
+            <BookReadingPane
+              kingdom={kingdom}
+              // buildData stamps every node with its order (lowercase id
+              // stem, e.g. "carnivora") and family, so the book opens on the
+              // chapter the reader is actually looking at rather than at
+              // chapter one. Falls back to the part's first chapter when
+              // nothing is selected.
+              orderName={selected?.orderName ?? null}
+              focusFamilySlug={
+                selectedInTree?.familySlug ?? (inFamilyFocus ? focusedFamilySlug : undefined) ?? undefined
+              }
             />
           )}
           {viewMode === "graph" && (
@@ -993,8 +1003,9 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
           )}
         </div>
 
-        {/* Sidebar */}
-        {showRightSidebar && (
+        {/* Details sidebar - graph mode only; book mode is a full-width
+            reading column until a book-mode panel is designed */}
+        {showRightSidebar && viewMode === "graph" && (
           <div style={{
             width: 380,
             borderLeft: "1px solid #1e2030",
