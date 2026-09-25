@@ -13,17 +13,45 @@ files directly (read-only, via a symlink) rather than a duplicated copy — see
 
 ```bash
 npm install
-npm run extract-data   # rebuilds the small public/data/extensions/*.json sidecars
-npm run dev
+npm run extract-data   # rebuilds the book sidecars (see "Where the data lives" below)
+npm run dev            # `predev` runs the extract step only if the data is missing
 ```
 
+### Where the data lives
+
+The generated book data — `book-skeleton.json` and the `extensions*/` sidecars — is
+**not** stored in this app. It is generated into `portal/public/data/book/` (canonical,
+gitignored, right next to the per-order files it decorates) and this app reaches it
+through symlinks in `public/data/`, the same trick its `portal-*-orders` symlinks use.
+The portal's Book viewMode serves the very same files.
+
+Consequence: on a fresh clone the data doesn't exist yet. `npm run dev` handles it (a
+`predev` hook runs `portal/scripts/ensureBookData.sh`, which builds only when missing),
+and `npm run extract-data` always rebuilds. The portal's own `npm run dev` / `build`
+do the same, so neither app can be missing data the other has.
+
+### Where the code lives
+
+This app is the book's **shell**; the **reading surface** is shared with the portal so both
+render the same book from one implementation (see
+[`../../docs/book-integration-plan.md`](../../docs/book-integration-plan.md)):
+
+| Location | Contents |
+|---|---|
+| `shared/src/book/` | Reading surface: `components/{ChapterPage,FamilySection,SpeciesEntry,PartCollage}`, `hooks/{useReadingWindow,useBookOptions}`, `context/BookOptions*`, `lib/{decorateChapter,synonyms,paragraphs,chapterVisibility}`, `types.ts` |
+| `experiments/book-view/src/` | This app's shell: `App.tsx` phase machine, `CoverSplash`, `TableOfContents`, `ForeEdgeIndex`, `KingdomIntroPage`, `Breadcrumb`, `OptionsPanel`, `hooks/useBookData.ts`, and the content tables (`curatedParts`, `kingdomIntros`, `familyIntros`, `collageOverrides`) |
+
+The shell imports the reading surface via the `@shared/*` alias (mapped in both
+`vite.config.ts` and `tsconfig.app.json`).
+
 `extract-data` runs `scripts/extractSlice.ts`, which reads
-`portal/public/data/kingdoms/animalia/orders/*.json`,
-`portal/data/gap-report.json`, and `shared/data/wiki-images.json` from the
-repo root and writes one small sidecar per chapter to
-`public/data/extensions/${orderFile}.json` (portrait images, IUCN status,
-`chapterStats`, curated Family-level prose, and — for curated Parts only —
-the family whitelist). Re-run it any time upstream portal data changes.
+`portal/public/data/kingdoms/*/orders*/*.json`, `portal/data/gap-report*.json`, and
+`shared/data/{wiki-images,breed-images}.json` from the repo root, and writes
+`book-skeleton.json` plus one small sidecar per chapter to
+`portal/public/data/book/extensions[-<kingdom>]/${orderFile}.json` (portrait images,
+IUCN status, `chapterStats`, curated Family-level prose, and — for curated Parts only —
+the family whitelist). Set `SN_BOOK_OUT` to write elsewhere. Re-run it any time
+upstream portal data changes.
 
 ## Data architecture
 
@@ -87,7 +115,7 @@ book.
 
 At runtime, `src/hooks/useBookData.ts`'s `loadChapter` fetches the portal
 order file (via the kingdom-appropriate symlink) and the matching small
-extensions sidecar in parallel, then `src/lib/decorateChapter.ts` merges
+extensions sidecar in parallel, then `@shared/book/lib/decorateChapter.ts` merges
 them in one client-side tree walk: strips corrupted
 `enrichFromWikipedia.ts` extracts (raw `{{Speciesbox|...}}` markup,
 `Category:` links, `#REDIRECT` pages — disproportionately common on
@@ -182,7 +210,7 @@ deterministic, no randomness, so `extract-data` output stays reproducible
 run to run). No new upstream data needed - this reuses the same per-chapter
 `images` map (sourced from `shared/data/wiki-images.json`)
 `extractSlice.ts` already built for species-level portraits. New
-`src/components/PartCollage.tsx` renders it as a strict 9-column CSS grid
+`@shared/book/components/PartCollage.tsx` renders it as a strict 9-column CSS grid
 in the same `showPartIntro` header block, reusing `SpeciesEntry.tsx`'s
 `object-fit: contain` + paper-shadow-background treatment (see the
 shark-image-cropping fix above) so collage photos of elongated animals
@@ -324,9 +352,9 @@ A ⚙ button in the top-right of the reading shell (`Breadcrumb.tsx` →
 `src/components/OptionsPanel.tsx`) opens a small dropdown of three toggles,
 all default **off** - mirrors the portal's own `OptionsPanel.tsx` pattern
 (gear button → checkbox-row dropdown), restyled for book-view's paper
-palette. State lives in `src/context/BookOptions.tsx` (each toggle
+palette. State lives in `@shared/book/context/BookOptions.tsx` (each toggle
 independently persisted to `localStorage`), read via
-`src/hooks/useBookOptions.ts`.
+`@shared/book/hooks/useBookOptions.ts`.
 
 - **Show extinct species** — `FamilySection.tsx` filters on the
   `extinct`/`fossil` flags at species and genus granularity; a genus
@@ -372,7 +400,7 @@ at ~5MB - well within what a lazy per-chapter fetch can absorb.
 Passeriformes alone carries 146 families and ~3,200 fully-enriched species -
 too many `SpeciesEntry` components (each with a lazy-loaded image,
 description, badges) to mount all at once in one continuous scroll.
-`src/hooks/useReadingWindow.ts` + `FamilySection.tsx` solve this with a
+`@shared/book/hooks/useReadingWindow.ts` + `@shared/book/components/FamilySection.tsx` solve this with a
 scroll-driven "reading window": only the family currently crossing the top
 of the viewport, plus one before and one after, stay expanded (fully
 mounted) - everything else collapses to just its header

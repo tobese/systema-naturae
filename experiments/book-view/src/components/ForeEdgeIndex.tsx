@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Kingdom } from "../types";
+import type { Kingdom } from "@shared/book/types";
 
 export interface EdgeKingdomEntry {
   kingdom: Kingdom;

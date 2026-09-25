@@ -1,4 +1,4 @@
-import type { Kingdom } from "./types";
+import type { Kingdom } from "@shared/book/types";
 
 // Hand-written framing prose for each of the six kingdoms, shown once on a
 // dedicated intro page before a reader descends into that kingdom's Parts —

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useBookOptions } from "../hooks/useBookOptions";
+import { useBookOptions } from "@shared/book/hooks/useBookOptions";
 
 // Mirrors the portal's own ⚙ OptionsPanel (gear button -> dropdown of
 // checkbox rows) for a consistent pattern across the two apps, restyled for

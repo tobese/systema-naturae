@@ -1,0 +1,73 @@
+/* The book's palette and page typography, shared by the standalone book app
+   (experiments/book-view) and the portal's Book viewMode.
+   Declared on :root for the standalone (its whole surface is the book page)
+   and re-declared on .book-surface so the portal hands the book a
+   self-contained page inside its dark chrome. The portal defines no custom
+   properties of its own today, so this can't collide - and scoping to
+   .book-surface keeps the two palettes independent if that ever changes. */
+
+:root,
+.book-surface {
+  --paper: #f3ead4;
+  --paper-shadow: #d8caa4;
+  --ink: #2a2118;
+  --ink-soft: #4d4030;
+  --ink-faint: #7a6c53;
+  --rule-gold: #a3823a;
+  --mammalia: #7a1f2b;
+  --mammalia-soft: #a5453f;
+  --aves: #1f4d43;
+  --aves-soft: #3d7568;
+  --chondrichthyes: #1f3a52;
+  --chondrichthyes-soft: #3d647d;
+  --reptilia: #5c4a1f;
+  --reptilia-soft: #85703d;
+  --plantae: #2f5233;
+  --plantae-soft: #567a5b;
+  --fungi: #6b4423;
+  --fungi-soft: #93684a;
+  --chromista: #1f5c5c;
+  --chromista-soft: #468484;
+  --protozoa: #6a3f6b;
+  --protozoa-soft: #916992;
+  --archaea: #a3521f;
+  --archaea-soft: #c17e4c;
+  --cover-bg: radial-gradient(ellipse at 30% 20%, #4a1620 0%, #2b0e14 45%, #170709 100%);
+  --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "EB Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+
+/* The book page proper. In the standalone these rules are inherited from
+   :root/body; mounting the same components inside the portal needs them
+   re-established here, because the reading surface deliberately inherits
+   very little from its host (the body font, heading faces, and link/button
+   colour are all the portal would otherwise impose). */
+.book-surface {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.book-surface *,
+.book-surface *::before,
+.book-surface *::after {
+  box-sizing: border-box;
+}
+
+.book-surface h1,
+.book-surface h2,
+.book-surface h3,
+.book-surface h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+}
+
+.book-surface a {
+  color: inherit;
+}
+
+.book-surface button {
+  font-family: inherit;
+}

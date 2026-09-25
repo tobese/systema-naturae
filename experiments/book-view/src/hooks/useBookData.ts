@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef, useEffect } from "react";
-import type { BookNode, BookSkeleton, ChapterDoc, ChapterExtensions } from "../types";
-import { decorateChapter } from "../lib/decorateChapter";
+import type { BookNode, BookSkeleton, ChapterDoc, ChapterExtensions } from "@shared/book/types";
+import { decorateChapter } from "@shared/book/lib/decorateChapter";
 
 // Mirrors portal/src/hooks/useTaxonomyLoader.ts's skeleton + on-demand-fetch +
 // LRU-cache pattern, at book "chapter" (= taxonomic order) granularity. The cap

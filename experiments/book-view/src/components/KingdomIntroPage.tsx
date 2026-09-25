@@ -1,4 +1,4 @@
-import type { Kingdom } from "../types";
+import type { Kingdom } from "@shared/book/types";
 import { KINGDOM_INTROS } from "../kingdomIntros";
 
 // A dedicated "title page" for a kingdom, shown before a reader descends

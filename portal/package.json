@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && sh scripts/ensureBookData.sh && NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
     "dev:plantae": "SN_KINGDOM=plantae NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=plantae NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
     "dev:fungi": "SN_KINGDOM=fungi NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=fungi NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
     "dev:chromista": "SN_KINGDOM=chromista NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=chromista NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
     "dev:protozoa": "SN_KINGDOM=protozoa NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=protozoa NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
     "dev:archaea": "SN_KINGDOM=archaea NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=archaea NODE_OPTIONS=\"--max-old-space-size=8192\" vite",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && sh scripts/ensureBookData.sh --force && NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "build:plantae": "SN_KINGDOM=plantae NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=plantae NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "build:fungi": "SN_KINGDOM=fungi NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=fungi NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "build:chromista": "SN_KINGDOM=chromista NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=chromista NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
@@ -25,7 +25,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "playwright test",
-    "test:ui": "playwright test --ui"
+    "test:ui": "playwright test --ui",
+    "build:book": "sh scripts/ensureBookData.sh --force"
   },
   "dependencies": {
     "@types/d3": "^7.4.3",
