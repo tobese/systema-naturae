@@ -61,12 +61,14 @@ enwiki wikitext is *already* mirrored in Postgres on debbie (19M mainspace rows,
 existing `scripts/dbserved.ts` — would cover it, following redirects so
 `Pekin` → `American Pekin` the way the breed resolver needs.
 
-**Partly done.** `wikiserved` is built and deployed — see
-`services/wikiserved/README.md` — and reachable on the LAN/Tailscale at
-`debbie:9881`. Deliberately *not* wired into the browser and *not* routed
-through Caddy: the primary deployment is GitHub Pages, where the service is
-unreachable, so a public route would expose a 19M-row mirror without changing
-the primary deployment. Its clients are the enrichment workers.
+**Built, deployed, and wired into local development.** `wikiserved` runs in the
+deploy compose (`services/wikiserved/README.md`), reachable on the
+LAN/Tailscale at `debbie:9881`, and the dev server takes Wikipedia summaries
+from it via `VITE_WIKI_SUMMARY_BASE` in `portal/.env.local`. Not routed through
+Caddy and not used by deployed builds — the primary deployment is GitHub Pages,
+where it is unreachable. Remaining: point the batch enrichment scripts at it
+(§ below), and if the tree's hover portraits are ever wanted from the mirror,
+extract the infobox image from wikitext.
 
 What is left:
 

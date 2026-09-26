@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
+import { fetchWikiSummary, type WikiSummary } from "../lib/wikiSummary";
 
-interface WikiSummary {
-  extract: string;
-  thumbnail?: { source: string };
-  content_urls?: { desktop: { page: string } };
-}
+// Resolves through shared/src/lib/wikiSummary.ts, which picks the self-hosted
+// mirror (VITE_WIKI_SUMMARY_BASE, development) or the public REST API
+// (deployed builds). The summary type is re-exported so existing consumers that
+// import it from here keep working.
+export type { WikiSummary };
 
 export function useWikipediaSummary(title: string | null) {
   const [data, setData] = useState<WikiSummary | null>(null);
@@ -12,13 +13,13 @@ export function useWikipediaSummary(title: string | null) {
 
   useEffect(() => {
     if (!title) { setData(null); return; }
+    let cancelled = false;
     setLoading(true);
-    fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, "_"))}`
-    )
-      .then(r => (r.ok ? r.json() : null))
-      .then(d => { setData(d); setLoading(false); })
-      .catch(() => { setData(null); setLoading(false); });
+    fetchWikiSummary(title)
+      .then((d) => { if (!cancelled) setData(d); })
+      .catch(() => { if (!cancelled) setData(null); })
+      .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
   }, [title]);
 
   return { data, loading };
