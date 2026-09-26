@@ -10,6 +10,7 @@ import { join, dirname, resolve } from "path";
 import { fileURLToPath } from "url";
 import { FAMILY_INTROS } from "../src/familyIntros";
 import { COLLAGE_OVERRIDES } from "../src/collageOverrides";
+import { breedKey } from "../../../shared/src/book/lib/breedKey";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "../../..");
@@ -267,12 +268,17 @@ function findFamilies(order: TaxonNode, slugs: string[] | "ALL"): TaxonNode[] {
 // only the relevant entries out of the 43MB wiki-images.json sidecar rather
 // than shipping any of it to the browser. BREED display names are collected
 // too: their portraits come from the separate breed-images.json sidecar
-// (breeds are common-name keyed), merged into the same per-chapter `images`
-// map at the point of use - see `images[name]` below.
-function collectImageKeys(node: TaxonNode, out: string[]): void {
-  if (node.rank === "SPECIES" || node.rank === "BREED") out.push(node.name);
-  for (const child of node.children ?? []) collectImageKeys(child, out);
-  for (const s of node.speciesList ?? []) collectImageKeys(s, out);
+// (breeds are common-name keyed, and six names are shared by two host
+// species), merged into the same per-chapter `images` map at the point of
+// use. Breed keys are host-prefixed so "cavy-Silkie" and "chicken-Silkie"
+// stay distinct - see shared/src/book/lib/breedKey.ts, which the runtime
+// reader uses too.
+function collectImageKeys(node: TaxonNode, out: string[], host?: string): void {
+  if (node.rank === "SPECIES" && node.name) host = node.name;
+  if (node.rank === "SPECIES") out.push(node.name);
+  if (node.rank === "BREED") out.push(breedKey(host, node.name));
+  for (const child of node.children ?? []) collectImageKeys(child, out, host);
+  for (const s of node.speciesList ?? []) collectImageKeys(s, out, host);
 }
 
 interface CollageCandidate {
@@ -424,12 +430,12 @@ function main() {
 
         collectCollageCandidates(family, wikiImages, overrideNames, collageCandidates);
 
-        const speciesNames: string[] = [];
-        collectImageKeys(family, speciesNames);
-        for (const name of speciesNames) {
-          const entry = wikiImages[name] ?? breedImages[name];
+        const imageKeys: string[] = [];
+        collectImageKeys(family, imageKeys);
+        for (const key of imageKeys) {
+          const entry = wikiImages[key] ?? breedImages[key];
           if (!entry?.image && !entry?.iucnStatus) continue;
-          images[name] = {
+          images[key] = {
             ...(entry.image ? { imageUrl: toThumb(entry.image) } : {}),
             ...(entry.iucnStatus ? { iucnStatus: entry.iucnStatus } : {}),
           };

@@ -480,9 +480,9 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
-      {(extract || node.description) && (
+      {(node.description || extract) && (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
-          {extract ? extract.replace(/\(listen\)/g,'') : node.description}
+          {node.description ?? extract!.replace(/\(listen\)/g, '')}
         </p>
       )}
 
@@ -584,7 +584,11 @@ function SubspeciesPanel({ node }: { node: TaxonNode }) {
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
-      {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
+      {(node.description || extract) && (
+        <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
+          {node.description ?? extract}
+        </p>
+      )}
       {wikiUrl && (
         <div style={{ marginTop: 16 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>Links</div>
@@ -711,7 +715,11 @@ function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSele
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 2 }}>{node.name}</div>
       {node.lineage && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.lineage}</div>}
       <FadingImage src={wiki?.thumbnail?.source} alt={node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
-      {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
+      {(node.description || extract) && (
+        <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
+          {node.description ?? extract}
+        </p>
+      )}
       {parents.length > 0 && (
         <div style={{ marginTop: 16 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 8 }}>Parent species</div>

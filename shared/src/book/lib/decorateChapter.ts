@@ -1,5 +1,6 @@
 import type { BookNode, ChapterDoc, ChapterExtensions } from "../types";
 import { synonymTarget } from "./synonyms";
+import { breedKey } from "./breedKey";
 
 // Some enrichFromWikipedia.ts extracts are corrupted leftover MediaWiki
 // markup instead of real prose - category links, raw infobox templates
@@ -14,12 +15,16 @@ function isCorrupted(description: string): boolean {
   return CORRUPTION_MARKERS.some((m) => description.includes(m));
 }
 
-function decorateNode(node: BookNode, extensions: ChapterExtensions): void {
+function decorateNode(node: BookNode, extensions: ChapterExtensions, host?: string): void {
   if (node.description && isCorrupted(node.description)) {
     node.description = undefined;
   }
+  // A breed's portrait is keyed by host species as well as name, so it is
+  // tracked down the walk rather than read off the node - see lib/breedKey.ts.
+  if (node.rank === "SPECIES" && node.name) host = node.name;
   if (node.rank === "SPECIES" || node.rank === "BREED") {
-    const image = extensions.images[node.name];
+    const key = node.rank === "BREED" ? breedKey(host, node.name) : node.name;
+    const image = extensions.images[key];
     // Synonym stubs (e.g. "Felis lanea") carry no portrait under their own
     // name but their description is the accepted species' - reuse that
     // species' image + status so the row isn't a text-only orphan.
@@ -34,8 +39,8 @@ function decorateNode(node: BookNode, extensions: ChapterExtensions): void {
     const intro = extensions.familyDescriptions[node.familySlug];
     if (intro) node.description = intro;
   }
-  for (const child of node.children ?? []) decorateNode(child, extensions);
-  for (const s of node.speciesList ?? []) decorateNode(s, extensions);
+  for (const child of node.children ?? []) decorateNode(child, extensions, host);
+  for (const s of node.speciesList ?? []) decorateNode(s, extensions, host);
 }
 
 // Finds every FAMILY node in the order tree, honoring includeFamilySlugs

@@ -178,17 +178,20 @@ produced, rather than from a name search. It:
   `Special:FilePath?width=N`, so the book's hover preview and lightbox could not
   resize them.
 
-**Residual limitation, not fixed:** `breed-images.json` is keyed by breed display
-name, and 6 names are shared by two host species — `Abyssinian` (cat/cavy),
-`Hampshire` (sheep/pig), `Hereford` (cattle/pig), `Rex` (rabbit/cavy), `Silkie`
-(chicken/cavy), `Texel` (sheep/cavy). One name key cannot hold both, so each
-pair shares a single portrait. Five land on a defensible subject; `Hereford`
-resolves to a boar rather than the Hereford cow, since `Sus scrofa domesticus`
-sorts after `Bos taurus`. Fixing it properly needs a species-qualified key,
-which would mean changing the sidecar's schema and the book's lookup in
-`extractSlice.ts` and `decorateChapter.ts`. Guard added in the meantime so a
-list-only breed can never delete a portrait another species legitimately set —
-which is how the cavy `Rex` was briefly deleting the rabbit `Rex`'s photo.
+**The name collisions are now fixed too.** `breed-images.json` and the book's
+per-chapter `images` map are keyed by host species as well as breed name
+(`cat-Abyssinian`, `cavy-Abyssinian`, `cattle-Hereford`, `pig-Hereford`,
+`rabbit-Rex`, `chicken-Silkie`, …), so all 6 pairs are distinct and each holds
+its own animal — `cattle-Hereford` gets the cow that `pig-Hereford` never
+showed. The key is derived in one place, `shared/src/book/lib/breedKey.ts`, and
+mirrored in `scripts/enrichBreedsFromWikipedia.py`; the generator
+(`extractSlice.ts`) and the runtime reader (`decorateChapter.ts`) both go
+through it, and `fetchBreedImages.mjs` — the name-search tool that caused the
+wrong portraits in the first place — now refuses to run.
+
+The host *species* is the discriminator rather than the family, because caprinae
+holds both sheep and goats and anatidae both ducks and geese, so no per-family
+animal word can be correct.
 
 Also fixed along the way: the resolution table had `pig Hampshire` pinned to
 `Hampshire Down`, the *sheep's* article, so the pig breed was taking the
@@ -202,15 +205,13 @@ call about the book's structure, not a defect.
 ## Follow-ups not done here
 
 - **Phylum level in the book** → `BACKLOG.md`.
-- **The graph prefers a live Wikipedia extract over stored prose at several
-  ranks.** `FamilyPanel` was one (now fixed); `SpeciesPanel` still does
-  (`extract || node.description`, i.e. live first), as do `SubspeciesPanel` and
-  `HybridPanel`. So for species the graph largely ignores the enrichment
-  pipeline's stored `description` and shows whatever Wikipedia returns *now*,
-  while the book shows the stored text. `GenusPanel` and `BreedPanel` read the
-  stored description. Deliberate? Probably accidental, and it is a much larger
-  behavioural change than the family fix, so it is reported rather than changed
-  here.
+- ~~**The graph prefers a live Wikipedia extract over stored prose at several
+  ranks.**~~ **Fixed.** Every panel that renders prose — species, subspecies,
+  hybrid, family, breed — now prefers the stored `description` and keeps the
+  live fetch only as a fallback, so the graph and the book read the same text.
+  The fallback is still doing a lot of work (809k species, 849 subspecies, 4
+  hybrids, 4,182 families have no stored text); backfilling that is in
+  `BACKLOG.md`.
 - The graph has no equivalent of the book's synonym tagging, `chapterStats`
   prose, or stub rollups. Asymmetric, but each is a deliberate book-side
   reading affordance rather than a defect.
