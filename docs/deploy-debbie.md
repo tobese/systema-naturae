@@ -24,6 +24,35 @@ Companion files at repo root: `.dockerignore` (excludes `.git`,
 `unified-taxonomy*.json`), `nginx.conf`, and a `docker-compose.yml` for local
 testing (`docker compose up --build`, served at `localhost:8080`).
 
+## Services in the deploy compose
+
+`/home/agent/gcloud-vm/docker-compose.yml` runs `ghost`, `periodic-table`,
+`web`, `systema-naturae`, `swegov-web`, `blackcatstudio`, `caddy`,
+`cloudflared`, and **`wikiserved`** (added 2026-09-26).
+
+`wikiserved` serves English Wikipedia text from the `EnWikiPages` wikitext
+mirror in the `postgres_snedtankt_debbie` database, so the portal's live-summary
+fallback can be served locally instead of from `en.wikipedia.org`. It is a
+compose service rather than a standalone process for the same reason the others
+are: Caddy is the only public ingress, and being on the compose network also puts
+it on the LAN/Tailscale for the enrichment workers. It has **no Caddy route** on
+purpose — see `services/wikiserved/README.md` for why.
+
+```bash
+ssh debbie 'cd ~/systema-naturae && DOCKER_BUILDKIT=0 docker build -t wikiserved:latest services/wikiserved'
+ssh debbie 'cd ~/gcloud-vm && docker compose up -d wikiserved'
+ssh debbie 'curl -s http://192.168.0.100:9881/health'
+```
+
+The mirror's credentials live in `/home/agent/gcloud-vm/.env` as
+`WIKI_PG_DSN` (mode 600), the same convention as `SWEGOV_DATABASE_URL` — not in
+the compose file.
+
+Note: the compose version on the box is **v5.1.0**, not the 0.13.1 the notes
+below assume; the `docker compose build`/buildx caveat no longer applies, but
+`DOCKER_BUILDKIT=0 docker build` + `compose up --no-build` is still the path
+that works for `systema-naturae`.
+
 ## Layout on Debbie
 
 Owned by the `agent` user (`/home/agent`, mode `700` — `tommy` needs `sudo`

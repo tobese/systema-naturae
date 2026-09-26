@@ -45,7 +45,16 @@ software.
 
 ## What to do instead
 
-### 1. `wikiserved` — a lookup service over `EnWikiPages` (the actual win)
+### 1. `wikiserved` — a lookup service over `EnWikiPages` (the actual win) — **DONE**
+
+Built and deployed: [`services/wikiserved/`](../services/wikiserved/README.md).
+Runs in the deploy compose (`gcloud-vm/docker-compose.yml`) rather than
+standalone, because debbie's only public ingress is Caddy via the tunnel and
+everything reachable from outside is a compose service behind it. It reaches the
+mirror through `host.docker.internal:5433` (the `postgres_snedtankt_debbie`
+project, published on the host), with the DSN in `.env` alongside
+`SWEGOV_DATABASE_URL`. Live at `:9881` on LAN/Tailscale; **no Caddy route, on
+purpose** — see below.
 
 The repo already has this pattern for the plant mirror:
 `scripts/dbserved.ts` loads a DB once and serves batched lookups over HTTP so
@@ -70,10 +79,25 @@ GET  /health   → { ok, rows, version }
   so images stay on Wikidata P18 / the REST API. That is fine — it is the long
   prose that the 809k-species fallback is paying network round-trips for.
 
-Then point `shared/src/hooks/useWikipediaSummary.ts` at it, with the public REST
-API as a fallback for when debbie is unreachable. That is the change that makes
-the graph's "prefer stored prose" work pay off: once storage covers a rank, the
-fallback stops firing and the graph and the book cannot disagree.
+**Not wired into the browser, deliberately.** The *primary* deployment is GitHub
+Pages, where this service is unreachable, so pointing the client hooks at it
+would only affect the secondary Debbie build — while putting a 19M-row mirror on
+the public domain to get there. So the REST fallback stays where it is and the
+service's clients are the enrichment workers.
+
+Worth knowing before that is revisited: the browser's largest live-Wikipedia load
+is not the panels but `shared/src/components/FamilyTree.tsx`, which fetches
+summaries directly in three places, on node hover. `EponymModal` uses a
+different endpoint (`action=query`). All of them would need to move behind one
+base-URL-configurable helper for a public route to be worth adding — and the
+mirror is a 2026-06-01 snapshot, so the browser would get *older* text than the
+live API. A rate-limit win, not a freshness one.
+
+What did pay off immediately: the service made the shape of the client work
+obvious, and it is a usable target for the backfill. Measured cold on that box:
+0.26 s for one key, 12.4 s for 200 (~17 keys/s), and ~0 s for anything it has
+already served. That last number is why a browser client would feel fine while a
+809k-species backfill should keep hitting Postgres directly (~13 h over HTTP).
 
 ### 2. svwiki MediaWiki, if a real wiki is wanted
 

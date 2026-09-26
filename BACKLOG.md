@@ -61,6 +61,29 @@ enwiki wikitext is *already* mirrored in Postgres on debbie (19M mainspace rows,
 existing `scripts/dbserved.ts` — would cover it, following redirects so
 `Pekin` → `American Pekin` the way the breed resolver needs.
 
+**Partly done.** `wikiserved` is built and deployed — see
+`services/wikiserved/README.md` — and reachable on the LAN/Tailscale at
+`debbie:9881`. Deliberately *not* wired into the browser and *not* routed
+through Caddy: the primary deployment is GitHub Pages, where the service is
+unreachable, so a public route would expose a 19M-row mirror without changing
+the primary deployment. Its clients are the enrichment workers.
+
+What is left:
+
+- Point the batch enrichment scripts at it. Measured cold on that box it does
+  ~17 keys/s (0.26 s for one key, 12.4 s for 200, ~0 s for anything already
+  served), so a full 809k-species backfill over HTTP would be ~13 hours — fine
+  for incremental passes, too slow for the initial one, which should keep
+  hitting Postgres directly.
+- The 809k-species / 4,182-family / 849-subspecies / 4-hybrid backfill itself
+  (see the item above).
+- If the browser should ever use it: `useWikipediaSummary` plus the three direct
+  fetches in `shared/src/components/FamilyTree.tsx` (the real volume — it fires
+  on node hover) and `EponymModal`'s `action=query` all need to move behind one
+  base-URL-configurable helper, *and* that needs a Caddy route and a decision
+  about public exposure. Note the mirror is a 2026-06-01 snapshot, so the browser
+  would get older text than the live API — a rate-limit win, not a freshness one.
+
 Plan, including why running MediaWiki for enwiki is the wrong answer on that box
 and why svwiki is the one case where it is not:
 `docs/wiki-on-debbie-plan.md`.
