@@ -327,9 +327,10 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
           </div>
         </div>
       )}
-      {wiki?.extract && (
+      {(node.description || wiki?.extract) && (
         <div style={{ fontSize: 12, color: "#666", lineHeight: 1.7, marginBottom: 20 }}>
-          {wiki.extract.slice(0, 320)}{wiki.extract.length > 320 ? "…" : ""}
+          {(node.description ?? wiki!.extract).slice(0, 320)}
+          {(node.description ?? wiki!.extract).length > 320 ? "…" : ""}
         </div>
       )}
       {pn.appSlug && (
