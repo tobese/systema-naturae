@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { DUCK_BREEDS, GOOSE_BREEDS, DUCK_GROUPS, GOOSE_GROUPS } from "../src/data/breeds.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
 const COL_API = "https://api.checklistbank.org";
@@ -291,38 +290,6 @@ function injectDomesticGoose(tree: TaxonNode): void {
   console.log("Injected domestic goose into Anser");
 }
 
-function injectDuckBreeds(tree: TaxonNode): void {
-  const duckNode = findNode(tree, n => n.id === DOMESTIC_DUCK_ID);
-  if (!duckNode) { console.warn("Domestic duck not found"); return; }
-  duckNode.children = DUCK_GROUPS.map(group => ({
-    id: `duck-breed-group-${group.toLowerCase().replace(/ /g, "-")}`,
-    name: group,
-    rank: "BREED_GROUP",
-    lineage: "Dabbling Duck",
-    children: DUCK_BREEDS
-      .filter(b => b.group === group)
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(b => ({ id: b.id, name: b.name, rank: "BREED", origin: b.origin, lineage: "Dabbling Duck" })),
-  }));
-  console.log(`Injected ${DUCK_BREEDS.length} duck breeds`);
-}
-
-function injectGooseBreeds(tree: TaxonNode): void {
-  const gooseNode = findNode(tree, n => n.id === DOMESTIC_GOOSE_ID);
-  if (!gooseNode) { console.warn("Domestic goose not found"); return; }
-  gooseNode.children = GOOSE_GROUPS.map(group => ({
-    id: `goose-breed-group-${group.toLowerCase()}`,
-    name: group,
-    rank: "BREED_GROUP",
-    lineage: "Goose",
-    children: GOOSE_BREEDS
-      .filter(b => b.group === group)
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(b => ({ id: b.id, name: b.name, rank: "BREED", origin: b.origin, lineage: "Goose" })),
-  }));
-  console.log(`Injected ${GOOSE_BREEDS.length} goose breeds`);
-}
-
 function injectRanges(tree: TaxonNode): void {
   let count = 0;
   function walk(node: TaxonNode): void {
@@ -345,8 +312,6 @@ async function main() {
   const tree = buildTree(records, ANATIDAE_ID);
   injectDomesticDuck(tree);
   injectDomesticGoose(tree);
-  injectDuckBreeds(tree);
-  injectGooseBreeds(tree);
   injectRanges(tree);
 
   const leaves = countLeaves(tree);

@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { SHEEP_BREEDS, GOAT_BREEDS, SHEEP_GROUPS, GOAT_GROUPS } from "../src/data/breeds.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
 const COL_API = "https://api.checklistbank.org";
@@ -323,64 +322,6 @@ function injectDomesticGoat(tree: TaxonNode): void {
   console.log("Injected domestic goat node into Capra genus");
 }
 
-function injectSheepBreeds(tree: TaxonNode): void {
-  const sheepNode = findNode(tree, n => n.id === DOMESTIC_SHEEP_ID);
-  if (!sheepNode) {
-    console.warn("Domestic sheep node not found — skipping sheep breed injection");
-    return;
-  }
-
-  sheepNode.children = SHEEP_GROUPS.map(group => {
-    const groupBreeds = SHEEP_BREEDS.filter(b => b.group === group);
-    return {
-      id: `sheep-breed-group-${group.toLowerCase()}`,
-      name: group,
-      rank: "BREED_GROUP",
-      lineage: "Sheep",
-      children: groupBreeds
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(b => ({
-          id: b.id,
-          name: b.name,
-          rank: "BREED",
-          origin: b.origin,
-          lineage: "Sheep",
-        })),
-    };
-  });
-
-  console.log(`Injected ${SHEEP_BREEDS.length} sheep breeds in ${SHEEP_GROUPS.length} groups`);
-}
-
-function injectGoatBreeds(tree: TaxonNode): void {
-  const goatNode = findNode(tree, n => n.id === DOMESTIC_GOAT_ID);
-  if (!goatNode) {
-    console.warn("Domestic goat node not found — skipping goat breed injection");
-    return;
-  }
-
-  goatNode.children = GOAT_GROUPS.map(group => {
-    const groupBreeds = GOAT_BREEDS.filter(b => b.group === group);
-    return {
-      id: `goat-breed-group-${group.toLowerCase()}`,
-      name: group,
-      rank: "BREED_GROUP",
-      lineage: "Goat",
-      children: groupBreeds
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(b => ({
-          id: b.id,
-          name: b.name,
-          rank: "BREED",
-          origin: b.origin,
-          lineage: "Goat",
-        })),
-    };
-  });
-
-  console.log(`Injected ${GOAT_BREEDS.length} goat breeds in ${GOAT_GROUPS.length} groups`);
-}
-
 function injectRanges(tree: TaxonNode): void {
   let count = 0;
   function walk(node: TaxonNode): void {
@@ -404,8 +345,6 @@ async function main() {
   const tree = buildTree(records, CAPRINAE_ID);
   injectDomesticSheep(tree);
   injectDomesticGoat(tree);
-  injectSheepBreeds(tree);
-  injectGoatBreeds(tree);
   injectRanges(tree);
 
   const leaves = countLeaves(tree);

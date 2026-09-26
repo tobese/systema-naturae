@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { BREEDS, DISCIPLINE_GROUPS } from "../src/data/breeds.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
 const COL_API = "https://api.checklistbank.org";
@@ -264,43 +263,6 @@ function injectDomesticHorse(tree: TaxonNode): void {
   console.log("Injected domestic horse node into Equus genus");
 }
 
-function injectBreeds(tree: TaxonNode): void {
-  function findNode(node: TaxonNode, id: string): TaxonNode | undefined {
-    if (node.id === id) return node;
-    for (const child of node.children ?? []) {
-      const found = findNode(child, id);
-      if (found) return found;
-    }
-  }
-
-  const horseNode = findNode(tree, DOMESTIC_HORSE_ID);
-  if (!horseNode) {
-    console.warn("Domestic horse node not found — skipping breed injection");
-    return;
-  }
-
-  horseNode.children = DISCIPLINE_GROUPS.map(group => {
-    const groupBreeds = BREEDS.filter(b => b.group === group);
-    return {
-      id: `breed-group-${group.toLowerCase()}`,
-      name: group,
-      rank: "BREED_GROUP",
-      lineage: "Horse",
-      children: groupBreeds
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(b => ({
-          id: b.id,
-          name: b.name,
-          rank: "BREED",
-          origin: b.origin,
-          lineage: "Horse",
-        })),
-    };
-  });
-
-  console.log(`Injected ${BREEDS.length} breeds in ${DISCIPLINE_GROUPS.length} discipline groups under domestic horse`);
-}
-
 function injectHybrids(tree: TaxonNode): void {
   // Find IDs for Equus africanus and Equus quagga
   function findNode(node: TaxonNode, predicate: (n: TaxonNode) => boolean): TaxonNode | undefined {
@@ -384,7 +346,6 @@ async function main() {
 
   const tree = buildTree(records, EQUIDAE_ID);
   injectDomesticHorse(tree);
-  injectBreeds(tree);
   injectHybrids(tree);
   injectRanges(tree);
 

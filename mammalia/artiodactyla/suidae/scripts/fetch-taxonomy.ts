@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { PIG_BREEDS, PIG_GROUPS } from "../src/data/breeds.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
 const COL_API = "https://api.checklistbank.org";
@@ -262,35 +261,6 @@ function injectDomesticPig(tree: TaxonNode): void {
   console.log("Injected domestic pig node into Sus genus");
 }
 
-function injectPigBreeds(tree: TaxonNode): void {
-  const pigNode = findNode(tree, n => n.id === DOMESTIC_PIG_ID);
-  if (!pigNode) {
-    console.warn("Domestic pig node not found — skipping breed injection");
-    return;
-  }
-
-  pigNode.children = PIG_GROUPS.map(group => {
-    const groupBreeds = PIG_BREEDS.filter(b => b.group === group);
-    return {
-      id: `pig-breed-group-${group.toLowerCase()}`,
-      name: group,
-      rank: "BREED_GROUP",
-      lineage: "Pig",
-      children: groupBreeds
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(b => ({
-          id: b.id,
-          name: b.name,
-          rank: "BREED",
-          origin: b.origin,
-          lineage: "Pig",
-        })),
-    };
-  });
-
-  console.log(`Injected ${PIG_BREEDS.length} pig breeds in ${PIG_GROUPS.length} groups`);
-}
-
 function injectRanges(tree: TaxonNode): void {
   let count = 0;
   function walk(node: TaxonNode): void {
@@ -312,7 +282,6 @@ async function main() {
 
   const tree = buildTree(records, SUIDAE_ID);
   injectDomesticPig(tree);
-  injectPigBreeds(tree);
   injectRanges(tree);
 
   const leaves = countLeaves(tree);

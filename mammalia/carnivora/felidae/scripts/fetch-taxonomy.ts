@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { BREEDS, REGIONS } from "../src/data/breeds.js";
 import { HYBRIDS } from "../src/data/hybrids.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
@@ -277,45 +276,6 @@ function countLeaves(node: TaxonNode): number {
 
 const FELIS_CATUS_ID = "3DXV3";
 
-function injectBreeds(tree: TaxonNode): void {
-  function findNode(node: TaxonNode, id: string): TaxonNode | undefined {
-    if (node.id === id) return node;
-    for (const child of node.children ?? []) {
-      const found = findNode(child, id);
-      if (found) return found;
-    }
-  }
-
-  const felisCatus = findNode(tree, FELIS_CATUS_ID);
-  if (!felisCatus) {
-    console.warn("Felis catus node not found — skipping breed injection");
-    return;
-  }
-
-  felisCatus.children = REGIONS.map(region => {
-    const regionBreeds = BREEDS.filter(b => b.region === region);
-    return {
-      id: `breed-group-${region.toLowerCase().replace(/[^a-z]/g, "-")}`,
-      name: region,
-      rank: "BREED_GROUP",
-      lineage: "Domestic cat",
-      children: regionBreeds
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(b => ({
-          id: b.id,
-          name: b.name,
-          rank: "BREED",
-          origin: b.origin,
-          lineage: "Domestic cat",
-          coatType: b.coatType,
-          ...(b.wildParentId && { wildParentId: b.wildParentId, wildParentName: b.wildParentName }),
-        })),
-    };
-  });
-
-  console.log(`Injected ${BREEDS.length} breeds in ${REGIONS.length} regional groups under Felis catus`);
-}
-
 function injectHybrids(tree: TaxonNode): void {
   const hybridGroup: TaxonNode = {
     id: "hybrids-group",
@@ -354,7 +314,6 @@ async function main() {
   console.log(`Fetched ${records.length} records total`);
 
   const tree = buildTree(records);
-  injectBreeds(tree);
   injectHybrids(tree);
   injectRanges(tree);
 

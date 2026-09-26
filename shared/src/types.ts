@@ -16,6 +16,10 @@ export interface TaxonNode {
   className?: string;
   orderName?: string;
   description?: string;
+  /** Canonical en.wikipedia article title when it differs from `name` (breeds
+   *  especially: "Persian" is the people, "Siamese" the language). Lets the UI
+   *  look up and link the right article instead of guessing from the name. */
+  wikipediaTitle?: string;
   /** Native geographic range as curated text (e.g. from POWO taxonRemarks),
    *  e.g. "E. Bolivia to WC. Brazil and N. Argentina". */
   distribution?: string;
