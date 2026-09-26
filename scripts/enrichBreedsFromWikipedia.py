@@ -44,6 +44,7 @@ import json
 import os
 import re
 import sys
+import time
 from glob import glob
 
 DEFAULT_DSN = (
@@ -98,7 +99,7 @@ CURATED = {
     "pig Berkshire":           "Berkshire pig",
     "pig Landrace":            "Danish Landrace pig",
     "pig Mangalitsa":          "Mangalica",
-    "pig Hampshire":           "Hampshire Down",
+    "pig Hampshire":           "Hampshire pig",
     "pig Belgian Draft":       "American Belgian Draft",
     "pig Brahman":             "American Brahman",
     "pig Juliana":             ("List of pig breeds", "Juliana"),
@@ -601,6 +602,208 @@ def qid_titles(cur, qids):
 
 # -------------------------------------------------------------------- main ---
 
+# ------------------------------------------------------------- portraits ----
+# shared/data/breed-images.json is the book's ONLY portrait source for breeds
+# (the graph instead fetches live from the REST API). It was originally built by
+# experiments/book-view/scripts/fetchBreedImages.mjs, which resolves breeds by
+# NAME through Wikidata search - fine for a sidecar, but it lands on the wrong
+# entity whenever a breed name is also a place or a person, and a wrong entity
+# that happens to carry an image sticks. "Alpine" (a goat) resolved to Q661540,
+# the city of Alpine, Texas, and took a photograph of the town with it.
+#
+# Here the article comes from the validated resolution above instead, so the
+# portrait is whatever that breed's own article leads with.
+
+# A breed with no article of its own redirects into one of these, so the title
+# after redirect-following is what identifies the case. A pinned section alone
+# is not enough: "American guinea pig" and "Teddy guinea pig" both land on
+# "List of guinea pig breeds" without ever being written as a section.
+LIST_PAGE = re.compile(r"^List of .+ breeds$", re.I)
+
+UA = ("SystemaNaturaeDev/1.0 (https://github.com/tobese/systema-naturae; "
+      "breed-portrait backfill)")
+
+COMMONS_HOSTS = ("upload.wikimedia.org", "thumb.wikimedia.org",
+                 "commons.wikimedia.org", "en.wikipedia.org")
+
+
+def commons_filename(url):
+    """Reduce a Wikimedia image URL to the bare Commons filename the book wants.
+
+    The sidecar convention is a bare filename: extractSlice's toThumb() wraps it
+    in Special:FilePath?width=N, and SpeciesEntry's withWidth() rewrites that
+    width to 400 for the hover preview and 1600 for the lightbox. An absolute
+    upload.wikimedia.org URL bypasses both - it serves one fixed size, and the
+    ?utm_source=... tracking query the REST API appends is not a width= param,
+    so withWidth cannot upgrade it.
+    """
+    if not url or not url.startswith("http"):
+        return url
+    if not any(h in url for h in COMMONS_HOSTS):
+        return url
+    from urllib.parse import unquote
+    path = url.split("?", 1)[0]
+    name = path.rsplit("/", 1)[-1]
+    if "/thumb/" in path:                    # .../thumb/a/ab/X.jpg/380px-X.jpg
+        if re.match(r"^\d+px-", name):
+            name = name.split("-", 1)[1]
+    return unquote(name)
+
+
+def qid_for_title(cur, title):
+    cur.execute(
+        'SELECT "Qid" FROM "EnWikiPagesQid" q JOIN "EnWikiPages" p USING ("PageId") '
+        'WHERE lower(p."Title") = lower(%s)', (title,))
+    row = cur.fetchone()
+    return row[0] if row else None
+
+
+def wikidata_p18(qid):
+    """P18 (depicted image) for a Wikidata item, as a bare Commons filename.
+
+    The REST summary only carries the article's *lead* image and plenty of breed
+    articles have none - "Alpine goat" is one. P18 is the item's canonical
+    picture regardless of where the article places it.
+    """
+    import urllib.request
+    try:
+        req = urllib.request.Request(
+            f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json",
+            headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=25) as r:
+            ent = json.loads(r.read())["entities"][qid]
+    except Exception:
+        return None
+    for claim in ent.get("claims", {}).get("P18", []):
+        value = (claim.get("mainsnak") or {}).get("datavalue") or {}
+        if isinstance(value.get("value"), str) and value["value"]:
+            return value["value"]
+    return None
+
+
+def wiki_summary(title):
+    import urllib.parse
+    import urllib.request
+    url = ("https://en.wikipedia.org/api/rest_v1/page/summary/"
+           + urllib.parse.quote(title.replace(" ", "_")))
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return json.loads(r.read())
+    except Exception:
+        return None
+
+
+def write_portraits(args, meta, pages, cur):
+    start = time.time()
+    path = os.path.join(args.root, "shared/data/breed-images.json")
+    current = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+
+    # (species, name) -> (validated article title, is-a-list-page)
+    resolved = {}
+    for key, info in meta.items():
+        species, name = key
+        host_noun = host_key(species)
+        for title, section in candidate_titles(name, host_noun, None):
+            rec = pages.get(title.lower())
+            if not rec or "text" not in rec:
+                continue
+            paras = lead_paragraphs(rec["text"], section)
+            if not paras:
+                continue
+            from_list = bool(section) or bool(LIST_PAGE.match(rec["title"]))
+            if not looks_like_breed(paras, host_of(species)[0], from_list=from_list):
+                continue
+            resolved[key] = (rec["title"], from_list)
+            break
+
+    redo = {n.strip() for n in (args.redo_portraits or "").split(",") if n.strip()}
+    todo, list_only = [], []
+    for key, (title, from_list) in sorted(resolved.items()):
+        name = key[1]
+        have = (current.get(name) or {}).get("image")
+        if from_list:
+            # The breed has no article of its own; its prose - and any lead
+            # image - lives inside a "List of <host> breeds" page, and that
+            # image belongs to some *other* breed on the list. Attaching it
+            # would put a photo of the wrong animal on the row.
+            list_only.append(name)
+            continue
+        if args.force or name in redo or not have:
+            todo.append((key, title))
+    print(f"portraits: {len(resolved)} breeds resolved to an article; "
+          f"{len(todo)} to fetch, {len(list_only)} documented only inside a list "
+          f"page (no portrait attached)")
+
+    out = dict(current)
+    added = changed = dropped = normalised = 0
+    for name, entry in out.items():
+        raw = entry.get("image")
+        if raw and raw.startswith("http"):
+            fn = commons_filename(raw)
+            if fn != raw:
+                out[name] = {**entry, "image": fn}
+                normalised += 1
+    # Six breed display names are shared by two host species ("Rex" is a rabbit
+    # and a cavy, "Silkie" a chicken and a cavy, "Abyssinian" a cat and a cavy,
+    # "Hampshire"/"Hereford" sheep-or-pig vs cattle-or-pig, "Texel" sheep and
+    # cavy) and this sidecar is keyed by name alone, so one of each pair writes
+    # over the other. A list-only breed must therefore never drop a portrait
+    # that a *different* species legitimately resolved - that is how the cavy
+    # Rex ended up deleting the rabbit Rex's photo.
+    name_keyed = {name for (_sp, name), (_t, from_list) in resolved.items() if not from_list}
+    for name in list_only:
+        if name in name_keyed:
+            print(f"    keeping {name!r}: also a non-list breed of another species, "
+                  f"one name key cannot hold both")
+            continue
+        if (out.get(name) or {}).get("image"):
+            out[name] = {k: v for k, v in out[name].items() if k != "image"}
+            dropped += 1
+
+    for i, (key, title) in enumerate(todo, 1):
+        name = key[1]
+        j = wiki_summary(title)
+        img = commons_filename(((j or {}).get("originalimage") or {}).get("source")
+                               or ((j or {}).get("thumbnail") or {}).get("source"))
+        # The mirror's own QID for this article wins over the one the REST
+        # summary reports: for "Alpine goat" the summary answers Q141438738,
+        # which carries no P18, while the mirror's Q2840092 is the goat breed
+        # and has the picture.
+        qid = qid_for_title(cur, title) or (j or {}).get("wikibase_item")
+        if not img:
+            # No lead image on the article: fall back to the Wikidata item's P18
+            # before concluding there is no portrait at all.
+            img = commons_filename(wikidata_p18(qid)) if qid else None
+            if img:
+                print(f"    {name}: no lead image, took P18 {img}")
+        if img:
+            was = (current.get(name) or {}).get("image")
+            out[name] = {k: v for k, v in {"qid": qid, "image": img}.items() if v}
+            if not was:
+                added += 1
+            elif was != img:
+                changed += 1
+        elif (args.force or name in redo) and (out.get(name) or {}).get("image"):
+            # Re-fetched, and the validated article has no lead image and no
+            # P18, so whatever is stored cannot be verified against it. Drop it
+            # rather than keep an unverifiable picture.
+            out[name] = {k: v for k, v in out[name].items() if k != "image"}
+            dropped += 1
+            print(f"    dropped unverifiable portrait for {name!r}")
+        if i % 15 == 0 or i == len(todo):
+            el = time.time() - start
+            print(f"  {i}/{len(todo)} {100*i/len(todo):.0f}% elapsed {el:.0f}s "
+                  f"eta {(el/i)*(len(todo)-i):.0f}s")
+        time.sleep(0.25)
+
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write(json.dumps(dict(sorted(out.items())), indent=2, ensure_ascii=False) + "\n")
+    print(f"wrote {path}: +{added} new, {changed} changed, {dropped} misleading or "
+          f"unverifiable portrait(s) dropped, {normalised} URL(s) normalised to a "
+          f"bare Commons filename")
+
+
 def main():
     ap = argparse.ArgumentParser()
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -613,6 +816,12 @@ def main():
     ap.add_argument("--force", action="store_true",
                     help="re-extract breeds that already have a description")
     ap.add_argument("--out", default="/tmp/breed-leads.json")
+    ap.add_argument("--portraits", action="store_true",
+                    help="fill shared/data/breed-images.json from the validated "
+                         "article titles (the book's only portrait source for breeds)")
+    ap.add_argument("--redo-portraits", default="",
+                    help="comma-separated breed names to re-fetch even when they "
+                         "already have a portrait (for ones known to be wrong)")
     args = ap.parse_args()
 
     inv = collect_breeds(args.root)
@@ -685,6 +894,10 @@ def main():
     print(f"resolved {len(result)}; unresolved {len(unresolved)}")
     for s, n in unresolved:
         print(f"  UNRESOLVED {n} (under {s})")
+
+    if args.portraits:
+        write_portraits(args, meta, pages, cur)
+        return
 
     if args.resolve_only:
         for k, v in sorted(result.items()):
