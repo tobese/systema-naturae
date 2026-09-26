@@ -6,8 +6,22 @@
 // separate. The book's extractSlice.ts reads it and merges breed portraits into
 // the same per-chapter `images` map as species portraits.
 //
-// Run (re-runnable - skips names already resolved):
-//   node experiments/book-view/scripts/fetchBreedImages.mjs
+// SUPERSEDED - do not run this. It resolves breeds by NAME through Wikidata
+// search, which lands on the wrong entity whenever a breed name is also a place
+// or a person, and a wrong entity that happened to carry an image stuck: Alpine
+// (a goat) got the city of Alpine, Texas; Duroc a Paris metro station; Chinese a
+// language icon; African a swine-fever micrograph. It also keys the sidecar by
+// bare display name, so six names shared by two host species (Abyssinian cat and
+// cavy, Hampshire sheep and pig, Hereford cattle and pig, Rex rabbit and cavy,
+// Silkie chicken and cavy, Texel sheep and cavy) could only ever hold one of each
+// pair.
+//
+// The replacement is scripts/enrichBreedsFromWikipedia.py --portraits, which
+// reuses the validated article resolution and keys entries by host species
+// ("cat-Persian", "cavy-Silkie"). See shared/src/book/lib/breedKey.ts.
+//
+// Kept for reference only; running it would rewrite the sidecar in the old
+// bare-name format and reintroduce every one of those bugs.
 import { readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -174,6 +188,15 @@ async function resolveImage(name, ctx) {
 }
 
 async function main() {
+  console.error(
+    "fetchBreedImages.mjs is superseded and will not run: it resolves breeds by\n" +
+    "name, which produced portraits of the wrong subject, and it keys the\n" +
+    "sidecar by bare display name, which collides across host species.\n" +
+    "Use:  python3 scripts/enrichBreedsFromWikipedia.py --portraits");
+  process.exit(1);
+}
+
+async function unused() {
   const distinct = new Map();
   for (const entry of collectBreeds()) {
     if (!distinct.has(entry.name)) distinct.set(entry.name, entry);

@@ -18,3 +18,36 @@ A design call, not a defect — hence here rather than fixed. Options, roughly i
 order of effort: fold phyla into the Part title/intro; make a Part per phylum and
 demote classes to chapter groupings; or leave it and accept that the book is
 class-first. Audited in `docs/graph-vs-book-parity.md`.
+
+## Backfill descriptions so the graph stops falling back to a live Wikipedia fetch
+
+`UnifiedInfoPanel` now prefers the stored `description` over a live REST summary
+at every rank that shows prose — species, subspecies, hybrid, family, breed — so
+the graph and the book read the same text, and the graph no longer shows whatever
+Wikipedia returns *today* while the book shows the stored copy.
+
+The live fetch is kept as a fallback, so nothing goes blank, but that means most
+of the tree still renders a network round-trip and the two surfaces can still
+disagree wherever storage is empty. What is missing, counted from the built order
+files across all kingdoms:
+
+| Rank | stored / total | falls back to live |
+|---|---|---|
+| SPECIES | 395,061 / 1,204,338 | 809,277 |
+| FAMILY | 3,860 / 8,042 | 4,182 |
+| SUBSPECIES | 2 / 851 | 849 |
+| GENUS | 92,967 / 93,037 | 70 |
+| ORDER | 1,047 / 1,100 | 53 |
+| BREED | 317 / 321 | 4 |
+| HYBRID | 0 / 4 | 4 |
+
+The two worst ranks are cheap and worth doing first: **849 subspecies** (only 2
+carry any text) and **4 hybrids** (none do) — a few hundred articles, not a
+project. The long tail is the 809k species, which is the same job
+`scripts/enrichFromWikipedia.ts` already does for the SQLite mirror, so the real
+work is extending that pass to the ranks it currently skips rather than anything
+new. Once storage covers a rank, drop the fallback for it.
+
+Subspecies need a trinomial-aware lookup: they are not in `wiki-images.json`
+(so `SubspeciesPanel` already falls back to the parent binomial for portraits),
+and their Wikipedia articles are rarer than species articles.

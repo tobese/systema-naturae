@@ -481,6 +481,26 @@ def host_key(species):
     return nouns[0] if nouns else None
 
 
+# Sidecar key for a breed. Mirrors shared/src/book/lib/breedKey.ts, which the
+# book uses to read the same keys - the two must agree exactly. Host-prefixed
+# because six breed display names are shared by two host species (Abyssinian
+# cat/cavy, Hampshire sheep/pig, Hereford cattle/pig, Rex rabbit/cavy, Silkie
+# chicken/cavy, Texel sheep/cavy) and a bare-name key can hold only one of each
+# pair. The host species is the discriminator, not the family: caprinae holds
+# both sheep and goats, anatidae both ducks and geese.
+BREED_KEY_TOKENS = {
+    "Felis": "cat", "Canis": "dog", "Equus": "horse", "Capra": "goat",
+    "Ovis": "sheep", "Sus": "pig", "Bos": "cattle", "Gallus": "chicken",
+    "Meleagris": "turkey", "Anas": "duck", "Anser": "goose",
+    "Columba": "pigeon", "Oryctolagus": "rabbit", "Cavia": "cavy",
+}
+
+
+def breed_key(species, name):
+    genus = (species or "").strip().split(" ")[0]
+    return f"{BREED_KEY_TOKENS.get(genus, 'unknown')}-{name}"
+
+
 def candidate_titles(name, host_noun, qid_title):
     """Ordered (title, section|None) candidates for one (species, breed)."""
     out = []
@@ -720,7 +740,8 @@ def write_portraits(args, meta, pages, cur):
     redo = {n.strip() for n in (args.redo_portraits or "").split(",") if n.strip()}
     todo, list_only = [], []
     for key, (title, from_list) in sorted(resolved.items()):
-        name = key[1]
+        species, name = key
+        name = breed_key(species, name)
         have = (current.get(name) or {}).get("image")
         if from_list:
             # The breed has no article of its own; its prose - and any lead
@@ -744,25 +765,17 @@ def write_portraits(args, meta, pages, cur):
             if fn != raw:
                 out[name] = {**entry, "image": fn}
                 normalised += 1
-    # Six breed display names are shared by two host species ("Rex" is a rabbit
-    # and a cavy, "Silkie" a chicken and a cavy, "Abyssinian" a cat and a cavy,
-    # "Hampshire"/"Hereford" sheep-or-pig vs cattle-or-pig, "Texel" sheep and
-    # cavy) and this sidecar is keyed by name alone, so one of each pair writes
-    # over the other. A list-only breed must therefore never drop a portrait
-    # that a *different* species legitimately resolved - that is how the cavy
-    # Rex ended up deleting the rabbit Rex's photo.
-    name_keyed = {name for (_sp, name), (_t, from_list) in resolved.items() if not from_list}
+    # Sidecar keys are host-prefixed, so a list-only breed can drop its own
+    # entry freely: "cavy-Rex" and "rabbit-Rex" are separate keys and the cavy
+    # can no longer delete the rabbit's portrait the way it did when both were
+    # filed under "Rex".
     for name in list_only:
-        if name in name_keyed:
-            print(f"    keeping {name!r}: also a non-list breed of another species, "
-                  f"one name key cannot hold both")
-            continue
         if (out.get(name) or {}).get("image"):
             out[name] = {k: v for k, v in out[name].items() if k != "image"}
             dropped += 1
 
     for i, (key, title) in enumerate(todo, 1):
-        name = key[1]
+        name = breed_key(key[0], key[1])
         j = wiki_summary(title)
         img = commons_filename(((j or {}).get("originalimage") or {}).get("source")
                                or ((j or {}).get("thumbnail") or {}).get("source"))
