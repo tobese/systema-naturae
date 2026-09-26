@@ -51,3 +51,16 @@ new. Once storage covers a rank, drop the fallback for it.
 Subspecies need a trinomial-aware lookup: they are not in `wiki-images.json`
 (so `SubspeciesPanel` already falls back to the parent binomial for portraits),
 and their Wikipedia articles are rarer than species articles.
+
+## Serve Wikipedia lookups from debbie instead of en.wikipedia.org
+
+Every node without a stored description currently costs a live REST call, which
+is the rate limit and the graph/book disagreement waiting to happen. The
+enwiki wikitext is *already* mirrored in Postgres on debbie (19M mainspace rows,
+38 GB), so a small HTTP lookup service in front of it — the same shape as the
+existing `scripts/dbserved.ts` — would cover it, following redirects so
+`Pekin` → `American Pekin` the way the breed resolver needs.
+
+Plan, including why running MediaWiki for enwiki is the wrong answer on that box
+and why svwiki is the one case where it is not:
+`docs/wiki-on-debbie-plan.md`.

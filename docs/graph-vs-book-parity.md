@@ -212,6 +212,8 @@ call about the book's structure, not a defect.
   The fallback is still doing a lot of work (809k species, 849 subspecies, 4
   hybrids, 4,182 families have no stored text); backfilling that is in
   `BACKLOG.md`.
+- Serving the missing prose from debbie rather than en.wikipedia.org is planned
+  in `docs/wiki-on-debbie-plan.md` and filed in `BACKLOG.md`.
 - The graph has no equivalent of the book's synonym tagging, `chapterStats`
   prose, or stub rollups. Asymmetric, but each is a deliberate book-side
   reading affordance rather than a defect.
