@@ -303,9 +303,14 @@ function SubspeciesPanel({ node }: { node: TaxonNode; onSelect: (n: TaxonNode) =
 }
 
 function BreedPanel({ node }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
-  const { data: wiki, loading } = useWikipediaSummary(node.name);
+  const { data: wiki, loading } = useWikipediaSummary(node.wikipediaTitle ?? node.name);
   const extract = wiki?.extract ?? null;
   const wikiUrl = wiki?.content_urls?.desktop?.page;
+  // Built locally so breeds whose article is a redirect or a section of a list
+  // page still link somewhere sensible when the live summary comes back empty.
+  const wikiArticleUrl = node.wikipediaTitle
+    ? `https://en.wikipedia.org/wiki/${encodeURIComponent(node.wikipediaTitle.replace(/ /g, "_"))}`
+    : null;
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
@@ -329,15 +334,19 @@ function BreedPanel({ node }: { node: TaxonNode; onSelect: (n: TaxonNode) => voi
           style={{ marginTop: 16, width: "100%", height: "auto", borderRadius: 6, display: "block" }}
         />
       )}
-      {extract && (
-        <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>
-      )}
+      {node.description
+        ? node.description.split("\n").map((para: string, i: number) => (
+            <p key={i} style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{para}</p>
+          ))
+        : extract && (
+            <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>
+          )}
 
       <div style={{ marginTop: 16 }}>
         <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>
           Links
         </div>
-        {wikiUrl && <LinkRow href={wikiUrl} label="Wikipedia" />}
+        {(wikiUrl ?? wikiArticleUrl) && <LinkRow href={wikiUrl ?? wikiArticleUrl!} label="Wikipedia" />}
         <LinkRow href="https://en.wikipedia.org/wiki/Dog" label="Domestic Dog (Wikipedia)" />
         <LinkRow href="https://www.akc.org/dog-breeds/" label="AKC Breed Listing" />
       </div>

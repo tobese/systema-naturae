@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { BREEDS, AKC_GROUPS } from "../src/data/breeds.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
 const COL_API = "https://api.checklistbank.org";
@@ -284,43 +283,6 @@ function injectDomesticDog(tree: TaxonNode): void {
   console.log("Injected domestic dog node into Canis genus");
 }
 
-function injectBreeds(tree: TaxonNode): void {
-  function findNode(node: TaxonNode, id: string): TaxonNode | undefined {
-    if (node.id === id) return node;
-    for (const child of node.children ?? []) {
-      const found = findNode(child, id);
-      if (found) return found;
-    }
-  }
-
-  const dogNode = findNode(tree, DOMESTIC_DOG_ID);
-  if (!dogNode) {
-    console.warn("Domestic dog node not found — skipping breed injection");
-    return;
-  }
-
-  dogNode.children = AKC_GROUPS.map(group => {
-    const groupBreeds = BREEDS.filter(b => b.group === group);
-    return {
-      id: `breed-group-${group.toLowerCase().replace(/[^a-z]/g, "-")}`,
-      name: group,
-      rank: "BREED_GROUP",
-      lineage: "Wolf",
-      children: groupBreeds
-        .sort((a, b) => a.name.localeCompare(b.name))
-        .map(b => ({
-          id: b.id,
-          name: b.name,
-          rank: "BREED",
-          origin: b.origin,
-          lineage: "Wolf",
-        })),
-    };
-  });
-
-  console.log(`Injected ${BREEDS.length} breeds in ${AKC_GROUPS.length} AKC groups under domestic dog`);
-}
-
 function injectRanges(tree: TaxonNode): void {
   let count = 0;
   function walk(node: TaxonNode): void {
@@ -342,7 +304,6 @@ async function main() {
 
   const tree = buildTree(records, CANIDAE_ID);
   injectDomesticDog(tree);
-  injectBreeds(tree);
   injectRanges(tree);
 
   const leaves = countLeaves(tree);

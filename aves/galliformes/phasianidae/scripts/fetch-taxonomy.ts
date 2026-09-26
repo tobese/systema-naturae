@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import { join } from "path";
-import { CHICKEN_BREEDS, TURKEY_BREEDS, CHICKEN_GROUPS, TURKEY_GROUPS } from "../src/data/breeds.js";
 import { SPECIES_RANGES } from "../src/data/ranges.js";
 
 const COL_API = "https://api.checklistbank.org";
@@ -304,38 +303,6 @@ function injectDomesticTurkey(tree: TaxonNode): void {
   console.log("Injected domestic turkey into Meleagris");
 }
 
-function injectChickenBreeds(tree: TaxonNode): void {
-  const chickenNode = findNode(tree, n => n.id === DOMESTIC_CHICKEN_ID);
-  if (!chickenNode) { console.warn("Domestic chicken not found"); return; }
-  chickenNode.children = CHICKEN_GROUPS.map(group => ({
-    id: `chicken-breed-group-${group.toLowerCase().replace(/ /g, "-")}`,
-    name: group,
-    rank: "BREED_GROUP",
-    lineage: "Junglefowl",
-    children: CHICKEN_BREEDS
-      .filter(b => b.group === group)
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(b => ({ id: b.id, name: b.name, rank: "BREED", origin: b.origin, lineage: "Junglefowl" })),
-  }));
-  console.log(`Injected ${CHICKEN_BREEDS.length} chicken breeds`);
-}
-
-function injectTurkeyBreeds(tree: TaxonNode): void {
-  const turkeyNode = findNode(tree, n => n.id === DOMESTIC_TURKEY_ID);
-  if (!turkeyNode) { console.warn("Domestic turkey not found"); return; }
-  turkeyNode.children = TURKEY_GROUPS.map(group => ({
-    id: `turkey-breed-group-${group.toLowerCase()}`,
-    name: group,
-    rank: "BREED_GROUP",
-    lineage: "Turkey",
-    children: TURKEY_BREEDS
-      .filter(b => b.group === group)
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(b => ({ id: b.id, name: b.name, rank: "BREED", origin: b.origin, lineage: "Turkey" })),
-  }));
-  console.log(`Injected ${TURKEY_BREEDS.length} turkey breeds`);
-}
-
 function injectRanges(tree: TaxonNode): void {
   let count = 0;
   function walk(node: TaxonNode): void {
@@ -358,8 +325,6 @@ async function main() {
   const tree = buildTree(records, PHASIANIDAE_ID);
   injectDomesticChicken(tree);
   injectDomesticTurkey(tree);
-  injectChickenBreeds(tree);
-  injectTurkeyBreeds(tree);
   injectRanges(tree);
 
   const leaves = countLeaves(tree);

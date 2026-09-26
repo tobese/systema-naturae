@@ -618,9 +618,14 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
   const theme = node.familySlug ? registry[node.familySlug] : null;
   const accent = theme?.breedGroupColor ?? "#888";
   const coatAccent = theme?.coatTypeColor ?? "#5DB8C4";
-  const { data: wiki, loading } = useWikipediaSummary(node.name);
+  const { data: wiki, loading } = useWikipediaSummary(node.wikipediaTitle ?? node.name);
   const extract = wiki?.extract ?? null;
   const wikiUrl = wiki?.content_urls?.desktop?.page;
+  // Built locally so breeds whose article is a redirect or a section of a list
+  // page still link somewhere sensible when the live summary comes back empty.
+  const wikiArticleUrl = node.wikipediaTitle
+    ? `https://en.wikipedia.org/wiki/${encodeURIComponent(node.wikipediaTitle.replace(/ /g, "_"))}`
+    : null;
 
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
@@ -636,7 +641,11 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
         </div>
       )}
       <FadingImage src={wiki?.thumbnail?.source} alt={node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
-      {extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
+      {node.description
+        ? node.description.split("\n").map((para, i) => (
+            <p key={i} style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{para}</p>
+          ))
+        : extract && <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>{extract}</p>}
       {node.wildParentId && (
         <div style={{ marginTop: 14 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 6 }}>Wild origin</div>
@@ -654,18 +663,17 @@ function BreedPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelec
           </button>
         </div>
       )}
-      {wikiUrl && (
+      {(wikiUrl ?? wikiArticleUrl) && (
         <div style={{ marginTop: 16 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>Links</div>
-          <LinkRow href={wikiUrl} label="Wikipedia" />
+          <LinkRow href={wikiUrl ?? wikiArticleUrl!} label="Wikipedia" />
         </div>
       )}
     </div>
   );
 }
 
-function HybridGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
-  const hybrids = node.children ?? [];
+function HybridGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {  const hybrids = node.children ?? [];
   const registry = useColorRegistry();
   const theme = node.familySlug ? registry[node.familySlug] : null;
   const accent = theme?.hybridColor ?? "#C8A050";
@@ -723,7 +731,7 @@ function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSele
         </div>
       )}
       {wikiUrl && (
-        <div style={{ marginTop: 12 }}>
+        <div style={{ marginTop: 16 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>Links</div>
           <LinkRow href={wikiUrl} label="Wikipedia" />
         </div>
