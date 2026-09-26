@@ -79,19 +79,24 @@ GET  /health   → { ok, rows, version }
   so images stay on Wikidata P18 / the REST API. That is fine — it is the long
   prose that the 809k-species fallback is paying network round-trips for.
 
-**Not wired into the browser, deliberately.** The *primary* deployment is GitHub
-Pages, where this service is unreachable, so pointing the client hooks at it
-would only affect the secondary Debbie build — while putting a 19M-row mirror on
-the public domain to get there. So the REST fallback stays where it is and the
-service's clients are the enrichment workers.
+**Wired into local development, deliberately not into production.** The
+*primary* deployment is GitHub Pages, where this service is unreachable, so a
+Caddy route would expose a 19M-row mirror publicly without changing the primary
+deployment at all. Instead it is a build-time choice in
+`shared/src/lib/wikiSummary.ts`: `VITE_WIKI_SUMMARY_BASE` set in
+`portal/.env.local` (gitignored) for development, unset for any deployed build,
+which then uses the public API exactly as before. The helper also falls back per
+request, so a miss or a mirror hiccup costs one public call and nothing else.
 
-Worth knowing before that is revisited: the browser's largest live-Wikipedia load
-is not the panels but `shared/src/components/FamilyTree.tsx`, which fetches
-summaries directly in three places, on node hover. `EponymModal` uses a
-different endpoint (`action=query`). All of them would need to move behind one
-base-URL-configurable helper for a public route to be worth adding — and the
-mirror is a 2026-06-01 snapshot, so the browser would get *older* text than the
-live API. A rate-limit win, not a freshness one.
+Verified both directions: with the variable set, a panel that falls through to a
+live summary makes **0** requests to `en.wikipedia.org`; pointed at a dead port,
+the app still renders and falls back.
+
+`FamilyTree.tsx` (three direct fetches) and `EponymModal.tsx` (`action=query`)
+stay on the public API on purpose: the tree's hover tooltips want
+`thumbnail.source` and there is no image store here. The tree is also the
+highest-volume caller, so serving its portraits would mean extracting the
+infobox image from wikitext — a possible extension, not built.
 
 What did pay off immediately: the service made the shape of the client work
 obvious, and it is a usable target for the backfill. Measured cold on that box:

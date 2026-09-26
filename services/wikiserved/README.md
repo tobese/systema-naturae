@@ -70,32 +70,40 @@ cd ~/gcloud-vm && docker compose up -d wikiserved
 curl -s http://192.168.0.100:9881/health
 ```
 
-## Not on the public domain, deliberately
+## Used by the dev server, deliberately not in production
 
-There is no Caddy route for it. The portal's live-summary fallback stays on the
-public REST API, because the **primary** deployment is GitHub Pages, where this
-service is unreachable anyway — so routing it through Caddy would expose a
-19M-row mirror on `systema-naturae.se` without changing what the primary
-deployment does. Its clients today are the enrichment workers on the
-LAN/Tailscale.
+There is **no Caddy route** for it, and that is the point: the **primary**
+deployment is GitHub Pages, where this service is unreachable, so a public route
+would expose a 19M-row mirror on `systema-naturae.se` without changing what the
+primary deployment does at all.
 
-If the browser should use it, that needs a public route and a decision about
-exposure, plus an env-var base URL in the client hooks (see below). Note the
-mirror is a **2026-06-01 snapshot**, so the browser would get older text than the
-live API — a rate-limit win, not a freshness one.
+Instead the choice is a build-time one, resolved in
+`shared/src/lib/wikiSummary.ts`:
 
-## Client hooks that would need changing
+| | base | who |
+|---|---|---|
+| deployed build | *(unset)* → `en.wikipedia.org` | everyone |
+| local dev | `VITE_WIKI_SUMMARY_BASE` → this service | you, while iterating |
 
-Live REST callers, all currently going to `en.wikipedia.org`:
+```bash
+# portal/.env.local  (gitignored)
+VITE_WIKI_SUMMARY_BASE=http://192.168.0.100:9881
+```
 
-| Where | What |
-|---|---|
-| `shared/src/hooks/useWikipediaSummary.ts` | the panel summaries |
-| `shared/src/components/FamilyTree.tsx` ×3 | hover/label fetches — the highest volume, since it fires on node hover |
-| `portal/src/components/EponymModal.tsx` | `action=query`, a different endpoint (link resolution) |
+So development never spends the public API's rate limit on hover-and-click
+lookups and does not depend on en.wikipedia.org being up. Verified: with it set,
+a panel that falls through to a live summary issues **0** requests to
+`en.wikipedia.org`; pointed at a dead port the app still renders and falls back
+to the public API. The helper falls back per-request too, so one miss or a
+mirror hiccup costs a public call and nothing else.
 
-All should go through one helper with a configurable base, defaulting to the
-public API, so GitHub Pages keeps working unchanged.
+Two things stay on the public API regardless:
+
+- **`FamilyTree.tsx`** (three direct fetches) and **`EponymModal.tsx`**
+  (`action=query`). The tree's hover tooltips want `thumbnail.source` and the
+  eponym modal wants link resolution — a mirror with no image store serves
+  neither. The tree is also the highest-volume caller, so serving its portraits
+  from the mirror would need infobox-image extraction; not built.
 
 ## Performance
 
