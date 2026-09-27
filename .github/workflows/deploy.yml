@@ -1,5 +1,20 @@
 name: Deploy to GitHub Pages
 
+# DISABLED 2026-09-26. The `build` job below is gated `if: false`, so nothing
+# runs and `deploy` (which `needs: build`) never starts. GitHub Pages is being
+# served from the Docker deploy on debbie instead, behind the Cloudflare tunnel
+# at systema-naturae.se — see docs/deploy-debbie.md.
+#
+# The file is kept rather than deleted so the build recipe survives; the steps
+# are still the reference for how the felidae/canidae sub-apps and the portal are
+# assembled into one _site. To re-enable: remove the `if: false` on the build
+# job and restore a trigger below.
+#
+# Note the billing lock that originally forced this: the `push` trigger was
+# already commented out because GitHub Actions minutes were locked. Re-enabling
+# the push trigger is a separate decision - a per-push build of all six kingdoms
+# is expensive.
+
 on:
   # Auto-deploy on push to main is disabled (GitHub Actions billing lock).
   # Re-enable by uncommenting the push trigger below once billing is resolved.
@@ -21,6 +36,9 @@ concurrency:
 
 jobs:
   build:
+    # DISABLED — see the note at the top of this file. Remove this line to
+    # re-enable; nothing else needs to change.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
