@@ -37,7 +37,10 @@ Usage (from the repo root, with a tunnel to the wiki mirror on debbie):
     python3 scripts/enrichBreedsFromWikipedia.py --apply          # write the data
 
 Environment:
-    WIKI_PG_DSN   libpq connection string for the mirror (see DEFAULT_DSN)
+    WIKI_PG_DSN   libpq connection string for the mirror. Defaults to a
+                  credential-free local DSN; supply the password via
+                  PGPASSWORD or ~/.pgpass rather than in the DSN, so that no
+                  credential has to live in this repository.
 """
 import argparse
 import json
@@ -47,10 +50,7 @@ import sys
 import time
 from glob import glob
 
-DEFAULT_DSN = (
-    "host=127.0.0.1 port=15433 dbname=snedtankt user=snedtankt "
-    "password=hau8qpvFM6JYwvoDcztFT5NtfPBQ19"
-)
+DEFAULT_DSN = "host=127.0.0.1 port=15433 dbname=snedtankt user=snedtankt"
 
 # Host species -> the nouns its breed articles may legitimately use. Used both
 # to build hinted title candidates and to validate the lead we get back. Several
