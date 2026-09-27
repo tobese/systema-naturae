@@ -114,6 +114,24 @@ function walkFind(node: TaxonNode, id: string): TaxonNode | null {
   return null;
 }
 
+/** Name -> node for the whole annotated tree, speciesList included.
+ *
+ * `findNodeById` needs an id, but a subspecies only knows its parent by name -
+ * "Panthera tigris tigris" -> "Panthera tigris". Built once and memoized, since
+ * the tree is large and the panel asks on every subspecies it opens. */
+function indexByName(root: TaxonNode): Map<string, TaxonNode> {
+  const index = new Map<string, TaxonNode>();
+  const walk = (node: TaxonNode) => {
+    if (node.name && !index.has(node.name)) index.set(node.name, node);
+    for (const s of node.speciesList ?? []) {
+      if (s.name && !index.has(s.name)) index.set(s.name, s);
+    }
+    for (const child of node.children ?? []) walk(child);
+  };
+  walk(root);
+  return index;
+}
+
 function mergeThemes(base: ColorTheme, family: ColorTheme): ColorTheme {
   return {
     subfamilyColors: { ...base.subfamilyColors, ...family.subfamilyColors },
@@ -140,6 +158,7 @@ export function useUnifiedTree(
   colorTheme: ColorTheme;
   highlightedNodeIds: Set<string> | null;
   findNodeById: (id: string) => TaxonNode | null;
+  findNodeByName: (name: string) => TaxonNode | null;
 } {
   const treeData = useMemo(
     () => (annotatedData ? (pruneTree(annotatedData, focusedFamilyId, focusedClassId, expandedSubspeciesIds, expandedBreedIds, loadedOrders) ?? annotatedData) : null) as unknown as TaxonNode,
@@ -200,5 +219,14 @@ export function useUnifiedTree(
     [annotatedData],
   );
 
-  return { treeData, colorTheme, highlightedNodeIds, findNodeById };
+  const byName = useMemo(
+    () => (annotatedData ? indexByName(annotatedData) : new Map<string, TaxonNode>()),
+    [annotatedData],
+  );
+  const findNodeByName = useMemo(
+    () => (name: string) => byName.get(name) ?? null,
+    [byName],
+  );
+
+  return { treeData, colorTheme, highlightedNodeIds, findNodeById, findNodeByName };
 }

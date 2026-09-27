@@ -13,6 +13,7 @@ interface Props {
   node: TaxonNode | null;
   onSelect: (node: TaxonNode) => void;
   findNodeById: (id: string) => TaxonNode | null;
+  findNodeByName: (name: string) => TaxonNode | null;
   onFocusFamily: (slug: string | null) => void;
   focusedFamilySlug: string | null;
 }
@@ -554,11 +555,16 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
   );
 }
 
-function SubspeciesPanel({ node }: { node: TaxonNode }) {
+function SubspeciesPanel({ node, findNodeByName }: { node: TaxonNode; findNodeByName: (name: string) => TaxonNode | null }) {
   const accent = useAccentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
-  // Subspecies are trinomials and aren't in the cache; fall back to the parent binomial.
+  // Subspecies are trinomials: only 2 of the 851 in the tree have an enwiki
+  // article of their own, because Wikipedia documents subspecies inside the
+  // species article. So the parent's stored prose is the real text, and it is
+  // read from the parent rather than copied onto all 851 nodes (which would
+  // duplicate ~1.3MB of identical paragraphs into the committed family JSONs).
   const parentBinomial = node.name.trim().split(/\s+/).slice(0, 2).join(" ");
+  const parent = findNodeByName(parentBinomial);
   const wikiImages = useWikiImages(parentBinomial);
   const extract = wiki?.extract ?? null;
   const wikiUrl = wiki?.content_urls?.desktop?.page;
@@ -584,9 +590,9 @@ function SubspeciesPanel({ node }: { node: TaxonNode }) {
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
-      {(node.description || extract) && (
+      {(node.description || parent?.description || extract) && (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
-          {node.description ?? extract}
+          {node.description ?? parent?.description ?? extract}
         </p>
       )}
       {wikiUrl && (
@@ -755,6 +761,7 @@ export default function UnifiedInfoPanel({
   node,
   onSelect,
   findNodeById,
+  findNodeByName,
   onFocusFamily,
   focusedFamilySlug,
 }: Props) {
@@ -774,7 +781,7 @@ export default function UnifiedInfoPanel({
     return <SubfamilyPanel node={node} onSelect={onSelect} />;
   if (node.rank === "GENUS") return <GenusPanel node={node} onSelect={onSelect} />;
   if (node.rank === "SPECIES") return <SpeciesPanel node={node} onSelect={onSelect} />;
-  if (node.rank === "SUBSPECIES") return <SubspeciesPanel node={node} />;
+  if (node.rank === "SUBSPECIES") return <SubspeciesPanel node={node} findNodeByName={findNodeByName} />;
   if (node.rank === "BREED_GROUP") return <BreedGroupPanel node={node} onSelect={onSelect} />;
   if (node.rank === "BREED") return <BreedPanel node={node} onSelect={onSelect} findNodeById={findNodeById} />;
   if (node.rank === "HYBRID_GROUP") return <HybridGroupPanel node={node} onSelect={onSelect} />;
