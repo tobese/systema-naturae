@@ -41,16 +41,28 @@ files across all kingdoms:
 | BREED | 317 / 321 | 4 |
 | HYBRID | 0 / 4 | 4 |
 
-The two worst ranks are cheap and worth doing first: **849 subspecies** (only 2
-carry any text) and **4 hybrids** (none do) — a few hundred articles, not a
-project. The long tail is the 809k species, which is the same job
-`scripts/enrichFromWikipedia.ts` already does for the SQLite mirror, so the real
-work is extending that pass to the ranks it currently skips rather than anything
-new. Once storage covers a rank, drop the fallback for it.
+**Subspecies: done, and the premise was wrong.** This was listed as "a few
+hundred articles, not a project". It is not: of the 851 SUBSPECIES nodes, only
+**2 have an en.wikipedia article of their own** (132 are redirects, 717 have no
+page at all), because Wikipedia documents subspecies inside the *species*
+article rather than at the trinomial. There was nothing to fetch per subspecies.
 
-Subspecies need a trinomial-aware lookup: they are not in `wiki-images.json`
-(so `SubspeciesPanel` already falls back to the parent binomial for portraits),
-and their Wikipedia articles are rarer than species articles.
+The leverage is one level up, and that is what got done: those 851 subspecies hang
+off 229 host species, of which 91 had no stored description.
+`scripts/enrichSubspeciesHosts.py` filled exactly those 91 (anatidae 7,
+phasianidae 36, psittacidae 48) — all 229 hosts now described, all 91 resolved,
+no misses. `SubspeciesPanel` then reads the parent's stored prose through a new
+memoized `findNodeByName` in `useUnifiedTree` rather than duplicating it onto
+all 851 nodes, which would have put ~1.3MB of identical paragraphs into the
+committed family JSONs. Verified in-browser: *Amazona aestiva aestiva* and
+*Anas bahamensis galapagensis* both render portrait, habitat and prose.
+
+Still open: **4 hybrids** (none have any text) and the long tail of ~808k
+species, which is the same job `scripts/enrichFromWikipedia.ts` already does for
+the SQLite mirror — so the work is extending that pass to the ranks it skips,
+not anything new. Once storage covers a rank, drop the live fallback for it.
+Portraits for hybrids are absent from `wiki-images.json`, as they are for
+subspecies (trinomials), so those panels rely on the live lookup for images.
 
 ## Serve Wikipedia lookups from debbie instead of en.wikipedia.org
 

@@ -196,7 +196,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
     lastAutoZoomFamilyId.current = focusedFamilyId;
   }, [focusedFamilyId]);
 
-  const { treeData, colorTheme, highlightedNodeIds, findNodeById } = useUnifiedTree(
+  const { treeData, colorTheme, highlightedNodeIds, findNodeById, findNodeByName } = useUnifiedTree(
     taxonomyData,
     focusedFamilyId,
     focusedClassId,
@@ -1038,6 +1038,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
                 node={selectedInTree}
                 onSelect={handleSelect}
                 findNodeById={findNodeById}
+                findNodeByName={findNodeByName}
                 onFocusFamily={slug => setFocus(slug)}
                 focusedFamilySlug={focusedFamilySlug}
               />
