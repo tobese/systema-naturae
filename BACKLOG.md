@@ -57,12 +57,52 @@ all 851 nodes, which would have put ~1.3MB of identical paragraphs into the
 committed family JSONs. Verified in-browser: *Amazona aestiva aestiva* and
 *Anas bahamensis galapagensis* both render portrait, habitat and prose.
 
-Still open: **4 hybrids** (none have any text) and the long tail of ~808k
-species, which is the same job `scripts/enrichFromWikipedia.ts` already does for
-the SQLite mirror — so the work is extending that pass to the ranks it skips,
-not anything new. Once storage covers a rank, drop the live fallback for it.
-Portraits for hybrids are absent from `wiki-images.json`, as they are for
-subspecies (trinomials), so those panels rely on the live lookup for images.
+Still open: **4 hybrids** (none have any text). Portraits for hybrids are absent
+from `wiki-images.json`, as they are for subspecies (trinomials), so those panels
+rely on the live lookup for images.
+
+### The species long tail: measured, and mostly not Wikipedia's fault
+
+The subspecies item above turned out to generalise. The deployed animalia tree
+(383 order files, 527,631 species) had **462,950 species with no description —
+87.7%**. Joining every one of them against the 19.1M-page enwiki mirror on
+debbie:
+
+| | |
+|---|---|
+| have a real article | 26,937 |
+| are redirects that resolve | 11,592 |
+| **reachable total** | **~38,500** |
+| **no en.wikipedia page at all** | **421,748 (91.2%)** |
+
+So the "run the Wikipedia pass over the long tail" plan has a hard ceiling at
+about 8%. `scripts/enrichEmptySpecies.py` takes that ceiling, and what it
+actually closed:
+
+| | before | after |
+|---|---|---|
+| species with a description | 64,681 (12.3%) | **103,193 (19.6%)** |
+| species without | 462,950 (87.7%) | 424,438 (80.4%) |
+
+**38,512 species described** across 938 family files, in 13 minutes of fetching.
+The lead is validated before it is written, which matters at this volume: a lead
+that never mentions the genus is a title collision and is rejected, as is a
+lead that opens "is a genus of". That check also caught a real class of trap —
+`Abaraeus hamifer` redirects to `Temnosceloides hamifer` and `Abbottina
+obusirostris` to `Platysmacheilus obtusirostris`. Those are **genus
+reclassifications, not synonyms**, and pasting the new genus's description onto
+the old node would quietly put the wrong animal in the tree. 14,938 were
+rejected on these grounds.
+
+The remaining 424,438 are not a Wikipedia problem and cannot be closed by
+extending this script. They need a different source — GBIF species
+descriptions/remarks, iNaturalist, EOL, Catalogue of Life — or generated text.
+That is a different project, not a bigger batch.
+
+Note the mirror is `EnWikiPages` in Postgres on debbie, **not**
+`/Volumes/WikiDump/wiki-pages.sqlite`, which holds only 208k pages and is a
+subset left over from earlier runs. Anything assuming the SQLite file is the
+full dump is silently under-covering.
 
 ## Serve Wikipedia lookups from debbie instead of en.wikipedia.org
 
@@ -89,8 +129,10 @@ What is left:
   served), so a full 809k-species backfill over HTTP would be ~13 hours — fine
   for incremental passes, too slow for the initial one, which should keep
   hitting Postgres directly.
-- The 809k-species / 4,182-family / 849-subspecies / 4-hybrid backfill itself
-  (see the item above).
+- The remaining backfill is measured and bounded, not open-ended: 424,438
+  species still have no description, of which ~91% have no en.wikipedia page
+  and need GBIF/iNaturalist/EOL rather than this mirror (see the item above).
+  The 4 hybrids are still open.
 - If the browser should ever use it: `useWikipediaSummary` plus the three direct
   fetches in `shared/src/components/FamilyTree.tsx` (the real volume — it fires
   on node hover) and `EponymModal`'s `action=query` all need to move behind one
