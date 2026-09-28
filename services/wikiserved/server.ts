@@ -45,10 +45,13 @@ const arg = (flag: string, def: string) => {
 };
 
 const PORT = Number(arg("--port", "9881")); // 9880 is dbserved, 9876 progressd, 9877 modelsd
-const DSN = process.env.WIKI_PG_DSN ?? arg(
-  "--dsn",
-  "postgres://snedtankt:snedtankt@host.docker.internal:5433/snedtankt",
-);
+// Passwordless on purpose: libpq takes the password from PGPASSWORD or
+// ~/.pgpass, so no credential has to live in this repository. The real value
+// lives in ~/gcloud-vm/.env on debbie as WIKI_PG_DSN. An earlier version of
+// this file (and of scripts/enrichBreedsFromWikipedia.py) inlined the
+// password, and because the repository is public it had to be rotated.
+const DSN = process.env.WIKI_PG_DSN ??
+  arg("--dsn", "postgres://snedtankt@host.docker.internal:5433/snedtankt");
 const MAX_KEYS = 500;
 const MAX_PARAS = Number(arg("--paras", "2"));
 // Only the lead is ever wanted, and the lead lives in the first few KB after
