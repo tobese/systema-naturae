@@ -63,6 +63,28 @@ The mirror lives in the separate `postgres_snedtankt_debbie` project, published
 on the host at `:5433`; `host-gateway` is how the container reaches the host.
 Joining that project's network instead would couple two unrelated stacks.
 
+## The credential
+
+`WIKI_PG_DSN` is the `snedtankt` role, which belongs to the **sibling Snedtänkt
+project** — this repo only borrows the database because it happens to hold the
+enwiki mirror. The password lives in exactly two places, and neither is git:
+
+- `~/gcloud-vm/.env` on debbie, as `WIKI_PG_DSN=postgres://snedtankt:...`
+- `~/.pgpass` on any machine that queries the mirror directly, as
+  `127.0.0.1:15433:*:snedtankt:<password>`
+
+`scripts/enrichBreedsFromWikipedia.py` deliberately ships a DSN with **no**
+password in it and lets libpq read `~/.pgpass`, so the repo never has to carry a
+credential. Do not inline the password into `DEFAULT_DSN`; an earlier version
+did, and because the repository is public that password ended up in permanent
+git history at `7bbae2954` and had to be rotated.
+
+Rotating it means `ALTER ROLE snedtankt PASSWORD` plus an edit to both places
+above, then `docker compose up -d --force-recreate wikiserved`. Watch out when
+testing: `pg_hba.conf` on that database has `host all all 127.0.0.1/32 trust`,
+so a connection over loopback succeeds with *any* password and proves nothing.
+Verify over a non-loopback address, where `scram-sha-256` actually applies.
+
 ```bash
 # debbie
 cd ~/systema-naturae && DOCKER_BUILDKIT=0 docker build -t wikiserved:latest services/wikiserved
