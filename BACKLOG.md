@@ -19,6 +19,14 @@ order of effort: fold phyla into the Part title/intro; make a Part per phylum an
 demote classes to chapter groupings; or leave it and accept that the book is
 class-first. Audited in `docs/graph-vs-book-parity.md`.
 
+**Now partly unblocked.** Once the source tree is
+`taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/` and the book emits
+per-kingdom skeletons (see "Emit the book's sidecars per kingdom" below), a
+Part per phylum becomes a different change than it looks today: the phylum
+would already be a first-class level in both the source and the build output,
+rather than something that has to be recovered. Worth revisiting the options
+once both land, rather than treating this as settled.
+
 ## Backfill descriptions so the graph stops falling back to a live Wikipedia fetch
 
 `UnifiedInfoPanel` now prefers the stored `description` over a live REST summary
@@ -138,6 +146,50 @@ Note the mirror is `EnWikiPages` in Postgres on debbie, **not**
 `/Volumes/WikiDump/wiki-pages.sqlite`, which holds only 208k pages and is a
 subset left over from earlier runs. Anything assuming the SQLite file is the
 full dump is silently under-covering.
+
+## Emit the book's sidecars per kingdom, like the graph already does
+
+The graph view reads per kingdom — `data/kingdoms/<k>/unified-taxonomy-skeleton.json`
+plus `data/kingdoms/<k>/orders/<ORDER>.json`. The book reads one cross-kingdom
+`data/book/book-skeleton.json` (3.4 MB) plus `extensions-<k>/`. The split is
+arbitrary: `experiments/book-view/scripts/extractSlice.ts` **already** iterates a
+`KINGDOM_DIRS` map and reads each kingdom's `order-manifest.json`, then collapses
+the result into a single skeleton. The input side is partitioned; only the output
+is monolithic.
+
+And the file is almost entirely partitionable. It is `{parts: [...]}`, one part
+per class — 255 of them, each already carrying its own `kingdom` field:
+
+```json
+{"title":"Part I — Mammalia","kingdom":"Animalia","className":"Mammalia",
+ "description":"...","collage":"...","chapters":[
+   {"title":"Chapter 1 — Carnivora","orderFile":"CARNIVORA","families":[...]}]}
+```
+
+A chapter is a *pointer* — `orderFile`, `families`, `title`. No species prose is
+in this file; the book fetches the order files. So it is a table of contents, and
+it groups cleanly by kingdom: Animalia 75 parts, Fungi 51, Plantae 43, Chromista
+33, Archaea 30, Protozoa 23.
+
+**Target shape**, matching the graph and the source tree:
+
+```
+book/index.json                        kingdom sequence, tiny
+book/kingdoms/<kingdom>/skeleton.json  that kingdom's parts and chapters
+```
+
+The reading order survives the split because it is already explicit in each
+part's title — `"Part I — Mammalia"` — so the Part I/II/III numbering does not
+need to be reconstructed; `index.json` only has to carry the kingdom sequence
+(`Animalia, Plantae, Fungi, Chromista, Protozoa, Archaea`, which today is the
+hardcoded order of the `KINGDOMS` map in `extractSlice.ts` and should become
+data rather than a literal).
+
+Do this **after** the `taxonomy/<kingdom>/…` restructure and as its own commit,
+not folded in — it is a runtime-facing change and the restructure should stay
+independently revertable. Together they make the source tree, the graph output
+and the book output all keyed by kingdom, which is the property the 258
+top-level directories were missing.
 
 ## Serve Wikipedia lookups from debbie instead of en.wikipedia.org
 
