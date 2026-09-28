@@ -85,13 +85,23 @@ def plan_kingdom(kingdom, cfg):
             ord_ = nm
         elif r == "FAMILY" and node.get("appSlug"):
             slug = node["appSlug"]
-            segments = [dirname_(x) for x in (phylum, cls, ord_) if x]
-            legacy = os.path.join(*segments, slug) if segments else slug
-            target = os.path.join(TOP, kingdom, *segments, slug)
+            p, c, o = (dirname_(phylum), dirname_(cls), dirname_(ord_))
+            # Target: every level, with absent ranks simply absent.
+            target = os.path.join(TOP, kingdom,
+                                  *[x for x in (p, c, o) if x], slug)
+            # Pre-move location, class-first. The legacy path omits the phylum in
+            # the normal case (mammalia/carnivora/felidae, not chordata/mammalia/
+            # carnivora/felidae); the phylum-nested shape only applies to the 24
+            # families whose class shares its phylum's name, and the classless
+            # shape to Tardigrada.
+            if c:
+                legacy = os.path.join(c, o, slug) if o else c
+            else:
+                legacy = slug
             rows.append({
                 "slug": slug, "kingdom": kingdom, "phylum": phylum, "cls": cls,
                 "ord": ord_, "name": nm, "legacy": legacy, "target": target,
-                "depth": len(segments) + 1,
+                "depth": len([x for x in (p, c, o) if x]) + 1,
             })
         for c in node.get("children") or []:
             walk(c, phylum, cls, ord_)
@@ -252,20 +262,33 @@ def main():
 
     moved = 0
     for k, rows in by_kingdom.items():
-        kmoves = [r for r in rows if r["current"] != r["target"]]
+        # `r["current"]` must be truthy: a family declared by the taxonomy with no
+        # file on disk has current=None, and None != target, so a filter on
+        # inequality alone let those through and git mv was handed a None path
+        # part-way through a kingdom.
+        kmoves = [r for r in rows if r["current"] and r["current"] != r["target"]]
         if not kmoves:
             continue
         # Deepest first so we never move a parent directory out from under a
         # child we have not moved yet.
         kmoves.sort(key=lambda r: -r["depth"])
+        # Stage the old paths too. A `git mv` records both sides, but the caller
+        # stages by path, and staging only taxonomy/<kingdom> leaves the old
+        # files tracked in the index - the commit then *copies* the family
+        # instead of moving it, and the next status shows every old path as an
+        # unstaged deletion. That is what happened to archaea, chromista and
+        # fungi the first time.
+        old_tops = sorted({r["current"].split(os.sep)[0] for r in kmoves})
         for r in kmoves:
             dest = os.path.join(ROOT, r["target"])
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             git("mv", r["current"], r["target"])
             moved += 1
-        # Prune directories left empty by the move.
-        git("add", "-A")
-        print(f"  {k}: moved {len(kmoves):,} families")
+        for t in old_tops:
+            if t != TOP:
+                git("add", "-A", "--", t)
+        git("add", "-A", "--", os.path.join(TOP, k))
+        print(f"  {k}: moved {len(kmoves):,} families (staged, commit with the old roots too)")
 
     print(f"\nmoved {moved:,} family directories")
     print("next: rebuild, then re-run with --check to confirm nothing is left")
