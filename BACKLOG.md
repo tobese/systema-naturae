@@ -121,6 +121,18 @@ never re-queried. `description-gap-report*.json` does it for higher ranks via
 
 Re-running the script now skips names already in the ledger, so a future pass
 over a second source does not repeat the 13 minutes for names enwiki never had.
+A cold fetch is ~13 min; ~21s once the page cache is warm.
+
+**Tried and dead: stripping authority suffixes.** 169,206 of the 421,749
+`no-article` names carry one - `"Aaadonta angaurana Solem, 1976"`,
+`"Aaptochiton pustulosus Hoare & Karasawa, 2008"` - and no Wikipedia title will
+ever contain one, so they look like a free win. They are not. Sampled 3,000 and
+looked up the bare binomial: 2 resolved, projecting to ~112 across all 169,206,
+and one of those two was a *wrong* match (`Torellia vestita` resolves to
+`Torellia delicata`). The suffix is a symptom of obscurity, not the cause of
+the gap - the underlying taxa are simply undocumented everywhere. Worth knowing
+because `stripAuthority` already exists at `shared/src/hooks/useWikiImages.ts:82`
+and it is tempting to reach for it. Do not.
 
 Note the mirror is `EnWikiPages` in Postgres on debbie, **not**
 `/Volumes/WikiDump/wiki-pages.sqlite`, which holds only 208k pages and is a
