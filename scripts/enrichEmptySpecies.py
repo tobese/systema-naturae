@@ -95,7 +95,11 @@ def acceptable(name, paragraphs):
     if not paragraphs:
         return False, "no-lead"
     lead = paragraphs[0]
-    if len(lead) < 60:
+    # lead_paragraphs already discards anything under 40 chars after cleaning,
+    # so 60 here was just stricter than the parser. That threw away real
+    # one-line stubs like "Agfa flexilis is a species of parasitic nematode."
+    # (49 chars), which are accurate and worth more than an empty panel.
+    if len(lead) < 40:
         return False, "stub"
     # A collision (right title, wrong subject) almost never opens with the
     # genus. Real species leads do, essentially always.
@@ -211,16 +215,25 @@ def main():
         # filled 38,512 species before the ledger existed, so those names are
         # in the cache but not yet recorded; reconcile them here.
         prior = read_ledger(args.ledger)
+        # A name already recorded as rejected but now carrying a lead was
+        # recovered by a later pass (a parser fix, a looser gate). Upgrade the
+        # record rather than leaving it contradicting the data. Ledger keys are
+        # lower-cased but result keys keep the original casing, so look the lead
+        # up by the record's own name.
+        upgraded = [r["n"] for r in prior.values()
+                    if r.get("s") == "rejected" and r["n"] in result]
         missing = [n for n in result if n.lower() not in prior]
-        if missing:
-            for n in missing:
-                prior[n.lower()] = {"n": n, "s": "filled", "t": result[n]["title"]}
+        for nm in missing:
+            prior[nm.lower()] = {"n": nm, "s": "filled", "t": result[nm]["title"]}
+        for nm in upgraded:
+            prior[nm.lower()] = {"n": nm, "s": "filled", "t": result[nm]["title"]}
+        if missing or upgraded:
             write_ledger(args.ledger,
                          sorted(prior.values(), key=lambda r: r["n"].lower()),
                          count_records(prior.values()),
                          time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
-            print(f"ledger: added {len(missing):,} filled names; "
-                  f"{len(prior):,} records -> {args.ledger}")
+            print(f"ledger: +{len(missing):,} new, {len(upgraded):,} upgraded "
+                  f"rejected->filled; {len(prior):,} records -> {args.ledger}")
         else:
             print(f"ledger: already complete ({len(prior):,} records)")
     else:
