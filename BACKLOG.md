@@ -91,13 +91,36 @@ lead that opens "is a genus of". That check also caught a real class of trap —
 `Abaraeus hamifer` redirects to `Temnosceloides hamifer` and `Abbottina
 obusirostris` to `Platysmacheilus obtusirostris`. Those are **genus
 reclassifications, not synonyms**, and pasting the new genus's description onto
-the old node would quietly put the wrong animal in the tree. 14,938 were
-rejected on these grounds.
+the old node would quietly put the wrong animal in the tree.
 
-The remaining 424,438 are not a Wikipedia problem and cannot be closed by
-extending this script. They need a different source — GBIF species
-descriptions/remarks, iNaturalist, EOL, Catalogue of Life — or generated text.
-That is a different project, not a bigger batch.
+### `portal/data/description-lookup.jsonl` — every name we looked up, including the misses
+
+`scripts/enrichEmptySpecies.py` now writes a ledger, one JSON record per name:
+
+```json
+{"src":"enwiki","generatedAt":"...","counts":{...}}      <- header
+{"n":"Abaraeus hamifer","s":"rejected","r":"collision","t":"Temnosceloides hamifer"}
+{"n":"Some other name","s":"no-article"}
+```
+
+424,222 records, of which **421,749 have no en.wikipedia page at all** and
+**2,473 have one but failed validation** (1,456 collision, 949 genus-page,
+35 stub, 33 no-lead). Those two numbers are the whole story of the remaining
+gap, and the 2,473 are a revisit list: they have a real article, so a better
+validator, or a human, can cheaply recover them.
+
+The point of the ledger is that `sourcedFrom` cannot carry this. `"none"` is
+overwritten by the next successful pass (`tools/powo_enrich.py:190` turns it
+into `"powo"`), and every enricher's candidate filter re-selects `none`, so
+misses get retried on every run instead of being parked. The same idea, already
+proven in this repo, is the `{qid: "", fetchedAt}` stub in
+`shared/data/wiki-images.json` — record every name you asked about so a miss is
+never re-queried. `description-gap-report*.json` does it for higher ranks via
+`unresolvableIds[]`, but only for PHYLUM/CLASS/ORDER and only when run with
+`--write`.
+
+Re-running the script now skips names already in the ledger, so a future pass
+over a second source does not repeat the 13 minutes for names enwiki never had.
 
 Note the mirror is `EnWikiPages` in Postgres on debbie, **not**
 `/Volumes/WikiDump/wiki-pages.sqlite`, which holds only 208k pages and is a
@@ -129,10 +152,11 @@ What is left:
   served), so a full 809k-species backfill over HTTP would be ~13 hours — fine
   for incremental passes, too slow for the initial one, which should keep
   hitting Postgres directly.
-- The remaining backfill is measured and bounded, not open-ended: 424,438
-  species still have no description, of which ~91% have no en.wikipedia page
-  and need GBIF/iNaturalist/EOL rather than this mirror (see the item above).
-  The 4 hybrids are still open.
+- The remaining backfill is measured and bounded, not open-ended, and recorded
+  per name in `portal/data/description-lookup.jsonl`: 421,749 species have no
+  en.wikipedia page and need GBIF/iNaturalist/EOL rather than this mirror;
+  2,473 have a page but failed validation and are a revisit list. The 4 hybrids
+  are still open.
 - If the browser should ever use it: `useWikipediaSummary` plus the three direct
   fetches in `shared/src/components/FamilyTree.tsx` (the real volume — it fires
   on node hover) and `EponymModal`'s `action=query` all need to move behind one
