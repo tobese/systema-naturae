@@ -126,8 +126,13 @@ function scanFiles(classFilter?: string): FamilyFile[] {
   function processFile(fullPath: string) {
     try {
       const data = JSON.parse(readFileSync(fullPath, "utf-8"));
+      // taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/src/data/<family>.json
+      // Indexes are taken from the end, not the start: parts[0] is "taxonomy",
+      // and feeding that to familyGbifKey resolved a gbif-cache-taxonomy.json
+      // that does not exist, so every species was skipped for a description with
+      // no warning at all. Parts from the end survive the layout changing again.
       const parts = fullPath.replace(root + "/", "").split("/");
-      const cls = parts[0];
+      const cls = parts[parts.length - 6] || "";      // .../<class>/<order>/<family>/src/data/<file>.json
       const toEnrich: { idx: number; sci: string }[] = [];
       let idx = 0;
       function walk(n: Record<string, unknown>) {

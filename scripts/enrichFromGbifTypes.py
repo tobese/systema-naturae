@@ -53,6 +53,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from familyFiles import iter_family_files  # discovers the layout instead of assuming it
 from enrichEmptySpecies import count_records, read_ledger, write_ledger  # noqa: E402
 
 UA = "systema-naturae/1.0 (https://github.com/tobese/systema-naturae)"
@@ -187,7 +188,7 @@ def apply_descriptions(result, root):
     by_name = {}
     for name, v in result.items():
         by_name.setdefault(name, v)
-    for p in sorted(glob.glob(os.path.join(root, "*", "*", "*", "src", "data", "*.json"))):
+    for p in sorted(list(iter_family_files(root))):
         tree = json.load(open(p, encoding="utf-8"))
         hits = [0]
 

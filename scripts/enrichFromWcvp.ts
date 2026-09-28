@@ -160,10 +160,13 @@ function main() {
       const relPath = filePath.replace(root + sep, "");
       const data: TaxonNode = JSON.parse(readFileSync(filePath, "utf-8"));
 
-      // Extract appSlug from path: e.g. magnoliopsida/lamiales/acanthaceae/src/data/acanthaceae.json
+      // taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/src/data/<family>.json
+      // Indexes from the end. parts[2] used to be the family under the old
+      // class/order/family layout; after the move it is the class, so appSlug
+      // silently became a class name and the script wrote under the wrong key.
       const parts = relPath.split(sep);
-      const appSlug = parts[2];
-      const className = parts[0];
+      const appSlug = parts[parts.length - 4];
+      const className = parts[parts.length - 6];
 
       // Check if WCVP has this family
       if (!famLookup.has(appSlug)) {
