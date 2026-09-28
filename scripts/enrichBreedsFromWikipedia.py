@@ -535,7 +535,7 @@ def candidate_titles(name, host_noun, qid_title):
 def collect_breeds(root):
     """{family_dir: (path, [(breed_name, species, node_id, has_description)])}"""
     out = {}
-    for p in sorted(glob(os.path.join(root, "*", "*", "*", "src", "data", "*.json"))):
+    for p in sorted(list(iter_family_files(root))):
         try:
             tree = json.load(open(p, encoding="utf-8"))
         except Exception:

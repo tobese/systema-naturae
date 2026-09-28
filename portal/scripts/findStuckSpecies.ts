@@ -31,8 +31,10 @@ function findAllDataFiles(): string[] {
 function getClassOrderFromPath(fp: string): [string, string] {
   const rel = fp.replace(root + "/", "");
   const parts = rel.split("/");
-  // aves/passeriformes/corvidae/src/data/corvidae.json -> class=aves, order=passeriformes
-  return [parts[0] || "?", parts[1] || "?"];
+  // taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/src/data/<family>.json
+  // -> class=<class>, order=<order>. From the end: parts[0] is "taxonomy", which
+  // bucketed every family in the report under a class called "taxonomy".
+  return [parts[parts.length - 6] || "?", parts[parts.length - 5] || "?"];
 }
 
 function main() {

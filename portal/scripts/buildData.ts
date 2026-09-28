@@ -30,10 +30,15 @@ const kingdomRootDir = kingdomConfig?.rootDir ?? "";
 // One authority for "where does this family's data file live", shared with
 // findGaps.ts and the importers. See portal/scripts/lib/familyPath.ts for why
 // this rule must not be reimplemented per script.
-const layoutCounts = { kingdom: 0, legacy: 0, "legacy-phylum": 0, "legacy-root": 0 };
+let resolvedFamilies = 0;
 let missingFamilyFiles = 0;
 const missingExamples: string[] = [];
 const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
+// The kingdom every path is built from. An empty SN_KINGDOM means animalia,
+// which the output dirs below already assume - the family resolver has to use
+// the same fallback or it silently drops the kingdom segment and resolves
+// taxonomy/chordata/... instead of taxonomy/animalia/chordata/... .
+const effectiveKingdom = KINGDOM || "animalia";
 const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
 
 interface TaxonNode {
@@ -102,16 +107,16 @@ function processTree(
   if (node.rank === "FAMILY" && node.appSlug) {
     const slug = node.appSlug as string;
     const located = resolveFamilyFile(root, {
-      kingdom: kingdomConfig?.kingdom ?? KINGDOM,
+      kingdom: effectiveKingdom,
       phylum: next.phylum,
       cls: next.cls,
       ord: next.ord,
       slug,
     });
-    layoutCounts[located.layout]++;
+    if (existsSync(located.file)) resolvedFamilies++;
     const dataPath = located.file;
     const stamp = familySourceStamp(root, {
-      kingdom: kingdomConfig?.kingdom ?? KINGDOM,
+      kingdom: effectiveKingdom,
       phylum: next.phylum, cls: next.cls, ord: next.ord, slug,
     });
     if (stamp.size < 0) {
@@ -238,8 +243,8 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
 // and reporting files are build-time-only artifacts (used by test scripts,
 // never fetched by the browser), so they stay under the private data/ dir
 // to avoid bloating the production image with hundreds of MB of unused JSON.
-const kingdomOutDir = resolve(portalRoot, `public/data/kingdoms/${KINGDOM || "animalia"}`);
-const kingdomPrivateDir = resolve(portalRoot, `data/kingdoms/${KINGDOM || "animalia"}`);
+const kingdomOutDir = resolve(portalRoot, `public/data/kingdoms/${effectiveKingdom}`);
+const kingdomPrivateDir = resolve(portalRoot, `data/kingdoms/${effectiveKingdom}`);
 const ORDERS_REL = `orders${dataSuffix}`;
 
 const taxonomyPath = resolve(portalRoot, taxonomyInput);
@@ -284,7 +289,7 @@ function timed<T>(phase: string, fn: () => T): T {
   return result;
 }
 
-console.log(`Building kingdom ${KINGDOM || "animalia"} → ${outputPath} from ${taxonomyPath}…`);
+console.log(`Building kingdom ${effectiveKingdom} → ${outputPath} from ${taxonomyPath}…`);
 const taxonomy = timed("read+parse taxonomy.json", () => JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode);
 
 let taxonomyStat: ReturnType<typeof statSync> | undefined;
@@ -590,16 +595,23 @@ console.log(`  ${"total (sum of phases)".padEnd(35)} ${String(totalMs).padStart(
 // console.warn lines, and a run that found nothing still exits 0. So the counts
 // are printed, and a missing-file total is fatal.
 console.log(`\n── Family data layout ──`);
-for (const [k, v] of Object.entries(layoutCounts).sort()) {
-  if (v) console.log(`  ${k.padEnd(15)} ${String(v).padStart(6)}`);
-}
-const legacyLeft = layoutCounts.legacy + layoutCounts["legacy-phylum"] + layoutCounts["legacy-root"];
-if (legacyLeft > 0) {
-  console.log(`  ${"not yet moved".padEnd(15)} ${String(legacyLeft).padStart(6)}  (legacy layout)`);
-}
+console.log(`  ${"resolved".padEnd(15)} ${String(resolvedFamilies).padStart(6)}  (taxonomy/${effectiveKingdom}/…)`);
+const declared = resolvedFamilies + missingFamilyFiles;
 if (missingFamilyFiles > 0) {
-  console.error(`\nERROR: ${missingFamilyFiles} family data files could not be found.`);
-  for (const ex of missingExamples) console.error(`  ${ex}`);
-  console.error("This is not a warning - families would silently graft as empty. Aborting.");
+  console.log(`  ${"no data file".padEnd(15)} ${String(missingFamilyFiles).padStart(6)}  ` +
+    `(${declared} declared; these graft empty)`);
+  for (const ex of missingExamples) console.log(`      ${ex}`);
+}
+// A family whose file exists but that the resolver cannot reach is a path bug,
+// and it is completely silent: the graft is skipped, nothing is thrown, exit 0.
+// A partial count is normal - the taxonomy declares more families than have data
+// (plantae: 1,259 declared, 1,021 with files). A *total* failure means the
+// resolver itself is wrong, so that aborts.
+if (declared > 0 && resolvedFamilies === 0) {
+  console.error(
+    `\nERROR: none of ${missingFamilyFiles} family data files resolved.\n` +
+    `Every family in ${effectiveKingdom} grafted empty, which means the path\n` +
+    `resolver is broken rather than the data being absent. Aborting.`,
+  );
   process.exit(1);
 }
