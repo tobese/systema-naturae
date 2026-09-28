@@ -161,11 +161,13 @@ def write_ledger(path, records, counts, generated_at):
     and so a single malformed line cannot cost the whole file."""
     tmp = path + ".tmp"
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    sep = (",", ":")          # compact: smaller, and greppable as "s":"rejected"
     with open(tmp, "w", encoding="utf-8") as fh:
         fh.write(json.dumps({"src": LEDGER_HEADER_SRC, "generatedAt": generated_at,
-                             "counts": counts}, ensure_ascii=False) + "\n")
+                             "counts": counts}, ensure_ascii=False,
+                            separators=sep) + "\n")
         for rec in records:
-            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+            fh.write(json.dumps(rec, ensure_ascii=False, separators=sep) + "\n")
     os.replace(tmp, path)
 
 
