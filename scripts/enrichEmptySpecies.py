@@ -33,6 +33,7 @@ Usage (from the repo root, with a tunnel to the wiki mirror on debbie):
     python3 scripts/enrichEmptySpecies.py --apply
 """
 import argparse
+import collections
 import json
 import os
 import re
@@ -86,22 +87,86 @@ def genus_of(name):
 
 
 def acceptable(name, paragraphs):
-    """Reject stubs, lists, disambiguations and title collisions."""
+    """Reject stubs, lists, disambiguations and title collisions.
+
+    Returns (ok, reason). The reason is recorded in the ledger, so a rejection
+    is a decision someone can revisit rather than a silent gap.
+    """
     if not paragraphs:
-        return False
+        return False, "no-lead"
     lead = paragraphs[0]
     if len(lead) < 60:
-        return False
+        return False, "stub"
     # A collision (right title, wrong subject) almost never opens with the
     # genus. Real species leads do, essentially always.
     g = genus_of(name).lower()
     if g and g not in lead.lower():
-        return False
+        return False, "collision"
     # "is a genus of", "is a family of", "is a disambiguation" -> not a species
     if re.search(r"\bis a (genus|family|subfamily|order|class|phylum|"
                  r"disambiguation)\b", lead, re.I):
-        return False
-    return True
+        return False, "genus-page"
+    return True, None
+
+
+LEDGER_HEADER_SRC = "enwiki"
+LEDGER = os.path.join("portal", "data", "description-lookup.jsonl")
+
+
+def read_ledger(path):
+    """{lower(name): record} from a previous run, so misses are not re-queried.
+
+    This is the same idea as the {qid: "", fetchedAt} stubs in
+    shared/data/wiki-images.json: record every name we asked about, including
+    the ones that came back empty, so a later pass can tell "not found" from
+    "never tried". `sourcedFrom: "none"` cannot do that job - it is
+    overwritten by the next successful pass (tools/powo_enrich.py) and every
+    enricher's candidate filter re-selects it, so misses are retried forever.
+    """
+    out = {}
+    if not os.path.exists(path):
+        return out
+    with open(path, encoding="utf-8") as fh:
+        for i, line in enumerate(fh):
+            if i == 0:
+                continue                      # header
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if "n" in r:
+                out[r["n"].lower()] = r
+    return out
+
+
+def count_records(records):
+    """One tally shape for both write paths, so the header always reconciles.
+
+    `rejected` is broken out by reason here because that is the actionable
+    split: collision and genus-page are the cases a better validator could
+    recover, stub and no-lead are the article being thin.
+    """
+    c = collections.Counter()
+    for r in records:
+        s = r.get("s", "?")
+        c[s if s != "rejected" else "rejected:" + str(r.get("r"))] += 1
+    return dict(sorted(c.items()))
+
+
+def write_ledger(path, records, counts, generated_at):
+    """Newline-delimited so a 460k-line ledger stays appendable and diffable,
+    and so a single malformed line cannot cost the whole file."""
+    tmp = path + ".tmp"
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write(json.dumps({"src": LEDGER_HEADER_SRC, "generatedAt": generated_at,
+                             "counts": counts}, ensure_ascii=False) + "\n")
+        for rec in records:
+            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    os.replace(tmp, path)
 
 
 def main():
@@ -114,6 +179,8 @@ def main():
     ap.add_argument("--apply", action="store_true", help="write descriptions into the family JSONs")
     ap.add_argument("--out", help="cache the accepted leads here; reused if it exists")
     ap.add_argument("--refresh", action="store_true", help="ignore an existing --out cache")
+    ap.add_argument("--ledger", default=LEDGER,
+                    help="per-name lookup ledger, positives and negatives alike")
     ap.add_argument("--limit", type=int, default=0, help="only consider the first N names (probing)")
     args = ap.parse_args()
 
@@ -138,34 +205,68 @@ def main():
     if args.out and os.path.exists(args.out) and not args.refresh:
         result = json.load(open(args.out, encoding="utf-8"))
         print(f"loaded {len(result):,} cached leads from {args.out} (no database needed)")
+        # Keep the ledger a complete account. The first run of this script
+        # filled 38,512 species before the ledger existed, so those names are
+        # in the cache but not yet recorded; reconcile them here.
+        prior = read_ledger(args.ledger)
+        missing = [n for n in result if n.lower() not in prior]
+        if missing:
+            for n in missing:
+                prior[n.lower()] = {"n": n, "s": "filled", "t": result[n]["title"]}
+            write_ledger(args.ledger,
+                         sorted(prior.values(), key=lambda r: r["n"].lower()),
+                         count_records(prior.values()),
+                         time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+            print(f"ledger: added {len(missing):,} filled names; "
+                  f"{len(prior):,} records -> {args.ledger}")
+        else:
+            print(f"ledger: already complete ({len(prior):,} records)")
     else:
+        prior = read_ledger(args.ledger)
+        todo = [n for n in names if n.lower() not in prior] if not args.refresh else names
+        if prior:
+            print(f"ledger: {len(prior):,} names already recorded; "
+                  f"{len(names)-len(todo):,} skipped, {len(todo):,} to look up")
         conn = wiki.connect(args.dsn)
         cur = conn.cursor()
         t0 = time.time()
-        pages = wiki.fetch_pages(cur, names)
-        print(f"fetched {len(pages):,} of {len(names):,} candidate articles "
+        pages = wiki.fetch_pages(cur, todo)
+        print(f"fetched {len(pages):,} of {len(todo):,} candidate articles "
               f"in {time.time()-t0:.0f}s", flush=True)
 
-        result, rejected = {}, []
-        for name in names:
+        result, records = {}, []
+        for name in todo:
             rec = pages.get(name.lower())
             if not rec or "text" not in rec:
+                records.append({"n": name, "s": "no-article"})
                 continue
             paras = wiki.lead_paragraphs(rec["text"])
-            if acceptable(name, paras):
+            ok, reason = acceptable(name, paras)
+            if ok:
                 result[name] = {"title": rec["title"], "paragraphs": paras}
+                records.append({"n": name, "s": "filled", "t": rec["title"]})
             else:
-                rejected.append(name)
+                records.append({"n": name, "s": "rejected", "r": reason,
+                                "t": rec["title"]})
 
-        print(f"accepted {len(result):,}; rejected {len(rejected):,}; "
-              f"no article {len(names)-len(pages):,}")
-        for n in rejected[:25]:
-            print(f"  REJECTED {n}")
+        # Carry forward what a previous run recorded, so the ledger stays a
+        # complete account of every name we have ever looked up for this source.
+        for k, r in prior.items():
+            records.append(r)
+
+        counts = count_records(records)
+        print("accepted {:,}; ledger {}".format(
+            len(result), ", ".join(f"{k} {v:,}" for k, v in counts.items())))
+        for rec in [r for r in records if r.get("s") == "rejected"][:15]:
+            print(f"  REJECTED {rec['n']} ({rec.get('r')}) -> {rec.get('t')}")
         conn.close()
         if args.out:
             with open(args.out, "w", encoding="utf-8") as fh:
                 json.dump(result, fh, ensure_ascii=False)
             print(f"cached {len(result):,} leads -> {args.out}")
+        write_ledger(args.ledger, sorted(records, key=lambda r: r["n"].lower()),
+                     dict(counts), time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+        print(f"ledger: {len(records):,} records -> {args.ledger}")
 
     if not args.apply:
         print("(dry run - pass --apply)")
