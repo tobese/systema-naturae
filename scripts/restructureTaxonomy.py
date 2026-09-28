@@ -121,6 +121,9 @@ def find_current(root, row):
     p, c, o, slug = (dirname_(row["phylum"]), dirname_(row["cls"]),
                      dirname_(row["ord"]), row["slug"])
     cands = []
+    # Already moved? The target is tried first, so a resumed run reports
+    # families at their destination as done rather than as "no data on disk".
+    cands.append(os.path.join(TOP, row["kingdom"], *[x for x in (p, c, o) if x], slug))
     if c:
         cands.append(os.path.join(c, o, slug) if o else c)
     if p and c:
@@ -200,8 +203,11 @@ def main():
                 # about - so it is counted rather than treated as a failure.
                 declared_no_data.append((k, r["slug"]))
                 continue
-            if os.path.isdir(os.path.join(ROOT, r["target"])):
-                problems.append((k, r["slug"], f"target already exists: {r['target']}"))
+            # A real conflict is a target that exists while the family is still
+            # somewhere else. current == target just means a resumed run already
+            # moved it, which is not a problem.
+            if r["current"] != r["target"] and os.path.isdir(os.path.join(ROOT, r["target"])):
+                problems.append((k, r["slug"], f"target occupied: {r['target']}"))
         by_kingdom[k] = rows
 
     print(f"{'kingdom':10} {'declared':>9} {'moves':>7} {'no data':>8}  target depths")
@@ -278,17 +284,19 @@ def main():
         # instead of moving it, and the next status shows every old path as an
         # unstaged deletion. That is what happened to archaea, chromista and
         # fungi the first time.
-        old_tops = sorted({r["current"].split(os.sep)[0] for r in kmoves})
         for r in kmoves:
             dest = os.path.join(ROOT, r["target"])
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             git("mv", r["current"], r["target"])
             moved += 1
-        for t in old_tops:
-            if t != TOP:
-                git("add", "-A", "--", t)
-        git("add", "-A", "--", os.path.join(TOP, k))
-        print(f"  {k}: moved {len(kmoves):,} families (staged, commit with the old roots too)")
+        # git mv stages both sides, so nothing extra is needed for the move
+        # itself. What the caller must not do is commit with a pathspec of
+        # taxonomy/<kingdom> alone: that records the new files and leaves the
+        # old ones tracked in the index, so the commit copies rather than
+        # moves. Stage everything and commit it all - at this point the only
+        # pending changes are this kingdom's.
+        git("add", "-A")
+        print(f"  {k}: moved {len(kmoves):,} families (staged; commit without a pathspec)")
 
     print(f"\nmoved {moved:,} family directories")
     print("next: rebuild, then re-run with --check to confirm nothing is left")
