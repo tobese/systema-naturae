@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { resolveFamilyFile, familySourceStamp } from "./lib/familyPath.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../../");
@@ -25,6 +26,13 @@ if (existsSync(kingdomConfigPath)) {
   kingdomConfig = allConfigs.kingdoms[KINGDOM];
 }
 const kingdomRootDir = kingdomConfig?.rootDir ?? "";
+
+// One authority for "where does this family's data file live", shared with
+// findGaps.ts and the importers. See portal/scripts/lib/familyPath.ts for why
+// this rule must not be reimplemented per script.
+const layoutCounts = { kingdom: 0, legacy: 0, "legacy-phylum": 0, "legacy-root": 0 };
+let missingFamilyFiles = 0;
+const missingExamples: string[] = [];
 const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
 const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
 
@@ -82,15 +90,34 @@ function stampClassOrder(node: TaxonNode, cls?: string, ord?: string): TaxonNode
   return { ...node, className: cls, orderName: ord };
 }
 
-function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}): TaxonNode {
+function processTree(
+  node: TaxonNode,
+  ctx: { phylum?: string; cls?: string; ord?: string } = {},
+): TaxonNode {
   let next = ctx;
-  if (node.rank === "CLASS") next = { cls: node.name.toLowerCase() };
+  if (node.rank === "PHYLUM") next = { ...ctx, phylum: node.name.toLowerCase() };
+  if (node.rank === "CLASS") next = { ...ctx, cls: node.name.toLowerCase() };
   if (node.rank === "ORDER") next = { ...ctx, ord: node.name.toLowerCase() };
 
   if (node.rank === "FAMILY" && node.appSlug) {
     const slug = node.appSlug as string;
-    const parts = [next.cls, next.ord, slug].filter(Boolean) as string[];
-    const dataPath = resolve(root, kingdomRootDir, ...parts, "src/data", `${slug}.json`);
+    const located = resolveFamilyFile(root, {
+      kingdom: kingdomConfig?.kingdom ?? KINGDOM,
+      phylum: next.phylum,
+      cls: next.cls,
+      ord: next.ord,
+      slug,
+    });
+    layoutCounts[located.layout]++;
+    const dataPath = located.file;
+    const stamp = familySourceStamp(root, {
+      kingdom: kingdomConfig?.kingdom ?? KINGDOM,
+      phylum: next.phylum, cls: next.cls, ord: next.ord, slug,
+    });
+    if (stamp.size < 0) {
+      missingFamilyFiles++;
+      if (missingExamples.length < 8) missingExamples.push(dataPath);
+    }
     const cachePath = resolve(familyCacheDir, `${slug}.json`);
 
     let stat: ReturnType<typeof statSync> | undefined;
@@ -104,11 +131,16 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
     if (!NO_CACHE && stat && existsSync(cachePath)) {
       try {
         const cached = JSON.parse(readFileSync(cachePath, "utf-8")) as FamilyCacheEntry;
+        // stamp.phylum/stamp.layout are part of the key on purpose: if a family
+        // moves to the kingdom-first layout and the key does not change with it,
+        // the moved file silently reuses a stale graft. Wrong species, no error.
         if (
           cached.sourceMtimeMs === stat.mtimeMs &&
           cached.sourceSize === stat.size &&
           cached.cls === (next.cls ?? "") &&
-          cached.ord === (next.ord ?? "")
+          cached.ord === (next.ord ?? "") &&
+          (cached.phylum ?? "") === stamp.phylum &&
+          (cached.layout ?? "") === stamp.layout
         ) {
           familyCacheHits++;
           // Only `children` came from the family data file; `node` (this run's
@@ -132,6 +164,8 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
           sourceSize: stat.size,
           cls: next.cls ?? "",
           ord: next.ord ?? "",
+          phylum: stamp.phylum,
+          layout: stamp.layout,
           children: compressed.children,
         };
         writeFileSync(cachePath, JSON.stringify(entry));
@@ -225,6 +259,8 @@ interface FamilyCacheEntry {
   sourceSize: number;
   cls: string;
   ord: string;
+  phylum?: string;
+  layout?: string;
   children?: TaxonNode[];
 }
 const NO_CACHE = process.env.SN_BUILD_NO_CACHE === "1";
@@ -547,3 +583,23 @@ for (const { phase, ms, rssMB } of phaseLog) {
 }
 const totalMs = phaseLog.reduce((s, p) => s + p.ms, 0);
 console.log(`  ${"total (sum of phases)".padEnd(35)} ${String(totalMs).padStart(6)}ms`);
+
+// ── Layout + completeness report ────────────────────────────────────────────
+// A family whose data file cannot be found produces no children and no error:
+// the graft is simply skipped. At 8k families that is invisible in a wall of
+// console.warn lines, and a run that found nothing still exits 0. So the counts
+// are printed, and a missing-file total is fatal.
+console.log(`\n── Family data layout ──`);
+for (const [k, v] of Object.entries(layoutCounts).sort()) {
+  if (v) console.log(`  ${k.padEnd(15)} ${String(v).padStart(6)}`);
+}
+const legacyLeft = layoutCounts.legacy + layoutCounts["legacy-phylum"] + layoutCounts["legacy-root"];
+if (legacyLeft > 0) {
+  console.log(`  ${"not yet moved".padEnd(15)} ${String(legacyLeft).padStart(6)}  (legacy layout)`);
+}
+if (missingFamilyFiles > 0) {
+  console.error(`\nERROR: ${missingFamilyFiles} family data files could not be found.`);
+  for (const ex of missingExamples) console.error(`  ${ex}`);
+  console.error("This is not a warning - families would silently graft as empty. Aborting.");
+  process.exit(1);
+}
