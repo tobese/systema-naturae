@@ -160,8 +160,64 @@ def pick(name, descs):
     return max(cands, key=len), None
 
 
+MAX_CHARS = 1500       # a treatment can run to 50,000 chars; a panel cannot
+
+
+def truncate(t, cap=MAX_CHARS):
+    """Cut at a sentence boundary so the result still reads as prose.
+
+    47% of the 27,492 recovered descriptions exceed 2,000 characters and the
+    longest is 49,906 - a whole treatment paper, not a species description.
+    The full length stays in the ledger; only what a panel shows is capped.
+    """
+    if len(t) <= cap:
+        return t
+    cut = t[:cap]
+    m = list(re.finditer(r"[.!?](?=\s|$)", cut))
+    if m and m[-1].end() > cap * 0.5:
+        return cut[:m[-1].end()].strip()
+    sp = cut.rfind(" ")
+    return (cut[:sp] if sp > 0 else cut).strip() + "…"
+
+
+def apply_descriptions(result, root):
+    """Write the recovered prose into the family JSONs."""
+    import glob
+    written = touched = 0
+    by_name = {}
+    for name, v in result.items():
+        by_name.setdefault(name, v)
+    for p in sorted(glob.glob(os.path.join(root, "*", "*", "*", "src", "data", "*.json"))):
+        tree = json.load(open(p, encoding="utf-8"))
+        hits = [0]
+
+        def stamp(node):
+            if node.get("rank") == "SPECIES":
+                n = node.get("name")
+                rec = by_name.get(n)
+                if rec and not (node.get("description") or "").strip():
+                    node["description"] = truncate(rec["paragraphs"][0])
+                    node["wikipediaTitle"] = rec["title"]
+                    node["sourcedFrom"] = "gbif"
+                    hits[0] += 1
+            for c in node.get("children") or []:
+                stamp(c)
+            for s in node.get("speciesList") or []:
+                if isinstance(s, dict):
+                    stamp(s)
+
+        stamp(tree)
+        if hits[0]:
+            with open(p, "w", encoding="utf-8") as fh:
+                fh.write(json.dumps(tree, indent=2, ensure_ascii=False) + "\n")
+            written += hits[0]
+            touched += 1
+    return written, touched
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--root", default=os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     ap.add_argument("--scope", default="portal/data/description-lookup.jsonl",
                     help="the enwiki ledger; only its no-article rows are retried")
     ap.add_argument("--ledger", default=LEDGER)
@@ -194,7 +250,19 @@ def main():
               f"{before - len(todo):,} skipped, {len(todo):,} to look up")
 
     if not todo:
-        print("nothing to do")
+        # Everything already looked up. If a results cache exists, this is a
+        # re-apply after the tree moved - the fetch is the expensive part and
+        # it does not need repeating.
+        if args.out and os.path.exists(args.out):
+            cached = json.load(open(args.out, encoding="utf-8"))
+            print(f"ledger complete; re-applying {len(cached):,} cached descriptions")
+            if args.apply:
+                written, touched = apply_descriptions(cached, args.root)
+                print(f"applied: {written:,} species described across {touched:,} family files")
+            else:
+                print("(dry run - pass --apply)")
+        else:
+            print("nothing to do")
         return
 
     result, records = {}, []
@@ -230,6 +298,9 @@ def main():
         print(f"wrote {len(result):,} descriptions -> {args.out}")
     if not args.apply:
         print("(dry run - pass --apply)")
+        return
+    written, touched = apply_descriptions(result, args.root)
+    print(f"applied: {written:,} species described across {touched:,} family files")
 
 
 START = time.time()
