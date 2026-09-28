@@ -367,6 +367,12 @@ def strip_wikilinks(s):
 
 def clean_markup(s):
     """Wikitext -> plain prose, with the debris removed templates leave behind."""
+    # Invisible characters first. A stub article routinely opens with a bolded
+    # name that has picked up a BOM or zero-width space, e.g.
+    # "'''''<BOM>Genus species''''' is a species of ...". lead_paragraphs
+    # drops any paragraph whose first character is not a capital, so a single
+    # invisible codepoint silently discards an otherwise perfect lead.
+    s = re.sub(r"[\ufeff\u200b-\u200f\u2060\u00ad]", "", s)
     s = re.sub(r"<!--.*?-->", " ", s, flags=re.S)
     s = re.sub(r"<ref[^>]*?/>", "", s)
     s = re.sub(r"<ref[^>]*?>.*?</ref>", "", s, flags=re.S)
