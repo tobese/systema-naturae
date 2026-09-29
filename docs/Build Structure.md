@@ -120,10 +120,15 @@ Found while validating the above. Pre-existing, and not caused by the opt-in
 change — the restructure altered the build's summary format and its output
 paths without updating the two build tests, so both have been failing:
 
-- `testBuild.ts:74` matches `/Done\. (\d+) total nodes/`, but the summary line
+- `testBuild.ts:74` matched `/Done\. (\d+) total nodes/`, but the summary line
   now reads `Done. 346271 physical nodes … (456342 total nodes represented)`.
-  The digits are not followed by `total nodes`, so the match never succeeds
-  and the script always reports "Build failed or output format unexpected".
+  The digits are not followed by `total nodes`, so the match never succeeded
+  and the script always reported "Build failed or output format unexpected".
+  It also defaulted to no kingdom, so it built animalia and then read the legacy
+  flat `data/unified-taxonomy.json` — a 375MB file last written in July, before
+  the per-kingdom restructure. And its 10,000-node floor is an animalia-shaped
+  number that chromista (6,651), protozoa (726) and archaea (983) can never
+  clear; the floor is now the skeleton the build just wrote.
 - `testDataContract.ts:171-177` resolves each manifest `file` against
   `portal/`, but those paths are web-root-relative — correct for the browser,
   since `public/` is the web root, and wrong for a filesystem resolve. It
@@ -131,6 +136,32 @@ paths without updating the two build tests, so both have been failing:
   exists on disk" cannot pass.
 
 Six further `testDataContract.ts` failures (rank-count and manifest snapshots,
-one duplicated species, three families where `portalCount > totalCount`) are
-baseline drift of the same vintage and need a deliberate decision about
-whether the snapshots or the data are wrong.
+one duplicated species, three families where `portalCount > totalCount`) were
+also of this vintage. All six are now resolved — the snapshots were refreshed,
+the duplicate merged, and the `portalCount` assertion replaced with one that
+requires the excess to be explained by nodes that are not species (a domestic
+trinomial like *Canis lupus familiaris*, or a "sp. spec" placeholder).
+
+### The 28 missing genera are not missing
+
+The snapshot asserted `GENUS: 57348`; the tree has 57,320. That reads like
+data loss, and it is worth being precise about why it is not.
+
+The baseline was written by `e452bd90b` (2026-07-09). Six weeks later
+`e6a03ab05` removed fabricated taxa from 17 families after checking each
+against the cached GBIF backbone and Wikidata QIDs — invented genus containers
+(`GENUS_GENUS1`/"Genus1", `GENUS_DOLORESCUTTLE`, `GENUS_SEPIASQUILLARIA`), and
+wrong-class grafts such as a bird genus in a frog family. That commit took 30
+genus nodes out and put 1 back, and 177 species out and 1 back. The remaining
+one genus and three species came from later imports, which is why the observed
+movement is 28 and 173 rather than 29 and 176.
+
+So the old baseline was counting hallucinated taxa, and the data is now more
+accurate than the baseline it was checked against. The same commit corrected
+two `speciesCount` values in `taxonomy.json` for the same reason
+(Paragordiidae 10→0, Dendrobatidae 300→210).
+
+Counting the source family files directly gives 57,320 genera, which is what
+the skeleton reports, so the build is faithful in both directions here: it did
+not drop anything, and the number it reports is the number the data holds.
+
