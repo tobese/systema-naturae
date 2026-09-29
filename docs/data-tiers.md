@@ -86,26 +86,77 @@ files are pretty-printed and about 1.6× larger.
 It is only the full projection that collapses it. So "just drop speciesList" is
 not the fix.
 
-## Recommendation
+## Status: the tier is built, the client switch is deliberately not done
 
-Emit the nav tier alongside the order files, per order, and point the graph at
-it. **+6.7% on disk** (442.6 → 472.0 MB total) for a **15× smaller worst fetch**,
-and the per-order sharding is kept, so the skeleton and manifest indirection
-survives untouched. The book keeps reading the shipped order files, because it
-genuinely needs the prose.
+`buildData.ts` now emits a nav tier per order alongside the order files, and
+each manifest entry carries a `navFile`. Verified on the real build:
 
-That makes the two surfaces' difference *intentional and named* — structure
-versus detail — rather than two code paths happening to converge on one file.
-It also retires the duplicated lookup: with both tiers published, the graph's
-manifest entry gains a `navFile` field and the book keeps its own, and
-converging them becomes a deliberate step rather than an accident nobody
-notices.
+| | predicted | actual |
+|---|---|---|
+| animalia nav tier | 17.8 MB, worst 4.3 MB | **17.8 MB, worst 4.27 MB** |
+| all six kingdoms | 29.5 MB minified | 43.4 MB on disk (pretty-printed) |
 
-Two things this does **not** do. The book still fetches a 52.6 MB order file
-when a reader opens Coleoptera, so per-genus paging for the worst genera is
-still worth doing separately. And PHYLUM/KINGDOM stay absent, because a
-projection of an order-rooted file cannot invent the ranks above it — that
-needs the order files re-rooted at PHYLUM, or a phylum tier of its own.
+`testDataContract.ts` asserts the tier exists, matches the order file count,
+is more than 5× smaller, and that its species carry no descriptions — so the
+projection cannot rot, and the client switch becomes wiring rather than a
+rebuild.
+
+Getting there caught a bug worth recording, because it is the kind that looks
+like a modest shortfall rather than an error. The first implementation built
+each genus as `{...child, speciesList: undefined, _speciesCount, ...}`. Spreading
+keeps the genus's own `children` — which is every species node under it, with
+its full description — so COLEOPTERA came out at 25.4 MB instead of 4.3 MB and
+the tier at 102 MB instead of 17.8 MB. A 2× win instead of 11.7×, with no error
+anywhere. The genus node now lists its fields explicitly, and the contract
+assertion is on the ratio precisely because "smaller" alone would have passed.
+
+**Nothing reads the tier yet**, and that is the honest position rather than an
+oversight. The next step is not the wiring it looks like.
+
+## Why the client cannot simply switch
+
+`SearchBox` builds its index from the loaded tree by walking `children` **and
+`speciesList`**, taking `name` and `commonName`
+(`SearchBox.tsx:14-25`). The nav tier has no `speciesList` and reduces species
+to `{id, name, rank}` with no `commonName`. Pointing `loadOrder` at `navFile`
+would therefore silently lose:
+
+- search over the 110,614 entries in animalia's `speciesList` — over a fifth of
+  the 527,630 species in the kingdom;
+- common-name search for species entirely;
+- `EponymModal` and Species of the Day, which both read `namedAfter` off the
+  loaded tree.
+
+None of that throws. It is a quieter and much worse failure than a fetch error.
+
+## The decomposition, which supersedes the advice above
+
+The nav tier is only cheap because it is unusable for search. Keeping the names
+it needs costs most of the saving:
+
+| layer | animalia | share |
+|---|---|---|
+| descriptions (prose) | ~130 MB | 63% |
+| names + `commonName`, all 527,630 species | 78.6 MB | 38% |
+| structure + counts only | 17.8 MB | 7% |
+
+So the lever is **prose, not structure** — the opposite of what the first
+version of this note implied, and the reason a 15× smaller artifact turned out
+to be worth 2.7× once search was accounted for. A tier carrying family and
+genus prose plus every species name is 78.6 MB total and 18.8 MB for the worst
+order: still 2.7×, and 18.8 MB is not a comfortable phone fetch.
+
+That reframes the work:
+
+1. **Ship prose on demand, not with the order.** The order file is needed for
+   layout and for names; it is not needed for the description of the 99% of
+   species nobody has opened. Per-genus prose, fetched when a genus is opened,
+   is where the 130 MB goes.
+2. **Then a names tier becomes the layout/search artifact** — 78.6 MB today, and
+   much less if `commonName` is dropped, since it is the smaller half of the
+   name record and is already available from `wiki-images.json`.
+3. The counts tier already built stays useful for a layout-only path, and costs
+   17.8 MB to keep.
 
 ## Why not a server
 
@@ -132,6 +183,11 @@ Judged that way, of the three ways Go could be used here:
 - **Neither** — do the projection at build time. It is one more output of a
   build that already writes the order files, and it addresses the actual cost.
 
-Order of work: the projection first, then paging for the worst genera, then a
-build-time rewrite only if build memory becomes annoying, and a server only if
-search is the thing actually wanted.
+Order of work, revised by the measurements above: get prose out of the order
+file first, since it is 63% of the bytes and the graph only needs the
+description of species a reader actually opens. A names tier follows. The
+counts tier built here stays as the layout-only artifact. A build-time rewrite
+of `buildData.ts` comes only if build memory becomes annoying, and a server only
+if search is the thing actually wanted — at which point the answer is still
+that it must page and filter server-side, because re-serialising the same bytes
+does nothing for a browser that still calls `JSON.parse` on them.
