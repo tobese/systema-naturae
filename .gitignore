@@ -25,11 +25,14 @@ portal/data/powo-fields-cache*.json
 *.log
 *.tmp
 *.bat
-scripts/fix_*.py
-scripts/enrich_*.py
-scripts/gen_*.py
-scripts/add_*.py
-scripts/expand_*.py
+# Nothing under scripts/ is ignored on purpose. There used to be rules here for
+# fix_*.py, enrich_*.py, gen_*.py, add_*.py and expand_*.py, but every file
+# they matched is already tracked - 7 fixers, 18 enrich passes, and one each of
+# gen/add/expand - so the rules could not affect any of them and only hid new
+# ones. Adding scripts/fix_redirect_descriptions.py silently produced nothing
+# and needed `git add -f`, which is the worst way for a rule to behave. Kept
+# here so nobody adds them back: if a script is worth writing it is worth
+# committing, and one-shot scratch work belongs in /tmp, not the repo.
 *.bak
 __pycache__/
 portal/data/unified-taxonomy-plantae.json
