@@ -337,21 +337,36 @@ unified.rankCounts = rankCounts;
 if (!existsSync(kingdomOutDir)) mkdirSync(kingdomOutDir, { recursive: true });
 if (!existsSync(kingdomPrivateDir)) mkdirSync(kingdomPrivateDir, { recursive: true });
 
-// ── Still produce the monolithic unified-tree for backward compat ──
-// Only build-tooling reads this file (testBuild.ts, testDataContract.ts,
-// classifyFossils.ts — never the running app), and re-serializing the whole
-// ~600k-node tree is the single most expensive phase (~13s). So when nothing
-// changed since the last successful build (no family cache misses and
-// taxonomy.json itself is untouched), skip rewriting it — the file on disk is
-// already correct. Any real change still pays the full re-serialize; this
-// only helps the "nothing changed, just restarting" case.
-const canSkipUnifiedWrite = taxonomyUnchanged && dirtyFamilies.size === 0 && existsSync(outputPath);
-if (canSkipUnifiedWrite) {
-  timed("write unified-taxonomy.json (skipped, unchanged)", () => {});
-} else {
+// ── The monolithic unified tree is opt-in ──
+// It is 316MB for plantae, and one dirty family out of 1022 forces a full
+// JSON.stringify of all 346k nodes: ~3.2s and +1.7GB RSS. That buys a file
+// the browser never fetches — the app reads the skeleton plus the per-order
+// files — which only testBuild.ts and testDataContract.ts consume, and which
+// the Dockerfile excludes from the build context anyway. Measured on plantae:
+//
+//   clean rebuild    2.4s,  454MB RSS   nothing written
+//   one family edit  5.7s, 2.1GB RSS   full re-serialize
+//
+// So SN_BUILD_UNIFIED=1 opts in. Skipping the write leaves whatever is on
+// disk, which may now be stale, and a stale monolith that the tests validate
+// without complaint is exactly the silent success this build has been
+// hardened against — so the freshness is recorded in state.json, printed
+// here, and asserted by testDataContract.ts instead of being inferred from
+// the file merely existing.
+const WRITE_UNIFIED = process.env.SN_BUILD_UNIFIED === "1";
+const unifiedWasCurrent = taxonomyUnchanged && dirtyFamilies.size === 0 && existsSync(outputPath);
+if (WRITE_UNIFIED) {
   timed("write unified-taxonomy.json", () => writeFileSync(outputPath, JSON.stringify(unified, null, 2)));
+} else {
+  timed("write unified-taxonomy.json (opt-in: SN_BUILD_UNIFIED=1)", () => {});
 }
 console.log(`  Unified tree: ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species`);
+if (!WRITE_UNIFIED) {
+  console.log(
+    `  ${unifiedWasCurrent ? "unchanged on disk" : "STALE, not rewritten"}` +
+    ` — opt-in rebuild with SN_BUILD_UNIFIED=1`,
+  );
+}
 
 // ── Extract per-order subtrees ──
 if (!existsSync(ordersDir)) mkdirSync(ordersDir, { recursive: true });
@@ -577,7 +592,14 @@ writeFileSync(resolve(kingdomPrivateDir, "build-log.json"), JSON.stringify(build
 // interrupted build must not leave behind a state.json that claims a clean
 // build happened, or the next run would wrongly skip regenerating things.
 if (taxonomyStat) {
-  writeFileSync(buildStatePath, JSON.stringify({ taxonomyMtimeMs: taxonomyStat.mtimeMs, taxonomySize: taxonomyStat.size }));
+  writeFileSync(buildStatePath, JSON.stringify({
+    taxonomyMtimeMs: taxonomyStat.mtimeMs,
+    taxonomySize: taxonomyStat.size,
+    // Whether the monolith on disk still matches this build. Absent means the
+    // build never opted in, so a consumer cannot mistake a leftover file from
+    // an older build for a current one.
+    unified: WRITE_UNIFIED || unifiedWasCurrent ? "current" : "stale",
+  }));
 }
 
 console.log(`\nDone. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → ${outputPath}`);

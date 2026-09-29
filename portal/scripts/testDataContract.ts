@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync } from 'fs';
+import { readFileSync, readdirSync, statSync, existsSync } from 'fs';
 import { resolve, join } from 'path';
 import { strict as assert } from 'assert';
 
@@ -48,6 +48,14 @@ interface Manifest {
 
 let passCount = 0;
 let failCount = 0;
+let skipCount = 0;
+
+class Skipped extends Error {}
+
+/** Abort the current test as "not applicable", counted apart from passes. */
+function skip(reason: string): never {
+  throw new Skipped(reason);
+}
 
 function test(name: string, fn: () => void) {
   try {
@@ -55,6 +63,12 @@ function test(name: string, fn: () => void) {
     console.log(`  PASS  ${name}`);
     passCount++;
   } catch (err) {
+    if (err instanceof Skipped) {
+      console.log(`  SKIP  ${name}`);
+      console.log(`        ${err.message}`);
+      skipCount++;
+      return;
+    }
     console.error(`  FAIL  ${name}`);
     console.error(`        ${err instanceof Error ? err.message : String(err)}`);
     failCount++;
@@ -636,8 +650,19 @@ test('coverage-summary portalCount sums to skeleton rankCounts.SPECIES', () => {
 
 console.log('\nBUILD OUTPUT SANITY');
 
-test('unified-taxonomy.json exists and is large (>100MB)', () => {
+test('unified-taxonomy.json is current and large (>100MB)', () => {
   const path = join(PRIVATE_DATA_DIR, 'unified-taxonomy.json');
+  // The monolith is opt-in (SN_BUILD_UNIFIED=1), so its absence is normal and a
+  // leftover file from an older build proves nothing. Assert freshness from the
+  // build's own state rather than the file merely existing — the tree the app
+  // actually ships is covered by the skeleton and per-order assertions below.
+  if (!existsSync(path)) {
+    skip('not built — it is opt-in. Rebuild with SN_BUILD_UNIFIED=1 to assert on it.');
+  }
+  const state = loadJson<{ unified?: string }>(join(PRIVATE_DATA_DIR, '.build-cache', 'state.json'));
+  if (state.unified !== 'current') {
+    skip(`present but ${state.unified ?? 'of unknown freshness'} — rebuild with SN_BUILD_UNIFIED=1 to assert on it.`);
+  }
   const stats = statSync(path);
   assert.ok(stats.size > 100_000_000, `unified-taxonomy.json only ${(stats.size/1e6).toFixed(1)}MB`);
 });
@@ -660,7 +685,7 @@ test('no empty order files', () => {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 console.log(`\n${'='.repeat(60)}`);
-console.log(`Results: ${passCount} passed, ${failCount} failed`);
+console.log(`Results: ${passCount} passed, ${skipCount} skipped, ${failCount} failed`);
 console.log(`${'='.repeat(60)}\n`);
 
 if (failCount > 0) {
