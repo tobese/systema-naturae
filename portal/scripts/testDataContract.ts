@@ -775,6 +775,70 @@ test('nav tier exists and is materially smaller than the order files', () => {
     `${speciesWithProse} species in ${files[0]} still carry a description`);
 });
 
+test('names tier + genus prose reproduces the full order file', () => {
+  // The graph reads the names tier and overlays per-genus prose on selection.
+  // That is only equivalent to what the book reads if, after the overlay, the
+  // species descriptions and the three inherited stamps match the full order
+  // file exactly. This is the check that makes the two tiers safe to swap
+  // between, and it is deliberately run against the *largest* orders, where a
+  // partial implementation would show up.
+  const namesDir = join(DATA_DIR, 'orders-names');
+  const proseDir = join(DATA_DIR, 'orders-prose');
+  assert.ok(existsSync(namesDir), `names tier missing at ${namesDir} - run the build`);
+  assert.ok(existsSync(proseDir), `prose tier missing at ${proseDir} - run the build`);
+
+  const norm = (d?: string) => ((d ?? '').trim() === '' ? null : (d ?? '').trim());
+  const samples = allOrderFiles
+    .map(f => ({ f, size: statSync(join(ORDERS_DIR, f)).size }))
+    .sort((a, b) => b.size - a.size)
+    .slice(0, 3)
+    .map(x => x.f);
+
+  for (const file of samples) {
+    const orderId = file.replace(/\.json$/, '');
+    const full = loadJson<OrderNode>(join(ORDERS_DIR, file));
+    const lean = loadJson<OrderNode>(join(namesDir, file));
+
+    // The overlay, as useTaxonomyLoader performs it.
+    const flat = new Map<string, OrderNode>();
+    (function collect(n: OrderNode) {
+      if (n.rank === 'GENUS') {
+        const p = join(proseDir, orderId, `${n.id}.json`);
+        if (existsSync(p)) {
+          for (const sp of (loadJson<{ species: OrderNode[] }>(p)).species) flat.set(sp.id, sp);
+        }
+      }
+      for (const c of n.children ?? []) collect(c);
+    })(lean);
+    const overlay = (n: OrderNode): OrderNode => {
+      const patch = flat.get(n.id);
+      const next: OrderNode = patch
+        ? { ...n, description: patch.description, continents: patch.continents ?? n.continents }
+        : n;
+      if (n.children) next.children = n.children.map(overlay);
+      if (n.speciesList) next.speciesList = n.speciesList.map(overlay);
+      return next;
+    };
+    const merged = overlay(lean);
+
+    const describe = (root: OrderNode) => {
+      const m = new Map<string, string | null>();
+      (function walk(n: OrderNode) {
+        if (n.rank === 'SPECIES' || n.rank === 'SUBSPECIES' || n.rank === 'BREED') m.set(n.id, norm(n.description));
+        for (const c of n.children ?? []) walk(c);
+        for (const s of n.speciesList ?? []) walk(s);
+      })(root);
+      return m;
+    };
+    const a = describe(full);
+    const b = describe(merged);
+    assert.equal(b.size, a.size, `${file}: ${a.size} species in the order file, ${b.size} after the overlay`);
+    for (const [id, d] of a) {
+      assert.equal(b.get(id) ?? null, d, `${file}: ${id} description differs after the overlay`);
+    }
+  }
+});
+
 test('skeleton.json exists and is small (<10MB)', () => {
   const path = join(DATA_DIR, 'unified-taxonomy-skeleton.json');
   const stats = statSync(path);
