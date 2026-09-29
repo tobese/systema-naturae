@@ -27,7 +27,11 @@ const SQLITE_FALLBACK = "/Volumes/WikiDump/wiki-pages.sqlite";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
+// Names the GBIF cache files, which are keyed by the old top-level class
+// directory. Kept because those files still exist and are looked up by name;
+// the source tree walk below no longer uses it.
 const CLASSES = ["liliopsida", "magnoliopsida"];
+const PLANT_TAXONOMY = resolve(root, "taxonomy", "plantae");
 const BINOMIAL_RE = /^[A-Z][a-z]+ [a-z-]+/;
 
 const argv = process.argv.slice(2);
@@ -57,7 +61,9 @@ const files: string[] = (() => {
       else if (p.endsWith(".json") && p.includes(needle)) out.push(p);
     }
   };
-  for (const c of CLASSES) { const b = resolve(root, c); if (existsSync(b)) walk(b); }
+  // Walk the kingdom directory. The hard-coded class list plus existsSync meant
+  // this silently queued nothing once the tree moved.
+  if (existsSync(PLANT_TAXONOMY)) walk(PLANT_TAXONOMY);
   return out.sort();
 })();
 
@@ -157,7 +163,7 @@ function flush() {
     try { writeFileSync(p, JSON.stringify(t, null, 2) + "\n"); } catch (e) { console.error(`flush ${p}: ${(e as Error).message}`); }
   }
   const git = (...a: string[]) => spawnSync("git", a, { cwd: root, encoding: "utf-8" });
-  git("add", "--", ...CLASSES);
+  git("add", "--", "taxonomy/plantae");
   if (git("diff", "--cached", "--quiet").status !== 0) {
     git("commit", "-m", `enrich: Tier-2 queue submit — ${doneCount}/${total} (${paths.length} files)`);
     console.log(`committed (${paths.length} files, ${doneCount}/${total} done)`);

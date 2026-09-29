@@ -3,11 +3,26 @@ import { readFileSync, existsSync } from "fs";
 import { resolve } from "path";
 
 const PORTAL = resolve(import.meta.dirname, "..");
-const KINGDOM = process.env.SN_KINGDOM || "";
-const UNIFIED = KINGDOM
-  ? resolve(PORTAL, `data/kingdoms/${KINGDOM}/unified-taxonomy.json`)
-  : resolve(PORTAL, "data/unified-taxonomy.json");
-const MIN_NODES = KINGDOM ? 10000 : 68000;
+// Defaults to animalia, like buildData.ts. Without it this read the legacy flat
+// data/unified-taxonomy.json while the build wrote data/kingdoms/animalia/ - a
+// 375MB file last written in July, before the per-kingdom restructure - so the
+// node counts could never agree and this reported a mismatch on a good build.
+const KINGDOM = process.env.SN_KINGDOM || "animalia";
+const UNIFIED = resolve(PORTAL, `data/kingdoms/${KINGDOM}/unified-taxonomy.json`);
+/**
+ * The smallest tree this kingdom may legitimately produce: the skeleton the
+ * build just wrote, counted the same way countNodes() counts the monolith -
+ * `children` only. The skeleton's rankCounts would not do, because they sum
+ * the compressed speciesList members that countNodes never visits (593,254
+ * against 194,596 for animalia). The build always writes the skeleton, so this
+ * needs no per-kingdom table and stays right as the data changes.
+ */
+function skeletonNodes(): number {
+  const p = resolve(PORTAL, "public", "data", "kingdoms", KINGDOM, "unified-taxonomy-skeleton.json");
+  if (!existsSync(p)) return 0;
+  const sk = JSON.parse(readFileSync(p, "utf-8")) as TreeNode;
+  return countNodes(sk);
+}
 
 interface TreeNode {
   id?: string;
@@ -42,7 +57,13 @@ function main() {
   // 1. Run build
   console.log(`⏳ Building unified taxonomy${KINGDOM ? ` for ${KINGDOM}` : ""}...`);
   const start = Date.now();
-  const env = KINGDOM ? { ...process.env, SN_KINGDOM: KINGDOM } : process.env;
+  // The monolith is opt-in, and validating it is this script's entire purpose,
+  // so it asks for it explicitly rather than assuming every build writes it.
+  const env = {
+    ...process.env,
+    ...(KINGDOM ? { SN_KINGDOM: KINGDOM } : {}),
+    SN_BUILD_UNIFIED: "1",
+  };
   const out = execSync("sh scripts/buildData.sh", {
     cwd: PORTAL,
     encoding: "utf-8",
@@ -64,8 +85,11 @@ function main() {
     }
   }
 
-  // 3. Parse output for "Done. X total nodes"
-  const nodeMatch = out.match(/Done\. (\d+) total nodes/);
+  // 3. Parse the build's node counts. countNodes() below walks `children` only
+  //    and never descends into `speciesList`, so it must be compared against
+  //    "physical nodes" - "total nodes represented" includes the compressed
+  //    speciesList members and would always disagree.
+  const nodeMatch = out.match(/Done\. (\d+) physical nodes/);
   if (!nodeMatch) {
     console.error("❌ Build failed or output format unexpected");
     console.error(out);
@@ -96,9 +120,14 @@ function main() {
     process.exit(1);
   }
 
+  // Read after the build, not at module load: on a clean checkout the skeleton
+  // does not exist yet and a floor computed then would be a vacuous zero.
+  const MIN_NODES = skeletonNodes();
   if (actualNodes < MIN_NODES) {
     console.error(
-      `❌ Node count ${actualNodes} below minimum ${MIN_NODES}`
+      `❌ Node count ${actualNodes} below minimum ${MIN_NODES} for kingdom ${KINGDOM}.` +
+      ` The skeleton declares ${skeletonNodes()}, which is the real floor: a fixed` +
+      ` number cannot be right for six kingdoms spanning 194,596 nodes down to 726.`
     );
     process.exit(1);
   }

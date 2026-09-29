@@ -33,6 +33,8 @@ import urllib.parse
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA = os.path.join(ROOT, "portal", "data")
+# Names the cached GBIF dumps (gbif-cache-<class>.json), which still exist and
+# are looked up by name. The source-tree walk below uses the kingdom directory.
 CLASSES = ["liliopsida", "magnoliopsida"]
 IPNI_DATASET = "046bbc50-cae2-47ff-aa43-729fbf53f7c5"
 GBIF_UA = "SystemaNaturae/1.0 (https://github.com/tobese/systema-naturae; POWO enrich)"
@@ -170,14 +172,21 @@ def build_summary(d):
 # ---------- walk + enrich ----------
 def collect_targets():
     files = []
-    for cls in CLASSES:
-        base = os.path.join(ROOT, cls)
-        for dp, _, fns in os.walk(base):
-            if os.path.join("src", "data") not in dp:
-                continue
-            for fn in fns:
-                if fn.endswith(".json"):
-                    files.append(os.path.join(dp, fn))
+    # Walk taxonomy/plantae/ rather than a list of class directories. The list
+    # was hard-coded and os.walk on a missing directory yields nothing without
+    # error, so under taxonomy/<kingdom>/<phylum>/<class>/ this found no files
+    # at all and the run reported success having enriched nothing.
+    base = os.path.join(ROOT, "taxonomy", "plantae")
+    if not os.path.isdir(base):
+        sys.exit(f"No {base} - nothing to enrich. Refusing to report success.")
+    for dp, _, fns in os.walk(base):
+        if os.path.join("src", "data") not in dp:
+            continue
+        for fn in fns:
+            if fn.endswith(".json"):
+                files.append(os.path.join(dp, fn))
+    if not files:
+        sys.exit(f"No family data files under {base}. Refusing to report success.")
     files.sort()
     files = [f for i, f in enumerate(files) if i % args.total == args.id]
     return files

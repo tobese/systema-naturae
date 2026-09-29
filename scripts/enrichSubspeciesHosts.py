@@ -29,6 +29,7 @@ import sys
 from glob import glob
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from familyFiles import iter_family_files  # discovers the layout instead of assuming it
 import enrichBreedsFromWikipedia as wiki   # reuse the extraction, not a copy
 
 DSN = wiki.DEFAULT_DSN
@@ -37,7 +38,7 @@ DSN = wiki.DEFAULT_DSN
 def collect_hosts(root):
     """{family_dir: (path, [species names])} - hosts of subspecies with no text."""
     out = {}
-    for p in sorted(glob(os.path.join(root, "*", "*", "*", "src", "data", "*.json"))):
+    for p in sorted(list(iter_family_files(root))):
         try:
             tree = json.load(open(p, encoding="utf-8"))
         except Exception:

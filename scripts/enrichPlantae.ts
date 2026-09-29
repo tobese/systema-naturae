@@ -83,15 +83,24 @@ function countSpecies(n: any): number {
   return c;
 }
 
-const CLASSES = ["liliopsida", "magnoliopsida"];
+// Walks taxonomy/<kingdom>/ rather than a list of class directories. The
+// list was hard-coded and each entry existedSync-guarded, which fails in the
+// worst direction: the directory is absent, the script skips it, and it
+// reports success having processed nothing.
+const KINGDOM_ROOT = resolve(root, "taxonomy", "plantae");
 
 function collectFamilyFiles(): string[] {
   const files: string[] = [];
-  for (const cls of CLASSES) {
-    const d = resolve(root, cls);
-    if (!existsSync(d)) continue;
-    const r = spawnSync("find", [d, "-name", "*.json", "-path", "*/src/data/*", "-type", "f"], { encoding: "utf-8", timeout: 10000 });
-    if (r.status === 0 && r.stdout.trim()) files.push(...r.stdout.trim().split("\n").filter(Boolean));
+  if (!existsSync(KINGDOM_ROOT)) {
+    console.error(`No ${KINGDOM_ROOT} - nothing to process. Refusing to report success.`);
+    process.exit(1);
+  }
+  const r = spawnSync("find", [KINGDOM_ROOT, "-name", "*.json", "-path", "*/src/data/*", "-type", "f"],
+    { encoding: "utf-8", timeout: 30000 });
+  if (r.status === 0 && r.stdout.trim()) files.push(...r.stdout.trim().split("\n").filter(Boolean));
+  if (!files.length) {
+    console.error(`No family data files under ${KINGDOM_ROOT}. Refusing to report success.`);
+    process.exit(1);
   }
   return files;
 }
