@@ -116,6 +116,53 @@ def walk(node, genus=None):
         yield from walk(child, genus)
 
 
+# ── Classification ───────────────────────────────────────────────────────────
+# Shared with scripts/buildDescriptionReview.py, which imports from here, so the
+# thing that clears and the thing that reports can never disagree about what a
+# record is.
+
+LATIN = re.compile(
+    r"\b(organisatione|organisationis|percipiunt|sentiunt|regerentur|"
+    r"animalia|vegetabil|reprod[u]?ctio|generationis|exponentia)\b", re.I)
+OFF_TOPIC = re.compile(
+    r"\b(highway|route|map|railway|station|airport|province of|county|"
+    r"literature:|cf\.|ibid\.|op\. cit\.|km north|elevation of)\b", re.I)
+SPECIMEN = re.compile(
+    r"(\d+\s*[\u00b0\u00ba]\s*\d+|\bCo\.:|\bCounty\b|\bdet\.\s|\bleg\.\s|"
+    r"^\s*records?:|\bpreviously recorded\b|\bnew record\b|\bcounty\b)", re.I)
+BIBLIOGRAPHY = re.compile(
+    r"(\d{4}\s*:\s*\d+|comb\.\s*n\.|syn\.\s*nov\.|comb\.\s*nov\.|"
+    r"Am\.\s+Midl\. Nat|Acad\. Sci|Beitr\. Zool|sp\.\s*nov\.)")
+DISTRIBUTION = re.compile(
+    r"^\s*(general distribution|geographic distribution|distribution)\b", re.I)
+MORPHOLOGY = re.compile(
+    r"(descriptive features and remarks|medium sized (leeches|worms)|"
+    r"large leeches|small sized worms|habitats:|"
+    r"\bmm long\b|\bbody length\b|dorsally|ventrally|clitellum|"
+    r"genital pores|\bkeels?\b)", re.I)
+LEAD = re.compile(r"^(.{0,70}?)\s+is\sa\s+(species|genus|family|subfamily)\b", re.I)
+
+
+def classify(name: str, desc: str, genus: str | None = None) -> str:
+    """Which kind of leftover this is. Most specific evidence first."""
+    if LATIN.search(desc):
+        return "latin-filler"
+    if OFF_TOPIC.search(desc):
+        return "ocr-junk"
+    if SPECIMEN.search(desc):
+        return "specimen-records"
+    if BIBLIOGRAPHY.search(desc):
+        return "bibliography"
+    if DISTRIBUTION.match(desc) and not MORPHOLOGY.search(desc):
+        return "distribution-only"
+    if MORPHOLOGY.search(desc):
+        return "morphology"
+    m = LEAD.match(desc)
+    if m and genus and m.group(1).strip().lower() == genus.lower():
+        return "possibly-genuine"
+    return "possibly-genuine"
+
+
 def looks_like_treatment(name: str, desc: str) -> bool:
     if len(desc) < MIN_LEN:
         return False
@@ -132,6 +179,12 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("root", nargs="?", default="taxonomy")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument(
+        "--clear-unsourced-classes", default=None,
+        help="comma-separated classification classes to clear, e.g. "
+             "'bibliography,specimen-records'. 'all' clears every class except "
+             "morphology. Restricted to sourcedFrom='none' records - see below. "
+             "Omit to clear only the unambiguous treatment text.")
     args = ap.parse_args()
 
     if not os.path.isdir(args.root):
@@ -144,7 +197,9 @@ def main() -> int:
         print("Dry run. Re-run with --apply to write.")
 
     cleared = 0
+    kept = 0
     touched = []
+    by_class = Counter()
     skipped = Counter()
 
     for path in files:
@@ -162,11 +217,33 @@ def main() -> int:
             desc = (species.get("description") or "").strip()
             if not desc:
                 continue
-            if looks_like_treatment(species.get("name") or "", desc):
+            name = species.get("name") or ""
+            kind = classify(name, desc, _genus)
+            want = args.clear_unsourced_classes
+            if want:
+                if len(desc) < MIN_LEN:
+                    # The review queue applied MIN_LEN; this pass must too, or it
+                    # silently widens the population a human approved. Without
+                # this it saw 31 "possibly-genuine" where the review showed 5.
+                    skipped["short, below MIN_LEN"] += 1
+                    continue
+                should_clear = (kind != "morphology") if want == "all" \
+                    else kind in {c.strip() for c in want.split(",")}
+            else:
+                should_clear = looks_like_treatment(name, desc)
+            if should_clear:
                 species["description"] = ""
                 here += 1
+                by_class[kind] += 1
+            elif kind == "morphology":
+                # Kept, and re-attributed: the text is a GBIF treatment - the
+                # section headings here are GBIF's own ("Descriptive features
+                # and remarks", "Habitats:") - so "none" understates where it
+                # came from and hides it from the sourced-species highlight.
+                species["sourcedFrom"] = "gbif"
+                kept += 1
             else:
-                skipped["long text, no treatment markers"] += 1
+                skipped[kind] += 1
 
         if here:
             cleared += here
@@ -176,13 +253,15 @@ def main() -> int:
                     json.dump(doc, fh, ensure_ascii=False, indent=2)
                     fh.write("\n")
 
+    if by_class:
+        print(f"\n  cleared by class: {dict(by_class)}")
     print(f"\n{'Applied' if args.apply else 'Would clear'} {cleared} mis-attached descriptions "
           f"in {len(touched)} files:")
     for line in sorted(touched):
         print(line)
+    print(f"\n  kept and re-attributed to gbif: {kept}")
     if skipped:
-        print(f"\n{sum(skipped.values())} other long 'none' descriptions left alone "
-              f"({dict(skipped)}) - not confident these are treatments.")
+        print(f"\n{sum(skipped.values())} left alone ({dict(skipped)}).")
     return 0
 
 
