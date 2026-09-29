@@ -1,9 +1,12 @@
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "fs";
 import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { classDirsForKingdom, dirName } from "./lib/familyPath.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
+// Empty SN_KINGDOM means animalia, matching the build.
+const KINGDOM = process.env.SN_KINGDOM || "animalia";
 const portalRoot = resolve(__dirname, "..");
 
 const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary";
@@ -125,14 +128,45 @@ function scanFiles(classFilter?: string): FamilyFile[] {
     } catch { /* permission denied, skip */ }
   }
 
-  // Walk class directories — also catch tardigrada (phylum at root) and any others
-  const classDirs = classFilter
-    ? [classFilter]
-    : ["aves", "mammalia", "reptilia", "chondrichthyes", "amphibia", "actinopterygii",
-      "insecta", "arachnida", "asteroidea", "echinoidea", "holothuroidea", "tardigrada"];
-  for (const dir of classDirs) {
-    const fullDir = join(root, dir);
-    if (existsSync(fullDir)) walkDir(fullDir);
+  // Walk taxonomy/<kingdom>/ rather than a hard-coded list of class
+  // directories. The list was 12 names under an existsSync guard, and a guard
+  // like that fails in the worst direction: the directory is not there, the
+  // script skips it, and it reports success having enriched nothing. After the
+  // tree moved under taxonomy/<kingdom>/<phylum>/<class>/ all 12 were gone, so
+  // this had become a no-op that still exited 0.
+  //
+  // --class is still honoured, but resolved through the taxonomy rather than
+  // assumed to be a top-level directory, so it keeps working for a class that
+  // is not a direct child of the kingdom root (acoela lives under
+  // xenacoelomorpha, for instance).
+  const kingdomRoot = join(root, "taxonomy", KINGDOM);
+  if (classFilter) {
+    const dirs = classDirsForKingdom(root, KINGDOM)
+      .filter((c) => c === dirName(classFilter));
+    if (!dirs.length) {
+      console.error(`--class ${classFilter} is not a class in ${KINGDOM}. ` +
+        `Known: ${classDirsForKingdom(root, KINGDOM).join(", ")}`);
+      process.exit(1);
+    }
+    for (const dir of dirs) {
+      for (const phylum of safeReadDir(kingdomRoot)) {
+        const p1 = join(kingdomRoot, phylum, dir);
+        if (existsSync(p1)) walkDir(p1);
+        const p2 = join(kingdomRoot, dir);
+        if (existsSync(p2)) walkDir(p2);
+      }
+    }
+  } else if (existsSync(kingdomRoot)) {
+    walkDir(kingdomRoot);
+  } else {
+    console.error(`No taxonomy/${KINGDOM} directory. Nothing to enrich - refusing to ` +
+      `report success having done nothing.`);
+    process.exit(1);
+  }
+  if (families.length === 0) {
+    console.error(`No family data files found under taxonomy/${KINGDOM}. ` +
+      `Refusing to report success having enriched nothing.`);
+    process.exit(1);
   }
   return families;
 }
@@ -251,3 +285,11 @@ async function main() {
 }
 
 main().catch(e => { console.error("Fatal:", e); process.exit(1); });
+
+function safeReadDir(dir: string): string[] {
+  try {
+    return readdirSync(dir);
+  } catch {
+    return [];
+  }
+}

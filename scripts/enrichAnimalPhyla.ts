@@ -3,8 +3,8 @@
  * Usage: npx tsx scripts/enrichAnimalPhyla.ts [--live]
  */
 
-import { readFileSync, writeFileSync, existsSync } from "fs";
-import { resolve, dirname } from "path";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
+import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { spawnSync } from "child_process";
 
@@ -18,6 +18,7 @@ const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 const BINOMIAL_RE = /^[A-Z][a-z]+ [a-z-]+$/;
 
+const ANIMALIA_TAXONOMY = resolve(root, "taxonomy", "animalia");
 const PHYLA = [
   "phoronida", "loricifera", "priapulida", "entoprocta",
   "gnathostomulida", "onychophora", "gastrotricha", "xenacoelomorpha",
@@ -25,8 +26,10 @@ const PHYLA = [
 
 function collectFamilyFiles(): string[] {
   const files: string[] = [];
-  for (const phylum of PHYLA) {
-    const phylumDir = resolve(root, phylum);
+  // taxonomy/animalia/<phylum>/<class>/<order>/<family> - the PHYLA list named
+  // top-level directories that no longer exist, so every one was skipped.
+  for (const phylumDir of readdirSync(ANIMALIA_TAXONOMY, { withFileTypes: true })
+    .filter((d) => d.isDirectory()).map((d) => join(ANIMALIA_TAXONOMY, d.name))) {
     if (!existsSync(phylumDir)) continue;
     const result = spawnSync("find", [phylumDir, "-name", "*.json", "-path", "*/src/data/*", "-type", "f"], {
       encoding: "utf-8", timeout: 5000,
@@ -113,7 +116,7 @@ function countSpecies(node: any): number {
 async function main() {
   const live = process.argv.includes("--live");
   const files = collectFamilyFiles();
-  console.log(`Found ${files.length} family files across ${PHYLA.length} phyla\n`);
+  console.log(`Found ${files.length} family files under taxonomy/animalia\n`);
 
   let totalOk = 0, totalFail = 0, totalSkip = 0, totalApi = 0;
 

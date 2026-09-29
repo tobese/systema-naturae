@@ -1,4 +1,4 @@
-import { existsSync, statSync } from "fs";
+import { existsSync, statSync, readFileSync } from "fs";
 import { join } from "path";
 
 /**
@@ -118,4 +118,66 @@ export function familySourceStamp(root: string, loc: FamilyLocation) {
     /* missing; the caller reports it */
   }
   return { mtimeMs, size, layout: r.layout, phylum: dirName(loc.phylum), cls: dirName(loc.cls), ord: dirName(loc.ord) };
+}
+
+/**
+ * Class-level directory names for a kingdom, read from its taxonomy.
+ *
+ * Several scripts walked a hard-coded list of class directories wrapped in an
+ * `existsSync` guard - ["aves", "mammalia", ..., "tardigrada"] and similar. A
+ * guard like that fails in the worst direction: the directory does not exist, so
+ * the script skips it, and then reports success having enriched nothing. Under
+ * taxonomy/<kingdom>/<phylum>/<class>/ every one of those paths was gone, so
+ * those scripts had become no-ops that still exited 0.
+ *
+ * Reading the list from the taxonomy means it cannot drift again, and it
+ * includes the awkward cases for free: a phylum with no CLASS (Tardigrada), and
+ * a class that is not a direct child of the kingdom root.
+ */
+export function classDirsForKingdom(root: string, kingdom: string): string[] {
+  const cfgPath = join(root, "portal", "data", "kingdom-config.json");
+  if (!existsSync(cfgPath)) return [];
+  const cfg = JSON.parse(readFileSync(cfgPath, "utf-8")) as {
+    kingdoms?: Record<string, { input?: string }>;
+  };
+  const input = cfg.kingdoms?.[kingdom]?.input;
+  if (!input) return [];
+  const treePath = join(root, "portal", input);
+  if (!existsSync(treePath)) return [];
+  const tree = JSON.parse(readFileSync(treePath, "utf-8")) as {
+    children?: { rank?: string; name?: string; children?: unknown[] }[];
+  };
+  const out = new Set<string>();
+  const walk = (n: { rank?: string; name?: string; children?: unknown[] }, parentHasClass: boolean) => {
+    if (n?.rank === "CLASS" && n.name) {
+      out.add(dirName(n.name));
+      for (const c of (n.children ?? []) as typeof n[]) walk(c, true);
+    } else if (n?.rank === "PHYLUM" && n.name) {
+      // A phylum with a class beneath it contributes the class; one without
+      // (Tardigrada) contributes itself.
+      const hasClass = containsRank(n.children, "CLASS");
+      if (!hasClass) out.add(dirName(n.name));
+      for (const c of (n.children ?? []) as typeof n[]) walk(c, parentHasClass || hasClass);
+    } else {
+      for (const c of (n?.children ?? []) as typeof n[]) walk(c, parentHasClass);
+    }
+  };
+  for (const c of tree.children ?? []) walk(c, false);
+  return [...out].sort();
+}
+
+function containsRank(nodes: unknown[] | undefined, rank: string): boolean {
+  for (const n of (nodes ?? []) as { rank?: string; children?: unknown[] }[]) {
+    if (n?.rank === rank) return true;
+    if (containsRank(n?.children, rank)) return true;
+  }
+  return false;
+}
+
+/** Every kingdom key declared in kingdom-config.json. */
+export function kingdomNames(root: string): string[] {
+  const cfgPath = join(root, "portal", "data", "kingdom-config.json");
+  if (!existsSync(cfgPath)) return [];
+  const cfg = JSON.parse(readFileSync(cfgPath, "utf-8")) as { kingdoms?: Record<string, unknown> };
+  return Object.keys(cfg.kingdoms ?? {}).sort();
 }
