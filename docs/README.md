@@ -5,6 +5,7 @@
 - [**Backlog**](./backlog.md) — Living roadmap and feature queue
 - [**Book View**](./book-view.md) — Alternative text-driven taxonomy browser concept
 - [**Coverage**](./coverage.md) — Taxonomy node coverage, portal statistics & gaps
+- [**Data Tiers**](./data-tiers.md) — Graph/book data split, projection sizes, and whether a server is warranted
 - [**Graph UI**](./graph-ui.md) — Layout, node sizing, colors, and side panels
 - [**Import**](./import.md) — Family import workflow and scripts
 - [**Navigation**](./navigation.md) — Portal navigation architecture
