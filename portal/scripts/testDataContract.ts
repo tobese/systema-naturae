@@ -409,6 +409,8 @@ test('manifest CARNIVORA entry snapshot', () => {
     orderId: 'CARNIVORA', classSlug: 'mammalia', orderSlug: 'carnivora',
     file: 'data/kingdoms/animalia/orders/CARNIVORA.json',
     navFile: 'data/kingdoms/animalia/orders-nav/CARNIVORA.json',
+    namesFile: 'data/kingdoms/animalia/orders-names/CARNIVORA.json',
+    proseDir: 'data/kingdoms/animalia/orders-prose/CARNIVORA',
     familyCount: 5, speciesCount: 1015,
     familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae'],
   });

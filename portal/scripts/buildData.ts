@@ -256,6 +256,14 @@ const ordersDir = resolve(kingdomOutDir, ORDERS_REL);
 // never be mistaken for a current one (the dirty check covers that too).
 const navOrdersRel = `orders-nav${dataSuffix}`;
 const navOrdersDir = resolve(kingdomOutDir, navOrdersRel);
+// The graph's order file: the order tree with species prose removed and
+// everything else intact. The book keeps the full-prose `orders/` above,
+// because SpeciesEntry renders species.description from it.
+const namesOrdersRel = `orders-names${dataSuffix}`;
+const namesOrdersDir = resolve(kingdomOutDir, namesOrdersRel);
+// Per-genus species prose, fetched when a reader opens a genus.
+const proseRel = `orders-prose${dataSuffix}`;
+const proseDir = resolve(kingdomOutDir, proseRel);
 const skeletonPath = resolve(kingdomOutDir, `unified-taxonomy-skeleton.json`);
 const manifestPath = resolve(kingdomOutDir, `order-manifest.json`);
 
@@ -377,6 +385,8 @@ if (!WRITE_UNIFIED) {
 // ── Extract per-order subtrees ──
 if (!existsSync(ordersDir)) mkdirSync(ordersDir, { recursive: true });
 if (!existsSync(navOrdersDir)) mkdirSync(navOrdersDir, { recursive: true });
+if (!existsSync(namesOrdersDir)) mkdirSync(namesOrdersDir, { recursive: true });
+if (!existsSync(proseDir)) mkdirSync(proseDir, { recursive: true });
 
 interface OrderEntry {
   orderId: string;
@@ -392,6 +402,8 @@ const familyToOrder: Record<string, string> = {};
 let ordersWritten = 0;
 let ordersSkipped = 0;
 let navOrdersWritten = 0;
+let namesOrdersWritten = 0;
+let genusProseWritten = 0;
 
 function collectOrders(node: TaxonNode, cls?: string): void {
   if (node.rank === "ORDER") {
@@ -452,11 +464,109 @@ function collectOrders(node: TaxonNode, cls?: string): void {
       writeFileSync(navFilePath, JSON.stringify(navProjection(node), null, 2));
       navOrdersWritten++;
     }
+
+    // The names tier: everything the order file has except species prose. This
+    // is the graph's order file. It cannot be the nav tier, because SearchBox
+    // indexes name and commonName across children *and* speciesList, and the
+    // Eponyms and Species-of-the-Day modals read namedAfter off the same tree -
+    // a projection without species records silently loses search over 110,614
+    // of animalia's 527,630 species.
+    //
+    // Descriptions are the 63% of the bytes (animalia: ~130MB of 209MB), and
+    // the graph only needs the description of a species a reader actually
+    // opens. So they move to per-genus files, written below.
+    const namesFilePath = resolve(namesOrdersDir, `${node.id}.json`);
+    if (orderDirty || !existsSync(namesFilePath)) {
+      writeFileSync(namesFilePath, JSON.stringify(namesProjection(node), null, 2));
+      namesOrdersWritten++;
+    }
+    // `|| !existsSync(...)` for the same reason as the nav tier above: a clean
+    // order whose prose directory was never created would otherwise stay empty
+    // forever, because nothing else would ever mark it dirty.
+    if (orderDirty || !existsSync(resolve(proseDir, node.id))) writeGenusProse(node);
     return;
   }
 
   const nextCls = node.rank === "CLASS" ? (node.name?.toLowerCase() || "") : (cls || "");
   for (const c of node.children ?? []) collectOrders(c, nextCls);
+}
+
+function speciesOf(genus: TaxonNode): TaxonNode[] {
+  return [
+    ...(genus.speciesList ?? []),
+    ...(genus.children ?? []).filter(c => c.rank === "SPECIES"),
+  ];
+}
+
+/**
+ * One file per genus that has prose worth reading, holding that genus's
+ * species at full fidelity. Fetched when a reader opens the genus, so the cost
+ * of prose is paid for the genus being read rather than for the whole order.
+ *
+ * Only 38% of animalia's genera (21,588 of 57,161) have any described species,
+ * and the median genus prose file is 1KB against a 1.1MB worst case
+ * (Pheidole) - so the file count is high but the bytes are not, and nothing is
+ * fetched at all unless a genus is opened.
+ *
+ * A genus that loses its last description keeps a stale file until the next
+ * dirty rebuild rewrites the order. That is deliberate: an empty response is
+ * indistinguishable from "no prose", whereas a file that outlives its data
+ * would show a description the family no longer has.
+ */
+function writeGenusProse(order: TaxonNode): void {
+  // Only called for a dirty order: 21,588 writes on an otherwise clean build is
+  // exactly the cost the dirty check exists to avoid.
+  const dir = resolve(proseDir, order.id);
+  let wrote = 0;
+  // Genera sit under FAMILY (and sometimes SUBFAMILY), not directly under the
+  // order, so this has to walk down rather than look at order.children.
+  const walk = (node: TaxonNode) => {
+    for (const child of node.children ?? []) {
+      if (child.rank === "GENUS") {
+        const species = speciesOf(child);
+        if (!species.some(s => (s.description ?? "").trim())) continue;
+        if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
+        writeFileSync(
+          resolve(dir, `${child.id}.json`),
+          JSON.stringify({ genus: child.id, name: child.name, order: order.id, species }, null, 2),
+        );
+        wrote++;
+        continue;
+      }
+      walk(child);
+    }
+  };
+  walk(order);
+  genusProseWritten += wrote;
+}
+
+/**
+ * Structure, names and family/genus prose; species lose only their description.
+ * Every other species field survives - commonName, extinct, familySlug,
+ * namedAfter - because the graph reads them.
+ */
+function namesProjection(node: TaxonNode): TaxonNode {
+  const children: TaxonNode[] = [];
+  for (const child of node.children ?? []) {
+    if (child.rank === "SPECIES") {
+      const { description: _dropped, ...rest } = child;
+      children.push(rest as TaxonNode);
+      continue;
+    }
+    if (child.rank === "GENUS") {
+      const genus = { ...child, speciesList: undefined } as TaxonNode;
+      if (child.speciesList) {
+        genus.speciesList = child.speciesList.map(sp => {
+          const { description: _dropped, ...rest } = sp;
+          return rest as TaxonNode;
+        });
+      }
+      children.push(genus);
+      continue;
+    }
+    children.push(namesProjection(child));
+  }
+  return { ...node, children, speciesList: undefined } as TaxonNode;
 }
 
 /**
@@ -527,6 +637,8 @@ function navProjection(node: TaxonNode): TaxonNode {
   timed("collectOrders (+ write order files)", () => collectOrders(unified));
   console.log(`  Extracted ${orderMap.size - orderCountBefore} order data files (${ordersWritten} written, ${ordersSkipped} unchanged/skipped)`);
   console.log(`  Nav tier: ${navOrdersWritten} written → ${navOrdersDir}`);
+  console.log(`  Names tier: ${namesOrdersWritten} written → ${namesOrdersDir}`);
+  console.log(`  Genus prose: ${genusProseWritten} genus files → ${proseDir}`);
 }
 
 // ── Build skeleton (KINGDOM → PHYLUM → CLASS → ORDER, no family children) ──
@@ -586,6 +698,8 @@ interface ManifestEntry {
   orderSlug: string;
   file: string;
   navFile: string;
+  namesFile: string;
+  proseDir: string;
   familyCount: number;
   speciesCount: number;
   familySlugs: string[];
@@ -602,6 +716,11 @@ for (const [, entry] of orderMap) {
     // to lay an order out; `file` is only fetched when a reader actually opens
     // something and needs the prose. See docs/data-tiers.md.
     navFile: `data/kingdoms/${KINGDOM || "animalia"}/${navOrdersRel}/${entry.orderId}.json`,
+    // The graph's order file: names and structure, no species prose. The book's
+    // is `file`, which keeps it.
+    namesFile: `data/kingdoms/${KINGDOM || "animalia"}/${namesOrdersRel}/${entry.orderId}.json`,
+    // Per-genus species descriptions, fetched when a genus is opened.
+    proseDir: `data/kingdoms/${KINGDOM || "animalia"}/${proseRel}/${entry.orderId}`,
     familyCount: entry.familyCount,
     speciesCount: entry.speciesCount,
     familySlugs: entry.familySlugs,
