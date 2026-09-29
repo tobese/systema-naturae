@@ -42,7 +42,13 @@ function main() {
   // 1. Run build
   console.log(`⏳ Building unified taxonomy${KINGDOM ? ` for ${KINGDOM}` : ""}...`);
   const start = Date.now();
-  const env = KINGDOM ? { ...process.env, SN_KINGDOM: KINGDOM } : process.env;
+  // The monolith is opt-in, and validating it is this script's entire purpose,
+  // so it asks for it explicitly rather than assuming every build writes it.
+  const env = {
+    ...process.env,
+    ...(KINGDOM ? { SN_KINGDOM: KINGDOM } : {}),
+    SN_BUILD_UNIFIED: "1",
+  };
   const out = execSync("sh scripts/buildData.sh", {
     cwd: PORTAL,
     encoding: "utf-8",
