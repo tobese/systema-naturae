@@ -126,7 +126,9 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   const [now, setNow] = useState(new Date());
   const { todaysDays } = useInternationalDays(kingdom);
   const [treeReady, setTreeReady] = useState(false);
-  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(kingdom);
+const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_GROUP", "HYBRID", "HYBRID_GROUP"]);
+
+  const { taxonomyData, loading, manifest, loadOrder, loadProseFor, loadedOrders } = useTaxonomyLoader(kingdom);
 
   const speciesOfTheDay = useSpeciesOfTheDay(taxonomyData ?? undefined);
   const [expandedSubspeciesIds, setExpandedSubspeciesIds] = useState<Set<string>>(new Set());
@@ -309,6 +311,14 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
     // ORDER click → lazy-load the order's full subtree
     if (node.rank === "ORDER" && node._dataFile && !loadedOrders.has(node.id)) {
       loadOrder(node.id);
+    }
+
+    // Species prose is not in the names tier, so the panel for anything under a
+    // genus needs its genus's prose file before it can render a description.
+    // Without this the graph looks as though it lost its descriptions.
+    if (PROSE_RANKS.has(node.rank) && node.familySlug) {
+      const orderId = manifest?.familyToOrder[node.familySlug];
+      if (orderId) loadProseFor(orderId, node.id);
     }
 
     // Zoom to order-and-below so the tree pans to the destination (skip CLASS/PHYLUM — too jarring in overview)

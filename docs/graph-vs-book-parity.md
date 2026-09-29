@@ -2,6 +2,17 @@
 
 *Audit date:* 2026-09-26 · *Surfaces:* portal `Graph` and `Book` viewModes
 
+> **Superseded in part by [`docs/data-tiers.md`](./data-tiers.md) (2026-09-29).**
+> The "How the two surfaces get their data" table below is out of date: it says
+> the graph reads the compressed `unified-taxonomy.json` while the book reads
+> uncompressed per-order files. Both read the *same* order files today, via
+> `useTaxonomyLoader.ts:96` and `useBookChapters.ts:119` respectively — the
+> monolith became opt-in and the app stopped fetching it. The order files are
+> compressed too, so the compressed/uncompressed distinction no longer exists.
+> The findings below that are about *content* still stand; the ones about
+> *provenance* do not. data-tiers.md also measures what a structure-only
+> projection would cost, which is the way to finish closing the remaining gap.
+
 ## How the two surfaces get their data
 
 Not a fair fight, which explains most of the differences below:
