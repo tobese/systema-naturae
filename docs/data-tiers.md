@@ -129,34 +129,73 @@ would therefore silently lose:
 
 None of that throws. It is a quieter and much worse failure than a fetch error.
 
-## The decomposition, which supersedes the advice above
+## The decomposition — corrected, and it is not what this note first said
 
-The nav tier is only cheap because it is unusable for search. Keeping the names
-it needs costs most of the saving:
+The first version of this section claimed prose was 63% of the bytes and that
+shipping prose on demand was therefore the lever. **That was wrong**, and the
+way it was wrong is worth recording, because the mistake is easy to repeat.
 
-| layer | animalia | share |
+It came from comparing totals-with-`speciesList`-removed against totals, which
+attributes *all* per-species field overhead to prose. Measuring the fields
+directly, on `COLEOPTERA` (52.6 MB, 151,512 species entries):
+
+| | MB | share |
 |---|---|---|
-| descriptions (prose) | ~130 MB | 63% |
-| names + `commonName`, all 527,630 species | 78.6 MB | 38% |
-| structure + counts only | 17.8 MB | 7% |
+| `description`, all ranks | 13.2 | 25% |
+| `id` + `name` | 9.6 | 18% |
+| `familySlug` + `orderName` + `className` | 12.3 | 23% |
+| `lineage` + `rank` | 6.6 | 13% |
+| `sourcedFrom` + `subspeciesCount` + `extinct` | rest | ~21% |
 
-So the lever is **prose, not structure** — the opposite of what the first
-version of this note implied, and the reason a 15× smaller artifact turned out
-to be worth 2.7× once search was accounted for. A tier carrying family and
-genus prose plus every species name is 78.6 MB total and 18.8 MB for the worst
-order: still 2.7×, and 18.8 MB is not a comfortable phone fetch.
+**The largest single component is denormalisation**: `familySlug`, `orderName`,
+`className`, `lineage` and `rank` are repeated on all 151,512 species, where
+they are constant for the family or genus they sit under. Prose is a quarter of
+the file, not two thirds.
 
-That reframes the work:
+So the tiers that are actually available, measured rather than assumed:
 
-1. **Ship prose on demand, not with the order.** The order file is needed for
-   layout and for names; it is not needed for the description of the 99% of
-   species nobody has opened. Per-genus prose, fetched when a genus is opened,
-   is where the 130 MB goes.
-2. **Then a names tier becomes the layout/search artifact** — 78.6 MB today, and
-   much less if `commonName` is dropped, since it is the smaller half of the
-   name record and is already available from `wiki-images.json`.
-3. The counts tier already built stays useful for a layout-only path, and costs
-   17.8 MB to keep.
+| graph order file | animalia | worst file | COLEOPTERA |
+|---|---|---|---|
+| as shipped (the book's) | 208.9 MB | 52.6 MB | 52.6 MB |
+| **prose moved out only** — what is built now | ~209 MB | 50.8 MB | 50.8 MB |
+| + repeated stamps inherited from the parent | 61.1 MB | 14.1 MB | 14.1 MB |
+| + names only, no species records at all (nav tier) | 17.8 MB | 4.3 MB | 4.3 MB |
+
+The honest achievable win for the graph is **3.4×**, from 208.9 MB to 61.1 MB,
+with a worst file of 14.1 MB and per-genus prose on demand at a 1.23 MB worst
+case and a 3 KB median. Not the 15× or 12× quoted above — those are real
+arithmetic, but on a tier that cannot be searched, or that still carries the
+repeated stamps.
+
+Getting the third row needs one thing the build cannot do alone:
+`annotatePortalLevels` already re-derives `className` and `orderName` on the
+client, so the machinery exists, but `familySlug`, `lineage` and `rank` are read
+per-node today and would have to be inherited on the way down. That is a real
+client change, not a mechanical edit, and it is the next piece of work rather
+than something to slip in here.
+
+## What is built
+
+- `orders[-suffix]/` — unchanged, full prose. **The book's**; `SpeciesEntry`
+  renders `species.description` from it.
+- `orders-prose[-suffix]/<ORDER>/<GENUS>.json` — per-genus species prose,
+  21,588 files for animalia, worst 1.23 MB, median 3 KB, written only for
+  genera that have any described species (38% of them) and only for a dirty
+  order.
+- `orders-names[-suffix]/` — the order tree without species prose. **The
+  graph's**; this is the tier the client should load in place of `file`.
+- `orders-nav[-suffix]/` — structure and counts, no species records. The
+  layout-only artifact.
+
+Each manifest entry carries `file`, `namesFile`, `navFile` and `proseDir`.
+`testDataContract.ts` asserts the nav tier exists, matches the order count, is
+over 5× smaller, and holds no species descriptions.
+
+**The client is not switched yet.** `loadOrder` still fetches `file`. Wiring it
+to `namesFile` plus a per-genus prose fetch on selection is the outstanding
+step, and it is the step that has to keep `SearchBox` (which indexes
+`name` and `commonName` across `children` *and* `speciesList`) and the Eponyms
+and Species-of-the-Day modals working.
 
 ## Why not a server
 
