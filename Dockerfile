@@ -22,6 +22,14 @@ ARG VITE_BASE=/systema-naturae/
 ENV VITE_BASE=${VITE_BASE}
 RUN npm run build:all
 
+# orders-nav/ is the structure-and-counts projection: 30MB across the six
+# kingdoms, and nothing reads it. It is built and asserted by the contract suite
+# because it is the artifact a layout-only path would use, but shipping it would
+# be 30MB of dead weight in the image. The other three tiers do have consumers -
+# orders/ is the book's, orders-names/ and orders-prose/ are the graph's - so
+# they stay.
+RUN rm -rf /repo/portal/dist/data/kingdoms/*/orders-nav*
+
 # portal/data/kingdoms/<kingdom>/{skeleton,manifest,coverage-summary,orders*/*}
 # already land in dist/ via Vite's public/ copy. This rsync brings over the
 # remaining runtime-fetched files (e.g. international-days.json) while
