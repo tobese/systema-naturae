@@ -169,7 +169,11 @@ test('every ORDER in skeleton has a manifest entry', () => {
 });
 
 test('every manifest order file exists on disk', () => {
-  const baseDir = resolve(import.meta.dirname, '..');
+  // Manifest `file` values are web-root-relative, because the app fetches them
+  // as `${BASE_URL}${file}` and public/ is the web root. Resolving them against
+  // portal/ instead looks in the private data dir, where they have never
+  // lived, so this assertion could not pass.
+  const baseDir = resolve(import.meta.dirname, '..', 'public');
   for (const [orderId, entry] of Object.entries(manifest.orders)) {
     const filePath = resolve(baseDir, entry.file);
     assert.doesNotThrow(() => statSync(filePath), `missing: ${entry.file}`);
