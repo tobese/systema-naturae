@@ -1,9 +1,12 @@
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "fs";
 import { resolve, dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { classDirsForKingdom, dirName } from "./lib/familyPath.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
+// Empty SN_KINGDOM means animalia, matching the build.
+const KINGDOM = process.env.SN_KINGDOM || "animalia";
 const portalRoot = resolve(__dirname, "..");
 
 const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary";
@@ -13,6 +16,8 @@ const HEADERS = { "User-Agent": "systema-naturae/1.0 (enrichment; https://github
 
 interface ApiResult {
   title: string;
+  type?: string;          // "standard" | "disambiguation" | "redirect" | ...
+  description?: string;   // Wikipedia's one-line gloss, e.g. "Hosner's cat"
   extract?: string;
   thumbnail?: { source: string };
 }
@@ -43,7 +48,13 @@ function extractDescription(extract: string): string {
   return sentences.slice(0, Math.min(3, sentences.length)).join(" ");
 }
 
-async function fetchWiki(sciName: string): Promise<{ commonName: string; description: string; continents: string[] } | null> {
+/** Compare names the way Wikipedia does: underscores for spaces, case-blind. */
+function sameTitle(a: string, b: string): boolean {
+  const norm = (s: string) => s.replace(/_/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+  return norm(a) === norm(b);
+}
+
+async function fetchWiki(sciName: string): Promise<{ commonName?: string; description: string; continents: string[] } | null> {
   const encoded = encodeURIComponent(sciName.replace(/ /g, "_"));
   const url = `${WIKI_SUMMARY}/${encoded}`;
   for (let attempt = 0; attempt < 3; attempt++) {
@@ -57,8 +68,28 @@ async function fetchWiki(sciName: string): Promise<{ commonName: string; descrip
       if (!res.ok) return null;
       const data = await res.json() as ApiResult;
       if (!data.extract) return null;
+
+      // The summary endpoint follows redirects, so a binomial with no article of
+      // its own comes back 200 with the *genus* article: asking for
+      // "Dermechinus horridus" returns title "Dermechinus". The old code took
+      // that extract as the species' description and the genus title as its
+      // commonName, which put 327 genus-level descriptions on species nodes
+      // across 15 phyla. Only a standard article whose title is the name we
+      // actually asked for is evidence about that name.
+      if (data.type && data.type !== "standard") return null;
+      if (!sameTitle(data.title, sciName)) return null;
+
+      // The common name comes from Wikipedia's gloss field, not from the title:
+      // the title is the binomial, and writing it into commonName produced
+      // entries like "Leopardus Guttulus". A gloss that just echoes the title
+      // back is not a common name either.
+      const gloss = (data.description ?? "").replace(/\s*\([^)]*\)\s*$/, "").trim();
+      const commonName = gloss && !sameTitle(gloss, data.title) && !sameTitle(gloss, sciName)
+        ? gloss
+        : undefined;
+
       return {
-        commonName: data.title !== sciName ? data.title : sciName,
+        ...(commonName ? { commonName } : {}),
         description: extractDescription(data.extract),
         continents: inferContinents(data.extract),
       };
@@ -125,14 +156,45 @@ function scanFiles(classFilter?: string): FamilyFile[] {
     } catch { /* permission denied, skip */ }
   }
 
-  // Walk class directories — also catch tardigrada (phylum at root) and any others
-  const classDirs = classFilter
-    ? [classFilter]
-    : ["aves", "mammalia", "reptilia", "chondrichthyes", "amphibia", "actinopterygii",
-      "insecta", "arachnida", "asteroidea", "echinoidea", "holothuroidea", "tardigrada"];
-  for (const dir of classDirs) {
-    const fullDir = join(root, dir);
-    if (existsSync(fullDir)) walkDir(fullDir);
+  // Walk taxonomy/<kingdom>/ rather than a hard-coded list of class
+  // directories. The list was 12 names under an existsSync guard, and a guard
+  // like that fails in the worst direction: the directory is not there, the
+  // script skips it, and it reports success having enriched nothing. After the
+  // tree moved under taxonomy/<kingdom>/<phylum>/<class>/ all 12 were gone, so
+  // this had become a no-op that still exited 0.
+  //
+  // --class is still honoured, but resolved through the taxonomy rather than
+  // assumed to be a top-level directory, so it keeps working for a class that
+  // is not a direct child of the kingdom root (acoela lives under
+  // xenacoelomorpha, for instance).
+  const kingdomRoot = join(root, "taxonomy", KINGDOM);
+  if (classFilter) {
+    const dirs = classDirsForKingdom(root, KINGDOM)
+      .filter((c) => c === dirName(classFilter));
+    if (!dirs.length) {
+      console.error(`--class ${classFilter} is not a class in ${KINGDOM}. ` +
+        `Known: ${classDirsForKingdom(root, KINGDOM).join(", ")}`);
+      process.exit(1);
+    }
+    for (const dir of dirs) {
+      for (const phylum of safeReadDir(kingdomRoot)) {
+        const p1 = join(kingdomRoot, phylum, dir);
+        if (existsSync(p1)) walkDir(p1);
+        const p2 = join(kingdomRoot, dir);
+        if (existsSync(p2)) walkDir(p2);
+      }
+    }
+  } else if (existsSync(kingdomRoot)) {
+    walkDir(kingdomRoot);
+  } else {
+    console.error(`No taxonomy/${KINGDOM} directory. Nothing to enrich - refusing to ` +
+      `report success having done nothing.`);
+    process.exit(1);
+  }
+  if (families.length === 0) {
+    console.error(`No family data files found under taxonomy/${KINGDOM}. ` +
+      `Refusing to report success having enriched nothing.`);
+    process.exit(1);
   }
   return families;
 }
@@ -152,14 +214,20 @@ async function enrichFamily(fam: FamilyFile): Promise<number> {
     for (const { item, wiki } of results) {
       if (!wiki) continue;
 
-      // Find and update the species node at this idx
+      // Find and update the species node at this idx. An arrow, not a
+      // declaration: a hoisted `function` is treated as callable before the
+      // `if (!wiki) continue` above, so the narrowing never reached its body
+      // and every `wiki.` read was a type error.
       let currentIdx = 0;
-      function updateNode(n: Record<string, unknown>): boolean {
+      const updateNode = (n: Record<string, unknown>): boolean => {
         if (n.rank === "SPECIES") {
           if (currentIdx === item.idx) {
             n.sourcedFrom = "wikipedia";
             n.description = wiki.description;
-            n.commonName = wiki.commonName;
+            // Only overwrite when Wikipedia actually offered a gloss. The old
+            // code always assigned, so a name it could not improve was
+            // replaced by the binomial in title case.
+            if (wiki.commonName) n.commonName = wiki.commonName;
             n.continents = wiki.continents.length > 0 ? wiki.continents : n.continents;
             return true;
           }
@@ -169,7 +237,7 @@ async function enrichFamily(fam: FamilyFile): Promise<number> {
           if (updateNode(c)) return true;
         }
         return false;
-      }
+      };
       if (updateNode(fam.data)) enriched++;
     }
 
@@ -251,3 +319,11 @@ async function main() {
 }
 
 main().catch(e => { console.error("Fatal:", e); process.exit(1); });
+
+function safeReadDir(dir: string): string[] {
+  try {
+    return readdirSync(dir);
+  } catch {
+    return [];
+  }
+}

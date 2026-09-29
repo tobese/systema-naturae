@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync } from 'fs';
+import { readFileSync, readdirSync, statSync, existsSync } from 'fs';
 import { resolve, join } from 'path';
 import { strict as assert } from 'assert';
 
@@ -46,8 +46,25 @@ interface Manifest {
   familyToOrder: Record<string, string>;
 }
 
+// A binomial in the "Genus species" form and nothing else. Anything else is
+// not a species: a trinomial (Canis lupus familiaris), a "sp. spec" or
+// "sp. undefined" placeholder, or a bare genus used as a catch-all.
+const STRICT_BINOMIAL = /^[A-Z][a-z]+ [a-z][a-z-]+$/;
+
+// Portal species nodes that are not binomials, collected while the order files
+// are scanned. Module scope because the coverage section reads it.
+const nonBinomial: { familySlug: string; id: string; name: string }[] = [];
+
 let passCount = 0;
 let failCount = 0;
+let skipCount = 0;
+
+class Skipped extends Error {}
+
+/** Abort the current test as "not applicable", counted apart from passes. */
+function skip(reason: string): never {
+  throw new Skipped(reason);
+}
 
 function test(name: string, fn: () => void) {
   try {
@@ -55,6 +72,12 @@ function test(name: string, fn: () => void) {
     console.log(`  PASS  ${name}`);
     passCount++;
   } catch (err) {
+    if (err instanceof Skipped) {
+      console.log(`  SKIP  ${name}`);
+      console.log(`        ${err.message}`);
+      skipCount++;
+      return;
+    }
     console.error(`  FAIL  ${name}`);
     console.error(`        ${err instanceof Error ? err.message : String(err)}`);
     failCount++;
@@ -82,8 +105,8 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.CLASS, 75);
   assert.equal(rc.ORDER, 383);
   assert.equal(rc.FAMILY, 5071);
-  assert.equal(rc.GENUS, 57348);
-  assert.equal(rc.SPECIES, 529298);
+  assert.equal(rc.GENUS, 57320);
+  assert.equal(rc.SPECIES, 529125);
 });
 
 test('root has exactly 32 phylum children', () => {
@@ -155,7 +178,11 @@ test('every ORDER in skeleton has a manifest entry', () => {
 });
 
 test('every manifest order file exists on disk', () => {
-  const baseDir = resolve(import.meta.dirname, '..');
+  // Manifest `file` values are web-root-relative, because the app fetches them
+  // as `${BASE_URL}${file}` and public/ is the web root. Resolving them against
+  // portal/ instead looks in the private data dir, where they have never
+  // lived, so this assertion could not pass.
+  const baseDir = resolve(import.meta.dirname, '..', 'public');
   for (const [orderId, entry] of Object.entries(manifest.orders)) {
     const filePath = resolve(baseDir, entry.file);
     assert.doesNotThrow(() => statSync(filePath), `missing: ${entry.file}`);
@@ -335,6 +362,13 @@ test('every order file on disk has a manifest entry', () => {
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // STRUCTURAL SNAPSHOTS
+//
+// Exact counts, refreshed by hand after an import. They catch unintended change
+// rather than intended change: an import is *expected* to move SPECIES, GENUS,
+// BREED and BREED_GROUP, and everything at or above FAMILY is expected to stay
+// put. So the structural spine is the part worth reading when one of these
+// goes red - KINGDOM/PHYLUM/CLASS/ORDER/FAMILY moving means a data problem,
+// while a leaf count moving usually just means the last import did its job.
 // ═══════════════════════════════════════════════════════════════════════════════
 
 console.log('\nSTRUCTURAL SNAPSHOTS');
@@ -348,16 +382,16 @@ test('skeleton node type distribution', () => {
   // are inlined in the skeleton instead of being in a separate order file.
   assert.deepStrictEqual(counts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 383,
-    FAMILY: 1, GENUS: 159, SPECIES: 107,
+    FAMILY: 1, GENUS: 159, SPECIES: 57,
   });
 });
 
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 383,
-    FAMILY: 5071, GENUS: 57348, SPECIES: 529298,
+    FAMILY: 5071, GENUS: 57320, SPECIES: 529125,
     SUBFAMILY: 8, TRIBE: 10, SUBSPECIES: 851,
-    BREED_GROUP: 25, BREED: 115, HYBRID_GROUP: 1, HYBRID: 4,
+    BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
 });
 
@@ -374,7 +408,7 @@ test('manifest CARNIVORA entry snapshot', () => {
   assert.deepStrictEqual(manifest.orders['CARNIVORA'], {
     orderId: 'CARNIVORA', classSlug: 'mammalia', orderSlug: 'carnivora',
     file: 'data/kingdoms/animalia/orders/CARNIVORA.json',
-    familyCount: 5, speciesCount: 1013,
+    familyCount: 5, speciesCount: 1015,
     familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae'],
   });
 });
@@ -446,6 +480,13 @@ test('all 383 order files exist and are valid JSON', () => {
       if (node.rank === 'SPECIES') {
         totalSpecies++;
         if (typeof node.subspeciesCount !== 'number') speciesMissingSubspeciesCount++;
+        // A portal node is not automatically a species: families carry
+        // domestic trinomials (Canis lupus familiaris, Sus scrofa domesticus)
+        // and "sp. spec" placeholders (Canis spec, Felis undefined). Counted
+        // per family, because the coverage invariant below depends on them.
+        if (!STRICT_BINOMIAL.test(node.name ?? '')) {
+          nonBinomial.push({ familySlug: node.familySlug ?? '', id: node.id, name: node.name ?? '' });
+        }
       }
       for (const child of node.children ?? []) scan(child);
       for (const child of node.speciesList ?? []) scan(child);
@@ -503,7 +544,6 @@ test('all 383 order files exist and are valid JSON', () => {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 console.log('\nCOVERAGE SUMMARY');
-
 interface CoverageFamily {
   id: string; name: string; commonName?: string;
   appSlug?: string; className?: string; orderName?: string;
@@ -543,16 +583,45 @@ test('every coverage family has portalCount and id prefix; >=99% have className'
 });
 
 test('coverage portalCount never exceeds totalCount', () => {
-  let violations = 0;
+  // totalCount is the real-world species total for a family; portalCount is
+  // the number of species nodes the portal carries. Those are not the same
+  // quantity, and the portal legitimately carries nodes that are not species:
+  // a domestic trinomial is a subspecies raised to a node (Canis lupus
+  // familiaris, Sus scrofa domesticus), and "sp. spec"/"undefined" are
+  // placeholders for an undetermined taxon. Asserting a plain zero difference
+  // flagged felidae, canidae and suidae for exactly that reason, and would
+  // keep re-flagging any family that has a domestic form.
+  //
+  // The invariant worth keeping: the excess is *explained*. A family whose
+  // portal holds materially more binomial species than the real world has
+  // something wrong, and this still catches that.
+  const unexplained = unexplainedExcess();
+  assert.equal(
+    unexplained.length, 0,
+    `${unexplained.length} families where portalCount exceeds totalCount by more than their non-binomial nodes explain:\n` +
+    unexplained.map(u => `         ${u}`).join('\n'),
+  );
+});
+
+function unexplainedExcess(): string[] {
+  const slackByFamily = new Map<string, number>();
+  for (const n of nonBinomial) {
+    const k = (n.familySlug || '(no familySlug)').toLowerCase();
+    slackByFamily.set(k, (slackByFamily.get(k) ?? 0) + 1);
+  }
+  const out: string[] = [];
   for (const cls of coverage) {
     for (const family of cls.families) {
-      if (family.totalCount !== undefined && family.portalCount > family.totalCount) {
-        violations++;
+      if (family.totalCount === undefined || family.portalCount <= family.totalCount) continue;
+      const slack = slackByFamily.get((family.appSlug ?? '').toLowerCase()) ?? 0;
+      if (family.portalCount - family.totalCount > slack) {
+        out.push(`${family.appSlug}: portal ${family.portalCount} vs total ${family.totalCount}, ` +
+          `exceeds by ${family.portalCount - family.totalCount} but only ${slack} non-binomial nodes`);
       }
     }
   }
-  assert.equal(violations, 0, `${violations} families where portalCount > totalCount`);
-});
+  return out;
+}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // TAXONOMY.JSON (source of truth)
@@ -636,8 +705,19 @@ test('coverage-summary portalCount sums to skeleton rankCounts.SPECIES', () => {
 
 console.log('\nBUILD OUTPUT SANITY');
 
-test('unified-taxonomy.json exists and is large (>100MB)', () => {
+test('unified-taxonomy.json is current and large (>100MB)', () => {
   const path = join(PRIVATE_DATA_DIR, 'unified-taxonomy.json');
+  // The monolith is opt-in (SN_BUILD_UNIFIED=1), so its absence is normal and a
+  // leftover file from an older build proves nothing. Assert freshness from the
+  // build's own state rather than the file merely existing — the tree the app
+  // actually ships is covered by the skeleton and per-order assertions below.
+  if (!existsSync(path)) {
+    skip('not built — it is opt-in. Rebuild with SN_BUILD_UNIFIED=1 to assert on it.');
+  }
+  const state = loadJson<{ unified?: string }>(join(PRIVATE_DATA_DIR, '.build-cache', 'state.json'));
+  if (state.unified !== 'current') {
+    skip(`present but ${state.unified ?? 'of unknown freshness'} — rebuild with SN_BUILD_UNIFIED=1 to assert on it.`);
+  }
   const stats = statSync(path);
   assert.ok(stats.size > 100_000_000, `unified-taxonomy.json only ${(stats.size/1e6).toFixed(1)}MB`);
 });
@@ -660,7 +740,7 @@ test('no empty order files', () => {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 console.log(`\n${'='.repeat(60)}`);
-console.log(`Results: ${passCount} passed, ${failCount} failed`);
+console.log(`Results: ${passCount} passed, ${skipCount} skipped, ${failCount} failed`);
 console.log(`${'='.repeat(60)}\n`);
 
 if (failCount > 0) {

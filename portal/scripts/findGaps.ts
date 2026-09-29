@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { resolveFamilyFile } from "./lib/familyPath.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "../..");
@@ -34,26 +35,44 @@ interface FamilyInfo {
   dataFilePath: string;
 }
 
-function walk(node: any, className: string, orderName: string, results: FamilyInfo[], hasClass: boolean = false) {
+function walk(
+  node: any,
+  className: string,
+  orderName: string,
+  results: FamilyInfo[],
+  phylumName = "",
+  hasClass: boolean = false,
+) {
   if (!node || typeof node !== "object") return;
   const children = node.children || [];
   if (node.rank === "CLASS") {
     className = node.name;
     hasClass = true;
   }
-  if (node.rank === "PHYLUM" && !className) {
-    className = node.name;
+  if (node.rank === "PHYLUM") {
+    phylumName = node.name;
+    // Legacy on-disk shape: a phylum with no class is a top-level directory,
+    // and a phylum whose class shares its name is a directory containing a
+    // directory of the same name (xenacoelomorpha/acoela/...).
+    if (!className) className = node.name;
   }
   if (node.rank === "ORDER") {
     orderName = node.name;
   }
   if (node.rank === "FAMILY" && node.appSlug && node.speciesCount != null) {
-    let dataFilePath: string;
-    const phylumDir = className ? className.toLowerCase().replace(/\s+/g, "_") : "";
-    const ord = orderName ? orderName.toLowerCase().replace(/\s+/g, "_") : "";
-    // Families under a CLASS use <class>/<order>/<family>; classless (e.g. Tardigrada) live at <appSlug>/ directly
-    const parts = hasClass ? [phylumDir, ord, node.appSlug].filter(Boolean) : [node.appSlug];
-    dataFilePath = join(root, ...parts, "src", "data", `${node.appSlug}.json`);
+    // Resolved by the shared helper rather than rebuilt here. This used to be a
+    // second, different implementation of the same rule - `hasClass` deciding
+    // between [class, order, family] and [family] - which is exactly the kind
+    // of divergence that fails silently: a wrong path makes existsSync false,
+    // portalCount becomes 0, and gap becomes speciesCount for every family,
+    // so the whole gap report is rewritten as garbage with no error.
+    const { file: dataFilePath } = resolveFamilyFile(root, {
+      kingdom: KINGDOM || undefined,
+      phylum: phylumName || undefined,
+      cls: hasClass ? className : undefined,
+      ord: orderName || undefined,
+      slug: node.appSlug,
+    });
     results.push({
       className,
       orderName,
@@ -71,7 +90,7 @@ function walk(node: any, className: string, orderName: string, results: FamilyIn
   }
   if (Array.isArray(children)) {
     for (const child of children) {
-      walk(child, className, orderName, results, hasClass);
+      walk(child, className, orderName, results, phylumName, hasClass);
     }
   }
 }

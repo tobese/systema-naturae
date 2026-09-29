@@ -42,6 +42,7 @@ import time
 from glob import glob
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from familyFiles import iter_family_files  # discovers the layout instead of assuming it
 import enrichBreedsFromWikipedia as wiki   # reuse the extraction, not a copy
 
 DSN = wiki.DEFAULT_DSN
@@ -58,7 +59,7 @@ def collect_targets(root, scope_names):
     """
     out = {}
     total = 0
-    for p in sorted(glob(os.path.join(root, "*", "*", "*", "src", "data", "*.json"))):
+    for p in sorted(list(iter_family_files(root))):
         try:
             tree = json.load(open(p, encoding="utf-8"))
         except Exception:

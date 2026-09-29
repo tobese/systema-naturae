@@ -20,7 +20,10 @@ const root = resolve(__dirname, "..");
 const GBIF_MATCH = "https://api.gbif.org/v1/species/match";
 const UA = "SystemaNaturae/1.0 (https://github.com/tobese/systema-naturae; usage-key cache)";
 const CACHE_PATH = (cls) => resolve(root, "portal", "data", `gbif-keys-${cls}.json`);
+// Names the cache files (gbif-cache-<class>.json); the walk uses the
+// kingdom directory instead.
 const CLASSES = ["liliopsida", "magnoliopsida"];
+const PLANT_TAXONOMY = pathResolve(root, "taxonomy", "plantae");
 
 const RPS = 20;
 const SAVE_EVERY = 5000;
@@ -64,7 +67,11 @@ async function rateLimit() {
 async function main() {
   const files = [];
   for (const cls of CLASSES) {
-    const d = resolve(root, cls);
+    // Walk the kingdom root, not the class dir: taxonomy/<kingdom>/<phylum>/<class>/
+    // means the old top-level paths no longer exist and existsSync skipped them,
+    // so this cached nothing and still exited 0.
+    const d = PLANT_TAXONOMY;
+    void cls;
     if (!existsSync(d)) continue;
     (function walk(p) {
       let es; try { es = readdirSync(p); } catch { return; }

@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { resolveFamilyFile, familySourceStamp } from "./lib/familyPath.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../../");
@@ -25,7 +26,19 @@ if (existsSync(kingdomConfigPath)) {
   kingdomConfig = allConfigs.kingdoms[KINGDOM];
 }
 const kingdomRootDir = kingdomConfig?.rootDir ?? "";
+
+// One authority for "where does this family's data file live", shared with
+// findGaps.ts and the importers. See portal/scripts/lib/familyPath.ts for why
+// this rule must not be reimplemented per script.
+let resolvedFamilies = 0;
+let missingFamilyFiles = 0;
+const missingExamples: string[] = [];
 const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
+// The kingdom every path is built from. An empty SN_KINGDOM means animalia,
+// which the output dirs below already assume - the family resolver has to use
+// the same fallback or it silently drops the kingdom segment and resolves
+// taxonomy/chordata/... instead of taxonomy/animalia/chordata/... .
+const effectiveKingdom = KINGDOM || "animalia";
 const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
 
 interface TaxonNode {
@@ -82,15 +95,34 @@ function stampClassOrder(node: TaxonNode, cls?: string, ord?: string): TaxonNode
   return { ...node, className: cls, orderName: ord };
 }
 
-function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}): TaxonNode {
+function processTree(
+  node: TaxonNode,
+  ctx: { phylum?: string; cls?: string; ord?: string } = {},
+): TaxonNode {
   let next = ctx;
-  if (node.rank === "CLASS") next = { cls: node.name.toLowerCase() };
+  if (node.rank === "PHYLUM") next = { ...ctx, phylum: node.name.toLowerCase() };
+  if (node.rank === "CLASS") next = { ...ctx, cls: node.name.toLowerCase() };
   if (node.rank === "ORDER") next = { ...ctx, ord: node.name.toLowerCase() };
 
   if (node.rank === "FAMILY" && node.appSlug) {
     const slug = node.appSlug as string;
-    const parts = [next.cls, next.ord, slug].filter(Boolean) as string[];
-    const dataPath = resolve(root, kingdomRootDir, ...parts, "src/data", `${slug}.json`);
+    const located = resolveFamilyFile(root, {
+      kingdom: effectiveKingdom,
+      phylum: next.phylum,
+      cls: next.cls,
+      ord: next.ord,
+      slug,
+    });
+    if (existsSync(located.file)) resolvedFamilies++;
+    const dataPath = located.file;
+    const stamp = familySourceStamp(root, {
+      kingdom: effectiveKingdom,
+      phylum: next.phylum, cls: next.cls, ord: next.ord, slug,
+    });
+    if (stamp.size < 0) {
+      missingFamilyFiles++;
+      if (missingExamples.length < 8) missingExamples.push(dataPath);
+    }
     const cachePath = resolve(familyCacheDir, `${slug}.json`);
 
     let stat: ReturnType<typeof statSync> | undefined;
@@ -104,11 +136,16 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
     if (!NO_CACHE && stat && existsSync(cachePath)) {
       try {
         const cached = JSON.parse(readFileSync(cachePath, "utf-8")) as FamilyCacheEntry;
+        // stamp.phylum/stamp.layout are part of the key on purpose: if a family
+        // moves to the kingdom-first layout and the key does not change with it,
+        // the moved file silently reuses a stale graft. Wrong species, no error.
         if (
           cached.sourceMtimeMs === stat.mtimeMs &&
           cached.sourceSize === stat.size &&
           cached.cls === (next.cls ?? "") &&
-          cached.ord === (next.ord ?? "")
+          cached.ord === (next.ord ?? "") &&
+          (cached.phylum ?? "") === stamp.phylum &&
+          (cached.layout ?? "") === stamp.layout
         ) {
           familyCacheHits++;
           // Only `children` came from the family data file; `node` (this run's
@@ -132,6 +169,8 @@ function processTree(node: TaxonNode, ctx: { cls?: string; ord?: string } = {}):
           sourceSize: stat.size,
           cls: next.cls ?? "",
           ord: next.ord ?? "",
+          phylum: stamp.phylum,
+          layout: stamp.layout,
           children: compressed.children,
         };
         writeFileSync(cachePath, JSON.stringify(entry));
@@ -204,8 +243,8 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
 // and reporting files are build-time-only artifacts (used by test scripts,
 // never fetched by the browser), so they stay under the private data/ dir
 // to avoid bloating the production image with hundreds of MB of unused JSON.
-const kingdomOutDir = resolve(portalRoot, `public/data/kingdoms/${KINGDOM || "animalia"}`);
-const kingdomPrivateDir = resolve(portalRoot, `data/kingdoms/${KINGDOM || "animalia"}`);
+const kingdomOutDir = resolve(portalRoot, `public/data/kingdoms/${effectiveKingdom}`);
+const kingdomPrivateDir = resolve(portalRoot, `data/kingdoms/${effectiveKingdom}`);
 const ORDERS_REL = `orders${dataSuffix}`;
 
 const taxonomyPath = resolve(portalRoot, taxonomyInput);
@@ -225,6 +264,8 @@ interface FamilyCacheEntry {
   sourceSize: number;
   cls: string;
   ord: string;
+  phylum?: string;
+  layout?: string;
   children?: TaxonNode[];
 }
 const NO_CACHE = process.env.SN_BUILD_NO_CACHE === "1";
@@ -248,7 +289,7 @@ function timed<T>(phase: string, fn: () => T): T {
   return result;
 }
 
-console.log(`Building kingdom ${KINGDOM || "animalia"} → ${outputPath} from ${taxonomyPath}…`);
+console.log(`Building kingdom ${effectiveKingdom} → ${outputPath} from ${taxonomyPath}…`);
 const taxonomy = timed("read+parse taxonomy.json", () => JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode);
 
 let taxonomyStat: ReturnType<typeof statSync> | undefined;
@@ -296,21 +337,36 @@ unified.rankCounts = rankCounts;
 if (!existsSync(kingdomOutDir)) mkdirSync(kingdomOutDir, { recursive: true });
 if (!existsSync(kingdomPrivateDir)) mkdirSync(kingdomPrivateDir, { recursive: true });
 
-// ── Still produce the monolithic unified-tree for backward compat ──
-// Only build-tooling reads this file (testBuild.ts, testDataContract.ts,
-// classifyFossils.ts — never the running app), and re-serializing the whole
-// ~600k-node tree is the single most expensive phase (~13s). So when nothing
-// changed since the last successful build (no family cache misses and
-// taxonomy.json itself is untouched), skip rewriting it — the file on disk is
-// already correct. Any real change still pays the full re-serialize; this
-// only helps the "nothing changed, just restarting" case.
-const canSkipUnifiedWrite = taxonomyUnchanged && dirtyFamilies.size === 0 && existsSync(outputPath);
-if (canSkipUnifiedWrite) {
-  timed("write unified-taxonomy.json (skipped, unchanged)", () => {});
-} else {
+// ── The monolithic unified tree is opt-in ──
+// It is 316MB for plantae, and one dirty family out of 1022 forces a full
+// JSON.stringify of all 346k nodes: ~3.2s and +1.7GB RSS. That buys a file
+// the browser never fetches — the app reads the skeleton plus the per-order
+// files — which only testBuild.ts and testDataContract.ts consume, and which
+// the Dockerfile excludes from the build context anyway. Measured on plantae:
+//
+//   clean rebuild    2.4s,  454MB RSS   nothing written
+//   one family edit  5.7s, 2.1GB RSS   full re-serialize
+//
+// So SN_BUILD_UNIFIED=1 opts in. Skipping the write leaves whatever is on
+// disk, which may now be stale, and a stale monolith that the tests validate
+// without complaint is exactly the silent success this build has been
+// hardened against — so the freshness is recorded in state.json, printed
+// here, and asserted by testDataContract.ts instead of being inferred from
+// the file merely existing.
+const WRITE_UNIFIED = process.env.SN_BUILD_UNIFIED === "1";
+const unifiedWasCurrent = taxonomyUnchanged && dirtyFamilies.size === 0 && existsSync(outputPath);
+if (WRITE_UNIFIED) {
   timed("write unified-taxonomy.json", () => writeFileSync(outputPath, JSON.stringify(unified, null, 2)));
+} else {
+  timed("write unified-taxonomy.json (opt-in: SN_BUILD_UNIFIED=1)", () => {});
 }
 console.log(`  Unified tree: ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species`);
+if (!WRITE_UNIFIED) {
+  console.log(
+    `  ${unifiedWasCurrent ? "unchanged on disk" : "STALE, not rewritten"}` +
+    ` — opt-in rebuild with SN_BUILD_UNIFIED=1`,
+  );
+}
 
 // ── Extract per-order subtrees ──
 if (!existsSync(ordersDir)) mkdirSync(ordersDir, { recursive: true });
@@ -536,7 +592,14 @@ writeFileSync(resolve(kingdomPrivateDir, "build-log.json"), JSON.stringify(build
 // interrupted build must not leave behind a state.json that claims a clean
 // build happened, or the next run would wrongly skip regenerating things.
 if (taxonomyStat) {
-  writeFileSync(buildStatePath, JSON.stringify({ taxonomyMtimeMs: taxonomyStat.mtimeMs, taxonomySize: taxonomyStat.size }));
+  writeFileSync(buildStatePath, JSON.stringify({
+    taxonomyMtimeMs: taxonomyStat.mtimeMs,
+    taxonomySize: taxonomyStat.size,
+    // Whether the monolith on disk still matches this build. Absent means the
+    // build never opted in, so a consumer cannot mistake a leftover file from
+    // an older build for a current one.
+    unified: WRITE_UNIFIED || unifiedWasCurrent ? "current" : "stale",
+  }));
 }
 
 console.log(`\nDone. ${physicalCount} physical nodes, ${flatSpeciesCount} compressed flat species in speciesList (${physicalCount + flatSpeciesCount} total nodes represented) → ${outputPath}`);
@@ -547,3 +610,30 @@ for (const { phase, ms, rssMB } of phaseLog) {
 }
 const totalMs = phaseLog.reduce((s, p) => s + p.ms, 0);
 console.log(`  ${"total (sum of phases)".padEnd(35)} ${String(totalMs).padStart(6)}ms`);
+
+// ── Layout + completeness report ────────────────────────────────────────────
+// A family whose data file cannot be found produces no children and no error:
+// the graft is simply skipped. At 8k families that is invisible in a wall of
+// console.warn lines, and a run that found nothing still exits 0. So the counts
+// are printed, and a missing-file total is fatal.
+console.log(`\n── Family data layout ──`);
+console.log(`  ${"resolved".padEnd(15)} ${String(resolvedFamilies).padStart(6)}  (taxonomy/${effectiveKingdom}/…)`);
+const declared = resolvedFamilies + missingFamilyFiles;
+if (missingFamilyFiles > 0) {
+  console.log(`  ${"no data file".padEnd(15)} ${String(missingFamilyFiles).padStart(6)}  ` +
+    `(${declared} declared; these graft empty)`);
+  for (const ex of missingExamples) console.log(`      ${ex}`);
+}
+// A family whose file exists but that the resolver cannot reach is a path bug,
+// and it is completely silent: the graft is skipped, nothing is thrown, exit 0.
+// A partial count is normal - the taxonomy declares more families than have data
+// (plantae: 1,259 declared, 1,021 with files). A *total* failure means the
+// resolver itself is wrong, so that aborts.
+if (declared > 0 && resolvedFamilies === 0) {
+  console.error(
+    `\nERROR: none of ${missingFamilyFiles} family data files resolved.\n` +
+    `Every family in ${effectiveKingdom} grafted empty, which means the path\n` +
+    `resolver is broken rather than the data being absent. Aborting.`,
+  );
+  process.exit(1);
+}

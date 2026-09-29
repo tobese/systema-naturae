@@ -89,11 +89,13 @@ function isMinimalDescription(desc: string | undefined): boolean {
 
 const MINIMAL_SOURCES = new Set(["none", "generated", "", undefined]);
 
-const CLASS_DIRS = [
-  "magnoliopsida", "liliopsida",
-  "pinopsida", "cycadopsida", "ginkgoopsida",
-  "gnetopsida", "polypodiopsida", "lycopodiopsida",
-];
+// Walks taxonomy/plantae/ rather than a list of class directories. The list
+// was hard-coded and each entry existedSync-guarded, which fails in the worst
+// direction: under taxonomy/<kingdom>/<phylum>/<class>/ none of those paths
+// exist, so the loop skipped every one of them and the script went on to
+// report success having enriched nothing. The per-file path indexing below
+// had already been updated for the new layout, which is why this looked fixed.
+const KINGDOM_ROOT = resolve(root, "taxonomy", "plantae");
 
 /** Find all family data JSON files under a directory tree. */
 function findDataFiles(baseDir: string): string[] {
@@ -151,19 +153,31 @@ function main() {
   let enrichedFamilies = 0;
   let noDataFamilies = 0;
 
-  for (const classDir of CLASS_DIRS) {
-    const fullDir = resolve(root, classDir);
-    if (!existsSync(fullDir)) continue;
+  if (!existsSync(KINGDOM_ROOT)) {
+    console.error(`No ${KINGDOM_ROOT} - nothing to enrich. Refusing to report success.`);
+    process.exit(1);
+  }
+  const kingdomDirs = readdirSync(KINGDOM_ROOT, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => join(KINGDOM_ROOT, d.name));
+  if (!kingdomDirs.length) {
+    console.error(`${KINGDOM_ROOT} has no subdirectories. Refusing to report success.`);
+    process.exit(1);
+  }
 
-    const files = findDataFiles(fullDir);
+  for (const kingdomDir of kingdomDirs) {
+    const files = findDataFiles(kingdomDir);
     for (const filePath of files) {
       const relPath = filePath.replace(root + sep, "");
       const data: TaxonNode = JSON.parse(readFileSync(filePath, "utf-8"));
 
-      // Extract appSlug from path: e.g. magnoliopsida/lamiales/acanthaceae/src/data/acanthaceae.json
+      // taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/src/data/<family>.json
+      // Indexes from the end. parts[2] used to be the family under the old
+      // class/order/family layout; after the move it is the class, so appSlug
+      // silently became a class name and the script wrote under the wrong key.
       const parts = relPath.split(sep);
-      const appSlug = parts[2];
-      const className = parts[0];
+      const appSlug = parts[parts.length - 4];
+      const className = parts[parts.length - 6];
 
       // Check if WCVP has this family
       if (!famLookup.has(appSlug)) {

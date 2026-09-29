@@ -271,7 +271,7 @@ Part in this book:
 - **Kingdom Animalia**: all 75 classes / 383 orders (was 15/55).
 - **Kingdom Plantae**: all 43 classes / 237 orders (was 7/21).
 - Combined: **118 Parts, 620 Chapters**, aggregate species totals verified
-  against `docs/Coverage.md`'s published kingdom figures (Animalia 527,703
+  against `docs/coverage.md`'s published kingdom figures (Animalia 527,703
   vs. ~529,298 published; Plantae 435,111 vs. ~435,114 published — both
   within rounding/snapshot-timing distance, confirming nothing was silently
   dropped in the generation pass).
@@ -289,12 +289,12 @@ distinction.
 
 **Third kingdom added (2026-08-21):** **Kingdom Fungi**: all 51 classes /
 211 orders, 773 families, ~161,716 species per `gap-report-fungi.json` (no
-published Coverage.md figure to cross-check against yet — Fungi isn't
+published coverage.md figure to cross-check against yet — Fungi isn't
 tracked there the way Animalia/Plantae are).
 
 **Fourth kingdom added (2026-08-21):** **Kingdom Chromista**: all 33
 classes / 176 orders, 703 families, ~74,044 species per
-`gap-report-chromista.json` (same caveat — not in Coverage.md).
+`gap-report-chromista.json` (same caveat — not in coverage.md).
 
 **Fifth kingdom added (2026-08-21):** **Kingdom Protozoa**: all 23 classes
 / 41 orders, 106 families, ~3,871 species per `gap-report-protozoa.json`.
@@ -308,7 +308,7 @@ tracks (`portal/data/kingdom-config.json`).
 **Most of the newly added Parts are invisible by default** — this is
 expected, not a bug. Most of the 60 newly-added Animalia classes have very
 low Wikipedia-description enrichment (Insecta 8.3%, Gastropoda/Bivalvia 0%,
-Anthozoa 1.7%, per `docs/Coverage.md`), and `TableOfContents.tsx` already
+Anthozoa 1.7%, per `docs/coverage.md`), and `TableOfContents.tsx` already
 filters out any chapter/Part where every family reads `enrichedCount === 0`
 whenever "Show empty families" (below) is off. With default toggles, 102 of
 118 Parts show in Contents; toggling **Show empty families** on reveals all

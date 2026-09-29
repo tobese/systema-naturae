@@ -40,11 +40,19 @@ docker:
 SHELL := /bin/zsh
 PATH := $(HOME)/.nvm/versions/node/v23.3.0/bin:/usr/local/bin:/opt/homebrew/bin:$(PATH)
 
+# One pass over the whole kingdom, not one per class. The old loop walked 11
+# hard-coded class directories and staged `git add -A $$cls/`, which under
+# taxonomy/<kingdom>/<phylum>/<class>/ matched nothing: `git add` failed with
+# "pathspec 'aves/' did not match any files", the && chain aborted before the
+# commit, and the for-loop used ';' so it carried on to the next class. The
+# enrichment ran, the commits were lost, and the final `git push` pushed
+# whatever happened to be staged. enrichFromWikipedia.ts now derives its class
+# list from the taxonomy and walks taxonomy/animalia/ directly.
+SN_KINGDOM ?= animalia
+
 enrich:
-	@for cls in aves mammalia reptilia amphibia actinopterygii chondrichthyes insecta arachnida asteroidea echinoidea holothuroidea; do \
-	  echo "=== Enriching $$cls ==="; \
-	  cd portal && npx tsx scripts/enrichFromWikipedia.ts --class $$cls; \
-	  cd portal && sh scripts/buildData.sh; \
-	  cd .. && git add -A $$cls/ portal/scripts/ portal/data/ && git commit -m "Enrich $$cls with Wikipedia" --allow-empty; \
-	done; \
-	git push
+	@echo "=== Enriching $$(SN_KINGDOM) from Wikipedia ==="
+	cd portal && SN_KINGDOM=$(SN_KINGDOM) npx tsx scripts/enrichFromWikipedia.ts
+	cd portal && SN_KINGDOM=$(SN_KINGDOM) sh scripts/buildData.sh
+	cd .. && git add -A && git commit -m "Enrich $$(SN_KINGDOM) with Wikipedia" || echo "  nothing to commit"
+	@git push
