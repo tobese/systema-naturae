@@ -70,8 +70,11 @@ function main() {
     }
   }
 
-  // 3. Parse output for "Done. X total nodes"
-  const nodeMatch = out.match(/Done\. (\d+) total nodes/);
+  // 3. Parse the build's node counts. countNodes() below walks `children` only
+  //    and never descends into `speciesList`, so it must be compared against
+  //    "physical nodes" - "total nodes represented" includes the compressed
+  //    speciesList members and would always disagree.
+  const nodeMatch = out.match(/Done\. (\d+) physical nodes/);
   if (!nodeMatch) {
     console.error("❌ Build failed or output format unexpected");
     console.error(out);
