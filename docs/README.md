@@ -4,13 +4,13 @@
 
 - [**Backlog**](./backlog.md) — Living roadmap and feature queue
 - [**Book View**](./book-view.md) — Alternative text-driven taxonomy browser concept
-- [**Coverage**](./Coverage.md) — Taxonomy node coverage, portal statistics & gaps
+- [**Coverage**](./coverage.md) — Taxonomy node coverage, portal statistics & gaps
 - [**Graph UI**](./graph-ui.md) — Layout, node sizing, colors, and side panels
-- [**Import**](./Import.md) — Family import workflow and scripts
+- [**Import**](./import.md) — Family import workflow and scripts
 - [**Navigation**](./navigation.md) — Portal navigation architecture
 - [**Screen Handling**](./screen-handling.md) — Touch & desktop screen handling
 - [**Statistics Header**](./statistics-header.md) — Statistics header component
-- [**Tooltip**](./Tooltip.md) — Tooltip behavior and implementation
+- [**Tooltip**](./tooltip.md) — Tooltip behavior and implementation
 - [**Wheel of Nature**](./wheel-of-nature.md) — Wheel of Nature game component
 
 ## Reports

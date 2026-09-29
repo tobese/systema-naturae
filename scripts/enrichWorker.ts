@@ -25,7 +25,11 @@ import { spawnSync } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
-const CLASSES = ["liliopsida", "magnoliopsida"];
+// Walks taxonomy/plantae/ rather than a list of class directories. The list
+// was hard-coded and each entry existsSync-guarded, which fails in the worst
+// direction: under taxonomy/<kingdom>/<phylum>/<class>/ the paths are gone, the
+// guard skips them, and the worker reports no work having done nothing.
+const PLANT_TAXONOMY = resolve(root, "taxonomy", "plantae");
 const WIKI_API = "https://en.wikipedia.org/w/api.php";
 const BATCH_SIZE = 50;
 const DELAY_MS = 1500;
@@ -73,9 +77,14 @@ function collectFamilyFiles(): string[] {
       else if (p.endsWith(".json") && p.includes(needle)) out.push(p);
     }
   };
-  for (const cls of CLASSES) {
-    const base = resolve(root, cls);
-    if (existsSync(base)) walk(base);
+  if (!existsSync(PLANT_TAXONOMY)) {
+    console.error(`No ${PLANT_TAXONOMY} - nothing to enrich. Refusing to report success.`);
+    process.exit(1);
+  }
+  walk(PLANT_TAXONOMY);
+  if (out.length === 0) {
+    console.error(`No family data files under ${PLANT_TAXONOMY}. Refusing to report success.`);
+    process.exit(1);
   }
   return out.sort(); // deterministic across machines
 }
