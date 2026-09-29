@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fill the no-article species from GBIF, selecting descriptions by `type`.
 
-`docs/Coverage.md` rejected GBIF as a prose source after measuring 0.1% yield on
+`docs/coverage.md` rejected GBIF as a prose source after measuring 0.1% yield on
 Cephalopoda, and the reason given was that what comes back is specimen and
 holotype debris. That measurement is right about the *result* and wrong about
 the *cause*.

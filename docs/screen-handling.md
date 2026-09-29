@@ -6,7 +6,7 @@ Interaction patterns for touch screens and desktop (mouse/keyboard) in the D3 tr
 
 - **Pinch zoom** — handled by D3 zoom behaviour.
 - **Two-finger rotate** — radial layout rotates with a twist gesture.
-- **Long-press tooltip** — 500ms hold on a node opens its tooltip (see [`Tooltip.md`](./Tooltip.md)).
+- **Long-press tooltip** — 500ms hold on a node opens its tooltip (see [`tooltip.md`](./tooltip.md)).
 
 ## Desktop / Computer Screen
 
@@ -29,4 +29,4 @@ Interaction patterns for touch screens and desktop (mouse/keyboard) in the D3 tr
 ## Related
 
 - [`navigation.md`](./navigation.md) — zoom anchor and stay-in-place behaviour.
-- [`Tooltip.md`](./Tooltip.md) — long-press and keyboard tooltip details.
+- [`tooltip.md`](./tooltip.md) — long-press and keyboard tooltip details.

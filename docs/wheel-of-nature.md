@@ -28,5 +28,5 @@ A discovery feature: a **Tivoli-style spinning wheel** that randomly selects a s
 
 ## Related
 
-- [`Tooltip.md`](./Tooltip.md) — species preview patterns.
+- [`tooltip.md`](./tooltip.md) — species preview patterns.
 - [`Statistics header`](./statistics-header.md) — lineage display in the side panel.
