@@ -100,7 +100,9 @@ export default function AppBare({ kingdom = "animalia", colorRegistry }: AppBare
   const pendingZoomId = useRef<string | null>(null);
   const sidebarScrollRef = useRef<HTMLDivElement>(null);
 
-  const { taxonomyData, loading, manifest, loadOrder, loadedOrders } = useTaxonomyLoader(kingdom);
+const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_GROUP", "HYBRID", "HYBRID_GROUP"]);
+
+  const { taxonomyData, loading, manifest, loadOrder, loadProseFor, loadedOrders } = useTaxonomyLoader(kingdom);
   const { focusedFamilySlug, focusedClassId, focusedOrderId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo } = useUrlState();
 
   const showSplash = loading || !taxonomyData;
@@ -197,10 +199,17 @@ export default function AppBare({ kingdom = "animalia", colorRegistry }: AppBare
       }
     }
     if (node.rank === "ORDER" && node._dataFile && !loadedOrders.has(node.id)) loadOrder(node.id);
+
+    // Species prose is not in the names tier, so the panel for anything under a
+    // genus needs its genus's prose file before it can render a description.
+    if (PROSE_RANKS.has(node.rank) && node.familySlug) {
+      const oid = manifest?.familyToOrder[node.familySlug];
+      if (oid) loadProseFor(oid, node.id);
+    }
     const ZOOM_RANKS = new Set(["ORDER", "SUBFAMILY", "TRIBE", "GENUS", "BREED_GROUP", "HYBRID_GROUP"]);
     if (ZOOM_RANKS.has(node.rank)) pendingZoomId.current = node.id;
     setSelectedNodeId(selectedNodeId === node.id ? null : node.id);
-  }, [focusedFamilySlug, focusedClassId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo, taxonomyData, loadedOrders, loadOrder]);
+  }, [focusedFamilySlug, focusedClassId, selectedNodeId, setFocus, setFocusedClass, setSelectedNodeId, navigateTo, taxonomyData, loadedOrders, loadOrder, loadProseFor, manifest]);
 
   const handleCollapseFamily = useCallback(() => {
     if (focusedFamilyId) pendingZoomId.current = focusedFamilyId;

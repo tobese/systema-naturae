@@ -408,6 +408,9 @@ test('manifest CARNIVORA entry snapshot', () => {
   assert.deepStrictEqual(manifest.orders['CARNIVORA'], {
     orderId: 'CARNIVORA', classSlug: 'mammalia', orderSlug: 'carnivora',
     file: 'data/kingdoms/animalia/orders/CARNIVORA.json',
+    navFile: 'data/kingdoms/animalia/orders-nav/CARNIVORA.json',
+    namesFile: 'data/kingdoms/animalia/orders-names/CARNIVORA.json',
+    proseDir: 'data/kingdoms/animalia/orders-prose/CARNIVORA',
     familyCount: 5, speciesCount: 1015,
     familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae'],
   });
@@ -720,6 +723,120 @@ test('unified-taxonomy.json is current and large (>100MB)', () => {
   }
   const stats = statSync(path);
   assert.ok(stats.size > 100_000_000, `unified-taxonomy.json only ${(stats.size/1e6).toFixed(1)}MB`);
+});
+
+test('nav tier exists and is materially smaller than the order files', () => {
+  // The nav tier is the structure-and-counts projection the graph would use to
+  // lay an order out without parsing its full file. No consumer reads it yet -
+  // see docs/data-tiers.md, which explains why switching the graph over is not
+  // a drop-in (search indexes name and commonName across speciesList, and
+  // keeping those is most of the saving). It is emitted and asserted so the
+  // projection cannot silently rot, and so the client switch is a wiring job
+  // rather than a rebuild.
+  const dir = join(DATA_DIR, 'orders-nav');
+  assert.ok(existsSync(dir), `nav tier missing at ${dir} - run the build`);
+  const files = readdirSync(dir).filter(f => f.endsWith('.json'));
+  assert.ok(files.length > 0, 'nav tier directory is empty');
+  assert.equal(files.length, allOrderFiles.length,
+    `nav tier has ${files.length} files, orders have ${allOrderFiles.length}`);
+
+  let navBytes = 0;
+  let orderBytes = 0;
+  for (const f of files) {
+    navBytes += statSync(join(dir, f)).size;
+    orderBytes += statSync(join(ORDERS_DIR, f)).size;
+  }
+  const ratio = orderBytes / navBytes;
+  assert.ok(ratio > 5,
+    `nav tier is only ${ratio.toFixed(1)}x smaller than the order files ` +
+    `(${(navBytes / 1e6).toFixed(1)}MB vs ${(orderBytes / 1e6).toFixed(1)}MB). ` +
+    `A projection that keeps genus children by spreading them keeps every ` +
+    `species description and the ratio collapses to about 2x.`);
+
+  // Structure, not just a smaller file: a genus must carry its counts and must
+  // not carry species prose.
+  const sample = loadJson<OrderNode & Record<string, unknown>>(join(dir, files[0]));
+  let genera = 0;
+  let speciesWithProse = 0;
+  function audit(node: OrderNode) {
+    if (node.rank === 'GENUS') {
+      genera++;
+      if (typeof (node as unknown as Record<string, unknown>)._speciesCount !== 'number') {
+        assert.fail(`genus ${node.id} has no _speciesCount`);
+      }
+    }
+    if (node.rank === 'SPECIES' && (node.description ?? '').trim()) speciesWithProse++;
+    for (const c of node.children ?? []) audit(c);
+    for (const s of node.speciesList ?? []) audit(s);
+  }
+  audit(sample);
+  assert.ok(genera > 0, `no genera in ${files[0]}`);
+  assert.equal(speciesWithProse, 0,
+    `${speciesWithProse} species in ${files[0]} still carry a description`);
+});
+
+test('names tier + genus prose reproduces the full order file', () => {
+  // The graph reads the names tier and overlays per-genus prose on selection.
+  // That is only equivalent to what the book reads if, after the overlay, the
+  // species descriptions and the three inherited stamps match the full order
+  // file exactly. This is the check that makes the two tiers safe to swap
+  // between, and it is deliberately run against the *largest* orders, where a
+  // partial implementation would show up.
+  const namesDir = join(DATA_DIR, 'orders-names');
+  const proseDir = join(DATA_DIR, 'orders-prose');
+  assert.ok(existsSync(namesDir), `names tier missing at ${namesDir} - run the build`);
+  assert.ok(existsSync(proseDir), `prose tier missing at ${proseDir} - run the build`);
+
+  const norm = (d?: string) => ((d ?? '').trim() === '' ? null : (d ?? '').trim());
+  const samples = allOrderFiles
+    .map(f => ({ f, size: statSync(join(ORDERS_DIR, f)).size }))
+    .sort((a, b) => b.size - a.size)
+    .slice(0, 3)
+    .map(x => x.f);
+
+  for (const file of samples) {
+    const orderId = file.replace(/\.json$/, '');
+    const full = loadJson<OrderNode>(join(ORDERS_DIR, file));
+    const lean = loadJson<OrderNode>(join(namesDir, file));
+
+    // The overlay, as useTaxonomyLoader performs it.
+    const flat = new Map<string, OrderNode>();
+    (function collect(n: OrderNode) {
+      if (n.rank === 'GENUS') {
+        const p = join(proseDir, orderId, `${n.id}.json`);
+        if (existsSync(p)) {
+          for (const sp of (loadJson<{ species: OrderNode[] }>(p)).species) flat.set(sp.id, sp);
+        }
+      }
+      for (const c of n.children ?? []) collect(c);
+    })(lean);
+    const overlay = (n: OrderNode): OrderNode => {
+      const patch = flat.get(n.id);
+      const next: OrderNode = patch
+        ? { ...n, description: patch.description, continents: patch.continents ?? n.continents }
+        : n;
+      if (n.children) next.children = n.children.map(overlay);
+      if (n.speciesList) next.speciesList = n.speciesList.map(overlay);
+      return next;
+    };
+    const merged = overlay(lean);
+
+    const describe = (root: OrderNode) => {
+      const m = new Map<string, string | null>();
+      (function walk(n: OrderNode) {
+        if (n.rank === 'SPECIES' || n.rank === 'SUBSPECIES' || n.rank === 'BREED') m.set(n.id, norm(n.description));
+        for (const c of n.children ?? []) walk(c);
+        for (const s of n.speciesList ?? []) walk(s);
+      })(root);
+      return m;
+    };
+    const a = describe(full);
+    const b = describe(merged);
+    assert.equal(b.size, a.size, `${file}: ${a.size} species in the order file, ${b.size} after the overlay`);
+    for (const [id, d] of a) {
+      assert.equal(b.get(id) ?? null, d, `${file}: ${id} description differs after the overlay`);
+    }
+  }
 });
 
 test('skeleton.json exists and is small (<10MB)', () => {
