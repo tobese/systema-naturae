@@ -250,6 +250,12 @@ const ORDERS_REL = `orders${dataSuffix}`;
 const taxonomyPath = resolve(portalRoot, taxonomyInput);
 const outputPath = resolve(kingdomPrivateDir, `unified-taxonomy.json`);
 const ordersDir = resolve(kingdomOutDir, ORDERS_REL);
+// The graph reads these instead of the order files. Separate directory rather
+// than a suffix on the file name so the existing manifest `file` field keeps
+// meaning "the full order", and so a stale nav file from an older build can
+// never be mistaken for a current one (the dirty check covers that too).
+const navOrdersRel = `orders-nav${dataSuffix}`;
+const navOrdersDir = resolve(kingdomOutDir, navOrdersRel);
 const skeletonPath = resolve(kingdomOutDir, `unified-taxonomy-skeleton.json`);
 const manifestPath = resolve(kingdomOutDir, `order-manifest.json`);
 
@@ -370,6 +376,7 @@ if (!WRITE_UNIFIED) {
 
 // ── Extract per-order subtrees ──
 if (!existsSync(ordersDir)) mkdirSync(ordersDir, { recursive: true });
+if (!existsSync(navOrdersDir)) mkdirSync(navOrdersDir, { recursive: true });
 
 interface OrderEntry {
   orderId: string;
@@ -384,6 +391,7 @@ const orderMap = new Map<string, OrderEntry>();
 const familyToOrder: Record<string, string> = {};
 let ordersWritten = 0;
 let ordersSkipped = 0;
+let navOrdersWritten = 0;
 
 function collectOrders(node: TaxonNode, cls?: string): void {
   if (node.rank === "ORDER") {
@@ -429,6 +437,21 @@ function collectOrders(node: TaxonNode, cls?: string): void {
     } else {
       ordersSkipped++;
     }
+
+    // The nav tier: the same order with species prose and speciesList removed,
+    // so the graph can lay the order out without parsing the full file. The
+    // graph draws minimally-described species as pruned dots, so it needs
+    // structure and counts, not the 300MB of prose that sits under them.
+    // Measured across the six kingdoms: 442.6MB -> 29.5MB, and the worst
+    // single file 52.6MB (COLEOPTERA) -> 4.3MB. See docs/data-tiers.md.
+    //
+    // Same dirty rule as the order file, so the two can never disagree about
+    // which build they came from.
+    const navFilePath = resolve(navOrdersDir, `${node.id}.json`);
+    if (orderDirty || !existsSync(navFilePath)) {
+      writeFileSync(navFilePath, JSON.stringify(navProjection(node), null, 2));
+      navOrdersWritten++;
+    }
     return;
   }
 
@@ -436,10 +459,74 @@ function collectOrders(node: TaxonNode, cls?: string): void {
   for (const c of node.children ?? []) collectOrders(c, nextCls);
 }
 
+/**
+ * Structure and counts only. FAMILY and GENUS keep their prose and stamps,
+ * because the info panel renders them; SPECIES reduce to {id, name, rank},
+ * which is all the tree needs to draw a node and all the Eponyms/species
+ * lookups need to find one. A genus records how many species it holds and how
+ * many of those are described, so the graph can show coverage without the
+ * species themselves.
+ */
+function navProjection(node: TaxonNode): TaxonNode {
+  const out: TaxonNode = { ...node };
+  delete out.speciesList;
+
+  const children: TaxonNode[] = [];
+  for (const child of node.children ?? []) {
+    if (child.rank === "SPECIES") {
+      children.push({ id: child.id, name: child.name, rank: "SPECIES" } as TaxonNode);
+      continue;
+    }
+    if (child.rank === "GENUS") {
+      let total = 0;
+      let described = 0;
+      const count = (n: TaxonNode) => {
+        if (n.rank === "SPECIES") {
+          total++;
+          if (n.description) described++;
+        }
+        for (const s of n.speciesList ?? []) {
+          total++;
+          if (s.description) described++;
+        }
+        for (const c of n.children ?? []) count(c);
+      };
+      for (const c of child.children ?? []) count(c);
+      for (const s of child.speciesList ?? []) {
+        total++;
+        if (s.description) described++;
+      }
+      // Rebuilt field by field, never spread. Spreading `{...child}` keeps the
+      // genus's own `children`, which is every species node under it with its
+      // full description - 25MB for COLEOPTERA instead of 4MB, and the whole
+      // tier collapses to 102MB instead of 17.8MB.
+      children.push({
+        id: child.id,
+        name: child.name,
+        rank: "GENUS",
+        description: child.description,
+        commonName: child.commonName,
+        lineage: child.lineage,
+        familySlug: child.familySlug,
+        className: child.className,
+        orderName: child.orderName,
+        extinct: child.extinct,
+        _speciesCount: total,
+        _describedCount: described,
+      } as TaxonNode);
+      continue;
+    }
+    children.push(navProjection(child));
+  }
+  out.children = children;
+  return out;
+}
+
 {
   const orderCountBefore = orderMap.size;
   timed("collectOrders (+ write order files)", () => collectOrders(unified));
   console.log(`  Extracted ${orderMap.size - orderCountBefore} order data files (${ordersWritten} written, ${ordersSkipped} unchanged/skipped)`);
+  console.log(`  Nav tier: ${navOrdersWritten} written → ${navOrdersDir}`);
 }
 
 // ── Build skeleton (KINGDOM → PHYLUM → CLASS → ORDER, no family children) ──
@@ -498,6 +585,7 @@ interface ManifestEntry {
   classSlug: string;
   orderSlug: string;
   file: string;
+  navFile: string;
   familyCount: number;
   speciesCount: number;
   familySlugs: string[];
@@ -510,6 +598,10 @@ for (const [, entry] of orderMap) {
     classSlug: entry.classSlug,
     orderSlug: entry.orderSlug,
     file: `data/kingdoms/${KINGDOM || "animalia"}/${ORDERS_REL}/${entry.orderId}.json`,
+    // Structure-and-counts projection of the same order. The graph loads this
+    // to lay an order out; `file` is only fetched when a reader actually opens
+    // something and needs the prose. See docs/data-tiers.md.
+    navFile: `data/kingdoms/${KINGDOM || "animalia"}/${navOrdersRel}/${entry.orderId}.json`,
     familyCount: entry.familyCount,
     speciesCount: entry.speciesCount,
     familySlugs: entry.familySlugs,
