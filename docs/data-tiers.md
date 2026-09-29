@@ -191,11 +191,53 @@ Each manifest entry carries `file`, `namesFile`, `navFile` and `proseDir`.
 `testDataContract.ts` asserts the nav tier exists, matches the order count, is
 over 5× smaller, and holds no species descriptions.
 
-**The client is not switched yet.** `loadOrder` still fetches `file`. Wiring it
-to `namesFile` plus a per-genus prose fetch on selection is the outstanding
-step, and it is the step that has to keep `SearchBox` (which indexes
-`name` and `commonName` across `children` *and* `speciesList`) and the Eponyms
-and Species-of-the-Day modals working.
+**The client is switched.** `loadOrder` fetches `namesFile`, runs it through
+`inheritStamps`, and `loadProseFor` fetches the containing genus's prose file
+when a node under a genus is selected. `SearchBox` keeps working because the
+names tier retains `name`, `commonName` and the `speciesList` array, and the
+Eponyms and Species-of-the-Day modals keep working because `namedAfter` is a
+per-species field that is kept.
+
+Two stamps are dropped from the tier and re-derived on the client:
+`className`, `orderName` and `familySlug`. `lineage` and `rank` are **kept** —
+`lineage` because 379 animalia nodes have none and re-deriving it would invent
+a value, `rank` because it is read 79 times and position is a poor substitute
+for an explicit value. Together they are 12% of the bytes, which is the price of
+a change that is then provably behaviour-neutral.
+
+### The two verifications that make this safe
+
+Both were run against the real build, and both found real bugs before they
+passed. They are now contract assertions, not one-off scripts.
+
+**Inheritance parity.** For all 383 animalia order files, the inherited tree is
+compared field-by-field against the full order file on all 585,624
+species-level nodes: **0 mismatches**. The first version reported 380, all
+`lineage: null` against an invented genus name — the projection was deleting
+explicit nulls, so the client filled a field the source deliberately left
+empty. That is what moved `lineage` out of the dropped set.
+
+**Overlay parity.** For the largest orders, the names tier plus its genus prose
+files is compared against the full order file: **0 description differences
+across 183,109 species**. The first run reported 52,572, all of them `""`
+against `undefined` — semantically identical, so the comparison now
+normalises blank to null rather than treating the two as different values.
+
+### What the graph actually saves
+
+| | animalia | COLEOPTERA |
+|---|---|---|
+| before: the order file | 208.9 MB | 52.6 MB |
+| after: names tier on load | 173.0 MB | 43.0 MB |
+| plus prose when a genus is opened | | +1.23 MB worst, 3 KB median |
+
+**1.2×, not the 2.2× the Python prototype suggested** and well short of the
+3.4× in the table above. The prototype dropped `lineage`, `rank`,
+`sourcedFrom` and `subspeciesCount` as well, and every one of those is read
+somewhere in the graph — `sourcedFrom` by the OptionsPanel highlight,
+`subspeciesCount` by the book and asserted by this suite. Keeping them is why
+the real win is smaller than the modelled one, and it is the right trade: a
+provable 1.2× beats an unprovable 3.4×.
 
 ## Why not a server
 
