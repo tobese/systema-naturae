@@ -239,6 +239,37 @@ somewhere in the graph — `sourcedFrom` by the OptionsPanel highlight,
 the real win is smaller than the modelled one, and it is the right trade: a
 provable 1.2× beats an unprovable 3.4×.
 
+## Shipped size
+
+All four tiers are written **minified**. They are fetched and `JSON.parse`d by
+the browser, so the indentation was 33% of the bytes downloaded and walked
+past. Measured across the six kingdoms:
+
+| tier | pretty | minified | ships? |
+|---|---|---|---|
+| `orders/` — the book | 706 MB | 441 MB | yes |
+| `orders-names/` — the graph | 635 MB | 372 MB | yes |
+| `orders-prose/` — per genus | 410 MB | 323 MB | yes |
+| `orders-nav/` — layout only | 43 MB | 29 MB | **no** |
+| **shipped** | **1795 MB** | **1136 MB** | |
+
+`orders-nav/` has no consumer, so the Dockerfile drops it from `dist/`. It is
+still built and still asserted, because it is the artifact a layout-only path
+would use, but shipping 29 MB of nothing is not a trade worth making.
+
+The skeleton and the order manifest stay pretty-printed. Together they are
+under 900 KB, they are the human-inspectable index of what a build produced, and
+minifying them would buy nothing.
+
+Worst-case single fetch, minified:
+
+| | animalia | plantae |
+|---|---|---|
+| book, `orders/` | 52.5 MB | 17.1 MB |
+| graph, `orders-names/` | 42.9 MB | 16.5 MB |
+| nav tier (unbuilt path) | 4.2 MB | 0.5 MB |
+| prose, on genus open | 1.09 MB (2 KB median) | |
+
 ## Why not a server
 
 The test for any server proposal: **does it reduce what the client parses, or
