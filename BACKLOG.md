@@ -244,9 +244,40 @@ Checked live on 2026-09-30, because the docs and the reality differ:
 | GBIF descriptions | free, no key | sparse outside animals (measured 8–12%) | not worth a bulk pass |
 | WoRMS REST (`marinespecies.org/rest`) | free, no key | no — nomenclatural + distributions + attributes + references | good for marine name validation |
 | Index Fungorum SOAP | free, no key | no — `NameSearchDs`, `NameByKeyDs`, `NamesByCurrentKey`, authors, ranks | names only |
-| **EOL classic API** | free, key optional | has text | **currently HTTP 520**, Cloudflare error, unusable |
+| **EOL classic API** | free, key optional | has text, but see below | **no help for the long tail** — measured, not guessed |
 | **MycoBank** | free after registration | **yes** — legacy SOAP exposed a `summary` field; modern REST at `webservices.bio-aware.com` needs a **bearer token** | the real fungal source, if the token is obtainable |
 | **AlgaeBase** | **paid, €500–1000/yr** | taxonomic data | not free; key by emailing `pier.kuipers@algaebase.org` |
+
+### EOL, measured properly
+
+First report of this said EOL's classic API returns HTTP 520 and is unusable.
+That was one sample of a transient Cloudflare error — it is up, and serves 200.
+The conclusion survives, but the reason was wrong, and the real one matters more:
+
+| species | EOL page | `dataObject` | text |
+|---|---|---|---|
+| `Nectria confluens` | found | **0** | 0 chars |
+| `Cytospora coryli` | found | **0** | 0 chars |
+| `Pseudopeziza loti` | found | **0** | 0 chars |
+| `Navicula knysnensis` | found | **0** | 0 chars |
+| `Pseudonitzschia heimii` | found | **0** | 0 chars |
+| `Cantharellus mikemboensis` | found | **0** | 0 chars |
+
+EOL **has a page for all six** — correct `scientificName`, taxon concept and all
+— and **no content attached to any of them**. Because EOL's text is largely
+Wikipedia-derived, and these are precisely the species that have no en.wikipedia
+article, EOL cannot fill a gap that its own main upstream source cannot fill.
+That is a structural limit, not an outage.
+
+EOL's *other* API (`EOL/publishing`, the traits service) is a different thing
+entirely: Cypher over a neo4j traits graph, `/service/cypher`, `Authorization:
+JWT <token>`. The token is not self-service — "an EOL administrator needs to
+create a token for you, please contact hammockj AT si.edu" — the endpoint
+returns 403 without one, and the doc describes it as "in its infancy" with
+`/service/cypher` as the only service, written in November 2018. It returns
+structured traits (body size, habitat, and so on), not prose. There is no field
+in our schema for structured traits, so that is a different feature, not this
+gap.
 
 So: **the free sources are nomenclatural, not descriptive.** Getting real prose
 for fungi means MycoBank (ask for a token) and for algae means paying AlgaeBase.
