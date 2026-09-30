@@ -411,10 +411,47 @@ moved 59 species from "recovered" to "cleared", which is the correct direction.
 
 Verified ID-agnostically with a multiset of `(name, description)` pairs, because
 the first check keyed on `id` and reported three phantom edits: the touched files
-contain **25 duplicate species names** (`Cyanocorax mystacalis`,
-`Aphelocoma insularis`, `Parotia sefilata` … each twice), so ID-keyed comparison
-matched them against each other. `fix_duplicates.py` exists for that and is worth
-running separately — it is not this script's business.
+contain species appearing twice under the same id, so ID-keyed comparison matched
+copies against each other.
+
+### Duplicate genus nodes — done, `merge_duplicate_genera.py`
+
+The caption fix's notes claimed "25 duplicate species names" left over. That
+figure was wrong on both count and diagnosis, and finding the real defect took
+four attempts because every obvious way of counting is wrong:
+
+- Matching species by **name** finds 0 — the copies have identical names, so
+  they are indistinguishable that way.
+- Matching by **id**, then grouping by parent *name*, reports 292 "true
+  duplicates" concentrated in `lamnidae.json`. False: two different genera can
+  share a name. `lamnidae` has 12 distinctly-named genera and no duplicate
+  species at all.
+- Grouping by parent *id* is also wrong — genus ids derive from names, so a
+  `Phyllocardium` in plantae collides with one in animalia.
+- Comparing by **position in the tree** is right: **301 ids appear at more than
+  one position**, 258 of them in different files. Tracing one down —
+  `LOPHOTIS_RUFICRISTA` at `Otididae[6] > Lophotis[0]` *and* `Otididae[8] >
+  Lophotis[0]` — showed the actual defect: **12 families list the same genus
+  twice.** 22 redundant genus nodes, 66 redundant species nodes.
+
+Why it needed a new script: **14 of the 20 duplicate genus pairs are not
+identical**, they hold different subsets. Ploceus is listed twice with 57 and 60
+species and no overlap in the smaller, so `fix_duplicates.py` — keep first,
+discard the rest — **would delete 27 real species**: 19 in Ploceus alone, plus
+Tylas, four Erinaceidae genera and Galbula. That script is still in the repo and
+reads like a safe utility, so its docstring now carries the warning up top.
+
+`merge_duplicate_genera.py` unions by species id instead: the richest copy becomes
+the base, anything only another copy holds is appended in the list that copy used,
+and where two copies of one species disagree the longer description wins with its
+`sourcedFrom`. Applied: 12 families, 22 genera removed, 66 redundant species
+nodes gone, **27 species rescued**. Distinct species ids are unchanged; the family
+tree loses 38 nodes because copies are gone, not taxa.
+
+The per-file invariant is **set** equality of species ids, not a count. Summing
+copies and comparing to the union fails immediately and wrongly — two identical
+copies of a 3-species genus sum to 6 while the union is legitimately 3 — and that
+miscount is what made the first run claim Ploceidae had grown 118 → 137.
 
 ### The one genuinely valuable free source: Catalogue of Life
 
