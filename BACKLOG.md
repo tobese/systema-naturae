@@ -1,7 +1,13 @@
 # Backlog
 
 
-- How is deployment done today? The needed artifacts as I see it is the portal and the built files only?
+- ~~How is deployment done today? The needed artifacts as I see it is the portal
+  and the built files only?~~ **Closed 2026-09-29.** The deployable artifact is the
+  image alone — `docker build` self-builds from all six kingdoms out of
+  git-tracked source, then `docker save | docker load` and
+  `docker compose up -d --no-build`. Written up in `docs/deploy-debbie.md`,
+  along with the stale-`COPY . .` hazard that made a green build meaningless and
+  the reason the build happens on a dev machine rather than on the target.
 
 ## Book: no phylum level
 
@@ -231,3 +237,52 @@ What is left:
 Plan, including why running MediaWiki for enwiki is the wrong answer on that box
 and why svwiki is the one case where it is not:
 `docs/wiki-on-debbie-plan.md`.
+
+## Folded in from `docs/backlog.md` (2026-07-03; file deleted 2026-09-29)
+
+`docs/backlog.md` was a second, parallel roadmap, last touched 3 July. Most of
+it was superseded, but these items were still open and were tracked nowhere
+else, so they are preserved here rather than lost with the file.
+
+### Book: per-family chunks
+
+- Split the order chunks into per-family files for finer-grained lazy loading,
+  and teach the manifest/loader to resolve family chunks. **Measured
+  2026-09-29, and not recommended as written:** the book already lazy-loads per
+  chapter, and per-family would take Coleoptera from 55.1 MB to 15.8 MB — but
+  Hymenoptera only 13.1 → 12 MB, because Formicidae is 74% of that order. It
+  also needs a new structure tier (the nav tier cannot back it: `navProjection`
+  deletes `speciesList`, so it carries no species names), lands in
+  `shared/src/book/` that the standalone app consumes by symlink, and adds
+  ~63 MB to the shipped payload. Related: *Emit the book's sidecars per kingdom*
+  above, which is about sidecars rather than chunk granularity.
+  See `docs/data-tiers.md`.
+
+### Data
+
+- Wikipedia enrichment: batch the biggest zero/near-zero coverage classes first
+  — Gastropoda, Bivalvia, Annelida, Bryozoa, Porifera, Platyhelminthes,
+  Nematoda.
+- Wikipedia enrichment: make a pass resumable per class, so long runs can
+  stop/start without losing progress.
+- Wikipedia enrichment: keep empty or weak extracts out of
+  `sourcedFrom=wikipedia` and surface only real descriptions. Partly overtaken —
+  the mis-attached-text work on 2026-09-29 cleared 73 records and re-attributed
+  18, and `fix_redirect_descriptions.py` clears 913.
+- Micro-phyla scaffolding: manual taxonomy treatment for Gastrotricha,
+  Phoronida, Priapulida, Loricifera, Gnathostomulida, Entoprocta, Onychophora,
+  Xenacoelomorpha.
+- Micro-phyla validation: verify how each manual phylum should appear in
+  `taxonomy.json`, the gap reports, and the UI tree.
+
+### UI polish
+
+- Bookmarks and anchor links — deep linking per section in the Book view.
+- Book view: scroll to and open the relevant section on a search match.
+- Pulsing search matches — replace the 10% opacity dimming with a glow.
+- Tooltip: fade hover thumbnails in after load instead of popping them, keeping
+  the caption visible and avoiding layout shift.
+- Improve genus-centering zoom — refine the zoom level when centring on genus
+  nodes.
+- Wheel of Nature: tick audio while spinning; cache the last winner per session
+  to avoid immediate repeats.

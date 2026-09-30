@@ -34,7 +34,9 @@ Nodes scale by rank. Radius mappings in `FamilyTree.tsx`:
 `SubfamilyPanel` works well — has the same structure as higher ranks with accent colour.
 
 ## 6. Unaddressed / Backlog Items
-The following items are moved to the active roadmap in `docs/backlog.md`:
+The following items are moved to the active roadmap in the root `BACKLOG.md`
+(*Folded in from `docs/backlog.md`*, after that file was deleted on 2026-09-29
+for being three months stale):
 
 - **Wikipedia thumbnails on hover** (`TooltipBox`) — works but could fade in instead of appearing suddenly.
 - **Tree centering** — the `pendingZoomId` mechanism correctly centres on a node but doesn't always pick the right zoom level for genus-level views.

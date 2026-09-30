@@ -171,7 +171,8 @@ When a family is focused in the tree, all non-focused families' children are pru
 The ⓘ Coverage button opens a modal with sort/filter controls (Gaps first / A–Z; All / Complete / Partial / Gaps), per-class mini progress bars, and family status tags.
 
 ### Wheel of Nature, Statistics Header, Book View, Species of the Day
-All shipped — see `portal/src/components/` and `docs/backlog.md` for status notes.
+All shipped — see `portal/src/components/`. Open items live in the root
+`BACKLOG.md`, under *Folded in from `docs/backlog.md`*.
 
 ## Adding a new family — checklist
 
