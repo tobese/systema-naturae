@@ -153,6 +153,110 @@ Note the mirror is `EnWikiPages` in Postgres on debbie, **not**
 subset left over from earlier runs. Anything assuming the SQLite file is the
 full dump is silently under-covering.
 
+## Enrichment: 346,820 species are one command away from being described
+
+**Measured 2026-09-30** from the committed family JSONs (7,807 files), not from
+a built tier:
+
+| kingdom | species | described | gap | covered |
+|---|---|---|---|---|
+| animalia | 529,125 | 130,445 | 398,680 | 24.7% |
+| plantae | 435,113 | 325,699 | 109,414 | 74.9% |
+| fungi | 161,716 | 3,896 | 157,820 | **2.4%** |
+| chromista | 74,044 | 214 | 73,830 | **0.3%** |
+| protozoa | 3,871 | 57 | 3,814 | 1.5% |
+| archaea | 1,965 | 23 | 1,942 | 1.2% |
+| **total** | **1,205,834** | **460,334** | **745,500** | **38.2%** |
+
+Where the stored text came from is the whole story:
+
+| kingdom | sources actually used |
+|---|---|
+| animalia | wikipedia 102,175 · gbif 27,424 · generated 843 |
+| plantae | powo 248,499 · wikipedia 63,870 · gbif 13,238 |
+| fungi | wikipedia 3,896 |
+| chromista | wikipedia 214 |
+| archaea | wikipedia 23 |
+| protozoa | wikipedia 57 |
+
+Only plantae and animalia ever got a domain source. **Fungi, chromista, archaea
+and protozoa have had exactly one enrichment pass each — Wikipedia — and it is
+the worst possible source for them.** Fungal nomenclature is documented in
+MycoBank and Index Fungorum, algal names in AlgaeBase and WoRMS; en.wikipedia
+has articles for a few thousand of ~145,000 named fungi. The 2.4% and 0.3% are
+not a backfill that ran badly, they are the ceiling.
+
+### The blocker is already gone
+
+This looked expensive and is not. `portal/data/` holds **191 GBIF class
+caches** — several hundred MB, including `gbif-cache-agaricomycetes.json` at
+83 MB. Every non-animalia kingdom's classes already have one:
+
+| kingdom | gap | GBIF class cache present? |
+|---|---|---|
+| fungi | 157,820 | yes |
+| plantae | 109,414 | yes |
+| chromista | 73,830 | yes |
+| protozoa | 3,814 | yes |
+| archaea | 1,942 | yes |
+| **total** | **346,820** | |
+
+And `portal/scripts/enrichFromGbifDescriptions.ts` needs **no code change**: its
+walker recurses `taxonomy/*/*/…/src/data/*.json` and is already
+kingdom-agnostic, it is idempotent (empty descriptions only), it sets
+`sourcedFrom="gbif"`, and it takes `--class <name>` / `--all`. Nobody has run it
+outside animalia.
+
+```bash
+cd portal
+npx tsx scripts/enrichFromGbifDescriptions.ts --class agaricomycetes
+# …then the other cached non-animalia classes; --all walks every family
+```
+
+Expect it to be slow and rate-limited (the script already backs off on HTTP 429
+and resumes via `/tmp/gbif-desc-cache.json`). The same quality gate that cleared
+the 73 mis-attached GBIF texts on 2026-09-29 applies, and
+`fix_misattached_descriptions.py` should be run afterwards as a check rather
+than assumed.
+
+Caveat worth stating before anyone counts the yield: GBIF treatments are
+patchy outside animals. Expect a fraction of 346,820, not all of it. The win is
+that it is a few commands against data already on disk, not a project.
+
+### A smaller, fully safe win: 409 reclassified species
+
+The 1,456 `collision` rejections in `description-lookup.jsonl` were species whose
+Wikipedia lead never mentions our genus. 694 of those are redirect targets that
+share our **species epithet** while differing in genus — under ICZN a change of
+generic assignment does not change the species, so the target's text is about
+the same animal. Splitting those 694 against our own taxonomy:
+
+| | count | disposition |
+|---|---|---|
+| both genera in our tree, **same ORDER** | **409** | safe to accept |
+| both genera in our tree, cross ORDER | 3 | genuine homonyms, keep rejected |
+| target genus absent from our tree | 282 | needs an external genus check |
+
+The 3 cross-order cases are exactly the trap: `Duplicaria nadinae →
+Terebra nadinae` is a fungus matched against a gastropod, and the two genera
+even swap back (`Terebra duplicata → Duplicaria duplicata`). Note the 282 are
+**not** safe by default — `Acanthodes lateralis → Acanthispa lateralis` is a
+fish genus pointed at a beetle genus, and it is only catchable because the
+target is missing from our 91,728-genus index. Do not widen the rule to
+"epithet matches".
+
+409 out of 745,500 is 0.05%, so this is a tidy-up, not a lever. The GBIF pass
+above is the lever.
+
+### Not worth doing
+
+- **More Wikipedia work on the animalia long tail.** Already at its ceiling —
+  421,749 of the undescribed have no en.wikipedia page at all (91.2%). More
+  passes over the same 8% is done.
+- **Stripping authority suffixes to widen name lookups.** Tried and measured:
+  3,000 sampled, 2 resolved, one of them a *wrong* match. The suffix is a
+  symptom of obscurity. Do not reach for `stripAuthority`.
+
 ## Emit the book's sidecars per kingdom, like the graph already does
 
 The graph view reads per kingdom — `data/kingdoms/<k>/unified-taxonomy-skeleton.json`
@@ -209,11 +313,30 @@ existing `scripts/dbserved.ts` — would cover it, following redirects so
 **Built, deployed, and wired into local development.** `wikiserved` runs in the
 deploy compose (`services/wikiserved/README.md`), reachable on the
 LAN/Tailscale at `debbie:9881`, and the dev server takes Wikipedia summaries
-from it via `VITE_WIKI_SUMMARY_BASE` in `portal/.env.local`. Not routed through
-Caddy and not used by deployed builds — the primary deployment is GitHub Pages,
-where it is unreachable. Remaining: point the batch enrichment scripts at it
-(§ below), and if the tree's hover portraits are ever wanted from the mirror,
-extract the infobox image from wikitext.
+from it via `VITE_WIKI_SUMMARY_BASE` in `portal/.env.local`.
+
+Not used by deployed builds. **Corrected 2026-09-30:** this previously said the
+primary deployment is GitHub Pages "where it is unreachable". That is not the
+live site — the primary deployment is the Docker image behind Caddy at
+`/systema-naturae/` (see `docs/deploy-debbie.md`); GitHub Pages is a separate
+workflow. The corrected reading, which points opposite ways on two axes:
+
+- `wikiserved` and `systema-naturae` are services in the **same compose file**
+  on debbie, so anything server-side on that network reaches it at
+  `http://wikiserved:9881` today. Reachability was never the problem.
+- The deployed portal is static nginx serving prebuilt files. It makes no
+  server-side Wikipedia calls at runtime, so there is no server-side consumer to
+  repoint. The consumer that needs the mirror is the **browser**, which cannot
+  resolve a compose service name.
+
+So browser-side use needs a route — a Caddy one, or an `nginx.conf`
+`proxy_pass` location — and still needs a decision about public exposure. Note
+the mirror is a 2026-06-01 snapshot, so the browser would get older text than
+the live API: a rate-limit win, not a freshness one.
+
+Remaining: point the batch enrichment scripts at it (§ below), and if the
+tree's hover portraits are ever wanted from the mirror, extract the infobox
+image from wikitext.
 
 What is left:
 
