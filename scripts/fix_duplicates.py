@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 """
 Fix DUPLICATE_SPECIES: Remove duplicate species entries, keep first occurrence.
+
+⚠ DO NOT RUN ON THE CURRENT TREE. KEEP-FIRST IS THE WRONG POLICY HERE.
+--------------------------------------------------------------------------
+Measured 2026-09-30 against the real data: this would delete 27 real species.
+
+The duplicates it targets are duplicate GENERUS nodes - the same genus listed
+twice in a family, each copy holding a different subset of its species. Ploceus
+alone appears twice with 57 and 60 species and no overlap in the smaller copy,
+and the 19 species unique to it exist only in the copy this script would discard.
+Vangidae's Tylas, Erinaceidae's four genera and Galbula account for the rest.
+
+"Keep first occurrence" assumes the copies are identical. 14 of the 20 are not.
+
+Use scripts/merge_duplicate_genera.py instead, which unions by species id. That
+has been applied, so the duplicate genera this script was written for no longer
+exist - but if they come back, merge them, do not delete them.
 """
 import json
 import glob
