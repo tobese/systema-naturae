@@ -218,19 +218,34 @@ npx tsx scripts/enrichFromGbifDescriptions.ts --class agaricomycetes
 Expect it to be slow and rate-limited (the script already backs off on HTTP 429
 and resumes via `/tmp/gbif-desc-cache.json`).
 
-**Measured first, because the premise was wrong. Do not run this as a bulk pass.**
-Probing 20 real undescribed species against `/species/{key}/descriptions`:
+**Measured first, because the premise was wrong. Then measured properly.**
+A 20-species probe suggested 8% on fungi and 12% on chromista. A full run over
+one class says otherwise:
 
-| kingdom | sampled | returned prose >120 chars |
-|---|---|---|
-| fungi | 12 | **1** (8%) |
-| chromista | 8 | **1** (12%) |
+| | count |
+|---|---|
+| `agaricomycetes` binomials checked | 40,278 |
+| with any GBIF description at all | **151** |
+| **measured yield** | **0.37%** |
+
+The 20-species probe was off by more than 20x. It ran in 8.7 minutes, not hours
+— the class cache makes key resolution ~1 call per 100 species — so this cost
+almost nothing to find out, and it should have been the first thing measured
+rather than the last.
+
+The run also turned out to be a **no-op on the tree**: the 151 binomials with
+text had already been enriched by an earlier run and are in `HEAD`, so
+rewriting them produced byte-identical files (43 files touched, zero git diff).
+Nothing was lost and nothing was gained. Which is the point — GBIF descriptions
+for fungi are effectively absent, and re-running the pass will keep producing
+nothing.
 
 GBIF *matched* all 20 at confidence 99 — it knows every one of these names. It
 just does not hold prose for them. GBIF's description store is built from Plazi
 literature treatments, and there is very little Plazi treatment literature for
-fungi and algae. So the realistic yield on the 346,820 is roughly 20–30k species
-for many hours of rate-limited work: 3–4% of the 745,500 gap. The same gate is
+fungi or algae. At 0.37% the realistic yield across the whole 346,820 is ~1,300
+species, which is 0.2% of the 745,500 gap. **Do not run this on the other
+kingdoms.** The same gate is
 why the pass is safe, and `fix_misattached_descriptions.py` should be run
 afterwards as a check rather than assumed.
 
@@ -304,6 +319,25 @@ The rule needs no graph traversal and no epithet matching: for a candidate pair
 (A = our name, B = the Wikipedia redirect target), **A synonym + B accepted means
 same taxon, accept it; A accepted + B accepted means two distinct names, reject
 it.**
+
+Run complete over all 1,456 cases — `docs/reports/name-attribution-col.md`:
+
+| verdict | count | meaning |
+|---|---|---|
+| `safe` | **352** | ours is a COL synonym, target accepted — the description may be applied |
+| `distinct` | **80** | both names accepted in COL — genuinely different taxa, correctly rejected |
+| `unknown` | 1,024 | COL has no usable answer — left alone |
+
+The epithet heuristic proposed 409 safe. COL confirms **352** of them and rejects
+some of the rest as distinct, so it is doing real work rather than
+reproducing the guess. The `unknown` bucket is 70% and that is mostly COL's own
+coverage: `Acanthispa` is not in COL at all, and one ledger target is a
+vernacular name ("Khanka spiny bitterling"), so those cases need a human or the
+acceptedId link. Erring toward `unknown` is the right default here — the failure
+this replaces pasted a beetle description onto a fish.
+
+Not yet applied: `validateNamesWithCol.py --apply` is deliberately unwired, so
+the 352 are a reviewed list rather than a silent edit.
 
 And it settles the open question from the section below, which the epithet
 heuristic got wrong. `Acanthodes lateralis` and `Acanthispa lateralis` are
