@@ -18,6 +18,7 @@
     "build:archaea": "SN_KINGDOM=archaea NODE_OPTIONS=\"--max-old-space-size=8192\" sh scripts/buildData.sh && SN_KINGDOM=archaea NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "build:all": "sh scripts/buildAllKingdoms.sh && sh scripts/ensureBookData.sh --force && NODE_OPTIONS=\"--max-old-space-size=8192\" vite build",
     "typecheck": "tsc -b",
+    "verify:dist": "node ../scripts/verifyDist.mjs",
     "build:unified": "SN_BUILD_UNIFIED=1 sh scripts/buildData.sh",
     "import": "npx tsx scripts/importFamily.ts",
     "fetch": "npx tsx scripts/fetchSpeciesFromApi.ts",

@@ -96,6 +96,57 @@ Notes:
   https://debbie.bearded-panga.ts.net/systema-naturae/data/kingdoms/<kingdom>/unified-taxonomy-skeleton.json`
   for each kingdom.
 
+### The stale-layer hazard — read this before trusting a green build
+
+`docker build` replays cached layers. If `COPY . .` comes back **`Using cache`**
+for a tree that has actually changed, the build then re-runs an **older**
+`buildData.ts`, writes an **older** manifest, and exits 0. The image looks like
+a successful build and serves the previous source.
+
+This happened on 2026-09-29. The image it produced had an order manifest with
+no `namesFile`/`proseDir` and no `orders-names/` or `orders-prose/` directory
+at all — a pre-tier tree — and `docker build` reported success. Nothing in the
+pipeline noticed. Two things now guard it:
+
+1. **`scripts/verifyDist.mjs`** (also `npm run verify:dist` in `portal/`) runs
+   as the last build-stage step. It resolves every order-manifest entry against
+   the filesystem, requires the manifest to carry the tier fields at all, and
+   fails the build if a tier directory is missing or empty. A stale-source
+   image now fails instead of shipping.
+2. **Check the build log yourself.** The tell is a `COPY . .` step reported as
+   `Using cache` on a tree with new commits:
+
+   ```bash
+   grep -E "^Step|Using cache" build.log
+   ```
+
+   If `COPY . .` was cached, the image is not from your source. Pass
+   `--no-cache` to be sure.
+
+### Preferred: build the image here, ship the image
+
+Building on the box works, but it puts a multi-GB build on a host that also
+runs Gitea, Postgres, the enrichment workers and (as of 2026-09-29) Kubernetes.
+A wedged `docker` CLI there will stall a deploy indefinitely. Build locally and
+move the finished image instead — the image is self-contained, so nothing about
+the build needs to happen on the target:
+
+```bash
+# here
+docker build -t debbie-systema-naturae:latest .
+docker save debbie-systema-naturae:latest | gzip > /tmp/sna.tar.gz
+scp /tmp/sna.tar.gz agent@debbie:/tmp/
+
+# there
+agent@debbie 'gunzip -c /tmp/sna.tar.gz | docker load && \
+  cd /home/agent/gcloud-vm && docker compose up -d --no-build systema-naturae'
+```
+
+The build embeds `VITE_BASE=/systema-naturae/` by default, which is what
+Caddy proxies, so the image is directly deployable. Keep the box's git checkout
+current regardless (`git pull`) — it is the record of what is deployed, and the
+source `docker compose` would build from if anyone rebuilds on the box.
+
 ## Access
 
 - SSH as `tommy` — reach Debbie over **Tailscale**
