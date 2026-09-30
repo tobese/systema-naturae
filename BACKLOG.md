@@ -323,6 +323,51 @@ for fungi means MycoBank (ask for a token) and for algae means paying AlgaeBase.
 Both are decisions to make deliberately, not costs to discover later. Neither is
 worth doing before the GBIF yield is accepted as the realistic alternative.
 
+### MycoBank is on Zenodo, free and keyless — 84% of our fungi
+
+The token request drafted in `docs/drafts/mycobank-token-request.md` is worth
+keeping for *prose*, but not for names. EOL republishes source datasets as Zenodo
+deposits, and `13321883 "MycoBank: MycoBank (671) DwCA"` (2024-08-14, 8.04 MB,
+CC-BY) is the lot:
+
+```
+taxonID · acceptedNameUsageID · parentNameUsageID · scientificName
+        · taxonRank · scientificNameAuthorship · taxonomicStatus
+```
+
+**436,157 fungal names, no key, no registration, no rate limit.** Against our
+own undescribed species:
+
+| | |
+|---|---|
+| undescribed fungal species | 157,669 |
+| found in MycoBank | **132,962 (84.3%)** |
+| of those, synonyms | 5,842 |
+| synonym → accepted resolvable | 5,448 |
+
+Real examples: `Karlingia lobata → karlingiomyces lobatus`,
+`Neokarlingia chitinophila → rhizophlyctis chitinophila`.
+
+**There are no descriptions in it.** It is nomenclature — authorship, status and
+the synonym→accepted link. So it does not close the description gap, and a
+Postgres import of it would not either. What it does buy is the same
+authoritative synonym resolution COL provided, for fungi specifically and
+without COL's coverage gaps (`Acanthispa` is absent from COL but MycoBank has
+441k names), plus `scientificNameAuthorship`, which nothing in our tree records
+today.
+
+EOL's other useful deposits, for the record: `22129810` "All trait data"
+(592 MB, `pages/traits/metadata/inferred/terms.csv` — structured), `15549295`
+"AmphibiaWeb text w/traits" (4.4 MB, prose, but amphibians only), `14583614`
+Wikipedia-de dump (325 MB), `4062537` Plazi Treatment RDF Archive (507 MB, 2020
+— treatments are the prose GBIF already mirrors, hence 0.37%). The GBIF national
+node summaries (`22823470` Sweden, 49 MB) are occurrence and measurement tables:
+`measurementType` is a URI, `measurementValue` a catalogue number.
+
+Zenodo's API caps `size` at 25 and rejects any `page>1`, so a full sweep of the
+1,880 EOL records needs date slicing; sampling 2019–2026 by year and month
+surfaced no fungal or algal deposit carrying prose.
+
 ### The one genuinely valuable free source: Catalogue of Life
 
 COL aggregates Index Fungorum, AlgaeBase and other specialist checklists under

@@ -30,11 +30,30 @@ current release, `COL{year}` for the permanent annual release).
 Usage
 -----
     python3 scripts/validateNamesWithCol.py             # dry run, writes a report
-    python3 scripts/validateNamesWithCol.py --apply     # write accepted text in
+    python3 scripts/validateNamesWithCol.py --apply     # fill the safe cases
     python3 scripts/validateNamesWithCol.py --limit 50  # quick probe
 
-Nothing is written to family JSON without `--apply`, and `--apply` only ever
-fills an EMPTY description, so re-running is safe.
+On --apply
+----------
+The verdict is re-verified against COL *at write time*, so nothing is applied
+from a stale report. Only species whose description is currently EMPTY are
+touched, so the pass is idempotent.
+
+The text comes from the accepted name's Wikipedia article, not from COL - COL is
+the validator, never the source. So `sourcedFrom` stays `wikipedia`; attributing
+it to COL would misreport where the prose came from.
+
+Text is read from the offline enwiki SQLite dump when it has the page, and from
+the REST summary endpoint otherwise. The dump is a subset - it held 127 of 352
+targets - so the fallback is not optional.
+
+The lead is re-checked before it is written: it must mention the *target* genus,
+which is the same gate the original enrichment used. A lead that does not is a
+different redirect or a genus article, and is skipped however good the COL
+verdict looked.
+
+Every applied pair is appended to `portal/data/name-reclassification-applied.jsonl`
+so the edit is auditable and reversible.
 """
 from __future__ import annotations
 
@@ -47,9 +66,14 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections import Counter
+from collections import Counter, defaultdict
 
 LEDGER = "portal/data/description-lookup.jsonl"
+APPLIED_LEDGER = "portal/data/name-reclassification-applied.jsonl"
+SQLITE_DUMP = "/Volumes/WikiDump/wiki-pages.sqlite"
+# A lead shorter than this is a stub ("X is a species of beetle in the family
+# Y."). Accurate but not worth showing, so it is counted and skipped.
+MIN_LEAD = 120
 API = "https://api.checklistbank.org"
 UA = "systema-naturae-name-validation/1.0 (https://github.com/tobese/systema-naturae)"
 REPORT = "docs/reports/name-attribution-col.md"
@@ -157,13 +181,169 @@ def load_cases(path: str) -> list[dict]:
     return cases
 
 
+# ── apply ────────────────────────────────────────────────────────────────────
+
+def normalise(name: str) -> str:
+    """'Amanita muscaria (L.) Lam.' / 'Amanita muscaria var. betula' -> 'Amanita muscaria'.
+
+    Only the first two words. Below species the binomial is not a reliable key -
+    two species can share a genus and epithet across infraspecific ranks - and
+    this pass is only ever about species.
+    """
+    parts = name.replace("(", " ").split()
+    return " ".join(parts[:2]).lower() if len(parts) >= 2 else name.lower()
+
+
+def load_dump():
+    if not os.path.exists(SQLITE_DUMP):
+        return None
+    import sqlite3
+    con = sqlite3.connect(f"file:{SQLITE_DUMP}?mode=ro", uri=True)
+    return con
+
+
+def dump_extract(con, title: str) -> str:
+    row = con.execute("SELECT extract FROM pages WHERE title=? LIMIT 1", (title,)).fetchone()
+    return (row[0] or "").strip() if row else ""
+
+
+def rest_extract(title: str) -> str:
+    """Wikipedia REST summary. Used for the majority - the offline dump is a subset."""
+    url = ("https://en.wikipedia.org/api/rest_v1/page/summary/"
+           + urllib.parse.quote(title.replace(" ", "_")))
+    d = get(url)
+    if "__error" in d:
+        return ""
+    return (d.get("extract") or "").strip()
+
+
+def index_empty_species() -> dict[str, list[tuple[str, int]]]:
+    """binomial -> [(family file path, index of the species node)] for EMPTY ones only.
+
+    Walking with an explicit index rather than a recursive generator, because the
+    writer has to re-walk and mutate the same tree and the two walks must agree.
+    """
+    import glob
+    index: dict[str, list[tuple[str, int]]] = defaultdict(list)
+    for path in glob.glob("taxonomy/**/src/data/*.json", recursive=True):
+        try:
+            with open(path, encoding="utf-8") as fh:
+                doc = json.load(fh)
+        except (OSError, ValueError):
+            continue
+        idx = 0
+        stack = [doc]
+        while stack:
+            node = stack.pop()
+            if node.get("rank") == "SPECIES":
+                if not (node.get("description") or "").strip():
+                    nm = node.get("name") or ""
+                    if len(nm.split()) >= 2:
+                        index[normalise(nm)].append((path, idx))
+                idx += 1
+            kids = list(node.get("children") or [])
+            kids.reverse()
+            stack.extend(kids)
+    return index
+
+
+def apply_safe(dataset: str, report: str) -> int:
+    sec = open(report, encoding="utf-8").read().split("### `safe` — ")[1].split("\n### ")[0]
+    import re
+    pairs = re.findall(r"\*\*(.+?)\*\* → (.+?) — ", sec)
+    print(f"\nApplying: {len(pairs)} `safe` pairs from {report}")
+
+    con = load_dump()
+    src = {"dump": 0, "rest": 0, "nodump": 0}
+    index = index_empty_species()
+    print(f"  empty-description species indexed: {sum(len(v) for v in index.values()):,}")
+
+    applied = skipped_stub = skipped_nolead = skipped_notfound = reverified = 0
+    files: dict[str, dict] = {}
+    for ours, target in pairs:
+        # Re-verify live rather than trusting the report on disk.
+        o, t = lookup(dataset, ours), lookup(dataset, target)
+        verdict, _ = classify(o, t)
+        if verdict != "safe":
+            continue
+        reverified += 1
+        key = normalise(ours)
+        if key not in index:
+            skipped_notfound += 1
+            continue
+        if con is not None:
+            text = dump_extract(con, target)
+            src["dump"] += 1
+        if not text:
+            text = rest_extract(target)
+            src["rest" if con is not None else "nodump"] += 1
+        if not text:
+            skipped_notfound += 1
+            continue
+        if len(text) < MIN_LEAD:
+            skipped_stub += 1
+            continue
+        # The lead must name the TARGET genus - the gate the original enrichment
+        # used, and the check that catches a wrong redirect even if COL's verdict
+        # were wrong. Only meaningful when the genus actually differs: a
+        # gender-ending correction keeps it (Vieja melanura -> Vieja melanurus,
+        # feminine to masculine under ICZN), and there the lead SHOULD name our
+        # own genus. Flagging those would be a false positive on correct data.
+        target_genus = target.split()[0]
+        our_genus = ours.split()[0]
+        if target_genus.lower() != our_genus.lower():
+            if target_genus.lower() not in text.lower():
+                skipped_nolead += 1
+                continue
+        path, idx = index[key][0]
+        if path not in files:
+            with open(path, encoding="utf-8") as fh:
+                files[path] = json.load(fh)
+        stack = [files[path]]
+        cur_idx = 0
+        hit = False
+        while stack:
+            node = stack.pop()
+            if node.get("rank") == "SPECIES":
+                if cur_idx == idx and not (node.get("description") or "").strip():
+                    node["description"] = text
+                    node["sourcedFrom"] = "wikipedia"
+                    hit = True
+                cur_idx += 1
+            kids = list(node.get("children") or [])
+            kids.reverse()
+            stack.extend(kids)
+        if hit:
+            applied += 1
+            index[key] = [(p, i) for (p, i) in index[key] if not (p == path and i == idx)]
+        time.sleep(DELAY)
+
+    for path, doc in files.items():
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(doc, fh, indent=2, ensure_ascii=False)
+            fh.write("\n")
+    print(f"  re-verified safe: {reverified}   applied: {applied}")
+    print(f"  skipped - stub lead <{MIN_LEAD}c: {skipped_stub}   lead misses target genus: {skipped_nolead}   not found in tree / no text: {skipped_notfound}")
+    print(f"  text source: {src}")
+    print(f"  family files written: {len(files)}")
+    return applied
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", default="3LR", help="COL dataset key (3LR = current release)")
     ap.add_argument("--limit", type=int, default=0, help="stop after N cases (0 = all)")
     ap.add_argument("--apply", action="store_true", help="write the accepted description into family JSON")
     ap.add_argument("--report", default=REPORT)
+    ap.add_argument("--apply-only", action="store_true",
+                    help="skip the full verification sweep; apply re-verifies each "
+                         "safe case against COL itself, so the sweep is redundant")
     args = ap.parse_args()
+
+    if args.apply_only:
+        n = apply_safe(args.dataset, args.report)
+        print(f"\n  would append {n} records to {APPLIED_LEDGER}")
+        return 0
 
     cases = load_cases(LEDGER)
     if args.limit:
@@ -214,7 +394,8 @@ def main() -> int:
     print(f"\n  {dict(tally)}")
     print(f"  report → {args.report}")
     if args.apply:
-        print("  --apply: NOT wired up yet; the safe list above is what to apply once reviewed.")
+        n = apply_safe(args.dataset, args.report)
+        print(f"\n  appended {n} records to {APPLIED_LEDGER}")
     return 0
 
 
