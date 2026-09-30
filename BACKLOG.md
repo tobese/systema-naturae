@@ -153,7 +153,7 @@ Note the mirror is `EnWikiPages` in Postgres on debbie, **not**
 subset left over from earlier runs. Anything assuming the SQLite file is the
 full dump is silently under-covering.
 
-## Enrichment: 346,820 species are one command away from being described
+## Enrichment: where the remaining 745,500 descriptions can and cannot come from
 
 **Measured 2026-09-30** from the committed family JSONs (7,807 files), not from
 a built tier:
@@ -186,11 +186,11 @@ MycoBank and Index Fungorum, algal names in AlgaeBase and WoRMS; en.wikipedia
 has articles for a few thousand of ~145,000 named fungi. The 2.4% and 0.3% are
 not a backfill that ran badly, they are the ceiling.
 
-### The blocker is already gone
+### 346,820 species are reachable, and it is worth about 3%
 
-This looked expensive and is not. `portal/data/` holds **191 GBIF class
-caches** — several hundred MB, including `gbif-cache-agaricomycetes.json` at
-83 MB. Every non-animalia kingdom's classes already have one:
+`portal/data/` holds **191 GBIF class caches** — several hundred MB, including
+`gbif-cache-agaricomycetes.json` at 83 MB — and every non-animalia kingdom's
+classes already have one, so the mechanical side is done:
 
 | kingdom | gap | GBIF class cache present? |
 |---|---|---|
@@ -207,6 +207,8 @@ kingdom-agnostic, it is idempotent (empty descriptions only), it sets
 `sourcedFrom="gbif"`, and it takes `--class <name>` / `--all`. Nobody has run it
 outside animalia.
 
+So the reach is there. The yield is not — see immediately below.
+
 ```bash
 cd portal
 npx tsx scripts/enrichFromGbifDescriptions.ts --class agaricomycetes
@@ -214,14 +216,68 @@ npx tsx scripts/enrichFromGbifDescriptions.ts --class agaricomycetes
 ```
 
 Expect it to be slow and rate-limited (the script already backs off on HTTP 429
-and resumes via `/tmp/gbif-desc-cache.json`). The same quality gate that cleared
-the 73 mis-attached GBIF texts on 2026-09-29 applies, and
-`fix_misattached_descriptions.py` should be run afterwards as a check rather
-than assumed.
+and resumes via `/tmp/gbif-desc-cache.json`).
 
-Caveat worth stating before anyone counts the yield: GBIF treatments are
-patchy outside animals. Expect a fraction of 346,820, not all of it. The win is
-that it is a few commands against data already on disk, not a project.
+**Measured first, because the premise was wrong. Do not run this as a bulk pass.**
+Probing 20 real undescribed species against `/species/{key}/descriptions`:
+
+| kingdom | sampled | returned prose >120 chars |
+|---|---|---|
+| fungi | 12 | **1** (8%) |
+| chromista | 8 | **1** (12%) |
+
+GBIF *matched* all 20 at confidence 99 — it knows every one of these names. It
+just does not hold prose for them. GBIF's description store is built from Plazi
+literature treatments, and there is very little Plazi treatment literature for
+fungi and algae. So the realistic yield on the 346,820 is roughly 20–30k species
+for many hours of rate-limited work: 3–4% of the 745,500 gap. The same gate is
+why the pass is safe, and `fix_misattached_descriptions.py` should be run
+afterwards as a check rather than assumed.
+
+### What the specialist sources actually offer
+
+Checked live on 2026-09-30, because the docs and the reality differ:
+
+| source | cost | prose? | verdict |
+|---|---|---|---|
+| **Catalogue of Life** | free, **no key** | no — names, status, classification, synonyms | **use it**, see below |
+| GBIF descriptions | free, no key | sparse outside animals (measured 8–12%) | not worth a bulk pass |
+| WoRMS REST (`marinespecies.org/rest`) | free, no key | no — nomenclatural + distributions + attributes + references | good for marine name validation |
+| Index Fungorum SOAP | free, no key | no — `NameSearchDs`, `NameByKeyDs`, `NamesByCurrentKey`, authors, ranks | names only |
+| **EOL classic API** | free, key optional | has text | **currently HTTP 520**, Cloudflare error, unusable |
+| **MycoBank** | free after registration | **yes** — legacy SOAP exposed a `summary` field; modern REST at `webservices.bio-aware.com` needs a **bearer token** | the real fungal source, if the token is obtainable |
+| **AlgaeBase** | **paid, €500–1000/yr** | taxonomic data | not free; key by emailing `pier.kuipers@algaebase.org` |
+
+So: **the free sources are nomenclatural, not descriptive.** Getting real prose
+for fungi means MycoBank (ask for a token) and for algae means paying AlgaeBase.
+Both are decisions to make deliberately, not costs to discover later. Neither is
+worth doing before the GBIF yield is accepted as the realistic alternative.
+
+### The one genuinely valuable free source: Catalogue of Life
+
+COL aggregates Index Fungorum, AlgaeBase and other specialist checklists under
+one keyless API (`api.checklistbank.org`, dataset `3LR` for the current release,
+`COL{year}` for the permanent annual). It carries no prose — but it carries
+`status: accepted | synonym` per name, which is exactly what the collision
+problem needs, authoritatively and for all six kingdoms at once:
+
+| name | COL status |
+|---|---|
+| `Abaraeus hamifer` | **synonym** |
+| `Temnosceloides hamifer` | **accepted** |
+| `Acanthodes lateralis` | **accepted** |
+| `Acanthispa lateralis` | **accepted** |
+| `Cytospora coryli` | accepted |
+
+The rule needs no graph traversal and no epithet matching: for a candidate pair
+(A = our name, B = the Wikipedia redirect target), **A synonym + B accepted means
+same taxon, accept it; A accepted + B accepted means two distinct names, reject
+it.**
+
+And it settles the open question from the section below, which the epithet
+heuristic got wrong. `Acanthodes lateralis` and `Acanthispa lateralis` are
+*both* accepted — a fish genus and a beetle genus — so epithet matching would
+have pasted a beetle description onto a fish. COL rejects it for free.
 
 ### A smaller, fully safe win: 409 reclassified species
 
