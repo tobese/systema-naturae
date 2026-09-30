@@ -42,6 +42,14 @@ RUN rsync -a \
       --exclude='/orders/' --exclude='/orders-plantae/' \
       data/ dist/data/
 
+# A stale "COPY . ." layer replays an OLDER buildData.ts, which writes an OLDER
+# manifest (no namesFile/proseDir) and still exits 0 - so the build looks fine
+# and the image ships the previous source. Nothing in the build noticed when
+# that happened on 2026-09-29. This check is what notices: it resolves every
+# manifest entry against the filesystem and fails the build if a tier is absent
+# or a manifest predates the tiers. Cheap (~seconds) next to a build this size.
+RUN node /repo/scripts/verifyDist.mjs /repo/portal/dist
+
 # ---- Runtime: static nginx ----
 FROM nginx:alpine
 # Drop the base image's own default welcome page — bare `/` should 404,
