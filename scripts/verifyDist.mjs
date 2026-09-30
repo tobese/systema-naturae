@@ -89,6 +89,15 @@ for (const [kingdom, cfg] of Object.entries(config.kingdoms)) {
     continue;
   }
 
+  // Build state in a shipped image. It only ever appears in dist/ via the
+  // Dockerfile's rsync, because a plain `npm run build:all` never copies
+  // portal/data/ - so finding it here means the rsync's exclude is missing.
+  // 458MB across the six kingdoms when it last leaked.
+  if (existsSync(join(root, ".build-cache"))) {
+    const { total } = dirBytes(join(root, ".build-cache"));
+    fail(`${kingdom}: .build-cache/ is in dist (${bytes(total)}) - build state, read by nothing at runtime; add --exclude='.build-cache/' to the Dockerfile rsync`);
+  }
+
   const skeleton = join(root, "unified-taxonomy-skeleton.json");
   const manifestPath = join(root, "order-manifest.json");
   if (!existsSync(skeleton)) fail(`${kingdom}: skeleton missing`);

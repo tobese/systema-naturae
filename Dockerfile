@@ -36,9 +36,16 @@ RUN rm -rf /repo/portal/dist/data/kingdoms/*/orders-nav*
 # excluding build-time-only artifacts (unified-taxonomy.json, per-kingdom
 # order dumps, the various GBIF/WCVP/POWO caches) — mirrors deploy.yml's
 # "Copy data files to dist" step for GitHub Pages.
+#
+# `.build-cache/` is the per-family graft cache buildData uses for incremental
+# rebuilds - pure build state, read by nothing at runtime. The *cache*.json
+# excludes above do not catch it: those patterns require a .json suffix, so the
+# directory and the plain .json files inside it both slip through. It was 458MB
+# of the image (220 animalia, 162 plantae, 51 fungi) before this exclude existed.
 RUN rsync -a \
       --exclude='*cache*.json' --exclude='*cache*.json.gz' \
       --exclude='unified-taxonomy.json' --exclude='unified-taxonomy-plantae.json' \
+      --exclude='.build-cache/' \
       --exclude='/orders/' --exclude='/orders-plantae/' \
       data/ dist/data/
 
