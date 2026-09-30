@@ -71,9 +71,22 @@ from collections import Counter, defaultdict
 LEDGER = "portal/data/description-lookup.jsonl"
 APPLIED_LEDGER = "portal/data/name-reclassification-applied.jsonl"
 SQLITE_DUMP = "/Volumes/WikiDump/wiki-pages.sqlite"
-# A lead shorter than this is a stub ("X is a species of beetle in the family
-# Y."). Accurate but not worth showing, so it is counted and skipped.
-MIN_LEAD = 120
+# Where to draw the line on Wikipedia stub leads. Measured on the 352 safe cases:
+#
+#   80-119 chars  32 leads  USEFUL - "Sphaerium transversum is a species of
+#                 freshwater bivalve from the family Sphaeriidae" carries habitat
+#                 and rank; "Ternivoluta studeri is a species of sea snail, a
+#                 marine gastropod mollusk in the family Volutidae" carries both.
+#   60-79 chars  30 leads  BOILERPLATE - "Acronia gloriosa is a species of
+#                 beetle in the family Cerambycidae" restates the family, which
+#                 our tree already holds in familyName. Nothing is added.
+#
+# So 80 is the line, and it splits on content rather than on length. It was 120
+# before, borrowed from MIN_LEN in fix_misattached_descriptions.py - where that
+# constant means the opposite thing, flagging text as too LONG to be a
+# description. Reusing it as a floor contradicted its own purpose and threw away
+# the 100-119 band, which is the most informative one present.
+MIN_LEAD = 80
 API = "https://api.checklistbank.org"
 UA = "systema-naturae-name-validation/1.0 (https://github.com/tobese/systema-naturae)"
 REPORT = "docs/reports/name-attribution-col.md"
