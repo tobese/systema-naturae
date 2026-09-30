@@ -368,49 +368,53 @@ Zenodo's API caps `size` at 25 and rejects any `page>1`, so a full sweep of the
 1,880 EOL records needs date slicing; sampling 2019–2026 by year and month
 surfaced no fungal or algal deposit carrying prose.
 
-### 1,551 descriptions are image captions with the markup still attached
+### Media captions scraped into descriptions — done, `fix_thumb_captions.py`
 
-Found incidentally while measuring what the display gate would hide. A scraper
-left media markers in the `description` field:
+Found while measuring what the display gate would hide. An enrichment run wrote
+image markup into `description`, so the field held a caption, or a caption plus
+the real lead:
 
 ```
 thumb|Lycopodiella alopecuroides (L.) Cranfill.
-thumb|Leaf specimen of M.
-thumb|Selaginella denticulata from Antalya in Turkey thumb|Selaginella denticulata
-  from Antalya in Turkey thumb|Selaginella denticulata from Antalya in Turkey …
-alt=Zamia inermis cone|thumb|Zamia inermis cone
+thumb|233x233px|Entamoeba histolytica in peripheral blood
+thumb|right|450px|Life-cycle of Entamoeba histolytica.
+left|thumb|173x173px|Carrot infected with Meloidogyne chitwoodi
+  Meloidogyne chitwoodi is a plant pathogenic root-knot nematode …
 ```
 
-Almost all plantae. Two shapes, and they need opposite treatment:
+**1,708 species** across five kingdoms — 1,128 plantae, 538 animalia, 27 fungi,
+12 chromista, 3 protozoa. Note the marker also appears as `[[Link|thumb]]` and
+with inline pixel dimensions, so a `^thumb\|` match finds only a fraction of
+them; and a loose `alt` pattern matches ordinary prose.
 
-- **351 are recoverable.** The real prose sits *after* the caption junk, so the
-  fix is to strip the caption fragments and keep the tail. `Zamia inermis` is
-  `…thumb|Zamia inermis cone Zamia inermis is a species of plant in the family
-  Zamiaceae` — the description is there, behind the caption. `Cycas media` is
-  the same shape.
-- **755 are not.** `thumb|Leaf specimen of M.` is a caption and nothing else, so
-  stripping leaves nothing. Clear the field rather than invent text.
+`scripts/fix_thumb_captions.py` cuts at the **last occurrence of the binomial**,
+because a Wikipedia lead opens with the name and the caption usually names the
+species too, so the *first* occurrence keeps the caption. Result: **468
+recovered, 1,239 cleared**, in 388 family files, idempotent, 0 media markers left.
+Coverage moves 460,802 → 459,563 described species: the loss is intended, because
+`thumb|Leaf specimen of M.` is a caption and the honest options are prose or
+nothing.
 
-So: a `fix_thumb_captions.py` in the same shape as the other `fix_*.py` scripts,
-recording what it did in `docs/reports/`. Worth doing before any further
-plantae enrichment, or the next pass compounds it.
+The rule clears rather than recovers whenever it is unsure, and one case forced
+that. The Somali Crow mentions its binomial exactly once and only inside an
+appositive:
 
-### What the display gate actually hides
+```
+thumb|Somali Crow The Somali crow, or dwarf raven (Corvus edithae), is approximately the size…
+```
 
-`shared/src/lib/description.ts` is the one definition, shared by the portal and
-the book. Measured across the committed tree, of 460,802 described species:
+Cutting at the last occurrence yields `Corvus edithae), is approximately the size…`
+— mid-parenthetical. Both existing guards passed it, because it does contain "is"
+and does start with a capital. Counting brackets at the cut point is what catches
+it, and requiring the tail to end in terminal punctuation catches the rest. That
+moved 59 species from "recovered" to "cleared", which is the correct direction.
 
-| band | count |
-|---|---|
-| <40 chars | 483 |
-| 40–79 | 60,015 |
-| 80–119 | 175,335 |
-| 120–199 | 170,820 |
-| 200+ | 54,149 |
-
-So the default gate of 80 hides **60,498 descriptions**, 13% of what is stored.
-That is a large fraction of the *text* while being a small fraction of the
-*coverage*, which is the trade the option exists to let a reader make.
+Verified ID-agnostically with a multiset of `(name, description)` pairs, because
+the first check keyed on `id` and reported three phantom edits: the touched files
+contain **25 duplicate species names** (`Cyanocorax mystacalis`,
+`Aphelocoma insularis`, `Parotia sefilata` … each twice), so ID-keyed comparison
+matched them against each other. `fix_duplicates.py` exists for that and is worth
+running separately — it is not this script's business.
 
 ### The one genuinely valuable free source: Catalogue of Life
 
