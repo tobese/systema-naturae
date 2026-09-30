@@ -13,6 +13,14 @@
  * Usage:
  *   npx tsx scripts/enrichFromGbifDescriptions.ts --class gastropoda
  *   npx tsx scripts/enrichFromGbifDescriptions.ts --all
+ *
+ * --class matches the CLASS directory in the taxonomy path
+ * (taxonomy/<kingdom>/<phylum>/<class>/...), e.g. agaricomycetes,
+ * dothideomycetes, gastropoda. It used to be joined onto the repo root instead
+ * (join(root, classFilter)), which walked a path that does not exist, printed
+ * "0 families" and exited 0 - so every --class invocation was a silent no-op and
+ * only --all ever did anything. Hence never run outside animalia.
+ *   npx tsx scripts/enrichFromGbifDescriptions.ts --all
  */
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "fs";
 import { resolve, dirname, join } from "path";
@@ -155,12 +163,27 @@ function scanFiles(classFilter?: string): FamilyFile[] {
       const full = join(dir, x);
       let st; try { st = statSync(full); } catch { continue; }
       if (st.isDirectory()) walkDir(full);
-      else if (x.endsWith(".json") && full.includes("/src/data/")) processFile(full);
+      else if (x.endsWith(".json") && full.includes("/src/data/")) {
+        // Filter on the class computed from the path, not on the directory name.
+        // This used to be `if (classFilter) walkDir(join(root, classFilter))`,
+        // i.e. --class agaricomycetes walked <repo>/agaricomycetes - a path that
+        // does not exist. It reported "0 families" and exited 0, so --class was
+        // a silent no-op and only --all ever did anything. That is the likeliest
+        // reason this was never run outside animalia.
+        if (classFilter) {
+          const parts = full.replace(root + "/", "").split("/");
+          const cls = (parts[parts.length - 6] || "").toLowerCase();
+          if (cls !== classFilter) continue;
+        }
+        processFile(full);
+      }
     }
   }
   const skip = new Set(["portal", "scripts", "docs", "node_modules", ".git", ".github", ".claude", ".opencode", ".playwright-mcp", ".vscode", "shared", "tools", "tasks"]);
-  if (classFilter) walkDir(join(root, classFilter));
-  else for (const e of readdirSync(root)) { if (skip.has(e) || e.startsWith(".")) continue; try { if (statSync(join(root, e)).isDirectory()) walkDir(join(root, e)); } catch { /* */ } }
+  for (const e of readdirSync(root)) {
+    if (skip.has(e) || e.startsWith(".")) continue;
+    try { if (statSync(join(root, e)).isDirectory()) walkDir(join(root, e)); } catch { /* */ }
+  }
   return families;
 }
 
