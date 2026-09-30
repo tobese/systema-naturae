@@ -368,6 +368,50 @@ Zenodo's API caps `size` at 25 and rejects any `page>1`, so a full sweep of the
 1,880 EOL records needs date slicing; sampling 2019–2026 by year and month
 surfaced no fungal or algal deposit carrying prose.
 
+### 1,551 descriptions are image captions with the markup still attached
+
+Found incidentally while measuring what the display gate would hide. A scraper
+left media markers in the `description` field:
+
+```
+thumb|Lycopodiella alopecuroides (L.) Cranfill.
+thumb|Leaf specimen of M.
+thumb|Selaginella denticulata from Antalya in Turkey thumb|Selaginella denticulata
+  from Antalya in Turkey thumb|Selaginella denticulata from Antalya in Turkey …
+alt=Zamia inermis cone|thumb|Zamia inermis cone
+```
+
+Almost all plantae. Two shapes, and they need opposite treatment:
+
+- **351 are recoverable.** The real prose sits *after* the caption junk, so the
+  fix is to strip the caption fragments and keep the tail. `Zamia inermis` is
+  `…thumb|Zamia inermis cone Zamia inermis is a species of plant in the family
+  Zamiaceae` — the description is there, behind the caption. `Cycas media` is
+  the same shape.
+- **755 are not.** `thumb|Leaf specimen of M.` is a caption and nothing else, so
+  stripping leaves nothing. Clear the field rather than invent text.
+
+So: a `fix_thumb_captions.py` in the same shape as the other `fix_*.py` scripts,
+recording what it did in `docs/reports/`. Worth doing before any further
+plantae enrichment, or the next pass compounds it.
+
+### What the display gate actually hides
+
+`shared/src/lib/description.ts` is the one definition, shared by the portal and
+the book. Measured across the committed tree, of 460,802 described species:
+
+| band | count |
+|---|---|
+| <40 chars | 483 |
+| 40–79 | 60,015 |
+| 80–119 | 175,335 |
+| 120–199 | 170,820 |
+| 200+ | 54,149 |
+
+So the default gate of 80 hides **60,498 descriptions**, 13% of what is stored.
+That is a large fraction of the *text* while being a small fraction of the
+*coverage*, which is the trade the option exists to let a reader make.
+
 ### The one genuinely valuable free source: Catalogue of Life
 
 COL aggregates Index Fungorum, AlgaeBase and other specialist checklists under

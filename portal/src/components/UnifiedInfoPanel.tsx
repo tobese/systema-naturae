@@ -8,6 +8,7 @@ import FadingImage from "@shared/components/FadingImage";
 import { PORTAL_THEME } from "../colors";
 import { IUCN_COLORS } from "../iucnColors";
 import { useColorRegistry } from "./ColorRegistryContext.tsx";
+import { useDescriptionGate } from "../lib/descriptionContext";
 
 interface Props {
   node: TaxonNode | null;
@@ -149,6 +150,7 @@ function StatusBadges({ node }: { node: TaxonNode }) {
 // ─── Portal-level panels ──────────────────────────────────────────────────────
 
 function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const { show } = useDescriptionGate();
   const pn = node as PortalNode;
   const phyla = node.children ?? [];
   return (
@@ -160,7 +162,7 @@ function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
       <div style={{ fontSize: 12, color: "#666", marginBottom: pn.description ? 14 : 20 }}>
         {phyla.length} {phyla.length === 1 ? "phylum" : "phyla"}
       </div>
-      {pn.description && (
+      {show(pn.description) && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
           {pn.description}
         </div>
@@ -183,6 +185,7 @@ function KingdomPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
 }
 
 function PhylumPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const { show } = useDescriptionGate();
   const pn = node as PortalNode;
   const classes = node.children ?? [];
   return (
@@ -190,7 +193,7 @@ function PhylumPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonN
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
       <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 16 }}>{node.name}</div>
       <StatusBadges node={node} />
-      {pn.description && (
+      {show(pn.description) && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
           {pn.description}
         </div>
@@ -214,6 +217,7 @@ function PhylumPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonN
 
 
 function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const { show } = useDescriptionGate();
   const accent = useAccentForNode(node);
   const orders = node.children ?? [];
   const familyCount = (node as any)._familyCount ?? orders.reduce((s, o) => s + (o.children?.length ?? 0), 0);
@@ -226,7 +230,7 @@ function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
       <div style={{ fontSize: 12, color: "#666", marginBottom: (node as PortalNode).description ? 14 : 20 }}>
         {orders.length} {orders.length === 1 ? "order" : "orders"} · {familyCount} {familyCount === 1 ? "family" : "families"}
       </div>
-      {(node as PortalNode).description && (
+      {show((node as PortalNode).description) && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
           {(node as PortalNode).description}
         </div>
@@ -252,6 +256,7 @@ function ClassPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
 }
 
 function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const { show } = useDescriptionGate();
   const families = (node.children ?? []) as PortalNode[];
   const familyCount = (node as any)._familyCount ?? families.length;
   return (
@@ -262,7 +267,7 @@ function OrderPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
       <div style={{ fontSize: 12, color: "#666", marginBottom: (node as PortalNode).description ? 14 : 20 }}>
         {familyCount} {familyCount === 1 ? "family" : "families"}
       </div>
-      {(node as PortalNode).description && (
+      {show((node as PortalNode).description) && (
         <div style={{ fontSize: 12, color: "#777", lineHeight: 1.7, marginBottom: 20 }}>
           {(node as PortalNode).description}
         </div>
@@ -291,6 +296,7 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
   onFocusFamily: (slug: string | null) => void;
   focusedFamilySlug: string | null;
 }) {
+  const { show } = useDescriptionGate();
   const pn = node as PortalNode;
   const { data: wiki } = useWikipediaSummary(node.name); // use scientific name — common names with & don't map to Wikipedia
   const isFocused = pn.appSlug === focusedFamilySlug;
@@ -328,12 +334,18 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
           </div>
         </div>
       )}
-      {(node.description || wiki?.extract) && (
+      {(() => {
+        // Resolved through the gate, not just the stored field: the fallback is
+        // a live Wikipedia extract of the same species, so for an obscure one it
+        // is the very stub lead this option exists to hide.
+        const resolved = show(node.description) || show(wiki?.extract);
+        return resolved ? (
         <div style={{ fontSize: 12, color: "#666", lineHeight: 1.7, marginBottom: 20 }}>
-          {(node.description ?? wiki!.extract).slice(0, 320)}
-          {(node.description ?? wiki!.extract).length > 320 ? "…" : ""}
+          {resolved.slice(0, 320)}
+          {resolved.length > 320 ? "…" : ""}
         </div>
-      )}
+        ) : null;
+      })()}
       {pn.appSlug && (
         <button
           onClick={() => onFocusFamily(isFocused ? null : (pn.appSlug ?? null))}
@@ -382,6 +394,7 @@ function SubfamilyPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Tax
 }
 
 function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const { show } = useDescriptionGate();
   const accent = useAccentForNode(node);
   const physicalSpecies = collectLeaves(node).filter(l => l.rank === "SPECIES");
   const flatSpecies = node.speciesList ?? [];
@@ -393,7 +406,7 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 2 }}>{node.name}</div>
       <StatusBadges node={node} />
       {node.commonName && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.commonName}</div>}
-      {node.description && (
+      {show(node.description) && (
         <div style={{ fontSize: 13, color: "#777", lineHeight: 1.7, marginBottom: 14 }}>{node.description}</div>
       )}
       <div style={{ fontSize: 13, color: "#666", marginBottom: 16 }}>{allSpecies.length} {allSpecies.length === 1 ? "species" : "species"}</div>
@@ -415,6 +428,7 @@ function GenusPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNo
 }
 
 function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: TaxonNode) => void }) {
+  const { show } = useDescriptionGate();
   const accent = useAccentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
   const wikiImages = useWikiImages(node.name); // Wikidata cache keyed by binomial
@@ -481,11 +495,14 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
-      {(node.description || extract) && (
+      {(() => {
+        const resolved = show(node.description) || show(extract?.replace(/\(listen\)/g, ''));
+        return resolved ? (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
-          {node.description ?? extract!.replace(/\(listen\)/g, '')}
+          {resolved}
         </p>
-      )}
+        ) : null;
+      })()}
 
       {/* Breed groups */}
       {breedGroups.length > 0 && (
@@ -556,6 +573,7 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
 }
 
 function SubspeciesPanel({ node, findNodeByName }: { node: TaxonNode; findNodeByName: (name: string) => TaxonNode | null }) {
+  const { show } = useDescriptionGate();
   const accent = useAccentForNode(node);
   const { data: wiki, loading } = useWikipediaSummary(wikiTitle(node.commonName, node.name));
   // Subspecies are trinomials: only 2 of the 851 in the tree have an enwiki
@@ -590,11 +608,14 @@ function SubspeciesPanel({ node, findNodeByName }: { node: TaxonNode; findNodeBy
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
-      {(node.description || parent?.description || extract) && (
+      {(() => {
+        const resolved = show(node.description) || show(parent?.description) || show(extract);
+        return resolved ? (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
-          {node.description ?? parent?.description ?? extract}
+          {resolved}
         </p>
-      )}
+        ) : null;
+      })()}
       {wikiUrl && (
         <div style={{ marginTop: 16 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 4 }}>Links</div>
@@ -708,6 +729,7 @@ function HybridGroupPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: T
 }
 
 function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSelect: (n: TaxonNode) => void; findNodeById: (id: string) => TaxonNode | null }) {
+  const { show } = useDescriptionGate();
   const registry = useColorRegistry();
   const theme = node.familySlug ? registry[node.familySlug] : null;
   const accent = theme?.hybridColor ?? "#C8A050";
@@ -721,11 +743,14 @@ function HybridPanel({ node, onSelect, findNodeById }: { node: TaxonNode; onSele
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, marginBottom: 2 }}>{node.name}</div>
       {node.lineage && <div style={{ fontSize: 14, color: "#aaa", marginBottom: 8 }}>{node.lineage}</div>}
       <FadingImage src={wiki?.thumbnail?.source} alt={node.name} loading={loading && !wiki?.thumbnail?.source} marginTop={16} borderRadius={6} aspectRatio="4 / 3" />
-      {(node.description || extract) && (
+      {(() => {
+        const resolved = show(node.description) || show(extract);
+        return resolved ? (
         <p style={{ fontSize: 14, color: "#999", marginTop: 12, lineHeight: 1.65 }}>
-          {node.description ?? extract}
+          {resolved}
         </p>
-      )}
+        ) : null;
+      })()}
       {parents.length > 0 && (
         <div style={{ marginTop: 16 }}>
           <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "#444", marginBottom: 8 }}>Parent species</div>
