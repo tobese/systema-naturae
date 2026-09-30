@@ -279,10 +279,34 @@ The conclusion survives, but the reason was wrong, and the real one matters more
 | `Cantharellus mikemboensis` | found | **0** | 0 chars |
 
 EOL **has a page for all six** — correct `scientificName`, taxon concept and all
-— and **no content attached to any of them**. Because EOL's text is largely
-Wikipedia-derived, and these are precisely the species that have no en.wikipedia
-article, EOL cannot fill a gap that its own main upstream source cannot fill.
-That is a structural limit, not an outage.
+— and **no content attached to any of them**.
+
+The control matters here. `Pinus contorta`, which certainly has an en.wikipedia
+article and therefore certainly has text in EOL, returns `dataObject: 0` as well.
+So the empty result is not "these obscure species have no articles" — the
+endpoint is returning no content objects at all:
+
+| request variant | HTTP | top-level keys | `dataObject` |
+|---|---|---|---|
+| no `key` | 200 | `taxonConcept` | 0 |
+| `key=` (empty) | 200 | `taxonConcept` | 0 |
+| `key=garbage123` | 200 | `taxonConcept` | 0 |
+| `key=<uuid-shaped>` | 200 | `taxonConcept` | 0 |
+
+The `key` parameter is ignored in every variant, so the earlier HTTP 520 was
+plainly transient rather than a missing key — the same request returns 200 with
+and without `key=`. What comes back is `taxonConcept` with a `taxonConcepts`
+list naming the hierarchy providers (wikipedia NO, NCBI, …) and
+`richness_score: null`: identity and classification, no content.
+
+So either the classic content endpoints have stopped serving text, or they now
+require a genuinely registered key and an invalid one degrades silently to
+hierarchy-only instead of erroring. EOL's own terms say "you must register with
+the Site", so the second is plausible. **That cannot be settled without a key,
+and it is the one thing worth re-testing if someone gets one** — it would move
+EOL from "no help" to "unmeasured".
+
+Either way: **the free sources are nomenclatural, not descriptive.**
 
 EOL's *other* API (`EOL/publishing`, the traits service) is a different thing
 entirely: Cypher over a neo4j traits graph, `/service/cypher`, `Authorization:
