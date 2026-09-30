@@ -8,6 +8,9 @@ export interface PortalOptions {
   nodeScale: number;
   highlightWikipedia: boolean;
   highlightFossilExtinct: boolean;
+  /** Hide stored descriptions shorter than minDescriptionLength. */
+  hideThinDescriptions: boolean;
+  minDescriptionLength: number;
 }
 
 interface Props {
@@ -23,7 +26,7 @@ export default function OptionsPanel({ options, onChange }: Props) {
     onChange({ ...options, [key]: !(options as any)[key] });
   };
 
-  const setNum = (key: "collapseThreshold" | "nodeScale", val: number) => {
+  const setNum = (key: "collapseThreshold" | "nodeScale" | "minDescriptionLength", val: number) => {
     onChange({ ...options, [key]: val });
   };
 
@@ -83,6 +86,16 @@ export default function OptionsPanel({ options, onChange }: Props) {
               <SliderRow value={options.collapseThreshold} min={3} max={80}
                 label="Threshold"
                 onChange={v => setNum("collapseThreshold", v)} />
+            )}
+
+            <LabelRow checked={options.hideThinDescriptions} onChange={() => toggle("hideThinDescriptions")}>
+              Hide short descriptions
+            </LabelRow>
+
+            {options.hideThinDescriptions && (
+              <SliderRow value={options.minDescriptionLength} min={0} max={400} step={20}
+                label="Min chars"
+                onChange={v => setNum("minDescriptionLength", Math.round(v))} />
             )}
 
             <SliderRow value={options.nodeScale} min={0.5} max={2.0} step={0.1}

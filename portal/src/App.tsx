@@ -16,6 +16,8 @@ import InternationalDaysModal from "./components/InternationalDaysModal";
 import TaxonomySidebar from "./components/TaxonomySidebar";
 import OptionsPanel from "./components/OptionsPanel";
 import type { PortalOptions } from "./components/OptionsPanel";
+import { DEFAULT_MIN_DESCRIPTION_LENGTH } from "@shared/lib/description";
+import { DescriptionGateProvider } from "./lib/descriptionContext";
 import { useInternationalDays } from "./hooks/useInternationalDays";
 import SpeciesOfTheDayModal from "./components/SpeciesOfTheDayModal";
 import { useSpeciesOfTheDay } from "./hooks/useSpeciesOfTheDay";
@@ -113,6 +115,8 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
     nodeScale: 1.0,
     highlightWikipedia: false,
     highlightFossilExtinct: false,
+    hideThinDescriptions: false,
+    minDescriptionLength: DEFAULT_MIN_DESCRIPTION_LENGTH,
   });
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
@@ -500,6 +504,9 @@ const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_G
 
   return (
     <ColorRegistryContext.Provider value={colorRegistry}>
+    <DescriptionGateProvider
+      hideThinDescriptions={options.hideThinDescriptions}
+      minDescriptionLength={options.minDescriptionLength}>
     <div style={{
       display: "flex",
       flexDirection: "column",
@@ -807,6 +814,8 @@ const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_G
               focusFamilySlug={
                 selectedInTree?.familySlug ?? (inFamilyFocus ? focusedFamilySlug : undefined) ?? undefined
               }
+              hideThinDescriptions={options.hideThinDescriptions}
+              minDescriptionLength={options.minDescriptionLength}
             />
           )}
           {viewMode === "graph" && (
@@ -1090,6 +1099,7 @@ const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_G
         />
       )}
     </div>
+    </DescriptionGateProvider>
     </ColorRegistryContext.Provider>
   );
 }

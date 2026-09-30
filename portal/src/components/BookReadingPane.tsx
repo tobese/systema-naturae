@@ -21,9 +21,14 @@ interface Props {
   orderName: string | null;
   /** Family to open the chapter at, when the host knows one. */
   focusFamilySlug?: string;
+  /** The portal's ⚙ description gate, so the book follows the same switch. */
+  hideThinDescriptions?: boolean;
+  minDescriptionLength?: number;
 }
 
-export function BookReadingPane({ kingdom, orderName, focusFamilySlug }: Props) {
+export function BookReadingPane({
+  kingdom, orderName, focusFamilySlug, hideThinDescriptions, minDescriptionLength,
+}: Props) {
   const { skeleton, failed, loadChapter, getChapter } = useBookChapters(kingdom);
 
   const parts = useMemo(
@@ -70,7 +75,9 @@ export function BookReadingPane({ kingdom, orderName, focusFamilySlug }: Props) 
           {target ? `Opening ${target}…` : "No chapters available for this kingdom."}
         </div>
       ) : (
-        <BookOptionsProvider>
+        <BookOptionsProvider
+          hideThinDescriptions={hideThinDescriptions}
+          minDescriptionLength={minDescriptionLength}>
           <ChapterPage
             chapter={entry.chapter}
             partTitle={entry.partTitle}

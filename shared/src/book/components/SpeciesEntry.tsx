@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import type { BookNode } from "../types";
+import { useBookOptions } from "../hooks/useBookOptions";
+import { showDescription } from "../../lib/description";
 import { synonymTarget } from "../lib/synonyms";
 
 // Commons' Special:FilePath endpoint (see extractSlice.ts's commonsThumb)
@@ -161,6 +163,14 @@ function breedGroups(species: BookNode): BookNode[] {
 }
 
 export function SpeciesEntry({ species }: { species: BookNode }) {
+  const { hideThinDescriptions, minDescriptionLength } = useBookOptions();
+  // Same rule as FamilySection: the toggle and the threshold are resolved in one
+  // place, and 0 means "show everything" so they cannot combine into a state
+  // where no prose is ever rendered.
+  const shown = showDescription(
+    species.description,
+    hideThinDescriptions ? minDescriptionLength : 0,
+  );
   const groups = breedGroups(species);
   const isBreed = species.rank === "BREED";
   // `lineage` is populated on almost every species (genus/group label used
@@ -168,7 +178,7 @@ export function SpeciesEntry({ species }: { species: BookNode }) {
   // content here for HYBRID nodes, where it's parentage text ("A ♂ × B ♀").
   const isHybrid = species.rank === "HYBRID";
   const hasContent = Boolean(
-    species.description ||
+    shown ||
       species.namedAfter ||
       species.continents?.length ||
       (isHybrid && species.lineage) ||
@@ -287,9 +297,9 @@ export function SpeciesEntry({ species }: { species: BookNode }) {
           {synonym && <SynonymTag of={synonym} />}
         </div>
 
-        {species.description && (
+        {shown && (
           <p style={{ margin: "0.4rem 0 0", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--ink-soft)" }}>
-            {species.description}
+            {shown}
           </p>
         )}
 

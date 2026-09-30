@@ -3,6 +3,7 @@ import type { ReadingWindow } from "../hooks/useReadingWindow";
 import { SpeciesEntry } from "./SpeciesEntry";
 import { useBookOptions } from "../hooks/useBookOptions";
 import { paragraphs } from "../lib/paragraphs";
+import { showDescription } from "../../lib/description";
 
 function isExtinct(node: BookNode): boolean {
   return Boolean(node.extinct || node.fossil);
@@ -12,10 +13,12 @@ function GenusSection({
   genus,
   showExtinct,
   showStubs,
+  minDescriptionLength,
 }: {
   genus: BookNode;
   showExtinct: boolean;
   showStubs: boolean;
+  minDescriptionLength: number;
 }) {
   const detailed = (genus.children ?? []).filter((s) => showExtinct || !isExtinct(s));
   const rawStubs = (genus.speciesList ?? []).filter((s) => showExtinct || !isExtinct(s));
@@ -39,9 +42,9 @@ function GenusSection({
         </span>
       </h4>
 
-      {genus.description && (
+      {showDescription(genus.description, minDescriptionLength) && (
         <p style={{ fontSize: "0.85rem", color: "var(--ink-soft)", margin: "0 0 0.6rem", lineHeight: 1.6 }}>
-          {genus.description}
+          {showDescription(genus.description, minDescriptionLength)}
         </p>
       )}
 
@@ -69,7 +72,10 @@ function collectGenera(node: BookNode): BookNode[] {
 }
 
 export function FamilySection({ family, readingWindow }: { family: BookNode; readingWindow: ReadingWindow }) {
-  const { showExtinct, showStubs, showEmptyFamilies } = useBookOptions();
+  const { showExtinct, showStubs, showEmptyFamilies, hideThinDescriptions, minDescriptionLength } = useBookOptions();
+  // 0 disables the gate entirely, so the option and the threshold cannot
+  // disagree into a state where nothing at all is ever shown.
+  const minLen = hideThinDescriptions ? minDescriptionLength : 0;
   const stats = family.chapterStats;
 
   // A family with zero enriched species is "empty" regardless of extinct/
@@ -141,19 +147,20 @@ export function FamilySection({ family, readingWindow }: { family: BookNode; rea
 
       {expanded && (
         <div>
-          {paragraphs(family.description).map((paragraph, i) => (
+          {paragraphs(showDescription(family.description, minLen)).map((paragraph, i) => (
             <p key={i} style={{ margin: "0.8rem 0 0", fontSize: "0.95rem", lineHeight: 1.6, color: "var(--ink-soft)" }}>
               {paragraph}
             </p>
           ))}
-          {!family.description && family.notableMembers && family.notableMembers.length > 0 ? (
+          {!showDescription(family.description, minLen) && family.notableMembers && family.notableMembers.length > 0 ? (
             <p style={{ margin: "0.8rem 0 0", fontSize: "0.85rem", fontStyle: "italic", color: "var(--ink-faint)" }}>
               Notable: {family.notableMembers.join(", ")}
             </p>
           ) : null}
 
           {genera.map((genus) => (
-            <GenusSection key={genus.id} genus={genus} showExtinct={showExtinct} showStubs={showStubs} />
+            <GenusSection key={genus.id} genus={genus} showExtinct={showExtinct} showStubs={showStubs}
+              minDescriptionLength={minLen} />
           ))}
         </div>
       )}
