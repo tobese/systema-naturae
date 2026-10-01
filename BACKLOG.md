@@ -543,6 +543,66 @@ Alfaria, Dunaliella alike), so my parsing of that response is wrong and I am not
 going to assert a verdict I could not verify. Worth a look against GBIF or the
 original Dunaliellaceae source.
 
+### Phyllocardium in Dunaliellaceae — needs one external check
+
+`SP_PHYLLOCARDIUM_COMPLANATUM` sits in **Dunaliellaceae** (Chlorophyta,
+Volvocales) — a heart-cockle bivalve inside a green-alga family. The other six
+cross-kingdom cases are homonyms; this one has no such excuse, because there is
+no reason for an alga and a bivalve to share the genus.
+
+Could not confirm against COL: `/dataset/3LR/taxon/{id}` returns `rank` and
+`kingdom` as null for every genus tried (Phyllocardium, Alfaria and Dunaliella
+alike), so my parsing of that response is wrong and I am not going to assert a
+verdict I could not verify. Worth one lookup against GBIF, or against whatever
+source the Dunaliellaceae family file was built from. Then either move the
+species to Cardiidae or drop it — but not both copies.
+
+### There is no sanity scanner — the check that guarded 4057 issues cannot be re-run
+
+`portal/data/sanity-issues.json` holds the results of a kingdom-wide scan from
+2026-06-21: **4,057 issues across 66 families**, and `sanity-queue.json` is now
+`[]` because they were all fixed. `CLAUDE.md` documents the workflow as if it
+were runnable.
+
+It is not. Commit `71fd8e01f` added **only the two JSON files** — no script has
+ever existed at `scripts/*sanity*` or `portal/scripts/*sanity*`, and nothing in
+the repo produces `sanity-queue.json`. So the check that caught 1,750
+`UNKNOWN_CONTINENT`, 962 `SHORT_DESCRIPTION`, 651 `MISSING_SUBSPECIES_COUNT`,
+330 `MISSING_CONTINENTS`, 292 `MISSING_COMMON_NAME`, 56 `MISSING_LINEAGE`,
+13 `DUPLICATE_SPECIES` and 3 `EMPTY_GENUS` cannot be re-run against a tree that
+has changed a great deal since.
+
+That matters now more than it did in June. Since then, in one session: 317
+descriptions added, 1,239 cleared as captions, 22 duplicate genera merged, 27
+species rescued from a lossy merge, 7 fixture nodes removed, 6 split copies
+resolved, 468 captions recovered. None of it has been through a sanity pass,
+because there is no way to run one.
+
+The issue vocabulary is recoverable from the JSON and small — nine check names,
+each with a one-line detail. Recreating the scanner is a few hundred lines, not a
+rewrite. Worth doing before the next import, so the queue means something again.
+
+Note what it would *not* have caught: none of today's eight findings were in that
+vocabulary. `UNKNOWN_CONTINENT` and friends are field-completeness checks; the
+problems found today were structural — a genus listed twice, fixture nodes, a
+genus split applied halfway. If the scanner comes back, it needs checks for
+duplicate genus names within a family, species ids at more than one position, and
+synthetic-looking names.
+
+### Phyllocardium in Dunaliellaceae — needs one external check
+
+`SP_PHYLLOCARDIUM_COMPLANATUM` sits in **Dunaliellaceae** (Chlorophyta,
+Volvocales) — a heart-cockle bivalve inside a green-alga family. The other six
+cross-kingdom cases are homonyms; this one has no such excuse, because there is
+no reason for an alga and a bivalve to share the genus.
+
+Could not confirm against COL: `/dataset/3LR/taxon/{id}` returns `rank` and
+`kingdom` as null for every genus tried (Phyllocardium, Alfaria and Dunaliella
+alike), so my parsing of that response is wrong and I am not going to assert a
+verdict I could not verify. Worth one lookup against GBIF, or against whatever
+source the Dunaliellaceae family file was built from. Then either move the
+species to Cardiidae or drop it — but not both copies.
+
 ### The one genuinely valuable free source: Catalogue of Life
 
 COL aggregates Index Fungorum, AlgaeBase and other specialist checklists under

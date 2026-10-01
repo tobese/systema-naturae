@@ -182,7 +182,13 @@ for (const r of rows) {
 }
 const totalOrders = rows.reduce((a, r) => a + r.orders, 0);
 const noProse = rows.reduce((a, r) => a + r.noProseDir, 0);
-console.log(`\n  ${totalOrders} order files, all referenced files resolve. ${noProse} orders have no genus and so no per-order prose dir.`);
+console.log(`\n  ${totalOrders} order files, all referenced files resolve. ${noProse} orders have no per-order prose dir.`);
+// Those orders are not structurally broken. buildData.writeGenusProse creates a
+// prose directory only when a genus has at least one described species, so a
+// missing directory means nothing in that order is described yet - the coverage
+// gap restated, not a second problem. Measured 2026-09-30: zero species sit on
+// FAMILY or ORDER without a genus above them, so "no genus" was never the reason
+// and the earlier version of this line was simply wrong.
 
 if (warnings.length) {
   console.log(`\n${warnings.length} warning(s):`);
