@@ -495,6 +495,54 @@ file *after* pruning, so the dropped text was already gone. It has to capture th
 description at drop time. Both were caught only because the expected description
 length was checked afterwards rather than trusting the exit code.
 
+### Cross-kingdom id collisions — NOT a bug. Do not "fix" these.
+
+Last of the duplicate family, and the one that looks like a bug but is not.
+**7 species ids appear in two kingdoms.** Investigated; the answer is that they
+are binomial **homonyms** — genuinely different taxa that happen to share a
+name — and the id is derived from the binomial, so the two records get the same
+id string.
+
+| id | animalia / chromista | fungi / plantae |
+|---|---|---|
+| `ALFARIA_MINUTA` | Formicidae > Alfaria (1 species) | Stachybotryaceae > Alfaria (**18**) |
+| `CLAVULINA_FLORIDANA` | Valvulinidae > Clavulina (60) | Hydnaceae > Clavulina (**99**) |
+| `CLAVULINA_RUGOSA` | Valvulinidae > Clavulina (60) | Hydnaceae > Clavulina (**99**) |
+| `DIPLODERMA_POLYGONATUM` | Agamidae > Diploderma | Diplocystidiaceae > Diploderma (2) |
+| `GRAPHIUM_SARPEDON` | Papilionidae > Graphium | Microascaceae > Graphium (**76**) |
+| `HEXAGONIA_BICOLOR` | Carabidae > Hexagonia | Polyporaceae > Hexagonia (**46**) |
+| `SP_PHYLLOCARDIUM_COMPLANATUM` | Cardiidae > Phyllocardium | Dunaliellaceae > Phyllocardium (1) |
+
+The right-hand genera are **populated** — 18, 99, 76, 46 species — so those
+copies are ordinary members of a real genus, not intrusions. And "one species"
+proves nothing on the other side either: Formicidae has 545 genera and many are
+singletons (*Alfaria* is a real monotypic ant genus), and algal families have
+singleton genera routinely. `Clavulina rugosa` is a hydnoid fungus *and* a
+foraminifer, both real.
+
+**Deleting either copy would remove a real species.** So: no data change. Ids are
+derived from binomials, and binomials are not unique across kingdoms — that is a
+property of the scheme, not a defect in the tree.
+
+Where it actually bites is tooling. Any script that merges across kingdoms by id
+conflates them; that is how this was found. Audited the committed scripts:
+`merge_duplicate_genera.py` keys by genus name within one family file,
+`fix_thumb_captions.py` and `fix_fixture_nodes.py` work per file, and
+`validateNamesWithCol.py` indexes by `(path, index)`. **None of them merge by id
+globally**, so nothing committed is currently wrong. The conflation was in
+throwaway analysis. Any future whole-tree script should key on
+`(kingdom, id)`.
+
+One item flagged, not fixed: `Phyllocardium complanatum` sits in
+**Dunaliellaceae** (Chlorophyta, Volvocales) — a heart-cockle bivalve inside a
+green-alga family. That placement looks like a source artifact rather than a
+homonym, since there is no reason for an alga and a bivalve to share the genus.
+I could not confirm it against COL: the `/dataset/3LR/taxon/{id}` endpoint
+returned `rank` and `kingdom` as null for every genus I tried (Phyllocardium,
+Alfaria, Dunaliella alike), so my parsing of that response is wrong and I am not
+going to assert a verdict I could not verify. Worth a look against GBIF or the
+original Dunaliellaceae source.
+
 ### The one genuinely valuable free source: Catalogue of Life
 
 COL aggregates Index Fungorum, AlgaeBase and other specialist checklists under
