@@ -557,6 +557,117 @@ verdict I could not verify. Worth one lookup against GBIF, or against whatever
 source the Dunaliellaceae family file was built from. Then either move the
 species to Cardiidae or drop it — but not both copies.
 
+### User-facing problem reports — a "report a problem" button
+
+Nothing today captures what a reader sees. If a species name is wrong, a chapter
+renders empty, or a panel shows nonsense, the only route is the user noticing
+and telling us some other way.
+
+**The design point that matters: free text alone is nearly useless.** A report
+becomes actionable from the context, not the prose — which kingdom, which node by
+id *and* name, which rank, the URL with its params, the app version, what the
+user was looking at. So the control belongs where that context already exists (the
+info panel, the book spread), not in a generic corner, and it should be a
+*prefilled draft* the user edits rather than an empty box.
+
+Transport, and why not the obvious options:
+
+- **GitHub Issues API** — needs a token in the browser, which is not acceptable,
+  and issues are public and trivially spammable.
+- **Sentry or similar** — this is the wrong tool for *this*. Exception trackers
+  capture our crashes and stack traces; they cannot capture "this name is
+  wrong". It is a different signal and worth having separately — automatic
+  exception capture on the portal is a smaller, easier win than this item and
+  could be done first.
+- **A tiny service in the existing compose** — the shape of `wikiserved`, which
+  already solves exactly this problem for Wikipedia summaries: a container on
+  `gcloud-vm_default` that answers HTTP, sitting next to Postgres. Reports land
+  in a table, which gives moderation, dedup and querying. **This is the
+  recommendation.**
+
+Route: `Caddyfile` already proxies all of `/systema-naturae/*` to nginx, so no
+Caddy change is needed — one `location` in `nginx.conf` with `proxy_pass`, the
+same mechanism as the wikiserved note above, including the Docker-DNS caveat (a
+`resolver 127.0.0.11 valid=10s;` plus a variable in `proxy_pass`, or a
+`wikiserved` restart 502s until nginx is reloaded).
+
+Shape of a row:
+
+    id, created_at, kingdom, node_id, node_name, rank, url, app_version,
+    category, user_text, client_id_hash, status
+
+`status` for moderation, `client_id_hash` rather than an IP, and deliberately no
+free-form payload — not the node's description, not the tree, nothing that grows
+with the request.
+
+Open questions that are yours, not mine:
+
+1. **Public or authenticated?** Public means anyone can submit; the
+   `status` column plus rate limiting is the mitigation, but it is a decision.
+2. **Does it notify?** A Gitea issue or a mail drop on first report makes it
+   visible; without that it is a table nobody reads.
+3. **Retention.** User-submitted text is user data. Decide a deletion policy
+   before the first report lands, not after.
+
+Do this **before** the behavioural-analytics item below: it is the same
+collector, the same event envelope and the same ingest path, and it is by far
+the smallest useful producer of events.
+
+### Behavioural analytics — decide the schema now, the transport later
+
+Asked about Kafka specifically. The honest answer is that Kafka is a choice
+about the **sink**, not the front end, and at this project's volume it is
+enormous over-provisioning.
+
+**The browser cannot talk to Kafka.** Whatever happens, there is an HTTP hop in
+front of it. So Kafka sits behind a collector you have to build regardless, and
+the only question it answers is what that collector writes to.
+
+Against it, honestly stated: a self-hosted portal sees hundreds to low thousands
+of events a day, not millions. A single-node KRaft broker is 1–2 GB of RAM and a
+JVM, plus a schema registry if you want schemas, plus real operational
+knowledge — to carry a trickle. Postgres is already on that box with 38 GB of
+Wikipedia in it and would carry this without noticing.
+
+**The argument for it, taken seriously:** "behaviour analysis at large". If that
+means training models on interaction sequences — order-of-navigation, dwell,
+search-then-abandon — then a durable, ordered, replayable log genuinely is the
+right substrate, and Kafka stops being absurd. Replay is the thing a relational
+table is bad at and an event log is built for: re-derive a session's state
+without re-ingesting, and fan out to several consumers independently.
+
+So the recommendation is the same lesson as the data-tier work: **get the shape
+right, defer the expensive machinery.** Define the envelope now, emit over plain
+HTTP, and make the sink swappable.
+
+    {
+      "event_id":     "uuid, client-generated, for dedup",
+      "schema":       1,
+      "ts":           "ISO-8601, client clock, plus server receive time",
+      "session_id":   "uuid, sessionStorage lifetime",
+      "client_id":    "random id, cookie-less, hashed server-side",
+      "kingdom":      "animalia | plantae | ...",
+      "node_id":      "GENUS_SPECIES, the same id the tree uses",
+      "node_name":    "denormalised, so the event survives a rebuild",
+      "action":       "view | search | focus_family | open_book | expand_genus | report",
+      "props":        { "source": "search", "query": "Felis catus" },
+      "app_version":  "the built commit, so an event is traceable to a build"
+    }
+
+`app_version` and the denormalised `node_name` are what make this worth having:
+the 2026-09-30 session rebuilt the tree several times, and any event recorded
+against a node id that has since been renamed or re-parented becomes
+uninterpretable without them.
+
+With that envelope in place, moving the sink to Kafka later is a change to the
+collector alone. Nothing upstream of it moves.
+
+**A constraint worth naming:** this is a `.se` domain collecting behaviour data
+about identifiable visitors. Whatever the technical design, that needs a privacy
+notice and a lawful basis, and the two are much easier to add before there is a
+year of events in a table than after. The problem reports item above is
+identically constrained.
+
 ### There is no sanity scanner — the check that guarded 4057 issues cannot be re-run
 
 `portal/data/sanity-issues.json` holds the results of a kingdom-wide scan from
