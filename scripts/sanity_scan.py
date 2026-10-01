@@ -103,7 +103,7 @@ ALL_CHECKS = [
     "MISSING_CONTINENTS", "MISSING_COMMON_NAME", "MISSING_LINEAGE",
     "DUPLICATE_SPECIES", "EMPTY_GENUS",
     "DUPLICATE_GENUS", "SPECIES_ID_REPEATED", "SYNTHETIC_NAME",
-    "MALFORMED_ID", "HYBRID_RANK", "UNRESOLVED_TAXON",
+    "MALFORMED_ID", "HYBRID_RANK", "UNRESOLVED_TAXON", "ACCESSION_NAME",
 ]
 # The three added later, so --legacy can reproduce the original scope.
 LEGACY_ONLY = ALL_CHECKS[:8]
@@ -122,6 +122,37 @@ LEGACY_ONLY = ALL_CHECKS[:8]
 # foraminifera whose epithets merely read like virus words, so flagging the
 # parser's type there would be wrong.
 UNRESOLVED_TYPES = {"INFORMAL", "OTU", "NO_NAME", "PLACEHOLDER", "BLACKLISTED"}
+
+# NCBI genome-assembly accession standing in for a taxon name.
+#
+# Archaea are scaffolded from sequence data rather than a nomenclatural source,
+# so 1,213 of its nodes are named `UBA10200`, `JAGWAF01`, `ARS49`, `M3-22` - the
+# assembly, not the organism. That is 9% of archaeal species, 11% of genera and
+# 15% of families, and it is a scope statement about the kingdom rather than a
+# defect: there is no taxonomic name for these to carry. Counting them as
+# UNRESOLVED_TAXON alongside `Lactarius spec` conflated an editorial gap with a
+# design decision, so they get their own informational check.
+ASSEMBLY_ACCESSION = re.compile(
+    r"^(?:"
+    r"UBA\d+"                          # UBA10200
+    r"|JAG[A-Z0-9]+"                   # JAGWAF01
+    r"|(?:GCA|GCF)_\d+"                # GCA_000001405
+    r"|ARS\d+"                         # ARS49
+    r"|SAMN\d+"
+    r"|NZ_[A-Z]{2}\d+"
+    r"|[A-Z0-9]+(?:-[A-Za-z0-9]+)+"    # M3-22, SW-4-43-9, B1-Br10-U2g21, CG07-land
+    r"|(?:BM|KM|CP|JA[A-Z]{2}|PWVO|PWWA|JACQMU|JAAOYF|SKIS)\d*"  # BM511, JAAB01, PWVO01
+    r")(?: sp\d+)?$"                   # "PWWA01 sp007131205"
+)
+# Narrow on purpose. An earlier version ended with `[A-Za-z][A-Za-z0-9]{1,9}`,
+# which matches every binomial in the tree and reported 45,939 "accessions" --
+# more than three times the number of unresolved names it was supposed to
+# separate out. A pattern this permissive is worse than no check, because a
+# number that cannot be wrong is a number nobody checks.
+#
+# Deliberately NOT matched, each an earlier false positive: `Nanosalinarum spec.`
+# and `Lactarius spec` are placeholders, `Salmo sp. BOLD:AAD0897` is a barcode
+# BIN. All three are UNRESOLVED_TAXON instead.
 PARSE_INDEX = os.path.join("portal", "data", "name-parse-index.jsonl")
 
 
@@ -179,7 +210,8 @@ def main() -> int:
 
     # Only loaded when the check is on, so every other subset stays runnable
     # without the 259 MB index.
-    verdicts = load_parse_verdicts(args.parse_index) if "UNRESOLVED_TAXON" in checks else {}
+    needs_index = "UNRESOLVED_TAXON" in checks
+    verdicts = load_parse_verdicts(args.parse_index) if needs_index else {}
     if verdicts:
         print(f"  parser index: {len(verdicts):,} unresolved names")
 
@@ -216,6 +248,10 @@ def main() -> int:
 
             if rank == "GENUS":
                 genus_seen.setdefault("all", []).append(name)
+
+            if "ACCESSION_NAME" in checks and name and ASSEMBLY_ACCESSION.match(name):
+                issues.append({"family": family, "issue": "ACCESSION_NAME",
+                               "detail": f"{name} filed as {rank} - genome assembly, not a taxon name"})
 
             if "UNRESOLVED_TAXON" in checks and name:
                 t = verdicts.get((name, rank))
