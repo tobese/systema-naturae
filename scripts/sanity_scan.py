@@ -103,10 +103,46 @@ ALL_CHECKS = [
     "MISSING_CONTINENTS", "MISSING_COMMON_NAME", "MISSING_LINEAGE",
     "DUPLICATE_SPECIES", "EMPTY_GENUS",
     "DUPLICATE_GENUS", "SPECIES_ID_REPEATED", "SYNTHETIC_NAME",
-    "MALFORMED_ID", "HYBRID_RANK",
+    "MALFORMED_ID", "HYBRID_RANK", "UNRESOLVED_TAXON",
 ]
 # The three added later, so --legacy can reproduce the original scope.
 LEGACY_ONLY = ALL_CHECKS[:8]
+
+# Names that do not denote a taxon, from GBIF's name parser
+# (`portal/data/name-parse-index.jsonl`, built by scripts/parseAllNamesSliced.sh).
+#
+# A regex was tried first and is not good enough: `spec.` catches 40% of the
+# INFORMAL cases and `BOLD:` only 7% of the OTU ones, because the rest carry a
+# real-looking binomial plus an authority (`Acorus spec Linnaeus, 1753`) or a
+# `cf.` qualifier (`Hippocampus cf. fuscus BOLD:AAC0510`). So this reads the
+# parser's verdict rather than re-deriving it.
+#
+# NOT included: HYBRID, which is a real name type (2,446 nodes) and is handled by
+# HYBRID_RANK. Also not VIRUS (5) - `Bolivina prion` and `Neoaemula vector` are
+# foraminifera whose epithets merely read like virus words, so flagging the
+# parser's type there would be wrong.
+UNRESOLVED_TYPES = {"INFORMAL", "OTU", "NO_NAME", "PLACEHOLDER", "BLACKLISTED"}
+PARSE_INDEX = os.path.join("portal", "data", "name-parse-index.jsonl")
+
+
+def load_parse_verdicts(path: str) -> dict:
+    """(name, rank) -> parser type, from the merged parser index."""
+    if not os.path.exists(path):
+        sys.exit(
+            f"FATAL: UNRESOLVED_TAXON needs the parser index at {path}, which is absent.\n"
+            f"       Build it with:  sh scripts/parseAllNamesSliced.sh\n"
+            f"       Or drop the check:  --issues <everything else>\n"
+            f"       A regex alternative exists but catches only ~40% of the cases."
+        )
+    out = {}
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            if not line.startswith("{"):
+                continue
+            d = json.loads(line)
+            if d.get("type") in UNRESOLVED_TYPES:
+                out[(d["n"], d["ourRank"])] = d["type"]
+    return out
 
 
 def family_files(root: str) -> list[str]:
@@ -128,6 +164,8 @@ def main() -> int:
     ap.add_argument("--issues", default="", help="comma-separated subset of checks")
     ap.add_argument("--queue", default="portal/data/sanity-queue.json")
     ap.add_argument("--archive-path", default="portal/data/sanity-issues.json")
+    ap.add_argument("--parse-index", default=PARSE_INDEX,
+                    help="GBIF parser index, required by UNRESOLVED_TAXON")
     args = ap.parse_args()
 
     checks = set(LEGACY_ONLY if args.legacy else ALL_CHECKS)
@@ -138,6 +176,12 @@ def main() -> int:
             print(f"  unknown check(s): {sorted(unknown)}", file=sys.stderr)
             return 2
         checks = wanted
+
+    # Only loaded when the check is on, so every other subset stays runnable
+    # without the 259 MB index.
+    verdicts = load_parse_verdicts(args.parse_index) if "UNRESOLVED_TAXON" in checks else {}
+    if verdicts:
+        print(f"  parser index: {len(verdicts):,} unresolved names")
 
     files = family_files(args.root)
     print(f"Scanning {len(files):,} family files · {len(checks)} checks")
@@ -172,6 +216,12 @@ def main() -> int:
 
             if rank == "GENUS":
                 genus_seen.setdefault("all", []).append(name)
+
+            if "UNRESOLVED_TAXON" in checks and name:
+                t = verdicts.get((name, rank))
+                if t:
+                    issues.append({"family": family, "issue": "UNRESOLVED_TAXON",
+                                   "detail": f"{name} [{t}] filed as {rank}"})
 
             if "MALFORMED_ID" in checks and sid and PREFIXED_ID.match(sid) and MALFORMED_ID.search(sid):
                 issues.append({"family": family, "issue": "MALFORMED_ID", "detail": f"{name}: {sid}"})
