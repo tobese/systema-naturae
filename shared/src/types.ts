@@ -24,6 +24,14 @@ export interface TaxonNode {
    *  e.g. "E. Bolivia to WC. Brazil and N. Argentina". */
   distribution?: string;
   namedAfter?: string;
+  /** Who published this name, and when (`Linnaeus, 1758`).
+   *
+   *  548,304 species names (45.5% of the tree) carry the authority inside `name`
+   *  and inside `id` — `Smilax zeylanica L.` -> `SP_SMILAX_ZEYLANICA_L_` — so it
+   *  was present but unusable. Separated out here; nothing stored it before. */
+  authorship?: string;
+  /** Year of effective publication, when the authority carries one. */
+  yearPublished?: string;
   iucnStatus?: string;
   extinct?: boolean;
   /** Known only from the fossil record (never observed alive by humans).

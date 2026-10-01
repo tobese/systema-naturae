@@ -81,6 +81,27 @@ function useAccentForNode(node: TaxonNode): string {
   return "#888";
 }
 
+/** The scientific name with its authority, if we have one.
+ *
+ *  646,613 nodes carry `authorship`/`yearPublished` (MycoBank for fungi, GBIF's
+ *  name parser elsewhere). Most `name` values have no authority embedded at all —
+ *  only 12 fungal and a few thousand others do — so this shows information that
+ *  was simply absent for most species rather than repeating the title above it.
+ */
+function AuthorshipLine({ node }: { node: TaxonNode }) {
+  const authority = node.authorship
+    ? node.yearPublished
+      ? `${node.authorship}, ${node.yearPublished}`
+      : node.authorship
+    : null;
+  return (
+    <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 4 }}>
+      {node.name}
+      {authority && <span style={{ color: "#4a4a5a" }}> — {authority}</span>}
+    </div>
+  );
+}
+
 function LinkRow({ href, label }: { href: string; label: string }) {
   return (
     <a
@@ -304,7 +325,7 @@ function FamilyPanel({ node, onFocusFamily, focusedFamilySlug }: {
   return (
     <div style={{ padding: "20px" }}>
       <div style={{ fontSize: 22, fontWeight: 600, color: "#e0e0e0", marginBottom: 2 }}>{node.commonName ?? node.name}</div>
-      <div style={{ fontSize: 12, color: "#555", fontStyle: "italic", marginBottom: 4 }}>{node.name}</div>
+      <AuthorshipLine node={node} />
       {pn.speciesCount !== undefined && (
         <div style={{ fontSize: 12, color: "#666", marginBottom: 16 }}>{pn.speciesCount} species</div>
       )}
@@ -450,6 +471,11 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
   return (
     <div style={{ padding: "24px 20px", lineHeight: 1.6 }}>
       <div style={{ fontSize: 22, fontWeight: 600, color: accent, fontStyle: "italic", marginBottom: 2 }}>{node.name}</div>
+      {node.authorship && (
+        <div style={{ fontSize: 12, color: "#666", marginBottom: 6 }}>
+          {node.yearPublished ? `${node.authorship}, ${node.yearPublished}` : node.authorship}
+        </div>
+      )}
       {node.commonName && <div style={{ fontSize: 16, color: "#aaa", marginBottom: 8 }}>{node.commonName}</div>}
       {node.namedAfter && (
         <div style={{
