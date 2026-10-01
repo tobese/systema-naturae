@@ -453,6 +453,48 @@ copies and comparing to the union fails immediately and wrongly — two identica
 copies of a 3-species genus sum to 6 while the union is legitimately 3 — and that
 miscount is what made the first run claim Ploceidae had grown 118 → 137.
 
+### Cross-genus duplicates — done, `fix_genus_split_duplicates.py`
+
+The note above said 263 species sit under two genera. **That was wrong.** It
+counted ids at more than one *position*, which after the duplicate-genus merge is
+mostly the same genus appearing in both `children` and `speciesList`. The real
+count of cross-genus duplicates is **6**:
+
+| species | keep in | remove from | Catalogue of Life |
+|---|---|---|---|
+| `Aphelocoma coerulescens` | Aphelocoma | Corvus | accepted as *Aphelocoma coerulescens* (Bosc, 1798) |
+| `Aphelocoma insularis` | Aphelocoma | Corvus | accepted as *Aphelocoma insularis* Henshaw, 1886 |
+| `Cyanocorax mystacalis` | Cyanocorax | Corvus | accepted as *Cyanocorax mystacalis* (de Sparre, 1866) |
+| `Cyanocorax orcinus` | Cyanocorax | Corvus | accepted as ***Orcinus*** Fitzinger, 1860 |
+| `Galbalcyrhynchus purusianus` | Galbalcyrhynchus | Galbula | accepted as *Galbalcyrhynchus purusianus* Goeldi, 1897 |
+| `Stactolaema olivacea` | Stactolaema | Smilorbis | accepted as *Stactolaema olivacea* (Shelley, 1885) |
+
+Cyanocorax, Aphelocoma and Galbalcyrhynchus were split out of the genera these
+species were still also listed under, so each appeared twice, in two genera, with
+neither copy marked as a synonym.
+
+**Genus-level status is the wrong question.** COL reports *both* genera in every
+pair as accepted, correctly — they are distinct real taxa. The lookup has to be
+per species.
+
+One loose end deliberately left: COL has moved *Cyanocorax orcinus* again, to
+***Orcinus*** Fitzinger, 1860. We carry neither genus, so this pass drops the
+stale *Corvus* copy and leaves the accepted name alone. Following COL to
+*Orcinus* means adding a genus, which is a taxonomy decision rather than a
+cleanup. Same for the 7 cross-kingdom id collisions noted in the description
+ledger.
+
+Verified: 0 species lost, 0 ids still duplicated, no description shortened.
+
+Two bugs in the script itself, both silent — it exited 0 and printed a confident
+count. The description upgrade could not run inside the genus visit, because the
+survivor is in a *different* genus and out of scope there, so the in-place merge
+never fired and lost a description: *Cyanocorax orcinus* had 45 characters under
+Cyanocorax and 46 under Corvus. And the second pass that replaced it re-read the
+file *after* pruning, so the dropped text was already gone. It has to capture the
+description at drop time. Both were caught only because the expected description
+length was checked afterwards rather than trusting the exit code.
+
 ### The one genuinely valuable free source: Catalogue of Life
 
 COL aggregates Index Fungorum, AlgaeBase and other specialist checklists under
