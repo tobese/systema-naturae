@@ -72,11 +72,38 @@ MIN_DESCRIPTION = 30
 SYNTHETIC_ID = re.compile(r"^GENUS\d+SPECIES[A-Z]$|^GENUS_GENUS\d+$")
 SYNTHETIC_NAME = re.compile(r"^Genus\s?\d+(\s+Species\s?[A-Z])?$", re.I)
 
+# Id shape. Only these three prefixes are rank prefixes in this tree -- see
+# fixMalformedIds.py for why short rank-looking strings cannot be added here.
+# `PHY` would match every species in Phyllosticta, Phyllachora, Phycomyces...
+# The trailing-underscore case is deliberately NOT flagged: 145,484 ids end in
+# one because the name ends in an authority abbreviation (`L.`, `Merr.`), which
+# is the faithful slug.
+PREFIXED_ID = re.compile(r"^(SP_|GENUS_|FAM)")
+MALFORMED_ID = re.compile(r"__|[ \-]")
+
+# A hybrid name the tree files as a plain species. Under the ICN a `Genus x
+# epithet` name IS named at species rank, so those are correct and must not be
+# flagged -- there are 9,749 of them, mostly ferns and grasses.
+#
+# The discriminator is whether the element AFTER the marker is a genus or an
+# epithet, not whether spaces surround the marker. `Lycopodium × zeilleri` has
+# spaced markers and is same-genus; `Anacamptis × Dactylorhiza` is intergeneric
+# and capitalised after. A first version of this matched on spacing and
+# reported 1,951 hybrids, every one of them a correctly-ranked same-genus name.
+HYBRID_MARKER = re.compile(r"[×✕╳]|\bx(?=\s+[A-Z])")
+# Capitalised after an INTERNAL marker => a second genus => intergeneric, a real
+# rank error. A *leading* marker is a different convention entirely: `× Dryostichum
+# mirabile` is a nothogen, one genus, and the marker sits before the genus rather
+# than between two. Ignoring leading markers is what keeps those 423 out -- and
+# they are already visible as MALFORMED_ID, which is their actual defect.
+INTERGENERIC = re.compile(r"(?<!^)[×✕╳]\s*[A-Z]|\bx\s+[A-Z]")
+
 ALL_CHECKS = [
     "UNKNOWN_CONTINENT", "SHORT_DESCRIPTION", "MISSING_SUBSPECIES_COUNT",
     "MISSING_CONTINENTS", "MISSING_COMMON_NAME", "MISSING_LINEAGE",
     "DUPLICATE_SPECIES", "EMPTY_GENUS",
     "DUPLICATE_GENUS", "SPECIES_ID_REPEATED", "SYNTHETIC_NAME",
+    "MALFORMED_ID", "HYBRID_RANK",
 ]
 # The three added later, so --legacy can reproduce the original scope.
 LEGACY_ONLY = ALL_CHECKS[:8]
@@ -145,6 +172,14 @@ def main() -> int:
 
             if rank == "GENUS":
                 genus_seen.setdefault("all", []).append(name)
+
+            if "MALFORMED_ID" in checks and sid and PREFIXED_ID.match(sid) and MALFORMED_ID.search(sid):
+                issues.append({"family": family, "issue": "MALFORMED_ID", "detail": f"{name}: {sid}"})
+
+            if "HYBRID_RANK" in checks and name and HYBRID_MARKER.search(name):
+                if INTERGENERIC.search(name):
+                    issues.append({"family": family, "issue": "HYBRID_RANK",
+                                   "detail": f"{name} filed as {rank}"})
 
             if rank == "SPECIES":
                 if "SPECIES_ID_REPEATED" in checks and sid:

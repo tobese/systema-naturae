@@ -35,6 +35,17 @@ portal/data/powo-fields-cache*.json
 # committing, and one-shot scratch work belongs in /tmp, not the repo.
 *.bak
 __pycache__/
+.Rhistory
+# Derived data indexes, re-fetchable and far too large for git. Each has a
+# builder script; see the docstring for the source URL.
+#   mycobank-index.json      200 MB, from mycobank.org/Images/MBList.zip
+#                           (scripts/buildMycobankIndex.py)
+#   name-parse-shards/       ~99 MB per 3 shards, the GBIF parser output,
+#                           merged into name-parse-index.jsonl by
+#                           scripts/parseAllNamesSliced.sh
+portal/data/mycobank-index.json
+portal/data/name-parse-shards/
+portal/data/name-parse-index.jsonl
 portal/data/unified-taxonomy-plantae.json
 portal/data/unified-taxonomy-skeleton-plantae.json
 portal/data/order-manifest-plantae.json
