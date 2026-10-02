@@ -30,6 +30,13 @@ export interface WikiImageData {
   imageUrl?: string;
   /** Where `imageUrl` came from, e.g. `nmnh` — shown as the image credit. */
   imageSource?: string;
+  /** Author of the image, where known. Absent for most Wikidata-sourced
+   *  portraits: Wikidata P18 gives the file, not its author, so those link to
+   *  the Commons file page instead. */
+  imageArtist?: string;
+  /** Licence URL or code for the image, e.g.
+   *  `https://creativecommons.org/licenses/by-sa/3.0/`. */
+  imageLicense?: string;
   /** Range map (P181) filenames on Commons, in Wikidata order (often IUCN-derived first) */
   rangeMapFiles?: string[];
   /** Commons category (P373), e.g. `Panthera leo` */
@@ -45,6 +52,11 @@ export interface WikiImages {
   qid?: string;
   commonsCat?: string;
   imageCredit?: string;
+  imageArtist?: string;
+  imageLicense?: string;
+  /** Where the image's author and licence can be read. Always present for a
+   *  Commons-hosted portrait, since the file page carries them. */
+  imagePage?: string;
   raw?: WikiImageData;
 }
 
@@ -53,6 +65,8 @@ interface RawEntry {
   image?: string;
   imageUrl?: string;
   imageSource?: string;
+  imageArtist?: string;
+  imageLicense?: string;
   rangeMaps?: string[];
   commonsCat?: string;
   iucnStatus?: string;
@@ -82,10 +96,18 @@ function loadCache(): Promise<Record<string, RawEntry>> {
 loadCache();
 
 const COMMONS_BASE = "https://commons.wikimedia.org/wiki/Special:FilePath/";
+const COMMONS_WIKI = "https://commons.wikimedia.org/wiki/";
 
 /** Build a Commons thumbnail URL from a bare filename. */
 export function commonsThumb(filename: string, width = 600): string {
   return `${COMMONS_BASE}${encodeURIComponent(filename)}?width=${width}`;
+}
+
+/** The Commons file page, which is where the author and licence live.
+ *  Constructible from the filename alone, so every one of the 161,737 portraits
+ *  we already hold gets a route to its attribution without a lookup. */
+export function commonsFilePage(filename: string): string {
+  return `${COMMONS_WIKI}File:${encodeURIComponent(filename.replace(/ /g, "_"))}`;
 }
 
 /** Strip trailing authority from a scientific name, keeping only genus + species epithet. */
@@ -133,12 +155,19 @@ export function useWikiImages(binomial: string | null | undefined): WikiImages |
     iucnStatus: entry.iucnStatus,
     qid: entry.qid,
     commonsCat: entry.commonsCat,
-    imageCredit: entry.imageUrl ? entry.imageSource : undefined,
+    imageCredit: entry.imageUrl ? entry.imageSource : entry.imageSource,
+    imageArtist: entry.imageArtist,
+    imageLicense: entry.imageLicense,
+    // A Commons portrait always has a file page to credit, whether or not we
+    // hold its author. A museum portrait does not, so it gets none.
+    imagePage: entry.image && !entry.imageUrl ? commonsFilePage(entry.image) : undefined,
     raw: {
       qid: entry.qid ?? "",
       imageFile: entry.image,
       imageUrl: entry.imageUrl,
       imageSource: entry.imageSource,
+      imageArtist: entry.imageArtist,
+      imageLicense: entry.imageLicense,
       rangeMapFiles: entry.rangeMaps,
       commonsCat: entry.commonsCat,
       iucnStatus: entry.iucnStatus,

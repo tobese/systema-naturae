@@ -30,6 +30,18 @@ function wikiTitle(commonName: string | undefined, fallback: string): string {
   return parts.length > 2 ? parts.slice(0, 2).join(" ") : fallback;
 }
 
+// A licence URL is too long for a credit line, and the version matters, so
+// `.../licenses/by-sa/3.0/` reads as "CC BY-SA 3.0" and anything unrecognised
+// falls back to the last path segment rather than being dropped.
+function shortLicense(url: string): string {
+  const m = url.match(/licenses\/([a-z-]+)\/([\d.]+)\/?$/i);
+  if (m) return `CC ${m[1].toUpperCase()} ${m[2]}`;
+  if (/publicdomain\/zero/i.test(url)) return "CC0";
+  if (/publicdomain/i.test(url)) return "Public domain";
+  const tail = url.split("/").filter(Boolean).pop();
+  return tail && tail !== url ? tail : "licence";
+}
+
 // Natural hybrid notes keyed by species node id (from felidae data)
 const NATURAL_HYBRIDS: Record<string, string> = {
   "3DXW2": "Hybridises naturally with domestic cats → Kellas cat (Scotland). Threatens pure wildcat survival.",
@@ -523,7 +535,42 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
       />
       {wikiImages?.imageCredit && (
         <div style={{ fontSize: 11, color: "#556", marginTop: 4 }}>
-          Image: {wikiImages.imageCredit === "nmnh" ? "Smithsonian NMNH (CC0)" : wikiImages.imageCredit}
+          Image:{" "}
+          {wikiImages.imageCredit === "nmnh"
+            ? "Smithsonian NMNH (CC0)"
+            : wikiImages.imageCredit === "commons"
+              ? "Wikimedia Commons"
+              : wikiImages.imageCredit}
+          {wikiImages.imageArtist && ` · ${wikiImages.imageArtist}`}
+          {wikiImages.imageLicense && (
+            <>
+              {" · "}
+              <a
+                href={wikiImages.imageLicense}
+                target="_blank"
+                rel="noreferrer noopener"
+                style={{ color: "#667", textDecoration: "underline" }}
+              >
+                {shortLicense(wikiImages.imageLicense)}
+              </a>
+            </>
+          )}
+        </div>
+      )}
+      {/* Wikidata P18 gives the file but not its author, so the portrait's
+          attribution has to be read off the Commons file page. */}
+      {!wikiImages?.imageLicense && wikiImages?.imagePage && (
+        <div style={{ fontSize: 11, color: "#556", marginTop: 4 }}>
+          Image:{" "}
+          <a
+            href={wikiImages.imagePage}
+            target="_blank"
+            rel="noreferrer noopener"
+            style={{ color: "#667", textDecoration: "underline" }}
+          >
+            Wikimedia Commons
+          </a>{" "}
+          — author &amp; licence on the file page
         </div>
       )}
       {(() => {
