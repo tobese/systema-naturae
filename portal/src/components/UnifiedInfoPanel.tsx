@@ -521,6 +521,11 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
         loading={loading && !portrait && !rangeMap}
         accent={accent}
       />
+      {wikiImages?.imageCredit && (
+        <div style={{ fontSize: 11, color: "#556", marginTop: 4 }}>
+          Image: {wikiImages.imageCredit === "nmnh" ? "Smithsonian NMNH (CC0)" : wikiImages.imageCredit}
+        </div>
+      )}
       {(() => {
         const resolved = show(node.description) || show(extract?.replace(/\(listen\)/g, ''));
         return resolved ? (

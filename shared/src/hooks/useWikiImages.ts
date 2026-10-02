@@ -23,6 +23,13 @@ export interface WikiImageData {
   qid: string;
   /** Main image (P18) filename on Commons, raw — e.g. `Lion in masai mara.jpg` */
   imageFile?: string;
+  /** Absolute image URL on a non-Wikimedia host, e.g. a museum specimen photograph.
+   *  Used in preference to `imageFile`, which can only be resolved against
+   *  Commons. Set from CC0 museum harvests (NMNH), where the image is not on
+   *  Commons at all and building a Special:FilePath URL for it would 404. */
+  imageUrl?: string;
+  /** Where `imageUrl` came from, e.g. `nmnh` — shown as the image credit. */
+  imageSource?: string;
   /** Range map (P181) filenames on Commons, in Wikidata order (often IUCN-derived first) */
   rangeMapFiles?: string[];
   /** Commons category (P373), e.g. `Panthera leo` */
@@ -37,16 +44,19 @@ export interface WikiImages {
   iucnStatus?: string;
   qid?: string;
   commonsCat?: string;
+  imageCredit?: string;
   raw?: WikiImageData;
 }
 
 interface RawEntry {
-  qid: string;
+  qid?: string;
   image?: string;
+  imageUrl?: string;
+  imageSource?: string;
   rangeMaps?: string[];
   commonsCat?: string;
   iucnStatus?: string;
-  fetchedAt: string;
+  fetchedAt?: string;
 }
 
 let cache: Record<string, RawEntry> | null = null;
@@ -99,13 +109,18 @@ export function useWikiImages(binomial: string | null | undefined): WikiImages |
   if (!cache || !binomial) return null;
   // Try exact match first; fall back to stripped binomial (handles authority suffixes)
   let entry = cache[binomial];
-  if (!entry || !entry.qid) {
+  if (!entry || !(entry.qid || entry.imageUrl)) {
     const bare = stripAuthority(binomial);
     if (bare !== binomial) entry = cache[bare];
   }
-  if (!entry || !entry.qid) return null;
+  // An entry needs either a qid or an imageUrl to be worth returning: a bare
+  // iucnStatus with neither is a cache stub, and museum entries legitimately
+  // have no qid because they were never matched to Wikidata.
+  if (!entry || !(entry.qid || entry.imageUrl)) return null;
 
-  const portrait = entry.image ? commonsThumb(entry.image, 600) : undefined;
+  // imageUrl wins: it already points at a real image on its own host, while
+  // `image` is a bare Commons filename that has to be resolved against Commons.
+  const portrait = entry.imageUrl ?? (entry.image ? commonsThumb(entry.image, 600) : undefined);
   const rangeMap = entry.rangeMaps && entry.rangeMaps.length > 0
     ? commonsThumb(entry.rangeMaps[0], 800)
     : undefined;
@@ -118,9 +133,12 @@ export function useWikiImages(binomial: string | null | undefined): WikiImages |
     iucnStatus: entry.iucnStatus,
     qid: entry.qid,
     commonsCat: entry.commonsCat,
+    imageCredit: entry.imageUrl ? entry.imageSource : undefined,
     raw: {
-      qid: entry.qid,
+      qid: entry.qid ?? "",
       imageFile: entry.image,
+      imageUrl: entry.imageUrl,
+      imageSource: entry.imageSource,
       rangeMapFiles: entry.rangeMaps,
       commonsCat: entry.commonsCat,
       iucnStatus: entry.iucnStatus,
