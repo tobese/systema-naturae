@@ -91,7 +91,18 @@ import zipfile
 BACKBONE = os.path.expanduser("~/Downloads/backbone.zip")
 INDEX = os.path.join("portal", "data", "gbif-vernacular-index.json")
 
-ENGLISH = {"en", "eng", ""}
+# The blank code is NOT English. GBIF's VernacularName carries many rows with an
+# empty `language`, and those hold vernacular names in whatever script the
+# contributor typed -- treating "" as English imported 2,180 Chinese, Japanese
+# and Korean names into the tree in 23dd3876b.
+ENGLISH = {"en", "eng"}
+
+# A name in a non-Latin script is not an English name whatever the language
+# column claims. Checked on the value, so it also catches a mislabelled row.
+NON_LATIN = re.compile(
+    r"[\u0400-\u04FF\u0590-\u05FF\u0600-\u06FF\u0750-\u077F\u3040-\u30FF"
+    r"\u4E00-\u9FFF\uAC00-\uD7AF]"
+)
 
 # A disease, a host condition, or a role -- never what the organism is called.
 NOT_A_NAME = re.compile(
@@ -124,6 +135,8 @@ def usable(v: str) -> bool:
     if v.endswith("."):
         return False
     if RANK_WORD.match(v):
+        return False
+    if NON_LATIN.search(v):
         return False
     return True
 
@@ -209,6 +222,7 @@ def main() -> int:
 
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from familyFiles import iter_family_files
+    from canonicalNames import lookup
 
     tally: collections.Counter = collections.Counter()
     per_kingdom: collections.Counter = collections.Counter()
@@ -229,11 +243,32 @@ def main() -> int:
             if node.get("rank") != "SPECIES":
                 continue
             tally["species"] += 1
-            if (node.get("commonName") or "").strip():
+            existing = (node.get("commonName") or "").strip()
+            if NON_LATIN.search(existing):
+                tally["non-latin"] += 1
+                cn = lookup(index, (node.get("name") or "").strip().lower())
+                if cn:
+                    tally["replaced"] += 1
+                    if len(samples) < args.sample:
+                        samples.append((node.get("name"), cn))
+                else:
+                    cn = None
+                    tally["cleared"] += 1
+                if args.apply:
+                    if cn:
+                        node["commonName"] = cn
+                        node["sourcedFrom"] = "gbif"
+                    else:
+                        node.pop("commonName", None)
+                        if node.get("sourcedFrom") == "gbif":
+                            node.pop("sourcedFrom", None)
+                changed = True
+                continue
+            if existing:
                 tally["already-has"] += 1
                 continue
             tally["empty"] += 1
-            cn = index.get((node.get("name") or "").strip().lower())
+            cn = lookup(index, (node.get("name") or "").strip().lower())
             if not cn:
                 tally["no-match"] += 1
                 continue
@@ -256,6 +291,9 @@ def main() -> int:
     print(f"{'=' * 66}")
     print(f"species scanned          {tally['species']:>9,}")
     print(f"already has commonName   {tally['already-has']:>9,}")
+    if tally["non-latin"]:
+        print(f"NON-ENGLISH commonName   {tally['non-latin']:>9,}  <- "
+              f"{tally['replaced']:,} replaced, {tally['cleared']:,} cleared")
     print(f"empty                    {empty:>9,}")
     print(f"GBIF can fill            {tally['filled']:>9,}  "
           f"({tally['filled']/empty*100:.2f}%)")

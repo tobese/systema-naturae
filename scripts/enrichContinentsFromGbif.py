@@ -172,6 +172,7 @@ def main() -> int:
 
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from familyFiles import iter_family_files
+    from canonicalNames import lookup
 
     files = list(iter_family_files("."))
     tally: collections.Counter = collections.Counter()
@@ -197,7 +198,7 @@ def main() -> int:
                 tally["already-has"] += 1
                 continue
             tally["empty"] += 1
-            conts = index.get((node.get("name") or "").strip().lower())
+            conts = lookup(index, (node.get("name") or "").strip().lower())
             if not conts:
                 tally["no-match"] += 1
                 continue
