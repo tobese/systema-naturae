@@ -2,472 +2,471 @@
 
 This report aggregates the taxonomic database coverage gaps of the Systema Naturae portal at the **Phylum** level.
 
-*Generated automatically on: 10/07/2026*
+*Generated automatically on: 02/10/2026*
 
 ## Overview of Phylum Coverage
 
 | Phylum | Common Name | Classes | Families | Imported Species | Total Species Known | Minimal / Empty | Enriched | Completion % | Enrichment % | Gap Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Chordata** | Chordates | 6 | 352 | 43,641 | 43,641 | 29,346 | 14,295 | 100.0% | 32.8% | [✓] Complete |
-| **Phoronida** | Horseshoe worms | 1 | 1 | 13 | 13 | 0 | 13 | 100.0% | 100.0% | [✓] Complete |
-| **Loricifera** | Brush heads | 1 | 3 | 32 | 32 | 0 | 32 | 100.0% | 100.0% | [✓] Complete |
-| **Priapulida** | Penis worms | 3 | 4 | 145 | 145 | 0 | 145 | 100.0% | 100.0% | [✓] Complete |
-| **Entoprocta** | Goblet worms | 1 | 4 | 100 | 100 | 0 | 100 | 100.0% | 100.0% | [✓] Complete |
-| **Gnathostomulida** | Jaw worms | 1 | 12 | 294 | 294 | 0 | 294 | 100.0% | 100.0% | [✓] Complete |
-| **Onychophora** | Velvet worms | 1 | 2 | 232 | 232 | 0 | 232 | 100.0% | 100.0% | [✓] Complete |
-| **Gastrotricha** | Hairy backs | 1 | 18 | 926 | 926 | 0 | 926 | 100.0% | 100.0% | [✓] Complete |
-| **Xenacoelomorpha** | Xenacoelomorphs | 3 | 20 | 291 | 291 | 0 | 291 | 100.0% | 100.0% | [✓] Complete |
-| **Arthropoda** | Arthropods | 2 | 224 | 208,111 | 208,111 | 188,946 | 19,165 | 100.0% | 9.2% | [✓] Complete |
-| **Echinodermata** | Echinoderms | 3 | 3 | 516 | 516 | 420 | 96 | 100.0% | 18.6% | [✓] Complete |
-| **Mollusca** | Molluscs | 7 | 1529 | 139,663 | 139,663 | 137,880 | 1,783 | 100.0% | 1.3% | [✓] Complete |
-| **Ctenophora** | Comb jellies | 2 | 6 | 123 | 123 | 93 | 30 | 100.0% | 24.4% | [✓] Complete |
-| **Cnidaria** | Cnidarians | 5 | 725 | 22,268 | 22,268 | 18,834 | 3,434 | 100.0% | 15.4% | [✓] Complete |
-| **Cycliophora** | Symbion | 1 | 1 | 2 | 2 | 2 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Micrognathozoa** | Limnognathia | 1 | 1 | 1 | 1 | 1 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Nematomorpha** | Horsehair worms | 1 | 4 | 435 | 435 | 435 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Sipuncula** | Peanut worms | 2 | 6 | 230 | 230 | 230 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Kinorhyncha** | Mud dragons | 2 | 10 | 362 | 362 | 362 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Chaetognatha** | Arrow worms | 1 | 12 | 141 | 141 | 141 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Nemertea** | Ribbon worms | 4 | 57 | 1,381 | 1,381 | 1,381 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Placozoa** | Placozoans | 2 | 4 | 5 | 5 | 0 | 5 | 100.0% | 100.0% | [✓] Complete |
-| **Brachiopoda** | Lamp shells | 3 | 447 | 9,260 | 9,260 | 9,260 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Hemichordata** | Acorn worms | 1 | 39 | 457 | 457 | 457 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Rotifera** | Rotifers | 2 | 36 | 2,249 | 2,249 | 2,249 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Acanthocephala** | Thorny-headed worms | 4 | 30 | 1,487 | 1,487 | 1,487 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Bryozoa** | Moss animals | 3 | 393 | 23,126 | 23,126 | 23,126 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Porifera** | Sponges | 4 | 280 | 11,461 | 11,461 | 2,568 | 8,893 | 100.0% | 77.6% | [✓] Complete |
-| **Annelida** | Segmented worms | 2 | 208 | 23,651 | 23,651 | 23,651 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Platyhelminthes** | Flatworms | 4 | 425 | 22,020 | 22,020 | 22,020 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Nematoda** | Roundworms | 1 | 214 | 15,180 | 15,180 | 15,180 | 0 | 100.0% | 0.0% | [✓] Complete |
-| **Other** | Other Invertebrates | 1 | 1 | 1,495 | 1,495 | 1,438 | 57 | 100.0% | 3.8% | [✓] Complete |
+| **Chordata** | Chordates | 6 | 352 | 0 | 43,552 | 0 | 0 | 0.0% | 0.0% | > Gaps: 43552 |
+| **Phoronida** | Horseshoe worms | 1 | 1 | 0 | 13 | 0 | 0 | 0.0% | 0.0% | > Gaps: 13 |
+| **Loricifera** | Brush heads | 1 | 3 | 0 | 32 | 0 | 0 | 0.0% | 0.0% | > Gaps: 32 |
+| **Priapulida** | Penis worms | 2 | 3 | 0 | 111 | 0 | 0 | 0.0% | 0.0% | > Gaps: 111 |
+| **Entoprocta** | Goblet worms | 1 | 4 | 0 | 100 | 0 | 0 | 0.0% | 0.0% | > Gaps: 100 |
+| **Gnathostomulida** | Jaw worms | 1 | 12 | 0 | 294 | 0 | 0 | 0.0% | 0.0% | > Gaps: 294 |
+| **Onychophora** | Velvet worms | 1 | 2 | 0 | 232 | 0 | 0 | 0.0% | 0.0% | > Gaps: 232 |
+| **Gastrotricha** | Hairy backs | 1 | 18 | 0 | 926 | 0 | 0 | 0.0% | 0.0% | > Gaps: 926 |
+| **Xenacoelomorpha** | Xenacoelomorphs | 3 | 20 | 0 | 291 | 0 | 0 | 0.0% | 0.0% | > Gaps: 291 |
+| **Arthropoda** | Arthropods | 2 | 224 | 0 | 208,111 | 0 | 0 | 0.0% | 0.0% | > Gaps: 208111 |
+| **Echinodermata** | Echinoderms | 3 | 3 | 0 | 516 | 0 | 0 | 0.0% | 0.0% | > Gaps: 516 |
+| **Mollusca** | Molluscs | 7 | 1529 | 0 | 139,663 | 0 | 0 | 0.0% | 0.0% | > Gaps: 139663 |
+| **Ctenophora** | Comb jellies | 2 | 6 | 0 | 123 | 0 | 0 | 0.0% | 0.0% | > Gaps: 123 |
+| **Cnidaria** | Cnidarians | 5 | 725 | 0 | 22,268 | 0 | 0 | 0.0% | 0.0% | > Gaps: 22268 |
+| **Cycliophora** | Symbion | 1 | 1 | 0 | 2 | 0 | 0 | 0.0% | 0.0% | > Gaps: 2 |
+| **Micrognathozoa** | Limnognathia | 1 | 1 | 0 | 1 | 0 | 0 | 0.0% | 0.0% | > Gaps: 1 |
+| **Nematomorpha** | Horsehair worms | 1 | 4 | 0 | 425 | 0 | 0 | 0.0% | 0.0% | > Gaps: 425 |
+| **Sipuncula** | Peanut worms | 2 | 6 | 0 | 230 | 0 | 0 | 0.0% | 0.0% | > Gaps: 230 |
+| **Kinorhyncha** | Mud dragons | 2 | 10 | 0 | 362 | 0 | 0 | 0.0% | 0.0% | > Gaps: 362 |
+| **Chaetognatha** | Arrow worms | 1 | 12 | 0 | 141 | 0 | 0 | 0.0% | 0.0% | > Gaps: 141 |
+| **Nemertea** | Ribbon worms | 4 | 57 | 0 | 1,381 | 0 | 0 | 0.0% | 0.0% | > Gaps: 1381 |
+| **Placozoa** | Placozoans | 2 | 4 | 0 | 5 | 0 | 0 | 0.0% | 0.0% | > Gaps: 5 |
+| **Brachiopoda** | Lamp shells | 3 | 447 | 0 | 9,260 | 0 | 0 | 0.0% | 0.0% | > Gaps: 9260 |
+| **Hemichordata** | Acorn worms | 1 | 39 | 0 | 457 | 0 | 0 | 0.0% | 0.0% | > Gaps: 457 |
+| **Rotifera** | Rotifers | 2 | 36 | 0 | 2,249 | 0 | 0 | 0.0% | 0.0% | > Gaps: 2249 |
+| **Acanthocephala** | Thorny-headed worms | 4 | 30 | 0 | 1,487 | 0 | 0 | 0.0% | 0.0% | > Gaps: 1487 |
+| **Bryozoa** | Moss animals | 3 | 393 | 0 | 23,126 | 0 | 0 | 0.0% | 0.0% | > Gaps: 23126 |
+| **Porifera** | Sponges | 4 | 280 | 0 | 11,461 | 0 | 0 | 0.0% | 0.0% | > Gaps: 11461 |
+| **Annelida** | Segmented worms | 2 | 208 | 0 | 23,651 | 0 | 0 | 0.0% | 0.0% | > Gaps: 23651 |
+| **Platyhelminthes** | Flatworms | 4 | 425 | 0 | 22,020 | 0 | 0 | 0.0% | 0.0% | > Gaps: 22020 |
+| **Nematoda** | Roundworms | 1 | 214 | 0 | 15,180 | 0 | 0 | 0.0% | 0.0% | > Gaps: 15180 |
+| **Other** | Other Invertebrates | 1 | 1 | 0 | 1,495 | 0 | 0 | 0.0% | 0.0% | > Gaps: 1495 |
 
 ## Detail Breakdown & Checklists by Phylum
 
-### [x] Phylum Chordata (Chordates) - 100.0% complete
+### [ ] Phylum Chordata (Chordates) - 0.0% complete
 
-- **Imported species:** 43,641 / 43,641
-- **Enriched species:** 14,295 / 43,641 (32.8%)
-- **Remaining gaps:** None! 100% complete
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Mammalia | 39 | 7,897 | 7,897 | 1,061 | 100.0% | ✓ Complete |
-| Aves | 254 | 11,754 | 11,754 | 1,677 | 100.0% | ✓ Complete |
-| Reptilia | 23 | 8,121 | 8,121 | 5,481 | 100.0% | ✓ Complete |
-| Chondrichthyes | 7 | 1,187 | 1,187 | 137 | 100.0% | ✓ Complete |
-| Amphibia | 13 | 3,797 | 3,797 | 2,255 | 100.0% | ✓ Complete |
-| Actinopterygii | 16 | 10,885 | 10,885 | 3,684 | 100.0% | ✓ Complete |
-
-### [x] Phylum Phoronida (Horseshoe worms) - 100.0% complete
-
-- **Imported species:** 13 / 13
-- **Enriched species:** 13 / 13 (100.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 43,552
+- **Enriched species:** 0 / 43,552 (0.0%)
+- **Remaining gaps:** **43552**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Phoronida | 1 | 13 | 13 | 13 | 100.0% | ✓ Complete |
+| Aves | 254 | 0 | 11,754 | 0 | 0.0% | > Gaps: 11754 |
+| Actinopterygii | 16 | 0 | 10,885 | 0 | 0.0% | > Gaps: 10885 |
+| Reptilia | 23 | 0 | 8,121 | 0 | 0.0% | > Gaps: 8121 |
+| Mammalia | 39 | 0 | 7,898 | 0 | 0.0% | > Gaps: 7898 |
+| Amphibia | 13 | 0 | 3,707 | 0 | 0.0% | > Gaps: 3707 |
+| Chondrichthyes | 7 | 0 | 1,187 | 0 | 0.0% | > Gaps: 1187 |
 
-### [x] Phylum Loricifera (Brush heads) - 100.0% complete
+### [ ] Phylum Phoronida (Horseshoe worms) - 0.0% complete
 
-- **Imported species:** 32 / 32
-- **Enriched species:** 32 / 32 (100.0%)
-- **Remaining gaps:** None! 100% complete
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Loricifera | 3 | 32 | 32 | 32 | 100.0% | ✓ Complete |
-
-### [x] Phylum Priapulida (Penis worms) - 100.0% complete
-
-- **Imported species:** 145 / 145
-- **Enriched species:** 145 / 145 (100.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 13
+- **Enriched species:** 0 / 13 (0.0%)
+- **Remaining gaps:** **13**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Priapulimorpha | 2 | 109 | 109 | 109 | 100.0% | ✓ Complete |
-| Halicryptomorpha | 1 | 34 | 34 | 34 | 100.0% | ✓ Complete |
-| Seticoronaria | 1 | 2 | 2 | 2 | 100.0% | ✓ Complete |
+| Phoronida | 1 | 0 | 13 | 0 | 0.0% | > Gaps: 13 |
 
-### [x] Phylum Entoprocta (Goblet worms) - 100.0% complete
+### [ ] Phylum Loricifera (Brush heads) - 0.0% complete
 
-- **Imported species:** 100 / 100
-- **Enriched species:** 100 / 100 (100.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 32
+- **Enriched species:** 0 / 32 (0.0%)
+- **Remaining gaps:** **32**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Entoprocta | 4 | 100 | 100 | 100 | 100.0% | ✓ Complete |
+| Loricifera | 3 | 0 | 32 | 0 | 0.0% | > Gaps: 32 |
 
-### [x] Phylum Gnathostomulida (Jaw worms) - 100.0% complete
+### [ ] Phylum Priapulida (Penis worms) - 0.0% complete
 
-- **Imported species:** 294 / 294
-- **Enriched species:** 294 / 294 (100.0%)
-- **Remaining gaps:** None! 100% complete
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Gnathostomulida | 12 | 294 | 294 | 294 | 100.0% | ✓ Complete |
-
-### [x] Phylum Onychophora (Velvet worms) - 100.0% complete
-
-- **Imported species:** 232 / 232
-- **Enriched species:** 232 / 232 (100.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 111
+- **Enriched species:** 0 / 111 (0.0%)
+- **Remaining gaps:** **111**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Onychophora | 2 | 232 | 232 | 232 | 100.0% | ✓ Complete |
+| Priapulimorpha | 2 | 0 | 109 | 0 | 0.0% | > Gaps: 109 |
+| Seticoronaria | 1 | 0 | 2 | 0 | 0.0% | > Gaps: 2 |
 
-### [x] Phylum Gastrotricha (Hairy backs) - 100.0% complete
+### [ ] Phylum Entoprocta (Goblet worms) - 0.0% complete
 
-- **Imported species:** 926 / 926
-- **Enriched species:** 926 / 926 (100.0%)
-- **Remaining gaps:** None! 100% complete
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Gastrotricha | 18 | 926 | 926 | 926 | 100.0% | ✓ Complete |
-
-### [x] Phylum Xenacoelomorpha (Xenacoelomorphs) - 100.0% complete
-
-- **Imported species:** 291 / 291
-- **Enriched species:** 291 / 291 (100.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 100
+- **Enriched species:** 0 / 100 (0.0%)
+- **Remaining gaps:** **100**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Xenoturbellida | 1 | 2 | 2 | 2 | 100.0% | ✓ Complete |
-| Acoela | 17 | 223 | 223 | 223 | 100.0% | ✓ Complete |
-| Nemertodermatida | 2 | 66 | 66 | 66 | 100.0% | ✓ Complete |
+| Entoprocta | 4 | 0 | 100 | 0 | 0.0% | > Gaps: 100 |
 
-### [x] Phylum Arthropoda (Arthropods) - 100.0% complete
+### [ ] Phylum Gnathostomulida (Jaw worms) - 0.0% complete
 
-- **Imported species:** 208,111 / 208,111
-- **Enriched species:** 19,165 / 208,111 (9.2%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 294
+- **Enriched species:** 0 / 294 (0.0%)
+- **Remaining gaps:** **294**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Insecta | 213 | 186,174 | 186,174 | 15,397 | 100.0% | ✓ Complete |
-| Arachnida | 11 | 21,937 | 21,937 | 3,768 | 100.0% | ✓ Complete |
+| Gnathostomulida | 12 | 0 | 294 | 0 | 0.0% | > Gaps: 294 |
 
-### [x] Phylum Echinodermata (Echinoderms) - 100.0% complete
+### [ ] Phylum Onychophora (Velvet worms) - 0.0% complete
 
-- **Imported species:** 516 / 516
-- **Enriched species:** 96 / 516 (18.6%)
-- **Remaining gaps:** None! 100% complete
-
-#### Child Classes in this Phylum:
-
-| Class | Families | Imported | Total | Enriched | Completion % | Status |
-| --- | --- | --- | --- | --- | --- | --- |
-| Asteroidea | 1 | 199 | 199 | 38 | 100.0% | ✓ Complete |
-| Echinoidea | 1 | 100 | 100 | 7 | 100.0% | ✓ Complete |
-| Holothuroidea | 1 | 217 | 217 | 51 | 100.0% | ✓ Complete |
-
-### [x] Phylum Mollusca (Molluscs) - 100.0% complete
-
-- **Imported species:** 139,663 / 139,663
-- **Enriched species:** 1,783 / 139,663 (1.3%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 232
+- **Enriched species:** 0 / 232 (0.0%)
+- **Remaining gaps:** **232**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Cephalopoda | 94 | 2,429 | 2,429 | 1,783 | 100.0% | ✓ Complete |
-| Caudofoveata | 3 | 143 | 143 | 0 | 100.0% | ✓ Complete |
-| Monoplacophora | 15 | 257 | 257 | 0 | 100.0% | ✓ Complete |
-| Scaphopoda | 17 | 863 | 863 | 0 | 100.0% | ✓ Complete |
-| Polyplacophora | 54 | 1,448 | 1,448 | 0 | 100.0% | ✓ Complete |
-| Bivalvia | 440 | 34,960 | 34,960 | 0 | 100.0% | ✓ Complete |
-| Gastropoda | 906 | 99,563 | 99,563 | 0 | 100.0% | ✓ Complete |
+| Onychophora | 2 | 0 | 232 | 0 | 0.0% | > Gaps: 232 |
 
-### [x] Phylum Ctenophora (Comb jellies) - 100.0% complete
+### [ ] Phylum Gastrotricha (Hairy backs) - 0.0% complete
 
-- **Imported species:** 123 / 123
-- **Enriched species:** 30 / 123 (24.4%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 926
+- **Enriched species:** 0 / 926 (0.0%)
+- **Remaining gaps:** **926**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tentaculata | 5 | 93 | 93 | 20 | 100.0% | ✓ Complete |
-| Nuda | 1 | 30 | 30 | 10 | 100.0% | ✓ Complete |
+| Gastrotricha | 18 | 0 | 926 | 0 | 0.0% | > Gaps: 926 |
 
-### [x] Phylum Cnidaria (Cnidarians) - 100.0% complete
+### [ ] Phylum Xenacoelomorpha (Xenacoelomorphs) - 0.0% complete
 
-- **Imported species:** 22,268 / 22,268
-- **Enriched species:** 3,434 / 22,268 (15.4%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 291
+- **Enriched species:** 0 / 291 (0.0%)
+- **Remaining gaps:** **291**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Cubozoa | 8 | 56 | 56 | 35 | 100.0% | ✓ Complete |
-| Scyphozoa | 20 | 305 | 305 | 122 | 100.0% | ✓ Complete |
-| Hydrozoa | 141 | 4,505 | 4,505 | 2,963 | 100.0% | ✓ Complete |
-| Anthozoa | 549 | 17,346 | 17,346 | 297 | 100.0% | ✓ Complete |
-| Staurozoa | 7 | 56 | 56 | 17 | 100.0% | ✓ Complete |
+| Acoela | 17 | 0 | 223 | 0 | 0.0% | > Gaps: 223 |
+| Nemertodermatida | 2 | 0 | 66 | 0 | 0.0% | > Gaps: 66 |
+| Xenoturbellida | 1 | 0 | 2 | 0 | 0.0% | > Gaps: 2 |
 
-### [x] Phylum Cycliophora (Symbion) - 100.0% complete
+### [ ] Phylum Arthropoda (Arthropods) - 0.0% complete
 
-- **Imported species:** 2 / 2
+- **Imported species:** 0 / 208,111
+- **Enriched species:** 0 / 208,111 (0.0%)
+- **Remaining gaps:** **208111**
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Insecta | 213 | 0 | 186,174 | 0 | 0.0% | > Gaps: 186174 |
+| Arachnida | 11 | 0 | 21,937 | 0 | 0.0% | > Gaps: 21937 |
+
+### [ ] Phylum Echinodermata (Echinoderms) - 0.0% complete
+
+- **Imported species:** 0 / 516
+- **Enriched species:** 0 / 516 (0.0%)
+- **Remaining gaps:** **516**
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Holothuroidea | 1 | 0 | 217 | 0 | 0.0% | > Gaps: 217 |
+| Asteroidea | 1 | 0 | 199 | 0 | 0.0% | > Gaps: 199 |
+| Echinoidea | 1 | 0 | 100 | 0 | 0.0% | > Gaps: 100 |
+
+### [ ] Phylum Mollusca (Molluscs) - 0.0% complete
+
+- **Imported species:** 0 / 139,663
+- **Enriched species:** 0 / 139,663 (0.0%)
+- **Remaining gaps:** **139663**
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Gastropoda | 906 | 0 | 99,563 | 0 | 0.0% | > Gaps: 99563 |
+| Bivalvia | 440 | 0 | 34,960 | 0 | 0.0% | > Gaps: 34960 |
+| Cephalopoda | 94 | 0 | 2,429 | 0 | 0.0% | > Gaps: 2429 |
+| Polyplacophora | 54 | 0 | 1,448 | 0 | 0.0% | > Gaps: 1448 |
+| Scaphopoda | 17 | 0 | 863 | 0 | 0.0% | > Gaps: 863 |
+| Monoplacophora | 15 | 0 | 257 | 0 | 0.0% | > Gaps: 257 |
+| Caudofoveata | 3 | 0 | 143 | 0 | 0.0% | > Gaps: 143 |
+
+### [ ] Phylum Ctenophora (Comb jellies) - 0.0% complete
+
+- **Imported species:** 0 / 123
+- **Enriched species:** 0 / 123 (0.0%)
+- **Remaining gaps:** **123**
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Tentaculata | 5 | 0 | 93 | 0 | 0.0% | > Gaps: 93 |
+| Nuda | 1 | 0 | 30 | 0 | 0.0% | > Gaps: 30 |
+
+### [ ] Phylum Cnidaria (Cnidarians) - 0.0% complete
+
+- **Imported species:** 0 / 22,268
+- **Enriched species:** 0 / 22,268 (0.0%)
+- **Remaining gaps:** **22268**
+
+#### Child Classes in this Phylum:
+
+| Class | Families | Imported | Total | Enriched | Completion % | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Anthozoa | 549 | 0 | 17,346 | 0 | 0.0% | > Gaps: 17346 |
+| Hydrozoa | 141 | 0 | 4,505 | 0 | 0.0% | > Gaps: 4505 |
+| Scyphozoa | 20 | 0 | 305 | 0 | 0.0% | > Gaps: 305 |
+| Cubozoa | 8 | 0 | 56 | 0 | 0.0% | > Gaps: 56 |
+| Staurozoa | 7 | 0 | 56 | 0 | 0.0% | > Gaps: 56 |
+
+### [ ] Phylum Cycliophora (Symbion) - 0.0% complete
+
+- **Imported species:** 0 / 2
 - **Enriched species:** 0 / 2 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **2**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Eucycliophora | 1 | 2 | 2 | 0 | 100.0% | ✓ Complete |
+| Eucycliophora | 1 | 0 | 2 | 0 | 0.0% | > Gaps: 2 |
 
-### [x] Phylum Micrognathozoa (Limnognathia) - 100.0% complete
+### [ ] Phylum Micrognathozoa (Limnognathia) - 0.0% complete
 
-- **Imported species:** 1 / 1
+- **Imported species:** 0 / 1
 - **Enriched species:** 0 / 1 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **1**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Micrognathozoa | 1 | 1 | 1 | 0 | 100.0% | ✓ Complete |
+| Micrognathozoa | 1 | 0 | 1 | 0 | 0.0% | > Gaps: 1 |
 
-### [x] Phylum Nematomorpha (Horsehair worms) - 100.0% complete
+### [ ] Phylum Nematomorpha (Horsehair worms) - 0.0% complete
 
-- **Imported species:** 435 / 435
-- **Enriched species:** 0 / 435 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 425
+- **Enriched species:** 0 / 425 (0.0%)
+- **Remaining gaps:** **425**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Gordioida | 4 | 435 | 435 | 0 | 100.0% | ✓ Complete |
+| Gordioida | 4 | 0 | 425 | 0 | 0.0% | > Gaps: 425 |
 
-### [x] Phylum Sipuncula (Peanut worms) - 100.0% complete
+### [ ] Phylum Sipuncula (Peanut worms) - 0.0% complete
 
-- **Imported species:** 230 / 230
+- **Imported species:** 0 / 230
 - **Enriched species:** 0 / 230 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **230**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Phascolosomatidea | 2 | 79 | 79 | 0 | 100.0% | ✓ Complete |
-| Sipunculidea | 4 | 151 | 151 | 0 | 100.0% | ✓ Complete |
+| Sipunculidea | 4 | 0 | 151 | 0 | 0.0% | > Gaps: 151 |
+| Phascolosomatidea | 2 | 0 | 79 | 0 | 0.0% | > Gaps: 79 |
 
-### [x] Phylum Kinorhyncha (Mud dragons) - 100.0% complete
+### [ ] Phylum Kinorhyncha (Mud dragons) - 0.0% complete
 
-- **Imported species:** 362 / 362
+- **Imported species:** 0 / 362
 - **Enriched species:** 0 / 362 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **362**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Allomalorhagida | 5 | 123 | 123 | 0 | 100.0% | ✓ Complete |
-| Cyclorhagida | 5 | 239 | 239 | 0 | 100.0% | ✓ Complete |
+| Cyclorhagida | 5 | 0 | 239 | 0 | 0.0% | > Gaps: 239 |
+| Allomalorhagida | 5 | 0 | 123 | 0 | 0.0% | > Gaps: 123 |
 
-### [x] Phylum Chaetognatha (Arrow worms) - 100.0% complete
+### [ ] Phylum Chaetognatha (Arrow worms) - 0.0% complete
 
-- **Imported species:** 141 / 141
+- **Imported species:** 0 / 141
 - **Enriched species:** 0 / 141 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **141**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Sagittoidea | 12 | 141 | 141 | 0 | 100.0% | ✓ Complete |
+| Sagittoidea | 12 | 0 | 141 | 0 | 0.0% | > Gaps: 141 |
 
-### [x] Phylum Nemertea (Ribbon worms) - 100.0% complete
+### [ ] Phylum Nemertea (Ribbon worms) - 0.0% complete
 
-- **Imported species:** 1,381 / 1,381
+- **Imported species:** 0 / 1,381
 - **Enriched species:** 0 / 1,381 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **1381**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Palaeonemertea | 7 | 121 | 121 | 0 | 100.0% | ✓ Complete |
-| Pilidiophora | 11 | 505 | 505 | 0 | 100.0% | ✓ Complete |
-| Hoplonemertea | 38 | 754 | 754 | 0 | 100.0% | ✓ Complete |
-| Arhynchocoela | 1 | 1 | 1 | 0 | 100.0% | ✓ Complete |
+| Hoplonemertea | 38 | 0 | 754 | 0 | 0.0% | > Gaps: 754 |
+| Pilidiophora | 11 | 0 | 505 | 0 | 0.0% | > Gaps: 505 |
+| Palaeonemertea | 7 | 0 | 121 | 0 | 0.0% | > Gaps: 121 |
+| Arhynchocoela | 1 | 0 | 1 | 0 | 0.0% | > Gaps: 1 |
 
-### [x] Phylum Placozoa (Placozoans) - 100.0% complete
+### [ ] Phylum Placozoa (Placozoans) - 0.0% complete
 
-- **Imported species:** 5 / 5
-- **Enriched species:** 5 / 5 (100.0%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 5
+- **Enriched species:** 0 / 5 (0.0%)
+- **Remaining gaps:** **5**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Uniplacotomia | 3 | 4 | 4 | 4 | 100.0% | ✓ Complete |
-| Polyplacotomia | 1 | 1 | 1 | 1 | 100.0% | ✓ Complete |
+| Uniplacotomia | 3 | 0 | 4 | 0 | 0.0% | > Gaps: 4 |
+| Polyplacotomia | 1 | 0 | 1 | 0 | 0.0% | > Gaps: 1 |
 
-### [x] Phylum Brachiopoda (Lamp shells) - 100.0% complete
+### [ ] Phylum Brachiopoda (Lamp shells) - 0.0% complete
 
-- **Imported species:** 9,260 / 9,260
+- **Imported species:** 0 / 9,260
 - **Enriched species:** 0 / 9,260 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **9260**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Craniata | 6 | 101 | 101 | 0 | 100.0% | ✓ Complete |
-| Lingulata | 34 | 718 | 718 | 0 | 100.0% | ✓ Complete |
-| Rhynchonellata | 407 | 8,441 | 8,441 | 0 | 100.0% | ✓ Complete |
+| Rhynchonellata | 407 | 0 | 8,441 | 0 | 0.0% | > Gaps: 8441 |
+| Lingulata | 34 | 0 | 718 | 0 | 0.0% | > Gaps: 718 |
+| Craniata | 6 | 0 | 101 | 0 | 0.0% | > Gaps: 101 |
 
-### [x] Phylum Hemichordata (Acorn worms) - 100.0% complete
+### [ ] Phylum Hemichordata (Acorn worms) - 0.0% complete
 
-- **Imported species:** 457 / 457
+- **Imported species:** 0 / 457
 - **Enriched species:** 0 / 457 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **457**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pterobranchia | 39 | 457 | 457 | 0 | 100.0% | ✓ Complete |
+| Pterobranchia | 39 | 0 | 457 | 0 | 0.0% | > Gaps: 457 |
 
-### [x] Phylum Rotifera (Rotifers) - 100.0% complete
+### [ ] Phylum Rotifera (Rotifers) - 0.0% complete
 
-- **Imported species:** 2,249 / 2,249
+- **Imported species:** 0 / 2,249
 - **Enriched species:** 0 / 2,249 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **2249**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pararotatoria | 1 | 3 | 3 | 0 | 100.0% | ✓ Complete |
-| Eurotatoria | 35 | 2,246 | 2,246 | 0 | 100.0% | ✓ Complete |
+| Eurotatoria | 35 | 0 | 2,246 | 0 | 0.0% | > Gaps: 2246 |
+| Pararotatoria | 1 | 0 | 3 | 0 | 0.0% | > Gaps: 3 |
 
-### [x] Phylum Acanthocephala (Thorny-headed worms) - 100.0% complete
+### [ ] Phylum Acanthocephala (Thorny-headed worms) - 0.0% complete
 
-- **Imported species:** 1,487 / 1,487
+- **Imported species:** 0 / 1,487
 - **Enriched species:** 0 / 1,487 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **1487**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Eoacanthocephala | 4 | 311 | 311 | 0 | 100.0% | ✓ Complete |
-| Archiacanthocephala | 5 | 199 | 199 | 0 | 100.0% | ✓ Complete |
-| Palaeacanthocephala | 20 | 973 | 973 | 0 | 100.0% | ✓ Complete |
-| Polyacanthocephala | 1 | 4 | 4 | 0 | 100.0% | ✓ Complete |
+| Palaeacanthocephala | 20 | 0 | 973 | 0 | 0.0% | > Gaps: 973 |
+| Eoacanthocephala | 4 | 0 | 311 | 0 | 0.0% | > Gaps: 311 |
+| Archiacanthocephala | 5 | 0 | 199 | 0 | 0.0% | > Gaps: 199 |
+| Polyacanthocephala | 1 | 0 | 4 | 0 | 0.0% | > Gaps: 4 |
 
-### [x] Phylum Bryozoa (Moss animals) - 100.0% complete
+### [ ] Phylum Bryozoa (Moss animals) - 0.0% complete
 
-- **Imported species:** 23,126 / 23,126
+- **Imported species:** 0 / 23,126
 - **Enriched species:** 0 / 23,126 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **23126**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Phylactolaemata | 7 | 116 | 116 | 0 | 100.0% | ✓ Complete |
-| Stenolaemata | 168 | 11,564 | 11,564 | 0 | 100.0% | ✓ Complete |
-| Gymnolaemata | 218 | 11,446 | 11,446 | 0 | 100.0% | ✓ Complete |
+| Stenolaemata | 168 | 0 | 11,564 | 0 | 0.0% | > Gaps: 11564 |
+| Gymnolaemata | 218 | 0 | 11,446 | 0 | 0.0% | > Gaps: 11446 |
+| Phylactolaemata | 7 | 0 | 116 | 0 | 0.0% | > Gaps: 116 |
 
-### [x] Phylum Porifera (Sponges) - 100.0% complete
+### [ ] Phylum Porifera (Sponges) - 0.0% complete
 
-- **Imported species:** 11,461 / 11,461
-- **Enriched species:** 8,893 / 11,461 (77.6%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 11,461
+- **Enriched species:** 0 / 11,461 (0.0%)
+- **Remaining gaps:** **11461**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Hexactinellida | 79 | 1,406 | 1,406 | 0 | 100.0% | ✓ Complete |
-| Demospongiae | 150 | 8,893 | 8,893 | 8,893 | 100.0% | ✓ Complete |
-| Calcarea | 49 | 1,026 | 1,026 | 0 | 100.0% | ✓ Complete |
-| Homoscleromorpha | 2 | 136 | 136 | 0 | 100.0% | ✓ Complete |
+| Demospongiae | 150 | 0 | 8,893 | 0 | 0.0% | > Gaps: 8893 |
+| Hexactinellida | 79 | 0 | 1,406 | 0 | 0.0% | > Gaps: 1406 |
+| Calcarea | 49 | 0 | 1,026 | 0 | 0.0% | > Gaps: 1026 |
+| Homoscleromorpha | 2 | 0 | 136 | 0 | 0.0% | > Gaps: 136 |
 
-### [x] Phylum Annelida (Segmented worms) - 100.0% complete
+### [ ] Phylum Annelida (Segmented worms) - 0.0% complete
 
-- **Imported species:** 23,651 / 23,651
+- **Imported species:** 0 / 23,651
 - **Enriched species:** 0 / 23,651 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **23651**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Clitellata | 68 | 9,623 | 9,623 | 0 | 100.0% | ✓ Complete |
-| Polychaeta | 140 | 14,028 | 14,028 | 0 | 100.0% | ✓ Complete |
+| Polychaeta | 140 | 0 | 14,028 | 0 | 0.0% | > Gaps: 14028 |
+| Clitellata | 68 | 0 | 9,623 | 0 | 0.0% | > Gaps: 9623 |
 
-### [x] Phylum Platyhelminthes (Flatworms) - 100.0% complete
+### [ ] Phylum Platyhelminthes (Flatworms) - 0.0% complete
 
-- **Imported species:** 22,020 / 22,020
+- **Imported species:** 0 / 22,020
 - **Enriched species:** 0 / 22,020 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **22020**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Cestoda | 104 | 3,685 | 3,685 | 0 | 100.0% | ✓ Complete |
-| Turbellaria | 60 | 1,246 | 1,246 | 0 | 100.0% | ✓ Complete |
-| Trematoda | 192 | 11,265 | 11,265 | 0 | 100.0% | ✓ Complete |
-| Monogenea | 69 | 5,824 | 5,824 | 0 | 100.0% | ✓ Complete |
+| Trematoda | 192 | 0 | 11,265 | 0 | 0.0% | > Gaps: 11265 |
+| Monogenea | 69 | 0 | 5,824 | 0 | 0.0% | > Gaps: 5824 |
+| Cestoda | 104 | 0 | 3,685 | 0 | 0.0% | > Gaps: 3685 |
+| Turbellaria | 60 | 0 | 1,246 | 0 | 0.0% | > Gaps: 1246 |
 
-### [x] Phylum Nematoda (Roundworms) - 100.0% complete
+### [ ] Phylum Nematoda (Roundworms) - 0.0% complete
 
-- **Imported species:** 15,180 / 15,180
+- **Imported species:** 0 / 15,180
 - **Enriched species:** 0 / 15,180 (0.0%)
-- **Remaining gaps:** None! 100% complete
+- **Remaining gaps:** **15180**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Chromadorea | 214 | 15,180 | 15,180 | 0 | 100.0% | ✓ Complete |
+| Chromadorea | 214 | 0 | 15,180 | 0 | 0.0% | > Gaps: 15180 |
 
-### [x] Phylum Other (Other Invertebrates) - 100.0% complete
+### [ ] Phylum Other (Other Invertebrates) - 0.0% complete
 
-- **Imported species:** 1,495 / 1,495
-- **Enriched species:** 57 / 1,495 (3.8%)
-- **Remaining gaps:** None! 100% complete
+- **Imported species:** 0 / 1,495
+- **Enriched species:** 0 / 1,495 (0.0%)
+- **Remaining gaps:** **1495**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Tardigrada | 1 | 1,495 | 1,495 | 57 | 100.0% | ✓ Complete |
+| Tardigrada | 1 | 0 | 1,495 | 0 | 0.0% | > Gaps: 1495 |
 
