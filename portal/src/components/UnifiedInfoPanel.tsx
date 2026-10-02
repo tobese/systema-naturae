@@ -545,14 +545,21 @@ function SpeciesPanel({ node, onSelect }: { node: TaxonNode; onSelect: (n: Taxon
           {wikiImages.imageLicense && (
             <>
               {" · "}
-              <a
-                href={wikiImages.imageLicense}
-                target="_blank"
-                rel="noreferrer noopener"
-                style={{ color: "#667", textDecoration: "underline" }}
-              >
-                {shortLicense(wikiImages.imageLicense)}
-              </a>
+              {/* A licence can be recorded as a short name ("Public domain",
+                  "Copyrighted free use") when Commons gives no URL, so only
+                  linkify something that is actually a URL. */}
+              {wikiImages.imageLicense.startsWith("http") ? (
+                <a
+                  href={wikiImages.imageLicense}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{ color: "#667", textDecoration: "underline" }}
+                >
+                  {shortLicense(wikiImages.imageLicense)}
+                </a>
+              ) : (
+                shortLicense(wikiImages.imageLicense)
+              )}
             </>
           )}
         </div>
