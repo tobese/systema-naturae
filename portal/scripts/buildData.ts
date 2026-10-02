@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, rmSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { resolveFamilyFile, familySourceStamp } from "./lib/familyPath.js";
@@ -514,15 +514,18 @@ function speciesOf(genus: TaxonNode): TaxonNode[] {
  * (Pheidole) - so the file count is high but the bytes are not, and nothing is
  * fetched at all unless a genus is opened.
  *
- * A genus that loses its last description keeps a stale file until the next
- * dirty rebuild rewrites the order. That is deliberate: an empty response is
- * indistinguishable from "no prose", whereas a file that outlives its data
- * would show a description the family no longer has.
+ * A genus that loses its last description would otherwise keep a file
+ * describing it, and the names tier would then overlay onto the graph a
+ * description the family no longer has -- `Callistus lunatus` was still being
+ * shown a `thumb|` media caption that had been stripped from the data weeks
+ * earlier. So the order's prose directory is emptied before it is rewritten,
+ * and the output is exactly the prose the family currently has.
  */
 function writeGenusProse(order: TaxonNode): void {
   // Only called for a dirty order: 21,588 writes on an otherwise clean build is
   // exactly the cost the dirty check exists to avoid.
   const dir = resolve(proseDir, order.id);
+  if (existsSync(dir)) rmSync(dir, { recursive: true, force: true });
   let wrote = 0;
   // Genera sit under FAMILY (and sometimes SUBFAMILY), not directly under the
   // order, so this has to walk down rather than look at order.children.
