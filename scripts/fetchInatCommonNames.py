@@ -166,7 +166,7 @@ def main() -> int:
                     time.sleep(backoff)
                     continue
                 raise
-            except urllib.error.URLError as e:
+            except (urllib.error.URLError, TimeoutError, OSError) as e:
                 # A DNS or connection failure is not the API rate-limiting us, but
                 # it is still transient. This branch did not exist, so a single
                 # "nodename nor servname provided" ended a run that had 5,600
