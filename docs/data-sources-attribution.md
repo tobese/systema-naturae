@@ -1,11 +1,19 @@
 # Data Sources — Attribution & Licensing
 
-Last gathered: 2026-07-06.
+Last gathered: **2026-10-02**. Companion registry: [`data-sources.md`](data-sources.md).
 
-This project reuses **text descriptions** and **distribution data** from external
-biodiversity databases. Each species node records its provenance in the
-`sourcedFrom` field. This doc lists every source we pull from, its licence, and
-the attribution we owe. **Read the "Licensing risk" section before publishing.**
+This project reuses **text descriptions**, **names**, **distribution data** and
+**images** from external biodiversity databases. Each species node records its
+provenance in `sourcedFrom`; images carry their own fields in
+`shared/data/wiki-images.json` (`image`, `imageUrl`, `imageArtist`,
+`imageLicense`), because they are a runtime sidecar rather than part of the built
+tree. This doc lists every source we pull from, its licence, and the attribution
+we owe. **Read the "Licensing risk" section before publishing.**
+
+What changed on 2026-10-02: the Orthoptera Species File was imported (28,081
+species, CC BY 4.0); 35,035 portraits were added from Smithsonian NMNH and
+Wikimedia Commons; and 184,542 images gained an author and a licence that they
+previously did not have. None of that was covered by the previous gathering.
 
 > Note: licences below were read from each source's official terms/FAQ/footer on
 > 2026-07-06. Where a source has no formal licence page (footer/FAQ only) it is
@@ -17,11 +25,20 @@ the attribution we owe. **Read the "Licensing risk" section before publishing.**
 
 | `sourcedFrom` | Source | Licence | Attribution | Species (plants) |
 |---|---|---|---|---|
-| `wikipedia` | Wikipedia article text | **CC BY-SA 4.0** (share-alike) | Required | ~75,360 |
-| `gbif` | GBIF species descriptions | Per-dataset: CC0 / CC BY / CC BY-NC | Required (BY/BY-NC) | ~13,675 |
-| `powo` | Plants of the World Online (RBG Kew) | **CC BY** | Required | ~5,083 |
+| `wikipedia` | Wikipedia article text | **CC BY-SA 4.0** (share-alike) | Required | 125,504 |
+| `gbif` | GBIF species descriptions & vernacular | Per-dataset: CC0 / CC BY / CC BY-NC | Required (BY/BY-NC) | 200,677 |
+| `powo` | Plants of the World Online (RBG Kew) | **CC BY** | Required | 208,513 |
+| `orthoptera species file` | **Orthoptera Species File** (GBIF `af66d4cf-…`, DOI 10.15468/nn7jhc) | **CC BY 4.0** | Required | 35,761 |
+| `generated` | Template-generated from lineage | ours | n/a | 832 |
 | `nzpcn` | NZ Plant Conservation Network | **Permission-based** (no CC) | Required | 1 (test shot) |
-| `websearch` | Mixed (see below) | **Mixed / some non-open** | Required | ~46 |
+| `websearch` | Mixed (see below) | **Mixed / some non-open** | Required | 58 |
+| *(none)* | no provenance recorded | — | — | 669,002 |
+
+The `gbif` figure is the number of nodes tagged `gbif`, not the number of distinct
+datasets behind them — **no per-dataset DOI is stored**, so the licence of any
+individual record cannot be stated. That is the single largest attribution gap and
+it is not fixable retrospectively without re-deriving provenance from the family
+files.
 
 The `websearch` tier (46 species) drew from heterogeneous sources — some open,
 some **not**. Per-source breakdown of what the research used:
@@ -42,6 +59,20 @@ some **not**. Per-source breakdown of what the research used:
 ---
 
 ## Required citations (per source)
+
+**Orthoptera Species File** — CC BY 4.0; cite the dataset DOI:
+> Orthoptera Species File (2026). OSF. Species File Group, University of
+> Illinois. https://doi.org/10.15468/nn7jhc. Retrieved 2026-10-02.
+
+**Smithsonian NMNH** — every media row is CC0, so no attribution is required. The
+Zenodo record itself is CC BY 4.0 and worth citing anyway:
+> Smithsonian National Museum of Natural History (2026). NMNH images from GBIF
+> export. Zenodo. https://doi.org/10.5281/zenodo.20174554.
+
+**Wikimedia Commons / Wikidata P18** — per-file licence, which the sidecar records
+on each entry and the species panel prints as
+`Wikimedia Commons · <author> · CC BY-SA 4.0`. For bulk reuse, cite:
+> Wikimedia Commons contributors (2026). Files retrieved via the MediaWiki API.
 
 **Wikipedia** — CC BY-SA 4.0, share-alike + attribution:
 > Text from the Wikipedia article "[Title]" (https://en.wikipedia.org/wiki/[Title]),
@@ -119,10 +150,51 @@ them.
 
 ---
 
+## Images and media (added 2026-10-02)
+
+This section did not exist before the 2026-10-02 image work and covers an
+attribution surface that is entirely new.
+
+| Field in `shared/data/wiki-images.json` | Count | Meaning |
+|---|---|---|
+| `image` | 191,184 | Commons filename, rendered via `Special:FilePath` |
+| `imageUrl` | 5,628 | absolute URL on a museum host (NMNH) |
+| `imageArtist` | 184,542 | author of the image |
+| `imageLicense` | 190,647 | licence URL, or short name where Commons gives none |
+| `imageSource` | — | `nmnh` or `commons` |
+
+What is satisfied today:
+
+- **CC0 and public domain** — no attribution owed. This covers all 5,628 NMNH
+  photographs and a large share of the Commons portraits.
+- **CC BY / BY-SA** — author, licence and source are rendered in the species
+  panel: `Wikimedia Commons · April Nobile · CC BY-SA 4.0`, with the licence
+  linked. Where the author is unknown, the panel links the Commons `File:` page,
+  which is where the author and licence can be read. Constructed from the
+  filename, so all 191,184 portraits route to their attribution.
+- **NC and ND** — refused at ingest. `applyCommonsImages.py` rejects them and the
+  sidecar currently holds **zero**.
+
+What is still missing:
+
+- **BY-SA share-alike is not stated anywhere the user can see it.** Roughly a
+  third of the credited portraits are BY-SA, and share-alike binds derivative use.
+  The per-image line names the licence but not the obligation.
+- **No dataset-level notice.** The per-image credit covers individual files; there
+  is still no page listing the datasets and their terms.
+
 ## Attribution surface
 
-Wherever descriptions are shown in the portal, surface a data-attribution
-notice that covers at minimum: **Wikipedia (CC BY-SA), Plants of the World Online
-(Kew, CC BY), GBIF, IPNI/IFPNI, and Atlas of Living Australia.** A site-wide
-"Data sources & licences" page linking each source's terms is the cleanest way to
-satisfy the attribution requirements above.
+Two surfaces now, one of them new.
+
+**Per image** — implemented. The species panel prints the source, artist and
+licence beneath the portrait, or a link to the Commons file page when the author
+is unknown. See `portal/src/components/UnifiedInfoPanel.tsx`.
+
+**Per dataset** — still missing, and recommended since 2026-07-06. A site-wide
+"Data sources & licences" page must cover at minimum: **Wikipedia (CC BY-SA),
+Plants of the World Online (Kew, CC BY), GBIF (per-dataset, and say which),
+IPNI/IFPNI, Atlas of Living Australia, the Orthoptera Species File (CC BY 4.0),
+Smithsonian NMNH (CC0) and Wikimedia Commons (per-file)**.
+[`data-sources.md`](data-sources.md) is written to be the content of that page;
+it still needs a rendering that a reader can actually reach.

@@ -1,0 +1,138 @@
+# Data Sources — Registry
+
+Every external dataset this project has taken data from, with the identifier that
+makes it citable, its licence, when it was retrieved, what was actually taken,
+and how that is attributed in the product.
+
+This is the machine-checkable companion to
+[`data-sources-attribution.md`](data-sources-attribution.md), which carries the
+prose: required citation strings per source, the share-alike obligations, and the
+licensing risks still open. **Nothing here is legal advice.**
+
+Why a registry and not just the attribution doc: a source that is not written
+down cannot be cited, and a source that is written down only in prose gets lost
+the next time the tree is rebuilt. Each row here has a `sourcedFrom` value, a
+sidecar field, or both, so the data can be traced back to the licence it was
+taken under.
+
+Last updated: **2026-10-02**.
+
+---
+
+## In the data
+
+### Text and names (recorded per node in `sourcedFrom`)
+
+| `sourcedFrom` | Source | Identifier | Licence | Nodes | Retrieved |
+|---|---|---|---|---|---|
+| `powo` | Plants of the World Online (RBG Kew) | https://powo.science.kew.org | CC BY | 208,513 | ≤2026-07 |
+| `gbif` | GBIF species descriptions & vernacular | GBIF Backbone, DOI 10.15468/ts7wsb (taxonomy) / dataset d7dddbf4-2cf0-4f39-9b2a-bb099caae36c (backbone download) | per-dataset: CC0 / CC BY / CC BY-NC | 200,677 | ≤2026-07 |
+| `wikipedia` | English Wikipedia article text | en.wikipedia.org | CC BY-SA 4.0 (share-alike) | 125,504 | ≤2026-07 |
+| `orthoptera species file` | **Orthoptera Species File** | GBIF `af66d4cf-0fd2-434b-9334-9806a5efa6f7`, DOI 10.15468/nn7jhc | **CC BY 4.0** | 35,761 | 2026-10-02 |
+| `websearch` | Mixed — see attribution doc | — | mixed, some **not** open | 58 | ≤2026-07 |
+| `generated` | Template-generated from lineage | — | ours | 832 | — |
+| `nzpcn` | NZ Plant Conservation Network | nzpcn.org.nz | **permission-based** | 1 | ≤2026-07 |
+| *(none)* | no provenance recorded | — | — | 669,002 | — |
+
+`orthoptera species file` carries names, authorship, year, hierarchy and
+distribution. It carries **no descriptions** and **no images** — its
+`multimedia.txt` is empty. 371 of its 378 TDWG locality strings were mapped to our
+continent vocabulary (`scripts/osfLocalities.py`); 7 were left unmapped on
+purpose, so those species simply have no continent rather than a guessed one.
+
+> The 669,002 nodes with no `sourcedFrom` are a real blind spot: "no source" and
+> "source not recorded" are indistinguishable in the data. They are almost entirely
+> the GBIF backbone import, which is public domain, but that is an assumption
+> rather than a record.
+
+### Images and media (recorded in `shared/data/wiki-images.json`)
+
+The sidecar is keyed by scientific name and holds one portrait per species. It is
+**not** part of the built tree — it is fetched at runtime by
+`shared/src/hooks/useWikiImages.ts`, so image provenance never bloats the
+skeleton or the per-order files.
+
+| Field | Meaning | Count |
+|---|---|---|
+| `image` | Commons **filename**, resolved to a `Special:FilePath` thumbnail | 191,184 |
+| `imageUrl` | absolute URL on a non-Wikimedia host | 5,628 |
+| `imageArtist` | author of the image | 184,542 |
+| `imageLicense` | licence URL, or short name when Commons gives none | 190,647 |
+| `imageSource` | which harvest supplied it (`nmnh`, `commons`) | — |
+| `imagePage` (derived) | the Commons `File:` page, constructed from the filename | derived |
+
+| Source | Identifier | Licence | Taken | Retrieved |
+|---|---|---|---|---|
+| **Wikidata P18** → Wikimedia Commons | wikidata.org, via `scripts/fetchWikidataImages.ts` | per-file: CC0 / PD / BY / BY-SA | portraits for 191,184 species | 2026-06-27 → |
+| **Wikimedia Commons** (EOL harvest) | Zenodo `17509532`, CC BY 4.0 at record level | per-file, recorded per image | 29,447 new portraits **with** author + licence | 2026-10-02 |
+| **Smithsonian NMNH** | Zenodo `20174554`, DOI 10.5281/zenodo.20174554 | record CC BY 4.0; **every media row is CC0** | 5,628 specimen photographs | 2026-10-02 |
+| Wikimedia Commons API | `commons.wikimedia.org/w/api.php` | — | author + licence for 175,978 filenames | 2026-10-02 |
+
+Attribution owed:
+
+- **CC0 (NMNH)** — none. That is why `Owner` being empty on all 453,486 NMNH rows
+  is not a gap; the waiver is the point.
+- **CC0 / public domain (Wikimedia)** — none.
+- **CC BY / BY-SA (Wikimedia)** — author, licence and source. 184,542 entries carry
+  an author and the panel prints `Wikimedia Commons · <author> · CC BY-SA 4.0`
+  with the licence linked. Where the author is unknown the panel links the
+  Commons `File:` page instead, which is where the author can be read.
+- **BY-SA is share-alike.** Derivative reuse of those images must carry the same
+  licence. Not yet stated anywhere user-facing — see open items.
+
+### Conservation status
+
+`iucnStatus` on a species node and the `rangeMaps[]` sidecar field come from
+Wikidata (P141) and the IUCN range maps those point at. The IUCN Red List's own
+terms are **not** CC-licensed; the maps are used as linked range references.
+
+---
+
+## Assessed, not taken
+
+Recorded so they are not re-evaluated from scratch. Detail in
+[`reports/external-source-assessment.md`](reports/external-source-assessment.md)
+and [`reports/eol-traitbank.md`](reports/eol-traitbank.md).
+
+| Source | Identifier | Licence | Why not taken |
+|---|---|---|---|
+| Species Fungorum Plus (fungi) | GBIF `bf3db7c9-…`, DOI 10.15468/ts7wsb | CC BY 4.0 | 90% name match, but a checklist carries no descriptions and fungi are 97.5% undescribed. 1,791 synonyms and an authorship-abbreviation decision are open. |
+| World Spider Catalog | GBIF `80dd9c94-…`, DOI 10.24436/2 | CC BY 4.0 | 487 synonyms to reconcile; its 7,184 place names need a continent mapping before its distribution can be used. |
+| EOL TraitBank (CSV) | Zenodo `22129810` | **notspecified** | 11.4M trait rows but the values are ontology URIs (`ENVO_00000446`), not prose. Licence unspecified. |
+| EOL TraitBank (Neo4j) | Zenodo `22927080` | CC BY 4.0 | Same content as `22129810` as a 15 GB dump needing Java 21. |
+
+## Refused on licence
+
+The EOL harvester republishes whatever a project publishes and does **not** filter
+by licence. Of ten harvests assessed, seven were non-commercial.
+
+| Source | Identifier | Licence | Note |
+|---|---|---|---|
+| BioImages (UK) | Zenodo `21123026` | CC BY-NC-SA 3.0 | 132,528 rows |
+| CalPhotos Moorea Biocode | Zenodo `15597434` | CC BY-NC-SA 3.0 | 20,942 rows |
+| AntWeb | Zenodo `19027382` | CC BY-NC-SA 4.0 | 140,143 rows |
+| Flickr — Encyclopedia of Life group | Zenodo `20272755` | mostly NC | only 9,703 of 77,404 taxa free |
+| FishBase | GBIF via EOL, Zenodo `22739608` | images CC BY-NC 3.0 | 110,812 of 111,348 media rows |
+
+`applyCommonsImages.py` refuses `-nc` and `-nd` outright, so a non-commercial
+image cannot enter through the back door even though the 191,184 already in the
+sidecar predate any licence check. Currently **0 NC/ND** entries are present.
+
+---
+
+## Open items
+
+1. **No user-facing attribution notice.** `data-sources-attribution.md` has
+   recommended a site-wide "Data sources & licences" page since 2026-07-06. The
+   per-image credit now exists in the species panel; the dataset-level notice
+   does not.
+2. **BY-SA share-alike is not surfaced.** 190,647 entries carry a licence and
+   68,000-odd are BY-SA, whose share-alike term is not stated anywhere the user
+   can see it.
+3. **Per-dataset GBIF licensing is unresolved.** 200,677 nodes are tagged `gbif`
+   with no dataset DOI, so the licence of any individual record cannot be stated.
+   GBIF aggregates datasets with incompatible terms including CC BY-NC.
+4. **The four permission-based `websearch` sources** (FloraBase, Flora of China,
+   NZPCN, SANBI) are still unresolved — ~8 species. See the attribution doc.
+5. **669,002 nodes carry no `sourcedFrom`** and cannot be attributed from the
+   data alone.

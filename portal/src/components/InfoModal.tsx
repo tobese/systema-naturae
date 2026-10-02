@@ -6,6 +6,20 @@ interface Props {
   onClose: () => void;
 }
 
+// Kept in step with docs/data-sources.md. Only sources we actually draw on are
+// listed; the non-commercial ones we refused are deliberately absent, because a
+// reader cannot tell from a name whether a dataset is usable and naming them
+// would imply we had.
+const SOURCES = [
+  { name: "GBIF", licence: "per-dataset, CC0 / CC BY / CC BY-NC", url: "https://www.gbif.org" },
+  { name: "Wikipedia", licence: "CC BY-SA 4.0", url: "https://en.wikipedia.org" },
+  { name: "Plants of the World Online (RBG Kew)", licence: "CC BY", url: "https://powo.science.kew.org" },
+  { name: "Orthoptera Species File", licence: "CC BY 4.0", url: "https://doi.org/10.15468/nn7jhc" },
+  { name: "Smithsonian NMNH", licence: "CC0", url: "https://doi.org/10.5281/zenodo.20174554" },
+  { name: "Wikimedia Commons", licence: "per-file, CC0 / PD / CC BY / CC BY-SA", url: "https://commons.wikimedia.org" },
+  { name: "iNaturalist", licence: "CC BY-NC 4.0 for data, per-photo for images", url: "https://www.inaturalist.org" },
+];
+
 export default function InfoModal({ onClose }: Props) {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -119,6 +133,47 @@ export default function InfoModal({ onClose }: Props) {
               </p>
               <p style={{ margin: 0 }}>
                 This portal borrows his title and his structure. The same ranked hierarchy — kingdom, phylum, class, order, family, genus, species — organises everything here. The ambition is the same too: a single place where the diversity of life can be held, browsed, and understood.
+              </p>
+            </div>
+
+            <div style={{ borderTop: "1px solid #1e2030", margin: "24px 0 20px" }} />
+
+            {/* Attribution notice. Recommended in docs/data-sources-attribution.md
+                since 2026-07-06 and still missing; the per-image credit went in
+                first, so this closes the other half of the same obligation. */}
+            <div style={{ fontSize: 13, color: "#888", lineHeight: 1.65 }}>
+              <div style={{ fontSize: 10, color: "#6666aa", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8 }}>
+                Data sources &amp; licences
+              </div>
+              <p style={{ margin: "0 0 10px" }}>
+                This portal assembles its content from the sources below. Each is
+                reused under its own licence, and several require attribution —
+                which we owe and have tried to discharge. Where a licence permits
+                reuse only for non-commercial purposes, we have not used it.
+              </p>
+              <ul style={{ margin: "0 0 10px", paddingLeft: 18, display: "flex", flexDirection: "column", gap: 4 }}>
+                {SOURCES.map(s => (
+                  <li key={s.name}>
+                    <span style={{ color: "#c0c0d8" }}>{s.name}</span>
+                    <span style={{ color: "#666" }}> — {s.licence}</span>
+                    {s.url && (
+                      <>
+                        {" "}
+                        <a href={s.url} target="_blank" rel="noreferrer noopener" style={{ color: "#556", fontSize: 11 }}>
+                          source
+                        </a>
+                      </>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              <p style={{ margin: 0, fontSize: 12, color: "#666" }}>
+                Photographs are credited individually beneath the image, with the
+                author and licence where they are known; where they are not, we
+                link to the Wikimedia Commons file page, which carries them. Many
+                are CC BY-SA, whose share-alike terms apply to derivative use.
+                Full detail, including sources we assessed and declined, is in{" "}
+                <code style={{ color: "#777", fontSize: 11 }}>docs/data-sources.md</code>.
               </p>
             </div>
 
