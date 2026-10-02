@@ -104,9 +104,9 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.PHYLUM, 32);
   assert.equal(rc.CLASS, 75);
   assert.equal(rc.ORDER, 383);
-  assert.equal(rc.FAMILY, 5071);
-  assert.equal(rc.GENUS, 57320);
-  assert.equal(rc.SPECIES, 529125);
+  assert.equal(rc.FAMILY, 5070);
+  assert.equal(rc.GENUS, 57292);
+  assert.equal(rc.SPECIES, 529041);
 });
 
 test('root has exactly 32 phylum children', () => {
@@ -389,7 +389,7 @@ test('skeleton node type distribution', () => {
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 383,
-    FAMILY: 5071, GENUS: 57320, SPECIES: 529125,
+    FAMILY: 5070, GENUS: 57292, SPECIES: 529041,
     SUBFAMILY: 8, TRIBE: 10, SUBSPECIES: 851,
     BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
@@ -397,11 +397,11 @@ test('skeleton root rankCounts snapshot', () => {
 
 test('manifest order count snapshot', () => {
   assert.equal(Object.keys(manifest.orders).length, 383);
-  // familyToOrder maps families that have order data files (5070).
-  // The remaining family (of 5071 total) is Tardigrada, inlined in the
+  // familyToOrder maps families that have order data files (5069).
+  // The remaining family (of 5070 total) is Tardigrada, inlined in the
   // skeleton rather than a separate order file.
   const familyToOrderCount = Object.keys(manifest.familyToOrder).length;
-  assert.equal(familyToOrderCount, 5070);
+  assert.equal(familyToOrderCount, 5069);
 });
 
 test('manifest CARNIVORA entry snapshot', () => {
@@ -442,6 +442,13 @@ console.log('\nALL ORDER FILES');
 
 const allOrderFiles = readdirSync(ORDERS_DIR).filter(f => f.endsWith('.json'));
 
+// Halicryptomorpha is deliberately childless. Its only family, Halicryptidae,
+// held jellyfish that had been misfiled into a class of priapulid worms; the
+// data was deleted in 1b6cb3681 and the declaration dropped in c687fa0fd, but
+// the order and class stay so the gap is visible rather than silently absent.
+// See the commit message on c687fa0fd. Any *other* empty order is a bug.
+const KNOWN_EMPTY_ORDERS = new Set(['ORD_HALICRYPTOMORPHA.json']);
+
 test('all 383 order files exist and are valid JSON', () => {
   assert.equal(allOrderFiles.length, 383);
   for (const file of allOrderFiles) {
@@ -449,6 +456,7 @@ test('all 383 order files exist and are valid JSON', () => {
     const data = loadJson<OrderNode>(path);
     assert.equal(data.rank, 'ORDER', `${file}: root rank mismatch`);
     assert.ok(data.children, `${file}: missing children`);
+    if (KNOWN_EMPTY_ORDERS.has(file)) continue;
     assert.ok(data.children!.length > 0, `${file}: empty children`);
   }
 });
@@ -508,11 +516,11 @@ test('all 383 order files exist and are valid JSON', () => {
     checkDups(orderData);
   }
 
-  test('total families across all orders is 5070 (incl. bulk-imported)', () => {
-    // 5071 total families in taxonomy; 5070 in order files (Tardigrada inline is the 1 difference).
-    // 4865 have dedicated data files (manifest.familyToOrder).
+  test('total families across all orders is 5069 (incl. bulk-imported)', () => {
+    // 5070 total families in taxonomy; 5069 in order files (Tardigrada inline is the 1 difference).
+    // 4864 have dedicated data files (manifest.familyToOrder).
     // The remainder are bulk-imported (e.g., beetles) and exist only in order files without appSlug.
-    assert.equal(totalFamilies, 5070);
+    assert.equal(totalFamilies, 5069);
   });
 
   test('>=95% of FAMILY nodes have appSlug', () => {
@@ -568,7 +576,7 @@ test('coverage family count matches taxonomy', () => {
   for (const cls of coverage) {
     familyCount += cls.families.length;
   }
-  assert.equal(familyCount, 5071);
+  assert.equal(familyCount, 5070);
 });
 
 test('every coverage family has portalCount and id prefix; >=99% have className', () => {
@@ -662,7 +670,7 @@ test('every FAMILY in taxonomy has speciesCount; >=95% have appSlug', () => {
     for (const c of n.children ?? []) walk(c);
   }
   walk(taxonomy);
-  assert.equal(familyCount, 5071);
+  assert.equal(familyCount, 5070);
   const pct = (familyCount - missingAppSlug) / familyCount;
   assert.ok(pct >= 0.95, `only ${(pct*100).toFixed(1)}% of taxonomy families have appSlug`);
 });
