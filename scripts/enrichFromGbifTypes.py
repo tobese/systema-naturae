@@ -50,6 +50,9 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from textLanguage import foreign_language  # noqa: E402
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -85,41 +88,9 @@ def strip_label(t):
     return LABEL.sub("", t).strip()
 
 
-# A GBIF treatment is contributed text in whatever language the source
-# publication used, and GBIF does not translate or tag it. The portal is an
-# English interface, so a French or German treatment is not a usable
-# description however good the prose is -- it was showing a reader German
-# morphology for an ant whose panel is otherwise English.
-#
-# Counted by *distinct* foreign function words rather than a stopword list: "die"
-# also occurs inside English words, so one hit proves nothing. Three distinct
-# markers in one paragraph is a language, not a coincidence.
-FOREIGN = {
-    "de": re.compile(r"\b(und|der|die|das|werden|wird|sich|durch|einen|einem|"
-                     r"einer|eines|ungefähr|Länge|Körper|Fühler|Flügel|Beine|"
-                     r"Färbung|Männchen|Weibchen|Gattung|unterscheidet|Merkmale|"
-                     r"Kopf|Brust|Abdomen)\b", re.I),
-    "fr": re.compile(r"\b(le|les|une|des|espèce|genre|famille|habitat|"
-                     r"distribution|longueur|largeur|description|caractères|"
-                     r"exemplaire|mâle|femelle|répartition|phénologie)\b", re.I),
-    "es": re.compile(r"\b(el|los|las|una|uno|especie|género|familia|habitat|"
-                     r"distribución|longitud|anchura|descripción|caracteres|"
-                     r"ejemplar|hábitat)\b", re.I),
-    "it": re.compile(r"\b(il|lo|gli|una|uno|specie|genere|famiglia|habitat|"
-                     r"distribuzione|lunghezza|larghezza|descrizione|"
-                     r"caratteri|esemplare)\b", re.I),
-}
-MIN_FOREIGN = 3
-
-
-def foreign_language(t):
-    """ISO code of the language this text is written in, or None."""
-    for code, rx in FOREIGN.items():
-        if len({m.group(0).lower() for m in rx.finditer(t)}) >= MIN_FOREIGN:
-            return code
-    return None
-
-
+# Language is decided by textLanguage.foreign_language, shared with
+# sanity_scan.py's NON_ENGLISH_DESCRIPTION check so the gate that admits a
+# description and the check that would catch it cannot disagree.
 def looks_like_prose(t):
     """Cheap quality bar for treatment prose."""
     if len(t) < MIN_LEN:

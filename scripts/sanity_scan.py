@@ -53,6 +53,9 @@ import sys
 import time
 from collections import Counter, defaultdict
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from textLanguage import foreign_language  # noqa: E402
+
 # ── vocabulary, matching the fix scripts that resolved each one ───────────────
 
 CONTINENT_MAP = {
@@ -104,9 +107,11 @@ ALL_CHECKS = [
     "DUPLICATE_SPECIES", "EMPTY_GENUS",
     "DUPLICATE_GENUS", "SPECIES_ID_REPEATED", "SYNTHETIC_NAME",
     "MALFORMED_ID", "HYBRID_RANK", "UNRESOLVED_TAXON", "ACCESSION_NAME",
+    "NON_ENGLISH_DESCRIPTION",
 ]
 # The three added later, so --legacy can reproduce the original scope.
 LEGACY_ONLY = ALL_CHECKS[:8]
+
 
 # Names that do not denote a taxon, from GBIF's name parser
 # (`portal/data/name-parse-index.jsonl`, built by scripts/parseAllNamesSliced.sh).
@@ -278,6 +283,11 @@ def main() -> int:
                 desc = (node.get("description") or "").strip()
                 if "SHORT_DESCRIPTION" in checks and desc and len(desc) < MIN_DESCRIPTION:
                     issues.append({"family": family, "issue": "SHORT_DESCRIPTION", "detail": name})
+                if "NON_ENGLISH_DESCRIPTION" in checks and desc:
+                    code = foreign_language(desc)
+                    if code:
+                        issues.append({"family": family, "issue": "NON_ENGLISH_DESCRIPTION",
+                                       "detail": f"{name} ({code}, {len(desc)} chars)"})
                 if "MISSING_SUBSPECIES_COUNT" in checks and "subspeciesCount" not in node:
                     issues.append({"family": family, "issue": "MISSING_SUBSPECIES_COUNT", "detail": name})
                 if "MISSING_CONTINENTS" in checks and not node.get("continents"):

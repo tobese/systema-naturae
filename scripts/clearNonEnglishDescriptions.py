@@ -31,7 +31,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from familyFiles import iter_family_files  # noqa: E402
-from enrichFromGbifTypes import foreign_language  # noqa: E402
+from textLanguage import foreign_language  # noqa: E402
 
 BACKUP = os.path.join("portal", "data", "non-english-descriptions.jsonl")
 
