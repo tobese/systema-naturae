@@ -39,6 +39,10 @@ ORDER_HUE = {
     "Coleorrhyncha": 55,
     "Hemiptera": 145,      # aphid greens
     "Lepidoptera": 18,       # moth browns/ambers, distinct from the butterfly families
+    "Blattodea": 12,          # cockroach reds
+    "Mantophasmatodea": 235,  # heidehunkt violets
+    "Psocodea": 300,        # pale violets
+    "Embioptera": 225,       # steel blue, clear of Plecoptera 205
     "Hymenoptera": 315,
 }
 

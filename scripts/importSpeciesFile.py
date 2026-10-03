@@ -59,6 +59,9 @@ ARCHIVE_SLUG = {s: f"species-file-{s}" for s in (
     "phasmida", "plecoptera", "mantodea", "dermaptera", "grylloblattodea",
     "zoraptera", "coleorrhyncha", "chrysididae")}
 ARCHIVE_SLUG["aphid"] = "aphid-species-file"
+for _s in ("psocodea", "cockroach", "coreoidea", "embioptera", "lygaeoidea",
+           "mantophasmatodea"):
+    ARCHIVE_SLUG.setdefault(_s, f"species-file-{_s}")
 # Not a Species File, but it shares the extract/archive plumbing.
 ARCHIVE_SLUG["afromoths"] = "afromoths"
 ARCHIVE_SLUG.setdefault("orthoptera", "orthoptera")
@@ -105,6 +108,16 @@ ORDER_DIR = {
     "zoraptera": "zoraptera",
     "coleorrhyncha": "coleorrhyncha",
     "aphid": None,          # Aphidomorpha is an infraorder of Hemiptera, not an order
+    # The SFG calls its cockroach file Blattodea, which is the modern placement
+    # (Isoptera, the termites, are folded into Blattodea rather than ranked
+    # separately). Two of the six are superfamilies within Hemiptera and carry no
+    # order of their own, so --out must be given for them.
+    "psocodea": "psocodea",
+    "cockroach": "blattodea",
+    "embioptera": "embioptera",
+    "mantophasmatodea": "mantophasmatodea",
+    "coreoidea": None,
+    "lygaeoidea": None,
     "chrysididae": None,  # a family of Hymenoptera, not an order of its own
 }
 SLUG_RE = re.compile(r"[^a-z0-9]+")
@@ -416,6 +429,13 @@ def main() -> int:
             root["continents"] = conts
 
         buckets = {"SUBFAMILY": {}, "TRIBE": {}, "GENUS": {}}
+        # Sources occasionally list the same species twice -- Geocoris nocturnus
+        # arrived from the Lygaeoidea file with identical name, authorship and year
+        # in two rows. buildData's id scheme is name+authority based, so both
+        # collapse onto one id and the family ships with a duplicated species.
+        # Deduped on the triple that forms that id, which is also the only
+        # definition of "the same species" this data supports.
+        seen_species = set()
         for r in sorted(info["rows"], key=lambda x: x.get("scientificName") or ""):
             rank = RANK_OF[(r.get("taxonRank") or "").lower()]
             nm = nodename(r.get("scientificName") or "")
@@ -440,6 +460,11 @@ def main() -> int:
             node["sourcedFrom"] = f"{args.slug} species file"
 
             if rank in ("SPECIES", "SUBSPECIES"):
+                key = (rank, nm, a, y)
+                if key in seen_species:
+                    stats["skipped-duplicate-species"] += 1
+                    continue
+                seen_species.add(key)
                 node.setdefault("subspeciesCount", 0)
                 node.setdefault("lineage", " > ".join(
                     filter(None, [lin, nodename((next((x for x in chain(r)

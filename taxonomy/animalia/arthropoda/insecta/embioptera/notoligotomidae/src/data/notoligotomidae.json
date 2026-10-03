@@ -2,36 +2,78 @@
   "id": "FAM_NOTOLIGOTOMIDAE",
   "name": "Notoligotomidae",
   "rank": "FAMILY",
-  "commonName": "Notoligotomidae",
-  "description": "Notoligotomidae — a family in the order Embioptera.",
-  "sourcedFrom": "gbif",
   "children": [
     {
-      "id": "GENUS_NOTOLIGOTOMA",
-      "name": "Notoligotoma",
-      "rank": "GENUS",
-      "lineage": "Notoligotoma",
-      "description": "Notoligotoma — a genus in the family Notoligotomidae.",
+      "id": "SUBFAM_NOTOLIGOTOMINAE",
+      "name": "Notoligotominae",
+      "rank": "SUBFAMILY",
       "children": [
         {
-          "id": "SP_NOTOLIGOTOMA_HARDYI",
-          "name": "Notoligotoma hardyi",
-          "rank": "SPECIES",
-          "lineage": "Notoligotoma",
-          "subspeciesCount": 0,
-          "sourcedFrom": "none",
-          "description": ""
-        },
+          "id": "GENUS_NOTOLIGOTOMA_DAVIS_1936",
+          "name": "Notoligotoma",
+          "rank": "GENUS",
+          "authorship": "Davis",
+          "yearPublished": "1936",
+          "sourcedFrom": "embioptera species file",
+          "children": [
+            {
+              "id": "SP_NOTOLIGOTOMA_HARDYI_FRIEDERICHS_1914",
+              "name": "Notoligotoma hardyi",
+              "rank": "SPECIES",
+              "authorship": "(Friederichs, 1914)",
+              "sourcedFrom": "embioptera species file",
+              "subspeciesCount": 0,
+              "lineage": "Notoligotoma",
+              "children": []
+            },
+            {
+              "id": "SP_NOTOLIGOTOMA_NITENS_DAVIS_1936",
+              "name": "Notoligotoma nitens",
+              "rank": "SPECIES",
+              "authorship": "Davis",
+              "yearPublished": "1936",
+              "sourcedFrom": "embioptera species file",
+              "subspeciesCount": 0,
+              "lineage": "Notoligotoma",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SUBFAM_BURMITEMBIINAE",
+      "name": "†Burmitembiinae",
+      "rank": "SUBFAMILY",
+      "children": [
         {
-          "id": "SP_NOTOLIGOTOMA_NITENS",
-          "name": "Notoligotoma nitens",
-          "rank": "SPECIES",
-          "lineage": "Notoligotoma",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikipedia",
-          "description": "Notoligotoma nitens is a species of insect webspinners of the family Notoligotomidae."
+          "id": "GENUS_BURMITEMBIA_COCKERELL_1919",
+          "name": "†Burmitembia",
+          "rank": "GENUS",
+          "authorship": "Cockerell",
+          "yearPublished": "1919",
+          "extinct": true,
+          "sourcedFrom": "embioptera species file",
+          "children": [
+            {
+              "id": "SP_BURMITEMBIA_VENOSA_COCKERELL_1919",
+              "name": "†Burmitembia venosa",
+              "rank": "SPECIES",
+              "authorship": "Cockerell",
+              "yearPublished": "1919",
+              "extinct": true,
+              "sourcedFrom": "embioptera species file",
+              "subspeciesCount": 0,
+              "lineage": "†Burmitembia",
+              "children": []
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "speciesCount": 7,
+  "appSlug": "notoligotomidae",
+  "genusCount": 2,
+  "enrichmentStatus": "empty"
 }

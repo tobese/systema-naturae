@@ -2,43 +2,42 @@
   "id": "FAM_PTHIRIDAE",
   "name": "Pthiridae",
   "rank": "FAMILY",
-  "commonName": "Pthiridae",
-  "description": "Pthiridae — a family in the order Psocodea.",
-  "sourcedFrom": "gbif",
   "children": [
     {
-      "id": "GENUS_PTHIRUS",
+      "id": "GENUS_PTHIRUS_LEACH_1815",
       "name": "Pthirus",
       "rank": "GENUS",
-      "lineage": "Pthirus",
-      "description": "Pthirus — a genus in the family Pthiridae.",
+      "authorship": "Leach",
+      "yearPublished": "1815",
+      "sourcedFrom": "psocodea species file",
       "children": [
         {
-          "id": "SP_PTHIRUS_GORILLAE",
+          "id": "SP_PTHIRUS_GORILLAE_EWING_1927",
           "name": "Pthirus gorillae",
           "rank": "SPECIES",
-          "lineage": "Pthirus",
+          "authorship": "Ewing",
+          "yearPublished": "1927",
+          "sourcedFrom": "psocodea species file",
           "subspeciesCount": 0,
-          "sourcedFrom": "inaturalist",
-          "description": "Pthirus gorillae or gorilla louse is a species of parasitic sucking louse that afflicts gorillas.",
-          "commonName": "Gorilla Louse"
+          "lineage": "Troctomorpha > Pthirus",
+          "children": []
         },
         {
-          "id": "SP_PTHIRUS_PUBIS",
+          "id": "SP_PTHIRUS_PUBIS_LINNAEUS_1758",
           "name": "Pthirus pubis",
           "rank": "SPECIES",
-          "lineage": "Pthirus",
+          "authorship": "(Linnaeus, 1758)",
+          "sourcedFrom": "psocodea species file",
           "subspeciesCount": 0,
-          "sourcedFrom": "gbif",
-          "description": "The crab louse or pubic louse (Pthirus pubis) is an insect that is an obligate ectoparasite of humans, feeding exclusively on blood. The crab louse usually is found in the person's pubic hair. Although the louse cannot jump, it can also live in other areas of the body that are covered with coarse hair, such as the perianal area, the general body hair, and the eyelashes (in children).\nHumans are the only known hosts of the crab louse, although a closely related species, Pthirus gorillae, infects gorillas. The human parasite is thought to have diverged from Pthirus gorillae approximately 3.3 million years ago. It is more distantly related to the genus Pediculus, which contains the human head and body lice and lice that affect chimpanzees and bonobos.",
-          "wikipediaTitle": "Crab louse",
-          "continents": [
-            "Europe",
-            "North America"
-          ],
-          "commonName": "Louse"
+          "lineage": "Troctomorpha > Pthirus",
+          "children": []
         }
       ]
     }
-  ]
+  ],
+  "speciesCount": 3,
+  "appSlug": "pthiridae",
+  "lineage": "Troctomorpha",
+  "genusCount": 1,
+  "enrichmentStatus": "empty"
 }

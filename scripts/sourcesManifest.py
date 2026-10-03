@@ -68,6 +68,43 @@ SOURCES = {
         "butterfly families (Nymphalidae, Papilionidae), these are moths. Needs "
         "a new importer: status is 'accepted' not 'valid', and there is no "
         "vernacularname.txt"),
+    "species-file-psocodea": (
+        "Psocoda Species File", "DOI 10.15468/baeaax",
+        "https://www.gbif.org/dataset/6fb9265c-2d98-40ad-989d-7b6bf4820519",
+        "CC BY 4.0", "applied",
+        "12,113 taxa across 68 families, extending an order we held with 1,096 "
+        "species. No English common names in the source"),
+    "species-file-cockroach": (
+        "Cockroach Species File (Blattodea)", "Species File Group",
+        "https://www.gbif.org/dataset/3e812f13-bd5f-46b6-9bae-710766be526d",
+        "CC BY 4.0", "applied",
+        "5,312 taxa across 9 families; created the Blattodea order, which "
+        "includes the termites (Isoptera is not ranked separately). 13,436 "
+        "distribution rows and 144 English common names"),
+    "species-file-coreoidea": (
+        "Coreoidea Species File", "Species File Group",
+        "https://www.gbif.org/dataset/e0a61544-c923-4fd7-8ed1-9b692655cf6b",
+        "CC BY 4.0", "applied",
+        "3,843 taxa across 7 families. A superfamily, so its families were "
+        "placed under Hemiptera with the superfamily kept in lineage -- our "
+        "ranks have no tier between ORDER and FAMILY"),
+    "species-file-lygaeoidea": (
+        "Lygaeoidea Species File", "Species File Group",
+        "https://www.gbif.org/dataset/ca694ebf-2b52-4c67-b2e1-0f423149401c",
+        "CC BY 4.0", "applied",
+        "5,986 taxa across 16 families, also flattened into Hemiptera. No "
+        "distribution rows at all -- names and structure only"),
+    "species-file-embioptera": (
+        "Embioptera Species File", "Species File Group",
+        "https://www.gbif.org/dataset/203863b6-2adb-43f8-b648-959bcbaec091",
+        "CC BY 4.0", "applied",
+        "544 taxa across 16 families, extending an order we held with 272"),
+    "species-file-mantophasmatodea": (
+        "Mantophasmatodea Species File", "Species File Group",
+        "https://www.gbif.org/dataset/c5b58f9d-54b3-4ecf-933e-a9f785a54924",
+        "CC BY 4.0", "applied",
+        "48 taxa across 2 families; created the order. Only 25 valid species in "
+        "the source -- the order is far larger as fossils"),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",

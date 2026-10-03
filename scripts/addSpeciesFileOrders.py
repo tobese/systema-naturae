@@ -129,6 +129,80 @@ ORDERS = {
                        "which is why the order sat alone in its own superfamily for "
                        "decades.",
     },
+    # The six remaining SFG checklists. Three extend orders we already had --
+    # Psocodea and Embioptera were present with a handful of families each, and
+    # the two hemipteran superfamilies flatten into Hemiptera because our rank
+    # vocabulary has no superfamily between ORDER and FAMILY.
+    "psocodea": {
+        "name": "Psocodea", "commonName": "Barklice and booklice",
+        "description": "Psocodea unites the barklice (Psocoptera) and the "
+                       "parasitic parasitic lice (Paraneoptera), which between them "
+                       "span almost the whole range from scavengers on bark and "
+                       "lichen to wingless blood-feathers that live entirely on "
+                       "mammals and birds. They are small, soft-bodied insects "
+                       "recognisable by a large head, long antennae and a bulbous "
+                       "thorax, and they have been remarkably successful in damp, "
+                       "unstable habitats where almost nothing else can live -- leaf "
+                       "litter, bark, stored grain and the nests of birds and "
+                       "mammals. Their closest relatives are the aphids and the "
+                       "whiteflies, and together the two groups are called "
+                       "Paraneoptera.",
+    },
+    "embioptera": {
+        "name": "Embioptera", "commonName": "Webspinners",
+        "description": "Embioptera, the webspinners, are a small order of insects "
+                       "defined by silk: both sexes spin silk from glands on swollen "
+                       "tarsal segments and live in galleries in a silken tunnel "
+                       "through a leaf or bark, lines of which radiate from the "
+                       "entrance to guide returning foragers. The silk-making "
+                       "fore-tarsi are unique among insects and the order has no "
+                       "close relatives, so it stands alone. Webspinners favour "
+                       "humid tropical and subtropical habitats, live under bark or "
+                       "in leaf litter, and eat dead plant material and small "
+                       "arthropods. A few have lost the silk glands and become "
+                       "conventional terrestrial insects.",
+    },
+    "cockroach": {
+        "name": "Blattodea", "commonName": "Cockroaches and termites",
+        "description": "Blattodea in its modern sense takes in the cockroaches and "
+                       "the termites, the latter no longer ranked separately as "
+                       "Isoptera: they are the closest relatives of the cockroaches, "
+                       "and the genetic evidence for that is strong. Cockroaches are "
+                       "flattened, dorsoventrally compressed, cursorial scavengers "
+                       "with an omnivorous diet and a near-universal ability to "
+                       "survive weeks without food and weeks without water, which is "
+                       "why a handful of species dominate our domestic pests while "
+                       "roughly 4,500 remain outdoor and harmless. Termites "
+                       "superficially resemble them and convergently solve a "
+                       "similar problem -- eating cellulose, which few animals can "
+                       "digest -- but differ in having a worker caste of sterile "
+                       "individuals, complete sociality in the advanced lineages, "
+                       "and gut symbionts rather than external cellulose digestion.",
+    },
+    "mantophasmatodea": {
+        "name": "Mantophasmatodea", "commonName": "Heidehunts",
+        "description": "Mantophasmatodea, the heidehunts, are a small and ancient "
+                       "order of insects with no living relatives outside it, and "
+                       "with two species extending into southern Africa -- "
+                       "Mantispidae sharing the order name -- where they occupy "
+                       "somewhat the same ground as the Mantodea. They combine "
+                       "predatory forelegs, so they are convergent analogues of "
+                       "mantises, with a raptorial foreleg that lacks the mantid "
+                       "spines and clasps instead, with a characteristic posture "
+                       "holding the head and thorax upright and the forelegs folded "
+                       "against the body. Many more species are known as fossils, and "
+                       "the order is among the most frequently cited in arguments "
+                       "about whether the earliest winged insects had grasping or "
+                       "sucking mouthparts.",
+    },
+    "coreoidea": {
+        "parent": "Hemiptera", "name": "Coreoidea",
+        "commonName": None, "description": None,
+    },
+    "lygaeoidea": {
+        "parent": "Hemiptera", "name": "Lygaeoidea",
+        "commonName": None, "description": None,
+    },
     # The Aphid Species File covers infraorder Aphidomorpha. We hold no
     # Hemiptera at all, so it creates the order -- but only Aphidomorpha of it,
     # which the description says rather than letting a reader assume the order
