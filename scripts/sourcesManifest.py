@@ -52,12 +52,11 @@ SOURCES = {
     "aphid-species-file": (
         "Aphid Species File", "DOI 10.15468/v4tboe",
         "https://www.gbif.org/dataset/214c3109-d37a-40f8-9c24-5b6e59915394",
-        "CC BY 4.0", "ready",
-        "NOT YET APPLIED. 5,544 species across 32 families, infraorder "
-        "Aphidomorpha. 0% name overlap with the tree -- we hold no Hemiptera at "
-        "all, so this is an entire order. Also 5,067 synonyms. Dry run verified "
-        "against importSpeciesFile.py; distribution is thin (664 rows). Needs "
-        "taxonomy scaffolding for a new Hemiptera order"),
+        "CC BY 4.0", "applied",
+        "IMPORTED. 5,544 species across 32 families, infraorder Aphidomorpha; "
+        "created the Hemiptera order, which we did not have at all. Only 3 of "
+        "the 32 families are extant, the rest are daggered fossils. "
+        "Distribution is thin (664 rows); 5,067 synonyms remain unapplied"),
     "afromoths": (
         "Afromoths -- Afrotropical moths", "DOI 10.15468/s1kwuw",
         "https://www.gbif.org/dataset/65c9103f-2fbf-414b-9b0b-e47ca96c5df2",
