@@ -33,6 +33,9 @@ Burundi
 Cabinda
 Cameroon
 Cape Verde
+Desventuradas Is
+Desventurados Is.
+Desventurados Is.
 Caprivi Strip
 Central African Republic
 Chad
@@ -107,7 +110,6 @@ China North-central
 China South-central
 China Southeast
 Christmas I
-Cyprus
 East Himalaya
 Eastern Asia
 Hainan
@@ -191,12 +193,10 @@ EUROPE = """
 Albania
 Altay
 Austria
-Azores
 Baltic States
 Belarus
 Belgium
 Bulgaria
-Chita
 Corse
 Cyprus
 Denmark
@@ -239,11 +239,9 @@ Føroyar
 """
 
 NORTH_AMERICA = """
-Africa
 Alabama
 Alaska
 Alberta
-Azores
 Bahamas
 Baleares
 Belize
@@ -262,7 +260,6 @@ Dominican Republic
 Eastern Canada
 El Salvador
 Florida
-Galapagos
 Guatemala
 Gulf States
 Haiti
@@ -343,7 +340,6 @@ District of Columbia
 Northwest Territories
 Quebec
 Panama
-Galapagos
 Northern America
 Northeastern U.S.A
 Northwestern U.S.A
@@ -356,9 +352,7 @@ Turks-Caicos Is
 Prince Edward I
 South-Central U.S.A
 Central American Pacific Is
-Desventuradas Is
 Nunavut
-Desventuradas Is.
 """
 
 SOUTH_AMERICA = """
@@ -386,7 +380,6 @@ Guyana
 Paraguay
 Peru
 Surinam
-Trinidad-Tobago
 Uruguay
 Venezuela
 Falkland Is
@@ -405,9 +398,7 @@ Chatham Is
 Fiji
 Gilbert Is
 Juan Fernandez Is
-Leeward Is
 Lesser Sunda Is
-Maluka
 Marianas
 Marquesas
 Marshall Is
@@ -434,7 +425,6 @@ Tuvalu
 Vanuatu
 Victoria
 Western Australia
-Windward Is
 Bismarck Archipelago
 Caroline Is
 Chatham Is
@@ -446,8 +436,6 @@ Solomon Is
 Norfolk Is
 Gilbert Is
 Mexican Pacific Is
-Leeward Is
-Windward Is
 Marianas
 Papuasia
 Samoa
@@ -567,10 +555,30 @@ def _fold(name: str) -> str:
 
 
 def _build():
+    """Flatten the blocks, refusing to let one silently overwrite another.
+
+    A name listed under two continents used to resolve to whichever block came
+    last in GROUPS, which hid nine wrong answers: Azores, Cyprus and Chita were
+    all overwritten into the wrong continent, Galapagos into North America, and
+    "Leeward Is"/"Windward Is" out of the Caribbean and into Australia. Nothing
+    reported it -- the table just quietly asserted the wrong thing, and the
+    continents reached the tree. So a conflict is now a hard error, and the fix
+    is to say which block was right.
+    """
     table = {}
+    home: dict[str, str] = {}
+    conflicts = []
     for continent, block in GROUPS.items():
         for name in _lines(block):
+            if name in home and home[name] != continent:
+                conflicts.append(f"{name!r}: {home[name]} and {continent}")
+                continue
+            home.setdefault(name, continent)
             table[name] = [continent]
+    if conflicts:
+        raise AssertionError(
+            "Locality listed under two continents -- keep it in one block:\n  "
+            + "\n  ".join(sorted(conflicts)))
     for name, value in MULTI.items():
         table[name] = list(value)
     return table
