@@ -45,6 +45,17 @@ SOURCES = {
         "applied",
         "taxonomy backbone, vernacular names, country codes; the GBIF enrichers "
         "key off GBIF canonical names"),
+    # Not an archive: the iNaturalist ledger is 31MB of gitignored JSON under
+    # portal/data/, regenerable by scripts/fetchInatCommonNames.py, so it is not
+    # stored under sources/. Recorded here because it is applied data and its
+    # licence is the one NC exception in the project.
+    "inaturalist": (
+        "iNaturalist taxa and names", "iNaturalist API",
+        "https://www.inaturalist.org",
+        "CC BY-NC 4.0 for data (photographs are separate, per-photo licences)",
+        "applied",
+        "10,485 species common names, filling empty slots only. Ledger is "
+        "gitignored at portal/data/inat-common-names.jsonl, not archived here"),
     "wcvp": (
         "WCVP — World Checklist of Vascular Plants", "POWO/WCVP",
         "https://powo.science.kew.org/about/wcvp", "CC BY",
@@ -149,6 +160,11 @@ SOURCES = {
 }
 
 
+# Applied sources whose payload is regenerable and deliberately not archived, so
+# the "no archive on disk" warning should not fire for them every run.
+NO_ARCHIVE = {"inaturalist"}
+
+
 def sha256(path, chunk=1 << 20):
     h = hashlib.sha256()
     with open(path, "rb") as fh:
@@ -236,7 +252,8 @@ def main() -> int:
     print(f"  {len(doc['sources'])} datasets · archives {tot/1e9:.2f} GB · "
           f"work {wtot/1e9:.2f} GB")
     print("  status:", ", ".join(f"{k} {v}" for k, v in sorted(counts.items())))
-    missing = [s for s, r in doc["sources"].items() if not r["archive"]["files"]]
+    missing = [s for s, r in doc["sources"].items()
+               if not r["archive"]["files"] and s not in NO_ARCHIVE]
     if missing:
         print(f"  WARNING no archive on disk: {', '.join(missing)}")
     return 0

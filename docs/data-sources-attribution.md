@@ -30,6 +30,7 @@ previously did not have. None of that was covered by the previous gathering.
 | `wikipedia` | Wikipedia article text | **CC BY-SA 4.0** (share-alike) | Required | 125,504 |
 | `gbif` | GBIF species descriptions & vernacular | Per-dataset: CC0 / CC BY / CC BY-NC | Required (BY/BY-NC) | 200,677 |
 | `powo` | Plants of the World Online (RBG Kew) | **CC BY** | Required | 208,513 |
+| `inaturalist` | **iNaturalist** research-grade observations / taxa (names only, no images) | **CC BY-NC 4.0** (data) | Required + **NC — see Licensing risk** | 10,485 |
 | `orthoptera species file` | **Orthoptera Species File** (GBIF `af66d4cf-…`, DOI 10.15468/nn7jhc) | **CC BY 4.0** | Required | 35,761 |
 | `plecoptera species file` | **Plecoptera Species File (stoneflies)** | **CC BY 4.0** | Required | 3,910 |
 | `phasmida species file` | **Phasmida Species File (stick insects)** | **CC BY 4.0** | Required | 3,286 |
@@ -133,6 +134,18 @@ restrictive terms; CC BY-NC can propagate):
 ---
 
 ## Licensing risk (action needed before publishing)
+
+> **Known, deliberate exception: iNaturalist.** 10,485 species have
+> `sourcedFrom: "inaturalist"`. iNaturalist's *data* — names and ranks — is
+> **CC BY-NC 4.0**, unlike its photographs, which are mostly CC BY / CC BY-SA /
+> public domain. Every other bulk source here is openly licensed, so this is the
+> single import that breaks that story, and it is a decision rather than an
+> oversight: the yield is 0.9% of all missing common names, which does not
+> justify refusing the whole dataset on its own. It only touches species that had
+> **no** common name at all, so nothing better-sourced is displaced. If the portal
+> ever needs to be commercial, these 10,485 names are the thing to strip — they
+> are all tagged, so `sourcedFrom: "inaturalist"` is the removal predicate.
+>
 
 Most of our bulk data (`wikipedia`, `powo`, `gbif`, IPNI/IFPNI/ALA/WFO in
 `websearch`) is **openly licensed** and only needs **attribution** (plus

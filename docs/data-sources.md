@@ -153,3 +153,28 @@ sidecar predate any licence check. Currently **0 NC/ND** entries are present.
    NZPCN, SANBI) are still unresolved — ~8 species. See the attribution doc.
 5. **669,002 nodes carry no `sourcedFrom`** and cannot be attributed from the
    data alone.
+
+## iNaturalist (CC BY-NC 4.0, deliberate exception)
+
+Fetched as a gap-filler for the 1.1M species with no common name. The sweep
+collected 165,679 distinct names across all 5,651 pages; measured against the
+tree it fills **10,485** species — 0.9%.
+
+Names only. No images were taken from it: iNaturalist *photographs* are mostly
+CC BY / CC BY-SA / public domain and mostly already represented via Wikimedia
+Commons, whereas its *data* is CC BY-NC 4.0. So the one part that is freely
+licensed is the part we did not need, and the part we did take is the part that
+is NC.
+
+Applied by `scripts/applyInatCommonNames.py`, which fills only empty
+`commonName` slots — nothing from GBIF, Wikipedia or POWO is displaced, which is
+why a crowdsourced source is tolerable here at all. Three names are skipped
+rather than guessed: iNaturalist keys on the binomial alone, so a homonym gets
+whichever name each taxon happens to have, and `Ficus variegata` turns up as
+both a plant and a fig shell.
+
+The ledger (`portal/data/inat-common-names.jsonl`, 31 MB, 175,496 rows) is
+gitignored and lives on this machine rather than under `sources/`, since it is
+regenerable by `scripts/fetchInatCommonNames.py` and is the only artefact here
+that is not an archive.
+
