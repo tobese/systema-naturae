@@ -14,6 +14,7 @@ https://www.gbif.org/dataset/e01b0cbb-a10a-420c-b5f3-a3b20cc266ad
 
 https://www.gbif.org/dataset/214c3109-d37a-40f8-9c24-5b6e59915394
 
+https://www.gbif.org/dataset/6fb9265c-2d98-40ad-989d-7b6bf4820519
 ```
 
 ---
@@ -47,7 +48,10 @@ from the outside and only one of them is fixable by re-fetching.
 
 | Dataset | Verdict | Where it ended up |
 |---|---|---|
-| _(nothing triaged yet)_ | | |
+| [World Spider Catalog](https://www.gbif.org/dataset/80dd9c94-241b-4d49-999f-c89de7648525) | already assessed | Duplicate — indexed since 2026-10-02. 487 synonyms and a continent map for 17,492 of the 18,710 continent-less araneae are still unapplied, which is the highest-value spider work outstanding. |
+| [Afromoths](https://www.gbif.org/dataset/65c9103f-2fbf-414b-9b0b-e47ca96c5df2) | **ready** | Downloaded (6.4 MB). 29,983 accepted species, 137 families, **91,005 distribution rows**. Needs a new importer. |
+| [Aphid Species File](https://www.gbif.org/dataset/214c3109-d37a-40f8-9c24-5b6e59915394) | **ready** | Downloaded (3.5 MB). 5,544 species, 32 families. Dry run already passes on existing tooling. |
+| [ICTV Master Species List](https://www.gbif.org/dataset/e01b0cbb-a10a-420c-b5f3-a3b20cc266ad) | assessed | Not importable. Covers viruses, which belong to none of the six kingdoms in `kingdom-config.json`. Its declared archive endpoint 404s as well. |
 
 Verdicts: **applied** · **partial** · **ready** (downloadable, unapplied) ·
 **assessed** (measured, nothing taken) · **refused** (licence).

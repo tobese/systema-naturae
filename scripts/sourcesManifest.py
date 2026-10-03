@@ -49,6 +49,25 @@ SOURCES = {
     # portal/data/, regenerable by scripts/fetchInatCommonNames.py, so it is not
     # stored under sources/. Recorded here because it is applied data and its
     # licence is the one NC exception in the project.
+    "aphid-species-file": (
+        "Aphid Species File", "DOI 10.15468/v4tboe",
+        "https://www.gbif.org/dataset/214c3109-d37a-40f8-9c24-5b6e59915394",
+        "CC BY 4.0", "ready",
+        "NOT YET APPLIED. 5,544 species across 32 families, infraorder "
+        "Aphidomorpha. 0% name overlap with the tree -- we hold no Hemiptera at "
+        "all, so this is an entire order. Also 5,067 synonyms. Dry run verified "
+        "against importSpeciesFile.py; distribution is thin (664 rows). Needs "
+        "taxonomy scaffolding for a new Hemiptera order"),
+    "afromoths": (
+        "Afromoths -- Afrotropical moths", "DOI 10.15468/s1kwuw",
+        "https://www.gbif.org/dataset/65c9103f-2fbf-414b-9b0b-e47ca96c5df2",
+        "CC BY 4.0", "ready",
+        "NOT YET APPLIED. 29,983 accepted species across 137 families, and the "
+        "standout is 91,005 distribution rows over 136 localities -- far richer "
+        "than any checklist so far. 0% overlap: our Lepidoptera is two "
+        "butterfly families (Nymphalidae, Papilionidae), these are moths. Needs "
+        "a new importer: status is 'accepted' not 'valid', and there is no "
+        "vernacularname.txt"),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",

@@ -51,13 +51,32 @@ SLUG = "orthoptera"
 SRC = _wd(SLUG) + "/ortho"
 
 
+# slug -> archive directory under sources/archives/. Explicit because the
+# convention is not derivable: the Orthoptera archive is "orthoptera", the eight
+# sibling checklists are "species-file-<slug>", and the Aphid Species File is
+# "aphid-species-file" -- its name reads backwards from the others.
+ARCHIVE_SLUG = {s: f"species-file-{s}" for s in (
+    "phasmida", "plecoptera", "mantodea", "dermaptera", "grylloblattodea",
+    "zoraptera", "coleorrhyncha", "chrysididae")}
+ARCHIVE_SLUG["aphid"] = "aphid-species-file"
+ARCHIVE_SLUG.setdefault("orthoptera", "orthoptera")
+
+
+def archive_for(slug: str) -> str:
+    key = ARCHIVE_SLUG.get(slug)
+    if key is None:
+        sys.exit(f"FATAL: no archive mapping for slug {slug!r}.\n"
+                 f"       Add it to ARCHIVE_SLUG in {os.path.basename(__file__)}.")
+    return _ad(key)
+
+
 def work_dir_for(slug: str) -> str:
     """Where a slug's extracted tree belongs under sources/work/."""
-    return _wd("orthoptera" if slug == "orthoptera" else f"species-file-{slug}") + f"/{slug}"
+    return _wd(ARCHIVE_SLUG.get(slug, slug)) + f"/{slug}"
 
 
 def ensure_extracted(slug: str, dest: str, marker: str = "taxon.txt") -> str:
-    """Unpack the archive into work/<slug>/ if it is not already there."""
+    """Unpack the archive into work/<archive-slug>/ if it is not already there."""
     if os.path.exists(os.path.join(dest, marker)):
         return dest
     adir = _ad(slug)
@@ -83,6 +102,7 @@ ORDER_DIR = {
     "grylloblattodea": "grylloblattodea",
     "zoraptera": "zoraptera",
     "coleorrhyncha": "coleorrhyncha",
+    "aphid": None,          # Aphidomorpha is an infraorder of Hemiptera, not an order
     "chrysididae": None,  # a family of Hymenoptera, not an order of its own
 }
 SLUG_RE = re.compile(r"[^a-z0-9]+")
@@ -187,8 +207,7 @@ def main() -> int:
         out = args.out
     else:
         out = os.path.join(INSECTA, order)
-    src = args.src or ensure_extracted(f"species-file-{args.slug}"
-                                       if args.slug != "orthoptera" else SLUG,
+    src = args.src or ensure_extracted(ARCHIVE_SLUG.get(args.slug, args.slug),
                                        work_dir_for(args.slug))
     rows = list(csv.DictReader(
         open(f"{src}/taxon.txt", newline="", encoding="utf-8", errors="replace"),
