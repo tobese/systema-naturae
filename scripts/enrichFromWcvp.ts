@@ -16,12 +16,13 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from "fs";
 import { resolve, dirname, join, sep } from "path";
 import { fileURLToPath } from "url";
+import { workFile } from "./paths";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
 const CACHE_PATHS = [
-  "/Volumes/MacieExternal/tmp/opencode/wcvp-cache.json",
+  workFile("wcvp", "wcvp-cache.json"),
   resolve(root, "portal", "data", "wcvp-cache.json"),
 ];
 

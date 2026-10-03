@@ -36,13 +36,34 @@ import os
 import re
 import shutil
 import sys
+import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from osfLocalities import continent_for  # noqa: E402
+from sources import archive_dir as _ad, work_dir as _wd  # noqa: E402
 
 csv.field_size_limit(10_000_000)
 
-SRC = "/Volumes/MacieExternal/tmp/opencode/ortho"
+# The extracted tree lives in work/ and the .zip in archives/, so the work copy
+# is disposable. Unpacking on demand is what makes that split safe: if someone
+# clears work/ to reclaim the 7GB, the next run rebuilds it rather than failing.
+SLUG = "orthoptera"
+SRC = _wd(SLUG) + "/ortho"
+
+
+def ensure_extracted(slug: str, dest: str, marker: str = "taxon.txt") -> str:
+    """Unpack the archive into work/<slug>/ if it is not already there."""
+    if os.path.exists(os.path.join(dest, marker)):
+        return dest
+    adir = _ad(slug)
+    zips = [f for f in os.listdir(adir) if f.endswith((".zip", ".tgz", ".tar.gz"))]
+    if not zips:
+        sys.exit(f"FATAL: no archive for '{slug}' in {adir}")
+    os.makedirs(dest, exist_ok=True)
+    print(f"  unpacking {zips[0]} -> {dest}", flush=True)
+    with zipfile.ZipFile(os.path.join(adir, zips[0])) as z:
+        z.extractall(dest)
+    return dest
 OUT_ROOT = os.path.join("taxonomy", "animalia", "arthropoda", "insecta", "orthoptera")
 SLUG_RE = re.compile(r"[^a-z0-9]+")
 
@@ -127,13 +148,14 @@ def iter_genera(node):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", default=SRC)
+    ap.add_argument("--src", default="", help="override the extracted source directory")
     ap.add_argument("--out", default=OUT_ROOT)
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
 
+    src = args.src or ensure_extracted(SLUG, SRC)
     rows = list(csv.DictReader(
-        open(f"{args.src}/taxon.txt", newline="", encoding="utf-8", errors="replace"),
+        open(f"{src}/taxon.txt", newline="", encoding="utf-8", errors="replace"),
         delimiter="\t"))
     by_id = {r["id"]: r for r in rows}
 
@@ -151,7 +173,7 @@ def main() -> int:
 
     # ---- distribution, by taxon id ----
     dist = collections.defaultdict(set)
-    for r in csv.DictReader(open(f"{args.src}/distribution.txt", newline="",
+    for r in csv.DictReader(open(f"{src}/distribution.txt", newline="",
                                  encoding="utf-8", errors="replace"), delimiter="\t"):
         loc = (r.get("locality") or "").strip()
         if not loc:
@@ -164,7 +186,7 @@ def main() -> int:
     # 7 Spanish. Importing the lot would repeat the mistake of af5669043, which
     # wrote Chinese and Japanese names into the tree as English ones.
     common = collections.defaultdict(list)
-    for r in csv.DictReader(open(f"{args.src}/vernacularname.txt", newline="",
+    for r in csv.DictReader(open(f"{src}/vernacularname.txt", newline="",
                                  encoding="utf-8", errors="replace"), delimiter="\t"):
         if (r.get("language") or "").strip().lower() not in ("english", "en", "eng"):
             continue

@@ -186,7 +186,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--index", default=DEFAULT_INDEX)
     ap.add_argument("--xlsx", help="parse this local MBList.xlsx instead of downloading")
-    ap.add_argument("--cache-dir", default="/Volumes/MacieExternal/tmp/opencode")
+    ap.add_argument("--cache-dir", default=None)
     ap.add_argument("--report", action="store_true", help="print stats, write nothing")
     args = ap.parse_args()
 

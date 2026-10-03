@@ -30,6 +30,9 @@ Output: portal/data/wcvp-cache.json
 import json
 import os
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sources import work_dir as _wd, archive_dir as _ad  # noqa: E402
 import time
 import urllib.request
 import zipfile
@@ -37,10 +40,10 @@ import io
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 OUT_PATH = os.path.join(ROOT, "portal", "data", "wcvp-cache.json")
-EXTERNAL_PATH = "/Volumes/MacieExternal/tmp/opencode/wcvp-cache.json"
+EXTERNAL_PATH = _wd("wcvp") + "/wcvp-cache.json"
 
 WCVP_URL = "http://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip"
-LOCAL_ZIP = "/Volumes/MacieExternal/tmp/opencode/wcvp_dwca.zip"
+LOCAL_ZIP = _ad("wcvp") + "/wcvp_dwca.zip"
 TAXON_FILE = "wcvp_taxon.csv"
 DIST_FILE = "wcvp_distribution.csv"
 

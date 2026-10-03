@@ -28,11 +28,14 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sources import work_file as _wf  # noqa: E402
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from familyFiles import iter_family_files  # noqa: E402
 from canonicalNames import _load as load_canonical  # noqa: E402
 
 SIDECAR = os.path.join("shared", "data", "wiki-images.json")
-COMMONS = "/Volumes/MacieExternal/tmp/opencode/commons_new_images.json"
+COMMONS = sources.work_file("wikimedia-commons", "commons_new_images.json")
 
 # Refuse anything that forbids commercial use or derivatives. Checked against the
 # licence URL, and "no known copyright restrictions" is treated as public domain

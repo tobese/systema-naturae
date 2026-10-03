@@ -8,7 +8,7 @@
  * against the GBIF backbone, then their species are paginated via
  * higherTaxonKey (the proper taxonomic filter).
  *
- * Output: /Volumes/MacieExternal/tmp/opencode/gbif-cache-nonvascular.json
+ * Output: sources/work/gbif-nonvascular/gbif-cache-nonvascular.json
  *   (with a local fallback portal/data/gbif-cache-nonvascular.json)
  *
  * Resume-safe: already-cached families are skipped on re-run.
@@ -20,13 +20,14 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { workFile } from "./paths";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
 const TAX_PATH = resolve(root, "portal", "data", "taxonomy-plantae-snippet.json");
 const OUT_PATHS = [
-  "/Volumes/MacieExternal/tmp/opencode/gbif-cache-nonvascular.json",
+  workFile("gbif-nonvascular", "gbif-cache-nonvascular.json"),
   resolve(root, "portal", "data", "gbif-cache-nonvascular.json"),
 ];
 

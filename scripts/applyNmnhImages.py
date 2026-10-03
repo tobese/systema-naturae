@@ -20,11 +20,14 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sources import work_file as _wf  # noqa: E402
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from familyFiles import iter_family_files  # noqa: E402
 from canonicalNames import _load as load_canonical  # noqa: E402
 
 SIDECAR = os.path.join("shared", "data", "wiki-images.json")
-NMNH = "/Volumes/MacieExternal/tmp/opencode/nmnh_media.json"
+NMNH = _wf("nmnh", "nmnh_media.json")
 # h= is the delivery service's height parameter; 800 keeps the panel's payload
 # sane next to the 600px Commons thumbnails useWikiImages asks for.
 HEIGHT = 800

@@ -14,12 +14,13 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { workFile } from "./paths";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
 const CACHE_PATHS = [
-  "/Volumes/MacieExternal/tmp/opencode/gbif-cache-nonvascular.json",
+  workFile("gbif-nonvascular", "gbif-cache-nonvascular.json"),
   resolve(root, "portal", "data", "gbif-cache-nonvascular.json"),
 ];
 const TAX_PATH = resolve(root, "portal", "data", "taxonomy-plantae-snippet.json");
