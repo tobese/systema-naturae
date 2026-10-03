@@ -105,6 +105,17 @@ SOURCES = {
         "CC BY 4.0", "applied",
         "48 taxa across 2 families; created the order. Only 25 valid species in "
         "the source -- the order is far larger as fossils"),
+    "zoobank": (
+        "ZooBank -- ICZN Official Register", "Zoobank LSID",
+        "https://zoobank.org", "open access registry; per-publication rights vary",
+        "assessed",
+        "NOT APPLIED. Reachable (the site gate is one confirmation per IP, not a "
+        "block) and it is the only nomenclatural authority we have for animals, "
+        "but measured coverage of our unauthenticated names is 8.8% +/- 1.4% over "
+        "400 queries, projecting to ~34,600 of 395,528. Reaching even those means "
+        "querying every candidate -- about seven days sequential -- against a "
+        "service asking for less automated traffic. Worth doing if a bulk dump "
+        "ever appears"),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",
@@ -218,7 +229,7 @@ SOURCES = {
 
 # Applied sources whose payload is regenerable and deliberately not archived, so
 # the "no archive on disk" warning should not fire for them every run.
-NO_ARCHIVE = {"inaturalist"}
+NO_ARCHIVE = {"inaturalist", "zoobank"}
 
 
 def sha256(path, chunk=1 << 20):

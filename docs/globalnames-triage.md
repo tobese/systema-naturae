@@ -55,18 +55,59 @@ result, and the port bounds those reads instead. Distances are unaffected.
 the reconciliation backlogs. It should not silently collapse two names, because
 near-identical spellings sometimes denote genuinely distinct taxa.
 
-## Not usable
+## Reachable, measured, and not worth sweeping
 
 ### ZooBank
 
-The ICZN Official Register, and the most valuable thing on the page: a
-nomenclatural authority for animal names, which we have no equivalent for. It is
-behind a human-verification wall, asking callers to confirm they are not a robot
-because of "extremely high demand" and volume from automated traffic.
+I first recorded ZooBank as unusable, on the grounds that its site sits behind a
+human-verification wall. **That was wrong**, and worth correcting: the wall is one
+confirmation per IP address, so it clears once and the API is open afterwards.
+`https://zoobank.org/NomenclaturalActs.json?search_term=...` answers in about
+1.5 s with the nomenclatural act — authorship, year, publication, and an LSID.
 
-Not workable for bulk lookup against ~1M animal names, and hammering a service
-that has asked not to be hammered is not the trade. Revisit if ZooBank publishes
-a bulk dump.
+It is the only nomenclatural authority we have for animals, and the potential is
+large: **395,528 of our 634,055 animalia species (62.4%) carry no authorship at
+all.** So the question is not whether it works but whether it is worth the traffic.
+
+Measured with `scripts/measureZooBankCoverage.py`, which is sequential,
+rate-limited and caches, because ZooBank's own notice says they are "experiencing
+extremely high demand" and are "testing a new system to block the high volume of
+web traffic from robots":
+
+```
+  answered 400   hits 35   misses 365
+  coverage 8.8% +/- 1.4%  (95% CI 6.0-11.5%)
+  projected over 395,528 names: ~34,600 authorship records
+```
+
+**8.8%.** ZooBank registers names that are nomenclaturally available under the
+ICZN Code, which in practice means recently published names plus a legacy
+backlog; our unauthenticated names skew old and obscure, which is exactly the
+wrong end of the distribution.
+
+Getting those ~34,600 records means querying all 395,528 candidates, because there
+is no way to know in advance which 8.8% will answer: roughly seven days
+sequential, or about a day at six concurrent requests, against a service that has
+asked for less automated traffic. A week of continuous traffic for under a tenth
+of one field is a poor trade, and it risks the access.
+
+**Recommendation: do not sweep.** If ZooBank ever publishes a bulk dump, this
+becomes a half-hour job and worth doing immediately. Until then it is worth using
+only in small, targeted batches — type species of families, or names whose
+authorship the eponyms view depends on.
+
+Two practical notes for anyone who does use it:
+
+- **A 404 means "no such act", not "request failed".** It is indistinguishable from
+  an unknown endpoint unless you know it, and reading it as a transport error made
+  the first run report *100% of answered queries matched* when the honest figure
+  was 18 in 120.
+- **The `label` field duplicates fragments.** An act comes back as
+  `"phaeobalius Kraus & Allison 2009 2009"`, or
+  `"spirizona de Férussac in de Férussac in de Férussac 1821"`. Strip the epithet
+  prefix and hand the rest to GNparser, which recovers authorship and year
+  separately; 33 of 35 sampled records came out clean that way, and the remainder
+  keep the duplication.
 
 ## Not applicable
 
