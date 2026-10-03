@@ -51,6 +51,11 @@ SLUG = "orthoptera"
 SRC = _wd(SLUG) + "/ortho"
 
 
+def work_dir_for(slug: str) -> str:
+    """Where a slug's extracted tree belongs under sources/work/."""
+    return _wd("orthoptera" if slug == "orthoptera" else f"species-file-{slug}") + f"/{slug}"
+
+
 def ensure_extracted(slug: str, dest: str, marker: str = "taxon.txt") -> str:
     """Unpack the archive into work/<slug>/ if it is not already there."""
     if os.path.exists(os.path.join(dest, marker)):
@@ -64,7 +69,22 @@ def ensure_extracted(slug: str, dest: str, marker: str = "taxon.txt") -> str:
     with zipfile.ZipFile(os.path.join(adir, zips[0])) as z:
         z.extractall(dest)
     return dest
-OUT_ROOT = os.path.join("taxonomy", "animalia", "arthropoda", "insecta", "orthoptera")
+INSECTA = os.path.join("taxonomy", "animalia", "arthropoda", "insecta")
+# Order directory per slug. Only Orthoptera was imported by hand; the other eight
+# Species Files arrived later, so the mapping is explicit rather than guessed --
+# a slug that is not here should fail loudly instead of creating a directory that
+# turns out to be the wrong order.
+ORDER_DIR = {
+    "orthoptera": "orthoptera",
+    "phasmida": "phasmida",
+    "plecoptera": "plecoptera",
+    "mantodea": "mantodea",
+    "dermaptera": "dermaptera",
+    "grylloblattodea": "grylloblattodea",
+    "zoraptera": "zoraptera",
+    "coleorrhyncha": "coleorrhyncha",
+    "chrysididae": None,  # a family of Hymenoptera, not an order of its own
+}
 SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 RANK_KEEP = ("SUBFAMILY", "TRIBE", "GENUS", "SPECIES", "SUBSPECIES")
@@ -149,11 +169,27 @@ def iter_genera(node):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", default="", help="override the extracted source directory")
-    ap.add_argument("--out", default=OUT_ROOT)
+    ap.add_argument("--slug", default="orthoptera",
+                    help="Species File slug; picks the archive and output order")
+    ap.add_argument("--out", default="")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--clean", action="store_true",
+                    help="delete the output directory first (stale families on a "
+                         "re-import). Off by default: --out may point at a parent "
+                         "like hymenoptera/ that holds families from other sources, "
+                         "and clearing it would delete them.")
     args = ap.parse_args()
 
-    src = args.src or ensure_extracted(SLUG, SRC)
+    order = ORDER_DIR.get(args.slug, "?")
+    if order is None:
+        out = args.out  # caller supplies the Hymenoptera path
+    elif args.out:
+        out = args.out
+    else:
+        out = os.path.join(INSECTA, order)
+    src = args.src or ensure_extracted(f"species-file-{args.slug}"
+                                       if args.slug != "orthoptera" else SLUG,
+                                       work_dir_for(args.slug))
     rows = list(csv.DictReader(
         open(f"{src}/taxon.txt", newline="", encoding="utf-8", errors="replace"),
         delimiter="\t"))
@@ -242,12 +278,25 @@ def main() -> int:
               and (r.get("taxonomicStatus") or "").lower() == "valid")
     print(f"taxa with a † (extinct) marker: {ext:,}")
 
+
+    # emit the taxonomy.json fragment for the caller
+    frag = []
+    for fid, info in fams.items():
+        fname = nodename(by_id[fid].get("scientificName") or "")
+        frag.append({"name": fname, "appSlug": slug(fname),
+                     "speciesCount": info["species"]})
+    frag.sort(key=lambda x: -x["speciesCount"])
+    frag_path = f"/tmp/{args.slug}_families.json"
+    with open(frag_path, "w", encoding="utf-8") as fh:
+        json.dump(frag, fh, ensure_ascii=False, indent=1)
+    print(f"  taxonomy fragment: {frag_path} ({len(frag)} families)")
+
     if not args.apply:
         print("\n  (dry run -- pass --apply to write)")
         return 0
 
-    if os.path.isdir(args.out):
-        shutil.rmtree(args.out)
+    if args.clean and os.path.isdir(out):
+        shutil.rmtree(out)
     written = 0
     total_nodes = 0
     for fid, info in fams.items():
@@ -362,7 +411,7 @@ def main() -> int:
         root["genusCount"] = kept_genera
         root["enrichmentStatus"] = "empty"
 
-        d = os.path.join(args.out, fslug, "src", "data")
+        d = os.path.join(out, fslug, "src", "data")
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, f"{fslug}.json"), "w", encoding="utf-8") as fh:
             json.dump(root, fh, indent=2, ensure_ascii=False)
@@ -373,18 +422,8 @@ def main() -> int:
         total_nodes += count(root)
         written += 1
 
-    print(f"\nwrote {written:,} family files under {args.out}")
+    print(f"\nwrote {written:,} family files under {out}")
     print(f"  {total_nodes:,} nodes")
-    # emit the taxonomy.json fragment for the caller
-    frag = []
-    for fid, info in fams.items():
-        fname = nodename(by_id[fid].get("scientificName") or "")
-        frag.append({"name": fname, "appSlug": slug(fname),
-                     "speciesCount": info["species"]})
-    frag.sort(key=lambda x: -x["speciesCount"])
-    with open("/tmp/orthoptera_families.json", "w", encoding="utf-8") as fh:
-        json.dump(frag, fh, ensure_ascii=False, indent=1)
-    print(f"  taxonomy fragment: /tmp/orthoptera_families.json ({len(frag)} families)")
     return 0
 
 

@@ -17,6 +17,18 @@ CONTINENT_MAP = {
     "AN": "Antarctica",
     "CENTRAL AMERICA": "North America",
     "Central America": "North America",
+    # Ocean basins and multi-continent regions are not continents, but the GBIF
+    # continent fill wrote them as if they were. They expand to the continents the
+    # region actually borders rather than being dropped, so the range information
+    # survives -- "Pacific" is real evidence, just not in continent form.
+    "Worldwide": ["Europe", "Asia", "Africa", "North America", "South America",
+                  "Australia", "Oceania", "Antarctica"],
+    "Atlantic": ["North America", "South America", "Europe", "Africa"],
+    "Pacific": ["Asia", "Australia", "North America", "South America"],
+    "Indian": ["Asia", "Africa", "Australia"],
+    "Indo-Pacific": ["Asia", "Africa", "Australia"],
+    "Mediterranean": ["Europe", "Africa"],
+    "Southeast Asia": ["Asia"],
 }
 
 VALID_CONTINENTS = {
@@ -41,7 +53,12 @@ def fix_continents_in_node(node):
                 new_continents = []
                 for cont in continents:
                     if cont in CONTINENT_MAP:
-                        new_continents.append(CONTINENT_MAP[cont])
+                        mapped = CONTINENT_MAP[cont]
+                        # A region may expand to several continents, and the node
+                        # may already list some of them -- so union, don't append,
+                        # or a species found in both the Pacific and Asia ends up
+                        # with Asia twice.
+                        new_continents.extend(mapped if isinstance(mapped, list) else [mapped])
                         fixed += 1
                     elif cont in VALID_CONTINENTS:
                         new_continents.append(cont)
@@ -49,7 +66,8 @@ def fix_continents_in_node(node):
                         # Keep unknown but log
                         print(f"  WARNING: Unknown continent '{cont}' in {node.get('name', 'unknown')}")
                         new_continents.append(cont)
-                node["continents"] = new_continents
+                # Preserve order but drop duplicates introduced by the expansion.
+                node["continents"] = list(dict.fromkeys(new_continents))
         
         for child in node.get("children", []):
             fixed += fix_continents_in_node(child)
