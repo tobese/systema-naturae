@@ -99,29 +99,29 @@ SOURCES = {
         "https://zenodo.org/records/344329", "notspecified", "assessed",
         "nothing. A stale count table; live GBIF counts are preferable"),
     "species-file-phasmida": (
-        "Phasmida Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 5,144 taxa; absent from our tree"),
+        "Phasmida Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 5,144 taxa; absent from our tree"),
     "species-file-plecoptera": (
-        "Plecoptera Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 5,471 taxa; absent from our tree"),
+        "Plecoptera Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 5,471 taxa; absent from our tree"),
     "species-file-mantodea": (
-        "Mantodea Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 4,046 taxa; absent from our tree"),
+        "Mantodea Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 4,046 taxa; absent from our tree"),
     "species-file-dermaptera": (
-        "Dermaptera Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 2,930 taxa; absent from our tree"),
+        "Dermaptera Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 2,930 taxa; absent from our tree"),
     "species-file-grylloblattodea": (
-        "Grylloblattodea Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 1,000 taxa; absent from our tree"),
+        "Grylloblattodea Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 1,000 taxa; absent from our tree"),
     "species-file-zoraptera": (
-        "Zoraptera Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 71 taxa; absent from our tree"),
+        "Zoraptera Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 71 taxa; absent from our tree"),
     "species-file-coleorrhyncha": (
-        "Coleorrhyncha Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 184 taxa; absent from our tree"),
+        "Coleorrhyncha Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 184 taxa; absent from our tree"),
     "species-file-chrysididae": (
-        "Chrysididae Species File", "Species File Group", "", "CC BY 4.0", "ready",
-        "nothing yet. 268 taxa; would extend Hymenoptera from 4 families"),
+        "Chrysididae Species File", "Species File Group", "", "CC BY 4.0", "applied",
+        "IMPORTED. 239 taxa; extended Hymenoptera from 4 families to 5"),
     "fishbase": (
         "FishBase (EOL harvest)", "DOI 10.5281/zenodo.22739608",
         "https://zenodo.org/records/22739608",

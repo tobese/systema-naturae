@@ -10,8 +10,10 @@ provenance in `sourcedFrom`; images carry their own fields in
 tree. This doc lists every source we pull from, its licence, and the attribution
 we owe. **Read the "Licensing risk" section before publishing.**
 
-What changed on 2026-10-02: the Orthoptera Species File was imported (28,081
-species, CC BY 4.0); 35,035 portraits were added from Smithsonian NMNH and
+What changed on 2026-10-02: nine Species File checklists were imported --
+Orthoptera (28,081 species) and eight further orders totalling 12,522 species, all
+CC BY 4.0, each with its own row below because each is a separately citable
+dataset;  35,035 portraits were added from Smithsonian NMNH and
 Wikimedia Commons; and 184,542 images gained an author and a licence that they
 previously did not have. None of that was covered by the previous gathering.
 
@@ -29,6 +31,14 @@ previously did not have. None of that was covered by the previous gathering.
 | `gbif` | GBIF species descriptions & vernacular | Per-dataset: CC0 / CC BY / CC BY-NC | Required (BY/BY-NC) | 200,677 |
 | `powo` | Plants of the World Online (RBG Kew) | **CC BY** | Required | 208,513 |
 | `orthoptera species file` | **Orthoptera Species File** (GBIF `af66d4cf-…`, DOI 10.15468/nn7jhc) | **CC BY 4.0** | Required | 35,761 |
+| `plecoptera species file` | **Plecoptera Species File (stoneflies)** | **CC BY 4.0** | Required | 3,910 |
+| `phasmida species file` | **Phasmida Species File (stick insects)** | **CC BY 4.0** | Required | 3,286 |
+| `mantodea species file` | **Mantodea Species File (mantises)** | **CC BY 4.0** | Required | 2,510 |
+| `dermaptera species file` | **Dermaptera Species File (earwigs)** | **CC BY 4.0** | Required | 1,923 |
+| `grylloblattodea species file` | **Grylloblattodea Species File (rock crawlers)** | **CC BY 4.0** | Required | 545 |
+| `chrysididae species file` | **Chrysididae Species File (cuckoo wasps)** | **CC BY 4.0** | Required | 197 |
+| `coleorrhyncha species file` | **Coleorrhyncha Species File (twisted-wing parasites)** | **CC BY 4.0** | Required | 99 |
+| `zoraptera species file` | **Zoraptera Species File (angel insects)** | **CC BY 4.0** | Required | 52 |
 | `generated` | Template-generated from lineage | ours | n/a | 832 |
 | `nzpcn` | NZ Plant Conservation Network | **Permission-based** (no CC) | Required | 1 (test shot) |
 | `websearch` | Mixed (see below) | **Mixed / some non-open** | Required | 58 |

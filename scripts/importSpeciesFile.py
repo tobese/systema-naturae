@@ -334,7 +334,11 @@ def main() -> int:
                 break
             if "†" in (r.get("scientificName") or ""):
                 node["extinct"] = True
-            node["sourcedFrom"] = "orthoptera species file"
+            # Per checklist, not per importer. A hardcoded "orthoptera species
+            # file" made 12,325 nodes from Plecoptera, Mantodea and the rest
+            # claim Orthoptera provenance -- wrong on both the source and the DOI
+            # that has to be cited for it.
+            node["sourcedFrom"] = f"{args.slug} species file"
 
             if rank in ("SPECIES", "SUBSPECIES"):
                 node.setdefault("subspeciesCount", 0)
