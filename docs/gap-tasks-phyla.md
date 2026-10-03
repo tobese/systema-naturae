@@ -17,7 +17,7 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 | **Onychophora** | Velvet worms | 1 | 2 | 0 | 232 | 0 | 0 | 0.0% | 0.0% | > Gaps: 232 |
 | **Gastrotricha** | Hairy backs | 1 | 18 | 0 | 926 | 0 | 0 | 0.0% | 0.0% | > Gaps: 926 |
 | **Xenacoelomorpha** | Xenacoelomorphs | 3 | 20 | 0 | 291 | 0 | 0 | 0.0% | 0.0% | > Gaps: 291 |
-| **Arthropoda** | Arthropods | 2 | 437 | 0 | 259,666 | 0 | 0 | 0.0% | 0.0% | > Gaps: 259666 |
+| **Arthropoda** | Arthropods | 2 | 469 | 0 | 266,529 | 0 | 0 | 0.0% | 0.0% | > Gaps: 266529 |
 | **Echinodermata** | Echinoderms | 3 | 3 | 0 | 516 | 0 | 0 | 0.0% | 0.0% | > Gaps: 516 |
 | **Mollusca** | Molluscs | 7 | 1529 | 0 | 139,663 | 0 | 0 | 0.0% | 0.0% | > Gaps: 139663 |
 | **Ctenophora** | Comb jellies | 2 | 6 | 0 | 123 | 0 | 0 | 0.0% | 0.0% | > Gaps: 123 |
@@ -161,15 +161,15 @@ This report aggregates the taxonomic database coverage gaps of the Systema Natur
 
 ### [ ] Phylum Arthropoda (Arthropods) - 0.0% complete
 
-- **Imported species:** 0 / 259,666
-- **Enriched species:** 0 / 259,666 (0.0%)
-- **Remaining gaps:** **259666**
+- **Imported species:** 0 / 266,529
+- **Enriched species:** 0 / 266,529 (0.0%)
+- **Remaining gaps:** **266529**
 
 #### Child Classes in this Phylum:
 
 | Class | Families | Imported | Total | Enriched | Completion % | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Insecta | 426 | 0 | 237,729 | 0 | 0.0% | > Gaps: 237729 |
+| Insecta | 458 | 0 | 244,592 | 0 | 0.0% | > Gaps: 244592 |
 | Arachnida | 11 | 0 | 21,937 | 0 | 0.0% | > Gaps: 21937 |
 
 ### [ ] Phylum Echinodermata (Echinoderms) - 0.0% complete

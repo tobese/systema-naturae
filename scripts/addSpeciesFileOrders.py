@@ -129,6 +129,28 @@ ORDERS = {
                        "which is why the order sat alone in its own superfamily for "
                        "decades.",
     },
+    # The Aphid Species File covers infraorder Aphidomorpha. We hold no
+    # Hemiptera at all, so it creates the order -- but only Aphidomorpha of it,
+    # which the description says rather than letting a reader assume the order
+    # is otherwise complete.
+    "aphid": {
+        "name": "Hemiptera", "commonName": "True bugs",
+        "description": "Hemiptera, the true bugs, is the largest order of "
+                       "non-flying insects and one of the largest orders of "
+                       "insects overall, with roughly 80,000 species in some "
+                       "300 families. They are defined by piercing-sucking "
+                       "mouthparts: a rostrum enclosing needle-like stylets "
+                       "that pierce plant or animal tissue, which is why so many "
+                       "are serious agricultural pests. What is present here is "
+                       "currently infraorder Aphidomorpha only -- the aphids and "
+                       "their relatives -- imported from the Aphid Species File, "
+                       "so the rest of the order is not yet covered. Aphid "
+                       "morphology is distinctive: pear-shaped soft-bodied "
+                       "insects with cornicles, paired abdominal projections "
+                       "that vent defensive droplets, and a near-universal "
+                       "parthenogenetic life cycle in which females reproduce "
+                       "without mating, often for most of the year.",
+    },
     # Chrysididae is a family of Hymenoptera, not an order, so it lands under
     # Hymenoptera while the rest land under Insecta.
     "chrysididae": {
@@ -174,7 +196,7 @@ def main() -> int:
     for o in arthropoda["children"]:
         used_names.setdefault(o["name"].lower(), o["name"])
 
-    added_orders, added_families, updated = [], [], 0
+    added_orders, adopted, added_families, updated = [], [], [], 0
     for slug, meta in ORDERS.items():
         frag_path = f"/tmp/{slug}_families.json"
         if not os.path.exists(frag_path):
@@ -188,16 +210,29 @@ def main() -> int:
             holder = parent
             if holder is None:
                 sys.exit(f"FATAL: {meta['parent']} not found")
-            bucket = None  # families go straight into the parent
+            # Families go straight into the parent. This must be set on every
+            # iteration: left to default, `bucket` holds the previous slug's
+            # order and the family lands in the wrong order entirely.
+            bucket = None
         else:
-            if meta["name"] in used_names:
-                sys.exit(f"FATAL: order {meta['name']} already exists -- refusing to "
-                         f"duplicate it")
-            bucket = {"id": meta["name"].upper(), "name": meta["name"], "rank": "ORDER",
-                      "commonName": meta["commonName"], "description": meta["description"],
-                      "extinct": False, "fossil": False, "children": []}
-            arthropoda["children"].append(bucket)
-            added_orders.append(meta["name"])
+            # Compare lowercased: used_names is keyed that way, and
+            # "Plecoptera" not being in {"plecoptera": ...} made this silently
+            # propose re-adding seven orders that already exist.
+            if meta["name"].lower() in used_names:
+                # Adopt the existing order and add to it. Aborting here made the
+                # script all-or-nothing across every slug, so it could only ever
+                # be run once -- which is also how the case-sensitivity bug below
+                # survived to propose duplicating seven orders.
+                bucket = next(o for o in arthropoda["children"]
+                              if o["name"].lower() == meta["name"].lower())
+                adopted.append(meta["name"])
+            else:
+                bucket = {"id": meta["name"].upper(), "name": meta["name"],
+                          "rank": "ORDER", "commonName": meta["commonName"],
+                          "description": meta["description"],
+                          "extinct": False, "fossil": False, "children": []}
+                arthropoda["children"].append(bucket)
+                added_orders.append(meta["name"])
 
         existing_by_name = {c["name"].lower(): c for c in (holder["children"]
                                                            if bucket is None else bucket["children"])
@@ -233,6 +268,8 @@ def main() -> int:
         arthropoda["children"].sort(key=lambda o: o["name"])
 
     print(f"orders added:   {len(added_orders)}  {', '.join(added_orders)}")
+    if adopted:
+        print(f"orders adopted: {len(adopted)}  {', '.join(adopted)}")
     print(f"families added: {len(added_families)}")
     print(f"families updated (speciesCount): {updated}")
     if not args.apply:

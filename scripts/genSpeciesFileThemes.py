@@ -37,6 +37,7 @@ ORDER_HUE = {
     "Grylloblattodea": 265,
     "Zoraptera": 175,
     "Coleorrhyncha": 55,
+    "Hemiptera": 145,      # aphid greens
     "Hymenoptera": 315,
 }
 

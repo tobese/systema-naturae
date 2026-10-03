@@ -6459,6 +6459,39 @@ const insecta_zopheridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "
   const insecta_karabasiidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Karabasiidae": "#CCA4B8" }, breedGroupColor: "#722C4F", hybridColor: "#AC728F", appSlug: "karabasiidae", className: "Insecta", orderName: "Coleorrhyncha", name: "†Karabasiidae", mainColor: "#8F3D66" };
   const insecta_hoploridiidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Hoploridiidae": "#ACCCA4" }, breedGroupColor: "#3B722C", hybridColor: "#7EAC72", appSlug: "hoploridiidae", className: "Insecta", orderName: "Coleorrhyncha", name: "†Hoploridiidae", mainColor: "#4E8F3D" };
 
+  const insecta_aphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Aphididae": "#A4CCB4" }, breedGroupColor: "#2C7249", hybridColor: "#72AC8A", appSlug: "aphididae", className: "Insecta", orderName: "Hemiptera", name: "Aphididae", mainColor: "#3D8F5F" };
+  const insecta_phylloxeridae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Phylloxeridae": "#C0A4CC" }, breedGroupColor: "#5E2C72", hybridColor: "#9B72AC", appSlug: "phylloxeridae", className: "Insecta", orderName: "Hemiptera", name: "Phylloxeridae", mainColor: "#773D8F" };
+  const insecta_adelgidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Adelgidae": "#CCCCA4" }, breedGroupColor: "#72722C", hybridColor: "#ACAC72", appSlug: "adelgidae", className: "Insecta", orderName: "Hemiptera", name: "Adelgidae", mainColor: "#8F8F3D" };
+  const insecta_ellinaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Ellinaphididae": "#A4C0CC" }, breedGroupColor: "#2C5E72", hybridColor: "#729BAC", appSlug: "ellinaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Ellinaphididae", mainColor: "#3D778F" };
+  const insecta_oviparosiphidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Oviparosiphidae": "#CCA4B4" }, breedGroupColor: "#722C49", hybridColor: "#AC728A", appSlug: "oviparosiphidae", className: "Insecta", orderName: "Hemiptera", name: "†Oviparosiphidae", mainColor: "#8F3D5F" };
+  const insecta_elektraphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Elektraphididae": "#A9CCA4" }, breedGroupColor: "#35722C", hybridColor: "#79AC72", appSlug: "elektraphididae", className: "Insecta", orderName: "Hemiptera", name: "†Elektraphididae", mainColor: "#478F3D" };
+  const insecta_szelegiewicziidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Szelegiewicziidae": "#AAA4CC" }, breedGroupColor: "#382C72", hybridColor: "#7B72AC", appSlug: "szelegiewicziidae", className: "Insecta", orderName: "Hemiptera", name: "†Szelegiewicziidae", mainColor: "#4B3D8F" };
+  const insecta_palaeoaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Palaeoaphididae": "#CCB6A4" }, breedGroupColor: "#724C2C", hybridColor: "#AC8C72", appSlug: "palaeoaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Palaeoaphididae", mainColor: "#8F633D" };
+  const insecta_canadaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Canadaphididae": "#A4CCC2" }, breedGroupColor: "#2C7261", hybridColor: "#72AC9D", appSlug: "canadaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Canadaphididae", mainColor: "#3D8F7A" };
+  const insecta_mesozoicaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Mesozoicaphididae": "#CCA4CA" }, breedGroupColor: "#722C6F", hybridColor: "#AC72A9", appSlug: "mesozoicaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Mesozoicaphididae", mainColor: "#8F3D8B" };
+  const insecta_juraphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Juraphididae": "#BECCA4" }, breedGroupColor: "#5B722C", hybridColor: "#98AC72", appSlug: "juraphididae", className: "Insecta", orderName: "Hemiptera", name: "†Juraphididae", mainColor: "#738F3D" };
+  const insecta_naibiidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Naibiidae": "#A4B3CC" }, breedGroupColor: "#2C4672", hybridColor: "#7287AC", appSlug: "naibiidae", className: "Insecta", orderName: "Hemiptera", name: "†Naibiidae", mainColor: "#3D5C8F" };
+  const insecta_creaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Creaphididae": "#CCA4A7" }, breedGroupColor: "#722C32", hybridColor: "#AC7276", appSlug: "creaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Creaphididae", mainColor: "#8F3D44" };
+  const insecta_burmitaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Burmitaphididae": "#A4CCAC" }, breedGroupColor: "#2C723B", hybridColor: "#72AC7E", appSlug: "burmitaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Burmitaphididae", mainColor: "#3D8F4E" };
+  const insecta_bajsaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Bajsaphididae": "#B8A4CC" }, breedGroupColor: "#4F2C72", hybridColor: "#8F72AC", appSlug: "bajsaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Bajsaphididae", mainColor: "#663D8F" };
+  const insecta_tajmyraphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Tajmyraphididae": "#CCC3A4" }, breedGroupColor: "#72632C", hybridColor: "#ACA072", appSlug: "tajmyraphididae", className: "Insecta", orderName: "Hemiptera", name: "†Tajmyraphididae", mainColor: "#8F7E3D" };
+  const insecta_rasnitsynaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Rasnitsynaphididae": "#A4C8CC" }, breedGroupColor: "#2C6C72", hybridColor: "#72A7AC", appSlug: "rasnitsynaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Rasnitsynaphididae", mainColor: "#3D888F" };
+  const insecta_lebanaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Lebanaphididae": "#CCA4BD" }, breedGroupColor: "#722C58", hybridColor: "#AC7296", appSlug: "lebanaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Lebanaphididae", mainColor: "#8F3D70" };
+  const insecta_sinaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Sinaphididae": "#B1CCA4" }, breedGroupColor: "#43722C", hybridColor: "#85AC72", appSlug: "sinaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Sinaphididae", mainColor: "#588F3D" };
+  const insecta_isolitaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Isolitaphididae": "#A4A5CC" }, breedGroupColor: "#2C2F72", hybridColor: "#7274AC", appSlug: "isolitaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Isolitaphididae", mainColor: "#3D408F" };
+  const insecta_khatangaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Khatangaphididae": "#CCAEA4" }, breedGroupColor: "#723E2C", hybridColor: "#AC8072", appSlug: "khatangaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Khatangaphididae", mainColor: "#8F523D" };
+  const insecta_retinaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Retinaphididae": "#A4CCB9" }, breedGroupColor: "#2C7252", hybridColor: "#72AC91", appSlug: "retinaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Retinaphididae", mainColor: "#3D8F6A" };
+  const insecta_sinojuraphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Sinojuraphididae": "#C5A4CC" }, breedGroupColor: "#662C72", hybridColor: "#A272AC", appSlug: "sinojuraphididae", className: "Insecta", orderName: "Hemiptera", name: "†Sinojuraphididae", mainColor: "#813D8F" };
+  const insecta_dracaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Dracaphididae": "#C6CCA4" }, breedGroupColor: "#69722C", hybridColor: "#A5AC72", appSlug: "dracaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Dracaphididae", mainColor: "#848F3D" };
+  const insecta_triassoaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Triassoaphididae": "#A4BBCC" }, breedGroupColor: "#2C5572", hybridColor: "#7293AC", appSlug: "triassoaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Triassoaphididae", mainColor: "#3D6D8F" };
+  const insecta_genaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Genaphididae": "#CCA4AF" }, breedGroupColor: "#722C40", hybridColor: "#AC7282", appSlug: "genaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Genaphididae", mainColor: "#8F3D55" };
+  const insecta_shaposhnikoviidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Shaposhnikoviidae": "#A4CCA4" }, breedGroupColor: "#2C722D", hybridColor: "#72AC72", appSlug: "shaposhnikoviidae", className: "Insecta", orderName: "Hemiptera", name: "†Shaposhnikoviidae", mainColor: "#3D8F3D" };
+  const insecta_grassyaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Grassyaphididae": "#AFA4CC" }, breedGroupColor: "#412C72", hybridColor: "#8372AC", appSlug: "grassyaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Grassyaphididae", mainColor: "#553D8F" };
+  const insecta_drepanochaitophoridae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Drepanochaitophoridae": "#CCBBA4" }, breedGroupColor: "#72552C", hybridColor: "#AC9472", appSlug: "drepanochaitophoridae", className: "Insecta", orderName: "Hemiptera", name: "†Drepanochaitophoridae", mainColor: "#8F6D3D" };
+  const insecta_parvaverrucosidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Parvaverrucosidae": "#A4CCC7" }, breedGroupColor: "#2C7269", hybridColor: "#72ACA5", appSlug: "parvaverrucosidae", className: "Insecta", orderName: "Hemiptera", name: "†Parvaverrucosidae", mainColor: "#3D8F85" };
+  const insecta_cretamyzidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Cretamyzidae": "#CCA4C5" }, breedGroupColor: "#722C66", hybridColor: "#AC72A2", appSlug: "cretamyzidae", className: "Insecta", orderName: "Hemiptera", name: "†Cretamyzidae", mainColor: "#8F3D81" };
+  const insecta_lutevanaphididae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Lutevanaphididae": "#B9CCA4" }, breedGroupColor: "#52722C", hybridColor: "#91AC72", appSlug: "lutevanaphididae", className: "Insecta", orderName: "Hemiptera", name: "†Lutevanaphididae", mainColor: "#698F3D" };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   acrididae: insecta_acrididae,
   adumbratomorphidae: insecta_adumbratomorphidae,
@@ -11750,7 +11783,39 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "progonocimicidae": insecta_progonocimicidae,
   "peloridiidae": insecta_peloridiidae,
   "karabasiidae": insecta_karabasiidae,
-  "hoploridiidae": insecta_hoploridiidae,};
+  "hoploridiidae": insecta_hoploridiidae,
+  "aphididae": insecta_aphididae,
+  "phylloxeridae": insecta_phylloxeridae,
+  "adelgidae": insecta_adelgidae,
+  "ellinaphididae": insecta_ellinaphididae,
+  "oviparosiphidae": insecta_oviparosiphidae,
+  "elektraphididae": insecta_elektraphididae,
+  "szelegiewicziidae": insecta_szelegiewicziidae,
+  "palaeoaphididae": insecta_palaeoaphididae,
+  "canadaphididae": insecta_canadaphididae,
+  "mesozoicaphididae": insecta_mesozoicaphididae,
+  "juraphididae": insecta_juraphididae,
+  "naibiidae": insecta_naibiidae,
+  "creaphididae": insecta_creaphididae,
+  "burmitaphididae": insecta_burmitaphididae,
+  "bajsaphididae": insecta_bajsaphididae,
+  "tajmyraphididae": insecta_tajmyraphididae,
+  "rasnitsynaphididae": insecta_rasnitsynaphididae,
+  "lebanaphididae": insecta_lebanaphididae,
+  "sinaphididae": insecta_sinaphididae,
+  "isolitaphididae": insecta_isolitaphididae,
+  "khatangaphididae": insecta_khatangaphididae,
+  "retinaphididae": insecta_retinaphididae,
+  "sinojuraphididae": insecta_sinojuraphididae,
+  "dracaphididae": insecta_dracaphididae,
+  "triassoaphididae": insecta_triassoaphididae,
+  "genaphididae": insecta_genaphididae,
+  "shaposhnikoviidae": insecta_shaposhnikoviidae,
+  "grassyaphididae": insecta_grassyaphididae,
+  "drepanochaitophoridae": insecta_drepanochaitophoridae,
+  "parvaverrucosidae": insecta_parvaverrucosidae,
+  "cretamyzidae": insecta_cretamyzidae,
+  "lutevanaphididae": insecta_lutevanaphididae,};
 
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {
