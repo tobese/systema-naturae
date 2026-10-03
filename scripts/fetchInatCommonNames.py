@@ -172,12 +172,16 @@ def main() -> int:
                 # "nodename nor servname provided" ended a run that had 5,600
                 # pages left and was perfectly resumable.
                 net_fails += 1
+                # Not every OSError has `.reason`: http.client's
+                # RemoteDisconnected and ConnectionReset do not, and assuming it
+                # did turned a recoverable network blip into a crash.
+                why = getattr(e, "reason", None) or type(e).__name__
                 if net_fails > 10:
                     sys.exit(f"FATAL: {net_fails} consecutive network failures "
-                             f"({e.reason}). State is saved -- rerun with --resume "
+                             f"({why}). State is saved -- rerun with --resume "
                              f"once the network is back.")
                 backoff = min(backoff * 2, 120)
-                print(f"  id>{after_id or 0}: network {e.reason}, retrying in {backoff:.0f}s "
+                print(f"  id>{after_id or 0}: network {why}, retrying in {backoff:.0f}s "
                       f"({net_fails}/10)", flush=True)
                 time.sleep(backoff)
                 continue

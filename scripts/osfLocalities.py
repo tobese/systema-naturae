@@ -89,6 +89,7 @@ Madeira
 East Tropical Africa
 Northern Africa
 Algeria
+Mozambique Channel Is
 """
 
 ASIA = """
@@ -181,6 +182,9 @@ Ogasawara-shoto
 Kriti
 Sakhalin
 Uzbekistan
+Laccadive Is
+South China Sea
+Aleutian Is
 """
 
 EUROPE = """
@@ -229,6 +233,9 @@ Europe
 Azores
 Kazan-retto
 Krym
+Belorussiya
+Northern Europe
+Føroyar
 """
 
 NORTH_AMERICA = """
@@ -347,6 +354,11 @@ Leeward Is
 Windward Is
 Turks-Caicos Is
 Prince Edward I
+South-Central U.S.A
+Central American Pacific Is
+Desventuradas Is
+Nunavut
+Desventuradas Is.
 """
 
 SOUTH_AMERICA = """
@@ -441,6 +453,10 @@ Papuasia
 Samoa
 Tonga
 Vanuatu
+Antipodean Is
+Kermadec Is
+Easter Is
+Selvagens
 """
 
 ANTARCTIA = """
@@ -448,6 +464,7 @@ Antarctic
 Antarctica
 Tristan de Cunha
 Tristan de Cunha
+Greenland
 """
 
 GROUPS = {
@@ -504,6 +521,12 @@ MULTI = {
     "Krym": ["Europe"],
     "Czechoslovakia": ["Europe"],
     "Levant": ["Asia"],
+    "Northwestern Pacific": ["Australia"],
+    "South China Sea": ["Asia"],
+    "Greenland": ["North America"],
+    "Belorussiya": ["Europe"],
+    "Northern Europe": ["Europe"],
+    "Mozambique Channel Is": ["Africa"],
     "Southwest Caribbean": ["North America"],
     "Southern America": ["South America"],
     "Northern America": ["North America"],
@@ -521,6 +544,7 @@ UNMAPPED_NOTE = {
     "Netherlands Antilles": "dissolved 2010",
     "Rodrigues": "Mascarene outlier south-east of Madagascar",
     "Aldabra": "Seychelles outlier, well south of the Seychelles",
+    "Chagos Archipelago": "see above",
 }
 
 
@@ -568,12 +592,13 @@ def continent_for(locality: str):
 
 if __name__ == "__main__":
     import sys
-    names = [l.strip() for l in open(sys.argv[1], encoding="utf-8") if l.strip()]
-    mapped = [n for n in names if continent_for(n)]
-    missing = [n for n in names if not continent_for(n)]
+    names = [ln.strip() for ln in open(sys.argv[1], encoding="utf-8") if ln.strip()]
+    missing = [n for n in names
+               if not (LOCALITY_TO_CONTINENT.get(n) or _BY_FOLD.get(_fold(n)))]
     print(f"localities: {len(names):,}")
-    print(f"  mapped:   {len(mapped):,} ({len(mapped)/max(len(names),1)*100:.1f}%)")
+    print(f"  mapped:   {len(names) - len(missing):,} "
+          f"({(len(names) - len(missing))/max(len(names), 1)*100:.1f}%)")
     print(f"  UNMAPPED: {len(missing)}")
-    for m in missing:
-        tag = "(deliberate)" if m in UNMAPPED_NOTE else "*** UNEXPECTED ***"
-        print(f"     {m}  {tag}")
+    for n in missing:
+        tag = "(deliberate)" if n in UNMAPPED_NOTE else "*** UNEXPECTED ***"
+        print(f"     {n}  {tag}")
