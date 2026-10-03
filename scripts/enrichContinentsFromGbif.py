@@ -87,6 +87,30 @@ CC2CONT = {
     "AU": "Australia", "NZ": "Australia", "PG": "Australia", "FJ": "Australia",
     "NC": "Australia", "VU": "Australia", "SB": "Australia", "WS": "Australia",
     "AQ": "Antarctica",
+    # Africa, completed. The block above stopped at a handful of Anglophone and
+    # North African countries, which was invisible until a source used ISO codes
+    # for the whole continent: Afromoths lists 65 codes and only 17 resolved, so
+    # 48 countries across Africa mapped to nothing at all. Kept here rather than
+    # in that importer so there is still one country->continent authority.
+    "AO": "Africa", "BF": "Africa", "BI": "Africa", "BJ": "Africa", "BW": "Africa",
+    "CD": "Africa", "CF": "Africa", "CG": "Africa", "CI": "Africa", "CV": "Africa",
+    "DJ": "Africa", "EH": "Africa", "ER": "Africa", "ET": "Africa", "GA": "Africa",
+    "GH": "Africa", "GM": "Africa", "GN": "Africa", "GQ": "Africa", "GW": "Africa",
+    "KM": "Africa", "LR": "Africa", "LS": "Africa", "LY": "Africa", "MA": "Africa",
+    "MG": "Africa", "ML": "Africa", "MR": "Africa", "MU": "Africa", "MW": "Africa",
+    "MZ": "Africa", "NA": "Africa", "NE": "Africa", "RE": "Africa", "RW": "Africa",
+    "SC": "Africa", "SD": "Africa", "SH": "Africa", "SL": "Africa", "SN": "Africa",
+    "SO": "Africa", "SS": "Africa", "ST": "Africa", "SZ": "Africa", "TD": "Africa",
+    "TG": "Africa", "TZ": "Africa", "UG": "Africa", "YT": "Africa", "ZA": "Africa",
+    "ZM": "Africa", "ZW": "Africa", "NG": "Africa", "EG": "Africa",
+    # Gulf and Yemen, which Afromoths reaches across the Red Sea.
+    "AE": "Asia", "BH": "Asia", "KW": "Asia", "MV": "Asia", "OM": "Asia",
+    "QA": "Asia", "SA": "Asia", "YE": "Asia",
+    # IO (Chagos) and TF (French Southern Territories) are deliberately absent.
+    # Both are genuinely ambiguous rather than merely unlisted, and
+    # osfLocalities.py already leaves the Chagos Archipelago unmapped on purpose
+    # -- the same reasoning, so the omission stays visible in one place instead of
+    # being quietly resolved differently by each source.
 }
 
 VALID_CONTINENTS = {

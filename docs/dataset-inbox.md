@@ -15,6 +15,18 @@ https://www.gbif.org/dataset/e01b0cbb-a10a-420c-b5f3-a3b20cc266ad
 https://www.gbif.org/dataset/214c3109-d37a-40f8-9c24-5b6e59915394
 
 https://www.gbif.org/dataset/6fb9265c-2d98-40ad-989d-7b6bf4820519
+
+https://www.gbif.org/dataset/e1c9e885-9d8c-45b5-9f7d-b710ac2b303b
+
+https://www.gbif.org/dataset/672aca30-f1b5-43d3-8a2b-c1606125fa1b
+
+https://www.gbif.org/dataset/80b4b440-eaca-4860-aadf-d0dfdd3e856e
+
+https://www.gbif.org/dataset/da38f103-4410-43d1-b716-ea6b1b92bbac
+
+https://www.gbif.org/dataset/598678e4-323c-49dc-8eb7-3a96ac72d472
+
+https://speciesfilegroup.org/data.html
 ```
 
 ---

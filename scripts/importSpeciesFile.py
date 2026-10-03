@@ -59,6 +59,8 @@ ARCHIVE_SLUG = {s: f"species-file-{s}" for s in (
     "phasmida", "plecoptera", "mantodea", "dermaptera", "grylloblattodea",
     "zoraptera", "coleorrhyncha", "chrysididae")}
 ARCHIVE_SLUG["aphid"] = "aphid-species-file"
+# Not a Species File, but it shares the extract/archive plumbing.
+ARCHIVE_SLUG["afromoths"] = "afromoths"
 ARCHIVE_SLUG.setdefault("orthoptera", "orthoptera")
 
 
@@ -176,6 +178,84 @@ def split_authorship(raw_auth: str, scientific_name: str):
         y = m.group(1)
         a = a[:m.start()].strip().rstrip(",").strip()
     return (a or None), y
+
+
+def genus_node_for(r, nm, buckets, chain, lin=""):
+    """The GENUS node a species row belongs under, created if absent.
+
+    Sources do not reliably include an explicit genus row for every species, so
+    the genus is manufactured from the binomial when it is missing -- which is
+    why `lineage` is threaded through to fill in the `lineage` field the same way
+    the Species File importer does.
+    """
+    node = {"id": None, "name": None, "rank": "GENUS", "children": []}
+    gen = next((x for x in reversed(chain(r))
+                if (x.get("taxonRank") or "").lower() == "genus"), None)
+    gname = nodename((gen or {}).get("scientificName") or nm.split(" ")[0])
+    gnode = buckets["GENUS"].get(gname)
+    if gnode is None:
+        gnode = {"id": node_id("GENUS", gname), "name": gname, "rank": "GENUS",
+                 "children": []}
+        if lin:
+            gnode["lineage"] = lin
+        buckets["GENUS"][gname] = gnode
+    return gnode
+
+
+def assemble_genera_tree(root, buckets, genus_rows, chain, stats):
+    """Nest genera under tribes and subfamilies, then prune empty genera.
+
+    Shared because getting this wrong is silent and expensive. A first attempt
+    appended every genus straight to the family root and every species to the
+    root as well, which produced 94 moth families full of childless genus nodes
+    and failed the data contract's empty-genus check -- a shape no test on the
+    importer itself would have caught, because the tree was well-formed JSON, just
+    not the tree the portal expects.
+
+    Assembled bottom-up, once per node: building each tribe inside the per-genus
+    loop adds a tribe holding N genera to its subfamily N times and serialises
+    its whole subtree N times over.
+    """
+    bare_genera = []
+    tribe_genera = collections.defaultdict(list)
+    subfam_tribes = collections.defaultdict(set)
+    subfam_genera = collections.defaultdict(list)
+
+    for gname, gnode in buckets["GENUS"].items():
+        anc = chain(genus_rows.get(gname)) if genus_rows.get(gname) else []
+        sub = next((a for a in anc if (a.get("taxonRank") or "").lower() == "subfamily"), None)
+        tri = next((a for a in anc if (a.get("taxonRank") or "").lower() == "tribe"), None)
+        if sub is None:
+            bare_genera.append(gnode)
+        elif tri is None:
+            subfam_genera[nodename(sub.get("scientificName") or "")].append(gnode)
+        else:
+            tname = nodename(tri.get("scientificName") or "")
+            tribe_genera[tname].append(gnode)
+            subfam_tribes[nodename(sub.get("scientificName") or "")].add(tname)
+
+    subfam_nodes = {}
+    for sf in sorted(set(subfam_tribes) | set(subfam_genera)):
+        node = {"id": node_id("SUBFAM", sf), "name": sf, "rank": "SUBFAMILY",
+                "children": []}
+        for t in sorted(subfam_tribes.get(sf, ())):
+            node["children"].append({"id": node_id("TRIBE", t), "name": t,
+                                     "rank": "TRIBE", "children": tribe_genera[t]})
+        node["children"].extend(subfam_genera.get(sf, []))
+        subfam_nodes[sf] = node
+
+    root["children"] = bare_genera + [subfam_nodes[k] for k in sorted(subfam_nodes)]
+
+    # sanity_scan.py treats an empty genus as a defect and EMPTY_GENUS must stay 0,
+    # so they are pruned here rather than shipped and cleaned up later.
+    def prune(node):
+        node["children"] = [c for c in (node.get("children") or [])
+                            if c.get("rank") != "GENUS" or (c.get("children") or [])]
+        for c in node["children"]:
+            prune(c)
+    prune(root)
+    kept = sum(1 for _ in iter_genera(root))
+    return kept
 
 
 def iter_genera(node):
@@ -365,69 +445,16 @@ def main() -> int:
                     filter(None, [lin, nodename((next((x for x in chain(r)
                         if (x.get('taxonRank') or '').lower() == 'genus'), {})).get('scientificName') or '')])))
                 # attach to its genus, creating the genus if OSF omitted it
-                gen = next((x for x in reversed(chain(r))
-                            if (x.get("taxonRank") or "").lower() == "genus"), None)
-                gname = nodename((gen or {}).get("scientificName") or nm.split(" ")[0])
-                gnode = buckets["GENUS"].get(gname)
-                if gnode is None:
-                    gnode = {"id": node_id("GENUS", gname), "name": gname,
-                             "rank": "GENUS", "children": []}
-                    buckets["GENUS"][gname] = gnode
+                gnode = genus_node_for(r, nm, buckets, chain, node.get("lineage") or "")
                 gnode.setdefault("children", []).append(node)
             elif rank == "GENUS":
                 buckets["GENUS"].setdefault(nm, node)
             else:
                 buckets[rank].setdefault(nm, node)
 
-        # Assemble bottom-up, once per node.
-        #
-        # The first version appended each tribe to its subfamily inside the
-        # per-genus loop, so a tribe holding 104 genera was added to its
-        # subfamily 104 times and its entire subtree was serialised 104 times
-        # over: 312,156 nodes for 9,572 unique ones, and 318MB of JSON. Each
-        # tribe is now built once and attached once.
         genus_rows = {nodename(x.get("scientificName") or ""): x
                       for x in info["rows"] if (x.get("taxonRank") or "").lower() == "genus"}
-        bare_genera = []
-        tribe_genera = collections.defaultdict(list)   # tribe name -> [genus node]
-        subfam_tribes = collections.defaultdict(set)  # subfamily -> {tribe names}
-        subfam_genera = collections.defaultdict(list)  # subfamily -> [genus node]
-
-        for gname, gnode in buckets["GENUS"].items():
-            anc = chain(genus_rows.get(gname)) if genus_rows.get(gname) else []
-            sub = next((a for a in anc if (a.get("taxonRank") or "").lower() == "subfamily"), None)
-            tri = next((a for a in anc if (a.get("taxonRank") or "").lower() == "tribe"), None)
-            if sub is None:
-                bare_genera.append(gnode)
-            elif tri is None:
-                subfam_genera[nodename(sub.get("scientificName") or "")].append(gnode)
-            else:
-                tname = nodename(tri.get("scientificName") or "")
-                tribe_genera[tname].append(gnode)
-                subfam_tribes[nodename(sub.get("scientificName") or "")].add(tname)
-
-        subfam_nodes = {}
-        for sf in sorted(set(subfam_tribes) | set(subfam_genera)):
-            node = {"id": node_id("SUBFAM", sf), "name": sf, "rank": "SUBFAMILY", "children": []}
-            for t in sorted(subfam_tribes.get(sf, ())):
-                tnode = {"id": node_id("TRIBE", t), "name": t, "rank": "TRIBE",
-                         "children": tribe_genera[t]}
-                node["children"].append(tnode)
-            node["children"].extend(subfam_genera.get(sf, []))
-            subfam_nodes[sf] = node
-
-        root["children"] = bare_genera + [subfam_nodes[k] for k in sorted(subfam_nodes)]
-        # OSF lists four fossil genera with no species under them (Minititan,
-        # Flexaboilus, Furcaboilus, Pruvostites). sanity_scan.py treats an empty
-        # genus as a defect and EMPTY_GENUS must stay 0, so they are pruned here
-        # rather than shipped and cleaned up later.
-        def prune(node):
-            node["children"] = [c for c in (node.get("children") or [])
-                                if c.get("rank") != "GENUS" or (c.get("children") or [])]
-            for c in node["children"]:
-                prune(c)
-        prune(root)
-        kept_genera = sum(1 for _ in iter_genera(root))
+        kept_genera = assemble_genera_tree(root, buckets, genus_rows, chain, stats)
         if kept_genera != len(info["genera"]):
             stats["pruned-empty-genera"] += len(info["genera"]) - kept_genera
 

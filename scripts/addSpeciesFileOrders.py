@@ -151,6 +151,12 @@ ORDERS = {
                        "parthenogenetic life cycle in which females reproduce "
                        "without mating, often for most of the year.",
     },
+    # Afromoths are moths, so they extend the Lepidoptera order we already have
+    # rather than creating one. That order previously held two butterfly families.
+    "afromoths": {
+        "parent": "Lepidoptera", "name": "Lepidoptera",
+        "commonName": None, "description": None,
+    },
     # Chrysididae is a family of Hymenoptera, not an order, so it lands under
     # Hymenoptera while the rest land under Insecta.
     "chrysididae": {

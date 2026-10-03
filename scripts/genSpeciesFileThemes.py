@@ -38,6 +38,7 @@ ORDER_HUE = {
     "Zoraptera": 175,
     "Coleorrhyncha": 55,
     "Hemiptera": 145,      # aphid greens
+    "Lepidoptera": 18,       # moth browns/ambers, distinct from the butterfly families
     "Hymenoptera": 315,
 }
 

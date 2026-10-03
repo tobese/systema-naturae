@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, rmSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, rmSync, openSync, writeSync, closeSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { resolveFamilyFile, familySourceStamp } from "./lib/familyPath.js";
@@ -370,7 +370,44 @@ if (!existsSync(kingdomPrivateDir)) mkdirSync(kingdomPrivateDir, { recursive: tr
 const WRITE_UNIFIED = process.env.SN_BUILD_UNIFIED === "1";
 const unifiedWasCurrent = taxonomyUnchanged && dirtyFamilies.size === 0 && existsSync(outputPath);
 if (WRITE_UNIFIED) {
-  timed("write unified-taxonomy.json", () => writeFileSync(outputPath, JSON.stringify(unified, null, 2)));
+  // Streamed, and compact.
+  //
+  // Streamed because one JSON.stringify call passed V8's maximum string length
+  // and the build died with RangeError: Invalid string length. Compact because
+  // streaming alone was not enough: pretty-printed the file came to 529MB, which
+  // Node still cannot JSON.parse (V8's limit is ~512MB), so testBuild rejected it
+  // while Python read it happily -- a file that one consumer can read and another
+  // cannot is not a fix. Compact brings it under the ceiling for both, and the
+  // monolith is tooling-only, so indentation buys nothing but the bytes that
+  // pushed it over.
+  timed("write unified-taxonomy.json", () => {
+    const fd = openSync(outputPath, "w");
+    try {
+      writeSync(fd, "{");
+      // Separator handling: the first key needs no comma, and "children" is
+      // written last so the scalar keys can come first without tracking whether
+      // any of them were present.
+      //
+      // Keys whose value is undefined are dropped, because JSON.stringify skips
+      // them and interpolating one writes the bare text `undefined` into the
+      // file -- which is how className and orderName made it invalid JSON.
+      const scalars = Object.keys(unified).filter(
+        (k) => k !== "children" && (unified as Record<string, unknown>)[k] !== undefined,
+      );
+      scalars.forEach((k, i) => {
+        writeSync(fd, `${i ? "," : ""}${JSON.stringify(k)}:${JSON.stringify(
+          (unified as Record<string, unknown>)[k])}`);
+      });
+      const kids = unified.children ?? [];
+      writeSync(fd, `${scalars.length ? "," : ""}"children":[`);
+      kids.forEach((child: unknown, i: number) => {
+        writeSync(fd, (i ? "," : "") + JSON.stringify(child));
+      });
+      writeSync(fd, "]}\n");
+    } finally {
+      closeSync(fd);
+    }
+  });
 } else {
   timed("write unified-taxonomy.json (opt-in: SN_BUILD_UNIFIED=1)", () => {});
 }
