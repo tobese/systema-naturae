@@ -105,8 +105,8 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.CLASS, 75);
   assert.equal(rc.ORDER, 394);
   assert.equal(rc.FAMILY, 5472);
-  assert.equal(rc.GENUS, 72083);
-  assert.equal(rc.SPECIES, 634117);
+  assert.equal(rc.GENUS, 100297);
+  assert.equal(rc.SPECIES, 1033411);
 });
 
 test('root has exactly 32 phylum children', () => {
@@ -394,7 +394,7 @@ test('skeleton node type distribution', () => {
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 394,
-    FAMILY: 5472, GENUS: 72083, SPECIES: 634117,
+    FAMILY: 5472, GENUS: 100297, SPECIES: 1033411,
     SUBFAMILY: 792, TRIBE: 948, SUBSPECIES: 7291,
     BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
@@ -416,7 +416,7 @@ test('manifest CARNIVORA entry snapshot', () => {
     navFile: 'data/kingdoms/animalia/orders-nav/CARNIVORA.json',
     namesFile: 'data/kingdoms/animalia/orders-names/CARNIVORA.json',
     proseDir: 'data/kingdoms/animalia/orders-prose/CARNIVORA',
-    familyCount: 5, speciesCount: 1015,
+    familyCount: 5, speciesCount: 1041,
     familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae'],
   });
 });

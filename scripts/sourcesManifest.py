@@ -115,6 +115,17 @@ SOURCES = {
         "querying every candidate -- about seven days sequential -- against a "
         "service asking for less automated traffic. Worth doing if a bulk dump "
         "ever appears"),
+    "catalogue-of-life": (
+        "Catalogue of Life, Base Release", "DOI 10.48580/dgz5n (ChecklistBank 316321)",
+        "https://www.catalogueoflife.org/data/download",
+        "CC BY 4.0", "partial",
+        "Stage 1 applied: 427,804 species merged into the 3,413 families we "
+        "already had, 431,305 authorship records, CC BY. Stage 2 NOT applied: "
+        "the remaining ~818,006 species sit in 9,591 families across 1,403 orders "
+        "we do not have, which is a structural change rather than an import. COL's "
+        "2.6M synonyms also not imported. ColDP with per-name source attribution "
+        "is not currently downloadable (404); the DwCA has 7 columns and no "
+        "source field, so provenance is recorded as COL rather than per-checklist"),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",
@@ -228,7 +239,7 @@ SOURCES = {
 
 # Applied sources whose payload is regenerable and deliberately not archived, so
 # the "no archive on disk" warning should not fire for them every run.
-NO_ARCHIVE = {"inaturalist", "zoobank"}
+NO_ARCHIVE = {"inaturalist", "zoobank", "catalogue-of-life"}
 
 
 def sha256(path, chunk=1 << 20):
