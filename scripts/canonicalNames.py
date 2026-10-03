@@ -57,11 +57,22 @@ def lookup(index, key):
     Returns the index value, or None. The canonical retry is only attempted for
     names that actually carry an authorship, so it costs one dict probe for the
     87% of names that do not.
+
+    Both probes are lowercased, because `_load()` keys its table by
+    `name.lower()`. They were not, and every scientific name is mixed case, so
+    every caller got None and silently degraded to no match at all -- which is
+    how the iNaturalist import filled zero names on its first run, and why
+    Mammal Species of the World measured as 100% new when 3,762 of our 7,900
+    mammal species are in it. The failure is invisible either way: no exception,
+    no warning, just a lookup table that never hits.
     """
-    hit = index.get(key)
+    if not key:
+        return None
+    k = key.strip().lower()
+    hit = index.get(k)
     if hit is not None:
         return hit
-    canon = _load().get(key)
-    if not canon or canon == key:
+    canon = _load().get(k)
+    if not canon or canon == k:
         return None
     return index.get(canon)
