@@ -274,28 +274,44 @@ def main() -> int:
         for genus, entries in genera.items():
             for nm, a, tid in entries:
                 p = canon_names.get(nm) or {}
-                bare = " ".join(x for x in (p.get("genus"), p.get("species"))
-                                if x).strip()
-                if not bare:
-                    bare = nm
+                genus_p, sp_p = p.get("genus"), p.get("species")
+                if not sp_p:
+                    # GNparser reduces a hybrid to the genus and the marker:
+                    # "Asplenium x hybridum" canonicalises to "Asplenium x", and
+                    # taking that as the name wrote 1,004 species called
+                    # "Asplenium xx". Recover the epithet from the raw string
+                    # instead, and skip anything still not binominal.
+                    parts = [x for x in nm.replace("\u00d7", " ").split()
+                             if x.lower() != "x"]
+                    if len(parts) >= 2:
+                        genus_p, sp_p = parts[0], parts[1]
+                    else:
+                        sp_p = None
+                if not genus_p or not sp_p:
+                    skipped_dup += 1
+                    continue
+                bare = f"{genus_p} {sp_p}".strip()
                 # GNparser drops the hybrid marker from the canonical form, so
                 # "Rubus x adenanthoides" canonicalises to "Rubus adenanthoides"
                 # while we store "Rubus xadenanthoides Sudre" -- same plant, still
                 # two different strings, and five duplicates got through on the
                 # second attempt. Put the marker back, in our spelling.
                 if p.get("genus") and p.get("species"):
-                    # Both directions of the hybrid marker. COL may write
-                    # "Rubus x adenanthoides" where we store "Rubus xadenanthoides
-                    # Sudre" -- or omit the marker entirely where we keep it, so
-                    # the name we would insert and the name we already hold still
-                    # differ as strings. Check the marked form as well, and keep
-                    # the marker in our spelling when inserting.
-                    marked = f"{p['genus']} \u00d7{p['species']}"
-                    if marked.lower() in canon:
+                    # Every spelling of the hybrid marker we have now met, across
+                    # COL, GNparser and our own data: COL writes "Rubus x
+                    # adenanthoides", GNparser canonicalises it to "Rubus x
+                    # adenanthoides" with a space, we store "Rubus xadenanthoides"
+                    # with none, and COL sometimes omits the marker entirely.
+                    # Three variants of one bug, each caught by the data
+                    # contract's duplicate-id check rather than by a test.
+                    g_, s_ = p["genus"], p["species"]
+                    tight = f"{g_} \u00d7{s_}"
+                    spaced = f"{g_} \u00d7 {s_}"
+                    if tight.lower() in canon or spaced.lower() in canon:
                         skipped_dup += 1
                         continue
                     if "\u00d7" in nm:
-                        bare = marked
+                        bare = tight
                 if bare.lower() in canon:
                     skipped_dup += 1        # held already under another spelling
                     continue
