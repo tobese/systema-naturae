@@ -6646,6 +6646,12 @@ const insecta_zopheridae: ColorTheme = { subfamilyColors: {}, breedGroupColor: "
   const insecta_mantophasmatidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Mantophasmatidae": "#A4A7CC" }, breedGroupColor: "#2C3272", hybridColor: "#7276AC", appSlug: "mantophasmatidae", className: "Insecta", orderName: "Mantophasmatodea", name: "Mantophasmatidae", mainColor: "#3D448F" };
   const insecta_ensiferophasmatidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "†Ensiferophasmatidae": "#CCACA4" }, breedGroupColor: "#723B2C", hybridColor: "#AC7E72", appSlug: "ensiferophasmatidae", className: "Insecta", orderName: "Mantophasmatodea", name: "†Ensiferophasmatidae", mainColor: "#8F4E3D" };
 
+  const insecta_halictidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Halictidae": "#B6CCA4" }, breedGroupColor: "#4C722C", hybridColor: "#8CAC72", appSlug: "halictidae", className: "Insecta", orderName: "Hymenoptera", name: "Halictidae", mainColor: "#638F3D" };
+  const insecta_megachilidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Megachilidae": "#A4AACC" }, breedGroupColor: "#2C3872", hybridColor: "#727BAC", appSlug: "megachilidae", className: "Insecta", orderName: "Hymenoptera", name: "Megachilidae", mainColor: "#3D4B8F" };
+  const insecta_colletidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Colletidae": "#C0A4CC" }, breedGroupColor: "#5E2C72", hybridColor: "#9B72AC", appSlug: "colletidae", className: "Insecta", orderName: "Hymenoptera", name: "Colletidae", mainColor: "#773D8F" };
+  const insecta_melittidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Melittidae": "#A4C0CC" }, breedGroupColor: "#2C5D72", hybridColor: "#729BAC", appSlug: "melittidae", className: "Insecta", orderName: "Hymenoptera", name: "Melittidae", mainColor: "#3D778F" };
+  const insecta_andrenidae: ColorTheme = { subfamilyColors: {}, lineageColors: { "Andrenidae": "#CCA4B4" }, breedGroupColor: "#722C49", hybridColor: "#AC728A", appSlug: "andrenidae", className: "Insecta", orderName: "Hymenoptera", name: "Andrenidae", mainColor: "#8F3D5F" };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   acrididae: insecta_acrididae,
   adumbratomorphidae: insecta_adumbratomorphidae,
@@ -12121,7 +12127,12 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "lamproblattidae": insecta_lamproblattidae,
   "termitidae": insecta_termitidae,
   "mantophasmatidae": insecta_mantophasmatidae,
-  "ensiferophasmatidae": insecta_ensiferophasmatidae,};
+  "ensiferophasmatidae": insecta_ensiferophasmatidae,
+  "halictidae": insecta_halictidae,
+  "megachilidae": insecta_megachilidae,
+  "colletidae": insecta_colletidae,
+  "melittidae": insecta_melittidae,
+  "andrenidae": insecta_andrenidae,};
 
 
 export function getThemeForNode(node: TaxonNode): ColorTheme {

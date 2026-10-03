@@ -271,6 +271,192 @@ def assemble_genera_tree(root, buckets, genus_rows, chain, stats):
     return kept
 
 
+def _index_by_name(node, ranks, out=None):
+    """Every node of the given ranks in a family tree, keyed by name."""
+    if out is None:
+        out = {}
+    for c in node.get("children") or []:
+        if c.get("rank") in ranks:
+            out.setdefault(c.get("name"), []).append(c)
+        _index_by_name(c, ranks, out)
+    return out
+
+
+def merge_family(existing: dict, new: dict):
+    """Fold a freshly imported family into one that already has data.
+
+    Needed because importing a source that overlaps a family we already hold would
+    otherwise overwrite it. The Afrotropical bees file carries 2,634 Apidae, and
+    our Apidae already holds 6,526 species enriched from GBIF, Wikipedia and
+    iNaturalist -- writing the file would have replaced all of that with 2,634
+    un-enriched names. Same problem is about to arrive with Ichneumonidae and
+    Chalcidoidea, whose families partly exist already, so it is a capability
+    rather than a patch.
+
+    Matching is by (rank, name) anywhere in the family, not merely among
+    siblings. That distinction is the whole reason a first version kept adding
+    bees on every run: our Apidae holds its genera directly under the FAMILY
+    node while the bees file nests them in subfamilies, so a sibling-scoped lookup
+    never found genus Apis, appended the entire subfamily subtree beside the
+    existing genus, and the next run did it again -- +2,348, then +417 more on a
+    re-run against a file that had already been deduplicated.
+
+    Existing nodes are never modified beyond backfilling fields they lack: a
+    genus we already have keeps its common names, descriptions and images.
+    """
+    merged = {"genera_added": 0, "species_added": 0, "genera_merged": 0,
+              "species_deduped": 0}
+
+    index = {}
+
+    def build(n):
+        for c in n.get("children") or []:
+            index.setdefault((c.get("rank"), c.get("name")), c)
+            build(c)
+    build(existing)
+
+    BACKFILL = ("authorship", "yearPublished", "description", "commonName",
+                "continents", "reference", "iucnStatus", "sourcedFrom", "lineage")
+
+    def add_children(dst_parent, src_children):
+        for src in src_children or []:
+            key = (src.get("rank"), src.get("name"))
+            prior = index.get(key)
+            if prior is None:
+                dst_parent.setdefault("children", []).append(src)
+                index[key] = src
+                build(src)
+                merged["genera_added"] += 1 if src.get("rank") == "GENUS" else 0
+                merged["species_added"] += sum(1 for _ in iter_species(src))
+                continue
+            if src.get("rank") in ("SPECIES", "SUBSPECIES"):
+                # Identity is the name; two records of one species are one
+                # species. Matching on (name, authorship, year) instead let
+                # spelling variants through and produced 2,366 redundant nodes
+                # across the six bee families -- Xylocopa capensis four times as
+                # None / Spinola / "Lepeletier, 1841" / "Lepeletier".
+                merged["species_deduped"] += 1
+                for f in BACKFILL:
+                    if not prior.get(f) and src.get(f):
+                        prior[f] = src[f]
+                continue
+            merged["genera_merged"] += 1 if src.get("rank") == "GENUS" else 0
+            add_children(prior, src.get("children"))
+
+    add_children(existing, new.get("children"))
+
+    drop_redundant_species(existing)
+    existing["genusCount"] = sum(1 for _ in iter_genera(existing))
+    existing["speciesCount"] = sum(1 for _ in iter_species(existing))
+    for k in ("continents", "lineage", "commonName", "description"):
+        if not existing.get(k) and new.get(k):
+            existing[k] = new[k]
+    return merged
+
+
+def drop_redundant_species(root):
+    """Remove same-name species duplicates anywhere in a family, keeping the richest.
+
+    Family-wide rather than per-genus. Two things made per-genus insufficient:
+    eight genus names in Apidae exist as two nodes each (Bombus, Melipona,
+    Centris and five others), so a genus's species can be split across two
+    subtrees; and some species sit directly under a subfamily with no genus node
+    at all, which a genus-scoped pass never visits.
+
+    Matching on the name alone is safe here: a binomial's genus is its first
+    word, so two nodes with the same name are the same species wherever they
+    sit. Subspecies carry a rank marker in the name and so never collide with
+    their parent species.
+
+    The surviving node is the one carrying the most information, so a bare GBIF
+    stub is replaced by a record with authorship, description and continents
+    rather than the reverse. Returns how many nodes were removed.
+    """
+    def richness(n):
+        return sum(1 for k in ("authorship", "yearPublished", "description",
+                               "commonName", "continents", "reference",
+                               "iucnStatus") if n.get(k)) + len(n.get("continents") or [])
+
+    # parent links, so a loser can be unlinked from wherever it hangs
+    parent = {}
+    stack = [root]
+    while stack:
+        n = stack.pop()
+        for c in n.get("children") or []:
+            parent[id(c)] = n
+            stack.append(c)
+
+    by_name = {}
+    for sp in iter_species(root):
+        by_name.setdefault(sp.get("name"), []).append(sp)
+
+    removed = 0
+    for _nm, group in by_name.items():
+        if len(group) < 2:
+            continue
+        winner = max(group, key=richness)
+        for sp in group:
+            if sp is winner:
+                continue
+            removed += 1
+            for f in ("authorship", "yearPublished", "description", "commonName",
+                      "continents", "reference", "iucnStatus", "sourcedFrom"):
+                if not winner.get(f) and sp.get(f):
+                    winner[f] = sp[f]
+            par = parent.get(id(sp))
+            if par is not None and sp in (par.get("children") or []):
+                par["children"].remove(sp)
+
+    # duplicate genus nodes holding the same name
+    gseen = {}
+    for g in list(iter_genera(root)):
+        prior = gseen.get(g.get("name"))
+        if prior is None:
+            gseen[g.get("name")] = g
+            continue
+        removed += 1
+        par = parent.get(id(g))
+        if par is not None and g in (par.get("children") or []):
+            par["children"].remove(g)
+        # re-home any species the loser held that the winner lacks
+        have = {x.get("name") for x in iter_species(prior)}
+        for sp in list(iter_species(g)):
+            if sp.get("name") not in have:
+                prior.setdefault("children", []).append(sp)
+
+    # Removing duplicates can strand a genus with no species: where two genus
+    # nodes shared a name and every one of the loser's species also existed in
+    # the winner, the loser is emptied rather than deleted. sanity_scan treats an
+    # empty genus as a defect and the data contract asserts there are none, so
+    # prune here rather than leave the caller to find out from a failed build.
+    def prune(node):
+        nonlocal removed
+        # The rebuild is what actually drops empty genera, so the count has to be
+        # taken here. An `if rank == "GENUS" and not children` branch after it
+        # never fires, because the node has already been filtered out by the time
+        # control reaches it -- which is why this reported zero while removing
+        # six, and dedupeSpeciesTree then skipped writing the fix.
+        n = len(node.get("children") or [])
+        node["children"] = [c for c in (node.get("children") or [])
+                            if c.get("rank") != "GENUS" or (c.get("children") or [])]
+        removed += n - len(node["children"])
+        for c in node["children"]:
+            prune(c)
+    prune(root)
+    return removed
+
+
+def iter_species(node):
+    """Every SPECIES node in a subtree."""
+    if node.get("rank") == "SPECIES":
+        yield node
+    for c in node.get("children") or []:
+        yield from iter_species(c)
+    for s in node.get("speciesList") or []:
+        if s.get("rank") == "SPECIES":
+            yield s
+
+
 def iter_genera(node):
     """Every GENUS node in a family tree."""
     if node.get("rank") == "GENUS":
@@ -488,7 +674,22 @@ def main() -> int:
 
         d = os.path.join(out, fslug, "src", "data")
         os.makedirs(d, exist_ok=True)
-        with open(os.path.join(d, f"{fslug}.json"), "w", encoding="utf-8") as fh:
+        target = os.path.join(d, f"{fslug}.json")
+        if os.path.exists(target) and not args.clean:
+            # Merge rather than clobber. See merge_family() for why.
+            try:
+                existing = json.load(open(target, encoding="utf-8"))
+            except Exception:
+                existing = None
+            if existing and existing.get("rank") == "FAMILY":
+                m = merge_family(existing, root)
+                stats["merged-existing-family"] += 1
+                print(f"   merged into existing {fslug}: "
+                      f"+{m['species_added']:,} species "
+                      f"({m['genera_added']} new genera, "
+                      f"{m['genera_merged']} existing genera extended)")
+                root = existing
+        with open(target, "w", encoding="utf-8") as fh:
             json.dump(root, fh, indent=2, ensure_ascii=False)
             fh.write("\n")
 

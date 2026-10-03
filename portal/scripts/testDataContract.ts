@@ -104,9 +104,9 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.PHYLUM, 32);
   assert.equal(rc.CLASS, 75);
   assert.equal(rc.ORDER, 394);
-  assert.equal(rc.FAMILY, 5467);
-  assert.equal(rc.GENUS, 71856);
-  assert.equal(rc.SPECIES, 627744);
+  assert.equal(rc.FAMILY, 5472);
+  assert.equal(rc.GENUS, 72083);
+  assert.equal(rc.SPECIES, 634117);
 });
 
 test('root has exactly 32 phylum children', () => {
@@ -394,8 +394,8 @@ test('skeleton node type distribution', () => {
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 394,
-    FAMILY: 5467, GENUS: 71856, SPECIES: 627744,
-    SUBFAMILY: 776, TRIBE: 918, SUBSPECIES: 6914,
+    FAMILY: 5472, GENUS: 72083, SPECIES: 634117,
+    SUBFAMILY: 792, TRIBE: 948, SUBSPECIES: 7291,
     BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
 });
@@ -406,7 +406,7 @@ test('manifest order count snapshot', () => {
   // The remaining family (of 5283 total) is Tardigrada, inlined in the
   // skeleton rather than a separate order file.
   const familyToOrderCount = Object.keys(manifest.familyToOrder).length;
-  assert.equal(familyToOrderCount, 5465);
+  assert.equal(familyToOrderCount, 5470);
 });
 
 test('manifest CARNIVORA entry snapshot', () => {
@@ -521,11 +521,11 @@ test('all 394 order files exist and are valid JSON', () => {
     checkDups(orderData);
   }
 
-  test('total families across all orders is 5466 (incl. bulk-imported)', () => {
-    // 5467 total families in taxonomy; 5466 in order files (Tardigrada inline is the 1 difference).
-    // 5465 have dedicated data files (manifest.familyToOrder).
+  test('total families across all orders is 5471 (incl. bulk-imported)', () => {
+    // 5472 total families in taxonomy; 5471 in order files (Tardigrada inline is the 1 difference).
+    // 5470 have dedicated data files (manifest.familyToOrder).
     // The remainder are bulk-imported (e.g., beetles) and exist only in order files without appSlug.
-    assert.equal(totalFamilies, 5466);
+    assert.equal(totalFamilies, 5471);
   });
 
   test('>=95% of FAMILY nodes have appSlug', () => {
@@ -581,7 +581,7 @@ test('coverage family count matches taxonomy', () => {
   for (const cls of coverage) {
     familyCount += cls.families.length;
   }
-  assert.equal(familyCount, 5467);
+  assert.equal(familyCount, 5472);
 });
 
 test('every coverage family has portalCount and id prefix; >=99% have className', () => {
@@ -675,7 +675,7 @@ test('every FAMILY in taxonomy has speciesCount; >=95% have appSlug', () => {
     for (const c of n.children ?? []) walk(c);
   }
   walk(taxonomy);
-  assert.equal(familyCount, 5467);
+  assert.equal(familyCount, 5472);
   const pct = (familyCount - missingAppSlug) / familyCount;
   assert.ok(pct >= 0.95, `only ${(pct*100).toFixed(1)}% of taxonomy families have appSlug`);
 });

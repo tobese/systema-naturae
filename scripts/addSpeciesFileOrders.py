@@ -20,6 +20,7 @@ Usage:
     python3 scripts/addSpeciesFileOrders.py --apply
 """
 import argparse
+import glob
 import json
 import os
 import sys
@@ -225,6 +226,10 @@ ORDERS = {
                        "parthenogenetic life cycle in which females reproduce "
                        "without mating, often for most of the year.",
     },
+    "afrotropical-bees": {
+        "parent": "Hymenoptera", "name": "Hymenoptera",
+        "commonName": None, "description": None,
+    },
     # Afromoths are moths, so they extend the Lepidoptera order we already have
     # rather than creating one. That order previously held two butterfly families.
     "afromoths": {
@@ -239,6 +244,35 @@ ORDERS = {
         "description": None,  # family-level description belongs to the data file
     },
 }
+
+
+def count_species_in_file(app_slug):
+    """Species nodes in a family's data file, or None if absent/unreadable.
+
+    Located by glob rather than by constructing the path: family files live at
+    taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/src/data/<family>.json,
+    and the rank depth varies (Tardigrada has no class), so a joined path is a
+    guess. The alternative authority, portal/scripts/lib/familyPath.ts, is
+    TypeScript and not importable here.
+    """
+    hits = glob.glob(f"taxonomy/**/{app_slug}/src/data/{app_slug}.json",
+                    recursive=True)
+    hits = [h for h in hits if "node_modules" not in h]
+    if not hits:
+        return None
+    try:
+        doc = json.load(open(hits[0], encoding="utf-8"))
+    except Exception:
+        return None
+    n = 0
+    stack = [doc]
+    while stack:
+        x = stack.pop()
+        if x.get("rank") == "SPECIES":
+            n += 1
+        stack.extend(x.get("children") or [])
+        stack.extend(x.get("speciesList") or [])
+    return n
 
 
 def find_node(node, pred):
@@ -333,9 +367,18 @@ def main() -> int:
                 n += 1
             target = existing_by_name.get(name.lower())
             if target:
-                if target.get("speciesCount") != f["speciesCount"]:
+                # Count the species actually in the family data file rather than
+                # trusting the incoming fragment. A fragment counts one source's
+                # taxa, and for a family that already existed -- or that an import
+                # has just merged into -- that is the wrong number. It set Apidae
+                # to 2,634 from the Afrotropical bees file while the family file
+                # held 8,874, and the coverage contract failed on
+                # "portalCount never exceeds totalCount".
+                on_disk = count_species_in_file(target["appSlug"])
+                resolved = on_disk if on_disk is not None else f["speciesCount"]
+                if target.get("speciesCount") != resolved:
+                    target["speciesCount"] = resolved
                     updated += 1
-                target["speciesCount"] = f["speciesCount"]
                 target["appSlug"] = f["appSlug"]
                 continue
             node = {"id": fid, "name": name, "rank": "FAMILY",
