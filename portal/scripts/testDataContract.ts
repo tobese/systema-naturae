@@ -105,8 +105,8 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.CLASS, 119);
   assert.equal(rc.ORDER, 721);
   assert.equal(rc.FAMILY, 10601);
-  assert.equal(rc.GENUS, 171508);
-  assert.equal(rc.SPECIES, 1705596);
+  assert.equal(rc.GENUS, 171511);
+  assert.equal(rc.SPECIES, 1705600);
 });
 
 test('root has exactly 33 phylum children', () => {
@@ -394,7 +394,7 @@ test('skeleton node type distribution', () => {
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 33, CLASS: 119, ORDER: 721,
-    FAMILY: 10601, GENUS: 171508, SPECIES: 1705596,
+    FAMILY: 10601, GENUS: 171511, SPECIES: 1705600,
     SUBFAMILY: 792, TRIBE: 948, SUBSPECIES: 7291,
     BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
