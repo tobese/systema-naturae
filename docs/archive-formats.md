@@ -134,6 +134,32 @@ Checksums are the point of the manifest. `--verify` recomputes sha256 for every
 archive because **a truncated download reads as "this source has poor coverage"
 rather than as an error**, which is a far more expensive thing to notice.
 
+## The name index is a snapshot, and it is stale
+
+`portal/data/name-parse-index.jsonl` (385 MB, gitignored) holds every species
+name in the tree as of the moment it was written. Nothing in CI notices when it
+drifts, and it drifts on every import. As of 2026-10-04 it is **19 hours old with
+6,591 family files newer than it**, and it has been wrong in **both**
+directions:
+
+- Craneflies: 15,563 species scored new when 15,191 were already held.
+- ILDIS: 13,347 of 16,371 species scored as already held when the tree holds 64.
+
+The second is the expensive one — an importer trusting the index would have
+skipped 13,283 species and reported success.
+
+`make name-index-status` reports this and is wired into `make data` and
+`make enrich`, so staleness surfaces on every build without costing anything.
+`make name-index` rebuilds it, which is not a local reindex: `parseAllNames.py`
+POSTs every name to GBIF's parser at roughly 113 names/s on one connection,
+which is hours for the 2.4M names the tree now holds. Sharding brings that down
+(`ARGS='--shard 0/6 --workers 6'`) but it cannot run inside a build.
+
+Until it is rebuilt, the rule that survives both failures is: **stage everything
+and let `merge_family` decide**, because it reads the file it is about to write
+rather than a cached summary of every file. See the docstring of
+`scripts/importColChecklist.py`, which was changed for exactly this.
+
 ## Inventory, measured 2026-10-04
 
 39 archive directories, 37 of them indexed in `manifest.json`.

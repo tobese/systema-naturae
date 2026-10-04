@@ -1,4 +1,5 @@
-.PHONY: dev dev-daemon build data typecheck lint docker
+.PHONY: dev dev-daemon build data typecheck lint docker enrich \
+        name-index name-index-status
 
 dev:
 	cd portal && npm run dev
@@ -12,6 +13,20 @@ build:
 
 data:
 	cd portal && sh scripts/buildData.sh
+	@$(MAKE) --no-print-directory name-index-status
+
+# portal/data/name-parse-index.jsonl is a snapshot of every species name, taken
+# at a moment and gitignored, so nothing in CI notices it drifting. It drifts on
+# every import, and it has been wrong in both directions: it scored 15,563
+# Cranefly species as new when 15,191 were held, and 13,347 of 16,371 ILDIS
+# species as held when the tree holds 64. `data` reports rather than rebuilds,
+# because rebuilding is a network job -- parseAllNames.py POSTs every name to
+# GBIF's parser at ~113/s on one connection, hours for the 2.4M the tree holds.
+name-index-status:
+	@python3 scripts/nameIndexStatus.py || true
+
+name-index:
+	python3 scripts/parseAllNames.py $(ARGS)
 
 typecheck:
 	cd portal && npm run typecheck
@@ -56,3 +71,4 @@ enrich:
 	cd portal && SN_KINGDOM=$(SN_KINGDOM) sh scripts/buildData.sh
 	cd .. && git add -A && git commit -m "Enrich $$(SN_KINGDOM) with Wikipedia" || echo "  nothing to commit"
 	@git push
+	@$(MAKE) --no-print-directory name-index-status
