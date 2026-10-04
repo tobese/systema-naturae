@@ -105,6 +105,28 @@ all the publisher offers (AntWeb, BioImages, CalPhotos, FishBase, Flickr, NMNH,
 msw3, Wikimedia Commons, USDA). Preferring zip is a convenience, not a rule:
 every importer here reads a zip because a DwCA is a zip.
 
+**Do not trust the extension.** ChecklistBank's `/dataset/<key>/archive.zip`
+answers `content-type: application/zip` for every dataset and for ILDIS (1015)
+returns a gzip'd tar anyway, so opening it as a zip raises `BadZipFile` on a
+perfectly good download. `scripts/colChecklist.py` sniffs the two-byte magic
+instead of going by the name.
+
+**And do not trust one shape inside either.** Three datasets in a row, same
+endpoint, same apparent format, three different schemas:
+
+| dataset | columns | metadata | tables |
+|---|---|---|---|
+| reptile-db | bare snake_case (`parent_id`, `name_id`) | YAML inside a file called `Metadata.json` | COL's `Taxon`/`Name`/`Synonym` split |
+| craneflies | `col:`-prefixed camelCase (`col:parentId`) | real JSON | same COL split |
+| ildis | PascalCase (`AcceptedTaxonID`, `SpeciesEpithet`) | none at all | its own: `AcceptedSpecies.tsv`, `Synonyms.tsv`, `CommonNames.tsv`, … |
+
+Two more traps in that family, both silent. `Name.tsv` carries no usable
+`status` — all 34,366 reptile-db rows have it empty — so accepted-versus-synonym
+has to come from `Synonym.tsv`. And the denormalised
+`kingdom_name`…`family_name` columns are **empty in reptile-db and populated in
+ILDIS**, so reading the chain from them without checking places nothing at all,
+with no error to show for it.
+
 Paths are resolved through `scripts/sources.py` / `scripts/paths.ts`, never
 hardcoded, so an unmounted volume produces a sentence rather than an ENOENT.
 

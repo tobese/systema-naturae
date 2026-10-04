@@ -34,19 +34,39 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import canonicalNames as C  # noqa: E402
 import colChecklist as K  # noqa: E402
 import importSpeciesFile as SF  # noqa: E402
 import taxamatch  # noqa: E402
 
-TAXONOMY = "portal/data/taxonomy.json"
+KINGDOM_CONFIG = "portal/data/kingdom-config.json"
+# Fallback only. A source's own kingdom comes from its rank chain, because
+# portal/data/taxonomy.json is animalia alone -- looking for Fabaceae in it
+# refuses all 3,024 of ILDIS' legume species as needing a new family when the
+# tree already holds Fabaceae with 24,496 species.
+FALLBACK_KINGDOM = "animalia"
 SOURCE = "checklistbank"
 FORMS = ("{g} \u00d7{s}", "{g} {s}", "{g} \u00d7{s}", "{g} \u00d7 {s}")
 
 
-def our_families():
+def taxonomy_input(kingdom):
+    """Path to a kingdom's taxonomy file, from kingdom-config.json.
+
+    Not derived from the kingdom's name: Plantae's input is
+    taxonomy-plantae-snippet.json and Animalia's is plain taxonomy.json.
+    """
+    cfg = json.load(open(KINGDOM_CONFIG, encoding="utf-8"))["kingdoms"]
+    k = (kingdom or FALLBACK_KINGDOM).lower()
+    if k not in cfg:
+        sys.exit(f"FATAL: kingdom {k!r} is not in kingdom-config.json. "
+                 f"Declared: {', '.join(sorted(cfg))}")
+    return os.path.join("portal", cfg[k]["input"]), k
+
+
+def our_families(kingdom=None):
     """lower-cased family name -> (appSlug, node)"""
-    tax = json.load(open(TAXONOMY, encoding="utf-8"))
+    path, k = taxonomy_input(kingdom)
+    print(f"  taxonomy input: {path}  (kingdom {k})")
+    tax = json.load(open(path, encoding="utf-8"))
     out = {}
 
     def walk(n):
@@ -75,12 +95,19 @@ def main() -> int:
             and t["name"] and not t["is_synonym"]]
     print(f"  accepted species/subspecies offered: {len(cand):,}")
 
-    idx = C._load()
-    canon = set(idx.keys()) | set(idx.values())
     placed = set()
-    print(f"  our canonical index: {len(canon):,} names", flush=True)
 
-    tax, fams = our_families()
+    # The source's kingdom comes from its own rank chain, read off the first
+    # taxon that carries one.
+    src_kingdom = None
+    probe = {t["id"]: t for t in taxa}
+    for t in cand[:200]:
+        c = K.chain(t, probe)
+        if c.get("kingdom"):
+            src_kingdom = c["kingdom"]
+            break
+    tax, fams = our_families(src_kingdom)
+    tax_path, _k = taxonomy_input(src_kingdom)
     parsed = taxamatch.parse_names(sorted({t["name"] for t in cand}))
 
     staged = collections.defaultdict(list)      # appSlug -> [(genus, name, auth)]
@@ -100,9 +127,17 @@ def main() -> int:
             nonb += 1
             continue
         bare = f"{g} \u00d7{s}" if "\u00d7" in nm else f"{g} {s}"
-        if any(f.format(g=g, s=s).lower() in canon
-               or f.format(g=g, s=s).lower() in placed for f in FORMS):
-            held += 1
+        # Deliberately NOT consulting the canonical index here. It is a snapshot
+        # of the tree taken at a point in time, and on ILDIS it is wrong in the
+        # expensive direction: it scored 13,347 of 16,371 legume species as
+        # already held when only 64 are, so an index-driven run would have
+        # staged 3,024 and silently skipped the other 13,283. On Craneflies the
+        # same index erred the other way, scoring 15,563 as new when 15,191
+        # were held. A snapshot disagrees with the tree it indexes in whichever
+        # direction it drifted, so the only arbiter here is merge_family, which
+        # reads the family file it is about to write and reports what it really
+        # added and what was already present.
+        if bare.lower() in placed:
             continue
         placed.add(bare.lower())
         ch = K.chain(t, by_id)
@@ -114,7 +149,9 @@ def main() -> int:
         slug = fams[fam][0]
         staged[slug].append((g, bare, (t.get("authorship") or "").strip() or None))
 
-    print(f"\n  already held:        {held:,}")
+    print(f"  source kingdom: {src_kingdom or '(none found; using ' + FALLBACK_KINGDOM + ')'}")
+    print(f"\n  staged:              {sum(len(v) for v in staged.values()):,} "
+          f"(+{held:,} unparseable)")
     print(f"  non-binominal:       {nonb:,}")
     print(f"  new, into a family we hold: {sum(len(v) for v in staged.values()):,}"
           f"  across {len(staged)} families")
@@ -182,10 +219,10 @@ def main() -> int:
 
     print(f"\n  species added: {added_total:,}   already present: {dedup_total:,}")
     if args.apply:
-        with open(TAXONOMY, "w", encoding="utf-8") as fh:
+        with open(tax_path, "w", encoding="utf-8") as fh:
             json.dump(tax, fh, indent=2, ensure_ascii=False)
             fh.write("\n")
-        print(f"  wrote {TAXONOMY}")
+        print(f"  wrote {tax_path}")
     else:
         print("\n  (dry run -- pass --apply to write)")
     return 0

@@ -280,6 +280,25 @@ SOURCES = {
         "EMPTY, left by an abandoned download, which is why this entry appears "
         "now rather than when the archive landed. "
         "Also CC BY 4.0, so citable with attribution once taken."),
+    "ildis": (
+        "ILDIS -- World Database of Legumes", "DOI 10.48580/d382 "
+        "(ChecklistBank dataset 1015); version 12, May 2014, issued 2014-05-05",
+        "https://api.checklistbank.org/dataset/1015/archive.zip",
+        "CC BY 4.0 (from the ChecklistBank dataset record; the archive carries "
+        "no metadata file)", "applied",
+        "APPLIED, and the largest single gain in this batch: **16,296 species "
+        "into Fabaceae**, which went 24,496 -> 41,771. Of 16,371 species "
+        "offered, only 64 were already held. It was the one genuine gap in a "
+        "batch that also contained FishBase, where 600 of 600 sampled species "
+        "were already present. "
+        "Three things about the archive, all of which cost time: the endpoint is "
+        "called archive.zip and answers content-type application/zip but returns "
+        "a gzip'd TAR, so opening it as a zip raises BadZipFile on a perfectly "
+        "good download; the tables are ILDIS's own (AcceptedSpecies.tsv, "
+        "Synonyms.tsv, CommonNames.tsv, ...) rather than COL's Taxon/Name split; "
+        "and it is the only one of the three shapes whose denormalised chain "
+        "columns are actually populated, so placement needs no parent walk. "
+        "scripts/colChecklist.py now normalises all three to one internal shape."),
     "reptile-db": (
         "The Reptile Database", "DOI 10.48580/d37s (ChecklistBank dataset 1008); "
         "version 2026-06, issued 2026-06-24; contact Peter Uetz",

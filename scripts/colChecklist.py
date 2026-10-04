@@ -66,6 +66,53 @@ CHAIN_COL = {r: f"{r}_name" for r in
              ("kingdom", "phylum", "class", "order", "family")}
 
 
+class _Container:
+    """zipfile or tarfile, same three methods.
+
+    The endpoint is named archive.zip and answers with content-type
+    application/zip, but ILDIS (1015) returns a gzip'd tar whose members are
+    its own tables. Trusting the name is how a reader ends up raising
+    BadZipFile on a valid download, so the magic decides.
+    """
+
+    def __init__(self, path):
+        with open(path, "rb") as fh:
+            magic = fh.read(2)
+        if magic == b"PK":
+            import zipfile
+            self._z = zipfile.ZipFile(path)
+            self._t = None
+        elif magic == b"\x1f\x8b":
+            import tarfile
+            self._t = tarfile.open(path, "r:gz")
+            self._z = None
+        else:
+            raise ValueError(f"{path}: not a zip or gzip (magic {magic!r})")
+
+    def names(self):
+        return self.namelist()
+
+    def namelist(self):
+        return sorted(self._z.namelist()) if self._z else self._t.getnames()
+
+    def read(self, name):
+        if self._z:
+            return self._z.read(name)
+        return self._t.extractfile(name).read()
+
+    def open(self, name):
+        if self._z:
+            return self._z.open(name)
+        import io as _io
+        return _io.BytesIO(self.read(name))
+
+    def close(self):
+        if self._z:
+            self._z.close()
+        if self._t:
+            self._t.close()
+
+
 def _norm(h):
     """Column name -> comparison key: strip col:, lowercase, drop underscores."""
     h = h[4:] if h.startswith("col:") else h
@@ -127,14 +174,15 @@ def metadata(path):
     datasets, so this does not trust the extension: it tries json first and
     falls back to a flat `key: value` scan.
     """
-    with zipfile.ZipFile(path) as z:
+    c = _Container(path)
+    try:
         raw = None
         for cand in ("Metadata.json", "metadata.yaml", "metadata.json"):
-            try:
-                raw = z.read(cand).decode("utf-8", "replace")
+            if cand in c.names():
+                raw = c.read(cand).decode("utf-8", "replace")
                 break
-            except KeyError:
-                continue
+    finally:
+        c.close()
     if raw is None:
         return {}
     try:
@@ -154,32 +202,88 @@ def metadata(path):
     return out
 
 
-def load(path):
-    """-> (taxa, names, meta).
+# ILDIS (ChecklistBank 1015) does not use COL's tables at all. Its export is
+# AcceptedSpecies.tsv / Synonyms.tsv / CommonNames.tsv / Distribution.tsv /
+# NameReferences.tsv / References.tsv / SourceDatabase.tsv -- no Taxon.tsv, no
+# Name.tsv, no meta.xml. And it is the one shape whose denormalised chain columns
+# are actually populated: Kingdom, Phylum, Class, Order, Family on every row,
+# which is the placement chain for free with no parent walk.
+ILDIS_TABLES = ("AcceptedSpecies.tsv", "Synonyms.tsv", "CommonNames.tsv",
+                "Distribution.tsv", "NameReferences.tsv", "References.tsv",
+                "SourceDatabase.tsv")
+ILDIS_CHAIN = ("Kingdom", "Phylum", "Class", "Order", "Family")
 
-    taxa: [{'id','parent','name_id','name','authorship','rank','chain'}]
+
+def _ildis(z):
+    """(taxa, names, meta) for the ILDIS shape, in the same shape as _col()."""
+    meta = {}
+    taxa = []
+    with z.open("AcceptedSpecies.tsv") as f:
+        rd = csv.DictReader(
+            io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
+            delimiter="\t")
+        for r in rd:
+            genus = (r.get("Genus") or "").strip()
+            epithet = (r.get("SpeciesEpithet") or "").strip()
+            sub = (r.get("SubGenusName") or "").strip()
+            if not genus or not epithet:
+                continue
+            # ILDIS keeps the subgenus in its own column; COL writes it as a
+            # trinomial, and importColStage2 canonical() sees both, so emit the
+            # trinomial form rather than dropping the subgenus on the floor.
+            name = f"{genus} {sub} {epithet}" if sub else f"{genus} {epithet}"
+            t = {
+                "id": r.get("AcceptedTaxonID"),
+                "parent": None,
+                "name_id": r.get("AcceptedTaxonID"),
+                "name": name,
+                "authorship": (r.get("AuthorString") or "").strip() or None,
+                "rank": "species",
+                "is_synonym": False,
+            }
+            for col in ILDIS_CHAIN:
+                v = (r.get(col) or "").strip()
+                if v:
+                    t[f"{col.lower()}_name"] = v
+            taxa.append(t)
+    for t in taxa:
+        meta = meta  # metadata.yaml is absent in this shape; keep the contract
+    return taxa, {}, meta
+
+
+def load(path):
+    """-> (taxa, names, meta), whatever serialisation the archive uses.
+
+    taxa: [{'id','parent','name_id','name','authorship','rank','is_synonym',
+            '<rank>_name': ...}]
     names: {name_id: {'name','authorship','rank'}}
+
+    Three shapes reach this function and all three come out identical, so the
+    importer downstream has one path rather than three.
     """
-    with zipfile.ZipFile(path) as z:
+    c = _Container(path)
+    try:
+        if "AcceptedSpecies.tsv" in c.names():
+            return _ildis(c)
         names = {}
         for t in NAME_TABLES:
-            if t in z.namelist():
-                for r in _rows(z, t, "name"):
+            if t in c.namelist():
+                for r in _rows(c, t, "name"):
                     names[r["id"]] = {"name": r.get("scientific_name"),
                                       "authorship": r.get("authorship"),
                                       "rank": r.get("rank")}
                 break
         synonym_ids = set()
         for t in SYN_TABLES:
-            if t in z.namelist():
-                for r in _rows(z, t, "synonym"):
+            if t in c.namelist():
+                for r in _rows(c, t, "synonym"):
                     if r.get("name_id"):
                         synonym_ids.add(r["name_id"])
                 break
         taxa = []
         for t in TAXON_TABLES:
-            if t in z.namelist():
-                for r in _rows(z, t, "taxon"):
+            if t in c.namelist():
+                for r in _rows(c, t, "taxon"):
                     n = names.get(r["name_id"], {})
                     row = {
                         "id": r["id"],
@@ -196,6 +300,8 @@ def load(path):
                             row[col] = v
                     taxa.append(row)
                 break
+    finally:
+        c.close()
     return taxa, names, metadata(path)
 
 
