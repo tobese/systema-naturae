@@ -1260,6 +1260,20 @@ const GONATOZYGACEAE_THEME: ColorTheme = {"accent":"hsl(320.1120000000228, 55%, 
 const CHLOROKYBACEAE_THEME: ColorTheme = {"accent":"hsl(97.62000000002445, 55%, 40%)","bg":"hsl(97.62000000002445, 25%, 92%)","bgAlt":"hsl(97.62000000002445, 20%, 96%)","border":"hsl(97.62000000002445, 30%, 70%)","familyTree":"hsl(127.62000000002445, 40%, 50%)","nodeFill":"hsl(97.62000000002445, 35%, 70%)","nodeStroke":"hsl(97.62000000002445, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
 const ARCHAEFFRUCTACEAE_THEME: ColorTheme = {"accent":"hsl(45, 55%, 40%)","bg":"hsl(45, 25%, 92%)","bgAlt":"hsl(45, 20%, 96%)","border":"hsl(45, 30%, 70%)","familyTree":"hsl(75, 40%, 50%)","nodeFill":"hsl(45, 35%, 70%)","nodeStroke":"hsl(45, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
 
+const PTERIDRYACEAE_THEME: ColorTheme = {"accent":"hsl(162.57200000001467, 55%, 40%)","bg":"hsl(162.57200000001467, 25%, 92%)","bgAlt":"hsl(162.57200000001467, 20%, 96%)","border":"hsl(162.57200000001467, 30%, 70%)","familyTree":"hsl(192.57200000001467, 40%, 50%)","nodeFill":"hsl(162.57200000001467, 35%, 70%)","nodeStroke":"hsl(162.57200000001467, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const CRYPTOCAULACEAE_THEME: ColorTheme = {"accent":"hsl(300.0800000000163, 55%, 40%)","bg":"hsl(300.0800000000163, 25%, 92%)","bgAlt":"hsl(300.0800000000163, 20%, 96%)","border":"hsl(300.0800000000163, 30%, 70%)","familyTree":"hsl(330.0800000000163, 40%, 50%)","nodeFill":"hsl(300.0800000000163, 35%, 70%)","nodeStroke":"hsl(300.0800000000163, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const ARTHROPTERIDACEAE_THEME: ColorTheme = {"accent":"hsl(77.58800000001793, 55%, 40%)","bg":"hsl(77.58800000001793, 25%, 92%)","bgAlt":"hsl(77.58800000001793, 20%, 96%)","border":"hsl(77.58800000001793, 30%, 70%)","familyTree":"hsl(107.58800000001793, 40%, 50%)","nodeFill":"hsl(77.58800000001793, 35%, 70%)","nodeStroke":"hsl(77.58800000001793, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const CTENIDIACEAE_THEME: ColorTheme = {"accent":"hsl(215.09600000001956, 55%, 40%)","bg":"hsl(215.09600000001956, 25%, 92%)","bgAlt":"hsl(215.09600000001956, 20%, 96%)","border":"hsl(215.09600000001956, 30%, 70%)","familyTree":"hsl(245.09600000001956, 40%, 50%)","nodeFill":"hsl(215.09600000001956, 35%, 70%)","nodeStroke":"hsl(215.09600000001956, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const CERATODONTACEAE_THEME: ColorTheme = {"accent":"hsl(352.6040000000212, 55%, 40%)","bg":"hsl(352.6040000000212, 25%, 92%)","bgAlt":"hsl(352.6040000000212, 20%, 96%)","border":"hsl(352.6040000000212, 30%, 70%)","familyTree":"hsl(22.604000000021188, 40%, 50%)","nodeFill":"hsl(352.6040000000212, 35%, 70%)","nodeStroke":"hsl(352.6040000000212, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const DICRANELLOPSIDACEAE_THEME: ColorTheme = {"accent":"hsl(130.11200000002282, 55%, 40%)","bg":"hsl(130.11200000002282, 25%, 92%)","bgAlt":"hsl(130.11200000002282, 20%, 96%)","border":"hsl(130.11200000002282, 30%, 70%)","familyTree":"hsl(160.11200000002282, 40%, 50%)","nodeFill":"hsl(130.11200000002282, 35%, 70%)","nodeStroke":"hsl(130.11200000002282, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const RUFICAULACEAE_THEME: ColorTheme = {"accent":"hsl(267.62000000002445, 55%, 40%)","bg":"hsl(267.62000000002445, 25%, 92%)","bgAlt":"hsl(267.62000000002445, 20%, 96%)","border":"hsl(267.62000000002445, 30%, 70%)","familyTree":"hsl(297.62000000002445, 40%, 50%)","nodeFill":"hsl(267.62000000002445, 35%, 70%)","nodeStroke":"hsl(267.62000000002445, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const CALLICOSTACEAE_THEME: ColorTheme = {"accent":"hsl(45.12800000002608, 55%, 40%)","bg":"hsl(45.12800000002608, 25%, 92%)","bgAlt":"hsl(45.12800000002608, 20%, 96%)","border":"hsl(45.12800000002608, 30%, 70%)","familyTree":"hsl(75.12800000002608, 40%, 50%)","nodeFill":"hsl(45.12800000002608, 35%, 70%)","nodeStroke":"hsl(45.12800000002608, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const RHAMPHIDIACEAE_THEME: ColorTheme = {"accent":"hsl(182.6359999999986, 55%, 40%)","bg":"hsl(182.6359999999986, 25%, 92%)","bgAlt":"hsl(182.6359999999986, 20%, 96%)","border":"hsl(182.6359999999986, 30%, 70%)","familyTree":"hsl(212.6359999999986, 40%, 50%)","nodeFill":"hsl(182.6359999999986, 35%, 70%)","nodeStroke":"hsl(182.6359999999986, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const RHIZOGEMMACEAE_THEME: ColorTheme = {"accent":"hsl(320.14400000000023, 55%, 40%)","bg":"hsl(320.14400000000023, 25%, 92%)","bgAlt":"hsl(320.14400000000023, 20%, 96%)","border":"hsl(320.14400000000023, 30%, 70%)","familyTree":"hsl(350.14400000000023, 40%, 50%)","nodeFill":"hsl(320.14400000000023, 35%, 70%)","nodeStroke":"hsl(320.14400000000023, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const KAHAKULOACEAE_THEME: ColorTheme = {"accent":"hsl(97.65200000000186, 55%, 40%)","bg":"hsl(97.65200000000186, 25%, 92%)","bgAlt":"hsl(97.65200000000186, 20%, 96%)","border":"hsl(97.65200000000186, 30%, 70%)","familyTree":"hsl(127.65200000000186, 40%, 50%)","nodeFill":"hsl(97.65200000000186, 35%, 70%)","nodeStroke":"hsl(97.65200000000186, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const LANGIOPHYTACEAE_THEME: ColorTheme = {"accent":"hsl(235.1600000000035, 55%, 40%)","bg":"hsl(235.1600000000035, 25%, 92%)","bgAlt":"hsl(235.1600000000035, 20%, 96%)","border":"hsl(235.1600000000035, 30%, 70%)","familyTree":"hsl(265.1600000000035, 40%, 50%)","nodeFill":"hsl(235.1600000000035, 35%, 70%)","nodeStroke":"hsl(235.1600000000035, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+const LYONOPHYTACEAE_THEME: ColorTheme = {"accent":"hsl(12.668000000005122, 55%, 40%)","bg":"hsl(12.668000000005122, 25%, 92%)","bgAlt":"hsl(12.668000000005122, 20%, 96%)","border":"hsl(12.668000000005122, 30%, 70%)","familyTree":"hsl(42.66800000000512, 40%, 50%)","nodeFill":"hsl(12.668000000005122, 35%, 70%)","nodeStroke":"hsl(12.668000000005122, 50%, 35%)", subfamilyColors: {}, lineageColors: {}, breedGroupColor: "#888", hybridColor: "#888" };
+
 export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "araucariaceae": ARAUCARIACEAE_THEME,
   "pinaceae": PINACEAE_THEME,
@@ -2520,4 +2534,17 @@ export const COLOR_REGISTRY: Record<string, ColorTheme> = {
   "gonatozygaceae": GONATOZYGACEAE_THEME,
   "chlorokybaceae": CHLOROKYBACEAE_THEME,
   "archaefructaceae": ARCHAEFFRUCTACEAE_THEME,
+  "pteridryaceae": PTERIDRYACEAE_THEME,
+  "cryptocaulaceae": CRYPTOCAULACEAE_THEME,
+  "arthropteridaceae": ARTHROPTERIDACEAE_THEME,
+  "ctenidiaceae": CTENIDIACEAE_THEME,
+  "ceratodontaceae": CERATODONTACEAE_THEME,
+  "dicranellopsidaceae": DICRANELLOPSIDACEAE_THEME,
+  "ruficaulaceae": RUFICAULACEAE_THEME,
+  "callicostaceae": CALLICOSTACEAE_THEME,
+  "rhamphidiaceae": RHAMPHIDIACEAE_THEME,
+  "rhizogemmaceae": RHIZOGEMMACEAE_THEME,
+  "kahakuloaceae": KAHAKULOACEAE_THEME,
+  "langiophytaceae": LANGIOPHYTACEAE_THEME,
+  "lyonophytaceae": LYONOPHYTACEAE_THEME,
 };
