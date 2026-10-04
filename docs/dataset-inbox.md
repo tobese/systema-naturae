@@ -7,6 +7,16 @@ here and move each one into the table with a verdict.
 
 ```
 ```
+COL Hierarchy
+https://www.checklistbank.org/dataset/1000/metadata
+
+Craneflies
+https://www.checklistbank.org/dataset/1005/metadata
+
+
+Reptiles
+https://www.checklistbank.org/dataset/1008/metadata
+
 
 ## Triaged 2026-10-04 — four pastes, one of them a real find
 
