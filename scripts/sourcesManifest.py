@@ -119,13 +119,17 @@ SOURCES = {
         "Catalogue of Life, Base Release", "DOI 10.48580/dgz5n (ChecklistBank 316321)",
         "https://www.catalogueoflife.org/data/download",
         "CC BY 4.0", "partial",
-        "Stage 1 applied: 427,804 species merged into the 3,413 families we "
-        "already had, 431,305 authorship records, CC BY. Stage 2 NOT applied: "
-        "the remaining ~818,006 species sit in 9,591 families across 1,403 orders "
-        "we do not have, which is a structural change rather than an import. COL's "
-        "2.6M synonyms also not imported. ColDP with per-name source attribution "
-        "is not currently downloadable (404); the DwCA has 7 columns and no "
-        "source field, so provenance is recorded as COL rather than per-checklist"),
+        "Stage 1 applied: 427,804 species merged into the 3,413 animalia "
+        "families we already had, 431,305 authorship records. Stage 2 applied "
+        "to Fungi and Chromista (importColStage2.py): 27,812 species, of which "
+        "27,462 in 719 new family files and 350 into 95 existing ones; Fungi "
+        "773 -> 1,193 families, Chromista 703 -> 1,002. Stage 2 still to do for "
+        "Animalia (the large majority), Plantae, Protozoa and Archaea, plus "
+        "bacteria and viruses, which are not yet declared in kingdom-config.json. "
+        "COL's 2.6M synonyms are still not imported. ColDP with per-name source "
+        "attribution is not currently downloadable (404); the DwCA has 7 columns "
+        "and no source field, so provenance is recorded as COL rather than "
+        "per-checklist"),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",
