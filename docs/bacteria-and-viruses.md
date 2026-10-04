@@ -1,0 +1,126 @@
+# Holding bacteria and viruses
+
+The decision this document exists to inform: **the project should hold viruses
+and bacteria** — they are a fifth of the tree's potential and no amount of
+waiting makes COL supply them in a form the importer can use. What is still open
+is *at what rank*, because COL and Wikidata both decline to say, and the answer
+determines whether the import is a clean extension or 17 new kingdoms.
+
+Measured against the DwCA (2026-08 COL Base Release) and Wikidata Species
+(2026-08-02, DOI [10.48580/dgx38](https://doi.org/10.48580/dgx38)), both CC BY 4.0
+and CC0 respectively. Every count here is reproducible with
+`scripts/overlapReport.py`.
+
+## Why this is a decision and not a bug
+
+COL's DwCA has four roots: `Eukaryota` (2,652,500 taxa), `Bacteria` (33,365),
+`Viruses` (22,669), `Archaea` (1,076). Walking every taxon to its root looks
+like the answer — two clean kingdoms, 44,077 species between them.
+
+It is not, because of *how the ranks are labelled*. `importColStage2.chain()`
+resolves a kingdom by looking for rank `kingdom`, then `superkingdom`, then
+`domain`, first match walking upward. Under Bacteria:
+
+| COL clade | accepted species | families |
+|---|---|---|
+| Bacillati | 13,873 | 252 |
+| Pseudomonadati | 12,368 | 406 |
+| Thermotogati | 297 | 12 |
+| Fusobacteriati | 79 | 3 |
+| `Bacteria` (the domain itself) | **2** | 0 |
+
+So `--kingdom Bacteria` imports **two species**. `--kingdom Viruses` imports
+**none**: the virus root has rank `unranked`, which `chain()` does not look for,
+so nothing resolves and every taxon is filtered out — and the run prints its
+normal summary and exits 0. That silent success is the failure mode to avoid;
+it is why this is written down rather than left to whoever runs it next.
+
+Wikidata does not help. It carries the same 17 clades at `kingdom` rank —
+Bacillati, Pseudomonadati, Methanobacteriati, Thermoproteati, Thermotogati,
+Fusobacteriati, Nanobdellati, Promethearchaeati, Orthornavirae, Heunggongvirae,
+Shotokuvirae, Bamfordvirae, Pararnavirae, Sangervirae, Loebvirae, Zilligvirae,
+Trapavirae, Helvetiavirae — because it is generated from the same upstream. It
+also has `Bacteria` as both a domain and a kingdom, plus `Virus`, `Prokaryota`
+and `Monera` as competing roots. Adopting Wikidata does not dodge the question.
+
+## What is actually there
+
+Two kingdoms' worth of species, and Wikidata adds more:
+
+| | COL DwCA | Wikidata Species |
+|---|---|---|
+| bacterial species | 26,525 | not separable — same 17 clades |
+| viral species | 17,552 | includes *Hepatitis B virus* → Hepadnaviridae, *Human herpesvirus 6* → Herpesviridae |
+| new against our tree | — | 1,811,989 species overall, 56.5% of the archive |
+
+Bacillati and Pseudomonadati are **GTDB phyla**. That is the whole difficulty in
+one fact: our Archaea kingdom is already built on GTDB phylum-level ranks
+(Methanobacteriota, Microcaldota, Nanobdellota, Promethearchaeota,
+Thermoproteota), so the precedent for admitting this rank already exists — COL
+just labels it `kingdom`.
+
+## The options
+
+**A. Two kingdoms, 17 phyla inside each.** Add `bacteria` and `viruses` to
+`kingdom-config.json`; teach `chain()` to fall back to the root taxon when no
+kingdom-ish rank is found; the clades become phyla. *For:* two new
+`kingdom-config.json` entries, one new input file and colour registry each, and
+a tree shape matching Archaea's. *Against:* asserts Bacteria and Viruses are
+equivalent in rank when GTDB and ICTV treat them differently; needs the rank
+fallback, which is a behaviour change in a script every kingdom runs through.
+*Cost:* the plumbing is small; the taxonomy claim is the real decision.
+
+**B. Bacteria as a seventh kingdom, viruses held back.** Same treatment for
+Bacteria; leave viruses out until ICTV is taken properly. *For:* viruses are the
+harder half — ICTV's MSL is a spreadsheet with 50+ realms and no parent
+hierarchy our tree can hold, and a virus placed in the wrong realm is worse than
+one absent. *Against:* leaves ~17,552 species out for a reason that is about our
+ingestion, not about the data.
+
+**C. 17 kingdoms, one per clade.** What `--kingdom Bacillati` gives you today,
+essentially for free. *For:* needs no code change and no judgement. *Against:*
+seventeen peer kingdoms in the switcher, and Bacillati is not a kingdom — this
+reproduces the source's mislabelling as our structure. **Not recommended**;
+listed because it is the path of least resistance and should be ruled out
+explicitly.
+
+**D. Do not hold them.** *For:* no work, no new kingdoms, no rank debate. *Against:*
+the tree claims 1.7M species across six kingdoms and silently omits an entire
+domain of life. This is the current state and it is the thing being changed.
+
+## What each option needs
+
+| | rank fallback in `chain()` | new kingdoms in config | new input files | new colour registries | taxonomy decision |
+|---|---|---|---|---|---|
+| A | yes | 2 | 2 | 2 | asserts Bacteria ≡ Viruses |
+| B | yes | 1 | 1 | 1 | asserts Bacteria is a kingdom |
+| C | no | 17 | 17 | 17 | none, which is the problem |
+| D | no | — | — | — | asserts they are out of scope |
+
+Every option is plumbing except the last column. The code is not the expensive
+part of this decision.
+
+## Reference datasets, in the order they bear on it
+
+1. **GTDB** (DOI [10.15468/dpzg84](https://doi.org/10.15468/dpzg84), CC BY 4.0) —
+   the authority for the rank Bacillati and Pseudomonadati actually sit at.
+   Registered as `gtdb`, not downloaded. Fetch this **before** deciding, not
+   after: it is what converts option A's taxonomy claim from an assertion into a
+   citation.
+2. **ICTV MSL** (DOI
+   [10.5281/zenodo.19154110](https://doi.org/10.5281/zenodo.19154110), ratified
+   February 2026) — the virus authority. An xlsx, not a DwCA and not a NEWICK,
+   so it needs its own reader either way. `sources/archives/ictv-msl/` is an
+   empty directory waiting for it.
+3. **NCBI Taxonomy** (DOI [10.15468/rhydar](https://doi.org/10.15468/rhydar),
+   CC0) — carries Bacteria and Viruses as real divisions with real authorities,
+   which is the one thing neither COL nor Wikidata does. Registered as
+   `ncbi-taxonomy`, not downloaded.
+
+## Related
+
+- [`archive-formats.md`](archive-formats.md) — the formats, and which have a
+  reader (ColDP does as of `scripts/coldp.py`; xlsx and NEWICK do not)
+- [`dataset-inbox.md`](dataset-inbox.md) — where these were triaged
+- `scripts/importColStage2.py` — `chain()` and the `--kingdom` filter
+- `docs/data-sources.md` — the registry
