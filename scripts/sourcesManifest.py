@@ -60,13 +60,18 @@ SOURCES = {
     "afromoths": (
         "Afromoths -- Afrotropical moths", "DOI 10.15468/s1kwuw",
         "https://www.gbif.org/dataset/65c9103f-2fbf-414b-9b0b-e47ca96c5df2",
-        "CC BY 4.0", "ready",
-        "NOT YET APPLIED. 29,983 accepted species across 137 families, and the "
-        "standout is 91,005 distribution rows over 136 localities -- far richer "
-        "than any checklist so far. 0% overlap: our Lepidoptera is two "
-        "butterfly families (Nymphalidae, Papilionidae), these are moths. Needs "
-        "a new importer: status is 'accepted' not 'valid', and there is no "
-        "vernacularname.txt"),
+        "CC BY 4.0", "applied",
+        "APPLIED by scripts/importAfromoths.py, which the entry previously said "
+        "was still to write. Measured against the tree: 29,983 of 29,983 species "
+        "present, spread over 94 family files, every one stamped "
+        "sourcedFrom='afromoths'. Our Lepidoptera went from two butterfly "
+        "families to 143. The 137 in this entry is how many families the source "
+        "has; 94 is how many we hold, the difference being families whose "
+        "species our other sources already covered. The 91,005 distribution "
+        "rows over 136 localities are still unused and are the reason this "
+        "source was worth having: no other checklist carries per-locality "
+        "occurrence for moths. Needs its own importer because the DwCA status is "
+        "'accepted' not 'valid' and there is no vernacularname.txt"),
     "species-file-psocodea": (
         "Psocoda Species File", "DOI 10.15468/baeaax",
         "https://www.gbif.org/dataset/6fb9265c-2d98-40ad-989d-7b6bf4820519",
@@ -136,6 +141,36 @@ SOURCES = {
         "ColDP with per-name source attribution is not currently downloadable "
         "(404); the DwCA has 7 columns and no source field, so provenance is "
         "recorded as COL rather than per-checklist"),
+    "ncbi-taxonomy": (
+        "NCBI Taxonomy", "DOI 10.15468/rhydar (GBIF dataset "
+        "fab88965-e69d-4491-a04d-e3198b626e52, published 2026-04-17)",
+        "https://www.gbif.org/dataset/fab88965-e69d-4491-a04d-e3198b626e52",
+        "CC0", "assessed",
+        "nothing yet, and the overlap question has to be settled first. NCBI is "
+        "the only one of our candidate sources that carries Bacteria and Viruses "
+        "as real divisions with real authorities, which is exactly what COL will "
+        "not give us: COL holds the prokaryotes and viruses in 17 clades at "
+        "kingdom rank, so neither '--kingdom Bacteria' nor '--kingdom Viruses' "
+        "reaches them (see docs/dataset-inbox.md). Against that, GBIF Backbone "
+        "is already applied and is itself built from NCBI among others, so for "
+        "the kingdoms we do hold this is largely a second copy of names we "
+        "already have. Its value is narrower and real: prokaryote and viral "
+        "coverage, and the type material and literature citations the NCBI "
+        "record carries and no checklist we hold does. CC0, so licensing is not "
+        "an obstacle. Not downloaded."),
+    "gtdb": (
+        "Genome Taxonomy Database r226.0", "DOI 10.15468/dpzg84 (GBIF dataset "
+        "a97f36e5-ded1-49cc-bdec-ac6170fc7b9c, published 2026-01-28)",
+        "https://www.gbif.org/dataset/a97f36e5-ded1-49cc-bdec-ac6170fc7b9c",
+        "CC BY 4.0", "assessed",
+        "nothing yet, and it exists here for one reason: it is where the rank "
+        "COL mislabels comes from. Bacillati and Pseudomonadati, the two clades "
+        "holding 26,241 of COL's bacteria, are GTDB phyla, and GTDB is the "
+        "authority that would say what rank they belong at. Our Archaea "
+        "kingdom is already built on GTDB phylum-level ranks "
+        "(Methanobacteriota, Thermoproteota and four more), so GTDB is the "
+        "precedent for admitting this rank. Worth fetching before deciding how "
+        "to map COL's bacteria, not before. Not downloaded."),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",

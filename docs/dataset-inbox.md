@@ -8,6 +8,51 @@ here and move each one into the table with a verdict.
 ```
 ```
 
+## Triaged 2026-10-04 — four pastes, one of them a real find
+
+All four arrived with the same URL, `https://www.gbif.org/dataset/search?type=CHECKLIST`,
+which is a *search page* rather than a dataset — so none of them named a dataset
+to fetch. Resolved through the GBIF dataset API instead:
+
+| pasted as | resolves to | verdict |
+|---|---|---|
+| **NCBI** | NCBI Taxonomy, DOI [10.15468/rhydar](https://doi.org/10.15468/rhydar), GBIF `fab88965…`, CC0, published 2026-04-17 | **assessed, worth having** — manifest `ncbi-taxonomy` |
+| **Vascular Plants** | World Checklist of Vascular Plants, DOI 10.15468/6h8ucr | **already applied** — manifest `wcvp`. Nothing to do |
+| **Plants** | ambiguous | **needs a specific dataset** — see below |
+| **wiki** | nothing | **no such dataset** — Wikispecies returns 0 GBIF checklists |
+
+**NCBI is the one worth having, and it answers a question COL cannot.** It is
+the only candidate that carries Bacteria and Viruses as real divisions with real
+authorities — COL holds the prokaryotes and viruses in 17 clades at `kingdom`
+rank, which is why neither `--kingdom Bacteria` nor `--kingdom Viruses` reaches
+them (see below). Set against that, GBIF Backbone is already applied and is
+itself built partly from NCBI, so for the kingdoms we hold this is largely a
+second copy of names we already have. The narrow, real value: prokaryote and
+viral coverage, plus the type material and literature citations the NCBI record
+carries and no checklist we hold does. CC0, so licensing is not an obstacle.
+
+Chasing the same question turned up a second dataset worth having, entered as
+manifest `gtdb`: **Genome Taxonomy Database r226.0**, DOI
+[10.15468/dpzg84](https://doi.org/10.15468/dpzg84), CC BY 4.0. Bacillati and
+Pseudomonadati — the two clades holding 26,241 of COL's bacteria — are GTDB
+*phyla*, so GTDB is the authority that says what rank they belong at, and our
+Archaea kingdom is already built on GTDB phylum-level ranks. Worth fetching
+before deciding how to map COL's bacteria, not before.
+
+**"Plants" is too vague to triage and probably already covered.** GBIF holds
+thousands of plant checklists and the search does not surface one canonical
+"Plants" dataset; a paste of this kind cannot be acted on. We already hold
+`wcvp` (vascular plants, applied), `usda-plants` (assessed, 2,657 NativeRange
+records still unresolved) and COL's plant coverage via Stage 2. If the intent is
+a specific flora, paste its GBIF dataset key or DOI.
+
+**"wiki" does not resolve.** Wikispecies has no GBIF checklist — the API returns
+zero for it. We already take Wikimedia Commons (`wikimedia-commons`, applied) for
+media. If a Wikispecies *taxonomy* dump is wanted it has to come from Wikimedia
+dumps directly, and it would be a name list competing with what GBIF Backbone
+and COL already give us.
+
+
 ## Catalogue of Life
 
 Assessed and **partially applied** — see
