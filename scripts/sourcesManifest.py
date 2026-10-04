@@ -263,6 +263,23 @@ SOURCES = {
         "material we already hold from COL and POWO. Worth taking only for the "
         "occurrence data if the distribution table carries it, which is the one "
         "thing here that is not a name we already have."),
+    "ictv-msl": (
+        "ICTV Master Species List (MSL41)", "DOI 10.5281/zenodo.19154110; "
+        "published 2026-03-21; the 2025-2026 ICTV taxonomy, ratified February "
+        "2026",
+        "https://zenodo.org/records/19154110", "CC BY 4.0", "assessed",
+        "NOT DOWNLOADED, and deliberately so: viruses are on hold until further "
+        "notice, so registering the source is the whole of the work for now. "
+        "Recorded because it is the virus authority -- the one source that states "
+        "the official ICTV taxonomy, which COL and Wikidata both decline to give "
+        "at a usable rank. "
+        "Two things to know before anyone does download it. It is an XLSX "
+        "(ICTV_Master_Species_List_2025_MSL41.v1.xlsx, 1.80 MB), a fifth format "
+        "this repo has no reader for, alongside NEWICK and DOT -- see "
+        "docs/archive-formats.md. And sources/archives/ictv-msl/ exists but is "
+        "EMPTY, left by an abandoned download, which is why this entry appears "
+        "now rather than when the archive landed. "
+        "Also CC BY 4.0, so citable with attribution once taken."),
     "wikidata-species": (
         "Wikidata Species (ChecklistBank dataset 314569)",
         "DOI 10.48580/dgx38; version 2026-08-02; contact Markus Doering (GBIF); "

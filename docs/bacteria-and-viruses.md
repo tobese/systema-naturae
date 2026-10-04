@@ -1,10 +1,19 @@
 # Holding bacteria and viruses
 
-The decision this document exists to inform: **the project should hold viruses
-and bacteria** — they are a fifth of the tree's potential and no amount of
-waiting makes COL supply them in a form the importer can use. What is still open
+> **ON HOLD as of 2026-10-04 until further notice.** Bacteria and viruses are
+> not to be imported, and no rank decision is to be taken. Sources for them are
+> still being registered — `ncbi-taxonomy`, `ictv-msl`, `gtdb` and
+> `wikidata-species` are all on the record — but registration is the only work
+> in scope. Everything below is retained because the measurement is expensive to
+> redo and because the hold may be lifted; none of it is a task list. When the
+> hold lifts, the rank question is settled for bacteria (see *Settled* below) and
+> still open for viruses.
+
+The decision this document was written to inform: **the project should hold
+viruses and bacteria** — they are a fifth of the tree's potential and no amount
+of waiting makes COL supply them in a form the importer can use. What was open
 is *at what rank*, because COL and Wikidata both decline to say, and the answer
-determines whether the import is a clean extension or 17 new kingdoms.
+determines whether an import is a clean extension or 17 new kingdoms.
 
 Measured against the DwCA (2026-08 COL Base Release) and Wikidata Species
 (2026-08-02, DOI [10.48580/dgx38](https://doi.org/10.48580/dgx38)), both CC BY 4.0
@@ -140,6 +149,18 @@ part of this decision.
    CC0) — carries Bacteria and Viruses as real divisions with real authorities,
    which is the one thing neither COL nor Wikidata does. Registered as
    `ncbi-taxonomy`, not downloaded.
+
+## What the hold does not stop
+
+Registering sources is unaffected and continues. Both remaining sources are now
+on the record without being fetched:
+
+| source | state | why it matters when the hold lifts |
+|---|---|---|
+| `gtdb` | **downloaded**, 21.6 MB ColDP, sha256 recorded | settles the bacterial rank (above) |
+| `ncbi-taxonomy` | registered, **not downloaded** | the only candidate carrying Bacteria and Viruses as real divisions with real authorities |
+| `ictv-msl` | registered, **not downloaded** | the virus authority; xlsx, and nothing here reads xlsx yet |
+| `wikidata-species` | downloaded and assessed | 1,811,989 new species overall, but the same 17 clades, so it does not help the rank question |
 
 ## Related
 
