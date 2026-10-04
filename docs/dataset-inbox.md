@@ -7,25 +7,46 @@ here and move each one into the table with a verdict.
 
 ```
 ```
-Fishes - Maybe we have them
-https://www.checklistbank.org/dataset/1010/metadata
 
-FLOW
-https://www.checklistbank.org/dataset/1011/metadata
+## Triaged 2026-10-04 (third batch) — six datasets, sampled rather than downloaded
 
-Fungi
-https://www.checklistbank.org/dataset/1012/metadata
+Seven paste lines, six datasets: one entry arrived blank and the next was
+LepIndex, both pointing at dataset 1018.
 
-ILDIS
-https://www.checklistbank.org/dataset/1015/metadata
+Measured with `scripts/sampleDatasetOverlap.py`, which pages a sample of each
+dataset's accepted species through the ChecklistBank API and tests the names
+against what is on disk. Downloading six archives to find out whether they were
+worth anything is the expensive way to ask, and after the ReptileDB lesson a
+name count is not evidence either way.
 
-https://www.checklistbank.org/dataset/1018/metadata
+| dataset | what | vintage | name usages | **already held** | verdict |
+|---|---|---|---|---|---|
+| 1010 | WoRMS FishBase | 2026-09 | 37,504 | **100%** | **do not take** |
+| 1015 | ILDIS — World Database of Legumes | 2014-05 | 16,349 | **0.3%** | **take — the only real gap here** |
+| 1018 | LepIndex — Global Lepidoptera Names Index | 2012-01 | 133,948 | ~77% | **take — biggest absolute gain** |
+| 1019 | Moss TROPICOS (MOST) | 2004-07 | 13,300 | ~76% | take, small |
+| 1011 | FLOW — Fulgoromorpha Lists | 2019-02 | 13,450 | ~85% | take, small |
+| 1012 | Glomeromycota (arbuscular mycorrhizal fungi) | 2017-10 | 284 | 83% | **licence is "other" — check before use** |
 
-LepIndex
-https://www.checklistbank.org/dataset/1018/metadata
+**FishBase: your guess was right, and then some.** Not "maybe we have them" —
+600 of 600 sampled species already on disk, zero new. Our registry already
+carries `fishbase` as partial (an EOL harvest with 28 marginal English names
+after GBIF vernacular); this ChecklistBank edition at CC BY adds nothing to it.
 
-Moss
-https://www.checklistbank.org/dataset/1019/metadata
+**ILDIS is the one genuine gap in the batch**: 0 of 150, 0 of 150, 1 of 150 and
+0 of 150 at four offsets spread across the dataset. Legumes are a very large
+group and we hold almost none of ILDIS's names.
+
+**LepIndex offers the most in absolute terms** — roughly 23% of 133,948 is
+around 30,000 names — but it is a 2012 source, so a good share of what it would
+add is probably obsolete names rather than missing taxa. That is a taxonomy
+question, not a data one, and it is the same question as the COL synonyms we
+hold back everywhere else.
+
+Two caveats on the method. The sample is the API's name order, which is
+alphabetical, so each figure above was taken at four spread offsets rather than
+at one; and a "not held" name is not automatically a species we want, which
+matters most for the three pre-2015 sources.
 
 ## Triaged 2026-10-04 (second batch) — two good sources, one superseded
 
