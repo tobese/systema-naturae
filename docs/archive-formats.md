@@ -132,15 +132,15 @@ be cited:
 
 | directory | state |
 |---|---|
-| `afrotropical-bees` | `bees.zip` on disk, **7,082 species already in the tree** stamped `sourcedFrom: "afrotropical bees"`, and no registry entry |
-| `msw3` | `msw3.tar.gz` on disk, unregistered |
-| `iczn-lists` | `iczn.zip` on disk (304 members), unregistered |
-| `taiwan-endemic` | `taiwan.zip` on disk, unregistered |
-| `ictv-msl` | **empty** — a download started and abandoned |
+| `afrotropical-bees` | **registered 2026-10-04** — CC BY 4.0 read out of the archive's own eml.xml. Had 7,082 species in the tree stamped `sourcedFrom: "afrotropical bees"` with no registry entry at all |
+| `msw3` | **registered 2026-10-04, status refused** — Mammal Species of the World is all rights reserved, copyright 2005 Johns Hopkins University Press. Nothing derives from it and nothing should |
+| `iczn-lists` | **registered 2026-10-04, assessed** — CC0. The freely reusable nomenclatural authority, which ZooBank is not |
+| `taiwan-endemic` | **registered 2026-10-04, assessed** — CC0, narrow |
+| `ictv-msl` | **still empty** — a download started and abandoned. The one thing still unregistered, because there is nothing to register |
 
-`afrotropical-bees` is the one that matters: its data is in the product and its
-licence is unknown to the registry. The other four are untriaged rather than
-misapplied, except `ictv-msl`, which is simply nothing yet.
+All four archives had been sitting on the volume unrecorded. Three were merely
+untriaged, but `afrotropical-bees` was the failure this file is arguing about:
+data in the product, licence recorded nowhere.
 
 ---
 

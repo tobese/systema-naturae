@@ -198,6 +198,61 @@ SOURCES = {
         "https://zenodo.org/records/20174554",
         "CC0 per media row (record is CC BY 4.0)", "applied",
         "5,628 specimen photographs; attribution waived by CC0"),
+    "afrotropical-bees": (
+        "Catalogue of Afrotropical Bees", "GBIF dataset "
+        "8de37d73-4016-4dba-9934-b3ac24cb15c6; IPT resource "
+        "catalogueofafrotropicalbees; Connal Eardley (Agricultural Research "
+        "Council, Pretoria), published via SAIAB",
+        "https://www.gbif.org/dataset/8de37d73-4016-4dba-9934-b3ac24cb15c6",
+        "CC BY 4.0 (stated in the archive's own eml.xml intellectualRights)",
+        "applied",
+        "APPLIED by scripts/importBees.py: 7,082 species, every one stamped "
+        "sourcedFrom='afrotropical bees'. This entry did not exist until "
+        "2026-10-04, which is the failure this registry exists to prevent -- the "
+        "data was in the product and in the tree for a week with its licence "
+        "recorded nowhere, and the archive sat unregistered on the volume "
+        "beside four others. Licence read out of bees.zip rather than assumed: "
+        "CC BY 4.0, so citable with attribution. DwCA in the older profile "
+        "(taxon.txt, tab-separated)."),
+    "msw3": (
+        "Mammal Species of the World, 3rd edition", "ASM, Johns Hopkins "
+        "University Press, 2005",
+        "https://www.mammaldiversity.org/", "ALL RIGHTS RESERVED",
+        "refused",
+        "NOT USED, and deliberately. The archive's own eml states: 'This online "
+        "list was compiled under the auspices of the American Society of "
+        "Mammalogists. Copyright 2005 Johns Hopkins University Press. All "
+        "rights are reserved.' Zero species in the tree derive from it. Unlike "
+        "the four refused media harvests this is a taxonomic authority rather "
+        "than NC photographs, which makes it more tempting and not less "
+        "restricted: deriving public species records from an all-rights-reserved "
+        "compilation is redistribution of derived data, which is exactly what the "
+        "EOL harvester republishes without filtering on licence. Kept on disk so "
+        "the decision can be re-checked if permission is ever obtained. Mammal "
+        "names are covered regardless: COL supplies 1.13M species including every "
+        "mammal we hold."),
+    "iczn-lists": (
+        "Official Lists and Indexes of Names in Zoology (ICZN)", "ICZN, "
+        "packageId da38f103-4410-43d1-b716-ea6b1b92bbac",
+        "https://www.iczn.org/", "CC0 1.0 (waived, per the archive's eml.xml)",
+        "assessed",
+        "NOT YET APPLIED. The only nomenclatural authority for animals that is "
+        "freely reusable -- unlike ZooBank, whose 8.8% measured coverage over "
+        "400 queries is what makes it impractical. 304 members in the archive. "
+        "Its value is validation rather than coverage: it settles availability "
+        "and the correct spelling of a name, which is a different question from "
+        "whether we hold the name, and GBIF's backbone and COL both carry names "
+        "no one has checked against the Commission's lists. No importer reads it "
+        "yet; it is DwCA-shaped."),
+    "taiwan-endemic": (
+        "Endemic species in Taiwan", "GBIF DwCA, 3 members (taxon.txt)",
+        "(no DOI in the archive's eml.xml)", "CC0 1.0 (waived, per the eml.xml)",
+        "assessed",
+        "NOT YET APPLIED, and assessed as narrow: 0.5 MB, one DwCA, endemic "
+        "species of one island nation. Not a gap-filler -- it overlaps Taiwan "
+        "material we already hold from COL and POWO. Worth taking only for the "
+        "occurrence data if the distribution table carries it, which is the one "
+        "thing here that is not a name we already have."),
     "wikidata-species": (
         "Wikidata Species (ChecklistBank dataset 314569)",
         "DOI 10.48580/dgx38; version 2026-08-02; contact Markus Doering (GBIF); "
