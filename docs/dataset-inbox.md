@@ -7,25 +7,59 @@ here and move each one into the table with a verdict.
 
 ```
 ```
+Fishes - Maybe we have them
+https://www.checklistbank.org/dataset/1010/metadata
+
+FLOW
+https://www.checklistbank.org/dataset/1011/metadata
+
+Fungi
+https://www.checklistbank.org/dataset/1012/metadata
+
+ILDIS
+https://www.checklistbank.org/dataset/1015/metadata
+
+https://www.checklistbank.org/dataset/1018/metadata
+
+LepIndex
+https://www.checklistbank.org/dataset/1018/metadata
+
+Moss
+https://www.checklistbank.org/dataset/1019/metadata
 
 ## Triaged 2026-10-04 (second batch) — two good sources, one superseded
 
 | pasted as | resolves to | verdict |
 |---|---|---|
-| **Craneflies** | Catalogue of Craneflies of the World, ChecklistBank 1005, DOI [10.48580/d37p](https://doi.org/10.48580/d37p), CC0, Apr 2025, 23,780 name usages | **worth taking** — enrichment, not gap fill |
-| **Reptiles** | The Reptile Database, ChecklistBank 1008, DOI [10.48580/d37s](https://doi.org/10.48580/d37s), CC BY, 2026-06, 34,366 name usages | **worth taking** — the larger gap of the two |
+| **Craneflies** | Catalogue of Craneflies of the World, ChecklistBank 1005, DOI [10.48580/d37p](https://doi.org/10.48580/d37p), CC0, Apr 2025 | **taken and applied** — 372 of 16,061 species added |
+| **Reptiles** | The Reptile Database, ChecklistBank 1008, DOI [10.48580/d37s](https://doi.org/10.48580/d37s), CC BY, 2026-06 | **taken and applied** — 1 of 15,612 species added |
 | **COL Hierarchy** | Catalogue of Life Hierarchy (COLH) v1.4, ChecklistBank 1000 | **superseded** — do not take |
 
-**Craneflies is enrichment.** We already hold 5 cranefly families with 14,963
-species — Limoniidae 10,342, Tipulidae 4,291, Trichoceridae 262,
-Cylindrotomidae 67, Archilimoniidae 1 — so this roughly doubles a group we have
-rather than opening a hole. The synonymy is the part worth having, and it is the
-part we systematically hold back everywhere else.
+> **Both verdicts above were wrong on the evidence, and are corrected here.**
+> They were written before anything was downloaded, from comparing name counts
+> against name counts, and both overstated the gap. What follows is what the
+> import actually found.
 
-**Reptiles is the real gap.** 177 reptile families and 16,612 species against a
-source of comparable group carrying twice the names. Reptiles are among the
-best-documented organisms on earth, so a shortfall that size is a genuine hole
-rather than a vague one.
+**Neither source was a gap. Both were near-duplicates** — which is the user's
+guess being right, and the reason checking was worth the download:
+
+| | species offered | already on disk | added |
+|---|---|---|---|
+| Craneflies | 16,061 | 15,683 | **372** (370 Limoniidae, 2 Tipulidae) |
+| ReptileDB | 15,612 | 15,611 | **1** (Scincidae) |
+
+The Reptiles verdict was the worse error: 34,366 name usages against our 16,612
+node speciesCount looks like a doubling, but 34,366 includes 17,325 synonyms
+and 2,962 subspecies. Reptiles are among the best-documented organisms on earth
+and we already hold 15,611 of the 15,612 on offer, which is what being
+well-documented means.
+
+Craneflies came with a second lesson attached. The canonical index —
+`portal/data/name-parse-index.jsonl`, a snapshot taken **before** the Stage 2
+import — scored 15,563 of its species as new. Measured against the family files
+it is 378, and `merge_family` settled it at 372 with 15,191 already present.
+An index that is a snapshot will disagree with the tree it indexes, and the
+direction it errs is toward over-reporting novelty.
 
 Neither is blocked on format: both are external-origin ChecklistBank datasets,
 so both arrive as ColDP, and `scripts/coldp.py` reads that as of `dc0726a87`.

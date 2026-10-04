@@ -280,6 +280,35 @@ SOURCES = {
         "EMPTY, left by an abandoned download, which is why this entry appears "
         "now rather than when the archive landed. "
         "Also CC BY 4.0, so citable with attribution once taken."),
+    "reptile-db": (
+        "The Reptile Database", "DOI 10.48580/d37s (ChecklistBank dataset 1008); "
+        "version 2026-06, issued 2026-06-24; contact Peter Uetz",
+        "https://api.checklistbank.org/dataset/1008/archive.zip",
+        "CC BY 4.0 (from the archive's own Metadata.json)", "applied",
+        "APPLIED, and it turned out to be very nearly a duplicate of what we "
+        "already had -- which is the finding, and the reason it is worth having "
+        "been checked rather than assumed. 15,612 accepted species offered, "
+        "15,611 already on disk, **1 added** (to Scincidae). "
+        "The earlier triage of this source called it 'the larger gap of the two' "
+        "and that was wrong: it compared our 16,612 node speciesCount against "
+        "the source's 34,366 name usages, but 34,366 includes 17,325 synonyms "
+        "and 2,962 subspecies. Name against name, it is a near-total "
+        "overlap. Four species were refused rather than placed, all with no "
+        "family in the source."),
+    "craneflies": (
+        "Catalogue of Craneflies of the World", "DOI 10.48580/d37p "
+        "(ChecklistBank dataset 1005); version Apr 2025, issued 2025-04-10",
+        "https://api.checklistbank.org/dataset/1005/archive.zip",
+        "CC0 (from the archive's own Metadata.json)", "applied",
+        "APPLIED. 16,061 accepted species offered across 4 families, of which "
+        "**372 were added**: 370 to Limoniidae and 2 to Tipulidae. "
+        "This source is the clearest case in the project of a name count being "
+        "the wrong measure. The canonical index -- a snapshot taken before the "
+        "Stage 2 import -- scored 15,563 of these species as new; measured "
+        "against the family files on disk it is 378, and the importer's own "
+        "merge settled it at 372, with 15,191 already present. Our "
+        "crane-fly families hold 15,454 names, so CCW roughly doubles a group "
+        "we are already strong in rather than opening a hole."),
     "wikidata-species": (
         "Wikidata Species (ChecklistBank dataset 314569)",
         "DOI 10.48580/dgx38; version 2026-08-02; contact Markus Doering (GBIF); "
