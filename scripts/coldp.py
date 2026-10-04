@@ -46,6 +46,29 @@ import os
 import zipfile
 
 CORE = "NameUsage.tsv"
+# ColDP rank values are not uniform across datasets. Catalogue of Life's own
+# exports use the English ranks; other ChecklistBank sources use the
+# ziological/Latin ones, which is what Wikispecies (314570) does:
+# Hominidae is rank "familia", Homininae "subfamilia", Hominini "tribus",
+# Hominoidea has no rank at all. Left untranslated, every one of the 78,731 new
+# Wikispecies species came back with no family, because chain() was looking for
+# "family" in a vocabulary that spells it "familia".
+RANK_ALIASES = {
+    "familia": "family", "subfamilia": "subfamily", "superfamilia": "superfamily",
+    "tribus": "tribe", "subtribus": "subtribe", "ordo": "order",
+    "varietas": "variety", "sectio": "section", "subsectio": "subsection",
+    "series": "series zoology", "subseries": "subseries",
+    "divisio": "division", "subdivisio": "subdivision",
+    "cohortus": "cohort", "legio": "legion", "ordo_": "order",
+    "uninomial": "genus", "species_": "species",
+    "morphospecies": "species", "nodospecies": "species",
+}
+
+
+def norm_rank(r):
+    if not r:
+        return r
+    return RANK_ALIASES.get(r.strip().lower(), r)
 # same set the DwCA importers accept
 ACCEPTED = {"accepted", "provisionally accepted"}
 
@@ -144,7 +167,7 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
                     continue
                 t = row[i_id]
                 par[t] = row[i_par]
-                rank[t] = row[i_rank]
+                rank[t] = norm_rank(row[i_rank])
                 name[t] = row[i_nm]
                 if want_authorship:
                     e = {}
@@ -154,6 +177,8 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
                         e["link"] = row[i_link]
                     if i_ref is not None and len(row) > i_ref:
                         e["reference"] = row[i_ref]
+                    if i_st is not None:
+                        e["status"] = row[i_st]
                     extra[t] = e
     return par, rank, name, extra
 

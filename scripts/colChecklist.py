@@ -251,6 +251,56 @@ def _ildis(z):
     return taxa, {}, meta
 
 
+def _ancestors(par, tid, limit=200):
+    out, c, n, seen = [], tid, 0, set()
+    while c and n < limit and c not in seen:
+        seen.add(c)
+        out.append(c)
+        p_ = par.get(c)
+        if not p_ or p_ == c:
+            break
+        c = p_
+        n += 1
+    return out
+
+
+def _coldp(path):
+    """ColDP, via scripts/coldp.py -- one NameUsage.tsv instead of a table split.
+
+    Wikispecies (314570) arrives this way, as the Wikidata Species dataset beside
+    it does, so a reader knowing only the COL export shape would decline the two
+    largest sources on the shelf. Accepted-ness comes from col:status, which is
+    the field ColDP uses -- the opposite of the COL export shape, where status
+    is empty and Synonym.tsv carries the split.
+    """
+    import coldp as _C
+    # Load the WHOLE name usage set, not the accepted subset, because a chain
+    # legitimately runs through names that are not themselves accepted -- a genus
+    # can be a synonym and still be the parent of accepted species. Indexing
+    # only accepted taxa (the first attempt) made chain() dead-end and every
+    # species came back "no family": all 78,731 of Wikispecies' new species,
+    # which would have refused the lot. Status decides who is a *candidate*, not
+    # who may appear in a hierarchy.
+    par, rank, name, extra = _C.load_core(
+        path, accepted=_C.ACCEPTED | {"synonym", "ambiguous synonym",
+                                     "misapplied", "unplaced", "excluded"},
+        want_authorship=True)
+    by_id = {}
+    for t, r in rank.items():
+        e = extra.get(t) or {}
+        by_id[t] = {"id": t, "parent": par.get(t), "name_id": t,
+                    "name": name.get(t), "authorship": e.get("authorship"),
+                    "rank": r, "is_synonym": (e.get("status") or "") not in _C.ACCEPTED,
+                    "status": e.get("status")}
+    # The WHOLE hierarchy, not just the species: the importer builds its
+    # parent-walk index from this list, so returning only species meant
+    # by_id.get("Homo") was None and the walk stopped one step above the species
+    # with no family found. Candidates are selected downstream by rank, so
+    # carrying genera and families here costs nothing and makes the chain
+    # walkable.
+    return list(by_id.values()), {}, _C.metadata(path)
+
+
 def load(path):
     """-> (taxa, names, meta), whatever serialisation the archive uses.
 
@@ -265,6 +315,8 @@ def load(path):
     try:
         if "AcceptedSpecies.tsv" in c.names():
             return _ildis(c)
+        if "NameUsage.tsv" in c.names():
+            return _coldp(path)
         names = {}
         for t in NAME_TABLES:
             if t in c.namelist():

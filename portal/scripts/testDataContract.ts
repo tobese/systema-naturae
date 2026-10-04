@@ -105,8 +105,8 @@ test('rankCounts match known totals', () => {
   assert.equal(rc.CLASS, 119);
   assert.equal(rc.ORDER, 721);
   assert.equal(rc.FAMILY, 10601);
-  assert.equal(rc.GENUS, 171470);
-  assert.equal(rc.SPECIES, 1705762);
+  assert.equal(rc.GENUS, 175821);
+  assert.equal(rc.SPECIES, 1759789);
 });
 
 test('root has exactly 33 phylum children', () => {
@@ -394,7 +394,7 @@ test('skeleton node type distribution', () => {
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
     KINGDOM: 1, PHYLUM: 33, CLASS: 119, ORDER: 721,
-    FAMILY: 10601, GENUS: 171470, SPECIES: 1705762,
+    FAMILY: 10601, GENUS: 175821, SPECIES: 1759789,
     SUBFAMILY: 792, TRIBE: 948, SUBSPECIES: 7291,
     BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
@@ -417,7 +417,7 @@ test('manifest CARNIVORA entry snapshot', () => {
     navFile: 'data/kingdoms/animalia/orders-nav/CARNIVORA.json',
     namesFile: 'data/kingdoms/animalia/orders-names/CARNIVORA.json',
     proseDir: 'data/kingdoms/animalia/orders-prose/CARNIVORA',
-    familyCount: 16, speciesCount: 1171,
+    familyCount: 16, speciesCount: 1294,
     familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae', 'viverridae',
       'herpestidae', 'otariidae', 'mephitidae', 'procyonidae', 'eupleridae', 'hyaenidae',
       'prionodontidae', 'ailuridae', 'nandiniidae', 'odobenidae'],

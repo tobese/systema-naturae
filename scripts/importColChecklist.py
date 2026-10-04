@@ -9,6 +9,17 @@ so the only operation needed is part A of `importColStage2.py`: hand
 Rather than implement placement and guess it untested, anything that would need a
 new family is counted and refused, and the run says so.
 
+**A refused species is dropped, not placed.** It gets no family of its own, no
+`Incertae sedis` placeholder, and no node anywhere in the tree. That is a
+deliberate difference from `importColStage2.py`, whose part C does exactly that:
+COL offers enough family-less species (23,536 of them in Animalia) that a
+placeholder is the least-wrong answer, and an explicitly unplaced family asserts
+only that we could not place it. Here the counts do not justify it -- 21 species
+in FLOW, 207 in Moss TROPICOS, 4 in ReptileDB -- so a placeholder family would be
+a directory and a colour theme per handful of names, and the families are real
+and findable in the source. They stay out until someone decides to scaffold them,
+which is a taxonomy decision rather than a data one.
+
 The overlap is the headline, and it was measured against the tree rather than
 against the canonical index, which is a snapshot taken before the Stage 2
 import and reports 15,563 "new" Cranefly species that are in fact already on disk:
@@ -155,7 +166,8 @@ def main() -> int:
     print(f"  non-binominal:       {nonb:,}")
     print(f"  new, into a family we hold: {sum(len(v) for v in staged.values()):,}"
           f"  across {len(staged)} families")
-    print(f"  REFUSED (would need a new family): {refused:,}")
+    print(f"  REFUSED (would need a new family): {refused:,}"
+          f"  -- dropped, not placed: no placeholder family, no orphan node")
     for k, v in no_family.most_common(10):
         print(f"      {v:>6,}  {k}")
 
@@ -165,6 +177,7 @@ def main() -> int:
 
     print()
     added_total = dedup_total = 0
+    files = None
     for slug, rows in sorted(staged.items()):
         genera = collections.defaultdict(list)
         for g, nm, a in rows:
@@ -172,29 +185,43 @@ def main() -> int:
         new_root = {"id": None, "name": None, "rank": "FAMILY", "children": []}
         touched_path = None
         for g, species in genera.items():
+            # lineage is not decoration: testDataContract asserts that >=95% of
+            # genera carry one, and the first Wikispecies run dropped it to 93.5%
+            # in CARNIVORA. The COL importers set it on both levels.
             gnode = {"id": SF.node_id(SF.PREFIX["GENUS"], g), "name": g,
-                     "rank": "GENUS", "children": [], "sourcedFrom": SOURCE}
+                     "rank": "GENUS", "children": [], "sourcedFrom": SOURCE,
+                     "lineage": fname}
             new_root["children"].append(gnode)
             for nm, a in species:
                 sp = {"id": SF.node_id(SF.PREFIX["SPECIES"], nm, a or ""),
                       "name": nm, "rank": "SPECIES", "subspeciesCount": 0,
-                      "sourcedFrom": SOURCE}
+                      "sourcedFrom": SOURCE, "lineage": fname}
                 if a:
                     sp["authorship"] = a
                 gnode["children"].append(sp)
 
-        # find the file for this slug
-        import glob
-        hits = [f for f in glob.glob(f"taxonomy/*/**/{slug}/src/data/{slug}.json",
-                                     recursive=True)
-                if "node_modules" not in f]
+        # One index, built once. A recursive glob per family means a full walk
+        # of a 14,085-file tree per family: 34 families took 7 minutes, which
+        # puts Wikispecies' 736 at over two hours for what is a dict lookup.
+        if files is None:
+            import glob
+            files = {}
+            for f in glob.glob("taxonomy/*/**/src/data/*.json", recursive=True):
+                if "node_modules" in f:
+                    continue
+                slug_ = os.path.basename(f)[:-5]
+                files.setdefault(slug_, []).append(f)
+            print(f"  indexed {sum(len(v) for v in files.values()):,} family "
+                  f"data files across {len(files):,} slugs")
+        hits = files.get(slug, [])
         if len(hits) != 1:
             print(f"  ! {slug}: {len(hits)} files found, skipping")
             continue
         touched_path = hits[0]
         doc = json.load(open(touched_path, encoding="utf-8"))
         new_root["id"] = doc.get("id")
-        new_root["name"] = doc.get("name")
+        fname = doc.get("name")
+        new_root["name"] = fname
         m = SF.merge_family(doc, new_root)
         added_total += m.get("species_added", 0)
         dedup_total += m.get("species_deduped", 0)
