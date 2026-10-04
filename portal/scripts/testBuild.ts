@@ -67,7 +67,10 @@ function main() {
   const out = execSync("sh scripts/buildData.sh", {
     cwd: PORTAL,
     encoding: "utf-8",
-    timeout: 60000,
+    // Animalia's build went from ~50s to ~4.5min when COL Stage 2 took it from
+    // 5,472 families to 10,601, and the 60s this used to allow made the test
+    // report a spawn timeout rather than whatever it was actually testing.
+    timeout: 30 * 60 * 1000,
     env,
   });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);

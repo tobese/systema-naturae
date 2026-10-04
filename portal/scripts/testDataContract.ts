@@ -101,17 +101,17 @@ test('root is KINGDOM with expected metadata', () => {
 test('rankCounts match known totals', () => {
   const rc = skeleton.rankCounts!;
   assert.equal(rc.KINGDOM, 1);
-  assert.equal(rc.PHYLUM, 32);
-  assert.equal(rc.CLASS, 75);
-  assert.equal(rc.ORDER, 394);
-  assert.equal(rc.FAMILY, 5472);
-  assert.equal(rc.GENUS, 100297);
-  assert.equal(rc.SPECIES, 1033414);
+  assert.equal(rc.PHYLUM, 33);
+  assert.equal(rc.CLASS, 119);
+  assert.equal(rc.ORDER, 721);
+  assert.equal(rc.FAMILY, 10601);
+  assert.equal(rc.GENUS, 171508);
+  assert.equal(rc.SPECIES, 1705596);
 });
 
-test('root has exactly 32 phylum children', () => {
+test('root has exactly 33 phylum children', () => {
   assert.ok(skeleton.children);
-  assert.equal(skeleton.children!.length, 32);
+  assert.equal(skeleton.children!.length, 33);
   for (const child of skeleton.children!) {
     assert.equal(child.rank, 'PHYLUM');
   }
@@ -381,32 +381,33 @@ test('skeleton node type distribution', () => {
   // Tardigrada has no CLASS/ORDER layer — its FAMILY/GENUS/SPECIES
   // are inlined in the skeleton instead of being in a separate order file.
   assert.deepStrictEqual(counts, {
-    CLASS: 75,
+    CLASS: 119,
     FAMILY: 1,
     GENUS: 159,
     KINGDOM: 1,
-    ORDER: 394,
-    PHYLUM: 32,
+    ORDER: 721,
+    PHYLUM: 33,
     SPECIES: 57,
   });
 });
 
 test('skeleton root rankCounts snapshot', () => {
   assert.deepStrictEqual(skeleton.rankCounts, {
-    KINGDOM: 1, PHYLUM: 32, CLASS: 75, ORDER: 394,
-    FAMILY: 5472, GENUS: 100297, SPECIES: 1033414,
+    KINGDOM: 1, PHYLUM: 33, CLASS: 119, ORDER: 721,
+    FAMILY: 10601, GENUS: 171508, SPECIES: 1705596,
     SUBFAMILY: 792, TRIBE: 948, SUBSPECIES: 7291,
     BREED_GROUP: 52, BREED: 321, HYBRID_GROUP: 1, HYBRID: 4,
   });
 });
 
 test('manifest order count snapshot', () => {
-  assert.equal(Object.keys(manifest.orders).length, 394);
-  // familyToOrder maps families that have order data files (5282).
-  // The remaining family (of 5283 total) is Tardigrada, inlined in the
-  // skeleton rather than a separate order file.
+  assert.equal(Object.keys(manifest.orders).length, 721);
+  // One family per order data file except Tardigrada, which has no CLASS or
+  // ORDER layer and is inlined in the skeleton, and `personidae`, which is two
+  // unrelated families (a gastropod and an insect) under one appSlug and so
+  // collapses to one entry.
   const familyToOrderCount = Object.keys(manifest.familyToOrder).length;
-  assert.equal(familyToOrderCount, 5470);
+  assert.equal(familyToOrderCount, 10599);
 });
 
 test('manifest CARNIVORA entry snapshot', () => {
@@ -416,8 +417,10 @@ test('manifest CARNIVORA entry snapshot', () => {
     navFile: 'data/kingdoms/animalia/orders-nav/CARNIVORA.json',
     namesFile: 'data/kingdoms/animalia/orders-names/CARNIVORA.json',
     proseDir: 'data/kingdoms/animalia/orders-prose/CARNIVORA',
-    familyCount: 5, speciesCount: 1041,
-    familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae'],
+    familyCount: 16, speciesCount: 1171,
+    familySlugs: ['felidae', 'canidae', 'mustelidae', 'ursidae', 'phocidae', 'viverridae',
+      'herpestidae', 'otariidae', 'mephitidae', 'procyonidae', 'eupleridae', 'hyaenidae',
+      'prionodontidae', 'ailuridae', 'nandiniidae', 'odobenidae'],
   });
 });
 
@@ -427,10 +430,12 @@ test('CARNIVORA order structure snapshot', () => {
   assert.equal(orderData.rank, 'ORDER');
 
   const families = orderData.children!.filter(c => c.rank === 'FAMILY');
-  assert.equal(families.length, 5);
+  assert.equal(families.length, 16);
   assert.deepStrictEqual(
     families.map(f => f.appSlug).sort(),
-    ['canidae', 'felidae', 'mustelidae', 'phocidae', 'ursidae'],
+    ['ailuridae', 'canidae', 'eupleridae', 'felidae', 'herpestidae', 'hyaenidae',
+      'mephitidae', 'mustelidae', 'nandiniidae', 'odobenidae', 'otariidae', 'phocidae',
+      'prionodontidae', 'procyonidae', 'ursidae', 'viverridae'],
   );
 
   const felidae = families.find(f => f.appSlug === 'felidae')!;
@@ -454,8 +459,8 @@ const allOrderFiles = readdirSync(ORDERS_DIR).filter(f => f.endsWith('.json'));
 // See the commit message on c687fa0fd. Any *other* empty order is a bug.
 const KNOWN_EMPTY_ORDERS = new Set(['ORD_HALICRYPTOMORPHA.json']);
 
-test('all 394 order files exist and are valid JSON', () => {
-  assert.equal(allOrderFiles.length, 394);
+test('all 721 order files exist and are valid JSON', () => {
+  assert.equal(allOrderFiles.length, 721);
   for (const file of allOrderFiles) {
     const path = join(ORDERS_DIR, file);
     const data = loadJson<OrderNode>(path);
@@ -521,11 +526,12 @@ test('all 394 order files exist and are valid JSON', () => {
     checkDups(orderData);
   }
 
-  test('total families across all orders is 5471 (incl. bulk-imported)', () => {
-    // 5472 total families in taxonomy; 5471 in order files (Tardigrada inline is the 1 difference).
-    // 5470 have dedicated data files (manifest.familyToOrder).
-    // The remainder are bulk-imported (e.g., beetles) and exist only in order files without appSlug.
-    assert.equal(totalFamilies, 5471);
+  test('total families across all orders is 10600 (incl. bulk-imported)', () => {
+    // Taxonomy holds 10601 families. Tardigrada has no ORDER layer and is
+    // inlined in the skeleton rather than an order file, and `personidae` is two
+    // unrelated families (a gastropod and an insect) sharing one appSlug, so it
+    // occupies a single entry: 10601 - 1 - 1 + 1 = 10600.
+    assert.equal(totalFamilies, 10600);
   });
 
   test('>=95% of FAMILY nodes have appSlug', () => {
@@ -572,8 +578,8 @@ interface CoverageClass {
 
 const coverage = loadJson<CoverageClass[]>(join(PRIVATE_DATA_DIR, 'coverage-summary.json'));
 
-test('coverage has 75 classes', () => {
-  assert.equal(coverage.length, 75);
+test('coverage has 119 classes', () => {
+  assert.equal(coverage.length, 119);
 });
 
 test('coverage family count matches taxonomy', () => {
@@ -581,7 +587,7 @@ test('coverage family count matches taxonomy', () => {
   for (const cls of coverage) {
     familyCount += cls.families.length;
   }
-  assert.equal(familyCount, 5472);
+  assert.equal(familyCount, 10601);
 });
 
 test('every coverage family has portalCount and id prefix; >=99% have className', () => {
@@ -658,9 +664,9 @@ test('taxonomy root is KINGDOM Animalia', () => {
   assert.equal(taxonomy.rank, 'KINGDOM');
 });
 
-test('taxonomy has 32 phyla', () => {
+test('taxonomy has 33 phyla', () => {
   const phyla = taxonomy.children?.filter(c => c.rank === 'PHYLUM') ?? [];
-  assert.equal(phyla.length, 32);
+  assert.equal(phyla.length, 33);
 });
 
 test('every FAMILY in taxonomy has speciesCount; >=95% have appSlug', () => {
@@ -675,7 +681,7 @@ test('every FAMILY in taxonomy has speciesCount; >=95% have appSlug', () => {
     for (const c of n.children ?? []) walk(c);
   }
   walk(taxonomy);
-  assert.equal(familyCount, 5472);
+  assert.equal(familyCount, 10601);
   const pct = (familyCount - missingAppSlug) / familyCount;
   assert.ok(pct >= 0.95, `only ${(pct*100).toFixed(1)}% of taxonomy families have appSlug`);
 });

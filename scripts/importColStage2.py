@@ -248,6 +248,17 @@ def main() -> int:
     print(f"  normalising {len(raw):,} names through GNparser ...", flush=True)
     parsed = taxamatch.parse_names(raw)
 
+    # Names claimed during this run. COL regularly places one genus in more
+    # than one family -- Acantha lands in several hymenopteran families,
+    # Abbreviata in several others -- and the canonical index cannot see that,
+    # because it is a snapshot taken before the run. Without this, each of those
+    # species is written into every family COL offers it under, and 3,472 ids
+    # end up duplicated across the tree after an Animalia run. First placement
+    # wins, and part A runs before parts B and C so that an existing family
+    # beats a new one for a contested name: we would rather add a species to a
+    # family we already hold than start a second one to hold the same name.
+    placed = set()
+
     def canonical(nm):
         """COL name -> our bare name, or None if it is not binominal."""
         p = parsed.get(nm) or {}
@@ -259,10 +270,12 @@ def main() -> int:
                 g, s = parts[0], parts[1]
         if not g or not s:
             return None, None
-        for form in (f"{g} \u00d7{s}", f"{g} \u00d7 {s}"):
-            if form.lower() in canon:
+        bare = f"{g} \u00d7{s}" if "\u00d7" in nm else f"{g} {s}"
+        for form in (bare, f"{g} {s}", f"{g} \u00d7{s}", f"{g} \u00d7 {s}"):
+            if form.lower() in canon or form.lower() in placed:
                 return None, None                      # already held
-        return (f"{g} \u00d7{s}" if "\u00d7" in nm else f"{g} {s}"), g
+        placed.add(bare.lower())
+        return bare, g
 
     new_orders, unplaced = [], 0
     written = skipped = 0
@@ -313,6 +326,47 @@ def main() -> int:
           f"in {len(incerta):,} placements")
 
     counters = {"written": 0, "skipped": 0, "unplaced": 0}
+
+    used_ids = set()
+
+    def collect_ids(node):
+        if node.get("id"):
+            used_ids.add(node["id"])
+        for c in node.get("children") or []:
+            collect_ids(c)
+
+    for _t in tax_files.values():
+        collect_ids(_t)
+
+    def new_id(prefix, name, ancestry=()):
+        """An id no other node holds.
+
+        `SF.node_id` builds from the name alone, which is unique for a real taxon
+        name and useless for a placeholder: every order COL declines to name
+        became `ORDER_INCERTAE_SEDIS`, 21 of them in animalia and 21 more in
+        fungi, and the manifest keys order files by order id, so 20 of each went
+        into the same file and the families under them became unreachable. On a
+        collision, qualify with the ancestry the way the tree already does for
+        `SCAPHOPODA_UNKNOWN` -- the parent's name, then further out. Mirrors
+        scripts/fix_duplicate_node_ids.py, which repaired the ids this produced.
+        """
+        base = SF.node_id(prefix, name)
+        if base not in used_ids:
+            used_ids.add(base)
+            return base
+        for depth in (1, 2, 3):
+            anc = [a for a in ancestry[-depth:] if a]
+            cand = "_".join([SF.slug(a).upper() for a in reversed(anc)]
+                            + [SF.slug(name).upper()])
+            if cand not in used_ids:
+                used_ids.add(cand)
+                return cand
+        n = 2
+        while f"{SF.slug(ancestry[-1]).upper()}_{SF.slug(name).upper()}_{n}" in used_ids:
+            n += 1
+        cand = f"{SF.slug(ancestry[-1]).upper()}_{SF.slug(name).upper()}_{n}"
+        used_ids.add(cand)
+        return cand
 
     def place(kingdom, phylum, klass, order, fname, kids, placeholder=False):
         """Scaffold phylum/class/order/family and write the family file.
@@ -365,7 +419,8 @@ def main() -> int:
             return
         king_node = ktax
         parent = king_node
-        for label in (("phylum", phylum), ("class", klass), ("order", order)):
+        for _tag_i, label in enumerate((("phylum", phylum), ("class", klass),
+                                         ("order", order))):
             _tag, val = label
             if not val:
                 continue
@@ -373,7 +428,8 @@ def main() -> int:
                           if c.get("rank") == RANK_NODE[_tag]
                           and (c.get("name") or "").lower() == val.lower()), None)
             if found is None:
-                found = {"id": SF.node_id(RANK_NODE[_tag], val),
+                chain_names = [n for n in (phylum, klass, order) if n]
+                found = {"id": new_id(RANK_NODE[_tag], val, chain_names[:_tag_i + 1]),
                          "name": val, "rank": RANK_NODE[_tag]}
                 if _tag == "order":
                     found["commonName"] = "Unplaced" if order == UNPLACED else None
@@ -385,14 +441,26 @@ def main() -> int:
                 parent.setdefault("children", []).append(found)
             parent = found
 
+        # Match on the slug, not the name. SF.slug() strips the extinct marker,
+        # so a family we already hold as "\u2020Protodiplatyidae" and the same
+        # family from COL as "Protodiplatyidae" are one directory with two
+        # possible names -- matching on the name created a parallel node with a
+        # colliding appSlug, and testFamilyPaths flagged 31 such duplicates.
+        # Comparing slugs also folds the pre-existing case where the Cebidae
+        # node and data file are misnamed "Platyrrhini" but hold Cebidae.
         existing = next((c for c in (parent.get("children") or [])
                          if c.get("rank") == "FAMILY"
-                         and (c.get("name") or "").lower() == fname.lower()), None)
+                         and SF.slug(c.get("name") or "") == fslug), None)
         if existing is None:
-            existing = {"id": SF.node_id("FAM", fname), "name": fname, "rank": "FAMILY",
+            # Minted once and reused for the data file's root below: calling
+            # new_id twice would hand out two ids, because the first one is by
+            # then taken.
+            fam_id = new_id("FAM", fname, [x for x in (phylum, klass, order) if x])
+            existing = {"id": fam_id, "name": fname, "rank": "FAMILY",
                         "appSlug": fslug, "speciesCount": len(nodes)}
             parent.setdefault("children", []).append(existing)
         else:
+            fam_id = existing.get("id")
             existing["speciesCount"] = (existing.get("speciesCount") or 0) + len(nodes)
 
         # the data file
@@ -407,7 +475,7 @@ def main() -> int:
             os.makedirs(d, exist_ok=True)
         target = os.path.join(d, f"{fslug}.json")
 
-        root = {"id": SF.node_id("FAM", fname), "name": fname, "rank": "FAMILY",
+        root = {"id": fam_id, "name": fname, "rank": "FAMILY",
                 "children": [], "speciesCount": len(nodes), "appSlug": fslug,
                 "sourcedFrom": SOURCE}
         lin = " > ".join(x for x in (
@@ -439,26 +507,6 @@ def main() -> int:
                 json.dump(root, fh, indent=2, ensure_ascii=False)
                 fh.write("\n")
         counters["written"] += 1
-
-    # ---- part B: families COL names and we lack ----
-    targets = sorted(fam_kids.items(), key=lambda kv: -len(kv[1]))
-    if args.limit_families:
-        targets = targets[:args.limit_families]
-    for fam, kids in targets:
-        fname = (name.get(fam) or "").strip()
-        if not fname:
-            continue
-        ch = chain(fam)
-        place((ch.get("kingdom") or ch.get("superkingdom")
-               or ch.get("domain") or "").strip(),
-              (ch.get("phylum") or "").strip(),
-              (ch.get("class") or "").strip(),
-              (ch.get("order") or "").strip(),
-              fname, kids)
-
-    # ---- part C leftovers: one 'Incertae sedis' family per placement ----
-    for (k, phylum, klass, order), kids in sorted(incerta.items()):
-        place(k, phylum, klass, order, UNPLACED, kids, placeholder=True)
 
     # ---- part A: enrich family files we already have ----
     #
@@ -514,6 +562,26 @@ def main() -> int:
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(existing, fh, indent=2, ensure_ascii=False)
                 fh.write("\n")
+
+    # ---- part C leftovers: one 'Incertae sedis' family per placement ----
+    for (k, phylum, klass, order), kids in sorted(incerta.items()):
+        place(k, phylum, klass, order, UNPLACED, kids, placeholder=True)
+
+    # ---- part B: families COL names and we lack ----
+    targets = sorted(fam_kids.items(), key=lambda kv: -len(kv[1]))
+    if args.limit_families:
+        targets = targets[:args.limit_families]
+    for fam, kids in targets:
+        fname = (name.get(fam) or "").strip()
+        if not fname:
+            continue
+        ch = chain(fam)
+        place((ch.get("kingdom") or ch.get("superkingdom")
+               or ch.get("domain") or "").strip(),
+              (ch.get("phylum") or "").strip(),
+              (ch.get("class") or "").strip(),
+              (ch.get("order") or "").strip(),
+              fname, kids)
 
     print(f"\n  new family files written:      {counters['written']:,}")
     print(f"  existing family files merged:   {len(path_kids):,}")
