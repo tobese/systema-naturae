@@ -53,11 +53,35 @@ Two kingdoms' worth of species, and Wikidata adds more:
 | viral species | 17,552 | includes *Hepatitis B virus* → Hepadnaviridae, *Human herpesvirus 6* → Herpesviridae |
 | new against our tree | — | 1,811,989 species overall, 56.5% of the archive |
 
-Bacillati and Pseudomonadati are **GTDB phyla**. That is the whole difficulty in
-one fact: our Archaea kingdom is already built on GTDB phylum-level ranks
-(Methanobacteriota, Microcaldota, Nanobdellota, Promethearchaeota,
-Thermoproteota), so the precedent for admitting this rank already exists — COL
-just labels it `kingdom`.
+**Settled, by GTDB r232 (fetched 2026-10-04, `scripts/coldp.py` reads it):**
+COL's names are not GTDB's names, and COL's rank is not GTDB's rank.
+
+| | COL | GTDB r232 |
+|---|---|---|
+| the group COL calls `Bacillati` | **not a GTDB name at all** | `Bacillota`, rank **phylum**, domain Bacteria |
+| the group COL calls `Pseudomonadati` | **not a GTDB name at all** | `Pseudomonadota`, rank **phylum**, domain Bacteria |
+| rank used for that level | `kingdom` | `phylum` |
+| top of the hierarchy | 4 roots, ranks `kingdom`/`superkingdom`/`domain`/`unranked` | **2 domains**, Bacteria and Archaea |
+| ranks present anywhere | kingdom, phylum, class, order, family… | species, genus, family, order, class, phylum, domain — **no kingdom rank exists** |
+
+All eight of COL's prokaryote clade names (`Bacillati`, `Pseudomonadati`,
+`Thermotogati`, `Fusobacteriati`, `Methanobacteriati`, `Thermoproteati`,
+`Nanobdellati`, `Promethearchaeati`) return **zero hits** in GTDB at any rank.
+They are not older or newer spellings of GTDB names; they are a different
+naming convention (`-ati` where GTDB writes `-ota`) applied to the same
+organisms, and COL then ranks them one level too high.
+
+So the claim option A rested on is now a citation rather than an assertion:
+treating those groups as **phyla** is what the authority says, and it is what
+this tree already does for Archaea — Methanobacteriota, Microcaldota,
+Nanobdellota, Promethearchaeota, Thermoproteota are GTDB phyla and are already
+kingdom-rank nodes here. GTDB holds 199,923 species (189,801 bacterial, 10,122
+archaeal) in 3,967 families, so it is also a better source than COL for these
+kingdoms outright.
+
+What GTDB does **not** settle is viruses: its scope is `Bacteria and Archaea`
+and it contains no viral taxa at all. Option B's half — hold viruses back until
+ICTV is ingested — survives this evidence intact.
 
 ## The options
 

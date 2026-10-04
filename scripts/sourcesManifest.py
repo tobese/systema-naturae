@@ -159,18 +159,28 @@ SOURCES = {
         "record carries and no checklist we hold does. CC0, so licensing is not "
         "an obstacle. Not downloaded."),
     "gtdb": (
-        "Genome Taxonomy Database r226.0", "DOI 10.15468/dpzg84 (GBIF dataset "
-        "a97f36e5-ded1-49cc-bdec-ac6170fc7b9c, published 2026-01-28)",
-        "https://www.gbif.org/dataset/a97f36e5-ded1-49cc-bdec-ac6170fc7b9c",
+        "Genome Taxonomy Database r232", "DOI 10.15468/dpzg84 (GBIF dataset "
+        "a97f36e5-ded1-49cc-bdec-ac6170fc7b9c); ColDP endpoint "
+        "gtdb_r232_coldp.zip, issued 2026-08-25",
+        "https://hosted-datasets.gbif.org/gtdb/gtdb_r232_coldp.zip",
         "CC BY 4.0", "assessed",
-        "nothing yet, and it exists here for one reason: it is where the rank "
-        "COL mislabels comes from. Bacillati and Pseudomonadati, the two clades "
-        "holding 26,241 of COL's bacteria, are GTDB phyla, and GTDB is the "
-        "authority that would say what rank they belong at. Our Archaea "
-        "kingdom is already built on GTDB phylum-level ranks "
-        "(Methanobacteriota, Thermoproteota and four more), so GTDB is the "
-        "precedent for admitting this rank. Worth fetching before deciding how "
-        "to map COL's bacteria, not before. Not downloaded."),
+        "DOWNLOADED AND READ, and it settles the question it was fetched for. "
+        "242,895 accepted name usages: 189,801 bacterial species in 3,967 "
+        "families plus 10,122 archaeal, 125 phyla, two domains (Bacteria, "
+        "Archaea) and no kingdom rank anywhere. "
+        "That last fact is the one: COL's eight prokaryote clades -- Bacillati, "
+        "Pseudomonadati, Thermotogati, Fusobacteriati, Methanobacteriati, "
+        "Thermoproteati, Nanobdellati, Promethearchaeati -- return zero hits at "
+        "any rank. They are not older spellings of GTDB names but a different "
+        "convention (-ati where GTDB writes -ota) on the same organisms, ranked "
+        "one level too high. COL's 'Bacillati' is GTDB's Bacillota, a phylum. "
+        "So the tree's existing treatment of Archaea -- GTDB phyla such as "
+        "Methanobacteriota and Thermoproteota as kingdom-rank nodes -- is the "
+        "authority's own, and the bacteria question reduces to applying the "
+        "same rule. "
+        "Scope note: GTDB covers Bacteria and Archaea only and holds no viral "
+        "taxa, so it says nothing about the virus half. See "
+        "docs/bacteria-and-viruses.md."),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",
