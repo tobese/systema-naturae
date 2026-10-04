@@ -7,16 +7,37 @@ here and move each one into the table with a verdict.
 
 ```
 ```
-COL Hierarchy
-https://www.checklistbank.org/dataset/1000/metadata
 
-Craneflies
-https://www.checklistbank.org/dataset/1005/metadata
+## Triaged 2026-10-04 (second batch) — two good sources, one superseded
 
+| pasted as | resolves to | verdict |
+|---|---|---|
+| **Craneflies** | Catalogue of Craneflies of the World, ChecklistBank 1005, DOI [10.48580/d37p](https://doi.org/10.48580/d37p), CC0, Apr 2025, 23,780 name usages | **worth taking** — enrichment, not gap fill |
+| **Reptiles** | The Reptile Database, ChecklistBank 1008, DOI [10.48580/d37s](https://doi.org/10.48580/d37s), CC BY, 2026-06, 34,366 name usages | **worth taking** — the larger gap of the two |
+| **COL Hierarchy** | Catalogue of Life Hierarchy (COLH) v1.4, ChecklistBank 1000 | **superseded** — do not take |
 
-Reptiles
-https://www.checklistbank.org/dataset/1008/metadata
+**Craneflies is enrichment.** We already hold 5 cranefly families with 14,963
+species — Limoniidae 10,342, Tipulidae 4,291, Trichoceridae 262,
+Cylindrotomidae 67, Archilimoniidae 1 — so this roughly doubles a group we have
+rather than opening a hole. The synonymy is the part worth having, and it is the
+part we systematically hold back everywhere else.
 
+**Reptiles is the real gap.** 177 reptile families and 16,612 species against a
+source of comparable group carrying twice the names. Reptiles are among the
+best-documented organisms on earth, so a shortfall that size is a genuine hole
+rather than a vague one.
+
+Neither is blocked on format: both are external-origin ChecklistBank datasets,
+so both arrive as ColDP, and `scripts/coldp.py` reads that as of `dc0726a87`.
+That is the opposite of NCBI and GTDB, which are still only registered.
+
+**COL Hierarchy is superseded.** COLH v1.4 was issued **2019-05-06** and
+ChecklistBank holds only **2,844 name usages** for it — a legacy remnant of a
+source whose live version we already hold. The current Catalogue of Life is
+**dataset 3** (alias `COL`, version `project`), which is the 2026 base release
+imported in `a268f11c0` and extended by `6ea5a62d5`. Worth recording so nobody
+re-triages it: the name still reads like the authoritative backbone and the
+dataset key looks authoritative too.
 
 ## Triaged 2026-10-04 — four pastes, one of them a real find
 
