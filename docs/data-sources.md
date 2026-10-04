@@ -27,12 +27,41 @@ the next time the tree is rebuilt. Each row here has a `sourcedFrom` value, a
 sidecar field, or both, so the data can be traced back to the licence it was
 taken under.
 
-Last updated: **2026-10-02**.
+Last updated: **2026-10-04**.
 
 Local copies of everything below live in `/Volumes/MacieExternal/sources/archives/`
-— 24 datasets, 2.5 GB — indexed by `manifest.json` with checksums. Four are kept
+— 37 datasets, 2.5 GB — indexed by `manifest.json` with checksums. Four are kept
 specifically because they were **refused** on licence grounds; they stay so the
 decision can be re-checked rather than re-litigated.
+
+---
+
+## Accepted archive formats
+
+In preference order: **DwCA**, **ColDP**, **NEWICK**, **DOT**.
+
+Two thirds of what we already hold is DwCA (28 of 39 archives are zips, and
+essentially every zip is a DwCA or a Species File export of one), which is why
+this ordering starts there: it is the one shape GBIF, ChecklistBank, Kew and the
+Species Files all publish, and the one every importer here already reads.
+
+Where a publisher offers both DwCA and ColDP, take **ColDP** — it is the same
+model plus a per-name source attribution, and its absence is the recorded
+weakness of what we hold: COL's DwCA export has 7 columns and no source field, so
+every COL name is attributed to "COL" rather than to the ~160 checklists under it.
+That is a provenance loss we cannot recover from a DwCA.
+
+Being honest about the other two: **nothing in this repo reads NEWICK or DOT
+yet.** No importer, no script, no sample file, and nothing on the volume. They are
+the two formats a phylogeny arrives in, and a tree is genuinely something this
+project has no way to hold — the structure is a taxonomy, not a phylogeny, and
+`TaxonNode` has no field for branch lengths. So treat them as *preferred when a
+source offers a choice*, not as *supported today*; taking one means writing the
+reader first.
+
+Archives are stored **zipped**, and the extension follows the publisher: 28 zip,
+7 tgz, 3 gz, 1 xlsx. `tar.gz` appears only where that is all the publisher offers
+(AntWeb, BioImages, CalPhotos, FishBase, Flickr, NMNH, msw3, Commons, USDA).
 
 ---
 
