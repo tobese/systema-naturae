@@ -123,13 +123,19 @@ SOURCES = {
         "families we already had, 431,305 authorship records. Stage 2 applied "
         "to Fungi and Chromista (importColStage2.py): 27,812 species, of which "
         "27,462 in 719 new family files and 350 into 95 existing ones; Fungi "
-        "773 -> 1,193 families, Chromista 703 -> 1,002. Stage 2 still to do for "
-        "Animalia (the large majority), Plantae, Protozoa and Archaea, plus "
-        "bacteria and viruses, which are not yet declared in kingdom-config.json. "
-        "COL's 2.6M synonyms are still not imported. ColDP with per-name source "
-        "attribution is not currently downloadable (404); the DwCA has 7 columns "
-        "and no source field, so provenance is recorded as COL rather than "
-        "per-checklist"),
+        "773 -> 1,193 families, Chromista 703 -> 1,002. Stage 2 then applied to "
+        "Animalia: 672,185 species, 5,152 new family files and 33 enriched in "
+        "place, families 5,472 -> 10,601, orders 394 -> 721. Stage 2 still to do "
+        "for Plantae, Protozoa and Archaea. Bacteria and viruses are NOT two "
+        "kingdoms and are not a kingdom-config.json problem: COL holds them as "
+        "17 clades at kingdom rank (Bacillati 13,873 species, Pseudomonadati "
+        "12,368, Orthornavirae 7,201, Heunggongvirae 6,521, Shotokuvirae 2,351, "
+        "and 12 smaller), so filtering on kingdom name reaches almost none of "
+        "them and how to group them is an open decision -- see "
+        "docs/dataset-inbox.md. COL's 2.6M synonyms are still not imported. "
+        "ColDP with per-name source attribution is not currently downloadable "
+        "(404); the DwCA has 7 columns and no source field, so provenance is "
+        "recorded as COL rather than per-checklist"),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",
