@@ -1,8 +1,8 @@
 # Session 2026-10-04 — COL Stage 2: Animalia applied, three structural bugs fixed
 
-Uncommitted. Nothing in this file has been committed; see *Working tree* below for
-the exact list. Macie restarted mid-task, so this session picked the import up from
-where the previous one left it.
+Committed as `a268f11c0`; the file itself rode along in that commit. Macie restarted
+mid-task twice, so this session picked the import up from where the previous one left
+it, and the parts below are written as they stood at the first restart.
 
 ## Where the task stood at restart
 
@@ -106,21 +106,29 @@ hand as that file intends after an import of this kind.
 - new: `scripts/addAnimaliaStage2Themes.py`, `scripts/fix_duplicate_family_nodes.py`,
   `scripts/fix_duplicate_node_ids.py`
 
-## Known gap, stated rather than hidden
+## Known gap — closed after the first restart, verified after the second
 
-**Four COL species of Atactophlebiidae are lost.** The first run of
+**Four COL species of Atactophlebiidae were lost.** The first run of
 `fix_duplicate_family_nodes.py` wrote one merged file, then crashed on an `rmdir` before
 writing `taxonomy.json`. Rolling that back restored the tracked file, which discarded the
-four species it had just merged. Three of the four names are known (Malmyzhia kazanica,
-Issadophlebia fusa, Novokshonovus boreus); the fourth is not. A re-run against the DwCA
-would restore them, and the script is now idempotent so a re-run is safe.
+four species it had just merged. Three of the four names were known (Malmyzhia kazanica,
+Issadophlebia fusa, Novokshonovus boreus); the fourth was not.
+
+They are back. A re-run of the now-idempotent merge restored them once the volume was
+mounted, and the family carries all nine of its species — including the fourth,
+**Novokshonovus ignoratus**, which the DwCA identified.
+
+`scripts/restore_atactophlebiidae_species.py` was written to close the gap by taking
+COL's own species list for the family as the authority and adding only what is missing.
+It is kept because that is the check worth repeating, but it now reports *nothing to do
+(already complete)*, which is how the gap was confirmed closed rather than assumed.
 
 ## What is left
 
-1. Commit the above (nothing is committed yet).
+1. ~~Commit the above.~~ Done — `a268f11c0`.
 2. **Bacteria + viruses Stage 2** — ~43k species. Needs two kingdoms added to
    `portal/data/kingdom-config.json` first; `importColStage2.py` refuses a kingdom the
-   config does not declare rather than writing data nothing will load. Blocked on the
-   volume being mounted.
+   config does not declare rather than writing data nothing will load. Was blocked on
+   `/Volumes/MacieExternal`; the volume is mounted again, so this is next.
 3. Update `docs/dataset-inbox.md` and the `catalogue-of-life` manifest entry, which
    still say Animalia Stage 2 is "not yet applied".
