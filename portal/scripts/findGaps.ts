@@ -12,11 +12,21 @@ const portalRoot = join(root, "portal");
 // report path are derived from data/kingdom-config.json so gap analysis stays
 // consistent with the build.
 const KINGDOM = process.env.SN_KINGDOM || "";
+// The kingdom family paths are resolved from. An empty SN_KINGDOM means
+// animalia, but handing that empty string to the resolver drops the kingdom
+// segment: it resolves taxonomy/chordata/... rather than
+// taxonomy/animalia/chordata/..., existsSync is then false for every family,
+// and portalCount comes out 0 for the whole kingdom. That is not a partial
+// failure -- it wrote a report claiming 0% coverage across 5,472 families on
+// 03/10/2026, and gap-tasks.md, gap-tasks-phyla.md and the Coverage figures
+// all inherited it. buildData.ts hit the same thing and carries the same
+// fallback for the same reason.
+const effectiveKingdom = KINGDOM || "animalia";
 const kingdomConfigPath = join(portalRoot, "data", "kingdom-config.json");
 let kingdomConfig: { input?: string; dataSuffix?: string } | undefined;
 if (existsSync(kingdomConfigPath)) {
   const allConfigs = JSON.parse(readFileSync(kingdomConfigPath, "utf-8"));
-  kingdomConfig = allConfigs.kingdoms?.[KINGDOM];
+  kingdomConfig = allConfigs.kingdoms?.[effectiveKingdom];
 }
 const dataSuffix = kingdomConfig?.dataSuffix ?? (KINGDOM ? `-${KINGDOM}` : "");
 const taxonomyInput = kingdomConfig?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
@@ -67,7 +77,7 @@ function walk(
     // portalCount becomes 0, and gap becomes speciesCount for every family,
     // so the whole gap report is rewritten as garbage with no error.
     const { file: dataFilePath } = resolveFamilyFile(root, {
-      kingdom: KINGDOM || undefined,
+      kingdom: effectiveKingdom,
       phylum: phylumName || undefined,
       cls: hasClass ? className : undefined,
       ord: orderName || undefined,

@@ -18,7 +18,14 @@ function buildPhylumMap(node: any, map: Map<string, { id: string; name: string; 
     currentPhylum = {
       id: node.id,
       name: node.name,
-      commonName: node.commonName as string,
+      // Falls back to the scientific name. commonName is optional and the COL
+      // importer does not write one -- it scaffolds PHYLUM nodes as
+      // {id, name, rank} -- so Dicyemida arrived without one and took this
+      // whole report down with a TypeError on `undefined.padEnd`, which meant
+      // gap-tasks-phyla.md silently kept its previous contents rather than
+      // regenerating. Inventing a common name to avoid the crash would be the
+      // wrong fix; showing the scientific name is honest and cannot break again.
+      commonName: (node.commonName as string) || (node.name as string),
       rank: 0,
     };
   }
