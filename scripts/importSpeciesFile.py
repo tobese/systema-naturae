@@ -308,10 +308,19 @@ def merge_family(existing: dict, new: dict):
               "species_deduped": 0}
 
     index = {}
+    # A parallel index by id. Two sources spell one species differently while
+    # hashing it to the same id: POWO writes "Tibetia yadongensis H.P.Tsui" with
+    # the authorship inline, WFO writes "Tibetia yadongensis" with a separate
+    # authorship field, and SF.node_id gives both SP_TIBETIA_YADONGENSIS_H_P_TSUI.
+    # Matching on (rank, name) therefore treated them as two species and appended
+    # the second beside the first -- 4,310 such pairs in fabaceae alone.
+    by_id = {}
 
     def build(n):
         for c in n.get("children") or []:
             index.setdefault((c.get("rank"), c.get("name")), c)
+            if c.get("id") and c.get("rank") in ("SPECIES", "SUBSPECIES"):
+                by_id.setdefault(c["id"], c)
             build(c)
     build(existing)
 
@@ -322,9 +331,14 @@ def merge_family(existing: dict, new: dict):
         for src in src_children or []:
             key = (src.get("rank"), src.get("name"))
             prior = index.get(key)
+            if prior is None and src.get("id") and \
+                    src.get("rank") in ("SPECIES", "SUBSPECIES"):
+                prior = by_id.get(src["id"])
             if prior is None:
                 dst_parent.setdefault("children", []).append(src)
                 index[key] = src
+                if src.get("id") and src.get("rank") in ("SPECIES", "SUBSPECIES"):
+                    by_id[src["id"]] = src
                 build(src)
                 merged["genera_added"] += 1 if src.get("rank") == "GENUS" else 0
                 merged["species_added"] += sum(1 for _ in iter_species(src))
@@ -386,9 +400,17 @@ def drop_redundant_species(root):
             parent[id(c)] = n
             stack.append(c)
 
+    # Keyed by id where there is one. The previous version keyed by name and
+    # argued that was safe because "a binomial's genus is its first word, so two
+    # nodes with the same name are the same species". That is true, and it is not
+    # sufficient: the duplicate case here is two nodes with the SAME id and
+    # DIFFERENT names, because one source carries the authorship inside the name
+    # and another keeps it in a separate field. SF.node_id already normalises
+    # that difference, so the id is the authoritative key and the name is not.
     by_name = {}
     for sp in iter_species(root):
-        by_name.setdefault(sp.get("name"), []).append(sp)
+        key = sp.get("id") or ("name", sp.get("name"))
+        by_name.setdefault(key, []).append(sp)
 
     removed = 0
     for _nm, group in by_name.items():

@@ -34,11 +34,25 @@ IMPORTED = {"checklistbank", "catalogue of life"}
 
 
 def walk_species(doc):
-    for g in doc.get("children") or []:
-        for s in g.get("children") or []:
-            yield g, s
-        for s in g.get("speciesList") or []:
-            yield g, s
+    """(owning genus, species) for every species, at any nesting depth.
+
+    This was a single level deep -- top-level children, then their children --
+    which silently skipped every family whose top-level children are SUBFAMILY or
+    TRIBE nodes rather than GENUS. 143,300 of our 1,680,516 animalia species sit
+    under such a node, so the deduper was blind to them and reported 7 duplicate
+    ids where there were 22. A tool that reports "nothing to do" is the most
+    dangerous kind, because it is indistinguishable from a clean tree.
+    """
+    def rec(node):
+        for g in node.get("children") or []:
+            for s in g.get("children") or []:
+                if s.get("rank") == "SPECIES":
+                    yield g, s
+            for s in g.get("speciesList") or []:
+                yield g, s
+            if g.get("rank") != "SPECIES":
+                yield from rec(g)
+    yield from rec(doc)
 
 
 def count_species(node):
@@ -50,16 +64,31 @@ def count_species(node):
     return n
 
 
+def genus_count(node):
+    n = 0
+    for c in node.get("children") or []:
+        n += 1 if c.get("rank") == "GENUS" else genus_count(c)
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
-    ap.add_argument("--kingdom", default="animalia")
+    ap.add_argument("--kingdom", default="",
+                    help="default: every kingdom, which is what verifyTree.py "
+                         "checks. Scoping this to one kingdom is how 4,310 "
+                         "plantae duplicates went unnoticed next to a clean "
+                         "animalia run.")
     args = ap.parse_args()
 
+    kingdoms = ([args.kingdom] if args.kingdom else
+                ("animalia", "plantae", "fungi", "chromista", "protozoa",
+                 "archaea"))
     where = collections.defaultdict(list)
     docs = {}
-    for f in glob.glob(f"{KINGDOM_DIR}/{args.kingdom}/**/src/data/*.json",
-                       recursive=True):
+    for f in [x for k in kingdoms
+              for x in glob.glob(f"{KINGDOM_DIR}/{k}/**/src/data/*.json",
+                                 recursive=True)]:
         try:
             d = json.load(open(f, encoding="utf-8"))
         except Exception:
@@ -70,7 +99,7 @@ def main() -> int:
                 where[s["id"]].append((f, s))
 
     dupes = {i: v for i, v in where.items() if len(v) > 1}
-    print(f"  {args.kingdom}: {len(where):,} species ids, "
+    print(f"  {'+'.join(kingdoms)}: {len(where):,} species ids, "
           f"{len(dupes):,} held in more than one family")
 
     # decide per duplicate id
@@ -110,21 +139,36 @@ def main() -> int:
     removed = 0
     for f, ids in drops.items():
         d = docs[f]
-        for g in d.get("children") or []:
-            if g.get("children"):
-                before = len(g["children"])
-                g["children"] = [s for s in g["children"]
-                                 if s.get("id") not in ids]
-                removed += before - len(g["children"])
-            if g.get("speciesList"):
-                before = len(g["speciesList"])
-                g["speciesList"] = [s for s in g["speciesList"]
+
+        def prune(node):
+            # `removed` is a local of main(), so this needs nonlocal -- with
+            # `global` it raises NameError the first time prune runs, which is
+            # after the family file has been mutated in memory and before it is
+            # written, so --apply died on the first family.
+            nonlocal removed
+            if node.get("children"):
+                before = len(node["children"])
+                node["children"] = [s for s in node["children"]
                                     if s.get("id") not in ids]
-                removed += before - len(g["speciesList"])
-            g["children"] = [g for g in g.get("children") or [] if g.get("children")]
+                removed += before - len(node["children"])
+            if node.get("speciesList"):
+                before = len(node["speciesList"])
+                node["speciesList"] = [s for s in node["speciesList"]
+                                       if s.get("id") not in ids]
+                removed += before - len(node["speciesList"])
+            kept = []
+            for g in node.get("children") or []:
+                if g.get("rank") == "SPECIES":
+                    continue
+                prune(g)
+                if g.get("children") or g.get("speciesList"):
+                    kept.append(g)
+            node["children"] = kept
+
+        prune(d)
         d["children"] = [g for g in d.get("children") or [] if g.get("children")]
         d["speciesCount"] = count_species(d)
-        d["genusCount"] = len(d.get("children") or [])
+        d["genusCount"] = genus_count(d)
         with open(f, "w", encoding="utf-8") as fh:
             json.dump(d, fh, indent=2, ensure_ascii=False)
             fh.write("\n")
