@@ -186,23 +186,32 @@ def cmd_seed(_args):
     print(f"  wrote {len(rows):,} rows to {STORE}")
 
 
-def cmd_add(args):
+def add_family(family, kingdom="", species=0, source="manual", reason=""):
+    """Record one missed family. Callable from an importer mid-run."""
     ensure_link()
-    fam = args.family.strip()
+    fam = family.strip()
+    if not fam:
+        return False
     rows = read_store()
     for r in rows:
         if (r.get("family") or "").lower() == fam.lower():
-            r["species"] = int(r.get("species") or 0) + args.species
-            if args.source:
-                r["source"] = args.source
+            r["species"] = int(r.get("species") or 0) + int(species or 0)
+            if not r.get("kingdom") and kingdom:
+                r["kingdom"] = kingdom
             break
     else:
-        rows.append({"family": fam, "kingdom": args.kingdom or "",
-                     "source": args.source or "manual", "species": args.species,
+        rows.append({"family": fam, "kingdom": kingdom or "", "source": source,
+                     "species": int(species or 0),
                      "firstSeen": date.today().isoformat(),
-                     "reason": args.reason or "offered by source, not in taxonomy"})
+                     "reason": reason or "not in taxonomy"})
     write_store(rows)
-    print(f"  pending: {fam} (+{args.species})")
+    return True
+
+
+def cmd_add(args):
+    add_family(args.family, kingdom=args.kingdom, species=args.species,
+               source=args.source or "manual", reason=args.reason or "")
+    print(f"  pending: {args.family} (+{args.species})")
 
 
 def cmd_report(args):

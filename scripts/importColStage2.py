@@ -490,9 +490,14 @@ def main() -> int:
             buckets["GENUS"][g] = gnode
             root["children"].append(gnode)
             for nm2, a in species:
+                # lineage is the immediate parent's name: the order on a FAMILY
+                # node (see annotatePortalLevels), the family on a GENUS node, the
+                # GENUS on a species node. Writing fname here put the family on
+                # ~900k species, and because a species always lives in a file
+                # named for its family the wrong value reads as correct.
                 sp = {"id": SF.node_id(SF.PREFIX["SPECIES"], nm2, a or ""),
                       "name": nm2, "rank": "SPECIES", "subspeciesCount": 0,
-                      "sourcedFrom": SOURCE, "lineage": fname}
+                      "sourcedFrom": SOURCE, "lineage": g}
                 if a:
                     sp["authorship"] = a
                 gnode["children"].append(sp)
@@ -548,7 +553,7 @@ def main() -> int:
             a = (auth.get(t) or "").strip() or None
             sp = {"id": SF.node_id(SF.PREFIX["SPECIES"], bare, a or ""),
                   "name": bare, "rank": "SPECIES", "subspeciesCount": 0,
-                  "sourcedFrom": SOURCE, "lineage": fam_name}
+                  "sourcedFrom": SOURCE, "lineage": g}
             if a:
                 sp["authorship"] = a
             gnode["children"].append(sp)
