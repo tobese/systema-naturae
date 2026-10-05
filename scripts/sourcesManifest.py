@@ -335,6 +335,72 @@ SOURCES = {
     # The three that are declined on licensing rather than coverage are the
     # point of registering them at all -- "no licence stated" is not a
     # permissive licence, and that is not visible from the name count.
+    # The fifth batch, 2026-10-05: the top of ChecklistBank by size rather than
+    # a pile of group checklists. Measured with scripts/apiOverlapReport.py,
+    # which pages a dataset's whole accepted list through the API instead of
+    # sampling 600 names -- the sampling bias on an alphabetical list was worth
+    # 23 points, which is most of a dataset's apparent gap. Full write-ups in
+    # docs/dataset-inbox.md.
+    "wfo-plant-list": (
+        "World Flora Online Plant List 2026-06 (ChecklistBank dataset 2004)",
+        "DOI 10.5281/zenodo.7460141; version 2026-06 01, issued 2026-06-21",
+        "https://api.checklistbank.org/dataset/2004/archive.zip",
+        "CC0", "applied",
+        "TAKEN and applied. 1,663,770 name usages, 408,939 accepted "
+        "species/subspecies, 1,026,322 synonyms excluded. 158,701 species added "
+        "into 719 existing plant families; 1,071 refused, which is 0.26% -- the "
+        "reason being that 97.4% of WFO's 738 families are ones we already "
+        "hold, so the import extends the tree rather than manufacturing "
+        "placeholders. That ratio is the whole argument for this source over "
+        "Wikispecies, which refused 191,866 for want of families we lack. "
+        "Arrives as the standard ChecklistBank DwCA (taxon.tsv + name.tsv + "
+        "synonym.tsv), which colChecklist.load() dispatches on already."),
+    "checklistbank-2144": (
+        "ITIS, The Integrated Taxonomic Information System (dataset 2144)",
+        "DOI 10.48580/d4ky; version 2026-08-26",
+        "https://api.checklistbank.org/dataset/2144/archive.zip",
+        "CC0", "assessed",
+        "NOT yet taken, and next after WFO. 993,349 name usages, 526,474 "
+        "accepted species, 71.5% held over 59,183 measured, 8,843 families of "
+        "which 81.6% are held -- so roughly 120,000 species into families we "
+        "mostly have. CC0 and two months old. The reservation is that ITIS is a "
+        "synoptic management taxonomy with a North-American centre of gravity "
+        "and a large tail of obsolete concepts, which is the same judgement "
+        "call as taking COL's 2.6M synonyms."),
+    "checklistbank-310868": (
+        "Tropicos (dataset 310868)",
+        "DOI 10.48580/dgrnm; version 2021, issued 2021-11-04",
+        "https://api.checklistbank.org/dataset/310868/archive.zip",
+        "CC BY", "assessed",
+        "NOT taken. 1,368,229 name usages, 977,904 accepted species, and only "
+        "19.4% held over 20,580 measured -- the largest apparent gap in its "
+        "batch, and declined anyway. It is 2021 data offered alongside a 2026 "
+        "WFO list covering the same ground, so taking it would import older "
+        "nomenclatural data over newer. Its 44.0% family coverage says most of "
+        "what it offers is families WFO handles and we do not."),
+    "checklistbank-1028": (
+        "Species Fungorum, Index Fungorum API crawl (dataset 1028)",
+        "DOI 10.48580/d38h; version 2026-09-24",
+        "https://api.checklistbank.org/dataset/1028/archive.zip",
+        None, "assessed",
+        "NOT taken, blocked on permission rather than coverage. 541,761 name "
+        "usages, three months old, and 30.1% of its species are new to us "
+        "(69.9% held over 70,961 measured) with 85.3% of its families held -- on "
+        "the numbers the second-best source in its batch. ChecklistBank records "
+        "NO licence for it, the same position as 1023 and 1025, and no stated "
+        "terms is not permissive terms. Worth one email to Index Fungorum; the "
+        "archive is otherwise ready to take."),
+    "checklistbank-2007": (
+        "IRMNG, Interim Register of Marine and Nonmarine Genera (dataset 2007)",
+        "DOI 10.48580/d4f8; version 2026-09-16",
+        "https://api.checklistbank.org/dataset/2007/archive.zip",
+        "CC BY", "assessed",
+        "NOT taken, and not comparable to the species sources. 269,528 accepted "
+        "genera and 2 species: it is a register of genus names, so '59.9% of its "
+        "genera are held' answers a different question from the rest of the "
+        "batch. Its value is nomenclatural availability, which this tree does "
+        "not model. Sampled at species rank before the tooling was fixed, it "
+        "reported a confident 100% already-held from a two-name sample."),
     "checklistbank-1021": (
         "Orthoptera Species File, ChecklistBank edition (dataset 1021)",
         "DOI 10.48580/d388; version Oct 2026, issued 2026-10-01",
@@ -529,6 +595,8 @@ NO_ARCHIVE = {
     "inaturalist", "zoobank", "catalogue-of-life",
     "checklistbank-1021", "checklistbank-1022", "checklistbank-1023",
     "checklistbank-1025", "checklistbank-1026", "checklistbank-1030",
+    "checklistbank-1028", "checklistbank-2007", "checklistbank-2144",
+    "checklistbank-310868",
 }
 
 

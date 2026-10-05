@@ -8,6 +8,80 @@ here and move each one into the table with a verdict.
 ```
 ```
 
+## Triaged 2026-10-05 (fifth batch) — the global sets, measured not sampled
+
+Five datasets, and the opposite of the fourth batch: this is the top of
+ChecklistBank by size, not a pile of group-specific checklists. WFO Plant List
+1,663,770 name usages, ITIS 993,349, Tropicos 1,368,229, Species Fungorum
+541,761, IRMNG 567,549.
+
+So nothing here was decided on a 600-name sample. `scripts/apiOverlapReport.py`
+pages each dataset's whole accepted list through the API — no download — and
+tests it against `taxaserve`. Measured, spread across the alphabet:
+
+| pasted as | dataset | rank measured | measured | **already held** | families held | licence | vintage | verdict |
+|---|---|---|---|---|---|---|---|---|
+| World Flora | 2004 WFO Plant List 2026-06 | SPECIES | 14,154 | **43.8%** | **97.4%** (719/738) | CC0 | **2026-06** | **take** |
+| ITIS | 2144 ITIS | SPECIES | 59,183 | **71.5%** | 81.6% (7,215/8,843) | CC0 | **2026-08** | **take, second** |
+| Tropicos | 310868 Tropicos | SPECIES | 20,580 | 19.4% | 44.0% | CC BY | 2021 | **decline** |
+| Fungurum | 1028 Species Fungorum | SPECIES | 70,961 | 69.9% | 85.3% | **none stated** | 2026-09 | **blocked on licence** |
+| IMRNG | 2007 IRMNG | GENUS | 33,773 | 59.9% | 56.0% | CC BY | 2026-09 | **decline** |
+
+**WFO Plant List is the one that matters, and it is not close.** CC0, issued
+2026-06-21, four months old, and 97.4% of its families are ones we already hold
+— which is the whole point of the pending-family work. A source whose families
+we mostly have is a source that extends the tree instead of manufacturing
+placeholders: the import refused **1,071 species out of 408,939, or 0.26%**.
+Under the Wikispecies importer the same shape produced 191,866 refusals, because
+that source names families we do not have. The difference is not the importer,
+it is the source.
+
+Import measured at **158,701 species added** into 719 families, by the
+importer's own held/new test rather than a string comparison.
+
+**Tropicos is declined on vintage, and it is the one I expected to take.** 19.4%
+held reads like the largest opening in the batch, and it is 2021 data being
+offered in the same breath as a 2026 WFO list covering the same ground. Taking
+it would mean importing older nomenclatural data over newer, and its family
+coverage of 44.0% says most of its families are ones WFO handles and we do not.
+
+**Species Fungorum is blocked, not declined.** 30.1% of its species are new to
+us and it is three months old, which is the second-best source in the batch on
+the numbers. ChecklistBank records **no licence** for it, which is the same
+position as 1023 and 1025 in the batch above: a dataset with no stated terms is
+not a dataset with permissive terms. It is worth one email to Index Fungorum.
+
+**IRMNG is a different kind of thing.** It holds 269,528 genera and 2 species,
+so it is a register of genus names rather than a species source, and "59.9% of
+its genera are held" is not comparable to the other rows. Its value is
+nomenclatural availability, which this tree does not model.
+
+### What the worms question turned up
+
+Asked whether the marine worms are already covered: **the families are, the
+species are not.** Lineidae, Polynoidae, Sabellidae, Serpulidae, Syllidae,
+Spionidae, Terebellidae and Ampharetidae are all in the tree under
+`Animalia/Annelida/Polychaeta` — several of them under an `Unknown` order — and
+Nemertea is present as a phylum with Lineidae under it. But of 69 nemertean
+species sampled from GBIF's WoRMS checklist, **3 are held (4.3%)**.
+
+So the shape is the inverse of the usual gap: the skeleton exists and is
+species-empty. Neither WFO nor ITIS fixes that, since both are weak on marine
+invertebrates relative to their size. WoRMS is 1,219,588 species in GBIF and is
+the source that would, and it is not in this batch.
+
+### Two measurements worth not trusting
+
+The sampling bias was worth **23 points**. WFO measured 66.2% held on its first
+600 names, which were all `Aa…`, and 43.8% held spread across the alphabet. The
+first number came from offset-paging an alphabetical list and should never have
+been quoted at that precision — which is why the exact tool exists now.
+
+And IRMNG at species rank reported a confident **100% already-held** from a
+two-name sample. That was not a good result, it was a register of genera being
+asked about species. `sampleDatasetOverlap.py` took `--rank` after that, and
+`taxaserve` learned to answer genus and family lookups.
+
 ## Triaged 2026-10-05 (fourth batch) — six offered, none worth taking
 
 Seven paste lines, six datasets. "Scarabs" arrived with no URL, and "Phylla"
