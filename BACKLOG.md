@@ -945,3 +945,4 @@ else, so they are preserved here rather than lost with the file.
   nodes.
 - Wheel of Nature: tick audio while spinning; cache the last winner per session
   to avoid immediate repeats.
+- Investigate the icons ChecklistBank shows on dataset download pages (the row after "Biota"): they look standardised for at least part of the tree, so find out what they actually encode and whether the graph view could use them.

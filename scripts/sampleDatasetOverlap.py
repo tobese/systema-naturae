@@ -26,6 +26,7 @@ datasets in a minute and not finishing in half an hour: the fallback below
 walks all 14,085 family files to build its held-set, which is the single
 largest fixed cost in this script and is paid again by every caller.
 """
+import argparse
 import glob
 import json
 import os
@@ -49,13 +50,14 @@ def meta(key):
     return d
 
 
-def sample_names(key, pages=PAGES, size=PAGE_SIZE):
+def sample_names(key, pages=PAGES, size=PAGE_SIZE, rank="SPECIES"):
     """(accepted names by rank, total name usages)."""
+    want_rank = rank
     names = []
     total = None
     for p in range(pages):
         d = get(f"{API}/dataset/{key}/nameusage/search?limit={size}"
-                 f"&offset={p * size}&rank=SPECIES&status=ACCEPTED")
+                 f"&offset={p * size}&rank={want_rank}&status=ACCEPTED")
         if total is None:
             total = d.get("total")
         res = d.get("result") or []
@@ -66,9 +68,9 @@ def sample_names(key, pages=PAGES, size=PAGE_SIZE):
             if u.get("status") != "accepted":
                 continue
             nm = (u.get("name") or {}).get("scientificName")
-            rank = (u.get("name") or {}).get("rank")
+            row_rank = (u.get("name") or {}).get("rank")
             if nm:
-                names.append((nm, rank))
+                names.append((nm, row_rank))
     return names, total
 
 
@@ -126,13 +128,20 @@ def held_names(kingdom="animalia"):
 
 
 def main() -> int:
-    keys = [int(a) for a in sys.argv[1:]] or [1018]
+    ap = argparse.ArgumentParser(
+        description="sample a ChecklistBank dataset and test it against the tree")
+    ap.add_argument("keys", nargs="*", type=int, default=[1018])
+    ap.add_argument("--rank", default="SPECIES",
+                   help="rank to sample. A register of GENERA has to be asked "
+                        "for at GENUS: IRMNG sampled at SPECIES returns two "
+                        "names and a confident 100%% already-held, which reads "
+                        "exactly like a clean bill of health.")
+    args = ap.parse_args()
+    keys = args.keys
     # Walk each kingdom's files ONCE. This called held_names() five times for
     # animalia alone -- once per print, once per assignment -- and each call
     # re-reads all 10,601 animalia family files, so the fixed cost was five
-    # full passes over 14,085 files before a single API call was made. With
-    # animalia at 1.68M species that dominated the runtime and made triaging
-    # three datasets look like a hang.
+    # full passes over 14,085 files before a single API call was made.
     h = serve_health()
     if h:
         print(f"  taxaserve at {TAXASERVE}: {h['speciesNames']:,} species names, "
@@ -150,22 +159,28 @@ def main() -> int:
 
     for key in keys:
         m = meta(key)
-        print(f"\n=== {key}  {m.get('alias')} — {m.get('title')}")
+        print(f"\n=== {key}  {m.get('alias')} -- {m.get('title')}")
         print(f"    v{m.get('version')} issued {str(m.get('issued'))[:10]}  "
               f"licence {m.get('license')}  doi {m.get('doi')}")
-        names, total = sample_names(key)
-        sp = [(n, r) for n, r in names if (r or "").lower() in ("species", "subspecies")]
+        names, total = sample_names(key, rank=args.rank)
+        # Measure the rank that was asked for. Hard-coding species is what made
+        # a 269,528-genus register look like a two-name dataset.
+        want = args.rank.lower()
+        sp = [(n, r) for n, r in names
+              if (r or "").lower() in (want, "subspecies")]
         if not sp:
-            print(f"    sample: no species in {len(names)} names "
-                  f"(ranks: {sorted({r for _, r in names})[:6]})")
+            ranks = sorted({r for _, r in names})
+            print(f"    sample: nothing at rank {args.rank} in {len(names)} "
+                  f"names (ranks present: {ranks[:6]})")
+            print("    -> re-run at a rank this dataset actually holds")
             continue
         served = served_held([n for n, _r in sp])
         if served is not None and not served and len(sp) > 50:
             raise SystemExit(
-                f"  taxaserve reports 0 of {len(sp)} sampled species held, "
-                f"which cannot be right for this tree. Refusing to write that "
-                f"down as a verdict -- check the key casing in served_held() "
-                f"or run without TAXASERVE.")
+                f"  taxaserve reports 0 of {len(sp)} sampled {want} held, which "
+                f"cannot be right for this tree. Refusing to record that as a "
+                f"verdict -- check key casing in served_held(), or run without "
+                f"TAXASERVE.")
         hit = 0
         miss = []
         for n, _r in sp:
@@ -181,7 +196,7 @@ def main() -> int:
                 miss.append(n)
         pct = hit / len(sp) * 100
         print(f"    dataset total name usages: {total:,}")
-        print(f"    sampled {len(sp):,} species of {len(names):,} names  ->  "
+        print(f"    sampled {len(sp):,} {want} of {len(names):,} names  ->  "
               f"{hit:,} already held ({pct:.1f}%)")
         print(f"    sampled-not-held: {len(sp) - hit:,} of {len(sp):,} "
               f"({100 - pct:.1f}%)")

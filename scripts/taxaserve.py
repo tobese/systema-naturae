@@ -105,6 +105,8 @@ class Index:
     def __init__(self, quiet=False):
         self.lock = threading.Lock()
         self.held = {}            # lowercased name -> [(kingdom, family, genus)]
+        self.genera = set()       # lowercased GENUS names, for genus registers
+        self.families = set()     # lowercased FAMILY names
         self.parse = {}           # name -> canonical
         self.pending = []
         self.built_at = 0.0
@@ -133,6 +135,7 @@ class Index:
                 fam_raw = (d.get("name") or "").strip()
                 if not fam_raw:
                     continue
+                self.families.add(fam_raw.lower())
                 ki = _intern("k", k)
                 fi, _fdisp = _intern_family(fam_raw)
                 st = [(nd, None) for nd in reversed(d.get("children") or [])]
@@ -140,6 +143,8 @@ class Index:
                     node, genus = st.pop()
                     if node.get("rank") == "GENUS":
                         genus = (node.get("name") or "").strip()
+                        if genus:
+                            self.genera.add(genus.lower())
                     if node.get("rank") == "SPECIES" and node.get("name"):
                         # The genus comes from the GENUS node this species hangs
                         # under, which is structural. It does NOT come from
@@ -166,7 +171,8 @@ class Index:
         self._fdisp = FAMILY_DISPLAY
         self.build_seconds["held"] = time.time() - t0
         if not quiet:
-            print(f"    held:   {len(held):,} species names across "
+            print(f"    held:   {len(held):,} species names and "
+                  f"{len(self.genera):,} genera across "
                   f"{len(KINGDOMS)} kingdoms in "
                   f"{self.build_seconds['held']:.1f}s", flush=True)
             for k, n in per.items():
@@ -272,6 +278,8 @@ class Index:
             "indexed": self.built_at,
             "treeMtime": self.tree_mtime,
             "speciesNames": len(self.held),
+            "genusNames": len(self.genera),
+            "familyNames": len(self.families),
             "parseNames": len(self.parse),
             "pendingFamilies": len(self.pending),
             "families": len(_strings["f"]),
@@ -377,21 +385,35 @@ class Handler(http.server.BaseHTTPRequestHandler):
     def _held(self, names):
         idx = INDEX
         out = {}
+        genera_hit = 0
+        family_hit = 0
         for n in names:
             hits = idx.where(n)
-            if not hits:
+            if hits:
+                out[_norm(n)] = [
+                    {"rank": "SPECIES",
+                     "kingdom": _strings["k"][ki],
+                     "family": _strings["fdisp"][INDEX._fdisp[fi]],
+                     "genus": _strings["g"][gi] if gi >= 0 else None}
+                    for (ki, fi, gi) in hits]
                 continue
-            if not hits:
+            # A register of genera cannot be measured against a species-only
+            # index. IRMNG holds 269,528 genera and 2 species, and asking a
+            # species index about genera returns a confident 0-of-600, which
+            # the caller is right to refuse as impossible.
+            g = _norm(n)
+            if g in idx.genera:
+                out[g] = [{"rank": "GENUS"}]
+                genera_hit += 1
                 continue
-            out[_norm(n)] = [
-                {"kingdom": _strings["k"][ki],
-                 "family": _strings["fdisp"][INDEX._fdisp[fi]],
-                 "genus": _strings["g"][gi] if gi >= 0 else None}
-                for (ki, fi, gi) in hits
-            ]
+            if g in idx.families:
+                out[g] = [{"rank": "FAMILY"}]
+                family_hit += 1
         return {"indexed": idx.built_at, "treeMtime": idx.tree_mtime,
                 "held": out, "asked": len(names),
-                "notHeld": len(names) - len(out)}
+                "notHeld": len(names) - len(out),
+                "matchedAsGenus": genera_hit,
+                "matchedAsFamily": family_hit}
 
     def _stats(self):
         fam_by_kingdom = collections.Counter()
