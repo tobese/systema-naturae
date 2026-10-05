@@ -394,6 +394,38 @@ def main() -> int:
             print(f"      {touched_path}  speciesCount -> {n}")
 
     print(f"\n  species added: {added_total:,}   already present: {dedup_total:,}")
+
+    # A durable record of what this run did, so the post-import gate reads
+    # numbers rather than scraped stdout. Every serious defect in Oct 2026 was a
+    # plausible number rather than an error, and the number that would have
+    # caught two of them is the refusal rate: WFO refused 0.26% and ITIS 5.5%,
+    # both healthy, while a run refusing 60% looks identical at exit 0. Written
+    # on --apply only, because a dry run changed nothing.
+    if args.apply:
+        import datetime as _dt
+        row = {
+            "at": _dt.datetime.now().isoformat(timespec="seconds"),
+            "source": SOURCE,
+            "archive": os.path.basename(args.archive),
+            "slugHint": slug_hint(args.archive),
+            "offered": len(cand),
+            "alreadyHeld": held,
+            "nonBinominal": nonb,
+            "staged": sum(len(v) for v in staged.values()),
+            "refused": refused,
+            "refusalRate": round(refused / max(1, len(cand)), 4),
+            "added": added_total,
+            "deduped": dedup_total,
+            "families": len(staged),
+            "kingdoms": sorted({k for k, _ in staged}),
+            "missedFamilies": len({f for _kk, f in missed if f}),
+        }
+        log = os.path.join("data", "import-log.jsonl")
+        os.makedirs(os.path.dirname(log), exist_ok=True)
+        with open(log, "a", encoding="utf-8") as fh:
+            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+        print(f"  recorded {log}")
+
     if args.apply:
         for kind in sorted({k for k, _ in staged}):
             _tax_k, _ = KINDS[kind]

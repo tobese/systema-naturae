@@ -20,13 +20,14 @@ healthy, and a run that adds 158,701 and refuses 60% is not, even though both
 exit 0.
 
     python3 scripts/verifyTree.py
-    python3 scripts/verifyTree.py --max-refusal-rate 0.5   # looser
+    python3 scripts/verifyTree.py --after-import          # gate a run that just applied
 """
 import argparse
 import collections
 import glob
 import json
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -301,8 +302,162 @@ def check_lineage(sample=200):
              f"scripts/fixSpeciesLineage.py --apply")
 
 
+CODE_LIKE_NAME = re.compile(r"^\d+[-_]\d+|^\d+$")
+
+# Two archaea families are named for a GBIF taxon key rather than a name. Both
+# are honest placeholders for organisms that have no binomial: NCBI environmental
+# sequences from candidate phyla, where the "genus" is a locus tag --
+# 21-14-0-10-32-9 holds 6 species under genera SKIS01 and PWWA01, and
+# 1-14-0-10-31-34 holds 3 under a genus with the same code. Renaming them to
+# "Incertae sedis" would match the project's 103 existing placeholder families,
+# but it moves directories, appSlugs and node ids, so it is a decision rather
+# than a repair. Listed here so the gate is honest instead of permanently red.
+KNOWN_CODE_LIKE_FAMILIES = {"1-14-0-10-31-34", "21-14-0-10-32-9"}
+PLACEHOLDER_NAME = re.compile(
+    r"^(unknown|incertae\s+sedis|unclassified|unplaced)$", re.I)
+
+
+def check_family_names():
+    """A FAMILY node's name should be a name.
+
+    Two exceptions exist in the tree and both are junk from the GBIF backbone
+    import: archaea `1-14-0-10-31-34` and `21-14-0-10-32-9`, which are GBIF
+    taxon keys rather than names. Everything else that looks like a placeholder
+    is reported rather than failed, because "Incertae sedis" is a deliberate
+    editorial decision and 103 families carry it.
+    """
+    junk, placeholders = [], collections.Counter()
+    for path in KINGDOM_DOCS.values():
+        p = os.path.join(ROOT, path)
+        if not os.path.exists(p):
+            continue
+        kingdom = doc_kingdom(path)
+        tax = json.load(open(p, encoding="utf-8"))
+
+        def walk(n):
+            if n.get("rank") == "FAMILY":
+                nm = (n.get("name") or "").strip()
+                if CODE_LIKE_NAME.match(nm):
+                    junk.append((kingdom, nm))
+                elif PLACEHOLDER_NAME.match(nm):
+                    placeholders[kingdom] += 1
+            for c in n.get("children") or []:
+                walk(c)
+        walk(tax)
+    unexpected = [(k, n) for k, n in junk if n not in KNOWN_CODE_LIKE_FAMILIES]
+    if unexpected:
+        fail("no family node named like a taxon key",
+             f"{len(unexpected)}: "
+             + ", ".join(f"{k}/{n}" for k, n in unexpected[:4]))
+    else:
+        ok("no unexpected family node named like a taxon key",
+           f"{len(junk)} documented ({', '.join(sorted(KNOWN_CODE_LIKE_FAMILIES))}"
+           + (")" if junk else ")"))
+    gone = KNOWN_CODE_LIKE_FAMILIES - {n for _k, n in junk}
+    if gone:
+        notes.append(f"documented code-like family names now resolved: "
+                     f"{', '.join(sorted(gone))} -- drop them from "
+                     f"KNOWN_CODE_LIKE_FAMILIES")
+    if placeholders:
+        notes.append("families named Unknown/Incertae sedis: "
+                     + ", ".join(f"{k} {n}" for k, n in placeholders.most_common())
+                     + " -- a deliberate editorial state, not a defect")
+
+
+def check_missing_lineage(limit=0):
+    """Every species should carry a lineage (its genus).
+
+    2,906 animalia species did not as of 2026-10-05, which is the only
+    field-presence defect the tree-wide sanity scan found that is not coverage
+    work. Presence only: whether the value is *correct* is a separate and much
+    larger question (1.17M plantae carry a superseded genus).
+    """
+    missing = collections.Counter()
+    examples = []
+    for kingdom in KINGDOM_DOCS:
+        n = 0
+        for _slug, f in family_files(kingdom).items():
+            try:
+                d = json.load(open(f, encoding="utf-8"))
+            except Exception:
+                continue
+            st = list(d.get("children") or [])
+            while st:
+                x = st.pop()
+                if x.get("rank") == "SPECIES" and not (x.get("lineage") or "").strip():
+                    n += 1
+                    if len(examples) < 4:
+                        examples.append(f"{kingdom}/{os.path.basename(f)}:"
+                                        f"{x.get('name')}")
+                st.extend(x.get("children") or [])
+        if n:
+            missing[kingdom] = n
+    if missing:
+        fail("every species carries a lineage",
+             f"{sum(missing.values()):,} without one "
+             f"({', '.join(f'{k} {v:,}' for k, v in missing.most_common())})"
+             + (f" e.g. {examples[0]}" if examples else ""))
+    else:
+        ok("every species carries a lineage")
+
+
+def check_import(refusal_ceiling=0.20):
+    """Gate the last applied import, from data/import-log.jsonl.
+
+    The refusal rate is the number that matters and the one no exit code has ever
+    caught: WFO Plant List refused 1,071 of 408,939 (0.26%) and ITIS 31,760 of
+    582,013 (5.5%), both healthy because those sources name families we mostly
+    hold. A run that refused 60% would print the same shape of output and leave
+    the tree with a fifth of its potential, and there is nothing else in the
+    pipeline that would object.
+    """
+    log = os.path.join(ROOT, "data", "import-log.jsonl")
+    if not os.path.exists(log):
+        notes.append("no data/import-log.jsonl yet -- nothing to gate")
+        return
+    rows = []
+    with open(log, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if line:
+                try:
+                    rows.append(json.loads(line))
+                except json.JSONDecodeError:
+                    continue
+    if not rows:
+        notes.append("data/import-log.jsonl is empty")
+        return
+    r = rows[-1]
+    rate = r.get("refusalRate") or 0.0
+    print(f"\n  last applied import: {r.get('slugHint')} "
+          f"({r.get('at')})")
+    print(f"    offered {r.get('offered', 0):,}  already held "
+          f"{r.get('alreadyHeld', 0):,}  staged {r.get('staged', 0):,}  "
+          f"refused {r.get('refused', 0):,}  added {r.get('added', 0):,}")
+    if rate > refusal_ceiling:
+        fail("last import's refusal rate is within tolerance",
+             f"{rate:.1%} of offered species refused, ceiling is "
+             f"{refusal_ceiling:.0%} -- that is the signature of a source whose "
+             f"families we do not hold (cf. Wikispecies at 45%), or of a "
+             f"kingdom-routing bug. Check the pending-family store before "
+             f"treating the shortfall as real")
+    else:
+        ok("last import's refusal rate is within tolerance",
+           f"{rate:.2%} (ceiling {refusal_ceiling:.0%})")
+    if r.get("added") == 0 and r.get("staged", 0) > 0:
+        fail("last import added something it staged",
+             f"staged {r.get('staged'):,} but added 0 -- every staged species "
+             f"was already present, which usually means the held-check is "
+             f"wrong rather than the source being exhausted")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--after-import", action="store_true",
+                    help="also gate the last applied import's refusal rate")
+    ap.add_argument("--refusal-ceiling", type=float, default=0.20,
+                    help="fraction of offered species an import may refuse "
+                         "before this fails (default 0.20)")
     args = ap.parse_args()
     os.chdir(ROOT)
     print("verifying the tree's data invariants")
@@ -310,7 +465,11 @@ def main() -> int:
     check_file_counts()
     check_duplicate_species()
     check_species_names()
+    check_family_names()
+    check_missing_lineage()
     check_lineage()
+    if args.after_import:
+        check_import(refusal_ceiling=args.refusal_ceiling)
     if notes:
         print("\n  notes (not failures):")
         for n in notes:

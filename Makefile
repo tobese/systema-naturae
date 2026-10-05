@@ -1,5 +1,6 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich \
-        name-index name-index-status verify triage triage-sample serve
+        name-index name-index-status verify verify-import triage \
+        triage-sample serve fix-lineage fix-counts fix-duplicates
 
 dev:
 	cd portal && npm run dev
@@ -34,6 +35,23 @@ name-index-status:
 # Non-zero exit on violation, so CI can run it.
 verify:
 	@python3 scripts/verifyTree.py
+
+# Gate a run that has just applied. Adds the refusal-rate check, which is the
+# number no exit code has ever caught: WFO refused 0.26% and ITIS 5.5%, both
+# healthy, while a run refusing 60% prints the same shape of output and leaves
+# the tree with a fifth of its potential. Importers append to
+# data/import-log.jsonl so this reads numbers rather than scraped stdout.
+verify-import:
+	@python3 scripts/verifyTree.py --after-import $(ARGS)
+
+fix-lineage:
+	@python3 scripts/fixSpeciesLineage.py $(ARGS)
+
+fix-counts:
+	@python3 scripts/resyncFamilyCounts.py $(ARGS)
+
+fix-duplicates:
+	@python3 scripts/dedupeSpeciesAcrossFamilies.py $(ARGS)
 
 # Triage a ChecklistBank dataset before downloading it. TAXASERVE makes this an
 # API-only measurement of the whole accepted list rather than a 600-name sample:
