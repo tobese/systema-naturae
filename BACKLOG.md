@@ -9,6 +9,49 @@
   along with the stale-`COPY . .` hazard that made a green build meaningless and
   the reason the build happens on a dev machine rather than on the target.
 
+## Open right now (2026-10-05)
+
+### Blocked on a person — only you can unblock these
+
+- **Request the WoRMS full copy** — <https://www.marinespecies.org/usersrequest.php>.
+  GBIF's DwC-A endpoint for it returns 403 and the dataset's own description
+  points at that form, so this is deliberate rather than technical. It is the
+  largest remaining gap in the animal tree: measured *after* the ITIS import,
+  17.9% of marine worm species are held, and Platyhelminthes is **0 of 600** —
+  the phylum is in the tree with families and no species at all. Manifest
+  `worms`; measurements in `docs/dataset-inbox.md`. Do not work around it by
+  paging GBIF's API: that is ~4,000 requests against an offset ceiling and it
+  sidesteps a form that says to request.
+- **Email Index Fungorum about the licence** — ChecklistBank records *no
+  licence* for Species Fungorum (dataset 1028), which makes it unusable on
+  evidence rather than merely unattractive. 30.1% of its species are new to us
+  and it is three months old, so on the numbers it is the second-best source in
+  its batch. Missouri Botanical Garden runs Index Fungorum **and** Tropicos, so
+  one email can also settle whether to take Tropicos' 2021 edition at all.
+
+### Queued — decided, not started
+
+- **154 pending families are now in the tree** and are therefore scaffoldable or
+  importable, worth 108,320 species of scope.
+  `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first
+  time that report has had anything to say, and it is the whole payoff of
+  recording refusals instead of counting them.
+- **Rebuild the name index** — 2,989 family files postdate it after the WFO and
+  ITIS imports. `make name-index` (hours; it POSTs every name to GBIF's parser).
+- **1.17M plantae species carry a superseded genus in `lineage`** —
+  `Gyroporella pauciforata` has `lineage: "Physoporella"`, so the field is not a
+  reliable genus source. `verifyTree.py` reports this as a note rather than a
+  failure because it is widespread and pre-existing; the graph reads genus from
+  the tree structure instead. Fixing the field wants its own pass, not a
+  drive-by during an import.
+
+### Needs a decision
+
+- **PhyloPic icons** — see the item at the end of this file. Still open: rank,
+  what the fallback glyph is for the 3,777 families with no icon, where
+  attribution would surface if any BY-SA icon is used, and whether species
+  silhouettes are the bigger prize than group icons.
+
 ## Book: no phylum level
 
 The book goes kingdom selector → Part (CLASS) → Chapter (ORDER) → Family → Genus →

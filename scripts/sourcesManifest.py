@@ -401,7 +401,9 @@ SOURCES = {
         "the numbers the second-best source in its batch. ChecklistBank records "
         "NO licence for it, the same position as 1023 and 1025, and no stated "
         "terms is not permissive terms. Worth one email to Index Fungorum; the "
-        "archive is otherwise ready to take."),
+        "archive is otherwise ready to take. The action is on BACKLOG.md: one "
+        "email to Missouri Botanical Garden, which runs Index Fungorum and "
+        "Tropicos alike."),
     "checklistbank-2007": (
         "IRMNG, Interim Register of Marine and Nonmarine Genera (dataset 2007)",
         "DOI 10.48580/d4f8; version 2026-09-16",
@@ -432,7 +434,11 @@ SOURCES = {
         "enumerate all 1.2M names, but the offset ceiling is 100,000 so it is "
         "~4,000 paged requests, and scraping around an explicit request form is "
         "the wrong answer to being told to request. Worth registering as the "
-        "highest-value blocked item."),
+        "highest-value blocked item. The action is on BACKLOG.md under 'Open "
+        "right now': request marinespecies.org/usersrequest.php. Recorded as "
+        "NO_ARCHIVE because nothing was fetched, and because the access route is "
+        "a request form rather than a URL -- listing an archive path here would "
+        "imply a download that does not exist."),
     "checklistbank-1021": (
         "Orthoptera Species File, ChecklistBank edition (dataset 1021)",
         "DOI 10.48580/d388; version Oct 2026, issued 2026-10-01",
