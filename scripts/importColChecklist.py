@@ -261,8 +261,13 @@ def main() -> int:
     print(f"      kingdom from the taxon: {routed_by_kingdom:,}"
           f"   from the family name: {routed_by_family:,}"
           f"   fell back to {DEFAULT_K}: {routed_unknown:,}")
-    print(f"\n  staged:              {sum(len(v) for v in staged.values()):,} "
-          f"(+{held:,} unparseable)")
+    # `held` is the already-on-disk count, not a parse failure. Labelling it
+    # "unparseable" made WFO's dry run read "staged 226,683 (+148,381
+    # unparseable)", which looks like 40% of the dataset failing to parse. It is
+    # 148,381 species we already hold. A counter with the wrong name on it is
+    # worse than no counter.
+    print(f"\n  already held (skipped): {held:,}")
+    print(f"  staged:              {sum(len(v) for v in staged.values()):,}")
     print(f"  non-binominal:       {nonb:,}")
     print(f"  new, into a family we hold: {sum(len(v) for v in staged.values()):,}"
           f"  across {len(staged)} families in {len({k for k, _ in staged})} kingdoms")
