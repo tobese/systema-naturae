@@ -34,6 +34,26 @@ import os
 TAXONOMY = "portal/data/taxonomy.json"
 
 
+def count_species(node):
+    """Every species under a family, at any depth, including speciesList.
+
+    The first version of this walked only the direct children of the family's
+    top-level nodes and so missed everything nested below a SUBFAMILY: it
+    counted alcedinidae.json as 19 when it holds 138, and in the same pass it
+    rewrote 360 files' speciesCount down to that wrong number -- including
+    alcedinidae's, which had been correct. buildData compresses minimal species
+    into speciesList and the tree nests families under subfamilies, so the count
+    has to be recursive over both.
+    """
+    n = len(node.get("speciesList") or [])
+    for c in node.get("children") or []:
+        if c.get("rank") == "SPECIES":
+            n += 1
+        else:
+            n += count_species(c)
+    return n
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
@@ -47,7 +67,7 @@ def main() -> int:
             d = json.load(open(f, encoding="utf-8"))
         except Exception:
             continue
-        n = sum(len(g.get("children") or []) for g in d.get("children") or [])
+        n = count_species(d)
         if n:
             held[os.path.basename(f)[:-5]] = n
     print(f"  family files with species: {len(held):,}")
@@ -75,7 +95,7 @@ def main() -> int:
             continue
         if "speciesCount" not in d:
             continue
-        n = sum(len(g.get("children") or []) for g in d.get("children") or [])
+        n = count_species(d)
         if d["speciesCount"] != n:
             if args.apply:
                 d["speciesCount"] = n
@@ -132,7 +152,7 @@ def main() -> int:
         print(f"\n  would update {len(changes)} nodes (dry run -- pass --apply)")
         return 0
 
-    by_slug = {c[1]: c[2] for c in changes}
+    by_slug = {c[1]: c[3] for c in changes}   # c = (name, slug, have, want)
     n = 0
 
     def apply_walk(node):

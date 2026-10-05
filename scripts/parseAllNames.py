@@ -50,6 +50,7 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures as cf
+import http.client
 import json
 import os
 import sys
@@ -118,9 +119,18 @@ def parse_batch(names: list[str]) -> list[dict]:
             if attempt == 3:
                 sys.exit(f"FATAL: parser returned {e.code}. Stop rather than write misaligned data.")
             time.sleep(2 ** attempt * 2)
-        except urllib.error.URLError:
+        except (urllib.error.URLError, http.client.HTTPException,
+                ConnectionResetError) as e:
+            # RemoteDisconnected is raised by h.getresponse() inside urllib's
+            # do_open and is NOT wrapped in URLError, so the original
+            # `except URLError` did not see it: a run that reached 1.1M of 2.69M
+            # names at 1,900/s died on a connection GBIF closed under sustained
+            # load, after ten minutes of work and with no progress to resume
+            # from. It is a retryable condition, so it belongs here.
             if attempt == 3:
                 raise
+            print(f"    retry {attempt + 1}/3 after "
+                  f"{type(e).__name__}: {e}", flush=True)
             time.sleep(2 ** attempt * 2)
     # The one thing that must never be assumed.
     if len(out) != len(names):
@@ -169,7 +179,16 @@ def main() -> int:
     started = time.time()
 
     os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    fh = open(args.out, "w", encoding="utf-8")
+    # Written to a sibling and moved into place at the end, never in place.
+    # This run is hours long and the machine it runs on has restarted twice today
+    # (once mid-write, leaving a 0-byte unified-taxonomy.json that read as valid
+    # JSON and reported "0 nodes"). An index truncated that way is worse than a
+    # stale one: it looks well-formed and answers "we do not hold this name" for
+    # every name past the cut, which is precisely the question importers ask it.
+    # os.replace is atomic within a filesystem, so a reader either sees the old
+    # index or the new one.
+    tmp_out = args.out + ".partial"
+    fh = open(tmp_out, "w", encoding="utf-8")
 
     # Each batch is an independent POST; alignment is asserted inside
     # parse_batch, so concurrency cannot cross-contaminate results.
@@ -213,6 +232,8 @@ def main() -> int:
                           f"ETA {(len(pairs)-done)/rate:>4.0f}s", flush=True)
     finally:
         fh.close()
+    os.replace(tmp_out, args.out)
+    print(f"\n  moved {tmp_out} into place as {args.out}")
 
     total = sum(tally.values())
     print(f"\n{'=' * 70}")

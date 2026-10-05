@@ -119,6 +119,24 @@ def main() -> int:
             break
     tax, fams = our_families(src_kingdom)
     tax_path, _k = taxonomy_input(src_kingdom)
+
+    # every species id we hold in this kingdom, read from the files once
+    import glob as _glob
+    on_disk = set()
+    kdir = tax_path.split("/")[-1].replace("taxonomy-", "").replace(".json", "")
+    for f in _glob.glob(f"taxonomy/{kdir}/**/src/data/*.json", recursive=True):
+        try:
+            d = json.load(open(f, encoding="utf-8"))
+        except Exception:
+            continue
+        st = list(d.get("children") or [])
+        while st:
+            nd = st.pop()
+            if nd.get("rank") == "SPECIES" and nd.get("id"):
+                on_disk.add(nd["id"])
+            st.extend(nd.get("children") or [])
+    print(f"  species already on disk in {kdir}: {len(on_disk):,} (held-check is "
+          f"against these files, not the index)")
     parsed = taxamatch.parse_names(sorted({t["name"] for t in cand}))
 
     staged = collections.defaultdict(list)      # appSlug -> [(genus, name, auth)]
@@ -151,6 +169,19 @@ def main() -> int:
         if bare.lower() in placed:
             continue
         placed.add(bare.lower())
+        # Held in ANOTHER family. This check has to be against the files, not
+        # the canonical index: the index is a snapshot and was wrong in both
+        # directions, but removing the held-check entirely was worse than a bad
+        # index. Without it this importer wrote a species into whichever family
+        # the source assigned even when we already held it elsewhere -- 236
+        # copies across 57 file pairs, Kinnaridae and Meenoplidae each holding
+        # the other's cixiid relatives, because the source's circumscription
+        # differs from ours. Skipping is the right call and matches
+        # dedupe_genera_across_families.py, which keeps the copy we already had.
+        sid = SF.node_id(SF.PREFIX["SPECIES"], bare, (t.get("authorship") or "").strip() or "")
+        if sid in on_disk:
+            held += 1
+            continue
         ch = K.chain(t, by_id)
         fam = (ch.get("family") or "").lower().strip()
         if fam not in fams:
