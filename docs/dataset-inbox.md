@@ -22,7 +22,7 @@ tests it against `taxaserve`. Measured, spread across the alphabet:
 | pasted as | dataset | rank measured | measured | **already held** | families held | licence | vintage | verdict |
 |---|---|---|---|---|---|---|---|---|
 | World Flora | 2004 WFO Plant List 2026-06 | SPECIES | 14,154 | **43.8%** | **97.4%** (719/738) | CC0 | **2026-06** | **take** |
-| ITIS | 2144 ITIS | SPECIES | 59,183 | **71.5%** | 81.6% (7,215/8,843) | CC0 | **2026-08** | **take, second** |
+| ITIS | 2144 ITIS | SPECIES | 59,183 | **71.5%** | 81.6% (7,215/8,843) | CC0 | **2026-08** | **taken, +68,813** |
 | Tropicos | 310868 Tropicos | SPECIES | 20,580 | 19.4% | 44.0% | CC BY | 2021 | **decline** |
 | Fungurum | 1028 Species Fungorum | SPECIES | 70,961 | 69.9% | 85.3% | **none stated** | 2026-09 | **blocked on licence** |
 | IMRNG | 2007 IRMNG | GENUS | 33,773 | 59.9% | 56.0% | CC BY | 2026-09 | **decline** |
@@ -55,6 +55,45 @@ not a dataset with permissive terms. It is worth one email to Index Fungorum.
 so it is a register of genus names rather than a species source, and "59.9% of
 its genera are held" is not comparable to the other rows. Its value is
 nomenclatural availability, which this tree does not model.
+
+### ITIS, taken — and the risk that produced
+
+**68,813 species added** across 4,776 families in all six kingdoms. 582,013
+offered, 259,037 already held, 31,760 refused (5.5%, recorded in the pending
+store, taking it to 12,121 families and 154 of them now *present in the tree* —
+the first time `pendingFamilies.py report --scaffoldable` has had anything to
+say).
+
+The naive estimate was ~150,000 new from the 71.5% held figure. The importer's
+own test found 68,813, because the held-check undercounts on authorship
+differences and `merge_family` then finds another 167,074 already present. This
+is the third time the API estimate and the importer's test have disagreed
+materially — 150k against 69k — and it is the reason the verdict numbers in this
+table are described as measurements of the *sample*, not predictions of the
+import.
+
+**The risk I flagged arrived inside the first hour, in a useful shape.** ITIS
+filed the nudibranch *Actinocyclus bifrons* Karsten, 1905 into the **diatom**
+family Hemidiscaceae. We already hold it correctly, as a nudibranch in
+Actinocyclidae (329 *Actinocyclus* species under
+`Mollusca/Gastropoda/Nudibranchia`). `verifyTree.py` caught it as a new
+cross-kingdom homonym — and it is not one of the seven documented homonyms,
+because it is not a homonym at all: it is one species that ITIS's synoptic
+backbone filed under the wrong kingdom. Its copy came out, ours stayed, and the
+judgement call is now written down rather than left implicit.
+
+**Two acquisition notes.** The export endpoint returns a
+`multipart/form-data` wrapper containing `coldp.zip` rather than a bare archive,
+so the DwCA has to be unwrapped from the first `PK` signature — and the ColDP
+edition *is* available for this dataset even though `/coldp.zip` returns 406.
+ITIS also contains bacteria, and its refusal list is where that shows:
+Streptomycetaceae, Oscillatoriaceae, Microcystaceae and Microcoleaceae, none of
+which we can place while bacteria are on hold.
+
+**The refused families are the interesting output.** Geoplanidae (872 species) is
+a planarian flatworm family — the worm gap from below — and Leuciscidae (674) is
+a major freshwater fish family. Both are families we should have and do not, and
+1,213 families went to the pending store as a result.
 
 ### What the worms question turned up
 

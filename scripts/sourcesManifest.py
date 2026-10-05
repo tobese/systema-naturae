@@ -359,14 +359,26 @@ SOURCES = {
         "ITIS, The Integrated Taxonomic Information System (dataset 2144)",
         "DOI 10.48580/d4ky; version 2026-08-26",
         "https://api.checklistbank.org/dataset/2144/archive.zip",
-        "CC0", "assessed",
-        "NOT yet taken, and next after WFO. 993,349 name usages, 526,474 "
-        "accepted species, 71.5% held over 59,183 measured, 8,843 families of "
-        "which 81.6% are held -- so roughly 120,000 species into families we "
-        "mostly have. CC0 and two months old. The reservation is that ITIS is a "
-        "synoptic management taxonomy with a North-American centre of gravity "
-        "and a large tail of obsolete concepts, which is the same judgement "
-        "call as taking COL's 2.6M synonyms."),
+        "CC0", "applied",
+        "TAKEN and applied, on the user's authorisation over my recorded "
+        "reservation. 993,349 name usages, 582,013 accepted species/subspecies. "
+        "68,813 added across 4,776 families in all six kingdoms; 259,037 "
+        "already held, 31,760 refused (5.5%) and recorded in the pending store. "
+        "The naive API estimate was ~150,000 new; the importer's own test found "
+        "68,813, because its held-check undercounts and merge_family catches "
+        "another 167,074 already present. "
+        "The reservation, kept on the record: ITIS is a synoptic management "
+        "taxonomy with a North-American centre of gravity and a tail of obsolete "
+        "concepts, the same judgement call as taking COL's 2.6M synonyms. One "
+        "consequence arrived immediately -- ITIS filed the nudibranch "
+        "Actinocyclus bifrons Karsten, 1905 into the diatom family "
+        "Hemidiscaceae, so its chromista copy was removed and our curated "
+        "nudibranch placement kept. That is the shape of the risk this source "
+        "carries, so expect more of it. "
+        "Note the export endpoint returns a multipart/form-data wrapper "
+        "containing coldp.zip rather than a bare archive, so the DwCA has to be "
+        "unwrapped from the first PK signature; the ColDP edition IS available "
+        "for this dataset even though /coldp.zip 406s."),
     "checklistbank-310868": (
         "Tropicos (dataset 310868)",
         "DOI 10.48580/dgrnm; version 2021, issued 2021-11-04",

@@ -379,14 +379,15 @@ def main() -> int:
             with open(touched_path, "w", encoding="utf-8") as fh:
                 json.dump(doc, fh, indent=2, ensure_ascii=False)
                 fh.write("\n")
-            # taxonomy.json's speciesCount is what the Coverage modal reads
-            n = sum(len(g.get("children") or []) for g in doc.get("children") or [])
-            for g in doc.get("children") or []:
-                st = [g]
-                while st:
-                    nd = st.pop()
-                    n += len(nd.get("speciesList") or [])
-                    st.extend(nd.get("children") or [])
+            # taxonomy.json's speciesCount is what the Coverage modal reads.
+            # Use the same iterator merge_family uses rather than counting here:
+            # a hand-rolled count of top-level children counts SUBFAMILY nodes
+            # as if they were species, so Aphididae -- whose top-level children
+            # are subfamilies -- was written as 193 when it holds 5,873, and 61
+            # animalia families came out understating by 103,385 species.
+            # Three copies of this counter already existed and disagreed; the
+            # fix is to have none.
+            n = sum(1 for _ in SF.iter_species(doc))
             fam = fams_k[[n for n, v in fams_k.items() if v[0] == slug][0]][1]
             if fam.get("speciesCount") != n:
                 fam["speciesCount"] = n

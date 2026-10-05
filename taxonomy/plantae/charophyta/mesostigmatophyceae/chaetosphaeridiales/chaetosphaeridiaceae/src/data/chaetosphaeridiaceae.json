@@ -19,7 +19,8 @@
           "lineage": "Oligochaetophora",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
     },
@@ -38,7 +39,8 @@
           "lineage": "Polychaetophora",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
     },
@@ -60,7 +62,9 @@
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
-          ]
+          ],
+          "authorship": "(Nordst.) Kleb.",
+          "children": []
         },
         {
           "id": "SP_CHAETOSPHAERIDIUM_OVALIS",
@@ -70,7 +74,9 @@
           "lineage": "Chaetosphaeridium",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "authorship": "G. M. Smith, 1916",
+          "children": []
         },
         {
           "id": "SP_CHAETOSPHAERIDIUM_PRINGSHEIMII",
@@ -83,7 +89,9 @@
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
-          ]
+          ],
+          "authorship": "Klebahn, 1892",
+          "children": []
         }
       ]
     },
@@ -105,7 +113,8 @@
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
-          ]
+          ],
+          "children": []
         }
       ]
     },
@@ -124,9 +133,32 @@
           "lineage": "Diplochaete",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "authorship": "Collins, 1901",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CONOCHAETE",
+      "name": "Conochaete",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CONOCHAETE_COMOSA_KLEBAHM",
+          "name": "Conochaete comosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Conochaete",
+          "authorship": "Klebahm",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaetosphaeridiaceae"
     }
-  ]
+  ],
+  "genusCount": 6,
+  "speciesCount": 8
 }
