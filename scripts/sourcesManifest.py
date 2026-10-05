@@ -413,6 +413,26 @@ SOURCES = {
         "batch. Its value is nomenclatural availability, which this tree does "
         "not model. Sampled at species rank before the tooling was fixed, it "
         "reported a confident 100% already-held from a two-name sample."),
+    "worms": (
+        "World Register of Marine Species (GBIF dataset "
+        "2d59e5db-57ad-41ff-97d6-11f5fb264527)",
+        "CC BY 4.0; published 2026-09-01; 1,219,588 species in GBIF",
+        "https://www.marinespecies.org/",
+        "CC BY 4.0", "assessed",
+        "NOT taken, and blocked on a person rather than on tooling. This is the "
+        "source that would close the largest remaining gap in the animal tree, "
+        "which is marine worms: measured after the ITIS import, 17.9% of their "
+        "species are held. Platyhelminthes is 0 of 600 -- the phylum exists with "
+        "families under Animalia and no species at all -- and Polychaeta 30.8%, "
+        "Nemertea 27.0%, Sipunculida 13.5%, Priapulida 22.0%. That is the "
+        "inverse of the usual gap and neither WFO nor ITIS touched it. "
+        "Acquisition is deliberate, not technical: GBIF's DwC-A endpoint for "
+        "this dataset returns HTTP 403 and its description says to obtain a full "
+        "copy from marinespecies.org/usersrequest.php. GBIF's API would let us "
+        "enumerate all 1.2M names, but the offset ceiling is 100,000 so it is "
+        "~4,000 paged requests, and scraping around an explicit request form is "
+        "the wrong answer to being told to request. Worth registering as the "
+        "highest-value blocked item."),
     "checklistbank-1021": (
         "Orthoptera Species File, ChecklistBank edition (dataset 1021)",
         "DOI 10.48580/d388; version Oct 2026, issued 2026-10-01",
@@ -609,6 +629,8 @@ NO_ARCHIVE = {
     "checklistbank-1025", "checklistbank-1026", "checklistbank-1030",
     "checklistbank-1028", "checklistbank-2007", "checklistbank-2144",
     "checklistbank-310868",
+    # blocked on WoRMS's own request form, not on anything we can do
+    "worms",
 }
 
 

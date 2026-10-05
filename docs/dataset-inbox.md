@@ -109,6 +109,37 @@ species-empty. Neither WFO nor ITIS fixes that, since both are weak on marine
 invertebrates relative to their size. WoRMS is 1,219,588 species in GBIF and is
 the source that would, and it is not in this batch.
 
+### The worm gap, quantified properly
+
+Asked about "worms" and answered badly the first time. The measurement used
+GBIF's `scientificName`, which carries authorship, so filtering for two-token
+names kept almost nothing and reported Polychaeta as 1 species and Nemertea at
+4.3%. Using `canonicalName` instead, over 2,459 binomials in five marine worm
+groups, **after** the ITIS import:
+
+| group | already held |
+|---|---|
+| Polychaeta | 30.8% |
+| Nemertea | 27.0% |
+| **Platyhelminthes** | **0.0%** (0 of 600) |
+| Sipunculida | 13.5% |
+| Priapulida | 22.0% |
+| **all five** | **17.9%** |
+
+We hold the worm *families* and almost none of the species. Platyhelminthes is
+the stark one: the phylum is in the tree under Animalia, and 600 flatworm
+species sampled from GBIF yield zero held. Neither WFO (a plant list) nor ITIS
+(synoptic, and only 68,813 species across six kingdoms) moved this.
+
+**WoRMS is the source that would, and it is blocked on a person.** GBIF holds
+1,219,588 species for it, published 2026-09-01, CC BY 4.0. Its DwC-A endpoint
+returns **HTTP 403** and the dataset description says to obtain a full copy from
+`marinespecies.org/usersrequest.php`. GBIF's API would let us enumerate all
+1.2M names, but the offset ceiling is 100,000 so that is roughly 4,000 paged
+requests — and working around an explicit request form is the wrong answer to
+being told to request. Registered as `worms`, assessed, and the highest-value
+blocked item in the manifest.
+
 ### Two measurements worth not trusting
 
 The sampling bias was worth **23 points**. WFO measured 66.2% held on its first
