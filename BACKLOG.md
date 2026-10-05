@@ -945,4 +945,58 @@ else, so they are preserved here rather than lost with the file.
   nodes.
 - Wheel of Nature: tick audio while spinning; cache the last winner per session
   to avoid immediate repeats.
-- Investigate the icons ChecklistBank shows on dataset download pages (the row after "Biota"): they look standardised for at least part of the tree, so find out what they actually encode and whether the graph view could use them.
+### Phylum icons from PhyloPic, not from ChecklistBank
+
+The icons ChecklistBank shows after "Biota" on a dataset page are **PhyloPic
+silhouettes** — `images.phylopic.org/images/<uuid>/thumbnail/64x64.png`, one per
+group in COL's classification, in a nested order (prokaryotes → bacteria,
+archaea; eukaryotes → plants, fungi, animals → arthropods → insects →
+coleoptera, diptera, lepidoptera… → molluscs → chordates). Investigated
+2026-10-05; `scripts/phylopicIcons.py` fetched the metadata for 32 of the 33
+into `data/phylopic-icons.json`.
+
+**The source is the reusable part, not ChecklistBank's selection.** Their labels
+are COL's dashboard buckets and twelve of the 33 are not taxon names at all
+(`otherfungi`, `pseudofungi`, `otherinsects`, `othermolluscs`, `otheranimals`,
+`prokaryotes`, `eukaryotes`). Their `alt` text also does not describe the image:
+the one labelled `prokaryotes` is a **Fusobacteriales** silhouette, `plants` is
+**Fagales**, `animals` is **Forcipulatida**, `chordates` is **Salmoninae**,
+`otheranimals` is **Lumbricina**. Each is a representative render of its bucket,
+which is fine for iconography and means the UUID is real provenance rather than
+decoration — but it means reusing their set means reusing COL's grouping.
+
+**Licensing is better than feared and lumpy.** 27 of 32 are **CC0** with no
+obligation at all. The other five are CC BY-SA — and they are the prominent ones:
+`prokaryotes`, `eukaryotes`, `angiosperms`, `animals` (BY-SA 3.0) and `diptera`
+(BY-SA 4.0). So attribution and share-alike would attach to exactly the icons
+used most. Worth noting PhyloPic licence URLs end in `/`, which made a first pass
+report all 33 as unlicensed.
+
+**Their set covers 89.4% of our animalia species, but only as a fallback
+chain.** Mapping `arthropods`→Arthropoda, `molluscs`→Mollusca,
+`chordates`→Chordata plus the seven named insect orders, 1,502,301 of 1,680,561
+animalia species (6,824 of 10,601 families) sit under a covered group. But only
+**3 of our 33 phyla** get a real icon; the other 30 all collapse into
+`otheranimals`, which is an earthworm. Any honest use needs a stated fallback
+rather than pretending the set is a taxonomy.
+
+**The better path is to source per-phylum from PhyloPic directly.**
+`api.phylopic.org/autocomplete` returns an **exact node for all 33 of our
+animalia phyla**, so a real one-per-phylum set is available rather than 3 real
+icons and a catch-all — which is what makes this worth doing rather than
+skipping.
+
+Decide before starting:
+- **Rank.** Phylum is the obvious one (33 animalia alone, and there is no
+  kingdom-level gain since our kingdoms are already visually distinct). Orders
+  are the open question: 721 of them, and PhyloPic covers a useful minority.
+- **Where the fallback shows.** A family with no icon still needs *something*;
+  whether that is a neutral glyph, the parent phylum's icon dimmed, or nothing.
+- **Whether to reuse ChecklistBank's exact 32** (five BY-SA, and their grouping)
+  or take PhyloPic per-phylum (CC0 for nearly all, our grouping) — the latter is
+  better on both axes and the 89.4% coverage figure is then only a floor.
+- **Attribution surface**, if any BY-SA icon is used at all.
+- **Species silhouettes**, not just group ones: PhyloPic's real strength. Our
+  graph already has images per node for a large share of species, so this may be
+  a better image *source* than an icon set, and that is a bigger prize than the
+  icons.
