@@ -19,7 +19,8 @@
           "lineage": "Phragmonema",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
     },
@@ -41,7 +42,8 @@
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
-          ]
+          ],
+          "children": []
         }
       ]
     },
@@ -60,9 +62,48 @@
           "lineage": "Kneuckeria",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_GLAUCONEMA",
+      "name": "Glauconema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLAUCONEMA_RAMOSUM",
+          "name": "Glauconema ramosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glauconema",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phragmonemataceae"
+    },
+    {
+      "id": "GENUS_SELKIA",
+      "name": "Selkia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SELKIA_LACUSTRIS",
+          "name": "Selkia lacustris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Selkia",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phragmonemataceae"
     }
-  ]
+  ],
+  "genusCount": 5,
+  "speciesCount": 5
 }

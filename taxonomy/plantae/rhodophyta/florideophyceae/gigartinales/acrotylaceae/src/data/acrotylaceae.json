@@ -19,7 +19,8 @@
           "lineage": "Hennedya",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
     },
@@ -38,7 +39,8 @@
           "lineage": "Antrocentrum",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         },
         {
           "id": "SP_ANTROCENTRUM_MOLLE",
@@ -48,7 +50,8 @@
           "lineage": "Antrocentrum",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         },
         {
           "id": "SP_ANTROCENTRUM_NIGRESCENS",
@@ -61,7 +64,8 @@
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
-          ]
+          ],
+          "children": []
         }
       ]
     },
@@ -80,7 +84,8 @@
           "lineage": "Reinboldia",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
     },
@@ -99,7 +104,17 @@
           "lineage": "Amphiplexia",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
+        },
+        {
+          "id": "SP_AMPHIPLEXIA_RACEMOSA",
+          "name": "Amphiplexia racemosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphiplexia",
+          "children": []
         }
       ]
     },
@@ -121,7 +136,8 @@
           "sourcedFrom": "gbif",
           "continents": [
             "Europe"
-          ]
+          ],
+          "children": []
         },
         {
           "id": "SP_ACROTYLUS_CRYPTOGRAPHICUS",
@@ -131,9 +147,48 @@
           "lineage": "Acrotylus",
           "subspeciesCount": 0,
           "description": "",
-          "sourcedFrom": "none"
+          "sourcedFrom": "none",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CLAVICLONIUM",
+      "name": "Claviclonium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLAVICLONIUM_OVATUM",
+          "name": "Claviclonium ovatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Claviclonium",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acrotylaceae"
+    },
+    {
+      "id": "GENUS_RANAVALONA",
+      "name": "Ranavalona",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RANAVALONA_DUCKERAE",
+          "name": "Ranavalona duckerae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ranavalona",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acrotylaceae"
     }
-  ]
+  ],
+  "genusCount": 7,
+  "speciesCount": 11
 }
