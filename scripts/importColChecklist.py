@@ -255,7 +255,9 @@ def main() -> int:
             refused += 1
             continue
         slug = fams_k[fam][0]
-        staged[(k, slug)].append((g, bare, (t.get("authorship") or "").strip() or None))
+        staged[(k, slug)].append((g, bare,
+                                  (t.get("authorship") or "").strip() or None,
+                                  t.get("id")))
 
     print("  routed per taxon: " + ", ".join(f"{k} {v:,}" for k, v in routed.most_common()))
     print(f"      kingdom from the taxon: {routed_by_kingdom:,}"
@@ -319,8 +321,8 @@ def main() -> int:
         # the family name, needed by the genera loop below for genus lineage
         fname = next((n for n, v in fams_k.items() if v[0] == slug), slug)
         genera = collections.defaultdict(list)
-        for g, nm, a in rows:
-            genera[g].append((nm, a))
+        for g, nm, a, sid in rows:
+            genera[g].append((nm, a, sid))
         new_root = {"id": None, "name": None, "rank": "FAMILY", "children": []}
         touched_path = None
         for g, species in genera.items():
@@ -335,12 +337,19 @@ def main() -> int:
                      "rank": "GENUS", "children": [], "sourcedFrom": SOURCE,
                      "lineage": fname}
             new_root["children"].append(gnode)
-            for nm, a in species:
+            for nm, a, sid in species:
                 sp = {"id": SF.node_id(SF.PREFIX["SPECIES"], nm, a or ""),
                       "name": nm, "rank": "SPECIES", "subspeciesCount": 0,
                       "sourcedFrom": SOURCE, "lineage": g}
                 if a:
                     sp["authorship"] = a
+                if sid:
+                    # the source's own identifier, kept. Our id is derived from
+                    # the name and is deliberately not canonical -- 387,528 of
+                    # them have no prefix at all, because prefixing them would
+                    # collapse GENUS_SCHULZIA across two kingdoms -- so this is
+                    # the only reliable join key to COL, ITIS, WFO or GBIF.
+                    sp["sourceIds"] = {SOURCE: sid}
                 gnode["children"].append(sp)
 
         # One index, built once. A recursive glob per family means a full walk

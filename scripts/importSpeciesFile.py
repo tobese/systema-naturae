@@ -325,7 +325,8 @@ def merge_family(existing: dict, new: dict):
     build(existing)
 
     BACKFILL = ("authorship", "yearPublished", "description", "commonName",
-                "continents", "reference", "iucnStatus", "sourcedFrom", "lineage")
+                "continents", "reference", "iucnStatus", "sourcedFrom", "lineage",
+                "sourceIds")
 
     def add_children(dst_parent, src_children):
         for src in src_children or []:
@@ -351,7 +352,14 @@ def merge_family(existing: dict, new: dict):
                 # None / Spinola / "Lepeletier, 1841" / "Lepeletier".
                 merged["species_deduped"] += 1
                 for f in BACKFILL:
-                    if not prior.get(f) and src.get(f):
+                    if f == "sourceIds":
+                        # merged, not copied: two sources contributing the same
+                        # taxon is exactly the case where both ids matter
+                        if src.get(f):
+                            tgt = prior.setdefault("sourceIds", {})
+                            for k, v in src[f].items():
+                                tgt.setdefault(k, v)
+                    elif not prior.get(f) and src.get(f):
                         prior[f] = src[f]
                 continue
             merged["genera_merged"] += 1 if src.get("rank") == "GENUS" else 0
@@ -391,6 +399,26 @@ def drop_redundant_species(root):
                                "commonName", "continents", "reference",
                                "iucnStatus") if n.get(k)) + len(n.get("continents") or [])
 
+    def name_is_conforming(n):
+        """True when `name` does not repeat the node's own `authorship`.
+
+        The importers' convention is a bare binomial in `name` with the authority
+        in `authorship` -- nodename() and split_authorship() exist to enforce it,
+        and COL, WFO and ITIS all write it that way. POWO, GBIF and the Wikipedia
+        enrichers write the authority inline instead, so one species can arrive
+        as "Tibetia yadongensis" from WFO and "Tibetia yadongensis H.P.Tsui" from
+        POWO. Both hash to the same id, so the merge has to choose, and it was
+        choosing on richness alone -- which let the inline spelling win and threw
+        the bare one away. 4,310 such names were lost from fabaceae alone.
+
+        This only decides *which* spelling survives a same-id collision. The
+        322,083 inline names that never collided with anything are a display
+        convention question and are deliberately not touched here.
+        """
+        nm = (n.get("name") or "").strip()
+        au = (n.get("authorship") or "").strip()
+        return not (au and len(nm) > len(au) + 2 and nm.endswith(au))
+
     # parent links, so a loser can be unlinked from wherever it hangs
     parent = {}
     stack = [root]
@@ -416,7 +444,10 @@ def drop_redundant_species(root):
     for _nm, group in by_name.items():
         if len(group) < 2:
             continue
-        winner = max(group, key=richness)
+        # A conforming name beats a richer one: "Poeppigia procera  C.Presl" and
+        # "Poeppigia procera" are one species with the same id, and every other
+        # source writes it the second way.
+        winner = max(group, key=lambda n: (name_is_conforming(n), richness(n)))
         for sp in group:
             if sp is winner:
                 continue
@@ -425,6 +456,13 @@ def drop_redundant_species(root):
                       "continents", "reference", "iucnStatus", "sourcedFrom"):
                 if not winner.get(f) and sp.get(f):
                     winner[f] = sp[f]
+            if sp.get("sourceIds"):
+                tgt = winner.setdefault("sourceIds", {})
+                for k, v in sp["sourceIds"].items():
+                    tgt.setdefault(k, v)
+            # Recover the bare spelling if the survivor inlined its authority.
+            if not name_is_conforming(winner) and name_is_conforming(sp):
+                winner["name"] = sp["name"]
             par = parent.get(id(sp))
             if par is not None and sp in (par.get("children") or []):
                 par["children"].remove(sp)
