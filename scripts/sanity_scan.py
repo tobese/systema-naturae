@@ -200,6 +200,11 @@ def main() -> int:
     ap.add_argument("--issues", default="", help="comma-separated subset of checks")
     ap.add_argument("--queue", default="portal/data/sanity-queue.json")
     ap.add_argument("--archive-path", default="portal/data/sanity-issues.json")
+    ap.add_argument("--no-parse-index", action="store_true",
+                    help="do not read portal/data/name-parse-index.jsonl. The "
+                         "index is 2,989 files stale after the WFO and ITIS "
+                         "imports, so any check reading it is scoring against "
+                         "a snapshot of an older tree.")
     ap.add_argument("--parse-index", default=PARSE_INDEX,
                     help="GBIF parser index, required by UNRESOLVED_TAXON")
     args = ap.parse_args()
@@ -215,8 +220,18 @@ def main() -> int:
 
     # Only loaded when the check is on, so every other subset stays runnable
     # without the 259 MB index.
-    needs_index = "UNRESOLVED_TAXON" in checks
-    verdicts = load_parse_verdicts(args.parse_index) if needs_index else {}
+    skipped = {}
+    needs_index = "UNRESOLVED_TAXON" in checks and not args.no_parse_index
+    if needs_index:
+        verdicts = load_parse_verdicts(args.parse_index)
+    else:
+        verdicts = {}
+        if "UNRESOLVED_TAXON" in checks:
+            skipped["UNRESOLVED_TAXON"] = ("parse index is a stale snapshot; "
+                                           "rebuild it or accept the gap")
+            print("  UNRESOLVED_TAXON skipped (--no-parse-index): the index is a "
+                  "stale snapshot, so its verdicts describe an older tree. The "
+                  "check is the one thing the index is still needed for.")
     if verdicts:
         print(f"  parser index: {len(verdicts):,} unresolved names")
 
@@ -358,8 +373,19 @@ def main() -> int:
           f"({(time.time()-started)/60:.1f}m)\n")
     for k, n in tally.most_common():
         print(f"  {k:<26}{n:>8,}")
+    # A check that was not run must never print as clean. UNRESOLVED_TAXON was
+    # skipped here because the parse index is a stale snapshot, and the summary
+    # reported it as "0 clean" -- the exact failure mode this project keeps
+    # hitting, where a number that means "not measured" reads as "measured and
+    # fine". It is now reported as SKIPPED, with the reason.
     for k in ALL_CHECKS:
-        if k in checks and not tally.get(k):
+        if k not in checks:
+            continue
+        if tally.get(k):
+            continue
+        if k in skipped:
+            print(f"  {k:<26}{'-':>8}  SKIPPED ({skipped[k]})")
+        else:
             print(f"  {k:<26}{'0':>8}  clean")
 
     if args.write:
