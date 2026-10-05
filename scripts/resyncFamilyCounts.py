@@ -33,6 +33,22 @@ import os
 
 TAXONOMY = "portal/data/taxonomy.json"
 
+# Every kingdom has its own taxonomy doc, and each FAMILY node's speciesCount
+# there has the same two meanings as animalia's. This walked only
+# taxonomy.json, so it reported "node UNDERstates the file: 0" while fungi alone
+# had 266 understated nodes worth 1,367 species -- written by importers whose
+# count was not recursive over subfamilies and speciesList. animalia being clean
+# is why that went unnoticed: the one kingdom it did read is the one that had
+# already been fixed by hand.
+TAXONOMY_DOCS = (
+    "portal/data/taxonomy.json",
+    "portal/data/taxonomy-fungi.json",
+    "portal/data/taxonomy-chromista.json",
+    "portal/data/taxonomy-plantae-snippet.json",
+    "portal/data/taxonomy-protozoa.json",
+    "portal/data/taxonomy-archaea.json",
+)
+
 
 def count_species(node):
     """Every species under a family, at any depth, including speciesList.
@@ -54,11 +70,34 @@ def count_species(node):
     return n
 
 
+def doc_kingdom(path):
+    """Which kingdom's family tree a taxonomy doc describes.
+
+    Two of the six names do not follow the convention: animalia's doc is plain
+    taxonomy.json, and Plantae's carries a "-snippet" suffix. Deriving the
+    kingdom from the filename -- which is what the doc -> kingdom lookup did --
+    yields "taxonomy" and "plantae-snippet", neither of which matches the
+    directory the family files live in, so every node in those two docs read as
+    "no file" and animalia looked like it had no families at all.
+    """
+    base = os.path.basename(path)
+    if base == "taxonomy.json":
+        return "animalia"
+    k = base[len("taxonomy-"):-len(".json")]
+    for suffix in ("-snippet",):
+        if k.endswith(suffix):
+            k = k[: -len(suffix)]
+    return k
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
 
+    # keyed by (kingdom, slug): a bare slug collides, since the same family name
+    # legitimately appears under two kingdoms and their files hold different
+    # numbers of species
     held = collections.defaultdict(int)
     for f in glob.glob("taxonomy/*/**/src/data/*.json", recursive=True):
         if "node_modules" in f:
@@ -69,7 +108,8 @@ def main() -> int:
             continue
         n = count_species(d)
         if n:
-            held[os.path.basename(f)[:-5]] = n
+            held[(f.split("taxonomy/")[1].split("/")[0],
+                  os.path.basename(f)[:-5])] = n
     print(f"  family files with species: {len(held):,}")
 
     # Two different counters disagree, and it matters which is which.
@@ -112,60 +152,87 @@ def main() -> int:
           "(4,050 files; the field is not universal)")
     print()
 
-    tax = json.load(open(TAXONOMY, encoding="utf-8"))
-    counts = {"over": 0, "under": 0, "same": 0, "missing": 0}
-    changes = []
+    grand = {"same": 0, "under": 0, "over": 0, "missing": 0}
+    all_changes = []
+    for TAXONOMY in TAXONOMY_DOCS:
+        if not os.path.exists(TAXONOMY):
+            print(f"  {TAXONOMY}: absent, skipped")
+            continue
+        kingdom = doc_kingdom(TAXONOMY)
+        tax = json.load(open(TAXONOMY, encoding="utf-8"))
+        counts = {"over": 0, "under": 0, "same": 0, "missing": 0}
+        changes = []
 
-    def walk(n):
-        over = counts["over"]
-        if n.get("rank") == "FAMILY" and n.get("appSlug"):
-            slug = n["appSlug"]
-            if slug not in held:
-                counts["missing"] += 1
-                return
-            want = held[slug]
-            have = n.get("speciesCount")
-            if have is None:
-                counts["missing"] += 1
-            elif want > have:
-                counts["over"] += 1
-                changes.append((n.get("name"), slug, have, want))
-            elif want < have:
-                counts["under"] += 1
-            else:
-                counts["same"] += 1
-        for c in n.get("children") or []:
-            walk(c)
-    walk(tax)
+        def walk(n, _k=kingdom, _c=counts, _ch=changes):
+            if n.get("rank") == "FAMILY" and n.get("appSlug"):
+                key = (_k, n["appSlug"])
+                if key not in held:
+                    _c["missing"] += 1
+                else:
+                    want = held[key]
+                    have = n.get("speciesCount")
+                    if have is None:
+                        _c["missing"] += 1
+                    elif want > have:
+                        _c["over"] += 1
+                        _ch.append((n.get("name"), _k, n["appSlug"], have, want))
+                    elif want < have:
+                        _c["under"] += 1
+                    else:
+                        _c["same"] += 1
+            for c in n.get("children") or []:
+                walk(c)
 
-    print(f"  nodes matching their file:        {counts['same']:,}")
-    print(f"  node UNDERstates the file:       {counts['over']:,}")
-    print(f"  node OVERstates the file:        {counts['under']:,}  (left alone)")
-    print(f"  nodes with no file / no count:   {counts['missing']:,}  (left alone)")
-    if changes:
+        walk(tax)
+        for k in counts:
+            grand[k] += counts[k]
+        all_changes.extend(changes)
+        flag = "" if not counts["over"] else f"   <-- {counts['over']} understated"
+        print(f"  {kingdom:10s} matching {counts['same']:>6,}   "
+              f"understated {counts['over']:>4,}   "
+              f"correctly larger {counts['under']:>5,}   "
+              f"no file {counts['missing']:>4,}{flag}")
+
+    print(f"\n  TOTAL: matching {grand['same']:,}   "
+          f"understated {grand['over']:,}   "
+          f"correctly larger {grand['under']:,}   "
+          f"no file {grand['missing']:,}")
+    if all_changes:
         print("\n  largest understated:")
-        for name, slug, have, want in sorted(changes, key=lambda c: c[3] - c[2],
-                                             reverse=True)[:10]:
-            print(f"    {name:34s} {have:>7,} -> {want:>7,}  (+{want - have:,})")
+        for name, k, slug, have, want in sorted(all_changes,
+                                                key=lambda c: c[4] - c[3],
+                                                reverse=True)[:10]:
+            print(f"    {name:34s} {k:9s} {have:>7,} -> {want:>7,}  "
+                  f"(+{want - have:,})")
 
     if not args.apply:
-        print(f"\n  would update {len(changes)} nodes (dry run -- pass --apply)")
+        print(f"\n  would update {len(all_changes)} nodes "
+              f"(dry run -- pass --apply)")
         return 0
 
-    by_slug = {c[1]: c[3] for c in changes}   # c = (name, slug, have, want)
     n = 0
+    for TAXONOMY in TAXONOMY_DOCS:
+        if not os.path.exists(TAXONOMY):
+            continue
+        kingdom = doc_kingdom(TAXONOMY)
+        by_slug = {c[2]: c[4] for c in all_changes if c[1] == kingdom}
+        if not by_slug:
+            continue
+        tax = json.load(open(TAXONOMY, encoding="utf-8"))
 
-    def apply_walk(node):
-        if node.get("rank") == "FAMILY" and node.get("appSlug") in by_slug:
-            node["speciesCount"] = by_slug[node["appSlug"]]
-        for c in node.get("children") or []:
-            apply_walk(c)
-    apply_walk(tax)
-    n = len(changes)
-    with open(TAXONOMY, "w", encoding="utf-8") as fh:
-        json.dump(tax, fh, indent=2, ensure_ascii=False)
-        fh.write("\n")
-    print(f"\n  wrote {TAXONOMY}: {n} speciesCount values raised to match the files")
+        def apply_walk(node, _b=by_slug):
+            if node.get("rank") == "FAMILY" and node.get("appSlug") in _b:
+                node["speciesCount"] = _b[node["appSlug"]]
+            for c in node.get("children") or []:
+                apply_walk(c)
+
+        apply_walk(tax)
+        with open(TAXONOMY, "w", encoding="utf-8") as fh:
+            json.dump(tax, fh, indent=2, ensure_ascii=False)
+            fh.write("\n")
+        n += len(by_slug)
+        print(f"  wrote {TAXONOMY}: {len(by_slug):,} speciesCount values raised")
+    print(f"\n  {n:,} nodes raised to match their family files")
     return 0
 
 
