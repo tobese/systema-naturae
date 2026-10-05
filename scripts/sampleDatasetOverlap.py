@@ -19,6 +19,12 @@ Names come from `usage.name.scientificName` in ChecklistBank's search response;
 writing the loop that reads it.
 
     python3 scripts/sampleDatasetOverlap.py 1018 [1010 ...]
+
+Set TAXASERVE=http://127.0.0.1:9882 to ask a running scripts/taxaserve.py
+instead of reading the tree. That is the difference between triaging six
+datasets in a minute and not finishing in half an hour: the fallback below
+walks all 14,085 family files to build its held-set, which is the single
+largest fixed cost in this script and is paid again by every caller.
 """
 import glob
 import json
@@ -66,6 +72,42 @@ def sample_names(key, pages=PAGES, size=PAGE_SIZE):
     return names, total
 
 
+TAXASERVE = os.environ.get("TAXASERVE", "").rstrip("/")
+
+
+def serve_health():
+    if not TAXASERVE:
+        return None
+    try:
+        r = json.loads(urllib.request.urlopen(TAXASERVE + "/health", timeout=10).read())
+        return r
+    except Exception:
+        return None
+
+
+def served_held(names):
+    """Ask taxaserve which of `names` we hold. None if it is not running."""
+    if not TAXASERVE:
+        return None
+    out = {}
+    B = 4000
+    ns = list(names)
+    for i in range(0, len(ns), B):
+        chunk = ns[i:i + B]
+        req = urllib.request.Request(
+            TAXASERVE + "/held", data=json.dumps({"names": chunk}).encode(),
+            headers={"Content-Type": "application/json"})
+        try:
+            r = json.loads(urllib.request.urlopen(req, timeout=120).read())
+        except Exception:
+            return None
+        out.update(r.get("held") or {})
+    # taxaserve echoes the caller's casing back as the key, but the caller
+    # compares lowercased names, so a mixed-case sample silently reads as 0%
+    # held. Normalise once, here, where the client's own contract lives.
+    return {k.lower(): v for k, v in out.items()}
+
+
 def held_names(kingdom="animalia"):
     """every species name on disk for a kingdom, lower-cased, dagger stripped."""
     out = set()
@@ -91,13 +133,20 @@ def main() -> int:
     # full passes over 14,085 files before a single API call was made. With
     # animalia at 1.68M species that dominated the runtime and made triaging
     # three datasets look like a hang.
-    held = {k: held_names(k) for k in ("animalia", "plantae", "fungi",
-                                       "chromista")}
-    all_held = set()
-    for v in held.values():
-        all_held |= v
-    print("  our tree on disk: " + ", ".join(
-        f"{k} {len(v):,}" for k, v in held.items()))
+    h = serve_health()
+    if h:
+        print(f"  taxaserve at {TAXASERVE}: {h['speciesNames']:,} species names, "
+              f"{h['families']:,} families, indexed {h['indexed']:.0f}")
+    else:
+        if TAXASERVE:
+            print(f"  {TAXASERVE} is not answering; reading the tree instead")
+        held = {k: held_names(k) for k in ("animalia", "plantae", "fungi",
+                                           "chromista")}
+        all_held = set()
+        for v in held.values():
+            all_held |= v
+        print("  our tree on disk: " + ", ".join(
+            f"{k} {len(v):,}" for k, v in held.items()))
 
     for key in keys:
         m = meta(key)
@@ -110,11 +159,23 @@ def main() -> int:
             print(f"    sample: no species in {len(names)} names "
                   f"(ranks: {sorted({r for _, r in names})[:6]})")
             continue
+        served = served_held([n for n, _r in sp])
+        if served is not None and not served and len(sp) > 50:
+            raise SystemExit(
+                f"  taxaserve reports 0 of {len(sp)} sampled species held, "
+                f"which cannot be right for this tree. Refusing to write that "
+                f"down as a verdict -- check the key casing in served_held() "
+                f"or run without TAXASERVE.")
         hit = 0
         miss = []
         for n, _r in sp:
             k = n.lower()
-            if k in all_held:
+            if served is not None:
+                if k in served:
+                    hit += 1
+                else:
+                    miss.append(n)
+            elif k in all_held:
                 hit += 1
             else:
                 miss.append(n)

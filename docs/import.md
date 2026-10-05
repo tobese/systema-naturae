@@ -238,6 +238,34 @@ Workers (stdlib only, no npm): `tools/enrich_worker.mjs`, `tools/enrich_worker.p
 (self-serve, GBIF API from the worker's own IP), and `tools/enrich_worker_gbif.mjs`
 (Macie-local). All honour the server-provided `gbifKey`.
 
+### Held-name lookups — `scripts/taxaserve.py`
+
+**`scripts/taxaserve.py`** — an in-memory index of everything we already hold,
+served over HTTP on port 9882. Fourteen scripts answer "do we hold this name?"
+and each was answering it by re-reading 2.5GB of family JSON; this holds the
+answer once (~44s to build, ~1.2GB resident) and serves it.
+
+```bash
+python3 scripts/taxaserve.py --port 9882
+export TAXASERVE=http://127.0.0.1:9882
+python3 scripts/sampleDatasetOverlap.py 1021 1022 1023   # 19.8s, was ~6 min
+```
+
+- `POST /held {"names":[…]}` → where each name is held (kingdom, family, genus).
+  Returns *where*, not just whether, so a caller can see a wrong family rather
+  than trusting a bare boolean.
+- `POST /parse {"names":[…]}` → canonical form, served from the parse index
+  rather than shelling out to GNparser.
+- `GET /pending?scaffoldable=1` → the pending-family store.
+- `POST /reload` after an `--apply`. Every response carries `indexed` and
+  `treeMtime` so a caller can tell whether the index reflects the tree.
+
+`canonicalNames._load()` and `sampleDatasetOverlap.py` use it when `TAXASERVE`
+is set and fall back to reading the files when it is not. Full description,
+including the two silent bugs found while measuring it (genus must not be read
+from `lineage`; leading daggers must be stripped), in
+[`taxaserve.md`](taxaserve.md).
+
 ### Tier 2.5 — GBIF usageKey cache
 
 **`tools/cache_gbif_keys.mjs`** — resolves every plant binomial to a GBIF
