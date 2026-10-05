@@ -8,6 +8,62 @@ here and move each one into the table with a verdict.
 ```
 ```
 
+## Triaged 2026-10-05 (fourth batch) — six offered, none worth taking
+
+Seven paste lines, six datasets. "Scarabs" arrived with no URL, and "Phylla"
+(1023) and "Ryth" (1025) are the abbreviated paste labels rather than the
+dataset's own names — both resolve, so both were triaged on their merits.
+
+| pasted as | dataset | what | vintage | name usages | **already held** | licence | verdict |
+|---|---|---|---|---|---|---|---|
+| SF Ortho | 1021 | Orthoptera Species File | **Oct 2026** | 30,890 | **88.3%** | CC BY | **do not take** |
+| Fleas | 1022 | Parhost World Database of Fleas | 2005-11 | 2,047 | **96.7%** | *other* | **do not take** |
+| Phylla | 1023 | Phyllachorales | Oct 2017 | 1,311 | **95.8%** | **none stated** | **do not take** |
+| Ryth | 1025 | Rhytismatales | Oct 2017 | 769 | **96.7%** | **none stated** | **do not take** |
+| Scales | 1026 | ScaleNet, World Database of Scale Insects | Dec 2004 | 7,074 | **83.7%** | CC BY | **do not take** |
+| Ticks | 1030 | TicksBase | Jun 2005 | 796 | **100%** | CC BY | **do not take** |
+
+**None of the six clears the bar, and three of them are blocked on licensing
+before coverage even matters.** 1022 declares `other`, and 1023 and 1025 declare
+no licence at all, so they are not usable on evidence — a dataset with no stated
+terms is not a dataset with permissive terms. That is the same question as 1012
+in the batch below, and it is a question about permission, not about data.
+
+**Orthoptera is the strongest of a weak field, and it is the current edition of a
+source we already hold.** 88.3% is the lowest overlap figure in the batch, which
+sounds like an opening, and the vintage explains it: issued **2026-10-01**, four
+days ago, and our `orthoptera species file` rows were imported from an earlier
+release. 27,194 species already carry that provenance. The ~3,580 names it would
+add are new *to this year's* circumscription — taxonomic churn in one taxonomic
+group over one release cycle — not names we are missing. The clean way to take
+it would be to re-import OSF as a replacement and diff, not to merge a second
+copy on top, and that is a decision about whether OSF's newer arrangement is
+better than what we hold. Not obviously worth it for a group this well covered.
+
+**TicksBase is 100% and the sample is not small enough to be lucky.** 600 of 600,
+and the whole dataset is 796 name usages. There is nothing there for us.
+
+**ScaleNet's 16.3% is the largest miss in the batch and I am still declining it.**
+That is 2004 data on scale insects, and the names it would add are the ones a
+twenty-year-old circumscription and a current one disagree about. The earlier
+LepIndex verdict in the batch below applies verbatim: a good share of such a
+source's novelty is obsolete names rather than missing taxa, and importing those
+is a taxonomy decision, not a data one. If we decide we want synonym coverage
+rather than only accepted taxa, ScaleNet becomes worth revisiting alongside
+LepIndex — that is a policy question, and this batch is not the place to settle it.
+
+So: **zero taken, six declined, no downloads.** That is the cheapest possible
+outcome for six datasets and it is the point of sampling rather than fetching.
+
+**One tooling bug found while doing this**, worth recording because it made the
+first attempt look like a hang. `scripts/sampleDatasetOverlap.py` called
+`held_names()` five times for animalia alone — three inside an f-string and two
+by assignment — and each call re-reads all 10,601 animalia family files. Five
+full passes over 14,085 files happened before a single API request, with
+animalia at 1.68M species; triaging three datasets did not finish in 30 minutes.
+Now each kingdom is walked once into a single set. Same six datasets in 59
+seconds.
+
 ## Triaged 2026-10-04 (third batch) — six datasets, sampled rather than downloaded
 
 Seven paste lines, six datasets: one entry arrived blank and the next was

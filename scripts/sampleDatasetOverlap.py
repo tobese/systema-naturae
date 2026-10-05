@@ -85,15 +85,19 @@ def held_names(kingdom="animalia"):
 
 def main() -> int:
     keys = [int(a) for a in sys.argv[1:]] or [1018]
-    held = {}
-    print(f"  our tree on disk: animalia {len(held_names('animalia')):,} species, "
-          f"plantae {len(held_names('plantae')):,}, "
-          f"fungi {len(held_names('fungi')):,}, "
-          f"chromista {len(held_names('chromista')):,}")
-    held["animalia"] = held_names("animalia")
-    held["plantae"] = held_names("plantae")
-    held["fungi"] = held_names("fungi")
-    held["chromista"] = held_names("chromista")
+    # Walk each kingdom's files ONCE. This called held_names() five times for
+    # animalia alone -- once per print, once per assignment -- and each call
+    # re-reads all 10,601 animalia family files, so the fixed cost was five
+    # full passes over 14,085 files before a single API call was made. With
+    # animalia at 1.68M species that dominated the runtime and made triaging
+    # three datasets look like a hang.
+    held = {k: held_names(k) for k in ("animalia", "plantae", "fungi",
+                                       "chromista")}
+    all_held = set()
+    for v in held.values():
+        all_held |= v
+    print("  our tree on disk: " + ", ".join(
+        f"{k} {len(v):,}" for k, v in held.items()))
 
     for key in keys:
         m = meta(key)
@@ -110,7 +114,7 @@ def main() -> int:
         miss = []
         for n, _r in sp:
             k = n.lower()
-            if any(k in s for s in held.values()):
+            if k in all_held:
                 hit += 1
             else:
                 miss.append(n)
