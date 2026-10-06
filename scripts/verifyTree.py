@@ -317,6 +317,53 @@ PLACEHOLDER_NAME = re.compile(
     r"^(unknown|incertae\s+sedis|unclassified|unplaced)$", re.I)
 
 
+def check_authority_collisions():
+    """Two of our species must not share an external authority id in one kingdom.
+
+    This is the strongest duplicate signal available: a GBIF usageKey or an ITIS
+    TSN is issued by the authority, so two records carrying the same one are the
+    same taxon by definition rather than by name resemblance. Backfilling
+    sourceIds surfaced 4,248 such groups worth 8,499 copies, which no amount of
+    name or internal-id matching had found.
+
+    Cross-kingdom collisions are excluded, because they are a kingdom-placement
+    disagreement (67 of the original 4,522) rather than a duplicate, and the 7
+    deliberately undecided placements stay put.
+    """
+    seen = collections.defaultdict(list)
+    for kingdom in KINGDOM_DOCS:
+        for slug, f in family_files(kingdom).items():
+            try:
+                d = json.load(open(f, encoding="utf-8"))
+            except Exception:
+                continue
+            st = list(d.get("children") or [])
+            while st:
+                n = st.pop()
+                if n.get("rank") == "SPECIES":
+                    for auth, key in (n.get("sourceIds") or {}).items():
+                        if key:
+                            seen[(kingdom, auth, str(key))].append(
+                                f"{n.get('name')}[{slug}]")
+                st.extend(n.get("children") or [])
+                for sp in n.get("speciesList") or []:
+                    if sp.get("rank") == "SPECIES":
+                        for auth, key in (sp.get("sourceIds") or {}).items():
+                            if key:
+                                seen[(kingdom, auth, str(key))].append(
+                                    f"{sp.get('name')}[{slug}]")
+    dupes = {k: v for k, v in seen.items() if len(set(v)) > 1}
+    if dupes:
+        ex = list(dupes)[:3]
+        fail("no two species share an authority id in one kingdom",
+             f"{len(dupes):,} collisions, e.g. "
+             + "; ".join(f"{k[1]} {k[2]} in {k[0]}" for k in ex)
+             + " -- run scripts/dedupeSpeciesAcrossFamilies.py")
+    else:
+        ok("no two species share an authority id in one kingdom",
+           f"{len(seen):,} identifiers checked")
+
+
 def check_family_names():
     """A FAMILY node's name should be a name.
 
@@ -465,6 +512,7 @@ def main() -> int:
     check_file_counts()
     check_duplicate_species()
     check_species_names()
+    check_authority_collisions()
     check_family_names()
     check_missing_lineage()
     check_lineage()

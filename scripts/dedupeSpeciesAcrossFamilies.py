@@ -17,6 +17,17 @@ or from which file happens to be larger. Where both copies came from an import,
 the one in the family with more species keeps it, which is the same tie-break the
 genus dedupe uses.
 
+Two species are the same taxon when either the tree's own id says so, or an
+external authority does. The second test is new and much stronger: 4,455 pairs
+of our species share a GBIF usageKey within one kingdom, which is GBIF saying
+they are one taxon rather than us inferring it from a name. Every previous
+dedupe this session ran on name or id heuristics.
+
+Cross-kingdom collisions are excluded by construction, because they are a
+kingdom-placement disagreement rather than a duplicate -- 67 of the 4,522
+collisions are of that kind, and the 7 deliberately undecided placements
+(Cincloramphus, Poodytes, Oryzoborus) are left alone.
+
 Idempotent.
 
     python3 scripts/dedupeSpeciesAcrossFamilies.py
@@ -85,10 +96,12 @@ def main() -> int:
                 ("animalia", "plantae", "fungi", "chromista", "protozoa",
                  "archaea"))
     where = collections.defaultdict(list)
+    by_authority = collections.defaultdict(list)
     docs = {}
     for f in [x for k in kingdoms
               for x in glob.glob(f"{KINGDOM_DIR}/{k}/**/src/data/*.json",
                                  recursive=True)]:
+        kingdom = f.split(f"{KINGDOM_DIR}/")[1].split("/")[0]
         try:
             d = json.load(open(f, encoding="utf-8"))
         except Exception:
@@ -97,14 +110,63 @@ def main() -> int:
         for _g, s in walk_species(d):
             if s.get("id"):
                 where[s["id"]].append((f, s))
+                # authority identity, which needs no name judgement at all
+                for auth, key in (s.get("sourceIds") or {}).items():
+                    if key:
+                        by_authority[(kingdom, auth, str(key))].append((f, s))
 
     dupes = {i: v for i, v in where.items() if len(v) > 1}
     print(f"  {'+'.join(kingdoms)}: {len(where):,} species ids, "
           f"{len(dupes):,} held in more than one family")
 
-    # decide per duplicate id
+    # An authority-keyed collision is a duplicate without any name judgement:
+    # GBIF issued that usageKey, so the two records are one taxon. Reported
+    # separately from id collisions because the two sets barely overlap and the
+    # authority one is the trustworthy one.
+    # Same-file collisions count too. The first pass filtered to cross-file only
+    # and left 107 behind, all of one kind: an authority written "&" inline and
+    # "and" in the authorship field, which node_id reduces differently --
+    # SP_CHUNIPHYES_MULTIDENTATA_LENS_AND_VAN_RIEMSDIJK_1908 beside
+    # SP_CHUNIPHYES_MULTIDENTATA_LENS_VAN_RIEMSDIJK_1908 -- so one taxon had two
+    # ids in one genus. GBIF says they are one; we were holding both.
+    auth_groups = {}
+    for (kingdom, auth, key), places in by_authority.items():
+        if len(places) > 1:
+            auth_groups.setdefault(kingdom, []).append((auth, key, places))
+    n_auth = sum(len(v) for v in auth_groups.values())
+    if n_auth:
+        print(f"  authority-proven duplicates: {n_auth:,} "
+              f"(same kingdom, same external id)")
+        for kingdom, groups in list(auth_groups.items())[:3]:
+            auth, key, places = groups[0]
+            print(f"      e.g. {kingdom}/{auth} {key}: "
+                  + ", ".join(sorted({(n.get('name') or '') for _f, n in places})[:2]))
+
     drops = collections.defaultdict(set)      # file -> set(species id)
     keep_report = collections.Counter()
+    for kingdom, groups in auth_groups.items():
+        for auth, key, places in groups:
+            # keep the richest node, break ties on the file that is not the
+            # first alphabetically so the survivor is deterministic
+            def score(fp):
+                n = fp[1]
+                nm = (n.get("name") or "").strip()
+                au = (n.get("authorship") or "").strip()
+                conforming = not (au and len(nm) > len(au) + 2
+                                  and nm.endswith(au))
+                return (conforming,
+                        sum(1 for k in ("description", "commonName", "continents",
+                                        "reference", "yearPublished")
+                            if n.get(k)),
+                        fp[0])
+
+            winner = max(places, key=score)
+            for f, n in places:
+                if (f, n) is winner:
+                    continue
+                drops[f].add(n["id"])
+            keep_report[f"collapsed on {auth} id"] += 1
+
     for sid, places in dupes.items():
         files = {f for f, _ in places}
         imported = [(f, s) for f, s in places if (s.get("sourcedFrom") or "") in IMPORTED]
