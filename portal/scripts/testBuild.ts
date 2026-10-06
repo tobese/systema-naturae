@@ -1,5 +1,5 @@
 import { execSync } from "child_process";
-import { readFileSync, existsSync } from "fs";
+import { readFileSync, existsSync, statSync } from "fs";
 import { resolve } from "path";
 
 const PORTAL = resolve(import.meta.dirname, "..");
@@ -7,6 +7,10 @@ const PORTAL = resolve(import.meta.dirname, "..");
 // data/unified-taxonomy.json while the build wrote data/kingdoms/animalia/ - a
 // 375MB file last written in July, before the per-kingdom restructure - so the
 // node counts could never agree and this reported a mismatch on a good build.
+// V8 refuses to build a string longer than this. Animalia's monolith passed it
+// during the WFO and ITIS imports, so this is now a live constraint, not a
+// theoretical one: 590,515,658 bytes against a 536,870,888-character limit.
+const MAX_STRING_LENGTH = 2 ** 29 - 24;
 const KINGDOM = process.env.SN_KINGDOM || "animalia";
 const UNIFIED = resolve(PORTAL, `data/kingdoms/${KINGDOM}/unified-taxonomy.json`);
 /**
@@ -109,8 +113,29 @@ function main() {
   let tax: TreeNode;
   try {
     tax = JSON.parse(readFileSync(UNIFIED, "utf-8"));
-  } catch {
-    console.error("❌ unified-taxonomy.json is not valid JSON");
+  } catch (err) {
+    // Two very different failures land in this catch, and only one of them is
+    // the message that used to be printed unconditionally.
+    //
+    // Animalia's monolith is now 590 MB. V8's maximum string length is 536,870,888
+    // characters, so `readFileSync(path, "utf-8")` throws
+    // "Cannot create a string longer than 0x1fffffe8 characters" — and the JSON is
+    // perfectly valid. This test reported "not valid JSON" for months of tree
+    // growth without anyone checking whether the file was actually corrupt, which
+    // is the failure mode this script exists to prevent.
+    const msg = err instanceof Error ? err.message : String(err);
+    const bytes = statSync(UNIFIED).size;
+    if (/longer than|Invalid string length|ERR_STRING_TOO_LONG/i.test(msg)) {
+      console.error(
+        `❌ unified-taxonomy.json is ${bytes.toLocaleString()} bytes, past V8's ` +
+          `${MAX_STRING_LENGTH.toLocaleString()}-character string limit, so it cannot be ` +
+          `read into a JS string at all. The file is not corrupt — this test cannot ` +
+          `validate a monolith this size. Assert against the per-order files, or ` +
+          `validate the monolith outside Node.`
+      );
+      process.exit(2);
+    }
+    console.error(`❌ unified-taxonomy.json is not valid JSON: ${msg}`);
     process.exit(1);
   }
 
