@@ -4,7 +4,10 @@ Fix UNKNOWN_CONTINENT: Replace abbreviated continent codes with full names.
 """
 import json
 import os
-import glob
+
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import family_data_files  # noqa: E402
 
 CONTINENT_MAP = {
     "EU": "Europe",
@@ -38,10 +41,7 @@ VALID_CONTINENTS = {
 
 def find_data_files():
     """Find all family data JSON files."""
-    files = glob.glob("**/src/data/*.json", recursive=True)
-    # Exclude generated and system files
-    excluded = ['unified-taxonomy', 'node_modules', 'portal/data', 'shared/data']
-    return [f for f in files if not any(e in f for e in excluded)]
+    return family_data_files()
 
 def fix_continents_in_node(node):
     """Recursively fix continent codes in a node."""

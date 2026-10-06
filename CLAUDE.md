@@ -247,7 +247,23 @@ Always run these three after a significant import.
 
 ## Fixing sanity issues
 
-`portal/data/sanity-queue.json` is currently `[]` — all 4057 historical issues across 66 families have been resolved (full report in `sanity-issues.json`). Fix scripts live in `scripts/`:
+**The 2026-06 scan is closed, but the queue is not empty.** The 4,057 historical
+issues across 66 families were all resolved and the full report is in
+`sanity-issues.json`. Since then the tree grew by ~2.4M species through the COL,
+WFO and ITIS imports, which add nodes without common names or continents, so
+`make check` currently reports **4,405,405 issues across 12,595 families** —
+2,235,877 `MISSING_COMMON_NAME` and 2,163,595 `MISSING_CONTINENTS`, which is
+98% of the total and is the expected state for freshly imported taxa rather than
+a defect.
+
+`sanity-queue.json` on disk is a **stale snapshot** (last written 2026-10-01,
+2,328,798 entries) and does not reflect the current tree. Refresh it with
+`python3 scripts/sanity_scan.py taxonomy --write`. `make check` runs the scan
+report-only and does not rewrite it.
+
+Run `make check` before committing — it runs the `tree.py` selftest,
+`verifyTree`'s nine invariants and the sanity scan in about four minutes, and
+`verifyTree` is a non-zero-exit gate. Fix scripts live in `scripts/`:
 
 | Script | Fixes |
 |---|---|

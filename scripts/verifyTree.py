@@ -24,22 +24,25 @@ exit 0.
 """
 import argparse
 import collections
-import glob
 import json
 import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import (  # noqa: E402
+    KINGDOMS,
+    count_species,
+    iter_family_files,
+    iter_family_nodes,
+    kingdom_input,
+    resolve_family_file,
+)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KINGDOM_DOCS = {
-    "animalia": "portal/data/taxonomy.json",
-    "fungi": "portal/data/taxonomy-fungi.json",
-    "chromista": "portal/data/taxonomy-chromista.json",
-    "plantae": "portal/data/taxonomy-plantae-snippet.json",
-    "protozoa": "portal/data/taxonomy-protozoa.json",
-    "archaea": "portal/data/taxonomy-archaea.json",
-}
-TAXONOMY_DIR = "taxonomy"
+# kingdom -> repo-relative taxonomy input path. Was hardcoded here, which meant
+# a kingdom added to kingdom-config.json was silently invisible to this script.
+KINGDOM_DOCS = {k: kingdom_input(k) for k in KINGDOMS}
 
 failures = []
 notes = []
@@ -54,17 +57,12 @@ def ok(check, detail=""):
     print(f"  ok    {check}{': ' + detail if detail else ''}")
 
 
-def count_species(node):
-    """Recursive. Families nest under SUBFAMILY and buildData compresses
-    minimal species into speciesList at every level, so a direct-children count
-    is wrong -- that was the first bug this script exists to catch."""
-    n = len(node.get("speciesList") or [])
-    for c in node.get("children") or []:
-        n += 1 if c.get("rank") == "SPECIES" else count_species(c)
-    return n
-
-
 def doc_kingdom(path):
+    """Kingdom a taxonomy document belongs to, from its filename.
+
+    `kingdom-config.json` names plantae's input `taxonomy-plantae-snippet.json`,
+    so the suffix rule has to cope with both `-fungi` and `-plantae-snippet`.
+    """
     base = os.path.basename(path)
     if base == "taxonomy.json":
         return "animalia"
@@ -73,13 +71,21 @@ def doc_kingdom(path):
 
 
 def family_files(kingdom):
-    out = {}
-    for f in glob.glob(os.path.join(ROOT, TAXONOMY_DIR, kingdom, "**",
-                                    "src", "data", "*.json"), recursive=True):
-        if "node_modules" in f:
-            continue
-        out[os.path.basename(f)[:-5]] = f
-    return out
+    """Every family document in one kingdom, as a list of `tree.FamilyFile`.
+
+    Was a `slug -> path` dict, which is lossy: slug is the basename, and
+    distinct families share one. Fungi has **87** family directories called
+    `incertae-sedis` (1,220 species in the largest), chromista 12, and animalia
+    has two `personidae` -- a 1-species Grylloblattodea file and a 45-species
+    gastropod one. Keying by slug silently dropped 86 of the 87 fungi families
+    and 11 of the 12 chromista ones from every check in this script.
+
+    It went unnoticed because the dict's winner depended on `glob` order, which
+    is filesystem-dependent. Sorting made the winner deterministic and turned a
+    silent skip into a visible FAIL, which is how this was found: the slug-keyed
+    dict had been reporting on whichever `personidae` the filesystem listed last.
+    """
+    return list(iter_family_files(kingdom))
 
 
 def check_species_counts(max_understated=0):
@@ -96,24 +102,26 @@ def check_species_counts(max_understated=0):
             continue
         kingdom = doc_kingdom(path)
         files = family_files(kingdom)
+        by_path = {fam.path: fam for fam in files}
         tax = json.load(open(p, encoding="utf-8"))
         under = []
-        by_slug = set()
+        resolved_paths = set()
 
-        def walk(n):
-            if n.get("rank") == "FAMILY":
-                slug = n.get("appSlug") or ""
-                by_slug.add(slug)
-                f = files.get(slug)
-                if f:
-                    held = count_species(json.load(open(f, encoding="utf-8")))
-                    have = n.get("speciesCount")
-                    if have is None or have < held:
-                        under.append((n.get("name"), have, held))
-            for c in n.get("children") or []:
-                walk(c)
+        # Join taxonomy node -> data file by RANK PATH, not by appSlug. The slug
+        # is not unique -- 87 fungi families are all called `incertae-sedis` --
+        # so a slug join silently compared the wrong file, and the loser was
+        # whichever one the filesystem happened to list last.
+        for node, ranks in iter_family_nodes(kingdom):
+            slug = node.get("appSlug") or ""
+            resolved = resolve_family_file(**ranks, slug=slug)
+            if resolved is None or resolved not in by_path:
+                continue
+            resolved_paths.add(resolved)
+            held = count_species(json.load(open(resolved, encoding="utf-8")))
+            have = node.get("speciesCount")
+            if have is None or have < held:
+                under.append((node.get("name"), have, held))
 
-        walk(tax)
         total_under += len(under)
         if under:
             by = 0
@@ -124,7 +132,7 @@ def check_species_counts(max_understated=0):
                  f"(worst: {under[0][0]} has {under[0][1]}, file holds "
                  f"{under[0][2]})")
         # files with no taxonomy node are a structural problem, not a count one
-        orphans = set(files) - by_slug
+        orphans = set(by_path) - resolved_paths
         if orphans:
             notes.append(f"{kingdom}: {len(orphans)} family files with no "
                          f"taxonomy node")
@@ -137,7 +145,8 @@ def check_file_counts(max_mismatch=0):
     """A family DATA FILE's own speciesCount must equal what the file holds."""
     bad = 0
     for kingdom in KINGDOM_DOCS:
-        for slug, f in family_files(kingdom).items():
+        for fam in family_files(kingdom):
+            f = fam.path
             d = json.load(open(f, encoding="utf-8"))
             if "speciesCount" not in d:
                 continue
@@ -187,20 +196,20 @@ def check_duplicate_species():
     """
     seen = collections.defaultdict(set)          # id -> {(kingdom, file)}
     for kingdom in KINGDOM_DOCS:
-        for slug, f in family_files(kingdom).items():
+        for fam in family_files(kingdom):
             try:
-                d = json.load(open(f, encoding="utf-8"))
+                d = json.load(open(fam.path, encoding="utf-8"))
             except Exception:
                 continue
             st = list(d.get("children") or [])
             while st:
                 n = st.pop()
                 if n.get("rank") == "SPECIES" and n.get("id"):
-                    seen[n["id"]].add((kingdom, f))
+                    seen[n["id"]].add((kingdom, fam.path))
                 st.extend(n.get("children") or [])
                 for sp in n.get("speciesList") or []:
                     if sp.get("id"):
-                        seen[sp["id"]].add((kingdom, f))
+                        seen[sp["id"]].add((kingdom, fam.path))
     same, cross = {}, {}
     for i, places in seen.items():
         if len(places) < 2:
@@ -240,9 +249,9 @@ def check_species_names(kingdom="animalia"):
     nodes, and a staged node missing its id would be invisible in a count."""
     missing = 0
     total = 0
-    for slug, f in family_files(kingdom).items():
+    for fam in family_files(kingdom):
         try:
-            d = json.load(open(f, encoding="utf-8"))
+            d = json.load(open(fam.path, encoding="utf-8"))
         except Exception:
             continue
         st = list(d.get("children") or [])
@@ -266,9 +275,9 @@ def check_lineage(sample=200):
     plantae carry a superseded genus there (Gyroporella pauciforata under
     "Physoporella") -- so this only reports, and asserts nothing."""
     genus = other = family = 0
-    for slug, f in list(family_files("animalia").items())[:sample]:
+    for fam in family_files("animalia")[:sample]:
         try:
-            d = json.load(open(f, encoding="utf-8"))
+            d = json.load(open(fam.path, encoding="utf-8"))
         except Exception:
             continue
         fam = (d.get("name") or "").lower()
@@ -332,9 +341,9 @@ def check_authority_collisions():
     """
     seen = collections.defaultdict(list)
     for kingdom in KINGDOM_DOCS:
-        for slug, f in family_files(kingdom).items():
+        for fam in family_files(kingdom):
             try:
-                d = json.load(open(f, encoding="utf-8"))
+                d = json.load(open(fam.path, encoding="utf-8"))
             except Exception:
                 continue
             st = list(d.get("children") or [])
@@ -344,7 +353,7 @@ def check_authority_collisions():
                     for auth, key in (n.get("sourceIds") or {}).items():
                         if key:
                             seen[(kingdom, auth, str(key))].append(
-                                f"{n.get('name')}[{slug}]")
+                                f"{n.get('name')}[{fam.slug}]")
                 st.extend(n.get("children") or [])
                 for sp in n.get("speciesList") or []:
                     if sp.get("rank") == "SPECIES":
@@ -423,9 +432,9 @@ def check_missing_lineage(limit=0):
     examples = []
     for kingdom in KINGDOM_DOCS:
         n = 0
-        for _slug, f in family_files(kingdom).items():
+        for fam in family_files(kingdom):
             try:
-                d = json.load(open(f, encoding="utf-8"))
+                d = json.load(open(fam.path, encoding="utf-8"))
             except Exception:
                 continue
             st = list(d.get("children") or [])

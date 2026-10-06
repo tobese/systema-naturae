@@ -25,6 +25,9 @@ import json
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import count_species, find_family_file  # noqa: E402
+
 TAXONOMY = "portal/data/taxonomy.json"
 
 # slug -> order metadata. Written out rather than derived, because `commonName`
@@ -249,30 +252,19 @@ ORDERS = {
 def count_species_in_file(app_slug):
     """Species nodes in a family's data file, or None if absent/unreadable.
 
-    Located by glob rather than by constructing the path: family files live at
-    taxonomy/<kingdom>/<phylum>/<class>/<order>/<family>/src/data/<family>.json,
-    and the rank depth varies (Tardigrada has no class), so a joined path is a
-    guess. The alternative authority, portal/scripts/lib/familyPath.ts, is
-    TypeScript and not importable here.
+    Slug only, because that is all the caller has -- so this is ambiguous for the
+    families whose slug is not unique (87 fungi `incertae-sedis`, two animalia
+    `personidae`) and returns the first match, as the glob it replaces did.
+    Resolving by rank path needs the node's phylum/class/order, which is what
+    `verifyTree` and `resyncFamilyCounts` do; this call site predates that.
     """
-    hits = glob.glob(f"taxonomy/**/{app_slug}/src/data/{app_slug}.json",
-                    recursive=True)
-    hits = [h for h in hits if "node_modules" not in h]
-    if not hits:
+    fam = find_family_file(app_slug)
+    if fam is None:
         return None
     try:
-        doc = json.load(open(hits[0], encoding="utf-8"))
+        return count_species(fam.load())
     except Exception:
         return None
-    n = 0
-    stack = [doc]
-    while stack:
-        x = stack.pop()
-        if x.get("rank") == "SPECIES":
-            n += 1
-        stack.extend(x.get("children") or [])
-        stack.extend(x.get("speciesList") or [])
-    return n
 
 
 def find_node(node, pred):

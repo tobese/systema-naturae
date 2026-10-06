@@ -70,6 +70,9 @@ import sys
 import time
 from collections import defaultdict
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import species_ids  # noqa: E402
+
 
 def better(a: dict, b: dict) -> dict:
     """The copy with the longer description, keeping its sourcedFrom with it."""
@@ -78,16 +81,6 @@ def better(a: dict, b: dict) -> dict:
     return a if len(da) >= len(db) else b
 
 
-def species_ids(genus: dict) -> set:
-    out = set()
-    stack = [genus]
-    while stack:
-        n = stack.pop()
-        if n.get("rank") == "SPECIES" and n.get("id"):
-            out.add(n["id"])
-        stack.extend(n.get("children") or [])
-        stack.extend(n.get("speciesList") or [])
-    return out
 
 
 def merge(base: dict, other: dict) -> tuple[dict, int]:

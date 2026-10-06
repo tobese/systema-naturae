@@ -50,7 +50,6 @@ importers own.
 """
 import argparse
 import collections
-import glob
 import http.server
 import json
 import os
@@ -60,7 +59,8 @@ import threading
 import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-KINGDOMS = ("animalia", "plantae", "fungi", "chromista", "protozoa", "archaea")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import KINGDOMS, iter_family_files  # noqa: E402
 PARSE_INDEX = os.path.join(ROOT, "portal/data/name-parse-index.jsonl")
 PENDING = "/Volumes/MacieExternal/sources/pending/families.jsonl"
 
@@ -126,10 +126,10 @@ class Index:
         per = {}
         for k in KINGDOMS:
             n = 0
-            pat = os.path.join(ROOT, "taxonomy", k, "**", "src", "data", "*.json")
-            for f in glob.glob(pat, recursive=True):
+            for fam in iter_family_files(k):
+                f = fam.path
                 try:
-                    d = json.load(open(f, encoding="utf-8"))
+                    d = fam.load()
                 except Exception:
                     continue
                 fam_raw = (d.get("name") or "").strip()
@@ -257,9 +257,8 @@ class Index:
         this index reflects the tree it is asking about."""
         newest = 0.0
         for k in KINGDOMS:
-            for f in glob.glob(os.path.join(ROOT, "taxonomy", k, "**",
-                                            "src", "data", "*.json"),
-                               recursive=True):
+            for fam in iter_family_files(k):
+                f = fam.path
                 try:
                     m = os.path.getmtime(f)
                 except OSError:

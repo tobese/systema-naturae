@@ -35,51 +35,20 @@ Idempotent.
 """
 import argparse
 import collections
-import glob
 import json
 import os
 import sys
 
-KINGDOM_DIR = "taxonomy"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import (  # noqa: E402
+    KINGDOMS,
+    count_rank,
+    count_species,
+    iter_family_files,
+    iter_species_with_parent,
+)
+
 IMPORTED = {"checklistbank", "catalogue of life"}
-
-
-def walk_species(doc):
-    """(owning genus, species) for every species, at any nesting depth.
-
-    This was a single level deep -- top-level children, then their children --
-    which silently skipped every family whose top-level children are SUBFAMILY or
-    TRIBE nodes rather than GENUS. 143,300 of our 1,680,516 animalia species sit
-    under such a node, so the deduper was blind to them and reported 7 duplicate
-    ids where there were 22. A tool that reports "nothing to do" is the most
-    dangerous kind, because it is indistinguishable from a clean tree.
-    """
-    def rec(node):
-        for g in node.get("children") or []:
-            for s in g.get("children") or []:
-                if s.get("rank") == "SPECIES":
-                    yield g, s
-            for s in g.get("speciesList") or []:
-                yield g, s
-            if g.get("rank") != "SPECIES":
-                yield from rec(g)
-    yield from rec(doc)
-
-
-def count_species(node):
-    """Recursive, because families nest under subfamilies and buildData
-    compresses minimal species into speciesList at every level."""
-    n = len(node.get("speciesList") or [])
-    for c in node.get("children") or []:
-        n += 1 if c.get("rank") == "SPECIES" else count_species(c)
-    return n
-
-
-def genus_count(node):
-    n = 0
-    for c in node.get("children") or []:
-        n += 1 if c.get("rank") == "GENUS" else genus_count(c)
-    return n
 
 
 def main() -> int:
@@ -92,22 +61,18 @@ def main() -> int:
                          "animalia run.")
     args = ap.parse_args()
 
-    kingdoms = ([args.kingdom] if args.kingdom else
-                ("animalia", "plantae", "fungi", "chromista", "protozoa",
-                 "archaea"))
+    kingdoms = [args.kingdom] if args.kingdom else KINGDOMS
     where = collections.defaultdict(list)
     by_authority = collections.defaultdict(list)
     docs = {}
-    for f in [x for k in kingdoms
-              for x in glob.glob(f"{KINGDOM_DIR}/{k}/**/src/data/*.json",
-                                 recursive=True)]:
-        kingdom = f.split(f"{KINGDOM_DIR}/")[1].split("/")[0]
+    for fam in [x for k in kingdoms for x in iter_family_files(k)]:
+        f, kingdom = fam.path, fam.kingdom
         try:
-            d = json.load(open(f, encoding="utf-8"))
+            d = fam.load()
         except Exception:
             continue
         docs[f] = d
-        for _g, s in walk_species(d):
+        for _parent, s in iter_species_with_parent(d):
             if s.get("id"):
                 where[s["id"]].append((f, s))
                 # authority identity, which needs no name judgement at all
@@ -230,7 +195,7 @@ def main() -> int:
         prune(d)
         d["children"] = [g for g in d.get("children") or [] if g.get("children")]
         d["speciesCount"] = count_species(d)
-        d["genusCount"] = genus_count(d)
+        d["genusCount"] = count_rank(d, "GENUS")
         with open(f, "w", encoding="utf-8") as fh:
             json.dump(d, fh, indent=2, ensure_ascii=False)
             fh.write("\n")

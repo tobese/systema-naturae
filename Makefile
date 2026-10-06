@@ -1,6 +1,22 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich \
         name-index name-index-status verify verify-import triage \
-        triage-sample serve fix-lineage fix-counts fix-duplicates
+        triage-sample serve fix-lineage fix-counts fix-duplicates check
+
+# The pre-commit gate. `tree.py` first because it is a second and fails in
+# milliseconds, then the invariants. Order matters: tree.py's selftest is the
+# only thing that can catch a traversal being edited wrongly, and every other
+# check now depends on it.
+#
+# Costs about four minutes, almost all of it JSON parsing, so this is cheap
+# enough to run before every commit rather than only before an import. What it
+# is FOR: today a bad import is caught at the next audit, which is how 980,786
+# wrong lineages survived until 2026-10-05 and how 27 fungi families kept a
+# stale speciesCount of 11 while their files held 1,220.
+check:
+	@python3 scripts/tree.py
+	@python3 scripts/verifyTree.py
+	@python3 scripts/sanity_scan.py taxonomy
+	@echo "all checks passed"
 
 dev:
 	cd portal && npm run dev

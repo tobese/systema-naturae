@@ -5,10 +5,12 @@ Fix EMPTY_GENUS: Remove genus nodes with no children.
 import json
 import glob
 
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from tree import family_data_files  # noqa: E402
+
 def find_data_files():
-    files = glob.glob("**/src/data/*.json", recursive=True)
-    excluded = ['unified-taxonomy', 'node_modules', 'portal/data', 'shared/data']
-    return [f for f in files if not any(e in f for e in excluded)]
+    return family_data_files()
 
 def remove_empty_genera(node):
     """Remove genus nodes with no children."""
@@ -26,9 +28,7 @@ def remove_empty_genera(node):
     return removed
 
 def main():
-    data_files = glob.glob("**/src/data/*.json", recursive=True)
-    excluded = ['unified-taxonomy', 'node_modules', 'portal/data', 'shared/data']
-    data_files = [f for f in data_files if not any(e in f for e in excluded)]
+    data_files = family_data_files()
     
     print(f"Found {len(data_files)} family data files")
     

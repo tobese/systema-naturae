@@ -59,6 +59,9 @@ import urllib.error
 import urllib.request
 from collections import Counter
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import family_data_files, iter_nodes  # noqa: E402
+
 PARSER_URL = "https://api.gbif.org/v1/parser/name"
 UA = "SystemaNaturae/1.0 (taxonomy portal; https://github.com/tobese/systema-naturae)"
 BATCH = 1000
@@ -84,25 +87,30 @@ MARKERS = {
 
 
 def collect(root: str) -> list[tuple[str, str]]:
-    """(name, ourRank) for every named node, deduplicated by (name, rank)."""
+    """(name, ourRank) for every named node, deduplicated by (name, rank).
+
+    Walks `tree.family_data_files()` rather than globbing `src/data`, which is
+    what produced the index's worst-known defect: the bare walk also picked up
+    `felidae/src/data/continents.json`, a GeoJSON continent map, and asked GBIF's
+    parser to parse it. The list is the canonical one, so a rebuild cannot drift
+    from what the other scripts see.
+    """
     seen: dict[tuple[str, str], None] = {}
-    for dirpath, _dirs, files in os.walk(root):
-        if os.path.join("src", "data") not in dirpath.replace(os.sep, "/"):
+    for path in family_data_files():
+        # `--root` defaults to ".", which covers all six kingdoms. Honour a
+        # narrower root rather than silently widening it: the old os.walk did
+        # what it was told, and losing that is how a one-kingdom index quietly
+        # becomes a six-kingdom one.
+        if root not in (".", "") and not os.path.abspath(path).startswith(
+                os.path.abspath(root) + os.sep):
             continue
-        for fn in files:
-            if not fn.endswith(".json"):
-                continue
-            with open(os.path.join(dirpath, fn), encoding="utf-8") as fh:
-                doc = json.load(fh)
-            stack = [doc]
-            while stack:
-                node = stack.pop()
-                stack.extend(node.get("children") or [])
-                stack.extend(node.get("speciesList") or [])
-                name = (node.get("name") or "").strip()
-                rank = node.get("rank") or ""
-                if name and rank:
-                    seen.setdefault((name, rank), None)
+        with open(path, encoding="utf-8") as fh:
+            doc = json.load(fh)
+        for node in iter_nodes(doc):
+            name = (node.get("name") or "").strip()
+            rank = node.get("rank") or ""
+            if name and rank:
+                seen.setdefault((name, rank), None)
     return list(seen)
 
 

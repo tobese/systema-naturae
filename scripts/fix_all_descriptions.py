@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 import json, glob
 
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from tree import family_data_files  # noqa: E402
+
 caprinae_data = {
     "Ammotragus lervia": {"cn": "Barbary Sheep", "cont": ["Africa"]},
     "Budorcas taxicolor": {"cn": "Takin", "cont": ["Asia"]},
@@ -71,8 +75,7 @@ rallidae_missing = {
     "Gallirallus striatus": {"cn": "Slaty-breasted Rail", "cont": ["Asia"]},
 }
 
-files = glob.glob("**/src/data/*.json", recursive=True)
-files = [f for f in files if not any(e in f for e in ["unified-taxonomy", "node_modules", "portal/data", "shared/data"])]
+files = family_data_files()
 
 total_fixed_cn = 0
 total_fixed_cont = 0

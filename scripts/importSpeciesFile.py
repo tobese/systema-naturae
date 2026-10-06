@@ -40,6 +40,7 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from osfLocalities import continent_for  # noqa: E402
+from tree import iter_species  # noqa: E402
 from sources import archive_dir as _ad, work_dir as _wd  # noqa: E402
 
 csv.field_size_limit(10_000_000)
@@ -506,15 +507,6 @@ def drop_redundant_species(root):
     return removed
 
 
-def iter_species(node):
-    """Every SPECIES node in a subtree."""
-    if node.get("rank") == "SPECIES":
-        yield node
-    for c in node.get("children") or []:
-        yield from iter_species(c)
-    for s in node.get("speciesList") or []:
-        if s.get("rank") == "SPECIES":
-            yield s
 
 
 def iter_genera(node):

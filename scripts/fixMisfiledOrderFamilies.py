@@ -67,6 +67,9 @@ import os
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import family_data_files, species_ids  # noqa: E402
+
 # The one file to remove, and the file that legitimately holds its content.
 # The three order-named families are checked and refused at runtime rather than
 # listed here, so that a future run cannot act on a wrong assumption about them.
@@ -76,16 +79,6 @@ CANDIDATES = [
 ]
 
 
-def species_ids(node: dict) -> set:
-    out = set()
-    stack = [node]
-    while stack:
-        n = stack.pop()
-        if n.get("rank") == "SPECIES" and n.get("id"):
-            out.add(n["id"])
-        stack.extend(n.get("children") or [])
-        stack.extend(n.get("speciesList") or [])
-    return out
 
 
 def all_species_ids(root: str = "taxonomy") -> set:

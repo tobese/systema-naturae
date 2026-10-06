@@ -72,21 +72,86 @@ disagreeing, not a missing query engine.
 
 In this order:
 
-1. **`scripts/tree.py` with one `iter_nodes` / `iter_species` / `count_species`
-   / `species_index`**, imported by `verifyTree`, `sanity_scan`, the dedupers,
-   `resyncFamilyCounts`, `parseAllNames`, `taxaserve` and both importers. Delete
-   the other 25. This is the fix for the bug class that has cost the most.
-2. **Run `verifyTree` + `sanity_scan` in CI on every commit.** The tree is the
-   database and the invariants are its integrity layer; today a bad import is
-   caught at the *next* audit, which is how 980,786 wrong lineages survived until
-   2026-10-05.
+1. ~~**`scripts/tree.py`** with one `iter_nodes` / `iter_species` /
+   `count_species` / `species_index`~~ — **Done 2026-10-06, and it found two live
+   bugs on its first run.** `verifyTree`, `resyncFamilyCounts`,
+   `dedupeSpeciesAcrossFamilies`, `sanity_scan`, `parseAllNames`, `taxaserve`,
+   `importSpeciesFile`, `mergeCaseVariantGenera`, `addSpeciesFileOrders`,
+   `fix_fixture_nodes`, `fixMisfiledOrderFamilies` and the six `fix_*.py`
+   sweepers all import it now.
+   Left behind deliberately: the nine applied one-shot `enrich_*.py` /
+   `expand_bird_families.py` passes keep their own `count_species`. Each ignores
+   `speciesList`, which is harmless on family files — **0 of 14,084 contain one** —
+   so migrating them would be churn on scripts whose work is already applied.
+   Details in `scripts/tree.py` and below.
+2. ~~**Run `verifyTree` + `sanity_scan` in CI on every commit.**~~ — **Done
+   2026-10-06, with one caveat.** `make check` runs all three gates
+   (`tree.py` selftest → `verifyTree` → `sanity_scan`) in **3m53s**, and
+   `.github/workflows/verify.yml` runs the same three on push and pull_request.
+   The caveat: this repo's Actions minutes are billing-locked — the same lock
+   that gated `deploy.yml`'s push trigger — so **`make check` is the gate that
+   actually holds** and the workflow is ready but may not run until billing
+   clears. `sanity_scan` is wired in report-only: there are ~4.4M open issues by
+   design, so an exit-code gate would be permanently red.
 3. **Then, if disk allows, a derived gitignored `species.parquet`** built by that
    same `tree.py` and queried with DuckDB — immutable flat columnar, rebuilt
    from source, never the source of truth. Makes ad-hoc questions cheap
    ("which families gained species this week") without changing how anything is
    stored. Blocked on disk, not design.
-4. **Free disk first.** 13 GB free on a 466 GB volume at 98% is the constraint
-   that will bite next whatever we decide about databases. The repo is 14 GB
+4. ~~**Free disk first.** 13 GB free on a 466 GB volume at 98% is the constraint
+   that will bite next~~ — **no longer urgent; the numbers moved.** As of
+   2026-10-06 the volume reports **34 GB free at 93%**, so whatever prompted the
+   original warning has since been cleared. Worth revisiting before step 3, but
+   it is no longer the thing standing in the way. The 14 GB is almost entirely
+   gitignored build output anyway: `portal/public/data` 2.0 GB, `portal/dist`
+   1.7 GB, `portal/data` 5.6 GB, `.git` 1.2 GB.
+
+#### What writing the module turned up
+
+The plan's premise held, and harder than the plan claimed — the disagreement was
+not in the traversal but in the **join**.
+
+**`appSlug` is not unique, and every count keyed on it was wrong.** Fungi has
+**87** family directories called `incertae-sedis` (the largest holds 1,220
+species) and chromista 12; animalia has two `personidae`, a 1-species
+Grylloblattodea file and a 45-species gastropod one. `verifyTree` and
+`resyncFamilyCounts` both built `{slug: path}` dicts, so each kept one file per
+kingdom and compared every colliding node against that one file's count.
+
+That produced the cleanest possible demonstration of the thesis, on one dataset,
+at one moment:
+
+| | said |
+|---|---|
+| `resyncFamilyCounts.py` | fungi understated **0** |
+| `verifyTree.py` | fungi understated **27 families, 3,307 species** |
+
+All 27 were `Incertae sedis` nodes carrying a stale scaffolding placeholder of
+`speciesCount: 11` while their files held up to 1,220 — invisible because 86 of
+the 87 fungi files were being skipped. Fixed by `resyncFamilyCounts --apply`
+(`portal/data/taxonomy-fungi.json`, 27 values raised). Families are now resolved
+by **rank path**, via `tree.resolve_family_file`, a Python mirror of the build's
+`familyPath.ts`, and that join is a verified bijection: every FAMILY node in
+animalia/fungi/chromista/protozoa/archaea resolves to exactly one distinct file
+and every file is reached.
+
+Two smaller ones, both from the glob rather than the walk:
+
+- **`taxonomy/animalia/.../felidae/src/data/continents.json`** is a 169 KB
+  GeoJSON continent map, not a family, and every `**/src/data/*.json` glob has
+  been opening it as one. A family document is now required to be named after its
+  own directory, which drops it and keeps all 14,084 real families.
+- The six `fix_*.py` sweepers filtered their glob with a four-entry denylist
+  (`unified-taxonomy`, `node_modules`, `portal/data`, `shared/data`) — four
+  guesses about where the families are *not*. `portal/bivalvia/.../bivalvia_margaritidae.json`,
+  a pre-restructure leftover, was being opened and rewritten.
+
+**The `speciesList` claim in the original plan was wrong, and measuring said so.**
+`speciesList` is a build-output shape only: **0 of 14,085 source family files**
+contain one. In the built animalia order files, though, **1,516,480 of 1,630,700
+species (93%)** sit inside one. So a walk that skips `speciesList` is correct on
+a family file and wrong by 93% on a built order file — which is why `tree.py`
+descends both and is deliberately uniform rather than source-aware.
    (.git 1.2 GB) and `portal/public/data` is 2.0 GB of built output.
 
 ## Book: no phylum level

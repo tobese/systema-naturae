@@ -55,6 +55,11 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from textLanguage import foreign_language  # noqa: E402
+from tree import (  # noqa: E402
+    ROOT,
+    TAXONOMY_DIR,
+    family_data_files,
+)
 
 # ── vocabulary, matching the fix scripts that resolved each one ───────────────
 
@@ -182,13 +187,19 @@ def load_parse_verdicts(path: str) -> dict:
 
 
 def family_files(root: str) -> list[str]:
-    out = []
-    for dirpath, _d, names in os.walk(root):
-        if os.path.join("src", "data") not in dirpath.replace(os.sep, "/"):
-            continue
-        out += [os.path.join(dirpath, n) for n in names if n.endswith(".json")]
-    out.sort()
-    return out
+    """Family documents under `root`.
+
+    Was an `os.walk` that took every `.json` under any `src/data` directory, which
+    is also how `felidae/src/data/continents.json` -- a 169 KB GeoJSON continent
+    map, not a family -- got scanned as one. The list comes from `tree` now. The
+    `root` argument still filters, so pointing the scan at a single kingdom
+    works.
+    """
+    paths = family_data_files()
+    prefix = os.path.abspath(root)
+    if prefix == os.path.join(ROOT, TAXONOMY_DIR):
+        return paths
+    return [f for f in paths if os.path.abspath(f).startswith(prefix + os.sep)]
 
 
 def main() -> int:

@@ -45,6 +45,9 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tree import count_species, iter_nodes  # noqa: E402
+
 FIXTURE_ID = re.compile(r"^GENUS\d+SPECIES[A-Z]$|^GENUS_GENUS\d+$")
 FIXTURE_NAME = re.compile(r"^Genus\s?\d+(\s+Species\s?[A-Z])?$", re.I)
 RANK = ("GENUS", "SPECIES")
@@ -80,16 +83,6 @@ def prune(node: dict, path: list[str], found: list) -> bool:
     return False
 
 
-def count_species(node) -> int:
-    n = 0
-    st = [node]
-    while st:
-        x = st.pop()
-        if x.get("rank") == "SPECIES":
-            n += 1
-        st.extend(x.get("children") or [])
-        st.extend(x.get("speciesList") or [])
-    return n
 
 
 def main() -> int:
