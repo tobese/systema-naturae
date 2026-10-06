@@ -58,6 +58,12 @@ portal/data/order-manifest-plantae.json
 portal/data/coverage-summary-plantae.json
 portal/data/orders-plantae/
 portal/data/kingdoms/
+
+# Derived flat projection of the tree, for ad-hoc DuckDB queries. Rebuilt from
+# the family files by scripts/buildSpeciesParquet.py; never read by the app.
+# 47 MB for 2.35M species, ~82s to build.
+portal/data/species.parquet
+portal/data/species.parquet.jsonl
 portal/public/data/kingdoms/
 portal/public/data/book/
 portal/data/non-english-descriptions.jsonl

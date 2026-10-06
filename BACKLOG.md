@@ -93,11 +93,55 @@ In this order:
    actually holds** and the workflow is ready but may not run until billing
    clears. `sanity_scan` is wired in report-only: there are ~4.4M open issues by
    design, so an exit-code gate would be permanently red.
-3. **Then, if disk allows, a derived gitignored `species.parquet`** built by that
-   same `tree.py` and queried with DuckDB — immutable flat columnar, rebuilt
-   from source, never the source of truth. Makes ad-hoc questions cheap
-   ("which families gained species this week") without changing how anything is
-   stored. Blocked on disk, not design.
+3. ~~**Then, if disk allows, a derived gitignored `species.parquet`**~~ —
+   **Done 2026-10-06; the disk had already freed itself.** 2,351,752 species in
+   47 MB, built in **82s**, one row per species with its full rank path
+   denormalised. `make species-parquet`. Never the source of truth.
+
+   The original DuckDB measurement was a *view*, re-parsing 0.97 GB of JSON per
+   query — ~50s a time, which is why the answer was "no". Flattening once into
+   columnar is the same engine in the cheaper shape, and the distinction matters:
+   the queries above now run in milliseconds with no JSON in them at all.
+
+   The rank path is read from the taxonomy document rather than parsed out of the
+   file path, because the path cannot carry it: Tardigrada is
+   `taxonomy/animalia/tardigrada/tardigrada/…`, where the one segment between
+   kingdom and family is **both** the phylum and the family, so any positional
+   reading invents an order that the tree does not have.
+
+   **It immediately paid for itself by finding a separate problem.** Per-kingdom
+   row counts agree exactly with on-disk truth in all six kingdoms — but the
+   built skeletons for the five non-animalia kingdoms do not, because they are
+   stale output from 2026-10-04, before the WFO and ITIS imports:
+
+   | kingdom | on disk | skeleton (mtime) |
+   |---|---|---|
+   | animalia | 1,632,195 | 1,632,195 (10-05) |
+   | plantae | 554,038 | 483,468 (10-04) |
+   | fungi | **76,979** | **169,363 (10-04)** |
+   | chromista | 84,008 | 97,256 (10-04) |
+   | protozoa | 3,164 | 3,981 (10-04) |
+   | archaea | 1,368 | 2,214 (10-04) |
+
+   fungi is the sharp one: the skeleton holds **92,384 more species than the
+   files do**, confirmed by a second count written from scratch. They are
+   gitignored build artifacts so nothing is committed wrong, and the deployed
+   portal is animalia-only so production is unaffected — but a local
+   `npm run dev` that switches kingdoms is reading pre-import data.
+
+   And the coverage question that was previously unanswerable without a
+   four-minute parse:
+
+   | kingdom | species | with description | with continents |
+   |---|---|---|---|
+   | animalia | 1,632,195 | 114,303 (7.0%) | 113,391 (6.9%) |
+   | plantae | 554,038 | 248,197 (44.8%) | 58,652 (10.6%) |
+   | chromista | 84,008 | 114 (0.1%) | 3,054 (3.6%) |
+   | fungi | 76,979 | 2,030 (2.6%) | 12,285 (16.0%) |
+   | archaea | 1,368 | 14 (1.0%) | **0** |
+
+   **Foraminifera is 48,803 species at 0.0% description coverage** — the single
+   largest hole in the tree, and invisible until now.
 4. ~~**Free disk first.** 13 GB free on a 466 GB volume at 98% is the constraint
    that will bite next~~ — **no longer urgent; the numbers moved.** As of
    2026-10-06 the volume reports **34 GB free at 93%**, so whatever prompted the

@@ -1,4 +1,4 @@
-.PHONY: dev dev-daemon build data typecheck lint docker enrich \
+.PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
         name-index name-index-status verify verify-import triage \
         triage-sample serve fix-lineage fix-counts fix-duplicates check
 
@@ -17,6 +17,17 @@ check:
 	@python3 scripts/verifyTree.py
 	@python3 scripts/sanity_scan.py taxonomy
 	@echo "all checks passed"
+
+# Flat projection of the tree for ad-hoc questions: "which families gained
+# species in the last import", "how many species per kingdom have a stored
+# description". Derived and gitignored, rebuilt in ~82s, never the source of
+# truth. The only thing here that needs duckdb, which is not a project
+# dependency -- PARQUET_PY overrides the interpreter if it lives in a venv.
+#
+#   make species-parquet PARQUET_PY=.venv-parquet/bin/python
+PARQUET_PY ?= python3
+species-parquet:
+	@$(PARQUET_PY) scripts/buildSpeciesParquet.py $(ARGS)
 
 dev:
 	cd portal && npm run dev
