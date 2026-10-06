@@ -52,6 +52,43 @@
   attribution would surface if any BY-SA icon is used, and whether species
   silhouettes are the bigger prize than group icons.
 
+### Plan: one traversal, then a query layer
+
+Asked whether an object/file database would suit the tree, and the answer after
+measuring is **no — but the thing underneath the question is real.** DuckDB
+installs in seconds and reads the nested JSON fine via `json_tree()`, but a view
+over 14,085 files costs ~50s, a flatten attempt ~3 min, and pivoting keys into
+nodes OOM'd at 12.7 GiB. `verifyTree` does nine invariants in **2m21s**. The
+engine is not the bottleneck; JSON parsing is, and every query re-parses 0.97 GB.
+
+A real database is the wrong shape anyway: 1 GB, shallow, single-parent, already
+versioned by git with per-family diffs, and a write pattern of "rewrite one
+family file" that Postgres/Iceberg/Dolt would make slower.
+
+What is actually costing us is **27 scripts globbing the family files and 26
+hand-written traversals** (`iter_species`, `count_species`, `walk_species`,
+`species_ids`, `collect`, ...). Every serious defect in Oct 2026 was two of them
+disagreeing, not a missing query engine.
+
+In this order:
+
+1. **`scripts/tree.py` with one `iter_nodes` / `iter_species` / `count_species`
+   / `species_index`**, imported by `verifyTree`, `sanity_scan`, the dedupers,
+   `resyncFamilyCounts`, `parseAllNames`, `taxaserve` and both importers. Delete
+   the other 25. This is the fix for the bug class that has cost the most.
+2. **Run `verifyTree` + `sanity_scan` in CI on every commit.** The tree is the
+   database and the invariants are its integrity layer; today a bad import is
+   caught at the *next* audit, which is how 980,786 wrong lineages survived until
+   2026-10-05.
+3. **Then, if disk allows, a derived gitignored `species.parquet`** built by that
+   same `tree.py` and queried with DuckDB — immutable flat columnar, rebuilt
+   from source, never the source of truth. Makes ad-hoc questions cheap
+   ("which families gained species this week") without changing how anything is
+   stored. Blocked on disk, not design.
+4. **Free disk first.** 13 GB free on a 466 GB volume at 98% is the constraint
+   that will bite next whatever we decide about databases. The repo is 14 GB
+   (.git 1.2 GB) and `portal/public/data` is 2.0 GB of built output.
+
 ## Book: no phylum level
 
 The book goes kingdom selector → Part (CLASS) → Chapter (ORDER) → Family → Genus →
