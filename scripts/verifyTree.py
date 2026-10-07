@@ -38,6 +38,9 @@ from tree import (  # noqa: E402
     kingdom_input,
     resolve_family_file,
 )
+# The one definition of "these two names are not the same taxon", shared with
+# the dedupe so the gate and the script that satisfies it cannot disagree.
+from dedupeSpeciesAcrossFamilies import _same_taxon  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # kingdom -> repo-relative taxonomy input path. Was hardcoded here, which meant
@@ -338,6 +341,14 @@ def check_authority_collisions():
     Cross-kingdom collisions are excluded, because they are a kingdom-placement
     disagreement (67 of the original 4,522) rather than a duplicate, and the 7
     deliberately undecided placements stay put.
+
+    A collision is also excluded when the two records are not the same taxon,
+    which an authority id alone does not guarantee. GBIF files a subspecies, a
+    variety and a hybrid under its parent's usageKey -- key 4553865 is `Buthus
+    occitanus` and our `Buthus occitanus israelis` carries the same number -- so
+    "same usageKey" is "same taxon" only when the names agree too. Checking the
+    key alone reported 24 collisions that are 24 correctly-kept subspecies, and
+    pointing at the dedupe, which is careful enough not to touch them.
     """
     seen = collections.defaultdict(list)
     for kingdom in KINGDOM_DOCS:
@@ -353,15 +364,27 @@ def check_authority_collisions():
                     for auth, key in (n.get("sourceIds") or {}).items():
                         if key:
                             seen[(kingdom, auth, str(key))].append(
-                                f"{n.get('name')}[{fam.slug}]")
+                                (n.get("name"), fam.slug))
                 st.extend(n.get("children") or [])
                 for sp in n.get("speciesList") or []:
                     if sp.get("rank") == "SPECIES":
                         for auth, key in (sp.get("sourceIds") or {}).items():
                             if key:
                                 seen[(kingdom, auth, str(key))].append(
-                                    f"{sp.get('name')}[{slug}]")
-    dupes = {k: v for k, v in seen.items() if len(set(v)) > 1}
+                                    (sp.get("name"), fam.slug))
+    dupes = {}
+    for k, places in seen.items():
+        distinct = {f"{nm}[{slug}]" for nm, slug in places}
+        if len(distinct) <= 1:
+            continue
+        # Same usageKey does not mean same taxon. `_same_taxon` is the one
+        # definition of that question, shared with the dedupe, so this gate
+        # cannot fail on something the dedupe is right to keep -- which it did
+        # on 24 subspecies before, pointing at a script that deliberately spares
+        # them.
+        nms = {nm for nm, _s in places}
+        if all(_same_taxon(a, b) for a in nms for b in nms):
+            dupes[k] = sorted(distinct)
     if dupes:
         ex = list(dupes)[:3]
         fail("no two species share an authority id in one kingdom",

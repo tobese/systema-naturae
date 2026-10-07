@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 2,735,565 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 2,892,087 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,11 +8,11 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 2,726,868 | 99.68% |
-| `INFORMAL` | 4,107 | 0.15% |
+| `SCIENTIFIC` | 2,883,291 | 99.70% |
+| `INFORMAL` | 4,111 | 0.14% |
 | `HYBRID` | 2,480 | 0.09% |
-| `OTU` | 1,517 | 0.06% |
-| `NO_NAME` | 400 | 0.01% |
+| `OTU` | 1,517 | 0.05% |
+| `NO_NAME` | 495 | 0.02% |
 | `CULTIVAR` | 89 | 0.00% |
 | `PLACEHOLDER` | 57 | 0.00% |
 | `BLACKLISTED` | 25 | 0.00% |
@@ -27,8 +27,8 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 2,501,415 | 178 | 4,497 |
-| GENUS | 0 | 268 | 205,840 |
+| SPECIES | 2,656,964 | 183 | 5,195 |
+| GENUS | 0 | 268 | 206,110 |
 | SUBSPECIES | 372 | 6,914 | 1 |
 | FAMILY | 2,468 | 89 | 11,423 |
 
@@ -36,12 +36,21 @@ and is often simply absent -- which is not a disagreement.
 
 **`INFORMAL`**
 
-- `Chlorella spec`
-- `Raphidonema spec`
-- `Droopiella spec`
-- `Xanthidium spec`
-- `Pseudococcomyxa spec`
+- `Ulothrix spec`
+- `Ulva spec`
+- `Ulvella spec`
+- `Desmodesmus spec`
 - `Planktococcomyxa spec`
+- `Ankistrodesmus spec`
+
+**`NO_NAME`**
+
+- `×`
+- `× ×Cyclobotrya`
+- `× ×Alpingera`
+- `× ×Cattlianthe`
+- `× ×Neotinarhiza`
+- `× ×Neotinacamptis`
 
 **`HYBRID`**
 
@@ -50,16 +59,7 @@ and is often simply absent -- which is not a disagreement.
 - `Colchicum alpinum x Colchicum autumnale`
 - `Gagea lutea x Gagea pratensis`
 - `Gagea lutea × pratensis`
-- `Gymnadenia x Pseudorchis`
-
-**`NO_NAME`**
-
-- `×`
-- `× ×Alpingera`
-- `× ×Benzoscaphe`
-- `× ×Dactylodenia`
-- `× ×Zygopabstia`
-- `× ×Vandaenopsis`
+- `Anacamptis x Dactylorhiza`
 
 **`BLACKLISTED`**
 
@@ -73,11 +73,11 @@ and is often simply absent -- which is not a disagreement.
 **`CULTIVAR`**
 
 - `Echinopsis ×wilkensii  hort.`
-- `Amphilophus cv.`
-- `Nannacara cv.`
-- `Andinoacara cv.`
-- `Astronotus cv.`
-- `Apistogramma cv.`
+- `Perca cv.`
+- `Etheostoma cv.`
+- `Paretroplus cv.`
+- `Paratilapia cv.`
+- `Cichla cv.`
 
 **`VIRUS`**
 

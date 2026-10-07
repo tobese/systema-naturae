@@ -493,6 +493,42 @@ def _selftest() -> int:
     else:
         raise SystemExit("assert_count_matches did not fire")
 
+    # The shape a family file actually has: species in `children`, no
+    # `speciesList` anywhere. A traversal or a pruner that reasons from
+    # `speciesList` looks correct against a built order file and destroys a
+    # family file -- which is what dedupeSpeciesAcrossFamilies did to 689 of
+    # them, emptying every one (351,882 species) while its commit message
+    # reported 8,745 removals.
+    source_shaped = {
+        "rank": "FAMILY",
+        "children": [{"rank": "GENUS", "children": [
+            {"rank": "SPECIES", "id": "a"},
+            {"rank": "SPECIES", "id": "b"},
+        ]}],
+    }
+    # A GBIF usageKey is not always one taxon: subspecies, varieties and
+    # hybrids are filed under their parent's key, so `Buthus occitanus
+    # israelis` shares key 4553865 with `Buthus occitanus`. Collapsing on the key
+    # alone deleted 194 subspecies and hybrids in one pass. These four
+    # comparisons are what tell a true duplicate from a namesake relative, and
+    # they failed in both directions before they were pinned here: truncating
+    # both sides to two words made the subspecies equal its parent, and testing
+    # for the hybrid marker after truncation never saw the `x`.
+    from dedupeSpeciesAcrossFamilies import _same_taxon
+    assert _same_taxon("Buthus occitanus", "Buthus occitanus")
+    assert not _same_taxon("Buthus occitanus israelis", "Buthus occitanus")
+    assert _same_taxon("Aethaloperca rogaa Forsskål, 1775", "Aethaloperca rogaa")
+    assert _same_taxon("Caprodon schlegelii Günther, 1859", "Caprodon schlegelii")
+    assert _same_taxon("Eisenia patriciae Szederjesi, Pavlíček, "
+                       "Coşkun & Csuzdi, 2014", "Eisenia patriciae")
+    assert not _same_taxon("Carassius auratus x Cyprinus carpio",
+                           "Carassius auratus")
+    assert _same_taxon("Homo sapiens", "Homo sapiens sapiens")
+
+    assert "speciesList" not in json.dumps(source_shaped)
+    assert count_species(source_shaped) == 2
+    assert [n["id"] for n in iter_species(source_shaped)] == ["a", "b"]
+
     print("tree.py selftest ok")
     return 0
 
