@@ -2,10 +2,33 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync, rmSync, o
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { resolveFamilyFile, familySourceStamp } from "./lib/familyPath.js";
+import { createHash } from "crypto";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../../");
 const portalRoot = resolve(__dirname, "..");
+
+// Fixed namespace UUID for deterministic UUID v5 generation
+// This UUID is arbitrary but fixed; changing it changes ALL species UUIDs.
+const UUID_NAMESPACE = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
+
+function generateUUID(name: string): string {
+  // UUID v5 = SHA-1(namespace + name) with variant/version bits set
+  const hash = createHash("sha1").update(UUID_NAMESPACE + name).digest("hex");
+  const hex = hash.slice(0, 32);
+  return [
+    hex.slice(0, 8),
+    hex.slice(8, 12),
+    "5" + hex.slice(13, 15),  // version 5
+    (parseInt(hex.slice(15, 16), 16) & 0x3 | 0x8).toString(16) + hex.slice(16, 18), // variant
+    hex.slice(18, 32),
+  ].join("-");
+}
+
+function buildUUIDKey(ctx: { kingdom: string; phylum?: string; cls?: string; ord?: string; family: string; genus: string; species: string; authorship?: string }): string {
+  // Deterministic key from full taxonomy path
+  return `${ctx.kingdom}|${ctx.phylum || ""}|${ctx.cls || ""}|${ctx.ord || ""}|${ctx.family}|${ctx.genus}|${ctx.species}|${ctx.authorship || ""}`;
+}
 
 // ── Load kingdom configuration ──
 interface KingdomConfig {
@@ -57,6 +80,7 @@ interface TaxonNode {
   speciesCount?: number;
   rankCounts?: Record<string, number>;
   extinct?: boolean;
+  uuid?: string;
   _familyCount?: number;
   _speciesCount?: number;
   _dataFile?: string;
@@ -93,6 +117,58 @@ function graftFamily(portalNode: TaxonNode, familyData: TaxonNode, slug: string,
 
 function stampClassOrder(node: TaxonNode, cls?: string, ord?: string): TaxonNode {
   return { ...node, className: cls, orderName: ord };
+}
+
+function collectUuidsFromCompressed(node: TaxonNode, genusName?: string, uuids: Map<string, string> = new Map()): Map<string, string> {
+  const currentGenus = node.rank === "GENUS" ? node.name : genusName;
+  if (node.rank === "SPECIES" && node.uuid && currentGenus && node.familySlug) {
+    const key = `${node.familySlug}|${currentGenus}|${node.name}`;
+    uuids.set(key, node.uuid);
+  }
+  for (const child of node.children ?? []) {
+    collectUuidsFromCompressed(child, currentGenus, uuids);
+  }
+  for (const sp of node.speciesList ?? []) {
+    if (sp.uuid && currentGenus && sp.familySlug) {
+      const key = `${sp.familySlug}|${currentGenus}|${sp.name}`;
+      uuids.set(key, sp.uuid);
+    }
+  }
+  return uuids;
+}
+
+function applyUuidsToFamily(node: TaxonNode, uuids: Map<string, string>, familySlug: string, genusName?: string): TaxonNode {
+  const currentGenus = node.rank === "GENUS" ? node.name : genusName;
+  if (node.rank === "SPECIES" && currentGenus) {
+    const key = `${familySlug}|${currentGenus}|${node.name}`;
+    const uuid = uuids.get(key);
+    if (uuid && !node.uuid) {
+      node.uuid = uuid;
+    }
+  }
+  const newChildren = node.children?.map(c => applyUuidsToFamily(c, uuids, familySlug, currentGenus));
+  return { ...node, children: newChildren };
+}
+
+function writeFamilyFileWithUuids(
+  dataPath: string,
+  familyData: TaxonNode,
+  compressed: TaxonNode,
+  kingdom: string,
+  phylum: string | undefined,
+  cls: string | undefined,
+  ord: string | undefined,
+  slug: string,
+): void {
+  try {
+    const uuids = collectUuidsFromCompressed(compressed);
+    if (uuids.size > 0) {
+      const updatedFamilyData = applyUuidsToFamily(familyData, uuids, slug);
+      writeFileSync(dataPath, JSON.stringify(updatedFamilyData, null, 2) + "\n");
+    }
+  } catch (e) {
+    console.warn(`  Warning: could not write UUIDs to ${dataPath}: ${(e as Error).message}`);
+  }
 }
 
 function processTree(
@@ -150,7 +226,11 @@ function processTree(
           familyCacheHits++;
           // Only `children` came from the family data file; `node` (this run's
           // live taxonomy.json fields — speciesCount, commonName, etc.) must stay fresh.
-          return { ...node, familySlug: slug, className: next.cls, orderName: next.ord, children: cached.children };
+          const cachedWithUuid = compressTreeNodes({ ...node, familySlug: slug, className: next.cls, orderName: next.ord, children: cached.children });
+          // Write UUIDs back to the source family file from cache
+          const familyData = JSON.parse(readFileSync(dataPath, "utf-8")) as TaxonNode;
+          writeFamilyFileWithUuids(dataPath, familyData, cachedWithUuid, effectiveKingdom, next.phylum, next.cls, next.ord, slug);
+          return cachedWithUuid;
         }
       } catch {
         // Corrupt/unreadable cache entry — treat as a miss and regenerate below.
@@ -175,6 +255,8 @@ function processTree(
         };
         writeFileSync(cachePath, JSON.stringify(entry));
       }
+      // Write UUIDs back to the source family file
+      writeFamilyFileWithUuids(dataPath, familyData, compressed, effectiveKingdom, next.phylum, next.cls, next.ord, slug);
       return compressed;
     } catch (e) {
       console.warn(`  Warning: could not load ${dataPath}: ${(e as Error).message}`);
@@ -188,8 +270,8 @@ function processTree(
   return stamped;
 }
 
-function compressTreeNodes(node: TaxonNode): TaxonNode {
-  const processedChildren = node.children?.map(compressTreeNodes);
+function compressTreeNodes(node: TaxonNode, genusName?: string): TaxonNode {
+  const processedChildren = node.children?.map(c => compressTreeNodes(c, node.rank === "GENUS" ? node.name : genusName));
 
   if (node.rank === "GENUS") {
     const physicalChildren: TaxonNode[] = [];
@@ -205,8 +287,34 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
           if (isMinimal && !hasChildren) {
             const leanChild = { ...child };
             delete leanChild.children;
+            // Generate UUID for compressed species
+            if (!leanChild.uuid && leanChild.familySlug && genusName) {
+              const key = buildUUIDKey({
+                kingdom: effectiveKingdom,
+                cls: leanChild.className,
+                ord: leanChild.orderName,
+                family: leanChild.familySlug,
+                genus: genusName,
+                species: leanChild.name,
+                authorship: leanChild.lineage,
+              });
+              leanChild.uuid = generateUUID(key);
+            }
             speciesList.push(leanChild);
           } else {
+            // Generate UUID for non-minimal species
+            if (!child.uuid && child.familySlug && genusName) {
+              const key = buildUUIDKey({
+                kingdom: effectiveKingdom,
+                cls: child.className,
+                ord: child.orderName,
+                family: child.familySlug,
+                genus: genusName,
+                species: child.name,
+                authorship: child.lineage,
+              });
+              child.uuid = generateUUID(key);
+            }
             physicalChildren.push(child);
           }
         } else {
@@ -227,6 +335,22 @@ function compressTreeNodes(node: TaxonNode): TaxonNode {
     }
 
     return updatedNode;
+  }
+
+  // Generate UUID for species not under a genus (direct under family/subfamily/tribe)
+  if (node.rank === "SPECIES" && genusName && node.familySlug) {
+    if (!node.uuid) {
+      const key = buildUUIDKey({
+        kingdom: effectiveKingdom,
+        cls: node.className,
+        ord: node.orderName,
+        family: node.familySlug,
+        genus: genusName,
+        species: node.name,
+        authorship: node.lineage,
+      });
+      node.uuid = generateUUID(key);
+    }
   }
 
   const updatedNode = { ...node };

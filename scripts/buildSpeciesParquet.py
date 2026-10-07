@@ -65,7 +65,7 @@ DEFAULT_OUT = os.path.join(ROOT, "portal", "data", "species.parquet")
 # iterative.
 COLUMNS = (
     "kingdom", "phylum", "cls", "ord", "family", "familyName",
-    "genus", "genusRank", "name", "id", "rank", "lineage", "commonName",
+    "genus", "genusRank", "name", "id", "uuid", "rank", "lineage", "commonName",
     "continents", "subspeciesCount", "hasDescription", "sourcedFrom",
     "iucnStatus", "authorityIds",
 )
@@ -124,6 +124,7 @@ def rows_for_family(fam, ranks: dict) -> list:
             "genusRank": parent_rank or "",
             "name": (sp.get("name") or "").strip(),
             "id": sp.get("id") or "",
+            "uuid": sp.get("uuid") or "",
             "rank": sp.get("rank") or "",
             "lineage": (sp.get("lineage") or "").strip(),
             "commonName": sp.get("commonName") or "",
