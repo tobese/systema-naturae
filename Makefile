@@ -1,6 +1,6 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
         name-index name-index-status verify verify-import triage \
-        triage-sample serve fix-lineage fix-counts fix-duplicates check
+        triage-sample serve fix-lineage fix-counts fix-duplicates check count
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -28,6 +28,9 @@ check:
 PARQUET_PY ?= python3
 species-parquet:
 	@$(PARQUET_PY) scripts/buildSpeciesParquet.py $(ARGS)
+
+count:
+	@$(PARQUET_PY) scripts/countIds.py $(ARGS)
 
 dev:
 	cd portal && npm run dev
