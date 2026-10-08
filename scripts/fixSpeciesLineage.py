@@ -42,10 +42,15 @@ import sys
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--fix-case", action="store_true",
+                    help="normalize lineage case to match the genus name "
+                         "(677k plantae species carry lowercase lineage from an "
+                         "importer that lowercased it; the genus node is Capitalized)")
     args = ap.parse_args()
 
     refixed = 0        # lineage was the family, now the genus
     filled = 0         # lineage was absent, now filled
+    cased = 0          # lineage matched genus but wrong case, now corrected
     neither = 0        # left alone: neither genus nor family
     touched = 0
     left = collections.Counter()
@@ -86,6 +91,14 @@ def main() -> int:
                         node["lineage"] = genus or from_name
                     refixed += 1
                     n_changed += 1
+                elif args.fix_case and genus and lin == genus.lower() \
+                        and (node.get("lineage") or "").strip() != genus:
+                    # lineage matched the genus (case-insensitive) but was
+                    # stored lowercased; normalize to the genus's own casing.
+                    if args.apply:
+                        node["lineage"] = genus
+                    cased += 1
+                    n_changed += 1
                 elif lin != from_name and lin != fam:
                     neither += 1
                     left[(node.get("sourcedFrom") or "none", "neither")] += 1
@@ -104,6 +117,7 @@ def main() -> int:
 
     print(f"  lineage was the family, now the genus: {refixed:,}")
     print(f"  lineage was absent, now filled:         {filled:,}")
+    print(f"  lineage case normalized to genus:       {cased:,}")
     print(f"  family files touched:                  {touched:,}")
     print(f"  left alone (neither genus nor family): {neither:,}")
     if left:

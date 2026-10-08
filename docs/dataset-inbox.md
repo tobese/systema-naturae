@@ -7,6 +7,23 @@ here and move each one into the table with a verdict.
 
 ```
 ```
+IRMNG
+https://www.checklistbank.org/dataset/2007/metadata
+
+ZOOBANK
+https://www.checklistbank.org/dataset/2037/metadata
+
+BOLDINSECT
+https://www.checklistbank.org/dataset/311094/metadata
+
+WCSP
+https://www.checklistbank.org/dataset/1024/metadata
+
+GLI
+https://www.checklistbank.org/dataset/55434/metadata
+
+
+
 ## Triaged 2026-10-08 — four largest unmeasured
 
 Measured via `apiOverlapReport.py` against `taxaserve` (2.69M species indexed).
