@@ -15,6 +15,7 @@ import argparse
 import io
 import os
 import sys
+import tempfile
 import time
 import zipfile
 
@@ -59,7 +60,6 @@ def main() -> int:
 
     # Extract Taxon.tsv to a temp file so DuckDB can read it natively (it
     # cannot read straight out of a zip). 369 MB on disk, ~5.4M rows.
-    import tempfile
     tmp = tempfile.NamedTemporaryFile(suffix=".tsv", delete=False)
     tmp.close()
     with zipfile.ZipFile(COL_ARCHIVE).open("Taxon.tsv") as f:
@@ -74,9 +74,9 @@ def main() -> int:
     con.execute(f"""
         INSERT INTO species_id_map
         SELECT
-            TRIM(`dwc:scientificName`) AS scientific_name,
+            TRIM("dwc:scientificName") AS scientific_name,
             'col' AS source,
-            TRIM(`dwc:taxonID`) AS external_id,
+            TRIM("dwc:taxonID") AS external_id,
             'exact' AS matched_on,
             1.0 AS confidence,
             'col2026-base' AS source_version
@@ -88,10 +88,10 @@ def main() -> int:
             escape='"',
             ignore_errors=true
         )
-        WHERE `dwc:taxonomicStatus` IN ('accepted', 'provisionally accepted')
-          AND `dwc:taxonRank` IN ('species', 'subspecies')
-          AND TRIM(`dwc:scientificName`) != ''
-          AND TRIM(`dwc:taxonID`) != ''
+        WHERE "dwc:taxonomicStatus" IN ('accepted', 'provisionally accepted')
+          AND "dwc:taxonRank" IN ('species', 'subspecies')
+          AND TRIM("dwc:scientificName") != ''
+          AND TRIM("dwc:taxonID") != ''
     """)
     os.unlink(tmp.name)
     added = con.execute("SELECT count(*) FROM species_id_map").fetchone()[0] - before

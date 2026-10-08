@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
+import tempfile
 import time
 import zipfile
 
@@ -22,7 +23,6 @@ from tree import ROOT
 
 ITIS_ARCHIVE = "/Volumes/MacieExternal/sources/archives/itis/archive.zip"
 DEFAULT_OUT = os.path.join(ROOT, "portal", "data", "species_id_map.parquet")
-ACCEPTED_RANKS = {"species", "subspecies", "hybrid"}
 
 
 def main() -> int:
@@ -57,7 +57,6 @@ def main() -> int:
     before = con.execute("SELECT count(*) FROM species_id_map").fetchone()[0]
     print(f"  existing rows: {before:,}", flush=True)
 
-    import tempfile
     name_tmp = tempfile.NamedTemporaryFile(suffix=".tsv", delete=False)
     name_tmp.close()
     taxon_tmp = tempfile.NamedTemporaryFile(suffix=".tsv", delete=False)
@@ -81,18 +80,18 @@ def main() -> int:
     con.execute(f"""
         INSERT INTO species_id_map
         SELECT
-            n.`scientificName`,
+            n.scientificName,
             'itis',
-            t.ID,
+            CAST(t.ID AS VARCHAR),
             'exact',
             1.0,
             'itis-2026-10'
         FROM read_csv('{name_tmp.name}', header=true, sep='\t', quote='"', escape='"', ignore_errors=true) n
         JOIN read_csv('{taxon_tmp.name}', header=true, sep='\t', quote='"', escape='"', ignore_errors=true) t
-            ON t.nameID = n.ID
+            ON CAST(t.nameID AS VARCHAR) = CAST(n.ID AS VARCHAR)
         WHERE lower(n.rank) IN ('species','subspecies','hybrid')
-          AND TRIM(n.`scientificName`) != ''
-          AND TRIM(t.ID) != ''
+          AND TRIM(n.scientificName) != ''
+          AND TRIM(CAST(t.ID AS VARCHAR)) != ''
     """)
     os.unlink(name_tmp.name)
     os.unlink(taxon_tmp.name)

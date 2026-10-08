@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
+import tempfile
 import time
 import zipfile
 
@@ -23,8 +24,6 @@ from tree import ROOT
 
 WFO_ARCHIVE = "/Volumes/MacieExternal/sources/archives/wfo-plant-list/archive.zip"
 DEFAULT_OUT = os.path.join(ROOT, "portal", "data", "species_id_map.parquet")
-ACCEPTED_RANKS = {"species", "subspecies", "variety", "subvariety", "form",
-                  "subform"}
 
 
 def main() -> int:
@@ -59,7 +58,6 @@ def main() -> int:
     before = con.execute("SELECT count(*) FROM species_id_map").fetchone()[0]
     print(f"  existing rows: {before:,}", flush=True)
 
-    import tempfile
     name_tmp = tempfile.NamedTemporaryFile(suffix=".tsv", delete=False)
     name_tmp.close()
     taxon_tmp = tempfile.NamedTemporaryFile(suffix=".tsv", delete=False)
@@ -83,7 +81,7 @@ def main() -> int:
     con.execute(f"""
         INSERT INTO species_id_map
         SELECT
-            n.`scientificName`,
+            n.scientificName,
             'wfo',
             t.ID,
             'exact',
@@ -93,7 +91,7 @@ def main() -> int:
         JOIN read_csv('{taxon_tmp.name}', header=true, sep='\t', quote='"', escape='"', ignore_errors=true) t
             ON t.nameID = n.ID
         WHERE lower(n.rank) IN ('species','subspecies','variety','subvariety','form','subform')
-          AND TRIM(n.`scientificName`) != ''
+          AND TRIM(n.scientificName) != ''
           AND TRIM(t.ID) != ''
     """)
     os.unlink(name_tmp.name)
