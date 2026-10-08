@@ -2,60 +2,63 @@
   "id": "FAM_PARATOMELLIDAE",
   "name": "Paratomellidae",
   "rank": "FAMILY",
-  "commonName": "Paratomellids",
+  "commonName": "Paratomellidae",
+  "description": "Paratomellidae — a family in the class Acoela.",
+  "sourcedFrom": "worms",
   "children": [
     {
       "id": "GENUS_HESIOLICIUM",
       "name": "Hesiolicium",
       "rank": "GENUS",
+      "lineage": "Hesiolicium",
+      "description": "Hesiolicium — a genus in the family Paratomellidae.",
       "children": [
         {
-          "id": "SP_HESIOLICIUM_INOPS_CREZEE_TYLER_1976",
+          "id": "SP_HESIOLICIUM_INOPS",
           "name": "Hesiolicium inops",
           "rank": "SPECIES",
+          "lineage": "Hesiolicium",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Crezee & Tyler, 1976",
-          "children": [],
-          "lineage": "hesiolicium",
-          "uuid": "c773b500-fe51-549-a1d-c96e56a59d6e35"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "380077"
+          },
+          "uuid": "47bdee49-a59e-5ab-a2a-484d438dc4fed9"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Paratomellidae"
+      ]
     },
     {
       "id": "GENUS_PARATOMELLA",
       "name": "Paratomella",
       "rank": "GENUS",
+      "lineage": "Paratomella",
+      "description": "Paratomella — a genus in the family Paratomellidae.",
       "children": [
         {
-          "id": "SP_PARATOMELLA_UNICHAETA_D_RJES_1966",
-          "name": "Paratomella unichaeta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Dörjes, 1966",
-          "children": [],
-          "lineage": "paratomella",
-          "uuid": "56abd2ed-7d94-559-912-c0e249d471febe"
-        },
-        {
-          "id": "SP_PARATOMELLA_RUBRA_RIEGER_OTT_1971",
+          "id": "SP_PARATOMELLA_RUBRA",
           "name": "Paratomella rubra",
           "rank": "SPECIES",
+          "lineage": "Paratomella",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Rieger & Ott, 1971",
-          "children": [],
-          "lineage": "paratomella",
-          "uuid": "38729d3d-0473-56a-a11-9c55014f2c785f"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "142704"
+          },
+          "uuid": "bea80a4b-1938-5db-b40-3d3114c96bb322"
+        },
+        {
+          "id": "SP_PARATOMELLA_UNICHAETA",
+          "name": "Paratomella unichaeta",
+          "rank": "SPECIES",
+          "lineage": "Paratomella",
+          "subspeciesCount": 0,
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "142705"
+          },
+          "uuid": "ad93204b-3922-5f8-9e3-15c3539c6ab3d1"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Paratomellidae"
+      ]
     }
-  ],
-  "genusCount": 2,
-  "speciesCount": 3
+  ]
 }

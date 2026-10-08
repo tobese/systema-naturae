@@ -2,29 +2,30 @@
   "id": "FAM_TAURIDIDAE",
   "name": "Taurididae",
   "rank": "FAMILY",
-  "commonName": "Tauridids",
+  "commonName": "Taurididae",
+  "description": "Taurididae — a family in the class Acoela.",
+  "sourcedFrom": "worms",
   "children": [
     {
       "id": "GENUS_TAURIDA",
       "name": "Taurida",
       "rank": "GENUS",
+      "lineage": "Taurida",
+      "description": "Taurida — a genus in the family Taurididae.",
       "children": [
         {
-          "id": "SP_TAURIDA_FULVOMACULATA_AX_1959",
+          "id": "SP_TAURIDA_FULVOMACULATA",
           "name": "Taurida fulvomaculata",
           "rank": "SPECIES",
+          "lineage": "Taurida",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "(Ax, 1959)",
-          "children": [],
-          "lineage": "taurida",
-          "uuid": "495d14f4-c319-514-bb0-3121d8429d1c18"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "142718"
+          },
+          "uuid": "825843fd-880f-5c9-857-4edf426c168908"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Taurididae"
+      ]
     }
-  ],
-  "genusCount": 1,
-  "speciesCount": 1
+  ]
 }

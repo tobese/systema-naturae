@@ -3,27 +3,29 @@
   "name": "Natanellidae",
   "rank": "FAMILY",
   "commonName": "Natanellidae",
+  "description": "Natanellidae — a family in the class Gymnolaemata.",
+  "sourcedFrom": "worms",
   "children": [
     {
       "id": "GENUS_NATANELLA",
       "name": "Natanella",
       "rank": "GENUS",
+      "lineage": "Natanella",
+      "description": "Natanella — a genus in the family Natanellidae.",
       "children": [
         {
           "id": "SP_NATANELLA_NATANS",
           "name": "Natanella natans",
           "rank": "SPECIES",
+          "lineage": "Natanella",
           "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "children": [],
-          "lineage": "natanella",
-          "uuid": "4d62693a-1a35-5bf-a15-0a47b802e648b4"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "1047436"
+          },
+          "uuid": "735bcd15-3792-525-a21-85b8dc5bb18a7f"
         }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "Natanellidae"
+      ]
     }
-  ],
-  "genusCount": 1,
-  "speciesCount": 1
+  ]
 }

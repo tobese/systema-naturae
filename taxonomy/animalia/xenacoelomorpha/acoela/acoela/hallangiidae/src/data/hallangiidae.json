@@ -2,49 +2,51 @@
   "id": "FAM_HALLANGIIDAE",
   "name": "Hallangiidae",
   "rank": "FAMILY",
-  "commonName": "Hallangiids",
+  "commonName": "Hallangiidae",
+  "description": "Hallangiidae — a family in the class Acoela.",
+  "sourcedFrom": "worms",
   "children": [
     {
       "id": "GENUS_AECHMALOTUS",
       "name": "Aechmalotus",
       "rank": "GENUS",
+      "lineage": "Aechmalotus",
+      "description": "Aechmalotus — a genus in the family Hallangiidae.",
       "children": [
         {
-          "id": "SP_AECHMALOTUS_PYRULA_BEKLEMISCHEV_1915",
+          "id": "SP_AECHMALOTUS_PYRULA",
           "name": "Aechmalotus pyrula",
           "rank": "SPECIES",
+          "lineage": "Aechmalotus",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Beklemischev, 1915",
-          "children": [],
-          "lineage": "aechmalotus",
-          "uuid": "e4f90034-3e23-5a3-ac8-2b684554e6ca7e"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "379982"
+          },
+          "uuid": "7ee8ccde-c0da-50a-8ba-58190949b8c173"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Hallangiidae"
+      ]
     },
     {
       "id": "GENUS_HALLANGIA",
       "name": "Hallangia",
       "rank": "GENUS",
+      "lineage": "Hallangia",
+      "description": "Hallangia — a genus in the family Hallangiidae.",
       "children": [
         {
-          "id": "SP_HALLANGIA_PROPOROIDES_WESTBLAD_1946",
+          "id": "SP_HALLANGIA_PROPOROIDES",
           "name": "Hallangia proporoides",
           "rank": "SPECIES",
+          "lineage": "Hallangia",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Westblad, 1946",
-          "children": [],
-          "lineage": "hallangia",
-          "uuid": "c7911fb7-7724-548-84b-f67cd5d99b2f3b"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "142641"
+          },
+          "uuid": "c1499be8-6e60-5da-a92-80fe5f1e837e08"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Hallangiidae"
+      ]
     }
-  ],
-  "genusCount": 2,
-  "speciesCount": 2
+  ]
 }

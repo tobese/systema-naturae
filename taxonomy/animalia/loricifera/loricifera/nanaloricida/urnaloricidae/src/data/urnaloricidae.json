@@ -2,40 +2,42 @@
   "id": "FAM_URNALORICIDAE",
   "name": "Urnaloricidae",
   "rank": "FAMILY",
-  "commonName": "Urnaloricids",
+  "commonName": "Urnaloricidae",
+  "description": "Urnaloricidae — a family in the class Loricifera.",
+  "sourcedFrom": "worms",
   "children": [
     {
       "id": "GENUS_URNALORICUS",
       "name": "Urnaloricus",
       "rank": "GENUS",
+      "lineage": "Urnaloricus",
+      "description": "Urnaloricus — a genus in the family Urnaloricidae.",
       "children": [
         {
-          "id": "SP_URNALORICUS_IBENAE_NEVES_KRISTENSEN_ROHAL_THISTLE_S_RENSEN_2018",
-          "name": "Urnaloricus ibenae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Neves, Kristensen, Rohal, Thistle & Sørensen, 2018",
-          "children": [],
-          "lineage": "urnaloricus",
-          "uuid": "d01ba268-1efd-5d5-a4f-b1139d39e40eb9"
-        },
-        {
-          "id": "SP_URNALORICUS_GADI_HEINER_KRISTENSEN_2009",
+          "id": "SP_URNALORICUS_GADI",
           "name": "Urnaloricus gadi",
           "rank": "SPECIES",
+          "lineage": "Urnaloricus",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Heiner & Kristensen, 2009",
-          "children": [],
-          "lineage": "urnaloricus",
-          "uuid": "e07fe229-aebf-5b4-943-7306f0032de42e"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "1335199"
+          },
+          "uuid": "e75926cb-7c68-5eb-b4b-67aceaf39f51fc"
+        },
+        {
+          "id": "SP_URNALORICUS_IBENAE",
+          "name": "Urnaloricus ibenae",
+          "rank": "SPECIES",
+          "lineage": "Urnaloricus",
+          "subspeciesCount": 0,
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "1615075"
+          },
+          "uuid": "c0988f9e-2c1a-510-94c-1cb6c9112a8133"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Urnaloricidae"
+      ]
     }
-  ],
-  "genusCount": 1,
-  "speciesCount": 2
+  ]
 }

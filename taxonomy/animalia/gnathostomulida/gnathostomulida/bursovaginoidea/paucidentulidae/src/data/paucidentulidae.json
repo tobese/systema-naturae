@@ -2,29 +2,30 @@
   "id": "FAM_PAUCIDENTULIDAE",
   "name": "Paucidentulidae",
   "rank": "FAMILY",
-  "commonName": "Paucidentulids",
+  "commonName": "Paucidentulidae",
+  "description": "Paucidentulidae — a family in the class Gnathostomulida.",
+  "sourcedFrom": "worms",
   "children": [
     {
       "id": "GENUS_PAUCIDENTULA",
       "name": "Paucidentula",
       "rank": "GENUS",
+      "lineage": "Paucidentula",
+      "description": "Paucidentula — a genus in the family Paucidentulidae.",
       "children": [
         {
-          "id": "SP_PAUCIDENTULA_ANONYMA_STERRER_1998",
+          "id": "SP_PAUCIDENTULA_ANONYMA",
           "name": "Paucidentula anonyma",
           "rank": "SPECIES",
+          "lineage": "Paucidentula",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Sterrer, 1998",
-          "children": [],
-          "lineage": "paucidentula",
-          "uuid": "62fd362f-464c-5ce-a94-466af421c34753"
+          "sourcedFrom": "worms",
+          "sourceIds": {
+            "worms": "265984"
+          },
+          "uuid": "11881f69-bb04-5e1-a1d-2f530d7c150e38"
         }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Paucidentulidae"
+      ]
     }
-  ],
-  "genusCount": 1,
-  "speciesCount": 1
+  ]
 }
