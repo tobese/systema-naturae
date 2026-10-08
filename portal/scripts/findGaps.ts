@@ -156,15 +156,18 @@ walk(taxonomy, "", "", results);
 
 for (const r of results) {
   if (existsSync(r.dataFilePath)) {
-    const data = JSON.parse(readFileSync(r.dataFilePath, "utf-8"));
+    const raw = readFileSync(r.dataFilePath, "utf-8");
+    if (!raw.trim()) {
+      r.portalCount = 0;
+      r.minimalCount = 0;
+      r.enrichedCount = 0;
+      continue;
+    }
+    const data = JSON.parse(raw);
     const stats = analyzeSpecies(data);
     r.portalCount = stats.total;
     r.minimalCount = stats.minimal;
     r.enrichedCount = stats.enriched;
-  } else {
-    r.portalCount = 0;
-    r.minimalCount = 0;
-    r.enrichedCount = 0;
   }
   r.gap = r.speciesCount - r.portalCount;
   r.trueGap = r.speciesCount - r.enrichedCount;
