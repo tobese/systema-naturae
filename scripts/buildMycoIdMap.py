@@ -14,10 +14,11 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from sources import work_file
 from tree import ROOT
 
 DEFAULT_OUT = os.path.join(ROOT, "portal", "data", "species_id_map.parquet")
-MYCO_INDEX = os.path.join(ROOT, "portal", "data", "mycobank-index.json")
+MYCO_INDEX = work_file("mycobank", "mycobank_index.json")
 
 
 def load_myco_index_streaming(con) -> int:
