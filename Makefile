@@ -1,6 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
         name-index name-index-status verify verify-import triage \
-        triage-sample serve fix-lineage fix-counts fix-duplicates check count
+        triage-sample serve fix-lineage fix-counts fix-duplicates check count \
+        idmap patch-ids
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -31,6 +32,20 @@ species-parquet:
 
 count:
 	@$(PARQUET_PY) scripts/countIds.py $(ARGS)
+
+# Build the species_id_map staging table from GBIF cache + wiki-images.json.
+# One row per (scientific_name, source), deduplicated by confidence.
+#   make idmap
+#   make idmap PARQUET_PY=.venv-parquet/bin/python
+idmap:
+	@$(PARQUET_PY) scripts/buildIdMap.py $(ARGS)
+
+# Apply species_id_map to family JSON files: writes sourceIds/authorityIds
+# to each species. Run after `make idmap` and before `make species-parquet`.
+#   make patch-ids
+#   make patch-ids --dry-run
+patch-ids:
+	@$(PARQUET_PY) scripts/patchFamilyIds.py $(ARGS)
 
 dev:
 	cd portal && npm run dev
