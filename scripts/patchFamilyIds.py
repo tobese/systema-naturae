@@ -51,7 +51,7 @@ def build_authority_ids(info: dict[str, list[str]]) -> str:
     """Build authorityIds string from {source: [ids]} mapping."""
     parts = []
     for source, ids in sorted(info.items()):
-        for id_val in sorted(set(ids)):
+        for id_val in sorted(set(str(i) for i in ids)):
             parts.append(f"{source}:{id_val}")
     return ",".join(parts)
 
@@ -83,22 +83,38 @@ def main() -> int:
             name = (sp.get("name") or "").strip()
             if not name:
                 continue
-            existing = sp.get("sourceIds") or {}
-            if existing:
-                already += 1
-                continue
             info = id_map.get(name)
             if not info:
                 # Try canonical name only (strip authorship)
                 canonical = name.split()[0] + " " + name.split()[1] if len(name.split()) >= 2 else name
                 info = id_map.get(canonical)
-            if info:
-                sp["sourceIds"] = info
-                sp["authorityIds"] = build_authority_ids(info)
-                changed = True
-                patched += 1
-            else:
+            if not info:
                 no_match += 1
+                continue
+            existing_raw = sp.get("sourceIds") or {}
+            existing = {}
+            for k, v in existing_raw.items():
+                if isinstance(v, (list, tuple)):
+                    existing[k] = [str(i) for i in v]
+                else:
+                    existing[k] = [str(v)]
+            merged = {k: list(v) for k, v in existing.items()}
+            for src, ids in info.items():
+                merged.setdefault(src, [])
+                for i in ids:
+                    si = str(i)
+                    if si not in merged[src]:
+                        merged[src].append(si)
+            # Compare normalized forms
+            norm_existing = {k: sorted(v) for k, v in existing.items()}
+            norm_merged = {k: sorted(v) for k, v in merged.items()}
+            if norm_existing == norm_merged:
+                already += 1
+                continue
+            sp["sourceIds"] = merged
+            sp["authorityIds"] = build_authority_ids(merged)
+            changed = True
+            patched += 1
 
         if changed and not args.dry_run:
             save_json(fam.path, doc)
