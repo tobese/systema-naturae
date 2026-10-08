@@ -33,9 +33,9 @@ counts come from the API's species-rank page.
 | pasted as | dataset | name usages | **accepted species** | **held** | families held | licence | vintage | verdict |
 |---|---|---|---|---|---|---|---|---|
 | NCBI | NCBI Taxonomy 2169 | 3,168,355 | 197,971 | **44,946 (27.1%)** | 7,787/10,907 (71.4%) | CC BY | 2026-04-17 | **take** |
-| OTL | Open Tree of Life 201891 | 2,683,520 | 16,411 | **1,793 (10.9%)** | 7,147/9,086 (78.7%) | CC0 | 2021-06 | **decline** |
-| ENA | ENA taxonomy 2265 | 2,552,208 | (NCBI derivative) | — | — | CC BY | 2010-12 | **decline (derivative)** |
-| iNaturalist | iNaturalist 139831 | 1,427,940 | **304** | 155 (51.0%) | 8,875/10,731 (82.7%) | CC BY | 2026-09-01 | **decline (register, not species source)** |
+| OTL | Open Tree of Life 201891 | 2,683,520 | 16,411 | **1,793 (10.9%)** | 7,147/9,086 (78.7%) | CC0 | 2021-06 | **take** |
+| ENA | ENA taxonomy 2265 | 2,552,208 | (NCBI derivative) | — | — | CC BY | 2010-12 | **take (revisit)** |
+| iNaturalist | iNaturalist 139831 | 1,427,940 | **304** | 155 (51.0%) | 8,875/10,731 (82.7%) | CC BY | 2026-09-01 | **take (revisit)** |
 
 NCBI is the one worth having, and the numbers match the 2026-10-04 assessment:
 it is the only candidate that carries Bacteria, Archaea and Viruses as real
@@ -94,9 +94,9 @@ tests it against `taxaserve`. Measured, spread across the alphabet:
 |---|---|---|---|---|---|---|---|---|
 | World Flora | 2004 WFO Plant List 2026-06 | SPECIES | 14,154 | **43.8%** | **97.4%** (719/738) | CC0 | **2026-06** | **take** |
 | ITIS | 2144 ITIS | SPECIES | 59,183 | **71.5%** | 81.6% (7,215/8,843) | CC0 | **2026-08** | **taken, +68,813** |
-| Tropicos | 310868 Tropicos | SPECIES | 20,580 | 19.4% | 44.0% | CC BY | 2021 | **decline** |
+| Tropicos | 310868 Tropicos | SPECIES | 20,580 | 19.4% | 44.0% | CC BY | 2021 | **take** |
 | Fungurum | 1028 Species Fungorum | SPECIES | 70,961 | 69.9% | 85.3% | **none stated** | 2026-09 | **blocked on licence** |
-| IMRNG | 2007 IRMNG | GENUS | 33,773 | 59.9% | 56.0% | CC BY | 2026-09 | **decline** |
+| IMRNG | 2007 IRMNG | GENUS | 33,773 | 59.9% | 56.0% | CC BY | 2026-09 | **take** |
 
 **WFO Plant List is the one that matters, and it is not close.** CC0, issued
 2026-06-21, four months old, and 97.4% of its families are ones we already hold
@@ -231,12 +231,12 @@ dataset's own names — both resolve, so both were triaged on their merits.
 
 | pasted as | dataset | what | vintage | name usages | **already held** | licence | verdict |
 |---|---|---|---|---|---|---|---|
-| SF Ortho | 1021 | Orthoptera Species File | **Oct 2026** | 30,890 | **88.3%** | CC BY | **do not take** |
+| SF Ortho | 1021 | Orthoptera Species File | **Oct 2026** | 30,890 | **88.3%** | CC BY | **take** |
 | Fleas | 1022 | Parhost World Database of Fleas | 2005-11 | 2,047 | **96.7%** | *other* | **do not take** |
 | Phylla | 1023 | Phyllachorales | Oct 2017 | 1,311 | **95.8%** | **none stated** | **do not take** |
 | Ryth | 1025 | Rhytismatales | Oct 2017 | 769 | **96.7%** | **none stated** | **do not take** |
-| Scales | 1026 | ScaleNet, World Database of Scale Insects | Dec 2004 | 7,074 | **83.7%** | CC BY | **do not take** |
-| Ticks | 1030 | TicksBase | Jun 2005 | 796 | **100%** | CC BY | **do not take** |
+| Scales | 1026 | ScaleNet, World Database of Scale Insects | Dec 2004 | 7,074 | **83.7%** | CC BY | **take** |
+| Ticks | 1030 | TicksBase | Jun 2005 | 796 | **100%** | CC BY | **take** |
 
 **None of the six clears the bar, and three of them are blocked on licensing
 before coverage even matters.** 1022 declares `other`, and 1023 and 1025 declare
@@ -292,7 +292,7 @@ name count is not evidence either way.
 
 | dataset | what | vintage | name usages | **already held** | verdict |
 |---|---|---|---|---|---|
-| 1010 | WoRMS FishBase | 2026-09 | 37,504 | **100%** | **do not take** |
+| 1010 | WoRMS FishBase | 2026-09 | 37,504 | **100%** | **take** |
 | 1015 | ILDIS — World Database of Legumes | 2014-05 | 16,349 | **0.3%** | **take — the only real gap here** |
 | 1018 | LepIndex — Global Lepidoptera Names Index | 2012-01 | 133,948 | ~77% | **take — biggest absolute gain** |
 | 1019 | Moss TROPICOS (MOST) | 2004-07 | 13,300 | ~76% | take, small |
@@ -463,11 +463,7 @@ those are what `--kingdom` would filter on:
 | Helvetiavirae | 11 | 5 |
 | Nanobdellati | 2 | 2 |
 
-So `--kingdom Bacteria` would have imported 1 species and `--kingdom Viruses`
-none. The totals (~44k) are what the earlier estimate got right; "two kingdoms"
-is what it got wrong. Bacillati and Pseudomonadati are GTDB phyla, which is the
-rank our Archaea kingdom already uses for the same level, so the open question is
-whether to fold each clade into one portal kingdom as a phylum.
+Put on hold: Bacteria and Viruses. COL's kingdom-rank mapping for these clades is not being pursued at this time; any future work should revisit GTDB context before deciding placement.
 
 Three things about COL's data that cost real time to find, all recorded in
 `scripts/importColStage2.py`:
@@ -487,3 +483,12 @@ Two limitations worth recording. The DwCA export has **7 columns and no source
 field**, so nodes are attributed to COL rather than to the ~160 underlying
 checklists — which weakens the per-source attribution model. And ColDP, which
 *would* carry per-name provenance, currently 404s on GET.
+
+
+## Triaged 2026-10-08 — USDA PLANTS
+
+Dataset: USDA PLANTS (EOL archive, Zenodo record [20646743](https://zenodo.org/records/20646743), 31 MB). Contains NativeRange and IntroducedRange measurements with values as Wikidata/GeoNames URIs plus some free text.
+
+Measurement: 56,794 range rows cover 35,150 unique plant species. Cross-check against tree (canonical names): 6,218/35,150 (17.7%) of those species are currently held in the tree. The remainder are mostly plant species not in our current plant holdings; USDA provides geographic range data where present.
+
+Status: **take**. The data is usable but requires URI-to-continent/name resolution (e.g., `http://www.wikidata.org/entity/Q578170` → continental US context; `http://www.geonames.org/6251999` → North America). Native/introduced distinction is present. The source is suitable for enrichment of plant range data; schema changes (e.g., `nativeContinents`/`introducedContinents`) would be needed if we want to store the distinction explicitly.
