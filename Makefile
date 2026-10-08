@@ -1,7 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
-        name-index name-index-status verify verify-import triage \
-        triage-sample serve fix-lineage fix-counts fix-duplicates check count \
-        idmap patch-ids
+         name-index name-index-status verify verify-import triage \
+         triage-sample serve fix-lineage fix-counts fix-duplicates check count \
+         idmap patch-ids fill-authority-ids
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -40,12 +40,36 @@ count:
 idmap:
 	@$(PARQUET_PY) scripts/buildIdMap.py $(ARGS)
 
+# Add COL taxonIDs to species_id_map, from the COL DwCA archive.
+#   make col-idmap
+col-idmap:
+	@$(PARQUET_PY) scripts/buildColIdMap.py $(ARGS)
+
+# Add WFO identifiers to species_id_map, from the WFO Plant List archive.
+#   make wfo-idmap
+wfo-idmap:
+	@$(PARQUET_PY) scripts/buildWfoIdMap.py $(ARGS)
+
+# Add ITIS TSNs to species_id_map, from the ITIS archive.
+#   make itis-idmap
+itis-idmap:
+	@$(PARQUET_PY) scripts/buildItisIdMap.py $(ARGS)
+
 # Apply species_id_map to family JSON files: writes sourceIds/authorityIds
 # to each species. Run after `make idmap` and before `make species-parquet`.
 #   make patch-ids
 #   make patch-ids --dry-run
 patch-ids:
 	@$(PARQUET_PY) scripts/patchFamilyIds.py $(ARGS)
+
+# Derive authorityIds from sourceIds wherever it is missing. Closes the gap
+# left by patch-ids, which only stamps authorityIds on species whose name is
+# in species_id_map. Species that already carried sourceIds from an earlier
+# backfillSourceIds.py run get their authorityIds here.
+#   make fill-authority-ids
+#   make fill-authority-ids --dry-run
+fill-authority-ids:
+	@$(PARQUET_PY) scripts/fillAuthorityIds.py $(ARGS)
 
 dev:
 	cd portal && npm run dev
