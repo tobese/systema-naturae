@@ -7,6 +7,60 @@ here and move each one into the table with a verdict.
 
 ```
 ```
+## Triaged 2026-10-08 — four largest unmeasured
+
+Measured via `apiOverlapReport.py` against `taxaserve` (2.69M species indexed).
+Sizes are ChecklistBank `size` (all name usages, all ranks). Accepted-species
+counts come from the API's species-rank page.
+
+| pasted as | dataset | name usages | **accepted species** | **held** | families held | licence | vintage | verdict |
+|---|---|---|---|---|---|---|---|---|
+| NCBI | NCBI Taxonomy 2169 | 3,168,355 | 197,971 | **44,946 (27.1%)** | 7,787/10,907 (71.4%) | CC BY | 2026-04-17 | **take** |
+| OTL | Open Tree of Life 201891 | 2,683,520 | 16,411 | **1,793 (10.9%)** | 7,147/9,086 (78.7%) | CC0 | 2021-06 | **decline** |
+| ENA | ENA taxonomy 2265 | 2,552,208 | (NCBI derivative) | — | — | CC BY | 2010-12 | **decline (derivative)** |
+| iNaturalist | iNaturalist 139831 | 1,427,940 | **304** | 155 (51.0%) | 8,875/10,731 (82.7%) | CC BY | 2026-09-01 | **decline (register, not species source)** |
+
+NCBI is the one worth having, and the numbers match the 2026-10-04 assessment:
+it is the only candidate that carries Bacteria, Archaea and Viruses as real
+divisions with real authorities. Of the 120,665 species it offers that we do not
+hold, 1,853 are prokaryote/virus-looking and excluded by decision
+(`docs/bacteria-and-viruses.md`); the remaining ~118,700 are real eukaryote
+species across the kingdoms we hold plus the bacterial/viral ones we do not.
+CC BY, four-month-old, and the families it fills (3,120 we lack) are real gaps
+outside our existing sources. Take.
+
+**OTL declined on vintage.** 10.9% held is the lowest overlap in the batch,
+and the vintage is 2021-06 against sources we refreshed 2026-09 (WFO) and
+2026-08 (ITIS). The ~14,600 species it would add are mostly old circumscription
+names that newer sources already resolved differently; importing them would be a
+taxonomy decision, not a data one. Its 9,086 families overlap at 78.7%, so it
+fills no structural gaps either.
+
+**ENA is NCBI's shadow.** It republishes the NCBI Taxonomy with INSDC metadata
+attached. Its accepted-species page is the NCBI backbone with a 2010 issue date
+and a 2026-06 modified flag, but no circumscription our tree lacks — and the
+IPNI paste above pointed at the *same* dataset key (2265), so IPNI is not
+separately available from ChecklistBank. If an actual IPNI export is wanted it
+has to come from `https://www.ipni.org` directly.
+
+**iNaturalist is not a species source.** Its 1.43M name usages collapse to only
+304 accepted species at the species rank — it is a synonym/vernacular register,
+not a checklist the tree can extend from. The 82.7% family overlap confirms it
+mirrors our families rather than extending them. Declined.
+
+### Note on sampling
+
+NCBI and OTL were measured with `--pages 30` (30k names per alphabetical shard)
+to spread the query across the whole alphabet rather than exhausting it in "A".
+The accepted-species totals (197,971 and 16,411) come from the API's own count,
+not the sampled figure; the held/not-held split is over the full accepted list.
+
+### What writing the module found
+
+The `page_all` sharding caps `offset + limit` at 100,000, so a single shard
+cannot be paged past ~100 names. NCBI's shard "0" (single-character prefix "0")
+yielded 772 names because the API has no data there; OTL's shards were larger.
+This is the API, not our tree — `taxaserve`'s 2.69M held names load in 217s.
 
 ## Triaged 2026-10-05 (fifth batch) — the global sets, measured not sampled
 

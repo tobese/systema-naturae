@@ -146,18 +146,20 @@ SOURCES = {
         "fab88965-e69d-4491-a04d-e3198b626e52, published 2026-04-17)",
         "https://www.gbif.org/dataset/fab88965-e69d-4491-a04d-e3198b626e52",
         "CC0", "assessed",
-        "nothing yet, and the overlap question has to be settled first. NCBI is "
-        "the only one of our candidate sources that carries Bacteria and Viruses "
-        "as real divisions with real authorities, which is exactly what COL will "
-        "not give us: COL holds the prokaryotes and viruses in 17 clades at "
-        "kingdom rank, so neither '--kingdom Bacteria' nor '--kingdom Viruses' "
-        "reaches them (see docs/dataset-inbox.md). Against that, GBIF Backbone "
-        "is already applied and is itself built from NCBI among others, so for "
-        "the kingdoms we do hold this is largely a second copy of names we "
-        "already have. Its value is narrower and real: prokaryote and viral "
-        "coverage, and the type material and literature citations the NCBI "
-        "record carries and no checklist we hold does. CC0, so licensing is not "
-        "an obstacle. Not downloaded."),
+        "overlap-measured 2026-10-08: 197,971 accepted species, 44,946 held "
+        "(27.1%), 120,665 species not held (of which 1,853 are prokaryote/virus "
+        "names on hold by decision). 3,120 of its 10,907 families are not in the "
+        "tree. The only candidate that carries Bacteria and Viruses as real "
+        "divisions with real authorities, which is exactly what COL will not give "
+        "us: COL holds the prokaryotes and viruses in 17 clades at kingdom rank, "
+        "so neither '--kingdom Bacteria' nor '--kingdom Viruses' reaches them "
+        "(see docs/dataset-inbox.md). Against that, GBIF Backbone is already "
+        "applied and is itself built from NCBI among others, so for the kingdoms "
+        "we do hold this is largely a second copy of names we already have. "
+        "Its value is narrower and real: prokaryote and viral coverage, and the "
+        "type material and literature citations the NCBI record carries and no "
+        "checklist we hold does. CC0, so licensing is not an obstacle. Not "
+        "downloaded."),
     "gtdb": (
         "Genome Taxonomy Database r232", "DOI 10.15468/dpzg84 (GBIF dataset "
         "a97f36e5-ded1-49cc-bdec-ac6170fc7b9c); ColDP endpoint "

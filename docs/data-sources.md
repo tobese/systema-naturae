@@ -27,7 +27,7 @@ the next time the tree is rebuilt. Each row here has a `sourcedFrom` value, a
 sidecar field, or both, so the data can be traced back to the licence it was
 taken under.
 
-Last updated: **2026-10-04**.
+Last updated: **2026-10-08**.
 
 Local copies of everything below live in `/Volumes/MacieExternal/sources/archives/`
 — 37 datasets, 2.5 GB — indexed by `manifest.json` with checksums. Four are kept
@@ -142,6 +142,7 @@ and [`reports/eol-traitbank.md`](reports/eol-traitbank.md).
 
 | Source | Identifier | Licence | Why not taken |
 |---|---|---|---|
+| NCBI Taxonomy | GBIF `fab88965-…`, DOI 10.15468/rhydar | CC0 | Overlaps 2006-10-08: 197,971 accepted species, 44,946 held (27.1%), 120,665 not held (1,853 prokaryote/virus on hold). 3,120 of 10,907 families absent. Worth having for bacteria/virus coverage, but needs a separate kingdoms-and-prokaryote import path (see `docs/bacteria-and-viruses.md`). Registered, not downloaded. |
 | Species Fungorum Plus (fungi) | GBIF `bf3db7c9-…`, DOI 10.15468/ts7wsb | CC BY 4.0 | 90% name match, but a checklist carries no descriptions and fungi are 97.5% undescribed. 1,791 synonyms and an authorship-abbreviation decision are open. |
 | World Spider Catalog | GBIF `80dd9c94-…`, DOI 10.24436/2 | CC BY 4.0 | 487 synonyms to reconcile; its 7,184 place names need a continent mapping before its distribution can be used. |
 | EOL TraitBank (CSV) | Zenodo `22129810` | **notspecified** | 11.4M trait rows but the values are ontology URIs (`ENVO_00000446`), not prose. Licence unspecified. |
