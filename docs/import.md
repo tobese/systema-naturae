@@ -331,3 +331,67 @@ Notes:
   conflated). See [distribution-notes-2026-07-06.md](./reports/distribution-notes-2026-07-06.md).
 - Open item: the ~89k wiki/gbif species lack `distribution`; it can be backfilled
   cheaply via the cached IPNI bridge as additive metadata (no `sourcedFrom` change).
+
+---
+
+## 10. Storing a name: `taxamatch.bare_name`
+
+Every importer that reads a checklist needs the same thing — turn a source's
+`scientificName` into the spelling we store, or decide it is not a binomial we
+can store. That is `taxamatch.bare_name(name, parsed)` (and
+`taxamatch.bare_binomial(name, parsed)` for the parts), and importers call it
+rather than re-deriving it.
+
+### The hybrid rule, and what it cost
+
+GNparser does not read a hybrid the way the name is written. For
+`Strelitzia × kewensis` it returns **genus `Strelitzia`, species `×`,
+infraspecies `kewensis`**: the marker takes the species slot and the epithet is
+demoted. So `if not species` — the obvious guard — never fires, because `'×'` is
+a perfectly good truthy string, and the importer builds `Strelitzia ××`.
+
+| | |
+|---|---|
+| In the tree before 2026-10-09 | **1,044** nodes named `Genus ××` — 676 from `importColChecklist.py`, 368 from the COL importers |
+| Blast radius | one broken name **per genus**, not per species: the within-run dedup kept the first and dropped the rest, so every hybrid after the first in a genus was silently discarded |
+| Cost on the run that exposed it | `importColStage2.py --kingdom Plantae` added **218** species with the bug and **850** without it |
+| `bare_binomial` | treats an epithet that is only the marker (`×`, `x`) as *lost*, not *absent*, and recovers it from `infraspecies` or from the raw tokens. Returns `(None, None)` when there is genuinely no epithet (`Strelitzia ×`) |
+
+Three importers carried the bug and all three now call the helper:
+`importColBreadth.py`, `importColChecklist.py`, `importColStage2.py`.
+
+**The 1,044 existing nodes are still broken.** They are one-per-genus placeholders
+carrying a name that denotes no taxon, and repairing them means recovering the
+epithet from the archive that supplied each one — see the open item below.
+
+### Why the check has to run after every import
+
+`verifyTree.py` is the gate, and it is the only thing that would have caught the
+hybrid names as a *class* of defect. It did not, for the same reason
+`dedupeSpeciesAcrossFamilies.py` exists: a wrong-but-well-formed name is
+indistinguishable from a right one without consulting the source.
+
+The sharper lesson is what a full-tree rewrite can do. Commit `9754ab2e81`
+("Normalize species lineage case") left
+`taxonomy/animalia/arthropoda/insecta/blattodea/nocticolidae/src/data/nocticolidae.json`
+as a **0-byte file** — a whole family, 78 species, deleted in passing. Nothing
+caught it: `git status` was clean, the build warned only about unrelated missing
+files, and `verifyTree.py` died with a bare `JSONDecodeError` at character 0
+rather than naming the file. Restored from `9754ab2e81^` on 2026-10-09.
+
+Two cheap guards, both worth having before the next full-tree pass:
+
+```bash
+# 1. any family file that is empty or unparseable -- catches a truncated write
+python3 - <<'PY'
+import glob, json, os
+for f in glob.glob('taxonomy/*/**/src/data/*.json', recursive=True):
+    if os.path.getsize(f) == 0:
+        print('EMPTY', f); continue
+    try: json.load(open(f, encoding='utf-8'))
+    except Exception as e: print('BAD', f, e)
+PY
+```
+
+2. `verifyTree.py` should report the offending path when a family file fails to
+parse, not raise out of `json.load`.

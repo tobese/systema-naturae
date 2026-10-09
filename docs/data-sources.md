@@ -27,12 +27,28 @@ the next time the tree is rebuilt. Each row here has a `sourcedFrom` value, a
 sidecar field, or both, so the data can be traced back to the licence it was
 taken under.
 
-Last updated: **2026-10-08**.
+Last updated: **2026-10-09**.
 
 Local copies of everything below live in `/Volumes/MacieExternal/sources/archives/`
-— 37 datasets, 2.5 GB — indexed by `manifest.json` with checksums. Four are kept
+— 63 datasets in the manifest, 3.19 GB — indexed by `manifest.json` with checksums. Five are kept
 specifically because they were **refused** on licence grounds; they stay so the
 decision can be re-checked rather than re-litigated.
+
+> The node counts in the table below were recounted from the tree on 2026-10-09,
+> and doing so found that the largest provenance we hold was missing from it:
+> **`catalogue of life` stamps 1,183,528 nodes and had no row here at all**,
+> along with `checklistbank`, `afromoths` (35,893) and the fourteen
+> remaining Species Files (42,058). The registry's own argument is that "a
+> source that is not written down cannot be cited", and a third of the tree's
+> provenance was unwritten. Recount rather than trusting the older figures.
+>
+> One weakness worth naming: `checklistbank` is a **container name, not a
+> source**. Every ChecklistBank import stamps the same `sourcedFrom`, so a node
+> from ITIS is indistinguishable from one from the Global Lepidoptera Index in
+> the tree itself; the per-source split lives only in
+> `/Volumes/MacieExternal/sources/manifest.json`. A dataset with a real DOI
+> (ITIS, WFO, GLI) is citable from here; a GLI node is not, without the
+> manifest.
 
 ---
 
@@ -71,14 +87,32 @@ Archives are stored **zipped**, and the extension follows the publisher: 28 zip,
 
 | `sourcedFrom` | Source | Identifier | Licence | Nodes | Retrieved |
 |---|---|---|---|---|---|
-| `powo` | Plants of the World Online (RBG Kew) | https://powo.science.kew.org | CC BY | 208,513 | ≤2026-07 |
-| `gbif` | GBIF species descriptions & vernacular | GBIF Backbone, DOI 10.15468/ts7wsb (taxonomy) / dataset d7dddbf4-2cf0-4f39-9b2a-bb099caae36c (backbone download) | per-dataset: CC0 / CC BY / CC BY-NC | 200,677 | ≤2026-07 |
-| `wikipedia` | English Wikipedia article text | en.wikipedia.org | CC BY-SA 4.0 (share-alike) | 125,504 | ≤2026-07 |
-| `orthoptera species file` | **Orthoptera Species File** | GBIF `af66d4cf-0fd2-434b-9334-9806a5efa6f7`, DOI 10.15468/nn7jhc | **CC BY 4.0** | 35,761 | 2026-10-02 |
+| `catalogue of life` | **Catalogue of Life**, Base Release 2026-09-11 | DOI 10.48580/dgz5n (ChecklistBank 316321) | CC BY 4.0 | **1,183,528** | 2026-10 |
+| *(none)* | no provenance recorded | — | — | 620,509 | — |
+| `checklistbank` | ChecklistBank ColDP exports — ITIS, ILDIS, Craneflies, ReptileDB, FLOW, WoRMS FishBase, WoRMS families, **Global Lepidoptera Index** | per dataset DOI | CC0 / CC BY 4.0 | 389,773 | 2026-10 |
+| `powo` | Plants of the World Online (RBG Kew) | https://powo.science.kew.org | CC BY | 205,998 | ≤2026-07 |
+| `gbif` | GBIF species descriptions & vernacular | GBIF Backbone, DOI 10.15468/ts7wsb (taxonomy) / dataset d7dddbf4-2cf0-4f39-9b2a-bb099caae36c (backbone download) | per-dataset: CC0 / CC BY / CC BY-NC | 189,548 | ≤2026-07 |
+| `wikipedia` | English Wikipedia article text | en.wikipedia.org | CC BY-SA 4.0 (share-alike) | 118,790 | ≤2026-07 |
+| `afromoths` | Afromoths — Afrotropical moths | DOI 10.15468/s1kwuw | CC BY 4.0 | 35,893 | 2026-10 |
+| `orthoptera species file` | **Orthoptera Species File** | GBIF `af66d4cf-0fd2-434b-9334-9806a5efa6f7`, DOI 10.15468/nn7jhc | **CC BY 4.0** | 34,874 | 2026-10-02 |
+| `psocodea species file` | Psocoda Species File | DOI 10.15468/baeaax | CC BY 4.0 | 11,956 | 2026-10 |
+| `inaturalist` | iNaturalist | iNaturalist API | **CC BY-NC 4.0** (deliberate exception, see below) | 10,025 | 2026-10 |
+| `afrotropical bees` | Afrotropical bees | GBIF `8de37d73-4016-4dba-9934-b3ac24c…` | CC BY 4.0 | 7,517 | 2026-10 |
+| `aphid species file` | Aphid Species File | DOI 10.15468/v4tboe | CC BY 4.0 | 6,799 | 2026-10 |
+| *13 × `<order> species file`* | Species File Group — Lygaeoidea, Blattodea, Plecoptera, Phasmida, Coreoidea, Mantodea, Dermaptera, Grylloblattodea, Embioptera, Chrysididae, Coleorrhyncha, Zoraptera, Mantophasmatodea | Species File Group | CC BY 4.0 | 30,102 | 2026-10 |
+| `generated` | Template-generated from lineage | — | ours | 829 | — |
+| `worms` | WoRMS via GBIF / ChecklistBank | CC BY 4.0 | CC BY 4.0 | 425 | 2026-10 |
 | `websearch` | Mixed — see attribution doc | — | mixed, some **not** open | 58 | ≤2026-07 |
-| `generated` | Template-generated from lineage | — | ours | 832 | — |
 | `nzpcn` | NZ Plant Conservation Network | nzpcn.org.nz | **permission-based** | 1 | ≤2026-07 |
-| *(none)* | no provenance recorded | — | — | 669,002 | — |
+
+The Catalogue of Life is the single largest provenance in the tree and reached
+that size in one day: Stage 1 took the species COL holds in families we already
+had, and Stage 2 took everything else by scaffolding the families we lacked —
+Animalia 5,472 → 10,601 families, Fungi 773 → 1,193, Chromista 703 → 1,002.
+Its DwCA has **7 columns and no source field**, so every one of those 1.18M nodes
+is attributed to "COL" rather than to the ~160 checklists underneath it. That is
+a provenance loss we cannot recover from a DwCA, and it is the recorded
+weakness of this source rather than a gap in this table.
 
 `orthoptera species file` carries names, authorship, year, hierarchy and
 distribution. It carries **no descriptions** and **no images** — its
@@ -86,10 +120,12 @@ distribution. It carries **no descriptions** and **no images** — its
 continent vocabulary (`scripts/osfLocalities.py`); 7 were left unmapped on
 purpose, so those species simply have no continent rather than a guessed one.
 
-> The 669,002 nodes with no `sourcedFrom` are a real blind spot: "no source" and
+> The 620,509 nodes with no `sourcedFrom` are a real blind spot: "no source" and
 > "source not recorded" are indistinguishable in the data. They are almost entirely
 > the GBIF backbone import, which is public domain, but that is an assumption
-> rather than a record.
+> rather than a record. It is also a **falling** number — it was 669,002 before
+> the Catalogue of Life import, because COL stamps provenance on everything it
+> touches — so the blind spot is closing rather than being fixed.
 
 ### Images and media (recorded in `shared/data/wiki-images.json`)
 
@@ -181,7 +217,7 @@ sidecar predate any licence check. Currently **0 NC/ND** entries are present.
    GBIF aggregates datasets with incompatible terms including CC BY-NC.
 4. **The four permission-based `websearch` sources** (FloraBase, Flora of China,
    NZPCN, SANBI) are still unresolved — ~8 species. See the attribution doc.
-5. **669,002 nodes carry no `sourcedFrom`** and cannot be attributed from the
+5. **620,509 nodes carry no `sourcedFrom`** and cannot be attributed from the
    data alone.
 
 ## iNaturalist (CC BY-NC 4.0, deliberate exception)

@@ -22,6 +22,126 @@ https://www.checklistbank.org/dataset/1024/metadata
 GLI
 https://www.checklistbank.org/dataset/55434/metadata
 
+## Triaged 2026-10-09 — the last four paste lines
+
+All five lines above are now resolved. IRMNG was triaged on 2026-10-05 and
+taken. These four are the remainder, measured **from their archives** with
+`scripts/archiveOverlap.py` (new, 2026-10-09) against `taxaserve` — 2,687,155
+species indexed — with authorship stripped and names normalised through GNparser.
+
+| pasted as | dataset | names offered | held | **not held** | families not held | licence | vintage | verdict |
+|---|---|---|---|---|---|---|---|---|
+| **BOLDINSECT** | 311094 BOLD Insecta | 371,044 | 300,035 (80.9%) | **71,009** | 165/1,186 (13.9%) | CC BY | 2025-07-17 | **take**, audit first |
+| GLI | 55434 Global Lepidoptera Index | 164,529 | 156,340 (95.0%) | **8,189** | 1/142 (0.7%) | CC BY | **2026-09-04** | **take** |
+| ZOOBANK | 2037 ZooBank | 275,961 | 114,908 (41.7%) | 160,728 (58.3%) | 148/427 (34.7%) | **CC0** | 2026-08-29 | **decline** — see below |
+| WCSP | 1024 World Checklist of Selected Plant Families | *no archive* | — | — | — | CC BY | **2017-08-25** | decline |
+
+### The measurement tool was wrong, and it is now fixed
+
+The first pass of this triage used `apiOverlapReport.py`, which pages the API in
+alphabetical shards on `q` and sums each shard's `total`. **That sum is not the
+dataset's `total`.** `q` does not index species names for these datasets, and the
+sum undercounted silently while printing `(complete)`:
+
+| dataset | shard sum | API `total` | error |
+|---|---|---|---|
+| 2037 ZooBank | 16,723 | **283,190** | 17× |
+| 311094 BOLD | 6,722 | **371,177** | 55× |
+| 1024 WCSP | 3,515 | **120,288** | 34× |
+| 55434 GLI | 6,510 | **162,922** | 25× |
+
+So every verdict above is a **revision**, and two of them reverse: GLI went from
+"80 real misses, decline" to **8,189, take**, and BOLD from "2,138" to
+**71,009**. ZooBank went from "6,153, take" to "160,728, decline" for an
+unrelated reason given below.
+
+`apiOverlapReport.py` now fetches the unfiltered `total` first and **refuses to
+report** a shard sum that disagrees with it by more than 2%, naming
+`archiveOverlap.py` as the way to measure a dataset instead. Every number in the
+tables in this document that came from `page_all` before 2026-10-09 is suspect by
+the same mechanism and should be re-measured from the archive when it matters.
+
+### ZooBank: CC0, current, 160,728 names — and still the wrong import
+
+The manifest's `zoobank` entry said NOT APPLIED because coverage needed ~7 days
+of sequential API querying. ChecklistBank 2037 removes that objection
+completely: CC0, version **2026-08-29**, one archive. So the entry's *reason* is
+dead, and the verdict changed with it — but not to "take".
+
+ZooBank is a **nomenclatural register**, and ChecklistBank types it
+`nomenclatural`. What we can download is a DwCA in which **every row reads
+`accepted` and self-references its own `acceptedNameUsageID`**: 283,875 species
+rows, all accepted. The ColDP edition — which carries the accepted/synonym split
+per name — returns **HTTP 406**.
+
+Without that split there is no way to tell the new taxa from the synonymy, and
+the whole miss is 160,728 names we do not hold (`Ababactus depressus`,
+`Abacarus nectandrae`, and so on; only 909 of them are ZooBank's own `Aa…`
+placeholder index names). Importing a register in which everything is accepted
+is the same decision as importing COL's 2.6M synonyms, which this project holds
+back everywhere by policy. **Declined, and the reason is the missing column
+rather than the licence, the vintage or the effort.**
+
+### GLI is now the cleanest take in the batch — and it is applied
+
+A month old, CC BY, 142 families of which we hold **141**, and 8,189 species we
+do not — Lepidoptera being our weakest large order after Afromoths covered only
+the Afrotropics. Families 1 of 142 missing means it extends the tree instead of
+scaffolding placeholders, which is the shape worth having.
+
+**Applied 2026-10-09** by `importColChecklist.py`: 196,874 accepted
+species/subspecies offered, 143,771 already held, 20,637 staged, **6,947 species
+added** into 72 existing animalia families, 13,690 already present on merge,
+121 refused as needing a family we lack, 199 non-binominal. Animalia went
+1,711,917 → **1,718,864** species. No new families, no new orders, and both
+`verifyTree` duplicate counts unchanged (35 and 322,928, both pre-existing) —
+so the import added nothing that collides.
+
+Getting there needed a reader fix first: GLI ships ColDP in its **CSV
+serialisation** (`name.csv` / `taxon.csv` / `synonym.csv`), which
+`colChecklist.load()` did not recognise. It fell through to the DwCA path, found
+no `name.tsv`, and reported **0 accepted species offered** — which reads as "this
+dataset is empty" rather than as "this reader does not read this container".
+`coldp.load_core_csv()` now reads it, joined on `taxon.nameID → name.ID` (not
+`taxon.ID`, which is the usage id and matches nothing, so joining on it yields
+zero rows with no error at all).
+
+Note what the earlier number was made of: its 671-name raw miss was 591
+subgenus trinomials (`Cyana (Strigivulpecula) naumanni` where we store `Cyana
+naumanni`). Stripping them still left 8,189 real names — the subgenus inflation
+was real *and* the opening was bigger than the broken measurement showed. Two
+errors, opposite signs, same page.
+
+### BOLD is the largest opening, and it needs an audit before it is applied
+
+71,009 names we do not hold, CC BY, 165 of 1,186 families absent. The misses are
+real gaps and not name artefacts — `Ambulyx regia`, `Theretra mercedes` and
+`Cocytius mephisto` are all confirmed absent from the index.
+
+**Before importing:** BOLD's taxonomy is barcode-driven and its spellings follow
+the voucher record, so its name and authorship conventions need a spot-check
+before 71,009 names go in. Audit, then import.
+
+### WCSP stays declined, and now for a second reason
+
+Declined on vintage as before — August 2017 against WFO Plant List 2026-06
+(CC0, applied), POWO and WCVP (applied). Additionally **its archive endpoint
+returns HTTP 404**, so it cannot be measured offline at all: the 882 quoted in
+the first pass was another broken shard sum, and the true accepted-species count
+is 120,288.
+
+### Two bugs found while measuring, both worth keeping
+
+- **Lower-cased keys.** The name index answers with lower-cased, dagger-stripped
+  keys. A comparison made against raw strings matches nothing — one probe
+  reported 16,723 of 16,723 ZooBank species as missed. `archiveOverlap.py` probes
+  `Felis catus` and `Panthera leo` before it starts and aborts if either is
+  missing, which is also what catches a `taxaserve` loaded by a concurrent job.
+- **GNparser per name.** Stripping authorship with `taxamatch.parse_names([n])`
+  spawns one GNparser subprocess per name: 371,000 of them for BOLD, a
+  45-minute run instead of a 45-second one. The parser is applied once to the
+  whole set, and authorship stripping is regex-only.
+
 
 
 ## Triaged 2026-10-08 — four largest unmeasured
@@ -424,9 +544,44 @@ species. Measured against the tree:
 | Stage 1 — animalia, family we already have | **427,804 applied** | 3,413 families, no new scaffolding, 431,305 authorship records |
 | Stage 2 — Fungi + Chromista | **27,812 applied** | 719 new family files + 350 into 95 existing families |
 | Stage 2 — Animalia | **672,185 applied** | 5,152 new family files, 33 enriched in place; families 5,472 → 10,601 |
-| Stage 2 — remaining kingdoms | not yet applied | Plantae, Protozoa, Archaea — all small next to Animalia |
+| Stage 2 — Plantae, Protozoa, Archaea | **850 applied** (2026-10-09) | 89 existing plantae files, 0 new families, 0 new orders; Protozoa and Archaea yielded nothing |
 | Stage 2 — bacteria + viruses | **needs a decision** | not a `kingdom-config.json` problem after all; see below |
 | COL synonyms | 2.6M held back | importing them is a taxonomy decision, not a data one |
+
+### Stage 2 closed, 2026-10-09 — and a hybrid bug that was costing more than the run
+
+`importColStage2.py --kingdom Plantae --kingdom Protozoa --kingdom Archaea`
+was the last declared kingdom left. It is applied, and Stage 2 is now done for
+all six kingdoms in `kingdom-config.json`.
+
+| | measured | applied |
+|---|---|---|
+| A, species whose COL family we hold | 181 families, 8,374 species | into 89 existing plantae files |
+| B, species in families COL has and we do not | 7 families, 82 species | 0 new files — all seven resolved to families already in the tree |
+| C, species COL records with no family | 709 species (70 resolved via genus, 637 into `Incertae sedis`) | no new placeholders needed |
+| **species added** | | **850** (93 already present, 8,147 skipped) |
+
+**Protozoa and Archaea contributed nothing**, which is worth stating plainly
+rather than leaving as an absence: COL holds no accepted species for either
+outside families we already had. What it does hold for Archaea sits in the
+bacteria clades (`Methanobacteriati`, `Thermoproteati`, `Thermotogati`), which
+are on hold by decision, not missing.
+
+**The first dry run of this run said 218 species, and 218 was wrong.** Three
+importers (`importColBreadth.py`, `importColChecklist.py`,
+`importColStage2.py`) each recovered a hybrid epithet with `if not species`,
+which never fires because GNparser returns `'×'` as the species — see
+[import.md §10](./import.md#10-storing-a-name-taxamatchbarename). The bug had
+already written **1,044 `Genus ××` nodes** into the tree (676 from the
+ChecklistBank importer, 368 from these). The fix is in
+`taxamatch.bare_binomial()`; the 850-vs-218 gap is what it recovered on this
+kingdom alone. **The 1,044 existing nodes are still broken** and are tracked as
+an open item in [`import.md`](./import.md).
+
+This is the third time an importer's own held-test and a table in this document
+have disagreed materially (150k vs 69k for ITIS, 32,950 vs 27,812 for Fungi +
+Chromista). The rule that keeps holding: **re-measure with the importer, never
+quote the number from the run before the last one.**
 
 Stage 2 was originally deferred as "a structural change rather than an import",
 which turned out to be half right: it *is* structural, but only for the kingdoms

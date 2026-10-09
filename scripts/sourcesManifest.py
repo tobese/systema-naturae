@@ -56,7 +56,10 @@ SOURCES = {
         "IMPORTED. 5,544 species across 32 families, infraorder Aphidomorpha; "
         "created the Hemiptera order, which we did not have at all. Only 3 of "
         "the 32 families are extant, the rest are daggered fossils. "
-        "Distribution is thin (664 rows); 5,067 synonyms remain unapplied"),
+        "Distribution is thin (664 rows) and is applied. The 5,067 unapplied "
+        "synonyms are held by policy, not left over: COL's 2.6M and every other "
+        "source's synonyms are held back too, because importing them is a "
+        "taxonomy decision rather than a data one"),
     "afromoths": (
         "Afromoths -- Afrotropical moths", "DOI 10.15468/s1kwuw",
         "https://www.gbif.org/dataset/65c9103f-2fbf-414b-9b0b-e47ca96c5df2",
@@ -68,10 +71,17 @@ SOURCES = {
         "families to 143. The 137 in this entry is how many families the source "
         "has; 94 is how many we hold, the difference being families whose "
         "species our other sources already covered. The 91,005 distribution "
-        "rows over 136 localities are still unused and are the reason this "
-        "source was worth having: no other checklist carries per-locality "
-        "occurrence for moths. Needs its own importer because the DwCA status is "
-        "'accepted' not 'valid' and there is no vernacularname.txt"),
+        "rows ARE used: importAfromoths.py reads distribution.txt and maps its "
+        "ISO country codes through CC2CONT into `continents`, which is what "
+        "makes this source worth having -- no other checklist we hold carries "
+        "occurrence data for moths. 87.3% of its 35,893 nodes carry a "
+        "continent; the remainder are countries left unmapped on purpose (48 IO "
+        "British Indian Ocean Territory, 15 TF French Southern Territories). An "
+        "earlier version of this entry said those rows were 'still unused', "
+        "which was wrong, and '136 localities' was never this source's shape: "
+        "the file holds 65 country codes, not free text. Needs its own importer "
+        "because the DwCA status is 'accepted' not 'valid' and there is no "
+        "vernacularname.txt"),
     "species-file-psocodea": (
         "Psocoda Species File", "DOI 10.15468/baeaax",
         "https://www.gbif.org/dataset/6fb9265c-2d98-40ad-989d-7b6bf4820519",
@@ -118,20 +128,34 @@ SOURCES = {
         "but measured coverage of our unauthenticated names is 8.8% +/- 1.4% over "
         "400 queries, projecting to ~34,600 of 395,528. Reaching even those means "
         "querying every candidate -- about seven days sequential -- against a "
-        "service asking for less automated traffic. Worth doing if a bulk dump "
-        "ever appears"),
+        "service asking for less automated traffic. That objection is now DEAD: "
+        "ChecklistBank dataset 2037 is the same publisher's bulk export, CC0, "
+        "version 2026-08-29, one archive. The verdict did not improve, because "
+        "the bulk export is missing the one column that would make it "
+        "importable -- see `checklistbank-2037`. Both routes declined, for "
+        "different reasons: this one on cost, that one on the absent "
+        "accepted/synonym split. The 8.8% +/- 1.4% above was measured "
+        "correctly, unlike the shard sums in the 2026-10-09 triage"),
     "catalogue-of-life": (
         "Catalogue of Life, Base Release", "DOI 10.48580/dgz5n (ChecklistBank 316321)",
         "https://www.catalogueoflife.org/data/download",
-        "CC BY 4.0", "partial",
+        "CC BY 4.0", "applied",
         "Stage 1 applied: 427,804 species merged into the 3,413 animalia "
         "families we already had, 431,305 authorship records. Stage 2 applied "
         "to Fungi and Chromista (importColStage2.py): 27,812 species, of which "
         "27,462 in 719 new family files and 350 into 95 existing ones; Fungi "
         "773 -> 1,193 families, Chromista 703 -> 1,002. Stage 2 then applied to "
         "Animalia: 672,185 species, 5,152 new family files and 33 enriched in "
-        "place, families 5,472 -> 10,601, orders 394 -> 721. Stage 2 still to do "
-        "for Plantae, Protozoa and Archaea. Bacteria and viruses are NOT two "
+        "place, families 5,472 -> 10,601, orders 394 -> 721. Stage 2 then "
+        "applied to the three remaining declared kingdoms (2026-10-09): 850 "
+        "species into 89 existing plantae family files, 0 new family files, 0 "
+        "new orders, 93 already present. Protozoa and Archaea yielded nothing: "
+        "COL holds no accepted species for either outside families we already "
+        "had. That closes Stage 2 for all six kingdoms in "
+        "kingdom-config.json. What is deliberately NOT taken is not outstanding "
+        "work: the 2.6M synonyms and the bacteria/virus clades are both policy "
+        "decisions -- a synonym is a taxonomy decision, and see the paragraph "
+        "below on the clades. Bacteria and viruses are NOT two "
         "kingdoms and are not a kingdom-config.json problem: COL holds them as "
         "17 clades at kingdom rank (Bacillati 13,873 species, Pseudomonadati "
         "12,368, Orthornavirae 7,201, Heunggongvirae 6,521, Shotokuvirae 2,351, "
@@ -441,6 +465,77 @@ SOURCES = {
         "NO_ARCHIVE because nothing was fetched, and because the access route is "
         "a request form rather than a URL -- listing an archive path here would "
         "imply a download that does not exist."),
+    "checklistbank-2037": (
+        "ZooBank (ChecklistBank bulk export)", "DOI 10.48580/d4g9",
+        "https://www.checklistbank.org/dataset/2037",
+        "CC0 (confirmed in the archive's own eml.xml)", "assessed",
+        "NOT TAKEN, and downloaded: 81MB DwCA at "
+        "archives/checklistbank-2037/archive.zip, 527,127 rows, version "
+        "2026-08-29. Measured 2026-10-09 from the archive: 275,961 names "
+        "offered, 114,908 held, 160,728 NOT held, 148 of 427 families absent. "
+        "The licence, the vintage and the effort are all fine; what is missing "
+        "is one column. This is a NOMENCLATURAL register (ChecklistBank types "
+        "it `nomenclatural`) and the DwCA writes `accepted` on every row with "
+        "every acceptedNameUsageID self-referencing -- 283,875 species rows, all "
+        "accepted. The ColDP edition carrying the per-name accepted/synonym "
+        "split returns HTTP 406. Without it there is no way to separate the new "
+        "taxa from the synonymy, so importing it is the same decision as "
+        "importing COL's 2.6M synonyms, which this project holds back by "
+        "policy. Only 909 of the 160,728 are ZooBank's own `Aa...` placeholder "
+        "index names; the rest look like ordinary binomials (Ababactus "
+        "depressus), which is what makes the register hard to refuse on data "
+        "quality alone. Re-open if the ColDP becomes downloadable"),
+    "checklistbank-311094": (
+        "BOLD Systems Taxonomy -- Insecta", "DOI 10.48580/dgrxf",
+        "https://www.checklistbank.org/dataset/311094",
+        "CC BY 4.0", "assessed",
+        "TAKE, pending an audit. Downloaded: 9.5MB ColDP at "
+        "archives/checklistbank-311094/archive.zip, version 2025-07-17. "
+        "Measured 2026-10-09 from the archive: 371,044 names offered, 300,035 "
+        "held (80.9%), 71,009 NOT held, 165 of 1,186 families absent -- the "
+        "largest opening in the 2026-10-09 batch. The misses are real gaps "
+        "rather than name artefacts: Ambulyx regia, Theretra mercedes and "
+        "Cocytius mephisto are all confirmed absent from the index, which is "
+        "what a cosmopolitan hawkmoth looks like when Afromoths (Afrotropical) "
+        "and the Orthoptera Species File (one order) are the only "
+        "Lepidoptera-adjacent sources applied. Audit its name and authorship "
+        "conventions before importing 71,009 of them: BOLD names follow the "
+        "voucher record, not a traditional checklist"),
+    "checklistbank-55434": (
+        "Global Lepidoptera Index (GLI)", "DOI 10.48580/d49xk",
+        "https://www.checklistbank.org/dataset/55434",
+        "CC BY 4.0", "applied",
+        "APPLIED 2026-10-09 by scripts/importColChecklist.py: 196,874 accepted "
+        "species/subspecies offered, 143,771 already held, 20,637 staged, "
+        "**6,947 species added** into 72 existing families across animalia, "
+        "13,690 found already present on merge, 121 refused as needing a family "
+        "we do not have (recorded in the pending-family store), 199 "
+        "non-binominal. Animalia went 1,711,917 -> 1,718,864 species. No new "
+        "families and no new orders: 141 of GLI's 142 families were already "
+        "held, which is why this extends the tree instead of scaffolding it. "
+        "Both verifyTree duplicate-id counts were unchanged by the import (35 "
+        "and 322,928, both pre-existing). Downloaded: 19.9MB ColDP at "
+        "archives/checklistbank-55434/"
+        "archive.zip, version 1.1.26.247 issued 2026-09-04 -- a month old, the "
+        "best vintage in its batch. Measured 2026-10-09 from the archive: "
+        "164,529 names offered, 156,340 held (95.0%), 8,189 NOT held, and 141 "
+        "of its 142 families already held, so it extends the tree rather than "
+        "scaffolding placeholders. Lepidoptera is our weakest large order after "
+        "Afromoths covered only the Afrotropics. An earlier pass put this at 80 "
+        "real misses and declined it: that number came from a broken shard sum, "
+        "and its 671 raw miss was itself 591 subgenus trinomials -- two errors "
+        "of opposite sign on the same page"),
+    "checklistbank-1024": (
+        "World Checklist of Selected Plant Families (WCSP)", "DOI 10.48580/d38c",
+        "https://www.checklistbank.org/dataset/1024",
+        "CC BY 4.0", "assessed",
+        "NOT TAKEN, vintage. 416,075 name usages, all 116 families held, "
+        "accepted-species count 120,288 -- and the edition is 2017-08-25, nine "
+        "years old, against WFO Plant List 2026-06 (CC0, applied), POWO and the "
+        "World Checklist of Vascular Plants (applied). The same verdict as "
+        "Tropicos: importing older nomenclatural data over newer is a taxonomy "
+        "decision, not a data one. Its archive endpoint also returns HTTP 404, "
+        "so it cannot be measured offline at all"),
     "checklistbank-1021": (
         "Orthoptera Species File, ChecklistBank edition (dataset 1021)",
         "DOI 10.48580/d388; version Oct 2026, issued 2026-10-01",
@@ -599,9 +694,12 @@ SOURCES = {
     "fishbase": (
         "FishBase (EOL harvest)", "DOI 10.5281/zenodo.22739608",
         "https://zenodo.org/records/22739608",
-        "mixed; images are CC BY-NC 3.0", "partial",
-        "English names measured: only 28 marginal after GBIF vernacular, so "
-        "not applied. Images not used (NC)"),
+        "mixed; images are CC BY-NC 3.0", "assessed",
+        "NOT APPLIED, and nothing here is pending. English names measured: 28 "
+        "marginal after GBIF vernacular, which is not a trade. Images are CC "
+        "BY-NC 3.0 and refused. The separate ChecklistBank edition of FishBase "
+        "(dataset 1010, CC BY) measured 100% already held over 600 of 600 "
+        "sampled species. Nothing to do unless a policy question changes"),
     "bioimages": (
         "BioImages — the Virtual Fieldguide (UK)", "DOI 10.5281/zenodo.21123026",
         "https://zenodo.org/records/21123026", "CC BY-NC-SA 3.0", "refused",
@@ -637,6 +735,9 @@ NO_ARCHIVE = {
     "checklistbank-1025", "checklistbank-1026", "checklistbank-1030",
     "checklistbank-1028", "checklistbank-2007", "checklistbank-2144",
     "checklistbank-310868",
+    # 2026-10-09 batch, no archive on disk: 1024's endpoint 404s, and 311094 /
+    # 55434 are verdicts whose archives are fetched (so NOT listed here)
+    "checklistbank-1024",
     # blocked on WoRMS's own request form, not on anything we can do
     "worms",
 }
