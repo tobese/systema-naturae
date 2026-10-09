@@ -315,7 +315,13 @@ def load(path):
     try:
         if "AcceptedSpecies.tsv" in c.names():
             return _ildis(c)
-        if "NameUsage.tsv" in c.names():
+        if "NameUsage.tsv" in c.names() or any(
+                m.lower().endswith("taxon.csv") for m in c.namelist()):
+            # ColDP arrives in two serialisations: one NameUsage.tsv, or a
+            # name/taxon/synonym CSV split (GLI). Both go through coldp.py,
+            # which reads each; dispatching only on the TSV made the CSV flavour
+            # fall through to the DwCA path, find no `name.tsv`, and report an
+            # empty dataset.
             return _coldp(path)
         names = {}
         for t in NAME_TABLES:

@@ -146,6 +146,9 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
     par, rank, name, extra = {}, {}, {}, {}
     with zipfile.ZipFile(path) as z:
         if CORE not in z.namelist():
+            if any(m.lower().endswith("taxon.csv") for m in z.namelist()):
+                # ColDP's CSV flavour; read by load_core_csv() below.
+                return load_core_csv(path, accepted, want_authorship)
             raise KeyError(f"{CORE} not in {os.path.basename(path)}; "
                            f"members: {sorted(z.namelist())[:8]}")
         with z.open(CORE) as f:
@@ -180,6 +183,81 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
                     if i_st is not None:
                         e["status"] = row[i_st]
                     extra[t] = e
+    return par, rank, name, extra
+
+
+def load_core_csv(path, accepted=ACCEPTED, want_authorship=True):
+    """`load_core()` for ColDP's CSV flavour, which splits name from usage.
+
+    GLI (ChecklistBank 55434) ships `name.csv`, `taxon.csv` and `synonym.csv`
+    rather than one `NameUsage.tsv`, so `load_core()` found no core table and
+    the importer reported **0 accepted species offered** -- which reads as "this
+    dataset has nothing in it" rather than as "this reader does not read this
+    container".
+
+    The join is `taxon.nameID -> name.ID`, and it is worth being explicit about
+    why: `taxon.ID` is the *usage* id and matches nothing in the name table, so
+    joining on it yields zero rows with no error at all. The split is also the
+    point of the flavour -- taxon.csv holds only the accepted usages and
+    synonym.csv the rest -- so "accepted" is decided by file membership here
+    rather than by a status string.
+    """
+    par, rank, name, extra = {}, {}, {}, {}
+    with zipfile.ZipFile(path) as z:
+        members = z.namelist()
+
+        def table(base):
+            nxt = next((m for m in members
+                        if m.lower().split("/")[-1].startswith(base + ".")), None)
+            if nxt is None:
+                return None, None
+            delim = "," if nxt.lower().endswith(".csv") else "\t"
+            f = z.open(nxt)
+            rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8",
+                                             errors="replace"), delimiter=delim)
+            hdr = next(rd)
+            ix = {(h[4:] if h.startswith("col:") else h): i
+                  for i, h in enumerate(hdr)}
+            ix.update({k.lower(): v for k, v in list(ix.items())})
+            return rd, ix
+
+        nrd, nix = table("name")
+        if nrd is None:
+            raise KeyError(f"{os.path.basename(path)} has no name table; "
+                           f"members: {sorted(members)[:8]}")
+        nametab = {}
+        for row in nrd:
+            if len(row) <= max(nix["id"], nix["scientificname"]):
+                continue
+            nametab[row[nix["id"]]] = (
+                row[nix["scientificname"]],
+                row[nix["rank"]] if "rank" in nix and len(row) > nix["rank"] else "",
+                row[nix["authorship"]] if "authorship" in nix
+                and len(row) > nix["authorship"] else "")
+
+        trd, tix = table("taxon")
+        if trd is None:
+            raise KeyError(f"{os.path.basename(path)} has no taxon table; "
+                           f"members: {sorted(members)[:8]}")
+        st = tix.get("taxonomicstatus") or tix.get("status")
+        for row in trd:
+            if len(row) <= max(tix["id"], tix["parentid"], tix["nameid"]):
+                continue
+            if st is not None and len(row) > st and row[st] not in accepted:
+                continue
+            nid = row[tix["nameid"]]
+            if nid not in nametab:
+                continue
+            t = row[tix["id"]]
+            nm, rk, au = nametab[nid]
+            par[t] = row[tix["parentid"]]
+            rank[t] = norm_rank(rk)
+            name[t] = nm
+            # Membership in taxon.csv *is* the accepted set in this flavour, and
+            # saying so matters downstream: colChecklist._coldp() derives
+            # `is_synonym` from the absence of an accepted status, so leaving
+            # the key out marks every accepted taxon a synonym.
+            extra[t] = {"authorship": au, "status": "accepted"}
     return par, rank, name, extra
 
 
