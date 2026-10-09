@@ -681,9 +681,26 @@ SOURCES = {
     "world-spider-catalog": (
         "World Spider Catalog", "DOI 10.24436/2",
         "https://www.gbif.org/dataset/80dd9c94-241b-4d49-999f-c89de7648525",
-        "CC BY 4.0", "assessed",
-        "nothing yet. 487 synonyms pending; its 7,184 place names need a "
-        "continent mapping first"),
+        "CC BY 4.0", "applied",
+        "APPLIED 2026-10-09 by scripts/importWsc.py, which reads the "
+        "Distribution.tsv in the DwCA and writes `continents` onto species "
+        "that carry no one. 66,766 distribution rows naming 7,184 places "
+        "(China, Brazil, USA, Australia (Queensland), Hispaniola ...); 65,452 "
+        "of the names resolve to a continent, and 48,738 of those resolve "
+        "completely, which is the only safe subset -- a record reading "
+        "'Canada, USA, and an island the table has never heard of' must not "
+        "become North America, so the other 16,714 are left alone. 40,794 "
+        "tree species gained a continent across 135 families (Asia 13,339, "
+        "South America 8,601, Africa 7,597, Australia 5,954, North America "
+        "3,871, Europe 2,134); 485 already had one and kept it. This is "
+        "2.3% of the MISSING_CONTINENTS backlog, and it is where a spider "
+        "catalogue beats a general one: GBIF has almost no country data for "
+        "Araneae, so there is nothing here to conflict with. The 487 "
+        "synonyms are held by policy and not imported. The place-name "
+        "decomposition lives in scripts/osfLocalities.py, which has no "
+        "country table (no `USA`, never needed one -- the Orthoptera file "
+        "records TDWG level-1/3/4 names instead), so the remaining 16,714 "
+        "names need one before the rest of this source is usable"),
     "eol-traitbank": (
         "EOL TraitBank — all trait data", "DOI 10.5281/zenodo.22129810",
         "https://zenodo.org/records/22129810", "notspecified", "assessed",

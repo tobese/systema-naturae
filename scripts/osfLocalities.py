@@ -21,6 +21,8 @@ Run directly to audit coverage against a locality list:
     python3 scripts/osfLocalities.py /tmp/osf_localities.txt
 """
 
+import re
+
 AFRICA = """
 Africa
 Algeria
@@ -596,6 +598,52 @@ def continent_for(locality: str):
     if v and all(x in VALID for x in v):
         return sorted(set(v))
     return None
+
+
+# A sub-national qualifier, a multi-country range and a comma inside a qualifier
+# all occur in checklists that record distribution as one free-text string, and
+# this is the shape of all three:
+#
+#   "Australia (Queensland)"                  one place, one country
+#   "Canada, USA"                             two countries, two continents
+#   "Australia (Queensland, New South Wales)" one place -- and splitting it on
+#                                            the inner comma invents a second
+#
+# So the parenthetical is removed FIRST and only then is the string split. Doing
+# it the other way round is how "Australia (Queensland, New South Wales)"
+# becomes "Queensland", which is not a place this table has ever heard of, and
+# the whole record falls out as unmapped.
+_PAREN = re.compile(r"\s*\([^)]*\)")
+
+
+def area_parts(area: str):
+    """The individual places a free-text distribution string names, in order."""
+    stripped = _PAREN.sub("", area or "")
+    return [p.strip() for p in stripped.split(",") if p.strip()]
+
+
+def continent_for_area(area: str):
+    """Continents for one distribution string, or None if any part is unmapped.
+
+    The all-or-nothing return is the point. A record like "Canada, USA, and an
+    island this table has never heard of" must not resolve to North America:
+    that records a range narrower than the source states, and a species with a
+    missing continent is the state it was already in, whereas a species with a
+    wrong one is a new error.
+    """
+    whole = continent_for(area)
+    if whole:
+        return whole
+    parts = area_parts(area)
+    if not parts:
+        return None
+    out = set()
+    for part in parts:
+        c = continent_for(part)
+        if not c:
+            return None
+        out.update(c)
+    return sorted(out)
 
 
 if __name__ == "__main__":
