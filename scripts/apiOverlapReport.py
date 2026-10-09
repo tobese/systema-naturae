@@ -78,6 +78,26 @@ def page_all(key, rank, pages_per_shard=None, quiet=False, shard=True):
     whole alphabet instead of exhausting the budget in "A" and reporting a
     flora sample that is all alyssums.
     """
+    # The unfiltered `total` is authoritative. The per-shard sum is not: `q`
+    # does not index species names for every dataset, and when it does not, the
+    # sum undercounts silently. Measured 2026-10-09 on four datasets:
+    #
+    #     dataset   shard sum   unfiltered total
+    #     2037          16,723             283,190
+    #     311094         6,722             371,177
+    #     1024           3,515             120,288
+    #     55434          6,510             162,922
+    #
+    # Those are 17x to 55x errors, and they printed as "(complete)". So the
+    # authoritative total is fetched first and compared; a shard sum that
+    # disagrees by more than a few percent is reported as a broken measurement
+    # rather than passed off as one. Use scripts/archiveOverlap.py to measure a
+    # dataset from its archive instead -- no paging, no assumption about what
+    # the API indexes.
+    probe = get(f"{API}/dataset/{key}/nameusage/search?limit=1"
+                f"&rank={rank}&status=ACCEPTED")
+    truth = probe.get("total")
+
     names = []
     total = 0
     # `q` does not index family names at all -- it returns total 0 for
@@ -114,6 +134,14 @@ def page_all(key, rank, pages_per_shard=None, quiet=False, shard=True):
             print(f"      shard {sh!r}: {len(names):,} so far", flush=True)
         else:
             print(f"      paged to {off:,} of {total:,}", flush=True)
+    if truth and total and abs(truth - total) > max(50, truth * 0.02):
+        sys.stderr.write(
+            f"FATAL: dataset {key} rank {rank}: paging recovered {total:,} names "
+            f"but the API reports {truth:,}. The `q` shards do not index this "
+            f"rank for this dataset, so the number above is a broken "
+            f"measurement, not a sample. Measure it from the archive with "
+            f"scripts/archiveOverlap.py.\n")
+        return names, truth
     return names, total
 
 
