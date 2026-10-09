@@ -164,18 +164,24 @@ def check_file_counts(max_mismatch=0):
         ok("every family data file's speciesCount matches its contents")
 
 
-# The deliberately undecided placements: three genera whose family assignment is
-# genuinely disputed, so we hold a copy under each candidate rather than picking.
-# Named individually rather than allowed as a count of 7, because a *different*
-# eighth duplicate has to fail and a bare allowance cannot tell the difference.
-KNOWN_SAME_KINGDOM_DUPLICATES = {
-    # Acanthizidae vs Locustellidae -- one genus, two placements
-    "CINCLORAMPHUS_CRURALIS", "CINCLORAMPHUS_MACRURUS",
-    "CINCLORAMPHUS_MATHEWSI", "CINCLORAMPHUS_TIMORIENSIS",
-    "POODYTES_CARTERI", "POODYTES_RUFESCENS",
-    # Vangidae vs Passerellidae -- same question
-    "ORYZOBORUS_ANGOLENSIS",
-}
+# The deliberately undecided placements used to live here: three genera whose
+# family assignment is genuinely disputed, so we held a copy under each
+# candidate rather than picking -- Cincloramphus and Poodytes under both
+# Locustellidae and Acanthizidae, Oryzoborus under both Vangidae and
+# Passerellidae.
+#
+# They are all resolved now, and not by a taxonomic argument: the dedupe
+# collapsed each pair on its own rules -- one by authority id, and
+# Oryzoborus by "both from imports, the larger family keeps it". All three
+# landed on the second-named family. So the placement question these were
+# holding open has been answered by a data signal (family size) rather than by
+# anyone looking at the birds, and that is worth knowing if it is ever
+# re-opened: the choice is recorded in the tree, not justified by it.
+#
+# Kept as an empty set rather than deleted, because the check asserts that
+# whatever is listed here is still duplicated -- so a placement that comes back
+# fails loudly instead of passing on a stale allowance.
+KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = set()
 
 # Cross-kingdom homonyms are NOT a bug and must never be "fixed": these are
 # unrelated organisms that share a binomial. Alfaria minuta is an ant and a
@@ -185,28 +191,15 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     "ALFARIA_MINUTA", "CLAVULINA_FLORIDANA", "CLAVULINA_RUGOSA",
     "DIPLODERMA_POLYGONATUM", "GRAPHIUM_SARPEDON", "HEXAGONIA_BICOLOR",
     "SP_PHYLLOCARDIUM_COMPLANATUM",
-    # 21 added by the BOLD Insecta import (2026-10-09). Confirmed before adding,
-    # which is what the check asks for: all 21 are the same binomial in two
-    # kingdoms, not two names colliding on one id -- there are 28 cross-kingdom
-    # collisions in the tree and zero id collisions.
-    #
-    # Twenty of them are thrips (Thysanoptera) whose genus names coincide with
-    # recently described plant genera, which is why they arrived in one batch:
-    # Aliceathrips, Iranodendrothrips, Kenyattathrips, Kranzithrips,
-    # Masamithrips, Striathrips, Xerophytacolus and Xerophytavorus are all
-    # BOLD insect genera and all plant genera in our holdings. The twenty-first
-    # is Phoenix reclinata -- a palm, and a scale insect.
-    "SP_ACTENOSIGYNES_MANTIQUEIRENSIS", "SP_ALICEATHRIPS_ENGAIUS",
-    "SP_ALICEATHRIPS_MNESTES", "SP_ALICEATHRIPS_PALMERI",
-    "SP_ALICEATHRIPS_SORGHI", "SP_IRANODENDROTHRIPS_KAMALII",
-    "SP_KENYATTATHRIPS_KATARINAE", "SP_KRANZITHRIPS_MAREEBAI",
-    "SP_MASAMITHRIPS_GEIKIEI", "SP_MASAMITHRIPS_MASAMII",
-    "SP_MASAMITHRIPS_MELINUS", "SP_MASAMITHRIPS_TANYOEIKUS",
-    "SP_MASAMITHRIPS_WILLIEI", "SP_MASAMITHRIPS_WYNDHAMI",
-    "SP_PHOENIX_RECLINATA", "SP_STRIATHRIPS_SULCATUS",
-    "SP_TURANIA_PENTODONTALIS", "SP_XEROPHYTACOLUS_CLAVIVERPUS",
-    "SP_XEROPHYTACOLUS_TUBUVERPUS", "SP_XEROPHYTAVORUS_FURCILLATUS",
-    "SP_XEROPHYTAVORUS_RASTRULLUS",
+    # The BOLD import added 21 more here, all thrips whose genus names coincide
+    # with recently described plant genera (Aliceathrips, Masamithrips,
+    # Xerophytacolus, Xerophytavorus and the rest) plus Phoenix reclinata, a
+    # palm that is also a scale insect. All 21 are gone: the plant half of each
+    # pair was one of the in-family duplicates the merge collapsed, so what was
+    # a cross-kingdom homonym became a single record and there is nothing left
+    # to allow. They are named rather than counted, because a *different*
+    # cross-kingdom collision has to fail and a bare count cannot tell it from
+    # a reappearance of one of these.
 }
 
 
