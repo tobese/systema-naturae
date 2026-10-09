@@ -498,9 +498,19 @@ SOURCES = {
         "Cocytius mephisto are all confirmed absent from the index, which is "
         "what a cosmopolitan hawkmoth looks like when Afromoths (Afrotropical) "
         "and the Orthoptera Species File (one order) are the only "
-        "Lepidoptera-adjacent sources applied. Audit its name and authorship "
-        "conventions before importing 71,009 of them: BOLD names follow the "
-        "voucher record, not a traditional checklist"),
+        "Lepidoptera-adjacent sources applied. AUDITED 2026-10-09 with "
+        "scripts/auditChecklistArchive.py: on the 321,784 names both sources "
+        "hold, family placement agrees 90.2% and disagrees on 6,033 (1.9%). "
+        "The disagreements are systematic, not noise -- BOLD raises "
+        "subfamilies we keep inside larger families (Oecanthinae as "
+        "Oecanthidae 1,407, Ascalaphidae as Myrmeleontidae 436, Bembicinae as "
+        "Bembicidae 290, Philanthinae as Philanthidae 151), which is a "
+        "legitimate but different circumscription. Name form is clean: 384,317 "
+        "plain binomials, 20,021 trinomials, 7 hybrids. One real weakness: "
+        "only 116,239 of 489,672 taxa carry authorship (23.7%), so most names "
+        "would arrive unciteable against a later edition. Verdict unchanged -- "
+        "take, then run scripts/dedupeSpeciesAcrossFamilies.py, since the "
+        "curated placement wins over the source's by this project's own rule"),
     "checklistbank-55434": (
         "Global Lepidoptera Index (GLI)", "DOI 10.48580/d49xk",
         "https://www.checklistbank.org/dataset/55434",

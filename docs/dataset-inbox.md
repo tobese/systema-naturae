@@ -112,15 +112,60 @@ naumanni`). Stripping them still left 8,189 real names — the subgenus inflatio
 was real *and* the opening was bigger than the broken measurement showed. Two
 errors, opposite signs, same page.
 
-### BOLD is the largest opening, and it needs an audit before it is applied
+### BOLD is the largest opening, audited 2026-10-09
 
 71,009 names we do not hold, CC BY, 165 of 1,186 families absent. The misses are
 real gaps and not name artefacts — `Ambulyx regia`, `Theretra mercedes` and
 `Cocytius mephisto` are all confirmed absent from the index.
 
-**Before importing:** BOLD's taxonomy is barcode-driven and its spellings follow
-the voucher record, so its name and authorship conventions need a spot-check
-before 71,009 names go in. Audit, then import.
+**The audit is `scripts/auditChecklistArchive.py`, and it answers the question
+overlap cannot.** "We lack it" and "we would put it where the source puts it"
+are different questions. The measurable one is the 321,784 names *both* sources
+hold:
+
+| | |
+|---|---|
+| family placement agrees | **290,384 (90.2%)** |
+| disagrees | **6,033 (1.9%)** |
+| no family on one side | 25,367 |
+
+The disagreements are **systematic, not noise** — BOLD raises subfamilies we
+keep inside larger families:
+
+| ours | BOLD | names |
+|---|---|---|
+| Gryllidae | Oecanthidae | 1,407 |
+| Diapheromeridae | Lonchodidae | 710 |
+| Ascalaphidae | Myrmeleontidae | 436 |
+| Phasmatidae | Lonchodidae | 366 |
+| Crabronidae | Bembicidae / Philanthidae | 290 / 151 |
+| Anthomyiidae | Scathophagidae | 132 |
+| Ethmiidae | Depressariidae | 118 |
+
+A report of the percentage alone would have hidden all seven of those behind one
+number; they are one circumscription difference each, and each is a defensible
+taxonomic act rather than an error. Name form is clean — 384,317 plain binomials,
+20,021 trinomials, **7 hybrids**.
+
+**One real weakness:** only **116,239 of 489,672 taxa carry authorship (23.7%)**.
+Most names would arrive with no authorship, so they cannot be re-identified
+against a later edition of the same source, and no authority id can be derived
+for them. That is a permanent property of the import, not a fixable defect.
+
+**Verdict: take, then dedupe.** The 6,033 disagreements mean roughly 6,000 names
+we already hold would be written into a second family, which is exactly what
+`scripts/dedupeSpeciesAcrossFamilies.py` exists for, and which this project's own
+rule resolves in the right direction: the curated placement wins and the
+taxonomy disagreement is recorded rather than silently taken from the source.
+
+### Two numbers for the same quantity, 11,000 apart
+
+`archiveOverlap.py` says BOLD offers **71,009** names we do not hold;
+`auditChecklistArchive.py` says **82,561**. Both are honest, and the difference
+is what each one counts: the audit includes subspecies and deduplicates on
+`strip_authorship`, while `archiveOverlap` also applies GNparser and
+`bare_name`, collapsing spellings. Quote the stricter figure for an import and
+say which tool produced it — 71,009 is the one that predicts the tree.
 
 ### WCSP stays declined, and now for a second reason
 
