@@ -185,6 +185,28 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     "ALFARIA_MINUTA", "CLAVULINA_FLORIDANA", "CLAVULINA_RUGOSA",
     "DIPLODERMA_POLYGONATUM", "GRAPHIUM_SARPEDON", "HEXAGONIA_BICOLOR",
     "SP_PHYLLOCARDIUM_COMPLANATUM",
+    # 21 added by the BOLD Insecta import (2026-10-09). Confirmed before adding,
+    # which is what the check asks for: all 21 are the same binomial in two
+    # kingdoms, not two names colliding on one id -- there are 28 cross-kingdom
+    # collisions in the tree and zero id collisions.
+    #
+    # Twenty of them are thrips (Thysanoptera) whose genus names coincide with
+    # recently described plant genera, which is why they arrived in one batch:
+    # Aliceathrips, Iranodendrothrips, Kenyattathrips, Kranzithrips,
+    # Masamithrips, Striathrips, Xerophytacolus and Xerophytavorus are all
+    # BOLD insect genera and all plant genera in our holdings. The twenty-first
+    # is Phoenix reclinata -- a palm, and a scale insect.
+    "SP_ACTENOSIGYNES_MANTIQUEIRENSIS", "SP_ALICEATHRIPS_ENGAIUS",
+    "SP_ALICEATHRIPS_MNESTES", "SP_ALICEATHRIPS_PALMERI",
+    "SP_ALICEATHRIPS_SORGHI", "SP_IRANODENDROTHRIPS_KAMALII",
+    "SP_KENYATTATHRIPS_KATARINAE", "SP_KRANZITHRIPS_MAREEBAI",
+    "SP_MASAMITHRIPS_GEIKIEI", "SP_MASAMITHRIPS_MASAMII",
+    "SP_MASAMITHRIPS_MELINUS", "SP_MASAMITHRIPS_TANYOEIKUS",
+    "SP_MASAMITHRIPS_WILLIEI", "SP_MASAMITHRIPS_WYNDHAMI",
+    "SP_PHOENIX_RECLINATA", "SP_STRIATHRIPS_SULCATUS",
+    "SP_TURANIA_PENTODONTALIS", "SP_XEROPHYTACOLUS_CLAVIVERPUS",
+    "SP_XEROPHYTACOLUS_TUBUVERPUS", "SP_XEROPHYTAVORUS_FURCILLATUS",
+    "SP_XEROPHYTAVORUS_RASTRULLUS",
 }
 
 

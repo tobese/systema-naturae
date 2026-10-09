@@ -38,8 +38,12 @@ import zipfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import taxamatch as T  # noqa: E402
 
-ARCHIVES = "/Volumes/MacieExternal/sources/archives"
 TAXASERVE = os.environ.get("TAXASERVE", "").rstrip("/")
+# honours SN_SOURCES_ROOT, so this measures the same archives from a machine
+# that has them at a different root (q-bert keeps its own copy)
+ARCHIVES = os.path.join(
+    os.environ.get("SN_SOURCES_ROOT", "/Volumes/MacieExternal/sources"),
+    "archives")
 ACCEPTED = {"accepted", "provisionally accepted", ""}
 SPECIES_RANKS = {"species", "subspecies"}
 

@@ -12,7 +12,16 @@ import json
 import os
 import sys
 
-ROOT = "/Volumes/MacieExternal/sources"
+# The root is overridable so the tree's tools can run off Macie. This file
+# exists so that *dataset* paths are not hardcoded -- leaving the volume itself
+# hardcoded meant `importColChecklist.py` refused to run anywhere else with
+#
+#     FATAL: /Volumes/MacieExternal/sources/manifest.json not found.
+#
+# ...which reads as "the dataset is unavailable" and is in fact "this machine has
+# a different disk". q-bert (WSL2, 22 cores) indexes the tree and runs importers
+# with SN_SOURCES_ROOT pointing at its own copy.
+ROOT = os.environ.get("SN_SOURCES_ROOT", "/Volumes/MacieExternal/sources")
 MANIFEST = os.path.join(ROOT, "manifest.json")
 
 

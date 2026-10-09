@@ -373,10 +373,10 @@ def main() -> int:
     # `auth_groups`, not `by_authority`: the latter is the unfiltered index and
     # still holds the subspecies and hybrids just excluded, so the guard would
     # rescue one of those and put back what the filter removed.
-    collapsed = [places for groups in auth_groups.values()
-                 for _auth, _key, places in groups]
+    collapsed = [(gauth, gkey, places) for groups in auth_groups.values()
+                 for gauth, gkey, places in groups]
     orphaned = 0
-    for places in collapsed:
+    for gauth, gkey, places in collapsed:
         if len(places) > 1:
             survivors = [(f, s) for f, s in places if s["id"] not in drops[f]]
             if not survivors:

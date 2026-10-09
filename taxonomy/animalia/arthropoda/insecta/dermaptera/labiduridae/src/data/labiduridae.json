@@ -120,6 +120,20 @@
               "lineage": "Neodermaptera > Labiduroidea > Allostethella",
               "children": [],
               "uuid": "ab253439-157b-50c-b88-2cdc8f31bc7514"
+            },
+            {
+              "id": "SP_ALLOSTETHELLA_INSULARIS_ANISYUTKIN_1997",
+              "name": "Allostethella insularis",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Allostethella",
+              "authorship": "Anisyutkin, 1997",
+              "sourceIds": {
+                "checklistbank": "1169792"
+              },
+              "children": [],
+              "uuid": "32a24f5a-336d-5d2-a6d-b31545107ebe58"
             }
           ]
         },
@@ -847,7 +861,8 @@
               "sourceIds": {
                 "col": [
                   "C75M3"
-                ]
+                ],
+                "checklistbank": "1169836"
               },
               "authorityIds": "col:C75M3"
             },
@@ -1140,7 +1155,10 @@
               "subspeciesCount": 0,
               "lineage": "Neodermaptera > Labiduroidea > Labidura",
               "children": [],
-              "uuid": "f593a1fe-04df-5f3-ae2-f9ab34fc59bde9"
+              "uuid": "f593a1fe-04df-5f3-ae2-f9ab34fc59bde9",
+              "sourceIds": {
+                "checklistbank": "505737"
+              }
             },
             {
               "id": "SP_LABIDURA_MINOR_BOESEMAN_1954",
@@ -1195,7 +1213,8 @@
                 ],
                 "col": [
                   "3RJLW"
-                ]
+                ],
+                "checklistbank": "1348777"
               },
               "authorityIds": "col:3RJLW,itis:186021"
             },
@@ -1676,11 +1695,33 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Labiduridae"
+    },
+    {
+      "id": "GENUS_KISELLA",
+      "name": "Kisella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KISELLA_IRENA",
+          "name": "Kisella irena",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kisella",
+          "sourceIds": {
+            "checklistbank": "1325532"
+          },
+          "children": [],
+          "uuid": "fd36df2d-a4bd-504-87f-f210f492f1cc28"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "labiduridae"
     }
   ],
-  "speciesCount": 87,
+  "speciesCount": 89,
   "appSlug": "labiduridae",
   "lineage": "Neodermaptera > Labiduroidea",
-  "genusCount": 10,
+  "genusCount": 16,
   "enrichmentStatus": "empty"
 }

@@ -44,9 +44,19 @@ import sys
 import zipfile
 from datetime import date
 
-STORE = "/Volumes/MacieExternal/sources/pending/families.jsonl"
+# Resolved through scripts/sources.py, which honours SN_SOURCES_ROOT. These two
+# were the last hardcoded /Volumes paths in an importer's write path, and the
+# failure mode was silent and late: importColChecklist.py --apply wrote its
+# refusals to the pending store LAST, so a run on any machine without the
+# Macie volume got all the way through the import and then died with
+# `PermissionError: '/Volumes'` -- after the tree walk, not before it.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sources as _sources  # noqa: E402
+
+_ROOT = _sources.ROOT
+STORE = os.path.join(_ROOT, "pending", "families.jsonl")
 LINK = "portal/data/pending-families.jsonl"
-GBIF = "/Volumes/MacieExternal/sources/archives/gbif-backbone/backbone.zip"
+GBIF = os.path.join(_ROOT, "archives", "gbif-backbone", "backbone.zip")
 GBIF_SOURCE = "gbif-backbone:53147"
 
 TAXONOMIES = (
