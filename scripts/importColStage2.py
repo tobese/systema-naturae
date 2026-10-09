@@ -260,17 +260,11 @@ def main() -> int:
     placed = set()
 
     def canonical(nm):
-        """COL name -> our bare name, or None if it is not binominal."""
-        p = parsed.get(nm) or {}
-        g, s = p.get("genus"), p.get("species")
-        if not s:
-            parts = [x for x in nm.replace("\u00d7", " ").split()
-                     if x.lower() != "x"]
-            if len(parts) >= 2:
-                g, s = parts[0], parts[1]
+        """COL name -> (our bare name, genus), or (None, None) if not binominal."""
+        g, s = taxamatch.bare_binomial(nm, parsed)
         if not g or not s:
             return None, None
-        bare = f"{g} \u00d7{s}" if "\u00d7" in nm else f"{g} {s}"
+        bare = taxamatch.bare_name(nm, parsed)
         for form in (bare, f"{g} {s}", f"{g} \u00d7{s}", f"{g} \u00d7 {s}"):
             if form.lower() in canon or form.lower() in placed:
                 return None, None                      # already held

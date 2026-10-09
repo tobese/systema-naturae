@@ -274,19 +274,14 @@ def main() -> int:
         for genus, entries in genera.items():
             for nm, a, tid in entries:
                 p = canon_names.get(nm) or {}
-                genus_p, sp_p = p.get("genus"), p.get("species")
-                if not sp_p:
-                    # GNparser reduces a hybrid to the genus and the marker:
-                    # "Asplenium x hybridum" canonicalises to "Asplenium x", and
-                    # taking that as the name wrote 1,004 species called
-                    # "Asplenium xx". Recover the epithet from the raw string
-                    # instead, and skip anything still not binominal.
-                    parts = [x for x in nm.replace("\u00d7", " ").split()
-                             if x.lower() != "x"]
-                    if len(parts) >= 2:
-                        genus_p, sp_p = parts[0], parts[1]
-                    else:
-                        sp_p = None
+                # GNparser reads "Asplenium x hybridum" as genus "Asplenium",
+                # species "x" and infraspecies "hybridum", so an epithet that is
+                # only the marker is a lost epithet rather than a name: testing
+                # `if not sp_p` let "Asplenium xx" through, and 368 such nodes
+                # are in the tree. bare_binomial recovers the epithet from the
+                # parse or the raw string, and returns nothing when there is no
+                # epithet to recover.
+                genus_p, sp_p = taxamatch.bare_binomial(nm, canon_names)
                 if not genus_p or not sp_p:
                     skipped_dup += 1
                     continue
@@ -304,7 +299,7 @@ def main() -> int:
                     # with none, and COL sometimes omits the marker entirely.
                     # Three variants of one bug, each caught by the data
                     # contract's duplicate-id check rather than by a test.
-                    g_, s_ = p["genus"], p["species"]
+                    g_, s_ = genus_p, sp_p
                     tight = f"{g_} \u00d7{s_}"
                     spaced = f"{g_} \u00d7 {s_}"
                     if tight.lower() in canon or spaced.lower() in canon:

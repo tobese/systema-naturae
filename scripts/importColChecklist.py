@@ -194,17 +194,11 @@ def main() -> int:
 
     for t in cand:
         nm = t["name"]
-        p = parsed.get(nm) or {}
-        g, s = p.get("genus"), p.get("species")
-        if not s:
-            parts = [x for x in nm.replace("\u00d7", " ").split()
-                     if x.lower() != "x"]
-            if len(parts) >= 2:
-                g, s = parts[0], parts[1]
+        g, s = taxamatch.bare_binomial(nm, parsed)
         if not g or not s:
             nonb += 1
             continue
-        bare = f"{g} \u00d7{s}" if "\u00d7" in nm else f"{g} {s}"
+        bare = taxamatch.bare_name(nm, parsed)
         # Deliberately NOT consulting the canonical index here. It is a snapshot
         # of the tree taken at a point in time, and on ILDIS it is wrong in the
         # expensive direction: it scored 13,347 of 16,371 legume species as

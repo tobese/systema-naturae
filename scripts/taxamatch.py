@@ -31,7 +31,8 @@ import subprocess
 import unicodedata
 
 __all__ = ["damerau_levenshtein", "Taxamatch", "parse_names", "normalize",
-           "phonetize", "authmatch"]
+           "phonetize", "authmatch", "is_hybrid_marker", "bare_binomial",
+           "bare_name"]
 
 
 # --------------------------------------------------------------------------
@@ -393,6 +394,54 @@ def parse_names(names):
             "years": [year] if year else [],
         }
     return res
+
+
+# --------------------------------------------------------------------------
+# Storing a name -- shared by every importer that reads a checklist
+# --------------------------------------------------------------------------
+_HYBRID_MARKERS = {"\u00d7", "x", "\u2715", "\u2a2f"}
+
+
+def is_hybrid_marker(token):
+    """True for a bare hybrid marker: the `\u00d7` in `Rubus \u00d7 adenanthoides`."""
+    return (token or "").strip().lower() in _HYBRID_MARKERS
+
+
+def bare_binomial(name, parsed=None):
+    """(genus, epithet) for a name we can store, or (None, None).
+
+    GNparser reads `Strelitzia \u00d7 kewensis` as genus `Strelitzia`, species `\u00d7`,
+    infraspecies `kewensis`: the marker takes the species slot and the epithet is
+    demoted. So an epithet that is *only* the marker is a lost epithet, not a
+    name. Every importer here tested `if not species`, which is false for
+    `'\u00d7'`, and wrote `Strelitzia \u00d7\u00d7` -- 1,044 such nodes are in the
+    tree, 676 of them from the ChecklistBank importer and 368 from the Catalogue
+    of Life. The epithet comes from the parse's `infraspecies` when GNparser put
+    it there, and from the raw tokens otherwise.
+    """
+    p = (parsed or {}).get(name) or {}
+    g, s, infra = p.get("genus"), p.get("species"), p.get("infraspecies")
+    tokens = [t for t in (name or "").replace("\u00d7", " ").split()
+              if not is_hybrid_marker(t)]
+    if not g and tokens:
+        g = tokens[0]
+    if is_hybrid_marker(s) or not s:
+        rest = tokens[1:] if tokens and tokens[:1] == [g] else tokens
+        s = infra if infra and not is_hybrid_marker(infra) else (
+            rest[0] if rest else None)
+    if not g or not s or is_hybrid_marker(s):
+        return None, None
+    return g, s
+
+
+def bare_name(name, parsed=None):
+    """Our stored spelling of a source name: `Genus \u00d7epithet` for a hybrid,
+    `Genus epithet` otherwise. None when the name is not binominal."""
+    g, s = bare_binomial(name, parsed)
+    if not g or not s:
+        return None
+    hybrid = any(is_hybrid_marker(t) for t in (name or "").split())
+    return f"{g} \u00d7{s}" if hybrid else f"{g} {s}"
 
 
 # --------------------------------------------------------------------------
