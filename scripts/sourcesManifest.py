@@ -736,6 +736,82 @@ SOURCES = {
         "taxonomy question, the same one Tropicos and ScaleNet were "
         "declined over, not a data one. Full species list in "
         "docs/reports/checklistbank-gap-sweep-batch2.json."),
+    "checklistbank-2122": (
+        "EUNIS", "DOI 10.48580/d4k7; version/issued not recorded by "
+        "ChecklistBank (completeness: 0)",
+        "https://www.checklistbank.org/dataset/2122",
+        "CC BY", "assessed",
+        "TAKE, not yet imported. Pasted 2026-10-10 in docs/dataset-inbox.md. "
+        "ChecklistBank's export is a denormalised `taxons.tsv`/`names.tsv` "
+        "pair (plural filenames, flat rank columns, no parent chain), which "
+        "scripts/archiveOverlap.py's reader does not recognise -- measured "
+        "with a one-off join script instead, same strip_authorship + "
+        "GNparser normalisation. 198,814 accepted species across 4,772 "
+        "families, **60,289 (33.8%) not held**, 754 whole families absent "
+        "-- mostly small European invertebrate groups (Abacarus mites, "
+        "Abbreviata nematodes) a global backbone tends to miss. The one "
+        "open question is vintage: ChecklistBank records no issued date "
+        "for this entry, worth checking with the EUNIS project before "
+        "import. Archive on disk at archives/checklistbank-2122/archive.zip."),
+    "checklistbank-127379": (
+        "Australian Faunal Directory (AFD)",
+        "DOI 10.48580/d78hf; version 2022-10-12",
+        "https://www.checklistbank.org/dataset/127379",
+        "CC BY", "assessed",
+        "NOT taken. Pasted 2026-10-10. ChecklistBank types it "
+        "`nomenclatural`, and the export proves why: `name.tsv` "
+        "(scientificName, rank, status, ICZN/ICN code) plus "
+        "`reference.tsv` only -- no `taxon.*` table at all, no "
+        "parent/accepted links, no family. This is the Ozymandias "
+        "nomenclatural layer AFD publishes through ChecklistBank, not "
+        "AFD's actual classification (which lives at "
+        "biodiversity.org.au/afd, not as a ChecklistBank export). Same "
+        "underlying problem as ZooBank (checklistbank-2037) one step "
+        "further -- ZooBank at least had a taxon table to read. Declined "
+        "on data shape, not licence (CC BY) or vintage."),
+    "checklistbank-2026": (
+        "Fauna Europaea (FaEu)", "DOI 10.48580/d4fw; version 2016-09-09",
+        "https://www.checklistbank.org/dataset/2026",
+        "other (unverified)", "assessed",
+        "NOT taken. Pasted 2026-10-10. DwCA with `ignoreHeaderLines=\"0\"` "
+        "(no header row; columns positional per meta.xml) -- read after "
+        "prepending a synthetic header from the field order meta.xml "
+        "declares. 131,672 species, 30.5% (40,120) not held, but "
+        "**97.3% of that miss (39,045 names) already appears in eunis's "
+        "own miss list** (checklistbank-2122) -- the two cover the same "
+        "European fauna and FaEu is the smaller, older, lower-confidence "
+        "half of the overlap. Declined twice over: redundant with eunis, "
+        "which is worth taking instead, and its own licence is recorded "
+        "by ChecklistBank as `other` rather than a named CC term, which "
+        "this project treats as unverified rather than permissive "
+        "regardless (the same standard applied to Parhost/1022, Phyllachorales/1023 "
+        "and Rhytismatales/1025)."),
+    "checklistbank-2262": (
+        "LCVP -- the Leipzig catalogue of vascular plants",
+        "DOI 10.48580/d4q2; version 3.01, issued 2022-11-07",
+        "https://www.checklistbank.org/dataset/2262",
+        "CC BY", "assessed",
+        "NOT YET DECIDED. Pasted 2026-10-10. GBIF's raw upload uses "
+        "namespaced DwC headers (`dwc:taxonID`, not `taxonID`/`ID`) which "
+        "archiveOverlap.py's reader does not recognise as-is -- read "
+        "after stripping the `dwc:`/`col:` prefixes and renaming "
+        "`taxonID` to `ID`. 359,927 accepted species, **173,187 (48.1%) "
+        "not held** -- roughly a third of the tree's entire plantae "
+        "holding (498,325), which is too large to be a clean gap given "
+        "WFO Plant List (CC0, 2026-06, taken, +158,701) is supposed to be "
+        "the current mainstream backbone. LCVP's own abstract says it "
+        "deliberately uses a different generic circumscription than "
+        "POWO/WCVP in places (citing Goeppertia/Calathea and "
+        "Stapelia/Duvalia/Ceropegia by name), which is the BOLD/OTL shape "
+        "of 'raw miss partly disagreement, not data'. A hand spot check "
+        "cuts against a pure-disagreement reading though: Abarema, Aa, "
+        "Goeppertia AND Calathea are all already held as genera (the "
+        "last two both at once), and the specific species checked under "
+        "them were genuinely absent rather than renamed. Needs "
+        "scripts/auditChecklistArchive.py's agree/disagree family-"
+        "placement measurement (the tool BOLD's verdict used) before "
+        "this is a take or a decline. Archive on disk at "
+        "archives/checklistbank-2262/archive.zip."),
     "wikispecies": (
         "Wikispecies (ChecklistBank dataset 314570)",
         "DOI 10.48580/dgx39; version 2026-08-02; "

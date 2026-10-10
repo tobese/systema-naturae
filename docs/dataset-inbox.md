@@ -10,6 +10,86 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Triaged 2026-10-10 — five pastes, one duplicate, one clean take
+
+IRMNG (2007) is the fifth paste and a duplicate: it was triaged 2026-10-05
+and taken (see the fifth-batch table below). Nothing to do.
+
+The other four measured with `scripts/archiveOverlap.py` against `taxaserve`
+(2,531,312 species indexed), authorship stripped and names run through
+GNparser, same method as the 2026-10-09 batch. None of the four ChecklistBank
+exports read as-is -- every one needed a format fix before the shared reader
+could open it, logged here so the next dataset that fails the same way is
+faster to diagnose:
+
+| dataset | problem | fix |
+|---|---|---|
+| LCVP (2262) | GBIF's raw upload uses namespaced headers (`dwc:taxonID`, not `taxonID`/`ID`) | stripped the `dwc:`/`col:` prefixes, renamed `taxonID` to `ID` |
+| AFD (127379) | ColDP export has `name.tsv` + `reference.tsv` only -- **no taxon table at all** | none possible; see below |
+| eunis (2122) | denormalised `taxons.tsv`/`names.tsv` (plural, flat rank columns, no parent chain) -- doesn't match the reader's DwCA/ColDP shapes | one-off join script instead of `archiveOverlap.py` |
+| FaEu (2026) | DwCA with `ignoreHeaderLines="0"` -- **no header row**, columns positional per `meta.xml` | prepended a synthetic header from `meta.xml`'s field order |
+
+| dataset | type | licence | vintage | offered | **not held** | families not held | verdict |
+|---|---|---|---|---|---|---|---|
+| **eunis** (2122) | taxonomic | CC BY | not recorded (completeness 0) | 198,814 species | **60,289 (33.8%)** | 754/4,772 (15.8%) | **take** |
+| LCVP (2262) | taxonomic | CC BY | 2022-11-07, v3.01 | 359,927 species | **173,187 (48.1%)** | 59/564 (10.5%) | **not yet decided** -- see below |
+| AFD (127379) | **nomenclatural** | CC BY | 2022-10-12 | 124,305 (API) | -- | -- | **decline** -- no taxon table |
+| FaEu (2026) | taxonomic | **other** | 2016-09-09 | 131,672 species | 40,120 (30.5%) | 0 recovered | **decline** -- superseded by eunis, see below |
+
+**AFD is a name register, not a checklist.** Its ChecklistBank export is
+`name.tsv` (scientificName, rank, status, `code: ICZN`) and `reference.tsv`
+only -- no `taxon.*` table, no parent/accepted links, no family. That is the
+Ozymandias nomenclatural layer the Australian Faunal Directory publishes
+through ChecklistBank, not AFD's actual classification (which lives at
+`biodiversity.org.au/afd`, not as a ChecklistBank export). `type: nomenclatural`
+turned out to be the same signal it was for ZooBank, one step further: ZooBank
+at least had a taxon table with everything marked `accepted`; AFD has no taxon
+table to read at all. Declined on data shape, not on licence or vintage.
+
+**eunis is the real find.** CC BY, 198,814 accepted species across 4,772
+families, 60,289 of them new -- mostly small, specialist European invertebrate
+groups a global backbone like GBIF/COL/ITIS tends to miss (`Abacarus` mites,
+`Abbreviata` nematodes). 754 whole families absent. The one gap in its own
+metadata: ChecklistBank records no `issued` date and `completeness: 0` for
+this entry, so the vintage is unknown -- worth asking ChecklistBank or the
+EUNIS project directly before importing, the same kind of check that caught
+WCSP's 2017 vintage and Tropicos's 2021 one elsewhere in this document.
+
+**FaEu is eunis's shadow, the same shape as ENA/NCBI.** Checked because both
+cover European fauna and the miss lists looked similar: of FaEu's 40,120
+"not held" names, **39,045 (97.3%) are already in eunis's own miss list.**
+Taking eunis first and then FaEu would add only ~1,075 names beyond what
+eunis already offers. Combined with a 2016 vintage (ten years older than
+eunis) and a licence ChecklistBank records as `other` rather than a named CC
+term -- unverified, not confirmed permissive -- FaEu is declined twice over:
+redundant with the source worth taking, and not cleared to take on its own
+terms regardless.
+
+**LCVP is the one left open, and the number is too large to accept or decline
+without checking what it's made of.** 173,187 "not held" names is roughly a
+third of the species the tree currently holds for the whole plant kingdom
+(498,325), which is implausible as a clean gap given WFO Plant List (CC0,
+2026-06, taken, +158,701 species) was supposed to be the current mainstream
+backbone. LCVP's own abstract says it deliberately uses a *different* generic
+circumscription than POWO/WCVP in places ("splitting genera... or fusing
+them", citing `Goeppertia`/`Calathea` and `Stapelia`/`Duvalia`/`Ceropegia` by
+name) -- which is exactly the shape of the BOLD and OTL cases above, where a
+big raw miss was partly genus-placement disagreement rather than missing
+species. But a spot check cuts against that reading: `Abarema`, `Aa`,
+`Goeppertia` **and** `Calathea` are all already held as genera in our tree
+(the last two both at once, so our plantae holdings are not strictly tied to
+one circumscription either), and the specific species checked
+(`Abarema adenophora`, `Aa nervosa`) were genuinely absent under genera we
+already have -- real species-level gaps, not renamed duplicates, at least for
+those two. Logged as `checklistbank-2262`, status `assessed`, not applied.
+Deciding this properly needs `scripts/auditChecklistArchive.py`'s
+agree/disagree family-placement measurement (the tool BOLD's verdict used),
+not a few names checked by hand.
+
+**xlsx mirror not updated.** `docs/reports/data-sources.xlsx` needs
+`openpyxl`, which is not installed in this environment -- the manifest note
+above asks for both to change together, and only this file did.
+
 ## Evaluated, 2026-10-10 — searching ChecklistBank by gap family, not by paste
 
 Prompted by a pasted link that was a *search*, not a dataset:
