@@ -44,12 +44,17 @@ TAXON_TABLES = ("Taxon.tsv", "taxon.tsv")
 # our name -> the variants seen in the wild
 FIELDS = {
     "id": ("id",),
-    "parent": ("parentid",),
+    "parent": ("parentid", "parentnameusageid"),
     "name_id": ("nameid",),
     "name_phrase": ("namephrase",),
     "scientific_name": ("scientificname",),
-    "authorship": ("authorship", "authorshipstring"),
-    "rank": ("rank",),
+    "authorship": ("authorship", "authorshipstring", "scientificnameauthorship"),
+    "rank": ("rank", "taxonrank"),
+    # a single-table DwCA (no Name.tsv to carry the split) marks synonymy
+    # right on the taxon row instead -- LCVP, not reptile-db/craneflies,
+    # which is why `is_synonym` below checks this before falling back to
+    # `synonym_ids`.
+    "status": ("taxonomicstatus",),
     "genus": ("genus",),
     "species_epithet": ("speificepithet",),
     "infraspecific_epithet": ("infrspecificepithet", "infraspepithet",
@@ -127,7 +132,12 @@ def _norm(h):
 REQUIRED = {
     "name": ("id", "scientific_name", "rank"),
     "synonym": ("name_id",),
-    "taxon": ("id", "parent", "name_id"),
+    # name_id is NOT required here: a single-table DwCA like LCVP has no
+    # Name.tsv to join against and carries scientific_name/rank/authorship/
+    # status directly on the taxon row instead. Both shapes satisfy
+    # ("id", "parent"); load() falls back to the taxon row's own columns
+    # when name_id -- and so `names` -- comes up empty for a given row.
+    "taxon": ("id", "parent"),
 }
 
 
@@ -251,6 +261,52 @@ def _ildis(z):
     return taxa, {}, meta
 
 
+# EUNIS (ChecklistBank 2122) is a third denormalised shape, in the same
+# spirit as ILDIS but split across two joined files instead of one:
+# taxons.tsv (plural -- not `Taxon.tsv`, so `load()` dispatches on it before
+# the generic TAXON_TABLES check ever runs) is the accepted-species register,
+# one row per species with family/order/class/phylum/kingdom as flat columns
+# rather than parent rows to walk, and nameID joining to names.tsv for the
+# scientificName, authorship and rank. No Metadata.json ships in this export.
+EUNIS_TABLES = ("taxons.tsv", "names.tsv")
+EUNIS_CHAIN = ("family", "order", "class", "phylum", "kingdom")
+
+
+def _eunis(z):
+    """(taxa, names, meta) for the EUNIS shape, in the same shape as _col()."""
+    names = {}
+    with z.open("names.tsv") as f:
+        rd = csv.DictReader(
+            io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
+            delimiter="\t")
+        for r in rd:
+            names[r.get("ID")] = {
+                "name": (r.get("scientificName") or "").strip(),
+                "authorship": (r.get("authorship") or "").strip() or None,
+                "rank": (r.get("rank") or "").strip().lower(),
+            }
+    taxa = []
+    with z.open("taxons.tsv") as f:
+        rd = csv.DictReader(
+            io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
+            delimiter="\t")
+        for r in rd:
+            n = names.get(r.get("nameID")) or {}
+            if not n.get("name"):
+                continue
+            t = {
+                "id": r.get("ID"), "parent": None, "name_id": r.get("nameID"),
+                "name": n["name"], "authorship": n.get("authorship"),
+                "rank": n.get("rank") or "species", "is_synonym": False,
+            }
+            for col in EUNIS_CHAIN:
+                v = (r.get(col) or "").strip()
+                if v:
+                    t[f"{col}_name"] = v
+            taxa.append(t)
+    return taxa, {}, {}
+
+
 def _ancestors(par, tid, limit=200):
     out, c, n, seen = [], tid, 0, set()
     while c and n < limit and c not in seen:
@@ -315,6 +371,8 @@ def load(path):
     try:
         if "AcceptedSpecies.tsv" in c.names():
             return _ildis(c)
+        if all(t in c.names() for t in EUNIS_TABLES):
+            return _eunis(c)
         if "NameUsage.tsv" in c.names() or any(
                 m.lower().endswith("taxon.csv") for m in c.namelist()):
             # ColDP arrives in two serialisations: one NameUsage.tsv, or a
@@ -342,15 +400,24 @@ def load(path):
         for t in TAXON_TABLES:
             if t in c.namelist():
                 for r in _rows(c, t, "taxon"):
-                    n = names.get(r["name_id"], {})
+                    n = names.get(r.get("name_id"), {}) if r.get("name_id") else {}
+                    # LCVP (no Name.tsv, no Synonym.tsv) carries scientificName,
+                    # rank, authorship and taxonomicStatus directly on the row
+                    # instead -- the `or r.get(...)` fallbacks are that shape;
+                    # `n` wins where both exist because that was true already.
+                    status = r.get("status")
                     row = {
                         "id": r["id"],
                         "parent": r.get("parent"),
                         "name_id": r.get("name_id"),
-                        "name": r.get("name_phrase") or n.get("name"),
-                        "authorship": n.get("authorship"),
+                        "name": r.get("name_phrase") or n.get("name")
+                                or r.get("scientific_name"),
+                        "authorship": n.get("authorship") or r.get("authorship"),
                         "rank": r.get("rank") or n.get("rank"),
-                        "is_synonym": r.get("name_id") in synonym_ids,
+                        "is_synonym": (
+                            status.strip().lower() not in
+                            ("accepted", "provisionally accepted")
+                            if status else r.get("name_id") in synonym_ids),
                     }
                     for rnk, col in CHAIN_COL.items():
                         v = r.get(col)

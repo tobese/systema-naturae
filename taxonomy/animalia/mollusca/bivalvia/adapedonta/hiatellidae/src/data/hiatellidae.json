@@ -115,7 +115,8 @@
             ],
             "col": [
               "4CG42"
-            ]
+            ],
+            "checklistbank": "60105"
           },
           "authorityIds": "col:4CG42,itis:568050"
         },
@@ -302,7 +303,8 @@
             ],
             "col": [
               "33M44"
-            ]
+            ],
+            "checklistbank": "60102"
           },
           "authorityIds": "col:33M44,itis:81763"
         },
@@ -412,7 +414,8 @@
             ],
             "itis": [
               "81765"
-            ]
+            ],
+            "checklistbank": "60103"
           },
           "authorityIds": "col:3LHV5,itis:81765"
         },
@@ -528,9 +531,11 @@
           "sourceIds": {
             "col": [
               "3LHVK"
-            ]
+            ],
+            "checklistbank": "60104"
           },
-          "authorityIds": "col:3LHVK"
+          "authorityIds": "col:3LHVK",
+          "authorship": "(Linné, 1767)"
         },
         {
           "id": "SP_HIATELLA_TENUIS",
@@ -1482,9 +1487,11 @@
           "sourceIds": {
             "col": [
               "6TMCT"
-            ]
+            ],
+            "checklistbank": "60106"
           },
-          "authorityIds": "col:6TMCT"
+          "authorityIds": "col:6TMCT",
+          "authorship": "(Von Born, 1778)"
         },
         {
           "id": "SP_PANOPEA_INTERMEDIA",
@@ -2181,6 +2188,19 @@
           "children": [],
           "lineage": "Panopea",
           "uuid": "dbda3e55-4cfa-532-8bd-87dc76e0a80491"
+        },
+        {
+          "id": "SP_PANOPEA_GLYCYMERIS_VON_BORN_1778",
+          "name": "Panopea glycymeris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Von Born, 1778)",
+          "sourceIds": {
+            "checklistbank": "9929"
+          },
+          "children": []
         }
       ]
     },
@@ -2284,8 +2304,30 @@
           "uuid": "337f4ce1-04bc-554-90d-b7da4118ee7926"
         }
       ]
+    },
+    {
+      "id": "GENUS_SAXICAVELLA",
+      "name": "Saxicavella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAXICAVELLA_ANGULATA_WOOD_S_1857",
+          "name": "Saxicavella angulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saxicavella",
+          "authorship": "(Wood S., 1857)",
+          "sourceIds": {
+            "checklistbank": "60107"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hiatellidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 131
+  "genusCount": 8,
+  "speciesCount": 133
 }

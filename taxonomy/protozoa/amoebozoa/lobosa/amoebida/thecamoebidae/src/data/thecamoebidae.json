@@ -25,7 +25,8 @@
             "gbif": 9577101
           },
           "uuid": "f8ac6e95-8a6a-5c1-a11-544681a157d9ca",
-          "authorityIds": "gbif:9577101"
+          "authorityIds": "gbif:9577101",
+          "children": []
         },
         {
           "id": "THECAMOEBA_ASTROLOGA",
@@ -41,7 +42,8 @@
             "gbif": 12236883
           },
           "uuid": "753e64f2-3e59-505-a24-e9b1ff7fa26bb1",
-          "authorityIds": "gbif:12236883"
+          "authorityIds": "gbif:12236883",
+          "children": []
         },
         {
           "id": "THECAMOEBA_FOLIOVENANDA",
@@ -57,7 +59,8 @@
             "gbif": 11135152
           },
           "uuid": "0539b07f-e4b6-59e-83f-5aacc4b2239920",
-          "authorityIds": "gbif:11135152"
+          "authorityIds": "gbif:11135152",
+          "children": []
         },
         {
           "id": "THECAMOEBA_HILLA",
@@ -70,10 +73,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4378471
+            "gbif": 4378471,
+            "checklistbank": "40634"
           },
           "uuid": "0566d8fb-cbd9-5d4-afc-56b0f4937df09e",
-          "authorityIds": "gbif:4378471"
+          "authorityIds": "gbif:4378471",
+          "authorship": "Schaeffer, 1926",
+          "children": []
         },
         {
           "id": "THECAMOEBA_MUNDA",
@@ -91,10 +97,13 @@
             ],
             "itis": [
               "615927"
-            ]
+            ],
+            "checklistbank": "40635"
           },
           "uuid": "dbc10c67-b46b-51e-941-f293c238f1c708",
-          "authorityIds": "gbif:4281083,itis:615927"
+          "authorityIds": "gbif:4281083,itis:615927",
+          "authorship": "Schaeffer, 1926",
+          "children": []
         },
         {
           "id": "THECAMOEBA_ORBIS",
@@ -114,10 +123,13 @@
             ],
             "itis": [
               "615926"
-            ]
+            ],
+            "checklistbank": "40636"
           },
           "uuid": "82a51cf5-ca9d-570-820-0fbcb2136bd2b7",
-          "authorityIds": "gbif:3210368,itis:615926"
+          "authorityIds": "gbif:3210368,itis:615926",
+          "authorship": "Schaeffer, 1926",
+          "children": []
         },
         {
           "id": "THECAMOEBA_PULCHRA",
@@ -130,10 +142,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4378469
+            "gbif": 4378469,
+            "checklistbank": "40637"
           },
           "uuid": "469b3bf4-f4ec-566-b12-f703a6b1fc17d5",
-          "authorityIds": "gbif:4378469"
+          "authorityIds": "gbif:4378469",
+          "authorship": "Page, 1977",
+          "children": []
         },
         {
           "id": "THECAMOEBA_QUADRILINEATA",
@@ -149,7 +164,8 @@
             "gbif": 3210369
           },
           "uuid": "28c985ef-4ab1-5d4-80a-be108b0fec6544",
-          "authorityIds": "gbif:3210369"
+          "authorityIds": "gbif:3210369",
+          "children": []
         },
         {
           "id": "THECAMOEBA_VERRUCOSA",
@@ -165,7 +181,8 @@
             "gbif": 11456891
           },
           "uuid": "d44a4cee-1c72-500-9a2-e08e7a652004cd",
-          "authorityIds": "gbif:11456891"
+          "authorityIds": "gbif:11456891",
+          "children": []
         },
         {
           "id": "THECAMOEBA_VUMURTA",
@@ -181,9 +198,34 @@
             "gbif": 12251510
           },
           "uuid": "84f63557-5523-589-99e-fbf751cd782f15",
-          "authorityIds": "gbif:12251510"
+          "authorityIds": "gbif:12251510",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PARVAMOEBA",
+      "name": "Parvamoeba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARVAMOEBA_RUGATA_ROGERSON_1993",
+          "name": "Parvamoeba rugata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parvamoeba",
+          "authorship": "Rogerson, 1993",
+          "sourceIds": {
+            "checklistbank": "40633"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecamoebidae"
     }
-  ]
+  ],
+  "genusCount": 2,
+  "speciesCount": 11
 }

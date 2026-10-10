@@ -188,7 +188,10 @@
           "lineage": "Doliolina",
           "authorship": "Herdman, 1888",
           "children": [],
-          "uuid": "fe07ff01-8e66-58f-9a0-a386729ffa9acc"
+          "uuid": "fe07ff01-8e66-58f-9a0-a386729ffa9acc",
+          "sourceIds": {
+            "checklistbank": "57243"
+          }
         },
         {
           "id": "SP_DOLIOLINA_MUELLERI_KROHN_1852",
@@ -200,6 +203,32 @@
           "authorship": "(Krohn, 1852)",
           "children": [],
           "uuid": "fd80b84b-664e-525-9bc-a35e013a10553b"
+        },
+        {
+          "id": "SP_DOLIOLINA_INTERMEDIUM_NEUMANN",
+          "name": "Doliolina intermedium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Doliolina",
+          "authorship": "Neumann",
+          "sourceIds": {
+            "checklistbank": "57242"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DOLIOLINA_MULLERI_KROHN_1852",
+          "name": "Doliolina mulleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Doliolina",
+          "authorship": "(Krohn, 1852)",
+          "sourceIds": {
+            "checklistbank": "57244"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -223,7 +252,8 @@
           "sourceIds": {
             "col": [
               "377QV"
-            ]
+            ],
+            "checklistbank": "57245"
           },
           "authorityIds": "col:377QV"
         }
@@ -272,7 +302,8 @@
             ],
             "itis": [
               "159640"
-            ]
+            ],
+            "checklistbank": "57247"
           },
           "authorityIds": "col:377R8,itis:159640"
         },
@@ -313,11 +344,59 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Doliolidae"
+    },
+    {
+      "id": "GENUS_ANCHINIA",
+      "name": "Anchinia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANCHINIA_SAVIGNIANIA_RATHKE_1851",
+          "name": "Anchinia savigniania",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anchinia",
+          "authorship": "Rathke, 1851",
+          "sourceIds": {
+            "checklistbank": "57240"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANCHINIA_LAUREOLELLA_HERRICH_SCH_FFER_1854",
+          "name": "Anchinia laureolella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anchinia",
+          "authorship": "Herrich-Schäffer, 1854",
+          "sourceIds": {
+            "checklistbank": "302162"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANCHINIA_DAPHNELLA_DENIS_SCHIFFERM_LLER_1775",
+          "name": "Anchinia daphnella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anchinia",
+          "authorship": "(Denis & Schiffermüller, 1775)",
+          "sourceIds": {
+            "checklistbank": "302165"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "doliolidae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 24,
   "appSlug": "doliolidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Thaliacea",
-  "genusCount": 4
+  "genusCount": 5
 }

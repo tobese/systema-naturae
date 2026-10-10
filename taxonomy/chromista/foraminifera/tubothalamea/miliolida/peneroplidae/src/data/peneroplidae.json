@@ -572,10 +572,12 @@
             ],
             "col": [
               "76H6M"
-            ]
+            ],
+            "checklistbank": "32813"
           },
           "uuid": "5c77887c-9b32-5d1-bad-bec87d92f530e8",
-          "authorityIds": "col:76H6M,gbif:7809313"
+          "authorityIds": "col:76H6M,gbif:7809313",
+          "authorship": "d'Orbigny, 1839"
         },
         {
           "id": "PENEROPLIS_EVOLUTUS",
@@ -907,10 +909,12 @@
             ],
             "itis": [
               "44920"
-            ]
+            ],
+            "checklistbank": "32815"
           },
           "uuid": "d626337a-b389-5a5-bb2-b5ef0b15ab4869",
-          "authorityIds": "col:76H6R,gbif:8126825,itis:44920"
+          "authorityIds": "col:76H6R,gbif:8126825,itis:44920",
+          "authorship": "(Foraskal, 1775)"
         },
         {
           "id": "PENEROPLIS_PLANATUS",
@@ -932,10 +936,12 @@
             ],
             "itis": [
               "44921"
-            ]
+            ],
+            "checklistbank": "32817"
           },
           "uuid": "dccd90de-1d0a-5da-b92-5a3f002cc890b1",
-          "authorityIds": "col:76H73,gbif:7428260,itis:44921"
+          "authorityIds": "col:76H73,gbif:7428260,itis:44921",
+          "authorship": "(Fichtel & Moll, 1798)"
         },
         {
           "id": "PENEROPLIS_POLYSTOMATIUM",
@@ -1181,6 +1187,45 @@
             ]
           },
           "authorityIds": "col:C4KJB"
+        },
+        {
+          "id": "SP_PENEROPLIS_ARBUSCULUS_D_ORBIGNY_1839",
+          "name": "Peneroplis arbusculus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peneroplis",
+          "authorship": "(d'Orbigny, 1839)",
+          "sourceIds": {
+            "checklistbank": "32810"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PENEROPLIS_BRADYI_CUSHMAN_1930",
+          "name": "Peneroplis bradyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peneroplis",
+          "authorship": "Cushman, 1930",
+          "sourceIds": {
+            "checklistbank": "32811"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PENEROPLIS_PROTEUS_D_ORBIGNY_1839",
+          "name": "Peneroplis proteus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peneroplis",
+          "authorship": "d'Orbigny, 1839",
+          "sourceIds": {
+            "checklistbank": "32819"
+          },
+          "children": []
         }
       ]
     },
@@ -1317,6 +1362,19 @@
           },
           "uuid": "26435960-a668-59f-ae2-c629ae9b09fd56",
           "authorityIds": "gbif:9621107"
+        },
+        {
+          "id": "SP_LAEVIPENEROPLIS_KARRERI_WIESNER_1923",
+          "name": "Laevipeneroplis karreri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Laevipeneroplis",
+          "authorship": "(Wiesner, 1923)",
+          "sourceIds": {
+            "checklistbank": "32795"
+          },
+          "children": []
         }
       ]
     },
@@ -2102,10 +2160,12 @@
             ],
             "col": [
               "4Z7YS"
-            ]
+            ],
+            "checklistbank": "32821"
           },
           "uuid": "cac8affe-8a84-583-a5b-0fba032a9bf0ee",
-          "authorityIds": "col:4Z7YS,gbif:8218614"
+          "authorityIds": "col:4Z7YS,gbif:8218614",
+          "authorship": "(Lamarck, 1804)"
         },
         {
           "id": "SPIROLINA_DUDENSA",
@@ -2872,6 +2932,19 @@
             ]
           },
           "authorityIds": "col:CHM5L"
+        },
+        {
+          "id": "SP_COSCINOSPIRA_ARIETINA_BATSCH_1791",
+          "name": "Coscinospira arietina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coscinospira",
+          "authorship": "(Batsch, 1791)",
+          "sourceIds": {
+            "checklistbank": "32794"
+          },
+          "children": []
         }
       ]
     },
@@ -3103,8 +3176,30 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Peneroplidae"
+    },
+    {
+      "id": "GENUS_ARCHAIAS",
+      "name": "Archaias",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAIAS_ANGULATUS_FICHTEL_MOLL_1798",
+          "name": "Archaias angulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaias",
+          "authorship": "(Fichtel & Moll, 1798)",
+          "sourceIds": {
+            "checklistbank": "32792"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peneroplidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 137
+  "genusCount": 16,
+  "speciesCount": 143
 }

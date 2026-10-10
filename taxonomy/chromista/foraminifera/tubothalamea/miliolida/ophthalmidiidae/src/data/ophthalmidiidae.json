@@ -2634,10 +2634,12 @@
             ],
             "itis": [
               "44632"
-            ]
+            ],
+            "checklistbank": "32786"
           },
           "uuid": "129bef8d-9368-536-975-f1e631a6479931",
-          "authorityIds": "col:6B4KN,gbif:8011718,itis:44632"
+          "authorityIds": "col:6B4KN,gbif:8011718,itis:44632",
+          "authorship": "(Brady, 1879)"
         },
         {
           "id": "CORNULOCULINA_INOCCLUSA",
@@ -2861,6 +2863,19 @@
           },
           "uuid": "67e9ab02-a9eb-5a3-b11-b659e99556f8e8",
           "authorityIds": "col:YGF4,gbif:8335685,itis:44633"
+        },
+        {
+          "id": "SP_CORNULOCULINA_BALKWILLI_MACFAYDEN_1939",
+          "name": "Cornuloculina balkwilli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornuloculina",
+          "authorship": "(Macfayden, 1939)",
+          "sourceIds": {
+            "checklistbank": "66262"
+          },
+          "children": []
         }
       ]
     },
@@ -3662,8 +3677,43 @@
           "authorityIds": "col:82HR7,gbif:9808430"
         }
       ]
+    },
+    {
+      "id": "GENUS_SPIROPHTALMIDIUM",
+      "name": "Spirophtalmidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPIROPHTALMIDIUM_ACUTIMARGO_BRADY_1884",
+          "name": "Spirophtalmidium acutimargo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirophtalmidium",
+          "authorship": "(Brady, 1884)",
+          "sourceIds": {
+            "checklistbank": "32788"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPIROPHTALMIDIUM_LONGISCATA_TERQUEM_BERTHELIN_1875",
+          "name": "Spirophtalmidium longiscata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirophtalmidium",
+          "authorship": "(Terquem & Berthelin, 1875)",
+          "sourceIds": {
+            "checklistbank": "32789"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ophthalmidiidae"
     }
   ],
-  "genusCount": 21,
-  "speciesCount": 159
+  "genusCount": 22,
+  "speciesCount": 162
 }

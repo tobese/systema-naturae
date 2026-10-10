@@ -91,10 +91,12 @@
             ],
             "itis": [
               "11124"
-            ]
+            ],
+            "checklistbank": "65906"
           },
           "uuid": "ad409b9f-0189-548-827-c556b6a13dbb68",
-          "authorityIds": "gbif:5423671,itis:11124"
+          "authorityIds": "gbif:5423671,itis:11124",
+          "authorship": "(Grateloup) Kützing, 1843"
         },
         {
           "id": "HALOPTERIS_FUNICULARIS",
@@ -340,8 +342,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stypocaulaceae"
+    },
+    {
+      "id": "GENUS_STYPOCAULON",
+      "name": "Stypocaulon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYPOCAULON_SCOPARIUM_LINNAEUS_K_TZING_1843",
+          "name": "Stypocaulon scoparium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stypocaulon",
+          "authorship": "(Linnaeus) Kützing, 1843",
+          "sourceIds": {
+            "checklistbank": "65907"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stypocaulaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 18
+  "genusCount": 5,
+  "speciesCount": 19
 }

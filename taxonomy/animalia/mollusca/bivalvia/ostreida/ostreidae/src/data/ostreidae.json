@@ -5516,7 +5516,8 @@
             ],
             "itis": [
               "79872"
-            ]
+            ],
+            "checklistbank": "60657"
           },
           "authorityIds": "col:Z6ZW,itis:79872"
         },
@@ -5821,7 +5822,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Crassostrea",
-          "uuid": "8ff20781-58bc-55b-9c2-8d2576e194a5a7"
+          "uuid": "8ff20781-58bc-55b-9c2-8d2576e194a5a7",
+          "authorship": "(Thunberg, 1793)",
+          "sourceIds": {
+            "checklistbank": "60656"
+          }
         },
         {
           "id": "SP_CRASSOSTREA_GIGANTISSIMA",
@@ -6436,6 +6441,19 @@
             ]
           },
           "authorityIds": "col:C8PR3"
+        },
+        {
+          "id": "SP_SACCOSTREA_COMMERCIALIS_IREDALE_ROUGHLEY_1933",
+          "name": "Saccostrea commercialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccostrea",
+          "authorship": "(Iredale & Roughley, 1933)",
+          "sourceIds": {
+            "checklistbank": "60660"
+          },
+          "children": []
         }
       ]
     },
@@ -9699,8 +9717,30 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Ostreidae"
+    },
+    {
+      "id": "GENUS_OSTREOLA",
+      "name": "Ostreola",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSTREOLA_STENTINA_PAYRAUDEAU_1826",
+          "name": "Ostreola stentina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ostreola",
+          "authorship": "(Payraudeau, 1826)",
+          "sourceIds": {
+            "checklistbank": "60659"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ostreidae"
     }
   ],
-  "genusCount": 37,
-  "speciesCount": 597
+  "genusCount": 38,
+  "speciesCount": 599
 }

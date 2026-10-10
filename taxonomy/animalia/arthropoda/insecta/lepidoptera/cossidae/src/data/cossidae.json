@@ -4170,7 +4170,11 @@
               "sourcedFrom": "checklistbank",
               "children": [],
               "lineage": "Dyspessa",
-              "uuid": "4f88d5c3-770c-501-8fa-b353393f153334"
+              "uuid": "4f88d5c3-770c-501-8fa-b353393f153334",
+              "authorship": "(Swinhoe, 1899)",
+              "sourceIds": {
+                "checklistbank": "303770"
+              }
             },
             {
               "id": "SP_DYSPESSA_PEUKERAE",
@@ -4727,7 +4731,11 @@
               "sourcedFrom": "checklistbank",
               "children": [],
               "lineage": "Holcocerus",
-              "uuid": "00371382-2bf8-5e7-9e6-96449c0e475100"
+              "uuid": "00371382-2bf8-5e7-9e6-96449c0e475100",
+              "authorship": "Christoph, 1893",
+              "sourceIds": {
+                "checklistbank": "303780"
+              }
             },
             {
               "id": "SP_HOLCOCERUS_CONSOBRINUS",
@@ -5733,7 +5741,21 @@
                 "checklistbank": "1288512"
               },
               "children": [],
-              "uuid": "a61413c4-7599-52d-8ee-ac9d0d3f8e648f"
+              "uuid": "a61413c4-7599-52d-8ee-ac9d0d3f8e648f",
+              "authorship": "(Bethune-Baker, 1894)"
+            },
+            {
+              "id": "SP_PAROPTA_PARADOXUM_HERRICH_SCH_FFER_1851",
+              "name": "Paropta paradoxum",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Paropta",
+              "authorship": "(Herrich-Schäffer, 1851)",
+              "sourceIds": {
+                "checklistbank": "303776"
+              },
+              "children": []
             }
           ],
           "lineage": "Cossinae"
@@ -17542,6 +17564,19 @@
           "children": [],
           "lineage": "phragmacossia",
           "uuid": "8e96c3fc-aadc-503-94c-3edba1024e51a1"
+        },
+        {
+          "id": "SP_PHRAGMACOSSIA_ALBIDA_ERSCHOFF_1874",
+          "name": "Phragmacossia albida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phragmacossia",
+          "authorship": "(Erschoff, 1874)",
+          "sourceIds": {
+            "checklistbank": "303757"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -19572,7 +19607,8 @@
           "sourceIds": {
             "col": [
               "4CX6H"
-            ]
+            ],
+            "checklistbank": "303779"
           },
           "authorityIds": "col:4CX6H"
         },
@@ -27135,7 +27171,8 @@
             "checklistbank": "752467"
           },
           "children": [],
-          "uuid": "ca7df9a8-8b85-505-b70-09e03d60481a7f"
+          "uuid": "ca7df9a8-8b85-505-b70-09e03d60481a7f",
+          "authorship": "(Püngeler, 1902)"
         },
         {
           "id": "SP_LAMELLOCOSSUS_TEREBRA_SCHIFFERM_LLER_DENIS_1776",
@@ -27658,13 +27695,70 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cossidae"
+    },
+    {
+      "id": "GENUS_STYGOIDES",
+      "name": "Stygoides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYGOIDES_COLCHICUS_HERRICH_SCH_FFER_1851",
+          "name": "Stygoides colchicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stygoides",
+          "authorship": "(Herrich-Schäffer, 1851)",
+          "sourceIds": {
+            "checklistbank": "303763"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STYGOIDES_TRICOLOR_LEDERER_1858",
+          "name": "Stygoides tricolor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stygoides",
+          "authorship": "(Lederer, 1858)",
+          "sourceIds": {
+            "checklistbank": "303765"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cossidae"
+    },
+    {
+      "id": "GENUS_DANIELOSTYGIA",
+      "name": "Danielostygia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DANIELOSTYGIA_PERSEPHONE_REISSER_1962",
+          "name": "Danielostygia persephone",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Danielostygia",
+          "authorship": "Reisser, 1962",
+          "sourceIds": {
+            "checklistbank": "303769"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cossidae"
     }
   ],
-  "speciesCount": 1561,
+  "speciesCount": 1566,
   "appSlug": "cossidae",
   "authorship": "Leach",
   "yearPublished": "1815",
   "lineage": "Cossoidea",
-  "genusCount": 203,
+  "genusCount": 205,
   "enrichmentStatus": "empty"
 }

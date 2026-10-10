@@ -1402,9 +1402,11 @@
           "sourceIds": {
             "col": [
               "VMRZ"
-            ]
+            ],
+            "checklistbank": "202581"
           },
-          "authorityIds": "col:VMRZ"
+          "authorityIds": "col:VMRZ",
+          "authorship": "(Stål, 1859)"
         },
         {
           "id": "SP_CIXIDIA_SHOSHONE",
@@ -1474,7 +1476,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cixidia",
           "children": [],
-          "uuid": "2c1acd12-6462-58e-84e-3859e20a2fd485"
+          "uuid": "2c1acd12-6462-58e-84e-3859e20a2fd485",
+          "authorship": "(Zetterstedt, 1828)",
+          "sourceIds": {
+            "checklistbank": "202576"
+          }
         },
         {
           "id": "SP_CIXIDIA_MAGHREBINA",
@@ -1584,9 +1590,11 @@
           "sourceIds": {
             "col": [
               "VMRR"
-            ]
+            ],
+            "checklistbank": "202577"
           },
-          "authorityIds": "col:VMRR"
+          "authorityIds": "col:VMRR",
+          "authorship": "(Spinola, 1839)"
         },
         {
           "id": "SP_CIXIDIA_LAPPONICA",
@@ -1596,7 +1604,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cixidia",
           "children": [],
-          "uuid": "3b0e651a-004d-546-964-e30f84ec924a3d"
+          "uuid": "3b0e651a-004d-546-964-e30f84ec924a3d",
+          "authorship": "(Zetterstedt, 1828)",
+          "sourceIds": {
+            "checklistbank": "202578"
+          }
         },
         {
           "id": "SP_CIXIDIA_MARGINICOLLIS",
@@ -1606,7 +1618,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cixidia",
           "children": [],
-          "uuid": "4f993c1d-8616-582-8f5-9db0c80a54a50a"
+          "uuid": "4f993c1d-8616-582-8f5-9db0c80a54a50a",
+          "authorship": "(Spinola, 1839)",
+          "sourceIds": {
+            "checklistbank": "202579"
+          }
         },
         {
           "id": "SP_CIXIDIA_OCHROPHARA",
@@ -1626,7 +1642,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cixidia",
           "children": [],
-          "uuid": "d605b341-15bc-563-b56-0a2b817cdeb18d"
+          "uuid": "d605b341-15bc-563-b56-0a2b817cdeb18d",
+          "authorship": "D'Urso & Guglielmino, 1995",
+          "sourceIds": {
+            "checklistbank": "202582"
+          }
         },
         {
           "id": "SP_CIXIDIA_POLIAS",
@@ -1652,7 +1672,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cixidia",
           "children": [],
-          "uuid": "ce41f619-f6bd-56a-b40-73b0dc283e526c"
+          "uuid": "ce41f619-f6bd-56a-b40-73b0dc283e526c",
+          "authorship": "D'Urso & Guglielmino, 1995",
+          "sourceIds": {
+            "checklistbank": "202583"
+          }
         },
         {
           "id": "SP_CIXIDIA_OPACA",
@@ -8214,11 +8238,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "achilidae"
+    },
+    {
+      "id": "GENUS_NEOMENOCRIA",
+      "name": "Neomenocria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOMENOCRIA_ADVENA_SPINOLA_1839",
+          "name": "Neomenocria advena",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neomenocria",
+          "authorship": "(Spinola, 1839)",
+          "sourceIds": {
+            "checklistbank": "202575"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "achilidae"
     }
   ],
-  "speciesCount": 472,
+  "speciesCount": 473,
   "appSlug": "achilidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 142
+  "genusCount": 143
 }

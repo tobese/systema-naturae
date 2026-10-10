@@ -617,7 +617,8 @@
             ],
             "itis": [
               "76873"
-            ]
+            ],
+            "checklistbank": "286409"
           },
           "authorityIds": "col:5D794,itis:76873"
         },
@@ -826,7 +827,8 @@
             ],
             "col": [
               "7FDLW"
-            ]
+            ],
+            "checklistbank": "286426"
           },
           "authorityIds": "col:7FDLW,itis:76865"
         },
@@ -921,7 +923,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "daa22ce1-29db-53d-92a-b153bb39493f45"
+          "uuid": "daa22ce1-29db-53d-92a-b153bb39493f45",
+          "authorship": "Gredler, 1856",
+          "sourceIds": {
+            "checklistbank": "17641"
+          }
         },
         {
           "id": "SP_VALLONIA_EXCENTRICA_STERKI_1893",
@@ -1305,7 +1311,8 @@
             ],
             "col": [
               "7FDN6"
-            ]
+            ],
+            "checklistbank": "286440"
           },
           "authorityIds": "col:7FDN6,itis:76871"
         },
@@ -1683,6 +1690,43 @@
             ]
           },
           "authorityIds": "itis:76864"
+        },
+        {
+          "id": "SP_VALLONIA_ALLAMANICA",
+          "name": "Vallonia allamanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vallonia",
+          "sourceIds": {
+            "checklistbank": "17639"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VALLONIA_DECLIVIS_STERKI_1892",
+          "name": "Vallonia declivis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vallonia",
+          "authorship": "Sterki, 1892",
+          "sourceIds": {
+            "checklistbank": "17640"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VALLONIA_SUEVICA",
+          "name": "Vallonia suevica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vallonia",
+          "sourceIds": {
+            "checklistbank": "17642"
+          },
+          "children": []
         }
       ]
     },
@@ -1710,9 +1754,11 @@
           "sourceIds": {
             "col": [
               "8TS9"
-            ]
+            ],
+            "checklistbank": "286413"
           },
-          "authorityIds": "col:8TS9"
+          "authorityIds": "col:8TS9",
+          "authorship": "(O.F. Müller, 1774)"
         },
         {
           "id": "SP_ACANTHINULA_ANTONINI",
@@ -2032,9 +2078,11 @@
           "sourceIds": {
             "col": [
               "8TSJ"
-            ]
+            ],
+            "checklistbank": "17637"
           },
-          "authorityIds": "col:8TSJ"
+          "authorityIds": "col:8TSJ",
+          "authorship": "Mousson, 1872"
         },
         {
           "id": "SP_ACANTHINULA_STAMPINENSIS",
@@ -2243,9 +2291,11 @@
           "sourceIds": {
             "col": [
               "6YX94"
-            ]
+            ],
+            "checklistbank": "286410"
           },
-          "authorityIds": "col:6YX94"
+          "authorityIds": "col:6YX94",
+          "authorship": "(Jeffreys, 1830)"
         },
         {
           "id": "SP_SPERMODEA_MONAS",
@@ -2264,9 +2314,11 @@
           "sourceIds": {
             "col": [
               "4YK8F"
-            ]
+            ],
+            "checklistbank": "286412"
           },
-          "authorityIds": "col:4YK8F"
+          "authorityIds": "col:4YK8F",
+          "authorship": "(Morelet, 1860)"
         },
         {
           "id": "SP_SPERMODEA_PLICATELLA",
@@ -2355,9 +2407,11 @@
           "sourceIds": {
             "col": [
               "4JHXL"
-            ]
+            ],
+            "checklistbank": "286421"
           },
-          "authorityIds": "col:4JHXL"
+          "authorityIds": "col:4JHXL",
+          "authorship": "(Shuttleworth, 1852)"
         }
       ]
     },
@@ -2385,9 +2439,11 @@
           "sourceIds": {
             "col": [
               "3G438"
-            ]
+            ],
+            "checklistbank": "286417"
           },
-          "authorityIds": "col:3G438"
+          "authorityIds": "col:3G438",
+          "authorship": "(Benoit, 1859)"
         }
       ]
     },
@@ -2810,8 +2866,30 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Valloniidae"
+    },
+    {
+      "id": "GENUS_SPELAEODISCUS",
+      "name": "Spelaeodiscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPELAEODISCUS_TATRICUS_HAZAY_1883",
+          "name": "Spelaeodiscus tatricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spelaeodiscus",
+          "authorship": "Hazay, 1883",
+          "sourceIds": {
+            "checklistbank": "17638"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "valloniidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 145
+  "genusCount": 16,
+  "speciesCount": 149
 }

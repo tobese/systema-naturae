@@ -66,10 +66,12 @@
             ],
             "itis": [
               "708496"
-            ]
+            ],
+            "checklistbank": "133926"
           },
           "uuid": "0aef58a3-94f5-5da-98f-5e62965d56a713",
-          "authorityIds": "gbif:1045040,itis:708496"
+          "authorityIds": "gbif:1045040,itis:708496",
+          "authorship": "J. Sahlberg, 1875"
         },
         {
           "id": "SP_PYTHO_AMERICANUS",
@@ -186,6 +188,32 @@
           },
           "uuid": "ce0e50c4-33fa-509-bdd-bb986a8712c118",
           "authorityIds": "gbif:1045036,itis:708600"
+        },
+        {
+          "id": "SP_PYTHO_KOLWENSIS_SAHLBERG_1833",
+          "name": "Pytho kolwensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pytho",
+          "authorship": "Sahlberg, 1833",
+          "sourceIds": {
+            "checklistbank": "310"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYTHO_DEPRESSUS_LINNAEUS_1767",
+          "name": "Pytho depressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pytho",
+          "authorship": "Linnaeus, 1767",
+          "sourceIds": {
+            "checklistbank": "133925"
+          },
+          "children": []
         }
       ]
     },
@@ -261,8 +289,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Pythidae"
+    },
+    {
+      "id": "GENUS_OSPHYOPLESIUS",
+      "name": "Osphyoplesius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSPHYOPLESIUS_ANOPHTHALMUS_WINKLER_1915",
+          "name": "Osphyoplesius anophthalmus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Osphyoplesius",
+          "authorship": "Winkler, 1915",
+          "sourceIds": {
+            "checklistbank": "133929"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OSPHYOPLESIUS_LOEBLI_ESPA_OL_1975",
+          "name": "Osphyoplesius loebli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Osphyoplesius",
+          "authorship": "Español, 1975",
+          "sourceIds": {
+            "checklistbank": "133930"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pythidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 10
+  "genusCount": 6,
+  "speciesCount": 14
 }

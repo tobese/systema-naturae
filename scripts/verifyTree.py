@@ -191,6 +191,20 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     "ALFARIA_MINUTA", "CLAVULINA_FLORIDANA", "CLAVULINA_RUGOSA",
     "DIPLODERMA_POLYGONATUM", "GRAPHIUM_SARPEDON", "HEXAGONIA_BICOLOR",
     "SP_PHYLLOCARDIUM_COMPLANATUM",
+    # eunis (checklistbank-2122) import, 2026-10-10: Chondracanthus is both a
+    # parasitic copepod genus (animalia) and a red-algae genus (plantae,
+    # Gigartinaceae), and "angustatus Heller, 1865" happens to name a species
+    # in each. Confirmed a genuine homonym, not a collision: the animalia copy
+    # is the copepod (Catalogue of Life), the plantae copy is the alga
+    # (checklistbank/eunis). The same import also added four species of
+    # Oxynoemacheilus (a loach genus, animalia-only) under fungi/Coniocybaceae
+    # -- that WAS a collision, traced to EUNIS's own data mis-joining those
+    # four fish records to a lichen family's kingdom/order/class/phylum
+    # (order literally read "[unassigned] Pulmonata", a gastropod clade,
+    # which is itself the bug showing). Removed from coniocybaceae.json
+    # rather than allow-listed here, the same call made on ITIS's nudibranch
+    # filed under a diatom family (see docs/dataset-inbox.md).
+    "SP_CHONDRACANTHUS_ANGUSTATUS_HELLER_1865",
     # The BOLD import added 21 more here, all thrips whose genus names coincide
     # with recently described plant genera (Aliceathrips, Masamithrips,
     # Xerophytacolus, Xerophytavorus and the rest) plus Phoenix reclinata, a
