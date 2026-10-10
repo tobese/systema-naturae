@@ -490,7 +490,8 @@
             ],
             "col": [
               "VPY6"
-            ]
+            ],
+            "checklistbank": "taicol: 46695"
           },
           "uuid": "a1678803-110c-5a8-bf1-547abab3a61a5f",
           "authorityIds": "col:VPY6,gbif:2620483,mycobank:482996"
@@ -2393,7 +2394,8 @@
             ],
             "col": [
               "VQ2Y"
-            ]
+            ],
+            "checklistbank": "taicol: 46699"
           },
           "uuid": "464c5f71-2434-590-93e-3f9dbdbaa3dbd6",
           "authorityIds": "col:VQ2Y,gbif:2620657,mycobank:294915"
@@ -3708,10 +3710,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6123855
+            "gbif": 6123855,
+            "checklistbank": "taicol: 46704"
           },
           "uuid": "faa08b0d-4b4d-5b8-a27-6f65845da659bf",
-          "authorityIds": "gbif:6123855"
+          "authorityIds": "gbif:6123855",
+          "authorship": "Cooke"
         },
         {
           "id": "CLADOSPORIUM_FOLIORUM",
@@ -5940,7 +5944,8 @@
             ],
             "mycobank": [
               "219238"
-            ]
+            ],
+            "checklistbank": "taicol: 46711"
           },
           "uuid": "31a84a8d-26cc-53a-860-5586ab9a9bb31c",
           "authorityIds": "gbif:3501850,mycobank:219238"
@@ -6824,7 +6829,8 @@
             ],
             "col": [
               "VQ95"
-            ]
+            ],
+            "checklistbank": "taicol: 46712"
           },
           "uuid": "123a6ee5-3bab-5c4-97a-c352ccc11b1712",
           "authorityIds": "col:VQ95,gbif:2620494,mycobank:238857"
@@ -7140,7 +7146,8 @@
             ],
             "col": [
               "VQ9F"
-            ]
+            ],
+            "checklistbank": "taicol: 46713"
           },
           "uuid": "edf27b26-e543-542-8ca-7ceb9088e51edb",
           "authorityIds": "col:VQ9F,gbif:8403664,mycobank:517085"
@@ -8087,7 +8094,8 @@
             ],
             "col": [
               "5Z876"
-            ]
+            ],
+            "checklistbank": "taicol: 46714"
           },
           "uuid": "37310a22-8ebd-599-8a6-ec72a64fce8c67",
           "authorityIds": "col:5Z876,gbif:10742499,mycobank:822226"
@@ -9485,7 +9493,8 @@
             ],
             "mycobank": [
               "285273"
-            ]
+            ],
+            "checklistbank": "taicol: 46718"
           },
           "uuid": "9278365a-35a8-5de-a41-561b6d98ceb838",
           "authorityIds": "gbif:3501858,mycobank:285273"
@@ -9896,7 +9905,8 @@
             ],
             "col": [
               "VQCQ"
-            ]
+            ],
+            "checklistbank": "taicol: 46719"
           },
           "uuid": "5de0e223-a6be-582-a7f-c7873a0cf9107d",
           "authorityIds": "col:VQCQ,gbif:2620664,mycobank:239462"
@@ -11284,6 +11294,19 @@
           "authorship": "(Fresen.) Bayl.Ell.",
           "sourceIds": {
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6032885"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CLADOSPORIUM_BRUHNEI_LINDER_1947",
+          "name": "Cladosporium bruhnei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cladosporium",
+          "authorship": "Linder 1947",
+          "sourceIds": {
+            "checklistbank": "taicol: 46697"
           },
           "children": []
         }
@@ -13472,9 +13495,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cladosporiaceae"
+    },
+    {
+      "id": "GENUS_GRAPHIOPSIS",
+      "name": "Graphiopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GRAPHIOPSIS_CHLOROCEPHALA_FRESENIUS_TRAIL",
+          "name": "Graphiopsis chlorocephala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Graphiopsis",
+          "authorship": "(Fresenius) Trail",
+          "sourceIds": {
+            "checklistbank": "taicol: 47754"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladosporiaceae"
     }
   ],
   "authorship": "A.J. Chalmers & R. G. Archibald",
-  "genusCount": 12,
-  "speciesCount": 536
+  "genusCount": 13,
+  "speciesCount": 538
 }

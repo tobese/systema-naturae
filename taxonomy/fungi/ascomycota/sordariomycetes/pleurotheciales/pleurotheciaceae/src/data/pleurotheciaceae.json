@@ -539,10 +539,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9278023
+            "gbif": 9278023,
+            "checklistbank": "taicol: 51311"
           },
           "uuid": "8f6caad3-bd39-50e-984-9296c2ace41867",
-          "authorityIds": "gbif:9278023"
+          "authorityIds": "gbif:9278023",
+          "authorship": "(Berk. & Curt.) Seifert"
         },
         {
           "id": "STERIGMATOBOTRYS_ELATUS",
@@ -644,7 +646,8 @@
             ],
             "col": [
               "6ZSGL"
-            ]
+            ],
+            "checklistbank": "taicol: 51312"
           },
           "uuid": "a34b6656-88a1-538-86e-058234c33d0182",
           "authorityIds": "col:6ZSGL,gbif:3545731,mycobank:626943"
@@ -1044,7 +1047,8 @@
             ],
             "col": [
               "4KDG7"
-            ]
+            ],
+            "checklistbank": "taicol: 50070"
           },
           "uuid": "81ad73f8-bb67-515-b02-9f22c8b02135d1",
           "authorityIds": "col:4KDG7,gbif:8410455,mycobank:813238"
@@ -1609,9 +1613,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pleurotheciaceae"
+    },
+    {
+      "id": "GENUS_PHAEOISARIA",
+      "name": "Phaeoisaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHAEOISARIA_CLEMATIDIS_FUCKEL_HUGHES",
+          "name": "Phaeoisaria clematidis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeoisaria",
+          "authorship": "(Fuckel) Hughes",
+          "sourceIds": {
+            "checklistbank": "taicol: 49620"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pleurotheciaceae"
     }
   ],
   "authorship": "Réblová & K.A. Seifert",
-  "genusCount": 13,
-  "speciesCount": 60
+  "genusCount": 14,
+  "speciesCount": 61
 }

@@ -332,9 +332,11 @@
           "sourceIds": {
             "col": [
               "6725K"
-            ]
+            ],
+            "checklistbank": "taicol: 63607"
           },
-          "authorityIds": "col:6725K"
+          "authorityIds": "col:6725K",
+          "authorship": "(Matsumura, 1914)"
         },
         {
           "id": "SP_ANIGRUS_HIEMPSAL",
@@ -360,7 +362,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Anigrus",
           "children": [],
-          "uuid": "e430f869-9d7d-55f-8ec-cda254f9b1bf0d"
+          "uuid": "e430f869-9d7d-55f-8ec-cda254f9b1bf0d",
+          "authorship": "(Matsumura, 1914)",
+          "sourceIds": {
+            "checklistbank": "taicol: 63609"
+          }
         },
         {
           "id": "SP_ANIGRUS_TOPARCHA",
@@ -406,6 +412,19 @@
           },
           "children": [],
           "uuid": "5ee40feb-eaec-56a-920-d9e9474e9983ca"
+        },
+        {
+          "id": "SP_ANIGRUS_FREQUENS_MATSUMURA_1914",
+          "name": "Anigrus frequens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anigrus",
+          "authorship": "(Matsumura, 1914)",
+          "sourceIds": {
+            "checklistbank": "taicol: 63608"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -620,9 +639,11 @@
           "sourceIds": {
             "col": [
               "47J44"
-            ]
+            ],
+            "checklistbank": "taicol: 81004"
           },
-          "authorityIds": "col:47J44"
+          "authorityIds": "col:47J44",
+          "authorship": "Woodward, 1957"
         },
         {
           "id": "SP_NISIA_FULIGINOSA",
@@ -668,9 +689,11 @@
           "sourceIds": {
             "col": [
               "47J4L"
-            ]
+            ],
+            "checklistbank": "taicol: 81006"
           },
-          "authorityIds": "col:47J4L"
+          "authorityIds": "col:47J4L",
+          "authorship": "Tsaur, 1989"
         },
         {
           "id": "SP_NISIA_ALBINOTATA",
@@ -813,7 +836,8 @@
             "checklistbank": "969819"
           },
           "children": [],
-          "uuid": "32642675-f638-583-bfb-601d3ffc23bd61"
+          "uuid": "32642675-f638-583-bfb-601d3ffc23bd61",
+          "authorship": "Fennah, 1971"
         },
         {
           "id": "SP_NISIA_NERVOSA",
@@ -1224,9 +1248,11 @@
           "sourceIds": {
             "col": [
               "59ZZF"
-            ]
+            ],
+            "checklistbank": "taicol: 91284"
           },
-          "authorityIds": "col:59ZZF"
+          "authorityIds": "col:59ZZF",
+          "authorship": "(Tsaur , Yang & Wilson, 1986)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1281,9 +1307,11 @@
           "sourceIds": {
             "col": [
               "42BGJ"
-            ]
+            ],
+            "checklistbank": "taicol: 78974"
           },
-          "authorityIds": "col:42BGJ"
+          "authorityIds": "col:42BGJ",
+          "authorship": "Tsaur, Yang & Wilson, 1986"
         },
         {
           "id": "SP_METANIGRUS_GUTTATUS",
@@ -1412,11 +1440,81 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "meenoplidae"
+    },
+    {
+      "id": "GENUS_EPONISIA",
+      "name": "Eponisia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EPONISIA_GUTTULA_MATSUMURA_1914",
+          "name": "Eponisia guttula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eponisia",
+          "authorship": "Matsumura, 1914",
+          "sourceIds": {
+            "checklistbank": "taicol: 71972"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPONISIA_MACULA_TSAUR_YANG_WILSON_1986",
+          "name": "Eponisia macula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eponisia",
+          "authorship": "Tsaur, Yang & Wilson, 1986",
+          "sourceIds": {
+            "checklistbank": "taicol: 71973"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPONISIA_SPLENDIDA_TSAUR_1989",
+          "name": "Eponisia splendida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eponisia",
+          "authorship": "Tsaur, 1989",
+          "sourceIds": {
+            "checklistbank": "taicol: 71974"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "meenoplidae"
+    },
+    {
+      "id": "GENUS_EPONISIELLA",
+      "name": "Eponisiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EPONISIELLA_MATSUMURAI_TSAUR_YANG_WILSON_1986",
+          "name": "Eponisiella matsumurai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eponisiella",
+          "authorship": "Tsaur, Yang & Wilson, 1986",
+          "sourceIds": {
+            "checklistbank": "taicol: 71975"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "meenoplidae"
     }
   ],
-  "speciesCount": 81,
+  "speciesCount": 86,
   "appSlug": "meenoplidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 17
+  "genusCount": 19
 }

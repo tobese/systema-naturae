@@ -8221,7 +8221,8 @@
           "authorship": "Niedbala, 2018",
           "children": [],
           "sourceIds": {
-            "gbif": 10801473
+            "gbif": 10801473,
+            "checklistbank": "taicol: 83871"
           },
           "uuid": "56ebc4ad-b62a-531-bc8-c2cfd33fe4da07",
           "authorityIds": "gbif:10801473"
@@ -8657,7 +8658,10 @@
           "lineage": "phthiracarus",
           "authorship": "Niedbala, 2021",
           "children": [],
-          "uuid": "c2aa4fbf-56bd-576-a38-9aea50b6dfa9c6"
+          "uuid": "c2aa4fbf-56bd-576-a38-9aea50b6dfa9c6",
+          "sourceIds": {
+            "checklistbank": "taicol: 108284"
+          }
         },
         {
           "id": "SP_PHTHIRACARUS_INSULARIS_JACOT_1934",
@@ -16750,11 +16754,46 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phthiracaridae"
+    },
+    {
+      "id": "GENUS_PHTHACARUS",
+      "name": "Phthacarus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHTHACARUS_CLEMENS_AOKI_1963",
+          "name": "Phthacarus clemens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phthacarus",
+          "authorship": "Aoki, 1963",
+          "sourceIds": {
+            "checklistbank": "taicol: 83870"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHTHACARUS_GIBBER_AOKI_1980",
+          "name": "Phthacarus gibber",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phthacarus",
+          "authorship": "(Aoki, 1980)",
+          "sourceIds": {
+            "checklistbank": "taicol: 108283"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phthiracaridae"
     }
   ],
-  "speciesCount": 1181,
+  "speciesCount": 1183,
   "appSlug": "phthiracaridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 15
+  "genusCount": 16
 }

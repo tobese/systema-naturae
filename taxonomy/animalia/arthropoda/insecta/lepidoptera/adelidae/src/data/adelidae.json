@@ -4350,7 +4350,8 @@
               "sourceIds": {
                 "col": [
                   "BTXZB"
-                ]
+                ],
+                "checklistbank": "taicol: 164711"
               },
               "authorityIds": "col:BTXZB"
             },
@@ -5495,7 +5496,11 @@
               "sourcedFrom": "checklistbank",
               "children": [],
               "lineage": "Nemophora",
-              "uuid": "5538bac2-9509-590-a5e-fba07c5e4b3260"
+              "uuid": "5538bac2-9509-590-a5e-fba07c5e4b3260",
+              "authorship": "Hirowatari, 2007",
+              "sourceIds": {
+                "checklistbank": "taicol: 164713"
+              }
             },
             {
               "id": "SP_NEMOPHORA_INSULARIELLA",
@@ -5800,6 +5805,19 @@
               "authorship": "(Eversmann, 1844)",
               "sourceIds": {
                 "checklistbank": "298659"
+              },
+              "children": []
+            },
+            {
+              "id": "SP_NEMOPHORA_LIMENITES_MEYRICK_1914",
+              "name": "Nemophora limenites",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Nemophora",
+              "authorship": "Meyrick, 1914",
+              "sourceIds": {
+                "checklistbank": "taicol: 31507"
               },
               "children": []
             }
@@ -9688,13 +9706,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "adelidae"
+    },
+    {
+      "id": "GENUS_NAMATOPOGON",
+      "name": "Namatopogon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NAMATOPOGON_TAIWANELLA_KOZLOV_2001",
+          "name": "Namatopogon taiwanella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Namatopogon",
+          "authorship": "Kozlov, 2001",
+          "sourceIds": {
+            "checklistbank": "taicol: 31431"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "adelidae"
     }
   ],
-  "speciesCount": 556,
+  "speciesCount": 558,
   "appSlug": "adelidae",
   "authorship": "Bruand",
   "yearPublished": "1851",
   "lineage": "Adeloidea",
-  "genusCount": 7,
+  "genusCount": 8,
   "enrichmentStatus": "empty"
 }

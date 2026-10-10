@@ -1619,10 +1619,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8287492
+            "gbif": 8287492,
+            "checklistbank": "taicol: 44025"
           },
           "uuid": "83c622f9-c213-5a2-a48-401fe3e82f81c2",
-          "authorityIds": "gbif:8287492"
+          "authorityIds": "gbif:8287492",
+          "authorship": "Hust."
         },
         {
           "id": "NEIDIUM_GRANDIS",
@@ -1710,7 +1712,8 @@
             ],
             "itis": [
               "591319"
-            ]
+            ],
+            "checklistbank": "taicol: 44026"
           },
           "uuid": "3b390781-9f98-59f-8b6-514f39cc022b43",
           "authorityIds": "gbif:2633439,itis:591319"
@@ -3634,7 +3637,8 @@
             ],
             "itis": [
               "3311"
-            ]
+            ],
+            "checklistbank": "taicol: 44029"
           },
           "uuid": "c5785870-9469-550-898-0283e2dcc3b6d9",
           "authorityIds": "gbif:7654890,itis:3311"
@@ -4521,6 +4525,19 @@
             ]
           },
           "authorityIds": "itis:3290"
+        },
+        {
+          "id": "SP_NEIDIUM_KOZLOWII_MERESCHK",
+          "name": "Neidium kozlowii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neidium",
+          "authorship": "Mereschk.",
+          "sourceIds": {
+            "checklistbank": "taicol: 44028"
+          },
+          "children": []
         }
       ]
     },
@@ -4985,8 +5002,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "neidiaceae"
+    },
+    {
+      "id": "GENUS_SCOLIOPLEURA",
+      "name": "Scoliopleura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCOLIOPLEURA_TUMIDA_BR_B_EX_K_TZ_RABENH",
+          "name": "Scoliopleura tumida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scoliopleura",
+          "authorship": "(Bréb. ex Kütz.) Rabenh.",
+          "sourceIds": {
+            "checklistbank": "taicol: 45071"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neidiaceae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 278
+  "genusCount": 7,
+  "speciesCount": 280
 }

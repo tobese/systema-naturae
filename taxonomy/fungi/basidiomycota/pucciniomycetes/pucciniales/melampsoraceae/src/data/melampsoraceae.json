@@ -2842,7 +2842,8 @@
             ],
             "mycobank": [
               "300310"
-            ]
+            ],
+            "checklistbank": "taicol: 48718"
           },
           "uuid": "02015fc6-dff0-5ad-910-13e1966b48b097",
           "authorityIds": "gbif:9411413,mycobank:300310"
@@ -3897,6 +3898,19 @@
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6052723"
           },
           "children": []
+        },
+        {
+          "id": "SP_MELAMPSORA_LARICIS_EPITEA_KLEB",
+          "name": "Melampsora laricis-epitea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melampsora",
+          "authorship": "Kleb.",
+          "sourceIds": {
+            "checklistbank": "taicol: 48716"
+          },
+          "children": []
         }
       ],
       "authorship": "Castagne"
@@ -4533,9 +4547,31 @@
         }
       ],
       "authorship": "Léveillé"
+    },
+    {
+      "id": "GENUS_CHNOOPSORA",
+      "name": "Chnoopsora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHNOOPSORA_ITOANA_HIRATS",
+          "name": "Chnoopsora itoana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chnoopsora",
+          "authorship": "Hirats.",
+          "sourceIds": {
+            "checklistbank": "taicol: 46613"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melampsoraceae"
     }
   ],
   "authorship": "Dietel",
-  "genusCount": 2,
-  "speciesCount": 189
+  "genusCount": 3,
+  "speciesCount": 191
 }

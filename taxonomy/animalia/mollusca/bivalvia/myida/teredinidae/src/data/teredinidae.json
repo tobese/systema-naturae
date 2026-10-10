@@ -301,9 +301,11 @@
           "sourceIds": {
             "col": [
               "47YWR"
-            ]
+            ],
+            "checklistbank": "taicol: 81159"
           },
-          "authorityIds": "col:47YWR"
+          "authorityIds": "col:47YWR",
+          "authorship": "(Hedley, 1895)"
         },
         {
           "id": "SP_NOTOTEREDO_KNOXI",
@@ -443,9 +445,11 @@
           "sourceIds": {
             "col": [
               "55F4J"
-            ]
+            ],
+            "checklistbank": "taicol: 89801"
           },
-          "authorityIds": "col:55F4J"
+          "authorityIds": "col:55F4J",
+          "authorship": "(Sivicks, 1928)"
         },
         {
           "id": "SP_TEREDORA_MALLEOLA_TURTON_1822",
@@ -1211,6 +1215,19 @@
             "checklistbank": "102884"
           },
           "children": []
+        },
+        {
+          "id": "SP_TEREDO_FULLERI_CLAPP",
+          "name": "Teredo fulleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teredo",
+          "authorship": "Clapp",
+          "sourceIds": {
+            "checklistbank": "taicol: 89799"
+          },
+          "children": []
         }
       ]
     },
@@ -1434,9 +1451,11 @@
           "sourceIds": {
             "col": [
               "55F5T"
-            ]
+            ],
+            "checklistbank": "taicol: 89802"
           },
-          "authorityIds": "col:55F5T"
+          "authorityIds": "col:55F5T",
+          "authorship": "(Bartsch, 1927)"
         }
       ]
     },
@@ -1786,6 +1805,19 @@
             ]
           },
           "authorityIds": "col:KB2G"
+        },
+        {
+          "id": "SP_BACTRONOPHORUS_PHILIPPINENSIS_BARTSCH_1923",
+          "name": "Bactronophorus philippinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bactronophorus",
+          "authorship": "(Bartsch, 1923)",
+          "sourceIds": {
+            "checklistbank": "taicol: 65110"
+          },
+          "children": []
         }
       ]
     },
@@ -1909,7 +1941,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c41cfd4d-7945-562-84f-23daa58de6d54f"
+          "uuid": "c41cfd4d-7945-562-84f-23daa58de6d54f",
+          "authorship": "(Linnaeus, 1767)",
+          "sourceIds": {
+            "checklistbank": "taicol: 76118"
+          }
         },
         {
           "id": "SP_SUCCINODON_PUTZERI_HUENE_1941",
@@ -2061,9 +2097,11 @@
           "sourceIds": {
             "col": [
               "KKVY"
-            ]
+            ],
+            "checklistbank": "taicol: 65227"
           },
-          "authorityIds": "col:KKVY"
+          "authorityIds": "col:KKVY",
+          "authorship": "(Lamarck, 1801)"
         },
         {
           "id": "SP_BANKIA_BIPENNATA",
@@ -2504,7 +2542,8 @@
             ],
             "col": [
               "KKXT"
-            ]
+            ],
+            "checklistbank": "taicol: 65230"
           },
           "authorityIds": "col:KKXT,itis:81836"
         },
@@ -2804,6 +2843,19 @@
             ]
           },
           "authorityIds": "col:7DM66"
+        },
+        {
+          "id": "SP_UPEROTUS_CLAVUS_GMELIN_1791",
+          "name": "Uperotus clavus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uperotus",
+          "authorship": "(Gmelin, 1791)",
+          "sourceIds": {
+            "checklistbank": "taicol: 91347"
+          },
+          "children": []
         }
       ]
     },
@@ -2911,7 +2963,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "66c44f71-541e-50d-923-b09d782c746af3"
+          "uuid": "66c44f71-541e-50d-923-b09d782c746af3",
+          "authorship": "(Ozaki, 1958)",
+          "sourceIds": {
+            "checklistbank": "taicol: 89472"
+          }
         }
       ]
     },
@@ -2966,8 +3022,52 @@
           "authorityIds": "col:9X82V"
         }
       ]
+    },
+    {
+      "id": "GENUS_AUSTROTEREDO",
+      "name": "Austroteredo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AUSTROTEREDO_PARKSI_BARTSCH_1921",
+          "name": "Austroteredo parksi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Austroteredo",
+          "authorship": "Bartsch, 1921",
+          "sourceIds": {
+            "checklistbank": "taicol: 65011"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "teredinidae"
+    },
+    {
+      "id": "GENUS_COELOTEREDO",
+      "name": "Coeloteredo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COELOTEREDO_MINDANENSIS_BARTSCH_1923",
+          "name": "Coeloteredo mindanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coeloteredo",
+          "authorship": "(Bartsch, 1923)",
+          "sourceIds": {
+            "checklistbank": "taicol: 68318"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "teredinidae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 147
+  "genusCount": 25,
+  "speciesCount": 152
 }

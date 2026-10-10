@@ -1144,10 +1144,12 @@
             ],
             "itis": [
               "46505"
-            ]
+            ],
+            "checklistbank": "taicol: 53502"
           },
           "uuid": "58aae1f3-3b57-5eb-a7c-dbabfa997454e2",
-          "authorityIds": "col:5BR4Y,gbif:5424330,itis:46505"
+          "authorityIds": "col:5BR4Y,gbif:5424330,itis:46505",
+          "authorship": "(L.)"
         },
         {
           "id": "VORTICELLA_CORNUTA",
@@ -3618,10 +3620,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6123731
+            "gbif": 6123731,
+            "checklistbank": "taicol: 53503"
           },
           "uuid": "58bf4fc5-ca37-59b-8cc-1023c595836301",
-          "authorityIds": "gbif:6123731"
+          "authorityIds": "gbif:6123731",
+          "authorship": "Ehrenberg"
         },
         {
           "id": "VORTICELLA_MINIMA",
@@ -3728,10 +3732,12 @@
             ],
             "itis": [
               "46502"
-            ]
+            ],
+            "checklistbank": "taicol: 53504"
           },
           "uuid": "74d39610-17fc-5d4-8ff-15fc5101b9f5ba",
-          "authorityIds": "gbif:9563374,itis:46502"
+          "authorityIds": "gbif:9563374,itis:46502",
+          "authorship": "Ehrenberg"
         },
         {
           "id": "VORTICELLA_MONILIATA",
@@ -3877,10 +3883,12 @@
             ],
             "col": [
               "5BR9T"
-            ]
+            ],
+            "checklistbank": "taicol: 53505"
           },
           "uuid": "84c3300d-cb28-569-861-2ef5a3f42111b9",
-          "authorityIds": "col:5BR9T,gbif:5731090"
+          "authorityIds": "col:5BR9T,gbif:5731090",
+          "authorship": "O. F. Müller"
         },
         {
           "id": "VORTICELLA_NIGRA",
@@ -7039,10 +7047,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6123732
+            "gbif": 6123732,
+            "checklistbank": "taicol: 52414"
           },
           "uuid": "b2bd65a0-21de-547-81c-20b3fee610819c",
-          "authorityIds": "gbif:6123732"
+          "authorityIds": "gbif:6123732",
+          "authorship": "Linne"
         },
         {
           "id": "CARCHESIUM_POLYPINUM",
@@ -9916,8 +9926,52 @@
           "authorityIds": "gbif:10835378"
         }
       ]
+    },
+    {
+      "id": "GENUS_ZOOTHAMNIUM",
+      "name": "Zoothamnium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZOOTHAMNIUM_ARBUSCULA_EHRENBERG_1839",
+          "name": "Zoothamnium arbuscula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zoothamnium",
+          "authorship": "Ehrenberg, 1839",
+          "sourceIds": {
+            "checklistbank": "taicol: 53509"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vorticellidae"
+    },
+    {
+      "id": "GENUS_OPHRYDIUM",
+      "name": "Ophrydium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OPHRYDIUM_VERSATILE_O_F_M_LLER_EHRENBERG",
+          "name": "Ophrydium versatile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ophrydium",
+          "authorship": "(O. F. Müller) Ehrenberg",
+          "sourceIds": {
+            "checklistbank": "taicol: 52987"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vorticellidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 455
+  "genusCount": 14,
+  "speciesCount": 457
 }

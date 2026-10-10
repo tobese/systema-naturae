@@ -261,7 +261,8 @@
           "lineage": "neoribates",
           "authorship": "(Berlese, 1910)",
           "sourceIds": {
-            "gbif": 2193320
+            "gbif": 2193320,
+            "checklistbank": "taicol: 80593"
           },
           "uuid": "147b0d6a-f91c-528-810-c0b195c7bafc09",
           "authorityIds": "gbif:2193320",
@@ -471,7 +472,8 @@
           "lineage": "neoribates",
           "authorship": "Ermilov & Starý, 2017",
           "sourceIds": {
-            "gbif": 9441444
+            "gbif": 9441444,
+            "checklistbank": "taicol: 80594"
           },
           "uuid": "6c4587f0-1f8b-5e0-a25-98a143c22dc9dd",
           "authorityIds": "gbif:9441444",
@@ -884,7 +886,10 @@
           "lineage": "neoribates",
           "authorship": "Hagino, Shimano & Aoki, 2016",
           "uuid": "54f27734-3c14-503-b4b-c2ae90a27a0572",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "taicol: 80592"
+          }
         },
         {
           "id": "SP_NEORIBATES_SPINDLEFORMIS_ERMILOV_ANICHKIN_2012",
@@ -1052,11 +1057,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "parakalummidae"
+    },
+    {
+      "id": "GENUS_NEOKALUMMA",
+      "name": "Neokalumma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOKALUMMA_LAIAE_TSENG_1984",
+          "name": "Neokalumma laiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neokalumma",
+          "authorship": "Tseng, 1984",
+          "sourceIds": {
+            "checklistbank": "taicol: 80455"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parakalummidae"
     }
   ],
-  "speciesCount": 75,
+  "speciesCount": 76,
   "appSlug": "parakalummidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 4
+  "genusCount": 5
 }

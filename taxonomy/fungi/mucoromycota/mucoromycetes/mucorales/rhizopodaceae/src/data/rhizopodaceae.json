@@ -325,11 +325,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 6124176
+            "gbif": 6124176,
+            "checklistbank": "taicol: 50813"
           },
           "uuid": "f5a8def9-7af8-53b-9a7-044d0e9a58046a",
           "authorityIds": "gbif:6124176",
-          "children": []
+          "children": [],
+          "authorship": "Ehrenburg"
         },
         {
           "id": "RHIZOPUS_NIVEUS",
@@ -544,12 +546,69 @@
             "checklistbank": "d7e49e64-f298-40a4-94af-257fe277ed4f"
           },
           "children": []
+        },
+        {
+          "id": "SP_RHIZOPUS_SALEBROSUS_YAMAZAKI",
+          "name": "Rhizopus salebrosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizopus",
+          "authorship": "Yamazaki",
+          "sourceIds": {
+            "checklistbank": "taicol: 50816"
+          },
+          "children": []
         }
       ],
       "authorship": "Ehrenberg"
+    },
+    {
+      "id": "GENUS_AMYLOMYCES",
+      "name": "Amylomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMYLOMYCES_ROUXII_CALMETTE_1892",
+          "name": "Amylomyces rouxii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amylomyces",
+          "authorship": "Calmette 1892",
+          "sourceIds": {
+            "checklistbank": "taicol: 45730"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizopodaceae"
+    },
+    {
+      "id": "GENUS_SPORODINIELLA",
+      "name": "Sporodiniella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPORODINIELLA_UMBELLATA_BOEDIJN",
+          "name": "Sporodiniella umbellata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sporodiniella",
+          "authorship": "Boedijn",
+          "sourceIds": {
+            "checklistbank": "taicol: 51231"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizopodaceae"
     }
   ],
   "authorship": "A.A. Jaczewski",
-  "genusCount": 2,
-  "speciesCount": 24
+  "genusCount": 4,
+  "speciesCount": 27
 }

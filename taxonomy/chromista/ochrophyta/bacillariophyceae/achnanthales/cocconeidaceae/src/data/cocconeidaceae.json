@@ -977,10 +977,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 2630066
+            "gbif": 2630066,
+            "checklistbank": "taicol: 43307"
           },
           "uuid": "d294df14-3639-540-b53-24e89af39b3727",
-          "authorityIds": "gbif:2630066"
+          "authorityIds": "gbif:2630066",
+          "authorship": "Hust."
         },
         {
           "id": "COCCONEIS_BRITANNICA",
@@ -3724,7 +3726,8 @@
             "checklistbank": "320a5fa5-2059-4789-bd27-59737434ca1c"
           },
           "uuid": "e5e7dbd2-cf36-527-b71-0bccda8d689e8d",
-          "authorityIds": "gbif:7890009"
+          "authorityIds": "gbif:7890009",
+          "authorship": "Hantzsch"
         },
         {
           "id": "COCCONEIS_HEYDRICHII",
@@ -6152,10 +6155,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6124806
+            "gbif": 6124806,
+            "checklistbank": "taicol: 43321"
           },
           "uuid": "82fd5878-900c-5c5-93f-ff1d58f82d359a",
-          "authorityIds": "gbif:6124806"
+          "authorityIds": "gbif:6124806",
+          "authorship": "Hantzsch & Grunow"
         },
         {
           "id": "COCCONEIS_PEDICULUS",
@@ -6763,7 +6768,8 @@
             "checklistbank": "2a47b92a-99ad-47e9-b389-0938c3b0bfd7"
           },
           "uuid": "f064cc6b-5788-514-8c0-efbf9446768e7c",
-          "authorityIds": "gbif:9431568"
+          "authorityIds": "gbif:9431568",
+          "authorship": "W.Greg."
         },
         {
           "id": "COCCONEIS_PSEUDONOTATA",
@@ -9274,6 +9280,19 @@
             "checklistbank": "aa030aa8-abca-4e8b-ac3a-f4a3d91aba68"
           },
           "children": []
+        },
+        {
+          "id": "SP_COCCONEIS_HUSTEDTI_KRASSKE",
+          "name": "Cocconeis hustedti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeis",
+          "authorship": "Krasske",
+          "sourceIds": {
+            "checklistbank": "taicol: 43318"
+          },
+          "children": []
         }
       ]
     },
@@ -9483,7 +9502,8 @@
             ],
             "itis": [
               "3625"
-            ]
+            ],
+            "checklistbank": "taicol: 43113"
           },
           "uuid": "4caf61b2-eda9-5c8-a1d-0b6e3f6d58d823",
           "authorityIds": "gbif:7756408,itis:3625"
@@ -9933,8 +9953,30 @@
           "authorityIds": "gbif:12172670"
         }
       ]
+    },
+    {
+      "id": "GENUS_AMPHICOCCONEIS",
+      "name": "Amphicocconeis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMPHICOCCONEIS_DISCULOIDES_HUST_STEFANO_D_MARINO",
+          "name": "Amphicocconeis disculoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphicocconeis",
+          "authorship": "(Hust.) Stefano & D.Marino",
+          "sourceIds": {
+            "checklistbank": "taicol: 44679"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cocconeidaceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 559
+  "genusCount": 11,
+  "speciesCount": 561
 }

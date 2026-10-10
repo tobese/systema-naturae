@@ -1880,7 +1880,8 @@
             ],
             "mycobank": [
               "226961"
-            ]
+            ],
+            "checklistbank": "taicol: 49988"
           },
           "uuid": "15476aa5-944b-54f-9c5-feb5bda61ed4af",
           "authorityIds": "gbif:9269347,mycobank:226961"
@@ -4472,10 +4473,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6123809
+            "gbif": 6123809,
+            "checklistbank": "taicol: 49995"
           },
           "uuid": "1ae05738-979c-5cd-974-c062f217a4172f",
-          "authorityIds": "gbif:6123809"
+          "authorityIds": "gbif:6123809",
+          "authorship": "Speg."
         },
         {
           "id": "PHYSALOSPORA_VACCINII",
@@ -7264,9 +7267,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hyponectriaceae"
+    },
+    {
+      "id": "GENUS_CHAETAPIOSPORA",
+      "name": "Chaetapiospora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHAETAPIOSPORA_RHODODENDRI_TENGWALL_ARX_1952",
+          "name": "Chaetapiospora rhododendri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetapiospora",
+          "authorship": "(Tengwall) Arx 1952",
+          "sourceIds": {
+            "checklistbank": "taicol: 46557"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hyponectriaceae"
     }
   ],
   "authorship": "Petrak",
-  "genusCount": 26,
-  "speciesCount": 282
+  "genusCount": 27,
+  "speciesCount": 283
 }

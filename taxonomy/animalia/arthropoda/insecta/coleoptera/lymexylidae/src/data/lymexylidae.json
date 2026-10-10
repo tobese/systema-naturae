@@ -547,7 +547,8 @@
             ],
             "itis": [
               "708338"
-            ]
+            ],
+            "checklistbank": "taicol: 71369"
           },
           "uuid": "2859117f-24ac-5dc-bd5-a5da694493c28c",
           "authorityIds": "gbif:1034611,itis:708338"
@@ -745,7 +746,8 @@
             ],
             "itis": [
               "708270"
-            ]
+            ],
+            "checklistbank": "taicol: 77863"
           },
           "uuid": "0cd20a3f-2cc8-5c8-a6c-5e0f4706516809",
           "authorityIds": "gbif:1034601,itis:708270"
@@ -825,7 +827,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "lymexylon",
-          "uuid": "77ddd761-9cc0-516-80c-92e34eec010821"
+          "uuid": "77ddd761-9cc0-516-80c-92e34eec010821",
+          "authorship": "Nakane, 1985",
+          "sourceIds": {
+            "checklistbank": "taicol: 77864"
+          }
         }
       ]
     },
@@ -1453,7 +1459,8 @@
             ],
             "itis": [
               "708334"
-            ]
+            ],
+            "checklistbank": "taicol: 86171"
           },
           "uuid": "411dbf74-aaec-5dc-b31-870b86bd298e6c",
           "authorityIds": "gbif:1034597,itis:708334"
@@ -1489,8 +1496,43 @@
           "authorityIds": "gbif:1034617,itis:708324"
         }
       ]
+    },
+    {
+      "id": "GENUS_ARRACTOERUS",
+      "name": "Arractoerus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARRACTOERUS_NIPPONICUS_NAKANE_1984",
+          "name": "Arractoerus nipponicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arractoerus",
+          "authorship": "(Nakane, 1984)",
+          "sourceIds": {
+            "checklistbank": "taicol: 64452"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARRACTOERUS_MONTICOLA_KUROSAWA_1985",
+          "name": "Arractoerus monticola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arractoerus",
+          "authorship": "(Kurosawa, 1985)",
+          "sourceIds": {
+            "checklistbank": "taicol: 64451"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lymexylidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 66
+  "genusCount": 14,
+  "speciesCount": 68
 }

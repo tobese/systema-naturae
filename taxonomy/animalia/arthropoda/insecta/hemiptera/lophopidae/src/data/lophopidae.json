@@ -217,9 +217,11 @@
           "sourceIds": {
             "col": [
               "6F32Q"
-            ]
+            ],
+            "checklistbank": "taicol: 71356"
           },
-          "authorityIds": "col:6F32Q"
+          "authorityIds": "col:6F32Q",
+          "authorship": "Walker, 1862"
         },
         {
           "id": "SP_ELASMOSCELIS_SPINIFER",
@@ -786,7 +788,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Lophops",
           "children": [],
-          "uuid": "da6cd5b2-d255-513-90a-ecd252f9a95831"
+          "uuid": "da6cd5b2-d255-513-90a-ecd252f9a95831",
+          "authorship": "(Kirby,1891)",
+          "sourceIds": {
+            "checklistbank": "taicol: 77537"
+          }
         },
         {
           "id": "SP_LOPHOPS_KWAZULU",
@@ -1947,11 +1953,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lophopidae"
+    },
+    {
+      "id": "GENUS_RIDESA",
+      "name": "Ridesa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RIDESA_TORTRICIFORMIS_SCHUMACHER_1915",
+          "name": "Ridesa tortriciformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ridesa",
+          "authorship": "Schumacher, 1915",
+          "sourceIds": {
+            "checklistbank": "taicol: 86504"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophopidae"
     }
   ],
-  "speciesCount": 104,
+  "speciesCount": 105,
   "appSlug": "lophopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 40
+  "genusCount": 41
 }

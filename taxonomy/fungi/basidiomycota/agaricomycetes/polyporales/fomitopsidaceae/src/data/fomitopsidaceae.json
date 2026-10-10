@@ -736,10 +736,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6124384
+            "gbif": 6124384,
+            "checklistbank": "taicol: 47510"
           },
           "uuid": "11d58f2f-ce11-5a8-9c0-161394a43dce71",
-          "authorityIds": "gbif:6124384"
+          "authorityIds": "gbif:6124384",
+          "authorship": "(Fr.) Imaz."
         },
         {
           "id": "FOMITOPSIS_PINICOLA",
@@ -1221,7 +1223,8 @@
             ],
             "mycobank": [
               "314182"
-            ]
+            ],
+            "checklistbank": "taicol: 47514"
           },
           "uuid": "a1e28f2c-2094-5a7-bee-304cc67f0474e8",
           "authorityIds": "gbif:11254117,mycobank:314182"
@@ -2595,7 +2598,8 @@
             ],
             "col": [
               "F47L"
-            ]
+            ],
+            "checklistbank": "taicol: 45777"
           },
           "uuid": "bf1508d0-c7ba-5b6-a7e-3477da4d8e177d",
           "authorityIds": "col:F47L,gbif:3362309,mycobank:443538"
@@ -3387,7 +3391,8 @@
             ],
             "col": [
               "F49Q"
-            ]
+            ],
+            "checklistbank": "taicol: 45779"
           },
           "uuid": "52fba557-d18f-5d0-a80-db4ff864bbe98d",
           "authorityIds": "col:F49Q,gbif:3362295,mycobank:459617"
@@ -7573,7 +7578,8 @@
             ],
             "col": [
               "NFX8"
-            ]
+            ],
+            "checklistbank": "taicol: 46231"
           },
           "uuid": "0de73e76-526c-57c-af2-ae584794ebc737",
           "authorityIds": "col:NFX8,gbif:9745312,mycobank:627170"
@@ -10014,9 +10020,66 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "fomitopsidaceae"
+    },
+    {
+      "id": "GENUS_MELANOPORIA",
+      "name": "Melanoporia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELANOPORIA_CASTANEA_IMAZEKI_T_HATT_RYVARDEN_1994",
+          "name": "Melanoporia castanea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melanoporia",
+          "authorship": "(Imazeki) T. Hatt. & Ryvarden 1994",
+          "sourceIds": {
+            "checklistbank": "taicol: 48735"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELANOPORIA_NIGRA_BERK_MURRILL_1907",
+          "name": "Melanoporia nigra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melanoporia",
+          "authorship": "(Berk.) Murrill 1907",
+          "sourceIds": {
+            "checklistbank": "taicol: 48736"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fomitopsidaceae"
+    },
+    {
+      "id": "GENUS_SPOROTRICHUM",
+      "name": "Sporotrichum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPOROTRICHUM_AURANTIACUM_BULL_FR_1832",
+          "name": "Sporotrichum aurantiacum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sporotrichum",
+          "authorship": "(Bull.) Fr. 1832",
+          "sourceIds": {
+            "checklistbank": "taicol: 51242"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fomitopsidaceae"
     }
   ],
   "authorship": "Jülich",
-  "genusCount": 55,
-  "speciesCount": 438
+  "genusCount": 57,
+  "speciesCount": 441
 }
