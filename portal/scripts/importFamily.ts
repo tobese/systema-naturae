@@ -2,6 +2,8 @@ import { readFileSync, writeFileSync, rmSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
+import { createHash } from "crypto";
+import { resolveFamilyFile } from "./lib/familyPath.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../..");
@@ -33,6 +35,8 @@ interface FamilyNode {
   speciesCount: number;
   className?: string;
   orderName?: string;
+  kingdom?: string;
+  phylum?: string;
 }
 
 interface GenusNode {
@@ -48,12 +52,14 @@ interface GenusNode {
 
 function findFamily(slug: string): FamilyNode | null {
   const tax = JSON.parse(readFileSync(resolve(portalRoot, "data/taxonomy.json"), "utf-8"));
-  let cls = "", ord = "";
+  let kdm = "", phy = "", cls = "", ord = "";
   function walk(n: Record<string, unknown>): FamilyNode | null {
+    if (n.rank === "KINGDOM") kdm = (n.name as string).toLowerCase();
+    if (n.rank === "PHYLUM") phy = (n.name as string).toLowerCase();
     if (n.rank === "CLASS") cls = (n.name as string).toLowerCase();
     if (n.rank === "ORDER" && n.name) ord = (n.name as string).toLowerCase();
     if (n.rank === "FAMILY" && (n as Record<string, string>).appSlug === slug) {
-      return { ...n as unknown as FamilyNode, className: cls, orderName: ord };
+      return { ...n as unknown as FamilyNode, kingdom: kdm, phylum: phy, className: cls, orderName: ord };
     }
     for (const c of (n.children ?? []) as Record<string, unknown>[]) {
       const r = walk(c);
@@ -65,7 +71,13 @@ function findFamily(slug: string): FamilyNode | null {
 }
 
 function readDataFile(family: FamilyNode): { data: Record<string, unknown>; species: Species[]; existingNames: Set<string>; existingLineages: Set<string>; genera: GenusNode[] } {
-  const path = resolve(root, family.className!, family.orderName!, family.appSlug, "src/data", `${family.appSlug}.json`);
+  const { file: path } = resolveFamilyFile(root, {
+    kingdom: family.kingdom!,
+    phylum: family.phylum,
+    cls: family.className,
+    ord: family.orderName,
+    slug: family.appSlug,
+  });
   if (!existsSync(path)) return { data: {}, species: [], existingNames: new Set(), existingLineages: new Set(), genera: [] };
   const data = JSON.parse(readFileSync(path, "utf-8")) as Record<string, unknown>;
   const genera: GenusNode[] = [];
@@ -189,6 +201,8 @@ function appendSpecies(data: Record<string, unknown>, newSpecies: Species[], fam
     lineageMap.get(key)!.push(s);
   }
 
+  const familyCommonName = family.commonName || family.name.toLowerCase();
+
   for (const [lineage, spp] of lineageMap) {
     // Check if a genus with this lineage already exists
     const gen = spp[0].name.split(" ")[0];
@@ -199,7 +213,7 @@ function appendSpecies(data: Record<string, unknown>, newSpecies: Species[], fam
         id: genusId,
         name: gen,
         rank: "GENUS",
-        description: `${gen} — a genus of ${family.commonName.toLowerCase()}.`,
+        description: `${gen} — a genus of ${familyCommonName}.`,
         lineage,
         children: [],
       };
@@ -209,6 +223,10 @@ function appendSpecies(data: Record<string, unknown>, newSpecies: Species[], fam
     for (const s of spp) {
       if (!s.id) s.id = formatId(s.name);
       s.rank = "SPECIES";
+      s.sourcedFrom = "ollama";
+      if (!s.uuid) {
+        s.uuid = createHash("sha1").update(`ollama:${s.id}`).digest("hex").replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, "$1-$2-$3-$4-$5");
+      }
       // Check if name already exists in this genus
       if (!genus.children.some(ex => ex.name === s.name)) {
         genus.children.push(s);
@@ -272,7 +290,11 @@ async function main() {
   const newSpecies: Species[] = [];
   const activeExistingNames = new Set(existingNames);
 
-  console.log(`📦 ${family.name} (${family.className}/${family.orderName}/${family.appSlug})`);
+  const classLabel = family.className?.charAt(0).toUpperCase() + family.className?.slice(1) || "";
+  const orderLabel = family.orderName?.charAt(0).toUpperCase() + family.orderName?.slice(1) || "";
+  const commonNameLabel = family.commonName || family.name;
+
+  console.log(`📦 ${family.name} (${classLabel}/${orderLabel}/${family.appSlug})`);
   console.log(`   ${currentCount}/${family.speciesCount} species — gap=${gap}, generating ${totalToGenerate} in chunks of ${CHUNK_SIZE}`);
   console.log();
 
@@ -286,11 +308,14 @@ async function main() {
       ? `~${currentCount + newSpecies.length} species across ${genera.length} genera`
       : genera.map(g => `${g.name} (${g.children.length + newSpecies.filter(s => s.name.startsWith(g.name)).length} spp)`).join(", ");
 
-    const prompt = `Generate exactly ${chunkNum} NEW, distinct, real species for ${family.name} (${family.commonName}), Order ${family.orderName}, Class ${family.className}.
+    // Limit lineages in prompt to avoid oversized payload
+    const lineageList = [...existingLineages].slice(0, 50).join(", ") || "none";
+
+    const prompt = `Generate exactly ${chunkNum} NEW, distinct, real species for ${family.name} (${commonNameLabel}), Order ${orderLabel}, Class ${classLabel}.
 Do NOT repeat any existing species or species generated in previous steps.
 
 ${isLarge ? `Family has ${currentCount + newSpecies.length}/${family.speciesCount} species.` : `Existing genera: ${genusSummary}`}
-Existing lineages: ${[...existingLineages].join(", ") || "none"}
+Existing lineages (sample): ${lineageList}
 Target total: ${family.speciesCount}
 
 Return a JSON array where each object has:
@@ -368,7 +393,13 @@ Exactly ${chunkNum} species, valid JSON only. Use genera not yet listed to maxim
   appendSpecies(data, newSpecies, family);
 
   // Write file
-  const outPath = resolve(root, family.className!, family.orderName!, family.appSlug, "src/data", `${family.appSlug}.json`);
+  const { file: outPath } = resolveFamilyFile(root, {
+    kingdom: family.kingdom!,
+    phylum: family.phylum,
+    cls: family.className,
+    ord: family.orderName,
+    slug: family.appSlug,
+  });
   writeFileSync(outPath, JSON.stringify(data, null, 2) + "\n");
   console.log(`✅ Wrote ${newSpecies.length} species to ${outPath}`);
 
