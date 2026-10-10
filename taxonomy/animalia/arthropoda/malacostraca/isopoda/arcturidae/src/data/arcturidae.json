@@ -614,7 +614,8 @@
           "sourceIds": {
             "col": [
               "CCS4N"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752763"
           },
           "authorityIds": "col:CCS4N"
         },
@@ -4264,11 +4265,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "arcturidae"
+    },
+    {
+      "id": "GENUS_ARCTURIDAE",
+      "name": "Arcturidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCTURIDAE_INCERTAE_HASWELL_1881",
+          "name": "Arcturidae incertae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arcturidae",
+          "authorship": "Haswell, 1881",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:291381"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arcturidae"
     }
   ],
-  "speciesCount": 219,
+  "speciesCount": 220,
   "appSlug": "arcturidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 26
+  "genusCount": 27
 }

@@ -1189,3 +1189,4 @@ Decide before starting:
   graph already has images per node for a large share of species, so this may be
   a better image *source* than an icon set, and that is a bigger prize than the
   icons.
+- Stop tracking 5 derived/stray files in git and strip them from history: `portal/data/species_id_map.parquet` (63.7MB, same category as already-gitignored `species.parquet`), `portal/data/mycobank-species.jsonl` (59.2MB, derived from MBList.xlsx), `portal/data/description-lookup-gbif.jsonl` (30.4MB) and `description-lookup.jsonl` (25.4MB) (enrichment caches), and `portal/profiles/full-run.trace.json.json.gz` (8.8MB, a stray one-off profiling trace from 2026-07-03). Same treatment as sanity-queue.json/MBList.xlsx just stripped on 2026-10-10: gitignore + git-filter-repo + force-push. Also watch `portal/data/gbif-cache-aves.json` (94.7MB) and `gbif-cache-mammalia.json` (96.2MB) — within 6MB of GitHub's 100MB hard limit already.

@@ -165,13 +165,30 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
             i_auth = ix.get("authorship")
             i_link = ix.get("link")
             i_ref = ix.get("referenceID")
+            # The World Spider Catalog (56185) leaves col:scientificName empty
+            # on every row and expects the reader to build it from the parts
+            # instead -- genericName (which it also overloads for the bare
+            # name at ranks above genus, e.g. a family row's genericName is
+            # "Bemmeridae") plus specificEpithet/infraspecificEpithet for
+            # species and below. uninomial exists in the header but was empty
+            # on every row sampled; included anyway since it's the term ColDP
+            # actually defines for this.
+            i_uni = ix.get("uninomial")
+            i_gen = ix.get("genericName")
+            i_sp = ix.get("specificEpithet")
+            i_isp = ix.get("infraspecificEpithet")
             for row in rd:
                 if len(row) <= i_nm or row[i_st] not in accepted:
                     continue
                 t = row[i_id]
                 par[t] = row[i_par]
                 rank[t] = norm_rank(row[i_rank])
-                name[t] = row[i_nm]
+                nm = row[i_nm]
+                if not nm:
+                    parts = [row[i] for i in (i_uni, i_gen, i_sp, i_isp)
+                             if i is not None and len(row) > i and row[i]]
+                    nm = " ".join(parts)
+                name[t] = nm
                 if want_authorship:
                     e = {}
                     if i_auth is not None and len(row) > i_auth:
