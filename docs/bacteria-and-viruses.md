@@ -162,15 +162,22 @@ on the record without being fetched:
 | `ictv-msl` | registered, **not downloaded** | the virus authority; xlsx, and nothing here reads xlsx yet |
 | `wikidata-species` | downloaded and assessed | 1,811,989 new species overall, but the same 17 clades, so it does not help the rank question |
 
-**`wikidata-species`'s sidecar tables are not held by this hold either**,
-re-checked 2026-10-10. `VernacularName.tsv`, `Media.tsv` and
-`Distribution.tsv` in the same archive carry real content —
-236,487 / 340,979 / 103,221 distinct taxa respectively — that the
-species-count measurement above never looked at. Enrichment only needs
-species we already hold, which is orthogonal to the bacteria-and-viruses
-rank question, so this does not need to wait for the hold to lift. See the
-`wikidata-species` entry in `scripts/sourcesManifest.py` for the numbers;
-not yet measured is how much of that is on species actually in the tree.
+**`wikidata-species`'s sidecar tables are not held by this hold either.**
+Measured against the held tree 2026-10-10 (joined, not just counted):
+
+| sidecar | archive taxa | held in tree | already covered | **gap** |
+|---|---|---|---|---|
+| Media.tsv → image | 340,025 | 192,847 | 110,224 | 82,623 (but 99.75% of rows carry no licence string) |
+| VernacularName.tsv → commonName (en/blank) | 95,067 | 70,935 | 36,620 | **34,315** (clean; bigger than the 23,287 the applied GBIF Backbone pass filled) |
+| Distribution.tsv → continents | 103,213 | 66,815 | 35,043 | 31,772 (84% free text needing resolution, 16% ISO-mappable now) |
+
+Enrichment only needs species we already hold, which is orthogonal to the
+bacteria-and-viruses rank question, so none of this needs to wait for the
+hold to lift. See the `wikidata-species` entry in
+`scripts/sourcesManifest.py` for the full breakdown and caveats. Vernacular
+names are the clear first pick: the largest clean gap, no licence problem,
+and the same safety pattern as the already-applied GBIF Backbone importer
+should carry over directly. Not yet done: writing that importer.
 
 ## Related
 
