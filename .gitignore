@@ -75,4 +75,13 @@ portal/public/data/book/
 portal/data/non-english-descriptions.jsonl
 portal/data/commons-credits.jsonl
 portal/data/inat-fetch-state.json
+
+# Stripped from history 2026-10-10 (exceeded GitHub's 100MB hard limit and
+# were blocking every push since). Both regenerable/downloaded, never meant
+# to be versioned: sanity-queue.json is a scan snapshot
+# (python3 scripts/sanity_scan.py taxonomy --write), MBList.xlsx is the raw
+# MycoBank download (mycobank.org/Images/MBList.zip) that builds the
+# already-gitignored mycobank-index.json.
+portal/data/sanity-queue.json
+portal/data/MBList.xlsx
 ~$*
