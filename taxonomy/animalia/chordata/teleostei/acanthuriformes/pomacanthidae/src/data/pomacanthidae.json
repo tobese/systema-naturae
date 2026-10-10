@@ -879,7 +879,8 @@
           "sourceIds": {
             "itis": [
               "610475"
-            ]
+            ],
+            "checklistbank": "20ffeb81eeab4e4db95fe169eb6a54d4"
           },
           "authorityIds": "itis:610475"
         },
@@ -1008,7 +1009,8 @@
             ],
             "itis": [
               "610504"
-            ]
+            ],
+            "checklistbank": "2556b003f7384e95847d12fd825b2cd4"
           },
           "uuid": "d627f832-e94f-517-9f7-fabb50a590b8ab",
           "authorityIds": "col:TC75,gbif:177716293,gbif:2396582,itis:610504",
@@ -2470,11 +2472,33 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pomacanthidae"
+    },
+    {
+      "id": "GENUS_PARACENTROPYGE",
+      "name": "Paracentropyge",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARACENTROPYGE_MULTIFASCIATA_SMITH_RADCLIFFE_1911",
+          "name": "Paracentropyge multifasciata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracentropyge",
+          "authorship": "(Smith & Radcliffe, 1911)",
+          "sourceIds": {
+            "checklistbank": "a8a895dc831442ccb87c5866bc78799a"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pomacanthidae"
     }
   ],
-  "speciesCount": 103,
+  "speciesCount": 104,
   "appSlug": "pomacanthidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 8
+  "genusCount": 9
 }

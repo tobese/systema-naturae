@@ -34,7 +34,8 @@
             ]
           },
           "uuid": "e466634a-a47f-5f5-89c-b26372bf008e78",
-          "authorityIds": "col:46KFP,gbif:2599670,mycobank:148900"
+          "authorityIds": "col:46KFP,gbif:2599670,mycobank:148900",
+          "children": []
         },
         {
           "id": "NEOLECTA_FLAVOVIRESCENS",
@@ -61,7 +62,8 @@
             ]
           },
           "uuid": "07fe594e-2af1-519-a46-0f3af83caa8173",
-          "authorityIds": "col:46KFQ,gbif:2599677,mycobank:149659"
+          "authorityIds": "col:46KFQ,gbif:2599677,mycobank:149659",
+          "children": []
         },
         {
           "id": "NEOLECTA_IRREGULARIS",
@@ -85,10 +87,12 @@
             ],
             "col": [
               "46KFR"
-            ]
+            ],
+            "checklistbank": "271b868c-8cf2-449f-89fa-c57934a3dbc3"
           },
           "uuid": "9270bb89-4f56-5dd-866-b0556b8c1dd7bd",
-          "authorityIds": "col:46KFR,gbif:2599671,mycobank:318621"
+          "authorityIds": "col:46KFR,gbif:2599671,mycobank:318621",
+          "children": []
         },
         {
           "id": "NEOLECTA_VITELLINA",
@@ -115,7 +119,8 @@
             ]
           },
           "uuid": "bf16c484-fd6e-542-bd8-60aec41a968479",
-          "authorityIds": "col:46KFS,gbif:2599664,mycobank:318622"
+          "authorityIds": "col:46KFS,gbif:2599664,mycobank:318622",
+          "children": []
         }
       ],
       "authorship": "Spegazzini"
@@ -150,11 +155,49 @@
             ]
           },
           "uuid": "9d454782-3dfa-56f-bc5-9e8180cf64a07c",
-          "authorityIds": "col:4ZDPF,gbif:3553473,mycobank:177103"
+          "authorityIds": "col:4ZDPF,gbif:3553473,mycobank:177103",
+          "children": []
+        },
+        {
+          "id": "SP_SPRAGUEOLA_IRREGULARIS_PECK_NANNF",
+          "name": "Spragueola irregularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spragueola",
+          "authorship": "(Peck) Nannf.",
+          "sourceIds": {
+            "checklistbank": "aedf298d-0da4-4d38-9735-5cf91a42fb76"
+          },
+          "children": []
         }
       ],
       "authorship": "Massee"
+    },
+    {
+      "id": "GENUS_ASCOCORYNIUM",
+      "name": "Ascocorynium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASCOCORYNIUM_IRREGULARE_PECK_S_ITO_S_IMAI",
+          "name": "Ascocorynium irregulare",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascocorynium",
+          "authorship": "(Peck) S. Ito & S. Imai",
+          "sourceIds": {
+            "checklistbank": "fa27ecec-27fe-4500-a9c4-e39407cc9fa3"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neolectaceae"
     }
   ],
-  "authorship": "Redhead"
+  "authorship": "Redhead",
+  "genusCount": 3,
+  "speciesCount": 7
 }

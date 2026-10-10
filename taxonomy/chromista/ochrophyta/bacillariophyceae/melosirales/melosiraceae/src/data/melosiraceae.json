@@ -1825,10 +1825,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8503883
+            "gbif": 8503883,
+            "checklistbank": "36ed757c-7e7e-4daa-a1e4-a1e4759ecf4e"
           },
           "uuid": "4bc98804-f250-531-b9c-280cbcc8768086",
-          "authorityIds": "gbif:8503883"
+          "authorityIds": "gbif:8503883",
+          "authorship": "Moore,1843"
         },
         {
           "id": "MELOSIRA_ARENOSA",
@@ -4040,10 +4042,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8329005
+            "gbif": 8329005,
+            "checklistbank": "6ce0e8b8-3a7b-4445-a297-d7daa6d92d76"
           },
           "uuid": "0c66461f-38b0-597-8b9-6a38d1f18936c7",
-          "authorityIds": "gbif:8329005"
+          "authorityIds": "gbif:8329005",
+          "authorship": "Mann,1925"
         },
         {
           "id": "MELOSIRA_INCORRUPTA",
@@ -4159,10 +4163,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9511817
+            "gbif": 9511817,
+            "checklistbank": "8009bd9b-0c39-4b07-8fba-a3917e94250e"
           },
           "uuid": "8e60ed81-afd0-556-a8a-4a7675603ae09d",
-          "authorityIds": "gbif:9511817"
+          "authorityIds": "gbif:9511817",
+          "authorship": "O. Mueller,1906"
         },
         {
           "id": "MELOSIRA_ITALICA",
@@ -4184,7 +4190,8 @@
             ],
             "itis": [
               "2333"
-            ]
+            ],
+            "checklistbank": "b8372e6d-87d2-4bdb-a629-59b7e9eaff00"
           },
           "uuid": "65228655-9293-57e-a9b-417e7d7b26f123",
           "authorityIds": "gbif:9492574,itis:2333"
@@ -7824,7 +7831,8 @@
           "sourceIds": {
             "itis": [
               "2295"
-            ]
+            ],
+            "checklistbank": "44d98266-1e94-4937-824b-69ad3ca3aad7"
           },
           "authorityIds": "itis:2295"
         },
@@ -7906,6 +7914,19 @@
           "authorship": "Arnott ex Van Heurck, 1882",
           "sourceIds": {
             "checklistbank": "224502"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_JUERGENSI_AGARDH_1824",
+          "name": "Melosira juergensi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "Agardh,1824",
+          "sourceIds": {
+            "checklistbank": "9b7a2778-8fe5-435c-958e-d2c5a63210ee"
           },
           "children": []
         }
@@ -8607,8 +8628,209 @@
           "authorityIds": "gbif:10395013"
         }
       ]
+    },
+    {
+      "id": "GENUS_XANTHIOPYXIS",
+      "name": "Xanthiopyxis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XANTHIOPYXIS_MICROSPINOSA_ANDREWS_1984",
+          "name": "Xanthiopyxis microspinosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xanthiopyxis",
+          "authorship": "Andrews,1984",
+          "sourceIds": {
+            "checklistbank": "004c619b-4f44-48f1-ba26-53d735ef2c43"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melosiraceae"
+    },
+    {
+      "id": "GENUS_PYXIDICUAL",
+      "name": "Pyxidicual",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PYXIDICUAL_WEYPRECHTII_GRUNOW_1884",
+          "name": "Pyxidicual weyprechtii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyxidicual",
+          "authorship": "Grunow,1884",
+          "sourceIds": {
+            "checklistbank": "3d6ea21b-5c89-43a3-985b-c566ca080c6f"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYXIDICUAL_MEDITERRANEA_GRUNOW_1881",
+          "name": "Pyxidicual mediterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyxidicual",
+          "authorship": "Grunow,1881",
+          "sourceIds": {
+            "checklistbank": "a30507af-21db-42d8-9c18-f593ed8fe7e2"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melosiraceae"
+    },
+    {
+      "id": "GENUS_PODOSIRA",
+      "name": "Podosira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PODOSIRA_STELLIGER_BAILEY_MANN_1907",
+          "name": "Podosira stelliger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podosira",
+          "authorship": "(Bailey Mann,1907)",
+          "sourceIds": {
+            "checklistbank": "40d117b4-f64c-4870-8deb-6094755915da"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODOSIRA_HORMOIDES_MONT_KUTZING_1844",
+          "name": "Podosira hormoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podosira",
+          "authorship": "(Mont. Kutzing,1844)",
+          "sourceIds": {
+            "checklistbank": "5cb1f598-1758-40ef-8aa7-1ff8c1106137"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODOSIRA_MAXIMA_KUETZ_GRUNOW_1879",
+          "name": "Podosira maxima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podosira",
+          "authorship": "(Kuetz. Grunow,1879)",
+          "sourceIds": {
+            "checklistbank": "ae4ac794-7541-421e-8534-b8144986f240"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODOSIRA_GRANULATA_LIU_1984",
+          "name": "Podosira granulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podosira",
+          "authorship": "Liu,1984",
+          "sourceIds": {
+            "checklistbank": "db6eab0d-5ed5-4398-94e6-f6d9ed0b21ba"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODOSIRA_ARGUS_GRUNOW_1878",
+          "name": "Podosira argus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podosira",
+          "authorship": "Grunow,1878",
+          "sourceIds": {
+            "checklistbank": "f3086e12-bccb-4aed-96cc-0ffab17f9b40"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melosiraceae"
+    },
+    {
+      "id": "GENUS_HYALODISCUS",
+      "name": "Hyalodiscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYALODISCUS_SUBTILIS_BAILEY_1854",
+          "name": "Hyalodiscus subtilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyalodiscus",
+          "authorship": "Bailey,1854",
+          "sourceIds": {
+            "checklistbank": "718f3874-7253-468d-8c47-fa0bfa210745"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYALODISCUS_RADIATUS_O_MEARA_GRUNOW_1880",
+          "name": "Hyalodiscus radiatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyalodiscus",
+          "authorship": "(O'Meara Grunow,1880)",
+          "sourceIds": {
+            "checklistbank": "78baafbc-432f-4aae-b330-8d56e9346db4"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYALODISCUS_AMBIGUUS_GRUNOW_TEMPERE_ET_PERAGALLO_1889",
+          "name": "Hyalodiscus ambiguus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyalodiscus",
+          "authorship": "(Grunow Tempere et Peragallo,1889)",
+          "sourceIds": {
+            "checklistbank": "d70779c2-6949-4b66-b24a-a3f62542b261"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melosiraceae"
+    },
+    {
+      "id": "GENUS_ENDICTYA",
+      "name": "Endictya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENDICTYA_OCEANICA_EHRENBERG_1845",
+          "name": "Endictya oceanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Endictya",
+          "authorship": "Ehrenberg,1845",
+          "sourceIds": {
+            "checklistbank": "817203ca-8c7d-4b7e-98fd-3d0e972ab3ba"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melosiraceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 490
+  "genusCount": 14,
+  "speciesCount": 503
 }

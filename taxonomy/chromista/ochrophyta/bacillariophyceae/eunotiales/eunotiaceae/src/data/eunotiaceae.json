@@ -2710,10 +2710,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8130555
+            "gbif": 8130555,
+            "checklistbank": "55ce77c0-03bf-47c9-8fe5-5e81d2df0a96"
           },
           "uuid": "4b5b9784-a358-5e8-b5b-8815ab8db031de",
-          "authorityIds": "gbif:8130555"
+          "authorityIds": "gbif:8130555",
+          "authorship": "Grunow et Moeller,1878"
         },
         {
           "id": "EUNOTIA_CLIMACIDIUM",
@@ -20189,8 +20191,30 @@
           "authorityIds": "gbif:10822760"
         }
       ]
+    },
+    {
+      "id": "GENUS_PSEUDO_EUNOTIA",
+      "name": "Pseudo-eunotia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDO_EUNOTIA_DOLIOLUS_WALL_GRUNOW_1885",
+          "name": "Pseudo-eunotia doliolus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudo-eunotia",
+          "authorship": "(Wall. Grunow,1885)",
+          "sourceIds": {
+            "checklistbank": "5ab510b7-8be4-44ea-a03b-abe68a509e73"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eunotiaceae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 1132
+  "genusCount": 15,
+  "speciesCount": 1133
 }

@@ -43,7 +43,11 @@ csv.field_size_limit(10_000_000)
 
 # our name -> the variants seen in the wild
 FIELDS = {
-    "id": ("id",),
+    # Dyntaxa (2041) calls its own id column "taxonId", a UTF-8 BOM riding
+    # on the first byte of the header line (both normalised away already by
+    # `_norm`; what's left is just a column-naming variant like every other
+    # one in this dict).
+    "id": ("id", "taxonid"),
     "parent": ("parentid", "parentnameusageid"),
     "name_id": ("nameid",),
     "name_phrase": ("namephrase",),
@@ -59,11 +63,15 @@ FIELDS = {
     "species_epithet": ("speificepithet",),
     "infraspecific_epithet": ("infrspecificepithet", "infraspepithet",
                               "infraspecificepithet"),
-    "kingdom_name": ("kingdomname",),
-    "phylum_name": ("phylumname",),
-    "class_name": ("classname",),
-    "order_name": ("ordername",),
-    "family_name": ("familyname",),
+    # Real Darwin Core terms are bare ("kingdom", "family", ...); the
+    # "...name" variants are a convention some publishers layer on top
+    # (reptile-db's own `family_name` column, empty on all 17,042 rows).
+    # COL China (312616) uses the bare DwC terms directly.
+    "kingdom_name": ("kingdomname", "kingdom"),
+    "phylum_name": ("phylumname", "phylum"),
+    "class_name": ("classname", "class"),
+    "order_name": ("ordername", "order"),
+    "family_name": ("familyname", "family"),
 }
 
 # A taxonomicStatus value that means "this is the name to use", not a
@@ -399,13 +407,23 @@ def load(path):
             return _ildis(c)
         if all(t in c.names() for t in EUNIS_TABLES):
             return _eunis(c)
-        if "NameUsage.tsv" in c.names() or any(
-                m.lower().endswith("taxon.csv") for m in c.namelist()):
+        basenames = {m.rsplit("/", 1)[-1].lower() for m in c.namelist()}
+        has_taxon_csv = "taxon.csv" in basenames
+        has_name_csv = "name.csv" in basenames
+        if "NameUsage.tsv" in c.names() or (has_taxon_csv and has_name_csv):
             # ColDP arrives in two serialisations: one NameUsage.tsv, or a
             # name/taxon/synonym CSV split (GLI). Both go through coldp.py,
             # which reads each; dispatching only on the TSV made the CSV flavour
             # fall through to the DwCA path, find no `name.tsv`, and report an
-            # empty dataset.
+            # empty dataset. `has_name_csv` is required alongside
+            # `has_taxon_csv` because a `taxon.csv` alone is not proof of the
+            # split -- Dyntaxa (2041) ships a single-table DwCA that happens to
+            # use `.csv` instead of `.txt`/`.tsv`, no name table in sight, and
+            # matching on taxon.csv alone sent it into `_coldp`, which failed
+            # outright looking for a name table that was never going to exist.
+            # Exact basenames, not `endswith` -- Dyntaxa's own
+            # `VernacularName.csv` ends with "name.csv" too, which the first
+            # version of this fix matched and made no difference at all.
             return _coldp(path)
         names = {}
         t = _find(c, "name")
@@ -447,6 +465,23 @@ def load(path):
                         if v:
                             row[col] = v
                     taxa.append(row)
+        # COL China (312616) carries no rank column anywhere -- not on the
+        # taxon row, not on a joined name -- despite its own metadata
+        # describing every row as "spp & infraspecific taxa" by scope. Every
+        # row coming back rank=None reads as "nothing here is a species"
+        # rather than "this export doesn't say", the same kind of silent
+        # failure GLI's CSV flavour and the EUNIS/Nortaxa `.txt` tables
+        # produced before each got its own fix. Inferred only when NO row in
+        # the whole table carries a rank anywhere -- a dataset that states
+        # ranks for some taxa and omits them for others is a data gap to
+        # leave alone, not a shape to paper over -- and only for rows that
+        # already look like a binomial under a family we can place, which is
+        # what a species row looks like in this shape.
+        if taxa and not any(t.get("rank") for t in taxa):
+            for row in taxa:
+                nm = row.get("name") or ""
+                if " " in nm and row.get("family_name"):
+                    row["rank"] = "species"
     finally:
         c.close()
     return taxa, names, metadata(path)

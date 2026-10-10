@@ -262,7 +262,8 @@
             ],
             "itis": [
               "11103"
-            ]
+            ],
+            "checklistbank": "31df871b-b906-4f8a-b4ca-720c21613e02"
           },
           "uuid": "eaf0cc88-1bd5-5aa-8f8-7ba2b8ecf0dc0a",
           "authorityIds": "gbif:3200725,itis:11103"
@@ -285,7 +286,8 @@
             ],
             "itis": [
               "11112"
-            ]
+            ],
+            "checklistbank": "dd161e26-d42e-4de7-b469-376f94cd6b36"
           },
           "uuid": "838155a1-f597-5d0-a27-2e4a700cffc111",
           "authorityIds": "gbif:3200643,itis:11112"
@@ -374,10 +376,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3200668
+            "gbif": 3200668,
+            "checklistbank": "b69dec08-b422-4104-8ade-895179036f47"
           },
           "uuid": "0072e841-e37b-51f-9de-64f38519c579e5",
-          "authorityIds": "gbif:3200668"
+          "authorityIds": "gbif:3200668",
+          "authorship": "Montagne,1849"
         },
         {
           "id": "SPHACELARIA_FUSCA",
@@ -482,10 +486,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3200750
+            "gbif": 3200750,
+            "checklistbank": "25255c1c-44a6-4876-b023-57177a7811b6"
           },
           "uuid": "c877c5ee-803e-5bb-918-b4f14b6b8acc9b",
-          "authorityIds": "gbif:3200750"
+          "authorityIds": "gbif:3200750",
+          "authorship": "Sonder,1845"
         },
         {
           "id": "SPHACELARIA_PLUMULA",
@@ -595,7 +601,8 @@
             ],
             "itis": [
               "11100"
-            ]
+            ],
+            "checklistbank": "70e52048-9048-4271-baa6-f410d6aaa250"
           },
           "uuid": "dabfbcec-d6c2-561-a23-870effc3df900a",
           "authorityIds": "gbif:3200705,itis:11100"
@@ -1042,6 +1049,19 @@
             "checklistbank": "65896"
           },
           "children": []
+        },
+        {
+          "id": "SP_SPHACELARIA_TSENGII_DRAISMA_KEUM_PRUD_HOMME_VAN_REINE_ET_LOKHORST_1998",
+          "name": "Sphacelaria tsengii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphacelaria",
+          "authorship": "Draisma, Keum, Prud’homme van Reine et Lokhorst,1998",
+          "sourceIds": {
+            "checklistbank": "9fdc7236-82c7-40a4-9016-9e4816ae383d"
+          },
+          "children": []
         }
       ]
     },
@@ -1290,8 +1310,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphacelariaceae"
+    },
+    {
+      "id": "GENUS_HETERORALFSIA",
+      "name": "Heteroralfsia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HETERORALFSIA_SAXICOLA_OKAMURA_ET_YAMADA_KAWAI_1989",
+          "name": "Heteroralfsia saxicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heteroralfsia",
+          "authorship": "(Okamura et Yamada Kawai,1989)",
+          "sourceIds": {
+            "checklistbank": "23a884c5-6203-4290-9549-f8a08121d2ae"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphacelariaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 75
+  "genusCount": 9,
+  "speciesCount": 77
 }

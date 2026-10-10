@@ -433,7 +433,8 @@
           "sourceIds": {
             "itis": [
               "12721"
-            ]
+            ],
+            "checklistbank": "b68b4531-926d-409b-8661-e4e692771c0c"
           },
           "authorityIds": "itis:12721"
         },
@@ -509,7 +510,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Champia",
           "children": [],
-          "uuid": "cfca4d6a-2bda-596-add-0e3b4d60fd9e3b"
+          "uuid": "cfca4d6a-2bda-596-add-0e3b4d60fd9e3b",
+          "authorship": "Okamura,1932",
+          "sourceIds": {
+            "checklistbank": "6c2e2bc9-cf8a-4e99-88b4-532bcdae82a4"
+          }
         },
         {
           "id": "SP_CHAMPIA_CAESPITOSA",
@@ -903,6 +908,19 @@
             ]
           },
           "authorityIds": "itis:12740"
+        },
+        {
+          "id": "SP_GASTROCLONIUM_XISHAENSIS_CHANG_ET_XIA_1978",
+          "name": "Gastroclonium xishaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gastroclonium",
+          "authorship": "Chang et Xia,1978",
+          "sourceIds": {
+            "checklistbank": "372fac3d-b185-4f0f-8e76-8f4d8312e45d"
+          },
+          "children": []
         }
       ]
     },
@@ -998,8 +1016,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "champiaceae"
+    },
+    {
+      "id": "GENUS_LOMENTARIA",
+      "name": "Lomentaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOMENTARIA_HAKODATENSIS_YENDO_1920",
+          "name": "Lomentaria hakodatensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lomentaria",
+          "authorship": "Yendo,1920",
+          "sourceIds": {
+            "checklistbank": "3d73c621-9521-465a-a82c-f3012bf768e4"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOMENTARIA_CATENATA_HARVEY_1857",
+          "name": "Lomentaria catenata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lomentaria",
+          "authorship": "Harvey,1857",
+          "sourceIds": {
+            "checklistbank": "d9926518-6ea1-42f0-ba5f-a5fd6bfccfbf"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "champiaceae"
+    },
+    {
+      "id": "GENUS_BINGHAMIA",
+      "name": "Binghamia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BINGHAMIA_CALIFORNICA_J_AGARDH_1894",
+          "name": "Binghamia californica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Binghamia",
+          "authorship": "J. Agardh,1894",
+          "sourceIds": {
+            "checklistbank": "dfa415fb-41db-452a-8a3f-48172de7a80f"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "champiaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 74
+  "genusCount": 10,
+  "speciesCount": 78
 }

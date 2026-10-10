@@ -24,7 +24,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "466e5262-8caa-563-91a-a65bd3830664bb"
+          "uuid": "466e5262-8caa-563-91a-a65bd3830664bb",
+          "authorship": "Kjellman,1883",
+          "sourceIds": {
+            "checklistbank": "9e5d217b-1c55-4d7a-9976-bb438d642fa4"
+          }
         },
         {
           "id": "SP_MONOSTROMA_ANTARCTICUM",
@@ -151,9 +155,11 @@
           "sourceIds": {
             "itis": [
               "6492"
-            ]
+            ],
+            "checklistbank": "9c8c3fb7-bdeb-4fc2-80eb-b0b237c73a77"
           },
-          "authorityIds": "itis:6492"
+          "authorityIds": "itis:6492",
+          "authorship": "(ThuretWittrock,1866)"
         },
         {
           "id": "SP_MONOSTROMA_HARIOTII",
@@ -462,10 +468,58 @@
           "lineage": "Monostroma",
           "children": [],
           "uuid": "d99aa1d2-e869-5e7-b7a-29194be14adb40"
+        },
+        {
+          "id": "SP_MONOSTROMA_NITIDIUM_WITTROCK_1866",
+          "name": "Monostroma nitidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monostroma",
+          "authorship": "Wittrock,1866",
+          "sourceIds": {
+            "checklistbank": "40825d33-f121-4a7c-88c2-85c12b2680b9"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MONOSTROMA_ARCTICUM_WITTROCK_1866",
+          "name": "Monostroma arcticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monostroma",
+          "authorship": "Wittrock,1866",
+          "sourceIds": {
+            "checklistbank": "4d55c3f2-c192-427a-9856-c3c90ee96c3d"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PROTOMONOSTROMA",
+      "name": "Protomonostroma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTOMONOSTROMA_UNDULATUM_WITTROCKVINOGRADOVA_1969",
+          "name": "Protomonostroma undulatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protomonostroma",
+          "authorship": "(WittrockVinogradova,1969)",
+          "sourceIds": {
+            "checklistbank": "4c2d7cde-6528-4708-b154-e552da433c80"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monostromataceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 35
+  "genusCount": 2,
+  "speciesCount": 38
 }

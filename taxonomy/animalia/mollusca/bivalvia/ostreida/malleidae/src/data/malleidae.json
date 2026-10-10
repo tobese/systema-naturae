@@ -131,9 +131,11 @@
           "sourceIds": {
             "col": [
               "3XNGP"
-            ]
+            ],
+            "checklistbank": "4c5d8768-45ef-42de-bb3f-a78d24f9babc"
           },
-          "authorityIds": "col:3XNGP"
+          "authorityIds": "col:3XNGP",
+          "authorship": "(Linnaeus,1758)"
         },
         {
           "id": "SP_MALLEUS_MERIDIANUS_COTTON_1930",
@@ -173,9 +175,11 @@
           "sourceIds": {
             "col": [
               "3XNGV"
-            ]
+            ],
+            "checklistbank": "62858a92-6701-472b-8ea9-8a3354a1d830"
           },
-          "authorityIds": "col:3XNGV"
+          "authorityIds": "col:3XNGV",
+          "authorship": "Forskal,1775"
         },
         {
           "id": "SP_MALLEUS_REGULUS_SIC",
@@ -187,6 +191,19 @@
           "authorship": "[sic]",
           "sourceIds": {
             "checklistbank": "60305"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MALLEUS_IRREGULARIS_JOUSSEAUME_1894",
+          "name": "Malleus irregularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malleus",
+          "authorship": "(Jousseaume,1894)",
+          "sourceIds": {
+            "checklistbank": "4c68ea91-5461-49bc-aaec-0baa6b7276fb"
           },
           "children": []
         }
@@ -519,8 +536,30 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Malleidae"
+    },
+    {
+      "id": "GENUS_VULSELLA",
+      "name": "Vulsella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VULSELLA_VULSELLA_LINNAEUS_1758",
+          "name": "Vulsella vulsella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vulsella",
+          "authorship": "(Linnaeus,1758)",
+          "sourceIds": {
+            "checklistbank": "05692d7c-38dd-461a-99e2-339c9df3c7b0"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "malleidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 26
+  "genusCount": 9,
+  "speciesCount": 28
 }

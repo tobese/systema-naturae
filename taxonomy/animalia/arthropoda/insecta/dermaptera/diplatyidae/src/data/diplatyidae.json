@@ -1448,7 +1448,8 @@
               "sourceIds": {
                 "col": [
                   "BXLFS"
-                ]
+                ],
+                "checklistbank": "{A67F7E91-FFD7-46E9-BAFE-ED126EE77524}"
               },
               "authorityIds": "col:BXLFS"
             },
@@ -1516,7 +1517,8 @@
               "sourceIds": {
                 "col": [
                   "BXLFT"
-                ]
+                ],
+                "checklistbank": "{A95F5DE3-CBB0-49FB-9C39-AE05CB04E770}"
               },
               "authorityIds": "col:BXLFT"
             },
@@ -1638,6 +1640,19 @@
                 ]
               },
               "authorityIds": "col:CTMW5"
+            },
+            {
+              "id": "SP_DIPLATYS_TRILOBUS_MA_ET_CHEN_1991",
+              "name": "Diplatys trilobus",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Diplatys",
+              "authorship": "Ma et Chen,1991",
+              "sourceIds": {
+                "checklistbank": "{3BE8363D-C2DD-48A8-B03E-D38C00748298}"
+              },
+              "children": []
             }
           ],
           "lineage": "Diplatyinae"
@@ -2366,7 +2381,8 @@
           "sourceIds": {
             "col": [
               "KVJZR"
-            ]
+            ],
+            "checklistbank": "{300310D9-625C-4BF3-B182-7687E25D6E9D}"
           },
           "authorityIds": "col:KVJZR"
         },
@@ -2860,15 +2876,63 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Diplatyidae"
+    },
+    {
+      "id": "GENUS_HAPLODIPLATYS",
+      "name": "Haplodiplatys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HAPLODIPLATYS_TRICHOSTICHUS_MA_ET_CHEN_1991",
+          "name": "Haplodiplatys trichostichus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haplodiplatys",
+          "authorship": "Ma et Chen,1991",
+          "sourceIds": {
+            "checklistbank": "{4AF3D6B0-D529-42CF-AAE4-7DE117BCF30F}"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HAPLODIPLATYS_AOTOUENSIS_MA_ET_CHEN_1991",
+          "name": "Haplodiplatys aotouensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haplodiplatys",
+          "authorship": "Ma et Chen,1991",
+          "sourceIds": {
+            "checklistbank": "{54AD9D6D-EC01-48C2-8E36-84FD6FDAF980}"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HAPLODIPLATYS_TIANPINGENSIS_MA_ET_CHEN_1992",
+          "name": "Haplodiplatys tianpingensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haplodiplatys",
+          "authorship": "Ma et Chen,1992",
+          "sourceIds": {
+            "checklistbank": "{7E562B30-2CA6-464E-BFD2-B78CA60B2269}"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "diplatyidae"
     }
   ],
-  "speciesCount": 165,
+  "speciesCount": 169,
   "appSlug": "diplatyidae",
   "lineage": "Neodermaptera > Pygidicranoidea",
   "continents": [
     "Asia",
     "South America"
   ],
-  "genusCount": 18,
+  "genusCount": 19,
   "enrichmentStatus": "empty"
 }

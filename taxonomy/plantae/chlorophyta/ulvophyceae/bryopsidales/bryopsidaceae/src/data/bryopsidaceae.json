@@ -209,7 +209,8 @@
           "sourceIds": {
             "itis": [
               "9316"
-            ]
+            ],
+            "checklistbank": "43245f6b-1e10-4ffd-aa09-fdd59edd262d"
           },
           "authorityIds": "itis:9316"
         },
@@ -338,7 +339,8 @@
           "sourceIds": {
             "itis": [
               "203789"
-            ]
+            ],
+            "checklistbank": "8d90222c-9ad5-4e36-baac-962c1056fc50"
           },
           "authorityIds": "itis:203789"
         },
@@ -376,7 +378,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c702ff22-dbe6-523-99f-3cbf65b9afbcf8"
+          "uuid": "c702ff22-dbe6-523-99f-3cbf65b9afbcf8",
+          "authorship": "A. et E.S. Gepp,1908",
+          "sourceIds": {
+            "checklistbank": "914b2652-c8c2-420e-8ebc-8c5c84a94674"
+          }
         },
         {
           "id": "SP_BRYOPSIS_KERMADECENSIS",
@@ -431,7 +437,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "36b8047b-49d3-565-9d0-0d74c55b777d93"
+          "uuid": "36b8047b-49d3-565-9d0-0d74c55b777d93",
+          "authorship": "Lamouroux,1809",
+          "sourceIds": {
+            "checklistbank": "2a20f654-e5e1-4b53-ab34-5d065985d971"
+          }
         },
         {
           "id": "SP_BRYOPSIS_MUSCOSA",
@@ -666,6 +676,19 @@
             "checklistbank": "66237"
           },
           "children": []
+        },
+        {
+          "id": "SP_BRYOPSIS_CESPITOSA_SUHR_EX_K_TZING_1849",
+          "name": "Bryopsis cespitosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryopsis",
+          "authorship": "Suhr ex Kützing,1849",
+          "sourceIds": {
+            "checklistbank": "4cc6aa47-3153-4c6e-b116-3c76253d3526"
+          },
+          "children": []
         }
       ]
     },
@@ -796,8 +819,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bryopsidaceae"
+    },
+    {
+      "id": "GENUS_TRICHSOLEN",
+      "name": "Trichsolen",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRICHSOLEN_HAINANENSIS_TSENG_TAYLOR_1962",
+          "name": "Trichsolen hainanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichsolen",
+          "authorship": "(Tseng Taylor,1962)",
+          "sourceIds": {
+            "checklistbank": "bfaa9f22-eb91-4677-85d6-4c35dcf9b65d"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bryopsidaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 50
+  "genusCount": 9,
+  "speciesCount": 52
 }

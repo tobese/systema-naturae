@@ -86,7 +86,8 @@
             ],
             "col": [
               "6CZSF"
-            ]
+            ],
+            "checklistbank": "faf5e979-f519-4cda-90a8-f8f210448dd7"
           },
           "uuid": "cfbe432b-8160-58e-8b5-d694a372fa0430",
           "authorityIds": "col:6CZSF,gbif:2574639,mycobank:514981"
@@ -1274,7 +1275,8 @@
             ],
             "col": [
               "6CZVQ"
-            ]
+            ],
+            "checklistbank": "2ac41413-ad40-4d73-81f9-522b9d8cbf6b"
           },
           "uuid": "f8ccc82c-afd5-573-96f-43adf40791fad7",
           "authorityIds": "col:6CZVQ,gbif:2574644,mycobank:487539"
@@ -1508,6 +1510,19 @@
             ]
           },
           "authorityIds": "col:C9KHH,mycobank:187849"
+        },
+        {
+          "id": "SP_DISCOSIA_THEAE_CAVARA",
+          "name": "Discosia theae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discosia",
+          "authorship": "Cavara",
+          "sourceIds": {
+            "checklistbank": "9c0c1f22-8295-40d3-9419-0b1b53274d68"
+          },
+          "children": []
         }
       ],
       "authorship": "Libert"
@@ -1619,9 +1634,53 @@
         }
       ],
       "authorship": "Kaz. Tanaka, Okane & Hosoya"
+    },
+    {
+      "id": "GENUS_SARCOSTROMA",
+      "name": "Sarcostroma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SARCOSTROMA_SINICUM_NAG_RAJ",
+          "name": "Sarcostroma sinicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcostroma",
+          "authorship": "Nag Raj",
+          "sourceIds": {
+            "checklistbank": "99b84578-0e6c-46d8-afa3-1e17ec647a90"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discosiaceae"
+    },
+    {
+      "id": "GENUS_DISCOSTROMA",
+      "name": "Discostroma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISCOSTROMA_CORTICOLA_FUCKEL_BROCKMANN",
+          "name": "Discostroma corticola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discostroma",
+          "authorship": "(Fuckel) Brockmann",
+          "sourceIds": {
+            "checklistbank": "dcb45c5f-febf-486d-944a-d99920632bac"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discosiaceae"
     }
   ],
   "authorship": "Maharachchikumbura & K.D. Hyde",
-  "genusCount": 4,
-  "speciesCount": 61
+  "genusCount": 6,
+  "speciesCount": 64
 }
