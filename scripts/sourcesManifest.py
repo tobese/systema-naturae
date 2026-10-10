@@ -493,7 +493,20 @@ SOURCES = {
         "policy. Only 909 of the 160,728 are ZooBank's own `Aa...` placeholder "
         "index names; the rest look like ordinary binomials (Ababactus "
         "depressus), which is what makes the register hard to refuse on data "
-        "quality alone. Re-open if the ColDP becomes downloadable"),
+        "quality alone. "
+        "RE-ASSESSED 2026-10-10: the archive is still on disk and still the "
+        "same version. `/dataset/2037/coldp.zip` still 406s, but "
+        "`/dataset/2037/export?format=ColDP` works -- it is a classification-"
+        "tree JSON, not a ColDP archive -- and it carries no synonym status "
+        "either: 524,236 `accepted`, 2,933 `provisionally accepted`, zero "
+        "`synonym`. The flat DwCA's own taxonomicStatus agrees -- 527,106 "
+        "`accepted`, 21 `invalid`, and those 21 are the only rows where id != "
+        "acceptedNameUsageID, pointing not to a synonym but to an obsolete "
+        "18th-century Linnaean group name (e.g. Clupeidae -> \"Abdominales "
+        "Linnæus, 1758\") -- noise, not synonymy. So the missing column "
+        "is not an export-format gap to wait out: ZooBank's data model has no "
+        "accepted/synonym concept to export, in any format ChecklistBank "
+        "offers. Verdict unchanged, and nothing left to re-open on"),
     "checklistbank-311094": (
         "BOLD Systems Taxonomy -- Insecta", "DOI 10.48580/dgrxf",
         "https://www.checklistbank.org/dataset/311094",

@@ -109,6 +109,25 @@ is the same decision as importing COL's 2.6M synonyms, which this project holds
 back everywhere by policy. **Declined, and the reason is the missing column
 rather than the licence, the vintage or the effort.**
 
+**Re-assessed 2026-10-10**, asked because the 81MB archive we'd downloaded
+sounded like it should have been enough. It's still on disk, same version,
+and nothing about it changed — but the ColDP question is now closed rather
+than open:
+
+- `coldp.zip` still returns **HTTP 406** for this dataset.
+- `export?format=ColDP` *does* work — but it's a classification-tree JSON,
+  not a ColDP archive, and it carries the same non-answer: 524,236
+  `accepted`, 2,933 `provisionally accepted`, **zero `synonym`**.
+- The flat DwCA's own `taxonomicStatus` agrees: 527,106 `accepted`, 21
+  `invalid`. Those 21 are the only rows where `id != acceptedNameUsageID`,
+  and they don't point to synonyms — they point to obsolete 18th-century
+  Linnaean group names (`Clupeidae -> "Abdominales Linnæus, 1758"`). Noise,
+  not synonymy.
+
+So the missing column was never an export-format gap waiting on ChecklistBank
+to fix — ZooBank's data model has no accepted/synonym concept to export, in
+any format the API offers. Verdict unchanged; nothing left to re-open on.
+
 ### GLI is now the cleanest take in the batch — and it is applied
 
 A month old, CC BY, 142 families of which we hold **141**, and 8,189 species we
