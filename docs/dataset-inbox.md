@@ -79,6 +79,44 @@ including the complete 41- and 129-name lists of what's actually new, is in
 [`docs/reports/checklistbank-leads-1146-185410.md`](reports/checklistbank-leads-1146-185410.md)
 (raw data: [`checklistbank-1146-185410-overlap.json`](reports/checklistbank-1146-185410-overlap.json)).
 
+**Swept the rest of the top-30, 2026-10-10.** The other 24 of
+`animalia-gaps.md`'s top-30 gap families, same search, `type != article`
+filtered. Eighteen surfaced nothing beyond Catalogue of Life itself, GBIF
+Backbone, or regional/thematic lists too narrow to matter (Staphylinidae,
+Ichneumonidae, Buprestidae, Formicidae, Crabronidae, Chironomidae,
+Dolichopodidae, Asilidae, Chrysomelidae, Cecidomyiidae, Reduviidae,
+Acrididae, Syrphidae, Ceratopogonidae, Tettigoniidae: nothing but
+articles). Three confirmed a verdict already on record — Noctuidae,
+Crambidae and Pyralidae's best hit is GLI, already applied.
+
+Four new candidates, measured the same unsharded-plus-normalised way:
+
+| dataset | gap family (rank, missing) | offered | held | **new** | verdict |
+|---|---|---|---|---|---|
+| Cerambycidae database (1032) | Cerambycidae (#8, 23,228) | 36,776 | 100.0% | 13 | decline |
+| World Catalogue of the Tortricidae (219318) | Tortricidae (#13, 12,239) | 10,718 | 99.9% | 7 | decline |
+| On-line Systematic Catalog of Plant Bugs (1171) | Miridae (#14, 11,477) | 11,132 | 99.8% | 24 | decline |
+| **Global Butterfly Information System (1046)** | Lycaenidae (#30, 7,107) | 7,982 | 90.9% | **727** | **not yet decided** |
+
+Three are the same shape as Carabcat and the Geometridae facility —
+specialist databases COL Stage 2 already mostly absorbed, declined as
+negligible and logged as `checklistbank-1032`, `checklistbank-219318`
+and `checklistbank-1171`.
+
+**GloBIS is the real find, and it is not a clean take.** 727 new species
+is an order of magnitude more than every other 2026-10-10 lead combined
+(214), covering all three families it offers (Lycaenidae, Papilionidae,
+Pieridae — all already 100% held at the family level, so this is pure
+species top-up). But it is issued **2013-09**, thirteen years old, which
+puts it in the same bucket as **LepIndex** (1018, 2012-01): hedged "take —
+biggest absolute gain" when triaged on 2026-10-04 and never actually
+resolved either way, because a big raw number from an old Lepidoptera
+source is exactly the shape where "new to us" and "obsolete, superseded
+since" are hard to tell apart without checking names individually — the
+same question Tropicos and ScaleNet were declined over elsewhere in this
+document. Logged as `checklistbank-1046`, status `assessed`, not applied.
+Full species list: [`checklistbank-gap-sweep-batch2.json`](reports/checklistbank-gap-sweep-batch2.json).
+
 **Worth automating**: looping this search over `docs/reports/animalia-gaps.md`'s
 top N families (not all 9,888) and surfacing the largest non-article,
 non-already-held hit per family would turn this from "found two leads by

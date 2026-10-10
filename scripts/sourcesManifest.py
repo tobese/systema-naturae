@@ -686,6 +686,56 @@ SOURCES = {
         "(99.5%) already held, **129 new**. Declined for the same reason: "
         "the real opening is two orders of magnitude smaller than the "
         "search result's size column (52,742) suggested."),
+    "checklistbank-1032": (
+        "Cerambycidae database", "DOI 10.48580/d38t; version 2026-04-07",
+        "https://www.checklistbank.org/dataset/1032",
+        "CC BY", "assessed",
+        "NOT taken. Found 2026-10-10 sweeping the rest of the top-30 "
+        "animalia-gaps.md families through the same search, for our #8 gap "
+        "family (Cerambycidae, 23,228 missing). Measured the same way "
+        "(unsharded page_all + strip_authorship + GNparser bare_name): "
+        "36,776 accepted species, 36,755 of 36,768 normalised forms "
+        "(100.0%) already held, **13 new**. Declined -- same shape as "
+        "Carabcat: a specialist database that COL Stage 2 already mostly "
+        "absorbed."),
+    "checklistbank-219318": (
+        "World Catalogue of the Tortricidae", "DOI 10.48580/d38s; version 4.0",
+        "https://www.checklistbank.org/dataset/219318",
+        "CC BY", "assessed",
+        "NOT taken. Found the same sweep, for our #13 gap family "
+        "(Tortricidae, 12,239 missing). 10,718 accepted species, 10,678 of "
+        "10,685 normalised forms (99.9%) held, **7 new**. Declined; 2018 "
+        "vintage adds nothing -- the gain is negligible regardless."),
+    "checklistbank-1171": (
+        "On-line Systematic Catalog of Plant Bugs (Heteroptera: Miridae)",
+        "DOI 10.48580/d38w; version Mar 2013",
+        "https://www.checklistbank.org/dataset/1171",
+        "CC BY", "assessed",
+        "NOT taken. Found the same sweep, for our #14 gap family (Miridae, "
+        "11,477 missing). 11,132 accepted species, 11,108 (99.8%) held, "
+        "**24 new**. Declined; negligible gain."),
+    "checklistbank-1046": (
+        "Global Butterfly Information System (GloBIS)",
+        "DOI 10.48580/d38u; version Sep 2013",
+        "https://www.checklistbank.org/dataset/1046",
+        "CC BY", "assessed",
+        "NOT YET DECIDED -- the one real find in the 2026-10-10 sweep. "
+        "Found searching for our #30 gap family (Lycaenidae, 7,107 "
+        "missing); the dataset actually covers three families "
+        "(Lycaenidae, Papilionidae, Pieridae), all three already 100% "
+        "held. 7,982 accepted species, 7,255 (90.9%) already held, **727 "
+        "new** -- an order of magnitude more than every other 2026-10-10 "
+        "lead combined (Carabcat 41 + Geometridae facility 129 + "
+        "Cerambycidae 13 + Tortricidae 7 + Miridae 24 = 214). The catch is "
+        "vintage: issued 2013-09, thirteen years old, the same shape as "
+        "LepIndex (1018, 2012-01, hedged 'take -- biggest absolute gain' "
+        "in docs/dataset-inbox.md on 2026-10-04 and never actually "
+        "resolved either way). Whether a 13-year-old butterfly "
+        "circumscription's novelty is real species or obsolete names "
+        "superseded since is not answered by this measurement -- it is a "
+        "taxonomy question, the same one Tropicos and ScaleNet were "
+        "declined over, not a data one. Full species list in "
+        "docs/reports/checklistbank-gap-sweep-batch2.json."),
     "wikispecies": (
         "Wikispecies (ChecklistBank dataset 314570)",
         "DOI 10.48580/dgx39; version 2026-08-02; "
