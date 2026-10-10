@@ -10,6 +10,105 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Taken 2026-10-10 — EUNIS and LCVP applied, and the second batch's two takes
+
+Following straight on from the batch below: eunis and LCVP (both "not yet
+decided" or "take" there) were applied, and a second five-paste batch
+(COL China, COL Lepidoptera Project, Nortaxa, the Brazilian Fauna catalogue,
+Index Nominum Algarum) added two more.
+
+| dataset | verdict | species added |
+|---|---|---|
+| **eunis** (2122) | **taken** | **36,568** |
+| **LCVP** (2262) | **taken** | **71,663** |
+| **Nortaxa** (2030) | **taken** | **12,028** |
+| **Brazilian Fauna catalogue** (281817) | **taken** | **29,431** |
+| COL China (312616) | assessed, not yet decided -- see below | -- |
+| COL Lepidoptera Project (9818) | blocked -- no archive, API total over the safe paging cap | -- |
+| Index Nominum Algarum / INA (2003) | decline -- no taxon table, same shape as AFD | -- |
+
+**149,690 species added in one sitting, and three different importer bugs
+found and fixed on the way** -- each one caught because `verifyTree.py` runs
+after every import, not because anything looked wrong in the run's own
+output.
+
+**eunis** needed `colChecklist.py` to learn a third denormalised shape
+(`taxons.tsv`/`names.tsv`, plural, flat family/order/class/phylum/kingdom
+columns, no parent chain). Multi-kingdom, not animalia-only as the first
+sampled row suggested. Caught a real bug in EUNIS's own data this way: four
+Balkan loach species (genus *Oxynoemacheilus*, animalia-only) were joined to
+fungi/Coniocybaceae, with EUNIS's own `order` column literally reading
+`[unassigned] Pulmonata` -- a gastropod clade -- on all four, which is the
+bug announcing itself. Removed. One further new cross-kingdom collision
+(*Chondracanthus angustatus* Heller 1865, a copepod *and* a red alga) was a
+genuine homonym and is now allow-listed in `verifyTree.py`.
+
+**LCVP** was audited first with `scripts/auditChecklistArchive.py` rather
+than acted on from the raw 48.1%-not-held figure: 75.2% family-placement
+agreement on shared names, with the disagreements concentrated in a dozen
+well-documented pre-/post-APG segregate-family splits (Myrsinaceae vs
+Primulaceae, Asparagaceae vs Hyacinthaceae/Ruscaceae/Agavaceae, Malvaceae vs
+three of its old segregates) -- alternate circumscriptions, not errors, the
+same shape BOLD's "take, then dedupe" verdict rested on. A spot check of
+species under genera we already hold (*Abarema*, *Aa*) found real
+species-level gaps rather than renamed duplicates, so it was taken.
+
+**Nortaxa and the Brazilian catalogue** both arrive as ChecklistBank's native
+`.txt` DwCA, which `colChecklist.py` didn't recognise at all (it only matched
+`.tsv` names, the ColDP-split convention) -- ten more species read as zero,
+no error, until table matching went by filename stem instead of a fixed
+list. Both also write authorship inline on every rank's name
+("Curculionidae Latreille, 1802"), which broke family matching outright until
+`chain()` learned that a rank above species is one word in real nomenclature
+and authorship is riding along, not part of it. Nortaxa also writes `valid`
+where Darwin Core says `accepted`.
+
+Once readable, Nortaxa surfaced **eight** more wrong-kingdom bugs in its own
+data -- the same shape as EUNIS's, a correct record's citation pasted onto
+the wrong kingdom/family (a brittle star tagged `kingdom=Fungi` while its own
+remarks field quotes the WoRMS *Ophiuroidea* citation verbatim; the same for
+a polychaete filed under a dry-rot fungus genus, a gall midge under a
+red-algae family, a bird family gaining a plant species, and three more) --
+removed. The Brazilian catalogue's correct new entries exposed **two older,
+pre-existing** ghosts sitting under the wrong plant family already
+(*Schulzia travassosi* -- a nematode named for parasitologist Travassos,
+described by helminthologist Durette-Desset, not a plant -- and the flea
+beetle *Pseudostenophyma modesta*) -- also removed. All ten gone; all nine
+`verifyTree` invariants hold after every fix.
+
+**A concurrency bug surfaced along the way, unrelated to any one dataset.**
+Two importers rebuilding the shared authority-id duplicate-gate index (the
+import-time gate added earlier today in `scripts/authorityIndex.py`) at the
+same time collided on its temp file (`sqlite3.OperationalError: attempt to
+write a readonly database`).
+`authorityIndex.build()` now uses a per-process temp name, and the gate call
+inside `merge_family` is wrapped so a future failure there warns instead of
+crashing the import -- it was only ever meant to be a warning signal, never a
+blocker.
+
+**COL China is a real find, not yet actionable.** Measured by hand (its
+`taxon.txt` has no rank column at all, so `colChecklist.py` can't select
+species from it yet): 148,081 distinct names, **44,805 (30.3%) not held** --
+mostly China-regional names in poorly globally-catalogued groups (gall mites,
+*Abacarus*, again), the kind of thing a national checklist adds that a global
+synthesis misses. Also some visibly corrupted genus names in the raw data
+(`0vipennis bicolor` -- a leading digit, not a real genus). Needs a
+rank-inference fix (every row in this export is species-or-infraspecific by
+the dataset's own documented scope, so defaulting rank when the row carries
+its own genus/family columns is safe, but untested) before it can go through
+the normal importer. Logged as `checklistbank-312616`, assessed, not applied.
+
+**COL Lepidoptera Project has no path to measurement right now.** No
+downloadable archive (`archive.zip` 404s, `export?format=ColDP` returns a
+51MB classification-tree JSON, not an archive our readers open), and its
+131,135 accepted-species total is over the 100k-offset cap that makes
+unsharded `apiOverlapReport.py` paging safe -- the same ceiling that limited
+the 2026-10-10 gap-sweep batch. Blocked, not declined.
+
+**INA (Index Nominum Algarum) declines on data shape**, the AFD precedent
+exactly: its ChecklistBank export is `name.tsv` + `name-rel.tsv` +
+`reference.tsv` only, no `taxon.*` table, nothing to place against a family.
+
 ## Triaged 2026-10-10 — five pastes, one duplicate, one clean take
 
 IRMNG (2007) is the fifth paste and a duplicate: it was triaged 2026-10-05

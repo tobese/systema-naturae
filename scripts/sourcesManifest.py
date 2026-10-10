@@ -813,28 +813,112 @@ SOURCES = {
         "LCVP -- the Leipzig catalogue of vascular plants",
         "DOI 10.48580/d4q2; version 3.01, issued 2022-11-07",
         "https://www.checklistbank.org/dataset/2262",
+        "CC BY", "applied",
+        "APPLIED 2026-10-10. GBIF's raw upload uses namespaced DwC headers "
+        "(`dwc:taxonID`, not `taxonID`/`ID`) which neither archiveOverlap.py "
+        "nor colChecklist.py recognised as-is -- both fixed to strip the "
+        "`dwc:`/`col:` prefixes, recognise `parentNameUsageID`/`taxonRank`, "
+        "and let name_id be optional for a single-table DwCA with no "
+        "Name.tsv to join against. Audited with "
+        "scripts/auditChecklistArchive.py before deciding, rather than "
+        "acted on the raw 173,187/48.1% not-held figure: 75.2% family-"
+        "placement agreement on the 211,776 shared names, with "
+        "disagreement concentrated in a dozen well-known pre-/post-APG "
+        "segregate-family splits (Myrsinaceae vs Primulaceae, Asparagaceae "
+        "vs Hyacinthaceae/Ruscaceae/Agavaceae, Malvaceae vs three of its "
+        "old segregates) -- alternate circumscriptions, not errors, the "
+        "same shape BOLD's take rested on. A spot check (Abarema, Aa, "
+        "Goeppertia, Calathea all already held as genera, with the "
+        "specific species checked genuinely absent rather than renamed) "
+        "supported a real gap. importColChecklist.py's own held-check "
+        "settled the number: 378,210 offered, 212,067 already held, "
+        "**71,663 added** across 540 families (4,057 refused for lacking "
+        "a family, mostly pre-APG segregate names like Myrsinaceae/"
+        "Ruscaceae that don't exist as separate files in our tree)."),
+    "checklistbank-2030": (
+        "Nortaxa (Artsnavnebasen)", "DOI not recorded; version 2026-09-11",
+        "https://www.checklistbank.org/dataset/2030",
+        "CC BY", "applied",
+        "APPLIED 2026-10-10. Norwegian species-name database, ChecklistBank "
+        "native `.txt` DwCA -- colChecklist.py's table matching only knew "
+        "`.tsv` names (the ColDP-split convention) and read this as zero "
+        "taxa with no error until it started matching by filename stem. "
+        "Also writes authorship inline on every rank's name "
+        "('Curculionidae Latreille, 1802') and uses `valid` for DwC's "
+        "`accepted`, both now handled. 109,058 accepted species/subspecies "
+        "offered, 32,975 already held, **12,028 added** across hundreds of "
+        "families in 5 kingdoms. Surfaced 8 real data bugs in Nortaxa's "
+        "own records -- a correct record's citation joined to the wrong "
+        "kingdom/family (a brittle star tagged kingdom=Fungi while its own "
+        "remarks field quotes the WoRMS Ophiuroidea citation verbatim; "
+        "same shape for a polychaete under a dry-rot fungus genus, a gall "
+        "midge under a red-algae family, a bird family gaining a plant "
+        "species, and three more) -- all removed after verifyTree's "
+        "cross-kingdom-homonym check caught them."),
+    "checklistbank-281817": (
+        "Catálogo Taxonômico da Fauna do Brasil (Brazilian Fauna catalogue)",
+        "DOI not recorded; version 2026-09-15",
+        "https://www.checklistbank.org/dataset/281817",
+        "CC BY", "applied",
+        "APPLIED 2026-10-10, same colChecklist.py fixes as Nortaxa (native "
+        "`.txt` DwCA, inline authorship on every rank). Animalia-only; no "
+        "kingdom field in the source, all 131,040 candidates routed "
+        "animalia (122,160 by family-name match, 8,880 fell back to the "
+        "animalia default, which happens to be correct here). 137,924 "
+        "accepted species/subspecies offered, 62,997 already held, "
+        "**29,431 added** across 2,329 families -- dominated by arthropods "
+        "(Curculionidae, Cicadellidae, Formicidae). 8,186 refused for "
+        "lacking a family, including Geoplanidae (253) and Dipsadidae "
+        "(261), both documented gaps already. Its correct new entries "
+        "exposed 2 older, pre-existing bugs: a nematode (Schulzia "
+        "travassosi, genus named for parasitologist Travassos, described "
+        "by helminthologist Durette-Desset) and a flea beetle "
+        "(Pseudostenophyma modesta) each had a same-named ghost sitting "
+        "under an unrelated plant family already -- both removed."),
+    "checklistbank-312616": (
+        "Catalogue of Life China 2025 Annual Checklist",
+        "DOI not recorded; version 2025-05-22",
+        "https://www.checklistbank.org/dataset/312616",
         "CC BY", "assessed",
-        "NOT YET DECIDED. Pasted 2026-10-10. GBIF's raw upload uses "
-        "namespaced DwC headers (`dwc:taxonID`, not `taxonID`/`ID`) which "
-        "archiveOverlap.py's reader does not recognise as-is -- read "
-        "after stripping the `dwc:`/`col:` prefixes and renaming "
-        "`taxonID` to `ID`. 359,927 accepted species, **173,187 (48.1%) "
-        "not held** -- roughly a third of the tree's entire plantae "
-        "holding (498,325), which is too large to be a clean gap given "
-        "WFO Plant List (CC0, 2026-06, taken, +158,701) is supposed to be "
-        "the current mainstream backbone. LCVP's own abstract says it "
-        "deliberately uses a different generic circumscription than "
-        "POWO/WCVP in places (citing Goeppertia/Calathea and "
-        "Stapelia/Duvalia/Ceropegia by name), which is the BOLD/OTL shape "
-        "of 'raw miss partly disagreement, not data'. A hand spot check "
-        "cuts against a pure-disagreement reading though: Abarema, Aa, "
-        "Goeppertia AND Calathea are all already held as genera (the "
-        "last two both at once), and the specific species checked under "
-        "them were genuinely absent rather than renamed. Needs "
-        "scripts/auditChecklistArchive.py's agree/disagree family-"
-        "placement measurement (the tool BOLD's verdict used) before "
-        "this is a take or a decline. Archive on disk at "
-        "archives/checklistbank-2262/archive.zip."),
+        "NOT YET DECIDED. Pasted 2026-10-10. A regional slice of the same "
+        "COL backbone Stage 1/2 already imported globally, so the prior "
+        "was heavy redundancy -- measured instead, and it isn't: its "
+        "`taxon.txt` has no rank column at all (every row came back "
+        "rank=None through colChecklist.py, so it isn't importable through "
+        "the normal path yet), but a hand-rolled check against taxaserve "
+        "found 148,081 distinct names, **44,805 (30.3%) not held** -- "
+        "mostly China-regional names in poorly globally-catalogued groups "
+        "(gall mites, Abacarus, the same group eunis and Nortaxa both "
+        "under-covered). Some visibly corrupted genus names in the raw "
+        "data too (`0vipennis bicolor`, a leading digit). Needs a rank-"
+        "inference fix before it can go through importColChecklist.py -- "
+        "every row in this export is species-or-infraspecific by the "
+        "dataset's own documented scope, so defaulting rank when the row "
+        "carries its own genus/family columns should be safe, but "
+        "untested. Archive on disk at archives/checklistbank-312616/."),
+    "checklistbank-9818": (
+        "COL Lepidoptera Project", "version/issued not recorded by "
+        "ChecklistBank",
+        "https://www.checklistbank.org/dataset/9818",
+        "CC BY", "assessed",
+        "BLOCKED, not declined. Pasted 2026-10-10. No downloadable "
+        "archive (`archive.zip` 404s; `export?format=ColDP` returns a "
+        "51MB classification-tree JSON, not an archive any reader here "
+        "opens -- the same non-answer ZooBank's export gave). 131,135 "
+        "accepted species is over the 100k-offset cap that makes "
+        "unsharded apiOverlapReport.py paging safe, the same ceiling that "
+        "limited the 2026-10-10 gap-sweep batch. No safe measurement path "
+        "right now."),
+    "checklistbank-2003": (
+        "Index Nominum Algarum (INA)", "DOI not recorded; version 2019-05-10",
+        "https://www.checklistbank.org/dataset/2003",
+        "CC BY", "assessed",
+        "NOT taken. Pasted 2026-10-10. ChecklistBank types it "
+        "`nomenclatural`, and the export proves why, the exact AFD "
+        "(checklistbank-127379) shape: `name.tsv` + `name-rel.tsv` + "
+        "`reference.tsv` only, no `taxon.*` table, nothing to place "
+        "against a family. Declined on data shape, not licence (CC BY) "
+        "or vintage."),
     "wikispecies": (
         "Wikispecies (ChecklistBank dataset 314570)",
         "DOI 10.48580/dgx39; version 2026-08-02; "
