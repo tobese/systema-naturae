@@ -168,16 +168,21 @@ Measured against the held tree 2026-10-10 (joined, not just counted):
 | sidecar | archive taxa | held in tree | already covered | **gap** |
 |---|---|---|---|---|
 | Media.tsv → image | 340,025 | 192,847 | 110,224 | 82,623 (but 99.75% of rows carry no licence string) |
-| VernacularName.tsv → commonName (en/blank) | 95,067 | 70,935 | 36,620 | **34,315** (clean; bigger than the 23,287 the applied GBIF Backbone pass filled) |
+| VernacularName.tsv → commonName (en/blank) | 95,067 | 70,935 | 36,620 | **APPLIED 2026-10-10: 39,322 filled** (scripts/enrichCommonNamesFromWikidata.py; bigger than the 23,287 the GBIF Backbone pass filled) |
 | Distribution.tsv → continents | 103,213 | 66,815 | 35,043 | 31,772 (84% free text needing resolution, 16% ISO-mappable now) |
 
 Enrichment only needs species we already hold, which is orthogonal to the
 bacteria-and-viruses rank question, so none of this needs to wait for the
 hold to lift. See the `wikidata-species` entry in
-`scripts/sourcesManifest.py` for the full breakdown and caveats. Vernacular
-names are the clear first pick: the largest clean gap, no licence problem,
-and the same safety pattern as the already-applied GBIF Backbone importer
-should carry over directly. Not yet done: writing that importer.
+`scripts/sourcesManifest.py` for the full breakdown and caveats.
+**Vernacular names are now applied** (2026-10-10,
+`scripts/enrichCommonNamesFromWikidata.py`, 39,322 filled) — it was the
+clear first pick: the largest clean gap, no licence problem, and the same
+safety pattern as the already-applied GBIF Backbone importer carried over
+directly, plus one filter it didn't need (31 candidates that were just the
+binomial re-capitalised, not a translation). Media and Distribution remain
+unapplied -- the first needs a per-image Commons licence lookup, the
+second needs free-text place-name resolution for 84% of its rows.
 
 ## Related
 
