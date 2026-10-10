@@ -648,6 +648,44 @@ SOURCES = {
         "already held. The whole dataset is smaller than the sample several of "
         "its neighbours got, so 100% here is exhaustive rather than "
         "indicative. Nothing there for us."),
+    "checklistbank-1146": (
+        "Carabcat database", "DOI 10.48580/d3dk; version v.03 (08/2021)",
+        "https://www.checklistbank.org/dataset/1146",
+        "CC BY", "assessed",
+        "NOT taken. Found 2026-10-10 searching ChecklistBank by gap family "
+        "(Carabidae, our #3 animalia gap at 31,316 missing per "
+        "docs/reports/animalia-gaps.md) rather than waiting for a paste. No "
+        "downloadable export exists (export.zip?format=ColDP 404s, and the "
+        "POST that would generate one needs credentials this project does "
+        "not have), so measured via scripts/apiOverlapReport.py's page_all, "
+        "called unsharded since the 40,934 total is well under the API's "
+        "100k offset cap. The first pass (no subgenus stripping) read 58.5% "
+        "as new -- the same GLI/BOLD mistake, since the misses were almost "
+        "all `Genus (Subgenus) species` forms COL already holds without the "
+        "parenthetical. Re-measured with strip_authorship + GNparser "
+        "bare_name, the same way archiveOverlap.py does it: 40,886 of 40,934 "
+        "(99.9%) already held, **41 new**. Declined -- not on licence (CC "
+        "BY) or vintage (2021-08, fine for a stable group), but because the "
+        "real opening is three orders of magnitude smaller than the search "
+        "result's size column (108,488) suggested. COL Stage 2's animalia "
+        "import already swept in most of what this independently-compiled "
+        "database holds, from overlapping sources."),
+    "checklistbank-185410": (
+        "Online Taxonomic Facility of Geometridae",
+        "DOI 10.48580/d9mhh; version 1.1.24.158 (2024-06-06)",
+        "https://www.checklistbank.org/dataset/185410",
+        "CC BY", "assessed",
+        "NOT taken. Found 2026-10-10 the same way as checklistbank-1146, for "
+        "our #5 animalia gap family (Geometridae, 24,459 missing per "
+        "docs/reports/animalia-gaps.md). Same measurement method (no "
+        "downloadable export; apiOverlapReport.py's page_all, unsharded, "
+        "23,793 total well under the offset cap). Geometridae has few "
+        "subgenus trinomials, so the subgenus-stripping step barely moves "
+        "the number (130 raw -> 129 normalised misses) the way it did for "
+        "Carabcat -- but the conclusion is the same: 23,613 of 23,742 "
+        "(99.5%) already held, **129 new**. Declined for the same reason: "
+        "the real opening is two orders of magnitude smaller than the "
+        "search result's size column (52,742) suggested."),
     "wikispecies": (
         "Wikispecies (ChecklistBank dataset 314570)",
         "DOI 10.48580/dgx39; version 2026-08-02; "

@@ -26,9 +26,9 @@ rather than waiting for a link to get pasted here?
 
 | family | gap (animalia-gaps.md) | top non-COL hit | size | verdict |
 |---|---|---|---|---|
-| Carabidae | 31,316 | **Carabcat database** (key 1146, DOI 10.48580/d3dk) | 108,488 | CC BY, 2021-08 vintage — **new lead, not yet measured** |
+| Carabidae | 31,316 | Carabcat database (key 1146, DOI 10.48580/d3dk) | 108,488 | measured — **decline**, see below |
 | Erebidae | 28,896 | Global Lepidoptera Index (55434) | 398,383 | **already applied** 2026-10-09 as `checklistbank-55434` — search just confirms it was the right call |
-| Geometridae | 24,459 | **Online Taxonomic Facility of Geometridae** (key 185410, DOI 10.48580/d9mhh) | 52,742 | CC BY, 2024-06 vintage — **new lead, not yet measured** |
+| Geometridae | 24,459 | Online Taxonomic Facility of Geometridae (key 185410, DOI 10.48580/d9mhh) | 52,742 | measured — **decline**, see below |
 | Scarabaeidae | 33,911 | Catalogue of Life Checklist (2328) + four annual COL/ITIS snapshots | — | all already held or superseded (same shape as the COL Hierarchy call above) |
 | Braconidae | 22,140 | Digital Catalogue of Biodiversity of Poland (200034) | 1,307 | too narrow (one country) to matter at this gap size |
 | Cicadellidae | 24,003 | — | — | nothing but single-paper Plazi articles |
@@ -43,11 +43,38 @@ own. Filtering `type != article` (not exposed as a query param; filtered
 client-side above) is what turns the search from noise into five minutes of
 useful triage per family.
 
-**Two new, unmeasured leads**: Carabcat (Carabidae, our #3 gap family) and
-the Geometridae online facility (our #5 gap family). Neither has been
-measured against the held tree yet — that's the next step if either is
-worth pursuing, the same `scripts/archiveOverlap.py` treatment every other
-candidate above gets before a verdict.
+**Both measured 2026-10-10, both decline — and the raw gap figure was the
+wrong number to look at.** Neither dataset has a downloadable export (both
+`export.zip?format=ColDP` and the POST that would generate one 401
+without credentials — even GLI's own export URL now 404s, so this isn't
+specific to these two), so the measurement is `scripts/apiOverlapReport.py`'s
+`page_all`, called unsharded (`shard=False`) since both totals are well
+under the API's 100k offset cap and sharding on `q` is exactly the thing
+2026-10-09 proved unreliable. The first pass skipped the subgenus-stripping
+step `archiveOverlap.py` applies (`Abacetus (Abacetillus) alaticollis` is
+not a species we lack, it's `Abacetus alaticollis` spelled the way COL
+writes subgenus trinomials) and got it badly wrong, same lesson as GLI
+and BOLD above:
+
+| | raw (unstripped) | normalised (`strip_authorship` + GNparser `bare_name`) |
+|---|---|---|
+| Carabcat, 40,934 offered | 58.5% not held (23,942) | **0.1% not held (41)** |
+| Geometridae facility, 23,793 offered | 0.5% not held (130) | 0.5% not held (129) |
+
+Carabidae's own candidate database is 99.9% species we already hold — 41
+genuinely new names out of 40,934. The Geometridae facility's raw and
+normalised numbers barely move (130 → 129) because Geometridae has few
+subgenus trinomials to begin with, but it is similarly saturated: 99.5%
+held, 129 new. Both declined — not on licence or vintage (both CC BY, both
+reasonably current), but because the real opening is two orders of
+magnitude smaller than the search's size column suggested. The 31,316 and
+24,459 gap figures in `animalia-gaps.md` are real (speciesCount minus what
+we hold), but they describe a shortfall against the family's *true*
+richness, not against what a specific external checklist happens to offer
+— COL Stage 2's animalia import already swept in most of what these two
+databases independently compiled, from overlapping underlying sources.
+Logged as `checklistbank-1146` and `checklistbank-185410` in
+`scripts/sourcesManifest.py` so neither gets re-triaged.
 
 **Worth automating**: looping this search over `docs/reports/animalia-gaps.md`'s
 top N families (not all 9,888) and surfacing the largest non-article,
