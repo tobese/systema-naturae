@@ -10,6 +10,50 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Evaluated, 2026-10-10 — searching ChecklistBank by gap family, not by paste
+
+Prompted by a pasted link that was a *search*, not a dataset:
+`checklistbank.org/dataset?...&q=testSpecieName&sortBy=size&...`.
+`testSpecieName` matches zero datasets (confirmed against the API) — it reads
+like a placeholder typed while exploring the search box, not a real query. But
+the capability behind it is real, and worth asking about on its own: can
+searching ChecklistBank's dataset catalog by family name, sorted by size,
+find something for `docs/reports/animalia-gaps.md`'s 1,596,076-species gap,
+rather than waiting for a link to get pasted here?
+
+**Yes, with caveats.** Tested against five of the top-10 gap families via
+`api.checklistbank.org/dataset?q=<family>&sortBy=size&reverse=false`:
+
+| family | gap (animalia-gaps.md) | top non-COL hit | size | verdict |
+|---|---|---|---|---|
+| Carabidae | 31,316 | **Carabcat database** (key 1146, DOI 10.48580/d3dk) | 108,488 | CC BY, 2021-08 vintage — **new lead, not yet measured** |
+| Erebidae | 28,896 | Global Lepidoptera Index (55434) | 398,383 | **already applied** 2026-10-09 as `checklistbank-55434` — search just confirms it was the right call |
+| Geometridae | 24,459 | **Online Taxonomic Facility of Geometridae** (key 185410, DOI 10.48580/d9mhh) | 52,742 | CC BY, 2024-06 vintage — **new lead, not yet measured** |
+| Scarabaeidae | 33,911 | Catalogue of Life Checklist (2328) + four annual COL/ITIS snapshots | — | all already held or superseded (same shape as the COL Hierarchy call above) |
+| Braconidae | 22,140 | Digital Catalogue of Biodiversity of Poland (200034) | 1,307 | too narrow (one country) to matter at this gap size |
+| Cicadellidae | 24,003 | — | — | nothing but single-paper Plazi articles |
+
+**The long tail is almost entirely Plazi `type:"article"`** — one dataset per
+taxonomic paper, often describing a single new species (`size: 1`–`2`).
+Cicadellidae's top six results were all articles; Braconidae's were all
+articles past the first. These are real and CC0/CC-BY licensed in bulk, but
+they are a different acquisition shape entirely — thousands of tiny records
+rather than one checklist — and not what this search is useful for on its
+own. Filtering `type != article` (not exposed as a query param; filtered
+client-side above) is what turns the search from noise into five minutes of
+useful triage per family.
+
+**Two new, unmeasured leads**: Carabcat (Carabidae, our #3 gap family) and
+the Geometridae online facility (our #5 gap family). Neither has been
+measured against the held tree yet — that's the next step if either is
+worth pursuing, the same `scripts/archiveOverlap.py` treatment every other
+candidate above gets before a verdict.
+
+**Worth automating**: looping this search over `docs/reports/animalia-gaps.md`'s
+top N families (not all 9,888) and surfacing the largest non-article,
+non-already-held hit per family would turn this from "found two leads by
+hand" into a standing part of the gap-tracking workflow. Not written yet.
+
 ## Correction, 2026-10-10 — seven table verdicts conflicted with their own prose
 
 Found while re-checking `data-sources.xlsx` against this file. Six cells read
