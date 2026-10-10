@@ -10,6 +10,64 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Found 2026-10-10 — the sequence number in the URL is a search strategy
+
+Prompted by a simple observation about the pasted links so far: ChecklistBank
+dataset keys are not random, and sorting the ~45 we had already triaged
+showed a dense cluster from key 1021 to 2262 with real gaps inside it,
+rather than a flat spread. `scripts/checklistbankShelf.py` already existed
+for exactly this (pages `/dataset?type=taxonomic` in bulk, cross-references
+our manifest by DOI) -- ran it instead of walking ~1,300 individual keys one
+at a time, and it surfaced a specific, named reason for the cluster: a block
+of "World Register/Database/Catalogue of X" specialist databases, all
+registered through the same WoRMS-adjacent editorial infrastructure, sitting
+right in that key range.
+
+**The headline: WoRMS itself (2011) is sitting there, CC BY, current
+(2026-10-01), 1,585,535 name usages, with no blocker.** `docs/dataset-inbox.md`'s
+own earlier worm-gap investigation (2026-10-05 batch, "The worm gap,
+quantified properly") flagged WoRMS as blocked on a person -- GBIF's DwC-A
+endpoint 403s and the documented route was marinespecies.org's manual
+request form. This ChecklistBank listing has none of that. It is also the
+dataset whose family-level sister databases would close the exact gaps that
+investigation measured (Platyhelminthes 0% held, Nemertea 27.0%, Polychaeta
+30.8%, Sipunculida 13.5%, Priapulida 22.0%).
+
+Found alongside it, same key range, not yet measured:
+
+| key | title | size | licence | vintage |
+|---|---|---|---|---|
+| **2011** | **World Register of Marine Species (WoRMS)** | 1,585,535 | CC BY | 2026-10-01 |
+| 2008 | TAXREF (France's national reference taxonomy) | 708,685 | CC BY | 2025-03-10 |
+| 2031 | Flora e Funga do Brasil - Lista Oficial | 166,026 | CC BY | 2026-09-15 |
+| 2214 | Genome Taxonomy Database (GTDB) r232 | 243,860 | CC BY | 2026-08-25 |
+| 1193 | World list of turbellarian worms (Acoelomorpha etc.) | 14,245 | CC BY | 2026-10-01 |
+| 2302 | Nemys: World Database of Nematodes | 41,213 | CC BY | 2026-10-01 |
+| 1081 | World List of Bryozoa | 25,602 | CC BY | 2026-10-01 |
+| 1044 | World Porifera Database | 25,491 | CC BY | 2026-10-01 |
+| 1094 | World Marine/Freshwater/Terrestrial Isopod database | 22,257 | CC BY | 2026-10-01 |
+| 1200 | MilliBase | 34,648 | CC BY | 2026-10-01 |
+| 56185 | The World Spider Catalog | 71,681 | CC BY | 2026-10-04 |
+| 2130 | Checklist of the Collembola of the World | 18,703 | CC BY | 2025-02-04 |
+| 2256 | World Catalogue of Opiliones | 15,242 | CC BY | 2026-10-01 |
+
+GTDB r232 (2214) supersedes the r226.0 logged in the 2026-10-04 batch below
+as "worth fetching before deciding how to map COL's bacteria" -- never
+actually fetched; this is a newer release of the same still-open question.
+Flora e Funga do Brasil pairs with the Brazilian Fauna catalogue already
+taken, same country, the plant/fungus half.
+
+Working through these in order: WoRMS first (the biggest unblock), then the
+WoRMS-family invertebrate cluster, then TAXREF / Flora e Funga do Brasil /
+GTDB. Verdicts recorded below as each is measured.
+
+**Also found while answering a side question**: q-bert (WSL2, 22 cores,
+`scripts/sources.py`) has not been used this session -- every download and
+measurement ran locally on Macie. It is not currently reachable as a remote
+peer either (no `ocd serve` running there), so delegating the heavier
+WoRMS-cluster downloads to it would need that set up first. Worth doing if
+this pattern of large specialist-database batches keeps paying off.
+
 ## Taken 2026-10-10 — the third batch: four takes, one deferred on licence
 
 Dyntaxa, StaphBase, APNI and taicol all applied; AlgaeBase ("Algea") is
