@@ -271,15 +271,24 @@ SOURCES = {
         "Official Lists and Indexes of Names in Zoology (ICZN)", "ICZN, "
         "packageId da38f103-4410-43d1-b716-ea6b1b92bbac",
         "https://www.iczn.org/", "CC0 1.0 (waived, per the archive's eml.xml)",
-        "assessed",
-        "NOT YET APPLIED. The only nomenclatural authority for animals that is "
-        "freely reusable -- unlike ZooBank, whose 8.8% measured coverage over "
-        "400 queries is what makes it impractical. 304 members in the archive. "
-        "Its value is validation rather than coverage: it settles availability "
-        "and the correct spelling of a name, which is a different question from "
-        "whether we hold the name, and GBIF's backbone and COL both carry names "
-        "no one has checked against the Commission's lists. No importer reads it "
-        "yet; it is DwCA-shaped."),
+        "applied",
+        "VALIDATED 2026-10-09 by scripts/validateIczn.py, which parses the "
+        "archive's `names.txt` positionally -- the file has no header and the "
+        "column order is the one in the README's `\\copy names (...)` "
+        "statement -- and matches our names against the Commission's rulings. "
+        "12,403 names (8,158 available, 4,043 unavailable, 202 blank) against "
+        "1,755,597 animalia species: 1,159 matched (0.07%), of which 983 are "
+        "available and 157 are **unavailable** -- the finding no amount of "
+        "name or id matching had surfaced, across 72 families. The opinions "
+        "column carries each ruling (a plenary power, a Direction, a homonymy "
+        "decision), which is the only place that reasoning lives. "
+        "This is not an import and does not write a data field: the lists are "
+        "a judgement about availability, not a record of which species exist, "
+        "so 0.1% coverage means it fills no gap and the finding is a report "
+        "rather than a boolean. Full list in docs/reports/iczn-lists.md. "
+        "The archive is a GitHub clone, not a DwCA as the old note said; "
+        "it also carries a 5.7MB PDF of the lists themselves and an opinions "
+        "directory, neither of which is parsed."),
     "taiwan-endemic": (
         "Endemic species in Taiwan", "GBIF DwCA, 3 members (taxon.txt)",
         "(no DOI in the archive's eml.xml)", "CC0 1.0 (waived, per the eml.xml)",
