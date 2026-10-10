@@ -74,7 +74,10 @@ richness, not against what a specific external checklist happens to offer
 — COL Stage 2's animalia import already swept in most of what these two
 databases independently compiled, from overlapping underlying sources.
 Logged as `checklistbank-1146` and `checklistbank-185410` in
-`scripts/sourcesManifest.py` so neither gets re-triaged.
+`scripts/sourcesManifest.py` so neither gets re-triaged. Full measurement,
+including the complete 41- and 129-name lists of what's actually new, is in
+[`docs/reports/checklistbank-leads-1146-185410.md`](reports/checklistbank-leads-1146-185410.md)
+(raw data: [`checklistbank-1146-185410-overlap.json`](reports/checklistbank-1146-185410-overlap.json)).
 
 **Worth automating**: looping this search over `docs/reports/animalia-gaps.md`'s
 top N families (not all 9,888) and surfacing the largest non-article,
