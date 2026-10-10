@@ -919,6 +919,76 @@ SOURCES = {
         "`reference.tsv` only, no `taxon.*` table, nothing to place "
         "against a family. Declined on data shape, not licence (CC BY) "
         "or vintage."),
+    "checklistbank-2041": (
+        "Dyntaxa -- Svensk taxonomisk databas",
+        "DOI not recorded; version 2026-10-09",
+        "https://www.checklistbank.org/dataset/2041",
+        "CC0", "applied",
+        "APPLIED 2026-10-10. Swedish taxonomic database, all life, issued "
+        "the day before it was pasted. Single-table DwCA, but its id "
+        "column is BOM-prefixed 'taxonId' -- the BOM itself is stripped "
+        "correctly already, but 'taxonid' wasn't yet a recognised "
+        "variant of the generic `id` field, now fixed in colChecklist.py. "
+        "78,716 accepted species/subspecies offered, 35,033 already "
+        "held, 34,487 staged, **3,521 added**. Most of what Dyntaxa "
+        "offers was already covered by eunis and Nortaxa's own Nordic/"
+        "European content -- expected for a fourth source over the same "
+        "ground, not a problem."),
+    "checklistbank-1204": (
+        "StaphBase", "DOI not recorded; version Sep 2026",
+        "https://www.checklistbank.org/dataset/1204",
+        "CC BY", "applied",
+        "APPLIED 2026-10-10. Global rove/clown/water-scavenger beetle "
+        "specialist database (Staphylinidae, Histeridae, Hydrophilidae "
+        "and kin). Read cleanly through the existing ColDP-split path, no "
+        "reader work needed. 89,119 offered, 77,472 already held, 9,077 "
+        "staged, **5,134 added** across 16 families (7,363 staged / "
+        "4,374 added in Staphylinidae alone). 0 authority-id conflicts."),
+    "checklistbank-133813": (
+        "Australian Plant Name Index and Census (APNI-APC)",
+        "DOI not recorded; version 2022-08-31",
+        "https://www.checklistbank.org/dataset/133813",
+        "CC BY", "applied",
+        "APPLIED 2026-10-10. ColDP CSV split, but under a fourth table-"
+        "name spelling (`taxa.tsv`, plural) colChecklist.py's `_find` "
+        "didn't know, and ranked entirely in Latin (Regnum, Division, "
+        "Classis, Ordo, Familia) rather than the English terms every "
+        "other source here uses -- both fixed (`_find` takes multiple "
+        "stems now; `chain()` translates the Latin ranks it knows before "
+        "matching). 24,148 accepted species/subspecies offered, 13,714 "
+        "already held, **1,011 added** across 266 families -- a small "
+        "Australian-endemic top-up over WFO/POWO/LCVP."),
+    "checklistbank-2010": (
+        "The National Checklist of Taiwan (TaiCOL)",
+        "DOI not recorded; version 2024-07-31",
+        "https://www.checklistbank.org/dataset/2010",
+        "CC BY", "applied",
+        "APPLIED 2026-10-10. Single-table DwCA, read without further "
+        "reader changes. 66,504 offered, 23,827 already held, 33,308 "
+        "staged, **10,815 added** across hundreds of families in all six "
+        "kingdoms -- the first import this session to touch archaea. "
+        "Surfaced five more wrong-kingdom-join bugs in its own data, same "
+        "shape as EUNIS and Nortaxa's: a Chinese moss (Hageniella micans, "
+        "cited from a 1999 Sematophyllaceae revision) tagged kingdom="
+        "Animalia/Insecta on all six of its listed synonyms, and four "
+        "Siphonariidae limpet species (subatra, rucuana, sipho, sirius; "
+        "zoological authorships Pilsbry/Sowerby) grafted onto a chytrid "
+        "fungus genus node that already held four genuinely fungal "
+        "Siphonaria species with unrelated epithets. All five removed; "
+        "the four legitimate fungal Siphonaria species untouched."),
+    "checklistbank-304756": (
+        "AlgaeBase (AlgaeGNA)", "DOI not recorded; version 2021",
+        "https://www.checklistbank.org/dataset/304756",
+        "CC BY-NC", "assessed",
+        "DEFERRED, not declined -- licence question raised, not "
+        "resolved. Pasted 2026-10-10 as 'Algea'. 172,351 name usages, "
+        "unmeasured. ChecklistBank records its licence as CC BY-NC, and "
+        "this project holds exactly one documented non-commercial "
+        "exception already (the iNaturalist common-names ledger, see "
+        "its own entry above) -- taking AlgaeBase would be a second one, "
+        "which is a standing-policy call for the project owner, not "
+        "something to default into. Not measured against the tree "
+        "pending that decision."),
     "wikispecies": (
         "Wikispecies (ChecklistBank dataset 314570)",
         "DOI 10.48580/dgx39; version 2026-08-02; "

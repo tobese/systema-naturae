@@ -10,6 +10,54 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Taken 2026-10-10 — the third batch: four takes, one deferred on licence
+
+Dyntaxa, StaphBase, APNI and taicol all applied; AlgaeBase ("Algea") is
+deferred, not declined -- its licence is CC BY-**NC**, and this project
+holds exactly one documented non-commercial exception already (iNaturalist).
+A second one is a standing-policy call, not something to default into, so
+it's logged and left unmeasured pending that decision.
+
+| dataset | verdict | species added |
+|---|---|---|
+| **Dyntaxa** (2041) | **taken** | **3,521** |
+| **StaphBase** (1204) | **taken** | **5,134** |
+| **APNI-APC** (133813) | **taken** | **1,011** |
+| **taicol** (2010) | **taken** | **10,815** |
+| AlgaeBase (304756) | deferred -- CC BY-NC, a licence-policy question | -- |
+
+**Four more reader-format quirks, four more small fixes**, each regression-
+tested against every dataset already taken before moving on:
+
+| dataset | problem | fix |
+|---|---|---|
+| Dyntaxa | id column is `taxonId` behind a UTF-8 BOM; `taxonid` wasn't a recognised `id` variant | added it to `FIELDS` |
+| Dyntaxa (incidentally) | the ColDP-CSV dispatch matched `taxon.csv`/`name.csv` by `endswith`, and Dyntaxa's own `VernacularName.csv` also ends in "name.csv" | matched by exact basename instead |
+| APNI | taxon table is `taxa.tsv`, plural -- a fourth spelling `_find` didn't know | `_find` now takes multiple candidate stems |
+| APNI | ranks its whole hierarchy in Latin (Regnum, Division, Classis, Ordo, Familia) | `chain()` translates the Latin ranks it knows before matching |
+
+StaphBase and taicol both read through the existing paths with no changes.
+
+**taicol surfaced five more wrong-kingdom-join bugs**, the same shape as
+EUNIS's and Nortaxa's own data problems, not anything introduced here: a
+Chinese moss (*Hageniella micans*, cited straight from a 1999
+*Sematophyllaceae* revision) tagged `kingdom=Animalia`/`Insecta` on all six
+of its listed synonyms, and four Siphonariidae limpet species (*subatra*,
+*rucuana*, *sipho*, *sirius* -- correct zoological authorships, Pilsbry and
+Sowerby) grafted onto a chytrid fungus genus node that already held four
+*genuinely* fungal *Siphonaria* species with entirely unrelated epithets --
+the tell that these four were mollusks misjoined onto the wrong genus, not a
+second homonymous fungal genus. All five removed; the four legitimate
+fungal species untouched. All nine `verifyTree` invariants hold.
+
+**Running total for 2026-10-10: nine datasets taken, 194,768 species added
+(eunis 36,568 + LCVP 71,663 + Nortaxa 12,028 + Brazilian Fauna 29,431 +
+COL China 24,597 + Dyntaxa 3,521 + StaphBase 5,134 + APNI 1,011 + taicol
+10,815), 19 wrong-kingdom data bugs found and fixed in other people's
+databases (4 EUNIS + 8 Nortaxa + 2 pre-existing exposed by the Brazilian
+Fauna catalogue + 5 taicol), one genuine new cross-kingdom homonym
+allow-listed, and one licence question parked for a decision.**
+
 ## Taken 2026-10-10 — EUNIS and LCVP applied, and the second batch's two takes
 
 Following straight on from the batch below: eunis and LCVP (both "not yet
