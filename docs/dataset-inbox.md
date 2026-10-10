@@ -3,6 +3,33 @@
 Paste dataset links below — one per line. Nothing else needed; I triage them from
 here and move each one into the table with a verdict.
 
+> **Linked to `docs/reports/data-sources.xlsx`.** That workbook mirrors this
+> file's manifest and triage tables (`Sources (manifest)` from
+> `scripts/sourcesManifest.py`, `Candidate triage log` from the tables below).
+> When a verdict, coverage number, or status changes in either place,
+> update the other in the same change — they are meant to stay in sync, not
+> to fork.
+
+## Correction, 2026-10-10 — seven table verdicts conflicted with their own prose
+
+Found while re-checking `data-sources.xlsx` against this file. Six cells read
+**take** (or "take (revisit)") while the paragraph right below them said the
+opposite in as many words, and a seventh ("take") sat next to a paragraph
+that gave no reason to take it. Fixed below, with `sourcesManifest.py`
+confirming four of them as `"NOT taken"` where an entry exists:
+
+| row | table said | now reads | why |
+|---|---|---|---|
+| OTL | take | decline | "OTL declined on vintage" (line below the table) |
+| iNaturalist 139831 | take (revisit) | decline | "Declined." — not a species source |
+| Tropicos | take | decline | "Tropicos is declined on vintage"; `checklistbank-310868` says `NOT taken` |
+| SF Ortho (1021) | take | decline | batch heading "none worth taking" / closing "zero taken, six declined"; `checklistbank-1021` says `NOT taken` |
+| Scales/ScaleNet (1026) | take | decline | "I am still declining it"; `checklistbank-1026` says `NOT taken` |
+| Ticks/TicksBase (1030) | take | decline | "nothing there for us"; `checklistbank-1030` says `NOT taken` |
+| WoRMS FishBase (1010) | take | decline (probable) | "zero new... adds nothing to it" — no manifest entry to confirm, flagged rather than asserted |
+
+No other row in this file's tables was found to disagree with its own prose.
+
 <!-- PASTE BELOW THIS LINE -->
 
 ```
@@ -198,9 +225,9 @@ counts come from the API's species-rank page.
 | pasted as | dataset | name usages | **accepted species** | **held** | families held | licence | vintage | verdict |
 |---|---|---|---|---|---|---|---|---|
 | NCBI | NCBI Taxonomy 2169 | 3,168,355 | 197,971 | **44,946 (27.1%)** | 7,787/10,907 (71.4%) | CC BY | 2026-04-17 | **take** |
-| OTL | Open Tree of Life 201891 | 2,683,520 | 16,411 | **1,793 (10.9%)** | 7,147/9,086 (78.7%) | CC0 | 2021-06 | **take** |
+| OTL | Open Tree of Life 201891 | 2,683,520 | 16,411 | **1,793 (10.9%)** | 7,147/9,086 (78.7%) | CC0 | 2021-06 | **decline** |
 | ENA | ENA taxonomy 2265 | 2,552,208 | (NCBI derivative) | — | — | CC BY | 2010-12 | **take (revisit)** |
-| iNaturalist | iNaturalist 139831 | 1,427,940 | **304** | 155 (51.0%) | 8,875/10,731 (82.7%) | CC BY | 2026-09-01 | **take (revisit)** |
+| iNaturalist | iNaturalist 139831 | 1,427,940 | **304** | 155 (51.0%) | 8,875/10,731 (82.7%) | CC BY | 2026-09-01 | **decline** |
 
 NCBI is the one worth having, and the numbers match the 2026-10-04 assessment:
 it is the only candidate that carries Bacteria, Archaea and Viruses as real
@@ -259,7 +286,7 @@ tests it against `taxaserve`. Measured, spread across the alphabet:
 |---|---|---|---|---|---|---|---|---|
 | World Flora | 2004 WFO Plant List 2026-06 | SPECIES | 14,154 | **43.8%** | **97.4%** (719/738) | CC0 | **2026-06** | **take** |
 | ITIS | 2144 ITIS | SPECIES | 59,183 | **71.5%** | 81.6% (7,215/8,843) | CC0 | **2026-08** | **taken, +68,813** |
-| Tropicos | 310868 Tropicos | SPECIES | 20,580 | 19.4% | 44.0% | CC BY | 2021 | **take** |
+| Tropicos | 310868 Tropicos | SPECIES | 20,580 | 19.4% | 44.0% | CC BY | 2021 | **decline** |
 | Fungurum | 1028 Species Fungorum | SPECIES | 70,961 | 69.9% | 85.3% | **none stated** | 2026-09 | **blocked on licence** |
 | IMRNG | 2007 IRMNG | GENUS | 33,773 | 59.9% | 56.0% | CC BY | 2026-09 | **take** |
 
@@ -396,12 +423,12 @@ dataset's own names — both resolve, so both were triaged on their merits.
 
 | pasted as | dataset | what | vintage | name usages | **already held** | licence | verdict |
 |---|---|---|---|---|---|---|---|
-| SF Ortho | 1021 | Orthoptera Species File | **Oct 2026** | 30,890 | **88.3%** | CC BY | **take** |
+| SF Ortho | 1021 | Orthoptera Species File | **Oct 2026** | 30,890 | **88.3%** | CC BY | **decline** |
 | Fleas | 1022 | Parhost World Database of Fleas | 2005-11 | 2,047 | **96.7%** | *other* | **do not take** |
 | Phylla | 1023 | Phyllachorales | Oct 2017 | 1,311 | **95.8%** | **none stated** | **do not take** |
 | Ryth | 1025 | Rhytismatales | Oct 2017 | 769 | **96.7%** | **none stated** | **do not take** |
-| Scales | 1026 | ScaleNet, World Database of Scale Insects | Dec 2004 | 7,074 | **83.7%** | CC BY | **take** |
-| Ticks | 1030 | TicksBase | Jun 2005 | 796 | **100%** | CC BY | **take** |
+| Scales | 1026 | ScaleNet, World Database of Scale Insects | Dec 2004 | 7,074 | **83.7%** | CC BY | **decline** |
+| Ticks | 1030 | TicksBase | Jun 2005 | 796 | **100%** | CC BY | **decline** |
 
 **None of the six clears the bar, and three of them are blocked on licensing
 before coverage even matters.** 1022 declares `other`, and 1023 and 1025 declare
@@ -457,7 +484,7 @@ name count is not evidence either way.
 
 | dataset | what | vintage | name usages | **already held** | verdict |
 |---|---|---|---|---|---|
-| 1010 | WoRMS FishBase | 2026-09 | 37,504 | **100%** | **take** |
+| 1010 | WoRMS FishBase | 2026-09 | 37,504 | **100%** | **decline (probable)** |
 | 1015 | ILDIS — World Database of Legumes | 2014-05 | 16,349 | **0.3%** | **take — the only real gap here** |
 | 1018 | LepIndex — Global Lepidoptera Names Index | 2012-01 | 133,948 | ~77% | **take — biggest absolute gain** |
 | 1019 | Moss TROPICOS (MOST) | 2004-07 | 13,300 | ~76% | take, small |
