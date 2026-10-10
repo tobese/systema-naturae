@@ -62,7 +62,8 @@
             ],
             "col": [
               "WLZY"
-            ]
+            ],
+            "checklistbank": "76296"
           },
           "uuid": "cafc79bf-7a87-5f7-8ac-463e1edb100afc",
           "authorityIds": "col:WLZY,gbif:2600189,mycobank:358613"
@@ -116,7 +117,8 @@
             ],
             "col": [
               "WM22"
-            ]
+            ],
+            "checklistbank": "202677"
           },
           "uuid": "fd4d5477-f52b-54d-9fa-8dbcb14052959d",
           "authorityIds": "col:WM22,gbif:3412775,mycobank:365982"
@@ -170,7 +172,8 @@
             ],
             "col": [
               "WM24"
-            ]
+            ],
+            "checklistbank": "76297"
           },
           "uuid": "11f43d05-fad6-5b6-9d7-0bf58523a31dc8",
           "authorityIds": "col:WM24,gbif:3412764,mycobank:383101"
@@ -221,7 +224,8 @@
             ],
             "mycobank": [
               "475390"
-            ]
+            ],
+            "checklistbank": "202678"
           },
           "uuid": "671dfaa1-99e4-5ac-a4f-f2d5077b03280c",
           "authorityIds": "gbif:3412751,mycobank:475390"
@@ -272,7 +276,8 @@
             ],
             "mycobank": [
               "365748"
-            ]
+            ],
+            "checklistbank": "76298"
           },
           "uuid": "0f0ad177-632e-5b4-bf4-a1380031bb337b",
           "authorityIds": "gbif:3412752,mycobank:365748"
@@ -329,7 +334,8 @@
             ],
             "col": [
               "WM28"
-            ]
+            ],
+            "checklistbank": "76299"
           },
           "uuid": "4dc9f7f8-e10d-545-95f-8b5909cbf4ada2",
           "authorityIds": "col:WM28,gbif:3412762,itis:191931,mycobank:341792"
@@ -357,7 +363,8 @@
             ],
             "itis": [
               "191932"
-            ]
+            ],
+            "checklistbank": "76300"
           },
           "uuid": "fc50cb7d-634e-57f-9e5-2c654fb92ca3b2",
           "authorityIds": "gbif:3412746,itis:191932,mycobank:341793"
@@ -385,7 +392,8 @@
             ],
             "col": [
               "5ZFVV"
-            ]
+            ],
+            "checklistbank": "76301"
           },
           "uuid": "bc458b1e-2d87-5f1-8c3-5b226d8af75806",
           "authorityIds": "col:5ZFVV,gbif:3412756,mycobank:341794"
@@ -430,10 +438,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3412750
+            "gbif": 3412750,
+            "checklistbank": "76302"
           },
           "uuid": "d081e10c-173a-597-9dd-cd675727dd4196",
-          "authorityIds": "gbif:3412750"
+          "authorityIds": "gbif:3412750",
+          "authorship": "Vainio"
         },
         {
           "id": "SP_COCCOTREMA_MINUTUM",
@@ -447,9 +457,11 @@
           "sourceIds": {
             "mycobank": [
               "560054"
-            ]
+            ],
+            "checklistbank": "173415"
           },
-          "authorityIds": "mycobank:560054"
+          "authorityIds": "mycobank:560054",
+          "authorship": "(Degel.) R. Sant."
         },
         {
           "id": "SP_COCCOTREMA_STELLATUM",
@@ -466,6 +478,19 @@
             ]
           },
           "authorityIds": "mycobank:374476"
+        },
+        {
+          "id": "SP_COCCOTREMA_STELLATA_VST",
+          "name": "Coccotrema stellata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccotrema",
+          "authorship": "Øvst.",
+          "sourceIds": {
+            "checklistbank": "76303"
+          },
+          "children": []
         }
       ],
       "authorship": "Müller Arg."
@@ -692,7 +717,8 @@
             ],
             "col": [
               "3HNN7"
-            ]
+            ],
+            "checklistbank": "225826"
           },
           "uuid": "ee67154f-b30e-596-97e-e81a01504ded9e",
           "authorityIds": "col:3HNN7,gbif:9814532,mycobank:515572"
@@ -751,9 +777,31 @@
         }
       ],
       "authorship": "Schmitt, Kalb & Lumbsch"
+    },
+    {
+      "id": "GENUS_LEPOLICHEN",
+      "name": "Lepolichen",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPOLICHEN_COCCOPHORUS_MONT_TREVIS",
+          "name": "Lepolichen coccophorus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepolichen",
+          "authorship": "(Mont.) Trevis.",
+          "sourceIds": {
+            "checklistbank": "76305"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coccotremataceae"
     }
   ],
   "authorship": "Henssen",
-  "genusCount": 3,
-  "speciesCount": 28
+  "genusCount": 4,
+  "speciesCount": 30
 }

@@ -1323,7 +1323,8 @@
           "sourceIds": {
             "itis": [
               "88541"
-            ]
+            ],
+            "checklistbank": "209843"
           },
           "authorityIds": "itis:88541"
         },
@@ -1391,7 +1392,8 @@
           "sourceIds": {
             "itis": [
               "88551"
-            ]
+            ],
+            "checklistbank": "209845"
           },
           "authorityIds": "itis:88551"
         },
@@ -1435,6 +1437,19 @@
           "authorship": "Shmeleva, 1968",
           "sourceIds": {
             "checklistbank": "48927"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ONCAEA_OBSCURA_FARRAN_1908",
+          "name": "Oncaea obscura",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oncaea",
+          "authorship": "Farran, 1908",
+          "sourceIds": {
+            "checklistbank": "155186"
           },
           "children": []
         }
@@ -2370,11 +2385,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oncaeidae"
+    },
+    {
+      "id": "GENUS_PACHYSOMA",
+      "name": "Pachysoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PACHYSOMA_PUNCTATUM_CLAUS_1863",
+          "name": "Pachysoma punctatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachysoma",
+          "authorship": "Claus, 1863",
+          "sourceIds": {
+            "checklistbank": "209905"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oncaeidae"
     }
   ],
-  "speciesCount": 127,
+  "speciesCount": 129,
   "appSlug": "oncaeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 10
+  "genusCount": 11
 }

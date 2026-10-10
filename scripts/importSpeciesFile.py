@@ -355,9 +355,19 @@ def merge_family(existing: dict, new: dict, *, kingdom: str = None,
                 if src.get("id") and src.get("rank") in ("SPECIES", "SUBSPECIES"):
                     by_id[src["id"]] = src
                     if kingdom and family_slug and src.get("sourceIds"):
-                        hits = authorityIndex.conflicts_for(
-                            kingdom, family_slug, src.get("name"),
-                            src["sourceIds"])
+                        # Fail open: this gate is a warning, not a gatekeeper
+                        # (see the docstring), and two importers rebuilding
+                        # the index at once has already crashed a run that
+                        # was otherwise fine (sqlite3's "readonly database"
+                        # from a since-fixed tmp-file collision in
+                        # authorityIndex.build). An import should never die
+                        # on the thing meant to make it safer.
+                        try:
+                            hits = authorityIndex.conflicts_for(
+                                kingdom, family_slug, src.get("name"),
+                                src["sourceIds"])
+                        except Exception:
+                            hits = []
                         if hits:
                             merged["authority_conflicts"] = \
                                 merged.get("authority_conflicts", 0) + 1

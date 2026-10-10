@@ -191,10 +191,12 @@
             ],
             "itis": [
               "13736"
-            ]
+            ],
+            "checklistbank": "118271"
           },
           "uuid": "845fff3a-19c5-568-917-5d3bd81b53ca1a",
-          "authorityIds": "gbif:7954640,itis:13736"
+          "authorityIds": "gbif:7954640,itis:13736",
+          "authorship": "(Zacharias) Lemmermann"
         },
         {
           "id": "SALPINGOECA_FUSIFORMIS",
@@ -237,10 +239,12 @@
             ],
             "itis": [
               "180962"
-            ]
+            ],
+            "checklistbank": "149809"
           },
           "uuid": "d520acc5-3963-5ce-a78-bff42882f84b09",
-          "authorityIds": "gbif:7464077,itis:180962"
+          "authorityIds": "gbif:7464077,itis:180962",
+          "authorship": "Clark"
         },
         {
           "id": "SALPINGOECA_HUXLEYI",
@@ -377,10 +381,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8276712
+            "gbif": 8276712,
+            "checklistbank": "149812"
           },
           "uuid": "3de9d398-48ae-567-975-72a1ac58a780de",
-          "authorityIds": "gbif:8276712"
+          "authorityIds": "gbif:8276712",
+          "authorship": "Kent"
         },
         {
           "id": "SALPINGOECA_NAPIFORMIS",
@@ -434,10 +440,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 11840462
+            "gbif": 11840462,
+            "checklistbank": "224726"
           },
           "uuid": "8afd69c0-95b4-535-997-6e8af9ac286184",
-          "authorityIds": "gbif:11840462"
+          "authorityIds": "gbif:11840462",
+          "authorship": "Tikhonenkov & Mazei, 2008"
         },
         {
           "id": "SALPINGOECA_STENOTHECA",
@@ -632,10 +640,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8041946
+            "gbif": 8041946,
+            "checklistbank": "150385"
           },
           "uuid": "484eb46f-bde4-566-a09-d76f08f7abff88",
-          "authorityIds": "gbif:8041946"
+          "authorityIds": "gbif:8041946",
+          "authorship": "(Bourr.) Fott"
         },
         {
           "id": "PACHYSOECA_URNULA",
@@ -701,10 +711,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7749107
+            "gbif": 7749107,
+            "checklistbank": "118269"
           },
           "uuid": "92dc4f09-ae15-5db-a1e-38dbd011d5fc5a",
-          "authorityIds": "gbif:7749107"
+          "authorityIds": "gbif:7749107",
+          "authorship": "Lackey"
         }
       ]
     },
@@ -782,8 +794,91 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "salpingoecidae"
+    },
+    {
+      "id": "GENUS_AULOMONAS",
+      "name": "Aulomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULOMONAS_PURDYI_LACKEY",
+          "name": "Aulomonas purdyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulomonas",
+          "authorship": "Lackey",
+          "sourceIds": {
+            "checklistbank": "118274"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salpingoecidae"
+    },
+    {
+      "id": "GENUS_CALLIACANTHA",
+      "name": "Calliacantha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLIACANTHA_NATANS_GR_NTVED_LEADBEATER_1978",
+          "name": "Calliacantha natans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliacantha",
+          "authorship": "(Grøntved) Leadbeater, 1978",
+          "sourceIds": {
+            "checklistbank": "147948"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIACANTHA_LONGICAUDATA_LEADBEATER_LEADBEATER_1978",
+          "name": "Calliacantha longicaudata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliacantha",
+          "authorship": "(Leadbeater) Leadbeater, 1978",
+          "sourceIds": {
+            "checklistbank": "150382"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIACANTHA_MULTISPINA_MANTON_OATES",
+          "name": "Calliacantha multispina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliacantha",
+          "authorship": "Manton & Oates",
+          "sourceIds": {
+            "checklistbank": "150383"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIACANTHA_SIMPLEX_MANTON_OATES_1979",
+          "name": "Calliacantha simplex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliacantha",
+          "authorship": "Manton & Oates, 1979",
+          "sourceIds": {
+            "checklistbank": "150384"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "salpingoecidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 37
+  "genusCount": 8,
+  "speciesCount": 42
 }

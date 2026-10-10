@@ -732,7 +732,8 @@
             ],
             "itis": [
               "9335"
-            ]
+            ],
+            "checklistbank": "106254"
           },
           "authorityIds": "itis:9335,mycobank:496754"
         },
@@ -917,9 +918,11 @@
           "sourceIds": {
             "mycobank": [
               "364746"
-            ]
+            ],
+            "checklistbank": "203508"
           },
-          "authorityIds": "mycobank:364746"
+          "authorityIds": "mycobank:364746",
+          "authorship": "(Linnaeus) Wallroth"
         },
         {
           "id": "SP_TRENTEPOHLIA_LICHENICOLA",
@@ -979,7 +982,8 @@
           "sourceIds": {
             "itis": [
               "9338"
-            ]
+            ],
+            "checklistbank": "106256"
           },
           "authorityIds": "itis:9338"
         },
@@ -1027,7 +1031,11 @@
             "South America"
           ],
           "children": [],
-          "uuid": "9df56de8-f2d8-507-ba0-83f9c55c7c37e7"
+          "uuid": "9df56de8-f2d8-507-ba0-83f9c55c7c37e7",
+          "authorship": "(Kützing) Bornet",
+          "sourceIds": {
+            "checklistbank": "106257"
+          }
         },
         {
           "id": "SP_TRENTEPOHLIA_UNCINATA",
@@ -1509,8 +1517,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trentepohliaceae"
+    },
+    {
+      "id": "GENUS_BYSSUS",
+      "name": "Byssus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BYSSUS_INCANA_LINNAEUS_1753",
+          "name": "Byssus incana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Byssus",
+          "authorship": "Linnaeus, 1753",
+          "sourceIds": {
+            "checklistbank": "145065"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trentepohliaceae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 112
+  "genusCount": 12,
+  "speciesCount": 113
 }

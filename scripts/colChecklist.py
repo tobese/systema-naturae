@@ -36,10 +36,10 @@ import os
 import re
 import zipfile
 
-# accepted-name handling: synonyms are named here, not flagged on the name
-SYN_TABLES = ("Synonym.tsv", "synonym.tsv")
-NAME_TABLES = ("Name.tsv", "name.tsv")
-TAXON_TABLES = ("Taxon.tsv", "taxon.tsv")
+# COL China's taxon.txt carries a huge denormalised remarks/reference field on
+# some rows and overflows the csv module's 128KB default (Nortaxa and the
+# Brazilian Fauna catalogue stay under it, so this only bit one of the three).
+csv.field_size_limit(10_000_000)
 
 # our name -> the variants seen in the wild
 FIELDS = {
@@ -65,6 +65,11 @@ FIELDS = {
     "order_name": ("ordername",),
     "family_name": ("familyname",),
 }
+
+# A taxonomicStatus value that means "this is the name to use", not a
+# synonym. Nortaxa (2030) writes "valid" where DwC's own vocabulary says
+# "accepted" -- same concept, different publisher's word for it.
+ACCEPTED_STATUS = {"accepted", "provisionally accepted", "valid"}
 
 # rank -> the column that may carry it directly on the taxon row
 CHAIN_COL = {r: f"{r}_name" for r in
@@ -132,13 +137,34 @@ def _norm(h):
 REQUIRED = {
     "name": ("id", "scientific_name", "rank"),
     "synonym": ("name_id",),
-    # name_id is NOT required here: a single-table DwCA like LCVP has no
-    # Name.tsv to join against and carries scientific_name/rank/authorship/
-    # status directly on the taxon row instead. Both shapes satisfy
-    # ("id", "parent"); load() falls back to the taxon row's own columns
-    # when name_id -- and so `names` -- comes up empty for a given row.
-    "taxon": ("id", "parent"),
+    # Neither name_id nor parent is required here. LCVP (no Name.tsv) carries
+    # scientific_name/rank/authorship/status directly on the taxon row
+    # instead of joining to a name table. COL China goes further and has no
+    # parent column at all -- kingdom/phylum/class/order/family/genus are
+    # flat columns on every row, like ILDIS and EUNIS, just denormalised
+    # alongside a parent-walk-shaped table instead of a single-purpose one.
+    # `chain()` already treats a missing parent as "stop after this row's
+    # own columns", which is exactly right for that shape.
+    "taxon": ("id",),
 }
+
+
+def _find(c, stem):
+    """First member whose basename matches `stem`, any case, any extension.
+
+    ChecklistBank native DwCA exports (COL China, Nortaxa, the Brazilian
+    Fauna catalogue) name their tables `taxon.txt`/`name.txt`, not the
+    `.tsv` this reader's TAXON_TABLES/NAME_TABLES/SYN_TABLES tuples list --
+    those matched ColDP's own convention (craneflies, reptile-db) and the
+    `.txt` DwCA shape silently read as zero taxa, no error, the same "looks
+    empty" failure GLI's CSV flavour produced before `_coldp` learned to
+    read it. One stem-matching lookup handles every extension at once.
+    """
+    for m in c.namelist():
+        base = m.rsplit("/", 1)[-1]
+        if "." in base and base[:base.rindex(".")].lower() == stem:
+            return m
+    return None
 
 
 def _index(header, require):
@@ -382,24 +408,22 @@ def load(path):
             # empty dataset.
             return _coldp(path)
         names = {}
-        for t in NAME_TABLES:
-            if t in c.namelist():
-                for r in _rows(c, t, "name"):
-                    names[r["id"]] = {"name": r.get("scientific_name"),
-                                      "authorship": r.get("authorship"),
-                                      "rank": r.get("rank")}
-                break
+        t = _find(c, "name")
+        if t:
+            for r in _rows(c, t, "name"):
+                names[r["id"]] = {"name": r.get("scientific_name"),
+                                  "authorship": r.get("authorship"),
+                                  "rank": r.get("rank")}
         synonym_ids = set()
-        for t in SYN_TABLES:
-            if t in c.namelist():
-                for r in _rows(c, t, "synonym"):
-                    if r.get("name_id"):
-                        synonym_ids.add(r["name_id"])
-                break
+        t = _find(c, "synonym")
+        if t:
+            for r in _rows(c, t, "synonym"):
+                if r.get("name_id"):
+                    synonym_ids.add(r["name_id"])
         taxa = []
-        for t in TAXON_TABLES:
-            if t in c.namelist():
-                for r in _rows(c, t, "taxon"):
+        t = _find(c, "taxon")
+        if t:
+            for r in _rows(c, t, "taxon"):
                     n = names.get(r.get("name_id"), {}) if r.get("name_id") else {}
                     # LCVP (no Name.tsv, no Synonym.tsv) carries scientificName,
                     # rank, authorship and taxonomicStatus directly on the row
@@ -415,8 +439,7 @@ def load(path):
                         "authorship": n.get("authorship") or r.get("authorship"),
                         "rank": r.get("rank") or n.get("rank"),
                         "is_synonym": (
-                            status.strip().lower() not in
-                            ("accepted", "provisionally accepted")
+                            status.strip().lower() not in ACCEPTED_STATUS
                             if status else r.get("name_id") in synonym_ids),
                     }
                     for rnk, col in CHAIN_COL.items():
@@ -424,7 +447,6 @@ def load(path):
                         if v:
                             row[col] = v
                     taxa.append(row)
-                break
     finally:
         c.close()
     return taxa, names, metadata(path)
@@ -450,10 +472,20 @@ def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
             # its rank is the one we want. reptile-db leaves family_name empty on
             # all 17,042 rows, so the second path is the one that does the work.
             v = cur.get(CHAIN_COL[rnk])
+            denormalised = bool(v)
             if not v and crank in (rnk, f"{rnk}group"):
                 v = cur.get("name")
             if v:
-                out[rnk] = re.sub(r"\s+", " ", str(v)).strip()
+                v = re.sub(r"\s+", " ", str(v)).strip()
+                # A rank above species is one word in real nomenclature, so a
+                # second word is authorship riding along on `scientificName`
+                # per plain Darwin Core convention -- "Curculionidae
+                # Latreille, 1802" (the Brazilian Fauna catalogue writes every
+                # rank this way) -- not part of the name. Denormalised chain
+                # columns (ILDIS, EUNIS) are already bare and skip this.
+                if not denormalised and " " in v:
+                    v = v.split()[0]
+                out[rnk] = v
         cur = by_id.get(cur.get("parent")) if cur.get("parent") else None
         n += 1
     return out

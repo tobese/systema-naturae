@@ -194,7 +194,8 @@
             ],
             "itis": [
               "591410"
-            ]
+            ],
+            "checklistbank": "150532"
           },
           "uuid": "9377a34a-9469-5e9-908-33c8f96a33dba0",
           "authorityIds": "gbif:7785419,itis:591410"
@@ -366,10 +367,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8275178
+            "gbif": 8275178,
+            "checklistbank": "151412"
           },
           "uuid": "b8d4f3fe-d0c4-57e-a56-6eaf65c57b4f89",
-          "authorityIds": "gbif:8275178"
+          "authorityIds": "gbif:8275178",
+          "authorship": "Grunow in Cleve et Grunow"
         },
         {
           "id": "PLAGIOTROPIS_SEMIHYALINA",
@@ -470,10 +473,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7396881
+            "gbif": 7396881,
+            "checklistbank": "150533"
           },
           "uuid": "f69f9159-7217-570-ada-32abe593defcdf",
-          "authorityIds": "gbif:7396881"
+          "authorityIds": "gbif:7396881",
+          "authorship": "Grunow in Van Heurck, 1880"
         },
         {
           "id": "PLAGIOTROPIS_VITREA",
@@ -662,8 +667,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "plagiotropidaceae"
+    },
+    {
+      "id": "GENUS_MEUNIERA",
+      "name": "Meuniera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEUNIERA_MEMBRANACEA_P_T_CLEVE_P_C_SILVA_IN_HASLE_SYVERTSEN_1996",
+          "name": "Meuniera membranacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meuniera",
+          "authorship": "(P.T. Cleve) P.C. Silva in Hasle & Syvertsen, 1996",
+          "sourceIds": {
+            "checklistbank": "117791"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plagiotropidaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 34
+  "genusCount": 8,
+  "speciesCount": 35
 }

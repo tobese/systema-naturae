@@ -34,7 +34,8 @@
             ]
           },
           "uuid": "710c91d0-6b01-51f-8be-5d8a6a5035d52f",
-          "authorityIds": "col:H83H,gbif:2580202,mycobank:126675"
+          "authorityIds": "col:H83H,gbif:2580202,mycobank:126675",
+          "children": []
         },
         {
           "id": "ASCODICHAENA_RUGOSA",
@@ -59,10 +60,12 @@
             ],
             "col": [
               "H83J"
-            ]
+            ],
+            "checklistbank": "129370"
           },
           "uuid": "78a82798-7c57-5b8-90f-9e01fc0ebb0387",
-          "authorityIds": "col:H83J,gbif:2580175,mycobank:309177"
+          "authorityIds": "col:H83J,gbif:2580175,mycobank:309177",
+          "children": []
         }
       ],
       "authorship": "Butin"
@@ -97,7 +100,8 @@
             ]
           },
           "uuid": "8da1ff98-5c8f-5d2-b91-7e0d47b6d4cccb",
-          "authorityIds": "col:35K3L,gbif:3308122,mycobank:296604"
+          "authorityIds": "col:35K3L,gbif:3308122,mycobank:296604",
+          "children": []
         }
       ],
       "authorship": "Petrak"
@@ -132,7 +136,8 @@
             ]
           },
           "uuid": "b32ccc27-7deb-5c9-b40-d901b55775b38b",
-          "authorityIds": "col:34K26,gbif:3481267,mycobank:431596"
+          "authorityIds": "col:34K26,gbif:3481267,mycobank:431596",
+          "children": []
         }
       ],
       "authorship": "Kuntze"
@@ -164,7 +169,8 @@
             ]
           },
           "uuid": "febaab34-6d75-571-a92-f37ad661b8b5fa",
-          "authorityIds": "gbif:3559748,mycobank:228274"
+          "authorityIds": "gbif:3559748,mycobank:228274",
+          "children": []
         }
       ],
       "authorship": "Passerini & Thümen"
@@ -196,7 +202,8 @@
             ]
           },
           "uuid": "2a484f7f-e24b-577-8d9-1816763e6945f4",
-          "authorityIds": "gbif:6123967,mycobank:337873"
+          "authorityIds": "gbif:6123967,mycobank:337873",
+          "children": []
         },
         {
           "id": "PSILOSPORA_CHAMAECYPARIDIS",
@@ -221,11 +228,49 @@
             ]
           },
           "uuid": "05b1955c-4edf-59f-b28-54c17101b43847",
-          "authorityIds": "col:4PJMX,gbif:6334151,mycobank:304505"
+          "authorityIds": "col:4PJMX,gbif:6334151,mycobank:304505",
+          "children": []
+        },
+        {
+          "id": "SP_PSILOSPORA_FAGINEA_PERS_RABENH",
+          "name": "Psilospora faginea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilospora",
+          "authorship": "(Pers.) Rabenh.",
+          "sourceIds": {
+            "checklistbank": "81012"
+          },
+          "children": []
         }
       ],
       "authorship": "Rabenhorst"
+    },
+    {
+      "id": "GENUS_PSEUDOPHACIDIUM",
+      "name": "Pseudophacidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOPHACIDIUM_LEDI_ALB_EX_SCHWEIN_FR_P_KARST",
+          "name": "Pseudophacidium ledi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudophacidium",
+          "authorship": "(Alb. ex Schwein.: Fr.) P. Karst.",
+          "sourceIds": {
+            "checklistbank": "81010"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ascodichaenaceae"
     }
   ],
-  "authorship": "D. Hawksworth & Sherwood"
+  "authorship": "D. Hawksworth & Sherwood",
+  "genusCount": 6,
+  "speciesCount": 9
 }

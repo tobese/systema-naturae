@@ -50,8 +50,16 @@ def _newest_family_mtime() -> float:
 
 
 def build(path: str = INDEX_PATH) -> int:
-    """(Re)write the index from the family files on disk. Returns row count."""
-    tmp = path + ".tmp"
+    """(Re)write the index from the family files on disk. Returns row count.
+
+    `tmp` is per-process (pid in the name): two importers run at once --
+    which happened, an eunis/LCVP/Nortaxa/Brazil batch all mid-import at
+    once -- both see the index as stale and both rebuild, and a shared tmp
+    name means the second one's `os.remove` or `os.replace` can land on the
+    first one's in-progress file. `sqlite3.OperationalError: attempt to
+    write a readonly database` was that collision, not a permissions bug.
+    """
+    tmp = f"{path}.{os.getpid()}.tmp"
     if os.path.exists(tmp):
         os.remove(tmp)
     os.makedirs(os.path.dirname(path), exist_ok=True)

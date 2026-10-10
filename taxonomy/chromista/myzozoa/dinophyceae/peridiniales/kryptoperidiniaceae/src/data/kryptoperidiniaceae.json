@@ -25,7 +25,8 @@
             "gbif": 7782971
           },
           "uuid": "6ca88b1a-14a1-5c8-bd5-acc422cd88ab52",
-          "authorityIds": "gbif:7782971"
+          "authorityIds": "gbif:7782971",
+          "children": []
         },
         {
           "id": "DURINSKIA_BALTICA",
@@ -44,7 +45,8 @@
             "gbif": 7474742
           },
           "uuid": "ace7d575-d22f-5f7-a8d-88f82371fc60c6",
-          "authorityIds": "gbif:7474742"
+          "authorityIds": "gbif:7474742",
+          "children": []
         },
         {
           "id": "DURINSKIA_OCULATA",
@@ -62,7 +64,21 @@
             "gbif": 8106567
           },
           "uuid": "ed3a87ee-91bc-557-88d-87b099ab70d9bb",
-          "authorityIds": "gbif:8106567"
+          "authorityIds": "gbif:8106567",
+          "children": []
+        },
+        {
+          "id": "SP_DURINSKIA_DYBOWSKII_WOLOSZYNSKA_CARTY_2014",
+          "name": "Durinskia dybowskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Durinskia",
+          "authorship": "(Woloszynska) Carty, 2014",
+          "sourceIds": {
+            "checklistbank": "224259"
+          },
+          "children": []
         }
       ]
     },
@@ -87,7 +103,8 @@
             "gbif": 10771270
           },
           "uuid": "a5bedc5d-716c-55a-bcf-ee02fccc18d1da",
-          "authorityIds": "gbif:10771270"
+          "authorityIds": "gbif:10771270",
+          "children": []
         },
         {
           "id": "UNRUHDINIUM_KEVEI",
@@ -103,7 +120,8 @@
             "gbif": 10838194
           },
           "uuid": "62db366c-2d06-55c-96e-d760e1186479bb",
-          "authorityIds": "gbif:10838194"
+          "authorityIds": "gbif:10838194",
+          "children": []
         },
         {
           "id": "UNRUHDINIUM_PENARDII",
@@ -118,12 +136,74 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 11499851
+            "gbif": 11499851,
+            "checklistbank": "224888"
           },
           "uuid": "fe388f63-924a-56c-b77-dedb1b7b2af832",
-          "authorityIds": "gbif:11499851"
+          "authorityIds": "gbif:11499851",
+          "authorship": "(Lemmermann) Gottschling, 2017",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_KRYPTOPERIDINIUM",
+      "name": "Kryptoperidinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KRYPTOPERIDINIUM_FOLIACEUM_STEIN_LINDEMANN_1924",
+          "name": "Kryptoperidinium foliaceum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kryptoperidinium",
+          "authorship": "(Stein) Lindemann, 1924",
+          "sourceIds": {
+            "checklistbank": "147910"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KRYPTOPERIDINIUM_TRIQUETRUM_EHRENBERG_U_TILLMANN_M_GOTTSCHLING_M_ELBR_CHTER_W_H_KUSBER_M_HOPPENRATH_2019",
+          "name": "Kryptoperidinium triquetrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kryptoperidinium",
+          "authorship": "(Ehrenberg) U.Tillmann, M. Gottschling, M.Elbrächter, W.-H.Kusber & M.Hoppenrath, 2019",
+          "sourceIds": {
+            "checklistbank": "224442"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kryptoperidiniaceae"
+    },
+    {
+      "id": "GENUS_BLIXAEA",
+      "name": "Blixaea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BLIXAEA_QUINQUECORNIS_AB_GOTTSCHLING_2017",
+          "name": "Blixaea quinquecornis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blixaea",
+          "authorship": "(Abé) Gottschling, 2017",
+          "sourceIds": {
+            "checklistbank": "224094"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kryptoperidiniaceae"
     }
-  ]
+  ],
+  "genusCount": 4,
+  "speciesCount": 10
 }

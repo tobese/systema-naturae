@@ -6277,7 +6277,8 @@
             ],
             "col": [
               "BBS5"
-            ]
+            ],
+            "checklistbank": "2663"
           },
           "uuid": "3ea023c2-4873-552-8ea-707e27e6529541",
           "authorityIds": "col:BBS5,gbif:7711843"
@@ -9454,10 +9455,12 @@
           "children": [],
           "lineage": "agyneta",
           "sourceIds": {
-            "gbif": 8400797
+            "gbif": 8400797,
+            "checklistbank": "205004"
           },
           "uuid": "e94ae8cf-8690-501-9c2-59919e805be187",
-          "authorityIds": "gbif:8400797"
+          "authorityIds": "gbif:8400797",
+          "authorship": "(C.L. Koch, 1836)"
         },
         {
           "id": "SP_AGYNETA_LAETESIFORMIS_WUNDERLICH_1976",
@@ -46822,6 +46825,18 @@
             "checklistbank": "225299"
           },
           "children": []
+        },
+        {
+          "id": "SP_ACARTAUCHENIUS_SQURRIIS",
+          "name": "Acartauchenius squrriis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acartauchenius",
+          "sourceIds": {
+            "checklistbank": "143852"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -76290,7 +76305,8 @@
             ],
             "itis": [
               "854904"
-            ]
+            ],
+            "checklistbank": "2723"
           },
           "uuid": "08513cbd-548a-5ad-9cd-9befec18bda9dc",
           "authorityIds": "gbif:2137859,itis:854904"
@@ -130775,7 +130791,8 @@
           "sourceIds": {
             "itis": [
               "860775"
-            ]
+            ],
+            "checklistbank": "133769"
           },
           "authorityIds": "itis:860775"
         },
@@ -133015,7 +133032,8 @@
           "sourceIds": {
             "itis": [
               "860906"
-            ]
+            ],
+            "checklistbank": "133778"
           },
           "authorityIds": "itis:860906"
         },
@@ -134540,11 +134558,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "linyphiidae"
+    },
+    {
+      "id": "GENUS_MEGALEPTYPHANTES",
+      "name": "Megaleptyphantes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEGALEPTYPHANTES_NEBULOSUS_SUNDEVALL_1830",
+          "name": "Megaleptyphantes nebulosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megaleptyphantes",
+          "authorship": "Sundevall, 1830",
+          "sourceIds": {
+            "checklistbank": "133768"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "linyphiidae"
     }
   ],
-  "speciesCount": 5568,
+  "speciesCount": 5570,
   "appSlug": "linyphiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 664
+  "genusCount": 665
 }
