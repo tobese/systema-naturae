@@ -162,6 +162,16 @@ on the record without being fetched:
 | `ictv-msl` | registered, **not downloaded** | the virus authority; xlsx, and nothing here reads xlsx yet |
 | `wikidata-species` | downloaded and assessed | 1,811,989 new species overall, but the same 17 clades, so it does not help the rank question |
 
+**`wikidata-species`'s sidecar tables are not held by this hold either**,
+re-checked 2026-10-10. `VernacularName.tsv`, `Media.tsv` and
+`Distribution.tsv` in the same archive carry real content —
+236,487 / 340,979 / 103,221 distinct taxa respectively — that the
+species-count measurement above never looked at. Enrichment only needs
+species we already hold, which is orthogonal to the bacteria-and-viruses
+rank question, so this does not need to wait for the hold to lift. See the
+`wikidata-species` entry in `scripts/sourcesManifest.py` for the numbers;
+not yet measured is how much of that is on species actually in the tree.
+
 ## Related
 
 - [`archive-formats.md`](archive-formats.md) — the formats, and which have a

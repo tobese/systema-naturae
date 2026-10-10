@@ -686,7 +686,28 @@ SOURCES = {
         "built from the same upstream, and 1,612,751 of the new species have no "
         "parent at all. See docs/bacteria-and-viruses.md for the options. "
         "First archive in the ColDP format we hold, and first to exercise "
-        "scripts/coldp.py."),
+        "scripts/coldp.py. "
+        "RE-CHECKED 2026-10-10: species-import question still correctly "
+        "undecided -- it is downstream of the bacteria-and-viruses hold, which "
+        "is unchanged (GTDB has since settled the bacterial rank; viruses are "
+        "still blocked on ICTV). The 2026-10-04 measurement was already taken "
+        "after Animalia Stage 2, so the ~135k species added since (ITIS, BOLD, "
+        "GLI, Craneflies, Reptiles) shave a little off 1,811,989 but do not "
+        "change the shape of the decision -- not worth re-measuring on its own. "
+        "SEPARATE FINDING, not previously assessed: the same archive's sidecar "
+        "tables carry real content the species-count note above never "
+        "mentions -- VernacularName.tsv (816,277 rows, 236,487 taxa), "
+        "Media.tsv (664,930 rows, 340,979 taxa with Commons image URL + "
+        "licence), Distribution.tsv (293,850 rows, 103,221 taxa, "
+        "establishmentMeans native/invasive, free-text place names rather than "
+        "ISO codes). Of the 340,979 media taxa, 211,855 are not in "
+        "shared/data/wiki-images.json's image set at all. This is an "
+        "enrichment question, not an import one -- it only needs species we "
+        "already hold, so it does not wait on the bacteria-and-viruses hold. "
+        "Not yet measured: how many of the 211,855/161,390 (media/vernacular) "
+        "gaps are species actually in the tree rather than among the 1.81M "
+        "not-yet-held candidates -- that join is the next step if this is "
+        "worth pursuing."),
     "wikimedia-commons": (
         "Wikimedia Commons (EOL harvest)", "DOI 10.5281/zenodo.17509532",
         "https://zenodo.org/records/17509532",
