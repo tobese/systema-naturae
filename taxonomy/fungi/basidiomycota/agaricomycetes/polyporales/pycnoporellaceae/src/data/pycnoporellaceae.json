@@ -28,7 +28,8 @@
             ]
           },
           "uuid": "f98ca926-f596-57c-aab-7bc8b9c9000ff7",
-          "authorityIds": "col:4QMTR,gbif:2543387,mycobank:322113"
+          "authorityIds": "col:4QMTR,gbif:2543387,mycobank:322113",
+          "children": []
         },
         {
           "id": "SP_PYCNOPORELLUS_ALBOLUTEUS_ELLIS_EVERH_KOTL_POUZAR",
@@ -47,19 +48,43 @@
             ],
             "col": [
               "4QMTP"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:1338"
           },
           "uuid": "8f571c9c-ce61-58f-b86-18a7628d188649",
-          "authorityIds": "col:4QMTP,gbif:2543405,mycobank:338051"
+          "authorityIds": "col:4QMTP,gbif:2543405,mycobank:338051",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pycnoporellaceae"
+    },
+    {
+      "id": "GENUS_CRUSTODERMA",
+      "name": "Crustoderma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRUSTODERMA_LONGICYSTIDIA_LITSCH_NAKASONE",
+          "name": "Crustoderma longicystidia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crustoderma",
+          "authorship": "(Litsch.) Nakasone",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:253715"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pycnoporellaceae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 3,
   "appSlug": "pycnoporellaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Basidiomycota > Agaricomycetes",
-  "genusCount": 1
+  "genusCount": 2
 }

@@ -34,7 +34,8 @@
             ]
           },
           "uuid": "f1a64ce5-eb75-54d-b82-124b987dcd551b",
-          "authorityIds": "col:RTB6,gbif:2531723,mycobank:208638"
+          "authorityIds": "col:RTB6,gbif:2531723,mycobank:208638",
+          "children": []
         },
         {
           "id": "CATATHELASMA_IMPERIALE",
@@ -59,10 +60,12 @@
             ],
             "col": [
               "RTB7"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:275"
           },
           "uuid": "7bfa0825-5fca-5a8-bdf-692a30aed3bf68",
-          "authorityIds": "col:RTB7,gbif:2531729,mycobank:284817"
+          "authorityIds": "col:RTB7,gbif:2531729,mycobank:284817",
+          "children": []
         },
         {
           "id": "CATATHELASMA_LAORENTOU",
@@ -87,7 +90,8 @@
             ]
           },
           "uuid": "12d68616-c1f6-562-b7c-c3610c7ed1c01c",
-          "authorityIds": "col:9Z2QR,gbif:10809869,mycobank:830871"
+          "authorityIds": "col:9Z2QR,gbif:10809869,mycobank:830871",
+          "children": []
         },
         {
           "id": "CATATHELASMA_SINGERI",
@@ -112,7 +116,8 @@
             ]
           },
           "uuid": "2610e819-547f-5fe-8c9-714ba01035bea7",
-          "authorityIds": "col:RTB8,gbif:2531728,mycobank:310400"
+          "authorityIds": "col:RTB8,gbif:2531728,mycobank:310400",
+          "children": []
         },
         {
           "id": "CATATHELASMA_SUBALPINUM",
@@ -137,7 +142,8 @@
             ]
           },
           "uuid": "6b84df8e-ca2f-55e-a60-952799cbd29b71",
-          "authorityIds": "col:9Z2QS,gbif:10814020,mycobank:830872"
+          "authorityIds": "col:9Z2QS,gbif:10814020,mycobank:830872",
+          "children": []
         },
         {
           "id": "CATATHELASMA_VENTRICOSUM",
@@ -162,11 +168,58 @@
             ]
           },
           "uuid": "412bae5c-8da3-557-bcb-083e4fe57554f5",
-          "authorityIds": "col:RTB9,gbif:2531724,mycobank:284818"
+          "authorityIds": "col:RTB9,gbif:2531724,mycobank:284818",
+          "children": []
         }
       ],
       "authorship": "Lovejoy"
+    },
+    {
+      "id": "GENUS_BONOMYCES",
+      "name": "Bonomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BONOMYCES_SINOPICUS_FR_VIZZINI",
+          "name": "Bonomyces sinopicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bonomyces",
+          "authorship": "(Fr.) Vizzini",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:3332"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "biannulariaceae"
+    },
+    {
+      "id": "GENUS_PSEUDOLACCARIA",
+      "name": "Pseudolaccaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOLACCARIA_PACHYPHYLLA_FR_VIZZINI_CONTU",
+          "name": "Pseudolaccaria pachyphylla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudolaccaria",
+          "authorship": "(Fr.) Vizzini & Contu",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:5687"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "biannulariaceae"
     }
   ],
-  "authorship": "Jülich"
+  "authorship": "Jülich",
+  "genusCount": 3,
+  "speciesCount": 8
 }

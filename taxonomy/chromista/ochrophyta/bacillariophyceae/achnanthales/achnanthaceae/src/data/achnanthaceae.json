@@ -1691,7 +1691,8 @@
             ],
             "itis": [
               "3469"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6330806"
           },
           "uuid": "1f5355e1-790d-5f3-960-9a566ae935d369",
           "authorityIds": "gbif:8450346,itis:3469"
@@ -4504,10 +4505,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7607693
+            "gbif": 7607693,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6332519"
           },
           "uuid": "a0f007a1-3b6b-5ff-9f0-f8e8a5a9c3575e",
-          "authorityIds": "gbif:7607693"
+          "authorityIds": "gbif:7607693",
+          "authorship": "Lange-Bert."
         },
         {
           "id": "ACHNANTHES_INOPINATA",
@@ -11870,10 +11873,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 9877105
+            "gbif": 9877105,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:262380"
           },
           "uuid": "8438da67-7ca9-56e-bb5-270ac64bd791c0",
-          "authorityIds": "gbif:9877105"
+          "authorityIds": "gbif:9877105",
+          "authorship": "Lange-Bert."
         },
         {
           "id": "SP_ACHNANTHES_LAPIDOSA_KRASSKE",
@@ -12094,7 +12099,8 @@
           "sourceIds": {
             "itis": [
               "591148"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:237790"
           },
           "authorityIds": "itis:591148"
         },
@@ -12509,10 +12515,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 10377550
+            "gbif": 10377550,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6034954"
           },
           "uuid": "3a31bb89-b359-577-980-ada4e241d8d559",
-          "authorityIds": "gbif:10377550"
+          "authorityIds": "gbif:10377550",
+          "authorship": "(Krasske ex Hust.) C.E.Wetzel & al."
         },
         {
           "id": "PLATESSA_STEWARTII",
@@ -12643,6 +12651,19 @@
             "checklistbank": "224634"
           },
           "children": []
+        },
+        {
+          "id": "SP_PLATESSA_BAHLSII_POTAPOVA",
+          "name": "Platessa bahlsii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platessa",
+          "authorship": "Potapova",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6006616"
+          },
+          "children": []
         }
       ]
     },
@@ -12667,8 +12688,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "achnanthaceae"
+    },
+    {
+      "id": "GENUS_ROSSITHIDIUM",
+      "name": "Rossithidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ROSSITHIDIUM_NODOSUM_A_CLEVE_ABOAL",
+          "name": "Rossithidium nodosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rossithidium",
+          "authorship": "(A.Cleve) Aboal",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:262832"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ROSSITHIDIUM_ANASTASIAE_KACZMARSKA_POTAPOVA",
+          "name": "Rossithidium anastasiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rossithidium",
+          "authorship": "(Kaczmarska) Potapova",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:262228"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "achnanthaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 716
+  "genusCount": 5,
+  "speciesCount": 719
 }

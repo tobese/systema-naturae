@@ -146,10 +146,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3199665
+            "gbif": 3199665,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:232729"
           },
           "uuid": "015bd473-b516-54e-bee-b03d31b5b383d1",
-          "authorityIds": "gbif:3199665"
+          "authorityIds": "gbif:3199665",
+          "authorship": "(Waern) S.Lund"
         },
         {
           "id": "PSEUDOLITHODERMA_SUBEXTENSUM",
@@ -885,8 +887,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ralfsiaceae"
+    },
+    {
+      "id": "GENUS_PSEUDORALFSIA",
+      "name": "Pseudoralfsia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDORALFSIA_VERRUCOSA_ARESCHOUG_PARENTE_FLETCHER_G_W_SAUNDERS",
+          "name": "Pseudoralfsia verrucosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoralfsia",
+          "authorship": "(Areschoug) Parente, Fletcher & G.W.Saunders",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:232732"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ralfsiaceae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 44
+  "genusCount": 12,
+  "speciesCount": 45
 }

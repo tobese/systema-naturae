@@ -2848,7 +2848,8 @@
             ],
             "mycobank": [
               "493064"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6000431"
           },
           "uuid": "22458312-723e-5f9-852-789ec38da9af11",
           "authorityIds": "gbif:9645412,mycobank:493064"
@@ -3358,7 +3359,8 @@
             ],
             "col": [
               "49TW4"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:1819"
           },
           "uuid": "e684fd70-8c04-5ee-863-f799464b6b57f3",
           "authorityIds": "col:49TW4,gbif:5258423,mycobank:363560"
@@ -4327,7 +4329,8 @@
             ],
             "col": [
               "6SNWM"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6000433"
           },
           "uuid": "446a5d3d-7cd9-5e2-940-f4a94a08613c9c",
           "authorityIds": "col:6SNWM,gbif:5516989,mycobank:125968"
@@ -5044,7 +5047,8 @@
             ],
             "col": [
               "49TZM"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6038858"
           },
           "uuid": "6645129a-e08d-502-aeb-82dd28196c22ea",
           "authorityIds": "col:49TZM,gbif:6616402,mycobank:342741"
@@ -6105,7 +6109,8 @@
             ],
             "mycobank": [
               "396717"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:266181"
           },
           "uuid": "a035ac9a-fd9a-566-830-af004a16c33596",
           "authorityIds": "gbif:5517087,mycobank:396717"
@@ -6209,7 +6214,8 @@
             ],
             "col": [
               "74NZB"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:229472"
           },
           "uuid": "2849040d-4d9a-50f-bd1-7abf75ee62da9a",
           "authorityIds": "col:74NZB,gbif:7719027,mycobank:367121"
@@ -6417,7 +6423,8 @@
             ],
             "col": [
               "74NZ6"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:1118"
           },
           "uuid": "81e53ed9-99f2-5ad-af5-d379479b5d1e3f",
           "authorityIds": "col:74NZ6,gbif:5258394,mycobank:345384"
@@ -6663,6 +6670,19 @@
           "authorship": "Turner ex Sm.",
           "sourceIds": {
             "checklistbank": "fbc7a165-d5bb-403f-9ee1-b8f0f8237860"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OPEGRAPHA_PARAXANTHODES_NYL",
+          "name": "Opegrapha paraxanthodes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Opegrapha",
+          "authorship": "Nyl.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6320809"
           },
           "children": []
         }
@@ -6972,9 +6992,31 @@
         }
       ],
       "authorship": "Ertz & Tehler"
+    },
+    {
+      "id": "GENUS_PHACOTHECIUM",
+      "name": "Phacothecium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHACOTHECIUM_VARIUM_TUL_TREVIS",
+          "name": "Phacothecium varium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phacothecium",
+          "authorship": "(Tul.) Trevis.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:229467"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "opegraphaceae"
     }
   ],
   "authorship": "Stizenberger",
-  "genusCount": 15,
-  "speciesCount": 272
+  "genusCount": 16,
+  "speciesCount": 274
 }

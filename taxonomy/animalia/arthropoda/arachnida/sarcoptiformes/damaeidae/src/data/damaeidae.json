@@ -624,7 +624,8 @@
           "authorship": "(Kulczynski, 1902)",
           "children": [],
           "sourceIds": {
-            "gbif": 7678146
+            "gbif": 7678146,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6007944"
           },
           "uuid": "7cf3a87b-dff4-5e7-87b-e61baca1cf8c05",
           "authorityIds": "gbif:7678146"
@@ -3891,6 +3892,19 @@
             "checklistbank": "f60adab7-09bc-42a5-b24c-ec5e4ef30f4f"
           },
           "children": []
+        },
+        {
+          "id": "SP_BELBA_COMPTA_KULCZY_SKI_1902",
+          "name": "Belba compta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Belba",
+          "authorship": "(Kulczyński, 1902)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:256406"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5568,11 +5582,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "damaeidae"
+    },
+    {
+      "id": "GENUS_DAMAEOBELBA",
+      "name": "Damaeobelba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DAMAEOBELBA_MINUTISSIMA_SELLNICK_1920",
+          "name": "Damaeobelba minutissima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Damaeobelba",
+          "authorship": "(Sellnick, 1920)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6006998"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "damaeidae"
     }
   ],
-  "speciesCount": 382,
+  "speciesCount": 384,
   "appSlug": "damaeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 25
+  "genusCount": 26
 }

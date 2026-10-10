@@ -157,8 +157,8 @@ REQUIRED = {
 }
 
 
-def _find(c, stem):
-    """First member whose basename matches `stem`, any case, any extension.
+def _find(c, *stems):
+    """First member whose basename matches one of `stems`, any case, extension.
 
     ChecklistBank native DwCA exports (COL China, Nortaxa, the Brazilian
     Fauna catalogue) name their tables `taxon.txt`/`name.txt`, not the
@@ -167,10 +167,12 @@ def _find(c, stem):
     `.txt` DwCA shape silently read as zero taxa, no error, the same "looks
     empty" failure GLI's CSV flavour produced before `_coldp` learned to
     read it. One stem-matching lookup handles every extension at once.
+    Multiple stems because APNI (133813) calls its taxon table `taxa.tsv`,
+    plural, a fourth spelling of the same table.
     """
     for m in c.namelist():
         base = m.rsplit("/", 1)[-1]
-        if "." in base and base[:base.rindex(".")].lower() == stem:
+        if "." in base and base[:base.rindex(".")].lower() in stems:
             return m
     return None
 
@@ -439,7 +441,7 @@ def load(path):
                 if r.get("name_id"):
                     synonym_ids.add(r["name_id"])
         taxa = []
-        t = _find(c, "taxon")
+        t = _find(c, "taxon", "taxa")
         if t:
             for r in _rows(c, t, "taxon"):
                     n = names.get(r.get("name_id"), {}) if r.get("name_id") else {}
@@ -487,6 +489,18 @@ def load(path):
     return taxa, names, metadata(path)
 
 
+# APNI (133813) ranks its whole hierarchy in Latin -- Regnum, Division,
+# Classis, Ordo, Familia -- rather than the English terms every other
+# source here uses (including Dyntaxa and taicol's "[unranked]"-style
+# brackets, which this intentionally leaves alone since those aren't a
+# translation question). Keyed lower-case to match `crank` already being
+# lower-cased before the lookup.
+LATIN_RANK = {
+    "regnum": "kingdom", "division": "phylum", "divisio": "phylum",
+    "classis": "class", "ordo": "order", "familia": "family",
+}
+
+
 def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
           limit=200):
     """taxon -> {rank: name}, first match walking upward.
@@ -500,6 +514,7 @@ def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
     cur, n = tax, 0
     while cur is not None and n < limit:
         crank = (cur.get("rank") or "").lower()
+        crank = LATIN_RANK.get(crank, crank)
         for rnk in ranks:
             if rnk in out:
                 continue

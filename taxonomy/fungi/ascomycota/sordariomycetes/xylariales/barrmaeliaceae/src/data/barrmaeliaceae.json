@@ -36,7 +36,8 @@
             ]
           },
           "uuid": "00b007b5-dc12-5f8-adf-f7e588a06de746",
-          "authorityIds": "col:KSFX,gbif:2576873,mycobank:363306"
+          "authorityIds": "col:KSFX,gbif:2576873,mycobank:363306",
+          "children": []
         },
         {
           "id": "BARRMAELIA_MORAVICA",
@@ -60,10 +61,12 @@
             ],
             "col": [
               "KSFY"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6034805"
           },
           "uuid": "692781ca-f305-50e-a11-719280cfaf7e16",
-          "authorityIds": "col:KSFY,gbif:2576885,mycobank:363305"
+          "authorityIds": "col:KSFY,gbif:2576885,mycobank:363305",
+          "children": []
         },
         {
           "id": "BARRMAELIA_OXYACANTHAE",
@@ -90,7 +93,8 @@
             ]
           },
           "uuid": "9f0d2b97-7c36-54e-94c-e07e3af97bb36b",
-          "authorityIds": "col:KSFZ,gbif:2576870,mycobank:363307"
+          "authorityIds": "col:KSFZ,gbif:2576870,mycobank:363307",
+          "children": []
         },
         {
           "id": "BARRMAELIA_PICACEA",
@@ -115,7 +119,8 @@
             ]
           },
           "uuid": "cc9e28aa-f3fb-50f-969-9b4c1d247b775b",
-          "authorityIds": "col:KSG2,gbif:2576877,mycobank:363310"
+          "authorityIds": "col:KSG2,gbif:2576877,mycobank:363310",
+          "children": []
         },
         {
           "id": "BARRMAELIA_PSEUDOBOMBARDA",
@@ -142,7 +147,8 @@
             ]
           },
           "uuid": "d5496597-c912-5e1-918-5176d12d8b6a0f",
-          "authorityIds": "col:KSG3,gbif:2576887,mycobank:363309"
+          "authorityIds": "col:KSG3,gbif:2576887,mycobank:363309",
+          "children": []
         },
         {
           "id": "BARRMAELIA_RAPPAZII",
@@ -166,10 +172,12 @@
             ],
             "col": [
               "KSG4"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6034806"
           },
           "uuid": "21f11618-710f-5fc-b91-6219431440d57d",
-          "authorityIds": "col:KSG4,gbif:10461807,mycobank:822043"
+          "authorityIds": "col:KSG4,gbif:10461807,mycobank:822043",
+          "children": []
         },
         {
           "id": "BARRMAELIA_RHAMNICOLA",
@@ -194,7 +202,8 @@
             ]
           },
           "uuid": "3d6db26f-8a6d-5d1-949-7c397acbeac055",
-          "authorityIds": "col:KSG5,gbif:3460028,mycobank:447477"
+          "authorityIds": "col:KSG5,gbif:3460028,mycobank:447477",
+          "children": []
         },
         {
           "id": "BARRMAELIA_SUSTENTA",
@@ -219,11 +228,36 @@
             ]
           },
           "uuid": "8ea45ee0-c937-5b3-bc9-51e362e920bed6",
-          "authorityIds": "col:KSG6,gbif:2576881,mycobank:363308"
+          "authorityIds": "col:KSG6,gbif:2576881,mycobank:363308",
+          "children": []
         }
       ],
       "authorship": "Rappaz"
+    },
+    {
+      "id": "GENUS_ENTOSORDARIA",
+      "name": "Entosordaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENTOSORDARIA_PERFIDIOSA_DE_NOT_H_HN",
+          "name": "Entosordaria perfidiosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entosordaria",
+          "authorship": "(De Not.) Höhn.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:233092"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barrmaeliaceae"
     }
   ],
-  "authorship": "Voglmayr & Jaklitsch"
+  "authorship": "Voglmayr & Jaklitsch",
+  "genusCount": 2,
+  "speciesCount": 9
 }

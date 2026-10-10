@@ -1429,7 +1429,8 @@
           "lineage": "oribatella",
           "authorship": "(Michael, 1898)",
           "sourceIds": {
-            "gbif": 2195263
+            "gbif": 2195263,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6007121"
           },
           "uuid": "f65f89b8-4b69-530-a6a-cb5566e2de649a",
           "authorityIds": "gbif:2195263",
@@ -1459,7 +1460,8 @@
           "lineage": "oribatella",
           "authorship": "Berlese, 1916",
           "sourceIds": {
-            "gbif": 2195190
+            "gbif": 2195190,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6007975"
           },
           "uuid": "c4703faf-747e-53e-8e2-43536a874e87b5",
           "authorityIds": "gbif:2195190",
@@ -2256,7 +2258,8 @@
             ],
             "col": [
               "49VTV"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6007123"
           },
           "uuid": "69cf1a4b-2e4a-5ad-91b-f507412b6940df",
           "authorityIds": "col:49VTV,gbif:2195296,itis:741746",
@@ -2895,11 +2898,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oribatellidae"
+    },
+    {
+      "id": "GENUS_SCUTOZETES",
+      "name": "Scutozetes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCUTOZETES_LANCEOLATUS_M_HAMMER_1952",
+          "name": "Scutozetes lanceolatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scutozetes",
+          "authorship": "M.Hammer, 1952",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:256612"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oribatellidae"
     }
   ],
-  "speciesCount": 185,
+  "speciesCount": 186,
   "appSlug": "oribatellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 13
+  "genusCount": 14
 }

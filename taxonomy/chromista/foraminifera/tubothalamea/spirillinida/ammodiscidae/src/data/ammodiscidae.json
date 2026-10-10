@@ -9057,10 +9057,12 @@
             ],
             "col": [
               "GFSZ"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6001307"
           },
           "uuid": "20010368-b99d-572-90f-d7392d18ba717d",
-          "authorityIds": "col:GFSZ,gbif:8005852"
+          "authorityIds": "col:GFSZ,gbif:8005852",
+          "authorship": "(Höglund, 1947)"
         },
         {
           "id": "ARENOTURRISPIRILLINA_CONCAVATA",
@@ -13069,8 +13071,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ammodiscidae"
+    },
+    {
+      "id": "GENUS_TROCHAMMINA",
+      "name": "Trochammina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TROCHAMMINA_SHONEANA_SIDDALL_1878",
+          "name": "Trochammina shoneana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochammina",
+          "authorship": "Siddall, 1878",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6325742"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ammodiscidae"
     }
   ],
-  "genusCount": 41,
-  "speciesCount": 582
+  "genusCount": 42,
+  "speciesCount": 583
 }

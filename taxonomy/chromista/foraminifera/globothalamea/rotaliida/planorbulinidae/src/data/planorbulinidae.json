@@ -719,11 +719,13 @@
             ],
             "col": [
               "4JL57"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6325343"
           },
           "uuid": "de9fe1cb-99ed-5d9-ad7-59fdbe50495858",
           "authorityIds": "col:4JL57,gbif:8150345",
-          "children": []
+          "children": [],
+          "authorship": "Goës, 1882"
         },
         {
           "id": "PLANORBULINA_UVA",
@@ -1604,8 +1606,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "planorbulinidae"
+    },
+    {
+      "id": "GENUS_HYALINEA",
+      "name": "Hyalinea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYALINEA_BALTHICA_SCHR_TER_1783",
+          "name": "Hyalinea balthica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyalinea",
+          "authorship": "(Schröter, 1783)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6001388"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planorbulinidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 69
+  "genusCount": 11,
+  "speciesCount": 70
 }

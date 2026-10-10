@@ -1983,9 +1983,11 @@
           "sourceIds": {
             "col": [
               "BSN5"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:227005"
           },
-          "authorityIds": "col:BSN5"
+          "authorityIds": "col:BSN5",
+          "authorship": "(Stimpson, 1853)"
         },
         {
           "id": "SP_ALITTA_PLENIDENTATA",
@@ -2050,9 +2052,11 @@
           "sourceIds": {
             "col": [
               "BSN7"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:227008"
           },
-          "authorityIds": "col:BSN7"
+          "authorityIds": "col:BSN7",
+          "authorship": "(M.Sars, 1835)"
         },
         {
           "id": "SP_ALITTA_WILLIAMI_VILLALOBOS_GUERRERO_BAKKEN_2018",
@@ -2134,7 +2138,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "64dfdfde-867a-598-be6-b147dd72be9642"
+          "uuid": "64dfdfde-867a-598-be6-b147dd72be9642",
+          "authorship": "(Eliason, 1962)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:226999"
+          }
         },
         {
           "id": "SP_EUNEREIS_EUGENIAE_DE_LE_N_GONZ_LEZ_SOL_S_WEISS_2000",
@@ -9366,7 +9374,8 @@
             ],
             "col": [
               "3JZBG"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:227000"
           },
           "authorityIds": "col:3JZBG,itis:65991"
         },
@@ -18060,8 +18069,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nereididae"
+    },
+    {
+      "id": "GENUS_LYCASTIS",
+      "name": "Lycastis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LYCASTIS_BREVICORNIS_AUDOUIN_H_MILNE_EDWARDS_1833",
+          "name": "Lycastis brevicornis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lycastis",
+          "authorship": "Audouin & H. Milne-Edwards, 1833",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:227020"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nereididae"
     }
   ],
-  "genusCount": 58,
-  "speciesCount": 943
+  "genusCount": 59,
+  "speciesCount": 944
 }

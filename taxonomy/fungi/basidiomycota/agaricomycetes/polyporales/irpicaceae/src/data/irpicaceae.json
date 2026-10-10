@@ -1103,6 +1103,19 @@
             ]
           },
           "authorityIds": "col:CCKDZ,mycobank:901080"
+        },
+        {
+          "id": "SP_MERULIOPSIS_RUBICUNDA_LITSCH_SPIRIN_K_H_LARSS",
+          "name": "Meruliopsis rubicunda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meruliopsis",
+          "authorship": "(Litsch.) Spirin & K.H.Larss.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:298"
+          },
+          "children": []
         }
       ],
       "authorship": "Bondartsev"
@@ -1873,7 +1886,8 @@
             ],
             "mycobank": [
               "414422"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:303"
           },
           "uuid": "fafda02f-1272-569-b5d-2cb584026448e4",
           "authorityIds": "gbif:2541696,mycobank:414422"
@@ -3547,10 +3561,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8184080
+            "gbif": 8184080,
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:250077"
           },
           "uuid": "b2b8334a-0db6-5ff-8be-6cae7d23088784",
-          "authorityIds": "gbif:8184080"
+          "authorityIds": "gbif:8184080",
+          "authorship": "Miettinen, Niemelä & Ryvarden"
         },
         {
           "id": "IRPEX_DESTRUENS",
@@ -6860,12 +6876,117 @@
             ]
           },
           "authorityIds": "col:CCKHB,mycobank:571658"
+        },
+        {
+          "id": "SP_PHANEROCHAETELLA_JOSEFERREIRAE_D_A_REID_SPIRIN_K_H_LARSS",
+          "name": "Phanerochaetella joseferreirae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phanerochaetella",
+          "authorship": "(D.A.Reid) Spirin & K.H.Larss.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:253752"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHANEROCHAETELLA_CREMEO_OCHRACEA_BOURDOT_GALZIN_SPIRIN_K_H_LARSS",
+          "name": "Phanerochaetella cremeo-ochracea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phanerochaetella",
+          "authorship": "(Bourdot & Galzin) Spirin & K.H.Larss.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6333197"
+          },
+          "children": []
         }
       ],
       "authorship": "C.Chih Chen & Sheng H. Wu"
+    },
+    {
+      "id": "GENUS_EMMIA",
+      "name": "Emmia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EMMIA_LATEMARGINATA_DURIEU_MONT_ZMITR_SPIRIN_MALYSHEVA",
+          "name": "Emmia latemarginata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Emmia",
+          "authorship": "(Durieu & Mont.) Zmitr., Spirin & Malysheva",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6035264"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "irpicaceae"
+    },
+    {
+      "id": "GENUS_CYTIDIELLA",
+      "name": "Cytidiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYTIDIELLA_NITIDULA_P_KARST_ZMITR",
+          "name": "Cytidiella nitidula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cytidiella",
+          "authorship": "(P.Karst.) Zmitr.",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:5461"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "irpicaceae"
+    },
+    {
+      "id": "GENUS_PHANERICIUM",
+      "name": "Phanericium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHANERICIUM_GEMELLUM_K_H_LARSS_SPIRIN",
+          "name": "Phanericium gemellum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phanericium",
+          "authorship": "K.H.Larss. & Spirin",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6333128"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHANERICIUM_TUBERCULATUM_P_KARST_K_H_LARSS_SPIRIN",
+          "name": "Phanericium tuberculatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phanericium",
+          "authorship": "(P.Karst.) K.H.Larss. & Spirin",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:5430"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "irpicaceae"
     }
   ],
   "authorship": "Spirin & Zmitrovich",
-  "genusCount": 15,
-  "speciesCount": 264
+  "genusCount": 18,
+  "speciesCount": 271
 }

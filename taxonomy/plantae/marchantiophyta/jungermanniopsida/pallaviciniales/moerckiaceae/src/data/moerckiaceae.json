@@ -68,9 +68,11 @@
             ],
             "col": [
               "6RMKY"
-            ]
+            ],
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:2622"
           },
-          "authorityIds": "col:6RMKY,itis:15447,wfo:wfo-0001196827"
+          "authorityIds": "col:6RMKY,itis:15447,wfo:wfo-0001196827",
+          "authorship": "(Nees) Schiffn."
         },
         {
           "id": "SP_MOERCKIA_HIBERNICA",
@@ -117,8 +119,30 @@
           "authorityIds": "itis:552074"
         }
       ]
+    },
+    {
+      "id": "GENUS_PSEUDOMOERCKIA",
+      "name": "Pseudomoerckia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOMOERCKIA_BLYTTII_M_RCH_VILNET_KONSTANT_D_G_LONG_N_D_LOCKH_MAMONTOV",
+          "name": "Pseudomoerckia blyttii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudomoerckia",
+          "authorship": "(Mørch) Vilnet, Konstant., D.G.Long, N.D.Lockh. & Mamontov",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:2623"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "moerckiaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 4
+  "genusCount": 3,
+  "speciesCount": 5
 }
