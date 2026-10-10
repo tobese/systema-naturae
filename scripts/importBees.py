@@ -258,9 +258,14 @@ def main() -> int:
             except Exception:
                 existing = None
             if existing and existing.get("rank") == "FAMILY":
-                m = SF.merge_family(existing, root)
+                m = SF.merge_family(existing, root, kingdom="animalia",
+                                     family_slug=fslug)
                 print(f"   merged into existing {fslug}: +{m['species_added']:,} species "
                       f"({m['genera_added']} new genera, {m['genera_merged']} extended)")
+                if m.get("authority_conflicts"):
+                    print(f"   ! {m['authority_conflicts']} species share an "
+                          f"authority id with a different family already: "
+                          f"{m['authority_conflict_examples'][0]}")
                 root = existing
         with open(target, "w", encoding="utf-8") as fh:
             json.dump(root, fh, indent=2, ensure_ascii=False)

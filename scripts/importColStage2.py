@@ -499,8 +499,13 @@ def main() -> int:
 
         if os.path.exists(target):
             old = json.load(open(target, encoding="utf-8"))
-            SF.merge_family(old, root)
+            m = SF.merge_family(old, root, kingdom=kingdom.lower(),
+                                 family_slug=fslug)
             root = old
+            if m.get("authority_conflicts"):
+                print(f"  ! {fslug}: {m['authority_conflicts']} species share "
+                      f"an authority id with a different family already: "
+                      f"{m['authority_conflict_examples'][0]}")
         if args.apply:
             with open(target, "w", encoding="utf-8") as fh:
                 json.dump(root, fh, indent=2, ensure_ascii=False)
@@ -554,9 +559,16 @@ def main() -> int:
             staged += 1
         if not staged:
             continue
-        m = SF.merge_family(existing, new_root)
+        m = SF.merge_family(
+            existing, new_root,
+            kingdom=path.split("taxonomy/")[1].split("/")[0],
+            family_slug=os.path.basename(path)[:-5])
         a_added += m["species_added"]
         a_dedup += m["species_deduped"]
+        if m.get("authority_conflicts"):
+            print(f"  ! {path}: {m['authority_conflicts']} species share an "
+                  f"authority id with a different family already: "
+                  f"{m['authority_conflict_examples'][0]}")
         if args.apply:
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(existing, fh, indent=2, ensure_ascii=False)

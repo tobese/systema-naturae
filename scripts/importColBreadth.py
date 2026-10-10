@@ -356,10 +356,17 @@ def main() -> int:
                 if a:
                     sp["authorship"] = a
                 gnode["children"].append(sp)
-        m = SF.merge_family(existing, new_root)
+        m = SF.merge_family(
+            existing, new_root,
+            kingdom=path.split("taxonomy/")[1].split("/")[0],
+            family_slug=os.path.basename(path)[:-5])
         added += m["species_added"]
         dedup += m["species_deduped"]
         touched += 1
+        if m.get("authority_conflicts"):
+            print(f"  ! {path}: {m['authority_conflicts']} species share an "
+                  f"authority id with a different family already: "
+                  f"{m['authority_conflict_examples'][0]}")
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(existing, fh, indent=2, ensure_ascii=False)
             fh.write("\n")

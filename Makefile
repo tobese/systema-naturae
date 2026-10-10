@@ -1,7 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
          name-index name-index-status verify verify-import triage \
          triage-sample serve fix-lineage fix-counts fix-duplicates check count \
-         idmap patch-ids fill-authority-ids
+         idmap patch-ids fill-authority-ids authority-index
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -70,6 +70,15 @@ patch-ids:
 #   make fill-authority-ids --dry-run
 fill-authority-ids:
 	@$(PARQUET_PY) scripts/fillAuthorityIds.py $(ARGS)
+
+# (kingdom, authority, key) -> species, for merge_family's cross-family
+# duplicate gate. merge_family rebuilds this itself whenever it is stale (any
+# family file newer than the index), so this target is for forcing a rebuild
+# on demand -- after an import, or to check what it holds.
+#   make authority-index          # rebuild unconditionally
+#   make authority-index ARGS=--stats
+authority-index:
+	@python3 scripts/authorityIndex.py --build $(ARGS)
 
 dev:
 	cd portal && npm run dev

@@ -367,11 +367,18 @@ def main() -> int:
         doc = json.load(open(touched_path, encoding="utf-8"))
         new_root["id"] = doc.get("id")
         new_root["name"] = doc.get("name")
-        m = SF.merge_family(doc, new_root)
+        m = SF.merge_family(
+            doc, new_root,
+            kingdom=touched_path.split("taxonomy/")[1].split("/")[0],
+            family_slug=slug)
         added_total += m.get("species_added", 0)
         dedup_total += m.get("species_deduped", 0)
         print(f"    {slug:28s} staged {len(rows):>4,}  added {m.get('species_added', 0):>4,}  "
               f"already present {m.get('species_deduped', 0):>4,}")
+        if m.get("authority_conflicts"):
+            print(f"    ! {m['authority_conflicts']} species share an "
+                  f"authority id with a different family already: "
+                  f"{m['authority_conflict_examples'][0]}")
         # Only write what actually gained something. Writing unconditionally
         # reformats every family that was merely scanned -- json.dump re-emits
         # each array one item per line -- and the first run rewrote 75 family

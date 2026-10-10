@@ -64,6 +64,12 @@ portal/data/kingdoms/
 # 47 MB for 2.35M species, ~82s to build.
 portal/data/species.parquet
 portal/data/species.parquet.jsonl
+
+# (kingdom, authority, key) -> species, for the import-time duplicate gate.
+# Rebuilt from the family files by scripts/authorityIndex.py (and lazily,
+# automatically, by merge_family itself whenever it is older than the newest
+# family file); never read by the app.
+portal/data/.authority-index.sqlite3
 portal/public/data/kingdoms/
 portal/public/data/book/
 portal/data/non-english-descriptions.jsonl

@@ -42,6 +42,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from osfLocalities import continent_for  # noqa: E402
 from tree import iter_species  # noqa: E402
 from sources import archive_dir as _ad, work_dir as _wd  # noqa: E402
+import authorityIndex  # noqa: E402
 
 csv.field_size_limit(10_000_000)
 
@@ -283,8 +284,20 @@ def _index_by_name(node, ranks, out=None):
     return out
 
 
-def merge_family(existing: dict, new: dict):
+def merge_family(existing: dict, new: dict, *, kingdom: str = None,
+                  family_slug: str = None):
     """Fold a freshly imported family into one that already has data.
+
+    `kingdom` and `family_slug` are optional and gate a check that has
+    nothing to do with this family's own contents: a species whose GBIF/ITIS/
+    WFO key already belongs to a DIFFERENT family is a duplicate this merge
+    cannot see, because its dedup is scoped to `existing` alone (see below).
+    Passing both consults `authorityIndex.conflicts_for` -- the same
+    authority-id signal and `_same_taxon` test `verifyTree.check_authority_collisions`
+    uses after the fact -- and counts what it finds in
+    `merged["authority_conflicts"]` rather than blocking the add: a false
+    positive here would silently drop good data, and the index is a snapshot
+    that can lag the very import run consulting it.
 
     Needed because importing a source that overlaps a family we already hold would
     otherwise overwrite it. The Afrotropical bees file carries 2,634 Apidae, and
@@ -341,6 +354,18 @@ def merge_family(existing: dict, new: dict):
                 index[key] = src
                 if src.get("id") and src.get("rank") in ("SPECIES", "SUBSPECIES"):
                     by_id[src["id"]] = src
+                    if kingdom and family_slug and src.get("sourceIds"):
+                        hits = authorityIndex.conflicts_for(
+                            kingdom, family_slug, src.get("name"),
+                            src["sourceIds"])
+                        if hits:
+                            merged["authority_conflicts"] = \
+                                merged.get("authority_conflicts", 0) + 1
+                            auth, akey, other_name, other_slug, _oid = hits[0]
+                            merged.setdefault(
+                                "authority_conflict_examples", []).append(
+                                f"{src.get('name')!r} {auth}:{akey} also in "
+                                f"{other_slug!r} as {other_name!r}")
                 build(src)
                 merged["genera_added"] += 1 if src.get("rank") == "GENUS" else 0
                 merged["species_added"] += sum(1 for _ in iter_species(src))
@@ -734,8 +759,13 @@ def main() -> int:
             except Exception:
                 existing = None
             if existing and existing.get("rank") == "FAMILY":
-                m = merge_family(existing, root)
+                m = merge_family(existing, root, kingdom="animalia",
+                                  family_slug=fslug)
                 stats["merged-existing-family"] += 1
+                if m.get("authority_conflicts"):
+                    print(f"   ! {m['authority_conflicts']} species share an "
+                          f"authority id with a different family already: "
+                          f"{m['authority_conflict_examples'][0]}")
                 print(f"   merged into existing {fslug}: "
                       f"+{m['species_added']:,} species "
                       f"({m['genera_added']} new genera, "
