@@ -367,9 +367,11 @@
           "sourceIds": {
             "col": [
               "BKTJ9"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1670407"
           },
-          "authorityIds": "col:BKTJ9"
+          "authorityIds": "col:BKTJ9",
+          "authorship": "(Eguchi, 1936)"
         },
         {
           "id": "SP_CYATHOPHORA_NEOCOMIENSIS_FROMENTEL_1875",
@@ -479,9 +481,11 @@
           "sourceIds": {
             "col": [
               "BZWPS"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599441"
           },
-          "authorityIds": "col:BZWPS"
+          "authorityIds": "col:BZWPS",
+          "authorship": "(Tomes, 1883)"
         },
         {
           "id": "SP_CYATHOPHORA_STEIMANNI_FRITZSCHE_1924",
@@ -659,6 +663,20 @@
             ]
           },
           "authorityIds": "col:BTQJB"
+        },
+        {
+          "id": "SP_CYATHOPHORA_DENSETA_ELI_OV_1981",
+          "name": "Cyathophora denseta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyathophora",
+          "authorship": "Eliášová, 1981",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1697937"
+          },
+          "children": [],
+          "uuid": "91a8f9ac-dc60-5c0-a9f-3ea72b00d62f95"
         }
       ]
     },
@@ -803,6 +821,20 @@
           "yearPublished": "1850",
           "children": [],
           "uuid": "beb24c88-dc29-553-b03-a500d8fcdfbe15"
+        },
+        {
+          "id": "SP_HOLOCYSTIS_ELEGANS_LONSDALE_1849",
+          "name": "Holocystis elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Holocystis",
+          "authorship": "Lonsdale, 1849",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1582652"
+          },
+          "children": [],
+          "uuid": "3027a505-1a7b-578-8b5-f5d09137081f31"
         }
       ]
     },
@@ -1144,10 +1176,33 @@
           "authorityIds": "col:9WXWT"
         }
       ]
+    },
+    {
+      "id": "GENUS_TETRACOENIA",
+      "name": "Tetracoenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TETRACOENIA_ELEGENS_D_ORBIGNY_1850",
+          "name": "Tetracoenia elegens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetracoenia",
+          "authorship": "(d'Orbigny, 1850)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1865262"
+          },
+          "children": [],
+          "uuid": "c8e7ae0a-87d2-54c-ab7-a55bdb232c48e6"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyathophoridae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 64,
+  "genusCount": 10,
+  "speciesCount": 67,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -102,11 +102,13 @@
             ],
             "col": [
               "446SH"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:341713"
           },
           "uuid": "36ea3d7d-f4f1-5f3-804-d82e619d61f993",
           "authorityIds": "col:446SH,gbif:7459052",
-          "children": []
+          "children": [],
+          "authorship": "Fabre-Domergue, 1888"
         },
         {
           "id": "MONODINIUM_CHLORELLIGERUM",
@@ -400,11 +402,13 @@
             ],
             "col": [
               "35X85"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:341712"
           },
           "uuid": "81933e8e-a720-5ab-82a-a6a5c521aba5bc",
           "authorityIds": "col:35X85,gbif:7648210",
-          "children": []
+          "children": [],
+          "authorship": "Meunier, 1910"
         },
         {
           "id": "DIDINIUM_GARGANTUM",
@@ -534,11 +538,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7471299
+            "gbif": 7471299,
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:754737"
           },
           "uuid": "394bbaee-78ab-5de-a08-9931d30c6eb4ff",
           "authorityIds": "gbif:7471299",
-          "children": []
+          "children": [],
+          "authorship": "Gaarder, 1938"
         },
         {
           "id": "DIDINIUM_PEYREFITTENSE",
@@ -583,6 +589,20 @@
           "uuid": "606bb45c-84dd-5f8-987-e87eefbccb88e4",
           "authorityIds": "gbif:7658588,itis:46281",
           "children": []
+        },
+        {
+          "id": "SP_DIDINIUM_BALBIANI_FABRE_DOMERGUE_1888",
+          "name": "Didinium balbiani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didinium",
+          "authorship": "Fabre-Domergue, 1888",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:426532"
+          },
+          "children": [],
+          "uuid": "2187b4d2-57ee-512-afa-c12a73c6cbcd10"
         }
       ]
     },
@@ -602,7 +622,8 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:238564"
           },
-          "children": []
+          "children": [],
+          "uuid": "954d6fd5-7a3e-506-98f-01c0b6a1f031ad"
         },
         {
           "id": "SP_CYCLOTRICHIUM_OVATUM_FAUR_FREMIET_1924",
@@ -615,7 +636,50 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:238563"
           },
-          "children": []
+          "children": [],
+          "uuid": "b31db438-b67c-596-8d6-b66c6fab945589"
+        },
+        {
+          "id": "SP_CYCLOTRICHIUM_TANIGUCHII_XU_SONG_HU_2005",
+          "name": "Cyclotrichium taniguchii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclotrichium",
+          "authorship": "Xu, Song & Hu, 2005",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:389374"
+          },
+          "children": [],
+          "uuid": "cf3db51c-5ade-560-996-005df5c1c1f60d"
+        },
+        {
+          "id": "SP_CYCLOTRICHIUM_CYCLOKARYON_MEUNIER_1910",
+          "name": "Cyclotrichium cyclokaryon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclotrichium",
+          "authorship": "Meunier, 1910",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:426529"
+          },
+          "children": [],
+          "uuid": "577a2cc5-27c3-5aa-a49-bdf75d99e426ea"
+        },
+        {
+          "id": "SP_CYCLOTRICHIUM_MEUNIERI_POWERS_1932",
+          "name": "Cyclotrichium meunieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclotrichium",
+          "authorship": "Powers, 1932",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:730798"
+          },
+          "children": [],
+          "uuid": "595973b6-cda5-526-ac0-e34ddcae0ea7d5"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -623,7 +687,7 @@
     }
   ],
   "genusCount": 4,
-  "speciesCount": 27,
+  "speciesCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -631,7 +695,6 @@
       "classKey": 8319235,
       "orderKey": 7569076,
       "familyKey": 8153440
-    },
-    "checklistbank": "1160"
+    }
   }
 }

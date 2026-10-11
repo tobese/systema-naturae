@@ -27,9 +27,12 @@
             ],
             "col": [
               "6J737"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1047483"
           },
-          "authorityIds": "col:6J737,itis:78654"
+          "authorityIds": "col:6J737,itis:78654",
+          "authorship": "(J. G. Cooper, 1863)",
+          "children": []
         },
         {
           "id": "SP_FLABELLINOPSIS_TRILLINEATA",
@@ -40,7 +43,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "1d7d06a2-5134-5ee-bff-dd2cfa2f7fe76f"
+          "uuid": "1d7d06a2-5134-5ee-bff-dd2cfa2f7fe76f",
+          "children": []
         }
       ]
     },
@@ -64,13 +68,41 @@
           "sourceIds": {
             "col": [
               "KC6N"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1047764"
           },
-          "authorityIds": "col:KC6N"
+          "authorityIds": "col:KC6N",
+          "authorship": "(García-Gómez, 1984)",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_KYNARIA",
+      "name": "Kynaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KYNARIA_CYNARA_EV_MARCUS_ER_MARCUS_1967",
+          "name": "Kynaria cynara",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kynaria",
+          "authorship": "(Ev. Marcus & Er. Marcus, 1967)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1048826"
+          },
+          "children": [],
+          "uuid": "4f04dc54-6f6f-50c-ba3-85d4a8a686eabe"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "flabellinopsidae"
     }
   ],
+  "genusCount": 3,
+  "speciesCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -61,8 +61,7 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9248663,
-            "checklistbank": "4269"
+            "gbif": 9248663
           },
           "uuid": "4b6a8fd0-007e-596-a55-206e7ee6cc3eb6",
           "authorityIds": "gbif:9248663",
@@ -123,10 +122,12 @@
             ],
             "col": [
               "69WRR"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427173"
           },
           "uuid": "bd24afde-3662-5d6-b16-39062ac4601ab0",
           "authorityIds": "col:69WRR,gbif:8393565",
+          "authorship": "Entzsen, 1884",
           "children": []
         },
         {
@@ -189,10 +190,12 @@
             ],
             "col": [
               "5XWS4"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427175"
           },
           "uuid": "9ee0044e-6088-59a-8eb-58a1f7ebab9ddc",
           "authorityIds": "col:5XWS4,gbif:7701223",
+          "authorship": "(Kahl, 1931) Carey, 1994",
           "children": []
         },
         {
@@ -211,10 +214,12 @@
             ],
             "col": [
               "5XX3S"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427176"
           },
           "uuid": "6dbb403d-730c-5bd-979-c7177332b46bcf",
           "authorityIds": "col:5XX3S,gbif:7871430",
+          "authorship": "Dragesco, 1965",
           "children": []
         },
         {
@@ -234,10 +239,11 @@
             "col": [
               "5Y93S"
             ],
-            "checklistbank": "354296"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:417373"
           },
           "uuid": "859e3d2e-7d5c-588-85a-8bb4675ff3786f",
           "authorityIds": "col:5Y93S,gbif:7941405",
+          "authorship": "Ehrenberg, 1835",
           "children": []
         },
         {
@@ -256,8 +262,7 @@
             ],
             "col": [
               "5Y944"
-            ],
-            "checklistbank": "354305"
+            ]
           },
           "uuid": "ab5d95d4-965a-565-af8-72c87afa3373ac",
           "authorityIds": "col:5Y944,gbif:8315971",
@@ -313,8 +318,7 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9522781,
-            "checklistbank": "4287"
+            "gbif": 9522781
           },
           "uuid": "db772539-099a-556-901-4a9b88c73914a6",
           "authorityIds": "gbif:9522781",
@@ -375,10 +379,12 @@
             ],
             "col": [
               "5XWRT"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427177"
           },
           "uuid": "39bbb9da-5949-5db-973-e20b06b2c60ec5",
           "authorityIds": "col:5XWRT,gbif:7372336",
+          "authorship": "Dragesco, 1966",
           "children": []
         },
         {
@@ -392,8 +398,7 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9448804,
-            "checklistbank": "4296"
+            "gbif": 9448804
           },
           "uuid": "10f42d13-3214-5e4-a81-21ef82f6668915",
           "authorityIds": "gbif:9448804",
@@ -433,10 +438,11 @@
             "col": [
               "5XWS5"
             ],
-            "checklistbank": "4305"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:163552"
           },
           "uuid": "e09d8b9e-68fc-561-bc3-46b6055755851e",
           "authorityIds": "col:5XWS5,gbif:8238852",
+          "authorship": "(Müller, 1786)",
           "children": []
         },
         {
@@ -457,16 +463,32 @@
           "children": []
         },
         {
-          "id": "SP_CHLAMYDODON_EXCOCELLATUS",
-          "name": "Chlamydodon excocellatus",
+          "id": "SP_CHLAMYDODON_OBLIQUUS_KAHL_1931",
+          "name": "Chlamydodon obliquus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Chlamydodon",
+          "authorship": "Kahl, 1931",
           "sourceIds": {
-            "checklistbank": "4278"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:417374"
           },
-          "children": []
+          "children": [],
+          "uuid": "abeb9a31-511d-592-942-3f863937dfe868"
+        },
+        {
+          "id": "SP_CHLAMYDODON_LYNCHELLIFORMIS_BORROR_1972",
+          "name": "Chlamydodon lynchelliformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chlamydodon",
+          "authorship": "Borror, 1972",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427174"
+          },
+          "children": [],
+          "uuid": "55591fb2-a741-5b5-8e6-43973817b1b84e"
         }
       ]
     },
@@ -500,29 +522,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PARACYRTOPHORON",
-      "name": "Paracyrtophoron",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARACYRTOPHORON_TROPICUM",
-          "name": "Paracyrtophoron tropicum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paracyrtophoron",
-          "sourceIds": {
-            "checklistbank": "354322"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "chlamydodontidae"
     }
   ],
+  "genusCount": 2,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -530,9 +533,6 @@
       "classKey": 8168405,
       "orderKey": 7842954,
       "familyKey": 7895016
-    },
-    "checklistbank": "4267"
-  },
-  "genusCount": 3,
-  "speciesCount": 25
+    }
+  }
 }

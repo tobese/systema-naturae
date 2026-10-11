@@ -20,9 +20,11 @@
           "sourceIds": {
             "col": [
               "V64CW"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1903964"
           },
-          "authorityIds": "col:V64CW"
+          "authorityIds": "col:V64CW",
+          "children": []
         },
         {
           "id": "SP_SEROMETACOCERAS_VERAE_ARTHABER_1900",
@@ -38,7 +40,8 @@
               "V64JW"
             ]
           },
-          "authorityIds": "col:V64JW"
+          "authorityIds": "col:V64JW",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -63,7 +66,8 @@
               "VR4VR"
             ]
           },
-          "authorityIds": "col:VR4VR"
+          "authorityIds": "col:VR4VR",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -88,7 +92,8 @@
               "VQZVD"
             ]
           },
-          "authorityIds": "col:VQZVD"
+          "authorityIds": "col:VQZVD",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -113,7 +118,22 @@
               "VQYMF"
             ]
           },
-          "authorityIds": "col:VQYMF"
+          "authorityIds": "col:VQYMF",
+          "children": []
+        },
+        {
+          "id": "SP_METACOCERAS_QUADRATUM_NIKO_MAPES_SEUSS_2022",
+          "name": "Metacoceras quadratum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metacoceras",
+          "authorship": "Niko, Mapes & Seuss, 2022",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1909172"
+          },
+          "children": [],
+          "uuid": "00b89155-976d-59b-811-027b0e2a6fc724"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -138,16 +158,40 @@
               "VR4XS"
             ]
           },
-          "authorityIds": "col:VR4XS"
+          "authorityIds": "col:VR4XS",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Metacoceratidae"
+    },
+    {
+      "id": "GENUS_COOPEROCERAS",
+      "name": "Cooperoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COOPEROCERAS_TEXANUM_A_K_MILLER_1945",
+          "name": "Cooperoceras texanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cooperoceras",
+          "authorship": "A. K. Miller, 1945",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1903136"
+          },
+          "children": [],
+          "uuid": "c880ba83-de30-570-a4a-dcc4566d5ad460"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "metacoceratidae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 8,
   "appSlug": "metacoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 5
+  "genusCount": 6
 }

@@ -148,10 +148,12 @@
             ],
             "col": [
               "55PWD"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172136"
           },
           "uuid": "cb97dcd5-4c4a-5a6-9ce-03b35845b0504d",
           "authorityIds": "col:55PWD,gbif:3204291,itis:13834,mycobank:148632",
+          "authorship": "K.I. Goebel, 1884",
           "children": []
         },
         {
@@ -200,10 +202,12 @@
             ],
             "col": [
               "55PWF"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177374"
           },
           "uuid": "9b24a285-29be-55c-9ae-e150e74cf8caa5",
           "authorityIds": "col:55PWF,gbif:3204292,mycobank:148358",
+          "authorship": "Molliard, 1909",
           "children": []
         }
       ]
@@ -776,10 +780,12 @@
             ],
             "itis": [
               "181449"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1501345"
           },
           "uuid": "927ad4c5-ca1e-573-8f2-d115b49d6ac125",
           "authorityIds": "col:4ZB3H,gbif:7817088,itis:181449,mycobank:121480",
+          "authorship": "(Wallr.) Lagerh., 1892",
           "children": []
         }
       ]
@@ -983,10 +989,12 @@
             ],
             "col": [
               "4JM8R"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172138"
           },
           "uuid": "f42b610a-d7a0-57e-97d-e07aded8f9dfe6",
           "authorityIds": "col:4JM8R,gbif:3285895,mycobank:289715",
+          "authorship": "J. Feldmann, 1941",
           "children": []
         },
         {
@@ -1014,8 +1022,7 @@
             ],
             "itis": [
               "181447"
-            ],
-            "checklistbank": "332291"
+            ]
           },
           "uuid": "258111fb-8a4f-5df-b06-63d7c3e1e393d8",
           "authorityIds": "col:4JM8S,gbif:7949999,itis:181447,mycobank:214750",
@@ -1041,10 +1048,11 @@
             "col": [
               "4JM8T"
             ],
-            "checklistbank": "332268"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172141"
           },
           "uuid": "40184e00-3ac1-565-88f-118baca40b57dc",
           "authorityIds": "col:4JM8T,gbif:3285884,mycobank:529656",
+          "authorship": "(Ferdinandsen & Winge) Ivimey-Cook, 1932",
           "children": []
         },
         {
@@ -1091,10 +1099,12 @@
             ],
             "col": [
               "4JM8V"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172140"
           },
           "uuid": "6d6a5dde-1e3b-58e-a31-a43e51135e4641",
           "authorityIds": "col:4JM8V,gbif:3285894,mycobank:349023",
+          "authorship": "Ferd. & Winge, 1913",
           "children": []
         },
         {
@@ -1116,10 +1126,12 @@
             ],
             "col": [
               "4JM8W"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172139"
           },
           "uuid": "c47f57d3-80a8-5f9-9ed-935ac4f640fe8b",
           "authorityIds": "col:4JM8W,gbif:3285888,mycobank:303769",
+          "authorship": "Feldm.-Maz., 1958",
           "children": []
         }
       ]
@@ -1368,8 +1380,33 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_OSTENFELDIELLA",
+      "name": "Ostenfeldiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSTENFELDIELLA_DIPLANTHERAE_FERDINANDSEN_WINGE_1914",
+          "name": "Ostenfeldiella diplantherae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ostenfeldiella",
+          "authorship": "Ferdinandsen & Winge, 1914",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172143"
+          },
+          "children": [],
+          "uuid": "c5baa470-e43f-5ff-b80-10fd79f882e63a"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plasmodiophoridae"
     }
   ],
+  "genusCount": 13,
+  "speciesCount": 50,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1377,9 +1414,6 @@
       "classKey": 266,
       "orderKey": 1116,
       "familyKey": 4921124
-    },
-    "checklistbank": "332266"
-  },
-  "genusCount": 12,
-  "speciesCount": 49
+    }
+  }
 }

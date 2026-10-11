@@ -43,9 +43,11 @@
           "sourceIds": {
             "col": [
               "BRCT5"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674683"
           },
-          "authorityIds": "col:BRCT5"
+          "authorityIds": "col:BRCT5",
+          "authorship": "(Lühe, 1909) Dollfus, 1950"
         },
         {
           "id": "SP_PARALEPODERMA_PROGENETICUM_B_TTNER_1951",
@@ -114,6 +116,34 @@
             ]
           },
           "authorityIds": "col:BXS3Z"
+        },
+        {
+          "id": "SP_PARALEPODERMA_BRUMPTI_BUTTNER_1950_BUTTNER_1950",
+          "name": "Paralepoderma brumpti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralepoderma",
+          "authorship": "(Buttner, 1950) Buttner, 1950",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674682"
+          },
+          "children": [],
+          "uuid": "5aade0b1-9d49-50b-9d1-023df4ad117dea"
+        },
+        {
+          "id": "SP_PARALEPODERMA_PROGENETICUM_BUTTNER_1950",
+          "name": "Paralepoderma progeneticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralepoderma",
+          "authorship": "Buttner, 1950",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1765328"
+          },
+          "children": [],
+          "uuid": "0a0c1cb8-f812-500-888-fb9d83a7dd14b3"
         }
       ]
     },
@@ -138,9 +168,11 @@
           "sourceIds": {
             "col": [
               "BRBCZ"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674648"
           },
-          "authorityIds": "col:BRBCZ"
+          "authorityIds": "col:BRBCZ",
+          "authorship": "(Bellingham, 1844) Lühe, 1909"
         },
         {
           "id": "SP_LEPTOPHALLUS_OVALIS_FANTHAM_PORTER_1954",
@@ -186,10 +218,56 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Leptophallidae"
+    },
+    {
+      "id": "GENUS_MACRODERA",
+      "name": "Macrodera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACRODERA_LONGICOLLIS_ABILDGAARD_IN_M_LLER_1789_L_HE_1909",
+          "name": "Macrodera longicollis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodera",
+          "authorship": "(Abildgaard in Müller, 1789) Lühe, 1909",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674284"
+          },
+          "children": [],
+          "uuid": "6995661a-1cbd-5ed-a0f-731983e91c71eb"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptophallidae"
+    },
+    {
+      "id": "GENUS_METALEPTOPHALLUS",
+      "name": "Metaleptophallus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METALEPTOPHALLUS_GRACILLIMUS_L_HE_1909_YAMAGUTI_1958",
+          "name": "Metaleptophallus gracillimus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metaleptophallus",
+          "authorship": "(Lühe, 1909) Yamaguti, 1958",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674650"
+          },
+          "children": [],
+          "uuid": "bc7e453a-9991-5cf-833-5579af9da9defd"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptophallidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 9,
+  "genusCount": 5,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

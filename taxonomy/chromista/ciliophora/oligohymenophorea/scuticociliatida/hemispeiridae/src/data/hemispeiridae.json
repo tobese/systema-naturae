@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "106b3c53-6f3f-5d4-957-8a62efa4c28922",
-          "authorityIds": "col:6W9VL,gbif:7740550"
+          "authorityIds": "col:6W9VL,gbif:7740550",
+          "children": []
         },
         {
           "id": "PROBOVERIA_THYASIRAE",
@@ -48,10 +49,13 @@
             ],
             "col": [
               "77XVL"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427161"
           },
           "uuid": "bfe1b401-0fee-581-89e-37d669d83a5fb1",
-          "authorityIds": "col:77XVL,gbif:7449911"
+          "authorityIds": "col:77XVL,gbif:7449911",
+          "authorship": "Fenchel, 1965",
+          "children": []
         },
         {
           "id": "PROBOVERIA_TRIANGULARIS",
@@ -69,10 +73,13 @@
             ],
             "col": [
               "77Y7L"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427162"
           },
           "uuid": "bcc721c7-20ad-57c-ae1-7de5a36c7a9ce3",
-          "authorityIds": "col:77Y7L,gbif:8274446"
+          "authorityIds": "col:77Y7L,gbif:8274446",
+          "authorship": "Fenchel, 1965",
+          "children": []
         }
       ]
     },
@@ -99,10 +106,13 @@
             ],
             "col": [
               "3KSQ2"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:163567"
           },
           "uuid": "4e1109bd-f456-598-877-10866e1fc8ca4b",
-          "authorityIds": "col:3KSQ2,gbif:7494299"
+          "authorityIds": "col:3KSQ2,gbif:7494299",
+          "authorship": "(Cuénot, 1891)",
+          "children": []
         },
         {
           "id": "HEMISPEIRA_ASTERIASI",
@@ -120,10 +130,13 @@
             ],
             "col": [
               "3KSQ3"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427159"
           },
           "uuid": "834fc01c-a809-5b8-8ef-66db0818655243",
-          "authorityIds": "col:3KSQ3,gbif:8256676"
+          "authorityIds": "col:3KSQ3,gbif:8256676",
+          "authorship": "Fabre-Domergue, 1888",
+          "children": []
         }
       ]
     },
@@ -145,10 +158,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7677309
+            "gbif": 7677309,
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427156"
           },
           "uuid": "71dc00f5-bb00-5b5-a83-27b0e464441d22",
-          "authorityIds": "gbif:7677309"
+          "authorityIds": "gbif:7677309",
+          "authorship": "Chatton & Lwoff, 1926",
+          "children": []
         }
       ]
     },
@@ -178,7 +194,8 @@
             ]
           },
           "uuid": "5c371f6c-2071-562-996-d5934842e95ec0",
-          "authorityIds": "col:3KSQ4,gbif:7695145"
+          "authorityIds": "col:3KSQ4,gbif:7695145",
+          "children": []
         }
       ]
     },
@@ -200,14 +217,70 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7998673
+            "gbif": 7998673,
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427160"
           },
           "uuid": "b8436ef7-0f7e-59a-945-6d22bbfe2f599d",
-          "authorityIds": "gbif:7998673"
+          "authorityIds": "gbif:7998673",
+          "authorship": "Issel, 1903",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BOVERIA",
+      "name": "Boveria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOVERIA_TEREDINIDI_NELSON_1923",
+          "name": "Boveria teredinidi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boveria",
+          "authorship": "Nelson, 1923",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:394859"
+          },
+          "children": [],
+          "uuid": "893ae96d-531a-50a-a68-4f63591bde7823"
+        },
+        {
+          "id": "SP_BOVERIA_LABIALIS_IKEDA_OZAKI_1918",
+          "name": "Boveria labialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boveria",
+          "authorship": "Ikeda & Ozaki, 1918",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427157"
+          },
+          "children": [],
+          "uuid": "71dace10-a4b4-5c5-a1a-3671a4587a2f3b"
+        },
+        {
+          "id": "SP_BOVERIA_SUBCYLINDRICA_STEVEN_1901",
+          "name": "Boveria subcylindrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boveria",
+          "authorship": "Steven, 1901",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:427158"
+          },
+          "children": [],
+          "uuid": "fbbe5649-9262-5a7-801-e9e8284f49a232"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemispeiridae"
     }
   ],
+  "genusCount": 6,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

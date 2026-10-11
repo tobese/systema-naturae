@@ -284,9 +284,11 @@
           "sourceIds": {
             "col": [
               "CSDQ8"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1791119"
           },
-          "authorityIds": "col:CSDQ8"
+          "authorityIds": "col:CSDQ8",
+          "authorship": "Koken, 1925"
         },
         {
           "id": "SP_LYTOSPIRA_RECTANGULARIS",
@@ -302,9 +304,11 @@
           "sourceIds": {
             "col": [
               "CSDQ9"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1791268"
           },
-          "authorityIds": "col:CSDQ9"
+          "authorityIds": "col:CSDQ9",
+          "authorship": "Kobayashi, 1959"
         },
         {
           "id": "SP_LYTOSPIRA_YOCHELSONI",
@@ -698,6 +702,20 @@
             ]
           },
           "authorityIds": "col:CSDQ7"
+        },
+        {
+          "id": "SP_LYTOSPIRA_WANWANKOUENSIS_Y_WEN_YOCHELSON_1999",
+          "name": "Lytospira wanwankouensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lytospira",
+          "authorship": "Y. Wen & Yochelson, 1999",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1727126"
+          },
+          "children": [],
+          "uuid": "b46906fd-599c-5fb-bc6-7ac687171e7e47"
         }
       ]
     },
@@ -789,9 +807,11 @@
           "sourceIds": {
             "col": [
               "CSHXZ"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1791129"
           },
-          "authorityIds": "col:CSHXZ"
+          "authorityIds": "col:CSHXZ",
+          "authorship": "Rohr, 1994"
         },
         {
           "id": "SP_MALAYASPIRA_RUGOSA",
@@ -807,9 +827,11 @@
           "sourceIds": {
             "col": [
               "CSHY2"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1791128"
           },
-          "authorityIds": "col:CSHY2"
+          "authorityIds": "col:CSHY2",
+          "authorship": "Kobayashi, 1958"
         },
         {
           "id": "SP_OPHILETA_BELLA",
@@ -871,10 +893,56 @@
           "uuid": "1436689a-575c-544-ab3-e53b7f55d0e1d3"
         }
       ]
+    },
+    {
+      "id": "GENUS_ROSSOSPIRA",
+      "name": "Rossospira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ROSSOSPIRA_HARRISAE_ROHR_1994",
+          "name": "Rossospira harrisae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rossospira",
+          "authorship": "Rohr, 1994",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1791131"
+          },
+          "children": [],
+          "uuid": "809f8dba-7f21-590-960-bbffefadbf982b"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ophiletidae"
+    },
+    {
+      "id": "GENUS_BURDEKINOSTOMA",
+      "name": "Burdekinostoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BURDEKINOSTOMA_BURDEKINENSIS_A_G_COOK_1997",
+          "name": "Burdekinostoma burdekinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Burdekinostoma",
+          "authorship": "A. G. Cook, 1997",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1894634"
+          },
+          "children": [],
+          "uuid": "586bfd22-6a55-52d-8b3-b9bc05ac6fd971"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ophiletidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 59,
+  "genusCount": 8,
+  "speciesCount": 62,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

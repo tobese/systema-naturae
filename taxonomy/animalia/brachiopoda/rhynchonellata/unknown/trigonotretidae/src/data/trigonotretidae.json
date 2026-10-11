@@ -355,9 +355,11 @@
           "sourceIds": {
             "col": [
               "CN357"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1776878"
           },
-          "authorityIds": "col:CN357"
+          "authorityIds": "col:CN357",
+          "authorship": "Shen, Shi & Zhu, 2000"
         }
       ]
     },
@@ -863,9 +865,11 @@
           "sourceIds": {
             "col": [
               "BTTGW"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1698474"
           },
-          "authorityIds": "col:BTTGW"
+          "authorityIds": "col:BTTGW",
+          "authorship": "Archbold & Thomas, 1986"
         },
         {
           "id": "SP_TRIGONOTRETA_NEOAUSTRALIS",
@@ -881,9 +885,11 @@
           "sourceIds": {
             "col": [
               "BTTH4"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1698473"
           },
-          "authorityIds": "col:BTTH4"
+          "authorityIds": "col:BTTH4",
+          "authorship": "Archbold & Thomas, 1986"
         }
       ]
     },
@@ -1022,6 +1028,20 @@
             ]
           },
           "authorityIds": "col:F2VJ8"
+        },
+        {
+          "id": "SP_APERISPIRIFER_ARCHBOLDI_WATERHOUSE_1999",
+          "name": "Aperispirifer archboldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aperispirifer",
+          "authorship": "Waterhouse, 1999",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795091"
+          },
+          "children": [],
+          "uuid": "0aada957-a7da-51a-83f-a13b8a0d4825de"
         }
       ]
     },
@@ -1443,10 +1463,33 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Trigonotretidae"
+    },
+    {
+      "id": "GENUS_GRANTONIA",
+      "name": "Grantonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GRANTONIA_HOBARTENSIS_BROWN_1953",
+          "name": "Grantonia hobartensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Grantonia",
+          "authorship": "Brown, 1953",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1675920"
+          },
+          "children": [],
+          "uuid": "17d5533a-535c-595-8c6-df26632c4c0df3"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trigonotretidae"
     }
   ],
-  "genusCount": 24,
-  "speciesCount": 84,
+  "genusCount": 25,
+  "speciesCount": 86,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

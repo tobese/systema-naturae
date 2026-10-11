@@ -48,9 +48,11 @@
             ],
             "col": [
               "75P5S"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:122863"
           },
-          "authorityIds": "col:75P5S,itis:204323"
+          "authorityIds": "col:75P5S,itis:204323",
+          "authorship": "(Quatrefages, 1846)"
         },
         {
           "id": "SP_PARADREPANOPHORUS_NISIDENSIS",
@@ -66,9 +68,11 @@
           "sourceIds": {
             "col": [
               "75P64"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:122864"
           },
-          "authorityIds": "col:75P64"
+          "authorityIds": "col:75P64",
+          "authorship": "(Hubrecht, 1874)"
         },
         {
           "id": "SP_PARADREPANOPHORUS_OBIENSIS_STIASNY_WIJNHOFF_1936",
@@ -159,10 +163,70 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Paradrepanophoridae"
+    },
+    {
+      "id": "GENUS_DREPANOGIGAS",
+      "name": "Drepanogigas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DREPANOGIGAS_ALBOLINEATUS_B_RGER_1895",
+          "name": "Drepanogigas albolineatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Drepanogigas",
+          "authorship": "(Bürger, 1895)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:122855"
+          },
+          "children": [],
+          "uuid": "7b62ac58-dbda-561-bea-bb645035f1769b"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paradrepanophoridae"
+    },
+    {
+      "id": "GENUS_DREPANOPHORELLA",
+      "name": "Drepanophorella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DREPANOPHORELLA_LIFUENSIS_PUNNETT_1900",
+          "name": "Drepanophorella lifuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Drepanophorella",
+          "authorship": "(Punnett, 1900)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:573303"
+          },
+          "children": [],
+          "uuid": "dadcb07f-2925-5fd-a7e-8737ac86db0cbd"
+        },
+        {
+          "id": "SP_DREPANOPHORELLA_ROSEA_PUNNETT_1903",
+          "name": "Drepanophorella rosea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Drepanophorella",
+          "authorship": "(Punnett, 1903)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:573304"
+          },
+          "children": [],
+          "uuid": "bfea0716-fad7-53e-8a7-64df4674b2acfc"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paradrepanophoridae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 7,
+  "genusCount": 5,
+  "speciesCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

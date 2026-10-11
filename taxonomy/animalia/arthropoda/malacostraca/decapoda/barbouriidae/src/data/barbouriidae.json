@@ -76,7 +76,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Calliasmata",
-          "uuid": "76a40456-933a-50e-956-2d98742fea4663"
+          "uuid": "76a40456-933a-50e-956-2d98742fea4663",
+          "authorship": "Holthuis, 1973",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:515220"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -183,7 +187,8 @@
             ],
             "itis": [
               "1173183"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:515210"
           },
           "authorityIds": "col:8VKZJ,itis:1173183",
           "commonName": "Sterrer’s cave shrimp"
@@ -207,6 +212,20 @@
             ]
           },
           "authorityIds": "col:8VBRZ,itis:659982"
+        },
+        {
+          "id": "SP_PARHIPPOLYTE_MISTICIA_CLARK_1989",
+          "name": "Parhippolyte misticia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parhippolyte",
+          "authorship": "(Clark, 1989)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:515208"
+          },
+          "children": [],
+          "uuid": "0d597a0d-6d65-5a0-8c0-0da1fc77ea441a"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -241,13 +260,36 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Barbouriidae"
+    },
+    {
+      "id": "GENUS_TOMARICARIS",
+      "name": "Tomaricaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TOMARICARIS_AINUENSIS_GARASSINO_PASINI_NAZARKIN_2022",
+          "name": "Tomaricaris ainuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tomaricaris",
+          "authorship": "Garassino, Pasini & Nazarkin, 2022",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1579918"
+          },
+          "children": [],
+          "uuid": "681c49c3-6a81-5f7-aa8-c8c8cd35b867d7"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barbouriidae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 13,
   "appSlug": "barbouriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

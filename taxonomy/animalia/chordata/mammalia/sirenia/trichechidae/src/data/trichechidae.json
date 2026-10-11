@@ -66,7 +66,8 @@
             ],
             "itis": [
               "180686"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:255026"
           },
           "authorityIds": "col:58862,itis:180686",
           "commonName": "Amazon Manatee"
@@ -98,7 +99,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Ribodon",
-          "uuid": "753fe1cf-5c28-5dc-955-afbd721ba5450d"
+          "uuid": "753fe1cf-5c28-5dc-955-afbd721ba5450d",
+          "authorship": "Ameghino, 1883",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458197"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -117,18 +122,105 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Potamosiren",
-          "uuid": "46302d1e-bb8b-539-88f-7ea5088b655b3d"
+          "uuid": "46302d1e-bb8b-539-88f-7ea5088b655b3d",
+          "authorship": "Reinhart, 1951",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458194"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Trichechidae"
+    },
+    {
+      "id": "GENUS_ANOMOTHERIUM",
+      "name": "Anomotherium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOMOTHERIUM_LANGEWIESCHEI_SIEGFRIED_1965",
+          "name": "Anomotherium langewieschei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomotherium",
+          "authorship": "Siegfried, 1965",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458181"
+          },
+          "children": [],
+          "uuid": "7f3a941f-6ce1-56f-a76-16d283b8e2658b"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trichechidae"
+    },
+    {
+      "id": "GENUS_MIOSIREN",
+      "name": "Miosiren",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIOSIREN_KOCKI_DOLLO_1889",
+          "name": "Miosiren kocki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Miosiren",
+          "authorship": "Dollo, 1889",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458183"
+          },
+          "children": [],
+          "uuid": "b4b7033c-7a82-521-965-bdd8e8b7bacbcc"
+        },
+        {
+          "id": "SP_MIOSIREN_CANHAMI_FLOWER_1874_SICKENBERG_1934",
+          "name": "Miosiren canhami",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Miosiren",
+          "authorship": "(Flower, 1874) Sickenberg, 1934",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458184"
+          },
+          "children": [],
+          "uuid": "77d03730-a17f-5a4-991-32f2496bdf0c17"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trichechidae"
+    },
+    {
+      "id": "GENUS_PROHALICORE",
+      "name": "Prohalicore",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROHALICORE_DUBALENI_FLOT_1887",
+          "name": "Prohalicore dubaleni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prohalicore",
+          "authorship": "Flot, 1887",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458190"
+          },
+          "children": [],
+          "uuid": "9d3ab3bb-d87e-531-a19-f229a2bfa1c73f"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trichechidae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 10,
   "appSlug": "trichechidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 3,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

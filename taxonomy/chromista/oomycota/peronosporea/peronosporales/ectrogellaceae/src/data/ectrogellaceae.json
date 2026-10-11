@@ -33,7 +33,8 @@
             ]
           },
           "uuid": "e9e024db-cbd2-5be-900-53fad9f7fe6965",
-          "authorityIds": "col:38RCS,gbif:3203435,mycobank:211381"
+          "authorityIds": "col:38RCS,gbif:3203435,mycobank:211381",
+          "children": []
         },
         {
           "id": "ECTROGELLA_BRACHYSTOMA",
@@ -57,7 +58,8 @@
             ]
           },
           "uuid": "8e5d8d3a-e948-51d-963-1182e36d8d4cca",
-          "authorityIds": "col:6DY4M,gbif:3203443,mycobank:483210"
+          "authorityIds": "col:6DY4M,gbif:3203443,mycobank:483210",
+          "children": []
         },
         {
           "id": "ECTROGELLA_CYCLOTELLAE",
@@ -81,7 +83,8 @@
             ]
           },
           "uuid": "23e01d51-aee2-575-b89-39eb4bcfe4cdb2",
-          "authorityIds": "col:38RCV,gbif:3203441,mycobank:483211"
+          "authorityIds": "col:38RCV,gbif:3203441,mycobank:483211",
+          "children": []
         },
         {
           "id": "ECTROGELLA_EURYCHASMOIDES",
@@ -102,10 +105,13 @@
             ],
             "col": [
               "38RCY"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172162"
           },
           "uuid": "90c1de04-4d87-5b5-8f0-aa74dd538522fd",
-          "authorityIds": "col:38RCY,gbif:3203440,mycobank:297089"
+          "authorityIds": "col:38RCY,gbif:3203440,mycobank:297089",
+          "authorship": "Feldmann & Feldm.-Maz., 1955",
+          "children": []
         },
         {
           "id": "ECTROGELLA_LAUDERIAE",
@@ -129,7 +135,8 @@
             ]
           },
           "uuid": "f3177727-7cc7-5bc-8b1-7da69324ed4438",
-          "authorityIds": "col:38RD2,gbif:3276474,mycobank:252973"
+          "authorityIds": "col:38RD2,gbif:3276474,mycobank:252973",
+          "children": []
         },
         {
           "id": "ECTROGELLA_MONOSTOMA",
@@ -153,7 +160,8 @@
             ]
           },
           "uuid": "c5e6cb11-b96b-5ec-9be-d8907910c7e18a",
-          "authorityIds": "col:38RD5,gbif:3276475,mycobank:271576"
+          "authorityIds": "col:38RD5,gbif:3276475,mycobank:271576",
+          "children": []
         },
         {
           "id": "ECTROGELLA_PERFORANS",
@@ -177,14 +185,158 @@
             ],
             "itis": [
               "13903"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172160"
           },
           "uuid": "ffbe1afa-d402-583-b5b-b4efa79a2479f3",
-          "authorityIds": "col:38RD6,gbif:3203438,itis:13903,mycobank:211033"
+          "authorityIds": "col:38RD6,gbif:3203438,itis:13903,mycobank:211033",
+          "authorship": "Petersen, 1905",
+          "children": []
+        },
+        {
+          "id": "SP_ECTROGELLA_LICMOPHORAE_SCHERFFEL_1925",
+          "name": "Ectrogella licmophorae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ectrogella",
+          "authorship": "Scherffel, 1925",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172161"
+          },
+          "children": [],
+          "uuid": "ac38c1aa-aa0e-508-a11-33e57f996706e3"
+        },
+        {
+          "id": "SP_ECTROGELLA_MARINA_P_A_DANGEARD_J_G_FELDMANN_1955",
+          "name": "Ectrogella marina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ectrogella",
+          "authorship": "(P.A. Dangeard) J. & G. Feldmann, 1955",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172215"
+          },
+          "children": [],
+          "uuid": "82348ef0-e3aa-530-9ea-afae251bb42699"
         }
       ]
+    },
+    {
+      "id": "GENUS_EURYCHASMA",
+      "name": "Eurychasma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EURYCHASMA_DICKSONII_WRIGHT_1879",
+          "name": "Eurychasma dicksonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eurychasma",
+          "authorship": "Wright, 1879",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172155"
+          },
+          "children": [],
+          "uuid": "172bc4fe-e850-5b7-b14-69e2dd38488c1f"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ectrogellaceae"
+    },
+    {
+      "id": "GENUS_EURYCHASMIDIUM",
+      "name": "Eurychasmidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EURYCHASMIDIUM_TUMEFACIENS_MAGNUS_SPARROW_1936",
+          "name": "Eurychasmidium tumefaciens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eurychasmidium",
+          "authorship": "(Magnus) Sparrow, 1936",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172164"
+          },
+          "children": [],
+          "uuid": "65b4812b-303d-56a-8cc-a51122d7889ebe"
+        },
+        {
+          "id": "SP_EURYCHASMIDIUM_SACCULUM_H_E_PETERSEN_M_W_DICK_2001",
+          "name": "Eurychasmidium sacculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eurychasmidium",
+          "authorship": "(H.E. Petersen) M.W. Dick, 2001",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:178178"
+          },
+          "children": [],
+          "uuid": "a8c5be41-1fd1-53c-9c6-e5640961589e3a"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ectrogellaceae"
+    },
+    {
+      "id": "GENUS_PLEOTRACHELUS",
+      "name": "Pleotrachelus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLEOTRACHELUS_MINUTUS_PETERSEN_1905",
+          "name": "Pleotrachelus minutus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleotrachelus",
+          "authorship": "(Petersen, 1905)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177353"
+          },
+          "children": [],
+          "uuid": "0a4ca873-9ffc-5ae-a8c-45cec84e6d0eb1"
+        },
+        {
+          "id": "SP_PLEOTRACHELUS_OLPIDIUM_PETERSEN_1905",
+          "name": "Pleotrachelus olpidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleotrachelus",
+          "authorship": "(Petersen, 1905)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177355"
+          },
+          "children": [],
+          "uuid": "a480bcda-868e-5a2-aac-0116442fddcea8"
+        },
+        {
+          "id": "SP_PLEOTRACHELUS_PARADOXUS_PETERSEN_1905",
+          "name": "Pleotrachelus paradoxus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleotrachelus",
+          "authorship": "(Petersen, 1905)",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177357"
+          },
+          "children": [],
+          "uuid": "481dab45-62aa-523-9af-a827b054daf5dd"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ectrogellaceae"
     }
   ],
+  "genusCount": 4,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -912,7 +912,8 @@
             ],
             "col": [
               "4SCWW"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172124"
           },
           "uuid": "af05170f-3b30-572-b2c-1b6324d6017705",
           "authorityIds": "col:4SCWW,gbif:3384572,mycobank:338348"
@@ -1428,7 +1429,8 @@
             ],
             "col": [
               "4SCXH"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177367"
           },
           "uuid": "1191ee59-ef06-5b2-b9e-0d2b62a14bdd13",
           "authorityIds": "col:4SCXH,gbif:3384467,mycobank:219668"
@@ -1795,7 +1797,8 @@
             ],
             "col": [
               "4SCXV"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177368"
           },
           "uuid": "5cb19ce8-40fe-541-b15-26285814d2b019",
           "authorityIds": "col:4SCXV,gbif:3384523,mycobank:219846"
@@ -1960,7 +1963,8 @@
             ],
             "itis": [
               "13798"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:164160"
           },
           "uuid": "9ce9c89d-5809-584-b56-03fa1fef0f892b",
           "authorityIds": "col:4SCY3,gbif:7522492,itis:13798,mycobank:586818"
@@ -3193,8 +3197,7 @@
             ],
             "col": [
               "4SCZQ"
-            ],
-            "checklistbank": "400153"
+            ]
           },
           "uuid": "7bc17ad9-a54b-53f-887-57a88d1b47c47a",
           "authorityIds": "col:4SCZQ,gbif:2627459,mycobank:290485"
@@ -3536,8 +3539,7 @@
             ],
             "col": [
               "4SD26"
-            ],
-            "checklistbank": "377538"
+            ]
           },
           "uuid": "e6e9bc94-7b85-518-955-01e6d9997bf163",
           "authorityIds": "col:4SD26,gbif:3384469,mycobank:480758"
@@ -3693,7 +3695,8 @@
             ],
             "col": [
               "4SD2C"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:988699"
           },
           "uuid": "263505c7-4c81-573-af8-6e207ad6385116",
           "authorityIds": "col:4SD2C,gbif:3384564,mycobank:480381"
@@ -4071,7 +4074,8 @@
             ],
             "col": [
               "4SD2V"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172126"
           },
           "uuid": "477c6959-8ec0-54e-b76-5eaf2bfb936e4f",
           "authorityIds": "col:4SD2V,gbif:3384578,mycobank:305175"
@@ -4793,14 +4797,28 @@
           "children": []
         },
         {
-          "id": "SP_RHIZOPHYDIUM_LITTOREUM",
+          "id": "SP_RHIZOPHYDIUM_CODICOLA_ZELLER_1918",
+          "name": "Rhizophydium codicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizophydium",
+          "authorship": "Zeller, 1918",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:172125"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHIZOPHYDIUM_LITTOREUM_AMON_1984",
           "name": "Rhizophydium littoreum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Rhizophydium",
+          "authorship": "Amon, 1984",
           "sourceIds": {
-            "checklistbank": "377503"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:437818"
           },
           "children": []
         }
@@ -4835,7 +4853,8 @@
             ],
             "col": [
               "4GJNM"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1457129"
           },
           "uuid": "6f5a9d45-8558-5c5-bd7-c4c7d994bb4395",
           "authorityIds": "col:4GJNM,gbif:6321616,mycobank:336427"
@@ -4865,6 +4884,19 @@
           },
           "uuid": "6d59531c-c478-52a-aad-f91ab77a72d483",
           "authorityIds": "col:4GJP8,gbif:6321599,mycobank:480385"
+        },
+        {
+          "id": "SP_PHLYCTIDIUM_BREVIPES_G_F_ATK_MINDEN_1911",
+          "name": "Phlyctidium brevipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phlyctidium",
+          "authorship": "(G.F. Atk.) Minden, 1911",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:177328"
+          },
+          "children": []
         }
       ],
       "authorship": "(A. Braun) Rabenhorst"
@@ -4904,65 +4936,11 @@
         }
       ],
       "authorship": "M. Krings & C.J. Harper"
-    },
-    {
-      "id": "GENUS_BATRACHOCHYTRIUM",
-      "name": "Batrachochytrium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BATRACHOCHYTRIUM_DENDROBATIDIS",
-          "name": "Batrachochytrium dendrobatidis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Batrachochytrium",
-          "sourceIds": {
-            "checklistbank": "376479"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BATRACHOCHYTRIUM_SALAMANDRIVORANS",
-          "name": "Batrachochytrium salamandrivorans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Batrachochytrium",
-          "sourceIds": {
-            "checklistbank": "376488"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "rhizophydiaceae"
-    },
-    {
-      "id": "GENUS_BOOTHIOMYCES",
-      "name": "Boothiomyces",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BOOTHIOMYCES_MACROPOROSUS",
-          "name": "Boothiomyces macroporosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Boothiomyces",
-          "sourceIds": {
-            "checklistbank": "376504"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "rhizophydiaceae"
     }
   ],
   "authorship": "Letcher",
-  "genusCount": 5,
-  "speciesCount": 193,
+  "genusCount": 3,
+  "speciesCount": 192,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -4970,7 +4948,6 @@
       "classKey": 10689325,
       "orderKey": 1117,
       "familyKey": 3814
-    },
-    "checklistbank": "376477"
+    }
   }
 }

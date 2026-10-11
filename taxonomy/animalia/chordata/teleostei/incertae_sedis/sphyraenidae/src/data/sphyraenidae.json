@@ -713,7 +713,8 @@
             ],
             "itis": [
               "646739"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:305323"
           },
           "uuid": "1f75b7ae-f529-571-bb4-17bc7f8704053e",
           "authorityIds": "gbif:177714875,gbif:2394247,itis:646739"
@@ -738,13 +739,36 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Sphyraenidae"
+    },
+    {
+      "id": "GENUS_PARASPHYRAENA",
+      "name": "Parasphyraena",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARASPHYRAENA_APSCHERONICA_SWITCHENSKA_1968",
+          "name": "Parasphyraena apscheronica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parasphyraena",
+          "authorship": "Switchenska, 1968",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1909206"
+          },
+          "children": [],
+          "uuid": "e76120d0-86a7-54f-a0c-44a5739f99a127"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphyraenidae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 33,
   "appSlug": "sphyraenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

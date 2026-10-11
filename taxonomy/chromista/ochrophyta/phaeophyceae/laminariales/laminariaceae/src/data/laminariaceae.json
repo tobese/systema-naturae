@@ -478,8 +478,7 @@
           "sourcedFrom": "inaturalist",
           "children": [],
           "sourceIds": {
-            "gbif": 4267628,
-            "checklistbank": "447590"
+            "gbif": 4267628
           },
           "uuid": "cc8e8d9a-73d4-5ba-853-3fb8c4415f04ba",
           "authorityIds": "gbif:4267628"
@@ -848,8 +847,7 @@
             ],
             "itis": [
               "11274"
-            ],
-            "checklistbank": "447581"
+            ]
           },
           "uuid": "5f74ae8c-8995-555-b1a-296990d6c1d267",
           "authorityIds": "gbif:5422328,itis:11274"
@@ -1420,7 +1418,8 @@
           "sourceIds": {
             "checklistbank": "65727"
           },
-          "children": []
+          "children": [],
+          "uuid": "9062c2ce-8c00-501-a36-9b7d5d230990d1"
         },
         {
           "id": "SP_LAMINARIA_AGARDHII_KJELLMAN_1877",
@@ -1433,7 +1432,8 @@
           "sourceIds": {
             "checklistbank": "66304"
           },
-          "children": []
+          "children": [],
+          "uuid": "755335eb-278e-5e7-87b-84b347728e3dba"
         }
       ]
     },
@@ -1627,15 +1627,39 @@
           "sourceIds": {
             "checklistbank": "e8206b43-11ac-4931-a739-6061a3c8fa5c"
           },
-          "children": []
+          "children": [],
+          "uuid": "70ad41a7-84c4-55b-8dc-8cd5c018e85b6f"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "laminariaceae"
+    },
+    {
+      "id": "GENUS_MYRIOTREMA",
+      "name": "Myriotrema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYRIOTREMA_TRYPANEOIDES_NYL_HALE_1980",
+          "name": "Myriotrema trypaneoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myriotrema",
+          "authorship": "(Nyl.) Hale, 1980",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1486931"
+          },
+          "children": [],
+          "uuid": "5514f962-bbe8-544-b65-751e87c12ebd8e"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "laminariaceae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 89,
+  "genusCount": 20,
+  "speciesCount": 90,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1643,7 +1667,6 @@
       "classKey": 7073593,
       "orderKey": 560,
       "familyKey": 7740
-    },
-    "checklistbank": "447579"
+    }
   }
 }

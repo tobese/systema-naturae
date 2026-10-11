@@ -258,9 +258,11 @@
           "sourceIds": {
             "col": [
               "BLLVR"
-            ]
+            ],
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1670849"
           },
-          "authorityIds": "col:BLLVR"
+          "authorityIds": "col:BLLVR",
+          "authorship": "(Deslongchamps, 1873)"
         },
         {
           "id": "SP_SPHAEROIDOTHYRIS_ELMII_ALMERAS_MOULAN_1988",
@@ -459,6 +461,20 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "2a1b5a6b-7024-519-a9a-2d34d553ed03d7"
+        },
+        {
+          "id": "SP_SPHAEROIDOTHYRIS_URETAE_GARC_A_JORAL_2005",
+          "name": "Sphaeroidothyris uretae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeroidothyris",
+          "authorship": "García Joral, 2005",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828203"
+          },
+          "children": [],
+          "uuid": "44bf6e1f-96b5-5ee-b8a-ee4384680cc4f6"
         }
       ]
     },
@@ -508,6 +524,20 @@
             ]
           },
           "authorityIds": "col:VBLFH"
+        },
+        {
+          "id": "SP_ECTYPHORIA_SINAIENSIS_FELDMAN_RADULOVI_HEGAB_RADULOVI_2012",
+          "name": "Ectyphoria sinaiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ectyphoria",
+          "authorship": "Feldman, Radulović, Hegab & Radulović, 2012",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1864172"
+          },
+          "children": [],
+          "uuid": "c8bc4331-390e-58f-adf-3e8e0ac6ad0a93"
         }
       ]
     },
@@ -880,10 +910,33 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Loboidothyrididae"
+    },
+    {
+      "id": "GENUS_AVONOTHYRIS",
+      "name": "Avonothyris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AVONOTHYRIS_PLICATINA_BUCKMAN_1918",
+          "name": "Avonothyris plicatina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Avonothyris",
+          "authorship": "Buckman, 1918",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1864182"
+          },
+          "children": [],
+          "uuid": "d90739cb-ff5a-562-93d-39995ce5d67dc7"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "loboidothyrididae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 52,
+  "genusCount": 17,
+  "speciesCount": 55,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
