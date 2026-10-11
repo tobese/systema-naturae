@@ -22,10 +22,12 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10691533
+            "gbif": 10691533,
+            "checklistbank": "s__B14-G17 sp003649515"
           },
           "uuid": "9baef5d7-5bc0-52e-a2d-e43d3cddd5b41d",
-          "authorityIds": "gbif:10691533"
+          "authorityIds": "gbif:10691533",
+          "children": []
         }
       ]
     },
@@ -47,12 +49,47 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10756908
+            "gbif": 10756908,
+            "checklistbank": "s__B67-G16 sp003650675"
           },
           "uuid": "c64464f9-8894-5ec-bfb-1f0101ee5a4080",
-          "authorityIds": "gbif:10756908"
+          "authorityIds": "gbif:10756908",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_B20_G17",
+      "name": "B20-G17",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_B20_G17_SP003650785",
+          "name": "B20-G17 sp003650785",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "B20-G17",
+          "sourceIds": {
+            "checklistbank": "s__B20-G17 sp003650785"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_B20_G17_SP964522205",
+          "name": "B20-G17 sp964522205",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "B20-G17",
+          "sourceIds": {
+            "checklistbank": "s__B20-G17 sp964522205"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "b20-g17"
     }
   ],
   "sourceIds": {
@@ -62,6 +99,9 @@
       "classKey": 10705623,
       "orderKey": 10772788,
       "familyKey": 10689915
-    }
-  }
+    },
+    "checklistbank": "f__B20-G17"
+  },
+  "genusCount": 3,
+  "speciesCount": 4
 }
