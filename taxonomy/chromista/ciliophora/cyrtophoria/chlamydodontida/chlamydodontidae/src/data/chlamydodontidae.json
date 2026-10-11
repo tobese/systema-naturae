@@ -262,7 +262,8 @@
             ],
             "col": [
               "5Y944"
-            ]
+            ],
+            "checklistbank": "1426971"
           },
           "uuid": "ab5d95d4-965a-565-af8-72c87afa3373ac",
           "authorityIds": "col:5Y944,gbif:8315971",
@@ -456,7 +457,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9331415
+            "gbif": 9331415,
+            "checklistbank": "1639428"
           },
           "uuid": "2b838bf3-331d-5de-8cb-2e9e335948b983",
           "authorityIds": "gbif:9331415",
@@ -583,10 +585,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chlamydodontidae"
+    },
+    {
+      "id": "GENUS_PARACYRTOPHORON",
+      "name": "Paracyrtophoron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARACYRTOPHORON_TROPICUM",
+          "name": "Paracyrtophoron tropicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracyrtophoron",
+          "sourceIds": {
+            "checklistbank": "1651657"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chlamydodontidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 29,
+  "genusCount": 4,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

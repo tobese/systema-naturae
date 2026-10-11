@@ -120,7 +120,8 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7821723
+            "gbif": 7821723,
+            "checklistbank": "989541"
           },
           "uuid": "675aef86-3e62-546-a60-9ea32b0fcac301",
           "authorityIds": "gbif:7821723"
@@ -1306,7 +1307,8 @@
           "sourceIds": {
             "itis": [
               "180945"
-            ]
+            ],
+            "checklistbank": "1019902"
           },
           "authorityIds": "itis:180945"
         },
@@ -1789,17 +1791,63 @@
           "sourceIds": {
             "itis": [
               "10669"
-            ]
+            ],
+            "checklistbank": "995012"
           },
           "authorityIds": "itis:10669"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cryptomonadaceae"
+    },
+    {
+      "id": "GENUS_MONOMASTIX",
+      "name": "Monomastix",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONOMASTIX_ASTIGMATA",
+          "name": "Monomastix astigmata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monomastix",
+          "sourceIds": {
+            "checklistbank": "1019903"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MONOMASTIX_MINUTA",
+          "name": "Monomastix minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monomastix",
+          "sourceIds": {
+            "checklistbank": "1019925"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MONOMASTIX_OPISTHOSTIGMA",
+          "name": "Monomastix opisthostigma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monomastix",
+          "sourceIds": {
+            "checklistbank": "1673848"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cryptomonadaceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 82,
+  "genusCount": 11,
+  "speciesCount": 85,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

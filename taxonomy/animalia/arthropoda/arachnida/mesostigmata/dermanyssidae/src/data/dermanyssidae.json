@@ -246,7 +246,8 @@
           "lineage": "dermanyssus",
           "authorship": "Evans & Till, 1962",
           "sourceIds": {
-            "gbif": 6885180
+            "gbif": 6885180,
+            "checklistbank": "661602"
           },
           "uuid": "23f01ce6-19e9-573-97d-b79acc7f3fcc88",
           "authorityIds": "gbif:6885180",
@@ -569,7 +570,8 @@
             ],
             "itis": [
               "1158243"
-            ]
+            ],
+            "checklistbank": "1497510"
           },
           "authorityIds": "col:8QFJ7,itis:1158243",
           "children": []
@@ -591,7 +593,8 @@
             ],
             "itis": [
               "1158239"
-            ]
+            ],
+            "checklistbank": "391749"
           },
           "uuid": "286994c3-308b-5b5-9a3-e8953dfbdc22bf",
           "authorityIds": "col:8QDYK,gbif:2188251,itis:1158239",
@@ -902,13 +905,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dermanyssidae"
+    },
+    {
+      "id": "GENUS_ALLODERMANYSSUS",
+      "name": "Allodermanyssus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALLODERMANYSSUS_SANGUINEUS",
+          "name": "Allodermanyssus sanguineus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allodermanyssus",
+          "sourceIds": {
+            "checklistbank": "263330"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermanyssidae"
     }
   ],
-  "speciesCount": 52,
+  "speciesCount": 53,
   "appSlug": "dermanyssidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

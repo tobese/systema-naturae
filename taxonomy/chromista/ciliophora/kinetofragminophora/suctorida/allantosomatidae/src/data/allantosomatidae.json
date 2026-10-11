@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "b98fb80f-2947-5bc-ab2-99a1761278bbab",
-          "authorityIds": "col:BTB8,gbif:7792335"
+          "authorityIds": "col:BTB8,gbif:7792335",
+          "children": []
         },
         {
           "id": "ALLANTOSOMA_CUCUMIS",
@@ -48,10 +49,12 @@
             ],
             "col": [
               "BTB9"
-            ]
+            ],
+            "checklistbank": "1459314"
           },
           "uuid": "bb940e0c-065f-5a1-a14-1ca2587a75ce44",
-          "authorityIds": "col:BTB9,gbif:8358841"
+          "authorityIds": "col:BTB9,gbif:8358841",
+          "children": []
         },
         {
           "id": "ALLANTOSOMA_INTESTINALE",
@@ -72,7 +75,8 @@
             ]
           },
           "uuid": "8b566de6-7fa5-5ee-a3a-5f56dd821bdc08",
-          "authorityIds": "col:BTBB,gbif:8310882"
+          "authorityIds": "col:BTBB,gbif:8310882",
+          "children": []
         },
         {
           "id": "ALLANTOSOMA_JAPONENSIS",
@@ -93,7 +97,8 @@
             ]
           },
           "uuid": "b8587675-8bf5-542-97d-e613fb040cc1a1",
-          "authorityIds": "col:BTBD,gbif:6144840"
+          "authorityIds": "col:BTBD,gbif:6144840",
+          "children": []
         },
         {
           "id": "ALLANTOSOMA_LINEARE",
@@ -114,7 +119,20 @@
             ]
           },
           "uuid": "45f6053f-2075-5fa-a77-94293b0153c92c",
-          "authorityIds": "col:65VG6,gbif:7974995"
+          "authorityIds": "col:65VG6,gbif:7974995",
+          "children": []
+        },
+        {
+          "id": "SP_ALLANTOSOMA_INTESTINALIS",
+          "name": "Allantosoma intestinalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allantosoma",
+          "sourceIds": {
+            "checklistbank": "1459107"
+          },
+          "children": []
         }
       ]
     },
@@ -141,10 +159,12 @@
             ],
             "col": [
               "5VPY2"
-            ]
+            ],
+            "checklistbank": "1459319"
           },
           "uuid": "6f929571-87e4-58f-bac-bf5a283b3a3974",
-          "authorityIds": "col:5VPY2,gbif:8096950"
+          "authorityIds": "col:5VPY2,gbif:8096950",
+          "children": []
         },
         {
           "id": "ARCOSOMA_DICORNIGER",
@@ -162,10 +182,12 @@
             ],
             "col": [
               "5VQ9Q"
-            ]
+            ],
+            "checklistbank": "1459318"
           },
           "uuid": "47ad8e5d-5c56-5c7-848-2cac245a5d26f0",
-          "authorityIds": "col:5VQ9Q,gbif:7838093"
+          "authorityIds": "col:5VQ9Q,gbif:7838093",
+          "children": []
         },
         {
           "id": "ARCOSOMA_LINEARE",
@@ -183,10 +205,12 @@
             ],
             "col": [
               "67PXQ"
-            ]
+            ],
+            "checklistbank": "1459320"
           },
           "uuid": "b88ea1d5-9978-53f-80b-12d04ce7867fd6",
-          "authorityIds": "col:67PXQ,gbif:8157311"
+          "authorityIds": "col:67PXQ,gbif:8157311",
+          "children": []
         }
       ]
     },
@@ -216,9 +240,31 @@
             ]
           },
           "uuid": "251ad717-a890-5b0-b34-25ee74e5011952",
-          "authorityIds": "col:52X8S,gbif:8021410"
+          "authorityIds": "col:52X8S,gbif:8021410",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ALLANTOXENA",
+      "name": "Allantoxena",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALLANTOXENA_BISERIALE",
+          "name": "Allantoxena biseriale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allantoxena",
+          "sourceIds": {
+            "checklistbank": "1459316"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "allantosomatidae"
     }
   ],
   "sourceIds": {
@@ -229,5 +275,7 @@
       "orderKey": 7592404,
       "familyKey": 7515681
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 11
 }

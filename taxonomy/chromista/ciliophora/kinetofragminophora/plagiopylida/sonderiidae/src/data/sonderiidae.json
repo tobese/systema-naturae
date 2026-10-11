@@ -25,7 +25,8 @@
             "gbif": 8103105
           },
           "uuid": "a6df35cf-6a4a-514-a62-274dd27e24a4f3",
-          "authorityIds": "gbif:8103105"
+          "authorityIds": "gbif:8103105",
+          "children": []
         },
         {
           "id": "SONDERIA_LABIATA",
@@ -38,10 +39,12 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8275102
+            "gbif": 8275102,
+            "checklistbank": "1567388"
           },
           "uuid": "ffda0ce3-b1f9-5b3-b51-2d02dc52044aa5",
-          "authorityIds": "gbif:8275102"
+          "authorityIds": "gbif:8275102",
+          "children": []
         },
         {
           "id": "SONDERIA_MACROCHILUS",
@@ -57,7 +60,8 @@
             "gbif": 7406214
           },
           "uuid": "7c8cad37-c17b-5a5-bff-89e1ea1e07afab",
-          "authorityIds": "gbif:7406214"
+          "authorityIds": "gbif:7406214",
+          "children": []
         },
         {
           "id": "SONDERIA_MIRA",
@@ -73,7 +77,8 @@
             "gbif": 7739944
           },
           "uuid": "6658909b-7378-587-960-9129bb9fb63853",
-          "authorityIds": "gbif:7739944"
+          "authorityIds": "gbif:7739944",
+          "children": []
         },
         {
           "id": "SONDERIA_PHARYNGEA",
@@ -89,7 +94,8 @@
             "gbif": 8056367
           },
           "uuid": "5f0c9a1b-5ee5-538-a20-7685f5b3c099e0",
-          "authorityIds": "gbif:8056367"
+          "authorityIds": "gbif:8056367",
+          "children": []
         },
         {
           "id": "SONDERIA_SCHIZOSTOMA",
@@ -105,7 +111,8 @@
             "gbif": 8381436
           },
           "uuid": "ece16ff8-0ac3-55f-8c1-675941a4509508",
-          "authorityIds": "gbif:8381436"
+          "authorityIds": "gbif:8381436",
+          "children": []
         },
         {
           "id": "SONDERIA_SINUATA",
@@ -121,7 +128,8 @@
             "gbif": 7549084
           },
           "uuid": "606a1205-9731-512-bf0-7047a601fe3087",
-          "authorityIds": "gbif:7549084"
+          "authorityIds": "gbif:7549084",
+          "children": []
         },
         {
           "id": "SONDERIA_TUBIGULA",
@@ -137,7 +145,8 @@
             "gbif": 7450527
           },
           "uuid": "f15b66f2-7383-584-86d-b47f04f075d3be",
-          "authorityIds": "gbif:7450527"
+          "authorityIds": "gbif:7450527",
+          "children": []
         },
         {
           "id": "SONDERIA_VESTITA",
@@ -153,7 +162,8 @@
             "gbif": 7953078
           },
           "uuid": "38602ac8-359a-51e-b92-a942740bc10ae4",
-          "authorityIds": "gbif:7953078"
+          "authorityIds": "gbif:7953078",
+          "children": []
         },
         {
           "id": "SONDERIA_VORAX",
@@ -166,10 +176,24 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7906804
+            "gbif": 7906804,
+            "checklistbank": "1492418"
           },
           "uuid": "12d790ad-a68d-529-8cc-766551eddbf66b",
-          "authorityIds": "gbif:7906804"
+          "authorityIds": "gbif:7906804",
+          "children": []
+        },
+        {
+          "id": "SP_SONDERIA_MEGALABIATA",
+          "name": "Sonderia megalabiata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sonderia",
+          "sourceIds": {
+            "checklistbank": "1649644"
+          },
+          "children": []
         }
       ]
     },
@@ -191,12 +215,56 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8429567
+            "gbif": 8429567,
+            "checklistbank": "1487208"
           },
           "uuid": "157fcfdf-5706-59e-b32-99ba92d57a7c48",
-          "authorityIds": "gbif:8429567"
+          "authorityIds": "gbif:8429567",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ONCOSONDERIA",
+      "name": "Oncosonderia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ONCOSONDERIA_TUBIGULA",
+          "name": "Oncosonderia tubigula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oncosonderia",
+          "sourceIds": {
+            "checklistbank": "1426347"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sonderiidae"
+    },
+    {
+      "id": "GENUS_KAHLISONDERIA",
+      "name": "Kahlisonderia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KAHLISONDERIA_MIRA",
+          "name": "Kahlisonderia mira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kahlisonderia",
+          "sourceIds": {
+            "checklistbank": "1479997"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sonderiidae"
     }
   ],
   "sourceIds": {
@@ -207,5 +275,7 @@
       "orderKey": 7483454,
       "familyKey": 8352590
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 14
 }
