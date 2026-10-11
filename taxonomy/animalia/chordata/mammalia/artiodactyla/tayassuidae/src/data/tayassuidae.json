@@ -58,6 +58,19 @@
           },
           "authorityIds": "col:55297,itis:552762",
           "commonName": "White-lipped Peccary"
+        },
+        {
+          "id": "SP_TAYASSU_TAJACU_LINNAEUS_1758",
+          "name": "Tayassu tajacu",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tayassu",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "443813"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -106,7 +119,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Dicotyles",
-          "uuid": "a77741ff-c669-5fd-808-7d94d8bbec3dff"
+          "uuid": "a77741ff-c669-5fd-808-7d94d8bbec3dff",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "443812"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -130,13 +147,70 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Tayassuidae"
+    },
+    {
+      "id": "GENUS_DICOTYLILES",
+      "name": "Dicotyliles",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DICOTYLILES_PECARI_LINK_1795",
+          "name": "Dicotyliles pecari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dicotyliles",
+          "authorship": "(Link, 1795)",
+          "sourceIds": {
+            "checklistbank": "443811"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tayassuidae"
+    },
+    {
+      "id": "GENUS_SUS",
+      "name": "Sus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SUS_PECARI_LINK_1795",
+          "name": "Sus pecari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sus",
+          "authorship": "Link, 1795",
+          "sourceIds": {
+            "checklistbank": "655419"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SUS_TAJACU_LINNAEUS_1758",
+          "name": "Sus tajacu",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sus",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "846513"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tayassuidae"
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 9,
   "appSlug": "tayassuidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 5,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

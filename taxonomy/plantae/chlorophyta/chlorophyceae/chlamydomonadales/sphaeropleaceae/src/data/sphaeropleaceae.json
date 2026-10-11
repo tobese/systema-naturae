@@ -28,9 +28,11 @@
           "sourceIds": {
             "itis": [
               "9330"
-            ]
+            ],
+            "checklistbank": "974771"
           },
-          "authorityIds": "itis:9330"
+          "authorityIds": "itis:9330",
+          "authorship": "(Roth) C.Agardh, 1824"
         },
         {
           "id": "SP_SPHAEROPLEA_ROBUSTA",
@@ -54,7 +56,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8918080d-9054-588-916-84c1723a9a4d07"
+          "uuid": "8918080d-9054-588-916-84c1723a9a4d07",
+          "authorship": "(Duby) Montagne ex Kützing, 1849",
+          "sourceIds": {
+            "checklistbank": "74876"
+          }
         },
         {
           "id": "SP_SPHAEROPLEA_AFRICANA",
@@ -446,10 +452,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaeropleaceae"
+    },
+    {
+      "id": "GENUS_CONFERVA",
+      "name": "Conferva",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CONFERVA_ANNULINA_ROTH_1806",
+          "name": "Conferva annulina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Conferva",
+          "authorship": "Roth, 1806",
+          "sourceIds": {
+            "checklistbank": "974772"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaeropleaceae"
+    },
+    {
+      "id": "GENUS_SPHAEROPLETHRA",
+      "name": "Sphaeroplethra",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAEROPLETHRA_SOLEIROLII_DUBY_1830",
+          "name": "Sphaeroplethra soleirolii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeroplethra",
+          "authorship": "Duby, 1830",
+          "sourceIds": {
+            "checklistbank": "1002507"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaeropleaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 31,
+  "genusCount": 9,
+  "speciesCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

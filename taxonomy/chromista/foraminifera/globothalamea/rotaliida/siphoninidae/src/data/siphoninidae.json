@@ -53,10 +53,12 @@
             ],
             "col": [
               "6Z2T9"
-            ]
+            ],
+            "checklistbank": "702658"
           },
           "uuid": "ac8e1089-a7ae-581-8e0-1e0e2984527ed0",
-          "authorityIds": "col:6Z2T9,gbif:7919744,itis:45665"
+          "authorityIds": "col:6Z2T9,gbif:7919744,itis:45665",
+          "authorship": "(Brady, 1879)"
         },
         {
           "id": "SIPHONINOIDES_ECHINATIFORMIS",
@@ -100,10 +102,12 @@
             ],
             "itis": [
               "45666"
-            ]
+            ],
+            "checklistbank": "702659"
           },
           "uuid": "7fe26a7c-a1c4-522-97a-613cafea8470e0",
-          "authorityIds": "col:4XPPC,gbif:7374361,itis:45666"
+          "authorityIds": "col:4XPPC,gbif:7374361,itis:45666",
+          "authorship": "(Heron-Allen & Earland, 1915)"
         },
         {
           "id": "SIPHONINOIDES_LAEVIGATA",
@@ -117,10 +121,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7581176
+            "gbif": 7581176,
+            "checklistbank": "702792"
           },
           "uuid": "12b1857c-a9de-5e3-936-13278ff094b148",
-          "authorityIds": "gbif:7581176"
+          "authorityIds": "gbif:7581176",
+          "authorship": "(Howchin, 1889)"
         }
       ]
     },
@@ -1179,10 +1185,12 @@
             ],
             "col": [
               "4XPP4"
-            ]
+            ],
+            "checklistbank": "702189"
           },
           "uuid": "39171bfa-2306-5e5-ab4-dbeb7b53af695c",
-          "authorityIds": "col:4XPP4,gbif:7876093,itis:45659"
+          "authorityIds": "col:4XPP4,gbif:7876093,itis:45659",
+          "authorship": "Cushman, 1924"
         },
         {
           "id": "SIPHONINA_UMBONATA",
@@ -1239,6 +1247,19 @@
             ]
           },
           "authorityIds": "col:VPFF9"
+        },
+        {
+          "id": "SP_SIPHONINA_ECHINATA_BRADY_1879",
+          "name": "Siphonina echinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonina",
+          "authorship": "(Brady, 1879)",
+          "sourceIds": {
+            "checklistbank": "703716"
+          },
+          "children": []
         }
       ]
     },
@@ -1639,10 +1660,54 @@
           "authorityIds": "col:83MGL,gbif:8914832"
         }
       ]
+    },
+    {
+      "id": "GENUS_PLANORBULINA",
+      "name": "Planorbulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLANORBULINA_ECHINATA_BRADY_1879",
+          "name": "Planorbulina echinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planorbulina",
+          "authorship": "Brady, 1879",
+          "sourceIds": {
+            "checklistbank": "703717"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "siphoninidae"
+    },
+    {
+      "id": "GENUS_TRUNCATULINA",
+      "name": "Truncatulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRUNCATULINA_GLABRA_HERON_ALLEN_EARLAND_1915",
+          "name": "Truncatulina glabra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Truncatulina",
+          "authorship": "Heron-Allen & Earland, 1915",
+          "sourceIds": {
+            "checklistbank": "966792"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "siphoninidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 73,
+  "genusCount": 8,
+  "speciesCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

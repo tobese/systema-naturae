@@ -28,9 +28,12 @@
             ],
             "col": [
               "8MVZF"
-            ]
+            ],
+            "checklistbank": "238500"
           },
-          "authorityIds": "col:8MVZF,itis:63530"
+          "authorityIds": "col:8MVZF,itis:63530",
+          "authorship": "(Dujardin, 1845)",
+          "children": []
         },
         {
           "id": "SP_AGFA_MORANDI_RIBAS_CASANOVA_2002",
@@ -49,7 +52,8 @@
               "8N9JB"
             ]
           },
-          "authorityIds": "col:8N9JB"
+          "authorityIds": "col:8N9JB",
+          "children": []
         },
         {
           "id": "SP_AGFA_TAURICUS_KOROL_SPIRIDONOV_1991",
@@ -68,9 +72,32 @@
               "8N89R"
             ]
           },
-          "authorityIds": "col:8N89R"
+          "authorityIds": "col:8N89R",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_LEPTODERA",
+      "name": "Leptodera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPTODERA_FLEXILIS_DUJARDIN_1845",
+          "name": "Leptodera flexilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodera",
+          "authorship": "Dujardin, 1845",
+          "sourceIds": {
+            "checklistbank": "957598"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "agfidae"
     }
   ],
   "sourceIds": {
@@ -81,5 +108,7 @@
       "orderKey": 440,
       "familyKey": 6481
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 4
 }

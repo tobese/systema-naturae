@@ -29,7 +29,8 @@
               "3R7JK"
             ]
           },
-          "authorityIds": "col:3R7JK,itis:58222"
+          "authorityIds": "col:3R7JK,itis:58222",
+          "children": []
         },
         {
           "id": "KIJANEBALOLA_CUBUETES",
@@ -46,7 +47,8 @@
               "3R7JH"
             ]
           },
-          "authorityIds": "col:3R7JH"
+          "authorityIds": "col:3R7JH",
+          "children": []
         },
         {
           "id": "KIJANEBALOLA_CUBEUTES",
@@ -63,7 +65,8 @@
               "58221"
             ]
           },
-          "authorityIds": "itis:58221"
+          "authorityIds": "itis:58221",
+          "children": []
         },
         {
           "id": "KIJANEBALOLA_CANINA",
@@ -83,7 +86,8 @@
               "709013"
             ]
           },
-          "authorityIds": "col:3R7JG,itis:709013"
+          "authorityIds": "col:3R7JG,itis:709013",
+          "children": []
         },
         {
           "id": "KIJANEBALOLA_DEVESTIVA",
@@ -101,7 +105,8 @@
               "3R7JJ"
             ]
           },
-          "authorityIds": "col:3R7JJ"
+          "authorityIds": "col:3R7JJ",
+          "children": []
         }
       ]
     },
@@ -130,7 +135,8 @@
               "58232"
             ]
           },
-          "authorityIds": "col:73W9X,itis:58232"
+          "authorityIds": "col:73W9X,itis:58232",
+          "children": []
         },
         {
           "id": "NEOGOSSEA_SEXISETA",
@@ -150,7 +156,8 @@
               "58231"
             ]
           },
-          "authorityIds": "col:46HTT,itis:58231"
+          "authorityIds": "col:46HTT,itis:58231",
+          "children": []
         },
         {
           "id": "NEOGOSSEA_PAUCISETA",
@@ -168,9 +175,12 @@
             ],
             "col": [
               "46HTS"
-            ]
+            ],
+            "checklistbank": "985103"
           },
-          "authorityIds": "col:46HTS,itis:58229"
+          "authorityIds": "col:46HTS,itis:58229",
+          "authorship": "(Daday, 1905)",
+          "children": []
         },
         {
           "id": "NEOGOSSEA_ANTENNIGERA",
@@ -188,9 +198,12 @@
             ],
             "col": [
               "46HTQ"
-            ]
+            ],
+            "checklistbank": "227716"
           },
-          "authorityIds": "col:46HTQ,itis:58224"
+          "authorityIds": "col:46HTQ,itis:58224",
+          "authorship": "(Gosse, 1851)",
+          "children": []
         },
         {
           "id": "NEOGOSSEA_FASCICULATA",
@@ -208,9 +221,12 @@
             ],
             "itis": [
               "58227"
-            ]
+            ],
+            "checklistbank": "227717"
           },
-          "authorityIds": "col:46HTR,itis:58227"
+          "authorityIds": "col:46HTR,itis:58227",
+          "authorship": "(Daday, 1905)",
+          "children": []
         },
         {
           "id": "NEOGOSSEA_ACANTHOCOLLA",
@@ -231,7 +247,8 @@
               "709012"
             ]
           },
-          "authorityIds": "col:46HTP,itis:709012"
+          "authorityIds": "col:46HTP,itis:709012",
+          "children": []
         },
         {
           "id": "NEOGOSSEA_CTHULHU",
@@ -248,9 +265,54 @@
               "7P6TR"
             ]
           },
-          "authorityIds": "col:7P6TR"
+          "authorityIds": "col:7P6TR",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_GOSSEA",
+      "name": "Gossea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GOSSEA_FASCICULATA_DADAY_1905",
+          "name": "Gossea fasciculata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gossea",
+          "authorship": "Daday, 1905",
+          "sourceIds": {
+            "checklistbank": "892022"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neogosseidae"
+    },
+    {
+      "id": "GENUS_DASYDYTES",
+      "name": "Dasydytes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DASYDYTES_ANTENNIGER_GOSSE_1851",
+          "name": "Dasydytes antenniger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dasydytes",
+          "authorship": "Gosse, 1851",
+          "sourceIds": {
+            "checklistbank": "962053"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neogosseidae"
     }
   ],
   "sourceIds": {
@@ -259,5 +321,7 @@
       "phylumKey": 22,
       "familyKey": 3426
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 14
 }

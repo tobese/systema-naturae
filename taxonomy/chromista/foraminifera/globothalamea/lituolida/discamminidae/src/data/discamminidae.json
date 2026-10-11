@@ -156,10 +156,12 @@
             ],
             "col": [
               "CVFV"
-            ]
+            ],
+            "checklistbank": "702223"
           },
           "uuid": "5813e59e-f4e7-541-bda-afdc6f87bed436",
-          "authorityIds": "col:CVFV,gbif:8319382"
+          "authorityIds": "col:CVFV,gbif:8319382",
+          "authorship": "(Cushman & McCulloch, 1939)"
         },
         {
           "id": "AMMOSCALARIA_CONDITA",
@@ -526,12 +528,91 @@
           },
           "uuid": "b43431f2-1ecf-5be-959-bb64c749153bc2",
           "authorityIds": "col:82CYM,gbif:10214764"
+        },
+        {
+          "id": "SP_DISCAMMINA_FALLAX_LACROIX_1932",
+          "name": "Discammina fallax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discammina",
+          "authorship": "Lacroix, 1932",
+          "sourceIds": {
+            "checklistbank": "680272"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PROTEONINA",
+      "name": "Proteonina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTEONINA_PSEUDOSPIRALIS_WILLIAMSON_1858",
+          "name": "Proteonina pseudospiralis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proteonina",
+          "authorship": "Williamson, 1858",
+          "sourceIds": {
+            "checklistbank": "387525"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discamminidae"
+    },
+    {
+      "id": "GENUS_AMMOBACULITES",
+      "name": "Ammobaculites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMMOBACULITES_PSEUDOSPIRALE_WILLIAMSON",
+          "name": "Ammobaculites pseudospirale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ammobaculites",
+          "authorship": "(Williamson)",
+          "sourceIds": {
+            "checklistbank": "680805"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discamminidae"
+    },
+    {
+      "id": "GENUS_AMMOFRONDICULARIA",
+      "name": "Ammofrondicularia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMMOFRONDICULARIA_COMPRESSA_CUSHMAN_MCCULLOCH_1939",
+          "name": "Ammofrondicularia compressa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ammofrondicularia",
+          "authorship": "Cushman & McCulloch, 1939",
+          "sourceIds": {
+            "checklistbank": "703550"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discamminidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 22,
+  "genusCount": 7,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

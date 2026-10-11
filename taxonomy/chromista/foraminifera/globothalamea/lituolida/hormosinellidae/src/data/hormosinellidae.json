@@ -63,10 +63,12 @@
             ],
             "col": [
               "3MPTT"
-            ]
+            ],
+            "checklistbank": "928679"
           },
           "uuid": "d1d870fe-bd0d-545-81b-0dcb9cd348ba9b",
-          "authorityIds": "col:3MPTT,gbif:9243563"
+          "authorityIds": "col:3MPTT,gbif:9243563",
+          "authorship": "(Brady, 1881)"
         },
         {
           "id": "HORMOSINELLOIDES_HISPIDULA",
@@ -310,6 +312,19 @@
           },
           "uuid": "b8bae58d-51bf-5e4-a75-4f96a1cba271d4",
           "authorityIds": "col:83P6C,gbif:11216827"
+        },
+        {
+          "id": "SP_SUBREOPHAX_GUTTIFER_BRADY_1881",
+          "name": "Subreophax guttifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Subreophax",
+          "authorship": "(Brady, 1881)",
+          "sourceIds": {
+            "checklistbank": "928684"
+          },
+          "children": []
         }
       ]
     },
@@ -548,10 +563,12 @@
             ],
             "col": [
               "BHH37"
-            ]
+            ],
+            "checklistbank": "689134"
           },
           "uuid": "da93a674-b00d-5db-bed-dea597c1651c71",
-          "authorityIds": "col:BHH37,gbif:7697619"
+          "authorityIds": "col:BHH37,gbif:7697619",
+          "authorship": "(Brady, 1879)"
         },
         {
           "id": "REOPHANUS_PROAVITUS",
@@ -721,10 +738,128 @@
           "authorityIds": "col:83J4Y,gbif:9598344"
         }
       ]
+    },
+    {
+      "id": "GENUS_HORMOSINA",
+      "name": "Hormosina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HORMOSINA_DISTANS_BRADY_1881",
+          "name": "Hormosina distans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hormosina",
+          "authorship": "(Brady, 1881)",
+          "sourceIds": {
+            "checklistbank": "383035"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HORMOSINA_OVICULA_BRADY_1879",
+          "name": "Hormosina ovicula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hormosina",
+          "authorship": "Brady, 1879",
+          "sourceIds": {
+            "checklistbank": "383038"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HORMOSINA_GUTTIFERA_BRADY_1881",
+          "name": "Hormosina guttifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hormosina",
+          "authorship": "(Brady, 1881)",
+          "sourceIds": {
+            "checklistbank": "928682"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hormosinellidae"
+    },
+    {
+      "id": "GENUS_REOPHAX",
+      "name": "Reophax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_REOPHAX_DISTANS_BRADY_1881",
+          "name": "Reophax distans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reophax",
+          "authorship": "(Brady, 1881)",
+          "sourceIds": {
+            "checklistbank": "383063"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_REOPHAX_GUTTIFER_BRADY_1881",
+          "name": "Reophax guttifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reophax",
+          "authorship": "(Brady, 1881)",
+          "sourceIds": {
+            "checklistbank": "928680"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hormosinellidae"
+    },
+    {
+      "id": "GENUS_LITUOLA",
+      "name": "Lituola",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LITUOLA_DISTANS_BRADY_1881",
+          "name": "Lituola distans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lituola",
+          "authorship": "Brady, 1881",
+          "sourceIds": {
+            "checklistbank": "689130"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LITUOLA_GUTTIFERA_BRADY_1881",
+          "name": "Lituola guttifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lituola",
+          "authorship": "Brady, 1881",
+          "sourceIds": {
+            "checklistbank": "928681"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hormosinellidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 30,
+  "genusCount": 10,
+  "speciesCount": 38,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

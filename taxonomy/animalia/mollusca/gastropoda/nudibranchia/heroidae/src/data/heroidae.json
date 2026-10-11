@@ -28,7 +28,8 @@
               "3L2MD"
             ]
           },
-          "authorityIds": "col:3L2MD"
+          "authorityIds": "col:3L2MD",
+          "children": []
         },
         {
           "id": "SP_HERO_FORMOSA",
@@ -49,11 +50,36 @@
             ],
             "col": [
               "6LRH7"
-            ]
+            ],
+            "checklistbank": "63790"
           },
-          "authorityIds": "col:6LRH7,itis:78591"
+          "authorityIds": "col:6LRH7,itis:78591",
+          "authorship": "(Lovén, 1844)",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CLOELIA",
+      "name": "Cloelia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLOELIA_FORMOSA_LOV_N_1844",
+          "name": "Cloelia formosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cloelia",
+          "authorship": "Lovén, 1844",
+          "sourceIds": {
+            "checklistbank": "1046975"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heroidae"
     }
   ],
   "sourceIds": {
@@ -64,5 +90,7 @@
       "orderKey": 980,
       "familyKey": 6564
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

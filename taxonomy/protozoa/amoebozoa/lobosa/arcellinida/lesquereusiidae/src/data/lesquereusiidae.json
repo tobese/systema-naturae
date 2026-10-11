@@ -25,7 +25,8 @@
             "gbif": 4378372
           },
           "uuid": "178daf6d-fb0a-510-858-7e94055102921b",
-          "authorityIds": "gbif:4378372"
+          "authorityIds": "gbif:4378372",
+          "children": []
         }
       ]
     },
@@ -47,10 +48,39 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 6123153
+            "gbif": 6123153,
+            "checklistbank": "1036906"
           },
           "uuid": "a1ecb5a1-e2a1-5a6-b83-4ebdedc35b9ab7",
-          "authorityIds": "gbif:6123153"
+          "authorityIds": "gbif:6123153",
+          "authorship": "(Ehrenberg, 1840) Butschli, 1880",
+          "children": []
+        },
+        {
+          "id": "SP_LESQUEREUSIA_MODESTA_RHUMBLER_1895",
+          "name": "Lesquereusia modesta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lesquereusia",
+          "authorship": "Rhumbler, 1895",
+          "sourceIds": {
+            "checklistbank": "1036905"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LESQUEREUSIA_EPISTOMUM_PENARD_1902",
+          "name": "Lesquereusia epistomum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lesquereusia",
+          "authorship": "Penard, 1902",
+          "sourceIds": {
+            "checklistbank": "1040189"
+          },
+          "children": []
         }
       ]
     },
@@ -72,10 +102,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10318022
+            "gbif": 10318022,
+            "checklistbank": "842349"
           },
           "uuid": "fcdf81fe-faff-553-b2c-066f20e98737e4",
-          "authorityIds": "gbif:10318022"
+          "authorityIds": "gbif:10318022",
+          "authorship": "Golemansky, 1968",
+          "children": []
         }
       ]
     },
@@ -100,7 +133,8 @@
             "gbif": 10870021
           },
           "uuid": "5a75ad36-acaa-540-920-24598d1f3c7b2e",
-          "authorityIds": "gbif:10870021"
+          "authorityIds": "gbif:10870021",
+          "children": []
         },
         {
           "id": "QUADRULELLA_TROPICA",
@@ -116,7 +150,8 @@
             "gbif": 10753896
           },
           "uuid": "201a4dd6-2a46-593-b21-def8d770737b94",
-          "authorityIds": "gbif:10753896"
+          "authorityIds": "gbif:10753896",
+          "children": []
         }
       ]
     },
@@ -141,7 +176,8 @@
             "gbif": 11586681
           },
           "uuid": "0288372c-21b3-5da-907-a131ad0f1fd69d",
-          "authorityIds": "gbif:11586681"
+          "authorityIds": "gbif:11586681",
+          "children": []
         },
         {
           "id": "NETZELIA_LOBOSTOMA",
@@ -157,9 +193,93 @@
             "gbif": 11633424
           },
           "uuid": "6cd81c30-ec4e-554-b13-430372bb1dcd95",
-          "authorityIds": "gbif:11633424"
+          "authorityIds": "gbif:11633424",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PARAQUADRULA",
+      "name": "Paraquadrula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAQUADRULA_IRREGULARIS_ARCHER_1877_DEFLANDRE_1932",
+          "name": "Paraquadrula irregularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraquadrula",
+          "authorship": "(Archer, 1877) Deflandre, 1932",
+          "sourceIds": {
+            "checklistbank": "920959"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARAQUADRULA_PACHYLEPIS_BONNET_1959",
+          "name": "Paraquadrula pachylepis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraquadrula",
+          "authorship": "Bonnet, 1959",
+          "sourceIds": {
+            "checklistbank": "958216"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARAQUADRULA_DISCOIDES_PENARD_1893_DEFLANDRE_1932",
+          "name": "Paraquadrula discoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraquadrula",
+          "authorship": "(Penard, 1893) Deflandre, 1932",
+          "sourceIds": {
+            "checklistbank": "1028431"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARAQUADRULA_GLOBULOSA_PENARD_1891_DEFLANDRE_1932",
+          "name": "Paraquadrula globulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraquadrula",
+          "authorship": "(Penard, 1891) Deflandre, 1932",
+          "sourceIds": {
+            "checklistbank": "1028433"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lesquereusiidae"
+    },
+    {
+      "id": "GENUS_QUADRULA",
+      "name": "Quadrula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_QUADRULA_IRREGULARIS_ARCHER_1877",
+          "name": "Quadrula irregularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Quadrula",
+          "authorship": "Archer, 1877",
+          "sourceIds": {
+            "checklistbank": "928562"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lesquereusiidae"
     }
   ],
   "sourceIds": {
@@ -170,5 +290,7 @@
       "orderKey": 760,
       "familyKey": 3235535
     }
-  }
+  },
+  "genusCount": 7,
+  "speciesCount": 14
 }

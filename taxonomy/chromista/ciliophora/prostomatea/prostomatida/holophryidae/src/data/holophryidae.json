@@ -887,10 +887,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12259100
+            "gbif": 12259100,
+            "checklistbank": "1011417"
           },
           "uuid": "32aa4240-31dd-527-99d-804e4e1ef2b44a",
-          "authorityIds": "gbif:12259100"
+          "authorityIds": "gbif:12259100",
+          "authorship": "Foissner, 2021"
         },
         {
           "id": "HOLOPHRYA_MARINA",
@@ -1267,10 +1269,12 @@
             ],
             "col": [
               "3M9FV"
-            ]
+            ],
+            "checklistbank": "1030122"
           },
           "uuid": "3f5db3ac-d887-574-ad5-1773eec16e8cf3",
-          "authorityIds": "col:3M9FV,gbif:8232599"
+          "authorityIds": "col:3M9FV,gbif:8232599",
+          "authorship": "(Leipe, 1989)"
         },
         {
           "id": "HOLOPHRYA_SULCATA",
@@ -2022,10 +2026,32 @@
           "authorityIds": "gbif:8039298"
         }
       ]
+    },
+    {
+      "id": "GENUS_PRORODON",
+      "name": "Prorodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PRORODON_SPIROGYROPHAGUS_LEIPE_1989",
+          "name": "Prorodon spirogyrophagus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prorodon",
+          "authorship": "Leipe, 1989",
+          "sourceIds": {
+            "checklistbank": "1030121"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "holophryidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 90,
+  "genusCount": 8,
+  "speciesCount": 91,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -134,6 +134,58 @@
           },
           "children": [],
           "uuid": "16afd1ca-98dc-579-890-5bd10b4ea10b73"
+        },
+        {
+          "id": "SP_DIPYLIDIUM_TRISERIALE_L_HE_1898",
+          "name": "Dipylidium triseriale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dipylidium",
+          "authorship": "Lühe, 1898",
+          "sourceIds": {
+            "checklistbank": "402509"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPYLIDIUM_CARRACIDOI_LOPEZ_NEYRA_1929",
+          "name": "Dipylidium carracidoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dipylidium",
+          "authorship": "Lopez-Neyra, 1929",
+          "sourceIds": {
+            "checklistbank": "402510"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPYLIDIUM_PASQUALEI_DIAMARA_1893",
+          "name": "Dipylidium pasqualei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dipylidium",
+          "authorship": "Diamara, 1893",
+          "sourceIds": {
+            "checklistbank": "1015834"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPYLIDIUM_GENETTAE_GERVAIS_1847",
+          "name": "Dipylidium genettae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dipylidium",
+          "authorship": "(Gervais, 1847)",
+          "sourceIds": {
+            "checklistbank": "1055294"
+          },
+          "children": []
         }
       ]
     },
@@ -158,9 +210,11 @@
           "sourceIds": {
             "col": [
               "CSDSP"
-            ]
+            ],
+            "checklistbank": "234302"
           },
-          "authorityIds": "col:CSDSP"
+          "authorityIds": "col:CSDSP",
+          "authorship": "(Sonsino, 1884)"
         },
         {
           "id": "SP_JOYEUXIELLA_PASQUALEI",
@@ -176,9 +230,11 @@
           "sourceIds": {
             "col": [
               "CSDSQ"
-            ]
+            ],
+            "checklistbank": "1015833"
           },
-          "authorityIds": "col:CSDSQ"
+          "authorityIds": "col:CSDSQ",
+          "authorship": "(Diamara, 1893)"
         },
         {
           "id": "SP_JOYEUXIELLA_ROSSICUM",
@@ -221,7 +277,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5dd9fdfb-5bf5-5b9-ad2-ee0430783e2d77"
+          "uuid": "5dd9fdfb-5bf5-5b9-ad2-ee0430783e2d77",
+          "authorship": "(Parona, 1886)",
+          "sourceIds": {
+            "checklistbank": "234300"
+          }
         },
         {
           "id": "SP_DIPLOPYLIDIUM_MONOOPHORUM",
@@ -262,10 +322,115 @@
           "uuid": "4293a286-5746-572-b75-69bed1c6711d5f"
         }
       ]
+    },
+    {
+      "id": "GENUS_TAENIA",
+      "name": "Taenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TAENIA_CUCUMERINA_BLOCH_1782",
+          "name": "Taenia cucumerina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taenia",
+          "authorship": "Bloch, 1782",
+          "sourceIds": {
+            "checklistbank": "402511"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAENIA_CANINA_LINNAEUS_1758",
+          "name": "Taenia canina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taenia",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "958684"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAENIA_ECHINORHYNCHOIDES_SONSINO_1884",
+          "name": "Taenia echinorhynchoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taenia",
+          "authorship": "Sonsino, 1884",
+          "sourceIds": {
+            "checklistbank": "958685"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAENIA_GENETTAE_GERVAIS_1847",
+          "name": "Taenia genettae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taenia",
+          "authorship": "(Gervais, 1847)",
+          "sourceIds": {
+            "checklistbank": "1055296"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dipylidiidae"
+    },
+    {
+      "id": "GENUS_CYSTICERCUS",
+      "name": "Cysticercus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYSTICERCUS_ACANTHOTETRA_PARONA_1886",
+          "name": "Cysticercus acanthotetra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cysticercus",
+          "authorship": "Parona, 1886",
+          "sourceIds": {
+            "checklistbank": "958683"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dipylidiidae"
+    },
+    {
+      "id": "GENUS_HALYSIS",
+      "name": "Halysis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALYSIS_GENETTAE_GERVAIS_1847",
+          "name": "Halysis genettae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halysis",
+          "authorship": "Gervais, 1847",
+          "sourceIds": {
+            "checklistbank": "1055295"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dipylidiidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 16,
+  "genusCount": 6,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

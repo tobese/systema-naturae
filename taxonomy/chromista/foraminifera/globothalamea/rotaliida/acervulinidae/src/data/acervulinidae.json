@@ -57,10 +57,12 @@
             ],
             "itis": [
               "45735"
-            ]
+            ],
+            "checklistbank": "702180"
           },
           "uuid": "60472c49-0ce8-5c8-811-69aa7f4cc7f0c0",
-          "authorityIds": "col:4JKFH,gbif:7821815,itis:45735"
+          "authorityIds": "col:4JKFH,gbif:7821815,itis:45735",
+          "authorship": "(Chapman, 1901)"
         }
       ]
     },
@@ -223,10 +225,12 @@
             ],
             "col": [
               "3HXNP"
-            ]
+            ],
+            "checklistbank": "359082"
           },
           "uuid": "2448c67d-3c29-522-b41-15bf6e425e559b",
-          "authorityIds": "col:3HXNP,gbif:7604225"
+          "authorityIds": "col:3HXNP,gbif:7604225",
+          "authorship": "(Chapman, 1901)"
         },
         {
           "id": "GYPSINA_GALAPAGOSENSIS",
@@ -493,6 +497,32 @@
           "uuid": "79cd6cf3-6ac6-56f-af7-8c393df2bab316",
           "authorityIds": "col:3HXNY,gbif:8264111,itis:45739",
           "authorship": "(Parker & Jones)"
+        },
+        {
+          "id": "SP_GYPSINA_INHAERENS_SCHULTZE_1854",
+          "name": "Gypsina inhaerens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gypsina",
+          "authorship": "(Schultze, 1854)",
+          "sourceIds": {
+            "checklistbank": "680785"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYPSINA_GLOBULA_REUSS_1848",
+          "name": "Gypsina globula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gypsina",
+          "authorship": "(Reuss, 1848)",
+          "sourceIds": {
+            "checklistbank": "683542"
+          },
+          "children": []
         }
       ]
     },
@@ -681,10 +711,12 @@
             ],
             "col": [
               "9563"
-            ]
+            ],
+            "checklistbank": "702396"
           },
           "uuid": "e6f5d744-ee91-576-9e3-105d6422cc310e",
-          "authorityIds": "col:9563,gbif:8027128"
+          "authorityIds": "col:9563,gbif:8027128",
+          "authorship": "(Said, 1949)"
         },
         {
           "id": "ACERVULINA_ORNATIFORMIS",
@@ -851,10 +883,12 @@
             ],
             "col": [
               "4YQKM"
-            ]
+            ],
+            "checklistbank": "542851"
           },
           "uuid": "4008752b-7d93-51d-98e-a3f0852ebf4e18",
-          "authorityIds": "col:4YQKM,gbif:8216708,itis:45733"
+          "authorityIds": "col:4YQKM,gbif:8216708,itis:45733",
+          "authorship": "(Reuss, 1848)"
         },
         {
           "id": "SPHAEROGYPSINA_HEMISPHAERICA",
@@ -952,10 +986,12 @@
             ],
             "col": [
               "36TQQ"
-            ]
+            ],
+            "checklistbank": "544447"
           },
           "uuid": "c4e4c719-5244-5c9-911-028f17a55893cf",
-          "authorityIds": "col:36TQQ,gbif:7905631"
+          "authorityIds": "col:36TQQ,gbif:7905631",
+          "authorship": "A. Silvestri, 1937"
         }
       ]
     },
@@ -1415,10 +1451,155 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Acervulinidae"
+    },
+    {
+      "id": "GENUS_ORBITOLINA",
+      "name": "Orbitolina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORBITOLINA_VESICULARIS_PARKER_JONES_1860",
+          "name": "Orbitolina vesicularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orbitolina",
+          "authorship": "Parker & Jones, 1860",
+          "sourceIds": {
+            "checklistbank": "567839"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acervulinidae"
+    },
+    {
+      "id": "GENUS_CERIOPORA",
+      "name": "Ceriopora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CERIOPORA_GLOBULA_REUSS_1848",
+          "name": "Ceriopora globula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceriopora",
+          "authorship": "Reuss, 1848",
+          "sourceIds": {
+            "checklistbank": "567840"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acervulinidae"
+    },
+    {
+      "id": "GENUS_POLYTREMA",
+      "name": "Polytrema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POLYTREMA_PLANUM_CARTER_1876",
+          "name": "Polytrema planum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polytrema",
+          "authorship": "Carter, 1876",
+          "sourceIds": {
+            "checklistbank": "576961"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acervulinidae"
+    },
+    {
+      "id": "GENUS_PLANORBULINA",
+      "name": "Planorbulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLANORBULINA_ACERVALIS_BRADY_1884",
+          "name": "Planorbulina acervalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planorbulina",
+          "authorship": "Brady, 1884",
+          "sourceIds": {
+            "checklistbank": "581282"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLANORBULINA_MABAHETHI_SAID_1949",
+          "name": "Planorbulina mabahethi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planorbulina",
+          "authorship": "Said, 1949",
+          "sourceIds": {
+            "checklistbank": "703689"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acervulinidae"
+    },
+    {
+      "id": "GENUS_TINOPORUS",
+      "name": "Tinoporus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TINOPORUS_VESICULARIS_PARKER_JONES_1860",
+          "name": "Tinoporus vesicularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tinoporus",
+          "authorship": "(Parker & Jones, 1860)",
+          "sourceIds": {
+            "checklistbank": "682113"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acervulinidae"
+    },
+    {
+      "id": "GENUS_ANOMALINA",
+      "name": "Anomalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOMALINA_MABAHETHI_SAID_1949",
+          "name": "Anomalina mabahethi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomalina",
+          "authorship": "(Said, 1949)",
+          "sourceIds": {
+            "checklistbank": "703690"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acervulinidae"
     }
   ],
-  "genusCount": 18,
-  "speciesCount": 58,
+  "genusCount": 24,
+  "speciesCount": 67,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

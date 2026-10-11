@@ -34,7 +34,8 @@
             ]
           },
           "uuid": "cf2bab6c-24d6-500-b55-964ac9a10d0cc0",
-          "authorityIds": "col:4FRTB,gbif:2525999,mycobank:256162"
+          "authorityIds": "col:4FRTB,gbif:2525999,mycobank:256162",
+          "children": []
         }
       ],
       "authorship": "G. Cunningham"
@@ -69,7 +70,8 @@
             ]
           },
           "uuid": "4f727055-ba84-588-b29-3ce38b9edbd440",
-          "authorityIds": "col:57Y8Y,gbif:2526001,mycobank:489004"
+          "authorityIds": "col:57Y8Y,gbif:2526001,mycobank:489004",
+          "children": []
         },
         {
           "id": "TRAPPEA_DARKERI",
@@ -91,10 +93,12 @@
             ],
             "col": [
               "57Y8Z"
-            ]
+            ],
+            "checklistbank": "726095"
           },
           "uuid": "43c2511f-5dd4-562-85e-b90cb14e48d056",
-          "authorityIds": "col:57Y8Z,gbif:2526002,mycobank:127550"
+          "authorityIds": "col:57Y8Z,gbif:2526002,mycobank:127550",
+          "children": []
         }
       ],
       "authorship": "Castellano"
@@ -129,7 +133,8 @@
             ]
           },
           "uuid": "eb67ec07-83ca-5c8-83f-12589e2f73796c",
-          "authorityIds": "col:9ZF65,gbif:12203145,mycobank:839717"
+          "authorityIds": "col:9ZF65,gbif:12203145,mycobank:839717",
+          "children": []
         },
         {
           "id": "RESTINGOMYCES_RETICULATUS",
@@ -156,7 +161,8 @@
             ]
           },
           "uuid": "d928641b-da4b-5aa-a30-017e0963ce7451",
-          "authorityIds": "col:794NQ,gbif:9797512,mycobank:815515"
+          "authorityIds": "col:794NQ,gbif:9797512,mycobank:815515",
+          "children": []
         },
         {
           "id": "RESTINGOMYCES_YAAXTAX",
@@ -181,10 +187,33 @@
             ]
           },
           "uuid": "0e5343a7-0a29-564-a71-7ee66ddbd45612",
-          "authorityIds": "col:9ZF66,gbif:11678716,mycobank:839718"
+          "authorityIds": "col:9ZF66,gbif:11678716,mycobank:839718",
+          "children": []
         }
       ],
       "authorship": "Sulzbacher, T. Grebenc & Baseia"
+    },
+    {
+      "id": "GENUS_HYSTERANGIUM",
+      "name": "Hysterangium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYSTERANGIUM_DARKERI_ZELLER_1939",
+          "name": "Hysterangium darkeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hysterangium",
+          "authorship": "Zeller, 1939",
+          "sourceIds": {
+            "checklistbank": "906109"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trappeaceae"
     }
   ],
   "authorship": "P.M. Kirk",
@@ -196,5 +225,7 @@
       "orderKey": 1146,
       "familyKey": 3294
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 7
 }

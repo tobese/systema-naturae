@@ -58,11 +58,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8059407
+            "gbif": 8059407,
+            "checklistbank": "1015781"
           },
           "uuid": "c4496f31-a34e-5cd-a2a-542bb1b10b6c18",
           "authorityIds": "gbif:8059407",
-          "children": []
+          "children": [],
+          "authorship": "Van de Vijver & L. Beyens in B. Van de Vijver, Y. Frenot, & L. Beyens, 2002"
         },
         {
           "id": "ORTHOSEIRA_CIRCULARIS",
@@ -409,11 +411,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7373622
+            "gbif": 7373622,
+            "checklistbank": "895841"
           },
           "uuid": "866d3c20-86a7-577-89f-6fbe7519338f51",
           "authorityIds": "gbif:7373622",
-          "children": []
+          "children": [],
+          "authorship": "Van de Vijver, 2013"
         },
         {
           "id": "ORTHOSIRA_AMERICANA",
@@ -754,10 +758,76 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MELOSIRA",
+      "name": "Melosira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELOSIRA_ROESEANA_RABENH_1853",
+          "name": "Melosira roeseana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "Rabenh., 1853",
+          "sourceIds": {
+            "checklistbank": "727838"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "orthoseiraceae"
+    },
+    {
+      "id": "GENUS_GAILLONELLA",
+      "name": "Gaillonella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GAILLONELLA_ROESEANA_RABENH_PETIT_1880",
+          "name": "Gaillonella roeseana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaillonella",
+          "authorship": "(Rabenh.) Petit, 1880",
+          "sourceIds": {
+            "checklistbank": "852746"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "orthoseiraceae"
+    },
+    {
+      "id": "GENUS_ORTHOSIRA",
+      "name": "Orthosira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHOSIRA_SPINOSA_W_SMITH_1855",
+          "name": "Orthosira spinosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthosira",
+          "authorship": "W.Smith, 1855",
+          "sourceIds": {
+            "checklistbank": "950785"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "orthoseiraceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 42,
+  "genusCount": 6,
+  "speciesCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

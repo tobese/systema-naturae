@@ -383,11 +383,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7708174
+            "gbif": 7708174,
+            "checklistbank": "950476"
           },
           "uuid": "a5cdad75-f1f9-5e4-ae3-19cd882fd68865",
           "authorityIds": "gbif:7708174",
-          "children": []
+          "children": [],
+          "authorship": "Vivier, Ormieres & Tuzet, 1964"
         },
         {
           "id": "LECUDINA_HESIONIS",
@@ -666,11 +668,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10251672
+            "gbif": 10251672,
+            "checklistbank": "892363"
           },
           "uuid": "877bfe85-7c2a-579-a9e-c5ed99a8b26c26",
           "authorityIds": "gbif:10251672",
-          "children": []
+          "children": [],
+          "authorship": "Trefouel, Arnoult & Vernet, 2000"
         },
         {
           "id": "LECUDINA_PELMATOMORPHA",
@@ -913,6 +917,19 @@
           },
           "children": [],
           "uuid": "4e878aa3-08de-5f3-8f9-9264d9e1871c73"
+        },
+        {
+          "id": "SP_LECUDINA_FRANCIANA_ARVY_1952",
+          "name": "Lecudina franciana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lecudina",
+          "authorship": "Arvy, 1952",
+          "sourceIds": {
+            "checklistbank": "950464"
+          },
+          "children": []
         }
       ]
     },
@@ -2288,11 +2305,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10722802
+            "gbif": 10722802,
+            "checklistbank": "950472"
           },
           "uuid": "3cac43c1-e47e-586-b5b-8c8e33a149db52",
           "authorityIds": "gbif:10722802",
-          "children": []
+          "children": [],
+          "authorship": "Caullery & Mesnil, 1914"
         },
         {
           "id": "POLYRHABDINA_SPIONIS",
@@ -2339,6 +2358,19 @@
           "uuid": "380f77c5-a879-56c-be2-a99cdf0435fbef",
           "authorityIds": "gbif:7553484",
           "authorship": "(Frenzel, 1885) Labbé, 1899",
+          "children": []
+        },
+        {
+          "id": "SP_OPHIOIDINA_ELONGATA_MINGAZZINI_1891",
+          "name": "Ophioidina elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ophioidina",
+          "authorship": "Mingazzini, 1891",
+          "sourceIds": {
+            "checklistbank": "950505"
+          },
           "children": []
         }
       ]
@@ -2761,10 +2793,76 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DOLIOCYSTIS",
+      "name": "Doliocystis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DOLIOCYSTIS_POLYDORAE_L_L_GER_1893",
+          "name": "Doliocystis polydorae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Doliocystis",
+          "authorship": "L. Léger, 1893",
+          "sourceIds": {
+            "checklistbank": "951149"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lecudinidae"
+    },
+    {
+      "id": "GENUS_GREGARINA",
+      "name": "Gregarina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GREGARINA_SAGITTATA_LEUCKHART_1861",
+          "name": "Gregarina sagittata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gregarina",
+          "authorship": "Leuckhart, 1861",
+          "sourceIds": {
+            "checklistbank": "1003768"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lecudinidae"
+    },
+    {
+      "id": "GENUS_CYGNICOLLUM",
+      "name": "Cygnicollum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYGNICOLLUM_LANKESTERI_DESPARTES_THEODORIDES_1986",
+          "name": "Cygnicollum lankesteri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cygnicollum",
+          "authorship": "Despartes & Theodorides, 1986",
+          "sourceIds": {
+            "checklistbank": "1026424"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lecudinidae"
     }
   ],
-  "genusCount": 26,
-  "speciesCount": 134,
+  "genusCount": 29,
+  "speciesCount": 139,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

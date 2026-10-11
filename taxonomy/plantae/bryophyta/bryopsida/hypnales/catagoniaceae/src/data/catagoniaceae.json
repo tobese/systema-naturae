@@ -101,9 +101,11 @@
             ],
             "wfo": [
               "wfo-0001180066"
-            ]
+            ],
+            "checklistbank": "820034"
           },
-          "authorityIds": "col:RRR8,wfo:wfo-0001180066"
+          "authorityIds": "col:RRR8,wfo:wfo-0001180066",
+          "authorship": "(Brid.) Cardot, 1915"
         },
         {
           "id": "SP_CATAGONIUM_NITIDUM",
@@ -140,10 +142,32 @@
           "uuid": "e42c83c5-4b63-578-96e-0cd6271d580a01"
         }
       ]
+    },
+    {
+      "id": "GENUS_LESKEA",
+      "name": "Leskea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LESKEA_NITENS_BRID_1812",
+          "name": "Leskea nitens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leskea",
+          "authorship": "Brid., 1812",
+          "sourceIds": {
+            "checklistbank": "1028023"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "catagoniaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 6,
+  "genusCount": 2,
+  "speciesCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

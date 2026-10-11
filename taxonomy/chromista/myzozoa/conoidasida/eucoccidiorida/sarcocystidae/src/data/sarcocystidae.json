@@ -25,10 +25,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8014281
+            "gbif": 8014281,
+            "checklistbank": "840908"
           },
           "uuid": "ce60f0fc-65e8-5fa-993-40f6ec8268d526",
-          "authorityIds": "gbif:8014281"
+          "authorityIds": "gbif:8014281",
+          "authorship": "(Nicolle & Manceaux, 1908)"
         }
       ]
     },
@@ -352,6 +354,19 @@
           "lineage": "Sarcocystis",
           "children": [],
           "uuid": "4ce7e07a-f53f-55e-b67-c6dd771d66ec0a"
+        },
+        {
+          "id": "SP_SARCOCYSTIS_BESNOITI_FRANCO_BORGES_1916",
+          "name": "Sarcocystis besnoiti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcocystis",
+          "authorship": "Franco & Borges, 1916",
+          "sourceIds": {
+            "checklistbank": "1047052"
+          },
+          "children": []
         }
       ]
     },
@@ -448,10 +463,54 @@
           "authorityIds": "gbif:8557829"
         }
       ]
+    },
+    {
+      "id": "GENUS_LEISHMANIA",
+      "name": "Leishmania",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEISHMANIA_GONDII_NICOLLE_MANCEAUX_1908",
+          "name": "Leishmania gondii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leishmania",
+          "authorship": "Nicolle & Manceaux, 1908",
+          "sourceIds": {
+            "checklistbank": "840909"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcocystidae"
+    },
+    {
+      "id": "GENUS_BESNOITIA",
+      "name": "Besnoitia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BESNOITIA_BESNOITI_FRANCO_BORGES_1916",
+          "name": "Besnoitia besnoiti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Besnoitia",
+          "authorship": "(Franco & Borges, 1916)",
+          "sourceIds": {
+            "checklistbank": "1047051"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcocystidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 22,
+  "genusCount": 6,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

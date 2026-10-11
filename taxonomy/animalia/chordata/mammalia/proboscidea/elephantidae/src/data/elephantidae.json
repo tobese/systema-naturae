@@ -100,6 +100,45 @@
             ]
           },
           "authorityIds": "col:398D9,itis:584938,wikidata:Q133006"
+        },
+        {
+          "id": "SP_ELEPHAS_PRIMIGENIUS_BLUMENBACH_1799",
+          "name": "Elephas primigenius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elephas",
+          "authorship": "Blumenbach, 1799",
+          "sourceIds": {
+            "checklistbank": "416664"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELEPHAS_ANTIQUUS_FALCONER_CAUTLEY_1847",
+          "name": "Elephas antiquus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elephas",
+          "authorship": "Falconer & Cautley, 1847",
+          "sourceIds": {
+            "checklistbank": "458857"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELEPHAS_MERIDIONALIS_NESTI_1825",
+          "name": "Elephas meridionalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elephas",
+          "authorship": "Nesti, 1825",
+          "sourceIds": {
+            "checklistbank": "1024801"
+          },
+          "children": []
         }
       ]
     },
@@ -117,7 +156,11 @@
           "children": [],
           "lineage": "Mammuthus",
           "uuid": "f4ea75d7-3a04-564-aa6-5c126f94bcaed7",
-          "commonName": "woolly mammoth"
+          "commonName": "woolly mammoth",
+          "authorship": "(Blumenbach, 1799)",
+          "sourceIds": {
+            "checklistbank": "199744"
+          }
         },
         {
           "id": "SP_MAMMUTHUS_EXILIS",
@@ -147,7 +190,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mammuthus",
-          "uuid": "f03ed980-1215-5f7-a19-f7aa5d10866a8d"
+          "uuid": "f03ed980-1215-5f7-a19-f7aa5d10866a8d",
+          "authorship": "(Nesti, 1825)",
+          "sourceIds": {
+            "checklistbank": "458786"
+          }
         },
         {
           "id": "SP_MAMMUTHUS_COLUMBI",
@@ -228,7 +275,11 @@
           "children": [],
           "lineage": "Palaeoloxodon",
           "uuid": "4f58f0b8-c9f2-5e2-9c3-2efd1770d13f74",
-          "commonName": "straight-tusked elephant"
+          "commonName": "straight-tusked elephant",
+          "authorship": "(Falconer & Cautley, 1847)",
+          "sourceIds": {
+            "checklistbank": "416719"
+          }
         },
         {
           "id": "SP_PALAEOLOXODON_CYPRIOTES",
@@ -303,10 +354,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Elephantidae"
+    },
+    {
+      "id": "GENUS_ARCHIDISKODON",
+      "name": "Archidiskodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHIDISKODON_MERIDIONALIS_NESTI_1825",
+          "name": "Archidiskodon meridionalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archidiskodon",
+          "authorship": "(Nesti, 1825)",
+          "sourceIds": {
+            "checklistbank": "458789"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elephantidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 20,
+  "genusCount": 6,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

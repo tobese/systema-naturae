@@ -623,9 +623,11 @@
           "sourceIds": {
             "itis": [
               "53639"
-            ]
+            ],
+            "checklistbank": "444934"
           },
-          "authorityIds": "itis:53639"
+          "authorityIds": "itis:53639",
+          "authorship": "Veron & Pichon, 1980"
         },
         {
           "id": "SP_EUPHYLLIA_DIVISA",
@@ -639,9 +641,11 @@
           "sourceIds": {
             "itis": [
               "53638"
-            ]
+            ],
+            "checklistbank": "444994"
           },
-          "authorityIds": "itis:53638"
+          "authorityIds": "itis:53638",
+          "authorship": "Veron & Pichon, 1980"
         },
         {
           "id": "SP_EUPHYLLIA_PARAANCORA_VERON_1990",
@@ -1483,6 +1487,32 @@
           },
           "children": [],
           "uuid": "b3053488-776b-5dc-884-fb8bc6bb8a9898"
+        },
+        {
+          "id": "SP_GALAXEA_HEXAGONALIS_MILNE_EDWARDS_HAIME",
+          "name": "Galaxea hexagonalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galaxea",
+          "authorship": "(Milne Edwards & Haime)",
+          "sourceIds": {
+            "checklistbank": "548835"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GALAXEA_CLAVUS_DANA_1846",
+          "name": "Galaxea clavus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galaxea",
+          "authorship": "Dana, 1846",
+          "sourceIds": {
+            "checklistbank": "548836"
+          },
+          "children": []
         }
       ]
     },
@@ -1720,10 +1750,133 @@
           "authorityIds": "col:8H7HH"
         }
       ]
+    },
+    {
+      "id": "GENUS_CARYOPHYLLIA",
+      "name": "Caryophyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARYOPHYLLIA_ASTREATA_LAMARCK_1816",
+          "name": "Caryophyllia astreata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caryophyllia",
+          "authorship": "Lamarck, 1816",
+          "sourceIds": {
+            "checklistbank": "913497"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CARYOPHYLLIA_GLABRESCENS_CHAMISSO_EYSENHARDT_1821",
+          "name": "Caryophyllia glabrescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caryophyllia",
+          "authorship": "Chamisso & Eysenhardt, 1821",
+          "sourceIds": {
+            "checklistbank": "1045921"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euphylliidae"
+    },
+    {
+      "id": "GENUS_MADREPORA",
+      "name": "Madrepora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MADREPORA_FASCICULARIS_LINNAEUS_1767",
+          "name": "Madrepora fascicularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Madrepora",
+          "authorship": "Linnaeus, 1767",
+          "sourceIds": {
+            "checklistbank": "913498"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euphylliidae"
+    },
+    {
+      "id": "GENUS_OCULINA",
+      "name": "Oculina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OCULINA_HORRESCENS_DANA_1846",
+          "name": "Oculina horrescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oculina",
+          "authorship": "Dana, 1846",
+          "sourceIds": {
+            "checklistbank": "913499"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euphylliidae"
+    },
+    {
+      "id": "GENUS_MANICINA",
+      "name": "Manicina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MANICINA_INTERRUPTA_EHRENBERG_1834",
+          "name": "Manicina interrupta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manicina",
+          "authorship": "Ehrenberg, 1834",
+          "sourceIds": {
+            "checklistbank": "913507"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euphylliidae"
+    },
+    {
+      "id": "GENUS_SARCINULA",
+      "name": "Sarcinula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SARCINULA_PAUCIRADIATA_BLAINVILLE_1830",
+          "name": "Sarcinula pauciradiata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcinula",
+          "authorship": "Blainville, 1830",
+          "sourceIds": {
+            "checklistbank": "1046258"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euphylliidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 91,
+  "genusCount": 16,
+  "speciesCount": 99,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1628,10 +1628,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 10217242
+            "gbif": 10217242,
+            "checklistbank": "866101"
           },
           "uuid": "00608536-e0a3-5fd-8f8-1d21cc698e64d3",
-          "authorityIds": "gbif:10217242"
+          "authorityIds": "gbif:10217242",
+          "authorship": "Speg."
         },
         {
           "id": "HYSTEROSTOMELLA_ULEANA",
@@ -4686,6 +4688,19 @@
           },
           "uuid": "d4617e05-19b2-54b-af6-19a299f00b578b",
           "authorityIds": "col:6TRCB,gbif:5515241,mycobank:101808"
+        },
+        {
+          "id": "SP_PARMULINA_CYATHUS_PENARD_1902",
+          "name": "Parmulina cyathus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parmulina",
+          "authorship": "Penard, 1902",
+          "sourceIds": {
+            "checklistbank": "1040168"
+          },
+          "children": []
         }
       ],
       "authorship": "Theissen & Sydow"
@@ -4807,11 +4822,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "parmulariaceae"
+    },
+    {
+      "id": "GENUS_PHACIDIUM",
+      "name": "Phacidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHACIDIUM_TEUCRII_P_CROUAN_H_CROUAN_1867",
+          "name": "Phacidium teucrii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phacidium",
+          "authorship": "P.Crouan & H.Crouan, 1867",
+          "sourceIds": {
+            "checklistbank": "875774"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parmulariaceae"
     }
   ],
   "authorship": "E. Müller & Arx ex M.E. Barr",
-  "genusCount": 40,
-  "speciesCount": 170,
+  "genusCount": 41,
+  "speciesCount": 172,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

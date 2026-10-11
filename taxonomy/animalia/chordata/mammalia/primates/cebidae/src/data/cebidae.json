@@ -64,9 +64,11 @@
             ],
             "col": [
               "RYZX"
-            ]
+            ],
+            "checklistbank": "443761"
           },
-          "authorityIds": "col:RYZX,itis:572978,wikidata:Q169682"
+          "authorityIds": "col:RYZX,itis:572978,wikidata:Q169682",
+          "authorship": "Schomburgk, 1848"
         },
         {
           "id": "CEBUS_ALBIFRONS",
@@ -351,6 +353,31 @@
           },
           "authorityIds": "col:RYZN,itis:944163",
           "commonName": "Sierra de Perijá white-fronted capuchin"
+        },
+        {
+          "id": "SP_CEBUS_APELLA_LINNAEUS_1758",
+          "name": "Cebus apella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cebus",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "443760"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CEBUS_NIGRIVITTATUS",
+          "name": "Cebus nigrivittatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cebus",
+          "sourceIds": {
+            "checklistbank": "443836"
+          },
+          "children": []
         }
       ]
     },
@@ -384,9 +411,11 @@
             ],
             "itis": [
               "944156"
-            ]
+            ],
+            "checklistbank": "785956"
           },
-          "authorityIds": "col:6XJVY,itis:944156,wikidata:Q18324712"
+          "authorityIds": "col:6XJVY,itis:944156,wikidata:Q18324712",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "SAPAJUS_LIBIDINOSUS",
@@ -623,9 +652,11 @@
             ],
             "col": [
               "4TZK2"
-            ]
+            ],
+            "checklistbank": "443764"
           },
-          "authorityIds": "col:4TZK2,itis:180095,wikidata:Q476930"
+          "authorityIds": "col:4TZK2,itis:180095,wikidata:Q476930",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "SAIMIRI_BOLIVIENSIS",
@@ -3766,10 +3797,45 @@
           "authorityIds": "col:P4C8,itis:998633,wikidata:Q1365871"
         }
       ]
+    },
+    {
+      "id": "GENUS_SIMIA",
+      "name": "Simia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIMIA_APELLA_LINNAEUS_1758",
+          "name": "Simia apella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simia",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "1024853"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIMIA_SCIUREA_LINNAEUS_1758",
+          "name": "Simia sciurea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simia",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "1024854"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cebidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 143,
+  "genusCount": 21,
+  "speciesCount": 147,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

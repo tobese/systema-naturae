@@ -503,7 +503,8 @@
             ],
             "checklistbank": "181440"
           },
-          "authorityIds": "col:4BQCC,itis:561753,wikidata:Q1091391"
+          "authorityIds": "col:4BQCC,itis:561753,wikidata:Q1091391",
+          "authorship": "(Gmelin, 1789)"
         },
         {
           "id": "PACHYCEPHALA_CITREOGASTER",
@@ -1284,7 +1285,8 @@
             ],
             "checklistbank": "181452"
           },
-          "authorityIds": "col:4BQD9,itis:561774,wikidata:Q1584926"
+          "authorityIds": "col:4BQD9,itis:561774,wikidata:Q1584926",
+          "authorship": "E.L. Layard, 1878"
         },
         {
           "id": "PACHYCEPHALA_PHAIONOTA",
@@ -1367,7 +1369,8 @@
             ],
             "checklistbank": "181473"
           },
-          "authorityIds": "col:4BQDD,itis:561777,wikidata:Q3180293"
+          "authorityIds": "col:4BQDD,itis:561777,wikidata:Q3180293",
+          "authorship": "(Latham, 1801)"
         },
         {
           "id": "PACHYCEPHALA_RUFOGULARIS",
@@ -1691,7 +1694,11 @@
           "children": [],
           "lineage": "Pachycephala",
           "uuid": "759bf8ca-4157-5db-aa6-6fa5632a2ae377",
-          "commonName": "Melanesian Whistler"
+          "commonName": "Melanesian Whistler",
+          "authorship": "Gray, GR, 1860",
+          "sourceIds": {
+            "checklistbank": "962462"
+          }
         },
         {
           "id": "SP_PACHYCEPHALA_FEMININA",
@@ -1765,6 +1772,45 @@
           "lineage": "Pachycephala",
           "uuid": "20119d74-a7b5-56d-888-53b647d2427e1f",
           "commonName": "Temotu Whistler"
+        },
+        {
+          "id": "SP_PACHYCEPHALA_MORARIENSIS_J_VERREAUX_DES_MURS_1860",
+          "name": "Pachycephala morariensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachycephala",
+          "authorship": "J. Verreaux & Des Murs, 1860",
+          "sourceIds": {
+            "checklistbank": "1023647"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PACHYCEPHALA_ASSIMILIS_J_VERREAUX_DES_MURS_1860",
+          "name": "Pachycephala assimilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachycephala",
+          "authorship": "J. Verreaux & Des Murs, 1860",
+          "sourceIds": {
+            "checklistbank": "1023649"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PACHYCEPHALA_LITTAYEI_E_L_LAYARD_1878",
+          "name": "Pachycephala littayei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachycephala",
+          "authorship": "E.L. Layard, 1878",
+          "sourceIds": {
+            "checklistbank": "1024315"
+          },
+          "children": []
         }
       ]
     },
@@ -1890,10 +1936,67 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pachycephalidae"
+    },
+    {
+      "id": "GENUS_MUSCICAPA",
+      "name": "Muscicapa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MUSCICAPA_CALEDONICA_GMELIN_1789",
+          "name": "Muscicapa caledonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muscicapa",
+          "authorship": "Gmelin, 1789",
+          "sourceIds": {
+            "checklistbank": "928381"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MUSCICAPA_XANTHETRAEA_FORSTER_J_R_1844",
+          "name": "Muscicapa xanthetraea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muscicapa",
+          "authorship": "Forster, J.R., 1844",
+          "sourceIds": {
+            "checklistbank": "928384"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachycephalidae"
+    },
+    {
+      "id": "GENUS_SYLVIA",
+      "name": "Sylvia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYLVIA_RUFIVENTRIS_LATHAM_1801",
+          "name": "Sylvia rufiventris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sylvia",
+          "authorship": "Latham, 1801",
+          "sourceIds": {
+            "checklistbank": "928382"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachycephalidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 84,
+  "genusCount": 9,
+  "speciesCount": 90,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -982,7 +982,8 @@
                   "sourceIds": {
                     "col": [
                       "6VH88"
-                    ]
+                    ],
+                    "checklistbank": "52010"
                   },
                   "authorityIds": "col:6VH88"
                 },
@@ -1383,6 +1384,32 @@
                   },
                   "children": [],
                   "uuid": "e1f1bf60-63b6-5bd-aa7-f431b731072b2c"
+                },
+                {
+                  "id": "SP_PHYLLOXERA_VITIFOLII_FITCH_1855",
+                  "name": "Phylloxera vitifolii",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Phylloxera",
+                  "authorship": "(Fitch, 1855)",
+                  "sourceIds": {
+                    "checklistbank": "52011"
+                  },
+                  "children": []
+                },
+                {
+                  "id": "SP_PHYLLOXERA_FLORENTINA_TARGIONI_TOZZETTI_1875",
+                  "name": "Phylloxera florentina",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Phylloxera",
+                  "authorship": "Targioni-Tozzetti, 1875",
+                  "sourceIds": {
+                    "checklistbank": "388814"
+                  },
+                  "children": []
                 }
               ],
               "lineage": "Phylloxerini"
@@ -1608,6 +1635,19 @@
               },
               "children": [],
               "uuid": "292d9b45-df1c-5f2-976-8c4c92b314816a"
+            },
+            {
+              "id": "SP_PHYLLOXERINA_COCCINEA_VON_HEYDEN_1837",
+              "name": "Phylloxerina coccinea",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Phylloxerina",
+              "authorship": "von Heyden, 1837",
+              "sourceIds": {
+                "checklistbank": "911426"
+              },
+              "children": []
             }
           ]
         }
@@ -1658,15 +1698,59 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phylloxeridae"
+    },
+    {
+      "id": "GENUS_PEMPHIGUS",
+      "name": "Pemphigus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PEMPHIGUS_VITIFOLIAE_FITCH_1855",
+          "name": "Pemphigus vitifoliae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pemphigus",
+          "authorship": "Fitch, 1855",
+          "sourceIds": {
+            "checklistbank": "829054"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phylloxeridae"
+    },
+    {
+      "id": "GENUS_XERAMPELUS",
+      "name": "Xerampelus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XERAMPELUS_VASTATOR_PLANCHON_1868",
+          "name": "Xerampelus vastator",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xerampelus",
+          "authorship": "(Planchon, 1868)",
+          "sourceIds": {
+            "checklistbank": "854039"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phylloxeridae"
     }
   ],
-  "speciesCount": 83,
+  "speciesCount": 88,
   "appSlug": "phylloxeridae",
   "lineage": "Phylloxeroidea",
   "continents": [
     "Europe"
   ],
-  "genusCount": 10,
+  "genusCount": 12,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

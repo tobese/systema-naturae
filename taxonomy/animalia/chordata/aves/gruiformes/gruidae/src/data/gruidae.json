@@ -37,7 +37,8 @@
             ],
             "checklistbank": "175657"
           },
-          "authorityIds": "col:KGTM,itis:176194,wikidata:Q379761"
+          "authorityIds": "col:KGTM,itis:176194,wikidata:Q379761",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "BALEARICA_REGULORUM",
@@ -212,9 +213,11 @@
           "sourceIds": {
             "wikidata": [
               "Q333166"
-            ]
+            ],
+            "checklistbank": "933272"
           },
-          "authorityIds": "wikidata:Q333166"
+          "authorityIds": "wikidata:Q333166",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "GRUS_CANADENSIS",
@@ -421,7 +424,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Grus",
-          "uuid": "1ce0c635-9a44-5e0-bb2-58975434c31002"
+          "uuid": "1ce0c635-9a44-5e0-bb2-58975434c31002",
+          "authorship": "Milne-Edwards, 1869",
+          "sourceIds": {
+            "checklistbank": "416704"
+          }
         },
         {
           "id": "SP_GRUS_LEUCOGERANUS_PALLAS_1773",
@@ -647,10 +654,119 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Gruidae"
+    },
+    {
+      "id": "GENUS_ARDEA",
+      "name": "Ardea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARDEA_GRUS_LINNAEUS_1758",
+          "name": "Ardea grus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardea",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "3078"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARDEA_VIRGO_LINNAEUS_1758",
+          "name": "Ardea virgo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardea",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "3083"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARDEA_CANADENSIS_LINNAEUS_1758",
+          "name": "Ardea canadensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardea",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "846649"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARDEA_SUBGEN_STATIUS_MULLER_1776",
+          "name": "Ardea subgen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardea",
+          "authorship": "Statius Muller, 1776",
+          "sourceIds": {
+            "checklistbank": "933205"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARDEA_PAVONINA_LINNAEUS_1758",
+          "name": "Ardea pavonina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardea",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "933206"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARDEA_ANTIGONE_LINNAEUS_1758",
+          "name": "Ardea Antigone",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ardea",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "933273"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gruidae"
+    },
+    {
+      "id": "GENUS_MEGALORNIS",
+      "name": "Megalornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEGALORNIS_GRUS_LINNAEUS_1758",
+          "name": "Megalornis grus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalornis",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "3079"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gruidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 26,
+  "genusCount": 8,
+  "speciesCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

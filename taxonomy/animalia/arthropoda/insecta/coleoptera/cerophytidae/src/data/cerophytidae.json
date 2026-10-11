@@ -112,10 +112,12 @@
             ],
             "itis": [
               "708352"
-            ]
+            ],
+            "checklistbank": "223191"
           },
           "uuid": "588f0e0e-c789-54a-92d-456bf02658d51f",
-          "authorityIds": "col:7S4Y4,gbif:1162241,itis:708352"
+          "authorityIds": "col:7S4Y4,gbif:1162241,itis:708352",
+          "authorship": "(Latreille, 1804)"
         },
         {
           "id": "SP_CEROPHYTUM_JAPONICUM",
@@ -174,6 +176,19 @@
           "children": [],
           "lineage": "cerophytum",
           "uuid": "81e94acf-75dd-5bd-a28-c91db65060871b"
+        },
+        {
+          "id": "SP_CEROPHYTUM_CAYENNENSE_BONVOULOIR_1870",
+          "name": "Cerophytum cayennense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerophytum",
+          "authorship": "Bonvouloir, 1870",
+          "sourceIds": {
+            "checklistbank": "920999"
+          },
+          "children": []
         }
       ]
     },
@@ -616,10 +631,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Cerophytidae"
+    },
+    {
+      "id": "GENUS_CERATOPHYTUM",
+      "name": "Ceratophytum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CERATOPHYTUM_LATREILLEI_LEACH_1819",
+          "name": "Ceratophytum latreillei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratophytum",
+          "authorship": "Leach, 1819",
+          "sourceIds": {
+            "checklistbank": "396477"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cerophytidae"
+    },
+    {
+      "id": "GENUS_ELATER",
+      "name": "Elater",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ELATER_ELATEROIDES_LATREILLE_1804",
+          "name": "Elater elateroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elater",
+          "authorship": "Latreille, 1804",
+          "sourceIds": {
+            "checklistbank": "893993"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cerophytidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 27,
+  "genusCount": 7,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

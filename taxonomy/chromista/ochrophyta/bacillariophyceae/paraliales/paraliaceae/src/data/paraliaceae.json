@@ -193,10 +193,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6539714
+            "gbif": 6539714,
+            "checklistbank": "1019249"
           },
           "uuid": "2ef1dd91-84c6-51c-a8c-d4f317f90a142b",
-          "authorityIds": "gbif:6539714"
+          "authorityIds": "gbif:6539714",
+          "authorship": "Sawai & Nagumo, 2005"
         },
         {
           "id": "PARALIA_GRUNOWII",
@@ -414,10 +416,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7842519
+            "gbif": 7842519,
+            "checklistbank": "1006493"
           },
           "uuid": "36422629-88a8-5c1-b3d-b34397f8e95c39",
-          "authorityIds": "gbif:7842519"
+          "authorityIds": "gbif:7842519",
+          "authorship": "(Ehrenberg) R.M.Crawford, 1979"
         },
         {
           "id": "PARALIA_SULCATA",
@@ -439,10 +443,12 @@
             ],
             "itis": [
               "2346"
-            ]
+            ],
+            "checklistbank": "530284"
           },
           "uuid": "8462106a-a0e1-52e-b33-2da20c3d7aac86",
-          "authorityIds": "gbif:5421896,itis:2346"
+          "authorityIds": "gbif:5421896,itis:2346",
+          "authorship": "(Ehrenberg) Cleve, 1873"
         },
         {
           "id": "PARALIA_THUMII",
@@ -503,7 +509,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Paralia",
           "children": [],
-          "uuid": "ff4c26a8-007f-5d0-9d7-3daf0385d72a0c"
+          "uuid": "ff4c26a8-007f-5d0-9d7-3daf0385d72a0c",
+          "authorship": "(W. Smith) Heib., 1863",
+          "sourceIds": {
+            "checklistbank": "546448"
+          }
         },
         {
           "id": "SP_PARALIA_FAUSTA",
@@ -554,6 +564,19 @@
           "lineage": "Paralia",
           "children": [],
           "uuid": "96b25bde-ba7d-54a-a0d-4672a81c525bde"
+        },
+        {
+          "id": "SP_PARALIA_ARENARIA_MOORE_MOISSEEVA_1986",
+          "name": "Paralia arenaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paralia",
+          "authorship": "(Moore) Moisseeva, 1986",
+          "sourceIds": {
+            "checklistbank": "697866"
+          },
+          "children": []
         }
       ]
     },
@@ -593,9 +616,11 @@
           "sourceIds": {
             "itis": [
               "591271"
-            ]
+            ],
+            "checklistbank": "653945"
           },
-          "authorityIds": "itis:591271"
+          "authorityIds": "itis:591271",
+          "authorship": "(Moore ex Ralfs) R.M.Crawford, 1988"
         },
         {
           "id": "SP_ELLERBECKIA_KOCHII",
@@ -625,7 +650,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ellerbeckia",
           "children": [],
-          "uuid": "eca37506-5cf5-562-9ec-322edb8700cc62"
+          "uuid": "eca37506-5cf5-562-9ec-322edb8700cc62",
+          "authorship": "(Ehrenberg) Crawford & Sims, 2006",
+          "sourceIds": {
+            "checklistbank": "1006489"
+          }
         },
         {
           "id": "SP_ELLERBECKIA_CLAVIGERA",
@@ -665,7 +694,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ellerbeckia",
           "children": [],
-          "uuid": "1f2411ba-a6f2-51b-8c5-95764834dd76b7"
+          "uuid": "1f2411ba-a6f2-51b-8c5-95764834dd76b7",
+          "authorship": "(H.L.Smith) R.M.Crawford & P.Sims, 2007",
+          "sourceIds": {
+            "checklistbank": "945696"
+          }
         },
         {
           "id": "SP_ELLERBECKIA_FISHERIENSIS",
@@ -743,10 +776,312 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_MELOSIRA",
+      "name": "Melosira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELOSIRA_ARENARIA_MOORE_EX_RALFS_1843",
+          "name": "Melosira arenaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "Moore ex Ralfs, 1843",
+          "sourceIds": {
+            "checklistbank": "75430"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_SULCATA_EHRENBERG_K_TZ_1844",
+          "name": "Melosira sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "(Ehrenberg) Kütz., 1844",
+          "sourceIds": {
+            "checklistbank": "76137"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_MARINA_W_SMITH_JANISCH_1862",
+          "name": "Melosira marina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "(W. Smith) Janisch, 1862",
+          "sourceIds": {
+            "checklistbank": "547175"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_SOL_EHRENBERG_K_TZ_1849",
+          "name": "Melosira sol",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "(Ehrenberg) Kütz., 1849",
+          "sourceIds": {
+            "checklistbank": "727557"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_BAILEYI_H_L_SMITH_WOLLE_1890",
+          "name": "Melosira baileyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "(H.L.Smith) Wolle, 1890",
+          "sourceIds": {
+            "checklistbank": "945702"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_ORTHOSEIRA",
+      "name": "Orthoseira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHOSEIRA_MARINA_W_SMITH_1856",
+          "name": "Orthoseira marina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthoseira",
+          "authorship": "W. Smith, 1856",
+          "sourceIds": {
+            "checklistbank": "545109"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORTHOSEIRA_SULCATA_EHRENBERG_O_MEARA_1875",
+          "name": "Orthoseira sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthoseira",
+          "authorship": "(Ehrenberg) O'Meara, 1875",
+          "sourceIds": {
+            "checklistbank": "1006899"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_GALLIONELLA",
+      "name": "Gallionella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GALLIONELLA_SULCATA_EHRENBERG_1839",
+          "name": "Gallionella sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gallionella",
+          "authorship": "Ehrenberg, 1839",
+          "sourceIds": {
+            "checklistbank": "678834"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_GAILLONELLA",
+      "name": "Gaillonella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GAILLONELLA_ARENARIA_MOORE_PELLETAN_1889",
+          "name": "Gaillonella arenaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaillonella",
+          "authorship": "(Moore) Pelletan, 1889",
+          "sourceIds": {
+            "checklistbank": "697867"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GAILLONELLA_SOL_EHRENBERG_1844",
+          "name": "Gaillonella sol",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaillonella",
+          "authorship": "Ehrenberg, 1844",
+          "sourceIds": {
+            "checklistbank": "1006490"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_LYSIGONIUM",
+      "name": "Lysigonium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LYSIGONIUM_ARENARIUM_MOORE_TREVISAN_1848",
+          "name": "Lysigonium arenarium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lysigonium",
+          "authorship": "(Moore) Trevisan, 1848",
+          "sourceIds": {
+            "checklistbank": "697868"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LYSIGONIUM_SOL_EHRENBERG_KUNTZE_1891",
+          "name": "Lysigonium sol",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lysigonium",
+          "authorship": "(Ehrenberg) Kuntze, 1891",
+          "sourceIds": {
+            "checklistbank": "1006492"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LYSIGONIUM_SULCATUM_EHRENBERG_TREV_1848",
+          "name": "Lysigonium sulcatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lysigonium",
+          "authorship": "(Ehrenberg) Trev., 1848",
+          "sourceIds": {
+            "checklistbank": "1006900"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_ORTHOSIRA",
+      "name": "Orthosira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHOSIRA_ARENARIA_MOORE_W_SMITH_1856",
+          "name": "Orthosira arenaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthosira",
+          "authorship": "(Moore) W.Smith, 1856",
+          "sourceIds": {
+            "checklistbank": "697869"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_CESTODISCUS",
+      "name": "Cestodiscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CESTODISCUS_BAILEYI_H_L_SMITH_1878",
+          "name": "Cestodiscus baileyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cestodiscus",
+          "authorship": "H.L.Smith, 1878",
+          "sourceIds": {
+            "checklistbank": "945699"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_COSCINODISCUS",
+      "name": "Coscinodiscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COSCINODISCUS_BAILEYI_H_L_SMITH_J_RATTRAY_1890",
+          "name": "Coscinodiscus baileyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coscinodiscus",
+          "authorship": "(H.L.Smith) J.Rattray, 1890",
+          "sourceIds": {
+            "checklistbank": "945701"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
+    },
+    {
+      "id": "GENUS_RADIALIPLICATA",
+      "name": "Radialiplicata",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RADIALIPLICATA_SOL_EHRENBERG_GLEZER_1992",
+          "name": "Radialiplicata sol",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Radialiplicata",
+          "authorship": "(Ehrenberg) Glezer, 1992",
+          "sourceIds": {
+            "checklistbank": "1006491"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraliaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 48,
+  "genusCount": 13,
+  "speciesCount": 66,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -36,7 +36,8 @@
             ]
           },
           "uuid": "58609821-0a1b-5fa-913-fed5d18c60d45e",
-          "authorityIds": "col:3CSZR,gbif:2265718,itis:48974,wikidata:Q2958233"
+          "authorityIds": "col:3CSZR,gbif:2265718,itis:48974,wikidata:Q2958233",
+          "children": []
         },
         {
           "id": "EUPHYSILLA_PYRAMIDATA",
@@ -61,10 +62,13 @@
             ],
             "itis": [
               "48973"
-            ]
+            ],
+            "checklistbank": "985064"
           },
           "uuid": "016adb67-59d7-5c7-833-6ded7d559ff89a",
-          "authorityIds": "col:3CSZS,gbif:2265719,itis:48973,wikidata:Q2415020"
+          "authorityIds": "col:3CSZS,gbif:2265719,itis:48973,wikidata:Q2415020",
+          "authorship": "Kramp, 1955",
+          "children": []
         },
         {
           "id": "EUPHYSILLA_TUBULARIA",
@@ -88,7 +92,8 @@
             ]
           },
           "uuid": "10881aea-31c5-5f9-9e7-09be4921f0bd00",
-          "authorityIds": "col:3CSZT,gbif:9011309,wikidata:Q61656386"
+          "authorityIds": "col:3CSZT,gbif:9011309,wikidata:Q61656386",
+          "children": []
         }
       ]
     },
@@ -121,10 +126,13 @@
             ],
             "itis": [
               "49267"
-            ]
+            ],
+            "checklistbank": "726857"
           },
           "uuid": "08a70f2a-c628-5ca-a3b-277673c968cac9",
-          "authorityIds": "col:6Z8BJ,gbif:5185719,itis:49267,wikidata:Q2213501"
+          "authorityIds": "col:6Z8BJ,gbif:5185719,itis:49267,wikidata:Q2213501",
+          "authorship": "(McCrady, 1859)",
+          "children": []
         },
         {
           "id": "SPHAEROCORYNE_ARCUATA",
@@ -145,7 +153,8 @@
             ]
           },
           "uuid": "697584e9-cfdf-566-814-558fde6183c0bd",
-          "authorityIds": "gbif:5720782,wikidata:Q105940416"
+          "authorityIds": "gbif:5720782,wikidata:Q105940416",
+          "children": []
         },
         {
           "id": "SPHAEROCORYNE_BEDOTI",
@@ -167,10 +176,13 @@
             ],
             "col": [
               "4YQ4B"
-            ]
+            ],
+            "checklistbank": "383322"
           },
           "uuid": "51548fe5-d072-52f-aa1-37499545082c14",
-          "authorityIds": "col:4YQ4B,gbif:5185718,wikidata:Q2486327"
+          "authorityIds": "col:4YQ4B,gbif:5185718,wikidata:Q2486327",
+          "authorship": "Pictet, 1893",
+          "children": []
         },
         {
           "id": "SPHAEROCORYNE_COCCOMETRA",
@@ -194,7 +206,8 @@
             ]
           },
           "uuid": "e070d549-94de-5bf-a39-d7a0dfe330b33a",
-          "authorityIds": "col:6YWBK,gbif:5185696,wikidata:Q1844016"
+          "authorityIds": "col:6YWBK,gbif:5185696,wikidata:Q1844016",
+          "children": []
         },
         {
           "id": "SPHAEROCORYNE_PETERSENI",
@@ -218,7 +231,21 @@
             ]
           },
           "uuid": "6810d1dd-1bd7-5dc-895-fea5164eef8fab",
-          "authorityIds": "col:4YQ4J,gbif:5185717,wikidata:Q2042846"
+          "authorityIds": "col:4YQ4J,gbif:5185717,wikidata:Q2042846",
+          "children": []
+        },
+        {
+          "id": "SP_SPHAEROCORYNE_MULTITENTACULATA_WARREN_1908",
+          "name": "Sphaerocoryne multitentaculata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerocoryne",
+          "authorship": "(Warren, 1908)",
+          "sourceIds": {
+            "checklistbank": "1016082"
+          },
+          "children": []
         }
       ]
     },
@@ -249,10 +276,13 @@
             ],
             "col": [
               "3L8Y8"
-            ]
+            ],
+            "checklistbank": "716083"
           },
           "uuid": "7f633529-7f69-51f-88f-f42d52b8e799bd",
-          "authorityIds": "col:3L8Y8,gbif:7812937,wikidata:Q61654567"
+          "authorityIds": "col:3L8Y8,gbif:7812937,wikidata:Q61654567",
+          "authorship": "Wedler & Larson, 1986",
+          "children": []
         }
       ]
     },
@@ -286,9 +316,54 @@
             ]
           },
           "uuid": "1d7dcd6a-fe7e-587-bee-f8238f8641d2aa",
-          "authorityIds": "col:8TG55,gbif:11584502,wikidata:Q135656214"
+          "authorityIds": "col:8TG55,gbif:11584502,wikidata:Q135656214",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CLAVATELLA",
+      "name": "Clavatella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLAVATELLA_MULTITENTACULATA_WARREN_1908",
+          "name": "Clavatella multitentaculata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clavatella",
+          "authorship": "Warren, 1908",
+          "sourceIds": {
+            "checklistbank": "1016083"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerocorynidae"
+    },
+    {
+      "id": "GENUS_CORYNITIS",
+      "name": "Corynitis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORYNITIS_AGASSIZII_MCCRADY_1859",
+          "name": "Corynitis agassizii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Corynitis",
+          "authorship": "McCrady, 1859",
+          "sourceIds": {
+            "checklistbank": "1017497"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerocorynidae"
     }
   ],
   "sourceIds": {
@@ -299,5 +374,7 @@
       "orderKey": 838,
       "familyKey": 3367
     }
-  }
+  },
+  "genusCount": 6,
+  "speciesCount": 13
 }

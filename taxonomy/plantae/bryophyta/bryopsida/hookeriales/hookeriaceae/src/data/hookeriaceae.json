@@ -55,9 +55,11 @@
             ],
             "wfo": [
               "wfo-0001181034"
-            ]
+            ],
+            "checklistbank": "726627"
           },
-          "authorityIds": "col:9K2T4,wfo:wfo-0001181034"
+          "authorityIds": "col:9K2T4,wfo:wfo-0001181034",
+          "authorship": "(Mitt.) Müll.Hal., 1874"
         },
         {
           "id": "SP_CROSSOMITRIUM_GOEBELII",
@@ -100,9 +102,11 @@
             ],
             "wfo": [
               "wfo-0001181042"
-            ]
+            ],
+            "checklistbank": "726629"
           },
-          "authorityIds": "col:9K2T6,wfo:wfo-0001181042"
+          "authorityIds": "col:9K2T6,wfo:wfo-0001181042",
+          "authorship": "(Brid.) Müll.Hal., 1874"
         },
         {
           "id": "SP_CROSSOMITRIUM_PHRAGMIDIACEUM",
@@ -142,9 +146,11 @@
             ],
             "wfo": [
               "wfo-0001181048"
-            ]
+            ],
+            "checklistbank": "912519"
           },
-          "authorityIds": "col:9L8BD,wfo:wfo-0001181048"
+          "authorityIds": "col:9L8BD,wfo:wfo-0001181048",
+          "authorship": "Herzog, 1916"
         },
         {
           "id": "SP_CROSSOMITRIUM_SAPROPHILUM",
@@ -204,7 +210,11 @@
             "South America"
           ],
           "children": [],
-          "uuid": "b3e6ce79-5e85-5ba-9e0-bd6bbba9bdec95"
+          "uuid": "b3e6ce79-5e85-5ba-9e0-bd6bbba9bdec95",
+          "authorship": "Müll.Hal., 1898",
+          "sourceIds": {
+            "checklistbank": "912518"
+          }
         },
         {
           "id": "SP_CROSSOMITRIUM_TENELLUM",
@@ -400,7 +410,23 @@
           "authorship": "Bridel, 1819 [1818]",
           "children": [],
           "lineage": "Pterygophyllum",
-          "uuid": "6d583642-115d-555-855-95c149844b3826"
+          "uuid": "6d583642-115d-555-855-95c149844b3826",
+          "sourceIds": {
+            "checklistbank": "944809"
+          }
+        },
+        {
+          "id": "SP_PTERYGOPHYLLUM_LUCENS_HEDW_BRID_1818",
+          "name": "Pterygophyllum lucens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterygophyllum",
+          "authorship": "(Hedw.) Brid., 1818",
+          "sourceIds": {
+            "checklistbank": "787813"
+          },
+          "children": []
         }
       ]
     },
@@ -738,9 +764,11 @@
             ],
             "wfo": [
               "wfo-0001183929"
-            ]
+            ],
+            "checklistbank": "823532"
           },
-          "authorityIds": "col:9MRCT,wfo:wfo-0001183929"
+          "authorityIds": "col:9MRCT,wfo:wfo-0001183929",
+          "authorship": "(Brid.) Arn., 1827"
         },
         {
           "id": "SP_HOOKERIA_SQUARROSULA",
@@ -752,7 +780,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b65ce963-024e-5ce-98c-8c5f2df9662528"
+          "uuid": "b65ce963-024e-5ce-98c-8c5f2df9662528",
+          "authorship": "Paris, 1896",
+          "sourceIds": {
+            "checklistbank": "823533"
+          }
         },
         {
           "id": "SP_HOOKERIA_ULIGINOSA",
@@ -4504,6 +4536,19 @@
           "children": [],
           "lineage": "Hookeriopsis",
           "uuid": "181126de-6542-59a-81c-c681b37ab7120a"
+        },
+        {
+          "id": "SP_HOOKERIOPSIS_SQUARROSULA_A_JAEGER_1877",
+          "name": "Hookeriopsis squarrosula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hookeriopsis",
+          "authorship": "A. Jaeger, 1877",
+          "sourceIds": {
+            "checklistbank": "823534"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5338,10 +5383,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hookeriaceae"
+    },
+    {
+      "id": "GENUS_HYPNUM",
+      "name": "Hypnum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYPNUM_SPLACHNIFOLIUM_BRID_1812",
+          "name": "Hypnum splachnifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypnum",
+          "authorship": "Brid., 1812",
+          "sourceIds": {
+            "checklistbank": "944796"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYPNUM_LUCENS_HEDW_1801",
+          "name": "Hypnum lucens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypnum",
+          "authorship": "Hedw., 1801",
+          "sourceIds": {
+            "checklistbank": "1079646"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hookeriaceae"
     }
   ],
-  "genusCount": 36,
-  "speciesCount": 327,
+  "genusCount": 37,
+  "speciesCount": 331,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

@@ -2665,10 +2665,12 @@
             ],
             "col": [
               "NKYC"
-            ]
+            ],
+            "checklistbank": "703570"
           },
           "uuid": "de9dcc18-0cd0-5a4-ab2-7baf96a7ac1cdc",
-          "authorityIds": "col:NKYC,gbif:7684570"
+          "authorityIds": "col:NKYC,gbif:7684570",
+          "authorship": "Albani & Barbero, 1982"
         },
         {
           "id": "BUCCELLA_SANTACRUZENSIS",
@@ -2945,10 +2947,12 @@
             ],
             "col": [
               "ZJ3B"
-            ]
+            ],
+            "checklistbank": "702690"
           },
           "uuid": "bf315333-697d-5c9-8db-932a481d62469b",
-          "authorityIds": "col:ZJ3B,gbif:7371752"
+          "authorityIds": "col:ZJ3B,gbif:7371752",
+          "authorship": "(Collins, 1958)"
         }
       ]
     },
@@ -3004,10 +3008,54 @@
           "authorityIds": "col:82DKJ,gbif:8156587"
         }
       ]
+    },
+    {
+      "id": "GENUS_AMMONIA",
+      "name": "Ammonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMMONIA_PUSTULOSA_ALBANI_BARBERO_1982",
+          "name": "Ammonia pustulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ammonia",
+          "authorship": "(Albani & Barbero, 1982)",
+          "sourceIds": {
+            "checklistbank": "702295"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "notorotaliidae"
+    },
+    {
+      "id": "GENUS_ELPHIDIUM",
+      "name": "Elphidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ELPHIDIUM_PACIFICUM_COLLINS_1958",
+          "name": "Elphidium pacificum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elphidium",
+          "authorship": "Collins, 1958",
+          "sourceIds": {
+            "checklistbank": "702945"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "notorotaliidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 136,
+  "genusCount": 8,
+  "speciesCount": 138,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

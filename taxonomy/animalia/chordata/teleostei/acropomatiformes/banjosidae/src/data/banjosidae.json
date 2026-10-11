@@ -22,7 +22,8 @@
               "68CD4"
             ]
           },
-          "authorityIds": "col:68CD4"
+          "authorityIds": "col:68CD4",
+          "children": []
         },
         {
           "id": "SP_BANJOS_BANJOS_RICHARDSON_1846",
@@ -45,7 +46,8 @@
             ]
           },
           "uuid": "d83a5959-0858-5a2-9d0-ba2c8779fce41f",
-          "authorityIds": "col:68CCS,gbif:177717179,gbif:2390497,itis:645581"
+          "authorityIds": "col:68CCS,gbif:177717179,gbif:2390497,itis:645581",
+          "children": []
         },
         {
           "id": "SP_BANJOS_ACULEATUS_MATSUNUMA_MOTOMURA_2017",
@@ -61,18 +63,54 @@
               "5WCD4"
             ]
           },
-          "authorityIds": "col:5WCD4"
+          "authorityIds": "col:5WCD4",
+          "children": []
+        },
+        {
+          "id": "SP_BANJOS_TYPUS_BLEEKER_1876",
+          "name": "Banjos typus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Banjos",
+          "authorship": "Bleeker, 1876",
+          "sourceIds": {
+            "checklistbank": "562963"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Banjosidae"
+    },
+    {
+      "id": "GENUS_ANOPLUS",
+      "name": "Anoplus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOPLUS_BANJOS_RICHARDSON_1846",
+          "name": "Anoplus banjos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anoplus",
+          "authorship": "Richardson, 1846",
+          "sourceIds": {
+            "checklistbank": "564694"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "banjosidae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "banjosidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

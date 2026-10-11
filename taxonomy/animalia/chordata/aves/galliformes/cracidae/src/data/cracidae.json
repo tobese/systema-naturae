@@ -79,6 +79,19 @@
           },
           "children": [],
           "uuid": "16c2b942-581f-591-a1b-d59171cf3b3c18"
+        },
+        {
+          "id": "SP_ABURRIA_PIPILE_AUCT",
+          "name": "Aburria pipile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aburria",
+          "authorship": "auct.",
+          "sourceIds": {
+            "checklistbank": "645127"
+          },
+          "children": []
         }
       ]
     },
@@ -365,6 +378,19 @@
           "children": [],
           "lineage": "Crax",
           "uuid": "f2303db8-52f5-501-b95-516bbd9d934656"
+        },
+        {
+          "id": "SP_CRAX_CUMANENSIS_JACQUIN_1784",
+          "name": "Crax cumanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crax",
+          "authorship": "Jacquin, 1784",
+          "sourceIds": {
+            "checklistbank": "780295"
+          },
+          "children": []
         }
       ]
     },
@@ -1741,9 +1767,11 @@
             ],
             "col": [
               "4J6HT"
-            ]
+            ],
+            "checklistbank": "442237"
           },
-          "authorityIds": "col:4J6HT,itis:553811"
+          "authorityIds": "col:4J6HT,itis:553811",
+          "authorship": "(Jacquin, 1784)"
         },
         {
           "id": "PIPILE_JACUTINGA",
@@ -1806,10 +1834,45 @@
           "uuid": "fc56dd05-a727-5ff-871-ca963c66944083"
         }
       ]
+    },
+    {
+      "id": "GENUS_PHASIANUS",
+      "name": "Phasianus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHASIANUS_MOTMOT_LINNAEUS_1766",
+          "name": "Phasianus Motmot",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phasianus",
+          "authorship": "Linnaeus, 1766",
+          "sourceIds": {
+            "checklistbank": "927673"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHASIANUS_MARAIL_STATIUS_M_LLER_1776",
+          "name": "Phasianus Marail",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phasianus",
+          "authorship": "Statius Müller, 1776",
+          "sourceIds": {
+            "checklistbank": "927674"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cracidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 70,
+  "genusCount": 13,
+  "speciesCount": 74,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

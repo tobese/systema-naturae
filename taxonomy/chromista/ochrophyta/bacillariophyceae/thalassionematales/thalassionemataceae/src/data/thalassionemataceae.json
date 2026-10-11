@@ -272,10 +272,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7535636
+            "gbif": 7535636,
+            "checklistbank": "935980"
           },
           "uuid": "f0b6301c-1baa-5cd-adb-35c9a7b175d90c",
-          "authorityIds": "gbif:7535636"
+          "authorityIds": "gbif:7535636",
+          "authorship": "Akiba, 1982"
         },
         {
           "id": "THALASSIONEMA_SYNEDRIFORME",
@@ -341,6 +343,18 @@
           },
           "children": [],
           "uuid": "549ed224-b30c-532-862-fa5ba9ac8f44ee"
+        },
+        {
+          "id": "SP_THALASSIONEMA_NITZSCHIODES",
+          "name": "Thalassionema nitzschiodes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassionema",
+          "sourceIds": {
+            "checklistbank": "697601"
+          },
+          "children": []
         }
       ]
     },
@@ -457,10 +471,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7348789
+            "gbif": 7348789,
+            "checklistbank": "697605"
           },
           "uuid": "13d4c436-f07f-5d6-86c-f13175f14e7b18",
-          "authorityIds": "gbif:7348789"
+          "authorityIds": "gbif:7348789",
+          "authorship": "Castracane, 1886"
         },
         {
           "id": "THALASSIOTHRIX_FALLAX",
@@ -550,7 +566,8 @@
             ],
             "itis": [
               "573681"
-            ]
+            ],
+            "checklistbank": "811001"
           },
           "uuid": "0c8ca7c1-8639-5fe-9fc-30d8e5a187d980",
           "authorityIds": "gbif:7392633,itis:573681"
@@ -593,7 +610,8 @@
             ],
             "itis": [
               "3134"
-            ]
+            ],
+            "checklistbank": "810998"
           },
           "uuid": "835a0a49-274e-56c-aba-ed0e530dc9d262",
           "authorityIds": "gbif:8367485,itis:3134"
@@ -790,7 +808,8 @@
           "sourceIds": {
             "itis": [
               "3132"
-            ]
+            ],
+            "checklistbank": "810997"
           },
           "authorityIds": "itis:3132"
         },
@@ -807,9 +826,23 @@
           "sourceIds": {
             "itis": [
               "3133"
-            ]
+            ],
+            "checklistbank": "655068"
           },
           "authorityIds": "itis:3133"
+        },
+        {
+          "id": "SP_THALASSIOTHRIX_NITZSCHIOIDES_GRUNOW_GRUNOW_1881",
+          "name": "Thalassiothrix nitzschioides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassiothrix",
+          "authorship": "(Grunow) Grunow, 1881",
+          "sourceIds": {
+            "checklistbank": "697607"
+          },
+          "children": []
         }
       ]
     },
@@ -912,10 +945,102 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thalassionemataceae"
+    },
+    {
+      "id": "GENUS_ASTERIONELLA",
+      "name": "Asterionella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTERIONELLA_FRAUENFELDII_GRUNOW_1863",
+          "name": "Asterionella frauenfeldii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asterionella",
+          "authorship": "Grunow, 1863",
+          "sourceIds": {
+            "checklistbank": "688650"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTERIONELLA_MEDITERRANEA_CUPP_R_MARGALEF",
+          "name": "Asterionella mediterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asterionella",
+          "authorship": "(Cupp) R.Margalef",
+          "sourceIds": {
+            "checklistbank": "1010622"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassionemataceae"
+    },
+    {
+      "id": "GENUS_SYNEDRA",
+      "name": "Synedra",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYNEDRA_NITZSCHIOIDES_GRUNOW_1862",
+          "name": "Synedra nitzschioides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synedra",
+          "authorship": "Grunow, 1862",
+          "sourceIds": {
+            "checklistbank": "697606"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYNEDRA_THALASSIOTHRIX_CLEVE_1873",
+          "name": "Synedra thalassiothrix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synedra",
+          "authorship": "Cleve, 1873",
+          "sourceIds": {
+            "checklistbank": "810999"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassionemataceae"
+    },
+    {
+      "id": "GENUS_SPINIGERA",
+      "name": "Spinigera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPINIGERA_BACILLARIS_HEIDEN_1928",
+          "name": "Spinigera bacillaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spinigera",
+          "authorship": "Heiden, 1928",
+          "sourceIds": {
+            "checklistbank": "956800"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassionemataceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 47,
+  "genusCount": 7,
+  "speciesCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

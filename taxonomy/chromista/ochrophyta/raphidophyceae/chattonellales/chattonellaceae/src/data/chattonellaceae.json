@@ -51,11 +51,13 @@
             ],
             "itis": [
               "1905"
-            ]
+            ],
+            "checklistbank": "955585"
           },
           "uuid": "00d675f0-c4bc-5ec-bb1-88d3d7fd2e76ee",
           "authorityIds": "gbif:3194247,itis:1905",
-          "children": []
+          "children": [],
+          "authorship": "N.Carter, 1937"
         },
         {
           "id": "OLISTHODISCUS_MAGNUS",
@@ -135,11 +137,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3194429
+            "gbif": 3194429,
+            "checklistbank": "647714"
           },
           "uuid": "26fe6a7d-7839-5be-98f-c419997a5bf9fc",
           "authorityIds": "gbif:3194429",
-          "children": []
+          "children": [],
+          "authorship": "S.Toriumi & H.Takano, 1973"
         }
       ]
     },
@@ -164,11 +168,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 5422039
+            "gbif": 5422039,
+            "checklistbank": "791882"
           },
           "uuid": "698f16eb-c6e1-53c-8f3-c7fb1aa6c6330a",
           "authorityIds": "gbif:5422039",
-          "children": []
+          "children": [],
+          "authorship": "(Subrahmanyan) Hara & Chihara, 1982"
         },
         {
           "id": "CHATTONELLA_SUBSALSA",
@@ -206,6 +212,32 @@
           },
           "children": [],
           "uuid": "e770cf9b-4a8f-5a2-a34-719f330f805a42"
+        },
+        {
+          "id": "SP_CHATTONELLA_JAPONICA_S_TORIUMI_H_TAKANO_LOEBLICH_III_K_E_FINE_1977",
+          "name": "Chattonella japonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chattonella",
+          "authorship": "(S.Toriumi & H.Takano) Loeblich III & K.E.Fine, 1977",
+          "sourceIds": {
+            "checklistbank": "1006126"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHATTONELLA_AKASHIWO_Y_HADA_LOEBLICH_III_1979",
+          "name": "Chattonella akashiwo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chattonella",
+          "authorship": "(Y.Hada) Loeblich III, 1979",
+          "sourceIds": {
+            "checklistbank": "1006361"
+          },
+          "children": []
         }
       ]
     },
@@ -234,12 +266,69 @@
           "uuid": "90d6ff43-6beb-512-9cd-0ee4d912a41d17",
           "authorityIds": "gbif:7882649",
           "children": []
+        },
+        {
+          "id": "SP_ENTOMOSIGMA_AKASHIWO_Y_HADA_1967",
+          "name": "Entomosigma akashiwo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomosigma",
+          "authorship": "Y.Hada, 1967",
+          "sourceIds": {
+            "checklistbank": "678542"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_HORNELLIA",
+      "name": "Hornellia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HORNELLIA_MARINA_SUBRAHMANYAN_1954",
+          "name": "Hornellia marina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hornellia",
+          "authorship": "Subrahmanyan, 1954",
+          "sourceIds": {
+            "checklistbank": "1004245"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chattonellaceae"
+    },
+    {
+      "id": "GENUS_HEMIEUTREPTIA",
+      "name": "Hemieutreptia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEMIEUTREPTIA_ANTIQUA_Y_HADA_1974",
+          "name": "Hemieutreptia antiqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemieutreptia",
+          "authorship": "Y.Hada, 1974",
+          "sourceIds": {
+            "checklistbank": "1004250"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chattonellaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 9,
+  "genusCount": 7,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

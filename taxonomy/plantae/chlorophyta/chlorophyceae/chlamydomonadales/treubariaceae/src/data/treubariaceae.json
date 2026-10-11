@@ -40,7 +40,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "47a9c62c-c046-53b-925-0270d37570690d"
+          "uuid": "47a9c62c-c046-53b-925-0270d37570690d",
+          "authorship": "(G.M.Smith) Korshikov, 1953",
+          "sourceIds": {
+            "checklistbank": "75104"
+          }
         },
         {
           "id": "SP_TREUBARIA_QUADRISPINA",
@@ -85,7 +89,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "21cf785a-40de-5dd-a11-02c2782bd3cd68"
+          "uuid": "21cf785a-40de-5dd-a11-02c2782bd3cd68",
+          "authorship": "(Schröder) Fott & Kovácik, 1975",
+          "sourceIds": {
+            "checklistbank": "653721"
+          }
         },
         {
           "id": "SP_TREUBARIA_SETIGERA",
@@ -100,7 +108,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "d1f0c093-8abd-54b-aad-dff412054d89fd"
+          "uuid": "d1f0c093-8abd-54b-aad-dff412054d89fd",
+          "authorship": "(W.Archer) G.M.Smith, 1933",
+          "sourceIds": {
+            "checklistbank": "75105"
+          }
         },
         {
           "id": "SP_TREUBARIA_TRIAPPENDICULA",
@@ -112,7 +124,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d21bbb22-2f0f-529-9cb-fcb2b3d976a04e"
+          "uuid": "d21bbb22-2f0f-529-9cb-fcb2b3d976a04e",
+          "authorship": "C.Bernard, 1908",
+          "sourceIds": {
+            "checklistbank": "75106"
+          }
         },
         {
           "id": "SP_TREUBARIA_TRIAPPENDICULATA",
@@ -155,6 +171,32 @@
           "lineage": "Treubaria",
           "children": [],
           "uuid": "3178cc81-4ddb-582-9c1-d790141afde063"
+        },
+        {
+          "id": "SP_TREUBARIA_VARIA_TIFFANY_AHLSTROM_1931",
+          "name": "Treubaria varia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Treubaria",
+          "authorship": "Tiffany & Ahlstrom, 1931",
+          "sourceIds": {
+            "checklistbank": "75107"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TREUBARIA_LIMNETICA_G_M_SMITH_FOTT_KOV_CIK_1975",
+          "name": "Treubaria limnetica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Treubaria",
+          "authorship": "(G.M.Smith) Fott & Kovácik, 1975",
+          "sourceIds": {
+            "checklistbank": "697132"
+          },
+          "children": []
         }
       ]
     },
@@ -179,9 +221,11 @@
           "sourceIds": {
             "itis": [
               "6337"
-            ]
+            ],
+            "checklistbank": "653551"
           },
-          "authorityIds": "itis:6337"
+          "authorityIds": "itis:6337",
+          "authorship": "G.M.Smith, 1920"
         }
       ]
     },
@@ -205,7 +249,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "c6b88ba0-31b5-54e-afc-a287854d5e2467"
+          "uuid": "c6b88ba0-31b5-54e-afc-a287854d5e2467",
+          "authorship": "Korshikov, 1953",
+          "sourceIds": {
+            "checklistbank": "1049348"
+          }
         },
         {
           "id": "SP_DESMATRACTUM_INDUTUM",
@@ -244,10 +292,98 @@
           "uuid": "e55ab0ed-69c0-584-ab4-316d139edab5cd"
         }
       ]
+    },
+    {
+      "id": "GENUS_POLYEDRIUM",
+      "name": "Polyedrium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POLYEDRIUM_SCHMIDLEI_SCHR_DER_1898",
+          "name": "Polyedrium schmidlei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polyedrium",
+          "authorship": "Schröder, 1898",
+          "sourceIds": {
+            "checklistbank": "697130"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "treubariaceae"
+    },
+    {
+      "id": "GENUS_TETRAEDRON",
+      "name": "Tetraedron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TETRAEDRON_SCHMIDLEI_SCHR_DER_LEMMERM",
+          "name": "Tetraedron schmidlei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetraedron",
+          "authorship": "(Schröder) Lemmerm.",
+          "sourceIds": {
+            "checklistbank": "697131"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "treubariaceae"
+    },
+    {
+      "id": "GENUS_TETRAPEDIA",
+      "name": "Tetrapedia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TETRAPEDIA_SETIGERA_W_ARCHER_1872",
+          "name": "Tetrapedia setigera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetrapedia",
+          "authorship": "W.Archer, 1872",
+          "sourceIds": {
+            "checklistbank": "933709"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "treubariaceae"
+    },
+    {
+      "id": "GENUS_BORGEA",
+      "name": "Borgea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BORGEA_PLANCTONICA_G_M_SMITH_1922",
+          "name": "Borgea planctonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Borgea",
+          "authorship": "G.M.Smith, 1922",
+          "sourceIds": {
+            "checklistbank": "965514"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "treubariaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 14,
+  "genusCount": 7,
+  "speciesCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

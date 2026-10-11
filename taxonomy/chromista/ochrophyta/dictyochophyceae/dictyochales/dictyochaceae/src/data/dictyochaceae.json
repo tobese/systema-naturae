@@ -253,6 +253,32 @@
           },
           "uuid": "36a5613e-a83d-51a-92e-05b8ee2f0b6619",
           "authorityIds": "gbif:5422105"
+        },
+        {
+          "id": "SP_STEPHANOCHA_OCTONARIA_EHRENBERG_K_MCCARTNEY_R_W_JORDAN_2015",
+          "name": "Stephanocha octonaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanocha",
+          "authorship": "(Ehrenberg) K.McCartney & R.W.Jordan, 2015",
+          "sourceIds": {
+            "checklistbank": "955575"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STEPHANOCHA_SPECULUM_EHRENBERG_K_MCCARTNEY_R_W_JORDAN_2015",
+          "name": "Stephanocha speculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanocha",
+          "authorship": "(Ehrenberg) K.McCartney & R.W.Jordan, 2015",
+          "sourceIds": {
+            "checklistbank": "1005468"
+          },
+          "children": []
         }
       ]
     },
@@ -338,10 +364,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 5422174
+            "gbif": 5422174,
+            "checklistbank": "791870"
           },
           "uuid": "75f65109-f6ec-50b-b9c-e2e63818f7e3c4",
-          "authorityIds": "gbif:5422174"
+          "authorityIds": "gbif:5422174",
+          "authorship": "Ehrenberg, 1840"
         },
         {
           "id": "DICTYOCHA_CRUZ",
@@ -400,7 +428,8 @@
             ],
             "itis": [
               "1805"
-            ]
+            ],
+            "checklistbank": "727480"
           },
           "uuid": "430362f8-6846-51f-a69-466abc492aa7af",
           "authorityIds": "gbif:5422243,itis:1805"
@@ -440,7 +469,8 @@
             ],
             "itis": [
               "615931"
-            ]
+            ],
+            "checklistbank": "955572"
           },
           "uuid": "7c7dae72-53a8-54a-897-96e42c884ddcad",
           "authorityIds": "gbif:5422284,itis:615931"
@@ -481,7 +511,8 @@
           "sourceIds": {
             "itis": [
               "615928"
-            ]
+            ],
+            "checklistbank": "791872"
           },
           "authorityIds": "itis:615928"
         }
@@ -552,10 +583,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 5422283
+            "gbif": 5422283,
+            "checklistbank": "955571"
           },
           "uuid": "45f69940-89eb-5b3-b38-3151b0f5ec482f",
-          "authorityIds": "gbif:5422283"
+          "authorityIds": "gbif:5422283",
+          "authorship": "(Ehrenberg) Hovasse, 1946"
         },
         {
           "id": "OCTACTIS_SPECULUM",
@@ -571,10 +604,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 10478115
+            "gbif": 10478115,
+            "checklistbank": "1005467"
           },
           "uuid": "d17ab9eb-af85-583-a77-6985daf8d619b4",
-          "authorityIds": "gbif:10478115"
+          "authorityIds": "gbif:10478115",
+          "authorship": "(Ehrenberg) F.H.Chang, J.M.Grieve & J.E.Sutherland, 2017"
         }
       ]
     },
@@ -599,10 +634,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7433432
+            "gbif": 7433432,
+            "checklistbank": "956952"
           },
           "uuid": "fb257829-cb99-585-a90-5e72786e940f1a",
-          "authorityIds": "gbif:7433432"
+          "authorityIds": "gbif:7433432",
+          "authorship": "(Y.Hara & Chihara) F.H.Chang, 2012"
         }
       ]
     },
@@ -755,6 +792,19 @@
             ]
           },
           "authorityIds": "col:36XCJ,itis:1812,wfo:wfo-0000136544"
+        },
+        {
+          "id": "SP_DISTEPHANUS_SPECULUM_EHRENBERG_HAECKEL_1887",
+          "name": "Distephanus speculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Distephanus",
+          "authorship": "(Ehrenberg) Haeckel, 1887",
+          "sourceIds": {
+            "checklistbank": "727701"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -802,10 +852,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dictyochaceae"
+    },
+    {
+      "id": "GENUS_CANNOPILUS",
+      "name": "Cannopilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANNOPILUS_CALYPTRA_HAECKEL_1887",
+          "name": "Cannopilus calyptra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cannopilus",
+          "authorship": "Haeckel, 1887",
+          "sourceIds": {
+            "checklistbank": "791874"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dictyochaceae"
+    },
+    {
+      "id": "GENUS_CHATTONELLA",
+      "name": "Chattonella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHATTONELLA_GLOBOSA_Y_HARA_M_CHIHARA_1994",
+          "name": "Chattonella globosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chattonella",
+          "authorship": "Y.Hara & M.Chihara, 1994",
+          "sourceIds": {
+            "checklistbank": "956953"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dictyochaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 37,
+  "genusCount": 15,
+  "speciesCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -87,9 +87,11 @@
             ],
             "itis": [
               "203312"
-            ]
+            ],
+            "checklistbank": "781076"
           },
-          "authorityIds": "col:6NPTV,itis:203312"
+          "authorityIds": "col:6NPTV,itis:203312",
+          "authorship": "(Risso, 1826)"
         },
         {
           "id": "SP_LACAZELLA_NANA_COOPER_1988",
@@ -377,6 +379,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5f0cf85d-a4ab-576-99c-03ef56e42e6c01"
+        },
+        {
+          "id": "SP_THECIDEA_MEDITERRANEA_RISSO_1826",
+          "name": "Thecidea mediterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thecidea",
+          "authorship": "Risso, 1826",
+          "sourceIds": {
+            "checklistbank": "844563"
+          },
+          "children": []
         }
       ]
     },
@@ -563,10 +578,54 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Thecideidae"
+    },
+    {
+      "id": "GENUS_THECIDIUM",
+      "name": "Thecidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THECIDIUM_MEDITERRANEUM_RISSO_1826",
+          "name": "Thecidium mediterraneum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thecidium",
+          "authorship": "(Risso, 1826)",
+          "sourceIds": {
+            "checklistbank": "844565"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecideidae"
+    },
+    {
+      "id": "GENUS_TEREBRATULA",
+      "name": "Terebratula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEREBRATULA_MEDITERRANEA_RISSO_1826",
+          "name": "Terebratula mediterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratula",
+          "authorship": "(Risso, 1826)",
+          "sourceIds": {
+            "checklistbank": "844566"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecideidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 26,
+  "genusCount": 15,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

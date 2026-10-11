@@ -44,7 +44,8 @@
             ],
             "itis": [
               "1221705"
-            ]
+            ],
+            "checklistbank": "645123"
           },
           "authorityIds": "col:C49RQ,itis:1221705",
           "commonName": "Bahia hairy dwarf porcupine"
@@ -85,7 +86,8 @@
             ],
             "col": [
               "WTYV"
-            ]
+            ],
+            "checklistbank": "443774"
           },
           "authorityIds": "col:WTYV,itis:584694",
           "commonName": "Brazilian Porcupine"
@@ -337,7 +339,11 @@
           "children": [],
           "lineage": "Coendou",
           "uuid": "fdbfbb9a-381b-507-8bf-9045e0c1a722fa",
-          "commonName": "Amazonian long-tailed porcupine"
+          "commonName": "Amazonian long-tailed porcupine",
+          "authorship": "Daudin, 1802",
+          "sourceIds": {
+            "checklistbank": "1017792"
+          }
         },
         {
           "id": "SP_COENDOU_VOSSI",
@@ -433,13 +439,48 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Erethizontidae"
+    },
+    {
+      "id": "GENUS_SPHIGGURUS",
+      "name": "Sphiggurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHIGGURUS_INSIDIOSUS_P_P",
+          "name": "Sphiggurus insidiosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphiggurus",
+          "authorship": "p.p.",
+          "sourceIds": {
+            "checklistbank": "443775"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHIGGURUS_MELANURUS_WAGNER_1842",
+          "name": "Sphiggurus melanurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphiggurus",
+          "authorship": "(Wagner, 1842)",
+          "sourceIds": {
+            "checklistbank": "645121"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "erethizontidae"
     }
   ],
-  "speciesCount": 22,
+  "speciesCount": 24,
   "appSlug": "erethizontidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

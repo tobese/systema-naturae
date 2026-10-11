@@ -101,9 +101,11 @@
           "sourceIds": {
             "itis": [
               "5542"
-            ]
+            ],
+            "checklistbank": "73655"
           },
-          "authorityIds": "itis:5542"
+          "authorityIds": "itis:5542",
+          "authorship": "(P.A.Dang.) Francé, 1897"
         },
         {
           "id": "SP_CHLOROGONIUM_EUCHLORUM",
@@ -731,7 +733,8 @@
           "sourceIds": {
             "itis": [
               "5607"
-            ]
+            ],
+            "checklistbank": "814102"
           },
           "authorityIds": "itis:5607"
         },
@@ -956,10 +959,111 @@
           "uuid": "9351a06b-4f7b-587-89c-28c8f2b7e532ff"
         }
       ]
+    },
+    {
+      "id": "GENUS_SPHAERELLA",
+      "name": "Sphaerella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAERELLA_PLUVIALIS_FLOTOW_WITTROCK",
+          "name": "Sphaerella pluvialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerella",
+          "authorship": "(Flotow) Wittrock",
+          "sourceIds": {
+            "checklistbank": "814099"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHAERELLA_LACUSTRIS_GIROD_CHANTRANS_WITTROCK",
+          "name": "Sphaerella lacustris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerella",
+          "authorship": "(Girod-Chantrans) Wittrock",
+          "sourceIds": {
+            "checklistbank": "814101"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haematococcaceae"
+    },
+    {
+      "id": "GENUS_VOLVOX",
+      "name": "Volvox",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VOLVOX_LACUSTRIS_GIROD_CHANTRANS_1802",
+          "name": "Volvox lacustris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Volvox",
+          "authorship": "Girod-Chantrans, 1802",
+          "sourceIds": {
+            "checklistbank": "814100"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haematococcaceae"
+    },
+    {
+      "id": "GENUS_CHLAMYDOMONAS",
+      "name": "Chlamydomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHLAMYDOMONAS_ELONGATA_WILLE",
+          "name": "Chlamydomonas elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chlamydomonas",
+          "authorship": "Wille",
+          "sourceIds": {
+            "checklistbank": "850823"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haematococcaceae"
+    },
+    {
+      "id": "GENUS_CERCIDIUM",
+      "name": "Cercidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CERCIDIUM_ELONGATUM_P_A_DANG_1888",
+          "name": "Cercidium elongatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cercidium",
+          "authorship": "P.A.Dang., 1888",
+          "sourceIds": {
+            "checklistbank": "850824"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haematococcaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 68,
+  "genusCount": 11,
+  "speciesCount": 73,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

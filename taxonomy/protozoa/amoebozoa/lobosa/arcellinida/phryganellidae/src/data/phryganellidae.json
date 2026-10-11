@@ -22,10 +22,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10860208
+            "gbif": 10860208,
+            "checklistbank": "958475"
           },
           "uuid": "8c765e13-1889-5c4-9fd-14a776c0023f83",
-          "authorityIds": "gbif:10860208"
+          "authorityIds": "gbif:10860208",
+          "authorship": "(Hertwig & Lesser, 1874) Hopkinson, 1909",
+          "children": []
         },
         {
           "id": "PHRYGANELLA_MARINUS",
@@ -41,7 +44,8 @@
             "gbif": 5730666
           },
           "uuid": "2e10f33c-aaf1-5db-bdf-aa08159df02faf",
-          "authorityIds": "gbif:5730666"
+          "authorityIds": "gbif:5730666",
+          "children": []
         },
         {
           "id": "PHRYGANELLA_PARADOXA",
@@ -54,10 +58,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10830821
+            "gbif": 10830821,
+            "checklistbank": "921927"
           },
           "uuid": "2208a3bc-806a-517-946-d92cac25f262d7",
-          "authorityIds": "gbif:10830821"
+          "authorityIds": "gbif:10830821",
+          "authorship": "Penard, 1902",
+          "children": []
         },
         {
           "id": "PHRYGANELLA_PARADOXICA",
@@ -78,9 +85,45 @@
             ]
           },
           "uuid": "b38abb87-adc5-56c-aac-83c283d64a6393",
-          "authorityIds": "gbif:5425239,itis:43981"
+          "authorityIds": "gbif:5425239,itis:43981",
+          "children": []
+        },
+        {
+          "id": "SP_PHRYGANELLA_NIDULUS_PENARD_1902",
+          "name": "Phryganella nidulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phryganella",
+          "authorship": "Penard, 1902",
+          "sourceIds": {
+            "checklistbank": "1037879"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DIFFLUGIA",
+      "name": "Difflugia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIFFLUGIA_ACROPODIA_HERTWIG_LESSER_1874",
+          "name": "Difflugia acropodia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Difflugia",
+          "authorship": "Hertwig & Lesser, 1874",
+          "sourceIds": {
+            "checklistbank": "958479"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phryganellidae"
     }
   ],
   "sourceIds": {
@@ -91,5 +134,7 @@
       "orderKey": 760,
       "familyKey": 2168
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 6
 }

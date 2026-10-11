@@ -26,7 +26,8 @@
               "55ZHN"
             ]
           },
-          "authorityIds": "col:55ZHN"
+          "authorityIds": "col:55ZHN",
+          "children": []
         },
         {
           "id": "SP_THALASSOCYON_TUI_DELL_1967",
@@ -45,7 +46,8 @@
               "55ZHP"
             ]
           },
-          "authorityIds": "col:55ZHP"
+          "authorityIds": "col:55ZHP",
+          "children": []
         },
         {
           "id": "SP_THALASSOCYON_WARENI_F_RIEDEL_2000",
@@ -64,7 +66,8 @@
               "55ZHQ"
             ]
           },
-          "authorityIds": "col:55ZHQ"
+          "authorityIds": "col:55ZHQ",
+          "children": []
         }
       ]
     },
@@ -88,9 +91,12 @@
           "sourceIds": {
             "col": [
               "36YF2"
-            ]
+            ],
+            "checklistbank": "592811"
           },
-          "authorityIds": "col:36YF2"
+          "authorityIds": "col:36YF2",
+          "authorship": "(Beu, 1978)",
+          "children": []
         },
         {
           "id": "SP_DISTORSIONELLA_PSEUDAPHERA_BEU_1998",
@@ -109,9 +115,67 @@
               "36YF3"
             ]
           },
-          "authorityIds": "col:36YF3"
+          "authorityIds": "col:36YF3",
+          "children": []
+        },
+        {
+          "id": "SP_DISTORSIONELLA_BEUI_F_RIEDEL_2000",
+          "name": "Distorsionella beui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Distorsionella",
+          "authorship": "F. Riedel, 2000",
+          "sourceIds": {
+            "checklistbank": "677165"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PERSONOPSIS",
+      "name": "Personopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERSONOPSIS_EDNAFARINASI_PARTH_2006",
+          "name": "Personopsis ednafarinasi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Personopsis",
+          "authorship": "Parth, 2006",
+          "sourceIds": {
+            "checklistbank": "677164"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassocyonidae"
+    },
+    {
+      "id": "GENUS_DISTORSIO",
+      "name": "Distorsio",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISTORSIO_LEWISI_BEU_1978",
+          "name": "Distorsio lewisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Distorsio",
+          "authorship": "Beu, 1978",
+          "sourceIds": {
+            "checklistbank": "1045407"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassocyonidae"
     }
   ],
   "sourceIds": {
@@ -122,5 +186,7 @@
       "orderKey": 7390893,
       "familyKey": 6491445
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 8
 }

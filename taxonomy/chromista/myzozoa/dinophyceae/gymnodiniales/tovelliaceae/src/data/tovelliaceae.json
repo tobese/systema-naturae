@@ -67,11 +67,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 7419315
+            "gbif": 7419315,
+            "checklistbank": "369678"
           },
           "children": [],
           "uuid": "c1dfa569-dc4b-55c-878-1b31b3b21bc130",
-          "authorityIds": "gbif:7419315"
+          "authorityIds": "gbif:7419315",
+          "authorship": "(Anissimova) Fott, 1957"
         },
         {
           "id": "KATODINIUM_GALEATUM",
@@ -353,6 +355,32 @@
           "children": [],
           "uuid": "c79d7b00-f673-505-a51-6c061c7db30cd2",
           "authorityIds": "gbif:7828480,itis:10112"
+        },
+        {
+          "id": "SP_KATODINIUM_CRASSIFILUM_SCHILLER_LOEBLICH_III_1965",
+          "name": "Katodinium crassifilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Katodinium",
+          "authorship": "(Schiller) Loeblich III, 1965",
+          "sourceIds": {
+            "checklistbank": "686098"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KATODINIUM_AUSTRIACUM_SCHILLER_LOEBLICH_III_1965",
+          "name": "Katodinium austriacum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Katodinium",
+          "authorship": "(Schiller) Loeblich III, 1965",
+          "sourceIds": {
+            "checklistbank": "686100"
+          },
+          "children": []
         }
       ]
     },
@@ -745,10 +773,119 @@
           "uuid": "7c259e11-02f5-5cf-906-615554eaa3ad81"
         }
       ]
+    },
+    {
+      "id": "GENUS_GYMNODINIUM",
+      "name": "Gymnodinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GYMNODINIUM_FUNGIFORME_SCHILLER_1933",
+          "name": "Gymnodinium fungiforme",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnodinium",
+          "authorship": "Schiller, 1933",
+          "sourceIds": {
+            "checklistbank": "686093"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYMNODINIUM_BLAX_HARRIS_1939",
+          "name": "Gymnodinium blax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnodinium",
+          "authorship": "Harris, 1939",
+          "sourceIds": {
+            "checklistbank": "686095"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYMNODINIUM_ASYMMETRICUM_MASSART_1920",
+          "name": "Gymnodinium asymmetricum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnodinium",
+          "authorship": "Massart, 1920",
+          "sourceIds": {
+            "checklistbank": "850905"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tovelliaceae"
+    },
+    {
+      "id": "GENUS_MASSARTIA",
+      "name": "Massartia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MASSARTIA_FUNGIFORME_SCHILLER_1955",
+          "name": "Massartia fungiforme",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Massartia",
+          "authorship": "Schiller, 1955",
+          "sourceIds": {
+            "checklistbank": "686096"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MASSARTIA_CRASSIFILUM_SCHILLER_1954",
+          "name": "Massartia crassifilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Massartia",
+          "authorship": "Schiller, 1954",
+          "sourceIds": {
+            "checklistbank": "686097"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MASSARTIA_AUSTRIACUM_SCHILLER_1955",
+          "name": "Massartia austriacum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Massartia",
+          "authorship": "Schiller, 1955",
+          "sourceIds": {
+            "checklistbank": "686099"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MASSARTIA_ASYMMETRICA_SCHILLER_1933",
+          "name": "Massartia asymmetrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Massartia",
+          "authorship": "Schiller, 1933",
+          "sourceIds": {
+            "checklistbank": "850906"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tovelliaceae"
     }
   ],
-  "speciesCount": 34,
-  "genusCount": 6,
+  "speciesCount": 43,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

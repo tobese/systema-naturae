@@ -98,11 +98,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7918109
+            "gbif": 7918109,
+            "checklistbank": "921801"
           },
           "uuid": "947d098b-cfec-55d-991-4dd6efdf2a3e71",
           "authorityIds": "gbif:7918109",
-          "children": []
+          "children": [],
+          "authorship": "(Schütt) J.Schiller, 1933"
         },
         {
           "id": "WARNOWIA_MITSUII",
@@ -497,11 +499,13 @@
             ],
             "itis": [
               "573529"
-            ]
+            ],
+            "checklistbank": "953635"
           },
           "uuid": "3fe93289-66b8-567-8b0-b501e81579ae14",
           "authorityIds": "gbif:7650497,itis:573529",
-          "children": []
+          "children": [],
+          "authorship": "(Hertwig) P.C.Silva, 1960"
         }
       ]
     },
@@ -573,17 +577,85 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8115508
+            "gbif": 8115508,
+            "checklistbank": "957644"
           },
           "uuid": "b6efe626-16b7-5a6-8bc-8764c2ff67b232",
           "authorityIds": "gbif:8115508",
-          "children": []
+          "children": [],
+          "authorship": "(Greuet) Loeblich III, 1980"
         }
       ]
+    },
+    {
+      "id": "GENUS_POUCHETIA",
+      "name": "Pouchetia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POUCHETIA_JUNO_SCH_TT_1895",
+          "name": "Pouchetia juno",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pouchetia",
+          "authorship": "Schütt, 1895",
+          "sourceIds": {
+            "checklistbank": "921802"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "warnowiaceae"
+    },
+    {
+      "id": "GENUS_ERYTHROPSIS",
+      "name": "Erythropsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ERYTHROPSIS_AGILIS_HERTWIG_1884",
+          "name": "Erythropsis agilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Erythropsis",
+          "authorship": "Hertwig, 1884",
+          "sourceIds": {
+            "checklistbank": "953637"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "warnowiaceae"
+    },
+    {
+      "id": "GENUS_LEUCOPSIS",
+      "name": "Leucopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEUCOPSIS_CYLINDRICA_GREUET_1968",
+          "name": "Leucopsis cylindrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leucopsis",
+          "authorship": "Greuet, 1968",
+          "sourceIds": {
+            "checklistbank": "957645"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "warnowiaceae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 24,
+  "genusCount": 9,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

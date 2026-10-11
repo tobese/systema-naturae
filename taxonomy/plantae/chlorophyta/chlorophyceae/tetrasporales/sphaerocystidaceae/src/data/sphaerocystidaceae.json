@@ -52,9 +52,11 @@
           "sourceIds": {
             "itis": [
               "6350"
-            ]
+            ],
+            "checklistbank": "964022"
           },
-          "authorityIds": "itis:6350"
+          "authorityIds": "itis:6350",
+          "authorship": "Borzì, 1883"
         }
       ]
     },
@@ -78,7 +80,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "15ea1819-0092-5cf-a79-59615848be89a9"
+          "uuid": "15ea1819-0092-5cf-a79-59615848be89a9",
+          "authorship": "(Korshikov) Bourr., 1974",
+          "sourceIds": {
+            "checklistbank": "653709"
+          }
         },
         {
           "id": "SP_SPHAEROCYSTIS_SCHROETERI",
@@ -98,9 +104,11 @@
           "sourceIds": {
             "itis": [
               "9170"
-            ]
+            ],
+            "checklistbank": "74873"
           },
-          "authorityIds": "itis:9170"
+          "authorityIds": "itis:9170",
+          "authorship": "Chodat, 1897"
         },
         {
           "id": "SP_SPHAEROCYSTIS_POWERI",
@@ -165,7 +173,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "67952dd3-c51f-5c8-884-c3560a4a675fd7"
+          "uuid": "67952dd3-c51f-5c8-884-c3560a4a675fd7",
+          "authorship": "(Korshikov) P.C.Silva, 1959",
+          "sourceIds": {
+            "checklistbank": "653534"
+          }
         },
         {
           "id": "SP_DICTYOCHLORELLA_GLOBOSA",
@@ -255,10 +267,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaerocystidaceae"
+    },
+    {
+      "id": "GENUS_PALMELLOCYSTIS",
+      "name": "Palmellocystis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALMELLOCYSTIS_PLANCTONICA_KORSHIKOV",
+          "name": "Palmellocystis planctonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palmellocystis",
+          "authorship": "Korshikov",
+          "sourceIds": {
+            "checklistbank": "697428"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerocystidaceae"
+    },
+    {
+      "id": "GENUS_GLOEOCOCCUS",
+      "name": "Gloeococcus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLOEOCOCCUS_SCHROETERI_CHODAT_LEMMERM_1915",
+          "name": "Gloeococcus schroeteri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gloeococcus",
+          "authorship": "(Chodat) Lemmerm., 1915",
+          "sourceIds": {
+            "checklistbank": "703374"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerocystidaceae"
+    },
+    {
+      "id": "GENUS_DICTYOCHLORIS",
+      "name": "Dictyochloris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DICTYOCHLORIS_RENIFORMIS_KORSHIKOV_1953",
+          "name": "Dictyochloris reniformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dictyochloris",
+          "authorship": "Korshikov, 1953",
+          "sourceIds": {
+            "checklistbank": "1010268"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerocystidaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 14,
+  "genusCount": 11,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

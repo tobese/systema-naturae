@@ -25,9 +25,11 @@
           "sourceIds": {
             "col": [
               "477NK"
-            ]
+            ],
+            "checklistbank": "987525"
           },
-          "authorityIds": "col:477NK"
+          "authorityIds": "col:477NK",
+          "authorship": "(Michaelsen, 1905)"
         },
         {
           "id": "SP_NESODRILUS_ISOCHAETA_PINDER_BRINKHURST_1997",
@@ -63,9 +65,11 @@
           "sourceIds": {
             "col": [
               "477NM"
-            ]
+            ],
+            "checklistbank": "987324"
           },
-          "authorityIds": "col:477NM"
+          "authorityIds": "col:477NM",
+          "authorship": "(Michaelsen, 1903)"
         },
         {
           "id": "SP_NESODRILUS_SOUTHWELLENSIS_PINDER_BRINKHURST_1997",
@@ -365,7 +369,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Phreodrilus",
-          "uuid": "fb732aad-a56a-5df-9e3-7e5a44bc23c966"
+          "uuid": "fb732aad-a56a-5df-9e3-7e5a44bc23c966",
+          "authorship": "Michaelsen, 1905",
+          "sourceIds": {
+            "checklistbank": "987526"
+          }
         },
         {
           "id": "SP_PHREODRILUS_NIGER_BEDDARD_1894",
@@ -451,6 +459,19 @@
             ]
           },
           "authorityIds": "itis:69067"
+        },
+        {
+          "id": "SP_PHREODRILUS_KERGUELENENSIS_MICHAELSEN_1903",
+          "name": "Phreodrilus kerguelenensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phreodrilus",
+          "authorship": "Michaelsen, 1903",
+          "sourceIds": {
+            "checklistbank": "987326"
+          },
+          "children": []
         }
       ]
     },
@@ -1218,10 +1239,45 @@
           "authorityIds": "col:5V9PB"
         }
       ]
+    },
+    {
+      "id": "GENUS_HESPERODRILUS",
+      "name": "Hesperodrilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HESPERODRILUS_KERGUELENENSIS_MICHAELSEN_1903",
+          "name": "Hesperodrilus kerguelenensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hesperodrilus",
+          "authorship": "(Michaelsen, 1903)",
+          "sourceIds": {
+            "checklistbank": "987327"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HESPERODRILUS_CROZETENSIS_MICHAELSEN_1905",
+          "name": "Hesperodrilus crozetensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hesperodrilus",
+          "authorship": "(Michaelsen, 1905)",
+          "sourceIds": {
+            "checklistbank": "987527"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phreodrilidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 62,
+  "genusCount": 8,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

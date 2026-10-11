@@ -73,9 +73,11 @@
             ],
             "itis": [
               "559409"
-            ]
+            ],
+            "checklistbank": "441806"
           },
-          "authorityIds": "col:XSGW,itis:559409,wikidata:Q942420"
+          "authorityIds": "col:XSGW,itis:559409,wikidata:Q942420",
+          "authorship": "(Gmelin, 1789)"
         },
         {
           "id": "CONOPOPHAGA_CASTANEICEPS",
@@ -360,10 +362,32 @@
           "commonName": "Black-crowned Antpitta"
         }
       ]
+    },
+    {
+      "id": "GENUS_TURDUS",
+      "name": "Turdus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TURDUS_AURITUS_GMELIN_1789",
+          "name": "Turdus auritus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turdus",
+          "authorship": "Gmelin, 1789",
+          "sourceIds": {
+            "checklistbank": "927813"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conopophagidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 13,
+  "genusCount": 3,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

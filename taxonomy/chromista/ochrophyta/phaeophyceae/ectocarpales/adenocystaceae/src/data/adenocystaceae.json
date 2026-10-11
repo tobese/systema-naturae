@@ -23,10 +23,12 @@
           "sourcedFrom": "inaturalist",
           "children": [],
           "sourceIds": {
-            "gbif": 3198170
+            "gbif": 3198170,
+            "checklistbank": "999603"
           },
           "uuid": "7143045d-4503-54e-b60-f7b0ef8763f507",
-          "authorityIds": "gbif:3198170"
+          "authorityIds": "gbif:3198170",
+          "authorship": "(C.Agardh) Kylin, 1940"
         }
       ]
     },
@@ -49,10 +51,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3199427
+            "gbif": 3199427,
+            "checklistbank": "815493"
           },
           "uuid": "9498a667-b353-55a-ab4-6d5fbd3a42dbfb",
-          "authorityIds": "gbif:3199427"
+          "authorityIds": "gbif:3199427",
+          "authorship": "Skottsberg, 1907"
         }
       ]
     },
@@ -75,10 +79,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3199429
+            "gbif": 3199429,
+            "checklistbank": "999584"
           },
           "uuid": "ef601e8d-249d-54c-a91-e03038216ca3bd",
-          "authorityIds": "gbif:3199429"
+          "authorityIds": "gbif:3199429",
+          "authorship": "J.Agardh, 1859"
         }
       ]
     },
@@ -118,10 +124,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3199431
+            "gbif": 3199431,
+            "checklistbank": "815495"
           },
           "uuid": "e4a25c1e-b9bc-538-922-ec278bf852cd05",
-          "authorityIds": "gbif:3199431"
+          "authorityIds": "gbif:3199431",
+          "authorship": "(Bory) Skottsberg, 1907"
         },
         {
           "id": "SP_ADENOCYSTIS_LONGISSIMA",
@@ -132,12 +140,126 @@
           "lineage": "Adenocystis",
           "children": [],
           "uuid": "3f7b5278-23c4-5e5-85d-4a58e1aba1e58c"
+        },
+        {
+          "id": "SP_ADENOCYSTIS_LESSONII_BORY_J_D_HOOKER_HARVEY_1845",
+          "name": "Adenocystis lessonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adenocystis",
+          "authorship": "(Bory) J.D.Hooker & Harvey, 1845",
+          "sourceIds": {
+            "checklistbank": "815498"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ASPEROCOCCUS",
+      "name": "Asperococcus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASPEROCOCCUS_UTRICULARIS_BORY_1825",
+          "name": "Asperococcus utricularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asperococcus",
+          "authorship": "Bory, 1825",
+          "sourceIds": {
+            "checklistbank": "815496"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASPEROCOCCUS_LESSONII_BORY_1828",
+          "name": "Asperococcus lessonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asperococcus",
+          "authorship": "Bory, 1828",
+          "sourceIds": {
+            "checklistbank": "815499"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "adenocystaceae"
+    },
+    {
+      "id": "GENUS_SCYTOSIPHON",
+      "name": "Scytosiphon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCYTOSIPHON_UTRICULARIS_BORY_TREVISAN_1849",
+          "name": "Scytosiphon utricularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scytosiphon",
+          "authorship": "(Bory) Trevisan, 1849",
+          "sourceIds": {
+            "checklistbank": "815497"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "adenocystaceae"
+    },
+    {
+      "id": "GENUS_CHORDA",
+      "name": "Chorda",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHORDA_LESSONII_BORY_K_TZ_1849",
+          "name": "Chorda lessonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chorda",
+          "authorship": "(Bory) Kütz., 1849",
+          "sourceIds": {
+            "checklistbank": "815500"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "adenocystaceae"
+    },
+    {
+      "id": "GENUS_CHROA",
+      "name": "Chroa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHROA_SACCULIFORMIS_REINSCH_1888",
+          "name": "Chroa sacculiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroa",
+          "authorship": "Reinsch, 1888",
+          "sourceIds": {
+            "checklistbank": "815501"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "adenocystaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 6,
+  "genusCount": 8,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

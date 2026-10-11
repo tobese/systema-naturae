@@ -85,10 +85,12 @@
           "description": "",
           "children": [],
           "sourceIds": {
-            "gbif": 1096071
+            "gbif": 1096071,
+            "checklistbank": "910261"
           },
           "uuid": "ab8655b5-768c-5a6-b52-16f57792d16a32",
-          "authorityIds": "gbif:1096071"
+          "authorityIds": "gbif:1096071",
+          "authorship": "Fauvel, 1903"
         },
         {
           "id": "SP_NOSODENDRON_AUSTRALICUM",
@@ -351,10 +353,12 @@
           ],
           "children": [],
           "sourceIds": {
-            "gbif": 1096003
+            "gbif": 1096003,
+            "checklistbank": "224047"
           },
           "uuid": "20b280d7-5377-5a2-a5a-3fcc6364314d9c",
-          "authorityIds": "gbif:1096003"
+          "authorityIds": "gbif:1096003",
+          "authorship": "(Olivier, 1790)"
         },
         {
           "id": "SP_NOSODENDRON_FIJIENSE",
@@ -816,10 +820,12 @@
           "description": "",
           "children": [],
           "sourceIds": {
-            "gbif": 1096043
+            "gbif": 1096043,
+            "checklistbank": "640063"
           },
           "uuid": "727aed9f-0d52-57b-a74-95696ee9f9885c",
-          "authorityIds": "gbif:1096043"
+          "authorityIds": "gbif:1096043",
+          "authorship": "Chevrolat, 1864"
         },
         {
           "id": "SP_NOSODENDRON_PUNCTULATUM",
@@ -1105,7 +1111,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "nosodendron",
-          "uuid": "5b7df96a-eff7-500-b35-84a00f2f6a42ed"
+          "uuid": "5b7df96a-eff7-500-b35-84a00f2f6a42ed",
+          "authorship": "Háva, 2011",
+          "sourceIds": {
+            "checklistbank": "759906"
+          }
         },
         {
           "id": "SP_NOSODENDRON_TAPAHENSE",
@@ -1214,6 +1224,19 @@
           },
           "children": [],
           "uuid": "33164faf-04ed-5ea-afc-ff98859e129322"
+        },
+        {
+          "id": "SP_NOSODENDRON_CRIBRATUM_FLEUTIAUX_SALL_1890",
+          "name": "Nosodendron cribratum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nosodendron",
+          "authorship": "Fleutiaux & Sallé, 1890",
+          "sourceIds": {
+            "checklistbank": "640064"
+          },
+          "children": []
         }
       ]
     },
@@ -1326,10 +1349,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Nosodendridae"
+    },
+    {
+      "id": "GENUS_BYRRHUS",
+      "name": "Byrrhus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BYRRHUS_FASCICULARIS_OLIVIER_1790",
+          "name": "Byrrhus fascicularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Byrrhus",
+          "authorship": "Olivier, 1790",
+          "sourceIds": {
+            "checklistbank": "801303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nosodendridae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 87,
+  "genusCount": 4,
+  "speciesCount": 89,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

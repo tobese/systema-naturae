@@ -825,9 +825,11 @@
           "sourceIds": {
             "col": [
               "DWKB"
-            ]
+            ],
+            "checklistbank": "987150"
           },
-          "authorityIds": "col:DWKB"
+          "authorityIds": "col:DWKB",
+          "authorship": "(Ikeda, 1904)"
         },
         {
           "id": "SP_ANELASSORHYNCHUS_INDIVISUS",
@@ -1147,7 +1149,8 @@
             ],
             "itis": [
               "155047"
-            ]
+            ],
+            "checklistbank": "891445"
           },
           "authorityIds": "col:GL9T,itis:155047"
         },
@@ -1925,9 +1928,11 @@
           "sourceIds": {
             "col": [
               "7C5FJ"
-            ]
+            ],
+            "checklistbank": "364099"
           },
-          "authorityIds": "col:7C5FJ"
+          "authorityIds": "col:7C5FJ",
+          "authorship": "(Pallas, 1774)"
         },
         {
           "id": "SP_THALASSEMA_VIRIDE_VERRILL_1879",
@@ -2002,6 +2007,45 @@
             ]
           },
           "authorityIds": "itis:705758"
+        },
+        {
+          "id": "SP_THALASSEMA_NEPTUNI_PALLAS_1774",
+          "name": "Thalassema neptuni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassema",
+          "authorship": "Pallas, 1774",
+          "sourceIds": {
+            "checklistbank": "28469"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THALASSEMA_ARHYNCHITE_IKEDA_1924",
+          "name": "Thalassema arhynchite",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassema",
+          "authorship": "Ikeda, 1924",
+          "sourceIds": {
+            "checklistbank": "891446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THALASSEMA_INANSENSE_IKEDA_1904",
+          "name": "Thalassema inansense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassema",
+          "authorship": "Ikeda, 1904",
+          "sourceIds": {
+            "checklistbank": "987151"
+          },
+          "children": []
         }
       ]
     },
@@ -2170,10 +2214,32 @@
           "uuid": "957c7e67-48a6-50c-963-8ec253586ee54d"
         }
       ]
+    },
+    {
+      "id": "GENUS_LUMBRICUS",
+      "name": "Lumbricus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LUMBRICUS_THALASSEMUM_PALLAS_1774",
+          "name": "Lumbricus thalassemum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lumbricus",
+          "authorship": "Pallas, 1774",
+          "sourceIds": {
+            "checklistbank": "553330"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassematidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 100,
+  "genusCount": 9,
+  "speciesCount": 104,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

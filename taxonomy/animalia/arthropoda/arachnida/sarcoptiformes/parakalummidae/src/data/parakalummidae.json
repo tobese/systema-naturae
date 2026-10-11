@@ -58,7 +58,8 @@
           "lineage": "sandenia",
           "authorship": "Wallwork, 1963",
           "sourceIds": {
-            "gbif": 2193305
+            "gbif": 2193305,
+            "checklistbank": "842680"
           },
           "uuid": "979a0c3b-2f22-5f0-874-fe2f71ef250d18",
           "authorityIds": "gbif:2193305",
@@ -1084,13 +1085,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "parakalummidae"
+    },
+    {
+      "id": "GENUS_POROKALUMMA",
+      "name": "Porokalumma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POROKALUMMA_ROTUNDA_WALLWORK_1963",
+          "name": "Porokalumma rotunda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porokalumma",
+          "authorship": "Wallwork, 1963",
+          "sourceIds": {
+            "checklistbank": "842681"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "parakalummidae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 77,
   "appSlug": "parakalummidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

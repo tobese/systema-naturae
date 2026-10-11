@@ -25,7 +25,8 @@
             "gbif": 11218332
           },
           "uuid": "bdb934fa-4584-52d-9fc-2ef0365e24c8cf",
-          "authorityIds": "gbif:11218332"
+          "authorityIds": "gbif:11218332",
+          "children": []
         },
         {
           "id": "PSEUDOPARAMOEBA_PAGEI",
@@ -38,10 +39,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4378441
+            "gbif": 4378441,
+            "checklistbank": "956231"
           },
           "uuid": "75e37c2c-7dfd-58d-807-4fa418d2c00325",
-          "authorityIds": "gbif:4378441"
+          "authorityIds": "gbif:4378441",
+          "authorship": "(Sawer, 1975)",
+          "children": []
         }
       ]
     },
@@ -63,10 +67,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4378446
+            "gbif": 4378446,
+            "checklistbank": "955405"
           },
           "uuid": "a872fb56-f38c-5d0-be6-76f006627c36c2",
-          "authorityIds": "gbif:4378446"
+          "authorityIds": "gbif:4378446",
+          "authorship": "(Page, 1970)",
+          "children": []
         },
         {
           "id": "NEOPARAMOEBA_LONGIPODIA",
@@ -82,7 +89,8 @@
             "gbif": 9602148
           },
           "uuid": "cd98416a-95a3-523-b76-9eefbb7d2effc5",
-          "authorityIds": "gbif:9602148"
+          "authorityIds": "gbif:9602148",
+          "children": []
         },
         {
           "id": "NEOPARAMOEBA_PEMAQUIDENSIS",
@@ -95,10 +103,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4378444
+            "gbif": 4378444,
+            "checklistbank": "955408"
           },
           "uuid": "cca6837e-8aa9-5b6-bc6-c1a3da554f9caa",
-          "authorityIds": "gbif:4378444"
+          "authorityIds": "gbif:4378444",
+          "authorship": "(Page, 1970)",
+          "children": []
         },
         {
           "id": "NEOPARAMOEBA_PERURANS",
@@ -114,7 +125,8 @@
             "gbif": 11280634
           },
           "uuid": "06b56be0-950c-552-9f2-8a096ca2df25eb",
-          "authorityIds": "gbif:11280634"
+          "authorityIds": "gbif:11280634",
+          "children": []
         }
       ]
     },
@@ -139,7 +151,8 @@
             "gbif": 9513803
           },
           "uuid": "d51d21ed-b441-5e6-8dd-f93e1d1d8be463",
-          "authorityIds": "gbif:9513803"
+          "authorityIds": "gbif:9513803",
+          "children": []
         },
         {
           "id": "VEXILLIFERA_ARMATA",
@@ -152,10 +165,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 5730687
+            "gbif": 5730687,
+            "checklistbank": "956941"
           },
           "uuid": "de2d3d8e-adb1-51c-90c-cf064a994dc298",
-          "authorityIds": "gbif:5730687"
+          "authorityIds": "gbif:5730687",
+          "authorship": "Page, 1979",
+          "children": []
         },
         {
           "id": "VEXILLIFERA_KERETI",
@@ -171,7 +187,8 @@
             "gbif": 9257060
           },
           "uuid": "0572be1d-a53b-5f0-b24-b26789f301c59f",
-          "authorityIds": "gbif:9257060"
+          "authorityIds": "gbif:9257060",
+          "children": []
         },
         {
           "id": "VEXILLIFERA_MINUTISSIMA",
@@ -187,7 +204,8 @@
             "gbif": 5730685
           },
           "uuid": "eae21e82-b723-59c-9de-84c43cb4ed7957",
-          "authorityIds": "gbif:5730685"
+          "authorityIds": "gbif:5730685",
+          "children": []
         },
         {
           "id": "VEXILLIFERA_TELMATHALASSA",
@@ -203,9 +221,58 @@
             "gbif": 5730686
           },
           "uuid": "21a54860-8aaa-56b-aea-1378a22752de2c",
-          "authorityIds": "gbif:5730686"
+          "authorityIds": "gbif:5730686",
+          "children": []
+        },
+        {
+          "id": "SP_VEXILLIFERA_PAGEI_SAWYER_1975",
+          "name": "Vexillifera pagei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vexillifera",
+          "authorship": "Sawyer, 1975",
+          "sourceIds": {
+            "checklistbank": "956232"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PARAMOEBA",
+      "name": "Paramoeba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAMOEBA_AESTUARINA_PAGE_1970",
+          "name": "Paramoeba aestuarina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paramoeba",
+          "authorship": "Page, 1970",
+          "sourceIds": {
+            "checklistbank": "955406"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARAMOEBA_PEMAQUIDENSIS_PAGE_1970",
+          "name": "Paramoeba pemaquidensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paramoeba",
+          "authorship": "Page, 1970",
+          "sourceIds": {
+            "checklistbank": "955409"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vexilliferidae"
     }
   ],
   "sourceIds": {
@@ -216,5 +283,7 @@
       "orderKey": 9744751,
       "familyKey": 3236916
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 14
 }

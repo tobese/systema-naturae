@@ -72,10 +72,12 @@
             ],
             "col": [
               "6WS88"
-            ]
+            ],
+            "checklistbank": "797336"
           },
           "uuid": "b084778b-1c1e-584-a5a-fa3c2c238dd1e2",
-          "authorityIds": "col:6WS88,gbif:7889529"
+          "authorityIds": "col:6WS88,gbif:7889529",
+          "authorship": "Cushman & McCulloch, 1948"
         },
         {
           "id": "REUSSELLA_AGUAYOI",
@@ -647,10 +649,12 @@
             ],
             "col": [
               "78RVW"
-            ]
+            ],
+            "checklistbank": "702512"
           },
           "uuid": "e95215b7-94ce-58c-a66-ff27f948a1ed50",
-          "authorityIds": "col:78RVW,gbif:8086616"
+          "authorityIds": "col:78RVW,gbif:8086616",
+          "authorship": "Oki, 1989"
         },
         {
           "id": "REUSSELLA_INSUETA",
@@ -985,10 +989,12 @@
             ],
             "col": [
               "7947W"
-            ]
+            ],
+            "checklistbank": "702535"
           },
           "uuid": "157aa86f-7811-554-bb3-84292e5db0d382",
-          "authorityIds": "col:7947W,gbif:8244361"
+          "authorityIds": "col:7947W,gbif:8244361",
+          "authorship": "Hofker, 1956"
         },
         {
           "id": "REUSSELLA_NUDA",
@@ -1095,10 +1101,12 @@
             ],
             "col": [
               "79488"
-            ]
+            ],
+            "checklistbank": "702495"
           },
           "uuid": "39916546-b700-5e1-803-614c344126e6ee",
-          "authorityIds": "col:79488,gbif:8412507"
+          "authorityIds": "col:79488,gbif:8412507",
+          "authorship": "Cushman & McCulloch, 1948"
         },
         {
           "id": "REUSSELLA_PALEOCENIFORMIS",
@@ -1183,10 +1191,12 @@
             ],
             "col": [
               "6WS7Z"
-            ]
+            ],
+            "checklistbank": "702513"
           },
           "uuid": "51a544ff-65c1-547-830-d06bfee38f4431",
-          "authorityIds": "col:6WS7Z,gbif:7769408"
+          "authorityIds": "col:6WS7Z,gbif:7769408",
+          "authorship": "Cushman, 1945"
         },
         {
           "id": "REUSSELLA_PYRAMIDALIS",
@@ -1337,10 +1347,12 @@
             ],
             "col": [
               "78RVZ"
-            ]
+            ],
+            "checklistbank": "382867"
           },
           "uuid": "ee6b6a8f-3abd-52d-ad4-b8db27850b03c4",
-          "authorityIds": "col:78RVZ,gbif:8334872"
+          "authorityIds": "col:78RVZ,gbif:8334872",
+          "authorship": "(Reuss, 1850)"
         },
         {
           "id": "REUSSELLA_SPURIA",
@@ -1678,6 +1690,32 @@
             ]
           },
           "authorityIds": "col:VPDPW"
+        },
+        {
+          "id": "SP_REUSSELLA_NEAPOLITANA_HOFKER_1956",
+          "name": "Reussella neapolitana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reussella",
+          "authorship": "Hofker, 1956",
+          "sourceIds": {
+            "checklistbank": "703760"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_REUSSELLA_SIMPLEX_CUSHMAN_1929",
+          "name": "Reussella simplex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reussella",
+          "authorship": "(Cushman, 1929)",
+          "sourceIds": {
+            "checklistbank": "703804"
+          },
+          "children": []
         }
       ]
     },
@@ -2483,10 +2521,98 @@
           "authorityIds": "col:8374D,gbif:9808996"
         }
       ]
+    },
+    {
+      "id": "GENUS_VERNEUILINA",
+      "name": "Verneuilina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VERNEUILINA_SPINULOSA_REUSS_1850",
+          "name": "Verneuilina spinulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Verneuilina",
+          "authorship": "Reuss, 1850",
+          "sourceIds": {
+            "checklistbank": "383300"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "reussellidae"
+    },
+    {
+      "id": "GENUS_CHRYSALIDINA",
+      "name": "Chrysalidina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHRYSALIDINA_DIMORPHA_BRADY_1881",
+          "name": "Chrysalidina dimorpha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysalidina",
+          "authorship": "Brady, 1881",
+          "sourceIds": {
+            "checklistbank": "703730"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "reussellidae"
+    },
+    {
+      "id": "GENUS_TRIMOSINA",
+      "name": "Trimosina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIMOSINA_SIMPLEX_CUSHMAN_1929",
+          "name": "Trimosina simplex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trimosina",
+          "authorship": "Cushman, 1929",
+          "sourceIds": {
+            "checklistbank": "703803"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "reussellidae"
+    },
+    {
+      "id": "GENUS_BIFARINA",
+      "name": "Bifarina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BIFARINA_MACKINNONII_MILLETT_1900",
+          "name": "Bifarina mackinnonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bifarina",
+          "authorship": "Millett, 1900",
+          "sourceIds": {
+            "checklistbank": "797258"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "reussellidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 109,
+  "genusCount": 14,
+  "speciesCount": 115,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

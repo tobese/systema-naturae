@@ -137,10 +137,12 @@
             ],
             "col": [
               "73MKC"
-            ]
+            ],
+            "checklistbank": "7017"
           },
           "uuid": "45a41ff3-91f8-5a6-8a2-f36ce13938e2b9",
-          "authorityIds": "col:73MKC,gbif:2265573,wikidata:Q2082167"
+          "authorityIds": "col:73MKC,gbif:2265573,wikidata:Q2082167",
+          "authorship": "Paltschikowa-Osroumowa, 1925"
         },
         {
           "id": "MOERISIA_LYONSI",
@@ -201,6 +203,19 @@
           },
           "uuid": "c3f6881f-46fc-527-930-6576f5006cfb7d",
           "authorityIds": "col:6RMJZ,gbif:2265570,itis:50788,wikidata:Q2465859"
+        },
+        {
+          "id": "SP_MOERISIA_MAEOTICA_OSTROUMOV_1896",
+          "name": "Moerisia maeotica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Moerisia",
+          "authorship": "(Ostroumov, 1896)",
+          "sourceIds": {
+            "checklistbank": "552285"
+          },
+          "children": []
         }
       ]
     },
@@ -238,7 +253,8 @@
             ],
             "itis": [
               "50795"
-            ]
+            ],
+            "checklistbank": "241212"
           },
           "uuid": "fead3438-990e-5b8-88c-c8166b27b8157d",
           "authorityIds": "col:48MYK,gbif:2265576,itis:50795,wikidata:Q3333084"
@@ -326,17 +342,40 @@
           "sourceIds": {
             "itis": [
               "50803"
-            ]
+            ],
+            "checklistbank": "7018"
           },
           "authorityIds": "itis:50803"
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "moerisiidae"
+    },
+    {
+      "id": "GENUS_THAUMANTIAS",
+      "name": "Thaumantias",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAUMANTIAS_MAEOTICA_OSTROUMOFF_1896",
+          "name": "Thaumantias maeotica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thaumantias",
+          "authorship": "Ostroumoff, 1896",
+          "sourceIds": {
+            "checklistbank": "1051146"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "moerisiidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 11,
+  "genusCount": 5,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

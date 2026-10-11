@@ -118,7 +118,8 @@
           "sourceIds": {
             "itis": [
               "180796"
-            ]
+            ],
+            "checklistbank": "653626"
           },
           "authorityIds": "itis:180796"
         },
@@ -136,7 +137,11 @@
             "South America"
           ],
           "children": [],
-          "uuid": "dc138997-c992-55e-99a-bd73ee136857fa"
+          "uuid": "dc138997-c992-55e-99a-bd73ee136857fa",
+          "authorship": "(N.Carter) Ettl, 1982",
+          "sourceIds": {
+            "checklistbank": "955410"
+          }
         },
         {
           "id": "SP_NEPHROSELMIS_ROTUNDA",
@@ -151,7 +156,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "4baf66e6-129f-55b-8ba-edd4fc04630c30"
+          "uuid": "4baf66e6-129f-55b-8ba-edd4fc04630c30",
+          "authorship": "(N.Carter) Fott, 1971",
+          "sourceIds": {
+            "checklistbank": "388072"
+          }
         },
         {
           "id": "SP_NEPHROSELMIS_VIRIDIS",
@@ -214,6 +223,19 @@
           "lineage": "Nephroselmis",
           "children": [],
           "uuid": "60738aaf-bf41-5a3-b11-c3bdb0ae1140ae"
+        },
+        {
+          "id": "SP_NEPHROSELMIS_ANGULATA_KORSHIKOV_SKUJA_1948",
+          "name": "Nephroselmis angulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nephroselmis",
+          "authorship": "(Korshikov) Skuja, 1948",
+          "sourceIds": {
+            "checklistbank": "74322"
+          },
+          "children": []
         }
       ]
     },
@@ -573,14 +595,62 @@
             ]
           },
           "authorityIds": "itis:9518"
+        },
+        {
+          "id": "SP_HETEROMASTIX_ROTUNDA_N_CARTER_MANTON_1964",
+          "name": "Heteromastix rotunda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heteromastix",
+          "authorship": "(N.Carter) Manton, 1964",
+          "sourceIds": {
+            "checklistbank": "1010347"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nephroselmidaceae"
+    },
+    {
+      "id": "GENUS_BIPEDINOMONAS",
+      "name": "Bipedinomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BIPEDINOMONAS_ROTUNDA_N_CARTER_1937",
+          "name": "Bipedinomonas rotunda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bipedinomonas",
+          "authorship": "N.Carter, 1937",
+          "sourceIds": {
+            "checklistbank": "689038"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BIPEDINOMONAS_PYRIFORMIS_N_CARTER_1937",
+          "name": "Bipedinomonas pyriformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bipedinomonas",
+          "authorship": "N.Carter, 1937",
+          "sourceIds": {
+            "checklistbank": "955411"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nephroselmidaceae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 36,
+  "genusCount": 13,
+  "speciesCount": 40,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

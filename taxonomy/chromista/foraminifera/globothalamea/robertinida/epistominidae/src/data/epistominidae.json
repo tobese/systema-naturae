@@ -584,10 +584,12 @@
             ],
             "col": [
               "3M646"
-            ]
+            ],
+            "checklistbank": "703290"
           },
           "uuid": "2221dd50-5e22-5f4-957-24369659e8f4e6",
-          "authorityIds": "col:3M646,gbif:7431523"
+          "authorityIds": "col:3M646,gbif:7431523",
+          "authorship": "Debenay, 2013"
         },
         {
           "id": "HOEGLUNDINA_PERVAGATA",
@@ -3854,6 +3856,19 @@
             ]
           },
           "authorityIds": "col:V4W4G"
+        },
+        {
+          "id": "SP_EPISTOMINA_ELEGANS_D_ORBIGNY_1826",
+          "name": "Epistomina elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epistomina",
+          "authorship": "(d'Orbigny, 1826)",
+          "sourceIds": {
+            "checklistbank": "670437"
+          },
+          "children": []
         }
       ]
     },
@@ -5074,10 +5089,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "epistominidae"
+    },
+    {
+      "id": "GENUS_ANOMALINA",
+      "name": "Anomalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOMALINA_ELEGANS_D_ORBIGNY_1826",
+          "name": "Anomalina elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomalina",
+          "authorship": "d’Orbigny, 1826",
+          "sourceIds": {
+            "checklistbank": "689735"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epistominidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 228,
+  "genusCount": 16,
+  "speciesCount": 230,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

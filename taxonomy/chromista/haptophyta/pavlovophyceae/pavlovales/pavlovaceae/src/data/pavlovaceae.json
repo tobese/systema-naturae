@@ -30,10 +30,12 @@
             ],
             "itis": [
               "1471"
-            ]
+            ],
+            "checklistbank": "1021802"
           },
           "uuid": "571a2a25-bf59-523-871-d20b9ddbae8953",
-          "authorityIds": "gbif:3202279,itis:1471"
+          "authorityIds": "gbif:3202279,itis:1471",
+          "authorship": "Butcher, 1952"
         },
         {
           "id": "PAVLOVA_HOMMERSANDII",
@@ -108,6 +110,32 @@
           "lineage": "Pavlova",
           "children": [],
           "uuid": "032ea66a-78ec-547-86c-582808ae1837c0"
+        },
+        {
+          "id": "SP_PAVLOVA_LUTHERI_DROOP_J_C_GREEN_1975",
+          "name": "Pavlova lutheri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pavlova",
+          "authorship": "(Droop) J.C.Green, 1975",
+          "sourceIds": {
+            "checklistbank": "952950"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PAVLOVA_VIRESCENS_BILLARD_1976",
+          "name": "Pavlova virescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pavlova",
+          "authorship": "Billard, 1976",
+          "sourceIds": {
+            "checklistbank": "1021797"
+          },
+          "children": []
         }
       ]
     },
@@ -151,10 +179,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 6540131
+            "gbif": 6540131,
+            "checklistbank": "952948"
           },
           "uuid": "d8853f08-b75f-559-951-70729fd7be7fcc",
-          "authorityIds": "gbif:6540131"
+          "authorityIds": "gbif:6540131",
+          "authorship": "(Droop) Bendif & Véron, 2011"
         },
         {
           "id": "DIACRONEMA_NOCTIVAGA",
@@ -189,10 +219,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 6540133
+            "gbif": 6540133,
+            "checklistbank": "1021796"
           },
           "uuid": "f2fcdbeb-ed8d-5a7-90e-6a71821522ba53",
-          "authorityIds": "gbif:6540133"
+          "authorityIds": "gbif:6540133",
+          "authorship": "(Billard) Bendif & Véron, 2011"
         },
         {
           "id": "DIACRONEMA_VIRIDIS",
@@ -225,10 +257,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8161731
+            "gbif": 8161731,
+            "checklistbank": "1021798"
           },
           "uuid": "3c73e8cf-6f4c-55c-84a-b366af49048c95",
-          "authorityIds": "gbif:8161731"
+          "authorityIds": "gbif:8161731",
+          "authorship": "Prauser, 1958"
         }
       ]
     },
@@ -251,10 +285,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12258762
+            "gbif": 12258762,
+            "checklistbank": "1042085"
           },
           "uuid": "42fc4789-4d33-56a-989-45322f7490dd02",
-          "authorityIds": "gbif:12258762"
+          "authorityIds": "gbif:12258762",
+          "authorship": "Véron, 2023"
         },
         {
           "id": "REBECCA_SALINA",
@@ -309,13 +345,61 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Exanthemachrysis",
           "children": [],
-          "uuid": "7871e664-4ac3-520-847-3d68601d9537ea"
+          "uuid": "7871e664-4ac3-520-847-3d68601d9537ea",
+          "authorship": "H.Lepailleur, 1970",
+          "sourceIds": {
+            "checklistbank": "1021800"
+          }
         }
       ]
+    },
+    {
+      "id": "GENUS_MONOCHRYSIS",
+      "name": "Monochrysis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONOCHRYSIS_LUTHERI_DROOP_1953",
+          "name": "Monochrysis lutheri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monochrysis",
+          "authorship": "Droop, 1953",
+          "sourceIds": {
+            "checklistbank": "952949"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pavlovaceae"
+    },
+    {
+      "id": "GENUS_PHAEASTER",
+      "name": "Phaeaster",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHAEASTER_LUTHERI_DROOP_BOURR_1957",
+          "name": "Phaeaster lutheri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeaster",
+          "authorship": "(Droop) Bourr., 1957",
+          "sourceIds": {
+            "checklistbank": "952951"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pavlovaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 16,
+  "genusCount": 6,
+  "speciesCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

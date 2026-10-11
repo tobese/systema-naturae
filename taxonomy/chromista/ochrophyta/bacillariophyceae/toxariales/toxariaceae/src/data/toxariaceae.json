@@ -25,7 +25,8 @@
             "gbif": 9339028
           },
           "uuid": "26cd609e-ec99-556-aff-08e3346bcc0bb2",
-          "authorityIds": "gbif:9339028"
+          "authorityIds": "gbif:9339028",
+          "children": []
         },
         {
           "id": "TOXARIUM_HENNEDYANUM",
@@ -38,10 +39,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7995200
+            "gbif": 7995200,
+            "checklistbank": "727820"
           },
           "uuid": "cf3fea9d-de5b-524-a33-63e9f2863096f7",
-          "authorityIds": "gbif:7995200"
+          "authorityIds": "gbif:7995200",
+          "authorship": "(Gregory) Pelletan, 1889",
+          "children": []
         },
         {
           "id": "TOXARIUM_ROSTRATUM",
@@ -57,7 +61,8 @@
             "gbif": 9473914
           },
           "uuid": "8be8aae8-c6a2-588-9da-2a07d41532b637",
-          "authorityIds": "gbif:9473914"
+          "authorityIds": "gbif:9473914",
+          "children": []
         },
         {
           "id": "TOXARIUM_SEMILUNARE",
@@ -73,7 +78,8 @@
             "gbif": 9623824
           },
           "uuid": "dbea3ac6-266f-557-881-9b01da8d23dfb2",
-          "authorityIds": "gbif:9623824"
+          "authorityIds": "gbif:9623824",
+          "children": []
         },
         {
           "id": "TOXARIUM_UNDULATUM",
@@ -88,12 +94,50 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 7490802
+            "gbif": 7490802,
+            "checklistbank": "727819"
           },
           "uuid": "00765472-19bf-503-b62-53d5a70bb0f741",
-          "authorityIds": "gbif:7490802"
+          "authorityIds": "gbif:7490802",
+          "authorship": "Bailey, 1854",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SYNEDRA",
+      "name": "Synedra",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYNEDRA_HENNEDYANA_GREGORY_1857",
+          "name": "Synedra hennedyana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synedra",
+          "authorship": "Gregory, 1857",
+          "sourceIds": {
+            "checklistbank": "727858"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYNEDRA_UNDULATA_J_W_BAILEY_GREGORY_1857",
+          "name": "Synedra undulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synedra",
+          "authorship": "(J.W.Bailey) Gregory, 1857",
+          "sourceIds": {
+            "checklistbank": "727860"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "toxariaceae"
     }
   ],
   "sourceIds": {
@@ -104,5 +148,7 @@
       "orderKey": 7943201,
       "familyKey": 7558681
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 7
 }

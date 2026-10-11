@@ -132,10 +132,12 @@
             ],
             "col": [
               "6TX2H"
-            ]
+            ],
+            "checklistbank": "234817"
           },
           "uuid": "49fa39bf-1d3e-535-b26-36453fe5a3e666",
-          "authorityIds": "col:6TX2H,gbif:1043772,itis:705918"
+          "authorityIds": "col:6TX2H,gbif:1043772,itis:705918",
+          "authorship": "(Herbst, 1797)"
         },
         {
           "id": "SP_PEDIACUS_DERMESTOIDES",
@@ -158,10 +160,12 @@
             ],
             "itis": [
               "771541"
-            ]
+            ],
+            "checklistbank": "234818"
           },
           "uuid": "fa50e06b-29d0-55b-939-bfd9a0450f0348",
-          "authorityIds": "col:75WQH,gbif:1043787,itis:771541"
+          "authorityIds": "col:75WQH,gbif:1043787,itis:771541",
+          "authorship": "(Fabricius, 1792)"
         },
         {
           "id": "SP_PEDIACUS_ELONGATUS",
@@ -210,10 +214,12 @@
             ],
             "col": [
               "768QH"
-            ]
+            ],
+            "checklistbank": "306210"
           },
           "uuid": "fafddbb9-32c1-52e-8ed-e909f6b28daebd",
-          "authorityIds": "col:768QH,gbif:1043765,itis:705921"
+          "authorityIds": "col:768QH,gbif:1043765,itis:705921",
+          "authorship": "Erichson, 1845"
         },
         {
           "id": "SP_PEDIACUS_GRACILIS",
@@ -691,7 +697,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "cucujus",
-          "uuid": "ad7dc575-bb04-551-b93-849bd9ef671231"
+          "uuid": "ad7dc575-bb04-551-b93-849bd9ef671231",
+          "authorship": "(Scopoli, 1763)",
+          "sourceIds": {
+            "checklistbank": "159452"
+          }
         },
         {
           "id": "SP_CUCUJUS_CLAVIPES",
@@ -779,6 +789,19 @@
           "children": [],
           "lineage": "cucujus",
           "uuid": "9d732f43-3f97-54e-b78-3d449de9b7f8e4"
+        },
+        {
+          "id": "SP_CUCUJUS_DERMESTOIDES_FABRICIUS_1792",
+          "name": "Cucujus dermestoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cucujus",
+          "authorship": "Fabricius, 1792",
+          "sourceIds": {
+            "checklistbank": "801697"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -928,10 +951,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cucujidae"
+    },
+    {
+      "id": "GENUS_MELOE",
+      "name": "Meloe",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELOE_CINNABERINUS_SCOPOLI_1763",
+          "name": "Meloe cinnaberinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meloe",
+          "authorship": "Scopoli, 1763",
+          "sourceIds": {
+            "checklistbank": "801695"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cucujidae"
+    },
+    {
+      "id": "GENUS_COLYDIUM",
+      "name": "Colydium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLYDIUM_DEPRESSUS_HERBST_1797",
+          "name": "Colydium depressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colydium",
+          "authorship": "Herbst, 1797",
+          "sourceIds": {
+            "checklistbank": "801696"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cucujidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 51,
+  "genusCount": 9,
+  "speciesCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

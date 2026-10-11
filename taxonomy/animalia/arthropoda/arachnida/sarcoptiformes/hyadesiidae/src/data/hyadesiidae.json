@@ -487,7 +487,8 @@
           "authorship": "Benard, 1961",
           "children": [],
           "sourceIds": {
-            "gbif": 6471509
+            "gbif": 6471509,
+            "checklistbank": "987421"
           },
           "uuid": "2d35b491-4381-57a-87a-e15cb27a6d0486",
           "authorityIds": "gbif:6471509"
@@ -887,13 +888,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Hyadesiidae"
+    },
+    {
+      "id": "GENUS_LENTUNGULA",
+      "name": "Lentungula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LENTUNGULA_FUSCA_LOHMANN_1894",
+          "name": "Lentungula fusca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lentungula",
+          "authorship": "Lohmann, 1894",
+          "sourceIds": {
+            "checklistbank": "1022977"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hyadesiidae"
     }
   ],
-  "speciesCount": 50,
+  "speciesCount": 51,
   "appSlug": "hyadesiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

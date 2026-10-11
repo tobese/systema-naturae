@@ -91,7 +91,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 10404897
+            "gbif": 10404897,
+            "checklistbank": "862433"
           },
           "uuid": "89de71ae-eb25-547-b81-c5cab55288f3f0",
           "authorityIds": "gbif:10404897"
@@ -190,7 +191,8 @@
             ],
             "mycobank": [
               "543520"
-            ]
+            ],
+            "checklistbank": "659910"
           },
           "uuid": "6eacad30-5201-53c-b0a-01607990c41087",
           "authorityIds": "gbif:8159208,mycobank:543520"
@@ -389,9 +391,11 @@
           "sourceIds": {
             "mycobank": [
               "114821"
-            ]
+            ],
+            "checklistbank": "862434"
           },
-          "authorityIds": "mycobank:114821"
+          "authorityIds": "mycobank:114821",
+          "authorship": "Hafellner, 1985"
         },
         {
           "id": "SP_DACTYLOSPORA_GLAUCOMARIOIDES",
@@ -861,6 +865,58 @@
           "authorship": "K.L. Pang, S.Y. Guo, Alias, 2014",
           "sourceIds": {
             "checklistbank": "taicol: 47152"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DACTYLOSPORA_VERRUCULOSA_HAFELLNER_1979",
+          "name": "Dactylospora verruculosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dactylospora",
+          "authorship": "Hafellner, 1979",
+          "sourceIds": {
+            "checklistbank": "862411"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DACTYLOSPORA_CRASSA_SARRI_N_HAFELLNER_2002",
+          "name": "Dactylospora crassa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dactylospora",
+          "authorship": "Sarrión & Hafellner, 2002",
+          "sourceIds": {
+            "checklistbank": "862432"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DACTYLOSPORA_MEDITERRANEA_SARRI_N_HAFELLNER_2002",
+          "name": "Dactylospora mediterranea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dactylospora",
+          "authorship": "Sarrión & Hafellner, 2002",
+          "sourceIds": {
+            "checklistbank": "862437"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DACTYLOSPORA_RUBIGINOSA_HAFELLNER_1979",
+          "name": "Dactylospora rubiginosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dactylospora",
+          "authorship": "Hafellner, 1979",
+          "sourceIds": {
+            "checklistbank": "862439"
           },
           "children": []
         }
@@ -1439,11 +1495,147 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dactylosporaceae"
+    },
+    {
+      "id": "GENUS_ABROTHALLUS",
+      "name": "Abrothallus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ABROTHALLUS_PLACOPHYLLUS_ANZI_1868",
+          "name": "Abrothallus placophyllus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abrothallus",
+          "authorship": "Anzi, 1868",
+          "sourceIds": {
+            "checklistbank": "59603"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylosporaceae"
+    },
+    {
+      "id": "GENUS_BUELLIA",
+      "name": "Buellia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BUELLIA_BLOXAMII_BERK_W_PHILLIPS_D_HAWKSW_1976",
+          "name": "Buellia bloxamii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Buellia",
+          "authorship": "(Berk. & W.Phillips) D.Hawksw., 1976",
+          "sourceIds": {
+            "checklistbank": "873950"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUELLIA_IMPERFECTA_ELLIS_E_M_LLER",
+          "name": "Buellia imperfecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Buellia",
+          "authorship": "(Ellis) E. Müller",
+          "sourceIds": {
+            "checklistbank": "873953"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylosporaceae"
+    },
+    {
+      "id": "GENUS_KARSCHIA",
+      "name": "Karschia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KARSCHIA_BLOXAMII_BERK_W_PHILLIPS_SACC_1889",
+          "name": "Karschia bloxamii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Karschia",
+          "authorship": "(Berk. & W.Phillips) Sacc., 1889",
+          "sourceIds": {
+            "checklistbank": "873951"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylosporaceae"
+    },
+    {
+      "id": "GENUS_PATELLARIA",
+      "name": "Patellaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PATELLARIA_BLOXAMII_BERK_W_PHILLIPS_1887",
+          "name": "Patellaria bloxamii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patellaria",
+          "authorship": "Berk. & W.Phillips, 1887",
+          "sourceIds": {
+            "checklistbank": "873952"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PATELLARIA_IMPERFECTA_ELLIS_1881",
+          "name": "Patellaria imperfecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patellaria",
+          "authorship": "Ellis, 1881",
+          "sourceIds": {
+            "checklistbank": "873954"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylosporaceae"
+    },
+    {
+      "id": "GENUS_PEZIZA",
+      "name": "Peziza",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PEZIZA_BLOXAMII_BERK_BROOME_1851",
+          "name": "Peziza bloxamii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peziza",
+          "authorship": "Berk & Broome, 1851",
+          "sourceIds": {
+            "checklistbank": "978662"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dactylosporaceae"
     }
   ],
   "authorship": "Bellemère & Hafellner",
-  "genusCount": 6,
-  "speciesCount": 82,
+  "genusCount": 11,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

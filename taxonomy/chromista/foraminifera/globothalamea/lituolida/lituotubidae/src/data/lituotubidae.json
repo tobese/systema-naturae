@@ -760,10 +760,12 @@
             ],
             "col": [
               "72KDJ"
-            ]
+            ],
+            "checklistbank": "383119"
           },
           "uuid": "3106419f-4984-5d0-a6a-1d5d421ef1a67e",
-          "authorityIds": "col:72KDJ,gbif:7924102,itis:44161"
+          "authorityIds": "col:72KDJ,gbif:7924102,itis:44161",
+          "authorship": "(Brady, 1879)"
         },
         {
           "id": "LITUOTUBA_MARKOVICI",
@@ -1094,6 +1096,19 @@
           },
           "uuid": "9775b118-483c-514-b89-61e531c9d9a712",
           "authorityIds": "col:82WGL,gbif:10611851"
+        },
+        {
+          "id": "SP_LITUOTUBA_MINUTA_COLLINS_1958",
+          "name": "Lituotuba minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lituotuba",
+          "authorship": "Collins, 1958",
+          "sourceIds": {
+            "checklistbank": "711991"
+          },
+          "children": []
         }
       ]
     },
@@ -1587,10 +1602,32 @@
           "authorityIds": "col:82NM8,gbif:9747852"
         }
       ]
+    },
+    {
+      "id": "GENUS_TROCHAMMINA",
+      "name": "Trochammina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TROCHAMMINA_LITUIFORMIS_BRADY_1879",
+          "name": "Trochammina lituiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochammina",
+          "authorship": "Brady, 1879",
+          "sourceIds": {
+            "checklistbank": "680324"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lituotubidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 72,
+  "genusCount": 6,
+  "speciesCount": 74,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -23,9 +23,11 @@
             ],
             "itis": [
               "99241"
-            ]
+            ],
+            "checklistbank": "28912"
           },
-          "authorityIds": "col:4KS2T,itis:99241"
+          "authorityIds": "col:4KS2T,itis:99241",
+          "children": []
         },
         {
           "id": "SP_PODURA_INFERNALIS_MOTSCHULSKI_1850",
@@ -41,18 +43,54 @@
               "4KS44"
             ]
           },
-          "authorityIds": "col:4KS44"
+          "authorityIds": "col:4KS44",
+          "children": []
+        },
+        {
+          "id": "SP_PODURA_ATRA_LINNAEUS_1758",
+          "name": "Podura atra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podura",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "884526"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Poduridae"
+    },
+    {
+      "id": "GENUS_HYPOGASTRURA",
+      "name": "Hypogastrura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYPOGASTRURA_AQUATICA_LINNAEUS_1758",
+          "name": "Hypogastrura aquatica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypogastrura",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "884527"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "poduridae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 4,
   "appSlug": "poduridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Collembola",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

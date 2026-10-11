@@ -31,10 +31,12 @@
             ],
             "col": [
               "4PW4Q"
-            ]
+            ],
+            "checklistbank": "647308"
           },
           "uuid": "6c10dc14-1ce4-5bd-be5-627796617309d0",
-          "authorityIds": "col:4PW4Q,gbif:2266058,wikidata:Q2659306"
+          "authorityIds": "col:4PW4Q,gbif:2266058,wikidata:Q2659306",
+          "authorship": "(Pictet, 1893)"
         },
         {
           "id": "PTEROCLAVA_KREMPFI",
@@ -56,10 +58,12 @@
             ],
             "col": [
               "4PW4R"
-            ]
+            ],
+            "checklistbank": "716194"
           },
           "uuid": "f7f2f92b-b659-5d7-a44-8e376033438164",
-          "authorityIds": "col:4PW4R,gbif:2266059,wikidata:Q2322298"
+          "authorityIds": "col:4PW4R,gbif:2266059,wikidata:Q2322298",
+          "authorship": "(Billard, 1919)"
         }
       ]
     },
@@ -95,7 +99,8 @@
             ],
             "col": [
               "VNZS"
-            ]
+            ],
+            "checklistbank": "7133"
           },
           "uuid": "ea02a0ce-5559-5a1-945-43818c4530cbed",
           "authorityIds": "col:VNZS,gbif:2266064,itis:49445,wikidata:Q3321377"
@@ -120,10 +125,12 @@
             ],
             "col": [
               "VNZT"
-            ]
+            ],
+            "checklistbank": "647262"
           },
           "uuid": "750d514e-fcf5-5f9-b69-c1ad48acb4cc4e",
-          "authorityIds": "col:VNZT,gbif:2266062,wikidata:Q1971925"
+          "authorityIds": "col:VNZT,gbif:2266062,wikidata:Q1971925",
+          "authorship": "Kirkpatrick, 1890"
         },
         {
           "id": "CLADOCORYNE_LITTORALIS",
@@ -216,6 +223,19 @@
             ]
           },
           "authorityIds": "col:V8TH9"
+        },
+        {
+          "id": "SP_CLADOCORYNE_PELAGICA_ALLMAN_1876",
+          "name": "Cladocoryne pelagica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cladocoryne",
+          "authorship": "Allman, 1876",
+          "sourceIds": {
+            "checklistbank": "553784"
+          },
+          "children": []
         }
       ]
     },
@@ -249,10 +269,32 @@
           "authorityIds": "col:8M33T,gbif:11188708"
         }
       ]
+    },
+    {
+      "id": "GENUS_CLAVA",
+      "name": "Clava",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLAVA_KREMPFI_BILLARD_1919",
+          "name": "Clava krempfi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clava",
+          "authorship": "Billard, 1919",
+          "sourceIds": {
+            "checklistbank": "1017493"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladocorynidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 9,
+  "genusCount": 4,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

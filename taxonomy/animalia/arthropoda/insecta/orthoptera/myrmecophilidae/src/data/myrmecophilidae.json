@@ -1392,7 +1392,10 @@
                   "subspeciesCount": 0,
                   "lineage": "Ensifera > Gryllotalpoidea > Myrmecophilus",
                   "children": [],
-                  "uuid": "dfe367e5-a724-550-ab5-ee5e445e69247a"
+                  "uuid": "dfe367e5-a724-550-ab5-ee5e445e69247a",
+                  "sourceIds": {
+                    "checklistbank": "715185"
+                  }
                 },
                 {
                   "id": "SP_MYRMECOPHILUS_BREVIPALPIS_CHOPARD_1948",
@@ -1890,14 +1893,72 @@
             "checklistbank": "519405"
           },
           "children": [],
-          "uuid": "4d88eb25-7566-567-b1e-32f48728c7000d"
+          "uuid": "4d88eb25-7566-567-b1e-32f48728c7000d",
+          "authorship": "Chopard, 1923"
+        },
+        {
+          "id": "SP_MYRMECOPHILA_BIFASCIATA_FISCHER_VON_WALDHEIM_1846",
+          "name": "Myrmecophila bifasciata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myrmecophila",
+          "authorship": "Fischer von Waldheim, 1846",
+          "sourceIds": {
+            "checklistbank": "953264"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "myrmecophilidae"
+    },
+    {
+      "id": "GENUS_BLATTA",
+      "name": "Blatta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BLATTA_ACERVORUM_PANZER_1799",
+          "name": "Blatta acervorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blatta",
+          "authorship": "Panzer, 1799",
+          "sourceIds": {
+            "checklistbank": "953263"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "myrmecophilidae"
+    },
+    {
+      "id": "GENUS_GRYLLUS",
+      "name": "Gryllus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GRYLLUS_MYRMECOPHILUS_SAVI_1819",
+          "name": "Gryllus myrmecophilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gryllus",
+          "authorship": "Savi, 1819",
+          "sourceIds": {
+            "checklistbank": "953265"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myrmecophilidae"
     }
   ],
-  "speciesCount": 98,
+  "speciesCount": 101,
   "appSlug": "myrmecophilidae",
   "lineage": "Ensifera > Gryllotalpoidea",
   "continents": [
@@ -1908,7 +1969,7 @@
     "North America",
     "South America"
   ],
-  "genusCount": 8,
+  "genusCount": 10,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

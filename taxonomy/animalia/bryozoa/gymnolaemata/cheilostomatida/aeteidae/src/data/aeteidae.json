@@ -52,7 +52,8 @@
             ],
             "itis": [
               "155803"
-            ]
+            ],
+            "checklistbank": "28646"
           },
           "authorityIds": "col:65BF2,itis:155803"
         },
@@ -351,7 +352,8 @@
             ],
             "col": [
               "65BGB"
-            ]
+            ],
+            "checklistbank": "28647"
           },
           "authorityIds": "col:65BGB,itis:155805"
         },
@@ -377,7 +379,8 @@
             ],
             "col": [
               "65BGC"
-            ]
+            ],
+            "checklistbank": "28649"
           },
           "authorityIds": "col:65BGC,itis:155804"
         },
@@ -404,9 +407,23 @@
           "sourceIds": {
             "itis": [
               "155806"
-            ]
+            ],
+            "checklistbank": "547118"
           },
           "authorityIds": "itis:155806"
+        },
+        {
+          "id": "SP_AETEA_CAPILLARIS_D_HONDT_1986",
+          "name": "Aetea capillaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aetea",
+          "authorship": "d'Hondt, 1986",
+          "sourceIds": {
+            "checklistbank": "675265"
+          },
+          "children": []
         }
       ]
     },
@@ -431,9 +448,11 @@
           "sourceIds": {
             "col": [
               "PKWX"
-            ]
+            ],
+            "checklistbank": "989863"
           },
-          "authorityIds": "col:PKWX"
+          "authorityIds": "col:PKWX",
+          "authorship": "(d'Hondt, 1986)"
         },
         {
           "id": "SP_CALLAETEA_LILIACEA_WINSTON_2008",
@@ -450,10 +469,76 @@
           "uuid": "254de3fe-5b52-58a-ba4-6dce4053546645"
         }
       ]
+    },
+    {
+      "id": "GENUS_SERTULARIA",
+      "name": "Sertularia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SERTULARIA_ANGUINA_LINNAEUS_1758",
+          "name": "Sertularia anguina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sertularia",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "546374"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aeteidae"
+    },
+    {
+      "id": "GENUS_HIPPOTHOA",
+      "name": "Hippothoa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HIPPOTHOA_SICA_COUCH_1844",
+          "name": "Hippothoa sica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hippothoa",
+          "authorship": "Couch, 1844",
+          "sourceIds": {
+            "checklistbank": "961104"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aeteidae"
+    },
+    {
+      "id": "GENUS_ANGUINARIA",
+      "name": "Anguinaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANGUINARIA_TRUNCATA_LANDSBOROUGH_1852",
+          "name": "Anguinaria truncata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anguinaria",
+          "authorship": "Landsborough, 1852",
+          "sourceIds": {
+            "checklistbank": "961105"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aeteidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 22,
+  "genusCount": 5,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

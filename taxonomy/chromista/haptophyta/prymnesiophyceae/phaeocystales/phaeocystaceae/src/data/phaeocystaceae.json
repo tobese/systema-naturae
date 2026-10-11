@@ -27,7 +27,8 @@
             "gbif": 7670328
           },
           "uuid": "fe457ce5-0925-533-881-fd2efcab661bfc",
-          "authorityIds": "gbif:7670328"
+          "authorityIds": "gbif:7670328",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_ANTARCTICA",
@@ -47,10 +48,13 @@
             ],
             "itis": [
               "610058"
-            ]
+            ],
+            "checklistbank": "955777"
           },
           "uuid": "21c67962-9c4a-5e7-83f-ff1cb9d3a64d19",
-          "authorityIds": "gbif:3202272,itis:610058"
+          "authorityIds": "gbif:3202272,itis:610058",
+          "authorship": "Karsten, 1905",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_CORDATA",
@@ -65,10 +69,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202269
+            "gbif": 3202269,
+            "checklistbank": "955778"
           },
           "uuid": "19b87c31-aede-571-b90-d2838941aca0db",
-          "authorityIds": "gbif:3202269"
+          "authorityIds": "gbif:3202269",
+          "authorship": "A.Zingone & M.J.Chrétiennot-Dinet, 2000",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_GLOBOSA",
@@ -89,10 +96,13 @@
             ],
             "itis": [
               "610059"
-            ]
+            ],
+            "checklistbank": "791879"
           },
           "uuid": "2e3c4ad8-6bee-5e3-a55-c4cab704b765bc",
-          "authorityIds": "gbif:3202270,itis:610059"
+          "authorityIds": "gbif:3202270,itis:610059",
+          "authorship": "Scherffel, 1899",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_JAHNII",
@@ -107,10 +117,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202266
+            "gbif": 3202266,
+            "checklistbank": "955779"
           },
           "uuid": "ef386390-56f0-52c-b7a-33d8cc9403211f",
-          "authorityIds": "gbif:3202266"
+          "authorityIds": "gbif:3202266",
+          "authorship": "A.Zingone, 2000",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_POUCHETII",
@@ -131,10 +144,13 @@
             ],
             "itis": [
               "2173"
-            ]
+            ],
+            "checklistbank": "378703"
           },
           "uuid": "61143cfc-f8df-5b6-89b-b1c4d83a66297b",
-          "authorityIds": "gbif:9150298,itis:2173"
+          "authorityIds": "gbif:9150298,itis:2173",
+          "authorship": "(Hariot) Lagerh., 1896",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_SCROBICULATA",
@@ -152,7 +168,8 @@
             "gbif": 3202271
           },
           "uuid": "2ab18250-d04f-5ab-b92-295b9df0119a14",
-          "authorityIds": "gbif:3202271"
+          "authorityIds": "gbif:3202271",
+          "children": []
         },
         {
           "id": "PHAEOCYSTIS_SPHAEROIDES",
@@ -170,9 +187,32 @@
             "gbif": 8136174
           },
           "uuid": "d525bd6b-0f08-5cd-ba4-66ac86f8fc474e",
-          "authorityIds": "gbif:8136174"
+          "authorityIds": "gbif:8136174",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_TETRASPORA",
+      "name": "Tetraspora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TETRASPORA_POUCHETI_M_P_HARIOT_IN_M_G_POUCHET_1892",
+          "name": "Tetraspora poucheti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetraspora",
+          "authorship": "M.P. Hariot in M.G. Pouchet, 1892",
+          "sourceIds": {
+            "checklistbank": "552006"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaeocystaceae"
     }
   ],
   "sourceIds": {
@@ -183,5 +223,7 @@
       "orderKey": 7865601,
       "familyKey": 7126
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 9
 }

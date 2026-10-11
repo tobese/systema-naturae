@@ -35,7 +35,8 @@
               "6LDDV"
             ]
           },
-          "authorityIds": "col:6LDDV,itis:14580,wfo:wfo-0001196350"
+          "authorityIds": "col:6LDDV,itis:14580,wfo:wfo-0001196350",
+          "children": []
         },
         {
           "id": "SP_HARPANTHUS_FLOTOVIANUS",
@@ -59,9 +60,12 @@
             ],
             "itis": [
               "14581"
-            ]
+            ],
+            "checklistbank": "6488"
           },
-          "authorityIds": "col:6LDDW,itis:14581,wfo:wfo-0001196351"
+          "authorityIds": "col:6LDDW,itis:14581,wfo:wfo-0001196351",
+          "authorship": "(Nees) Nees, 1836",
+          "children": []
         },
         {
           "id": "SP_HARPANTHUS_SCUTATUS",
@@ -86,9 +90,12 @@
             ],
             "col": [
               "6LDDX"
-            ]
+            ],
+            "checklistbank": "6489"
           },
-          "authorityIds": "col:6LDDX,itis:14582,wfo:wfo-0001196352"
+          "authorityIds": "col:6LDDX,itis:14582,wfo:wfo-0001196352",
+          "authorship": "(F.Weber & D.Mohr) Spruce, 1850",
+          "children": []
         }
       ]
     },
@@ -117,9 +124,67 @@
               "wfo-1000009823"
             ]
           },
-          "authorityIds": "col:9M8VG,wfo:wfo-1000009823"
+          "authorityIds": "col:9M8VG,wfo:wfo-1000009823",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_JUNGERMANNIA",
+      "name": "Jungermannia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_JUNGERMANNIA_SCUTATA_F_WEBER_D_MOHR_1807",
+          "name": "Jungermannia scutata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jungermannia",
+          "authorship": "F.Weber & D.Mohr, 1807",
+          "sourceIds": {
+            "checklistbank": "786909"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_JUNGERMANNIA_FLOTOVIANA_NEES_1833",
+          "name": "Jungermannia flotoviana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jungermannia",
+          "authorship": "Nees, 1833",
+          "sourceIds": {
+            "checklistbank": "787286"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "harpanthaceae"
+    },
+    {
+      "id": "GENUS_LOPHOZIA",
+      "name": "Lophozia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOPHOZIA_SCUTATA_F_WEBER_D_MOHR_DUMORT",
+          "name": "Lophozia scutata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lophozia",
+          "authorship": "(F.Weber & D.Mohr) Dumort.",
+          "sourceIds": {
+            "checklistbank": "787994"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "harpanthaceae"
     }
   ],
   "sourceIds": {
@@ -130,5 +195,7 @@
       "orderKey": 381,
       "familyKey": 9618917
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 7
 }

@@ -37,9 +37,11 @@
           "sourceIds": {
             "itis": [
               "6682"
-            ]
+            ],
+            "checklistbank": "965562"
           },
-          "authorityIds": "itis:6682"
+          "authorityIds": "itis:6682",
+          "authorship": "F.Gay, 1894"
         },
         {
           "id": "SP_THAMNIOCHAETE_FRUTEX",
@@ -70,7 +72,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "7412ebae-f8cf-519-895-ee2da4649fec08"
+          "uuid": "7412ebae-f8cf-519-895-ee2da4649fec08",
+          "authorship": "(Nägeli ex Kütz.) Rabenh.",
+          "sourceIds": {
+            "checklistbank": "682735"
+          }
         },
         {
           "id": "SP_APHANOCHAETE_ELEGANS",
@@ -162,9 +168,11 @@
           "sourceIds": {
             "itis": [
               "6702"
-            ]
+            ],
+            "checklistbank": "73443"
           },
-          "authorityIds": "itis:6702"
+          "authorityIds": "itis:6702",
+          "authorship": "A.Braun, 1850"
         },
         {
           "id": "SP_APHANOCHAETE_VERMICULOIDES",
@@ -183,9 +191,11 @@
           "sourceIds": {
             "itis": [
               "6705"
-            ]
+            ],
+            "checklistbank": "652753"
           },
-          "authorityIds": "itis:6705"
+          "authorityIds": "itis:6705",
+          "authorship": "Wolle, 1887"
         },
         {
           "id": "SP_APHANOCHAETE_GLOBIFERUM",
@@ -216,6 +226,19 @@
           "lineage": "Aphanochaete",
           "children": [],
           "uuid": "f3ed4fc8-d188-5f9-953-766dcafe3e1a49"
+        },
+        {
+          "id": "SP_APHANOCHAETE_HYALOTHECAE_HANSG_SCHMIDLE_1893",
+          "name": "Aphanochaete hyalothecae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphanochaete",
+          "authorship": "(Hansg.) Schmidle, 1893",
+          "sourceIds": {
+            "checklistbank": "697476"
+          },
+          "children": []
         }
       ]
     },
@@ -295,10 +318,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aphanochaetaceae"
+    },
+    {
+      "id": "GENUS_HERPOSTEIRON",
+      "name": "Herposteiron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HERPOSTEIRON_REPENS_A_BRAUN_WITTROCK_1872",
+          "name": "Herposteiron repens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Herposteiron",
+          "authorship": "(A.Braun) Wittrock, 1872",
+          "sourceIds": {
+            "checklistbank": "682733"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aphanochaetaceae"
+    },
+    {
+      "id": "GENUS_GONATOBLASTE",
+      "name": "Gonatoblaste",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GONATOBLASTE_ROSTRATA_HUBER",
+          "name": "Gonatoblaste rostrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gonatoblaste",
+          "authorship": "Huber",
+          "sourceIds": {
+            "checklistbank": "682734"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aphanochaetaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 18,
+  "genusCount": 6,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

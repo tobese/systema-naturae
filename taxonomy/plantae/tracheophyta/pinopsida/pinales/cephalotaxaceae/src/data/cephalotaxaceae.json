@@ -43,9 +43,11 @@
             ],
             "wfo": [
               "wfo-0000594951"
-            ]
+            ],
+            "checklistbank": "89951"
           },
-          "authorityIds": "col:69JRD,wfo:wfo-0000594951"
+          "authorityIds": "col:69JRD,wfo:wfo-0000594951",
+          "authorship": "Hook., 1850"
         },
         {
           "id": "SP_CEPHALOTAXUS_GRIFFITHII",
@@ -97,9 +99,11 @@
           "sourceIds": {
             "itis": [
               "506784"
-            ]
+            ],
+            "checklistbank": "610743"
           },
-          "authorityIds": "itis:506784"
+          "authorityIds": "itis:506784",
+          "authorship": "(Knight ex J.Forbes) K.Koch, 1873"
         },
         {
           "id": "SP_CEPHALOTAXUS_MANNII",
@@ -237,12 +241,60 @@
           },
           "authorityIds": "col:5XK3J,wfo:wfo-0000594972",
           "commonName": "Broad-leaved Plum Yew"
+        },
+        {
+          "id": "SP_CEPHALOTAXUS_KOREANA_NAKAI_1930",
+          "name": "Cephalotaxus koreana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalotaxus",
+          "authorship": "Nakai, 1930",
+          "sourceIds": {
+            "checklistbank": "610744"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CEPHALOTAXUS_DRUPACEA_SIEBOLD_ZUCC_1846",
+          "name": "Cephalotaxus drupacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalotaxus",
+          "authorship": "Siebold & Zucc., 1846",
+          "sourceIds": {
+            "checklistbank": "789179"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_TAXUS",
+      "name": "Taxus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TAXUS_HARRINGTONIA_KNIGHT_EX_J_FORBES_1839",
+          "name": "Taxus harringtonia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taxus",
+          "authorship": "Knight ex J.Forbes, 1839",
+          "sourceIds": {
+            "checklistbank": "789178"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cephalotaxaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 12,
+  "genusCount": 2,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

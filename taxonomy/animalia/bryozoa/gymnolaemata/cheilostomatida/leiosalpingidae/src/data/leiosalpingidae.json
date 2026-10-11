@@ -26,7 +26,8 @@
             ]
           },
           "authorityIds": "col:HVHV",
-          "uuid": "1eea4600-cf30-5d2-9f6-7a3305d83dbc69"
+          "uuid": "1eea4600-cf30-5d2-9f6-7a3305d83dbc69",
+          "children": []
         }
       ]
     },
@@ -49,10 +50,13 @@
           "sourceIds": {
             "col": [
               "3T2CX"
-            ]
+            ],
+            "checklistbank": "675528"
           },
           "authorityIds": "col:3T2CX",
-          "uuid": "960561d2-733f-546-aba-b41638eb132f1e"
+          "uuid": "960561d2-733f-546-aba-b41638eb132f1e",
+          "authorship": "(Busk, 1884)",
+          "children": []
         },
         {
           "id": "SP_LEIOSALPINX_INORNATA",
@@ -66,12 +70,59 @@
           "sourceIds": {
             "col": [
               "3T2CY"
-            ]
+            ],
+            "checklistbank": "838836"
           },
           "authorityIds": "col:3T2CY",
-          "uuid": "2628c434-aa56-55f-a80-01f5334071dbb8"
+          "uuid": "2628c434-aa56-55f-a80-01f5334071dbb8",
+          "authorship": "(Goldstein, 1882)",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BRETTIA",
+      "name": "Brettia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRETTIA_AUSTRALIS_BUSK_1884",
+          "name": "Brettia australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brettia",
+          "authorship": "Busk, 1884",
+          "sourceIds": {
+            "checklistbank": "961113"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leiosalpingidae"
+    },
+    {
+      "id": "GENUS_ALYSIDIUM",
+      "name": "Alysidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALYSIDIUM_INORNATA_GOLDSTEIN_1882",
+          "name": "Alysidium inornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alysidium",
+          "authorship": "Goldstein, 1882",
+          "sourceIds": {
+            "checklistbank": "961114"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leiosalpingidae"
     }
   ],
   "sourceIds": {
@@ -82,5 +133,7 @@
       "orderKey": 467,
       "familyKey": 5821
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 5
 }

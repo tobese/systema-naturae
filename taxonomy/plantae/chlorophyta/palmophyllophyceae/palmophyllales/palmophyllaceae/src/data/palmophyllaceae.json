@@ -28,9 +28,11 @@
           "sourceIds": {
             "itis": [
               "9173"
-            ]
+            ],
+            "checklistbank": "380782"
           },
-          "authorityIds": "itis:9173"
+          "authorityIds": "itis:9173",
+          "authorship": "(Naccari) Rabenh., 1868"
         },
         {
           "id": "SP_PALMOPHYLLUM_FLABELLATUM",
@@ -46,9 +48,11 @@
           "sourceIds": {
             "itis": [
               "9174"
-            ]
+            ],
+            "checklistbank": "678189"
           },
-          "authorityIds": "itis:9174"
+          "authorityIds": "itis:9174",
+          "authorship": "Kütz., 1845"
         },
         {
           "id": "SP_PALMOPHYLLUM_UMBRACOLA",
@@ -109,7 +113,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Verdigellas",
           "children": [],
-          "uuid": "8def391c-fc13-541-a0e-f11d54089f08c9"
+          "uuid": "8def391c-fc13-541-a0e-f11d54089f08c9",
+          "authorship": "D.L.Ballant. & J.N.Norris, 1994",
+          "sourceIds": {
+            "checklistbank": "711258"
+          }
         },
         {
           "id": "SP_VERDIGELLAS_NEKTONGAMMEA",
@@ -134,10 +142,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "palmophyllaceae"
+    },
+    {
+      "id": "GENUS_CHLOROCHYTRIUM",
+      "name": "Chlorochytrium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHLOROCHYTRIUM_CRASSUM_NACCARI_RABENH",
+          "name": "Chlorochytrium crassum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chlorochytrium",
+          "authorship": "(Naccari) Rabenh.",
+          "sourceIds": {
+            "checklistbank": "370760"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palmophyllaceae"
+    },
+    {
+      "id": "GENUS_PALMELLA",
+      "name": "Palmella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALMELLA_CRASSA_NACCARI_1828",
+          "name": "Palmella crassa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palmella",
+          "authorship": "Naccari, 1828",
+          "sourceIds": {
+            "checklistbank": "678188"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palmophyllaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 8,
+  "genusCount": 5,
+  "speciesCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

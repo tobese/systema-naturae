@@ -131,9 +131,11 @@
             ],
             "col": [
               "6FWWL"
-            ]
+            ],
+            "checklistbank": "7466"
           },
-          "authorityIds": "col:6FWWL,wikidata:Q3945000"
+          "authorityIds": "col:6FWWL,wikidata:Q3945000",
+          "authorship": "(Delle Chiaje, 1823)"
         },
         {
           "id": "SP_EPIZOANTHUS_ARMATUS_CARLGREN_1923",
@@ -401,7 +403,8 @@
             ],
             "col": [
               "6FX8C"
-            ]
+            ],
+            "checklistbank": "361437"
           },
           "authorityIds": "col:6FX8C,itis:204156,wikidata:Q3945442"
         },
@@ -1882,9 +1885,36 @@
           "sourceIds": {
             "itis": [
               "52446"
-            ]
+            ],
+            "checklistbank": "7464"
           },
           "authorityIds": "itis:52446"
+        },
+        {
+          "id": "SP_EPIZOANTHUS_COUCHI_JOHNSTON",
+          "name": "Epizoanthus couchi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epizoanthus",
+          "authorship": "Johnston",
+          "sourceIds": {
+            "checklistbank": "7465"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPIZOANTHUS_PAGURIPHILA_HADDON_SHACKLETON_1891",
+          "name": "Epizoanthus paguriphila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epizoanthus",
+          "authorship": "Haddon & Shackleton, 1891",
+          "sourceIds": {
+            "checklistbank": "684906"
+          },
+          "children": []
         }
       ]
     },
@@ -1964,10 +1994,54 @@
           "uuid": "991b0900-5ef5-505-98a-e71b187d0b3b86"
         }
       ]
+    },
+    {
+      "id": "GENUS_PALYTHOA",
+      "name": "Palythoa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALYTHOA_COUCHI_FISCHER_1874",
+          "name": "Palythoa couchi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palythoa",
+          "authorship": "Fischer, 1874",
+          "sourceIds": {
+            "checklistbank": "684558"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epizoanthidae"
+    },
+    {
+      "id": "GENUS_ZOANTHUS",
+      "name": "Zoanthus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZOANTHUS_COUCHII_JOHNSTON_IN_COUCH_1844",
+          "name": "Zoanthus couchii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zoanthus",
+          "authorship": "Johnston in Couch, 1844",
+          "sourceIds": {
+            "checklistbank": "1045869"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epizoanthidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 98,
+  "genusCount": 6,
+  "speciesCount": 102,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

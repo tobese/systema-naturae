@@ -120,9 +120,11 @@
           "sourceIds": {
             "itis": [
               "156380"
-            ]
+            ],
+            "checklistbank": "781056"
           },
-          "authorityIds": "itis:156380"
+          "authorityIds": "itis:156380",
+          "authorship": "(Busk, 1859)"
         },
         {
           "id": "SP_HIPPOPORIDRA_ELONGATA_EL_HAJJAJI_1992",
@@ -517,6 +519,19 @@
           },
           "authorityIds": "col:86NJT",
           "authorship": "(Weisbord, 1967)"
+        },
+        {
+          "id": "SP_ODONTOPORELLA_PARVA_MARCUS_1938",
+          "name": "Odontoporella parva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Odontoporella",
+          "authorship": "(Marcus, 1938)",
+          "sourceIds": {
+            "checklistbank": "697098"
+          },
+          "children": []
         }
       ]
     },
@@ -1261,6 +1276,19 @@
           },
           "authorityIds": "col:6XYWF",
           "authorship": "(Canu & Bassler, 1929)"
+        },
+        {
+          "id": "SP_SCORPIODINIPORA_BERNARDII_AUDOUIN_1826",
+          "name": "Scorpiodinipora bernardii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scorpiodinipora",
+          "authorship": "(Audouin, 1826)",
+          "sourceIds": {
+            "checklistbank": "674971"
+          },
+          "children": []
         }
       ]
     },
@@ -1334,10 +1362,89 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Hippoporidridae"
+    },
+    {
+      "id": "GENUS_CELLEPORA",
+      "name": "Cellepora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CELLEPORA_EDAX_BUSK_1859",
+          "name": "Cellepora edax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cellepora",
+          "authorship": "Busk, 1859",
+          "sourceIds": {
+            "checklistbank": "28834"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hippoporidridae"
+    },
+    {
+      "id": "GENUS_LEPRALIA",
+      "name": "Lepralia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPRALIA_EDAX_BUSK_1859",
+          "name": "Lepralia edax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepralia",
+          "authorship": "(Busk, 1859)",
+          "sourceIds": {
+            "checklistbank": "545174"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPRALIA_ADPRESSA_BUSK_1854",
+          "name": "Lepralia adpressa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepralia",
+          "authorship": "Busk, 1854",
+          "sourceIds": {
+            "checklistbank": "1031196"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hippoporidridae"
+    },
+    {
+      "id": "GENUS_CYCLOCOLPOSA",
+      "name": "Cyclocolposa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCLOCOLPOSA_COSTULATA_CANU_BASSLER_1929",
+          "name": "Cyclocolposa costulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclocolposa",
+          "authorship": "(Canu & Bassler, 1929)",
+          "sourceIds": {
+            "checklistbank": "697099"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hippoporidridae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 70,
+  "genusCount": 10,
+  "speciesCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

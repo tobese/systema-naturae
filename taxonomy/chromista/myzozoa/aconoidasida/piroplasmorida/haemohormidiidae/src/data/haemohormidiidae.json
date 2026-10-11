@@ -25,7 +25,8 @@
             "gbif": 8139649
           },
           "uuid": "8db92817-a167-5cb-903-89d88e474c17bd",
-          "authorityIds": "gbif:8139649"
+          "authorityIds": "gbif:8139649",
+          "children": []
         },
         {
           "id": "HAEMOHORMIDIUM_COTTI",
@@ -41,7 +42,8 @@
             "gbif": 7871031
           },
           "uuid": "567e355c-3301-5a0-845-d3c4a46b7d7290",
-          "authorityIds": "gbif:7871031"
+          "authorityIds": "gbif:7871031",
+          "children": []
         },
         {
           "id": "HAEMOHORMIDIUM_RUBRIMARENSIS",
@@ -57,7 +59,8 @@
             "gbif": 8190967
           },
           "uuid": "22db8cf7-f6c4-53e-aaf-9a05124fd0fb5f",
-          "authorityIds": "gbif:8190967"
+          "authorityIds": "gbif:8190967",
+          "children": []
         },
         {
           "id": "HAEMOHORMIDIUM_TERRANOVAE",
@@ -73,7 +76,8 @@
             "gbif": 7628601
           },
           "uuid": "fe6a4822-1c87-5b0-a23-986f5330e9563a",
-          "authorityIds": "gbif:7628601"
+          "authorityIds": "gbif:7628601",
+          "children": []
         }
       ]
     },
@@ -95,10 +99,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7796909
+            "gbif": 7796909,
+            "checklistbank": "958868"
           },
           "uuid": "cbc15afd-b39d-5b7-b8e-88063096dc6def",
-          "authorityIds": "gbif:7796909"
+          "authorityIds": "gbif:7796909",
+          "authorship": "(Gaver & Stephan, 1907)",
+          "children": []
         }
       ]
     },
@@ -123,9 +130,32 @@
             "gbif": 8315582
           },
           "uuid": "ca128381-90ad-50a-972-5ef7ac60493826",
-          "authorityIds": "gbif:8315582"
+          "authorityIds": "gbif:8315582",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SAUROPLASMA",
+      "name": "Sauroplasma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAUROPLASMA_THOMASI_DU_TOIT_1937",
+          "name": "Sauroplasma thomasi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sauroplasma",
+          "authorship": "Du Toit, 1937",
+          "sourceIds": {
+            "checklistbank": "1047640"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "haemohormidiidae"
     }
   ],
   "sourceIds": {
@@ -136,5 +166,7 @@
       "orderKey": 9101837,
       "familyKey": 7677707
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 7
 }

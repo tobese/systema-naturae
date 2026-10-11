@@ -43,11 +43,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202472
+            "gbif": 3202472,
+            "checklistbank": "933098"
           },
           "children": [],
           "uuid": "adcd2453-c12b-5e6-8a6-643023b412d275",
-          "authorityIds": "gbif:3202472"
+          "authorityIds": "gbif:3202472",
+          "authorship": "(Skuja) G.Novarino, I.A.N.Lucas & S.Morrall, 1994"
         },
         {
           "id": "PLAGIOSELMIS_PROLONGA",
@@ -67,11 +69,26 @@
             ],
             "itis": [
               "10673"
-            ]
+            ],
+            "checklistbank": "850339"
           },
           "children": [],
           "uuid": "b769e814-1328-56e-b7d-056569a042f386",
-          "authorityIds": "gbif:7957916,itis:10673"
+          "authorityIds": "gbif:7957916,itis:10673",
+          "authorship": "Butcher ex G.Novarino, I.A.N.Lucas & S.Morrall, 1994"
+        },
+        {
+          "id": "SP_PLAGIOSELMIS_PUNCTATA_BUTCHER_1967",
+          "name": "Plagioselmis punctata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plagioselmis",
+          "authorship": "Butcher, 1967",
+          "sourceIds": {
+            "checklistbank": "850340"
+          },
+          "children": []
         }
       ]
     },
@@ -116,11 +133,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202525
+            "gbif": 3202525,
+            "checklistbank": "956763"
           },
           "children": [],
           "uuid": "0209ca09-3a29-56f-881-81e2eca52a3a60",
-          "authorityIds": "gbif:3202525"
+          "authorityIds": "gbif:3202525",
+          "authorship": "(W.Conrad) D.R.A.Hill, 1992"
         }
       ]
     },
@@ -144,11 +163,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202532
+            "gbif": 3202532,
+            "checklistbank": "953917"
           },
           "children": [],
           "uuid": "944c75ad-7d8c-5e3-b1d-f01b8c3b76cdbb",
-          "authorityIds": "gbif:3202532"
+          "authorityIds": "gbif:3202532",
+          "authorship": "(D.L.Taylor & C.C.Lee) D.R.A.Hill, 1991"
         }
       ]
     },
@@ -173,11 +194,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202534
+            "gbif": 3202534,
+            "checklistbank": "953956"
           },
           "children": [],
           "uuid": "7ec38108-1b0d-56c-b22-fc83612cc078e3",
-          "authorityIds": "gbif:3202534"
+          "authorityIds": "gbif:3202534",
+          "authorship": "D.R.A.Hill & R.Wetherbee, 1990"
         }
       ]
     },
@@ -201,17 +224,85 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 5424000
+            "gbif": 5424000,
+            "checklistbank": "953993"
           },
           "children": [],
           "uuid": "744a43a4-f597-5da-9ea-c18176a7594a70",
-          "authorityIds": "gbif:5424000"
+          "authorityIds": "gbif:5424000",
+          "authorship": "J.A.Deane, 1998"
         }
       ]
+    },
+    {
+      "id": "GENUS_CRYPTOMONAS",
+      "name": "Cryptomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTOMONAS_CRYOPHILA_D_L_TAYLOR_C_C_LEE_1971",
+          "name": "Cryptomonas cryophila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptomonas",
+          "authorship": "D.L.Taylor & C.C.Lee, 1971",
+          "sourceIds": {
+            "checklistbank": "953919"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
+    },
+    {
+      "id": "GENUS_RHODOMONAS",
+      "name": "Rhodomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHODOMONAS_AMPHIOXEIA_W_CONRAD_1939",
+          "name": "Rhodomonas amphioxeia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhodomonas",
+          "authorship": "W.Conrad, 1939",
+          "sourceIds": {
+            "checklistbank": "956765"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
+    },
+    {
+      "id": "GENUS_CHROOMONAS",
+      "name": "Chroomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHROOMONAS_AMPHIOXIEIA_CONRAD_BUTCHER_1967",
+          "name": "Chroomonas amphioxieia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroomonas",
+          "authorship": "(Conrad) Butcher, 1967",
+          "sourceIds": {
+            "checklistbank": "956766"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
     }
   ],
-  "speciesCount": 8,
-  "genusCount": 5,
+  "speciesCount": 12,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -68,11 +68,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 8257682
+            "gbif": 8257682,
+            "checklistbank": "954465"
           },
           "children": [],
           "uuid": "8c639f37-8527-5bc-804-423e596adf51b9",
-          "authorityIds": "gbif:8257682"
+          "authorityIds": "gbif:8257682",
+          "authorship": "(A.R.Loebl.) Morrill & A.R.Loebl., 1981"
         },
         {
           "id": "HETEROCAPSA_ORIENTALIS",
@@ -85,11 +87,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 5730955
+            "gbif": 5730955,
+            "checklistbank": "1010818"
           },
           "children": [],
           "uuid": "95c140a2-479a-5db-bc3-baa5c23079e43a",
-          "authorityIds": "gbif:5730955"
+          "authorityIds": "gbif:5730955",
+          "authorship": "Iwataki, Botes & Fukuyo, 2003"
         },
         {
           "id": "HETEROCAPSA_OVATA",
@@ -102,11 +106,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 5730951
+            "gbif": 5730951,
+            "checklistbank": "979399"
           },
           "children": [],
           "uuid": "dc4ce5e9-5f58-5ff-a5a-096b57d70beae7",
-          "authorityIds": "gbif:5730951"
+          "authorityIds": "gbif:5730951",
+          "authorship": "Iwataki & Fukuyo, 2003"
         },
         {
           "id": "HETEROCAPSA_PYGMAEA",
@@ -121,11 +127,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 8062128
+            "gbif": 8062128,
+            "checklistbank": "979400"
           },
           "children": [],
           "uuid": "99f5d9ea-59a1-5f3-9bb-35ef22c5627e65",
-          "authorityIds": "gbif:8062128"
+          "authorityIds": "gbif:8062128",
+          "authorship": "Lobelich III, R.J.Schmidt & Sherley, 1981"
         },
         {
           "id": "HETEROCAPSA_ROTUNDATA",
@@ -142,11 +150,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 8273436
+            "gbif": 8273436,
+            "checklistbank": "954468"
           },
           "children": [],
           "uuid": "f81886cd-083f-579-87b-439838ecc6bc10",
-          "authorityIds": "gbif:8273436"
+          "authorityIds": "gbif:8273436",
+          "authorship": "(Lohmann) Gert Hansen, 1995"
         },
         {
           "id": "HETEROCAPSA_TRIQUETRA",
@@ -186,6 +196,19 @@
           },
           "children": [],
           "uuid": "c7b18979-eb7e-5d6-81f-99fa378e62c475"
+        },
+        {
+          "id": "SP_HETEROCAPSA_STEINII_TILLMANN_GOTTSCHLING_HOPPENRATH_KUSBER_ELBR_CHTER_2017",
+          "name": "Heterocapsa steinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterocapsa",
+          "authorship": "Tillmann, Gottschling, Hoppenrath, Kusber & Elbrächter, 2017",
+          "sourceIds": {
+            "checklistbank": "1076290"
+          },
+          "children": []
         }
       ]
     },
@@ -214,10 +237,98 @@
           "authorityIds": "gbif:8507564"
         }
       ]
+    },
+    {
+      "id": "GENUS_CACHONINA",
+      "name": "Cachonina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CACHONINA_NIEI_A_R_LOEBL_1968",
+          "name": "Cachonina niei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cachonina",
+          "authorship": "A.R.Loebl., 1968",
+          "sourceIds": {
+            "checklistbank": "954466"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heterocapsaceae"
+    },
+    {
+      "id": "GENUS_AMPHIDINIUM",
+      "name": "Amphidinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMPHIDINIUM_ROTUNDATUM_LOHMANN_1908",
+          "name": "Amphidinium rotundatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphidinium",
+          "authorship": "Lohmann, 1908",
+          "sourceIds": {
+            "checklistbank": "954470"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heterocapsaceae"
+    },
+    {
+      "id": "GENUS_MASSARTIA",
+      "name": "Massartia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MASSARTIA_ROTUNDATA_LOHMANN_SCHILLER_1933",
+          "name": "Massartia rotundata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Massartia",
+          "authorship": "(Lohmann) Schiller, 1933",
+          "sourceIds": {
+            "checklistbank": "954472"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heterocapsaceae"
+    },
+    {
+      "id": "GENUS_KATODINIUM",
+      "name": "Katodinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KATODINIUM_ROTUNDATUM_LOHMANN_A_R_LOEBL_1965",
+          "name": "Katodinium rotundatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Katodinium",
+          "authorship": "(Lohmann) A.R.Loebl., 1965",
+          "sourceIds": {
+            "checklistbank": "954473"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heterocapsaceae"
     }
   ],
-  "speciesCount": 10,
-  "genusCount": 2,
+  "speciesCount": 15,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

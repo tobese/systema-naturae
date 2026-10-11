@@ -1433,9 +1433,11 @@
           "sourceIds": {
             "wikidata": [
               "Q109563538"
-            ]
+            ],
+            "checklistbank": "442442"
           },
-          "authorityIds": "wikidata:Q109563538"
+          "authorityIds": "wikidata:Q109563538",
+          "authorship": "Lafresnaye, 1845"
         },
         {
           "id": "THRYOTHORUS_SUPERCILIARIS",
@@ -1562,6 +1564,45 @@
           "sourcedFrom": "generated",
           "children": [],
           "uuid": "9577de68-bc27-5d0-a74-119c442ebd317c"
+        },
+        {
+          "id": "SP_THRYOTHORUS_CORAYA_GMELIN_1789",
+          "name": "Thryothorus coraya",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thryothorus",
+          "authorship": "(Gmelin, 1789)",
+          "sourceIds": {
+            "checklistbank": "442441"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THRYOTHORUS_MARTINICENSIS_SCLATER_1866",
+          "name": "Thryothorus martinicensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thryothorus",
+          "authorship": "Sclater, 1866",
+          "sourceIds": {
+            "checklistbank": "645253"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THRYOTHORUS_GUADELOUPENSIS_CORY_1886",
+          "name": "Thryothorus guadeloupensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thryothorus",
+          "authorship": "Cory, 1886",
+          "sourceIds": {
+            "checklistbank": "645254"
+          },
+          "children": []
         }
       ]
     },
@@ -1596,9 +1637,11 @@
             ],
             "itis": [
               "178547"
-            ]
+            ],
+            "checklistbank": "3967"
           },
-          "authorityIds": "col:598TT,itis:178547,wikidata:Q25740"
+          "authorityIds": "col:598TT,itis:178547,wikidata:Q25740",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "TROGLODYTES_AEDON",
@@ -1624,9 +1667,11 @@
             ],
             "itis": [
               "178541"
-            ]
+            ],
+            "checklistbank": "442472"
           },
-          "authorityIds": "col:598SY,itis:178541,wikidata:Q524799"
+          "authorityIds": "col:598SY,itis:178541,wikidata:Q524799",
+          "authorship": "Vieillot, 1809"
         },
         {
           "id": "TROGLODYTES_MUSCULUS",
@@ -1925,7 +1970,11 @@
           "children": [],
           "lineage": "Troglodytes",
           "uuid": "684f4255-fc0a-539-8e2-c9e713175b03ef",
-          "commonName": "Kalinago Wren"
+          "commonName": "Kalinago Wren",
+          "authorship": "(Sclater, 1866)",
+          "sourceIds": {
+            "checklistbank": "442473"
+          }
         },
         {
           "id": "SP_TROGLODYTES_MESOLEUCUS",
@@ -2526,7 +2575,11 @@
           "description": "The musician wren or organ wren (Cyphorhinus arada) is a species of wren named for its elaborate song.",
           "sourcedFrom": "wikipedia",
           "children": [],
-          "uuid": "5e106299-4283-5bc-845-fca50ec32f0818"
+          "uuid": "5e106299-4283-5bc-845-fca50ec32f0818",
+          "authorship": "(Hermann, 1783)",
+          "sourceIds": {
+            "checklistbank": "441845"
+          }
         },
         {
           "id": "CYPHORHINUS_MODULATOR",
@@ -2675,6 +2728,19 @@
           },
           "children": [],
           "uuid": "d3839fc5-de2d-555-85d-68fcdeff01c1fe"
+        },
+        {
+          "id": "SP_CYPHORHINUS_LEUCOSTICTA_CABANIS_1847",
+          "name": "Cyphorhinus leucosticta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyphorhinus",
+          "authorship": "Cabanis, 1847",
+          "sourceIds": {
+            "checklistbank": "929024"
+          },
+          "children": []
         }
       ]
     },
@@ -2979,10 +3045,98 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Troglodytidae"
+    },
+    {
+      "id": "GENUS_TURDUS",
+      "name": "Turdus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TURDUS_CORAYA_GMELIN_1789",
+          "name": "Turdus coraya",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turdus",
+          "authorship": "Gmelin, 1789",
+          "sourceIds": {
+            "checklistbank": "782525"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "troglodytidae"
+    },
+    {
+      "id": "GENUS_FORMICARIUS",
+      "name": "Formicarius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FORMICARIUS_BAMBLA_BODDAERT_1783",
+          "name": "Formicarius bambla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Formicarius",
+          "authorship": "Boddaert, 1783",
+          "sourceIds": {
+            "checklistbank": "929025"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "troglodytidae"
+    },
+    {
+      "id": "GENUS_MOTACILLA",
+      "name": "Motacilla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MOTACILLA_TROGLODYTES_LINNAEUS_1758",
+          "name": "Motacilla Troglodytes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Motacilla",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "929026"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "troglodytidae"
+    },
+    {
+      "id": "GENUS_MYRMORNIS",
+      "name": "Myrmornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYRMORNIS_ARADA_HERMANN_1783",
+          "name": "Myrmornis arada",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myrmornis",
+          "authorship": "Hermann, 1783",
+          "sourceIds": {
+            "checklistbank": "1079365"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "troglodytidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 121,
+  "genusCount": 23,
+  "speciesCount": 129,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

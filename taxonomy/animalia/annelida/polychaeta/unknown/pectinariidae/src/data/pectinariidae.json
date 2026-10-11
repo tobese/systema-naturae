@@ -53,7 +53,8 @@
             ],
             "col": [
               "66F6Q"
-            ]
+            ],
+            "checklistbank": "530190"
           },
           "authorityIds": "col:66F6Q,itis:67695"
         },
@@ -129,9 +130,11 @@
           "sourceIds": {
             "col": [
               "D28C"
-            ]
+            ],
+            "checklistbank": "669149"
           },
-          "authorityIds": "col:D28C"
+          "authorityIds": "col:D28C",
+          "authorship": "(Grube, 1870)"
         },
         {
           "id": "SP_AMPHICTENE_FAVONA_HUTCHINGS_PEART_2002",
@@ -426,7 +429,8 @@
             ],
             "itis": [
               "67701"
-            ]
+            ],
+            "checklistbank": "952544"
           },
           "authorityIds": "col:5Z8FR,itis:67701"
         },
@@ -482,7 +486,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Cistenides",
-          "uuid": "3fb62b28-26f0-52d-922-3f35ad1088d406"
+          "uuid": "3fb62b28-26f0-52d-922-3f35ad1088d406",
+          "authorship": "Verrill, 1873",
+          "sourceIds": {
+            "checklistbank": "952543"
+          }
         },
         {
           "id": "SP_CISTENIDES_REGALIS_NULL",
@@ -792,7 +800,8 @@
             ],
             "itis": [
               "999160"
-            ]
+            ],
+            "checklistbank": "1037982"
           },
           "authorityIds": "col:767KQ,itis:999160"
         },
@@ -1265,6 +1274,58 @@
           },
           "children": [],
           "uuid": "af189b60-7017-59e-a44-ac759ae0d39866"
+        },
+        {
+          "id": "SP_PECTINARIA_MALMGRENI_GRUBE_1870",
+          "name": "Pectinaria malmgreni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinaria",
+          "authorship": "Grube, 1870",
+          "sourceIds": {
+            "checklistbank": "566707"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PECTINARIA_ROBUSTA_LEVINSEN_1883",
+          "name": "Pectinaria robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinaria",
+          "authorship": "Levinsen, 1883",
+          "sourceIds": {
+            "checklistbank": "566708"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PECTINARIA_AUSTRALIS_EHLERS_1904",
+          "name": "Pectinaria australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinaria",
+          "authorship": "Ehlers, 1904",
+          "sourceIds": {
+            "checklistbank": "669170"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PECTINARIA_CRASSA_GRUBE_1870",
+          "name": "Pectinaria crassa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinaria",
+          "authorship": "Grube, 1870",
+          "sourceIds": {
+            "checklistbank": "695983"
+          },
+          "children": []
         }
       ]
     },
@@ -1307,9 +1368,11 @@
           "sourceIds": {
             "col": [
               "6NV63"
-            ]
+            ],
+            "checklistbank": "828538"
           },
-          "authorityIds": "col:6NV63"
+          "authorityIds": "col:6NV63",
+          "authorship": "(Ehlers, 1904)"
         },
         {
           "id": "SP_LAGIS_BOCKI",
@@ -1406,9 +1469,11 @@
           "sourceIds": {
             "col": [
               "3RX5K"
-            ]
+            ],
+            "checklistbank": "914083"
           },
-          "authorityIds": "col:3RX5K"
+          "authorityIds": "col:3RX5K",
+          "authorship": "(Claparède, 1869)"
         },
         {
           "id": "SP_LAGIS_PLURIHAMUS_CHOI_JUNG_YOON_2017",
@@ -1679,10 +1744,98 @@
           "authorityIds": "col:85RRW"
         }
       ]
+    },
+    {
+      "id": "GENUS_NEREIS",
+      "name": "Nereis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEREIS_CYLINDRARIA_PALLAS_1766",
+          "name": "Nereis cylindraria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nereis",
+          "authorship": "Pallas, 1766",
+          "sourceIds": {
+            "checklistbank": "547057"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
+    },
+    {
+      "id": "GENUS_AMPHITRITE",
+      "name": "Amphitrite",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMPHITRITE_AURICOMA_O_F_M_LLER_1776",
+          "name": "Amphitrite auricoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphitrite",
+          "authorship": "O.F. Müller, 1776",
+          "sourceIds": {
+            "checklistbank": "547141"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
+    },
+    {
+      "id": "GENUS_SOLEN",
+      "name": "Solen",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SOLEN_FRAGILIS_KLEIN_IN_MCINTOSH_1922",
+          "name": "Solen fragilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solen",
+          "authorship": "Klein in McIntosh, 1922",
+          "sourceIds": {
+            "checklistbank": "566709"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
+    },
+    {
+      "id": "GENUS_SABELLA",
+      "name": "Sabella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SABELLA_GRANULATA_LINNAEUS_1767",
+          "name": "Sabella granulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sabella",
+          "authorship": "Linnaeus, 1767",
+          "sourceIds": {
+            "checklistbank": "952545"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 83,
+  "genusCount": 9,
+  "speciesCount": 91,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

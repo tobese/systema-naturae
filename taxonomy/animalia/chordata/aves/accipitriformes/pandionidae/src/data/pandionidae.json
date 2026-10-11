@@ -41,7 +41,8 @@
               "175590"
             ]
           },
-          "authorityIds": "col:4CBTY,itis:175590,wikidata:Q25332"
+          "authorityIds": "col:4CBTY,itis:175590,wikidata:Q25332",
+          "children": []
         },
         {
           "id": "SP_PANDION_CRISTATUS",
@@ -62,9 +63,67 @@
               "Q2880614"
             ]
           },
-          "authorityIds": "wikidata:Q2880614"
+          "authorityIds": "wikidata:Q2880614",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_FALCO",
+      "name": "Falco",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FALCO_HALIAETUS_LINNAEUS_1758",
+          "name": "Falco haliaetus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falco",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "2662"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FALCO_CAROLINENSIS_GMELIN_1788",
+          "name": "Falco carolinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falco",
+          "authorship": "Gmelin, 1788",
+          "sourceIds": {
+            "checklistbank": "927073"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pandionidae"
+    },
+    {
+      "id": "GENUS_BUTEO",
+      "name": "Buteo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BUTEO_CRISTATUS_VIEILLOT_1816",
+          "name": "Buteo cristatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Buteo",
+          "authorship": "Vieillot, 1816",
+          "sourceIds": {
+            "checklistbank": "927074"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pandionidae"
     }
   ],
   "sourceIds": {
@@ -75,5 +134,7 @@
       "orderKey": 7191147,
       "familyKey": 4408414
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 5
 }

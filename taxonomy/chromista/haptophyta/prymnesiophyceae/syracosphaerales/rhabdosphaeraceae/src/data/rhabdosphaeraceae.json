@@ -289,10 +289,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 4377965
+            "gbif": 4377965,
+            "checklistbank": "651266"
           },
           "uuid": "27acbf92-0af8-51d-ac7-0c4cc4f47903b9",
-          "authorityIds": "gbif:4377965"
+          "authorityIds": "gbif:4377965",
+          "authorship": "Bollmann, Cortes, Kleijne, Ostergaard & Young, 2006"
         },
         {
           "id": "SOLISPHAERA_HELIANTHIFORMIS",
@@ -306,10 +308,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 4377966
+            "gbif": 4377966,
+            "checklistbank": "651267"
           },
           "uuid": "50f81719-3800-5d5-a84-065448d3b4586f",
-          "authorityIds": "gbif:4377966"
+          "authorityIds": "gbif:4377966",
+          "authorship": "Bollmann, Cortes, Kleijne, Ostergaard & Young, 2006"
         }
       ]
     },
@@ -466,7 +470,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Rhabdosphaera",
           "children": [],
-          "uuid": "ee0fb3ea-9a3e-57f-9d3-dceb93849d91c1"
+          "uuid": "ee0fb3ea-9a3e-57f-9d3-dceb93849d91c1",
+          "authorship": "(Deflandre & Fert) Norris, 1984",
+          "sourceIds": {
+            "checklistbank": "973967"
+          }
         },
         {
           "id": "SP_RHABDOSPHAERA_CLAVIGERA",
@@ -504,10 +512,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhabdosphaeraceae"
+    },
+    {
+      "id": "GENUS_SYRACOSPHAERA",
+      "name": "Syracosphaera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYRACOSPHAERA_ROBUSTA_LOHMANN_1902",
+          "name": "Syracosphaera robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syracosphaera",
+          "authorship": "Lohmann, 1902",
+          "sourceIds": {
+            "checklistbank": "951556"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhabdosphaeraceae"
+    },
+    {
+      "id": "GENUS_ANTHOSPHAERA",
+      "name": "Anthosphaera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTHOSPHAERA_ROBUSTA_LOHMANN_KAMPTNER_1941",
+          "name": "Anthosphaera robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anthosphaera",
+          "authorship": "(Lohmann) Kamptner, 1941",
+          "sourceIds": {
+            "checklistbank": "951559"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhabdosphaeraceae"
+    },
+    {
+      "id": "GENUS_RHABDOLITHUS",
+      "name": "Rhabdolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHABDOLITHUS_XIPHOS_DEFLANDRE_FERT_1954",
+          "name": "Rhabdolithus xiphos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhabdolithus",
+          "authorship": "Deflandre & Fert, 1954",
+          "sourceIds": {
+            "checklistbank": "973969"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhabdosphaeraceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 24,
+  "genusCount": 13,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

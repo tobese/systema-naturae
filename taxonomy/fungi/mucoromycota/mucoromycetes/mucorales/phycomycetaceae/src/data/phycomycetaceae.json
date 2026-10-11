@@ -37,7 +37,8 @@
             ]
           },
           "uuid": "9b27183b-9997-5b6-8bb-71ce91d9c8ed32",
-          "authorityIds": "col:4GYPX,gbif:2558255,mycobank:258558"
+          "authorityIds": "col:4GYPX,gbif:2558255,mycobank:258558",
+          "children": []
         },
         {
           "id": "PHYCOMYCES_MICROSPORUS",
@@ -62,7 +63,8 @@
             ]
           },
           "uuid": "a619fb53-0337-51e-b2d-4d7c2a00223e8e",
-          "authorityIds": "col:4GYPY,gbif:2558254,mycobank:243684"
+          "authorityIds": "col:4GYPY,gbif:2558254,mycobank:243684",
+          "children": []
         },
         {
           "id": "PHYCOMYCES_NITENS",
@@ -87,10 +89,12 @@
             ],
             "col": [
               "4GYPZ"
-            ]
+            ],
+            "checklistbank": "970444"
           },
           "uuid": "8e84ab02-b702-548-b94-432aa07e8e6888",
-          "authorityIds": "col:4GYPZ,gbif:2558258,mycobank:243360"
+          "authorityIds": "col:4GYPZ,gbif:2558258,mycobank:243360",
+          "children": []
         }
       ],
       "authorship": "Kunze"
@@ -125,7 +129,8 @@
             ]
           },
           "uuid": "82e0886b-17b9-569-a6d-96e2e386d12ca2",
-          "authorityIds": "col:6YZBX,gbif:3386679,mycobank:250805"
+          "authorityIds": "col:6YZBX,gbif:3386679,mycobank:250805",
+          "children": []
         },
         {
           "id": "SPINELLUS_CHALYBEUS",
@@ -152,7 +157,8 @@
             ]
           },
           "uuid": "a63ad21f-76c9-5f7-982-8c07837b668f38",
-          "authorityIds": "col:4Z5BV,gbif:2558282,mycobank:188484"
+          "authorityIds": "col:4Z5BV,gbif:2558282,mycobank:188484",
+          "children": []
         },
         {
           "id": "SPINELLUS_FUSIGER",
@@ -176,10 +182,12 @@
             ],
             "col": [
               "4Z5BW"
-            ]
+            ],
+            "checklistbank": "945337"
           },
           "uuid": "952a6961-f0f4-508-b05-88bcc42f54741f",
-          "authorityIds": "col:4Z5BW,gbif:2558273,mycobank:188090"
+          "authorityIds": "col:4Z5BW,gbif:2558273,mycobank:188090",
+          "children": []
         },
         {
           "id": "SPINELLUS_GIGASPORUS",
@@ -204,7 +212,8 @@
             ]
           },
           "uuid": "124c14a9-637d-537-b9d-2a084fd84d7833",
-          "authorityIds": "col:4Z5BX,gbif:3386681,mycobank:188126"
+          "authorityIds": "col:4Z5BX,gbif:3386681,mycobank:188126",
+          "children": []
         },
         {
           "id": "SPINELLUS_SPHAEROSPORUS",
@@ -229,10 +238,55 @@
             ]
           },
           "uuid": "014308ac-0831-5b6-8e7-7fb08c59c07b65",
-          "authorityIds": "col:4Z5C2,gbif:2558271,mycobank:183303"
+          "authorityIds": "col:4Z5C2,gbif:2558271,mycobank:183303",
+          "children": []
         }
       ],
       "authorship": "Tieghem"
+    },
+    {
+      "id": "GENUS_MUCOR",
+      "name": "Mucor",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MUCOR_FUSIGER_LINK_1824",
+          "name": "Mucor fusiger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mucor",
+          "authorship": "Link, 1824",
+          "sourceIds": {
+            "checklistbank": "945338"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phycomycetaceae"
+    },
+    {
+      "id": "GENUS_ULVA",
+      "name": "Ulva",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ULVA_NITENS_C_AGARDH_1817",
+          "name": "Ulva nitens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ulva",
+          "authorship": "C.Agardh, 1817",
+          "sourceIds": {
+            "checklistbank": "970446"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phycomycetaceae"
     }
   ],
   "authorship": "Arx",
@@ -244,5 +298,7 @@
       "orderKey": 749,
       "familyKey": 8277
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 10
 }

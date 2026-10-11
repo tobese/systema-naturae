@@ -43,9 +43,11 @@
             ],
             "itis": [
               "53248"
-            ]
+            ],
+            "checklistbank": "526217"
           },
-          "authorityIds": "col:VNZB,itis:53248,wikidata:Q3950129"
+          "authorityIds": "col:VNZB,itis:53248,wikidata:Q3950129",
+          "authorship": "(Le Sueur, 1820)"
         },
         {
           "id": "SP_CLADOCORA_BOSQUENSIS_FROST_LANGENHEIM_1974",
@@ -104,9 +106,11 @@
             ],
             "itis": [
               "53250"
-            ]
+            ],
+            "checklistbank": "360717"
           },
-          "authorityIds": "col:VNZC,itis:53250,wikidata:Q3678817"
+          "authorityIds": "col:VNZC,itis:53250,wikidata:Q3678817",
+          "authorship": "(Linnaeus, 1767)"
         },
         {
           "id": "SP_CLADOCORA_CONTORTILIS_TENISON_WOODS_1878",
@@ -803,10 +807,54 @@
           "authorityIds": "col:VC6SW"
         }
       ]
+    },
+    {
+      "id": "GENUS_MADREPORA",
+      "name": "Madrepora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MADREPORA_CAESPITOSA_LINNAEUS_1767",
+          "name": "Madrepora caespitosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Madrepora",
+          "authorship": "Linnaeus, 1767",
+          "sourceIds": {
+            "checklistbank": "575161"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladocoridae"
+    },
+    {
+      "id": "GENUS_CARYOPHYLLIA",
+      "name": "Caryophyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARYOPHYLLIA_ARBUSCULA_LE_SUEUR_1820",
+          "name": "Caryophyllia arbuscula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caryophyllia",
+          "authorship": "Le Sueur, 1820",
+          "sourceIds": {
+            "checklistbank": "913379"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladocoridae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 45,
+  "genusCount": 3,
+  "speciesCount": 47,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

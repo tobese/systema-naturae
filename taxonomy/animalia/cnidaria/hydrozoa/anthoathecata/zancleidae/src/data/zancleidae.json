@@ -513,7 +513,8 @@
             ],
             "col": [
               "5CVXV"
-            ]
+            ],
+            "checklistbank": "7143"
           },
           "uuid": "b78a0b6e-3ce0-5da-86c-a6b53da179ab5b",
           "authorityIds": "col:5CVXV,gbif:5185552,itis:49271,wikidata:Q2399901"
@@ -734,10 +735,12 @@
             ],
             "col": [
               "5CVY5"
-            ]
+            ],
+            "checklistbank": "980087"
           },
           "uuid": "629dea6d-0bb7-563-a35-89fb480725fb09",
-          "authorityIds": "col:5CVY5,gbif:5185546,wikidata:Q2368267"
+          "authorityIds": "col:5CVY5,gbif:5185546,wikidata:Q2368267",
+          "authorship": "Boero, Bouillon & Gravili, 2000"
         },
         {
           "id": "ZANCLEA_GILII",
@@ -841,7 +844,8 @@
             ],
             "col": [
               "5CVYB"
-            ]
+            ],
+            "checklistbank": "7142"
           },
           "uuid": "ad5256d4-1455-59f-9fa-733e94e1cafecb",
           "authorityIds": "col:5CVYB,gbif:5711802,itis:204106,wikidata:Q2114709"
@@ -1008,10 +1012,12 @@
             ],
             "col": [
               "5CVYF"
-            ]
+            ],
+            "checklistbank": "674870"
           },
           "uuid": "55a71cf1-2adf-542-80e-886537f72b7a35",
-          "authorityIds": "col:5CVYF,gbif:5720810,wikidata:Q2756716"
+          "authorityIds": "col:5CVYF,gbif:5720810,wikidata:Q2756716",
+          "authorship": "Galea, 2008"
         },
         {
           "id": "ZANCLEA_NGERIANA",
@@ -1276,7 +1282,8 @@
             ],
             "itis": [
               "204107"
-            ]
+            ],
+            "checklistbank": "980088"
           },
           "uuid": "ab03a223-b7e0-547-bed-f8d7c4a6281c74",
           "authorityIds": "col:5CVYR,gbif:5185551,itis:204107,wikidata:Q2249875"
@@ -1395,6 +1402,19 @@
             ]
           },
           "authorityIds": "itis:49274"
+        },
+        {
+          "id": "SP_ZANCLEA_PARASITES_KROHN_1853",
+          "name": "Zanclea parasites",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zanclea",
+          "authorship": "(Krohn, 1853)",
+          "sourceIds": {
+            "checklistbank": "1038232"
+          },
+          "children": []
         }
       ]
     },
@@ -1479,6 +1499,19 @@
             ]
           },
           "authorityIds": "itis:49278"
+        },
+        {
+          "id": "SP_MNESTRA_PARASITES_KROHN_1853",
+          "name": "Mnestra parasites",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mnestra",
+          "authorship": "Krohn, 1853",
+          "sourceIds": {
+            "checklistbank": "1038234"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1509,10 +1542,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zancleidae"
+    },
+    {
+      "id": "GENUS_CORYNE",
+      "name": "Coryne",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORYNE_SESSILIS_GOSSE_1853",
+          "name": "Coryne sessilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryne",
+          "authorship": "Gosse, 1853",
+          "sourceIds": {
+            "checklistbank": "980090"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zancleidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 61,
+  "genusCount": 9,
+  "speciesCount": 64,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

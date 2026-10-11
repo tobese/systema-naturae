@@ -219,10 +219,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3192096
+            "gbif": 3192096,
+            "checklistbank": "1020323"
           },
           "uuid": "d5bb7e00-f4dd-52a-a11-4ac9f62a26491c",
-          "authorityIds": "gbif:3192096"
+          "authorityIds": "gbif:3192096",
+          "authorship": "W.Smith, 1853"
         },
         {
           "id": "EUCAMPIA_GROENLANDICA",
@@ -603,7 +605,8 @@
             ],
             "itis": [
               "2736"
-            ]
+            ],
+            "checklistbank": "1019970"
           },
           "uuid": "314f6fa9-6e7f-51e-973-a9a58892781fc7",
           "authorityIds": "gbif:4275479,itis:2736"
@@ -2896,10 +2899,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7547743
+            "gbif": 7547743,
+            "checklistbank": "935932"
           },
           "uuid": "7dd29c40-dc27-59e-8ce-c42db132295bb3",
-          "authorityIds": "gbif:7547743"
+          "authorityIds": "gbif:7547743",
+          "authorship": "Grunow, 1884"
         },
         {
           "id": "HEMIAULUS_DANOSUECICUS",
@@ -2932,10 +2937,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 5421732
+            "gbif": 5421732,
+            "checklistbank": "688626"
           },
           "uuid": "dcd0e82a-cbb3-58a-9ea-360e2da0d6abc0",
-          "authorityIds": "gbif:5421732"
+          "authorityIds": "gbif:5421732",
+          "authorship": "Lemmermann, 1905"
         },
         {
           "id": "HEMIAULUS_DISSIMILIS",
@@ -4379,7 +4386,8 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:704397"
           },
           "uuid": "8e4c1f36-8d6f-540-ae7-30e935f3500d17",
-          "authorityIds": "gbif:5421741"
+          "authorityIds": "gbif:5421741",
+          "authorship": "Ehrenberg, 1854"
         },
         {
           "id": "HEMIAULUS_POLYMORPHUS",
@@ -4514,10 +4522,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8047457
+            "gbif": 8047457,
+            "checklistbank": "935944"
           },
           "uuid": "ffb163e4-ae6e-533-9fb-3d537dbc174558",
-          "authorityIds": "gbif:8047457"
+          "authorityIds": "gbif:8047457",
+          "authorship": "Grunow, 1884"
         },
         {
           "id": "HEMIAULUS_PYXILLOIDES",
@@ -6159,10 +6169,76 @@
           "authorityIds": "gbif:11218656"
         }
       ]
+    },
+    {
+      "id": "GENUS_CERATAULUS",
+      "name": "Cerataulus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CERATAULUS_BERGONII_H_PERAG_1892",
+          "name": "Cerataulus bergonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerataulus",
+          "authorship": "H.Perag., 1892",
+          "sourceIds": {
+            "checklistbank": "792060"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemiaulaceae"
+    },
+    {
+      "id": "GENUS_ZYGOCEROS",
+      "name": "Zygoceros",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZYGOCEROS_PELAGICUM_CLEVE_1889",
+          "name": "Zygoceros pelagicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zygoceros",
+          "authorship": "Cleve, 1889",
+          "sourceIds": {
+            "checklistbank": "792061"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemiaulaceae"
+    },
+    {
+      "id": "GENUS_SYRINGIDIUM",
+      "name": "Syringidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYRINGIDIUM_DAEMON_GREV_1866",
+          "name": "Syringidium daemon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syringidium",
+          "authorship": "Grev., 1866",
+          "sourceIds": {
+            "checklistbank": "956753"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemiaulaceae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 340,
+  "genusCount": 22,
+  "speciesCount": 343,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

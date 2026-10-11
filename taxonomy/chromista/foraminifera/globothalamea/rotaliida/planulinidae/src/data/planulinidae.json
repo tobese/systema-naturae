@@ -3579,10 +3579,12 @@
             ],
             "itis": [
               "45685"
-            ]
+            ],
+            "checklistbank": "702188"
           },
           "uuid": "1d85c0b2-5b53-5cd-9c5-40e54f6be087ad",
-          "authorityIds": "col:4JM62,gbif:8133847,itis:45685"
+          "authorityIds": "col:4JM62,gbif:8133847,itis:45685",
+          "authorship": "(d'Orbigny, 1839)"
         },
         {
           "id": "PLANULINA_ORNATIFORMIS",
@@ -4129,10 +4131,12 @@
             ],
             "col": [
               "4JM67"
-            ]
+            ],
+            "checklistbank": "702527"
           },
           "uuid": "181681f2-6dbf-562-b40-09fa21c76b44ae",
-          "authorityIds": "col:4JM67,gbif:8210204"
+          "authorityIds": "col:4JM67,gbif:8210204",
+          "authorship": "Belford, 1966"
         },
         {
           "id": "PLANULINA_RUGOSA",
@@ -5142,10 +5146,76 @@
           "authorityIds": "col:BHZ3N,gbif:12173583"
         }
       ]
+    },
+    {
+      "id": "GENUS_NAUTILUS",
+      "name": "Nautilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NAUTILUS_BALTHICUS_GMELIN_1791",
+          "name": "Nautilus balthicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nautilus",
+          "authorship": "Gmelin, 1791",
+          "sourceIds": {
+            "checklistbank": "928688"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planulinidae"
+    },
+    {
+      "id": "GENUS_ANOMALINA",
+      "name": "Anomalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOMALINA_BALTHICA_SCHR_TER_1783",
+          "name": "Anomalina balthica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomalina",
+          "authorship": "(Schröter, 1783)",
+          "sourceIds": {
+            "checklistbank": "928689"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planulinidae"
+    },
+    {
+      "id": "GENUS_TRUNCATULINA",
+      "name": "Truncatulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRUNCATULINA_ORNATA_D_ORBIGNY_1839",
+          "name": "Truncatulina ornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Truncatulina",
+          "authorship": "d'Orbigny, 1839",
+          "sourceIds": {
+            "checklistbank": "1007235"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planulinidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 232,
+  "genusCount": 8,
+  "speciesCount": 235,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

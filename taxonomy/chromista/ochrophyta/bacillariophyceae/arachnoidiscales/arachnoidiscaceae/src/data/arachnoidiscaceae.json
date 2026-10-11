@@ -246,10 +246,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3193725
+            "gbif": 3193725,
+            "checklistbank": "727825"
           },
           "uuid": "b6651351-b17b-510-b37-249ef3f19d1ec1",
-          "authorityIds": "gbif:3193725"
+          "authorityIds": "gbif:3193725",
+          "authorship": "J.W.Bailey, 1849"
         },
         {
           "id": "ARACHNOIDISCUS_EVANESCENS",
@@ -433,10 +435,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9529987
+            "gbif": 9529987,
+            "checklistbank": "1003781"
           },
           "uuid": "b3a33084-3b2a-55c-a66-99ea6c6cbdbac5",
-          "authorityIds": "gbif:9529987"
+          "authorityIds": "gbif:9529987",
+          "authorship": "Shadboldt ex Pritchard, 1852"
         },
         {
           "id": "ARACHNOIDISCUS_LEPIDUS",
@@ -932,10 +936,54 @@
           "authorityIds": "itis:2625"
         }
       ]
+    },
+    {
+      "id": "GENUS_HEMIPTYCHUS",
+      "name": "Hemiptychus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEMIPTYCHUS_ORNATUS_EHRENBERG_1848",
+          "name": "Hemiptychus ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemiptychus",
+          "authorship": "Ehrenberg, 1848",
+          "sourceIds": {
+            "checklistbank": "727873"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arachnoidiscaceae"
+    },
+    {
+      "id": "GENUS_ARACHNODISCUS",
+      "name": "Arachnodiscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARACHNODISCUS_ORNATUS_EHRENBERG_EHRENBERG_1849",
+          "name": "Arachnodiscus ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnodiscus",
+          "authorship": "(Ehrenberg) Ehrenberg, 1849",
+          "sourceIds": {
+            "checklistbank": "727874"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arachnoidiscaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 54,
+  "genusCount": 3,
+  "speciesCount": 56,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -119,10 +119,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12266905
+            "gbif": 12266905,
+            "checklistbank": "1010793"
           },
           "uuid": "d5f87ac7-4bb0-581-bab-b0b8d0efec3cd4",
-          "authorityIds": "gbif:12266905"
+          "authorityIds": "gbif:12266905",
+          "authorship": "(Bergh) F.Gómez, Artigas & Gast, 2021"
         },
         {
           "id": "BALECHINA_PACHYDERMATA",
@@ -142,7 +144,8 @@
             ],
             "itis": [
               "183907"
-            ]
+            ],
+            "checklistbank": "1078742"
           },
           "uuid": "e818e4e5-e800-5a4-bd8-c8e069f889b81c",
           "authorityIds": "gbif:9100475,itis:183907"
@@ -176,10 +179,37 @@
             ],
             "itis": [
               "331267"
-            ]
+            ],
+            "checklistbank": "850353"
           },
           "uuid": "69b4bcf8-c23a-51c-825-4fa61f722da044",
           "authorityIds": "gbif:7819321,itis:331267"
+        },
+        {
+          "id": "SP_PTYCHODISCUS_CARINATUS_KOF_1907",
+          "name": "Ptychodiscus carinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ptychodiscus",
+          "authorship": "Kof., 1907",
+          "sourceIds": {
+            "checklistbank": "850355"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTYCHODISCUS_INFLATUS_PAVILL_1916",
+          "name": "Ptychodiscus inflatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ptychodiscus",
+          "authorship": "Pavill., 1916",
+          "sourceIds": {
+            "checklistbank": "850356"
+          },
+          "children": []
         }
       ]
     },
@@ -203,7 +233,8 @@
             ],
             "itis": [
               "573531"
-            ]
+            ],
+            "checklistbank": "850897"
           },
           "uuid": "18872edf-1879-573-990-e219e4e3ddda24",
           "authorityIds": "gbif:7752846,itis:573531"
@@ -234,10 +265,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ptychodiscaceae"
+    },
+    {
+      "id": "GENUS_DIPLOCYSTIS",
+      "name": "Diplocystis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIPLOCYSTIS_ANTARCTICA_CLEVE_1900",
+          "name": "Diplocystis antarctica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplocystis",
+          "authorship": "Cleve, 1900",
+          "sourceIds": {
+            "checklistbank": "850354"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ptychodiscaceae"
+    },
+    {
+      "id": "GENUS_GYMNODINIUM",
+      "name": "Gymnodinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GYMNODINIUM_GRACILE_BERGH_1881",
+          "name": "Gymnodinium gracile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnodinium",
+          "authorship": "Bergh, 1881",
+          "sourceIds": {
+            "checklistbank": "1010815"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYMNODINIUM_ABBREVIATUM_KOF_SWEZY_1921",
+          "name": "Gymnodinium abbreviatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnodinium",
+          "authorship": "Kof. & Swezy, 1921",
+          "sourceIds": {
+            "checklistbank": "1010816"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ptychodiscaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 10,
+  "genusCount": 7,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

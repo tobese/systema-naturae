@@ -46,11 +46,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8182641
+            "gbif": 8182641,
+            "checklistbank": "959305"
           },
           "uuid": "9d1231bf-41a9-50d-8aa-3ea21011572c9c",
           "authorityIds": "gbif:8182641",
-          "children": []
+          "children": [],
+          "authorship": "(Meunier, 1910)"
         },
         {
           "id": "METACYLIS_ANNULIFERA",
@@ -640,10 +642,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "metacylididae"
+    },
+    {
+      "id": "GENUS_TINTINNUS",
+      "name": "Tintinnus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TINTINNUS_SUBULATUS_EHRENBERG_1838",
+          "name": "Tintinnus subulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tintinnus",
+          "authorship": "Ehrenberg, 1838",
+          "sourceIds": {
+            "checklistbank": "1055405"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TINTINNUS_MEDITERRANEUS_MERESCHKOWSKY_1881",
+          "name": "Tintinnus mediterraneus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tintinnus",
+          "authorship": "Mereschkowsky, 1881",
+          "sourceIds": {
+            "checklistbank": "1055455"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "metacylididae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 34,
+  "genusCount": 5,
+  "speciesCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

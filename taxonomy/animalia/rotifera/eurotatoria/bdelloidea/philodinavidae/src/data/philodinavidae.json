@@ -72,9 +72,11 @@
             ],
             "col": [
               "4G8N2"
-            ]
+            ],
+            "checklistbank": "934744"
           },
-          "authorityIds": "col:4G8N2,itis:58341"
+          "authorityIds": "col:4G8N2,itis:58341",
+          "authorship": "(Murray, 1905)"
         }
       ]
     },
@@ -164,9 +166,11 @@
           "sourceIds": {
             "col": [
               "63ZWG"
-            ]
+            ],
+            "checklistbank": "78182"
           },
-          "authorityIds": "col:63ZWG"
+          "authorityIds": "col:63ZWG",
+          "authorship": "(de Beauchamp, 1909)"
         },
         {
           "id": "SP_ABROCHTHA_MESELSONI",
@@ -252,10 +256,54 @@
           "authorityIds": "col:CD3HD"
         }
       ]
+    },
+    {
+      "id": "GENUS_PHILODINA",
+      "name": "Philodina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHILODINA_INTERMEDIA_DE_BEAUCHAMP_1909",
+          "name": "Philodina intermedia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Philodina",
+          "authorship": "de Beauchamp, 1909",
+          "sourceIds": {
+            "checklistbank": "904201"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "philodinavidae"
+    },
+    {
+      "id": "GENUS_MICRODINA",
+      "name": "Microdina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICRODINA_PARADOXA_MURRAY_1905",
+          "name": "Microdina paradoxa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microdina",
+          "authorship": "Murray, 1905",
+          "sourceIds": {
+            "checklistbank": "934745"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "philodinavidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 11,
+  "genusCount": 6,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

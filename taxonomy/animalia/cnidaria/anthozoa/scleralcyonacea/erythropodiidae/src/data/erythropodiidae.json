@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "793622a9-a51b-566-969-2fdc5a6d9193aa"
+          "uuid": "793622a9-a51b-566-969-2fdc5a6d9193aa",
+          "children": []
         },
         {
           "id": "SP_ERYTHROPODIUM_CARIBAEORUM",
@@ -41,9 +42,12 @@
             ],
             "col": [
               "3BFKB"
-            ]
+            ],
+            "checklistbank": "653832"
           },
-          "authorityIds": "col:3BFKB,itis:52100,wikidata:Q2252447"
+          "authorityIds": "col:3BFKB,itis:52100,wikidata:Q2252447",
+          "authorship": "(Duchassaing & Michelotti, 1860)",
+          "children": []
         },
         {
           "id": "SP_ERYTHROPODIUM_HICKSONI",
@@ -63,7 +67,8 @@
               "3BFKD"
             ]
           },
-          "authorityIds": "col:3BFKD,wikidata:Q2277531"
+          "authorityIds": "col:3BFKD,wikidata:Q2277531",
+          "children": []
         },
         {
           "id": "SP_ERYTHROPODIUM_PAMBANENSIS_FERNANDO_2011",
@@ -76,7 +81,8 @@
           "sourcedFrom": "none",
           "authorship": "Fernando",
           "yearPublished": "2011",
-          "uuid": "d36e11b2-0cc7-5b9-b3c-3aa2bb57fd27ac"
+          "uuid": "d36e11b2-0cc7-5b9-b3c-3aa2bb57fd27ac",
+          "children": []
         },
         {
           "id": "SP_ERYTHROPODIUM_SALOMONENSE_THOMSON_MACKINNON_1910",
@@ -95,7 +101,8 @@
               "3BFKH"
             ]
           },
-          "authorityIds": "col:3BFKH"
+          "authorityIds": "col:3BFKH",
+          "children": []
         },
         {
           "id": "SP_ERYTHROPODIUM_TAOYUANENSIS_TU_DAI_2022",
@@ -115,9 +122,45 @@
               "8YKPK"
             ]
           },
-          "authorityIds": "col:8YKPK"
+          "authorityIds": "col:8YKPK",
+          "children": []
+        },
+        {
+          "id": "SP_ERYTHROPODIUM_CARYBAEORUM_K_LLIKER_1865",
+          "name": "Erythropodium carybaeorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Erythropodium",
+          "authorship": "Kölliker, 1865",
+          "sourceIds": {
+            "checklistbank": "985060"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_XAENIA",
+      "name": "Xaenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XAENIA_CARIBAEORUM_DUCHASSAING_MICHELOTTI_1860",
+          "name": "Xaenia caribaeorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xaenia",
+          "authorship": "Duchassaing & Michelotti, 1860",
+          "sourceIds": {
+            "checklistbank": "985061"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "erythropodiidae"
     }
   ],
   "sourceIds": {
@@ -128,5 +171,7 @@
       "orderKey": 12202578,
       "familyKey": 12176238
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 8
 }

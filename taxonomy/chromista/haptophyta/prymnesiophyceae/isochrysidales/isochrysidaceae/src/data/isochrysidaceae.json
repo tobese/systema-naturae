@@ -71,10 +71,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8355731
+            "gbif": 8355731,
+            "checklistbank": "792260"
           },
           "uuid": "1648f2b9-49b6-5df-8ca-2d70174fd55f41",
-          "authorityIds": "gbif:8355731"
+          "authorityIds": "gbif:8355731",
+          "authorship": "Billard & Gayral, 1972"
         },
         {
           "id": "SP_ISOCHRYSIS_ZHANJIANGENSIS",
@@ -94,7 +96,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Isochrysis",
           "children": [],
-          "uuid": "b3ee0ae1-5bdf-504-8a0-0da5113aab8170"
+          "uuid": "b3ee0ae1-5bdf-504-8a0-0da5113aab8170",
+          "authorship": "Bendif & Probert, 2013",
+          "sourceIds": {
+            "checklistbank": "1021827"
+          }
         }
       ]
     },
@@ -256,9 +262,11 @@
           "sourceIds": {
             "itis": [
               "1680"
-            ]
+            ],
+            "checklistbank": "792402"
           },
-          "authorityIds": "itis:1680"
+          "authorityIds": "itis:1680",
+          "authorship": "Bourr. & Magne, 1953"
         },
         {
           "id": "SP_RUTTNERA_PRINGSHEIMII",
@@ -335,7 +343,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chrysotila",
           "children": [],
-          "uuid": "d5f9bb91-d364-5d9-a58-e6728e95c17712"
+          "uuid": "d5f9bb91-d364-5d9-a58-e6728e95c17712",
+          "authorship": "(Pringsheim) R.A.Andersen, J.I.Kim, Tittley & H.S.Yoon, 2014",
+          "sourceIds": {
+            "checklistbank": "1021819"
+          }
         },
         {
           "id": "SP_CHRYSOTILA_DENTATA_J_R_JOHANS_DOUCETTE_R_A_ANDERSEN_AL",
@@ -420,6 +432,19 @@
           },
           "children": [],
           "uuid": "0312b077-892a-50d-930-6ea46590a7c6b3"
+        },
+        {
+          "id": "SP_CHRYSOTILA_LAMELLOSA_P_L_ANAND_1937",
+          "name": "Chrysotila lamellosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysotila",
+          "authorship": "P.L.Anand, 1937",
+          "sourceIds": {
+            "checklistbank": "1021836"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -491,10 +516,290 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_HYMENOMONAS",
+      "name": "Hymenomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYMENOMONAS_CARTERAE_BRAARUD_FAGERLAND_BRAARUD_1954",
+          "name": "Hymenomonas carterae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hymenomonas",
+          "authorship": "(Braarud & Fagerland) Braarud, 1954",
+          "sourceIds": {
+            "checklistbank": "362176"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_PLEUROCHRYSIS",
+      "name": "Pleurochrysis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLEUROCHRYSIS_CARTERAE_BRAARUD_FAGERLAND_T_CHRISTENSEN_1978",
+          "name": "Pleurochrysis carterae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochrysis",
+          "authorship": "(Braarud & Fagerland) T.Christensen, 1978",
+          "sourceIds": {
+            "checklistbank": "670586"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCHRYSIS_ROSCOFFENSIS_DANGEARD_FRESNEL_BILLARD_1991",
+          "name": "Pleurochrysis roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochrysis",
+          "authorship": "(Dangeard) Fresnel & Billard, 1991",
+          "sourceIds": {
+            "checklistbank": "792486"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCHRYSIS_DENTATA_J_R_JOHANSEN_G_J_DOUCETTE_PROBERT_2003",
+          "name": "Pleurochrysis dentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochrysis",
+          "authorship": "(J.R.Johansen & G.J.Doucette) Probert, 2003",
+          "sourceIds": {
+            "checklistbank": "958886"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCHRYSIS_PSEUDOROSCOFFENSIS_GAYRAL_FRESNEL_1983",
+          "name": "Pleurochrysis pseudoroscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochrysis",
+          "authorship": "Gayral & Fresnel, 1983",
+          "sourceIds": {
+            "checklistbank": "1021818"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCHRYSIS_SCHERFFELII_PRINGSHEIM_1955",
+          "name": "Pleurochrysis scherffelii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochrysis",
+          "authorship": "Pringsheim, 1955",
+          "sourceIds": {
+            "checklistbank": "1021820"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCHRYSIS_PLACOLITHOIDES_FRESNEL_BILLARD_1991",
+          "name": "Pleurochrysis placolithoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochrysis",
+          "authorship": "Fresnel & Billard, 1991",
+          "sourceIds": {
+            "checklistbank": "1037227"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_CRICOSPHAERA",
+      "name": "Cricosphaera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRICOSPHAERA_CARTERAE_BRAARUD_FAGERLAND_BRAARUD_1960",
+          "name": "Cricosphaera carterae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cricosphaera",
+          "authorship": "(Braarud & Fagerland) Braarud, 1960",
+          "sourceIds": {
+            "checklistbank": "688809"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRICOSPHAERA_ROSCOFFENSIS_DANGEARD_GAYRAL_FRESNEL_1976",
+          "name": "Cricosphaera roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cricosphaera",
+          "authorship": "(Dangeard) Gayral & Fresnel, 1976",
+          "sourceIds": {
+            "checklistbank": "792526"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_SYRACOSPHAERA",
+      "name": "Syracosphaera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYRACOSPHAERA_BRANDTI_SCHILLER",
+          "name": "Syracosphaera brandti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syracosphaera",
+          "authorship": "Schiller",
+          "sourceIds": {
+            "checklistbank": "688810"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYRACOSPHAERA_CARTERAE_BRAARUD_FARGERLAND_1946",
+          "name": "Syracosphaera carterae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syracosphaera",
+          "authorship": "Braarud & Fargerland, 1946",
+          "sourceIds": {
+            "checklistbank": "688811"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYRACOSPHAERA_ROSCOFFENSIS_DANGEARD_1934",
+          "name": "Syracosphaera roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syracosphaera",
+          "authorship": "Dangeard, 1934",
+          "sourceIds": {
+            "checklistbank": "792525"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_PONTOSPHAERA",
+      "name": "Pontosphaera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PONTOSPHAERA_ROSCOFFENSIS_P_A_DANGEARD_DEFLANDRE_1952",
+          "name": "Pontosphaera roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pontosphaera",
+          "authorship": "(P.A.Dangeard) Deflandre, 1952",
+          "sourceIds": {
+            "checklistbank": "792377"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_SYRACOLITHUS",
+      "name": "Syracolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYRACOLITHUS_ROSCOFFENSIS_DANGEARD_MAGNE_1954",
+          "name": "Syracolithus roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syracolithus",
+          "authorship": "(Dangeard) Magne, 1954",
+          "sourceIds": {
+            "checklistbank": "792487"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_IMANTONIA",
+      "name": "Imantonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_IMANTONIA_ROTUNDA_N_REYNOLDS_1974",
+          "name": "Imantonia rotunda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Imantonia",
+          "authorship": "N.Reynolds, 1974",
+          "sourceIds": {
+            "checklistbank": "976680"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
+    },
+    {
+      "id": "GENUS_AULACOCHLAMYS",
+      "name": "Aulacochlamys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULACOCHLAMYS_ROSCOFFENSIS_P_A_DANGEARD_MARGALEF_1946",
+          "name": "Aulacochlamys roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacochlamys",
+          "authorship": "(P.A.Dangeard) Margalef, 1946",
+          "sourceIds": {
+            "checklistbank": "1007244"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isochrysidaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 27,
+  "genusCount": 17,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

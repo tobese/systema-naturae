@@ -37,7 +37,8 @@
             ],
             "col": [
               "7FL3G"
-            ]
+            ],
+            "checklistbank": "7327"
           },
           "uuid": "b51cee46-15df-550-a40-552442f43241ec",
           "authorityIds": "col:7FL3G,gbif:2265793,itis:51267,wikidata:Q1366657"
@@ -55,9 +56,23 @@
           "sourceIds": {
             "itis": [
               "51266"
-            ]
+            ],
+            "checklistbank": "683351"
           },
           "authorityIds": "itis:51266"
+        },
+        {
+          "id": "SP_VELELLA_SPIRANS_FORSKAL",
+          "name": "Velella spirans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Velella",
+          "authorship": "(Forskal)",
+          "sourceIds": {
+            "checklistbank": "7326"
+          },
+          "children": []
         }
       ]
     },
@@ -137,7 +152,8 @@
             ],
             "col": [
               "4LZFQ"
-            ]
+            ],
+            "checklistbank": "363424"
           },
           "uuid": "f5202f72-86b9-57d-bb3-0ba6d162e65e18",
           "authorityIds": "col:4LZFQ,gbif:5185632,itis:51263,wikidata:Q2535508"
@@ -179,7 +195,8 @@
           "sourceIds": {
             "itis": [
               "51262"
-            ]
+            ],
+            "checklistbank": "553797"
           },
           "authorityIds": "itis:51262"
         },
@@ -220,10 +237,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Porpitidae"
+    },
+    {
+      "id": "GENUS_HOLOTHURIA",
+      "name": "Holothuria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HOLOTHURIA_SPIRANS_FORSSK_L_1775",
+          "name": "Holothuria spirans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Holothuria",
+          "authorship": "Forsskål, 1775",
+          "sourceIds": {
+            "checklistbank": "698780"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "porpitidae"
+    },
+    {
+      "id": "GENUS_MEDUSA",
+      "name": "Medusa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEDUSA_VELELLA_LINNAEUS_1758",
+          "name": "Medusa velella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Medusa",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "851027"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEDUSA_PORPITA_LINNAEUS_1758",
+          "name": "Medusa porpita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Medusa",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "1052427"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "porpitidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 9,
+  "genusCount": 5,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

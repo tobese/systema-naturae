@@ -63,9 +63,11 @@
             ],
             "col": [
               "GVGL"
-            ]
+            ],
+            "checklistbank": "520947"
           },
-          "authorityIds": "col:GVGL,itis:558760,wikidata:Q601632"
+          "authorityIds": "col:GVGL,itis:558760,wikidata:Q601632",
+          "authorship": "(Latham, 1801)"
         },
         {
           "id": "ARTAMUS_FLAVIVENTER",
@@ -167,9 +169,11 @@
             ],
             "col": [
               "GVGR"
-            ]
+            ],
+            "checklistbank": "895880"
           },
-          "authorityIds": "col:GVGR,itis:916567"
+          "authorityIds": "col:GVGR,itis:916567",
+          "authorship": "(Linnaeus, 1771)"
         },
         {
           "id": "ARTAMUS_LEUCORYNCHUS",
@@ -375,6 +379,19 @@
             ]
           },
           "authorityIds": "col:GVGX,itis:558768,wikidata:Q900393"
+        },
+        {
+          "id": "SP_ARTAMUS_LEUCORHYNCHUS_LINNAEUS_1771",
+          "name": "Artamus leucorhynchus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Artamus",
+          "authorship": "(Linnaeus, 1771)",
+          "sourceIds": {
+            "checklistbank": "441668"
+          },
+          "children": []
         }
       ]
     },
@@ -633,10 +650,76 @@
           "uuid": "8c65ff1b-c293-5e3-95c-3bd3e40efaa665"
         }
       ]
+    },
+    {
+      "id": "GENUS_LANIUS",
+      "name": "Lanius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LANIUS_LEUCORYNCHUS_LINNAEUS_1771",
+          "name": "Lanius leucorynchus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lanius",
+          "authorship": "Linnaeus, 1771",
+          "sourceIds": {
+            "checklistbank": "895881"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "artamidae"
+    },
+    {
+      "id": "GENUS_LEPTOPTERYX",
+      "name": "Leptopteryx",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPTOPTERYX_MELALEUCA_WAGLER_1827",
+          "name": "Leptopteryx melaleuca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptopteryx",
+          "authorship": "Wagler, 1827",
+          "sourceIds": {
+            "checklistbank": "895883"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "artamidae"
+    },
+    {
+      "id": "GENUS_LOXIA",
+      "name": "Loxia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOXIA_CYANOPTERA_LATHAM_1801",
+          "name": "Loxia cyanoptera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loxia",
+          "authorship": "Latham, 1801",
+          "sourceIds": {
+            "checklistbank": "1023828"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "artamidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 24,
+  "genusCount": 7,
+  "speciesCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

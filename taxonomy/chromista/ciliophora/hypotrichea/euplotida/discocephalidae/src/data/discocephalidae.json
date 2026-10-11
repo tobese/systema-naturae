@@ -25,7 +25,8 @@
             "gbif": 5839707
           },
           "uuid": "aa0d0967-cdd7-5a1-a2b-3767e21be2ed3f",
-          "authorityIds": "gbif:5839707"
+          "authorityIds": "gbif:5839707",
+          "children": []
         }
       ]
     },
@@ -47,10 +48,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8249122
+            "gbif": 8249122,
+            "checklistbank": "959783"
           },
           "uuid": "dd48c0b8-9b46-549-936-73539b4a2e0f5c",
-          "authorityIds": "gbif:8249122"
+          "authorityIds": "gbif:8249122",
+          "authorship": "Dragesco, 1960",
+          "children": []
         },
         {
           "id": "DISCOCEPHALUS_GRANDIS",
@@ -63,10 +67,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8006334
+            "gbif": 8006334,
+            "checklistbank": "1047246"
           },
           "uuid": "ba2c5ba7-d294-55b-94c-037d1b9d14491c",
-          "authorityIds": "gbif:8006334"
+          "authorityIds": "gbif:8006334",
+          "authorship": "Dragesco, 1954",
+          "children": []
         },
         {
           "id": "DISCOCEPHALUS_MINIMUS",
@@ -82,7 +89,8 @@
             "gbif": 8081951
           },
           "uuid": "c552c149-c6e9-5f4-b5d-22e6db2744ad48",
-          "authorityIds": "gbif:8081951"
+          "authorityIds": "gbif:8081951",
+          "children": []
         },
         {
           "id": "DISCOCEPHALUS_ROTATORIUS",
@@ -98,7 +106,8 @@
             "gbif": 7426294
           },
           "uuid": "ae30bedf-f121-5d5-9b6-b8314a49ede347",
-          "authorityIds": "gbif:7426294"
+          "authorityIds": "gbif:7426294",
+          "children": []
         }
       ]
     },
@@ -123,7 +132,8 @@
             "gbif": 7618395
           },
           "uuid": "5ce63616-5538-575-816-f1e09d21c4e989",
-          "authorityIds": "gbif:7618395"
+          "authorityIds": "gbif:7618395",
+          "children": []
         },
         {
           "id": "MARGINOTRICHA_FAUREI",
@@ -139,7 +149,8 @@
             "gbif": 7881458
           },
           "uuid": "a744ceb7-1527-51e-add-0d8e645058667b",
-          "authorityIds": "gbif:7881458"
+          "authorityIds": "gbif:7881458",
+          "children": []
         },
         {
           "id": "MARGINOTRICHA_LITHOPHORA",
@@ -152,10 +163,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7615119
+            "gbif": 7615119,
+            "checklistbank": "1047260"
           },
           "uuid": "2340573a-6074-58b-917-59bd0f9f33ce73",
-          "authorityIds": "gbif:7615119"
+          "authorityIds": "gbif:7615119",
+          "authorship": "(Fauré-Fremiet, 1954)",
+          "children": []
         }
       ]
     },
@@ -180,9 +194,54 @@
             "gbif": 7691311
           },
           "uuid": "1b43d471-a8b8-5fd-b1b-5007fe06128827",
-          "authorityIds": "gbif:7691311"
+          "authorityIds": "gbif:7691311",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PSAMMOCEPHALUS",
+      "name": "Psammocephalus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSAMMOCEPHALUS_LITHOPHORA_FAURE_FREMIET_1954",
+          "name": "Psammocephalus lithophora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psammocephalus",
+          "authorship": "(Faure-Fremiet, 1954)",
+          "sourceIds": {
+            "checklistbank": "1047261"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discocephalidae"
+    },
+    {
+      "id": "GENUS_AMPHISIELLA",
+      "name": "Amphisiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMPHISIELLA_LITHOPHORA_FAUR_FREMIET_1954",
+          "name": "Amphisiella lithophora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphisiella",
+          "authorship": "Fauré-Fremiet, 1954",
+          "sourceIds": {
+            "checklistbank": "1047262"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discocephalidae"
     }
   ],
   "sourceIds": {
@@ -193,5 +252,7 @@
       "orderKey": 8290279,
       "familyKey": 8382879
     }
-  }
+  },
+  "genusCount": 6,
+  "speciesCount": 11
 }

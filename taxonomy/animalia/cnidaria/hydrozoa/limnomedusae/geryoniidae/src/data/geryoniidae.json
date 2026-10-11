@@ -26,7 +26,8 @@
             "gbif": 2269570
           },
           "uuid": "eb403c23-d9db-5c9-a64-8356daf8bcfa6b",
-          "authorityIds": "gbif:2269570"
+          "authorityIds": "gbif:2269570",
+          "children": []
         }
       ]
     },
@@ -52,7 +53,8 @@
             "gbif": 2269578
           },
           "uuid": "4540892c-90fb-50c-ac6-31dbd8ac5928b9",
-          "authorityIds": "gbif:2269578"
+          "authorityIds": "gbif:2269578",
+          "children": []
         }
       ]
     },
@@ -78,7 +80,8 @@
             "gbif": 4878093
           },
           "uuid": "b7206c67-4923-5a2-931-882655e9d5e15b",
-          "authorityIds": "gbif:4878093"
+          "authorityIds": "gbif:4878093",
+          "children": []
         }
       ]
     },
@@ -113,10 +116,13 @@
             ],
             "itis": [
               "51048"
-            ]
+            ],
+            "checklistbank": "362396"
           },
           "uuid": "55657a72-8c82-544-90a-b4aa1fbb5d298b",
-          "authorityIds": "col:3VCY7,gbif:5186382,itis:51048,wikidata:Q2805806"
+          "authorityIds": "col:3VCY7,gbif:5186382,itis:51048,wikidata:Q2805806",
+          "authorship": "(Chamisso & Eysenhardt, 1821)",
+          "children": []
         },
         {
           "id": "SP_XANTHEA_AGARICINA_LESSON_1843",
@@ -131,7 +137,60 @@
             "gbif": 8925713
           },
           "uuid": "030e30a6-8e76-598-848-5bb913d950f43c",
-          "authorityIds": "gbif:8925713"
+          "authorityIds": "gbif:8925713",
+          "children": []
+        },
+        {
+          "id": "SP_LIRIOPE_EURYBIA_HAECKEL_1864",
+          "name": "Liriope eurybia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liriope",
+          "authorship": "Haeckel, 1864",
+          "sourceIds": {
+            "checklistbank": "6953"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIRIOPE_CATHARINENSIS_M_LLER_1859",
+          "name": "Liriope catharinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liriope",
+          "authorship": "Müller, 1859",
+          "sourceIds": {
+            "checklistbank": "553453"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIRIOPE_CONIROSTRIS_HAECKEL_1879",
+          "name": "Liriope conirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liriope",
+          "authorship": "Haeckel, 1879",
+          "sourceIds": {
+            "checklistbank": "553525"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIRIOPE_SCUTIGERA_MCCRADY_1859",
+          "name": "Liriope scutigera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liriope",
+          "authorship": "McCrady, 1859",
+          "sourceIds": {
+            "checklistbank": "553526"
+          },
+          "children": []
         }
       ]
     },
@@ -157,7 +216,8 @@
             "gbif": 10428792
           },
           "uuid": "b68aba8e-0122-558-b52-27489709708041",
-          "authorityIds": "gbif:10428792"
+          "authorityIds": "gbif:10428792",
+          "children": []
         },
         {
           "id": "SP_GERYONIA_PROBOSCIDALIS",
@@ -181,12 +241,72 @@
             ],
             "col": [
               "3FXPT"
-            ]
+            ],
+            "checklistbank": "6956"
           },
           "uuid": "ffbfe59b-1be2-5a7-93f-1d32387f0f3973",
-          "authorityIds": "col:3FXPT,gbif:5186387,itis:51044,wikidata:Q1515952"
+          "authorityIds": "col:3FXPT,gbif:5186387,itis:51044,wikidata:Q1515952",
+          "authorship": "(Forsskål, 1775)",
+          "children": []
+        },
+        {
+          "id": "SP_GERYONIA_TETRAPHYLLA_CHAMISSO_EYSENHARDT_1821",
+          "name": "Geryonia tetraphylla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geryonia",
+          "authorship": "Chamisso & Eysenhardt, 1821",
+          "sourceIds": {
+            "checklistbank": "1047544"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CARMARIS",
+      "name": "Carmaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARMARIS_ROSEA_AGASSIZ_MAYER_1902",
+          "name": "Carmaris rosea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carmaris",
+          "authorship": "Agassiz & Mayer, 1902",
+          "sourceIds": {
+            "checklistbank": "994700"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geryoniidae"
+    },
+    {
+      "id": "GENUS_MEDUSA",
+      "name": "Medusa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEDUSA_PROBOSCIDALIS_FORSSK_L_1775",
+          "name": "Medusa proboscidalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Medusa",
+          "authorship": "Forsskål, 1775",
+          "sourceIds": {
+            "checklistbank": "1046277"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geryoniidae"
     }
   ],
   "sourceIds": {
@@ -197,5 +317,7 @@
       "orderKey": 1435,
       "familyKey": 3971
     }
-  }
+  },
+  "genusCount": 7,
+  "speciesCount": 14
 }

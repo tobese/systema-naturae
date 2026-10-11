@@ -23,7 +23,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "90e310ea-9bfc-5a7-b6c-54252d57bd3adf"
+          "uuid": "90e310ea-9bfc-5a7-b6c-54252d57bd3adf",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_AMERICANA",
@@ -40,7 +41,8 @@
               "9416"
             ]
           },
-          "authorityIds": "itis:9416"
+          "authorityIds": "itis:9416",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_BIPLEX",
@@ -54,7 +56,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "8e77a118-0e7e-558-a1d-ff3da81f2ea0be"
+          "uuid": "8e77a118-0e7e-558-a1d-ff3da81f2ea0be",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_GELATINOSA",
@@ -72,9 +75,12 @@
           "sourceIds": {
             "itis": [
               "9413"
-            ]
+            ],
+            "checklistbank": "74036"
           },
-          "authorityIds": "itis:9413"
+          "authorityIds": "itis:9413",
+          "authorship": "Wille, 1898",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_GELIFACTA",
@@ -88,7 +94,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "11e47500-8924-5ae-9fa-6469329744f40d"
+          "uuid": "11e47500-8924-5ae-9fa-6469329744f40d",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_GENEVENSIS",
@@ -106,9 +113,12 @@
           "sourceIds": {
             "itis": [
               "9415"
-            ]
+            ],
+            "checklistbank": "653554"
           },
-          "authorityIds": "itis:9415"
+          "authorityIds": "itis:9415",
+          "authorship": "(Reverdin) Hindák, 1962",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_INFLEXA",
@@ -119,7 +129,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "073a6827-f9a1-526-85f-0151826f6bc165"
+          "uuid": "073a6827-f9a1-526-85f-0151826f6bc165",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_SUBACUTA",
@@ -133,7 +144,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "a42406fe-3bd1-5aa-b01-ab15537d71110f"
+          "uuid": "a42406fe-3bd1-5aa-b01-ab15537d71110f",
+          "children": []
         },
         {
           "id": "SP_ELAKATOTHRIX_VIRIDIS",
@@ -153,9 +165,32 @@
               "9414"
             ]
           },
-          "authorityIds": "itis:9414"
+          "authorityIds": "itis:9414",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ANKISTRODESMUS",
+      "name": "Ankistrodesmus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANKISTRODESMUS_GENEVENSIS_REVERDIN_1919",
+          "name": "Ankistrodesmus genevensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankistrodesmus",
+          "authorship": "Reverdin, 1919",
+          "sourceIds": {
+            "checklistbank": "1008484"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elakatotrichaceae"
     }
   ],
   "sourceIds": {
@@ -166,5 +201,7 @@
       "orderKey": 634,
       "familyKey": 3229639
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 10
 }

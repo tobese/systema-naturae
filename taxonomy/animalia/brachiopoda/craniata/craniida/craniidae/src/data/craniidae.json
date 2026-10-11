@@ -77,9 +77,11 @@
           "sourceIds": {
             "col": [
               "6SCVB"
-            ]
+            ],
+            "checklistbank": "529999"
           },
-          "authorityIds": "col:6SCVB"
+          "authorityIds": "col:6SCVB",
+          "authorship": "(O.F. Müller, 1776)"
         },
         {
           "id": "SP_NOVOCRANIA_CHATHAMENSIS",
@@ -152,9 +154,11 @@
           "sourceIds": {
             "col": [
               "48273"
-            ]
+            ],
+            "checklistbank": "1051080"
           },
-          "authorityIds": "col:48273"
+          "authorityIds": "col:48273",
+          "authorship": "(Joubin, 1901)"
         },
         {
           "id": "SP_NOVOCRANIA_NYSTI",
@@ -247,9 +251,37 @@
           "sourceIds": {
             "col": [
               "89KZD"
-            ]
+            ],
+            "checklistbank": "782127"
           },
-          "authorityIds": "col:89KZD"
+          "authorityIds": "col:89KZD",
+          "authorship": "(Poli, 1795)"
+        },
+        {
+          "id": "SP_NOVOCRANIA_VALDIVIAE_HELMCKE_1940",
+          "name": "Novocrania valdiviae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Novocrania",
+          "authorship": "(Helmcke, 1940)",
+          "sourceIds": {
+            "checklistbank": "838038"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NOVOCRANIA_REEVEI_LEE_BRUNTON_1986",
+          "name": "Novocrania reevei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Novocrania",
+          "authorship": "Lee & Brunton, 1986",
+          "sourceIds": {
+            "checklistbank": "964927"
+          },
+          "children": []
         }
       ]
     },
@@ -1337,7 +1369,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b8e953f5-3e8b-514-838-557f3176f117b0"
+          "uuid": "b8e953f5-3e8b-514-838-557f3176f117b0",
+          "authorship": "(Da Costa & Humphrey, 1770)",
+          "sourceIds": {
+            "checklistbank": "843668"
+          }
         },
         {
           "id": "SP_CRANIA_KIRKBYI_DAVIDSON_1858",
@@ -1560,6 +1596,32 @@
             ]
           },
           "authorityIds": "itis:156775"
+        },
+        {
+          "id": "SP_CRANIA_VALDIVIAE_HELMCKE_1940",
+          "name": "Crania valdiviae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crania",
+          "authorship": "Helmcke, 1940",
+          "sourceIds": {
+            "checklistbank": "838039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRANIA_LECOINTEI_JOUBIN_1901",
+          "name": "Crania lecointei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crania",
+          "authorship": "Joubin, 1901",
+          "sourceIds": {
+            "checklistbank": "1051081"
+          },
+          "children": []
         }
       ]
     },
@@ -1707,6 +1769,32 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4bfb4226-0a5e-5d3-a3d-dae3a21afcfad7"
+        },
+        {
+          "id": "SP_ORBICULA_ANOMALA_M_LLER_1776",
+          "name": "Orbicula anomala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orbicula",
+          "authorship": "(Müller, 1776)",
+          "sourceIds": {
+            "checklistbank": "844551"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORBICULA_NORWEGICA_LAMARCK_1801",
+          "name": "Orbicula norwegica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orbicula",
+          "authorship": "Lamarck, 1801",
+          "sourceIds": {
+            "checklistbank": "844552"
+          },
+          "children": []
         }
       ]
     },
@@ -1977,10 +2065,89 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "craniidae"
+    },
+    {
+      "id": "GENUS_PATELLA",
+      "name": "Patella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PATELLA_ANOMALA_O_F_M_LLER_1776",
+          "name": "Patella anomala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "O.F. Müller, 1776",
+          "sourceIds": {
+            "checklistbank": "844549"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "craniidae"
+    },
+    {
+      "id": "GENUS_ANOMIA",
+      "name": "Anomia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOMIA_TURBINATA_POLI_1795",
+          "name": "Anomia turbinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomia",
+          "authorship": "Poli, 1795",
+          "sourceIds": {
+            "checklistbank": "844550"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANOMIA_NORWEGICA_LAMARCK_1801",
+          "name": "Anomia norwegica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomia",
+          "authorship": "(Lamarck, 1801)",
+          "sourceIds": {
+            "checklistbank": "844554"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "craniidae"
+    },
+    {
+      "id": "GENUS_CRIOPUS",
+      "name": "Criopus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRIOPUS_ANOMALUS_M_LLER_1776",
+          "name": "Criopus anomalus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Criopus",
+          "authorship": "(Müller, 1776)",
+          "sourceIds": {
+            "checklistbank": "844553"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "craniidae"
     }
   ],
-  "genusCount": 21,
-  "speciesCount": 111,
+  "genusCount": 24,
+  "speciesCount": 121,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

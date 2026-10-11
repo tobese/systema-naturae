@@ -118,9 +118,23 @@
           "sourceIds": {
             "itis": [
               "51276"
-            ]
+            ],
+            "checklistbank": "376105"
           },
           "authorityIds": "itis:51276"
+        },
+        {
+          "id": "SP_CLAUSOPHYES_MASSILANA_PATRITI_1969",
+          "name": "Clausophyes massilana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clausophyes",
+          "authorship": "Patriti, 1969",
+          "sourceIds": {
+            "checklistbank": "688167"
+          },
+          "children": []
         }
       ]
     },
@@ -150,10 +164,12 @@
             ],
             "col": [
               "3LD88"
-            ]
+            ],
+            "checklistbank": "986244"
           },
           "uuid": "28c04985-a666-5aa-b1f-1e306fb12bf318",
-          "authorityIds": "col:3LD88,gbif:2264836,wikidata:Q2625983"
+          "authorityIds": "col:3LD88,gbif:2264836,wikidata:Q2625983",
+          "authorship": "(Moser, 1925)"
         },
         {
           "id": "SP_HETEROPYRAMIS_MACULATA_MOSER_1925",
@@ -328,16 +344,62 @@
             ],
             "col": [
               "3R5QC"
-            ]
+            ],
+            "checklistbank": "670342"
           },
           "uuid": "9170a7b7-088a-56d-8bf-a19ea72d8b8da1",
-          "authorityIds": "col:3R5QC,gbif:4339865,wikidata:Q2491184"
+          "authorityIds": "col:3R5QC,gbif:4339865,wikidata:Q2491184",
+          "authorship": "(Keferstein & Ehlers, 1860)"
         }
       ]
+    },
+    {
+      "id": "GENUS_DIPHYES",
+      "name": "Diphyes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIPHYES_OVATA_KEFERSTEIN_EHLERS_1860",
+          "name": "Diphyes ovata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diphyes",
+          "authorship": "Keferstein & Ehlers, 1860",
+          "sourceIds": {
+            "checklistbank": "688168"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clausophyidae"
+    },
+    {
+      "id": "GENUS_THALASSOPHYES",
+      "name": "Thalassophyes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THALASSOPHYES_CRYSTALLINA_MOSER_1925",
+          "name": "Thalassophyes crystallina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassophyes",
+          "authorship": "Moser, 1925",
+          "sourceIds": {
+            "checklistbank": "986246"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clausophyidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 12,
+  "genusCount": 7,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

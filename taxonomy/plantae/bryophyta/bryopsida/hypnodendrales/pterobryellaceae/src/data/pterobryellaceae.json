@@ -70,9 +70,11 @@
             ],
             "wfo": [
               "wfo-0001186824"
-            ]
+            ],
+            "checklistbank": "656873"
           },
-          "authorityIds": "col:4PVBG,wfo:wfo-0001186824"
+          "authorityIds": "col:4PVBG,wfo:wfo-0001186824",
+          "authorship": "(Mitt.) Touw, 1971"
         },
         {
           "id": "SP_PTEROBRYELLA_SPECIOSISSIMA",
@@ -112,9 +114,11 @@
             ],
             "col": [
               "9MC3M"
-            ]
+            ],
+            "checklistbank": "953136"
           },
-          "authorityIds": "col:9MC3M,wfo:wfo-0001171360"
+          "authorityIds": "col:9MC3M,wfo:wfo-0001171360",
+          "authorship": "Müll.Hal., 1878"
         },
         {
           "id": "SP_PTEROBRYELLA_LONGIFRONS",
@@ -125,6 +129,32 @@
           "lineage": "Pterobryella",
           "children": [],
           "uuid": "d5f756a1-d6f8-58b-b78-4e8fc42b6afcfb"
+        },
+        {
+          "id": "SP_PTEROBRYELLA_BREVIACUMINATA_BESCH",
+          "name": "Pterobryella breviacuminata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterobryella",
+          "authorship": "Besch.",
+          "sourceIds": {
+            "checklistbank": "656872"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTEROBRYELLA_VIEILLARDI_M_LL_HAL_1878",
+          "name": "Pterobryella Vieillardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterobryella",
+          "authorship": "Müll.Hal., 1878",
+          "sourceIds": {
+            "checklistbank": "656874"
+          },
+          "children": []
         }
       ]
     },
@@ -178,10 +208,45 @@
           "authorityIds": "col:9MJF5,wfo:wfo-0001175348"
         }
       ]
+    },
+    {
+      "id": "GENUS_CYRTOPODENDRON",
+      "name": "Cyrtopodendron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYRTOPODENDRON_VIEILLARDI_M_LL_HAL_M_FLEISCH_1909",
+          "name": "Cyrtopodendron vieillardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtopodendron",
+          "authorship": "(Müll.Hal.) M.Fleisch., 1909",
+          "sourceIds": {
+            "checklistbank": "656603"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOPODENDRON_VIEILLARDII_M_LL_HAL_M_FLEISCH_1909",
+          "name": "Cyrtopodendron vieillardii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtopodendron",
+          "authorship": "(Müll.Hal.) M.Fleisch., 1909",
+          "sourceIds": {
+            "checklistbank": "953148"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pterobryellaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 8,
+  "genusCount": 3,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

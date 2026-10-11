@@ -36,10 +36,12 @@
             ],
             "itis": [
               "13994"
-            ]
+            ],
+            "checklistbank": "45655"
           },
           "uuid": "7e104489-63e5-547-a0d-c66959452e8cef",
-          "authorityIds": "col:5VTQP,gbif:2582962,itis:13994,mycobank:204237"
+          "authorityIds": "col:5VTQP,gbif:2582962,itis:13994,mycobank:204237",
+          "children": []
         },
         {
           "id": "ASCOCORTICIUM_EFFUSUM",
@@ -64,7 +66,8 @@
             ]
           },
           "uuid": "83616338-bcaf-595-b7c-bc755add5cb6c3",
-          "authorityIds": "col:H7ZV,gbif:3491099,mycobank:211677"
+          "authorityIds": "col:H7ZV,gbif:3491099,mycobank:211677",
+          "children": []
         },
         {
           "id": "ASCOCORTICIUM_SORBICOLA",
@@ -89,7 +92,21 @@
             ]
           },
           "uuid": "b8863f90-0f80-5f6-af5-6efa8aa2f46a93",
-          "authorityIds": "col:B2T7Z,gbif:12217746,mycobank:844288"
+          "authorityIds": "col:B2T7Z,gbif:12217746,mycobank:844288",
+          "children": []
+        },
+        {
+          "id": "SP_ASCOCORTICIUM_ALBIDUM_BREF_TAVEL_1891",
+          "name": "Ascocorticium albidum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascocorticium",
+          "authorship": "Bref. & Tavel, 1891",
+          "sourceIds": {
+            "checklistbank": "872140"
+          },
+          "children": []
         }
       ],
       "authorship": "Brefeld"
@@ -126,7 +143,8 @@
             ]
           },
           "uuid": "d99de3ae-6717-5fa-a3f-cc6952a3c7df6b",
-          "authorityIds": "col:H7ZS,gbif:2589604,mycobank:110492"
+          "authorityIds": "col:H7ZS,gbif:2589604,mycobank:110492",
+          "children": []
         }
       ],
       "authorship": "Jülich & B. de Vries"
@@ -161,7 +179,8 @@
             ]
           },
           "uuid": "8968025c-ed43-5ff-9a5-dd801bf39271cb",
-          "authorityIds": "col:6NXMN,gbif:3484794,mycobank:271506"
+          "authorityIds": "col:6NXMN,gbif:3484794,mycobank:271506",
+          "children": []
         }
       ],
       "authorship": "Velenovský"
@@ -199,10 +218,33 @@
             ]
           },
           "uuid": "44a1a283-f1c4-59c-923-e74a5e348dfa76",
-          "authorityIds": "col:H8QB,gbif:3498172,itis:181610,mycobank:214968"
+          "authorityIds": "col:H8QB,gbif:3498172,itis:181610,mycobank:214968",
+          "children": []
         }
       ],
       "authorship": "Hennings & Ruhland"
+    },
+    {
+      "id": "GENUS_ASCOMYCES",
+      "name": "Ascomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASCOMYCES_ANOMALUS_ELLIS_HARKN_1881",
+          "name": "Ascomyces anomalus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascomyces",
+          "authorship": "Ellis & Harkn., 1881",
+          "sourceIds": {
+            "checklistbank": "872141"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ascocorticiaceae"
     }
   ],
   "authorship": "J. Schröter",
@@ -214,5 +256,7 @@
       "orderKey": 1052,
       "familyKey": 4120
     }
-  }
+  },
+  "genusCount": 5,
+  "speciesCount": 8
 }

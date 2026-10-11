@@ -30,9 +30,12 @@
             ],
             "itis": [
               "78679"
-            ]
+            ],
+            "checklistbank": "63053"
           },
-          "authorityIds": "col:PWV3,itis:78679"
+          "authorityIds": "col:PWV3,itis:78679",
+          "authorship": "(Alder & Hancock, 1854)",
+          "children": []
         },
         {
           "id": "SP_CALMA_GOBIOOPHAGA_CALADO_URGORRI_2002",
@@ -54,9 +57,32 @@
               "PWV4"
             ]
           },
-          "authorityIds": "col:PWV4"
+          "authorityIds": "col:PWV4",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_EOLIS",
+      "name": "Eolis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOLIS_GLAUCOIDES_ALDER_HANCOCK_1854",
+          "name": "Eolis glaucoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eolis",
+          "authorship": "Alder & Hancock, 1854",
+          "sourceIds": {
+            "checklistbank": "1044683"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calmidae"
     }
   ],
   "sourceIds": {
@@ -67,5 +93,7 @@
       "orderKey": 980,
       "familyKey": 7047
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

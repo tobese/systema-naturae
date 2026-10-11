@@ -94,7 +94,8 @@
             ],
             "itis": [
               "668671"
-            ]
+            ],
+            "checklistbank": "990115"
           },
           "authorityIds": "col:3X3WY,itis:668671",
           "commonName": "Alligator Snapping Turtle",
@@ -146,13 +147,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chelydridae"
+    },
+    {
+      "id": "GENUS_TESTUDO",
+      "name": "Testudo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TESTUDO_SERPENTINA_LINNAEUS_1758",
+          "name": "Testudo serpentina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Testudo",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "840830"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chelydridae"
+    },
+    {
+      "id": "GENUS_CHELONURA",
+      "name": "Chelonura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHELONURA_TEMMINCKII_TROOST_IN_HARLAN_1835",
+          "name": "Chelonura temminckii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonura",
+          "authorship": "Troost in Harlan, 1835",
+          "sourceIds": {
+            "checklistbank": "990129"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chelydridae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 8,
   "appSlug": "chelydridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Reptilia",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -184,6 +184,32 @@
             ]
           },
           "authorityIds": "col:PBBS,itis:202213,wikidata:Q644453"
+        },
+        {
+          "id": "SP_CAIMAN_NIGER_SPIX_1825",
+          "name": "Caiman niger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caiman",
+          "authorship": "Spix, 1825",
+          "sourceIds": {
+            "checklistbank": "901129"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CAIMAN_SCLEROPS_SCHNEIDER_1801",
+          "name": "Caiman sclerops",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caiman",
+          "authorship": "(Schneider, 1801)",
+          "sourceIds": {
+            "checklistbank": "1078009"
+          },
+          "children": []
         }
       ]
     },
@@ -217,9 +243,11 @@
             ],
             "itis": [
               "202215"
-            ]
+            ],
+            "checklistbank": "443974"
           },
-          "authorityIds": "col:3ZBL4,itis:202215,wikidata:Q504483"
+          "authorityIds": "col:3ZBL4,itis:202215,wikidata:Q504483",
+          "authorship": "(Spix, 1825)"
         }
       ]
     },
@@ -253,9 +281,11 @@
             ],
             "itis": [
               "551815"
-            ]
+            ],
+            "checklistbank": "443976"
           },
-          "authorityIds": "col:4C47K,itis:551815,wikidata:Q473521"
+          "authorityIds": "col:4C47K,itis:551815,wikidata:Q473521",
+          "authorship": "(Schneider, 1801)"
         },
         {
           "id": "PALEOSUCHUS_PALPEBROSUS",
@@ -280,9 +310,11 @@
             ],
             "itis": [
               "551814"
-            ]
+            ],
+            "checklistbank": "443975"
           },
-          "authorityIds": "col:4C47J,itis:551814,wikidata:Q757363"
+          "authorityIds": "col:4C47J,itis:551814,wikidata:Q757363",
+          "authorship": "(Cuvier, 1807)"
         }
       ]
     },
@@ -304,10 +336,80 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Alligatoridae"
+    },
+    {
+      "id": "GENUS_LACERTA",
+      "name": "Lacerta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LACERTA_CROCODILUS_LINNAEUS_1758",
+          "name": "Lacerta crocodilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lacerta",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "901121"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alligatoridae"
+    },
+    {
+      "id": "GENUS_CROCODILUS",
+      "name": "Crocodilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CROCODILUS_PALPEBROSUS_CUVIER_1807",
+          "name": "Crocodilus palpebrosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crocodilus",
+          "authorship": "Cuvier, 1807",
+          "sourceIds": {
+            "checklistbank": "901130"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CROCODILUS_TRIGONATUS_SCHNEIDER_1801",
+          "name": "Crocodilus trigonatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crocodilus",
+          "authorship": "Schneider, 1801",
+          "sourceIds": {
+            "checklistbank": "901132"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CROCODILUS_SCLEROPS_SCHNEIDER_1801",
+          "name": "Crocodilus sclerops",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crocodilus",
+          "authorship": "Schneider, 1801",
+          "sourceIds": {
+            "checklistbank": "1077993"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alligatoridae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 12,
+  "genusCount": 7,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

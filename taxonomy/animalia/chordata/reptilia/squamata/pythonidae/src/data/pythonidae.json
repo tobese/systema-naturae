@@ -24,7 +24,11 @@
           "description": "The reticulated python (Malayopython reticulatus) is a python species native to South and Southeast Asia.",
           "sourcedFrom": "wikipedia",
           "children": [],
-          "uuid": "8cd87948-135b-570-9ff-128ee2127a2692"
+          "uuid": "8cd87948-135b-570-9ff-128ee2127a2692",
+          "authorship": "(Schneider, 1801)",
+          "sourceIds": {
+            "checklistbank": "896817"
+          }
         },
         {
           "id": "PYTHON_BIVITTATUS",
@@ -51,7 +55,8 @@
             ],
             "itis": [
               "1094050"
-            ]
+            ],
+            "checklistbank": "649903"
           },
           "authorityIds": "col:4QY48,itis:1094050,wikidata:Q2716137"
         },
@@ -109,7 +114,8 @@
             ],
             "col": [
               "7925W"
-            ]
+            ],
+            "checklistbank": "649883"
           },
           "authorityIds": "col:7925W,itis:634784,wikidata:Q464424"
         },
@@ -137,7 +143,8 @@
             ],
             "itis": [
               "202187"
-            ]
+            ],
+            "checklistbank": "966253"
           },
           "authorityIds": "col:4QY4N,itis:202187,wikidata:Q245183"
         },
@@ -414,9 +421,11 @@
           "sourceIds": {
             "wikidata": [
               "Q186275"
-            ]
+            ],
+            "checklistbank": "649917"
           },
-          "authorityIds": "wikidata:Q186275"
+          "authorityIds": "wikidata:Q186275",
+          "authorship": "(Schneider, 1801)"
         },
         {
           "id": "MORELIA_BOELENI",
@@ -1150,7 +1159,8 @@
             ],
             "itis": [
               "1094041"
-            ]
+            ],
+            "checklistbank": "995657"
           },
           "authorityIds": "col:3XMDC,itis:1094041,wikidata:Q216136"
         },
@@ -1416,10 +1426,80 @@
           "authorityIds": "itis:1094048"
         }
       ]
+    },
+    {
+      "id": "GENUS_BOA",
+      "name": "Boa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOA_REGIA_SHAW_1802",
+          "name": "Boa regia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boa",
+          "authorship": "Shaw, 1802",
+          "sourceIds": {
+            "checklistbank": "649884"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOA_AMETHISTINA_SCHNEIDER_1801",
+          "name": "Boa amethistina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boa",
+          "authorship": "Schneider, 1801",
+          "sourceIds": {
+            "checklistbank": "840154"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOA_RETICULATA_SCHNEIDER_1801",
+          "name": "Boa reticulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boa",
+          "authorship": "Schneider, 1801",
+          "sourceIds": {
+            "checklistbank": "896818"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pythonidae"
+    },
+    {
+      "id": "GENUS_COLUBER",
+      "name": "Coluber",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLUBER_MOLURUS_LINNAEUS_1758",
+          "name": "Coluber molurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "966254"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pythonidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 53,
+  "genusCount": 13,
+  "speciesCount": 57,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

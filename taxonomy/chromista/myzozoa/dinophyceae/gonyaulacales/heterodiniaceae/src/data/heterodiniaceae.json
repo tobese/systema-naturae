@@ -129,11 +129,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 3206360
+            "gbif": 3206360,
+            "checklistbank": "850898"
           },
           "uuid": "b9047220-d5a7-5c5-b54-0225ad06952691",
           "authorityIds": "gbif:3206360",
-          "children": []
+          "children": [],
+          "authorship": "(Murray & Whitting) Kof., 1906"
         },
         {
           "id": "HETERODINIUM_HINDMARCHI",
@@ -188,11 +190,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8272581
+            "gbif": 8272581,
+            "checklistbank": "850902"
           },
           "uuid": "802d729b-2eaf-5b5-a58-4d41ba4fae4572",
           "authorityIds": "gbif:8272581",
-          "children": []
+          "children": [],
+          "authorship": "Pavill., 1915"
         },
         {
           "id": "HETERODINIUM_MEDITERRANEUM",
@@ -236,11 +240,13 @@
             ],
             "itis": [
               "10395"
-            ]
+            ],
+            "checklistbank": "850900"
           },
           "uuid": "e28773e4-5f8c-5e1-9cf-f50c40a79a5437",
           "authorityIds": "gbif:7731556,itis:10395",
-          "children": []
+          "children": [],
+          "authorship": "(Murray & Whitting) Kof., 1906"
         },
         {
           "id": "HETERODINIUM_RIGDENIAE",
@@ -253,11 +259,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7840610
+            "gbif": 7840610,
+            "checklistbank": "793371"
           },
           "uuid": "8109df7a-b6a0-527-a8e-366cadb78b540f",
           "authorityIds": "gbif:7840610",
-          "children": []
+          "children": [],
+          "authorship": "Kof., 1906"
         },
         {
           "id": "HETERODINIUM_SCRIPPSII",
@@ -272,11 +280,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 7575185
+            "gbif": 7575185,
+            "checklistbank": "851021"
           },
           "uuid": "207a7714-68e6-5ad-a09-70b7b6ec625613",
           "authorityIds": "gbif:7575185",
-          "children": []
+          "children": [],
+          "authorship": "Kof., 1906"
         },
         {
           "id": "HETERODINIUM_VARICATOR",
@@ -313,6 +323,19 @@
           },
           "children": [],
           "uuid": "1ae6abd8-2c34-50d-893-21ec9bfb51b42d"
+        },
+        {
+          "id": "SP_HETERODINIUM_PAVILLARDII_KOF_ADAMSON",
+          "name": "Heterodinium pavillardii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterodinium",
+          "authorship": "Kof. & Adamson",
+          "sourceIds": {
+            "checklistbank": "850903"
+          },
+          "children": []
         }
       ]
     },
@@ -346,10 +369,45 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PERIDINIUM",
+      "name": "Peridinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERIDINIUM_DOMA_MURRAY_WHITTING_1899",
+          "name": "Peridinium doma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peridinium",
+          "authorship": "Murray & Whitting, 1899",
+          "sourceIds": {
+            "checklistbank": "850899"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PERIDINIUM_MILNERI_MURRAY_WHITTING_1899",
+          "name": "Peridinium milneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peridinium",
+          "authorship": "Murray & Whitting, 1899",
+          "sourceIds": {
+            "checklistbank": "850901"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heterodiniaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 16,
+  "genusCount": 3,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

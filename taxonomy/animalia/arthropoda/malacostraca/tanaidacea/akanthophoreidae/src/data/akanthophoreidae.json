@@ -1210,9 +1210,11 @@
           "sourceIds": {
             "itis": [
               "683103"
-            ]
+            ],
+            "checklistbank": "937723"
           },
-          "authorityIds": "itis:683103"
+          "authorityIds": "itis:683103",
+          "authorship": "(Krøyer, 1842)"
         },
         {
           "id": "SP_PARALEPTOGNATHIA_FASTUOSA",
@@ -1232,7 +1234,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Paraleptognathia",
-          "uuid": "d73898d5-f969-5a3-b92-3dbda09a1e3180"
+          "uuid": "d73898d5-f969-5a3-b92-3dbda09a1e3180",
+          "authorship": "(Hansen, 1913)",
+          "sourceIds": {
+            "checklistbank": "940583"
+          }
         },
         {
           "id": "SP_PARALEPTOGNATHIA_BISETULOSA",
@@ -1325,13 +1331,83 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Akanthophoreidae"
+    },
+    {
+      "id": "GENUS_TANAIS",
+      "name": "Tanais",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TANAIS_GRACILIS_KR_YER_1842",
+          "name": "Tanais gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tanais",
+          "authorship": "Krøyer, 1842",
+          "sourceIds": {
+            "checklistbank": "937721"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "akanthophoreidae"
+    },
+    {
+      "id": "GENUS_LEPTOGNATHIA",
+      "name": "Leptognathia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPTOGNATHIA_GRACILIS_KR_YER_1842",
+          "name": "Leptognathia gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptognathia",
+          "authorship": "(Krøyer, 1842)",
+          "sourceIds": {
+            "checklistbank": "937722"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTOGNATHIA_AUSTRALIS_BEDDARD_1886",
+          "name": "Leptognathia australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptognathia",
+          "authorship": "Beddard, 1886",
+          "sourceIds": {
+            "checklistbank": "947238"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTOGNATHIA_ANTARCTICA_VANH_FFEN_1914",
+          "name": "Leptognathia antarctica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptognathia",
+          "authorship": "Vanhöffen, 1914",
+          "sourceIds": {
+            "checklistbank": "947243"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "akanthophoreidae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 80,
   "appSlug": "akanthophoreidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 11,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

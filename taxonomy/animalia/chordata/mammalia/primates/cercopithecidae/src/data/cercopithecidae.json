@@ -117,9 +117,11 @@
             ],
             "col": [
               "3WWP8"
-            ]
+            ],
+            "checklistbank": "60568"
           },
-          "authorityIds": "col:3WWP8,itis:573027,wikidata:Q199962"
+          "authorityIds": "col:3WWP8,itis:573027,wikidata:Q199962",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "MACACA_NIGRA",
@@ -679,6 +681,18 @@
           "children": [],
           "lineage": "Macaca",
           "uuid": "3ece141d-fdd1-55b-8d1-50e3f9f1b30bf5"
+        },
+        {
+          "id": "SP_MACACA_FLORENTINA",
+          "name": "Macaca florentina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macaca",
+          "sourceIds": {
+            "checklistbank": "458821"
+          },
+          "children": []
         }
       ]
     },
@@ -1983,6 +1997,19 @@
           "children": [],
           "lineage": "Cercopithecus",
           "uuid": "4e92fbf1-cfc3-530-a3c-84fe0acd628168"
+        },
+        {
+          "id": "SP_CERCOPITHECUS_AETHIOPS_LINNAEUS_1758",
+          "name": "Cercopithecus aethiops",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cercopithecus",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "835447"
+          },
+          "children": []
         }
       ]
     },
@@ -2283,9 +2310,11 @@
             ],
             "col": [
               "69VWT"
-            ]
+            ],
+            "checklistbank": "814257"
           },
-          "authorityIds": "col:69VWT,itis:944217,wikidata:Q8985570"
+          "authorityIds": "col:69VWT,itis:944217,wikidata:Q8985570",
+          "authorship": "(F. Cuvier, 1821)"
         },
         {
           "id": "CHLOROCEBUS_SABAEUS",
@@ -2310,9 +2339,11 @@
             ],
             "col": [
               "5XW96"
-            ]
+            ],
+            "checklistbank": "926294"
           },
-          "authorityIds": "col:5XW96,itis:944215,wikidata:Q857996"
+          "authorityIds": "col:5XW96,itis:944215,wikidata:Q857996",
+          "authorship": "(Linnaeus, 1766)"
         },
         {
           "id": "CHLOROCEBUS_AETHIOPS",
@@ -2337,9 +2368,11 @@
             ],
             "col": [
               "5XW8T"
-            ]
+            ],
+            "checklistbank": "835446"
           },
-          "authorityIds": "col:5XW8T,itis:552515,wikidata:Q257470"
+          "authorityIds": "col:5XW8T,itis:552515,wikidata:Q257470",
+          "authorship": "auct. non (Linnaeus, 1758)"
         },
         {
           "id": "CHLOROCEBUS_TANTALUS",
@@ -5075,10 +5108,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Cercopithecidae"
+    },
+    {
+      "id": "GENUS_SIMIA",
+      "name": "Simia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIMIA_SYLVANUS_LINNAEUS_1758",
+          "name": "Simia sylvanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simia",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "961619"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIMIA_SABAEA_LINNAEUS_1766",
+          "name": "Simia sabaea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simia",
+          "authorship": "Linnaeus, 1766",
+          "sourceIds": {
+            "checklistbank": "1024826"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cercopithecidae"
     }
   ],
-  "genusCount": 38,
-  "speciesCount": 205,
+  "genusCount": 39,
+  "speciesCount": 209,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

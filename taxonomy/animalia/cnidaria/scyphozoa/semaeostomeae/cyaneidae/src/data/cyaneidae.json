@@ -503,9 +503,23 @@
           "sourceIds": {
             "itis": [
               "51678"
-            ]
+            ],
+            "checklistbank": "553434"
           },
           "authorityIds": "itis:51678"
+        },
+        {
+          "id": "SP_CYANEA_ARCTICA_PERON_LESUEUR_1809",
+          "name": "Cyanea arctica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanea",
+          "authorship": "Peron & Lesueur, 1809",
+          "sourceIds": {
+            "checklistbank": "432478"
+          },
+          "children": []
         }
       ]
     },
@@ -697,10 +711,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyaneidae"
+    },
+    {
+      "id": "GENUS_MEDUSA",
+      "name": "Medusa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEDUSA_CAPILLATA_LINNAEUS_1758",
+          "name": "Medusa capillata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Medusa",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "851025"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyaneidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 31,
+  "genusCount": 5,
+  "speciesCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

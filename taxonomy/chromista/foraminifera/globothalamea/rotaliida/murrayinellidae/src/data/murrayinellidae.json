@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "9ebfcf35-3f33-564-9f0-1957d7d51ed480",
-          "authorityIds": "col:44N73,gbif:7361956"
+          "authorityIds": "col:44N73,gbif:7361956",
+          "children": []
         },
         {
           "id": "MURRAYINELLA_GLOBOSA",
@@ -48,10 +49,13 @@
             ],
             "col": [
               "44N75"
-            ]
+            ],
+            "checklistbank": "703119"
           },
           "uuid": "f6e6ecbf-e074-5b2-b23-9ffe26ba49f464",
-          "authorityIds": "col:44N75,gbif:8010314"
+          "authorityIds": "col:44N75,gbif:8010314",
+          "authorship": "(Millet, 1903)",
+          "children": []
         },
         {
           "id": "MURRAYINELLA_MINUTA",
@@ -72,7 +76,8 @@
             ]
           },
           "uuid": "5206e032-7780-524-a76-64cddb36cf1627",
-          "authorityIds": "col:44N76,gbif:7549774"
+          "authorityIds": "col:44N76,gbif:7549774",
+          "children": []
         },
         {
           "id": "MURRAYINELLA_MURRAYI",
@@ -90,10 +95,13 @@
             ],
             "col": [
               "44N77"
-            ]
+            ],
+            "checklistbank": "702655"
           },
           "uuid": "386b381e-3606-58b-b51-0d2a896d5482a8",
-          "authorityIds": "col:44N77,gbif:7638911"
+          "authorityIds": "col:44N77,gbif:7638911",
+          "authorship": "(Heron-Allen & Earland, 1915)",
+          "children": []
         },
         {
           "id": "MURRAYINELLA_TAKAYANAGII",
@@ -114,7 +122,8 @@
             ]
           },
           "uuid": "0e3eefde-3a3c-5b6-9a3-061f9c5cd6fde1",
-          "authorityIds": "col:44N78,gbif:8796033"
+          "authorityIds": "col:44N78,gbif:8796033",
+          "children": []
         },
         {
           "id": "MURRAYINELLA_YAKUMOENSIS",
@@ -135,9 +144,45 @@
             ]
           },
           "uuid": "2579931c-19e7-504-af5-8cbe5ab053bb7a",
-          "authorityIds": "col:82Z28,gbif:9331059"
+          "authorityIds": "col:82Z28,gbif:9331059",
+          "children": []
+        },
+        {
+          "id": "SP_MURRAYINELLA_ERINACEA_HERON_ALLEN_EARLAND_1915",
+          "name": "Murrayinella erinacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murrayinella",
+          "authorship": "(Heron-Allen & Earland, 1915)",
+          "sourceIds": {
+            "checklistbank": "703120"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ROTALIA",
+      "name": "Rotalia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ROTALIA_MURRAYI_HERON_ALLEN_EARLAND_1915",
+          "name": "Rotalia murrayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rotalia",
+          "authorship": "Heron-Allen & Earland, 1915",
+          "sourceIds": {
+            "checklistbank": "797256"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murrayinellidae"
     }
   ],
   "sourceIds": {
@@ -148,5 +193,7 @@
       "orderKey": 7692889,
       "familyKey": 9571183
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 8
 }

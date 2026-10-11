@@ -1010,6 +1010,32 @@
           },
           "uuid": "b06f7401-e099-507-88b-c9496bae3a4569",
           "authorityIds": "col:3HVM8,gbif:177740860,gbif:5212806,itis:640275"
+        },
+        {
+          "id": "SP_GYMNOTUS_BRACHIURUS_BLOCH_1786",
+          "name": "Gymnotus brachiurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnotus",
+          "authorship": "Bloch, 1786",
+          "sourceIds": {
+            "checklistbank": "777926"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYMNOTUS_PUTAOL_LACEP_DE_1800",
+          "name": "Gymnotus putaol",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnotus",
+          "authorship": "Lacepède, 1800",
+          "sourceIds": {
+            "checklistbank": "777932"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1038,11 +1064,13 @@
             ],
             "col": [
               "396VZ"
-            ]
+            ],
+            "checklistbank": "424056"
           },
           "uuid": "a82834f2-096a-5da-94d-61110e964a7690",
           "authorityIds": "col:396VZ,gbif:177740884,gbif:2401958,itis:163322",
-          "commonName": "Electric eel"
+          "commonName": "Electric eel",
+          "authorship": "auct. non (Linnaeus, 1766)"
         },
         {
           "id": "SP_ELECTROPHORUS_VARII",
@@ -1056,10 +1084,12 @@
             "gbif": [
               "177740882",
               "10782853"
-            ]
+            ],
+            "checklistbank": "929185"
           },
           "uuid": "015cf25f-343f-572-9a8-013d5852f2153a",
-          "authorityIds": "gbif:10782853,gbif:177740882"
+          "authorityIds": "gbif:10782853,gbif:177740882",
+          "authorship": "de Santana, Wosiacki, Crampton, Sabaj, Dillman, Mendes-Júnior & Castro e Castro, 2019"
         },
         {
           "id": "SP_ELECTROPHORUS_VOLTAI",
@@ -1084,13 +1114,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Gymnotidae"
+    },
+    {
+      "id": "GENUS_CARAPUS",
+      "name": "Carapus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARAPUS_MACROURUS_CUVIER_1870",
+          "name": "Carapus macrourus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carapus",
+          "authorship": "Cuvier, 1870",
+          "sourceIds": {
+            "checklistbank": "777529"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gymnotidae"
+    },
+    {
+      "id": "GENUS_GITON",
+      "name": "Giton",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GITON_FASCIATUS_STEINDACHNER_1908",
+          "name": "Giton fasciatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Giton",
+          "authorship": "Steindachner, 1908",
+          "sourceIds": {
+            "checklistbank": "1048834"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gymnotidae"
     }
   ],
-  "speciesCount": 49,
+  "speciesCount": 53,
   "appSlug": "gymnotidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 2,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

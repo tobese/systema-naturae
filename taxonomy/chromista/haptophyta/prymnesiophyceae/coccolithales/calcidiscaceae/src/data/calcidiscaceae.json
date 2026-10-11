@@ -26,10 +26,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3202195
+            "gbif": 3202195,
+            "checklistbank": "975644"
           },
           "uuid": "c9c568e8-748c-52e-ba1-c88e0d18992b4c",
-          "authorityIds": "gbif:3202195"
+          "authorityIds": "gbif:3202195",
+          "authorship": "(G.Murray & V.H.Blackman) Loeblich Jr. & Tappan, 1978"
         },
         {
           "id": "CALCIDISCUS_MACINTYREI",
@@ -47,6 +49,19 @@
           },
           "uuid": "c54fee61-ec02-58c-b3c-57bdf76bd915d9",
           "authorityIds": "gbif:6878946"
+        },
+        {
+          "id": "SP_CALCIDISCUS_QUADRIFORATUS_KAMPTNER_1950",
+          "name": "Calcidiscus quadriforatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calcidiscus",
+          "authorship": "Kamptner, 1950",
+          "sourceIds": {
+            "checklistbank": "1021816"
+          },
+          "children": []
         }
       ]
     },
@@ -164,10 +179,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 4378038
+            "gbif": 4378038,
+            "checklistbank": "979649"
           },
           "uuid": "9f0dfc6e-3415-5ba-8a6-ecf3cfc42c1f64",
-          "authorityIds": "gbif:4378038"
+          "authorityIds": "gbif:4378038",
+          "authorship": "(Weber Bosse) Gaarder, 1970"
         },
         {
           "id": "SP_UMBILICOSPHAERA_ANULATA",
@@ -246,10 +263,12 @@
             ],
             "itis": [
               "610063"
-            ]
+            ],
+            "checklistbank": "1021829"
           },
           "uuid": "34772135-396f-57d-bc1-09618063b41ab9",
-          "authorityIds": "gbif:9607196,itis:610063"
+          "authorityIds": "gbif:9607196,itis:610063",
+          "authorship": "(Lohmann) Martini & C.Müller, 1972"
         }
       ]
     },
@@ -373,10 +392,176 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calcidiscaceae"
+    },
+    {
+      "id": "GENUS_COCCOSPHAERA",
+      "name": "Coccosphaera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COCCOSPHAERA_LEPTOPORA_G_MURRAY_V_H_BLACKMAN_1898",
+          "name": "Coccosphaera leptopora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccosphaera",
+          "authorship": "G.Murray & V.H.Blackman, 1898",
+          "sourceIds": {
+            "checklistbank": "975645"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCOSPHAERA_SIBOGAE_WEBER_BOSSE_1901",
+          "name": "Coccosphaera sibogae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccosphaera",
+          "authorship": "Weber Bosse, 1901",
+          "sourceIds": {
+            "checklistbank": "979651"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcidiscaceae"
+    },
+    {
+      "id": "GENUS_COCCOLITHOPHORA",
+      "name": "Coccolithophora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COCCOLITHOPHORA_LEPTOPORA_MURRAY_BLACKMAN_LOHMANN_1902",
+          "name": "Coccolithophora leptopora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccolithophora",
+          "authorship": "(Murray & Blackman) Lohmann, 1902",
+          "sourceIds": {
+            "checklistbank": "975646"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCOLITHOPHORA_FRAGILIS_LOHMANN_1912",
+          "name": "Coccolithophora fragilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccolithophora",
+          "authorship": "Lohmann, 1912",
+          "sourceIds": {
+            "checklistbank": "1021830"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcidiscaceae"
+    },
+    {
+      "id": "GENUS_COCCOLITHUS",
+      "name": "Coccolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COCCOLITHUS_LEPTOPORUS_MURRAY_BLACKMAN_SCHILLER_1930",
+          "name": "Coccolithus leptoporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccolithus",
+          "authorship": "(Murray & Blackman) Schiller, 1930",
+          "sourceIds": {
+            "checklistbank": "975647"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCOLITHUS_SIBOGAE_WEBER_VAN_BOSSE_SCHILLER",
+          "name": "Coccolithus sibogae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccolithus",
+          "authorship": "(Weber-van Bosse) Schiller",
+          "sourceIds": {
+            "checklistbank": "979653"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCOLITHUS_FRAGILIS_LOHMANN_SCHILLER_1930",
+          "name": "Coccolithus fragilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccolithus",
+          "authorship": "(Lohmann) Schiller, 1930",
+          "sourceIds": {
+            "checklistbank": "1021832"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcidiscaceae"
+    },
+    {
+      "id": "GENUS_CYCLOCOCCOLITHUS",
+      "name": "Cyclococcolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCLOCOCCOLITHUS_LEPTOPORUS_MURRAY_BLACKMAN_KAMPTNER_1954",
+          "name": "Cyclococcolithus leptoporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclococcolithus",
+          "authorship": "(Murray & Blackman) Kamptner, 1954",
+          "sourceIds": {
+            "checklistbank": "975648"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLOCOCCOLITHUS_SIBOGAE_WEBER_BOSSE_GAARDER_1959",
+          "name": "Cyclococcolithus sibogae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclococcolithus",
+          "authorship": "(Weber Bosse) Gaarder, 1959",
+          "sourceIds": {
+            "checklistbank": "979654"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLOCOCCOLITHUS_FRAGILIS_LOHMANN_DEFLANDRE_1954",
+          "name": "Cyclococcolithus fragilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclococcolithus",
+          "authorship": "(Lohmann) Deflandre, 1954",
+          "sourceIds": {
+            "checklistbank": "1021831"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcidiscaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 19,
+  "genusCount": 12,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

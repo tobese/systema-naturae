@@ -164,10 +164,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8141432
+            "gbif": 8141432,
+            "checklistbank": "1056133"
           },
           "uuid": "66fd29bf-4136-5bd-821-68eaef4fbe97ec",
-          "authorityIds": "gbif:8141432"
+          "authorityIds": "gbif:8141432",
+          "authorship": "Dujardin, 1841"
         },
         {
           "id": "TREPOMONAS_LATECAPITATA",
@@ -202,10 +204,25 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7370334
+            "gbif": 7370334,
+            "checklistbank": "1056137"
           },
           "uuid": "183ce7f8-9a4b-5e7-911-158159adcffd04",
-          "authorityIds": "gbif:7370334"
+          "authorityIds": "gbif:7370334",
+          "authorship": "Klebs, 1892"
+        },
+        {
+          "id": "SP_TREPOMONAS_ANGULATUS_KLEBS_1893",
+          "name": "Trepomonas angulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trepomonas",
+          "authorship": "(Klebs, 1893)",
+          "sourceIds": {
+            "checklistbank": "1056134"
+          },
+          "children": []
         }
       ]
     },
@@ -332,10 +349,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8177606
+            "gbif": 8177606,
+            "checklistbank": "1078605"
           },
           "uuid": "231897fd-7c0d-5b4-b20-57e2f56417fef0",
-          "authorityIds": "gbif:8177606"
+          "authorityIds": "gbif:8177606",
+          "authorship": "Lavier, 1936"
         },
         {
           "id": "HEXAMITA_SALMONIS",
@@ -355,6 +374,45 @@
           },
           "uuid": "162dfc48-4ddd-5b8-8a1-c6ad79e6c3c50b",
           "authorityIds": "gbif:7833995"
+        },
+        {
+          "id": "SP_HEXAMITA_NELSONI_SCHLICHT_MACKIN_1968",
+          "name": "Hexamita nelsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hexamita",
+          "authorship": "Schlicht & Mackin, 1968",
+          "sourceIds": {
+            "checklistbank": "1049415"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEXAMITA_BOCIS_LAVIER_1936",
+          "name": "Hexamita bocis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hexamita",
+          "authorship": "Lavier, 1936",
+          "sourceIds": {
+            "checklistbank": "1078593"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEXAMITA_MUGILIS_LAVIER_1936",
+          "name": "Hexamita mugilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hexamita",
+          "authorship": "Lavier, 1936",
+          "sourceIds": {
+            "checklistbank": "1078606"
+          },
+          "children": []
         }
       ]
     },
@@ -458,10 +516,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hexamitidae"
+    },
+    {
+      "id": "GENUS_HEXAMITUS",
+      "name": "Hexamitus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEXAMITUS_INTESTINALIS_DUJARDIN_1841",
+          "name": "Hexamitus intestinalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hexamitus",
+          "authorship": "Dujardin, 1841",
+          "sourceIds": {
+            "checklistbank": "1041944"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hexamitidae"
+    },
+    {
+      "id": "GENUS_UROPHAGUS",
+      "name": "Urophagus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UROPHAGUS_INTESTINALIS_MOROFF_1903",
+          "name": "Urophagus intestinalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Urophagus",
+          "authorship": "Moroff, 1903",
+          "sourceIds": {
+            "checklistbank": "1078592"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hexamitidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 24,
+  "genusCount": 8,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,

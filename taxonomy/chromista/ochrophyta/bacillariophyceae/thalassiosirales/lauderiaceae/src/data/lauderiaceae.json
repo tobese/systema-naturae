@@ -74,7 +74,8 @@
             ],
             "itis": [
               "2531"
-            ]
+            ],
+            "checklistbank": "791780"
           },
           "uuid": "7dc46983-0355-58e-a29-21c777bda4a918",
           "authorityIds": "gbif:3193619,itis:2531"
@@ -233,10 +234,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9359123
+            "gbif": 9359123,
+            "checklistbank": "914085"
           },
           "uuid": "d1c02e5d-dde8-566-ad5-4dd23415064abd",
-          "authorityIds": "gbif:9359123"
+          "authorityIds": "gbif:9359123",
+          "authorship": "Castracane, 1886"
         },
         {
           "id": "LAUDERIA_OBTUSATA",
@@ -324,6 +327,19 @@
             ]
           },
           "authorityIds": "itis:2532"
+        },
+        {
+          "id": "SP_LAUDERIA_MOSLEYANA_CASTRACANE_1886",
+          "name": "Lauderia mosleyana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lauderia",
+          "authorship": "Castracane, 1886",
+          "sourceIds": {
+            "checklistbank": "810548"
+          },
+          "children": []
         }
       ]
     },
@@ -352,10 +368,32 @@
           "authorityIds": "gbif:9573149"
         }
       ]
+    },
+    {
+      "id": "GENUS_DETONULA",
+      "name": "Detonula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DETONULA_MOSELEYANA_CASTRACANE_H_H_GRAN_1900",
+          "name": "Detonula moseleyana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Detonula",
+          "authorship": "(Castracane) H.H.Gran, 1900",
+          "sourceIds": {
+            "checklistbank": "810547"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lauderiaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 18,
+  "genusCount": 3,
+  "speciesCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

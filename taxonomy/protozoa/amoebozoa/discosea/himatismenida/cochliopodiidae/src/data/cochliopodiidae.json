@@ -25,7 +25,8 @@
             "gbif": 4378473
           },
           "uuid": "1dee2de8-f809-511-96f-a35f40e251ab53",
-          "authorityIds": "gbif:4378473"
+          "authorityIds": "gbif:4378473",
+          "children": []
         }
       ]
     },
@@ -47,10 +48,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4378615
+            "gbif": 4378615,
+            "checklistbank": "1015379"
           },
           "uuid": "5fcf829c-c23c-51b-834-3891e5fd9b4f01",
-          "authorityIds": "gbif:4378615"
+          "authorityIds": "gbif:4378615",
+          "authorship": "Kudryavtsev & Smirnov, 2006",
+          "children": []
         },
         {
           "id": "COCHLIOPODIUM_GULOSUM",
@@ -66,7 +70,8 @@
             "gbif": 6533965
           },
           "uuid": "56d8d353-77af-5fc-817-b392ecdb57ec1e",
-          "authorityIds": "gbif:6533965"
+          "authorityIds": "gbif:6533965",
+          "children": []
         },
         {
           "id": "COCHLIOPODIUM_MAEOTICUM",
@@ -82,7 +87,8 @@
             "gbif": 4378614
           },
           "uuid": "199702e0-8a0c-5a2-936-55367c766ad16f",
-          "authorityIds": "gbif:4378614"
+          "authorityIds": "gbif:4378614",
+          "children": []
         },
         {
           "id": "COCHLIOPODIUM_SPINIFERUM",
@@ -98,9 +104,71 @@
             "gbif": 4378613
           },
           "uuid": "39226851-5ad1-532-904-2c24f2660222f2",
-          "authorityIds": "gbif:4378613"
+          "authorityIds": "gbif:4378613",
+          "children": []
+        },
+        {
+          "id": "SP_COCHLIOPODIUM_GRANULATUM_PENARD_1890",
+          "name": "Cochliopodium granulatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cochliopodium",
+          "authorship": "Penard, 1890",
+          "sourceIds": {
+            "checklistbank": "1031366"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCHLIOPODIUM_AMBIGUUM_PENARD_1904",
+          "name": "Cochliopodium ambiguum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cochliopodium",
+          "authorship": "Penard, 1904",
+          "sourceIds": {
+            "checklistbank": "1037858"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCHLIOPODIUM_ECHINATUM_KOROTNEEF_1879",
+          "name": "Cochliopodium echinatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cochliopodium",
+          "authorship": "Korotneef, 1879",
+          "sourceIds": {
+            "checklistbank": "1040202"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_GOCEVIA",
+      "name": "Gocevia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GOCEVIA_FONBRUNEI_PUSSARD_1964",
+          "name": "Gocevia fonbrunei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gocevia",
+          "authorship": "Pussard, 1964",
+          "sourceIds": {
+            "checklistbank": "1028381"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cochliopodiidae"
     }
   ],
   "sourceIds": {
@@ -111,5 +179,7 @@
       "orderKey": 9687960,
       "familyKey": 4906591
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 9
 }

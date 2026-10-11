@@ -147,9 +147,11 @@
             ],
             "col": [
               "7FQ27"
-            ]
+            ],
+            "checklistbank": "7447"
           },
-          "authorityIds": "col:7FQ27,wikidata:Q4009947"
+          "authorityIds": "col:7FQ27,wikidata:Q4009947",
+          "authorship": "(Pallas, 1766)"
         },
         {
           "id": "SP_VERETILLUM_LELOUPI_TIXIER_DURIVAULT_1960",
@@ -242,6 +244,32 @@
             ]
           },
           "authorityIds": "col:5B3ML"
+        },
+        {
+          "id": "SP_VERETILLUM_PUSILLUM_PHILIPPI_1835",
+          "name": "Veretillum pusillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Veretillum",
+          "authorship": "Philippi, 1835",
+          "sourceIds": {
+            "checklistbank": "983334"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VERETILLUM_LUTEUM_QUOY_GAIMARD_1827",
+          "name": "Veretillum luteum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Veretillum",
+          "authorship": "(Quoy & Gaimard, 1827)",
+          "sourceIds": {
+            "checklistbank": "1043128"
+          },
+          "children": []
         }
       ]
     },
@@ -738,9 +766,11 @@
             ],
             "col": [
               "RY7G"
-            ]
+            ],
+            "checklistbank": "983332"
           },
-          "authorityIds": "col:RY7G,wikidata:Q5296632"
+          "authorityIds": "col:RY7G,wikidata:Q5296632",
+          "authorship": "(Philippi, 1835)"
         },
         {
           "id": "SP_CAVERNULARIA_SUBTILIS_TIXIER_DURIVAULT_LAFARGUE_1968",
@@ -836,6 +866,19 @@
           },
           "children": [],
           "uuid": "dfd8e8bf-b649-5a6-bba-79691d6b9b9cbc"
+        },
+        {
+          "id": "SP_CAVERNULARIA_INOPINATA_TIXIER_DURIVAULT_LAFARGUE_1968",
+          "name": "Cavernularia inopinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cavernularia",
+          "authorship": "Tixier-Durivault & Lafargue, 1968",
+          "sourceIds": {
+            "checklistbank": "1027864"
+          },
+          "children": []
         }
       ]
     },
@@ -867,10 +910,89 @@
           "authorityIds": "col:8NFHH"
         }
       ]
+    },
+    {
+      "id": "GENUS_STYLOBELEMNON",
+      "name": "Stylobelemnon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYLOBELEMNON_PUSILLUM_PHILIPPI_1835",
+          "name": "Stylobelemnon pusillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylobelemnon",
+          "authorship": "(Philippi, 1835)",
+          "sourceIds": {
+            "checklistbank": "983336"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "veretillidae"
+    },
+    {
+      "id": "GENUS_ALCYONIUM",
+      "name": "Alcyonium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALCYONIUM_LUTEUM_QUOY_GAIMARD_1827",
+          "name": "Alcyonium luteum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alcyonium",
+          "authorship": "Quoy & Gaimard, 1827",
+          "sourceIds": {
+            "checklistbank": "1043131"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALCYONIUM_EPIPETRUM_LINNAEUS_1767",
+          "name": "Alcyonium epipetrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alcyonium",
+          "authorship": "Linnaeus, 1767",
+          "sourceIds": {
+            "checklistbank": "1043132"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "veretillidae"
+    },
+    {
+      "id": "GENUS_PENNATULA",
+      "name": "Pennatula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENNATULA_CYNOMORIUM_PALLAS_1766",
+          "name": "Pennatula cynomorium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pennatula",
+          "authorship": "Pallas, 1766",
+          "sourceIds": {
+            "checklistbank": "1043133"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "veretillidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 43,
+  "genusCount": 9,
+  "speciesCount": 50,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

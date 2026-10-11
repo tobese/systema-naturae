@@ -31,7 +31,8 @@
               "4G3JD"
             ]
           },
-          "authorityIds": "col:4G3JD"
+          "authorityIds": "col:4G3JD",
+          "children": []
         },
         {
           "id": "SP_PHERUSELLA_FLABELLARIS",
@@ -48,7 +49,8 @@
               "76WM9"
             ]
           },
-          "authorityIds": "col:76WM9"
+          "authorityIds": "col:76WM9",
+          "children": []
         },
         {
           "id": "SP_PHERUSELLA_LIOWAE_DECKER_GORDON_SPENCER_JONES_SCHWAHA_2021",
@@ -59,7 +61,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "ae65adb2-bbc7-5b7-b9f-02e745c9cf2390"
+          "uuid": "ae65adb2-bbc7-5b7-b9f-02e745c9cf2390",
+          "children": []
         },
         {
           "id": "SP_PHERUSELLA_MINIMA_DECKER_GORDON_SPENCER_JONES_SCHWAHA_2021",
@@ -70,7 +73,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "c7c10ee3-b0f6-5ac-ba3-e72fedd1d22561"
+          "uuid": "c7c10ee3-b0f6-5ac-ba3-e72fedd1d22561",
+          "children": []
         },
         {
           "id": "SP_PHERUSELLA_TUBULOSA",
@@ -85,11 +89,36 @@
           "sourceIds": {
             "col": [
               "4G3JF"
-            ]
+            ],
+            "checklistbank": "380250"
           },
-          "authorityIds": "col:4G3JF"
+          "authorityIds": "col:4G3JF",
+          "authorship": "(Ellis & Solander, 1786)",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_FLUSTRA",
+      "name": "Flustra",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FLUSTRA_TUBULOSA_ELLIS_SOLANDER_1786",
+          "name": "Flustra tubulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flustra",
+          "authorship": "Ellis & Solander, 1786",
+          "sourceIds": {
+            "checklistbank": "961165"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pherusellidae"
     }
   ],
   "sourceIds": {
@@ -100,5 +129,7 @@
       "orderKey": 998,
       "familyKey": 3504
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 6
 }

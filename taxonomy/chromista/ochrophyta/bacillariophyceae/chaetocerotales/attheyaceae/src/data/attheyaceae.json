@@ -42,10 +42,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3193079
+            "gbif": 3193079,
+            "checklistbank": "810629"
           },
           "uuid": "ce9066a5-bda3-505-85b-30525cce194c47",
-          "authorityIds": "gbif:3193079"
+          "authorityIds": "gbif:3193079",
+          "authorship": "T.West, 1860"
         },
         {
           "id": "ATTHEYA_FLEXUOSA",
@@ -112,10 +114,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3193081
+            "gbif": 3193081,
+            "checklistbank": "951978"
           },
           "uuid": "1a516311-612c-5ff-a4b-db13a3c3b5a7ab",
-          "authorityIds": "gbif:3193081"
+          "authorityIds": "gbif:3193081",
+          "authorship": "R.M.Crawford & C.Gardner, 1994"
         },
         {
           "id": "ATTHEYA_MINUTA",
@@ -200,15 +204,125 @@
           "sourceIds": {
             "itis": [
               "615884"
-            ]
+            ],
+            "checklistbank": "1019968"
           },
           "authorityIds": "itis:615884"
+        },
+        {
+          "id": "SP_ATTHEYA_GAUSSII_HEIDEN_R_M_CRAWFORD_2000",
+          "name": "Attheya gaussii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Attheya",
+          "authorship": "(Heiden) R.M.Crawford, 2000",
+          "sourceIds": {
+            "checklistbank": "823117"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATTHEYA_ARMATA_T_WEST_R_M_CRAWFORD_1994",
+          "name": "Attheya armata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Attheya",
+          "authorship": "(T.West) R.M.Crawford, 1994",
+          "sourceIds": {
+            "checklistbank": "829598"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CHAETOCEROS",
+      "name": "Chaetoceros",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHAETOCEROS_ARMATUS_T_WEST_1860",
+          "name": "Chaetoceros armatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetoceros",
+          "authorship": "T.West, 1860",
+          "sourceIds": {
+            "checklistbank": "75237"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHAETOCEROS_GAUSSII_HEIDEN_1928",
+          "name": "Chaetoceros gaussii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetoceros",
+          "authorship": "Heiden, 1928",
+          "sourceIds": {
+            "checklistbank": "823118"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHAETOCEROS_SEPTENTRIONALE_STRUP_1895",
+          "name": "Chaetoceros septentrionale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetoceros",
+          "authorship": "Østrup, 1895",
+          "sourceIds": {
+            "checklistbank": "1019966"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "attheyaceae"
+    },
+    {
+      "id": "GENUS_GONIOCEROS",
+      "name": "Gonioceros",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GONIOCEROS_SEPTRIONALIS_STRUP_F_E_ROUND_R_M_CRAWFORD_D_G_MANN_1990",
+          "name": "Gonioceros septrionalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gonioceros",
+          "authorship": "(Østrup) F.E. Round, R.M. Crawford & D.G. Mann, 1990",
+          "sourceIds": {
+            "checklistbank": "1019967"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GONIOCEROS_ARMATUM_T_WEST_H_PERAG_PERAG_1897",
+          "name": "Gonioceros armatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gonioceros",
+          "authorship": "(T. West) H.Perag. & Perag., 1897",
+          "sourceIds": {
+            "checklistbank": "1020361"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "attheyaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 11,
+  "genusCount": 3,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

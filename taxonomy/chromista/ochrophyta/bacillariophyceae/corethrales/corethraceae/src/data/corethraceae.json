@@ -83,7 +83,8 @@
             ],
             "itis": [
               "2387"
-            ]
+            ],
+            "checklistbank": "727835"
           },
           "uuid": "f33c48de-2866-5eb-838-a3eff393daa130",
           "authorityIds": "gbif:3193842,itis:2387"
@@ -119,10 +120,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3193843
+            "gbif": 3193843,
+            "checklistbank": "960090"
           },
           "uuid": "ce118817-39b4-553-87d-16224e0b8e3a8e",
-          "authorityIds": "gbif:3193843"
+          "authorityIds": "gbif:3193843",
+          "authorship": "Hensen, 1887"
         },
         {
           "id": "CORETHRON_INERME",
@@ -142,7 +145,8 @@
             ],
             "itis": [
               "610086"
-            ]
+            ],
+            "checklistbank": "952684"
           },
           "uuid": "3814b959-2568-57d-885-a3365ed2c3e9c6",
           "authorityIds": "gbif:3193836,itis:610086"
@@ -213,10 +217,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3193839
+            "gbif": 3193839,
+            "checklistbank": "727722"
           },
           "uuid": "9a1c8bff-7e99-5fe-a7c-85ce9fd3187bf3",
-          "authorityIds": "gbif:3193839"
+          "authorityIds": "gbif:3193839",
+          "authorship": "(Grunow) Ostenf., 1909"
         },
         {
           "id": "CORETHRON_PINNATUM",
@@ -304,10 +310,32 @@
           "authorityIds": "itis:2389"
         }
       ]
+    },
+    {
+      "id": "GENUS_ACTINISCUS",
+      "name": "Actiniscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACTINISCUS_PENNATUS_GRUNOW_1882",
+          "name": "Actiniscus pennatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actiniscus",
+          "authorship": "Grunow, 1882",
+          "sourceIds": {
+            "checklistbank": "1004316"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corethraceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 16,
+  "genusCount": 2,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

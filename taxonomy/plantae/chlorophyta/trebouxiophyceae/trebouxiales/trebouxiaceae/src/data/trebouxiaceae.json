@@ -182,7 +182,8 @@
           "sourceIds": {
             "itis": [
               "5655"
-            ]
+            ],
+            "checklistbank": "792542"
           },
           "authorityIds": "itis:5655"
         },
@@ -256,7 +257,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5b9d1c09-3e57-5cb-980-9ad8e4d3e56c94"
+          "uuid": "5b9d1c09-3e57-5cb-980-9ad8e4d3e56c94",
+          "authorship": "Ahmadjian, 1960",
+          "sourceIds": {
+            "checklistbank": "792545"
+          }
         },
         {
           "id": "SP_TREBOUXIA_FLAVA",
@@ -517,9 +522,23 @@
           "sourceIds": {
             "itis": [
               "5654"
-            ]
+            ],
+            "checklistbank": "792543"
           },
           "authorityIds": "itis:5654"
+        },
+        {
+          "id": "SP_TREBOUXIA_ALBULESCENS_GIUDECI_DE_NICOLA_DI_BENEDETTO_1962",
+          "name": "Trebouxia albulescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trebouxia",
+          "authorship": "Giudeci de Nicola & Di Benedetto, 1962",
+          "sourceIds": {
+            "checklistbank": "792548"
+          },
+          "children": []
         }
       ]
     },
@@ -1112,10 +1131,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trebouxiaceae"
+    },
+    {
+      "id": "GENUS_PSEUDOTREBOUXIA",
+      "name": "Pseudotrebouxia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOTREBOUXIA_DECOLORANS_AHMADJIAN_ARCHIBALD_1975",
+          "name": "Pseudotrebouxia decolorans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudotrebouxia",
+          "authorship": "(Ahmadjian) Archibald, 1975",
+          "sourceIds": {
+            "checklistbank": "792546"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trebouxiaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 88,
+  "genusCount": 14,
+  "speciesCount": 90,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

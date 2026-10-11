@@ -29,10 +29,13 @@
             ],
             "itis": [
               "1688"
-            ]
+            ],
+            "checklistbank": "956509"
           },
           "uuid": "32b992b1-0b9f-551-8ff-bcfbe5ed53717d",
-          "authorityIds": "gbif:3195288,itis:1688"
+          "authorityIds": "gbif:3195288,itis:1688",
+          "authorship": "Geitler, 1930",
+          "children": []
         }
       ]
     },
@@ -54,10 +57,26 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 3195291
+            "gbif": 3195291,
+            "checklistbank": "651035"
           },
           "uuid": "b45a4aba-d2e5-552-800-0211667a2dadce",
-          "authorityIds": "gbif:3195291"
+          "authorityIds": "gbif:3195291",
+          "authorship": "(J.Feldmann) Billard, 2000",
+          "children": []
+        },
+        {
+          "id": "SP_NEMATOCHRYSOPSIS_ROSCOFFENSIS_CHADEFAUD_1947",
+          "name": "Nematochrysopsis roscoffensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nematochrysopsis",
+          "authorship": "Chadefaud, 1947",
+          "sourceIds": {
+            "checklistbank": "693131"
+          },
+          "children": []
         }
       ]
     },
@@ -81,10 +100,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3195298
+            "gbif": 3195298,
+            "checklistbank": "648743"
           },
           "uuid": "bd0916b1-d9f4-593-987-5b641ce174bcf5",
-          "authorityIds": "gbif:3195298"
+          "authorityIds": "gbif:3195298",
+          "authorship": "(W.R.Taylor) W.R.Taylor, 1952",
+          "children": []
         }
       ]
     },
@@ -109,7 +131,8 @@
             "gbif": 3195306
           },
           "uuid": "62605a0a-ed88-53e-a7b-534b2fc138045e",
-          "authorityIds": "gbif:3195306"
+          "authorityIds": "gbif:3195306",
+          "children": []
         },
         {
           "id": "CHRYSOREINHARDIA_GIRAUDII",
@@ -125,7 +148,8 @@
             "gbif": 3195307
           },
           "uuid": "75c53a8e-41f6-515-b9b-2e40622fa0953c",
-          "authorityIds": "gbif:3195307"
+          "authorityIds": "gbif:3195307",
+          "children": []
         }
       ]
     },
@@ -147,12 +171,59 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10691724
+            "gbif": 10691724,
+            "checklistbank": "946141"
           },
           "uuid": "0b309e05-e092-552-a5c-691287bf715777",
-          "authorityIds": "gbif:10691724"
+          "authorityIds": "gbif:10691724",
+          "authorship": "R.A.Andersen & K.Y.Han, 2018",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_TRIBONEMA",
+      "name": "Tribonema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIBONEMA_MARINUM_FELDMANN_1941",
+          "name": "Tribonema marinum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tribonema",
+          "authorship": "Feldmann, 1941",
+          "sourceIds": {
+            "checklistbank": "364139"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcinochrysidaceae"
+    },
+    {
+      "id": "GENUS_CHRYSOPHAEUM",
+      "name": "Chrysophaeum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHRYSOPHAEUM_LEWISII_W_R_TAYLOR_1951",
+          "name": "Chrysophaeum lewisii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysophaeum",
+          "authorship": "W.R.Taylor, 1951",
+          "sourceIds": {
+            "checklistbank": "676949"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcinochrysidaceae"
     }
   ],
   "sourceIds": {
@@ -163,5 +234,7 @@
       "orderKey": 7552401,
       "familyKey": 2913
     }
-  }
+  },
+  "genusCount": 7,
+  "speciesCount": 9
 }

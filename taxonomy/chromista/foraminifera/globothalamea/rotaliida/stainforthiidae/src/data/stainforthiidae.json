@@ -89,10 +89,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6534832
+            "gbif": 6534832,
+            "checklistbank": "702850"
           },
           "uuid": "44f702fb-57df-5c6-b58-a7d7b75d9b3217",
-          "authorityIds": "gbif:6534832"
+          "authorityIds": "gbif:6534832",
+          "authorship": "(Cushman, 1911)"
         },
         {
           "id": "CASSIDELINA_SUBCAPITATA",
@@ -111,10 +113,12 @@
             ],
             "col": [
               "RMS6"
-            ]
+            ],
+            "checklistbank": "702869"
           },
           "uuid": "382f0339-e609-5fd-954-d27c49d267f5af",
-          "authorityIds": "col:RMS6,gbif:6534829"
+          "authorityIds": "col:RMS6,gbif:6534829",
+          "authorship": "(Zheng, 1979)"
         },
         {
           "id": "SP_CASSIDELINA_NODOSA_STEWART_STEWART_1930",
@@ -884,10 +888,12 @@
             ],
             "col": [
               "3MJKC"
-            ]
+            ],
+            "checklistbank": "1003582"
           },
           "uuid": "5fa5488f-02d4-5e5-837-548a89e40089da",
-          "authorityIds": "col:3MJKC,gbif:7699557"
+          "authorityIds": "col:3MJKC,gbif:7699557",
+          "authorship": "Collins, 1974"
         },
         {
           "id": "HOPKINSINA_WAKIMOTOENSIS",
@@ -1054,10 +1060,12 @@
             ],
             "col": [
               "6ZGVD"
-            ]
+            ],
+            "checklistbank": "928659"
           },
           "uuid": "c6d70c24-4f9e-586-aaf-1dbe653886583f",
-          "authorityIds": "col:6ZGVD,gbif:7873171"
+          "authorityIds": "col:6ZGVD,gbif:7873171",
+          "authorship": "(Williamson, 1858)"
         },
         {
           "id": "STAINFORTHIA_KAMALI",
@@ -1416,10 +1424,120 @@
           "authorityIds": "gbif:10655955"
         }
       ]
+    },
+    {
+      "id": "GENUS_BOLIVINA",
+      "name": "Bolivina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOLIVINA_SPINESCENS_CUSHMAN_1911",
+          "name": "Bolivina spinescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolivina",
+          "authorship": "Cushman, 1911",
+          "sourceIds": {
+            "checklistbank": "908365"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stainforthiidae"
+    },
+    {
+      "id": "GENUS_FURSENKOINA",
+      "name": "Fursenkoina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FURSENKOINA_FUSIFORMIS_WILLIAMSON_1858",
+          "name": "Fursenkoina fusiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fursenkoina",
+          "authorship": "(Williamson, 1858)",
+          "sourceIds": {
+            "checklistbank": "928660"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stainforthiidae"
+    },
+    {
+      "id": "GENUS_BULIMINA",
+      "name": "Bulimina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BULIMINA_FUSIFORMIS_WILLIAMSON_1858",
+          "name": "Bulimina fusiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bulimina",
+          "authorship": "Williamson, 1858",
+          "sourceIds": {
+            "checklistbank": "928661"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stainforthiidae"
+    },
+    {
+      "id": "GENUS_VIRGULINA",
+      "name": "Virgulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIRGULINA_CONCAVA_H_GLUND_1947",
+          "name": "Virgulina concava",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Virgulina",
+          "authorship": "Höglund, 1947",
+          "sourceIds": {
+            "checklistbank": "928723"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stainforthiidae"
+    },
+    {
+      "id": "GENUS_BRIZALINA",
+      "name": "Brizalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRIZALINA_SUBCAPITATA_ZHENG_1979",
+          "name": "Brizalina subcapitata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brizalina",
+          "authorship": "Zheng, 1979",
+          "sourceIds": {
+            "checklistbank": "966794"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stainforthiidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 64,
+  "genusCount": 11,
+  "speciesCount": 69,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

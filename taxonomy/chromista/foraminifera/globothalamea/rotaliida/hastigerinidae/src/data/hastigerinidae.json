@@ -25,7 +25,8 @@
             "gbif": 9549328
           },
           "uuid": "36c91001-f8a3-5d2-a69-2465adfea8019b",
-          "authorityIds": "gbif:9549328"
+          "authorityIds": "gbif:9549328",
+          "children": []
         },
         {
           "id": "HASTIGERINA_EOCENICA",
@@ -46,7 +47,8 @@
             ]
           },
           "uuid": "98e5a51d-d4b1-5b8-812-38162a073f78a7",
-          "authorityIds": "col:82QGV,gbif:9529594"
+          "authorityIds": "col:82QGV,gbif:9529594",
+          "children": []
         },
         {
           "id": "HASTIGERINA_PELAGICA",
@@ -67,10 +69,13 @@
             ],
             "col": [
               "3JVSW"
-            ]
+            ],
+            "checklistbank": "382700"
           },
           "uuid": "d9881702-bc2b-5a7-bd2-ebe11a87530aaa",
-          "authorityIds": "col:3JVSW,gbif:7379147,itis:45824"
+          "authorityIds": "col:3JVSW,gbif:7379147,itis:45824",
+          "authorship": "(d'Orbigny, 1839)",
+          "children": []
         },
         {
           "id": "HASTIGERINA_PRIMITIVA",
@@ -91,7 +96,21 @@
             ]
           },
           "uuid": "ea8beafe-ffbf-55f-aa6-db042802f3d4e8",
-          "authorityIds": "col:82QGX,gbif:9338054"
+          "authorityIds": "col:82QGX,gbif:9338054",
+          "children": []
+        },
+        {
+          "id": "SP_HASTIGERINA_DIGITATA_RHUMBLER_1911",
+          "name": "Hastigerina digitata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hastigerina",
+          "authorship": "Rhumbler, 1911",
+          "sourceIds": {
+            "checklistbank": "959097"
+          },
+          "children": []
         }
       ]
     },
@@ -118,10 +137,13 @@
             ],
             "col": [
               "3JVSY"
-            ]
+            ],
+            "checklistbank": "959096"
           },
           "uuid": "ec636ec7-8759-571-97e-2ccf6dfab29ccd",
-          "authorityIds": "col:3JVSY,gbif:8208356"
+          "authorityIds": "col:3JVSY,gbif:8208356",
+          "authorship": "(Rhumbler, 1911)",
+          "children": []
         },
         {
           "id": "HASTIGERINELLA_EOCAENICA",
@@ -142,7 +164,8 @@
             ]
           },
           "uuid": "fce26ea1-9e1d-554-be4-d2ef4897fd546d",
-          "authorityIds": "col:BH5M6,gbif:9241820"
+          "authorityIds": "col:BH5M6,gbif:9241820",
+          "children": []
         }
       ]
     },
@@ -172,9 +195,32 @@
             ]
           },
           "uuid": "1f6fb2f2-b3dd-59d-a56-1a64aa6a4b8be4",
-          "authorityIds": "col:6T5DH,gbif:8255709"
+          "authorityIds": "col:6T5DH,gbif:8255709",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_NONIONINA",
+      "name": "Nonionina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NONIONINA_PELAGICA_D_ORBIGNY_1839",
+          "name": "Nonionina pelagica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nonionina",
+          "authorship": "d'Orbigny, 1839",
+          "sourceIds": {
+            "checklistbank": "573687"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hastigerinidae"
     }
   ],
   "sourceIds": {
@@ -185,5 +231,7 @@
       "orderKey": 7692889,
       "familyKey": 7504161
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 9
 }

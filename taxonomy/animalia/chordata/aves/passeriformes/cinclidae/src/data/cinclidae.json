@@ -36,9 +36,11 @@
             ],
             "itis": [
               "559287"
-            ]
+            ],
+            "checklistbank": "3958"
           },
-          "authorityIds": "col:VDPH,itis:559287,wikidata:Q201831"
+          "authorityIds": "col:VDPH,itis:559287,wikidata:Q201831",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "CINCLUS_MEXICANUS",
@@ -156,12 +158,47 @@
           },
           "authorityIds": "col:VDPM,itis:916585",
           "commonName": "Rufous-throated Dipper"
+        },
+        {
+          "id": "SP_CINCLUS_MERIDIONALIS_BREHM_1856",
+          "name": "Cinclus meridionalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cinclus",
+          "authorship": "Brehm, 1856",
+          "sourceIds": {
+            "checklistbank": "961522"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_STURNUS",
+      "name": "Sturnus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STURNUS_CINCLUS_LINNAEUS_1758",
+          "name": "Sturnus cinclus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sturnus",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "checklistbank": "3960"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cinclidae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 6,
+  "genusCount": 2,
+  "speciesCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

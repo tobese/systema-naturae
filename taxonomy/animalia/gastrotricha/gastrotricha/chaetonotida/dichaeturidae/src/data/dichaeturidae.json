@@ -29,7 +29,8 @@
               "58183"
             ]
           },
-          "authorityIds": "col:6CSCG,itis:58183"
+          "authorityIds": "col:6CSCG,itis:58183",
+          "children": []
         },
         {
           "id": "DICHAETURA_CAPRICORNIA",
@@ -47,9 +48,12 @@
             ],
             "col": [
               "35KJR"
-            ]
+            ],
+            "checklistbank": "892097"
           },
-          "authorityIds": "col:35KJR,itis:58181"
+          "authorityIds": "col:35KJR,itis:58181",
+          "authorship": "(Metschnikoff, 1865)",
+          "children": []
         },
         {
           "id": "DICHAETURA_SURREYI",
@@ -66,7 +70,8 @@
               "35KJV"
             ]
           },
-          "authorityIds": "col:35KJV"
+          "authorityIds": "col:35KJV",
+          "children": []
         },
         {
           "id": "DICHAETURA_FILISPINA",
@@ -84,7 +89,8 @@
               "35KJT"
             ]
           },
-          "authorityIds": "col:35KJT"
+          "authorityIds": "col:35KJT",
+          "children": []
         }
       ]
     },
@@ -114,9 +120,32 @@
               "3Y6N2"
             ]
           },
-          "authorityIds": "col:3Y6N2,itis:58186"
+          "authorityIds": "col:3Y6N2,itis:58186",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CHAETURA",
+      "name": "Chaetura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHAETURA_CAPRICORNIA_METSCHNIKOFF_1865",
+          "name": "Chaetura capricornia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetura",
+          "authorship": "Metschnikoff, 1865",
+          "sourceIds": {
+            "checklistbank": "892098"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dichaeturidae"
     }
   ],
   "sourceIds": {
@@ -125,5 +154,7 @@
       "phylumKey": 22,
       "familyKey": 7392
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 6
 }
