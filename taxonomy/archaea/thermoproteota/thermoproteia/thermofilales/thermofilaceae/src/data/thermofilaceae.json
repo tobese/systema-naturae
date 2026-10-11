@@ -31,7 +31,8 @@
             ],
             "itis": [
               "951964"
-            ]
+            ],
+            "checklistbank": "ott765617"
           },
           "uuid": "efd4279a-83d6-592-bbe-387272d29b0831",
           "authorityIds": "col:7C8TZ,gbif:1000065,itis:951964"
@@ -48,7 +49,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8933675
+            "gbif": 8933675,
+            "checklistbank": "ott5603566"
           },
           "uuid": "bace6221-5d35-519-be8-51760b7aba9020",
           "authorityIds": "gbif:8933675"
@@ -69,6 +71,42 @@
             ]
           },
           "authorityIds": "col:CT89N"
+        },
+        {
+          "id": "SP_THERMOFILUM_ADORNATUS",
+          "name": "Thermofilum adornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermofilum",
+          "sourceIds": {
+            "checklistbank": "ott5245648"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THERMOFILUM_LIBRUM",
+          "name": "Thermofilum librum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermofilum",
+          "sourceIds": {
+            "checklistbank": "ott784703"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THERMOFILUM_CARBOXYDITROPHUS",
+          "name": "Thermofilum carboxyditrophus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermofilum",
+          "sourceIds": {
+            "checklistbank": "ott5384238"
+          },
+          "children": []
         }
       ]
     },
@@ -304,10 +342,31 @@
           "authorityIds": "col:CSDS6,gbif:11455516"
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOFILACEAE",
+          "name": "uncultured Thermofilaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5205959"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermofilaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 14,
+  "genusCount": 6,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -315,6 +374,7 @@
       "classKey": 10705623,
       "orderKey": 10772788,
       "familyKey": 3800
-    }
+    },
+    "checklistbank": "ott1032624"
   }
 }

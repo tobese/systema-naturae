@@ -155,7 +155,10 @@
               "subspeciesCount": 0,
               "lineage": "Caelifera > Eumastacoidea > Biroella",
               "children": [],
-              "uuid": "444f17b1-e4be-5a0-aed-1a544f029dfb9e"
+              "uuid": "444f17b1-e4be-5a0-aed-1a544f029dfb9e",
+              "sourceIds": {
+                "checklistbank": "ott3495911"
+              }
             },
             {
               "id": "SP_BIROELLA_CARINATA_BOL_VAR_1930",
@@ -776,6 +779,18 @@
                 "checklistbank": "760953"
               },
               "authorityIds": "col:8PX9J"
+            },
+            {
+              "id": "SP_BIROELLA_SP",
+              "name": "Biroella sp.",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Biroella",
+              "sourceIds": {
+                "checklistbank": "ott913015"
+              },
+              "children": []
             }
           ],
           "lineage": "Biroellinae"
@@ -1244,6 +1259,18 @@
                     "checklistbank": "fe51190e-a820-495d-a0d4-1136fe7abac7"
                   },
                   "authorityIds": "col:6W9FN"
+                },
+                {
+                  "id": "SP_PRORIFERA_SP",
+                  "name": "Prorifera sp.",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Prorifera",
+                  "sourceIds": {
+                    "checklistbank": "ott449384"
+                  },
+                  "children": []
                 }
               ]
             },
@@ -2147,6 +2174,18 @@
                     "checklistbank": "003a110b-42c6-4d82-8172-e5531e03248a"
                   },
                   "authorityIds": "col:6NL8Z"
+                },
+                {
+                  "id": "SP_KEYACRIS_SP",
+                  "name": "Keyacris sp.",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Keyacris",
+                  "sourceIds": {
+                    "checklistbank": "ott449385"
+                  },
+                  "children": []
                 }
               ]
             },
@@ -3447,16 +3486,49 @@
           ]
         }
       ]
+    },
+    {
+      "id": "GENUS_KEYOPSIS",
+      "name": "Keyopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KEYOPSIS_PALIDIVENTER",
+          "name": "Keyopsis palidiventer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Keyopsis",
+          "sourceIds": {
+            "checklistbank": "ott3502842"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KEYOPSIS_STRIATIVENTER",
+          "name": "Keyopsis striativenter",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Keyopsis",
+          "sourceIds": {
+            "checklistbank": "ott3502843"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "morabidae"
     }
   ],
-  "speciesCount": 129,
+  "speciesCount": 134,
   "appSlug": "morabidae",
   "lineage": "Caelifera > Eumastacoidea",
   "continents": [
     "Asia",
     "Australia"
   ],
-  "genusCount": 42,
+  "genusCount": 43,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -3466,6 +3538,6 @@
       "orderKey": 1458,
       "familyKey": 5929
     },
-    "checklistbank": "f3806f9e-32ce-4504-8150-5c36492c92a8"
+    "checklistbank": "ott901376"
   }
 }

@@ -788,6 +788,18 @@
             "checklistbank": "476051"
           },
           "authorityIds": "col:6YW69"
+        },
+        {
+          "id": "SP_SPANIOCELYPHUS_REPLETUS",
+          "name": "Spaniocelyphus repletus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spaniocelyphus",
+          "sourceIds": {
+            "checklistbank": "ott7837646"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1415,7 +1427,10 @@
           "lineage": "celyphus",
           "authorship": "Hendel, 1914",
           "children": [],
-          "uuid": "212d2782-cfe6-5ae-9f0-e564d6befedac7"
+          "uuid": "212d2782-cfe6-5ae-9f0-e564d6befedac7",
+          "sourceIds": {
+            "checklistbank": "ott4415818"
+          }
         },
         {
           "id": "SP_CELYPHUS_HYACINTHUS_BIGOT_1859",
@@ -2162,7 +2177,8 @@
           "sourceIds": {
             "col": [
               "3PCL8"
-            ]
+            ],
+            "checklistbank": "ott4415882"
           },
           "authorityIds": "col:3PCL8"
         },
@@ -2461,17 +2477,83 @@
             "checklistbank": "910134"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHAMAECELYPHUS_RUWENZORIENSIS",
+          "name": "Chamaecelyphus ruwenzoriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chamaecelyphus",
+          "sourceIds": {
+            "checklistbank": "ott4415896"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "celyphidae"
+    },
+    {
+      "id": "GENUS_CELYPHIDAE",
+      "name": "Celyphidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CELYPHIDAE_SP",
+          "name": "Celyphidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Celyphidae",
+          "sourceIds": {
+            "checklistbank": "ott4415759"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "celyphidae"
+    },
+    {
+      "id": "GENUS_SABEURINA",
+      "name": "Sabeurina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SABEURINA_MINUTA",
+          "name": "Sabeurina minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sabeurina",
+          "sourceIds": {
+            "checklistbank": "ott7837642"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SABEURINA_OCCIDENTALIS",
+          "name": "Sabeurina occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sabeurina",
+          "sourceIds": {
+            "checklistbank": "ott7837643"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "celyphidae"
     }
   ],
-  "speciesCount": 148,
+  "speciesCount": 153,
   "appSlug": "celyphidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 10,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2479,6 +2561,7 @@
       "classKey": 216,
       "orderKey": 811,
       "familyKey": 3339
-    }
+    },
+    "checklistbank": "ott70033"
   }
 }

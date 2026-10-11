@@ -3,7 +3,29 @@
   "name": "Gwyniidae",
   "rank": "FAMILY",
   "commonName": "Gwyniidae",
-  "children": [],
+  "children": [
+    {
+      "id": "GENUS_GWYNIA",
+      "name": "Gwynia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GWYNIA_MACRODENTATA",
+          "name": "Gwynia macrodentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gwynia",
+          "sourceIds": {
+            "checklistbank": "ott2932409"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gwyniidae"
+    }
+  ],
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -11,6 +33,9 @@
       "classKey": 210,
       "orderKey": 509,
       "familyKey": 8650608
-    }
-  }
+    },
+    "checklistbank": "ott571446"
+  },
+  "genusCount": 1,
+  "speciesCount": 1
 }

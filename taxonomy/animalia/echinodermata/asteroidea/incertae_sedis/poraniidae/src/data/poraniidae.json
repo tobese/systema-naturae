@@ -21,7 +21,8 @@
           "sourceIds": {
             "itis": [
               "157141"
-            ]
+            ],
+            "checklistbank": "ott3656735"
           },
           "authorityIds": "itis:157141"
         },
@@ -38,7 +39,8 @@
           "sourceIds": {
             "itis": [
               "990716"
-            ]
+            ],
+            "checklistbank": "ott3656720"
           },
           "authorityIds": "itis:990716"
         },
@@ -72,7 +74,8 @@
           "sourceIds": {
             "itis": [
               "157142"
-            ]
+            ],
+            "checklistbank": "ott3656722"
           },
           "authorityIds": "itis:157142"
         },
@@ -89,7 +92,8 @@
           "sourceIds": {
             "itis": [
               "990717"
-            ]
+            ],
+            "checklistbank": "ott3656736"
           },
           "authorityIds": "itis:990717"
         },
@@ -132,7 +136,8 @@
             ],
             "col": [
               "4LVVY"
-            ]
+            ],
+            "checklistbank": "ott370601"
           },
           "authorityIds": "col:4LVVY,itis:157176"
         },
@@ -152,7 +157,8 @@
             ],
             "col": [
               "4LVVX"
-            ]
+            ],
+            "checklistbank": "ott971378"
           },
           "authorityIds": "col:4LVVX,itis:990758"
         },
@@ -191,7 +197,8 @@
             ],
             "col": [
               "3Y56K"
-            ]
+            ],
+            "checklistbank": "ott3656731"
           },
           "authorityIds": "col:3Y56K,itis:990214"
         },
@@ -211,7 +218,8 @@
             ],
             "col": [
               "3Y56F"
-            ]
+            ],
+            "checklistbank": "ott3656729"
           },
           "authorityIds": "col:3Y56F,itis:990212"
         },
@@ -231,7 +239,8 @@
             ],
             "col": [
               "3Y56L"
-            ]
+            ],
+            "checklistbank": "ott3656730"
           },
           "authorityIds": "col:3Y56L,itis:157150"
         },
@@ -302,7 +311,8 @@
             ],
             "itis": [
               "989676"
-            ]
+            ],
+            "checklistbank": "ott3656726"
           },
           "authorityIds": "col:69ZQ5,itis:989676"
         },
@@ -322,7 +332,8 @@
             ],
             "col": [
               "69ZPT"
-            ]
+            ],
+            "checklistbank": "ott3656724"
           },
           "authorityIds": "col:69ZPT,itis:989677"
         }
@@ -384,7 +395,10 @@
           "lineage": "Porania",
           "authorship": "(O.F. Müller, 1776)",
           "children": [],
-          "uuid": "446a0c05-ed6a-526-b65-72a41ba0318c8c"
+          "uuid": "446a0c05-ed6a-526-b65-72a41ba0318c8c",
+          "sourceIds": {
+            "checklistbank": "ott843667"
+          }
         },
         {
           "id": "SP_PORANIA_HERMANNI_MADSEN_1959",
@@ -395,7 +409,10 @@
           "lineage": "Porania",
           "authorship": "Madsen, 1959",
           "children": [],
-          "uuid": "eda88c1e-e1b3-569-9f4-032acdbf291404"
+          "uuid": "eda88c1e-e1b3-569-9f4-032acdbf291404",
+          "sourceIds": {
+            "checklistbank": "ott3656716"
+          }
         },
         {
           "id": "SP_PORANIA_ANTARCTICA_E_A_SMITH_1876",
@@ -527,7 +544,8 @@
             ],
             "itis": [
               "993048"
-            ]
+            ],
+            "checklistbank": "ott5708342"
           },
           "authorityIds": "col:KXRB,itis:993048"
         }
@@ -556,7 +574,8 @@
             ],
             "itis": [
               "993083"
-            ]
+            ],
+            "checklistbank": "ott5493447"
           },
           "authorityIds": "col:6BR2H,itis:993083"
         }
@@ -585,7 +604,8 @@
             ],
             "itis": [
               "993049"
-            ]
+            ],
+            "checklistbank": "ott5708343"
           },
           "authorityIds": "col:5Z9VZ,itis:993049"
         }
@@ -640,7 +660,8 @@
             ],
             "itis": [
               "990652"
-            ]
+            ],
+            "checklistbank": "ott3656723"
           },
           "authorityIds": "col:7CYFW,itis:990652"
         }
@@ -669,7 +690,8 @@
             ],
             "col": [
               "3G48L"
-            ]
+            ],
+            "checklistbank": "ott5926326"
           },
           "authorityIds": "col:3G48L,itis:992272"
         }
@@ -724,7 +746,8 @@
             ],
             "itis": [
               "990762"
-            ]
+            ],
+            "checklistbank": "ott3656737"
           },
           "authorityIds": "col:4Z9T6,itis:990762"
         }
@@ -968,13 +991,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "poraniidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_PORANIA",
+          "name": "cf. Porania",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "ott725052"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "poraniidae"
+    },
+    {
+      "id": "GENUS_DERMASTERIAS",
+      "name": "Dermasterias",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DERMASTERIAS_IMBRICATA",
+          "name": "Dermasterias imbricata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermasterias",
+          "sourceIds": {
+            "checklistbank": "ott977099"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "poraniidae"
     }
   ],
-  "speciesCount": 49,
+  "speciesCount": 51,
   "appSlug": "poraniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Asteroidea",
-  "genusCount": 23,
+  "genusCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -983,6 +1048,6 @@
       "orderKey": 810,
       "familyKey": 2068
     },
-    "checklistbank": "28278f03-88e2-4fcb-acc0-7a6b4db3def5"
+    "checklistbank": "ott843665"
   }
 }

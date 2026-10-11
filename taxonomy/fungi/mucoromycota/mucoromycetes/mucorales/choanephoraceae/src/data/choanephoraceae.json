@@ -118,7 +118,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6124190
+            "gbif": 6124190,
+            "checklistbank": "ott3686116"
           },
           "uuid": "749aa945-a5fb-5e5-a72-e652fdff39e39f",
           "authorityIds": "gbif:6124190"
@@ -295,6 +296,18 @@
             "checklistbank": "f5ed93e6-0e88-4a9c-a9d8-798a00493246"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHOANEPHORA_CONJUNTA",
+          "name": "Choanephora conjunta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Choanephora",
+          "sourceIds": {
+            "checklistbank": "ott3686115"
+          },
+          "children": []
         }
       ],
       "authorship": "Currey"
@@ -411,11 +424,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "choanephoraceae"
+    },
+    {
+      "id": "GENUS_CHOANEPHORACEAE",
+      "name": "Choanephoraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHOANEPHORACEAE_SP",
+          "name": "Choanephoraceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Choanephoraceae",
+          "sourceIds": {
+            "checklistbank": "ott4039070"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "choanephoraceae"
     }
   ],
   "authorship": "J. Schröter",
-  "genusCount": 5,
-  "speciesCount": 19,
+  "genusCount": 6,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -423,6 +457,7 @@
       "classKey": 9796761,
       "orderKey": 749,
       "familyKey": 8274
-    }
+    },
+    "checklistbank": "ott363289"
   }
 }

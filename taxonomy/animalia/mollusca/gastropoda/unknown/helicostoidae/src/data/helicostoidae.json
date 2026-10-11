@@ -3,7 +3,29 @@
   "name": "Helicostoidae",
   "rank": "FAMILY",
   "commonName": "Helicostoidae",
-  "children": [],
+  "children": [
+    {
+      "id": "GENUS_HELICOSTOA",
+      "name": "Helicostoa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HELICOSTOA_SINENSIS",
+          "name": "Helicostoa sinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Helicostoa",
+          "sourceIds": {
+            "checklistbank": "ott6355364"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "helicostoidae"
+    }
+  ],
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -11,6 +33,9 @@
       "classKey": 225,
       "orderKey": 7390893,
       "familyKey": 4963581
-    }
-  }
+    },
+    "checklistbank": "ott2919857"
+  },
+  "genusCount": 1,
+  "speciesCount": 1
 }

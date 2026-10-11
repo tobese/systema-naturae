@@ -53,7 +53,8 @@
             ],
             "col": [
               "CSMD5"
-            ]
+            ],
+            "checklistbank": "ott642013"
           },
           "uuid": "4b977d8c-c7ba-585-956-a7b3399f253e82",
           "authorityIds": "col:CSMD5,gbif:7576509"
@@ -78,10 +79,23 @@
             ],
             "itis": [
               "951789"
-            ]
+            ],
+            "checklistbank": "ott404435"
           },
           "uuid": "8dc281e8-f8f3-5c4-89b-cf091696a0a6bf",
           "authorityIds": "col:42FCN,gbif:7981850,itis:951789"
+        },
+        {
+          "id": "SP_METHANOCELLA_SP",
+          "name": "Methanocella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocella",
+          "sourceIds": {
+            "checklistbank": "ott7000944"
+          },
+          "children": []
         }
       ]
     },
@@ -153,10 +167,31 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Methanocellaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHANOMICROBIA",
+          "name": "uncultured Methanomicrobia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206472"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocellaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 6,
+  "genusCount": 4,
+  "speciesCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -164,6 +199,7 @@
       "classKey": 10692980,
       "orderKey": 8303780,
       "familyKey": 4896458
-    }
+    },
+    "checklistbank": "ott404443"
   }
 }

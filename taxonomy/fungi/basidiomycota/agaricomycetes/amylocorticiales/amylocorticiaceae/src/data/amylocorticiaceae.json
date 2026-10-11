@@ -158,7 +158,8 @@
             ],
             "col": [
               "66GXZ"
-            ]
+            ],
+            "checklistbank": "ott3809135"
           },
           "uuid": "3151bc10-1a19-585-860-c847f2f6c221d2",
           "authorityIds": "col:66GXZ,gbif:2525150,mycobank:136640"
@@ -239,7 +240,8 @@
             ],
             "col": [
               "66GZC"
-            ]
+            ],
+            "checklistbank": "ott3809130"
           },
           "uuid": "e69ebdd0-108b-5fc-abf-07e09be59b1c9a",
           "authorityIds": "col:66GZC,gbif:2525136,mycobank:367767"
@@ -666,7 +668,8 @@
             ],
             "col": [
               "66GY6"
-            ]
+            ],
+            "checklistbank": "ott4106520"
           },
           "uuid": "8cf3d9dc-903a-529-af6-92820a58e59033",
           "authorityIds": "col:66GY6,gbif:2525175,mycobank:374063"
@@ -733,7 +736,8 @@
             ],
             "col": [
               "SFXN"
-            ]
+            ],
+            "checklistbank": "ott7524316"
           },
           "uuid": "ac2ceb8c-bf15-557-8b4-7c5755c9cc170b",
           "authorityIds": "col:SFXN,gbif:10677368,mycobank:812988"
@@ -755,7 +759,8 @@
             ],
             "col": [
               "SFXP"
-            ]
+            ],
+            "checklistbank": "ott8008849"
           },
           "uuid": "33b59a12-e93f-5c5-a03-074ea60000f78f",
           "authorityIds": "col:SFXP,gbif:3356637"
@@ -781,7 +786,8 @@
             ],
             "col": [
               "SFXQ"
-            ]
+            ],
+            "checklistbank": "ott5304227"
           },
           "uuid": "7acbded7-65e1-53d-92b-351cb745c4e90c",
           "authorityIds": "col:SFXQ,gbif:7784012,mycobank:507417"
@@ -889,7 +895,8 @@
             ],
             "col": [
               "SFXV"
-            ]
+            ],
+            "checklistbank": "ott3803690"
           },
           "uuid": "4366d969-16a5-592-825-3d719bb2656b56",
           "authorityIds": "col:SFXV,gbif:2525235,mycobank:102623"
@@ -1002,7 +1009,8 @@
             ],
             "col": [
               "SFY4"
-            ]
+            ],
+            "checklistbank": "ott3803693"
           },
           "uuid": "aca6e734-54cf-528-824-4f18ad4b9e651f",
           "authorityIds": "col:SFY4,gbif:2525247,mycobank:466555"
@@ -1028,7 +1036,8 @@
             ],
             "col": [
               "SFY5"
-            ]
+            ],
+            "checklistbank": "ott3803700"
           },
           "uuid": "c6ebf4cd-3003-5b6-843-83d63a3e5cac52",
           "authorityIds": "col:SFY5,gbif:2525194,mycobank:310460"
@@ -1231,6 +1240,18 @@
           "lineage": "Ceraceomyces",
           "sourceIds": {
             "checklistbank": "988650"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERACEOMYCES_AUSTROANDINUM",
+          "name": "Ceraceomyces austroandinum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceraceomyces",
+          "sourceIds": {
+            "checklistbank": "ott3803691"
           },
           "children": []
         }
@@ -1570,7 +1591,8 @@
             ],
             "col": [
               "D9F2"
-            ]
+            ],
+            "checklistbank": "ott4106513"
           },
           "uuid": "fe4a4c0f-77eb-54f-b42-a3c75820292b7e",
           "authorityIds": "col:D9F2,gbif:2525293,mycobank:346241"
@@ -3176,11 +3198,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amylocorticiaceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_AMYLOXENASMA",
+          "name": "cf. Amyloxenasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "ott5984227"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amylocorticiaceae"
+    },
+    {
+      "id": "GENUS_CERACEOMYCES",
+      "name": "[Ceraceomyces]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CERACEOMYCES_CF",
+          "name": "[Ceraceomyces] cf.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Ceraceomyces]",
+          "sourceIds": {
+            "checklistbank": "ott5984228"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amylocorticiaceae"
     }
   ],
   "authorship": "Jülich",
-  "genusCount": 34,
-  "speciesCount": 141,
+  "genusCount": 36,
+  "speciesCount": 144,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3188,6 +3252,7 @@
       "classKey": 186,
       "orderKey": 7794662,
       "familyKey": 4188
-    }
+    },
+    "checklistbank": "ott1075091"
   }
 }

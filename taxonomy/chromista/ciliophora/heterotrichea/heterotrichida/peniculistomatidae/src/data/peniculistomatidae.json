@@ -24,7 +24,8 @@
             ]
           },
           "uuid": "7887122a-3c98-57c-9c0-44cd144b8f40aa",
-          "authorityIds": "col:3R7CR,gbif:8383812"
+          "authorityIds": "col:3R7CR,gbif:8383812",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -49,21 +50,44 @@
             ],
             "col": [
               "76J86"
-            ]
+            ],
+            "checklistbank": "ott4031512"
           },
           "uuid": "4fdc22bf-705d-5da-835-1626c1af86e7be",
-          "authorityIds": "col:76J86,gbif:8258415"
+          "authorityIds": "col:76J86,gbif:8258415",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Peniculistomatidae"
+    },
+    {
+      "id": "GENUS_MYTILOPHILUS",
+      "name": "Mytilophilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYTILOPHILUS_PACIFICAE",
+          "name": "Mytilophilus pacificae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mytilophilus",
+          "sourceIds": {
+            "checklistbank": "ott4029832"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peniculistomatidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 3,
   "appSlug": "peniculistomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ciliophora > Heterotrichea",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -71,6 +95,7 @@
       "classKey": 8235041,
       "orderKey": 8169551,
       "familyKey": 7742182
-    }
+    },
+    "checklistbank": "ott4031507"
   }
 }

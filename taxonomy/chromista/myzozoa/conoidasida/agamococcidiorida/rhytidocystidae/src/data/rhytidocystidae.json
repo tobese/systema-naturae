@@ -22,7 +22,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8087290
+            "gbif": 8087290,
+            "checklistbank": "ott311950"
           },
           "uuid": "1778f24a-5e29-55f-8d4-89cc9e6bc29ee5",
           "authorityIds": "gbif:8087290",
@@ -56,7 +57,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7493008
+            "gbif": 7493008,
+            "checklistbank": "ott2821849"
           },
           "uuid": "a77cb562-ceb0-557-ad1-8248a3814024e4",
           "authorityIds": "gbif:7493008",
@@ -90,7 +92,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7922440
+            "gbif": 7922440,
+            "checklistbank": "ott2821851"
           },
           "uuid": "c74a2116-cf28-5ca-894-d8ef0a2f0b09ca",
           "authorityIds": "gbif:7922440",
@@ -124,7 +127,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7421247
+            "gbif": 7421247,
+            "checklistbank": "ott135637"
           },
           "uuid": "a0cb62bd-36c3-569-894-1791c8b47d0406",
           "authorityIds": "gbif:7421247",
@@ -172,6 +176,27 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhytidocystidae"
+    },
+    {
+      "id": "GENUS_UNIDENTIFIED",
+      "name": "unidentified",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNIDENTIFIED_PROTIST",
+          "name": "unidentified protist",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "unidentified",
+          "sourceIds": {
+            "checklistbank": "ott5155026"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhytidocystidae"
     }
   ],
   "sourceIds": {
@@ -181,8 +206,9 @@
       "classKey": 7531158,
       "orderKey": 8783502,
       "familyKey": 8413248
-    }
+    },
+    "checklistbank": "ott135632"
   },
-  "genusCount": 2,
-  "speciesCount": 9
+  "genusCount": 3,
+  "speciesCount": 10
 }

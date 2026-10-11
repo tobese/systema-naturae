@@ -31,7 +31,8 @@
             ],
             "col": [
               "G7PX"
-            ]
+            ],
+            "checklistbank": "ott243482"
           },
           "uuid": "d126dae9-c94c-537-8c0-0cc770ec49735f",
           "authorityIds": "col:G7PX,gbif:11123622,itis:951606"
@@ -56,7 +57,8 @@
             ],
             "itis": [
               "951609"
-            ]
+            ],
+            "checklistbank": "ott534700"
           },
           "uuid": "2799a16a-94bf-517-a80-5983acc6854dcd",
           "authorityIds": "col:G7PY,gbif:5900782,itis:951609"
@@ -73,7 +75,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 5900776
+            "gbif": 5900776,
+            "checklistbank": "ott823802"
           },
           "uuid": "836602d0-cc54-59d-b87-c1625c1ea223c2",
           "authorityIds": "gbif:5900776"
@@ -98,7 +101,8 @@
             ],
             "itis": [
               "951607"
-            ]
+            ],
+            "checklistbank": "ott45566"
           },
           "uuid": "c1ace6e9-459c-51e-8eb-2b8da85851fb2c",
           "authorityIds": "col:G7PZ,gbif:1000316,itis:951607"
@@ -123,7 +127,8 @@
             ],
             "col": [
               "G7Q2"
-            ]
+            ],
+            "checklistbank": "ott4796806"
           },
           "uuid": "e7ad1874-f0c2-55a-b68-36612b945c83ce",
           "authorityIds": "col:G7Q2,gbif:8323007,itis:951610"
@@ -148,7 +153,8 @@
             ],
             "itis": [
               "951608"
-            ]
+            ],
+            "checklistbank": "ott89470"
           },
           "uuid": "6104bbce-34fc-513-88d-408b4b7e7e660a",
           "authorityIds": "col:G7Q3,gbif:1000314,itis:951608"
@@ -169,6 +175,18 @@
             ]
           },
           "authorityIds": "col:CRLTQ"
+        },
+        {
+          "id": "SP_ARCHAEOGLOBUS_SP",
+          "name": "Archaeoglobus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeoglobus",
+          "sourceIds": {
+            "checklistbank": "ott1010654"
+          },
+          "children": []
         }
       ]
     },
@@ -199,7 +217,8 @@
             ],
             "col": [
               "6HQH9"
-            ]
+            ],
+            "checklistbank": "ott159051"
           },
           "uuid": "26bc27fc-cd42-547-81a-95d07ea7394bd5",
           "authorityIds": "col:6HQH9,gbif:1000318,itis:951618"
@@ -250,7 +269,8 @@
             ],
             "itis": [
               "951621"
-            ]
+            ],
+            "checklistbank": "ott685892"
           },
           "uuid": "c536bd79-625c-58d-a12-e2f611cee4a6c6",
           "authorityIds": "col:3FPTX,gbif:1000320,itis:951621"
@@ -288,9 +308,22 @@
             ],
             "col": [
               "3FPTW"
-            ]
+            ],
+            "checklistbank": "ott756642"
           },
           "authorityIds": "col:3FPTW,itis:951622"
+        },
+        {
+          "id": "SP_GEOGLOBUS_SP",
+          "name": "Geoglobus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geoglobus",
+          "sourceIds": {
+            "checklistbank": "ott614803"
+          },
+          "children": []
         }
       ]
     },
@@ -604,10 +637,97 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "archaeoglobaceae"
+    },
+    {
+      "id": "GENUS_THERMOCOCCUS",
+      "name": "Thermococcus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOCOCCUS_SP",
+          "name": "Thermococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermococcus",
+          "sourceIds": {
+            "checklistbank": "ott93452"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeoglobaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ARCHAEOGLOBALES",
+          "name": "uncultured Archaeoglobales",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5207560"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ARCHAEOGLOBUS",
+          "name": "uncultured Archaeoglobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5207558"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ARCHAEOGLOBI",
+          "name": "uncultured Archaeoglobi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5207563"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeoglobaceae"
+    },
+    {
+      "id": "GENUS_ARCHAEOGLOBACEAE",
+      "name": "Archaeoglobaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAEOGLOBACEAE_ARCHAEON",
+          "name": "Archaeoglobaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeoglobaceae",
+          "sourceIds": {
+            "checklistbank": "ott7000317"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeoglobaceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 27,
+  "genusCount": 13,
+  "speciesCount": 34,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -615,6 +735,7 @@
       "classKey": 291,
       "orderKey": 1190,
       "familyKey": 3799
-    }
+    },
+    "checklistbank": "ott999"
   }
 }

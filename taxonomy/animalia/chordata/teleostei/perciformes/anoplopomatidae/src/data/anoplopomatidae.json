@@ -26,11 +26,13 @@
             ],
             "itis": [
               "167123"
-            ]
+            ],
+            "checklistbank": "ott441856"
           },
           "uuid": "ce0fed4b-2e58-558-a2b-d8b231a40032aa",
           "authorityIds": "col:66WKW,gbif:177732955,gbif:2335062,itis:167123",
-          "commonName": "Sablefish"
+          "commonName": "Sablefish",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -59,27 +61,63 @@
             ],
             "col": [
               "3B286"
-            ]
+            ],
+            "checklistbank": "ott3632609"
           },
           "uuid": "c0e14f2e-ca37-5b5-ac1-46f8a6525a6ece",
-          "authorityIds": "col:3B286,gbif:177732949,gbif:2335057,itis:167125"
+          "authorityIds": "col:3B286,gbif:177732949,gbif:2335057,itis:167125",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Anoplopomatidae"
+    },
+    {
+      "id": "GENUS_ATHERSTONIA",
+      "name": "Atherstonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ATHERSTONIA_MINOR",
+          "name": "Atherstonia minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atherstonia",
+          "sourceIds": {
+            "checklistbank": "ott7650346"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATHERSTONIA_SEELEYI",
+          "name": "Atherstonia seeleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atherstonia",
+          "sourceIds": {
+            "checklistbank": "ott7650347"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anoplopomatidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 4,
   "appSlug": "anoplopomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 44,
       "orderKey": 587,
       "familyKey": 5090
-    }
+    },
+    "checklistbank": "ott441562"
   }
 }

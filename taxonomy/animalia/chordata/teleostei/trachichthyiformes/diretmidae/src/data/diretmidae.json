@@ -26,7 +26,8 @@
             ],
             "itis": [
               "622112"
-            ]
+            ],
+            "checklistbank": "ott3642487"
           },
           "uuid": "bf1abac1-11a2-5f0-a5e-fb261de6deba1b",
           "authorityIds": "col:6CYZV,gbif:177711942,gbif:2356688,itis:622112",
@@ -51,7 +52,8 @@
             ],
             "itis": [
               "622114"
-            ]
+            ],
+            "checklistbank": "ott837710"
           },
           "uuid": "1c480ccb-2a44-5bf-91c-2501b28bee225c",
           "authorityIds": "col:6CYZW,gbif:177711943,gbif:2356689,itis:622114",
@@ -67,6 +69,18 @@
           "authorship": "Post & Quéro, 1981",
           "sourceIds": {
             "checklistbank": "68909"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIRETMOIDES_SP",
+          "name": "Diretmoides sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diretmoides",
+          "sourceIds": {
+            "checklistbank": "ott42091"
           },
           "children": []
         }
@@ -248,13 +262,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "diretmidae"
+    },
+    {
+      "id": "GENUS_DIRETMIDAE",
+      "name": "Diretmidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIRETMIDAE_ENVIRONMENTAL",
+          "name": "Diretmidae environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diretmidae",
+          "sourceIds": {
+            "checklistbank": "ott7061191"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "diretmidae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 13,
   "appSlug": "diretmidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -262,6 +297,6 @@
       "orderKey": 499,
       "familyKey": 7194
     },
-    "checklistbank": "98a39869-3178-492f-9adb-6788ec09d937"
+    "checklistbank": "ott1062934"
   }
 }

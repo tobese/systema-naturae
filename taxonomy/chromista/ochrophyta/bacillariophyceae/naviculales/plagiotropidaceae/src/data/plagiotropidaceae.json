@@ -63,7 +63,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8351635
+            "gbif": 8351635,
+            "checklistbank": "ott4024923"
           },
           "uuid": "c1b9cbe0-8385-5cd-a1a-62b45dcf4f6b1f",
           "authorityIds": "gbif:8351635"
@@ -80,7 +81,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7667529
+            "gbif": 7667529,
+            "checklistbank": "ott4024926"
           },
           "uuid": "3bb36869-9900-5b9-af9-b415f6fbc4b398",
           "authorityIds": "gbif:7667529"
@@ -114,7 +116,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7477176
+            "gbif": 7477176,
+            "checklistbank": "ott6390656"
           },
           "uuid": "d667d942-1dd4-557-896-5b6660cd907416",
           "authorityIds": "gbif:7477176"
@@ -230,7 +233,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7712876
+            "gbif": 7712876,
+            "checklistbank": "ott4921013"
           },
           "uuid": "0efeb971-b039-5cc-8e5-e1d078a37669db",
           "authorityIds": "gbif:7712876"
@@ -247,7 +251,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9496690
+            "gbif": 9496690,
+            "checklistbank": "ott8030267"
           },
           "uuid": "d154e5c4-e4df-55c-8ca-49babb23503f22",
           "authorityIds": "gbif:9496690"
@@ -457,7 +462,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9730816
+            "gbif": 9730816,
+            "checklistbank": "ott8030268"
           },
           "uuid": "7cba1d49-07d1-5a1-9b2-9cba280f26e5ca",
           "authorityIds": "gbif:9730816"
@@ -474,7 +480,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7791643
+            "gbif": 7791643,
+            "checklistbank": "ott5432735"
           },
           "uuid": "7bd046ce-25fa-526-9c9-7bd248c11cc22a",
           "authorityIds": "gbif:7791643"
@@ -571,6 +578,30 @@
             "checklistbank": "1019237"
           },
           "children": []
+        },
+        {
+          "id": "SP_PLAGIOTROPIS_NEAPOLITANA",
+          "name": "Plagiotropis neapolitana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plagiotropis",
+          "sourceIds": {
+            "checklistbank": "ott4024915"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLAGIOTROPIS_MAXIMA",
+          "name": "Plagiotropis maxima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plagiotropis",
+          "sourceIds": {
+            "checklistbank": "ott4024932"
+          },
+          "children": []
         }
       ]
     },
@@ -661,6 +692,18 @@
             "checklistbank": "1019186"
           },
           "children": []
+        },
+        {
+          "id": "SP_PLAGIOLEMMA_INFLATUM",
+          "name": "Plagiolemma inflatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plagiolemma",
+          "sourceIds": {
+            "checklistbank": "ott4024906"
+          },
+          "children": []
         }
       ]
     },
@@ -683,7 +726,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 10628694
+            "gbif": 10628694,
+            "checklistbank": "ott7556458"
           },
           "uuid": "16aa8ed2-0062-5fa-b5e-8f4189dc2c7170",
           "authorityIds": "gbif:10628694"
@@ -1120,10 +1164,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "plagiotropidaceae"
+    },
+    {
+      "id": "GENUS_PLAGIOTROPIDACEAE",
+      "name": "Plagiotropidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLAGIOTROPIDACEAE_SP",
+          "name": "Plagiotropidaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plagiotropidaceae",
+          "sourceIds": {
+            "checklistbank": "ott250849"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plagiotropidaceae"
+    },
+    {
+      "id": "GENUS_STILUS",
+      "name": "Stilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STILUS_SUBULATUS",
+          "name": "Stilus subulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stilus",
+          "sourceIds": {
+            "checklistbank": "ott4024826"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plagiotropidaceae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 63,
+  "genusCount": 16,
+  "speciesCount": 68,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1131,6 +1217,7 @@
       "classKey": 7947184,
       "orderKey": 7763029,
       "familyKey": 7499599
-    }
+    },
+    "checklistbank": "ott250846"
   }
 }

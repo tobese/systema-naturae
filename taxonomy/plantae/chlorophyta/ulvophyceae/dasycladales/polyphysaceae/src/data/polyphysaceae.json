@@ -483,7 +483,8 @@
           "sourceIds": {
             "itis": [
               "9233"
-            ]
+            ],
+            "checklistbank": "ott4003048"
           },
           "authorityIds": "itis:9233"
         },
@@ -679,6 +680,18 @@
           "authorship": "Lam., 1816",
           "sourceIds": {
             "checklistbank": "899417"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACETABULARIA_TOXASII",
+          "name": "Acetabularia toxasii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acetabularia",
+          "sourceIds": {
+            "checklistbank": "ott4003041"
           },
           "children": []
         }
@@ -1206,10 +1219,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polyphysaceae"
+    },
+    {
+      "id": "GENUS_HALICORYNE",
+      "name": "Halicoryne",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALICORYNE_SP",
+          "name": "Halicoryne sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halicoryne",
+          "sourceIds": {
+            "checklistbank": "ott7044324"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "polyphysaceae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 74,
+  "genusCount": 18,
+  "speciesCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -1217,6 +1251,7 @@
       "classKey": 195,
       "orderKey": 1364,
       "familyKey": 4859
-    }
+    },
+    "checklistbank": "ott101023"
   }
 }

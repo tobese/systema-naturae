@@ -206,6 +206,18 @@
           },
           "uuid": "7f33a673-00b4-58a-998-d24f9629774f9e",
           "authorityIds": "col:5TX57,gbif:177724822,gbif:2347649,itis:647058"
+        },
+        {
+          "id": "SP_ALLOTOCA_SP",
+          "name": "Allotoca sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allotoca",
+          "sourceIds": {
+            "checklistbank": "ott840799"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -295,7 +307,8 @@
             ],
             "col": [
               "TMTJ"
-            ]
+            ],
+            "checklistbank": "ott316488"
           },
           "uuid": "d4f27161-6627-5ac-bbd-e334abf864694a",
           "authorityIds": "col:TMTJ,gbif:177724771,gbif:2347672,itis:647192",
@@ -428,7 +441,8 @@
             ],
             "col": [
               "3PHBQ"
-            ]
+            ],
+            "checklistbank": "ott366078"
           },
           "uuid": "205b0880-793e-55c-912-6cf2f1a8a8bc7e",
           "authorityIds": "col:3PHBQ,gbif:177724903,gbif:2347634,itis:647330"
@@ -471,9 +485,34 @@
           "sourceIds": {
             "itis": [
               "647035"
-            ]
+            ],
+            "checklistbank": "ott3642008"
           },
           "authorityIds": "itis:647035"
+        },
+        {
+          "id": "SP_ILYODON_SP",
+          "name": "Ilyodon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ilyodon",
+          "sourceIds": {
+            "checklistbank": "ott24430"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ILYODON_PARAGUAYENSIS",
+          "name": "Ilyodon paraguayensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ilyodon",
+          "sourceIds": {
+            "checklistbank": "ott7651487"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -893,7 +932,8 @@
             ],
             "itis": [
               "647191"
-            ]
+            ],
+            "checklistbank": "ott3642014"
           },
           "uuid": "e5d5ac14-1805-527-b57-a91dfa25ead278",
           "authorityIds": "col:5XQ9Z,gbif:190004648,gbif:2347644,itis:647191"
@@ -1217,7 +1257,8 @@
             ],
             "col": [
               "6Z3XJ"
-            ]
+            ],
+            "checklistbank": "ott777422"
           },
           "uuid": "ba551f92-3015-5ee-86d-21118c244f60a1",
           "authorityIds": "col:6Z3XJ,gbif:177724872,gbif:2347691"
@@ -1292,7 +1333,8 @@
             ],
             "itis": [
               "647317"
-            ]
+            ],
+            "checklistbank": "ott316491"
           },
           "uuid": "5f271848-d082-5f3-bd0-debf20e6afa2e9",
           "authorityIds": "col:3H25J,gbif:177724765,gbif:5203390,itis:647317",
@@ -1340,7 +1382,8 @@
             ],
             "itis": [
               "647318"
-            ]
+            ],
+            "checklistbank": "ott3642012"
           },
           "authorityIds": "col:3H25M,itis:647318"
         }
@@ -1369,7 +1412,8 @@
             ],
             "col": [
               "6MF8G"
-            ]
+            ],
+            "checklistbank": "ott316483"
           },
           "uuid": "4f841ff8-f2d1-5c0-9f7-2956b4d52b9c51",
           "authorityIds": "col:6MF8G,gbif:177724746,gbif:2347646"
@@ -1567,19 +1611,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "goodeidae"
+    },
+    {
+      "id": "GENUS_TAPATIA",
+      "name": "Tapatia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TAPATIA_OCCIDENTALIS",
+          "name": "Tapatia occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tapatia",
+          "sourceIds": {
+            "checklistbank": "ott7651490"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "goodeidae"
     }
   ],
-  "speciesCount": 60,
+  "speciesCount": 64,
   "appSlug": "goodeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 20,
+  "genusCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 44,
       "orderKey": 547,
       "familyKey": 7657
-    }
+    },
+    "checklistbank": "ott643281"
   }
 }

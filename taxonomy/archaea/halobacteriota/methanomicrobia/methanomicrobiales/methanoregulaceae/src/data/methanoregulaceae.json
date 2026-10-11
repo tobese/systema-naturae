@@ -31,7 +31,8 @@
             ],
             "itis": [
               "951841"
-            ]
+            ],
+            "checklistbank": "ott835418"
           },
           "uuid": "834375ae-78ac-5f2-994-405761e7404930",
           "authorityIds": "col:73FJ2,gbif:8043407,itis:951841"
@@ -56,7 +57,8 @@
             ],
             "itis": [
               "951842"
-            ]
+            ],
+            "checklistbank": "ott518587"
           },
           "uuid": "b4663e95-f0c6-597-9df-c49835b035d4f4",
           "authorityIds": "col:42FF2,gbif:7462668,itis:951842"
@@ -107,7 +109,8 @@
             ],
             "itis": [
               "951826"
-            ]
+            ],
+            "checklistbank": "ott588890"
           },
           "uuid": "50ed5fbc-2ba8-571-884-d4d8a671e51997",
           "authorityIds": "col:73FHC,gbif:7492426,itis:951826"
@@ -132,7 +135,8 @@
             ],
             "itis": [
               "951825"
-            ]
+            ],
+            "checklistbank": "ott566071"
           },
           "uuid": "9e7730de-20e5-5b2-8ff-8b756b9d1a3733",
           "authorityIds": "col:6RFHB,gbif:8012258,itis:951825"
@@ -592,10 +596,109 @@
           "authorityIds": "gbif:12219194"
         }
       ]
+    },
+    {
+      "id": "GENUS_ANAEROBIC",
+      "name": "anaerobic",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANAEROBIC_METHANOGENIC",
+          "name": "anaerobic methanogenic",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "anaerobic",
+          "sourceIds": {
+            "checklistbank": "ott4796028"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanoregulaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHANOREGULA",
+          "name": "uncultured Methanoregula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206444"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOLINEA",
+          "name": "uncultured Methanolinea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206433"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOMICROBIALES",
+          "name": "uncultured Methanomicrobiales",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206468"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOSPHAERULA",
+          "name": "uncultured Methanosphaerula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206442"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanoregulaceae"
+    },
+    {
+      "id": "GENUS_METHANOSPHAERULA",
+      "name": "Methanosphaerula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOSPHAERULA_PALUSTRIS",
+          "name": "Methanosphaerula palustris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanosphaerula",
+          "sourceIds": {
+            "checklistbank": "ott897176"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanoregulaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 28,
+  "genusCount": 12,
+  "speciesCount": 34,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -603,6 +706,7 @@
       "classKey": 162,
       "orderKey": 566,
       "familyKey": 7536903
-    }
+    },
+    "checklistbank": "ott966150"
   }
 }

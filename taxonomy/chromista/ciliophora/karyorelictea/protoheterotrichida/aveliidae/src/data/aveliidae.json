@@ -27,10 +27,12 @@
             ],
             "col": [
               "K2B9"
-            ]
+            ],
+            "checklistbank": "ott2829051"
           },
           "uuid": "a82bfb4d-91aa-57a-b77-9098ce31a79a42",
-          "authorityIds": "col:K2B9,gbif:7402367"
+          "authorityIds": "col:K2B9,gbif:7402367",
+          "children": []
         },
         {
           "id": "AVELIA_GIGAS",
@@ -48,10 +50,12 @@
             ],
             "col": [
               "67Z6Z"
-            ]
+            ],
+            "checklistbank": "ott2829061"
           },
           "uuid": "88f6be1a-be9e-5e6-b81-5aa882c476abb3",
-          "authorityIds": "col:67Z6Z,gbif:7902797"
+          "authorityIds": "col:67Z6Z,gbif:7902797",
+          "children": []
         },
         {
           "id": "AVELIA_MARTINICENSIS",
@@ -72,7 +76,8 @@
             ]
           },
           "uuid": "7eef6acc-e347-513-b29-6548247d3c968e",
-          "authorityIds": "col:K2BC,gbif:7670463"
+          "authorityIds": "col:K2BC,gbif:7670463",
+          "children": []
         },
         {
           "id": "AVELIA_MULTINUCLEATA",
@@ -90,10 +95,24 @@
             ],
             "col": [
               "K2BD"
-            ]
+            ],
+            "checklistbank": "ott2829065"
           },
           "uuid": "30426105-6296-5c9-afc-5d223923e1b106",
-          "authorityIds": "col:K2BD,gbif:8348482"
+          "authorityIds": "col:K2BD,gbif:8348482",
+          "children": []
+        },
+        {
+          "id": "SP_AVELIA_MARTINICENSE",
+          "name": "Avelia martinicense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Avelia",
+          "sourceIds": {
+            "checklistbank": "ott5668130"
+          },
+          "children": []
         }
       ]
     },
@@ -123,7 +142,8 @@
             ]
           },
           "uuid": "afbf5c06-9d8d-51f-b27-bf27c82f7e3c92",
-          "authorityIds": "col:4DK7G,gbif:7743793"
+          "authorityIds": "col:4DK7G,gbif:7743793",
+          "children": []
         },
         {
           "id": "PARDUCZIA_FILIFORMIS",
@@ -141,10 +161,12 @@
             ],
             "col": [
               "4DK7H"
-            ]
+            ],
+            "checklistbank": "ott2829053"
           },
           "uuid": "c397f865-b83b-5c5-add-2f6900514e7000",
-          "authorityIds": "col:4DK7H,gbif:7863571"
+          "authorityIds": "col:4DK7H,gbif:7863571",
+          "children": []
         },
         {
           "id": "PARDUCZIA_FLORIDENSIS",
@@ -162,10 +184,12 @@
             ],
             "col": [
               "4DK7J"
-            ]
+            ],
+            "checklistbank": "ott2829054"
           },
           "uuid": "73302835-0a70-591-800-6099e76ecc14fe",
-          "authorityIds": "col:4DK7J,gbif:8271003"
+          "authorityIds": "col:4DK7J,gbif:8271003",
+          "children": []
         },
         {
           "id": "PARDUCZIA_MARTINICENSIS",
@@ -186,7 +210,8 @@
             ]
           },
           "uuid": "34a5c655-a027-5c7-a74-671eba1c482649",
-          "authorityIds": "col:4DK7L,gbif:7828336"
+          "authorityIds": "col:4DK7L,gbif:7828336",
+          "children": []
         },
         {
           "id": "PARDUCZIA_ORBIS",
@@ -204,10 +229,12 @@
             ],
             "col": [
               "4DK7N"
-            ]
+            ],
+            "checklistbank": "ott251291"
           },
           "uuid": "14835143-546c-5ec-a53-a4e30647cc0012",
-          "authorityIds": "col:4DK7N,gbif:7552933"
+          "authorityIds": "col:4DK7N,gbif:7552933",
+          "children": []
         }
       ]
     },
@@ -237,9 +264,31 @@
             ]
           },
           "uuid": "e76bc04f-bd0a-5bb-be7-a31e39ed66d1bc",
-          "authorityIds": "col:75S6N,gbif:7789471"
+          "authorityIds": "col:75S6N,gbif:7789471",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_GELEIA",
+      "name": "Geleia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GELEIA_MURMANICA",
+          "name": "Geleia murmanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geleia",
+          "sourceIds": {
+            "checklistbank": "ott2829066"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aveliidae"
     }
   ],
   "sourceIds": {
@@ -249,6 +298,9 @@
       "classKey": 7478606,
       "orderKey": 8024259,
       "familyKey": 7985001
-    }
-  }
+    },
+    "checklistbank": "ott2829060"
+  },
+  "genusCount": 4,
+  "speciesCount": 12
 }

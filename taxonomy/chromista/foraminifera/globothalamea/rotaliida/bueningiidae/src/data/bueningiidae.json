@@ -25,7 +25,8 @@
             ]
           },
           "uuid": "ca84af9b-2a7d-508-866-5683eea3d9cb76",
-          "authorityIds": "col:825C7,gbif:10829385"
+          "authorityIds": "col:825C7,gbif:10829385",
+          "children": []
         },
         {
           "id": "SP_BUENINGIA_CREEKI_FINLAY_1939",
@@ -41,10 +42,12 @@
             ],
             "col": [
               "NNRQ"
-            ]
+            ],
+            "checklistbank": "ott4806635"
           },
           "uuid": "6f23a311-e481-503-8e3-185873c131f556",
-          "authorityIds": "col:NNRQ,gbif:6535110"
+          "authorityIds": "col:NNRQ,gbif:6535110",
+          "children": []
         },
         {
           "id": "SP_BUENINGIA_VENEZUELENSIS_BERM_DEZ_FUENMAYOR_1966",
@@ -60,21 +63,44 @@
             ],
             "col": [
               "825C8"
-            ]
+            ],
+            "checklistbank": "ott8018489"
           },
           "uuid": "3ac0e258-6a7d-563-bba-0943234668a213",
-          "authorityIds": "col:825C8,gbif:9002822"
+          "authorityIds": "col:825C8,gbif:9002822",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Bueningiidae"
+    },
+    {
+      "id": "GENUS_RUTTENELLA",
+      "name": "Ruttenella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RUTTENELLA_BUTONENSIS",
+          "name": "Ruttenella butonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ruttenella",
+          "sourceIds": {
+            "checklistbank": "ott8018490"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bueningiidae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 4,
   "appSlug": "bueningiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Globothalamea",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -82,6 +108,7 @@
       "classKey": 7434778,
       "orderKey": 7692889,
       "familyKey": 4907746
-    }
+    },
+    "checklistbank": "ott4806633"
   }
 }

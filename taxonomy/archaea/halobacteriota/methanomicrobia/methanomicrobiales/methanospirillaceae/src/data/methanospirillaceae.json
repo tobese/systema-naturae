@@ -31,7 +31,8 @@
             ],
             "itis": [
               "951860"
-            ]
+            ],
+            "checklistbank": "ott859611"
           },
           "uuid": "34025cda-2595-51b-9a5-62f478ba175d13",
           "authorityIds": "col:42FFP,gbif:8028263,itis:951860"
@@ -53,7 +54,8 @@
             ],
             "col": [
               "CSMLN"
-            ]
+            ],
+            "checklistbank": "ott5245657"
           },
           "uuid": "0ce255bd-d455-514-aed-c6b0f7ad14f294",
           "authorityIds": "col:CSMLN,gbif:7742822"
@@ -92,7 +94,8 @@
             ],
             "col": [
               "CSMLP"
-            ]
+            ],
+            "checklistbank": "ott50151"
           },
           "uuid": "3e02c4b4-4a23-5d4-ae0-7807a900580f37",
           "authorityIds": "col:CSMLP,gbif:7755258"
@@ -130,9 +133,22 @@
             ],
             "itis": [
               "951861"
-            ]
+            ],
+            "checklistbank": "ott993152"
           },
           "authorityIds": "col:CSMLM,itis:951861"
+        },
+        {
+          "id": "SP_METHANOSPIRILLUM_SP",
+          "name": "Methanospirillum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanospirillum",
+          "sourceIds": {
+            "checklistbank": "ott534057"
+          },
+          "children": []
         }
       ]
     },
@@ -232,10 +248,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanospirillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHANOSPIRILLACEAE",
+          "name": "uncultured Methanospirillaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOSPIRILLUM",
+          "name": "uncultured Methanospirillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5206448"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanospirillaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 10,
+  "genusCount": 6,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -243,6 +292,7 @@
       "classKey": 162,
       "orderKey": 566,
       "familyKey": 3806
-    }
+    },
+    "checklistbank": "ott302700"
   }
 }

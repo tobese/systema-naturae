@@ -155,7 +155,8 @@
             ],
             "itis": [
               "951967"
-            ]
+            ],
+            "checklistbank": "ott891210"
           },
           "uuid": "84333f60-a855-505-a5e-df33acfcaaeeb7",
           "authorityIds": "col:CT8DD,gbif:1000089,itis:951967"
@@ -197,10 +198,23 @@
             ],
             "col": [
               "7C8VL"
-            ]
+            ],
+            "checklistbank": "ott1057134"
           },
           "uuid": "8f3de39d-655a-5a6-a6d-4aef664ef065d7",
           "authorityIds": "col:7C8VL,gbif:1000090,itis:951966"
+        },
+        {
+          "id": "SP_THERMOPLASMA_SP",
+          "name": "Thermoplasma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoplasma",
+          "sourceIds": {
+            "checklistbank": "ott13293"
+          },
+          "children": []
         }
       ]
     },
@@ -540,10 +554,73 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Thermoplasmataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THERMOPLASMA",
+          "name": "uncultured Thermoplasma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5207303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoplasmataceae"
+    },
+    {
+      "id": "GENUS_THERMOPLASMATALES",
+      "name": "Thermoplasmatales",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOPLASMATALES_ARCHAEON",
+          "name": "Thermoplasmatales archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoplasmatales",
+          "sourceIds": {
+            "checklistbank": "ott5207308"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoplasmataceae"
+    },
+    {
+      "id": "GENUS_MINE",
+      "name": "mine",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MINE_DRAINAGE",
+          "name": "mine drainage",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "mine",
+          "sourceIds": {
+            "checklistbank": "ott5878027"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoplasmataceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 21,
+  "genusCount": 16,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -551,6 +628,7 @@
       "classKey": 295,
       "orderKey": 567,
       "familyKey": 3810
-    }
+    },
+    "checklistbank": "ott982266"
   }
 }

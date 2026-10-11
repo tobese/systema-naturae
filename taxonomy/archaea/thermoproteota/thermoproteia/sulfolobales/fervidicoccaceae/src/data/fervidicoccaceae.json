@@ -30,10 +30,12 @@
             ],
             "col": [
               "6HRKR"
-            ]
+            ],
+            "checklistbank": "ott688073"
           },
           "uuid": "20ee2c57-8cf1-569-8a6-d29a4abf891d61",
-          "authorityIds": "col:6HRKR,gbif:7992883,itis:951620"
+          "authorityIds": "col:6HRKR,gbif:7992883,itis:951620",
+          "children": []
         }
       ]
     },
@@ -58,7 +60,8 @@
             "gbif": 11131318
           },
           "uuid": "bffec531-d003-571-b7a-c23e11d99615d4",
-          "authorityIds": "gbif:11131318"
+          "authorityIds": "gbif:11131318",
+          "children": []
         }
       ]
     },
@@ -83,9 +86,31 @@
             "gbif": 11596130
           },
           "uuid": "78bc66cc-6a78-57d-809-09aa1e767960b7",
-          "authorityIds": "gbif:11596130"
+          "authorityIds": "gbif:11596130",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_AEROPYRUM",
+          "name": "uncultured Aeropyrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "ott5205946"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fervidicoccaceae"
     }
   ],
   "sourceIds": {
@@ -95,6 +120,9 @@
       "classKey": 10705623,
       "orderKey": 564,
       "familyKey": 8340365
-    }
-  }
+    },
+    "checklistbank": "ott915913"
+  },
+  "genusCount": 4,
+  "speciesCount": 4
 }

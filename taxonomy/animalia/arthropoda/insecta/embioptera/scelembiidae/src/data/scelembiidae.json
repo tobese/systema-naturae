@@ -93,7 +93,10 @@
           "subspeciesCount": 0,
           "lineage": "Ambonembia",
           "children": [],
-          "uuid": "cd0bd093-7408-50a-b0d-cde04f70fd2b15"
+          "uuid": "cd0bd093-7408-50a-b0d-cde04f70fd2b15",
+          "sourceIds": {
+            "checklistbank": "ott3511260"
+          }
         }
       ]
     },
@@ -1222,7 +1225,10 @@
           "subspeciesCount": 0,
           "lineage": "Rhagadochir",
           "children": [],
-          "uuid": "2722e491-ef49-5ec-860-64b695d2c06c32"
+          "uuid": "2722e491-ef49-5ec-860-64b695d2c06c32",
+          "sourceIds": {
+            "checklistbank": "ott3511264"
+          }
         },
         {
           "id": "SP_RHAGADOCHIR_VOSSELERI_ENDERLEIN_1909",
@@ -1587,16 +1593,37 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "scelembiidae"
+    },
+    {
+      "id": "GENUS_KUMAREMBIA",
+      "name": "Kumarembia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KUMAREMBIA_HURLEYI",
+          "name": "Kumarembia hurleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kumarembia",
+          "sourceIds": {
+            "checklistbank": "ott6193604"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scelembiidae"
     }
   ],
-  "speciesCount": 75,
+  "speciesCount": 76,
   "appSlug": "scelembiidae",
   "continents": [
     "Africa",
     "North America",
     "South America"
   ],
-  "genusCount": 18,
+  "genusCount": 19,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -1605,6 +1632,7 @@
       "classKey": 216,
       "orderKey": 584,
       "familyKey": 2057
-    }
+    },
+    "checklistbank": "ott417125"
   }
 }
