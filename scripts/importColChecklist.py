@@ -186,6 +186,12 @@ def main() -> int:
             FAM2K[fam].add(k)
 
     staged = collections.defaultdict(list)      # (kingdom, slug) -> [(genus, name, auth)]
+    # (kingdom, slug) -> set of the archive's own ids for the family-rank
+    # ancestor feeding it. Normally one id per slug; more than one means this
+    # archive is feeding two of ITS OWN distinct family concepts into the one
+    # tree family we matched by name -- the Actinocyclidae/Hemidiscaceae kind
+    # of cross-kingdom homonym, visible here before it ever hits disk.
+    fam_source_ids = collections.defaultdict(set)
     held = refused = nonb = 0
     no_family = collections.Counter()
     missed = collections.Counter()
@@ -252,6 +258,9 @@ def main() -> int:
         staged[(k, slug)].append((g, bare,
                                   (t.get("authorship") or "").strip() or None,
                                   t.get("id")))
+        fid = ch.get("family_id")
+        if fid:
+            fam_source_ids[(k, slug)].add(fid)
 
     print("  routed per taxon: " + ", ".join(f"{k} {v:,}" for k, v in routed.most_common()))
     print(f"      kingdom from the taxon: {routed_by_kingdom:,}"
@@ -373,6 +382,30 @@ def main() -> int:
             family_slug=slug)
         added_total += m.get("species_added", 0)
         dedup_total += m.get("species_deduped", 0)
+
+        # Stamp this archive's own family-rank id onto the family's own root
+        # node, the same way species already carry sourceIds (colChecklist.
+        # chain() now surfaces it). More than one id feeding one slug means
+        # the archive itself disagrees with our tree about what "this family"
+        # is -- the Actinocyclidae/Hemidiscaceae class of bug, visible here
+        # before a single species crosses into the file.
+        fids = fam_source_ids.get((kind, slug)) or set()
+        fam_id_changed = False
+        if len(fids) > 1:
+            print(f"    ! {slug}: archive feeds {len(fids)} distinct family "
+                  f"ids into this one slug -- possible homonym collision: "
+                  f"{sorted(fids)[:5]}")
+        elif len(fids) == 1:
+            fid = next(iter(fids))
+            doc_ids = doc.setdefault("sourceIds", {})
+            prior = doc_ids.get(SOURCE)
+            if prior != fid:
+                if prior:
+                    print(f"    ! {slug}: {SOURCE} family id changed "
+                          f"{prior} -> {fid}")
+                doc_ids[SOURCE] = fid
+                fam_id_changed = True
+
         print(f"    {slug:28s} staged {len(rows):>4,}  added {m.get('species_added', 0):>4,}  "
               f"already present {m.get('species_deduped', 0):>4,}")
         if m.get("authority_conflicts"):
@@ -383,7 +416,7 @@ def main() -> int:
         # reformats every family that was merely scanned -- json.dump re-emits
         # each array one item per line -- and the first run rewrote 75 family
         # files to add 373 species to three of them.
-        if args.apply and not m.get("species_added"):
+        if args.apply and not m.get("species_added") and not fam_id_changed:
             print(f"      unchanged, not rewritten")
         elif args.apply:
             with open(touched_path, "w", encoding="utf-8") as fh:

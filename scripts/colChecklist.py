@@ -509,6 +509,14 @@ def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
     parent walk finds nothing, which for both archives it does -- reptile-db's
     `family_name` is empty on all 17,042 rows, so trusting it would place
     nothing at all.
+
+    Also sets `{rank}_id` to the archive's own id for that ancestor row,
+    whenever the match came from walking to a real ancestor taxon rather than
+    a denormalised column -- a flat `family_name` string on the species row
+    has no taxon of its own to carry an id. This is the source's bare local
+    id (whatever `cur["id"]` means in that archive, e.g. a COL/ChecklistBank
+    usage id), not a cross-source authority id; nothing has reconciled it
+    against any other archive's numbering.
     """
     out = {}
     cur, n = tax, 0
@@ -536,6 +544,8 @@ def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
                 if not denormalised and " " in v:
                     v = v.split()[0]
                 out[rnk] = v
+                if not denormalised and cur.get("id"):
+                    out[f"{rnk}_id"] = cur["id"]
         cur = by_id.get(cur.get("parent")) if cur.get("parent") else None
         n += 1
     return out
