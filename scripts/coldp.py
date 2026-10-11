@@ -177,6 +177,15 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
             i_gen = ix.get("genericName")
             i_sp = ix.get("specificEpithet")
             i_isp = ix.get("infraspecificEpithet")
+            # The Mammal Diversity Database (9802) leaves col:parentID blank on
+            # every row -- there is no hierarchy to walk at all -- and gives the
+            # full classification as flat columns per row instead, same idea as
+            # genericName/specificEpithet above but one rank up. Kept alongside
+            # link/reference/status below, keyed to match colChecklist.py's
+            # CHAIN_COL names (`{rank}_name`) so chain()'s denormalised-column
+            # fallback reads them with no extra translation.
+            i_rankcol = {rnk: ix.get(rnk) for rnk in
+                         ("kingdom", "phylum", "class", "order", "family")}
             for row in rd:
                 if len(row) <= i_nm or row[i_st] not in accepted:
                     continue
@@ -199,6 +208,9 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
                         e["reference"] = row[i_ref]
                     if i_st is not None:
                         e["status"] = row[i_st]
+                    for rnk, i_rc in i_rankcol.items():
+                        if i_rc is not None and len(row) > i_rc and row[i_rc]:
+                            e[f"{rnk}_name"] = row[i_rc]
                     extra[t] = e
     return par, rank, name, extra
 

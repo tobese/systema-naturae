@@ -364,6 +364,16 @@ def _coldp(path):
     largest sources on the shelf. Accepted-ness comes from col:status, which is
     the field ColDP uses -- the opposite of the COL export shape, where status
     is empty and Synonym.tsv carries the split.
+
+    Blank is also itself a valid accepted-ness value, not just a thing Wikispecies
+    and Wikidata Species happen not to do. NameUsage.status "includes ... the
+    Taxon.provisional flag" per the ColDP spec, and that flag defaults to false --
+    a plain accepted taxon writes nothing, "provisionally accepted" only for the
+    exception. The Mammal Diversity Database (9802) does exactly that: 41,686 of
+    its rows are blank-status accepted taxa and 1 is literally "provisionally
+    accepted"; none of the 50,800 synonym rows are blank. Omitting "" here filtered
+    every real taxon out and kept only the synonyms, so the import reported 0
+    candidates for a dataset that is nothing but mammals.
     """
     import coldp as _C
     # Load the WHOLE name usage set, not the accepted subset, because a chain
@@ -374,16 +384,29 @@ def _coldp(path):
     # which would have refused the lot. Status decides who is a *candidate*, not
     # who may appear in a hierarchy.
     par, rank, name, extra = _C.load_core(
-        path, accepted=_C.ACCEPTED | {"synonym", "ambiguous synonym",
+        path, accepted=_C.ACCEPTED | {"", "synonym", "ambiguous synonym",
                                      "misapplied", "unplaced", "excluded"},
         want_authorship=True)
     by_id = {}
     for t, r in rank.items():
         e = extra.get(t) or {}
-        by_id[t] = {"id": t, "parent": par.get(t), "name_id": t,
-                    "name": name.get(t), "authorship": e.get("authorship"),
-                    "rank": r, "is_synonym": (e.get("status") or "") not in _C.ACCEPTED,
-                    "status": e.get("status")}
+        row = {"id": t, "parent": par.get(t), "name_id": t,
+               "name": name.get(t), "authorship": e.get("authorship"),
+               "rank": r,
+               # Blank is the ordinary accepted case here too, same reason
+               # as the load_core() filter above -- not just "not excluded".
+               "is_synonym": e.get("status") not in _C.ACCEPTED and
+                             e.get("status") != "",
+               "status": e.get("status")}
+        # Flat kingdom_name/.../family_name columns, when load_core() found
+        # them (col:parentID blank -- MDD -- or just not walked that far).
+        # Named to match CHAIN_COL exactly, so chain()'s own denormalised-
+        # column fallback reads them with no extra translation.
+        for rnk in ("kingdom", "phylum", "class", "order", "family"):
+            v = e.get(f"{rnk}_name")
+            if v:
+                row[f"{rnk}_name"] = v
+        by_id[t] = row
     # The WHOLE hierarchy, not just the species: the importer builds its
     # parent-walk index from this list, so returning only species meant
     # by_id.get("Homo") was None and the walk stopped one step above the species
