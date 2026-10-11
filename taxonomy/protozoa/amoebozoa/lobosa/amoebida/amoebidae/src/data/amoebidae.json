@@ -458,7 +458,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Deuteramoeba",
           "children": [],
-          "uuid": "240d2c2a-a15d-509-97d-029b74fc16901c"
+          "uuid": "240d2c2a-a15d-509-97d-029b74fc16901c",
+          "authorship": "Pussard, Alabouvette, Lemaitre & Pons",
+          "sourceIds": {
+            "checklistbank": "79cb50a5-6a2c-4fba-bfe6-9fff7be65074"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -715,10 +719,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amoebidae"
+    },
+    {
+      "id": "GENUS_MALAMEBA",
+      "name": "Malameba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MALAMEBA_LOCUSTAE_TAYLOR_KING",
+          "name": "Malameba locustae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malameba",
+          "authorship": "Taylor & King",
+          "sourceIds": {
+            "checklistbank": "24683edb-a98e-4bb4-98a6-9af604fcd770"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amoebidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 33,
+  "genusCount": 12,
+  "speciesCount": 34,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,
@@ -726,6 +752,7 @@
       "classKey": 116,
       "orderKey": 761,
       "familyKey": 5864
-    }
+    },
+    "checklistbank": "1981778c-75f1-409f-ae1b-03a1fad261fb"
   }
 }

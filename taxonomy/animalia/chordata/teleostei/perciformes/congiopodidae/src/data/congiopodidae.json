@@ -124,7 +124,8 @@
             ],
             "itis": [
               "643913"
-            ]
+            ],
+            "checklistbank": "ddd9cff6-ab10-4a38-ab89-5a2c721be513"
           },
           "uuid": "c3cb3920-13f6-564-8ee-c377e8eb7c1fc8",
           "authorityIds": "col:XLKH,gbif:177722063,gbif:2336916,itis:643913"
@@ -181,19 +182,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Congiopodidae"
+    },
+    {
+      "id": "GENUS_ZANCLORHYNCHUS",
+      "name": "Zanclorhynchus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZANCLORHYNCHUS_SPINIFER_G_NTHER",
+          "name": "Zanclorhynchus spinifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zanclorhynchus",
+          "authorship": "Günther",
+          "sourceIds": {
+            "checklistbank": "88b323f5-a4d9-482b-b759-e5c70866b4e0"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "congiopodidae"
     }
   ],
-  "speciesCount": 7,
+  "speciesCount": 8,
   "appSlug": "congiopodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 44,
       "orderKey": 587,
       "familyKey": 5094
-    }
+    },
+    "checklistbank": "79e83fec-9aa0-43a9-a6ce-cc2d42b3fb72"
   }
 }

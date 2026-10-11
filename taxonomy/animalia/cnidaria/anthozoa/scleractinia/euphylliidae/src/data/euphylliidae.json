@@ -158,9 +158,11 @@
             ],
             "itis": [
               "53636"
-            ]
+            ],
+            "checklistbank": "e925f9ac-30c1-4fd3-9b2b-6e72a0d2d3c2"
           },
-          "authorityIds": "col:3CSVT,itis:53636,wikidata:Q3942668"
+          "authorityIds": "col:3CSVT,itis:53636,wikidata:Q3942668",
+          "authorship": "Chamisso & Eysenhardt"
         },
         {
           "id": "SP_EUPHYLLIA_GRACILIS_DANA_1846",
@@ -660,6 +662,19 @@
           },
           "children": [],
           "uuid": "992d6df0-d589-545-ba0-0b5eb879bb24f4"
+        },
+        {
+          "id": "SP_EUPHYLLIA_CRISTATA_CHEVALIER",
+          "name": "Euphyllia cristata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euphyllia",
+          "authorship": "Chevalier",
+          "sourceIds": {
+            "checklistbank": "cf824110-2373-4191-9566-4edb6896a26f"
+          },
+          "children": []
         }
       ]
     },
@@ -862,6 +877,19 @@
           "yearPublished": "1959",
           "children": [],
           "uuid": "a9e583e2-ec61-5c9-977-b7f6785458fdb8"
+        },
+        {
+          "id": "SP_MONTIGYRA_KENTI_MATTHAI",
+          "name": "Montigyra kenti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Montigyra",
+          "authorship": "Matthai",
+          "sourceIds": {
+            "checklistbank": "f14e2ccd-b57e-41fd-b91f-cbe8dfc64c6b"
+          },
+          "children": []
         }
       ]
     },
@@ -1019,9 +1047,11 @@
             ],
             "col": [
               "3F2ST"
-            ]
+            ],
+            "checklistbank": "65c2968a-ea27-4e46-b7ae-044bcfde3831"
           },
-          "authorityIds": "col:3F2ST,itis:53408,wikidata:Q3942952"
+          "authorityIds": "col:3F2ST,itis:53408,wikidata:Q3942952",
+          "authorship": "Lamarck"
         },
         {
           "id": "SP_GALAXEA_BOUGAINVILLEI",
@@ -1873,10 +1903,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "euphylliidae"
+    },
+    {
+      "id": "GENUS_CATALAPHYLLIA",
+      "name": "Catalaphyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CATALAPHYLLIA_JARDINEI_SAVILLE_KENT",
+          "name": "Catalaphyllia jardinei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Catalaphyllia",
+          "authorship": "Saville-Kent",
+          "sourceIds": {
+            "checklistbank": "978511ad-6534-45c2-ae41-406a1e850691"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euphylliidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 99,
+  "genusCount": 17,
+  "speciesCount": 102,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1884,6 +1936,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 7526997
-    }
+    },
+    "checklistbank": "7724068f-9e21-471a-bc99-59f161f5dccb"
   }
 }

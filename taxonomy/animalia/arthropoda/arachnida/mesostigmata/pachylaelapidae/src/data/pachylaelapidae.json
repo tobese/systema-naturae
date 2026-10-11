@@ -315,7 +315,8 @@
           "authorship": "Womersley, 1942",
           "children": [],
           "sourceIds": {
-            "gbif": 4664677
+            "gbif": 4664677,
+            "checklistbank": "0f844c9e-2a6c-4d44-8645-4cc9d5196676"
           },
           "uuid": "45ef12c3-043e-548-a86-be2c2897e2d435",
           "authorityIds": "gbif:4664677"
@@ -625,7 +626,8 @@
             ],
             "col": [
               "8Y7ML"
-            ]
+            ],
+            "checklistbank": "792f0d0c-46bf-4f64-a7fc-87b33478383a"
           },
           "uuid": "e52beb19-763f-5d7-bad-77e99be2c743cb",
           "authorityIds": "col:8Y7ML,gbif:4664678,itis:1176713"
@@ -1809,7 +1811,8 @@
             ],
             "itis": [
               "1176539"
-            ]
+            ],
+            "checklistbank": "ef23ed99-c003-4103-adcb-91d2f1a6b805"
           },
           "authorityIds": "col:8Y7JL,itis:1176539"
         },
@@ -4266,7 +4269,8 @@
             ],
             "col": [
               "8Y7ND"
-            ]
+            ],
+            "checklistbank": "bbd2c986-6216-44f9-9fa3-d1eae5380366"
           },
           "uuid": "bd772f6b-1031-598-bf0-02a7994b582657",
           "authorityIds": "col:8Y7ND,gbif:4549072,itis:1176649"
@@ -5569,13 +5573,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pachylaelapidae"
+    },
+    {
+      "id": "GENUS_ZYGOSEIUS",
+      "name": "Zygoseius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZYGOSEIUS_SARCINULUS_HALLIDAY",
+          "name": "Zygoseius sarcinulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zygoseius",
+          "authorship": "Halliday",
+          "sourceIds": {
+            "checklistbank": "443ac91d-0fa6-4444-ba20-66d926bae4b9"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachylaelapidae"
     }
   ],
-  "speciesCount": 305,
+  "speciesCount": 306,
   "appSlug": "pachylaelapidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 20,
+  "genusCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -5583,6 +5609,7 @@
       "classKey": 367,
       "orderKey": 1109,
       "familyKey": 4336747
-    }
+    },
+    "checklistbank": "7f8c4cbb-d4b4-4354-a8b6-a567e4d1fa12"
   }
 }

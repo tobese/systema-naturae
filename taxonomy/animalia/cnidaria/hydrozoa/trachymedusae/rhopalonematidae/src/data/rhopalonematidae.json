@@ -1118,6 +1118,19 @@
           },
           "uuid": "266b269b-5b0d-51a-91d-ce98bf67ee15a9",
           "authorityIds": "gbif:2269523,itis:51073,wikidata:Q3995180"
+        },
+        {
+          "id": "SP_COLOBONEMA_SERICEUM_VANH_FFEN",
+          "name": "Colobonema sericeum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colobonema",
+          "authorship": "Vanhöffen",
+          "sourceIds": {
+            "checklistbank": "db51e6f5-c745-4cec-83c0-7397c595a600"
+          },
+          "children": []
         }
       ]
     },
@@ -1211,6 +1224,19 @@
           },
           "uuid": "9d28810c-3c56-529-975-c3937a3faa1460",
           "authorityIds": "col:75M5F,gbif:2269529,itis:51115"
+        },
+        {
+          "id": "SP_PANTACHOGON_HAECKELII_MAAS",
+          "name": "Pantachogon haeckelii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pantachogon",
+          "authorship": "Maas",
+          "sourceIds": {
+            "checklistbank": "b59b8e28-e0b6-41f7-a485-0540387c6362"
+          },
+          "children": []
         }
       ]
     },
@@ -1622,7 +1648,8 @@
           "sourceIds": {
             "itis": [
               "51090"
-            ]
+            ],
+            "checklistbank": "e28ca28d-93e8-462c-abf9-0aab6e52f7d2"
           },
           "authorityIds": "itis:51090"
         }
@@ -1881,10 +1908,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhopalonematidae"
+    },
+    {
+      "id": "GENUS_PEGASIA",
+      "name": "Pegasia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PEGASIA_CYLINDRELLA_P_RON_LESUEUR",
+          "name": "Pegasia cylindrella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pegasia",
+          "authorship": "Péron & Lesueur",
+          "sourceIds": {
+            "checklistbank": "a55c01ce-c8d3-434a-bfa7-24d99e731f81"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhopalonematidae"
     }
   ],
-  "genusCount": 28,
-  "speciesCount": 77,
+  "genusCount": 29,
+  "speciesCount": 80,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1892,6 +1941,7 @@
       "classKey": 205,
       "orderKey": 709,
       "familyKey": 3375
-    }
+    },
+    "checklistbank": "5cc94cae-6b07-41c8-80ed-a66fd303ff64"
   }
 }

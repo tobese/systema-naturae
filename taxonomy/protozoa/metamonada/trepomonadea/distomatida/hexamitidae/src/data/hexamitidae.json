@@ -129,7 +129,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Spironucleus",
           "children": [],
-          "uuid": "c65a4136-4876-540-ac8-b8e6bafdf9e390"
+          "uuid": "c65a4136-4876-540-ac8-b8e6bafdf9e390",
+          "authorship": "Lavier",
+          "sourceIds": {
+            "checklistbank": "f5156eca-7f57-40f8-92d0-fd038561fe5b"
+          }
         },
         {
           "id": "SP_SPIRONUCLEUS_SALMONIS",
@@ -140,6 +144,32 @@
           "lineage": "Spironucleus",
           "children": [],
           "uuid": "e81feb12-7e09-5e3-8ab-d0157c4f385ba7"
+        },
+        {
+          "id": "SP_SPIRONUCLEUS_MELEAGRIDIS_MCNEIL_HINSHAW_KOFOID",
+          "name": "Spironucleus meleagridis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spironucleus",
+          "authorship": "McNeil, Hinshaw & Kofoid",
+          "sourceIds": {
+            "checklistbank": "87b3af1c-b398-42d9-9b48-b24e6eee95a7"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPIRONUCLEUS_MURIS_GRASSI",
+          "name": "Spironucleus muris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spironucleus",
+          "authorship": "Grassi",
+          "sourceIds": {
+            "checklistbank": "6bbdee5f-87a5-4025-87d1-d80d4e4055ae"
+          },
+          "children": []
         }
       ]
     },
@@ -413,6 +443,19 @@
             "checklistbank": "1078606"
           },
           "children": []
+        },
+        {
+          "id": "SP_HEXAMITA_TERMITIS_GRASSI",
+          "name": "Hexamita termitis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hexamita",
+          "authorship": "Grassi",
+          "sourceIds": {
+            "checklistbank": "cb99da0f-ce61-47ca-a0e4-b034a1a84ebf"
+          },
+          "children": []
         }
       ]
     },
@@ -435,10 +478,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8991904
+            "gbif": 8991904,
+            "checklistbank": "015bd50b-7975-4bed-b8f0-fa34dd7338c6"
           },
           "uuid": "588a17ca-5c82-55e-b33-9b2389452e2bd7",
-          "authorityIds": "gbif:8991904"
+          "authorityIds": "gbif:8991904",
+          "authorship": "Künstler"
         },
         {
           "id": "GIARDIA_DUODENALIS",
@@ -454,10 +499,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8562913
+            "gbif": 8562913,
+            "checklistbank": "c83bfa42-f844-453b-95d2-677e6d27bfca"
           },
           "uuid": "da8f80cd-2a94-5df-9a4-90095eb97611f3",
-          "authorityIds": "gbif:8562913"
+          "authorityIds": "gbif:8562913",
+          "authorship": "Davaine"
         },
         {
           "id": "SP_GIARDIA_LAMBLIA_KOFOID_AND_CHRISTIANSEN_1915",
@@ -475,6 +522,45 @@
             ]
           },
           "authorityIds": "itis:553109"
+        },
+        {
+          "id": "SP_GIARDIA_MICROTI_KOFOID_CHRISTIANSEN",
+          "name": "Giardia microti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Giardia",
+          "authorship": "Kofoid & Christiansen",
+          "sourceIds": {
+            "checklistbank": "fd64f190-000e-4b41-8b43-737d6c999678"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GIARDIA_MURIS_GRASSI",
+          "name": "Giardia muris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Giardia",
+          "authorship": "Grassi",
+          "sourceIds": {
+            "checklistbank": "ee6bbc5a-5f8f-49d5-91e3-10217a1890a7"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GIARDIA_PSITTACI_ERLANDSEN_BEMRICK",
+          "name": "Giardia psittaci",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Giardia",
+          "authorship": "Erlandsen & Bemrick",
+          "sourceIds": {
+            "checklistbank": "f995392a-a862-4aec-8e47-b409f3adf775"
+          },
+          "children": []
         }
       ]
     },
@@ -563,7 +649,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 30,
+  "speciesCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,
@@ -571,6 +657,7 @@
       "classKey": 7636249,
       "orderKey": 7375606,
       "familyKey": 5858
-    }
+    },
+    "checklistbank": "01b72e37-9b02-4794-8a30-8abd3901f81d"
   }
 }

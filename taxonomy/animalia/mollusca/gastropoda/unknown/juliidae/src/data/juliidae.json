@@ -80,7 +80,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "f10a3da3-e8cf-51a-80f-4d2bd6c71d5c0d"
+          "uuid": "f10a3da3-e8cf-51a-80f-4d2bd6c71d5c0d",
+          "authorship": "Hedley",
+          "sourceIds": {
+            "checklistbank": "df60a846-5057-4282-9bee-07609e2f9d3e"
+          }
         },
         {
           "id": "SP_BERTHELINIA_DARWINI_K_R_JENSEN_1997",
@@ -295,6 +299,19 @@
             ]
           },
           "authorityIds": "col:8YLF5"
+        },
+        {
+          "id": "SP_BERTHELINIA_ROTTNESTI_JENSEN",
+          "name": "Berthelinia rottnesti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Berthelinia",
+          "authorship": "Jensen",
+          "sourceIds": {
+            "checklistbank": "b6c44b09-e631-40ca-a1d0-a2b6fc25677f"
+          },
+          "children": []
         }
       ]
     },
@@ -888,7 +905,8 @@
           "sourceIds": {
             "col": [
               "38STK"
-            ]
+            ],
+            "checklistbank": "ca3c023d-d18a-4bad-af2f-6ee9b4f4db4c"
           },
           "authorityIds": "col:38STK"
         },
@@ -1115,16 +1133,74 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "juliidae"
+    },
+    {
+      "id": "GENUS_MIDORIGAI",
+      "name": "Midorigai",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIDORIGAI_AUSTRALIS_BURN",
+          "name": "Midorigai australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Midorigai",
+          "authorship": "Burn",
+          "sourceIds": {
+            "checklistbank": "e7c2d74f-b384-4815-9dfb-313c84cbc9f0"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "juliidae"
+    },
+    {
+      "id": "GENUS_TAMANOVALVA",
+      "name": "Tamanovalva",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TAMANOVALVA_BABAI_BURN",
+          "name": "Tamanovalva babai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tamanovalva",
+          "authorship": "Burn",
+          "sourceIds": {
+            "checklistbank": "7f0c1c6d-5f21-46ef-b9ad-6f1579149679"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAMANOVALVA_LIMAX_KAWAGUTI_BABA",
+          "name": "Tamanovalva limax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tamanovalva",
+          "authorship": "Kawaguti & Baba",
+          "sourceIds": {
+            "checklistbank": "e371dcd4-dfb9-4b2e-8ab0-c2d2e71d8b39"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "juliidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 61,
+  "genusCount": 12,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 6549
-    }
+    },
+    "checklistbank": "5da6cd59-bd2d-475b-8e51-c268e43c9277"
   }
 }

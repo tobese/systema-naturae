@@ -321,11 +321,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10043127
+            "gbif": 10043127,
+            "checklistbank": "d3cc83a7-b2fb-40f0-99f6-a5013f16b2cf"
           },
           "uuid": "c4eac452-933b-5a3-ac8-28fc107c7f8eda",
           "authorityIds": "gbif:10043127",
-          "children": []
+          "children": [],
+          "authorship": "Nanney & McCoy"
         },
         {
           "id": "TETRAHYMENA_BERGERI",
@@ -396,11 +398,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10583450
+            "gbif": 10583450,
+            "checklistbank": "50770abf-7a0a-47c7-b55f-0578687ee647"
           },
           "uuid": "c01ee69c-63f7-5c4-965-5308566bd6090b",
           "authorityIds": "gbif:10583450",
-          "children": []
+          "children": [],
+          "authorship": "Nanney & McCoy"
         },
         {
           "id": "TETRAHYMENA_CAUDATA",
@@ -457,11 +461,13 @@
             ],
             "col": [
               "7C4SV"
-            ]
+            ],
+            "checklistbank": "dfcb1140-d796-4eda-a0bf-ca474ebe303d"
           },
           "uuid": "d026a271-0441-552-bbb-46505cdf79adc3",
           "authorityIds": "col:7C4SV,gbif:7628008",
-          "children": []
+          "children": [],
+          "authorship": "Thompson"
         },
         {
           "id": "TETRAHYMENA_COSMOPOLITANIS",
@@ -917,11 +923,13 @@
             ],
             "col": [
               "55NF8"
-            ]
+            ],
+            "checklistbank": "19321873-e80b-4bc7-a883-c5fabdec695d"
           },
           "uuid": "7d7c1e9f-f51b-56e-8b7-1e85f4aa32a546",
           "authorityIds": "col:55NF8,gbif:7866224,itis:46391",
-          "children": []
+          "children": [],
+          "authorship": "Kahl"
         },
         {
           "id": "TETRAHYMENA_ROTUNDA",
@@ -1320,10 +1328,54 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BLEPHAROSTOMA",
+      "name": "Blepharostoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BLEPHAROSTOMA_GLAUCOMA_SCHEWIAKOFF",
+          "name": "Blepharostoma glaucoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blepharostoma",
+          "authorship": "Schewiakoff",
+          "sourceIds": {
+            "checklistbank": "1514f411-11d4-48a4-bc8b-943019ab5d1e"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetrahymenidae"
+    },
+    {
+      "id": "GENUS_DELTOPYLUM",
+      "name": "Deltopylum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DELTOPYLUM_RHABDOIDES_FAURE_FREMIET_MUGARD",
+          "name": "Deltopylum rhabdoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deltopylum",
+          "authorship": "Faure-Fremiet & Mugard",
+          "sourceIds": {
+            "checklistbank": "9e3d15d4-ab29-42f8-b664-c78685c92310"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetrahymenidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 63,
+  "genusCount": 7,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1331,6 +1383,7 @@
       "classKey": 8006472,
       "orderKey": 7984607,
       "familyKey": 7602988
-    }
+    },
+    "checklistbank": "68fac967-93be-4ebc-a2c2-12af6e0baf3c"
   }
 }

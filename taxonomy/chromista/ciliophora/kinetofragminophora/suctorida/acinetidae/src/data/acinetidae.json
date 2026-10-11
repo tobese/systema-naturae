@@ -1419,10 +1419,12 @@
             ],
             "col": [
               "9B2N"
-            ]
+            ],
+            "checklistbank": "f6a972e5-6958-4895-8c6f-64aef5f6497d"
           },
           "uuid": "60c7d0c7-2b7e-52f-988-5c6f647ffc7271",
-          "authorityIds": "col:9B2N,gbif:7942393"
+          "authorityIds": "col:9B2N,gbif:7942393",
+          "authorship": "Stokes"
         },
         {
           "id": "ACINETA_FOECUNDA",
@@ -2941,6 +2943,19 @@
             "checklistbank": "1029216"
           },
           "children": []
+        },
+        {
+          "id": "SP_ACINETA_LEMNARUM_STEIN",
+          "name": "Acineta lemnarum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acineta",
+          "authorship": "Stein",
+          "sourceIds": {
+            "checklistbank": "aa0de55e-7c85-43f0-86a3-97c9e02d5842"
+          },
+          "children": []
         }
       ]
     },
@@ -3668,6 +3683,19 @@
             "checklistbank": "972881"
           },
           "children": []
+        },
+        {
+          "id": "SP_TREMATOSOMA_BOCQUETI_GUILCHER",
+          "name": "Trematosoma bocqueti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trematosoma",
+          "authorship": "Guilcher",
+          "sourceIds": {
+            "checklistbank": "1ad2ccff-a5b8-4297-b377-0d54056cea5c"
+          },
+          "children": []
         }
       ]
     },
@@ -3760,10 +3788,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acinetidae"
+    },
+    {
+      "id": "GENUS_LORICOPHRYA",
+      "name": "Loricophrya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LORICOPHRYA_EDMONDSONI_KING",
+          "name": "Loricophrya edmondsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loricophrya",
+          "authorship": "King",
+          "sourceIds": {
+            "checklistbank": "e6932c1f-e0c5-4450-af2c-257daed38219"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acinetidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 171,
+  "genusCount": 14,
+  "speciesCount": 174,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -3771,6 +3821,7 @@
       "classKey": 7908305,
       "orderKey": 7592404,
       "familyKey": 8115349
-    }
+    },
+    "checklistbank": "eefebcfd-5045-463d-a8dd-f484ba03fdc7"
   }
 }

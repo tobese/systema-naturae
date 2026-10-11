@@ -655,9 +655,11 @@
           "sourceIds": {
             "col": [
               "59KKR"
-            ]
+            ],
+            "checklistbank": "4216a284-a422-4eaa-8149-8ca805c045c5"
           },
-          "authorityIds": "col:59KKR"
+          "authorityIds": "col:59KKR",
+          "authorship": "Adams"
         },
         {
           "id": "SP_TUDIVASUM_ASHMORENSE_H_MORRISON_2020",
@@ -711,9 +713,11 @@
           "sourceIds": {
             "col": [
               "59KKS"
-            ]
+            ],
+            "checklistbank": "c29816e1-6513-4538-bea3-5fca23ccf9ee"
           },
-          "authorityIds": "col:59KKS"
+          "authorityIds": "col:59KKS",
+          "authorship": "Angas"
         },
         {
           "id": "SP_TUDIVASUM_KURTZI",
@@ -729,9 +733,11 @@
           "sourceIds": {
             "col": [
               "59KKT"
-            ]
+            ],
+            "checklistbank": "7b1b0355-efd1-4dd6-a9e5-2e6cfd47654c"
           },
-          "authorityIds": "col:59KKT"
+          "authorityIds": "col:59KKT",
+          "authorship": "Macpherson"
         },
         {
           "id": "SP_TUDIVASUM_RASILISTOMA",
@@ -743,7 +749,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "01467797-ec0a-5b5-9b6-b2a7e57fcff47c"
+          "uuid": "01467797-ec0a-5b5-9b6-b2a7e57fcff47c",
+          "authorship": "Abbott",
+          "sourceIds": {
+            "checklistbank": "33babd76-0f72-4147-a004-20805c4f181a"
+          }
         },
         {
           "id": "SP_TUDIVASUM_SPINOSUM",
@@ -759,9 +769,11 @@
           "sourceIds": {
             "col": [
               "59KKV"
-            ]
+            ],
+            "checklistbank": "379be54c-f912-4050-85dd-0094130d8dcf"
           },
-          "authorityIds": "col:59KKV"
+          "authorityIds": "col:59KKV",
+          "authorship": "H. & A. Adams"
         },
         {
           "id": "SP_TUDIVASUM_WESTRALE_H_MORRISON_2020",
@@ -794,6 +806,45 @@
           "sourcedFrom": "wikipedia",
           "children": [],
           "uuid": "9f99dc54-1354-54d-90d-9d23a3be136f78"
+        },
+        {
+          "id": "SP_TUDIVASUM_WESTRALE_MORRISON",
+          "name": "Tudivasum westrale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tudivasum",
+          "authorship": "Morrison",
+          "sourceIds": {
+            "checklistbank": "05a05961-a9ba-4c1a-a440-74b6fc14eb5d"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TUDIVASUM_ASHMORENSE_MORRISON",
+          "name": "Tudivasum ashmorense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tudivasum",
+          "authorship": "Morrison",
+          "sourceIds": {
+            "checklistbank": "3acd7a76-1e1c-4574-8bfb-9bf03680fea6"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TUDIVASUM_CHANEYI_MORRISON",
+          "name": "Tudivasum chaneyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tudivasum",
+          "authorship": "Morrison",
+          "sourceIds": {
+            "checklistbank": "79282e65-c0f2-423e-aa0c-764ba72253be"
+          },
+          "children": []
         }
       ]
     },
@@ -2279,6 +2330,45 @@
             ]
           },
           "authorityIds": "col:5TY68"
+        },
+        {
+          "id": "SP_ALTIVASUM_PROFUNDUM_DEKKERS_MAXWELL",
+          "name": "Altivasum profundum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Altivasum",
+          "authorship": "Dekkers & Maxwell",
+          "sourceIds": {
+            "checklistbank": "608bad4e-df3b-4edf-ab4a-90fa6b548708"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALTIVASUM_FLINDERSI_VERCO",
+          "name": "Altivasum flindersi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Altivasum",
+          "authorship": "Verco",
+          "sourceIds": {
+            "checklistbank": "f7726f6e-1055-4af4-97b6-a905da73c225"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALTIVASUM_TYPICUM_HEDLEY",
+          "name": "Altivasum typicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Altivasum",
+          "authorship": "Hedley",
+          "sourceIds": {
+            "checklistbank": "8ef847e3-3462-424a-9828-b49280f1c104"
+          },
+          "children": []
         }
       ]
     },
@@ -2857,10 +2947,167 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "turbinellidae"
+    },
+    {
+      "id": "GENUS_COLUMBARIUM",
+      "name": "Columbarium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLUMBARIUM_HARRISAE_HARASEWYCH",
+          "name": "Columbarium harrisae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Columbarium",
+          "authorship": "Harasewych",
+          "sourceIds": {
+            "checklistbank": "53505f30-b36d-4cff-a613-f5ce50388742"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUMBARIUM_HEDLEYI_IREDALE",
+          "name": "Columbarium hedleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Columbarium",
+          "authorship": "Iredale",
+          "sourceIds": {
+            "checklistbank": "8a699404-ddc1-48f4-8d92-7169c8bcdb46"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUMBARIUM_HYSTRICULUM_DARRAGH",
+          "name": "Columbarium hystriculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Columbarium",
+          "authorship": "Darragh",
+          "sourceIds": {
+            "checklistbank": "564a1ea5-0c44-466f-94a3-5371db68026a"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUMBARIUM_PAGODOIDES_WATSON",
+          "name": "Columbarium pagodoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Columbarium",
+          "authorship": "Watson",
+          "sourceIds": {
+            "checklistbank": "0c086c85-1cfa-44ce-9bb4-0f629b6818ce"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUMBARIUM_SPINICINCTUM_VON_MARTENS",
+          "name": "Columbarium spinicinctum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Columbarium",
+          "authorship": "von Martens",
+          "sourceIds": {
+            "checklistbank": "9d754179-452a-473c-b1a6-8cf8f616a731"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "turbinellidae"
+    },
+    {
+      "id": "GENUS_COLUZEA",
+      "name": "Coluzea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLUZEA_AAPTA_HARASEWYCH",
+          "name": "Coluzea aapta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluzea",
+          "authorship": "Harasewych",
+          "sourceIds": {
+            "checklistbank": "347180c1-35f6-4fd0-b59b-a12d7b77a0a2"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUZEA_BIMURATA_DARRAGH",
+          "name": "Coluzea bimurata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluzea",
+          "authorship": "Darragh",
+          "sourceIds": {
+            "checklistbank": "40d7a54d-79f9-4faa-bf28-f3cc2b7c2133"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUZEA_DISTEPHANOTIS_MELVILL",
+          "name": "Coluzea distephanotis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluzea",
+          "authorship": "Melvill",
+          "sourceIds": {
+            "checklistbank": "f66adc1b-c063-4c12-b39d-2dd0e249f8a3"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUZEA_ICARUS_HARASEWYCH",
+          "name": "Coluzea icarus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluzea",
+          "authorship": "Harasewych",
+          "sourceIds": {
+            "checklistbank": "ce1ea24d-6338-44d0-a405-dd4d9c3722fc"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "turbinellidae"
+    },
+    {
+      "id": "GENUS_EXILIA",
+      "name": "Exilia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EXILIA_HILGENDORFI_MARTENS",
+          "name": "Exilia hilgendorfi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Exilia",
+          "authorship": "Martens",
+          "sourceIds": {
+            "checklistbank": "b4c5468d-267b-4b6f-b06e-87c77b5a573f"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "turbinellidae"
     }
   ],
-  "genusCount": 27,
-  "speciesCount": 167,
+  "genusCount": 30,
+  "speciesCount": 183,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2868,6 +3115,7 @@
       "classKey": 225,
       "orderKey": 982,
       "familyKey": 6769
-    }
+    },
+    "checklistbank": "1366a0fe-55e6-4e3e-928c-12ea921e87aa"
   }
 }

@@ -59,7 +59,8 @@
             ],
             "itis": [
               "203219"
-            ]
+            ],
+            "checklistbank": "1a33b0f3-8a92-4217-aa94-72686572ce95"
           },
           "authorityIds": "col:QK5X,itis:203219"
         },
@@ -127,6 +128,19 @@
             ]
           },
           "authorityIds": "col:BXQR8"
+        },
+        {
+          "id": "SP_CANCELLOTHYRIS_RADULA_HEDLEY",
+          "name": "Cancellothyris radula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cancellothyris",
+          "authorship": "Hedley",
+          "sourceIds": {
+            "checklistbank": "bcc04617-8fe9-4817-aff0-0613d05f3d82"
+          },
+          "children": []
         }
       ]
     },
@@ -1701,6 +1715,32 @@
             "checklistbank": "548698"
           },
           "children": []
+        },
+        {
+          "id": "SP_TEREBRATULINA_CAVATA_VERCO",
+          "name": "Terebratulina cavata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratulina",
+          "authorship": "Verco",
+          "sourceIds": {
+            "checklistbank": "74ceeac8-92e5-4da5-aebb-4e6ff4eb579c"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEREBRATULINA_REEVEI_DALL",
+          "name": "Terebratulina reevei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratulina",
+          "authorship": "Dall",
+          "sourceIds": {
+            "checklistbank": "b0f69f83-1c18-4b10-a82a-e81e66d7730c"
+          },
+          "children": []
         }
       ]
     },
@@ -1759,9 +1799,11 @@
           "sourceIds": {
             "col": [
               "44N5M"
-            ]
+            ],
+            "checklistbank": "e11f4ec0-8eb4-41c4-9007-0c7f872161ef"
           },
-          "authorityIds": "col:44N5M"
+          "authorityIds": "col:44N5M",
+          "authorship": "Verco"
         },
         {
           "id": "SP_MURRAVIA_FOSTERI_BITNER_1996",
@@ -2166,10 +2208,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cancellothyrididae"
+    },
+    {
+      "id": "GENUS_EUCALATHIS",
+      "name": "Eucalathis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUCALATHIS_MAGNA_COOPER",
+          "name": "Eucalathis magna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucalathis",
+          "authorship": "Cooper",
+          "sourceIds": {
+            "checklistbank": "36153d57-f76a-4fb3-908d-ba65ed89f3a5"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EUCALATHIS_MURRAYI_DAVIDSON",
+          "name": "Eucalathis murrayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucalathis",
+          "authorship": "Davidson",
+          "sourceIds": {
+            "checklistbank": "465be625-f18b-40cf-a459-5536bb4d835f"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cancellothyrididae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 126,
+  "genusCount": 14,
+  "speciesCount": 131,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2177,6 +2254,7 @@
       "classKey": 210,
       "orderKey": 509,
       "familyKey": 3061
-    }
+    },
+    "checklistbank": "daa2d16d-2728-484e-9840-71bca308c110"
   }
 }

@@ -606,7 +606,8 @@
           "lineage": "edwardzetes",
           "authorship": "Wallwork, 1966",
           "sourceIds": {
-            "gbif": 2198711
+            "gbif": 2198711,
+            "checklistbank": "618ab3af-eaa0-4af1-ae4e-94f9a27fb2c8"
           },
           "uuid": "ed7c5949-6b1a-5fc-93e-16025054bf10f9",
           "authorityIds": "gbif:2198711",
@@ -1487,7 +1488,10 @@
           "lineage": "trichoribates",
           "authorship": "(Balogh & Mahunka, 1996)",
           "uuid": "d2ac91cf-8f4a-594-8c0-76169468b79de6",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "eaeba411-b06e-4903-aa30-2219cbec0885"
+          }
         },
         {
           "id": "SP_TRICHORIBATES_PERSIMILIS_BANKS_1906",
@@ -7448,13 +7452,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ceratozetidae"
+    },
+    {
+      "id": "GENUS_SAGITTAZETES",
+      "name": "Sagittazetes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAGITTAZETES_AGRESSOR_BALOGH_BALOGH",
+          "name": "Sagittazetes agressor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sagittazetes",
+          "authorship": "Balogh & Balogh",
+          "sourceIds": {
+            "checklistbank": "e35332bf-3f74-4f5b-aeb8-37c80eafebe8"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ceratozetidae"
     }
   ],
-  "speciesCount": 430,
+  "speciesCount": 431,
   "appSlug": "ceratozetidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 50,
+  "genusCount": 51,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -7462,6 +7488,7 @@
       "classKey": 367,
       "orderKey": 542,
       "familyKey": 7412
-    }
+    },
+    "checklistbank": "2256c32f-07b2-4493-af96-1206a7ec16e6"
   }
 }

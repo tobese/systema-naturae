@@ -796,7 +796,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:7031486",
           "uuid": "3b71d475-e579-591-a19-2cfa8b685d7ef1",
-          "children": []
+          "children": [],
+          "authorship": "Mawson",
+          "sourceIds": {
+            "checklistbank": "1254aaa9-38ba-45cf-9465-80a8eb23cbab"
+          }
         },
         {
           "id": "SP_LABIOBULURA_LENGGURUENSIS_PURWANINSIH_SMALES_2018",
@@ -838,7 +842,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:10154471",
           "uuid": "ed7b7312-85d0-50f-968-660e1820498b00",
-          "children": []
+          "children": [],
+          "authorship": "Johnston & Mawson",
+          "sourceIds": {
+            "checklistbank": "04744d8b-0e0e-4185-a207-5d83f452eb40"
+          }
         },
         {
           "id": "SP_LABIOBULURA_PERAMELIS",
@@ -851,7 +859,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:10399027",
           "uuid": "e9b2c787-5ab4-598-aa0-03054024541fea",
-          "children": []
+          "children": [],
+          "authorship": "Baylis",
+          "sourceIds": {
+            "checklistbank": "bc52f0d7-71e6-4513-bcde-a4da705a7ba9"
+          }
         },
         {
           "id": "SP_LABIOBULURA_PERDITUS",
@@ -864,7 +876,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:8658678",
           "uuid": "831778e1-e5de-5aa-a8e-db8f96e127e1b2",
-          "children": []
+          "children": [],
+          "authorship": "Smales",
+          "sourceIds": {
+            "checklistbank": "280860a8-c5ab-401c-9343-9fcbef1cbd7a"
+          }
         },
         {
           "id": "SP_LABIOBULURA_QUENTINI",
@@ -877,6 +893,23 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:8576604",
           "uuid": "c284940b-1de8-57e-bf2-c9ac6047e224fe",
+          "children": [],
+          "authorship": "Smales",
+          "sourceIds": {
+            "checklistbank": "ae807c5e-3047-4701-a228-4029e6458cdb"
+          }
+        },
+        {
+          "id": "SP_LABIOBULURA_BAYLISI_MAWSON",
+          "name": "Labiobulura baylisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Labiobulura",
+          "authorship": "Mawson",
+          "sourceIds": {
+            "checklistbank": "5cc9edf4-b04e-47a7-b29a-dc697adcda73"
+          },
           "children": []
         }
       ]
@@ -898,6 +931,45 @@
           "description": "",
           "sourcedFrom": "none",
           "uuid": "3a6d69c3-5a51-5c5-8e4-1686e6c036c2e0",
+          "children": []
+        },
+        {
+          "id": "SP_ALLODAPA_DIFFERENS_SONSINO",
+          "name": "Allodapa differens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allodapa",
+          "authorship": "Sonsino",
+          "sourceIds": {
+            "checklistbank": "32232515-f30c-4873-a56b-44277e1e6cce"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALLODAPA_SUCTORIA_MOLIN",
+          "name": "Allodapa suctoria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allodapa",
+          "authorship": "Molin",
+          "sourceIds": {
+            "checklistbank": "8aac158f-8e71-4415-b27b-24eb5e83b49d"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALLODAPA_SP_MAWSON_ANGEL_EDMONDS",
+          "name": "Allodapa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allodapa",
+          "authorship": "Mawson, Angel & Edmonds",
+          "sourceIds": {
+            "checklistbank": "9162f5a6-7ca1-4ac8-b8fc-d1e582f231d9"
+          },
           "children": []
         }
       ]
@@ -1006,10 +1078,54 @@
           "uuid": "608defd6-1b33-598-b64-07b03bc5d18484"
         }
       ]
+    },
+    {
+      "id": "GENUS_ECHIDNONEMA",
+      "name": "Echidnonema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ECHIDNONEMA_CORONORUM_SMALES_ELLIOT_CHISHOLM",
+          "name": "Echidnonema coronorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echidnonema",
+          "authorship": "Smales, Elliot & Chisholm",
+          "sourceIds": {
+            "checklistbank": "5b85fffd-41e4-4b2c-a66f-b222226e856d"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "subuluridae"
+    },
+    {
+      "id": "GENUS_LEIPOANEMA",
+      "name": "Leipoanema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEIPOANEMA_ELLISI_JOHNSTON_MAWSON",
+          "name": "Leipoanema ellisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leipoanema",
+          "authorship": "Johnston & Mawson",
+          "sourceIds": {
+            "checklistbank": "91faa7a2-abf3-4d7f-b4f0-85fb8da21b72"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "subuluridae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 62,
+  "genusCount": 10,
+  "speciesCount": 68,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1017,6 +1133,7 @@
       "classKey": 11133537,
       "orderKey": 440,
       "familyKey": 3249051
-    }
+    },
+    "checklistbank": "59d9f0cf-8717-40eb-8057-0c57342f41c2"
   }
 }

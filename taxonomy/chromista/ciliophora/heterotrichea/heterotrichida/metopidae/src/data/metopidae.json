@@ -832,10 +832,12 @@
             ],
             "col": [
               "42HRW"
-            ]
+            ],
+            "checklistbank": "dbe4c1ea-471b-48f3-9fc4-8d5566270171"
           },
           "uuid": "42201d9b-913a-5f3-b6f-b0d5a3b6f68025",
-          "authorityIds": "col:42HRW,gbif:8016226"
+          "authorityIds": "col:42HRW,gbif:8016226",
+          "authorship": "Sindheim"
         },
         {
           "id": "METOPUS_HISTOPHAGUS",
@@ -1116,10 +1118,12 @@
             ],
             "col": [
               "42HSD"
-            ]
+            ],
+            "checklistbank": "42f95365-9c85-4327-838c-6d7534ce46e1"
           },
           "uuid": "5111d77f-e420-54c-af1-e0e5600723a1a7",
-          "authorityIds": "col:42HSD,gbif:7622613"
+          "authorityIds": "col:42HSD,gbif:7622613",
+          "authorship": "Kahl"
         },
         {
           "id": "METOPUS_MIRABILIS",
@@ -1689,10 +1693,12 @@
             ],
             "itis": [
               "46587"
-            ]
+            ],
+            "checklistbank": "2ca58407-e243-4888-9cf5-f97418f08898"
           },
           "uuid": "aa251110-9cc4-5cf-ac8-61f5968905fab3",
-          "authorityIds": "col:42HT8,gbif:8393914,itis:46587"
+          "authorityIds": "col:42HT8,gbif:8393914,itis:46587",
+          "authorship": "McMurrich"
         },
         {
           "id": "METOPUS_TENUIS",
@@ -2339,10 +2345,12 @@
             ],
             "col": [
               "692JW"
-            ]
+            ],
+            "checklistbank": "c1900b27-10ca-470c-81ac-672d316934a8"
           },
           "uuid": "8ea14c69-6faf-50c-814-a891f5c3caaa87",
-          "authorityIds": "col:692JW,gbif:7352020"
+          "authorityIds": "col:692JW,gbif:7352020",
+          "authorship": "Kahl"
         },
         {
           "id": "BOTHROSTOMA_NASUTA",
@@ -2507,10 +2515,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "metopidae"
+    },
+    {
+      "id": "GENUS_PALMARELLA",
+      "name": "Palmarella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALMARELLA_SALINA_GAJEWSKAJA",
+          "name": "Palmarella salina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palmarella",
+          "authorship": "Gajewskaja",
+          "sourceIds": {
+            "checklistbank": "d12fa272-f27a-4dbf-842d-54b117075d67"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "metopidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 113,
+  "genusCount": 8,
+  "speciesCount": 114,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2518,6 +2548,7 @@
       "classKey": 8235041,
       "orderKey": 8169551,
       "familyKey": 7864492
-    }
+    },
+    "checklistbank": "60b5b1c7-f67e-4351-9d22-f9735cda3b0a"
   }
 }

@@ -1227,7 +1227,8 @@
             ],
             "itis": [
               "1013414"
-            ]
+            ],
+            "checklistbank": "56c682c9-8058-4468-a4ea-2edc0e90aa2a"
           },
           "uuid": "d0c9e994-1a19-59f-849-74b2fa9729be22",
           "authorityIds": "col:7RDNM,gbif:4662039,itis:1013414"
@@ -1430,13 +1431,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "samoidae"
+    },
+    {
+      "id": "GENUS_BINDOONA",
+      "name": "Bindoona",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BINDOONA_GLAUERTI_ROEWER",
+          "name": "Bindoona glauerti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bindoona",
+          "authorship": "Roewer",
+          "sourceIds": {
+            "checklistbank": "f79a6ce8-269f-4d42-ba84-26fcdf7c28f4"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "samoidae"
     }
   ],
-  "speciesCount": 55,
+  "speciesCount": 56,
   "appSlug": "samoidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 24,
+  "genusCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1444,6 +1467,7 @@
       "classKey": 367,
       "orderKey": 907,
       "familyKey": 4662037
-    }
+    },
+    "checklistbank": "9a95ac8d-471d-4469-9c67-0d424ba4d7b5"
   }
 }
