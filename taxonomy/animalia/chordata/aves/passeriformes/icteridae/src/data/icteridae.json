@@ -1244,9 +1244,11 @@
           "sourceIds": {
             "wikidata": [
               "Q3356380"
-            ]
+            ],
+            "checklistbank": "22731807"
           },
-          "authorityIds": "wikidata:Q3356380"
+          "authorityIds": "wikidata:Q3356380",
+          "authorship": "Chapman, 1911"
         },
         {
           "id": "ICTERUS_AURATUS",
@@ -1531,7 +1533,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Icterus",
-          "uuid": "b03cdbd1-d250-524-b49-77a1f98b8f2798"
+          "uuid": "b03cdbd1-d250-524-b49-77a1f98b8f2798",
+          "authorship": "(Swainson, 1827)",
+          "sourceIds": {
+            "checklistbank": "22729123"
+          }
         }
       ]
     },
@@ -2265,6 +2271,32 @@
           },
           "authorityIds": "col:P5SK,itis:558971",
           "commonName": "Subtropical Cacique"
+        },
+        {
+          "id": "SP_CACICUS_PACIFICUS_CHAPMAN_1915",
+          "name": "Cacicus pacificus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cacicus",
+          "authorship": "Chapman, 1915",
+          "sourceIds": {
+            "checklistbank": "103792633"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CACICUS_FLAVICRISSUS_P_L_SCLATER_1860",
+          "name": "Cacicus flavicrissus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cacicus",
+          "authorship": "(P.L. Sclater, 1860)",
+          "sourceIds": {
+            "checklistbank": "103792695"
+          },
+          "children": []
         }
       ]
     },
@@ -2540,6 +2572,19 @@
           },
           "authorityIds": "col:6WC6F,itis:726202,wikidata:Q1302663",
           "authorship": "(Richmond, 1898)"
+        },
+        {
+          "id": "SP_PSAROCOLIUS_OLEAGINEUS_P_L_SCLATER_1883",
+          "name": "Psarocolius oleagineus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psarocolius",
+          "authorship": "P.L. Sclater, 1883",
+          "sourceIds": {
+            "checklistbank": "103780778"
+          },
+          "children": []
         }
       ]
     },
@@ -3745,10 +3790,32 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Icteridae"
+    },
+    {
+      "id": "GENUS_ICTERIA",
+      "name": "Icteria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ICTERIA_VIRENS_LINNAEUS_1758",
+          "name": "Icteria virens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Icteria",
+          "authorship": "(Linnaeus, 1758)",
+          "sourceIds": {
+            "checklistbank": "22722057"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "icteridae"
     }
   ],
-  "genusCount": 38,
-  "speciesCount": 132,
+  "genusCount": 39,
+  "speciesCount": 136,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
