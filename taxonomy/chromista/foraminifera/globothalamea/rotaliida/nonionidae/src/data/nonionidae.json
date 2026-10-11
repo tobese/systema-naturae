@@ -297,7 +297,8 @@
             ],
             "col": [
               "47PJZ"
-            ]
+            ],
+            "checklistbank": "462027"
           },
           "uuid": "9bb86322-9482-5c3-b9f-76eb45efb0e258",
           "authorityIds": "col:47PJZ,gbif:8224514"
@@ -402,7 +403,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8336744
+            "gbif": 8336744,
+            "checklistbank": "462036"
           },
           "uuid": "60e85376-c3e9-524-95f-f8392d02e1d330",
           "authorityIds": "gbif:8336744"
@@ -3009,6 +3011,18 @@
           "authorship": "(Williamson, 1858)",
           "sourceIds": {
             "checklistbank": "33605"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NONIONELLA_LABRADORICA",
+          "name": "Nonionella labradorica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nonionella",
+          "sourceIds": {
+            "checklistbank": "335577"
           },
           "children": []
         }
@@ -10536,10 +10550,85 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nonionidae"
+    },
+    {
+      "id": "GENUS_DENTALINA",
+      "name": "Dentalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DENTALINA_APHELIS",
+          "name": "Dentalina aphelis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dentalina",
+          "sourceIds": {
+            "checklistbank": "335497"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nonionidae"
+    },
+    {
+      "id": "GENUS_OSANGULARIELLA",
+      "name": "Osangulariella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSANGULARIELLA_UMBONIFERA",
+          "name": "Osangulariella umbonifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Osangulariella",
+          "sourceIds": {
+            "checklistbank": "335586"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nonionidae"
+    },
+    {
+      "id": "GENUS_CRIBROSTOMOIDES",
+      "name": "Cribrostomoides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRIBROSTOMOIDES_CRASSIMARGO",
+          "name": "Cribrostomoides crassimargo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cribrostomoides",
+          "sourceIds": {
+            "checklistbank": "460822"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRIBROSTOMOIDES_JEFFREYSII",
+          "name": "Cribrostomoides jeffreysii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cribrostomoides",
+          "sourceIds": {
+            "checklistbank": "460831"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nonionidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 488,
+  "genusCount": 25,
+  "speciesCount": 493,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -10547,6 +10636,7 @@
       "classKey": 7434778,
       "orderKey": 7692889,
       "familyKey": 8390398
-    }
+    },
+    "checklistbank": "335487"
   }
 }

@@ -478,7 +478,8 @@
             ],
             "col": [
               "VNXJ"
-            ]
+            ],
+            "checklistbank": "376662"
           },
           "uuid": "abdb2bc9-8036-59c-ade-9be58548a34462",
           "authorityIds": "col:VNXJ,gbif:2627339,mycobank:166281"
@@ -609,7 +610,8 @@
             ],
             "col": [
               "VNXN"
-            ]
+            ],
+            "checklistbank": "459962"
           },
           "uuid": "0764010e-f936-511-a1d-b75b26900b526e",
           "authorityIds": "col:VNXN,gbif:2627343,mycobank:166002"
@@ -639,6 +641,18 @@
           },
           "uuid": "937d3eea-716e-562-b78-3d8592801773ff",
           "authorityIds": "col:VNXR,gbif:3384637,mycobank:165956"
+        },
+        {
+          "id": "SP_CLADOCHYTRIUM_POLYSTOMUM",
+          "name": "Cladochytrium polystomum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cladochytrium",
+          "sourceIds": {
+            "checklistbank": "376653"
+          },
+          "children": []
         }
       ],
       "authorship": "Nowakowski"
@@ -756,11 +770,32 @@
         }
       ],
       "authorship": "Deckenbach"
+    },
+    {
+      "id": "GENUS_CYLINDROCHYTRIDIUM",
+      "name": "Cylindrochytridium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYLINDROCHYTRIDIUM_JOHNSTONII",
+          "name": "Cylindrochytridium johnstonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cylindrochytridium",
+          "sourceIds": {
+            "checklistbank": "459971"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladochytriaceae"
     }
   ],
   "authorship": "J. Schröter",
-  "genusCount": 6,
-  "speciesCount": 26,
+  "genusCount": 7,
+  "speciesCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -768,6 +803,7 @@
       "classKey": 318,
       "orderKey": 10745599,
       "familyKey": 7570
-    }
+    },
+    "checklistbank": "376534"
   }
 }

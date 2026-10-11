@@ -26,7 +26,8 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3202195
+            "gbif": 3202195,
+            "checklistbank": "53627"
           },
           "uuid": "c9c568e8-748c-52e-ba1-c88e0d18992b4c",
           "authorityIds": "gbif:3202195"
@@ -47,6 +48,18 @@
           },
           "uuid": "c54fee61-ec02-58c-b3c-57bdf76bd915d9",
           "authorityIds": "gbif:6878946"
+        },
+        {
+          "id": "SP_CALCIDISCUS_QUADRIPERFORATUS",
+          "name": "Calcidiscus quadriperforatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calcidiscus",
+          "sourceIds": {
+            "checklistbank": "53635"
+          },
+          "children": []
         }
       ]
     },
@@ -106,7 +119,8 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 4378042
+            "gbif": 4378042,
+            "checklistbank": "53651"
           },
           "uuid": "45d1aa97-deb4-5a8-a88-186526cd9b5231",
           "authorityIds": "gbif:4378042"
@@ -164,7 +178,8 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 4378038
+            "gbif": 4378038,
+            "checklistbank": "53659"
           },
           "uuid": "9f0dfc6e-3415-5ba-8a6-ecf3cfc42c1f64",
           "authorityIds": "gbif:4378038"
@@ -246,7 +261,8 @@
             ],
             "itis": [
               "610063"
-            ]
+            ],
+            "checklistbank": "53643"
           },
           "uuid": "34772135-396f-57d-bc1-09618063b41ab9",
           "authorityIds": "gbif:9607196,itis:610063"
@@ -373,10 +389,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calcidiscaceae"
+    },
+    {
+      "id": "GENUS_UMBILICOSPHAERA_SIBOGAE_VAR",
+      "name": "Umbilicosphaera_sibogae_var",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UMBILICOSPHAERA_SIBOGAE_VAR_FOLIOSA",
+          "name": "Umbilicosphaera_sibogae_var foliosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbilicosphaera_sibogae_var",
+          "sourceIds": {
+            "checklistbank": "53667"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcidiscaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 19,
+  "genusCount": 9,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -384,6 +421,7 @@
       "classKey": 258,
       "orderKey": 8221594,
       "familyKey": 4378066
-    }
+    },
+    "checklistbank": "53625"
   }
 }

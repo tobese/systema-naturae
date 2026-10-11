@@ -23,7 +23,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "10d8278c-0cf4-57e-a9b-f0960b430a34c8"
+          "uuid": "10d8278c-0cf4-57e-a9b-f0960b430a34c8",
+          "children": []
         }
       ]
     },
@@ -43,7 +44,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "044006ae-3346-514-b3d-16aec5151b977c"
+          "uuid": "044006ae-3346-514-b3d-16aec5151b977c",
+          "children": []
         },
         {
           "id": "SP_MANTONIELLA_SQUAMATA",
@@ -57,7 +59,32 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "5d71271c-d448-5ba-ace-ec0c35b1df20e4"
+          "uuid": "5d71271c-d448-5ba-ace-ec0c35b1df20e4",
+          "children": []
+        },
+        {
+          "id": "SP_MANTONIELLA_BAFFINENSIS",
+          "name": "Mantoniella baffinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mantoniella",
+          "sourceIds": {
+            "checklistbank": "352439"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MANTONIELLA_BEAUFORTII",
+          "name": "Mantoniella beaufortii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mantoniella",
+          "sourceIds": {
+            "checklistbank": "352447"
+          },
+          "children": []
         }
       ]
     },
@@ -77,7 +104,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "b4c3486a-0e71-59b-bdb-9d2b97ca89fc90"
+          "uuid": "b4c3486a-0e71-59b-bdb-9d2b97ca89fc90",
+          "children": []
         },
         {
           "id": "SP_MICROMONAS_COMMODA",
@@ -88,7 +116,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "557af5a2-06ee-5b6-b78-b5b88a9e91d5c2"
+          "uuid": "557af5a2-06ee-5b6-b78-b5b88a9e91d5c2",
+          "children": []
         },
         {
           "id": "SP_MICROMONAS_POLARIS",
@@ -99,7 +128,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "7b3931db-7a10-5cd-b59-dcf5b3ed896e6f"
+          "uuid": "7b3931db-7a10-5cd-b59-dcf5b3ed896e6f",
+          "children": []
         },
         {
           "id": "SP_MICROMONAS_PUSILLA",
@@ -120,7 +150,8 @@
               "9520"
             ]
           },
-          "authorityIds": "itis:9520"
+          "authorityIds": "itis:9520",
+          "children": []
         }
       ]
     },
@@ -140,7 +171,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "566cff3b-917e-507-828-40fa5842f1c83e"
+          "uuid": "566cff3b-917e-507-828-40fa5842f1c83e",
+          "children": []
         },
         {
           "id": "SP_MICRINOMONAS_SQUAMATA",
@@ -151,9 +183,154 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "e890fbd5-7fd3-584-806-4b4a1a6c4a1a86"
+          "uuid": "e890fbd5-7fd3-584-806-4b4a1a6c4a1a86",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MANTONIELLA_CLADE",
+      "name": "Mantoniella_clade",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MANTONIELLA_CLADE_A",
+          "name": "Mantoniella_clade A",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mantoniella_clade",
+          "sourceIds": {
+            "checklistbank": "352455"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MANTONIELLA_CLADE_B",
+          "name": "Mantoniella_clade B",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mantoniella_clade",
+          "sourceIds": {
+            "checklistbank": "352463"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mamiellaceae"
+    },
+    {
+      "id": "GENUS_MICROMONAS_BRAVO",
+      "name": "Micromonas_bravo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROMONAS_BRAVO_B1",
+          "name": "Micromonas_bravo B1",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_bravo",
+          "sourceIds": {
+            "checklistbank": "352471"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROMONAS_BRAVO_B2",
+          "name": "Micromonas_bravo B2",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_bravo",
+          "sourceIds": {
+            "checklistbank": "352479"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mamiellaceae"
+    },
+    {
+      "id": "GENUS_MICROMONAS_CLADE",
+      "name": "Micromonas_clade",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROMONAS_CLADE_B4",
+          "name": "Micromonas_clade B4",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_clade",
+          "sourceIds": {
+            "checklistbank": "352487"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROMONAS_CLADE_B3",
+          "name": "Micromonas_clade B3",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_clade",
+          "sourceIds": {
+            "checklistbank": "352495"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROMONAS_CLADE_B5",
+          "name": "Micromonas_clade B5",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_clade",
+          "sourceIds": {
+            "checklistbank": "352503"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mamiellaceae"
+    },
+    {
+      "id": "GENUS_MICROMONAS_COMMODA",
+      "name": "Micromonas_commoda",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROMONAS_COMMODA_A1",
+          "name": "Micromonas_commoda A1",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_commoda",
+          "sourceIds": {
+            "checklistbank": "352511"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROMONAS_COMMODA_A2",
+          "name": "Micromonas_commoda A2",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromonas_commoda",
+          "sourceIds": {
+            "checklistbank": "352519"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mamiellaceae"
     }
   ],
   "sourceIds": {
@@ -163,6 +340,9 @@
       "classKey": 8176772,
       "orderKey": 1376,
       "familyKey": 5428
-    }
-  }
+    },
+    "checklistbank": "19282"
+  },
+  "genusCount": 8,
+  "speciesCount": 20
 }

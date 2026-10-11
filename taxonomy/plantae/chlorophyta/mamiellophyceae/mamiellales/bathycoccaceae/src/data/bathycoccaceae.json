@@ -47,6 +47,18 @@
           "lineage": "Ostreococcus",
           "children": [],
           "uuid": "f4e4146a-b5ba-507-b3d-2f7a9ff850a20c"
+        },
+        {
+          "id": "SP_OSTREOCOCCUS_BENGALENSIS",
+          "name": "Ostreococcus bengalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ostreococcus",
+          "sourceIds": {
+            "checklistbank": "433929"
+          },
+          "children": []
         }
       ]
     },
@@ -71,12 +83,45 @@
           ],
           "children": [],
           "uuid": "0ddd65af-b580-547-b5a-b9722d4dc3bfe9"
+        },
+        {
+          "id": "SP_BATHYCOCCUS_OCEANICUS",
+          "name": "Bathycoccus oceanicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bathycoccus",
+          "sourceIds": {
+            "checklistbank": "359266"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_OSTREOCOCCUS_CLADE",
+      "name": "Ostreococcus_clade",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSTREOCOCCUS_CLADE_B",
+          "name": "Ostreococcus_clade B",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ostreococcus_clade",
+          "sourceIds": {
+            "checklistbank": "352535"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bathycoccaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 4,
+  "genusCount": 3,
+  "speciesCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -84,6 +129,7 @@
       "classKey": 8176772,
       "orderKey": 1376,
       "familyKey": 4908143
-    }
+    },
+    "checklistbank": "19243"
   }
 }

@@ -3193,7 +3193,8 @@
             ],
             "col": [
               "4SCZQ"
-            ]
+            ],
+            "checklistbank": "400153"
           },
           "uuid": "7bc17ad9-a54b-53f-887-57a88d1b47c47a",
           "authorityIds": "col:4SCZQ,gbif:2627459,mycobank:290485"
@@ -3535,7 +3536,8 @@
             ],
             "col": [
               "4SD26"
-            ]
+            ],
+            "checklistbank": "377538"
           },
           "uuid": "e6e9bc94-7b85-518-955-01e6d9997bf163",
           "authorityIds": "col:4SD26,gbif:3384469,mycobank:480758"
@@ -4789,6 +4791,18 @@
             "checklistbank": "f9b8a3f7-8c20-462e-b50d-9c22ea1928d1"
           },
           "children": []
+        },
+        {
+          "id": "SP_RHIZOPHYDIUM_LITTOREUM",
+          "name": "Rhizophydium littoreum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizophydium",
+          "sourceIds": {
+            "checklistbank": "377503"
+          },
+          "children": []
         }
       ],
       "authorship": "Schenk ex L. Rabenhorst"
@@ -4890,11 +4904,65 @@
         }
       ],
       "authorship": "M. Krings & C.J. Harper"
+    },
+    {
+      "id": "GENUS_BATRACHOCHYTRIUM",
+      "name": "Batrachochytrium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BATRACHOCHYTRIUM_DENDROBATIDIS",
+          "name": "Batrachochytrium dendrobatidis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Batrachochytrium",
+          "sourceIds": {
+            "checklistbank": "376479"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BATRACHOCHYTRIUM_SALAMANDRIVORANS",
+          "name": "Batrachochytrium salamandrivorans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Batrachochytrium",
+          "sourceIds": {
+            "checklistbank": "376488"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizophydiaceae"
+    },
+    {
+      "id": "GENUS_BOOTHIOMYCES",
+      "name": "Boothiomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOOTHIOMYCES_MACROPOROSUS",
+          "name": "Boothiomyces macroporosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boothiomyces",
+          "sourceIds": {
+            "checklistbank": "376504"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizophydiaceae"
     }
   ],
   "authorship": "Letcher",
-  "genusCount": 3,
-  "speciesCount": 189,
+  "genusCount": 5,
+  "speciesCount": 193,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -4902,6 +4970,7 @@
       "classKey": 10689325,
       "orderKey": 1117,
       "familyKey": 3814
-    }
+    },
+    "checklistbank": "376477"
   }
 }

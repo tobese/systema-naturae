@@ -56,7 +56,8 @@
             ],
             "col": [
               "3G6DY"
-            ]
+            ],
+            "checklistbank": "3843"
           },
           "uuid": "534d0ee3-de95-5f4-8e3-0e547ae3bc4fa2",
           "authorityIds": "col:3G6DY,gbif:8414913,itis:193492"
@@ -594,7 +595,8 @@
             ],
             "col": [
               "3G6F4"
-            ]
+            ],
+            "checklistbank": "3852"
           },
           "uuid": "df7f0899-9478-50b-898-f1f3a493756c9e",
           "authorityIds": "col:3G6F4,gbif:7535916,itis:46400"
@@ -1291,10 +1293,73 @@
           "authorityIds": "col:3G6FN,gbif:7967276"
         }
       ]
+    },
+    {
+      "id": "GENUS_BROMELIOPHRYA",
+      "name": "Bromeliophrya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BROMELIOPHRYA_BRASILIENSIS",
+          "name": "Bromeliophrya brasiliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bromeliophrya",
+          "sourceIds": {
+            "checklistbank": "3834"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaucomidae"
+    },
+    {
+      "id": "GENUS_GLAUCOMIDES",
+      "name": "Glaucomides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLAUCOMIDES_BROMELICOLA",
+          "name": "Glaucomides bromelicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glaucomides",
+          "sourceIds": {
+            "checklistbank": "3868"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaucomidae"
+    },
+    {
+      "id": "GENUS_ANTEGLAUCOMA",
+      "name": "Anteglaucoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTEGLAUCOMA_HARBINENSIS",
+          "name": "Anteglaucoma harbinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anteglaucoma",
+          "sourceIds": {
+            "checklistbank": "353499"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaucomidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 56,
+  "genusCount": 11,
+  "speciesCount": 59,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1302,6 +1367,7 @@
       "classKey": 8006472,
       "orderKey": 7984607,
       "familyKey": 7625079
-    }
+    },
+    "checklistbank": "3832"
   }
 }

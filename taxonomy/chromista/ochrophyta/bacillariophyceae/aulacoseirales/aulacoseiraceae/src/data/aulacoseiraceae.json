@@ -186,7 +186,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3192010
+            "gbif": 3192010,
+            "checklistbank": "340129"
           },
           "uuid": "60ced54f-c00f-5a7-bf6-fb7f2d229a50b7",
           "authorityIds": "gbif:3192010"
@@ -1438,7 +1439,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3191997
+            "gbif": 3191997,
+            "checklistbank": "340192"
           },
           "uuid": "0cfe1bca-aeec-5ed-a67-581672ae3cb1dc",
           "authorityIds": "gbif:3191997"
@@ -1732,6 +1734,18 @@
           "authorship": "(Reinsch) Krammer",
           "sourceIds": {
             "checklistbank": "148711"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AULACOSEIRA_NYASSENSIS",
+          "name": "Aulacoseira nyassensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacoseira",
+          "sourceIds": {
+            "checklistbank": "340183"
           },
           "children": []
         }
@@ -2071,10 +2085,31 @@
           "uuid": "495cae10-dc2d-516-88e-f66b712057add5"
         }
       ]
+    },
+    {
+      "id": "GENUS_AULACOSEIRA_GRANULATA_V",
+      "name": "Aulacoseira_granulata_v.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AULACOSEIRA_GRANULATA_V_ANGUSTISSIMA",
+          "name": "Aulacoseira_granulata_v. angustissima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacoseira_granulata_v.",
+          "sourceIds": {
+            "checklistbank": "340165"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulacoseiraceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 113,
+  "genusCount": 6,
+  "speciesCount": 115,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2082,6 +2117,7 @@
       "classKey": 7947184,
       "orderKey": 1095,
       "familyKey": 7142
-    }
+    },
+    "checklistbank": "340109"
   }
 }

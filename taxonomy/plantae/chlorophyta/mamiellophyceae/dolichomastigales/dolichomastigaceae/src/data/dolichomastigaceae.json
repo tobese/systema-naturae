@@ -23,7 +23,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "c1d08cb0-51bd-509-b8a-bc6e0538da8054"
+          "uuid": "c1d08cb0-51bd-509-b8a-bc6e0538da8054",
+          "children": []
         },
         {
           "id": "SP_DOLICHOMASTIX_NUMMILIFERA",
@@ -34,7 +35,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "8098f678-db2e-5dd-b75-1496ffa3680195"
+          "uuid": "8098f678-db2e-5dd-b75-1496ffa3680195",
+          "children": []
         },
         {
           "id": "SP_DOLICHOMASTIX_NUMMULIFERA",
@@ -48,7 +50,8 @@
           "continents": [
             "Europe"
           ],
-          "uuid": "c314cc7d-6896-539-ad7-59deed3cac920a"
+          "uuid": "c314cc7d-6896-539-ad7-59deed3cac920a",
+          "children": []
         },
         {
           "id": "SP_DOLICHOMASTIX_TENUILEPIS",
@@ -59,9 +62,31 @@
           "subspeciesCount": 0,
           "description": "Dolichomastix tenuilepis is a unicellular alga of the order Dolichomastigales, family Dolichomastigaceae.",
           "sourcedFrom": "wikipedia",
-          "uuid": "255ba650-8037-505-935-1d0bb0da750e11"
+          "uuid": "255ba650-8037-505-935-1d0bb0da750e11",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MICRORHIZOIDEA",
+      "name": "Microrhizoidea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICRORHIZOIDEA_PICKETTHEAPSIORUM",
+          "name": "Microrhizoidea pickettheapsiorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microrhizoidea",
+          "sourceIds": {
+            "checklistbank": "382709"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dolichomastigaceae"
     }
   ],
   "sourceIds": {
@@ -71,6 +96,9 @@
       "classKey": 8176772,
       "orderKey": 7985202,
       "familyKey": 3229540
-    }
-  }
+    },
+    "checklistbank": "19221"
+  },
+  "genusCount": 2,
+  "speciesCount": 5
 }

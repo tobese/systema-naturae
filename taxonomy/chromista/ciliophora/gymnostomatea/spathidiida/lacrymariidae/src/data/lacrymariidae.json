@@ -749,7 +749,8 @@
             ],
             "col": [
               "3RRGM"
-            ]
+            ],
+            "checklistbank": "1201"
           },
           "uuid": "0302adfc-1ad7-50b-8af-863325fe11929b",
           "authorityIds": "col:3RRGM,gbif:8041250"
@@ -793,7 +794,8 @@
             ],
             "col": [
               "3RRGN"
-            ]
+            ],
+            "checklistbank": "383424"
           },
           "uuid": "0bd48396-3065-5cb-85d-54b4422217851c",
           "authorityIds": "col:3RRGN,gbif:8086715"
@@ -1996,10 +1998,55 @@
           "authorityIds": "col:7CGHR,gbif:7700026"
         }
       ]
+    },
+    {
+      "id": "GENUS_PHIALINA",
+      "name": "Phialina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHIALINA_SALINARUM",
+          "name": "Phialina salinarum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phialina",
+          "sourceIds": {
+            "checklistbank": "1217"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHIALINA_CAUDATA",
+          "name": "Phialina caudata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phialina",
+          "sourceIds": {
+            "checklistbank": "383433"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHIALINA_CLAMPI",
+          "name": "Phialina clampi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phialina",
+          "sourceIds": {
+            "checklistbank": "383442"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lacrymariidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 90,
+  "genusCount": 7,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2007,6 +2054,7 @@
       "classKey": 8319235,
       "orderKey": 7491457,
       "familyKey": 7958515
-    }
+    },
+    "checklistbank": "1199"
   }
 }

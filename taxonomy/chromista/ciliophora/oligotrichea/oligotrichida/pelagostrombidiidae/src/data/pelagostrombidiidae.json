@@ -25,7 +25,8 @@
             ]
           },
           "uuid": "1c380f3b-5a2a-525-937-8cfe4ff7280954",
-          "authorityIds": "col:75Y3H,gbif:7674859"
+          "authorityIds": "col:75Y3H,gbif:7674859",
+          "children": []
         },
         {
           "id": "SP_PELAGOSTROMBIDIUM_MIRABILE_PENARD_1916_KRAINER_1991",
@@ -44,18 +45,40 @@
             ]
           },
           "uuid": "d0b6fe55-ee67-58c-a85-bcf3988791cbde",
-          "authorityIds": "col:769RH,gbif:8188058"
+          "authorityIds": "col:769RH,gbif:8188058",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pelagostrombidiidae"
+    },
+    {
+      "id": "GENUS_LIMNOSTROMBIDIUM",
+      "name": "Limnostrombidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LIMNOSTROMBIDIUM_VIRIDE",
+          "name": "Limnostrombidium viride",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limnostrombidium",
+          "sourceIds": {
+            "checklistbank": "349730"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pelagostrombidiidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 3,
   "appSlug": "pelagostrombidiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ciliophora > Oligotrichea",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -63,6 +86,7 @@
       "classKey": 7732358,
       "orderKey": 7885786,
       "familyKey": 8142650
-    }
+    },
+    "checklistbank": "349728"
   }
 }

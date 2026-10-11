@@ -50,7 +50,8 @@
             ],
             "col": [
               "5ZLMZ"
-            ]
+            ],
+            "checklistbank": "383044"
           },
           "uuid": "384efcc5-4feb-5e7-ad1-164f24cc0cdc6a",
           "authorityIds": "col:5ZLMZ,gbif:7668575"
@@ -244,7 +245,8 @@
             ],
             "col": [
               "WZXP"
-            ]
+            ],
+            "checklistbank": "4636"
           },
           "uuid": "cbfe7c0c-bdb7-52c-bb7-733911b29cd2b2",
           "authorityIds": "col:WZXP,gbif:7741857,itis:46261"
@@ -484,7 +486,8 @@
             ],
             "col": [
               "WZY5"
-            ]
+            ],
+            "checklistbank": "4652"
           },
           "uuid": "33e25f7f-6159-556-b8a-cf9ed20d376691",
           "authorityIds": "col:WZY5,gbif:8196318"
@@ -663,7 +666,8 @@
             ],
             "col": [
               "WZYF"
-            ]
+            ],
+            "checklistbank": "389317"
           },
           "uuid": "9b6e6b6f-1353-5ea-9d3-5f30c1ac0d7953",
           "authorityIds": "col:WZYF,gbif:8273047"
@@ -684,6 +688,18 @@
             ]
           },
           "authorityIds": "col:87ZGC"
+        },
+        {
+          "id": "SP_COLEPS_NOLANDI",
+          "name": "Coleps nolandi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coleps",
+          "sourceIds": {
+            "checklistbank": "4644"
+          },
+          "children": []
         }
       ]
     },
@@ -796,6 +812,18 @@
           },
           "uuid": "b4577d03-ec6d-588-ac6-684a3dc9b8cf62",
           "authorityIds": "col:7BYQX,gbif:8126873"
+        },
+        {
+          "id": "SP_TIARINA_FUSA",
+          "name": "Tiarina fusa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tiarina",
+          "sourceIds": {
+            "checklistbank": "4668"
+          },
+          "children": []
         }
       ]
     },
@@ -1158,10 +1186,23 @@
             ],
             "col": [
               "6PVJ4"
-            ]
+            ],
+            "checklistbank": "4660"
           },
           "uuid": "4ab4dd6b-2c0e-5a7-8c2-7778941f5c8130",
           "authorityIds": "col:6PVJ4,gbif:7551037"
+        },
+        {
+          "id": "SP_LEVICOLEPS_TAEHWAE",
+          "name": "Levicoleps taehwae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levicoleps",
+          "sourceIds": {
+            "checklistbank": "383052"
+          },
+          "children": []
         }
       ]
     },
@@ -1206,7 +1247,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 10044475
+            "gbif": 10044475,
+            "checklistbank": "354497"
           },
           "uuid": "353b7693-e7a3-5d1-864-ade2ad00d93e1b",
           "authorityIds": "gbif:10044475"
@@ -1468,10 +1510,55 @@
           "authorityIds": "col:47MKQ,gbif:8428399"
         }
       ]
+    },
+    {
+      "id": "GENUS_APOCOLEPS",
+      "name": "Apocoleps",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_APOCOLEPS_MAGNUS",
+          "name": "Apocoleps magnus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apocoleps",
+          "sourceIds": {
+            "checklistbank": "4622"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_APOCOLEPS_ORIENTALIS",
+          "name": "Apocoleps orientalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apocoleps",
+          "sourceIds": {
+            "checklistbank": "383028"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_APOCOLEPS_PULCHER",
+          "name": "Apocoleps pulcher",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apocoleps",
+          "sourceIds": {
+            "checklistbank": "383036"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colepidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 63,
+  "genusCount": 13,
+  "speciesCount": 69,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1479,6 +1566,7 @@
       "classKey": 8318312,
       "orderKey": 7699047,
       "familyKey": 7907941
-    }
+    },
+    "checklistbank": "4620"
   }
 }

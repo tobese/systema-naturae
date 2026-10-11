@@ -22,10 +22,12 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8401791
+            "gbif": 8401791,
+            "checklistbank": "350169"
           },
           "uuid": "cc7b308e-5ec4-52c-958-ac96e93c6fa317",
-          "authorityIds": "gbif:8401791"
+          "authorityIds": "gbif:8401791",
+          "children": []
         },
         {
           "id": "PETALOTRICHA_CAPSA",
@@ -41,7 +43,8 @@
             "gbif": 9138269
           },
           "uuid": "1ea6f528-f5a1-58c-bcb-c256d8ed233c0e",
-          "authorityIds": "gbif:9138269"
+          "authorityIds": "gbif:9138269",
+          "children": []
         },
         {
           "id": "PETALOTRICHA_ENTZI",
@@ -57,7 +60,8 @@
             "gbif": 9040637
           },
           "uuid": "2fab307f-d05b-51c-aeb-78140ad6e461e9",
-          "authorityIds": "gbif:9040637"
+          "authorityIds": "gbif:9040637",
+          "children": []
         },
         {
           "id": "PETALOTRICHA_FOLI",
@@ -73,7 +77,8 @@
             "gbif": 8892777
           },
           "uuid": "d9f7ebc4-199c-52c-8ba-619c6268b01532",
-          "authorityIds": "gbif:8892777"
+          "authorityIds": "gbif:8892777",
+          "children": []
         },
         {
           "id": "PETALOTRICHA_INDICA",
@@ -89,7 +94,8 @@
             "gbif": 9006394
           },
           "uuid": "300da402-37e0-50b-aef-d7e3b726ba3934",
-          "authorityIds": "gbif:9006394"
+          "authorityIds": "gbif:9006394",
+          "children": []
         },
         {
           "id": "PETALOTRICHA_SERRATA",
@@ -105,9 +111,67 @@
             "gbif": 7985489
           },
           "uuid": "08abc6bf-b885-541-a8e-f048b492429515",
-          "authorityIds": "gbif:7985489"
+          "authorityIds": "gbif:7985489",
+          "children": []
+        },
+        {
+          "id": "SP_CYTTAROCYLIS_ACUTIFORMIS",
+          "name": "Cyttarocylis acutiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyttarocylis",
+          "sourceIds": {
+            "checklistbank": "350160"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYTTAROCYLIS_CASSIS",
+          "name": "Cyttarocylis cassis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyttarocylis",
+          "sourceIds": {
+            "checklistbank": "350178"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYTTAROCYLIS_EUCECRYPHALUS",
+          "name": "Cyttarocylis eucecryphalus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyttarocylis",
+          "sourceIds": {
+            "checklistbank": "350187"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PETALOTRICHA",
+      "name": "Petalotricha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PETALOTRICHA_AMPULLA",
+          "name": "Petalotricha ampulla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petalotricha",
+          "sourceIds": {
+            "checklistbank": "350196"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyttarocylididae"
     }
   ],
   "sourceIds": {
@@ -117,6 +181,9 @@
       "classKey": 7732358,
       "orderKey": 8036030,
       "familyKey": 7879205
-    }
-  }
+    },
+    "checklistbank": "350151"
+  },
+  "genusCount": 2,
+  "speciesCount": 10
 }

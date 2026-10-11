@@ -308,7 +308,8 @@
             ],
             "itis": [
               "2249"
-            ]
+            ],
+            "checklistbank": "53790"
           },
           "uuid": "a0cac0e6-175b-515-8e2-4fbb0b43418cd5",
           "authorityIds": "gbif:9124414,itis:2249"
@@ -339,6 +340,18 @@
             ]
           },
           "authorityIds": "itis:2250"
+        },
+        {
+          "id": "SP_COCCOLITHUS_BRAARUDII",
+          "name": "Coccolithus braarudii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccolithus",
+          "sourceIds": {
+            "checklistbank": "53782"
+          },
+          "children": []
         }
       ]
     },
@@ -566,10 +579,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "coccolithaceae"
+    },
+    {
+      "id": "GENUS_CRUCIPLACOLITHUS",
+      "name": "Cruciplacolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRUCIPLACOLITHUS_NEOHELIS",
+          "name": "Cruciplacolithus neohelis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cruciplacolithus",
+          "sourceIds": {
+            "checklistbank": "53798"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coccolithaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 24,
+  "genusCount": 14,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -577,6 +611,7 @@
       "classKey": 258,
       "orderKey": 8221594,
       "familyKey": 7120
-    }
+    },
+    "checklistbank": "53780"
   }
 }

@@ -124,7 +124,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11625398
+            "gbif": 11625398,
+            "checklistbank": "351179"
           },
           "uuid": "c3181680-d048-582-82c-95882543dbd5cb",
           "authorityIds": "gbif:11625398",
@@ -312,6 +313,42 @@
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6009251"
           },
           "children": []
+        },
+        {
+          "id": "SP_TINTINNIDIUM_FLUVIATILE",
+          "name": "Tintinnidium fluviatile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tintinnidium",
+          "sourceIds": {
+            "checklistbank": "351188"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TINTINNIDIUM_PUSILLUM",
+          "name": "Tintinnidium pusillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tintinnidium",
+          "sourceIds": {
+            "checklistbank": "373645"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TINTINNIDIUM_PRIMITIVUM",
+          "name": "Tintinnidium primitivum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tintinnidium",
+          "sourceIds": {
+            "checklistbank": "428791"
+          },
+          "children": []
         }
       ]
     },
@@ -371,10 +408,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tintinnidiidae"
+    },
+    {
+      "id": "GENUS_ANTETINTINNIDIUM",
+      "name": "Antetintinnidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTETINTINNIDIUM_MUCICOLA",
+          "name": "Antetintinnidium mucicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Antetintinnidium",
+          "sourceIds": {
+            "checklistbank": "373621"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tintinnidiidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 20,
+  "genusCount": 5,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -382,6 +440,7 @@
       "classKey": 7732358,
       "orderKey": 8036030,
       "familyKey": 7679279
-    }
+    },
+    "checklistbank": "351177"
   }
 }
