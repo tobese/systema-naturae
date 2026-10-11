@@ -77,7 +77,25 @@ FIELDS = {
 # A taxonomicStatus value that means "this is the name to use", not a
 # synonym. Nortaxa (2030) writes "valid" where DwC's own vocabulary says
 # "accepted" -- same concept, different publisher's word for it.
-ACCEPTED_STATUS = {"accepted", "provisionally accepted", "valid"}
+ACCEPTED_STATUS = {"accepted", "provisionally accepted", "valid", "nome_aceito"}
+
+# Rank vocabularies seen so far that are not the plain English terms both
+# the candidate filter (importColChecklist.py: rank in ("species",
+# "subspecies")) and `chain()` below expect. Applied once, at the row's own
+# rank, rather than only inside `chain()` -- APNI's Latin ranks (Regnum,
+# Division, Classis, Ordo, Familia, and crucially "Species"/"Subspecies"
+# which happen to already match) got the candidate filter for free because
+# Latin species-rank spells the same in English, but Flora e Funga do
+# Brasil's Portuguese (ESPECIE, SUBESPECIE, GENERO, FAMILIA, ORDEM, CLASSE)
+# does not, and read as zero candidates until normalised here too.
+RANK_SYNONYMS = {
+    "regnum": "kingdom", "division": "phylum", "divisio": "phylum",
+    "classis": "class", "ordo": "order", "familia": "family",
+    "especie": "species", "subespecie": "subspecies",
+    "sub_especie": "subspecies", "genero": "genus", "ordem": "order",
+    "classe": "class", "variedade": "variety", "forma": "form",
+    "tribo": "tribe",
+}
 
 # rank -> the column that may carry it directly on the taxon row
 CHAIN_COL = {r: f"{r}_name" for r in
@@ -480,7 +498,9 @@ def load(path):
                         "name": r.get("name_phrase") or n.get("name")
                                 or r.get("scientific_name"),
                         "authorship": n.get("authorship") or r.get("authorship"),
-                        "rank": r.get("rank") or n.get("rank"),
+                        "rank": RANK_SYNONYMS.get(
+                            ((r.get("rank") or n.get("rank")) or "").lower(),
+                            r.get("rank") or n.get("rank")),
                         "is_synonym": (
                             status.strip().lower() not in ACCEPTED_STATUS
                             if status else r.get("name_id") in synonym_ids),
@@ -512,16 +532,6 @@ def load(path):
     return taxa, names, metadata(path)
 
 
-# APNI (133813) ranks its whole hierarchy in Latin -- Regnum, Division,
-# Classis, Ordo, Familia -- rather than the English terms every other
-# source here uses (including Dyntaxa and taicol's "[unranked]"-style
-# brackets, which this intentionally leaves alone since those aren't a
-# translation question). Keyed lower-case to match `crank` already being
-# lower-cased before the lookup.
-LATIN_RANK = {
-    "regnum": "kingdom", "division": "phylum", "divisio": "phylum",
-    "classis": "class", "ordo": "order", "familia": "family",
-}
 
 
 def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
@@ -545,7 +555,7 @@ def chain(tax, by_id, ranks=("kingdom", "phylum", "class", "order", "family"),
     cur, n = tax, 0
     while cur is not None and n < limit:
         crank = (cur.get("rank") or "").lower()
-        crank = LATIN_RANK.get(crank, crank)
+        crank = RANK_SYNONYMS.get(crank, crank)
         for rnk in ranks:
             if rnk in out:
                 continue
