@@ -219,8 +219,14 @@ def _rows(z, table, kind):
     except KeyError:
         return None
     with fh as f:
+        # iNaturalist (139831) names its taxon table `taxa.csv` -- an actual
+        # comma-delimited CSV, not the tab-delimited .txt/.tsv every other
+        # DwCA/ColDP source here uses regardless of its own extension. Reading
+        # it as tab-delimited put the whole header in one cell, so `_index`
+        # found no column named "id" and raised on a file that plainly has one.
+        delimiter = "," if table.lower().endswith(".csv") else "\t"
         rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
-                        delimiter="\t")
+                        delimiter=delimiter)
         try:
             header = next(rd)
         except StopIteration:
