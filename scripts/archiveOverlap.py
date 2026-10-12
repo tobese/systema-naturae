@@ -90,7 +90,7 @@ def _family(ix, row, par, rank, name):  # noqa: C901
     fc = col(ix, "family")
     if fc is not None and len(row) > fc and row[fc]:
         return row[fc].strip()
-    ic = col(ix, "ID")
+    ic = col(ix, "ID", "taxonID")
     tid = row[ic] if ic is not None and len(row) > ic else ""
     for _ in range(50):
         p = par.get(tid)
@@ -194,7 +194,7 @@ def read_archive(path):
         join = col(ix, "nameID")
 
     par, rank, name, rowof = {}, {}, {}, {}
-    idcol = col(ix, "ID")
+    idcol = col(ix, "ID", "taxonID")
     if idcol is None:
         sys.exit(f"{taxon}: no ID column ({sorted(ix)[:10]})")
     for row in rd:
