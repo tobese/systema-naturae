@@ -152,9 +152,19 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
             raise KeyError(f"{CORE} not in {os.path.basename(path)}; "
                            f"members: {sorted(z.namelist())[:8]}")
         with z.open(CORE) as f:
+            # NCBI Taxonomy (2169) has a stray literal `"` in a free-text
+            # remarks field. csv's default QUOTE_MINIMAL treats that as the
+            # start of a quoted field and keeps consuming subsequent physical
+            # lines looking for the matching close-quote, merging real rows
+            # together until it either finds one or blows the field-size
+            # limit -- 154,774 rows silently vanished this way before the
+            # limit was even hit. These are plain tab-separated files with no
+            # CSV-style quoting convention of their own; QUOTE_NONE reads each
+            # physical line as its own row, which is what every source here
+            # actually is.
             rd = csv.reader(
                 io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
-                delimiter="\t")
+                delimiter="\t", quoting=csv.QUOTE_NONE)
             ix = _columns(next(rd))
             for col in ("ID", "parentID", "status", "rank", "scientificName"):
                 if col not in ix:

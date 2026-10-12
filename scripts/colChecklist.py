@@ -225,8 +225,17 @@ def _rows(z, table, kind):
         # it as tab-delimited put the whole header in one cell, so `_index`
         # found no column named "id" and raised on a file that plainly has one.
         delimiter = "," if table.lower().endswith(".csv") else "\t"
+        # Tab-delimited sources here carry no CSV-style quoting convention of
+        # their own (NCBI Taxonomy, 2169, has a stray literal `"` in a
+        # free-text remarks field that QUOTE_MINIMAL reads as an opening
+        # quote, silently merging every following physical line into one
+        # field until it finds a closing `"` -- 154,774 rows gone before the
+        # field-size limit even caught it). An actual comma CSV may rely on
+        # quoting to escape a comma inside a field, so only disable it for
+        # tab.
+        quoting = csv.QUOTE_NONE if delimiter == "\t" else csv.QUOTE_MINIMAL
         rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
-                        delimiter=delimiter)
+                        delimiter=delimiter, quoting=quoting)
         try:
             header = next(rd)
         except StopIteration:
