@@ -241,7 +241,8 @@
             ],
             "mycobank": [
               "564728"
-            ]
+            ],
+            "checklistbank": "749876"
           },
           "uuid": "4f3b6692-99ed-5a9-ab3-b62fc6dd1d1763",
           "authorityIds": "gbif:7353677,mycobank:564728"
@@ -25600,11 +25601,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "leptosphaeriaceae"
+    },
+    {
+      "id": "GENUS_AMPELOMYCES",
+      "name": "Ampelomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMPELOMYCES_QUISQUALIS",
+          "name": "Ampelomyces quisqualis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ampelomyces",
+          "sourceIds": {
+            "checklistbank": "50730"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AMPELOMYCES_HUMULI",
+          "name": "Ampelomyces humuli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ampelomyces",
+          "sourceIds": {
+            "checklistbank": "81446"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptosphaeriaceae"
     }
   ],
   "authorship": "M.E. Barr",
-  "genusCount": 79,
-  "speciesCount": 1128,
+  "genusCount": 80,
+  "speciesCount": 1130,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

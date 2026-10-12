@@ -7218,7 +7218,8 @@
             ],
             "col": [
               "9ZBXJ"
-            ]
+            ],
+            "checklistbank": "2706755"
           },
           "uuid": "26776aa1-930d-5cd-9b2-942e4f20462c2b",
           "authorityIds": "col:9ZBXJ,gbif:11931028,mycobank:833619"
@@ -7674,7 +7675,8 @@
             ],
             "col": [
               "CBBW8"
-            ]
+            ],
+            "checklistbank": "2706772"
           },
           "uuid": "27a04b10-52fc-560-b0e-4d62ab8bc38e0c",
           "authorityIds": "col:CBBW8,gbif:2585076,mycobank:148100"
@@ -12986,6 +12988,18 @@
           "lineage": "Mollisia",
           "sourceIds": {
             "checklistbank": "3047483"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MOLLISIA_INCRUSTATA",
+          "name": "Mollisia incrustata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mollisia",
+          "sourceIds": {
+            "checklistbank": "743679"
           },
           "children": []
         }
@@ -19649,11 +19663,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mollisiaceae"
+    },
+    {
+      "id": "GENUS_PHIALOCEPHALA",
+      "name": "[Phialocephala]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHIALOCEPHALA_TRIGONOSPORA",
+          "name": "[Phialocephala] trigonospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Phialocephala]",
+          "sourceIds": {
+            "checklistbank": "519228"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mollisiaceae"
     }
   ],
   "authorship": "Rehm",
-  "genusCount": 40,
-  "speciesCount": 785,
+  "genusCount": 41,
+  "speciesCount": 787,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
