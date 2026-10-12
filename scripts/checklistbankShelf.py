@@ -33,12 +33,15 @@ normalised title. A title match is weaker and is reported separately.
 import argparse
 import collections
 import json
+import os
 import re
 import sys
 import urllib.request
 
+sys.path.insert(0, os.path.dirname(__file__))
+from sources import MANIFEST
+
 API = "https://api.checklistbank.org/dataset"
-MANIFEST = "/Volumes/MacieExternal/sources/manifest.json"
 KNOWN_KEYS = {
     3: "catalogue-of-life", 1000: "COL Hierarchy (superseded)", 1005: "craneflies",
     1008: "reptile-db", 1010: "FishBase (offered, declined)",

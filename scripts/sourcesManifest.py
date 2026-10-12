@@ -32,8 +32,11 @@ import json
 import os
 import sys
 
-ROOT = "/Volumes/MacieExternal/sources"
-MANIFEST = os.path.join(ROOT, "manifest.json")
+# ROOT is overridable (SN_SOURCES_ROOT) so this runs on q-bert too -- see
+# scripts/sources.py, which this used to duplicate rather than import,
+# leaving q-bert's SN_SOURCES_ROOT silently unconsulted here.
+sys.path.insert(0, os.path.dirname(__file__))
+from sources import ROOT, MANIFEST
 
 # slug -> (title, identifier, source url, licence, status, what we took)
 # status: applied | partial | ready | assessed | refused
