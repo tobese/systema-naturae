@@ -34,6 +34,7 @@ import io
 import json
 import os
 import re
+import xml.etree.ElementTree as ET
 import zipfile
 
 # COL China's taxon.txt carries a huge denormalised remarks/reference field on
@@ -213,6 +214,74 @@ def _index(header, require):
     return out
 
 
+# DwC-A `meta.xml` terms are full URIs (e.g.
+# "http://rs.tdwg.org/dwc/terms/taxonID"); this maps the term's last path
+# segment onto our own field names, parallel to FIELDS' column-text variants.
+TERM_TO_FIELD = {
+    "taxonID": "id",
+    "parentNameUsageID": "parent",
+    "scientificName": "scientific_name",
+    "scientificNameAuthorship": "authorship",
+    "taxonRank": "rank",
+    "taxonomicStatus": "status",
+    "genus": "genus",
+    "specificEpithet": "species_epithet",
+    "infraspecificEpithet": "infraspecific_epithet",
+    "kingdom": "kingdom_name",
+    "phylum": "phylum_name",
+    "class": "class_name",
+    "order": "order_name",
+    "family": "family_name",
+}
+
+
+def _meta_positions(z, table):
+    """Field positions for `table` from meta.xml, when the file has no header row.
+
+    WCVP (2000) declares `ignoreHeaderLines="0"` in meta.xml: taxon.txt starts
+    with data, not a header, so the header-text matching `_index` normally
+    does finds nothing and raises on a row it mistook for column names. A DwCA
+    with ignoreHeaderLines="0" has no header to match -- its field order is
+    only ever recoverable from meta.xml's own <field index="N" term="..."/>
+    declarations, so that is the one shape this reads positionally; every
+    other archive keeps using the proven header-text path unchanged.
+    """
+    names = z.names()
+    meta_name = next((n for n in names if n.rsplit("/", 1)[-1] == "meta.xml"), None)
+    if not meta_name:
+        return None
+    try:
+        root = ET.fromstring(z.read(meta_name))
+    except ET.ParseError:
+        return None
+    base = table.rsplit("/", 1)[-1].lower()
+    for block in root:
+        tag = block.tag.rsplit("}", 1)[-1]
+        if tag not in ("core", "extension"):
+            continue
+        loc = block.find(".//{*}location")
+        if loc is None or (loc.text or "").strip().lower() != base:
+            continue
+        try:
+            ignore = int(block.get("ignoreHeaderLines", "1"))
+        except ValueError:
+            ignore = 1
+        positions = {}
+        for field in block:
+            ftag = field.tag.rsplit("}", 1)[-1]
+            idx = field.get("index")
+            if idx is None:
+                continue
+            if ftag == "id":
+                positions["id"] = int(idx)
+            elif ftag == "field":
+                term = (field.get("term") or "").rsplit("/", 1)[-1]
+                if term in TERM_TO_FIELD:
+                    positions.setdefault(TERM_TO_FIELD[term], int(idx))
+        return ignore, positions
+    return None
+
+
 def _rows(z, table, kind):
     try:
         fh = z.open(table)
@@ -236,11 +305,20 @@ def _rows(z, table, kind):
         quoting = csv.QUOTE_NONE if delimiter == "\t" else csv.QUOTE_MINIMAL
         rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
                         delimiter=delimiter, quoting=quoting)
-        try:
-            header = next(rd)
-        except StopIteration:
-            return None
-        ix = _index(header, REQUIRED[kind])
+        meta = _meta_positions(z, table)
+        if meta and meta[0] == 0:
+            # No header line to read or skip -- meta.xml's own field positions
+            # are the only source of the column mapping (see _meta_positions).
+            ix = meta[1]
+            missing = [k for k in REQUIRED[kind] if k not in ix]
+            if missing:
+                raise KeyError(f"no column for {missing} in {table}'s meta.xml")
+        else:
+            try:
+                header = next(rd)
+            except StopIteration:
+                return None
+            ix = _index(header, REQUIRED[kind])
         for row in rd:
             if len(row) > max(ix.values()):
                 yield {k: (row[i] if row[i] else None) for k, i in ix.items()}
