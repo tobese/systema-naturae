@@ -243,6 +243,12 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     # same name under the zoological family makes this a genuine homonym to
     # confirm, not a one-off misfiling to delete.
     "SP_ACTINOCYCLUS_VERRUCOSUS_EHRENBERG_1831",
+    # ENA Taxonomy import (2026-10-12), same session: 2 more "sp." placeholder
+    # collisions (Didymocyrtis, Fluminicola), plus 6 more Eisenia species under
+    # the same earthworm/kelp family pair already confirmed above.
+    "SP_DIDYMOCYRTIS_SP", "SP_FLUMINICOLA_SP",
+    "SP_EISENIA_CAROLINENSIS", "SP_EISENIA_MURANYII", "SP_EISENIA_NANA",
+    "SP_EISENIA_OREOPHILA", "SP_EISENIA_SALAIRICA", "SP_EISENIA_TRACTA",
 }
 
 
