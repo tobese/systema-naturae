@@ -44,7 +44,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "571a4637-9cc0-5f6-995-9af613c0bda0a5"
+          "uuid": "571a4637-9cc0-5f6-995-9af613c0bda0a5",
+          "authorship": "Buchheim & Hoffman",
+          "sourceIds": {
+            "checklistbank": "52681"
+          }
         },
         {
           "id": "SP_SPHAEROPLEA_SOLEIROLII",
@@ -141,6 +145,18 @@
           "lineage": "Sphaeroplea",
           "children": [],
           "uuid": "86c9578f-3b88-5ea-a5d-b412ec768b0bc6"
+        },
+        {
+          "id": "SP_SPHAEROPLEA_SP",
+          "name": "Sphaeroplea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeroplea",
+          "sourceIds": {
+            "checklistbank": "3237868"
+          },
+          "children": []
         }
       ]
     },
@@ -192,9 +208,11 @@
           "sourceIds": {
             "itis": [
               "6458"
-            ]
+            ],
+            "checklistbank": "163323"
           },
-          "authorityIds": "itis:6458"
+          "authorityIds": "itis:6458",
+          "authorship": "Schmidle"
         },
         {
           "id": "SP_RADIOFILUM_FLAVESCENS",
@@ -304,7 +322,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "fd8ba095-537f-5e5-83f-2e91ac32b08eb7"
+          "uuid": "fd8ba095-537f-5e5-83f-2e91ac32b08eb7",
+          "authorship": "L.R.Hoffman",
+          "sourceIds": {
+            "checklistbank": "415179"
+          }
         },
         {
           "id": "SP_ATRACTOMORPHA_ECHINATA",
@@ -314,7 +336,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Atractomorpha",
           "children": [],
-          "uuid": "5edfebb4-4043-583-bb0-874f468631c34d"
+          "uuid": "5edfebb4-4043-583-bb0-874f468631c34d",
+          "authorship": "L.R.Hoffmann",
+          "sourceIds": {
+            "checklistbank": "52677"
+          }
         }
       ]
     },
@@ -385,7 +411,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ankyra",
           "children": [],
-          "uuid": "a4000873-5646-514-8f8-58eb4a0a7dca24"
+          "uuid": "a4000873-5646-514-8f8-58eb4a0a7dca24",
+          "authorship": "Lee & H.C.Bold",
+          "sourceIds": {
+            "checklistbank": "415178"
+          }
         },
         {
           "id": "SP_ANKYRA_ANCORA_G_M_SM_FOTT",
@@ -397,6 +427,44 @@
           "authorship": "(G.M.Sm.) Fott",
           "sourceIds": {
             "checklistbank": "taicol: 54071"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANKYRA_JUDAYI_G_M_SMITH_FOTT",
+          "name": "Ankyra judayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankyra",
+          "authorship": "(G.M.Smith) Fott",
+          "sourceIds": {
+            "checklistbank": "52688"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANKYRA_LANCEOLATA_KORSHIKOV_FOTT",
+          "name": "Ankyra lanceolata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankyra",
+          "authorship": "(Korshikov) Fott",
+          "sourceIds": {
+            "checklistbank": "164532"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANKYRA_SP",
+          "name": "Ankyra sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankyra",
+          "sourceIds": {
+            "checklistbank": "2799824"
           },
           "children": []
         }
@@ -496,10 +564,105 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaeropleaceae"
+    },
+    {
+      "id": "GENUS_PARALLELA",
+      "name": "Parallela",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARALLELA_TRANSVERSALIS_BREBISSON_NOVIS_M_LORENZ_BROADY_E_A_FLINT",
+          "name": "Parallela transversalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parallela",
+          "authorship": "(Brebisson) Novis, M.Lorenz, Broady & E.A.Flint",
+          "sourceIds": {
+            "checklistbank": "163324"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARALLELA_NOVAE_ZELANDIAE_E_A_FLINT",
+          "name": "Parallela novae-zelandiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parallela",
+          "authorship": "E.A.Flint",
+          "sourceIds": {
+            "checklistbank": "871273"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaeropleaceae"
+    },
+    {
+      "id": "GENUS_TETRAEDRON",
+      "name": "Tetraedron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TETRAEDRON_MINIMUM_A_BRAUN_HANSGIRG",
+          "name": "Tetraedron minimum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetraedron",
+          "authorship": "(A.Braun) Hansgirg",
+          "sourceIds": {
+            "checklistbank": "302393"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TETRAEDRON_CAUDATUM_CORDA_HANSGIRG",
+          "name": "Tetraedron caudatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetraedron",
+          "authorship": "(Corda) Hansgirg",
+          "sourceIds": {
+            "checklistbank": "302394"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TETRAEDRON_PENTAEDRICUM_WEST_G_S_WEST",
+          "name": "Tetraedron pentaedricum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetraedron",
+          "authorship": "West & G.S.West",
+          "sourceIds": {
+            "checklistbank": "313987"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TETRAEDRON_SP",
+          "name": "Tetraedron sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetraedron",
+          "sourceIds": {
+            "checklistbank": "2306713"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaeropleaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 33,
+  "genusCount": 11,
+  "speciesCount": 43,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -507,6 +670,7 @@
       "classKey": 329,
       "orderKey": 8223403,
       "familyKey": 4685
-    }
+    },
+    "checklistbank": "52675"
   }
 }

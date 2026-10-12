@@ -281,10 +281,12 @@
             ],
             "col": [
               "3X99C"
-            ]
+            ],
+            "checklistbank": "2499543"
           },
           "uuid": "4e66b851-28ea-584-a72-215f50bb26f3b7",
-          "authorityIds": "col:3X99C,gbif:2267324,wikidata:Q2577582"
+          "authorityIds": "col:3X99C,gbif:2267324,wikidata:Q2577582",
+          "authorship": "(Nutting, 1900)"
         },
         {
           "id": "SP_MACRORHYNCHIA_GRANDIS",
@@ -1743,10 +1745,12 @@
             ],
             "col": [
               "3HP92"
-            ]
+            ],
+            "checklistbank": "2203278"
           },
           "uuid": "6952bd3f-0f1b-5c8-a64-b0915997d89642",
-          "authorityIds": "col:3HP92,gbif:2267204,wikidata:Q61656363"
+          "authorityIds": "col:3HP92,gbif:2267204,wikidata:Q61656363",
+          "authorship": "(Billard, 1913)"
         },
         {
           "id": "SP_GYMNANGIUM_SINUOSUM",
@@ -1771,7 +1775,8 @@
             ],
             "itis": [
               "719152"
-            ]
+            ],
+            "checklistbank": "2499538"
           },
           "uuid": "bda12999-2947-545-835-1ebe90f459bc6d",
           "authorityIds": "col:3HP94,gbif:4283038,itis:719152,wikidata:Q1862554"
@@ -2265,6 +2270,18 @@
           "lineage": "Gymnangium",
           "sourceIds": {
             "checklistbank": "ott7508314"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYMNANGIUM_SP",
+          "name": "Gymnangium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gymnangium",
+          "sourceIds": {
+            "checklistbank": "1673626"
           },
           "children": []
         }
@@ -3847,7 +3864,8 @@
           "sourceIds": {
             "checklistbank": "ott3682670"
           },
-          "children": []
+          "children": [],
+          "authorship": "Jaderholm, 1919"
         },
         {
           "id": "SP_CLADOCARPUS_SIBOGAE",
@@ -6087,7 +6105,8 @@
             ],
             "col": [
               "65RHT"
-            ]
+            ],
+            "checklistbank": "1769401"
           },
           "uuid": "ad4e0995-1bbb-590-949-c8e38dbf44f22a",
           "authorityIds": "col:65RHT,gbif:2267365,itis:50334,wikidata:Q3321020"
@@ -8393,10 +8412,12 @@
             ],
             "col": [
               "3WVLB"
-            ]
+            ],
+            "checklistbank": "1769407"
           },
           "uuid": "0edb24e0-e98e-561-b3a-900cf983328088",
-          "authorityIds": "col:3WVLB,gbif:2267456,wikidata:Q2629302"
+          "authorityIds": "col:3WVLB,gbif:2267456,wikidata:Q2629302",
+          "authorship": "(Blanco & Bellusci de Miralles, 1971)"
         },
         {
           "id": "SP_LYTOCARPIA_CHILTONI",
@@ -9533,10 +9554,12 @@
             ],
             "col": [
               "65RH8"
-            ]
+            ],
+            "checklistbank": "2499550"
           },
           "uuid": "57ab099d-2556-504-8e3-6afa5d4b71d3db",
-          "authorityIds": "col:65RH8,gbif:7767472,wikidata:Q61654887"
+          "authorityIds": "col:65RH8,gbif:7767472,wikidata:Q61654887",
+          "authorship": "(Bedot, 1921)"
         },
         {
           "id": "SP_AGLAOPHENOPSIS_CORNUTA",
@@ -9561,10 +9584,12 @@
             ],
             "col": [
               "663GW"
-            ]
+            ],
+            "checklistbank": "2499551"
           },
           "uuid": "57b3dc28-c98f-504-b72-14606a29889193",
-          "authorityIds": "col:663GW,gbif:4282698,itis:50329,wikidata:Q61654888"
+          "authorityIds": "col:663GW,gbif:4282698,itis:50329,wikidata:Q61654888",
+          "authorship": "(Fewkes, 1881)"
         },
         {
           "id": "SP_AGLAOPHENOPSIS_DISTANS_NUTTING_1900",
@@ -10594,10 +10619,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aglaopheniidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_MACRORHYNCHIA",
+          "name": "cf. Macrorhynchia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "2499602"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aglaopheniidae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 564,
+  "genusCount": 24,
+  "speciesCount": 566,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -10606,6 +10652,6 @@
       "orderKey": 712,
       "familyKey": 8156
     },
-    "checklistbank": "ott889785"
+    "checklistbank": "308582"
   }
 }

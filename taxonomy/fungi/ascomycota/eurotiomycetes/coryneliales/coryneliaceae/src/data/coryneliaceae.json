@@ -592,7 +592,8 @@
             ],
             "col": [
               "58Z5W"
-            ]
+            ],
+            "checklistbank": "1630125"
           },
           "uuid": "1b4d6713-dd5b-5c5-b61-b5779a295679d7",
           "authorityIds": "col:58Z5W,gbif:3468461,mycobank:121736"
@@ -917,6 +918,18 @@
             "checklistbank": "ott3754698"
           },
           "children": []
+        },
+        {
+          "id": "SP_HYPSOTHECA_SP",
+          "name": "Hypsotheca sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypsotheca",
+          "sourceIds": {
+            "checklistbank": "3156517"
+          },
+          "children": []
         }
       ],
       "authorship": "Ellis & Everhart"
@@ -1003,7 +1016,8 @@
             ],
             "col": [
               "PJQX"
-            ]
+            ],
+            "checklistbank": "1631646"
           },
           "uuid": "f4a0208b-679c-52d-959-f7cbe0b3d240c9",
           "authorityIds": "col:PJQX,gbif:8071116,mycobank:810742"
@@ -1215,7 +1229,8 @@
             ],
             "mycobank": [
               "833212"
-            ]
+            ],
+            "checklistbank": "2567983"
           },
           "uuid": "bb7b6dd7-ace5-558-bda-310ee339eae998",
           "authorityIds": "gbif:10770669,mycobank:833212"
@@ -1718,7 +1733,8 @@
           "sourceIds": {
             "checklistbank": "ott3726920"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Berk. & M.A. Curtis) Hohn., 1919"
         },
         {
           "id": "SP_CALICIOPSIS_EPHEMERA",
@@ -1789,6 +1805,18 @@
           "lineage": "Caliciopsis",
           "sourceIds": {
             "checklistbank": "ott5696792"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALICIOPSIS_SP",
+          "name": "Caliciopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caliciopsis",
+          "sourceIds": {
+            "checklistbank": "2107891"
           },
           "children": []
         }
@@ -1880,7 +1908,8 @@
             ],
             "col": [
               "B2XRX"
-            ]
+            ],
+            "checklistbank": "2996542"
           },
           "uuid": "2367dcd8-5082-596-aeb-956704d4b7e800",
           "authorityIds": "col:B2XRX,gbif:12240357,mycobank:844554"
@@ -1906,7 +1935,8 @@
             ],
             "col": [
               "9ZD6Y"
-            ]
+            ],
+            "checklistbank": "2726395"
           },
           "uuid": "1e6fc183-9401-5b4-987-9df7856621f5ce",
           "authorityIds": "col:9ZD6Y,gbif:11683252,mycobank:834915"
@@ -1929,7 +1959,8 @@
             ],
             "mycobank": [
               "844552"
-            ]
+            ],
+            "checklistbank": "2996543"
           },
           "uuid": "59de6a0e-879d-51e-bb6-ed77bc82fa026d",
           "authorityIds": "gbif:12265370,mycobank:844552"
@@ -1955,7 +1986,8 @@
             ],
             "col": [
               "B2XVG"
-            ]
+            ],
+            "checklistbank": "2996544"
           },
           "uuid": "5c23f58b-8442-5f5-bc6-684272db6763f6",
           "authorityIds": "col:B2XVG,gbif:12220020,mycobank:844553"
@@ -2080,11 +2112,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "coryneliaceae"
+    },
+    {
+      "id": "GENUS_CORYNELIACEAE",
+      "name": "Coryneliaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORYNELIACEAE_SP",
+          "name": "Coryneliaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryneliaceae",
+          "sourceIds": {
+            "checklistbank": "2011734"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coryneliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CALICIOPSIS",
+          "name": "uncultured Caliciopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2722944"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coryneliaceae"
     }
   ],
   "authorship": "Saccardo ex Berlese & Voglino",
-  "genusCount": 14,
-  "speciesCount": 84,
+  "genusCount": 16,
+  "speciesCount": 88,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2093,6 +2167,6 @@
       "orderKey": 1039,
       "familyKey": 8323
     },
-    "checklistbank": "ott123362"
+    "checklistbank": "152642"
   }
 }

@@ -528,7 +528,8 @@
             ],
             "col": [
               "B39JT"
-            ]
+            ],
+            "checklistbank": "3095911"
           },
           "uuid": "a86c7247-1147-584-ba9-4a616f0a94bb82",
           "authorityIds": "col:B39JT,gbif:12198362,mycobank:835457"
@@ -1122,9 +1123,11 @@
           "sourceIds": {
             "mycobank": [
               "400373"
-            ]
+            ],
+            "checklistbank": "1930631"
           },
-          "authorityIds": "mycobank:400373"
+          "authorityIds": "mycobank:400373",
+          "authorship": "Nyl., 1869"
         },
         {
           "id": "SP_PHLYCTIS_UNCINATA",
@@ -1577,6 +1580,18 @@
             "checklistbank": "ott8005134"
           },
           "children": []
+        },
+        {
+          "id": "SP_PHLYCTIS_SP",
+          "name": "Phlyctis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phlyctis",
+          "sourceIds": {
+            "checklistbank": "2893619"
+          },
+          "children": []
         }
       ],
       "authorship": "(Wallroth) Flotow"
@@ -1901,11 +1916,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phlyctidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PHLYCTIS",
+          "name": "uncultured Phlyctis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2722979"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phlyctidaceae"
     }
   ],
   "authorship": "Poelt ex J.C. David & D. Hawksworth",
-  "genusCount": 11,
-  "speciesCount": 108,
+  "genusCount": 12,
+  "speciesCount": 110,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1914,6 +1950,6 @@
       "orderKey": 1279,
       "familyKey": 5838
     },
-    "checklistbank": "ott199502"
+    "checklistbank": "291600"
   }
 }

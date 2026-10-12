@@ -28,9 +28,11 @@
             ],
             "col": [
               "6MKHN"
-            ]
+            ],
+            "checklistbank": "1285665"
           },
-          "authorityIds": "col:6MKHN,wikidata:Q13299530"
+          "authorityIds": "col:6MKHN,wikidata:Q13299530",
+          "authorship": "(Swain, 2009)"
         },
         {
           "id": "SP_HYDROZOANTHUS_GRACILIS",
@@ -50,9 +52,11 @@
             ],
             "col": [
               "6MKHH"
-            ]
+            ],
+            "checklistbank": "760133"
           },
-          "authorityIds": "col:6MKHH,wikidata:Q13299547"
+          "authorityIds": "col:6MKHH,wikidata:Q13299547",
+          "authorship": "Lwowsky, 1913"
         },
         {
           "id": "SP_HYDROZOANTHUS_SILS_KISE_MAEDA_REIMER_2019",
@@ -105,6 +109,31 @@
           "sourceIds": {
             "checklistbank": "986647"
           },
+          "children": [],
+          "authorship": "Kise, Maeda & Reimer, 2018"
+        },
+        {
+          "id": "SP_HYDROZOANTHUS_AFF",
+          "name": "Hydrozoanthus aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydrozoanthus",
+          "sourceIds": {
+            "checklistbank": "2987711"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYDROZOANTHUS_SP",
+          "name": "Hydrozoanthus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydrozoanthus",
+          "sourceIds": {
+            "checklistbank": "3457789"
+          },
           "children": []
         }
       ]
@@ -133,9 +162,11 @@
             ],
             "col": [
               "55HXT"
-            ]
+            ],
+            "checklistbank": "861483"
           },
-          "authorityIds": "col:55HXT,wikidata:Q61656431"
+          "authorityIds": "col:55HXT,wikidata:Q61656431",
+          "authorship": "(Carlgren, 1951)"
         },
         {
           "id": "SP_TERRAZOANTHUS_MINUTUS",
@@ -154,9 +185,11 @@
             ],
             "col": [
               "7BRMB"
-            ]
+            ],
+            "checklistbank": "861485"
           },
-          "authorityIds": "col:7BRMB,wikidata:Q61656434"
+          "authorityIds": "col:7BRMB,wikidata:Q61656434",
+          "authorship": "(Duerden, 1898)"
         },
         {
           "id": "SP_TERRAZOANTHUS_PATAGONICHUS",
@@ -175,9 +208,11 @@
             ],
             "col": [
               "55HXV"
-            ]
+            ],
+            "checklistbank": "2201172"
           },
-          "authorityIds": "col:55HXV,wikidata:Q61656429"
+          "authorityIds": "col:55HXV,wikidata:Q61656429",
+          "authorship": "(Carlgren, 1898)"
         },
         {
           "id": "SP_TERRAZOANTHUS_SINNIGERI_REIMER_FUJII_2010",
@@ -229,6 +264,18 @@
           "children": [],
           "lineage": "Terrazoanthus",
           "uuid": "610c31ef-a59f-5eb-9ce-ba0a236f5d9b04"
+        },
+        {
+          "id": "SP_TERRAZOANTHUS_SP",
+          "name": "Terrazoanthus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terrazoanthus",
+          "sourceIds": {
+            "checklistbank": "908896"
+          },
+          "children": []
         }
       ]
     },
@@ -267,7 +314,8 @@
           "sourceIds": {
             "checklistbank": "ott7507446"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kise, Maeda & Reimer, 2018"
         }
       ]
     },
@@ -292,10 +340,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hydrozoanthidae"
+    },
+    {
+      "id": "GENUS_HYDROZOANTHIDAE",
+      "name": "Hydrozoanthidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYDROZOANTHIDAE_SP",
+          "name": "Hydrozoanthidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydrozoanthidae",
+          "sourceIds": {
+            "checklistbank": "470400"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hydrozoanthidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 15,
+  "genusCount": 5,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -304,6 +373,6 @@
       "orderKey": 1433,
       "familyKey": 5841776
     },
-    "checklistbank": "ott758115"
+    "checklistbank": "754162"
   }
 }

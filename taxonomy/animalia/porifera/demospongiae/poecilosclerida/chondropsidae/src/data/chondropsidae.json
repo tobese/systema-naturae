@@ -1027,9 +1027,11 @@
           "sourceIds": {
             "col": [
               "L3NC"
-            ]
+            ],
+            "checklistbank": "2070859"
           },
-          "authorityIds": "col:L3NC"
+          "authorityIds": "col:L3NC",
+          "authorship": "(Levi, 1958)"
         },
         {
           "id": "SP_BATZELLA_CATARINENSIS_ESTEVES_DE_PAULA_LERNER_L_BO_HAJDU_HAJDU_2018",
@@ -1320,6 +1322,18 @@
           "lineage": "Batzella",
           "sourceIds": {
             "checklistbank": "ott5440745"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BATZELLA_SP",
+          "name": "Batzella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Batzella",
+          "sourceIds": {
+            "checklistbank": "2974088"
           },
           "children": []
         }
@@ -2389,10 +2403,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chondropsidae"
+    },
+    {
+      "id": "GENUS_CHONDROPSIDAE",
+      "name": "Chondropsidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHONDROPSIDAE_SP",
+          "name": "Chondropsidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chondropsidae",
+          "sourceIds": {
+            "checklistbank": "3023835"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chondropsidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 138,
+  "genusCount": 7,
+  "speciesCount": 140,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2401,6 +2436,6 @@
       "orderKey": 668,
       "familyKey": 8142
     },
-    "checklistbank": "ott174869"
+    "checklistbank": "491774"
   }
 }

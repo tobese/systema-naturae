@@ -25,9 +25,11 @@
           "sourceIds": {
             "itis": [
               "6346"
-            ]
+            ],
+            "checklistbank": "44656"
           },
-          "authorityIds": "itis:6346"
+          "authorityIds": "itis:6346",
+          "authorship": "(Kuetzing) Klebs"
         },
         {
           "id": "SP_PROTOSIPHON_CINNAMOMEUS",
@@ -38,6 +40,18 @@
           "lineage": "Protosiphon",
           "children": [],
           "uuid": "65fc30b9-91a3-5c5-af9-c3cb9bf1ed8ac2"
+        },
+        {
+          "id": "SP_PROTOSIPHON_SP",
+          "name": "Protosiphon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protosiphon",
+          "sourceIds": {
+            "checklistbank": "1068950"
+          },
+          "children": []
         }
       ]
     },
@@ -58,7 +72,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "33de42db-dab0-5b3-89a-0bbf635c386c96"
+          "uuid": "33de42db-dab0-5b3-89a-0bbf635c386c96",
+          "authorship": "Q.Yan & G.Liu, 2022",
+          "sourceIds": {
+            "checklistbank": "2911531"
+          }
         },
         {
           "id": "SP_SPONGIOSARCINOPSIS_TERRESTRIS",
@@ -68,7 +86,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Spongiosarcinopsis",
           "children": [],
-          "uuid": "83379ebb-6155-53c-a5e-3f5f11687dbc06"
+          "uuid": "83379ebb-6155-53c-a5e-3f5f11687dbc06",
+          "authorship": "A.Temraleeva, S.Moskalenko, E.Mincheva, Y.Bukin & M.Sinetova, 2019",
+          "sourceIds": {
+            "checklistbank": "2053957"
+          }
         },
         {
           "id": "SP_SPONGIOSARCINOPSIS_LIMNEUS",
@@ -78,7 +100,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Spongiosarcinopsis",
           "children": [],
-          "uuid": "f7fa72b0-8a72-576-bf2-04f8bca352ddb8"
+          "uuid": "f7fa72b0-8a72-576-bf2-04f8bca352ddb8",
+          "authorship": "Lortou & Gkelis, 2022",
+          "sourceIds": {
+            "checklistbank": "3035977"
+          }
+        },
+        {
+          "id": "SP_SPONGIOSARCINOPSIS_SP",
+          "name": "Spongiosarcinopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongiosarcinopsis",
+          "sourceIds": {
+            "checklistbank": "3134988"
+          },
+          "children": []
         }
       ]
     },
@@ -177,6 +215,45 @@
             "checklistbank": "ott7042584"
           },
           "children": []
+        },
+        {
+          "id": "SP_SPONGIOCHLORIS_SPONGIOSA_VISCHER_R_C_STARR_1955",
+          "name": "Spongiochloris spongiosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongiochloris",
+          "authorship": "(Vischer) R.C.Starr, 1955",
+          "sourceIds": {
+            "checklistbank": "50045"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPONGIOCHLORIS_GIGANTEA_BISCHOFF_BOLD_1963",
+          "name": "Spongiochloris gigantea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongiochloris",
+          "authorship": "Bischoff & Bold, 1963",
+          "sourceIds": {
+            "checklistbank": "2969186"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPONGIOCHLORIS_LAMELLATA_DEASON_BOLD_1960",
+          "name": "Spongiochloris lamellata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spongiochloris",
+          "authorship": "Deason & Bold, 1960",
+          "sourceIds": {
+            "checklistbank": "2969188"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -214,10 +291,114 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protosiphonaceae"
+    },
+    {
+      "id": "GENUS_VALERIELLA",
+      "name": "Valeriella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VALERIELLA_EXCENTRICA_R_C_STARR_DARIENKO_PROSCHOLD_2022",
+          "name": "Valeriella excentrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valeriella",
+          "authorship": "(R.C.Starr) Darienko & Proschold, 2022",
+          "sourceIds": {
+            "checklistbank": "1521744"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VALERIELLA_INCRASSATA_CHANTANACHAT_H_C_BOLD_DARIENKO_PROSCHOLD_2022",
+          "name": "Valeriella incrassata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valeriella",
+          "authorship": "(Chantanachat & H.C.Bold) Darienko & Proschold, 2022",
+          "sourceIds": {
+            "checklistbank": "2969187"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VALERIELLA_MINOR_CHANTANACHAT_H_C_BOLD_DARIENKO_PROSCHOLD_2022",
+          "name": "Valeriella minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valeriella",
+          "authorship": "(Chantanachat & H.C.Bold) Darienko & Proschold, 2022",
+          "sourceIds": {
+            "checklistbank": "2969190"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protosiphonaceae"
+    },
+    {
+      "id": "GENUS_PROTOSIPHONACEAE",
+      "name": "Protosiphonaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTOSIPHONACEAE_SP",
+          "name": "Protosiphonaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protosiphonaceae",
+          "sourceIds": {
+            "checklistbank": "2782594"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protosiphonaceae"
+    },
+    {
+      "id": "GENUS_PHARAO",
+      "name": "Pharao",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHARAO_LLANOENSE_H_W_BISCHOFF_H_C_BOLD_DARIENKO_PROSCHOLD_2022",
+          "name": "Pharao llanoense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pharao",
+          "authorship": "(H.W.Bischoff & H.C.Bold) Darienko & Proschold, 2022",
+          "sourceIds": {
+            "checklistbank": "2969189"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHARAO_TYPICUM_TRAINOR_R_J_MCLEAN_DARIENKO_PROSCHOLD_2022",
+          "name": "Pharao typicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pharao",
+          "authorship": "(Trainor & R.J.McLean) Darienko & Proschold, 2022",
+          "sourceIds": {
+            "checklistbank": "2969191"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protosiphonaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 14,
+  "genusCount": 8,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -226,6 +407,6 @@
       "orderKey": 8223403,
       "familyKey": 2032
     },
-    "checklistbank": "ott5153314"
+    "checklistbank": "2491658"
   }
 }

@@ -32,7 +32,8 @@
             ],
             "col": [
               "B39MS"
-            ]
+            ],
+            "checklistbank": "3025480"
           },
           "uuid": "bb58c365-894a-52d-b8e-b51524141c0fa2",
           "authorityIds": "col:B39MS,gbif:12214618,mycobank:836244"
@@ -58,7 +59,8 @@
             ],
             "col": [
               "B35CW"
-            ]
+            ],
+            "checklistbank": "984092"
           },
           "uuid": "5c2bb971-1211-5ef-9f4-897c0f5b2ba5f5",
           "authorityIds": "col:B35CW,gbif:12238587,mycobank:836245"
@@ -84,7 +86,8 @@
             ],
             "col": [
               "B34ZX"
-            ]
+            ],
+            "checklistbank": "3049150"
           },
           "uuid": "0e12d8e8-fcf7-5c3-a33-d2787fdd2a341d",
           "authorityIds": "col:B34ZX,gbif:12203831,mycobank:836246"
@@ -110,7 +113,8 @@
             ],
             "col": [
               "B39YN"
-            ]
+            ],
+            "checklistbank": "1227662"
           },
           "uuid": "615312aa-73e9-512-833-9b0fbed07bc829",
           "authorityIds": "col:B39YN,gbif:12232482,mycobank:836247"
@@ -136,7 +140,8 @@
             ],
             "col": [
               "B32DY"
-            ]
+            ],
+            "checklistbank": "937382"
           },
           "uuid": "4b4f74de-e0a3-58c-bd8-5c0febab44638e",
           "authorityIds": "col:B32DY,gbif:12186490,mycobank:836248"
@@ -162,7 +167,8 @@
             ],
             "col": [
               "B2ZWX"
-            ]
+            ],
+            "checklistbank": "3025451"
           },
           "uuid": "edd56ac0-5f4b-565-9c9-aaf827064efc89",
           "authorityIds": "col:B2ZWX,gbif:12231977,mycobank:846048"
@@ -188,7 +194,8 @@
             ],
             "col": [
               "B33N4"
-            ]
+            ],
+            "checklistbank": "3025450"
           },
           "uuid": "7866580d-8e18-5b7-8a5-ecb370394e9db6",
           "authorityIds": "col:B33N4,gbif:12245737,mycobank:846045"
@@ -243,7 +250,8 @@
             ],
             "col": [
               "6FHP5"
-            ]
+            ],
+            "checklistbank": "58153"
           },
           "uuid": "c10323b2-b640-5b1-987-c48942d24e7d45",
           "authorityIds": "col:6FHP5,gbif:2560143,mycobank:313899"
@@ -269,7 +277,8 @@
             ],
             "col": [
               "B37W6"
-            ]
+            ],
+            "checklistbank": "118615"
           },
           "uuid": "903d8239-cc1d-570-82b-16fd3773c8ffaa",
           "authorityIds": "col:B37W6,gbif:12266640,mycobank:836250"
@@ -295,7 +304,8 @@
             ],
             "col": [
               "B3756"
-            ]
+            ],
+            "checklistbank": "1403560"
           },
           "uuid": "e9a4f43b-ec9a-52b-966-0f159e81ab46bb",
           "authorityIds": "col:B3756,gbif:12210486,mycobank:836251"
@@ -321,7 +331,8 @@
             ],
             "col": [
               "B336N"
-            ]
+            ],
+            "checklistbank": "330898"
           },
           "uuid": "af75f465-f6f4-5df-ab7-1559799f61ae0e",
           "authorityIds": "col:B336N,gbif:12239071,mycobank:836252"
@@ -357,6 +368,31 @@
             ]
           },
           "authorityIds": "mycobank:363741"
+        },
+        {
+          "id": "SP_ENTROPHOSPORA_SP",
+          "name": "Entrophospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entrophospora",
+          "sourceIds": {
+            "checklistbank": "27377"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENTROPHOSPORA_HANLINII_BASZK_CHWAT_GORALSKA_BASZK_NIEZGODA_B_T_GOTO_MAGURNO_2022",
+          "name": "Entrophospora hanlinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entrophospora",
+          "authorship": "(Baszk., Chwat & Goralska) Baszk., Niezgoda, B.T. Goto & Magurno, 2022",
+          "sourceIds": {
+            "checklistbank": "1635129"
+          },
+          "children": []
         }
       ],
       "authorship": "R.N. Ames & R.W. Schneider"
@@ -401,11 +437,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "entrophosporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ENTROPHOSPORA",
+          "name": "uncultured Entrophospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1150877"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ENTROPHOSPORACEAE",
+          "name": "uncultured Entrophosporaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1381340"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entrophosporaceae"
+    },
+    {
+      "id": "GENUS_ENTROPHOSPORACEAE",
+      "name": "Entrophosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENTROPHOSPORACEAE_SP",
+          "name": "Entrophosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entrophosporaceae",
+          "sourceIds": {
+            "checklistbank": "1921605"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entrophosporaceae"
     }
   ],
   "authorship": "Oehl & Sieverding",
-  "genusCount": 2,
-  "speciesCount": 16,
+  "genusCount": 4,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -413,6 +503,7 @@
       "classKey": 156,
       "orderKey": 12260499,
       "familyKey": 3555748
-    }
+    },
+    "checklistbank": "3025479"
   }
 }

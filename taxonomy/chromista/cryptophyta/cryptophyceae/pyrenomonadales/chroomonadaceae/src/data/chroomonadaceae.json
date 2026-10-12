@@ -319,7 +319,8 @@
           },
           "children": [],
           "uuid": "4f6fd7de-7941-5ee-887-d337040380171f",
-          "authorityIds": "gbif:3202583"
+          "authorityIds": "gbif:3202583",
+          "authorship": "(Geitler) Skuja, 1948"
         },
         {
           "id": "CHROOMONAS_COLLEGIONIS",
@@ -339,11 +340,13 @@
             ],
             "itis": [
               "10623"
-            ]
+            ],
+            "checklistbank": "2867499"
           },
           "children": [],
           "uuid": "e2207441-6486-51a-95e-8890990e4a3035",
-          "authorityIds": "gbif:8033086,itis:10623"
+          "authorityIds": "gbif:8033086,itis:10623",
+          "authorship": "Butcher ex Hill, 1991"
         },
         {
           "id": "CHROOMONAS_COMMUTATA",
@@ -590,11 +593,13 @@
             ],
             "itis": [
               "10627"
-            ]
+            ],
+            "checklistbank": "195065"
           },
           "children": [],
           "uuid": "c9ffe6d5-ae0f-5be-8b9-82af954a7e0224",
-          "authorityIds": "gbif:7976188,itis:10627"
+          "authorityIds": "gbif:7976188,itis:10627",
+          "authorship": "Butcher ex D.R.A.Hill, 1991"
         },
         {
           "id": "CHROOMONAS_MINUTA",
@@ -688,7 +693,8 @@
           },
           "children": [],
           "uuid": "c6be34ec-9589-5d0-a8d-4794e436cbc338",
-          "authorityIds": "gbif:8021913,itis:10634"
+          "authorityIds": "gbif:8021913,itis:10634",
+          "authorship": "Hansgirg, 1885"
         },
         {
           "id": "CHROOMONAS_PLACOIDEA",
@@ -703,11 +709,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 8108875
+            "gbif": 8108875,
+            "checklistbank": "173977"
           },
           "children": [],
           "uuid": "c62d4de1-4c1e-52a-b6f-6522445f0ba136",
-          "authorityIds": "gbif:8108875"
+          "authorityIds": "gbif:8108875",
+          "authorship": "Butcher ex G.Novarino & I.A.N.Lucas, 1993"
         },
         {
           "id": "CHROOMONAS_PLUROCOCCA",
@@ -925,6 +933,57 @@
             "checklistbank": "1157683"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHROOMONAS_SP",
+          "name": "Chroomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroomonas",
+          "sourceIds": {
+            "checklistbank": "3029"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHROOMONAS_POCHMANNII_HUBER_PESTALOZZI_1950",
+          "name": "Chroomonas pochmannii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroomonas",
+          "authorship": "Huber-Pestalozzi, 1950",
+          "sourceIds": {
+            "checklistbank": "478128"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHROOMONAS_AFRICANA_MEYER_PIENAAR_1984",
+          "name": "Chroomonas africana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroomonas",
+          "authorship": "Meyer & Pienaar, 1984",
+          "sourceIds": {
+            "checklistbank": "1379283"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHROOMONAS_GENTOFTENSIS_HOEF_EMDEN_2018",
+          "name": "Chroomonas gentoftensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroomonas",
+          "authorship": "Hoef-Emden, 2018",
+          "sourceIds": {
+            "checklistbank": "2058883"
+          },
+          "children": []
         }
       ]
     },
@@ -948,11 +1007,25 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202569
+            "gbif": 3202569,
+            "checklistbank": "95528"
           },
           "children": [],
           "uuid": "41d7692d-0955-5fe-9bd-377dcb555f1532",
-          "authorityIds": "gbif:3202569"
+          "authorityIds": "gbif:3202569",
+          "authorship": "(W.Conrad & H.Kufferath) D.R.A.Hill, 1991"
+        },
+        {
+          "id": "SP_FALCOMONAS_SP",
+          "name": "Falcomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falcomonas",
+          "sourceIds": {
+            "checklistbank": "1091505"
+          },
+          "children": []
         }
       ]
     },
@@ -984,12 +1057,90 @@
           "uuid": "9d9df033-9af7-54e-98c-006888a7cc1c93",
           "authorityIds": "gbif:3202600",
           "authorship": "(L.Geitler) D.R.A.Hill, 1991"
+        },
+        {
+          "id": "SP_KOMMA_SP",
+          "name": "Komma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Komma",
+          "sourceIds": {
+            "checklistbank": "3055155"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHROOMONAS",
+          "name": "uncultured Chroomonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108283"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_KOMMA",
+          "name": "uncultured Komma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108284"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FALCOMONAS",
+          "name": "uncultured Falcomonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2587255"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chroomonadaceae"
+    },
+    {
+      "id": "GENUS_CHROOMONADACEAE",
+      "name": "Chroomonadaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHROOMONADACEAE_SP",
+          "name": "Chroomonadaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroomonadaceae",
+          "sourceIds": {
+            "checklistbank": "2571262"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chroomonadaceae"
     }
   ],
-  "speciesCount": 45,
-  "genusCount": 4,
+  "speciesCount": 55,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -997,6 +1148,7 @@
       "classKey": 257,
       "orderKey": 1083,
       "familyKey": 2900
-    }
+    },
+    "checklistbank": "589345"
   }
 }

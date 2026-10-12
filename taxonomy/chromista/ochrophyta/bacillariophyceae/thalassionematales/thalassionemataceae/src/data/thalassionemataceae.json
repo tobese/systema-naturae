@@ -326,7 +326,8 @@
           "sourceIds": {
             "itis": [
               "573698"
-            ]
+            ],
+            "checklistbank": "1604852"
           },
           "authorityIds": "itis:573698"
         },
@@ -353,6 +354,18 @@
           "lineage": "Thalassionema",
           "sourceIds": {
             "checklistbank": "697601"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THALASSIONEMA_SP",
+          "name": "Thalassionema sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassionema",
+          "sourceIds": {
+            "checklistbank": "216620"
           },
           "children": []
         }
@@ -843,6 +856,18 @@
             "checklistbank": "697607"
           },
           "children": []
+        },
+        {
+          "id": "SP_THALASSIOTHRIX_SP",
+          "name": "Thalassiothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thalassiothrix",
+          "sourceIds": {
+            "checklistbank": "3102931"
+          },
+          "children": []
         }
       ]
     },
@@ -917,6 +942,18 @@
           "uuid": "fdb4777a-21e1-56e-8e5-5385e30135c37f",
           "authorityIds": "gbif:8241374",
           "authorship": "(Cupp) Hasle, 1996"
+        },
+        {
+          "id": "SP_LIOLOMA_SP",
+          "name": "Lioloma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lioloma",
+          "sourceIds": {
+            "checklistbank": "3471100"
+          },
+          "children": []
         }
       ]
     },
@@ -1037,10 +1074,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thalassionemataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THALASSIONEMA",
+          "name": "uncultured Thalassionema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "941244"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalassionemataceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 54,
+  "genusCount": 8,
+  "speciesCount": 58,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1048,6 +1106,7 @@
       "classKey": 7947184,
       "orderKey": 8391761,
       "familyKey": 7629877
-    }
+    },
+    "checklistbank": "38755"
   }
 }

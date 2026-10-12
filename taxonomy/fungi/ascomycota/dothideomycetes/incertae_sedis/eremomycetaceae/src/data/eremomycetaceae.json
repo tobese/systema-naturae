@@ -25,7 +25,8 @@
             ],
             "col": [
               "4S6RZ"
-            ]
+            ],
+            "checklistbank": "1341171"
           },
           "uuid": "bd44924d-2bc5-536-bd4-1c60e06a2aa1c7",
           "authorityIds": "col:4S6RZ,gbif:2626722,mycobank:322458",
@@ -57,10 +58,23 @@
             ],
             "col": [
               "6GG7G"
-            ]
+            ],
+            "checklistbank": "1341166"
           },
           "uuid": "f9711131-e766-519-af4-62e521781878ef",
           "authorityIds": "col:6GG7G,gbif:2626723,mycobank:313945",
+          "children": []
+        },
+        {
+          "id": "SP_EREMOMYCES_SP",
+          "name": "Eremomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eremomyces",
+          "sourceIds": {
+            "checklistbank": "2860030"
+          },
           "children": []
         }
       ],
@@ -112,7 +126,8 @@
             ],
             "col": [
               "GYP3"
-            ]
+            ],
+            "checklistbank": "1341162"
           },
           "uuid": "d0252d0f-fb66-57e-98c-bb4e33e1785b00",
           "authorityIds": "col:GYP3,gbif:8183147,mycobank:804633",
@@ -135,7 +150,8 @@
             ],
             "col": [
               "GYNX"
-            ]
+            ],
+            "checklistbank": "1537659"
           },
           "uuid": "76445d72-ff89-57f-b43-5b5814e64dd3ce",
           "authorityIds": "col:GYNX,gbif:7782686,mycobank:804634",
@@ -182,7 +198,8 @@
             ],
             "col": [
               "GYP2"
-            ]
+            ],
+            "checklistbank": "1341163"
           },
           "uuid": "cf795605-0eef-556-9ed-a1eac29ba2796a",
           "authorityIds": "col:GYP2,gbif:8147521,mycobank:804630",
@@ -205,7 +222,8 @@
             ],
             "col": [
               "GYNY"
-            ]
+            ],
+            "checklistbank": "1341164"
           },
           "uuid": "9943305e-76a9-595-b36-cfef85fc2a2682",
           "authorityIds": "col:GYNY,gbif:7863245,mycobank:804632",
@@ -228,7 +246,8 @@
             ],
             "col": [
               "9YNLX"
-            ]
+            ],
+            "checklistbank": "2682943"
           },
           "uuid": "33c53f0a-f1f5-5cb-a20-60ffcb29c45c96",
           "authorityIds": "col:9YNLX,gbif:11868952,mycobank:833677",
@@ -297,7 +316,8 @@
             ],
             "col": [
               "GYP6"
-            ]
+            ],
+            "checklistbank": "1341161"
           },
           "uuid": "a7ff4beb-235c-540-bfa-1f8e032ed076fc",
           "authorityIds": "col:GYP6,gbif:7789163,mycobank:804631",
@@ -326,6 +346,18 @@
           "authorship": "Cochet, 1938",
           "sourceIds": {
             "checklistbank": "1078628"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARTHROGRAPHIS_SP",
+          "name": "Arthrographis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arthrographis",
+          "sourceIds": {
+            "checklistbank": "471517"
           },
           "children": []
         }
@@ -398,19 +430,74 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eremomycetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ARTHROGRAPHIS",
+          "name": "uncultured Arthrographis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1235301"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_EREMOMYCES",
+          "name": "uncultured Eremomyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1562390"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eremomycetaceae"
+    },
+    {
+      "id": "GENUS_EREMOMYCETACEAE",
+      "name": "Eremomycetaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EREMOMYCETACEAE_SP",
+          "name": "Eremomycetaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eremomycetaceae",
+          "sourceIds": {
+            "checklistbank": "2012114"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eremomycetaceae"
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 22,
   "appSlug": "eremomycetaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Dothideomycetes",
-  "genusCount": 6,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
       "phylumKey": 95,
       "classKey": 183,
       "familyKey": 5745
-    }
+    },
+    "checklistbank": "241722"
   }
 }

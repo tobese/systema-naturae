@@ -628,7 +628,8 @@
           "sourceIds": {
             "itis": [
               "9317"
-            ]
+            ],
+            "checklistbank": "325652"
           },
           "authorityIds": "itis:9317"
         },
@@ -730,7 +731,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e5b06b5c-468a-536-89c-0cfb16b2fb1fee"
+          "uuid": "e5b06b5c-468a-536-89c-0cfb16b2fb1fee",
+          "authorship": "J.Agardh",
+          "sourceIds": {
+            "checklistbank": "511813"
+          }
         },
         {
           "id": "SP_BRYOPSIS_BALBISIANA_NULL",
@@ -1085,7 +1090,8 @@
           "sourceIds": {
             "checklistbank": "63627"
           },
-          "children": []
+          "children": [],
+          "authorship": "Areschoug, 1851"
         },
         {
           "id": "SP_BRYOPSIS_AISHAE",
@@ -1121,7 +1127,8 @@
           "sourceIds": {
             "checklistbank": "327032"
           },
-          "children": []
+          "children": [],
+          "authorship": "Okamura ex Segawa"
         },
         {
           "id": "SP_BRYOPSIS_GALAPAGENSIS",
@@ -1169,7 +1176,8 @@
           "sourceIds": {
             "checklistbank": "704317"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kuetzing"
         },
         {
           "id": "SP_BRYOPSIS_MACRAILDII",
@@ -1373,7 +1381,8 @@
           "sourceIds": {
             "checklistbank": "ott4002275"
           },
-          "children": []
+          "children": [],
+          "authorship": "Sonder"
         },
         {
           "id": "SP_BRYOPSIS_MAGELLANICA",
@@ -1866,6 +1875,18 @@
             "checklistbank": "ott7567172"
           },
           "children": []
+        },
+        {
+          "id": "SP_BRYOPSIS_SP",
+          "name": "Bryopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryopsis",
+          "sourceIds": {
+            "checklistbank": "103784"
+          },
+          "children": []
         }
       ]
     },
@@ -1934,7 +1955,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Lambia",
           "children": [],
-          "uuid": "2fbc4562-8dfd-51f-9ff-c95f7e8760230e"
+          "uuid": "2fbc4562-8dfd-51f-9ff-c95f7e8760230e",
+          "authorship": "(Skottsberg) Delepine",
+          "sourceIds": {
+            "checklistbank": "101717"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1953,7 +1978,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pseudoderbesia",
           "children": [],
-          "uuid": "a639f7c6-3324-54a-95a-2270a6ad0e50a7"
+          "uuid": "a639f7c6-3324-54a-95a-2270a6ad0e50a7",
+          "authorship": "E.Calderon & Schnetter, 1991",
+          "sourceIds": {
+            "checklistbank": "2320809"
+          }
         },
         {
           "id": "SP_PSEUDODERBESIA_ECKLONIAE",
@@ -1963,7 +1992,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pseudoderbesia",
           "children": [],
-          "uuid": "09c1f8f1-f111-5a8-b9d-1b9fbbed4931b1"
+          "uuid": "09c1f8f1-f111-5a8-b9d-1b9fbbed4931b1",
+          "authorship": "Huisman & Verbruggen, 2020",
+          "sourceIds": {
+            "checklistbank": "2797641"
+          }
+        },
+        {
+          "id": "SP_PSEUDODERBESIA_SP",
+          "name": "Pseudoderbesia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoderbesia",
+          "sourceIds": {
+            "checklistbank": "1501514"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2132,10 +2177,98 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bryopsidaceae"
+    },
+    {
+      "id": "GENUS_PSEUDOCHLORODESMIS",
+      "name": "Pseudochlorodesmis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCHLORODESMIS_FURCELLATA_ZANARDINI_BORGESEN",
+          "name": "Pseudochlorodesmis furcellata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudochlorodesmis",
+          "authorship": "(Zanardini) Borgesen",
+          "sourceIds": {
+            "checklistbank": "575870"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOCHLORODESMIS_SP",
+          "name": "Pseudochlorodesmis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudochlorodesmis",
+          "sourceIds": {
+            "checklistbank": "575872"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bryopsidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PSEUDOCHLORODESMIS",
+          "name": "uncultured Pseudochlorodesmis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1818007"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BRYOPSIS",
+          "name": "uncultured Bryopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1818008"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bryopsidaceae"
+    },
+    {
+      "id": "GENUS_BRYOPSIDACEAE",
+      "name": "Bryopsidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRYOPSIDACEAE_SP",
+          "name": "Bryopsidaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryopsidaceae",
+          "sourceIds": {
+            "checklistbank": "1818128"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bryopsidaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 153,
+  "genusCount": 16,
+  "speciesCount": 160,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -2144,6 +2277,6 @@
       "orderKey": 625,
       "familyKey": 8774
     },
-    "checklistbank": "ott59849"
+    "checklistbank": "3127"
   }
 }

@@ -246,6 +246,18 @@
           "authorityIds": "col:N9DM,gbif:8118209",
           "children": [],
           "authorship": "Kahl"
+        },
+        {
+          "id": "SP_BRESSLAUA_SP",
+          "name": "Bresslaua sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bresslaua",
+          "sourceIds": {
+            "checklistbank": "2820102"
+          },
+          "children": []
         }
       ]
     },
@@ -745,7 +757,8 @@
           },
           "uuid": "d91a2729-563c-562-9d1-1690f37cf36e7d",
           "authorityIds": "col:X95H,gbif:8140440",
-          "children": []
+          "children": [],
+          "authorship": "Smith, 1899"
         },
         {
           "id": "COLPODA_HENNEGUYI",
@@ -1197,7 +1210,8 @@
           },
           "uuid": "e9c7802e-658f-566-977-df5039ccb7c2d8",
           "authorityIds": "col:X96D,gbif:7552767",
-          "children": []
+          "children": [],
+          "authorship": "Kahl, 1931"
         },
         {
           "id": "COLPODA_ROTUNDA",
@@ -1317,7 +1331,8 @@
           },
           "uuid": "41daf6b9-82be-559-81f-238bba7538ef55",
           "authorityIds": "col:X96T,gbif:7841800",
-          "children": []
+          "children": [],
+          "authorship": "Foissner, 1980"
         },
         {
           "id": "SP_COLPODA_STEINI_MAUPAS_1883",
@@ -1368,6 +1383,18 @@
           "lineage": "Colpoda",
           "sourceIds": {
             "checklistbank": "1060650"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLPODA_SP",
+          "name": "Colpoda sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colpoda",
+          "sourceIds": {
+            "checklistbank": "41631"
           },
           "children": []
         }
@@ -1843,14 +1870,80 @@
             "checklistbank": "1060643"
           },
           "children": []
+        },
+        {
+          "id": "SP_EXOCOLPODA_SP",
+          "name": "Exocolpoda sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Exocolpoda",
+          "sourceIds": {
+            "checklistbank": "3388125"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colpodidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_COLPODA",
+          "name": "uncultured Colpoda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "346658"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_COLPODIDAE",
+          "name": "uncultured Colpodidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "798211"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colpodidae"
+    },
+    {
+      "id": "GENUS_COLPODIDAE",
+      "name": "Colpodidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLPODIDAE_SP",
+          "name": "Colpodidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colpodidae",
+          "sourceIds": {
+            "checklistbank": "3061793"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "colpodidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 76,
+  "genusCount": 17,
+  "speciesCount": 82,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1859,6 +1952,6 @@
       "orderKey": 7773411,
       "familyKey": 7881076
     },
-    "checklistbank": "46770095-13c5-4037-8438-00f86b92c815"
+    "checklistbank": "5978"
   }
 }

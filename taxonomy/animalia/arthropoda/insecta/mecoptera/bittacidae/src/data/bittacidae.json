@@ -116,10 +116,12 @@
             ],
             "col": [
               "C93NH"
-            ]
+            ],
+            "checklistbank": "172808"
           },
           "uuid": "e7048159-8944-5b3-a9c-380f1d85bf4e26",
-          "authorityIds": "col:C93NH,gbif:1031878,itis:660890"
+          "authorityIds": "col:C93NH,gbif:1031878,itis:660890",
+          "authorship": "Westwood, 1846"
         },
         {
           "id": "SP_BITTACUS_PUNCTIGER",
@@ -141,10 +143,12 @@
             ],
             "itis": [
               "660891"
-            ]
+            ],
+            "checklistbank": "185829"
           },
           "uuid": "9e5aa524-3ee5-5f1-866-dcf3bdc2fe5c2f",
-          "authorityIds": "col:C93NJ,gbif:1031875,itis:660891"
+          "authorityIds": "col:C93NJ,gbif:1031875,itis:660891",
+          "authorship": "Westwood, 1846"
         },
         {
           "id": "SP_BITTACUS_STIGMATERUS",
@@ -166,10 +170,12 @@
             ],
             "itis": [
               "660892"
-            ]
+            ],
+            "checklistbank": "185831"
           },
           "uuid": "620a9c91-1cc8-5c1-806-21094a4244acf6",
-          "authorityIds": "col:5WKG8,gbif:1031872,itis:660892"
+          "authorityIds": "col:5WKG8,gbif:1031872,itis:660892",
+          "authorship": "Say, 1823"
         },
         {
           "id": "SP_BITTACUS_STRIGOSUS",
@@ -193,10 +199,12 @@
             ],
             "col": [
               "5WKFV"
-            ]
+            ],
+            "checklistbank": "50433"
           },
           "uuid": "ac209156-7c6f-525-862-5408f20fe2e17b",
-          "authorityIds": "col:5WKFV,gbif:1031877,itis:660893"
+          "authorityIds": "col:5WKFV,gbif:1031877,itis:660893",
+          "authorship": "Hagen, 1861"
         },
         {
           "id": "SP_BITTACUS_TEXANUS",
@@ -3712,6 +3720,19 @@
             "checklistbank": "ott7870324"
           },
           "children": []
+        },
+        {
+          "id": "SP_BITTACUS_PURIPENNIS_CAI_HUA_2006",
+          "name": "Bittacus puripennis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bittacus",
+          "authorship": "Cai & Hua, 2006",
+          "sourceIds": {
+            "checklistbank": "3385965"
+          },
+          "children": []
         }
       ]
     },
@@ -3741,10 +3762,12 @@
             ],
             "itis": [
               "660887"
-            ]
+            ],
+            "checklistbank": "173799"
           },
           "uuid": "13f00af4-c449-5e2-b09-e7180fccafc887",
-          "authorityIds": "col:3NFSB,gbif:1031880,itis:660887"
+          "authorityIds": "col:3NFSB,gbif:1031880,itis:660887",
+          "authorship": "(Hagen, 1861)"
         }
       ]
     },
@@ -5474,10 +5497,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bittacidae"
+    },
+    {
+      "id": "GENUS_BITTACIDAE",
+      "name": "Bittacidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BITTACIDAE_SP",
+          "name": "Bittacidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bittacidae",
+          "sourceIds": {
+            "checklistbank": "674122"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bittacidae"
     }
   ],
-  "genusCount": 27,
-  "speciesCount": 263,
+  "genusCount": 28,
+  "speciesCount": 265,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -5486,6 +5530,6 @@
       "orderKey": 1000,
       "familyKey": 6991
     },
-    "checklistbank": "ott1094291"
+    "checklistbank": "27422"
   }
 }

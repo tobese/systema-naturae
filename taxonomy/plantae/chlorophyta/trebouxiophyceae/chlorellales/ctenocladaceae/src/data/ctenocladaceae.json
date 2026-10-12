@@ -31,7 +31,8 @@
           "sourceIds": {
             "checklistbank": "1473197"
           },
-          "children": []
+          "children": [],
+          "authorship": "Borzi"
         }
       ]
     },
@@ -87,7 +88,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pseudopleurococcus",
           "children": [],
-          "uuid": "7d54d9d1-d0dd-5c9-993-0e07cc30729d8c"
+          "uuid": "7d54d9d1-d0dd-5c9-993-0e07cc30729d8c",
+          "authorship": "Vischer, 1933",
+          "sourceIds": {
+            "checklistbank": "1400012"
+          }
+        },
+        {
+          "id": "SP_PSEUDOPLEUROCOCCUS_SP",
+          "name": "Pseudopleurococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudopleurococcus",
+          "sourceIds": {
+            "checklistbank": "2184263"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -106,7 +123,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Rindifilum",
           "children": [],
-          "uuid": "66d6b06a-ff29-55d-8ce-bf1c34ab74e9ab"
+          "uuid": "66d6b06a-ff29-55d-8ce-bf1c34ab74e9ab",
+          "authorship": "(Darienko & Proschold) Malavasi & Skaloud, 2022",
+          "sourceIds": {
+            "checklistbank": "2926371"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -137,10 +158,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ctenocladaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PSEUDOPLEUROCOCCUS",
+          "name": "uncultured Pseudopleurococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2588599"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenocladaceae"
+    },
+    {
+      "id": "GENUS_CTENOCLADACEAE",
+      "name": "Ctenocladaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CTENOCLADACEAE_SP",
+          "name": "Ctenocladaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenocladaceae",
+          "sourceIds": {
+            "checklistbank": "3237801"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ctenocladaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 8,
+  "genusCount": 7,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -148,6 +211,7 @@
       "classKey": 332,
       "orderKey": 1359,
       "familyKey": 3229756
-    }
+    },
+    "checklistbank": "37386"
   }
 }

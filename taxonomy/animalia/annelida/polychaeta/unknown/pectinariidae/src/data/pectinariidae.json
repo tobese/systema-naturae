@@ -505,9 +505,11 @@
           "sourceIds": {
             "col": [
               "VLDC"
-            ]
+            ],
+            "checklistbank": "649695"
           },
-          "authorityIds": "col:VLDC"
+          "authorityIds": "col:VLDC",
+          "authorship": "(Hessle, 1917)"
         },
         {
           "id": "SP_CISTENIDES_GRANULATA",
@@ -1880,9 +1882,11 @@
           "sourceIds": {
             "col": [
               "3RX5F"
-            ]
+            ],
+            "checklistbank": "2943811"
           },
-          "authorityIds": "col:3RX5F"
+          "authorityIds": "col:3RX5F",
+          "authorship": "(Hessle, 1917)"
         },
         {
           "id": "SP_LAGIS_CRENULATUS_SUN_QIU_2012",
@@ -2130,6 +2134,18 @@
           "lineage": "Lagis",
           "sourceIds": {
             "checklistbank": "ott7918460"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LAGIS_SP",
+          "name": "Lagis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lagis",
+          "sourceIds": {
+            "checklistbank": "3470628"
           },
           "children": []
         }
@@ -2470,10 +2486,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pectinariidae"
+    },
+    {
+      "id": "GENUS_PECTINARIIDAE",
+      "name": "Pectinariidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PECTINARIIDAE_SP",
+          "name": "Pectinariidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinariidae",
+          "sourceIds": {
+            "checklistbank": "2841880"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pectinariidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 143,
+  "genusCount": 10,
+  "speciesCount": 145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2481,6 +2518,6 @@
       "classKey": 256,
       "familyKey": 7096
     },
-    "checklistbank": "ott208983"
+    "checklistbank": "104750"
   }
 }

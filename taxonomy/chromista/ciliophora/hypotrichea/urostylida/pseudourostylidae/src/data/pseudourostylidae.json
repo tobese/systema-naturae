@@ -99,11 +99,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8596661
+            "gbif": 8596661,
+            "checklistbank": "1161425"
           },
           "uuid": "5aca4817-6599-577-a4c-2cc9c0e84b1930",
           "authorityIds": "gbif:8596661",
-          "children": []
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
         },
         {
           "id": "PSEUDOUROSTYLA_FRANZI",
@@ -269,11 +271,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9597024
+            "gbif": 9597024,
+            "checklistbank": "1661749"
           },
           "uuid": "cd48efa7-26f4-5cd-98d-8ddeab1b4c759a",
           "authorityIds": "gbif:9597024",
-          "children": []
+          "children": [],
+          "authorship": "Chen et al., 2014"
         },
         {
           "id": "PSEUDOUROSTYLA_UROSTYLA",
@@ -297,6 +301,31 @@
           "uuid": "dd193037-09a5-59a-929-dbc5675acf9a95",
           "authorityIds": "col:78HDS,gbif:7720919",
           "authorship": "(Claparède & Lachmann, 1858) Borror, 1972",
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOUROSTYLA_SP",
+          "name": "Pseudourostyla sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudourostyla",
+          "sourceIds": {
+            "checklistbank": "617232"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOUROSTYLA_GUIZHOUENSIS_VAN_AS_BASSON_VAN_AS_1998",
+          "name": "Pseudourostyla guizhouensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudourostyla",
+          "authorship": "Van As, Basson & Van As, 1998",
+          "sourceIds": {
+            "checklistbank": "1985741"
+          },
           "children": []
         }
       ]
@@ -611,10 +640,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pseudourostylidae"
+    },
+    {
+      "id": "GENUS_NOTHOHOLOSTICHA",
+      "name": "Nothoholosticha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NOTHOHOLOSTICHA_FASCIOLA",
+          "name": "Nothoholosticha fasciola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nothoholosticha",
+          "sourceIds": {
+            "checklistbank": "693155"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NOTHOHOLOSTICHA_FLAVA_VAN_AS_BASSON_VAN_AS_1998",
+          "name": "Nothoholosticha flava",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nothoholosticha",
+          "authorship": "Van As, Basson & Van As, 1998",
+          "sourceIds": {
+            "checklistbank": "1793894"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NOTHOHOLOSTICHA_LUPORINII_ZHANG_ET_AL_2020",
+          "name": "Nothoholosticha luporinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nothoholosticha",
+          "authorship": "Zhang et al., 2020",
+          "sourceIds": {
+            "checklistbank": "2774398"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudourostylidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 27,
+  "genusCount": 6,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -623,6 +699,6 @@
       "orderKey": 7945900,
       "familyKey": 8221926
     },
-    "checklistbank": "d0ec44a0-361d-49e4-974a-2293df562fa0"
+    "checklistbank": "293814"
   }
 }

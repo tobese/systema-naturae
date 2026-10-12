@@ -154,9 +154,22 @@
           "sourceIds": {
             "itis": [
               "43992"
-            ]
+            ],
+            "checklistbank": "178378"
           },
           "authorityIds": "itis:43992"
+        },
+        {
+          "id": "SP_PSEUDODIFFLUGIA_SP",
+          "name": "Pseudodifflugia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudodifflugia",
+          "sourceIds": {
+            "checklistbank": "3388216"
+          },
+          "children": []
         }
       ]
     },
@@ -212,10 +225,23 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9263498
+            "gbif": 9263498,
+            "checklistbank": "985831"
           },
           "uuid": "4e58fe57-a7f3-5d1-9fc-43bbffe497e310",
           "authorityIds": "gbif:9263498"
+        },
+        {
+          "id": "SP_OVULINATA_SP",
+          "name": "Ovulinata sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovulinata",
+          "sourceIds": {
+            "checklistbank": "2909509"
+          },
+          "children": []
         }
       ]
     },
@@ -240,10 +266,64 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pseudodifflugiidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PSEUDODIFFLUGIIDAE",
+          "name": "uncultured Pseudodifflugiidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "765885"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PSEUDODIFFLUGIA",
+          "name": "uncultured Pseudodifflugia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2590458"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudodifflugiidae"
+    },
+    {
+      "id": "GENUS_PSEUDODIFFLUGIIDAE",
+      "name": "Pseudodifflugiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDODIFFLUGIIDAE_SP",
+          "name": "Pseudodifflugiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudodifflugiidae",
+          "sourceIds": {
+            "checklistbank": "1979841"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudodifflugiidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 9,
+  "genusCount": 8,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,
@@ -252,6 +332,6 @@
       "orderKey": 760,
       "familyKey": 2167
     },
-    "checklistbank": "ott5247658"
+    "checklistbank": "178376"
   }
 }

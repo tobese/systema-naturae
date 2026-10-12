@@ -908,7 +908,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "46e1ab4a-c09d-541-b99-488fca40fced85"
+          "uuid": "46e1ab4a-c09d-541-b99-488fca40fced85",
+          "authorship": "(Selenka, 1867)",
+          "sourceIds": {
+            "checklistbank": "2606650"
+          }
         },
         {
           "id": "SP_TEDANIA_PHACELLINA_TOPSENT_1912",
@@ -1961,7 +1965,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Tedania",
-          "uuid": "87e3d7c8-2c9c-55f-892-62665083edbfa2"
+          "uuid": "87e3d7c8-2c9c-55f-892-62665083edbfa2",
+          "authorship": "Levi, 1963",
+          "sourceIds": {
+            "checklistbank": "1346155"
+          }
         },
         {
           "id": "SP_TEDANIA_FIBROSA",
@@ -2396,7 +2404,8 @@
           "sourceIds": {
             "checklistbank": "ott7509620"
           },
-          "children": []
+          "children": [],
+          "authorship": "Cristobo, 2002"
         },
         {
           "id": "SP_TEDANIA_SP",
@@ -2616,6 +2625,18 @@
             "checklistbank": "1005332"
           },
           "children": []
+        },
+        {
+          "id": "SP_TRACHYTEDANIA_SP",
+          "name": "Trachytedania sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trachytedania",
+          "sourceIds": {
+            "checklistbank": "3680123"
+          },
+          "children": []
         }
       ]
     },
@@ -2798,10 +2819,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tedaniidae"
+    },
+    {
+      "id": "GENUS_TEDANIIDAE",
+      "name": "Tedaniidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEDANIIDAE_SP",
+          "name": "Tedaniidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tedaniidae",
+          "sourceIds": {
+            "checklistbank": "2705381"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tedaniidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 208,
+  "genusCount": 12,
+  "speciesCount": 210,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2810,6 +2852,6 @@
       "orderKey": 668,
       "familyKey": 4911
     },
-    "checklistbank": "ott962323"
+    "checklistbank": "278974"
   }
 }

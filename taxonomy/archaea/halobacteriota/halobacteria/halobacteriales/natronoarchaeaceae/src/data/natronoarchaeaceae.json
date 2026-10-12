@@ -31,10 +31,12 @@
             ],
             "itis": [
               "951887"
-            ]
+            ],
+            "checklistbank": "926360"
           },
           "uuid": "b76ac82c-0770-504-a4d-3f8d9db172298f",
-          "authorityIds": "col:6RTT8,gbif:7505236,itis:951887"
+          "authorityIds": "col:6RTT8,gbif:7505236,itis:951887",
+          "authorship": "Shimane et al. 2010"
         },
         {
           "id": "NATRONOARCHAEUM_PERSICUM",
@@ -53,10 +55,12 @@
             ],
             "col": [
               "CSKRQ"
-            ]
+            ],
+            "checklistbank": "1968283"
           },
           "uuid": "2032ad1a-1720-567-883-3f32ce9d2ec6f6",
-          "authorityIds": "col:CSKRQ,gbif:9736591"
+          "authorityIds": "col:CSKRQ,gbif:9736591",
+          "authorship": "Naghoni et al. 2017"
         },
         {
           "id": "NATRONOARCHAEUM_PHILIPPINENSE",
@@ -75,10 +79,12 @@
             ],
             "col": [
               "CSKRR"
-            ]
+            ],
+            "checklistbank": "558529"
           },
           "uuid": "e911101a-c83c-500-b5b-ccf694dea9d486",
-          "authorityIds": "col:CSKRR,gbif:7846755"
+          "authorityIds": "col:CSKRR,gbif:7846755",
+          "authorship": "Shimane et al. 2013"
         },
         {
           "id": "NATRONOARCHAEUM_RUBRUM",
@@ -97,10 +103,12 @@
             ],
             "col": [
               "CSKRS"
-            ]
+            ],
+            "checklistbank": "755311"
           },
           "uuid": "5d321b64-f9b5-5d5-b39-7848649026b61d",
-          "authorityIds": "col:CSKRS,gbif:7652230"
+          "authorityIds": "col:CSKRS,gbif:7652230",
+          "authorship": "Qiu et al. 2014"
         },
         {
           "id": "NATRONOARCHAEUM_SPEC.",
@@ -118,6 +126,18 @@
           },
           "uuid": "7c4eb56f-e1e1-5fc-841-eb399dd5473ee1",
           "authorityIds": "gbif:12217934"
+        },
+        {
+          "id": "SP_NATRONOARCHAEUM_SP",
+          "name": "Natronoarchaeum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Natronoarchaeum",
+          "sourceIds": {
+            "checklistbank": "1529832"
+          },
+          "children": []
         }
       ]
     },
@@ -142,6 +162,57 @@
             ]
           },
           "authorityIds": "col:CS95Y"
+        },
+        {
+          "id": "SP_HALOSTELLA_SALINA_SONG_ET_AL_2016",
+          "name": "Halostella salina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halostella",
+          "authorship": "Song et al. 2016",
+          "sourceIds": {
+            "checklistbank": "1547897"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALOSTELLA_SP",
+          "name": "Halostella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halostella",
+          "sourceIds": {
+            "checklistbank": "1963339"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALOSTELLA_LITOREA_HAN_AND_CUI_2020",
+          "name": "Halostella litorea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halostella",
+          "authorship": "Han and Cui 2020",
+          "sourceIds": {
+            "checklistbank": "2528831"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALOSTELLA_PELAGICA_HAN_AND_CUI_2020",
+          "name": "Halostella pelagica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halostella",
+          "authorship": "Han and Cui 2020",
+          "sourceIds": {
+            "checklistbank": "2583824"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -165,7 +236,8 @@
           "sourceIds": {
             "col": [
               "CSKP7"
-            ]
+            ],
+            "checklistbank": "2784880"
           },
           "authorityIds": "col:CSKP7"
         },
@@ -185,14 +257,131 @@
             ]
           },
           "authorityIds": "col:CSKP5"
+        },
+        {
+          "id": "SP_NATRANAEROARCHAEUM_AEROPHILUS_SOROKIN_ET_AL_2022",
+          "name": "Natranaeroarchaeum aerophilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Natranaeroarchaeum",
+          "authorship": "Sorokin et al. 2022",
+          "sourceIds": {
+            "checklistbank": "2917711"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Natronoarchaeaceae"
+    },
+    {
+      "id": "GENUS_SALINARCHAEUM",
+      "name": "Salinarchaeum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SALINARCHAEUM_LAMINARIAE_CUI_ET_AL_2014",
+          "name": "Salinarchaeum laminariae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinarchaeum",
+          "authorship": "Cui et al. 2014",
+          "sourceIds": {
+            "checklistbank": "869888"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SALINARCHAEUM_SP",
+          "name": "Salinarchaeum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinarchaeum",
+          "sourceIds": {
+            "checklistbank": "1333523"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SALINARCHAEUM_CHITINILYTICUM_MINEGISHI_ET_AL_2017",
+          "name": "Salinarchaeum chitinilyticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salinarchaeum",
+          "authorship": "Minegishi et al. 2017",
+          "sourceIds": {
+            "checklistbank": "1395169"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "natronoarchaeaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NATRONOARCHAEUM",
+          "name": "uncultured Natronoarchaeum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1633895"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SALINARCHAEUM",
+          "name": "uncultured Salinarchaeum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1709415"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HALOSTELLA",
+          "name": "uncultured Halostella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1843187"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_NATRANAEROARCHAEUM",
+          "name": "uncultured Natranaeroarchaeum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2917710"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "natronoarchaeaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 8,
+  "genusCount": 5,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -200,6 +389,7 @@
       "classKey": 160,
       "orderKey": 565,
       "familyKey": 10797915
-    }
+    },
+    "checklistbank": "2976354"
   }
 }

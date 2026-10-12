@@ -28,10 +28,12 @@
             ],
             "itis": [
               "112746"
-            ]
+            ],
+            "checklistbank": "63936"
           },
           "uuid": "6cf6f780-3873-591-b3e-13fe7a4987a8c2",
-          "authorityIds": "gbif:1032943,itis:112746"
+          "authorityIds": "gbif:1032943,itis:112746",
+          "authorship": "Leconte, 1874"
         },
         {
           "id": "SP_HYDROSCAPHA_JUMALONI",
@@ -51,7 +53,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "hydroscapha",
-          "uuid": "d03367bc-6c5d-58c-a50-cd4ab8a7b57c1b"
+          "uuid": "d03367bc-6c5d-58c-a50-cd4ab8a7b57c1b",
+          "authorship": "Fikacek & Sipkova, 2009",
+          "sourceIds": {
+            "checklistbank": "1552827"
+          }
         },
         {
           "id": "SP_HYDROSCAPHA_RAJANI",
@@ -151,7 +157,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "hydroscapha",
-          "uuid": "db2bbbfb-3087-52a-b03-5db3d89bcf3797"
+          "uuid": "db2bbbfb-3087-52a-b03-5db3d89bcf3797",
+          "authorship": "Miwa, 1934",
+          "sourceIds": {
+            "checklistbank": "2714803"
+          }
         },
         {
           "id": "SP_HYDROSCAPHA_PERIJAENSIS",
@@ -161,7 +171,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "hydroscapha",
-          "uuid": "ba2439ac-7a05-5df-919-26f278e48fc65a"
+          "uuid": "ba2439ac-7a05-5df-919-26f278e48fc65a",
+          "authorship": "Hall & Short, 2010",
+          "sourceIds": {
+            "checklistbank": "1552828"
+          }
         },
         {
           "id": "SP_HYDROSCAPHA_GRANULUM",
@@ -214,7 +228,8 @@
           "sourceIds": {
             "checklistbank": "543502"
           },
-          "children": []
+          "children": [],
+          "authorship": "Maier, Ivie, Johnson & Maddison, 2010"
         },
         {
           "id": "SP_HYDROSCAPHA_SHUIHAU",
@@ -261,6 +276,18 @@
           "lineage": "Hydroscapha",
           "sourceIds": {
             "checklistbank": "ott7731190"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYDROSCAPHA_SP",
+          "name": "Hydroscapha sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydroscapha",
+          "sourceIds": {
+            "checklistbank": "2714802"
           },
           "children": []
         }
@@ -312,6 +339,18 @@
           },
           "children": [],
           "uuid": "1838befa-c976-574-b82-9d6ad441269cc3"
+        },
+        {
+          "id": "SP_SCAPHYDRA_SP",
+          "name": "Scaphydra sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scaphydra",
+          "sourceIds": {
+            "checklistbank": "1554452"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -358,7 +397,8 @@
           "sourceIds": {
             "checklistbank": "1470216"
           },
-          "children": []
+          "children": [],
+          "authorship": "Short, Joly, & Garcia, 2010"
         },
         {
           "id": "SP_YARA_MARMONTSEDU",
@@ -438,7 +478,8 @@
           "sourceIds": {
             "checklistbank": "1378309"
           },
-          "children": []
+          "children": [],
+          "authorship": "Short, Joly, Garcia & Maddison, 2015"
         },
         {
           "id": "SP_CONFOSSA_FALCATA",
@@ -450,7 +491,8 @@
           "sourceIds": {
             "checklistbank": "1378310"
           },
-          "children": []
+          "children": [],
+          "authorship": "Short, Joly, Garcia & Maddison, 2015"
         },
         {
           "id": "SP_CONFOSSA_MINIMA",
@@ -462,7 +504,8 @@
           "sourceIds": {
             "checklistbank": "1378311"
           },
-          "children": []
+          "children": [],
+          "authorship": "Short, Joly, Garcia & Maddison, 2015"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -488,10 +531,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hydroscaphidae"
+    },
+    {
+      "id": "GENUS_HYDROSCAPHIDAE",
+      "name": "Hydroscaphidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYDROSCAPHIDAE_SP",
+          "name": "Hydroscaphidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydroscaphidae",
+          "sourceIds": {
+            "checklistbank": "365663"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hydroscaphidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 36,
+  "genusCount": 7,
+  "speciesCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -500,6 +564,6 @@
       "orderKey": 1470,
       "familyKey": 4735
     },
-    "checklistbank": "ott599265"
+    "checklistbank": "63908"
   }
 }

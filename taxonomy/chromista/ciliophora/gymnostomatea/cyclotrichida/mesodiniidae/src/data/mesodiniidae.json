@@ -353,7 +353,8 @@
             "checklistbank": "ott2824130"
           },
           "uuid": "8b1e01f3-c556-539-ab8-7abc802e501d01",
-          "authorityIds": "col:5VTVP,gbif:8231551"
+          "authorityIds": "col:5VTVP,gbif:8231551",
+          "authorship": "Krainer & Foissner, 1990"
         },
         {
           "id": "ASKENASIA_ELEGANS",
@@ -540,6 +541,18 @@
           },
           "uuid": "a9bcb0a5-bc55-51d-bdf-19de4f5858df79",
           "authorityIds": "col:5W5WW,gbif:7590202"
+        },
+        {
+          "id": "SP_ASKENASIA_SP",
+          "name": "Askenasia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Askenasia",
+          "sourceIds": {
+            "checklistbank": "457374"
+          },
+          "children": []
         }
       ]
     },
@@ -865,6 +878,18 @@
           },
           "children": [],
           "uuid": "654f60bb-edf6-5b7-8ba-6901b879bf7733"
+        },
+        {
+          "id": "SP_MESODINIUM_SP",
+          "name": "Mesodinium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesodinium",
+          "sourceIds": {
+            "checklistbank": "673101"
+          },
+          "children": []
         }
       ]
     },
@@ -953,10 +978,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mesodiniidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ASKENASIA",
+          "name": "uncultured Askenasia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "858385"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MYRIONECTA",
+          "name": "uncultured Myrionecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "947845"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MESODINIUM",
+          "name": "uncultured Mesodinium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1501851"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesodiniidae"
+    },
+    {
+      "id": "GENUS_MESODINIIDAE",
+      "name": "Mesodiniidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MESODINIIDAE_SP",
+          "name": "Mesodiniidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesodiniidae",
+          "sourceIds": {
+            "checklistbank": "2811758"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mesodiniidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 40,
+  "genusCount": 8,
+  "speciesCount": 46,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -965,6 +1056,6 @@
       "orderKey": 7801033,
       "familyKey": 7697529
     },
-    "checklistbank": "ott182636"
+    "checklistbank": "283645"
   }
 }

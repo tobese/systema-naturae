@@ -354,7 +354,8 @@
             ],
             "col": [
               "9ZDNH"
-            ]
+            ],
+            "checklistbank": "2610161"
           },
           "uuid": "bb0b6b7d-377d-58b-887-b6c19c95b19a72",
           "authorityIds": "col:9ZDNH,gbif:11432026,mycobank:830114"
@@ -1089,6 +1090,30 @@
           "lineage": "Placynthium",
           "sourceIds": {
             "checklistbank": "ott3781537"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLACYNTHIUM_SP",
+          "name": "Placynthium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Placynthium",
+          "sourceIds": {
+            "checklistbank": "1166711"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLACYNTHIUM_AFF",
+          "name": "Placynthium aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Placynthium",
+          "sourceIds": {
+            "checklistbank": "2609915"
           },
           "children": []
         }
@@ -3035,11 +3060,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "placynthiaceae"
+    },
+    {
+      "id": "GENUS_LECIOPHYSMA",
+      "name": "Leciophysma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LECIOPHYSMA_FURFURASCENS_NYL_GYELN_1939",
+          "name": "Leciophysma furfurascens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leciophysma",
+          "authorship": "(Nyl.) Gyeln., 1939",
+          "sourceIds": {
+            "checklistbank": "508739"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LECIOPHYSMA_FINMARKICUM_TH_FR_1865",
+          "name": "Leciophysma finmarkicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leciophysma",
+          "authorship": "Th. Fr., 1865",
+          "sourceIds": {
+            "checklistbank": "696947"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "placynthiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PLACYNTHIUM",
+          "name": "uncultured Placynthium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1284425"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "placynthiaceae"
     }
   ],
   "authorship": "E. Dahl",
-  "genusCount": 36,
-  "speciesCount": 176,
+  "genusCount": 38,
+  "speciesCount": 181,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3048,6 +3129,6 @@
       "orderKey": 1055,
       "familyKey": 4118
     },
-    "checklistbank": "ott185791"
+    "checklistbank": "169285"
   }
 }

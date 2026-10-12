@@ -1038,7 +1038,8 @@
           },
           "children": [],
           "uuid": "850a50d3-e20e-5e6-8b2-503588a2feccfc",
-          "authorityIds": "gbif:10804292"
+          "authorityIds": "gbif:10804292",
+          "authorship": "Pandeirada, Craveiro, Daugbjerg, Moestrup & Calado, 2019"
         },
         {
           "id": "SP_TOVELLIA_AVEIRENSIS",
@@ -1050,7 +1051,8 @@
           "sourceIds": {
             "checklistbank": "423991"
           },
-          "children": []
+          "children": [],
+          "authorship": "Pandeirada, Craveiro, Daugbjerg, Moestrup & Calado, 2014"
         },
         {
           "id": "SP_TOVELLIA_SANGUINEA",
@@ -1062,7 +1064,8 @@
           "sourceIds": {
             "checklistbank": "ott498074"
           },
-          "children": []
+          "children": [],
+          "authorship": "Moestrup, Gert Hansen, Daugbjerg, G.Flaim & d'Andrea, 2006"
         },
         {
           "id": "SP_TOVELLIA_APICULATA",
@@ -1086,7 +1089,8 @@
           "sourceIds": {
             "checklistbank": "ott4038154"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Woloszynska) Moestrup, K.Lindberg & Daugbjerg, 2005"
         },
         {
           "id": "SP_TOVELLIA_NYGAARDII",
@@ -1146,7 +1150,8 @@
           "sourceIds": {
             "checklistbank": "ott7529263"
           },
-          "children": []
+          "children": [],
+          "authorship": "Pandeirada, Craveiro, Daugbjerg, Moestrup & Calado, 2017"
         }
       ]
     },
@@ -1201,6 +1206,31 @@
           "lineage": "Jadwigia",
           "sourceIds": {
             "checklistbank": "1641873"
+          },
+          "children": [],
+          "authorship": "Moestrup, Lindberg & Daugbjerg, 2005"
+        },
+        {
+          "id": "SP_JADWIGIA_AFF",
+          "name": "Jadwigia aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jadwigia",
+          "sourceIds": {
+            "checklistbank": "3106227"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_JADWIGIA_SP",
+          "name": "Jadwigia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jadwigia",
+          "sourceIds": {
+            "checklistbank": "3379154"
           },
           "children": []
         }
@@ -1330,7 +1360,8 @@
           "sourceIds": {
             "checklistbank": "1578514"
           },
-          "children": []
+          "children": [],
+          "authorship": "Javornicky, 1997"
         },
         {
           "id": "SP_ESOPTRODINIUM_THIOPHILUM",
@@ -1343,14 +1374,68 @@
             "checklistbank": "ott2831424"
           },
           "children": []
+        },
+        {
+          "id": "SP_ESOPTRODINIUM_SP",
+          "name": "Esoptrodinium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Esoptrodinium",
+          "sourceIds": {
+            "checklistbank": "1156158"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tovelliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_WOLOSZYNSKIA",
+          "name": "uncultured Woloszynskia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "718267"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tovelliaceae"
+    },
+    {
+      "id": "GENUS_TOVELLIACEAE",
+      "name": "Tovelliaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TOVELLIACEAE_SP",
+          "name": "Tovelliaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tovelliaceae",
+          "sourceIds": {
+            "checklistbank": "3061906"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tovelliaceae"
     }
   ],
-  "speciesCount": 80,
-  "genusCount": 9,
+  "speciesCount": 85,
+  "genusCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1359,6 +1444,6 @@
       "orderKey": 8920583,
       "familyKey": 7762615
     },
-    "checklistbank": "ott1021776"
+    "checklistbank": "1169139"
   }
 }

@@ -150,10 +150,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 4376601
+            "gbif": 4376601,
+            "checklistbank": "451787"
           },
           "uuid": "430a71ff-1f0b-5f4-a8f-80ce8dafc705fd",
-          "authorityIds": "gbif:4376601"
+          "authorityIds": "gbif:4376601",
+          "authorship": "Stonik, Orlova & R.M.Crawford, 2006"
         },
         {
           "id": "ATTHEYA_ZACHARIASI",
@@ -232,6 +234,18 @@
           "authorship": "(T.West) R.M.Crawford, 1994",
           "sourceIds": {
             "checklistbank": "829598"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATTHEYA_SP",
+          "name": "Attheya sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Attheya",
+          "sourceIds": {
+            "checklistbank": "426681"
           },
           "children": []
         }
@@ -319,10 +333,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "attheyaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ATTHEYA",
+          "name": "uncultured Attheya",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "654887"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "attheyaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 18,
+  "genusCount": 4,
+  "speciesCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -330,6 +365,7 @@
       "classKey": 7947184,
       "orderKey": 1096,
       "familyKey": 2919
-    }
+    },
+    "checklistbank": "265577"
   }
 }

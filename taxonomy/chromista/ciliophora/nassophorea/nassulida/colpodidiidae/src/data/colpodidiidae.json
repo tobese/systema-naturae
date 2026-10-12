@@ -146,6 +146,18 @@
           "uuid": "09657c34-d30b-5ca-a7d-1bfdb97eb6e900",
           "authorityIds": "col:5ZNVG,gbif:8061779",
           "children": []
+        },
+        {
+          "id": "SP_COLPODIDIUM_SP",
+          "name": "Colpodidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colpodidium",
+          "sourceIds": {
+            "checklistbank": "2799674"
+          },
+          "children": []
         }
       ]
     },
@@ -216,11 +228,13 @@
             ],
             "col": [
               "FQXS"
-            ]
+            ],
+            "checklistbank": "1425173"
           },
           "uuid": "41c74dcf-a865-5f3-856-4d68749825b7b8",
           "authorityIds": "col:FQXS,gbif:8347117",
-          "children": []
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
         },
         {
           "id": "APOCOLPODIDIUM_MACROSTOMA",
@@ -245,6 +259,27 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_COLPODIDIIDAE",
+      "name": "Colpodidiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLPODIDIIDAE_SP",
+          "name": "Colpodidiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colpodidiidae",
+          "sourceIds": {
+            "checklistbank": "485332"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colpodidiidae"
     }
   ],
   "sourceIds": {
@@ -255,8 +290,8 @@
       "orderKey": 7543638,
       "familyKey": 7752973
     },
-    "checklistbank": "31c878f4-b389-4df8-880c-4be49d5ac039"
+    "checklistbank": "485328"
   },
-  "genusCount": 3,
-  "speciesCount": 10
+  "genusCount": 4,
+  "speciesCount": 12
 }

@@ -49,7 +49,10 @@
           "lineage": "acartia",
           "authorship": "Guo & Gong, 2025",
           "children": [],
-          "uuid": "049bd478-6433-5c6-ab5-7e12feea910cee"
+          "uuid": "049bd478-6433-5c6-ab5-7e12feea910cee",
+          "sourceIds": {
+            "checklistbank": "3349825"
+          }
         },
         {
           "id": "SP_ACARTIA_DANAE_GIESBRECHT_1889",
@@ -690,7 +693,10 @@
           "lineage": "acartia",
           "authorship": "Lee, S, Soh & W. Lee, 2019",
           "children": [],
-          "uuid": "026eb103-706d-53e-b1f-45c53543029605"
+          "uuid": "026eb103-706d-53e-b1f-45c53543029605",
+          "sourceIds": {
+            "checklistbank": "2691879"
+          }
         },
         {
           "id": "SP_ACARTIA_CLAUSII_GIESBRECHT_1892",
@@ -1253,6 +1259,18 @@
           "lineage": "Acartia",
           "sourceIds": {
             "checklistbank": "ott7114115"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACARTIA_SP",
+          "name": "Acartia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acartia",
+          "sourceIds": {
+            "checklistbank": "163461"
           },
           "children": []
         }
@@ -1840,13 +1858,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acartiidae"
+    },
+    {
+      "id": "GENUS_ACARTIIDAE",
+      "name": "Acartiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACARTIIDAE_SP",
+          "name": "Acartiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acartiidae",
+          "sourceIds": {
+            "checklistbank": "2321560"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acartiidae"
     }
   ],
-  "speciesCount": 112,
+  "speciesCount": 114,
   "appSlug": "acartiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 9,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1855,6 +1894,6 @@
       "orderKey": 679,
       "familyKey": 8961
     },
-    "checklistbank": "ott966226"
+    "checklistbank": "121147"
   }
 }

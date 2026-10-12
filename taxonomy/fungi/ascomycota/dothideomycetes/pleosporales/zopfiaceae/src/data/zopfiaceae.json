@@ -176,7 +176,8 @@
             ],
             "col": [
               "5D7RB"
-            ]
+            ],
+            "checklistbank": "160030"
           },
           "uuid": "66b8d219-bf79-56d-964-1b551ab7c359ba",
           "authorityIds": "col:5D7RB,gbif:2619081,mycobank:325676",
@@ -245,6 +246,18 @@
           "authorship": "D.Hawksw. & C.Booth, 1974",
           "sourceIds": {
             "checklistbank": "881396"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZOPFIA_SP",
+          "name": "Zopfia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zopfia",
+          "sourceIds": {
+            "checklistbank": "3136308"
           },
           "children": []
         }
@@ -611,7 +624,8 @@
           "sourceIds": {
             "checklistbank": "ott435947"
           },
-          "children": []
+          "children": [],
+          "authorship": "Jeffers, 1940"
         },
         {
           "id": "SP_CARYOSPORA_PHYLLOSTACHYDIS",
@@ -755,7 +769,8 @@
           "sourceIds": {
             "checklistbank": "ott6378012"
           },
-          "children": []
+          "children": [],
+          "authorship": "Huang Zhang, K.D. Hyde & Ariyaw., 2015"
         },
         {
           "id": "SP_CARYOSPORA_DAWEIENSIS",
@@ -778,6 +793,20 @@
           "lineage": "Caryospora",
           "sourceIds": {
             "checklistbank": "ott7514356"
+          },
+          "children": [],
+          "authorship": "Jayasiri, E.B.G. Jones & K.D. Hyde, 2019"
+        },
+        {
+          "id": "SP_CARYOSPORA_SUBMERSA_W_DONG_H_ZHANG_K_D_HYDE_2020",
+          "name": "Caryospora submersa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caryospora",
+          "authorship": "W. Dong, H. Zhang & K.D. Hyde, 2020",
+          "sourceIds": {
+            "checklistbank": "2696541"
           },
           "children": []
         }
@@ -850,11 +879,66 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zopfiaceae"
+    },
+    {
+      "id": "GENUS_DIDYMOCREA",
+      "name": "Didymocrea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIDYMOCREA_SADASIVANII_T_K_R_REDDY_KOWALSKI_1965",
+          "name": "Didymocrea sadasivanii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymocrea",
+          "authorship": "(T.K.R. Reddy) Kowalski, 1965",
+          "sourceIds": {
+            "checklistbank": "372059"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIDYMOCREA_SP",
+          "name": "Didymocrea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymocrea",
+          "sourceIds": {
+            "checklistbank": "2860026"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zopfiaceae"
+    },
+    {
+      "id": "GENUS_ZOPFIACEAE",
+      "name": "Zopfiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZOPFIACEAE_SP",
+          "name": "Zopfiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zopfiaceae",
+          "sourceIds": {
+            "checklistbank": "423056"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zopfiaceae"
     }
   ],
   "authorship": "G. Arnaud",
-  "genusCount": 12,
-  "speciesCount": 40,
+  "genusCount": 14,
+  "speciesCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -863,6 +947,6 @@
       "orderKey": 1047,
       "familyKey": 8318
     },
-    "checklistbank": "ott454656"
+    "checklistbank": "160033"
   }
 }

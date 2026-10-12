@@ -31,7 +31,8 @@
             "checklistbank": "ott672569"
           },
           "uuid": "93566c86-77fc-5b7-ae4-fbbd62917554c2",
-          "authorityIds": "gbif:3207190"
+          "authorityIds": "gbif:3207190",
+          "authorship": "(Pouchet) Cachon & Cachon ex Loeblich & Loeblich 1969"
         },
         {
           "id": "SP_SPATULODINIUM_SP",
@@ -178,6 +179,18 @@
             "checklistbank": "ott5400980"
           },
           "children": []
+        },
+        {
+          "id": "SP_KOFOIDINIUM_SP",
+          "name": "Kofoidinium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kofoidinium",
+          "sourceIds": {
+            "checklistbank": "763932"
+          },
+          "children": []
         }
       ]
     },
@@ -271,10 +284,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "kofoidiniaceae"
+    },
+    {
+      "id": "GENUS_FABADINIUM",
+      "name": "Fabadinium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FABADINIUM_AMICUM_COONEY_LEANDER_KEELING_2022",
+          "name": "Fabadinium amicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fabadinium",
+          "authorship": "Cooney, Leander & Keeling, 2022",
+          "sourceIds": {
+            "checklistbank": "2969666"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kofoidiniaceae"
+    },
+    {
+      "id": "GENUS_KOFOIDINIACEAE",
+      "name": "Kofoidiniaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KOFOIDINIACEAE_SP",
+          "name": "Kofoidiniaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kofoidiniaceae",
+          "sourceIds": {
+            "checklistbank": "3061842"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "kofoidiniaceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 12,
+  "genusCount": 7,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -283,6 +339,6 @@
       "orderKey": 8808938,
       "familyKey": 7622106
     },
-    "checklistbank": "ott98345"
+    "checklistbank": "763928"
   }
 }

@@ -37,7 +37,8 @@
             ],
             "checklistbank": "1005796"
           },
-          "authorityIds": "col:3XVJR,itis:584930,wikidata:Q269728"
+          "authorityIds": "col:3XVJR,itis:584930,wikidata:Q269728",
+          "authorship": "Desmarest, 1822"
         },
         {
           "id": "MANIS_PENTADACTYLA",
@@ -65,7 +66,8 @@
             ],
             "checklistbank": "1005797"
           },
-          "authorityIds": "col:3XVJS,itis:584931,wikidata:Q842283"
+          "authorityIds": "col:3XVJS,itis:584931,wikidata:Q842283",
+          "authorship": "Linnaeus, 1758"
         },
         {
           "id": "MANIS_CRASSICAUDATA",
@@ -93,7 +95,8 @@
             ],
             "checklistbank": "1005794"
           },
-          "authorityIds": "col:3XVJJ,itis:728008,wikidata:Q752467"
+          "authorityIds": "col:3XVJJ,itis:728008,wikidata:Q752467",
+          "authorship": "Gray, 1827"
         },
         {
           "id": "SP_MANIS_CULIONENSIS",
@@ -118,9 +121,11 @@
             ],
             "col": [
               "3XVJM"
-            ]
+            ],
+            "checklistbank": "1836949"
           },
-          "authorityIds": "col:3XVJM,itis:727709,wikidata:Q1339663"
+          "authorityIds": "col:3XVJM,itis:727709,wikidata:Q1339663",
+          "authorship": "de Elera, 1915"
         },
         {
           "id": "SP_MANIS_MYSTERIA_T_T_GU_H_WU_F_YANG_GAUBERT_HEIGHTON_Y_FU_K_LIU_S_J_LUO_H_R_ZHANG_ET_AL_2023",
@@ -138,7 +143,8 @@
             ],
             "itis": [
               "1267320"
-            ]
+            ],
+            "checklistbank": "3078835"
           },
           "authorityIds": "col:KZB3Z,itis:1267320"
         },
@@ -200,7 +206,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Manis",
-          "uuid": "5acfd340-16d2-512-917-f59b1769b03c38"
+          "uuid": "5acfd340-16d2-512-917-f59b1769b03c38",
+          "authorship": "Hodgson, 1836",
+          "sourceIds": {
+            "checklistbank": "3466002"
+          }
         },
         {
           "id": "SP_MANIS_TEMMINCKII",
@@ -249,6 +259,18 @@
             "checklistbank": "ott3613427"
           },
           "children": []
+        },
+        {
+          "id": "SP_MANIS_SP",
+          "name": "Manis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manis",
+          "sourceIds": {
+            "checklistbank": "49127"
+          },
+          "children": []
         }
       ]
     },
@@ -286,7 +308,8 @@
             ],
             "checklistbank": "1005801"
           },
-          "authorityIds": "col:DTCTZ,itis:1267322,wikidata:Q28173017"
+          "authorityIds": "col:DTCTZ,itis:1267322,wikidata:Q28173017",
+          "authorship": "(Smuts, 1832)"
         },
         {
           "id": "SMUTSIA_GIGANTEA",
@@ -314,7 +337,8 @@
             ],
             "checklistbank": "1005800"
           },
-          "authorityIds": "col:DTCTY,itis:1267323,wikidata:Q20085878"
+          "authorityIds": "col:DTCTY,itis:1267323,wikidata:Q20085878",
+          "authorship": "(Illiger, 1815)"
         },
         {
           "id": "SP_SMUTSIA_OLTENIENSIS",
@@ -361,7 +385,8 @@
             ],
             "checklistbank": "1005799"
           },
-          "authorityIds": "col:KZCXM,itis:1267325,wikidata:Q28173138"
+          "authorityIds": "col:KZCXM,itis:1267325,wikidata:Q28173138",
+          "authorship": "(Rafinesque, 1821)"
         },
         {
           "id": "SP_PHATAGINUS_TETRADACTYLA",
@@ -386,9 +411,11 @@
             ],
             "itis": [
               "1267324"
-            ]
+            ],
+            "checklistbank": "73815"
           },
-          "authorityIds": "col:KZCXL,itis:1267324,wikidata:Q28173098"
+          "authorityIds": "col:KZCXL,itis:1267324,wikidata:Q28173098",
+          "authorship": "(Linnaeus, 1766)"
         },
         {
           "id": "SP_PHATAGINUS_TETRADACTYLUS",
@@ -404,10 +431,31 @@
           "uuid": "a2dbed3d-9c5c-5c5-a45-f728b26765d1c2"
         }
       ]
+    },
+    {
+      "id": "GENUS_MANIDAE",
+      "name": "Manidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MANIDAE_SP",
+          "name": "Manidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manidae",
+          "sourceIds": {
+            "checklistbank": "3043966"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "manidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 20,
+  "genusCount": 4,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -416,6 +464,6 @@
       "orderKey": 796,
       "familyKey": 5480
     },
-    "checklistbank": "ott644249"
+    "checklistbank": "9972"
   }
 }

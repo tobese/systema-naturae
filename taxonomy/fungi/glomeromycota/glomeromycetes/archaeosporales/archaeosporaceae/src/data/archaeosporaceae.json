@@ -140,7 +140,8 @@
             ],
             "col": [
               "G7TQ"
-            ]
+            ],
+            "checklistbank": "2734651"
           },
           "uuid": "9b8643de-9051-5c5-89f-9fde8b6926a41c",
           "authorityIds": "col:G7TQ,gbif:10881062,mycobank:556467",
@@ -230,6 +231,18 @@
             "checklistbank": "f2eaddc7-76b9-4816-8f42-a04512dcbb1a"
           },
           "children": []
+        },
+        {
+          "id": "SP_ARCHAEOSPORA_SP",
+          "name": "Archaeospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeospora",
+          "sourceIds": {
+            "checklistbank": "181785"
+          },
+          "children": []
         }
       ],
       "authorship": "J.B. Morton & D. Redecker"
@@ -312,11 +325,87 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "archaeosporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ARCHAEOSPORA",
+          "name": "uncultured Archaeospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "235084"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ARCHAEOSPORACEAE",
+          "name": "uncultured Archaeosporaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "487658"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeosporaceae"
+    },
+    {
+      "id": "GENUS_ARCHAEOSPORACEAE",
+      "name": "Archaeosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAEOSPORACEAE_SP",
+          "name": "Archaeosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeosporaceae",
+          "sourceIds": {
+            "checklistbank": "2011677"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeosporaceae"
+    },
+    {
+      "id": "GENUS_ANTIQUISPORA",
+      "name": "Antiquispora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTIQUISPORA_DISSEMINANS_MAGURNO_USZOK_M_B_QUEIROZ_B_T_GOTO_2025",
+          "name": "Antiquispora disseminans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Antiquispora",
+          "authorship": "Magurno, Uszok, M.B. Queiroz & B.T. Goto, 2025",
+          "sourceIds": {
+            "checklistbank": "3447305"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeosporaceae"
     }
   ],
   "authorship": "J.B. Morton & D. Redecker",
-  "genusCount": 4,
-  "speciesCount": 12,
+  "genusCount": 7,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -325,6 +414,6 @@
       "orderKey": 1149,
       "familyKey": 3302
     },
-    "checklistbank": "ott348833"
+    "checklistbank": "144513"
   }
 }

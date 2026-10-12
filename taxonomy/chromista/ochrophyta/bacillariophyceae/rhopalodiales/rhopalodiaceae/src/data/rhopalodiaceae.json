@@ -1911,10 +1911,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8204588
+            "gbif": 8204588,
+            "checklistbank": "3420109"
           },
           "uuid": "d205119a-7f22-5eb-a49-d77a2e64cd20e5",
-          "authorityIds": "gbif:8204588"
+          "authorityIds": "gbif:8204588",
+          "authorship": "Krammer, 1987"
         },
         {
           "id": "RHOPALODIA_STRICTA",
@@ -2387,6 +2389,57 @@
           "lineage": "Rhopalodia",
           "sourceIds": {
             "checklistbank": "548843"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHOPALODIA_SP",
+          "name": "Rhopalodia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhopalodia",
+          "sourceIds": {
+            "checklistbank": "1003310"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHOPALODIA_FUXIANENSIS_QI_LIU_KOCIOLEK_2025",
+          "name": "Rhopalodia fuxianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhopalodia",
+          "authorship": "Qi Liu & Kociolek, 2025",
+          "sourceIds": {
+            "checklistbank": "3417242"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHOPALODIA_INFLATA_QI_LIU_KOCIOLEK_2025",
+          "name": "Rhopalodia inflata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhopalodia",
+          "authorship": "Qi Liu & Kociolek, 2025",
+          "sourceIds": {
+            "checklistbank": "3417243"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHOPALODIA_YUNNANENSIS_QI_LIU_KOCIOLEK_2025",
+          "name": "Rhopalodia yunnanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhopalodia",
+          "authorship": "Qi Liu & Kociolek, 2025",
+          "sourceIds": {
+            "checklistbank": "3417244"
           },
           "children": []
         }
@@ -4963,6 +5016,56 @@
             "checklistbank": "1704717"
           },
           "children": []
+        },
+        {
+          "id": "SP_EPITHEMIA_SP",
+          "name": "Epithemia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epithemia",
+          "sourceIds": {
+            "checklistbank": "1951637"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPITHEMIA_PELAGICA_SCHVARCZ_STANCHEVA_STEWARD_2022",
+          "name": "Epithemia pelagica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epithemia",
+          "authorship": "Schvarcz, Stancheva & Steward, 2022",
+          "sourceIds": {
+            "checklistbank": "2809013"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPITHEMIA_CATENATA_SCHVARCZ_STANCHEVA_STEWARD_2022",
+          "name": "Epithemia catenata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epithemia",
+          "authorship": "Schvarcz, Stancheva & Steward, 2022",
+          "sourceIds": {
+            "checklistbank": "2962568"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPITHEMIA_CLEMENTINA",
+          "name": "Epithemia clementina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epithemia",
+          "sourceIds": {
+            "checklistbank": "3042617"
+          },
+          "children": []
         }
       ]
     },
@@ -5006,7 +5109,8 @@
             "checklistbank": "1435565"
           },
           "uuid": "61b07ba6-3950-504-bb5-ec949d05ea5723",
-          "authorityIds": "gbif:8010238"
+          "authorityIds": "gbif:8010238",
+          "authorship": "Round, 1993"
         },
         {
           "id": "PROTOKEELIA_HOTTINGERI",
@@ -5921,10 +6025,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhopalodiaceae"
+    },
+    {
+      "id": "GENUS_RHOPALODIACEAE",
+      "name": "Rhopalodiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHOPALODIACEAE_SP",
+          "name": "Rhopalodiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhopalodiaceae",
+          "sourceIds": {
+            "checklistbank": "2579918"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhopalodiaceae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 329,
+  "genusCount": 18,
+  "speciesCount": 338,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -5932,6 +6057,7 @@
       "classKey": 7947184,
       "orderKey": 7455241,
       "familyKey": 8280231
-    }
+    },
+    "checklistbank": "245177"
   }
 }

@@ -45,6 +45,30 @@
           },
           "authorityIds": "col:9WTNJ",
           "commonName": "Green Emerald Damselfly"
+        },
+        {
+          "id": "SP_CHALCOLESTES_SP",
+          "name": "Chalcolestes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chalcolestes",
+          "sourceIds": {
+            "checklistbank": "2762893"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHALCOLESTES_PARVIDENS",
+          "name": "Chalcolestes ×parvidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chalcolestes",
+          "sourceIds": {
+            "checklistbank": "3681513"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -697,7 +721,8 @@
             "checklistbank": "944917"
           },
           "children": [],
-          "uuid": "fea25997-b9cf-551-8ab-e89e7c9493c08e"
+          "uuid": "fea25997-b9cf-551-8ab-e89e7c9493c08e",
+          "authorship": "(Fraser, 1930)"
         },
         {
           "id": "SP_INDOLESTES_LUNDQVISTI_LIEFTINCK_1949",
@@ -2663,7 +2688,8 @@
           "sourceIds": {
             "checklistbank": "ott888981"
           },
-          "children": []
+          "children": [],
+          "authorship": "Selys, 1891"
         },
         {
           "id": "SP_LESTES_THORACICA",
@@ -2746,6 +2772,18 @@
           "lineage": "Lestes",
           "sourceIds": {
             "checklistbank": "ott7906003"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LESTES_SP",
+          "name": "Lestes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lestes",
+          "sourceIds": {
+            "checklistbank": "243548"
           },
           "children": []
         }
@@ -3370,6 +3408,18 @@
             "checklistbank": "ott7905998"
           },
           "children": []
+        },
+        {
+          "id": "SP_AUSTROLESTES_SP",
+          "name": "Austrolestes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Austrolestes",
+          "sourceIds": {
+            "checklistbank": "2657282"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3641,13 +3691,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lestidae"
+    },
+    {
+      "id": "GENUS_LESTIDAE",
+      "name": "Lestidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LESTIDAE_SP",
+          "name": "Lestidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lestidae",
+          "sourceIds": {
+            "checklistbank": "2087998"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lestidae"
     }
   ],
-  "speciesCount": 200,
+  "speciesCount": 205,
   "appSlug": "lestidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3656,6 +3727,6 @@
       "orderKey": 789,
       "familyKey": 4489
     },
-    "checklistbank": "ott1038335"
+    "checklistbank": "126180"
   }
 }

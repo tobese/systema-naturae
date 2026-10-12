@@ -1275,6 +1275,18 @@
             "checklistbank": "ott5263340"
           },
           "children": []
+        },
+        {
+          "id": "SP_COCCOCARPIA_SP",
+          "name": "Coccocarpia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coccocarpia",
+          "sourceIds": {
+            "checklistbank": "1381334"
+          },
+          "children": []
         }
       ],
       "authorship": "Persoon"
@@ -1597,9 +1609,11 @@
           "sourceIds": {
             "mycobank": [
               "405564"
-            ]
+            ],
+            "checklistbank": "3397994"
           },
-          "authorityIds": "mycobank:405564"
+          "authorityIds": "mycobank:405564",
+          "authorship": "Nyl., 1869"
         },
         {
           "id": "SP_SPILONEMA_SUBSIMILE",
@@ -1725,7 +1739,8 @@
           "sourceIds": {
             "checklistbank": "ott711134"
           },
-          "children": []
+          "children": [],
+          "authorship": "Henssen & Tnsberg, 2000"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2194,11 +2209,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "coccocarpiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_COCCOCARPIA",
+          "name": "uncultured Coccocarpia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1284409"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coccocarpiaceae"
     }
   ],
   "authorship": "(Montagne ex K. Müller) Henssen",
-  "genusCount": 16,
-  "speciesCount": 112,
+  "genusCount": 17,
+  "speciesCount": 114,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2207,6 +2243,6 @@
       "orderKey": 1055,
       "familyKey": 8389
     },
-    "checklistbank": "ott372043"
+    "checklistbank": "191096"
   }
 }

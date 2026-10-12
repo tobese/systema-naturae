@@ -25,10 +25,12 @@
             ],
             "col": [
               "98QH"
-            ]
+            ],
+            "checklistbank": "864583"
           },
           "uuid": "386b5f96-dce7-5f3-85c-661f6c3da2514d",
-          "authorityIds": "col:98QH,gbif:8169501,mycobank:515197"
+          "authorityIds": "col:98QH,gbif:8169501,mycobank:515197",
+          "children": []
         },
         {
           "id": "SP_ACHROCERATOSPHAERIA_INCOLORATA_R_BLOV_R_BLOV_J_FOURN_K_D_HYDE",
@@ -50,7 +52,20 @@
             ]
           },
           "uuid": "e59729cb-b102-549-922-88b347f0614bbf",
-          "authorityIds": "col:98QG,gbif:7841872,mycobank:515198"
+          "authorityIds": "col:98QG,gbif:7841872,mycobank:515198",
+          "children": []
+        },
+        {
+          "id": "SP_ACHROCERATOSPHAERIA_SP",
+          "name": "Achroceratosphaeria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Achroceratosphaeria",
+          "sourceIds": {
+            "checklistbank": "3136430"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -78,10 +93,12 @@
             ],
             "col": [
               "77MJK"
-            ]
+            ],
+            "checklistbank": "1588760"
           },
           "uuid": "2a6f9ca7-b5d6-542-b68-3692e305adf23e",
-          "authorityIds": "col:77MJK,gbif:7916561,mycobank:810341"
+          "authorityIds": "col:77MJK,gbif:7916561,mycobank:810341",
+          "children": []
         },
         {
           "id": "SP_PISORISPORIUM_GLAUCUM_R_BLOV_J_FOURN",
@@ -103,18 +120,73 @@
             ]
           },
           "uuid": "a86199ec-353a-580-8e1-5392105b4f91df",
-          "authorityIds": "col:4J9FV,gbif:8093129,mycobank:810342"
+          "authorityIds": "col:4J9FV,gbif:8093129,mycobank:810342",
+          "children": []
+        },
+        {
+          "id": "SP_PISORISPORIUM_SP",
+          "name": "Pisorisporium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pisorisporium",
+          "sourceIds": {
+            "checklistbank": "3388774"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pisorisporiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PISORISPORIACEAE",
+          "name": "uncultured Pisorisporiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2789559"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pisorisporiaceae"
+    },
+    {
+      "id": "GENUS_PISORISPORIACEAE",
+      "name": "Pisorisporiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PISORISPORIACEAE_SP",
+          "name": "Pisorisporiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pisorisporiaceae",
+          "sourceIds": {
+            "checklistbank": "3406394"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pisorisporiaceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 8,
   "appSlug": "pisorisporiaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Sordariomycetes",
-  "genusCount": 2,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -122,6 +194,7 @@
       "classKey": 320,
       "orderKey": 7775868,
       "familyKey": 8237719
-    }
+    },
+    "checklistbank": "1588758"
   }
 }

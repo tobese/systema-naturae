@@ -93,7 +93,8 @@
             "checklistbank": "ott863645"
           },
           "uuid": "9effcce9-23ee-53a-96e-c8f1b2a6378ded",
-          "authorityIds": "col:3MY2B,gbif:2265635,wikidata:Q2524360"
+          "authorityIds": "col:3MY2B,gbif:2265635,wikidata:Q2524360",
+          "authorship": "Hartlaub, 1905"
         },
         {
           "id": "HYBOCODON_CRYPTUS",
@@ -234,6 +235,18 @@
           "lineage": "Hybocodon",
           "sourceIds": {
             "checklistbank": "554465"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYBOCODON_SP",
+          "name": "Hybocodon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hybocodon",
+          "sourceIds": {
+            "checklistbank": "2783312"
           },
           "children": []
         }
@@ -972,7 +985,8 @@
             "checklistbank": "ott3681781"
           },
           "uuid": "8b7f6944-2665-531-98f-3a34e53b76d031",
-          "authorityIds": "col:38QXJ,gbif:2265647,wikidata:Q2784214"
+          "authorityIds": "col:38QXJ,gbif:2265647,wikidata:Q2784214",
+          "authorship": "Migotto & Marques, 1999"
         },
         {
           "id": "ECTOPLEURA_PACIFICA",
@@ -1024,7 +1038,8 @@
             "checklistbank": "ott3681792"
           },
           "uuid": "c908d559-04a7-55d-a29-16a9046e1c388d",
-          "authorityIds": "col:38QXP,gbif:2265648,wikidata:Q2355058"
+          "authorityIds": "col:38QXP,gbif:2265648,wikidata:Q2355058",
+          "authorship": "(Uchida, 1937)"
         },
         {
           "id": "ECTOPLEURA_SACCULIFERA",
@@ -1150,7 +1165,8 @@
             "checklistbank": "ott3681797"
           },
           "uuid": "bbe3ca9f-90ea-598-9ff-d18d5ec023df74",
-          "authorityIds": "col:6DY47,gbif:2265662,wikidata:Q2234708"
+          "authorityIds": "col:6DY47,gbif:2265662,wikidata:Q2234708",
+          "authorship": "(Pictet, 1893)"
         },
         {
           "id": "ECTOPLEURA_WRIGHTI",
@@ -1565,6 +1581,18 @@
           "authorship": "Petersen, 1990",
           "sourceIds": {
             "checklistbank": "697325"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZYZZYZUS_SP",
+          "name": "Zyzzyzus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zyzzyzus",
+          "sourceIds": {
+            "checklistbank": "2672437"
           },
           "children": []
         }
@@ -2681,6 +2709,18 @@
             "checklistbank": "ott7995914"
           },
           "children": []
+        },
+        {
+          "id": "SP_TUBULARIA_SP",
+          "name": "Tubularia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubularia",
+          "sourceIds": {
+            "checklistbank": "56706"
+          },
+          "children": []
         }
       ]
     },
@@ -2902,7 +2942,8 @@
             "checklistbank": "ott3681745"
           },
           "uuid": "feeec18f-379a-552-803-6283fce4ae5e21",
-          "authorityIds": "col:6WRBB,gbif:5185609,wikidata:Q2324619"
+          "authorityIds": "col:6WRBB,gbif:5185609,wikidata:Q2324619",
+          "authorship": "(Da Silveira & Migotto, 1984)"
         },
         {
           "id": "SP_RALPHARIA_SP",
@@ -3142,10 +3183,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tubulariidae"
+    },
+    {
+      "id": "GENUS_TUBULARIIDAE",
+      "name": "Tubulariidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TUBULARIIDAE_SP",
+          "name": "Tubulariidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulariidae",
+          "sourceIds": {
+            "checklistbank": "1527583"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tubulariidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 141,
+  "genusCount": 17,
+  "speciesCount": 145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3154,6 +3216,6 @@
       "orderKey": 838,
       "familyKey": 7312
     },
-    "checklistbank": "ott622563"
+    "checklistbank": "37517"
   }
 }

@@ -25,9 +25,11 @@
           "sourceIds": {
             "col": [
               "4NR3T"
-            ]
+            ],
+            "checklistbank": "375148"
           },
-          "authorityIds": "col:4NR3T"
+          "authorityIds": "col:4NR3T",
+          "authorship": "(Keller, 1889)"
         },
         {
           "id": "SP_PSEUDOCERATINA_DURISSIMA_CARTER_1885",
@@ -128,6 +130,18 @@
             "checklistbank": "1423914"
           },
           "children": []
+        },
+        {
+          "id": "SP_PSEUDOCERATINA_SP",
+          "name": "Pseudoceratina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoceratina",
+          "sourceIds": {
+            "checklistbank": "424241"
+          },
+          "children": []
         }
       ]
     },
@@ -190,10 +204,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pseudoceratinidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_PSEUDOCERATINA",
+          "name": "cf. Pseudoceratina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "283602"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudoceratinidae"
+    },
+    {
+      "id": "GENUS_PSEUDOCERATINIDAE",
+      "name": "Pseudoceratinidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCERATINIDAE_SP",
+          "name": "Pseudoceratinidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoceratinidae",
+          "sourceIds": {
+            "checklistbank": "1342663"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudoceratinidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 10,
+  "genusCount": 4,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -202,6 +258,6 @@
       "orderKey": 8058188,
       "familyKey": 4917
     },
-    "checklistbank": "e5716057-4e27-49e6-9e40-9543b800e211"
+    "checklistbank": "283600"
   }
 }

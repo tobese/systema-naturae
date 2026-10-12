@@ -31,7 +31,8 @@
             ]
           },
           "uuid": "47853c8d-50e0-521-bf5-f4679e179df5af",
-          "authorityIds": "col:3D3L6,gbif:3203477,itis:13907,mycobank:255219"
+          "authorityIds": "col:3D3L6,gbif:3203477,itis:13907,mycobank:255219",
+          "children": []
         },
         {
           "id": "SP_EURYCHASMIDIUM_SACCULUM_H_E_PETERSEN_M_W_DICK",
@@ -53,7 +54,8 @@
             ]
           },
           "uuid": "ff033778-32d8-527-b99-ae08f05f1a8f49",
-          "authorityIds": "col:3D3L5,gbif:3203473,mycobank:483198"
+          "authorityIds": "col:3D3L5,gbif:3203473,mycobank:483198",
+          "children": []
         },
         {
           "id": "SP_EURYCHASMIDIUM_JOYCEAE_SPARROW_M_W_DICK",
@@ -75,7 +77,8 @@
             ]
           },
           "uuid": "f92c7df4-03fe-519-876-78e6a7ab40ac93",
-          "authorityIds": "col:3D3L4,gbif:3203475,mycobank:483199"
+          "authorityIds": "col:3D3L4,gbif:3203475,mycobank:483199",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -106,27 +109,63 @@
             ],
             "col": [
               "3D3KZ"
-            ]
+            ],
+            "checklistbank": "159317"
           },
           "uuid": "921fc278-bb19-596-858-887f0101cf644b",
-          "authorityIds": "col:3D3KZ,gbif:8048145,itis:13905,mycobank:223712"
+          "authorityIds": "col:3D3KZ,gbif:8048145,itis:13905,mycobank:223712",
+          "children": []
+        },
+        {
+          "id": "SP_EURYCHASMA_SP",
+          "name": "Eurychasma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eurychasma",
+          "sourceIds": {
+            "checklistbank": "2909659"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Eurychasmataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_EURYCHASMATACEAE",
+          "name": "uncultured Eurychasmataceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2829232"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eurychasmataceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 6,
   "appSlug": "eurychasmataceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Oomycota > Peronosporea",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
       "phylumKey": 32,
       "classKey": 8179345,
       "familyKey": 6246
-    }
+    },
+    "checklistbank": "159315"
   }
 }

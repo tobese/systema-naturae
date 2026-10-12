@@ -440,11 +440,13 @@
             "col": [
               "526HB",
               "6ZMQK"
-            ]
+            ],
+            "checklistbank": "710219"
           },
           "uuid": "9bad178a-e9a7-5e2-a75-988b30b1fc7d21",
           "authorityIds": "col:526HB,col:6ZMQK,gbif:5840280",
-          "children": []
+          "children": [],
+          "authorship": "Fromentel, 1867"
         },
         {
           "id": "STENTOR_ELONGATUS",
@@ -648,7 +650,8 @@
             ],
             "col": [
               "526HV"
-            ]
+            ],
+            "checklistbank": "710220"
           },
           "uuid": "0c94e1f5-37f4-598-805-e60647d9e31d5b",
           "authorityIds": "col:526HV,gbif:7441321",
@@ -692,11 +695,13 @@
             ],
             "col": [
               "526HZ"
-            ]
+            ],
+            "checklistbank": "710221"
           },
           "uuid": "dd47eae1-bc26-56d-83c-cdce62ef45b6bf",
           "authorityIds": "col:526HZ,gbif:7615801",
-          "children": []
+          "children": [],
+          "authorship": "Ehrenberg 1831"
         },
         {
           "id": "STENTOR_MULTIFORMIS",
@@ -864,11 +869,13 @@
             ],
             "itis": [
               "46600"
-            ]
+            ],
+            "checklistbank": "2721102"
           },
           "uuid": "fcd94680-2d5b-583-b34-b0d155e6f92f66",
           "authorityIds": "col:526JK,gbif:8081230,itis:46600",
-          "children": []
+          "children": [],
+          "authorship": "Johnson, 1893"
         },
         {
           "id": "STENTOR_ROESELI",
@@ -956,11 +963,13 @@
             ],
             "col": [
               "526JX"
-            ]
+            ],
+            "checklistbank": "2676437"
           },
           "uuid": "9779cf35-edc1-5c0-b5b-78927eca10e658",
           "authorityIds": "col:526JX,gbif:8358892",
-          "children": []
+          "children": [],
+          "authorship": "Murthy & Bai, 1974"
         },
         {
           "id": "SP_STENTOR_MULLERI_BORY_ST_VINCENT_1824_EHRENBERG_1838",
@@ -975,6 +984,18 @@
           },
           "children": [],
           "uuid": "8176ca69-2155-532-a59-1dad0adea30df3"
+        },
+        {
+          "id": "SP_STENTOR_SP",
+          "name": "Stentor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stentor",
+          "sourceIds": {
+            "checklistbank": "233266"
+          },
+          "children": []
         }
       ]
     },
@@ -1061,10 +1082,98 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MARISTENTOR",
+      "name": "Maristentor",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MARISTENTOR_DINOFERUS",
+          "name": "Maristentor dinoferus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Maristentor",
+          "sourceIds": {
+            "checklistbank": "244810"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stentoridae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_STENTORIDAE",
+          "name": "uncultured Stentoridae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "282565"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_STENTOR",
+          "name": "uncultured Stentor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1415797"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stentoridae"
+    },
+    {
+      "id": "GENUS_CONDYLOSTENTOR",
+      "name": "Condylostentor",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CONDYLOSTENTOR_AURICULATUS_VAN_AS_BASSON_VAN_AS_1998",
+          "name": "Condylostentor auriculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Condylostentor",
+          "authorship": "Van As, Basson & Van As, 1998",
+          "sourceIds": {
+            "checklistbank": "512344"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CONDYLOSTENTOR_SP",
+          "name": "Condylostentor sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Condylostentor",
+          "sourceIds": {
+            "checklistbank": "2716169"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stentoridae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 45,
+  "genusCount": 6,
+  "speciesCount": 51,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1073,6 +1182,6 @@
       "orderKey": 8169551,
       "familyKey": 7675494
     },
-    "checklistbank": "f34d4104-aa3e-478a-a588-63968befe9ad"
+    "checklistbank": "219169"
   }
 }

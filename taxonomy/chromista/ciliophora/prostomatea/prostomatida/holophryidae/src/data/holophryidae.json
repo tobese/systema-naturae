@@ -1388,7 +1388,8 @@
             "checklistbank": "ott4031347"
           },
           "uuid": "7a06ef0a-4065-595-83f-a925f508ac5224",
-          "authorityIds": "col:3M9FY,gbif:8174529"
+          "authorityIds": "col:3M9FY,gbif:8174529",
+          "authorship": "(Ehrenberg, 1834) Foissner, Berger and Kohmann, 1994"
         },
         {
           "id": "HOLOPHRYA_TORQUABILIS",
@@ -1603,6 +1604,19 @@
           "authorship": "Ehrenberg",
           "sourceIds": {
             "checklistbank": "077ad791-5343-438d-8ae9-eac3529f1ac3"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HOLOPHRYA_PARADISCOLOR_JIANG_WANG_WARREN_MA_HU_2022",
+          "name": "Holophrya paradiscolor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Holophrya",
+          "authorship": "Jiang, Wang, Warren, Ma & Hu, 2022",
+          "sourceIds": {
+            "checklistbank": "2869577"
           },
           "children": []
         }
@@ -1862,7 +1876,21 @@
             "checklistbank": "ott2825647"
           },
           "uuid": "3828afc9-e943-5ef-a55-95666dce1bcabf",
-          "authorityIds": "col:6TXRK,gbif:7975670"
+          "authorityIds": "col:6TXRK,gbif:7975670",
+          "authorship": "Foissner, Berger & Schaumburg, 1999"
+        },
+        {
+          "id": "SP_PELAGOTHRIX_ABIETUM_PENARD_1922_JIANG_ET_AL_2024",
+          "name": "Pelagothrix abietum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagothrix",
+          "authorship": "(Penard, 1922) Jiang et al., 2024",
+          "sourceIds": {
+            "checklistbank": "3230543"
+          },
+          "children": []
         }
       ]
     },
@@ -2118,10 +2146,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "holophryidae"
+    },
+    {
+      "id": "GENUS_HOLOPHRYIDAE",
+      "name": "Holophryidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HOLOPHRYIDAE_SP",
+          "name": "Holophryidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Holophryidae",
+          "sourceIds": {
+            "checklistbank": "3061829"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "holophryidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 92,
+  "genusCount": 9,
+  "speciesCount": 95,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2130,6 +2179,6 @@
       "orderKey": 7699047,
       "familyKey": 8173953
     },
-    "checklistbank": "ott884734"
+    "checklistbank": "614056"
   }
 }

@@ -2154,7 +2154,8 @@
           "sourceIds": {
             "itis": [
               "53265"
-            ]
+            ],
+            "checklistbank": "1071168"
           },
           "authorityIds": "itis:53265"
         },
@@ -2240,7 +2241,8 @@
           "sourceIds": {
             "itis": [
               "53271"
-            ]
+            ],
+            "checklistbank": "1071169"
           },
           "authorityIds": "itis:53271",
           "commonName": "Head Coral"
@@ -2276,7 +2278,8 @@
           "sourceIds": {
             "itis": [
               "53273"
-            ]
+            ],
+            "checklistbank": "1132378"
           },
           "authorityIds": "itis:53273"
         },
@@ -2328,7 +2331,8 @@
           "sourceIds": {
             "itis": [
               "53276"
-            ]
+            ],
+            "checklistbank": "983585"
           },
           "authorityIds": "itis:53276",
           "commonName": "Honeycomb coral"
@@ -2346,7 +2350,8 @@
           "sourceIds": {
             "itis": [
               "53277"
-            ]
+            ],
+            "checklistbank": "1071166"
           },
           "authorityIds": "itis:53277"
         },
@@ -2511,6 +2516,30 @@
           "lineage": "Favia",
           "sourceIds": {
             "checklistbank": "503828"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FAVIA_AFF",
+          "name": "Favia aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Favia",
+          "sourceIds": {
+            "checklistbank": "570134"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FAVIA_SP",
+          "name": "Favia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Favia",
+          "sourceIds": {
+            "checklistbank": "746480"
           },
           "children": []
         }
@@ -2783,6 +2812,30 @@
           },
           "children": [],
           "uuid": "ddc0927e-ed67-5e1-abe-7365256f9d7914"
+        },
+        {
+          "id": "SP_DIPLORIA_CLIVOSA",
+          "name": "Diploria ×clivosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diploria",
+          "sourceIds": {
+            "checklistbank": "1162621"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPLORIA_AFF",
+          "name": "Diploria aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diploria",
+          "sourceIds": {
+            "checklistbank": "1203472"
+          },
+          "children": []
         }
       ]
     },
@@ -3103,6 +3156,18 @@
           "lineage": "Mycetophyllia",
           "sourceIds": {
             "checklistbank": "106303"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYCETOPHYLLIA_SP",
+          "name": "Mycetophyllia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mycetophyllia",
+          "sourceIds": {
+            "checklistbank": "465056"
           },
           "children": []
         }
@@ -3647,6 +3712,18 @@
           "lineage": "Scolymia",
           "sourceIds": {
             "checklistbank": "85250"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SCOLYMIA_SP",
+          "name": "Scolymia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scolymia",
+          "sourceIds": {
+            "checklistbank": "242746"
           },
           "children": []
         }
@@ -8617,10 +8694,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "faviidae"
+    },
+    {
+      "id": "GENUS_FAVIIDAE",
+      "name": "Faviidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FAVIIDAE_SP",
+          "name": "Faviidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Faviidae",
+          "sourceIds": {
+            "checklistbank": "1210894"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "faviidae"
+    },
+    {
+      "id": "GENUS_FAVIINAE",
+      "name": "Faviinae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FAVIINAE_SP",
+          "name": "Faviinae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Faviinae",
+          "sourceIds": {
+            "checklistbank": "3119373"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "faviidae"
     }
   ],
-  "genusCount": 75,
-  "speciesCount": 465,
+  "genusCount": 77,
+  "speciesCount": 473,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -8628,6 +8747,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 3968
-    }
+    },
+    "checklistbank": "46756"
   }
 }

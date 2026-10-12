@@ -3,7 +3,29 @@
   "name": "Ecnomiosidae",
   "rank": "FAMILY",
   "commonName": "Ecnomiosidae",
-  "children": [],
+  "children": [
+    {
+      "id": "GENUS_ECNOMIOSA",
+      "name": "Ecnomiosa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ECNOMIOSA_SP",
+          "name": "Ecnomiosa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ecnomiosa",
+          "sourceIds": {
+            "checklistbank": "93911"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ecnomiosidae"
+    }
+  ],
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -11,6 +33,9 @@
       "classKey": 210,
       "orderKey": 509,
       "familyKey": 4868739
-    }
-  }
+    },
+    "checklistbank": "93909"
+  },
+  "genusCount": 1,
+  "speciesCount": 1
 }

@@ -159,7 +159,8 @@
             "checklistbank": "ott891210"
           },
           "uuid": "84333f60-a855-505-a5e-df33acfcaaeeb7",
-          "authorityIds": "col:CT8DD,gbif:1000089,itis:951967"
+          "authorityIds": "col:CT8DD,gbif:1000089,itis:951967",
+          "authorship": "Darland et al. 1970"
         },
         {
           "id": "THERMOPLASMA_SPEC.",
@@ -202,7 +203,8 @@
             "checklistbank": "ott1057134"
           },
           "uuid": "8f3de39d-655a-5a6-a6d-4aef664ef065d7",
-          "authorityIds": "col:7C8VL,gbif:1000090,itis:951966"
+          "authorityIds": "col:7C8VL,gbif:1000090,itis:951966",
+          "authorship": "Segerer et al. 1988"
         },
         {
           "id": "SP_THERMOPLASMA_SP",
@@ -571,6 +573,18 @@
             "checklistbank": "ott5207303"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOPLASMATACEAE",
+          "name": "uncultured Thermoplasmataceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "292411"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -617,10 +631,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thermoplasmataceae"
+    },
+    {
+      "id": "GENUS_THERMOPLASMATACEAE",
+      "name": "Thermoplasmataceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOPLASMATACEAE_ARCHAEON",
+          "name": "Thermoplasmataceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoplasmataceae",
+          "sourceIds": {
+            "checklistbank": "2953047"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoplasmataceae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 25,
+  "genusCount": 17,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -629,6 +664,6 @@
       "orderKey": 567,
       "familyKey": 3810
     },
-    "checklistbank": "ott982266"
+    "checklistbank": "46659"
   }
 }

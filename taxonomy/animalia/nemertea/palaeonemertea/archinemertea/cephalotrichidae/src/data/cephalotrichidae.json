@@ -704,7 +704,8 @@
           "sourceIds": {
             "col": [
               "CLJ3L"
-            ]
+            ],
+            "checklistbank": "2780037"
           },
           "authorityIds": "col:CLJ3L"
         },
@@ -721,7 +722,8 @@
           "sourceIds": {
             "col": [
               "69K5B"
-            ]
+            ],
+            "checklistbank": "3385618"
           },
           "authorityIds": "col:69K5B"
         },
@@ -755,7 +757,8 @@
           "sourceIds": {
             "col": [
               "5XK5C"
-            ]
+            ],
+            "checklistbank": "2827202"
           },
           "authorityIds": "col:5XK5C"
         },
@@ -885,7 +888,8 @@
           "sourceIds": {
             "checklistbank": "497474"
           },
-          "children": []
+          "children": [],
+          "authorship": "Burger, 1892"
         },
         {
           "id": "SP_CEPHALOTHRIX_HERMAPHRODITICUS",
@@ -908,6 +912,18 @@
           "lineage": "Cephalothrix",
           "sourceIds": {
             "checklistbank": "1671165"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CEPHALOTHRIX_SP",
+          "name": "Cephalothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalothrix",
+          "sourceIds": {
+            "checklistbank": "743460"
           },
           "children": []
         }
@@ -1131,10 +1147,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cephalotrichidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_CEPHALOTHRIX",
+          "name": "cf. Cephalothrix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "696317"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cephalotrichidae"
+    },
+    {
+      "id": "GENUS_CEPHALOTRICHIDAE",
+      "name": "Cephalotrichidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CEPHALOTRICHIDAE_SP",
+          "name": "Cephalotrichidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalotrichidae",
+          "sourceIds": {
+            "checklistbank": "3061358"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cephalotrichidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 64,
+  "genusCount": 12,
+  "speciesCount": 67,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1142,6 +1200,7 @@
       "classKey": 7194193,
       "orderKey": 11217809,
       "familyKey": 7424221
-    }
+    },
+    "checklistbank": "166040"
   }
 }

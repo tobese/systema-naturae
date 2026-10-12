@@ -113,11 +113,13 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3202529
+            "gbif": 3202529,
+            "checklistbank": "195071"
           },
           "children": [],
           "uuid": "8ee55789-2343-53d-aca-fae22280d852b7",
-          "authorityIds": "gbif:3202529"
+          "authorityIds": "gbif:3202529",
+          "authorship": "(Butcher) D.R.A.Hill, 1991"
         },
         {
           "id": "TELEAULAX_AMPHIOXEIA",
@@ -140,6 +142,56 @@
           "uuid": "0209ca09-3a29-56f-881-81e2eca52a3a60",
           "authorityIds": "gbif:3202525",
           "authorship": "(W.Conrad) D.R.A.Hill, 1992"
+        },
+        {
+          "id": "SP_TELEAULAX_SP",
+          "name": "Teleaulax sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teleaulax",
+          "sourceIds": {
+            "checklistbank": "265870"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TELEAULAX_GRACILIS_LAZA_MARTINEZ_2012",
+          "name": "Teleaulax gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teleaulax",
+          "authorship": "Laza-Martinez, 2012",
+          "sourceIds": {
+            "checklistbank": "1273570"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TELEAULAX_MINUTA_LAZA_MARTINEZ_2012",
+          "name": "Teleaulax minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teleaulax",
+          "authorship": "Laza-Martinez, 2012",
+          "sourceIds": {
+            "checklistbank": "1273571"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TELEAULAX_MERIMBULA",
+          "name": "Teleaulax merimbula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teleaulax",
+          "sourceIds": {
+            "checklistbank": "1684323"
+          },
+          "children": []
         }
       ]
     },
@@ -170,6 +222,18 @@
           "uuid": "944c75ad-7d8c-5e3-b1d-f01b8c3b76cdbb",
           "authorityIds": "gbif:3202532",
           "authorship": "(D.L.Taylor & C.C.Lee) D.R.A.Hill, 1991"
+        },
+        {
+          "id": "SP_GEMINIGERA_SP",
+          "name": "Geminigera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geminigera",
+          "sourceIds": {
+            "checklistbank": "2864123"
+          },
+          "children": []
         }
       ]
     },
@@ -299,10 +363,157 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "geminigeraceae"
+    },
+    {
+      "id": "GENUS_PROTEOMONAS",
+      "name": "Proteomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTEOMONAS_SULCATA_D_R_A_HILL_WETHERBEE_1986",
+          "name": "Proteomonas sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proteomonas",
+          "authorship": "D.R.A.Hill & Wetherbee, 1986",
+          "sourceIds": {
+            "checklistbank": "77928"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTEOMONAS_SP",
+          "name": "Proteomonas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proteomonas",
+          "sourceIds": {
+            "checklistbank": "301224"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTEOMONAS_AGILIS_KHANAYCHENKO_NIKOLAEVA_RYLKOVA_ALEOSHIN_SABUROVA_MOISEENKO_2024",
+          "name": "Proteomonas agilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proteomonas",
+          "authorship": "Khanaychenko, Nikolaeva, Rylkova, Aleoshin, Saburova & Moiseenko, 2024",
+          "sourceIds": {
+            "checklistbank": "3080731"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TELEAULAX",
+          "name": "uncultured Teleaulax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "660924"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GEMINIGERA",
+          "name": "uncultured Geminigera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "858387"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PROTEOMONAS",
+          "name": "uncultured Proteomonas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1074202"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GEMINIGERACEAE",
+          "name": "uncultured Geminigeraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1508460"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
+    },
+    {
+      "id": "GENUS_URGORRI",
+      "name": "Urgorri",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_URGORRI_COMPLANATUS_LAZA_MARTINEZ_2012",
+          "name": "Urgorri complanatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Urgorri",
+          "authorship": "Laza-Martinez, 2012",
+          "sourceIds": {
+            "checklistbank": "1176437"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
+    },
+    {
+      "id": "GENUS_GEMINIGERACEAE",
+      "name": "Geminigeraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GEMINIGERACEAE_SP",
+          "name": "Geminigeraceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geminigeraceae",
+          "sourceIds": {
+            "checklistbank": "1486444"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "geminigeraceae"
     }
   ],
-  "speciesCount": 12,
-  "genusCount": 8,
+  "speciesCount": 26,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -310,6 +521,7 @@
       "classKey": 257,
       "orderKey": 1083,
       "familyKey": 2901
-    }
+    },
+    "checklistbank": "589343"
   }
 }

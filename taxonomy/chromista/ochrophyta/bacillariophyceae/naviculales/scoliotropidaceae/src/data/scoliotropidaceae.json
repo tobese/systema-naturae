@@ -875,10 +875,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7550021
+            "gbif": 7550021,
+            "checklistbank": "1550373"
           },
           "uuid": "94e9dbd9-e6c2-53a-9f8-1fb6ffc612e291",
-          "authorityIds": "gbif:7550021"
+          "authorityIds": "gbif:7550021",
+          "authorship": "F.Barka, A.Witkowski & J.L.F. Weisenborn, 2014"
         },
         {
           "id": "BIREMIS_SIGMOIDEA",
@@ -950,6 +952,18 @@
           "lineage": "Biremis",
           "sourceIds": {
             "checklistbank": "978636"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BIREMIS_SP",
+          "name": "Biremis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biremis",
+          "sourceIds": {
+            "checklistbank": "1550374"
           },
           "children": []
         }
@@ -1125,10 +1139,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "scoliotropidaceae"
+    },
+    {
+      "id": "GENUS_SCOLIOTROPIDACEAE",
+      "name": "Scoliotropidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCOLIOTROPIDACEAE_SP",
+          "name": "Scoliotropidaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scoliotropidaceae",
+          "sourceIds": {
+            "checklistbank": "1629881"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scoliotropidaceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 58,
+  "genusCount": 11,
+  "speciesCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1136,6 +1171,7 @@
       "classKey": 7947184,
       "orderKey": 7763029,
       "familyKey": 7544296
-    }
+    },
+    "checklistbank": "1003106"
   }
 }

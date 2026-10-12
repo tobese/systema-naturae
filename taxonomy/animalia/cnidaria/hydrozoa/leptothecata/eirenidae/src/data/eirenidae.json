@@ -349,10 +349,12 @@
             ],
             "col": [
               "3DDRT"
-            ]
+            ],
+            "checklistbank": "2752225"
           },
           "uuid": "28a94228-6172-5f6-95f-e9e2dca02657ec",
-          "authorityIds": "col:3DDRT,gbif:9460701,wikidata:Q61656615"
+          "authorityIds": "col:3DDRT,gbif:9460701,wikidata:Q61656615",
+          "authorship": "(Kramp, 1959)"
         },
         {
           "id": "SP_EUTIMA_GEGENBAURI",
@@ -1009,6 +1011,18 @@
           "lineage": "Eutima",
           "sourceIds": {
             "checklistbank": "666055"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EUTIMA_SP",
+          "name": "Eutima sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eutima",
+          "sourceIds": {
+            "checklistbank": "1531282"
           },
           "children": []
         }
@@ -2520,6 +2534,18 @@
             "checklistbank": "c1968950-2021-4af9-a489-8cc094331f6f"
           },
           "children": []
+        },
+        {
+          "id": "SP_EIRENE_SP",
+          "name": "Eirene sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eirene",
+          "sourceIds": {
+            "checklistbank": "128129"
+          },
+          "children": []
         }
       ]
     },
@@ -3119,10 +3145,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eirenidae"
+    },
+    {
+      "id": "GENUS_EIRENIDAE",
+      "name": "Eirenidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EIRENIDAE_GEN",
+          "name": "Eirenidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eirenidae",
+          "sourceIds": {
+            "checklistbank": "1569950"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EIRENIDAE_SP",
+          "name": "Eirenidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eirenidae",
+          "sourceIds": {
+            "checklistbank": "3061399"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eirenidae"
     }
   ],
-  "genusCount": 21,
-  "speciesCount": 141,
+  "genusCount": 22,
+  "speciesCount": 145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3131,6 +3190,6 @@
       "orderKey": 712,
       "familyKey": 8191
     },
-    "checklistbank": "7d52363a-9b4c-4c3b-b77c-d7d6b9645366"
+    "checklistbank": "48402"
   }
 }

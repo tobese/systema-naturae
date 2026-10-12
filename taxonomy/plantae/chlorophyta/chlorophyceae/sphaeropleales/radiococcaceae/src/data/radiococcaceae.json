@@ -109,7 +109,8 @@
           "sourceIds": {
             "itis": [
               "6361"
-            ]
+            ],
+            "checklistbank": "402388"
           },
           "authorityIds": "itis:6361"
         },
@@ -382,6 +383,18 @@
           "lineage": "Gloeocystis",
           "sourceIds": {
             "checklistbank": "ott7566807"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOEOCYSTIS_SP",
+          "name": "Gloeocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gloeocystis",
+          "sourceIds": {
+            "checklistbank": "256024"
           },
           "children": []
         }
@@ -1250,7 +1263,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "eb2a029a-4389-5cd-97b-b0bbf3688189b7"
+          "uuid": "eb2a029a-4389-5cd-97b-b0bbf3688189b7",
+          "authorship": "(W.Vischer) I.Kostikov & L.Hoffmann",
+          "sourceIds": {
+            "checklistbank": "1065496"
+          }
         },
         {
           "id": "SP_NEOCYSTIS_MUCOSA",
@@ -1262,7 +1279,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8e3d2e9f-4354-5d6-b78-a981491d29634b"
+          "uuid": "8e3d2e9f-4354-5d6-b78-a981491d29634b",
+          "authorship": "Krienitz, C.Bock, Nozaki & M.Wolf",
+          "sourceIds": {
+            "checklistbank": "1266559"
+          }
         },
         {
           "id": "SP_NEOCYSTIS_OVALIS",
@@ -1322,6 +1343,18 @@
           "lineage": "Neocystis",
           "children": [],
           "uuid": "95ccea70-4f60-557-923-5bbe3a977ab376"
+        },
+        {
+          "id": "SP_NEOCYSTIS_SP",
+          "name": "Neocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neocystis",
+          "sourceIds": {
+            "checklistbank": "1462949"
+          },
+          "children": []
         }
       ]
     },
@@ -1437,7 +1470,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Coenocystis",
           "children": [],
-          "uuid": "918a62d0-895c-5dd-a39-a829cbedadb316"
+          "uuid": "918a62d0-895c-5dd-a39-a829cbedadb316",
+          "authorship": "N.Hanagata & Chihara, 1999",
+          "sourceIds": {
+            "checklistbank": "82176"
+          }
         },
         {
           "id": "SP_COENOCYSTIS_HERCYNICA_H_HENIG_HIND_K_1984",
@@ -1597,6 +1634,18 @@
           "lineage": "Radiococcus",
           "sourceIds": {
             "checklistbank": "ott7566813"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RADIOCOCCUS_SP",
+          "name": "Radiococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Radiococcus",
+          "sourceIds": {
+            "checklistbank": "1289344"
           },
           "children": []
         }
@@ -1829,7 +1878,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sphaerochloris",
           "children": [],
-          "uuid": "042a4878-03bb-5da-9ca-4eed9e370d8dc6"
+          "uuid": "042a4878-03bb-5da-9ca-4eed9e370d8dc6",
+          "authorship": "(Hindak) Hindak, 1988",
+          "sourceIds": {
+            "checklistbank": "1986988"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2165,6 +2218,33 @@
           "sourceIds": {
             "checklistbank": "ott910505"
           },
+          "children": [],
+          "authorship": "(H.W.Bischoff & H.C.Bold) H.Ettl & J.Komarek"
+        },
+        {
+          "id": "SP_FOLLICULARIA_BOTRYOIDES_W_HERNDON_J_KOMAREK",
+          "name": "Follicularia botryoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Follicularia",
+          "authorship": "(W.Herndon) J.Komarek",
+          "sourceIds": {
+            "checklistbank": "1241898"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FOLLICULARIA_PARADOXALIS_W_W_MILLER_1924",
+          "name": "Follicularia paradoxalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Follicularia",
+          "authorship": "W.W.Miller, 1924",
+          "sourceIds": {
+            "checklistbank": "1519563"
+          },
           "children": []
         }
       ],
@@ -2191,10 +2271,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "radiococcaceae"
+    },
+    {
+      "id": "GENUS_RADIOCOCCACEAE",
+      "name": "Radiococcaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RADIOCOCCACEAE_SP",
+          "name": "Radiococcaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Radiococcaceae",
+          "sourceIds": {
+            "checklistbank": "1301219"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "radiococcaceae"
     }
   ],
-  "genusCount": 37,
-  "speciesCount": 138,
+  "genusCount": 38,
+  "speciesCount": 144,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -2203,6 +2304,6 @@
       "orderKey": 7429582,
       "familyKey": 6335
     },
-    "checklistbank": "ott5153184"
+    "checklistbank": "1656250"
   }
 }

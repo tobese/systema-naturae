@@ -2349,7 +2349,8 @@
             ],
             "col": [
               "4SCYF"
-            ]
+            ],
+            "checklistbank": "2681480"
           },
           "uuid": "1ae14c8a-1188-5b9-8a3-a978b1eca0b234",
           "authorityIds": "col:4SCYF,gbif:10754467,mycobank:554571"
@@ -5062,7 +5063,8 @@
           "sourceIds": {
             "checklistbank": "ott3685238"
           },
-          "children": []
+          "children": [],
+          "authorship": "Karling, 1968"
         },
         {
           "id": "SP_RHIZOPHYDIUM_ASYMMETRICUM",
@@ -5217,6 +5219,18 @@
           "lineage": "Rhizophydium",
           "sourceIds": {
             "checklistbank": "ott5665786"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHIZOPHYDIUM_SP",
+          "name": "Rhizophydium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizophydium",
+          "sourceIds": {
+            "checklistbank": "60187"
           },
           "children": []
         }
@@ -5632,11 +5646,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhizophydiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_RHIZOPHYDIUM",
+          "name": "uncultured Rhizophydium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "682749"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_RHIZOPHYDIACEAE",
+          "name": "uncultured Rhizophydiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "941408"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizophydiaceae"
+    },
+    {
+      "id": "GENUS_RHIZOPHYDIACEAE",
+      "name": "Rhizophydiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHIZOPHYDIACEAE_SP",
+          "name": "Rhizophydiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizophydiaceae",
+          "sourceIds": {
+            "checklistbank": "2012233"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizophydiaceae"
     }
   ],
   "authorship": "Letcher",
-  "genusCount": 8,
-  "speciesCount": 234,
+  "genusCount": 10,
+  "speciesCount": 238,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -5645,6 +5713,6 @@
       "orderKey": 1117,
       "familyKey": 3814
     },
-    "checklistbank": "ott894419"
+    "checklistbank": "451449"
   }
 }

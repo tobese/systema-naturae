@@ -286,9 +286,11 @@
           "sourceIds": {
             "col": [
               "53LND"
-            ]
+            ],
+            "checklistbank": "1169934"
           },
-          "authorityIds": "col:53LND"
+          "authorityIds": "col:53LND",
+          "authorship": "(Jenkin, 1908)"
         },
         {
           "id": "SP_SYCETTUSA_STAURIDIA",
@@ -305,9 +307,11 @@
           "sourceIds": {
             "col": [
               "7B5NC"
-            ]
+            ],
+            "checklistbank": "2034230"
           },
-          "authorityIds": "col:7B5NC"
+          "authorityIds": "col:7B5NC",
+          "authorship": "(Haeckel, 1872)"
         },
         {
           "id": "SP_SYCETTUSA_SYCILLOIDES",
@@ -361,9 +365,11 @@
           "sourceIds": {
             "col": [
               "53LNH"
-            ]
+            ],
+            "checklistbank": "2204106"
           },
-          "authorityIds": "col:53LNH"
+          "authorityIds": "col:53LNH",
+          "authorship": "(Lambe, 1900)"
         },
         {
           "id": "SP_SYCETTUSA_ZANZIBARIS",
@@ -380,9 +386,11 @@
           "sourceIds": {
             "col": [
               "53LNJ"
-            ]
+            ],
+            "checklistbank": "2034677"
           },
-          "authorityIds": "col:53LNJ"
+          "authorityIds": "col:53LNJ",
+          "authorship": "(Jenkin, 1908)"
         },
         {
           "id": "SP_SYCETTUSA_NEMURENSIS_H_ZAWA_1929",
@@ -425,6 +433,30 @@
           "authorship": "Borojevic & Klautau",
           "sourceIds": {
             "checklistbank": "632b1397-5e60-43e6-ad4e-5a152614c071"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYCETTUSA_SP",
+          "name": "Sycettusa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sycettusa",
+          "sourceIds": {
+            "checklistbank": "196274"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYCETTUSA_AFF",
+          "name": "Sycettusa aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sycettusa",
+          "sourceIds": {
+            "checklistbank": "1169954"
           },
           "children": []
         }
@@ -1142,6 +1174,18 @@
           "lineage": "Vosmaeropsis",
           "sourceIds": {
             "checklistbank": "1663951"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VOSMAEROPSIS_SP",
+          "name": "Vosmaeropsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vosmaeropsis",
+          "sourceIds": {
+            "checklistbank": "196276"
           },
           "children": []
         }
@@ -2247,6 +2291,31 @@
             "checklistbank": "667500"
           },
           "children": []
+        },
+        {
+          "id": "SP_GRANTESSA_SP",
+          "name": "Grantessa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Grantessa",
+          "sourceIds": {
+            "checklistbank": "981509"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GRANTESSA_TUMIDA_BASLAVI_CONDOR_LUJAN_LOUZADA_HAJDU_KLAUTAU_2018",
+          "name": "Grantessa tumida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Grantessa",
+          "authorship": "Baslavi Condor-Lujan, Louzada, Hajdu & Klautau, 2018",
+          "sourceIds": {
+            "checklistbank": "2034754"
+          },
+          "children": []
         }
       ]
     },
@@ -2598,10 +2667,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Heteropiidae"
+    },
+    {
+      "id": "GENUS_HETEROPIIDAE",
+      "name": "Heteropiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HETEROPIIDAE_SP",
+          "name": "Heteropiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heteropiidae",
+          "sourceIds": {
+            "checklistbank": "1346644"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heteropiidae"
+    },
+    {
+      "id": "GENUS_AFF",
+      "name": "aff.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AFF_GRANTESSA",
+          "name": "aff. Grantessa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "aff.",
+          "sourceIds": {
+            "checklistbank": "2973440"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heteropiidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 132,
+  "genusCount": 9,
+  "speciesCount": 139,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2610,6 +2721,6 @@
       "orderKey": 1184,
       "familyKey": 7751
     },
-    "checklistbank": "6b626070-a2e6-4794-b435-686469c8f35a"
+    "checklistbank": "196272"
   }
 }

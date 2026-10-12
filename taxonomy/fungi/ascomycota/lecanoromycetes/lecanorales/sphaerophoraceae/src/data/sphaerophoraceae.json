@@ -198,7 +198,8 @@
             ],
             "col": [
               "NVDG"
-            ]
+            ],
+            "checklistbank": "2230923"
           },
           "uuid": "35f73881-cc5d-597-9ad-5a3944e159819f",
           "authorityIds": "col:NVDG,gbif:10845397,mycobank:821589"
@@ -811,6 +812,18 @@
             "checklistbank": "1713286"
           },
           "children": []
+        },
+        {
+          "id": "SP_BUNODOPHORON_SP",
+          "name": "Bunodophoron sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bunodophoron",
+          "sourceIds": {
+            "checklistbank": "2741363"
+          },
+          "children": []
         }
       ],
       "authorship": "A. Massalongo"
@@ -1318,9 +1331,11 @@
           "sourceIds": {
             "mycobank": [
               "370345"
-            ]
+            ],
+            "checklistbank": "3044040"
           },
-          "authorityIds": "mycobank:370345"
+          "authorityIds": "mycobank:370345",
+          "authorship": "Rasanen, 1933"
         },
         {
           "id": "SP_SPHAEROPHORUS_MURRAYII",
@@ -1717,6 +1732,18 @@
             "checklistbank": "ott8004507"
           },
           "children": []
+        },
+        {
+          "id": "SP_SPHAEROPHORUS_SP",
+          "name": "Sphaerophorus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerophorus",
+          "sourceIds": {
+            "checklistbank": "236270"
+          },
+          "children": []
         }
       ],
       "authorship": "Persoon"
@@ -1867,6 +1894,19 @@
           "authorship": "(Sommerf.) McCune",
           "sourceIds": {
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:229085"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOMICAREA_COMMACULANS_NYL_APTROOT_2022",
+          "name": "Protomicarea commaculans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protomicarea",
+          "authorship": "(Nyl.) Aptroot, 2022",
+          "sourceIds": {
+            "checklistbank": "3397977"
           },
           "children": []
         }
@@ -2328,11 +2368,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaerophoraceae"
+    },
+    {
+      "id": "GENUS_SPHAEROPHORACEAE",
+      "name": "Sphaerophoraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAEROPHORACEAE_SP",
+          "name": "Sphaerophoraceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerophoraceae",
+          "sourceIds": {
+            "checklistbank": "3350561"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerophoraceae"
     }
   ],
   "authorship": "Fries",
-  "genusCount": 22,
-  "speciesCount": 113,
+  "genusCount": 23,
+  "speciesCount": 117,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2341,6 +2402,6 @@
       "orderKey": 1048,
       "familyKey": 4810
     },
-    "checklistbank": "ott1014712"
+    "checklistbank": "40598"
   }
 }

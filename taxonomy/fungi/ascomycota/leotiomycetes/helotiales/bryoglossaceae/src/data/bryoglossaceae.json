@@ -36,7 +36,8 @@
             ]
           },
           "uuid": "b0bdcabd-5eab-5c7-b38-fb01aefc167d17",
-          "authorityIds": "col:NJ5Z,gbif:2586705,mycobank:309963"
+          "authorityIds": "col:NJ5Z,gbif:2586705,mycobank:309963",
+          "children": []
         },
         {
           "id": "BRYOGLOSSUM_REHMII",
@@ -63,7 +64,20 @@
             ]
           },
           "uuid": "87ec06a8-d409-5ed-957-5f5bd91374d627",
-          "authorityIds": "col:NJ62,gbif:2586703,mycobank:436699"
+          "authorityIds": "col:NJ62,gbif:2586703,mycobank:436699",
+          "children": []
+        },
+        {
+          "id": "SP_BRYOGLOSSUM_SP",
+          "name": "Bryoglossum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryoglossum",
+          "sourceIds": {
+            "checklistbank": "2599108"
+          },
+          "children": []
         }
       ],
       "authorship": "Redhead"
@@ -98,7 +112,8 @@
             ]
           },
           "uuid": "4c57ebb2-e586-5bf-aaf-12950830795442",
-          "authorityIds": "col:46FG4,gbif:3486736,mycobank:318600"
+          "authorityIds": "col:46FG4,gbif:3486736,mycobank:318600",
+          "children": []
         },
         {
           "id": "NEOCUDONIELLA_JEZOENSIS",
@@ -119,7 +134,8 @@
             ]
           },
           "uuid": "b57aaff8-a327-5fb-9b8-c789093240f465",
-          "authorityIds": "col:46FG5,gbif:5952993"
+          "authorityIds": "col:46FG5,gbif:5952993",
+          "children": []
         },
         {
           "id": "NEOCUDONIELLA_RADICELLA",
@@ -141,10 +157,12 @@
             ],
             "col": [
               "46FG6"
-            ]
+            ],
+            "checklistbank": "271844"
           },
           "uuid": "254cf9c3-291d-578-8b8-3e38fe3efe417d",
-          "authorityIds": "col:46FG6,gbif:3486735,mycobank:129003"
+          "authorityIds": "col:46FG6,gbif:3486735,mycobank:129003",
+          "children": []
         }
       ],
       "authorship": "S. Imai"
@@ -176,13 +194,36 @@
             ],
             "col": [
               "NHW7"
-            ]
+            ],
+            "checklistbank": "1306272"
           },
           "uuid": "751c7601-b371-526-b5d-227fd7af5a6bbb",
-          "authorityIds": "col:NHW7,gbif:7506494,mycobank:803179"
+          "authorityIds": "col:NHW7,gbif:7506494,mycobank:803179",
+          "children": []
         }
       ],
       "authorship": "L. Ludwig, P.R. Johnston & Steel"
+    },
+    {
+      "id": "GENUS_BRYOGLOSSACEAE",
+      "name": "Bryoglossaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRYOGLOSSACEAE_SP",
+          "name": "Bryoglossaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryoglossaceae",
+          "sourceIds": {
+            "checklistbank": "3421474"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bryoglossaceae"
     }
   ],
   "authorship": "Ekanayaka & K.D. Hyde",
@@ -193,6 +234,9 @@
       "classKey": 179,
       "orderKey": 1052,
       "familyKey": 10854765
-    }
-  }
+    },
+    "checklistbank": "2907088"
+  },
+  "genusCount": 4,
+  "speciesCount": 8
 }

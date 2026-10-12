@@ -432,7 +432,8 @@
           "sourceIds": {
             "itis": [
               "2731"
-            ]
+            ],
+            "checklistbank": "1527828"
           },
           "authorityIds": "itis:2731"
         },
@@ -481,6 +482,18 @@
           },
           "children": [],
           "uuid": "4b66f490-b3c6-5f7-8f8-61bf3c5e44e321"
+        },
+        {
+          "id": "SP_EUCAMPIA_SP",
+          "name": "Eucampia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucampia",
+          "sourceIds": {
+            "checklistbank": "1335114"
+          },
+          "children": []
         }
       ]
     },
@@ -2206,6 +2219,31 @@
           },
           "children": [],
           "uuid": "889a457e-572a-55e-9b3-40acad0ed55fd6"
+        },
+        {
+          "id": "SP_CERATAULINA_DAEMON_GREVILLE_HASLE_1980",
+          "name": "Cerataulina daemon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerataulina",
+          "authorship": "(Greville) Hasle, 1980",
+          "sourceIds": {
+            "checklistbank": "1527800"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATAULINA_SP",
+          "name": "Cerataulina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerataulina",
+          "sourceIds": {
+            "checklistbank": "2302671"
+          },
+          "children": []
         }
       ]
     },
@@ -5304,6 +5342,18 @@
           },
           "uuid": "74c5141b-6944-56a-93e-bedd2f7c764289",
           "authorityIds": "gbif:7492810"
+        },
+        {
+          "id": "SP_HEMIAULUS_SP",
+          "name": "Hemiaulus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemiaulus",
+          "sourceIds": {
+            "checklistbank": "1631173"
+          },
+          "children": []
         }
       ]
     },
@@ -6235,10 +6285,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hemiaulaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_EUCAMPIA",
+          "name": "uncultured Eucampia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1572326"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HEMIAULUS",
+          "name": "uncultured Hemiaulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1799767"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CLIMACODIUM",
+          "name": "uncultured Climacodium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2022335"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemiaulaceae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 343,
+  "genusCount": 23,
+  "speciesCount": 350,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -6246,6 +6341,7 @@
       "classKey": 7947184,
       "orderKey": 488,
       "familyKey": 2928
-    }
+    },
+    "checklistbank": "49250"
   }
 }

@@ -442,6 +442,18 @@
           },
           "uuid": "6fef05f6-aa7d-512-bc1-59ba1b342d67fe",
           "authorityIds": "col:56W84,gbif:2562134,mycobank:171483"
+        },
+        {
+          "id": "SP_TILACHLIDIUM_SP",
+          "name": "Tilachlidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tilachlidium",
+          "sourceIds": {
+            "checklistbank": "150390"
+          },
+          "children": []
         }
       ],
       "authorship": "Preuss"
@@ -474,10 +486,23 @@
             ],
             "col": [
               "4PR6P"
-            ]
+            ],
+            "checklistbank": "2005075"
           },
           "uuid": "230cd066-e62e-511-be4-aca38f617d9898",
           "authorityIds": "col:4PR6P,gbif:10893578,mycobank:821598"
+        },
+        {
+          "id": "SP_PSYCHRONECTRIA_SP",
+          "name": "Psychronectria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psychronectria",
+          "sourceIds": {
+            "checklistbank": "3367063"
+          },
+          "children": []
         }
       ],
       "authorship": "J. Pawłowska, Ł. Istel, M. Wrzosek & D.L. Hawksworth"
@@ -831,7 +856,8 @@
           "sourceIds": {
             "checklistbank": "408233"
           },
-          "children": []
+          "children": [],
+          "authorship": "(A.H.S.Br. & G.Sm.) Samson"
         },
         {
           "id": "SP_SEPTOFUSIDIUM_ELEGANTULUM",
@@ -855,7 +881,8 @@
           "sourceIds": {
             "checklistbank": "ott3756138"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Ola'h & H.-W. Ackerm.) Samson, 1974"
         },
         {
           "id": "SP_SEPTOFUSIDIUM_VARIABILE",
@@ -878,6 +905,31 @@
           "lineage": "Septofusidium",
           "sourceIds": {
             "checklistbank": "ott5481813"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SEPTOFUSIDIUM_SP",
+          "name": "Septofusidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Septofusidium",
+          "sourceIds": {
+            "checklistbank": "2040963"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SEPTOFUSIDIUM_STEVENSIAE_Y_P_TAN_BISHOP_HURLEY_MARNEY_R_G_SHIVAS_2022",
+          "name": "Septofusidium stevensiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Septofusidium",
+          "authorship": "Y.P. Tan, Bishop-Hurley, Marney & R.G. Shivas, 2022",
+          "sourceIds": {
+            "checklistbank": "2984064"
           },
           "children": []
         }
@@ -926,11 +978,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tilachlidiaceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_PSYCHRONECTRIA",
+          "name": "cf. Psychronectria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "2340252"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tilachlidiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TILACHLIDIUM",
+          "name": "uncultured Tilachlidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980888"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tilachlidiaceae"
     }
   ],
   "authorship": "L. Lombard & P.W. Crous",
-  "genusCount": 9,
-  "speciesCount": 48,
+  "genusCount": 11,
+  "speciesCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -939,6 +1033,6 @@
       "orderKey": 1290,
       "familyKey": 7929895
     },
-    "checklistbank": "ott5694827"
+    "checklistbank": "1634953"
   }
 }

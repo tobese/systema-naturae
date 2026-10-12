@@ -56,7 +56,8 @@
             ],
             "col": [
               "3G6DY"
-            ]
+            ],
+            "checklistbank": "5883"
           },
           "uuid": "534d0ee3-de95-5f4-8e3-0e547ae3bc4fa2",
           "authorityIds": "col:3G6DY,gbif:8414913,itis:193492"
@@ -271,10 +272,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 10565573
+            "gbif": 10565573,
+            "checklistbank": "2814651"
           },
           "uuid": "33669e8e-0d62-5db-89c-3a8daed2107322",
-          "authorityIds": "gbif:10565573"
+          "authorityIds": "gbif:10565573",
+          "authorship": "Doerder, 2018"
         },
         {
           "id": "GLAUCOMA_HYALINA",
@@ -464,10 +467,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9925839
+            "gbif": 9925839,
+            "checklistbank": "2814652"
           },
           "uuid": "a0257825-03fe-590-bb4-6721898dacc520",
-          "authorityIds": "gbif:9925839"
+          "authorityIds": "gbif:9925839",
+          "authorship": "Doerder, 2018"
         },
         {
           "id": "GLAUCOMA_PARADOXUM",
@@ -805,6 +810,18 @@
           "authorship": "Kahl, 1926",
           "sourceIds": {
             "checklistbank": "1028977"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLAUCOMA_SP",
+          "name": "Glaucoma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glaucoma",
+          "sourceIds": {
+            "checklistbank": "173089"
           },
           "children": []
         }
@@ -1314,10 +1331,45 @@
           "authorship": "(Kahl, 1926)"
         }
       ]
+    },
+    {
+      "id": "GENUS_ANTEGLAUCOMA",
+      "name": "Anteglaucoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTEGLAUCOMA_HARBINENSIS_PAN_ET_AL_2016",
+          "name": "Anteglaucoma harbinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anteglaucoma",
+          "authorship": "Pan et al., 2016",
+          "sourceIds": {
+            "checklistbank": "1926397"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANTEGLAUCOMA_ORIENTALIS_ZHANG_SUN_CHEN_PAN_2021",
+          "name": "Anteglaucoma orientalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anteglaucoma",
+          "authorship": "Zhang, Sun, Chen & Pan, 2021",
+          "sourceIds": {
+            "checklistbank": "2784001"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaucomidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 57,
+  "genusCount": 9,
+  "speciesCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1326,6 +1378,6 @@
       "orderKey": 7984607,
       "familyKey": 7625079
     },
-    "checklistbank": "c4a9e8d9-bd87-4efc-8e79-ccee2d78e8cd"
+    "checklistbank": "291296"
   }
 }

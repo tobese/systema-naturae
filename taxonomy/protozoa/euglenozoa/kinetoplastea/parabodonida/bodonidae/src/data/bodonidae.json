@@ -115,11 +115,13 @@
             ],
             "itis": [
               "43822"
-            ]
+            ],
+            "checklistbank": "266813"
           },
           "uuid": "5320dd6c-b229-5fa-bee-913ff5757fc48b",
           "authorityIds": "gbif:8114005,itis:43822",
-          "children": []
+          "children": [],
+          "authorship": "Klebs, 1892"
         },
         {
           "id": "BODO_CURVIFILUS",
@@ -380,7 +382,8 @@
             ],
             "itis": [
               "203852"
-            ]
+            ],
+            "checklistbank": "259042"
           },
           "uuid": "203f9dda-1942-576-ba3-358002e830855e",
           "authorityIds": "gbif:4281175,itis:203852",
@@ -418,11 +421,13 @@
           "description": "Bodo saltans (alternatively known as Pleuromonas jaculans) is a free-living nonparasitic species of kinetoplastid flagellated phagotrophic protozoa that feed on bacteria.",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 7761641
+            "gbif": 7761641,
+            "checklistbank": "75058"
           },
           "uuid": "dfbac10f-fbb1-59c-b51-7f55d620c273fd",
           "authorityIds": "gbif:7761641",
-          "children": []
+          "children": [],
+          "authorship": "Ehrenberg"
         },
         {
           "id": "BODO_TRINAGULARIS",
@@ -488,6 +493,42 @@
           },
           "uuid": "0d48059f-8ae5-5cf-b5a-573077dcf507b5",
           "authorityIds": "gbif:4281162,itis:193463",
+          "children": []
+        },
+        {
+          "id": "SP_BODO_UNCINATUS",
+          "name": "Bodo uncinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bodo",
+          "sourceIds": {
+            "checklistbank": "62684"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BODO_SP",
+          "name": "Bodo sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bodo",
+          "sourceIds": {
+            "checklistbank": "155205"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BODO_ENVIRONMENTAL",
+          "name": "Bodo environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bodo",
+          "sourceIds": {
+            "checklistbank": "1227961"
+          },
           "children": []
         }
       ]
@@ -579,6 +620,123 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bodonidae"
+    },
+    {
+      "id": "GENUS_KINETOPLASTID",
+      "name": "kinetoplastid",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KINETOPLASTID_FLAGELLATE",
+          "name": "kinetoplastid flagellate",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "kinetoplastid",
+          "sourceIds": {
+            "checklistbank": "127153"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bodonidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BODONID",
+          "name": "uncultured bodonid",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "212100"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BODONIDAE",
+          "name": "uncultured Bodonidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "547485"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bodonidae"
+    },
+    {
+      "id": "GENUS_BODONIDAE",
+      "name": "Bodonidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BODONIDAE_SP",
+          "name": "Bodonidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bodonidae",
+          "sourceIds": {
+            "checklistbank": "266811"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bodonidae"
+    },
+    {
+      "id": "GENUS_CRYPTAULAXOIDES_LIKE",
+      "name": "Cryptaulaxoides-like",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTAULAXOIDES_LIKE_SP",
+          "name": "Cryptaulaxoides-like sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptaulaxoides-like",
+          "sourceIds": {
+            "checklistbank": "296185"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bodonidae"
+    },
+    {
+      "id": "GENUS_PLO",
+      "name": "PLO",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLO_OF",
+          "name": "PLO of",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "PLO",
+          "sourceIds": {
+            "checklistbank": "1321613"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bodonidae"
     }
   ],
   "sourceIds": {
@@ -589,8 +747,8 @@
       "orderKey": 8206012,
       "familyKey": 3235464
     },
-    "checklistbank": "4c5d2b25-36a8-49de-8ccc-384d53e298f8"
+    "checklistbank": "5708"
   },
-  "genusCount": 5,
-  "speciesCount": 26
+  "genusCount": 10,
+  "speciesCount": 35
 }

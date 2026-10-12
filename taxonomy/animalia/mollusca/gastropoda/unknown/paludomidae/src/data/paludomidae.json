@@ -858,9 +858,11 @@
           "sourceIds": {
             "col": [
               "CPB7G"
-            ]
+            ],
+            "checklistbank": "3208479"
           },
-          "authorityIds": "col:CPB7G"
+          "authorityIds": "col:CPB7G",
+          "authorship": "(Benson, 1862)"
         },
         {
           "id": "SP_PALUDOMUS_SUBFASCIATA_E_VON_MARTENS_1908",
@@ -1252,7 +1254,8 @@
           "sourceIds": {
             "checklistbank": "150936"
           },
-          "children": []
+          "children": [],
+          "authorship": "Blanford, 1903"
         },
         {
           "id": "SP_PALUDOMUS_QIANENSIS",
@@ -1311,6 +1314,44 @@
           "lineage": "Paludomus",
           "sourceIds": {
             "checklistbank": "1706197"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALUDOMUS_SP",
+          "name": "Paludomus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paludomus",
+          "sourceIds": {
+            "checklistbank": "593675"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALUDOMUS_PETROSUS_GOULD_1844",
+          "name": "Paludomus petrosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paludomus",
+          "authorship": "(Gould, 1844)",
+          "sourceIds": {
+            "checklistbank": "2052469"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALUDOMUS_ISSELI_BROT_1880",
+          "name": "Paludomus isseli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paludomus",
+          "authorship": "Brot, 1880",
+          "sourceIds": {
+            "checklistbank": "3398081"
           },
           "children": []
         }
@@ -1547,7 +1588,8 @@
           "sourceIds": {
             "checklistbank": "110985"
           },
-          "children": []
+          "children": [],
+          "authorship": "Thiele, 1928"
         },
         {
           "id": "SP_PSEUDOCLEOPATRA_TOGOENSIS",
@@ -3566,7 +3608,8 @@
           "sourceIds": {
             "checklistbank": "97973"
           },
-          "children": []
+          "children": [],
+          "authorship": "Smith, 1893"
         },
         {
           "id": "SP_CLEOPATRA_LANGI",
@@ -3590,7 +3633,8 @@
           "sourceIds": {
             "checklistbank": "97975"
           },
-          "children": []
+          "children": [],
+          "authorship": "Smith, 1893"
         },
         {
           "id": "SP_CLEOPATRA_NSENDWEENSIS",
@@ -4144,16 +4188,38 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Paludomidae"
+    },
+    {
+      "id": "GENUS_STORMSIA",
+      "name": "Stormsia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STORMSIA_MINIMA",
+          "name": "Stormsia minima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stormsia",
+          "sourceIds": {
+            "checklistbank": "262715"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paludomidae"
     }
   ],
-  "genusCount": 26,
-  "speciesCount": 236,
+  "genusCount": 27,
+  "speciesCount": 240,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 4956530
-    }
+    },
+    "checklistbank": "223729"
   }
 }

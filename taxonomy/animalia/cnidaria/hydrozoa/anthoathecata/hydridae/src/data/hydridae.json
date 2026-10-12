@@ -553,7 +553,8 @@
             "checklistbank": "ott1055035"
           },
           "uuid": "a6004d72-fc78-57e-b63-1c55b6f2a4ebcc",
-          "authorityIds": "col:3N2C7,gbif:5185788,wikidata:Q2183676"
+          "authorityIds": "col:3N2C7,gbif:5185788,wikidata:Q2183676",
+          "authorship": "Ito, 1947"
         },
         {
           "id": "HYDRA_JAVANICA",
@@ -1040,7 +1041,8 @@
             "checklistbank": "ott613905"
           },
           "uuid": "2ab19136-4e3c-5a2-9e5-f5bfb5c685bc98",
-          "authorityIds": "col:3N2D6,gbif:5185777,wikidata:Q2164734"
+          "authorityIds": "col:3N2D6,gbif:5185777,wikidata:Q2164734",
+          "authorship": "(Ito, 1947)"
         },
         {
           "id": "HYDRA_RUBRA",
@@ -1168,7 +1170,8 @@
             "checklistbank": "1456968"
           },
           "uuid": "73601d4b-f49a-599-bf0-0fdd74ef4b8b7d",
-          "authorityIds": "col:3N2DB,gbif:5842425,wikidata:Q2584740"
+          "authorityIds": "col:3N2DB,gbif:5842425,wikidata:Q2584740",
+          "authorship": "Wang, Deng, Lai & Li, 2009"
         },
         {
           "id": "HYDRA_SOCIATA",
@@ -1439,7 +1442,8 @@
             "checklistbank": "ott257476"
           },
           "uuid": "490e0c47-eb78-528-b99-24612446619134",
-          "authorityIds": "col:3N2DR,gbif:5842421,wikidata:Q13257613"
+          "authorityIds": "col:3N2DR,gbif:5842421,wikidata:Q13257613",
+          "authorship": "Liu & Wang, 2010"
         },
         {
           "id": "SP_HYDRA_SHENZHENSIS",
@@ -1449,7 +1453,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Hydra",
-          "uuid": "62d2944d-f404-5c1-8f9-4eea0d248681e1"
+          "uuid": "62d2944d-f404-5c1-8f9-4eea0d248681e1",
+          "authorship": "Wang & Deng, 2012",
+          "sourceIds": {
+            "checklistbank": "929442"
+          }
         },
         {
           "id": "SP_HYDRA_AMERICANA_HYMAN_1929",
@@ -1774,6 +1782,31 @@
             "checklistbank": "ott7995899"
           },
           "children": []
+        },
+        {
+          "id": "SP_HYDRA_SP",
+          "name": "Hydra sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydra",
+          "sourceIds": {
+            "checklistbank": "6086"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYDRA_POLYMORPHUS_CHEN_WANG_2008",
+          "name": "Hydra polymorphus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydra",
+          "authorship": "Chen & Wang, 2008",
+          "sourceIds": {
+            "checklistbank": "798223"
+          },
+          "children": []
         }
       ]
     },
@@ -1866,7 +1899,7 @@
     }
   ],
   "genusCount": 4,
-  "speciesCount": 87,
+  "speciesCount": 89,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1875,6 +1908,6 @@
       "orderKey": 838,
       "familyKey": 3977
     },
-    "checklistbank": "ott861539"
+    "checklistbank": "6080"
   }
 }

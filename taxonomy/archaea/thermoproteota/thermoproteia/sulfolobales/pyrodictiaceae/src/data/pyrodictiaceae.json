@@ -35,7 +35,8 @@
             "checklistbank": "938985"
           },
           "uuid": "ae3a4c9c-d8bd-5c1-9f3-0ba9f6c14c40db",
-          "authorityIds": "col:792CP,gbif:1000006,itis:951916"
+          "authorityIds": "col:792CP,gbif:1000006,itis:951916",
+          "authorship": "Pley et al. 1991"
         },
         {
           "id": "PYRODICTIUM_BROCKII",
@@ -61,7 +62,8 @@
             "checklistbank": "938987"
           },
           "uuid": "8345cb81-ab75-5a5-b25-c2c6d0e63103db",
-          "authorityIds": "col:6WQCR,gbif:1000007,itis:951917"
+          "authorityIds": "col:6WQCR,gbif:1000007,itis:951917",
+          "authorship": "Stetter et al. 1984"
         },
         {
           "id": "PYRODICTIUM_DELANEYI",
@@ -84,7 +86,8 @@
             "checklistbank": "ott465229"
           },
           "uuid": "69bed42b-e7b0-515-887-1d5027098f8ee4",
-          "authorityIds": "col:CSY64,gbif:9327683"
+          "authorityIds": "col:CSY64,gbif:9327683",
+          "authorship": "Lin 2014"
         },
         {
           "id": "PYRODICTIUM_OCCULTUM",
@@ -110,7 +113,20 @@
             "checklistbank": "938988"
           },
           "uuid": "b201e495-0cdb-5ff-80f-daa792cb474405",
-          "authorityIds": "col:6WQD3,gbif:1000005,itis:951918"
+          "authorityIds": "col:6WQD3,gbif:1000005,itis:951918",
+          "authorship": "Stetter et al. 1984"
+        },
+        {
+          "id": "SP_PYRODICTIUM_SP",
+          "name": "Pyrodictium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrodictium",
+          "sourceIds": {
+            "checklistbank": "1970082"
+          },
+          "children": []
         }
       ]
     },
@@ -145,7 +161,8 @@
             "checklistbank": "938983"
           },
           "uuid": "6227d701-c00f-579-8a5-637283d4791904",
-          "authorityIds": "col:3NRH5,gbif:1000009,itis:951735"
+          "authorityIds": "col:3NRH5,gbif:1000009,itis:951735",
+          "authorship": "Zillig et al. 1991"
         },
         {
           "id": "SP_HYPERTHERMUS_HEPHAESTI",
@@ -155,7 +172,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hyperthermus",
           "children": [],
-          "uuid": "98a7eb79-b063-5e4-bcd-78296e9f6a6d95"
+          "uuid": "98a7eb79-b063-5e4-bcd-78296e9f6a6d95",
+          "authorship": "Lin 2014",
+          "sourceIds": {
+            "checklistbank": "1227648"
+          }
+        },
+        {
+          "id": "SP_HYPERTHERMUS_SP",
+          "name": "Hyperthermus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyperthermus",
+          "sourceIds": {
+            "checklistbank": "1970083"
+          },
+          "children": []
         }
       ]
     },
@@ -190,7 +223,8 @@
             "checklistbank": "938990"
           },
           "uuid": "fbdbe420-5081-594-b5e-a1e69839befabb",
-          "authorityIds": "col:4QV33,gbif:1000011,itis:951919"
+          "authorityIds": "col:4QV33,gbif:1000011,itis:951919",
+          "authorship": "Blochl et al. 1999"
         },
         {
           "id": "PYROLOBUS_SPEC.",
@@ -208,6 +242,18 @@
           },
           "uuid": "f8bc8c6f-a2b2-5d1-9db-de348029fd3b91",
           "authorityIds": "gbif:12229927"
+        },
+        {
+          "id": "SP_PYROLOBUS_SP",
+          "name": "Pyrolobus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrolobus",
+          "sourceIds": {
+            "checklistbank": "1970085"
+          },
+          "children": []
         }
       ]
     },
@@ -264,7 +310,8 @@
           "sourceIds": {
             "checklistbank": "936600"
           },
-          "children": []
+          "children": [],
+          "authorship": "Lovely et al. 2004"
         }
       ]
     },
@@ -398,9 +445,22 @@
           "sourceIds": {
             "col": [
               "CSY66"
-            ]
+            ],
+            "checklistbank": "3060460"
           },
           "authorityIds": "col:CSY66"
+        },
+        {
+          "id": "SP_PYROFOLLIS_SP",
+          "name": "Pyrofollis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrofollis",
+          "sourceIds": {
+            "checklistbank": "3088730"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -447,10 +507,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pyrodictiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PYRODICTIUM",
+          "name": "uncultured Pyrodictium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "269245"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HYPERTHERMUS",
+          "name": "uncultured Hyperthermus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "526712"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PYROLOBUS",
+          "name": "uncultured Pyrolobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1936142"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pyrodictiaceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 19,
+  "genusCount": 11,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -459,6 +564,6 @@
       "orderKey": 564,
       "familyKey": 3797
     },
-    "checklistbank": "ott583715"
+    "checklistbank": "2307"
   }
 }

@@ -101,6 +101,18 @@
           "uuid": "fa285f33-0838-586-9ca-01b9d90ce75c3f",
           "authorityIds": "col:N8BH,gbif:2524958,mycobank:293853",
           "children": []
+        },
+        {
+          "id": "SP_BRAUNIELLULA_SP",
+          "name": "Brauniellula sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brauniellula",
+          "sourceIds": {
+            "checklistbank": "3418974"
+          },
+          "children": []
         }
       ],
       "authorship": "A.H. Smith & Singer"
@@ -346,7 +358,8 @@
             ],
             "col": [
               "B2MB6"
-            ]
+            ],
+            "checklistbank": "2546176"
           },
           "uuid": "d12f85c7-d27f-5fd-91d-eb61e9248750a8",
           "authorityIds": "col:B2MB6,gbif:11840556,mycobank:830223",
@@ -946,6 +959,18 @@
           "lineage": "Chroogomphus",
           "sourceIds": {
             "checklistbank": "ott5686151"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHROOGOMPHUS_AFF",
+          "name": "Chroogomphus aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chroogomphus",
+          "sourceIds": {
+            "checklistbank": "2715388"
           },
           "children": []
         }
@@ -1884,11 +1909,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gomphidiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHROOGOMPHUS",
+          "name": "uncultured Chroogomphus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "451125"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GOMPHIDIUS",
+          "name": "uncultured Gomphidius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "563947"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gomphidiaceae"
+    },
+    {
+      "id": "GENUS_GOMPHIDIACEAE",
+      "name": "Gomphidiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GOMPHIDIACEAE_SP",
+          "name": "Gomphidiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphidiaceae",
+          "sourceIds": {
+            "checklistbank": "2926472"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gomphidiaceae"
     }
   ],
   "authorship": "Maire ex Jülich",
-  "genusCount": 10,
-  "speciesCount": 83,
+  "genusCount": 12,
+  "speciesCount": 88,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1897,6 +1976,6 @@
       "orderKey": 1063,
       "familyKey": 4192
     },
-    "checklistbank": "ott428814"
+    "checklistbank": "5389"
   }
 }

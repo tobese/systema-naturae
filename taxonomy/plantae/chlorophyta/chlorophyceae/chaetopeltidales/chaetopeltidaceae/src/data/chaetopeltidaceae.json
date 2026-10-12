@@ -67,7 +67,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "7c052ec0-554d-5cb-ab7-396785cbb2839e"
+          "uuid": "7c052ec0-554d-5cb-ab7-396785cbb2839e",
+          "authorship": "F.R.Trainor & H.C.Bold, 1953",
+          "sourceIds": {
+            "checklistbank": "56008"
+          }
         },
         {
           "id": "SP_HORMOTILOPSIS_TETRAVACUOLARIS",
@@ -78,6 +82,19 @@
           "lineage": "Hormotilopsis",
           "sourceIds": {
             "checklistbank": "ott337527"
+          },
+          "children": [],
+          "authorship": "Arce & H.C.Bold, 1958"
+        },
+        {
+          "id": "SP_HORMOTILOPSIS_SP",
+          "name": "Hormotilopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hormotilopsis",
+          "sourceIds": {
+            "checklistbank": "3237829"
           },
           "children": []
         }
@@ -158,9 +175,11 @@
           "sourceIds": {
             "itis": [
               "6626"
-            ]
+            ],
+            "checklistbank": "356782"
           },
-          "authorityIds": "itis:6626"
+          "authorityIds": "itis:6626",
+          "authorship": "(J.W.Snow) Wille"
         },
         {
           "id": "SP_PSEUDULVELLA_APPLANATA",
@@ -322,6 +341,18 @@
             "checklistbank": "ott4003565"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHAETOPELTIS_SP",
+          "name": "Chaetopeltis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetopeltis",
+          "sourceIds": {
+            "checklistbank": "3237797"
+          },
+          "children": []
         }
       ]
     },
@@ -338,7 +369,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Floydiella",
           "children": [],
-          "uuid": "09b6a75d-081c-536-a81-5b9f01484b5745"
+          "uuid": "09b6a75d-081c-536-a81-5b9f01484b5745",
+          "authorship": "(Groover & Hofstetter) Friedl & O'Kelly",
+          "sourceIds": {
+            "checklistbank": "51328"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -357,7 +392,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Koshicola",
           "children": [],
-          "uuid": "f114b6d4-50e0-5b3-ada-bc285d997e14d8"
+          "uuid": "f114b6d4-50e0-5b3-ada-bc285d997e14d8",
+          "authorship": "Shin Watan., Fucikova and L.A.Lewis, 2016",
+          "sourceIds": {
+            "checklistbank": "1707787"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -376,7 +415,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Gormaniella",
           "children": [],
-          "uuid": "6d9ca210-90af-5d4-a82-8f71e7a388ed12"
+          "uuid": "6d9ca210-90af-5d4-a82-8f71e7a388ed12",
+          "authorship": "Lewis, Robison, Fay-Wei Li, 2022",
+          "sourceIds": {
+            "checklistbank": "2904618"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -432,10 +475,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chaetopeltidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHAETOPELTIS",
+          "name": "uncultured Chaetopeltis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108051"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaetopeltidaceae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 23,
+  "genusCount": 12,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -444,6 +508,6 @@
       "orderKey": 1346,
       "familyKey": 4269546
     },
-    "checklistbank": "ott311484"
+    "checklistbank": "51326"
   }
 }

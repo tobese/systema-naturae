@@ -505,7 +505,8 @@
             ],
             "col": [
               "3DLHF"
-            ]
+            ],
+            "checklistbank": "390828"
           },
           "uuid": "0bed3eb8-5606-5e5-a76-d8653b04a5c25e",
           "authorityIds": "col:3DLHF,gbif:3371901,mycobank:251215",
@@ -1889,7 +1890,8 @@
             ],
             "col": [
               "B33VC"
-            ]
+            ],
+            "checklistbank": "2930421"
           },
           "uuid": "1c8b3233-65e2-57d-a62-9e022a0f4c991f",
           "authorityIds": "col:B33VC,gbif:12177332,mycobank:843833",
@@ -3586,7 +3588,8 @@
           "sourceIds": {
             "checklistbank": "1605712"
           },
-          "children": []
+          "children": [],
+          "authorship": "Nagao, 2025"
         },
         {
           "id": "SP_EXOBASIDIUM_CAUCASICUM",
@@ -3598,7 +3601,8 @@
           "sourceIds": {
             "checklistbank": "1620739"
           },
-          "children": []
+          "children": [],
+          "authorship": "Woron., 1921"
         },
         {
           "id": "SP_EXOBASIDIUM_HACHIJOENSE",
@@ -3634,7 +3638,8 @@
           "sourceIds": {
             "checklistbank": "1620758"
           },
-          "children": []
+          "children": [],
+          "authorship": "Q.M. Wang, 2024"
         },
         {
           "id": "SP_EXOBASIDIUM_NOETHERAE",
@@ -3646,7 +3651,8 @@
           "sourceIds": {
             "checklistbank": "1620766"
           },
-          "children": []
+          "children": [],
+          "authorship": "Y.P. Tan, Bishop-Hurley & R.G. Shivas, 2024"
         },
         {
           "id": "SP_EXOBASIDIUM_CYLINDRICUM",
@@ -3670,7 +3676,8 @@
           "sourceIds": {
             "checklistbank": "1673821"
           },
-          "children": []
+          "children": [],
+          "authorship": "M. Kolarik, Jezkova, Ngubane, Veselska, 2026"
         },
         {
           "id": "SP_EXOBASIDIUM_SP",
@@ -3847,6 +3854,18 @@
             "checklistbank": "1447244"
           },
           "children": []
+        },
+        {
+          "id": "SP_MURIBASIDIOSPORA_SP",
+          "name": "Muribasidiospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Muribasidiospora",
+          "sourceIds": {
+            "checklistbank": "484027"
+          },
+          "children": []
         }
       ],
       "authorship": "Kamat & Rajendren"
@@ -3866,6 +3885,18 @@
           "authorship": "(Rostr.) Savile",
           "sourceIds": {
             "checklistbank": "123183"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARCTICOMYCES_SP",
+          "name": "Arcticomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arcticomyces",
+          "sourceIds": {
+            "checklistbank": "3472197"
           },
           "children": []
         }
@@ -3960,11 +3991,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "exobasidiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_EXOBASIDIUM",
+          "name": "uncultured Exobasidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "886318"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_EXOBASIDIACEAE",
+          "name": "uncultured Exobasidiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2716136"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "exobasidiaceae"
+    },
+    {
+      "id": "GENUS_EXOBASIDIACEAE",
+      "name": "Exobasidiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EXOBASIDIACEAE_SP",
+          "name": "Exobasidiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Exobasidiaceae",
+          "sourceIds": {
+            "checklistbank": "2306455"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "exobasidiaceae"
     }
   ],
   "authorship": "J. Schröter",
-  "genusCount": 9,
-  "speciesCount": 159,
+  "genusCount": 11,
+  "speciesCount": 164,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3972,6 +4057,7 @@
       "classKey": 151,
       "orderKey": 524,
       "familyKey": 3264
-    }
+    },
+    "checklistbank": "5405"
   }
 }

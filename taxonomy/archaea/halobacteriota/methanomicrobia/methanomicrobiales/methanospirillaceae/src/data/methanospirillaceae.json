@@ -35,7 +35,8 @@
             "checklistbank": "ott859611"
           },
           "uuid": "34025cda-2595-51b-9a5-62f478ba175d13",
-          "authorityIds": "col:42FFP,gbif:8028263,itis:951860"
+          "authorityIds": "col:42FFP,gbif:8028263,itis:951860",
+          "authorship": "Iino et al. 2010"
         },
         {
           "id": "METHANOSPIRILLUM_PSYCHRODURUM",
@@ -58,7 +59,8 @@
             "checklistbank": "ott5245657"
           },
           "uuid": "0ce255bd-d455-514-aed-c6b0f7ad14f294",
-          "authorityIds": "col:CSMLN,gbif:7742822"
+          "authorityIds": "col:CSMLN,gbif:7742822",
+          "authorship": "Zhou et al. 2014"
         },
         {
           "id": "METHANOSPIRILLUM_SPEC.",
@@ -98,7 +100,8 @@
             "checklistbank": "ott50151"
           },
           "uuid": "3e02c4b4-4a23-5d4-ae0-7807a900580f37",
-          "authorityIds": "col:CSMLP,gbif:7755258"
+          "authorityIds": "col:CSMLP,gbif:7755258",
+          "authorship": "Parshina et al. 2014"
         },
         {
           "id": "SP_METHANOSPIRILLUM_PURGAMENTI_PRADEL_ET_AL_2025",
@@ -113,7 +116,8 @@
           "sourceIds": {
             "col": [
               "CTMT3"
-            ]
+            ],
+            "checklistbank": "2834276"
           },
           "authorityIds": "col:CTMT3"
         },
@@ -281,10 +285,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanospirillaceae"
+    },
+    {
+      "id": "GENUS_METHANOSPIRILLACEAE",
+      "name": "Methanospirillaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOSPIRILLACEAE_ARCHAEON",
+          "name": "Methanospirillaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanospirillaceae",
+          "sourceIds": {
+            "checklistbank": "2813030"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanospirillaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_METHANOFILUM_PROTASOV_AND_BRUNE_2023",
+          "name": "Candidatus Methanofilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Protasov and Brune 2023",
+          "sourceIds": {
+            "checklistbank": "3136066"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanospirillaceae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 13,
+  "genusCount": 8,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -293,6 +340,6 @@
       "orderKey": 566,
       "familyKey": 3806
     },
-    "checklistbank": "ott302700"
+    "checklistbank": "196137"
   }
 }

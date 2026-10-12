@@ -241,7 +241,8 @@
           "sourceIds": {
             "checklistbank": "1616533"
           },
-          "children": []
+          "children": [],
+          "authorship": "Yiu, 2017"
         },
         {
           "id": "SP_DIPLOCLADON_ROBUSTUM",
@@ -384,6 +385,18 @@
           "lineage": "Diplocladon",
           "sourceIds": {
             "checklistbank": "1670403"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPLOCLADON_SP",
+          "name": "Diplocladon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplocladon",
+          "sourceIds": {
+            "checklistbank": "3390513"
           },
           "children": []
         }
@@ -563,6 +576,18 @@
           },
           "uuid": "471ecdba-9638-561-80d-fb2481dc60acf2",
           "authorityIds": "gbif:1162205,itis:777438",
+          "children": []
+        },
+        {
+          "id": "SP_FALSOPHRIXOTHRIX_SP",
+          "name": "Falsophrixothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falsophrixothrix",
+          "sourceIds": {
+            "checklistbank": "2824037"
+          },
           "children": []
         }
       ]
@@ -848,11 +873,13 @@
             ],
             "itis": [
               "777414"
-            ]
+            ],
+            "checklistbank": "2591746"
           },
           "uuid": "fc1cc22b-a932-5e9-b0a-e9d7ca865e3640",
           "authorityIds": "gbif:1162191,itis:777414",
-          "children": []
+          "children": [],
+          "authorship": "Fairmaire, 1888"
         },
         {
           "id": "SP_RHAGOPHTHALMUS_INGENS",
@@ -970,11 +997,13 @@
             ],
             "itis": [
               "777413"
-            ]
+            ],
+            "checklistbank": "398797"
           },
           "uuid": "18e103db-8633-502-86c-45169f6f592305",
           "authorityIds": "gbif:1162166,itis:777413",
-          "children": []
+          "children": [],
+          "authorship": "Li & Liang, 2008"
         },
         {
           "id": "SP_RHAGOPHTHALMUS_MINUTUS",
@@ -1337,12 +1366,108 @@
             "checklistbank": "962786"
           },
           "children": []
+        },
+        {
+          "id": "SP_RHAGOPHTHALMUS_SP",
+          "name": "Rhagophthalmus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhagophthalmus",
+          "sourceIds": {
+            "checklistbank": "333898"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_RHAGOPHTHALMINAE",
+      "name": "Rhagophthalminae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHAGOPHTHALMINAE_SP",
+          "name": "Rhagophthalminae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhagophthalminae",
+          "sourceIds": {
+            "checklistbank": "333895"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhagophthalmidae"
+    },
+    {
+      "id": "GENUS_RHAGOPHTHALMIDAE",
+      "name": "Rhagophthalmidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHAGOPHTHALMIDAE_SP",
+          "name": "Rhagophthalmidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhagophthalmidae",
+          "sourceIds": {
+            "checklistbank": "1490705"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhagophthalmidae"
+    },
+    {
+      "id": "GENUS_HAPLOCLADON",
+      "name": "Haplocladon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HAPLOCLADON_SP",
+          "name": "Haplocladon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haplocladon",
+          "sourceIds": {
+            "checklistbank": "3144328"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhagophthalmidae"
+    },
+    {
+      "id": "GENUS_BICLADUM",
+      "name": "Bicladum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BICLADUM_SP",
+          "name": "Bicladum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bicladum",
+          "sourceIds": {
+            "checklistbank": "3474585"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhagophthalmidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 69,
+  "genusCount": 12,
+  "speciesCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1350,6 +1475,7 @@
       "classKey": 216,
       "orderKey": 1470,
       "familyKey": 7844
-    }
+    },
+    "checklistbank": "71489"
   }
 }

@@ -674,7 +674,8 @@
             ],
             "col": [
               "6C9B9"
-            ]
+            ],
+            "checklistbank": "1585746"
           },
           "uuid": "c2df378c-c560-5e9-ab8-f4363b5bbe7dc8",
           "authorityIds": "col:6C9B9,gbif:10744633,mycobank:810739"
@@ -756,7 +757,8 @@
             ],
             "col": [
               "33TFH"
-            ]
+            ],
+            "checklistbank": "1306131"
           },
           "uuid": "7fe50435-dddd-57f-856-1fd710074711c3",
           "authorityIds": "col:33TFH,gbif:10796518,mycobank:802967"
@@ -3208,11 +3210,44 @@
         }
       ],
       "authorship": "Brefeld"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_OLIGOPORUS",
+          "name": "uncultured Oligoporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "760029"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DACRYOBOLUS",
+          "name": "uncultured Dacryobolus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1763332"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dacryobolaceae"
     }
   ],
   "authorship": "Jülich",
-  "genusCount": 9,
-  "speciesCount": 129,
+  "genusCount": 10,
+  "speciesCount": 131,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3220,6 +3255,7 @@
       "classKey": 186,
       "orderKey": 1145,
       "familyKey": 3289563
-    }
+    },
+    "checklistbank": "2028214"
   }
 }

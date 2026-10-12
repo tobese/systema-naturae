@@ -1986,7 +1986,8 @@
             ],
             "col": [
               "B2QSB"
-            ]
+            ],
+            "checklistbank": "2933543"
           },
           "uuid": "b1796565-eb4f-5f9-a2c-51b004b8b611ae",
           "authorityIds": "col:B2QSB,gbif:11434643,mycobank:843665",
@@ -2982,7 +2983,8 @@
             ],
             "col": [
               "B2QS8"
-            ]
+            ],
+            "checklistbank": "3023360"
           },
           "uuid": "3d553b42-f907-537-857-10df367a86abd8",
           "authorityIds": "col:B2QS8,gbif:11834326,mycobank:843666",
@@ -4227,6 +4229,18 @@
             "checklistbank": "ott8003750"
           },
           "children": []
+        },
+        {
+          "id": "SP_MASSARIA_SP",
+          "name": "Massaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Massaria",
+          "sourceIds": {
+            "checklistbank": "698435"
+          },
+          "children": []
         }
       ],
       "authorship": "De Notaris"
@@ -4258,7 +4272,8 @@
             ],
             "col": [
               "6TPRD"
-            ]
+            ],
+            "checklistbank": "2485079"
           },
           "uuid": "74420dcc-a628-587-a62-26bf1ea9b75fab",
           "authorityIds": "col:6TPRD,gbif:10838343,mycobank:555522",
@@ -4294,7 +4309,8 @@
             ],
             "col": [
               "3YC5Z"
-            ]
+            ],
+            "checklistbank": "3097371"
           },
           "uuid": "5f1de941-09b2-57f-ba8-427bee51918d1b",
           "authorityIds": "col:3YC5Z,gbif:10879837,mycobank:554426",
@@ -5215,11 +5231,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "massariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MASSARIA",
+          "name": "uncultured Massaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1978849"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MASSARIACEAE",
+          "name": "uncultured Massariaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2794695"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "massariaceae"
     }
   ],
   "authorship": "Nitschke",
-  "genusCount": 26,
-  "speciesCount": 302,
+  "genusCount": 27,
+  "speciesCount": 305,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -5228,6 +5277,6 @@
       "orderKey": 1047,
       "familyKey": 8326
     },
-    "checklistbank": "ott1039834"
+    "checklistbank": "45311"
   }
 }

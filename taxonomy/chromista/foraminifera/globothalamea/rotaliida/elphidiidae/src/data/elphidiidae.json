@@ -6044,10 +6044,12 @@
             ],
             "col": [
               "39CT2"
-            ]
+            ],
+            "checklistbank": "3242571"
           },
           "uuid": "0f3a7e95-232b-546-ba5-3ece453b902496",
-          "authorityIds": "col:39CT2,gbif:9467862"
+          "authorityIds": "col:39CT2,gbif:9467862",
+          "authorship": "(Terquem, 1878)"
         },
         {
           "id": "ELPHIDIUM_PUSCHAROVSKI",
@@ -9053,7 +9055,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Elphidium",
           "children": [],
-          "uuid": "36fef402-6605-50c-950-65d720a0bf0d85"
+          "uuid": "36fef402-6605-50c-950-65d720a0bf0d85",
+          "authorship": "Hayward, 1997",
+          "sourceIds": {
+            "checklistbank": "2822399"
+          }
         },
         {
           "id": "SP_ELPHIDIUM_CUVILIERI_LEVY_1966",
@@ -9350,7 +9356,8 @@
           "sourceIds": {
             "checklistbank": "ott5667028"
           },
-          "children": []
+          "children": [],
+          "authorship": "Saidova, 1961"
         },
         {
           "id": "SP_ELPHIDIUM_HALLANDENSE",
@@ -9493,6 +9500,18 @@
           "lineage": "Elphidium",
           "sourceIds": {
             "checklistbank": "ott8019020"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELPHIDIUM_SP",
+          "name": "Elphidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elphidium",
+          "sourceIds": {
+            "checklistbank": "882364"
           },
           "children": []
         }
@@ -10570,7 +10589,8 @@
             "checklistbank": "ott4008435"
           },
           "uuid": "f492ae48-fb9e-5da-af3-3d29e9957e9663",
-          "authorityIds": "gbif:8297465"
+          "authorityIds": "gbif:8297465",
+          "authorship": "(Cushman, 1944)"
         },
         {
           "id": "CRIBROELPHIDIUM_SUBGLOBOSUM",
@@ -10921,7 +10941,8 @@
           "sourceIds": {
             "checklistbank": "ott5667089"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Cushman, 1933)"
         },
         {
           "id": "SP_CRIBROELPHIDIUM_ASTERINEUS",
@@ -10968,6 +10989,18 @@
           "lineage": "Cribroelphidium",
           "sourceIds": {
             "checklistbank": "ott8018878"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRIBROELPHIDIUM_SP",
+          "name": "Cribroelphidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cribroelphidium",
+          "sourceIds": {
+            "checklistbank": "3242523"
           },
           "children": []
         }
@@ -14991,7 +15024,8 @@
           "sourceIds": {
             "checklistbank": "348058"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Cushman & Grant, 1927)"
         },
         {
           "id": "SP_ELPHIDIELLA_BISERIPORA",
@@ -15242,6 +15276,18 @@
           "lineage": "Elphidiella",
           "sourceIds": {
             "checklistbank": "ott8018910"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELPHIDIELLA_SP",
+          "name": "Elphidiella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elphidiella",
+          "sourceIds": {
+            "checklistbank": "1696159"
           },
           "children": []
         }
@@ -15495,10 +15541,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "elphidiidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ELPHIDIUM",
+          "name": "uncultured Elphidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1909795"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elphidiidae"
     }
   ],
-  "genusCount": 39,
-  "speciesCount": 765,
+  "genusCount": 40,
+  "speciesCount": 769,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -15507,6 +15574,6 @@
       "orderKey": 7692889,
       "familyKey": 7628777
     },
-    "checklistbank": "ott158521"
+    "checklistbank": "29186"
   }
 }

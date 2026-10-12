@@ -138,10 +138,12 @@
             ],
             "col": [
               "6SQXP"
-            ]
+            ],
+            "checklistbank": "2919885"
           },
           "uuid": "40776d7f-7d64-539-ae0-2971d19435453a",
-          "authorityIds": "col:6SQXP,gbif:7722654"
+          "authorityIds": "col:6SQXP,gbif:7722654",
+          "authorship": "Penard, 1922"
         },
         {
           "id": "OPHRYDIUM_ECTATUM",
@@ -545,6 +547,18 @@
           "uuid": "d580151c-033f-522-bf2-b0d4cbc7f02664",
           "authorityIds": "col:7539M,gbif:7688015",
           "authorship": "(O. F. Müller, 1786)"
+        },
+        {
+          "id": "SP_OPHRYDIUM_SP",
+          "name": "Ophrydium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ophrydium",
+          "sourceIds": {
+            "checklistbank": "1810375"
+          },
+          "children": []
         }
       ]
     },
@@ -868,10 +882,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ophrydiidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_OPHRYDIUM",
+          "name": "uncultured Ophrydium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2590470"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ophrydiidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 38,
+  "genusCount": 5,
+  "speciesCount": 40,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -880,6 +915,6 @@
       "orderKey": 7964270,
       "familyKey": 7412699
     },
-    "checklistbank": "52b12fff-da69-4f8a-be7e-85aa46e59cba"
+    "checklistbank": "168249"
   }
 }

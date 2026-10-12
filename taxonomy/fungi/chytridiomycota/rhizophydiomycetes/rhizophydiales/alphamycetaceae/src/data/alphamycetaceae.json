@@ -64,6 +64,31 @@
           "uuid": "d50fe99e-409d-563-8e3-a80887d7399b5f",
           "authorityIds": "col:C63N,gbif:5952404,mycobank:540288",
           "children": []
+        },
+        {
+          "id": "SP_ALPHAMYCES_SP",
+          "name": "Alphamyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alphamyces",
+          "sourceIds": {
+            "checklistbank": "2750424"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALPHAMYCES_THAILANDICUS_V_G_HURDEAL_E_GENTEKAKI_2024",
+          "name": "Alphamyces thailandicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alphamyces",
+          "authorship": "V.G Hurdeal & E. Gentekaki, 2024",
+          "sourceIds": {
+            "checklistbank": "3231529"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -108,7 +133,8 @@
           "sourceIds": {
             "checklistbank": "ott216324"
           },
-          "children": []
+          "children": [],
+          "authorship": "Letcher 2012"
         },
         {
           "id": "SP_BETAMYCES_SP",
@@ -137,13 +163,55 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Alphamycetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ALPHAMYCETACEAE",
+          "name": "uncultured Alphamycetaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2126287"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alphamycetaceae"
+    },
+    {
+      "id": "GENUS_ALPHAMYCETACEAE",
+      "name": "Alphamycetaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALPHAMYCETACEAE_SP",
+          "name": "Alphamycetaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alphamycetaceae",
+          "sourceIds": {
+            "checklistbank": "2169588"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alphamycetaceae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 10,
   "appSlug": "alphamycetaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chytridiomycota > Rhizophydiomycetes",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -152,6 +220,6 @@
       "orderKey": 1117,
       "familyKey": 3270907
     },
-    "checklistbank": "ott752067"
+    "checklistbank": "1167809"
   }
 }

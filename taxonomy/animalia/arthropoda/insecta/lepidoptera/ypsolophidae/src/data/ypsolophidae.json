@@ -320,7 +320,11 @@
               "sourcedFrom": "checklistbank",
               "children": [],
               "lineage": "Ypsolopha",
-              "uuid": "76b4b207-0934-56f-bfb-8cd037ea6d26e0"
+              "uuid": "76b4b207-0934-56f-bfb-8cd037ea6d26e0",
+              "authorship": "Byun & Park, 2001",
+              "sourceIds": {
+                "checklistbank": "1178177"
+              }
             },
             {
               "id": "SP_YPSOLOPHA_VITTELLA",
@@ -1960,7 +1964,8 @@
                 "checklistbank": "574529"
               },
               "children": [],
-              "uuid": "8b55aa6e-6ac4-5cc-afa-48460a6d87f049"
+              "uuid": "8b55aa6e-6ac4-5cc-afa-48460a6d87f049",
+              "authorship": "(Issiki, 1930)"
             },
             {
               "id": "SP_YPSOLOPHA_BLANDELLUS",
@@ -1999,7 +2004,8 @@
                 "checklistbank": "1149754"
               },
               "children": [],
-              "uuid": "150718d5-4652-534-a90-11f4a2c728130a"
+              "uuid": "150718d5-4652-534-a90-11f4a2c728130a",
+              "authorship": "Moriuti, 1977"
             },
             {
               "id": "SP_YPSOLOPHA_DORSIMACULELLA",
@@ -2012,7 +2018,8 @@
                 "checklistbank": "457201"
               },
               "children": [],
-              "uuid": "2f78ebf7-f3f6-5e0-9c3-b91049a846ab1d"
+              "uuid": "2f78ebf7-f3f6-5e0-9c3-b91049a846ab1d",
+              "authorship": "(Kearfott, 1907)"
             },
             {
               "id": "SP_YPSOLOPHA_MILFONTENSIS",
@@ -2025,7 +2032,8 @@
                 "checklistbank": "1145809"
               },
               "children": [],
-              "uuid": "5a0436d4-7d01-554-899-e009502bd02491"
+              "uuid": "5a0436d4-7d01-554-899-e009502bd02491",
+              "authorship": "Corley & Ferreira, 2021"
             },
             {
               "id": "SP_YPSOLOPHA_MUCRONELLA",
@@ -2052,7 +2060,8 @@
                 "checklistbank": "1297415"
               },
               "children": [],
-              "uuid": "5dd168ed-a94f-54d-899-793f926e9c1574"
+              "uuid": "5dd168ed-a94f-54d-899-793f926e9c1574",
+              "authorship": "(Chambers, 1880)"
             },
             {
               "id": "SP_YPSOLOPHA_PARALLELUS",
@@ -2155,7 +2164,8 @@
               "sourceIds": {
                 "checklistbank": "927685"
               },
-              "children": []
+              "children": [],
+              "authorship": "(Caradja, 1939)"
             },
             {
               "id": "SP_YPSOLOPHA_AURATA",
@@ -2636,6 +2646,18 @@
                 "checklistbank": "ott7724006"
               },
               "children": []
+            },
+            {
+              "id": "SP_YPSOLOPHA_SP",
+              "name": "Ypsolopha sp.",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Ypsolopha",
+              "sourceIds": {
+                "checklistbank": "1681793"
+              },
+              "children": []
             }
           ]
         }
@@ -3049,6 +3071,18 @@
             "checklistbank": "1651221"
           },
           "children": []
+        },
+        {
+          "id": "SP_OCHSENHEIMERIA_SP",
+          "name": "Ochsenheimeria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ochsenheimeria",
+          "sourceIds": {
+            "checklistbank": "3112341"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3194,7 +3228,8 @@
             "checklistbank": "381486"
           },
           "children": [],
-          "uuid": "738defc9-78e6-5d4-a52-b439e22cd32985"
+          "uuid": "738defc9-78e6-5d4-a52-b439e22cd32985",
+          "authorship": "Moriuti, 1977"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4458,14 +4493,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ypsolophidae"
+    },
+    {
+      "id": "GENUS_YPSOLOPHINAE",
+      "name": "Ypsolophinae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_YPSOLOPHINAE_GEN",
+          "name": "Ypsolophinae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ypsolophinae",
+          "sourceIds": {
+            "checklistbank": "1181437"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ypsolophidae"
+    },
+    {
+      "id": "GENUS_YPSOLOPHIDAE",
+      "name": "Ypsolophidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_YPSOLOPHIDAE_SP",
+          "name": "Ypsolophidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ypsolophidae",
+          "sourceIds": {
+            "checklistbank": "1418968"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ypsolophidae"
     }
   ],
-  "speciesCount": 313,
+  "speciesCount": 317,
   "appSlug": "ypsolophidae",
   "authorship": "Guenée",
   "yearPublished": "1845",
   "lineage": "Yponomeutoidea",
-  "genusCount": 23,
+  "genusCount": 25,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -4475,6 +4552,6 @@
       "orderKey": 797,
       "familyKey": 5345
     },
-    "checklistbank": "ott403999"
+    "checklistbank": "687156"
   }
 }

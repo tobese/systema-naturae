@@ -32,7 +32,8 @@
             ],
             "col": [
               "JJSV"
-            ]
+            ],
+            "checklistbank": "2571391"
           },
           "uuid": "cf9adda7-cbc1-50a-9db-ea8d2b4d51935f",
           "authorityIds": "col:JJSV,gbif:10706747,mycobank:555639"
@@ -58,7 +59,8 @@
             ],
             "col": [
               "JJSW"
-            ]
+            ],
+            "checklistbank": "1809268"
           },
           "uuid": "506c7af1-5db6-5fd-bdf-be8a86964b9a88",
           "authorityIds": "col:JJSW,gbif:9700061,mycobank:815027"
@@ -84,7 +86,8 @@
             ],
             "col": [
               "JJSX"
-            ]
+            ],
+            "checklistbank": "246473"
           },
           "uuid": "8922f437-7297-500-a2b-a301b742e2e633",
           "authorityIds": "col:JJSX,gbif:9804185,mycobank:815030"
@@ -110,7 +113,8 @@
             ],
             "col": [
               "JJSY"
-            ]
+            ],
+            "checklistbank": "1809269"
           },
           "uuid": "2fd87ef1-a62c-5aa-9a0-cca8b7a4580e45",
           "authorityIds": "col:JJSY,gbif:9783035,mycobank:815028"
@@ -136,7 +140,8 @@
             ],
             "col": [
               "JJSZ"
-            ]
+            ],
+            "checklistbank": "2035980"
           },
           "uuid": "acb36086-f015-5b0-8d3-bbae1ec12f211c",
           "authorityIds": "col:JJSZ,gbif:9720265,mycobank:553212"
@@ -162,7 +167,8 @@
             ],
             "col": [
               "JJT2"
-            ]
+            ],
+            "checklistbank": "1809270"
           },
           "uuid": "c0237dfc-ef07-5c4-a8e-fe97f763197373",
           "authorityIds": "col:JJT2,gbif:9750975,mycobank:815029"
@@ -183,17 +189,94 @@
             ],
             "col": [
               "C9469"
-            ]
+            ],
+            "checklistbank": "3053835"
           },
           "authorityIds": "col:C9469,mycobank:900727"
+        },
+        {
+          "id": "SP_ATRACTOSPORA_SP",
+          "name": "Atractospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atractospora",
+          "sourceIds": {
+            "checklistbank": "2012017"
+          },
+          "children": []
         }
       ],
       "authorship": "Réblová & J. Fournier"
+    },
+    {
+      "id": "GENUS_RUBELLISPHAERIA",
+      "name": "Rubellisphaeria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RUBELLISPHAERIA_ABSCONDITA_REBLOVA_J_FOURN_2016",
+          "name": "Rubellisphaeria abscondita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rubellisphaeria",
+          "authorship": "Reblova & J. Fourn., 2016",
+          "sourceIds": {
+            "checklistbank": "1809274"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atractosporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ATRACTOSPORA",
+          "name": "uncultured Atractospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2547707"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atractosporaceae"
+    },
+    {
+      "id": "GENUS_ATRACTOSPORACEAE",
+      "name": "Atractosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ATRACTOSPORACEAE_SP",
+          "name": "Atractosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atractosporaceae",
+          "sourceIds": {
+            "checklistbank": "3423379"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atractosporaceae"
     }
   ],
   "authorship": "Huang Zhang, K.D. Hyde & Maharachchikumbura",
-  "genusCount": 1,
-  "speciesCount": 7,
+  "genusCount": 4,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -201,6 +284,7 @@
       "classKey": 320,
       "orderKey": 10850049,
       "familyKey": 10773920
-    }
+    },
+    "checklistbank": "2231537"
   }
 }

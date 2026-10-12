@@ -705,6 +705,18 @@
           "uuid": "e9610d7c-68a1-519-aac-0b653e54fff2b3",
           "authorityIds": "gbif:177718373,gbif:5208655,itis:168066",
           "commonName": "Striped Terapon"
+        },
+        {
+          "id": "SP_PELATES_SP",
+          "name": "Pelates sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelates",
+          "sourceIds": {
+            "checklistbank": "3444688"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -881,6 +893,18 @@
           "lineage": "Terapon",
           "sourceIds": {
             "checklistbank": "ott7650059"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TERAPON_SP",
+          "name": "Terapon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terapon",
+          "sourceIds": {
+            "checklistbank": "2990337"
           },
           "children": []
         }
@@ -1150,6 +1174,18 @@
           "authorship": "Bleeker, 1845",
           "sourceIds": {
             "checklistbank": "562157"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOPRISTES_SP",
+          "name": "Mesopristes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesopristes",
+          "sourceIds": {
+            "checklistbank": "3589502"
           },
           "children": []
         }
@@ -2144,13 +2180,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "terapontidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_TERAPON",
+          "name": "cf. Terapon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "2613830"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "terapontidae"
+    },
+    {
+      "id": "GENUS_TERAPONTIDAE",
+      "name": "Terapontidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TERAPONTIDAE_SP",
+          "name": "Terapontidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terapontidae",
+          "sourceIds": {
+            "checklistbank": "3040171"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "terapontidae"
     }
   ],
-  "speciesCount": 95,
+  "speciesCount": 100,
   "appSlug": "terapontidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 25,
+  "genusCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2158,6 +2236,6 @@
       "orderKey": 587,
       "familyKey": 5072
     },
-    "checklistbank": "ott1089730"
+    "checklistbank": "30875"
   }
 }

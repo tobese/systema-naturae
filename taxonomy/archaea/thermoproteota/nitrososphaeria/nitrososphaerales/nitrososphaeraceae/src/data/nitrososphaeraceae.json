@@ -79,10 +79,12 @@
             ],
             "col": [
               "CSLVL"
-            ]
+            ],
+            "checklistbank": "1034015"
           },
           "uuid": "42a276b3-496e-5cd-ad8-71ced75848334d",
-          "authorityIds": "col:CSLVL,gbif:7428256"
+          "authorityIds": "col:CSLVL,gbif:7428256",
+          "authorship": "Stieglmeier et al. 2014"
         },
         {
           "id": "SP_NITROSOSPHAERA_MAUNAULUENSIS",
@@ -93,6 +95,18 @@
           "lineage": "Nitrososphaera",
           "children": [],
           "uuid": "a49f7166-2d51-59f-b76-8fc5c738f2e290"
+        },
+        {
+          "id": "SP_NITROSOSPHAERA_SP",
+          "name": "Nitrososphaera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrososphaera",
+          "sourceIds": {
+            "checklistbank": "1110358"
+          },
+          "children": []
         }
       ]
     },
@@ -187,6 +201,18 @@
           },
           "uuid": "9d5b07f6-0eb0-573-966-8a8aa53a8b1d6e",
           "authorityIds": "gbif:12227802"
+        },
+        {
+          "id": "SP_NITROSOCOSMICUS_SP",
+          "name": "Nitrosocosmicus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrosocosmicus",
+          "sourceIds": {
+            "checklistbank": "2866607"
+          },
+          "children": []
         }
       ]
     },
@@ -667,6 +693,87 @@
           "sourceIds": {
             "checklistbank": "ott5245645"
           },
+          "children": [],
+          "authorship": "Jung et al. 2016"
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOSPHAERA_HATZENPICHLER_ET_AL_2008",
+          "name": "Candidatus Nitrososphaera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Hatzenpichler et al. 2008",
+          "sourceIds": {
+            "checklistbank": "497727"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOPOLARIS_PESSI_ET_AL_2022",
+          "name": "Candidatus Nitrosopolaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Pessi et al. 2022",
+          "sourceIds": {
+            "checklistbank": "2959593"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitrososphaeraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NITROSOSPHAERA",
+          "name": "uncultured Nitrososphaera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "759874"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_NITROSOSPHAERACEAE",
+          "name": "uncultured Nitrososphaeraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2126347"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitrososphaeraceae"
+    },
+    {
+      "id": "GENUS_NITROSOSPHAERACEAE",
+      "name": "Nitrososphaeraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NITROSOSPHAERACEAE_ARCHAEON",
+          "name": "Nitrososphaeraceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrososphaeraceae",
+          "sourceIds": {
+            "checklistbank": "2169593"
+          },
           "children": []
         }
       ],
@@ -674,8 +781,8 @@
       "lineage": "nitrososphaeraceae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 34,
+  "genusCount": 16,
+  "speciesCount": 41,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -684,6 +791,6 @@
       "orderKey": 10883498,
       "familyKey": 9331787
     },
-    "checklistbank": "ott686307"
+    "checklistbank": "1033997"
   }
 }

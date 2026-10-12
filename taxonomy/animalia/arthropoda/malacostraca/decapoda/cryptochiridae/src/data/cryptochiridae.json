@@ -145,7 +145,8 @@
           "sourceIds": {
             "col": [
               "BBXRR"
-            ]
+            ],
+            "checklistbank": "2968762"
           },
           "authorityIds": "col:BBXRR"
         },
@@ -248,6 +249,18 @@
           "lineage": "Lithoscaptus",
           "sourceIds": {
             "checklistbank": "ott2981146"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LITHOSCAPTUS_SP",
+          "name": "Lithoscaptus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lithoscaptus",
+          "sourceIds": {
+            "checklistbank": "1903102"
           },
           "children": []
         }
@@ -397,6 +410,18 @@
             "checklistbank": "ott4666434"
           },
           "authorityIds": "col:33TJQ"
+        },
+        {
+          "id": "SP_DACRYOMAIA_SP",
+          "name": "Dacryomaia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dacryomaia",
+          "sourceIds": {
+            "checklistbank": "1505216"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -591,6 +616,18 @@
             "checklistbank": "ott2981159"
           },
           "authorityIds": "col:49TMC,itis:660725"
+        },
+        {
+          "id": "SP_OPECARCINUS_SP",
+          "name": "Opecarcinus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Opecarcinus",
+          "sourceIds": {
+            "checklistbank": "2979539"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1330,7 +1367,8 @@
           "sourceIds": {
             "checklistbank": "ott2981161"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Fize & Serene, 1956)"
         },
         {
           "id": "SP_FUNGICOLA_SYZYGIA",
@@ -1342,7 +1380,8 @@
           "sourceIds": {
             "checklistbank": "ott5819545"
           },
-          "children": []
+          "children": [],
+          "authorship": "van der Meij, 2015"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1817,13 +1856,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cryptochiridae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_LITHOSCAPTUS",
+          "name": "cf. Lithoscaptus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "3369166"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cryptochiridae"
     }
   ],
-  "speciesCount": 95,
+  "speciesCount": 99,
   "appSlug": "cryptochiridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 23,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1832,6 +1892,6 @@
       "orderKey": 637,
       "familyKey": 8034
     },
-    "checklistbank": "ott527037"
+    "checklistbank": "563103"
   }
 }

@@ -25,21 +25,56 @@
             ],
             "col": [
               "4ZLXX"
-            ]
+            ],
+            "checklistbank": "2006670"
           },
           "uuid": "2917b3a3-9d5e-54d-9a2-17beb9d0636797",
-          "authorityIds": "col:4ZLXX,gbif:10742732,mycobank:819823"
+          "authorityIds": "col:4ZLXX,gbif:10742732,mycobank:819823",
+          "children": []
+        },
+        {
+          "id": "SP_STAURASTROMYCES_SP",
+          "name": "Staurastromyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Staurastromyces",
+          "sourceIds": {
+            "checklistbank": "3036233"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Staurastromycetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_STAURASTROMYCES",
+          "name": "uncultured Staurastromyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2904289"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "staurastromycetaceae"
     }
   ],
-  "speciesCount": 1,
+  "speciesCount": 3,
   "appSlug": "staurastromycetaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chytridiomycota > Rhizophydiomycetes",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -47,6 +82,7 @@
       "classKey": 10689325,
       "orderKey": 1117,
       "familyKey": 10705552
-    }
+    },
+    "checklistbank": "3464872"
   }
 }

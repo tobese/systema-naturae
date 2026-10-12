@@ -123,10 +123,12 @@
             ],
             "col": [
               "3G5XS"
-            ]
+            ],
+            "checklistbank": "1627846"
           },
           "uuid": "43d739e4-972a-5db-96a-2978502d6218b9",
-          "authorityIds": "col:3G5XS,gbif:1086170"
+          "authorityIds": "col:3G5XS,gbif:1086170",
+          "authorship": "Solsky, 1870"
         },
         {
           "id": "SP_GLARESIS_CANADENSIS",
@@ -346,7 +348,8 @@
             ],
             "col": [
               "3G5YD"
-            ]
+            ],
+            "checklistbank": "1542155"
           },
           "uuid": "e89217a1-6ccb-506-bd4-71107ab1ee67b6",
           "authorityIds": "col:3G5YD,gbif:1086173,itis:930017"
@@ -1903,6 +1906,18 @@
             ]
           },
           "authorityIds": "itis:930013"
+        },
+        {
+          "id": "SP_GLARESIS_SP",
+          "name": "Glaresis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glaresis",
+          "sourceIds": {
+            "checklistbank": "295535"
+          },
+          "children": []
         }
       ]
     },
@@ -1977,10 +1992,31 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Glaresidae"
+    },
+    {
+      "id": "GENUS_GLARESIDAE",
+      "name": "Glaresidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLARESIDAE_SP",
+          "name": "Glaresidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glaresidae",
+          "sourceIds": {
+            "checklistbank": "2917906"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaresidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 98,
+  "genusCount": 5,
+  "speciesCount": 100,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1989,6 +2025,6 @@
       "orderKey": 1470,
       "familyKey": 4243
     },
-    "checklistbank": "ott738375"
+    "checklistbank": "110045"
   }
 }

@@ -35,7 +35,8 @@
             "checklistbank": "ott601802"
           },
           "uuid": "0e0ccd77-7c98-5f2-8be-6d63ed06af809a",
-          "authorityIds": "col:42FD8,gbif:1000376,itis:951798"
+          "authorityIds": "col:42FD8,gbif:1000376,itis:951798",
+          "authorship": "(Ollivier et al. 1985) Xun et al. 1989"
         },
         {
           "id": "METHANOCORPUSCULUM_BAVARICUM",
@@ -61,7 +62,8 @@
             "checklistbank": "ott191180"
           },
           "uuid": "abf0a2ab-0e8d-545-80d-cfbfc4a456ccf0",
-          "authorityIds": "col:42FD9,gbif:1000379,itis:951801"
+          "authorityIds": "col:42FD9,gbif:1000379,itis:951801",
+          "authorship": "Zellner et al. 1989"
         },
         {
           "id": "METHANOCORPUSCULUM_FAECIPULLORUM",
@@ -104,7 +106,8 @@
             "checklistbank": "ott801511"
           },
           "uuid": "3c041ccf-8f85-5c3-804-a02387c87340c3",
-          "authorityIds": "col:73FHM,gbif:1000378,itis:951802"
+          "authorityIds": "col:73FHM,gbif:1000378,itis:951802",
+          "authorship": "Zhao et al. 1989"
         },
         {
           "id": "METHANOCORPUSCULUM_PARVUM",
@@ -153,7 +156,8 @@
             "checklistbank": "ott801506"
           },
           "uuid": "7d8477af-694b-552-a8d-1b9cae61c13f90",
-          "authorityIds": "col:42FDC,gbif:1000375,itis:951800"
+          "authorityIds": "col:42FDC,gbif:1000375,itis:951800",
+          "authorship": "Zellner et al. 1989"
         },
         {
           "id": "METHANOCORPUSCULUM_SPEC.",
@@ -171,6 +175,56 @@
           },
           "uuid": "68c18cfa-73d1-594-9eb-de352f29d3a9ec",
           "authorityIds": "gbif:12216613"
+        },
+        {
+          "id": "SP_METHANOCORPUSCULUM_SP",
+          "name": "Methanocorpusculum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocorpusculum",
+          "sourceIds": {
+            "checklistbank": "225463"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHANOCORPUSCULUM_ENDOSYMBIONT",
+          "name": "Methanocorpusculum endosymbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocorpusculum",
+          "sourceIds": {
+            "checklistbank": "2024301"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHANOCORPUSCULUM_PETAURI_VOLMER_ET_AL_2023",
+          "name": "Methanocorpusculum petauri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocorpusculum",
+          "authorship": "Volmer et al. 2023",
+          "sourceIds": {
+            "checklistbank": "3002863"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHANOCORPUSCULUM_VOMBATI_VOLMER_ET_AL_2023",
+          "name": "Methanocorpusculum vombati",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocorpusculum",
+          "authorship": "Volmer et al. 2023",
+          "sourceIds": {
+            "checklistbank": "3002864"
+          },
+          "children": []
         }
       ]
     },
@@ -367,7 +421,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Methanorbis",
           "children": [],
-          "uuid": "6c9227ed-7ead-5c6-bab-7e074c6c129faa"
+          "uuid": "6c9227ed-7ead-5c6-bab-7e074c6c129faa",
+          "authorship": "Protasov and Brune 2023",
+          "sourceIds": {
+            "checklistbank": "3028299"
+          }
         },
         {
           "id": "SP_METHANORBIS_RUBEI",
@@ -377,7 +435,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Methanorbis",
           "children": [],
-          "uuid": "92a08495-48f5-5bf-901-30adea98796700"
+          "uuid": "92a08495-48f5-5bf-901-30adea98796700",
+          "authorship": "Protasov and Brune 2023",
+          "sourceIds": {
+            "checklistbank": "3028300"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -399,14 +461,136 @@
             "checklistbank": "ott5206453"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOCORPUSCULACEAE",
+          "name": "uncultured Methanocorpusculaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2563819"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocorpusculaceae"
+    },
+    {
+      "id": "GENUS_METOPUS",
+      "name": "Metopus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METOPUS_PALAEFORMIS",
+          "name": "Metopus palaeformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metopus",
+          "sourceIds": {
+            "checklistbank": "2174"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METOPUS_CONTORTUS",
+          "name": "Metopus contortus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metopus",
+          "sourceIds": {
+            "checklistbank": "13774"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocorpusculaceae"
+    },
+    {
+      "id": "GENUS_TRIMYEMA",
+      "name": "Trimyema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIMYEMA_SP",
+          "name": "Trimyema sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trimyema",
+          "sourceIds": {
+            "checklistbank": "2312"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocorpusculaceae"
+    },
+    {
+      "id": "GENUS_METHANOCORPUSCULACEAE",
+      "name": "Methanocorpusculaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOCORPUSCULACEAE_ARCHAEON",
+          "name": "Methanocorpusculaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocorpusculaceae",
+          "sourceIds": {
+            "checklistbank": "1500957"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocorpusculaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_METHANOCORPUSCULUM_GILROY_ET_AL_2021",
+          "name": "Candidatus Methanocorpusculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Gilroy et al. 2021",
+          "sourceIds": {
+            "checklistbank": "2838695"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_METHANORBIS_PROTASOV_AND_BRUNE_2023",
+          "name": "Candidatus Methanorbis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Protasov and Brune 2023",
+          "sourceIds": {
+            "checklistbank": "3136061"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanocorpusculaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 18,
+  "genusCount": 8,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -415,6 +599,6 @@
       "orderKey": 566,
       "familyKey": 3805
     },
-    "checklistbank": "ott408827"
+    "checklistbank": "88404"
   }
 }

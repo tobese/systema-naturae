@@ -157,6 +157,18 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:437601"
           },
           "children": []
+        },
+        {
+          "id": "SP_AIGIALUS_SP",
+          "name": "Aigialus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aigialus",
+          "sourceIds": {
+            "checklistbank": "3095410"
+          },
+          "children": []
         }
       ],
       "authorship": "Kohlmeyer & S. Schatz"
@@ -262,7 +274,8 @@
             ],
             "col": [
               "6J7FF"
-            ]
+            ],
+            "checklistbank": "1149708"
           },
           "uuid": "0ba5f4c6-c1ee-5d1-bf1-ea70352f7d31d1",
           "authorityIds": "col:6J7FF,gbif:8001668,mycobank:822855",
@@ -288,7 +301,8 @@
             ],
             "col": [
               "9Z69J"
-            ]
+            ],
+            "checklistbank": "2678308"
           },
           "uuid": "fec0600b-00fc-5e2-b8b-f67e9b8e6b4117",
           "authorityIds": "col:9Z69J,gbif:12212504,mycobank:557045",
@@ -364,7 +378,8 @@
             ],
             "col": [
               "B39Q7"
-            ]
+            ],
+            "checklistbank": "2891596"
           },
           "uuid": "746a4da9-d755-505-a58-19384d0f9f8cb0",
           "authorityIds": "col:B39Q7,gbif:12185056,mycobank:661825",
@@ -576,7 +591,8 @@
             ],
             "col": [
               "9Z69K"
-            ]
+            ],
+            "checklistbank": "2675701"
           },
           "uuid": "aea2dcf9-fbb0-5d7-810-d6ec168b1809dc",
           "authorityIds": "col:9Z69K,gbif:12219814,mycobank:556950",
@@ -656,7 +672,8 @@
             ],
             "col": [
               "9Z69L"
-            ]
+            ],
+            "checklistbank": "2874045"
           },
           "uuid": "53607847-4171-50d-bad-b25a766d96b75b",
           "authorityIds": "col:9Z69L,gbif:11467065,mycobank:557046",
@@ -671,6 +688,18 @@
           "lineage": "Fissuroma",
           "sourceIds": {
             "checklistbank": "ott865147"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FISSUROMA_SP",
+          "name": "Fissuroma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fissuroma",
+          "sourceIds": {
+            "checklistbank": "2920908"
           },
           "children": []
         }
@@ -784,7 +813,8 @@
             ],
             "col": [
               "9ZC6W"
-            ]
+            ],
+            "checklistbank": "2675050"
           },
           "uuid": "5b9f31d4-5e18-575-ab4-3d6494b41a2ecd",
           "authorityIds": "col:9ZC6W,gbif:11658537,mycobank:556951",
@@ -856,11 +886,53 @@
         }
       ],
       "authorship": "Vohník & Réblová"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FISSUROMA",
+          "name": "uncultured Fissuroma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1284415"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aigialaceae"
+    },
+    {
+      "id": "GENUS_AIGIALACEAE",
+      "name": "Aigialaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AIGIALACEAE_SP",
+          "name": "Aigialaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aigialaceae",
+          "sourceIds": {
+            "checklistbank": "2012052"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aigialaceae"
     }
   ],
   "authorship": "Suetrong, Sakayaroj, E.B.G. Jones, Kohlmeyer, Volkmann-Kohlmeyer & C.L. Schoch",
-  "genusCount": 6,
-  "speciesCount": 31,
+  "genusCount": 8,
+  "speciesCount": 35,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -869,6 +941,6 @@
       "orderKey": 1047,
       "familyKey": 5894021
     },
-    "checklistbank": "ott364948"
+    "checklistbank": "715274"
   }
 }

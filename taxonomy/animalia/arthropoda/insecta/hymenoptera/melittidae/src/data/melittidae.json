@@ -2498,7 +2498,10 @@
           "subspeciesCount": 0,
           "lineage": "Apoidea > Redivivoides Michener, 1981",
           "children": [],
-          "uuid": "335da723-2f93-5bd-a6c-1f24a30862189b"
+          "uuid": "335da723-2f93-5bd-a6c-1f24a30862189b",
+          "sourceIds": {
+            "checklistbank": "1267531"
+          }
         },
         {
           "id": "SP_REDIVIVOIDES_EARDLEYI_KUHLMANN_2012_2012",
@@ -2546,7 +2549,10 @@
           "subspeciesCount": 0,
           "lineage": "Apoidea > Redivivoides Michener, 1981",
           "children": [],
-          "uuid": "73227c98-7c39-51f-a6d-f9328519215db2"
+          "uuid": "73227c98-7c39-51f-a6d-f9328519215db2",
+          "sourceIds": {
+            "checklistbank": "1267532"
+          }
         },
         {
           "id": "SP_REDIVIVOIDES_SIMULANS_MICHENER_1981_1981",
@@ -3507,7 +3513,11 @@
                   "sourcedFrom": "checklistbank",
                   "children": [],
                   "lineage": "Dasypoda",
-                  "uuid": "1747ad93-2b0e-5c8-9cb-603231ca194d39"
+                  "uuid": "1747ad93-2b0e-5c8-9cb-603231ca194d39",
+                  "authorship": "Ghisbain & Wood, 2023",
+                  "sourceIds": {
+                    "checklistbank": "3681750"
+                  }
                 },
                 {
                   "id": "SP_DASYPODA_SURIPES",
@@ -3645,6 +3655,18 @@
                   "lineage": "Dasypoda",
                   "sourceIds": {
                     "checklistbank": "ott3276186"
+                  },
+                  "children": []
+                },
+                {
+                  "id": "SP_DASYPODA_SP",
+                  "name": "Dasypoda sp.",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Dasypoda",
+                  "sourceIds": {
+                    "checklistbank": "3681614"
                   },
                   "children": []
                 }
@@ -5512,6 +5534,31 @@
             "checklistbank": "ott7855007"
           },
           "children": []
+        },
+        {
+          "id": "SP_MELITTA_INDICA_SAINI_CHANDRA_2019",
+          "name": "Melitta indica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melitta",
+          "authorship": "Saini & Chandra, 2019",
+          "sourceIds": {
+            "checklistbank": "2726228"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELITTA_SP",
+          "name": "Melitta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melitta",
+          "sourceIds": {
+            "checklistbank": "2875991"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6665,12 +6712,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "melittidae"
+    },
+    {
+      "id": "GENUS_MELITTIDAE",
+      "name": "Melittidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELITTIDAE_SP",
+          "name": "Melittidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melittidae",
+          "sourceIds": {
+            "checklistbank": "2659802"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melittidae"
     }
   ],
-  "speciesCount": 340,
+  "speciesCount": 344,
   "appSlug": "melittidae",
   "lineage": "Apoidea",
-  "genusCount": 35,
+  "genusCount": 36,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -6680,6 +6748,6 @@
       "orderKey": 1457,
       "familyKey": 4345
     },
-    "checklistbank": "ott584922"
+    "checklistbank": "156323"
   }
 }

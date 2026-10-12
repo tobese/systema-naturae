@@ -49,7 +49,8 @@
             ],
             "col": [
               "B345V"
-            ]
+            ],
+            "checklistbank": "2500147"
           },
           "uuid": "a20c5da8-b275-511-93a-8c9be14b895536",
           "authorityIds": "col:B345V,gbif:12194827,mycobank:555778",
@@ -77,7 +78,8 @@
           "sourceIds": {
             "checklistbank": "ott4078622"
           },
-          "children": []
+          "children": [],
+          "authorship": "M. Kolarik & D. Spakowicz, 2016"
         },
         {
           "id": "SP_BIATRIOSPORA_PERUVIENSIS",
@@ -89,7 +91,8 @@
           "sourceIds": {
             "checklistbank": "ott5713920"
           },
-          "children": []
+          "children": [],
+          "authorship": "M. Kolarik & R. Gazis, 2016"
         },
         {
           "id": "SP_BIATRIOSPORA_CAROLLII",
@@ -100,6 +103,19 @@
           "lineage": "Biatriospora",
           "sourceIds": {
             "checklistbank": "ott5713921"
+          },
+          "children": [],
+          "authorship": "M. Kolarik & R. Gazis, 2016"
+        },
+        {
+          "id": "SP_BIATRIOSPORA_SP",
+          "name": "Biatriospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biatriospora",
+          "sourceIds": {
+            "checklistbank": "1156051"
           },
           "children": []
         }
@@ -187,13 +203,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "biatriosporaceae"
+    },
+    {
+      "id": "GENUS_BIATRIOSPORACEAE",
+      "name": "Biatriosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BIATRIOSPORACEAE_SP",
+          "name": "Biatriosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biatriosporaceae",
+          "sourceIds": {
+            "checklistbank": "1849764"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "biatriosporaceae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 14,
   "appSlug": "biatriosporaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Dothideomycetes",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -202,6 +239,6 @@
       "orderKey": 1047,
       "familyKey": 7482190
     },
-    "checklistbank": "ott5345472"
+    "checklistbank": "1849762"
   }
 }

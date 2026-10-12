@@ -3470,10 +3470,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3191849
+            "gbif": 3191849,
+            "checklistbank": "1334983"
           },
           "uuid": "9f66454f-1806-536-935-63e64e1258a1d4",
-          "authorityIds": "gbif:3191849"
+          "authorityIds": "gbif:3191849",
+          "authorship": "P.A. Sims & R. Ross, 1990"
         },
         {
           "id": "TRICERATIUM_DIGITALE",
@@ -8600,10 +8602,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9582649
+            "gbif": 9582649,
+            "checklistbank": "2974961"
           },
           "uuid": "d363cc9b-146b-56c-b7d-beba60e443aaac",
-          "authorityIds": "gbif:9582649"
+          "authorityIds": "gbif:9582649",
+          "authorship": "Greville, 1863"
         },
         {
           "id": "TRICERATIUM_ROBUSTUM",
@@ -9535,10 +9539,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 9676745
+            "gbif": 9676745,
+            "checklistbank": "2974962"
           },
           "uuid": "686aab1c-2ab7-58c-8e9-3d1dc70527a171",
-          "authorityIds": "gbif:9676745"
+          "authorityIds": "gbif:9676745",
+          "authorship": "Bailey, 1844"
         },
         {
           "id": "TRICERATIUM_SPINULOSUM",
@@ -11200,6 +11206,18 @@
           },
           "children": [],
           "uuid": "ec933585-1ee6-53c-b82-8903f5123b5486"
+        },
+        {
+          "id": "SP_TRICERATIUM_SP",
+          "name": "Triceratium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triceratium",
+          "sourceIds": {
+            "checklistbank": "2974948"
+          },
+          "children": []
         }
       ]
     },
@@ -12354,10 +12372,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7996078
+            "gbif": 7996078,
+            "checklistbank": "1003067"
           },
           "uuid": "2d4650ef-7b71-55c-8c0-88f9e55f78b1b6",
-          "authorityIds": "gbif:7996078"
+          "authorityIds": "gbif:7996078",
+          "authorship": "(Greville) H.Peragallo & M.Peragallo, 1902"
         },
         {
           "id": "SP_LAMPRISCUS_SHADBOLTIANUM",
@@ -12372,6 +12392,18 @@
           "sourceIds": {
             "checklistbank": "727686"
           }
+        },
+        {
+          "id": "SP_LAMPRISCUS_SP",
+          "name": "Lampriscus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lampriscus",
+          "sourceIds": {
+            "checklistbank": "1631175"
+          },
+          "children": []
         }
       ]
     },
@@ -20128,10 +20160,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "triceratiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TRICERATIACEAE",
+          "name": "uncultured Triceratiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1824562"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "triceratiaceae"
     }
   ],
-  "genusCount": 43,
-  "speciesCount": 1151,
+  "genusCount": 44,
+  "speciesCount": 1154,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -20139,6 +20192,7 @@
       "classKey": 7947184,
       "orderKey": 1151,
       "familyKey": 3306
-    }
+    },
+    "checklistbank": "210587"
   }
 }

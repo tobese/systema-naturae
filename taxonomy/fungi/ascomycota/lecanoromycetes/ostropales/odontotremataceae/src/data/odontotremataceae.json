@@ -866,7 +866,8 @@
             ],
             "col": [
               "4YR8C"
-            ]
+            ],
+            "checklistbank": "3004077"
           },
           "uuid": "593335ad-5f70-57e-826-d84f1615cc34b0",
           "authorityIds": "col:4YR8C,gbif:10878792,mycobank:556315"
@@ -1118,7 +1119,8 @@
             ],
             "col": [
               "9ZFVJ"
-            ]
+            ],
+            "checklistbank": "2799134"
           },
           "uuid": "e55f82df-a8da-571-b3b-63b2b143c07fe2",
           "authorityIds": "col:9ZFVJ,gbif:11522705,mycobank:556558"
@@ -1260,6 +1262,18 @@
           "lineage": "Sphaeropezia",
           "sourceIds": {
             "checklistbank": "ott3788079"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHAEROPEZIA_SP",
+          "name": "Sphaeropezia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeropezia",
+          "sourceIds": {
+            "checklistbank": "2528396"
           },
           "children": []
         }
@@ -1649,7 +1663,8 @@
           "sourceIds": {
             "checklistbank": "1033873"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rehm"
         },
         {
           "id": "SP_ODONTOTREMA_SP",
@@ -2201,7 +2216,8 @@
             ],
             "col": [
               "B34QH"
-            ]
+            ],
+            "checklistbank": "2530489"
           },
           "uuid": "a4f96f19-1749-5d4-a48-20f75358815cc1",
           "authorityIds": "col:B34QH,gbif:12199554,mycobank:811909"
@@ -2280,7 +2296,8 @@
             ],
             "col": [
               "B33LG"
-            ]
+            ],
+            "checklistbank": "1792624"
           },
           "uuid": "990dffaf-ee97-5a6-811-dabc09932e4971",
           "authorityIds": "col:B33LG,gbif:12171414,mycobank:811918"
@@ -2306,7 +2323,8 @@
             ],
             "col": [
               "B38B6"
-            ]
+            ],
+            "checklistbank": "1792625"
           },
           "uuid": "508c9b03-28a2-5d3-91e-dcdababa8d45b9",
           "authorityIds": "col:B38B6,gbif:12215279,mycobank:811920"
@@ -2332,7 +2350,8 @@
             ],
             "col": [
               "B2ZYJ"
-            ]
+            ],
+            "checklistbank": "1792626"
           },
           "uuid": "91135bb8-5522-576-8ba-d89b458d4090ef",
           "authorityIds": "col:B2ZYJ,gbif:12260663,mycobank:811921"
@@ -2365,6 +2384,18 @@
           },
           "uuid": "9b059c8b-723d-52a-9a1-b47db4c1095c6f",
           "authorityIds": "col:VVX9,gbif:9710482,mycobank:801140"
+        },
+        {
+          "id": "SP_CLAVIRADULOMYCES_SP",
+          "name": "Claviradulomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Claviradulomyces",
+          "sourceIds": {
+            "checklistbank": "1792622"
+          },
+          "children": []
         }
       ],
       "authorship": "P.R. Johnston, D.C. Park, H.C. Evans, R.W. Barreto & D.J. Soares"
@@ -2418,7 +2449,8 @@
           "sourceIds": {
             "checklistbank": "ott982664"
           },
-          "children": []
+          "children": [],
+          "authorship": "Dobbeler & Poelt 1974"
         },
         {
           "id": "SP_BRYODISCUS_GRIMMIAE",
@@ -2463,10 +2495,23 @@
             ],
             "col": [
               "4CXFL"
-            ]
+            ],
+            "checklistbank": "2496819"
           },
           "uuid": "62b43da1-d342-59f-846-9e1b0b9bbbaf3e",
           "authorityIds": "col:4CXFL,gbif:10831778,mycobank:829066"
+        },
+        {
+          "id": "SP_PARAKARSTENIA_SP",
+          "name": "Parakarstenia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parakarstenia",
+          "sourceIds": {
+            "checklistbank": "3068471"
+          },
+          "children": []
         }
       ],
       "authorship": "Chun L. Yang, H.O. Baral & X.L. Xu"
@@ -2853,11 +2898,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "odontotremataceae"
+    },
+    {
+      "id": "GENUS_ODONTOTREMATACEAE",
+      "name": "Odontotremataceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ODONTOTREMATACEAE_SP",
+          "name": "Odontotremataceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Odontotremataceae",
+          "sourceIds": {
+            "checklistbank": "3476264"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "odontotremataceae"
     }
   ],
   "authorship": "D. Hawksworth & Sherwood",
-  "genusCount": 28,
-  "speciesCount": 141,
+  "genusCount": 29,
+  "speciesCount": 145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2866,6 +2932,6 @@
       "orderKey": 1279,
       "familyKey": 2147
     },
-    "checklistbank": "ott843696"
+    "checklistbank": "292182"
   }
 }

@@ -275,9 +275,11 @@
           "sourceIds": {
             "col": [
               "6Y7LQ"
-            ]
+            ],
+            "checklistbank": "1093062"
           },
-          "authorityIds": "col:6Y7LQ"
+          "authorityIds": "col:6Y7LQ",
+          "authorship": "(Topsent, 1892)"
         },
         {
           "id": "SP_SCEPTRELLA_INSIGNIS",
@@ -463,7 +465,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Tsitsikamma",
-          "uuid": "b42e0a86-bfe8-594-841-99bbe370b17cfc"
+          "uuid": "b42e0a86-bfe8-594-841-99bbe370b17cfc",
+          "authorship": "Samaai, Gibbons, Kelly & Davies-Coleman, 2003",
+          "sourceIds": {
+            "checklistbank": "1336896"
+          }
         },
         {
           "id": "SP_TSITSIKAMMA_SCURRA",
@@ -473,7 +479,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Tsitsikamma",
-          "uuid": "73515e29-3111-5d3-8e0-32f377cb3e7bb3"
+          "uuid": "73515e29-3111-5d3-8e0-32f377cb3e7bb3",
+          "authorship": "Samaai, Gibbons, Kelly & Davies-Coleman, 2003",
+          "sourceIds": {
+            "checklistbank": "1336897"
+          }
         },
         {
           "id": "SP_TSITSIKAMMA_MICHAELI",
@@ -524,6 +534,18 @@
           "children": [],
           "lineage": "Tsitsikamma",
           "uuid": "4cbd98fb-d8f7-507-b9b-d2c10fdbbe3f7b"
+        },
+        {
+          "id": "SP_TSITSIKAMMA_SP",
+          "name": "Tsitsikamma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tsitsikamma",
+          "sourceIds": {
+            "checklistbank": "1562930"
+          },
+          "children": []
         }
       ]
     },
@@ -2148,6 +2170,18 @@
             "checklistbank": "c4344387-adca-4845-9c10-bf5323d858a3"
           },
           "children": []
+        },
+        {
+          "id": "SP_LATRUNCULIA_SP",
+          "name": "Latrunculia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Latrunculia",
+          "sourceIds": {
+            "checklistbank": "1562929"
+          },
+          "children": []
         }
       ]
     },
@@ -2173,9 +2207,11 @@
           "sourceIds": {
             "col": [
               "32SJK"
-            ]
+            ],
+            "checklistbank": "1815996"
           },
-          "authorityIds": "col:32SJK"
+          "authorityIds": "col:32SJK",
+          "authorship": "(Samaai, Gibbons, Kelly & Davies-Coleman, 2003)"
         },
         {
           "id": "SP_CYCLACANTHIA_CLOVERLYAE_SAMAAI_KELLY_2004",
@@ -2261,6 +2297,18 @@
           "lineage": "Cyclacanthia",
           "sourceIds": {
             "checklistbank": "660631"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLACANTHIA_SP",
+          "name": "Cyclacanthia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclacanthia",
+          "sourceIds": {
+            "checklistbank": "2575583"
           },
           "children": []
         }
@@ -2530,10 +2578,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "latrunculiidae"
+    },
+    {
+      "id": "GENUS_NEGOMBATA",
+      "name": "Negombata",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEGOMBATA_CORTICATA_CARTER_1879",
+          "name": "Negombata corticata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Negombata",
+          "authorship": "(Carter, 1879)",
+          "sourceIds": {
+            "checklistbank": "81543"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEGOMBATA_SP",
+          "name": "Negombata sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Negombata",
+          "sourceIds": {
+            "checklistbank": "2912312"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "latrunculiidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 178,
+  "genusCount": 13,
+  "speciesCount": 183,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2542,6 +2624,6 @@
       "orderKey": 668,
       "familyKey": 8989
     },
-    "checklistbank": "464e5623-19af-4b2b-9a2b-72e0000f199e"
+    "checklistbank": "81541"
   }
 }

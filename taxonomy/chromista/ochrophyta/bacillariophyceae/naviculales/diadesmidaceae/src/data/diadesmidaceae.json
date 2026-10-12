@@ -1284,10 +1284,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9145113
+            "gbif": 9145113,
+            "checklistbank": "3064430"
           },
           "uuid": "e150bd21-18f5-5f9-bd3-9981d94fb6f8b9",
-          "authorityIds": "gbif:9145113"
+          "authorityIds": "gbif:9145113",
+          "authorship": "Van de Vijver, Van Dam & Beyens, 2006"
         },
         {
           "id": "LUTICOLA_HILGENBERGII",
@@ -1928,10 +1930,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9337318
+            "gbif": 9337318,
+            "checklistbank": "3139164"
           },
           "uuid": "bd71f42c-2a42-58f-a2e-16e5176caa7664",
-          "authorityIds": "gbif:9337318"
+          "authorityIds": "gbif:9337318",
+          "authorship": "Metzeltin & Lange-Bertalot, 2007"
         },
         {
           "id": "LUTICOLA_PERMUTICOPSIS",
@@ -2260,10 +2264,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8896766
+            "gbif": 8896766,
+            "checklistbank": "1560743"
           },
           "uuid": "68a8c58a-5719-570-aad-28d2c1ec955b77",
-          "authorityIds": "gbif:8896766"
+          "authorityIds": "gbif:8896766",
+          "authorship": "Levkov, Metzeltin & A.Pavlov, 2013"
         },
         {
           "id": "LUTICOLA_STIGMA",
@@ -3122,6 +3128,31 @@
           "lineage": "Luticola",
           "sourceIds": {
             "checklistbank": "1269106"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LUTICOLA_SP",
+          "name": "Luticola sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Luticola",
+          "sourceIds": {
+            "checklistbank": "1490951"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LUTICOLA_ECTORII_LEVKOV_METZELTIN_A_PAVLOV_2013",
+          "name": "Luticola ectorii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Luticola",
+          "authorship": "Levkov, Metzeltin & A.Pavlov, 2013",
+          "sourceIds": {
+            "checklistbank": "3139163"
           },
           "children": []
         }
@@ -4050,6 +4081,18 @@
           "authorship": "(Cleve) Mann, 1990",
           "sourceIds": {
             "checklistbank": "1006631"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIADESMIS_SP",
+          "name": "Diadesmis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diadesmis",
+          "sourceIds": {
+            "checklistbank": "1837224"
           },
           "children": []
         }
@@ -5539,6 +5582,18 @@
           },
           "children": [],
           "uuid": "4c387afc-1ac7-550-b9b-f286d3eeccbec5"
+        },
+        {
+          "id": "SP_HUMIDOPHILA_SP",
+          "name": "Humidophila sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Humidophila",
+          "sourceIds": {
+            "checklistbank": "1826774"
+          },
+          "children": []
         }
       ]
     },
@@ -6107,10 +6162,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "diadesmidaceae"
+    },
+    {
+      "id": "GENUS_OLIFANTIELLA",
+      "name": "Olifantiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OLIFANTIELLA_SP",
+          "name": "Olifantiella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Olifantiella",
+          "sourceIds": {
+            "checklistbank": "1542926"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "diadesmidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DIADESMIS",
+          "name": "uncultured Diadesmis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1592787"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "diadesmidaceae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 336,
+  "genusCount": 13,
+  "speciesCount": 342,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -6118,6 +6215,7 @@
       "classKey": 7947184,
       "orderKey": 7763029,
       "familyKey": 7356672
-    }
+    },
+    "checklistbank": "303454"
   }
 }

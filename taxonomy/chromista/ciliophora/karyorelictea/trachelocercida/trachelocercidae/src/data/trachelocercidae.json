@@ -99,10 +99,12 @@
             ],
             "col": [
               "57NS7"
-            ]
+            ],
+            "checklistbank": "3026089"
           },
           "uuid": "584f9d3c-298b-58e-876-910590b4874d0f",
-          "authorityIds": "col:57NS7,gbif:7856616"
+          "authorityIds": "col:57NS7,gbif:7856616",
+          "authorship": "(Dragesco, 1963) Dragesco, 2002"
         },
         {
           "id": "TRACHELOCERCA_BRUNEA",
@@ -365,10 +367,12 @@
             ],
             "col": [
               "57NSP"
-            ]
+            ],
+            "checklistbank": "2755072"
           },
           "uuid": "58fdf3c4-3580-583-97e-25c49ba955a013",
-          "authorityIds": "col:57NSP,gbif:8271348"
+          "authorityIds": "col:57NSP,gbif:8271348",
+          "authorship": "Kahl, 1933"
         },
         {
           "id": "TRACHELOCERCA_LACRYMARIAE",
@@ -742,7 +746,8 @@
             "checklistbank": "ott2829088"
           },
           "uuid": "9803610b-97ed-5e3-a1c-cb12c09377d703",
-          "authorityIds": "col:7CLBF,gbif:7687793"
+          "authorityIds": "col:7CLBF,gbif:7687793",
+          "authorship": "Ehrenberg, 1840"
         },
         {
           "id": "TRACHELOCERCA_SCHULTZEI",
@@ -1054,7 +1059,8 @@
           "sourceIds": {
             "checklistbank": "ott5668100"
           },
-          "children": []
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
         },
         {
           "id": "SP_TRACHELOCERCA_CHINENSIS",
@@ -1065,6 +1071,19 @@
           "lineage": "Trachelocerca",
           "sourceIds": {
             "checklistbank": "ott5668101"
+          },
+          "children": [],
+          "authorship": "Xu et al., 2014"
+        },
+        {
+          "id": "SP_TRACHELOCERCA_SP",
+          "name": "Trachelocerca sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trachelocerca",
+          "sourceIds": {
+            "checklistbank": "2615155"
           },
           "children": []
         }
@@ -1969,7 +1988,8 @@
             "checklistbank": "ott2829152"
           },
           "uuid": "13eb46e1-2c0f-5d4-b15-1adcaa6dd8af30",
-          "authorityIds": "col:57P2Y,gbif:7715513"
+          "authorityIds": "col:57P2Y,gbif:7715513",
+          "authorship": "(Raikov, 1962)"
         },
         {
           "id": "TRACHELORAPHIS_OLIGOSTRIATUM",
@@ -2586,7 +2606,8 @@
           "sourceIds": {
             "checklistbank": "ott5668105"
           },
-          "children": []
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
         },
         {
           "id": "SP_TRACHELORAPHIS_DRAGESCOI",
@@ -2597,6 +2618,33 @@
           "lineage": "Tracheloraphis",
           "sourceIds": {
             "checklistbank": "ott5668106"
+          },
+          "children": [],
+          "authorship": "Xu et al., 2014"
+        },
+        {
+          "id": "SP_TRACHELORAPHIS_KATZAE_MA_ET_AL_2021",
+          "name": "Tracheloraphis katzae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tracheloraphis",
+          "authorship": "Ma et al., 2021",
+          "sourceIds": {
+            "checklistbank": "2697361"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRACHELORAPHIS_COLUBIS_KAHL_1933_XU_ET_AL_2011",
+          "name": "Tracheloraphis colubis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tracheloraphis",
+          "authorship": "(Kahl, 1933) Xu et al., 2011",
+          "sourceIds": {
+            "checklistbank": "2905233"
           },
           "children": []
         }
@@ -2736,6 +2784,20 @@
           "sourceIds": {
             "checklistbank": "ott7529104"
           },
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
+        },
+        {
+          "id": "SP_TRACHELOLOPHOS_MONOCARYON_DRAGESCO_1965",
+          "name": "Trachelolophos monocaryon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trachelolophos",
+          "authorship": "(Dragesco, 1965)",
+          "sourceIds": {
+            "checklistbank": "2758304"
+          },
           "children": []
         }
       ]
@@ -2768,7 +2830,8 @@
             "checklistbank": "ott2829188"
           },
           "uuid": "129540ca-6a66-5f1-aaf-a3cc3fec3a1820",
-          "authorityIds": "col:6NN7V,gbif:7891845"
+          "authorityIds": "col:6NN7V,gbif:7891845",
+          "authorship": "Kovaleva, 1966"
         },
         {
           "id": "KOVALEVAIA_TEISSIERI",
@@ -2967,10 +3030,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trachelocercidae"
+    },
+    {
+      "id": "GENUS_PARATRACHELOCERCA",
+      "name": "Paratrachelocerca",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARATRACHELOCERCA_TYPICA_MA_ET_AL_2021",
+          "name": "Paratrachelocerca typica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paratrachelocerca",
+          "authorship": "Ma et al., 2021",
+          "sourceIds": {
+            "checklistbank": "2755131"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trachelocercidae"
+    },
+    {
+      "id": "GENUS_TRACHELOCERCIDAE",
+      "name": "Trachelocercidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRACHELOCERCIDAE_SP",
+          "name": "Trachelocercidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trachelocercidae",
+          "sourceIds": {
+            "checklistbank": "2925061"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trachelocercidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 143,
+  "genusCount": 12,
+  "speciesCount": 149,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2979,6 +3085,6 @@
       "orderKey": 7885081,
       "familyKey": 8125273
     },
-    "checklistbank": "ott493857"
+    "checklistbank": "37865"
   }
 }

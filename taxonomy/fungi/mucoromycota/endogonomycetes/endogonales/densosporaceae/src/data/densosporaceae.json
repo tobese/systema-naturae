@@ -28,7 +28,8 @@
             ]
           },
           "uuid": "b865a962-a27b-5e8-bb6-3b4a799abebde5",
-          "authorityIds": "col:34T8P,gbif:2559540,mycobank:415998"
+          "authorityIds": "col:34T8P,gbif:2559540,mycobank:415998",
+          "children": []
         },
         {
           "id": "SP_DENSOSPORA_SOLICARPA_MCGEE",
@@ -50,7 +51,8 @@
             ]
           },
           "uuid": "b6ce6faa-256c-585-8c0-8b326ba2c6386f",
-          "authorityIds": "col:34T8Q,gbif:2559541,mycobank:416000"
+          "authorityIds": "col:34T8Q,gbif:2559541,mycobank:416000",
+          "children": []
         },
         {
           "id": "SP_DENSOSPORA_TUBIFORMIS_P_A_TANDY_MCGEE",
@@ -72,7 +74,8 @@
             ]
           },
           "uuid": "742ac406-7b51-54d-95b-77d623e71cb0d5",
-          "authorityIds": "col:34T8R,gbif:2559542,mycobank:415997"
+          "authorityIds": "col:34T8R,gbif:2559542,mycobank:415997",
+          "children": []
         },
         {
           "id": "SP_DENSOSPORA_NANOSPORA_MCGEE",
@@ -94,18 +97,119 @@
             ]
           },
           "uuid": "01c88715-b73f-5d8-99d-9dfac8c2ea1d58",
-          "authorityIds": "col:34T8N,gbif:2559544,mycobank:415999"
+          "authorityIds": "col:34T8N,gbif:2559544,mycobank:415999",
+          "children": []
+        },
+        {
+          "id": "SP_DENSOSPORA_SP",
+          "name": "Densospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Densospora",
+          "sourceIds": {
+            "checklistbank": "2570868"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Densosporaceae"
+    },
+    {
+      "id": "GENUS_SPHAEROCREAS",
+      "name": "Sphaerocreas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAEROCREAS_PUBESCENS_SACC_ELLIS_1882",
+          "name": "Sphaerocreas pubescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerocreas",
+          "authorship": "Sacc. & Ellis, 1882",
+          "sourceIds": {
+            "checklistbank": "1237932"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHAEROCREAS_SP",
+          "name": "Sphaerocreas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerocreas",
+          "sourceIds": {
+            "checklistbank": "2012213"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "densosporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SPHAEROCREAS",
+          "name": "uncultured Sphaerocreas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1967939"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_DENSOSPORACEAE",
+          "name": "uncultured Densosporaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2304597"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "densosporaceae"
+    },
+    {
+      "id": "GENUS_DENSOSPORACEAE",
+      "name": "Densosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DENSOSPORACEAE_SP",
+          "name": "Densosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Densosporaceae",
+          "sourceIds": {
+            "checklistbank": "2957638"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "densosporaceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 10,
   "appSlug": "densosporaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mucoromycota > Endogonomycetes",
-  "genusCount": 1,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -113,6 +217,7 @@
       "classKey": 12257625,
       "orderKey": 751,
       "familyKey": 12200976
-    }
+    },
+    "checklistbank": "2052797"
   }
 }

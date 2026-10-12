@@ -1014,11 +1014,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9604373
+            "gbif": 9604373,
+            "checklistbank": "1607865"
           },
           "uuid": "2cee906a-6928-5a9-9ed-cf3c8f477eca58",
           "authorityIds": "gbif:9604373",
-          "children": []
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
         },
         {
           "id": "DYSTERIA_PAROVALIS",
@@ -1108,11 +1110,13 @@
             ],
             "col": [
               "6DRXZ"
-            ]
+            ],
+            "checklistbank": "1606868"
           },
           "uuid": "a53fc417-e438-5cf-b60-226e79384d9494",
           "authorityIds": "col:6DRXZ,gbif:7386736",
-          "children": []
+          "children": [],
+          "authorship": "Clark, 1866"
         },
         {
           "id": "DYSTERIA_PUSILLA",
@@ -1284,11 +1288,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9293476
+            "gbif": 9293476,
+            "checklistbank": "2747868"
           },
           "uuid": "73781066-ba9b-51e-88b-23a5f949e58d88",
           "authorityIds": "gbif:9293476",
-          "children": []
+          "children": [],
+          "authorship": "Qu et al., 2015"
         },
         {
           "id": "DYSTERIA_SULCATA",
@@ -1362,6 +1368,83 @@
           "authorship": "Tucolesco, 1962",
           "sourceIds": {
             "checklistbank": "959481"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSTERIA_SP",
+          "name": "Dysteria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteria",
+          "sourceIds": {
+            "checklistbank": "238905"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSTERIA_NABIA_PARK_MIN_2014",
+          "name": "Dysteria nabia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteria",
+          "authorship": "Park & Min 2014",
+          "sourceIds": {
+            "checklistbank": "1543324"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSTERIA_OZAKII_WANG_JIANG_QU_AL_FARRAJ_WARREN_2021",
+          "name": "Dysteria ozakii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteria",
+          "authorship": "Wang, Jiang, Qu, Al-Farraj & Warren, 2021",
+          "sourceIds": {
+            "checklistbank": "2775966"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSTERIA_PARACRASSIPES_ZHAO_ET_AL_2022",
+          "name": "Dysteria paracrassipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteria",
+          "authorship": "Zhao et al., 2022",
+          "sourceIds": {
+            "checklistbank": "2896641"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSTERIA_PARASEMILUNARIS_CHOI_KIM_KIM_2025",
+          "name": "Dysteria parasemilunaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteria",
+          "authorship": "Choi, Kim & Kim, 2025",
+          "sourceIds": {
+            "checklistbank": "3162687"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSTERIA_BREVICAUDA_CHOI_KIM_KIM_2025",
+          "name": "Dysteria brevicauda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteria",
+          "authorship": "Choi, Kim & Kim, 2025",
+          "sourceIds": {
+            "checklistbank": "3162688"
           },
           "children": []
         }
@@ -1956,6 +2039,18 @@
             "checklistbank": "1477937"
           },
           "children": []
+        },
+        {
+          "id": "SP_TROCHILIA_SP",
+          "name": "Trochilia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochilia",
+          "sourceIds": {
+            "checklistbank": "2586647"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2019,10 +2114,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dysteriidae"
+    },
+    {
+      "id": "GENUS_MICRODYSTERIA",
+      "name": "Microdysteria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICRODYSTERIA_DECORA_LYNN_SMALL_2000",
+          "name": "Microdysteria decora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microdysteria",
+          "authorship": "Lynn & Small 2000",
+          "sourceIds": {
+            "checklistbank": "1170558"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dysteriidae"
+    },
+    {
+      "id": "GENUS_DYSTERIIDAE",
+      "name": "Dysteriidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DYSTERIIDAE_SP",
+          "name": "Dysteriidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysteriidae",
+          "sourceIds": {
+            "checklistbank": "1357971"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dysteriidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 90,
+  "genusCount": 16,
+  "speciesCount": 99,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2030,6 +2168,7 @@
       "classKey": 8168405,
       "orderKey": 7897575,
       "familyKey": 7703756
-    }
+    },
+    "checklistbank": "238903"
   }
 }

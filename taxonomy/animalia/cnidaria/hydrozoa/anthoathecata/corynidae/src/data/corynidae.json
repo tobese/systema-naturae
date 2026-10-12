@@ -1081,7 +1081,8 @@
             "checklistbank": "ott1056693"
           },
           "uuid": "7e210140-026a-585-b31-a6c8abb172a4bf",
-          "authorityIds": "col:YQPQ,gbif:5185685,wikidata:Q1839076"
+          "authorityIds": "col:YQPQ,gbif:5185685,wikidata:Q1839076",
+          "authorship": "Schuchert, 1996"
         },
         {
           "id": "CORYNE_UCHIDAI",
@@ -1107,7 +1108,8 @@
             "checklistbank": "ott545642"
           },
           "uuid": "defe0b9c-33c8-5d8-b2b-58bdd79614f077",
-          "authorityIds": "col:YQPT,gbif:5185677,wikidata:Q2347819"
+          "authorityIds": "col:YQPT,gbif:5185677,wikidata:Q2347819",
+          "authorship": "Stechow, 1931"
         },
         {
           "id": "CORYNE_VANBENEDENI",
@@ -2477,6 +2479,18 @@
             "checklistbank": "ott7508032"
           },
           "children": []
+        },
+        {
+          "id": "SP_SARSIA_SP",
+          "name": "Sarsia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarsia",
+          "sourceIds": {
+            "checklistbank": "6079"
+          },
+          "children": []
         }
       ]
     },
@@ -2675,10 +2689,12 @@
             ],
             "col": [
               "CR3YR"
-            ]
+            ],
+            "checklistbank": "264120"
           },
           "uuid": "3af3c331-4bf2-5f8-8c8-f60182a49aafb1",
-          "authorityIds": "col:CR3YR,gbif:6180442,wikidata:Q2244672"
+          "authorityIds": "col:CR3YR,gbif:6180442,wikidata:Q2244672",
+          "authorship": "(Schierwater & Ender, 2000)"
         },
         {
           "id": "STAURIDIOSARSIA_NIPPONICA",
@@ -2794,7 +2810,8 @@
             "checklistbank": "ott204698"
           },
           "uuid": "9454ae2e-0bf5-5ce-830-98e2729c4b0997",
-          "authorityIds": "col:4ZLYB,gbif:6180436,wikidata:Q2093902"
+          "authorityIds": "col:4ZLYB,gbif:6180436,wikidata:Q2093902",
+          "authorship": "(Vannucci, 1956)"
         },
         {
           "id": "STAURIDIOSARSIA_SPONGICOLA",
@@ -3196,6 +3213,18 @@
           },
           "uuid": "02581599-200b-544-9dc-070c54af852844",
           "authorityIds": "col:6YS27,gbif:7901080,wikidata:Q2526343"
+        },
+        {
+          "id": "SP_SLABBERIA_SP",
+          "name": "Slabberia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Slabberia",
+          "sourceIds": {
+            "checklistbank": "2782790"
+          },
+          "children": []
         }
       ]
     },
@@ -4032,10 +4061,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "corynidae"
+    },
+    {
+      "id": "GENUS_CORYNIDAE",
+      "name": "Corynidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORYNIDAE_SP",
+          "name": "Corynidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Corynidae",
+          "sourceIds": {
+            "checklistbank": "2464688"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corynidae"
     }
   ],
-  "genusCount": 31,
-  "speciesCount": 178,
+  "genusCount": 32,
+  "speciesCount": 181,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4044,6 +4094,6 @@
       "orderKey": 838,
       "familyKey": 8182
     },
-    "checklistbank": "ott641026"
+    "checklistbank": "6077"
   }
 }

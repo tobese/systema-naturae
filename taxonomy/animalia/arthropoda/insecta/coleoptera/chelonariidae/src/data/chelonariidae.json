@@ -29,10 +29,12 @@
             ],
             "itis": [
               "114280"
-            ]
+            ],
+            "checklistbank": "979749"
           },
           "uuid": "4e636aed-78bb-564-8d8-4788a05e680021",
-          "authorityIds": "gbif:1033702,itis:114280"
+          "authorityIds": "gbif:1033702,itis:114280",
+          "authorship": "Thomson, 1867"
         },
         {
           "id": "SP_CHELONARIUM_KUROSAWAI",
@@ -1737,6 +1739,31 @@
             "checklistbank": "ott5072462"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHELONARIUM_SP",
+          "name": "Chelonarium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonarium",
+          "sourceIds": {
+            "checklistbank": "440286"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHELONARIUM_JAPONICUM_NAKANE_1963",
+          "name": "Chelonarium japonicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonarium",
+          "authorship": "Nakane, 1963",
+          "sourceIds": {
+            "checklistbank": "3397809"
+          },
+          "children": []
         }
       ]
     },
@@ -1798,7 +1825,8 @@
           "sourceIds": {
             "checklistbank": "1270595"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Nakane, 1963)"
         },
         {
           "id": "SP_PSEUDOCHELONARIUM_MACULOSUM",
@@ -1896,10 +1924,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chelonariidae"
+    },
+    {
+      "id": "GENUS_CHELONARIIDAE",
+      "name": "Chelonariidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHELONARIIDAE_SP",
+          "name": "Chelonariidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonariidae",
+          "sourceIds": {
+            "checklistbank": "333857"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chelonariidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 135,
+  "genusCount": 5,
+  "speciesCount": 138,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1908,6 +1957,6 @@
       "orderKey": 1470,
       "familyKey": 7779
     },
-    "checklistbank": "ott949417"
+    "checklistbank": "186987"
   }
 }

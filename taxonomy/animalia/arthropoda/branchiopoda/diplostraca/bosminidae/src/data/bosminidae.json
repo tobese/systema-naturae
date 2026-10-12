@@ -31,7 +31,10 @@
           "lineage": "bosmina",
           "authorship": "Baird, 1857",
           "children": [],
-          "uuid": "df069498-12ec-5bd-835-e36c2cc4aa7d35"
+          "uuid": "df069498-12ec-5bd-835-e36c2cc4aa7d35",
+          "sourceIds": {
+            "checklistbank": "3090742"
+          }
         },
         {
           "id": "SP_BOSMINA_LONGIROSTRIS_O_F_M_LLER_1776",
@@ -629,6 +632,18 @@
             "checklistbank": "ott7693481"
           },
           "children": []
+        },
+        {
+          "id": "SP_BOSMINA_SP",
+          "name": "Bosmina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bosmina",
+          "sourceIds": {
+            "checklistbank": "77755"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -838,7 +853,8 @@
           "sourceIds": {
             "checklistbank": "ott108031"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Uljanin, 1874)"
         },
         {
           "id": "SP_EUBOSMINA_CRASSICORNIS",
@@ -933,13 +949,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bosminidae"
+    },
+    {
+      "id": "GENUS_BOSMINIDAE",
+      "name": "Bosminidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOSMINIDAE_SP",
+          "name": "Bosminidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bosminidae",
+          "sourceIds": {
+            "checklistbank": "1724642"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bosminidae"
     }
   ],
-  "speciesCount": 61,
+  "speciesCount": 63,
   "appSlug": "bosminidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Branchiopoda",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -948,6 +985,6 @@
       "orderKey": 545,
       "familyKey": 3680
     },
-    "checklistbank": "ott46783"
+    "checklistbank": "27401"
   }
 }

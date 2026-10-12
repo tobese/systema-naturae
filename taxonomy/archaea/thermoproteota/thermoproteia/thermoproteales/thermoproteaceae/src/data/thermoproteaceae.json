@@ -76,7 +76,8 @@
             "checklistbank": "ott1001757"
           },
           "uuid": "3690f658-1988-5cc-835-eedba5fb613d6e",
-          "authorityIds": "col:CT8DQ,gbif:9125849"
+          "authorityIds": "col:CT8DQ,gbif:9125849",
+          "authorship": "Yim et al. 2015"
         },
         {
           "id": "THERMOPROTEUS_UZONIENSIS",
@@ -243,7 +244,8 @@
             "checklistbank": "ott873369"
           },
           "uuid": "a811a836-0028-501-8ef-547b8038fea6e1",
-          "authorityIds": "col:CSY36,gbif:7862938"
+          "authorityIds": "col:CSY36,gbif:7862938",
+          "authorship": "Slobodkina et al. 2015"
         },
         {
           "id": "PYROBACULUM_IGNEILUTI",
@@ -266,7 +268,8 @@
             "checklistbank": "ott5877683"
           },
           "uuid": "b11cda48-91a8-5b8-b54-75377fc2ecccb2",
-          "authorityIds": "col:CSY37,gbif:9445018"
+          "authorityIds": "col:CSY37,gbif:9445018",
+          "authorship": "Lee et al. 2017"
         },
         {
           "id": "PYROBACULUM_ISLANDICUM",
@@ -312,10 +315,12 @@
             ],
             "col": [
               "CSY38"
-            ]
+            ],
+            "checklistbank": "70771"
           },
           "uuid": "da8ab675-8c57-5c7-893-0f6be555487092",
-          "authorityIds": "col:CSY38,gbif:7636309"
+          "authorityIds": "col:CSY38,gbif:7636309",
+          "authorship": "(Stetter and Zillig 1989) Chan et al. 2013"
         },
         {
           "id": "PYROBACULUM_OGUNIENSE",
@@ -443,7 +448,8 @@
           "sourceIds": {
             "checklistbank": "939064"
           },
-          "children": []
+          "children": [],
+          "authorship": "Itoh et al. 1999"
         },
         {
           "id": "SP_CALDIVIRGA_SP",
@@ -476,6 +482,19 @@
           "sourceIds": {
             "checklistbank": "939073"
           },
+          "children": [],
+          "authorship": "Itoh et al. 1998"
+        },
+        {
+          "id": "SP_THERMOCLADIUM_SP",
+          "name": "Thermocladium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermocladium",
+          "sourceIds": {
+            "checklistbank": "1714261"
+          },
           "children": []
         }
       ],
@@ -497,7 +516,8 @@
           "sourceIds": {
             "checklistbank": "939080"
           },
-          "children": []
+          "children": [],
+          "authorship": "Itoh et al. 2002"
         },
         {
           "id": "SP_VULCANISAETA_SOUNIANA",
@@ -509,7 +529,8 @@
           "sourceIds": {
             "checklistbank": "939081"
           },
-          "children": []
+          "children": [],
+          "authorship": "Itoh et al. 2002"
         },
         {
           "id": "SP_VULCANISAETA_MOUTNOVSKIA",
@@ -521,7 +542,8 @@
           "sourceIds": {
             "checklistbank": "ott105380"
           },
-          "children": []
+          "children": [],
+          "authorship": "Gumerov et al. 2011"
         },
         {
           "id": "SP_VULCANISAETA_THERMOPHILA",
@@ -532,6 +554,19 @@
           "lineage": "Vulcanisaeta",
           "sourceIds": {
             "checklistbank": "ott1001756"
+          },
+          "children": [],
+          "authorship": "Yim et al. 2015"
+        },
+        {
+          "id": "SP_VULCANISAETA_SP",
+          "name": "Vulcanisaeta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vulcanisaeta",
+          "sourceIds": {
+            "checklistbank": "1295370"
           },
           "children": []
         }
@@ -591,14 +626,83 @@
             "checklistbank": "ott5205971"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOPROTEACEAE",
+          "name": "uncultured Thermoproteaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "310081"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOPROTEUS",
+          "name": "uncultured Thermoproteus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "310086"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PYROBACULUM",
+          "name": "uncultured Pyrobaculum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "398234"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CALDIVIRGA",
+          "name": "uncultured Caldivirga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1434682"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermoproteaceae"
+    },
+    {
+      "id": "GENUS_THERMOPROTEACEAE",
+      "name": "Thermoproteaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOPROTEACEAE_ARCHAEON",
+          "name": "Thermoproteaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermoproteaceae",
+          "sourceIds": {
+            "checklistbank": "2614265"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thermoproteaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 29,
+  "genusCount": 8,
+  "speciesCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -607,6 +711,6 @@
       "orderKey": 1191,
       "familyKey": 3798
     },
-    "checklistbank": "ott1043518"
+    "checklistbank": "2267"
   }
 }

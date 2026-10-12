@@ -1754,7 +1754,8 @@
           "sourceIds": {
             "col": [
               "CVZ4S"
-            ]
+            ],
+            "checklistbank": "3402109"
           },
           "authorityIds": "col:CVZ4S"
         },
@@ -1896,7 +1897,8 @@
           "sourceIds": {
             "checklistbank": "1269814"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Allman, 1883)"
         },
         {
           "id": "SP_NEMERTESIA_PINNATIFIDA",
@@ -3048,10 +3050,12 @@
             ],
             "col": [
               "78425"
-            ]
+            ],
+            "checklistbank": "1476438"
           },
           "uuid": "4862dc78-6210-5dd-a45-2c2e826373e0f2",
-          "authorityIds": "col:78425,gbif:6180973,wikidata:Q2587158"
+          "authorityIds": "col:78425,gbif:6180973,wikidata:Q2587158",
+          "authorship": "(Lamouroux, 1824)"
         },
         {
           "id": "SP_PLUMULARIA_GOLDSTEINI_BALE_1882",
@@ -6012,7 +6016,8 @@
           "sourceIds": {
             "checklistbank": "ott3682213"
           },
-          "children": []
+          "children": [],
+          "authorship": "Jaderholm, 1904"
         },
         {
           "id": "SP_PLUMULARIA_KIRKPATRICKI",
@@ -6335,6 +6340,19 @@
           "lineage": "Plumularia",
           "sourceIds": {
             "checklistbank": "ott7996209"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLUMULARIA_CYLINDRICA_KIRCHENPAUER_1876",
+          "name": "Plumularia cylindrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plumularia",
+          "authorship": "Kirchenpauer, 1876",
+          "sourceIds": {
+            "checklistbank": "2833599"
           },
           "children": []
         }
@@ -6970,7 +6988,8 @@
           "sourceIds": {
             "checklistbank": "ott7508360"
           },
-          "children": []
+          "children": [],
+          "authorship": "Ansin Agis, Ramil & Calder, 2016"
         },
         {
           "id": "SP_SCHIZOPLUMULARIA_GENICULATA",
@@ -7477,6 +7496,18 @@
             "checklistbank": "35b5bd1a-6d9f-459b-afe8-69a4da82fe30"
           },
           "children": []
+        },
+        {
+          "id": "SP_POLYPLUMARIA_SP",
+          "name": "Polyplumaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polyplumaria",
+          "sourceIds": {
+            "checklistbank": "3457855"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7643,10 +7674,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "plumulariidae"
+    },
+    {
+      "id": "GENUS_MONOSTAECHAS",
+      "name": "Monostaechas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONOSTAECHAS_SP",
+          "name": "Monostaechas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monostaechas",
+          "sourceIds": {
+            "checklistbank": "2499585"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plumulariidae"
     }
   ],
-  "genusCount": 27,
-  "speciesCount": 408,
+  "genusCount": 28,
+  "speciesCount": 411,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -7655,6 +7707,6 @@
       "orderKey": 712,
       "familyKey": 5175
     },
-    "checklistbank": "ott566406"
+    "checklistbank": "308572"
   }
 }

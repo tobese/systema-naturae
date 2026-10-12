@@ -391,6 +391,18 @@
           "uuid": "85469b0f-5142-52a-9e6-6230d9b1a032e0",
           "authorityIds": "col:69NCL,gbif:2123698,itis:745594",
           "children": []
+        },
+        {
+          "id": "SP_CEROMA_SP",
+          "name": "Ceroma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceroma",
+          "sourceIds": {
+            "checklistbank": "3069925"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -541,13 +553,34 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Ceromidae"
+    },
+    {
+      "id": "GENUS_CEROMIDAE",
+      "name": "Ceromidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CEROMIDAE_GEN",
+          "name": "Ceromidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceromidae",
+          "sourceIds": {
+            "checklistbank": "3069949"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ceromidae"
     }
   ],
-  "speciesCount": 21,
+  "speciesCount": 23,
   "appSlug": "ceromidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -556,6 +589,6 @@
       "orderKey": 756,
       "familyKey": 5849
     },
-    "checklistbank": "ott3520344"
+    "checklistbank": "3069921"
   }
 }

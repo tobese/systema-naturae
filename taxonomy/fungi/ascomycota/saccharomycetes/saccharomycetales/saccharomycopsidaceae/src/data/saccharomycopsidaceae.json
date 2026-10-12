@@ -904,7 +904,8 @@
             ],
             "col": [
               "4TWK6"
-            ]
+            ],
+            "checklistbank": "2268993"
           },
           "uuid": "076343f2-8ed6-596-bd4-e83ff35b347577",
           "authorityIds": "col:4TWK6,gbif:10844544,mycobank:824962",
@@ -930,7 +931,8 @@
             ],
             "col": [
               "4TWK7"
-            ]
+            ],
+            "checklistbank": "2878314"
           },
           "uuid": "e468cdae-4824-53a-ac4-c72671b93649cb",
           "authorityIds": "col:4TWK7,gbif:10671026,mycobank:832323",
@@ -1104,6 +1106,44 @@
           "sourceIds": {
             "checklistbank": "ott220525"
           },
+          "children": [],
+          "authorship": "(L.R. Batra) Kurtzman, 1999"
+        },
+        {
+          "id": "SP_SACCHAROMYCOPSIS_SP",
+          "name": "Saccharomycopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccharomycopsis",
+          "sourceIds": {
+            "checklistbank": "379488"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SACCHAROMYCOPSIS_FIBULIGERA",
+          "name": "Saccharomycopsis ×fibuligera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccharomycopsis",
+          "sourceIds": {
+            "checklistbank": "1725355"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SACCHAROMYCOPSIS_PHALLUAE_FH_TIAN_XX_YUAN_KQ_PENG_2021",
+          "name": "Saccharomycopsis phalluae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccharomycopsis",
+          "authorship": "FH Tian, XX Yuan & KQ Peng, 2021",
+          "sourceIds": {
+            "checklistbank": "2826930"
+          },
           "children": []
         }
       ],
@@ -1130,11 +1170,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "saccharomycopsidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SACCHAROMYCOPSIS",
+          "name": "uncultured Saccharomycopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1204762"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saccharomycopsidaceae"
+    },
+    {
+      "id": "GENUS_SACCHAROMYCOPSIDACEAE",
+      "name": "Saccharomycopsidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SACCHAROMYCOPSIDACEAE_SP",
+          "name": "Saccharomycopsidaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccharomycopsidaceae",
+          "sourceIds": {
+            "checklistbank": "2306475"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saccharomycopsidaceae"
     }
   ],
   "authorship": "Arx & Van der Walt",
-  "genusCount": 5,
-  "speciesCount": 44,
+  "genusCount": 7,
+  "speciesCount": 49,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1143,6 +1225,6 @@
       "orderKey": 1281,
       "familyKey": 8406
     },
-    "checklistbank": "ott102640"
+    "checklistbank": "34366"
   }
 }

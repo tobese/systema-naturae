@@ -65,7 +65,44 @@
             ],
             "checklistbank": "ott418570"
           },
-          "authorityIds": "col:3W9KX,itis:609784,wikidata:Q189514"
+          "authorityIds": "col:3W9KX,itis:609784,wikidata:Q189514",
+          "authorship": "(Matschie, 1900)"
+        },
+        {
+          "id": "SP_LOXODONTA_CYCLOTIS",
+          "name": "Loxodonta ×cyclotis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loxodonta",
+          "sourceIds": {
+            "checklistbank": "169825"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOXODONTA_ENVIRONMENTAL",
+          "name": "Loxodonta environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loxodonta",
+          "sourceIds": {
+            "checklistbank": "2682740"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOXODONTA_SP",
+          "name": "Loxodonta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loxodonta",
+          "sourceIds": {
+            "checklistbank": "2798486"
+          },
+          "children": []
         }
       ]
     },
@@ -102,7 +139,8 @@
             ],
             "checklistbank": "ott541928"
           },
-          "authorityIds": "col:398D9,itis:584938,wikidata:Q133006"
+          "authorityIds": "col:398D9,itis:584938,wikidata:Q133006",
+          "authorship": "Linnaeus, 1758"
         },
         {
           "id": "SP_ELEPHAS_PRIMIGENIUS_BLUMENBACH_1799",
@@ -202,6 +240,31 @@
             "checklistbank": "ott7654245"
           },
           "children": []
+        },
+        {
+          "id": "SP_ELEPHAS_CYPRIOTES_BATE_1903",
+          "name": "Elephas cypriotes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elephas",
+          "authorship": "Bate, 1903",
+          "sourceIds": {
+            "checklistbank": "363579"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELEPHAS_SP",
+          "name": "Elephas sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elephas",
+          "sourceIds": {
+            "checklistbank": "363580"
+          },
+          "children": []
         }
       ]
     },
@@ -233,7 +296,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mammuthus",
-          "uuid": "8dd80f64-0e31-538-8ee-0a0b4c86f6c076"
+          "uuid": "8dd80f64-0e31-538-8ee-0a0b4c86f6c076",
+          "authorship": "(Stock & Furlong, 1928)",
+          "sourceIds": {
+            "checklistbank": "1851653"
+          }
         },
         {
           "id": "SP_MAMMUTHUS_TROGONTHERII",
@@ -299,6 +366,31 @@
           "children": [],
           "lineage": "Mammuthus",
           "uuid": "b7656a01-eda8-57b-bfa-224da2eeef2786"
+        },
+        {
+          "id": "SP_MAMMUTHUS_SP",
+          "name": "Mammuthus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mammuthus",
+          "sourceIds": {
+            "checklistbank": "1851651"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MAMMUTHUS_JEFFERSONII_OSBORN_1922",
+          "name": "Mammuthus jeffersonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mammuthus",
+          "authorship": "Osborn, 1922",
+          "sourceIds": {
+            "checklistbank": "1851652"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -393,7 +485,23 @@
           "children": [],
           "lineage": "Palaeoloxodon",
           "uuid": "aae332cd-2554-5e4-ab0-6226c8180b4c63",
-          "commonName": "Asian Straight-tusked Elephant"
+          "commonName": "Asian Straight-tusked Elephant",
+          "authorship": "(Makiyama, 1924)",
+          "sourceIds": {
+            "checklistbank": "3469239"
+          }
+        },
+        {
+          "id": "SP_PALAEOLOXODON_SP",
+          "name": "Palaeoloxodon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeoloxodon",
+          "sourceIds": {
+            "checklistbank": "3064006"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -439,10 +547,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "elephantidae"
+    },
+    {
+      "id": "GENUS_ELEPHANTIDAE",
+      "name": "Elephantidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ELEPHANTIDAE_GEN",
+          "name": "Elephantidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elephantidae",
+          "sourceIds": {
+            "checklistbank": "9781"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elephantidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 29,
+  "genusCount": 7,
+  "speciesCount": 38,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -451,6 +580,6 @@
       "orderKey": 799,
       "familyKey": 9427
     },
-    "checklistbank": "ott541924"
+    "checklistbank": "9780"
   }
 }

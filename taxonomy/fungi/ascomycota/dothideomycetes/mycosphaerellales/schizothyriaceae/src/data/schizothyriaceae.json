@@ -1411,7 +1411,8 @@
             ],
             "col": [
               "4VDDT"
-            ]
+            ],
+            "checklistbank": "561301"
           },
           "uuid": "8237650d-d0f5-5fb-ae0-6e8187d47644ad",
           "authorityIds": "col:4VDDT,gbif:8050058,mycobank:815098",
@@ -1437,7 +1438,8 @@
             ],
             "col": [
               "6XWNH"
-            ]
+            ],
+            "checklistbank": "710217"
           },
           "uuid": "956ff44b-a76d-528-96e-fefd0493c728c8",
           "authorityIds": "col:6XWNH,gbif:7435530,mycobank:815099",
@@ -2085,7 +2087,8 @@
             ],
             "col": [
               "6XWNN"
-            ]
+            ],
+            "checklistbank": "1453764"
           },
           "uuid": "82d10b11-1462-527-a50-4d03bc5225cd40",
           "authorityIds": "col:6XWNN,gbif:8407168,mycobank:815104",
@@ -2303,7 +2306,8 @@
             ],
             "col": [
               "79WNT"
-            ]
+            ],
+            "checklistbank": "286623"
           },
           "uuid": "c648f574-6559-5e4-9ff-2cfd4f1393240b",
           "authorityIds": "col:79WNT,gbif:7862515,mycobank:815105",
@@ -2329,7 +2333,8 @@
             ],
             "col": [
               "6XWNQ"
-            ]
+            ],
+            "checklistbank": "508917"
           },
           "uuid": "9880940d-3848-506-9f0-7c6dd4fe6cee0e",
           "authorityIds": "col:6XWNQ,gbif:8384423,mycobank:815106",
@@ -2526,6 +2531,18 @@
           "lineage": "Schizothyrium",
           "sourceIds": {
             "checklistbank": "ott5320044"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SCHIZOTHYRIUM_SP",
+          "name": "Schizothyrium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizothyrium",
+          "sourceIds": {
+            "checklistbank": "1515580"
           },
           "children": []
         }
@@ -6024,6 +6041,18 @@
             "checklistbank": "ott5320045"
           },
           "children": []
+        },
+        {
+          "id": "SP_ZYGOPHIALA_SP",
+          "name": "Zygophiala sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zygophiala",
+          "sourceIds": {
+            "checklistbank": "561302"
+          },
+          "children": []
         }
       ],
       "authorship": "E.W. Mason"
@@ -6411,11 +6440,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "schizothyriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SCHIZOTHYRIUM",
+          "name": "uncultured Schizothyrium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "667053"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizothyriaceae"
     }
   ],
   "authorship": "Höhnel ex Trotter, Saccardo, D. Saccardo & Traverso",
-  "genusCount": 48,
-  "speciesCount": 249,
+  "genusCount": 49,
+  "speciesCount": 252,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -6424,6 +6474,6 @@
       "orderKey": 9783671,
       "familyKey": 4799
     },
-    "checklistbank": "ott1066849"
+    "checklistbank": "281250"
   }
 }

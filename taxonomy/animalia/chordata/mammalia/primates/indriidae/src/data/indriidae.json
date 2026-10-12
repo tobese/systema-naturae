@@ -204,6 +204,18 @@
           "authorityIds": "col:K29S,itis:944081",
           "commonName": "Masoala Woolly Lemur",
           "children": []
+        },
+        {
+          "id": "SP_AVAHI_SP",
+          "name": "Avahi sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Avahi",
+          "sourceIds": {
+            "checklistbank": "3471686"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -410,6 +422,18 @@
           "authorityIds": "col:6VXQ9,itis:944093",
           "commonName": "Perrier's Sifaka",
           "children": []
+        },
+        {
+          "id": "SP_PROPITHECUS_SP",
+          "name": "Propithecus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Propithecus",
+          "sourceIds": {
+            "checklistbank": "39582"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -445,13 +469,69 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Indriidae"
+    },
+    {
+      "id": "GENUS_ARCHAEOLEMUR",
+      "name": "Archaeolemur",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAEOLEMUR_MAJORI_FILHOL_1895",
+          "name": "Archaeolemur majori",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeolemur",
+          "authorship": "Filhol, 1895",
+          "sourceIds": {
+            "checklistbank": "523821"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARCHAEOLEMUR_EDWARDSI_FILHOL_1895",
+          "name": "Archaeolemur edwardsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeolemur",
+          "authorship": "Filhol, 1895",
+          "sourceIds": {
+            "checklistbank": "523822"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "indriidae"
+    },
+    {
+      "id": "GENUS_HADROPITHECUS",
+      "name": "Hadropithecus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HADROPITHECUS_STENOGNATHUS",
+          "name": "Hadropithecus stenognathus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hadropithecus",
+          "sourceIds": {
+            "checklistbank": "523825"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "indriidae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 24,
   "appSlug": "indriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -460,6 +540,6 @@
       "orderKey": 798,
       "familyKey": 4827490
     },
-    "checklistbank": "ott1058643"
+    "checklistbank": "30599"
   }
 }

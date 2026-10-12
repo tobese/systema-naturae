@@ -48,10 +48,12 @@
             ],
             "col": [
               "42FG3"
-            ]
+            ],
+            "checklistbank": "2223"
           },
           "uuid": "6340b47b-3768-50e-b9e-86badd10a58fd0",
-          "authorityIds": "col:42FG3,gbif:1000363,itis:952031"
+          "authorityIds": "col:42FG3,gbif:1000363,itis:952031",
+          "authorship": "Huser et al. 1983"
         },
         {
           "id": "METHANOTHRIX_SPEC.",
@@ -90,10 +92,12 @@
             ],
             "itis": [
               "952032"
-            ]
+            ],
+            "checklistbank": "2224"
           },
           "uuid": "853a60b0-c094-562-b38-7f56ad058ed403",
-          "authorityIds": "col:42FG4,gbif:7641274,itis:952032"
+          "authorityIds": "col:42FG4,gbif:7641274,itis:952032",
+          "authorship": "corrig. Nozhevnikova and Chudina 1988"
         },
         {
           "id": "SP_METHANOTHRIX_HARUNDINACEA_MA_ET_AL_2006_AKINYEMI_ET_AL_2021",
@@ -108,9 +112,22 @@
           "sourceIds": {
             "col": [
               "CSMLY"
-            ]
+            ],
+            "checklistbank": "301375"
           },
           "authorityIds": "col:CSMLY"
+        },
+        {
+          "id": "SP_METHANOTHRIX_SP",
+          "name": "Methanothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanothrix",
+          "sourceIds": {
+            "checklistbank": "90426"
+          },
+          "children": []
         }
       ]
     },
@@ -330,14 +347,157 @@
           "lineage": "Methanocrinis",
           "children": [],
           "uuid": "0823200e-ff58-58a-af0-7121b4ee115fca"
+        },
+        {
+          "id": "SP_METHANOCRINIS_SP",
+          "name": "Methanocrinis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocrinis",
+          "sourceIds": {
+            "checklistbank": "3101522"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanotrichaceae"
+    },
+    {
+      "id": "GENUS_METHANOSAETA",
+      "name": "Methanosaeta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOSAETA_SP",
+          "name": "Methanosaeta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanosaeta",
+          "sourceIds": {
+            "checklistbank": "118058"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHANOSAETA_PELAGICA_MORI_ET_AL_2012",
+          "name": "Methanosaeta pelagica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanosaeta",
+          "authorship": "Mori et al. 2012",
+          "sourceIds": {
+            "checklistbank": "1110545"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanotrichaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHANOTRICHACEAE",
+          "name": "uncultured Methanotrichaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "176232"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOSAETA",
+          "name": "uncultured Methanosaeta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "183756"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanotrichaceae"
+    },
+    {
+      "id": "GENUS_METHANOSAETACEAE",
+      "name": "Methanosaetaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOSAETACEAE_ARCHAEON",
+          "name": "Methanosaetaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanosaetaceae",
+          "sourceIds": {
+            "checklistbank": "388591"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanotrichaceae"
+    },
+    {
+      "id": "GENUS_METHANOTRICHACEAE",
+      "name": "Methanotrichaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOTRICHACEAE_ARCHAEON",
+          "name": "Methanotrichaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanotrichaceae",
+          "sourceIds": {
+            "checklistbank": "1915695"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanotrichaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_METHANOCRINIS_KHOMYAKOVA_ET_AL_2023",
+          "name": "Candidatus Methanocrinis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Khomyakova et al. 2023",
+          "sourceIds": {
+            "checklistbank": "3033395"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanotrichaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 15,
+  "genusCount": 14,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -345,6 +505,7 @@
       "classKey": 10751195,
       "orderKey": 10709616,
       "familyKey": 10885241
-    }
+    },
+    "checklistbank": "143067"
   }
 }

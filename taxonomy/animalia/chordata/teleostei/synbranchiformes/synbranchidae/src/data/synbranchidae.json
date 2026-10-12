@@ -26,7 +26,8 @@
             ],
             "itis": [
               "1280940"
-            ]
+            ],
+            "checklistbank": "2793301"
           },
           "uuid": "49a1eef6-0859-572-bdb-a3e37d2fff1901",
           "authorityIds": "col:V967P,gbif:177714633,itis:1280940"
@@ -49,7 +50,8 @@
             ],
             "col": [
               "V96TP"
-            ]
+            ],
+            "checklistbank": "2793300"
           },
           "uuid": "5fc936b1-b7cb-58c-885-1fafac62de9d4d",
           "authorityIds": "col:V96TP,gbif:177714635,itis:1280937"
@@ -109,7 +111,8 @@
             ],
             "col": [
               "V938T"
-            ]
+            ],
+            "checklistbank": "2793299"
           },
           "uuid": "3c150f95-5a9c-5eb-aa6-dbe383e63cb506",
           "authorityIds": "col:V938T,gbif:177714637,itis:1280936"
@@ -136,6 +139,18 @@
           },
           "uuid": "ddf1fcb0-082a-5cd-8a1-e423e35de75433",
           "authorityIds": "col:V994V,gbif:188587586,itis:1280938"
+        },
+        {
+          "id": "SP_RAKTHAMICHTHYS_SP",
+          "name": "Rakthamichthys sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rakthamichthys",
+          "sourceIds": {
+            "checklistbank": "3118644"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -430,7 +445,8 @@
             ],
             "itis": [
               "1280946"
-            ]
+            ],
+            "checklistbank": "2940115"
           },
           "uuid": "0e0c1a3f-0ab1-557-83f-af09cb63aaa425",
           "authorityIds": "gbif:203811800,itis:1280946"
@@ -572,6 +588,18 @@
           "lineage": "Synbranchus",
           "sourceIds": {
             "checklistbank": "ott7649822"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYNBRANCHUS_SP",
+          "name": "Synbranchus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synbranchus",
+          "sourceIds": {
+            "checklistbank": "2812829"
           },
           "children": []
         }
@@ -1034,7 +1062,8 @@
             ],
             "col": [
               "V9998"
-            ]
+            ],
+            "checklistbank": "2793286"
           },
           "uuid": "7527c3a5-fe61-5f1-8e5-ad133d4ba466a7",
           "authorityIds": "col:V9998,gbif:177714645,itis:1280929"
@@ -1216,13 +1245,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "synbranchidae"
+    },
+    {
+      "id": "GENUS_SYNBRANCHIDAE",
+      "name": "Synbranchidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYNBRANCHIDAE_SP",
+          "name": "Synbranchidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synbranchidae",
+          "sourceIds": {
+            "checklistbank": "200934"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "synbranchidae"
     }
   ],
-  "speciesCount": 65,
+  "speciesCount": 68,
   "appSlug": "synbranchidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1230,6 +1280,6 @@
       "orderKey": 889,
       "familyKey": 2223
     },
-    "checklistbank": "ott765110"
+    "checklistbank": "43698"
   }
 }

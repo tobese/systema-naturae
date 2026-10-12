@@ -46,7 +46,8 @@
             ],
             "col": [
               "CCBV6"
-            ]
+            ],
+            "checklistbank": "3129250"
           },
           "authorityIds": "col:CCBV6,mycobank:901727",
           "children": []
@@ -89,7 +90,8 @@
             ],
             "col": [
               "CCBV4"
-            ]
+            ],
+            "checklistbank": "3129249"
           },
           "authorityIds": "col:CCBV4,mycobank:901726",
           "children": []
@@ -252,7 +254,8 @@
             ],
             "col": [
               "9ZGKR"
-            ]
+            ],
+            "checklistbank": "2893551"
           },
           "uuid": "b3eb1d0c-ed0c-5e0-822-ca004b789a94aa",
           "authorityIds": "col:9ZGKR,gbif:11525215,mycobank:841919",
@@ -298,7 +301,8 @@
             ],
             "col": [
               "9ZGKM"
-            ]
+            ],
+            "checklistbank": "1501807"
           },
           "uuid": "3564a876-e211-596-925-430f3bd9933a43",
           "authorityIds": "col:9ZGKM,gbif:11505863,mycobank:841923",
@@ -413,7 +417,8 @@
             ],
             "col": [
               "9ZGKH"
-            ]
+            ],
+            "checklistbank": "1093894"
           },
           "uuid": "11436611-2967-596-91a-da32342e1effe1",
           "authorityIds": "col:9ZGKH,gbif:11772352,mycobank:841920",
@@ -506,7 +511,8 @@
             ],
             "col": [
               "9ZGKK"
-            ]
+            ],
+            "checklistbank": "1836554"
           },
           "uuid": "c5601a50-360b-527-aed-cbc59a2106696a",
           "authorityIds": "col:9ZGKK,gbif:11919119,mycobank:841922",
@@ -645,7 +651,8 @@
             ],
             "col": [
               "9ZGKL"
-            ]
+            ],
+            "checklistbank": "2894070"
           },
           "uuid": "8904f6b6-fc2d-5cb-80c-7401cb8058879c",
           "authorityIds": "col:9ZGKL,gbif:11700070,mycobank:841917",
@@ -739,7 +746,8 @@
             ],
             "col": [
               "9ZGKJ"
-            ]
+            ],
+            "checklistbank": "1093900"
           },
           "uuid": "563f7360-8100-506-b56-a0c277946c6928",
           "authorityIds": "col:9ZGKJ,gbif:11561333,mycobank:841921",
@@ -832,7 +840,8 @@
             ],
             "col": [
               "9ZGKN"
-            ]
+            ],
+            "checklistbank": "2776128"
           },
           "uuid": "e31bc1e5-724b-528-88f-ce965521d948c0",
           "authorityIds": "col:9ZGKN,gbif:11519744,mycobank:841927",
@@ -948,7 +957,8 @@
             ],
             "col": [
               "9ZGKQ"
-            ]
+            ],
+            "checklistbank": "1093896"
           },
           "uuid": "43781df3-c130-54e-842-9974007e21865e",
           "authorityIds": "col:9ZGKQ,gbif:11905340,mycobank:841918",
@@ -992,7 +1002,8 @@
             ],
             "col": [
               "CCK9T"
-            ]
+            ],
+            "checklistbank": "3350651"
           },
           "authorityIds": "col:CCK9T,mycobank:901973",
           "children": []
@@ -1070,6 +1081,45 @@
           "lineage": "Thyridium",
           "sourceIds": {
             "checklistbank": "1593939"
+          },
+          "children": [],
+          "authorship": "Crous & Akulov, 2024"
+        },
+        {
+          "id": "SP_THYRIDIUM_SP",
+          "name": "Thyridium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thyridium",
+          "sourceIds": {
+            "checklistbank": "2006390"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THYRIDIUM_LIVISTONAE_SONG_JING_SENAN_2024",
+          "name": "Thyridium livistonae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thyridium",
+          "authorship": "Song Jing & Senan., 2024",
+          "sourceIds": {
+            "checklistbank": "3161063"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THYRIDIUM_LAURI_VOGLMAYR_D_AIELLO_G_R_LEONARDI_2024",
+          "name": "Thyridium lauri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thyridium",
+          "authorship": "Voglmayr, D. Aiello & G.R. Leonardi, 2024",
+          "sourceIds": {
+            "checklistbank": "3162768"
           },
           "children": []
         }
@@ -1211,7 +1261,8 @@
             ],
             "col": [
               "4XLXG"
-            ]
+            ],
+            "checklistbank": "314041"
           },
           "uuid": "cae7cdd4-395b-506-a8a-e8d339a823ce86",
           "authorityIds": "col:4XLXG,gbif:3290322,mycobank:132788",
@@ -1403,19 +1454,107 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thyridiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_THYRIDIUM",
+          "name": "uncultured Thyridium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1064559"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thyridiaceae"
+    },
+    {
+      "id": "GENUS_PHIALEMONIOPSIS",
+      "name": "[Phialemoniopsis]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHIALEMONIOPSIS_SP",
+          "name": "[Phialemoniopsis] sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Phialemoniopsis]",
+          "sourceIds": {
+            "checklistbank": "2770904"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHIALEMONIOPSIS_HIPPOSIDERICOLA",
+          "name": "[Phialemoniopsis] hipposidericola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Phialemoniopsis]",
+          "sourceIds": {
+            "checklistbank": "3056465"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHIALEMONIOPSIS_XISHUANGBANNAENSIS",
+          "name": "[Phialemoniopsis] xishuangbannaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Phialemoniopsis]",
+          "sourceIds": {
+            "checklistbank": "3056466"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thyridiaceae"
+    },
+    {
+      "id": "GENUS_THYRIDIACEAE",
+      "name": "Thyridiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THYRIDIACEAE_SP",
+          "name": "Thyridiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thyridiaceae",
+          "sourceIds": {
+            "checklistbank": "2950521"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thyridiaceae"
     }
   ],
-  "speciesCount": 64,
+  "speciesCount": 72,
   "appSlug": "thyridiaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Sordariomycetes",
-  "genusCount": 10,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
       "phylumKey": 95,
       "classKey": 320,
       "familyKey": 2457
-    }
+    },
+    "checklistbank": "265081"
   }
 }

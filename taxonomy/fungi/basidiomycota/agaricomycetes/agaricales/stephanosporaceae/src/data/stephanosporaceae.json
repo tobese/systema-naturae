@@ -39,6 +39,18 @@
           "uuid": "a5c3668a-cafd-5bf-b93-f9f16ac1e2c243",
           "authorityIds": "col:458TC,gbif:2523736,mycobank:228640",
           "children": []
+        },
+        {
+          "id": "SP_MYRIOCOCCUM_SP",
+          "name": "Myriococcum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myriococcum",
+          "sourceIds": {
+            "checklistbank": "2012196"
+          },
+          "children": []
         }
       ],
       "authorship": "Fries"
@@ -141,6 +153,18 @@
           },
           "uuid": "b4aeeeef-ac95-5f0-be5-75af302155f49a",
           "authorityIds": "col:3YH69,gbif:2552417,mycobank:510441",
+          "children": []
+        },
+        {
+          "id": "SP_MAYAMONTANA_SP",
+          "name": "Mayamontana sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mayamontana",
+          "sourceIds": {
+            "checklistbank": "2939425"
+          },
           "children": []
         }
       ],
@@ -577,7 +601,8 @@
           "sourceIds": {
             "checklistbank": "1634268"
           },
-          "children": []
+          "children": [],
+          "authorship": "Miller, Bernicchia & Gorjon, 2025"
         },
         {
           "id": "SP_LINDTNERIA_SP",
@@ -947,6 +972,18 @@
           "lineage": "Cristinia",
           "sourceIds": {
             "checklistbank": "1109137"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRISTINIA_SP",
+          "name": "Cristinia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cristinia",
+          "sourceIds": {
+            "checklistbank": "693307"
           },
           "children": []
         }
@@ -1609,7 +1646,8 @@
           "sourceIds": {
             "checklistbank": "ott5683590"
           },
-          "children": []
+          "children": [],
+          "authorship": "T. Lebel & Castellano, 2015"
         }
       ],
       "authorship": "Patouillard"
@@ -2113,11 +2151,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stephanosporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_STEPHANOSPORACEAE",
+          "name": "uncultured Stephanosporaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "685305"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_STEPHANOSPORA",
+          "name": "uncultured Stephanospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "940453"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_LINDTNERIA",
+          "name": "uncultured Lindtneria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980262"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stephanosporaceae"
+    },
+    {
+      "id": "GENUS_STEPHANOSPORACEAE",
+      "name": "Stephanosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STEPHANOSPORACEAE_SP",
+          "name": "Stephanosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanosporaceae",
+          "sourceIds": {
+            "checklistbank": "1389551"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stephanosporaceae"
     }
   ],
   "authorship": "Oberwinkler & E. Horak",
-  "genusCount": 21,
-  "speciesCount": 88,
+  "genusCount": 23,
+  "speciesCount": 95,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2126,6 +2230,6 @@
       "orderKey": 1499,
       "familyKey": 3280
     },
-    "checklistbank": "ott300723"
+    "checklistbank": "178441"
   }
 }

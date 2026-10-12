@@ -76,9 +76,11 @@
             ],
             "col": [
               "RHX3"
-            ]
+            ],
+            "checklistbank": "1699629"
           },
-          "authorityIds": "col:RHX3,wikidata:Q2509675"
+          "authorityIds": "col:RHX3,wikidata:Q2509675",
+          "authorship": "Kishinouye, 1891"
         },
         {
           "id": "CARYBDEA_COLORATA",
@@ -361,7 +363,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Carybdea",
-          "uuid": "dc23821c-9997-5c8-932-a0701a8a97eae5"
+          "uuid": "dc23821c-9997-5c8-932-a0701a8a97eae5",
+          "authorship": "Gershwin & Gibbons, 2009",
+          "sourceIds": {
+            "checklistbank": "685041"
+          }
         },
         {
           "id": "SP_CARYBDEA_MORANDINII",
@@ -406,6 +412,18 @@
             ]
           },
           "authorityIds": "itis:51464"
+        },
+        {
+          "id": "SP_CARYBDEA_SP",
+          "name": "Carybdea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carybdea",
+          "sourceIds": {
+            "checklistbank": "323338"
+          },
+          "children": []
         }
       ]
     },
@@ -475,10 +493,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "carybdeidae"
+    },
+    {
+      "id": "GENUS_DARWIN",
+      "name": "'Darwin",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DARWIN_CARYBDEID",
+          "name": "'Darwin carybdeid'",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "'Darwin",
+          "sourceIds": {
+            "checklistbank": "168735"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "carybdeidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 24,
+  "genusCount": 5,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -487,6 +526,6 @@
       "orderKey": 9288429,
       "familyKey": 8170
     },
-    "checklistbank": "da355c08-d587-44ae-a303-72d636a8759e"
+    "checklistbank": "6139"
   }
 }

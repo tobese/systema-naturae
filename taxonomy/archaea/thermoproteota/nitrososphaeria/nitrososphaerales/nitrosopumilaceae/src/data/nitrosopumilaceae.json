@@ -28,10 +28,12 @@
             ],
             "col": [
               "CRFYB"
-            ]
+            ],
+            "checklistbank": "1580092"
           },
           "uuid": "6260ce2d-eb38-584-a3b-a224fcbfee0827",
-          "authorityIds": "col:CRFYB,gbif:10813463"
+          "authorityIds": "col:CRFYB,gbif:10813463",
+          "authorship": "Bayer et al. 2019"
         },
         {
           "id": "NITROSOPUMILUS_CATALINENSIS",
@@ -62,10 +64,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 11205520
+            "gbif": 11205520,
+            "checklistbank": "1470066"
           },
           "uuid": "c90f26f5-5f68-513-86a-7b682a3f7d841a",
-          "authorityIds": "gbif:11205520"
+          "authorityIds": "gbif:11205520",
+          "authorship": "Qin et al. 2017"
         },
         {
           "id": "NITROSOPUMILUS_KOREENSIS",
@@ -120,10 +124,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 11121245
+            "gbif": 11121245,
+            "checklistbank": "1959104"
           },
           "uuid": "58b7dc02-d092-586-a92-dcbb337a84df54",
-          "authorityIds": "gbif:11121245"
+          "authorityIds": "gbif:11121245",
+          "authorship": "Qin et al. 2017"
         },
         {
           "id": "NITROSOPUMILUS_PIRANENSIS",
@@ -142,10 +148,12 @@
             ],
             "col": [
               "CRFYC"
-            ]
+            ],
+            "checklistbank": "1582439"
           },
           "uuid": "18b5b38f-086e-5c5-870-664ff5ffc187b8",
-          "authorityIds": "col:CRFYC,gbif:10701987"
+          "authorityIds": "col:CRFYC,gbif:10701987",
+          "authorship": "Bayer et al. 2019"
         },
         {
           "id": "NITROSOPUMILUS_SALARIA",
@@ -210,10 +218,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 11173333
+            "gbif": 11173333,
+            "checklistbank": "1470067"
           },
           "uuid": "135ac575-fe59-538-8cb-df20efd44879ee",
-          "authorityIds": "gbif:11173333"
+          "authorityIds": "gbif:11173333",
+          "authorship": "Qin et al. 2017"
         },
         {
           "id": "SP_NITROSOPUMILUS_ZOSTERAE_NAKAGAWA_ET_AL_2021",
@@ -251,6 +261,18 @@
           "lineage": "Nitrosopumilus",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1479043"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NITROSOPUMILUS_SP",
+          "name": "Nitrosopumilus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrosopumilus",
+          "sourceIds": {
+            "checklistbank": "1027373"
           },
           "children": []
         }
@@ -559,10 +581,12 @@
             ],
             "col": [
               "CSLTT"
-            ]
+            ],
+            "checklistbank": "1088740"
           },
           "uuid": "e447e121-d79e-56e-9f6-f125ebe0b40fd0",
-          "authorityIds": "col:CSLTT,gbif:10787966"
+          "authorityIds": "col:CSLTT,gbif:10787966",
+          "authorship": "Jung et al. 2018"
         },
         {
           "id": "NITROSARCHAEUM_LIMNAE",
@@ -597,6 +621,18 @@
           },
           "uuid": "ef545fcf-cf50-561-95f-d5835ccb1765bf",
           "authorityIds": "gbif:12175326"
+        },
+        {
+          "id": "SP_NITROSARCHAEUM_SP",
+          "name": "Nitrosarchaeum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrosarchaeum",
+          "sourceIds": {
+            "checklistbank": "2026886"
+          },
+          "children": []
         }
       ]
     },
@@ -1230,10 +1266,161 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nitrosopumilaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_NITROSARCHAEUM_BLAINEY_ET_AL_2011_JUNG_ET_AL_2018",
+          "name": "Candidatus Nitrosarchaeum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "(Blainey et al. 2011) Jung et al. 2018",
+          "sourceIds": {
+            "checklistbank": "1007084"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOPUMILUS_CORRIG_MOSIER_ET_AL_2012",
+          "name": "Candidatus Nitrosopumilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "corrig. Mosier et al. 2012",
+          "sourceIds": {
+            "checklistbank": "1170320"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOMARINUS_CORRIG_AHLGREN_ET_AL_2017",
+          "name": "Candidatus Nitrosomarinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "corrig. Ahlgren et al. 2017",
+          "sourceIds": {
+            "checklistbank": "1898749"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOABYSSUS_GARRITANO_ET_AL_2024",
+          "name": "Candidatus Nitrosoabyssus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Garritano et al. 2024",
+          "sourceIds": {
+            "checklistbank": "3076529"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOKOINONIA_GLASL_ET_AL_2024",
+          "name": "Candidatus Nitrosokoinonia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Glasl et al. 2024",
+          "sourceIds": {
+            "checklistbank": "3133725"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_NITROSOMARITIMUM_ZHAO_ET_AL_2024",
+          "name": "Candidatus Nitrosomaritimum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Zhao et al. 2024",
+          "sourceIds": {
+            "checklistbank": "3342352"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitrosopumilaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NITROSOPUMILACEAE",
+          "name": "uncultured Nitrosopumilaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1118069"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitrosopumilaceae"
+    },
+    {
+      "id": "GENUS_NITROSOPUMILACEAE",
+      "name": "Nitrosopumilaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NITROSOPUMILACEAE_ARCHAEON",
+          "name": "Nitrosopumilaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrosopumilaceae",
+          "sourceIds": {
+            "checklistbank": "2202732"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitrosopumilaceae"
+    },
+    {
+      "id": "GENUS_NITROSOARCHAEUM",
+      "name": "Nitrosoarchaeum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NITROSOARCHAEUM_HAOHAIENSIS_LI_ET_AL_2025",
+          "name": "Nitrosoarchaeum haohaiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nitrosoarchaeum",
+          "authorship": "Li et al. 2025",
+          "sourceIds": {
+            "checklistbank": "3382224"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nitrosopumilaceae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 62,
+  "genusCount": 27,
+  "speciesCount": 73,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -1241,6 +1428,7 @@
       "classKey": 10707890,
       "orderKey": 10883498,
       "familyKey": 6453386
-    }
+    },
+    "checklistbank": "338190"
   }
 }

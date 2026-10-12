@@ -22,10 +22,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7462809
+            "gbif": 7462809,
+            "checklistbank": "1158071"
           },
           "uuid": "5be8bcc1-e71b-540-955-edaa92a5861c0e",
-          "authorityIds": "gbif:7462809"
+          "authorityIds": "gbif:7462809",
+          "authorship": "Ashworth & Lobban, 2012",
+          "children": []
         },
         {
           "id": "CYCLOPHORA_MINOR",
@@ -38,10 +41,12 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8043260
+            "gbif": 8043260,
+            "checklistbank": "2115810"
           },
           "uuid": "2dac476d-9873-5f1-825-8186f0680b2a28",
-          "authorityIds": "gbif:8043260"
+          "authorityIds": "gbif:8043260",
+          "children": []
         },
         {
           "id": "CYCLOPHORA_SIAMENSIS",
@@ -57,7 +62,8 @@
             "gbif": 9512889
           },
           "uuid": "abf55bc6-f36d-5b6-95b-fabee76cd6c8ad",
-          "authorityIds": "gbif:9512889"
+          "authorityIds": "gbif:9512889",
+          "children": []
         },
         {
           "id": "CYCLOPHORA_TABELLARIFORMIS",
@@ -70,10 +76,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8288331
+            "gbif": 8288331,
+            "checklistbank": "1158072"
           },
           "uuid": "ec5eed4d-0542-5b3-810-d4ef33dc57d46c",
-          "authorityIds": "gbif:8288331"
+          "authorityIds": "gbif:8288331",
+          "authorship": "Ashworth & Lobban, 2012",
+          "children": []
         },
         {
           "id": "CYCLOPHORA_TENUIS",
@@ -86,10 +95,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7727338
+            "gbif": 7727338,
+            "checklistbank": "216820"
           },
           "uuid": "a5bfbf39-30db-5b6-912-feb0c08f930e27",
-          "authorityIds": "gbif:7727338"
+          "authorityIds": "gbif:7727338",
+          "authorship": "Castracane, 1878",
+          "children": []
         }
       ]
     },
@@ -114,7 +126,8 @@
             "gbif": 10732885
           },
           "uuid": "ab469121-c354-5c1-852-70ff073d477221",
-          "authorityIds": "gbif:10732885"
+          "authorityIds": "gbif:10732885",
+          "children": []
         },
         {
           "id": "LUCANICUM_CONCATENATUM",
@@ -127,12 +140,59 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 9994436
+            "gbif": 9994436,
+            "checklistbank": "1543681"
           },
           "uuid": "de3db57b-cfe1-563-bf2-1c4d7fbeb90a04",
-          "authorityIds": "gbif:9994436"
+          "authorityIds": "gbif:9994436",
+          "authorship": "Lobban & Ashworth, 2014",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ASTROSYNE",
+      "name": "Astrosyne",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTROSYNE_RADIATA_ASHWORTH_LOBBAN_2012",
+          "name": "Astrosyne radiata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrosyne",
+          "authorship": "Ashworth & Lobban, 2012",
+          "sourceIds": {
+            "checklistbank": "1158023"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclophoraceae"
+    },
+    {
+      "id": "GENUS_FLORELLOPSIS",
+      "name": "Florellopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FLORELLOPSIS_AYOPEE_ASHWORTH_2024",
+          "name": "Florellopsis ayopee",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Florellopsis",
+          "authorship": "Ashworth, 2024",
+          "sourceIds": {
+            "checklistbank": "3393328"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclophoraceae"
     }
   ],
   "sourceIds": {
@@ -142,6 +202,9 @@
       "classKey": 7947184,
       "orderKey": 7440861,
       "familyKey": 7823856
-    }
-  }
+    },
+    "checklistbank": "216818"
+  },
+  "genusCount": 4,
+  "speciesCount": 9
 }

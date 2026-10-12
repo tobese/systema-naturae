@@ -343,7 +343,8 @@
             ],
             "col": [
               "B39SX"
-            ]
+            ],
+            "checklistbank": "3064270"
           },
           "uuid": "6832e9ad-b702-5d7-a8f-cc44f5f358fc41",
           "authorityIds": "col:B39SX,gbif:12239568,mycobank:840192",
@@ -394,6 +395,44 @@
           "lineage": "Vuilleminia",
           "sourceIds": {
             "checklistbank": "ott5685459"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VUILLEMINIA_SP_COMEDENS",
+          "name": "Vuilleminia sp.'comedens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vuilleminia",
+          "sourceIds": {
+            "checklistbank": "3065475"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VUILLEMINIA_BAMBUSICOLA_L_WANG_C_L_ZHAO_2025",
+          "name": "Vuilleminia bambusicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vuilleminia",
+          "authorship": "L. Wang & C.L. Zhao, 2025",
+          "sourceIds": {
+            "checklistbank": "3415451"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VUILLEMINIA_PUNCTATA_L_WANG_C_L_ZHAO_2025",
+          "name": "Vuilleminia punctata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vuilleminia",
+          "authorship": "L. Wang & C.L. Zhao, 2025",
+          "sourceIds": {
+            "checklistbank": "3415452"
           },
           "children": []
         }
@@ -565,7 +604,8 @@
             ],
             "col": [
               "33RVC"
-            ]
+            ],
+            "checklistbank": "3065446"
           },
           "uuid": "6dafe7e1-c4f2-5aa-bc6-dbdb5a9ef17257",
           "authorityIds": "col:33RVC,gbif:2555858,mycobank:296372",
@@ -662,11 +702,32 @@
         }
       ],
       "authorship": "Ghobad-Nejhad & Hallenberg"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VUILLEMINIA",
+          "name": "uncultured Vuilleminia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1418084"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vuilleminiaceae"
     }
   ],
   "authorship": "Maire",
-  "genusCount": 3,
-  "speciesCount": 26,
+  "genusCount": 4,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -675,6 +736,6 @@
       "orderKey": 1301,
       "familyKey": 3283194
     },
-    "checklistbank": "ott38462"
+    "checklistbank": "908824"
   }
 }

@@ -31,7 +31,8 @@
             ],
             "col": [
               "9ZDQX"
-            ]
+            ],
+            "checklistbank": "2698477"
           },
           "uuid": "b2eee770-5e9c-596-b1d-8a435d0e472e6f",
           "authorityIds": "col:9ZDQX,gbif:11702939,mycobank:557826",
@@ -59,7 +60,8 @@
             ],
             "col": [
               "4KKVH"
-            ]
+            ],
+            "checklistbank": "4754"
           },
           "uuid": "f250a2ef-eb6e-55f-849-0a702cf2699062",
           "authorityIds": "col:4KKVH,gbif:2610979,mycobank:446182",
@@ -139,7 +141,8 @@
             ],
             "col": [
               "4KKVL"
-            ]
+            ],
+            "checklistbank": "42068"
           },
           "uuid": "6cdcb0a5-41d9-558-933-f001449247cd72",
           "authorityIds": "col:4KKVL,gbif:2610978,mycobank:450385",
@@ -165,7 +168,8 @@
             ],
             "col": [
               "4KKVM"
-            ]
+            ],
+            "checklistbank": "263815"
           },
           "uuid": "4ab48900-f285-5b9-9b5-e6d0ef273ab59b",
           "authorityIds": "col:4KKVM,gbif:3475228,mycobank:370828",
@@ -191,7 +195,8 @@
             ],
             "col": [
               "4KKVN"
-            ]
+            ],
+            "checklistbank": "42067"
           },
           "uuid": "3678ed13-bd7d-5d6-a41-2b90d398757291",
           "authorityIds": "col:4KKVN,gbif:3475227,mycobank:500511",
@@ -217,7 +222,8 @@
             ],
             "col": [
               "4KKVP"
-            ]
+            ],
+            "checklistbank": "38082"
           },
           "uuid": "9bf10608-e2d7-5bd-a19-9c51d6d57d06a1",
           "authorityIds": "col:4KKVP,gbif:3475226,mycobank:323298",
@@ -235,13 +241,46 @@
             "checklistbank": "16eb2fbb-de7e-4edf-bc78-1576ffad6ec5"
           },
           "children": []
+        },
+        {
+          "id": "SP_PNEUMOCYSTIS_SP",
+          "name": "Pneumocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pneumocystis",
+          "sourceIds": {
+            "checklistbank": "312037"
+          },
+          "children": []
         }
       ],
       "authorship": "P. Delanoë & Delanoë"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PNEUMOCYSTIS",
+          "name": "uncultured Pneumocystis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1155011"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pneumocystaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 9,
+  "genusCount": 2,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -249,6 +288,7 @@
       "classKey": 9678908,
       "orderKey": 9741797,
       "familyKey": 9761141
-    }
+    },
+    "checklistbank": "44281"
   }
 }

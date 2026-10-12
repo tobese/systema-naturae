@@ -59,7 +59,8 @@
             ],
             "col": [
               "3HY4S"
-            ]
+            ],
+            "checklistbank": "2048659"
           },
           "uuid": "130e1ad6-9a74-5cf-948-e20dcf718f0023",
           "authorityIds": "col:3HY4S,gbif:10897631,mycobank:821857"
@@ -181,6 +182,18 @@
             ]
           },
           "authorityIds": "itis:190265"
+        },
+        {
+          "id": "SP_GYPSOPLACA_SP",
+          "name": "Gypsoplaca sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gypsoplaca",
+          "sourceIds": {
+            "checklistbank": "1650702"
+          },
+          "children": []
         }
       ],
       "authorship": "Timdal"
@@ -219,11 +232,32 @@
         }
       ],
       "authorship": "Stein"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GYPSOPLACA",
+          "name": "uncultured Gypsoplaca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1401429"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gypsoplacaceae"
     }
   ],
   "authorship": "Timdal",
-  "genusCount": 2,
-  "speciesCount": 8,
+  "genusCount": 3,
+  "speciesCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -232,6 +266,6 @@
       "orderKey": 1048,
       "familyKey": 8327
     },
-    "checklistbank": "ott818904"
+    "checklistbank": "388442"
   }
 }

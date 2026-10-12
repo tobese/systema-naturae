@@ -464,7 +464,8 @@
             ],
             "col": [
               "92QW"
-            ]
+            ],
+            "checklistbank": "1484167"
           },
           "uuid": "d7e2e3d2-cfea-51b-b56-048787a79cc6e8",
           "authorityIds": "col:92QW,gbif:177717027,gbif:5209184,itis:623239",
@@ -515,7 +516,8 @@
             ],
             "itis": [
               "172264"
-            ]
+            ],
+            "checklistbank": "1828454"
           },
           "uuid": "ea2c5bea-142b-521-b18-059b7678f098c8",
           "authorityIds": "col:92P4,gbif:177717015,gbif:5209183,itis:172264",
@@ -767,7 +769,8 @@
             ],
             "itis": [
               "172273"
-            ]
+            ],
+            "checklistbank": "1484166"
           },
           "uuid": "befc85a1-4e47-588-aba-8cd751de2b1365",
           "authorityIds": "col:92NB,gbif:177717029,gbif:5209159,itis:172273",
@@ -2071,6 +2074,54 @@
             "checklistbank": "1044123"
           },
           "children": []
+        },
+        {
+          "id": "SP_ACANTHURUS_SP",
+          "name": "Acanthurus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthurus",
+          "sourceIds": {
+            "checklistbank": "94220"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHURUS_NIGRICANS",
+          "name": "Acanthurus ×nigricans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthurus",
+          "sourceIds": {
+            "checklistbank": "881633"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHURUS_LINEATUS",
+          "name": "Acanthurus ×lineatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthurus",
+          "sourceIds": {
+            "checklistbank": "1702346"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACANTHURUS_AFF",
+          "name": "Acanthurus aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthurus",
+          "sourceIds": {
+            "checklistbank": "2687080"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2758,6 +2809,18 @@
             "checklistbank": "680813"
           },
           "children": []
+        },
+        {
+          "id": "SP_NASO_SP",
+          "name": "Naso sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Naso",
+          "sourceIds": {
+            "checklistbank": "238068"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2863,7 +2926,8 @@
             ],
             "col": [
               "7GD2K"
-            ]
+            ],
+            "checklistbank": "753649"
           },
           "uuid": "397a4cbf-68c2-56c-adf-5fe40c691a0bd8",
           "authorityIds": "col:7GD2K,gbif:177716926,gbif:2379872,itis:623254",
@@ -2982,6 +3046,18 @@
           "authorship": "(Bennett, 1836)",
           "sourceIds": {
             "checklistbank": "704481"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZEBRASOMA_SP",
+          "name": "Zebrasoma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zebrasoma",
+          "sourceIds": {
+            "checklistbank": "1519077"
           },
           "children": []
         }
@@ -3456,6 +3532,18 @@
           "authorship": "Fourmanoir, 1966",
           "sourceIds": {
             "checklistbank": "561170"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOCHAETUS_SP",
+          "name": "Ctenochaetus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenochaetus",
+          "sourceIds": {
+            "checklistbank": "546516"
           },
           "children": []
         }
@@ -5102,13 +5190,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acanthuridae"
+    },
+    {
+      "id": "GENUS_ACANTHURIDAE",
+      "name": "Acanthuridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACANTHURIDAE_SP",
+          "name": "Acanthuridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthuridae",
+          "sourceIds": {
+            "checklistbank": "1647118"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acanthuridae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_NASO",
+          "name": "cf. Naso",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "2613815"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acanthuridae"
     }
   ],
-  "speciesCount": 293,
+  "speciesCount": 302,
   "appSlug": "acanthuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 24,
+  "genusCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -5116,6 +5246,6 @@
       "orderKey": 587,
       "familyKey": 4233
     },
-    "checklistbank": "412e2468-dae2-4c90-8416-2736fa3226a6"
+    "checklistbank": "29146"
   }
 }

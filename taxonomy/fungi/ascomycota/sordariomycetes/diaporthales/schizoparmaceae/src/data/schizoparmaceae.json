@@ -615,7 +615,8 @@
             ],
             "col": [
               "XM3W"
-            ]
+            ],
+            "checklistbank": "911141"
           },
           "uuid": "b5a47e52-21e0-5d8-a53-d5af12fad9624b",
           "authorityIds": "col:XM3W,gbif:9769309,mycobank:817812"
@@ -748,7 +749,8 @@
             ],
             "col": [
               "XM44"
-            ]
+            ],
+            "checklistbank": "1904829"
           },
           "uuid": "11caafec-c4ba-5b7-abc-3fea18ff46124e",
           "authorityIds": "col:XM44,gbif:9656467,mycobank:817814"
@@ -882,7 +884,8 @@
             ],
             "col": [
               "XM49"
-            ]
+            ],
+            "checklistbank": "1904831"
           },
           "uuid": "7fdea485-43f4-598-b20-efdef6d7504cc6",
           "authorityIds": "col:XM49,gbif:9714189,mycobank:817817"
@@ -908,7 +911,8 @@
             ],
             "col": [
               "9Z4Q4"
-            ]
+            ],
+            "checklistbank": "2778927"
           },
           "uuid": "340ab123-2030-520-b4a-586a6d34297440",
           "authorityIds": "col:9Z4Q4,gbif:12240930,mycobank:555476"
@@ -1233,7 +1237,8 @@
             ],
             "col": [
               "XM4M"
-            ]
+            ],
+            "checklistbank": "1904825"
           },
           "uuid": "88c6c6bf-6589-5ee-860-74030ae10a845d",
           "authorityIds": "col:XM4M,gbif:5252605,mycobank:107835"
@@ -1394,7 +1399,8 @@
             ],
             "col": [
               "XM4T"
-            ]
+            ],
+            "checklistbank": "1904838"
           },
           "uuid": "83eb0d96-9da8-5b8-951-437a1f5f749bf1",
           "authorityIds": "col:XM4T,gbif:9698756,mycobank:817825"
@@ -1717,7 +1723,8 @@
             ],
             "col": [
               "XM57"
-            ]
+            ],
+            "checklistbank": "1904842"
           },
           "uuid": "b342b8cb-642f-529-ac2-b0363af1ac36ff",
           "authorityIds": "col:XM57,gbif:9741100,mycobank:817831"
@@ -1770,7 +1777,8 @@
             ],
             "col": [
               "5ZTLT"
-            ]
+            ],
+            "checklistbank": "1904844"
           },
           "uuid": "672dba07-44f3-5fd-8c6-8ad6c50c76d710",
           "authorityIds": "col:5ZTLT,gbif:9754278,mycobank:817833"
@@ -1879,7 +1887,8 @@
             ],
             "col": [
               "5ZTM5"
-            ]
+            ],
+            "checklistbank": "1904845"
           },
           "uuid": "ed094a83-651f-512-a58-d18919d672f35b",
           "authorityIds": "col:5ZTM5,gbif:9678621,mycobank:817835"
@@ -1932,7 +1941,8 @@
             ],
             "col": [
               "XM5G"
-            ]
+            ],
+            "checklistbank": "1904846"
           },
           "uuid": "b7181433-ca06-534-b1a-8ae179d0833cbd",
           "authorityIds": "col:XM5G,gbif:9737497,mycobank:817836"
@@ -1963,6 +1973,18 @@
           "lineage": "Coniella",
           "sourceIds": {
             "checklistbank": "ott8006303"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CONIELLA_SP",
+          "name": "Coniella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coniella",
+          "sourceIds": {
+            "checklistbank": "251291"
           },
           "children": []
         }
@@ -2251,11 +2273,98 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "schizoparmaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PILIDIELLA",
+          "name": "uncultured Pilidiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1763397"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CONIELLA",
+          "name": "uncultured Coniella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1898490"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SCHIZOPARMACEAE",
+          "name": "uncultured Schizoparmaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2043416"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizoparmaceae"
+    },
+    {
+      "id": "GENUS_PILIDIELLA",
+      "name": "[Pilidiella]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PILIDIELLA_GUIZHOUENSIS",
+          "name": "[Pilidiella] guizhouensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Pilidiella]",
+          "sourceIds": {
+            "checklistbank": "1775530"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizoparmaceae"
+    },
+    {
+      "id": "GENUS_SCHIZOPARMACEAE",
+      "name": "Schizoparmaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCHIZOPARMACEAE_SP",
+          "name": "Schizoparmaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizoparmaceae",
+          "sourceIds": {
+            "checklistbank": "2011865"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizoparmaceae"
     }
   ],
   "authorship": "Rossman",
-  "genusCount": 7,
-  "speciesCount": 97,
+  "genusCount": 10,
+  "speciesCount": 103,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2264,6 +2373,6 @@
       "orderKey": 1289,
       "familyKey": 8415
     },
-    "checklistbank": "ott4053762"
+    "checklistbank": "1535530"
   }
 }

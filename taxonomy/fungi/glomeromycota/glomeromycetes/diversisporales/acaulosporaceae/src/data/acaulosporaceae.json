@@ -511,7 +511,8 @@
             ],
             "col": [
               "9YMMY"
-            ]
+            ],
+            "checklistbank": "2817583"
           },
           "uuid": "e962e500-137e-52c-870-13f036cb84b9ca",
           "authorityIds": "col:9YMMY,gbif:11376831,mycobank:570847"
@@ -796,7 +797,8 @@
             ],
             "col": [
               "9YMMZ"
-            ]
+            ],
+            "checklistbank": "2682953"
           },
           "uuid": "8c08eab2-e413-559-98f-a7ed1644f39e0f",
           "authorityIds": "col:9YMMZ,gbif:12221478,mycobank:827364"
@@ -973,7 +975,8 @@
             ],
             "col": [
               "B2SHY"
-            ]
+            ],
+            "checklistbank": "2880882"
           },
           "uuid": "51b1763c-d499-5fc-b0f-29f12320084315",
           "authorityIds": "col:B2SHY,gbif:12266794,mycobank:841512"
@@ -1777,7 +1780,8 @@
             ],
             "col": [
               "C8YL7"
-            ]
+            ],
+            "checklistbank": "3071020"
           },
           "authorityIds": "col:C8YL7,mycobank:841896"
         },
@@ -1910,6 +1914,18 @@
           "authorship": "C.G.Wu, T.C.Lin & Su-Chen Lin",
           "sourceIds": {
             "checklistbank": "taicol: 115041"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACAULOSPORA_SP",
+          "name": "Acaulospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acaulospora",
+          "sourceIds": {
+            "checklistbank": "79151"
           },
           "children": []
         }
@@ -2218,11 +2234,65 @@
         }
       ],
       "authorship": "R.N. Ames & R.W. Schneider"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ACAULOSPORA",
+          "name": "uncultured Acaulospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "254030"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ACAULOSPORACEAE",
+          "name": "uncultured Acaulosporaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "467201"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acaulosporaceae"
+    },
+    {
+      "id": "GENUS_ACAULOSPORACEAE",
+      "name": "Acaulosporaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACAULOSPORACEAE_SP",
+          "name": "Acaulosporaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acaulosporaceae",
+          "sourceIds": {
+            "checklistbank": "316288"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acaulosporaceae"
     }
   ],
   "authorship": "J.B. Morton & Benny",
-  "genusCount": 5,
-  "speciesCount": 88,
+  "genusCount": 7,
+  "speciesCount": 92,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2231,6 +2301,6 @@
       "orderKey": 533,
       "familyKey": 3301
     },
-    "checklistbank": "ott157952"
+    "checklistbank": "36752"
   }
 }

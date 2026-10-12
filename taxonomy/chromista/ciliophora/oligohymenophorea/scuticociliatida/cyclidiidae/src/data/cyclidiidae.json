@@ -1644,6 +1644,44 @@
             "checklistbank": "b0cefda8-79c8-4416-8023-c6b1c691aef3"
           },
           "children": []
+        },
+        {
+          "id": "SP_CYCLIDIUM_SP",
+          "name": "Cyclidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclidium",
+          "sourceIds": {
+            "checklistbank": "334585"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLIDIUM_VORAX_PAN_CHEN_LIANG_PAN_2020",
+          "name": "Cyclidium vorax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclidium",
+          "authorship": "Pan, Chen, Liang & Pan, 2020",
+          "sourceIds": {
+            "checklistbank": "2651472"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLIDIUM_PARAVORAX_WANG_ET_AL_2025",
+          "name": "Cyclidium paravorax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclidium",
+          "authorship": "Wang et al., 2025",
+          "sourceIds": {
+            "checklistbank": "3071111"
+          },
+          "children": []
         }
       ]
     },
@@ -1915,10 +1953,12 @@
             ],
             "itis": [
               "203867"
-            ]
+            ],
+            "checklistbank": "1348387"
           },
           "uuid": "88e2bfee-061e-526-8ec-843afa8719098b",
-          "authorityIds": "col:ZJ9V,gbif:8204579,itis:203867"
+          "authorityIds": "col:ZJ9V,gbif:8204579,itis:203867",
+          "authorship": "Roux, 1899"
         },
         {
           "id": "CRISTIGERA_SETOSA",
@@ -1994,6 +2034,18 @@
           "uuid": "1738b361-5fd5-5b0-814-b961826d9420c9",
           "authorityIds": "col:ZJ9Z,gbif:7411581",
           "authorship": "Kahl, 1928"
+        },
+        {
+          "id": "SP_CRISTIGERA_SP",
+          "name": "Cristigera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cristigera",
+          "sourceIds": {
+            "checklistbank": "2650155"
+          },
+          "children": []
         }
       ]
     },
@@ -2054,10 +2106,12 @@
             ],
             "col": [
               "4N522"
-            ]
+            ],
+            "checklistbank": "1348389"
           },
           "uuid": "cfbcac8f-1b60-5b0-b70-72261d14e9524b",
-          "authorityIds": "col:4N522,gbif:7883701"
+          "authorityIds": "col:4N522,gbif:7883701",
+          "authorship": "(Cohn, 1866) Foissner, Agatha & Berger, 2002"
         },
         {
           "id": "PROTOCYCLIDIUM_MUSCICOLA",
@@ -2150,6 +2204,31 @@
           "uuid": "d4a6b824-4a7d-5cb-9e7-bcea905efc20d9",
           "authorityIds": "col:4N526,gbif:7455814",
           "authorship": "Kahl"
+        },
+        {
+          "id": "SP_PROTOCYCLIDIUM_SINICA_VAN_AS_BASSON_VAN_AS_1998",
+          "name": "Protocyclidium sinica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protocyclidium",
+          "authorship": "Van As, Basson & Van As, 1998",
+          "sourceIds": {
+            "checklistbank": "1348390"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOCYCLIDIUM_SP",
+          "name": "Protocyclidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protocyclidium",
+          "sourceIds": {
+            "checklistbank": "3388211"
+          },
+          "children": []
         }
       ]
     },
@@ -2314,10 +2393,112 @@
           "authorship": "Grolière, de Puytorac & Grain, 1980"
         }
       ]
+    },
+    {
+      "id": "GENUS_CYCLIDIIDAE",
+      "name": "Cyclidiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCLIDIIDAE_SP",
+          "name": "Cyclidiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclidiidae",
+          "sourceIds": {
+            "checklistbank": "638328"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclidiidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CYCLIDIUM",
+          "name": "uncultured Cyclidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1275949"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CYCLIDIIDAE",
+          "name": "uncultured Cyclidiidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2587617"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclidiidae"
+    },
+    {
+      "id": "GENUS_FALCICYCLIDIUM",
+      "name": "Falcicyclidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FALCICYCLIDIUM_FANGI_FAN_ET_AL_2011",
+          "name": "Falcicyclidium fangi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falcicyclidium",
+          "authorship": "Fan et al., 2011",
+          "sourceIds": {
+            "checklistbank": "1344037"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FALCICYCLIDIUM_ATRACTODES_FAN_ET_AL_2011",
+          "name": "Falcicyclidium atractodes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falcicyclidium",
+          "authorship": "Fan et al., 2011",
+          "sourceIds": {
+            "checklistbank": "1344038"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FALCICYCLIDIUM_CITRIFORME_FAN_XU_JIANG_AL_RASHEID_WANG_HU_2017",
+          "name": "Falcicyclidium citriforme",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Falcicyclidium",
+          "authorship": "Fan, Xu, Jiang, Al-Rasheid, Wang & Hu, 2017",
+          "sourceIds": {
+            "checklistbank": "2259662"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclidiidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 100,
+  "genusCount": 11,
+  "speciesCount": 112,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2326,6 +2507,6 @@
       "orderKey": 7549732,
       "familyKey": 8202377
     },
-    "checklistbank": "9f620c1d-8059-4372-be7b-14f14bde9cd5"
+    "checklistbank": "35098"
   }
 }

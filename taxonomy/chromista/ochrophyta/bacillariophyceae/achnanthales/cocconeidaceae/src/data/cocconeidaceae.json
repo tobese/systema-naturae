@@ -4709,10 +4709,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7801330
+            "gbif": 7801330,
+            "checklistbank": "941910"
           },
           "uuid": "b7ba25d8-682f-5ba-b55-57f9abbf756896",
-          "authorityIds": "gbif:7801330"
+          "authorityIds": "gbif:7801330",
+          "authorship": "Subrahmanyan, 1946"
         },
         {
           "id": "COCCONEIS_LONGA",
@@ -9749,6 +9751,68 @@
             "checklistbank": "1396828"
           },
           "children": []
+        },
+        {
+          "id": "SP_COCCONEIS_SP",
+          "name": "Cocconeis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeis",
+          "sourceIds": {
+            "checklistbank": "1335107"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCONEIS_STAURONEISFORMIS",
+          "name": "Cocconeis stauroneisformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeis",
+          "sourceIds": {
+            "checklistbank": "1648470"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCONEIS_CUPULIFERA",
+          "name": "Cocconeis cupulifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeis",
+          "sourceIds": {
+            "checklistbank": "1880616"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCONEIS_ECTORII_L_D_MORA_STANCHEVA_R_JAHN_2024",
+          "name": "Cocconeis ectorii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeis",
+          "authorship": "L.D.Mora, Stancheva & R.Jahn, 2024",
+          "sourceIds": {
+            "checklistbank": "3136304"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COCCONEIS_WITKOWSKII_JAHN_MORA_ABARCA_KUSBER_ZIMMERMANN_SKIBBE_2025",
+          "name": "Cocconeis witkowskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeis",
+          "authorship": "Jahn, Mora, Abarca, Kusber, Zimmermann & Skibbe, 2025",
+          "sourceIds": {
+            "checklistbank": "3289882"
+          },
+          "children": []
         }
       ]
     },
@@ -10247,6 +10311,18 @@
             "checklistbank": "653755"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANORTHONEIS_SP",
+          "name": "Anorthoneis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anorthoneis",
+          "sourceIds": {
+            "checklistbank": "3135764"
+          },
+          "children": []
         }
       ]
     },
@@ -10696,6 +10772,18 @@
             "checklistbank": "1269078"
           },
           "children": []
+        },
+        {
+          "id": "SP_COCCONEIOPSIS_KANTSIENSIS",
+          "name": "Cocconeiopsis kantsiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeiopsis",
+          "sourceIds": {
+            "checklistbank": "3082010"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10876,10 +10964,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cocconeidaceae"
+    },
+    {
+      "id": "GENUS_COCCONEIDACEAE",
+      "name": "Cocconeidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COCCONEIDACEAE_SP",
+          "name": "Cocconeidaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cocconeidaceae",
+          "sourceIds": {
+            "checklistbank": "1880632"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cocconeidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_COCCONEIDACEAE",
+          "name": "uncultured Cocconeidaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2547826"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cocconeidaceae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 602,
+  "genusCount": 25,
+  "speciesCount": 611,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -10887,6 +11017,7 @@
       "classKey": 7947184,
       "orderKey": 7993538,
       "familyKey": 8051356
-    }
+    },
+    "checklistbank": "216714"
   }
 }

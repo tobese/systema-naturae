@@ -354,6 +354,18 @@
             "checklistbank": "1604404"
           },
           "children": []
+        },
+        {
+          "id": "SP_MITROCOMELLA_SP",
+          "name": "Mitrocomella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mitrocomella",
+          "sourceIds": {
+            "checklistbank": "3411667"
+          },
+          "children": []
         }
       ]
     },
@@ -799,10 +811,12 @@
             ],
             "col": [
               "38BRB"
-            ]
+            ],
+            "checklistbank": "2751899"
           },
           "uuid": "aabe5813-ab42-5c9-9c0-857c355595c064",
-          "authorityIds": "col:38BRB,gbif:9735672,wikidata:Q61657982"
+          "authorityIds": "col:38BRB,gbif:9735672,wikidata:Q61657982",
+          "authorship": "(Sars, 1874)"
         },
         {
           "id": "SP_EARLERIA_PURPUREA",
@@ -862,6 +876,18 @@
           "lineage": "Earleria",
           "sourceIds": {
             "checklistbank": "ott4712567"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EARLERIA_DENTICULATA",
+          "name": "Earleria denticulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Earleria",
+          "sourceIds": {
+            "checklistbank": "2997249"
           },
           "children": []
         }
@@ -1283,10 +1309,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mitrocomidae"
+    },
+    {
+      "id": "GENUS_MITROCOMIDAE",
+      "name": "Mitrocomidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MITROCOMIDAE_ENVIRONMENTAL",
+          "name": "Mitrocomidae environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mitrocomidae",
+          "sourceIds": {
+            "checklistbank": "2830255"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MITROCOMIDAE_SP",
+          "name": "Mitrocomidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mitrocomidae",
+          "sourceIds": {
+            "checklistbank": "3122105"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mitrocomidae"
     }
   ],
-  "genusCount": 18,
-  "speciesCount": 61,
+  "genusCount": 19,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1295,6 +1354,6 @@
       "orderKey": 712,
       "familyKey": 7001
     },
-    "checklistbank": "ott206551"
+    "checklistbank": "36081"
   }
 }

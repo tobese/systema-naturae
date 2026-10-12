@@ -820,7 +820,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sphacelaria",
           "children": [],
-          "uuid": "96431dcf-2cf6-552-8df-80ee6914f4b1a8"
+          "uuid": "96431dcf-2cf6-552-8df-80ee6914f4b1a8",
+          "authorship": "Kitayama, 1994",
+          "sourceIds": {
+            "checklistbank": "670097"
+          }
         },
         {
           "id": "SP_SPHACELARIA_RECURVA",
@@ -830,7 +834,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sphacelaria",
           "children": [],
-          "uuid": "e60080ad-3783-542-895-0f7fba7a8aaa6b"
+          "uuid": "e60080ad-3783-542-895-0f7fba7a8aaa6b",
+          "authorship": "Y.-S.Keum, J.H.Oak, Prud'homme van Reine & I.K.Lee, 2001",
+          "sourceIds": {
+            "checklistbank": "670096"
+          }
         },
         {
           "id": "SP_SPHACELARIA_SAUVAGEAUI",
@@ -850,7 +858,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Sphacelaria",
           "children": [],
-          "uuid": "5370d542-dd7c-5d3-85e-cfcf09ac5e178b"
+          "uuid": "5370d542-dd7c-5d3-85e-cfcf09ac5e178b",
+          "authorship": "Segawa, 1941",
+          "sourceIds": {
+            "checklistbank": "117518"
+          }
         },
         {
           "id": "SP_SPHACELARIA_RACEMOSA_NULL",
@@ -1313,7 +1325,8 @@
           "sourceIds": {
             "checklistbank": "ott165188"
           },
-          "children": []
+          "children": [],
+          "authorship": "Sauvageau, 1900"
         },
         {
           "id": "SP_SPHACELARIA_PULVINATA",
@@ -1325,7 +1338,8 @@
           "sourceIds": {
             "checklistbank": "ott670966"
           },
-          "children": []
+          "children": [],
+          "authorship": "J.D.Hooker & Harvey, 1855"
         },
         {
           "id": "SP_SPHACELARIA_BORNETII",
@@ -1337,7 +1351,8 @@
           "sourceIds": {
             "checklistbank": "ott839659"
           },
-          "children": []
+          "children": [],
+          "authorship": "Hariot, 1887"
         },
         {
           "id": "SP_SPHACELARIA_LUTEA",
@@ -1458,6 +1473,18 @@
             "checklistbank": "ott8031992"
           },
           "children": []
+        },
+        {
+          "id": "SP_SPHACELARIA_SP",
+          "name": "Sphacelaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphacelaria",
+          "sourceIds": {
+            "checklistbank": "159162"
+          },
+          "children": []
         }
       ]
     },
@@ -1486,7 +1513,8 @@
             "checklistbank": "ott165772"
           },
           "uuid": "a460ebb3-6abf-5a2-85c-79700ccf0b63e8",
-          "authorityIds": "gbif:7770301"
+          "authorityIds": "gbif:7770301",
+          "authorship": "(Harvey) Draisma, Prud'homme & H.Kawai, 2010"
         },
         {
           "id": "BATTERSIA_MIRABILIS",
@@ -1553,7 +1581,8 @@
             "checklistbank": "ott165773"
           },
           "uuid": "96332d9c-cf1b-550-b75-f49864690026f9",
-          "authorityIds": "gbif:7922257"
+          "authorityIds": "gbif:7922257",
+          "authorship": "(Greville) Draisma, Prud'homme & H.Kawai, 2010"
         },
         {
           "id": "SP_BATTERSIA_NORRISII",
@@ -1564,6 +1593,18 @@
           "lineage": "Battersia",
           "children": [],
           "uuid": "4495f6f0-1a88-54a-8fb-1e39efae2ac8e5"
+        },
+        {
+          "id": "SP_BATTERSIA_SP",
+          "name": "Battersia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Battersia",
+          "sourceIds": {
+            "checklistbank": "2606914"
+          },
+          "children": []
         }
       ]
     },
@@ -1890,10 +1931,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphacelariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHAETOPTERIS",
+          "name": "uncultured Chaetopteris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2507665"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphacelariaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 116,
+  "genusCount": 14,
+  "speciesCount": 119,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1902,6 +1964,6 @@
       "orderKey": 592,
       "familyKey": 8647
     },
-    "checklistbank": "ott213049"
+    "checklistbank": "27946"
   }
 }

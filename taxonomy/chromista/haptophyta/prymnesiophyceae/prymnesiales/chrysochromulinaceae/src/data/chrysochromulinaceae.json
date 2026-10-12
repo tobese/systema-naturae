@@ -112,10 +112,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 3202219
+            "gbif": 3202219,
+            "checklistbank": "72547"
           },
           "uuid": "cebccf23-35d4-5dc-80d-6a1e678bc8abab",
-          "authorityIds": "gbif:3202219"
+          "authorityIds": "gbif:3202219",
+          "authorship": "Moestrup & H.A.Thomsen, 1986"
         },
         {
           "id": "CHRYSOCHROMULINA_BERGENENSIS",
@@ -875,6 +877,44 @@
           },
           "children": [],
           "uuid": "34d70675-2ba7-5da-ab8-27f476b28b23d4"
+        },
+        {
+          "id": "SP_CHRYSOCHROMULINA_SP",
+          "name": "Chrysochromulina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysochromulina",
+          "sourceIds": {
+            "checklistbank": "127564"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHRYSOCHROMULINA_TOBINII_CATTOLICO_2019",
+          "name": "Chrysochromulina tobinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysochromulina",
+          "authorship": "Cattolico 2019",
+          "sourceIds": {
+            "checklistbank": "1460289"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHRYSOCHROMULINA_ANDERSONII_YUASA_KAWACHI_HORIGUCHI_TAKAHASHI_2019",
+          "name": "Chrysochromulina andersonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysochromulina",
+          "authorship": "Yuasa, Kawachi, Horiguchi & Takahashi 2019",
+          "sourceIds": {
+            "checklistbank": "2555874"
+          },
+          "children": []
         }
       ]
     },
@@ -899,10 +939,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chrysochromulinaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CHRYSOCHROMULINA",
+          "name": "uncultured Chrysochromulina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "660911"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chrysochromulinaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 44,
+  "genusCount": 3,
+  "speciesCount": 48,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -910,6 +971,7 @@
       "classKey": 258,
       "orderKey": 1086,
       "familyKey": 6789471
-    }
+    },
+    "checklistbank": "1136790"
   }
 }

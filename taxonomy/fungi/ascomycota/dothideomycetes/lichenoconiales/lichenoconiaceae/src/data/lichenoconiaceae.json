@@ -220,7 +220,8 @@
             ],
             "col": [
               "B3BYT"
-            ]
+            ],
+            "checklistbank": "2793308"
           },
           "uuid": "4631d6e8-0b07-5ae-b7c-bcd4888c4f3d05",
           "authorityIds": "col:B3BYT,gbif:12217407,mycobank:838684"
@@ -507,6 +508,18 @@
           "lineage": "Lichenoconium",
           "sourceIds": {
             "checklistbank": "ott3740460"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LICHENOCONIUM_SP",
+          "name": "Lichenoconium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lichenoconium",
+          "sourceIds": {
+            "checklistbank": "2859964"
           },
           "children": []
         }
@@ -1134,11 +1147,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lichenoconiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LICHENOCONIACEAE",
+          "name": "uncultured Lichenoconiaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "3048568"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lichenoconiaceae"
     }
   ],
   "authorship": "Diederich & Lawrey",
-  "genusCount": 2,
-  "speciesCount": 64,
+  "genusCount": 3,
+  "speciesCount": 66,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1147,6 +1181,6 @@
       "orderKey": 8171373,
       "familyKey": 7839992
     },
-    "checklistbank": "ott5345126"
+    "checklistbank": "1446272"
   }
 }

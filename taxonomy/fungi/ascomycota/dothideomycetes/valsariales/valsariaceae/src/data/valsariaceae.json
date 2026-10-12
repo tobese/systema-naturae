@@ -140,7 +140,8 @@
             ],
             "col": [
               "7FCZV"
-            ]
+            ],
+            "checklistbank": "467979"
           },
           "uuid": "0ae25084-2a34-584-a8d-20deb6088d32e0",
           "authorityIds": "col:7FCZV,gbif:3447027,mycobank:504458"
@@ -591,7 +592,8 @@
             ],
             "col": [
               "7FCPN"
-            ]
+            ],
+            "checklistbank": "2486327"
           },
           "uuid": "d9733a2d-c766-5a5-803-3aef88bd3d10ca",
           "authorityIds": "col:7FCPN,gbif:10683942,mycobank:554758"
@@ -904,7 +906,8 @@
             ],
             "col": [
               "CCGC9"
-            ]
+            ],
+            "checklistbank": "3074474"
           },
           "authorityIds": "col:CCGC9,mycobank:901099"
         },
@@ -1102,6 +1105,18 @@
             "checklistbank": "1043222"
           },
           "children": []
+        },
+        {
+          "id": "SP_VALSARIA_SP",
+          "name": "Valsaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Valsaria",
+          "sourceIds": {
+            "checklistbank": "1685406"
+          },
+          "children": []
         }
       ],
       "authorship": "Cesati & De Notaris"
@@ -1294,10 +1309,23 @@
             ],
             "col": [
               "459ZC"
-            ]
+            ],
+            "checklistbank": "1680688"
           },
           "uuid": "b3f6614d-777d-5a9-b0d-ec84d6e548fb79",
           "authorityIds": "col:459ZC,gbif:8283320,mycobank:811905"
+        },
+        {
+          "id": "SP_MYRMAECIUM_SP",
+          "name": "Myrmaecium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myrmaecium",
+          "sourceIds": {
+            "checklistbank": "1849025"
+          },
+          "children": []
         }
       ],
       "authorship": "Saccardo"
@@ -1334,6 +1362,18 @@
           },
           "uuid": "7eb148c8-13fb-570-9f9-aaf1355f97dc30",
           "authorityIds": "col:78HZK,gbif:3565748,mycobank:271716"
+        },
+        {
+          "id": "SP_PSEUDOTHYRIDARIA_SP",
+          "name": "Pseudothyridaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudothyridaria",
+          "sourceIds": {
+            "checklistbank": "3234832"
+          },
+          "children": []
         }
       ],
       "authorship": "Petrak"
@@ -1366,7 +1406,8 @@
             ],
             "col": [
               "KJTB"
-            ]
+            ],
+            "checklistbank": "1680690"
           },
           "uuid": "f76e9b76-767e-515-b7f-6169a0926950e8",
           "authorityIds": "col:KJTB,gbif:7440712,mycobank:811907"
@@ -1749,11 +1790,44 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "valsariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VALSARIA",
+          "name": "uncultured Valsaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1978906"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_BAMBUSARIA",
+          "name": "uncultured Bambusaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980214"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "valsariaceae"
     }
   ],
   "authorship": "Jaklitsch, K.D. Hyde & Voglmayr",
-  "genusCount": 14,
-  "speciesCount": 80,
+  "genusCount": 15,
+  "speciesCount": 85,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1761,6 +1835,7 @@
       "classKey": 183,
       "orderKey": 7676498,
       "familyKey": 8342219
-    }
+    },
+    "checklistbank": "1680669"
   }
 }

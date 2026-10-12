@@ -257,7 +257,8 @@
             ],
             "mycobank": [
               "396114"
-            ]
+            ],
+            "checklistbank": "1891688"
           },
           "uuid": "c54b6f26-0363-5ff-a83-3efb47c0af47ee",
           "authorityIds": "gbif:3412678,mycobank:396114"
@@ -1116,7 +1117,8 @@
             ],
             "col": [
               "48DZ8"
-            ]
+            ],
+            "checklistbank": "3449199"
           },
           "uuid": "3715288f-3a57-595-80a-b65dd23c158535",
           "authorityIds": "col:48DZ8,gbif:10829745,mycobank:815451"
@@ -2492,7 +2494,8 @@
           "sourceIds": {
             "checklistbank": "1430495"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Raasaanen) Raasaanen"
         },
         {
           "id": "SP_OCHROLECHIA_OSORIANA",
@@ -2528,7 +2531,8 @@
           "sourceIds": {
             "checklistbank": "ott965990"
           },
-          "children": []
+          "children": [],
+          "authorship": "Verseghy, 1962"
         },
         {
           "id": "SP_OCHROLECHIA_CHONDRIOCARPA",
@@ -3031,6 +3035,56 @@
           "lineage": "Ochrolechia",
           "sourceIds": {
             "checklistbank": "ott5315727"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OCHROLECHIA_SP",
+          "name": "Ochrolechia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ochrolechia",
+          "sourceIds": {
+            "checklistbank": "312820"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OCHROLECHIA_AFF",
+          "name": "Ochrolechia aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ochrolechia",
+          "sourceIds": {
+            "checklistbank": "2615243"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OCHROLECHIA_KUANKUOSHUIENSIS_ZHENG_MENG_2025",
+          "name": "Ochrolechia kuankuoshuiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ochrolechia",
+          "authorship": "Zheng & Meng, 2025",
+          "sourceIds": {
+            "checklistbank": "3449201"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OCHROLECHIA_LEIGONGSHANENSIS_ZHENG_FU_2025",
+          "name": "Ochrolechia leigongshanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ochrolechia",
+          "authorship": "Zheng & Fu, 2025",
+          "sourceIds": {
+            "checklistbank": "3449202"
           },
           "children": []
         }
@@ -3745,11 +3799,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ochrolechiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_OCHROLECHIA",
+          "name": "uncultured Ochrolechia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2044481"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ochrolechiaceae"
     }
   ],
   "authorship": "R.C. Harris ex Lumbsch & I. Schmitt",
-  "genusCount": 10,
-  "speciesCount": 195,
+  "genusCount": 11,
+  "speciesCount": 200,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3758,6 +3833,6 @@
       "orderKey": 1051,
       "familyKey": 4114
     },
-    "checklistbank": "ott966001"
+    "checklistbank": "394531"
   }
 }

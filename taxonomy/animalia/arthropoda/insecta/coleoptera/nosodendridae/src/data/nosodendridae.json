@@ -185,10 +185,12 @@
           ],
           "children": [],
           "sourceIds": {
-            "gbif": 1096069
+            "gbif": 1096069,
+            "checklistbank": "1605522"
           },
           "uuid": "4a2bb71a-24b4-588-b71-41979bc988e972",
-          "authorityIds": "gbif:1096069"
+          "authorityIds": "gbif:1096069",
+          "authorship": "Horn, 1874"
         },
         {
           "id": "SP_NOSODENDRON_CALVUM",
@@ -644,10 +646,12 @@
           "description": "",
           "children": [],
           "sourceIds": {
-            "gbif": 1096058
+            "gbif": 1096058,
+            "checklistbank": "460611"
           },
           "uuid": "3fd3e7b2-2ea1-549-ab6-a9d16fe9888ed7",
-          "authorityIds": "gbif:1096058"
+          "authorityIds": "gbif:1096058",
+          "authorship": "(Reitter, 1886)"
         },
         {
           "id": "SP_NOSODENDRON_MEDIOBASALE",
@@ -1253,6 +1257,18 @@
             "checklistbank": "1654449"
           },
           "children": []
+        },
+        {
+          "id": "SP_NOSODENDRON_SP",
+          "name": "Nosodendron sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nosodendron",
+          "sourceIds": {
+            "checklistbank": "904170"
+          },
+          "children": []
         }
       ]
     },
@@ -1399,10 +1415,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nosodendridae"
+    },
+    {
+      "id": "GENUS_NOSODENDRIDAE",
+      "name": "Nosodendridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NOSODENDRIDAE_SP",
+          "name": "Nosodendridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nosodendridae",
+          "sourceIds": {
+            "checklistbank": "3474100"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nosodendridae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 91,
+  "genusCount": 5,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1411,6 +1448,6 @@
       "orderKey": 1470,
       "familyKey": 7841
     },
-    "checklistbank": "9952aa45-61e8-44bf-9b8d-67e209f4178d"
+    "checklistbank": "186078"
   }
 }

@@ -25,7 +25,8 @@
             "gbif": 9144352
           },
           "uuid": "9c49dbfd-38b7-5d3-900-426a1ed2646529",
-          "authorityIds": "gbif:9144352"
+          "authorityIds": "gbif:9144352",
+          "children": []
         },
         {
           "id": "FLAMELLA_BALNEARIA",
@@ -41,7 +42,8 @@
             "gbif": 8898560
           },
           "uuid": "0600db1d-9e70-5f7-ab0-9a0c9e90fa5960",
-          "authorityIds": "gbif:8898560"
+          "authorityIds": "gbif:8898560",
+          "children": []
         },
         {
           "id": "FLAMELLA_FLUVIATILIS",
@@ -57,7 +59,8 @@
             "gbif": 8906856
           },
           "uuid": "6f4a27d1-e083-559-819-d33f87f9ade0db",
-          "authorityIds": "gbif:8906856"
+          "authorityIds": "gbif:8906856",
+          "children": []
         }
       ]
     },
@@ -82,9 +85,31 @@
             "gbif": 9243442
           },
           "uuid": "e02178a4-bfd7-551-88b-3ac0f314eadc76",
-          "authorityIds": "gbif:9243442"
+          "authorityIds": "gbif:9243442",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_HYALODISCIDAE",
+      "name": "Hyalodiscidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYALODISCIDAE_SP",
+          "name": "Hyalodiscidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyalodiscidae",
+          "sourceIds": {
+            "checklistbank": "3061833"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hyalodiscidae"
     }
   ],
   "sourceIds": {
@@ -94,6 +119,9 @@
       "classKey": 116,
       "orderKey": 761,
       "familyKey": 3235553
-    }
-  }
+    },
+    "checklistbank": "1920163"
+  },
+  "genusCount": 3,
+  "speciesCount": 5
 }

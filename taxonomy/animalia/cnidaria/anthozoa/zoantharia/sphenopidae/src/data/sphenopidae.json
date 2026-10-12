@@ -1191,9 +1191,11 @@
             ],
             "col": [
               "4C877"
-            ]
+            ],
+            "checklistbank": "1206978"
           },
-          "authorityIds": "col:4C877,wikidata:Q13993061"
+          "authorityIds": "col:4C877,wikidata:Q13993061",
+          "authorship": "(Verrill, 1900)"
         },
         {
           "id": "SP_PALYTHOA_GRANDIS",
@@ -2507,9 +2509,11 @@
             ],
             "col": [
               "4C88R"
-            ]
+            ],
+            "checklistbank": "334440"
           },
-          "authorityIds": "col:4C88R,wikidata:Q13993182"
+          "authorityIds": "col:4C88R,wikidata:Q13993182",
+          "authorship": "(Esper, 1805)"
         },
         {
           "id": "SP_PALYTHOA_TUBULIFERA_CARLGREN",
@@ -2593,9 +2597,11 @@
             ],
             "col": [
               "4C88T"
-            ]
+            ],
+            "checklistbank": "86597"
           },
-          "authorityIds": "col:4C88T,wikidata:Q3945063"
+          "authorityIds": "col:4C88T,wikidata:Q3945063",
+          "authorship": "(Duerden, 1898)"
         },
         {
           "id": "SP_PALYTHOA_VESTITUS",
@@ -4023,6 +4029,18 @@
             "checklistbank": "ott7994852"
           },
           "children": []
+        },
+        {
+          "id": "SP_PALYTHOA_SP",
+          "name": "Palythoa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palythoa",
+          "sourceIds": {
+            "checklistbank": "167841"
+          },
+          "children": []
         }
       ]
     },
@@ -4607,10 +4625,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphenopidae"
+    },
+    {
+      "id": "GENUS_SPHENOPIDAE",
+      "name": "Sphenopidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHENOPIDAE_GEN",
+          "name": "Sphenopidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenopidae",
+          "sourceIds": {
+            "checklistbank": "3115838"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphenopidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 301,
+  "genusCount": 7,
+  "speciesCount": 303,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4619,6 +4658,6 @@
       "orderKey": 1433,
       "familyKey": 3365
     },
-    "checklistbank": "ott563208"
+    "checklistbank": "167839"
   }
 }

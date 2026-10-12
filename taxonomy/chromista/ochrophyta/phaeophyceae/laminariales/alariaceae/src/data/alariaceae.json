@@ -32,7 +32,8 @@
             "checklistbank": "464963"
           },
           "uuid": "49f04aac-b7c1-54f-8cc-4a2feef56845a1",
-          "authorityIds": "gbif:3195815,itis:11270"
+          "authorityIds": "gbif:3195815,itis:11270",
+          "authorship": "(Farlow & Setchell ex Tilden) Reinke, 1903"
         }
       ]
     },
@@ -64,7 +65,8 @@
             "checklistbank": "429872"
           },
           "uuid": "5ff817fd-fe49-5d6-a94-53b977e7ae59ff",
-          "authorityIds": "gbif:3196028,itis:11261"
+          "authorityIds": "gbif:3196028,itis:11261",
+          "authorship": "Setchell & Saunders ex Tilden, 1900"
         }
       ]
     },
@@ -140,7 +142,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Undaria",
           "children": [],
-          "uuid": "58511b68-38a0-5f5-942-178634a910faec"
+          "uuid": "58511b68-38a0-5f5-942-178634a910faec",
+          "authorship": "Lee & Yoon, 1998",
+          "sourceIds": {
+            "checklistbank": "2862339"
+          }
         },
         {
           "id": "SP_UNDARIA_PETERSENIANA",
@@ -191,6 +197,18 @@
           "lineage": "Undaria",
           "sourceIds": {
             "checklistbank": "ott8031921"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNDARIA_SP",
+          "name": "Undaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Undaria",
+          "sourceIds": {
+            "checklistbank": "3388255"
           },
           "children": []
         }
@@ -623,7 +641,8 @@
           "sourceIds": {
             "checklistbank": "ott72521"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kjellman, 1885"
         },
         {
           "id": "SP_ALARIA_SP",
@@ -695,7 +714,8 @@
           "sourceIds": {
             "checklistbank": "ott4922036"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Miyabe & Nagai) Widdowson, 1972"
         },
         {
           "id": "SP_ALARIA_LONGIPES",
@@ -845,7 +865,11 @@
           "lineage": "Eualaria",
           "children": [],
           "uuid": "df6e0938-4d2b-5ff-9f3-f73e9a0887e22a",
-          "commonName": "Dragon Kelp"
+          "commonName": "Dragon Kelp",
+          "authorship": "(Postels & Ruprecht) Wynne, 2009",
+          "sourceIds": {
+            "checklistbank": "2691979"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1258,10 +1282,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "alariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ALARIA",
+          "name": "uncultured Alaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2507660"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alariaceae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 72,
+  "genusCount": 21,
+  "speciesCount": 74,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1270,6 +1315,6 @@
       "orderKey": 560,
       "familyKey": 7734
     },
-    "checklistbank": "ott878348"
+    "checklistbank": "2887"
   }
 }

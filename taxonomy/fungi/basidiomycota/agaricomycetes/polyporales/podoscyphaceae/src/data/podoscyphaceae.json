@@ -225,6 +225,18 @@
           },
           "uuid": "5f793336-54f9-50d-ab5-e83f6bd2003d90",
           "authorityIds": "col:63ZRW,gbif:2543758,mycobank:467812"
+        },
+        {
+          "id": "SP_ABORTIPORUS_SP",
+          "name": "Abortiporus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abortiporus",
+          "sourceIds": {
+            "checklistbank": "1429105"
+          },
+          "children": []
         }
       ],
       "authorship": "Murrill"
@@ -541,7 +553,8 @@
             ],
             "col": [
               "4KR8S"
-            ]
+            ],
+            "checklistbank": "759399"
           },
           "uuid": "6d3cd573-7a5c-56b-baf-1de99acb2adffe",
           "authorityIds": "col:4KR8S,gbif:3361611,mycobank:488215"
@@ -626,7 +639,8 @@
             ],
             "col": [
               "4KR8W"
-            ]
+            ],
+            "checklistbank": "759401"
           },
           "uuid": "344952f7-ea65-52e-a33-fe7929c0d2d84e",
           "authorityIds": "col:4KR8W,gbif:2544854,mycobank:320789"
@@ -768,7 +782,8 @@
             ],
             "col": [
               "4KR99"
-            ]
+            ],
+            "checklistbank": "759404"
           },
           "uuid": "e8a04312-0538-513-ba4-511db857ce7580",
           "authorityIds": "col:4KR99,gbif:2544884,mycobank:337363"
@@ -1179,10 +1194,12 @@
             ],
             "col": [
               "9ZDRL"
-            ]
+            ],
+            "checklistbank": "759407"
           },
           "uuid": "ef04af08-bc40-53b-85d-9d86fb65a6f2c0",
-          "authorityIds": "col:9ZDRL,gbif:12174150"
+          "authorityIds": "col:9ZDRL,gbif:12174150",
+          "authorship": "(D.A. Reid) Sheng H. Wu"
         },
         {
           "id": "PODOSCYPHA_THOZETII",
@@ -1237,7 +1254,8 @@
             ],
             "col": [
               "77QZM"
-            ]
+            ],
+            "checklistbank": "1290974"
           },
           "uuid": "8d6a8ec4-663c-56c-a46-52ea197260f1da",
           "authorityIds": "col:77QZM,gbif:2544863,mycobank:337371"
@@ -1611,6 +1629,32 @@
           "lineage": "Podoscypha",
           "sourceIds": {
             "checklistbank": "1685537"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODOSCYPHA_SUBINVOLUTA_JING_SI_HAI_J_LI_2023",
+          "name": "Podoscypha subinvoluta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podoscypha",
+          "authorship": "Jing Si & Hai J. Li, 2023",
+          "sourceIds": {
+            "checklistbank": "3081746"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODOSCYPHA_TROPICA_JING_SI_HAI_J_LI_2023",
+          "name": "Podoscypha tropica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podoscypha",
+          "authorship": "Jing Si & Hai J. Li, 2023",
+          "sourceIds": {
+            "checklistbank": "3081747"
           },
           "children": []
         }
@@ -3041,11 +3085,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "podoscyphaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CYPHELLOSTEREUM",
+          "name": "uncultured Cyphellostereum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "667060"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ABORTIPORUS",
+          "name": "uncultured Abortiporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1763357"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PODOSCYPHA",
+          "name": "uncultured Podoscypha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1822482"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "podoscyphaceae"
+    },
+    {
+      "id": "GENUS_PODOSCYPHACEAE",
+      "name": "Podoscyphaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PODOSCYPHACEAE_SP",
+          "name": "Podoscyphaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podoscyphaceae",
+          "sourceIds": {
+            "checklistbank": "2011783"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "podoscyphaceae"
     }
   ],
   "authorship": "D.A. Reid",
-  "genusCount": 26,
-  "speciesCount": 154,
+  "genusCount": 28,
+  "speciesCount": 161,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3053,6 +3163,7 @@
       "classKey": 186,
       "orderKey": 1145,
       "familyKey": 3310736
-    }
+    },
+    "checklistbank": "103388"
   }
 }

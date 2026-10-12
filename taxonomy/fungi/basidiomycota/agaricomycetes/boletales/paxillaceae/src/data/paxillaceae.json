@@ -685,6 +685,31 @@
           "uuid": "1f28eb8e-1579-56a-9ac-ca9e94863f8def",
           "authorityIds": "col:6QXP9,gbif:7757228,mycobank:584709",
           "children": []
+        },
+        {
+          "id": "SP_MEIORGANUM_MACROSPORUM_G_WU_ZHU_L_YANG_2025",
+          "name": "Meiorganum macrosporum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meiorganum",
+          "authorship": "G. Wu & Zhu L. Yang, 2025",
+          "sourceIds": {
+            "checklistbank": "3393774"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEIORGANUM_SP",
+          "name": "Meiorganum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meiorganum",
+          "sourceIds": {
+            "checklistbank": "3401837"
+          },
+          "children": []
         }
       ],
       "authorship": "R. Heim"
@@ -1783,7 +1808,8 @@
             ],
             "col": [
               "6TW2Y"
-            ]
+            ],
+            "checklistbank": "217301"
           },
           "uuid": "2df16536-030f-5f4-9a2-eecdfa97d27155",
           "authorityIds": "col:6TW2Y,gbif:5460707,mycobank:415134",
@@ -2644,6 +2670,18 @@
           "lineage": "Paxillus",
           "sourceIds": {
             "checklistbank": "1694646"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PAXILLUS_AFF",
+          "name": "Paxillus aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paxillus",
+          "sourceIds": {
+            "checklistbank": "1134718"
           },
           "children": []
         }
@@ -3586,7 +3624,8 @@
             ],
             "col": [
               "9ZC6L"
-            ]
+            ],
+            "checklistbank": "2655015"
           },
           "uuid": "0abe8850-0d97-51d-b62-3720594f743c13",
           "authorityIds": "col:9ZC6L,gbif:11618195,mycobank:833075",
@@ -3612,7 +3651,8 @@
             ],
             "col": [
               "9ZC6M"
-            ]
+            ],
+            "checklistbank": "2793118"
           },
           "uuid": "3edb78f6-ca73-598-917-4752244f6a7586",
           "authorityIds": "col:9ZC6M,gbif:11465248,mycobank:835123",
@@ -3645,6 +3685,18 @@
           },
           "uuid": "7186a0c3-cc4d-5c0-9fa-ddbf0d83f05e48",
           "authorityIds": "col:7479Q,gbif:8097111,mycobank:550503",
+          "children": []
+        },
+        {
+          "id": "SP_NEOALPOVA_SP",
+          "name": "Neoalpova sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoalpova",
+          "sourceIds": {
+            "checklistbank": "3473687"
+          },
           "children": []
         }
       ],
@@ -3686,6 +3738,18 @@
           "uuid": "2d1412ab-d6da-5a3-9bc-3e9b8d70525cd4",
           "authorityIds": "col:9XWPR,gbif:9074097,mycobank:474900",
           "children": []
+        },
+        {
+          "id": "SP_HYDNOMERULIUS_SP",
+          "name": "Hydnomerulius sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydnomerulius",
+          "sourceIds": {
+            "checklistbank": "3136499"
+          },
+          "children": []
         }
       ],
       "authorship": "Jarosch & Besl"
@@ -3717,7 +3781,8 @@
             ],
             "col": [
               "9ZCYF"
-            ]
+            ],
+            "checklistbank": "2655016"
           },
           "uuid": "6aba035b-b8e7-5f3-9e0-55bcf16eae8746",
           "authorityIds": "col:9ZCYF,gbif:11507449,mycobank:833077",
@@ -4079,11 +4144,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paxillaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PAXILLACEAE",
+          "name": "uncultured Paxillaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "318437"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PAXILLUS",
+          "name": "uncultured Paxillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "320641"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HYDNOMERULIUS",
+          "name": "uncultured Hydnomerulius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1395601"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paxillaceae"
     }
   ],
   "authorship": "Lotsy",
-  "genusCount": 25,
-  "speciesCount": 173,
+  "genusCount": 26,
+  "speciesCount": 181,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -4091,6 +4201,7 @@
       "classKey": 186,
       "orderKey": 1063,
       "familyKey": 4195
-    }
+    },
+    "checklistbank": "5394"
   }
 }

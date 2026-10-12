@@ -17,7 +17,8 @@
           "lineage": "dermanyssus",
           "authorship": "Krantz, 1959",
           "sourceIds": {
-            "gbif": 6885169
+            "gbif": 6885169,
+            "checklistbank": "2486390"
           },
           "uuid": "c6ec4e95-0548-5f6-8f6-71ffcd268a7191",
           "authorityIds": "gbif:6885169",
@@ -497,6 +498,18 @@
           "lineage": "Dermanyssus",
           "sourceIds": {
             "checklistbank": "ott7681926"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DERMANYSSUS_SP",
+          "name": "Dermanyssus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermanyssus",
+          "sourceIds": {
+            "checklistbank": "480680"
           },
           "children": []
         }
@@ -1136,13 +1149,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dermanyssidae"
+    },
+    {
+      "id": "GENUS_DERMANYSSIDAE",
+      "name": "Dermanyssidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DERMANYSSIDAE_SP",
+          "name": "Dermanyssidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermanyssidae",
+          "sourceIds": {
+            "checklistbank": "3041294"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dermanyssidae"
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 70,
   "appSlug": "dermanyssidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1151,6 +1185,6 @@
       "orderKey": 1109,
       "familyKey": 6088
     },
-    "checklistbank": "ott543047"
+    "checklistbank": "34639"
   }
 }

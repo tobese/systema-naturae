@@ -169,7 +169,8 @@
             "checklistbank": "1360661"
           },
           "uuid": "9158b50f-b8d8-574-ab6-b79ef3aef6d526",
-          "authorityIds": "col:3W9JJ,gbif:8380866"
+          "authorityIds": "col:3W9JJ,gbif:8380866",
+          "authorship": "Dragesco & Njine 1971"
         },
         {
           "id": "LOXODES_MAGNUM",
@@ -331,7 +332,8 @@
             "checklistbank": "1613552"
           },
           "uuid": "510bb2ba-5fe0-505-813-881ca001c88b30",
-          "authorityIds": "col:3W9JT,gbif:7685283"
+          "authorityIds": "col:3W9JT,gbif:7685283",
+          "authorship": "Dragesco, 1970"
         },
         {
           "id": "LOXODES_ROSTRUM",
@@ -396,10 +398,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12173677
+            "gbif": 12173677,
+            "checklistbank": "2879199"
           },
           "uuid": "fcf6d318-cfd3-503-9d6-4a19081434e1eb",
-          "authorityIds": "gbif:12173677"
+          "authorityIds": "gbif:12173677",
+          "authorship": "Mendez-Sanchez, Mayen-Estrada & Ramirez-Corona, 2022"
         },
         {
           "id": "LOXODES_VIRIDIS",
@@ -448,7 +452,8 @@
             "checklistbank": "1394689"
           },
           "uuid": "8c35da89-52d9-5ed-b3d-3336e08ee836da",
-          "authorityIds": "col:3W9K2,gbif:7360799,itis:46330"
+          "authorityIds": "col:3W9K2,gbif:7360799,itis:46330",
+          "authorship": "Stokes, 1885"
         },
         {
           "id": "SP_LOXODES_MAGNUS_STOKES_1887",
@@ -488,6 +493,18 @@
             "checklistbank": "ott8010930"
           },
           "authorityIds": "col:6QNWC"
+        },
+        {
+          "id": "SP_LOXODES_SP",
+          "name": "Loxodes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loxodes",
+          "sourceIds": {
+            "checklistbank": "696128"
+          },
+          "children": []
         }
       ]
     },
@@ -946,7 +963,8 @@
           "sourceIds": {
             "checklistbank": "1428357"
           },
-          "children": []
+          "children": [],
+          "authorship": "Xu et al., 2012"
         },
         {
           "id": "SP_REMANELLA_SP",
@@ -994,13 +1012,74 @@
           "sourceIds": {
             "checklistbank": "ott4923294"
           },
+          "children": [],
+          "authorship": "Xu et al., 2013"
+        },
+        {
+          "id": "SP_REMANELLA_MACROSTOMA_XU_GAO_HU_AL_RASHEID_SONG_2013",
+          "name": "Remanella macrostoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Remanella",
+          "authorship": "Xu, Gao, Hu, Al-Rasheid & Song, 2013",
+          "sourceIds": {
+            "checklistbank": "2755083"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_REMANELLA_APOSINICA_MA_ET_AL_2022",
+          "name": "Remanella aposinica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Remanella",
+          "authorship": "Ma et al., 2022",
+          "sourceIds": {
+            "checklistbank": "2907348"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_REMANELLA_ELONGATA_MA_ET_AL_2022",
+          "name": "Remanella elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Remanella",
+          "authorship": "Ma et al., 2022",
+          "sourceIds": {
+            "checklistbank": "2907349"
+          },
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LOXODIDAE",
+          "name": "uncultured Loxodidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "282469"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "loxodidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 46,
+  "genusCount": 3,
+  "speciesCount": 51,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1009,6 +1088,6 @@
       "orderKey": 8026886,
       "familyKey": 7841649
     },
-    "checklistbank": "ott287579"
+    "checklistbank": "409610"
   }
 }

@@ -444,7 +444,8 @@
             ],
             "col": [
               "6JSGX"
-            ]
+            ],
+            "checklistbank": "2054043"
           },
           "uuid": "d7312e80-98f1-5f4-ac0-0db2df0c4e2cb7",
           "authorityIds": "col:6JSGX,gbif:2600736,mycobank:480412"
@@ -801,7 +802,8 @@
             ],
             "col": [
               "6JSH2"
-            ]
+            ],
+            "checklistbank": "2528736"
           },
           "uuid": "17df3414-edd3-56d-b14-42423d5a6ef26c",
           "authorityIds": "col:6JSH2,gbif:10757719,mycobank:830057"
@@ -1531,6 +1533,18 @@
             "checklistbank": "586081"
           },
           "children": []
+        },
+        {
+          "id": "SP_FUSCIDEA_SP",
+          "name": "Fuscidea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fuscidea",
+          "sourceIds": {
+            "checklistbank": "452211"
+          },
+          "children": []
         }
       ],
       "authorship": "V. Wirth & Vězda"
@@ -1563,7 +1577,8 @@
             ],
             "col": [
               "3MSQT"
-            ]
+            ],
+            "checklistbank": "3240706"
           },
           "uuid": "bc7ef75c-5954-57a-840-09d03f7e310ca7",
           "authorityIds": "col:3MSQT,gbif:2600769,mycobank:481110"
@@ -1578,6 +1593,18 @@
           "authorship": "Ertz & Søchting, 2024",
           "sourceIds": {
             "checklistbank": "1056874"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HUEIDEA_SP",
+          "name": "Hueidea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hueidea",
+          "sourceIds": {
+            "checklistbank": "3240708"
           },
           "children": []
         }
@@ -1867,9 +1894,11 @@
           "sourceIds": {
             "mycobank": [
               "411164"
-            ]
+            ],
+            "checklistbank": "286416"
           },
-          "authorityIds": "mycobank:411164"
+          "authorityIds": "mycobank:411164",
+          "authorship": "B. de Lesd., 1934"
         },
         {
           "id": "SP_MARONEA_COLBINDENSIS",
@@ -2978,11 +3007,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "fuscideaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FUSCIDEA",
+          "name": "uncultured Fuscidea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2722957"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fuscideaceae"
     }
   ],
   "authorship": "Hafellner",
-  "genusCount": 21,
-  "speciesCount": 145,
+  "genusCount": 22,
+  "speciesCount": 148,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2990,6 +3040,7 @@
       "classKey": 180,
       "orderKey": 1275,
       "familyKey": 8367
-    }
+    },
+    "checklistbank": "200971"
   }
 }

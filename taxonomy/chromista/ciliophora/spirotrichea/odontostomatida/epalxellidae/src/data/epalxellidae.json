@@ -363,7 +363,8 @@
             "checklistbank": "ott2823826"
           },
           "uuid": "fffbb10b-a188-57f-a1e-ff1ca4ad5d17f2",
-          "authorityIds": "col:6XKQ2,gbif:8073865"
+          "authorityIds": "col:6XKQ2,gbif:8073865",
+          "authorship": "(Lauterborn, 1901) Lauterborn, 1908"
         },
         {
           "id": "SAPRODINIUM_HALOPHILUM",
@@ -432,7 +433,8 @@
             "checklistbank": "ott2823825"
           },
           "uuid": "cb3d2ed9-1dee-586-b96-3ef50addc16efd",
-          "authorityIds": "col:79L22,gbif:8133457"
+          "authorityIds": "col:79L22,gbif:8133457",
+          "authorship": "Kahl, 1932"
         },
         {
           "id": "SAPRODINIUM_PUTRINIUM",
@@ -525,6 +527,18 @@
           },
           "uuid": "e7d78540-2051-5db-8f2-42fb5704962d3e",
           "authorityIds": "col:79KQ3,gbif:8152634"
+        },
+        {
+          "id": "SP_SAPRODINIUM_SP",
+          "name": "Saprodinium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saprodinium",
+          "sourceIds": {
+            "checklistbank": "3138889"
+          },
+          "children": []
         }
       ]
     },
@@ -648,7 +662,8 @@
             "checklistbank": "ott2823805"
           },
           "uuid": "866dcbea-842e-568-ba3-33dd184ac6627b",
-          "authorityIds": "col:6FMQH,gbif:7493753"
+          "authorityIds": "col:6FMQH,gbif:7493753",
+          "authorship": "Penard, 1922"
         },
         {
           "id": "EPALXELLA_FLAGELLATA",
@@ -883,7 +898,8 @@
             "checklistbank": "ott2823792"
           },
           "uuid": "3ee48968-7b03-5c0-8d2-3166743b277446",
-          "authorityIds": "col:6FMPT,gbif:7889437"
+          "authorityIds": "col:6FMPT,gbif:7889437",
+          "authorship": "Kahl, 1932"
         },
         {
           "id": "EPALXELLA_UNCINATA",
@@ -907,6 +923,18 @@
           },
           "uuid": "875eba30-9bb2-5ed-b14-d1fed1103c4348",
           "authorityIds": "col:6FMQ5,gbif:8120821"
+        },
+        {
+          "id": "SP_EPALXELLA_SP",
+          "name": "Epalxella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epalxella",
+          "sourceIds": {
+            "checklistbank": "3388118"
+          },
+          "children": []
         }
       ]
     },
@@ -988,10 +1016,31 @@
           "authorityIds": "col:76CTB,gbif:7998309"
         }
       ]
+    },
+    {
+      "id": "GENUS_EPALXELLIDAE",
+      "name": "Epalxellidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EPALXELLIDAE_SP",
+          "name": "Epalxellidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epalxellidae",
+          "sourceIds": {
+            "checklistbank": "3384518"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epalxellidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 42,
+  "genusCount": 5,
+  "speciesCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1000,6 +1049,6 @@
       "orderKey": 7934197,
       "familyKey": 7466296
     },
-    "checklistbank": "ott1046642"
+    "checklistbank": "408073"
   }
 }

@@ -100,7 +100,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3710a08f-ff28-5f8-adb-46e79fecff1101"
+          "uuid": "3710a08f-ff28-5f8-adb-46e79fecff1101",
+          "authorship": "Tupa",
+          "sourceIds": {
+            "checklistbank": "764105"
+          }
         },
         {
           "id": "SP_APHANOCHAETE_MAGNA",
@@ -158,9 +162,11 @@
           "sourceIds": {
             "itis": [
               "6704"
-            ]
+            ],
+            "checklistbank": "2805053"
           },
-          "authorityIds": "itis:6704"
+          "authorityIds": "itis:6704",
+          "authorship": "(Hansgirg) F.E.Fritsch, 1902"
         },
         {
           "id": "SP_APHANOCHAETE_REPENS",
@@ -227,7 +233,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Aphanochaete",
           "children": [],
-          "uuid": "abf21434-cd4e-520-8b6-0825fcfac85a9e"
+          "uuid": "abf21434-cd4e-520-8b6-0825fcfac85a9e",
+          "authorship": "M.B.Godward, 1934",
+          "sourceIds": {
+            "checklistbank": "104531"
+          }
         },
         {
           "id": "SP_APHANOCHAETE_PILOSISSIMUM",
@@ -273,6 +283,31 @@
           "lineage": "Aphanochaete",
           "sourceIds": {
             "checklistbank": "ott5417012"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_APHANOCHAETE_SP",
+          "name": "Aphanochaete sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphanochaete",
+          "sourceIds": {
+            "checklistbank": "764107"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_APHANOCHAETE_XIANTAOENSIS_B_LIU_J_GE_Y_CHEN_Q_YAN_H_ZHU_G_LIU_2023",
+          "name": "Aphanochaete xiantaoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphanochaete",
+          "authorship": "B.Liu, J.Ge, Y.Chen, Q.Yan, H.Zhu, & G.Liu, 2023",
+          "sourceIds": {
+            "checklistbank": "2805052"
           },
           "children": []
         }
@@ -398,10 +433,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aphanochaetaceae"
+    },
+    {
+      "id": "GENUS_CAESPITELLA",
+      "name": "Caespitella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAESPITELLA_PASCHERI_VISCHER_1933",
+          "name": "Caespitella pascheri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caespitella",
+          "authorship": "Vischer, 1933",
+          "sourceIds": {
+            "checklistbank": "764110"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CAESPITELLA_SP",
+          "name": "Caespitella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caespitella",
+          "sourceIds": {
+            "checklistbank": "1683227"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aphanochaetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_APHANOCHAETE",
+          "name": "uncultured Aphanochaete",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108038"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aphanochaetaceae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 24,
+  "genusCount": 8,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -410,6 +500,6 @@
       "orderKey": 1347,
       "familyKey": 4908877
     },
-    "checklistbank": "ott1018092"
+    "checklistbank": "35458"
   }
 }

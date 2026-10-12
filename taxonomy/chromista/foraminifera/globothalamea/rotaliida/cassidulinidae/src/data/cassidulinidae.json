@@ -122,7 +122,8 @@
             "checklistbank": "ott178032"
           },
           "uuid": "e77ba02c-5fdb-50e-8ee-d83649b9453b08",
-          "authorityIds": "col:6KJBT,gbif:7750975"
+          "authorityIds": "col:6KJBT,gbif:7750975",
+          "authorship": "Voloshinova, 1960"
         },
         {
           "id": "GLOBOCASSIDULINA_BISECTA",
@@ -1232,10 +1233,12 @@
             ],
             "col": [
               "8758W"
-            ]
+            ],
+            "checklistbank": "2099581"
           },
           "uuid": "9590ce28-67c1-5ee-978-ca50ff8c565523",
-          "authorityIds": "col:8758W,gbif:11208662"
+          "authorityIds": "col:8758W,gbif:11208662",
+          "authorship": "Kennett, 1967"
         },
         {
           "id": "GLOBOCASSIDULINA_RUGOSA",
@@ -1657,6 +1660,18 @@
           "lineage": "Globocassidulina",
           "sourceIds": {
             "checklistbank": "ott8017868"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOBOCASSIDULINA_SP",
+          "name": "Globocassidulina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Globocassidulina",
+          "sourceIds": {
+            "checklistbank": "203412"
           },
           "children": []
         }
@@ -3213,7 +3228,8 @@
             "checklistbank": "ott4007421"
           },
           "uuid": "7e1790c2-551e-525-acd-008cf650e25bc8",
-          "authorityIds": "col:RMWD,gbif:7794437,itis:45948"
+          "authorityIds": "col:RMWD,gbif:7794437,itis:45948",
+          "authorship": "Cushman & Hughes, 1925"
         },
         {
           "id": "CASSIDULINA_LINEOCORRUGATA",
@@ -5293,6 +5309,18 @@
             "checklistbank": "ott8017846"
           },
           "children": []
+        },
+        {
+          "id": "SP_CASSIDULINA_SP",
+          "name": "Cassidulina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassidulina",
+          "sourceIds": {
+            "checklistbank": "2231201"
+          },
+          "children": []
         }
       ]
     },
@@ -5441,7 +5469,8 @@
             "checklistbank": "ott4007441"
           },
           "uuid": "85546377-c99b-5e0-a3f-b6142c4160fcab",
-          "authorityIds": "col:3DHXF,gbif:8342701"
+          "authorityIds": "col:3DHXF,gbif:8342701",
+          "authorship": "(Cushman, 1922)"
         },
         {
           "id": "EVOLVOCASSIDULINA_TENUIS",
@@ -6256,6 +6285,31 @@
           "lineage": "Cassidulinoides",
           "sourceIds": {
             "checklistbank": "ott1002491"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CASSIDULINOIDES_SP",
+          "name": "Cassidulinoides sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassidulinoides",
+          "sourceIds": {
+            "checklistbank": "2846896"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CASSIDULINOIDES_PARVUS_EARLAND_1934",
+          "name": "Cassidulinoides parvus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassidulinoides",
+          "authorship": "(Earland, 1934)",
+          "sourceIds": {
+            "checklistbank": "2846900"
           },
           "children": []
         }
@@ -10116,10 +10170,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cassidulinidae"
+    },
+    {
+      "id": "GENUS_CASSIDULINIDAE",
+      "name": "Cassidulinidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CASSIDULINIDAE_SP",
+          "name": "Cassidulinidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassidulinidae",
+          "sourceIds": {
+            "checklistbank": "2822285"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cassidulinidae"
     }
   ],
-  "genusCount": 35,
-  "speciesCount": 448,
+  "genusCount": 36,
+  "speciesCount": 453,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -10128,6 +10203,6 @@
       "orderKey": 7692889,
       "familyKey": 7753765
     },
-    "checklistbank": "ott111458"
+    "checklistbank": "203408"
   }
 }

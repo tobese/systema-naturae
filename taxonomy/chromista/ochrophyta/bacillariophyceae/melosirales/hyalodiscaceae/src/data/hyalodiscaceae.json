@@ -1172,6 +1172,18 @@
             "checklistbank": "1020462"
           },
           "children": []
+        },
+        {
+          "id": "SP_HYALODISCUS_SP",
+          "name": "Hyalodiscus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hyalodiscus",
+          "sourceIds": {
+            "checklistbank": "265599"
+          },
+          "children": []
         }
       ]
     },
@@ -2363,7 +2375,8 @@
           "sourceIds": {
             "checklistbank": "1465267"
           },
-          "children": []
+          "children": [],
+          "authorship": "Grunow, 1888"
         }
       ]
     },
@@ -2541,10 +2554,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hyalodiscaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HYALODISCUS",
+          "name": "uncultured Hyalodiscus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1035518"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hyalodiscaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 145,
+  "genusCount": 8,
+  "speciesCount": 147,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2552,6 +2586,7 @@
       "classKey": 7947184,
       "orderKey": 8080352,
       "familyKey": 2931
-    }
+    },
+    "checklistbank": "265573"
   }
 }

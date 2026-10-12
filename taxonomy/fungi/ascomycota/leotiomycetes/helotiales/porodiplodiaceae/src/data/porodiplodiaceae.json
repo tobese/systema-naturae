@@ -55,6 +55,18 @@
           "uuid": "b6bc8109-cda4-5d3-b15-c30a318a4cf47c",
           "authorityIds": "col:7889X,gbif:10853039,mycobank:829349",
           "children": []
+        },
+        {
+          "id": "SP_PORODIPLODIA_SP",
+          "name": "Porodiplodia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porodiplodia",
+          "sourceIds": {
+            "checklistbank": "2755134"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -82,7 +94,8 @@
             ],
             "col": [
               "B2WHX"
-            ]
+            ],
+            "checklistbank": "2972918"
           },
           "uuid": "7db20e4e-ff1e-534-a58-c7a745c1d61712",
           "authorityIds": "col:B2WHX,gbif:12219417,mycobank:843306",
@@ -112,13 +125,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "porodiplodiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PORODIPLODIA",
+          "name": "uncultured Porodiplodia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2794711"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "porodiplodiaceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 6,
   "appSlug": "porodiplodiaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Leotiomycetes",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -127,6 +161,6 @@
       "orderKey": 1052,
       "familyKey": 11716170
     },
-    "checklistbank": "ott7517000"
+    "checklistbank": "2506531"
   }
 }

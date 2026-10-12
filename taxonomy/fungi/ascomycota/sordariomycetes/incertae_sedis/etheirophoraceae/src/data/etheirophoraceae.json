@@ -25,7 +25,8 @@
             ],
             "col": [
               "3BKX5"
-            ]
+            ],
+            "checklistbank": "419779"
           },
           "uuid": "e0836151-2bf2-549-b5c-c3cb12717b4a04",
           "authorityIds": "col:3BKX5,gbif:3456483,mycobank:135938",
@@ -103,19 +104,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "etheirophoraceae"
+    },
+    {
+      "id": "GENUS_SWAMPOMYCES",
+      "name": "Swampomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SWAMPOMYCES_TRISEPTATUS_K_D_HYDE_NAKAGIRI_1992",
+          "name": "Swampomyces triseptatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Swampomyces",
+          "authorship": "K.D. Hyde & Nakagiri, 1992",
+          "sourceIds": {
+            "checklistbank": "311116"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SWAMPOMYCES_ARMENIACUS_KOHLMEYER_VOLKMANN_KOHLMEYER_1987",
+          "name": "Swampomyces armeniacus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Swampomyces",
+          "authorship": "Kohlmeyer & Volkmann-Kohlmeyer, 1987",
+          "sourceIds": {
+            "checklistbank": "311118"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "etheirophoraceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 6,
   "appSlug": "etheirophoraceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Sordariomycetes",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
       "phylumKey": 95,
       "classKey": 320,
       "familyKey": 7555850
-    }
+    },
+    "checklistbank": "1535433"
   }
 }

@@ -831,6 +831,18 @@
             "checklistbank": "1679886"
           },
           "children": []
+        },
+        {
+          "id": "SP_FLAMMULASTER_AFF",
+          "name": "Flammulaster aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Flammulaster",
+          "sourceIds": {
+            "checklistbank": "2964272"
+          },
+          "children": []
         }
       ],
       "authorship": "Earle"
@@ -2269,6 +2281,31 @@
             "checklistbank": "1680193"
           },
           "children": []
+        },
+        {
+          "id": "SP_PHAEOMARASMIUS_CURCUMA_BERK_M_A_CURTIS_SINGER_1951",
+          "name": "Phaeomarasmius curcuma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeomarasmius",
+          "authorship": "(Berk. & M.A. Curtis) Singer, 1951",
+          "sourceIds": {
+            "checklistbank": "165596"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHAEOMARASMIUS_AFF",
+          "name": "Phaeomarasmius aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeomarasmius",
+          "sourceIds": {
+            "checklistbank": "2494141"
+          },
+          "children": []
         }
       ],
       "authorship": "Scherffel"
@@ -2421,6 +2458,18 @@
           "lineage": "Pachylepyrium",
           "sourceIds": {
             "checklistbank": "1535879"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PACHYLEPYRIUM_SP",
+          "name": "Pachylepyrium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pachylepyrium",
+          "sourceIds": {
+            "checklistbank": "1051803"
           },
           "children": []
         }
@@ -5025,7 +5074,8 @@
           "sourceIds": {
             "checklistbank": "1521494"
           },
-          "children": []
+          "children": [],
+          "authorship": "Musumeci, 2023"
         },
         {
           "id": "SP_TUBARIA_SP",
@@ -5194,6 +5244,30 @@
             "checklistbank": "ott8008786"
           },
           "children": []
+        },
+        {
+          "id": "SP_TUBARIA_AFF",
+          "name": "Tubaria aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubaria",
+          "sourceIds": {
+            "checklistbank": "2909127"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TUBARIA_SQUAMATA",
+          "name": "Tubaria squamata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubaria",
+          "sourceIds": {
+            "checklistbank": "3681598"
+          },
+          "children": []
         }
       ],
       "authorship": "(W.G. Smith) Gillet"
@@ -5226,7 +5300,8 @@
             ],
             "col": [
               "6BS5V"
-            ]
+            ],
+            "checklistbank": "1973307"
           },
           "uuid": "854043e8-93c8-5d5-981-46f2d13a19f7e5",
           "authorityIds": "col:6BS5V,gbif:7941167,mycobank:550610"
@@ -5365,7 +5440,8 @@
             ],
             "col": [
               "6BRTW"
-            ]
+            ],
+            "checklistbank": "2107607"
           },
           "uuid": "2d493240-c189-520-b5f-75704534d111b4",
           "authorityIds": "col:6BRTW,gbif:8115315,mycobank:550604"
@@ -5473,6 +5549,18 @@
             "checklistbank": "1678012"
           },
           "children": []
+        },
+        {
+          "id": "SP_CYCLOCYBE_AFF",
+          "name": "Cyclocybe aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyclocybe",
+          "sourceIds": {
+            "checklistbank": "2914794"
+          },
+          "children": []
         }
       ],
       "authorship": "Velenovský"
@@ -5510,6 +5598,18 @@
           },
           "uuid": "aed90099-b6fa-5e3-9ed-2f0e4f32179708",
           "authorityIds": "col:4KBTK,gbif:10857102,mycobank:824586"
+        },
+        {
+          "id": "SP_PLEUROMYCES_SP",
+          "name": "Pleuromyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleuromyces",
+          "sourceIds": {
+            "checklistbank": "3053920"
+          },
+          "children": []
         }
       ],
       "authorship": "Dima, P.-A. Moreau & V. Papp"
@@ -7046,11 +7146,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tubariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CYCLOCYBE",
+          "name": "uncultured Cyclocybe",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2979480"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tubariaceae"
+    },
+    {
+      "id": "GENUS_TUBARIACEAE",
+      "name": "Tubariaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TUBARIACEAE_SP",
+          "name": "Tubariaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubariaceae",
+          "sourceIds": {
+            "checklistbank": "2982156"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tubariaceae"
     }
   ],
   "authorship": "Vizzini",
-  "genusCount": 29,
-  "speciesCount": 339,
+  "genusCount": 31,
+  "speciesCount": 349,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -7059,6 +7201,6 @@
       "orderKey": 1499,
       "familyKey": 7821354
     },
-    "checklistbank": "ott5344589"
+    "checklistbank": "2614740"
   }
 }

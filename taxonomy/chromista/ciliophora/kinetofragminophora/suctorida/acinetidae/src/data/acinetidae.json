@@ -393,6 +393,31 @@
           },
           "uuid": "0a8a48cc-95e9-5bf-b11-559397ede5ff6d",
           "authorityIds": "gbif:11599887"
+        },
+        {
+          "id": "SP_PARACINETA_SP",
+          "name": "Paracineta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracineta",
+          "sourceIds": {
+            "checklistbank": "2909458"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARACINETA_GAETANI_SEWELL_1951",
+          "name": "Paracineta gaetani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracineta",
+          "authorship": "Sewell, 1951",
+          "sourceIds": {
+            "checklistbank": "3114895"
+          },
+          "children": []
         }
       ]
     },
@@ -1375,10 +1400,12 @@
             ],
             "col": [
               "9B2K"
-            ]
+            ],
+            "checklistbank": "1003325"
           },
           "uuid": "0daebce2-ae8e-517-81d-8ae0d899d0b0b3",
-          "authorityIds": "col:9B2K,gbif:7350821"
+          "authorityIds": "col:9B2K,gbif:7350821",
+          "authorship": "Kellicott 1885"
         },
         {
           "id": "ACINETA_FLOS",
@@ -2956,6 +2983,18 @@
             "checklistbank": "aa0de55e-7c85-43f0-86a3-97c9e02d5842"
           },
           "children": []
+        },
+        {
+          "id": "SP_ACINETA_SP",
+          "name": "Acineta sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acineta",
+          "sourceIds": {
+            "checklistbank": "239361"
+          },
+          "children": []
         }
       ]
     },
@@ -3810,10 +3849,80 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acinetidae"
+    },
+    {
+      "id": "GENUS_METACINETA",
+      "name": "Metacineta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METACINETA_MACROCAULIS_STOKES_1887",
+          "name": "Metacineta macrocaulis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metacineta",
+          "authorship": "Stokes 1887",
+          "sourceIds": {
+            "checklistbank": "2585969"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METACINETA_MYSTACINA_EHRENBERG_1831_BUTSCHLI_1889",
+          "name": "Metacineta mystacina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metacineta",
+          "authorship": "(Ehrenberg, 1831) Butschli, 1889",
+          "sourceIds": {
+            "checklistbank": "3375752"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METACINETA_ALATA_STOKES_1885",
+          "name": "Metacineta alata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metacineta",
+          "authorship": "(Stokes, 1885)",
+          "sourceIds": {
+            "checklistbank": "3375758"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acinetidae"
+    },
+    {
+      "id": "GENUS_LUXOPHRYA",
+      "name": "Luxophrya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LUXOPHRYA_LIMBATA_MAUPAS_JANKOWSKI_1978",
+          "name": "Luxophrya limbata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Luxophrya",
+          "authorship": "(Maupas) Jankowski, 1978",
+          "sourceIds": {
+            "checklistbank": "3095674"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acinetidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 174,
+  "genusCount": 16,
+  "speciesCount": 181,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -3822,6 +3931,6 @@
       "orderKey": 7592404,
       "familyKey": 8115349
     },
-    "checklistbank": "eefebcfd-5045-463d-a8dd-f484ba03fdc7"
+    "checklistbank": "239359"
   }
 }

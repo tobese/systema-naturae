@@ -425,7 +425,8 @@
           "sourceIds": {
             "checklistbank": "392207"
           },
-          "children": []
+          "children": [],
+          "authorship": "Verrill, 1881"
         },
         {
           "id": "SP_MASTIGOTEUTHIS_DENTATA",
@@ -472,6 +473,18 @@
           "lineage": "Mastigoteuthis",
           "sourceIds": {
             "checklistbank": "752811"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MASTIGOTEUTHIS_SP",
+          "name": "Mastigoteuthis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mastigoteuthis",
+          "sourceIds": {
+            "checklistbank": "493913"
           },
           "children": []
         }
@@ -612,6 +625,18 @@
             ]
           },
           "authorityIds": "itis:556700"
+        },
+        {
+          "id": "SP_IDIOTEUTHIS_SP",
+          "name": "Idioteuthis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Idioteuthis",
+          "sourceIds": {
+            "checklistbank": "1346174"
+          },
+          "children": []
         }
       ]
     },
@@ -636,9 +661,11 @@
           "sourceIds": {
             "col": [
               "38LBT"
-            ]
+            ],
+            "checklistbank": "2053951"
           },
-          "authorityIds": "col:38LBT"
+          "authorityIds": "col:38LBT",
+          "authorship": "(Joubin, 1933)"
         },
         {
           "id": "SP_ECHINOTEUTHIS_DANAE_JOUBIN_1933",
@@ -737,9 +764,11 @@
           "sourceIds": {
             "col": [
               "3XHMP"
-            ]
+            ],
+            "checklistbank": "1977385"
           },
-          "authorityIds": "col:3XHMP"
+          "authorityIds": "col:3XHMP",
+          "authorship": "(Young, Lindgren & Vecchione, 2008)"
         },
         {
           "id": "SP_MAGNOTEUTHIS_OSHEAI_BRAID_BOLSTAD_2015",
@@ -794,9 +823,11 @@
           "sourceIds": {
             "col": [
               "3YD75"
-            ]
+            ],
+            "checklistbank": "1977384"
           },
-          "authorityIds": "col:3YD75"
+          "authorityIds": "col:3YD75",
+          "authorship": "(Young, 1972)"
         }
       ]
     },
@@ -821,15 +852,38 @@
           "sourceIds": {
             "col": [
               "3YD4Q"
-            ]
+            ],
+            "checklistbank": "2060711"
           },
-          "authorityIds": "col:3YD4Q"
+          "authorityIds": "col:3YD4Q",
+          "authorship": "(Chun, 1913)"
         }
       ]
+    },
+    {
+      "id": "GENUS_MASTIGOTEUTHIDAE",
+      "name": "Mastigoteuthidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MASTIGOTEUTHIDAE_ENVIRONMENTAL",
+          "name": "Mastigoteuthidae environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mastigoteuthidae",
+          "sourceIds": {
+            "checklistbank": "1986384"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mastigoteuthidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 45,
+  "genusCount": 7,
+  "speciesCount": 48,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -838,6 +892,6 @@
       "orderKey": 8403901,
       "familyKey": 2872
     },
-    "checklistbank": "ebcc21a9-b494-4d3e-87b4-4e7252992ac8"
+    "checklistbank": "61729"
   }
 }

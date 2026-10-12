@@ -2633,7 +2633,8 @@
             "checklistbank": "622578"
           },
           "uuid": "fbbd17c7-6b93-516-b73-c3342ca92d5dc9",
-          "authorityIds": "gbif:7584130"
+          "authorityIds": "gbif:7584130",
+          "authorship": "(Meave, Okolodkov & M.E.Zamudio) F.Gomez, 2013"
         },
         {
           "id": "TRIPOS_BELONE",
@@ -2777,7 +2778,8 @@
             "checklistbank": "ott2830079"
           },
           "uuid": "a1662a36-29da-563-b2d-af41849e19301f",
-          "authorityIds": "gbif:8288171"
+          "authorityIds": "gbif:8288171",
+          "authorship": "(Lemmermann) Gomez, 2013"
         },
         {
           "id": "TRIPOS_CONCILIANS",
@@ -2881,7 +2883,8 @@
             "checklistbank": "860532"
           },
           "uuid": "2e4936af-fe8e-53f-9e5-de63bf345a2919",
-          "authorityIds": "gbif:8208503"
+          "authorityIds": "gbif:8208503",
+          "authorship": "(Ostenfeld & Johannes Schmidt) F.Gomez 2013"
         },
         {
           "id": "TRIPOS_DIGITATUS",
@@ -3172,7 +3175,8 @@
             "checklistbank": "ott2830085"
           },
           "uuid": "016fb00d-e53f-527-9b3-91afa34b416109",
-          "authorityIds": "gbif:7423264"
+          "authorityIds": "gbif:7423264",
+          "authorship": "(Kofoid) F.Gomez, 2013"
         },
         {
           "id": "TRIPOS_LIMULUS",
@@ -4180,7 +4184,8 @@
           "sourceIds": {
             "checklistbank": "1123581"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Steemann Nielsen) F.Gomez, 2013"
         },
         {
           "id": "SP_TRIPOS_DIVARICATUS",
@@ -4216,7 +4221,8 @@
           "sourceIds": {
             "checklistbank": "ott2830078"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Lemmermann) F.Gomez, 2021"
         },
         {
           "id": "SP_TRIPOS_RECURVATUS",
@@ -4348,7 +4354,8 @@
           "sourceIds": {
             "checklistbank": "ott2830121"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Claparede & Lachmann) F.Gomez, 2013"
         },
         {
           "id": "SP_TRIPOS_STRICTUS",
@@ -4444,7 +4451,8 @@
           "sourceIds": {
             "checklistbank": "ott2830185"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Pavillard) F.Gomez, 2013"
         },
         {
           "id": "SP_TRIPOS_DEPRESSUS",
@@ -4984,7 +4992,8 @@
           "sourceIds": {
             "checklistbank": "ott5663527"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Kofoid) Gomez, 2013"
         },
         {
           "id": "SP_TRIPOS_DALMATICUS",
@@ -5079,6 +5088,43 @@
           "lineage": "Tripos",
           "sourceIds": {
             "checklistbank": "ott7529281"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRIPOS_SP",
+          "name": "Tripos sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tripos",
+          "sourceIds": {
+            "checklistbank": "2795494"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRIPOS_LONGIROSTRUS_INFLATUS",
+          "name": "Tripos longirostrus-inflatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tripos",
+          "sourceIds": {
+            "checklistbank": "2929151"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRIPOS_LONGIROSTRUM_GOURRET_HALLEGRAEFF_HUISMAN_2020",
+          "name": "Tripos longirostrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tripos",
+          "authorship": "(Gourret) Hallegraeff & Huisman, 2020",
+          "sourceIds": {
+            "checklistbank": "3681918"
           },
           "children": []
         }
@@ -6505,6 +6551,18 @@
             "checklistbank": "ott2830077"
           },
           "children": []
+        },
+        {
+          "id": "SP_NEOCERATIUM_SP",
+          "name": "Neoceratium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoceratium",
+          "sourceIds": {
+            "checklistbank": "2316509"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7081,10 +7139,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ceratiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_NEOCERATIUM",
+          "name": "uncultured Neoceratium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1305751"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CERATIUM",
+          "name": "uncultured Ceratium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1799766"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ceratiaceae"
     }
   ],
-  "genusCount": 25,
-  "speciesCount": 431,
+  "genusCount": 26,
+  "speciesCount": 437,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -7093,6 +7184,6 @@
       "orderKey": 8775728,
       "familyKey": 7479242
     },
-    "checklistbank": "ott476867"
+    "checklistbank": "39451"
   }
 }

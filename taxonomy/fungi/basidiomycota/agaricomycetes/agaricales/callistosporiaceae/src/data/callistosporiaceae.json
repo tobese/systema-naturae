@@ -231,6 +231,18 @@
           "uuid": "0f5154d0-db52-5c1-b9f-20160d10048add",
           "authorityIds": "col:3X4GN,gbif:2531665,mycobank:443595",
           "children": []
+        },
+        {
+          "id": "SP_MACROCYBE_SP",
+          "name": "Macrocybe sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrocybe",
+          "sourceIds": {
+            "checklistbank": "1618206"
+          },
+          "children": []
         }
       ],
       "authorship": "Pegler & Lodge"
@@ -425,6 +437,31 @@
           },
           "uuid": "00e62297-1abd-58e-a92-48d1ddc00d9e68",
           "authorityIds": "col:6VRRZ,gbif:2531965,mycobank:320689",
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCOLLYBIA_SP",
+          "name": "Pleurocollybia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurocollybia",
+          "sourceIds": {
+            "checklistbank": "1590332"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCOLLYBIA_CIBARIA_SINGER_1963",
+          "name": "Pleurocollybia cibaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurocollybia",
+          "authorship": "Singer, 1963",
+          "sourceIds": {
+            "checklistbank": "1920527"
+          },
           "children": []
         }
       ],
@@ -1027,7 +1064,8 @@
           "sourceIds": {
             "checklistbank": "824760"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Malencon & Bertault) Bon, 1976"
         },
         {
           "id": "SP_CALLISTOSPORIUM_GRAMINICOLOR",
@@ -1039,7 +1077,8 @@
           "sourceIds": {
             "checklistbank": "1348802"
           },
-          "children": []
+          "children": [],
+          "authorship": "Lennox, 1979"
         },
         {
           "id": "SP_CALLISTOSPORIUM_KHALIDII",
@@ -1074,6 +1113,44 @@
           "lineage": "Callistosporium",
           "sourceIds": {
             "checklistbank": "1681892"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLISTOSPORIUM_ELAEODES_BON_1976",
+          "name": "Callistosporium elaeodes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callistosporium",
+          "authorship": "Bon, 1976",
+          "sourceIds": {
+            "checklistbank": "2585268"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLISTOSPORIUM_BRUNNESCENS_EARLE_VIZZINI_CONSIGLIO_M_MARCHETTI_2020",
+          "name": "Callistosporium brunnescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callistosporium",
+          "authorship": "(Earle) Vizzini, Consiglio & M. Marchetti, 2020",
+          "sourceIds": {
+            "checklistbank": "2726193"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLISTOSPORIUM_AFF",
+          "name": "Callistosporium aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callistosporium",
+          "sourceIds": {
+            "checklistbank": "3698078"
           },
           "children": []
         }
@@ -1152,6 +1229,18 @@
           "lineage": "Pseudolaccaria",
           "sourceIds": {
             "checklistbank": "1685566"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOLACCARIA_AFF",
+          "name": "Pseudolaccaria aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudolaccaria",
+          "sourceIds": {
+            "checklistbank": "426776"
           },
           "children": []
         }
@@ -1276,7 +1365,8 @@
             ],
             "col": [
               "F4XF"
-            ]
+            ],
+            "checklistbank": "2382322"
           },
           "uuid": "af28e55a-590b-570-bb2-3f40e87dab4513",
           "authorityIds": "col:F4XF,gbif:10680455,mycobank:828253",
@@ -1383,7 +1473,8 @@
           "sourceIds": {
             "checklistbank": "1520877"
           },
-          "children": []
+          "children": [],
+          "authorship": "M. Asif, Saba & M. Raza, 2023"
         },
         {
           "id": "SP_XEROPHORUS_SP",
@@ -1486,11 +1577,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "callistosporiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PSEUDOLACCARIA",
+          "name": "uncultured Pseudolaccaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1982663"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "callistosporiaceae"
     }
   ],
   "authorship": "Vizzini, Consiglio, M. Marchetti & P. Alvarado",
-  "genusCount": 11,
-  "speciesCount": 59,
+  "genusCount": 12,
+  "speciesCount": 67,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1498,6 +1610,7 @@
       "classKey": 186,
       "orderKey": 1499,
       "familyKey": 10777657
-    }
+    },
+    "checklistbank": "2726190"
   }
 }

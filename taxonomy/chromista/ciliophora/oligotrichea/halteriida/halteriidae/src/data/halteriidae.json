@@ -27,11 +27,13 @@
             ],
             "col": [
               "6TXR8"
-            ]
+            ],
+            "checklistbank": "3459618"
           },
           "uuid": "cd95b8c3-4e0c-5f0-bad-cc979ab2ecf793",
           "authorityIds": "col:6TXR8,gbif:8102194",
-          "children": []
+          "children": [],
+          "authorship": "(Kahl, 1932)"
         },
         {
           "id": "PELAGOHALTERIA_HYALINA",
@@ -508,6 +510,18 @@
           "uuid": "36b7fbca-00cd-52e-b42-29dbc020168852",
           "authorityIds": "col:3JGJK,gbif:7476354",
           "children": []
+        },
+        {
+          "id": "SP_HALTERIA_SP",
+          "name": "Halteria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halteria",
+          "sourceIds": {
+            "checklistbank": "57501"
+          },
+          "children": []
         }
       ]
     },
@@ -616,6 +630,18 @@
           "uuid": "87709f22-bd79-531-a15-08acf21ca250e3",
           "authorityIds": "col:3ZZML,gbif:7980031",
           "children": []
+        },
+        {
+          "id": "SP_MESERES_SP",
+          "name": "Meseres sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meseres",
+          "sourceIds": {
+            "checklistbank": "1978401"
+          },
+          "children": []
         }
       ]
     },
@@ -662,6 +688,39 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "halteriidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HALTERIA",
+          "name": "uncultured Halteria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "858378"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_HALTERIIDAE",
+          "name": "uncultured Halteriidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2587267"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "halteriidae"
     }
   ],
   "sourceIds": {
@@ -672,8 +731,8 @@
       "orderKey": 8131315,
       "familyKey": 7879118
     },
-    "checklistbank": "f8fd2d87-2bf8-4385-b1fc-6d809178fd7f"
+    "checklistbank": "5972"
   },
-  "genusCount": 6,
-  "speciesCount": 28
+  "genusCount": 7,
+  "speciesCount": 32
 }

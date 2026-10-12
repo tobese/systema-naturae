@@ -29,9 +29,22 @@
           "sourceIds": {
             "itis": [
               "5642"
-            ]
+            ],
+            "checklistbank": "710656"
           },
           "authorityIds": "itis:5642"
+        },
+        {
+          "id": "SP_PASCHERINA_SP",
+          "name": "Pascherina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pascherina",
+          "sourceIds": {
+            "checklistbank": "3388186"
+          },
+          "children": []
         }
       ]
     },
@@ -55,7 +68,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "fcc9ba4b-b0fc-5eb-b3a-e277aa3ec2c189"
+          "uuid": "fcc9ba4b-b0fc-5eb-b3a-e277aa3ec2c189",
+          "authorship": "(Playfair) P.C.Silva",
+          "sourceIds": {
+            "checklistbank": "1743018"
+          }
         },
         {
           "id": "SP_PYROBOTRYS_ELONGATUS",
@@ -119,7 +136,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "dd8376a5-e2c2-5fb-ac6-8a9861bc6be72d"
+          "uuid": "dd8376a5-e2c2-5fb-ac6-8a9861bc6be72d",
+          "authorship": "(Korshikov) Korshikov, 1938",
+          "sourceIds": {
+            "checklistbank": "3064"
+          }
         },
         {
           "id": "SP_PYROBOTRYS_INCURVUS",
@@ -248,7 +269,8 @@
           "sourceIds": {
             "checklistbank": "ott333311"
           },
-          "children": []
+          "children": [],
+          "authorship": "Korshikov"
         },
         {
           "id": "SP_PYROBOTRYS_STELLATA",
@@ -284,7 +306,8 @@
           "sourceIds": {
             "checklistbank": "ott4003981"
           },
-          "children": []
+          "children": [],
+          "authorship": "Korshikov"
         },
         {
           "id": "SP_PYROBOTRYS_KORSCHIKOFFI",
@@ -404,10 +427,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spondylomoraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PYROBOTRYS",
+          "name": "uncultured Pyrobotrys",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1294396"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spondylomoraceae"
+    },
+    {
+      "id": "GENUS_SPONDYLOMORACEAE",
+      "name": "Spondylomoraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPONDYLOMORACEAE_SP",
+          "name": "Spondylomoraceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spondylomoraceae",
+          "sourceIds": {
+            "checklistbank": "3062077"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spondylomoraceae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 28,
+  "genusCount": 7,
+  "speciesCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -416,6 +481,6 @@
       "orderKey": 632,
       "familyKey": 6334
     },
-    "checklistbank": "ott396302"
+    "checklistbank": "3062"
   }
 }

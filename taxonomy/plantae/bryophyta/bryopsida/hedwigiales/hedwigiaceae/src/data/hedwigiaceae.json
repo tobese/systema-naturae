@@ -280,9 +280,11 @@
             ],
             "wfo": [
               "wfo-0001214336"
-            ]
+            ],
+            "checklistbank": "1588652"
           },
-          "authorityIds": "col:9LK5L,wfo:wfo-0001214336"
+          "authorityIds": "col:9LK5L,wfo:wfo-0001214336",
+          "authorship": "Biasuso"
         },
         {
           "id": "SP_HEDWIGIA_CILIATA",
@@ -332,9 +334,11 @@
             ],
             "wfo": [
               "wfo-1000018625"
-            ]
+            ],
+            "checklistbank": "1965256"
           },
-          "authorityIds": "col:9LK5M,wfo:wfo-1000018625"
+          "authorityIds": "col:9LK5M,wfo:wfo-1000018625",
+          "authorship": "Ignatova, Ignatov & Fedosov, 2016"
         },
         {
           "id": "SP_HEDWIGIA_DETONSA",
@@ -357,7 +361,8 @@
             ],
             "col": [
               "3JZKC"
-            ]
+            ],
+            "checklistbank": "1588655"
           },
           "authorityIds": "col:3JZKC,itis:1134802,wfo:wfo-0001201577"
         },
@@ -427,9 +432,11 @@
             ],
             "wfo": [
               "wfo-1000018628"
-            ]
+            ],
+            "checklistbank": "2249719"
           },
-          "authorityIds": "col:9LK5P,wfo:wfo-1000018628"
+          "authorityIds": "col:9LK5P,wfo:wfo-1000018628",
+          "authorship": "Ignatova & Ignatov, 2017"
         },
         {
           "id": "SP_HEDWIGIA_MOLLIS",
@@ -571,7 +578,8 @@
             ],
             "wfo": [
               "wfo-1000062232"
-            ]
+            ],
+            "checklistbank": "3076237"
           },
           "authorityIds": "col:CB2NS,wfo:wfo-1000062232"
         },
@@ -610,6 +618,18 @@
           "lineage": "Hedwigia",
           "sourceIds": {
             "checklistbank": "390318"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEDWIGIA_SP",
+          "name": "Hedwigia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hedwigia",
+          "sourceIds": {
+            "checklistbank": "1965260"
           },
           "children": []
         }
@@ -1418,10 +1438,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hedwigiaceae"
+    },
+    {
+      "id": "GENUS_BRYOWIJKIA",
+      "name": "Bryowijkia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRYOWIJKIA_AMBIGUA_HOOK_NOG",
+          "name": "Bryowijkia ambigua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryowijkia",
+          "authorship": "(Hook.) Nog.",
+          "sourceIds": {
+            "checklistbank": "324203"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRYOWIJKIA_MADAGASSA_TOUW_1993",
+          "name": "Bryowijkia madagassa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bryowijkia",
+          "authorship": "Touw, 1993",
+          "sourceIds": {
+            "checklistbank": "2736543"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hedwigiaceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 66,
+  "genusCount": 11,
+  "speciesCount": 69,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -1429,6 +1484,7 @@
       "classKey": 327,
       "orderKey": 12210182,
       "familyKey": 8763
-    }
+    },
+    "checklistbank": "52986"
   }
 }

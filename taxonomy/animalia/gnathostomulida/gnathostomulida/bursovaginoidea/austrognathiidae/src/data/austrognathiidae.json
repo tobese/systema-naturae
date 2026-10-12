@@ -286,11 +286,13 @@
             ],
             "col": [
               "JWNH"
-            ]
+            ],
+            "checklistbank": "231610"
           },
           "authorityIds": "col:JWNH,itis:684870,worms:265623",
           "uuid": "942406e1-46bc-533-832-0e54df0953952f",
-          "children": []
+          "children": [],
+          "authorship": "Farris, 1973"
         },
         {
           "id": "SP_AUSTROGNATHARIA_SP",
@@ -570,6 +572,18 @@
             "checklistbank": "ott3673044"
           },
           "children": []
+        },
+        {
+          "id": "SP_AUSTROGNATHIA_SP",
+          "name": "Austrognathia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Austrognathia",
+          "sourceIds": {
+            "checklistbank": "338273"
+          },
+          "children": []
         }
       ]
     },
@@ -660,10 +674,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "austrognathiidae"
+    },
+    {
+      "id": "GENUS_AUSTROGNATHIIDAE",
+      "name": "Austrognathiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AUSTROGNATHIIDAE_SP",
+          "name": "Austrognathiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Austrognathiidae",
+          "sourceIds": {
+            "checklistbank": "3061338"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "austrognathiidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 30,
+  "genusCount": 5,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -671,6 +706,6 @@
       "orderKey": 742,
       "familyKey": 7384
     },
-    "checklistbank": "ott1037804"
+    "checklistbank": "338265"
   }
 }

@@ -203,7 +203,8 @@
             ],
             "itis": [
               "696285"
-            ]
+            ],
+            "checklistbank": "63927"
           },
           "uuid": "8c807a4f-ab0d-566-8bc-8cdda34a3147c0",
           "authorityIds": "gbif:1162009,itis:696285"
@@ -326,7 +327,8 @@
             ],
             "itis": [
               "696279"
-            ]
+            ],
+            "checklistbank": "538602"
           },
           "uuid": "8f450f8c-1a06-557-bc5-22d230e4b8870a",
           "authorityIds": "gbif:1162007,itis:696279"
@@ -647,7 +649,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "clambus",
-          "uuid": "850dc6b7-83b1-5f1-b76-decd0bf34a0a11"
+          "uuid": "850dc6b7-83b1-5f1-b76-decd0bf34a0a11",
+          "authorship": "Meybohm, 2004",
+          "sourceIds": {
+            "checklistbank": "1553213"
+          }
         },
         {
           "id": "SP_CLAMBUS_ARMADILLO_DE_GEER_1774",
@@ -1170,6 +1176,18 @@
             "checklistbank": "ott7767159"
           },
           "children": []
+        },
+        {
+          "id": "SP_CLAMBUS_SP",
+          "name": "Clambus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clambus",
+          "sourceIds": {
+            "checklistbank": "1205546"
+          },
+          "children": []
         }
       ]
     },
@@ -1197,7 +1215,8 @@
             ],
             "itis": [
               "696273"
-            ]
+            ],
+            "checklistbank": "1718904"
           },
           "uuid": "aa4d7ae7-1af0-59d-b5c-1dcac06198dbc9",
           "authorityIds": "gbif:1162001,itis:696273"
@@ -1540,10 +1559,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "clambidae"
+    },
+    {
+      "id": "GENUS_CLAMBIDAE",
+      "name": "Clambidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLAMBIDAE_SP",
+          "name": "Clambidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clambidae",
+          "sourceIds": {
+            "checklistbank": "1491279"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "clambidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 101,
+  "genusCount": 12,
+  "speciesCount": 103,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1552,6 +1592,6 @@
       "orderKey": 1470,
       "familyKey": 7781
     },
-    "checklistbank": "ott26331"
+    "checklistbank": "63910"
   }
 }

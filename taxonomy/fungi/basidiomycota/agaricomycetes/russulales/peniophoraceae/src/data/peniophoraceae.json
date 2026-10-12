@@ -2223,7 +2223,8 @@
             ],
             "col": [
               "76KMY"
-            ]
+            ],
+            "checklistbank": "89883"
           },
           "uuid": "a09761ce-cd32-51c-a32-6d724e2ad8d365",
           "authorityIds": "col:76KMY,gbif:2552227,mycobank:263604"
@@ -2439,7 +2440,8 @@
             ],
             "col": [
               "76KLT"
-            ]
+            ],
+            "checklistbank": "2075219"
           },
           "uuid": "d8c513f9-3c03-590-877-789bec17ad9e5d",
           "authorityIds": "col:76KLT,gbif:2552206,mycobank:413714"
@@ -2809,7 +2811,8 @@
             ],
             "col": [
               "76KCG"
-            ]
+            ],
+            "checklistbank": "2075222"
           },
           "uuid": "01752331-f46b-5db-97d-503aab67f698d3",
           "authorityIds": "col:76KCG,gbif:2552101,mycobank:363115"
@@ -3303,7 +3306,8 @@
             ],
             "col": [
               "76KF9"
-            ]
+            ],
+            "checklistbank": "694610"
           },
           "uuid": "941541e9-8f05-5e2-91e-488a0cb81785e4",
           "authorityIds": "col:76KF9,gbif:2552266,mycobank:319314"
@@ -3811,7 +3815,8 @@
             ],
             "col": [
               "76JV5"
-            ]
+            ],
+            "checklistbank": "2075230"
           },
           "uuid": "52a2f737-b769-526-b23-85884756020708",
           "authorityIds": "col:76JV5,gbif:2552324,mycobank:354996"
@@ -4388,7 +4393,8 @@
             ],
             "col": [
               "76JTV"
-            ]
+            ],
+            "checklistbank": "709497"
           },
           "uuid": "986ffe7c-9bf6-54d-be4-a2b8a8c83cea33",
           "authorityIds": "col:76JTV,gbif:2552194,mycobank:113029"
@@ -4680,7 +4686,8 @@
             ],
             "col": [
               "B3BVS"
-            ]
+            ],
+            "checklistbank": "2976973"
           },
           "uuid": "1e2faa3e-d65d-5b4-869-26070cc254ad5f",
           "authorityIds": "col:B3BVS,gbif:12206608,mycobank:845758"
@@ -5049,7 +5056,8 @@
             ],
             "col": [
               "76K8Y"
-            ]
+            ],
+            "checklistbank": "2545663"
           },
           "uuid": "2f0cf102-1779-58d-a68-2a69b90b1ab7d7",
           "authorityIds": "col:76K8Y,gbif:2552137,mycobank:109163"
@@ -5833,7 +5841,8 @@
             ],
             "col": [
               "B343L"
-            ]
+            ],
+            "checklistbank": "2976970"
           },
           "uuid": "78c76282-958e-567-bd2-29cf92d6731d20",
           "authorityIds": "col:B343L,gbif:12263069,mycobank:845760"
@@ -6141,6 +6150,19 @@
           "lineage": "Peniophora",
           "sourceIds": {
             "checklistbank": "1680307"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PENIOPHORA_CRYSTALLINA_HOHN_LITSCH_1907",
+          "name": "Peniophora crystallina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peniophora",
+          "authorship": "Hohn. & Litsch., 1907",
+          "sourceIds": {
+            "checklistbank": "3043843"
           },
           "children": []
         }
@@ -14182,11 +14204,74 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "peniophoraceae"
+    },
+    {
+      "id": "GENUS_PENIOPHORACEAE",
+      "name": "Peniophoraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENIOPHORACEAE_SP",
+          "name": "Peniophoraceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Peniophoraceae",
+          "sourceIds": {
+            "checklistbank": "875626"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peniophoraceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_PENIOPHORA",
+          "name": "cf. Peniophora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "935631"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peniophoraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PENIOPHORACEAE",
+          "name": "uncultured Peniophoraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1588648"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peniophoraceae"
     }
   ],
   "authorship": "Lotsy",
-  "genusCount": 39,
-  "speciesCount": 587,
+  "genusCount": 42,
+  "speciesCount": 591,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -14194,6 +14279,7 @@
       "classKey": 186,
       "orderKey": 1144,
       "familyKey": 7610
-    }
+    },
+    "checklistbank": "103393"
   }
 }

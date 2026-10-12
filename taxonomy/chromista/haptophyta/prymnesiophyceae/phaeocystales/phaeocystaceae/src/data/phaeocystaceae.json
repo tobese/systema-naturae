@@ -189,6 +189,31 @@
           "uuid": "d525bd6b-0f08-5cd-ba4-66ac86f8fc474e",
           "authorityIds": "gbif:8136174",
           "children": []
+        },
+        {
+          "id": "SP_PHAEOCYSTIS_SP",
+          "name": "Phaeocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeocystis",
+          "sourceIds": {
+            "checklistbank": "113104"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHAEOCYSTIS_REX_ANDERSEN_BAILEY_DECELLE_PROBERT_2015",
+          "name": "Phaeocystis rex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeocystis",
+          "authorship": "Andersen, Bailey, Decelle & Probert, 2015",
+          "sourceIds": {
+            "checklistbank": "1631189"
+          },
+          "children": []
         }
       ]
     },
@@ -213,6 +238,27 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phaeocystaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PHAEOCYSTIS",
+          "name": "uncultured Phaeocystis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "660919"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaeocystaceae"
     }
   ],
   "sourceIds": {
@@ -222,8 +268,9 @@
       "classKey": 258,
       "orderKey": 7865601,
       "familyKey": 7126
-    }
+    },
+    "checklistbank": "418920"
   },
-  "genusCount": 2,
-  "speciesCount": 9
+  "genusCount": 3,
+  "speciesCount": 12
 }

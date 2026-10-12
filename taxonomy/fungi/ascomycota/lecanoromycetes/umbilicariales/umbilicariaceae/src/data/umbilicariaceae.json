@@ -2122,7 +2122,8 @@
             ],
             "col": [
               "9ZH34"
-            ]
+            ],
+            "checklistbank": "2747359"
           },
           "uuid": "3d796ff5-8581-519-ad9-337c153ac0d3b3",
           "authorityIds": "col:9ZH34,gbif:12256159,mycobank:821426"
@@ -3444,7 +3445,8 @@
             ],
             "col": [
               "9YPRV"
-            ]
+            ],
+            "checklistbank": "1217317"
           },
           "authorityIds": "col:9YPRV,mycobank:662469",
           "commonName": "manyroot navel lichen"
@@ -4127,7 +4129,8 @@
           "sourceIds": {
             "checklistbank": "977426"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rass."
         },
         {
           "id": "SP_UMBILICARIA_PERUVIANA",
@@ -4835,7 +4838,8 @@
           "sourceIds": {
             "checklistbank": "ott5311933"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Dombr.) N.S. Golubk., 1978"
         },
         {
           "id": "SP_UMBILICARIA_LECANOROCARPA",
@@ -4846,6 +4850,44 @@
           "lineage": "Umbilicaria",
           "sourceIds": {
             "checklistbank": "ott5311954"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UMBILICARIA_SP",
+          "name": "Umbilicaria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbilicaria",
+          "sourceIds": {
+            "checklistbank": "934000"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UMBILICARIA_NYALAMII_Y_Y_WANG_X_L_WEI_2025",
+          "name": "Umbilicaria nyalamii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbilicaria",
+          "authorship": "Y.Y. Wang & X.L. Wei, 2025",
+          "sourceIds": {
+            "checklistbank": "3107753"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UMBILICARIA_CHENTANGENSIS_Y_Y_WANG_X_L_WEI_2025",
+          "name": "Umbilicaria chentangensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbilicaria",
+          "authorship": "Y.Y. Wang & X.L. Wei, 2025",
+          "sourceIds": {
+            "checklistbank": "3435355"
           },
           "children": []
         }
@@ -5060,6 +5102,18 @@
           "lineage": "Xylopsora",
           "sourceIds": {
             "checklistbank": "1634504"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_XYLOPSORA_SP",
+          "name": "Xylopsora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xylopsora",
+          "sourceIds": {
+            "checklistbank": "3024279"
           },
           "children": []
         }
@@ -7772,11 +7826,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "umbilicariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_UMBILICARIA",
+          "name": "uncultured Umbilicaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1156049"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_UMBILICARIACEAE",
+          "name": "uncultured Umbilicariaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2212803"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_XYLOPSORA",
+          "name": "uncultured Xylopsora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2794735"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "umbilicariaceae"
+    },
+    {
+      "id": "GENUS_UMBILICARIACEAE",
+      "name": "Umbilicariaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UMBILICARIACEAE_SP",
+          "name": "Umbilicariaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbilicariaceae",
+          "sourceIds": {
+            "checklistbank": "3421461"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "umbilicariaceae"
     }
   ],
   "authorship": "Chevallier",
-  "genusCount": 23,
-  "speciesCount": 453,
+  "genusCount": 25,
+  "speciesCount": 461,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -7785,6 +7905,6 @@
       "orderKey": 1275,
       "familyKey": 4108
     },
-    "checklistbank": "ott1058540"
+    "checklistbank": "87265"
   }
 }

@@ -352,7 +352,8 @@
           },
           "uuid": "17f4730c-d78a-5e2-95e-b63290cc5d6ddd",
           "authorityIds": "gbif:8026151",
-          "children": []
+          "children": [],
+          "authorship": "(Grunow) K.Osada & H.Kobayasi, 1990"
         },
         {
           "id": "ENTOMONEIS_PUSILLA",
@@ -547,11 +548,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7564950
+            "gbif": 7564950,
+            "checklistbank": "3420328"
           },
           "uuid": "c25c23d4-a7b3-563-a58-1addd3d5db0d47",
           "authorityIds": "gbif:7564950",
-          "children": []
+          "children": [],
+          "authorship": "Clavero, Grimalt & Hernandez-Marine, 1999"
         },
         {
           "id": "ENTOMONEIS_VILICICII",
@@ -665,6 +668,31 @@
           "lineage": "Entomoneis",
           "sourceIds": {
             "checklistbank": "1659430"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENTOMONEIS_SP",
+          "name": "Entomoneis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomoneis",
+          "sourceIds": {
+            "checklistbank": "186043"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENTOMONEIS_TENERA_MEJDANDZIC_BOSAK_2017",
+          "name": "Entomoneis tenera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entomoneis",
+          "authorship": "Mejdandzic & Bosak, 2017",
+          "sourceIds": {
+            "checklistbank": "1937695"
           },
           "children": []
         }
@@ -1044,10 +1072,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "entomoneidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ENTOMONEIS",
+          "name": "uncultured Entomoneis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "682831"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entomoneidaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 59,
+  "genusCount": 8,
+  "speciesCount": 62,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1055,6 +1104,7 @@
       "classKey": 7947184,
       "orderKey": 8405879,
       "familyKey": 8127260
-    }
+    },
+    "checklistbank": "186041"
   }
 }

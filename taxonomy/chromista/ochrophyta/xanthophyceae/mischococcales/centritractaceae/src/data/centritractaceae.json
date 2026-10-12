@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "102432f7-b5bf-558-bd0-4c471d52a796dc",
-          "authorityIds": "gbif:3201445,itis:2011"
+          "authorityIds": "gbif:3201445,itis:2011",
+          "children": []
         },
         {
           "id": "BUMILLERIOPSIS_PETERSIANA",
@@ -46,7 +47,59 @@
             "gbif": 7183173
           },
           "uuid": "dbd0cc59-d6b6-53f-9c4-be5ed360dd0bde",
-          "authorityIds": "gbif:7183173"
+          "authorityIds": "gbif:7183173",
+          "children": []
+        },
+        {
+          "id": "SP_BUMILLERIOPSIS_FILIFORMIS_VISCHER_1945",
+          "name": "Bumilleriopsis filiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bumilleriopsis",
+          "authorship": "Vischer, 1945",
+          "sourceIds": {
+            "checklistbank": "2835"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUMILLERIOPSIS_PETERSENIANA_VISCHER_PASCHER_1936",
+          "name": "Bumilleriopsis peterseniana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bumilleriopsis",
+          "authorship": "Vischer & Pascher, 1936",
+          "sourceIds": {
+            "checklistbank": "240379"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUMILLERIOPSIS_SP",
+          "name": "Bumilleriopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bumilleriopsis",
+          "sourceIds": {
+            "checklistbank": "308879"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUMILLERIOPSIS_PYRENOIDOSA_DEASON_BOLD_ETTL_1977",
+          "name": "Bumilleriopsis pyrenoidosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bumilleriopsis",
+          "authorship": "(Deason & Bold) Ettl 1977",
+          "sourceIds": {
+            "checklistbank": "310674"
+          },
+          "children": []
         }
       ]
     },
@@ -74,7 +127,8 @@
             "gbif": 7581714
           },
           "uuid": "4462cb0d-29b8-5ba-9a5-b04ffde1e4e0e5",
-          "authorityIds": "gbif:7581714"
+          "authorityIds": "gbif:7581714",
+          "children": []
         },
         {
           "id": "CENTRITRACTUS_BELANOPHORUS",
@@ -90,7 +144,8 @@
             "gbif": 8193340
           },
           "uuid": "6d5f0909-0294-507-b29-5bac166d06c44a",
-          "authorityIds": "gbif:8193340"
+          "authorityIds": "gbif:8193340",
+          "children": []
         },
         {
           "id": "CENTRITRACTUS_BELONOPHORUS",
@@ -108,7 +163,8 @@
             "gbif": 3201458
           },
           "uuid": "3c4b02b7-2f69-518-8a1-47f06436e4cabb",
-          "authorityIds": "gbif:3201458"
+          "authorityIds": "gbif:3201458",
+          "children": []
         },
         {
           "id": "CENTRITRACTUS_BRUNNEUS",
@@ -124,7 +180,8 @@
             "gbif": 7994237
           },
           "uuid": "9b24e7df-ebb6-578-84a-9794fed055d794",
-          "authorityIds": "gbif:7994237"
+          "authorityIds": "gbif:7994237",
+          "children": []
         },
         {
           "id": "CENTRITRACTUS_DUBIUS",
@@ -142,7 +199,8 @@
             "gbif": 3201460
           },
           "uuid": "7372e72f-4a35-5c7-a5b-38475c05fb299e",
-          "authorityIds": "gbif:3201460"
+          "authorityIds": "gbif:3201460",
+          "children": []
         },
         {
           "id": "CENTRITRACTUS_ELLIPSOIDEUS",
@@ -161,9 +219,31 @@
             "gbif": 3201456
           },
           "uuid": "dc3e5369-2f6e-544-a19-0b2119d2cf4923",
-          "authorityIds": "gbif:3201456"
+          "authorityIds": "gbif:3201456",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BUMILLERIOPSIS",
+          "name": "uncultured Bumilleriopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1027882"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "centritractaceae"
     }
   ],
   "sourceIds": {
@@ -173,6 +253,9 @@
       "classKey": 7073629,
       "orderKey": 1320,
       "familyKey": 4267488
-    }
-  }
+    },
+    "checklistbank": "195997"
+  },
+  "genusCount": 3,
+  "speciesCount": 13
 }

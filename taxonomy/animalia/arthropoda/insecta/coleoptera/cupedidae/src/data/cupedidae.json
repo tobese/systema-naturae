@@ -153,10 +153,12 @@
             ],
             "col": [
               "H66T"
-            ]
+            ],
+            "checklistbank": "1903028"
           },
           "uuid": "90ecbeed-8618-531-9ea-041f5a335e97c3",
-          "authorityIds": "col:H66T,gbif:1096152,itis:767693"
+          "authorityIds": "col:H66T,gbif:1096152,itis:767693",
+          "authorship": "Neboiss, 1984"
         },
         {
           "id": "SP_ASCIOPLAGA_SCIASMA",
@@ -379,7 +381,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "cupes",
-          "uuid": "46ef02d8-e327-51d-a2c-7a16793e7465eb"
+          "uuid": "46ef02d8-e327-51d-a2c-7a16793e7465eb",
+          "authorship": "Fabricius, 1801",
+          "sourceIds": {
+            "checklistbank": "538623"
+          }
         },
         {
           "id": "SP_CUPES_MANIFESTUS",
@@ -1080,10 +1086,12 @@
             ],
             "itis": [
               "685629"
-            ]
+            ],
+            "checklistbank": "2843307"
           },
           "uuid": "6a196335-f3eb-55a-a9a-6268dda1351d23",
-          "authorityIds": "col:55B36,gbif:1096129,itis:685629"
+          "authorityIds": "col:55B36,gbif:1096129,itis:685629",
+          "authorship": "Neboiss, 1984"
         },
         {
           "id": "SP_TENOMERGA_YAMATO",
@@ -1204,6 +1212,19 @@
           "lineage": "Tenomerga",
           "sourceIds": {
             "checklistbank": "ott4592990"
+          },
+          "children": [],
+          "authorship": "(Kolbe, 1886)"
+        },
+        {
+          "id": "SP_TENOMERGA_SP",
+          "name": "Tenomerga sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tenomerga",
+          "sourceIds": {
+            "checklistbank": "1903022"
           },
           "children": []
         }
@@ -2482,10 +2503,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cupedidae"
+    },
+    {
+      "id": "GENUS_CUPEDIDAE",
+      "name": "Cupedidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CUPEDIDAE_SP",
+          "name": "Cupedidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cupedidae",
+          "sourceIds": {
+            "checklistbank": "1434472"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cupedidae"
     }
   ],
-  "genusCount": 33,
-  "speciesCount": 150,
+  "genusCount": 34,
+  "speciesCount": 152,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2494,6 +2536,6 @@
       "orderKey": 1470,
       "familyKey": 7821
     },
-    "checklistbank": "ott347794"
+    "checklistbank": "50548"
   }
 }

@@ -1211,7 +1211,8 @@
           "sourceIds": {
             "checklistbank": "ott547287"
           },
-          "children": []
+          "children": [],
+          "authorship": "A.L. Guyot, 1958"
         },
         {
           "id": "SP_GLONIUM_BETULINUM",
@@ -1476,6 +1477,18 @@
             "checklistbank": "ott5319261"
           },
           "children": []
+        },
+        {
+          "id": "SP_GLONIUM_SP",
+          "name": "Glonium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glonium",
+          "sourceIds": {
+            "checklistbank": "1973116"
+          },
+          "children": []
         }
       ],
       "authorship": "Muhlenberg"
@@ -1543,6 +1556,18 @@
           },
           "uuid": "51a7f223-d71d-5a2-aa5-513639de372bb1",
           "authorityIds": "col:S5PK,gbif:2626459,mycobank:120560",
+          "children": []
+        },
+        {
+          "id": "SP_CENOCOCCUM_SP",
+          "name": "Cenococcum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cenococcum",
+          "sourceIds": {
+            "checklistbank": "698445"
+          },
           "children": []
         }
       ],
@@ -2024,6 +2049,18 @@
           "uuid": "3ebd626c-182a-59f-bfe-9056e15e8df440",
           "authorityIds": "col:4NQZ2,gbif:9799533,mycobank:815843",
           "children": []
+        },
+        {
+          "id": "SP_PSEUDOCENOCOCCUM_SP",
+          "name": "Pseudocenococcum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocenococcum",
+          "sourceIds": {
+            "checklistbank": "3136960"
+          },
+          "children": []
         }
       ],
       "authorship": "K. Obase, G.W. Douhan, Y. Matsuda & M.E. Smith"
@@ -2123,11 +2160,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gloniaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CENOCOCCUM",
+          "name": "uncultured Cenococcum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "641380"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GLONIACEAE",
+          "name": "uncultured Gloniaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2043396"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gloniaceae"
+    },
+    {
+      "id": "GENUS_GLONIACEAE",
+      "name": "Gloniaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLONIACEAE_SP",
+          "name": "Gloniaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gloniaceae",
+          "sourceIds": {
+            "checklistbank": "2011861"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gloniaceae"
     }
   ],
   "authorship": "E.W.A. Boehm, C.L. Schoch & Spatafora",
-  "genusCount": 6,
-  "speciesCount": 94,
+  "genusCount": 8,
+  "speciesCount": 100,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2136,6 +2227,6 @@
       "orderKey": 7895423,
       "familyKey": 3281105
     },
-    "checklistbank": "ott420963"
+    "checklistbank": "603431"
   }
 }

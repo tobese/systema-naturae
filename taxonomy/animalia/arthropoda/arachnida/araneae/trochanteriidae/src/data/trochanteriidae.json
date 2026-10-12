@@ -432,10 +432,12 @@
             ],
             "itis": [
               "887265"
-            ]
+            ],
+            "checklistbank": "2978859"
           },
           "uuid": "312a8c64-191e-502-b49-7e8f826fc121b3",
-          "authorityIds": "gbif:2178425,itis:887265"
+          "authorityIds": "gbif:2178425,itis:887265",
+          "authorship": "Tikader, 1969"
         },
         {
           "id": "SP_PLATOR_SINICUS",
@@ -449,6 +451,18 @@
           "continents": [
             "Asia"
           ]
+        },
+        {
+          "id": "SP_PLATOR_SP",
+          "name": "Plator sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plator",
+          "sourceIds": {
+            "checklistbank": "2978861"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1278,7 +1292,8 @@
             ],
             "itis": [
               "891548"
-            ]
+            ],
+            "checklistbank": "2784062"
           },
           "uuid": "1f624a81-ed26-5f5-a33-cdc0e8bbda2502",
           "authorityIds": "col:596W5,gbif:2178439,itis:891548",
@@ -1407,6 +1422,18 @@
           "continents": [
             "South America"
           ]
+        },
+        {
+          "id": "SP_DOLIOMALUS_SP",
+          "name": "Doliomalus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Doliomalus",
+          "sourceIds": {
+            "checklistbank": "1956812"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3010,13 +3037,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trochanteriidae"
+    },
+    {
+      "id": "GENUS_TROCHANTERIIDAE",
+      "name": "Trochanteriidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TROCHANTERIIDAE_SP",
+          "name": "Trochanteriidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochanteriidae",
+          "sourceIds": {
+            "checklistbank": "2813115"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trochanteriidae"
     }
   ],
-  "speciesCount": 168,
+  "speciesCount": 171,
   "appSlug": "trochanteriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 19,
+  "genusCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3025,6 +3073,6 @@
       "orderKey": 1496,
       "familyKey": 7269
     },
-    "checklistbank": "deb6c775-17bb-4653-948a-6eba4fa6c92f"
+    "checklistbank": "243495"
   }
 }

@@ -25,10 +25,12 @@
             ],
             "col": [
               "6W2NP"
-            ]
+            ],
+            "checklistbank": "2499466"
           },
           "uuid": "ffcecb9c-11cb-5e1-8bf-13650acf0d3196",
-          "authorityIds": "col:6W2NP,gbif:10767609,mycobank:555566"
+          "authorityIds": "col:6W2NP,gbif:10767609,mycobank:555566",
+          "children": []
         },
         {
           "id": "SP_PLEOHELICOON_RICHONIS_BOUD_JAYASIRI_E_B_G_JONES_K_D_HYDE",
@@ -50,7 +52,20 @@
             ]
           },
           "uuid": "3979974e-8bfb-5c4-970-4fa0b9fe396a44",
-          "authorityIds": "col:77QNP,gbif:10856346,mycobank:555567"
+          "authorityIds": "col:77QNP,gbif:10856346,mycobank:555567",
+          "children": []
+        },
+        {
+          "id": "SP_PLEOHELICOON_SP",
+          "name": "Pleohelicoon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleohelicoon",
+          "sourceIds": {
+            "checklistbank": "3421443"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -78,10 +93,12 @@
             ],
             "col": [
               "6VQMF"
-            ]
+            ],
+            "checklistbank": "2016603"
           },
           "uuid": "d80730b9-40bf-570-add-d51e9d1ae22dce",
-          "authorityIds": "col:6VQMF,gbif:9666637,mycobank:821221"
+          "authorityIds": "col:6VQMF,gbif:9666637,mycobank:821221",
+          "children": []
         },
         {
           "id": "SP_PLEOMONODICTYS_DESCALSII_HERN_RESTR_J_MENA_GEN",
@@ -100,21 +117,90 @@
             ],
             "col": [
               "4K7HV"
-            ]
+            ],
+            "checklistbank": "2016604"
           },
           "uuid": "755d5f18-fde2-502-9e5-18aeb09d7c5e52",
-          "authorityIds": "col:4K7HV,gbif:9748213,mycobank:820281"
+          "authorityIds": "col:4K7HV,gbif:9748213,mycobank:820281",
+          "children": []
+        },
+        {
+          "id": "SP_PLEOMONODICTYS_SP",
+          "name": "Pleomonodictys sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleomonodictys",
+          "sourceIds": {
+            "checklistbank": "2859981"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pleomonodictydaceae"
+    },
+    {
+      "id": "GENUS_ROBINIIGENA",
+      "name": "Robiniigena",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ROBINIIGENA_HYALINOSPORA_BUNDHUN_CAMPORESI_K_D_HYDE_2024",
+          "name": "Robiniigena hyalinospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Robiniigena",
+          "authorship": "Bundhun, Camporesi & K.D.Hyde, 2024",
+          "sourceIds": {
+            "checklistbank": "3134088"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ROBINIIGENA_SP",
+          "name": "Robiniigena sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Robiniigena",
+          "sourceIds": {
+            "checklistbank": "3144175"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pleomonodictydaceae"
+    },
+    {
+      "id": "GENUS_PLEOMONODICTYDACEAE",
+      "name": "Pleomonodictydaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLEOMONODICTYDACEAE_SP",
+          "name": "Pleomonodictydaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleomonodictydaceae",
+          "sourceIds": {
+            "checklistbank": "3411010"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pleomonodictydaceae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 9,
   "appSlug": "pleomonodictydaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Dothideomycetes",
-  "genusCount": 2,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -122,6 +208,7 @@
       "classKey": 183,
       "orderKey": 1047,
       "familyKey": 9703763
-    }
+    },
+    "checklistbank": "2555780"
   }
 }

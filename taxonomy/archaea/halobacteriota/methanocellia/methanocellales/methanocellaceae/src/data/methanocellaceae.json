@@ -31,10 +31,12 @@
             ],
             "itis": [
               "951790"
-            ]
+            ],
+            "checklistbank": "1175445"
           },
           "uuid": "fe550237-8109-5d9-812-08c9ca894c4bb7",
-          "authorityIds": "col:42FCM,gbif:7521502,itis:951790"
+          "authorityIds": "col:42FCM,gbif:7521502,itis:951790",
+          "authorship": "Sakai et al. 2010"
         },
         {
           "id": "METHANOCELLA_CONRADII",
@@ -57,7 +59,8 @@
             "checklistbank": "ott642013"
           },
           "uuid": "4b977d8c-c7ba-585-956-a7b3399f253e82",
-          "authorityIds": "col:CSMD5,gbif:7576509"
+          "authorityIds": "col:CSMD5,gbif:7576509",
+          "authorship": "Lu and Lu 2012"
         },
         {
           "id": "METHANOCELLA_PALUDICOLA",
@@ -83,7 +86,8 @@
             "checklistbank": "ott404435"
           },
           "uuid": "8dc281e8-f8f3-5c4-89b-cf091696a0a6bf",
-          "authorityIds": "col:42FCN,gbif:7981850,itis:951789"
+          "authorityIds": "col:42FCN,gbif:7981850,itis:951789",
+          "authorship": "Sakai et al. 2008"
         },
         {
           "id": "SP_METHANOCELLA_SP",
@@ -184,14 +188,80 @@
             "checklistbank": "ott5206472"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOCELLA",
+          "name": "uncultured Methanocella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "999902"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOCELLACEAE",
+          "name": "uncultured Methanocellaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1194413"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocellaceae"
+    },
+    {
+      "id": "GENUS_METHANOCELLACEAE",
+      "name": "Methanocellaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOCELLACEAE_ARCHAEON",
+          "name": "Methanocellaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocellaceae",
+          "sourceIds": {
+            "checklistbank": "1915626"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocellaceae"
+    },
+    {
+      "id": "GENUS_METHANOCOCCACEAE",
+      "name": "Methanococcaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOCOCCACEAE_ARCHAEON",
+          "name": "Methanococcaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanococcaceae",
+          "sourceIds": {
+            "checklistbank": "1915627"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanocellaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 8,
+  "genusCount": 6,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -200,6 +270,6 @@
       "orderKey": 8303780,
       "familyKey": 4896458
     },
-    "checklistbank": "ott404443"
+    "checklistbank": "570265"
   }
 }

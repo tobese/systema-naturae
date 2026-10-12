@@ -518,7 +518,11 @@
           "description": "Corruptobranchus odhneri is a species of sea slug or nudibranch, a marine gastropod mollusc in the family Eubranchidae.",
           "sourcedFrom": "wikipedia",
           "children": [],
-          "uuid": "67fe8e42-ba89-507-a68-23074d39d51d8a"
+          "uuid": "67fe8e42-ba89-507-a68-23074d39d51d8a",
+          "authorship": "(Derjugin & Gurjanova, 1926)",
+          "sourceIds": {
+            "checklistbank": "1920059"
+          }
         },
         {
           "id": "SP_EUBRANCHUS_OLIVACEUS",
@@ -535,7 +539,8 @@
           "sourceIds": {
             "itis": [
               "78604"
-            ]
+            ],
+            "checklistbank": "1920060"
           },
           "authorityIds": "itis:78604"
         },
@@ -661,7 +666,8 @@
             ],
             "itis": [
               "78613"
-            ]
+            ],
+            "checklistbank": "763125"
           },
           "authorityIds": "col:3BP4Q,itis:78613"
         },
@@ -889,7 +895,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Eubranchus",
-          "uuid": "e3580119-f187-57f-a4a-7d15a6eab6d112"
+          "uuid": "e3580119-f187-57f-a4a-7d15a6eab6d112",
+          "authorship": "Fernandez-Simon & Moles, 2023",
+          "sourceIds": {
+            "checklistbank": "3019346"
+          }
         },
         {
           "id": "SP_EUBRANCHUS_DORIAE_TRINCHESE_1874",
@@ -1323,6 +1333,44 @@
           "lineage": "Eubranchus",
           "sourceIds": {
             "checklistbank": "1274231"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EUBRANCHUS_SP",
+          "name": "Eubranchus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eubranchus",
+          "sourceIds": {
+            "checklistbank": "76181"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EUBRANCHUS_ALEXEII_MARTYNOV_1998",
+          "name": "Eubranchus alexeii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eubranchus",
+          "authorship": "Martynov, 1998",
+          "sourceIds": {
+            "checklistbank": "1920098"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EUBRANCHUS_MALAKHOVI_EKIMOVA_MIKHLINA_VOROBYEVA_ANTOKHINA_TAMBOVTSEVA_SHEPETOV_2021",
+          "name": "Eubranchus malakhovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eubranchus",
+          "authorship": "Ekimova, Mikhlina, Vorobyeva, Antokhina, Tambovtseva & Shepetov, 2021",
+          "sourceIds": {
+            "checklistbank": "2863949"
           },
           "children": []
         }
@@ -2435,10 +2483,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eubranchidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_EUBRANCHUS",
+          "name": "cf. Eubranchus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "3398120"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eubranchidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 137,
+  "genusCount": 23,
+  "speciesCount": 141,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2447,6 +2516,6 @@
       "orderKey": 980,
       "familyKey": 2646
     },
-    "checklistbank": "12cc3fb7-3d6e-40e4-bab7-8bcea3e5dc21"
+    "checklistbank": "2692184"
   }
 }

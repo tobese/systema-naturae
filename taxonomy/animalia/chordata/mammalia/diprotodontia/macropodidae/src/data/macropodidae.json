@@ -308,6 +308,42 @@
             "checklistbank": "ott7657203"
           },
           "children": []
+        },
+        {
+          "id": "SP_MACROPUS_SP",
+          "name": "Macropus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macropus",
+          "sourceIds": {
+            "checklistbank": "9322"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACROPUS_EUGENII",
+          "name": "Macropus ×eugenii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macropus",
+          "sourceIds": {
+            "checklistbank": "76908"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACROPUS_RUFUS",
+          "name": "Macropus rufus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macropus",
+          "sourceIds": {
+            "checklistbank": "2874702"
+          },
+          "children": []
         }
       ]
     },
@@ -798,6 +834,18 @@
           },
           "authorityIds": "col:6YM77,itis:552754,wikidata:Q726151",
           "authorship": "Quoy & Gaimard"
+        },
+        {
+          "id": "SP_SETONIX_SP",
+          "name": "Setonix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Setonix",
+          "sourceIds": {
+            "checklistbank": "30671"
+          },
+          "children": []
         }
       ]
     },
@@ -904,7 +952,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Onychogalea",
-          "uuid": "fc492a81-a6ef-5ab-8ce-1ed635c3a4a53c"
+          "uuid": "fc492a81-a6ef-5ab-8ce-1ed635c3a4a53c",
+          "authorship": "(Gould, 1840)",
+          "sourceIds": {
+            "checklistbank": "3370452"
+          }
         }
       ]
     },
@@ -1030,7 +1082,8 @@
             ],
             "checklistbank": "ott775041"
           },
-          "authorityIds": "col:56Q7K,itis:552756,wikidata:Q209167"
+          "authorityIds": "col:56Q7K,itis:552756,wikidata:Q209167",
+          "authorship": "(Schreber, 1778)"
         },
         {
           "id": "SP_THYLOGALE_CALABYI_FLANNERY_1992",
@@ -1543,6 +1596,18 @@
             "checklistbank": "ott7657206"
           },
           "children": []
+        },
+        {
+          "id": "SP_PETROGALE_GODMANI",
+          "name": "Petrogale ×godmani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petrogale",
+          "sourceIds": {
+            "checklistbank": "1737130"
+          },
+          "children": []
         }
       ]
     },
@@ -1640,7 +1705,8 @@
             ],
             "checklistbank": "ott567249"
           },
-          "authorityIds": "col:34QBR,itis:552709,wikidata:Q209581"
+          "authorityIds": "col:34QBR,itis:552709,wikidata:Q209581",
+          "authorship": "Thomas, 1908"
         },
         {
           "id": "DENDROLAGUS_MATSCHIEI",
@@ -1669,7 +1735,8 @@
             ],
             "checklistbank": "ott579327"
           },
-          "authorityIds": "col:6CJFQ,itis:552712,wikidata:Q209174"
+          "authorityIds": "col:6CJFQ,itis:552712,wikidata:Q209174",
+          "authorship": "Forster & Rothschild, 1907"
         },
         {
           "id": "DENDROLAGUS_DORIANUS",
@@ -1698,7 +1765,8 @@
             ],
             "checklistbank": "ott619969"
           },
-          "authorityIds": "col:34QBQ,itis:552708,wikidata:Q183489"
+          "authorityIds": "col:34QBQ,itis:552708,wikidata:Q183489",
+          "authorship": "Ramsay, 1883"
         },
         {
           "id": "SP_DENDROLAGUS_MBAISO_FLANNERY_BOEADI_SZALAY_1995",
@@ -2409,7 +2477,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Protemnodon",
-          "uuid": "bbb73011-d263-59b-bab-322a17f3059236"
+          "uuid": "bbb73011-d263-59b-bab-322a17f3059236",
+          "authorship": "Owen, 1874",
+          "sourceIds": {
+            "checklistbank": "2493643"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2436,10 +2508,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "macropodidae"
+    },
+    {
+      "id": "GENUS_SIMOSTHENURUS",
+      "name": "Simosthenurus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIMOSTHENURUS_OCCIDENTALIS_GLAUERT_1910",
+          "name": "Simosthenurus occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simosthenurus",
+          "authorship": "Glauert, 1910",
+          "sourceIds": {
+            "checklistbank": "2493644"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "macropodidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 110,
+  "genusCount": 21,
+  "speciesCount": 116,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2448,6 +2542,6 @@
       "orderKey": 1452,
       "familyKey": 9372
     },
-    "checklistbank": "ott196582"
+    "checklistbank": "9307"
   }
 }

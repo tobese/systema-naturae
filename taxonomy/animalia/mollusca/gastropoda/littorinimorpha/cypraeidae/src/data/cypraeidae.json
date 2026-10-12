@@ -6661,6 +6661,18 @@
             "checklistbank": "ott7946161"
           },
           "children": []
+        },
+        {
+          "id": "SP_CYPRAEA_SP",
+          "name": "Cypraea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypraea",
+          "sourceIds": {
+            "checklistbank": "3140045"
+          },
+          "children": []
         }
       ]
     },
@@ -7730,6 +7742,18 @@
             "checklistbank": "1221976"
           },
           "children": []
+        },
+        {
+          "id": "SP_BISTOLIDA_SP",
+          "name": "Bistolida sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bistolida",
+          "sourceIds": {
+            "checklistbank": "2924193"
+          },
+          "children": []
         }
       ]
     },
@@ -8330,7 +8354,8 @@
           "sourceIds": {
             "checklistbank": "1221970"
           },
-          "children": []
+          "children": [],
+          "authorship": "Schilder, 1971"
         },
         {
           "id": "SP_CRIBRARULA_GASPARDI",
@@ -8354,7 +8379,8 @@
           "sourceIds": {
             "checklistbank": "1470201"
           },
-          "children": []
+          "children": [],
+          "authorship": "Lorenz, 1997"
         },
         {
           "id": "SP_CRIBRARULA_ROTTNESTENSIS",
@@ -8818,7 +8844,8 @@
           "sourceIds": {
             "checklistbank": "636290"
           },
-          "children": []
+          "children": [],
+          "authorship": "Cate, 1968"
         },
         {
           "id": "SP_ZOILA_ORIENTALIS",
@@ -8842,7 +8869,8 @@
           "sourceIds": {
             "checklistbank": "1222001"
           },
-          "children": []
+          "children": [],
+          "authorship": "Raybaudi, 1991"
         },
         {
           "id": "SP_ZOILA_MARIALLAE",
@@ -10405,7 +10433,8 @@
           "sourceIds": {
             "checklistbank": "966208"
           },
-          "children": []
+          "children": [],
+          "authorship": "Schilder, 1927"
         },
         {
           "id": "SP_ERRONEA_FERNANDOI",
@@ -10417,7 +10446,8 @@
           "sourceIds": {
             "checklistbank": "1221951"
           },
-          "children": []
+          "children": [],
+          "authorship": "Cate, 1969"
         },
         {
           "id": "SP_ERRONEA_ANGIOYORUM",
@@ -11598,7 +11628,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3ace23ff-41ac-5d9-ac7-f979977904ba77"
+          "uuid": "3ace23ff-41ac-5d9-ac7-f979977904ba77",
+          "authorship": "Cotton & Godfrey, 1932",
+          "sourceIds": {
+            "checklistbank": "346128"
+          }
         },
         {
           "id": "SP_NOTOCYPRAEA_COMPTONI_GRAY",
@@ -19308,7 +19342,8 @@
           "sourceIds": {
             "col": [
               "7SKJY"
-            ]
+            ],
+            "checklistbank": "346145"
           },
           "authorityIds": "col:7SKJY"
         },
@@ -28697,10 +28732,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cypraeidae"
+    },
+    {
+      "id": "GENUS_TRIVIELLA",
+      "name": "Triviella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIVIELLA_MILLARDI",
+          "name": "Triviella millardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triviella",
+          "sourceIds": {
+            "checklistbank": "220464"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cypraeidae"
+    },
+    {
+      "id": "GENUS_CYPRAEIDAE",
+      "name": "Cypraeidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYPRAEIDAE_SP",
+          "name": "Cypraeidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypraeidae",
+          "sourceIds": {
+            "checklistbank": "2672324"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cypraeidae"
     }
   ],
-  "genusCount": 113,
-  "speciesCount": 1700,
+  "genusCount": 115,
+  "speciesCount": 1704,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -28709,6 +28786,6 @@
       "orderKey": 7390893,
       "familyKey": 2675
     },
-    "checklistbank": "ott272319"
+    "checklistbank": "69557"
   }
 }

@@ -78,7 +78,8 @@
             ],
             "col": [
               "B2QGY"
-            ]
+            ],
+            "checklistbank": "2943483"
           },
           "uuid": "3f895588-8552-595-9ac-0f61fcd337acb6",
           "authorityIds": "col:B2QGY,gbif:12204679,mycobank:570979"
@@ -104,7 +105,8 @@
             ],
             "col": [
               "9Z868"
-            ]
+            ],
+            "checklistbank": "2781078"
           },
           "uuid": "2b336f09-350f-5fa-987-49f066f55b61d1",
           "authorityIds": "col:9Z868,gbif:11210756,mycobank:838413"
@@ -382,7 +384,8 @@
             ],
             "col": [
               "9Z86B"
-            ]
+            ],
+            "checklistbank": "2865841"
           },
           "uuid": "841efb8d-d526-563-8e1-c53f7a8cfb2b6b",
           "authorityIds": "col:9Z86B,gbif:11126494,mycobank:838414"
@@ -533,7 +536,8 @@
             ],
             "col": [
               "9Z86C"
-            ]
+            ],
+            "checklistbank": "2715933"
           },
           "uuid": "a00b957d-1795-507-aa6-089b3f5735333f",
           "authorityIds": "col:9Z86C,gbif:12176543,mycobank:831758"
@@ -613,7 +617,8 @@
             ],
             "col": [
               "B2NDY"
-            ]
+            ],
+            "checklistbank": "2795244"
           },
           "uuid": "224d42c8-1e83-552-9cc-c116b57021b4fa",
           "authorityIds": "col:B2NDY,gbif:11769144,mycobank:838353"
@@ -720,7 +725,8 @@
             ],
             "col": [
               "B2QKM"
-            ]
+            ],
+            "checklistbank": "2963361"
           },
           "uuid": "cf06f473-bdbf-5e7-99e-600837a1a0cbc5",
           "authorityIds": "col:B2QKM,gbif:12225040,mycobank:570982"
@@ -827,7 +833,8 @@
             ],
             "col": [
               "B2NWH"
-            ]
+            ],
+            "checklistbank": "2795245"
           },
           "uuid": "465316cd-a4ed-555-806-ce22a83c3b6a9e",
           "authorityIds": "col:B2NWH,gbif:11616536,mycobank:838354"
@@ -907,7 +914,8 @@
             ],
             "col": [
               "B2QL7"
-            ]
+            ],
+            "checklistbank": "2943485"
           },
           "uuid": "ffe3fb5c-d195-5a7-afc-53acc423e5d247",
           "authorityIds": "col:B2QL7,gbif:12243942,mycobank:570981"
@@ -1172,7 +1180,8 @@
             ],
             "col": [
               "B2NHZ"
-            ]
+            ],
+            "checklistbank": "2795246"
           },
           "uuid": "15d9b4ff-8b5e-5a8-aa5-fc835999b5ec81",
           "authorityIds": "col:B2NHZ,gbif:11688467,mycobank:838355"
@@ -1246,7 +1255,8 @@
             ],
             "col": [
               "CB2R2"
-            ]
+            ],
+            "checklistbank": "2963359"
           },
           "authorityIds": "col:CB2R2,mycobank:570980"
         },
@@ -1312,7 +1322,8 @@
           "sourceIds": {
             "checklistbank": "1136725"
           },
-          "children": []
+          "children": [],
+          "authorship": "Murrill, 1939"
         },
         {
           "id": "SP_GYROPORUS_PSEUDONEOLONGICYSTIDIATUS",
@@ -1491,6 +1502,19 @@
           "lineage": "Gyroporus",
           "sourceIds": {
             "checklistbank": "ott8008954"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GYROPORUS_SUBCAERULESCENS_MING_ZHANG_T_H_LI_2022",
+          "name": "Gyroporus subcaerulescens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gyroporus",
+          "authorship": "Ming Zhang & T.H. Li, 2022",
+          "sourceIds": {
+            "checklistbank": "2963360"
           },
           "children": []
         }
@@ -1698,11 +1722,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gyroporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GYROPORACEAE",
+          "name": "uncultured Gyroporaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2024013"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gyroporaceae"
     }
   ],
   "authorship": "Locquin",
-  "genusCount": 5,
-  "speciesCount": 80,
+  "genusCount": 6,
+  "speciesCount": 82,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1711,6 +1756,6 @@
       "orderKey": 1063,
       "familyKey": 4193
     },
-    "checklistbank": "ott1033612"
+    "checklistbank": "227328"
   }
 }

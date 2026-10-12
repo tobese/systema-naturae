@@ -6304,7 +6304,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Panorpa",
-          "uuid": "d23eaf1f-b8e2-5e9-b1c-26412ce86784e8"
+          "uuid": "d23eaf1f-b8e2-5e9-b1c-26412ce86784e8",
+          "authorship": "Tjeder, 1936",
+          "sourceIds": {
+            "checklistbank": "1105291"
+          }
         },
         {
           "id": "SP_PANORPA_DICERAS",
@@ -6334,7 +6338,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Panorpa",
-          "uuid": "b2af7836-56f0-53c-93a-674d8aee4a108c"
+          "uuid": "b2af7836-56f0-53c-93a-674d8aee4a108c",
+          "authorship": "Cheng, 1949",
+          "sourceIds": {
+            "checklistbank": "706605"
+          }
         },
         {
           "id": "SP_PANORPA_FLUVICAUDARIA",
@@ -6344,7 +6352,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Panorpa",
-          "uuid": "d8bc84e0-d094-5cc-be3-730a1d7ab4c4e8"
+          "uuid": "d8bc84e0-d094-5cc-be3-730a1d7ab4c4e8",
+          "authorship": "Miyake, 1910",
+          "sourceIds": {
+            "checklistbank": "115712"
+          }
         },
         {
           "id": "SP_PANORPA_GALLOISI",
@@ -6364,7 +6376,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Panorpa",
-          "uuid": "d6674e05-cfac-5b5-888-555af356daf2d3"
+          "uuid": "d6674e05-cfac-5b5-888-555af356daf2d3",
+          "authorship": "Carpenter, 1948",
+          "sourceIds": {
+            "checklistbank": "1112948"
+          }
         },
         {
           "id": "SP_PANORPA_LEAI",
@@ -7076,7 +7092,8 @@
           "sourceIds": {
             "checklistbank": "ott799209"
           },
-          "children": []
+          "children": [],
+          "authorship": "Huang, Hua & Shen, 2004"
         },
         {
           "id": "SP_PANORPA_SP",
@@ -7505,7 +7522,8 @@
             ],
             "itis": [
               "1226911"
-            ]
+            ],
+            "checklistbank": "2678412"
           },
           "authorityIds": "col:C9J8K,itis:1226911"
         },
@@ -7735,6 +7753,18 @@
           "lineage": "Dicerapanorpa",
           "sourceIds": {
             "checklistbank": "1634006"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DICERAPANORPA_SP",
+          "name": "Dicerapanorpa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dicerapanorpa",
+          "sourceIds": {
+            "checklistbank": "2492640"
           },
           "children": []
         }
@@ -11651,7 +11681,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Neopanorpa",
-          "uuid": "4fe30995-02b8-588-aeb-de840a9f047831"
+          "uuid": "4fe30995-02b8-588-aeb-de840a9f047831",
+          "authorship": "Chou & Wang, 1988",
+          "sourceIds": {
+            "checklistbank": "2484272"
+          }
         },
         {
           "id": "SP_NEOPANORPA_DIMIDIATA",
@@ -11810,6 +11844,18 @@
           "lineage": "Neopanorpa",
           "sourceIds": {
             "checklistbank": "ott7870354"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOPANORPA_SP",
+          "name": "Neopanorpa sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neopanorpa",
+          "sourceIds": {
+            "checklistbank": "115644"
           },
           "children": []
         }
@@ -12751,7 +12797,8 @@
             ],
             "col": [
               "CBDC8"
-            ]
+            ],
+            "checklistbank": "2678414"
           },
           "authorityIds": "col:CBDC8,itis:1227047"
         },
@@ -14138,13 +14185,46 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "panorpidae"
+    },
+    {
+      "id": "GENUS_PANORPIDAE",
+      "name": "Panorpidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PANORPIDAE_SP",
+          "name": "Panorpidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panorpidae",
+          "sourceIds": {
+            "checklistbank": "1453256"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANORPIDAE_GEN",
+          "name": "Panorpidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panorpidae",
+          "sourceIds": {
+            "checklistbank": "1980565"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "panorpidae"
     }
   ],
-  "speciesCount": 755,
+  "speciesCount": 759,
   "appSlug": "panorpidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 17,
+  "genusCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -14153,6 +14233,6 @@
       "orderKey": 1000,
       "familyKey": 7925
     },
-    "checklistbank": "ott32437"
+    "checklistbank": "50439"
   }
 }

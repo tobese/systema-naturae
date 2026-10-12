@@ -749,7 +749,8 @@
             ],
             "col": [
               "V2P99"
-            ]
+            ],
+            "checklistbank": "3380639"
           },
           "authorityIds": "col:V2P99,itis:1266394"
         },
@@ -769,7 +770,8 @@
             ],
             "col": [
               "V2P9C"
-            ]
+            ],
+            "checklistbank": "3380638"
           },
           "authorityIds": "col:V2P9C,itis:1266396"
         },
@@ -828,7 +830,8 @@
             ],
             "col": [
               "V2P9B"
-            ]
+            ],
+            "checklistbank": "3380640"
           },
           "authorityIds": "col:V2P9B,itis:1266395"
         },
@@ -907,7 +910,8 @@
             ],
             "itis": [
               "1261385"
-            ]
+            ],
+            "checklistbank": "3108936"
           },
           "authorityIds": "col:QYRDZ,itis:1261385"
         },
@@ -920,6 +924,18 @@
           "lineage": "Nocticola",
           "sourceIds": {
             "checklistbank": "1675681"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NOCTICOLA_SP",
+          "name": "Nocticola sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nocticola",
+          "sourceIds": {
+            "checklistbank": "439345"
           },
           "children": []
         }
@@ -2587,9 +2603,30 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nocticolidae"
+    },
+    {
+      "id": "GENUS_NOCTICOLIDAE",
+      "name": "Nocticolidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NOCTICOLIDAE_SP",
+          "name": "Nocticolidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nocticolidae",
+          "sourceIds": {
+            "checklistbank": "488258"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nocticolidae"
     }
   ],
-  "speciesCount": 133,
+  "speciesCount": 135,
   "appSlug": "nocticolidae",
   "lineage": "Corydioidea",
   "continents": [
@@ -2597,7 +2634,7 @@
     "Asia",
     "Australia"
   ],
-  "genusCount": 30,
+  "genusCount": 31,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -2607,6 +2644,6 @@
       "orderKey": 800,
       "familyKey": 5525
     },
-    "checklistbank": "ott154284"
+    "checklistbank": "85826"
   }
 }

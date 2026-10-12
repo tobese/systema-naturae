@@ -148,7 +148,8 @@
             ],
             "col": [
               "9Z3PK"
-            ]
+            ],
+            "checklistbank": "2075522"
           },
           "uuid": "4cbcb03f-95f0-5b1-a3b-e9ba93a44ec305",
           "authorityIds": "col:9Z3PK,gbif:9512306,mycobank:570451",
@@ -233,6 +234,18 @@
           },
           "uuid": "cc1f6712-4c70-580-9c4-dbac508b428ab8",
           "authorityIds": "col:5XZ8Y,gbif:2581332,mycobank:135948",
+          "children": []
+        },
+        {
+          "id": "SP_CHLOROVIBRISSEA_SP",
+          "name": "Chlorovibrissea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chlorovibrissea",
+          "sourceIds": {
+            "checklistbank": "355358"
+          },
           "children": []
         }
       ],
@@ -353,7 +366,8 @@
             ],
             "col": [
               "5BBYS"
-            ]
+            ],
+            "checklistbank": "2544963"
           },
           "uuid": "146555a6-d654-5c3-8d1-5e2d0845dbebd4",
           "authorityIds": "col:5BBYS,gbif:10868793,mycobank:556283",
@@ -407,7 +421,8 @@
             ],
             "col": [
               "7FQQT"
-            ]
+            ],
+            "checklistbank": "2593328"
           },
           "uuid": "fed94bfc-1ba0-5c2-86c-6306b819c3f4a7",
           "authorityIds": "col:7FQQT,gbif:2581347,mycobank:460335",
@@ -1300,6 +1315,19 @@
             "checklistbank": "1701484"
           },
           "children": []
+        },
+        {
+          "id": "SP_VIBRISSEA_CATENATA_W_H_TIAN_K_D_HYDE_MAHARACHCH_2024",
+          "name": "Vibrissea catenata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vibrissea",
+          "authorship": "W.H. Tian, K.D. Hyde & Maharachch., 2024",
+          "sourceIds": {
+            "checklistbank": "3406584"
+          },
+          "children": []
         }
       ],
       "authorship": "Fries"
@@ -1898,11 +1926,86 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "vibrisseaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VIBRISSEA",
+          "name": "uncultured Vibrissea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "909242"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_VIBRISSEACEAE",
+          "name": "uncultured Vibrisseaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "986051"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vibrisseaceae"
+    },
+    {
+      "id": "GENUS_VIBRISSEACEAE",
+      "name": "Vibrisseaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIBRISSEACEAE_SP",
+          "name": "Vibrisseaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vibrisseaceae",
+          "sourceIds": {
+            "checklistbank": "1085317"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vibrisseaceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_VIBRISSEA",
+          "name": "cf. Vibrissea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "1116228"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vibrisseaceae"
     }
   ],
   "authorship": "Locquin",
-  "genusCount": 16,
-  "speciesCount": 79,
+  "genusCount": 19,
+  "speciesCount": 85,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1910,6 +2013,7 @@
       "classKey": 179,
       "orderKey": 1052,
       "familyKey": 8386
-    }
+    },
+    "checklistbank": "292493"
   }
 }

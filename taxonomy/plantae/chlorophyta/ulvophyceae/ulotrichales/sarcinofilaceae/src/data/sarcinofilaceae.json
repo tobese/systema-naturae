@@ -21,7 +21,23 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "73eb5d9c-d98c-5b8-a00-ddf1267a7f305d"
+          "uuid": "73eb5d9c-d98c-5b8-a00-ddf1267a7f305d",
+          "authorship": "(Broady) Darienko & Proeschold, 2017",
+          "sourceIds": {
+            "checklistbank": "141643"
+          }
+        },
+        {
+          "id": "SP_SARCINOFILUM_SP",
+          "name": "Sarcinofilum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcinofilum",
+          "sourceIds": {
+            "checklistbank": "1432091"
+          },
+          "children": []
         }
       ]
     },
@@ -43,10 +59,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sarcinofilaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SARCINOFILUM",
+          "name": "uncultured Sarcinofilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "3049191"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcinofilaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 2,
+  "genusCount": 3,
+  "speciesCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -54,6 +91,7 @@
       "classKey": 195,
       "orderKey": 1356,
       "familyKey": 10280605
-    }
+    },
+    "checklistbank": "2682566"
   }
 }

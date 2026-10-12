@@ -490,7 +490,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Prymnesium",
           "children": [],
-          "uuid": "410aed72-68e1-5d2-9da-806ce6c6f090e1"
+          "uuid": "410aed72-68e1-5d2-9da-806ce6c6f090e1",
+          "authorship": "(S.Seoane, Eikrem, Edvardsen & Pienaar) Edvardsen, Eikrem & Probert, 2011",
+          "sourceIds": {
+            "checklistbank": "462884"
+          }
         },
         {
           "id": "SP_PRYMNESIUM_RADIATUM",
@@ -521,6 +525,30 @@
           "lineage": "Prymnesium",
           "children": [],
           "uuid": "e28b7a08-4bc7-51f-975-d7baa1c848cdca"
+        },
+        {
+          "id": "SP_PRYMNESIUM_SP",
+          "name": "Prymnesium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prymnesium",
+          "sourceIds": {
+            "checklistbank": "284783"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PRYMNESIUM_AFF",
+          "name": "Prymnesium aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prymnesium",
+          "sourceIds": {
+            "checklistbank": "412153"
+          },
+          "children": []
         }
       ]
     },
@@ -635,6 +663,18 @@
           "uuid": "7d5147d6-57cc-51c-923-a70b9cde16b342",
           "authorityIds": "gbif:7547729",
           "authorship": "(Manton) Edvardsen & Eikrem, 2011"
+        },
+        {
+          "id": "SP_HAPTOLINA_SP",
+          "name": "Haptolina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haptolina",
+          "sourceIds": {
+            "checklistbank": "2812479"
+          },
+          "children": []
         }
       ]
     },
@@ -698,6 +738,31 @@
           "sourceIds": {
             "checklistbank": "223932"
           }
+        },
+        {
+          "id": "SP_PSEUDOHAPTOLINA_SOROKINII_STONIK_EFIMOVA_ORLOVA_2016",
+          "name": "Pseudohaptolina sorokinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudohaptolina",
+          "authorship": "Stonik, Efimova & Orlova, 2016",
+          "sourceIds": {
+            "checklistbank": "1891361"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOHAPTOLINA_SP",
+          "name": "Pseudohaptolina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudohaptolina",
+          "sourceIds": {
+            "checklistbank": "2302168"
+          },
+          "children": []
         }
       ]
     },
@@ -1204,6 +1269,18 @@
             "checklistbank": "651140"
           },
           "children": []
+        },
+        {
+          "id": "SP_PLATYCHRYSIS_SP",
+          "name": "Platychrysis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platychrysis",
+          "sourceIds": {
+            "checklistbank": "127566"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1282,10 +1359,73 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "prymnesiaceae"
+    },
+    {
+      "id": "GENUS_IMANTONIA",
+      "name": "Imantonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_IMANTONIA_SP",
+          "name": "Imantonia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Imantonia",
+          "sourceIds": {
+            "checklistbank": "284757"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prymnesiaceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_IMANTONIA",
+          "name": "cf. Imantonia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "424484"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prymnesiaceae"
+    },
+    {
+      "id": "GENUS_PRYMNESIACEAE",
+      "name": "Prymnesiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PRYMNESIACEAE_SP",
+          "name": "Prymnesiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prymnesiaceae",
+          "sourceIds": {
+            "checklistbank": "2812483"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prymnesiaceae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 73,
+  "genusCount": 14,
+  "speciesCount": 82,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1293,6 +1433,7 @@
       "classKey": 258,
       "orderKey": 1086,
       "familyKey": 2910
-    }
+    },
+    "checklistbank": "418967"
   }
 }

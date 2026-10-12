@@ -1106,7 +1106,8 @@
             ],
             "col": [
               "6ZWQ8"
-            ]
+            ],
+            "checklistbank": "2654162"
           },
           "uuid": "086694e5-25f8-5c5-897-be0b6a3237dece",
           "authorityIds": "col:6ZWQ8,gbif:10800362,mycobank:832874",
@@ -1218,7 +1219,8 @@
           "sourceIds": {
             "checklistbank": "1560408"
           },
-          "children": []
+          "children": [],
+          "authorship": "N.I. de Silva & Lumyong, 2023"
         },
         {
           "id": "SP_STOMIOPELTIS_LOPHIRAE",
@@ -1241,6 +1243,18 @@
           "lineage": "Stomiopeltis",
           "sourceIds": {
             "checklistbank": "ott8003389"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STOMIOPELTIS_SP",
+          "name": "Stomiopeltis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stomiopeltis",
+          "sourceIds": {
+            "checklistbank": "218405"
           },
           "children": []
         }
@@ -8876,7 +8890,8 @@
             ],
             "col": [
               "9ZBVS"
-            ]
+            ],
+            "checklistbank": "2777675"
           },
           "uuid": "1b6ade90-9d75-5ef-84f-edf27265a98259",
           "authorityIds": "col:9ZBVS,gbif:11426450,mycobank:555447",
@@ -8902,7 +8917,8 @@
             ],
             "col": [
               "9ZBVT"
-            ]
+            ],
+            "checklistbank": "2777676"
           },
           "uuid": "8052f3be-bc5b-547-9f8-c93e0a2789727d",
           "authorityIds": "col:9ZBVT,gbif:11767963,mycobank:555451",
@@ -9060,7 +9076,8 @@
             ],
             "col": [
               "B2QHG"
-            ]
+            ],
+            "checklistbank": "2772224"
           },
           "uuid": "8bec4267-5b41-5e6-ba7-e6c726c5838ffb",
           "authorityIds": "col:B2QHG,gbif:12203031,mycobank:557872",
@@ -12198,6 +12215,18 @@
             "checklistbank": "ott8003383"
           },
           "children": []
+        },
+        {
+          "id": "SP_MICROPELTIS_SP",
+          "name": "Micropeltis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micropeltis",
+          "sourceIds": {
+            "checklistbank": "2484187"
+          },
+          "children": []
         }
       ],
       "authorship": "Montagne"
@@ -13910,11 +13939,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "micropeltidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_STOMIOPELTIS",
+          "name": "uncultured Stomiopeltis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1763318"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_LEPTOSPORA",
+          "name": "uncultured Leptospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1763344"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_MICROPELTIDACEAE",
+          "name": "uncultured Micropeltidaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980271"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "micropeltidaceae"
+    },
+    {
+      "id": "GENUS_MICROPELTIDACEAE",
+      "name": "Micropeltidaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROPELTIDACEAE_SP",
+          "name": "Micropeltidaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micropeltidaceae",
+          "sourceIds": {
+            "checklistbank": "2011739"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "micropeltidaceae"
     }
   ],
   "authorship": "Clements & Shear",
-  "genusCount": 59,
-  "speciesCount": 550,
+  "genusCount": 61,
+  "speciesCount": 556,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -13923,6 +14018,6 @@
       "orderKey": 1036,
       "familyKey": 2476
     },
-    "checklistbank": "ott890066"
+    "checklistbank": "218400"
   }
 }

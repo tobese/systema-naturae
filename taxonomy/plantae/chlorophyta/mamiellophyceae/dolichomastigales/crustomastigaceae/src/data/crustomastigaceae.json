@@ -21,7 +21,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "19720b8d-225b-5db-a66-3bef560f42e7a6"
+          "uuid": "19720b8d-225b-5db-a66-3bef560f42e7a6",
+          "authorship": "Zingone, 2002",
+          "sourceIds": {
+            "checklistbank": "195967"
+          }
         },
         {
           "id": "SP_CRUSTOMASTIX_DIDYMA",
@@ -32,12 +36,66 @@
           "lineage": "Crustomastix",
           "children": [],
           "uuid": "188fcb5a-6318-57d-8f5-eb17108e7865d7"
+        },
+        {
+          "id": "SP_CRUSTOMASTIX_SP",
+          "name": "Crustomastix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crustomastix",
+          "sourceIds": {
+            "checklistbank": "284967"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CRUSTOMASTIGACEAE",
+          "name": "uncultured Crustomastigaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2588594"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "crustomastigaceae"
+    },
+    {
+      "id": "GENUS_CRUSTOMASTIGACEAE",
+      "name": "Crustomastigaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRUSTOMASTIGACEAE_SP",
+          "name": "Crustomastigaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crustomastigaceae",
+          "sourceIds": {
+            "checklistbank": "2812573"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "crustomastigaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 2,
+  "genusCount": 3,
+  "speciesCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -45,6 +103,7 @@
       "classKey": 8176772,
       "orderKey": 7985202,
       "familyKey": 4906186
-    }
+    },
+    "checklistbank": "1525216"
   }
 }

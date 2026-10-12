@@ -3093,7 +3093,8 @@
             ],
             "itis": [
               "2326"
-            ]
+            ],
+            "checklistbank": "515480"
           },
           "uuid": "27c8795e-81de-524-b62-93f3247b8cd27f",
           "authorityIds": "gbif:4275497,itis:2326"
@@ -7467,10 +7468,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8129460
+            "gbif": 8129460,
+            "checklistbank": "439532"
           },
           "uuid": "243c8d62-7113-565-973-19ad00495505b9",
-          "authorityIds": "gbif:8129460"
+          "authorityIds": "gbif:8129460",
+          "authorship": "P.L.Crouan & H.M.Crouan"
         },
         {
           "id": "MELOSIRA_TRUNCATA",
@@ -8096,6 +8099,31 @@
           "lineage": "Melosira",
           "sourceIds": {
             "checklistbank": "970046"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_SP",
+          "name": "Melosira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "sourceIds": {
+            "checklistbank": "402400"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELOSIRA_CAPSULARUM_YANG_WANG_2022",
+          "name": "Melosira capsularum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melosira",
+          "authorship": "Yang & Wang, 2022",
+          "sourceIds": {
+            "checklistbank": "2779520"
           },
           "children": []
         }
@@ -9437,7 +9465,7 @@
     }
   ],
   "genusCount": 22,
-  "speciesCount": 534,
+  "speciesCount": 536,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -9445,6 +9473,7 @@
       "classKey": 7947184,
       "orderKey": 8080352,
       "familyKey": 2932
-    }
+    },
+    "checklistbank": "35123"
   }
 }

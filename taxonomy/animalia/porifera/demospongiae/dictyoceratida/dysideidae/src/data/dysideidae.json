@@ -251,6 +251,18 @@
           },
           "authorityIds": "col:3RZ96",
           "authorship": "(Keller, 1889)"
+        },
+        {
+          "id": "SP_LAMELLODYSIDEA_SP",
+          "name": "Lamellodysidea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lamellodysidea",
+          "sourceIds": {
+            "checklistbank": "436462"
+          },
+          "children": []
         }
       ]
     },
@@ -2000,7 +2012,8 @@
           "sourceIds": {
             "checklistbank": "131693"
           },
-          "children": []
+          "children": [],
+          "authorship": "Laubenfels, 1936"
         },
         {
           "id": "SP_DYSIDEA_TEAWANUI",
@@ -2071,6 +2084,30 @@
           "lineage": "Dysidea",
           "sourceIds": {
             "checklistbank": "1443983"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSIDEA_CF",
+          "name": "Dysidea cf.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysidea",
+          "sourceIds": {
+            "checklistbank": "190528"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DYSIDEA_SP",
+          "name": "Dysidea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysidea",
+          "sourceIds": {
+            "checklistbank": "253175"
           },
           "children": []
         }
@@ -2550,6 +2587,18 @@
           "lineage": "Euryspongia",
           "sourceIds": {
             "checklistbank": "1550148"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EURYSPONGIA_SP",
+          "name": "Euryspongia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euryspongia",
+          "sourceIds": {
+            "checklistbank": "1163035"
           },
           "children": []
         }
@@ -3102,10 +3151,64 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dysideidae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_DYSIDEA",
+          "name": "cf. Dysidea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "1163040"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CF_EURYSPONGIA",
+          "name": "cf. Euryspongia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "1163041"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dysideidae"
+    },
+    {
+      "id": "GENUS_DYSIDEIDAE",
+      "name": "Dysideidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DYSIDEIDAE_SP",
+          "name": "Dysideidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysideidae",
+          "sourceIds": {
+            "checklistbank": "1163356"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dysideidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 164,
+  "genusCount": 24,
+  "speciesCount": 171,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3114,6 +3217,6 @@
       "orderKey": 1009,
       "familyKey": 3897
     },
-    "checklistbank": "33f41797-c837-435c-a587-55d3daa11875"
+    "checklistbank": "190525"
   }
 }

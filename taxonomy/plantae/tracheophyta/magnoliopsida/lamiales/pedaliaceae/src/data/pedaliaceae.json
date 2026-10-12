@@ -601,7 +601,8 @@
           "sourceIds": {
             "wfo": [
               "wfo-0001423279"
-            ]
+            ],
+            "checklistbank": "3004059"
           },
           "authorityIds": "wfo:wfo-0001423279"
         },
@@ -937,7 +938,8 @@
           "sourceIds": {
             "checklistbank": "1124994"
           },
-          "children": []
+          "children": [],
+          "authorship": "J.B.Gillett, 1953"
         },
         {
           "id": "SP_SESAMUM_SCHENCKII",
@@ -949,7 +951,8 @@
           "sourceIds": {
             "checklistbank": "ott5522122"
           },
-          "children": []
+          "children": [],
+          "authorship": "Asch. ex Schinz, 1888"
         },
         {
           "id": "SP_SESAMUM_AFF",
@@ -996,6 +999,18 @@
           "lineage": "Sesamum",
           "sourceIds": {
             "checklistbank": "ott7630271"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SESAMUM_SP",
+          "name": "Sesamum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sesamum",
+          "sourceIds": {
+            "checklistbank": "2749404"
           },
           "children": []
         }
@@ -1735,7 +1750,8 @@
           "sourceIds": {
             "checklistbank": "431717"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rauh, 1996"
         },
         {
           "id": "SP_UNCARINA_SAKALAVA",
@@ -1747,7 +1763,8 @@
           "sourceIds": {
             "checklistbank": "468661"
           },
-          "children": []
+          "children": [],
+          "authorship": "Humbert, 1962"
         },
         {
           "id": "SP_UNCARINA_PLATYCARPA",
@@ -1759,7 +1776,8 @@
           "sourceIds": {
             "checklistbank": "1125007"
           },
-          "children": []
+          "children": [],
+          "authorship": "Lavranos, 1995"
         },
         {
           "id": "SP_UNCARINA_ANCARANENSIS",
@@ -2507,7 +2525,8 @@
           "sourceIds": {
             "checklistbank": "1124988"
           },
-          "children": []
+          "children": [],
+          "authorship": "Schinz, 1896"
         },
         {
           "id": "SP_PTERODISCUS_SACCATUS",
@@ -2846,10 +2865,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pedaliaceae"
+    },
+    {
+      "id": "GENUS_TRAPELLA",
+      "name": "Trapella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRAPELLA_SINENSIS_OLIV_1887",
+          "name": "Trapella sinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trapella",
+          "authorship": "Oliv., 1887",
+          "sourceIds": {
+            "checklistbank": "1218918"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pedaliaceae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 156,
+  "genusCount": 16,
+  "speciesCount": 158,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -2858,6 +2899,6 @@
       "orderKey": 408,
       "familyKey": 6650
     },
-    "checklistbank": "ott91446"
+    "checklistbank": "4180"
   }
 }

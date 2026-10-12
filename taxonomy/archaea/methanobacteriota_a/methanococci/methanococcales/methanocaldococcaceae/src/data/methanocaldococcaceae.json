@@ -28,10 +28,12 @@
             ],
             "col": [
               "CSMD3"
-            ]
+            ],
+            "checklistbank": "1301915"
           },
           "uuid": "c7110a3b-0c50-563-833-64299192d3dc0d",
-          "authorityIds": "col:CSMD3,gbif:8410934"
+          "authorityIds": "col:CSMD3,gbif:8410934",
+          "authorship": "Stewart et al. 2015"
         },
         {
           "id": "METHANOCALDOCOCCUS_FERVENS",
@@ -208,7 +210,8 @@
           "sourceIds": {
             "col": [
               "VQ58K"
-            ]
+            ],
+            "checklistbank": "3414486"
           },
           "authorityIds": "col:VQ58K"
         },
@@ -228,6 +231,18 @@
             ]
           },
           "authorityIds": "col:CSMD4"
+        },
+        {
+          "id": "SP_METHANOCALDOCOCCUS_SP",
+          "name": "Methanocaldococcus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocaldococcus",
+          "sourceIds": {
+            "checklistbank": "213203"
+          },
+          "children": []
         }
       ]
     },
@@ -287,14 +302,80 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:573649"
           },
           "children": []
+        },
+        {
+          "id": "SP_METHANOTORRIS_SP",
+          "name": "Methanotorris sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanotorris",
+          "sourceIds": {
+            "checklistbank": "213186"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocaldococcaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHANOCALDOCOCCUS",
+          "name": "uncultured Methanocaldococcus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "328406"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOTORRIS",
+          "name": "uncultured Methanotorris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "549381"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanocaldococcaceae"
+    },
+    {
+      "id": "GENUS_METHANOCALDOCOCCACEAE",
+      "name": "Methanocaldococcaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOCALDOCOCCACEAE_ARCHAEON",
+          "name": "Methanocaldococcaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanocaldococcaceae",
+          "sourceIds": {
+            "checklistbank": "2933266"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanocaldococcaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 12,
+  "genusCount": 5,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -302,6 +383,7 @@
       "classKey": 161,
       "orderKey": 1193,
       "familyKey": 3803
-    }
+    },
+    "checklistbank": "196117"
   }
 }

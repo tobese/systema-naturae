@@ -66,11 +66,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10782497
+            "gbif": 10782497,
+            "checklistbank": "767776"
           },
           "uuid": "8fdd61de-21f2-543-b17-f997245dbeca49",
           "authorityIds": "gbif:10782497",
-          "children": []
+          "children": [],
+          "authorship": "Foissner & Wolf 2009"
         },
         {
           "id": "PLATYOPHRYA_CITRINA",
@@ -332,6 +334,18 @@
           },
           "children": [],
           "uuid": "838904cb-0167-582-b0b-d9ce430db44058"
+        },
+        {
+          "id": "SP_PLATYOPHRYA_SP",
+          "name": "Platyophrya sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyophrya",
+          "sourceIds": {
+            "checklistbank": "638350"
+          },
+          "children": []
         }
       ]
     },
@@ -420,6 +434,31 @@
           "authorityIds": "col:77QPL,gbif:8149010",
           "children": [],
           "authorship": "Kahl"
+        },
+        {
+          "id": "SP_PLATYOPHRYIDES_MAGNUS_FOISSNER_1993",
+          "name": "Platyophryides magnus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyophryides",
+          "authorship": "Foissner, 1993",
+          "sourceIds": {
+            "checklistbank": "1003332"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLATYOPHRYIDES_SP",
+          "name": "Platyophryides sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyophryides",
+          "sourceIds": {
+            "checklistbank": "1538787"
+          },
+          "children": []
         }
       ]
     },
@@ -470,10 +509,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "platyophryidae"
+    },
+    {
+      "id": "GENUS_PLATOPHRYIDAE",
+      "name": "Platophryidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLATOPHRYIDAE_SP",
+          "name": "Platophryidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platophryidae",
+          "sourceIds": {
+            "checklistbank": "767771"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "platyophryidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PLATYOPHRYA",
+          "name": "uncultured Platyophrya",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108158"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "platyophryidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 20,
+  "genusCount": 7,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -482,6 +563,6 @@
       "orderKey": 7520151,
       "familyKey": 8350291
     },
-    "checklistbank": "de198e85-0ae9-407e-8424-a40c987b3ed8"
+    "checklistbank": "767765"
   }
 }

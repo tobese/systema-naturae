@@ -150,10 +150,23 @@
             ],
             "col": [
               "CXS3"
-            ]
+            ],
+            "checklistbank": "5101"
           },
           "uuid": "42e726be-4043-5f0-90a-5a25384f4bf45d",
           "authorityIds": "col:CXS3,gbif:2597087,mycobank:326157"
+        },
+        {
+          "id": "SP_AMORPHOTHECA_SP",
+          "name": "Amorphotheca sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amorphotheca",
+          "sourceIds": {
+            "checklistbank": "1564369"
+          },
+          "children": []
         }
       ],
       "authorship": "Parbery"
@@ -208,11 +221,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amorphothecaceae"
+    },
+    {
+      "id": "GENUS_AMORPHOTHECACEAE",
+      "name": "Amorphothecaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMORPHOTHECACEAE_SP",
+          "name": "Amorphothecaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amorphothecaceae",
+          "sourceIds": {
+            "checklistbank": "3350574"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amorphothecaceae"
     }
   ],
   "authorship": "Parbery",
-  "genusCount": 4,
-  "speciesCount": 7,
+  "genusCount": 5,
+  "speciesCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -220,6 +254,7 @@
       "classKey": 179,
       "orderKey": 1052,
       "familyKey": 1946
-    }
+    },
+    "checklistbank": "2907085"
   }
 }

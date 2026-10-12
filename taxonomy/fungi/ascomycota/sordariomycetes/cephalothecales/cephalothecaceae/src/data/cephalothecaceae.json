@@ -32,7 +32,8 @@
             ],
             "col": [
               "6BLGT"
-            ]
+            ],
+            "checklistbank": "1920181"
           },
           "uuid": "462e18b0-e4c5-59b-ba8-a5a5ee5fd375db",
           "authorityIds": "col:6BLGT,gbif:12175000,mycobank:815530"
@@ -63,6 +64,18 @@
           },
           "uuid": "81eedc0a-ffb4-5e9-88a-e9ee92f6b8b1ce",
           "authorityIds": "col:6BLH5,gbif:2573826,mycobank:312331"
+        },
+        {
+          "id": "SP_CRYPTENDOXYLA_SP",
+          "name": "Cryptendoxyla sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptendoxyla",
+          "sourceIds": {
+            "checklistbank": "1920179"
+          },
+          "children": []
         }
       ],
       "authorship": "Malloch & Cain"
@@ -618,6 +631,18 @@
             "checklistbank": "ott5316482"
           },
           "children": []
+        },
+        {
+          "id": "SP_CEPHALOTHECA_SP",
+          "name": "Cephalotheca sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalotheca",
+          "sourceIds": {
+            "checklistbank": "1388990"
+          },
+          "children": []
         }
       ],
       "authorship": "Fuckel"
@@ -863,7 +888,8 @@
             ],
             "col": [
               "CBRJB"
-            ]
+            ],
+            "checklistbank": "3045979"
           },
           "authorityIds": "col:CBRJB,mycobank:559430"
         },
@@ -888,6 +914,31 @@
           "lineage": "Phialemonium",
           "sourceIds": {
             "checklistbank": "ott891340"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHIALEMONIUM_THERMOPHILUM_W_GAMS_J_LACEY_L_W_HOU_L_CAI_CROUS_2023",
+          "name": "Phialemonium thermophilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phialemonium",
+          "authorship": "(W. Gams & J. Lacey) L.W. Hou, L. Cai & Crous, 2023",
+          "sourceIds": {
+            "checklistbank": "223376"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHIALEMONIUM_SP",
+          "name": "Phialemonium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phialemonium",
+          "sourceIds": {
+            "checklistbank": "263840"
           },
           "children": []
         }
@@ -1078,6 +1129,18 @@
           },
           "uuid": "664f5bb1-d45a-582-a16-4f3869066b303b",
           "authorityIds": "col:5BD5P,gbif:10674303,mycobank:823714"
+        },
+        {
+          "id": "SP_VICTORIOMYCES_SP",
+          "name": "Victoriomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Victoriomyces",
+          "sourceIds": {
+            "checklistbank": "3422717"
+          },
+          "children": []
         }
       ],
       "authorship": "Maggi, Davolos & Persiani"
@@ -1153,11 +1216,75 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cephalothecaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CEPHALOTHECA",
+          "name": "uncultured Cephalotheca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "997638"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cephalothecaceae"
+    },
+    {
+      "id": "GENUS_CEPHALOTHECACEAE",
+      "name": "Cephalothecaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CEPHALOTHECACEAE_SP",
+          "name": "Cephalothecaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalothecaceae",
+          "sourceIds": {
+            "checklistbank": "2012323"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cephalothecaceae"
+    },
+    {
+      "id": "GENUS_SCAPTONA",
+      "name": "Scaptona",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCAPTONA_RAMOSA_J_C_MOURA_R_N_BARBOSA_R_F_R_MEL_2023",
+          "name": "Scaptona ramosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scaptona",
+          "authorship": "J.C. Moura, R.N. Barbosa & R.F.R. Mel, 2023",
+          "sourceIds": {
+            "checklistbank": "3062539"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cephalothecaceae"
     }
   ],
   "authorship": "Höhnel",
-  "genusCount": 10,
-  "speciesCount": 44,
+  "genusCount": 13,
+  "speciesCount": 52,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1166,6 +1293,6 @@
       "orderKey": 10796203,
       "familyKey": 8426
     },
-    "checklistbank": "ott649020"
+    "checklistbank": "95343"
   }
 }

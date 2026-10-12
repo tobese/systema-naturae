@@ -101,7 +101,8 @@
             ],
             "itis": [
               "85266"
-            ]
+            ],
+            "checklistbank": "114069"
           },
           "authorityIds": "col:5X6D8,itis:85266"
         },
@@ -175,7 +176,8 @@
             ],
             "itis": [
               "85272"
-            ]
+            ],
+            "checklistbank": "6837"
           },
           "authorityIds": "col:PFM4,itis:85272"
         },
@@ -308,7 +310,8 @@
             ],
             "itis": [
               "85276"
-            ]
+            ],
+            "checklistbank": "114068"
           },
           "authorityIds": "col:PFM9,itis:85276"
         },
@@ -684,6 +687,42 @@
             "checklistbank": "720420"
           },
           "children": []
+        },
+        {
+          "id": "SP_CALANUS_SP",
+          "name": "Calanus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calanus",
+          "sourceIds": {
+            "checklistbank": "261848"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALANUS_CF",
+          "name": "Calanus cf.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calanus",
+          "sourceIds": {
+            "checklistbank": "2761447"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALANUS_ENVIRONMENTAL",
+          "name": "Calanus environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calanus",
+          "sourceIds": {
+            "checklistbank": "2813994"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -710,7 +749,8 @@
             ],
             "col": [
               "5X6C3"
-            ]
+            ],
+            "checklistbank": "148998"
           },
           "authorityIds": "col:5X6C3,itis:610031"
         },
@@ -805,6 +845,18 @@
             ]
           },
           "authorityIds": "col:5X6BP"
+        },
+        {
+          "id": "SP_CALANOIDES_MACROCARINATUS",
+          "name": "Calanoides macrocarinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calanoides",
+          "sourceIds": {
+            "checklistbank": "148999"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -872,7 +924,8 @@
             ],
             "col": [
               "46C5H"
-            ]
+            ],
+            "checklistbank": "119368"
           },
           "authorityIds": "col:46C5H,itis:667083"
         },
@@ -892,7 +945,8 @@
             ],
             "col": [
               "46C5L"
-            ]
+            ],
+            "checklistbank": "119370"
           },
           "authorityIds": "col:46C5L,itis:667085"
         },
@@ -912,7 +966,8 @@
             ],
             "col": [
               "46C5M"
-            ]
+            ],
+            "checklistbank": "197018"
           },
           "authorityIds": "col:46C5M,itis:85284"
         },
@@ -932,7 +987,8 @@
             ],
             "itis": [
               "610043"
-            ]
+            ],
+            "checklistbank": "148992"
           },
           "authorityIds": "col:46C5P,itis:610043"
         },
@@ -1131,6 +1187,18 @@
           "authorship": "(Lubbock, 1860)",
           "sourceIds": {
             "checklistbank": "714155"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNDINULA_SP",
+          "name": "Undinula sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Undinula",
+          "sourceIds": {
+            "checklistbank": "3098967"
           },
           "children": []
         }
@@ -1488,13 +1556,69 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calanidae"
+    },
+    {
+      "id": "GENUS_LIMNOCALANUS",
+      "name": "Limnocalanus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LIMNOCALANUS_MACRURUS_SARS_1863",
+          "name": "Limnocalanus macrurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limnocalanus",
+          "authorship": "Sars, 1863",
+          "sourceIds": {
+            "checklistbank": "399988"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIMNOCALANUS_JOHANSENI_MARSH_1920",
+          "name": "Limnocalanus johanseni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limnocalanus",
+          "authorship": "Marsh, 1920",
+          "sourceIds": {
+            "checklistbank": "443533"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calanidae"
+    },
+    {
+      "id": "GENUS_CALANIDAE",
+      "name": "Calanidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALANIDAE_SP",
+          "name": "Calanidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calanidae",
+          "sourceIds": {
+            "checklistbank": "2304910"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calanidae"
     }
   ],
-  "speciesCount": 82,
+  "speciesCount": 90,
   "appSlug": "calanidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 16,
+  "genusCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1503,6 +1627,6 @@
       "orderKey": 679,
       "familyKey": 4902
     },
-    "checklistbank": "7f1c1519-bedd-49bd-be51-42d2cb9693a8"
+    "checklistbank": "6835"
   }
 }

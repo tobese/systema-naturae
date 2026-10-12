@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "50f33ab4-f423-599-8ef-c55796d7ea7a17",
-          "authorityIds": "gbif:3212597,mycobank:321033"
+          "authorityIds": "gbif:3212597,mycobank:321033",
+          "children": []
         },
         {
           "id": "PROTOSPORANGIUM_BISPORUM",
@@ -51,7 +52,8 @@
             ]
           },
           "uuid": "afbd10ed-5ed9-5dd-826-825483d4e68524",
-          "authorityIds": "gbif:3212596,mycobank:321034"
+          "authorityIds": "gbif:3212596,mycobank:321034",
+          "children": []
         },
         {
           "id": "PROTOSPORANGIUM_CONICUM",
@@ -72,7 +74,8 @@
             ]
           },
           "uuid": "70f21d60-b562-52d-b31-8052997a88d893",
-          "authorityIds": "gbif:3212595,mycobank:128253"
+          "authorityIds": "gbif:3212595,mycobank:128253",
+          "children": []
         },
         {
           "id": "PROTOSPORANGIUM_FRAGILE",
@@ -93,7 +96,8 @@
             ]
           },
           "uuid": "815039f5-0d12-52b-aff-6c4ce3aebf4c36",
-          "authorityIds": "gbif:3212594,mycobank:321035"
+          "authorityIds": "gbif:3212594,mycobank:321035",
+          "children": []
         }
       ]
     },
@@ -123,10 +127,37 @@
             ],
             "col": [
               "4JKH6"
-            ]
+            ],
+            "checklistbank": "65008"
           },
           "uuid": "51bd1ebc-5900-5d9-aa5-5327ee12272eb3",
-          "authorityIds": "col:4JKH6,gbif:3212599,mycobank:320584"
+          "authorityIds": "col:4JKH6,gbif:3212599,mycobank:320584",
+          "children": []
+        },
+        {
+          "id": "SP_PLANOPROTOSTELIUM_SP",
+          "name": "Planoprotostelium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planoprotostelium",
+          "sourceIds": {
+            "checklistbank": "373135"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLANOPROTOSTELIUM_FUNGIVORUM_HILLMANN_FERLING_NOVOHRADSKA_GLOECKNER_2017",
+          "name": "Planoprotostelium fungivorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planoprotostelium",
+          "authorship": "Hillmann, Ferling, Novohradska & Gloeckner 2017",
+          "sourceIds": {
+            "checklistbank": "1890364"
+          },
+          "children": []
         }
       ]
     },
@@ -156,10 +187,12 @@
             ],
             "col": [
               "RYDH"
-            ]
+            ],
+            "checklistbank": "435410"
           },
           "uuid": "0f1695f7-4c92-56e-83a-76fa411e30db4b",
-          "authorityIds": "col:RYDH,gbif:3212601,mycobank:327547"
+          "authorityIds": "col:RYDH,gbif:3212601,mycobank:327547",
+          "children": []
         }
       ]
     },
@@ -192,9 +225,53 @@
             ]
           },
           "uuid": "493b3a89-b318-55c-8ae-4cef17dd72d622",
-          "authorityIds": "col:SLTY,gbif:3212603,mycobank:310472"
+          "authorityIds": "col:SLTY,gbif:3212603,mycobank:310472",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CAVOSTELIACEAE",
+      "name": "Cavosteliaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAVOSTELIACEAE_SP",
+          "name": "Cavosteliaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cavosteliaceae",
+          "sourceIds": {
+            "checklistbank": "1655010"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cavosteliaceae"
+    },
+    {
+      "id": "GENUS_NANNOSTELIUM",
+      "name": "Nannostelium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NANNOSTELIUM_AMPULLACEUM_IWAMOTO_NAKAYAMA_2024",
+          "name": "Nannostelium ampullaceum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannostelium",
+          "authorship": "Iwamoto & Nakayama, 2024",
+          "sourceIds": {
+            "checklistbank": "3024251"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cavosteliaceae"
     }
   ],
   "sourceIds": {
@@ -204,6 +281,9 @@
       "classKey": 145,
       "orderKey": 1111,
       "familyKey": 7521
-    }
-  }
+    },
+    "checklistbank": "435412"
+  },
+  "genusCount": 6,
+  "speciesCount": 11
 }

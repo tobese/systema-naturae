@@ -33,7 +33,8 @@
             ],
             "col": [
               "KSFX"
-            ]
+            ],
+            "checklistbank": "1457312"
           },
           "uuid": "00b007b5-dc12-5f8-adf-f7e588a06de746",
           "authorityIds": "col:KSFX,gbif:2576873,mycobank:363306",
@@ -90,7 +91,8 @@
             ],
             "col": [
               "KSFZ"
-            ]
+            ],
+            "checklistbank": "101485"
           },
           "uuid": "9f0d2b97-7c36-54e-94c-e07e3af97bb36b",
           "authorityIds": "col:KSFZ,gbif:2576870,mycobank:363307",
@@ -230,6 +232,44 @@
           "uuid": "8ea45ee0-c937-5b3-bc9-51e362e920bed6",
           "authorityIds": "col:KSG6,gbif:2576881,mycobank:363308",
           "children": []
+        },
+        {
+          "id": "SP_BARRMAELIA_SP",
+          "name": "Barrmaelia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barrmaelia",
+          "sourceIds": {
+            "checklistbank": "2860012"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARRMAELIA_SHANGRILAENSIS_L_S_DISSAN_K_D_HYDE_J_C_KANG_2024",
+          "name": "Barrmaelia shangrilaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barrmaelia",
+          "authorship": "L.S. Dissan., K.D. Hyde & J.C. Kang, 2024",
+          "sourceIds": {
+            "checklistbank": "3137538"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARRMAELIA_YUNNANENSIS_L_S_DISSAN_K_D_HYDE_J_C_KANG_2024",
+          "name": "Barrmaelia yunnanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barrmaelia",
+          "authorship": "L.S. Dissan., K.D. Hyde & J.C. Kang, 2024",
+          "sourceIds": {
+            "checklistbank": "3137539"
+          },
+          "children": []
         }
       ],
       "authorship": "Rappaz"
@@ -263,6 +303,96 @@
             "checklistbank": "1646794"
           },
           "children": []
+        },
+        {
+          "id": "SP_ENTOSORDARIA_QUERCINA_VOGLMAYR_JAKLITSCH_2017",
+          "name": "Entosordaria quercina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entosordaria",
+          "authorship": "Voglmayr & Jaklitsch, 2017",
+          "sourceIds": {
+            "checklistbank": "2032587"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENTOSORDARIA_SHANGRILANA_L_S_DISSAN_K_D_HYDE_J_C_KANG_2024",
+          "name": "Entosordaria shangrilana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entosordaria",
+          "authorship": "L.S. Dissan., K.D. Hyde & J.C. Kang, 2024",
+          "sourceIds": {
+            "checklistbank": "3137550"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barrmaeliaceae"
+    },
+    {
+      "id": "GENUS_INDURATIA",
+      "name": "Induratia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_INDURATIA_APIOSPORA_SAMUELS_E_MULL_PETRINI_1987",
+          "name": "Induratia apiospora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Induratia",
+          "authorship": "Samuels, E. Mull. & Petrini, 1987",
+          "sourceIds": {
+            "checklistbank": "2735576"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barrmaeliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_BARRMAELIA",
+          "name": "uncultured Barrmaelia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2794660"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "barrmaeliaceae"
+    },
+    {
+      "id": "GENUS_BARRMAELIACEAE",
+      "name": "Barrmaeliaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARRMAELIACEAE_SP",
+          "name": "Barrmaeliaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barrmaeliaceae",
+          "sourceIds": {
+            "checklistbank": "3139428"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -270,8 +400,8 @@
     }
   ],
   "authorship": "Voglmayr & Jaklitsch",
-  "genusCount": 2,
-  "speciesCount": 10,
+  "genusCount": 5,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -279,6 +409,7 @@
       "classKey": 320,
       "orderKey": 1298,
       "familyKey": 10221647
-    }
+    },
+    "checklistbank": "2032584"
   }
 }

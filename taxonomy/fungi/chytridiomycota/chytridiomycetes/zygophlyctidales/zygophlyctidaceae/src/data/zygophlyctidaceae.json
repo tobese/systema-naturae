@@ -25,10 +25,12 @@
             ],
             "col": [
               "5DBJX"
-            ]
+            ],
+            "checklistbank": "2606246"
           },
           "uuid": "55b66a3c-2ede-592-a14-2eb2b1422daaf7",
-          "authorityIds": "col:5DBJX,gbif:10766096,mycobank:831581"
+          "authorityIds": "col:5DBJX,gbif:10766096,mycobank:831581",
+          "children": []
         },
         {
           "id": "SP_ZYGOPHLYCTIS_MELOSIRAE_CANTER_K_SETO",
@@ -47,10 +49,12 @@
             ],
             "col": [
               "5DBJY"
-            ]
+            ],
+            "checklistbank": "1891209"
           },
           "uuid": "062257c5-307d-55c-aa8-670ed7c4dd87e3",
-          "authorityIds": "col:5DBJY,gbif:10699070,mycobank:831582"
+          "authorityIds": "col:5DBJY,gbif:10699070,mycobank:831582",
+          "children": []
         },
         {
           "id": "SP_ZYGOPHLYCTIS_PLANKTONICA_DOWELD",
@@ -69,21 +73,56 @@
             ],
             "col": [
               "5DBJZ"
-            ]
+            ],
+            "checklistbank": "2583829"
           },
           "uuid": "970d2032-bf81-553-9cf-33a6834ceae9b4",
-          "authorityIds": "col:5DBJZ,gbif:7982038,mycobank:550449"
+          "authorityIds": "col:5DBJZ,gbif:7982038,mycobank:550449",
+          "children": []
+        },
+        {
+          "id": "SP_ZYGOPHLYCTIS_SP",
+          "name": "Zygophlyctis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zygophlyctis",
+          "sourceIds": {
+            "checklistbank": "3036231"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Zygophlyctidaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ZYGOPHLYCTIDACEAE",
+          "name": "uncultured Zygophlyctidaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2785076"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zygophlyctidaceae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "zygophlyctidaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chytridiomycota > Chytridiomycetes",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -91,6 +130,7 @@
       "classKey": 318,
       "orderKey": 12199324,
       "familyKey": 11699244
-    }
+    },
+    "checklistbank": "2605711"
   }
 }

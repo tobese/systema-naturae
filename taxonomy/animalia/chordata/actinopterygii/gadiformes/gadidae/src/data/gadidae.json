@@ -310,7 +310,8 @@
             ],
             "col": [
               "42Z4S"
-            ]
+            ],
+            "checklistbank": "369968"
           },
           "uuid": "9f1423a5-c00a-555-8b0-ae3e9eb7a08df0",
           "authorityIds": "col:42Z4S,gbif:177711458,gbif:2415774,itis:164775,wikidata:Q589537"
@@ -364,6 +365,18 @@
           },
           "uuid": "430ca90e-4f8b-567-842-5f9c6917c43e81",
           "authorityIds": "col:42Z4T,gbif:177711461,gbif:2415777,itis:164774,wikidata:Q743248"
+        },
+        {
+          "id": "SP_MICROMESISTIUS_ENVIRONMENTAL",
+          "name": "Micromesistius environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromesistius",
+          "sourceIds": {
+            "checklistbank": "1814138"
+          },
+          "children": []
         }
       ]
     },
@@ -470,7 +483,8 @@
             ],
             "itis": [
               "164719"
-            ]
+            ],
+            "checklistbank": "80721"
           },
           "uuid": "c0ed015f-5f2f-53c-b08-d68d7951ec461e",
           "authorityIds": "col:42WJ2,gbif:177711465,gbif:2415888,itis:164719,wikidata:Q369995"
@@ -500,7 +514,8 @@
             ],
             "itis": [
               "164720"
-            ]
+            ],
+            "checklistbank": "34823"
           },
           "uuid": "04beb5e6-4d0d-5eb-b6e-8e9175a416cf45",
           "authorityIds": "col:42WJ3,gbif:177711466,gbif:2415893,itis:164720,wikidata:Q535432"
@@ -801,6 +816,30 @@
             "checklistbank": "555110"
           },
           "children": []
+        },
+        {
+          "id": "SP_POLLACHIUS_SP",
+          "name": "Pollachius sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pollachius",
+          "sourceIds": {
+            "checklistbank": "654608"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POLLACHIUS_ENVIRONMENTAL",
+          "name": "Pollachius environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pollachius",
+          "sourceIds": {
+            "checklistbank": "1814141"
+          },
+          "children": []
         }
       ]
     },
@@ -948,7 +987,8 @@
             ],
             "itis": [
               "934083"
-            ]
+            ],
+            "checklistbank": "442960"
           },
           "uuid": "9bb21d6e-213a-5e6-a51-e419b90775efd1",
           "authorityIds": "col:6K6PF,gbif:177711489,gbif:2415769,itis:934083,wikidata:Q28752183"
@@ -974,10 +1014,12 @@
             ],
             "col": [
               "D54CH"
-            ]
+            ],
+            "checklistbank": "3083464"
           },
           "uuid": "00792bb7-afc5-54a-97f-5c8e0709adbfd3",
-          "authorityIds": "col:D54CH,gbif:217769308,gbif:9422581,wikidata:Q61885525"
+          "authorityIds": "col:D54CH,gbif:217769308,gbif:9422581,wikidata:Q61885525",
+          "authorship": "(Koefoed, 1956)"
         },
         {
           "id": "GADUS_MACROCEPHALUS",
@@ -1566,6 +1608,18 @@
           "authorship": "Lepechin, 1774",
           "sourceIds": {
             "checklistbank": "1079050"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GADUS_SP",
+          "name": "Gadus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gadus",
+          "sourceIds": {
+            "checklistbank": "8051"
           },
           "children": []
         }
@@ -2386,10 +2440,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gadidae"
+    },
+    {
+      "id": "GENUS_GADIDAE",
+      "name": "Gadidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GADIDAE_SP",
+          "name": "Gadidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gadidae",
+          "sourceIds": {
+            "checklistbank": "2727004"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gadidae"
     }
   ],
-  "genusCount": 30,
-  "speciesCount": 124,
+  "genusCount": 31,
+  "speciesCount": 129,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2397,6 +2472,6 @@
       "orderKey": 549,
       "familyKey": 3701
     },
-    "checklistbank": "5e5657c8-626e-49e0-a821-1d1cb6d2efd1"
+    "checklistbank": "8045"
   }
 }

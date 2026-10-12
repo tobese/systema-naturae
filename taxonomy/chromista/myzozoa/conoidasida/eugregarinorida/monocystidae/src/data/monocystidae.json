@@ -86,11 +86,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 12192918
+            "gbif": 12192918,
+            "checklistbank": "2985290"
           },
           "uuid": "039e2914-a578-5cb-aa7-19788506144e9e",
           "authorityIds": "gbif:12192918",
-          "children": []
+          "children": [],
+          "authorship": "Schall, 2021"
         },
         {
           "id": "STOMATOCYSTIS_INDICA",
@@ -107,6 +109,18 @@
           },
           "uuid": "517dd9cc-b4c3-548-a35-ed5062cf448bdc",
           "authorityIds": "gbif:10388524",
+          "children": []
+        },
+        {
+          "id": "SP_STOMATOCYSTIS_SP",
+          "name": "Stomatocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stomatocystis",
+          "sourceIds": {
+            "checklistbank": "3388239"
+          },
           "children": []
         }
       ]
@@ -553,11 +567,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 12227234
+            "gbif": 12227234,
+            "checklistbank": "2744819"
           },
           "uuid": "190de544-2215-5e3-909-0a3d54a9af6631",
           "authorityIds": "gbif:12227234",
-          "children": []
+          "children": [],
+          "authorship": "Keller & Schall, 2020"
         },
         {
           "id": "MONOCYSTIS_PHERETIMI",
@@ -687,6 +703,18 @@
             "checklistbank": "1642627"
           },
           "children": []
+        },
+        {
+          "id": "SP_MONOCYSTIS_SP",
+          "name": "Monocystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monocystis",
+          "sourceIds": {
+            "checklistbank": "543235"
+          },
+          "children": []
         }
       ]
     },
@@ -745,6 +773,28 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_APOLOCYSTIS",
+      "name": "Apolocystis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_APOLOCYSTIS_BOSANQUETI_SCHALL_NOURI_AIIN_GORRES_2023",
+          "name": "Apolocystis bosanqueti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apolocystis",
+          "authorship": "Schall, Nouri-Aiin & Gorres, 2023",
+          "sourceIds": {
+            "checklistbank": "2985292"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monocystidae"
     }
   ],
   "sourceIds": {
@@ -754,8 +804,9 @@
       "classKey": 7531158,
       "orderKey": 8856420,
       "familyKey": 7992299
-    }
+    },
+    "checklistbank": "110314"
   },
-  "genusCount": 5,
-  "speciesCount": 40
+  "genusCount": 6,
+  "speciesCount": 43
 }

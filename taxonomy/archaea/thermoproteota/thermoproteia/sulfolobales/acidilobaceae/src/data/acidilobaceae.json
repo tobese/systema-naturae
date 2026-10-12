@@ -82,10 +82,12 @@
             ],
             "col": [
               "64JBK"
-            ]
+            ],
+            "checklistbank": "105851"
           },
           "uuid": "1b3c5cc7-267d-55b-8c5-979153aca14c70",
-          "authorityIds": "col:64JBK,gbif:1000013,itis:951600"
+          "authorityIds": "col:64JBK,gbif:1000013,itis:951600",
+          "authorship": "Prokofeva et al. 2000"
         },
         {
           "id": "ACIDILOBUS_SACCHAROVORANS",
@@ -107,10 +109,12 @@
             ],
             "itis": [
               "951601"
-            ]
+            ],
+            "checklistbank": "242703"
           },
           "uuid": "4206e3c4-77fd-537-a0a-0c3426e6c79e62",
-          "authorityIds": "col:64JBJ,gbif:5900549,itis:951601"
+          "authorityIds": "col:64JBJ,gbif:5900549,itis:951601",
+          "authorship": "Prokofeva et al. 2009"
         },
         {
           "id": "ACIDILOBUS_SPEC.",
@@ -137,7 +141,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Acidilobus",
           "children": [],
-          "uuid": "77210663-6f83-544-9e0-a5e1cabd595623"
+          "uuid": "77210663-6f83-544-9e0-a5e1cabd595623",
+          "authorship": "Boyd et al. 2007",
+          "sourceIds": {
+            "checklistbank": "411357"
+          }
+        },
+        {
+          "id": "SP_ACIDILOBUS_SP",
+          "name": "Acidilobus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidilobus",
+          "sourceIds": {
+            "checklistbank": "242702"
+          },
+          "children": []
         }
       ]
     },
@@ -604,10 +624,100 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acidilobaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ACIDILOBUS",
+          "name": "uncultured Acidilobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "242694"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidilobaceae"
+    },
+    {
+      "id": "GENUS_ACIDILOBACEAE",
+      "name": "Acidilobaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACIDILOBACEAE_ARCHAEON",
+          "name": "Acidilobaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acidilobaceae",
+          "sourceIds": {
+            "checklistbank": "1915614"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidilobaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_TIAMATELLA_ST_JOHN_AND_REYSENBACH_2024",
+          "name": "Candidatus Tiamatella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "St. John and Reysenbach 2024",
+          "sourceIds": {
+            "checklistbank": "3144224"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_HESTIELLA_ST_JOHN_AND_REYSENBACH_2024",
+          "name": "Candidatus Hestiella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "St. John and Reysenbach 2024",
+          "sourceIds": {
+            "checklistbank": "3144225"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_CALYPSONELLA_ST_JOHN_AND_REYSENBACH_2024",
+          "name": "Candidatus Calypsonella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "St. John and Reysenbach 2024",
+          "sourceIds": {
+            "checklistbank": "3144226"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acidilobaceae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 27,
+  "genusCount": 18,
+  "speciesCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -616,6 +726,6 @@
       "orderKey": 564,
       "familyKey": 5900544
     },
-    "checklistbank": "ott732035"
+    "checklistbank": "871007"
   }
 }

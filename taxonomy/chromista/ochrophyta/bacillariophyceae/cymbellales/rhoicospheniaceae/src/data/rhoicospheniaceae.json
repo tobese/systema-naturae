@@ -694,7 +694,8 @@
             "checklistbank": "ott7556985"
           },
           "uuid": "34d196f9-f4fe-5b3-8c5-52604cf0ad5067",
-          "authorityIds": "gbif:10551670"
+          "authorityIds": "gbif:10551670",
+          "authorship": "Frankovich, Ashworth & M.J. Sullivan, 2018"
         },
         {
           "id": "TURSIOCOLA_BONDEI",
@@ -857,7 +858,8 @@
           "sourceIds": {
             "checklistbank": "ott7556986"
           },
-          "children": []
+          "children": [],
+          "authorship": "Frankovich & M.J.Sullivan, 2015"
         },
         {
           "id": "SP_TURSIOCOLA_VARICOPULIFERA",
@@ -868,6 +870,32 @@
           "lineage": "Tursiocola",
           "sourceIds": {
             "checklistbank": "ott7556988"
+          },
+          "children": [],
+          "authorship": "Frankovich & M.J.Sullivan, 2015"
+        },
+        {
+          "id": "SP_TURSIOCOLA_SP",
+          "name": "Tursiocola sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tursiocola",
+          "sourceIds": {
+            "checklistbank": "2291665"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TURSIOCOLA_DENYSII_FRANKOVICH_SULLIVAN_2015",
+          "name": "Tursiocola denysii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tursiocola",
+          "authorship": "Frankovich & Sullivan, 2015",
+          "sourceIds": {
+            "checklistbank": "2971475"
           },
           "children": []
         }
@@ -1580,6 +1608,31 @@
             "checklistbank": "ott7556974"
           },
           "children": []
+        },
+        {
+          "id": "SP_GOMPHONEMOPSIS_SP",
+          "name": "Gomphonemopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphonemopsis",
+          "sourceIds": {
+            "checklistbank": "3229526"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOMPHONEMOPSIS_NOVO_ZELANDICUM_BOOTH_HARPER_2012",
+          "name": "Gomphonemopsis novo-zelandicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphonemopsis",
+          "authorship": "(Booth) Harper, 2012",
+          "sourceIds": {
+            "checklistbank": "3229527"
+          },
+          "children": []
         }
       ]
     },
@@ -1673,6 +1726,31 @@
           "uuid": "b0230b26-6499-594-a80-74c719d8a8bad5",
           "authorityIds": "gbif:10124189",
           "authorship": "Riaux-Gobin, Witkowski, Ector & D.Chevallier, 2017"
+        },
+        {
+          "id": "SP_CHELONICOLA_SP",
+          "name": "Chelonicola sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonicola",
+          "sourceIds": {
+            "checklistbank": "2971470"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHELONICOLA_COSTARICENSIS_MAJEWSKA_DE_STEFANO_VAN_DE_VIJVER_2015",
+          "name": "Chelonicola costaricensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonicola",
+          "authorship": "Majewska, De Stefano & Van de Vijver, 2015",
+          "sourceIds": {
+            "checklistbank": "2983541"
+          },
+          "children": []
         }
       ]
     },
@@ -1946,10 +2024,75 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhoicospheniaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_RHOICOSPHENIA",
+          "name": "uncultured Rhoicosphenia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2547831"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhoicospheniaceae"
+    },
+    {
+      "id": "GENUS_YUZAOEA",
+      "name": "Yuzaoea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_YUZAOEA_SINENSIS_C_H_LI_H_H_LIU_Y_H_GAO_C_P_CHEN_2024",
+          "name": "Yuzaoea sinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Yuzaoea",
+          "authorship": "C.H.Li, H.H.Liu, Y.H.Gao & C.P.Chen, 2024",
+          "sourceIds": {
+            "checklistbank": "2911151"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhoicospheniaceae"
+    },
+    {
+      "id": "GENUS_POULINEA",
+      "name": "Poulinea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POULINEA_LEPIDOCHELICOLA_MAJEWSKA_DE_STEFANO_VAN_DE_VIJVER_2015",
+          "name": "Poulinea lepidochelicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poulinea",
+          "authorship": "Majewska, De Stefano & Van de Vijver, 2015",
+          "sourceIds": {
+            "checklistbank": "2925282"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhoicospheniaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 107,
+  "genusCount": 16,
+  "speciesCount": 116,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1958,6 +2101,6 @@
       "orderKey": 7798126,
       "familyKey": 7394249
     },
-    "checklistbank": "ott2815338"
+    "checklistbank": "1574458"
   }
 }

@@ -61,7 +61,8 @@
             ],
             "col": [
               "B2PNT"
-            ]
+            ],
+            "checklistbank": "2949317"
           },
           "uuid": "70c63ec1-dca1-5f0-b0e-75fedfeefd18f8",
           "authorityIds": "col:B2PNT,gbif:12240407,mycobank:836322",
@@ -117,7 +118,8 @@
             ],
             "col": [
               "B37SH"
-            ]
+            ],
+            "checklistbank": "2748097"
           },
           "uuid": "fc7a7919-7b9b-544-948-c2c6b75b759e2c",
           "authorityIds": "col:B37SH,gbif:12233878,mycobank:836265",
@@ -220,7 +222,8 @@
             ],
             "col": [
               "9ZCH6"
-            ]
+            ],
+            "checklistbank": "1986986"
           },
           "uuid": "bd513de7-06b9-5f1-8bc-2842cabde6d854",
           "authorityIds": "col:9ZCH6,gbif:11904546,mycobank:819393",
@@ -380,11 +383,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gelatoporiaceae"
+    },
+    {
+      "id": "GENUS_GELATOPORIA",
+      "name": "Gelatoporia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GELATOPORIA_SUBVERMISPORA",
+          "name": "Gelatoporia subvermispora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gelatoporia",
+          "sourceIds": {
+            "checklistbank": "42742"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GELATOPORIA_SP",
+          "name": "Gelatoporia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gelatoporia",
+          "sourceIds": {
+            "checklistbank": "1987990"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gelatoporiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CINEREOMYCES",
+          "name": "uncultured Cinereomyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2292163"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GELATOPORIA",
+          "name": "uncultured Gelatoporia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980812"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gelatoporiaceae"
     }
   ],
   "authorship": "O. Miettinen, A. Justo & D.S. Hibbett",
-  "genusCount": 7,
-  "speciesCount": 15,
+  "genusCount": 9,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -392,6 +461,7 @@
       "classKey": 186,
       "orderKey": 1145,
       "familyKey": 9943145
-    }
+    },
+    "checklistbank": "2028217"
   }
 }

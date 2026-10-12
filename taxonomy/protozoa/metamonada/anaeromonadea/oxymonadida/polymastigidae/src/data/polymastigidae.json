@@ -27,7 +27,8 @@
             "checklistbank": "ott7060174"
           },
           "uuid": "0c5d1bbb-f5cd-5d4-838-536eb0d5d56de9",
-          "authorityIds": "gbif:9542805"
+          "authorityIds": "gbif:9542805",
+          "authorship": "Treitli et al. 2018"
         },
         {
           "id": "MONOCERCOMONOIDES_COMMUNIS",
@@ -45,7 +46,8 @@
             "checklistbank": "ott7060175"
           },
           "uuid": "b7d64175-8eec-582-986-aefab2c154245d",
-          "authorityIds": "gbif:9236218"
+          "authorityIds": "gbif:9236218",
+          "authorship": "Treitli et al. 2018"
         },
         {
           "id": "MONOCERCOMONOIDES_MERKOVICENSIS",
@@ -63,7 +65,8 @@
             "checklistbank": "ott7060178"
           },
           "uuid": "ea872c76-4113-583-a93-5a973e391d1399",
-          "authorityIds": "gbif:9536223"
+          "authorityIds": "gbif:9536223",
+          "authorship": "Treitli et al. 2018"
         },
         {
           "id": "SP_MONOCERCOMONOIDES_TERMITIS",
@@ -87,7 +90,8 @@
           "sourceIds": {
             "checklistbank": "ott7060176"
           },
-          "children": []
+          "children": [],
+          "authorship": "Nie, 1950"
         },
         {
           "id": "SP_MONOCERCOMONOIDES_MELOLONTHAE",
@@ -98,6 +102,19 @@
           "lineage": "Monocercomonoides",
           "sourceIds": {
             "checklistbank": "ott7060177"
+          },
+          "children": [],
+          "authorship": "(Grassi, 1879)"
+        },
+        {
+          "id": "SP_MONOCERCOMONOIDES_SP",
+          "name": "Monocercomonoides sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monocercomonoides",
+          "sourceIds": {
+            "checklistbank": "302782"
           },
           "children": []
         }
@@ -143,10 +160,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "polymastigidae"
+    },
+    {
+      "id": "GENUS_POLYMASTIGIDAE",
+      "name": "Polymastigidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POLYMASTIGIDAE_SP",
+          "name": "Polymastigidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polymastigidae",
+          "sourceIds": {
+            "checklistbank": "2202101"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "polymastigidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 8,
+  "genusCount": 4,
+  "speciesCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,
@@ -155,6 +193,6 @@
       "orderKey": 7891620,
       "familyKey": 3236055
     },
-    "checklistbank": "ott517073"
+    "checklistbank": "302780"
   }
 }

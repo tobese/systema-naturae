@@ -304,7 +304,8 @@
             ],
             "col": [
               "C9LH4"
-            ]
+            ],
+            "checklistbank": "3074003"
           },
           "authorityIds": "col:C9LH4,mycobank:901050"
         },
@@ -357,6 +358,18 @@
           "authorship": "(Bourdot & Galzin) Chamuris, 1986",
           "sourceIds": {
             "checklistbank": "511789"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYSTOSTEREUM_SP",
+          "name": "Cystostereum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cystostereum",
+          "sourceIds": {
+            "checklistbank": "2494061"
           },
           "children": []
         }
@@ -618,7 +631,8 @@
             ],
             "col": [
               "C9DC6"
-            ]
+            ],
+            "checklistbank": "3074002"
           },
           "authorityIds": "col:C9DC6,mycobank:901046"
         },
@@ -638,7 +652,8 @@
             ],
             "col": [
               "C9DC5"
-            ]
+            ],
+            "checklistbank": "3074001"
           },
           "authorityIds": "col:C9DC5,mycobank:901033"
         },
@@ -711,6 +726,18 @@
             "checklistbank": "1540927"
           },
           "children": []
+        },
+        {
+          "id": "SP_CRUSTOMYCES_SP",
+          "name": "Crustomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Crustomyces",
+          "sourceIds": {
+            "checklistbank": "1051916"
+          },
+          "children": []
         }
       ],
       "authorship": "Jülich"
@@ -772,7 +799,8 @@
             ],
             "col": [
               "B2XWQ"
-            ]
+            ],
+            "checklistbank": "2998105"
           },
           "uuid": "66369c7f-6217-5b8-860-99670e1a3d4d34",
           "authorityIds": "col:B2XWQ,gbif:12226744,mycobank:846254"
@@ -828,7 +856,8 @@
           "sourceIds": {
             "checklistbank": "1590097"
           },
-          "children": []
+          "children": [],
+          "authorship": "C.A. Paez, Nakasone, J.A. Sm. & M.E. Sm., 2024"
         },
         {
           "id": "SP_PARVODONTIA_GLOEOCYSTIDIATA",
@@ -839,6 +868,18 @@
           "lineage": "Parvodontia",
           "sourceIds": {
             "checklistbank": "1616307"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARVODONTIA_SP",
+          "name": "Parvodontia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parvodontia",
+          "sourceIds": {
+            "checklistbank": "2961516"
           },
           "children": []
         }
@@ -1011,7 +1052,8 @@
             ],
             "col": [
               "CC85X"
-            ]
+            ],
+            "checklistbank": "3074009"
           },
           "authorityIds": "col:CC85X,mycobank:901052"
         }
@@ -1275,11 +1317,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cystostereaceae"
+    },
+    {
+      "id": "GENUS_CYSTOSTEREACEAE",
+      "name": "Cystostereaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYSTOSTEREACEAE_SP",
+          "name": "Cystostereaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cystostereaceae",
+          "sourceIds": {
+            "checklistbank": "2211331"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cystostereaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CYSTOSTEREACEAE",
+          "name": "uncultured Cystostereaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2564053"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CYSTIDIODONTIA",
+          "name": "uncultured Cystidiodontia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2564054"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CYSTOSTEREUM",
+          "name": "uncultured Cystostereum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980796"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cystostereaceae"
     }
   ],
   "authorship": "Jülich",
-  "genusCount": 17,
-  "speciesCount": 56,
+  "genusCount": 19,
+  "speciesCount": 63,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1288,6 +1396,6 @@
       "orderKey": 1499,
       "familyKey": 3291
     },
-    "checklistbank": "ott4099832"
+    "checklistbank": "1834028"
   }
 }

@@ -389,11 +389,13 @@
             ],
             "col": [
               "FVZQ"
-            ]
+            ],
+            "checklistbank": "2034311"
           },
           "uuid": "2406243a-a078-592-b13-f084675511df5c",
           "authorityIds": "col:FVZQ,gbif:8382881",
-          "children": []
+          "children": [],
+          "authorship": "Van As, Basson & Van As, 1998"
         }
       ]
     },
@@ -426,6 +428,18 @@
           "authorship": "Svec",
           "sourceIds": {
             "checklistbank": "5874101c-5e50-4469-a117-15546ce3885b"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARADILEPTUS_SP",
+          "name": "Paradileptus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradileptus",
+          "sourceIds": {
+            "checklistbank": "3388181"
           },
           "children": []
         }
@@ -498,10 +512,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tracheliidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TRACHELIUS",
+          "name": "uncultured Trachelius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108177"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tracheliidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 28,
+  "genusCount": 9,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -510,6 +545,6 @@
       "orderKey": 8149836,
       "familyKey": 7861039
     },
-    "checklistbank": "f679a3f5-f51b-4822-86f6-8b4ff9b9c072"
+    "checklistbank": "71586"
   }
 }

@@ -71,7 +71,8 @@
             ],
             "col": [
               "5339S"
-            ]
+            ],
+            "checklistbank": "211025"
           },
           "uuid": "5ba19953-ffb6-567-a9b-b1434ec9ac0684",
           "authorityIds": "col:5339S,gbif:8273294",
@@ -478,6 +479,18 @@
             "checklistbank": "956336"
           },
           "children": []
+        },
+        {
+          "id": "SP_STROBILIDIUM_SP",
+          "name": "Strobilidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Strobilidium",
+          "sourceIds": {
+            "checklistbank": "181621"
+          },
+          "children": []
         }
       ]
     },
@@ -616,7 +629,8 @@
             ],
             "col": [
               "4T3KK"
-            ]
+            ],
+            "checklistbank": "434494"
           },
           "uuid": "a3a8282b-27e5-514-b58-36d58b5c600805",
           "authorityIds": "col:4T3KK,gbif:7369305",
@@ -660,7 +674,8 @@
             ],
             "col": [
               "4T3KN"
-            ]
+            ],
+            "checklistbank": "415605"
           },
           "uuid": "6ff60894-fc0f-500-8a4-a446f331a5e8fa",
           "authorityIds": "col:4T3KN,gbif:7397984",
@@ -855,6 +870,18 @@
           "authorityIds": "col:4T3KW,gbif:4380254",
           "children": [],
           "authorship": "(Montagnes & Taylor, 1994) Petz, Song & Wilbert, 1995"
+        },
+        {
+          "id": "SP_RIMOSTROMBIDIUM_SP",
+          "name": "Rimostrombidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rimostrombidium",
+          "sourceIds": {
+            "checklistbank": "457369"
+          },
+          "children": []
         }
       ]
     },
@@ -1040,6 +1067,30 @@
           "authorityIds": "col:75XRH,gbif:8413021",
           "children": [],
           "authorship": "(Leegaard, 1915) Petz, Song & Wilbert, 1995"
+        },
+        {
+          "id": "SP_PELAGOSTROBILIDIUM_LIUI",
+          "name": "Pelagostrobilidium liui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagostrobilidium",
+          "sourceIds": {
+            "checklistbank": "1254591"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PELAGOSTROBILIDIUM_SP",
+          "name": "Pelagostrobilidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelagostrobilidium",
+          "sourceIds": {
+            "checklistbank": "1925329"
+          },
+          "children": []
         }
       ]
     },
@@ -1065,10 +1116,88 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "strobilidiidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_RIMOSTROMBIDIUM",
+          "name": "uncultured Rimostrombidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "858374"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_STROBILIDIUM",
+          "name": "uncultured Strobilidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "858376"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PELAGOSTROBILIDIUM",
+          "name": "uncultured Pelagostrobilidium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1508465"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_STROBILIDIIDAE",
+          "name": "uncultured Strobilidiidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2588561"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "strobilidiidae"
+    },
+    {
+      "id": "GENUS_STROBILIDIIDAE",
+      "name": "Strobilidiidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STROBILIDIIDAE_SP",
+          "name": "Strobilidiidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Strobilidiidae",
+          "sourceIds": {
+            "checklistbank": "2812492"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "strobilidiidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 48,
+  "genusCount": 6,
+  "speciesCount": 57,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1076,6 +1205,7 @@
       "classKey": 7732358,
       "orderKey": 8036030,
       "familyKey": 7839792
-    }
+    },
+    "checklistbank": "181619"
   }
 }

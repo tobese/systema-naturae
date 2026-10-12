@@ -30,7 +30,8 @@
           "sourceIds": {
             "itis": [
               "8936"
-            ]
+            ],
+            "checklistbank": "45763"
           },
           "authorityIds": "itis:8936"
         },
@@ -71,7 +72,8 @@
           "sourceIds": {
             "itis": [
               "8923"
-            ]
+            ],
+            "checklistbank": "184482"
           },
           "authorityIds": "itis:8923"
         },
@@ -108,7 +110,11 @@
             "South America"
           ],
           "children": [],
-          "uuid": "72b92409-7bec-579-840-6a26027e36e2f0"
+          "uuid": "72b92409-7bec-579-840-6a26027e36e2f0",
+          "authorship": "(W.Archer) Rabenhorst, 1868",
+          "sourceIds": {
+            "checklistbank": "227148"
+          }
         },
         {
           "id": "SP_GONATOZYGON_KINAKANI",
@@ -160,7 +166,8 @@
           "sourceIds": {
             "itis": [
               "8930"
-            ]
+            ],
+            "checklistbank": "52235"
           },
           "authorityIds": "itis:8930"
         },
@@ -183,7 +190,8 @@
           "sourceIds": {
             "itis": [
               "8933"
-            ]
+            ],
+            "checklistbank": "426046"
           },
           "authorityIds": "itis:8933"
         },
@@ -377,10 +385,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gonatozygaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GONATOZYGON",
+          "name": "uncultured Gonatozygon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108020"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gonatozygaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 21,
+  "genusCount": 4,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -389,6 +418,6 @@
       "orderKey": 12255478,
       "familyKey": 7484177
     },
-    "checklistbank": "ott684006"
+    "checklistbank": "52234"
   }
 }

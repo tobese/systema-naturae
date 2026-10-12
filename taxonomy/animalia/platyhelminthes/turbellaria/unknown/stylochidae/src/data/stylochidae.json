@@ -569,7 +569,8 @@
             ],
             "itis": [
               "54089"
-            ]
+            ],
+            "checklistbank": "1385436"
           },
           "authorityIds": "col:6ZZFX,itis:54089"
         },
@@ -605,9 +606,11 @@
           "sourceIds": {
             "col": [
               "9GHWM"
-            ]
+            ],
+            "checklistbank": "3319416"
           },
-          "authorityIds": "col:9GHWM"
+          "authorityIds": "col:9GHWM",
+          "authorship": "(Marquina, Fernandez-Alvarez & Norena, 2015)"
         },
         {
           "id": "SP_STYLOCHUS_FEROX_BOCK_1925",
@@ -1293,9 +1296,11 @@
           "sourceIds": {
             "col": [
               "9GHWK"
-            ]
+            ],
+            "checklistbank": "3318740"
           },
-          "authorityIds": "col:9GHWK"
+          "authorityIds": "col:9GHWK",
+          "authorship": "(Jennings & Newman, 1996)"
         },
         {
           "id": "SP_STYLOCHUS_PILIDIUM",
@@ -1523,9 +1528,11 @@
           "sourceIds": {
             "col": [
               "6ZZHH"
-            ]
+            ],
+            "checklistbank": "3319387"
           },
-          "authorityIds": "col:6ZZHH"
+          "authorityIds": "col:6ZZHH",
+          "authorship": "(Marcus, 1947)"
         },
         {
           "id": "SP_STYLOCHUS_SPECIOSUS",
@@ -1559,9 +1566,11 @@
           "sourceIds": {
             "col": [
               "9GHWJ"
-            ]
+            ],
+            "checklistbank": "3319417"
           },
-          "authorityIds": "col:9GHWJ"
+          "authorityIds": "col:9GHWJ",
+          "authorship": "(Marquina, Osca, Rodriguez, Fernandez-Despiau, Norena, 2014)"
         },
         {
           "id": "SP_STYLOCHUS_STELLATUS_JENNINGS_NEWMAN_1996",
@@ -1970,7 +1979,8 @@
           "sourceIds": {
             "checklistbank": "ott43415"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Girard, 1853)"
         },
         {
           "id": "SP_STYLOCHUS_ZANZIBARICUS",
@@ -2221,6 +2231,18 @@
           "lineage": "Stylochus",
           "sourceIds": {
             "checklistbank": "ott7989733"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STYLOCHUS_SP",
+          "name": "Stylochus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylochus",
+          "sourceIds": {
+            "checklistbank": "74849"
           },
           "children": []
         }
@@ -3464,10 +3486,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stylochidae"
+    },
+    {
+      "id": "GENUS_STYLOCHIDAE",
+      "name": "Stylochidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYLOCHIDAE_SP",
+          "name": "Stylochidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylochidae",
+          "sourceIds": {
+            "checklistbank": "2792135"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stylochidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 190,
+  "genusCount": 12,
+  "speciesCount": 192,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3475,6 +3518,6 @@
       "classKey": 341,
       "familyKey": 3137
     },
-    "checklistbank": "ott492019"
+    "checklistbank": "31256"
   }
 }

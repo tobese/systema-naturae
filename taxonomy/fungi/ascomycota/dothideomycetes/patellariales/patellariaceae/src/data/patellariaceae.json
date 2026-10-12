@@ -2780,6 +2780,18 @@
           },
           "uuid": "87ee45a0-f2bc-54d-a24-26651a230fe48b",
           "authorityIds": "col:KKDC,gbif:3545323,mycobank:326913"
+        },
+        {
+          "id": "SP_BANHEGYIA_SP",
+          "name": "Banhegyia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Banhegyia",
+          "sourceIds": {
+            "checklistbank": "2506269"
+          },
+          "children": []
         }
       ],
       "authorship": "L. Zeller & Tóth"
@@ -4047,7 +4059,8 @@
             ],
             "col": [
               "765SD"
-            ]
+            ],
+            "checklistbank": "2585257"
           },
           "uuid": "85cc10fd-bf57-5ae-845-54befc9f6b2826",
           "authorityIds": "col:765SD,gbif:10774601,mycobank:556587"
@@ -4368,7 +4381,8 @@
             ],
             "col": [
               "9ZD32"
-            ]
+            ],
+            "checklistbank": "2717604"
           },
           "uuid": "5ff655db-263b-5c7-a9a-96c150e7e6685e",
           "authorityIds": "col:9ZD32,gbif:11777381,mycobank:557350"
@@ -4988,7 +5002,8 @@
             ],
             "col": [
               "B2NSN"
-            ]
+            ],
+            "checklistbank": "2925324"
           },
           "uuid": "263e3185-bc38-592-ba9-7c205b087b914f",
           "authorityIds": "col:B2NSN,gbif:11435840,mycobank:557819"
@@ -5505,7 +5520,8 @@
             ],
             "col": [
               "CBSQV"
-            ]
+            ],
+            "checklistbank": "3053847"
           },
           "authorityIds": "col:CBSQV,mycobank:900723"
         },
@@ -11494,11 +11510,74 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "patellariaceae"
+    },
+    {
+      "id": "GENUS_PATELLARIACEAE",
+      "name": "Patellariaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PATELLARIACEAE_SP",
+          "name": "Patellariaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patellariaceae",
+          "sourceIds": {
+            "checklistbank": "2306469"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "patellariaceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_PATELLARIA",
+          "name": "cf. Patellaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "2508890"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "patellariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PATELLARIACEAE",
+          "name": "uncultured Patellariaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2794707"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "patellariaceae"
     }
   ],
   "authorship": "Corda",
-  "genusCount": 46,
-  "speciesCount": 699,
+  "genusCount": 49,
+  "speciesCount": 703,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -11507,6 +11586,6 @@
       "orderKey": 1264,
       "familyKey": 8304
     },
-    "checklistbank": "ott141245"
+    "checklistbank": "37883"
   }
 }

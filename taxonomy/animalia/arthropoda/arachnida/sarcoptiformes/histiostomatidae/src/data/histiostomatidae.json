@@ -3213,7 +3213,8 @@
           "sourceIds": {
             "checklistbank": "ott5517375"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Muller, 1860)"
         },
         {
           "id": "SP_HISTIOSTOMA_MARITIMUS",
@@ -3538,6 +3539,18 @@
           "lineage": "Bonomoia",
           "sourceIds": {
             "checklistbank": "ott5120235"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BONOMOIA_SP",
+          "name": "Bonomoia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bonomoia",
+          "sourceIds": {
+            "checklistbank": "334601"
           },
           "children": []
         }
@@ -8252,6 +8265,18 @@
           },
           "authorityIds": "col:9GF8G,itis:1188605",
           "children": []
+        },
+        {
+          "id": "SP_KANOETUS_SP",
+          "name": "Kanoetus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kanoetus",
+          "sourceIds": {
+            "checklistbank": "482787"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -9426,6 +9451,18 @@
           "uuid": "3913162f-c771-502-848-ddae1c3a6223b0",
           "authorityIds": "col:9GF4Y,gbif:6901180,itis:1188615",
           "children": []
+        },
+        {
+          "id": "SP_OVANOETUS_SP",
+          "name": "Ovanoetus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovanoetus",
+          "sourceIds": {
+            "checklistbank": "1111338"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -10308,13 +10345,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "histiostomatidae"
+    },
+    {
+      "id": "GENUS_HISTIOSTOMATA",
+      "name": "Histiostomata",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HISTIOSTOMATA_SP",
+          "name": "Histiostomata sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostomata",
+          "sourceIds": {
+            "checklistbank": "66578"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "histiostomatidae"
+    },
+    {
+      "id": "GENUS_HISTIOSTOMATIDAE",
+      "name": "Histiostomatidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HISTIOSTOMATIDAE_GEN",
+          "name": "Histiostomatidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostomatidae",
+          "sourceIds": {
+            "checklistbank": "1111391"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HISTIOSTOMATIDAE_SP",
+          "name": "Histiostomatidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiostomatidae",
+          "sourceIds": {
+            "checklistbank": "2433147"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "histiostomatidae"
     }
   ],
-  "speciesCount": 571,
+  "speciesCount": 577,
   "appSlug": "histiostomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 63,
+  "genusCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -10323,6 +10414,6 @@
       "orderKey": 542,
       "familyKey": 2843
     },
-    "checklistbank": "ott113495"
+    "checklistbank": "66576"
   }
 }

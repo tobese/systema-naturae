@@ -59,10 +59,23 @@
             ],
             "col": [
               "9Z9XR"
-            ]
+            ],
+            "checklistbank": "2563486"
           },
           "uuid": "4661fac9-5cf2-5d8-9f3-9935b3ccedc4b5",
           "authorityIds": "col:9Z9XR,gbif:12242207,mycobank:830723"
+        },
+        {
+          "id": "SP_LEPIDOSPHAERIA_SP",
+          "name": "Lepidosphaeria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidosphaeria",
+          "sourceIds": {
+            "checklistbank": "2107932"
+          },
+          "children": []
         }
       ],
       "authorship": "Parguey-Leduc"
@@ -137,6 +150,18 @@
           },
           "uuid": "306b3889-ce9d-56b-921-ff9d51c3dda099",
           "authorityIds": "col:7DGY8,gbif:2619072,mycobank:325237"
+        },
+        {
+          "id": "SP_ULOSPORA_SP",
+          "name": "Ulospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ulospora",
+          "sourceIds": {
+            "checklistbank": "3461635"
+          },
+          "children": []
         }
       ],
       "authorship": "D. Hawksworth, Malloch & Sivanesan"
@@ -211,6 +236,18 @@
           "lineage": "Neotestudina",
           "sourceIds": {
             "checklistbank": "ott454657"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOTESTUDINA_SP",
+          "name": "Neotestudina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neotestudina",
+          "sourceIds": {
+            "checklistbank": "3464174"
           },
           "children": []
         }
@@ -391,7 +428,8 @@
             ],
             "col": [
               "3JG8Z"
-            ]
+            ],
+            "checklistbank": "2585264"
           },
           "uuid": "d555963d-9e25-5c3-aaa-dc4759b151b12e",
           "authorityIds": "col:3JG8Z,gbif:10834908,mycobank:556583"
@@ -427,7 +465,8 @@
             ],
             "col": [
               "9ZBYJ"
-            ]
+            ],
+            "checklistbank": "2777696"
           },
           "uuid": "b011bb28-7c15-59c-aa1-3485339d34d68e",
           "authorityIds": "col:9ZBYJ,gbif:11582743,mycobank:837560"
@@ -508,11 +547,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "testudinaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LEPIDOSPHAERIA",
+          "name": "uncultured Lepidosphaeria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1401989"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "testudinaceae"
+    },
+    {
+      "id": "GENUS_TESTUDINACEAE",
+      "name": "Testudinaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TESTUDINACEAE_SP",
+          "name": "Testudinaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Testudinaceae",
+          "sourceIds": {
+            "checklistbank": "2040978"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "testudinaceae"
     }
   ],
   "authorship": "Arx",
-  "genusCount": 13,
-  "speciesCount": 17,
+  "genusCount": 15,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -521,6 +602,6 @@
       "orderKey": 1047,
       "familyKey": 4823
     },
-    "checklistbank": "ott980616"
+    "checklistbank": "160028"
   }
 }

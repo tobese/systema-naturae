@@ -260,9 +260,11 @@
               "sourceIds": {
                 "col": [
                   "8P7SX"
-                ]
+                ],
+                "checklistbank": "2936724"
               },
-              "authorityIds": "col:8P7SX"
+              "authorityIds": "col:8P7SX",
+              "authorship": "Xue & Bu, 2004"
             },
             {
               "id": "SP_CHAULIOPS_ALBIDA_LI_BU_2022",
@@ -331,6 +333,18 @@
                 ]
               },
               "authorityIds": "col:C4LX4"
+            },
+            {
+              "id": "SP_CHAULIOPS_SP",
+              "name": "Chauliops sp.",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Chauliops",
+              "sourceIds": {
+                "checklistbank": "2936716"
+              },
+              "children": []
             }
           ],
           "lineage": "Chauliopinae"
@@ -1181,12 +1195,33 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Malcidae"
+    },
+    {
+      "id": "GENUS_MALCIDAE",
+      "name": "Malcidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MALCIDAE_SP",
+          "name": "Malcidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malcidae",
+          "sourceIds": {
+            "checklistbank": "2910651"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "malcidae"
     }
   ],
-  "speciesCount": 55,
+  "speciesCount": 57,
   "appSlug": "malcidae",
   "lineage": "Lygaeoidea",
-  "genusCount": 4,
+  "genusCount": 5,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -1196,6 +1231,6 @@
       "orderKey": 809,
       "familyKey": 4317
     },
-    "checklistbank": "ott568262"
+    "checklistbank": "236391"
   }
 }

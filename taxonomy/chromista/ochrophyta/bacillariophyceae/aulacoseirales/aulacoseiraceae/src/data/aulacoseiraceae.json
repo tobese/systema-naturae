@@ -1545,10 +1545,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3191997
+            "gbif": 3191997,
+            "checklistbank": "202471"
           },
           "uuid": "0cfe1bca-aeec-5ed-a67-581672ae3cb1dc",
-          "authorityIds": "gbif:3191997"
+          "authorityIds": "gbif:3191997",
+          "authorship": "M.B.Edlund, E.F.Stoermer & C.M.Taylor, 1996"
         },
         {
           "id": "AULACOSEIRA_SPATHULATA",
@@ -2003,6 +2005,31 @@
           "lineage": "Aulacoseira",
           "sourceIds": {
             "checklistbank": "1270826"
+          },
+          "children": [],
+          "authorship": "(Otto Muller) Simonsen, 1979"
+        },
+        {
+          "id": "SP_AULACOSEIRA_SP",
+          "name": "Aulacoseira sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacoseira",
+          "sourceIds": {
+            "checklistbank": "285085"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AULACOSEIRA_AFF",
+          "name": "Aulacoseira aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aulacoseira",
+          "sourceIds": {
+            "checklistbank": "3135769"
           },
           "children": []
         }
@@ -2754,10 +2781,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aulacoseiraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_AULACOSEIRA",
+          "name": "uncultured Aulacoseira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1191115"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_AULACOSEIRACEAE",
+          "name": "uncultured Aulacoseiraceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2728214"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aulacoseiraceae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 152,
+  "genusCount": 11,
+  "speciesCount": 156,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2765,6 +2825,7 @@
       "classKey": 7947184,
       "orderKey": 1095,
       "familyKey": 7142
-    }
+    },
+    "checklistbank": "49232"
   }
 }

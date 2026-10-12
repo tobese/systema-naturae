@@ -654,9 +654,22 @@
           "sourceIds": {
             "col": [
               "CRFXY"
-            ]
+            ],
+            "checklistbank": "1291540"
           },
           "authorityIds": "col:CRFXY"
+        },
+        {
+          "id": "SP_METHANOMETHYLOPHILUS_SP",
+          "name": "Methanomethylophilus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanomethylophilus",
+          "sourceIds": {
+            "checklistbank": "1564982"
+          },
+          "children": []
         }
       ]
     },
@@ -1200,10 +1213,90 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "methanomethylophilaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_METHANOMETHYLOPHILUS",
+          "name": "Candidatus Methanomethylophilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank": "1769296"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_METHANOPRIMATICOLA_CHIBANI_ET_AL_2022",
+          "name": "Candidatus Methanoprimaticola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Chibani et al. 2022",
+          "sourceIds": {
+            "checklistbank": "1820007"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_METHANOMETHYLOPHILACEAE",
+          "name": "Candidatus Methanomethylophilaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "sourceIds": {
+            "checklistbank": "2517205"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANDIDATUS_METHANOMICULA_PROTASOV_AND_BRUNE_2023",
+          "name": "Candidatus Methanomicula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Protasov and Brune 2023",
+          "sourceIds": {
+            "checklistbank": "3136104"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanomethylophilaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_METHANOMETHYLOPHILUS",
+          "name": "uncultured Methanomethylophilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1908203"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanomethylophilaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 66,
+  "genusCount": 15,
+  "speciesCount": 72,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -1211,6 +1304,7 @@
       "classKey": 295,
       "orderKey": 10816087,
       "familyKey": 10807831
-    }
+    },
+    "checklistbank": "2517203"
   }
 }

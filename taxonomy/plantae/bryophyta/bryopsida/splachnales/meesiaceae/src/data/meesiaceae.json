@@ -80,7 +80,8 @@
             ],
             "wfo": [
               "wfo-0001194555"
-            ]
+            ],
+            "checklistbank": "146579"
           },
           "authorityIds": "col:46MJ4,wfo:wfo-0001194555"
         }
@@ -147,7 +148,8 @@
           "sourceIds": {
             "checklistbank": "588961"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Mitt.) Broth."
         },
         {
           "id": "SP_LEPTOBRYUM_STELLATUM",
@@ -159,7 +161,8 @@
           "sourceIds": {
             "checklistbank": "ott1045552"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Herzog) Broth."
         },
         {
           "id": "SP_LEPTOBRYUM_SERICEUM",
@@ -182,6 +185,18 @@
           "lineage": "Leptobryum",
           "sourceIds": {
             "checklistbank": "ott7568322"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTOBRYUM_SP",
+          "name": "Leptobryum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptobryum",
+          "sourceIds": {
+            "checklistbank": "1130058"
           },
           "children": []
         }
@@ -270,9 +285,11 @@
             ],
             "wfo": [
               "wfo-0001176105"
-            ]
+            ],
+            "checklistbank": "2875604"
           },
-          "authorityIds": "col:9LVND,wfo:wfo-0001176105"
+          "authorityIds": "col:9LVND,wfo:wfo-0001176105",
+          "authorship": "Brid., 1803"
         },
         {
           "id": "SP_MEESIA_MINUTISSIMA",
@@ -637,10 +654,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "meesiaceae"
+    },
+    {
+      "id": "GENUS_MEESIACEAE",
+      "name": "Meesiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEESIACEAE_ENVIRONMENTAL",
+          "name": "Meesiaceae environmental",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meesiaceae",
+          "sourceIds": {
+            "checklistbank": "2715079"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEESIACEAE_SP",
+          "name": "Meesiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meesiaceae",
+          "sourceIds": {
+            "checklistbank": "2854049"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "meesiaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 32,
+  "genusCount": 9,
+  "speciesCount": 35,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -649,6 +699,6 @@
       "orderKey": 12240690,
       "familyKey": 4627
     },
-    "checklistbank": "ott848149"
+    "checklistbank": "67406"
   }
 }

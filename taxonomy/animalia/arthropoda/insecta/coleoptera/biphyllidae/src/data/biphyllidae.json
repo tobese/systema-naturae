@@ -73,10 +73,12 @@
             ],
             "itis": [
               "708343"
-            ]
+            ],
+            "checklistbank": "1605535"
           },
           "uuid": "923dc592-4198-5a3-b72-50b445d87af9ec",
-          "authorityIds": "gbif:1044365,itis:708343"
+          "authorityIds": "gbif:1044365,itis:708343",
+          "authorship": "LeConte, 1863"
         },
         {
           "id": "SP_DIPLOCOELUS_RUDIS",
@@ -406,6 +408,18 @@
           "lineage": "Diplocoelus",
           "sourceIds": {
             "checklistbank": "1569233"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIPLOCOELUS_SP",
+          "name": "Diplocoelus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diplocoelus",
+          "sourceIds": {
+            "checklistbank": "432926"
           },
           "children": []
         }
@@ -925,6 +939,18 @@
             "checklistbank": "ott5053411"
           },
           "children": []
+        },
+        {
+          "id": "SP_BIPHYLLUS_SP",
+          "name": "Biphyllus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biphyllus",
+          "sourceIds": {
+            "checklistbank": "1661490"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1070,10 +1096,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "biphyllidae"
+    },
+    {
+      "id": "GENUS_BIPHYLLIDAE",
+      "name": "Biphyllidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BIPHYLLIDAE_GEN",
+          "name": "Biphyllidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biphyllidae",
+          "sourceIds": {
+            "checklistbank": "2571648"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BIPHYLLIDAE_SP",
+          "name": "Biphyllidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biphyllidae",
+          "sourceIds": {
+            "checklistbank": "2938371"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "biphyllidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 75,
+  "genusCount": 11,
+  "speciesCount": 79,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1082,6 +1141,6 @@
       "orderKey": 1470,
       "familyKey": 7772
     },
-    "checklistbank": "ott840446"
+    "checklistbank": "196969"
   }
 }

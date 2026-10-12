@@ -474,6 +474,18 @@
           },
           "uuid": "ae444f83-8215-5a8-840-944ad62f974065",
           "authorityIds": "col:6X293,gbif:8312486"
+        },
+        {
+          "id": "SP_PYXIDIUM_SP",
+          "name": "Pyxidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyxidium",
+          "sourceIds": {
+            "checklistbank": "3388225"
+          },
+          "children": []
         }
       ]
     },
@@ -1721,6 +1733,18 @@
             "checklistbank": "1631045"
           },
           "children": []
+        },
+        {
+          "id": "SP_PROPYXIDIUM_SP",
+          "name": "Propyxidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Propyxidium",
+          "sourceIds": {
+            "checklistbank": "1810453"
+          },
+          "children": []
         }
       ]
     },
@@ -1796,7 +1820,8 @@
             "checklistbank": "1475255"
           },
           "uuid": "c5a55c11-165c-50e-9e1-ec38c28a0be7c0",
-          "authorityIds": "col:6SNN2,gbif:7657522"
+          "authorityIds": "col:6SNN2,gbif:7657522",
+          "authorship": "Stokes, 1887"
         },
         {
           "id": "OPERCULARIA_ARCHIORBOPERCULARIA",
@@ -2875,7 +2900,8 @@
             ],
             "col": [
               "6SNP4"
-            ]
+            ],
+            "checklistbank": "168248"
           },
           "uuid": "77bc8b59-4e24-5cb-969-12dd8625137177",
           "authorityIds": "col:6SNP4,gbif:9756667"
@@ -3753,6 +3779,18 @@
           "authorship": "Penard",
           "sourceIds": {
             "checklistbank": "21e743f6-70aa-451c-8a91-5a7f0d05953e"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OPERCULARIA_SP",
+          "name": "Opercularia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Opercularia",
+          "sourceIds": {
+            "checklistbank": "876585"
           },
           "children": []
         }
@@ -4904,10 +4942,52 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "operculariidae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_OPERCULARIA",
+          "name": "uncultured Opercularia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2108250"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "operculariidae"
+    },
+    {
+      "id": "GENUS_OPERCULARIIDAE",
+      "name": "Operculariidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OPERCULARIIDAE_SP",
+          "name": "Operculariidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Operculariidae",
+          "sourceIds": {
+            "checklistbank": "3388178"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "operculariidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 220,
+  "genusCount": 19,
+  "speciesCount": 225,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -4916,6 +4996,6 @@
       "orderKey": 7964270,
       "familyKey": 7626425
     },
-    "checklistbank": "fbcfd4af-c2b0-4e1b-80fd-5b465e6e775d"
+    "checklistbank": "168246"
   }
 }

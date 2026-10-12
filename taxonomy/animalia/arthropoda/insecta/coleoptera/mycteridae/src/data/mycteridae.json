@@ -285,7 +285,8 @@
             ],
             "itis": [
               "708456"
-            ]
+            ],
+            "checklistbank": "1605539"
           },
           "uuid": "0880a95d-4004-55d-8ab-ed7374aa1864b2",
           "authorityIds": "gbif:1045063,itis:708456"
@@ -494,7 +495,8 @@
             ],
             "itis": [
               "708435"
-            ]
+            ],
+            "checklistbank": "1605659"
           },
           "uuid": "7945cf68-3eb5-5b1-b15-e3940fe100621f",
           "authorityIds": "gbif:1045076,itis:708435"
@@ -1841,7 +1843,8 @@
           "sourceIds": {
             "checklistbank": "ott5064817"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Thomson, 1860)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2224,6 +2227,18 @@
           "authorship": "Lea",
           "sourceIds": {
             "checklistbank": "fcce1155-a1ca-455d-8f98-b7af3dc5548a"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRICHOSALPINGUS_SP",
+          "name": "Trichosalpingus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichosalpingus",
+          "sourceIds": {
+            "checklistbank": "1272115"
           },
           "children": []
         }
@@ -2707,10 +2722,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mycteridae"
+    },
+    {
+      "id": "GENUS_MYCTERIDAE",
+      "name": "Mycteridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYCTERIDAE_SP",
+          "name": "Mycteridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mycteridae",
+          "sourceIds": {
+            "checklistbank": "1845862"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mycteridae"
     }
   ],
-  "genusCount": 34,
-  "speciesCount": 169,
+  "genusCount": 35,
+  "speciesCount": 171,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2719,6 +2755,6 @@
       "orderKey": 1470,
       "familyKey": 4747
     },
-    "checklistbank": "ott3360850"
+    "checklistbank": "219443"
   }
 }

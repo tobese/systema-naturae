@@ -72,10 +72,12 @@
             ],
             "itis": [
               "708506"
-            ]
+            ],
+            "checklistbank": "1661912"
           },
           "uuid": "7ec1b83b-01e6-5e3-a82-224d119ced4c5d",
-          "authorityIds": "gbif:1032938,itis:708506"
+          "authorityIds": "gbif:1032938,itis:708506",
+          "authorship": "Knoch, 1801"
         },
         {
           "id": "SP_SANDALUS_PETROPHYA",
@@ -816,7 +818,8 @@
           "sourceIds": {
             "checklistbank": "988162"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Fauvel, 1904)"
         },
         {
           "id": "SP_OLIGORHIPIS_VESTITA",
@@ -866,10 +869,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhipiceridae"
+    },
+    {
+      "id": "GENUS_RHIPICERIDAE",
+      "name": "Rhipiceridae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHIPICERIDAE_SP",
+          "name": "Rhipiceridae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhipiceridae",
+          "sourceIds": {
+            "checklistbank": "333851"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhipiceridae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 58,
+  "genusCount": 11,
+  "speciesCount": 59,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -878,6 +902,6 @@
       "orderKey": 1470,
       "familyKey": 7847
     },
-    "checklistbank": "ott163811"
+    "checklistbank": "110059"
   }
 }

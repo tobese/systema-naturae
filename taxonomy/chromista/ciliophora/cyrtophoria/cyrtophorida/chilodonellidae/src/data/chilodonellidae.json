@@ -672,10 +672,12 @@
             ],
             "itis": [
               "203861"
-            ]
+            ],
+            "checklistbank": "1469614"
           },
           "uuid": "060ff5be-6972-574-883-217a57eb61b0d7",
-          "authorityIds": "col:69SLC,gbif:7974314,itis:203861"
+          "authorityIds": "col:69SLC,gbif:7974314,itis:203861",
+          "authorship": "Kahl, 1931"
         },
         {
           "id": "CHILODONELLA_APLANATA",
@@ -1231,10 +1233,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9561333
+            "gbif": 9561333,
+            "checklistbank": "1552886"
           },
           "uuid": "4240615e-ec7a-52e-b4a-2dfe95b445a8d1",
-          "authorityIds": "gbif:9561333"
+          "authorityIds": "gbif:9561333",
+          "authorship": "Qu, Pan, Hu, Al-Farraj, Yi, Li & Al-Rasheid, 2015"
         },
         {
           "id": "CHILODONELLA_PEDICULATUS",
@@ -1625,6 +1629,18 @@
             "checklistbank": "822bb1fd-2a1e-4c86-a804-69b2c83935c4"
           },
           "children": []
+        },
+        {
+          "id": "SP_CHILODONELLA_SP",
+          "name": "Chilodonella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chilodonella",
+          "sourceIds": {
+            "checklistbank": "1938390"
+          },
+          "children": []
         }
       ]
     },
@@ -1911,6 +1927,18 @@
           "uuid": "9367d6e1-2a38-5a0-a48-9329e29ad2165a",
           "authorityIds": "col:7D6FK,gbif:7761498",
           "authorship": "(Blochmann, 1895)"
+        },
+        {
+          "id": "SP_TRITHIGMOSTOMA_SP",
+          "name": "Trithigmostoma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trithigmostoma",
+          "sourceIds": {
+            "checklistbank": "1779607"
+          },
+          "children": []
         }
       ]
     },
@@ -2079,10 +2107,12 @@
             ],
             "col": [
               "4NTBF"
-            ]
+            ],
+            "checklistbank": "1170556"
           },
           "uuid": "970e8af9-91a7-554-bff-18d4d8760ee5d0",
-          "authorityIds": "col:4NTBF,gbif:7590521"
+          "authorityIds": "col:4NTBF,gbif:7590521",
+          "authorship": "Foissner, 1988"
         },
         {
           "id": "PSEUDOCHILODONOPSIS_KLOIBERI",
@@ -2212,10 +2242,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 9382291
+            "gbif": 9382291,
+            "checklistbank": "1652841"
           },
           "uuid": "6b751476-c902-51f-b32-4fe69ca44c44d1",
-          "authorityIds": "gbif:9382291"
+          "authorityIds": "gbif:9382291",
+          "authorship": "Qu et al., 2015"
         },
         {
           "id": "PSEUDOCHILODONOPSIS_SIMILIS",
@@ -2238,6 +2270,18 @@
           },
           "uuid": "c306edd9-b745-5eb-aff-5695701b0731d4",
           "authorityIds": "col:4NTBN,gbif:8175949"
+        },
+        {
+          "id": "SP_PSEUDOCHILODONOPSIS_SP",
+          "name": "Pseudochilodonopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudochilodonopsis",
+          "sourceIds": {
+            "checklistbank": "1348409"
+          },
+          "children": []
         }
       ]
     },
@@ -2331,10 +2375,24 @@
             ],
             "col": [
               "4FVQQ"
-            ]
+            ],
+            "checklistbank": "1895398"
           },
           "uuid": "d14970e1-ef8f-5b2-b08-7837f958ee1768",
-          "authorityIds": "col:4FVQQ,gbif:7961378"
+          "authorityIds": "col:4FVQQ,gbif:7961378",
+          "authorship": "Stein, 1859"
+        },
+        {
+          "id": "SP_PHASCOLODON_SP",
+          "name": "Phascolodon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phascolodon",
+          "sourceIds": {
+            "checklistbank": "3238243"
+          },
+          "children": []
         }
       ]
     },
@@ -2487,10 +2545,43 @@
           "authorityIds": "col:5Y4LC,gbif:8404281"
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PHASCOLODON",
+          "name": "uncultured Phascolodon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2487756"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PSEUDOCHILODONOPSIS",
+          "name": "uncultured Pseudochilodonopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2613907"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chilodonellidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 110,
+  "genusCount": 10,
+  "speciesCount": 116,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2499,6 +2590,6 @@
       "orderKey": 7522224,
       "familyKey": 7597177
     },
-    "checklistbank": "cb318ea9-4b33-4f7d-8d62-eda082dc247d"
+    "checklistbank": "1170554"
   }
 }

@@ -769,7 +769,8 @@
             ],
             "col": [
               "37GZ2"
-            ]
+            ],
+            "checklistbank": "2524045"
           },
           "uuid": "059e1c5d-aca0-587-b09-a20291c6c093eb",
           "authorityIds": "col:37GZ2,gbif:10896383,mycobank:556017",
@@ -849,7 +850,8 @@
             ],
             "col": [
               "37GZ5"
-            ]
+            ],
+            "checklistbank": "2563686"
           },
           "uuid": "8f3755dc-27ca-5fc-ac4-571205cf83ca5d",
           "authorityIds": "col:37GZ5,gbif:10762346,mycobank:556526",
@@ -918,6 +920,18 @@
           "lineage": "Dothidotthia",
           "sourceIds": {
             "checklistbank": "ott3729329"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DOTHIDOTTHIA_SP",
+          "name": "Dothidotthia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dothidotthia",
+          "sourceIds": {
+            "checklistbank": "2563685"
           },
           "children": []
         }
@@ -1123,11 +1137,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dothidotthiaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_DOTHIDOTTHIA",
+          "name": "uncultured Dothidotthia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2979482"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dothidotthiaceae"
+    },
+    {
+      "id": "GENUS_DOTHIDOTTHIACEAE",
+      "name": "Dothidotthiaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DOTHIDOTTHIACEAE_SP",
+          "name": "Dothidotthiaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dothidotthiaceae",
+          "sourceIds": {
+            "checklistbank": "3476237"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dothidotthiaceae"
     }
   ],
   "authorship": "Crous & A.J.L. Phillips",
-  "genusCount": 10,
-  "speciesCount": 45,
+  "genusCount": 12,
+  "speciesCount": 48,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1136,6 +1192,6 @@
       "orderKey": 1047,
       "familyKey": 3020
     },
-    "checklistbank": "ott975533"
+    "checklistbank": "548648"
   }
 }

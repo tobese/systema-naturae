@@ -170,7 +170,8 @@
             ],
             "col": [
               "6FFVL"
-            ]
+            ],
+            "checklistbank": "2729605"
           },
           "uuid": "1aee6619-f5ee-598-b8f-c016ffb7ef2df5",
           "authorityIds": "col:6FFVL,gbif:10682020,mycobank:821930",
@@ -453,6 +454,18 @@
             "checklistbank": "ott8010102"
           },
           "children": []
+        },
+        {
+          "id": "SP_ENTORRHIZA_SP",
+          "name": "Entorrhiza sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entorrhiza",
+          "sourceIds": {
+            "checklistbank": "1689857"
+          },
+          "children": []
         }
       ],
       "authorship": "C.A. Weber"
@@ -484,7 +497,8 @@
             ],
             "col": [
               "6NF8X"
-            ]
+            ],
+            "checklistbank": "2729606"
           },
           "uuid": "1ed4c74c-d89d-5f0-aa6-1dc526a30787a1",
           "authorityIds": "col:6NF8X,gbif:10851528,mycobank:821932",
@@ -563,7 +577,8 @@
             ],
             "col": [
               "6NF94"
-            ]
+            ],
+            "checklistbank": "2729604"
           },
           "uuid": "b9568df9-a779-57a-94f-d6197784e7d360",
           "authorityIds": "col:6NF94,gbif:10742941,mycobank:821935",
@@ -589,7 +604,8 @@
             ],
             "col": [
               "6NF8R"
-            ]
+            ],
+            "checklistbank": "2729610"
           },
           "uuid": "3694dc7c-cf00-58d-9bc-4b5b7a685a6839",
           "authorityIds": "col:6NF8R,gbif:10880910,mycobank:821936",
@@ -615,7 +631,8 @@
             ],
             "col": [
               "6NF93"
-            ]
+            ],
+            "checklistbank": "2729609"
           },
           "uuid": "912c2dee-7caf-53d-803-b1774727f24b57",
           "authorityIds": "col:6NF93,gbif:10772505,mycobank:821937",
@@ -720,11 +737,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "entorrhizaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ENTORRHIZA",
+          "name": "uncultured Entorrhiza",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1898484"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entorrhizaceae"
+    },
+    {
+      "id": "GENUS_ENTORRHIZACEAE",
+      "name": "Entorrhizaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENTORRHIZACEAE_SP",
+          "name": "Entorrhizaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entorrhizaceae",
+          "sourceIds": {
+            "checklistbank": "2012266"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "entorrhizaceae"
     }
   ],
   "authorship": "R. Bauer & Oberwinkler",
-  "genusCount": 3,
-  "speciesCount": 33,
+  "genusCount": 5,
+  "speciesCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -733,6 +792,6 @@
       "orderKey": 525,
       "familyKey": 7604
     },
-    "checklistbank": "ott754231"
+    "checklistbank": "62911"
   }
 }

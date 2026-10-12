@@ -27,10 +27,13 @@
             ],
             "col": [
               "CRVHM"
-            ]
+            ],
+            "checklistbank": "1874277"
           },
           "uuid": "49b5368e-4b51-505-894-af5a3d2c0f3c5b",
-          "authorityIds": "col:CRVHM,gbif:11123051"
+          "authorityIds": "col:CRVHM,gbif:11123051",
+          "authorship": "Kato et al. 2021",
+          "children": []
         },
         {
           "id": "CONEXIVISPHAERA_SPEC.",
@@ -46,7 +49,20 @@
             "gbif": 12216457
           },
           "uuid": "99429e25-ab75-58f-aac-7911d7be7eac3d",
-          "authorityIds": "gbif:12216457"
+          "authorityIds": "gbif:12216457",
+          "children": []
+        },
+        {
+          "id": "SP_CONEXIVISPHAERA_SP",
+          "name": "Conexivisphaera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Conexivisphaera",
+          "sourceIds": {
+            "checklistbank": "2613914"
+          },
+          "children": []
         }
       ]
     },
@@ -71,9 +87,52 @@
             "gbif": 11694367
           },
           "uuid": "118d8f84-9ee9-534-a1e-48a855234a4bdf",
-          "authorityIds": "gbif:11694367"
+          "authorityIds": "gbif:11694367",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CONEXIVISPHAERA",
+          "name": "uncultured Conexivisphaera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2613916"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conexivisphaeraceae"
+    },
+    {
+      "id": "GENUS_CONEXIVISPHAERACEAE",
+      "name": "Conexivisphaeraceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CONEXIVISPHAERACEAE_ARCHAEON",
+          "name": "Conexivisphaeraceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Conexivisphaeraceae",
+          "sourceIds": {
+            "checklistbank": "3107314"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conexivisphaeraceae"
     }
   ],
   "sourceIds": {
@@ -83,6 +142,9 @@
       "classKey": 10707890,
       "orderKey": 11187306,
       "familyKey": 11155192
-    }
-  }
+    },
+    "checklistbank": "2798276"
+  },
+  "genusCount": 4,
+  "speciesCount": 6
 }

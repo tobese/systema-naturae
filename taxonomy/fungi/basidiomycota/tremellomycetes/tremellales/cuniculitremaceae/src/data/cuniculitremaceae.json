@@ -197,7 +197,8 @@
             ],
             "col": [
               "9Z9M3"
-            ]
+            ],
+            "checklistbank": "2877719"
           },
           "uuid": "866072bf-2611-531-b62-f97f1763044158",
           "authorityIds": "col:9Z9M3,gbif:11453651,mycobank:828736",
@@ -250,7 +251,8 @@
             ],
             "col": [
               "9Z9M4"
-            ]
+            ],
+            "checklistbank": "2877720"
           },
           "uuid": "2faa165c-00ac-509-b60-921305c58ccc49",
           "authorityIds": "col:9Z9M4,gbif:11925015,mycobank:828738",
@@ -278,7 +280,8 @@
             ],
             "col": [
               "6NN8Q"
-            ]
+            ],
+            "checklistbank": "3032381"
           },
           "uuid": "cd80b27f-3960-501-bf3-884d4b2055e888",
           "authorityIds": "col:6NN8Q,gbif:10767278,mycobank:817710",
@@ -385,7 +388,8 @@
             ],
             "col": [
               "9Z9M6"
-            ]
+            ],
+            "checklistbank": "2877721"
           },
           "uuid": "ee5d015c-2b2c-56f-9cd-bbefbc1bd6b188",
           "authorityIds": "col:9Z9M6,gbif:11716535,mycobank:828739",
@@ -614,7 +618,8 @@
           "sourceIds": {
             "checklistbank": "1410001"
           },
-          "children": []
+          "children": [],
+          "authorship": "D.T. Luong, M. Takash., Ty, Dung & Nakase, 2001"
         },
         {
           "id": "SP_KOCKOVAELLA_LITSEAE",
@@ -626,7 +631,8 @@
           "sourceIds": {
             "checklistbank": "1410009"
           },
-          "children": []
+          "children": [],
+          "authorship": "D.T. Luong, M. Takash., Ty, Dung & Nakase, 2001"
         },
         {
           "id": "SP_KOCKOVAELLA_MEXICANUS",
@@ -649,6 +655,44 @@
           "lineage": "Kockovaella",
           "sourceIds": {
             "checklistbank": "ott544955"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KOCKOVAELLA_SP",
+          "name": "Kockovaella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kockovaella",
+          "sourceIds": {
+            "checklistbank": "235959"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KOCKOVAELLA_CARIOSILIGNI_Q_M_WANG_2024",
+          "name": "Kockovaella cariosiligni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kockovaella",
+          "authorship": "Q.M. Wang, 2024",
+          "sourceIds": {
+            "checklistbank": "3421690"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_KOCKOVAELLA_FOLIICOLA_Q_M_WANG_2024",
+          "name": "Kockovaella foliicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kockovaella",
+          "authorship": "Q.M. Wang, 2024",
+          "sourceIds": {
+            "checklistbank": "3421691"
           },
           "children": []
         }
@@ -881,6 +925,18 @@
             "checklistbank": "ott818017"
           },
           "children": []
+        },
+        {
+          "id": "SP_FELLOMYCES_SP",
+          "name": "Fellomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fellomyces",
+          "sourceIds": {
+            "checklistbank": "122276"
+          },
+          "children": []
         }
       ],
       "authorship": "Y. Yamada & Banno"
@@ -905,11 +961,111 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cuniculitremaceae"
+    },
+    {
+      "id": "GENUS_STERIGMATOSPORIDIUM",
+      "name": "Sterigmatosporidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STERIGMATOSPORIDIUM_POLYMORPHUM_G_KRAEP_U_SCHULZE_1982",
+          "name": "Sterigmatosporidium polymorphum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sterigmatosporidium",
+          "authorship": "G. Kraep. & U. Schulze, 1982",
+          "sourceIds": {
+            "checklistbank": "5647"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STERIGMATOSPORIDIUM_SP",
+          "name": "Sterigmatosporidium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sterigmatosporidium",
+          "sourceIds": {
+            "checklistbank": "3054452"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cuniculitremaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_KOCKOVAELLA",
+          "name": "uncultured Kockovaella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1978847"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_CUNICULITREMACEAE",
+          "name": "uncultured Cuniculitremaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2212692"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FELLOMYCES",
+          "name": "uncultured Fellomyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2794675"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cuniculitremaceae"
+    },
+    {
+      "id": "GENUS_CUNICULITREMACEAE",
+      "name": "Cuniculitremaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CUNICULITREMACEAE_SP",
+          "name": "Cuniculitremaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cuniculitremaceae",
+          "sourceIds": {
+            "checklistbank": "2306453"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cuniculitremaceae"
     }
   ],
   "authorship": "J.P. Sampaio, R. Kirschner & M. Weiss",
-  "genusCount": 4,
-  "speciesCount": 39,
+  "genusCount": 7,
+  "speciesCount": 49,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -918,6 +1074,6 @@
       "orderKey": 1123,
       "familyKey": 3247
     },
-    "checklistbank": "ott5260754"
+    "checklistbank": "1910893"
   }
 }

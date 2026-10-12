@@ -475,6 +475,18 @@
           "uuid": "3490cb50-e329-522-8e8-6f619716e7f738",
           "authorityIds": "col:B92KN,gbif:6919242,itis:1203573",
           "children": []
+        },
+        {
+          "id": "SP_ADAMYSTIS_SP",
+          "name": "Adamystis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adamystis",
+          "sourceIds": {
+            "checklistbank": "94791"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -680,13 +692,34 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Adamystidae"
+    },
+    {
+      "id": "GENUS_ADAMYSTIDAE",
+      "name": "Adamystidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ADAMYSTIDAE_GEN",
+          "name": "Adamystidae gen.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adamystidae",
+          "sourceIds": {
+            "checklistbank": "2051800"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "adamystidae"
     }
   ],
-  "speciesCount": 29,
+  "speciesCount": 31,
   "appSlug": "adamystidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -695,6 +728,6 @@
       "orderKey": 543,
       "familyKey": 4542133
     },
-    "checklistbank": "ott280874"
+    "checklistbank": "94789"
   }
 }

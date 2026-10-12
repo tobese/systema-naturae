@@ -480,7 +480,8 @@
             ],
             "itis": [
               "57420"
-            ]
+            ],
+            "checklistbank": "947580"
           },
           "authorityIds": "col:59JZ8,itis:57420"
         },
@@ -607,9 +608,11 @@
           "sourceIds": {
             "col": [
               "CCGCZ"
-            ]
+            ],
+            "checklistbank": "2039622"
           },
-          "authorityIds": "col:CCGCZ"
+          "authorityIds": "col:CCGCZ",
+          "authorship": "(Griffin, 1898)"
         },
         {
           "id": "SP_TUBULANUS_RUBICUNDUS",
@@ -649,7 +652,8 @@
             ],
             "itis": [
               "764794"
-            ]
+            ],
+            "checklistbank": "187815"
           },
           "authorityIds": "col:59JZF,itis:764794"
         },
@@ -905,7 +909,8 @@
           "sourceIds": {
             "checklistbank": "1077895"
           },
-          "children": []
+          "children": [],
+          "authorship": "Correa, 1954"
         },
         {
           "id": "SP_TUBULANUS_LUTESCENS",
@@ -1048,6 +1053,30 @@
           "lineage": "Tubulanus",
           "sourceIds": {
             "checklistbank": "ott5454065"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TUBULANUS_SP",
+          "name": "Tubulanus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulanus",
+          "sourceIds": {
+            "checklistbank": "662524"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TUBULANUS_AFF",
+          "name": "Tubulanus aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulanus",
+          "sourceIds": {
+            "checklistbank": "2867075"
           },
           "children": []
         }
@@ -1248,6 +1277,18 @@
           "lineage": "Callinera",
           "sourceIds": {
             "checklistbank": "ott2931168"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLINERA_SP",
+          "name": "Callinera sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callinera",
+          "sourceIds": {
+            "checklistbank": "527691"
           },
           "children": []
         }
@@ -1529,6 +1570,18 @@
           "lineage": "Carinina",
           "sourceIds": {
             "checklistbank": "ott2931160"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CARININA_SP",
+          "name": "Carinina sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carinina",
+          "sourceIds": {
+            "checklistbank": "1684119"
           },
           "children": []
         }
@@ -2056,10 +2109,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tubulanidae"
+    },
+    {
+      "id": "GENUS_TUBULANIDAE",
+      "name": "Tubulanidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TUBULANIDAE_SP",
+          "name": "Tubulanidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubulanidae",
+          "sourceIds": {
+            "checklistbank": "1684127"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tubulanidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 127,
+  "genusCount": 17,
+  "speciesCount": 132,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2067,6 +2141,6 @@
       "classKey": 7194193,
       "familyKey": 1994
     },
-    "checklistbank": "ott108674"
+    "checklistbank": "166029"
   }
 }

@@ -129,7 +129,8 @@
             ],
             "col": [
               "5C95J"
-            ]
+            ],
+            "checklistbank": "274780"
           },
           "uuid": "babc1c6e-c357-5fc-82c-84568156d4fe4b",
           "authorityIds": "col:5C95J,gbif:177733869,gbif:2337122,itis:167467"
@@ -512,6 +513,19 @@
           "lineage": "Hypsagonus",
           "sourceIds": {
             "checklistbank": "222104"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HYPSAGONUS_JORDANI_JORDAN_STARKS_1904",
+          "name": "Hypsagonus jordani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypsagonus",
+          "authorship": "(Jordan & Starks, 1904)",
+          "sourceIds": {
+            "checklistbank": "1633467"
           },
           "children": []
         }
@@ -1514,7 +1528,8 @@
             ],
             "itis": [
               "643658"
-            ]
+            ],
+            "checklistbank": "980419"
           },
           "uuid": "b2108e8c-10db-514-8f3-3ea94266a9cf22",
           "authorityIds": "gbif:177733972,gbif:2337218,itis:643658"
@@ -1768,19 +1783,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "agonidae"
+    },
+    {
+      "id": "GENUS_HEMITRIPTERUS",
+      "name": "Hemitripterus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEMITRIPTERUS_AMERICANUS_CUVIER_1829",
+          "name": "Hemitripterus americanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemitripterus",
+          "authorship": "Cuvier, 1829",
+          "sourceIds": {
+            "checklistbank": "8094"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "agonidae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 78,
   "appSlug": "agonidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 29,
+  "genusCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 44,
       "orderKey": 587,
       "familyKey": 8617
-    }
+    },
+    "checklistbank": "30972"
   }
 }

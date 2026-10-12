@@ -35,7 +35,8 @@
             "checklistbank": "ott243482"
           },
           "uuid": "d126dae9-c94c-537-8c0-0cc770ec49735f",
-          "authorityIds": "col:G7PX,gbif:11123622,itis:951606"
+          "authorityIds": "col:G7PX,gbif:11123622,itis:951606",
+          "authorship": "Stetter 1988"
         },
         {
           "id": "ARCHAEOGLOBUS_INFECTUS",
@@ -61,7 +62,8 @@
             "checklistbank": "ott534700"
           },
           "uuid": "2799a16a-94bf-517-a80-5983acc6854dcd",
-          "authorityIds": "col:G7PY,gbif:5900782,itis:951609"
+          "authorityIds": "col:G7PY,gbif:5900782,itis:951609",
+          "authorship": "Mori et al. 2008"
         },
         {
           "id": "ARCHAEOGLOBUS_LITHOTROPHICUS",
@@ -79,7 +81,8 @@
             "checklistbank": "ott823802"
           },
           "uuid": "836602d0-cc54-59d-b87-c1625c1ea223c2",
-          "authorityIds": "gbif:5900776"
+          "authorityIds": "gbif:5900776",
+          "authorship": "Stetter et al. 1993"
         },
         {
           "id": "ARCHAEOGLOBUS_PROFUNDUS",
@@ -105,7 +108,8 @@
             "checklistbank": "ott45566"
           },
           "uuid": "c1ace6e9-459c-51e-8eb-2b8da85851fb2c",
-          "authorityIds": "col:G7PZ,gbif:1000316,itis:951607"
+          "authorityIds": "col:G7PZ,gbif:1000316,itis:951607",
+          "authorship": "Burggraf et al. 1990"
         },
         {
           "id": "ARCHAEOGLOBUS_SULFATICALLIDUS",
@@ -131,7 +135,8 @@
             "checklistbank": "ott4796806"
           },
           "uuid": "e7ad1874-f0c2-55a-b68-36612b945c83ce",
-          "authorityIds": "col:G7Q2,gbif:8323007,itis:951610"
+          "authorityIds": "col:G7Q2,gbif:8323007,itis:951610",
+          "authorship": "Steinsbu et al. 2010"
         },
         {
           "id": "ARCHAEOGLOBUS_VENEFICUS",
@@ -157,7 +162,8 @@
             "checklistbank": "ott89470"
           },
           "uuid": "6104bbce-34fc-513-88d-408b4b7e7e660a",
-          "authorityIds": "col:G7Q3,gbif:1000314,itis:951608"
+          "authorityIds": "col:G7Q3,gbif:1000314,itis:951608",
+          "authorship": "Huber et al. 1998"
         },
         {
           "id": "SP_ARCHAEOGLOBUS_NEPTUNIUS_SLOBODKINA_ET_AL_2021",
@@ -221,7 +227,8 @@
             "checklistbank": "ott159051"
           },
           "uuid": "26bc27fc-cd42-547-81a-95d07ea7394bd5",
-          "authorityIds": "col:6HQH9,gbif:1000318,itis:951618"
+          "authorityIds": "col:6HQH9,gbif:1000318,itis:951618",
+          "authorship": "Hafenbradl et al. 1997"
         },
         {
           "id": "FERROGLOBUS_SPEC.",
@@ -239,6 +246,18 @@
           },
           "uuid": "32f9e095-ac90-5ee-86d-cb662230a4bbcb",
           "authorityIds": "gbif:12212155"
+        },
+        {
+          "id": "SP_FERROGLOBUS_SP",
+          "name": "Ferroglobus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ferroglobus",
+          "sourceIds": {
+            "checklistbank": "2614230"
+          },
+          "children": []
         }
       ]
     },
@@ -273,7 +292,8 @@
             "checklistbank": "ott685892"
           },
           "uuid": "c536bd79-625c-58d-a12-e2f611cee4a6c6",
-          "authorityIds": "col:3FPTX,gbif:1000320,itis:951621"
+          "authorityIds": "col:3FPTX,gbif:1000320,itis:951621",
+          "authorship": "Kashefi et al. 2002"
         },
         {
           "id": "GEOGLOBUS_SPEC.",
@@ -699,6 +719,42 @@
             "checklistbank": "ott5207563"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FERROGLOBUS",
+          "name": "uncultured Ferroglobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "269249"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ARCHAEOGLOBACEAE",
+          "name": "uncultured Archaeoglobaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1507183"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GEOGLOBUS",
+          "name": "uncultured Geoglobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1936122"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -724,10 +780,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "archaeoglobaceae"
+    },
+    {
+      "id": "GENUS_CANDIDATUS",
+      "name": "Candidatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANDIDATUS_METHANOGLOBUS_BUESSECKER_ET_AL_2023",
+          "name": "Candidatus Methanoglobus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candidatus",
+          "authorship": "Buessecker et al. 2023",
+          "sourceIds": {
+            "checklistbank": "3043371"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "archaeoglobaceae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 34,
+  "genusCount": 14,
+  "speciesCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -736,6 +814,6 @@
       "orderKey": 1190,
       "familyKey": 3799
     },
-    "checklistbank": "ott999"
+    "checklistbank": "2232"
   }
 }

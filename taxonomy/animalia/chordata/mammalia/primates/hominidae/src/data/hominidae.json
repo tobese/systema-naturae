@@ -58,7 +58,8 @@
             ],
             "checklistbank": "43580"
           },
-          "authorityIds": "col:3H3C9,itis:573080,wikidata:Q737838"
+          "authorityIds": "col:3H3C9,itis:573080,wikidata:Q737838",
+          "authorship": "(Savage, 1847)"
         },
         {
           "id": "GORILLA_BERINGEI",
@@ -104,7 +105,8 @@
             ],
             "checklistbank": "68790"
           },
-          "authorityIds": "col:3H3C3,itis:944295,wikidata:Q307157"
+          "authorityIds": "col:3H3C3,itis:944295,wikidata:Q307157",
+          "authorship": "Matschie, 1914"
         }
       ]
     },
@@ -205,7 +207,32 @@
             ],
             "checklistbank": "43578"
           },
-          "authorityIds": "col:4C92F,itis:573081,wikidata:Q19537"
+          "authorityIds": "col:4C92F,itis:573081,wikidata:Q19537",
+          "authorship": "Schwarz, 1929"
+        },
+        {
+          "id": "SP_PAN_TROGLODYTES",
+          "name": "Pan ×troglodytes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pan",
+          "sourceIds": {
+            "checklistbank": "1294088"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PAN_SP",
+          "name": "Pan sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pan",
+          "sourceIds": {
+            "checklistbank": "3612878"
+          },
+          "children": []
         }
       ]
     },
@@ -270,7 +297,8 @@
             ],
             "checklistbank": "43582"
           },
-          "authorityIds": "col:4LTT2,itis:573083,wikidata:Q599672"
+          "authorityIds": "col:4LTT2,itis:573083,wikidata:Q599672",
+          "authorship": "(Linnaeus, 1760)"
         },
         {
           "id": "PONGO_ABELII",
@@ -299,7 +327,8 @@
             ],
             "checklistbank": "569678"
           },
-          "authorityIds": "col:4LTSY,itis:944294,wikidata:Q543424"
+          "authorityIds": "col:4LTSY,itis:944294,wikidata:Q543424",
+          "authorship": "Lesson, 1827"
         },
         {
           "id": "PONGO_TAPANULIENSIS",
@@ -327,7 +356,8 @@
             ],
             "checklistbank": "569674"
           },
-          "authorityIds": "col:4LTT4,itis:1063220,wikidata:Q42564025"
+          "authorityIds": "col:4LTT4,itis:1063220,wikidata:Q42564025",
+          "authorship": "Nurcahyo, Meijaard, Nowak, Fredriksson & Groves, 2017"
         },
         {
           "id": "SP_PONGO_HOOIJERI",
@@ -338,6 +368,30 @@
           "children": [],
           "lineage": "Pongo",
           "uuid": "3ef41071-a68f-558-a7d-477f6a8b265a11"
+        },
+        {
+          "id": "SP_PONGO_SP",
+          "name": "Pongo sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pongo",
+          "sourceIds": {
+            "checklistbank": "9603"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PONGO_ABELII",
+          "name": "Pongo ×abelii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pongo",
+          "sourceIds": {
+            "checklistbank": "502961"
+          },
+          "children": []
         }
       ]
     },
@@ -461,9 +515,11 @@
           "sourceIds": {
             "wikidata": [
               "Q105784"
-            ]
+            ],
+            "checklistbank": "1425170"
           },
-          "authorityIds": "wikidata:Q105784"
+          "authorityIds": "wikidata:Q105784",
+          "authorship": "Schoetensack, 1908"
         },
         {
           "id": "HOMO_ERECTUS",
@@ -689,6 +745,18 @@
           "authorship": "Gregory, 1921",
           "sourceIds": {
             "checklistbank": "826908"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HOMO_SP",
+          "name": "Homo sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Homo",
+          "sourceIds": {
+            "checklistbank": "2813599"
           },
           "children": []
         }
@@ -1205,10 +1273,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Hominidae"
+    },
+    {
+      "id": "GENUS_HOMINIDAE",
+      "name": "Hominidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HOMINIDAE_SP",
+          "name": "Hominidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hominidae",
+          "sourceIds": {
+            "checklistbank": "2922388"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hominidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 58,
+  "genusCount": 20,
+  "speciesCount": 64,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1216,6 +1305,7 @@
       "classKey": 359,
       "orderKey": 798,
       "familyKey": 5483
-    }
+    },
+    "checklistbank": "9604"
   }
 }

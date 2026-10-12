@@ -112,7 +112,8 @@
             ],
             "col": [
               "6ZSK5"
-            ]
+            ],
+            "checklistbank": "44565"
           },
           "uuid": "bceadb3b-c91d-55c-8a0-f7dcf5fb790eb5",
           "authorityIds": "col:6ZSK5,gbif:9794691,mycobank:813385"
@@ -164,7 +165,8 @@
             ],
             "col": [
               "6ZSJX"
-            ]
+            ],
+            "checklistbank": "48848"
           },
           "uuid": "40a39dd5-4d3d-586-8d6-74921cd8b7c62f",
           "authorityIds": "col:6ZSJX,gbif:9792489,mycobank:813386"
@@ -199,6 +201,18 @@
           "authorship": "J.Z. Yue",
           "sourceIds": {
             "checklistbank": "2b66c97e-56c8-42da-92bf-f44567f00bf2"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STERIGMATOMYCES_SP",
+          "name": "Sterigmatomyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sterigmatomyces",
+          "sourceIds": {
+            "checklistbank": "623251"
           },
           "children": []
         }
@@ -305,7 +319,8 @@
             ],
             "col": [
               "9ZDV3"
-            ]
+            ],
+            "checklistbank": "2877775"
           },
           "uuid": "b3b9c23c-7d3c-5b8-ab0-e6e010c9d11117",
           "authorityIds": "col:9ZDV3,gbif:11462788,mycobank:828803"
@@ -331,7 +346,8 @@
             ],
             "col": [
               "4NPRZ"
-            ]
+            ],
+            "checklistbank": "4990"
           },
           "uuid": "2d8abe36-b377-5fe-8b9-4426b37fd58b19",
           "authorityIds": "col:4NPRZ,gbif:9697199,mycobank:813079"
@@ -357,18 +373,73 @@
             ],
             "col": [
               "4NPS2"
-            ]
+            ],
+            "checklistbank": "46900"
           },
           "uuid": "444b4108-4efd-55a-8ee-8c58aa0323bcb0",
           "authorityIds": "col:4NPS2,gbif:9780098,mycobank:813080"
+        },
+        {
+          "id": "SP_PSEUDOBENSINGTONIA_SP",
+          "name": "Pseudobensingtonia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudobensingtonia",
+          "sourceIds": {
+            "checklistbank": "2562613"
+          },
+          "children": []
         }
       ],
       "authorship": "F.Y. Bai, Q.M. Wang, M. Groenewald & T. Boekhout"
+    },
+    {
+      "id": "GENUS_AGARICOSTILBACEAE",
+      "name": "Agaricostilbaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AGARICOSTILBACEAE_SP",
+          "name": "Agaricostilbaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Agaricostilbaceae",
+          "sourceIds": {
+            "checklistbank": "2012230"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "agaricostilbaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PSEUDOBENSINGTONIA",
+          "name": "uncultured Pseudobensingtonia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980299"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "agaricostilbaceae"
     }
   ],
   "authorship": "Locquin",
-  "genusCount": 4,
-  "speciesCount": 13,
+  "genusCount": 6,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -376,6 +447,7 @@
       "classKey": 274,
       "orderKey": 1143,
       "familyKey": 7607
-    }
+    },
+    "checklistbank": "48847"
   }
 }

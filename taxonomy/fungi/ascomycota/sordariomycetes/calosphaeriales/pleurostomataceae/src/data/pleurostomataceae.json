@@ -97,7 +97,8 @@
             ],
             "col": [
               "9ZDQ7"
-            ]
+            ],
+            "checklistbank": "2715404"
           },
           "uuid": "b10f0eda-3b77-51a-bc6-855a8cd74bcec7",
           "authorityIds": "col:9ZDQ7,gbif:11858642,mycobank:835850",
@@ -123,7 +124,8 @@
             ],
             "col": [
               "4KCQV"
-            ]
+            ],
+            "checklistbank": "1208066"
           },
           "uuid": "599eef6b-83bb-555-873-e5a2d68450442a",
           "authorityIds": "col:4KCQV,gbif:9813926,mycobank:814421",
@@ -176,7 +178,8 @@
             ],
             "col": [
               "4KCQX"
-            ]
+            ],
+            "checklistbank": "91939"
           },
           "uuid": "ee93b78c-19eb-57c-a10-ac42f91413920a",
           "authorityIds": "col:4KCQX,gbif:9660223,mycobank:814422",
@@ -204,10 +207,23 @@
             ],
             "col": [
               "4KCQY"
-            ]
+            ],
+            "checklistbank": "41990"
           },
           "uuid": "61372900-cb03-5c6-995-0a9687b6180001",
           "authorityIds": "col:4KCQY,gbif:9691067,mycobank:814423",
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROSTOMA_SP",
+          "name": "Pleurostoma sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurostoma",
+          "sourceIds": {
+            "checklistbank": "1051953"
+          },
           "children": []
         }
       ],
@@ -270,11 +286,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pleurostomataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_PLEUROSTOMA",
+          "name": "uncultured Pleurostoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1868158"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pleurostomataceae"
+    },
+    {
+      "id": "GENUS_PLEUROSTOMATACEAE",
+      "name": "Pleurostomataceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLEUROSTOMATACEAE_SP",
+          "name": "Pleurostomataceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurostomataceae",
+          "sourceIds": {
+            "checklistbank": "2698773"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pleurostomataceae"
     }
   ],
   "authorship": "Réblová, L. Mostert, W. Gams & Crous",
-  "genusCount": 3,
-  "speciesCount": 11,
+  "genusCount": 5,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -283,6 +341,6 @@
       "orderKey": 1283,
       "familyKey": 4143
     },
-    "checklistbank": "ott4054400"
+    "checklistbank": "1775896"
   }
 }

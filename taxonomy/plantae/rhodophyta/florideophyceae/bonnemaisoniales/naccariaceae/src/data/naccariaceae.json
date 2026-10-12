@@ -24,7 +24,11 @@
             "South America"
           ],
           "children": [],
-          "uuid": "ec0c80b2-344a-51b-8c1-a91c996559e927"
+          "uuid": "ec0c80b2-344a-51b-8c1-a91c996559e927",
+          "authorship": "I.A.Abbott, 1985",
+          "sourceIds": {
+            "checklistbank": "367044"
+          }
         },
         {
           "id": "SP_RETICULOCAULIS_OBPYRIFORMIS",
@@ -35,6 +39,18 @@
           "lineage": "Reticulocaulis",
           "children": [],
           "uuid": "84c42d4f-88dd-5b2-b96-e604aa4839b09d"
+        },
+        {
+          "id": "SP_RETICULOCAULIS_SP",
+          "name": "Reticulocaulis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reticulocaulis",
+          "sourceIds": {
+            "checklistbank": "999064"
+          },
+          "children": []
         }
       ]
     },
@@ -160,9 +176,11 @@
           "sourceIds": {
             "itis": [
               "11851"
-            ]
+            ],
+            "checklistbank": "173450"
           },
-          "authorityIds": "itis:11851"
+          "authorityIds": "itis:11851",
+          "authorship": "P.Crouan & H.Crouan, 1848"
         }
       ]
     },
@@ -297,10 +315,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "naccariaceae"
+    },
+    {
+      "id": "GENUS_NACCARIACEAE",
+      "name": "Naccariaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NACCARIACEAE_SP",
+          "name": "Naccariaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Naccariaceae",
+          "sourceIds": {
+            "checklistbank": "999067"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "naccariaceae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 16,
+  "genusCount": 10,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -308,6 +347,7 @@
       "classKey": 342,
       "orderKey": 664,
       "familyKey": 4892
-    }
+    },
+    "checklistbank": "173448"
   }
 }

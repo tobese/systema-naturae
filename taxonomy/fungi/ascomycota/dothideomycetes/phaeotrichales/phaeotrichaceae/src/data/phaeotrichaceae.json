@@ -145,6 +145,18 @@
           "uuid": "d27c7467-0c07-56a-b52-b68dedd0f7884b",
           "authorityIds": "col:4FPXT,gbif:2613952,mycobank:319693",
           "children": []
+        },
+        {
+          "id": "SP_PHAEOTRICHUM_SP",
+          "name": "Phaeotrichum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeotrichum",
+          "sourceIds": {
+            "checklistbank": "2822316"
+          },
+          "children": []
         }
       ],
       "authorship": "Cain & M.E. Barr"
@@ -498,11 +510,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "phaeotrichaceae"
+    },
+    {
+      "id": "GENUS_PHAEOTRICHACEAE",
+      "name": "Phaeotrichaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHAEOTRICHACEAE_SP",
+          "name": "Phaeotrichaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phaeotrichaceae",
+          "sourceIds": {
+            "checklistbank": "2012425"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaeotrichaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_TRICHODELITSCHIA",
+          "name": "uncultured Trichodelitschia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2980344"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phaeotrichaceae"
     }
   ],
   "authorship": "Cain",
-  "genusCount": 8,
-  "speciesCount": 20,
+  "genusCount": 10,
+  "speciesCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -511,6 +565,6 @@
       "orderKey": 7948980,
       "familyKey": 8313
     },
-    "checklistbank": "ott85511"
+    "checklistbank": "45152"
   }
 }

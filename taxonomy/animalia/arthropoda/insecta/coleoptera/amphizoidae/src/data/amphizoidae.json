@@ -46,10 +46,12 @@
             ],
             "itis": [
               "111958"
-            ]
+            ],
+            "checklistbank": "107775"
           },
           "uuid": "76cf6240-1ede-53e-819-87f28953cfbd3c",
-          "authorityIds": "gbif:1044389,itis:111958"
+          "authorityIds": "gbif:1044389,itis:111958",
+          "authorship": "LeConte, 1853"
         },
         {
           "id": "SP_AMPHIZOA_LECONTEI",
@@ -70,10 +72,12 @@
             ],
             "itis": [
               "111961"
-            ]
+            ],
+            "checklistbank": "159779"
           },
           "uuid": "a51c9720-9169-567-a05-7c9d1cbd042994",
-          "authorityIds": "gbif:1044386,itis:111961"
+          "authorityIds": "gbif:1044386,itis:111961",
+          "authorship": "Matthews, 1872"
         },
         {
           "id": "SP_AMPHIZOA_SINICA",
@@ -137,10 +141,31 @@
           "authorityIds": "itis:1260669"
         }
       ]
+    },
+    {
+      "id": "GENUS_AMPHIZOIDAE",
+      "name": "Amphizoidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMPHIZOIDAE_SP",
+          "name": "Amphizoidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amphizoidae",
+          "sourceIds": {
+            "checklistbank": "2917914"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "amphizoidae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 6,
+  "genusCount": 2,
+  "speciesCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -148,6 +173,7 @@
       "classKey": 216,
       "orderKey": 1470,
       "familyKey": 3784
-    }
+    },
+    "checklistbank": "107773"
   }
 }

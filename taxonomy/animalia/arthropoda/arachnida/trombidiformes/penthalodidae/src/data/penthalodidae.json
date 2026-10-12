@@ -689,7 +689,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "stereotydeus",
-          "uuid": "622ecd2f-0ea0-531-b33-246409f1a75ce9"
+          "uuid": "622ecd2f-0ea0-531-b33-246409f1a75ce9",
+          "authorship": "Brunetti, 2021",
+          "sourceIds": {
+            "checklistbank": "2842340"
+          }
         },
         {
           "id": "SP_STEREOTYDEUS_NUDISETUS",
@@ -700,6 +704,18 @@
           "lineage": "Stereotydeus",
           "sourceIds": {
             "checklistbank": "397490"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STEREOTYDEUS_SP",
+          "name": "Stereotydeus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stereotydeus",
+          "sourceIds": {
+            "checklistbank": "367847"
           },
           "children": []
         }
@@ -974,6 +990,19 @@
             "checklistbank": "ott5927974"
           },
           "children": []
+        },
+        {
+          "id": "SP_PENTHALODES_CAUCASICUS_KHAUSTOV_KRAVCHENKO_2023",
+          "name": "Penthalodes caucasicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Penthalodes",
+          "authorship": "Khaustov & Kravchenko, 2023",
+          "sourceIds": {
+            "checklistbank": "3103773"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1129,13 +1158,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "penthalodidae"
+    },
+    {
+      "id": "GENUS_PENTHALODIDAE",
+      "name": "Penthalodidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENTHALODIDAE_SP",
+          "name": "Penthalodidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Penthalodidae",
+          "sourceIds": {
+            "checklistbank": "1251332"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "penthalodidae"
     }
   ],
-  "speciesCount": 53,
+  "speciesCount": 56,
   "appSlug": "penthalodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1144,6 +1194,6 @@
       "orderKey": 543,
       "familyKey": 2811
     },
-    "checklistbank": "ott1034230"
+    "checklistbank": "360066"
   }
 }

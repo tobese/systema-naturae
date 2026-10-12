@@ -495,7 +495,8 @@
           "sourceIds": {
             "checklistbank": "ott133647"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Ruprecht) Yendo, 1916"
         },
         {
           "id": "SP_ACROSIPHONIA_COALITA",
@@ -507,7 +508,8 @@
           "sourceIds": {
             "checklistbank": "ott458656"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Ruprecht) Scagel et al."
         },
         {
           "id": "SP_ACROSIPHONIA_STOLONIFERA",
@@ -638,6 +640,18 @@
           "lineage": "Acrosiphonia",
           "sourceIds": {
             "checklistbank": "ott5401219"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACROSIPHONIA_SP",
+          "name": "Acrosiphonia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acrosiphonia",
+          "sourceIds": {
+            "checklistbank": "100608"
           },
           "children": []
         }
@@ -1110,6 +1124,18 @@
             "checklistbank": "1022909"
           },
           "children": []
+        },
+        {
+          "id": "SP_CAPSOSIPHON_SP",
+          "name": "Capsosiphon sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Capsosiphon",
+          "sourceIds": {
+            "checklistbank": "2785202"
+          },
+          "children": []
         }
       ]
     },
@@ -1155,7 +1181,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "299d1cd6-71c0-5a2-88d-887cc998351010"
+          "uuid": "299d1cd6-71c0-5a2-88d-887cc998351010",
+          "authorship": "Deason, 1969",
+          "sourceIds": {
+            "checklistbank": "160069"
+          }
         },
         {
           "id": "SP_GLOEOTILOPSIS_SP",
@@ -1166,6 +1196,19 @@
           "lineage": "Gloeotilopsis",
           "sourceIds": {
             "checklistbank": "ott54276"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOEOTILOPSIS_PLANCTONICA_IYENGAR_PHILIPOSE_1956",
+          "name": "Gloeotilopsis planctonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gloeotilopsis",
+          "authorship": "Iyengar & Philipose, 1956",
+          "sourceIds": {
+            "checklistbank": "34157"
           },
           "children": []
         }
@@ -1537,7 +1580,8 @@
           "sourceIds": {
             "itis": [
               "6438"
-            ]
+            ],
+            "checklistbank": "764119"
           },
           "authorityIds": "itis:6438"
         },
@@ -1625,7 +1669,8 @@
           "sourceIds": {
             "itis": [
               "6439"
-            ]
+            ],
+            "checklistbank": "1837990"
           },
           "authorityIds": "itis:6439"
         },
@@ -3090,6 +3135,18 @@
             "checklistbank": "ott7567100"
           },
           "children": []
+        },
+        {
+          "id": "SP_ULOTHRIX_SP",
+          "name": "Ulothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ulothrix",
+          "sourceIds": {
+            "checklistbank": "398708"
+          },
+          "children": []
         }
       ]
     },
@@ -3528,6 +3585,18 @@
             "checklistbank": "ott5401205"
           },
           "children": []
+        },
+        {
+          "id": "SP_UROSPORA_SP",
+          "name": "Urospora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Urospora",
+          "sourceIds": {
+            "checklistbank": "264717"
+          },
+          "children": []
         }
       ]
     },
@@ -3635,6 +3704,18 @@
           "lineage": "Pseudothrix",
           "children": [],
           "uuid": "77d75f03-d426-598-a87-a20bd19109eb36"
+        },
+        {
+          "id": "SP_PSEUDOTHRIX_SP",
+          "name": "Pseudothrix sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudothrix",
+          "sourceIds": {
+            "checklistbank": "3237861"
+          },
+          "children": []
         }
       ]
     },
@@ -5166,10 +5247,64 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ulotrichaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ULOTRICHACEAE",
+          "name": "uncultured Ulotrichaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "662432"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_ULOTHRIX",
+          "name": "uncultured Ulothrix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "3049313"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ulotrichaceae"
+    },
+    {
+      "id": "GENUS_CF",
+      "name": "cf.",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CF_CHLOROTHRIX",
+          "name": "cf. Chlorothrix",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "cf.",
+          "sourceIds": {
+            "checklistbank": "2768413"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ulotrichaceae"
     }
   ],
-  "genusCount": 52,
-  "speciesCount": 341,
+  "genusCount": 54,
+  "speciesCount": 350,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -5178,6 +5313,6 @@
       "orderKey": 1356,
       "familyKey": 4857
     },
-    "checklistbank": "ott603"
+    "checklistbank": "205394"
   }
 }

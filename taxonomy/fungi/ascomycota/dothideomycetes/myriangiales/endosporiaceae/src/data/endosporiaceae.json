@@ -25,10 +25,12 @@
             ],
             "col": [
               "39SDG"
-            ]
+            ],
+            "checklistbank": "502745"
           },
           "uuid": "44d54426-12ee-587-819-9fccf9877d30b9",
-          "authorityIds": "col:39SDG,gbif:5954060,mycobank:536901"
+          "authorityIds": "col:39SDG,gbif:5954060,mycobank:536901",
+          "children": []
         },
         {
           "id": "SP_ENDOSPORIUM_AVIARIUM_TSUNEDA",
@@ -47,10 +49,24 @@
             ],
             "col": [
               "39SDF"
-            ]
+            ],
+            "checklistbank": "502744"
           },
           "uuid": "b22a466d-9bf3-542-987-b1211bca6dd651",
-          "authorityIds": "col:39SDF,gbif:5894328,mycobank:536902"
+          "authorityIds": "col:39SDF,gbif:5894328,mycobank:536902",
+          "children": []
+        },
+        {
+          "id": "SP_ENDOSPORIUM_SP",
+          "name": "Endosporium sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Endosporium",
+          "sourceIds": {
+            "checklistbank": "2040769"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -81,18 +97,41 @@
             ]
           },
           "uuid": "bba5dc70-723f-547-bcd-62a8fdf631a39d",
-          "authorityIds": "col:9Z7TP,gbif:11496885,mycobank:837822"
+          "authorityIds": "col:9Z7TP,gbif:11496885,mycobank:837822",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Endosporiaceae"
+    },
+    {
+      "id": "GENUS_PARAENDOSPORIUM",
+      "name": "Paraendosporium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAENDOSPORIUM_BARETIAE_Y_P_TAN_BISHOP_HURLEY_R_G_SHIVAS_2025",
+          "name": "Paraendosporium baretiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraendosporium",
+          "authorship": "Y.P. Tan, Bishop-Hurley & R.G. Shivas, 2025",
+          "sourceIds": {
+            "checklistbank": "3478728"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "endosporiaceae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "endosporiaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Dothideomycetes",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -100,6 +139,7 @@
       "classKey": 183,
       "orderKey": 1037,
       "familyKey": 10713473
-    }
+    },
+    "checklistbank": "3478726"
   }
 }

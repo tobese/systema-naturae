@@ -29,7 +29,8 @@
           "sourceIds": {
             "itis": [
               "6677"
-            ]
+            ],
+            "checklistbank": "34148"
           },
           "authorityIds": "itis:6677"
         },
@@ -52,12 +53,46 @@
           "lineage": "Microthamnion",
           "children": [],
           "uuid": "ac00921d-8f2f-550-a1f-6cdcbcb0c7e80f"
+        },
+        {
+          "id": "SP_MICROTHAMNION_SP",
+          "name": "Microthamnion sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microthamnion",
+          "sourceIds": {
+            "checklistbank": "3388166"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_FUSOCHLORIS",
+      "name": "Fusochloris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FUSOCHLORIS_PERFORATA_G_L_FLOYD_SHIN_WATANABE_1993",
+          "name": "Fusochloris perforata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fusochloris",
+          "authorship": "G.L.Floyd & Shin Watanabe, 1993",
+          "sourceIds": {
+            "checklistbank": "106203"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microthamniaceae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 3,
+  "genusCount": 2,
+  "speciesCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -65,6 +100,7 @@
       "classKey": 332,
       "orderKey": 1360,
       "familyKey": 3229754
-    }
+    },
+    "checklistbank": "2682484"
   }
 }

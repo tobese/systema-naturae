@@ -214,11 +214,13 @@
             ],
             "col": [
               "3RLBG"
-            ]
+            ],
+            "checklistbank": "382652"
           },
           "uuid": "420fece1-377b-52b-8a6-e157b2f8db34c1",
           "authorityIds": "col:3RLBG,gbif:3202674,mycobank:501412",
-          "children": []
+          "children": [],
+          "authorship": "D.M.Bigelow, M.W.Olsen & Gilb., 2005"
         },
         {
           "id": "LABYRINTHULA_VALKANOVII",
@@ -342,7 +344,8 @@
             ],
             "mycobank": [
               "127873"
-            ]
+            ],
+            "checklistbank": "160259"
           },
           "uuid": "e92a0933-0237-55b-942-620e14ad4efa01",
           "authorityIds": "gbif:3202673,mycobank:127873",
@@ -361,6 +364,31 @@
           },
           "children": [],
           "uuid": "420c4c59-2d3c-5e6-922-260bba4a00a49c"
+        },
+        {
+          "id": "SP_LABYRINTHULA_SP",
+          "name": "Labyrinthula sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Labyrinthula",
+          "sourceIds": {
+            "checklistbank": "87094"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LABYRINTHULA_DIATOMEA_POPOVA_BELEVICH_2020",
+          "name": "Labyrinthula diatomea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Labyrinthula",
+          "authorship": "Popova & Belevich, 2020",
+          "sourceIds": {
+            "checklistbank": "2590897"
+          },
+          "children": []
         }
       ]
     },
@@ -470,10 +498,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "labyrinthulaceae"
+    },
+    {
+      "id": "GENUS_LABYRINTHULACEAE",
+      "name": "Labyrinthulaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LABYRINTHULACEAE_SP",
+          "name": "Labyrinthulaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Labyrinthulaceae",
+          "sourceIds": {
+            "checklistbank": "2811756"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "labyrinthulaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 18,
+  "genusCount": 5,
+  "speciesCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -481,6 +530,7 @@
       "classKey": 311,
       "orderKey": 7793226,
       "familyKey": 4100
-    }
+    },
+    "checklistbank": "35132"
   }
 }

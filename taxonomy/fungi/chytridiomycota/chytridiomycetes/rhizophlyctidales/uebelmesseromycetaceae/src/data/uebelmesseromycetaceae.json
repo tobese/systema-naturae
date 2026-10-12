@@ -25,21 +25,56 @@
             ],
             "col": [
               "7DCY7"
-            ]
+            ],
+            "checklistbank": "109966"
           },
           "uuid": "4b5be16d-bc33-545-903-d6da37c3ccaffb",
-          "authorityIds": "col:7DCY7,gbif:7551398,mycobank:810749"
+          "authorityIds": "col:7DCY7,gbif:7551398,mycobank:810749",
+          "children": []
+        },
+        {
+          "id": "SP_UEBELMESSEROMYCES_SP",
+          "name": "Uebelmesseromyces sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uebelmesseromyces",
+          "sourceIds": {
+            "checklistbank": "2099463"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Uebelmesseromycetaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_UEBELMESSEROMYCES",
+          "name": "uncultured Uebelmesseromyces",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2126295"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "uebelmesseromycetaceae"
     }
   ],
-  "speciesCount": 1,
+  "speciesCount": 3,
   "appSlug": "uebelmesseromycetaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chytridiomycota > Chytridiomycetes",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -47,6 +82,7 @@
       "classKey": 318,
       "orderKey": 1060,
       "familyKey": 8058815
-    }
+    },
+    "checklistbank": "2099461"
   }
 }

@@ -366,7 +366,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Elasmotherium",
-          "uuid": "d67c04bb-1d95-527-9ad-639494608efadb"
+          "uuid": "d67c04bb-1d95-527-9ad-639494608efadb",
+          "authorship": "Fischer, 1809",
+          "sourceIds": {
+            "checklistbank": "2491732"
+          }
         },
         {
           "id": "SP_ELASMOTHERIUM_CAUCASICUM",
@@ -478,13 +482,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Rhinocerotidae"
+    },
+    {
+      "id": "GENUS_STEPHANORHINUS",
+      "name": "Stephanorhinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STEPHANORHINUS_KIRCHBERGENSIS",
+          "name": "Stephanorhinus kirchbergensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanorhinus",
+          "sourceIds": {
+            "checklistbank": "2003782"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhinocerotidae"
     }
   ],
-  "speciesCount": 31,
+  "speciesCount": 32,
   "appSlug": "rhinocerotidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 9,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -493,6 +518,6 @@
       "orderKey": 795,
       "familyKey": 9415
     },
-    "checklistbank": "ott1034218"
+    "checklistbank": "9803"
   }
 }

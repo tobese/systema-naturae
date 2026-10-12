@@ -33,10 +33,12 @@
             ],
             "itis": [
               "708493"
-            ]
+            ],
+            "checklistbank": "1896872"
           },
           "uuid": "0e96bdce-ac3e-529-a9f-6a0ca05e741481",
-          "authorityIds": "gbif:1045049,itis:708493"
+          "authorityIds": "gbif:1045049,itis:708493",
+          "authorship": "(Randall, 1838)"
         }
       ]
     },
@@ -91,10 +93,12 @@
             ],
             "itis": [
               "708497"
-            ]
+            ],
+            "checklistbank": "2340039"
           },
           "uuid": "b5d007d2-6e6b-58c-b5f-53756b1300cab8",
-          "authorityIds": "gbif:1045043,itis:708497"
+          "authorityIds": "gbif:1045043,itis:708497",
+          "authorship": "Kirby, 1837"
         },
         {
           "id": "SP_PYTHO_NIGER",
@@ -116,10 +120,12 @@
             ],
             "itis": [
               "708500"
-            ]
+            ],
+            "checklistbank": "1605552"
           },
           "uuid": "35abaeec-b276-588-804-fd11907009e986",
-          "authorityIds": "gbif:1045038,itis:708500"
+          "authorityIds": "gbif:1045038,itis:708500",
+          "authorship": "Kirby, 1837"
         },
         {
           "id": "SP_PYTHO_NIVALIS",
@@ -160,10 +166,12 @@
             ],
             "itis": [
               "708503"
-            ]
+            ],
+            "checklistbank": "1943936"
           },
           "uuid": "c35d8b62-d200-5f0-b7d-2d0f217a73f4a9",
-          "authorityIds": "gbif:1045037,itis:708503"
+          "authorityIds": "gbif:1045037,itis:708503",
+          "authorship": "Blair, 1925"
         },
         {
           "id": "SP_PYTHO_STRICTUS",
@@ -238,6 +246,18 @@
           "lineage": "Pytho",
           "sourceIds": {
             "checklistbank": "ott7747497"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYTHO_SP",
+          "name": "Pytho sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pytho",
+          "sourceIds": {
+            "checklistbank": "2085725"
           },
           "children": []
         }
@@ -488,6 +508,18 @@
             "checklistbank": "1426164"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANAPLOPUS_SP",
+          "name": "Anaplopus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anaplopus",
+          "sourceIds": {
+            "checklistbank": "1526869"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -558,10 +590,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pythidae"
+    },
+    {
+      "id": "GENUS_PYTHIDAE",
+      "name": "Pythidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PYTHIDAE_SP",
+          "name": "Pythidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pythidae",
+          "sourceIds": {
+            "checklistbank": "1845912"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pythidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 29,
+  "genusCount": 12,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -570,6 +623,6 @@
       "orderKey": 1470,
       "familyKey": 4757
     },
-    "checklistbank": "ott725635"
+    "checklistbank": "295957"
   }
 }

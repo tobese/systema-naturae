@@ -221,7 +221,8 @@
             ],
             "col": [
               "YSD3"
-            ]
+            ],
+            "checklistbank": "3245602"
           },
           "authorityIds": "col:YSD3,itis:78661"
         },
@@ -571,7 +572,8 @@
           "sourceIds": {
             "checklistbank": "1392211"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Korshunova, Martynov, Bakken, Evertsen, Fletcher, Mudianta, Saito, Lundin, Schrodl & Picton, 2017)"
         },
         {
           "id": "SP_CORYPHELLA_MONICAE",
@@ -583,7 +585,8 @@
           "sourceIds": {
             "checklistbank": "1392213"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Korshunova, Martynov, Bakken, Evertsen, Fletcher, Mudianta, Saito, Lundin, Schrodl & Picton, 2017)"
         },
         {
           "id": "SP_CORYPHELLA_ORJANI",
@@ -595,7 +598,8 @@
           "sourceIds": {
             "checklistbank": "1392214"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Korshunova, Martynov, Bakken, Evertsen, Fletcher, Mudianta, Saito, Lundin, Schrodl & Picton, 2017)"
         },
         {
           "id": "SP_CORYPHELLA_BOREALIS",
@@ -668,6 +672,18 @@
             "checklistbank": "1642602"
           },
           "children": []
+        },
+        {
+          "id": "SP_CORYPHELLA_SP",
+          "name": "Coryphella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryphella",
+          "sourceIds": {
+            "checklistbank": "2870616"
+          },
+          "children": []
         }
       ]
     },
@@ -684,7 +700,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Borealea",
-          "uuid": "27e0066d-99e8-501-8e1-bbe1f9a815ae7d"
+          "uuid": "27e0066d-99e8-501-8e1-bbe1f9a815ae7d",
+          "authorship": "Korshunova, Martynov, Bakken, Evertsen, Fletcher, Mudianta, Saito, Lundin, Schrodl & Picton, 2017",
+          "sourceIds": {
+            "checklistbank": "2078637"
+          }
         },
         {
           "id": "SP_BOREALEA_NOBILIS_A_E_VERRILL_1880",
@@ -722,6 +742,19 @@
           "sourceIds": {
             "checklistbank": "186505"
           }
+        },
+        {
+          "id": "SP_MICROCHLAMYLLA_AMABILIS_HIRANO_KUZIRIAN_1991",
+          "name": "Microchlamylla amabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microchlamylla",
+          "authorship": "(Hirano & Kuzirian, 1991)",
+          "sourceIds": {
+            "checklistbank": "763127"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -773,6 +806,19 @@
           },
           "children": [],
           "uuid": "2f38a1b2-b4f9-563-ac0-b342e639b846b8"
+        },
+        {
+          "id": "SP_FJORDIA_CAPENSIS_THIELE_1925",
+          "name": "Fjordia capensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fjordia",
+          "authorship": "(Thiele, 1925)",
+          "sourceIds": {
+            "checklistbank": "2879370"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1071,6 +1117,50 @@
           "sourceIds": {
             "checklistbank": "1642598"
           },
+          "children": [],
+          "authorship": "Korshunova, Fletcher & Martynov, 2025"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coryphellidae"
+    },
+    {
+      "id": "GENUS_ITAXIA",
+      "name": "Itaxia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ITAXIA_FALKLANDICA_ELIOT_1907",
+          "name": "Itaxia falklandica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Itaxia",
+          "authorship": "(Eliot, 1907)",
+          "sourceIds": {
+            "checklistbank": "2078641"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "coryphellidae"
+    },
+    {
+      "id": "GENUS_CORYPHELLIDAE",
+      "name": "Coryphellidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORYPHELLIDAE_SP",
+          "name": "Coryphellidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryphellidae",
+          "sourceIds": {
+            "checklistbank": "2870873"
+          },
           "children": []
         }
       ],
@@ -1078,8 +1168,8 @@
       "lineage": "coryphellidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 63,
+  "genusCount": 15,
+  "speciesCount": 68,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1087,6 +1177,7 @@
       "classKey": 225,
       "orderKey": 980,
       "familyKey": 4304703
-    }
+    },
+    "checklistbank": "2059233"
   }
 }

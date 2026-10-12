@@ -58,6 +58,18 @@
           "authorityIds": "col:4PDSK,gbif:8255170",
           "authorship": "(Lynn & Gilron, 1993) Agatha, 2004",
           "children": []
+        },
+        {
+          "id": "SP_PSEUDOTONTONIA_SP",
+          "name": "Pseudotontonia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudotontonia",
+          "sourceIds": {
+            "checklistbank": "1295631"
+          },
+          "children": []
         }
       ]
     },
@@ -364,6 +376,18 @@
           "authorityIds": "col:4Z92K,gbif:7879037",
           "authorship": "(Song & Bradbury, 1998) Agatha, 2004",
           "children": []
+        },
+        {
+          "id": "SP_SPIROTONTONIA_SP",
+          "name": "Spirotontonia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirotontonia",
+          "sourceIds": {
+            "checklistbank": "1986472"
+          },
+          "children": []
         }
       ]
     },
@@ -437,10 +461,52 @@
           "uuid": "44535447-5e57-57a-a84-6f6fb8f807b915"
         }
       ]
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SPIROTONTONIA",
+          "name": "uncultured Spirotontonia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2517269"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tontoniidae"
+    },
+    {
+      "id": "GENUS_TONTONIIDAE",
+      "name": "Tontoniidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TONTONIIDAE_SP",
+          "name": "Tontoniidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tontoniidae",
+          "sourceIds": {
+            "checklistbank": "2812497"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tontoniidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 18,
+  "genusCount": 6,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -448,6 +514,7 @@
       "classKey": 7732358,
       "orderKey": 7885786,
       "familyKey": 8397306
-    }
+    },
+    "checklistbank": "641220"
   }
 }

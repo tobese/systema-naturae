@@ -35,7 +35,8 @@
             "checklistbank": "ott765617"
           },
           "uuid": "efd4279a-83d6-592-bbe-387272d29b0831",
-          "authorityIds": "col:7C8TZ,gbif:1000065,itis:951964"
+          "authorityIds": "col:7C8TZ,gbif:1000065,itis:951964",
+          "authorship": "Zillig and Gierl 1983"
         },
         {
           "id": "THERMOFILUM_UZONENSE",
@@ -68,7 +69,8 @@
           "sourceIds": {
             "col": [
               "CT89N"
-            ]
+            ],
+            "checklistbank": "1365176"
           },
           "authorityIds": "col:CT89N"
         },
@@ -94,7 +96,8 @@
           "sourceIds": {
             "checklistbank": "ott784703"
           },
-          "children": []
+          "children": [],
+          "authorship": "Stetter 1986"
         },
         {
           "id": "SP_THERMOFILUM_CARBOXYDITROPHUS",
@@ -105,6 +108,19 @@
           "lineage": "Thermofilum",
           "sourceIds": {
             "checklistbank": "ott5384238"
+          },
+          "children": [],
+          "authorship": "Sokolova et al. 2009"
+        },
+        {
+          "id": "SP_THERMOFILUM_SP",
+          "name": "Thermofilum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermofilum",
+          "sourceIds": {
+            "checklistbank": "1867689"
           },
           "children": []
         }
@@ -297,10 +313,12 @@
             ],
             "col": [
               "CSDS5"
-            ]
+            ],
+            "checklistbank": "2776706"
           },
           "uuid": "10556959-b7f0-55b-a4f-229852bb784f64",
-          "authorityIds": "col:CSDS5,gbif:11702577"
+          "authorityIds": "col:CSDS5,gbif:11702577",
+          "authorship": "Zayulina et al. 2021"
         },
         {
           "id": "INFIRMIFILUM_SPEC.",
@@ -336,10 +354,23 @@
             ],
             "col": [
               "CSDS6"
-            ]
+            ],
+            "checklistbank": "1550241"
           },
           "uuid": "996c9e10-07ce-560-ab5-7daaf88c21cec8",
           "authorityIds": "col:CSDS6,gbif:11455516"
+        },
+        {
+          "id": "SP_INFIRMIFILUM_SP",
+          "name": "Infirmifilum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Infirmifilum",
+          "sourceIds": {
+            "checklistbank": "2856575"
+          },
+          "children": []
         }
       ]
     },
@@ -359,14 +390,47 @@
             "checklistbank": "ott5205959"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_THERMOFILUM",
+          "name": "uncultured Thermofilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "310083"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thermofilaceae"
+    },
+    {
+      "id": "GENUS_THERMOFILACEAE",
+      "name": "Thermofilaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THERMOFILACEAE_ARCHAEON",
+          "name": "Thermofilaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thermofilaceae",
+          "sourceIds": {
+            "checklistbank": "132566"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thermofilaceae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 18,
+  "genusCount": 7,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -375,6 +439,6 @@
       "orderKey": 10772788,
       "familyKey": 3800
     },
-    "checklistbank": "ott1032624"
+    "checklistbank": "114378"
   }
 }

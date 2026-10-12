@@ -35,7 +35,8 @@
             "checklistbank": "ott835418"
           },
           "uuid": "834375ae-78ac-5f2-994-405761e7404930",
-          "authorityIds": "col:73FJ2,gbif:8043407,itis:951841"
+          "authorityIds": "col:73FJ2,gbif:8043407,itis:951841",
+          "authorship": "Brauer et al. 2011"
         },
         {
           "id": "METHANOREGULA_FORMICICA",
@@ -61,7 +62,8 @@
             "checklistbank": "ott518587"
           },
           "uuid": "b4663e95-f0c6-597-9df-c49835b035d4f4",
-          "authorityIds": "col:42FF2,gbif:7462668,itis:951842"
+          "authorityIds": "col:42FF2,gbif:7462668,itis:951842",
+          "authorship": "Yashiro et al. 2011"
         },
         {
           "id": "METHANOREGULA_SPEC.",
@@ -79,6 +81,30 @@
           },
           "uuid": "8e5e0e6a-d872-5ad-9d7-ef6ebef4523707",
           "authorityIds": "gbif:12208402"
+        },
+        {
+          "id": "SP_METHANOREGULA_SP",
+          "name": "Methanoregula sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanoregula",
+          "sourceIds": {
+            "checklistbank": "1811680"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHANOREGULA_ENDOSYMBIONT",
+          "name": "Methanoregula endosymbiont",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanoregula",
+          "sourceIds": {
+            "checklistbank": "3118214"
+          },
+          "children": []
         }
       ]
     },
@@ -113,7 +139,8 @@
             "checklistbank": "ott588890"
           },
           "uuid": "50ed5fbc-2ba8-571-884-d4d8a671e51997",
-          "authorityIds": "col:73FHC,gbif:7492426,itis:951826"
+          "authorityIds": "col:73FHC,gbif:7492426,itis:951826",
+          "authorship": "Sakai et al. 2012"
         },
         {
           "id": "METHANOLINEA_TARDA",
@@ -139,7 +166,20 @@
             "checklistbank": "ott566071"
           },
           "uuid": "9e7730de-20e5-5b2-8ff-8b756b9d1a3733",
-          "authorityIds": "col:6RFHB,gbif:8012258,itis:951825"
+          "authorityIds": "col:6RFHB,gbif:8012258,itis:951825",
+          "authorship": "Imachi et al. 2008"
+        },
+        {
+          "id": "SP_METHANOLINEA_SP",
+          "name": "Methanolinea sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanolinea",
+          "sourceIds": {
+            "checklistbank": "1111893"
+          },
+          "children": []
         }
       ]
     },
@@ -670,6 +710,18 @@
             "checklistbank": "ott5206442"
           },
           "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_METHANOREGULACEAE",
+          "name": "uncultured Methanoregulaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1392423"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -690,6 +742,53 @@
           "sourceIds": {
             "checklistbank": "ott897176"
           },
+          "children": [],
+          "authorship": "Cadillo-Quiroz et al. 2009"
+        },
+        {
+          "id": "SP_METHANOSPHAERULA_SP",
+          "name": "Methanosphaerula sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanosphaerula",
+          "sourceIds": {
+            "checklistbank": "1354749"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METHANOSPHAERULA_SUBTERRANEUS_JIA_ET_AL_2024",
+          "name": "Methanosphaerula subterraneus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanosphaerula",
+          "authorship": "Jia et al. 2024",
+          "sourceIds": {
+            "checklistbank": "3350244"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "methanoregulaceae"
+    },
+    {
+      "id": "GENUS_METHANOREGULACEAE",
+      "name": "Methanoregulaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_METHANOREGULACEAE_ARCHAEON",
+          "name": "Methanoregulaceae archaeon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Methanoregulaceae",
+          "sourceIds": {
+            "checklistbank": "1811720"
+          },
           "children": []
         }
       ],
@@ -697,8 +796,8 @@
       "lineage": "methanoregulaceae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 34,
+  "genusCount": 13,
+  "speciesCount": 41,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 2,
@@ -707,6 +806,6 @@
       "orderKey": 566,
       "familyKey": 7536903
     },
-    "checklistbank": "ott966150"
+    "checklistbank": "1198451"
   }
 }

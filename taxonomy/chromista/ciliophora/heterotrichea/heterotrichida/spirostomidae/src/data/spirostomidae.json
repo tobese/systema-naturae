@@ -81,7 +81,8 @@
           },
           "uuid": "79ab5f5d-2a31-522-818-62d58aa377e945",
           "authorityIds": "col:6ZB3G,gbif:8293634",
-          "children": []
+          "children": [],
+          "authorship": "(Mueller, 1786) Delphy, 1939"
         },
         {
           "id": "SPIROSTOMUM_CHLORELLIGERA",
@@ -314,7 +315,8 @@
           },
           "uuid": "6dba7dd9-e378-5db-80b-49091f228ceb3a",
           "authorityIds": "col:4Z8NW,gbif:7821856",
-          "children": []
+          "children": [],
+          "authorship": "Perty, 1852"
         },
         {
           "id": "SPIROSTOMUM_SEMPERVIRESCENS",
@@ -408,7 +410,8 @@
           },
           "uuid": "06776c2b-7123-5db-aee-18efcab834dcda",
           "authorityIds": "col:4Z8P7,gbif:7531718",
-          "children": []
+          "children": [],
+          "authorship": "Shigenaka, 1959"
         },
         {
           "id": "SP_SPIROSTOMUM_INTERMEDIUM_KAHL_1930_5",
@@ -447,6 +450,32 @@
           "lineage": "Spirostomum",
           "sourceIds": {
             "checklistbank": "1466746"
+          },
+          "children": [],
+          "authorship": "Boscaro et al., 2014"
+        },
+        {
+          "id": "SP_SPIROSTOMUM_SP",
+          "name": "Spirostomum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirostomum",
+          "sourceIds": {
+            "checklistbank": "60926"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPIROSTOMUM_DHARWARENSIS_DESAI_1966",
+          "name": "Spirostomum dharwarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirostomum",
+          "authorship": "Desai, 1966",
+          "sourceIds": {
+            "checklistbank": "1471043"
           },
           "children": []
         }
@@ -1871,11 +1900,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 12231529
+            "gbif": 12231529,
+            "checklistbank": "2782393"
           },
           "uuid": "71b4cb77-f7ef-5a5-8c0-8cf8ce5a5e1817",
           "authorityIds": "gbif:12231529",
-          "children": []
+          "children": [],
+          "authorship": "Chi, Li, Zhang, Ma, Warren, Chen & Song, 2020"
         },
         {
           "id": "GRUBERIA_LANCEOLATA",
@@ -1923,6 +1954,18 @@
           "uuid": "34a081a9-6469-5d4-858-4d6683b45b188f",
           "authorityIds": "col:3HF6P,gbif:7984855",
           "authorship": "Kahl, 1932",
+          "children": []
+        },
+        {
+          "id": "SP_GRUBERIA_SP",
+          "name": "Gruberia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gruberia",
+          "sourceIds": {
+            "checklistbank": "37352"
+          },
           "children": []
         }
       ]
@@ -2051,7 +2094,8 @@
           "sourceIds": {
             "checklistbank": "1429043"
           },
-          "children": []
+          "children": [],
+          "authorship": "Isquith, 1968"
         },
         {
           "id": "SP_ANIGSTEINIA_SALINARA",
@@ -2064,14 +2108,47 @@
             "checklistbank": "1553031"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANIGSTEINIA_SP",
+          "name": "Anigsteinia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anigsteinia",
+          "sourceIds": {
+            "checklistbank": "1821547"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spirostomidae"
+    },
+    {
+      "id": "GENUS_SPIROSTOMIDAE",
+      "name": "Spirostomidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPIROSTOMIDAE_SP",
+          "name": "Spirostomidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirostomidae",
+          "sourceIds": {
+            "checklistbank": "3061895"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spirostomidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 91,
+  "genusCount": 8,
+  "speciesCount": 96,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2080,6 +2157,6 @@
       "orderKey": 8169551,
       "familyKey": 7841835
     },
-    "checklistbank": "7bc31c9a-1a38-49d7-ba13-d918b9e97fb8"
+    "checklistbank": "37350"
   }
 }

@@ -59,7 +59,8 @@
             ],
             "col": [
               "9Z8T4"
-            ]
+            ],
+            "checklistbank": "2234011"
           },
           "uuid": "63ae7af2-c37a-590-b56-7ec3dab9c15a2f",
           "authorityIds": "col:9Z8T4,gbif:11495949,mycobank:570533"
@@ -393,7 +394,8 @@
             ],
             "col": [
               "CCKJB"
-            ]
+            ],
+            "checklistbank": "3058069"
           },
           "authorityIds": "col:CCKJB,mycobank:571608"
         },
@@ -445,6 +447,18 @@
           "lineage": "Neolentinus",
           "sourceIds": {
             "checklistbank": "1698913"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOLENTINUS_AFF",
+          "name": "Neolentinus aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neolentinus",
+          "sourceIds": {
+            "checklistbank": "2447992"
           },
           "children": []
         }
@@ -512,6 +526,18 @@
           },
           "uuid": "0043f7a6-d9d6-5a1-801-a16876fb9ea201",
           "authorityIds": "col:TBRP,gbif:2553000,mycobank:135236"
+        },
+        {
+          "id": "SP_CHAETODERMELLA_SP",
+          "name": "Chaetodermella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetodermella",
+          "sourceIds": {
+            "checklistbank": "3057805"
+          },
+          "children": []
         }
       ],
       "authorship": "Rauschert"
@@ -636,6 +662,18 @@
           },
           "uuid": "9df1389b-117a-568-b6d-873002b31a5dd7",
           "authorityIds": "col:MJWL,gbif:2553304,mycobank:309835"
+        },
+        {
+          "id": "SP_BOREOSTEREUM_SP",
+          "name": "Boreostereum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boreostereum",
+          "sourceIds": {
+            "checklistbank": "2012359"
+          },
+          "children": []
         }
       ],
       "authorship": "Parmasto"
@@ -800,7 +838,8 @@
             ],
             "col": [
               "7FLRD"
-            ]
+            ],
+            "checklistbank": "2075487"
           },
           "uuid": "4ff65527-c04d-5a8-84d-46c0e680184fbc",
           "authorityIds": "col:7FLRD,gbif:2553516,mycobank:127332"
@@ -936,7 +975,8 @@
             ],
             "col": [
               "7FM35"
-            ]
+            ],
+            "checklistbank": "1476484"
           },
           "uuid": "428cf2e6-1876-585-b92-11d8135bdb5a1c",
           "authorityIds": "col:7FM35,gbif:9749263,mycobank:807532"
@@ -1038,7 +1078,8 @@
             ],
             "col": [
               "7FM37"
-            ]
+            ],
+            "checklistbank": "1189073"
           },
           "uuid": "8be9f310-797e-5ba-b02-144a07ffe9c33c",
           "authorityIds": "col:7FM37,gbif:7562885"
@@ -1064,7 +1105,8 @@
             ],
             "col": [
               "7FLQW"
-            ]
+            ],
+            "checklistbank": "1757944"
           },
           "uuid": "54aeffb3-7b7c-59a-981-43f8389e0cfeb8",
           "authorityIds": "col:7FLQW,gbif:9660260,mycobank:814979"
@@ -1932,6 +1974,18 @@
           "authorship": "(Berk. & M.A.Curtis) Ginns",
           "sourceIds": {
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:2013"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GRISEOPORIA_SP",
+          "name": "Griseoporia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Griseoporia",
+          "sourceIds": {
+            "checklistbank": "1349982"
           },
           "children": []
         }
@@ -2993,11 +3047,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gloeophyllaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GLOEOPHYLLUM",
+          "name": "uncultured Gloeophyllum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1193698"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gloeophyllaceae"
+    },
+    {
+      "id": "GENUS_GLOEOPHYLLACEAE",
+      "name": "Gloeophyllaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLOEOPHYLLACEAE_SP",
+          "name": "Gloeophyllaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gloeophyllaceae",
+          "sourceIds": {
+            "checklistbank": "3230119"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gloeophyllaceae"
     }
   ],
   "authorship": "Jülich",
-  "genusCount": 38,
-  "speciesCount": 139,
+  "genusCount": 40,
+  "speciesCount": 145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -3005,6 +3101,7 @@
       "classKey": 186,
       "orderKey": 1065,
       "familyKey": 8462
-    }
+    },
+    "checklistbank": "452340"
   }
 }

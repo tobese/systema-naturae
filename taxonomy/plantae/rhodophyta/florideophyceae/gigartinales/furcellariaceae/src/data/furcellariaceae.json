@@ -149,7 +149,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "964a85a1-7875-51f-ad9-1bc24ddffc4eb3"
+          "uuid": "964a85a1-7875-51f-ad9-1bc24ddffc4eb3",
+          "authorship": "Yamada 1941",
+          "sourceIds": {
+            "checklistbank": "1880591"
+          }
         },
         {
           "id": "SP_HALARACHNION_ACICULARE_K_TZ_1863",
@@ -161,6 +165,45 @@
           "authorship": "Kütz., 1863",
           "sourceIds": {
             "checklistbank": "682623"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALARACHNION_LATISSIMUM_OKAMURA_1933",
+          "name": "Halarachnion latissimum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halarachnion",
+          "authorship": "Okamura 1933",
+          "sourceIds": {
+            "checklistbank": "1545845"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALARACHNION_LOUISIANENSIS_ARAKAKI_SUZUKI_FREDERICQ_2014",
+          "name": "Halarachnion louisianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halarachnion",
+          "authorship": "Arakaki, Suzuki & Fredericq 2014",
+          "sourceIds": {
+            "checklistbank": "1545846"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HALARACHNION_PUSILLUM_BAARDSETH_1941",
+          "name": "Halarachnion pusillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halarachnion",
+          "authorship": "Baardseth, 1941",
+          "sourceIds": {
+            "checklistbank": "2668041"
           },
           "children": []
         }
@@ -235,9 +278,11 @@
           "sourceIds": {
             "itis": [
               "11910"
-            ]
+            ],
+            "checklistbank": "1268069"
           },
-          "authorityIds": "itis:11910"
+          "authorityIds": "itis:11910",
+          "authorship": "(Harvey) F.Schmitz in Rosenvinge 1893"
         },
         {
           "id": "SP_TURNERELLA_MERTENSIANA",
@@ -248,6 +293,19 @@
           "lineage": "Turnerella",
           "sourceIds": {
             "checklistbank": "1047066"
+          },
+          "children": [],
+          "authorship": "(Postels & Ruprecht) F.Schmitz, 1893"
+        },
+        {
+          "id": "SP_TURNERELLA_SP",
+          "name": "Turnerella sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turnerella",
+          "sourceIds": {
+            "checklistbank": "1583050"
           },
           "children": []
         }
@@ -303,7 +361,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "76d78538-568a-57d-b27-2ebb4fd07b722a"
+          "uuid": "76d78538-568a-57d-b27-2ebb4fd07b722a",
+          "authorship": "W.A.Nelson & R.D'Archino 2014",
+          "sourceIds": {
+            "checklistbank": "1647383"
+          }
         }
       ]
     },
@@ -613,10 +675,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "furcellariaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_FURCELLARIA",
+          "name": "uncultured Furcellaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2507679"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_TURNERELLA",
+          "name": "uncultured Turnerella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2507778"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "furcellariaceae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 31,
+  "genusCount": 20,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -624,6 +719,7 @@
       "classKey": 342,
       "orderKey": 1400,
       "familyKey": 4933
-    }
+    },
+    "checklistbank": "28018"
   }
 }

@@ -7983,10 +7983,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8353505
+            "gbif": 8353505,
+            "checklistbank": "2527895"
           },
           "uuid": "fc315dfe-e907-504-a0a-a632dd7561cc83",
-          "authorityIds": "gbif:8353505"
+          "authorityIds": "gbif:8353505",
+          "authorship": "Hustedt"
         },
         {
           "id": "GOMPHONEMA_LOUISIANANUM",
@@ -16332,6 +16334,31 @@
             "checklistbank": "1268872"
           },
           "children": []
+        },
+        {
+          "id": "SP_GOMPHONEMA_SP",
+          "name": "Gomphonema sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphonema",
+          "sourceIds": {
+            "checklistbank": "1490950"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOMPHONEMA_MARITIMO_ANTARCTICUM_VAN_DE_VIJVER_KOPALOVA_ZIDAROVA_KOCIOLEK_2016",
+          "name": "Gomphonema maritimo-antarcticum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphonema",
+          "authorship": "Van de Vijver, Kopalova, Zidarova & Kociolek, 2016",
+          "sourceIds": {
+            "checklistbank": "3064401"
+          },
+          "children": []
         }
       ]
     },
@@ -17878,6 +17905,18 @@
             "checklistbank": "1006302"
           },
           "children": []
+        },
+        {
+          "id": "SP_GOMPHONEIS_SP",
+          "name": "Gomphoneis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphoneis",
+          "sourceIds": {
+            "checklistbank": "1574465"
+          },
+          "children": []
         }
       ]
     },
@@ -18939,6 +18978,56 @@
             "checklistbank": "627057"
           },
           "authorityIds": "itis:591283"
+        },
+        {
+          "id": "SP_DIDYMOSPHENIA_DENTATA_DOROGOSTAISKY_SKVORTZOW_MEYER_1928",
+          "name": "Didymosphenia dentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymosphenia",
+          "authorship": "(Dorogostaisky) Skvortzow & Meyer, 1928",
+          "sourceIds": {
+            "checklistbank": "1574432"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIDYMOSPHENIA_HULLII_KHAN_BUREAU_2016",
+          "name": "Didymosphenia hullii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymosphenia",
+          "authorship": "Khan-Bureau, 2016",
+          "sourceIds": {
+            "checklistbank": "1579215"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIDYMOSPHENIA_SP",
+          "name": "Didymosphenia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymosphenia",
+          "sourceIds": {
+            "checklistbank": "2719303"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIDYMOSPHENIA_LATICOLLIS",
+          "name": "Didymosphenia laticollis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Didymosphenia",
+          "sourceIds": {
+            "checklistbank": "2720005"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -20424,10 +20513,77 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gomphonemataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_GOMPHONEMA",
+          "name": "uncultured Gomphonema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "585222"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_GOMPHONEMATACEAE",
+          "name": "uncultured Gomphonemataceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "665006"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_REIMERIA",
+          "name": "uncultured Reimeria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2613906"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gomphonemataceae"
+    },
+    {
+      "id": "GENUS_GOMPHADELPHA",
+      "name": "Gomphadelpha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GOMPHADELPHA_KOCIOLEKII_JAHN_ABARCA_ABARCA_ET_AL_2023",
+          "name": "Gomphadelpha kociolekii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gomphadelpha",
+          "authorship": "(Jahn & Abarca) Abarca et al., 2023",
+          "sourceIds": {
+            "checklistbank": "3050118"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gomphonemataceae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 1134,
+  "genusCount": 25,
+  "speciesCount": 1145,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -20435,6 +20591,7 @@
       "classKey": 7947184,
       "orderKey": 7798126,
       "familyKey": 7894191
-    }
+    },
+    "checklistbank": "97225"
   }
 }

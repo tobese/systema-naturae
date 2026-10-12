@@ -134,9 +134,11 @@
           "sourceIds": {
             "col": [
               "42KTK"
-            ]
+            ],
+            "checklistbank": "1210425"
           },
-          "authorityIds": "col:42KTK"
+          "authorityIds": "col:42KTK",
+          "authorship": "(Horst, 1922)"
         },
         {
           "id": "SP_MEXIEULEPIS_ELONGATUS_NULL",
@@ -835,10 +837,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eulepethidae"
+    },
+    {
+      "id": "GENUS_EULEPETHIDAE",
+      "name": "Eulepethidae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EULEPETHIDAE_SP",
+          "name": "Eulepethidae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eulepethidae",
+          "sourceIds": {
+            "checklistbank": "3028828"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eulepethidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 46,
+  "genusCount": 8,
+  "speciesCount": 47,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -847,6 +870,6 @@
       "orderKey": 1079,
       "familyKey": 6968
     },
-    "checklistbank": "ott413720"
+    "checklistbank": "1210442"
   }
 }

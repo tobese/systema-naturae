@@ -211,7 +211,8 @@
             ],
             "col": [
               "6PY3K"
-            ]
+            ],
+            "checklistbank": "2172131"
           },
           "uuid": "5c66d22c-b8a0-5ff-bac-86bd766d0754fc",
           "authorityIds": "col:6PY3K,gbif:10779105,mycobank:825180"
@@ -237,7 +238,8 @@
             ],
             "col": [
               "6Q9RK"
-            ]
+            ],
+            "checklistbank": "2172132"
           },
           "uuid": "9b3affab-7747-5e5-b76-7a1201c1f869cf",
           "authorityIds": "col:6Q9RK,gbif:10829012,mycobank:825181"
@@ -420,10 +422,12 @@
           "sourceIds": {
             "mycobank": [
               "130695"
-            ]
+            ],
+            "checklistbank": "1263496"
           },
           "authorityIds": "mycobank:130695",
-          "commonName": "calcareous lichenothelia lichen"
+          "commonName": "calcareous lichenothelia lichen",
+          "authorship": "Henssen, 1987"
         },
         {
           "id": "SP_LICHENOTHELIA_DENDRITICA",
@@ -501,10 +505,12 @@
           "sourceIds": {
             "mycobank": [
               "130681"
-            ]
+            ],
+            "checklistbank": "2172130"
           },
           "authorityIds": "mycobank:130681",
-          "commonName": "lichenothelia lichen"
+          "commonName": "lichenothelia lichen",
+          "authorship": "Henssen, 1987"
         },
         {
           "id": "SP_LICHENOTHELIA_MACROCARPA",
@@ -662,10 +668,12 @@
           "sourceIds": {
             "mycobank": [
               "130692"
-            ]
+            ],
+            "checklistbank": "1263502"
           },
           "authorityIds": "mycobank:130692",
-          "commonName": "lichenothelia lichen"
+          "commonName": "lichenothelia lichen",
+          "authorship": "Henssen, 1987"
         },
         {
           "id": "SP_LICHENOTHELIA_ELONGATA_NAV_ROS_HAFELLNER_P_F_CANNON",
@@ -677,6 +685,31 @@
           "authorship": "(Nav.-Ros. & Hafellner) P.F.Cannon",
           "sourceIds": {
             "checklistbank": "urn:lsid:dyntaxa.se:Taxon:229276"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LICHENOTHELIA_SP",
+          "name": "Lichenothelia sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lichenothelia",
+          "sourceIds": {
+            "checklistbank": "1263656"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LICHENOTHELIA_DIMELAENAE_CALAT_HAFELLNER_KOCOURK_K_KNUDSEN_MUGGIA_2019",
+          "name": "Lichenothelia dimelaenae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lichenothelia",
+          "authorship": "(Calat. & Hafellner) Kocourk., K. Knudsen & Muggia, 2019",
+          "sourceIds": {
+            "checklistbank": "2172129"
           },
           "children": []
         }
@@ -1928,11 +1961,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lichenotheliaceae"
+    },
+    {
+      "id": "GENUS_LICHENOTHELIACEAE",
+      "name": "Lichenotheliaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LICHENOTHELIACEAE_SP",
+          "name": "Lichenotheliaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lichenotheliaceae",
+          "sourceIds": {
+            "checklistbank": "1385576"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lichenotheliaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LICHENOTHELIA",
+          "name": "uncultured Lichenothelia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2510160"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lichenotheliaceae"
     }
   ],
   "authorship": "Henssen",
-  "genusCount": 7,
-  "speciesCount": 111,
+  "genusCount": 9,
+  "speciesCount": 115,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1941,6 +2016,6 @@
       "orderKey": 8285979,
       "familyKey": 2462
     },
-    "checklistbank": "ott560255"
+    "checklistbank": "281210"
   }
 }

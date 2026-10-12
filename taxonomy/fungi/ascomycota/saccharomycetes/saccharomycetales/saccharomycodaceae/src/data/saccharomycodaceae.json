@@ -242,7 +242,8 @@
             ],
             "col": [
               "3JJYG"
-            ]
+            ],
+            "checklistbank": "2268990"
           },
           "uuid": "f9b0cae2-544d-588-bd8-abaf258873f474",
           "authorityIds": "col:3JJYG,gbif:10856583,mycobank:824953"
@@ -563,7 +564,8 @@
             ],
             "col": [
               "C9Y66"
-            ]
+            ],
+            "checklistbank": "3031818"
           },
           "authorityIds": "col:C9Y66,mycobank:834591"
         },
@@ -576,6 +578,55 @@
           "lineage": "Hanseniaspora",
           "sourceIds": {
             "checklistbank": "ott591671"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HANSENIASPORA_SP",
+          "name": "Hanseniaspora sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanseniaspora",
+          "sourceIds": {
+            "checklistbank": "211095"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HANSENIASPORA_OPUNTIAE",
+          "name": "Hanseniaspora ×opuntiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanseniaspora",
+          "sourceIds": {
+            "checklistbank": "2598436"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HANSENIASPORA_AFF",
+          "name": "Hanseniaspora aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanseniaspora",
+          "sourceIds": {
+            "checklistbank": "2771022"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HANSENIASPORA_MENGLAENSIS_F_L_HUI_Y_Z_QIAO_2023",
+          "name": "Hanseniaspora menglaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hanseniaspora",
+          "authorship": "F.-l.Hui & Y.-Z. Qiao , 2023",
+          "sourceIds": {
+            "checklistbank": "3081051"
           },
           "children": []
         }
@@ -628,6 +679,18 @@
           "authorship": "J.Z. Yue",
           "sourceIds": {
             "checklistbank": "c272f7e9-7027-4838-859f-b77772d50ab3"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SACCHAROMYCODES_SP",
+          "name": "Saccharomycodes sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccharomycodes",
+          "sourceIds": {
+            "checklistbank": "765299"
           },
           "children": []
         }
@@ -973,11 +1036,65 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "saccharomycodaceae"
+    },
+    {
+      "id": "GENUS_SACCHAROMYCODACEAE",
+      "name": "Saccharomycodaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SACCHAROMYCODACEAE_SP",
+          "name": "Saccharomycodaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saccharomycodaceae",
+          "sourceIds": {
+            "checklistbank": "422842"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saccharomycodaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_HANSENIASPORA",
+          "name": "uncultured Hanseniaspora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "698511"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_SACCHAROMYCODES",
+          "name": "uncultured Saccharomycodes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1420878"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saccharomycodaceae"
     }
   ],
   "authorship": "Kudryavtsev",
-  "genusCount": 7,
-  "speciesCount": 38,
+  "genusCount": 9,
+  "speciesCount": 46,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -986,6 +1103,6 @@
       "orderKey": 1281,
       "familyKey": 8405
     },
-    "checklistbank": "ott207065"
+    "checklistbank": "34365"
   }
 }

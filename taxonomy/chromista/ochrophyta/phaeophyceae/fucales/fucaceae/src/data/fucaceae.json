@@ -248,7 +248,8 @@
             "checklistbank": "ott688262"
           },
           "uuid": "d780c2b9-7df3-517-b9d-c02bd3fd7c6cb7",
-          "authorityIds": "gbif:4377235"
+          "authorityIds": "gbif:4377235",
+          "authorship": "L.Bergstrom & L.Kautsky, 2005"
         },
         {
           "id": "FUCUS_SERRATUS",
@@ -2308,7 +2309,23 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pelvetiopsis",
           "children": [],
-          "uuid": "51b465db-e7e9-5d2-9c1-cae52cc39e01c3"
+          "uuid": "51b465db-e7e9-5d2-9c1-cae52cc39e01c3",
+          "authorship": "J.Neiva, Raimondi, G.A.Pearson & Serrao, 2017",
+          "sourceIds": {
+            "checklistbank": "2048665"
+          }
+        },
+        {
+          "id": "SP_PELVETIOPSIS_SP",
+          "name": "Pelvetiopsis sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelvetiopsis",
+          "sourceIds": {
+            "checklistbank": "1906368"
+          },
+          "children": []
         }
       ]
     },
@@ -2429,7 +2446,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Silvetia",
           "children": [],
-          "uuid": "11569e95-2e5c-543-83f-d89a4ddd1e967e"
+          "uuid": "11569e95-2e5c-543-83f-d89a4ddd1e967e",
+          "authorship": "(Harvey) E.A.Serrao, T.O.Cho, S.M.Boo & Brawley, 1999",
+          "sourceIds": {
+            "checklistbank": "93835"
+          }
         },
         {
           "id": "SP_SILVETIA_COMPRESSA",
@@ -2439,7 +2460,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Silvetia",
           "children": [],
-          "uuid": "3c35e447-4922-52b-82e-dbb1b2e2b2fbb1"
+          "uuid": "3c35e447-4922-52b-82e-dbb1b2e2b2fbb1",
+          "authorship": "(J.Agardh) E.Serrao, T.O.Cho, S.M.Boo & Brawley, 1999",
+          "sourceIds": {
+            "checklistbank": "93836"
+          }
         },
         {
           "id": "SP_SILVETIA_SILIQUOSA",
@@ -2449,7 +2474,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Silvetia",
           "children": [],
-          "uuid": "9f0716fc-9b91-535-839-7b40fc3efef101"
+          "uuid": "9f0716fc-9b91-535-839-7b40fc3efef101",
+          "authorship": "(C.K.Tseng & C.F.Chang) E.A.Serrao, T.O.Cho, S.M.Boo & S.H.Brawley, 1999",
+          "sourceIds": {
+            "checklistbank": "93837"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2837,7 +2866,8 @@
           "sourceIds": {
             "checklistbank": "ott725616"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Labillardiere) Montagne ex Kjellman, 1893"
         },
         {
           "id": "SP_XIPHOPHORA_CHONDROPHYLLA",
@@ -2849,7 +2879,8 @@
           "sourceIds": {
             "checklistbank": "ott996416"
           },
-          "children": []
+          "children": [],
+          "authorship": "(R.Brown ex Turner) Montagne ex Harvey, 1855"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2908,10 +2939,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "fucaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_ASCOPHYLLUM",
+          "name": "uncultured Ascophyllum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2507663"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_FUCUS",
+          "name": "uncultured Fucus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2507677"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "fucaceae"
     }
   ],
-  "genusCount": 18,
-  "speciesCount": 211,
+  "genusCount": 19,
+  "speciesCount": 214,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2920,6 +2984,6 @@
       "orderKey": 1182,
       "familyKey": 9641
     },
-    "checklistbank": "ott1022958"
+    "checklistbank": "3010"
   }
 }

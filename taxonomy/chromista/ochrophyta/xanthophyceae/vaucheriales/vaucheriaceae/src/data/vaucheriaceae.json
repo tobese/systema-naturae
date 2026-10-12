@@ -1086,7 +1086,8 @@
             "checklistbank": "1079280"
           },
           "uuid": "45a0073d-87f3-57b-8ee-a81ed758309e1c",
-          "authorityIds": "gbif:5423817"
+          "authorityIds": "gbif:5423817",
+          "authorship": "Blum, 1971"
         },
         {
           "id": "VAUCHERIA_TERRESTRIS",
@@ -1293,7 +1294,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Vaucheria",
           "children": [],
-          "uuid": "f2e3cb1d-4886-5d9-973-9c21041e08aeb9"
+          "uuid": "f2e3cb1d-4886-5d9-973-9c21041e08aeb9",
+          "authorship": "T.A.Christensen, 1987",
+          "sourceIds": {
+            "checklistbank": "195978"
+          }
         },
         {
           "id": "SP_VAUCHERIA_ELONGATA",
@@ -1573,7 +1578,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Vaucheria",
           "children": [],
-          "uuid": "357e87fb-d03b-51b-a0e-2120fae195fe3c"
+          "uuid": "357e87fb-d03b-51b-a0e-2120fae195fe3c",
+          "authorship": "Bonilla-Rodriguez, Garduno-Solorzano, Martinez-Garcia, Campos, Monsalvo-Reyes & Quintanar-Zuniga, 2013",
+          "sourceIds": {
+            "checklistbank": "1403559"
+          }
         },
         {
           "id": "SP_VAUCHERIA_HAMATA",
@@ -1986,6 +1995,18 @@
             "checklistbank": "ott8032047"
           },
           "children": []
+        },
+        {
+          "id": "SP_VAUCHERIA_SP",
+          "name": "Vaucheria sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vaucheria",
+          "sourceIds": {
+            "checklistbank": "439537"
+          },
+          "children": []
         }
       ]
     },
@@ -2285,10 +2306,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "vaucheriaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_VAUCHERIACEAE",
+          "name": "uncultured Vaucheriaceae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1010593"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vaucheriaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 139,
+  "genusCount": 8,
+  "speciesCount": 141,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2297,6 +2339,6 @@
       "orderKey": 1321,
       "familyKey": 4596
     },
-    "checklistbank": "ott223421"
+    "checklistbank": "2975"
   }
 }

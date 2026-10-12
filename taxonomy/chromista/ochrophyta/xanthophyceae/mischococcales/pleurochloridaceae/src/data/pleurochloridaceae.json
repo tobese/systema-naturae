@@ -297,10 +297,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12234765
+            "gbif": 12234765,
+            "checklistbank": "92126"
           },
           "uuid": "1998db26-9c6b-518-8d4-0488d853332f16",
-          "authorityIds": "gbif:12234765"
+          "authorityIds": "gbif:12234765",
+          "authorship": "Vischer, 1945"
         },
         {
           "id": "PLEUROCHLORIS_PSEUDOPOLYCHLORIS",
@@ -330,6 +332,18 @@
           "lineage": "Pleurochloris",
           "sourceIds": {
             "checklistbank": "1122482"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROCHLORIS_SP",
+          "name": "Pleurochloris sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurochloris",
+          "sourceIds": {
+            "checklistbank": "2792745"
           },
           "children": []
         }
@@ -1602,6 +1616,31 @@
           },
           "uuid": "546c909a-0b04-510-84f-8b8d86cce7e716",
           "authorityIds": "gbif:3201504,itis:189427"
+        },
+        {
+          "id": "SP_MONODUS_SP",
+          "name": "Monodus sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monodus",
+          "sourceIds": {
+            "checklistbank": "73015"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MONODUS_GUTTULA_PASCHER_1938",
+          "name": "Monodus guttula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monodus",
+          "authorship": "Pascher, 1938",
+          "sourceIds": {
+            "checklistbank": "423564"
+          },
+          "children": []
         }
       ]
     },
@@ -1812,6 +1851,33 @@
           "lineage": "Chloridella",
           "sourceIds": {
             "checklistbank": "1271848"
+          },
+          "children": [],
+          "authorship": "(Pascher & Geitler) Pascher, 1932"
+        },
+        {
+          "id": "SP_CHLORIDELLA_SIMPLEX_PASCHER_1937",
+          "name": "Chloridella simplex",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chloridella",
+          "authorship": "Pascher, 1937",
+          "sourceIds": {
+            "checklistbank": "1431824"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHLORIDELLA_MINUTA_GAYRAL_SEIZILLES_DE_MAZANCOURT_1958",
+          "name": "Chloridella minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chloridella",
+          "authorship": "Gayral & Seizilles de Mazancourt, 1958",
+          "sourceIds": {
+            "checklistbank": "2991669"
           },
           "children": []
         }
@@ -2033,10 +2099,24 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12262740
+            "gbif": 12262740,
+            "checklistbank": "92128"
           },
           "uuid": "b057b8e9-35b1-534-85b-8e2bf8d7bd3560",
-          "authorityIds": "gbif:12262740"
+          "authorityIds": "gbif:12262740",
+          "authorship": "Andreoli, Moro, Rocca, Rigoni, Dalla Valle & Bargelloni, 1999"
+        },
+        {
+          "id": "SP_PSEUDOPLEUROCHLORIS_SP",
+          "name": "Pseudopleurochloris sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudopleurochloris",
+          "sourceIds": {
+            "checklistbank": "1630296"
+          },
+          "children": []
         }
       ]
     },
@@ -2220,10 +2300,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pleurochloridaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_MONODUS",
+          "name": "uncultured Monodus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "2588811"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PSEUDOPLEUROCHLORIS",
+          "name": "uncultured Pseudopleurochloris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "3049176"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UNCULTURED_PLEUROCHLORIS",
+          "name": "uncultured Pleurochloris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "3050616"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pleurochloridaceae"
     }
   ],
-  "genusCount": 34,
-  "speciesCount": 99,
+  "genusCount": 35,
+  "speciesCount": 108,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2231,6 +2356,7 @@
       "classKey": 7073629,
       "orderKey": 1320,
       "familyKey": 8704
-    }
+    },
+    "checklistbank": "195996"
   }
 }

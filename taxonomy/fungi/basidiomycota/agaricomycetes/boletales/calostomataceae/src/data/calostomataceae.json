@@ -194,7 +194,8 @@
             ],
             "col": [
               "Q3W9"
-            ]
+            ],
+            "checklistbank": "555519"
           },
           "uuid": "24083ccb-490b-5b8-b35-fc43fdb82da2c1",
           "authorityIds": "col:Q3W9,gbif:2524287,mycobank:292985"
@@ -297,7 +298,8 @@
             ],
             "col": [
               "Q3WD"
-            ]
+            ],
+            "checklistbank": "556744"
           },
           "uuid": "2f23c056-ac80-592-aca-cb07ef90e391b6",
           "authorityIds": "col:Q3WD,gbif:3356661,mycobank:292988"
@@ -422,10 +424,12 @@
           "sourcedFrom": "inaturalist",
           "children": [],
           "sourceIds": {
-            "gbif": 9674121
+            "gbif": 9674121,
+            "checklistbank": "556746"
           },
           "uuid": "6690bf31-ea83-548-aa9-02c27ab7a00470",
-          "authorityIds": "gbif:9674121"
+          "authorityIds": "gbif:9674121",
+          "authorship": "(Schwein.) Burnap, 1897"
         },
         {
           "id": "CALOSTOMA_MAOERSHANENSE",
@@ -636,7 +640,8 @@
             ],
             "col": [
               "Q3WR"
-            ]
+            ],
+            "checklistbank": "555522"
           },
           "uuid": "8490b810-f088-529-b40-1b6f6a04cb9f8a",
           "authorityIds": "col:Q3WR,gbif:2524284,mycobank:473873"
@@ -662,7 +667,8 @@
             ],
             "col": [
               "Q3WS"
-            ]
+            ],
+            "checklistbank": "634911"
           },
           "uuid": "98a6e1c9-859e-5df-9f6-af28f718f1a30f",
           "authorityIds": "col:Q3WS,gbif:7454537,mycobank:580912"
@@ -715,7 +721,8 @@
             ],
             "col": [
               "B2MLD"
-            ]
+            ],
+            "checklistbank": "2876156"
           },
           "uuid": "d4b29362-31b7-522-966-c929d4df5f3167",
           "authorityIds": "col:B2MLD,gbif:11802981,mycobank:841417"
@@ -844,7 +851,8 @@
             ],
             "col": [
               "C97TF"
-            ]
+            ],
+            "checklistbank": "2213092"
           },
           "authorityIds": "col:C97TF,mycobank:556486"
         },
@@ -864,7 +872,8 @@
             ],
             "col": [
               "C97TG"
-            ]
+            ],
+            "checklistbank": "2213093"
           },
           "authorityIds": "col:C97TG,mycobank:556487"
         },
@@ -1181,11 +1190,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calostomataceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_CALOSTOMA",
+          "name": "uncultured Calostoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1780303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calostomataceae"
     }
   ],
   "authorship": "E. Fischer",
-  "genusCount": 3,
-  "speciesCount": 56,
+  "genusCount": 4,
+  "speciesCount": 57,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1194,6 +1224,6 @@
       "orderKey": 1063,
       "familyKey": 4189
     },
-    "checklistbank": "ott409663"
+    "checklistbank": "83214"
   }
 }

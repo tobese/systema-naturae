@@ -478,7 +478,8 @@
             ],
             "col": [
               "3RV7H"
-            ]
+            ],
+            "checklistbank": "3135307"
           },
           "uuid": "6e4333f8-61a5-51b-81e-0af69ddad7e30b",
           "authorityIds": "col:3RV7H,gbif:7241155,mycobank:107516"
@@ -806,7 +807,8 @@
           "sourceIds": {
             "checklistbank": "487301"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Morgan) Burds., Banik & T.J. Volk, 1998"
         },
         {
           "id": "SP_LAETIPORUS_VERSISPORUS",
@@ -818,7 +820,8 @@
           "sourceIds": {
             "checklistbank": "885668"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Lloyd) Imazeki, 1943"
         },
         {
           "id": "SP_LAETIPORUS_PRATIGIENSIS",
@@ -830,7 +833,8 @@
           "sourceIds": {
             "checklistbank": "1477317"
           },
-          "children": []
+          "children": [],
+          "authorship": "C.D. Santos, J.L. Bezerra, J.P.A.F. Oliveira, P.A.S. Marbach & G. Marques, 2023"
         },
         {
           "id": "SP_LAETIPORUS_SP",
@@ -841,6 +845,19 @@
           "lineage": "Laetiporus",
           "sourceIds": {
             "checklistbank": "1698983"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LAETIPORUS_SQUALIDUS_R_M_PIRES_MOTATO_VASQUEZ_GUGLIOTTA_2016",
+          "name": "Laetiporus squalidus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Laetiporus",
+          "authorship": "R.M.Pires, Motato-Vasquez & Gugliotta, 2016",
+          "sourceIds": {
+            "checklistbank": "1631747"
           },
           "children": []
         }
@@ -948,7 +965,8 @@
             ],
             "col": [
               "CCGKV"
-            ]
+            ],
+            "checklistbank": "3074007"
           },
           "authorityIds": "col:CCGKV,mycobank:901059"
         }
@@ -980,7 +998,8 @@
             ],
             "mycobank": [
               "847018"
-            ]
+            ],
+            "checklistbank": "3049453"
           },
           "uuid": "feb21ca5-e29b-50c-a57-5fc55d5f57229c",
           "authorityIds": "gbif:12254136,mycobank:847018"
@@ -1049,7 +1068,8 @@
           "sourceIds": {
             "checklistbank": "1649485"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Lloyd) Kun L. Yang, Jia Y. Lin & Zhu L. Yang, 2025"
         }
       ],
       "authorship": "J. Hussein, S. Tibell & Tibuhwa"
@@ -1185,11 +1205,80 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "laetiporaceae"
+    },
+    {
+      "id": "GENUS_PSEUDOPHAEOLUS",
+      "name": "Pseudophaeolus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOPHAEOLUS_SOLONIENSIS_DUBOIS_SPIRIN_B_RIVOIRE_2024",
+          "name": "Pseudophaeolus soloniensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudophaeolus",
+          "authorship": "(Dubois) Spirin & B. Rivoire, 2024",
+          "sourceIds": {
+            "checklistbank": "270283"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOPHAEOLUS_BAUDONII_PAT_RYVARDEN_1975",
+          "name": "Pseudophaeolus baudonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudophaeolus",
+          "authorship": "(Pat.) Ryvarden, 1975",
+          "sourceIds": {
+            "checklistbank": "2734650"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOPHAEOLUS_TRICHROUS_BERK_M_A_CURTIS_J_VLASAK_V_SPIRIN_2024",
+          "name": "Pseudophaeolus trichrous",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudophaeolus",
+          "authorship": "(Berk. & M.A. Curtis) J. Vlasak & V. Spirin, 2024",
+          "sourceIds": {
+            "checklistbank": "2963483"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "laetiporaceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_LAETIPORUS",
+          "name": "uncultured Laetiporus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1582792"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "laetiporaceae"
     }
   ],
   "authorship": "Jülich",
-  "genusCount": 8,
-  "speciesCount": 46,
+  "genusCount": 10,
+  "speciesCount": 51,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -1197,6 +1286,7 @@
       "classKey": 186,
       "orderKey": 1145,
       "familyKey": 3272667
-    }
+    },
+    "checklistbank": "2028212"
   }
 }

@@ -445,7 +445,8 @@
             ],
             "col": [
               "9YNFS"
-            ]
+            ],
+            "checklistbank": "2719149"
           },
           "uuid": "03315751-e88c-51c-a57-a3d0720b89df09",
           "authorityIds": "col:9YNFS,gbif:11122558,mycobank:835728"
@@ -891,7 +892,8 @@
             ],
             "col": [
               "9YNFT"
-            ]
+            ],
+            "checklistbank": "2719150"
           },
           "uuid": "e630f41d-b79f-534-889-0b1615c411a7cd",
           "authorityIds": "col:9YNFT,gbif:11184258,mycobank:835729"
@@ -1007,7 +1009,8 @@
             ],
             "col": [
               "9YNFV"
-            ]
+            ],
+            "checklistbank": "2719151"
           },
           "uuid": "e7af14b9-65d1-517-a5c-45949b48b70c3b",
           "authorityIds": "col:9YNFV,gbif:11174660,mycobank:835730"
@@ -1144,7 +1147,8 @@
           "sourceIds": {
             "checklistbank": "629142"
           },
-          "children": []
+          "children": [],
+          "authorship": "Fuckel, 1870"
         },
         {
           "id": "SP_ARACHNOPEZIZA_SP",
@@ -1155,6 +1159,18 @@
           "lineage": "Arachnopeziza",
           "sourceIds": {
             "checklistbank": "1695774"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARACHNOPEZIZA_AFF",
+          "name": "Arachnopeziza aff.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnopeziza",
+          "sourceIds": {
+            "checklistbank": "2913431"
           },
           "children": []
         }
@@ -2024,6 +2040,18 @@
           },
           "uuid": "9d5d4b44-ef12-518-bb7-2680571795877e",
           "authorityIds": "col:G3QD,gbif:3284046,mycobank:113134"
+        },
+        {
+          "id": "SP_ARACHNOSCYPHA_SP",
+          "name": "Arachnoscypha sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnoscypha",
+          "sourceIds": {
+            "checklistbank": "3070864"
+          },
+          "children": []
         }
       ],
       "authorship": "Boudier"
@@ -2049,7 +2077,8 @@
             ],
             "col": [
               "CB5SH"
-            ]
+            ],
+            "checklistbank": "3041114"
           },
           "authorityIds": "col:CB5SH,mycobank:845269"
         }
@@ -2192,11 +2221,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "arachnopezizaceae"
+    },
+    {
+      "id": "GENUS_THAMNOCHORTOMYCES",
+      "name": "Thamnochortomyces",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAMNOCHORTOMYCES_KIRSTENBOSCHENSIS_CROUS_2024",
+          "name": "Thamnochortomyces kirstenboschensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnochortomyces",
+          "authorship": "Crous, 2024",
+          "sourceIds": {
+            "checklistbank": "3146731"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arachnopezizaceae"
+    },
+    {
+      "id": "GENUS_ARACHNOPEZIZACEAE",
+      "name": "Arachnopezizaceae",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARACHNOPEZIZACEAE_SP",
+          "name": "Arachnopezizaceae sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnopezizaceae",
+          "sourceIds": {
+            "checklistbank": "3421447"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arachnopezizaceae"
     }
   ],
   "authorship": "Hosoya, J.G. Han & Baral",
-  "genusCount": 8,
-  "speciesCount": 88,
+  "genusCount": 10,
+  "speciesCount": 92,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -2204,6 +2276,7 @@
       "classKey": 179,
       "orderKey": 1052,
       "familyKey": 8377363
-    }
+    },
+    "checklistbank": "2793226"
   }
 }

@@ -284,7 +284,8 @@
             ],
             "col": [
               "9ZG9W"
-            ]
+            ],
+            "checklistbank": "2570299"
           },
           "uuid": "84219987-2d11-560-9ef-0286a40324b8eb",
           "authorityIds": "col:9ZG9W,gbif:11626964,mycobank:830627"
@@ -362,7 +363,8 @@
             ],
             "col": [
               "CC74H"
-            ]
+            ],
+            "checklistbank": "2898922"
           },
           "authorityIds": "col:CC74H,mycobank:570944"
         },
@@ -382,7 +384,8 @@
             ],
             "col": [
               "CC74J"
-            ]
+            ],
+            "checklistbank": "2898923"
           },
           "authorityIds": "col:CC74J,mycobank:570945"
         },
@@ -399,7 +402,8 @@
           "sourceIds": {
             "col": [
               "CC74G"
-            ]
+            ],
+            "checklistbank": "2898921"
           },
           "authorityIds": "col:CC74G"
         },
@@ -419,7 +423,8 @@
             ],
             "col": [
               "CC74K"
-            ]
+            ],
+            "checklistbank": "2898924"
           },
           "authorityIds": "col:CC74K,mycobank:570946"
         },
@@ -432,6 +437,31 @@
           "lineage": "Syncephalastrum",
           "sourceIds": {
             "checklistbank": "ott3686145"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYNCEPHALASTRUM_SP",
+          "name": "Syncephalastrum sp.",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syncephalastrum",
+          "sourceIds": {
+            "checklistbank": "227075"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYNCEPHALASTRUM_VERRUCULOSUM_P_C_MISRA_1975",
+          "name": "Syncephalastrum verruculosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syncephalastrum",
+          "authorship": "P.C. Misra, 1975",
+          "sourceIds": {
+            "checklistbank": "2045278"
           },
           "children": []
         }
@@ -950,11 +980,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "syncephalastraceae"
+    },
+    {
+      "id": "GENUS_UNCULTURED",
+      "name": "uncultured",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNCULTURED_SYNCEPHALASTRUM",
+          "name": "uncultured Syncephalastrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "uncultured",
+          "sourceIds": {
+            "checklistbank": "1538621"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "syncephalastraceae"
     }
   ],
   "authorship": "Naumov ex R.K. Benjamin",
-  "genusCount": 8,
-  "speciesCount": 36,
+  "genusCount": 9,
+  "speciesCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -963,6 +1014,6 @@
       "orderKey": 749,
       "familyKey": 8278
     },
-    "checklistbank": "ott596627"
+    "checklistbank": "37566"
   }
 }
