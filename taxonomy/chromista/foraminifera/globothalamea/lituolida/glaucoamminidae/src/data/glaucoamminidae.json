@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "bff8ab28-bb7b-554-9ba-4c0f88c6701490",
-          "authorityIds": "col:6KGMY,gbif:8293981"
+          "authorityIds": "col:6KGMY,gbif:8293981",
+          "children": []
         }
       ]
     },
@@ -55,7 +56,8 @@
             "gbif": 11704488
           },
           "uuid": "fe1e7beb-d699-56d-b82-501a64133d4fd8",
-          "authorityIds": "gbif:11704488"
+          "authorityIds": "gbif:11704488",
+          "children": []
         },
         {
           "id": "PSAMMOLINGULINA_JURASSICA",
@@ -76,7 +78,8 @@
             ]
           },
           "uuid": "4d5b6ea0-ded6-5fa-844-359b7bc76166b3",
-          "authorityIds": "col:83BSK,gbif:9876031"
+          "authorityIds": "col:83BSK,gbif:9876031",
+          "children": []
         },
         {
           "id": "PSAMMOLINGULINA_PAPILLOSA",
@@ -97,7 +100,8 @@
             ]
           },
           "uuid": "a326ef01-d3a4-5e1-992-d68db27c6aefa4",
-          "authorityIds": "col:83BSL,gbif:9291865"
+          "authorityIds": "col:83BSL,gbif:9291865",
+          "children": []
         },
         {
           "id": "PSAMMOLINGULINA_VOICUI",
@@ -118,9 +122,80 @@
             ]
           },
           "uuid": "4438a369-dc90-506-a35-d1ef52d2ec5205",
-          "authorityIds": "col:83BSM,gbif:9602638"
+          "authorityIds": "col:83BSM,gbif:9602638",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_GLAUCOAMMINA",
+      "name": "\"Glaucoammina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLAUCOAMMINA_TRILATERALIS_CUSHMAN_1935",
+          "name": "\"Glaucoammina trilateralis\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Glaucoammina",
+          "authorship": "\"(Cushman, 1935)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:758755"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaucoamminidae"
+    },
+    {
+      "id": "GENUS_PSAMMOLINGULINA",
+      "name": "\"Psammolingulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSAMMOLINGULINA_VOICUI_POPESCU_1979",
+          "name": "\"Psammolingulina voicui\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Psammolingulina",
+          "authorship": "\"Popescu, 1979\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:924734"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSAMMOLINGULINA_PAPILLOSA_NEUGEBOREN_1856",
+          "name": "\"Psammolingulina papillosa\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Psammolingulina",
+          "authorship": "\"(Neugeboren, 1856)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1043308"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSAMMOLINGULINA_JURASSICA_DAIN_1980",
+          "name": "\"Psammolingulina jurassica\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Psammolingulina",
+          "authorship": "\"Dain, 1980\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1292208"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "glaucoamminidae"
     }
   ],
   "sourceIds": {
@@ -131,5 +206,7 @@
       "orderKey": 7378538,
       "familyKey": 8037753
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 9
 }

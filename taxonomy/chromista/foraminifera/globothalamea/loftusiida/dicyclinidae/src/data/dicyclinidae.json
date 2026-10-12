@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "ee265a33-faf8-54b-800-e69b3a82e3e07b",
-          "authorityIds": "col:9FYFW,gbif:11616381"
+          "authorityIds": "col:9FYFW,gbif:11616381",
+          "children": []
         },
         {
           "id": "DICYCLINA_QATARENSIS",
@@ -46,7 +47,8 @@
             "gbif": 9371991
           },
           "uuid": "f2b462bc-8e6d-5e5-a34-93f09cd898a8e2",
-          "authorityIds": "gbif:9371991"
+          "authorityIds": "gbif:9371991",
+          "children": []
         },
         {
           "id": "DICYCLINA_SAMPOI",
@@ -67,7 +69,8 @@
             ]
           },
           "uuid": "2d25ab16-aa29-538-8c7-e2d4a970bc4884",
-          "authorityIds": "col:82CWS,gbif:10439190"
+          "authorityIds": "col:82CWS,gbif:10439190",
+          "children": []
         },
         {
           "id": "DICYCLINA_SCHLUMBERGERI",
@@ -88,7 +91,8 @@
             ]
           },
           "uuid": "f2401d0a-916a-50b-9ff-537a421106c8ef",
-          "authorityIds": "col:82CWT,gbif:9394998"
+          "authorityIds": "col:82CWT,gbif:9394998",
+          "children": []
         },
         {
           "id": "DICYCLINA_SIMPLEX",
@@ -109,7 +113,8 @@
             ]
           },
           "uuid": "431d6ddd-a021-5d7-9a2-4a3a6927b35168",
-          "authorityIds": "col:82CWV,gbif:10489093"
+          "authorityIds": "col:82CWV,gbif:10489093",
+          "children": []
         }
       ]
     },
@@ -134,9 +139,71 @@
             "gbif": 9775108
           },
           "uuid": "5e393af4-b844-516-81b-10f440c4be39ae",
-          "authorityIds": "gbif:9775108"
+          "authorityIds": "gbif:9775108",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DICYCLINA",
+      "name": "\"Dicyclina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DICYCLINA_SCHLUMBERGERI_MUNIER_CHALMAS_1887",
+          "name": "\"Dicyclina schlumbergeri\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Dicyclina",
+          "authorship": "\"Munier-Chalmas, 1887\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:919174"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DICYCLINA_SAMPOI_CHERCHI_SCHROEDER_1990",
+          "name": "\"Dicyclina sampoi\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Dicyclina",
+          "authorship": "\"Cherchi & Schroeder, 1990\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1309526"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DICYCLINA_SIMPLEX_CHERCHI_SCHROEDER_1990",
+          "name": "\"Dicyclina simplex\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Dicyclina",
+          "authorship": "\"Cherchi & Schroeder, 1990\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1310063"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DICYCLINA_AEGYPTIACA_HEWAIDY_1993",
+          "name": "\"Dicyclina aegyptiaca\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Dicyclina",
+          "authorship": "\"Hewaidy, 1993\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1596131"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dicyclinidae"
     }
   ],
   "sourceIds": {
@@ -147,5 +214,7 @@
       "orderKey": 8258225,
       "familyKey": 8187757
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 10
 }

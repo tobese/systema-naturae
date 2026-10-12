@@ -26,7 +26,8 @@
               "BDDRV"
             ]
           },
-          "authorityIds": "col:BDDRV"
+          "authorityIds": "col:BDDRV",
+          "children": []
         },
         {
           "id": "SP_SMILOSTYLIA_BUKOVENSIS_RONIEWICZ_1966",
@@ -45,9 +46,32 @@
               "BCHKK"
             ]
           },
-          "authorityIds": "col:BCHKK"
+          "authorityIds": "col:BCHKK",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SMILOSTYLIA",
+      "name": "\"Smilostylia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SMILOSTYLIA_ALPINA_KOBY_1884",
+          "name": "\"Smilostylia alpina\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Smilostylia",
+          "authorship": "\"(Koby, 1884)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662833"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "smilostyliidae"
     }
   ],
   "sourceIds": {
@@ -58,5 +82,7 @@
       "orderKey": 714,
       "familyKey": 4879377
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

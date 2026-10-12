@@ -29,7 +29,8 @@
             ]
           },
           "authorityIds": "col:84DZ5,worms:1335199",
-          "uuid": "e75926cb-7c68-5eb-b4b-67aceaf39f51fc"
+          "uuid": "e75926cb-7c68-5eb-b4b-67aceaf39f51fc",
+          "children": []
         },
         {
           "id": "SP_URNALORICUS_IBENAE",
@@ -47,9 +48,45 @@
             ]
           },
           "authorityIds": "col:9WYZW,worms:1615075",
-          "uuid": "c0988f9e-2c1a-510-94c-1cb6c9112a8133"
+          "uuid": "c0988f9e-2c1a-510-94c-1cb6c9112a8133",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_URNALORICUS",
+      "name": "\"Urnaloricus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_URNALORICUS_GADI_HEINER_KRISTENSEN_2009",
+          "name": "\"Urnaloricus gadi\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Urnaloricus",
+          "authorship": "\"Heiner & Kristensen, 2009\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1335199"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_URNALORICUS_IBENAE_NEVES_KRISTENSEN_ROHAL_THISTLE_S_RENSEN_2018",
+          "name": "\"Urnaloricus ibenae\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Urnaloricus",
+          "authorship": "\"Neves, Kristensen, Rohal, Thistle & Sørensen, 2018\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615075"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "urnaloricidae"
     }
   ],
   "sourceIds": {
@@ -59,5 +96,7 @@
       "orderKey": 836,
       "familyKey": 4862409
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 4
 }

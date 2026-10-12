@@ -28,7 +28,8 @@
               "86NCM"
             ]
           },
-          "authorityIds": "col:86NCM"
+          "authorityIds": "col:86NCM",
+          "children": []
         },
         {
           "id": "SP_NEPHROPORA_SCHIZOSTOMA",
@@ -45,9 +46,32 @@
               "86NCN"
             ]
           },
-          "authorityIds": "col:86NCN"
+          "authorityIds": "col:86NCN",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_NEPHROPORA",
+      "name": "\"Nephropora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEPHROPORA_SCHIZOSTOMA_VON_HAGENOW_1840",
+          "name": "\"Nephropora schizostoma\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Nephropora",
+          "authorship": "\"(von Hagenow, 1840)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412353"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nephroporidae"
     }
   ],
   "sourceIds": {
@@ -58,5 +82,7 @@
       "orderKey": 467,
       "familyKey": 4855127
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

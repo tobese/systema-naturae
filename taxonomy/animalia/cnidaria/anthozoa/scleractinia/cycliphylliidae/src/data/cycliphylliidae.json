@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "f2f5f31a-e84e-5f9-a85-a099f35c8d41f0"
+          "uuid": "f2f5f31a-e84e-5f9-a85-a099f35c8d41f0",
+          "children": []
         },
         {
           "id": "SP_KOMPSASTERIA_OLIGOCYSTIS",
@@ -37,7 +38,8 @@
             ]
           },
           "authorityIds": "col:BD783",
-          "uuid": "6a8bba47-16be-5ae-a15-e0f41f55c3813d"
+          "uuid": "6a8bba47-16be-5ae-a15-e0f41f55c3813d",
+          "children": []
         }
       ]
     },
@@ -63,7 +65,8 @@
             ]
           },
           "authorityIds": "col:BCSD9",
-          "uuid": "659cb487-f9b2-556-807-ded3bf28803780"
+          "uuid": "659cb487-f9b2-556-807-ded3bf28803780",
+          "children": []
         },
         {
           "id": "SP_CYCLIPHYLLIA_MAJOR",
@@ -80,9 +83,67 @@
             ]
           },
           "authorityIds": "col:BCSDB",
-          "uuid": "63f43759-20ad-57c-91c-57e7a1aff35cc7"
+          "uuid": "63f43759-20ad-57c-91c-57e7a1aff35cc7",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_KOMPSASTERIA",
+      "name": "\"Kompsasteria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KOMPSASTERIA_OLIGOCYSTIS_FRECH_1890",
+          "name": "\"Kompsasteria oligocystis\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Kompsasteria",
+          "authorship": "\"(Frech, 1890)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1658521"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycliphylliidae"
+    },
+    {
+      "id": "GENUS_CYCLIPHYLLIA",
+      "name": "\"Cycliphyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCLIPHYLLIA_CYCLICA_SCH_FER_SENOWBARI_DARYAN_1978",
+          "name": "\"Cycliphyllia cyclica\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Cycliphyllia",
+          "authorship": "\"(Schäfer & Senowbari-Daryan, 1978)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662052"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCLIPHYLLIA_MAJOR_RONIEWICZ_1989",
+          "name": "\"Cycliphyllia major\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Cycliphyllia",
+          "authorship": "\"(Roniewicz, 1989)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662053"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycliphylliidae"
     }
   ],
   "sourceIds": {
@@ -93,5 +154,7 @@
       "orderKey": 714,
       "familyKey": 10838390
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 7
 }

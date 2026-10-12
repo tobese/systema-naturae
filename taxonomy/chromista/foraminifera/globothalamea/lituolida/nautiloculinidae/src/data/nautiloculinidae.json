@@ -30,7 +30,8 @@
             ]
           },
           "uuid": "ea08d45c-37a3-54a-b75-cce753355da0d7",
-          "authorityIds": "col:82Z65,gbif:9583609"
+          "authorityIds": "col:82Z65,gbif:9583609",
+          "children": []
         },
         {
           "id": "NAUTILOCULINA_CIRCULARIS",
@@ -51,7 +52,8 @@
             ]
           },
           "uuid": "6aa17a7c-b1e8-548-bd2-37234f85273790",
-          "authorityIds": "col:8ZF4V,gbif:11454141"
+          "authorityIds": "col:8ZF4V,gbif:11454141",
+          "children": []
         },
         {
           "id": "NAUTILOCULINA_CRETACEA",
@@ -72,7 +74,8 @@
             ]
           },
           "uuid": "133ee859-2bcb-559-839-9ad10844f2e414",
-          "authorityIds": "col:8TZFN,gbif:11613305"
+          "authorityIds": "col:8TZFN,gbif:11613305",
+          "children": []
         },
         {
           "id": "NAUTILOCULINA_OOLITHICA",
@@ -93,7 +96,8 @@
             ]
           },
           "uuid": "8dbfacb5-d7d6-5fd-9e4-f035d08b74f06d",
-          "authorityIds": "col:82Z66,gbif:9377188"
+          "authorityIds": "col:82Z66,gbif:9377188",
+          "children": []
         }
       ]
     },
@@ -123,9 +127,93 @@
             ]
           },
           "uuid": "8fe87670-37bd-5e3-a04-03465ecb7097e7",
-          "authorityIds": "col:9GQLQ,gbif:9495777"
+          "authorityIds": "col:9GQLQ,gbif:9495777",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_NAUTILOCULINA",
+      "name": "\"Nautiloculina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NAUTILOCULINA_OOLITHICA_MOHLER_1938",
+          "name": "\"Nautiloculina oolithica\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Nautiloculina",
+          "authorship": "\"Mohler, 1938\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:913358"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NAUTILOCULINA_BRONNIMANNI_ARNAUD_VANNEAU_PEYBERN_S_1978",
+          "name": "\"Nautiloculina bronnimanni\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Nautiloculina",
+          "authorship": "\"Arnaud-Vanneau & Peybernès, 1978\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1045209"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NAUTILOCULINA_CRETACEA_PEYBERN_S_IN_ARNAUD_VANNEAU_PEYBERN_S_1978",
+          "name": "\"Nautiloculina cretacea\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Nautiloculina",
+          "authorship": "\"Peybernès in Arnaud-Vanneau & Peybernès, 1978\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1560290"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NAUTILOCULINA_CIRCULARIS_SAID_BARAKAT_1959",
+          "name": "\"Nautiloculina circularis\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Nautiloculina",
+          "authorship": "\"(Said & Barakat, 1959)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1575250"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nautiloculinidae"
+    },
+    {
+      "id": "GENUS_MURGEINA",
+      "name": "\"Murgeina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MURGEINA_APULA_LUPERTO_SINNI_1969",
+          "name": "\"Murgeina apula\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Murgeina",
+          "authorship": "\"(Luperto Sinni, 1969)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1043368"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nautiloculinidae"
     }
   ],
   "sourceIds": {
@@ -136,5 +224,7 @@
       "orderKey": 7378538,
       "familyKey": 8428013
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 10
 }

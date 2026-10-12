@@ -29,7 +29,8 @@
               "6SFF5"
             ]
           },
-          "authorityIds": "col:6SFF5,wikidata:Q13907044"
+          "authorityIds": "col:6SFF5,wikidata:Q13907044",
+          "children": []
         },
         {
           "id": "SP_OCEANACTIS_DIOMEDEAE",
@@ -49,7 +50,8 @@
               "74FF5"
             ]
           },
-          "authorityIds": "col:74FF5,wikidata:Q2476470"
+          "authorityIds": "col:74FF5,wikidata:Q2476470",
+          "children": []
         },
         {
           "id": "SP_OCEANACTIS_RHODACTYLUS_MOSELEY_1877",
@@ -71,9 +73,45 @@
               "6SFF4"
             ]
           },
-          "authorityIds": "col:6SFF4,itis:52789"
+          "authorityIds": "col:6SFF4,itis:52789",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_OCEANACTIS",
+      "name": "\"Oceanactis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OCEANACTIS_DIOMEDEAE_MCMURRICH_1893",
+          "name": "\"Oceanactis diomedeae\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Oceanactis",
+          "authorship": "\"(McMurrich, 1893)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:290509"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OCEANACTIS_BURSIFERA_RIEMANN_Z_RNECK_2000",
+          "name": "\"Oceanactis bursifera\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Oceanactis",
+          "authorship": "\"(Riemann-Zürneck, 2000)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:593079"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oractiidae"
     }
   ],
   "sourceIds": {
@@ -84,5 +122,7 @@
       "orderKey": 705,
       "familyKey": 4339031
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 5
 }

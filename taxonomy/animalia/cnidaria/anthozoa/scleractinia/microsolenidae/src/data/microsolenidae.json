@@ -26,7 +26,8 @@
               "8GMNP"
             ]
           },
-          "authorityIds": "col:8GMNP"
+          "authorityIds": "col:8GMNP",
+          "children": []
         },
         {
           "id": "SP_EOCOMOSERIS_MINIMA",
@@ -44,7 +45,8 @@
               "B8S2P"
             ]
           },
-          "authorityIds": "col:B8S2P"
+          "authorityIds": "col:B8S2P",
+          "children": []
         },
         {
           "id": "SP_EOCOMOSERIS_RAUENI_L_SER_1993",
@@ -63,9 +65,32 @@
               "8GMNR"
             ]
           },
-          "authorityIds": "col:8GMNR"
+          "authorityIds": "col:8GMNR",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_EOCOMOSERIS",
+      "name": "\"Eocomoseris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOCOMOSERIS_MINIMA_L_BEAUVAIS_1982",
+          "name": "\"Eocomoseris minima\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Eocomoseris",
+          "authorship": "\"(L. Beauvais, 1982)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1658097"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "microsolenidae"
     }
   ],
   "sourceIds": {
@@ -76,5 +101,7 @@
       "orderKey": 714,
       "familyKey": 3250194
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 4
 }

@@ -26,7 +26,8 @@
             ]
           },
           "authorityIds": "col:B7T65",
-          "uuid": "f2d96d2e-3476-536-866-ab29ab802b660a"
+          "uuid": "f2d96d2e-3476-536-866-ab29ab802b660a",
+          "children": []
         },
         {
           "id": "SP_CYMATOCHITON_LOFTUSIANUS",
@@ -43,7 +44,8 @@
             ]
           },
           "authorityIds": "col:B7H5Z",
-          "uuid": "7a2dcd0f-fa77-59c-8c6-758ba11a4b0e68"
+          "uuid": "7a2dcd0f-fa77-59c-8c6-758ba11a4b0e68",
+          "children": []
         },
         {
           "id": "SP_RHYNCHOTEUTHIS_KAIBABENSIS",
@@ -54,9 +56,45 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "99449e17-b114-5bd-b23-700b526717a07f"
+          "uuid": "99449e17-b114-5bd-b23-700b526717a07f",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CYMATOCHITON",
+      "name": "\"Cymatochiton",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYMATOCHITON_LOFTUSIANUS_KING_1848",
+          "name": "\"Cymatochiton loftusianus\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Cymatochiton",
+          "authorship": "\"(King, 1848)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1645263"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYMATOCHITON_HOWSEANUS_KIRKBY_1857",
+          "name": "\"Cymatochiton howseanus\"",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "\"Cymatochiton",
+          "authorship": "\"(Kirkby, 1857)\"",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1645266"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cymatochitonidae"
     }
   ],
   "sourceIds": {
@@ -67,5 +105,7 @@
       "orderKey": 7601723,
       "familyKey": 4584622
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 5
 }
