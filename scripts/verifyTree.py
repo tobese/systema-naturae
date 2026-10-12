@@ -214,6 +214,35 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     # to allow. They are named rather than counted, because a *different*
     # cross-kingdom collision has to fail and a bare count cannot tell it from
     # a reappearance of one of these.
+    #
+    # NCBI Taxonomy import (2026-10-12) added 34 more, every one an indeterminate
+    # "Genus sp." or "Genus aff." placeholder, never a named species -- so each
+    # pair is two unrelated real genera (different family in each kingdom, no
+    # family-name collision) that each happen to carry an unidentified-specimen
+    # record. Checked against NCBI's own raw NameUsage.tsv chain for a sample
+    # (Giraudia: ICN brown-alga genus 86872 vs ICZN wasp genus 216146, NCBI's own
+    # annotation literally reads "unclassified Giraudia (in: wasps, ants & bees)"
+    # -- a genuine homonym, not a collision).
+    "SP_AMPHINEMA_SP", "SP_APTEROSTIGMA_SP", "SP_CLUSIA_SP", "SP_CORELLA_AFF",
+    "SP_DUFOUREA_SP", "SP_EISENIA_SP", "SP_ERICA_SP", "SP_EUCLEA_SP",
+    "SP_EURYBIA_SP", "SP_EWARTIA_SP", "SP_GEOCHARIS_SP", "SP_GIRAUDIA_SP",
+    "SP_GLOEOSOMA_SP", "SP_GLOMERELLA_SP", "SP_GOMPHUS_SP", "SP_GRAMINELLA_SP",
+    "SP_HEXAGONIA_SP", "SP_LEPTOSTYLIS_SP", "SP_LIMACIA_SP", "SP_LORICARIA_SP",
+    "SP_MELANOCHAETA_SP", "SP_MORINIA_SP", "SP_MYRMECIA_SP", "SP_OPERCULINA_SP",
+    "SP_OUROCOCCUS_SP", "SP_PACHYPELTIS_SP", "SP_PENNELLA_SP", "SP_PERIPLOCA_SP",
+    "SP_PLINIA_SP", "SP_RHIZOPHAGUS_SP", "SP_RHYTISMA_SP", "SP_SATYRIUM_SP",
+    "SP_SCOPARIA_SP", "SP_TURBINARIA_SP",
+    # Actinocyclus verrucosus Ehrenberg, 1831 -- the same genus name as the
+    # diatom Actinocyclus (hemidiscaceae), but NCBI's own NameUsage.tsv carries
+    # a SEPARATE ICZN-coded taxon (id 262595, no author) under family
+    # Actinocyclidae / superfamily Eudoridoidea, the same nudibranch family we
+    # hold Hallaxa in. The Australian Faunal Directory import independently
+    # agrees -- it reintroduced this exact species (plus papillatus, laevis,
+    # japonicus) into actinocyclidae.json before NCBI was ever run, which is
+    # what NCBI's copy duplicated against. Two independent sources filing the
+    # same name under the zoological family makes this a genuine homonym to
+    # confirm, not a one-off misfiling to delete.
+    "SP_ACTINOCYCLUS_VERRUCOSUS_EHRENBERG_1831",
 }
 
 
