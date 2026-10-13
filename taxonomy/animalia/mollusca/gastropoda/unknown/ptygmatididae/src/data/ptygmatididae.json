@@ -47,9 +47,11 @@
             "col": [
               "C6SD9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1744079"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1744079"
+            ]
           },
-          "authorityIds": "col:C6SD9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1744079,col:C6SD9",
           "authorship": "(Münster, 1844)"
         },
         {
@@ -722,32 +724,10 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Ptygmatididae"
-    },
-    {
-      "id": "GENUS_CRYPTOPLOCUS",
-      "name": "\"Cryptoplocus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CRYPTOPLOCUS_SUBPYRAMIDALIS_M_NSTER_1844",
-          "name": "\"Cryptoplocus subpyramidalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptoplocus",
-          "authorship": "\"(Münster, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1744079"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ptygmatididae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 41,
+  "genusCount": 5,
+  "speciesCount": 40,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

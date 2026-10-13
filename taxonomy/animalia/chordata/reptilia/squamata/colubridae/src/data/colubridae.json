@@ -649,9 +649,11 @@
             "itis": [
               "1081511"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391285"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1391285"
+            ]
           },
-          "authorityIds": "col:BBXG,itis:1081511,wikidata:Q2715633"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1391285,col:BBXG,itis:1081511,wikidata:Q2715633"
         },
         {
           "id": "AHAETULLA_NASUTA",
@@ -1189,6 +1191,19 @@
             "checklistbank": "30139"
           },
           "authorityIds": "col:669WG,itis:1082647,wikidata:Q2840206"
+        },
+        {
+          "id": "SP_ALSOPHIS_CANTHERIGERUS_BIBRON_1843",
+          "name": "Alsophis cantherigerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alsophis",
+          "authorship": "Bibron 1843",
+          "sourceIds": {
+            "checklistbank": "txn:420378"
+          },
+          "children": []
         }
       ]
     },
@@ -1290,7 +1305,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "ad9099e3-8b10-5f6-a4d-05c5506920c25d"
+          "uuid": "ad9099e3-8b10-5f6-a4d-05c5506920c25d",
+          "authorship": "Holman 1976",
+          "sourceIds": {
+            "checklistbank": "txn:68127"
+          }
         }
       ]
     },
@@ -2497,7 +2516,8 @@
           "sourceIds": {
             "itis": [
               "1082527"
-            ]
+            ],
+            "checklistbank": "txn:403878"
           },
           "authorityIds": "itis:1082527"
         },
@@ -2785,7 +2805,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2ebacc23-1d71-5d6-9df-510c70a5b83659"
+          "uuid": "2ebacc23-1d71-5d6-9df-510c70a5b83659",
+          "authorship": "Parmley and Holman 1995",
+          "sourceIds": {
+            "checklistbank": "txn:155166"
+          }
         },
         {
           "id": "SP_ARIZONA_OCCIDENTALIS_BLANCHARD_1924",
@@ -3884,33 +3908,6 @@
           "authorityIds": "col:JJXJ,itis:1081554,wikidata:Q2869651"
         },
         {
-          "id": "ATRACTUS_CAETE",
-          "name": "Atractus caete",
-          "rank": "SPECIES",
-          "commonName": "Atractus Caete",
-          "lineage": "Atractus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Atractus caete is a species of snake in the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "Passos, Fernandes, Bérnils and Moura-Leite, 2010",
-          "uuid": "7f826619-ef1c-590-9cc-f0048beb721f20",
-          "sourceIds": {
-            "wikidata": [
-              "Q2869648"
-            ],
-            "itis": [
-              "1082670"
-            ],
-            "col": [
-              "JJXK"
-            ],
-            "checklistbank": "94849"
-          },
-          "authorityIds": "col:JJXK,itis:1082670,wikidata:Q2869648"
-        },
-        {
           "id": "ATRACTUS_CAREOLEPIS",
           "name": "Atractus careolepis",
           "rank": "SPECIES",
@@ -4717,33 +4714,6 @@
           "authorityIds": "col:JJYQ,itis:700952,wikidata:Q2869683"
         },
         {
-          "id": "ATRACTUS_GAIGEAE",
-          "name": "Atractus gaigeae",
-          "rank": "SPECIES",
-          "commonName": "Atractus Gaigeae",
-          "lineage": "Atractus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Atractus gaigeae, also known commonly as Gaige's ground snake, is a species of snake in the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "Savage, 1955",
-          "uuid": "1ad10133-bfbc-57c-b35-d34cf8861e556f",
-          "sourceIds": {
-            "wikidata": [
-              "Q2869685"
-            ],
-            "itis": [
-              "700953"
-            ],
-            "col": [
-              "JJYR"
-            ],
-            "checklistbank": "27881"
-          },
-          "authorityIds": "col:JJYR,itis:700953,wikidata:Q2869685"
-        },
-        {
           "id": "ATRACTUS_GIGAS",
           "name": "Atractus gigas",
           "rank": "SPECIES",
@@ -5067,33 +5037,6 @@
             "checklistbank": "27896"
           },
           "authorityIds": "col:JJZC,itis:700959,wikidata:Q2869701"
-        },
-        {
-          "id": "ATRACTUS_LATIFRONS",
-          "name": "Atractus latifrons",
-          "rank": "SPECIES",
-          "commonName": "Atractus Latifrons",
-          "lineage": "Atractus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Atractus elaps, the broadhead ground snake, is a species of snake in the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Günther, 1868)",
-          "uuid": "5d52f1fa-1d6a-5a8-9ec-925345a5058a6f",
-          "sourceIds": {
-            "wikidata": [
-              "Q2869704"
-            ],
-            "col": [
-              "JJZD"
-            ],
-            "itis": [
-              "700960"
-            ],
-            "checklistbank": "27898"
-          },
-          "authorityIds": "col:JJZD,itis:700960,wikidata:Q2869704"
         },
         {
           "id": "ATRACTUS_LEHMANNI",
@@ -6712,9 +6655,11 @@
             "itis": [
               "1082620"
             ],
-            "checklistbank": "94882"
+            "checklistbank": [
+              "94882"
+            ]
           },
-          "authorityIds": "col:JK3T,itis:1082620,wikidata:Q2869768"
+          "authorityIds": "checklistbank:94882,col:JK3T,itis:1082620,wikidata:Q2869768"
         },
         {
           "id": "ATRACTUS_TAMAENSIS",
@@ -8468,33 +8413,6 @@
             "checklistbank": "taicol: 65630"
           },
           "authorityIds": "col:5WNGD,itis:174206,wikidata:Q900781"
-        },
-        {
-          "id": "BOIGA_JASPIDEA",
-          "name": "Boiga jaspidea",
-          "rank": "SPECIES",
-          "commonName": "Boiga Jaspidea",
-          "lineage": "Boiga",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Boiga jaspidea, commonly known as the jasper cat snake, is a species of rear-fanged colubrid that is uncommon throughout its range.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(A. M. C. Duméril, Bibron and A. H. A. Duméril, 1854)",
-          "uuid": "a9513b88-38fc-551-a6c-e5d44645f72a94",
-          "sourceIds": {
-            "wikidata": [
-              "Q2908849"
-            ],
-            "itis": [
-              "1081572"
-            ],
-            "col": [
-              "68NGD"
-            ],
-            "checklistbank": "27681"
-          },
-          "authorityIds": "col:68NGD,itis:1081572,wikidata:Q2908849"
         },
         {
           "id": "BOIGA_KRAEPELINI",
@@ -12054,9 +11972,11 @@
             "col": [
               "69SVS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610095"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610095"
+            ]
           },
-          "authorityIds": "col:69SVS,itis:1081650,wikidata:Q2708970"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610095,col:69SVS,itis:1081650,wikidata:Q2708970"
         },
         {
           "id": "CHIRONIUS_CHALLENGER",
@@ -12692,24 +12612,6 @@
           "authorityIds": "col:MCZHB"
         },
         {
-          "id": "SP_CHIRONIUS_SCURRULA_WAGLER_1824",
-          "name": "Chironius scurrula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "(Wagler, 1824)",
-          "children": [],
-          "lineage": "Chironius",
-          "uuid": "926cfe04-35f9-5d7-8ee-cbb2232908b7ed",
-          "sourceIds": {
-            "col": [
-              "69SVP"
-            ],
-            "checklistbank": "1039056"
-          },
-          "authorityIds": "col:69SVP"
-        },
-        {
           "id": "SP_CHIRONIUS_DIXONI",
           "name": "Chironius dixoni",
           "rank": "SPECIES",
@@ -13018,9 +12920,11 @@
             "col": [
               "VXQN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1527845"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1527845"
+            ]
           },
-          "authorityIds": "col:VXQN,itis:209464,wikidata:Q2122008"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1527845,col:VXQN,itis:209464,wikidata:Q2122008"
         },
         {
           "id": "CLELIA_EQUATORIANA",
@@ -13365,9 +13269,11 @@
             "col": [
               "WRWF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391293"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1391293"
+            ]
           },
-          "authorityIds": "col:WRWF,itis:1081819,wikidata:Q280938"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1391293,col:WRWF,itis:1081819,wikidata:Q280938"
         },
         {
           "id": "COELOGNATHUS_HELENAE",
@@ -13432,9 +13338,11 @@
             "col": [
               "WRWM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1600459"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1600459"
+            ]
           },
-          "authorityIds": "col:WRWM,itis:1081832,wikidata:Q1005850"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1600459,col:WRWM,itis:1081832,wikidata:Q1005850"
         },
         {
           "id": "COELOGNATHUS_SUBRADIATUS",
@@ -13636,7 +13544,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "ef71d71d-2539-554-b9a-641abb490a5fa4"
+          "uuid": "ef71d71d-2539-554-b9a-641abb490a5fa4",
+          "authorship": "Rage 1974",
+          "sourceIds": {
+            "checklistbank": "txn:346267"
+          }
         },
         {
           "id": "COLUBER_CAERULESCENS",
@@ -13681,7 +13593,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "686de79e-7fb9-53e-ba9-5c1995c8fb8157"
+          "uuid": "686de79e-7fb9-53e-ba9-5c1995c8fb8157",
+          "authorship": "Szyndlar and Schleich 1993",
+          "sourceIds": {
+            "checklistbank": "txn:64914"
+          }
         },
         {
           "id": "COLUBER_CHIAMETLA",
@@ -13753,9 +13669,11 @@
             "col": [
               "5ZP35"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498256"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1498256"
+            ]
           },
-          "authorityIds": "col:5ZP35,itis:174169,wikidata:Q1459098"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1498256,col:5ZP35,itis:174169,wikidata:Q1459098"
         },
         {
           "id": "COLUBER_CORALLINUS",
@@ -13826,7 +13744,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e5a264a5-4e75-50e-a13-986d3ea4db502c"
+          "uuid": "e5a264a5-4e75-50e-a13-986d3ea4db502c",
+          "authorship": "Szyndlar 1987",
+          "sourceIds": {
+            "checklistbank": "txn:256068"
+          }
         },
         {
           "id": "COLUBER_DOMICELLA",
@@ -14016,7 +13938,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c26629e7-b4ec-586-b8c-6d4145893051e2"
+          "uuid": "c26629e7-b4ec-586-b8c-6d4145893051e2",
+          "authorship": "Ivanov 2002",
+          "sourceIds": {
+            "checklistbank": "txn:64913"
+          }
         },
         {
           "id": "COLUBER_ORYZIVORUS",
@@ -14074,7 +14000,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5cf2f691-6e0e-5fc-85d-2066f1228d681b"
+          "uuid": "5cf2f691-6e0e-5fc-85d-2066f1228d681b",
+          "authorship": "Mlynarksi 1964",
+          "sourceIds": {
+            "checklistbank": "txn:64961"
+          }
         },
         {
           "id": "COLUBER_RUBRICEPS",
@@ -14870,32 +14800,6 @@
           "children": []
         },
         {
-          "id": "SP_COLUBER_GUTTATUS_LINNAEUS_1766",
-          "name": "Coluber guttatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Coluber",
-          "authorship": "Linnaeus, 1766",
-          "sourceIds": {
-            "checklistbank": "839738"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COLUBER_SIRTALIS_LINNAEUS_1758",
-          "name": "Coluber sirtalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Coluber",
-          "authorship": "Linnaeus, 1758",
-          "sourceIds": {
-            "checklistbank": "839741"
-          },
-          "children": []
-        },
-        {
           "id": "SP_COLUBER_ALLEGHANIENSIS_HOLBROOK_1836",
           "name": "Coluber alleghaniensis",
           "rank": "SPECIES",
@@ -14948,19 +14852,6 @@
           "children": []
         },
         {
-          "id": "SP_COLUBER_LONGISSIMUS_LAURENTI_1768",
-          "name": "Coluber longissimus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Coluber",
-          "authorship": "(Laurenti, 1768)",
-          "sourceIds": {
-            "checklistbank": "1047865"
-          },
-          "children": []
-        },
-        {
           "id": "SP_COLUBER_SP",
           "name": "Coluber sp.",
           "rank": "SPECIES",
@@ -14969,6 +14860,110 @@
           "lineage": "Coluber",
           "sourceIds": {
             "checklistbank": "1780350"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_HUNGARICUS_BOLKAY_1913",
+          "name": "Coluber hungaricus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "(Bolkay 1913)",
+          "sourceIds": {
+            "checklistbank": "txn:250720"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_SUEVICUS_FRAAS_1870",
+          "name": "Coluber suevicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "(Fraas 1870)",
+          "sourceIds": {
+            "checklistbank": "txn:251344"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_PLANICARINATUS_BACHMAYER_AND_SZYNDLAR_1985",
+          "name": "Coluber planicarinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "(Bachmayer and Szyndlar 1985)",
+          "sourceIds": {
+            "checklistbank": "txn:64895"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_ACUMINATUS_COPE_1899",
+          "name": "Coluber acuminatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "(Cope 1899)",
+          "sourceIds": {
+            "checklistbank": "txn:345142"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_FREYBERGI_BRUNNER_1954",
+          "name": "Coluber freybergi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "Brunner 1954",
+          "sourceIds": {
+            "checklistbank": "txn:489624"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_POUCHETII_ROCHEBRUNE_1880",
+          "name": "Coluber pouchetii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "(Rochebrune 1880)",
+          "sourceIds": {
+            "checklistbank": "txn:489626"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_LOBSINGENSIS_HELLER_1960",
+          "name": "Coluber lobsingensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "(Heller 1960)",
+          "sourceIds": {
+            "checklistbank": "txn:489632"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLUBER_PLIOAGELLUS_WILSON_1968",
+          "name": "Coluber plioagellus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coluber",
+          "authorship": "Wilson 1968",
+          "sourceIds": {
+            "checklistbank": "txn:489660"
           },
           "children": []
         }
@@ -16048,7 +16043,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "30060530-7ace-585-9a0-601b7bf829d01b"
+          "uuid": "30060530-7ace-585-9a0-601b7bf829d01b",
+          "authorship": "Venczel 1998",
+          "sourceIds": {
+            "checklistbank": "txn:64899"
+          }
         }
       ]
     },
@@ -18858,7 +18857,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "f57f2b30-4fe0-52e-9d6-be83443f63cb4b"
+          "uuid": "f57f2b30-4fe0-52e-9d6-be83443f63cb4b",
+          "authorship": "Auffenberg 1963",
+          "sourceIds": {
+            "checklistbank": "txn:68128"
+          }
         },
         {
           "id": "DIADOPHIS_PUNCTATUS",
@@ -19127,27 +19130,6 @@
           },
           "authorityIds": "col:8H5N3",
           "authorship": "Uthmoller, 1939"
-        },
-        {
-          "id": "DIPSADOBOA_MONTISILVA",
-          "name": "Dipsadoboa montisilva",
-          "rank": "SPECIES",
-          "commonName": "Dipsadoboa montisilva",
-          "lineage": "Dipsadoboa",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Dipsadoboa montisilva, the montane forest tree snake, is a species of  non-venomous snake in the family Colubridae..",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "uuid": "caec0c3f-e466-551-9c5-d49390ef7f2539",
-          "sourceIds": {
-            "col": [
-              "8GPMX"
-            ],
-            "checklistbank": "1031613"
-          },
-          "authorityIds": "col:8GPMX",
-          "authorship": "Branch, Conradie & Tolley, 2019"
         },
         {
           "id": "DIPSADOBOA_SHREVEI",
@@ -20450,33 +20432,6 @@
           "authorityIds": "col:6D9CG,itis:701045,wikidata:Q3029246"
         },
         {
-          "id": "DIPSAS_TEMPORALIS",
-          "name": "Dipsas temporalis",
-          "rank": "SPECIES",
-          "commonName": "Dipsas Temporalis",
-          "lineage": "Dipsas",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Dipsas temporalis, the temporal snail-eater, is a non-venomous snake found in Panama, Ecuador, and Colombia.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Werner, 1909)",
-          "uuid": "c392c89a-dacc-588-b5d-4d6d32d32edee4",
-          "sourceIds": {
-            "wikidata": [
-              "Q3029247"
-            ],
-            "col": [
-              "6CXC9"
-            ],
-            "itis": [
-              "701046"
-            ],
-            "checklistbank": "30377"
-          },
-          "authorityIds": "col:6CXC9,itis:701046,wikidata:Q3029247"
-        },
-        {
           "id": "DIPSAS_TENUISSIMA",
           "name": "Dipsas tenuissima",
           "rank": "SPECIES",
@@ -20747,19 +20702,6 @@
           "children": [],
           "lineage": "Dipsas",
           "uuid": "c53b0d28-7525-5b5-afd-16732ec6c10cb3"
-        },
-        {
-          "id": "SP_DIPSAS_GAIMARDII_SCHLEGEL_1837",
-          "name": "Dipsas gaimardii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dipsas",
-          "authorship": "Schlegel, 1837",
-          "sourceIds": {
-            "checklistbank": "849550"
-          },
-          "children": []
         }
       ]
     },
@@ -21069,7 +21011,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "929ec53a-1e0c-588-a97-9df2476b4d2c22"
+          "uuid": "929ec53a-1e0c-588-a97-9df2476b4d2c22",
+          "authorship": "Auffenberg 1958",
+          "sourceIds": {
+            "checklistbank": "txn:99703"
+          }
         }
       ]
     },
@@ -21136,9 +21082,11 @@
             "itis": [
               "174224"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1393161"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1393161"
+            ]
           },
-          "authorityIds": "col:6DLG2,itis:174224,wikidata:Q3014273"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1393161,col:6DLG2,itis:174224,wikidata:Q3014273"
         },
         {
           "id": "DRYMARCHON_COUPERI",
@@ -21226,9 +21174,11 @@
             "itis": [
               "683032"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1393160"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1393160"
+            ]
           },
-          "authorityIds": "col:6DLFR,itis:683032,wikidata:Q2382534"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1393160,col:6DLFR,itis:683032,wikidata:Q2382534"
         },
         {
           "name": "Genyptis",
@@ -21358,33 +21308,6 @@
             "checklistbank": "26835"
           },
           "authorityIds": "col:6DN7H,itis:174226,wikidata:Q973272"
-        },
-        {
-          "id": "DRYMOBIUS_MELANOTROPIS",
-          "name": "Drymobius melanotropis",
-          "rank": "SPECIES",
-          "commonName": "Drymobius Melanotropis",
-          "lineage": "Drymobius",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Drymobius melanotropis, commonly known as the black forest racer, is a species of nonvenomous colubrid snake endemic to Central America.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Cope, 1876)",
-          "uuid": "9f2f4bf0-d725-5dd-92b-2f6a544c93da42",
-          "sourceIds": {
-            "wikidata": [
-              "Q3014542"
-            ],
-            "itis": [
-              "1081777"
-            ],
-            "col": [
-              "6DMVG"
-            ],
-            "checklistbank": "26826"
-          },
-          "authorityIds": "col:6DMVG,itis:1081777,wikidata:Q3014542"
         },
         {
           "id": "DRYMOBIUS_RHOMBIFER",
@@ -22354,28 +22277,6 @@
           "authorityIds": "col:38W3G,itis:1081505,wikidata:Q3049486"
         },
         {
-          "id": "EIRENIS_YASSUJICUS",
-          "name": "Eirenis yassujicus",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Eirenis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Eirenis yassujicus is a species of non-venomous snake in the family Colubridae. The species is found in Iran.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Eirenis yassujicus",
-          "children": [],
-          "uuid": "185cce8e-4853-5c6-8c7-5a0790cc401da7",
-          "sourceIds": {
-            "col": [
-              "8GPPJ"
-            ],
-            "checklistbank": "1031615"
-          },
-          "authorityIds": "col:8GPPJ",
-          "authorship": "Fathinia, Rastegar-Pouyani & Shafaeipour, 2019"
-        },
-        {
           "id": "SP_EIRENIS_DECEMLINEATA_DUM_RIL_BIBRON_DUM_RIL_1854",
           "name": "Eirenis decemlineata",
           "rank": "SPECIES",
@@ -22412,6 +22313,18 @@
           "lineage": "Eirenis",
           "sourceIds": {
             "checklistbank": "286082"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EIRENIS_MODESTA",
+          "name": "Eirenis modesta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eirenis",
+          "sourceIds": {
+            "checklistbank": "214735"
           },
           "children": []
         }
@@ -22488,7 +22401,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "80ae60fd-2998-522-88c-e4e58d5e227ed2"
+          "uuid": "80ae60fd-2998-522-88c-e4e58d5e227ed2",
+          "authorship": "Szyndlar 1985",
+          "sourceIds": {
+            "checklistbank": "txn:64919"
+          }
         },
         {
           "id": "ELAPHE_ANOMALA",
@@ -22619,9 +22536,11 @@
             "itis": [
               "1081811"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606360"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1606360"
+            ]
           },
-          "authorityIds": "col:38YKS,itis:1081811,wikidata:Q2562020"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1606360,col:38YKS,itis:1081811,wikidata:Q2562020"
         },
         {
           "id": "ELAPHE_DAVIDI",
@@ -22707,7 +22626,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "bbc22d50-5cd3-587-9f0-48b96956dbeab8"
+          "uuid": "bbc22d50-5cd3-587-9f0-48b96956dbeab8",
+          "authorship": "Bachmayer and Szyndlar 1985",
+          "sourceIds": {
+            "checklistbank": "txn:64894"
+          }
         },
         {
           "id": "ELAPHE_LINEATA",
@@ -22764,7 +22687,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c095e50a-315a-527-a32-6af4f2bcae208a"
+          "uuid": "c095e50a-315a-527-a32-6af4f2bcae208a",
+          "authorship": "Holman 1964",
+          "sourceIds": {
+            "checklistbank": "txn:111001"
+          }
         },
         {
           "id": "ELAPHE_PARALONGISSIMA",
@@ -22777,7 +22704,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "23be002e-2269-5a1-ba3-3f257c3f9d4ed0"
+          "uuid": "23be002e-2269-5a1-ba3-3f257c3f9d4ed0",
+          "authorship": "Szyndlar 1984",
+          "sourceIds": {
+            "checklistbank": "txn:64951"
+          }
         },
         {
           "id": "ELAPHE_PRAELONGISSIMA",
@@ -22794,9 +22725,11 @@
           "sourceIds": {
             "wikidata": [
               "Q138609054"
-            ]
+            ],
+            "checklistbank": "txn:250806"
           },
-          "authorityIds": "wikidata:Q138609054"
+          "authorityIds": "wikidata:Q138609054",
+          "authorship": "Venczel 1994"
         },
         {
           "id": "ELAPHE_QUADRIVIRGATA",
@@ -22822,9 +22755,11 @@
             "col": [
               "38YM8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1481775"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1481775"
+            ]
           },
-          "authorityIds": "col:38YM8,itis:1081830,wikidata:Q2705745"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1481775,col:38YM8,itis:1081830,wikidata:Q2705745"
         },
         {
           "id": "ELAPHE_QUATUORLINEATA",
@@ -22926,7 +22861,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2d72a4ab-837e-586-b27-75890f5dade6c5"
+          "uuid": "2d72a4ab-837e-586-b27-75890f5dade6c5",
+          "authorship": "Venczel 1998",
+          "sourceIds": {
+            "checklistbank": "txn:64918"
+          }
         },
         {
           "id": "ELAPHE_TAENIURA",
@@ -23166,14 +23105,93 @@
           "children": []
         },
         {
-          "id": "SP_ELAPHE_SP",
-          "name": "Elaphe sp.",
+          "id": "SP_ELAPHE_VULPINA_BAIRD_AND_GIRARD_1853",
+          "name": "Elaphe vulpina",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Elaphe",
+          "authorship": "(Baird and Girard 1853)",
           "sourceIds": {
-            "checklistbank": "114965"
+            "checklistbank": "txn:110879"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELAPHE_KANSENSIS_GILMORE_1938",
+          "name": "Elaphe kansensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaphe",
+          "authorship": "(Gilmore 1938)",
+          "sourceIds": {
+            "checklistbank": "txn:155150"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELAPHE_OBSOLETA_SAY_1823",
+          "name": "Elaphe obsoleta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaphe",
+          "authorship": "(Say 1823)",
+          "sourceIds": {
+            "checklistbank": "txn:155169"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELAPHE_KORMOSI_BOLKAY_1913",
+          "name": "Elaphe kormosi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaphe",
+          "authorship": "(Bolkay 1913)",
+          "sourceIds": {
+            "checklistbank": "txn:250730"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELAPHE_PARREYSSII_FITZINGER_1833",
+          "name": "Elaphe parreyssii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaphe",
+          "authorship": "Fitzinger 1833",
+          "sourceIds": {
+            "checklistbank": "txn:489630"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELAPHE_BUISI_HOLMAN_1973",
+          "name": "Elaphe buisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaphe",
+          "authorship": "Holman 1973",
+          "sourceIds": {
+            "checklistbank": "txn:489631"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELAPHE_PLIOCENICA_HOLMAN_1968",
+          "name": "Elaphe pliocenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elaphe",
+          "authorship": "Holman 1968",
+          "sourceIds": {
+            "checklistbank": "txn:489634"
           },
           "children": []
         }
@@ -24318,9 +24336,11 @@
             "itis": [
               "1081982"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606340"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1606340"
+            ]
           },
-          "authorityIds": "col:3BDYV,itis:1081982,wikidata:Q2712325"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1606340,col:3BDYV,itis:1081982,wikidata:Q2712325"
         },
         {
           "id": "ERYTHROLAMPRUS_MIMUS",
@@ -24455,31 +24475,6 @@
           "authorityIds": "col:3BDZ3,itis:1081983,wikidata:Q2382189"
         },
         {
-          "id": "ERYTHROLAMPRUS_PERFUSCUS",
-          "name": "Erythrolamprus perfuscus",
-          "rank": "SPECIES",
-          "commonName": "Barbados Racer",
-          "lineage": "Erythrolamprus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "The Barbados racer (Erythrolamprus perfuscus), also commonly known as the tan ground snake, is an extinct species of snake in the family Colubridae. It was endemic to Barbados, and was last recorded there in 1963.",
-          "sourcedFrom": "gbif",
-          "wikipediaTitle": "Barbados racer",
-          "children": [],
-          "authorship": "(Cope, 1863)",
-          "uuid": "12330c7c-83e4-5c6-b3e-4f4f891e296957",
-          "sourceIds": {
-            "itis": [
-              "1081984"
-            ],
-            "col": [
-              "3BDZ4"
-            ],
-            "checklistbank": "520239"
-          },
-          "authorityIds": "col:3BDZ4,itis:1081984"
-        },
-        {
           "id": "ERYTHROLAMPRUS_POECILOGYRUS",
           "name": "Erythrolamprus poecilogyrus",
           "rank": "SPECIES",
@@ -24502,9 +24497,11 @@
             "col": [
               "3BDZ5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606305"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1606305"
+            ]
           },
-          "authorityIds": "col:3BDZ5,itis:1081985,wikidata:Q110965591"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1606305,col:3BDZ5,itis:1081985,wikidata:Q110965591"
         },
         {
           "id": "ERYTHROLAMPRUS_PSEUDOCORALLUS",
@@ -25344,9 +25341,11 @@
             "col": [
               "6HPGF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498236"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1498236"
+            ]
           },
-          "authorityIds": "col:6HPGF,itis:174164,wikidata:Q517458"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1498236,col:6HPGF,itis:174164,wikidata:Q517458"
         },
         {
           "id": "FARANCIA_ERYTROGRAMMA",
@@ -25368,9 +25367,11 @@
             "itis": [
               "174166"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750708"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1750708"
+            ]
           },
-          "authorityIds": "col:6HPFX,itis:174166"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1750708,col:6HPFX,itis:174166"
         }
       ]
     },
@@ -25604,7 +25605,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "be43214e-05e9-546-beb-4ad0f53c8432ac"
+          "uuid": "be43214e-05e9-546-beb-4ad0f53c8432ac",
+          "authorship": "Holman 1999",
+          "sourceIds": {
+            "checklistbank": "txn:262218"
+          }
         }
       ]
     },
@@ -25692,9 +25697,11 @@
             "col": [
               "88VZJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391270"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1391270"
+            ]
           },
-          "authorityIds": "col:88VZJ,wikidata:Q107333332",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1391270,col:88VZJ,wikidata:Q107333332",
           "authorship": "(Schneider, 1799)"
         },
         {
@@ -26869,33 +26876,6 @@
             "checklistbank": "30032"
           },
           "authorityIds": "col:3FR9Y,itis:585887,wikidata:Q3101254"
-        },
-        {
-          "id": "GEOPHIS_NEPHODRYMUS",
-          "name": "Geophis nephodrymus",
-          "rank": "SPECIES",
-          "commonName": "Geophis nephodrymus is a species",
-          "lineage": "Geophis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Geophis nephodrymus is a species of snake in the colubrid family.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "Townsend and Wilson, 2006",
-          "uuid": "007b0a79-d90c-5c7-af2-a6d4a35d737382",
-          "sourceIds": {
-            "wikidata": [
-              "Q3101255"
-            ],
-            "col": [
-              "6KBQJ"
-            ],
-            "itis": [
-              "1082551"
-            ],
-            "checklistbank": "101357"
-          },
-          "authorityIds": "col:6KBQJ,itis:1082551,wikidata:Q3101255"
         },
         {
           "id": "GEOPHIS_NIGROALBUS",
@@ -28172,9 +28152,11 @@
             "itis": [
               "1081894"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1545695"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1545695"
+            ]
           },
-          "authorityIds": "col:3HBVK,itis:1081894,wikidata:Q3115859"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1545695,col:3HBVK,itis:1081894,wikidata:Q3115859"
         },
         {
           "id": "SP_GRAYIA_OBSCURA_CHANEY_GREENBAUM_PAUWELS_2024",
@@ -28204,8 +28186,11 @@
           "uuid": "86c8643d-35a9-52d-942-25c21686228283",
           "authorship": "(Leach, 1818)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610105"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610105"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610105"
         },
         {
           "id": "SP_GRAYIA_SP",
@@ -28497,24 +28482,6 @@
             "checklistbank": "539766"
           },
           "authorityIds": "col:3JQC9"
-        },
-        {
-          "id": "SP_HAPSIDOPHRYS_LINEATA_FISCHER_1856",
-          "name": "Hapsidophrys lineata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Fischer, 1856",
-          "children": [],
-          "lineage": "Hapsidophrys",
-          "uuid": "f7b99928-f312-5a4-a42-88057ef3d150e7",
-          "sourceIds": {
-            "col": [
-              "3JQC3"
-            ],
-            "checklistbank": "30010"
-          },
-          "authorityIds": "col:3JQC3"
         }
       ]
     },
@@ -30249,27 +30216,6 @@
           "authorityIds": "col:3K95R,itis:1082767,wikidata:Q11847517"
         },
         {
-          "id": "HELICOPS_BOITATA",
-          "name": "Helicops boitata",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Helicops",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Helicops boitata is a species of snake in the family Colubridae. It is endemic to the state of Mato Grosso in Brazil.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Helicops boitata",
-          "children": [],
-          "uuid": "c66d6312-c1bc-506-a22-748daffbdc0343",
-          "sourceIds": {
-            "col": [
-              "8GPS9"
-            ],
-            "checklistbank": "1031619"
-          },
-          "authorityIds": "col:8GPS9"
-        },
-        {
           "id": "HELICOPS_CARINICAUDUS",
           "name": "Helicops carinicaudus",
           "rank": "SPECIES",
@@ -30292,9 +30238,11 @@
             "itis": [
               "701103"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476235"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1476235"
+            ]
           },
-          "authorityIds": "col:3K95X,itis:701103,wikidata:Q2708913"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1476235,col:3K95X,itis:701103,wikidata:Q2708913"
         },
         {
           "id": "HELICOPS_DANIELI",
@@ -31261,7 +31209,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "800a1a26-58c5-54d-a3d-bca3e79028c53e"
+          "uuid": "800a1a26-58c5-54d-a3d-bca3e79028c53e",
+          "authorship": "Peters 1953",
+          "sourceIds": {
+            "checklistbank": "txn:155177"
+          }
         },
         {
           "id": "HETERODON_SIMUS",
@@ -31307,6 +31259,32 @@
             ]
           },
           "authorityIds": "itis:1082774"
+        },
+        {
+          "id": "SP_HETERODON_PLATYRHINOS_LATREILLE_1801",
+          "name": "Heterodon platyrhinos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterodon",
+          "authorship": "(Latreille 1801)",
+          "sourceIds": {
+            "checklistbank": "txn:155175"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HETERODON_BREVIS_AUFFENBERG_1963",
+          "name": "Heterodon brevis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterodon",
+          "authorship": "Auffenberg 1963",
+          "sourceIds": {
+            "checklistbank": "txn:489635"
+          },
+          "children": []
         }
       ]
     },
@@ -31439,7 +31417,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8eb504e2-1fb6-551-9b4-64530c4ddb5868"
+          "uuid": "8eb504e2-1fb6-551-9b4-64530c4ddb5868",
+          "authorship": "Szyndlar 1985",
+          "sourceIds": {
+            "checklistbank": "txn:318658"
+          }
         }
       ]
     },
@@ -31945,32 +31927,6 @@
             "checklistbank": "146173"
           },
           "authorityIds": "col:6N4PT,itis:1082615,wikidata:Q3144384"
-        },
-        {
-          "id": "HYPSIGLENA_JANI",
-          "name": "Hypsiglena jani",
-          "rank": "SPECIES",
-          "commonName": "Chihuahuan Nightsnake",
-          "lineage": "Hypsiglena",
-          "continents": [
-            "North America"
-          ],
-          "subspeciesCount": 0,
-          "description": "Hypsiglena jani, commonly known as the Texas night snake or the Chihuahuan night snake, is a small species of mildly venomous snake in the subfamily Dipsadinae of the family Colubridae.",
-          "sourcedFrom": "gbif",
-          "children": [],
-          "authorship": "(Dugès, 1865)",
-          "uuid": "e2085460-e723-543-bd4-32321aafb587c0",
-          "sourceIds": {
-            "itis": [
-              "1082439"
-            ],
-            "col": [
-              "6MSPW"
-            ],
-            "checklistbank": "103200"
-          },
-          "authorityIds": "col:6MSPW,itis:1082439"
         },
         {
           "id": "HYPSIGLENA_OCHORHYNCHA",
@@ -33064,34 +33020,6 @@
           "authorityIds": "col:3S4VL,itis:1082764,wikidata:Q1950584"
         },
         {
-          "id": "LAMPROPELTIS_EXTENUATA",
-          "name": "Lampropeltis extenuata",
-          "rank": "SPECIES",
-          "commonName": "Short-tailed Snake",
-          "lineage": "Lampropeltis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "The short-tailed snake (Lampropeltis extenuata) is a species of small harmless snake in the family Colubridae. Fossorial and seldom seen, the short-tailed snake is found only in sandy, upland parts of Florida where it is listed as \"Threatened\" and is protected by state law.",
-          "sourcedFrom": "gbif",
-          "wikipediaTitle": "Short-tailed snake",
-          "children": [],
-          "authorship": "(Brown, 1890)",
-          "uuid": "5832ec9e-50be-57c-a56-1006e721f26569",
-          "sourceIds": {
-            "wikidata": [
-              "Q2042509"
-            ],
-            "itis": [
-              "1082386"
-            ],
-            "col": [
-              "3S4VM"
-            ],
-            "checklistbank": "236840"
-          },
-          "authorityIds": "col:3S4VM,itis:1082386,wikidata:Q2042509"
-        },
-        {
           "id": "LAMPROPELTIS_GENTILIS",
           "name": "Lampropeltis gentilis",
           "rank": "SPECIES",
@@ -33209,7 +33137,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b9311750-9b67-56b-b84-440fee7f4e2c8d"
+          "uuid": "b9311750-9b67-56b-b84-440fee7f4e2c8d",
+          "authorship": "Brattstrom 1955",
+          "sourceIds": {
+            "checklistbank": "txn:118948"
+          }
         },
         {
           "id": "LAMPROPELTIS_KNOBLOCHI",
@@ -33493,7 +33425,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:8497635",
           "children": [],
-          "uuid": "b5c35802-f326-54c-880-5dd01c15d6f5b4"
+          "uuid": "b5c35802-f326-54c-880-5dd01c15d6f5b4",
+          "authorship": "Holman 1964",
+          "sourceIds": {
+            "checklistbank": "txn:178474"
+          }
         },
         {
           "id": "LAMPROPELTIS_SPLENDIDA",
@@ -33672,18 +33608,6 @@
           "children": []
         },
         {
-          "id": "SP_LAMPROPELTIS_ZONATA",
-          "name": "Lampropeltis ×zonata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lampropeltis",
-          "sourceIds": {
-            "checklistbank": "94882"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LAMPROPELTIS_TRIANGULUM",
           "name": "Lampropeltis ×triangulum",
           "rank": "SPECIES",
@@ -33704,6 +33628,19 @@
           "lineage": "Lampropeltis",
           "sourceIds": {
             "checklistbank": "369443"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LAMPROPELTIS_GETULUS_LINNAEUS_1766",
+          "name": "Lampropeltis getulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lampropeltis",
+          "authorship": "(Linnaeus 1766)",
+          "sourceIds": {
+            "checklistbank": "txn:110827"
           },
           "children": []
         }
@@ -34906,9 +34843,11 @@
             "col": [
               "3V5VW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498231"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1498231"
+            ]
           },
-          "authorityIds": "col:3V5VW,itis:1084933,wikidata:Q28320567"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1498231,col:3V5VW,itis:1084933,wikidata:Q28320567"
         },
         {
           "id": "LIODYTES_PYGAEA",
@@ -36092,33 +36031,6 @@
             "checklistbank": "889748"
           },
           "authorityIds": "col:8H6J8"
-        },
-        {
-          "id": "LYCODON_GONGSHAN",
-          "name": "Lycodon gongshan",
-          "rank": "SPECIES",
-          "commonName": "Lycodon Gongshan",
-          "lineage": "Lycodon",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "The Gongshan wolf snake, (Lycodon gongshan) is a species of snake in the family colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "Vogel and Luo, 2011",
-          "uuid": "8be4172a-d655-5ea-a3a-48e492d4d9d603",
-          "sourceIds": {
-            "wikidata": [
-              "Q3268433"
-            ],
-            "col": [
-              "3WL2S"
-            ],
-            "itis": [
-              "1082703"
-            ],
-            "checklistbank": "104888"
-          },
-          "authorityIds": "col:3WL2S,itis:1082703,wikidata:Q3268433"
         },
         {
           "id": "LYCODON_GRACILIS",
@@ -37522,33 +37434,6 @@
             "checklistbank": "29618"
           },
           "authorityIds": "col:6QR85,itis:1081966,wikidata:Q3269371"
-        },
-        {
-          "id": "LYGOPHIS_FLAVIFRENATUS",
-          "name": "Lygophis flavifrenatus",
-          "rank": "SPECIES",
-          "commonName": "Lygophis Flavifrenatus",
-          "lineage": "Lygophis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Lygophis flavifrenatus, the fronted ground snake, is a species of snake in the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "Cope, 1862",
-          "uuid": "4f4fb213-1fa9-51a-8fe-d4ce5fab7cb539",
-          "sourceIds": {
-            "wikidata": [
-              "Q3269373"
-            ],
-            "col": [
-              "6R2VT"
-            ],
-            "itis": [
-              "1081969"
-            ],
-            "checklistbank": "29606"
-          },
-          "authorityIds": "col:6R2VT,itis:1081969,wikidata:Q3269373"
         },
         {
           "id": "LYGOPHIS_LINEATUS",
@@ -39302,7 +39187,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "df20ff3d-19b5-5f2-8b4-e07fa13598c3be"
+          "uuid": "df20ff3d-19b5-5f2-8b4-e07fa13598c3be",
+          "authorship": "Parmley and Hunter 2010",
+          "sourceIds": {
+            "checklistbank": "txn:178476"
+          }
         }
       ]
     },
@@ -39324,7 +39213,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "86b3fe76-48d8-5e4-b76-a008f4285fd441"
+          "uuid": "86b3fe76-48d8-5e4-b76-a008f4285fd441",
+          "authorship": "Parmley 1988",
+          "sourceIds": {
+            "checklistbank": "txn:68538"
+          }
         }
       ]
     },
@@ -39610,9 +39503,11 @@
             "itis": [
               "700794"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407699"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:407699"
+            ]
           },
-          "authorityIds": "col:45TZG,itis:700794,wikidata:Q3337039"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:407699,col:45TZG,itis:700794,wikidata:Q3337039"
         },
         {
           "id": "NATRICITERES_OLIVACEA",
@@ -39638,9 +39533,11 @@
             "itis": [
               "700795"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407700"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:407700"
+            ]
           },
-          "authorityIds": "col:45TZJ,itis:700795,wikidata:Q3009587"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:407700,col:45TZJ,itis:700795,wikidata:Q3009587"
         },
         {
           "id": "NATRICITERES_PEMBANA",
@@ -39692,9 +39589,11 @@
             "itis": [
               "1084862"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407701"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:407701"
+            ]
           },
-          "authorityIds": "col:45TZL,itis:1084862,wikidata:Q3337037"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:407701,col:45TZL,itis:1084862,wikidata:Q3337037"
         },
         {
           "id": "NATRICITERES_VARIEGATA",
@@ -39719,9 +39618,11 @@
             "col": [
               "45TZM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407702"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:407702"
+            ]
           },
-          "authorityIds": "col:45TZM,itis:700796,wikidata:Q3337043"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:407702,col:45TZM,itis:700796,wikidata:Q3337043"
         }
       ]
     },
@@ -39751,9 +39652,11 @@
             "col": [
               "8GQ34"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750713"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1750713"
+            ]
           },
-          "authorityIds": "col:8GQ34,wikidata:Q23681198",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1750713,col:8GQ34,wikidata:Q23681198",
           "authorship": "(Lopez-Seoane, 1885)"
         },
         {
@@ -39810,9 +39713,11 @@
             "col": [
               "89JGM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750716"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1750716"
+            ]
           },
-          "authorityIds": "col:89JGM,wikidata:Q35541230",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1750716,col:89JGM,wikidata:Q35541230",
           "authorship": "(Lacépède, 1789)"
         },
         {
@@ -40065,7 +39970,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "218d9dd9-f4cb-52b-a5a-4dee6c4869d63c"
+          "uuid": "218d9dd9-f4cb-52b-a5a-4dee6c4869d63c",
+          "authorship": "Holman 1973",
+          "sourceIds": {
+            "checklistbank": "txn:111007"
+          }
         },
         {
           "name": "Stenophis zollii",
@@ -40102,7 +40011,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8fe0c3e7-d5e4-58f-b59-d390fd808ed706"
+          "uuid": "8fe0c3e7-d5e4-58f-b59-d390fd808ed706",
+          "authorship": "Rage and Holman 1984",
+          "sourceIds": {
+            "checklistbank": "txn:250518"
+          }
         },
         {
           "id": "NEONATRIX_ELONGATA",
@@ -40116,7 +40029,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:4968157",
           "children": [],
-          "uuid": "d5ea3a7d-9646-5e3-85c-d0aa428150e5c5"
+          "uuid": "d5ea3a7d-9646-5e3-85c-d0aa428150e5c5",
+          "authorship": "Holman 1973",
+          "sourceIds": {
+            "checklistbank": "txn:110881"
+          }
         },
         {
           "id": "NEONATRIX_EUROPAEA",
@@ -40129,7 +40046,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "10460ac0-1070-582-a04-89c78e256418f0"
+          "uuid": "10460ac0-1070-582-a04-89c78e256418f0",
+          "authorship": "Rage and Holman 1984",
+          "sourceIds": {
+            "checklistbank": "txn:250517"
+          }
         },
         {
           "id": "NEONATRIX_INFERA",
@@ -40142,7 +40063,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "22502fdc-a8ea-564-92b-e5f43857e6e9a4"
+          "uuid": "22502fdc-a8ea-564-92b-e5f43857e6e9a4",
+          "authorship": "Holman 1996",
+          "sourceIds": {
+            "checklistbank": "txn:178478"
+          }
         },
         {
           "id": "NEONATRIX_MAGNA",
@@ -40156,7 +40081,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:4968156",
           "children": [],
-          "uuid": "3848873b-2d8f-5c7-97d-aab84f8e971002"
+          "uuid": "3848873b-2d8f-5c7-97d-aab84f8e971002",
+          "authorship": "Holman 1982",
+          "sourceIds": {
+            "checklistbank": "txn:111008"
+          }
         },
         {
           "id": "NEONATRIX_NOVA",
@@ -40169,7 +40098,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "f5c26424-1e10-599-9d4-37d699992f24a6"
+          "uuid": "f5c26424-1e10-599-9d4-37d699992f24a6",
+          "authorship": "Szyndlar 1987",
+          "sourceIds": {
+            "checklistbank": "txn:256066"
+          }
         }
       ]
     },
@@ -40216,9 +40149,11 @@
             "col": [
               "476BD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:405991"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:405991"
+            ]
           },
-          "authorityIds": "col:476BD,itis:209370,wikidata:Q589568"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:405991,col:476BD,itis:209370,wikidata:Q589568"
         },
         {
           "id": "NERODIA_CYCLOPION",
@@ -40244,9 +40179,11 @@
             "itis": [
               "174243"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455108"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1455108"
+            ]
           },
-          "authorityIds": "col:476BF,itis:174243,wikidata:Q749037"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1455108,col:476BF,itis:174243,wikidata:Q749037"
         },
         {
           "id": "NERODIA_ERYTHROGASTER",
@@ -40301,9 +40238,11 @@
             "col": [
               "476BJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:344094"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:344094"
+            ]
           },
-          "authorityIds": "col:476BJ,itis:174248,wikidata:Q2065834"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:344094,col:476BJ,itis:174248,wikidata:Q2065834"
         },
         {
           "id": "NERODIA_FLORIDANA",
@@ -40371,7 +40310,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5a5fe5dc-df6a-50c-b2d-abe8389e77f55e"
+          "uuid": "5a5fe5dc-df6a-50c-b2d-abe8389e77f55e",
+          "authorship": "Holman 1962",
+          "sourceIds": {
+            "checklistbank": "txn:381443"
+          }
         },
         {
           "id": "NERODIA_PAUCIMACULATA",
@@ -40425,9 +40368,11 @@
             "itis": [
               "563904"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1425014"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1425014"
+            ]
           },
-          "authorityIds": "col:476BS,itis:563904,wikidata:Q3024773"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1425014,col:476BS,itis:563904,wikidata:Q3024773"
         },
         {
           "id": "NERODIA_SIPEDON",
@@ -40454,9 +40399,11 @@
             "itis": [
               "174251"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:344095"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:344095"
+            ]
           },
-          "authorityIds": "col:476BV,itis:174251,wikidata:Q2163958"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:344095,col:476BV,itis:174251,wikidata:Q2163958"
         },
         {
           "id": "NERODIA_TAXISPILOTA",
@@ -40507,6 +40454,19 @@
           "lineage": "Nerodia",
           "sourceIds": {
             "checklistbank": "2782589"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERODIA_HILLMANI_WILSON_1968",
+          "name": "Nerodia hillmani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nerodia",
+          "authorship": "(Wilson 1968)",
+          "sourceIds": {
+            "checklistbank": "txn:155194"
           },
           "children": []
         }
@@ -43505,42 +43465,6 @@
       ]
     },
     {
-      "id": "GENUS_OOCATOCHUS",
-      "name": "Oocatochus",
-      "rank": "GENUS",
-      "description": "Oocatochus — a genus of colubrids in the family Colubridae.",
-      "lineage": "Oocatochus",
-      "children": [
-        {
-          "id": "OOCATOCHUS_RUFODORSATUS",
-          "name": "Oocatochus rufodorsatus",
-          "rank": "SPECIES",
-          "commonName": "Chinese Garter Snake",
-          "lineage": "Oocatochus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "children": [],
-          "authorship": "(Cantor, 1842)",
-          "uuid": "29fb2163-f9e8-516-b31-f9197606eabe2f",
-          "sourceIds": {
-            "wikidata": [
-              "Q2710734"
-            ],
-            "col": [
-              "49RQV"
-            ],
-            "itis": [
-              "1081833"
-            ],
-            "checklistbank": "30236"
-          },
-          "authorityIds": "col:49RQV,itis:1081833,wikidata:Q2710734"
-        }
-      ]
-    },
-    {
       "id": "GENUS_OPHEODRYS",
       "name": "Opheodrys",
       "rank": "GENUS",
@@ -45155,9 +45079,11 @@
             "col": [
               "4BJYZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498260"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1498260"
+            ]
           },
-          "authorityIds": "col:4BJYZ,itis:1082163,wikidata:Q265554"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1498260,col:4BJYZ,itis:1082163,wikidata:Q265554"
         },
         {
           "id": "OXYRHOPUS_RHOMBIFER",
@@ -45261,6 +45187,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "42b1150b-9ec2-54c-8ac-9396911b82213e"
+        },
+        {
+          "id": "SP_PALAEONATRIX_LEHMANI_RAGE_AND_RO_EK_1983",
+          "name": "Palaeonatrix lehmani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeonatrix",
+          "authorship": "(Rage and Roček 1983)",
+          "sourceIds": {
+            "checklistbank": "txn:256063"
+          },
+          "children": []
         }
       ]
     },
@@ -45282,7 +45221,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "08441f11-c3b4-57d-94e-def704b9ceecc2"
+          "uuid": "08441f11-c3b4-57d-94e-def704b9ceecc2",
+          "authorship": "Rage and Holman 1984",
+          "sourceIds": {
+            "checklistbank": "txn:250516"
+          }
         },
         {
           "id": "PALEOHETERODON_TIHENI",
@@ -45295,7 +45238,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "669c6b92-df16-590-970-5112949def6c0c"
+          "uuid": "669c6b92-df16-590-970-5112949def6c0c",
+          "authorship": "Holman 1964",
+          "sourceIds": {
+            "checklistbank": "txn:111000"
+          }
         }
       ]
     },
@@ -45325,9 +45272,11 @@
             "col": [
               "8GQ4N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606324"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1606324"
+            ]
           },
-          "authorityIds": "col:8GQ4N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1606324,col:8GQ4N",
           "authorship": "(Raddi, 1820)"
         }
       ]
@@ -45657,7 +45606,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "7fe52691-1121-582-b9d-de0c32ac084a34"
+          "uuid": "7fe52691-1121-582-b9d-de0c32ac084a34",
+          "authorship": "Holman 1970",
+          "sourceIds": {
+            "checklistbank": "txn:68486"
+          }
         },
         {
           "name": "Paracoluber spolia",
@@ -46689,9 +46642,11 @@
             "itis": [
               "701212"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610079"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610079"
+            ]
           },
-          "authorityIds": "col:4G8Y9,itis:701212,wikidata:Q5085436"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610079,col:4G8Y9,itis:701212,wikidata:Q5085436"
         },
         {
           "id": "PHILODRYAS_PSAMMOPHIDEA",
@@ -47569,18 +47524,6 @@
           "authorityIds": "col:C83N7"
         },
         {
-          "id": "SP_PHILOTHAMNUS_SP",
-          "name": "Philothamnus sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Philothamnus",
-          "sourceIds": {
-            "checklistbank": "1328049"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PHILOTHAMNUS_SMITHII_BOCAGE_1882",
           "name": "Philothamnus smithii",
           "rank": "SPECIES",
@@ -48058,34 +48001,6 @@
             "checklistbank": "29034"
           },
           "authorityIds": "col:4JCGW,itis:174263,wikidata:Q1663774"
-        },
-        {
-          "id": "PITUOPHIS_RUTHVENI",
-          "name": "Pituophis ruthveni",
-          "rank": "SPECIES",
-          "commonName": "Pituophis Ruthveni",
-          "lineage": "Pituophis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "The Louisiana pine snake (Pituophis ruthveni) is a species of large, non-venomous, constrictor in the family Colubridae. This powerful snake is notable because of its large eggs and small clutch sizes. The Louisiana pine snake is indigenous to west-central Louisiana and East Texas, where it relies strongly on Baird's pocket gophers for its burrow system and as a food source. The Louisiana pine snake is rarely seen in the wild, and is considered to be one of the rarest snakes in North America. The demise of the species is due to its low fecundity coupled with the extensive loss of suitable habitat - the longleaf pine savannas in the Gulf Coastal Plain of the southeastern United States. Management activities are being conducted to promote the species' recovery.\nRecovery efforts to counter extirpation resulted in around 300 snakes having been reintroduced into the wild. In 2018 the snake was added to the List of Endangered and Threatened Wildlife. A species-specific rule on 27 February 2020, means interfering with the species could result in criminal charges.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Louisiana pine snake",
-          "children": [],
-          "authorship": "Stull, 1929",
-          "uuid": "6c08c77d-b419-53e-8cc-6c7af2d9e3f586",
-          "sourceIds": {
-            "wikidata": [
-              "Q3016432"
-            ],
-            "itis": [
-              "563905"
-            ],
-            "col": [
-              "4JCGZ"
-            ],
-            "checklistbank": "29041"
-          },
-          "authorityIds": "col:4JCGZ,itis:563905,wikidata:Q3016432"
         },
         {
           "id": "PITUOPHIS_VERTEBRALIS",
@@ -48718,9 +48633,11 @@
             "itis": [
               "1081687"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1513073"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1513073"
+            ]
           },
-          "authorityIds": "col:6VPPB,itis:1081687,wikidata:Q901168"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1513073,col:6VPPB,itis:1081687,wikidata:Q901168"
         },
         {
           "id": "PLATYCEPS_NOELI",
@@ -49340,7 +49257,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "55b30404-0dfc-5be-ae2-97eba3448b0e38"
+          "uuid": "55b30404-0dfc-5be-ae2-97eba3448b0e38",
+          "authorship": "Holman 1998",
+          "sourceIds": {
+            "checklistbank": "txn:264350"
+          }
         }
       ]
     },
@@ -49820,33 +49741,6 @@
             "checklistbank": "28944"
           },
           "authorityIds": "col:78C9Z,itis:701226,wikidata:Q764652"
-        },
-        {
-          "id": "PSEUDOBOA_HAASI",
-          "name": "Pseudoboa haasi",
-          "rank": "SPECIES",
-          "commonName": "Pseudoboa Haasi",
-          "lineage": "Pseudoboa",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Pseudoboa haasi, also known commonly as the Paraná false boa, is a species of snake in the subfamily Dipsadinae of the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Boettger, 1905)",
-          "uuid": "0471472f-9fd9-560-8ad-3e2436cab17fdb",
-          "sourceIds": {
-            "wikidata": [
-              "Q3409622"
-            ],
-            "itis": [
-              "701227"
-            ],
-            "col": [
-              "4NPZJ"
-            ],
-            "checklistbank": "28945"
-          },
-          "authorityIds": "col:4NPZJ,itis:701227,wikidata:Q3409622"
         },
         {
           "id": "PSEUDOBOA_KRAIT",
@@ -51360,9 +51254,11 @@
             "itis": [
               "174127"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498276"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1498276"
+            ]
           },
-          "authorityIds": "col:794GW,itis:174127,wikidata:Q25678920"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1498276,col:794GW,itis:174127,wikidata:Q25678920"
         },
         {
           "id": "REGINA_INTERMEDIA",
@@ -51375,7 +51271,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "cd96a5a7-1c79-5c7-985-439f192c0d87bb"
+          "uuid": "cd96a5a7-1c79-5c7-985-439f192c0d87bb",
+          "authorship": "Meylan 1982",
+          "sourceIds": {
+            "checklistbank": "txn:155193"
+          }
         },
         {
           "id": "REGINA_SEPTEMVITTATA",
@@ -51400,9 +51300,37 @@
             "col": [
               "794GZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1526219"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1526219"
+            ]
           },
-          "authorityIds": "col:794GZ,itis:174125,wikidata:Q2705218"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1526219,col:794GZ,itis:174125,wikidata:Q2705218"
+        },
+        {
+          "id": "SP_REGINA_ALLENI_GARMAN_1874",
+          "name": "Regina alleni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Regina",
+          "authorship": "(Garman 1874)",
+          "sourceIds": {
+            "checklistbank": "txn:155188"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_REGINA_RIGIDA_SAY_1825",
+          "name": "Regina rigida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Regina",
+          "authorship": "(Say 1825)",
+          "sourceIds": {
+            "checklistbank": "txn:155191"
+          },
+          "children": []
         }
       ]
     },
@@ -52075,33 +52003,6 @@
             "checklistbank": "2202454"
           },
           "authorityIds": "itis:700836,wikidata:Q3429022"
-        },
-        {
-          "id": "RHABDOPHIS_SUBMINIATUS",
-          "name": "Rhabdophis subminiatus",
-          "rank": "SPECIES",
-          "commonName": "Rhabdophis Subminiatus",
-          "lineage": "Rhabdophis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Rhabdophis subminiatus, commonly called the red-necked keelback or red-necked keelback snake, is a species of venomous snake in the subfamily Natricinae of the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Schlegel, 1837)",
-          "uuid": "f4e683f7-114f-54f-a8e-bf900afe9e8c1d",
-          "sourceIds": {
-            "wikidata": [
-              "Q2702835"
-            ],
-            "itis": [
-              "700837"
-            ],
-            "col": [
-              "4RW5D"
-            ],
-            "checklistbank": "28827"
-          },
-          "authorityIds": "col:4RW5D,itis:700837,wikidata:Q2702835"
         },
         {
           "id": "RHABDOPHIS_SWINHONIS",
@@ -53057,19 +52958,6 @@
           },
           "authorityIds": "itis:1082902",
           "commonName": "Stadelman's Graceful Brown Snake"
-        },
-        {
-          "id": "SP_RHADINAEA_BREVIROSTRIS_W_PETERS_1863",
-          "name": "Rhadinaea brevirostris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhadinaea",
-          "authorship": "(W. Peters, 1863)",
-          "sourceIds": {
-            "checklistbank": "444105"
-          },
-          "children": []
         }
       ]
     },
@@ -54440,7 +54328,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:5935975",
           "children": [],
-          "uuid": "c6d19823-268a-5b1-98e-0773cecc25c64d"
+          "uuid": "c6d19823-268a-5b1-98e-0773cecc25c64d",
+          "authorship": "Holman 1973",
+          "sourceIds": {
+            "checklistbank": "txn:110880"
+          }
         }
       ]
     },
@@ -55259,33 +55151,6 @@
             "checklistbank": "28697"
           },
           "authorityIds": "col:4X6JS,itis:209489,wikidata:Q603905"
-        },
-        {
-          "id": "SIBON_NOALAMINA",
-          "name": "Sibon noalamina",
-          "rank": "SPECIES",
-          "commonName": "Sibon Noalamina",
-          "lineage": "Sibon",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Sibon noalamina is a species of snail-eating snake discovered in 2012 from western Panama.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "Lotzkat, Hertz and Köhler, 2012",
-          "uuid": "20173675-d432-505-be9-b19e7c98d08190",
-          "sourceIds": {
-            "wikidata": [
-              "Q3482953"
-            ],
-            "itis": [
-              "1082753"
-            ],
-            "col": [
-              "4X6JV"
-            ],
-            "checklistbank": "200600"
-          },
-          "authorityIds": "col:4X6JV,itis:1082753,wikidata:Q3482953"
         },
         {
           "id": "SIBON_PERISSOSTICHON",
@@ -56725,9 +56590,11 @@
             "itis": [
               "209492"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610098"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610098"
+            ]
           },
-          "authorityIds": "col:4Z4Z7,itis:209492,wikidata:Q672263"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610098,col:4Z4Z7,itis:209492,wikidata:Q672263"
         },
         {
           "id": "SPILOTES_SULPHUREUS",
@@ -60560,33 +60427,6 @@
       "lineage": "Telescopus",
       "children": [
         {
-          "id": "TELESCOPUS_BEETZI",
-          "name": "Telescopus beetzi",
-          "rank": "SPECIES",
-          "commonName": "Telescopus Beetzi",
-          "lineage": "Telescopus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Telescopus beetzi, commonly known as Beetz's tiger snake, is a species of snake in the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Barbour, 1922)",
-          "uuid": "0fb3dd09-0b55-566-bdf-c2dd5398f5afd8",
-          "sourceIds": {
-            "wikidata": [
-              "Q3517337"
-            ],
-            "itis": [
-              "1082408"
-            ],
-            "col": [
-              "556C8"
-            ],
-            "checklistbank": "28455"
-          },
-          "authorityIds": "col:556C8,itis:1082408,wikidata:Q3517337"
-        },
-        {
           "id": "TELESCOPUS_DHARA",
           "name": "Telescopus dhara",
           "rank": "SPECIES",
@@ -61185,18 +61025,6 @@
             "checklistbank": "1695410"
           },
           "authorityIds": "col:VC2T9"
-        },
-        {
-          "id": "SP_TELESCOPUS_SP",
-          "name": "Telescopus sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Telescopus",
-          "sourceIds": {
-            "checklistbank": "1328050"
-          },
-          "children": []
         }
       ]
     },
@@ -61255,7 +61083,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "0a4a8d45-c8e9-5ad-816-8a13165d628fec"
+          "uuid": "0a4a8d45-c8e9-5ad-816-8a13165d628fec",
+          "authorship": "Szyndlar 1987",
+          "sourceIds": {
+            "checklistbank": "txn:256067"
+          }
         },
         {
           "id": "TEXASOPHIS_FOSSILIS",
@@ -61268,7 +61100,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "33819395-3fa3-524-a4b-817b13426f1cce"
+          "uuid": "33819395-3fa3-524-a4b-817b13426f1cce",
+          "authorship": "Holman 1977",
+          "sourceIds": {
+            "checklistbank": "txn:83952"
+          }
         },
         {
           "id": "TEXASOPHIS_GALBREATHI",
@@ -61281,7 +61117,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d9e2f3a4-990a-56a-9a1-9eeef69e02da87"
+          "uuid": "d9e2f3a4-990a-56a-9a1-9eeef69e02da87",
+          "authorship": "Holman 1984",
+          "sourceIds": {
+            "checklistbank": "txn:250272"
+          }
         },
         {
           "id": "TEXASOPHIS_HECKI",
@@ -61294,7 +61134,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b8f40887-ddc0-5bc-9c3-50f4640c733ade"
+          "uuid": "b8f40887-ddc0-5bc-9c3-50f4640c733ade",
+          "authorship": "Böhme 2008",
+          "sourceIds": {
+            "checklistbank": "txn:269476"
+          }
         },
         {
           "id": "TEXASOPHIS_MEINI",
@@ -61307,7 +61151,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a7361bd0-9dbc-560-ada-d89b2a4bdb2145"
+          "uuid": "a7361bd0-9dbc-560-ada-d89b2a4bdb2145",
+          "authorship": "Rage and Holman 1984",
+          "sourceIds": {
+            "checklistbank": "txn:250515"
+          }
         },
         {
           "id": "TEXASOPHIS_WILSONI",
@@ -61320,7 +61168,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d525bcac-0a4d-5dd-86d-1b00252336845c"
+          "uuid": "d525bcac-0a4d-5dd-86d-1b00252336845c",
+          "authorship": "Holman 1984",
+          "sourceIds": {
+            "checklistbank": "txn:83953"
+          }
         }
       ]
     },
@@ -61651,9 +61503,11 @@
             "col": [
               "7C5C2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610086"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610086"
+            ]
           },
-          "authorityIds": "col:7C5C2,itis:701294,wikidata:Q3015213"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610086,col:7C5C2,itis:701294,wikidata:Q3015213"
         },
         {
           "id": "THAMNODYNASTES_PARAGUANAE",
@@ -62157,9 +62011,11 @@
             "col": [
               "563KL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542530"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1542530"
+            ]
           },
-          "authorityIds": "col:563KL,itis:174143,wikidata:Q1535303"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1542530,col:563KL,itis:174143,wikidata:Q1535303"
         },
         {
           "id": "THAMNOPHIS_ERRANS",
@@ -62422,9 +62278,11 @@
             "col": [
               "8992S"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542652"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1542652"
+            ]
           },
-          "authorityIds": "col:8992S,itis:586228,wikidata:Q3519529"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1542652,col:8992S,itis:586228,wikidata:Q3519529"
         },
         {
           "id": "THAMNOPHIS_MENDAX",
@@ -62686,9 +62544,11 @@
             "col": [
               "563LC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542643"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1542643"
+            ]
           },
-          "authorityIds": "col:563LC,itis:174148,wikidata:Q2714713"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1542643,col:563LC,itis:174148,wikidata:Q2714713"
         },
         {
           "id": "THAMNOPHIS_SAURITA",
@@ -62805,9 +62665,11 @@
             "col": [
               "563LK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1481923"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1481923"
+            ]
           },
-          "authorityIds": "col:563LK,itis:174136,wikidata:Q911786"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1481923,col:563LK,itis:174136,wikidata:Q911786"
         },
         {
           "id": "THAMNOPHIS_SUMICHRASTI",
@@ -62891,9 +62753,11 @@
             "itis": [
               "1084927"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1377344"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1377344"
+            ]
           },
-          "authorityIds": "col:563LQ,itis:1084927,wikidata:Q107333354"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1377344,col:563LQ,itis:1084927,wikidata:Q107333354"
         },
         {
           "id": "SP_THAMNOPHIS_COPEI_DUG_S_1879",
@@ -63128,18 +62992,6 @@
             "checklistbank": "1714208"
           },
           "authorityIds": "col:VPHL5"
-        },
-        {
-          "id": "SP_THELOTORNIS_SP",
-          "name": "Thelotornis sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thelotornis",
-          "sourceIds": {
-            "checklistbank": "1328067"
-          },
-          "children": []
         }
       ]
     },
@@ -63391,9 +63243,11 @@
             "itis": [
               "701298"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610104"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610104"
+            ]
           },
-          "authorityIds": "col:899QN,itis:701298,wikidata:Q5085815"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610104,col:899QN,itis:701298,wikidata:Q5085815"
         },
         {
           "id": "TOMODON_OCELLATUS",
@@ -63493,33 +63347,6 @@
             "checklistbank": "27722"
           },
           "authorityIds": "col:57LKH,itis:1082427,wikidata:Q3535999"
-        },
-        {
-          "id": "TOXICODRYAS_PULVERULENTA",
-          "name": "Toxicodryas pulverulenta",
-          "rank": "SPECIES",
-          "commonName": "Toxicodryas Pulverulenta",
-          "lineage": "Toxicodryas",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "Toxicodryas pulverulenta, commonly known as Fischer's cat snake, Fischer's tree snake, and the powdered tree snake, is a species of rear-fanged venomous snake in the family Colubridae.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "authorship": "(Fischer, 1856)",
-          "uuid": "af3161a1-7a72-5dd-899-65a39df11a5a09",
-          "sourceIds": {
-            "wikidata": [
-              "Q3535997"
-            ],
-            "col": [
-              "57LKJ"
-            ],
-            "itis": [
-              "1082428"
-            ],
-            "checklistbank": "27720"
-          },
-          "authorityIds": "col:57LKJ,itis:1082428,wikidata:Q3535997"
         },
         {
           "id": "TOXICODRYAS_VEXATOR",
@@ -65514,6 +65341,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "7e6b656b-702c-51d-bf2-b517c75122aead"
+        },
+        {
+          "id": "SP_TROPIDONOTUS_LEBERIS_LINNAEUS_1758",
+          "name": "Tropidonotus leberis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tropidonotus",
+          "authorship": "(Linnaeus 1758)",
+          "sourceIds": {
+            "checklistbank": "txn:155196"
+          },
+          "children": []
         }
       ]
     },
@@ -66366,9 +66206,11 @@
             "itis": [
               "701331"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1478628"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1478628"
+            ]
           },
-          "authorityIds": "col:7G8J7,itis:701331,wikidata:Q3570884"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1478628,col:7G8J7,itis:701331,wikidata:Q3570884"
         },
         {
           "id": "XENODON_HISTRICUS",
@@ -66449,9 +66291,11 @@
             "itis": [
               "1082448"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610088"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610088"
+            ]
           },
-          "authorityIds": "col:89DR9,itis:1082448,wikidata:Q58206874"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610088,col:89DR9,itis:1082448,wikidata:Q58206874"
         },
         {
           "id": "XENODON_NATTERERI",
@@ -66820,39 +66664,6 @@
       ]
     },
     {
-      "id": "GENUS_XYELODONTOPHIS",
-      "name": "Xyelodontophis",
-      "rank": "GENUS",
-      "description": "Xyelodontophis — a genus of colubrids in the family Colubridae.",
-      "lineage": "Xyelodontophis",
-      "children": [
-        {
-          "id": "XYELODONTOPHIS_ULUGURUENSIS",
-          "name": "Xyelodontophis uluguruensis",
-          "rank": "SPECIES",
-          "commonName": "Dagger-tooth Vine Snake",
-          "lineage": "Xyelodontophis",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "children": [],
-          "authorship": "Broadley and Wallach, 2002",
-          "uuid": "45ebffbf-c76a-5fe-97c-71366f6edb1a47",
-          "sourceIds": {
-            "wikidata": [
-              "Q543759"
-            ],
-            "itis": [
-              "1082510"
-            ],
-            "checklistbank": "1328035"
-          },
-          "authorityIds": "itis:1082510,wikidata:Q543759"
-        }
-      ]
-    },
-    {
       "id": "GENUS_ZAMENIS",
       "name": "Zamenis",
       "rank": "GENUS",
@@ -67068,7 +66879,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b63277c5-4709-5b7-bd9-9b28a7bae4407f"
+          "uuid": "b63277c5-4709-5b7-bd9-9b28a7bae4407f",
+          "authorship": "Szyndlar 1984",
+          "sourceIds": {
+            "checklistbank": "txn:64953"
+          }
         }
       ]
     },
@@ -67090,7 +66905,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e9b40a09-ad58-5d6-8be-377995165faebf"
+          "uuid": "e9b40a09-ad58-5d6-8be-377995165faebf",
+          "authorship": "Jasinski and Moscato 2017",
+          "sourceIds": {
+            "checklistbank": "txn:452585"
+          }
         }
       ]
     },
@@ -68812,18 +68631,6 @@
           "uuid": "1cb99fd8-e54a-507-bef-f3bd7919ec9932"
         },
         {
-          "id": "SP_PSAMMODYNASTES_SP",
-          "name": "Psammodynastes sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Psammodynastes",
-          "sourceIds": {
-            "checklistbank": "578146"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PSAMMODYNASTES_PICTUS_GUNTHER_1858",
           "name": "Psammodynastes pictus",
           "rank": "SPECIES",
@@ -69120,19 +68927,6 @@
             "checklistbank": "444293"
           },
           "children": []
-        },
-        {
-          "id": "SP_DRYADOPHIS_BIFOSSATUS_RADDI_1820",
-          "name": "Dryadophis bifossatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dryadophis",
-          "authorship": "(Raddi, 1820)",
-          "sourceIds": {
-            "checklistbank": "1003086"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -69153,27 +68947,6 @@
           "authorship": "auct. non Wagler in Spix, 1824",
           "sourceIds": {
             "checklistbank": "444294"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_EUDRYAS",
-      "name": "Eudryas",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EUDRYAS_BODDAERTI",
-          "name": "Eudryas boddaerti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eudryas",
-          "sourceIds": {
-            "checklistbank": "444304"
           },
           "children": []
         }
@@ -69209,19 +68982,6 @@
           "authorship": "W. Peters, 1863",
           "sourceIds": {
             "checklistbank": "444309"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HERPETODRYAS_CARINATUS_LINNAEUS_1758",
-          "name": "Herpetodryas carinatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Herpetodryas",
-          "authorship": "(Linnaeus, 1758)",
-          "sourceIds": {
-            "checklistbank": "1003085"
           },
           "children": []
         }
@@ -69533,18 +69293,6 @@
           "children": []
         },
         {
-          "id": "SP_PROSYMNA_JANII",
-          "name": "Prosymna janii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prosymna",
-          "sourceIds": {
-            "checklistbank": "578147"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PROSYMNA_GREIGERTI",
           "name": "Prosymna greigerti",
           "rank": "SPECIES",
@@ -69677,45 +69425,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NERODIA_FASCIATA_LINNAEUS_1766",
-          "name": "\"Nerodia fasciata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nerodia",
-          "authorship": "\"(Linnaeus, 1766)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:344094"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NERODIA_SIPEDON_LINNAEUS_1758",
-          "name": "\"Nerodia sipedon\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nerodia",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:344095"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NERODIA_CLARKII_BAIRD_GIRARD_1853",
-          "name": "\"Nerodia clarkii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nerodia",
-          "authorship": "\"(Baird & Girard, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:405991"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NERODIA_FASCIATA_COPE_1895",
           "name": "\"Nerodia fasciata",
           "rank": "SPECIES",
@@ -69738,93 +69447,6 @@
           "authorship": "\"Kennicott, 1860\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:405994"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NERODIA_RHOMBIFER_HALLOWELL_1852",
-          "name": "\"Nerodia rhombifer\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nerodia",
-          "authorship": "\"(Hallowell, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1425014"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NERODIA_CYCLOPION_DUM_RIL_BIBRON_DUM_RIL_1854",
-          "name": "\"Nerodia cyclopion\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nerodia",
-          "authorship": "\"(Duméril, Bibron & Duméril, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455108"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_NATRICITERES",
-      "name": "\"Natriciteres",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NATRICITERES_FULIGINOIDES_G_NTHER_1858",
-          "name": "\"Natriciteres fuliginoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Natriciteres",
-          "authorship": "\"(Günther, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407699"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NATRICITERES_OLIVACEA_PETERS_1854",
-          "name": "\"Natriciteres olivacea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Natriciteres",
-          "authorship": "\"(Peters, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407700"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NATRICITERES_SYLVATICA_BROADLEY_1966",
-          "name": "\"Natriciteres sylvatica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Natriciteres",
-          "authorship": "\"Broadley, 1966\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407701"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NATRICITERES_VARIEGATA_PETERS_1861",
-          "name": "\"Natriciteres variegata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Natriciteres",
-          "authorship": "\"(Peters, 1861)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:407702"
           },
           "children": []
         }
@@ -69860,45 +69482,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_THAMNOPHIS_VALIDUS_KENNICOTT_1860",
-          "name": "\"Thamnophis validus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thamnophis",
-          "authorship": "\"(Kennicott, 1860)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1377344"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_THAMNOPHIS_SIRTALIS_LINNAEUS_1758",
-          "name": "\"Thamnophis sirtalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thamnophis",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1481923"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_THAMNOPHIS_EQUES_REUSS_1834",
-          "name": "\"Thamnophis eques\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thamnophis",
-          "authorship": "\"(Reuss, 1834)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542530"
-          },
-          "children": []
-        },
-        {
           "id": "SP_THAMNOPHIS_EQUES_KENNICOTT_1860",
           "name": "\"Thamnophis eques",
           "rank": "SPECIES",
@@ -69908,32 +69491,6 @@
           "authorship": "\"(Kennicott, 1860)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1542533"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_THAMNOPHIS_RUFIPUNCTATUS_COPE_1875",
-          "name": "\"Thamnophis rufipunctatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thamnophis",
-          "authorship": "\"(Cope, 1875)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542643"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_THAMNOPHIS_MELANOGASTER_PETERS_1864",
-          "name": "\"Thamnophis melanogaster\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thamnophis",
-          "authorship": "\"(Peters, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542652"
           },
           "children": []
         }
@@ -69964,120 +69521,6 @@
       "lineage": "colubridae"
     },
     {
-      "id": "GENUS_FOWLEA",
-      "name": "\"Fowlea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FOWLEA_PISCATOR_SCHNEIDER_1799",
-          "name": "\"Fowlea piscator\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fowlea",
-          "authorship": "\"(Schneider, 1799)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391270"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_AHAETULLA",
-      "name": "\"Ahaetulla",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AHAETULLA_MYCTERIZANS_LINNAEUS_1758",
-          "name": "\"Ahaetulla mycterizans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ahaetulla",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391285"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_COELOGNATHUS",
-      "name": "\"Coelognathus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COELOGNATHUS_HELENA_DAUDIN_1803",
-          "name": "\"Coelognathus helena\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coelognathus",
-          "authorship": "\"Daudin, 1803\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391293"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COELOGNATHUS_RADIATUS_BOIE_1827",
-          "name": "\"Coelognathus radiatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coelognathus",
-          "authorship": "\"(Boie, 1827)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1600459"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_DRYMARCHON",
-      "name": "\"Drymarchon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DRYMARCHON_MELANURUS_DUM_RIL_BIBRON_DUM_RIL_1854",
-          "name": "\"Drymarchon melanurus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Drymarchon",
-          "authorship": "\"(Duméril, Bibron & Duméril, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1393160"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DRYMARCHON_CORAIS_BOIE_1827",
-          "name": "\"Drymarchon corais\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Drymarchon",
-          "authorship": "\"(Boie, 1827)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1393161"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
       "id": "GENUS_TRIMERODYTES",
       "name": "\"Trimerodytes",
       "rank": "GENUS",
@@ -70092,28 +69535,6 @@
           "authorship": "\"(Boulenger, 1899)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1435560"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_HELICOPS",
-      "name": "\"Helicops",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HELICOPS_CARINICAUDUS_WIED_NEUWIED_1825",
-          "name": "\"Helicops carinicaudus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Helicops",
-          "authorship": "\"(Wied-Neuwied, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476235"
           },
           "children": []
         }
@@ -70144,58 +69565,10 @@
       "lineage": "colubridae"
     },
     {
-      "id": "GENUS_XENODON",
-      "name": "\"Xenodon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_XENODON_GUENTHERI_BOULENGER_1894",
-          "name": "\"Xenodon guentheri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Xenodon",
-          "authorship": "\"Boulenger, 1894\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1478628"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_XENODON_MERREMII_WAGLER_1824",
-          "name": "\"Xenodon merremii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Xenodon",
-          "authorship": "\"(Wagler, 1824)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610088"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
       "id": "GENUS_ELAPHE",
       "name": "\"Elaphe",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ELAPHE_QUADRIVIRGATA_BOIE_1826",
-          "name": "\"Elaphe quadrivirgata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Elaphe",
-          "authorship": "\"(Boie, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1481775"
-          },
-          "children": []
-        },
         {
           "id": "SP_ELAPHE_DIONE_PALLAS_1773",
           "name": "\"Elaphe dione\"",
@@ -70206,41 +69579,6 @@
           "authorship": "\"(Pallas, 1773)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1506596"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ELAPHE_CLIMACOPHORA_BOIE_1826",
-          "name": "\"Elaphe climacophora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Elaphe",
-          "authorship": "\"(Boie, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606360"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_LIODYTES",
-      "name": "\"Liodytes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LIODYTES_ALLENI_GARMAN_1874",
-          "name": "\"Liodytes alleni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liodytes",
-          "authorship": "\"(Garman, 1874)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498231"
           },
           "children": []
         }
@@ -70289,225 +69627,6 @@
           "authorship": "\"(Linnaeus, 1758)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1527803"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NATRIX_ASTREPTOPHORA_LOPEZ_SEOANE_1885",
-          "name": "\"Natrix astreptophora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Natrix",
-          "authorship": "\"(Lopez-Seoane, 1885)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750713"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NATRIX_HELVETICA_LAC_P_DE_1789",
-          "name": "\"Natrix helvetica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Natrix",
-          "authorship": "\"(Lacépède, 1789)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750716"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_FARANCIA",
-      "name": "\"Farancia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FARANCIA_ABACURA_HOLBROOK_1836",
-          "name": "\"Farancia abacura\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Farancia",
-          "authorship": "\"(Holbrook, 1836)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498236"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FARANCIA_ERYTROGRAMMA_PALISOT_DE_BEAUVOIS_1802",
-          "name": "\"Farancia erytrogramma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Farancia",
-          "authorship": "\"(Palisot de Beauvois, 1802)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1750708"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_COLUBER",
-      "name": "\"Coluber",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COLUBER_CONSTRICTOR_LINNAEUS_1758",
-          "name": "\"Coluber constrictor\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Coluber",
-          "authorship": "\"Linnaeus, 1758\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498256"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_OXYRHOPUS",
-      "name": "\"Oxyrhopus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OXYRHOPUS_PETOLARIUS_LINNAEUS_1758",
-          "name": "\"Oxyrhopus petolarius\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oxyrhopus",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498260"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_REGINA",
-      "name": "\"Regina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_REGINA_GRAHAMII_BAIRD_GIRARD_1853",
-          "name": "\"Regina grahamii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Regina",
-          "authorship": "\"Baird & Girard, 1853\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1498276"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_REGINA_SEPTEMVITTATA_SAY_1825",
-          "name": "\"Regina septemvittata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Regina",
-          "authorship": "\"(Say, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1526219"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_PLATYCEPS",
-      "name": "\"Platyceps",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLATYCEPS_NAJADUM_EICHWALD_1831",
-          "name": "\"Platyceps najadum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Platyceps",
-          "authorship": "\"(Eichwald, 1831)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1513073"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_CLELIA",
-      "name": "\"Clelia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CLELIA_CLELIA_DAUDIN_1803",
-          "name": "\"Clelia clelia\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Clelia",
-          "authorship": "\"(Daudin, 1803)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1527845"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_GRAYIA",
-      "name": "\"Grayia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GRAYIA_THOLLONI_MOCQUARD_1897",
-          "name": "\"Grayia tholloni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Grayia",
-          "authorship": "\"Mocquard, 1897\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1545695"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GRAYIA_SMYTHII_LEACH_1818",
-          "name": "\"Grayia smythii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Grayia",
-          "authorship": "\"(Leach, 1818)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610105"
           },
           "children": []
         }
@@ -70573,173 +69692,6 @@
       "lineage": "colubridae"
     },
     {
-      "id": "GENUS_ERYTHROLAMPRUS",
-      "name": "\"Erythrolamprus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ERYTHROLAMPRUS_POECILOGYRUS_WIED_NEUWIED_1824",
-          "name": "\"Erythrolamprus poecilogyrus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Erythrolamprus",
-          "authorship": "\"(Wied-Neuwied, 1824)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606305"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ERYTHROLAMPRUS_MILIARIS_LINNAEUS_1758",
-          "name": "\"Erythrolamprus miliaris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Erythrolamprus",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606340"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_PALUSOPHIS",
-      "name": "\"Palusophis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PALUSOPHIS_BIFOSSATUS_RADDI_1820",
-          "name": "\"Palusophis bifossatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Palusophis",
-          "authorship": "\"(Raddi, 1820)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1606324"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_PHILODRYAS",
-      "name": "\"Philodryas",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHILODRYAS_PATAGONIENSIS_GIRARD_1858",
-          "name": "\"Philodryas patagoniensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Philodryas",
-          "authorship": "\"(Girard, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610079"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_THAMNODYNASTES",
-      "name": "\"Thamnodynastes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_THAMNODYNASTES_PALLIDUS_LINNAEUS_1758",
-          "name": "\"Thamnodynastes pallidus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thamnodynastes",
-          "authorship": "\"(LInnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610086"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_CHIRONIUS",
-      "name": "\"Chironius",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHIRONIUS_CARINATUS_LINNAEUS_1758",
-          "name": "\"Chironius carinatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chironius",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610095"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_SPILOTES",
-      "name": "\"Spilotes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SPILOTES_PULLATUS_LINNAEUS_1758",
-          "name": "\"Spilotes pullatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spilotes",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610098"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
-      "id": "GENUS_TOMODON",
-      "name": "\"Tomodon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TOMODON_DORSATUS_DUM_RIL_BIBRON_DUM_RIL_1854",
-          "name": "\"Tomodon dorsatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tomodon",
-          "authorship": "\"Duméril, Bibron & Duméril, 1854\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610104"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colubridae"
-    },
-    {
       "id": "GENUS_HIEROPHIS",
       "name": "\"Hierophis",
       "rank": "GENUS",
@@ -70782,10 +69734,234 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_MALPOLON",
+      "name": "Malpolon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MALPOLON_MLYNARSKII_SZYNDLAR_1988",
+          "name": "Malpolon mlynarskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malpolon",
+          "authorship": "Szyndlar 1988",
+          "sourceIds": {
+            "checklistbank": "txn:251192"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MALPOLON_LAURENTI_DEP_RET_1897",
+          "name": "Malpolon laurenti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malpolon",
+          "authorship": "(Depéret 1897)",
+          "sourceIds": {
+            "checklistbank": "txn:489643"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_DAKOTAOPHIS",
+      "name": "Dakotaophis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DAKOTAOPHIS_GREENI_HOLMAN_1976",
+          "name": "Dakotaophis greeni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dakotaophis",
+          "authorship": "Holman 1976",
+          "sourceIds": {
+            "checklistbank": "txn:489629"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_MIONATRIX",
+      "name": "Mionatrix",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIONATRIX_DATOMEUS_SUN_AILIN_1861",
+          "name": "Mionatrix datomeus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mionatrix",
+          "authorship": "Sun Ailin 1861",
+          "sourceIds": {
+            "checklistbank": "txn:489645"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_PALAEOMALPOLON",
+      "name": "Palaeomalpolon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEOMALPOLON_BOREALIS_SZYNDLAR_1981",
+          "name": "Palaeomalpolon borealis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeomalpolon",
+          "authorship": "Szyndlar 1981",
+          "sourceIds": {
+            "checklistbank": "txn:489649"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_PALEONATRIX",
+      "name": "Paleonatrix",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALEONATRIX_SILESIACA_SZYNDLAR_1982",
+          "name": "Paleonatrix silesiaca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paleonatrix",
+          "authorship": "Szyndlar 1982",
+          "sourceIds": {
+            "checklistbank": "txn:489650"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_PALEOFARANCIA",
+      "name": "Paleofarancia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALEOFARANCIA_BREVISPINOSUS_AUFFENBERG_1963",
+          "name": "Paleofarancia brevispinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paleofarancia",
+          "authorship": "Auffenberg 1963",
+          "sourceIds": {
+            "checklistbank": "txn:489651"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_PARAOXYBELIS",
+      "name": "Paraoxybelis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAOXYBELIS_FLORIDANUS_AUFFENBERG_1963",
+          "name": "Paraoxybelis floridanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraoxybelis",
+          "authorship": "Auffenberg 1963",
+          "sourceIds": {
+            "checklistbank": "txn:489652"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_PSEUDOCEMOPHORA",
+      "name": "Pseudocemophora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCEMOPHORA_ANTIQUA_AUFFENBERG_1963",
+          "name": "Pseudocemophora antiqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocemophora",
+          "authorship": "Auffenberg 1963",
+          "sourceIds": {
+            "checklistbank": "txn:489654"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
+    },
+    {
+      "id": "GENUS_STILOSOMA",
+      "name": "Stilosoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STILOSOMA_EXTENUATUM_BROWN_1890",
+          "name": "Stilosoma extenuatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stilosoma",
+          "authorship": "Brown 1890",
+          "sourceIds": {
+            "checklistbank": "txn:489656"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STILOSOMA_VETUSTUM_AUFFENBERG_1863",
+          "name": "Stilosoma vetustum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stilosoma",
+          "authorship": "Auffenberg 1863",
+          "sourceIds": {
+            "checklistbank": "txn:489657"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "colubridae"
     }
   ],
-  "genusCount": 382,
-  "speciesCount": 2902,
+  "genusCount": 366,
+  "speciesCount": 2852,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

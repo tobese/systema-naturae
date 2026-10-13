@@ -142,9 +142,11 @@
             "col": [
               "CNVF6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1780363"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1780363"
+            ]
           },
-          "authorityIds": "col:CNVF6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1780363,col:CNVF6",
           "authorship": "(Zeder, 1800) Yamaguti, 1971"
         },
         {
@@ -1666,20 +1668,6 @@
           "authorityIds": "itis:56329"
         },
         {
-          "id": "SP_HAEMATOLOECHUS_FUELLEBORNI_TRAVASSOS_DARRIBA_1930",
-          "name": "Haematoloechus fuelleborni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Haematoloechus",
-          "authorship": "(Travassos & Darriba, 1930)",
-          "sourceIds": {
-            "checklistbank": "34571"
-          },
-          "children": [],
-          "uuid": "09a312ff-eae4-5ae-90a-9aede2c58df996"
-        },
-        {
           "id": "SP_HAEMATOLOECHUS_FREITASI_MA_GARZ_N_GIL_SOLARES_1961",
           "name": "Haematoloechus freitasi",
           "rank": "SPECIES",
@@ -2719,45 +2707,10 @@
       "lineage": "haematoloechidae"
     },
     {
-      "id": "GENUS_DISTOMA",
-      "name": "Distoma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DISTOMA_VARIEGATUM_RUDOLPHI_1819",
-          "name": "Distoma variegatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Distoma",
-          "authorship": "Rudolphi, 1819",
-          "sourceIds": {
-            "checklistbank": "960079"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "haematoloechidae"
-    },
-    {
       "id": "GENUS_PNEUMONOECES",
       "name": "Pneumonoeces",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PNEUMONOECES_VARIEGATUS_RUDOLPHI_1819",
-          "name": "Pneumonoeces variegatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pneumonoeces",
-          "authorship": "(Rudolphi, 1819)",
-          "sourceIds": {
-            "checklistbank": "1056781"
-          },
-          "children": []
-        },
         {
           "id": "SP_PNEUMONOECES_SIMILIS_LOOSS_1899",
           "name": "Pneumonoeces similis",
@@ -2873,27 +2826,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1719565"
           },
           "children": []
-        },
-        {
-          "id": "SP_HAEMATOLOECHUS_BOMBYNAE_ZEDER_1800_YAMAGUTI_1971",
-          "name": "\"Haematoloechus bombynae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Haematoloechus",
-          "authorship": "\"(Zeder, 1800) Yamaguti, 1971\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1780363"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "haematoloechidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 170,
+  "genusCount": 12,
+  "speciesCount": 166,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

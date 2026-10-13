@@ -422,33 +422,6 @@
           "authorityIds": "col:6ZF8K,gbif:9716172,mycobank:816031"
         },
         {
-          "id": "STACHYBOTRYS_ECHINATUS",
-          "name": "Stachybotrys echinatus",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Stachybotrys",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Rivolta) G. Smith",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "2562027"
-            ],
-            "mycobank": [
-              "627004"
-            ],
-            "col": [
-              "6ZF8P"
-            ],
-            "checklistbank": "80383"
-          },
-          "uuid": "04b451c0-5000-573-890-267541172eda1d",
-          "authorityIds": "col:6ZF8P,gbif:2562027,mycobank:627004"
-        },
-        {
           "id": "STACHYBOTRYS_ELASTICAE",
           "name": "Stachybotrys elasticae",
           "rank": "SPECIES",
@@ -866,10 +839,12 @@
             "col": [
               "6ZF6X"
             ],
-            "checklistbank": "1696553"
+            "checklistbank": [
+              "1696553"
+            ]
           },
           "uuid": "39be294a-adca-567-953-5ba41d6fe8db45",
-          "authorityIds": "col:6ZF6X,gbif:10878911,mycobank:821445"
+          "authorityIds": "checklistbank:1696553,col:6ZF6X,gbif:10878911,mycobank:821445"
         },
         {
           "id": "STACHYBOTRYS_LIMONISPORUS",
@@ -2644,18 +2619,6 @@
             "checklistbank": "3424291"
           },
           "children": []
-        },
-        {
-          "id": "SP_STACHYBOTRYS_LEVISPORA",
-          "name": "Stachybotrys levispora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stachybotrys",
-          "sourceIds": {
-            "checklistbank": "1696553"
-          },
-          "children": []
         }
       ],
       "authorship": "Corda"
@@ -3921,32 +3884,6 @@
           "lineage": "Myrothecium",
           "sourceIds": {
             "checklistbank": "1712070"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYROTHECIUM_GRAMINEUM_LIBERT_1837",
-          "name": "Myrothecium gramineum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myrothecium",
-          "authorship": "Libert, 1837",
-          "sourceIds": {
-            "checklistbank": "226117"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYROTHECIUM_ATRUM_DESM_M_C_TULLOCH_1972",
-          "name": "Myrothecium atrum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myrothecium",
-          "authorship": "(Desm.) M.C. Tulloch, 1972",
-          "sourceIds": {
-            "checklistbank": "226123"
           },
           "children": []
         }
@@ -5636,12 +5573,18 @@
               "10724239"
             ],
             "mycobank": [
-              "824149"
+              "824149",
+              "847413"
             ],
-            "checklistbank": "2079475"
+            "checklistbank": [
+              "2079475"
+            ],
+            "col": [
+              "BRKS"
+            ]
           },
           "uuid": "e7816c87-8afa-5b8-b66-06f6cfe5bde452",
-          "authorityIds": "gbif:10724239,mycobank:824149"
+          "authorityIds": "checklistbank:2079475,col:BRKS,gbif:10724239,mycobank:824149,mycobank:847413"
         },
         {
           "id": "ALFARIA_DANDENONGENSIS",
@@ -5985,27 +5928,6 @@
           },
           "uuid": "509a4085-73f7-577-b78-a0868d0614af6f",
           "authorityIds": "col:BRL4,gbif:10791402,mycobank:553955"
-        },
-        {
-          "id": "SP_ALFARIA_DACTYLI_VALENZ_LOPEZ_CANO_GUARRO_STCHIGEL",
-          "name": "Alfaria dactyli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "alfaria",
-          "authorship": "Valenz.-Lopez, Cano, Guarro & Stchigel",
-          "children": [],
-          "uuid": "e6906786-806d-513-96d-35f149044165eb",
-          "sourceIds": {
-            "mycobank": [
-              "847413"
-            ],
-            "col": [
-              "BRKS"
-            ],
-            "checklistbank": "2079475"
-          },
-          "authorityIds": "col:BRKS,mycobank:847413"
         },
         {
           "id": "SP_ALFARIA_ELEGIAE",
@@ -7332,10 +7254,12 @@
             "col": [
               "52ZBN"
             ],
-            "checklistbank": "1860027"
+            "checklistbank": [
+              "1860027"
+            ]
           },
           "uuid": "a32d157e-b79e-5d5-a77-8321bd06c518e1",
-          "authorityIds": "col:52ZBN,gbif:9657732,mycobank:821467"
+          "authorityIds": "checklistbank:1860027,col:52ZBN,gbif:9657732,mycobank:821467"
         },
         {
           "id": "STRIATIBOTRYS_HUMICOLA",
@@ -7440,10 +7364,12 @@
             "col": [
               "52ZBR"
             ],
-            "checklistbank": "1860030"
+            "checklistbank": [
+              "1860030"
+            ]
           },
           "uuid": "da8be350-8f6c-5e9-b12-8aa7a3d4620558",
-          "authorityIds": "col:52ZBR,gbif:9712829,mycobank:821468"
+          "authorityIds": "checklistbank:1860030,col:52ZBR,gbif:9712829,mycobank:821468"
         },
         {
           "id": "STRIATIBOTRYS_YUCCAE",
@@ -7494,30 +7420,6 @@
           "lineage": "Striatibotrys",
           "sourceIds": {
             "checklistbank": "2012119"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STRIATIBOTRYS_RHABDOSPORA",
-          "name": "Striatibotrys rhabdospora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Striatibotrys",
-          "sourceIds": {
-            "checklistbank": "1860030"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STRIATIBOTRYS_EUCYLINDROSPORA",
-          "name": "Striatibotrys eucylindrospora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Striatibotrys",
-          "sourceIds": {
-            "checklistbank": "1860027"
           },
           "children": []
         }
@@ -10528,7 +10430,7 @@
   ],
   "authorship": "L. Lombard & P.W. Crous",
   "genusCount": 66,
-  "speciesCount": 456,
+  "speciesCount": 449,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

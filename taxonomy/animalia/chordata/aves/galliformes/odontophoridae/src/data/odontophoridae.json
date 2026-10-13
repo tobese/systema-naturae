@@ -111,7 +111,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "045c48ad-93e8-58b-a1a-1d7cb8409029c6"
+          "uuid": "045c48ad-93e8-58b-a1a-1d7cb8409029c6",
+          "authorship": "Brodkorb 1958",
+          "sourceIds": {
+            "checklistbank": "txn:105633"
+          }
         },
         {
           "id": "SP_CALLIPEPLA_DOUGLASII_VIGORS_1829",
@@ -297,7 +301,8 @@
           "sourceIds": {
             "checklistbank": "ott6151724"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shufeldt 1915"
         },
         {
           "id": "SP_COLINUS_SUILIUM",
@@ -309,7 +314,8 @@
           "sourceIds": {
             "checklistbank": "ott6151727"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1959"
         },
         {
           "id": "SP_COLINUS_VIRGINIANUS",
@@ -320,6 +326,19 @@
           "lineage": "Colinus",
           "sourceIds": {
             "checklistbank": "3036673"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COLINUS_HIBBARDI_WETMORE_1944",
+          "name": "Colinus hibbardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colinus",
+          "authorship": "Wetmore 1944",
+          "sourceIds": {
+            "checklistbank": "txn:432125"
           },
           "children": []
         }
@@ -396,6 +415,32 @@
           "lineage": "Cyrtonyx",
           "sourceIds": {
             "checklistbank": "ott7659739"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTONYX_TEDFORDI_MILLER_1952",
+          "name": "Cyrtonyx tedfordi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtonyx",
+          "authorship": "Miller 1952",
+          "sourceIds": {
+            "checklistbank": "txn:290252"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTONYX_COOKI_WETMORE_1934",
+          "name": "Cyrtonyx cooki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtonyx",
+          "authorship": "Wetmore 1934",
+          "sourceIds": {
+            "checklistbank": "txn:432127"
           },
           "children": []
         }
@@ -560,7 +605,8 @@
           "uuid": "4177f440-28c7-5ac-98d-f266bf39aaa49f",
           "sourceIds": {
             "checklistbank": "ott3596097"
-          }
+          },
+          "authorship": "Weigel 1963"
         }
       ]
     },
@@ -1150,7 +1196,8 @@
             ],
             "checklistbank": "ott676779"
           },
-          "authorityIds": "col:7569D,itis:175893,wikidata:Q594810"
+          "authorityIds": "col:7569D,itis:175893,wikidata:Q594810",
+          "authorship": "(Douglas 1829)"
         },
         {
           "id": "SP_OREORTYX_SP",
@@ -1232,9 +1279,11 @@
             ],
             "col": [
               "6WLNF"
-            ]
+            ],
+            "checklistbank": "txn:365974"
           },
-          "authorityIds": "col:6WLNF,itis:176048"
+          "authorityIds": "col:6WLNF,itis:176048",
+          "authorship": "(Gmelin 1789)"
         },
         {
           "id": "SP_PTILOPACHUS_NAHANI_A_J_C_DUBOIS_1905",
@@ -1252,7 +1301,8 @@
             ],
             "itis": [
               "1193682"
-            ]
+            ],
+            "checklistbank": "Ptilopachus_nahani"
           },
           "authorityIds": "col:9MC48,itis:1193682",
           "commonName": "Nahan's Partridge"
@@ -1425,10 +1475,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "odontophoridae"
+    },
+    {
+      "id": "GENUS_MIORTYX",
+      "name": "Miortyx",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIORTYX_TERES_MILLER_1944",
+          "name": "Miortyx teres",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Miortyx",
+          "authorship": "Miller 1944",
+          "sourceIds": {
+            "checklistbank": "txn:290229"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MIORTYX_ALDENI_HOWARD_1966",
+          "name": "Miortyx aldeni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Miortyx",
+          "authorship": "Howard 1966",
+          "sourceIds": {
+            "checklistbank": "txn:381207"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "odontophoridae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 60,
+  "genusCount": 16,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

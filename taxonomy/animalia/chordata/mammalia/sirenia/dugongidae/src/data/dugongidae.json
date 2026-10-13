@@ -25,9 +25,11 @@
             "col": [
               "37ZY2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:220227"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:220227"
+            ]
           },
-          "authorityIds": "col:37ZY2,itis:180679",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:220227,col:37ZY2,itis:180679",
           "commonName": "Dugong"
         }
       ],
@@ -56,9 +58,11 @@
             "col": [
               "3N6WP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:255025"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:255025"
+            ]
           },
-          "authorityIds": "col:3N6WP,itis:180681",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:255025,col:3N6WP,itis:180681",
           "commonName": "Steller's Sea Cow"
         },
         {
@@ -72,8 +76,11 @@
           "uuid": "be65799f-ac88-598-83a-bb38e21431bc13",
           "authorship": "Domning, 1978",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458354"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1458354"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458354"
         },
         {
           "id": "SP_HYDRODAMALIS_SPISSA",
@@ -105,8 +112,11 @@
           "uuid": "c0d8029d-4fde-5be-bba-24273892097384",
           "authorship": "Takahashi, Domning & Saito, 1986",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458353"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1458353"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458353"
         },
         {
           "id": "SP_DUSISIREN_TAKASATENSIS",
@@ -116,7 +126,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Dusisiren",
-          "uuid": "26858022-cdaf-582-80d-665e2a680cb65d"
+          "uuid": "26858022-cdaf-582-80d-665e2a680cb65d",
+          "authorship": "Kobayashi et al. 1995",
+          "sourceIds": {
+            "checklistbank": "txn:170242"
+          }
         },
         {
           "id": "SP_DUSISIREN_REINHARTI_DOMNING_1978",
@@ -163,7 +177,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Kutchisiren",
-          "uuid": "7a69c949-496e-596-bda-a90675904f9a64"
+          "uuid": "7a69c949-496e-596-bda-a90675904f9a64",
+          "authorship": "Bajpai et al. 2010",
+          "sourceIds": {
+            "checklistbank": "txn:170320"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -185,8 +203,11 @@
           "uuid": "5f5ab7db-4070-561-80f-cb3c39d08942f7",
           "authorship": "von Koenigswald, 1952",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458391"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1458391"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458391"
         },
         {
           "id": "SP_INDOSIREN_KOENIGSWALDI",
@@ -199,8 +220,24 @@
           "uuid": "949b0faf-7ec1-59f-88d-c2f8f2b6c1691a",
           "authorship": "Sahni & Mishra, 1975",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458392"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1458392"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458392"
+        },
+        {
+          "id": "SP_INDOSIREN_KOENINGSWALDI_SAHNI_AND_MISHRA_1975",
+          "name": "Indosiren koeningswaldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Indosiren",
+          "authorship": "Sahni and Mishra 1975",
+          "sourceIds": {
+            "checklistbank": "txn:65056"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -340,6 +377,45 @@
           },
           "children": [],
           "uuid": "002d88ff-52f1-5fc-8ca-66f24fa5545d24"
+        },
+        {
+          "id": "SP_EOTHEROIDES_WAGHAPADARENSIS_DAS_AND_BASU_1994",
+          "name": "Eotheroides waghapadarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eotheroides",
+          "authorship": "Das and Basu 1994",
+          "sourceIds": {
+            "checklistbank": "txn:145133"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOTHEROIDES_CLAVIGERUM_ZALMOUT_AND_GINGERICH_2012",
+          "name": "Eotheroides clavigerum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eotheroides",
+          "authorship": "Zalmout and Gingerich 2012",
+          "sourceIds": {
+            "checklistbank": "txn:260242"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOTHEROIDES_SANDERSI_ZALMOUT_AND_GINGERICH_2012",
+          "name": "Eotheroides sandersi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eotheroides",
+          "authorship": "Zalmout and Gingerich 2012",
+          "sourceIds": {
+            "checklistbank": "txn:260243"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -405,6 +481,19 @@
           },
           "children": [],
           "uuid": "c9d54b82-f9b8-5ab-808-2582fe7ca433aa"
+        },
+        {
+          "id": "SP_HALITHERIUM_ANTIQUUM_LEIDY_1856",
+          "name": "Halitherium antiquum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halitherium",
+          "authorship": "(Leidy 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:94803"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -554,6 +643,32 @@
           },
           "children": [],
           "uuid": "6e8a6984-1ad1-529-b04-01b626d5bde58f"
+        },
+        {
+          "id": "SP_METAXYTHERIUM_RIVEROI_VARONA_1972",
+          "name": "Metaxytherium riveroi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metaxytherium",
+          "authorship": "Varona 1972",
+          "sourceIds": {
+            "checklistbank": "txn:65000"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_METAXYTHERIUM_ALBIFONTANUM_VELEZ_JUARBE_AND_DOMNING_2014",
+          "name": "Metaxytherium albifontanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Metaxytherium",
+          "authorship": "Velez-Juarbe and Domning 2014",
+          "sourceIds": {
+            "checklistbank": "txn:289540"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -577,6 +692,32 @@
           },
           "children": [],
           "uuid": "afd56466-2b7c-5c8-afd-bd1fb320c04b06"
+        },
+        {
+          "id": "SP_PROTOTHERIUM_INTERMEDIUM_BIZZOTTO_1983",
+          "name": "Prototherium intermedium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prototherium",
+          "authorship": "Bizzotto 1983",
+          "sourceIds": {
+            "checklistbank": "txn:53108"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOTHERIUM_AUSETANUM_BALAGUER_AND_ALBA_2016",
+          "name": "Prototherium ausetanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prototherium",
+          "authorship": "Balaguer and Alba 2016",
+          "sourceIds": {
+            "checklistbank": "txn:336957"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -826,6 +967,19 @@
           },
           "children": [],
           "uuid": "13c4079c-992a-56d-b4a-9e3be2a7d4ab29"
+        },
+        {
+          "id": "SP_RYTIODUS_HEALI_DOMNING_2011",
+          "name": "Rytiodus heali",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rytiodus",
+          "authorship": "Domning 2011",
+          "sourceIds": {
+            "checklistbank": "txn:213626"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -944,20 +1098,20 @@
       "lineage": "dugongidae"
     },
     {
-      "id": "GENUS_DUGONG",
-      "name": "\"Dugong",
+      "id": "GENUS_HALIGYNA",
+      "name": "Haligyna",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DUGONG_DUGON_M_LLER_1776_PALMER_1895",
-          "name": "\"Dugong dugon\"",
+          "id": "SP_HALIGYNA_BOREALIS_GMELIN_1788",
+          "name": "Haligyna borealis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Dugong",
-          "authorship": "\"(Müller, 1776) Palmer, 1895\"",
+          "lineage": "Haligyna",
+          "authorship": "(Gmelin 1788)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:220227"
+            "checklistbank": "txn:86920"
           },
           "children": []
         }
@@ -966,33 +1120,77 @@
       "lineage": "dugongidae"
     },
     {
-      "id": "GENUS_HYDRODAMALIS",
-      "name": "\"Hydrodamalis",
+      "id": "GENUS_PRISCOSIREN",
+      "name": "Priscosiren",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HYDRODAMALIS_GIGAS_ZIMMERMANN_1780_PALMER_1895",
-          "name": "\"Hydrodamalis gigas\"",
+          "id": "SP_PRISCOSIREN_ATLANTICA_VELEZ_JUARBE_AND_DOMNING_2014",
+          "name": "Priscosiren atlantica",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Hydrodamalis",
-          "authorship": "\"(Zimmermann, 1780) Palmer, 1895\"",
+          "lineage": "Priscosiren",
+          "authorship": "Velez-Juarbe and Domning 2014",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:255025"
+            "checklistbank": "txn:299759"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_CALLISTOSIREN",
+      "name": "Callistosiren",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLISTOSIREN_BORIQUENSIS_VELEZ_JUARBE_AND_DOMNING_2015",
+          "name": "Callistosiren boriquensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callistosiren",
+          "authorship": "Velez-Juarbe and Domning 2015",
+          "sourceIds": {
+            "checklistbank": "txn:313795"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_KAUPITHERIUM",
+      "name": "Kaupitherium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KAUPITHERIUM_BRONNI_KRAUSS_1858",
+          "name": "Kaupitherium bronni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kaupitherium",
+          "authorship": "(Krauss 1858)",
+          "sourceIds": {
+            "checklistbank": "txn:86751"
           },
           "children": []
         },
         {
-          "id": "SP_HYDRODAMALIS_CUESTAE_DOMNING_1978",
-          "name": "\"Hydrodamalis cuestae\"",
+          "id": "SP_KAUPITHERIUM_GRUELLI_VOSS_AND_HAMPE_2017",
+          "name": "Kaupitherium gruelli",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Hydrodamalis",
-          "authorship": "\"Domning, 1978\"",
+          "lineage": "Kaupitherium",
+          "authorship": "Voss and Hampe 2017",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458354"
+            "checklistbank": "txn:350597"
           },
           "children": []
         }
@@ -1001,20 +1199,20 @@
       "lineage": "dugongidae"
     },
     {
-      "id": "GENUS_DUSISIREN",
-      "name": "\"Dusisiren",
+      "id": "GENUS_LENTIARENIUM",
+      "name": "Lentiarenium",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DUSISIREN_DEWANA_TAKAHASHI_DOMNING_SAITO_1986",
-          "name": "\"Dusisiren dewana\"",
+          "id": "SP_LENTIARENIUM_CHRISTOLII_FITZINGER_1842",
+          "name": "Lentiarenium christolii",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Dusisiren",
-          "authorship": "\"Takahashi, Domning & Saito, 1986\"",
+          "lineage": "Lentiarenium",
+          "authorship": "(Fitzinger 1842)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458353"
+            "checklistbank": "txn:64994"
           },
           "children": []
         }
@@ -1023,33 +1221,130 @@
       "lineage": "dugongidae"
     },
     {
-      "id": "GENUS_INDOSIREN",
-      "name": "\"Indosiren",
+      "id": "GENUS_ITALOSIREN",
+      "name": "Italosiren",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_INDOSIREN_JAVANENSIS_VON_KOENIGSWALD_1952",
-          "name": "\"Indosiren javanensis\"",
+          "id": "SP_ITALOSIREN_BELLUNENSIS_DE_ZIGNO_1875",
+          "name": "Italosiren bellunensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Indosiren",
-          "authorship": "\"von Koenigswald, 1952\"",
+          "lineage": "Italosiren",
+          "authorship": "(de Zigno 1875)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458391"
+            "checklistbank": "txn:65054"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_CULEBRATHERIUM",
+      "name": "Culebratherium",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_INDOSIREN_KOENIGSWALDI_SAHNI_MISHRA_1975",
-          "name": "\"Indosiren koenigswaldi\"",
+          "id": "SP_CULEBRATHERIUM_ALEMANI_VELEZ_JUARBE_AND_WOOD_2018",
+          "name": "Culebratherium alemani",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Indosiren",
-          "authorship": "\"Sahni & Mishra, 1975\"",
+          "lineage": "Culebratherium",
+          "authorship": "Velez-Juarbe and Wood 2018",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458392"
+            "checklistbank": "txn:381689"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_NOROSIREN",
+      "name": "Norosiren",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NOROSIREN_ZAZAVAVINDRANO_SAMONDS_ET_AL_2019",
+          "name": "Norosiren zazavavindrano",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Norosiren",
+          "authorship": "Samonds et al. 2019",
+          "sourceIds": {
+            "checklistbank": "txn:385120"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_STEGOSIREN",
+      "name": "Stegosiren",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STEGOSIREN_MACEI_DOMNING_AND_BEATTY_2019",
+          "name": "Stegosiren macei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stegosiren",
+          "authorship": "Domning and Beatty 2019",
+          "sourceIds": {
+            "checklistbank": "txn:396203"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_SALWASIREN",
+      "name": "Salwasiren",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SALWASIREN_QATARENSIS_PYENSON_ET_AL_2025",
+          "name": "Salwasiren qatarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Salwasiren",
+          "authorship": "Pyenson et al. 2025",
+          "sourceIds": {
+            "checklistbank": "txn:516831"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dugongidae"
+    },
+    {
+      "id": "GENUS_KHARISIREN",
+      "name": "Kharisiren",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KHARISIREN_CRISTATA_SAHA_ET_AL_2026",
+          "name": "Kharisiren cristata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kharisiren",
+          "authorship": "Saha et al. 2026",
+          "sourceIds": {
+            "checklistbank": "txn:518817"
           },
           "children": []
         }
@@ -1058,11 +1353,11 @@
       "lineage": "dugongidae"
     }
   ],
-  "speciesCount": 57,
+  "speciesCount": 73,
   "appSlug": "dugongidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 29,
+  "genusCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

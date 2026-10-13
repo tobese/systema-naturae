@@ -164,10 +164,12 @@
             ],
             "col": [
               "7ZXYG"
-            ]
+            ],
+            "checklistbank": "txn:428696"
           },
           "uuid": "42be17d1-71d5-5e1-b75-526aff7b5377ba",
-          "authorityIds": "col:7ZXYG,gbif:8355460"
+          "authorityIds": "col:7ZXYG,gbif:8355460",
+          "authorship": "Cushman  and Todd 1949"
         },
         {
           "id": "ALLOMORPHINA_CRETACEA",
@@ -455,7 +457,8 @@
             "checklistbank": "ott4021660"
           },
           "uuid": "8a6774a1-88af-51f-8d3-40dc8e4f3dd3ad",
-          "authorityIds": "col:BXHZ,gbif:6535726"
+          "authorityIds": "col:BXHZ,gbif:6535726",
+          "authorship": "Cushman  and Todd 1949"
         },
         {
           "id": "ALLOMORPHINA_PALEOCENICA",
@@ -634,6 +637,19 @@
           },
           "uuid": "bdaa5104-794f-551-ba5-bcc23c51596110",
           "authorityIds": "col:7ZXZ7,gbif:10617748"
+        },
+        {
+          "id": "SP_ALLOMORPHINA_CONTRARIA_REUSS_1851",
+          "name": "Allomorphina contraria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allomorphina",
+          "authorship": "(Reuss 1851)",
+          "sourceIds": {
+            "checklistbank": "txn:473875"
+          },
+          "children": []
         }
       ]
     },
@@ -947,10 +963,12 @@
             ],
             "col": [
               "826V6"
-            ]
+            ],
+            "checklistbank": "txn:355098"
           },
           "uuid": "2fde8780-47b9-500-a41-a0f932095dc7d4",
-          "authorityIds": "col:826V6,gbif:7408828"
+          "authorityIds": "col:826V6,gbif:7408828",
+          "authorship": "(Sherborn and Chapman 1886)"
         },
         {
           "id": "CHILOSTOMELLOIDES_PARALLELUS",
@@ -4780,10 +4798,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chilostomellidae"
+    },
+    {
+      "id": "GENUS_SPHAEROIDINA",
+      "name": "Sphaeroidina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAEROIDINA_BULLOIDES_D_ORBIGNY_1826",
+          "name": "Sphaeroidina bulloides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeroidina",
+          "authorship": "d'Orbigny 1826",
+          "sourceIds": {
+            "checklistbank": "txn:113305"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHAEROIDINA_GREDALENSIS_COOK_1959",
+          "name": "Sphaeroidina gredalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeroidina",
+          "authorship": "Cook 1959",
+          "sourceIds": {
+            "checklistbank": "txn:355103"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chilostomellidae"
+    },
+    {
+      "id": "GENUS_PULLENIA",
+      "name": "Pullenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PULLENIA_EOCENICA_CUSHMAN_AND_SIEGFUS_1939",
+          "name": "Pullenia eocenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pullenia",
+          "authorship": "Cushman and Siegfus 1939",
+          "sourceIds": {
+            "checklistbank": "txn:355100"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chilostomellidae"
     }
   ],
-  "genusCount": 31,
-  "speciesCount": 255,
+  "genusCount": 33,
+  "speciesCount": 259,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

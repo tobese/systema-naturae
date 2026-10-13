@@ -362,20 +362,6 @@
           "authorityIds": "col:8ZDXN"
         },
         {
-          "id": "SP_HAEMATOTREPHUS_FASCIATUM_STOSSICH_1902",
-          "name": "Haematotrephus fasciatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Haematotrephus",
-          "authorship": "Stossich, 1902",
-          "sourceIds": {
-            "checklistbank": "241766"
-          },
-          "children": [],
-          "uuid": "a9fc67d9-f269-5ba-939-a661dc82a7f38e"
-        },
-        {
           "id": "SP_HAEMATOTREPHUS_LANCEOLATUM_WEDL_1858",
           "name": "Haematotrephus lanceolatum",
           "rank": "SPECIES",
@@ -617,9 +603,11 @@
             "itis": [
               "56172"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1777100"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1777100"
+            ]
           },
-          "authorityIds": "col:CN38W,itis:56172"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1777100,col:CN38W,itis:56172"
         },
         {
           "id": "SP_TYPHLOCOELUM_CUCUMERINUM_RUDOLPHI_1809_STOSSICH_1903",
@@ -1193,19 +1181,6 @@
           "authorship": "Harrah, 1921",
           "sourceIds": {
             "checklistbank": "959349"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CYCLOCOELUM_DOLLFUSI_TIMON_DAVID_1950",
-          "name": "Cyclocoelum dollfusi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cyclocoelum",
-          "authorship": "Timon-David, 1950",
-          "sourceIds": {
-            "checklistbank": "1044399"
           },
           "children": []
         },
@@ -3566,20 +3541,6 @@
           "uuid": "6ad54fab-ca83-532-b04-b21ca398fe5cfe"
         },
         {
-          "id": "SP_SELFCOELUM_BRASILIANUM_STOSSICH_1903",
-          "name": "Selfcoelum brasilianum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Selfcoelum",
-          "authorship": "(Stossich, 1903)",
-          "sourceIds": {
-            "checklistbank": "221499"
-          },
-          "children": [],
-          "uuid": "eb3cddfc-f4f8-566-a7e-36df4aa180f2a1"
-        },
-        {
           "id": "SP_SELFCOELUM_ALLAHABADI_KHAN_1935_DRONEN_BLEND_2015",
           "name": "Selfcoelum allahabadi",
           "rank": "SPECIES",
@@ -5629,32 +5590,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyclocoelidae"
-    },
-    {
-      "id": "GENUS_TYPHLOCOELUM",
-      "name": "\"Typhlocoelum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TYPHLOCOELUM_CYMBIUM_DIESING_1850_VAINUTIS_ANDREEV_VORONOVA_IN_VAINUTIS_VORONOVA_ANDREEV_SHCHELKANOV_2024",
-          "name": "\"Typhlocoelum cymbium\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Typhlocoelum",
-          "authorship": "\"(Diesing, 1850) Vainutis, Andreev & Voronova in Vainutis, Voronova, Andreev & Shchelkanov, 2024\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1777100"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cyclocoelidae"
     }
   ],
-  "genusCount": 41,
-  "speciesCount": 337,
+  "genusCount": 40,
+  "speciesCount": 333,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

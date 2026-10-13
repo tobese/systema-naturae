@@ -538,19 +538,6 @@
           "uuid": "5f0cf85d-a4ab-576-99c-03ef56e42e6c01"
         },
         {
-          "id": "SP_THECIDEA_MEDITERRANEA_RISSO_1826",
-          "name": "Thecidea mediterranea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thecidea",
-          "authorship": "Risso, 1826",
-          "sourceIds": {
-            "checklistbank": "844563"
-          },
-          "children": []
-        },
-        {
           "id": "SP_THECIDEA_ESSENSIS",
           "name": "Thecidea essensis",
           "rank": "SPECIES",
@@ -572,7 +559,8 @@
           "sourceIds": {
             "checklistbank": "ott6334578"
           },
-          "children": []
+          "children": [],
+          "authorship": "(von Schlotheim 1813)"
         },
         {
           "id": "SP_THECIDEA_RHAETICA",
@@ -657,6 +645,19 @@
             "checklistbank": "ott7923117"
           },
           "children": []
+        },
+        {
+          "id": "SP_THECIDEA_MOOREI_DAVIDSON_1851",
+          "name": "Thecidea moorei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thecidea",
+          "authorship": "Davidson 1851",
+          "sourceIds": {
+            "checklistbank": "txn:265037"
+          },
+          "children": []
         }
       ]
     },
@@ -677,7 +678,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "64e05786-3d34-5b7-a78-afd0983d2eadc1"
+          "uuid": "64e05786-3d34-5b7-a78-afd0983d2eadc1",
+          "authorship": "(Roemer 1839)",
+          "sourceIds": {
+            "checklistbank": "txn:297909"
+          }
         }
       ]
     },
@@ -716,6 +721,19 @@
             ]
           },
           "authorityIds": "col:CBV8V"
+        },
+        {
+          "id": "SP_PRAELACAZELLA_BALTOVIENSIS_BARCZYK_1970",
+          "name": "Praelacazella baltoviensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Praelacazella",
+          "authorship": "Barczyk 1970",
+          "sourceIds": {
+            "checklistbank": "txn:483351"
+          },
+          "children": []
         }
       ]
     },
@@ -761,6 +779,19 @@
             ]
           },
           "authorityIds": "col:V9XW4"
+        },
+        {
+          "id": "SP_NEOTHECIDELLA_ULMENSIS_QUENSTEDT_1858",
+          "name": "Neothecidella ulmensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neothecidella",
+          "authorship": "(Quenstedt 1858)",
+          "sourceIds": {
+            "checklistbank": "txn:483349"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -967,10 +998,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thecideidae"
+    },
+    {
+      "id": "GENUS_VERMICULOTHECIDEA",
+      "name": "Vermiculothecidea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VERMICULOTHECIDEA_VERMICULARIS_SCHLOTHEIM_1813",
+          "name": "Vermiculothecidea vermicularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vermiculothecidea",
+          "authorship": "(Schlotheim 1813)",
+          "sourceIds": {
+            "checklistbank": "txn:483233"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecideidae"
+    },
+    {
+      "id": "GENUS_MIMIKONSTANTIA",
+      "name": "Mimikonstantia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIMIKONSTANTIA_SCULPTA_BAKER_AND_ELSTON_1984",
+          "name": "Mimikonstantia sculpta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mimikonstantia",
+          "authorship": "Baker and Elston 1984",
+          "sourceIds": {
+            "checklistbank": "txn:483633"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecideidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 56,
+  "genusCount": 19,
+  "speciesCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

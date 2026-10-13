@@ -1015,9 +1015,11 @@
             "itis": [
               "56024"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1794798"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1794798"
+            ]
           },
-          "authorityIds": "col:CVP6V,itis:56024",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1794798,col:CVP6V,itis:56024",
           "authorship": "(Faust & Hoffman, 1934) Basch & Sturrock, 1969"
         },
         {
@@ -1103,6 +1105,18 @@
             ]
           },
           "authorityIds": "col:8VJV9"
+        },
+        {
+          "id": "SP_PSILOTORNUS_CONFERTUS",
+          "name": "Psilotornus confertus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilotornus",
+          "sourceIds": {
+            "checklistbank": "391019"
+          },
+          "children": []
         }
       ]
     },
@@ -2914,31 +2928,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psilostomidae"
-    },
-    {
-      "id": "GENUS_RIBEIROIA",
-      "name": "\"Ribeiroia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_RIBEIROIA_MARINI_FAUST_HOFFMAN_1934_BASCH_STURROCK_1969",
-          "name": "\"Ribeiroia marini\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ribeiroia",
-          "authorship": "\"(Faust & Hoffman, 1934) Basch & Sturrock, 1969\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1794798"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "psilostomidae"
     }
   ],
-  "genusCount": 32,
+  "genusCount": 31,
   "speciesCount": 160,
   "sourceIds": {
     "gbif": {

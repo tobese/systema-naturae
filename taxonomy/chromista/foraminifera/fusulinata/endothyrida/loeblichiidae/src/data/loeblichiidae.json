@@ -1197,10 +1197,13 @@
           "lineage": "Loeblichia",
           "authorship": "Vdovenko, 1972",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1298048"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1298048"
+            ]
           },
           "children": [],
-          "uuid": "03487723-bb42-599-8c3-26e3d5334f59d5"
+          "uuid": "03487723-bb42-599-8c3-26e3d5334f59d5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1298048"
         },
         {
           "id": "SP_LOEBLICHIA_PROCERA_VDOVENKO_1972",
@@ -1215,6 +1218,19 @@
           },
           "children": [],
           "uuid": "720edb3b-abd1-5f5-a84-6133e45ea0b894"
+        },
+        {
+          "id": "SP_LOEBLICHIA_HETERORHABDA_PLAYFORD_AND_WICANDER_1988",
+          "name": "Loeblichia heterorhabda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loeblichia",
+          "authorship": "Playford and Wicander 1988",
+          "sourceIds": {
+            "checklistbank": "txn:365315"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2390,28 +2406,6 @@
       "lineage": "loeblichiidae"
     },
     {
-      "id": "GENUS_LOEBLICHIA",
-      "name": "\"Loeblichia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LOEBLICHIA_URBANELLA_VDOVENKO_1972",
-          "name": "\"Loeblichia (Urbanella)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Loeblichia",
-          "authorship": "\"Vdovenko, 1972\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1298048"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "loeblichiidae"
-    },
-    {
       "id": "GENUS_SPINOENDOTHYRA",
       "name": "\"Spinoendothyra",
       "rank": "GENUS",
@@ -2460,13 +2454,14 @@
   "appSlug": "loeblichiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",
-  "genusCount": 23,
+  "genusCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
       "phylumKey": 8376456,
       "orderKey": 11161246,
       "familyKey": 8270089
-    }
+    },
+    "checklistbank": "txn:147611"
   }
 }

@@ -198,18 +198,6 @@
           "children": []
         },
         {
-          "id": "SP_DONDICE_TRAINITOI",
-          "name": "Dondice trainitoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dondice",
-          "sourceIds": {
-            "checklistbank": "1037798"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DONDICE_PARGUERENSIS",
           "name": "Dondice parguerensis",
           "rank": "SPECIES",
@@ -887,9 +875,11 @@
             "col": [
               "4H6LJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225502"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225502"
+            ]
           },
-          "authorityIds": "col:4H6LJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225502,col:4H6LJ",
           "authorship": "(Baba, 1949)"
         },
         {
@@ -1125,18 +1115,6 @@
           "children": []
         },
         {
-          "id": "SP_PHYLLODESMIUM_PARANGATUM",
-          "name": "Phyllodesmium parangatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phyllodesmium",
-          "sourceIds": {
-            "checklistbank": "349051"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PHYLLODESMIUM_COLEMANI",
           "name": "Phyllodesmium colemani",
           "rank": "SPECIES",
@@ -1235,9 +1213,11 @@
             "col": [
               "3L2BH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:367883"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:367883"
+            ]
           },
-          "authorityIds": "col:3L2BH,itis:78699",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:367883,col:3L2BH,itis:78699",
           "authorship": "(Eschscholtz, 1831)"
         },
         {
@@ -1275,9 +1255,11 @@
             "col": [
               "3L2BK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:877759"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:877759"
+            ]
           },
-          "authorityIds": "col:3L2BK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:877759,col:3L2BK",
           "authorship": "(J. G. Cooper, 1863)"
         }
       ]
@@ -1398,20 +1380,6 @@
             "checklistbank": "1647499"
           },
           "authorityIds": "col:V5JN5"
-        },
-        {
-          "id": "SP_NANUCA_SEBASTIANI_MARCUS_1957",
-          "name": "Nanuca sebastiani",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nanuca",
-          "authorship": "Marcus, 1957",
-          "sourceIds": {
-            "checklistbank": "105542"
-          },
-          "children": [],
-          "uuid": "1a67d9ab-b8e0-55a-a3f-cebff2d9f6dce1"
         },
         {
           "id": "SP_NANUCA_SEBASTIANA_SIC",
@@ -1574,28 +1542,6 @@
       "lineage": "myrrhinidae"
     },
     {
-      "id": "GENUS_PHIDIANA",
-      "name": "Phidiana",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHIDIANA_TENUIS_ELIOT_1905",
-          "name": "Phidiana tenuis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phidiana",
-          "authorship": "Eliot, 1905",
-          "sourceIds": {
-            "checklistbank": "695758"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myrrhinidae"
-    },
-    {
       "id": "GENUS_CALORIA",
       "name": "Caloria",
       "rank": "GENUS",
@@ -1660,67 +1606,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myrrhinidae"
-    },
-    {
-      "id": "GENUS_PHYLLODESMIUM",
-      "name": "\"Phyllodesmium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHYLLODESMIUM_SERRATUM_BABA_1949",
-          "name": "\"Phyllodesmium serratum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phyllodesmium",
-          "authorship": "\"(Baba, 1949)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225502"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myrrhinidae"
-    },
-    {
-      "id": "GENUS_HERMISSENDA",
-      "name": "\"Hermissenda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HERMISSENDA_CRASSICORNIS_ESCHSCHOLTZ_1831",
-          "name": "\"Hermissenda crassicornis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hermissenda",
-          "authorship": "\"(Eschscholtz, 1831)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:367883"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HERMISSENDA_OPALESCENS_J_G_COOPER_1863",
-          "name": "\"Hermissenda opalescens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hermissenda",
-          "authorship": "\"(J. G. Cooper, 1863)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:877759"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myrrhinidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 97,
+  "genusCount": 12,
+  "speciesCount": 90,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

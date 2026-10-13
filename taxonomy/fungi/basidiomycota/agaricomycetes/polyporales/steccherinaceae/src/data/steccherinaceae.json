@@ -1973,19 +1973,6 @@
           "children": []
         },
         {
-          "id": "SP_ANTRODIELLA_OVERHOLTSII_RYVARDEN_GILB_1984",
-          "name": "Antrodiella overholtsii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Antrodiella",
-          "authorship": "Ryvarden & Gilb., 1984",
-          "sourceIds": {
-            "checklistbank": "462703"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ANTRODIELLA_DURACINA_PAT_I_LINDBLAD_RYVARDEN_1999",
           "name": "Antrodiella duracina",
           "rank": "SPECIES",
@@ -4791,10 +4778,12 @@
             "col": [
               "B33K8"
             ],
-            "checklistbank": "2770583"
+            "checklistbank": [
+              "2770583"
+            ]
           },
           "uuid": "18eb2bb4-9fe8-54e-bea-4d082a00b5589e",
-          "authorityIds": "col:B33K8,gbif:12219042,mycobank:838259"
+          "authorityIds": "checklistbank:2770583,col:B33K8,gbif:12219042,mycobank:838259"
         },
         {
           "id": "STECCHERINUM_SUBCRINALE",
@@ -5541,9 +5530,21 @@
           "lineage": "Steccherinum",
           "authorship": "(F. Wu, P. Du & X.M. Tian) Z.B. Liu, Y.C. Dai & Jing Si, 2023",
           "sourceIds": {
-            "checklistbank": "2686314"
+            "checklistbank": [
+              "2686314"
+            ],
+            "gbif": [
+              "10759465"
+            ],
+            "mycobank": [
+              "833784"
+            ],
+            "col": [
+              "9Z9JV"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:2686314,col:9Z9JV,gbif:10759465,mycobank:833784"
         },
         {
           "id": "SP_STECCHERINUM_AUSTROSINENSE_F_WU_P_DU_X_M_TIAN_Z_B_LIU_Y_C_DAI_JING_SI_2023",
@@ -5554,9 +5555,21 @@
           "lineage": "Steccherinum",
           "authorship": "(F. Wu, P. Du & X.M. Tian) Z.B. Liu, Y.C. Dai & Jing Si, 2023",
           "sourceIds": {
-            "checklistbank": "2770582"
+            "checklistbank": [
+              "2770582"
+            ],
+            "gbif": [
+              "10867954"
+            ],
+            "mycobank": [
+              "834502"
+            ],
+            "col": [
+              "9Z9JT"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:2770582,col:9Z9JT,gbif:10867954,mycobank:834502"
         },
         {
           "id": "SP_STECCHERINUM_FILIFERUM_YURCHENKO_K_H_LARSS_2023",
@@ -7172,33 +7185,6 @@
           "authorityIds": "col:6NH38,gbif:5245979,mycobank:344126"
         },
         {
-          "id": "JUNGHUHNIA_AUSTROSINENSIS",
-          "name": "Junghuhnia austrosinensis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Junghuhnia",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "F. Wu, P. Du & X.M. Tian",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "10867954"
-            ],
-            "mycobank": [
-              "834502"
-            ],
-            "col": [
-              "9Z9JT"
-            ],
-            "checklistbank": "2770582"
-          },
-          "uuid": "91100342-7637-518-89c-da7e1afd6161f4",
-          "authorityIds": "col:9Z9JT,gbif:10867954,mycobank:834502"
-        },
-        {
           "id": "JUNGHUHNIA_CHLAMYDOSPORA",
           "name": "Junghuhnia chlamydospora",
           "rank": "SPECIES",
@@ -7583,33 +7569,6 @@
           },
           "uuid": "b504883c-485f-5cf-9cf-945e3a57acf791",
           "authorityIds": "col:B2P6X,gbif:11378388,mycobank:557660"
-        },
-        {
-          "id": "JUNGHUHNIA_NANDINAE",
-          "name": "Junghuhnia nandinae",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Junghuhnia",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "F. Wu, P. Du & X.M. Tian",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "10759465"
-            ],
-            "mycobank": [
-              "833784"
-            ],
-            "col": [
-              "9Z9JV"
-            ],
-            "checklistbank": "2686314"
-          },
-          "uuid": "b4b8f3f7-5c4b-51c-974-a805526a75d0e4",
-          "authorityIds": "col:9Z9JV,gbif:10759465,mycobank:833784"
         },
         {
           "id": "JUNGHUHNIA_NEOTROPICA",
@@ -8207,18 +8166,6 @@
           "lineage": "Junghuhnia",
           "sourceIds": {
             "checklistbank": "1130351"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_JUNGHUHNIA_SUBCOLLABENS",
-          "name": "Junghuhnia subcollabens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Junghuhnia",
-          "sourceIds": {
-            "checklistbank": "2770583"
           },
           "children": []
         }
@@ -12149,7 +12096,7 @@
   ],
   "authorship": "Parmasto",
   "genusCount": 74,
-  "speciesCount": 571,
+  "speciesCount": 567,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

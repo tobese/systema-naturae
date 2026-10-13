@@ -20,7 +20,8 @@
           "sourceIds": {
             "col": [
               "BBWC3"
-            ]
+            ],
+            "checklistbank": "txn:460121"
           },
           "authorityIds": "col:BBWC3",
           "children": []
@@ -130,7 +131,8 @@
           "sourceIds": {
             "col": [
               "BBWBZ"
-            ]
+            ],
+            "checklistbank": "txn:409691"
           },
           "authorityIds": "col:BBWBZ",
           "children": []
@@ -147,7 +149,8 @@
           "sourceIds": {
             "col": [
               "BBWC9"
-            ]
+            ],
+            "checklistbank": "txn:404225"
           },
           "authorityIds": "col:BBWC9",
           "children": []
@@ -164,7 +167,8 @@
           "sourceIds": {
             "col": [
               "BBWC7"
-            ]
+            ],
+            "checklistbank": "txn:404224"
           },
           "authorityIds": "col:BBWC7",
           "children": []
@@ -253,7 +257,8 @@
           "sourceIds": {
             "col": [
               "BBWCD"
-            ]
+            ],
+            "checklistbank": "txn:403690"
           },
           "authorityIds": "col:BBWCD",
           "children": []
@@ -268,7 +273,8 @@
           "sourceIds": {
             "checklistbank": "ott6186414"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Lörenthey 1898)"
         },
         {
           "id": "SP_DAIRA_GABERTII",
@@ -293,6 +299,19 @@
             "checklistbank": "ott7695536"
           },
           "children": []
+        },
+        {
+          "id": "SP_DAIRA_EOCAENICUS_L_RENTHEY_1898",
+          "name": "Daira eocaenicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Daira",
+          "authorship": "(Lörenthey 1898)",
+          "sourceIds": {
+            "checklistbank": "txn:402713"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -303,19 +322,6 @@
       "name": "Cancer",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CANCER_PERLATA_HERBST_1790",
-          "name": "Cancer perlata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cancer",
-          "authorship": "Herbst, 1790",
-          "sourceIds": {
-            "checklistbank": "578327"
-          },
-          "children": []
-        },
         {
           "id": "SP_CANCER_VARIOLOSUS_FABRICIUS_1798",
           "name": "Cancer variolosus",
@@ -367,13 +373,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dairidae"
+    },
+    {
+      "id": "GENUS_PHYMATOCARCINUS",
+      "name": "Phymatocarcinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHYMATOCARCINUS_EOCAENICUS_DI_SALVO_1933",
+          "name": "Phymatocarcinus eocaenicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phymatocarcinus",
+          "authorship": "Di Salvo 1933",
+          "sourceIds": {
+            "checklistbank": "txn:403689"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dairidae"
+    },
+    {
+      "id": "GENUS_ORGIANOCARCINUS",
+      "name": "Orgianocarcinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORGIANOCARCINUS_BERICUS_DE_ANGELI_AND_GARASSINO_2021",
+          "name": "Orgianocarcinus bericus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orgianocarcinus",
+          "authorship": "De Angeli and Garassino 2021",
+          "sourceIds": {
+            "checklistbank": "txn:460053"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dairidae"
     }
   ],
-  "speciesCount": 21,
+  "speciesCount": 23,
   "appSlug": "dairidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

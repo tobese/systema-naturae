@@ -233,9 +233,12 @@
           "uuid": "da9a4958-115d-555-a56-ce2282e1519049",
           "authorship": "Schouppé & Stacul, 1955",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823503"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1823503"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1823503"
         },
         {
           "id": "SP_LOPHOPHYLLIDIUM_NUCLEUM_ZHAO_ZHOU_1987",
@@ -261,9 +264,12 @@
           "uuid": "1d245b31-c8b1-51a-916-3b3ea0ca89ceb7",
           "authorship": "Schouppé & Stacul, 1955",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823505"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1823505"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1823505"
         },
         {
           "id": "SP_LOPHOPHYLLIDIUM_PENDULUM_GRABAU_1928",
@@ -331,9 +337,12 @@
           "uuid": "6227d793-d457-5e5-9c0-7e26f8d6f06afc",
           "authorship": "C.A. Ross & J.P. Ross, 1962",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1827225"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1827225"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1827225"
         },
         {
           "id": "SP_LOPHOPHYLLIDIUM_VALLUM_ROSS_ROSS_1962",
@@ -868,6 +877,19 @@
           "sourcedFrom": "none",
           "uuid": "574c9355-bed4-55f-8a3-2fcbcda2d471fa",
           "children": []
+        },
+        {
+          "id": "SP_PSEUDOWANNEROPHYLLUM_SOLIDUM_ROSS_AND_ROSS_1962",
+          "name": "Pseudowannerophyllum solidum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudowannerophyllum",
+          "authorship": "(Ross and Ross 1962)",
+          "sourceIds": {
+            "checklistbank": "txn:183571"
+          },
+          "children": []
         }
       ]
     },
@@ -960,46 +982,20 @@
       "lineage": "lophophyllidiidae"
     },
     {
-      "id": "GENUS_LOPHOPHYLLIDIUM",
-      "name": "\"Lophophyllidium",
+      "id": "GENUS_KHMEROPHYLLUM",
+      "name": "Khmerophyllum",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LOPHOPHYLLIDIUM_MARTINI_SCHOUPP_STACUL_1955",
-          "name": "\"Lophophyllidium martini\"",
+          "id": "SP_KHMEROPHYLLUM_CAMBODGENSE_FONTAINE_1961",
+          "name": "Khmerophyllum cambodgense",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Lophophyllidium",
-          "authorship": "\"Schouppé & Stacul, 1955\"",
+          "lineage": "Khmerophyllum",
+          "authorship": "Fontaine 1961",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823503"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LOPHOPHYLLIDIUM_PARVUM_SCHOUPP_STACUL_1955",
-          "name": "\"Lophophyllidium parvum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lophophyllidium",
-          "authorship": "\"Schouppé & Stacul, 1955\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823505"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LOPHOPHYLLIDIUM_SKINNERI_C_A_ROSS_J_P_ROSS_1962",
-          "name": "\"Lophophyllidium skinneri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lophophyllidium",
-          "authorship": "\"C.A. Ross & J.P. Ross, 1962\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1827225"
+            "checklistbank": "txn:203172"
           },
           "children": []
         }
@@ -1009,13 +1005,14 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 71,
+  "speciesCount": 70,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 43,
       "classKey": 206,
       "familyKey": 3250403
-    }
+    },
+    "checklistbank": "txn:110339"
   }
 }

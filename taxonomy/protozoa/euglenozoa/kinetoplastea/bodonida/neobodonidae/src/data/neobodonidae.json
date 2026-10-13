@@ -81,7 +81,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12249921
+            "gbif": 12249921,
+            "checklistbank": "423615"
           },
           "uuid": "fae099a8-fd37-504-80f-24cc020eb4db4f",
           "authorityIds": "gbif:12249921"
@@ -101,11 +102,49 @@
           "children": [],
           "sourceIds": {
             "gbif": 11214023,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1535026"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1535026"
+            ]
           },
           "uuid": "a686a5da-00fb-5dd-9d9-d25aef22c4900b",
-          "authorityIds": "gbif:11214023",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1535026,gbif:11214023",
           "authorship": "Moreira, López García & Vickerman"
+        },
+        {
+          "id": "SP_NEOBODO_CELER",
+          "name": "Neobodo celer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neobodo",
+          "sourceIds": {
+            "checklistbank": "364772"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOBODO_ROSTRATUS",
+          "name": "Neobodo rostratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neobodo",
+          "sourceIds": {
+            "checklistbank": "364781"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOBODO_CURVIFILUS",
+          "name": "Neobodo curvifilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neobodo",
+          "sourceIds": {
+            "checklistbank": "423606"
+          },
+          "children": []
         }
       ]
     },
@@ -127,32 +166,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "neobodonidae"
-    },
-    {
-      "id": "GENUS_NEOBODO",
-      "name": "\"Neobodo",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEOBODO_SALIENS_MOREIRA_L_PEZ_GARC_A_VICKERMAN",
-          "name": "\"Neobodo saliens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neobodo",
-          "authorship": "\"Moreira, López García & Vickerman\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1535026"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neobodonidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 7,
+  "genusCount": 3,
+  "speciesCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,
@@ -160,6 +177,7 @@
       "classKey": 7687234,
       "orderKey": 7386020,
       "familyKey": 10549294
-    }
+    },
+    "checklistbank": "364770"
   }
 }

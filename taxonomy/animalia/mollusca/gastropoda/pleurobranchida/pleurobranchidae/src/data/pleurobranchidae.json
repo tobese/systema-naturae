@@ -22,9 +22,11 @@
             "col": [
               "KWNP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:593385"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:593385"
+            ]
           },
-          "authorityIds": "col:KWNP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:593385,col:KWNP",
           "authorship": "Willan, 1983"
         },
         {
@@ -91,9 +93,11 @@
             "col": [
               "BHY7B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:533830"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:533830"
+            ]
           },
-          "authorityIds": "col:BHY7B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:533830,col:BHY7B",
           "authorship": "Martynov & Schrödl, 2009"
         },
         {
@@ -652,45 +656,6 @@
           "authorship": "MacFarland, 1909",
           "sourceIds": {
             "checklistbank": "896733"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROBRANCHUS_AURANTIACUS_RISSO_1818",
-          "name": "Pleurobranchus aurantiacus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleurobranchus",
-          "authorship": "Risso, 1818",
-          "sourceIds": {
-            "checklistbank": "1040507"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROBRANCHUS_ELONGATUS_CANTRAINE_1835",
-          "name": "Pleurobranchus elongatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleurobranchus",
-          "authorship": "Cantraine, 1835",
-          "sourceIds": {
-            "checklistbank": "1044575"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROBRANCHUS_OCELLATUS_DELLE_CHIAJE_1830",
-          "name": "Pleurobranchus ocellatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleurobranchus",
-          "authorship": "Delle Chiaje, 1830",
-          "sourceIds": {
-            "checklistbank": "1044576"
           },
           "children": []
         },
@@ -1438,19 +1403,6 @@
           "children": []
         },
         {
-          "id": "SP_BERTHELLA_EDWARDSII_VAYSSI_RE_1897",
-          "name": "Berthella edwardsii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Berthella",
-          "authorship": "Vayssière, 1897",
-          "sourceIds": {
-            "checklistbank": "1044578"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BERTHELLA_PELLUCIDA",
           "name": "Berthella pellucida",
           "rank": "SPECIES",
@@ -1924,20 +1876,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PLEUREHDERA_STELLATA_RISSO_1826",
-          "name": "Pleurehdera stellata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleurehdera",
-          "authorship": "(Risso, 1826)",
-          "sourceIds": {
-            "checklistbank": "105631"
-          },
-          "children": [],
-          "uuid": "c96392ac-7da1-51f-a89-d314400f9233d7"
-        },
-        {
           "id": "SP_PLEUREHDERA_NEBULA_GHANIMI_SCHR_DL_GODDARD_BALLESTEROS_GOSLINER_VALD_S_2020",
           "name": "Pleurehdera nebula",
           "rank": "SPECIES",
@@ -2120,67 +2058,10 @@
       "lineage": "pleurobranchidae"
     },
     {
-      "id": "GENUS_BULLA",
-      "name": "Bulla",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BULLA_PLUMULA_MONTAGU_1803",
-          "name": "Bulla plumula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bulla",
-          "authorship": "Montagu, 1803",
-          "sourceIds": {
-            "checklistbank": "1044577"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurobranchidae"
-    },
-    {
-      "id": "GENUS_LAMELLARIA",
-      "name": "Lamellaria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LAMELLARIA_MEMBRANACEA_MONTAGU_1816",
-          "name": "Lamellaria membranacea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lamellaria",
-          "authorship": "Montagu, 1816",
-          "sourceIds": {
-            "checklistbank": "1052212"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurobranchidae"
-    },
-    {
       "id": "GENUS_OSCANIELLA",
       "name": "Oscaniella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_OSCANIELLA_ALBIGUTTATA_BERGH_1905",
-          "name": "Oscaniella albiguttata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oscaniella",
-          "authorship": "Bergh, 1905",
-          "sourceIds": {
-            "checklistbank": "1052213"
-          },
-          "children": []
-        },
         {
           "id": "SP_OSCANIELLA_AFFINIS",
           "name": "Oscaniella affinis",
@@ -2400,54 +2281,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pleurobranchidae"
-    },
-    {
-      "id": "GENUS_BOREOBERTHELLA",
-      "name": "\"Boreoberthella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BOREOBERTHELLA_AUGUSTA_MARTYNOV_SCHR_DL_2009",
-          "name": "\"Boreoberthella augusta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Boreoberthella",
-          "authorship": "\"Martynov & Schrödl, 2009\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:533830"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurobranchidae"
-    },
-    {
-      "id": "GENUS_BATHYBERTHELLA",
-      "name": "\"Bathyberthella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BATHYBERTHELLA_ZELANDIAE_WILLAN_1983",
-          "name": "\"Bathyberthella zelandiae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bathyberthella",
-          "authorship": "\"Willan, 1983\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:593385"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurobranchidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 161,
+  "genusCount": 18,
+  "speciesCount": 151,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

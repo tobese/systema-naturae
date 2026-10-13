@@ -52,9 +52,11 @@
             "col": [
               "B8N47"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1653595"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1653595"
+            ]
           },
-          "authorityIds": "col:B8N47",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1653595,col:B8N47",
           "authorship": "(Buvignier, 1852)"
         },
         {
@@ -153,6 +155,19 @@
             ]
           },
           "authorityIds": "col:8T6CN"
+        },
+        {
+          "id": "SP_AUSTROCYPRINA_EXCELSA_GARDNER_2005",
+          "name": "Austrocyprina excelsa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Austrocyprina",
+          "authorship": "Gardner 2005",
+          "sourceIds": {
+            "checklistbank": "txn:109395"
+          },
+          "children": []
         }
       ]
     },
@@ -174,6 +189,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "2e2f36e9-ed2a-5a1-aac-5d5c04017e4bfe"
+        },
+        {
+          "id": "SP_ARGENTICYPRINA_MULENSIS_LAZO_AND_DAMBORENEA_2011",
+          "name": "Argenticyprina mulensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Argenticyprina",
+          "authorship": "Lazo and Damborenea 2011",
+          "sourceIds": {
+            "checklistbank": "txn:219149"
+          },
+          "children": []
         }
       ]
     },
@@ -199,9 +227,11 @@
             "col": [
               "9GJRW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1596981"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1596981"
+            ]
           },
-          "authorityIds": "col:9GJRW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1596981,col:9GJRW",
           "authorship": "(F. W. Anderson & L. R. Cox, 1948)"
         }
       ]
@@ -224,7 +254,8 @@
           "sourceIds": {
             "col": [
               "CGC2W"
-            ]
+            ],
+            "checklistbank": "txn:179741"
           },
           "authorityIds": "col:CGC2W"
         },
@@ -278,6 +309,32 @@
             ]
           },
           "authorityIds": "col:V7FMX"
+        },
+        {
+          "id": "SP_PSEUDOCORBULA_NUCULIFORMIS_ZENKER_1857",
+          "name": "Pseudocorbula nuculiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocorbula",
+          "authorship": "(Zenker 1857)",
+          "sourceIds": {
+            "checklistbank": "txn:210198"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOCORBULA_INCRASSATA_M_NSTER_1863",
+          "name": "Pseudocorbula incrassata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocorbula",
+          "authorship": "(Münster 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:386513"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -419,54 +476,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "isocyprinidae"
-    },
-    {
-      "id": "GENUS_STAFFINELLA",
-      "name": "\"Staffinella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STAFFINELLA_STAFFINENSIS_F_W_ANDERSON_L_R_COX_1948",
-          "name": "\"Staffinella staffinensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Staffinella",
-          "authorship": "\"(F. W. Anderson & L. R. Cox, 1948)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1596981"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "isocyprinidae"
-    },
-    {
-      "id": "GENUS_ISOCYPRINA",
-      "name": "\"Isocyprina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ISOCYPRINA_CYRENIFORMIS_BUVIGNIER_1852",
-          "name": "\"Isocyprina cyreniformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Isocyprina",
-          "authorship": "\"(Buvignier, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1653595"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "isocyprinidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 23,
+  "genusCount": 8,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -474,6 +487,7 @@
       "classKey": 137,
       "orderKey": 9310756,
       "familyKey": 4950251
-    }
+    },
+    "checklistbank": "txn:109394"
   }
 }

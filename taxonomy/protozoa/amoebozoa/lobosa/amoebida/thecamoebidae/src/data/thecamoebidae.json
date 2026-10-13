@@ -40,7 +40,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 12236883
+            "gbif": 12236883,
+            "checklistbank": "402203"
           },
           "uuid": "753e64f2-3e59-505-a24-e9b1ff7fa26bb1",
           "authorityIds": "gbif:12236883",
@@ -57,7 +58,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11135152
+            "gbif": 11135152,
+            "checklistbank": "402211"
           },
           "uuid": "0539b07f-e4b6-59e-83f-5aacc4b2239920",
           "authorityIds": "gbif:11135152",
@@ -197,7 +199,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 12251510
+            "gbif": 12251510,
+            "checklistbank": "402226"
           },
           "uuid": "84f63557-5523-589-99e-fbf751cd782f15",
           "authorityIds": "gbif:12251510",
@@ -236,6 +239,30 @@
           "lineage": "Thecamoeba",
           "sourceIds": {
             "checklistbank": "1245458"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THECAMOEBA_SIMILIS",
+          "name": "Thecamoeba similis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thecamoeba",
+          "sourceIds": {
+            "checklistbank": "13834"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THECAMOEBA_HOMERI",
+          "name": "Thecamoeba homeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thecamoeba",
+          "sourceIds": {
+            "checklistbank": "462632"
           },
           "children": []
         }
@@ -293,6 +320,18 @@
             "checklistbank": "1015365"
           },
           "children": []
+        },
+        {
+          "id": "SP_SAPPINIA_DANGEARDI",
+          "name": "Sappinia dangeardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sappinia",
+          "sourceIds": {
+            "checklistbank": "462399"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -345,10 +384,103 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thecamoebidae"
+    },
+    {
+      "id": "GENUS_STENAMOEBA",
+      "name": "Stenamoeba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STENAMOEBA_AMAZONICA",
+          "name": "Stenamoeba amazonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "13795"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENAMOEBA_LIMACINA",
+          "name": "Stenamoeba limacina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "13803"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENAMOEBA_STENOPODIA",
+          "name": "Stenamoeba stenopodia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "13818"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENAMOEBA_POLYMORPHA",
+          "name": "Stenamoeba polymorpha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "378073"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENAMOEBA_AERONAUTA",
+          "name": "Stenamoeba aeronauta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "401561"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENAMOEBA_DEJONCKHEEREI",
+          "name": "Stenamoeba dejonckheerei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "401569"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENAMOEBA_SARDINIENSIS",
+          "name": "Stenamoeba sardiniensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenamoeba",
+          "sourceIds": {
+            "checklistbank": "401577"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecamoebidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 19,
+  "genusCount": 5,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,
@@ -356,6 +488,7 @@
       "classKey": 116,
       "orderKey": 761,
       "familyKey": 2166
-    }
+    },
+    "checklistbank": "13770"
   }
 }

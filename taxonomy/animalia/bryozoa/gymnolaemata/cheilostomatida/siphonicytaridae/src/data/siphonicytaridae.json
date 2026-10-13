@@ -25,9 +25,11 @@
             "col": [
               "86SB4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413720"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1413720"
+            ]
           },
-          "authorityIds": "col:86SB4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413720,col:86SB4",
           "authorship": "(Maplestone, 1902)",
           "children": []
         },
@@ -65,9 +67,11 @@
             "col": [
               "86SB5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413721"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1413721"
+            ]
           },
-          "authorityIds": "col:86SB5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413721,col:86SB5",
           "authorship": "(Waters, 1881)",
           "children": []
         },
@@ -221,9 +225,11 @@
             "col": [
               "4XPMZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472501"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:472501"
+            ]
           },
-          "authorityIds": "col:4XPMZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:472501,col:4XPMZ",
           "authorship": "(Canu & Bassler, 1929)",
           "children": []
         },
@@ -241,9 +247,11 @@
             "col": [
               "869BG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413722"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1413722"
+            ]
           },
-          "authorityIds": "col:869BG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413722,col:869BG",
           "authorship": "(Maplestone, 1902)",
           "children": []
         },
@@ -432,7 +440,8 @@
           "sourceIds": {
             "checklistbank": "ott4149687"
           },
-          "children": []
+          "children": [],
+          "authorship": "Guha and Gopikrishna 2007"
         },
         {
           "id": "SP_SIPHONICYTARA_GRANULOSA",
@@ -492,7 +501,8 @@
           "sourceIds": {
             "checklistbank": "ott4149692"
           },
-          "children": []
+          "children": [],
+          "authorship": "Guha and Gopikrishna 2007"
         },
         {
           "id": "SP_SIPHONICYTARA_SYMETRICA",
@@ -553,63 +563,63 @@
             "checklistbank": "ott4149698"
           },
           "children": []
+        },
+        {
+          "id": "SP_SIPHONICYTARA_PRIMITIVA_GORDON_AND_TAYLOR_2015",
+          "name": "Siphonicytara primitiva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonicytara",
+          "authorship": "Gordon and Taylor 2015",
+          "sourceIds": {
+            "checklistbank": "txn:327782"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIPHONICYTARA_LITOTES_GORDON_AND_TAYLOR_2015",
+          "name": "Siphonicytara litotes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonicytara",
+          "authorship": "Gordon and Taylor 2015",
+          "sourceIds": {
+            "checklistbank": "txn:327784"
+          },
+          "children": []
         }
       ]
     },
     {
-      "id": "GENUS_SIPHONICYTARA",
-      "name": "\"Siphonicytara",
+      "id": "GENUS_TUBITRABECULARIA",
+      "name": "Tubitrabecularia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SIPHONICYTARA_INSOLITA_CANU_BASSLER_1929",
-          "name": "\"Siphonicytara insolita\"",
+          "id": "SP_TUBITRABECULARIA_CLYPEATA_WATERS_1881",
+          "name": "Tubitrabecularia clypeata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonicytara",
-          "authorship": "\"(Canu & Bassler, 1929)\"",
+          "lineage": "Tubitrabecularia",
+          "authorship": "(Waters 1881)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472501"
+            "checklistbank": "txn:315975"
           },
           "children": []
         },
         {
-          "id": "SP_SIPHONICYTARA_AIRENSIS_MAPLESTONE_1902",
-          "name": "\"Siphonicytara airensis\"",
+          "id": "SP_TUBITRABECULARIA_ELEVATA_TENISON_WOODS_1877",
+          "name": "Tubitrabecularia elevata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonicytara",
-          "authorship": "\"(Maplestone, 1902)\"",
+          "lineage": "Tubitrabecularia",
+          "authorship": "(Tenison-Woods 1877)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413720"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONICYTARA_CLYPEATA_WATERS_1881",
-          "name": "\"Siphonicytara clypeata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonicytara",
-          "authorship": "\"(Waters, 1881)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413721"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONICYTARA_IRREGULARIS_MAPLESTONE_1902",
-          "name": "\"Siphonicytara irregularis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonicytara",
-          "authorship": "\"(Maplestone, 1902)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413722"
+            "checklistbank": "txn:329318"
           },
           "children": []
         }

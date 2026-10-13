@@ -62,9 +62,11 @@
             "col": [
               "BHGJH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304395"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1304395"
+            ]
           },
-          "authorityIds": "col:BHGJH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1304395,col:BHGJH",
           "authorship": "Thach, 2018"
         },
         {
@@ -102,9 +104,11 @@
             "col": [
               "B23C9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1633403"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1633403"
+            ]
           },
-          "authorityIds": "col:B23C9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1633403,col:B23C9",
           "authorship": "(Dey, 1961)"
         },
         {
@@ -125,9 +129,11 @@
             "col": [
               "4QFZB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225028"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225028"
+            ]
           },
-          "authorityIds": "col:4QFZB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225028,col:4QFZB",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -335,19 +341,6 @@
           "authorityIds": "col:B6HZW"
         },
         {
-          "id": "SP_PUGILINA_LAEVIS_SCHUMACHER_1817",
-          "name": "Pugilina laevis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pugilina",
-          "authorship": "Schumacher, 1817",
-          "sourceIds": {
-            "checklistbank": "677964"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PUGILINA_TUPINIQUIM",
           "name": "Pugilina tupiniquim",
           "rank": "SPECIES",
@@ -368,6 +361,32 @@
           "lineage": "Pugilina",
           "sourceIds": {
             "checklistbank": "463700"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PUGILINA_DITROPIS_BAYAN_1870",
+          "name": "Pugilina ditropis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pugilina",
+          "authorship": "Bayan 1870",
+          "sourceIds": {
+            "checklistbank": "txn:408595"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PUGILINA_FASCIATA_SCHUMACHER_1817",
+          "name": "Pugilina fasciata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pugilina",
+          "authorship": "Schumacher 1817",
+          "sourceIds": {
+            "checklistbank": "txn:408596"
           },
           "children": []
         }
@@ -414,9 +433,11 @@
             "col": [
               "4TYJZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:448552"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:448552"
+            ]
           },
-          "authorityIds": "col:4TYJZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:448552,col:4TYJZ",
           "authorship": "(E. A. Smith, 1887)"
         },
         {
@@ -515,6 +536,71 @@
             ]
           },
           "authorityIds": "col:VD2YH"
+        },
+        {
+          "id": "SP_HELIGMOTOMA_LIBYCUM_MAYER_EYMAR_1895",
+          "name": "Heligmotoma libycum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heligmotoma",
+          "authorship": "(Mayer-Eymar 1895)",
+          "sourceIds": {
+            "checklistbank": "txn:112249"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELIGMOTOMA_DAKHLENSIS_AWAD_AND_ABED_1967",
+          "name": "Heligmotoma dakhlensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heligmotoma",
+          "authorship": "Awad and Abed 1967",
+          "sourceIds": {
+            "checklistbank": "txn:112251"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELIGMOTOMA_NIGERIENSIS_ADEGOKE_1977",
+          "name": "Heligmotoma nigeriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heligmotoma",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480352"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELIGMOTOMA_OLUWOLEI_ADEGOKE_1977",
+          "name": "Heligmotoma oluwolei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heligmotoma",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480353"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELIGMOTOMA_OPPENHEIMI_ADEGOKE_1977",
+          "name": "Heligmotoma oppenheimi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heligmotoma",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480354"
+          },
+          "children": []
         }
       ]
     },
@@ -749,7 +835,8 @@
           "sourceIds": {
             "col": [
               "VCRBH"
-            ]
+            ],
+            "checklistbank": "txn:486854"
           },
           "authorityIds": "col:VCRBH"
         },
@@ -769,6 +856,32 @@
             ]
           },
           "authorityIds": "col:VCVCB"
+        },
+        {
+          "id": "SP_SERRIFUSUS_BINODOSUM_STILWELL_ET_AL_2004",
+          "name": "Serrifusus binodosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Serrifusus",
+          "authorship": "Stilwell et al. 2004",
+          "sourceIds": {
+            "checklistbank": "txn:89130"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SERRIFUSUS_DAKOTENSIS_MEEK_AND_HAYDEN_1856",
+          "name": "Serrifusus dakotensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Serrifusus",
+          "authorship": "(Meek and Hayden 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:428923"
+          },
+          "children": []
         }
       ]
     },
@@ -812,9 +925,11 @@
             "col": [
               "8YK3Z"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571373"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571373"
+            ]
           },
-          "authorityIds": "col:8YK3Z",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571373,col:8YK3Z",
           "authorship": "(Lamarck, 1803)"
         },
         {
@@ -846,9 +961,11 @@
             "col": [
               "53M39"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304475"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1304475"
+            ]
           },
-          "authorityIds": "col:53M39",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1304475,col:53M39",
           "authorship": "(A. d'Orbigny, 1850)"
         },
         {
@@ -1028,7 +1145,8 @@
           "sourceIds": {
             "checklistbank": "ott7951877"
           },
-          "children": []
+          "children": [],
+          "authorship": "Adegoke 1977"
         },
         {
           "id": "SP_SYCOSTOMA_ROBUSTA",
@@ -1039,6 +1157,46 @@
           "lineage": "Sycostoma",
           "sourceIds": {
             "checklistbank": "ott7951879"
+          },
+          "children": [],
+          "authorship": "Adegoke 1977"
+        },
+        {
+          "id": "SP_SYCOSTOMA_PYRINOTA_STILWELL_ET_AL_2004",
+          "name": "Sycostoma pyrinota",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sycostoma",
+          "authorship": "Stilwell et al. 2004",
+          "sourceIds": {
+            "checklistbank": "txn:89129"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYCOSTOMA_EWEKOROENSIS_ADEGOKE_1977",
+          "name": "Sycostoma ewekoroensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sycostoma",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480324"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYCOSTOMA_EAMESI_ADEGOKE_1977",
+          "name": "Sycostoma eamesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sycostoma",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480325"
           },
           "children": []
         }
@@ -1152,9 +1310,11 @@
             "col": [
               "3KNQM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567152"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:567152"
+            ]
           },
-          "authorityIds": "col:3KNQM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:567152,col:3KNQM",
           "authorship": "(R. A. Philippi, 1849)"
         },
         {
@@ -1233,7 +1393,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "496fb996-11a0-527-a71-84899df26e1de2"
+          "uuid": "496fb996-11a0-527-a71-84899df26e1de2",
+          "authorship": "(Van Winkle 1918)",
+          "sourceIds": {
+            "checklistbank": "txn:356060"
+          }
         },
         {
           "id": "SP_HEMIFUSUS_MONTENSIS_COX_1930",
@@ -1558,7 +1722,8 @@
           "sourceIds": {
             "checklistbank": "ott4157171"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Lamarck 1822)"
         },
         {
           "id": "SP_HEMIFUSUS_BOUCHETI",
@@ -1630,7 +1795,8 @@
           "sourceIds": {
             "checklistbank": "ott7951851"
           },
-          "children": []
+          "children": [],
+          "authorship": "Weaver 1912"
         },
         {
           "id": "SP_HEMIFUSUS_SOPENAHENSIS",
@@ -1677,6 +1843,19 @@
           "lineage": "Hemifusus",
           "sourceIds": {
             "checklistbank": "1037417"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEMIFUSUS_TEJONENSIS_WEAVER_1912",
+          "name": "Hemifusus tejonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemifusus",
+          "authorship": "Weaver 1912",
+          "sourceIds": {
+            "checklistbank": "txn:484106"
           },
           "children": []
         }
@@ -1827,6 +2006,45 @@
             ]
           },
           "authorityIds": "col:V5RKH"
+        },
+        {
+          "id": "SP_DEUSSENIA_SIERRANA_SQUIRES_AND_SAUL_2000",
+          "name": "Deussenia sierrana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deussenia",
+          "authorship": "Squires and Saul 2000",
+          "sourceIds": {
+            "checklistbank": "txn:428231"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DEUSSENIA_CALIFORNIANA_SQUIRES_AND_SAUL_2000",
+          "name": "Deussenia californiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deussenia",
+          "authorship": "Squires and Saul 2000",
+          "sourceIds": {
+            "checklistbank": "txn:428232"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DEUSSENIA_PACIFICANA_SQUIRES_AND_SAUL_2000",
+          "name": "Deussenia pacificana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deussenia",
+          "authorship": "Squires and Saul 2000",
+          "sourceIds": {
+            "checklistbank": "txn:428233"
+          },
+          "children": []
         }
       ]
     },
@@ -1848,6 +2066,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "41343314-efdf-5a4-8ab-b1b410bbd1f800"
+        },
+        {
+          "id": "SP_PSEUDOMAZZALINA_NIGERIENSIS_NEWTON_1922",
+          "name": "Pseudomazzalina nigeriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudomazzalina",
+          "authorship": "(Newton 1922)",
+          "sourceIds": {
+            "checklistbank": "txn:66205"
+          },
+          "children": []
         }
       ]
     },
@@ -1909,9 +2140,11 @@
             "col": [
               "8H94T"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1508645"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1508645"
+            ]
           },
-          "authorityIds": "col:8H94T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1508645,col:8H94T",
           "authorship": "(Bellardi, 1873)"
         },
         {
@@ -1929,9 +2162,11 @@
             "col": [
               "3ZMYJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420060"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420060"
+            ]
           },
-          "authorityIds": "col:3ZMYJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420060,col:3ZMYJ",
           "authorship": "(R. A. Philippi, 1844)"
         },
         {
@@ -1975,9 +2210,11 @@
             "col": [
               "8VLGM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1562214"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1562214"
+            ]
           },
-          "authorityIds": "col:8VLGM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1562214,col:8VLGM",
           "authorship": "(Agassiz, 1843)"
         },
         {
@@ -2002,9 +2239,11 @@
             "col": [
               "3ZMYK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420061"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420061"
+            ]
           },
-          "authorityIds": "col:3ZMYK,itis:74101"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420061,col:3ZMYK,itis:74101"
         },
         {
           "id": "SP_MELONGENA_GIGAS",
@@ -2021,9 +2260,11 @@
             "col": [
               "BDCDL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1661352"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1661352"
+            ]
           },
-          "authorityIds": "col:BDCDL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1661352,col:BDCDL",
           "authorship": "(K. Martin, 1883)"
         },
         {
@@ -2061,9 +2302,11 @@
             "col": [
               "7S4WX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1343040"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1343040"
+            ]
           },
-          "authorityIds": "col:7S4WX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1343040,col:7S4WX",
           "authorship": "(Basterot, 1825)"
         },
         {
@@ -2084,9 +2327,11 @@
             "col": [
               "3ZMYP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420062"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420062"
+            ]
           },
-          "authorityIds": "col:3ZMYP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420062,col:3ZMYP",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -2153,9 +2398,11 @@
             "col": [
               "3ZMYR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567144"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:567144"
+            ]
           },
-          "authorityIds": "col:3ZMYR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:567144,col:3ZMYR",
           "authorship": "(Broderip & G. B. Sowerby I, 1829)"
         },
         {
@@ -2173,9 +2420,11 @@
             "col": [
               "B599W"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1636345"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1636345"
+            ]
           },
-          "authorityIds": "col:B599W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1636345,col:B599W",
           "authorship": "(K. Martin, 1895)"
         },
         {
@@ -2233,9 +2482,11 @@
             "col": [
               "3ZMYX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1063772"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1063772"
+            ]
           },
-          "authorityIds": "col:3ZMYX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1063772,col:3ZMYX",
           "authorship": "(Roxo, 1924)"
         },
         {
@@ -2297,7 +2548,8 @@
           "sourceIds": {
             "col": [
               "CBC93"
-            ]
+            ],
+            "checklistbank": "txn:108029"
           },
           "authorityIds": "col:CBC93"
         },
@@ -2570,7 +2822,8 @@
           "sourceIds": {
             "col": [
               "D63MN"
-            ]
+            ],
+            "checklistbank": "txn:417304"
           },
           "authorityIds": "col:D63MN"
         },
@@ -2652,10 +2905,13 @@
           "lineage": "Melongena",
           "authorship": "Vredenburg, 1924",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1807997"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1807997"
+            ]
           },
           "children": [],
-          "uuid": "9aae2126-82ac-570-957-0cfd13a7d87e5e"
+          "uuid": "9aae2126-82ac-570-957-0cfd13a7d87e5e",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1807997"
         },
         {
           "id": "SP_MELONGENA_ACANTHINA_DALTON_1908",
@@ -2791,6 +3047,162 @@
             "checklistbank": "ott7951870"
           },
           "children": []
+        },
+        {
+          "id": "SP_MELONGENA_LAXECARINATUS_MICHELOTTI_1861",
+          "name": "Melongena laxecarinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Michelotti 1861)",
+          "sourceIds": {
+            "checklistbank": "txn:106096"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_PSEUDOBUCEPHALA_NOETLING_1901",
+          "name": "Melongena pseudobucephala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Noetling 1901)",
+          "sourceIds": {
+            "checklistbank": "txn:112392"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_MURICIFORMIS_COSSMANN_AND_PISSARRO_1909",
+          "name": "Melongena muriciformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Cossmann and Pissarro 1909)",
+          "sourceIds": {
+            "checklistbank": "txn:112395"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_ICKEI_MARTIN_1906",
+          "name": "Melongena ickei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Martin 1906)",
+          "sourceIds": {
+            "checklistbank": "txn:112398"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_GALEODES_LAMARCK_1843",
+          "name": "Melongena galeodes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Lamarck 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:113414"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_INCORNUTA_H_ZL_1962",
+          "name": "Melongena incornuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Hözl 1962)",
+          "sourceIds": {
+            "checklistbank": "txn:115009"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_PUGILINA_BORN_1778",
+          "name": "Melongena pugilina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Born 1778)",
+          "sourceIds": {
+            "checklistbank": "txn:135515"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_ORTHACANTHA_PILSBRY_AND_JOHNSON_1917",
+          "name": "Melongena orthacantha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "Pilsbry and Johnson 1917",
+          "sourceIds": {
+            "checklistbank": "txn:164552"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_VENEZUELANA_GIBSON_SMITH_AND_GIBSON_SMITH_1983",
+          "name": "Melongena venezuelana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "Gibson-Smith and Gibson-Smith 1983",
+          "sourceIds": {
+            "checklistbank": "txn:188191"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_CANDELARIANA_GIBSON_SMITH_AND_GIBSON_SMITH_1983",
+          "name": "Melongena candelariana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "Gibson-Smith and Gibson-Smith 1983",
+          "sourceIds": {
+            "checklistbank": "txn:188194"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_CALIFORNICA_ANDERSON_AND_MARTIN_1914",
+          "name": "Melongena californica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "(Anderson and Martin 1914)",
+          "sourceIds": {
+            "checklistbank": "txn:384708"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELONGENA_GUILLEMAINI_OPPENHEIM_1915",
+          "name": "Melongena guillemaini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melongena",
+          "authorship": "Oppenheim 1915",
+          "sourceIds": {
+            "checklistbank": "txn:509928"
+          },
+          "children": []
         }
       ]
     },
@@ -2862,9 +3274,11 @@
             "col": [
               "5BP7Q"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:217077"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:217077"
+            ]
           },
-          "authorityIds": "col:5BP7Q",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:217077,col:5BP7Q",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -3028,6 +3442,19 @@
             "checklistbank": "ott7951881"
           },
           "children": []
+        },
+        {
+          "id": "SP_VOLEMA_TERNATANUS_GMELIN_1791",
+          "name": "Volema ternatanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Volema",
+          "authorship": "(Gmelin 1791)",
+          "sourceIds": {
+            "checklistbank": "txn:90833"
+          },
+          "children": []
         }
       ]
     },
@@ -3053,9 +3480,11 @@
             "col": [
               "8VLDP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1565321"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1565321"
+            ]
           },
-          "authorityIds": "col:8VLDP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1565321,col:8VLDP",
           "authorship": "(Conrad, 1833)"
         },
         {
@@ -3073,9 +3502,11 @@
             "col": [
               "8YJQJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571317"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571317"
+            ]
           },
-          "authorityIds": "col:8YJQJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571317,col:8YJQJ",
           "authorship": "(Solander, 1766)"
         },
         {
@@ -3208,6 +3639,45 @@
             ]
           },
           "authorityIds": "col:CPTQY"
+        },
+        {
+          "id": "SP_CORNULINA_LEVIFUSOIDES_OLSSON_1928",
+          "name": "Cornulina levifusoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornulina",
+          "authorship": "(Olsson 1928)",
+          "sourceIds": {
+            "checklistbank": "txn:146852"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CORNULINA_LOUISIANAE_HARRIS_AND_PALMER_1947",
+          "name": "Cornulina louisianae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornulina",
+          "authorship": "Harris and Palmer 1947",
+          "sourceIds": {
+            "checklistbank": "txn:478798"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CORNULINA_AFRICANA_ADEGOKE_1977",
+          "name": "Cornulina africana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornulina",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480355"
+          },
+          "children": []
         }
       ]
     },
@@ -3341,6 +3811,19 @@
           },
           "children": [],
           "uuid": "c515cd69-fe81-59d-a85-265126483a0836"
+        },
+        {
+          "id": "SP_TORQUIFER_COLOMBIANA_WEISBORD_1929",
+          "name": "Torquifer colombiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Torquifer",
+          "authorship": "(Weisbord 1929)",
+          "sourceIds": {
+            "checklistbank": "txn:120195"
+          },
+          "children": []
         }
       ]
     },
@@ -3386,9 +3869,11 @@
             "col": [
               "54RZF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567148"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:567148"
+            ]
           },
-          "authorityIds": "col:54RZF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:567148,col:54RZF",
           "authorship": "(Reeve, 1847)"
         }
       ]
@@ -3416,9 +3901,11 @@
             "col": [
               "7G4ZC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754352"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:754352"
+            ]
           },
-          "authorityIds": "col:7G4ZC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:754352,col:7G4ZC",
           "authorship": "(Röding, 1798)"
         },
         {
@@ -3439,9 +3926,11 @@
             "col": [
               "5BP7B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754350"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:754350"
+            ]
           },
-          "authorityIds": "col:5BP7B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:754350,col:5BP7B",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -3460,9 +3949,11 @@
             "col": [
               "5BP7C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754351"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:754351"
+            ]
           },
-          "authorityIds": "col:5BP7C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:754351,col:5BP7C",
           "authorship": "(Nolf, 2007)"
         },
         {
@@ -3561,9 +4052,11 @@
             "col": [
               "68T2J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1310082"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1310082"
+            ]
           },
-          "authorityIds": "col:68T2J",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1310082,col:68T2J",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -3937,7 +4430,8 @@
           "sourceIds": {
             "col": [
               "V7K33"
-            ]
+            ],
+            "checklistbank": "txn:268236"
           },
           "authorityIds": "col:V7K33"
         }
@@ -4182,6 +4676,97 @@
             "checklistbank": "55857"
           },
           "children": []
+        },
+        {
+          "id": "SP_BUSYCON_FOERSTEI_GARDNER_1947",
+          "name": "Busycon foerstei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Gardner 1947)",
+          "sourceIds": {
+            "checklistbank": "txn:94679"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCON_DASUM_GARDNER_1947",
+          "name": "Busycon dasum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Gardner 1947)",
+          "sourceIds": {
+            "checklistbank": "txn:94680"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCON_ALDRICHI_GARDNER_1947",
+          "name": "Busycon aldrichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Gardner 1947)",
+          "sourceIds": {
+            "checklistbank": "txn:94681"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCON_ATRAKTOIDES_GARDNER_1947",
+          "name": "Busycon atraktoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Gardner 1947)",
+          "sourceIds": {
+            "checklistbank": "txn:94682"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCON_FUSIFORMIS_CONRAD_1840",
+          "name": "Busycon fusiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Conrad 1840)",
+          "sourceIds": {
+            "checklistbank": "txn:97486"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCON_RAPUM_HEILPRIN_1887",
+          "name": "Busycon rapum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Heilprin 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:120693"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCON_CONTRARIUS_CONRAD_1840",
+          "name": "Busycon contrarius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycon",
+          "authorship": "(Conrad 1840)",
+          "sourceIds": {
+            "checklistbank": "txn:120695"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4225,6 +4810,123 @@
             ]
           },
           "authorityIds": "itis:74099"
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_CORONATUM_CONRAD_1840",
+          "name": "Busycotypus coronatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Conrad 1840)",
+          "sourceIds": {
+            "checklistbank": "txn:97490"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_RUGOSUM_CONRAD_1843",
+          "name": "Busycotypus rugosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Conrad 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:99389"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_ALVEATUM_CONRAD_1863",
+          "name": "Busycotypus alveatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Conrad 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:97492"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_SCALARISPIRA_CONRAD_1863",
+          "name": "Busycotypus scalarispira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Conrad 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:158572"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_CONRADI_TUOMEY_AND_HOLMES_1856",
+          "name": "Busycotypus conradi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Tuomey and Holmes 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:167642"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_CONCINNUM_CONRAD_1875",
+          "name": "Busycotypus concinnum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Conrad 1875)",
+          "sourceIds": {
+            "checklistbank": "txn:167644"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_CANALIFERUM_CONRAD_1863",
+          "name": "Busycotypus canaliferum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Conrad 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:167646"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_PROPEINCILE_MANSFIELD_1930",
+          "name": "Busycotypus propeincile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Mansfield 1930)",
+          "sourceIds": {
+            "checklistbank": "txn:167660"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUSYCOTYPUS_LIBERTIENSE_MANSFIELD_1930",
+          "name": "Busycotypus libertiense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Busycotypus",
+          "authorship": "(Mansfield 1930)",
+          "sourceIds": {
+            "checklistbank": "txn:167661"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4440,119 +5142,10 @@
       "lineage": "melongenidae"
     },
     {
-      "id": "GENUS_VOLEMA",
-      "name": "\"Volema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_VOLEMA_PYRUM_GMELIN_1791",
-          "name": "\"Volema pyrum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Volema",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:217077"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "melongenidae"
-    },
-    {
-      "id": "GENUS_PUGILINA",
-      "name": "\"Pugilina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PUGILINA_MORIO_LINNAEUS_1758",
-          "name": "\"Pugilina morio\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pugilina",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225028"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PUGILINA_ELONGATA_THACH_2018",
-          "name": "\"Pugilina elongata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pugilina",
-          "authorship": "\"Thach, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304395"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PUGILINA_EULACTEA_DEY_1961",
-          "name": "\"Pugilina eulactea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pugilina",
-          "authorship": "\"(Dey, 1961)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1633403"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "melongenidae"
-    },
-    {
       "id": "GENUS_MELONGENA",
       "name": "\"Melongena",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MELONGENA_BISPINOSA_R_A_PHILIPPI_1844",
-          "name": "\"Melongena bispinosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(R. A. Philippi, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420060"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_CORONA_GMELIN_1791",
-          "name": "\"Melongena corona\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420061"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_MELONGENA_LINNAEUS_1758",
-          "name": "\"Melongena melongena\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420062"
-          },
-          "children": []
-        },
         {
           "id": "SP_MELONGENA_CORONA_PETUCH_2003",
           "name": "\"Melongena corona",
@@ -4567,110 +5160,6 @@
           "children": []
         },
         {
-          "id": "SP_MELONGENA_PATULA_BRODERIP_G_B_SOWERBY_I_1829",
-          "name": "\"Melongena patula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Broderip & G. B. Sowerby I, 1829)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567144"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_WOODWARDI_ROXO_1924",
-          "name": "\"Melongena woodwardi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Roxo, 1924)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1063772"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_LAINEI_BASTEROT_1825",
-          "name": "\"Melongena lainei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Basterot, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1343040"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_BASILICA_BELLARDI_1873",
-          "name": "\"Melongena basilica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Bellardi, 1873)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1508645"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_CORNUTA_AGASSIZ_1843",
-          "name": "\"Melongena cornuta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(Agassiz, 1843)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1562214"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_PONDEROSA_K_MARTIN_1895",
-          "name": "\"Melongena ponderosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(K. Martin, 1895)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1636345"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_GIGAS_K_MARTIN_1883",
-          "name": "\"Melongena gigas\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"(K. Martin, 1883)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1661352"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MELONGENA_PUGILINA_VREDENBURG_1924",
-          "name": "\"Melongena (Pugilina)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Melongena",
-          "authorship": "\"Vredenburg, 1924\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1807997"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MELONGENA_CONSORS_PETUCH_1994",
           "name": "\"Melongena consors",
           "rank": "SPECIES",
@@ -4680,50 +5169,6 @@
           "authorship": "\"Petuch, 1994\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1820292"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "melongenidae"
-    },
-    {
-      "id": "GENUS_SAGINAFUSUS",
-      "name": "\"Saginafusus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SAGINAFUSUS_PRICEI_E_A_SMITH_1887",
-          "name": "\"Saginafusus pricei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Saginafusus",
-          "authorship": "\"(E. A. Smith, 1887)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:448552"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "melongenidae"
-    },
-    {
-      "id": "GENUS_TAPHON",
-      "name": "\"Taphon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TAPHON_CLAVELLA_REEVE_1847",
-          "name": "\"Taphon clavella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Taphon",
-          "authorship": "\"(Reeve, 1847)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567148"
           },
           "children": []
         }
@@ -4763,19 +5208,6 @@
           "children": []
         },
         {
-          "id": "SP_HEMIFUSUS_CRASSICAUDA_R_A_PHILIPPI_1849",
-          "name": "\"Hemifusus crassicauda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hemifusus",
-          "authorship": "\"(R. A. Philippi, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:567152"
-          },
-          "children": []
-        },
-        {
           "id": "SP_HEMIFUSUS_KAWAMURAI_T_HABE_1965",
           "name": "\"Hemifusus kawamurai\"",
           "rank": "SPECIES",
@@ -4793,46 +5225,46 @@
       "lineage": "melongenidae"
     },
     {
-      "id": "GENUS_VOLEGALEA",
-      "name": "\"Volegalea",
+      "id": "GENUS_FUSUS",
+      "name": "Fusus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_VOLEGALEA_COCHLIDIUM_LINNAEUS_1758",
-          "name": "\"Volegalea cochlidium\"",
+          "id": "SP_FUSUS_BELLALIRATUS_SOHL_1964",
+          "name": "Fusus bellaliratus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Volegalea",
-          "authorship": "\"(Linnaeus, 1758)\"",
+          "lineage": "Fusus",
+          "authorship": "Sohl 1964",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754350"
+            "checklistbank": "txn:60101"
           },
           "children": []
         },
         {
-          "id": "SP_VOLEGALEA_DIRKI_NOLF_2007",
-          "name": "\"Volegalea dirki\"",
+          "id": "SP_FUSUS_TRABEATUS_CONRAD_1858",
+          "name": "Fusus trabeatus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Volegalea",
-          "authorship": "\"(Nolf, 2007)\"",
+          "lineage": "Fusus",
+          "authorship": "Conrad 1858",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754351"
+            "checklistbank": "txn:232184"
           },
           "children": []
         },
         {
-          "id": "SP_VOLEGALEA_CARNARIA_R_DING_1798",
-          "name": "\"Volegalea carnaria\"",
+          "id": "SP_FUSUS_COOPERII_GABB_1864",
+          "name": "Fusus cooperii",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Volegalea",
-          "authorship": "\"(Röding, 1798)\"",
+          "lineage": "Fusus",
+          "authorship": "Gabb 1864",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754352"
+            "checklistbank": "txn:383390"
           },
           "children": []
         }
@@ -4841,33 +5273,122 @@
       "lineage": "melongenidae"
     },
     {
-      "id": "GENUS_SYCOSTOMA",
-      "name": "\"Sycostoma",
+      "id": "GENUS_LEVIFUSUS",
+      "name": "Levifusus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SYCOSTOMA_NEPTUNI_A_D_ORBIGNY_1850",
-          "name": "\"Sycostoma neptuni\"",
+          "id": "SP_LEVIFUSUS_MORTONII",
+          "name": "Levifusus mortonii",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Sycostoma",
-          "authorship": "\"(A. d'Orbigny, 1850)\"",
+          "lineage": "Levifusus",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304475"
+            "checklistbank": "txn:60832"
           },
           "children": []
         },
         {
-          "id": "SP_SYCOSTOMA_BULBIFORME_LAMARCK_1803",
-          "name": "\"Sycostoma bulbiforme\"",
+          "id": "SP_LEVIFUSUS_MORTONIOPSIS",
+          "name": "Levifusus mortoniopsis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Sycostoma",
-          "authorship": "\"(Lamarck, 1803)\"",
+          "lineage": "Levifusus",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571373"
+            "checklistbank": "txn:60833"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_WOOLFEI_STILWELL_ET_AL_2004",
+          "name": "Levifusus woolfei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "Stilwell et al. 2004",
+          "sourceIds": {
+            "checklistbank": "txn:89126"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_PAGODIFORMIS_HEILPRIN_1881",
+          "name": "Levifusus pagodiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "(Heilprin 1881)",
+          "sourceIds": {
+            "checklistbank": "txn:136954"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_MAPUTI_GLIOZZI_AND_MALATESTA_1983",
+          "name": "Levifusus maputi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "Gliozzi and Malatesta 1983",
+          "sourceIds": {
+            "checklistbank": "txn:345070"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_BRAUNERI_HARRIS_1894",
+          "name": "Levifusus brauneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "Harris 1894",
+          "sourceIds": {
+            "checklistbank": "txn:478807"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_MOODIANUS_COOKE_1926",
+          "name": "Levifusus moodianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "Cooke 1926",
+          "sourceIds": {
+            "checklistbank": "txn:478808"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_PALAEOCENICUS_FURON_1948",
+          "name": "Levifusus palaeocenicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "(Furon 1948)",
+          "sourceIds": {
+            "checklistbank": "txn:480359"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEVIFUSUS_YOCHELSONI_ADEGOKE_1977",
+          "name": "Levifusus yochelsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480361"
           },
           "children": []
         }
@@ -4876,20 +5397,20 @@
       "lineage": "melongenidae"
     },
     {
-      "id": "GENUS_BRUNNEIFUSUS",
-      "name": "\"Brunneifusus",
+      "id": "GENUS_PROBUCCINUM",
+      "name": "Probuccinum",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BRUNNEIFUSUS_TERNATANUS_GMELIN_1791",
-          "name": "\"Brunneifusus ternatanus\"",
+          "id": "SP_PROBUCCINUM_PALAIOCOSTATUM_STILWELL_ET_AL_2004",
+          "name": "Probuccinum palaiocostatum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Brunneifusus",
-          "authorship": "\"(Gmelin, 1791)\"",
+          "lineage": "Probuccinum",
+          "authorship": "Stilwell et al. 2004",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1310082"
+            "checklistbank": "txn:89128"
           },
           "children": []
         }
@@ -4898,33 +5419,99 @@
       "lineage": "melongenidae"
     },
     {
-      "id": "GENUS_CORNULINA",
-      "name": "\"Cornulina",
+      "id": "GENUS_PYRUELLA",
+      "name": "Pyruella",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CORNULINA_ARMIGERA_CONRAD_1833",
-          "name": "\"Cornulina armigera\"",
+          "id": "SP_PYRUELLA_BLOUNTENSE_MANSFIELD_1935",
+          "name": "Pyruella blountense",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Cornulina",
-          "authorship": "\"(Conrad, 1833)\"",
+          "lineage": "Pyruella",
+          "authorship": "(Mansfield 1935)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1565321"
+            "checklistbank": "txn:167659"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melongenidae"
+    },
+    {
+      "id": "GENUS_GALEODES",
+      "name": "Galeodes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GALEODES_CORNUTUS_AGASSIZ_1843",
+          "name": "Galeodes cornutus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galeodes",
+          "authorship": "(Agassiz 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:113411"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melongenidae"
+    },
+    {
+      "id": "GENUS_SYCUM",
+      "name": "Sycum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYCUM_AMERICANUM_WOODS_1922",
+          "name": "Sycum americanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sycum",
+          "authorship": "Woods 1922",
+          "sourceIds": {
+            "checklistbank": "txn:400712"
           },
           "children": []
         },
         {
-          "id": "SP_CORNULINA_MINAX_SOLANDER_1766",
-          "name": "\"Cornulina minax\"",
+          "id": "SP_SYCUM_MUCRONATUM_GABB_1869",
+          "name": "Sycum mucronatum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Cornulina",
-          "authorship": "\"(Solander, 1766)\"",
+          "lineage": "Sycum",
+          "authorship": "(Gabb 1869)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571317"
+            "checklistbank": "txn:369058"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "melongenidae"
+    },
+    {
+      "id": "GENUS_FYFEA",
+      "name": "Fyfea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FYFEA_BEUI_GRIFFIN_AND_HU_NICKEN_1994",
+          "name": "Fyfea beui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fyfea",
+          "authorship": "Griffin and Hünicken 1994",
+          "sourceIds": {
+            "checklistbank": "txn:513455"
           },
           "children": []
         }
@@ -4933,8 +5520,8 @@
       "lineage": "melongenidae"
     }
   ],
-  "genusCount": 46,
-  "speciesCount": 287,
+  "genusCount": 45,
+  "speciesCount": 328,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

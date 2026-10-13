@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "f19a72b8-8f89-5c6-9c6-5dadce625856d0"
+          "uuid": "f19a72b8-8f89-5c6-9c6-5dadce625856d0",
+          "children": []
         },
         {
           "id": "SP_DIADELOPLAX_ANTIQUUS_HOWSE_1848",
@@ -33,7 +34,8 @@
           "sourcedFrom": "none",
           "authorship": "Howse",
           "yearPublished": "1848",
-          "uuid": "1d85b109-7e8e-5b5-a14-befaab1747990f"
+          "uuid": "1d85b109-7e8e-5b5-a14-befaab1747990f",
+          "children": []
         },
         {
           "id": "SP_DIADELOPLAX_APICULATUS_HANGER_ET_AL_2000",
@@ -44,7 +46,21 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "ac551580-7761-5c8-9bd-1328a131423721"
+          "uuid": "ac551580-7761-5c8-9bd-1328a131423721",
+          "children": []
+        },
+        {
+          "id": "SP_DIADELOPLAX_ANTIQUA_HOWSE_1848",
+          "name": "Diadeloplax antiqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diadeloplax",
+          "authorship": "(Howse 1848)",
+          "sourceIds": {
+            "checklistbank": "txn:187016"
+          },
+          "children": []
         }
       ]
     },
@@ -66,9 +82,32 @@
           "sourcedFrom": "none",
           "authorship": "Vinther et al.",
           "yearPublished": "2012",
-          "uuid": "b56afb72-1001-5f6-957-e5aa4a7ec5122b"
+          "uuid": "b56afb72-1001-5f6-957-e5aa4a7ec5122b",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_STROBILEPIS",
+      "name": "Strobilepis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STROBILEPIS_SPINIGERA_CLARKE_1888",
+          "name": "Strobilepis spinigera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Strobilepis",
+          "authorship": "Clarke 1888",
+          "sourceIds": {
+            "checklistbank": "txn:482362"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "strobilepidae"
     }
   ],
   "sourceIds": {
@@ -77,6 +116,9 @@
       "phylumKey": 52,
       "classKey": 346,
       "familyKey": 4584531
-    }
-  }
+    },
+    "checklistbank": "txn:70876"
+  },
+  "genusCount": 3,
+  "speciesCount": 6
 }

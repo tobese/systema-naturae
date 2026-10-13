@@ -296,9 +296,11 @@
             "col": [
               "8YY7X"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:459059"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:459059"
+            ]
           },
-          "authorityIds": "col:8YY7X",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:459059,col:8YY7X",
           "children": [],
           "authorship": "(Kennedy, 1986)"
         },
@@ -397,20 +399,6 @@
           },
           "authorityIds": "col:99MNF",
           "children": []
-        },
-        {
-          "id": "SP_PARAFILAROIDES_GYMNURUS_RAILLIET_1899",
-          "name": "Parafilaroides gymnurus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parafilaroides",
-          "authorship": "(Railliet, 1899)",
-          "sourceIds": {
-            "checklistbank": "251025"
-          },
-          "children": [],
-          "uuid": "3ab8e7ee-ffe7-5d3-819-ef67173785f90d"
         },
         {
           "id": "SP_PARAFILAROIDES_DECORUS",
@@ -621,28 +609,6 @@
       "lineage": "filaroididae"
     },
     {
-      "id": "GENUS_GORDIUS",
-      "name": "Gordius",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GORDIUS_MARTIS_WERNER_1782",
-          "name": "Gordius martis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gordius",
-          "authorship": "Werner, 1782",
-          "sourceIds": {
-            "checklistbank": "1053433"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "filaroididae"
-    },
-    {
       "id": "GENUS_FILARIOPSIS",
       "name": "Filariopsis",
       "rank": "GENUS",
@@ -680,19 +646,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:459058"
           },
           "children": []
-        },
-        {
-          "id": "SP_PARAFILAROIDES_HISPIDUS_KENNEDY_1986",
-          "name": "\"Parafilaroides hispidus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parafilaroides",
-          "authorship": "\"(Kennedy, 1986)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:459059"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -721,8 +674,8 @@
       "lineage": "filaroididae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 43,
+  "genusCount": 8,
+  "speciesCount": 40,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

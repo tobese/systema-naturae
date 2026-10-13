@@ -46,7 +46,8 @@
           "sourceIds": {
             "col": [
               "CNQW5"
-            ]
+            ],
+            "checklistbank": "txn:142674"
           },
           "authorityIds": "col:CNQW5",
           "children": []
@@ -63,7 +64,8 @@
           "sourceIds": {
             "col": [
               "CNQW4"
-            ]
+            ],
+            "checklistbank": "txn:142675"
           },
           "authorityIds": "col:CNQW4",
           "children": []
@@ -308,7 +310,8 @@
           "sourceIds": {
             "col": [
               "CFDYF"
-            ]
+            ],
+            "checklistbank": "txn:174132"
           },
           "authorityIds": "col:CFDYF",
           "children": []
@@ -389,6 +392,45 @@
           },
           "authorityIds": "col:KZ5TJ",
           "children": []
+        },
+        {
+          "id": "SP_BALTOCERAS_BURCHARDI_DEWITZ_1879",
+          "name": "Baltoceras burchardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Baltoceras",
+          "authorship": "(Dewitz 1879)",
+          "sourceIds": {
+            "checklistbank": "txn:146350"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BALTOCERAS_STRIATUM_FLOWER_1964",
+          "name": "Baltoceras striatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Baltoceras",
+          "authorship": "Flower 1964",
+          "sourceIds": {
+            "checklistbank": "txn:146353"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BALTOCERAS_MINOR_FLOWER_1955",
+          "name": "Baltoceras minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Baltoceras",
+          "authorship": "Flower 1955",
+          "sourceIds": {
+            "checklistbank": "txn:325183"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -428,7 +470,8 @@
           "sourceIds": {
             "col": [
               "VCVTD"
-            ]
+            ],
+            "checklistbank": "txn:144021"
           },
           "authorityIds": "col:VCVTD",
           "children": []
@@ -448,6 +491,19 @@
             ]
           },
           "authorityIds": "col:CGCCJ",
+          "children": []
+        },
+        {
+          "id": "SP_RHABDIFEROCERAS_PERTINENS_BLAKE_1882",
+          "name": "Rhabdiferoceras pertinens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhabdiferoceras",
+          "authorship": "(Blake 1882)",
+          "sourceIds": {
+            "checklistbank": "txn:359613"
+          },
           "children": []
         }
       ],
@@ -566,7 +622,8 @@
           "sourceIds": {
             "col": [
               "C57RG"
-            ]
+            ],
+            "checklistbank": "txn:142796"
           },
           "authorityIds": "col:C57RG",
           "children": []
@@ -739,7 +796,8 @@
           "sourceIds": {
             "col": [
               "C5ZG9"
-            ]
+            ],
+            "checklistbank": "txn:142798"
           },
           "authorityIds": "col:C5ZG9",
           "children": []
@@ -747,13 +805,70 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Baltoceratidae"
+    },
+    {
+      "id": "GENUS_BACTROCERAS",
+      "name": "Bactroceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BACTROCERAS_ANGUSTISIPHONATUM_R_DIGER_1891",
+          "name": "Bactroceras angustisiphonatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bactroceras",
+          "authorship": "(Rüdiger 1891)",
+          "sourceIds": {
+            "checklistbank": "txn:147528"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BACTROCERAS_AVUS_HOLM_1898",
+          "name": "Bactroceras avus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bactroceras",
+          "authorship": "Holm 1898",
+          "sourceIds": {
+            "checklistbank": "txn:142787"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "baltoceratidae"
+    },
+    {
+      "id": "GENUS_OGYGOCERAS",
+      "name": "Ogygoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OGYGOCERAS_GRACILE_ULRICH_ET_AL_1944",
+          "name": "Ogygoceras gracile",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ogygoceras",
+          "authorship": "Ulrich et al. 1944",
+          "sourceIds": {
+            "checklistbank": "txn:173597"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "baltoceratidae"
     }
   ],
-  "speciesCount": 35,
+  "speciesCount": 42,
   "appSlug": "baltoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 17,
+  "genusCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -761,6 +876,7 @@
       "classKey": 136,
       "orderKey": 11164857,
       "familyKey": 4621692
-    }
+    },
+    "checklistbank": "txn:103402"
   }
 }

@@ -272,26 +272,6 @@
           "authorityIds": "col:G3F3"
         },
         {
-          "id": "SP_ARACHNOIDELLA_PRENANTI",
-          "name": "Arachnoidella prenanti",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Arachnoidella",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "097410a3-c971-530-b61-730714c38e2f04",
-          "sourceIds": {
-            "col": [
-              "G3F4"
-            ],
-            "checklistbank": "937637"
-          },
-          "authorityIds": "col:G3F4",
-          "authorship": "(d'Hondt, 1976)"
-        },
-        {
           "id": "SP_ARACHNOIDELLA_PROTECTA_HARMER_1915",
           "name": "Arachnoidella protecta Harmer, 1915",
           "rank": "SPECIES",
@@ -612,20 +592,6 @@
           "authorityIds": "itis:155530"
         },
         {
-          "id": "SP_ARACHNIDIUM_HIPPOTHOOIDES_HINCKS_1862",
-          "name": "Arachnidium hippothooides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arachnidium",
-          "authorship": "Hincks, 1862",
-          "sourceIds": {
-            "checklistbank": "42126"
-          },
-          "children": [],
-          "uuid": "1af097aa-fa87-5ee-b1e-7144891261cfea"
-        },
-        {
           "id": "SP_ARACHNIDIUM_FIBROSUM",
           "name": "Arachnidium fibrosum",
           "rank": "SPECIES",
@@ -922,19 +888,6 @@
           "children": []
         },
         {
-          "id": "SP_ARACHNOIDEA_PRENANTI_D_HONDT_1976",
-          "name": "Arachnoidea prenanti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arachnoidea",
-          "authorship": "d'Hondt, 1976",
-          "sourceIds": {
-            "checklistbank": "937638"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ARACHNOIDEA_RAYLANKASTERI",
           "name": "Arachnoidea raylankasteri",
           "rank": "SPECIES",
@@ -1137,10 +1090,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "arachnidiidae"
+    },
+    {
+      "id": "GENUS_SIMPLICIDIUM",
+      "name": "Simplicidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIMPLICIDIUM_SMITHII_PHILLIPS_1829",
+          "name": "Simplicidium smithii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simplicidium",
+          "authorship": "(Phillips 1829)",
+          "sourceIds": {
+            "checklistbank": "txn:426613"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIMPLICIDIUM_BRANDESI_VOIGT_1968",
+          "name": "Simplicidium brandesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simplicidium",
+          "authorship": "(Voigt 1968)",
+          "sourceIds": {
+            "checklistbank": "txn:426637"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "arachnidiidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 66,
+  "genusCount": 12,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1149,6 +1137,6 @@
       "orderKey": 998,
       "familyKey": 3491
     },
-    "checklistbank": "3078913"
+    "checklistbank": "ott2935322"
   }
 }

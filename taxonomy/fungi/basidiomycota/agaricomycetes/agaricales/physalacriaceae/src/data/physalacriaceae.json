@@ -6124,10 +6124,12 @@
             "col": [
               "4SCPD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437816"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:437816"
+            ]
           },
           "uuid": "e83e52c3-f081-55b-bf9-83c49446610f3c",
-          "authorityIds": "col:4SCPD,gbif:2537095,mycobank:467533"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:437816,col:4SCPD,gbif:2537095,mycobank:467533"
         },
         {
           "id": "RHIZOMARASMIUS_SETOSUS",
@@ -6584,10 +6586,12 @@
             "col": [
               "6KK8B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438081"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:438081"
+            ]
           },
           "uuid": "21ce7d4f-f240-5a9-b45-78647ada3cd52c",
-          "authorityIds": "col:6KK8B,gbif:3560912,mycobank:413118"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:438081,col:6KK8B,gbif:3560912,mycobank:413118"
         },
         {
           "id": "GLOIOCEPHALA_CAPILLATA",
@@ -7271,10 +7275,12 @@
             "col": [
               "3GCB2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437684"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:437684"
+            ]
           },
           "uuid": "65378aa4-0828-536-a76-9c1dfad680ace7",
-          "authorityIds": "col:3GCB2,gbif:2538024,mycobank:362104"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:437684,col:3GCB2,gbif:2538024,mycobank:362104"
         },
         {
           "id": "GLOIOCEPHALA_PODOCARPORUM",
@@ -7936,33 +7942,6 @@
           },
           "uuid": "1adff77c-2a14-5f9-a58-742b5b6a0890f5",
           "authorityIds": "col:44ZB8,gbif:9737679,mycobank:809685"
-        },
-        {
-          "id": "MYCOTRIBULUS_MIRABILIS",
-          "name": "Mycotribulus mirabilis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Mycotribulus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "Nag Raj & W.B. Kendrick",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "2591844"
-            ],
-            "mycobank": [
-              "318353"
-            ],
-            "col": [
-              "44ZB9"
-            ],
-            "checklistbank": "464698"
-          },
-          "uuid": "8c0b396c-75ce-5c4-90f-82469aaea9c0cb",
-          "authorityIds": "col:44ZB9,gbif:2591844,mycobank:318353"
         }
       ],
       "authorship": "Nag Raj & W.B. Kendrick"
@@ -13045,19 +13024,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RHIZOMORPHA_SETIFORMIS_ROTH",
-          "name": "Rhizomorpha setiformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhizomorpha",
-          "authorship": "Roth",
-          "sourceIds": {
-            "checklistbank": "133698"
-          },
-          "children": []
-        },
-        {
           "id": "SP_RHIZOMORPHA_CORYNEPHORA_KUNZE_1828",
           "name": "Rhizomorpha corynephora",
           "rank": "SPECIES",
@@ -14292,41 +14258,6 @@
       "lineage": "physalacriaceae"
     },
     {
-      "id": "GENUS_GLOIOCEPHALA",
-      "name": "\"Gloiocephala",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GLOIOCEPHALA_PHORMIORUM_E_HORAK_DESJARDIN_1994",
-          "name": "\"Gloiocephala phormiorum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gloiocephala",
-          "authorship": "\"E. Horak & Desjardin, 1994\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437684"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GLOIOCEPHALA_AQUATICA_DESJARDIN_MART_PECK_RAJCHENB_1995",
-          "name": "\"Gloiocephala aquatica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gloiocephala",
-          "authorship": "\"Desjardin, Mart.-Peck & Rajchenb., 1995\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438081"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "physalacriaceae"
-    },
-    {
       "id": "GENUS_PHYSALACRIA",
       "name": "\"Physalacria",
       "rank": "GENUS",
@@ -14341,28 +14272,6 @@
           "authorship": "\"Inderb. & Desjardin, 1999\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:437792"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "physalacriaceae"
-    },
-    {
-      "id": "GENUS_RHIZOMARASMIUS",
-      "name": "\"Rhizomarasmius",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_RHIZOMARASMIUS_PYRRHOCEPHALUS_BERK_R_H_PETERSEN_2000",
-          "name": "\"Rhizomarasmius pyrrhocephalus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhizomarasmius",
-          "authorship": "\"(Berk.) R.H. Petersen, 2000\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:437816"
           },
           "children": []
         }
@@ -14394,8 +14303,8 @@
     }
   ],
   "authorship": "Corner",
-  "genusCount": 60,
-  "speciesCount": 661,
+  "genusCount": 58,
+  "speciesCount": 656,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

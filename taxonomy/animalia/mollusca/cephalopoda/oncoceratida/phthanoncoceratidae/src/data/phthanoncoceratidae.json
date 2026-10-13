@@ -22,7 +22,8 @@
               "CQQ7C"
             ]
           },
-          "authorityIds": "col:CQQ7C"
+          "authorityIds": "col:CQQ7C",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -45,9 +46,11 @@
           "sourceIds": {
             "col": [
               "CGJB9"
-            ]
+            ],
+            "checklistbank": "txn:147268"
           },
-          "authorityIds": "col:CGJB9"
+          "authorityIds": "col:CGJB9",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -72,7 +75,8 @@
               "CGN3D"
             ]
           },
-          "authorityIds": "col:CGN3D"
+          "authorityIds": "col:CGN3D",
+          "children": []
         },
         {
           "id": "SP_PHTHANONCOCERAS_ELLIPTICUM_LOSSEN_1860",
@@ -88,7 +92,8 @@
               "CG7XR"
             ]
           },
-          "authorityIds": "col:CG7XR"
+          "authorityIds": "col:CG7XR",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -113,24 +118,48 @@
               "CQSD7"
             ]
           },
-          "authorityIds": "col:CQSD7"
+          "authorityIds": "col:CQSD7",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Phthanoncoceratidae"
+    },
+    {
+      "id": "GENUS_PHTANONCOCERAS",
+      "name": "Phtanoncoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHTANONCOCERAS_OELANDENSE_EVANS_AND_KING_1990",
+          "name": "Phtanoncoceras oelandense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phtanoncoceras",
+          "authorship": "Evans and King 1990",
+          "sourceIds": {
+            "checklistbank": "txn:147269"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phthanoncoceratidae"
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 6,
   "appSlug": "phthanoncoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4625169
-    }
+    },
+    "checklistbank": "txn:147267"
   }
 }

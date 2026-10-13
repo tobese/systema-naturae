@@ -86,9 +86,11 @@
             "col": [
               "PJJ7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472043"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:472043"
+            ]
           },
-          "authorityIds": "col:PJJ7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:472043,col:PJJ7",
           "authorship": "(Maplestone, 1909)"
         },
         {
@@ -124,9 +126,11 @@
             "col": [
               "86F7K"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410260"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1410260"
+            ]
           },
-          "authorityIds": "col:86F7K",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410260,col:86F7K",
           "authorship": "(Meunier & Pergens, 1886)"
         },
         {
@@ -263,6 +267,19 @@
             ]
           },
           "authorityIds": "col:584L5"
+        },
+        {
+          "id": "SP_TRETOSINA_ARCIFERA_CANU_AND_BASSLER_1927",
+          "name": "Tretosina arcifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tretosina",
+          "authorship": "Canu and Bassler 1927",
+          "sourceIds": {
+            "checklistbank": "txn:328525"
+          },
+          "children": []
         }
       ]
     },
@@ -306,9 +323,11 @@
             "col": [
               "86JZP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411400"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411400"
+            ]
           },
-          "authorityIds": "col:86JZP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411400,col:86JZP",
           "authorship": "(d'Orbigny, 1852)"
         },
         {
@@ -326,9 +345,11 @@
             "col": [
               "86JZQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411401"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411401"
+            ]
           },
-          "authorityIds": "col:86JZQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411401,col:86JZQ",
           "authorship": "(Goldfuss, 1826)"
         },
         {
@@ -346,9 +367,11 @@
             "col": [
               "86JZR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411402"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411402"
+            ]
           },
-          "authorityIds": "col:86JZR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411402,col:86JZR",
           "authorship": "(d'Orbigny, 1853)"
         },
         {
@@ -366,9 +389,11 @@
             "col": [
               "86JZS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411403"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411403"
+            ]
           },
-          "authorityIds": "col:86JZS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411403,col:86JZS",
           "authorship": "(von Hagenow, 1851)"
         },
         {
@@ -386,47 +411,14 @@
             "col": [
               "86JZT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411404"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411404"
+            ]
           },
-          "authorityIds": "col:86JZT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411404,col:86JZT",
           "authorship": "(von Hagenow, 1851)"
         }
       ]
-    },
-    {
-      "id": "GENUS_CALESCHARA",
-      "name": "\"Caleschara",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CALESCHARA_MINUTA_MAPLESTONE_1909",
-          "name": "\"Caleschara minuta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Caleschara",
-          "authorship": "\"(Maplestone, 1909)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472043"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CALESCHARA_SQUAMOSA_MEUNIER_PERGENS_1886",
-          "name": "\"Caleschara squamosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Caleschara",
-          "authorship": "\"(Meunier & Pergens, 1886)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410260"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "calescharidae"
     },
     {
       "id": "GENUS_TRETOSINA",
@@ -462,84 +454,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calescharidae"
-    },
-    {
-      "id": "GENUS_HAGENOWINELLA",
-      "name": "\"Hagenowinella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HAGENOWINELLA_CRYPTELLA_D_ORBIGNY_1852",
-          "name": "\"Hagenowinella cryptella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hagenowinella",
-          "authorship": "\"(d'Orbigny, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411400"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HAGENOWINELLA_DENTATA_GOLDFUSS_1826",
-          "name": "\"Hagenowinella dentata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hagenowinella",
-          "authorship": "\"(Goldfuss, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411401"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HAGENOWINELLA_INCRASSATA_D_ORBIGNY_1853",
-          "name": "\"Hagenowinella incrassata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hagenowinella",
-          "authorship": "\"(d'Orbigny, 1853)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411402"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HAGENOWINELLA_ODONTOPHORA_VON_HAGENOW_1851",
-          "name": "\"Hagenowinella odontophora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hagenowinella",
-          "authorship": "\"(von Hagenow, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411403"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HAGENOWINELLA_VAGINATA_VON_HAGENOW_1851",
-          "name": "\"Hagenowinella vaginata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hagenowinella",
-          "authorship": "\"(von Hagenow, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411404"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "calescharidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 30,
+  "genusCount": 4,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -548,6 +466,6 @@
       "orderKey": 467,
       "familyKey": 2106
     },
-    "checklistbank": "2780309"
+    "checklistbank": "8d19caff-5d25-4264-908a-d476b991aec5"
   }
 }

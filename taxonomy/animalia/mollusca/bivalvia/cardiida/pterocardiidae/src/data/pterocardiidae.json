@@ -72,9 +72,11 @@
             "col": [
               "4PVG8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:873309"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:873309"
+            ]
           },
-          "authorityIds": "col:4PVG8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:873309,col:4PVG8",
           "authorship": "(F. A. Quenstedt, 1852)"
         },
         {
@@ -92,9 +94,11 @@
             "col": [
               "4PVG9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:873308"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:873308"
+            ]
           },
-          "authorityIds": "col:4PVG9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:873308,col:4PVG9",
           "authorship": "(Leymerie, 1846)"
         },
         {
@@ -170,9 +174,11 @@
             "col": [
               "4PVGB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1043872"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1043872"
+            ]
           },
-          "authorityIds": "col:4PVGB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1043872,col:4PVGB",
           "authorship": "(A. d'Orbigny, 1850)"
         },
         {
@@ -245,6 +251,19 @@
           },
           "children": [],
           "uuid": "009c0bfb-d7c4-514-beb-e2bce8477ea03d"
+        },
+        {
+          "id": "SP_PTEROCARDIA_ANDRIACENSIS_COSSMANN_1900",
+          "name": "Pterocardia andriacensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterocardia",
+          "authorship": "(Cossmann 1900)",
+          "sourceIds": {
+            "checklistbank": "txn:332471"
+          },
+          "children": []
         }
       ]
     },
@@ -328,58 +347,10 @@
           "authorityIds": "col:KTVPX"
         }
       ]
-    },
-    {
-      "id": "GENUS_PTEROCARDIA",
-      "name": "\"Pterocardia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PTEROCARDIA_CORALLINA_LEYMERIE_1846",
-          "name": "\"Pterocardia corallina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pterocardia",
-          "authorship": "\"(Leymerie, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:873308"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PTEROCARDIA_COCHLEATA_F_A_QUENSTEDT_1852",
-          "name": "\"Pterocardia cochleata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pterocardia",
-          "authorship": "\"(F. A. Quenstedt, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:873309"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PTEROCARDIA_SUBMINUTA_A_D_ORBIGNY_1850",
-          "name": "\"Pterocardia subminuta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pterocardia",
-          "authorship": "\"(A. d'Orbigny, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1043872"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pterocardiidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 21,
+  "genusCount": 2,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -387,6 +358,7 @@
       "classKey": 137,
       "orderKey": 9529005,
       "familyKey": 8374237
-    }
+    },
+    "checklistbank": "txn:161557"
   }
 }

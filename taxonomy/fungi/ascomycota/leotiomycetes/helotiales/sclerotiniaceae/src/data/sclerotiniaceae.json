@@ -323,33 +323,6 @@
           "authorityIds": "col:V583,gbif:2582976,mycobank:311127"
         },
         {
-          "id": "CIBORINIA_CANDOLLEANA",
-          "name": "Ciborinia candolleana",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ciborinia",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Léveillé) Whetzel",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "2582970"
-            ],
-            "mycobank": [
-              "285221"
-            ],
-            "col": [
-              "V584"
-            ],
-            "checklistbank": "227369"
-          },
-          "uuid": "71b2f3d4-8b96-5d7-a27-416b4d1c27d5a6",
-          "authorityIds": "col:V584,gbif:2582970,mycobank:285221"
-        },
-        {
           "id": "CIBORINIA_CIBORIUM",
           "name": "Ciborinia ciborium",
           "rank": "SPECIES",
@@ -1480,19 +1453,6 @@
           "authorship": "(Roberge ex Desm.) N.F.Buchw., 1947",
           "sourceIds": {
             "checklistbank": "48751"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYRIOSCLEROTINIA_BOREALIS_BUB_K_VLEUGEL_L_M_KOHN_1979",
-          "name": "Myriosclerotinia borealis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myriosclerotinia",
-          "authorship": "(Bubák & Vleugel) L.M.Kohn, 1979",
-          "sourceIds": {
-            "checklistbank": "856660"
           },
           "children": []
         },
@@ -3139,33 +3099,6 @@
           "authorityIds": "col:5YT8S,gbif:3485839,mycobank:285212"
         },
         {
-          "id": "CIBORIA_POLYGONI",
-          "name": "Ciboria polygoni",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Ciboria",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Rehm) N.F. Buchwald",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "3485826"
-            ],
-            "mycobank": [
-              "285213"
-            ],
-            "col": [
-              "V56F"
-            ],
-            "checklistbank": "860242"
-          },
-          "uuid": "56510cf9-c64e-5cc-aa3-15c6a224fe178b",
-          "authorityIds": "col:V56F,gbif:3485826,mycobank:285213"
-        },
-        {
           "id": "CIBORIA_POLYGONI-VIVIPARI",
           "name": "Ciboria polygoni-vivipari",
           "rank": "SPECIES",
@@ -4235,9 +4168,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ciboria",
           "sourceIds": {
-            "checklistbank": "1436326"
+            "checklistbank": [
+              "1436326"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:1436326"
         },
         {
           "id": "SP_CIBORIA_AFF",
@@ -4248,18 +4184,6 @@
           "lineage": "Ciboria",
           "sourceIds": {
             "checklistbank": "1792666"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIBORIA_NYSSOGENA",
-          "name": "Ciboria nyssogena",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ciboria",
-          "sourceIds": {
-            "checklistbank": "1436326"
           },
           "children": []
         }
@@ -7443,18 +7367,6 @@
           "authorship": "J.C. Walker, 1925"
         },
         {
-          "id": "SP_BOTRYTIS_AURANTIACA",
-          "name": "Botrytis aurantiaca",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Botrytis",
-          "sourceIds": {
-            "checklistbank": "906032"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BOTRYTIS_PANNOSA",
           "name": "Botrytis pannosa",
           "rank": "SPECIES",
@@ -7624,10 +7536,12 @@
             "col": [
               "4VQRF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988871"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:988871"
+            ]
           },
           "uuid": "e8055632-9d85-526-82c-8a2915661b80eb",
-          "authorityIds": "col:4VQRF,gbif:2583181,mycobank:130648"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:988871,col:4VQRF,gbif:2583181,mycobank:130648"
         },
         {
           "id": "SCLEROTINIA_ARCTICA",
@@ -10785,19 +10699,6 @@
           "children": []
         },
         {
-          "id": "SP_SCLEROTINIA_ALNI_MAUL_1894",
-          "name": "Sclerotinia alni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sclerotinia",
-          "authorship": "Maul, 1894",
-          "sourceIds": {
-            "checklistbank": "978306"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SCLEROTINIA_CASSIOPES_ROSTR_1896",
           "name": "Sclerotinia cassiopes",
           "rank": "SPECIES",
@@ -12542,33 +12443,6 @@
           },
           "uuid": "fcc39613-9b7c-5b7-a97-cb7aeced62b1c2",
           "authorityIds": "col:458TL,gbif:2583299,mycobank:318414"
-        },
-        {
-          "id": "MYRIOCONIUM_COMITATUM",
-          "name": "Myrioconium comitatum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Myrioconium",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "Davis",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "7245839"
-            ],
-            "mycobank": [
-              "228315"
-            ],
-            "col": [
-              "458TM"
-            ],
-            "checklistbank": "881041"
-          },
-          "uuid": "55fca8b2-22c4-58b-af1-d314c32ca4825d",
-          "authorityIds": "col:458TM,gbif:7245839,mycobank:228315"
         },
         {
           "id": "MYRIOCONIUM_LONGISCLEROTIALE",
@@ -16161,10 +16035,12 @@
             "col": [
               "MQ83"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:177866"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:177866"
+            ]
           },
           "uuid": "a1c63c60-25b5-51e-a44-4cc094659afeaf",
-          "authorityIds": "col:MQ83,gbif:3300253,itis:14183,mycobank:284641"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:177866,col:MQ83,gbif:3300253,itis:14183,mycobank:284641"
         }
       ],
       "authorship": "Linder"
@@ -19637,27 +19513,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_COPROTINIA_MINUTULA_WHETZEL",
-          "name": "Coprotinia minutula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Coprotinia",
-          "authorship": "Whetzel",
-          "children": [],
-          "uuid": "3c87015a-766d-577-852-0f39b77b957a68",
-          "sourceIds": {
-            "mycobank": [
-              "285584"
-            ],
-            "itis": [
-              "181704"
-            ],
-            "checklistbank": "54676"
-          },
-          "authorityIds": "itis:181704,mycobank:285584"
-        },
-        {
           "id": "SP_COPROTINIA_CUNICULI_BOUD_DENNIS_1962",
           "name": "Coprotinia cuniculi",
           "rank": "SPECIES",
@@ -20632,19 +20487,6 @@
           "children": []
         },
         {
-          "id": "SP_PEZIZA_EXPLANATA_HOLMSK_1799",
-          "name": "Peziza explanata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Peziza",
-          "authorship": "Holmsk., 1799",
-          "sourceIds": {
-            "checklistbank": "983251"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PEZIZA_KERNERI_WETTST_1887",
           "name": "Peziza kerneri",
           "rank": "SPECIES",
@@ -21341,19 +21183,6 @@
           "authorship": "(Pers.) P.Karst., 1870",
           "sourceIds": {
             "checklistbank": "878619"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HELOTIUM_PHLEBOPHORUM_PAT_1902",
-          "name": "Helotium phlebophorum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Helotium",
-          "authorship": "Pat., 1902",
-          "sourceIds": {
-            "checklistbank": "880194"
           },
           "children": []
         }
@@ -23104,18 +22933,6 @@
           "children": []
         },
         {
-          "id": "SP_UNCULTURED_MONILINIA",
-          "name": "uncultured Monilinia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "uncultured",
-          "sourceIds": {
-            "checklistbank": "1048540"
-          },
-          "children": []
-        },
-        {
           "id": "SP_UNCULTURED_TORRENDIELLA",
           "name": "uncultured Torrendiella",
           "rank": "SPECIES",
@@ -23304,45 +23121,10 @@
       "lineage": "sclerotiniaceae"
     },
     {
-      "id": "GENUS_BOTRYOPHIALOPHORA",
-      "name": "\"Botryophialophora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BOTRYOPHIALOPHORA_MARINA_LINDER_1944",
-          "name": "\"Botryophialophora marina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Botryophialophora",
-          "authorship": "\"Linder, 1944\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:177866"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sclerotiniaceae"
-    },
-    {
       "id": "GENUS_SCLEROTINIA",
       "name": "\"Sclerotinia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_SCLEROTINIA_ANTARCTICA_GAMUND_SPINEDI_1987",
-          "name": "\"Sclerotinia antarctica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sclerotinia",
-          "authorship": "\"Gamundí & Spinedi, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988871"
-          },
-          "children": []
-        },
         {
           "id": "SP_SCLEROTINIA_SCLEROTIORUM_LIB_DE_BARY_1884",
           "name": "\"Sclerotinia sclerotiorum\"",
@@ -23419,8 +23201,8 @@
     }
   ],
   "authorship": "Whetzel",
-  "genusCount": 122,
-  "speciesCount": 1082,
+  "genusCount": 121,
+  "speciesCount": 1069,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

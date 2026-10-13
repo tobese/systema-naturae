@@ -43,9 +43,11 @@
             "col": [
               "R52M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225068"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225068"
+            ]
           },
-          "authorityIds": "col:R52M,itis:72867"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225068,col:R52M,itis:72867"
         },
         {
           "id": "SP_CARDIAPODA_RICHARDI_VAYSSI_RE_1904",
@@ -144,9 +146,11 @@
             "itis": [
               "72858"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:574935"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:574935"
+            ]
           },
-          "authorityIds": "col:RD8K,itis:72858"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:574935,col:RD8K,itis:72858"
         },
         {
           "id": "SP_CARINARIA_ELATA_G_B_SOWERBY_III_1893",
@@ -341,9 +345,11 @@
             "col": [
               "RD92"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1298271"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1298271"
+            ]
           },
-          "authorityIds": "col:RD92",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1298271,col:RD92",
           "authorship": "(Di Geronimo, 1974)"
         },
         {
@@ -621,67 +627,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_CARDIAPODA",
-      "name": "\"Cardiapoda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CARDIAPODA_PLACENTA_LESSON_1830",
-          "name": "\"Cardiapoda placenta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cardiapoda",
-          "authorship": "\"(Lesson, 1830)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225068"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "carinariidae"
-    },
-    {
-      "id": "GENUS_CARINARIA",
-      "name": "\"Carinaria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CARINARIA_CRISTATA_LINNAEUS_1767",
-          "name": "\"Carinaria cristata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Carinaria",
-          "authorship": "\"(Linnaeus, 1767)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:574935"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CARINARIA_STRIATA_DI_GERONIMO_1974",
-          "name": "\"Carinaria striata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Carinaria",
-          "authorship": "\"(Di Geronimo, 1974)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1298271"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "carinariidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 40,
+  "genusCount": 3,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

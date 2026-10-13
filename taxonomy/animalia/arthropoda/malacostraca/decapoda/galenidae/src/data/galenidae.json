@@ -92,9 +92,11 @@
             "col": [
               "4D78T"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:442356"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:442356"
+            ]
           },
-          "authorityIds": "col:4D78T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:442356,col:4D78T",
           "children": []
         },
         {
@@ -267,6 +269,19 @@
           },
           "authorityIds": "col:BCY75",
           "children": []
+        },
+        {
+          "id": "SP_GALENE_LITORALISTEMP_COLLINS_ET_AL_2003",
+          "name": "Galene litoralistemp",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galene",
+          "authorship": "Collins et al. 2003",
+          "sourceIds": {
+            "checklistbank": "txn:353600"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -395,7 +410,8 @@
           "sourceIds": {
             "col": [
               "BC4YY"
-            ]
+            ],
+            "checklistbank": "txn:404278"
           },
           "authorityIds": "col:BC4YY",
           "children": []
@@ -495,42 +511,20 @@
       "lineage": "galenidae"
     },
     {
-      "id": "GENUS_CANCER",
-      "name": "Cancer",
+      "id": "GENUS_PODOPILUMNUS",
+      "name": "Podopilumnus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CANCER_FRAGIFER_DE_HAAN_1835",
-          "name": "Cancer fragifer",
+          "id": "SP_PODOPILUMNUS_FITTONI_M_COY_1849",
+          "name": "Podopilumnus fittoni",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "Cancer",
-          "authorship": "De Haan, 1835",
+          "lineage": "Podopilumnus",
+          "authorship": "M'Coy 1849",
           "sourceIds": {
-            "checklistbank": "1046902"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "galenidae"
-    },
-    {
-      "id": "GENUS_PARAPANOPE",
-      "name": "\"Parapanope",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARAPANOPE_SERENEI_GUINOT_NG_I_IN_I_GUINOT_1985",
-          "name": "\"Parapanope serenei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parapanope",
-          "authorship": "\"Guinot & Ng <i>in</i> Guinot, 1985\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:442356"
+            "checklistbank": "txn:404394"
           },
           "children": []
         }
@@ -543,7 +537,7 @@
   "appSlug": "galenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 8,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -552,6 +546,6 @@
       "orderKey": 637,
       "familyKey": 3254406
     },
-    "checklistbank": "ott4668936"
+    "checklistbank": "ab15c3dc-e16f-4a88-bb90-ab27f004a779"
   }
 }

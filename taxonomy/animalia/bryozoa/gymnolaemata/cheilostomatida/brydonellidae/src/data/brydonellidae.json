@@ -71,7 +71,11 @@
           "description": "",
           "sourcedFrom": "none",
           "uuid": "9f8fc2e7-06cd-58f-b18-289118c95e27f3",
-          "children": []
+          "children": [],
+          "authorship": "(von Hagenow 1839)",
+          "sourceIds": {
+            "checklistbank": "txn:510856"
+          }
         },
         {
           "id": "SP_HOMALOSTEGA_HARTFORDENSIS_BRYDONE_1936",
@@ -122,9 +126,11 @@
             "col": [
               "86F5Z"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410232"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1410232"
+            ]
           },
-          "authorityIds": "col:86F5Z",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410232,col:86F5Z",
           "authorship": "(Brydone, 1913)",
           "children": []
         },
@@ -143,32 +149,10 @@
           "uuid": "9362b3e7-2de9-588-877-0ef26b4e8586f2"
         }
       ]
-    },
-    {
-      "id": "GENUS_BRYDONELLA",
-      "name": "\"Brydonella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BRYDONELLA_VULCANI_BRYDONE_1913",
-          "name": "\"Brydonella vulcani\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Brydonella",
-          "authorship": "\"(Brydone, 1913)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410232"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "brydonellidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 8,
+  "genusCount": 4,
+  "speciesCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -176,6 +160,7 @@
       "classKey": 252,
       "orderKey": 467,
       "familyKey": 2101
-    }
+    },
+    "checklistbank": "txn:510569"
   }
 }

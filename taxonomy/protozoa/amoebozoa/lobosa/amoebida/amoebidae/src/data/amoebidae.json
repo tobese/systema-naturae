@@ -80,10 +80,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 7935562,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:722973"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:722973"
+            ]
           },
           "uuid": "af41aabd-c03f-5bd-9c5-353c03c728a519",
-          "authorityIds": "gbif:7935562",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:722973,gbif:7935562",
           "authorship": "Kirk, 1906"
         },
         {
@@ -99,10 +101,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 5730689,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:345558"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:345558"
+            ]
           },
           "uuid": "4fcc54fc-498c-56a-bc3-bb81af54ce8ab7",
-          "authorityIds": "gbif:5730689"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:345558,gbif:5730689"
         },
         {
           "id": "AMOEBA_DISCOIDES",
@@ -861,44 +865,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amoebidae"
-    },
-    {
-      "id": "GENUS_AMOEBA",
-      "name": "\"Amoeba",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AMOEBA_BIDDULPHIAE",
-          "name": "\"Amoeba biddulphiae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Amoeba",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:345558"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AMOEBA_AGILIS_KIRK_1906",
-          "name": "\"Amoeba agilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Amoeba",
-          "authorship": "\"Kirk, 1906\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:722973"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "amoebidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 44,
+  "genusCount": 13,
+  "speciesCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,

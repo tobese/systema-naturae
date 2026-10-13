@@ -30,9 +30,11 @@
             "col": [
               "CD86H"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796342"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1796342"
+            ]
           },
-          "authorityIds": "col:CD86H,itis:58605"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1796342,col:CD86H,itis:58605"
         },
         {
           "id": "SP_DIPLEUCHLANIS_ELEGANS",
@@ -1557,41 +1559,6 @@
       "lineage": "euchlanidae"
     },
     {
-      "id": "GENUS_DAPIDIA",
-      "name": "Dapidia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DAPIDIA_DEFLEXA_GOSSE_1851",
-          "name": "Dapidia deflexa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dapidia",
-          "authorship": "Gosse, 1851",
-          "sourceIds": {
-            "checklistbank": "1036584"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DAPIDIA_CALPIDIA_MYERS_1930",
-          "name": "Dapidia calpidia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dapidia",
-          "authorship": "Myers, 1930",
-          "sourceIds": {
-            "checklistbank": "1042063"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "euchlanidae"
-    },
-    {
       "id": "GENUS_TRIPLEUCHLANIS",
       "name": "\"Tripleuchlanis",
       "rank": "GENUS",
@@ -1641,19 +1608,6 @@
           "authorship": "\"(Gosse, 1886)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1795251"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DIPLEUCHLANIS_CONRADI_EVENS_1947",
-          "name": "\"Dipleuchlanis conradi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipleuchlanis",
-          "authorship": "\"Evens, 1947\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796342"
           },
           "children": []
         }
@@ -1758,8 +1712,8 @@
       "lineage": "euchlanidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 90,
+  "genusCount": 12,
+  "speciesCount": 87,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1768,6 +1722,6 @@
       "orderKey": 1235,
       "familyKey": 8061
     },
-    "checklistbank": "1213223"
+    "checklistbank": "12189"
   }
 }

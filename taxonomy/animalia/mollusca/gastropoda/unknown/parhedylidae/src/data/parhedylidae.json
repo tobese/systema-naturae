@@ -72,9 +72,11 @@
             "col": [
               "42X89"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467493"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:467493"
+            ]
           },
-          "authorityIds": "col:42X89",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:467493,col:42X89",
           "authorship": "(Doe, 1974)"
         },
         {
@@ -291,9 +293,11 @@
             "col": [
               "4DLV2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:556014"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:556014"
+            ]
           },
-          "authorityIds": "col:4DLV2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:556014,col:4DLV2",
           "authorship": "(Westheide & Wawra, 1974)"
         },
         {
@@ -311,9 +315,11 @@
             "col": [
               "4DLV4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:878374"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:878374"
+            ]
           },
-          "authorityIds": "col:4DLV4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:878374,col:4DLV4",
           "authorship": "(Ev. Marcus & Er. Marcus, 1955)"
         },
         {
@@ -331,9 +337,11 @@
             "col": [
               "4DLV5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:556015"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:556015"
+            ]
           },
-          "authorityIds": "col:4DLV5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:556015,col:4DLV5",
           "authorship": "(Kowalevsky, 1900)"
         },
         {
@@ -943,19 +951,6 @@
           "children": []
         },
         {
-          "id": "SP_MICROHEDYLE_NAHANTENSIS_DOE_1974",
-          "name": "\"Microhedyle nahantensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Microhedyle",
-          "authorship": "\"(Doe, 1974)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467493"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MICROHEDYLE_REMANEI_ER_MARCUS_1953",
           "name": "\"Microhedyle remanei\"",
           "rank": "SPECIES",
@@ -971,58 +966,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "parhedylidae"
-    },
-    {
-      "id": "GENUS_PARHEDYLE",
-      "name": "\"Parhedyle",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARHEDYLE_CRYPTOPHTHALMA_WESTHEIDE_WAWRA_1974",
-          "name": "\"Parhedyle cryptophthalma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parhedyle",
-          "authorship": "\"(Westheide & Wawra, 1974)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:556014"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARHEDYLE_TYRTOWII_KOWALEVSKY_1900",
-          "name": "\"Parhedyle tyrtowii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parhedyle",
-          "authorship": "\"(Kowalevsky, 1900)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:556015"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARHEDYLE_ODHNERI_EV_MARCUS_ER_MARCUS_1955",
-          "name": "\"Parhedyle odhneri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parhedyle",
-          "authorship": "\"(Ev. Marcus & Er. Marcus, 1955)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:878374"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "parhedylidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 58,
+  "genusCount": 11,
+  "speciesCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

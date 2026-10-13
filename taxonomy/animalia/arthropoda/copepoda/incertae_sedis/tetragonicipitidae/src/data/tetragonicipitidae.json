@@ -1938,20 +1938,6 @@
           "uuid": "6a6d75e9-8f34-51e-937-14e5d287bdcbd2"
         },
         {
-          "id": "SP_TETRAGONICEPS_MACRONYX_SCOTT_T_1892",
-          "name": "Tetragoniceps macronyx",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tetragoniceps",
-          "authorship": "Scott T., 1892",
-          "sourceIds": {
-            "checklistbank": "210220"
-          },
-          "children": [],
-          "uuid": "112c75b3-f256-596-8e8-0d28d8cdda7fb3"
-        },
-        {
           "id": "SP_TETRAGONICEPS_CONCAVUS_CHO_SEO_KIM_LEE_2026",
           "name": "Tetragoniceps concavus",
           "rank": "SPECIES",
@@ -2020,19 +2006,6 @@
           },
           "children": [],
           "uuid": "fe361520-f5ed-59e-9c3-c9fb8c0fe5ddfd"
-        },
-        {
-          "id": "SP_TETRAGONICEPS_MALLEOLATUS_BRADY_1880",
-          "name": "Tetragoniceps malleolatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tetragoniceps",
-          "authorship": "Brady, 1880",
-          "sourceIds": {
-            "checklistbank": "375726"
-          },
-          "children": []
         },
         {
           "id": "SP_TETRAGONICEPS_BRADYI_SCOTT_T_1892",
@@ -2464,24 +2437,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PTEROPSYLLUS_CONSIMILIS_SCOTT_T_1894",
-          "name": "Pteropsyllus consimilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "pteropsyllus",
-          "authorship": "(Scott T., 1894)",
-          "children": [],
-          "uuid": "0dceed19-2207-5b0-830-2c1f3d85e8613c",
-          "sourceIds": {
-            "col": [
-              "4Q2RV"
-            ],
-            "checklistbank": "43943"
-          },
-          "authorityIds": "col:4Q2RV"
-        },
-        {
           "id": "SP_PTEROPSYLLUS_TRISETOSUS_MIELKE_1989",
           "name": "Pteropsyllus trisetosus",
           "rank": "SPECIES",
@@ -2513,9 +2468,11 @@
             "col": [
               "BHGH2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:233940"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:233940"
+            ]
           },
-          "authorityIds": "col:BHGH2"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:233940,col:BHGH2"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2793,28 +2750,6 @@
       "lineage": "tetragonicipitidae"
     },
     {
-      "id": "GENUS_PTEROPSYLLUS",
-      "name": "\"Pteropsyllus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PTEROPSYLLUS_PLEBEIUS_KUNZ_1938",
-          "name": "\"Pteropsyllus plebeius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pteropsyllus",
-          "authorship": "\"Kunz, 1938\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:233940"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tetragonicipitidae"
-    },
-    {
       "id": "GENUS_PHYLLOPODOPSYLLUS",
       "name": "\"Phyllopodopsyllus",
       "rank": "GENUS",
@@ -2885,11 +2820,11 @@
       "lineage": "tetragonicipitidae"
     }
   ],
-  "speciesCount": 148,
+  "speciesCount": 144,
   "appSlug": "tetragonicipitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 21,
+  "genusCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

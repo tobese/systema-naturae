@@ -51,9 +51,11 @@
             "col": [
               "583TQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:237820"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:237820"
+            ]
           },
-          "authorityIds": "col:583TQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:237820,col:583TQ",
           "authorship": "(Souleyet, 1852)"
         },
         {
@@ -200,54 +202,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tremoctopodidae"
-    },
-    {
-      "id": "GENUS_OCTOPUS",
-      "name": "Octopus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OCTOPUS_GRACILIS_SOULEYET_1852",
-          "name": "Octopus gracilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Octopus",
-          "authorship": "Souleyet, 1852",
-          "sourceIds": {
-            "checklistbank": "925124"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tremoctopodidae"
-    },
-    {
-      "id": "GENUS_TREMOCTOPUS",
-      "name": "\"Tremoctopus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TREMOCTOPUS_GRACILIS_SOULEYET_1852",
-          "name": "\"Tremoctopus gracilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tremoctopus",
-          "authorship": "\"(Souleyet, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:237820"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tremoctopodidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 13,
+  "genusCount": 2,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

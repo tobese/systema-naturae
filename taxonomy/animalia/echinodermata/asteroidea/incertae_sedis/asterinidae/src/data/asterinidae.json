@@ -2029,9 +2029,11 @@
             "col": [
               "BFPC5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:992771"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:992771"
+            ]
           },
-          "authorityIds": "col:BFPC5"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:992771,col:BFPC5"
         },
         {
           "id": "SP_ASTERINA_STELLIFERA_M_BIUS_1859",
@@ -2576,19 +2578,6 @@
           "children": []
         },
         {
-          "id": "SP_ASTERINA_NUDA_H_L_CLARK_1921",
-          "name": "Asterina nuda",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Asterina",
-          "authorship": "H.L. Clark, 1921",
-          "sourceIds": {
-            "checklistbank": "681053"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ASTERINA_SPINIGERA_KOEHLER_1911",
           "name": "Asterina spinigera",
           "rank": "SPECIES",
@@ -2598,19 +2587,6 @@
           "authorship": "Koehler, 1911",
           "sourceIds": {
             "checklistbank": "693671"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ASTERINA_LEPTALACANTHA_H_L_CLARK_1916",
-          "name": "Asterina leptalacantha",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Asterina",
-          "authorship": "H.L. Clark, 1916",
-          "sourceIds": {
-            "checklistbank": "908266"
           },
           "children": []
         },
@@ -2636,18 +2612,6 @@
           "lineage": "Asterina",
           "sourceIds": {
             "checklistbank": "46516"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ASTERINA_AMURENSIS",
-          "name": "Asterina amurensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Asterina",
-          "sourceIds": {
-            "checklistbank": "69830"
           },
           "children": []
         },
@@ -4237,19 +4201,6 @@
           "children": []
         },
         {
-          "id": "SP_ASTERISCUS_PANCERII_GASCO_1876",
-          "name": "Asteriscus pancerii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Asteriscus",
-          "authorship": "Gasco, 1876",
-          "sourceIds": {
-            "checklistbank": "386880"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ASTERISCUS_ARRECIFENSIS_GREEFF_1872",
           "name": "Asteriscus arrecifensis",
           "rank": "SPECIES",
@@ -4859,9 +4810,11 @@
             "itis": [
               "990610"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:124002"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:124002"
+            ]
           },
-          "authorityIds": "itis:990610"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:124002,itis:990610"
         },
         {
           "id": "SP_TREMASTER_LAEVIS_H_L_CLARK_1941",
@@ -5037,19 +4990,6 @@
       "name": "Palmipes",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PALMIPES_LOBIANCOI_LUDWIG_1897",
-          "name": "Palmipes lobiancoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Palmipes",
-          "authorship": "Ludwig, 1897",
-          "sourceIds": {
-            "checklistbank": "386881"
-          },
-          "children": []
-        },
         {
           "id": "SP_PALMIPES_MEMBRANACEUS_RETZIUS_1783",
           "name": "Palmipes membranaceus",
@@ -5259,28 +5199,6 @@
       "lineage": "asterinidae"
     },
     {
-      "id": "GENUS_TREMASTER",
-      "name": "\"Tremaster",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TREMASTER_MIRABILIS_VERRILL_1879",
-          "name": "\"Tremaster mirabilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tremaster",
-          "authorship": "\"Verrill, 1879\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:124002"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "asterinidae"
-    },
-    {
       "id": "GENUS_CYCETHRA",
       "name": "\"Cycethra",
       "rank": "GENUS",
@@ -5319,30 +5237,17 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:564380"
           },
           "children": []
-        },
-        {
-          "id": "SP_ASTERINA_CORONATA_DOMANTAY_ROXAS_1938",
-          "name": "\"Asterina coronata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Asterina",
-          "authorship": "\"Domantay & Roxas, 1938\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:992771"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "asterinidae"
     }
   ],
-  "speciesCount": 271,
+  "speciesCount": 264,
   "appSlug": "asterinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Asteroidea",
-  "genusCount": 53,
+  "genusCount": 52,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

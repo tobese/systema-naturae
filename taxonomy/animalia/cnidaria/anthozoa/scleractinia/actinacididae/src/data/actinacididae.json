@@ -26,9 +26,11 @@
             "col": [
               "862YV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1452010"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1452010"
+            ]
           },
-          "authorityIds": "col:862YV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1452010,col:862YV",
           "authorship": "(Felix, 1891)"
         },
         {
@@ -46,9 +48,11 @@
             "col": [
               "8GMBZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1511566"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1511566"
+            ]
           },
-          "authorityIds": "col:8GMBZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1511566,col:8GMBZ",
           "authorship": "(Münster, 1833)"
         },
         {
@@ -165,9 +169,11 @@
             "col": [
               "85L59"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1348113"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1348113"
+            ]
           },
-          "authorityIds": "col:85L59",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1348113,col:85L59",
           "authorship": "(Vaughan, 1900)"
         },
         {
@@ -786,6 +792,32 @@
           },
           "children": [],
           "uuid": "563e4d90-fb37-5cf-a98-2fbdd7b5f8d1b7"
+        },
+        {
+          "id": "SP_ACTINACIS_BARRETTI_WELLS_1934",
+          "name": "Actinacis barretti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinacis",
+          "authorship": "Wells 1934",
+          "sourceIds": {
+            "checklistbank": "txn:113518"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACTINACIS_MARTINIANA_D_ORBIGNY_1850",
+          "name": "Actinacis martiniana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinacis",
+          "authorship": "d’Orbigny 1850",
+          "sourceIds": {
+            "checklistbank": "txn:141456"
+          },
+          "children": []
         }
       ]
     },
@@ -811,9 +843,11 @@
             "col": [
               "8K48C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444562"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1444562"
+            ]
           },
-          "authorityIds": "col:8K48C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1444562,col:8K48C",
           "authorship": "(Goldfuss, 1826)"
         }
       ]
@@ -998,77 +1032,55 @@
       ]
     },
     {
-      "id": "GENUS_ACTINACIS",
-      "name": "\"Actinacis",
+      "id": "GENUS_THAMNAREA",
+      "name": "Thamnarea",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ACTINACIS_ALABAMENSIS_VAUGHAN_1900",
-          "name": "\"Actinacis alabamensis\"",
+          "id": "SP_THAMNAREA_HORNOSENSIS_FILKORN_AND_PANTOJA_ALOR_2009",
+          "name": "Thamnarea hornosensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinacis",
-          "authorship": "\"(Vaughan, 1900)\"",
+          "lineage": "Thamnarea",
+          "authorship": "Filkorn and Pantoja-Alor 2009",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1348113"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "actinacididae"
-    },
-    {
-      "id": "GENUS_ACTINHELIA",
-      "name": "\"Actinhelia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ACTINHELIA_ELEGANS_GOLDFUSS_1826",
-          "name": "\"Actinhelia elegans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinhelia",
-          "authorship": "\"(Goldfuss, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444562"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "actinacididae"
-    },
-    {
-      "id": "GENUS_ACTINARAEA",
-      "name": "\"Actinaraea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ACTINARAEA_ARBORESCENS_FELIX_1891",
-          "name": "\"Actinaraea arborescens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinaraea",
-          "authorship": "\"(Felix, 1891)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1452010"
+            "checklistbank": "txn:148127"
           },
           "children": []
         },
         {
-          "id": "SP_ACTINARAEA_GRANULATA_M_NSTER_1833",
-          "name": "\"Actinaraea granulata\"",
+          "id": "SP_THAMNAREA_LITHODES_FELIX_1903",
+          "name": "Thamnarea lithodes",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinaraea",
-          "authorship": "\"(Münster, 1833)\"",
+          "lineage": "Thamnarea",
+          "authorship": "Felix 1903",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1511566"
+            "checklistbank": "txn:148330"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "actinacididae"
+    },
+    {
+      "id": "GENUS_BOSNOPSAMMIA",
+      "name": "Bosnopsammia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOSNOPSAMMIA_KATZERI_OPPENHEIM_1908",
+          "name": "Bosnopsammia katzeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bosnopsammia",
+          "authorship": "Oppenheim 1908",
+          "sourceIds": {
+            "checklistbank": "txn:154825"
           },
           "children": []
         }
@@ -1077,8 +1089,8 @@
       "lineage": "actinacididae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 57,
+  "genusCount": 8,
+  "speciesCount": 58,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1086,6 +1098,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 4880019
-    }
+    },
+    "checklistbank": "txn:54230"
   }
 }

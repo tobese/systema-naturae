@@ -60,32 +60,6 @@
           "authorityIds": "col:3W2LH,gbif:177736944,gbif:2415069,itis:164499"
         },
         {
-          "id": "SP_LOPHIUS_GASTROPHYSUS_MIRANDA_RIBEIRO_1915",
-          "name": "Lophius gastrophysus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "lineage": "Lophius",
-          "authorship": "Miranda Ribeiro, 1915",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177736935",
-              "2415076"
-            ],
-            "col": [
-              "3W2LX"
-            ],
-            "itis": [
-              "164500"
-            ],
-            "checklistbank": "104803"
-          },
-          "uuid": "e210ce6f-4848-58e-9d8-43e594baf301c8",
-          "authorityIds": "col:3W2LX,gbif:177736935,gbif:2415076,itis:164500",
-          "commonName": "Anglerfish"
-        },
-        {
           "id": "SP_LOPHIUS_ALVEOLUS_SCHWARZHANS_2019",
           "name": "Lophius alveolus",
           "rank": "SPECIES",
@@ -385,6 +359,45 @@
           "lineage": "Lophius",
           "sourceIds": {
             "checklistbank": "30791"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOPHIUS_BRACHYSOMUS_AGASSIZ_1835",
+          "name": "Lophius brachysomus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lophius",
+          "authorship": "Agassiz 1835",
+          "sourceIds": {
+            "checklistbank": "txn:357014"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOPHIUS_ORPIENSIS_LERICHE_1906",
+          "name": "Lophius orpiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lophius",
+          "authorship": "Leriche 1906",
+          "sourceIds": {
+            "checklistbank": "txn:357016"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOPHIUS_DOLLOI_LERICHE_1908",
+          "name": "Lophius dolloi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lophius",
+          "authorship": "Leriche 1908",
+          "sourceIds": {
+            "checklistbank": "txn:357022"
           },
           "children": []
         }
@@ -734,32 +747,6 @@
           },
           "authorityIds": "col:3W27F,itis:622827",
           "commonName": "Monkfish"
-        },
-        {
-          "id": "SP_LOPHIODES_SPILURUS_GARMAN_1899",
-          "name": "Lophiodes spilurus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "lineage": "Lophiodes",
-          "authorship": "(Garman, 1899)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177736903",
-              "2415057"
-            ],
-            "itis": [
-              "649761"
-            ],
-            "col": [
-              "3W27P"
-            ],
-            "checklistbank": "104801"
-          },
-          "uuid": "d3005779-a2f7-5df-b84-c3324e81bfed14",
-          "authorityIds": "col:3W27P,gbif:177736903,gbif:2415057,itis:649761",
-          "commonName": "Threadfin angler"
         },
         {
           "id": "SP_LOPHIODES_MONODI_LE_DANOIS_1971",
@@ -1115,7 +1102,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Eosladenia",
-          "uuid": "d520e0ba-0891-584-901-a8624b5af664fb"
+          "uuid": "d520e0ba-0891-584-901-a8624b5af664fb",
+          "authorship": "Bannikov 2004",
+          "sourceIds": {
+            "checklistbank": "txn:356996"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1410,13 +1401,79 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lophiidae"
+    },
+    {
+      "id": "GENUS_EMMACHAERE",
+      "name": "Emmachaere",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EMMACHAERE_RHOMALEA_JORDAN_1921",
+          "name": "Emmachaere rhomalea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Emmachaere",
+          "authorship": "(Jordan 1921)",
+          "sourceIds": {
+            "checklistbank": "txn:352811"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophiidae"
+    },
+    {
+      "id": "GENUS_SHARFIA",
+      "name": "Sharfia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SHARFIA_MIRABILIS_PIETSCH_AND_CARNEVALE_2011",
+          "name": "Sharfia mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sharfia",
+          "authorship": "Pietsch and Carnevale 2011",
+          "sourceIds": {
+            "checklistbank": "txn:353214"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophiidae"
+    },
+    {
+      "id": "GENUS_CARUSO",
+      "name": "Caruso",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARUSO_BRACHYSOMUS_AGASSIZ_1835",
+          "name": "Caruso brachysomus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caruso",
+          "authorship": "(Agassiz 1835)",
+          "sourceIds": {
+            "checklistbank": "txn:353216"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophiidae"
     }
   ],
-  "speciesCount": 76,
+  "speciesCount": 80,
   "appSlug": "lophiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 10,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

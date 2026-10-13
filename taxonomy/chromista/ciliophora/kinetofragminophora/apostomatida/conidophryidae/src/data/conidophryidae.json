@@ -120,10 +120,12 @@
             "col": [
               "XM3H"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172393"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:172393"
+            ]
           },
           "uuid": "a2ed133e-eede-5af-b36-f1657aac6b30a4",
-          "authorityIds": "col:XM3H,gbif:7854081",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:172393,col:XM3H,gbif:7854081",
           "authorship": "Chatton & Lwoff, 1934",
           "children": []
         },
@@ -270,32 +272,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_CONIDOPHRYS",
-      "name": "\"Conidophrys",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CONIDOPHRYS_PILISUCTOR_CHATTON_LWOFF_1934",
-          "name": "\"Conidophrys pilisuctor\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Conidophrys",
-          "authorship": "\"Chatton & Lwoff, 1934\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172393"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "conidophryidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 12,
+  "genusCount": 3,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

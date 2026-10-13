@@ -105,9 +105,11 @@
             "col": [
               "C2DRG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730007"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1730007"
+            ]
           },
-          "authorityIds": "col:C2DRG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1730007,col:C2DRG",
           "children": [],
           "authorship": "(Stossich, 1895) Yorke & Maplestone, 1926"
         },
@@ -125,9 +127,11 @@
             "col": [
               "C2DRH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730010"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1730010"
+            ]
           },
-          "authorityIds": "col:C2DRH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1730010,col:C2DRH",
           "children": [],
           "authorship": "(Rudolphi, 1819) Yorke & Maplestone, 1926"
         },
@@ -745,32 +749,6 @@
           "children": []
         },
         {
-          "id": "SP_KALICEPHALUS_VALLEI_STOSSICH_1895_YORKE_MAPLESTONE_1926",
-          "name": "\"Kalicephalus vallei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kalicephalus",
-          "authorship": "\"(Stossich, 1895) Yorke & Maplestone, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730007"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_KALICEPHALUS_VIPERAE_RUDOLPHI_1819_YORKE_MAPLESTONE_1926",
-          "name": "\"Kalicephalus viperae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kalicephalus",
-          "authorship": "\"(Rudolphi, 1819) Yorke & Maplestone, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730010"
-          },
-          "children": []
-        },
-        {
           "id": "SP_KALICEPHALUS_ATROXI_HAICK_TAVARES_COSTA_MELO_IN_HAICK_ET_AL_2025",
           "name": "\"Kalicephalus atroxi\"",
           "rank": "SPECIES",
@@ -824,7 +802,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 58,
+  "speciesCount": 56,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -111,9 +111,11 @@
             "col": [
               "3VSNR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:878687"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:878687"
+            ]
           },
-          "authorityIds": "col:3VSNR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:878687,col:3VSNR",
           "authorship": "(Gordon, 1986)"
         },
         {
@@ -1274,9 +1276,11 @@
             "itis": [
               "155476"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:153717"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:153717"
+            ]
           },
-          "authorityIds": "col:BL3F,itis:155476"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:153717,col:BL3F,itis:155476"
         },
         {
           "id": "SP_ALCYONIDIUM_POLYPYLUM_MARCUS_1941",
@@ -1932,18 +1936,6 @@
           "children": []
         },
         {
-          "id": "SP_ALCYONIDIUM_DISCIFORME",
-          "name": "Alcyonidium disciforme",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alcyonidium",
-          "sourceIds": {
-            "checklistbank": "864650"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ALCYONIDIUM_PEDUNCULATUM",
           "name": "Alcyonidium pedunculatum",
           "rank": "SPECIES",
@@ -1952,18 +1944,6 @@
           "lineage": "Alcyonidium",
           "sourceIds": {
             "checklistbank": "873864"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ALCYONIDIUM_RHOMBOIDALE",
-          "name": "Alcyonidium rhomboidale",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alcyonidium",
-          "sourceIds": {
-            "checklistbank": "1039839"
           },
           "children": []
         },
@@ -2942,34 +2922,6 @@
           },
           "children": [],
           "uuid": "81882859-51a4-54c-90f-4f0d3d12e40818"
-        },
-        {
-          "id": "SP_PHORONOPSIS_CALIFORNICA_HILTON_1930",
-          "name": "Phoronopsis californica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phoronopsis",
-          "authorship": "Hilton, 1930",
-          "sourceIds": {
-            "checklistbank": "48554"
-          },
-          "children": [],
-          "uuid": "b74db6fc-a386-518-83f-1e5ddf518904ef"
-        },
-        {
-          "id": "SP_PHORONOPSIS_HARMERI_PIXELL_1912",
-          "name": "Phoronopsis harmeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phoronopsis",
-          "authorship": "Pixell, 1912",
-          "sourceIds": {
-            "checklistbank": "48555"
-          },
-          "children": [],
-          "uuid": "658d243e-3ceb-540-905-bab67c8b62c71e"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3192,19 +3144,6 @@
           "children": []
         },
         {
-          "id": "SP_ALCYONIDIUM_POLYOUM_HASSALL_1841",
-          "name": "\"Alcyonidium polyoum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Alcyonidium",
-          "authorship": "\"(Hassall, 1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:153717"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ALCYONIDIUM_MAMILLATUM_ANDERSSON_1902",
           "name": "\"Alcyonidium mamillatum",
           "rank": "SPECIES",
@@ -3246,32 +3185,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "alcyonidiidae"
-    },
-    {
-      "id": "GENUS_LOBIANCOPORA",
-      "name": "\"Lobiancopora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LOBIANCOPORA_ABYSSICOLA_GORDON_1986",
-          "name": "\"Lobiancopora abyssicola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lobiancopora",
-          "authorship": "\"(Gordon, 1986)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:878687"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "alcyonidiidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 203,
+  "genusCount": 15,
+  "speciesCount": 197,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

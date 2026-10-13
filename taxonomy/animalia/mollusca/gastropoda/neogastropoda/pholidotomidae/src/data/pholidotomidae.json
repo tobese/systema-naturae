@@ -227,9 +227,11 @@
             "col": [
               "5WH2X"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:765210"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:765210"
+            ]
           },
-          "authorityIds": "col:5WH2X",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:765210,col:5WH2X",
           "authorship": "(Wade, 1926)"
         },
         {
@@ -1510,9 +1512,11 @@
             "col": [
               "5BQ4S"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1054136"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1054136"
+            ]
           },
-          "authorityIds": "col:5BQ4S",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1054136,col:5BQ4S",
           "authorship": "(Gabb, 1864)"
         },
         {
@@ -3816,54 +3820,10 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pholidotomidae"
-    },
-    {
-      "id": "GENUS_BELLIFUSUS",
-      "name": "\"Bellifusus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BELLIFUSUS_CURVICOSTATUS_WADE_1926",
-          "name": "\"Bellifusus curvicostatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bellifusus",
-          "authorship": "\"(Wade, 1926)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:765210"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pholidotomidae"
-    },
-    {
-      "id": "GENUS_VOLUTODERMA",
-      "name": "\"Volutoderma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_VOLUTODERMA_AVERILLII_GABB_1864",
-          "name": "\"Volutoderma averillii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Volutoderma",
-          "authorship": "\"(Gabb, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1054136"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pholidotomidae"
     }
   ],
-  "genusCount": 33,
-  "speciesCount": 208,
+  "genusCount": 31,
+  "speciesCount": 206,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

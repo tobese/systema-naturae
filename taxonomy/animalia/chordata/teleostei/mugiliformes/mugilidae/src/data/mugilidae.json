@@ -152,28 +152,6 @@
           "authorityIds": "col:D5GY7"
         },
         {
-          "id": "SP_OSTEOMUGIL_PERUSII_VALENCIENNES_1836",
-          "name": "Osteomugil perusii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Osteomugil",
-          "authorship": "(Valenciennes, 1836)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177728725",
-              "9465525"
-            ],
-            "col": [
-              "6TBCR"
-            ],
-            "checklistbank": "623949"
-          },
-          "uuid": "717bf7a1-e8e1-519-b4b-904d91f1ed0ebe",
-          "authorityIds": "col:6TBCR,gbif:177728725,gbif:9465525"
-        },
-        {
           "id": "SP_OSTEOMUGIL_CUNNESIUS_VALENCIENNES_1836",
           "name": "Osteomugil cunnesius",
           "rank": "SPECIES",
@@ -215,9 +193,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Osteomugil",
           "sourceIds": {
-            "checklistbank": "1111175"
+            "checklistbank": [
+              "1111175"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:1111175"
         },
         {
           "id": "SP_OSTEOMUGIL_CF_PERUSII",
@@ -240,28 +221,6 @@
       "name": "Chelon",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CHELON_AURATUS_RISSO_1810",
-          "name": "Chelon auratus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Chelon",
-          "authorship": "(Risso, 1810)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177728844",
-              "9466310"
-            ],
-            "col": [
-              "TVBL"
-            ],
-            "checklistbank": "786323"
-          },
-          "uuid": "ddc6a06b-be31-5e0-aa1-df08a8ac9c1aea",
-          "authorityIds": "col:TVBL,gbif:177728844,gbif:9466310"
-        },
         {
           "id": "SP_CHELON_BISPINOSUS_BOWDICH_1825",
           "name": "Chelon bispinosus",
@@ -824,19 +783,6 @@
           "children": []
         },
         {
-          "id": "SP_AGONOSTOMUS_TELFAIRI_BENNETT_1832",
-          "name": "Agonostomus telfairi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Agonostomus",
-          "authorship": "Bennett, 1832",
-          "sourceIds": {
-            "checklistbank": "578057"
-          },
-          "children": []
-        },
-        {
           "id": "SP_AGONOSTOMUS_GLOBULOIDES_VALENCIENNES_1836",
           "name": "Agonostomus globuloides",
           "rank": "SPECIES",
@@ -1090,31 +1036,6 @@
           "uuid": "c9e5ef8e-a51b-564-ac3-c0b90c38ea3dc5",
           "authorityIds": "col:44J2X,gbif:177728969,gbif:2400633,itis:630331",
           "commonName": "Banana Mullet"
-        },
-        {
-          "id": "SP_MUGIL_THOBURNI_JORDAN_STARKS_1896",
-          "name": "Mugil thoburni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Mugil",
-          "authorship": "Jordan & Starks, 1896",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177728953",
-              "2400933"
-            ],
-            "itis": [
-              "630342"
-            ],
-            "col": [
-              "44J9G"
-            ],
-            "checklistbank": "623945"
-          },
-          "uuid": "d429986d-3f86-537-99b-99a45134aa9ac9",
-          "authorityIds": "col:44J9G,gbif:177728953,gbif:2400933,itis:630342"
         },
         {
           "id": "SP_MUGIL_INCILIS_HANCOCK_1830",
@@ -1604,19 +1525,6 @@
           "authorship": "Risso, 1827",
           "sourceIds": {
             "checklistbank": "69792"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MUGIL_CAPITO_CUVIER_1829",
-          "name": "Mugil capito",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mugil",
-          "authorship": "Cuvier, 1829",
-          "sourceIds": {
-            "checklistbank": "69793"
           },
           "children": []
         },
@@ -2414,19 +2322,6 @@
           "children": []
         },
         {
-          "id": "SP_MUGIL_METZELAARI_CHABANAUD_1926",
-          "name": "Mugil metzelaari",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mugil",
-          "authorship": "Chabanaud, 1926",
-          "sourceIds": {
-            "checklistbank": "559980"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MUGIL_MEXICANUS_STEINDACHNER_1876",
           "name": "Mugil mexicanus",
           "rank": "SPECIES",
@@ -2830,19 +2725,6 @@
           "children": []
         },
         {
-          "id": "SP_MUGIL_CRENILABRIS_FORSSK_L_1775",
-          "name": "Mugil crenilabris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mugil",
-          "authorship": "Forsskål, 1775",
-          "sourceIds": {
-            "checklistbank": "578153"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MUGIL_RUPPELLII_G_NTHER_1861",
           "name": "Mugil ruppellii",
           "rank": "SPECIES",
@@ -3021,19 +2903,6 @@
           "authorship": "Günther, 1861",
           "sourceIds": {
             "checklistbank": "694800"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MUGIL_TRICUSPIDENS_SMITH_1935",
-          "name": "Mugil tricuspidens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mugil",
-          "authorship": "Smith, 1935",
-          "sourceIds": {
-            "checklistbank": "704540"
           },
           "children": []
         },
@@ -3277,6 +3146,58 @@
           "lineage": "Mugil",
           "sourceIds": {
             "checklistbank": "722612"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MUGIL_LATUS_SVITSHENSKAJA_1957",
+          "name": "Mugil latus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mugil",
+          "authorship": "Svitshenskaja 1957",
+          "sourceIds": {
+            "checklistbank": "txn:355880"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MUGIL_MINAX_BOGATSHEV_1933",
+          "name": "Mugil minax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mugil",
+          "authorship": "Bogatshev 1933",
+          "sourceIds": {
+            "checklistbank": "txn:422722"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MUGIL_PRINCEPS_AGASSIZ_1843",
+          "name": "Mugil princeps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mugil",
+          "authorship": "Agassiz 1843",
+          "sourceIds": {
+            "checklistbank": "txn:440893"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MUGIL_ORNATUS_ARAMBOURG_1927",
+          "name": "Mugil ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mugil",
+          "authorship": "Arambourg 1927",
+          "sourceIds": {
+            "checklistbank": "txn:443482"
           },
           "children": []
         }
@@ -3696,20 +3617,6 @@
             "checklistbank": "ott7651788"
           },
           "authorityIds": "col:D5GYB"
-        },
-        {
-          "id": "SP_PLANILIZA_HAEMATOCHEILA_TEMMINCK_SCHLEGEL_1845",
-          "name": "Planiliza haematocheila",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Planiliza",
-          "authorship": "(Temminck & Schlegel, 1845)",
-          "sourceIds": {
-            "checklistbank": "216552"
-          },
-          "children": [],
-          "uuid": "5473df43-a62c-5c8-85f-5ea1a59577f366"
         },
         {
           "id": "SP_PLANILIZA_MELINOPTERUS_VALENCIENNES_1836",
@@ -4476,37 +4383,6 @@
       "lineage": "Mugilidae"
     },
     {
-      "id": "GENUS_GRACILIMUGIL",
-      "name": "Gracilimugil",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GRACILIMUGIL_ARGENTEUS_QUOY_GAIMARD_1825",
-          "name": "Gracilimugil argenteus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Gracilimugil",
-          "authorship": "(Quoy & Gaimard, 1825)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177728440",
-              "9576136"
-            ],
-            "col": [
-              "3H599"
-            ],
-            "checklistbank": "623944"
-          },
-          "uuid": "8b0e5eb1-80d9-5ca-80b-7d403d9a525a2e",
-          "authorityIds": "col:3H599,gbif:177728440,gbif:9576136"
-        }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Mugilidae"
-    },
-    {
       "id": "GENUS_DAJAUS",
       "name": "Dajaus",
       "rank": "GENUS",
@@ -4581,37 +4457,6 @@
             "checklistbank": "15718565-4135-42be-b099-f72cec6ac39a"
           },
           "authorityIds": "itis:630304"
-        }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Mugilidae"
-    },
-    {
-      "id": "GENUS_NEOCHELON",
-      "name": "Neochelon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEOCHELON_FALCIPINNIS_VALENCIENNES_1836",
-          "name": "Neochelon falcipinnis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Neochelon",
-          "authorship": "(Valenciennes, 1836)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177728467",
-              "9312384"
-            ],
-            "col": [
-              "46CRQ"
-            ],
-            "checklistbank": "623947"
-          },
-          "uuid": "ba1fd538-2807-573-b0b-5495929b1ea3c8",
-          "authorityIds": "col:46CRQ,gbif:177728467,gbif:9312384"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5131,24 +4976,6 @@
             "checklistbank": "424719"
           },
           "authorityIds": "itis:553297"
-        },
-        {
-          "id": "SP_LIZA_VAIGIENSIS_QUOY_AND_GAIMARD_1825",
-          "name": "Liza vaigiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liza",
-          "authorship": "(Quoy and Gaimard, 1825)",
-          "children": [],
-          "uuid": "3467fdb5-b8e8-527-85d-cae671b95bc44c",
-          "sourceIds": {
-            "itis": [
-              "553298"
-            ],
-            "checklistbank": "424723"
-          },
-          "authorityIds": "itis:553298"
         },
         {
           "id": "SP_LIZA_PLANICEPS_VALENCIENNES_IN_CUVIER_AND_VALENCIENNES_1836",
@@ -5750,6 +5577,19 @@
             "checklistbank": "206109"
           },
           "children": []
+        },
+        {
+          "id": "SP_LIZA_BREVIROSTRIS_SCHWARZHANS_ET_AL_2017",
+          "name": "Liza brevirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liza",
+          "authorship": "Schwarzhans et al. 2017",
+          "sourceIds": {
+            "checklistbank": "txn:395290"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6056,18 +5896,6 @@
           "lineage": "Valamugil",
           "sourceIds": {
             "checklistbank": "ott3642059"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VALAMUGIL_SP",
-          "name": "Valamugil sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Valamugil",
-          "sourceIds": {
-            "checklistbank": "1111175"
           },
           "children": []
         }
@@ -6443,27 +6271,6 @@
       "lineage": "mugilidae"
     },
     {
-      "id": "GENUS_DIAPSE",
-      "name": "Diapse",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DIAPSE_PTILOTA",
-          "name": "Diapse ptilota",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diapse",
-          "sourceIds": {
-            "checklistbank": "1691382"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mugilidae"
-    },
-    {
       "id": "GENUS_PLANILISA",
       "name": "Planilisa",
       "rank": "GENUS",
@@ -6504,13 +6311,83 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mugilidae"
+    },
+    {
+      "id": "GENUS_PELECORAPIS",
+      "name": "Pelecorapis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PELECORAPIS_BERYCINUS_COPE_1877",
+          "name": "Pelecorapis berycinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelecorapis",
+          "authorship": "Cope 1877",
+          "sourceIds": {
+            "checklistbank": "txn:308323"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PELECORAPIS_VARIUS_COPE_1874",
+          "name": "Pelecorapis varius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pelecorapis",
+          "authorship": "Cope 1874",
+          "sourceIds": {
+            "checklistbank": "txn:362332"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mugilidae"
+    },
+    {
+      "id": "GENUS_SYLLAEMUS",
+      "name": "Syllaemus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYLLAEMUS_LATIFRONS_COPE_1875",
+          "name": "Syllaemus latifrons",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syllaemus",
+          "authorship": "Cope 1875",
+          "sourceIds": {
+            "checklistbank": "txn:391730"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYLLAEMUS_ANGLICUS_DIXON_1850",
+          "name": "Syllaemus anglicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syllaemus",
+          "authorship": "(Dixon 1850)",
+          "sourceIds": {
+            "checklistbank": "txn:364785"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mugilidae"
     }
   ],
-  "speciesCount": 391,
+  "speciesCount": 386,
   "appSlug": "mugilidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 46,
+  "genusCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

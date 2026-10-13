@@ -645,9 +645,11 @@
             "col": [
               "CCS4N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752763"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1752763"
+            ]
           },
-          "authorityIds": "col:CCS4N"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752763,col:CCS4N"
         },
         {
           "id": "SP_ASTACILLA_SPINICUTIS_KENSLEY_SCHOTTE_POORE_2007",
@@ -1057,32 +1059,6 @@
           "authorship": "Vanhöffen, 1914",
           "sourceIds": {
             "checklistbank": "815028"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ASTACILLA_MARIONENSIS_BEDDARD_1886",
-          "name": "Astacilla marionensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Astacilla",
-          "authorship": "Beddard, 1886",
-          "sourceIds": {
-            "checklistbank": "816673"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ASTACILLA_MARIONIS_BEDDART_1886",
-          "name": "Astacilla marionis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Astacilla",
-          "authorship": "Beddart, 1886",
-          "sourceIds": {
-            "checklistbank": "816674"
           },
           "children": []
         },
@@ -4375,24 +4351,6 @@
           "authorityIds": "itis:543142"
         },
         {
-          "id": "SP_ARCTURELLA_CARLOSTEROI_REBOREDA_WAGELE_GARMENDIA_1994",
-          "name": "Arcturella carlosteroi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arcturella",
-          "authorship": "Reboreda, Wagele, & Garmendia, 1994",
-          "children": [],
-          "uuid": "ef28e629-cf57-567-ae2-7d32b28e3a5f4c",
-          "sourceIds": {
-            "itis": [
-              "543143"
-            ],
-            "checklistbank": "39007"
-          },
-          "authorityIds": "itis:543143"
-        },
-        {
           "id": "SP_ARCTURELLA_CORNUTA_KOEHLER_1911",
           "name": "Arcturella cornuta",
           "rank": "SPECIES",
@@ -4576,19 +4534,6 @@
           },
           "children": [],
           "uuid": "5fb9214b-630e-5bb-a97-515b3d3aedd11a"
-        },
-        {
-          "id": "SP_ARCTURELLA_DAMNONIENSIS_STEBBING_1874",
-          "name": "Arcturella damnoniensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arcturella",
-          "authorship": "(Stebbing, 1874)",
-          "sourceIds": {
-            "checklistbank": "380130"
-          },
-          "children": []
         },
         {
           "id": "SP_ARCTURELLA_ESTHERAE_RODR_GUEZ_S_NCHEZ_JUNOY_2002",
@@ -4802,35 +4747,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "arcturidae"
-    },
-    {
-      "id": "GENUS_ASTACILLA",
-      "name": "\"Astacilla",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ASTACILLA_ANDRESMEIXIDEI_JUNOY_TABOADA_I_IN_I_TABOADA_ALTUNA_S_NCHEZ_JUNOY_2019",
-          "name": "\"Astacilla andresmeixidei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Astacilla",
-          "authorship": "\"Junoy & Taboada <i>in</i> Taboada, Altuna, Sánchez & Junoy, 2019\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752763"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "arcturidae"
     }
   ],
-  "speciesCount": 246,
+  "speciesCount": 241,
   "appSlug": "arcturidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 32,
+  "genusCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -26,9 +26,11 @@
             "col": [
               "9GXYG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599965"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1599965"
+            ]
           },
-          "authorityIds": "col:9GXYG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599965,col:9GXYG",
           "authorship": "(Whitfield, 1878)"
         },
         {
@@ -58,9 +60,11 @@
             "col": [
               "9GXYJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599948"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1599948"
+            ]
           },
-          "authorityIds": "col:9GXYJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599948,col:9GXYJ",
           "authorship": "(Berkey, 1898)"
         },
         {
@@ -78,9 +82,11 @@
             "col": [
               "9GXYK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599959"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1599959"
+            ]
           },
-          "authorityIds": "col:9GXYK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599959,col:9GXYK",
           "authorship": "(Berkey, 1898)"
         },
         {
@@ -98,9 +104,11 @@
             "col": [
               "BDD9W"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1658634"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1658634"
+            ]
           },
-          "authorityIds": "col:BDD9W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658634,col:BDD9W",
           "authorship": "(Whitfield, 1878)"
         },
         {
@@ -184,7 +192,8 @@
           "sourceIds": {
             "col": [
               "KXZ5K"
-            ]
+            ],
+            "checklistbank": "txn:516844"
           },
           "authorityIds": "col:KXZ5K"
         },
@@ -201,7 +210,8 @@
           "sourceIds": {
             "col": [
               "KXZ5L"
-            ]
+            ],
+            "checklistbank": "txn:516843"
           },
           "authorityIds": "col:KXZ5L"
         },
@@ -232,6 +242,19 @@
           },
           "children": [],
           "uuid": "7abd5af4-d13a-5f4-87c-f329c6e52b6f35"
+        },
+        {
+          "id": "SP_PROPLINA_LOGANENSIS_LOCHMAN_AND_HU_1962",
+          "name": "Proplina loganensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proplina",
+          "authorship": "Lochman and Hu 1962",
+          "sourceIds": {
+            "checklistbank": "txn:105429"
+          },
+          "children": []
         }
       ]
     },
@@ -261,6 +284,19 @@
             ]
           },
           "authorityIds": "col:C4NTV"
+        },
+        {
+          "id": "SP_POTOSIPLINA_DELORENSIS_STINCHCOMB_AND_ANGELI_2002",
+          "name": "Potosiplina delorensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Potosiplina",
+          "authorship": "Stinchcomb and Angeli 2002",
+          "sourceIds": {
+            "checklistbank": "txn:65514"
+          },
+          "children": []
         }
       ]
     },
@@ -290,6 +326,19 @@
             ]
           },
           "authorityIds": "col:C5SK2"
+        },
+        {
+          "id": "SP_IRONDALIA_IRONDALENSIS_STINCHCOMB_AND_ANGELI_2002",
+          "name": "Irondalia irondalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Irondalia",
+          "authorship": "Stinchcomb and Angeli 2002",
+          "sourceIds": {
+            "checklistbank": "txn:65516"
+          },
+          "children": []
         }
       ]
     },
@@ -327,9 +376,23 @@
           "sourceIds": {
             "col": [
               "C5DQJ"
-            ]
+            ],
+            "checklistbank": "txn:65510"
           },
           "authorityIds": "col:C5DQJ"
+        },
+        {
+          "id": "SP_TITANOPLINA_MERRAMECENSIS_STINCHCOMB_AND_ANGELI_2002",
+          "name": "Titanoplina merramecensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Titanoplina",
+          "authorship": "Stinchcomb and Angeli 2002",
+          "sourceIds": {
+            "checklistbank": "txn:76420"
+          },
+          "children": []
         }
       ]
     },
@@ -351,7 +414,8 @@
           "sourceIds": {
             "col": [
               "C5QNP"
-            ]
+            ],
+            "checklistbank": "txn:76211"
           },
           "authorityIds": "col:C5QNP"
         },
@@ -449,70 +513,9 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Proplinidae"
-    },
-    {
-      "id": "GENUS_PROPLINA",
-      "name": "\"Proplina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROPLINA_CORPULENTUM_BERKEY_1898",
-          "name": "\"Proplina corpulentum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Proplina",
-          "authorship": "\"(Berkey, 1898)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599948"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROPLINA_EXTENSUM_BERKEY_1898",
-          "name": "\"Proplina extensum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Proplina",
-          "authorship": "\"(Berkey, 1898)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599959"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROPLINA_BARABUENSIS_WHITFIELD_1878",
-          "name": "\"Proplina barabuensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Proplina",
-          "authorship": "\"(Whitfield, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599965"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROPLINA_IRVINGI_WHITFIELD_1878",
-          "name": "\"Proplina irvingi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Proplina",
-          "authorship": "\"(Whitfield, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1658634"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "proplinidae"
     }
   ],
-  "genusCount": 7,
+  "genusCount": 6,
   "speciesCount": 27,
   "sourceIds": {
     "gbif": {
@@ -521,6 +524,7 @@
       "classKey": 347,
       "orderKey": 1413,
       "familyKey": 4583833
-    }
+    },
+    "checklistbank": "txn:65507"
   }
 }

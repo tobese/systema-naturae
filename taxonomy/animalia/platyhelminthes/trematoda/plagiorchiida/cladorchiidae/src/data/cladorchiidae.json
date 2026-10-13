@@ -191,9 +191,11 @@
             "col": [
               "KZ3K9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1820115"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1820115"
+            ]
           },
-          "authorityIds": "col:KZ3K9,itis:56202",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1820115,col:KZ3K9,itis:56202",
           "authorship": "(MacCallum, 1918) Yamaguti, 1958"
         },
         {
@@ -1738,9 +1740,11 @@
             "col": [
               "5X5HZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:746772"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:746772"
+            ]
           },
-          "authorityIds": "col:5X5HZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:746772,col:5X5HZ",
           "authorship": "(Caballero y C., 1940) Sey, 1988"
         },
         {
@@ -2622,9 +2626,11 @@
             "col": [
               "84DM6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338297"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1338297"
+            ]
           },
-          "authorityIds": "col:84DM6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1338297,col:84DM6",
           "authorship": "(Prudhoe, 1944) Sey, 1988"
         },
         {
@@ -4108,34 +4114,6 @@
           "authorityIds": "col:848GD"
         },
         {
-          "id": "SP_DORADAMPHISTOMA_BACUENSIS_THATCHER_1999",
-          "name": "Doradamphistoma bacuensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Doradamphistoma",
-          "authorship": "Thatcher, 1999",
-          "sourceIds": {
-            "checklistbank": "37379"
-          },
-          "children": [],
-          "uuid": "c1e59f72-ae3b-53e-bc9-26a7f283ecebd2"
-        },
-        {
-          "id": "SP_DORADAMPHISTOMA_PARAUCHENIPTERI_LUNASCHI_1989",
-          "name": "Doradamphistoma parauchenipteri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Doradamphistoma",
-          "authorship": "(Lunaschi, 1989)",
-          "sourceIds": {
-            "checklistbank": "212953"
-          },
-          "children": [],
-          "uuid": "67170a24-306d-504-819-0a5d4dc33bcad0"
-        },
-        {
           "id": "SP_DORADAMPHISTOMA_BACUENSE",
           "name": "Doradamphistoma bacuense",
           "rank": "SPECIES",
@@ -4225,20 +4203,6 @@
             ]
           },
           "authorityIds": "col:84CPG"
-        },
-        {
-          "id": "SP_PSEUDOCLADORCHIS_MACROSTOMUS_DADAY_1907",
-          "name": "Pseudocladorchis macrostomus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudocladorchis",
-          "authorship": "Daday, 1907",
-          "sourceIds": {
-            "checklistbank": "33500"
-          },
-          "children": [],
-          "uuid": "82cc78cd-4d70-57e-80c-8c490770ebbfc2"
         },
         {
           "id": "SP_PSEUDOCLADORCHIS_FERRUMEQUINUM_DIESING_1836",
@@ -5834,28 +5798,6 @@
       "lineage": "cladorchiidae"
     },
     {
-      "id": "GENUS_CABALLERODISCUS",
-      "name": "\"Caballerodiscus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CABALLERODISCUS_RESUPINATUS_CABALLERO_Y_C_1940_SEY_1988",
-          "name": "\"Caballerodiscus resupinatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Caballerodiscus",
-          "authorship": "\"(Caballero y C., 1940) Sey, 1988\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:746772"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cladorchiidae"
-    },
-    {
       "id": "GENUS_CHIORCHIS",
       "name": "\"Chiorchis",
       "rank": "GENUS",
@@ -5988,28 +5930,6 @@
       "lineage": "cladorchiidae"
     },
     {
-      "id": "GENUS_STUNKARDIA",
-      "name": "\"Stunkardia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STUNKARDIA_BURTI_PRUDHOE_1944_SEY_1988",
-          "name": "\"Stunkardia burti\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stunkardia",
-          "authorship": "\"(Prudhoe, 1944) Sey, 1988\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338297"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cladorchiidae"
-    },
-    {
       "id": "GENUS_NEMATOPHILA",
       "name": "\"Nematophila",
       "rank": "GENUS",
@@ -6074,32 +5994,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cladorchiidae"
-    },
-    {
-      "id": "GENUS_ALLASSOSTOMOIDES",
-      "name": "\"Allassostomoides",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ALLASSOSTOMOIDES_CHELYDRAE_MACCALLUM_1918_YAMAGUTI_1958",
-          "name": "\"Allassostomoides chelydrae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Allassostomoides",
-          "authorship": "\"(MacCallum, 1918) Yamaguti, 1958\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1820115"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cladorchiidae"
     }
   ],
-  "genusCount": 97,
-  "speciesCount": 330,
+  "genusCount": 94,
+  "speciesCount": 324,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

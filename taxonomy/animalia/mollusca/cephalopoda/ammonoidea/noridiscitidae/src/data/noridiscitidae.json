@@ -20,9 +20,11 @@
           "sourceIds": {
             "col": [
               "45KS6"
-            ]
+            ],
+            "checklistbank": "txn:266841"
           },
-          "authorityIds": "col:45KS6"
+          "authorityIds": "col:45KS6",
+          "children": []
         },
         {
           "id": "SP_NAIRITES_LAEVIS_KIPARISOVA_AZARIAN_1963",
@@ -36,20 +38,57 @@
           "sourceIds": {
             "col": [
               "45KS7"
-            ]
+            ],
+            "checklistbank": "txn:266842"
           },
-          "authorityIds": "col:45KS7"
+          "authorityIds": "col:45KS7",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Noridiscitidae"
+    },
+    {
+      "id": "GENUS_NORIDISCITES",
+      "name": "Noridiscites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NORIDISCITES_VIATOR_MOJSISOVICS_1893",
+          "name": "Noridiscites viator",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Noridiscites",
+          "authorship": "(Mojsisovics 1893)",
+          "sourceIds": {
+            "checklistbank": "txn:356689"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NORIDISCITES_NODOSUS_KRYSTYN_ET_AL_2019",
+          "name": "Noridiscites nodosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Noridiscites",
+          "authorship": "Krystyn et al. 2019",
+          "sourceIds": {
+            "checklistbank": "txn:384127"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "noridiscitidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 4,
   "appSlug": "noridiscitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -57,6 +96,7 @@
       "classKey": 136,
       "orderKey": 12261528,
       "familyKey": 4623195
-    }
+    },
+    "checklistbank": "txn:86810"
   }
 }

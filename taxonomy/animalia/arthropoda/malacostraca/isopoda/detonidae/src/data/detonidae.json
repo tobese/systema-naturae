@@ -63,9 +63,11 @@
             "col": [
               "BFNXK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:264234"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:264234"
+            ]
           },
-          "authorityIds": "col:BFNXK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:264234,col:BFNXK",
           "children": []
         },
         {
@@ -473,9 +475,11 @@
             "col": [
               "BFPDF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1668298"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1668298"
+            ]
           },
-          "authorityIds": "col:BFPDF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1668298,col:BFPDF",
           "children": []
         },
         {
@@ -726,9 +730,11 @@
             "col": [
               "8NCD9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1528379"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1528379"
+            ]
           },
-          "authorityIds": "col:8NCD9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1528379,col:8NCD9",
           "children": []
         }
       ],
@@ -871,70 +877,13 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Detonidae"
-    },
-    {
-      "id": "GENUS_ARMADILLONISCUS",
-      "name": "\"Armadilloniscus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ARMADILLONISCUS_LITORALIS_ARCANGELI_1957",
-          "name": "\"Armadilloniscus litoralis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Armadilloniscus",
-          "authorship": "\"Arcangeli, 1957\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:264234"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ARMADILLONISCUS_ARGENTARIUS_VERHOEFF_1944",
-          "name": "\"Armadilloniscus argentarius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Armadilloniscus",
-          "authorship": "\"Verhoeff, 1944\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1668298"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "detonidae"
-    },
-    {
-      "id": "GENUS_HERACLITUS",
-      "name": "\"Heraclitus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HERACLITUS_HELENAE_S_NCHEZ_GARC_A_PEN_ALVER_DELCLOS_ENGEL_2021",
-          "name": "\"Heraclitus helenae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heraclitus",
-          "authorship": "\"Sánchez-García, Peñalver, Delclos & Engel, 2021\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1528379"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "detonidae"
     }
   ],
-  "speciesCount": 46,
+  "speciesCount": 43,
   "appSlug": "detonidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 6,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -943,6 +892,6 @@
       "orderKey": 643,
       "familyKey": 8884
     },
-    "checklistbank": "ott3001315"
+    "checklistbank": "bff5972d-e4fb-4571-a2c2-3b9ae3d17c66"
   }
 }

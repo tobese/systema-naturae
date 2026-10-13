@@ -79,9 +79,11 @@
             "col": [
               "6JMMB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472379"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:472379"
+            ]
           },
-          "authorityIds": "col:6JMMB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:472379,col:6JMMB",
           "authorship": "(Franzen, 1960)"
         },
         {
@@ -134,9 +136,11 @@
             "col": [
               "85YG8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338678"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1338678"
+            ]
           },
-          "authorityIds": "col:85YG8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1338678,col:85YG8",
           "authorship": "(d'Hondt, 1976)"
         },
         {
@@ -154,9 +158,11 @@
             "col": [
               "85YG9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338679"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1338679"
+            ]
           },
-          "authorityIds": "col:85YG9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1338679,col:85YG9",
           "authorship": "(d'Hondt & Hayward, 1981)"
         }
       ]
@@ -200,19 +206,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NOLELLA_RADICANS_D_HONDT_HAYWARD_1981",
-          "name": "Nolella radicans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nolella",
-          "authorship": "d'Hondt & Hayward, 1981",
-          "sourceIds": {
-            "checklistbank": "937664"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NOLELLA_MONNIOTAE_D_HONDT_1976",
           "name": "Nolella monniotae",
           "rank": "SPECIES",
@@ -228,67 +221,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aethozoidae"
-    },
-    {
-      "id": "GENUS_FRANZENELLA",
-      "name": "\"Franzenella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FRANZENELLA_LIMICOLA_FRANZEN_1960",
-          "name": "\"Franzenella limicola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Franzenella",
-          "authorship": "\"(Franzen, 1960)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:472379"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aethozoidae"
-    },
-    {
-      "id": "GENUS_SOLELLA",
-      "name": "\"Solella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SOLELLA_MONNIOTAE_D_HONDT_1976",
-          "name": "\"Solella monniotae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solella",
-          "authorship": "\"(d'Hondt, 1976)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338678"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLELLA_RADICANS_D_HONDT_HAYWARD_1981",
-          "name": "\"Solella radicans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solella",
-          "authorship": "\"(d'Hondt & Hayward, 1981)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338679"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aethozoidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 15,
+  "genusCount": 5,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

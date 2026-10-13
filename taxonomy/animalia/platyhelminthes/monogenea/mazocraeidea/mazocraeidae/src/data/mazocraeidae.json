@@ -1089,9 +1089,11 @@
             "col": [
               "4P2PK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:718126"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:718126"
+            ]
           },
-          "authorityIds": "col:4P2PK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:718126,col:4P2PK",
           "authorship": "(Mamaev, 1975)"
         },
         {
@@ -2710,9 +2712,11 @@
             "col": [
               "4RQNL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:519221"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:519221"
+            ]
           },
-          "authorityIds": "col:4RQNL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:519221,col:4RQNL",
           "authorship": "(Reimer, 1975)"
         }
       ]
@@ -3998,32 +4002,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_OCTOCOTYLE_PILCHARDI_VAN_BENEDEN_HESSE_1863",
-          "name": "Octocotyle pilchardi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Octocotyle",
-          "authorship": "Van Beneden & Hesse, 1863",
-          "sourceIds": {
-            "checklistbank": "913136"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OCTOCOTYLE_TRUNCATUM_DIESING_1850",
-          "name": "Octocotyle truncatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Octocotyle",
-          "authorship": "Diesing, 1850",
-          "sourceIds": {
-            "checklistbank": "1044430"
-          },
-          "children": []
-        },
-        {
           "id": "SP_OCTOCOTYLE_MAJOR_GOTO_1894",
           "name": "Octocotyle major",
           "rank": "SPECIES",
@@ -4055,50 +4033,6 @@
           "authorship": "Kuhn, 1829",
           "sourceIds": {
             "checklistbank": "959156"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mazocraeidae"
-    },
-    {
-      "id": "GENUS_OCTOPLECTANUM",
-      "name": "Octoplectanum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OCTOPLECTANUM_TRUNCATUM_DIESING_1850",
-          "name": "Octoplectanum truncatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Octoplectanum",
-          "authorship": "(Diesing, 1850)",
-          "sourceIds": {
-            "checklistbank": "1044431"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mazocraeidae"
-    },
-    {
-      "id": "GENUS_OCTOBOTHRIUM",
-      "name": "Octobothrium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OCTOBOTHRIUM_SCOMBRI_KUHN_1829",
-          "name": "Octobothrium scombri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Octobothrium",
-          "authorship": "(Kuhn, 1829)",
-          "sourceIds": {
-            "checklistbank": "1044435"
           },
           "children": []
         }
@@ -4354,54 +4288,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mazocraeidae"
-    },
-    {
-      "id": "GENUS_REIMERICOTYLE",
-      "name": "\"Reimericotyle",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_REIMERICOTYLE_CERATOSCOPELI_REIMER_1975",
-          "name": "\"Reimericotyle ceratoscopeli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Reimericotyle",
-          "authorship": "\"(Reimer, 1975)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:519221"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mazocraeidae"
-    },
-    {
-      "id": "GENUS_PSEUDOMAZOCRAEOIDES",
-      "name": "\"Pseudomazocraeoides",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOMAZOCRAEOIDES_LONGICAUDA_MAMAEV_1975",
-          "name": "\"Pseudomazocraeoides longicauda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudomazocraeoides",
-          "authorship": "\"(Mamaev, 1975)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:718126"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mazocraeidae"
     }
   ],
-  "genusCount": 39,
-  "speciesCount": 258,
+  "genusCount": 35,
+  "speciesCount": 252,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

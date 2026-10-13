@@ -22,7 +22,8 @@
               "3Q6TD"
             ]
           },
-          "authorityIds": "col:3Q6TD"
+          "authorityIds": "col:3Q6TD",
+          "children": []
         },
         {
           "id": "SP_ISCULITES_SPHAERICUS_SHEVYREV_1968",
@@ -38,7 +39,8 @@
               "3Q6TL"
             ]
           },
-          "authorityIds": "col:3Q6TL"
+          "authorityIds": "col:3Q6TL",
+          "children": []
         },
         {
           "id": "SP_ISCULITES_TOZERI_SILBERLING_NICHOLS_1982",
@@ -52,9 +54,11 @@
           "sourceIds": {
             "col": [
               "3Q6TN"
-            ]
+            ],
+            "checklistbank": "txn:265468"
           },
-          "authorityIds": "col:3Q6TN"
+          "authorityIds": "col:3Q6TN",
+          "children": []
         },
         {
           "id": "SP_ISCULITES_CONSTRICTUS_BUCHER_1992",
@@ -70,7 +74,8 @@
               "3Q6TF"
             ]
           },
-          "authorityIds": "col:3Q6TF"
+          "authorityIds": "col:3Q6TF",
+          "children": []
         },
         {
           "id": "SP_ISCULITES_MEEKI_HYATT_SMITH_1905",
@@ -84,9 +89,37 @@
           "sourceIds": {
             "col": [
               "3Q6TG"
-            ]
+            ],
+            "checklistbank": "txn:265320"
           },
-          "authorityIds": "col:3Q6TG"
+          "authorityIds": "col:3Q6TG",
+          "children": []
+        },
+        {
+          "id": "SP_ISCULITES_HAUERINUS_STOLICZKA_1865",
+          "name": "Isculites hauerinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Isculites",
+          "authorship": "(Stoliczka 1865)",
+          "sourceIds": {
+            "checklistbank": "txn:357915"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ISCULITES_HEIMI_VON_MOJSISOVICS_1893",
+          "name": "Isculites heimi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Isculites",
+          "authorship": "von Mojsisovics 1893",
+          "sourceIds": {
+            "checklistbank": "txn:421926"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -111,7 +144,8 @@
               "6VFQ5"
             ]
           },
-          "authorityIds": "col:6VFQ5"
+          "authorityIds": "col:6VFQ5",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -136,18 +170,63 @@
               "XCDD"
             ]
           },
-          "authorityIds": "col:XCDD"
+          "authorityIds": "col:XCDD",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Isculitidae"
+    },
+    {
+      "id": "GENUS_PTYCHOSPHAERITES",
+      "name": "Ptychosphaerites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PTYCHOSPHAERITES_GLOBULUS_ARTHABER_1896",
+          "name": "Ptychosphaerites globulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ptychosphaerites",
+          "authorship": "(Arthaber 1896)",
+          "sourceIds": {
+            "checklistbank": "txn:356667"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isculitidae"
+    },
+    {
+      "id": "GENUS_SMITHOCERAS",
+      "name": "Smithoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SMITHOCERAS_DRUMMONDI_DIENER_1907",
+          "name": "Smithoceras drummondi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Smithoceras",
+          "authorship": "Diener 1907",
+          "sourceIds": {
+            "checklistbank": "txn:398715"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isculitidae"
     }
   ],
-  "speciesCount": 7,
+  "speciesCount": 11,
   "appSlug": "isculitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -155,6 +234,7 @@
       "classKey": 136,
       "orderKey": 12261528,
       "familyKey": 4623132
-    }
+    },
+    "checklistbank": "txn:86681"
   }
 }

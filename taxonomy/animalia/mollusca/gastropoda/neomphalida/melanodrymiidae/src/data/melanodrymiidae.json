@@ -49,9 +49,11 @@
             "col": [
               "7RVPS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1429892"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1429892"
+            ]
           },
-          "authorityIds": "col:7RVPS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1429892,col:7RVPS",
           "authorship": "(Gorbunov, 1946)"
         },
         {
@@ -191,18 +193,6 @@
           },
           "children": [],
           "uuid": "09fd06ac-f27f-514-b91-77c3b92cb7421e"
-        },
-        {
-          "id": "SP_LEPTOGYRA_PATULA",
-          "name": "Leptogyra patula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leptogyra",
-          "sourceIds": {
-            "checklistbank": "380205"
-          },
-          "children": []
         },
         {
           "id": "SP_LEPTOGYRA_CONSTRICTA",
@@ -674,32 +664,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "melanodrymiidae"
-    },
-    {
-      "id": "GENUS_LEPTOGYRA",
-      "name": "\"Leptogyra",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPTOGYRA_BUJNITZKII_GORBUNOV_1946",
-          "name": "\"Leptogyra bujnitzkii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptogyra",
-          "authorship": "\"(Gorbunov, 1946)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1429892"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "melanodrymiidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 39,
+  "genusCount": 7,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

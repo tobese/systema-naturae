@@ -640,20 +640,6 @@
           "authorityIds": "itis:56698"
         },
         {
-          "id": "SP_LASIOTOCUS_MULLI_STOSSICH_1883",
-          "name": "Lasiotocus mulli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lasiotocus",
-          "authorship": "(Stossich, 1883)",
-          "sourceIds": {
-            "checklistbank": "29119"
-          },
-          "children": [],
-          "uuid": "e3c965c0-ac05-5e4-9b4-4a5ec5f2324897"
-        },
-        {
           "id": "SP_LASIOTOCUS_BEAUFORTI_HOPKINS_1941",
           "name": "Lasiotocus beauforti",
           "rank": "SPECIES",
@@ -760,19 +746,6 @@
           "authorship": "Durio & Manter, 1968",
           "sourceIds": {
             "checklistbank": "712687"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LASIOTOCUS_TYPICUM_NICOLL_1912",
-          "name": "Lasiotocus typicum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lasiotocus",
-          "authorship": "(Nicoll, 1912)",
-          "sourceIds": {
-            "checklistbank": "923978"
           },
           "children": []
         },
@@ -3216,18 +3189,6 @@
           "uuid": "301c5f06-3592-50d-8c3-212bc8e9537ce5"
         },
         {
-          "id": "SP_PROCTOTREMATOIDES_KUWAITI",
-          "name": "Proctotrematoides kuwaiti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Proctotrematoides",
-          "sourceIds": {
-            "checklistbank": "1226410"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PROCTOTREMATOIDES_SYNAPTURAE",
           "name": "Proctotrematoides synapturae",
           "rank": "SPECIES",
@@ -3422,20 +3383,6 @@
             ]
           },
           "authorityIds": "col:KXBX"
-        },
-        {
-          "id": "SP_BATHYMONORCHIS_POLYIPNI_REIMER_1985",
-          "name": "Bathymonorchis polyipni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bathymonorchis",
-          "authorship": "(Reimer, 1985)",
-          "sourceIds": {
-            "checklistbank": "29117"
-          },
-          "children": [],
-          "uuid": "6f190ba5-f865-57d-86c-bf56e5c35905b1"
         }
       ]
     },
@@ -4471,20 +4418,6 @@
           "authorityIds": "col:4499R"
         },
         {
-          "id": "SP_MONORCHIS_MONORCHIS_STOSSICH_1890",
-          "name": "Monorchis monorchis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Monorchis",
-          "authorship": "(Stossich, 1890)",
-          "sourceIds": {
-            "checklistbank": "29121"
-          },
-          "children": [],
-          "uuid": "676d4216-d99d-59d-af0-686f44ccb58faf"
-        },
-        {
           "id": "SP_MONORCHIS_LEWISI_CRIBB_WEE_BRAY_CUTMORE",
           "name": "Monorchis lewisi",
           "rank": "SPECIES",
@@ -4705,9 +4638,11 @@
             "col": [
               "36M4P"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:723005"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:723005"
+            ]
           },
-          "authorityIds": "col:36M4P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:723005,col:36M4P",
           "authorship": "(Zhukov, 1983)"
         },
         {
@@ -7327,9 +7262,11 @@
             "col": [
               "44998"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727636"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:727636"
+            ]
           },
-          "authorityIds": "col:44998",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:727636,col:44998",
           "authorship": "(Bravo-Hollis, 1956)"
         },
         {
@@ -10643,20 +10580,6 @@
           "uuid": "9ff5701a-f87a-572-9bd-aac89e97ee0682"
         },
         {
-          "id": "SP_ASYMPHYLODORA_PROGENETICA_SERKOVA_BYKHOVSKII_1940",
-          "name": "Asymphylodora progenetica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Asymphylodora",
-          "authorship": "Serkova & Bykhovskii, 1940",
-          "sourceIds": {
-            "checklistbank": "242516"
-          },
-          "children": [],
-          "uuid": "7a39fcf5-35c9-53a-97b-1d9f24ec904775"
-        },
-        {
           "id": "SP_ASYMPHYLODORA_TINCAE_MODEER_1790",
           "name": "Asymphylodora tincae",
           "rank": "SPECIES",
@@ -10669,6 +10592,18 @@
           },
           "children": [],
           "uuid": "bc69da6b-f1e4-5fd-964-5ee6f53190312f"
+        },
+        {
+          "id": "SP_ASYMPHYLODORA_KUBANICA",
+          "name": "Asymphylodora kubanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asymphylodora",
+          "sourceIds": {
+            "checklistbank": "390604"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10886,50 +10821,6 @@
       "lineage": "monorchiidae"
     },
     {
-      "id": "GENUS_DIPLOMONORCHIS",
-      "name": "\"Diplomonorchis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DIPLOMONORCHIS_CABALLEROI_ZHUKOV_1983",
-          "name": "\"Diplomonorchis caballeroi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diplomonorchis",
-          "authorship": "\"(Zhukov, 1983)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:723005"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "monorchiidae"
-    },
-    {
-      "id": "GENUS_MONORCHICESTRAHELMINS",
-      "name": "\"Monorchicestrahelmins",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MONORCHICESTRAHELMINS_BUPHARYNX_BRAVO_HOLLIS_1956",
-          "name": "\"Monorchicestrahelmins bupharynx\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Monorchicestrahelmins",
-          "authorship": "\"(Bravo-Hollis, 1956)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727636"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "monorchiidae"
-    },
-    {
       "id": "GENUS_PHYSOCHOERUS",
       "name": "\"Physochoerus",
       "rank": "GENUS",
@@ -10996,8 +10887,8 @@
       "lineage": "monorchiidae"
     }
   ],
-  "genusCount": 76,
-  "speciesCount": 655,
+  "genusCount": 74,
+  "speciesCount": 648,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

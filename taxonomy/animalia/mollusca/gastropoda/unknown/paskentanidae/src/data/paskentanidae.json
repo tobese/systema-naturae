@@ -142,18 +142,6 @@
           "uuid": "b8f58750-9e90-56d-a7a-1069ace57031cd"
         },
         {
-          "id": "SP_ALVINICONCHA_ADAMANTIS",
-          "name": "Alviniconcha adamantis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Alviniconcha",
-          "sourceIds": {
-            "checklistbank": "959572"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ALVINICONCHA_BOUCHETI",
           "name": "Alviniconcha boucheti",
           "rank": "SPECIES",
@@ -354,9 +342,11 @@
             "col": [
               "8PSCJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542899"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1542899"
+            ]
           },
-          "authorityIds": "col:8PSCJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1542899,col:8PSCJ",
           "authorship": "(Stanton, 1895)"
         },
         {
@@ -406,7 +396,8 @@
           "sourceIds": {
             "col": [
               "CHCNX"
-            ]
+            ],
+            "checklistbank": "txn:397056"
           },
           "authorityIds": "col:CHCNX"
         },
@@ -423,7 +414,8 @@
           "sourceIds": {
             "col": [
               "CHCP4"
-            ]
+            ],
+            "checklistbank": "txn:397055"
           },
           "authorityIds": "col:CHCP4"
         },
@@ -487,38 +479,17 @@
           "uuid": "504cbc0f-cd4b-526-a77-48b5001e71f93c"
         }
       ]
-    },
-    {
-      "id": "GENUS_PASKENTANA",
-      "name": "\"Paskentana",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PASKENTANA_PASKENTAENSIS_STANTON_1895",
-          "name": "\"Paskentana paskentaensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paskentana",
-          "authorship": "\"(Stanton, 1895)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1542899"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "paskentanidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 28,
+  "genusCount": 4,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 11183758
-    }
+    },
+    "checklistbank": "txn:438115"
   }
 }

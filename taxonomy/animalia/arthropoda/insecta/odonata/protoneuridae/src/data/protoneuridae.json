@@ -1868,27 +1868,6 @@
           "commonName": "Tiger Threadtail"
         },
         {
-          "id": "SP_NEONEURA_ESTHERA_WILLIAMSON_1917",
-          "name": "Neoneura esthera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "neoneura",
-          "authorship": "Williamson, 1917",
-          "children": [],
-          "uuid": "216c788e-0908-507-97a-89321fa8c48e52",
-          "sourceIds": {
-            "col": [
-              "6S7QF"
-            ],
-            "itis": [
-              "592259"
-            ],
-            "checklistbank": "101723"
-          },
-          "authorityIds": "col:6S7QF,itis:592259"
-        },
-        {
           "id": "SP_NEONEURA_SCHREIBERI_MACHADO_1975",
           "name": "Neoneura schreiberi",
           "rank": "SPECIES",
@@ -2828,18 +2807,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PRODASINEURA_VITTATA",
-          "name": "Prodasineura vittata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Prodasineura",
-          "sourceIds": {
-            "checklistbank": "558822"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PRODASINEURA_HUMERALIS",
           "name": "Prodasineura humeralis",
           "rank": "SPECIES",
@@ -3112,18 +3079,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NOSOSTICTA_SOLIDA",
-          "name": "Nososticta solida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nososticta",
-          "sourceIds": {
-            "checklistbank": "476799"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NOSOSTICTA_SOLITARIA",
           "name": "Nososticta solitaria",
           "rank": "SPECIES",
@@ -3219,13 +3174,57 @@
       "sourcedFrom": "checklistbank",
       "lineage": "protoneuridae",
       "speciesList": []
+    },
+    {
+      "id": "GENUS_EOPROTONEURA",
+      "name": "Eoprotoneura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOPROTONEURA_HYPERSTIGMA_CARLE_AND_WIGHTON_1990",
+          "name": "Eoprotoneura hyperstigma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoprotoneura",
+          "authorship": "Carle and Wighton 1990",
+          "sourceIds": {
+            "checklistbank": "txn:178658"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protoneuridae"
+    },
+    {
+      "id": "GENUS_ANGLOPROTONEURA",
+      "name": "Angloprotoneura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANGLOPROTONEURA_EMILIELACROIXI_NEL_AND_FLECK_2014",
+          "name": "Angloprotoneura emilielacroixi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Angloprotoneura",
+          "authorship": "Nel and Fleck 2014",
+          "sourceIds": {
+            "checklistbank": "txn:298277"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protoneuridae"
     }
   ],
-  "speciesCount": 170,
+  "speciesCount": 169,
   "appSlug": "protoneuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 19,
+  "genusCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3233,6 +3232,7 @@
       "classKey": 216,
       "orderKey": 789,
       "familyKey": 9405
-    }
+    },
+    "checklistbank": "txn:178657"
   }
 }

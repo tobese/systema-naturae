@@ -186,6 +186,18 @@
             "checklistbank": "c36c3b03-48e4-4c6d-857f-6d8f29decd52"
           },
           "children": []
+        },
+        {
+          "id": "SP_TOXOCARA_GENETTAE",
+          "name": "Toxocara genettae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Toxocara",
+          "sourceIds": {
+            "checklistbank": "391486"
+          },
+          "children": []
         }
       ]
     },
@@ -284,20 +296,6 @@
             ]
           },
           "authorityIds": "col:99W6C"
-        },
-        {
-          "id": "SP_TOXASCARIS_LEONINA_LINSTOW_1902",
-          "name": "Toxascaris leonina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Toxascaris",
-          "authorship": "(Linstow, 1902)",
-          "sourceIds": {
-            "checklistbank": "250691"
-          },
-          "children": [],
-          "uuid": "fd814da0-12df-572-b58-8e9530d93df0dc"
         },
         {
           "id": "SP_TOXASCARIS_SP",
@@ -460,8 +458,11 @@
           "uuid": "a5398e40-2ccc-5d8-a69-348d56d6281dfa",
           "authorship": "(Skrjabin, 1926) Mozgovoy, 1949",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730222"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1730222"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1730222"
         },
         {
           "id": "SP_PORROCAECUM_CRASSUM",
@@ -1031,6 +1032,18 @@
             "checklistbank": "3133110"
           },
           "children": []
+        },
+        {
+          "id": "SP_PORROCAECUM_SKRJABINENSE",
+          "name": "Porrocaecum skrjabinense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porrocaecum",
+          "sourceIds": {
+            "checklistbank": "391469"
+          },
+          "children": []
         }
       ]
     },
@@ -1079,26 +1092,6 @@
           },
           "authorityIds": "col:BYZ3C",
           "authorship": "(Leidy, 1856)"
-        },
-        {
-          "id": "SP_BAYLISASCARIS_DEVOSI",
-          "name": "Baylisascaris devosi",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Baylisascaris",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "4bb1ef59-2d88-511-ab8-4f8e66c415ddb4",
-          "sourceIds": {
-            "col": [
-              "C2CJG"
-            ],
-            "checklistbank": "250671"
-          },
-          "authorityIds": "col:C2CJG",
-          "authorship": "(Sprent, 1952)"
         },
         {
           "id": "SP_BAYLISASCARIS_LAEVIS",
@@ -1423,20 +1416,6 @@
           "authorityIds": "col:BZYG5"
         },
         {
-          "id": "SP_SEURATASCARIS_NUMIDICA_SEURAT_1917",
-          "name": "Seuratascaris numidica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Seuratascaris",
-          "authorship": "(Seurat, 1917)",
-          "sourceIds": {
-            "checklistbank": "250690"
-          },
-          "children": [],
-          "uuid": "c26becde-1b3e-572-801-c829108c19995d"
-        },
-        {
           "id": "SP_SEURATASCARIS_RANAE_WANG_ZHAO_CHEN_1978_CHEN_LI_2022",
           "name": "Seuratascaris ranae",
           "rank": "SPECIES",
@@ -1658,20 +1637,6 @@
           "uuid": "71394b7c-8ac6-5e5-b30-d1ec51628c5e05"
         },
         {
-          "id": "SP_ASCARIS_ARGENTINAE_RUDOLPHI_1819",
-          "name": "Ascaris argentinae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascaris",
-          "authorship": "Rudolphi, 1819",
-          "sourceIds": {
-            "checklistbank": "42944"
-          },
-          "children": [],
-          "uuid": "0e193147-aeba-5ee-a94-bada20a6246971"
-        },
-        {
           "id": "SP_ASCARIS_ASPIDOPHORI_BENEDEN_1871",
           "name": "Ascaris aspidophori",
           "rank": "SPECIES",
@@ -1824,20 +1789,6 @@
           },
           "children": [],
           "uuid": "b459243e-97af-589-b0b-6c86400221a381"
-        },
-        {
-          "id": "SP_ASCARIS_FILARIFORMIS_STOSSICH_1902",
-          "name": "Ascaris filariformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascaris",
-          "authorship": "Stossich, 1902",
-          "sourceIds": {
-            "checklistbank": "42956"
-          },
-          "children": [],
-          "uuid": "d8a46128-4311-5d3-99d-348c2ba3909018"
         },
         {
           "id": "SP_ASCARIS_GADIMINUTI_RUDOLPHI_1819",
@@ -2527,19 +2478,6 @@
           "children": []
         },
         {
-          "id": "SP_ASCARIS_LAEVIS_LEIDY_1856",
-          "name": "Ascaris laevis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascaris",
-          "authorship": "Leidy, 1856",
-          "sourceIds": {
-            "checklistbank": "1037355"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ASCARIS_QUADRICORNIS_WEDL_1862",
           "name": "Ascaris quadricornis",
           "rank": "SPECIES",
@@ -2667,6 +2605,30 @@
             "checklistbank": "1885273"
           },
           "children": []
+        },
+        {
+          "id": "SP_ASCARIS_MOSGOVOYI",
+          "name": "Ascaris mosgovoyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascaris",
+          "sourceIds": {
+            "checklistbank": "391442"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASCARIS_SPALACIS",
+          "name": "Ascaris spalacis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascaris",
+          "sourceIds": {
+            "checklistbank": "391443"
+          },
+          "children": []
         }
       ]
     },
@@ -2706,20 +2668,6 @@
           }
         },
         {
-          "id": "SP_HEXAMETRA_BODDAERTII_BAIR_1860",
-          "name": "Hexametra boddaertii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hexametra",
-          "authorship": "(Bair, 1860)",
-          "sourceIds": {
-            "checklistbank": "44163"
-          },
-          "children": [],
-          "uuid": "b0a93f71-7379-5b8-9d2-d0864704720370"
-        },
-        {
           "id": "SP_HEXAMETRA_ANGUSTICAECOIDES_CHABAUD_BRYGOO_1960",
           "name": "Hexametra angusticaecoides",
           "rank": "SPECIES",
@@ -2756,6 +2704,18 @@
           "authorship": "(Linstow, 1904)",
           "sourceIds": {
             "checklistbank": "1077492"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEXAMETRA_BOZKOVI",
+          "name": "Hexametra bozkovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hexametra",
+          "sourceIds": {
+            "checklistbank": "391454"
           },
           "children": []
         }
@@ -2809,6 +2769,45 @@
           "yearPublished": "2014",
           "children": [],
           "uuid": "f3ddd77b-775f-59f-b0f-a915552dc926d0"
+        },
+        {
+          "id": "SP_ASCARITES_PRISCUS_POINAR_AND_BOUCOT_2006",
+          "name": "Ascarites priscus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascarites",
+          "authorship": "Poinar and Boucot 2006",
+          "sourceIds": {
+            "checklistbank": "txn:318916"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASCARITES_GERUS_POINAR_AND_BOUCOT_2006",
+          "name": "Ascarites gerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascarites",
+          "authorship": "Poinar and Boucot 2006",
+          "sourceIds": {
+            "checklistbank": "txn:318917"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASCARITES_RUFFERI_DA_SILVA_ET_AL_2014",
+          "name": "Ascarites rufferi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ascarites",
+          "authorship": "Da Silva et al. 2014",
+          "sourceIds": {
+            "checklistbank": "txn:319060"
+          },
+          "children": []
         }
       ]
     },
@@ -3346,34 +3345,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ASCARIDIA_COLUMBAE_GMELIN_1790",
-          "name": "Ascaridia columbae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascaridia",
-          "authorship": "(Gmelin, 1790)",
-          "sourceIds": {
-            "checklistbank": "146121"
-          },
-          "children": [],
-          "uuid": "f447c089-6a7b-56e-8a4-1c3032d8f1e850"
-        },
-        {
-          "id": "SP_ASCARIDIA_GALLI_SCHRANK_1788",
-          "name": "Ascaridia galli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascaridia",
-          "authorship": "(Schrank, 1788)",
-          "sourceIds": {
-            "checklistbank": "146122"
-          },
-          "children": [],
-          "uuid": "f7a3fb40-74ff-571-912-3f42dfb5516e62"
-        },
-        {
           "id": "SP_ASCARIDIA_SERGIOMEIRAI_PEREIRA_1933",
           "name": "Ascaridia sergiomeirai",
           "rank": "SPECIES",
@@ -3400,20 +3371,6 @@
           },
           "children": [],
           "uuid": "88e1cdd4-8fbb-5e6-a56-9849335cd7c916"
-        },
-        {
-          "id": "SP_ASCARIDIA_PINTOI_TRAVASSOS_1933",
-          "name": "Ascaridia pintoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascaridia",
-          "authorship": "Travassos, 1933",
-          "sourceIds": {
-            "checklistbank": "53291"
-          },
-          "children": [],
-          "uuid": "fe421f55-333c-53c-9f2-920d0363ebdb66"
         },
         {
           "id": "SP_ASCARIDIA_ORNATA_KREIS_1955",
@@ -3870,19 +3827,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DUJARDINIA_PAULISTA_TRAVASSOS_1933",
-          "name": "Dujardinia paulista",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dujardinia",
-          "authorship": "Travassos, 1933",
-          "sourceIds": {
-            "checklistbank": "1078007"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DUJARDINIA_LONGISPICULA_TRAVASSOS_1933",
           "name": "Dujardinia longispicula",
           "rank": "SPECIES",
@@ -4065,18 +4009,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ROSTELLASCARIS_SP",
-          "name": "Rostellascaris sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rostellascaris",
-          "sourceIds": {
-            "checklistbank": "540752"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ROSTELLASCARIS_SPINICAUDATUM",
           "name": "Rostellascaris spinicaudatum",
           "rank": "SPECIES",
@@ -4180,19 +4112,6 @@
           "authorship": "\"(Zeder, 1800) Baylis, 1920\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1696192"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PORROCAECUM_PORROCAECUM_SKRJABIN_1926_MOZGOVOY_1949",
-          "name": "\"Porrocaecum (Porrocaecum)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Porrocaecum",
-          "authorship": "\"(Skrjabin, 1926) Mozgovoy, 1949\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730222"
           },
           "children": []
         },
@@ -4496,10 +4415,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ascarididae"
+    },
+    {
+      "id": "GENUS_ASILUS",
+      "name": "[Asilus]",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASILUS_PERCAE_SHERBORN_1902",
+          "name": "[Asilus] percae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "[Asilus]",
+          "authorship": "Sherborn, 1902",
+          "sourceIds": {
+            "checklistbank": "1815277"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ascarididae"
     }
   ],
-  "genusCount": 44,
-  "speciesCount": 286,
+  "genusCount": 45,
+  "speciesCount": 282,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

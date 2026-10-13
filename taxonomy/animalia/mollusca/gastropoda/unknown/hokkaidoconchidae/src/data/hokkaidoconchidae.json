@@ -177,7 +177,8 @@
           "sourceIds": {
             "col": [
               "CH4NL"
-            ]
+            ],
+            "checklistbank": "txn:397054"
           },
           "authorityIds": "col:CH4NL"
         },
@@ -307,6 +308,19 @@
           },
           "children": [],
           "uuid": "a541e825-301e-5dc-86e-8ec58fbf2a1e17"
+        },
+        {
+          "id": "SP_ABYSSOMELANIA_CRAMPTONI_KAIM_ET_AL_2014",
+          "name": "Abyssomelania cramptoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abyssomelania",
+          "authorship": "Kaim et al. 2014",
+          "sourceIds": {
+            "checklistbank": "txn:438110"
+          },
+          "children": []
         }
       ]
     },
@@ -332,9 +346,11 @@
             "col": [
               "7Q8DT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1432470"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1432470"
+            ]
           },
-          "authorityIds": "col:7Q8DT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1432470,col:7Q8DT",
           "authorship": "(Olsson, 1931)"
         },
         {
@@ -426,7 +442,8 @@
           "sourceIds": {
             "col": [
               "CH5JS"
-            ]
+            ],
+            "checklistbank": "txn:397052"
           },
           "authorityIds": "col:CH5JS"
         },
@@ -443,7 +460,8 @@
           "sourceIds": {
             "col": [
               "CH5JV"
-            ]
+            ],
+            "checklistbank": "txn:397067"
           },
           "authorityIds": "col:CH5JV"
         },
@@ -490,31 +508,9 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Hokkaidoconchidae"
-    },
-    {
-      "id": "GENUS_ASCHERIA",
-      "name": "\"Ascheria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ASCHERIA_ELENENSIS_OLSSON_1931",
-          "name": "\"Ascheria elenensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ascheria",
-          "authorship": "\"(Olsson, 1931)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1432470"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hokkaidoconchidae"
     }
   ],
-  "genusCount": 6,
+  "genusCount": 5,
   "speciesCount": 28,
   "sourceIds": {
     "gbif": {
@@ -522,6 +518,7 @@
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 6882519
-    }
+    },
+    "checklistbank": "txn:397053"
   }
 }

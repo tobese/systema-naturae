@@ -231,6 +231,19 @@
           "uuid": "81799ca5-fc8f-51b-ab5-cd96f19bad0949",
           "authorityIds": "col:482C5,gbif:177739215,gbif:2346616,itis:162161",
           "commonName": "Olympic Mudminnow"
+        },
+        {
+          "id": "SP_NOVUMBRA_OREGONENSIS_CAVENDER_1969",
+          "name": "Novumbra oregonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Novumbra",
+          "authorship": "Cavender 1969",
+          "sourceIds": {
+            "checklistbank": "txn:442532"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -301,19 +314,42 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "umbridae"
+    },
+    {
+      "id": "GENUS_UMBRIDARUM",
+      "name": "Umbridarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UMBRIDARUM_RINGEADEI_STEURBAUT_1979",
+          "name": "Umbridarum ringeadei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbridarum",
+          "authorship": "Steurbaut 1979",
+          "sourceIds": {
+            "checklistbank": "txn:436697"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "umbridae"
     }
   ],
-  "speciesCount": 13,
+  "speciesCount": 15,
   "appSlug": "umbridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 44,
       "orderKey": 548,
       "familyKey": 7663
-    }
+    },
+    "checklistbank": "12036"
   }
 }

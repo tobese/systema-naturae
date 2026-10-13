@@ -428,10 +428,12 @@
             "mycobank": [
               "345547"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988918"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:988918"
+            ]
           },
           "uuid": "c13d3e19-11a9-5dc-8cd-25c6e74187a9c9",
-          "authorityIds": "gbif:3424192,mycobank:345547"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:988918,gbif:3424192,mycobank:345547"
         },
         {
           "id": "PELTIGERA_APHTHOSA",
@@ -465,30 +467,6 @@
           },
           "uuid": "947d57ad-7f8f-5ab-868-61e125e595a19a",
           "authorityIds": "col:76F95,gbif:2601143,itis:191224,mycobank:449264"
-        },
-        {
-          "id": "PELTIGERA_AQUATICA",
-          "name": "Peltigera aquatica",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Peltigera",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "J. Miadlikowska & J. Lendemer",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "10847736"
-            ],
-            "mycobank": [
-              "809067"
-            ],
-            "checklistbank": "463687"
-          },
-          "uuid": "09d8e948-38b2-585-9c9-518eb167d5dc3b",
-          "authorityIds": "gbif:10847736,mycobank:809067"
         },
         {
           "id": "PELTIGERA_AUBERTII",
@@ -1065,35 +1043,6 @@
           },
           "uuid": "9ed3381f-0035-50f-9da-612fdd754a8159",
           "authorityIds": "col:76F9K,gbif:7636212,mycobank:399305"
-        },
-        {
-          "id": "PELTIGERA_FIBRILLOIDES",
-          "name": "Peltigera fibrilloides",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Peltigera",
-          "continents": [
-            "South America"
-          ],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "authorship": "(Gyelnik) Vitikainen",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "3424111"
-            ],
-            "mycobank": [
-              "446787"
-            ],
-            "col": [
-              "B24Y3"
-            ],
-            "checklistbank": "463688"
-          },
-          "uuid": "10cf7ff3-44b1-59c-af6-e315f8b5fa4f60",
-          "authorityIds": "col:B24Y3,gbif:3424111,mycobank:446787"
         },
         {
           "id": "PELTIGERA_FIMBRIATA",
@@ -3036,33 +2985,6 @@
           "authorityIds": "gbif:3423973,mycobank:399367"
         },
         {
-          "id": "PELTIGERA_TARTAREA",
-          "name": "Peltigera tartarea",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Peltigera",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Llano) Vitik.",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "10827395"
-            ],
-            "mycobank": [
-              "548376"
-            ],
-            "col": [
-              "76F2K"
-            ],
-            "checklistbank": "463692"
-          },
-          "uuid": "9b6972a5-0521-57f-8c4-ea03a823dae9cc",
-          "authorityIds": "col:76F2K,gbif:10827395,mycobank:548376"
-        },
-        {
           "id": "PELTIGERA_TEREZIANA",
           "name": "Peltigera tereziana",
           "rank": "SPECIES",
@@ -4162,30 +4084,6 @@
           "lineage": "Peltigera",
           "sourceIds": {
             "checklistbank": "404677"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PELTIGERA_AVENOSA",
-          "name": "Peltigera avenosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Peltigera",
-          "sourceIds": {
-            "checklistbank": "463693"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PELTIGERA_PRAECANINA",
-          "name": "Peltigera praecanina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Peltigera",
-          "sourceIds": {
-            "checklistbank": "463695"
           },
           "children": []
         },
@@ -5578,19 +5476,6 @@
           "children": []
         },
         {
-          "id": "SP_NEPHROMA_LUSITANICUM_SCHAER_1850",
-          "name": "Nephroma lusitanicum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nephroma",
-          "authorship": "Schaer., 1850",
-          "sourceIds": {
-            "checklistbank": "56693"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NEPHROMA_PAPYRACEUM_HOFFM_TH_FR_1861",
           "name": "Nephroma papyraceum",
           "rank": "SPECIES",
@@ -6492,32 +6377,6 @@
           "authorship": "(Scop.) Ach., 1810",
           "sourceIds": {
             "checklistbank": "56612"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STICTA_PULMONARIA_ACH",
-          "name": "Sticta pulmonaria",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sticta",
-          "authorship": "Ach.",
-          "sourceIds": {
-            "checklistbank": "56614"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STICTA_PULMONACEA_ACH_ACH_1810",
-          "name": "Sticta pulmonacea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sticta",
-          "authorship": "(Ach.) Ach., 1810",
-          "sourceIds": {
-            "checklistbank": "56626"
           },
           "children": []
         },
@@ -7985,19 +7844,6 @@
           "children": []
         },
         {
-          "id": "SP_PELTIDEA_SCUTATA_ACH_1803",
-          "name": "Peltidea scutata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Peltidea",
-          "authorship": "Ach., 1803",
-          "sourceIds": {
-            "checklistbank": "980921"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PELTIDEA_HYMENINA_ACH_1803",
           "name": "Peltidea hymenina",
           "rank": "SPECIES",
@@ -8224,18 +8070,6 @@
           "lineage": "Massalongia",
           "sourceIds": {
             "checklistbank": "ott3781483"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MASSALONGIA_GRISEOLOBULATA",
-          "name": "Massalongia griseolobulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Massalongia",
-          "sourceIds": {
-            "checklistbank": "ott3781484"
           },
           "children": []
         },
@@ -9611,19 +9445,6 @@
           "children": []
         },
         {
-          "id": "SP_PELTIGERA_ANTARCTICA_C_W_DODGE_1966",
-          "name": "\"Peltigera antarctica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Peltigera",
-          "authorship": "\"C.W. Dodge, 1966\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988918"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PELTIGERA_CASTANEA_GOWARD_GOFFINET_MI_DL_2003",
           "name": "\"Peltigera castanea\"",
           "rank": "SPECIES",
@@ -9691,7 +9512,7 @@
   ],
   "authorship": "Dumortier",
   "genusCount": 39,
-  "speciesCount": 560,
+  "speciesCount": 549,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

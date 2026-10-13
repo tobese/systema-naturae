@@ -121,9 +121,11 @@
             "col": [
               "44FNH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403717"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403717"
+            ]
           },
-          "authorityIds": "col:44FNH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403717,col:44FNH",
           "authorship": "(A. W. B. Powell, 1958)"
         },
         {
@@ -226,9 +228,11 @@
             "col": [
               "44FNQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403721"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403721"
+            ]
           },
-          "authorityIds": "col:44FNQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403721,col:44FNQ",
           "authorship": "(A. Adams & Reeve, 1850)"
         },
         {
@@ -267,9 +271,11 @@
             "col": [
               "44FNS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832978"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:832978"
+            ]
           },
-          "authorityIds": "col:44FNS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832978,col:44FNS",
           "authorship": "(Laws, 1932)"
         },
         {
@@ -645,9 +651,11 @@
             "col": [
               "44FPD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403732"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403732"
+            ]
           },
-          "authorityIds": "col:44FPD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403732,col:44FPD",
           "authorship": "(Hanley, 1858)"
         },
         {
@@ -752,9 +760,11 @@
             "col": [
               "44FPH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403734"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403734"
+            ]
           },
-          "authorityIds": "col:44FPH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403734,col:44FPH",
           "authorship": "(Reeve, 1842)"
         },
         {
@@ -793,9 +803,11 @@
             "col": [
               "44FPK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403736"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403736"
+            ]
           },
-          "authorityIds": "col:44FPK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403736,col:44FPK",
           "authorship": "(Reeve, 1842)"
         },
         {
@@ -1277,7 +1289,8 @@
           "sourceIds": {
             "col": [
               "CBGK2"
-            ]
+            ],
+            "checklistbank": "txn:86375"
           },
           "authorityIds": "col:CBGK2"
         },
@@ -1294,7 +1307,8 @@
           "sourceIds": {
             "col": [
               "VFXWP"
-            ]
+            ],
+            "checklistbank": "txn:144904"
           },
           "authorityIds": "col:VFXWP"
         },
@@ -1420,18 +1434,6 @@
           "authorship": "Adams",
           "sourceIds": {
             "checklistbank": "adb54d0d-c5dd-44e0-b83b-a9a7d80046e0"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MORUM_JOELGREENEI",
-          "name": "Morum joelgreenei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Morum",
-          "sourceIds": {
-            "checklistbank": "174605"
           },
           "children": []
         },
@@ -1722,6 +1724,45 @@
             "checklistbank": "ott7954155"
           },
           "children": []
+        },
+        {
+          "id": "SP_MORUM_CORRUGATUM_CLARK_AND_DURHAM_1946",
+          "name": "Morum corrugatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morum",
+          "authorship": "Clark and Durham 1946",
+          "sourceIds": {
+            "checklistbank": "txn:158374"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MORUM_COXI_TRECHMANNI_1935",
+          "name": "Morum coxi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morum",
+          "authorship": "(Trechmanni 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:167675"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MORUM_CHARANALENSE_OLSSON_1931",
+          "name": "Morum charanalense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morum",
+          "authorship": "(Olsson 1931)",
+          "sourceIds": {
+            "checklistbank": "txn:71611"
+          },
+          "children": []
         }
       ]
     },
@@ -1742,7 +1783,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6c9f36c2-a88f-556-93d-b746d1a4f703b5"
+          "uuid": "6c9f36c2-a88f-556-93d-b746d1a4f703b5",
+          "authorship": "(Tate 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:114892"
+          }
         },
         {
           "id": "SP_AUSTROHARPA_CASSINOIDES",
@@ -1759,9 +1804,11 @@
             "col": [
               "7Q9BZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444967"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1444967"
+            ]
           },
-          "authorityIds": "col:7Q9BZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1444967,col:7Q9BZ",
           "authorship": "(Tate, 1889)"
         },
         {
@@ -1779,9 +1826,11 @@
             "col": [
               "7Q9C2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444959"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1444959"
+            ]
           },
-          "authorityIds": "col:7Q9C2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1444959,col:7Q9C2",
           "authorship": "(Tate, 1889)"
         },
         {
@@ -1800,9 +1849,11 @@
             "col": [
               "689F7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403783"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403783"
+            ]
           },
-          "authorityIds": "col:689F7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403783,col:689F7",
           "authorship": "(Iredale, 1931)"
         },
         {
@@ -1896,9 +1947,11 @@
             "col": [
               "7Q9C5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444964"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1444964"
+            ]
           },
-          "authorityIds": "col:7Q9C5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1444964,col:7Q9C5",
           "authorship": "(Tate, 1894)"
         },
         {
@@ -1917,9 +1970,11 @@
             "col": [
               "JWSX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1043191"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1043191"
+            ]
           },
-          "authorityIds": "col:JWSX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1043191,col:JWSX",
           "authorship": "(Tate, 1889)"
         },
         {
@@ -1938,9 +1993,11 @@
             "col": [
               "JWSY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403786"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:403786"
+            ]
           },
-          "authorityIds": "col:JWSY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:403786,col:JWSY",
           "authorship": "(Verco, 1896)"
         },
         {
@@ -2128,9 +2185,11 @@
             "col": [
               "7R7J3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455832"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1455832"
+            ]
           },
-          "authorityIds": "col:7R7J3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1455832,col:7R7J3",
           "authorship": "(Deshayes, 1835)"
         },
         {
@@ -2188,9 +2247,11 @@
             "col": [
               "6FJ6N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1321158"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1321158"
+            ]
           },
-          "authorityIds": "col:6FJ6N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1321158,col:6FJ6N",
           "authorship": "(G. D. Harris, 1896)"
         },
         {
@@ -2208,9 +2269,11 @@
             "col": [
               "7R7J4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455838"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1455838"
+            ]
           },
-          "authorityIds": "col:7R7J4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1455838,col:7R7J4",
           "authorship": "(Tate, 1889)"
         },
         {
@@ -2228,9 +2291,11 @@
             "col": [
               "6FJ6Q"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1321152"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1321152"
+            ]
           },
-          "authorityIds": "col:6FJ6Q",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1321152,col:6FJ6Q",
           "authorship": "(Lamarck, 1803)"
         },
         {
@@ -2266,9 +2331,11 @@
             "col": [
               "6FJ6P"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1321159"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1321159"
+            ]
           },
-          "authorityIds": "col:6FJ6P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1321159,col:6FJ6P",
           "authorship": "(A. d'Orbigny, 1852)"
         },
         {
@@ -2416,6 +2483,32 @@
             ]
           },
           "authorityIds": "col:VCWST"
+        },
+        {
+          "id": "SP_EOCITHARA_BELLARDII_SACCO_1890",
+          "name": "Eocithara bellardii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eocithara",
+          "authorship": "(Sacco 1890)",
+          "sourceIds": {
+            "checklistbank": "txn:106159"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOCITHARA_NARICA_VREDENBURG_1925",
+          "name": "Eocithara narica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eocithara",
+          "authorship": "(Vredenburg 1925)",
+          "sourceIds": {
+            "checklistbank": "txn:113379"
+          },
+          "children": []
         }
       ]
     },
@@ -2441,9 +2534,11 @@
             "col": [
               "QPF7M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1872818"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1872818"
+            ]
           },
-          "authorityIds": "col:QPF7M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1872818,col:QPF7M",
           "authorship": "Dall, 1925"
         },
         {
@@ -2485,9 +2580,11 @@
             "col": [
               "7SJ93"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1457768"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1457768"
+            ]
           },
-          "authorityIds": "col:7SJ93",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1457768,col:7SJ93",
           "authorship": "(Waring, 1917)"
         },
         {
@@ -2500,6 +2597,19 @@
           "authorship": "Powell, 1958",
           "sourceIds": {
             "checklistbank": "994166"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ONISCIDIA_CHAVANI_FURON_1948",
+          "name": "Oniscidia chavani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oniscidia",
+          "authorship": "Furon 1948",
+          "sourceIds": {
+            "checklistbank": "txn:480391"
           },
           "children": []
         }
@@ -2638,9 +2748,11 @@
             "col": [
               "3JRQ6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:208159"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:208159"
+            ]
           },
-          "authorityIds": "col:3JRQ6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:208159,col:3JRQ6",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -3357,18 +3469,6 @@
           "children": []
         },
         {
-          "id": "SP_HARPA_CRENATA",
-          "name": "Harpa crenata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Harpa",
-          "sourceIds": {
-            "checklistbank": "292192"
-          },
-          "children": []
-        },
-        {
           "id": "SP_HARPA_CABRITI",
           "name": "Harpa cabriti",
           "rank": "SPECIES",
@@ -3560,6 +3660,32 @@
             "checklistbank": "553753"
           },
           "children": []
+        },
+        {
+          "id": "SP_HARPA_MUTICA_LAMARCK_1803",
+          "name": "Harpa mutica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Harpa",
+          "authorship": "(Lamarck 1803)",
+          "sourceIds": {
+            "checklistbank": "txn:350097"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HARPA_JACKSONENSIS_HARRIS_1896",
+          "name": "Harpa jacksonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Harpa",
+          "authorship": "(Harris 1896)",
+          "sourceIds": {
+            "checklistbank": "txn:478832"
+          },
+          "children": []
         }
       ]
     },
@@ -3659,9 +3785,11 @@
             "col": [
               "7QW99"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1471702"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1471702"
+            ]
           },
-          "authorityIds": "col:7QW99",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1471702,col:7QW99",
           "authorship": "(Hermann, 1781)",
           "sourcedFrom": "checklistbank"
         },
@@ -4063,15 +4191,28 @@
           "children": []
         },
         {
-          "id": "SP_ONISCIA_DENNISONI_REEVE_1842",
-          "name": "Oniscia dennisoni",
+          "id": "SP_ONISCIA_HARPULA_CONRAD_1848",
+          "name": "Oniscia harpula",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Oniscia",
-          "authorship": "Reeve, 1842",
+          "authorship": "Conrad 1848",
           "sourceIds": {
-            "checklistbank": "1050843"
+            "checklistbank": "txn:417316"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ONISCIA_CHAVANI_FURON_1948",
+          "name": "Oniscia chavani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oniscia",
+          "authorship": "Furon 1948",
+          "sourceIds": {
+            "checklistbank": "txn:509997"
           },
           "children": []
         }
@@ -4120,19 +4261,6 @@
           "children": []
         },
         {
-          "id": "SP_HARPA_COSTATA_LINNAEUS_1758",
-          "name": "\"Harpa costata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Harpa",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:208159"
-          },
-          "children": []
-        },
-        {
           "id": "SP_HARPA_COSTATA_BOZZETTI_2020",
           "name": "\"Harpa costata",
           "rank": "SPECIES",
@@ -4154,19 +4282,6 @@
       "name": "\"Morum",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MORUM_BRUUNI_A_W_B_POWELL_1958",
-          "name": "\"Morum bruuni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"(A. W. B. Powell, 1958)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403717"
-          },
-          "children": []
-        },
         {
           "id": "SP_MORUM_CANCELLATUM_G_B_SOWERBY_I_1825",
           "name": "\"Morum cancellatum\"",
@@ -4190,19 +4305,6 @@
           "authorship": "\"(Reeve, 1842)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:403719"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MORUM_EXQUISITUM_A_ADAMS_REEVE_1850",
-          "name": "\"Morum exquisitum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"(A. Adams & Reeve, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403721"
           },
           "children": []
         },
@@ -4246,71 +4348,6 @@
           "children": []
         },
         {
-          "id": "SP_MORUM_PONDEROSUM_HANLEY_1858",
-          "name": "\"Morum ponderosum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"(Hanley, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403732"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MORUM_STROMBIFORME_REEVE_1842",
-          "name": "\"Morum strombiforme\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"(Reeve, 1842)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403734"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MORUM_TUBERCULOSUM_REEVE_1842",
-          "name": "\"Morum tuberculosum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"(Reeve, 1842)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403736"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MORUM_FINLAYI_LAWS_1932",
-          "name": "\"Morum finlayi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"(Laws, 1932)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832978"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MORUM_CHIPOLANUM_DALL_1925",
-          "name": "\"Morum chipolanum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Morum",
-          "authorship": "\"Dall, 1925\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1872818"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MORUM_CHIPOLANUM_MANSFIELD_1937",
           "name": "\"Morum chipolanum",
           "rank": "SPECIES",
@@ -4328,162 +4365,10 @@
       "lineage": "harpidae"
     },
     {
-      "id": "GENUS_AUSTROHARPA",
-      "name": "\"Austroharpa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AUSTROHARPA_EXQUISITA_IREDALE_1931",
-          "name": "\"Austroharpa exquisita\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Austroharpa",
-          "authorship": "\"(Iredale, 1931)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403783"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AUSTROHARPA_PUNCTATA_VERCO_1896",
-          "name": "\"Austroharpa punctata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Austroharpa",
-          "authorship": "\"(Verco, 1896)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:403786"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AUSTROHARPA_PULLIGERA_TATE_1889",
-          "name": "\"Austroharpa pulligera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Austroharpa",
-          "authorship": "\"(Tate, 1889)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1043191"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AUSTROHARPA_CLATHRATA_TATE_1889",
-          "name": "\"Austroharpa clathrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Austroharpa",
-          "authorship": "\"(Tate, 1889)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444959"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AUSTROHARPA_PACHYCHEILA_TATE_1894",
-          "name": "\"Austroharpa pachycheila\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Austroharpa",
-          "authorship": "\"(Tate, 1894)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444964"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AUSTROHARPA_CASSINOIDES_TATE_1889",
-          "name": "\"Austroharpa cassinoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Austroharpa",
-          "authorship": "\"(Tate, 1889)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1444967"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "harpidae"
-    },
-    {
       "id": "GENUS_EOCITHARA",
       "name": "\"Eocithara",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_EOCITHARA_MUTICA_LAMARCK_1803",
-          "name": "\"Eocithara mutica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eocithara",
-          "authorship": "\"(Lamarck, 1803)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1321152"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EOCITHARA_JACKSONENSIS_G_D_HARRIS_1896",
-          "name": "\"Eocithara jacksonensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eocithara",
-          "authorship": "\"(G. D. Harris, 1896)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1321158"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EOCITHARA_SUBMUTICA_A_D_ORBIGNY_1852",
-          "name": "\"Eocithara submutica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eocithara",
-          "authorship": "\"(A. d'Orbigny, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1321159"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EOCITHARA_ELEGANS_DESHAYES_1835",
-          "name": "\"Eocithara elegans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eocithara",
-          "authorship": "\"(Deshayes, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455832"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EOCITHARA_LAMELLIFERA_TATE_1889",
-          "name": "\"Eocithara lamellifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eocithara",
-          "authorship": "\"(Tate, 1889)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455838"
-          },
-          "children": []
-        },
         {
           "id": "SP_EOCITHARA_MUTICA_H_E_VOKES_1937",
           "name": "\"Eocithara mutica",
@@ -4500,54 +4385,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "harpidae"
-    },
-    {
-      "id": "GENUS_ONISCIDIA",
-      "name": "\"Oniscidia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ONISCIDIA_PLECTATA_WARING_1917",
-          "name": "\"Oniscidia plectata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oniscidia",
-          "authorship": "\"(Waring, 1917)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1457768"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "harpidae"
-    },
-    {
-      "id": "GENUS_CRYPTOCHORDA",
-      "name": "\"Cryptochorda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CRYPTOCHORDA_STROMBOIDES_HERMANN_1781",
-          "name": "\"Cryptochorda stromboides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptochorda",
-          "authorship": "\"(Hermann, 1781)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1471702"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "harpidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 273,
+  "genusCount": 17,
+  "speciesCount": 259,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

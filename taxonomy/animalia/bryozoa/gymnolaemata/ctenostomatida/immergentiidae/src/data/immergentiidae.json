@@ -121,9 +121,11 @@
             "col": [
               "86L3B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411655"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411655"
+            ]
           },
-          "authorityIds": "col:86L3B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411655,col:86L3B",
           "authorship": "(Magdefrau, 1937)"
         },
         {
@@ -181,26 +183,6 @@
             ]
           },
           "authorityIds": "col:86L3F"
-        },
-        {
-          "id": "SP_IMMERGENTIA_ORBIGNYANA",
-          "name": "Immergentia orbignyana",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Immergentia",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "2f324b65-df5e-593-b0d-dc8eaf359f96ba",
-          "sourceIds": {
-            "col": [
-              "3PJ8F"
-            ],
-            "checklistbank": "31648"
-          },
-          "authorityIds": "col:3PJ8F",
-          "authorship": "Fischer, 1866"
         },
         {
           "id": "SP_IMMERGENTIA_PATAGONIANA_POHOWSKY_1978",
@@ -476,19 +458,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:472729"
           },
           "children": []
-        },
-        {
-          "id": "SP_IMMERGENTIA_CRUCIATA_MAGDEFRAU_1937",
-          "name": "\"Immergentia cruciata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Immergentia",
-          "authorship": "\"(Magdefrau, 1937)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411655"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -496,7 +465,7 @@
     }
   ],
   "genusCount": 2,
-  "speciesCount": 29,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

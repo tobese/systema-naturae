@@ -263,6 +263,20 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     "SP_BACTRIDIUM_SP", "SP_CORTICIUM_SP", "SP_CRUCIBULUM_SP",
     "SP_HYPODERMA_SP", "SP_MICROSTOMA_SP", "SP_SCUTIGER_SP",
     "SP_SERPULA_SP", "SP_TAPINELLA_SP", "SP_VENTURIA_SP",
+    # Cross-kingdom collisions from the CheckListBank / NCBI import
+    # (2026-10-12/13):
+    # SP_CORTICIUM_TOPSENTI_POULIQUEN_1972: legitimate -- Corticium is
+    #   both a sponge genus (animalia/Plakinidae) and a fungal genus
+    #   (fungi/Corticiaceae); the same binomial is a real, independent
+    #   species in each kingdom.
+    # SP_ALICEATHRIPS_AUSTRALIENSIS: import artifact -- the animalia
+    #   entry in Thripidae (checklistbank 1279082) is the real thrips
+    #   species; the plantae entry in Poaceae (checklistbank ott6021347,
+    #   an OTT ID) is the same thrips species misplaced into grasses by
+    #   the OTT merge. The animalia genus Lineage is correct; the
+    #   plantae copy is a duplicate carrying the wrong family context.
+    "SP_ALICEATHRIPS_AUSTRALIENSIS",
+    "SP_CORTICIUM_TOPSENTI_POULIQUEN_1972",
 }
 
 def check_duplicate_species():

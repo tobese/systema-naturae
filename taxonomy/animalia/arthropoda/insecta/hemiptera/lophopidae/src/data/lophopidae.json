@@ -1109,20 +1109,6 @@
           "authorityIds": "col:3W445"
         },
         {
-          "id": "SP_LOPHOPS_SACCHARICIDA",
-          "name": "Lophops saccharicida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lophops",
-          "children": [],
-          "uuid": "c203a75e-2e63-5a0-973-fdc899a7807d8f",
-          "authorship": "Kirkaldy, 1906",
-          "sourceIds": {
-            "checklistbank": "469336"
-          }
-        },
-        {
           "id": "SP_LOPHOPS_SACCHARACIDA_KIRKALDY",
           "name": "Lophops saccharacida",
           "rank": "SPECIES",
@@ -1147,18 +1133,6 @@
           },
           "children": [],
           "authorship": "(Walker, 1870)"
-        },
-        {
-          "id": "SP_LOPHOPS_SERVILLEI",
-          "name": "Lophops servillei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lophops",
-          "sourceIds": {
-            "checklistbank": "919374"
-          },
-          "children": []
         },
         {
           "id": "SP_LOPHOPS_WATSHAMI",
@@ -1217,18 +1191,6 @@
           "lineage": "Lophops",
           "sourceIds": {
             "checklistbank": "ott7875481"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LOPHOPS_SP",
-          "name": "Lophops sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lophops",
-          "sourceIds": {
-            "checklistbank": "389980"
           },
           "children": []
         }
@@ -1337,18 +1299,6 @@
             ]
           },
           "authorityIds": "col:49RM3"
-        },
-        {
-          "id": "SP_ONYCTA_SP",
-          "name": "Onycta sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Onycta",
-          "sourceIds": {
-            "checklistbank": "390112"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1497,20 +1447,6 @@
             ]
           },
           "authorityIds": "col:78QGC"
-        },
-        {
-          "id": "SP_PYRILLA_PERPUSILLA_WALKER_1851",
-          "name": "Pyrilla perpusilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pyrilla",
-          "authorship": "Walker, 1851",
-          "sourceIds": {
-            "checklistbank": "264782"
-          },
-          "children": [],
-          "uuid": "5150516c-78e4-56a-a3e-847d9995287005"
         },
         {
           "id": "SP_PYRILLA_SINICA",
@@ -2986,7 +2922,8 @@
           "sourceIds": {
             "checklistbank": "ott6302930"
           },
-          "children": []
+          "children": [],
+          "authorship": "Stroinski and Szwedo 2012"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3007,7 +2944,8 @@
           "sourceIds": {
             "checklistbank": "ott6302932"
           },
-          "children": []
+          "children": [],
+          "authorship": "Szwedo et al. 2015"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3028,7 +2966,8 @@
           "sourceIds": {
             "checklistbank": "ott6302939"
           },
-          "children": []
+          "children": [],
+          "authorship": "Szwedo 2011"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3049,7 +2988,8 @@
           "sourceIds": {
             "checklistbank": "ott6302944"
           },
-          "children": []
+          "children": [],
+          "authorship": "Cockerell 1921"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3117,13 +3057,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lophopidae"
+    },
+    {
+      "id": "GENUS_BANINUS",
+      "name": "Baninus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BANINUS_THURINGIORUM_SZWEDO_AND_WAPPLER_2006",
+          "name": "Baninus thuringiorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Baninus",
+          "authorship": "Szwedo and Wappler 2006",
+          "sourceIds": {
+            "checklistbank": "txn:295063"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophopidae"
+    },
+    {
+      "id": "GENUS_ANKOMWARIUS",
+      "name": "Ankomwarius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANKOMWARIUS_BRODIEI_SZWEDO_2019",
+          "name": "Ankomwarius brodiei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankomwarius",
+          "authorship": "Szwedo 2019",
+          "sourceIds": {
+            "checklistbank": "txn:403223"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lophopidae"
     }
   ],
-  "speciesCount": 190,
+  "speciesCount": 187,
   "appSlug": "lophopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 52,
+  "genusCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

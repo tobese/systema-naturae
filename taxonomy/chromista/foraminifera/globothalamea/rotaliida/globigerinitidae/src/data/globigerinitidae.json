@@ -54,7 +54,8 @@
             "checklistbank": "ott8019097"
           },
           "uuid": "cf5b253b-85e3-5ae-904-50f54528d5ab4e",
-          "authorityIds": "col:83PDF,gbif:9295369"
+          "authorityIds": "col:83PDF,gbif:9295369",
+          "authorship": "(Bermudez 1961)"
         },
         {
           "id": "TENUITELLA_GEMMA",
@@ -338,10 +339,12 @@
             ],
             "col": [
               "6KHHL"
-            ]
+            ],
+            "checklistbank": "txn:82224"
           },
           "uuid": "0ecdb1d5-ccdc-5d6-b11-ebb190c958e158",
-          "authorityIds": "col:6KHHL,gbif:8186067,itis:45821"
+          "authorityIds": "col:6KHHL,gbif:8186067,itis:45821",
+          "authorship": "(Loeblich and Tappan 1957)"
         },
         {
           "id": "GLOBIGERINITA_MINUTA",
@@ -384,10 +387,12 @@
             ],
             "col": [
               "82MG3"
-            ]
+            ],
+            "checklistbank": "txn:508622"
           },
           "uuid": "b4cb0d1c-8abf-539-953-fca5c562fa62e1",
-          "authorityIds": "col:82MG3,gbif:9024553"
+          "authorityIds": "col:82MG3,gbif:9024553",
+          "authorship": "Loeblich and Tappan 1957"
         },
         {
           "id": "GLOBIGERINITA_PSEUDOHARAINGAE",
@@ -430,10 +435,38 @@
             ],
             "col": [
               "6KHHB"
-            ]
+            ],
+            "checklistbank": "txn:422377"
           },
           "uuid": "74d88d4b-d8af-5db-a65-41cb9835782623",
-          "authorityIds": "col:6KHHB,gbif:7672896"
+          "authorityIds": "col:6KHHB,gbif:7672896",
+          "authorship": "(Ehrenberg 1862)"
+        },
+        {
+          "id": "SP_GLOBIGERINITA_NAPARIMAENSIS_BROENNIMANN_1951",
+          "name": "Globigerinita naparimaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Globigerinita",
+          "authorship": "Broennimann 1951",
+          "sourceIds": {
+            "checklistbank": "txn:422374"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOBIGERINITA_ECHINATA_BOLLI_1957",
+          "name": "Globigerinita echinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Globigerinita",
+          "authorship": "(Bolli 1957)",
+          "sourceIds": {
+            "checklistbank": "txn:507370"
+          },
+          "children": []
         }
       ]
     },
@@ -804,6 +837,19 @@
             "checklistbank": "ott8019103"
           },
           "children": []
+        },
+        {
+          "id": "SP_TENUITELLINATA_PRAESTAINFORTHI_BLOW_1979",
+          "name": "Tenuitellinata praestainforthi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tenuitellinata",
+          "authorship": "(Blow 1979)",
+          "sourceIds": {
+            "checklistbank": "txn:506100"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1152,10 +1198,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "globigerinitidae"
+    },
+    {
+      "id": "GENUS_TENUITELLITA",
+      "name": "Tenuitellita",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TENUITELLITA_PARKERAE_BR_NNIMANN_AND_RESIG_1971",
+          "name": "Tenuitellita parkerae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tenuitellita",
+          "authorship": "(Brönnimann and Resig 1971)",
+          "sourceIds": {
+            "checklistbank": "txn:506627"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "globigerinitidae"
+    },
+    {
+      "id": "GENUS_MUTABELLA",
+      "name": "Mutabella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MUTABELLA_MIRABILIS_PEARSON_ET_AL_2001",
+          "name": "Mutabella mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mutabella",
+          "authorship": "Pearson et al. 2001",
+          "sourceIds": {
+            "checklistbank": "txn:510241"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "globigerinitidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 60,
+  "genusCount": 16,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -1164,6 +1254,6 @@
       "orderKey": 7692889,
       "familyKey": 7845762
     },
-    "checklistbank": "2517323"
+    "checklistbank": "ott4803125"
   }
 }

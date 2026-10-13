@@ -342,9 +342,11 @@
             "col": [
               "4XPDT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420647"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420647"
+            ]
           },
-          "authorityIds": "col:4XPDT,itis:76446"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420647,col:4XPDT,itis:76446"
         },
         {
           "id": "SP_SIPHONARIA_ALTERNICOSTA_POTIEZ_MICHAUD_1838",
@@ -790,9 +792,11 @@
             "col": [
               "7T5R8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1344857"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1344857"
+            ]
           },
-          "authorityIds": "col:7T5R8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1344857,col:7T5R8",
           "authorship": "(Deshayes, 1824)"
         },
         {
@@ -1231,9 +1235,11 @@
             "col": [
               "4XPFN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740941"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:740941"
+            ]
           },
-          "authorityIds": "col:4XPFN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:740941,col:4XPFN",
           "authorship": "(Donovan, 1824)"
         },
         {
@@ -1252,9 +1258,11 @@
             "col": [
               "4XPFP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740945"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:740945"
+            ]
           },
-          "authorityIds": "col:4XPFP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:740945,col:4XPFP",
           "authorship": "(Lamarck, 1819)"
         },
         {
@@ -1789,9 +1797,11 @@
             "col": [
               "4XPGR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:759139"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:759139"
+            ]
           },
-          "authorityIds": "col:4XPGR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:759139,col:4XPGR",
           "authorship": "(Iredale, 1940)"
         },
         {
@@ -1904,9 +1914,11 @@
             "col": [
               "CPJV9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:955820"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:955820"
+            ]
           },
-          "authorityIds": "col:CPJV9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:955820,col:CPJV9",
           "authorship": "(Sismonda, 1846)"
         },
         {
@@ -2194,9 +2206,11 @@
             "col": [
               "4XPHF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:850630"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:850630"
+            ]
           },
-          "authorityIds": "col:4XPHF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:850630,col:4XPHF",
           "authorship": "(A. W. B. Powell, 1939)"
         },
         {
@@ -3839,18 +3853,6 @@
           "children": []
         },
         {
-          "id": "SP_SIPHONARIA_COMPRESSA",
-          "name": "Siphonaria compressa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Siphonaria",
-          "sourceIds": {
-            "checklistbank": "112703"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SIPHONARIA_GIGAS",
           "name": "Siphonaria gigas",
           "rank": "SPECIES",
@@ -3934,7 +3936,8 @@
           "sourceIds": {
             "checklistbank": "542287"
           },
-          "children": []
+          "children": [],
+          "authorship": "Quoy and Gaimard 1833"
         },
         {
           "id": "SP_SIPHONARIA_CONCINNA",
@@ -4429,6 +4432,32 @@
             "checklistbank": "2790866"
           },
           "children": []
+        },
+        {
+          "id": "SP_SIPHONARIA_WIESERI_WADE_1926",
+          "name": "Siphonaria wieseri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonaria",
+          "authorship": "(Wade 1926)",
+          "sourceIds": {
+            "checklistbank": "txn:59119"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIPHONARIA_CAPULOIDES_COOPER_1894",
+          "name": "Siphonaria capuloides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonaria",
+          "authorship": "Cooper 1894",
+          "sourceIds": {
+            "checklistbank": "txn:383721"
+          },
+          "children": []
         }
       ]
     },
@@ -4533,6 +4562,71 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "07ae530a-f7f7-57b-9bd-c764f9e402cfdf"
+        },
+        {
+          "id": "SP_ANISOMYON_SHUMARDI_MEEK_AND_HAYDEN_1860",
+          "name": "Anisomyon shumardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anisomyon",
+          "authorship": "Meek and Hayden 1860",
+          "sourceIds": {
+            "checklistbank": "txn:132026"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANISOMYON_PATELLIFORMIS_MEEK_AND_HAYDEN_1860",
+          "name": "Anisomyon patelliformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anisomyon",
+          "authorship": "Meek and Hayden 1860",
+          "sourceIds": {
+            "checklistbank": "txn:132027"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANISOMYON_BOREALIS_MORTON_1842",
+          "name": "Anisomyon borealis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anisomyon",
+          "authorship": "(Morton 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:132028"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANISOMYON_TRANSFORMIS_DUNDO_AND_EFREMOVA_1974",
+          "name": "Anisomyon transformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anisomyon",
+          "authorship": "Dundo and Efremova 1974",
+          "sourceIds": {
+            "checklistbank": "txn:420443"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANISOMYON_SEXSULCATUS_MEEK_AND_HAYDEN_1856",
+          "name": "Anisomyon sexsulcatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anisomyon",
+          "authorship": "(Meek and Hayden 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:470612"
+          },
+          "children": []
         }
       ]
     },
@@ -4561,9 +4655,11 @@
             "col": [
               "5BZBV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141471"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:141471"
+            ]
           },
-          "authorityIds": "col:5BZBV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:141471,col:5BZBV",
           "authorship": "(O. G. Costa, 1829)"
         },
         {
@@ -4644,9 +4740,11 @@
             "col": [
               "7TN6C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1436923"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1436923"
+            ]
           },
-          "authorityIds": "col:7TN6C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1436923,col:7TN6C",
           "authorship": "(Wiechmann, 1868)"
         },
         {
@@ -4688,9 +4786,11 @@
             "itis": [
               "76451"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559235"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:559235"
+            ]
           },
-          "authorityIds": "col:5BZC5,itis:76451"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:559235,col:5BZC5,itis:76451"
         },
         {
           "id": "SP_WILLIAMIA_RADIATA",
@@ -4715,9 +4815,11 @@
             "itis": [
               "76450"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559198"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:559198"
+            ]
           },
-          "authorityIds": "col:9HGBL,itis:76450"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:559198,col:9HGBL,itis:76450"
         },
         {
           "id": "SP_WILLIAMIA_RAINCOURTI",
@@ -4734,9 +4836,11 @@
             "col": [
               "7TN6D"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1344879"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1344879"
+            ]
           },
-          "authorityIds": "col:7TN6D",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1344879,col:7TN6D",
           "authorship": "(Cossmann, 1885)"
         },
         {
@@ -4766,9 +4870,11 @@
             "col": [
               "7G84B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559192"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:559192"
+            ]
           },
-          "authorityIds": "col:7G84B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:559192,col:7G84B",
           "authorship": "(P. P. Carpenter, 1864)"
         },
         {
@@ -4983,9 +5089,11 @@
             "col": [
               "4XP9J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740943"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:740943"
+            ]
           },
-          "authorityIds": "col:4XP9J",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:740943,col:4XP9J",
           "authorship": "(Yokoyama, 1926)"
         }
       ]
@@ -5085,50 +5193,6 @@
           "authorship": "Mörch, 1877",
           "sourceIds": {
             "checklistbank": "676365"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "siphonariidae"
-    },
-    {
-      "id": "GENUS_TECTURA",
-      "name": "Tectura",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TECTURA_RADIATA_PEASE_1861",
-          "name": "Tectura radiata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tectura",
-          "authorship": "Pease, 1861",
-          "sourceIds": {
-            "checklistbank": "680047"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "siphonariidae"
-    },
-    {
-      "id": "GENUS_ROYA",
-      "name": "Roya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ROYA_KERMADECENSIS_IREDALE_1912",
-          "name": "Roya kermadecensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Roya",
-          "authorship": "Iredale, 1912",
-          "sourceIds": {
-            "checklistbank": "680051"
           },
           "children": []
         }
@@ -5254,97 +5318,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:224975"
           },
           "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_ALTERNATA_SAY_1826",
-          "name": "\"Siphonaria alternata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(Say, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420647"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_JAPONICA_DONOVAN_1824",
-          "name": "\"Siphonaria japonica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(Donovan, 1824)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740941"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_JAVANICA_LAMARCK_1819",
-          "name": "\"Siphonaria javanica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(Lamarck, 1819)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740945"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_PERCEA_IREDALE_1940",
-          "name": "\"Siphonaria percea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(Iredale, 1940)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:759139"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_STEWARTIANA_A_W_B_POWELL_1939",
-          "name": "\"Siphonaria stewartiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(A. W. B. Powell, 1939)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:850630"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_POLYGONA_SISMONDA_1846",
-          "name": "\"Siphonaria polygona\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(Sismonda, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:955820"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SIPHONARIA_COSTARIA_DESHAYES_1824",
-          "name": "\"Siphonaria costaria\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonaria",
-          "authorship": "\"(Deshayes, 1824)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1344857"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5355,19 +5328,6 @@
       "name": "\"Williamia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_WILLIAMIA_GUSSONI_O_G_COSTA_1829",
-          "name": "\"Williamia gussoni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Williamia",
-          "authorship": "\"(O. G. Costa, 1829)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141471"
-          },
-          "children": []
-        },
         {
           "id": "SP_WILLIAMIA_KREBSII_M_RCH_1877",
           "name": "\"Williamia krebsii\"",
@@ -5380,101 +5340,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:420648"
           },
           "children": []
-        },
-        {
-          "id": "SP_WILLIAMIA_SUBSPIRALIS_P_P_CARPENTER_1864",
-          "name": "\"Williamia subspiralis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Williamia",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559192"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_WILLIAMIA_RADIATA_PEASE_1861",
-          "name": "\"Williamia radiata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Williamia",
-          "authorship": "\"(Pease, 1861)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559198"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_WILLIAMIA_PELTOIDES_P_P_CARPENTER_1864",
-          "name": "\"Williamia peltoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Williamia",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:559235"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_WILLIAMIA_RAINCOURTI_COSSMANN_1885",
-          "name": "\"Williamia raincourti\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Williamia",
-          "authorship": "\"(Cossmann, 1885)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1344879"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_WILLIAMIA_MEGAPOLITANA_WIECHMANN_1868",
-          "name": "\"Williamia megapolitana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Williamia",
-          "authorship": "\"(Wiechmann, 1868)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1436923"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "siphonariidae"
-    },
-    {
-      "id": "GENUS_SIPHONACMEA",
-      "name": "\"Siphonacmea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SIPHONACMEA_OBLONGATA_YOKOYAMA_1926",
-          "name": "\"Siphonacmea oblongata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Siphonacmea",
-          "authorship": "\"(Yokoyama, 1926)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740943"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "siphonariidae"
     }
   ],
-  "genusCount": 24,
-  "speciesCount": 324,
+  "genusCount": 21,
+  "speciesCount": 314,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

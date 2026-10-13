@@ -144,9 +144,11 @@
             "col": [
               "4GK6Q"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:221555"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:221555"
+            ]
           },
-          "authorityIds": "col:4GK6Q",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:221555,col:4GK6Q",
           "authorship": "(Heller, 1867)",
           "children": []
         },
@@ -201,32 +203,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PHOCEANA",
-      "name": "\"Phoceana",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHOCEANA_TUBULIFERA_HELLER_1867",
-          "name": "\"Phoceana tubulifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phoceana",
-          "authorship": "\"(Heller, 1867)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:221555"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "phoceanidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 12,
+  "genusCount": 2,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

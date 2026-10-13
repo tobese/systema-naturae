@@ -25,9 +25,11 @@
             "col": [
               "C2DVB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730719"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1730719"
+            ]
           },
-          "authorityIds": "col:C2DVB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1730719,col:C2DVB",
           "children": [],
           "authorship": "(Spaul, 1927)"
         },
@@ -415,20 +417,6 @@
           "uuid": "33f42740-d3eb-58c-8ad-9d76c3feff9bb1"
         },
         {
-          "id": "SP_APROCTA_GOLVANI_D_AZ_UNGR_A_1963",
-          "name": "Aprocta golvani",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aprocta",
-          "authorship": "Díaz-Ungría, 1963",
-          "sourceIds": {
-            "checklistbank": "175568"
-          },
-          "children": [],
-          "uuid": "f2e16036-8bdd-560-8fb-b29ca14271b986"
-        },
-        {
           "id": "SP_APROCTA_MATRONENSIS_RAILLIET_HEENRY_1910",
           "name": "Aprocta matronensis",
           "rank": "SPECIES",
@@ -750,20 +738,6 @@
           "sourcedFrom": "none",
           "uuid": "7cb78f67-ce96-55b-803-3041565296fdcd",
           "children": []
-        },
-        {
-          "id": "SP_TETRACHEILONEMA_QUADRILABIATUM_MOLIN_1858",
-          "name": "Tetracheilonema quadrilabiatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tetracheilonema",
-          "authorship": "Molin, 1858",
-          "sourceIds": {
-            "checklistbank": "175569"
-          },
-          "children": [],
-          "uuid": "f3ae5531-5f54-547-af3-fa498215973552"
         }
       ]
     },
@@ -813,28 +787,6 @@
       "lineage": "aproctidae"
     },
     {
-      "id": "GENUS_LISSONEMA",
-      "name": "\"Lissonema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LISSONEMA_NOCTUAE_SPAUL_1927",
-          "name": "\"Lissonema noctuae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lissonema",
-          "authorship": "\"(Spaul, 1927)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1730719"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aproctidae"
-    },
-    {
       "id": "GENUS_TETRACHEILONEMA",
       "name": "\"Tetracheilonema",
       "rank": "GENUS",
@@ -857,8 +809,8 @@
       "lineage": "aproctidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 59,
+  "genusCount": 8,
+  "speciesCount": 56,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

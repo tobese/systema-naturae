@@ -185,9 +185,11 @@
             "col": [
               "75XD5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:829685"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:829685"
+            ]
           },
-          "authorityIds": "col:75XD5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:829685,col:75XD5",
           "authorship": "(Marwick, 1931)"
         },
         {
@@ -305,9 +307,11 @@
             "col": [
               "6TXCV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:138689"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:138689"
+            ]
           },
-          "authorityIds": "col:6TXCV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:138689,col:6TXCV",
           "authorship": "(Dautzenberg, 1925)"
         },
         {
@@ -361,9 +365,11 @@
             "col": [
               "75XD7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:887245"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:887245"
+            ]
           },
-          "authorityIds": "col:75XD7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:887245,col:75XD7",
           "authorship": "(Thiele, 1925)"
         },
         {
@@ -442,9 +448,11 @@
             "col": [
               "6TXD8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:456690"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:456690"
+            ]
           },
-          "authorityIds": "col:6TXD8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:456690,col:6TXD8",
           "authorship": "(Dall, 1925)"
         },
         {
@@ -594,18 +602,6 @@
           "children": []
         },
         {
-          "id": "SP_PECTINODONTA_PHILIPPINARUM",
-          "name": "Pectinodonta philippinarum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pectinodonta",
-          "sourceIds": {
-            "checklistbank": "1212230"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PECTINODONTA_ARCUATA",
           "name": "Pectinodonta arcuata",
           "rank": "SPECIES",
@@ -642,18 +638,6 @@
           "children": []
         },
         {
-          "id": "SP_PECTINODONTA_GILBERTVOSSI",
-          "name": "Pectinodonta gilbertvossi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pectinodonta",
-          "sourceIds": {
-            "checklistbank": "1212238"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PECTINODONTA_BOREALIS",
           "name": "Pectinodonta borealis",
           "rank": "SPECIES",
@@ -686,6 +670,19 @@
           "lineage": "Pectinodonta",
           "sourceIds": {
             "checklistbank": "ott7982956"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PECTINODONTA_PALAEOXYLODIA_LINDBERG_AND_HEDEGAARD_1996",
+          "name": "Pectinodonta palaeoxylodia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pectinodonta",
+          "authorship": "Lindberg and Hedegaard 1996",
+          "sourceIds": {
+            "checklistbank": "txn:397631"
           },
           "children": []
         }
@@ -1031,71 +1028,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pectinodontidae"
-    },
-    {
-      "id": "GENUS_PECTINODONTA",
-      "name": "\"Pectinodonta",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PECTINODONTA_MAXIMA_DAUTZENBERG_1925",
-          "name": "\"Pectinodonta maxima\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pectinodonta",
-          "authorship": "\"(Dautzenberg, 1925)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:138689"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PECTINODONTA_RHYSSA_DALL_1925",
-          "name": "\"Pectinodonta rhyssa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pectinodonta",
-          "authorship": "\"(Dall, 1925)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:456690"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PECTINODONTA_CONIFORMIS_MARWICK_1931",
-          "name": "\"Pectinodonta coniformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pectinodonta",
-          "authorship": "\"(Marwick, 1931)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:829685"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PECTINODONTA_OBTUSA_THIELE_1925",
-          "name": "\"Pectinodonta obtusa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pectinodonta",
-          "authorship": "\"(Thiele, 1925)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:887245"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pectinodontidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 66,
+  "genusCount": 4,
+  "speciesCount": 61,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

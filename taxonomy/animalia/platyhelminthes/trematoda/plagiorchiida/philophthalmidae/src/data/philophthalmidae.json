@@ -1638,9 +1638,11 @@
             "col": [
               "CRVDR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1789960"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1789960"
+            ]
           },
-          "authorityIds": "col:CRVDR,itis:56042"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1789960,col:CRVDR,itis:56042"
         },
         {
           "id": "SP_CLOACITREMA_PLENA_OSHMARIN_1970",
@@ -1676,9 +1678,11 @@
             "col": [
               "L2W5Z"
             ],
-            "checklistbank": "3028781"
+            "checklistbank": [
+              "3028781"
+            ]
           },
-          "authorityIds": "col:L2W5Z"
+          "authorityIds": "checklistbank:3028781,col:L2W5Z"
         },
         {
           "id": "SP_CLOACITREMA_NARRABEENENSE_HOWELL_BEARUP",
@@ -1738,18 +1742,6 @@
           "lineage": "Cloacitrema",
           "sourceIds": {
             "checklistbank": "ott5974304"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CLOACITREMA_SP",
-          "name": "Cloacitrema sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cloacitrema",
-          "sourceIds": {
-            "checklistbank": "3028781"
           },
           "children": []
         }
@@ -3040,29 +3032,6 @@
       "lineage": "philophthalmidae"
     },
     {
-      "id": "GENUS_OSWALDOTREMA",
-      "name": "Oswaldotrema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OSWALDOTREMA_NACINOVICI_MUNIZ_PEREIRA_PINTO_2000",
-          "name": "Oswaldotrema nacinovici",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oswaldotrema",
-          "authorship": "Muniz-Pereira & Pinto, 2000",
-          "sourceIds": {
-            "checklistbank": "194667"
-          },
-          "children": [],
-          "uuid": "ee98f0f2-3b53-53c-947-47244e01a33a59"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "philophthalmidae"
-    },
-    {
       "id": "GENUS_DISTOMA",
       "name": "Distoma",
       "rank": "GENUS",
@@ -3321,32 +3290,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "philophthalmidae"
-    },
-    {
-      "id": "GENUS_CLOACITREMA",
-      "name": "\"Cloacitrema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CLOACITREMA_PHILIPPINUM_VELASQUEZ_1969",
-          "name": "\"Cloacitrema philippinum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cloacitrema",
-          "authorship": "\"Velasquez, 1969\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1789960"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "philophthalmidae"
     }
   ],
-  "genusCount": 28,
-  "speciesCount": 185,
+  "genusCount": 26,
+  "speciesCount": 182,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -22,7 +22,8 @@
               "YPSQ"
             ]
           },
-          "authorityIds": "col:YPSQ"
+          "authorityIds": "col:YPSQ",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -47,7 +48,8 @@
               "Z9KW"
             ]
           },
-          "authorityIds": "col:Z9KW"
+          "authorityIds": "col:Z9KW",
+          "children": []
         },
         {
           "id": "SP_CRATOCHRYSA_SUBLAPSA_MARTINS_NETO_1997",
@@ -63,7 +65,8 @@
               "Z9KX"
             ]
           },
-          "authorityIds": "col:Z9KX"
+          "authorityIds": "col:Z9KX",
+          "children": []
         },
         {
           "id": "SP_CRATOCHRYSA_WILLMANNI_MARTINS_NETO_1994",
@@ -79,7 +82,8 @@
               "Z9KY"
             ]
           },
-          "authorityIds": "col:Z9KY"
+          "authorityIds": "col:Z9KY",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -102,9 +106,11 @@
           "sourceIds": {
             "col": [
               "3YVQD"
-            ]
+            ],
+            "checklistbank": "txn:354031"
           },
-          "authorityIds": "col:3YVQD"
+          "authorityIds": "col:3YVQD",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -127,20 +133,92 @@
           "sourceIds": {
             "col": [
               "5CSQB"
-            ]
+            ],
+            "checklistbank": "txn:331579"
           },
-          "authorityIds": "col:5CSQB"
+          "authorityIds": "col:5CSQB",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Corydasialidae"
+    },
+    {
+      "id": "GENUS_PARACRATOCHRYSA",
+      "name": "Paracratochrysa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARACRATOCHRYSA_TERNARIA_CHEN_ET_AL_2023",
+          "name": "Paracratochrysa ternaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracratochrysa",
+          "authorship": "Chen et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:477203"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARACRATOCHRYSA_BIFURCATA_CHEN_ET_AL_2023",
+          "name": "Paracratochrysa bifurcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracratochrysa",
+          "authorship": "Chen et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:477204"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corydasialidae"
+    },
+    {
+      "id": "GENUS_SIMPLICORYDASIALIS",
+      "name": "Simplicorydasialis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIMPLICORYDASIALIS_FANGYUANI_CHEN_ET_AL_2023",
+          "name": "Simplicorydasialis fangyuani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simplicorydasialis",
+          "authorship": "Chen et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:477206"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIMPLICORYDASIALIS_SIMPLICIVENIA_CHEN_ET_AL_2023",
+          "name": "Simplicorydasialis simplicivenia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simplicorydasialis",
+          "authorship": "Chen et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:477207"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corydasialidae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 10,
   "appSlug": "corydasialidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 4,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -148,6 +226,7 @@
       "classKey": 216,
       "orderKey": 1501,
       "familyKey": 4797945
-    }
+    },
+    "checklistbank": "txn:296905"
   }
 }

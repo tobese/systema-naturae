@@ -279,19 +279,6 @@
           "uuid": "6a1cc2d2-a6b8-56b-937-201b21cb6e7414"
         },
         {
-          "id": "SP_EUTETRARHYNCHUS_SPINIFER_DOLLFUS_1969",
-          "name": "Eutetrarhynchus spinifer",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eutetrarhynchus",
-          "authorship": "Dollfus, 1969",
-          "sourceIds": {
-            "checklistbank": "1045500"
-          },
-          "children": []
-        },
-        {
           "id": "SP_EUTETRARHYNCHUS_SETTIENSE",
           "name": "Eutetrarhynchus settiense",
           "rank": "SPECIES",
@@ -1906,9 +1893,11 @@
             "itis": [
               "1061572"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:508631"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:508631"
+            ]
           },
-          "authorityIds": "col:55S23,itis:1061572",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:508631,col:55S23,itis:1061572",
           "authorship": "(Wagener, 1854)"
         },
         {
@@ -3426,20 +3415,6 @@
           "authorityIds": "col:764ZD,itis:1061536"
         },
         {
-          "id": "SP_PARONCOMEGAS_ARAYA_WOODLAND_1934",
-          "name": "Paroncomegas araya",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paroncomegas",
-          "authorship": "(Woodland, 1934)",
-          "sourceIds": {
-            "checklistbank": "180530"
-          },
-          "children": [],
-          "uuid": "ca4a3391-84e1-563-a59-86b84165dd991b"
-        },
-        {
           "id": "SP_PARONCOMEGAS_BAERI_LOPEZ_NEYRA_DIAZ_UNGRIA_1958_CAMPBELL_MARQUES_IVANOV_1999",
           "name": "Paroncomegas baeri",
           "rank": "SPECIES",
@@ -4760,32 +4735,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eutetrarhynchidae"
-    },
-    {
-      "id": "GENUS_TETRARHYNCHOBOTHRIUM",
-      "name": "\"Tetrarhynchobothrium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TETRARHYNCHOBOTHRIUM_STRIATUM_WAGENER_1854",
-          "name": "\"Tetrarhynchobothrium striatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tetrarhynchobothrium",
-          "authorship": "\"(Wagener, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:508631"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eutetrarhynchidae"
     }
   ],
-  "genusCount": 27,
-  "speciesCount": 269,
+  "genusCount": 26,
+  "speciesCount": 266,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

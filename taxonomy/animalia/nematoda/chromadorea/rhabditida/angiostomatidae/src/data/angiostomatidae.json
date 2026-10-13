@@ -82,9 +82,11 @@
             "col": [
               "CHQ5P"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763468"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1763468"
+            ]
           },
-          "authorityIds": "col:CHQ5P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1763468,col:CHQ5P",
           "authorship": "Mengert, 1953"
         },
         {
@@ -364,9 +366,11 @@
             "col": [
               "CHQ5V"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763472"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1763472"
+            ]
           },
-          "authorityIds": "col:CHQ5V",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1763472,col:CHQ5V",
           "authorship": "Mengert, 1953"
         },
         {
@@ -614,6 +618,18 @@
             "checklistbank": "2005347"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANGIOSTOMA_KIMMERIENSIS",
+          "name": "Angiostoma kimmeriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Angiostoma",
+          "sourceIds": {
+            "checklistbank": "393241"
+          },
+          "children": []
         }
       ]
     },
@@ -753,45 +769,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "angiostomatidae"
-    },
-    {
-      "id": "GENUS_ANGIOSTOMA",
-      "name": "\"Angiostoma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ANGIOSTOMA_DENTIFERA_MENGERT_1953",
-          "name": "\"Angiostoma dentifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Angiostoma",
-          "authorship": "\"Mengert, 1953\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763468"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ANGIOSTOMA_STAMMERI_MENGERT_1953",
-          "name": "\"Angiostoma stammeri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Angiostoma",
-          "authorship": "\"Mengert, 1953\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763472"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "angiostomatidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 46,
+  "genusCount": 5,
+  "speciesCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

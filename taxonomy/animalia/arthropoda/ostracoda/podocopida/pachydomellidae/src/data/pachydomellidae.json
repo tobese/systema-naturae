@@ -768,7 +768,8 @@
           "sourceIds": {
             "col": [
               "C2FRS"
-            ]
+            ],
+            "checklistbank": "txn:264828"
           },
           "authorityIds": "col:C2FRS"
         },
@@ -930,13 +931,70 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pachydomellidae"
+    },
+    {
+      "id": "GENUS_KARINADOMELLA",
+      "name": "Karinadomella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KARINADOMELLA_STRIATA_BECKER_AND_WANG_1992",
+          "name": "Karinadomella striata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Karinadomella",
+          "authorship": "Becker and Wang 1992",
+          "sourceIds": {
+            "checklistbank": "txn:264824"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachydomellidae"
+    },
+    {
+      "id": "GENUS_NEWSOMITES",
+      "name": "Newsomites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEWSOMITES_KARINAE_BECKER_AND_WANG_1992",
+          "name": "Newsomites karinae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Newsomites",
+          "authorship": "Becker and Wang 1992",
+          "sourceIds": {
+            "checklistbank": "txn:264825"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEWSOMITES_SUBKARINAE_BECKER_AND_WANG_1992",
+          "name": "Newsomites subkarinae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Newsomites",
+          "authorship": "Becker and Wang 1992",
+          "sourceIds": {
+            "checklistbank": "txn:264826"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pachydomellidae"
     }
   ],
-  "speciesCount": 52,
+  "speciesCount": 55,
   "appSlug": "pachydomellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 8,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -944,6 +1002,7 @@
       "classKey": 353,
       "orderKey": 1438,
       "familyKey": 4806670
-    }
+    },
+    "checklistbank": "txn:170810"
   }
 }

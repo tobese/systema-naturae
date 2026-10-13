@@ -20,9 +20,11 @@
           "sourceIds": {
             "col": [
               "VP9YG"
-            ]
+            ],
+            "checklistbank": "txn:359504"
           },
-          "authorityIds": "col:VP9YG"
+          "authorityIds": "col:VP9YG",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -47,24 +49,83 @@
               "VD2BJ"
             ]
           },
-          "authorityIds": "col:VD2BJ"
+          "authorityIds": "col:VD2BJ",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Apocrinoceratidae"
+    },
+    {
+      "id": "GENUS_PALDOCERAS",
+      "name": "Paldoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALDOCERAS_PALDISKENSE_KR_GER_ET_AL_2009",
+          "name": "Paldoceras paldiskense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paldoceras",
+          "authorship": "Kröger et al. 2009",
+          "sourceIds": {
+            "checklistbank": "txn:147060"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALDOCERAS_NEPTUNSAKERENSE_KR_GER_ET_AL_2009",
+          "name": "Paldoceras neptunsakerense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paldoceras",
+          "authorship": "Kröger et al. 2009",
+          "sourceIds": {
+            "checklistbank": "txn:147062"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "apocrinoceratidae"
+    },
+    {
+      "id": "GENUS_DESTOMBESICERAS",
+      "name": "Destombesiceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESTOMBESICERAS_ZAGORENSE_KR_GER_AND_LEFEBVRE_2012",
+          "name": "Destombesiceras zagorense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Destombesiceras",
+          "authorship": "Kröger and Lefebvre 2012",
+          "sourceIds": {
+            "checklistbank": "txn:315246"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "apocrinoceratidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 5,
   "appSlug": "apocrinoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 2,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4621206
-    }
+    },
+    "checklistbank": "txn:144038"
   }
 }

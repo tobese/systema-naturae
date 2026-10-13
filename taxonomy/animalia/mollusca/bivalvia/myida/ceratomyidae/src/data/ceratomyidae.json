@@ -50,9 +50,11 @@
             "col": [
               "B22L3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1618880"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1618880"
+            ]
           },
-          "authorityIds": "col:B22L3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1618880,col:B22L3",
           "authorship": "(F. A. Roemer, 1836)"
         },
         {
@@ -124,8 +126,11 @@
           "uuid": "d6491e00-745a-54c-972-97f0bc48e0adfe",
           "authorship": "(M. Simpson, 1855)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1908598"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1908598"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1908598"
         },
         {
           "id": "SP_CERATOMYA_STRIATA_SOWERBY_1815",
@@ -202,6 +207,45 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4480ad15-bc2f-517-a37-9de3fc0490d940"
+        },
+        {
+          "id": "SP_CERATOMYA_WIMMISENSIS_GILLIERON_1886",
+          "name": "Ceratomya wimmisensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratomya",
+          "authorship": "(Gillieron 1886)",
+          "sourceIds": {
+            "checklistbank": "txn:160537"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOMYA_PITTIERI_DE_LORIOL_1883",
+          "name": "Ceratomya pittieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratomya",
+          "authorship": "(de Loriol 1883)",
+          "sourceIds": {
+            "checklistbank": "txn:160539"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOMYA_TELLURIS_LAMARCK_1819",
+          "name": "Ceratomya telluris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratomya",
+          "authorship": "(Lamarck 1819)",
+          "sourceIds": {
+            "checklistbank": "txn:160543"
+          },
+          "children": []
         }
       ]
     },
@@ -259,9 +303,11 @@
             "col": [
               "8K4F7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1515631"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1515631"
+            ]
           },
-          "authorityIds": "col:8K4F7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1515631,col:8K4F7",
           "authorship": "(Agassiz, 1842)"
         },
         {
@@ -419,7 +465,24 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6680ee6f-bcf4-58c-aef-74355cf2e855f0"
+          "uuid": "6680ee6f-bcf4-58c-aef-74355cf2e855f0",
+          "authorship": "(Phillips 1829)",
+          "sourceIds": {
+            "checklistbank": "txn:170114"
+          }
+        },
+        {
+          "id": "SP_GRESSLYA_GREGARIA_VON_ZIETEN_1833",
+          "name": "Gresslya gregaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gresslya",
+          "authorship": "(von Zieten 1833)",
+          "sourceIds": {
+            "checklistbank": "txn:383873"
+          },
+          "children": []
         }
       ]
     },
@@ -480,7 +543,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c36bfae3-8a0d-598-abc-5a6d89adb1d033"
+          "uuid": "c36bfae3-8a0d-598-abc-5a6d89adb1d033",
+          "authorship": "(Richardson and Tutcher 1916)",
+          "sourceIds": {
+            "checklistbank": "txn:299959"
+          }
         },
         {
           "id": "SP_PTEROMYA_VAURENSIS_FRENEIX_CUBAYNES_1984",
@@ -519,6 +586,58 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "95ebba0f-33c9-5df-9f0-f122e5545f77fd"
+        },
+        {
+          "id": "SP_PTEROMYA_VAURENSIS_FRENEIX_AND_CUBAYNES_1984",
+          "name": "Pteromya vaurensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pteromya",
+          "authorship": "Freneix and Cubaynes 1984",
+          "sourceIds": {
+            "checklistbank": "txn:299366"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTEROMYA_COXI_FRENEIX_AND_CUBAYNES_1984",
+          "name": "Pteromya coxi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pteromya",
+          "authorship": "Freneix and Cubaynes 1984",
+          "sourceIds": {
+            "checklistbank": "txn:299367"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTEROMYA_CROWCOMBEIA_MOORE_1861",
+          "name": "Pteromya crowcombeia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pteromya",
+          "authorship": "(Moore 1861)",
+          "sourceIds": {
+            "checklistbank": "txn:299957"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTEROMYA_LANGPORTENSIS_RICHARDSON_AND_TUTCHER_1916",
+          "name": "Pteromya langportensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pteromya",
+          "authorship": "(Richardson and Tutcher 1916)",
+          "sourceIds": {
+            "checklistbank": "txn:399492"
+          },
+          "children": []
         }
       ]
     },
@@ -563,55 +682,20 @@
       "lineage": "Ceratomyidae"
     },
     {
-      "id": "GENUS_MYOPHOLAS",
-      "name": "\"Myopholas",
+      "id": "GENUS_CEROMYA",
+      "name": "Ceromya",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_MYOPHOLAS_MULTICOSTATA_AGASSIZ_1842",
-          "name": "\"Myopholas multicostata\"",
+          "id": "SP_CEROMYA_CONCENTRICA_SOWERBY_1825",
+          "name": "Ceromya concentrica",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Myopholas",
-          "authorship": "\"(Agassiz, 1842)\"",
+          "lineage": "Ceromya",
+          "authorship": "(Sowerby 1825)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1515631"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ceratomyidae"
-    },
-    {
-      "id": "GENUS_CERATOMYA",
-      "name": "\"Ceratomya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CERATOMYA_EXCENTRICA_F_A_ROEMER_1836",
-          "name": "\"Ceratomya excentrica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ceratomya",
-          "authorship": "\"(F. A. Roemer, 1836)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1618880"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CERATOMYA_PETRICOSA_M_SIMPSON_1855",
-          "name": "\"Ceratomya petricosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ceratomya",
-          "authorship": "\"(M. Simpson, 1855)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1908598"
+            "checklistbank": "txn:322945"
           },
           "children": []
         }
@@ -620,8 +704,8 @@
       "lineage": "ceratomyidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 38,
+  "genusCount": 7,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -629,6 +713,7 @@
       "classKey": 137,
       "orderKey": 9241244,
       "familyKey": 3248104
-    }
+    },
+    "checklistbank": "txn:59610"
   }
 }

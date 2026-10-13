@@ -49,9 +49,11 @@
             "itis": [
               "63693"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724207"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1724207"
+            ]
           },
-          "authorityIds": "col:BX2ZY,itis:63693"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1724207,col:BX2ZY,itis:63693"
         },
         {
           "id": "SP_STICTYLUS_OBTUSUS",
@@ -91,9 +93,11 @@
             "col": [
               "BX2ZZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724213"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1724213"
+            ]
           },
-          "authorityIds": "col:BX2ZZ,itis:63692"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1724213,col:BX2ZZ,itis:63692"
         },
         {
           "id": "SP_STICTYLUS_ASYMMERICUS_THORNE_1941",
@@ -275,34 +279,6 @@
             ]
           },
           "authorityIds": "col:88CFD,itis:63679"
-        },
-        {
-          "id": "SP_HEXATYLUS_ACUTUS_THORNE_1941",
-          "name": "Hexatylus acutus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hexatylus",
-          "authorship": "(Thorne, 1941)",
-          "sourceIds": {
-            "checklistbank": "247788"
-          },
-          "children": [],
-          "uuid": "c4fa814f-27ae-506-801-dbdb2fb539ce80"
-        },
-        {
-          "id": "SP_HEXATYLUS_ITALICUS_MEYL_1954",
-          "name": "Hexatylus italicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hexatylus",
-          "authorship": "(Meyl, 1954)",
-          "sourceIds": {
-            "checklistbank": "247789"
-          },
-          "children": [],
-          "uuid": "c9990640-d1ed-552-bd8-f5340c69a40236"
         },
         {
           "id": "SP_HEXATYLUS_BOETTGERI",
@@ -769,26 +745,6 @@
           "uuid": "684888fb-da4b-5d5-818-7c1921b2be01d9"
         },
         {
-          "id": "SP_DELADENUS_RUEHMI",
-          "name": "Deladenus ruehmi",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Deladenus",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "4873242c-602a-5fe-aa4-97f23e2cadf105",
-          "sourceIds": {
-            "col": [
-              "CHYMK"
-            ],
-            "checklistbank": "247783"
-          },
-          "authorityIds": "col:CHYMK",
-          "authorship": "(Andrássy, 1958)"
-        },
-        {
           "id": "SP_DELADENUS_SIRICIDICOLA_BEDDING_1968",
           "name": "Deladenus siricidicola Bedding, 1968",
           "rank": "SPECIES",
@@ -912,6 +868,54 @@
           "lineage": "Deladenus",
           "sourceIds": {
             "checklistbank": "1409129"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DELADENUS_LEPTOSOMA",
+          "name": "Deladenus leptosoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deladenus",
+          "sourceIds": {
+            "checklistbank": "224142"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DELADENUS_OBESUS",
+          "name": "Deladenus obesus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deladenus",
+          "sourceIds": {
+            "checklistbank": "224144"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DELADENUS_PARVUS",
+          "name": "Deladenus parvus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deladenus",
+          "sourceIds": {
+            "checklistbank": "224145"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DELADENUS_RUDYI",
+          "name": "Deladenus rudyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deladenus",
+          "sourceIds": {
+            "checklistbank": "224146"
           },
           "children": []
         }
@@ -1308,22 +1312,6 @@
       "lineage": "Rubzovinema",
       "children": [
         {
-          "id": "SP_RUBZOVINEMA_CERATOPHYLLUS",
-          "name": "Rubzovinema ceratophyllus",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Rubzovinema",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "8b384587-3657-577-8a7-80609ec6c8eb76",
-          "authorship": "(Rubzov & Samurov, 1981)",
-          "sourceIds": {
-            "checklistbank": "247791"
-          }
-        },
-        {
           "id": "SP_RUBZOVINEMA_SP",
           "name": "Rubzovinema sp.",
           "rank": "SPECIES",
@@ -1434,20 +1422,6 @@
             ]
           },
           "authorityIds": "col:8GNNY"
-        },
-        {
-          "id": "SP_HADRODENUS_SACCATUS_ANDR_SSY_1954",
-          "name": "Hadrodenus saccatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hadrodenus",
-          "authorship": "(Andrássy, 1954)",
-          "sourceIds": {
-            "checklistbank": "247787"
-          },
-          "children": [],
-          "uuid": "fac7a9d2-e144-516-bf6-642334a6738d34"
         },
         {
           "id": "SP_HADRODENUS_SP",
@@ -1580,9 +1554,11 @@
             "col": [
               "8GJJ5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:584035"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:584035"
+            ]
           },
-          "authorityIds": "col:8GJJ5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:584035,col:8GJJ5",
           "authorship": "(Skarbilovich, 1952)"
         },
         {
@@ -3406,28 +3382,6 @@
       "lineage": "neotylenchidae"
     },
     {
-      "id": "GENUS_SCYTALEUM",
-      "name": "\"Scytaleum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SCYTALEUM_VIGISSI_SKARBILOVICH_1952",
-          "name": "\"Scytaleum vigissi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Scytaleum",
-          "authorship": "\"(Skarbilovich, 1952)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:584035"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neotylenchidae"
-    },
-    {
       "id": "GENUS_HADRODENUS",
       "name": "\"Hadrodenus",
       "rank": "GENUS",
@@ -3442,41 +3396,6 @@
           "authorship": "\"(Andrássy, 1954) Mulvey, 1969\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1469728"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neotylenchidae"
-    },
-    {
-      "id": "GENUS_STICTYLUS",
-      "name": "\"Stictylus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STICTYLUS_MYCOPHILUS_R_HM_1956",
-          "name": "\"Stictylus mycophilus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stictylus",
-          "authorship": "\"Rühm, 1956\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724207"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STICTYLUS_PINI_FUCHS_1929",
-          "name": "\"Stictylus pini\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stictylus",
-          "authorship": "\"(Fuchs, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724213"
           },
           "children": []
         }
@@ -3564,8 +3483,8 @@
       "lineage": "neotylenchidae"
     }
   ],
-  "genusCount": 34,
-  "speciesCount": 217,
+  "genusCount": 32,
+  "speciesCount": 213,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

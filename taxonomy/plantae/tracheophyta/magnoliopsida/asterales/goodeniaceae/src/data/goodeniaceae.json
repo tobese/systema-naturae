@@ -2957,7 +2957,8 @@
             ],
             "wfo": [
               "wfo-1000022735"
-            ]
+            ],
+            "checklistbank": "urn:lsid:ipni.org:names:77210083-1"
           },
           "authorityIds": "col:7WCZ4,wfo:wfo-1000022735",
           "description": "<div><p>Goodenia collaris (F.Muell.) K.A.Sheph. comb. nov.</p><p>≡ Scaevola collaris F.Muell., Rep. pl. Babbage’s Exped. 15 (1859) - Type citation: \"On sand ridges near Wonnomulla.\" Possible syntype: Australia. South Australia. Lake Eyre, s. dat., leg. ign. s.n. (AD 97604803 [image!]).</p><p>Note.</p><p>Carolin (1992c) cited the type of the name Scaevola collaris F.Muell. as \"Near Wonnamulla, S.A., Babbage Expedition; holo: MEL.\" A specimen of S. collaris labelled \"NW interior of South Australia"
@@ -3489,9 +3490,11 @@
           "sourceIds": {
             "col": [
               "6KQ82"
-            ]
+            ],
+            "checklistbank": "9709a0be-7552-5c76-aa4e-5b9d0b11c2cf"
           },
-          "authorityIds": "col:6KQ82"
+          "authorityIds": "col:6KQ82",
+          "authorship": "F.Muell."
         },
         {
           "id": "SP_GOODENIA_VISCIDA",
@@ -3966,7 +3969,8 @@
             ],
             "wfo": [
               "wfo-1000022749"
-            ]
+            ],
+            "checklistbank": "urn:lsid:ipni.org:names:77210096-1"
           },
           "authorityIds": "col:7WCZM,wfo:wfo-1000022749",
           "description": "Goodenia perfoliata is a species of flowering plant in the family Goodeniaceae and is endemic to a small area of New South Wales."
@@ -7010,7 +7014,8 @@
           "sourceIds": {
             "checklistbank": "1426186"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Carolin) K.A.Sheph."
         },
         {
           "id": "SP_GOODENIA_MACROPHYLLA",
@@ -7107,6 +7112,45 @@
           "lineage": "Goodenia",
           "sourceIds": {
             "checklistbank": "ott7624933"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOODENIA_BARBATA_R_BR",
+          "name": "Goodenia barbata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goodenia",
+          "authorship": "R.Br.",
+          "sourceIds": {
+            "checklistbank": "1e764c63-dafd-59b4-916d-657726d8d2ad"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOODENIA_PHYLICOIDES_F_MUELL",
+          "name": "Goodenia phylicoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goodenia",
+          "authorship": "F.Muell.",
+          "sourceIds": {
+            "checklistbank": "5a425daf-d195-5960-9bf6-903981f209eb"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOODENIA_STROPHIOLATA_F_MUELL",
+          "name": "Goodenia strophiolata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goodenia",
+          "authorship": "F.Muell.",
+          "sourceIds": {
+            "checklistbank": "f80cd52f-8e05-52b2-87be-c7366923d188"
           },
           "children": []
         }
@@ -10744,57 +10788,6 @@
           "commonName": "Mountain naupaka"
         },
         {
-          "id": "SP_SCAEVOLA_GAUDICHAUDII_HOOK_ARN",
-          "name": "Scaevola gaudichaudii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Scaevola",
-          "authorship": "Hook. & Arn.",
-          "children": [],
-          "uuid": "1b4fd402-5545-52b-a1e-db03d744e4d3d7",
-          "sourceIds": {
-            "col": [
-              "6Y4GJ"
-            ],
-            "wfo": [
-              "wfo-0001065168"
-            ],
-            "itis": [
-              "34775"
-            ],
-            "checklistbank": "168485"
-          },
-          "authorityIds": "col:6Y4GJ,itis:34775,wfo:wfo-0001065168",
-          "commonName": "mountain naupaka"
-        },
-        {
-          "id": "SP_SCAEVOLA_GLABRA_HOOK_ARN",
-          "name": "Scaevola glabra",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "lineage": "Scaevola",
-          "authorship": "Hook. & Arn.",
-          "children": [],
-          "uuid": "8ce3cd7a-3822-514-848-57d0c632ef4ac3",
-          "sourceIds": {
-            "itis": [
-              "34776"
-            ],
-            "col": [
-              "6XSGK"
-            ],
-            "wfo": [
-              "wfo-0001065169"
-            ],
-            "checklistbank": "168486"
-          },
-          "authorityIds": "col:6XSGK,itis:34776,wfo:wfo-0001065169",
-          "description": "Scaevola glabra, the 'ohe naupaka, is a shrub in the family Goodeniaceae.",
-          "commonName": "'ohe naupaka"
-        },
-        {
           "id": "SP_SCAEVOLA_SPINESCENS_R_BR",
           "name": "Scaevola spinescens",
           "rank": "SPECIES",
@@ -11792,14 +11785,15 @@
           "children": []
         },
         {
-          "id": "SP_SCAEVOLA_SP",
-          "name": "Scaevola sp.",
+          "id": "SP_SCAEVOLA_BROOKSIANA_F_MUELL",
+          "name": "Scaevola brooksiana",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Scaevola",
+          "authorship": "F.Muell.",
           "sourceIds": {
-            "checklistbank": "185787"
+            "checklistbank": "urn:lsid:ipni.org:names:384159-1"
           },
           "children": []
         }
@@ -13828,7 +13822,8 @@
           "sourceIds": {
             "checklistbank": "1667859"
           },
-          "children": []
+          "children": [],
+          "authorship": "Hislop & K.A.Sheph."
         }
       ]
     },
@@ -15434,7 +15429,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 869,
+  "speciesCount": 870,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

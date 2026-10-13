@@ -14195,10 +14195,12 @@
             "col": [
               "77NSQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1501333"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1501333"
+            ]
           },
           "uuid": "eec9c920-61a1-51e-a32-73821f1a875d75",
-          "authorityIds": "col:77NSQ,gbif:3204128,mycobank:203895",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1501333,col:77NSQ,gbif:3204128,mycobank:203895",
           "authorship": "Peck, 1876"
         },
         {
@@ -24371,33 +24373,6 @@
           "authorship": "Voglmayr 2013"
         },
         {
-          "id": "HYALOPERONOSPORA_CARDAMINES-LACINIATAE",
-          "name": "Hyaloperonospora cardamines-laciniatae",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Hyaloperonospora",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "7383482"
-            ],
-            "mycobank": [
-              "803660"
-            ],
-            "col": [
-              "3MWV6"
-            ],
-            "checklistbank": "1005467"
-          },
-          "uuid": "c8e562b1-21b2-5c3-b7c-854f955c5d96f0",
-          "authorityIds": "col:3MWV6,gbif:7383482,mycobank:803660",
-          "authorship": "(Gaum.) Voglmayr, 2013"
-        },
-        {
           "id": "HYALOPERONOSPORA_CARDAMINOPSIDIS",
           "name": "Hyaloperonospora cardaminopsidis",
           "rank": "SPECIES",
@@ -25341,9 +25316,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hyaloperonospora",
           "sourceIds": {
-            "checklistbank": "272964"
+            "checklistbank": [
+              "272964"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:272964"
         },
         {
           "id": "SP_HYALOPERONOSPORA_SP",
@@ -29179,18 +29157,6 @@
             "checklistbank": "272969"
           },
           "children": []
-        },
-        {
-          "id": "SP_PERONOSPORA_IBERIDIS",
-          "name": "[Peronospora] iberidis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "[Peronospora]",
-          "sourceIds": {
-            "checklistbank": "272964"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -29452,28 +29418,6 @@
       "lineage": "peronosporaceae"
     },
     {
-      "id": "GENUS_PLASMOPARA",
-      "name": "\"Plasmopara",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLASMOPARA_GERANII_PECK_1876",
-          "name": "\"Plasmopara geranii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Plasmopara",
-          "authorship": "\"Peck, 1876\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1501333"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "peronosporaceae"
-    },
-    {
       "id": "GENUS_PSEUDOPERONOSPORA",
       "name": "\"Pseudoperonospora",
       "rank": "GENUS",
@@ -29496,8 +29440,8 @@
       "lineage": "peronosporaceae"
     }
   ],
-  "genusCount": 45,
-  "speciesCount": 1308,
+  "genusCount": 44,
+  "speciesCount": 1305,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

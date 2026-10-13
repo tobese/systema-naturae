@@ -22,7 +22,8 @@
               "3YWJC"
             ]
           },
-          "authorityIds": "col:3YWJC"
+          "authorityIds": "col:3YWJC",
+          "children": []
         },
         {
           "id": "SP_MEGAPALAEOLENUS_FENGYANGENSIS_CHU_1962",
@@ -38,7 +39,8 @@
               "3YWJD"
             ]
           },
-          "authorityIds": "col:3YWJD"
+          "authorityIds": "col:3YWJD",
+          "children": []
         },
         {
           "id": "SP_MEGAPALAEOLENUS_QUADRATUS_YANG_ET_AL_1993",
@@ -54,7 +56,8 @@
               "3YWJF"
             ]
           },
-          "authorityIds": "col:3YWJF"
+          "authorityIds": "col:3YWJF",
+          "children": []
         },
         {
           "id": "SP_MEGAPALAEOLENUS_LATILIMBATUS_GUO_AN_1982",
@@ -64,7 +67,11 @@
           "sourcedFrom": "catalogue of life",
           "lineage": "Megapalaeolenus",
           "authorship": "Guo & An, 1982",
-          "uuid": "823ea224-a1d8-539-a46-7c371f61d54041"
+          "uuid": "823ea224-a1d8-539-a46-7c371f61d54041",
+          "sourceIds": {
+            "checklistbank": "txn:238129"
+          },
+          "children": []
         },
         {
           "id": "SP_MEGAPALAEOLENUS_LONGISPINUS_ZHANG_ET_AL_1980",
@@ -80,7 +87,8 @@
               "6R7VS"
             ]
           },
-          "authorityIds": "col:6R7VS"
+          "authorityIds": "col:6R7VS",
+          "children": []
         },
         {
           "id": "SP_MEGAPALAEOLENUS_HOUDAPOENSIS_GUO_AN_1982",
@@ -90,7 +98,11 @@
           "sourcedFrom": "catalogue of life",
           "lineage": "Megapalaeolenus",
           "authorship": "Guo & An, 1982",
-          "uuid": "f0765efd-46a9-52e-9cc-3e3e37edfb107b"
+          "uuid": "f0765efd-46a9-52e-9cc-3e3e37edfb107b",
+          "sourceIds": {
+            "checklistbank": "txn:238130"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -115,7 +127,8 @@
               "4C2H4"
             ]
           },
-          "authorityIds": "col:4C2H4"
+          "authorityIds": "col:4C2H4",
+          "children": []
         },
         {
           "id": "SP_PALAEOLENUS_LANTENOISI_MANSUY_1912",
@@ -131,7 +144,8 @@
               "4C2H6"
             ]
           },
-          "authorityIds": "col:4C2H6"
+          "authorityIds": "col:4C2H6",
+          "children": []
         },
         {
           "id": "SP_PALAEOLENUS_TINGI_LU_1941",
@@ -147,7 +161,21 @@
               "4C2H7"
             ]
           },
-          "authorityIds": "col:4C2H7"
+          "authorityIds": "col:4C2H7",
+          "children": []
+        },
+        {
+          "id": "SP_PALAEOLENUS_LONGISPINUS_ZHANG_ET_AL_1980",
+          "name": "Palaeolenus longispinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeolenus",
+          "authorship": "Zhang et al. 1980",
+          "sourceIds": {
+            "checklistbank": "txn:507401"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -172,7 +200,8 @@
               "39VDK"
             ]
           },
-          "authorityIds": "col:39VDK"
+          "authorityIds": "col:39VDK",
+          "children": []
         },
         {
           "id": "SP_ENIXUS_ENIGMATICUS_CHERNYSHEVA_1956",
@@ -188,18 +217,76 @@
               "39VDJ"
             ]
           },
-          "authorityIds": "col:39VDJ"
+          "authorityIds": "col:39VDJ",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Palaeolenidae"
+    },
+    {
+      "id": "GENUS_GIGOUTELLA",
+      "name": "Gigoutella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GIGOUTELLA_MAURETANICA_ORTEGA_HERN_NDEZ_ET_AL_2017",
+          "name": "Gigoutella mauretanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gigoutella",
+          "authorship": "(Ortega-Hernández et al. 2017)",
+          "sourceIds": {
+            "checklistbank": "txn:494775"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GIGOUTELLA_ATLASENSIS_HUP_1953",
+          "name": "Gigoutella atlasensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gigoutella",
+          "authorship": "Hupé 1953",
+          "sourceIds": {
+            "checklistbank": "txn:494780"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeolenidae"
+    },
+    {
+      "id": "GENUS_SIBIROLENUS",
+      "name": "Sibirolenus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIBIROLENUS_ENORMIS_REPINA_1965",
+          "name": "Sibirolenus enormis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sibirolenus",
+          "authorship": "(Repina 1965)",
+          "sourceIds": {
+            "checklistbank": "txn:500361"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeolenidae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 15,
   "appSlug": "palaeolenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Trilobita",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -207,6 +294,7 @@
       "classKey": 9273948,
       "orderKey": 9583276,
       "familyKey": 4634625
-    }
+    },
+    "checklistbank": "txn:154941"
   }
 }

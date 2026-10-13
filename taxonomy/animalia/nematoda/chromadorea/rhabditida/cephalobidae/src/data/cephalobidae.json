@@ -1496,19 +1496,6 @@
           "children": []
         },
         {
-          "id": "SP_CEPHALOBUS_ELONGATUS_DE_MAN_1880",
-          "name": "Cephalobus elongatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cephalobus",
-          "authorship": "de Man, 1880",
-          "sourceIds": {
-            "checklistbank": "1049526"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CEPHALOBUS_SPP",
           "name": "Cephalobus spp",
           "rank": "SPECIES",
@@ -1925,18 +1912,6 @@
           "lineage": "Cephalobus",
           "sourceIds": {
             "checklistbank": "ott7675934"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CEPHALOBUS_SP",
-          "name": "Cephalobus sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cephalobus",
-          "sourceIds": {
-            "checklistbank": "114969"
           },
           "children": []
         },
@@ -6409,18 +6384,6 @@
             "checklistbank": "ott7675909"
           },
           "children": []
-        },
-        {
-          "id": "SP_ACROBELES_SP",
-          "name": "Acrobeles sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Acrobeles",
-          "sourceIds": {
-            "checklistbank": "55787"
-          },
-          "children": []
         }
       ]
     },
@@ -8084,20 +8047,6 @@
           "authorityIds": "col:8G9QZ"
         },
         {
-          "id": "SP_HETEROCEPHALOBELLUS_MAGNIFICUS_ANDR_SSY_1987",
-          "name": "Heterocephalobellus magnificus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Heterocephalobellus",
-          "authorship": "(Andrássy, 1987)",
-          "sourceIds": {
-            "checklistbank": "249020"
-          },
-          "children": [],
-          "uuid": "66700454-81ab-500-8a0-993e7cf17a8c1a"
-        },
-        {
           "id": "SP_HETEROCEPHALOBELLUS_POTAMIENSIS_BOSTR_M_1991",
           "name": "Heterocephalobellus potamiensis",
           "rank": "SPECIES",
@@ -9649,6 +9598,18 @@
             "checklistbank": "1509351"
           },
           "children": []
+        },
+        {
+          "id": "SP_PARACROBELES_PSAMMOPHILUS",
+          "name": "Paracrobeles psammophilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracrobeles",
+          "sourceIds": {
+            "checklistbank": "225608"
+          },
+          "children": []
         }
       ]
     },
@@ -10512,9 +10473,11 @@
             "col": [
               "8GC3Z"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1319214"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1319214"
+            ]
           },
-          "authorityIds": "col:8GC3Z",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1319214,col:8GC3Z",
           "authorship": "(Siddiqi, 2002)"
         },
         {
@@ -11690,28 +11653,6 @@
       "lineage": "cephalobidae"
     },
     {
-      "id": "GENUS_MACROLAIMELLUS",
-      "name": "\"Macrolaimellus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MACROLAIMELLUS_CORNUTUS_SIDDIQI_2002",
-          "name": "\"Macrolaimellus cornutus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Macrolaimellus",
-          "authorship": "\"(Siddiqi, 2002)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1319214"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cephalobidae"
-    },
-    {
       "id": "GENUS_CEPHALOBUS",
       "name": "\"Cephalobus",
       "rank": "GENUS",
@@ -11804,8 +11745,8 @@
       "lineage": "cephalobidae"
     }
   ],
-  "genusCount": 53,
-  "speciesCount": 749,
+  "genusCount": 52,
+  "speciesCount": 745,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

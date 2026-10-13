@@ -115,9 +115,11 @@
             "col": [
               "8YLQN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571400"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571400"
+            ]
           },
-          "authorityIds": "col:8YLQN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571400,col:8YLQN",
           "children": []
         },
         {
@@ -764,28 +766,6 @@
       "lineage": "clavilithidae"
     },
     {
-      "id": "GENUS_CLAVILITHES",
-      "name": "\"Clavilithes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CLAVILITHES_PINUS_G_PERRY_1811",
-          "name": "\"Clavilithes pinus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Clavilithes",
-          "authorship": "\"(G. Perry, 1811)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571400"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "clavilithidae"
-    },
-    {
       "id": "GENUS_PAPILLINA",
       "name": "\"Papillina",
       "rank": "GENUS",
@@ -808,9 +788,9 @@
       "lineage": "clavilithidae"
     }
   ],
-  "speciesCount": 44,
+  "speciesCount": 43,
   "appSlug": "clavilithidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Gastropoda",
-  "genusCount": 9
+  "genusCount": 8
 }

@@ -859,10 +859,12 @@
             ],
             "col": [
               "BFZGZ"
-            ]
+            ],
+            "checklistbank": "txn:516776"
           },
           "uuid": "ce451a1a-2415-54e-8f0-babbcce493b1e1",
-          "authorityIds": "col:BFZGZ,gbif:9409574"
+          "authorityIds": "col:BFZGZ,gbif:9409574",
+          "authorship": "Rutimeyer 1850"
         },
         {
           "id": "HETEROSTEGINA_REZVANINEJADI",
@@ -1470,10 +1472,12 @@
             ],
             "col": [
               "834TL"
-            ]
+            ],
+            "checklistbank": "txn:417090"
           },
           "uuid": "b90ab3f4-be61-588-a5e-25ea30aa40205f",
-          "authorityIds": "col:834TL,gbif:9477074"
+          "authorityIds": "col:834TL,gbif:9477074",
+          "authorship": "d'Archiac 1850"
         },
         {
           "id": "OPERCULINA_COMPLANATA",
@@ -3709,18 +3713,6 @@
           "lineage": "Operculina",
           "sourceIds": {
             "checklistbank": "ott8019904"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OPERCULINA_SP",
-          "name": "Operculina sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Operculina",
-          "sourceIds": {
-            "checklistbank": "196927"
           },
           "children": []
         },
@@ -15908,6 +15900,19 @@
             "checklistbank": "ott8019890"
           },
           "children": []
+        },
+        {
+          "id": "SP_NUMMULITES_MADARASZI_HANTKEN_1876",
+          "name": "Nummulites madaraszi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nummulites",
+          "authorship": "Hantken 1876",
+          "sourceIds": {
+            "checklistbank": "txn:393205"
+          },
+          "children": []
         }
       ]
     },
@@ -15957,10 +15962,12 @@
             ],
             "col": [
               "8SM5X"
-            ]
+            ],
+            "checklistbank": "txn:516958"
           },
           "uuid": "deb1de98-ff19-549-b84-298ba877b61e19",
-          "authorityIds": "col:8SM5X,gbif:11735850"
+          "authorityIds": "col:8SM5X,gbif:11735850",
+          "authorship": "Douville 1916"
         },
         {
           "id": "ASSILINA_ARENENSIS",
@@ -20686,10 +20693,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8327928
+            "gbif": 8327928,
+            "checklistbank": "txn:153353"
           },
           "uuid": "d08abff2-aa5f-5a9-b55-bf699bbf4d5352",
-          "authorityIds": "gbif:8327928"
+          "authorityIds": "gbif:8327928",
+          "authorship": "Dorreen 1948"
         }
       ]
     },
@@ -21166,6 +21175,19 @@
             ]
           },
           "authorityIds": "col:BXRX6"
+        },
+        {
+          "id": "SP_SPIROCLYPEUS_GRANULOSUS_BOUSSAC_1906",
+          "name": "Spiroclypeus granulosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spiroclypeus",
+          "authorship": "Boussac 1906",
+          "sourceIds": {
+            "checklistbank": "txn:516959"
+          },
+          "children": []
         }
       ]
     },
@@ -36837,10 +36859,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nummulitidae"
+    },
+    {
+      "id": "GENUS_DICTYOCONOS",
+      "name": "Dictyoconos",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DICTYOCONOS_EGYPTIENSIS_CHAPMAN_1900",
+          "name": "Dictyoconos egyptiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dictyoconos",
+          "authorship": "(Chapman 1900)",
+          "sourceIds": {
+            "checklistbank": "txn:170179"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nummulitidae"
+    },
+    {
+      "id": "GENUS_GAZIRYINA",
+      "name": "Gaziryina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GAZIRYINA_PULCHELLA_HANTKEN_IN_DE_LA_HARPE_1883",
+          "name": "Gaziryina pulchella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gaziryina",
+          "authorship": "(Hantken in de la Harpe 1883)",
+          "sourceIds": {
+            "checklistbank": "txn:509388"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nummulitidae"
     }
   ],
-  "genusCount": 83,
-  "speciesCount": 2065,
+  "genusCount": 85,
+  "speciesCount": 2068,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

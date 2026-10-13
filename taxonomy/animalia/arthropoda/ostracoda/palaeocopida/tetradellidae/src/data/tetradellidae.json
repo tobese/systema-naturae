@@ -465,9 +465,11 @@
             "col": [
               "BHL3K"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:810615"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:810615"
+            ]
           },
-          "authorityIds": "col:BHL3K",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:810615,col:BHL3K",
           "children": []
         },
         {
@@ -534,6 +536,32 @@
           },
           "children": [],
           "uuid": "05e1c72b-c6c8-517-8d1-f9f04aced7f6ef"
+        },
+        {
+          "id": "SP_TETRADELLA_QUADRILIRATA_HALL_AND_WHITFIELD_1875",
+          "name": "Tetradella quadrilirata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetradella",
+          "authorship": "(Hall and Whitfield 1875)",
+          "sourceIds": {
+            "checklistbank": "txn:363559"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TETRADELLA_PLICATULA_KRAUSE_1892",
+          "name": "Tetradella plicatula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetradella",
+          "authorship": "(Krause 1892)",
+          "sourceIds": {
+            "checklistbank": "txn:363562"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1117,6 +1145,19 @@
           },
           "authorityIds": "col:85SWN",
           "children": []
+        },
+        {
+          "id": "SP_HIPPULA_LATENS_BARRANDE_1872",
+          "name": "Hippula latens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hippula",
+          "authorship": "(Barrande 1872)",
+          "sourceIds": {
+            "checklistbank": "txn:395923"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1186,6 +1227,19 @@
           },
           "authorityIds": "col:9XFWY",
           "children": []
+        },
+        {
+          "id": "SP_AHLA_ESTONICA_SARV_1955",
+          "name": "Ahla estonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ahla",
+          "authorship": "(Sarv 1955)",
+          "sourceIds": {
+            "checklistbank": "txn:434498"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1244,20 +1298,269 @@
       "lineage": "Tetradellidae"
     },
     {
-      "id": "GENUS_TETRADELLA",
-      "name": "\"Tetradella",
+      "id": "GENUS_CERATOPSIS",
+      "name": "Ceratopsis",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TETRADELLA_KUCKERSIANA_BONNEMA_1909_BASSLER_KELLETT_1934",
-          "name": "\"Tetradella kuckersiana",
+          "id": "SP_CERATOPSIS_OCULIFERA_HALL_1871",
+          "name": "Ceratopsis oculifera",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tetradella",
-          "authorship": "\"(Bonnema, 1909) Bassler & Kellett, 1934\"",
+          "lineage": "Ceratopsis",
+          "authorship": "Hall 1871",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:810615"
+            "checklistbank": "txn:327998"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOPSIS_CHAMBERSI_MILLER_1874",
+          "name": "Ceratopsis chambersi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratopsis",
+          "authorship": "(Miller 1874)",
+          "sourceIds": {
+            "checklistbank": "txn:434382"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetradellidae"
+    },
+    {
+      "id": "GENUS_GLOSSOMORPHITES",
+      "name": "Glossomorphites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLOSSOMORPHITES_LINGUA_HESSLAND_1949",
+          "name": "Glossomorphites lingua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glossomorphites",
+          "authorship": "(Hessland 1949)",
+          "sourceIds": {
+            "checklistbank": "txn:363519"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOSSOMORPHITES_ACUTA_HESSLAND_1949",
+          "name": "Glossomorphites acuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glossomorphites",
+          "authorship": "Hessland 1949",
+          "sourceIds": {
+            "checklistbank": "txn:363521"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOSSOMORPHITES_MYTOENSIS_SCHALLREUTER_AND_KRUTA_1988",
+          "name": "Glossomorphites mytoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glossomorphites",
+          "authorship": "(Schallreuter and Kruta 1988)",
+          "sourceIds": {
+            "checklistbank": "txn:492360"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetradellidae"
+    },
+    {
+      "id": "GENUS_TALLINNELLA",
+      "name": "Tallinnella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TALLINNELLA_DIMORPHA_OPIK_1937",
+          "name": "Tallinnella dimorpha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tallinnella",
+          "authorship": "Opik 1937",
+          "sourceIds": {
+            "checklistbank": "txn:363524"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TALLINNELLA_PRIMARIA_OPIK_1935",
+          "name": "Tallinnella primaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tallinnella",
+          "authorship": "(Opik 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:363526"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TALLINNELLA_GREWINGKII_BOCK_1867",
+          "name": "Tallinnella grewingkii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tallinnella",
+          "authorship": "(Bock 1867)",
+          "sourceIds": {
+            "checklistbank": "txn:363528"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetradellidae"
+    },
+    {
+      "id": "GENUS_RIGIDELLA",
+      "name": "Rigidella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RIGIDELLA_MITIS_OPIK_1935",
+          "name": "Rigidella mitis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rigidella",
+          "authorship": "(Opik 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:363530"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RIGIDELLA_ERRATICA_KRAUSE_1889",
+          "name": "Rigidella erratica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rigidella",
+          "authorship": "(Krause 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:363532"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetradellidae"
+    },
+    {
+      "id": "GENUS_KIESOWIA",
+      "name": "Kiesowia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KIESOWIA_DISSECTA_KRAUSE_1892",
+          "name": "Kiesowia dissecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kiesowia",
+          "authorship": "(Krause 1892)",
+          "sourceIds": {
+            "checklistbank": "txn:363558"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetradellidae"
+    },
+    {
+      "id": "GENUS_OPIKIUM",
+      "name": "Opikium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OPIKIUM_TENERUM_OPIK_1935",
+          "name": "Opikium tenerum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Opikium",
+          "authorship": "(Opik 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:363565"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OPIKIUM_PORKUNIENSIS_HENNINGSMOEN_1953",
+          "name": "Opikium porkuniensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Opikium",
+          "authorship": "Henningsmoen 1953",
+          "sourceIds": {
+            "checklistbank": "txn:363567"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetradellidae"
+    },
+    {
+      "id": "GENUS_HASTATELLINA",
+      "name": "Hastatellina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HASTATELLINA_HASTATA_BARRANDE_1872",
+          "name": "Hastatellina hastata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hastatellina",
+          "authorship": "(Barrande 1872)",
+          "sourceIds": {
+            "checklistbank": "txn:501368"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HASTATELLINA_POSTHASTATA_P_IBYL_1975",
+          "name": "Hastatellina posthastata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hastatellina",
+          "authorship": "Přibyl 1975",
+          "sourceIds": {
+            "checklistbank": "txn:501387"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HASTATELLINA_NORMANDIENSIS_P_IBYL_1975",
+          "name": "Hastatellina normandiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hastatellina",
+          "authorship": "Přibyl 1975",
+          "sourceIds": {
+            "checklistbank": "txn:501388"
           },
           "children": []
         }
@@ -1266,11 +1569,11 @@
       "lineage": "tetradellidae"
     }
   ],
-  "speciesCount": 62,
+  "speciesCount": 81,
   "appSlug": "tetradellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 24,
+  "genusCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1278,6 +1581,7 @@
       "classKey": 353,
       "orderKey": 371,
       "familyKey": 4808398
-    }
+    },
+    "checklistbank": "txn:142112"
   }
 }

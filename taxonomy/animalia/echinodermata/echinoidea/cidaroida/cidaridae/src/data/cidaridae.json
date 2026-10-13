@@ -53,7 +53,8 @@
           "sourceIds": {
             "col": [
               "VBC5"
-            ]
+            ],
+            "checklistbank": "txn:270145"
           },
           "authorityIds": "col:VBC5"
         },
@@ -71,9 +72,11 @@
             "col": [
               "VB9Z"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:755223"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:755223"
+            ]
           },
-          "authorityIds": "col:VB9Z"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:755223,col:VB9Z"
         },
         {
           "id": "SP_CIDARIS_LAMBERTI_VALETTE_1905",
@@ -890,7 +893,8 @@
           "sourceIds": {
             "col": [
               "5Z5VG"
-            ]
+            ],
+            "checklistbank": "txn:153551"
           },
           "authorityIds": "col:5Z5VG"
         },
@@ -1624,9 +1628,11 @@
           "sourceIds": {
             "col": [
               "5YTWD"
-            ]
+            ],
+            "checklistbank": "txn:269230"
           },
-          "authorityIds": "col:5YTWD"
+          "authorityIds": "col:5YTWD",
+          "authorship": "Agassiz 1839"
         },
         {
           "id": "SP_CIDARIS_FLEXUOSA",
@@ -1640,9 +1646,11 @@
           "sourceIds": {
             "col": [
               "VBBJ"
-            ]
+            ],
+            "checklistbank": "txn:269224"
           },
-          "authorityIds": "col:VBBJ"
+          "authorityIds": "col:VBBJ",
+          "authorship": "Münster 1841"
         },
         {
           "id": "SP_CIDARIS_ELEGANS",
@@ -1773,19 +1781,6 @@
           "children": []
         },
         {
-          "id": "SP_CIDARIS_LUETKENI_DE_LORIOL_1873",
-          "name": "Cidaris luetkeni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidaris",
-          "authorship": "De Loriol, 1873",
-          "sourceIds": {
-            "checklistbank": "675968"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CIDARIS_ROSACEUS_ROUSSEU_IN_PERRIER_1869",
           "name": "Cidaris rosaceus",
           "rank": "SPECIES",
@@ -1808,32 +1803,6 @@
           "authorship": "(A. Agassiz, 1863)",
           "sourceIds": {
             "checklistbank": "675983"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIDARIS_FUSTIGERA_A_AGASSIZ_1963",
-          "name": "Cidaris fustigera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidaris",
-          "authorship": "(A. Agassiz, 1963)",
-          "sourceIds": {
-            "checklistbank": "675988"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIDARIS_VERTICILLATA_LAMARCK_1816",
-          "name": "Cidaris verticillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidaris",
-          "authorship": "(Lamarck, 1816)",
-          "sourceIds": {
-            "checklistbank": "676918"
           },
           "children": []
         },
@@ -1899,32 +1868,6 @@
           "authorship": "(Lamarck, 1816)",
           "sourceIds": {
             "checklistbank": "678112"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIDARIS_CALLAO_PERRIER_1869",
-          "name": "Cidaris callao",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidaris",
-          "authorship": "Perrier, 1869",
-          "sourceIds": {
-            "checklistbank": "688671"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIDARIS_DANAE_L_AGASSIZ_DESOR_1846",
-          "name": "Cidaris danae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidaris",
-          "authorship": "L. Agassiz & Desor, 1846",
-          "sourceIds": {
-            "checklistbank": "688672"
           },
           "children": []
         },
@@ -2412,7 +2355,8 @@
           "sourceIds": {
             "checklistbank": "ott7670921"
           },
-          "children": []
+          "children": [],
+          "authorship": "Clark and Twitchell 1915"
         },
         {
           "id": "SP_CIDARIS_GILLIERONI",
@@ -2508,7 +2452,8 @@
           "sourceIds": {
             "checklistbank": "ott7670935"
           },
-          "children": []
+          "children": [],
+          "authorship": "Cotteau 1922"
         },
         {
           "id": "SP_CIDARIS_MARIONI",
@@ -2532,7 +2477,8 @@
           "sourceIds": {
             "checklistbank": "ott7670939"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Arnold 1908)"
         },
         {
           "id": "SP_CIDARIS_MERTONI",
@@ -2700,7 +2646,8 @@
           "sourceIds": {
             "checklistbank": "ott7670958"
           },
-          "children": []
+          "children": [],
+          "authorship": "Clark and Twitchell 1915"
         },
         {
           "id": "SP_CIDARIS_PSEUDOHIRUDO",
@@ -2772,7 +2719,8 @@
           "sourceIds": {
             "checklistbank": "ott7670969"
           },
-          "children": []
+          "children": [],
+          "authorship": "Clark and Twitchell 1915"
         },
         {
           "id": "SP_CIDARIS_SUBOCULATA",
@@ -2796,7 +2744,8 @@
           "sourceIds": {
             "checklistbank": "ott7670973"
           },
-          "children": []
+          "children": [],
+          "authorship": "Clark and Twitchell 1915"
         },
         {
           "id": "SP_CIDARIS_TEXANUS",
@@ -2808,7 +2757,8 @@
           "sourceIds": {
             "checklistbank": "ott7670976"
           },
-          "children": []
+          "children": [],
+          "authorship": "Clark 1891"
         },
         {
           "id": "SP_CIDARIS_THOMASI",
@@ -2891,6 +2841,578 @@
           "lineage": "Cidaris",
           "sourceIds": {
             "checklistbank": "2039813"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_TUBULOIDES_DE_LAMARCK_1816",
+          "name": "Cidaris tubuloides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "de Lamarck 1816",
+          "sourceIds": {
+            "checklistbank": "txn:141974"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_CUBENSIS_LAMBERT_1925",
+          "name": "Cidaris cubensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Lambert 1925",
+          "sourceIds": {
+            "checklistbank": "txn:153550"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_GUEMBELI_VON_W_HRMANN_1889",
+          "name": "Cidaris guembeli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "von Wöhrmann 1889",
+          "sourceIds": {
+            "checklistbank": "txn:249564"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_PARASTADIFERA_SCHAFHAUTL_1865",
+          "name": "Cidaris parastadifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Schafhautl 1865",
+          "sourceIds": {
+            "checklistbank": "txn:249565"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_LIAGORA_M_NSTER_1841",
+          "name": "Cidaris liagora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Münster 1841",
+          "sourceIds": {
+            "checklistbank": "txn:269215"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_SUBNOBILIS_M_NSTER_1841",
+          "name": "Cidaris subnobilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Münster 1841",
+          "sourceIds": {
+            "checklistbank": "txn:269218"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_CATENIFERA_AGASSIZ_1839",
+          "name": "Cidaris catenifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Agassiz 1839",
+          "sourceIds": {
+            "checklistbank": "txn:269228"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_BACULIFERA_AGASSIZ_1839",
+          "name": "Cidaris baculifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Agassiz 1839",
+          "sourceIds": {
+            "checklistbank": "txn:269229"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_ROEMERI_WISSMANN_1841",
+          "name": "Cidaris roemeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Wissmann 1841",
+          "sourceIds": {
+            "checklistbank": "txn:269440"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_ADMETO_BRAUN_1841",
+          "name": "Cidaris admeto",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Braun 1841",
+          "sourceIds": {
+            "checklistbank": "txn:269449"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_FASCICULATA_KLIPSTEIN_1843",
+          "name": "Cidaris fasciculata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Klipstein 1843",
+          "sourceIds": {
+            "checklistbank": "txn:270154"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_SPLENDENS_MORTON_1841",
+          "name": "Cidaris splendens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "(Morton 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:294367"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_CALIFORNICUS_CLARK_1893",
+          "name": "Cidaris californicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Clark 1893",
+          "sourceIds": {
+            "checklistbank": "txn:295343"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_PLUMASENSIS_CLARK_AND_TWITCHELL_1915",
+          "name": "Cidaris plumasensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Clark and Twitchell 1915",
+          "sourceIds": {
+            "checklistbank": "txn:295344"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_TAYLORENSIS_CLARK_1893",
+          "name": "Cidaris taylorensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Clark 1893",
+          "sourceIds": {
+            "checklistbank": "txn:295345"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_SCHLONBACHI_MOESCH_1867",
+          "name": "Cidaris schlonbachi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Moesch 1867",
+          "sourceIds": {
+            "checklistbank": "txn:322981"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_BOWERBANKII_FORBES_1850",
+          "name": "Cidaris bowerbankii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Forbes 1850",
+          "sourceIds": {
+            "checklistbank": "txn:364771"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_PERORNATA_FORBES_1850",
+          "name": "Cidaris perornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Forbes 1850",
+          "sourceIds": {
+            "checklistbank": "txn:364772"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_SERRIFERA_FORBES_1850",
+          "name": "Cidaris serrifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Forbes 1850",
+          "sourceIds": {
+            "checklistbank": "txn:364773"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_WAHALAKENSIS_DE_LORIOL_1887",
+          "name": "Cidaris wahalakensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "de Loriol 1887",
+          "sourceIds": {
+            "checklistbank": "txn:377914"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_BRANNERI_ARNOLD_1908",
+          "name": "Cidaris branneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Arnold 1908",
+          "sourceIds": {
+            "checklistbank": "txn:380369"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_SUBNODOSA_VON_MEYER_1851",
+          "name": "Cidaris subnodosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "von Meyer 1851",
+          "sourceIds": {
+            "checklistbank": "txn:387783"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_ALPIS_WINCKLER_1861",
+          "name": "Cidaris alpis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Winckler 1861",
+          "sourceIds": {
+            "checklistbank": "txn:388174"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_DIXIENSIS_CRAGIN_1893",
+          "name": "Cidaris dixiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Cragin 1893",
+          "sourceIds": {
+            "checklistbank": "txn:391848"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_MOEREUS_DE_GREGORIA_1890",
+          "name": "Cidaris moereus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "De Gregoria 1890",
+          "sourceIds": {
+            "checklistbank": "txn:391946"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_MODESTUS_DE_GREGORIO_1890",
+          "name": "Cidaris modestus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "De Gregorio 1890",
+          "sourceIds": {
+            "checklistbank": "txn:391947"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_ORDINATUS_DE_GREGORIO_1890",
+          "name": "Cidaris ordinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "De Gregorio 1890",
+          "sourceIds": {
+            "checklistbank": "txn:391948"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_PERDUBIUS_DE_GREGORIO_1890",
+          "name": "Cidaris perdubius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "De Gregorio 1890",
+          "sourceIds": {
+            "checklistbank": "txn:391949"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_ALABAMENSIS_MORTON_1846",
+          "name": "Cidaris alabamensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Morton 1846",
+          "sourceIds": {
+            "checklistbank": "txn:391951"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_BLANDIS_DE_GREGORIO_1890",
+          "name": "Cidaris blandis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "De Gregorio 1890",
+          "sourceIds": {
+            "checklistbank": "txn:391952"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_MORTONI_CONRAD_1850",
+          "name": "Cidaris mortoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "(Conrad 1850)",
+          "sourceIds": {
+            "checklistbank": "txn:392059"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_MARTINEZENSIS_KEW_1920",
+          "name": "Cidaris martinezensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Kew 1920",
+          "sourceIds": {
+            "checklistbank": "txn:392223"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_LORENZANUS_KEW_1920",
+          "name": "Cidaris lorenzanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Kew 1920",
+          "sourceIds": {
+            "checklistbank": "txn:392224"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_CURIONI_STOPPANI_1857",
+          "name": "Cidaris curioni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Stoppani 1857",
+          "sourceIds": {
+            "checklistbank": "txn:396305"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_CORNALIAE_STOPPANI_1857",
+          "name": "Cidaris cornaliae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Stoppani 1857",
+          "sourceIds": {
+            "checklistbank": "txn:396306"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_OMBONI_STOPPANI_1857",
+          "name": "Cidaris omboni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Stoppani 1857",
+          "sourceIds": {
+            "checklistbank": "txn:396307"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_FUMAGALLI_STOPPANI_1865",
+          "name": "Cidaris fumagalli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Stoppani 1865",
+          "sourceIds": {
+            "checklistbank": "txn:396308"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_GRANDAEVA_GOLDFUSS_1874",
+          "name": "Cidaris grandaeva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Goldfuss 1874",
+          "sourceIds": {
+            "checklistbank": "txn:399447"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_MAZZETTII_STEFANINI_1908",
+          "name": "Cidaris mazzettii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "(Stefanini 1908)",
+          "sourceIds": {
+            "checklistbank": "txn:416635"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_REMIGER_PONZI_1876",
+          "name": "Cidaris remiger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Ponzi 1876",
+          "sourceIds": {
+            "checklistbank": "txn:416761"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_VAFELLUS_DE_LORIOL_1888",
+          "name": "Cidaris vafellus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "de Loriol 1888",
+          "sourceIds": {
+            "checklistbank": "txn:421847"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_SINAIENSIS_FOURTAU_1921",
+          "name": "Cidaris sinaiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Fourtau 1921",
+          "sourceIds": {
+            "checklistbank": "txn:438967"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_BECHEI_BRODERIP_1835",
+          "name": "Cidaris bechei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Broderip 1835",
+          "sourceIds": {
+            "checklistbank": "txn:459182"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CIDARIS_VESICULOSA_GOLDFUSS_1826",
+          "name": "Cidaris vesiculosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cidaris",
+          "authorship": "Goldfuss 1826",
+          "sourceIds": {
+            "checklistbank": "txn:512390"
           },
           "children": []
         }
@@ -3793,7 +4315,8 @@
           "sourceIds": {
             "col": [
               "3GWC7"
-            ]
+            ],
+            "checklistbank": "txn:83713"
           },
           "authorityIds": "col:3GWC7"
         },
@@ -4942,10 +5465,13 @@
           "lineage": "Stereocidaris",
           "authorship": "Nisiyama, 1966",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757594"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:757594"
+            ]
           },
           "children": [],
-          "uuid": "24b02f99-da27-5eb-ab0-8e094172860184"
+          "uuid": "24b02f99-da27-5eb-ab0-8e094172860184",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:757594"
         },
         {
           "id": "SP_STEREOCIDARIS_EXCAVATUS",
@@ -5353,7 +5879,8 @@
           "sourceIds": {
             "checklistbank": "ott7671030"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Cotteau 1862)"
         },
         {
           "id": "SP_PRIONOCIDARIS_SP",
@@ -5364,6 +5891,45 @@
           "lineage": "Prionocidaris",
           "sourceIds": {
             "checklistbank": "1394322"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PRIONOCIDARIS_MORGANI_GAUTHIER_1902",
+          "name": "Prionocidaris morgani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prionocidaris",
+          "authorship": "(Gauthier 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:375161"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PRIONOCIDARIS_EMIRATUS_SMITH_1995",
+          "name": "Prionocidaris emiratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prionocidaris",
+          "authorship": "Smith 1995",
+          "sourceIds": {
+            "checklistbank": "txn:375163"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PRIONOCIDARIS_AVENIONENSIS_DES_MOULINS_1837",
+          "name": "Prionocidaris avenionensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prionocidaris",
+          "authorship": "(Des Moulins 1837)",
+          "sourceIds": {
+            "checklistbank": "txn:416624"
           },
           "children": []
         }
@@ -5657,6 +6223,19 @@
           "lineage": "Dorocidaris",
           "sourceIds": {
             "checklistbank": "ott7671002"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DOROCIDARIS_ABYSSICOLA_AGASSIZ_1869",
+          "name": "Dorocidaris abyssicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dorocidaris",
+          "authorship": "Agassiz 1869",
+          "sourceIds": {
+            "checklistbank": "txn:393236"
           },
           "children": []
         }
@@ -5956,32 +6535,6 @@
           "children": []
         },
         {
-          "id": "SP_LEIOCIDARIS_GIGANTEA_A_AGASSIZ_1863",
-          "name": "Leiocidaris gigantea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leiocidaris",
-          "authorship": "(A. Agassiz, 1863)",
-          "sourceIds": {
-            "checklistbank": "675894"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEIOCIDARIS_RECENS_TROSCHEL_1877",
-          "name": "Leiocidaris recens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leiocidaris",
-          "authorship": "(Troschel, 1877)",
-          "sourceIds": {
-            "checklistbank": "675967"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LEIOCIDARIS_BISPINOSA_LAMARCK_1816",
           "name": "Leiocidaris bispinosa",
           "rank": "SPECIES",
@@ -6047,32 +6600,6 @@
           "children": []
         },
         {
-          "id": "SP_LEIOCIDARIS_THOUARSII_L_AGASSIZ_DESOR_1846",
-          "name": "Leiocidaris thouarsii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leiocidaris",
-          "authorship": "(L. Agassiz & Desor, 1846)",
-          "sourceIds": {
-            "checklistbank": "688670"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEIOCIDARIS_DANAE_L_AGASSIZ_DESOR_1846",
-          "name": "Leiocidaris danae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leiocidaris",
-          "authorship": "(L. Agassiz & Desor, 1846)",
-          "sourceIds": {
-            "checklistbank": "688673"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LEIOCIDARIS_THOMASI_A_AGASSIZ_H_L_CLARK_1907",
           "name": "Leiocidaris thomasi",
           "rank": "SPECIES",
@@ -6094,6 +6621,45 @@
           "lineage": "Leiocidaris",
           "sourceIds": {
             "checklistbank": "ott7671019"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOCIDARIS_HEMIGRANOSUS_SHUMARD_1860",
+          "name": "Leiocidaris hemigranosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiocidaris",
+          "authorship": "(Shumard 1860)",
+          "sourceIds": {
+            "checklistbank": "txn:391849"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOCIDARIS_CAROLINENSIS_LAMBERT_AND_THIERY_1925",
+          "name": "Leiocidaris carolinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiocidaris",
+          "authorship": "Lambert and Thiery 1925",
+          "sourceIds": {
+            "checklistbank": "txn:393251"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOCIDARIS_MITCHELLI_LAMBERT_AND_THIERY_1925",
+          "name": "Leiocidaris mitchelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiocidaris",
+          "authorship": "Lambert and Thiery 1925",
+          "sourceIds": {
+            "checklistbank": "txn:393252"
           },
           "children": []
         }
@@ -6141,6 +6707,19 @@
             "checklistbank": "ott932442"
           },
           "authorityIds": "col:4FQPW"
+        },
+        {
+          "id": "SP_PHALACROCIDARIS_BRANNERI_WHITE_1877",
+          "name": "Phalacrocidaris branneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalacrocidaris",
+          "authorship": "(White 1877)",
+          "sourceIds": {
+            "checklistbank": "txn:144412"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6462,19 +7041,6 @@
           "children": []
         },
         {
-          "id": "SP_PHYLLACANTHUS_GIGANTEA_A_AGASSIZ_1863",
-          "name": "Phyllacanthus gigantea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phyllacanthus",
-          "authorship": "(A. Agassiz, 1863)",
-          "sourceIds": {
-            "checklistbank": "675895"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PHYLLACANTHUS_FUSTIGERA_A_AGASSIZ_1863",
           "name": "Phyllacanthus fustigera",
           "rank": "SPECIES",
@@ -6522,19 +7088,6 @@
           "lineage": "Phyllacanthus",
           "sourceIds": {
             "checklistbank": "676914"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PHYLLACANTHUS_VERTICILLATA_LAMARCK_1816",
-          "name": "Phyllacanthus verticillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phyllacanthus",
-          "authorship": "(Lamarck, 1816)",
-          "sourceIds": {
-            "checklistbank": "676916"
           },
           "children": []
         },
@@ -6588,6 +7141,84 @@
             "checklistbank": "ott7671020"
           },
           "children": []
+        },
+        {
+          "id": "SP_PHYLLACANTHUS_CLARKEI_CHAPMAN_AND_CUDMORE_1934",
+          "name": "Phyllacanthus clarkei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllacanthus",
+          "authorship": "Chapman and Cudmore 1934",
+          "sourceIds": {
+            "checklistbank": "txn:83712"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLACANTHUS_LEONI_LAMBERT_AND_SANCHEZ_ROIG_1926",
+          "name": "Phyllacanthus leoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllacanthus",
+          "authorship": "(Lambert and Sanchez Roig 1926)",
+          "sourceIds": {
+            "checklistbank": "txn:153554"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLACANTHUS_JAVANUS_MARTIN_1885",
+          "name": "Phyllacanthus javanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllacanthus",
+          "authorship": "Martin 1885",
+          "sourceIds": {
+            "checklistbank": "txn:391502"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLACANTHUS_MITCHELLI_EMMONDS_1858",
+          "name": "Phyllacanthus mitchelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllacanthus",
+          "authorship": "(Emmonds 1858)",
+          "sourceIds": {
+            "checklistbank": "txn:391943"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLACANTHUS_CAROLINENSIS_EMMONDS_1858",
+          "name": "Phyllacanthus carolinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllacanthus",
+          "authorship": "(Emmonds 1858)",
+          "sourceIds": {
+            "checklistbank": "txn:391944"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHYLLACANTHUS_MORTONI_CONRAD_1850",
+          "name": "Phyllacanthus mortoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllacanthus",
+          "authorship": "(Conrad 1850)",
+          "sourceIds": {
+            "checklistbank": "txn:393234"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6630,9 +7261,11 @@
             "col": [
               "8DW6B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757718"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:757718"
+            ]
           },
-          "authorityIds": "col:8DW6B"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:757718,col:8DW6B"
         },
         {
           "id": "SP_RHOPALOCIDARIS_HIRSUTISPINA_DE_MEIJERE_1904",
@@ -7093,6 +7726,19 @@
             "checklistbank": "2765015"
           },
           "children": []
+        },
+        {
+          "id": "SP_EUCIDARIS_ZEAMAYS_SISMONDA_1842",
+          "name": "Eucidaris zeamays",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucidaris",
+          "authorship": "(Sismonda 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:416637"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7204,6 +7850,45 @@
             ]
           },
           "authorityIds": "col:59YFS"
+        },
+        {
+          "id": "SP_TYPOCIDARIS_PISTILLUM_QUENSTEDT_1852",
+          "name": "Typocidaris pistillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typocidaris",
+          "authorship": "(Quenstedt 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:377749"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TYPOCIDARIS_SCEPTRIFERA_MANTELL_1822",
+          "name": "Typocidaris sceptrifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typocidaris",
+          "authorship": "(Mantell 1822)",
+          "sourceIds": {
+            "checklistbank": "txn:377751"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TYPOCIDARIS_SERRATA_DESOR_1858",
+          "name": "Typocidaris serrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typocidaris",
+          "authorship": "(Desor 1858)",
+          "sourceIds": {
+            "checklistbank": "txn:377753"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7327,31 +8012,6 @@
             "checklistbank": "ott1052949"
           },
           "authorityIds": "col:4KHFS"
-        },
-        {
-          "id": "SP_PLOCOCIDARIS_BISPINOSA_LAMARCK_1816",
-          "name": "Plococidaris bispinosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plococidaris",
-          "authorship": "(Lamarck, 1816)",
-          "sourceIds": {
-            "checklistbank": "675972"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLOCOCIDARIS_VERTILLATA",
-          "name": "Plococidaris vertillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plococidaris",
-          "sourceIds": {
-            "checklistbank": "676919"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7491,6 +8151,32 @@
             "checklistbank": "990728"
           },
           "children": []
+        },
+        {
+          "id": "SP_TRETOCIDARIS_DUBIA_CLARK_1907",
+          "name": "Tretocidaris dubia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tretocidaris",
+          "authorship": "(Clark 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:392231"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRETOCIDARIS_PERPLEXA_CLARK_1907",
+          "name": "Tretocidaris perplexa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tretocidaris",
+          "authorship": "(Clark 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:392236"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7613,6 +8299,84 @@
             "checklistbank": "988582"
           },
           "children": []
+        },
+        {
+          "id": "SP_TEMNOCIDARIS_MAGNIFICA_COTTEAU_1863",
+          "name": "Temnocidaris magnifica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Temnocidaris",
+          "authorship": "Cotteau 1863",
+          "sourceIds": {
+            "checklistbank": "txn:141969"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEMNOCIDARIS_SARRACENARUM_FOURTAU_1921",
+          "name": "Temnocidaris sarracenarum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Temnocidaris",
+          "authorship": "(Fourtau 1921)",
+          "sourceIds": {
+            "checklistbank": "txn:374637"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEMNOCIDARIS_MALHEIROI_DE_LORIOL_1888",
+          "name": "Temnocidaris malheiroi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Temnocidaris",
+          "authorship": "(de Loriol 1888)",
+          "sourceIds": {
+            "checklistbank": "txn:374905"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEMNOCIDARIS_BAYLEI_COTTEAU_1863",
+          "name": "Temnocidaris baylei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Temnocidaris",
+          "authorship": "Cotteau 1863",
+          "sourceIds": {
+            "checklistbank": "txn:377905"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEMNOCIDARIS_DANICA_DESOR_1855",
+          "name": "Temnocidaris danica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Temnocidaris",
+          "authorship": "(Desor 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:377906"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEMNOCIDARIS_PROXIMA_FOURTAU_1921",
+          "name": "Temnocidaris proxima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Temnocidaris",
+          "authorship": "(Fourtau 1921)",
+          "sourceIds": {
+            "checklistbank": "txn:438946"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7730,19 +8494,6 @@
           "children": []
         },
         {
-          "id": "SP_CIDARITES_VERTICILLATA_LAMARCK_1816",
-          "name": "Cidarites verticillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidarites",
-          "authorship": "Lamarck, 1816",
-          "sourceIds": {
-            "checklistbank": "676911"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CIDARITES_BACULOSA_LAMARCK_1816",
           "name": "Cidarites baculosa",
           "rank": "SPECIES",
@@ -7752,19 +8503,6 @@
           "authorship": "Lamarck, 1816",
           "sourceIds": {
             "checklistbank": "678106"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIDARITES_METULARIA_LAMARCK_1816",
-          "name": "Cidarites metularia",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cidarites",
-          "authorship": "Lamarck, 1816",
-          "sourceIds": {
-            "checklistbank": "689599"
           },
           "children": []
         },
@@ -7868,6 +8606,19 @@
             ]
           },
           "authorityIds": "col:7CP6W"
+        },
+        {
+          "id": "SP_TRIASSICIDARIS_AMPEZZANA_ZARDINI_1978",
+          "name": "Triassicidaris ampezzana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triassicidaris",
+          "authorship": "(Zardini 1978)",
+          "sourceIds": {
+            "checklistbank": "txn:267701"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -8065,6 +8816,19 @@
           "authorship": "(A. Agassiz, 1863)",
           "sourceIds": {
             "checklistbank": "988583"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CENTROCIDARIS_DODERLEINI_AGASSIZ_1898",
+          "name": "Centrocidaris doderleini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Centrocidaris",
+          "authorship": "(Agassiz 1898)",
+          "sourceIds": {
+            "checklistbank": "txn:392239"
           },
           "children": []
         }
@@ -8476,19 +9240,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RHABDOCIDARIS_GIGANTEA_A_AGASSIZ_1863",
-          "name": "Rhabdocidaris gigantea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhabdocidaris",
-          "authorship": "(A. Agassiz, 1863)",
-          "sourceIds": {
-            "checklistbank": "675896"
-          },
-          "children": []
-        },
-        {
           "id": "SP_RHABDOCIDARIS_BISPINOSA_LAMARCK_1816",
           "name": "Rhabdocidaris bispinosa",
           "rank": "SPECIES",
@@ -8550,50 +9301,6 @@
           "authorship": "(Lamarck, 1816)",
           "sourceIds": {
             "checklistbank": "678108"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cidaridae"
-    },
-    {
-      "id": "GENUS_LHYLLACANTHUS",
-      "name": "Lhyllacanthus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LHYLLACANTHUS_VERTICILLATA_LAMARCK_1816",
-          "name": "Lhyllacanthus verticillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lhyllacanthus",
-          "authorship": "(Lamarck, 1816)",
-          "sourceIds": {
-            "checklistbank": "676910"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cidaridae"
-    },
-    {
-      "id": "GENUS_PEIOCIDARIS",
-      "name": "Peiocidaris",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PEIOCIDARIS_VERTICILLATA_LAMARCK_1816",
-          "name": "Peiocidaris verticillata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Peiocidaris",
-          "authorship": "(Lamarck, 1816)",
-          "sourceIds": {
-            "checklistbank": "676912"
           },
           "children": []
         }
@@ -9093,19 +9800,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:513680"
           },
           "children": []
-        },
-        {
-          "id": "SP_RHOPALOCIDARIS_HIRSUTISPINUS_MORTENSEN_1927",
-          "name": "\"Rhopalocidaris hirsutispinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhopalocidaris",
-          "authorship": "\"Mortensen, 1927\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757718"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9126,19 +9820,6 @@
           "authorship": "\"Mortensen, 1928\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:513709"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CIDARIS_ACULEATA_LEONARDI_LOVO_1950",
-          "name": "\"Cidaris aculeata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cidaris",
-          "authorship": "\"Leonardi & Lovo, 1950\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:755223"
           },
           "children": []
         },
@@ -9345,19 +10026,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:513727"
           },
           "children": []
-        },
-        {
-          "id": "SP_STEREOCIDARIS_PHALACROCIDARIS_NISIYAMA_1966",
-          "name": "\"Stereocidaris (Phalacrocidaris)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stereocidaris",
-          "authorship": "\"Nisiyama, 1966\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:757594"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9550,13 +10218,149 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cidaridae"
+    },
+    {
+      "id": "GENUS_SINAECIDARIS",
+      "name": "Sinaecidaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SINAECIDARIS_GAUTHIERI_FOURTAU_1921",
+          "name": "Sinaecidaris gauthieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sinaecidaris",
+          "authorship": "Fourtau 1921",
+          "sourceIds": {
+            "checklistbank": "txn:141970"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cidaridae"
+    },
+    {
+      "id": "GENUS_POROCIDARIS",
+      "name": "Porocidaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POROCIDARIS_LOPEZI_SANCHEZ_ROIG_1953",
+          "name": "Porocidaris lopezi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porocidaris",
+          "authorship": "Sanchez-Roig 1953",
+          "sourceIds": {
+            "checklistbank": "txn:294214"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POROCIDARIS_PRIOR_OPPENHEIM_1902",
+          "name": "Porocidaris prior",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porocidaris",
+          "authorship": "Oppenheim 1902",
+          "sourceIds": {
+            "checklistbank": "txn:344899"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POROCIDARIS_SCHMIDELI_M_NSTER_1833",
+          "name": "Porocidaris schmideli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porocidaris",
+          "authorship": "(Münster 1833)",
+          "sourceIds": {
+            "checklistbank": "txn:416420"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cidaridae"
+    },
+    {
+      "id": "GENUS_FIRMACIDARIS",
+      "name": "Firmacidaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FIRMACIDARIS_NEUMAYRI_NISIYAMA_1966",
+          "name": "Firmacidaris neumayri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Firmacidaris",
+          "authorship": "Nisiyama 1966",
+          "sourceIds": {
+            "checklistbank": "txn:391496"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cidaridae"
+    },
+    {
+      "id": "GENUS_DESORICIDARIS",
+      "name": "Desoricidaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DESORICIDARIS_POUYANNEI_COTTEAU_1863",
+          "name": "Desoricidaris pouyannei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desoricidaris",
+          "authorship": "(Cotteau 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:438949"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cidaridae"
+    },
+    {
+      "id": "GENUS_BALANOCIDARIS",
+      "name": "Balanocidaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BALANOCIDARIS_STROMBECKI_DESOR_1858",
+          "name": "Balanocidaris strombecki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Balanocidaris",
+          "authorship": "(Desor 1858)",
+          "sourceIds": {
+            "checklistbank": "txn:438965"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cidaridae"
     }
   ],
-  "speciesCount": 588,
+  "speciesCount": 646,
   "appSlug": "cidaridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",
-  "genusCount": 66,
+  "genusCount": 69,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

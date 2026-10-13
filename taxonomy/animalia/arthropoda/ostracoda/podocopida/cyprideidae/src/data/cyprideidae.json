@@ -1602,9 +1602,11 @@
             "col": [
               "85XBL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:737272"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:737272"
+            ]
           },
-          "authorityIds": "col:85XBL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:737272,col:85XBL",
           "children": []
         },
         {
@@ -1670,28 +1672,6 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Cyprideidae"
-    },
-    {
-      "id": "GENUS_PRAECYPRIDEA",
-      "name": "\"Praecypridea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PRAECYPRIDEA_ACUTA_MOOS_I_IN_I_WICHER_1959",
-          "name": "\"Praecypridea acuta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Praecypridea",
-          "authorship": "\"(Moos <i>in</i> Wicher, 1959)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:737272"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cyprideidae"
     },
     {
       "id": "GENUS_CYPRIDEA",
@@ -1794,11 +1774,11 @@
       "lineage": "cyprideidae"
     }
   ],
-  "speciesCount": 111,
+  "speciesCount": 110,
   "appSlug": "cyprideidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 8,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -270,9 +270,11 @@
             "col": [
               "CDS9N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752052"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1752052"
+            ]
           },
-          "authorityIds": "col:CDS9N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752052,col:CDS9N",
           "authorship": "M. Hörnes, 1853"
         },
         {
@@ -290,9 +292,11 @@
             "col": [
               "CDS9P"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752081"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1752081"
+            ]
           },
-          "authorityIds": "col:CDS9P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1752081,col:CDS9P",
           "authorship": "A. De Toni, 1912"
         },
         {
@@ -543,9 +547,11 @@
             "col": [
               "4765T"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:216265"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:216265"
+            ]
           },
-          "authorityIds": "col:4765T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:216265,col:4765T",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -871,7 +877,8 @@
           "sourceIds": {
             "checklistbank": "292320"
           },
-          "children": []
+          "children": [],
+          "authorship": "Sarasua 1973"
         },
         {
           "id": "SP_NERITOPSIS_INTERLIRATA",
@@ -1148,6 +1155,97 @@
             "checklistbank": "ott7982800"
           },
           "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_DUMORTIERI_CONTI_AND_SZAB_1989",
+          "name": "Neritopsis dumortieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "Conti and Szabó 1989",
+          "sourceIds": {
+            "checklistbank": "txn:154219"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_KASEI_KIEL_AND_BANDEL_2004",
+          "name": "Neritopsis kasei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "Kiel and Bandel 2004",
+          "sourceIds": {
+            "checklistbank": "txn:163447"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_PLANOPLICATUS_TONG_AND_ERWIN_2001",
+          "name": "Neritopsis planoplicatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "Tong and Erwin 2001",
+          "sourceIds": {
+            "checklistbank": "txn:203740"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_GLABRATA_KITTL_1894",
+          "name": "Neritopsis glabrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "(Kittl 1894)",
+          "sourceIds": {
+            "checklistbank": "txn:254532"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_GEDROSIANA_HARZHAUSER_ET_AL_2017",
+          "name": "Neritopsis gedrosiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "Harzhauser et al. 2017",
+          "sourceIds": {
+            "checklistbank": "txn:364895"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_OLDAE_STOPPANI_1865",
+          "name": "Neritopsis oldae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "Stoppani 1865",
+          "sourceIds": {
+            "checklistbank": "txn:395980"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERITOPSIS_PAUCIORNATA_VON_W_HRMANN_1889",
+          "name": "Neritopsis pauciornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neritopsis",
+          "authorship": "von Wöhrmann 1889",
+          "sourceIds": {
+            "checklistbank": "txn:398108"
+          },
+          "children": []
         }
       ]
     },
@@ -1410,9 +1508,23 @@
           "sourceIds": {
             "col": [
               "VGGN3"
-            ]
+            ],
+            "checklistbank": "txn:76599"
           },
           "authorityIds": "col:VGGN3"
+        },
+        {
+          "id": "SP_TURBONITELLA_SEMISULCATUS_PHILLIPS_1836",
+          "name": "Turbonitella semisulcatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turbonitella",
+          "authorship": "(Phillips 1836)",
+          "sourceIds": {
+            "checklistbank": "txn:76624"
+          },
+          "children": []
         }
       ]
     },
@@ -1634,9 +1746,36 @@
           "sourceIds": {
             "col": [
               "355XN"
-            ]
+            ],
+            "checklistbank": "txn:72885"
           },
           "authorityIds": "col:355XN"
+        },
+        {
+          "id": "SP_DEVONONERITA_BREVISPIRA_WHITEAVES_1892",
+          "name": "Devononerita brevispira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Devononerita",
+          "authorship": "(Whiteaves 1892)",
+          "sourceIds": {
+            "checklistbank": "txn:73545"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DEVONONERITA_SCHWELMENSIS_KAYSER_1878",
+          "name": "Devononerita schwelmensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Devononerita",
+          "authorship": "(Kayser 1878)",
+          "sourceIds": {
+            "checklistbank": "txn:196505"
+          },
+          "children": []
         }
       ]
     },
@@ -1744,9 +1883,11 @@
             "col": [
               "7G6FC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:865741"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:865741"
+            ]
           },
-          "authorityIds": "col:7G6FC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:865741,col:7G6FC",
           "authorship": "(Stahl, 1824)"
         },
         {
@@ -1794,6 +1935,19 @@
             ]
           },
           "authorityIds": "col:LVLP"
+        },
+        {
+          "id": "SP_BIPARTOPSIS_ROBUSTUS_GRUENDEL_ET_AL_2015",
+          "name": "Bipartopsis robustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bipartopsis",
+          "authorship": "Gruendel et al. 2015",
+          "sourceIds": {
+            "checklistbank": "txn:423800"
+          },
+          "children": []
         }
       ]
     },
@@ -1958,6 +2112,32 @@
             ]
           },
           "authorityIds": "col:CK95R"
+        },
+        {
+          "id": "SP_FOSSARIOPSIS_SINENSE_YIN_AND_YOCHELSON_1983",
+          "name": "Fossariopsis sinense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fossariopsis",
+          "authorship": "Yin and Yochelson 1983",
+          "sourceIds": {
+            "checklistbank": "txn:206915"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FOSSARIOPSIS_RUGOSOCARINATA_KLIPSTEIN_1843",
+          "name": "Fossariopsis rugosocarinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fossariopsis",
+          "authorship": "(Klipstein 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:253781"
+          },
+          "children": []
         }
       ]
     },
@@ -1983,9 +2163,11 @@
             "col": [
               "9WXNL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615694"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1615694"
+            ]
           },
-          "authorityIds": "col:9WXNL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1615694,col:9WXNL",
           "authorship": "(Münster, 1841)"
         },
         {
@@ -2045,6 +2227,19 @@
             ]
           },
           "authorityIds": "col:CCXKK"
+        },
+        {
+          "id": "SP_CASSIANOPSIS_HEBERTANA_D_ORBIGNY_1852",
+          "name": "Cassianopsis hebertana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassianopsis",
+          "authorship": "(d'Orbigny 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:202431"
+          },
+          "children": []
         }
       ]
     },
@@ -2137,9 +2332,11 @@
             "col": [
               "9WXPB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1613247"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1613247"
+            ]
           },
-          "authorityIds": "col:9WXPB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1613247,col:9WXPB",
           "authorship": "(Klipstein, 1844)"
         }
       ]
@@ -2166,9 +2363,11 @@
             "col": [
               "33YJS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1301652"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1301652"
+            ]
           },
-          "authorityIds": "col:33YJS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1301652,col:33YJS",
           "authorship": "(Dahmer, 1917)"
         }
       ]
@@ -2191,6 +2390,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "5095f920-e7e1-50f-9c4-16daec861cacd6"
+        },
+        {
+          "id": "SP_CAMPANILOPSIS_PAKISTANICA_EAMES_1950",
+          "name": "Campanilopsis pakistanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Campanilopsis",
+          "authorship": "(Eames 1950)",
+          "sourceIds": {
+            "checklistbank": "txn:364900"
+          },
+          "children": []
         }
       ]
     },
@@ -2250,7 +2462,8 @@
           "sourceIds": {
             "col": [
               "VGZ2W"
-            ]
+            ],
+            "checklistbank": "txn:74842"
           },
           "authorityIds": "col:VGZ2W"
         },
@@ -2267,9 +2480,62 @@
           "sourceIds": {
             "col": [
               "VGB6C"
-            ]
+            ],
+            "checklistbank": "txn:74925"
           },
           "authorityIds": "col:VGB6C"
+        },
+        {
+          "id": "SP_PAFFRATHOPSIS_ANTIQUA_GOLDFUSS_1844",
+          "name": "Paffrathopsis antiqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paffrathopsis",
+          "authorship": "(Goldfuss 1844)",
+          "sourceIds": {
+            "checklistbank": "txn:63163"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PAFFRATHOPSIS_NANA_MEEK_AND_WORTHEN_1860",
+          "name": "Paffrathopsis nana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paffrathopsis",
+          "authorship": "(Meek and Worthen 1860)",
+          "sourceIds": {
+            "checklistbank": "txn:197434"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PAFFRATHOPSIS_HARPULA_SOWERBY_1827",
+          "name": "Paffrathopsis harpula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paffrathopsis",
+          "authorship": "(Sowerby 1827)",
+          "sourceIds": {
+            "checklistbank": "txn:74834"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PAFFRATHOPSIS_MACROSTOMA_SANDBERGER_AND_SANDBERGER_1854",
+          "name": "Paffrathopsis macrostoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paffrathopsis",
+          "authorship": "(Sandberger and Sandberger 1854)",
+          "sourceIds": {
+            "checklistbank": "txn:74176"
+          },
+          "children": []
         }
       ]
     },
@@ -2510,7 +2776,8 @@
           "sourceIds": {
             "col": [
               "VFCDP"
-            ]
+            ],
+            "checklistbank": "txn:76844"
           },
           "authorityIds": "col:VFCDP"
         }
@@ -2592,45 +2859,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NERITOPSIS_RADULA_LINNAEUS_1758",
-          "name": "\"Neritopsis radula\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neritopsis",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:216265"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NERITOPSIS_ELEGANTISSIMA_M_H_RNES_1853",
-          "name": "\"Neritopsis elegantissima\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neritopsis",
-          "authorship": "\"M. Hörnes, 1853\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752052"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NERITOPSIS_FABIANII_A_DE_TONI_1912",
-          "name": "\"Neritopsis fabianii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neritopsis",
-          "authorship": "\"A. De Toni, 1912\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1752081"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NERITOPSIS_RADULA_SACCO_1896",
           "name": "\"Neritopsis radula",
           "rank": "SPECIES",
@@ -2646,98 +2874,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "neritopsidae"
-    },
-    {
-      "id": "GENUS_WALLOWIELLA",
-      "name": "\"Wallowiella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_WALLOWIELLA_CANCELLATA_STAHL_1824",
-          "name": "\"Wallowiella cancellata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Wallowiella",
-          "authorship": "\"(Stahl, 1824)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:865741"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neritopsidae"
-    },
-    {
-      "id": "GENUS_DAHMERIA",
-      "name": "\"Dahmeria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DAHMERIA_FINDESPINOSA_DAHMER_1917",
-          "name": "\"Dahmeria findespinosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dahmeria",
-          "authorship": "\"(Dahmer, 1917)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1301652"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neritopsidae"
-    },
-    {
-      "id": "GENUS_COLUBRELLOPSIS",
-      "name": "\"Colubrellopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COLUBRELLOPSIS_ACUTICOSTATA_KLIPSTEIN_1844",
-          "name": "\"Colubrellopsis acuticostata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Colubrellopsis",
-          "authorship": "\"(Klipstein, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1613247"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neritopsidae"
-    },
-    {
-      "id": "GENUS_CASSIANOPSIS",
-      "name": "\"Cassianopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CASSIANOPSIS_ARMATA_M_NSTER_1841",
-          "name": "\"Cassianopsis armata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cassianopsis",
-          "authorship": "\"(Münster, 1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615694"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neritopsidae"
     }
   ],
-  "genusCount": 37,
-  "speciesCount": 161,
+  "genusCount": 33,
+  "speciesCount": 173,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2746,6 +2886,6 @@
       "orderKey": 9680972,
       "familyKey": 3245041
     },
-    "checklistbank": "ott38974"
+    "checklistbank": "38fbd34f-780c-4021-b9c5-960d473e2427"
   }
 }

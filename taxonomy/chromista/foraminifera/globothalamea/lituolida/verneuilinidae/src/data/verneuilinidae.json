@@ -768,7 +768,8 @@
           "children": [],
           "authorship": "Cushman, 1936",
           "sourceIds": {
-            "gbif": 9048240
+            "gbif": 9048240,
+            "checklistbank": "txn:477976"
           },
           "uuid": "5758b932-a91f-5ce-927-5f013a3326ac75",
           "authorityIds": "gbif:9048240"
@@ -1108,7 +1109,8 @@
           "children": [],
           "authorship": "Bertels, 1964",
           "sourceIds": {
-            "gbif": 9314719
+            "gbif": 9314719,
+            "checklistbank": "txn:477972"
           },
           "uuid": "f6a79e65-9bfc-5bf-a60-cf15aee9973df1",
           "authorityIds": "gbif:9314719"
@@ -2984,10 +2986,12 @@
             ],
             "col": [
               "82L6N"
-            ]
+            ],
+            "checklistbank": "txn:412546"
           },
           "uuid": "028ce131-7679-56c-b7f-d0182ba12cb8c2",
-          "authorityIds": "col:82L6N,gbif:6123482"
+          "authorityIds": "col:82L6N,gbif:6123482",
+          "authorship": "Huang et al. 2019"
         },
         {
           "id": "GAUDRYINA_HEALYI",
@@ -3384,7 +3388,8 @@
           "children": [],
           "authorship": "Cushman, 1926",
           "sourceIds": {
-            "gbif": 9153167
+            "gbif": 9153167,
+            "checklistbank": "txn:477974"
           },
           "uuid": "ee66eb4d-b88e-58a-a99-ac5b4c118093af",
           "authorityIds": "gbif:9153167"
@@ -4232,10 +4237,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8704331
+            "gbif": 8704331,
+            "checklistbank": "txn:153317"
           },
           "uuid": "e83d6f0e-01c8-571-884-6c1276bdb1ee65",
-          "authorityIds": "gbif:8704331"
+          "authorityIds": "gbif:8704331",
+          "authorship": "Finlay 1940"
         },
         {
           "id": "GAUDRYINA_MINUTA",
@@ -11145,10 +11152,12 @@
             ],
             "col": [
               "83VP5"
-            ]
+            ],
+            "checklistbank": "txn:423022"
           },
           "uuid": "a4c8db6d-13b2-5d7-944-eabef3b009fcc5",
-          "authorityIds": "col:83VP5,gbif:11220836"
+          "authorityIds": "col:83VP5,gbif:11220836",
+          "authorship": "Mjatliuk 1939"
         },
         {
           "id": "VERNEUILINOIDES_PARRI",
@@ -13259,6 +13268,19 @@
           },
           "children": [],
           "uuid": "1db67573-08c6-564-b51-07a38c364b3340"
+        },
+        {
+          "id": "SP_DOROTHIA_CALIFORNICA_CUSHMAN_AND_KLEINPELL_1934",
+          "name": "Dorothia californica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dorothia",
+          "authorship": "Cushman and Kleinpell 1934",
+          "sourceIds": {
+            "checklistbank": "txn:351897"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -20135,10 +20157,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "verneuilinidae"
+    },
+    {
+      "id": "GENUS_CLAVULINA",
+      "name": "Clavulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLAVULINA_COMMUNIS_D_ORBIGNY_1826",
+          "name": "Clavulina communis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clavulina",
+          "authorship": "d'Orbigny 1826",
+          "sourceIds": {
+            "checklistbank": "txn:485056"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "verneuilinidae"
     }
   ],
-  "genusCount": 41,
-  "speciesCount": 1130,
+  "genusCount": 42,
+  "speciesCount": 1132,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -20147,6 +20191,6 @@
       "orderKey": 7378538,
       "familyKey": 4381192
     },
-    "checklistbank": "ott4806320"
+    "checklistbank": "899c4923-84bd-4d11-9a3e-22c795739a4a"
   }
 }

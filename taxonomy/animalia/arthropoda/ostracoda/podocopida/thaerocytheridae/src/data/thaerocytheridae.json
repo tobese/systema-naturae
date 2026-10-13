@@ -2785,7 +2785,8 @@
           "sourceIds": {
             "col": [
               "N4SG"
-            ]
+            ],
+            "checklistbank": "txn:390498"
           },
           "authorityIds": "col:N4SG"
         },
@@ -2908,9 +2909,11 @@
             "col": [
               "BFQQ9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:813608"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:813608"
+            ]
           },
-          "authorityIds": "col:BFQQ9"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:813608,col:BFQQ9"
         },
         {
           "id": "SP_BRADLEYA_JAPONICA_BENSON_1972",
@@ -3084,6 +3087,32 @@
           "lineage": "Bradleya",
           "sourceIds": {
             "checklistbank": "ott7700505"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRADLEYA_CRASSICARINATA_HAZEL_AND_PAULSON_1964",
+          "name": "Bradleya crassicarinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bradleya",
+          "authorship": "Hazel and Paulson 1964",
+          "sourceIds": {
+            "checklistbank": "txn:347419"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRADLEYA_DIAGRENONA_GUERNET_1985",
+          "name": "Bradleya diagrenona",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bradleya",
+          "authorship": "Guernet 1985",
+          "sourceIds": {
+            "checklistbank": "txn:387631"
           },
           "children": []
         }
@@ -4614,19 +4643,6 @@
           },
           "children": [],
           "uuid": "d1be3464-c6d9-55c-ad3-82fb0d0a4822fc"
-        },
-        {
-          "id": "SP_HERMANITES_TRANSOCEANICUS_TEETER_1975",
-          "name": "Hermanites transoceanicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hermanites",
-          "authorship": "Teeter, 1975",
-          "sourceIds": {
-            "checklistbank": "1038303"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6763,19 +6779,6 @@
           "authorship": "\"Monostori, 1977\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:808578"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BRADLEYA_LACTEA_HORNIBROOK_1952",
-          "name": "\"Bradleya lactea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bradleya",
-          "authorship": "\"Hornibrook, 1952\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:813608"
           },
           "children": []
         }

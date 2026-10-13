@@ -49,9 +49,11 @@
             "col": [
               "75P5S"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:122863"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:122863"
+            ]
           },
-          "authorityIds": "col:75P5S,itis:204323",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:122863,col:75P5S,itis:204323",
           "authorship": "(Quatrefages, 1846)"
         },
         {
@@ -69,9 +71,11 @@
             "col": [
               "75P64"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:122864"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:122864"
+            ]
           },
-          "authorityIds": "col:75P64",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:122864,col:75P64",
           "authorship": "(Hubrecht, 1874)"
         },
         {
@@ -303,45 +307,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paradrepanophoridae"
-    },
-    {
-      "id": "GENUS_PARADREPANOPHORUS",
-      "name": "\"Paradrepanophorus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARADREPANOPHORUS_CRASSUS_QUATREFAGES_1846",
-          "name": "\"Paradrepanophorus crassus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paradrepanophorus",
-          "authorship": "\"(Quatrefages, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:122863"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARADREPANOPHORUS_NISIDENSIS_HUBRECHT_1874",
-          "name": "\"Paradrepanophorus nisidensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paradrepanophorus",
-          "authorship": "\"(Hubrecht, 1874)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:122864"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "paradrepanophoridae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 17,
+  "genusCount": 7,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

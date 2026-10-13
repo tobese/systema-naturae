@@ -868,9 +868,11 @@
             "col": [
               "99PRT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1585953"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1585953"
+            ]
           },
-          "authorityIds": "col:99PRT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1585953,col:99PRT",
           "authorship": "(Allgén, 1930)"
         },
         {
@@ -1387,9 +1389,11 @@
             "col": [
               "9BCPZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1585967"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1585967"
+            ]
           },
-          "authorityIds": "col:9BCPZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1585967,col:9BCPZ",
           "authorship": "(Allgén, 1930)"
         },
         {
@@ -6684,9 +6688,11 @@
             "col": [
               "8GFRN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:161194"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:161194"
+            ]
           },
-          "authorityIds": "col:8GFRN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:161194,col:8GFRN",
           "authorship": "(Allgén, 1929)"
         },
         {
@@ -6998,20 +7004,6 @@
           },
           "children": [],
           "uuid": "81259c21-f2ab-553-ae0-0acb92f1f486e5"
-        },
-        {
-          "id": "SP_PARALINHOMOEUS_VISCOSUS_ALLG_N_1929",
-          "name": "Paralinhomoeus viscosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paralinhomoeus",
-          "authorship": "(Allgén, 1929)",
-          "sourceIds": {
-            "checklistbank": "41742"
-          },
-          "children": [],
-          "uuid": "e0c76124-58b3-58d-8b2-fc8aa02aff8a08"
         },
         {
           "id": "SP_PARALINHOMOEUS_ATTENUATUS_DE_MAN_1907",
@@ -8557,24 +8549,6 @@
           "authorityIds": "itis:60082"
         },
         {
-          "id": "SP_EUMORPHOLAIMUS_DIGITICAUDATUS_STEKHOVEN_1946",
-          "name": "Eumorpholaimus digiticaudatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eumorpholaimus",
-          "authorship": "Stekhoven, 1946",
-          "children": [],
-          "uuid": "aa9e5c73-d252-5db-886-732a8676dc95cd",
-          "sourceIds": {
-            "itis": [
-              "60083"
-            ],
-            "checklistbank": "41692"
-          },
-          "authorityIds": "itis:60083"
-        },
-        {
           "id": "SP_EUMORPHOLAIMUS_MACROCIRCULUS_ALLGEN_1959",
           "name": "Eumorpholaimus macrocirculus",
           "rank": "SPECIES",
@@ -9007,32 +8981,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:121718"
           },
           "children": []
-        },
-        {
-          "id": "SP_LINHOMOEUS_CONICAUDATUS_ALLG_N_1930",
-          "name": "\"Linhomoeus conicaudatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Linhomoeus",
-          "authorship": "\"(Allgén, 1930)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1585953"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LINHOMOEUS_TRICHURUS_ALLG_N_1930",
-          "name": "\"Linhomoeus trichurus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Linhomoeus",
-          "authorship": "\"(Allgén, 1930)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1585967"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9057,19 +9005,6 @@
           "children": []
         },
         {
-          "id": "SP_PARALINHOMOEUS_MACQUARIENSIS_ALLG_N_1929",
-          "name": "\"Paralinhomoeus macquariensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paralinhomoeus",
-          "authorship": "\"(Allgén, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:161194"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PARALINHOMOEUS_MIRABILIS_B_TSCHLI_1874",
           "name": "\"Paralinhomoeus mirabilis\"",
           "rank": "SPECIES",
@@ -9088,7 +9023,7 @@
     }
   ],
   "genusCount": 49,
-  "speciesCount": 536,
+  "speciesCount": 531,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

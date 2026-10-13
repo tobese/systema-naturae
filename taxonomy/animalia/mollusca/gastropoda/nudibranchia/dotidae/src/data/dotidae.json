@@ -30,9 +30,11 @@
             "itis": [
               "78556"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:533100"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:533100"
+            ]
           },
-          "authorityIds": "col:73KQX,itis:78556"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:533100,col:73KQX,itis:78556"
         }
       ]
     },
@@ -2572,18 +2574,6 @@
           "children": []
         },
         {
-          "id": "SP_DOTO_WILDEI",
-          "name": "Doto wildei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Doto",
-          "sourceIds": {
-            "checklistbank": "549763"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DOTO_LEMCHEI",
           "name": "Doto lemchei",
           "rank": "SPECIES",
@@ -3544,50 +3534,6 @@
       "lineage": "dotidae"
     },
     {
-      "id": "GENUS_TERGIPES",
-      "name": "Tergipes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TERGIPES_AFFINIS_D_ORBIGNY_1837",
-          "name": "Tergipes affinis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tergipes",
-          "authorship": "d'Orbigny, 1837",
-          "sourceIds": {
-            "checklistbank": "1045504"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "dotidae"
-    },
-    {
-      "id": "GENUS_MELIBAEA",
-      "name": "Melibaea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MELIBAEA_FRAGILIS_FORBES_1838",
-          "name": "Melibaea fragilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melibaea",
-          "authorship": "Forbes, 1838",
-          "sourceIds": {
-            "checklistbank": "1045505"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "dotidae"
-    },
-    {
       "id": "GENUS_DOTIDAE",
       "name": "Dotidae",
       "rank": "GENUS",
@@ -3707,32 +3653,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dotidae"
-    },
-    {
-      "id": "GENUS_MIESEA",
-      "name": "\"Miesea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MIESEA_EVELINAE_ER_MARCUS_1957",
-          "name": "\"Miesea evelinae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Miesea",
-          "authorship": "\"(Er. Marcus, 1957)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:533100"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "dotidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 223,
+  "genusCount": 8,
+  "speciesCount": 219,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

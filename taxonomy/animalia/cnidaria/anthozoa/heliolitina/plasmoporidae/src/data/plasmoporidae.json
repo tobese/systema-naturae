@@ -23,9 +23,12 @@
           "uuid": "f8f2f622-328e-578-94c-a125e37437cb76",
           "authorship": "(Lonsdale, 1839)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1588427"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1588427"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1588427"
         }
       ]
     },
@@ -93,26 +96,17 @@
           },
           "children": [],
           "uuid": "01e687b0-7682-52b-838-908f2ba27b8a61"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "plasmoporidae"
-    },
-    {
-      "id": "GENUS_PLASMOPORA",
-      "name": "\"Plasmopora",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_PLASMOPORA_PETALLIFORMIS_LONSDALE_1839",
-          "name": "\"Plasmopora petalliformis\"",
+          "id": "SP_SQUAMEOLITES_JUNGGARENSIS_LIN_AND_WANG_1981",
+          "name": "Squameolites junggarensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Plasmopora",
-          "authorship": "\"(Lonsdale, 1839)\"",
+          "lineage": "Squameolites",
+          "authorship": "Lin and Wang 1981",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1588427"
+            "checklistbank": "txn:464353"
           },
           "children": []
         }
@@ -121,7 +115,7 @@
       "lineage": "plasmoporidae"
     }
   ],
-  "genusCount": 5,
+  "genusCount": 4,
   "speciesCount": 5,
   "sourceIds": {
     "gbif": {
@@ -130,6 +124,7 @@
       "classKey": 206,
       "orderKey": 903,
       "familyKey": 3250541
-    }
+    },
+    "checklistbank": "txn:87608"
   }
 }

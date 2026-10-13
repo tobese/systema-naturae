@@ -148,9 +148,11 @@
             "col": [
               "8H7G9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1511503"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1511503"
+            ]
           },
-          "authorityIds": "col:8H7G9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1511503,col:8H7G9",
           "authorship": "(Quenstedt, 1858)"
         },
         {
@@ -670,60 +672,18 @@
             "col": [
               "B8NPP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1658114"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1658114"
+            ]
           },
-          "authorityIds": "col:B8NPP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658114,col:B8NPP",
           "authorship": "(L. Beauvais, 1986)"
         }
       ]
-    },
-    {
-      "id": "GENUS_EPISMILIA",
-      "name": "\"Epismilia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EPISMILIA_CIRCUMVELATA_QUENSTEDT_1858",
-          "name": "\"Epismilia circumvelata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Epismilia",
-          "authorship": "\"(Quenstedt, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1511503"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "epismiliidae"
-    },
-    {
-      "id": "GENUS_NEORYLSTONIA",
-      "name": "\"Neorylstonia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEORYLSTONIA_PSEUDOCOLUMELLATA_L_BEAUVAIS_1986",
-          "name": "\"Neorylstonia pseudocolumellata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Neorylstonia",
-          "authorship": "\"(L. Beauvais, 1986)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1658114"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "epismiliidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 39,
+  "genusCount": 3,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

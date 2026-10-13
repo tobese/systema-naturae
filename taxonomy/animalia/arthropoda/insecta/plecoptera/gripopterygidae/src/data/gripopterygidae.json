@@ -3391,20 +3391,6 @@
               "authorityIds": "col:58VPJ"
             },
             {
-              "id": "SP_TRINOTOPERLA_GROOMI_PERKINS_1958",
-              "name": "Trinotoperla groomi",
-              "rank": "SPECIES",
-              "subspeciesCount": 0,
-              "sourcedFrom": "checklistbank",
-              "lineage": "Trinotoperla",
-              "authorship": "Perkins, 1958",
-              "sourceIds": {
-                "checklistbank": "184114"
-              },
-              "children": [],
-              "uuid": "7884f182-c446-5ff-986-56f14f599ba1ff"
-            },
-            {
               "id": "SP_TRINOTOPERLA_SP",
               "name": "Trinotoperla sp.",
               "rank": "SPECIES",
@@ -7421,34 +7407,6 @@
               "authorityIds": "col:798ZX"
             },
             {
-              "id": "SPSUB_RIEKOPERLA_TRILOBA_REGALIS_HYNES_1982",
-              "name": "Riekoperla triloba regalis",
-              "rank": "SUBSPECIES",
-              "authorship": "Hynes",
-              "yearPublished": "1982",
-              "continents": [
-                "Australia"
-              ],
-              "sourcedFrom": "plecoptera species file",
-              "subspeciesCount": 0,
-              "lineage": "Antarctoperlaria > Gripopterygoidea > Riekoperla",
-              "children": []
-            },
-            {
-              "id": "SPSUB_RIEKOPERLA_TRILOBA_TRILOBA_MCLELLAN_1971",
-              "name": "Riekoperla triloba triloba",
-              "rank": "SUBSPECIES",
-              "authorship": "McLellan",
-              "yearPublished": "1971",
-              "continents": [
-                "Australia"
-              ],
-              "sourcedFrom": "plecoptera species file",
-              "subspeciesCount": 0,
-              "lineage": "Antarctoperlaria > Gripopterygoidea > Riekoperla",
-              "children": []
-            },
-            {
               "id": "SP_RIEKOPERLA_TUBERCULATA_MCLELLAN_1971",
               "name": "Riekoperla tuberculata",
               "rank": "SPECIES",
@@ -7923,9 +7881,11 @@
                     "col": [
                       "JPK3"
                     ],
-                    "checklistbank": "urn:lsid:marinespecies.org:taxname:989485"
+                    "checklistbank": [
+                      "urn:lsid:marinespecies.org:taxname:989485"
+                    ]
                   },
-                  "authorityIds": "col:JPK3"
+                  "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:989485,col:JPK3"
                 },
                 {
                   "id": "SP_AUCKLANDOBIUS_TURBOTTI_ILLIES_1963",
@@ -8068,18 +8028,6 @@
                     ]
                   },
                   "authorityIds": "col:6LY77"
-                },
-                {
-                  "id": "SP_HOLCOPERLA_SP",
-                  "name": "Holcoperla sp.",
-                  "rank": "SPECIES",
-                  "subspeciesCount": 0,
-                  "sourcedFrom": "checklistbank",
-                  "lineage": "Holcoperla",
-                  "sourceIds": {
-                    "checklistbank": "714343"
-                  },
-                  "children": []
                 }
               ]
             },
@@ -8769,20 +8717,20 @@
       "lineage": "gripopterygidae"
     },
     {
-      "id": "GENUS_AUCKLANDOBIUS",
-      "name": "\"Aucklandobius",
+      "id": "GENUS_EODINOTOPERLA",
+      "name": "Eodinotoperla",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AUCKLANDOBIUS_KUSCHELI_ILIES_1974",
-          "name": "\"Aucklandobius kuscheli\"",
+          "id": "SP_EODINOTOPERLA_DUNCANAE_JELL_AND_DUNCAN_1986",
+          "name": "Eodinotoperla duncanae",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Aucklandobius",
-          "authorship": "\"(Ilies, 1974)\"",
+          "lineage": "Eodinotoperla",
+          "authorship": "Jell and Duncan 1986",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:989485"
+            "checklistbank": "txn:277003"
           },
           "children": []
         }
@@ -8791,7 +8739,7 @@
       "lineage": "gripopterygidae"
     }
   ],
-  "speciesCount": 395,
+  "speciesCount": 393,
   "appSlug": "gripopterygidae",
   "lineage": "Antarctoperlaria > Gripopterygoidea",
   "continents": [

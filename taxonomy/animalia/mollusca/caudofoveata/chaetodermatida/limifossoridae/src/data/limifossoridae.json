@@ -472,9 +472,11 @@
             "col": [
               "4PHG2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140247"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:140247"
+            ]
           },
-          "authorityIds": "col:4PHG2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:140247,col:4PHG2",
           "authorship": "(Salvini-Plawen, 1972)"
         },
         {
@@ -558,60 +560,18 @@
             "col": [
               "6RBM5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:544982"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:544982"
+            ]
           },
-          "authorityIds": "col:6RBM5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:544982,col:6RBM5",
           "authorship": "(Nierstrasz, 1903)"
         }
       ]
-    },
-    {
-      "id": "GENUS_PSILODENS",
-      "name": "\"Psilodens",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSILODENS_ELONGATUS_SALVINI_PLAWEN_1972",
-          "name": "\"Psilodens elongatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Psilodens",
-          "authorship": "\"(Salvini-Plawen, 1972)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140247"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "limifossoridae"
-    },
-    {
-      "id": "GENUS_METACHAETODERMA",
-      "name": "\"Metachaetoderma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_METACHAETODERMA_CHALLENGERI_NIERSTRASZ_1903",
-          "name": "\"Metachaetoderma challengeri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Metachaetoderma",
-          "authorship": "\"(Nierstrasz, 1903)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:544982"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "limifossoridae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 33,
+  "genusCount": 4,
+  "speciesCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

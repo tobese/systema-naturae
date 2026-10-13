@@ -156,9 +156,11 @@
             "col": [
               "365B3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:458310"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:458310"
+            ]
           },
-          "authorityIds": "col:365B3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:458310,col:365B3",
           "authorship": "T. Sasaki & Leal, 2008"
         },
         {
@@ -308,9 +310,11 @@
             "itis": [
               "568125"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:408613"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:408613"
+            ]
           },
-          "authorityIds": "col:4LY9S,itis:568125"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:408613,col:4LY9S,itis:568125"
         },
         {
           "id": "SP_POROMYA_TENUICONCHA_DALL_1913",
@@ -888,14 +892,53 @@
           "children": []
         },
         {
-          "id": "SP_POROMYA_ADELAIDIS",
-          "name": "Poromya adelaidis",
+          "id": "SP_POROMYA_MISSISSIPPIENSIS",
+          "name": "Poromya mississippiensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Poromya",
           "sourceIds": {
-            "checklistbank": "228510"
+            "checklistbank": "txn:61888"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POROMYA_TUMIDA_COSSMANN_1882",
+          "name": "Poromya tumida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poromya",
+          "authorship": "Cossmann 1882",
+          "sourceIds": {
+            "checklistbank": "txn:89777"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POROMYA_GLOBULOSA_FORBES_1846",
+          "name": "Poromya globulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poromya",
+          "authorship": "Forbes 1846",
+          "sourceIds": {
+            "checklistbank": "txn:314298"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POROMYA_LATA_FORBES_1846",
+          "name": "Poromya lata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poromya",
+          "authorship": "Forbes 1846",
+          "sourceIds": {
+            "checklistbank": "txn:314299"
           },
           "children": []
         }
@@ -921,20 +964,6 @@
           },
           "children": [],
           "uuid": "aae46637-afb3-54c-b15-7220a33f690a24"
-        },
-        {
-          "id": "SP_CETOMYA_TORNATA_JEFFREYS_1876",
-          "name": "Cetomya tornata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cetomya",
-          "authorship": "(Jeffreys, 1876)",
-          "sourceIds": {
-            "checklistbank": "233957"
-          },
-          "children": [],
-          "uuid": "ce6f40e1-2b36-5e9-870-ac772f32760370"
         },
         {
           "id": "SP_CETOMYA_ALBIDA_DALL_1886",
@@ -1271,10 +1300,13 @@
           "lineage": "Liopistha",
           "authorship": "H. Woods, 1906",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1833309"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1833309"
+            ]
           },
           "children": [],
-          "uuid": "52c555a8-8e4b-521-9fe-6e9d7ada6d343e"
+          "uuid": "52c555a8-8e4b-521-9fe-6e9d7ada6d343e",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1833309"
         },
         {
           "id": "SP_LIOPISTHA_BELLA_CONRAD_1873",
@@ -1303,6 +1335,162 @@
           },
           "children": [],
           "uuid": "42d7ee92-93aa-51b-b5e-f41c6bdb32cba7"
+        },
+        {
+          "id": "SP_LIOPISTHA_PROTEXTA_CONRAD_1853",
+          "name": "Liopistha protexta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "Conrad 1853",
+          "sourceIds": {
+            "checklistbank": "txn:60897"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_GLABRA_WARREN_1934",
+          "name": "Liopistha glabra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "Warren 1934",
+          "sourceIds": {
+            "checklistbank": "txn:143315"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_ALLANI_WARREN_1933",
+          "name": "Liopistha allani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "Warren 1933",
+          "sourceIds": {
+            "checklistbank": "txn:143328"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_SERGIPENSIS_WHITE_1887",
+          "name": "Liopistha sergipensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "(White 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:144094"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_HARDINGENSIS_PACKARD_1922",
+          "name": "Liopistha hardingensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "(Packard 1922)",
+          "sourceIds": {
+            "checklistbank": "txn:366171"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_VENTRICOSA_VON_KOENEN_1897",
+          "name": "Liopistha ventricosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "von Koenen 1897",
+          "sourceIds": {
+            "checklistbank": "txn:418370"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_SUPERBA_STOLICZKA_1871",
+          "name": "Liopistha superba",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "(Stoliczka 1871)",
+          "sourceIds": {
+            "checklistbank": "txn:418371"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_SULCATA_VON_KOENEN_1898",
+          "name": "Liopistha sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "von Koenen 1898",
+          "sourceIds": {
+            "checklistbank": "txn:418773"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_LIGERIENSIS_D_ORBIGNY_1845",
+          "name": "Liopistha ligeriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "(d'Orbigny 1845)",
+          "sourceIds": {
+            "checklistbank": "txn:419498"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_SERVESENSIS_CHOFFAT_1901",
+          "name": "Liopistha servesensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "(Choffat 1901)",
+          "sourceIds": {
+            "checklistbank": "txn:419501"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_MONTANENSIS_HENDERSON_1918",
+          "name": "Liopistha montanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "Henderson 1918",
+          "sourceIds": {
+            "checklistbank": "txn:490817"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIOPISTHA_ALTERNATA_WELLER_1907",
+          "name": "Liopistha alternata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liopistha",
+          "authorship": "Weller 1907",
+          "sourceIds": {
+            "checklistbank": "txn:505764"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1326,6 +1514,32 @@
           },
           "children": [],
           "uuid": "1d1160b3-2bb0-58c-af8-5ab9a25440c94b"
+        },
+        {
+          "id": "SP_NEAEROPOROMYA_PAKISTANICA_EAMES_1951",
+          "name": "Neaeroporomya pakistanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neaeroporomya",
+          "authorship": "Eames 1951",
+          "sourceIds": {
+            "checklistbank": "txn:152208"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEAEROPOROMYA_SORIENSIS_EAMES_1951",
+          "name": "Neaeroporomya soriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neaeroporomya",
+          "authorship": "Eames 1951",
+          "sourceIds": {
+            "checklistbank": "txn:152209"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1527,19 +1741,6 @@
           "children": []
         },
         {
-          "id": "SP_POROMYA_HOUBRICKI_F_R_BERNARD_1989",
-          "name": "\"Poromya houbricki\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Poromya",
-          "authorship": "\"F. R. Bernard, 1989\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:408613"
-          },
-          "children": []
-        },
-        {
           "id": "SP_POROMYA_CASTANEA_T_HABE_1952",
           "name": "\"Poromya castanea\"",
           "rank": "SPECIES",
@@ -1570,20 +1771,33 @@
       "lineage": "poromyidae"
     },
     {
-      "id": "GENUS_DILEMMA",
-      "name": "\"Dilemma",
+      "id": "GENUS_PSILOMYA",
+      "name": "Psilomya",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DILEMMA_JAPONICUM_T_SASAKI_LEAL_2008",
-          "name": "\"Dilemma japonicum\"",
+          "id": "SP_PSILOMYA_PETERPONDI_MCLEARN_1933",
+          "name": "Psilomya peterpondi",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Dilemma",
-          "authorship": "\"T. Sasaki & Leal, 2008\"",
+          "lineage": "Psilomya",
+          "authorship": "McLearn 1933",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:458310"
+            "checklistbank": "txn:143341"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSILOMYA_MEEKI_WHITE_1874",
+          "name": "Psilomya meeki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilomya",
+          "authorship": "(White 1874)",
+          "sourceIds": {
+            "checklistbank": "txn:490815"
           },
           "children": []
         }
@@ -1592,20 +1806,20 @@
       "lineage": "poromyidae"
     },
     {
-      "id": "GENUS_LIOPISTHA",
-      "name": "\"Liopistha",
+      "id": "GENUS_LEIOPISTHA",
+      "name": "Leiopistha",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LIOPISTHA_PSILOMYA_H_WOODS_1906",
-          "name": "\"Liopistha (Psilomya)",
+          "id": "SP_LEIOPISTHA_MEEKII_WHITE_1874",
+          "name": "Leiopistha meekii",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Liopistha",
-          "authorship": "\"H. Woods, 1906\"",
+          "lineage": "Leiopistha",
+          "authorship": "White 1874",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1833309"
+            "checklistbank": "txn:472127"
           },
           "children": []
         }
@@ -1615,7 +1829,7 @@
     }
   ],
   "genusCount": 19,
-  "speciesCount": 99,
+  "speciesCount": 115,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

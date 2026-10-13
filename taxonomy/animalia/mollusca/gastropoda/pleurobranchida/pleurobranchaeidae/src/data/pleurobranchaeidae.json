@@ -237,9 +237,11 @@
             "col": [
               "4KB2L"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:531612"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:531612"
+            ]
           },
-          "authorityIds": "col:4KB2L",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:531612,col:4KB2L",
           "authorship": "(Quoy & Gaimard, 1832)"
         },
         {
@@ -257,9 +259,11 @@
             "col": [
               "4KB2M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140818"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:140818"
+            ]
           },
-          "authorityIds": "col:4KB2M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:140818,col:4KB2M",
           "authorship": "(Blainville, 1825)"
         },
         {
@@ -291,9 +295,11 @@
             "col": [
               "4KB2N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:828470"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:828470"
+            ]
           },
-          "authorityIds": "col:4KB2N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:828470,col:4KB2N",
           "authorship": "(Bergh, 1892)"
         },
         {
@@ -323,9 +329,11 @@
             "col": [
               "4KB2R"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:160477"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:160477"
+            ]
           },
-          "authorityIds": "col:4KB2R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:160477,col:4KB2R",
           "authorship": "(A. E. Verrill, 1882)"
         },
         {
@@ -562,18 +570,6 @@
           "children": []
         },
         {
-          "id": "SP_PLEUROBRANCHAEA_TARDA",
-          "name": "Pleurobranchaea tarda",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleurobranchaea",
-          "sourceIds": {
-            "checklistbank": "684419"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PLEUROBRANCHAEA_JAPONICA",
           "name": "Pleurobranchaea japonica",
           "rank": "SPECIES",
@@ -661,18 +657,6 @@
             ]
           },
           "authorityIds": "col:4KB2X"
-        },
-        {
-          "id": "SP_PLEUROBRANCHELLA_NICOBARICA",
-          "name": "Pleurobranchella nicobarica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pleurobranchella",
-          "sourceIds": {
-            "checklistbank": "684420"
-          },
-          "children": []
         }
       ]
     },
@@ -785,71 +769,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pleurobranchaeidae"
-    },
-    {
-      "id": "GENUS_PLEUROBRANCHAEA",
-      "name": "\"Pleurobranchaea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLEUROBRANCHAEA_MECKELI_BLAINVILLE_1825",
-          "name": "\"Pleurobranchaea meckeli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleurobranchaea",
-          "authorship": "\"(Blainville, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:140818"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROBRANCHAEA_OBESA_A_E_VERRILL_1882",
-          "name": "\"Pleurobranchaea obesa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleurobranchaea",
-          "authorship": "\"(A. E. Verrill, 1882)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:160477"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROBRANCHAEA_MACULATA_QUOY_GAIMARD_1832",
-          "name": "\"Pleurobranchaea maculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleurobranchaea",
-          "authorship": "\"(Quoy & Gaimard, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:531612"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROBRANCHAEA_MOROSA_BERGH_1892",
-          "name": "\"Pleurobranchaea morosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleurobranchaea",
-          "authorship": "\"(Bergh, 1892)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:828470"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurobranchaeidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 50,
+  "genusCount": 6,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -858,6 +781,6 @@
       "orderKey": 10659174,
       "familyKey": 6520177
     },
-    "checklistbank": "2783465"
+    "checklistbank": "ott2914956"
   }
 }

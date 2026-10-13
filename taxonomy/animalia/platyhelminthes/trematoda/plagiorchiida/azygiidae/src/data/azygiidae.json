@@ -324,34 +324,6 @@
           "authorityIds": "itis:55632"
         },
         {
-          "id": "SP_OTODISTOMUM_VELIPORUM_DOLLFUS_1937",
-          "name": "Otodistomum veliporum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Otodistomum",
-          "authorship": "Dollfus, 1937",
-          "sourceIds": {
-            "checklistbank": "29253"
-          },
-          "children": [],
-          "uuid": "519bfffa-8d25-5bd-9ef-b3dc085f9e84e6"
-        },
-        {
-          "id": "SP_OTODISTOMUM_CESTOIDES_VAN_BENEDEN_1871",
-          "name": "Otodistomum cestoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Otodistomum",
-          "authorship": "(van Beneden,  1871)",
-          "sourceIds": {
-            "checklistbank": "29254"
-          },
-          "children": [],
-          "uuid": "1d05aef1-6051-560-bc5-07619998a5fe9a"
-        },
-        {
           "id": "SP_OTODISTOMUM_PRISTIOPHORI_JOHNSTON_1902_WOOLCOCK_1935",
           "name": "Otodistomum pristiophori",
           "rank": "SPECIES",
@@ -1000,9 +972,11 @@
             "col": [
               "5VYNC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:726176"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:726176"
+            ]
           },
-          "authorityIds": "col:5VYNC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:726176,col:5VYNC",
           "authorship": "(Tiwari, 1959)"
         },
         {
@@ -1935,19 +1909,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AZYGIA_ARMATI_TIWARI_1959",
-          "name": "\"Azygia armati\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Azygia",
-          "authorship": "\"(Tiwari, 1959)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:726176"
-          },
-          "children": []
-        },
-        {
           "id": "SP_AZYGIA_LUCII_M_LLER_1776_L_HE_1909",
           "name": "\"Azygia lucii\"",
           "rank": "SPECIES",
@@ -1979,7 +1940,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 119,
+  "speciesCount": 116,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

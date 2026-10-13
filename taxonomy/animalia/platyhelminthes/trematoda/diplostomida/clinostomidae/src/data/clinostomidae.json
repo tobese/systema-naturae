@@ -1415,18 +1415,6 @@
           "children": []
         },
         {
-          "id": "SP_CLINOSTOMUM_DASI",
-          "name": "Clinostomum dasi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clinostomum",
-          "sourceIds": {
-            "checklistbank": "1040374"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CLINOSTOMUM_CUTANEUM",
           "name": "Clinostomum cutaneum",
           "rank": "SPECIES",
@@ -2325,9 +2313,11 @@
             "col": [
               "84BGF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1399311"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1399311"
+            ]
           },
-          "authorityIds": "col:84BGF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1399311,col:84BGF",
           "authorship": "(Baer, 1959)"
         },
         {
@@ -2665,19 +2655,6 @@
             "checklistbank": "959167"
           },
           "children": []
-        },
-        {
-          "id": "SP_DISTOMA_COMPLANATUM_RUDOLPHI_1814",
-          "name": "Distoma complanatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Distoma",
-          "authorship": "Rudolphi, 1814",
-          "sourceIds": {
-            "checklistbank": "1051714"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2859,32 +2836,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "clinostomidae"
-    },
-    {
-      "id": "GENUS_NEPHROCEPHALUS",
-      "name": "\"Nephrocephalus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEPHROCEPHALUS_GERBERI_BAER_1959",
-          "name": "\"Nephrocephalus gerberi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nephrocephalus",
-          "authorship": "\"(Baer, 1959)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1399311"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "clinostomidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 165,
+  "genusCount": 15,
+  "speciesCount": 162,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

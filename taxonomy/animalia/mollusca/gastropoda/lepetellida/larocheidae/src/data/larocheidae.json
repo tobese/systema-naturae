@@ -94,42 +94,6 @@
           "authorityIds": "col:KYQT"
         },
         {
-          "id": "SP_BATHYXYLOPHILA_EXCELSA",
-          "name": "Bathyxylophila excelsa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bathyxylophila",
-          "sourceIds": {
-            "checklistbank": "409714"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BATHYXYLOPHILA_IOTA",
-          "name": "Bathyxylophila iota",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bathyxylophila",
-          "sourceIds": {
-            "checklistbank": "409715"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BATHYXYLOPHILA_PUSILLA",
-          "name": "Bathyxylophila pusilla",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bathyxylophila",
-          "sourceIds": {
-            "checklistbank": "409716"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BATHYXYLOPHILA_PERONIANA",
           "name": "Bathyxylophila peroniana",
           "rank": "SPECIES",
@@ -212,9 +176,11 @@
             "col": [
               "6NYYZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1250278"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1250278"
+            ]
           },
-          "authorityIds": "col:6NYYZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1250278,col:6NYYZ",
           "authorship": "(Gougerot & Le Renard, 1977)"
         },
         {
@@ -617,32 +583,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_LAROCHEOPSIS",
-      "name": "\"Larocheopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LAROCHEOPSIS_MICROCLATHRATA_GOUGEROT_LE_RENARD_1977",
-          "name": "\"Larocheopsis microclathrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Larocheopsis",
-          "authorship": "\"(Gougerot & Le Renard, 1977)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1250278"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "larocheidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 35,
+  "genusCount": 4,
+  "speciesCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -651,6 +595,6 @@
       "orderKey": 9799313,
       "familyKey": 6516197
     },
-    "checklistbank": "ott4962270"
+    "checklistbank": "1ff7d138-e00e-4888-8bbe-4e998e680c04"
   }
 }

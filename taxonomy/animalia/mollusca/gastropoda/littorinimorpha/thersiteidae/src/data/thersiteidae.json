@@ -130,9 +130,11 @@
             "col": [
               "9WXX7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615597"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1615597"
+            ]
           },
-          "authorityIds": "col:9WXX7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1615597,col:9WXX7",
           "authorship": "(Mansfield, 1937)"
         },
         {
@@ -182,9 +184,11 @@
             "col": [
               "9WXX8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615595"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1615595"
+            ]
           },
-          "authorityIds": "col:9WXX8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1615595,col:9WXX8",
           "authorship": "(Heilprin, 1886)"
         },
         {
@@ -217,6 +221,58 @@
           },
           "children": [],
           "uuid": "922a626f-cdaf-5b3-bd3-4705ad4f1a3020"
+        },
+        {
+          "id": "SP_ORTHAULAX_INORNATUS_GABB_1872",
+          "name": "Orthaulax inornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthaulax",
+          "authorship": "Gabb 1872",
+          "sourceIds": {
+            "checklistbank": "txn:109049"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORTHAULAX_ALTILIS_PILSBRY_1922",
+          "name": "Orthaulax altilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthaulax",
+          "authorship": "(Pilsbry 1922)",
+          "sourceIds": {
+            "checklistbank": "txn:157474"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORTHAULAX_BERMUDEZI_CLENCH_AND_AGUAYO_1939",
+          "name": "Orthaulax bermudezi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthaulax",
+          "authorship": "Clench and Aguayo 1939",
+          "sourceIds": {
+            "checklistbank": "txn:157480"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORTHAULAX_JAPONICUS_NAGAO_1924",
+          "name": "Orthaulax japonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthaulax",
+          "authorship": "Nagao 1924",
+          "sourceIds": {
+            "checklistbank": "txn:390903"
+          },
+          "children": []
         }
       ]
     },
@@ -242,9 +298,11 @@
             "col": [
               "9WXWW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1616304"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1616304"
+            ]
           },
-          "authorityIds": "col:9WXWW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1616304,col:9WXWW",
           "authorship": "(Grateloup, 1834)"
         },
         {
@@ -301,6 +359,19 @@
             ]
           },
           "authorityIds": "col:C7VYH"
+        },
+        {
+          "id": "SP_OOSTROMBUS_CHIRAENSIS_OLSSON_1931",
+          "name": "Oostrombus chiraensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oostrombus",
+          "authorship": "(Olsson 1931)",
+          "sourceIds": {
+            "checklistbank": "txn:71603"
+          },
+          "children": []
         }
       ]
     },
@@ -574,55 +645,20 @@
       "lineage": "Thersiteidae"
     },
     {
-      "id": "GENUS_ORTHAULAX",
-      "name": "\"Orthaulax",
+      "id": "GENUS_STROMBUS",
+      "name": "Strombus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ORTHAULAX_PUGNAX_HEILPRIN_1886",
-          "name": "\"Orthaulax pugnax\"",
+          "id": "SP_STROMBUS_CEDROENSIS_CLARK_AND_DURHAM_1946",
+          "name": "Strombus cedroensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Orthaulax",
-          "authorship": "\"(Heilprin, 1886)\"",
+          "lineage": "Strombus",
+          "authorship": "Clark and Durham 1946",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615595"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ORTHAULAX_HERNANDOENSIS_MANSFIELD_1937",
-          "name": "\"Orthaulax hernandoensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Orthaulax",
-          "authorship": "\"(Mansfield, 1937)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615597"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "thersiteidae"
-    },
-    {
-      "id": "GENUS_OOSTROMBUS",
-      "name": "\"Oostrombus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OOSTROMBUS_AURICULARIUS_GRATELOUP_1834",
-          "name": "\"Oostrombus auricularius\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oostrombus",
-          "authorship": "\"(Grateloup, 1834)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1616304"
+            "checklistbank": "txn:158368"
           },
           "children": []
         }
@@ -631,8 +667,8 @@
       "lineage": "thersiteidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 34,
+  "genusCount": 6,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -640,6 +676,7 @@
       "classKey": 225,
       "orderKey": 7390893,
       "familyKey": 4617157
-    }
+    },
+    "checklistbank": "txn:62516"
   }
 }

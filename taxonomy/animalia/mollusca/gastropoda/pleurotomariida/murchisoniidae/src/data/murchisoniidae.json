@@ -632,9 +632,11 @@
             "col": [
               "VPGMD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1896661"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1896661"
+            ]
           },
-          "authorityIds": "col:VPGMD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1896661,col:VPGMD",
           "authorship": "Linsley, 1968"
         },
         {
@@ -721,7 +723,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8fb9c178-4f68-51b-a3d-98a34b4c00a9c7"
+          "uuid": "8fb9c178-4f68-51b-a3d-98a34b4c00a9c7",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:74558"
+          }
         },
         {
           "id": "SP_MESOCOELIA_JANUS_PERNER_1907",
@@ -739,6 +745,97 @@
             ]
           },
           "authorityIds": "col:VPGB4"
+        },
+        {
+          "id": "SP_MESOCOELIA_DELICATA_PERNER_1907",
+          "name": "Mesocoelia delicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178134"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOCOELIA_DISCREPANS_PERNER_1907",
+          "name": "Mesocoelia discrepans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178136"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOCOELIA_INERS_PERNER_1907",
+          "name": "Mesocoelia iners",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178137"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOCOELIA_LIBERA_PERNER_1907",
+          "name": "Mesocoelia libera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178139"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOCOELIA_SUSPECTA_PERNER_1907",
+          "name": "Mesocoelia suspecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178140"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOCOELIA_GREGARIA_RUEDEMANN_1916",
+          "name": "Mesocoelia gregaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Ruedemann 1916)",
+          "sourceIds": {
+            "checklistbank": "txn:196103"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MESOCOELIA_PRISCUM_M_NSTER_1840",
+          "name": "Mesocoelia priscum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesocoelia",
+          "authorship": "(Münster 1840)",
+          "sourceIds": {
+            "checklistbank": "txn:74548"
+          },
+          "children": []
         }
       ]
     },
@@ -786,6 +883,45 @@
           "yearPublished": "1925",
           "children": [],
           "uuid": "0770ef73-5aa3-591-b45-f140e60661e652"
+        },
+        {
+          "id": "SP_LODANARIA_QUADRICARINATA_STAUFFER_1909",
+          "name": "Lodanaria quadricarinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lodanaria",
+          "authorship": "(Stauffer 1909)",
+          "sourceIds": {
+            "checklistbank": "txn:74786"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LODANARIA_FLORYI_BLODGETT_AND_JOHNSON_1992",
+          "name": "Lodanaria floryi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lodanaria",
+          "authorship": "(Blodgett and Johnson 1992)",
+          "sourceIds": {
+            "checklistbank": "txn:63383"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LODANARIA_ECCLESIAE_CLARKE_AND_SWARTZ_1913",
+          "name": "Lodanaria ecclesiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lodanaria",
+          "authorship": "(Clarke and Swartz 1913)",
+          "sourceIds": {
+            "checklistbank": "txn:73465"
+          },
+          "children": []
         }
       ]
     },
@@ -837,6 +973,32 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "2d9b7d0e-1723-5f1-bf3-4d027dfb2e1505"
+        },
+        {
+          "id": "SP_DEVONOCERITHIOIDES_LOXONEMOIDES_WHIDBORNE_1892",
+          "name": "Devonocerithioides loxonemoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Devonocerithioides",
+          "authorship": "(Whidborne 1892)",
+          "sourceIds": {
+            "checklistbank": "txn:63170"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DEVONOCERITHIOIDES_WHIDBORNI_FR_DA_2000",
+          "name": "Devonocerithioides whidborni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Devonocerithioides",
+          "authorship": "(Frýda 2000)",
+          "sourceIds": {
+            "checklistbank": "txn:72995"
+          },
+          "children": []
         }
       ]
     },
@@ -900,6 +1062,19 @@
           "yearPublished": "1992",
           "children": [],
           "uuid": "9de142e6-92e7-519-902-6936fabb55d996"
+        },
+        {
+          "id": "SP_VLADANELLA_LIRATA_TYLER_1965",
+          "name": "Vladanella lirata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vladanella",
+          "authorship": "(Tyler 1965)",
+          "sourceIds": {
+            "checklistbank": "txn:74632"
+          },
+          "children": []
         }
       ]
     },
@@ -1001,9 +1176,11 @@
             "col": [
               "VPJKH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1896650"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1896650"
+            ]
           },
-          "authorityIds": "col:VPJKH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1896650,col:VPJKH",
           "authorship": "(J. De C. Sowerby, 1827)"
         },
         {
@@ -1331,9 +1508,11 @@
             "col": [
               "9D7L"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1023116"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1023116"
+            ]
           },
-          "authorityIds": "col:9D7L",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1023116,col:9D7L",
           "authorship": "(de Koninck, 1843)"
         },
         {
@@ -1551,7 +1730,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "327dc917-49b6-5ed-91f-1fcfa669d83d8a"
+          "uuid": "327dc917-49b6-5ed-91f-1fcfa669d83d8a",
+          "authorship": "(Hall 1860)",
+          "sourceIds": {
+            "checklistbank": "txn:76867"
+          }
         },
         {
           "id": "SP_MURCHISONIA_AKIDOTA",
@@ -1563,7 +1746,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8808380c-0bae-5a2-82d-3aa853e092a1ec"
+          "uuid": "8808380c-0bae-5a2-82d-3aa853e092a1ec",
+          "authorship": "(Linsley 1968)",
+          "sourceIds": {
+            "checklistbank": "txn:196568"
+          }
         },
         {
           "id": "SP_MURCHISONIA_ALLEVATA",
@@ -1575,7 +1762,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "16cc9d77-e660-5bf-b20-7cd4ac9495a0d4"
+          "uuid": "16cc9d77-e660-5bf-b20-7cd4ac9495a0d4",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178155"
+          }
         },
         {
           "id": "SP_MURCHISONIA_AMII_MCLEARN_1924",
@@ -1606,9 +1797,11 @@
             "col": [
               "VF2TY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1893649"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1893649"
+            ]
           },
-          "authorityIds": "col:VF2TY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1893649,col:VF2TY",
           "authorship": "Linsley, 1968"
         },
         {
@@ -1739,7 +1932,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "ed27bb4b-24ea-51a-806-c4b18642a1d0d1"
+          "uuid": "ed27bb4b-24ea-51a-806-c4b18642a1d0d1",
+          "authorship": "(Tassell 1978)",
+          "sourceIds": {
+            "checklistbank": "txn:196655"
+          }
         },
         {
           "id": "SP_MURCHISONIA_BENSONI_FINLAY_1927",
@@ -1781,7 +1978,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a0691553-4229-56e-bdd-7f092fcf315408"
+          "uuid": "a0691553-4229-56e-bdd-7f092fcf315408",
+          "authorship": "(Dechen 1832)",
+          "sourceIds": {
+            "checklistbank": "txn:76654"
+          }
         },
         {
           "id": "SP_MURCHISONIA_BREVIS_ROEMER_1856",
@@ -1965,7 +2166,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "56bca8ba-84f4-5f4-ba7-0e19cb70fb40fe"
+          "uuid": "56bca8ba-84f4-5f4-ba7-0e19cb70fb40fe",
+          "authorship": "(Linsley 1968)",
+          "sourceIds": {
+            "checklistbank": "txn:196571"
+          }
         },
         {
           "id": "SP_MURCHISONIA_DENSILINEATA_WANG_1980",
@@ -2089,7 +2294,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e3e9db38-af52-505-87d-879b0647c584c1"
+          "uuid": "e3e9db38-af52-505-87d-879b0647c584c1",
+          "authorship": "(Sollas 1879)",
+          "sourceIds": {
+            "checklistbank": "txn:74712"
+          }
         },
         {
           "id": "SP_MURCHISONIA_EXTENUATA",
@@ -2187,7 +2396,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "bfca7bdf-c0c8-5dd-bf6-50319e02394551"
+          "uuid": "bfca7bdf-c0c8-5dd-bf6-50319e02394551",
+          "authorship": "(Linsley 1968)",
+          "sourceIds": {
+            "checklistbank": "txn:196573"
+          }
         },
         {
           "id": "SP_MURCHISONIA_GRACILIS",
@@ -2199,7 +2412,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6ee15b1f-c81b-554-ad7-adc1b8fd62cc94"
+          "uuid": "6ee15b1f-c81b-554-ad7-adc1b8fd62cc94",
+          "authorship": "(Goldfuss 1844)",
+          "sourceIds": {
+            "checklistbank": "txn:74728"
+          }
         },
         {
           "id": "SP_MURCHISONIA_GRANIFERA",
@@ -2237,7 +2454,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "675066ff-c7c4-5a1-857-c0dac436f38c00"
+          "uuid": "675066ff-c7c4-5a1-857-c0dac436f38c00",
+          "authorship": "(Billings 1874)",
+          "sourceIds": {
+            "checklistbank": "txn:74732"
+          }
         },
         {
           "id": "SP_MURCHISONIA_HERCYNICA_R_MER_1843",
@@ -2269,7 +2490,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a477e6fe-cd4a-54e-ba8-f7658ee0fb21c3"
+          "uuid": "a477e6fe-cd4a-54e-ba8-f7658ee0fb21c3",
+          "authorship": "(Frýda and Manda 1997)",
+          "sourceIds": {
+            "checklistbank": "txn:196392"
+          }
         },
         {
           "id": "SP_MURCHISONIA_INERS",
@@ -2324,9 +2549,11 @@
             "col": [
               "VF2TC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1893593"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1893593"
+            ]
           },
-          "authorityIds": "col:VF2TC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1893593,col:VF2TC",
           "authorship": "A. G. Cook, 1997"
         },
         {
@@ -2371,7 +2598,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "db74cb36-dfef-598-9ac-35a495e7606f67"
+          "uuid": "db74cb36-dfef-598-9ac-35a495e7606f67",
+          "authorship": "(Hall 1860)",
+          "sourceIds": {
+            "checklistbank": "txn:74746"
+          }
         },
         {
           "id": "SP_MURCHISONIA_LAUDABILIS_PERNER_1907",
@@ -2397,7 +2628,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "14969d8e-cf14-5fb-989-727587b684f10d"
+          "uuid": "14969d8e-cf14-5fb-989-727587b684f10d",
+          "authorship": "(Cook and Camilleri 1997)",
+          "sourceIds": {
+            "checklistbank": "txn:196163"
+          }
         },
         {
           "id": "SP_MURCHISONIA_LEDA",
@@ -2409,7 +2644,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "12c1133b-9fed-5e9-8f5-72564068671957"
+          "uuid": "12c1133b-9fed-5e9-8f5-72564068671957",
+          "authorship": "(Hall 1861)",
+          "sourceIds": {
+            "checklistbank": "txn:74750"
+          }
         },
         {
           "id": "SP_MURCHISONIA_LIBERA",
@@ -2453,7 +2692,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b7aa46bf-7d8e-55d-b9e-65f3d090fc1f66"
+          "uuid": "b7aa46bf-7d8e-55d-b9e-65f3d090fc1f66",
+          "authorship": "(Frýda and Manda 1997)",
+          "sourceIds": {
+            "checklistbank": "txn:196393"
+          }
         },
         {
           "id": "SP_MURCHISONIA_LOHRHEIMI_HEIDELBERGER_2001",
@@ -2595,7 +2838,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3a1f5d2e-78ca-588-872-0463997712d8fc"
+          "uuid": "3a1f5d2e-78ca-588-872-0463997712d8fc",
+          "authorship": "(Lindström 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:74773"
+          }
         },
         {
           "id": "SP_MURCHISONIA_OEGENSIS_HEIDELBERGER_KOCH_2005",
@@ -2751,7 +2998,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "18ec4907-1cf4-586-9c7-bcc283915bda69"
+          "uuid": "18ec4907-1cf4-586-9c7-bcc283915bda69",
+          "authorship": "(Frýda and Manda 1997)",
+          "sourceIds": {
+            "checklistbank": "txn:196394"
+          }
         },
         {
           "id": "SP_MURCHISONIA_PYGMAEA_ROWLEY_1895",
@@ -2919,7 +3170,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d2fe2e4b-db29-511-b99-a550914195d26f"
+          "uuid": "d2fe2e4b-db29-511-b99-a550914195d26f",
+          "authorship": "(Linsley 1968)",
+          "sourceIds": {
+            "checklistbank": "txn:196575"
+          }
         },
         {
           "id": "SP_MURCHISONIA_SIMILIS_TRENKNER_1868",
@@ -3081,7 +3336,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "30ce1fce-320a-5c4-a65-315328b6f5fcf5"
+          "uuid": "30ce1fce-320a-5c4-a65-315328b6f5fcf5",
+          "authorship": "(Blodgett and Johnson 1992)",
+          "sourceIds": {
+            "checklistbank": "txn:74811"
+          }
         },
         {
           "id": "SP_MURCHISONIA_TORQUATA",
@@ -3105,7 +3364,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d217b00e-7f3a-552-b18-3bcc5e0758fe7d"
+          "uuid": "d217b00e-7f3a-552-b18-3bcc5e0758fe7d",
+          "authorship": "(Whidborne 1892)",
+          "sourceIds": {
+            "checklistbank": "txn:74813"
+          }
         },
         {
           "id": "SP_MURCHISONIA_TRICINCTA",
@@ -3122,9 +3385,11 @@
             "col": [
               "VPGWQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1896635"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1896635"
+            ]
           },
-          "authorityIds": "col:VPGWQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1896635,col:VPGWQ",
           "authorship": "(Münster, 1840)"
         },
         {
@@ -3157,7 +3422,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a803badc-c60d-5b4-9d3-c580e43f60bdf1"
+          "uuid": "a803badc-c60d-5b4-9d3-c580e43f60bdf1",
+          "authorship": "(de Koninck 1883)",
+          "sourceIds": {
+            "checklistbank": "txn:236107"
+          }
         },
         {
           "id": "SP_MURCHISONIA_TURRIFORMIS_GR_NBERG_1927",
@@ -3188,9 +3457,11 @@
             "col": [
               "VPF3K"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1894702"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1894702"
+            ]
           },
-          "authorityIds": "col:VPF3K",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1894702,col:VPF3K",
           "authorship": "de Koninck, 1876"
         },
         {
@@ -3233,7 +3504,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "75e80651-def0-5b6-936-d3d4a81a40ce5e"
+          "uuid": "75e80651-def0-5b6-936-d3d4a81a40ce5e",
+          "authorship": "(Cook and Camilleri 1997)",
+          "sourceIds": {
+            "checklistbank": "txn:196164"
+          }
         },
         {
           "id": "SP_MURCHISONIA_XANTHIPPE_BILLINGS_1865",
@@ -3435,7 +3710,8 @@
           "sourceIds": {
             "col": [
               "VPCSL"
-            ]
+            ],
+            "checklistbank": "txn:75563"
           },
           "authorityIds": "col:VPCSL"
         },
@@ -3626,6 +3902,357 @@
           },
           "children": [],
           "uuid": "e8893041-2bde-54f-a5a-0001650a581427"
+        },
+        {
+          "id": "SP_MURCHISONIA_ARCTICA_TOLMACHOFF_1930",
+          "name": "Murchisonia arctica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Tolmachoff 1930)",
+          "sourceIds": {
+            "checklistbank": "txn:68643"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_GRACILLIMA_PERNER_1907",
+          "name": "Murchisonia gracillima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Perner 1907",
+          "sourceIds": {
+            "checklistbank": "txn:73764"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_DORNAPICA_HEIDELBERGER_AND_AMLER_2002",
+          "name": "Murchisonia dornapica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Heidelberger and Amler 2002",
+          "sourceIds": {
+            "checklistbank": "txn:74707"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_PETILA_HALL_AND_WHITFIELD_1872",
+          "name": "Murchisonia petila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Hall and Whitfield 1872",
+          "sourceIds": {
+            "checklistbank": "txn:74777"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_SUBULATA_CONRAD_1842",
+          "name": "Murchisonia subulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Conrad 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:74392"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_VINCTA_HALL_1856",
+          "name": "Murchisonia vincta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Hall 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:240211"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_MEGATHANAE_BLODGETT_AND_JOHNSON_1992",
+          "name": "Murchisonia megathanae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Blodgett and Johnson 1992)",
+          "sourceIds": {
+            "checklistbank": "txn:63374"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_CAMBRIA_DONALD_1905",
+          "name": "Murchisonia cambria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Donald 1905)",
+          "sourceIds": {
+            "checklistbank": "txn:73766"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_DEFRANCEI_D_ARCHIAC_AND_DE_VERNEUIL_1842",
+          "name": "Murchisonia defrancei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(d’Archiac and de Verneuil 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:75457"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_DUBLINENSIS_STAUFFER_1909",
+          "name": "Murchisonia dublinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Stauffer 1909)",
+          "sourceIds": {
+            "checklistbank": "txn:75473"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_KANEKOI_KASE_AND_NISHIDA_1986",
+          "name": "Murchisonia kanekoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Kase and Nishida 1986)",
+          "sourceIds": {
+            "checklistbank": "txn:76667"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_TRILINEATA_SANDBERGER_AND_SANDBERGER_1854",
+          "name": "Murchisonia trilineata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Sandberger and Sandberger 1854)",
+          "sourceIds": {
+            "checklistbank": "txn:76892"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_MINUTA_GRABAU_AND_SHERZER_1910",
+          "name": "Murchisonia minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Grabau and Sherzer 1910)",
+          "sourceIds": {
+            "checklistbank": "txn:87238"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_PLUMLEYI_BLODGETT_1992",
+          "name": "Murchisonia plumleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Blodgett 1992)",
+          "sourceIds": {
+            "checklistbank": "txn:73756"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_FUSIFORMIS_PHILLIPS_1836",
+          "name": "Murchisonia fusiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Phillips 1836)",
+          "sourceIds": {
+            "checklistbank": "txn:196934"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_SUBCARINATA_SHERZER_AND_GRABAU_1910",
+          "name": "Murchisonia subcarinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Sherzer and Grabau 1910)",
+          "sourceIds": {
+            "checklistbank": "txn:76896"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_ACUTA_M_NSTER_1841",
+          "name": "Murchisonia acuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Münster 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:267822"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_SUBGRANULATA_KLIPSTEIN_1843",
+          "name": "Murchisonia subgranulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Klipstein 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:267829"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_CALOSOMA_LAUBE_1868",
+          "name": "Murchisonia calosoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Laube 1868)",
+          "sourceIds": {
+            "checklistbank": "txn:267831"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_TRISTRIATA_M_NSTER_1841",
+          "name": "Murchisonia tristriata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Münster 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:267833"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_BIPUNCTATA_M_NSTER_1841",
+          "name": "Murchisonia bipunctata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Münster 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:267835"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_OBTUSA_KLIPSTEIN_1843",
+          "name": "Murchisonia obtusa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Klipstein 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:269124"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_BIARMICA_KUTORGA_1842",
+          "name": "Murchisonia biarmica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Kutorga 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:304973"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_HUNGARICA_KITTL_1900",
+          "name": "Murchisonia hungarica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Kittl 1900",
+          "sourceIds": {
+            "checklistbank": "txn:393002"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_TIMORENSIS_KRUMBECK_1924",
+          "name": "Murchisonia timorensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Krumbeck 1924",
+          "sourceIds": {
+            "checklistbank": "txn:397681"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_SUBEUGLYPHA_KRUMBECK_1924",
+          "name": "Murchisonia subeuglypha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Krumbeck 1924",
+          "sourceIds": {
+            "checklistbank": "txn:397682"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MURCHISONIA_PLEUROTOMARIOIDES_MANSUY_1912",
+          "name": "Murchisonia pleurotomarioides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "Mansuy 1912",
+          "sourceIds": {
+            "checklistbank": "txn:484614"
+          },
+          "children": []
         }
       ]
     },
@@ -3675,6 +4302,188 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "f3565bd9-8f1e-5ff-9f8-3473bb1add91be"
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_BICINCTA_M_COY_1844",
+          "name": "Cyrtostropha bicincta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(M'Coy 1844)",
+          "sourceIds": {
+            "checklistbank": "txn:58097"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_SALTERI_ULRICH_AND_SCOFIELD_1897",
+          "name": "Cyrtostropha salteri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Ulrich and Scofield 1897)",
+          "sourceIds": {
+            "checklistbank": "txn:67020"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_PACIFICA_PERNER_1907",
+          "name": "Cyrtostropha pacifica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:178124"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_SCITULA_DONALD_1902",
+          "name": "Cyrtostropha scitula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Donald 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:196365"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_MORINENSIS_HORN_1952",
+          "name": "Cyrtostropha morinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Horný 1952)",
+          "sourceIds": {
+            "checklistbank": "txn:73414"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_SCULPTA_PERNER_1907",
+          "name": "Cyrtostropha sculpta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:73769"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_OBSCURA_PORTLOCK_1843",
+          "name": "Cyrtostropha obscura",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Portlock 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:74347"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_CAVA_LINDSTR_M_1884",
+          "name": "Cyrtostropha cava",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Lindström 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:74689"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_MACROSPIRA_HALL_1852",
+          "name": "Cyrtostropha macrospira",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Hall 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:74756"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_SUBPLICATA_LINDSTR_M_1884",
+          "name": "Cyrtostropha subplicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Lindström 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:74803"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_TORQUATA_M_COY_1851",
+          "name": "Cyrtostropha torquata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(M'Coy 1851)",
+          "sourceIds": {
+            "checklistbank": "txn:74812"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_CORALLI_DE_SOWERBY_AND_MURCHISON_1839",
+          "name": "Cyrtostropha coralli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(de Sowerby and Murchison 1839)",
+          "sourceIds": {
+            "checklistbank": "txn:75377"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_MONOLINIFORMIS_LINDSTR_M_1884",
+          "name": "Cyrtostropha monoliniformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Lindström 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:74767"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTOSTROPHA_ARTICULATA_SOWERBY_AND_MURCHISON_1839",
+          "name": "Cyrtostropha articulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtostropha",
+          "authorship": "(Sowerby and Murchison 1839)",
+          "sourceIds": {
+            "checklistbank": "txn:75376"
+          },
+          "children": []
         }
       ]
     },
@@ -3721,6 +4530,19 @@
           "yearPublished": "1977",
           "children": [],
           "uuid": "1e83cf64-e495-569-9fb-ebed2c7a1fca88"
+        },
+        {
+          "id": "SP_MICHELIOPSIS_LAPPARENTI_TERMIER_AND_TERMIER_1977",
+          "name": "Micheliopsis lapparenti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micheliopsis",
+          "authorship": "Termier and Termier 1977",
+          "sourceIds": {
+            "checklistbank": "txn:129018"
+          },
+          "children": []
         }
       ]
     },
@@ -3769,9 +4591,11 @@
             "col": [
               "7RFPQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1477907"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1477907"
+            ]
           },
-          "authorityIds": "col:7RFPQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1477907,col:7RFPQ",
           "authorship": "(J. Donald, 1887)"
         },
         {
@@ -3784,7 +4608,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "14d651b7-0fe7-599-9ac-641462c934f0b6"
+          "uuid": "14d651b7-0fe7-599-9ac-641462c934f0b6",
+          "authorship": "(Young and Armstrong 1874)",
+          "sourceIds": {
+            "checklistbank": "txn:289809"
+          }
         },
         {
           "id": "SP_MURCHISONIA_TEREBRIFORMIS",
@@ -3797,6 +4625,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "e3493566-004c-5d0-812-959296bc192a60"
+        },
+        {
+          "id": "SP_GLYPHODETA_TEREBRIFORMIS_HALL_1856",
+          "name": "Glyphodeta terebriformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glyphodeta",
+          "authorship": "(Hall 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:74808"
+          },
+          "children": []
         }
       ]
     },
@@ -3944,7 +4785,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "01310b86-76cf-582-ab6-4e4778f2003d7b"
+          "uuid": "01310b86-76cf-582-ab6-4e4778f2003d7b",
+          "authorship": "Wilson 1951",
+          "sourceIds": {
+            "checklistbank": "txn:74016"
+          }
         },
         {
           "id": "SP_HORMOTOMA_SANA_PERNER_1907",
@@ -4053,9 +4898,11 @@
             "col": [
               "7QBHQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1350036"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1350036"
+            ]
           },
-          "authorityIds": "col:7QBHQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1350036,col:7QBHQ",
           "authorship": "(Walcott, 1884)"
         },
         {
@@ -4077,6 +4924,19 @@
             ]
           },
           "authorityIds": "col:7QBKY"
+        },
+        {
+          "id": "SP_BELLAZONA_POLITA_GORDON_AND_YOCHELSON_1987",
+          "name": "Bellazona polita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bellazona",
+          "authorship": "Gordon and Yochelson 1987",
+          "sourceIds": {
+            "checklistbank": "txn:197551"
+          },
+          "children": []
         }
       ]
     },
@@ -4155,7 +5015,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "58ec5824-0818-5bf-91d-78ea32e4d16d69"
+          "uuid": "58ec5824-0818-5bf-91d-78ea32e4d16d69",
+          "authorship": "(Horný 1953)",
+          "sourceIds": {
+            "checklistbank": "txn:199407"
+          }
         },
         {
           "id": "SP_MORANIA_WAGNERI_ROHR_ET_AL_2008",
@@ -4238,6 +5102,71 @@
           },
           "children": [],
           "uuid": "d8077438-e859-51d-a5d-0dd05f83059c22"
+        },
+        {
+          "id": "SP_MORANIA_GRIFFITHI_DONALD_1899",
+          "name": "Morania griffithi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morania",
+          "authorship": "(Donald 1899)",
+          "sourceIds": {
+            "checklistbank": "txn:74005"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MORANIA_ATTENUATUM_LINDSTR_M_1884",
+          "name": "Morania attenuatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morania",
+          "authorship": "(Lindström 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:74284"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MORANIA_ALTEVITTATA_SPITZ_1907",
+          "name": "Morania altevittata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morania",
+          "authorship": "(Spitz 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:74659"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MORANIA_PARADOXA_LINDSTR_M_1884",
+          "name": "Morania paradoxa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morania",
+          "authorship": "(Lindström 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:74776"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MORANIA_DECLIVIS_PERNER_1903",
+          "name": "Morania declivis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morania",
+          "authorship": "(Perner 1903)",
+          "sourceIds": {
+            "checklistbank": "txn:96396"
+          },
+          "children": []
         }
       ]
     },
@@ -4335,7 +5264,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "63f88cc7-b41a-52c-963-0d0abd3b2b2745"
+          "uuid": "63f88cc7-b41a-52c-963-0d0abd3b2b2745",
+          "authorship": "Spitz 1907",
+          "sourceIds": {
+            "checklistbank": "txn:74704"
+          }
         },
         {
           "id": "SP_MURCHISONIA_KAYSERI",
@@ -4511,6 +5444,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "40534560-cdb3-5d0-867-64160b41cc407a"
+        },
+        {
+          "id": "SP_KASEIELLA_LAUDABILIS_PERNER_1907",
+          "name": "Kaseiella laudabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kaseiella",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:73469"
+          },
+          "children": []
         }
       ]
     },
@@ -4574,7 +5520,8 @@
           "sourceIds": {
             "col": [
               "CJMJL"
-            ]
+            ],
+            "checklistbank": "txn:485455"
           },
           "authorityIds": "col:CJMJL"
         },
@@ -4594,6 +5541,19 @@
             ]
           },
           "authorityIds": "col:CJPK5"
+        },
+        {
+          "id": "SP_PREDAZZELLA_AVISII_B_HM_1895",
+          "name": "Predazzella avisii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Predazzella",
+          "authorship": "(Böhm 1895)",
+          "sourceIds": {
+            "checklistbank": "txn:254505"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -4703,125 +5663,33 @@
       "lineage": "murchisoniidae"
     },
     {
-      "id": "GENUS_ACLISINA",
-      "name": "\"Aclisina",
+      "id": "GENUS_LEPTORIMA",
+      "name": "Leptorima",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ACLISINA_STRIATULA_DE_KONINCK_1843",
-          "name": "\"Aclisina striatula\"",
+          "id": "SP_LEPTORIMA_OEHLERTI_PERNER_1903",
+          "name": "Leptorima oehlerti",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Aclisina",
-          "authorship": "\"(de Koninck, 1843)\"",
+          "lineage": "Leptorima",
+          "authorship": "(Perner 1903)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1023116"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "murchisoniidae"
-    },
-    {
-      "id": "GENUS_BELLAZONA",
-      "name": "\"Bellazona",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BELLAZONA_BELLA_WALCOTT_1884",
-          "name": "\"Bellazona bella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bellazona",
-          "authorship": "\"(Walcott, 1884)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1350036"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "murchisoniidae"
-    },
-    {
-      "id": "GENUS_GLYPHODETA",
-      "name": "\"Glyphodeta",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GLYPHODETA_ZONATA_J_DONALD_1887",
-          "name": "\"Glyphodeta zonata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Glyphodeta",
-          "authorship": "\"(J. Donald, 1887)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1477907"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "murchisoniidae"
-    },
-    {
-      "id": "GENUS_MURCHISONIA",
-      "name": "\"Murchisonia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MURCHISONIA_JACKJELLI_A_G_COOK_1997",
-          "name": "\"Murchisonia jackjelli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Murchisonia",
-          "authorship": "\"A. G. Cook, 1997\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1893593"
+            "checklistbank": "txn:63355"
           },
           "children": []
         },
         {
-          "id": "SP_MURCHISONIA_ANDERDONIAE_LINSLEY_1968",
-          "name": "\"Murchisonia anderdoniae\"",
+          "id": "SP_LEPTORIMA_TOWNSENDII_WHITEAVES_1895",
+          "name": "Leptorima townsendii",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Murchisonia",
-          "authorship": "\"Linsley, 1968\"",
+          "lineage": "Leptorima",
+          "authorship": "(Whiteaves 1895)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1893649"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MURCHISONIA_TURRIS_DE_KONINCK_1876",
-          "name": "\"Murchisonia turris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Murchisonia",
-          "authorship": "\"de Koninck, 1876\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1894702"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MURCHISONIA_TRICINCTA_M_NSTER_1840",
-          "name": "\"Murchisonia tricincta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Murchisonia",
-          "authorship": "\"(Münster, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1896635"
+            "checklistbank": "txn:75659"
           },
           "children": []
         }
@@ -4830,20 +5698,20 @@
       "lineage": "murchisoniidae"
     },
     {
-      "id": "GENUS_WUXUANELLA",
-      "name": "\"Wuxuanella",
+      "id": "GENUS_FAREWELLIA",
+      "name": "Farewellia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_WUXUANELLA_SPINOSA_J_DE_C_SOWERBY_1827",
-          "name": "\"Wuxuanella spinosa\"",
+          "id": "SP_FAREWELLIA_HEIDELBERGERAE_FR_DA_AND_BLODGETT_2004",
+          "name": "Farewellia heidelbergerae",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Wuxuanella",
-          "authorship": "\"(J. De C. Sowerby, 1827)\"",
+          "lineage": "Farewellia",
+          "authorship": "Frýda and Blodgett 2004",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1896650"
+            "checklistbank": "txn:65268"
           },
           "children": []
         }
@@ -4852,20 +5720,308 @@
       "lineage": "murchisoniidae"
     },
     {
-      "id": "GENUS_CRENULAZONA",
-      "name": "\"Crenulazona",
+      "id": "GENUS_BARROISOCAULUS",
+      "name": "Barroisocaulus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CRENULAZONA_ANGULATA_LINSLEY_1968",
-          "name": "\"Crenulazona angulata\"",
+          "id": "SP_BARROISOCAULUS_OLIVERI_GUBANOV_ET_AL_1995",
+          "name": "Barroisocaulus oliveri",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Crenulazona",
-          "authorship": "\"Linsley, 1968\"",
+          "lineage": "Barroisocaulus",
+          "authorship": "Gubanov et al. 1995",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1896661"
+            "checklistbank": "txn:72552"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARROISOCAULUS_DAVYI_BARROIS_1889",
+          "name": "Barroisocaulus davyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barroisocaulus",
+          "authorship": "(Barrois 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:74703"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARROISOCAULUS_KAYSERI_SPITZ_1907",
+          "name": "Barroisocaulus kayseri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barroisocaulus",
+          "authorship": "(Spitz 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:74744"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARROISOCAULUS_SEMIORNATA_SPITZ_1907",
+          "name": "Barroisocaulus semiornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barroisocaulus",
+          "authorship": "(Spitz 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:74794"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARROISOCAULUS_ASIATICA_GUBANOV_ET_AL_1995",
+          "name": "Barroisocaulus asiatica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barroisocaulus",
+          "authorship": "(Gubanov et al. 1995)",
+          "sourceIds": {
+            "checklistbank": "txn:73755"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murchisoniidae"
+    },
+    {
+      "id": "GENUS_BIANGULARIA",
+      "name": "Biangularia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BIANGULARIA_FRECHI_SPITZ_1907",
+          "name": "Biangularia frechi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Biangularia",
+          "authorship": "(Spitz 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:196641"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murchisoniidae"
+    },
+    {
+      "id": "GENUS_MICHELIA",
+      "name": "Michelia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICHELIA_TENUE_CLARKE_1907",
+          "name": "Michelia tenue",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "(Clarke 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:73039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICHELIA_WHITEAVESI_CLARKE_AND_RUEDEMANN_1903",
+          "name": "Michelia whiteavesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "(Clarke and Ruedemann 1903)",
+          "sourceIds": {
+            "checklistbank": "txn:74022"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICHELIA_COMPACTA_HALL_1859",
+          "name": "Michelia compacta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "(Hall 1859)",
+          "sourceIds": {
+            "checklistbank": "txn:74294"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICHELIA_DARWINI_DE_KONINCK_1876",
+          "name": "Michelia darwini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "(de Koninck 1876)",
+          "sourceIds": {
+            "checklistbank": "txn:74930"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICHELIA_TENERA_PERNER_1907",
+          "name": "Michelia tenera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "(Perner 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:76158"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICHELIA_PLANOGYRATA_HALL_1859",
+          "name": "Michelia planogyrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "(Hall 1859)",
+          "sourceIds": {
+            "checklistbank": "txn:175357"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICHELIA_CHAMPACA_LINNAEUS_1753",
+          "name": "Michelia champaca",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Michelia",
+          "authorship": "Linnaeus 1753",
+          "sourceIds": {
+            "checklistbank": "txn:495014"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murchisoniidae"
+    },
+    {
+      "id": "GENUS_GONIOSTROPHA",
+      "name": "Goniostropha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GONIOSTROPHA_BACHELIERI_ROUAULT_1851",
+          "name": "Goniostropha bachelieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goniostropha",
+          "authorship": "(Rouault 1851)",
+          "sourceIds": {
+            "checklistbank": "txn:94881"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GONIOSTROPHA_EXTENUATA_HALL_1859",
+          "name": "Goniostropha extenuata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goniostropha",
+          "authorship": "(Hall 1859)",
+          "sourceIds": {
+            "checklistbank": "txn:74717"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GONIOSTROPHA_CHAPMANI_WILLIAMS_AND_BREGER_1916",
+          "name": "Goniostropha chapmani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Goniostropha",
+          "authorship": "Williams and Breger 1916",
+          "sourceIds": {
+            "checklistbank": "txn:175380"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murchisoniidae"
+    },
+    {
+      "id": "GENUS_MICRENTOMA",
+      "name": "Micrentoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICRENTOMA_YUNNANENSIS_MANSUY_1919",
+          "name": "Micrentoma yunnanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micrentoma",
+          "authorship": "(Mansuy 1919)",
+          "sourceIds": {
+            "checklistbank": "txn:201658"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murchisoniidae"
+    },
+    {
+      "id": "GENUS_CHEILOTOMA",
+      "name": "Cheilotoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHEILOTOMA_BLUMI_WISSMANN_1841",
+          "name": "Cheilotoma blumi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheilotoma",
+          "authorship": "(Wissmann 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:269446"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "murchisoniidae"
+    },
+    {
+      "id": "GENUS_HELICOSPIRA",
+      "name": "Helicospira",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HELICOSPIRA_BUTTERSI_GIRTY_1912",
+          "name": "Helicospira buttersi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Helicospira",
+          "authorship": "(Girty 1912)",
+          "sourceIds": {
+            "checklistbank": "txn:483116"
           },
           "children": []
         }
@@ -4874,8 +6030,8 @@
       "lineage": "murchisoniidae"
     }
   ],
-  "genusCount": 44,
-  "speciesCount": 315,
+  "genusCount": 47,
+  "speciesCount": 392,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4883,6 +6039,7 @@
       "classKey": 225,
       "orderKey": 9684115,
       "familyKey": 3243821
-    }
+    },
+    "checklistbank": "txn:57203"
   }
 }

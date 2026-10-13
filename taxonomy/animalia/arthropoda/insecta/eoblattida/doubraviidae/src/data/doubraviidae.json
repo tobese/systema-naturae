@@ -22,7 +22,8 @@
               "V9SGD"
             ]
           },
-          "authorityIds": "col:V9SGD"
+          "authorityIds": "col:V9SGD",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -47,18 +48,41 @@
               "V9VH3"
             ]
           },
-          "authorityIds": "col:V9VH3"
+          "authorityIds": "col:V9VH3",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Doubraviidae"
+    },
+    {
+      "id": "GENUS_DOUBRAVIA",
+      "name": "Doubravia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DOUBRAVIA_ANNOSA_KUKALOV_1964",
+          "name": "Doubravia annosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Doubravia",
+          "authorship": "Kukalová 1964",
+          "sourceIds": {
+            "checklistbank": "txn:195495"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "doubraviidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 3,
   "appSlug": "doubraviidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -66,6 +90,7 @@
       "classKey": 216,
       "orderKey": 9810633,
       "familyKey": 8576059
-    }
+    },
+    "checklistbank": "txn:333305"
   }
 }

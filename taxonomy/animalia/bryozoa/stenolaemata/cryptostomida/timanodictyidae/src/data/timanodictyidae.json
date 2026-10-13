@@ -30,6 +30,19 @@
           },
           "authorityIds": "col:86984",
           "children": []
+        },
+        {
+          "id": "SP_SAKAGAMIINA_EASTERNENSIS_GILMOUR_AND_SNYDER_2000",
+          "name": "Sakagamiina easternensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sakagamiina",
+          "authorship": "Gilmour and Snyder 2000",
+          "sourceIds": {
+            "checklistbank": "txn:85845"
+          },
+          "children": []
         }
       ]
     },
@@ -72,9 +85,11 @@
             "col": [
               "869M6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414143"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1414143"
+            ]
           },
-          "authorityIds": "col:869M6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1414143,col:869M6",
           "authorship": "(Stuckenberg, 1895)",
           "children": []
         },
@@ -222,9 +237,11 @@
             "col": [
               "869MD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414144"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1414144"
+            ]
           },
-          "authorityIds": "col:869MD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1414144,col:869MD",
           "authorship": "(Nekhoroshev, 1935)",
           "children": []
         },
@@ -386,6 +403,19 @@
           },
           "authorityIds": "col:869MJ",
           "children": []
+        },
+        {
+          "id": "SP_TIMANOTRYPA_STELLIPORATA_KRUCHININA_1973",
+          "name": "Timanotrypa stelliporata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Timanotrypa",
+          "authorship": "Kruchinina 1973",
+          "sourceIds": {
+            "checklistbank": "txn:192576"
+          },
+          "children": []
         }
       ]
     },
@@ -419,33 +449,33 @@
       ]
     },
     {
-      "id": "GENUS_TIMANODICTYA",
-      "name": "\"Timanodictya",
+      "id": "GENUS_TAVAYZOPORA",
+      "name": "Tavayzopora",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TIMANODICTYA_DICHOTOMA_STUCKENBERG_1895",
-          "name": "\"Timanodictya dichotoma\"",
+          "id": "SP_TAVAYZOPORA_MULTIFORMIS_ROMANTCHUK_1976",
+          "name": "Tavayzopora multiformis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Timanodictya",
-          "authorship": "\"(Stuckenberg, 1895)\"",
+          "lineage": "Tavayzopora",
+          "authorship": "Romantchuk 1976",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414143"
+            "checklistbank": "txn:140206"
           },
           "children": []
         },
         {
-          "id": "SP_TIMANODICTYA_OBRUTSCHEWI_NEKHOROSHEV_1935",
-          "name": "\"Timanodictya obrutschewi\"",
+          "id": "SP_TAVAYZOPORA_VERAE_KISELEVA_1979",
+          "name": "Tavayzopora verae",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Timanodictya",
-          "authorship": "\"(Nekhoroshev, 1935)\"",
+          "lineage": "Tavayzopora",
+          "authorship": "Kiseleva 1979",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1414144"
+            "checklistbank": "txn:187061"
           },
           "children": []
         }
@@ -455,7 +485,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 22,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -463,6 +493,7 @@
       "classKey": 226,
       "orderKey": 1485,
       "familyKey": 4856369
-    }
+    },
+    "checklistbank": "txn:85842"
   }
 }

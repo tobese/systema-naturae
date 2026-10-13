@@ -44,9 +44,11 @@
             "col": [
               "BMP4D"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477653"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:477653"
+            ]
           },
-          "authorityIds": "col:BMP4D,itis:552885",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:477653,col:BMP4D,itis:552885",
           "children": []
         },
         {
@@ -214,6 +216,19 @@
           },
           "children": [],
           "uuid": "bc90b072-aa87-547-b5a-249525f69fc7b8"
+        },
+        {
+          "id": "SP_CALLIANOPSIS_GONIOPTHALMA_RATHBUN_1902",
+          "name": "Callianopsis goniopthalma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callianopsis",
+          "authorship": "(Rathbun 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:388897"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -341,35 +356,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "callianopsidae"
-    },
-    {
-      "id": "GENUS_CALLIANOPSIS",
-      "name": "\"Callianopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CALLIANOPSIS_GONIOPHTHALMA_RATHBUN_1902",
-          "name": "\"Callianopsis goniophthalma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Callianopsis",
-          "authorship": "\"(Rathbun, 1902)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477653"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "callianopsidae"
     }
   ],
   "speciesCount": 20,
   "appSlug": "callianopsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 5,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -378,6 +371,6 @@
       "orderKey": 637,
       "familyKey": 9616187
     },
-    "checklistbank": "2734714"
+    "checklistbank": "txn:488473"
   }
 }

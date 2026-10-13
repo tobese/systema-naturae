@@ -171,9 +171,11 @@
             "col": [
               "KZDBY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1812825"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1812825"
+            ]
           },
-          "authorityIds": "col:KZDBY,itis:56502",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1812825,col:KZDBY,itis:56502",
           "authorship": "Christian, 1971"
         },
         {
@@ -795,9 +797,11 @@
             "col": [
               "CG9SC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1755854"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1755854"
+            ]
           },
-          "authorityIds": "col:CG9SC,itis:56622",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1755854,col:CG9SC,itis:56622",
           "authorship": "(Looss, 1898) Travassos, 1921"
         },
         {
@@ -2275,9 +2279,11 @@
             "col": [
               "847S9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1460572"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1460572"
+            ]
           },
-          "authorityIds": "col:847S9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1460572,col:847S9",
           "authorship": "(Bychovskaja-Pavlovskaja, 1950) Khotenovsky, 1961"
         },
         {
@@ -2295,9 +2301,11 @@
             "col": [
               "KV56C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1808654"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1808654"
+            ]
           },
-          "authorityIds": "col:KV56C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1808654,col:KV56C",
           "authorship": "(Bychowskaja·Pawlowskaja, 1953) Khotenovsky, 1961"
         },
         {
@@ -3653,58 +3661,10 @@
       "lineage": "pleurogenidae"
     },
     {
-      "id": "GENUS_CORTREMA",
-      "name": "\"Cortrema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CORTREMA_MAGNICAUDATUM_BYCHOVSKAJA_PAVLOVSKAJA_1950_KHOTENOVSKY_1961",
-          "name": "\"Cortrema magnicaudatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cortrema",
-          "authorship": "\"(Bychovskaja-Pavlovskaja, 1950) Khotenovsky, 1961\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1460572"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CORTREMA_TESTILOBATUM_BYCHOWSKAJA_PAWLOWSKAJA_1953_KHOTENOVSKY_1961",
-          "name": "\"Cortrema testilobatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cortrema",
-          "authorship": "\"(Bychowskaja·Pawlowskaja, 1953) Khotenovsky, 1961\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1808654"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurogenidae"
-    },
-    {
       "id": "GENUS_PLEUROGENOIDES",
       "name": "\"Pleurogenoides",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PLEUROGENOIDES_TENER_LOOSS_1898_TRAVASSOS_1921",
-          "name": "\"Pleurogenoides tener\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleurogenoides",
-          "authorship": "\"(Looss, 1898) Travassos, 1921\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1755854"
-          },
-          "children": []
-        },
         {
           "id": "SP_PLEUROGENOIDES_MEDIANS_MEHRA_NEGI_1926",
           "name": "\"Pleurogenoides medians",
@@ -3756,32 +3716,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pleurogenidae"
-    },
-    {
-      "id": "GENUS_PSEUDOSONSINOTREMA",
-      "name": "\"Pseudosonsinotrema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOSONSINOTREMA_CATESBEIANAE_CHRISTIAN_1971",
-          "name": "\"Pseudosonsinotrema catesbeianae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudosonsinotrema",
-          "authorship": "\"Christian, 1971\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1812825"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleurogenidae"
     }
   ],
-  "genusCount": 40,
-  "speciesCount": 212,
+  "genusCount": 38,
+  "speciesCount": 208,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

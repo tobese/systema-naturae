@@ -877,7 +877,8 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 3193744
+            "gbif": 3193744,
+            "checklistbank": "339155"
           },
           "children": [],
           "uuid": "443f8bc0-ba93-5b1-904-d1517a66901a62",
@@ -1225,11 +1226,13 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8423546,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:619290"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:619290"
+            ]
           },
           "children": [],
           "uuid": "34dcd568-59b5-5f5-8a1-3ea790a6c0385d",
-          "authorityIds": "gbif:8423546",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:619290,gbif:8423546",
           "authorship": "Grunow, 1883"
         },
         {
@@ -1295,11 +1298,13 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8021735,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:620283"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:620283"
+            ]
           },
           "children": [],
           "uuid": "5f5e662f-daf6-5ae-ac6-033e29847f55c9",
-          "authorityIds": "gbif:8021735",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:620283,gbif:8021735",
           "authorship": "Forti"
         },
         {
@@ -1447,7 +1452,8 @@
             ],
             "itis": [
               "573639"
-            ]
+            ],
+            "checklistbank": "394331"
           },
           "children": [],
           "uuid": "18b40327-b062-55c-a5a-7a162aea2487c7",
@@ -1907,45 +1913,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lithodesmiaceae"
-    },
-    {
-      "id": "GENUS_LITHODESMIUM",
-      "name": "\"Lithodesmium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LITHODESMIUM_CALIFORNICUM_GRUNOW_1883",
-          "name": "\"Lithodesmium californicum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lithodesmium",
-          "authorship": "\"Grunow, 1883\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:619290"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LITHODESMIUM_EHRENBERGII_FORTI",
-          "name": "\"Lithodesmium ehrenbergii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lithodesmium",
-          "authorship": "Forti",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:620283"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lithodesmiaceae"
     }
   ],
-  "speciesCount": 106,
-  "genusCount": 16,
+  "speciesCount": 104,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

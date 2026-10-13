@@ -22,7 +22,8 @@
               "RWM3"
             ]
           },
-          "authorityIds": "col:RWM3"
+          "authorityIds": "col:RWM3",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -47,7 +48,8 @@
               "5X4D2"
             ]
           },
-          "authorityIds": "col:5X4D2"
+          "authorityIds": "col:5X4D2",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -70,9 +72,11 @@
           "sourceIds": {
             "col": [
               "53FTK"
-            ]
+            ],
+            "checklistbank": "txn:287990"
           },
-          "authorityIds": "col:53FTK"
+          "authorityIds": "col:53FTK",
+          "children": []
         },
         {
           "id": "SP_SULUDELLA_DAVNII_PALMER_GATEHOUSE_1972",
@@ -86,20 +90,88 @@
           "sourceIds": {
             "col": [
               "53FTJ"
-            ]
+            ],
+            "checklistbank": "txn:287988"
           },
-          "authorityIds": "col:53FTJ"
+          "authorityIds": "col:53FTJ",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Conokephalinidae"
+    },
+    {
+      "id": "GENUS_MASPAKITES",
+      "name": "Maspakites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MASPAKITES_OCCIDENTALIS_LAZARENKO_AND_NIKIFOROV_1968",
+          "name": "Maspakites occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Maspakites",
+          "authorship": "Lazarenko and Nikiforov 1968",
+          "sourceIds": {
+            "checklistbank": "txn:380614"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conokephalinidae"
+    },
+    {
+      "id": "GENUS_LOBOCEPHALINA",
+      "name": "Lobocephalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOBOCEPHALINA_EMMRICHI_BARRANDE_1846",
+          "name": "Lobocephalina emmrichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lobocephalina",
+          "authorship": "(Barrande 1846)",
+          "sourceIds": {
+            "checklistbank": "txn:506361"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conokephalinidae"
+    },
+    {
+      "id": "GENUS_CONOKEPHALINA",
+      "name": "Conokephalina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CONOKEPHALINA_ORNATA_BR_GGER_1878",
+          "name": "Conokephalina ornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Conokephalina",
+          "authorship": "(Brøgger 1878)",
+          "sourceIds": {
+            "checklistbank": "txn:507003"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conokephalinidae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 7,
   "appSlug": "conokephalinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Trilobita",
-  "genusCount": 3,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -107,6 +179,7 @@
       "classKey": 9273948,
       "orderKey": 9583276,
       "familyKey": 4634492
-    }
+    },
+    "checklistbank": "txn:155145"
   }
 }

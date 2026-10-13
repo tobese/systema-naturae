@@ -105,7 +105,8 @@
           "sourceIds": {
             "col": [
               "9X6L7"
-            ]
+            ],
+            "checklistbank": "txn:489026"
           },
           "authorityIds": "col:9X6L7",
           "children": []
@@ -139,7 +140,8 @@
           "sourceIds": {
             "col": [
               "B5FQ5"
-            ]
+            ],
+            "checklistbank": "txn:220838"
           },
           "authorityIds": "col:B5FQ5",
           "children": []
@@ -258,7 +260,8 @@
           "sourceIds": {
             "col": [
               "B5FQ2"
-            ]
+            ],
+            "checklistbank": "txn:220834"
           },
           "authorityIds": "col:B5FQ2",
           "children": []
@@ -275,7 +278,8 @@
           "sourceIds": {
             "col": [
               "9WX6T"
-            ]
+            ],
+            "checklistbank": "txn:220835"
           },
           "authorityIds": "col:9WX6T",
           "children": []
@@ -310,9 +314,11 @@
             "col": [
               "9ZPVW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1632446"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1632446"
+            ]
           },
-          "authorityIds": "col:9ZPVW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1632446,col:9ZPVW",
           "children": []
         },
         {
@@ -359,6 +365,32 @@
           },
           "children": [],
           "uuid": "64d45e4a-6502-57a-bdd-10e592719230a6"
+        },
+        {
+          "id": "SP_TANIDROMITES_LINGULATA_VON_MEYER_1858",
+          "name": "Tanidromites lingulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tanidromites",
+          "authorship": "von Meyer 1858",
+          "sourceIds": {
+            "checklistbank": "txn:147729"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TANIDROMITES_PUSTULOSA_VON_MEYER_1860",
+          "name": "Tanidromites pustulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tanidromites",
+          "authorship": "(Von Meyer 1860)",
+          "sourceIds": {
+            "checklistbank": "txn:402088"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -381,7 +413,8 @@
           "sourceIds": {
             "col": [
               "9ZNXP"
-            ]
+            ],
+            "checklistbank": "txn:147699"
           },
           "authorityIds": "col:9ZNXP",
           "children": []
@@ -398,7 +431,8 @@
           "sourceIds": {
             "col": [
               "9ZNXQ"
-            ]
+            ],
+            "checklistbank": "txn:147702"
           },
           "authorityIds": "col:9ZNXQ",
           "children": []
@@ -449,7 +483,8 @@
           "sourceIds": {
             "col": [
               "9ZNXN"
-            ]
+            ],
+            "checklistbank": "txn:147701"
           },
           "authorityIds": "col:9ZNXN",
           "children": []
@@ -457,35 +492,13 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Tanidromitidae"
-    },
-    {
-      "id": "GENUS_TANIDROMITES",
-      "name": "\"Tanidromites",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TANIDROMITES_ETTALONI_COLLINS_I_IN_I_COLLINS_WIERZBOWSKI_1985",
-          "name": "\"Tanidromites ettaloni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tanidromites",
-          "authorship": "\"(Collins <i>in</i> Collins & Wierzbowski, 1985)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1632446"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tanidromitidae"
     }
   ],
-  "speciesCount": 27,
+  "speciesCount": 28,
   "appSlug": "tanidromitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 3,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -493,6 +506,7 @@
       "classKey": 229,
       "orderKey": 637,
       "familyKey": 3254171
-    }
+    },
+    "checklistbank": "txn:147692"
   }
 }

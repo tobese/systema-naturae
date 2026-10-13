@@ -22,9 +22,11 @@
             "col": [
               "7BX6W"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386091"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:386091"
+            ]
           },
-          "authorityIds": "col:7BX6W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386091,col:7BX6W",
           "authorship": "H. Saito & Okutani, 1990"
         },
         {
@@ -136,9 +138,11 @@
             "col": [
               "6MY54"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:387136"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:387136"
+            ]
           },
-          "authorityIds": "col:6MY54,itis:567730"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:387136,col:6MY54,itis:567730"
         },
         {
           "id": "SP_ISCHNOCHITON_ABYSSICOLA_NULL",
@@ -227,9 +231,11 @@
             "col": [
               "6MXSX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:387096"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:387096"
+            ]
           },
-          "authorityIds": "col:6MXSX,itis:78857"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:387096,col:6MXSX,itis:78857"
         },
         {
           "id": "SP_ISCHNOCHITON_RUBER_NULL",
@@ -376,7 +382,8 @@
           "sourceIds": {
             "itis": [
               "78869"
-            ]
+            ],
+            "checklistbank": "txn:293959"
           },
           "authorityIds": "itis:78869"
         },
@@ -457,9 +464,11 @@
             "col": [
               "3Q4P6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848146"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:848146"
+            ]
           },
-          "authorityIds": "col:3Q4P6,itis:78875"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848146,col:3Q4P6,itis:78875"
         },
         {
           "id": "SP_ISCHNOCHITON_PSEUDOVIRGATUS_KAAS_1972",
@@ -2372,32 +2381,6 @@
           "children": []
         },
         {
-          "id": "SP_ISCHNOCHITON_VITREOLUS_KAAS_1985",
-          "name": "Ischnochiton vitreolus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ischnochiton",
-          "authorship": "Kaas, 1985",
-          "sourceIds": {
-            "checklistbank": "719926"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ISCHNOCHITON_JOHNSTONI_COTTON_1937",
-          "name": "Ischnochiton johnstoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ischnochiton",
-          "authorship": "Cotton, 1937",
-          "sourceIds": {
-            "checklistbank": "815815"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ISCHNOCHITON_BOOGII_HADDON_1886",
           "name": "Ischnochiton boogii",
           "rank": "SPECIES",
@@ -2760,6 +2743,58 @@
             "checklistbank": "2969778"
           },
           "children": []
+        },
+        {
+          "id": "SP_ISCHNOCHITON_PECTINULATUS_CARPENTER_1893",
+          "name": "Ischnochiton pectinulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ischnochiton",
+          "authorship": "(Carpenter 1893)",
+          "sourceIds": {
+            "checklistbank": "txn:293972"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ISCHNOCHITON_MARTINELLI_ANGELO_ET_AL_2004",
+          "name": "Ischnochiton martinelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ischnochiton",
+          "authorship": "Angelo et al. 2004",
+          "sourceIds": {
+            "checklistbank": "txn:333634"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ISCHNOCHITON_GOEDERTI_DELL_ANGELO_ET_AL_2011",
+          "name": "Ischnochiton goederti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ischnochiton",
+          "authorship": "Dell'Angelo et al. 2011",
+          "sourceIds": {
+            "checklistbank": "txn:345090"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ISCHNOCHITON_CONSPICUA_CARPENTER_1879",
+          "name": "Ischnochiton conspicua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ischnochiton",
+          "authorship": "(Carpenter 1879)",
+          "sourceIds": {
+            "checklistbank": "txn:401178"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3074,6 +3109,45 @@
           },
           "children": [],
           "uuid": "8de1057f-b411-5a5-af5-0d62bb6558300a"
+        },
+        {
+          "id": "SP_LEPIDOCHITONA_SZOETSI_DELL_ANGELO_ET_AL_2014",
+          "name": "Lepidochitona szoetsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidochitona",
+          "authorship": "Dell'Angelo et al. 2014",
+          "sourceIds": {
+            "checklistbank": "txn:327403"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPIDOCHITONA_GANTENSIS_DELL_ANGELO_ET_AL_2014",
+          "name": "Lepidochitona gantensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidochitona",
+          "authorship": "Dell'Angelo et al. 2014",
+          "sourceIds": {
+            "checklistbank": "txn:327404"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPIDOCHITONA_VICIANI_DELL_ANGELO_ET_AL_2014",
+          "name": "Lepidochitona viciani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidochitona",
+          "authorship": "Dell'Angelo et al. 2014",
+          "sourceIds": {
+            "checklistbank": "txn:327405"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3355,9 +3429,11 @@
             "itis": [
               "78914"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386053"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:386053"
+            ]
           },
-          "authorityIds": "col:6PBNX,itis:78914"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386053,col:6PBNX,itis:78914"
         },
         {
           "id": "SP_LEPIDOZONA_PECTINULATA_CARPENTER_1893",
@@ -3414,9 +3490,11 @@
             "col": [
               "6PBNV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386055"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:386055"
+            ]
           },
-          "authorityIds": "col:6PBNV,itis:78918"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386055,col:6PBNV,itis:78918"
         },
         {
           "id": "SP_LEPIDOZONA_SERRATA_CARPENTER_1864",
@@ -3435,9 +3513,11 @@
             "col": [
               "6PBNT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386057"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:386057"
+            ]
           },
-          "authorityIds": "col:6PBNT,itis:78919"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386057,col:6PBNT,itis:78919"
         },
         {
           "id": "SP_LEPIDOZONA_RADIANS_CARPENTER_IN_PILSBRY_1892",
@@ -3986,6 +4066,32 @@
             "checklistbank": "2969780"
           },
           "children": []
+        },
+        {
+          "id": "SP_LEPIDOZONA_COWLITZENSIS_DELL_ANGELO_ET_AL_2011",
+          "name": "Lepidozona cowlitzensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidozona",
+          "authorship": "Dell'Angelo et al. 2011",
+          "sourceIds": {
+            "checklistbank": "txn:345092"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPIDOZONA_SANCTAEMONICAE_BERRY_1922",
+          "name": "Lepidozona sanctaemonicae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lepidozona",
+          "authorship": "(Berry 1922)",
+          "sourceIds": {
+            "checklistbank": "txn:293968"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3996,27 +4102,6 @@
       "name": "Stenoplax",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_STENOPLAX_BAHAMENSIS_KAAS_AND_VAN_BELLE_1987",
-          "name": "Stenoplax bahamensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stenoplax",
-          "authorship": "Kaas and Van Belle, 1987",
-          "children": [],
-          "uuid": "2ec40271-d92f-5ba-809-3d97d1773f593b",
-          "sourceIds": {
-            "itis": [
-              "568322"
-            ],
-            "col": [
-              "523N9"
-            ],
-            "checklistbank": "207456"
-          },
-          "authorityIds": "col:523N9,itis:568322"
-        },
         {
           "id": "SP_STENOPLAX_PURPURASCENS_C_B_ADAMS_1845",
           "name": "Stenoplax purpurascens",
@@ -4055,9 +4140,11 @@
             "col": [
               "6ZN6B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848094"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:848094"
+            ]
           },
-          "authorityIds": "col:6ZN6B,itis:78921"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848094,col:6ZN6B,itis:78921"
         },
         {
           "id": "SP_STENOPLAX_LIMACIFORMIS_NULL",
@@ -4076,9 +4163,11 @@
             "col": [
               "523NL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848059"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:848059"
+            ]
           },
-          "authorityIds": "col:523NL,itis:78922"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848059,col:523NL,itis:78922"
         },
         {
           "id": "SP_STENOPLAX_RUGULATA_NULL",
@@ -4097,30 +4186,11 @@
             "col": [
               "523NW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848078"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:848078"
+            ]
           },
-          "authorityIds": "col:523NW,itis:78923"
-        },
-        {
-          "id": "SP_STENOPLAX_BOOGII_HADDON_1886",
-          "name": "Stenoplax boogii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Stenoplax",
-          "authorship": "(Haddon, 1886)",
-          "children": [],
-          "uuid": "8f4b4560-14e4-5f6-884-8d335e313b8cd8",
-          "sourceIds": {
-            "itis": [
-              "78924"
-            ],
-            "col": [
-              "6ZN6C"
-            ],
-            "checklistbank": "255555"
-          },
-          "authorityIds": "col:6ZN6C,itis:78924"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848078,col:523NW,itis:78923"
         },
         {
           "id": "SP_STENOPLAX_ERYTHRONOTA_NULL",
@@ -4220,9 +4290,11 @@
             "itis": [
               "78929"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848102"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:848102"
+            ]
           },
-          "authorityIds": "col:523ND,itis:78929"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:848102,col:523ND,itis:78929"
         },
         {
           "id": "SP_STENOPLAX_IANSA_JARDIM_DUMAS_2021",
@@ -4705,7 +4777,8 @@
           "sourceIds": {
             "checklistbank": "ott2867199"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Van Belle and Angelo 1998)"
         },
         {
           "id": "SP_STENOSEMUS_ROBUSTUS",
@@ -5475,20 +5548,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BOREOCHITON_RUBER_LINNAEUS_1767",
-          "name": "Boreochiton ruber",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Boreochiton",
-          "authorship": "(Linnaeus, 1767)",
-          "sourceIds": {
-            "checklistbank": "51454"
-          },
-          "children": [],
-          "uuid": "c8ce6c10-f76a-5ca-a74-74be3cd305c61f"
-        },
-        {
           "id": "SP_BOREOCHITON_GRANULATUS_JAKOVLEVA_1952",
           "name": "Boreochiton granulatus",
           "rank": "SPECIES",
@@ -6095,19 +6154,6 @@
             "checklistbank": "696488"
           },
           "children": []
-        },
-        {
-          "id": "SP_CHITON_VERSICOLOR_G_B_SOWERBY_II_1840",
-          "name": "Chiton versicolor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chiton",
-          "authorship": "G.B. Sowerby II, 1840",
-          "sourceIds": {
-            "checklistbank": "1047310"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6301,45 +6347,6 @@
           "children": []
         },
         {
-          "id": "SP_LEPIDOZONA_RETIPOROSA_P_P_CARPENTER_1864",
-          "name": "\"Lepidozona retiporosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lepidozona",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386053"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEPIDOZONA_SCABRICOSTATA_P_P_CARPENTER_1864",
-          "name": "\"Lepidozona scabricostata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lepidozona",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386055"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEPIDOZONA_SERRATA_P_P_CARPENTER_1864",
-          "name": "\"Lepidozona serrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lepidozona",
-          "authorship": "\"(P. P. Carpenter, 1864)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386057"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LEPIDOZONA_SUBTILIS_S_S_BERRY_1956",
           "name": "\"Lepidozona subtilis\"",
           "rank": "SPECIES",
@@ -6349,28 +6356,6 @@
           "authorship": "\"S. S. Berry, 1956\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:386062"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ischnochitonidae"
-    },
-    {
-      "id": "GENUS_THERMOCHITON",
-      "name": "\"Thermochiton",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_THERMOCHITON_UNDOCOSTATUS_H_SAITO_OKUTANI_1990",
-          "name": "\"Thermochiton undocostatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thermochiton",
-          "authorship": "\"H. Saito & Okutani, 1990\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386091"
           },
           "children": []
         }
@@ -6431,32 +6416,6 @@
       "name": "\"Ischnochiton",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_ISCHNOCHITON_ALASCENSIS_THIELE_1909",
-          "name": "\"Ischnochiton alascensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ischnochiton",
-          "authorship": "\"Thiele, 1909\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:387096"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ISCHNOCHITON_NIVEUS_A_J_FERREIRA_1987",
-          "name": "\"Ischnochiton niveus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ischnochiton",
-          "authorship": "\"A. J. Ferreira, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:387136"
-          },
-          "children": []
-        },
         {
           "id": "SP_ISCHNOCHITON_ELONGATUS_REEVE_1847",
           "name": "\"Ischnochiton elongatus",
@@ -6521,19 +6480,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:848139"
           },
           "children": []
-        },
-        {
-          "id": "SP_ISCHNOCHITON_NEWCOMBI_P_P_CARPENTER_1892",
-          "name": "\"Ischnochiton newcombi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ischnochiton",
-          "authorship": "\"P. P. Carpenter, 1892\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848146"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6545,45 +6491,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_STENOPLAX_LIMACIFORMIS_G_B_SOWERBY_I_1832",
-          "name": "\"Stenoplax limaciformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenoplax",
-          "authorship": "\"(G. B. Sowerby I, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848059"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STENOPLAX_RUGULATA_G_B_SOWERBY_I_1832",
-          "name": "\"Stenoplax rugulata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenoplax",
-          "authorship": "\"(G. B. Sowerby I, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848078"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STENOPLAX_FALLAX_P_P_CARPENTER_1892",
-          "name": "\"Stenoplax fallax\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenoplax",
-          "authorship": "\"(P. P. Carpenter, 1892)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848094"
-          },
-          "children": []
-        },
-        {
           "id": "SP_STENOPLAX_CONSPICUA_DALL_1879",
           "name": "\"Stenoplax conspicua\"",
           "rank": "SPECIES",
@@ -6593,19 +6500,6 @@
           "authorship": "\"(Dall, 1879)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:848098"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STENOPLAX_CORRUGATA_P_P_CARPENTER_1892",
-          "name": "\"Stenoplax corrugata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenoplax",
-          "authorship": "\"(P. P. Carpenter, 1892)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:848102"
           },
           "children": []
         },
@@ -6638,10 +6532,106 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ischnochitonidae"
+    },
+    {
+      "id": "GENUS_HETEROCHITON",
+      "name": "Heterochiton",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HETEROCHITON_COMPRESSUS_SCALIA_1903",
+          "name": "Heterochiton compressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterochiton",
+          "authorship": "(Scalia 1903)",
+          "sourceIds": {
+            "checklistbank": "txn:153859"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HETEROCHITON_GIGANTEUS_SCALIA_1903",
+          "name": "Heterochiton giganteus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterochiton",
+          "authorship": "(Scalia 1903)",
+          "sourceIds": {
+            "checklistbank": "txn:153872"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HETEROCHITON_ZITTELI_SCALIA_1903",
+          "name": "Heterochiton zitteli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heterochiton",
+          "authorship": "(Scalia 1903)",
+          "sourceIds": {
+            "checklistbank": "txn:153874"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ischnochitonidae"
+    },
+    {
+      "id": "GENUS_CYANOPLAX",
+      "name": "Cyanoplax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYANOPLAX_HARTWEGII_CARPENTER_1855",
+          "name": "Cyanoplax hartwegii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanoplax",
+          "authorship": "(Carpenter 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:401147"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYANOPLAX_DENTIENS_GOULD_1846",
+          "name": "Cyanoplax dentiens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanoplax",
+          "authorship": "(Gould 1846)",
+          "sourceIds": {
+            "checklistbank": "txn:401150"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYANOPLAX_KEEPIANA_BERRY_1948",
+          "name": "Cyanoplax keepiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyanoplax",
+          "authorship": "(Berry 1948)",
+          "sourceIds": {
+            "checklistbank": "txn:293971"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ischnochitonidae"
     }
   ],
-  "genusCount": 32,
-  "speciesCount": 443,
+  "genusCount": 33,
+  "speciesCount": 441,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

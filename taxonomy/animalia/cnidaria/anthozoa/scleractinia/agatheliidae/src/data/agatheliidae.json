@@ -21,7 +21,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "1bddb6ba-6f6e-5c3-a23-313308d8274ede"
+          "uuid": "1bddb6ba-6f6e-5c3-a23-313308d8274ede",
+          "authorship": "(Duncan 1865)",
+          "sourceIds": {
+            "checklistbank": "txn:143439"
+          }
         }
       ]
     },
@@ -126,9 +130,11 @@
             "col": [
               "LBNBM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1840895"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1840895"
+            ]
           },
-          "authorityIds": "col:LBNBM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1840895,col:LBNBM",
           "authorship": "(de Fromentel, 1870)"
         },
         {
@@ -141,7 +147,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e3942551-93df-5d0-bab-7b5197501baeab"
+          "uuid": "e3942551-93df-5d0-bab-7b5197501baeab",
+          "authorship": "(Dietrich 1926)",
+          "sourceIds": {
+            "checklistbank": "txn:137662"
+          }
         },
         {
           "id": "SP_PLACOPHORA_NEOCOMIENSIS_FROMENTEL_1870",
@@ -233,6 +243,19 @@
             ]
           },
           "authorityIds": "col:BTYPK"
+        },
+        {
+          "id": "SP_AGATHELIA_TURBINATA_TRAUTSCHOLD_1886",
+          "name": "Agathelia turbinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Agathelia",
+          "authorship": "(Trautschold 1886)",
+          "sourceIds": {
+            "checklistbank": "txn:148028"
+          },
+          "children": []
         }
       ]
     },
@@ -365,20 +388,33 @@
       "lineage": "Agatheliidae"
     },
     {
-      "id": "GENUS_AGATHELIA",
-      "name": "\"Agathelia",
+      "id": "GENUS_PLACOPHORA",
+      "name": "Placophora",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_AGATHELIA_NEOCOMIENSIS_DE_FROMENTEL_1870",
-          "name": "\"Agathelia neocomiensis\"",
+          "id": "SP_PLACOPHORA_BASSEAE_ALLOITEAU_1958",
+          "name": "Placophora basseae",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Agathelia",
-          "authorship": "\"(de Fromentel, 1870)\"",
+          "lineage": "Placophora",
+          "authorship": "Alloiteau 1958",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1840895"
+            "checklistbank": "txn:140745"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLACOPHORA_ACCORDENSIS_JELL_ET_AL_2011",
+          "name": "Placophora accordensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Placophora",
+          "authorship": "(Jell et al. 2011)",
+          "sourceIds": {
+            "checklistbank": "txn:213230"
           },
           "children": []
         }
@@ -388,7 +424,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 21,
+  "speciesCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -396,6 +432,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 4880017
-    }
+    },
+    "checklistbank": "txn:58371"
   }
 }

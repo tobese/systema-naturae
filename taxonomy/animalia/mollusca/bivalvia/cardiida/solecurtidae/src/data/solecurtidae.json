@@ -38,9 +38,11 @@
             "col": [
               "54JP2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225506"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225506"
+            ]
           },
-          "authorityIds": "col:54JP2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225506,col:54JP2",
           "authorship": "(Bosc, 1801)"
         },
         {
@@ -62,9 +64,11 @@
             "itis": [
               "81277"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507358"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507358"
+            ]
           },
-          "authorityIds": "col:54JP3,itis:81277"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507358,col:54JP3,itis:81277"
         },
         {
           "id": "SP_TAGELUS_BOLIVARENSIS_CLARK_DURHAM_1946",
@@ -108,9 +112,11 @@
             "col": [
               "54JP6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507361"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507361"
+            ]
           },
-          "authorityIds": "col:54JP6,itis:81275"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507361,col:54JP6,itis:81275"
         },
         {
           "id": "SP_TAGELUS_CEBUS_OLSSON_1922",
@@ -155,9 +161,11 @@
             "col": [
               "B8TJ8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1656815"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1656815"
+            ]
           },
-          "authorityIds": "col:B8TJ8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1656815,col:B8TJ8",
           "authorship": "(K. Martin, 1879)"
         },
         {
@@ -205,9 +213,11 @@
             "col": [
               "54JP9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507364"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507364"
+            ]
           },
-          "authorityIds": "col:54JP9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507364,col:54JP9",
           "authorship": "(Lamarck, 1818)"
         },
         {
@@ -273,9 +283,11 @@
             "col": [
               "54JPD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507363"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507363"
+            ]
           },
-          "authorityIds": "col:54JPD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507363,col:54JPD",
           "authorship": "(Dunker, 1862)"
         },
         {
@@ -334,9 +346,11 @@
             "col": [
               "54JPH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507359"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507359"
+            ]
           },
-          "authorityIds": "col:54JPH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507359,col:54JPH",
           "authorship": "(P. P. Carpenter, 1857)"
         },
         {
@@ -361,9 +375,11 @@
             "itis": [
               "81276"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507362"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507362"
+            ]
           },
-          "authorityIds": "col:54JPJ,itis:81276"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507362,col:54JPJ,itis:81276"
         },
         {
           "id": "SP_TAGELUS_PLEBEIUS_LIGHTFOOT_1786",
@@ -433,18 +449,6 @@
           "children": []
         },
         {
-          "id": "SP_TAGELUS_LONGISINUATUS",
-          "name": "Tagelus longisinuatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tagelus",
-          "sourceIds": {
-            "checklistbank": "560630"
-          },
-          "children": []
-        },
-        {
           "id": "SP_TAGELUS_PERUVIANUS",
           "name": "Tagelus peruvianus",
           "rank": "SPECIES",
@@ -454,7 +458,8 @@
           "sourceIds": {
             "checklistbank": "1207653"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Pilsbry and Olsson 1941)"
         },
         {
           "id": "SP_TAGELUS_ORTHRIUS",
@@ -477,6 +482,32 @@
           "lineage": "Tagelus",
           "sourceIds": {
             "checklistbank": "2488723"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAGELUS_PLEBIUS_CONRAD_1863",
+          "name": "Tagelus plebius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tagelus",
+          "authorship": "(Conrad 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:82719"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAGELUS_CLARKI_LOEL_AND_COREY_1932",
+          "name": "Tagelus clarki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tagelus",
+          "authorship": "Loel and Corey 1932",
+          "sourceIds": {
+            "checklistbank": "txn:98185"
           },
           "children": []
         }
@@ -547,9 +578,11 @@
             "col": [
               "K5VX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507338"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507338"
+            ]
           },
-          "authorityIds": "col:K5VX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507338,col:K5VX",
           "authorship": "(Boshoff, 1965)"
         },
         {
@@ -567,9 +600,11 @@
             "col": [
               "K5VY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507340"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507340"
+            ]
           },
-          "authorityIds": "col:K5VY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507340,col:K5VY",
           "authorship": "(Dunker, 1862)"
         },
         {
@@ -607,9 +642,11 @@
             "col": [
               "9GJMZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598667"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1598667"
+            ]
           },
-          "authorityIds": "col:9GJMZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598667,col:9GJMZ",
           "authorship": "(Rennie, 1930)"
         },
         {
@@ -627,9 +664,11 @@
             "col": [
               "K5W3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507342"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507342"
+            ]
           },
-          "authorityIds": "col:K5W3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507342,col:K5W3",
           "authorship": "(Melvill, 1898)"
         },
         {
@@ -673,7 +712,8 @@
           "sourceIds": {
             "checklistbank": "ott2856478"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Gmelin 1791)"
         }
       ]
     },
@@ -757,9 +797,11 @@
             "col": [
               "6Z53B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507344"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507344"
+            ]
           },
-          "authorityIds": "col:6Z53B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507344,col:6Z53B",
           "authorship": "(Dunker, 1862)"
         },
         {
@@ -810,7 +852,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "9eb3ee33-39a8-53a-ace-977abcbcb5c598"
+          "uuid": "9eb3ee33-39a8-53a-ace-977abcbcb5c598",
+          "authorship": "(Lea 1833)",
+          "sourceIds": {
+            "checklistbank": "txn:379720"
+          }
         },
         {
           "id": "SP_SOLECURTUS_BROGGII_PILSBRY_OLSSON_1941",
@@ -847,9 +893,11 @@
             "col": [
               "6YSRH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:543533"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:543533"
+            ]
           },
-          "authorityIds": "col:6YSRH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:543533,col:6YSRH",
           "authorship": "(Brocchi, 1814)"
         },
         {
@@ -996,9 +1044,11 @@
             "col": [
               "6Z53F"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507346"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507346"
+            ]
           },
-          "authorityIds": "col:6Z53F",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507346,col:6Z53F",
           "authorship": "(Lischke, 1869)"
         },
         {
@@ -1086,9 +1136,11 @@
             "col": [
               "6YSRL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507347"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507347"
+            ]
           },
-          "authorityIds": "col:6YSRL,itis:568294"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507347,col:6YSRL,itis:568294"
         },
         {
           "id": "SP_SOLECURTUS_LEGRANDI_TENISON_WOODS_1876",
@@ -1148,9 +1200,11 @@
             "col": [
               "6Z4RL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507349"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507349"
+            ]
           },
-          "authorityIds": "col:6Z4RL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507349,col:6Z4RL",
           "authorship": "(L. Spengler, 1794)"
         },
         {
@@ -1232,9 +1286,11 @@
             "col": [
               "B8SRD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1652097"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1652097"
+            ]
           },
-          "authorityIds": "col:B8SRD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1652097,col:B8SRD",
           "authorship": "(K. Martin, 1916)"
         },
         {
@@ -1252,9 +1308,11 @@
             "col": [
               "6Z4RJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:215269"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:215269"
+            ]
           },
-          "authorityIds": "col:6Z4RJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:215269,col:6Z4RJ",
           "authorship": "(Dunker, 1862)"
         },
         {
@@ -1453,7 +1511,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a969145a-be74-56a-b86-1c891de72eaa8a"
+          "uuid": "a969145a-be74-56a-b86-1c891de72eaa8a",
+          "authorship": "(Toula 1909)",
+          "sourceIds": {
+            "checklistbank": "txn:161787"
+          }
         },
         {
           "id": "SP_SOLECURTUS_SUBCANDIDUS_STURANY_1899",
@@ -1500,9 +1562,11 @@
             "col": [
               "4Y5FH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507345"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:507345"
+            ]
           },
-          "authorityIds": "col:4Y5FH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:507345,col:4Y5FH",
           "authorship": "(Dunker, 1862)"
         },
         {
@@ -1520,9 +1584,11 @@
             "col": [
               "BJ3NP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1668352"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1668352"
+            ]
           },
-          "authorityIds": "col:BJ3NP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1668352,col:BJ3NP",
           "authorship": "(O. Boettger, 1875)"
         },
         {
@@ -1535,7 +1601,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "cab05564-8ecf-565-911-2a2c88f18ad988"
+          "uuid": "cab05564-8ecf-565-911-2a2c88f18ad988",
+          "authorship": "(Aldrich 1885)",
+          "sourceIds": {
+            "checklistbank": "txn:161392"
+          }
         },
         {
           "id": "SP_SOLECURTUS_ZWIERZYCKII_K_MARTIN_1931",
@@ -1777,19 +1847,6 @@
           "uuid": "764c1b88-0d7f-5cd-a95-b496598615c1c4"
         },
         {
-          "id": "SP_SOLECURTUS_SCOPULUS_TURTON_1822",
-          "name": "Solecurtus scopulus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Solecurtus",
-          "authorship": "Turton, 1822",
-          "sourceIds": {
-            "checklistbank": "64621"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SOLECURTUS_ALBUS_BLAINVILLE_1827",
           "name": "Solecurtus albus",
           "rank": "SPECIES",
@@ -1951,7 +2008,8 @@
           "sourceIds": {
             "checklistbank": "1207643"
           },
-          "children": []
+          "children": [],
+          "authorship": "Pilsbry and Olsson 1941"
         },
         {
           "id": "SP_SOLECURTUS_ACTEON",
@@ -2046,6 +2104,19 @@
           "lineage": "Solecurtus",
           "sourceIds": {
             "checklistbank": "ott7930436"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SOLECURTUS_CERERIS_MAURY_1924",
+          "name": "Solecurtus cereris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solecurtus",
+          "authorship": "(Maury 1924)",
+          "sourceIds": {
+            "checklistbank": "txn:159088"
           },
           "children": []
         }
@@ -2289,19 +2360,6 @@
             "checklistbank": "574218"
           },
           "children": []
-        },
-        {
-          "id": "SP_PSAMMOBIA_TAENIATA_W_TURTON_1822",
-          "name": "Psammobia taeniata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Psammobia",
-          "authorship": "W. Turton, 1822",
-          "sourceIds": {
-            "checklistbank": "574220"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2392,6 +2450,19 @@
             "checklistbank": "ott7930438"
           },
           "children": []
+        },
+        {
+          "id": "SP_SOLENOCURTUS_HANETIANUS_D_ORBIGNY_1842",
+          "name": "Solenocurtus hanetianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solenocurtus",
+          "authorship": "(d'Orbigny 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:122621"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2438,19 +2509,6 @@
           "children": []
         },
         {
-          "id": "SP_AZORINUS_CUNHAI_BOSHOFF_1965",
-          "name": "\"Azorinus cunhai\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Azorinus",
-          "authorship": "\"(Boshoff, 1965)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507338"
-          },
-          "children": []
-        },
-        {
           "id": "SP_AZORINUS_SCHEEPMAKERI_DUNKER_1852",
           "name": "\"Azorinus scheepmakeri\"",
           "rank": "SPECIES",
@@ -2464,19 +2522,6 @@
           "children": []
         },
         {
-          "id": "SP_AZORINUS_MINUTUS_DUNKER_1862",
-          "name": "\"Azorinus minutus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Azorinus",
-          "authorship": "\"(Dunker, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507340"
-          },
-          "children": []
-        },
-        {
           "id": "SP_AZORINUS_ABBREVIATUS_A_A_GOULD_1861",
           "name": "\"Azorinus abbreviatus\"",
           "rank": "SPECIES",
@@ -2486,32 +2531,6 @@
           "authorship": "\"(A. A. Gould, 1861)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507341"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AZORINUS_XYRECES_MELVILL_1898",
-          "name": "\"Azorinus xyreces\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Azorinus",
-          "authorship": "\"(Melvill, 1898)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507342"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AZORINUS_WOODSI_RENNIE_1930",
-          "name": "\"Azorinus woodsi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Azorinus",
-          "authorship": "\"(Rennie, 1930)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598667"
           },
           "children": []
         }
@@ -2551,19 +2570,6 @@
           "children": []
         },
         {
-          "id": "SP_SOLECURTUS_PHILIPPINARUM_DUNKER_1862",
-          "name": "\"Solecurtus philippinarum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(Dunker, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:215269"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SOLECURTUS_CUMINGIANUS_DUNKER_1862",
           "name": "\"Solecurtus cumingianus\"",
           "rank": "SPECIES",
@@ -2573,58 +2579,6 @@
           "authorship": "\"(Dunker, 1862)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:420918"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_AUSTRALIS_DUNKER_1862",
-          "name": "\"Solecurtus australis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(Dunker, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507344"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_SULCATUS_DUNKER_1862",
-          "name": "\"Solecurtus sulcatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(Dunker, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507345"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_DIVARICATUS_LISCHKE_1869",
-          "name": "\"Solecurtus divaricatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(Lischke, 1869)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507346"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_GUAYMASENSIS_H_N_LOWE_1935",
-          "name": "\"Solecurtus guaymasensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(H. N. Lowe, 1935)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507347"
           },
           "children": []
         },
@@ -2642,19 +2596,6 @@
           "children": []
         },
         {
-          "id": "SP_SOLECURTUS_LINEATUS_L_SPENGLER_1794",
-          "name": "\"Solecurtus lineatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(L. Spengler, 1794)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507349"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SOLECURTUS_RHOMBUS_L_SPENGLER_1794",
           "name": "\"Solecurtus rhombus\"",
           "rank": "SPECIES",
@@ -2664,45 +2605,6 @@
           "authorship": "\"(L. Spengler, 1794)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:507350"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_CANDIDUS_BROCCHI_1814",
-          "name": "\"Solecurtus candidus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(Brocchi, 1814)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:543533"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_PECTINIFERUS_K_MARTIN_1916",
-          "name": "\"Solecurtus pectiniferus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(K. Martin, 1916)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1652097"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SOLECURTUS_TRUNCATUS_O_BOETTGER_1875",
-          "name": "\"Solecurtus truncatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solecurtus",
-          "authorship": "\"(O. Boettger, 1875)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1668352"
           },
           "children": []
         }
@@ -2727,108 +2629,39 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:156999"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "solecurtidae"
+    },
+    {
+      "id": "GENUS_PSAMMOSOLEN",
+      "name": "Psammosolen",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_TAGELUS_ADANSONII_BOSC_1801",
-          "name": "\"Tagelus adansonii\"",
+          "id": "SP_PSAMMOSOLEN_GATUNENSIS_TOULA_1909",
+          "name": "Psammosolen gatunensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(Bosc, 1801)\"",
+          "lineage": "Psammosolen",
+          "authorship": "(Toula 1909)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225506"
+            "checklistbank": "txn:161784"
           },
           "children": []
         },
         {
-          "id": "SP_TAGELUS_AFFINIS_C_B_ADAMS_1852",
-          "name": "\"Tagelus affinis\"",
+          "id": "SP_PSAMMOSOLEN_GALAPAGANUS_DALL_1928",
+          "name": "Psammosolen galapaganus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(C. B. Adams, 1852)\"",
+          "lineage": "Psammosolen",
+          "authorship": "(Dall 1928)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507358"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_POLITUS_P_P_CARPENTER_1857",
-          "name": "\"Tagelus politus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(P. P. Carpenter, 1857)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507359"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_CALIFORNIANUS_CONRAD_1837",
-          "name": "\"Tagelus californianus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(Conrad, 1837)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507361"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_SUBTERES_CONRAD_1837",
-          "name": "\"Tagelus subteres\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(Conrad, 1837)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507362"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_PERUANUS_DUNKER_1862",
-          "name": "\"Tagelus peruanus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(Dunker, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507363"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_DOMBEII_LAMARCK_1818",
-          "name": "\"Tagelus dombeii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(Lamarck, 1818)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:507364"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TAGELUS_DILATATUS_K_MARTIN_1879",
-          "name": "\"Tagelus dilatatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tagelus",
-          "authorship": "\"(K. Martin, 1879)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1656815"
+            "checklistbank": "txn:293337"
           },
           "children": []
         }
@@ -2837,8 +2670,8 @@
       "lineage": "solecurtidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 174,
+  "genusCount": 17,
+  "speciesCount": 156,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

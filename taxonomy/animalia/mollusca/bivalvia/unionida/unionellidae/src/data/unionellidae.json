@@ -45,9 +45,11 @@
             "col": [
               "879J3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1501121"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1501121"
+            ]
           },
-          "authorityIds": "col:879J3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1501121,col:879J3",
           "authorship": "(Etheridge, 1888)",
           "children": []
         }
@@ -75,32 +77,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "unionellidae"
-    },
-    {
-      "id": "GENUS_PROTOVIRGUS",
-      "name": "\"Protovirgus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROTOVIRGUS_DUNSTANI_ETHERIDGE_1888",
-          "name": "\"Protovirgus dunstani\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protovirgus",
-          "authorship": "\"(Etheridge, 1888)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1501121"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "unionellidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 4,
+  "genusCount": 2,
+  "speciesCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

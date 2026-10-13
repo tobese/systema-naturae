@@ -67,9 +67,11 @@
             "itis": [
               "78101"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:224463"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:224463"
+            ]
           },
-          "authorityIds": "col:56JCG,itis:78101",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:224463,col:56JCG,itis:78101",
           "authorship": "(Meisenheimer, 1902)"
         },
         {
@@ -197,9 +199,11 @@
             "col": [
               "3YCHD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:416647"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:416647"
+            ]
           },
-          "authorityIds": "col:3YCHD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:416647,col:3YCHD",
           "authorship": "(Massy, 1917)"
         },
         {
@@ -291,9 +295,11 @@
             "col": [
               "4CQDQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139181"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:139181"
+            ]
           },
-          "authorityIds": "col:4CQDQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:139181,col:4CQDQ",
           "authorship": "(Gegenbaur, 1855)"
         },
         {
@@ -314,9 +320,11 @@
             "col": [
               "4CQDR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139182"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:139182"
+            ]
           },
-          "authorityIds": "col:4CQDR,itis:78098",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:139182,col:4CQDR,itis:78098",
           "authorship": "(Souleyet, 1852)"
         },
         {
@@ -541,9 +549,11 @@
             "col": [
               "W7KY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139178"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:139178"
+            ]
           },
-          "authorityIds": "col:W7KY,itis:78089",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:139178,col:W7KY,itis:78089",
           "authorship": "(Phipps, 1774)"
         },
         {
@@ -671,19 +681,6 @@
             "checklistbank": "971832"
           },
           "children": []
-        },
-        {
-          "id": "SP_CLIONE_ANTARCTICA",
-          "name": "Clione antarctica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clione",
-          "sourceIds": {
-            "checklistbank": "1044710"
-          },
-          "children": [],
-          "authorship": "Smith, 1902"
         },
         {
           "id": "SP_CLIONE_ELEGANTISSIMA",
@@ -831,9 +828,11 @@
             "col": [
               "6JJMJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139179"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:139179"
+            ]
           },
-          "authorityIds": "col:6JJMJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:139179,col:6JJMJ",
           "authorship": "(Tesch, 1903)"
         },
         {
@@ -989,32 +988,6 @@
             "checklistbank": "971831"
           },
           "children": []
-        },
-        {
-          "id": "SP_CLIO_FLAVESCENS_GEGENBAUR_1855",
-          "name": "Clio flavescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clio",
-          "authorship": "Gegenbaur, 1855",
-          "sourceIds": {
-            "checklistbank": "1051786"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CLIO_LONGICAUDATA_SOULEYET_1852",
-          "name": "Clio longicaudata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Clio",
-          "authorship": "Souleyet, 1852",
-          "sourceIds": {
-            "checklistbank": "1051787"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1069,19 +1042,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CLIONE_LIMACINA_PHIPPS_1774",
-          "name": "\"Clione limacina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Clione",
-          "authorship": "\"(Phipps, 1774)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139178"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CLIONE_LIMACINA_BRUGUI_RE_1792",
           "name": "\"Clione limacina",
           "rank": "SPECIES",
@@ -1097,111 +1057,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "clionidae"
-    },
-    {
-      "id": "GENUS_FOWLERINA",
-      "name": "\"Fowlerina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FOWLERINA_PUNCTATA_TESCH_1903",
-          "name": "\"Fowlerina punctata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Fowlerina",
-          "authorship": "\"(Tesch, 1903)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139179"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "clionidae"
-    },
-    {
-      "id": "GENUS_PARACLIONE",
-      "name": "\"Paraclione",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARACLIONE_FLAVESCENS_GEGENBAUR_1855",
-          "name": "\"Paraclione flavescens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paraclione",
-          "authorship": "\"(Gegenbaur, 1855)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139181"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARACLIONE_LONGICAUDATA_SOULEYET_1852",
-          "name": "\"Paraclione longicaudata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paraclione",
-          "authorship": "\"(Souleyet, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:139182"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "clionidae"
-    },
-    {
-      "id": "GENUS_THLIPTODON",
-      "name": "\"Thliptodon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_THLIPTODON_DIAPHANUS_MEISENHEIMER_1902",
-          "name": "\"Thliptodon diaphanus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thliptodon",
-          "authorship": "\"(Meisenheimer, 1902)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:224463"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "clionidae"
-    },
-    {
-      "id": "GENUS_MASSYA",
-      "name": "\"Massya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MASSYA_LONGECIRRATA_MASSY_1917",
-          "name": "\"Massya longecirrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Massya",
-          "authorship": "\"(Massy, 1917)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:416647"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "clionidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 67,
+  "genusCount": 13,
+  "speciesCount": 58,
   "sourceIds": {
     "checklistbank": "71514"
   }

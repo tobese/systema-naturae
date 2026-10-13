@@ -174,9 +174,11 @@
             "col": [
               "CRC6B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1786097"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1786097"
+            ]
           },
-          "authorityIds": "col:CRC6B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1786097,col:CRC6B",
           "children": []
         },
         {
@@ -1223,35 +1225,13 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pseudotomidae"
-    },
-    {
-      "id": "GENUS_PSEUDOTOMA",
-      "name": "\"Pseudotoma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOTOMA_ALDRICHI_O_MEYER_1887",
-          "name": "\"Pseudotoma aldrichi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudotoma",
-          "authorship": "\"(O. Meyer, 1887)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1786097"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pseudotomidae"
     }
   ],
-  "speciesCount": 74,
+  "speciesCount": 73,
   "appSlug": "pseudotomidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Gastropoda",
-  "genusCount": 8,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

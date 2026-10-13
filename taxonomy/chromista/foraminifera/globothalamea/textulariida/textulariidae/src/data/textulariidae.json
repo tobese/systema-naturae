@@ -2847,10 +2847,12 @@
             ],
             "col": [
               "83PST"
-            ]
+            ],
+            "checklistbank": "txn:500734"
           },
           "uuid": "0f57e43d-c4cc-56d-b23-143bd493e17513",
-          "authorityIds": "col:83PST,gbif:8793072"
+          "authorityIds": "col:83PST,gbif:8793072",
+          "authorship": "Howe and Wallace 1932"
         },
         {
           "id": "TEXTULARIA_DEBEYI",
@@ -4408,10 +4410,12 @@
             ],
             "itis": [
               "44339"
-            ]
+            ],
+            "checklistbank": "txn:382614"
           },
           "uuid": "fdbe85e1-5263-564-907-69f7d34db8aba7",
-          "authorityIds": "col:55YCV,gbif:7411852,itis:44339"
+          "authorityIds": "col:55YCV,gbif:7411852,itis:44339",
+          "authorship": "dOrbigny 1846"
         },
         {
           "id": "TEXTULARIA_GRAMMOSTOMUM",
@@ -5471,10 +5475,12 @@
             ],
             "col": [
               "BHL6V"
-            ]
+            ],
+            "checklistbank": "txn:167226"
           },
           "uuid": "e93d40f5-7705-5b1-959-dd96b05ad1622a",
-          "authorityIds": "col:BHL6V,gbif:7786544"
+          "authorityIds": "col:BHL6V,gbif:7786544",
+          "authorship": "Guembel 1862"
         },
         {
           "id": "TEXTULARIA_JUTSONI",
@@ -7712,10 +7718,12 @@
             ],
             "col": [
               "83Q2Q"
-            ]
+            ],
+            "checklistbank": "txn:500735"
           },
           "uuid": "526131ab-668d-52d-833-f9bd2c27662406",
-          "authorityIds": "col:83Q2Q,gbif:9224428"
+          "authorityIds": "col:83Q2Q,gbif:9224428",
+          "authorship": "Howe and Wallace 1932"
         },
         {
           "id": "TEXTULARIA_OVALIS",
@@ -11845,10 +11853,12 @@
             ],
             "col": [
               "83Q89"
-            ]
+            ],
+            "checklistbank": "txn:351889"
           },
           "uuid": "10de22e0-e8c8-555-ab4-eeb962e410d668",
-          "authorityIds": "col:83Q89,gbif:9027516"
+          "authorityIds": "col:83Q89,gbif:9027516",
+          "authorship": "Cushman and Ellisor 1931"
         },
         {
           "id": "TEXTULARIA_WARRENITES",
@@ -12929,6 +12939,19 @@
           "lineage": "Textularia",
           "sourceIds": {
             "checklistbank": "46139"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEXTULARIA_BARRETTII_JONES_AND_PARKER_1876",
+          "name": "Textularia barrettii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Textularia",
+          "authorship": "(Jones and Parker 1876)",
+          "sourceIds": {
+            "checklistbank": "txn:473843"
           },
           "children": []
         }
@@ -14646,6 +14669,19 @@
           },
           "uuid": "d8e1ee65-1677-5f0-996-9e8b8435b3cb24",
           "authorityIds": "col:823V9,gbif:9377707"
+        },
+        {
+          "id": "SP_BIGENERINA_CISCOENSIS_CUSHMAN_AND_WATERS_1928",
+          "name": "Bigenerina ciscoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bigenerina",
+          "authorship": "Cushman and Waters 1928",
+          "sourceIds": {
+            "checklistbank": "txn:481168"
+          },
+          "children": []
         }
       ]
     },
@@ -19208,6 +19244,19 @@
           },
           "children": [],
           "uuid": "e51260be-4dcd-5ac-909-a47af4062de52e"
+        },
+        {
+          "id": "SP_VULVULINA_CURTA_CUSHMAN_AND_SIEGFUS_1935",
+          "name": "Vulvulina curta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vulvulina",
+          "authorship": "Cushman and Siegfus 1935",
+          "sourceIds": {
+            "checklistbank": "txn:351890"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -29108,10 +29157,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "textulariidae"
+    },
+    {
+      "id": "GENUS_BOLIVINOPSIS",
+      "name": "Bolivinopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BOLIVINOPSIS_DISTINCTUS_GOVINDAN_AND_BHANDARI_1988",
+          "name": "Bolivinopsis distinctus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolivinopsis",
+          "authorship": "Govindan and Bhandari 1988",
+          "sourceIds": {
+            "checklistbank": "txn:154107"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLIVINOPSIS_CAPITATA_YAKOLEV_1891",
+          "name": "Bolivinopsis capitata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bolivinopsis",
+          "authorship": "Yakolev 1891",
+          "sourceIds": {
+            "checklistbank": "txn:478117"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "textulariidae"
     }
   ],
-  "genusCount": 65,
-  "speciesCount": 1644,
+  "genusCount": 66,
+  "speciesCount": 1649,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -26,9 +26,11 @@
             "col": [
               "FN99"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:871160"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:871160"
+            ]
           },
-          "authorityIds": "col:FN99",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:871160,col:FN99",
           "authorship": "(Wesenberg-Lund, 1951)"
         },
         {
@@ -143,9 +145,11 @@
             "col": [
               "5VNN3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:129851"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:129851"
+            ]
           },
-          "authorityIds": "col:5VNN3,itis:66778"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:129851,col:5VNN3,itis:66778"
         },
         {
           "id": "SP_APISTOBRANCHUS_TYPICUS",
@@ -166,9 +170,11 @@
             "itis": [
               "66780"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:157182"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:157182"
+            ]
           },
-          "authorityIds": "col:FN9F,itis:66780"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:157182,col:FN9F,itis:66780"
         },
         {
           "id": "SP_APISTOBRANCHUS_JASONI_NEAL_PATERSON_IN_NEAL_PATERSON_ET_AL_2020",
@@ -255,58 +261,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "apistobranchidae"
-    },
-    {
-      "id": "GENUS_APISTOBRANCHUS",
-      "name": "\"Apistobranchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_APISTOBRANCHUS_TULLBERGI_TH_EL_1879",
-          "name": "\"Apistobranchus tullbergi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Apistobranchus",
-          "authorship": "\"(Théel, 1879)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:129851"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_APISTOBRANCHUS_TYPICUS_WEBSTER_BENEDICT_1887",
-          "name": "\"Apistobranchus typicus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Apistobranchus",
-          "authorship": "\"(Webster & Benedict, 1887)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:157182"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_APISTOBRANCHUS_FRAGMENTATA_WESENBERG_LUND_1951",
-          "name": "\"Apistobranchus fragmentata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Apistobranchus",
-          "authorship": "\"(Wesenberg-Lund, 1951)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:871160"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "apistobranchidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 16,
+  "genusCount": 2,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

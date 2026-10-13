@@ -285,9 +285,11 @@
             "col": [
               "CHF32"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1760939"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1760939"
+            ]
           },
-          "authorityIds": "col:CHF32",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1760939,col:CHF32",
           "children": []
         },
         {
@@ -303,9 +305,11 @@
             "col": [
               "CHF33"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1760938"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1760938"
+            ]
           },
-          "authorityIds": "col:CHF33",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1760938,col:CHF33",
           "children": []
         },
         {
@@ -354,7 +358,8 @@
           "sourceIds": {
             "col": [
               "CPH9B"
-            ]
+            ],
+            "checklistbank": "txn:142689"
           },
           "authorityIds": "col:CPH9B",
           "children": []
@@ -403,6 +408,58 @@
           },
           "children": [],
           "uuid": "409a9304-2e7e-589-b22-b0131952e06da9"
+        },
+        {
+          "id": "SP_RHYNCHORTHOCERAS_DENSUM_QI_1980",
+          "name": "Rhynchorthoceras densum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchorthoceras",
+          "authorship": "(Qi 1980)",
+          "sourceIds": {
+            "checklistbank": "txn:142690"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHYNCHORTHOCERAS_SUBCURVATUM_QI_1980",
+          "name": "Rhynchorthoceras subcurvatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchorthoceras",
+          "authorship": "(Qi 1980)",
+          "sourceIds": {
+            "checklistbank": "txn:142692"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHYNCHORTHOCERAS_BEYRICHI_REMELE_1882",
+          "name": "Rhynchorthoceras beyrichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchorthoceras",
+          "authorship": "Remele 1882",
+          "sourceIds": {
+            "checklistbank": "txn:309650"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHYNCHORTHOCERAS_HELGOEYENSE_SWEET_1958",
+          "name": "Rhynchorthoceras helgoeyense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhynchorthoceras",
+          "authorship": "Sweet 1958",
+          "sourceIds": {
+            "checklistbank": "txn:309651"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -463,58 +520,37 @@
           },
           "authorityIds": "col:TPK5C",
           "children": []
+        },
+        {
+          "id": "SP_TYRIOCERAS_KJAERULFI_STRAND_1934",
+          "name": "Tyrioceras kjaerulfi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tyrioceras",
+          "authorship": "Strand 1934",
+          "sourceIds": {
+            "checklistbank": "txn:297535"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Sinoceratidae"
-    },
-    {
-      "id": "GENUS_RHYNCHORTHOCERAS",
-      "name": "\"Rhynchorthoceras",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_RHYNCHORTHOCERAS_RUGIUM_AUBRECHTOV_D_KORN_2022",
-          "name": "\"Rhynchorthoceras rugium\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhynchorthoceras",
-          "authorship": "\"Aubrechtová & D. Korn, 2022\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1760938"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_RHYNCHORTHOCERAS_KRANEPUHLENSE_AUBRECHTOV_D_KORN_2022",
-          "name": "\"Rhynchorthoceras kranepuhlense\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Rhynchorthoceras",
-          "authorship": "\"Aubrechtová & D. Korn, 2022\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1760939"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sinoceratidae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 31,
   "appSlug": "sinoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 4,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4941294
-    }
+    },
+    "checklistbank": "txn:142688"
   }
 }

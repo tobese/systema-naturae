@@ -332,9 +332,11 @@
             "col": [
               "CDVVK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796355"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1796355"
+            ]
           },
-          "authorityIds": "col:CDVVK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1796355,col:CDVVK",
           "authorship": "José de Paggi & Paggi, 2011"
         },
         {
@@ -3014,28 +3016,6 @@
       "lineage": "synchaetidae"
     },
     {
-      "id": "GENUS_VORTICELLA",
-      "name": "Vorticella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_VORTICELLA_TREMULA_O_F_M_LLER_1786",
-          "name": "Vorticella tremula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vorticella",
-          "authorship": "O.F. Müller, 1786",
-          "sourceIds": {
-            "checklistbank": "1036638"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "synchaetidae"
-    },
-    {
       "id": "GENUS_GASTROPUS",
       "name": "Gastropus",
       "rank": "GENUS",
@@ -3147,32 +3127,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "synchaetidae"
-    },
-    {
-      "id": "GENUS_POLYARTHRA",
-      "name": "\"Polyarthra",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_POLYARTHRA_PLATENSIS_JOS_DE_PAGGI_PAGGI_2011",
-          "name": "\"Polyarthra platensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Polyarthra",
-          "authorship": "\"José de Paggi & Paggi, 2011\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796355"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "synchaetidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 175,
+  "genusCount": 9,
+  "speciesCount": 173,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

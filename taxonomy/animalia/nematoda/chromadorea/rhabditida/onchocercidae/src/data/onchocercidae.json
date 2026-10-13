@@ -505,22 +505,6 @@
           "uuid": "4bfbba6d-d353-58b-bf4-f1317161c362da"
         },
         {
-          "id": "SP_CERCOPITHIFILARIA_GRASSI",
-          "name": "Cercopithifilaria grassi",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Cercopithifilaria",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "70cf7aa1-a2f5-5a8-943-0417cd51eea136",
-          "authorship": "(Noé, 1907)",
-          "sourceIds": {
-            "checklistbank": "250817"
-          }
-        },
-        {
           "id": "SP_CERCOPITHIFILARIA_JAPONICA",
           "name": "Cercopithifilaria japonica",
           "rank": "SPECIES",
@@ -851,8 +835,11 @@
           "uuid": "11dc3ac3-220f-52b-b70-45da495a3a8095",
           "authorship": "(Rudolphi, 1809) Yorke & Maplestone, 1926",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1845613"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1845613"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1845613"
         },
         {
           "id": "SP_DIPETALONEMA_GRACILIFORME",
@@ -910,24 +897,13 @@
           "lineage": "Dipetalonema",
           "authorship": "(Leidy, 1858)",
           "sourceIds": {
-            "checklistbank": "43002"
+            "checklistbank": [
+              "43002"
+            ]
           },
           "children": [],
-          "uuid": "a6e654b7-442c-581-a65-4480a35a2b9fb7"
-        },
-        {
-          "id": "SP_DIPETALONEMA_SPIRALIS_MOLIN_1860",
-          "name": "Dipetalonema spiralis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dipetalonema",
-          "authorship": "(Molin, 1860)",
-          "sourceIds": {
-            "checklistbank": "28451"
-          },
-          "children": [],
-          "uuid": "e0825225-076e-576-a63-8130b615fbf32e"
+          "uuid": "a6e654b7-442c-581-a65-4480a35a2b9fb7",
+          "authorityIds": "checklistbank:43002"
         },
         {
           "id": "SP_DIPETALONEMA_ANTICLAVA_MOLIN_1858",
@@ -942,20 +918,6 @@
           },
           "children": [],
           "uuid": "ab5879c3-750d-520-905-db3e30baf3490a"
-        },
-        {
-          "id": "SP_DIPETALONEMA_GRACILIFORMIS_FREITAS_1964",
-          "name": "Dipetalonema graciliformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dipetalonema",
-          "authorship": "Freitas, 1964",
-          "sourceIds": {
-            "checklistbank": "50446"
-          },
-          "children": [],
-          "uuid": "f5aa7eb9-1c5e-51d-8d3-512396120a6c5b"
         },
         {
           "id": "SP_DIPETALONEMA_PRICEI_VAZ_PEREIRA_1934",
@@ -995,32 +957,6 @@
           "authorship": "Petit, Bain & Roussilhon, 1985",
           "sourceIds": {
             "checklistbank": "1024855"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DIPETALONEMA_PERSTANS_MANSON_1891",
-          "name": "Dipetalonema perstans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dipetalonema",
-          "authorship": "(Manson, 1891)",
-          "sourceIds": {
-            "checklistbank": "1047414"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DIPETALONEMA_RUGOSICAUDA_B_HM_SUPPERER_1953",
-          "name": "Dipetalonema rugosicauda",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dipetalonema",
-          "authorship": "(Böhm & Supperer, 1953)",
-          "sourceIds": {
-            "checklistbank": "1055253"
           },
           "children": []
         },
@@ -1618,22 +1554,6 @@
             ]
           },
           "authorityIds": "col:C2F8C"
-        },
-        {
-          "id": "SP_ONCHOCERCA_OCHENGI",
-          "name": "Onchocerca ochengi",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Onchocerca",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "a14114c6-08b2-578-9b1-cf3da12160d3b8",
-          "authorship": "Bwangomoi, 1969",
-          "sourceIds": {
-            "checklistbank": "42157"
-          }
         },
         {
           "id": "SP_ONCHOCERCA_RAMACHANDRINI",
@@ -2334,6 +2254,66 @@
             "checklistbank": "2993861"
           },
           "children": []
+        },
+        {
+          "id": "SP_LITOMOSA_AELLENI",
+          "name": "Litomosa aelleni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litomosa",
+          "sourceIds": {
+            "checklistbank": "391722"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LITOMOSA_BESHKOVI",
+          "name": "Litomosa beshkovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litomosa",
+          "sourceIds": {
+            "checklistbank": "391723"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LITOMOSA_DOGIELI",
+          "name": "Litomosa dogieli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litomosa",
+          "sourceIds": {
+            "checklistbank": "391724"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LITOMOSA_OTTAVIANII",
+          "name": "Litomosa ottavianii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litomosa",
+          "sourceIds": {
+            "checklistbank": "391727"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LITOMOSA_SKARBILOVITSCHI",
+          "name": "Litomosa skarbilovitschi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Litomosa",
+          "sourceIds": {
+            "checklistbank": "391729"
+          },
+          "children": []
         }
       ]
     },
@@ -2490,22 +2470,6 @@
           }
         },
         {
-          "id": "SP_SPLENDIDOFILARIA_FALLISENTIS",
-          "name": "Splendidofilaria fallisentis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Splendidofilaria",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "f94aea43-0513-56d-936-697ce5f023fa79",
-          "authorship": "(Anderson, 1954)",
-          "sourceIds": {
-            "checklistbank": "250882"
-          }
-        },
-        {
           "id": "SP_SPLENDIDOFILARIA_MAVIS",
           "name": "Splendidofilaria mavis",
           "rank": "SPECIES",
@@ -2519,22 +2483,6 @@
           "authorship": "(Leiper, 1909)",
           "sourceIds": {
             "checklistbank": "250883"
-          }
-        },
-        {
-          "id": "SP_SPLENDIDOFILARIA_PAPILLICERCA",
-          "name": "Splendidofilaria papillicerca",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Splendidofilaria",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "d5db7032-eed3-514-adf-ca21014227fadd",
-          "authorship": "(Lubimov, 1946)",
-          "sourceIds": {
-            "checklistbank": "250884"
           }
         },
         {
@@ -3626,22 +3574,6 @@
       "lineage": "Micipsella",
       "children": [
         {
-          "id": "SP_MICIPSELLA_NUMIDICA",
-          "name": "Micipsella numidica",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Micipsella",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "a55b1c95-6576-527-83f-031b5f2b382232",
-          "authorship": "(Seurat, 1917)",
-          "sourceIds": {
-            "checklistbank": "250851"
-          }
-        },
-        {
           "id": "SP_MICIPSELLA_BREVICAUDA",
           "name": "Micipsella brevicauda",
           "rank": "SPECIES",
@@ -3727,22 +3659,6 @@
           "uuid": "63ddee0d-5cf4-528-9e4-a760a828de41eb"
         },
         {
-          "id": "SP_PARONCOCERCA_TONKINENSIS",
-          "name": "Paroncocerca tonkinensis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Paroncocerca",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "24417a0d-e331-535-8c9-9ac6971a9bd975",
-          "authorship": "(Chow, 1939)",
-          "sourceIds": {
-            "checklistbank": "250864"
-          }
-        },
-        {
           "id": "SP_PARONCOCERCA_CICONIARUM",
           "name": "Paroncocerca ciconiarum",
           "rank": "SPECIES",
@@ -3809,26 +3725,6 @@
           "authorityIds": "col:CJBSN"
         },
         {
-          "id": "SP_PELECITUS_FULICAEATRAE",
-          "name": "Pelecitus fulicaeatrae",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Pelecitus",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "c2066750-dd9d-590-810-d5f7377660cd52",
-          "sourceIds": {
-            "col": [
-              "CJBSR"
-            ],
-            "checklistbank": "250866"
-          },
-          "authorityIds": "col:CJBSR",
-          "authorship": "(Diesing, 1861)"
-        },
-        {
           "id": "SP_PELECITUS_SERPENTULUS",
           "name": "Pelecitus serpentulus",
           "rank": "SPECIES",
@@ -3883,20 +3779,6 @@
           },
           "children": [],
           "uuid": "c23b76c8-30b4-5c8-953-d299614100852c"
-        },
-        {
-          "id": "SP_PELECITUS_CIRCULARIS_MOLIN_1860",
-          "name": "Pelecitus circularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pelecitus",
-          "authorship": "(Molin, 1860)",
-          "sourceIds": {
-            "checklistbank": "43002"
-          },
-          "children": [],
-          "uuid": "acbbf406-f5af-5f4-977-677e7c04bf2778"
         },
         {
           "id": "SP_PELECITUS_ANDERSONI_BARTLETT_GREINER_1986",
@@ -4883,26 +4765,6 @@
           "authorship": "(Rudolphi, 1819)"
         },
         {
-          "id": "SP_SETARIA_DIGITATA",
-          "name": "Setaria digitata",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Setaria",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "dc5cd97f-6f81-523-a03-cf8e71af4c2593",
-          "sourceIds": {
-            "col": [
-              "C2G5T"
-            ],
-            "checklistbank": "250875"
-          },
-          "authorityIds": "col:C2G5T",
-          "authorship": "(von Linstow, 1906)"
-        },
-        {
           "id": "SP_SETARIA_EQUINA_RAILLIET_HENRY_1911",
           "name": "Setaria equina  Railliet & Henry, 1911",
           "rank": "SPECIES",
@@ -5007,34 +4869,6 @@
           "uuid": "b941b011-fe0e-58e-818-efc9254354c127"
         },
         {
-          "id": "SP_SETARIA_TUNDRAE_ISAICHIKOV_RAJEWSKAJA_1928",
-          "name": "Setaria tundrae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Setaria",
-          "authorship": "Isaichikov & Rajewskaja, 1928",
-          "sourceIds": {
-            "checklistbank": "146157"
-          },
-          "children": [],
-          "uuid": "22973a9c-f7ef-51b-854-9f16c2f0206a0a"
-        },
-        {
-          "id": "SP_SETARIA_BIDENTATA_MOLIN_1858",
-          "name": "Setaria bidentata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Setaria",
-          "authorship": "(Molin, 1858)",
-          "sourceIds": {
-            "checklistbank": "52160"
-          },
-          "children": [],
-          "uuid": "d438260c-02fe-5a0-93c-b06bc1536f2076"
-        },
-        {
           "id": "SP_SETARIA_TUNDRA_ISSAITSCHIKOFF_RAJEWSKAJA_1928",
           "name": "Setaria tundra",
           "rank": "SPECIES",
@@ -5075,6 +4909,18 @@
           },
           "children": [],
           "uuid": "3be69541-13b5-516-8eb-fa8c5c5c22fe9c"
+        },
+        {
+          "id": "SP_SETARIA_TRANSCAUCASICA",
+          "name": "Setaria transcaucasica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Setaria",
+          "sourceIds": {
+            "checklistbank": "391770"
+          },
+          "children": []
         }
       ]
     },
@@ -5265,8 +5111,11 @@
           "uuid": "afe94795-d367-538-a3d-cc4f10bf8d4fa6",
           "authorship": "Bain, Kim & Petiti, 1979",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828065"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1828065"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1828065"
         },
         {
           "id": "SP_OCHOTERENELLA_GUYANENSIS",
@@ -5281,8 +5130,11 @@
           "uuid": "35cf8523-dec9-5b5-a92-85cf582575fde7",
           "authorship": "Bain & Prod'Hon, 1974",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828066"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1828066"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1828066"
         },
         {
           "id": "SP_OCHOTERENELLA_ROYI",
@@ -5297,8 +5149,11 @@
           "uuid": "fe22492c-b946-58b-a79-6e48c2d04aff1b",
           "authorship": "Bain, Kim & Petit, 1979",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828071"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1828071"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1828071"
         },
         {
           "id": "SP_OCHOTERENELLA_SCALARIS_ESSLINGER_1986",
@@ -5544,8 +5399,11 @@
           "uuid": "2ed046d8-34b2-500-af9-375bf84640f4a6",
           "authorship": "(Walton, 1929)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671823"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671823"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671823"
         },
         {
           "id": "SP_FOLEYELLIDES_BRACHYOPTERA",
@@ -5560,8 +5418,11 @@
           "uuid": "b59bc660-8527-51f-bb8-56d73c284efa26",
           "authorship": "(Wehr & Causey, 1939)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671824"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671824"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671824"
         },
         {
           "id": "SP_FOLEYELLIDES_CALAKMULENSIS_VEL_ZQUEZ_URRIETA_VELARDE_AGUILAR_OCEGUERA_FIGUEROA_LE_N_R_GAGNON_2023",
@@ -5590,8 +5451,11 @@
           "uuid": "af58259a-6623-592-b26-f15065fd178737",
           "authorship": "(Wehr & Causey, 1939)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671825"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671825"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671825"
         },
         {
           "id": "SP_FOLEYELLIDES_FLEXICAUDA",
@@ -5606,8 +5470,11 @@
           "uuid": "17267bf6-da4b-5d4-aed-3f89393b71749b",
           "authorship": "(Schacher & Crans, 1973)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671826"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671826"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671826"
         },
         {
           "id": "SP_FOLEYELLIDES_MALAYENSIS",
@@ -5622,8 +5489,11 @@
           "uuid": "b6b3273a-d559-540-a69-7a04ad417d3663",
           "authorship": "(Petit & Yen, 1979)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671827"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671827"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671827"
         },
         {
           "id": "SP_FOLEYELLIDES_MAYENAE_ROMERO_MAYEN_LEON_REGAGNON_2016",
@@ -5657,8 +5527,11 @@
           "uuid": "fbe82d7d-0982-5b1-945-15aba59432e3ad",
           "authorship": "(Walton, 1929)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671828"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1671828"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1671828"
         },
         {
           "id": "SP_FOLEYELLIDES_RHINELLAE_GARCIA_PRIETO_RUIZ_TORRES_OSORIO_SARABIA_MERLO_SERNA_2014",
@@ -5818,8 +5691,11 @@
           "uuid": "853ba7db-dfac-5b4-a04-f34290cf571053",
           "authorship": "Wehr & Dikmans, 1935",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1887316"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1887316"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1887316"
         },
         {
           "id": "SP_ELAEOPHORA_BOHMI",
@@ -5842,8 +5718,11 @@
           "uuid": "d7f48ef5-e367-548-8fa-e3531184801991",
           "authorship": "Hernandez Rodriguez, Martinez Gomez & Gutierrez Palomino, 1986",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1727675"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1727675"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1727675"
         },
         {
           "id": "SP_ELAEOPHORA_POELI",
@@ -6201,34 +6080,6 @@
           "uuid": "b22996b1-256d-5f2-a6e-fddf30b76062ba"
         },
         {
-          "id": "SP_LITOMOSOIDES_ODILAE_NOTARNICOLA_NAVONE_2002",
-          "name": "Litomosoides odilae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Litomosoides",
-          "authorship": "Notarnicola & Navone, 2002",
-          "sourceIds": {
-            "checklistbank": "59095"
-          },
-          "children": [],
-          "uuid": "474b245f-0adb-5e6-a7f-7d5e0774c71d46"
-        },
-        {
-          "id": "SP_LITOMOSOIDES_HAMLETI_SANDGROUND_1934",
-          "name": "Litomosoides hamleti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Litomosoides",
-          "authorship": "Sandground, 1934",
-          "sourceIds": {
-            "checklistbank": "59689"
-          },
-          "children": [],
-          "uuid": "a73e5ad4-5994-5a9-a41-e01a40c29681d5"
-        },
-        {
           "id": "SP_LITOMOSOIDES_CHAGASFILHOI_MORAIS_NETO_LANFREDI_SOUZA_1997",
           "name": "Litomosoides chagasfilhoi",
           "rank": "SPECIES",
@@ -6283,20 +6134,6 @@
           },
           "children": [],
           "uuid": "1d43f4e3-15db-59f-b37-a818c9da6beca3"
-        },
-        {
-          "id": "SP_LITOMOSOIDES_SERPICULA_MOLIN_1858",
-          "name": "Litomosoides serpicula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Litomosoides",
-          "authorship": "(Molin, 1858)",
-          "sourceIds": {
-            "checklistbank": "106225"
-          },
-          "children": [],
-          "uuid": "bc39db5c-116b-59c-bda-61a9ae13e3d8a8"
         },
         {
           "id": "SP_LITOMOSOIDES_SCOTTI",
@@ -6780,10 +6617,13 @@
           "lineage": "Mansonella",
           "authorship": "(Yamaguti, 1941) Bain & Uni, 2011",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1587310"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1587310"
+            ]
           },
           "children": [],
-          "uuid": "b296eb48-d66b-561-a28-656b92bc6b8690"
+          "uuid": "b296eb48-d66b-561-a28-656b92bc6b8690",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1587310"
         },
         {
           "id": "SP_MANSONELLA_AKITENSIS_UNI_1983_BAIN_UNI_2011",
@@ -6794,10 +6634,13 @@
           "lineage": "Mansonella",
           "authorship": "(Uni, 1983) Bain & Uni, 2011",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1587309"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1587309"
+            ]
           },
           "children": [],
-          "uuid": "2bd54807-6efc-580-8f3-f7d6461ad7241c"
+          "uuid": "2bd54807-6efc-580-8f3-f7d6461ad7241c",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1587309"
         },
         {
           "id": "SP_MANSONELLA_MARIAE_PETIT_BAIN_ROUSSILHON_1985",
@@ -7454,19 +7297,6 @@
           "uuid": "d970726c-732a-512-b56-b1378daeb6e622"
         },
         {
-          "id": "SP_MICROFILARIA_MATHISI_MESNIL_BRIMONT_1910",
-          "name": "Microfilaria mathisi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microfilaria",
-          "authorship": "Mesnil & Brimont, 1910",
-          "sourceIds": {
-            "checklistbank": "1028727"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MICROFILARIA_GYMNORHINAE_GILRUTH_SWEET_DODD",
           "name": "Microfilaria gymnorhinae",
           "rank": "SPECIES",
@@ -8083,47 +7913,10 @@
       "lineage": "onchocercidae"
     },
     {
-      "id": "GENUS_YATESIA",
-      "name": "Yatesia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_YATESIA_HYDROCHOERUS_YATES_JORGENSON_1983",
-          "name": "Yatesia hydrochoerus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Yatesia",
-          "authorship": "(Yates & Jorgenson, 1983)",
-          "sourceIds": {
-            "checklistbank": "26190"
-          },
-          "children": [],
-          "uuid": "ba7451b0-4ff0-58a-9a8-82663571360834"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "onchocercidae"
-    },
-    {
       "id": "GENUS_PIRATUBA",
       "name": "Piratuba",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PIRATUBA_DIGITICAUDA_LENT_FREITASI_1941",
-          "name": "Piratuba digiticauda",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Piratuba",
-          "authorship": "Lent & Freitasi, 1941",
-          "sourceIds": {
-            "checklistbank": "31374"
-          },
-          "children": [],
-          "uuid": "b0ed61f9-93b2-5d2-b22-b010ea36ae715a"
-        },
         {
           "id": "SP_PIRATUBA_LAINSONI_BAIN_1974",
           "name": "Piratuba lainsoni",
@@ -8905,45 +8698,6 @@
           "authorship": "Molin, 1858",
           "sourceIds": {
             "checklistbank": "992551"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FILARIA_BANCROFTI_COBBOLD_1877",
-          "name": "Filaria bancrofti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Filaria",
-          "authorship": "Cobbold, 1877",
-          "sourceIds": {
-            "checklistbank": "1023103"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FILARIA_OZZARDI_MANSON_1897",
-          "name": "Filaria ozzardi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Filaria",
-          "authorship": "Manson, 1897",
-          "sourceIds": {
-            "checklistbank": "1047185"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FILARIA_LOA_COBBOLD_1864",
-          "name": "Filaria loa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Filaria",
-          "authorship": "Cobbold, 1864",
-          "sourceIds": {
-            "checklistbank": "1055130"
           },
           "children": []
         },
@@ -10038,41 +9792,6 @@
       "lineage": "onchocercidae"
     },
     {
-      "id": "GENUS_MANSONELLA",
-      "name": "\"Mansonella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MANSONELLA_FILIAMAGUTIA_UNI_1983_BAIN_UNI_2011",
-          "name": "\"Mansonella (Filiamagutia)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mansonella",
-          "authorship": "\"(Uni, 1983) Bain & Uni, 2011\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1587309"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MANSONELLA_PSEUDOLITOSOMA_YAMAGUTI_1941_BAIN_UNI_2011",
-          "name": "\"Mansonella (Pseudolitosoma)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mansonella",
-          "authorship": "\"(Yamaguti, 1941) Bain & Uni, 2011\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1587310"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "onchocercidae"
-    },
-    {
       "id": "GENUS_SETARIA",
       "name": "\"Setaria",
       "rank": "GENUS",
@@ -10169,93 +9888,6 @@
       "lineage": "onchocercidae"
     },
     {
-      "id": "GENUS_FOLEYELLIDES",
-      "name": "\"Foleyellides",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FOLEYELLIDES_AMERICANA_WALTON_1929",
-          "name": "\"Foleyellides americana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Foleyellides",
-          "authorship": "\"(Walton, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671823"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FOLEYELLIDES_BRACHYOPTERA_WEHR_CAUSEY_1939",
-          "name": "\"Foleyellides brachyoptera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Foleyellides",
-          "authorship": "\"(Wehr & Causey, 1939)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671824"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FOLEYELLIDES_DOLICHOPTERA_WEHR_CAUSEY_1939",
-          "name": "\"Foleyellides dolichoptera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Foleyellides",
-          "authorship": "\"(Wehr & Causey, 1939)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671825"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FOLEYELLIDES_FLEXICAUDA_SCHACHER_CRANS_1973",
-          "name": "\"Foleyellides flexicauda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Foleyellides",
-          "authorship": "\"(Schacher & Crans, 1973)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671826"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FOLEYELLIDES_MALAYENSIS_PETIT_YEN_1979",
-          "name": "\"Foleyellides malayensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Foleyellides",
-          "authorship": "\"(Petit & Yen, 1979)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671827"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_FOLEYELLIDES_RANAE_WALTON_1929",
-          "name": "\"Foleyellides ranae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Foleyellides",
-          "authorship": "\"(Walton, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1671828"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "onchocercidae"
-    },
-    {
       "id": "GENUS_ONCHOCERCA",
       "name": "\"Onchocerca",
       "rank": "GENUS",
@@ -10283,19 +9915,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ELAEOPHORA_ELAPHI_HERNANDEZ_RODRIGUEZ_MARTINEZ_GOMEZ_GUTIERREZ_PALOMINO_1986",
-          "name": "\"Elaeophora elaphi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Elaeophora",
-          "authorship": "\"Hernandez Rodriguez, Martinez Gomez & Gutierrez Palomino, 1986\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1727675"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ELAEOPHORA_ABRAMOVI_OSHMARIN_BELOUS_1951",
           "name": "\"Elaeophora abramovi\"",
           "rank": "SPECIES",
@@ -10305,19 +9924,6 @@
           "authorship": "\"(Oshmarin & Belous, 1951)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1727676"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ELAEOPHORA_SCHNEIDERI_WEHR_DIKMANS_1935",
-          "name": "\"Elaeophora schneideri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Elaeophora",
-          "authorship": "\"Wehr & Dikmans, 1935\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1887316"
           },
           "children": []
         }
@@ -10546,32 +10152,6 @@
           "children": []
         },
         {
-          "id": "SP_OCHOTERENELLA_DUFOURAE_BAIN_KIM_PETITI_1979",
-          "name": "\"Ochoterenella dufourae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ochoterenella",
-          "authorship": "\"Bain, Kim & Petiti, 1979\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828065"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OCHOTERENELLA_GUYANENSIS_BAIN_PROD_HON_1974",
-          "name": "\"Ochoterenella guyanensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ochoterenella",
-          "authorship": "\"Bain & Prod'Hon, 1974\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828066"
-          },
-          "children": []
-        },
-        {
           "id": "SP_OCHOTERENELLA_CONVOLUTA_MOLIN_1858_ESSLINGER_1986",
           "name": "\"Ochoterenella convoluta\"",
           "rank": "SPECIES",
@@ -10581,19 +10161,6 @@
           "authorship": "\"(Molin, 1858) Esslinger, 1986\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1828067"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OCHOTERENELLA_ROYI_BAIN_KIM_PETIT_1979",
-          "name": "\"Ochoterenella royi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ochoterenella",
-          "authorship": "\"Bain, Kim & Petit, 1979\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1828071"
           },
           "children": []
         },
@@ -10655,19 +10222,6 @@
           "authorship": "\"(Molin, 1858) Diesing, 1861\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1844267"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DIPETALONEMA_GRACILE_RUDOLPHI_1809_YORKE_MAPLESTONE_1926",
-          "name": "\"Dipetalonema gracile\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dipetalonema",
-          "authorship": "\"(Rudolphi, 1809) Yorke & Maplestone, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1845613"
           },
           "children": []
         }
@@ -10812,8 +10366,8 @@
       "lineage": "onchocercidae"
     }
   ],
-  "genusCount": 114,
-  "speciesCount": 728,
+  "genusCount": 111,
+  "speciesCount": 696,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

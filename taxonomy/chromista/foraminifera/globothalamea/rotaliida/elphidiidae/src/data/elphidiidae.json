@@ -764,10 +764,12 @@
             ],
             "col": [
               "82FBK"
-            ]
+            ],
+            "checklistbank": "txn:354834"
           },
           "uuid": "ea0c5c01-d8ec-520-864-3600d6de142816",
-          "authorityIds": "col:82FBK,gbif:8936320"
+          "authorityIds": "col:82FBK,gbif:8936320",
+          "authorship": "Cook 1959"
         },
         {
           "id": "ELPHIDIUM_CAPELAVELAENSE",
@@ -5095,10 +5097,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8585614
+            "gbif": 8585614,
+            "checklistbank": "txn:153350"
           },
           "uuid": "60a9c491-71d1-51f-9bd-9a2d17fff96122",
-          "authorityIds": "gbif:8585614"
+          "authorityIds": "gbif:8585614",
+          "authorship": "Dorreen 1948"
         },
         {
           "id": "ELPHIDIUM_NOBILE",
@@ -9320,7 +9324,8 @@
           "sourceIds": {
             "checklistbank": "ott4008487"
           },
-          "children": []
+          "children": [],
+          "authorship": "d'Orbigny 1839"
         },
         {
           "id": "SP_ELPHIDIUM_UMBILICATULUM",
@@ -9512,6 +9517,18 @@
           "lineage": "Elphidium",
           "sourceIds": {
             "checklistbank": "882364"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ELPHIDIUM_ALBIUMBILICATUM",
+          "name": "Elphidium albiumbilicatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elphidium",
+          "sourceIds": {
+            "checklistbank": "335043"
           },
           "children": []
         }
@@ -9911,7 +9928,8 @@
             "checklistbank": "ott5667086"
           },
           "uuid": "9eb794ff-aa95-528-bb2-e4a30b0f888cb8",
-          "authorityIds": "gbif:7412087"
+          "authorityIds": "gbif:7412087",
+          "authorship": "McCulloch 1977"
         },
         {
           "id": "CRIBROELPHIDIUM_GLACIALIS",
@@ -14170,10 +14188,12 @@
             ],
             "col": [
               "7ZZ3G"
-            ]
+            ],
+            "checklistbank": "txn:428347"
           },
           "uuid": "4fced33d-b4f6-509-ab1-b4bd4c1f4f24fe",
-          "authorityIds": "col:7ZZ3G,gbif:9549178"
+          "authorityIds": "col:7ZZ3G,gbif:9549178",
+          "authorship": "Leckie and Webb 1986"
         }
       ]
     },
@@ -20500,10 +20520,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "elphidiidae"
+    },
+    {
+      "id": "GENUS_ROLSHAUSENIA",
+      "name": "Rolshausenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ROLSHAUSENIA_ROLSHAUSENI_CUSHMAN_AND_BERMUDEZ_1946",
+          "name": "Rolshausenia rolshauseni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rolshausenia",
+          "authorship": "Cushman and Bermudez 1946",
+          "sourceIds": {
+            "checklistbank": "txn:241515"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elphidiidae"
     }
   ],
-  "genusCount": 60,
-  "speciesCount": 1135,
+  "genusCount": 61,
+  "speciesCount": 1137,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

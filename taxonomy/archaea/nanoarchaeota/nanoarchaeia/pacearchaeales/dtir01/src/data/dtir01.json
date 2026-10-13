@@ -22,10 +22,12 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11613483
+            "gbif": 11613483,
+            "checklistbank": "s__JACRHU01 sp016211995"
           },
           "uuid": "1eb71de4-14f8-5d1-831-bcec5fd28b1163",
-          "authorityIds": "gbif:11613483"
+          "authorityIds": "gbif:11613483",
+          "children": []
         }
       ]
     },
@@ -47,12 +49,68 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11766045
+            "gbif": 11766045,
+            "checklistbank": "s__JAGVXL01 sp018303805"
           },
           "uuid": "c3417bce-a717-59d-a5f-9fbd250ff8e9d7",
-          "authorityIds": "gbif:11766045"
+          "authorityIds": "gbif:11766045",
+          "children": []
+        },
+        {
+          "id": "SP_JAGVXL01_SP043799715",
+          "name": "JAGVXL01 sp043799715",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JAGVXL01",
+          "sourceIds": {
+            "checklistbank": "s__JAGVXL01 sp043799715"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CAYSVT01",
+      "name": "CAYSVT01",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAYSVT01_SP964434685",
+          "name": "CAYSVT01 sp964434685",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "CAYSVT01",
+          "sourceIds": {
+            "checklistbank": "s__CAYSVT01 sp964434685"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dtir01"
+    },
+    {
+      "id": "GENUS_JAZDFA01",
+      "name": "JAZDFA01",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_JAZDFA01_SP043808285",
+          "name": "JAZDFA01 sp043808285",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "JAZDFA01",
+          "sourceIds": {
+            "checklistbank": "s__JAZDFA01 sp043808285"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dtir01"
     }
   ],
   "sourceIds": {
@@ -62,6 +120,9 @@
       "classKey": 10809188,
       "orderKey": 10814690,
       "familyKey": 11122611
-    }
-  }
+    },
+    "checklistbank": "f__DTIR01"
+  },
+  "genusCount": 4,
+  "speciesCount": 5
 }

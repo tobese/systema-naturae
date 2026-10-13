@@ -82,9 +82,11 @@
             "itis": [
               "52077"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:210725"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:210725"
+            ]
           },
-          "authorityIds": "col:3KBZS,itis:52077,wikidata:Q1056942",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:210725,col:3KBZS,itis:52077,wikidata:Q1056942",
           "authorship": "(Pallas, 1766)"
         },
         {
@@ -507,10 +509,38 @@
             "col": [
               "866QK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1440548"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1440548"
+            ]
           },
-          "authorityIds": "col:866QK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1440548,col:866QK",
           "authorship": "(Gregory, 1900)"
+        },
+        {
+          "id": "SP_PARAPOLYTREMACIS_ALLOITEAUI_ALLOITEAU_AND_TISSIER_1958",
+          "name": "Parapolytremacis alloiteaui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parapolytremacis",
+          "authorship": "Alloiteau and Tissier 1958",
+          "sourceIds": {
+            "checklistbank": "txn:112876"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARAPOLYTREMACIS_BELLARDII_HAIME_1852",
+          "name": "Parapolytremacis bellardii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parapolytremacis",
+          "authorship": "(Haime 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:117440"
+          },
+          "children": []
         }
       ]
     },
@@ -548,9 +578,11 @@
             "col": [
               "866SM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458925"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1458925"
+            ]
           },
-          "authorityIds": "col:866SM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458925,col:866SM",
           "authorship": "(Eguchi, 1948)"
         },
         {
@@ -621,9 +653,11 @@
             "col": [
               "KPXPL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1810545"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1810545"
+            ]
           },
-          "authorityIds": "col:KPXPL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1810545,col:KPXPL",
           "authorship": "Trauth, 1911"
         },
         {
@@ -661,9 +695,11 @@
             "col": [
               "BDD7N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1663538"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1663538"
+            ]
           },
-          "authorityIds": "col:BDD7N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1663538,col:BDD7N",
           "authorship": "(Stoliczka, 1873)"
         },
         {
@@ -1053,9 +1089,11 @@
             "col": [
               "866QD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458916"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1458916"
+            ]
           },
-          "authorityIds": "col:866QD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458916,col:866QD",
           "authorship": "(Reuss, 1866)"
         }
       ]
@@ -1112,121 +1150,20 @@
       "lineage": "helioporidae"
     },
     {
-      "id": "GENUS_HELIOPORA",
-      "name": "\"Heliopora",
+      "id": "GENUS_PROHELIOPORA",
+      "name": "Proheliopora",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HELIOPORA_COERULEA_PALLAS_1766",
-          "name": "\"Heliopora coerulea\"",
+          "id": "SP_PROHELIOPORA_KYSYLKUMENSIS_KUZMICHEVA_1970",
+          "name": "Proheliopora kysylkumensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliopora",
-          "authorship": "\"(Pallas, 1766)\"",
+          "lineage": "Proheliopora",
+          "authorship": "(Kuzmicheva 1970)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:210725"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HELIOPORA_TENERA_TRAUTH_1911",
-          "name": "\"Heliopora tenera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliopora",
-          "authorship": "\"Trauth, 1911\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1810545"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helioporidae"
-    },
-    {
-      "id": "GENUS_PARAPOLYTREMACIS",
-      "name": "\"Parapolytremacis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARAPOLYTREMACIS_SEPTIFERA_GREGORY_1900",
-          "name": "\"Parapolytremacis septifera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parapolytremacis",
-          "authorship": "\"(Gregory, 1900)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1440548"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helioporidae"
-    },
-    {
-      "id": "GENUS_OCTOTREMACIS",
-      "name": "\"Octotremacis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OCTOTREMACIS_HOCHSTETTERI_REUSS_1866",
-          "name": "\"Octotremacis hochstetteri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Octotremacis",
-          "authorship": "\"(Reuss, 1866)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458916"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helioporidae"
-    },
-    {
-      "id": "GENUS_PSEUDOPOLYTREMACIS",
-      "name": "\"Pseudopolytremacis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOPOLYTREMACIS_JAPONICA_EGUCHI_1948",
-          "name": "\"Pseudopolytremacis japonica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudopolytremacis",
-          "authorship": "\"(Eguchi, 1948)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1458925"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helioporidae"
-    },
-    {
-      "id": "GENUS_POLYTREMACIS",
-      "name": "\"Polytremacis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_POLYTREMACIS_EDWARDSANA_STOLICZKA_1873",
-          "name": "\"Polytremacis edwardsana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Polytremacis",
-          "authorship": "\"(Stoliczka, 1873)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1663538"
+            "checklistbank": "txn:117609"
           },
           "children": []
         }
@@ -1235,8 +1172,8 @@
       "lineage": "helioporidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 63,
+  "genusCount": 15,
+  "speciesCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1245,6 +1182,6 @@
       "orderKey": 12202578,
       "familyKey": 8203
     },
-    "checklistbank": "86513"
+    "checklistbank": "1b926f84-37f8-4fc8-a650-931c4061b9fb"
   }
 }

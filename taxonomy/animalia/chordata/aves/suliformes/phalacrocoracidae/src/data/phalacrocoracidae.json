@@ -36,9 +36,11 @@
             "itis": [
               "1255061"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1494896"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1494896"
+            ]
           },
-          "authorityIds": "col:D5K8J,itis:1255061,wikidata:Q244319",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1494896,col:D5K8J,itis:1255061,wikidata:Q244319",
           "authorship": "(Pallas, 1773)"
         },
         {
@@ -183,7 +185,8 @@
           "sourceIds": {
             "checklistbank": "774659"
           },
-          "children": []
+          "children": [],
+          "authorship": "van Tets 1994"
         }
       ]
     },
@@ -221,7 +224,8 @@
             ],
             "checklistbank": "1289608"
           },
-          "authorityIds": "col:DD8TJ,itis:1255062,wikidata:Q82988231"
+          "authorityIds": "col:DD8TJ,itis:1255062,wikidata:Q82988231",
+          "authorship": "Lesson and Garnot 1828"
         }
       ]
     },
@@ -259,7 +263,8 @@
             ],
             "checklistbank": "1289607"
           },
-          "authorityIds": "col:DD8TK,itis:1255063,wikidata:Q83022912"
+          "authorityIds": "col:DD8TK,itis:1255063,wikidata:Q83022912",
+          "authorship": "Brandt 1837"
         },
         {
           "id": "URILE_URILE",
@@ -289,7 +294,8 @@
             ],
             "checklistbank": "1289606"
           },
-          "authorityIds": "col:DD8TL,itis:1255064,wikidata:Q82980497"
+          "authorityIds": "col:DD8TL,itis:1255064,wikidata:Q82980497",
+          "authorship": "Gmelin 1789"
         },
         {
           "id": "URILE_PELAGICUS",
@@ -318,7 +324,8 @@
             ],
             "checklistbank": "1289605"
           },
-          "authorityIds": "col:D5K9D,itis:1255065,wikidata:Q83022790"
+          "authorityIds": "col:D5K9D,itis:1255065,wikidata:Q83022790",
+          "authorship": "Pallas 1811"
         },
         {
           "id": "URILE_PERSPICILLATUS",
@@ -706,7 +713,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Phalacrocorax",
-          "uuid": "576e148b-b97c-557-89a-78e9a61fc7c89f"
+          "uuid": "576e148b-b97c-557-89a-78e9a61fc7c89f",
+          "authorship": "Kurochkin 1971",
+          "sourceIds": {
+            "checklistbank": "txn:336815"
+          }
         },
         {
           "id": "SP_PHALACROCORAX_SERDICENSIS",
@@ -716,7 +727,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Phalacrocorax",
-          "uuid": "46d5301b-2ffe-56f-8c3-68e58d56e4960a"
+          "uuid": "46d5301b-2ffe-56f-8c3-68e58d56e4960a",
+          "authorship": "Burchak-Abramovich and Nikolov 1984",
+          "sourceIds": {
+            "checklistbank": "txn:429227"
+          }
         },
         {
           "id": "SP_PHALACROCORAX_ARISTOTELIS_LINNAEUS_1761",
@@ -745,34 +760,6 @@
           },
           "children": [],
           "uuid": "4f345f11-d90d-55e-962-35a105b1aa0a4f"
-        },
-        {
-          "id": "SP_PHALACROCORAX_PERSPICILLATUS_PALLAS_1811",
-          "name": "Phalacrocorax perspicillatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phalacrocorax",
-          "authorship": "Pallas, 1811",
-          "sourceIds": {
-            "checklistbank": "17250"
-          },
-          "children": [],
-          "uuid": "0538d72e-8540-564-a73-918a772932cb7e"
-        },
-        {
-          "id": "SP_PHALACROCORAX_AURITUS_LESSON_1831",
-          "name": "Phalacrocorax auritus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phalacrocorax",
-          "authorship": "(Lesson, 1831)",
-          "sourceIds": {
-            "checklistbank": "100706"
-          },
-          "children": [],
-          "uuid": "ba64af3e-b8bb-538-a9b-a5e2f659ddcda2"
         },
         {
           "id": "SP_PHALACROCORAX_GAIMARDI",
@@ -910,7 +897,8 @@
             "checklistbank": "174932"
           },
           "children": [],
-          "uuid": "fb3a6be4-c9b7-513-beb-cedc068762e00e"
+          "uuid": "fb3a6be4-c9b7-513-beb-cedc068762e00e",
+          "authorship": "(Gmelin 1789)"
         },
         {
           "id": "SP_PHALACROCORAX_CHALCONOTUS",
@@ -980,20 +968,6 @@
           "uuid": "22f14cc4-a94f-5a2-89c-3e2239c60f4bec"
         },
         {
-          "id": "SP_PHALACROCORAX_ATRICEPS",
-          "name": "Phalacrocorax atriceps",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phalacrocorax",
-          "sourceIds": {
-            "checklistbank": "174938"
-          },
-          "children": [],
-          "authorship": "King, 1828",
-          "uuid": "0cb55acb-4570-510-a12-78345f19ad3e3c"
-        },
-        {
           "id": "SP_PHALACROCORAX_BRANSFIELDENSIS",
           "name": "Phalacrocorax bransfieldensis",
           "rank": "SPECIES",
@@ -1058,7 +1032,8 @@
             "checklistbank": "175014"
           },
           "children": [],
-          "uuid": "569255e9-4215-513-8a9-16c3bd0f505ab1"
+          "uuid": "569255e9-4215-513-8a9-16c3bd0f505ab1",
+          "authorship": "(von Brandt 1837)"
         },
         {
           "id": "SP_PHALACROCORAX_AFRICANUS_GMELIN_1789",
@@ -1178,7 +1153,8 @@
           "sourceIds": {
             "checklistbank": "ott3600646"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Miller 1929)"
         },
         {
           "id": "SP_PHALACROCORAX_ROGERSI",
@@ -1190,7 +1166,8 @@
           "sourceIds": {
             "checklistbank": "ott3600647"
           },
-          "children": []
+          "children": [],
+          "authorship": "Howard 1932"
         },
         {
           "id": "SP_PHALACROCORAX_KENNELLI",
@@ -1202,7 +1179,8 @@
           "sourceIds": {
             "checklistbank": "ott3600648"
           },
-          "children": []
+          "children": [],
+          "authorship": "Howard 1949"
         },
         {
           "id": "SP_PHALACROCORAX_WETMOREI",
@@ -1214,7 +1192,8 @@
           "sourceIds": {
             "checklistbank": "ott3600662"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1955"
         },
         {
           "id": "SP_PHALACROCORAX_KENYONI",
@@ -1238,7 +1217,8 @@
           "sourceIds": {
             "checklistbank": "ott6154779"
           },
-          "children": []
+          "children": [],
+          "authorship": "Alvarez 1977"
         },
         {
           "id": "SP_PHALACROCORAX_DESTEFANII",
@@ -1262,7 +1242,8 @@
           "sourceIds": {
             "checklistbank": "ott6154782"
           },
-          "children": []
+          "children": [],
+          "authorship": "Emslie 1995"
         },
         {
           "id": "SP_PHALACROCORAX_GOLETENSIS",
@@ -1274,7 +1255,8 @@
           "sourceIds": {
             "checklistbank": "ott6154783"
           },
-          "children": []
+          "children": [],
+          "authorship": "Howard 1965"
         },
         {
           "id": "SP_PHALACROCORAX_IDAHENSIS",
@@ -1286,7 +1268,8 @@
           "sourceIds": {
             "checklistbank": "ott6154785"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Marsh 1870)"
         },
         {
           "id": "SP_PHALACROCORAX_INTERMEDIUS",
@@ -1298,7 +1281,8 @@
           "sourceIds": {
             "checklistbank": "ott6154786"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Milne-Edwards 1867)"
         },
         {
           "id": "SP_PHALACROCORAX_LEPTOPUS",
@@ -1310,7 +1294,8 @@
           "sourceIds": {
             "checklistbank": "ott6154787"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1961"
         },
         {
           "id": "SP_PHALACROCORAX_LONGIPES",
@@ -1322,7 +1307,8 @@
           "sourceIds": {
             "checklistbank": "ott6154788"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Tugarinov 1940)"
         },
         {
           "id": "SP_PHALACROCORAX_MACER",
@@ -1334,7 +1320,8 @@
           "sourceIds": {
             "checklistbank": "ott6154789"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1958"
         },
         {
           "id": "SP_PHALACROCORAX_MARINAVIS",
@@ -1346,7 +1333,8 @@
           "sourceIds": {
             "checklistbank": "ott6154791"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shufeldt 1915"
         },
         {
           "id": "SP_PHALACROCORAX_MEDITERRANEUS",
@@ -1358,7 +1346,8 @@
           "sourceIds": {
             "checklistbank": "ott6154792"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shufeldt 1915"
         },
         {
           "id": "SP_PHALACROCORAX_RELIQUUS",
@@ -1370,7 +1359,8 @@
           "sourceIds": {
             "checklistbank": "ott6154796"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kurochkin 1976"
         },
         {
           "id": "SP_PHALACROCORAX_AEOLUS",
@@ -1442,7 +1432,8 @@
           "sourceIds": {
             "checklistbank": "ott7662776"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Milne-Edwards 1863)"
         },
         {
           "id": "SP_PHALACROCORAX_LUGUBRIS",
@@ -1477,6 +1468,71 @@
           "lineage": "Phalacrocorax",
           "sourceIds": {
             "checklistbank": "ott7662782"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHALACROCORAX_MACROPUS_COPE_1878",
+          "name": "Phalacrocorax macropus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalacrocorax",
+          "authorship": "(Cope 1878)",
+          "sourceIds": {
+            "checklistbank": "txn:229487"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHALACROCORAX_PRAECARBO_VON_AMMON_1918",
+          "name": "Phalacrocorax praecarbo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalacrocorax",
+          "authorship": "(von Ammon 1918)",
+          "sourceIds": {
+            "checklistbank": "txn:369851"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHALACROCORAX_NOVAEZEALANDIAE_FORBES_1891",
+          "name": "Phalacrocorax novaezealandiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalacrocorax",
+          "authorship": "Forbes 1891",
+          "sourceIds": {
+            "checklistbank": "txn:369856"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHALACROCORAX_RISGOVIENSIS_FRAAS_1882",
+          "name": "Phalacrocorax risgoviensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalacrocorax",
+          "authorship": "Fraas 1882",
+          "sourceIds": {
+            "checklistbank": "txn:369859"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHALACROCORAX_LAUTUS_KUROCHKIN_AND_GANEA_1972",
+          "name": "Phalacrocorax lautus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalacrocorax",
+          "authorship": "Kurochkin and Ganea 1972",
+          "sourceIds": {
+            "checklistbank": "txn:429226"
           },
           "children": []
         }
@@ -1556,7 +1612,8 @@
             ],
             "checklistbank": "1289603"
           },
-          "authorityIds": "col:DD8TQ,itis:1255068,wikidata:Q82955137"
+          "authorityIds": "col:DD8TQ,itis:1255068,wikidata:Q82955137",
+          "authorship": "Rothschild 1898"
         },
         {
           "id": "NANNOPTERUM_BRASILIANUM",
@@ -1643,7 +1700,8 @@
           "sourceIds": {
             "checklistbank": "ott170200"
           },
-          "children": []
+          "children": [],
+          "authorship": "Lesson 1831"
         }
       ]
     },
@@ -1680,7 +1738,8 @@
             ],
             "checklistbank": "1289600"
           },
-          "authorityIds": "col:D5K94,itis:1255071,wikidata:Q83003323"
+          "authorityIds": "col:D5K94,itis:1255071,wikidata:Q83003323",
+          "authorship": "Gmelin 1789"
         },
         {
           "id": "LEUCOCARBO_BOUGAINVILLIORUM",
@@ -1709,7 +1768,8 @@
             ],
             "checklistbank": "1580339"
           },
-          "authorityIds": "col:DTFQG,itis:1255072,wikidata:Q27074617"
+          "authorityIds": "col:DTFQG,itis:1255072,wikidata:Q27074617",
+          "authorship": "Lesson 1837"
         },
         {
           "id": "LEUCOCARBO_RANFURLYI",
@@ -1736,9 +1796,11 @@
             "itis": [
               "824011"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773451"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1773451"
+            ]
           },
-          "authorityIds": "col:725KC,itis:824011,wikidata:Q677266",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773451,col:725KC,itis:824011,wikidata:Q677266",
           "authorship": "(Ogilvie-Grant, 1901)"
         },
         {
@@ -1766,9 +1828,11 @@
             "itis": [
               "824006"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611502"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1611502"
+            ]
           },
-          "authorityIds": "col:6PTKH,itis:824006,wikidata:Q25626",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1611502,col:6PTKH,itis:824006,wikidata:Q25626",
           "authorship": "(Gmelin, 1789)"
         },
         {
@@ -1797,9 +1861,11 @@
             "col": [
               "6PTKC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773448"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1773448"
+            ]
           },
-          "authorityIds": "col:6PTKC,itis:824008,wikidata:Q27074620",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773448,col:6PTKC,itis:824008,wikidata:Q27074620",
           "authorship": "(Forbes, 1893)"
         },
         {
@@ -1827,9 +1893,11 @@
             "itis": [
               "824007"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610891"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610891"
+            ]
           },
-          "authorityIds": "col:6Q5KH,itis:824007,wikidata:Q27074618",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610891,col:6Q5KH,itis:824007,wikidata:Q27074618",
           "authorship": "(G.R. Gray, 1845)"
         },
         {
@@ -1857,9 +1925,11 @@
             "itis": [
               "824010"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773446"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1773446"
+            ]
           },
-          "authorityIds": "col:725KH,itis:824010,wikidata:Q27074623",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773446,col:725KH,itis:824010,wikidata:Q27074623",
           "authorship": "(Buller, 1888)"
         },
         {
@@ -1887,9 +1957,11 @@
             "col": [
               "725KG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773445"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1773445"
+            ]
           },
-          "authorityIds": "col:725KG,itis:824009,wikidata:Q27074621",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773445,col:725KG,itis:824009,wikidata:Q27074621",
           "authorship": "(Filhol, 1878)"
         },
         {
@@ -1916,9 +1988,11 @@
             "col": [
               "725KJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603882"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1603882"
+            ]
           },
-          "authorityIds": "col:725KJ,itis:824003,wikidata:Q12262259",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1603882,col:725KJ,itis:824003,wikidata:Q12262259",
           "authorship": "(King, 1828)"
         },
         {
@@ -1946,9 +2020,11 @@
             "col": [
               "6PTKF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603885"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1603885"
+            ]
           },
-          "authorityIds": "col:6PTKF,itis:824174,wikidata:Q2997424",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1603885,col:6PTKF,itis:824174,wikidata:Q2997424",
           "authorship": "(Lönnberg, 1906)"
         },
         {
@@ -1977,7 +2053,8 @@
             ],
             "checklistbank": "ott3600651"
           },
-          "authorityIds": "col:6Q5KF,itis:824175,wikidata:Q2997421"
+          "authorityIds": "col:6Q5KF,itis:824175,wikidata:Q2997421",
+          "authorship": "(Blyth, 1860)"
         },
         {
           "id": "LEUCOCARBO_BRANSFIELDENSIS",
@@ -2004,9 +2081,11 @@
             "itis": [
               "824173"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1486689"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1486689"
+            ]
           },
-          "authorityIds": "col:6Q5KG,itis:824173,wikidata:Q1264549",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1486689,col:6Q5KG,itis:824173,wikidata:Q1264549",
           "authorship": "(Murphy, 1936)"
         },
         {
@@ -2066,7 +2145,8 @@
             ],
             "checklistbank": "ott3600650"
           },
-          "authorityIds": "col:725KF,itis:824176,wikidata:Q1261443"
+          "authorityIds": "col:725KF,itis:824176,wikidata:Q1261443",
+          "authorship": "(Falla, 1937)"
         },
         {
           "id": "LEUCOCARBO_PURPURASCENS",
@@ -2092,9 +2172,11 @@
             "itis": [
               "824177"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773450"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1773450"
+            ]
           },
-          "authorityIds": "col:6Q5KC,itis:824177,wikidata:Q1262501",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1773450,col:6Q5KC,itis:824177,wikidata:Q1262501",
           "authorship": "(Brandt, 1837)"
         },
         {
@@ -2259,19 +2341,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HALIEUS_VERRUCOSUS_CABANIS_1875",
-          "name": "Halieus verrucosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Halieus",
-          "authorship": "Cabanis, 1875",
-          "sourceIds": {
-            "checklistbank": "816897"
-          },
-          "children": []
-        },
-        {
           "id": "SP_HALIEUS_LUCIDUS_LICHTENSTEIN_1823",
           "name": "Halieus lucidus",
           "rank": "SPECIES",
@@ -2430,7 +2499,8 @@
           "sourceIds": {
             "checklistbank": "ott3600664"
           },
-          "children": []
+          "children": [],
+          "authorship": "Chandler 1990"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2450,6 +2520,20 @@
           "lineage": "Limicorallus",
           "sourceIds": {
             "checklistbank": "ott6151870"
+          },
+          "children": [],
+          "authorship": "(Kurochkin 1968)"
+        },
+        {
+          "id": "SP_LIMICORALLUS_CARBUNCULUS_MAYR_2009",
+          "name": "Limicorallus carbunculus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limicorallus",
+          "authorship": "Mayr 2009",
+          "sourceIds": {
+            "checklistbank": "txn:429145"
           },
           "children": []
         }
@@ -2493,7 +2577,8 @@
           "sourceIds": {
             "checklistbank": "ott6154798"
           },
-          "children": []
+          "children": [],
+          "authorship": "Harrison and Walker 1976"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2837,17 +2922,39 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1436395"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phalacrocoracidae"
+    },
+    {
+      "id": "GENUS_BORVOCARBO",
+      "name": "Borvocarbo",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_MICROCARBO_PYGMAEUS_PALLAS_1773",
-          "name": "\"Microcarbo pygmaeus\"",
+          "id": "SP_BORVOCARBO_TARDATUS_G_HLICH_AND_MOURER_CAUVIRE_2010",
+          "name": "Borvocarbo tardatus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Microcarbo",
-          "authorship": "\"(Pallas, 1773)\"",
+          "lineage": "Borvocarbo",
+          "authorship": "Göhlich and Mourer-Cauvire 2010",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1494896"
+            "checklistbank": "txn:227171"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BORVOCARBO_GUILLOTI_MOURER_CHAUVIR_ET_AL_2004",
+          "name": "Borvocarbo guilloti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Borvocarbo",
+          "authorship": "Mourer-Chauviré et al. 2004",
+          "sourceIds": {
+            "checklistbank": "txn:227172"
           },
           "children": []
         }
@@ -2856,137 +2963,147 @@
       "lineage": "phalacrocoracidae"
     },
     {
-      "id": "GENUS_LEUCOCARBO",
-      "name": "\"Leucocarbo",
+      "id": "GENUS_OLIGOCORAX",
+      "name": "Oligocorax",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LEUCOCARBO_BRANSFIELDENSIS_MURPHY_1936",
-          "name": "\"Leucocarbo bransfieldensis\"",
+          "id": "SP_OLIGOCORAX_LITTORALIS_MILNE_EDWARDS_1863",
+          "name": "Oligocorax littoralis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Murphy, 1936)\"",
+          "lineage": "Oligocorax",
+          "authorship": "(Milne-Edwards 1863)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1486689"
+            "checklistbank": "txn:369844"
           },
           "children": []
         },
         {
-          "id": "SP_LEUCOCARBO_ATRICEPS_KING_1828",
-          "name": "\"Leucocarbo atriceps\"",
+          "id": "SP_OLIGOCORAX_STOEFFELENSIS_MAYR_2007",
+          "name": "Oligocorax stoeffelensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(King, 1828)\"",
+          "lineage": "Oligocorax",
+          "authorship": "(Mayr 2007)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603882"
+            "checklistbank": "txn:227173"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phalacrocoracidae"
+    },
+    {
+      "id": "GENUS_PARACORAX",
+      "name": "Paracorax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARACORAX_DESTEFANII_REGALIA_1902",
+          "name": "Paracorax destefanii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paracorax",
+          "authorship": "(Regalia 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:336372"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phalacrocoracidae"
+    },
+    {
+      "id": "GENUS_NAMBASHAG",
+      "name": "Nambashag",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NAMBASHAG_BILLEROOENSIS_WORTHY_2011",
+          "name": "Nambashag billerooensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nambashag",
+          "authorship": "Worthy 2011",
+          "sourceIds": {
+            "checklistbank": "txn:429140"
           },
           "children": []
         },
         {
-          "id": "SP_LEUCOCARBO_GEORGIANUS_L_NNBERG_1906",
-          "name": "\"Leucocarbo georgianus\"",
+          "id": "SP_NAMBASHAG_MICROGLAUCUS_WORTHY_2011",
+          "name": "Nambashag microglaucus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Lönnberg, 1906)\"",
+          "lineage": "Nambashag",
+          "authorship": "Worthy 2011",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603885"
+            "checklistbank": "txn:429142"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phalacrocoracidae"
+    },
+    {
+      "id": "GENUS_NECTORNIS",
+      "name": "Nectornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NECTORNIS_MIOCAENUS_MILNE_EDWARDS_1868",
+          "name": "Nectornis miocaenus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nectornis",
+          "authorship": "(Milne-Edwards 1868)",
+          "sourceIds": {
+            "checklistbank": "txn:369845"
           },
           "children": []
         },
         {
-          "id": "SP_LEUCOCARBO_CHALCONOTUS_G_R_GRAY_1845",
-          "name": "\"Leucocarbo chalconotus\"",
+          "id": "SP_NECTORNIS_ANATOLICUS_PAICHELER_ET_AL_1978",
+          "name": "Nectornis anatolicus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(G.R. Gray, 1845)\"",
+          "lineage": "Nectornis",
+          "authorship": "(Paicheler et al. 1978)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610891"
+            "checklistbank": "txn:370228"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "phalacrocoracidae"
+    },
+    {
+      "id": "GENUS_PRAECARBO",
+      "name": "Praecarbo",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_LEUCOCARBO_CARUNCULATUS_GMELIN_1789",
-          "name": "\"Leucocarbo carunculatus\"",
+          "id": "SP_PRAECARBO_STRIGONIENSIS_KESSLER_AND_HORV_TH_2023",
+          "name": "Praecarbo strigoniensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Gmelin, 1789)\"",
+          "lineage": "Praecarbo",
+          "authorship": "Kessler and Horváth 2023",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1611502"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEUCOCARBO_CAMPBELLI_FILHOL_1878",
-          "name": "\"Leucocarbo campbelli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Filhol, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773445"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEUCOCARBO_COLENSOI_BULLER_1888",
-          "name": "\"Leucocarbo colensoi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Buller, 1888)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773446"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEUCOCARBO_ONSLOWI_FORBES_1893",
-          "name": "\"Leucocarbo onslowi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Forbes, 1893)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773448"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEUCOCARBO_PURPURASCENS_BRANDT_1837",
-          "name": "\"Leucocarbo purpurascens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Brandt, 1837)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773450"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEUCOCARBO_RANFURLYI_OGILVIE_GRANT_1901",
-          "name": "\"Leucocarbo ranfurlyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucocarbo",
-          "authorship": "\"(Ogilvie-Grant, 1901)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1773451"
+            "checklistbank": "txn:477634"
           },
           "children": []
         }
@@ -2995,8 +3112,8 @@
       "lineage": "phalacrocoracidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 166,
+  "genusCount": 25,
+  "speciesCount": 167,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

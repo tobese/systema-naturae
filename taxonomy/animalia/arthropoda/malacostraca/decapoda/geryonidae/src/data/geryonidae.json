@@ -360,7 +360,8 @@
           "sourceIds": {
             "col": [
               "BBSWN"
-            ]
+            ],
+            "checklistbank": "txn:400778"
           },
           "authorityIds": "col:BBSWN"
         },
@@ -637,7 +638,8 @@
           "sourceIds": {
             "col": [
               "BV5TM"
-            ]
+            ],
+            "checklistbank": "txn:479139"
           },
           "authorityIds": "col:BV5TM"
         },
@@ -741,27 +743,6 @@
           "authorityIds": "col:69N4Q"
         },
         {
-          "id": "SP_CHACEON_FENNERI_MANNING_HOLTHUIS_1984",
-          "name": "Chaceon fenneri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Chaceon",
-          "authorship": "(Manning & Holthuis, 1984)",
-          "children": [],
-          "uuid": "d2fdd874-35cd-592-909-a27b13727234f5",
-          "sourceIds": {
-            "itis": [
-              "620991"
-            ],
-            "col": [
-              "T996"
-            ],
-            "checklistbank": "959078"
-          },
-          "authorityIds": "col:T996,itis:620991"
-        },
-        {
           "id": "SP_CHACEON_NOTIALIS_MANNING_HOLTHUIS_1989",
           "name": "Chaceon notialis",
           "rank": "SPECIES",
@@ -822,7 +803,8 @@
           "sourceIds": {
             "checklistbank": "ott6372260"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kato and Koizumi 2001"
         },
         {
           "id": "SP_CHACEON_OTTNANGENSIS",
@@ -834,7 +816,8 @@
           "sourceIds": {
             "checklistbank": "ott6372265"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Bachmayer 1953)"
         },
         {
           "id": "SP_CHACEON_SP",
@@ -1092,9 +1075,11 @@
             "col": [
               "BKSSG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669759"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1669759"
+            ]
           },
-          "authorityIds": "col:BKSSG"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1669759,col:BKSSG"
         },
         {
           "id": "SP_COELOMA_BALTICUM_SCHL_TER_1879",
@@ -1376,7 +1361,8 @@
           "sourceIds": {
             "col": [
               "BBWVS"
-            ]
+            ],
+            "checklistbank": "txn:400779"
           },
           "authorityIds": "col:BBWVS"
         },
@@ -1475,19 +1461,6 @@
           "children": []
         },
         {
-          "id": "SP_GERYON_QUINQUEDENS_SMITH_1879",
-          "name": "Geryon quinquedens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Geryon",
-          "authorship": "Smith, 1879",
-          "sourceIds": {
-            "checklistbank": "1044861"
-          },
-          "children": []
-        },
-        {
           "id": "SP_GERYON_LATIFRONS",
           "name": "Geryon latifrons",
           "rank": "SPECIES",
@@ -1496,6 +1469,19 @@
           "lineage": "Geryon",
           "sourceIds": {
             "checklistbank": "ott7695853"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GERYON_FENNERI_MANNING_AND_HOLTHUIS_1984",
+          "name": "Geryon fenneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geryon",
+          "authorship": "(Manning and Holthuis 1984)",
+          "sourceIds": {
+            "checklistbank": "txn:388818"
           },
           "children": []
         }
@@ -1778,44 +1764,10 @@
       "lineage": "geryonidae"
     },
     {
-      "id": "GENUS_CARCINONECTES",
-      "name": "Carcinonectes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CARCINONECTES_PACIFICUS_STEPHENSON_1972",
-          "name": "Carcinonectes pacificus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Carcinonectes",
-          "authorship": "Stephenson, 1972",
-          "sourceIds": {
-            "checklistbank": "695285"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "geryonidae"
-    },
-    {
       "id": "GENUS_OVALIPES",
       "name": "Ovalipes",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_OVALIPES_OCELLATUS",
-          "name": "Ovalipes ocellatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ovalipes",
-          "sourceIds": {
-            "checklistbank": "52521"
-          },
-          "children": []
-        },
         {
           "id": "SP_OVALIPES_CATHARUS",
           "name": "Ovalipes catharus",
@@ -1911,26 +1863,17 @@
             "checklistbank": "1389111"
           },
           "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "geryonidae"
-    },
-    {
-      "id": "GENUS_COELOMA",
-      "name": "\"Coeloma",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_COELOMA_EGERENSE_L_RENTHEY_I_IN_I_L_RENTHEY_BEURLEN_1929",
-          "name": "\"Coeloma egerense\"",
+          "id": "SP_OVALIPES_FORMOSANUS_HU_AND_TAO_1996",
+          "name": "Ovalipes formosanus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Coeloma",
-          "authorship": "\"Lőrenthey <i>in</i> Lőrenthey & Beurlen, 1929\"",
+          "lineage": "Ovalipes",
+          "authorship": "Hu and Tao 1996",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669759"
+            "checklistbank": "txn:224494"
           },
           "children": []
         }
@@ -1939,11 +1882,11 @@
       "lineage": "geryonidae"
     }
   ],
-  "speciesCount": 105,
+  "speciesCount": 102,
   "appSlug": "geryonidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 16,
+  "genusCount": 14,
   "sourceIds": {
     "checklistbank": "6775"
   }

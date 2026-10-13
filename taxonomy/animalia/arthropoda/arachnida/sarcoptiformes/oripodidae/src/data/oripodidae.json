@@ -1283,20 +1283,6 @@
           "children": []
         },
         {
-          "id": "SP_ORIPODA_INCURVA_BERLESE_1916",
-          "name": "Oripoda incurva",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oripoda",
-          "authorship": "Berlese, 1916",
-          "sourceIds": {
-            "checklistbank": "222481"
-          },
-          "children": [],
-          "uuid": "0f2172fc-d75f-540-974-886c10350854bb"
-        },
-        {
           "id": "SP_ORIPODA_LENKOI_BALOGH_MAHUNKA_1978",
           "name": "Oripoda lenkoi",
           "rank": "SPECIES",
@@ -1763,6 +1749,19 @@
           "lineage": "Benoibates",
           "sourceIds": {
             "checklistbank": "297446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BENOIBATES_CHIAPASENSIS_WOOLLEY_1971",
+          "name": "Benoibates chiapasensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Benoibates",
+          "authorship": "(Woolley 1971)",
+          "sourceIds": {
+            "checklistbank": "txn:260490"
           },
           "children": []
         }
@@ -2336,18 +2335,6 @@
           "uuid": "db4420ce-7af7-538-8cf-d100c84bf058e0",
           "authorityIds": "col:4D8TS,gbif:2190386,itis:742657",
           "children": []
-        },
-        {
-          "id": "SP_PARAPIRNODUS_DENAIUS",
-          "name": "Parapirnodus denaius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Parapirnodus",
-          "sourceIds": {
-            "checklistbank": "262914"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2578,52 +2565,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PIRNODUS_DETECTIDENS_GRANDJEAN_1956",
-          "name": "Pirnodus detectidens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "pirnodus",
-          "authorship": "Grandjean, 1956",
-          "sourceIds": {
-            "gbif": [
-              "2191186"
-            ],
-            "itis": [
-              "743282"
-            ],
-            "col": [
-              "4J87T"
-            ]
-          },
-          "uuid": "68201b8a-306c-5b4-b53-b528a57afb3007",
-          "authorityIds": "col:4J87T,gbif:2191186,itis:743282",
-          "children": []
-        },
-        {
-          "id": "SP_PIRNODUS_SOYERI_TRAV_1969",
-          "name": "Pirnodus soyeri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "pirnodus",
-          "authorship": "Travé, 1969",
-          "sourceIds": {
-            "gbif": [
-              "2191188"
-            ],
-            "col": [
-              "6VKRY"
-            ],
-            "itis": [
-              "743283"
-            ]
-          },
-          "uuid": "4bc60f3c-9ab7-53b-a44-e73b250eeefeec",
-          "authorityIds": "col:6VKRY,gbif:2191188,itis:743283",
-          "children": []
-        },
-        {
           "id": "SP_PIRNODUS_IMITANS_BALOGH_MAHUNKA_1968",
           "name": "Pirnodus imitans",
           "rank": "SPECIES",
@@ -2833,49 +2774,6 @@
       "lineage": "Oripodidae"
     },
     {
-      "id": "GENUS_EXORIBATULA",
-      "name": "Exoribatula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EXORIBATULA_MARGINATUS_HAMMER_1973",
-          "name": "Exoribatula marginatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Exoribatula",
-          "authorship": "Hammer, 1973",
-          "sourceIds": {
-            "checklistbank": "954055"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "oripodidae"
-    },
-    {
-      "id": "GENUS_EXORIPODA",
-      "name": "Exoripoda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EXORIPODA_SURAMERICANA",
-          "name": "Exoripoda suramericana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Exoripoda",
-          "sourceIds": {
-            "checklistbank": "262913"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "oripodidae"
-    },
-    {
       "id": "GENUS_REDUCTOPORIDA",
       "name": "Reductoporida",
       "rank": "GENUS",
@@ -3045,13 +2943,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oripodidae"
+    },
+    {
+      "id": "GENUS_PARAPIMODUS",
+      "name": "Parapimodus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAPIMODUS_DENAIUS_WOOLLEY_1971",
+          "name": "Parapimodus denaius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parapimodus",
+          "authorship": "(Woolley 1971)",
+          "sourceIds": {
+            "checklistbank": "txn:260498"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oripodidae"
     }
   ],
-  "speciesCount": 136,
+  "speciesCount": 132,
   "appSlug": "oripodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 24,
+  "genusCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3060,6 +2980,6 @@
       "orderKey": 542,
       "familyKey": 7461
     },
-    "checklistbank": "229859"
+    "checklistbank": "16001"
   }
 }

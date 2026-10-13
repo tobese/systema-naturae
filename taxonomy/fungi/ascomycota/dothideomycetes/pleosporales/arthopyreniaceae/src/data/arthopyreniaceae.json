@@ -199,10 +199,12 @@
             "mycobank": [
               "364267"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:723705"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:723705"
+            ]
           },
           "uuid": "6cadc749-b77c-53a-968-ad5743463e7a29",
-          "authorityIds": "gbif:3529259,mycobank:364267"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:723705,gbif:3529259,mycobank:364267"
         },
         {
           "id": "ARTHOPYRENIA_BILIMBIACEA",
@@ -2047,42 +2049,6 @@
           "lineage": "Arthopyrenia",
           "sourceIds": {
             "checklistbank": "462360"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ARTHOPYRENIA_DEGELII",
-          "name": "Arthopyrenia degelii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthopyrenia",
-          "sourceIds": {
-            "checklistbank": "462362"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ARTHOPYRENIA_EXASPERATA",
-          "name": "Arthopyrenia exasperata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthopyrenia",
-          "sourceIds": {
-            "checklistbank": "462364"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ARTHOPYRENIA_OBLONGENS",
-          "name": "Arthopyrenia oblongens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arthopyrenia",
-          "sourceIds": {
-            "checklistbank": "462365"
           },
           "children": []
         },
@@ -5930,19 +5896,6 @@
           "children": []
         },
         {
-          "id": "SP_MICROTHELIA_BETULINA_J_LAHM_1865",
-          "name": "Microthelia betulina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microthelia",
-          "authorship": "J.Lahm, 1865",
-          "sourceIds": {
-            "checklistbank": "55393"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MICROTHELIA_ANALEPTOIDES_BAGL_CARESTIA_1863",
           "name": "Microthelia analeptoides",
           "rank": "SPECIES",
@@ -7103,19 +7056,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ARTHOPYRENIA_BALANOPHILA_ZAHLBR_1941",
-          "name": "\"Arthopyrenia balanophila\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthopyrenia",
-          "authorship": "\"Zahlbr., 1941\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:723705"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ARTHOPYRENIA_MARITIMA_VSTEDAL_1986",
           "name": "\"Arthopyrenia maritima\"",
           "rank": "SPECIES",
@@ -7135,7 +7075,7 @@
   ],
   "authorship": "Walt. Watson",
   "genusCount": 30,
-  "speciesCount": 506,
+  "speciesCount": 501,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

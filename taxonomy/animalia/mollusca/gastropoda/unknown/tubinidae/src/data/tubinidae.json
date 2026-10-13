@@ -66,9 +66,11 @@
             "col": [
               "7T4PH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1479508"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1479508"
+            ]
           },
-          "authorityIds": "col:7T4PH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1479508,col:7T4PH",
           "authorship": "(F. A. Quenstedt, 1852)",
           "children": []
         },
@@ -219,38 +221,17 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_SEMITUBINA",
-      "name": "\"Semitubina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SEMITUBINA_SPINOSA_F_A_QUENSTEDT_1852",
-          "name": "\"Semitubina spinosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Semitubina",
-          "authorship": "\"(F. A. Quenstedt, 1852)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1479508"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tubinidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 13,
+  "genusCount": 4,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 4599636
-    }
+    },
+    "checklistbank": "txn:58422"
   }
 }

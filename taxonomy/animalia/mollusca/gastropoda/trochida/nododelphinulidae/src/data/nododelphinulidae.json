@@ -26,9 +26,11 @@
             "col": [
               "9G5KM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832466"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:832466"
+            ]
           },
-          "authorityIds": "col:9G5KM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832466,col:9G5KM",
           "authorship": "(J. Morris & Lycett, 1851)"
         },
         {
@@ -160,9 +162,11 @@
             "col": [
               "D6GF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832469"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:832469"
+            ]
           },
-          "authorityIds": "col:D6GF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832469,col:D6GF",
           "authorship": "(J. Sowerby, 1817)"
         },
         {
@@ -290,9 +294,11 @@
             "col": [
               "YWGW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832472"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:832472"
+            ]
           },
-          "authorityIds": "col:YWGW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832472,col:YWGW",
           "authorship": "(A. d'Orbigny, 1850)"
         }
       ]
@@ -348,9 +354,11 @@
             "col": [
               "3SM5H"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832475"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:832475"
+            ]
           },
-          "authorityIds": "col:3SM5H",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832475,col:3SM5H",
           "authorship": "(Gründel, 2012)"
         }
       ]
@@ -552,90 +560,63 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "69fcb542-f1e5-5cb-9f1-76914f4838ad72"
+        },
+        {
+          "id": "SP_TROCHACANTHUS_DISPUTABILIS_UHLIG_1881",
+          "name": "Trochacanthus disputabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochacanthus",
+          "authorship": "(Uhlig 1881)",
+          "sourceIds": {
+            "checklistbank": "txn:280039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TROCHACANTHUS_PACIFICUS_SQUIRES_AND_SAUL_2001",
+          "name": "Trochacanthus pacificus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochacanthus",
+          "authorship": "Squires and Saul 2001",
+          "sourceIds": {
+            "checklistbank": "txn:428245"
+          },
+          "children": []
         }
       ]
     },
     {
-      "id": "GENUS_NODODELPHINULA",
-      "name": "\"Nododelphinula",
+      "id": "GENUS_METRIOMPHALUS",
+      "name": "Metriomphalus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NODODELPHINULA_BUCKMANI_J_MORRIS_LYCETT_1851",
-          "name": "\"Nododelphinula buckmani\"",
+          "id": "SP_METRIOMPHALUS_THETIS_MUNSTER_1844",
+          "name": "Metriomphalus thetis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Nododelphinula",
-          "authorship": "\"(J. Morris & Lycett, 1851)\"",
+          "lineage": "Metriomphalus",
+          "authorship": "(Munster 1844)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832466"
+            "checklistbank": "txn:279143"
           },
           "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "nododelphinulidae"
-    },
-    {
-      "id": "GENUS_AMPHITROCHUS",
-      "name": "\"Amphitrochus",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_AMPHITROCHUS_DUPLICATUS_J_SOWERBY_1817",
-          "name": "\"Amphitrochus duplicatus\"",
+          "id": "SP_METRIOMPHALUS_BENOISTI_COSSMANN_1899",
+          "name": "Metriomphalus benoisti",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Amphitrochus",
-          "authorship": "\"(J. Sowerby, 1817)\"",
+          "lineage": "Metriomphalus",
+          "authorship": "(Cossmann 1899)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832469"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "nododelphinulidae"
-    },
-    {
-      "id": "GENUS_COSTATROCHUS",
-      "name": "\"Costatrochus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COSTATROCHUS_SUBDUPLICATUS_A_D_ORBIGNY_1850",
-          "name": "\"Costatrochus subduplicatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Costatrochus",
-          "authorship": "\"(A. d'Orbigny, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832472"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "nododelphinulidae"
-    },
-    {
-      "id": "GENUS_LAUBETROCHUS",
-      "name": "\"Laubetrochus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LAUBETROCHUS_LAUBEI_GR_NDEL_2012",
-          "name": "\"Laubetrochus laubei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Laubetrochus",
-          "authorship": "\"(Gründel, 2012)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832475"
+            "checklistbank": "txn:332373"
           },
           "children": []
         }
@@ -644,7 +625,7 @@
       "lineage": "nododelphinulidae"
     }
   ],
-  "genusCount": 12,
+  "genusCount": 9,
   "speciesCount": 32,
   "sourceIds": {
     "gbif": {
@@ -653,6 +634,7 @@
       "classKey": 225,
       "orderKey": 9715180,
       "familyKey": 4616316
-    }
+    },
+    "checklistbank": "txn:110204"
   }
 }

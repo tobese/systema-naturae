@@ -26,9 +26,11 @@
             "col": [
               "3G4D7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235603"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:235603"
+            ]
           },
-          "authorityIds": "col:3G4D7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:235603,col:3G4D7",
           "authorship": "(Davidson, 1878)"
         },
         {
@@ -191,9 +193,11 @@
             "col": [
               "6NY5V"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235594"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:235594"
+            ]
           },
-          "authorityIds": "col:6NY5V",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:235594,col:6NY5V",
           "authorship": "(Dunker, 1882)"
         },
         {
@@ -470,9 +474,11 @@
             "col": [
               "6NXW6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235591"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:235591"
+            ]
           },
-          "authorityIds": "col:6NXW6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:235591,col:6NXW6",
           "authorship": "(Sowerby, 1846)"
         },
         {
@@ -490,9 +496,11 @@
             "col": [
               "6NY86"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235592"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:235592"
+            ]
           },
-          "authorityIds": "col:6NY86",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:235592,col:6NY86",
           "authorship": "(Dall, 1870)"
         },
         {
@@ -567,7 +575,8 @@
           "sourceIds": {
             "checklistbank": "ott474206"
           },
-          "children": []
+          "children": [],
+          "authorship": "Yabe and Hatai 1934"
         },
         {
           "id": "SP_LAQUEUS_JAPONICUS",
@@ -579,7 +588,8 @@
           "sourceIds": {
             "checklistbank": "ott807149"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Yabe and Hatai 1934)"
         },
         {
           "id": "SP_LAQUEUS_CONCENTRICUS",
@@ -591,7 +601,8 @@
           "sourceIds": {
             "checklistbank": "ott2932579"
           },
-          "children": []
+          "children": [],
+          "authorship": "Yabe and Hatai 1936"
         },
         {
           "id": "SP_LAQUEUS_PACIFICUS",
@@ -615,7 +626,8 @@
           "sourceIds": {
             "checklistbank": "ott2932582"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Dall 1871)"
         },
         {
           "id": "SP_LAQUEUS_MORSEI",
@@ -639,7 +651,8 @@
           "sourceIds": {
             "checklistbank": "ott2932586"
           },
-          "children": []
+          "children": [],
+          "authorship": "Yabe and Hatai 1934"
         },
         {
           "id": "SP_LAQUEUS_ORBICULARIS",
@@ -651,7 +664,8 @@
           "sourceIds": {
             "checklistbank": "ott2932587"
           },
-          "children": []
+          "children": [],
+          "authorship": "Yabe and Hatai 1934"
         },
         {
           "id": "SP_LAQUEUS_PALLIDUS",
@@ -710,6 +724,32 @@
           "lineage": "Laqueus",
           "sourceIds": {
             "checklistbank": "ott6332510"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LAQUEUS_CALIFORNICUS_KOCH_1848",
+          "name": "Laqueus californicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Laqueus",
+          "authorship": "(Koch 1848)",
+          "sourceIds": {
+            "checklistbank": "txn:356243"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LAQUEUS_VANCOUVERENSIS_DAVIDSON_1886",
+          "name": "Laqueus vancouverensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Laqueus",
+          "authorship": "(Davidson 1886)",
+          "sourceIds": {
+            "checklistbank": "txn:356245"
           },
           "children": []
         }
@@ -874,7 +914,8 @@
           "sourceIds": {
             "checklistbank": "ott6332524"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Zeuschner 1857)"
         },
         {
           "id": "SP_TEREBRATALIOPSIS_QUADRATA",
@@ -936,6 +977,19 @@
             ]
           },
           "authorityIds": "col:BTQM7"
+        },
+        {
+          "id": "SP_DALLIGAS_MIELNICENSIS_BITNER_AND_PISERA_1979",
+          "name": "Dalligas mielnicensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dalligas",
+          "authorship": "Bitner and Pisera 1979",
+          "sourceIds": {
+            "checklistbank": "txn:321997"
+          },
+          "children": []
         }
       ]
     },
@@ -1092,6 +1146,71 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "ad37164c-349f-504-802-51d56b56a34ca7"
+        },
+        {
+          "id": "SP_PSILOTHYRIS_TAMARINDA_SOWERBY_1842",
+          "name": "Psilothyris tamarinda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilothyris",
+          "authorship": "(Sowerby 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:285213"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSILOTHYRIS_TAMARINDUS_SOWERBY_1836",
+          "name": "Psilothyris tamarindus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilothyris",
+          "authorship": "(Sowerby 1836)",
+          "sourceIds": {
+            "checklistbank": "txn:287459"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSILOTHYRIS_AIRGULENSIS_MOISSEEV_1939",
+          "name": "Psilothyris airgulensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilothyris",
+          "authorship": "(Moisseev 1939)",
+          "sourceIds": {
+            "checklistbank": "txn:309181"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSILOTHYRIS_VILLERSENSIS_DE_LORIOL_1864",
+          "name": "Psilothyris villersensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilothyris",
+          "authorship": "(de Loriol 1864)",
+          "sourceIds": {
+            "checklistbank": "txn:309186"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSILOTHYRIS_HISPANICA_I_ESTA_AND_CALZADA_1996",
+          "name": "Psilothyris hispanica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psilothyris",
+          "authorship": "Iñesta and Calzada 1996",
+          "sourceIds": {
+            "checklistbank": "txn:474428"
+          },
+          "children": []
         }
       ]
     },
@@ -1403,28 +1522,6 @@
       "lineage": "laqueidae"
     },
     {
-      "id": "GENUS_TEREBRATALIA",
-      "name": "Terebratalia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TEREBRATALIA_TRANSVERSA_SOWERBY_1846",
-          "name": "Terebratalia transversa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Terebratalia",
-          "authorship": "(Sowerby, 1846)",
-          "sourceIds": {
-            "checklistbank": "34513"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "laqueidae"
-    },
-    {
       "id": "GENUS_COPTOTHYRIS",
       "name": "Coptothyris",
       "rank": "GENUS",
@@ -1463,65 +1560,52 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:104059"
           },
           "children": []
-        },
-        {
-          "id": "SP_GLACIARCULA_FRIELLEI_DAVIDSON_1878",
-          "name": "\"Glaciarcula friellei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Glaciarcula",
-          "authorship": "\"(Davidson, 1878)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235603"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "laqueidae"
     },
     {
-      "id": "GENUS_LAQUEUS",
-      "name": "\"Laqueus",
+      "id": "GENUS_TAMARELLA",
+      "name": "Tamarella",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LAQUEUS_RUBELLUS_SOWERBY_1846",
-          "name": "\"Laqueus rubellus\"",
+          "id": "SP_TAMARELLA_BONNEYI_KEEPING_1883",
+          "name": "Tamarella bonneyi",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Laqueus",
-          "authorship": "\"(Sowerby, 1846)\"",
+          "lineage": "Tamarella",
+          "authorship": "(Keeping 1883)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235591"
+            "checklistbank": "txn:287461"
           },
           "children": []
         },
         {
-          "id": "SP_LAQUEUS_SUFFUSUS_DALL_1870",
-          "name": "\"Laqueus suffusus\"",
+          "id": "SP_TAMARELLA_JUDDI_WALKER_1870",
+          "name": "Tamarella juddi",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Laqueus",
-          "authorship": "\"(Dall, 1870)\"",
+          "lineage": "Tamarella",
+          "authorship": "(Walker 1870)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235592"
+            "checklistbank": "txn:287463"
           },
           "children": []
         },
         {
-          "id": "SP_LAQUEUS_BLANFORDI_DUNKER_1882",
-          "name": "\"Laqueus blanfordi\"",
+          "id": "SP_TAMARELLA_ELLIPTICA_WALKER_1868",
+          "name": "Tamarella elliptica",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Laqueus",
-          "authorship": "\"(Dunker, 1882)\"",
+          "lineage": "Tamarella",
+          "authorship": "(Walker 1868)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:235594"
+            "checklistbank": "txn:287466"
           },
           "children": []
         }
@@ -1530,8 +1614,8 @@
       "lineage": "laqueidae"
     }
   ],
-  "genusCount": 25,
-  "speciesCount": 85,
+  "genusCount": 24,
+  "speciesCount": 91,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

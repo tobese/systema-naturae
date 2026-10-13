@@ -388,9 +388,11 @@
             "col": [
               "X4WL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795150"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1795150"
+            ]
           },
-          "authorityIds": "col:X4WL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1795150,col:X4WL",
           "authorship": "(Anderson, 1892)"
         },
         {
@@ -434,9 +436,11 @@
             "col": [
               "X4WN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795152"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1795152"
+            ]
           },
-          "authorityIds": "col:X4WN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1795152,col:X4WN",
           "authorship": "(Hood, 1892)"
         },
         {
@@ -520,9 +524,11 @@
             "col": [
               "X4WS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795154"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1795154"
+            ]
           },
-          "authorityIds": "col:X4WS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1795154,col:X4WS",
           "authorship": "(Hudson, 1883)"
         },
         {
@@ -757,40 +763,12 @@
             "col": [
               "X4X4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795160"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1795160"
+            ]
           },
-          "authorityIds": "col:X4X4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1795160,col:X4X4",
           "authorship": "(Penard, 1914)"
-        },
-        {
-          "id": "SP_COLLOTHECA_PELAGICA",
-          "name": "Collotheca pelagica",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Collotheca",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "continents": [
-            "Africa",
-            "Australia",
-            "Europe",
-            "North America",
-            "South America"
-          ],
-          "children": [],
-          "authorship": "(Rousselet, 1893)",
-          "uuid": "46d4d8af-d909-58d-8f5-a9e1ea54c38f95",
-          "sourceIds": {
-            "col": [
-              "X4X5"
-            ],
-            "itis": [
-              "59436"
-            ],
-            "checklistbank": "54964"
-          },
-          "authorityIds": "col:X4X5,itis:59436"
         },
         {
           "id": "SP_COLLOTHECA_POLYPHEMUS_HARRING_1914",
@@ -2018,19 +1996,6 @@
             "checklistbank": "1014914"
           },
           "children": []
-        },
-        {
-          "id": "SP_FLOSCULARIA_PELAGICA_ROUSSELET_1893",
-          "name": "Floscularia pelagica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Floscularia",
-          "authorship": "Rousselet, 1893",
-          "sourceIds": {
-            "checklistbank": "1036664"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2129,32 +2094,6 @@
           "children": []
         },
         {
-          "id": "SP_COLLOTHECA_EVANSONII_ANDERSON_1892",
-          "name": "\"Collotheca evansonii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Collotheca",
-          "authorship": "\"(Anderson, 1892)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795150"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COLLOTHECA_GOSSEII_HOOD_1892",
-          "name": "\"Collotheca gosseii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Collotheca",
-          "authorship": "\"(Hood, 1892)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795152"
-          },
-          "children": []
-        },
-        {
           "id": "SP_COLLOTHECA_HEPTABRACHIATA_SCHOCH_1869",
           "name": "\"Collotheca heptabrachiata\"",
           "rank": "SPECIES",
@@ -2164,19 +2103,6 @@
           "authorship": "\"(Schoch, 1869)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1795153"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COLLOTHECA_HOODII_HUDSON_1883",
-          "name": "\"Collotheca hoodii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Collotheca",
-          "authorship": "\"(Hudson, 1883)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795154"
           },
           "children": []
         },
@@ -2229,19 +2155,6 @@
           "authorship": "\"(Milne, 1905)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1795159"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COLLOTHECA_PARADOXA_PENARD_1914",
-          "name": "\"Collotheca paradoxa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Collotheca",
-          "authorship": "\"(Penard, 1914)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1795160"
           },
           "children": []
         },
@@ -2468,7 +2381,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 137,
+  "speciesCount": 131,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

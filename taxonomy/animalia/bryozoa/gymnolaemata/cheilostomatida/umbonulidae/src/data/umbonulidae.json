@@ -239,9 +239,11 @@
           "sourceIds": {
             "col": [
               "869PR"
-            ]
+            ],
+            "checklistbank": "txn:338440"
           },
-          "authorityIds": "col:869PR"
+          "authorityIds": "col:869PR",
+          "authorship": "(Reuss 1848)"
         },
         {
           "id": "SP_UMBONULA_MARGARITATA_KOSCHINSKY_1885",
@@ -635,6 +637,19 @@
             "checklistbank": "ott7925090"
           },
           "children": []
+        },
+        {
+          "id": "SP_UMBONULA_BICUSPIS_HINCKS_1883",
+          "name": "Umbonula bicuspis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbonula",
+          "authorship": "(Hincks 1883)",
+          "sourceIds": {
+            "checklistbank": "txn:330041"
+          },
+          "children": []
         }
       ]
     },
@@ -667,20 +682,6 @@
           },
           "authorityIds": "col:4M2XF",
           "authorship": "(Smitt, 1868)"
-        },
-        {
-          "id": "SP_POSTERULA_SARSI_SMITT_1868",
-          "name": "Posterula sarsi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Posterula",
-          "authorship": "(Smitt, 1868)",
-          "sourceIds": {
-            "checklistbank": "31584"
-          },
-          "children": [],
-          "uuid": "dc5d9cdf-126a-5a5-9e9-5a02f5f3bb01f9"
         }
       ]
     },
@@ -2074,6 +2075,19 @@
             ]
           },
           "authorityIds": "col:869N8"
+        },
+        {
+          "id": "SP_TRIGONOPORA_MONILIFERA_MILNE_EDWARDS_1836",
+          "name": "Trigonopora monilifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trigonopora",
+          "authorship": "(Milne Edwards 1836)",
+          "sourceIds": {
+            "checklistbank": "txn:329329"
+          },
+          "children": []
         }
       ]
     },
@@ -2319,6 +2333,19 @@
           "lineage": "Discopora",
           "sourceIds": {
             "checklistbank": "ott7925086"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DISCOPORA_VULTUR_HINCKS_1882",
+          "name": "Discopora vultur",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discopora",
+          "authorship": "(Hincks 1882)",
+          "sourceIds": {
+            "checklistbank": "txn:329286"
           },
           "children": []
         }
@@ -2757,10 +2784,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "umbonulidae"
+    },
+    {
+      "id": "GENUS_COLLETOSIA",
+      "name": "Colletosia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLLETOSIA_RADIATA_MOLL_1803",
+          "name": "Colletosia radiata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colletosia",
+          "authorship": "Moll 1803",
+          "sourceIds": {
+            "checklistbank": "txn:489481"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "umbonulidae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 158,
+  "genusCount": 24,
+  "speciesCount": 161,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2769,6 +2818,6 @@
       "orderKey": 467,
       "familyKey": 6892
     },
-    "checklistbank": "560996"
+    "checklistbank": "ott760238"
   }
 }

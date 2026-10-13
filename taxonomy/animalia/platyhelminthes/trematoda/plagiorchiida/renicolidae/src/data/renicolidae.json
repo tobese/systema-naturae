@@ -128,20 +128,6 @@
           "authorityIds": "col:4726N"
         },
         {
-          "id": "SP_NEPHROMONORCHA_LARI_TIMON_DAVID_1933",
-          "name": "Nephromonorcha lari",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nephromonorcha",
-          "authorship": "(Timon-David, 1933)",
-          "sourceIds": {
-            "checklistbank": "29103"
-          },
-          "children": [],
-          "uuid": "1959d48c-9b59-574-b19-8c4609a97f73d3"
-        },
-        {
           "id": "SP_NEPHROMONORCHA_MONORCHIS_DOLLFUS_CAPRON_1958_SUDARIKOV_STENKO_1984",
           "name": "Nephromonorcha monorchis",
           "rank": "SPECIES",
@@ -338,9 +324,11 @@
             "col": [
               "4RRYT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:767942"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:767942"
+            ]
           },
-          "authorityIds": "col:4RRYT,itis:56600"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:767942,col:4RRYT,itis:56600"
         },
         {
           "id": "SP_RENICOLA_CAUDESCENS_CHING_1989",
@@ -1400,20 +1388,6 @@
           "authorityIds": "itis:56597"
         },
         {
-          "id": "SP_RENICOLA_PARAQUINATA_RAJEWSKY_1937",
-          "name": "Renicola paraquinata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Renicola",
-          "authorship": "Rajewsky, 1937",
-          "sourceIds": {
-            "checklistbank": "29105"
-          },
-          "children": [],
-          "uuid": "4335ed54-e878-556-a59-8088dd22bde748"
-        },
-        {
           "id": "SP_RENICOLA_MEDIOVITELLATUS_BYKHOVSKAYA_PAVLOVSKAYA_1950",
           "name": "Renicola mediovitellatus",
           "rank": "SPECIES",
@@ -2035,6 +2009,18 @@
             "checklistbank": "2950130"
           },
           "children": []
+        },
+        {
+          "id": "SP_RENICOLA_QUINTA",
+          "name": "Renicola quinta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Renicola",
+          "sourceIds": {
+            "checklistbank": "391057"
+          },
+          "children": []
         }
       ]
     },
@@ -2128,19 +2114,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RENICOLA_BUCHANANI_MARTIN_GREGORY_1951",
-          "name": "\"Renicola buchanani\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Renicola",
-          "authorship": "\"(Martin & Gregory, 1951)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:767942"
-          },
-          "children": []
-        },
-        {
           "id": "SP_RENICOLA_PINGUIS_MEHLIS_IN_CREPLIN_1846_COHN_1904",
           "name": "\"Renicola pinguis\"",
           "rank": "SPECIES",
@@ -2159,7 +2132,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 129,
+  "speciesCount": 127,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

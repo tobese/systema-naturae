@@ -6963,19 +6963,6 @@
           "uuid": "47cf61ff-3595-563-96f-5d243108b37808"
         },
         {
-          "id": "SP_ROTYLENCHUS_SHERI_JAIRAJPURI_1963",
-          "name": "Rotylenchus sheri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rotylenchus",
-          "authorship": "Jairajpuri, 1963",
-          "sourceIds": {
-            "checklistbank": "891685"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ROTYLENCHUS_CHRISTIEI_GOLDEN_TAYLOR_1956",
           "name": "Rotylenchus christiei",
           "rank": "SPECIES",
@@ -7728,9 +7715,11 @@
             "col": [
               "894XP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1295441"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1295441"
+            ]
           },
-          "authorityIds": "col:894XP,itis:63759"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1295441,col:894XP,itis:63759"
         },
         {
           "id": "SP_SCUTELLONEMA_BREVISTYLETUM_SIDDIQI_1972",
@@ -9800,28 +9789,6 @@
       "lineage": "hoplolaimidae"
     },
     {
-      "id": "GENUS_SCUTELLONEMA",
-      "name": "\"Scutellonema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SCUTELLONEMA_BRADYS_STEINER_LEHEW_1933",
-          "name": "\"Scutellonema bradys\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Scutellonema",
-          "authorship": "\"(Steiner & LeHew, 1933)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1295441"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hoplolaimidae"
-    },
-    {
       "id": "GENUS_HELICOTYLENCHUS",
       "name": "\"Helicotylenchus",
       "rank": "GENUS",
@@ -9953,8 +9920,8 @@
       "lineage": "hoplolaimidae"
     }
   ],
-  "genusCount": 29,
-  "speciesCount": 589,
+  "genusCount": 28,
+  "speciesCount": 587,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

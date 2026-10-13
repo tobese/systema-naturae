@@ -228,10 +228,12 @@
             ],
             "col": [
               "8TGGZ"
-            ]
+            ],
+            "checklistbank": "txn:517600"
           },
           "uuid": "2d75669b-f5fa-5a6-81d-b1e1caca6ab185",
-          "authorityIds": "col:8TGGZ,gbif:11532329"
+          "authorityIds": "col:8TGGZ,gbif:11532329",
+          "authorship": "wan der Weijden 1940"
         },
         {
           "id": "DISCOCYCLINA_BARBADENSIS",
@@ -1612,10 +1614,12 @@
             ],
             "col": [
               "82D4V"
-            ]
+            ],
+            "checklistbank": "txn:516734"
           },
           "uuid": "19079814-d44c-56b-916-8243ea6c438c0e",
-          "authorityIds": "col:82D4V,gbif:8890550"
+          "authorityIds": "col:82D4V,gbif:8890550",
+          "authorship": "Douville 1922"
         },
         {
           "id": "DISCOCYCLINA_SHEPPARDI",
@@ -1929,6 +1933,32 @@
           },
           "uuid": "5ab6c6c6-589c-510-912-7572cb30048651",
           "authorityIds": "col:82D5K,gbif:10354188"
+        },
+        {
+          "id": "SP_DISCOCYCLINA_RANIKOTENSIS_DAVIES_1927",
+          "name": "Discocyclina ranikotensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discocyclina",
+          "authorship": "Davies 1927",
+          "sourceIds": {
+            "checklistbank": "txn:460872"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DISCOCYCLINA_PRATTI_MICHELIN_1846",
+          "name": "Discocyclina pratti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discocyclina",
+          "authorship": "Michelin 1846",
+          "sourceIds": {
+            "checklistbank": "txn:516953"
+          },
+          "children": []
         }
       ]
     },
@@ -5248,10 +5278,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "discocyclinidae"
+    },
+    {
+      "id": "GENUS_ASTEROCYCLINA",
+      "name": "Asterocyclina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTEROCYCLINA_PRAECIPUA_COLE_1959",
+          "name": "Asterocyclina praecipua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asterocyclina",
+          "authorship": "Cole 1959",
+          "sourceIds": {
+            "checklistbank": "txn:393211"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "discocyclinidae"
     }
   ],
-  "genusCount": 16,
-  "speciesCount": 294,
+  "genusCount": 17,
+  "speciesCount": 297,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -5259,6 +5311,7 @@
       "classKey": 7434778,
       "orderKey": 7692889,
       "familyKey": 7708098
-    }
+    },
+    "checklistbank": "txn:112186"
   }
 }

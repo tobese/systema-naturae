@@ -24,10 +24,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 10317083,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1340315"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1340315"
+            ]
           },
           "uuid": "fd7602fa-a473-5dc-84c-58b6f2d9577ac6",
-          "authorityIds": "gbif:10317083",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1340315,gbif:10317083",
           "authorship": "(Cleve) C.E. Wetzel & Ector, 2017"
         },
         {
@@ -105,10 +107,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 10166102,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1340316"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1340316"
+            ]
           },
           "uuid": "1b5de12f-ac83-528-afb-03a9c476f13f2d",
-          "authorityIds": "gbif:10166102",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1340316,gbif:10166102",
           "authorship": "(Frenguelli) C.E. Wetzel, E. Sar & Ector, 2017"
         },
         {
@@ -230,45 +234,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cosmioneidaceae"
-    },
-    {
-      "id": "GENUS_COSMIONEIS",
-      "name": "\"Cosmioneis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COSMIONEIS_BRASILIANA_CLEVE_C_E_WETZEL_ECTOR_2017",
-          "name": "\"Cosmioneis brasiliana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cosmioneis",
-          "authorship": "\"(Cleve) C.E. Wetzel & Ector, 2017\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1340315"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COSMIONEIS_PLATENSIS_FRENGUELLI_C_E_WETZEL_E_SAR_ECTOR_2017",
-          "name": "\"Cosmioneis platensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cosmioneis",
-          "authorship": "\"(Frenguelli) C.E. Wetzel, E. Sar & Ector, 2017\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1340316"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cosmioneidaceae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 14,
+  "genusCount": 3,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

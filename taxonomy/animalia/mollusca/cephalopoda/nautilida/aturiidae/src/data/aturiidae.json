@@ -138,9 +138,11 @@
             "col": [
               "KZQKQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571850"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571850"
+            ]
           },
-          "authorityIds": "col:KZQKQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571850,col:KZQKQ",
           "authorship": "(J. Sowerby, 1812)"
         },
         {
@@ -191,7 +193,11 @@
           "description": "Aturia is an extinct genus of Paleocene to Miocene nautilids within Aturiidae, a monotypic family, established by Campman in 1857 for Aturia Bronn, 1838, and is included in the superfamily Nautilaceae in Kümmel 1964.",
           "sourcedFrom": "wikipedia",
           "children": [],
-          "uuid": "90a015f5-eb2c-5a9-913-f2e58c8d1b9338"
+          "uuid": "90a015f5-eb2c-5a9-913-f2e58c8d1b9338",
+          "authorship": "(Morton 1834)",
+          "sourceIds": {
+            "checklistbank": "txn:122907"
+          }
         },
         {
           "id": "SP_ATURIA_ANGUSTATA",
@@ -203,7 +209,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "07ad8802-86c0-551-8fe-0c143c34e132ef"
+          "uuid": "07ad8802-86c0-551-8fe-0c143c34e132ef",
+          "authorship": "(Conrad 1849)",
+          "sourceIds": {
+            "checklistbank": "txn:314484"
+          }
         },
         {
           "id": "SP_ATURIA_BERRYI_STENZEL_1886",
@@ -229,7 +239,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "54c568de-a4cb-54a-8c0-08f8e835a4393b"
+          "uuid": "54c568de-a4cb-54a-8c0-08f8e835a4393b",
+          "authorship": "(Stenzel 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:123392"
+          }
         },
         {
           "id": "SP_ATURIA_BRUGGENI",
@@ -253,7 +267,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "97495250-d6f3-5eb-abd-0957d70c152cd8"
+          "uuid": "97495250-d6f3-5eb-abd-0957d70c152cd8",
+          "authorship": "(Ihering 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:314719"
+          }
         },
         {
           "id": "SP_ATURIA_CLARKEI_TEICHERT_1944",
@@ -322,9 +340,11 @@
             "col": [
               "JNFQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832058"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:832058"
+            ]
           },
-          "authorityIds": "col:JNFQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:832058,col:JNFQ",
           "authorship": "(I. Lea, 1841)"
         },
         {
@@ -379,7 +399,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3242c478-103f-5e6-af2-68da3448f22787"
+          "uuid": "3242c478-103f-5e6-af2-68da3448f22787",
+          "authorship": "(Stenzel 1940)",
+          "sourceIds": {
+            "checklistbank": "txn:123394"
+          }
         },
         {
           "id": "SP_ATURIA_GRANDIOR",
@@ -391,7 +415,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e0279b35-d77d-58c-ac3-442219b6a064ec"
+          "uuid": "e0279b35-d77d-58c-ac3-442219b6a064ec",
+          "authorship": "(Schenck 1931)",
+          "sourceIds": {
+            "checklistbank": "txn:314737"
+          }
         },
         {
           "id": "SP_ATURIA_GUJARATENSIS_HALDER_2012",
@@ -431,7 +459,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "0e06dd62-8f45-5b4-b13-85a419677feedf"
+          "uuid": "0e06dd62-8f45-5b4-b13-85a419677feedf",
+          "authorship": "(Stenzel 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:123396"
+          }
         },
         {
           "id": "SP_ATURIA_LOTZI_B_HM_1913",
@@ -543,7 +575,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "fb7d2ba5-a71d-52b-ace-4ffd04aaf61d03"
+          "uuid": "fb7d2ba5-a71d-52b-ace-4ffd04aaf61d03",
+          "authorship": "(Oppenheim 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:314741"
+          }
         },
         {
           "id": "SP_ATURIA_RICHARDSI_MILLER_1947",
@@ -750,56 +786,168 @@
           },
           "children": [],
           "uuid": "24f69da9-d762-55c-95c-da30a4f021bb4b"
+        },
+        {
+          "id": "SP_ATURIA_ATURI_BASTEROT_1825",
+          "name": "Aturia aturi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "(Basterot 1825)",
+          "sourceIds": {
+            "checklistbank": "txn:113311"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_PERUVIANA_OLSSON_1928",
+          "name": "Aturia peruviana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "(Olsson 1928)",
+          "sourceIds": {
+            "checklistbank": "txn:122909"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_ZICZAC_SOWERBY_1812",
+          "name": "Aturia ziczac",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "(Sowerby 1812)",
+          "sourceIds": {
+            "checklistbank": "txn:122912"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_SOMALIENSIS_HAAS_AND_MILLER_1952",
+          "name": "Aturia somaliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "Haas and Miller 1952",
+          "sourceIds": {
+            "checklistbank": "txn:125829"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_ALASKENSIS_SCHENCK_1931",
+          "name": "Aturia alaskensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "(Schenck 1931)",
+          "sourceIds": {
+            "checklistbank": "txn:314485"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_KERNIANA_ANDERSON_AND_HANNA_1925",
+          "name": "Aturia kerniana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "Anderson and Hanna 1925",
+          "sourceIds": {
+            "checklistbank": "txn:314738"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_TRIANGULA_STENZEL_1934",
+          "name": "Aturia triangula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "Stenzel 1934",
+          "sourceIds": {
+            "checklistbank": "txn:314743"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_MACKAYI_FLEMING_1945",
+          "name": "Aturia mackayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "(Fleming 1945)",
+          "sourceIds": {
+            "checklistbank": "txn:315173"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_BRUEGGENI_IHERING_1922",
+          "name": "Aturia brueggeni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "(Ihering 1922)",
+          "sourceIds": {
+            "checklistbank": "txn:314715"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_COXI_MILLER_1947",
+          "name": "Aturia coxi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "Miller 1947",
+          "sourceIds": {
+            "checklistbank": "txn:323854"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_MYRLAE_HANNA_1927",
+          "name": "Aturia myrlae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "Hanna 1927",
+          "sourceIds": {
+            "checklistbank": "txn:314739"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATURIA_GRANGEI_FLEMING_1945",
+          "name": "Aturia grangei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aturia",
+          "authorship": "Fleming 1945",
+          "sourceIds": {
+            "checklistbank": "txn:513081"
+          },
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_ATURIA",
-      "name": "\"Aturia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ATURIA_CUBAENSIS_I_LEA_1841",
-          "name": "\"Aturia cubaensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aturia",
-          "authorship": "\"(I. Lea, 1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:832058"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aturiidae"
-    },
-    {
-      "id": "GENUS_ATUROIDEA",
-      "name": "\"Aturoidea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ATUROIDEA_ZICZAC_J_SOWERBY_1812",
-          "name": "\"Aturoidea ziczac\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aturoidea",
-          "authorship": "\"(J. Sowerby, 1812)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571850"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aturiidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 53,
+  "genusCount": 2,
+  "speciesCount": 63,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -807,6 +955,7 @@
       "classKey": 136,
       "orderKey": 460,
       "familyKey": 3245725
-    }
+    },
+    "checklistbank": "txn:122379"
   }
 }

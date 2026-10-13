@@ -85,9 +85,23 @@
           "sourceIds": {
             "col": [
               "BV26T"
-            ]
+            ],
+            "checklistbank": "txn:498631"
           },
           "authorityIds": "col:BV26T"
+        },
+        {
+          "id": "SP_CAROLASTRAEA_FRAJI_ELIASOVA_1976",
+          "name": "Carolastraea fraji",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carolastraea",
+          "authorship": "Eliasova 1976",
+          "sourceIds": {
+            "checklistbank": "txn:152930"
+          },
+          "children": []
         }
       ]
     },
@@ -133,9 +147,11 @@
             "col": [
               "863KJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1440442"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1440442"
+            ]
           },
-          "authorityIds": "col:863KJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1440442,col:863KJ",
           "authorship": "(Michelin, 1847)"
         },
         {
@@ -217,20 +233,20 @@
       ]
     },
     {
-      "id": "GENUS_CRINOPORA",
-      "name": "\"Crinopora",
+      "id": "GENUS_COMALIA",
+      "name": "Comalia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CRINOPORA_MASSILIENSIS_MICHELIN_1847",
-          "name": "\"Crinopora massiliensis\"",
+          "id": "SP_COMALIA_FASCICULATA_WELLS_1932",
+          "name": "Comalia fasciculata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Crinopora",
-          "authorship": "\"(Michelin, 1847)\"",
+          "lineage": "Comalia",
+          "authorship": "Wells 1932",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1440442"
+            "checklistbank": "txn:438776"
           },
           "children": []
         }
@@ -240,7 +256,7 @@
     }
   ],
   "genusCount": 6,
-  "speciesCount": 10,
+  "speciesCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -248,6 +264,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 4883618
-    }
+    },
+    "checklistbank": "txn:117295"
   }
 }

@@ -381,9 +381,11 @@
             "col": [
               "4QGRK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:728056"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:728056"
+            ]
           },
-          "authorityIds": "col:4QGRK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:728056,col:4QGRK",
           "authorship": "(Travassos & Vogelsang, 1931)"
         },
         {
@@ -446,32 +448,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PULMONICOLA",
-      "name": "\"Pulmonicola",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PULMONICOLA_COCHLEOTREMA_TRAVASSOS_VOGELSANG_1931",
-          "name": "\"Pulmonicola cochleotrema\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pulmonicola",
-          "authorship": "\"(Travassos & Vogelsang, 1931)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:728056"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "opisthotrematidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 25,
+  "genusCount": 6,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -66,9 +66,11 @@
             "itis": [
               "98128"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467717"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:467717"
+            ]
           },
-          "authorityIds": "col:B3MSS,itis:98128",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:467717,col:B3MSS,itis:98128",
           "children": []
         },
         {
@@ -101,6 +103,32 @@
           "lineage": "Blepharipoda",
           "sourceIds": {
             "checklistbank": "ott7695235"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BLEPHARIPODA_BRUCEI_RATHBUN_1926",
+          "name": "Blepharipoda brucei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blepharipoda",
+          "authorship": "(Rathbun 1926)",
+          "sourceIds": {
+            "checklistbank": "txn:256081"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BLEPHARIPODA_SCABRA_MOLINA_1810",
+          "name": "Blepharipoda scabra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blepharipoda",
+          "authorship": "(Molina 1810)",
+          "sourceIds": {
+            "checklistbank": "txn:389441"
           },
           "children": []
         }
@@ -150,9 +178,11 @@
             "itis": [
               "98130"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467714"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:467714"
+            ]
           },
-          "authorityIds": "col:B49YD,itis:98130",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:467714,col:B49YD,itis:98130",
           "children": []
         },
         {
@@ -249,57 +279,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "blepharipodidae"
-    },
-    {
-      "id": "GENUS_LOPHOMASTIX",
-      "name": "\"Lophomastix",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LOPHOMASTIX_DIOMEDEAE_BENEDICT_1904",
-          "name": "\"Lophomastix diomedeae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lophomastix",
-          "authorship": "\"Benedict, 1904\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467714"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "blepharipodidae"
-    },
-    {
-      "id": "GENUS_BLEPHARIPODA",
-      "name": "\"Blepharipoda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BLEPHARIPODA_OCCIDENTALIS_RANDALL_1840",
-          "name": "\"Blepharipoda occidentalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Blepharipoda",
-          "authorship": "\"Randall, 1840\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:467717"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "blepharipodidae"
     }
   ],
   "speciesCount": 15,
   "appSlug": "blepharipodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 5,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

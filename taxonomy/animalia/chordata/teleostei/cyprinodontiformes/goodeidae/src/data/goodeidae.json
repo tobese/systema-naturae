@@ -85,32 +85,6 @@
           "commonName": "Patzcuaro Allotoca"
         },
         {
-          "id": "SP_ALLOTOCA_MACULATA_SMITH_MILLER_1980",
-          "name": "Allotoca maculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "lineage": "Allotoca",
-          "authorship": "Smith & Miller, 1980",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177724831",
-              "2347663"
-            ],
-            "col": [
-              "BZTW"
-            ],
-            "itis": [
-              "647056"
-            ],
-            "checklistbank": "93680"
-          },
-          "uuid": "3407793d-8923-580-917-2f165fa841a4f3",
-          "authorityIds": "col:BZTW,gbif:177724831,gbif:2347663,itis:647056",
-          "commonName": "Opal Goodeid"
-        },
-        {
           "id": "SP_ALLOTOCA_REGALIS_LVAREZ_1959",
           "name": "Allotoca regalis",
           "rank": "SPECIES",
@@ -1010,52 +984,17 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_EMPETRICHTHYS_MERRIAMI_GILBERT_1893",
-          "name": "Empetrichthys merriami",
+          "id": "SP_EMPETRICHTHYS_ERDISI_JORDAN_1924",
+          "name": "Empetrichthys erdisi",
           "rank": "SPECIES",
           "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
+          "sourcedFrom": "checklistbank",
           "lineage": "Empetrichthys",
-          "authorship": "Gilbert, 1893",
-          "children": [],
-          "uuid": "8074ed3d-70ac-50d-a54-64b1845bd1961c",
+          "authorship": "(Jordan 1924)",
           "sourceIds": {
-            "col": [
-              "39HKL"
-            ],
-            "itis": [
-              "165692"
-            ],
-            "checklistbank": "99881"
+            "checklistbank": "txn:355167"
           },
-          "authorityIds": "col:39HKL,itis:165692",
-          "commonName": "Ash Meadows Poolfish"
-        },
-        {
-          "id": "SP_EMPETRICHTHYS_LATOS_MILLER_1948",
-          "name": "Empetrichthys latos",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "lineage": "Empetrichthys",
-          "authorship": "Miller, 1948",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177724861",
-              "4284453"
-            ],
-            "itis": [
-              "165691"
-            ],
-            "col": [
-              "39HKK"
-            ],
-            "checklistbank": "99880"
-          },
-          "uuid": "fe753fcc-d88f-5df-961-6804aafc9d7cbd",
-          "authorityIds": "col:39HKK,gbif:177724861,gbif:4284453,itis:165691",
-          "commonName": "Pahrump Poolfish"
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1639,6 +1578,29 @@
           "sourceIds": {
             "checklistbank": "ott7651490"
           },
+          "children": [],
+          "authorship": "Álvarez and Arriola-Longoria 1972"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "goodeidae"
+    },
+    {
+      "id": "GENUS_PALEOCHARACODON",
+      "name": "Paleocharacodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALEOCHARACODON_GUZMANAE_CABALLERO_VI_AS_ET_AL_2023",
+          "name": "Paleocharacodon guzmanae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paleocharacodon",
+          "authorship": "Caballero-Viñas et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:477236"
+          },
           "children": []
         }
       ],
@@ -1646,11 +1608,11 @@
       "lineage": "goodeidae"
     }
   ],
-  "speciesCount": 65,
+  "speciesCount": 64,
   "appSlug": "goodeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 21,
+  "genusCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

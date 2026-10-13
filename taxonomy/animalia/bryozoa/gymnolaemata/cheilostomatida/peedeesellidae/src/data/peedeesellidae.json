@@ -23,9 +23,12 @@
           "uuid": "fd3481a7-d673-54d-b23-81c0da0e69e3bf",
           "authorship": "(Guha & Nathan, 1996)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412755"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1412755"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1412755"
         },
         {
           "id": "SP_PEEDEESELLA_GUHAI_TAYLOR_MCKINNEY_2006",
@@ -54,33 +57,24 @@
           },
           "children": [],
           "uuid": "68c27355-478f-534-901-6634d752c18270"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_PEEDEESELLA",
-      "name": "\"Peedeesella",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_PEEDEESELLA_BISINUOSA_GUHA_NATHAN_1996",
-          "name": "\"Peedeesella bisinuosa\"",
+          "id": "SP_PEEDEESELLA_SPENCERI_BRYDONE_1913",
+          "name": "Peedeesella spenceri",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Peedeesella",
-          "authorship": "\"(Guha & Nathan, 1996)\"",
+          "lineage": "Peedeesella",
+          "authorship": "(Brydone 1913)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1412755"
+            "checklistbank": "txn:224553"
           },
           "children": []
         }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "peedeesellidae"
+      ]
     }
   ],
-  "genusCount": 2,
+  "genusCount": 1,
   "speciesCount": 4,
   "sourceIds": {
     "gbif": {
@@ -89,6 +83,7 @@
       "classKey": 252,
       "orderKey": 467,
       "familyKey": 9273256
-    }
+    },
+    "checklistbank": "txn:494145"
   }
 }

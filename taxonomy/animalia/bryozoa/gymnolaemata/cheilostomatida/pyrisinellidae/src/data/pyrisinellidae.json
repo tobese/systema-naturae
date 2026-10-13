@@ -106,9 +106,12 @@
           "uuid": "1b69e0a7-4372-57e-80e-152cfaebc797d1",
           "authorship": "(Canu & Bassler, 1920)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1443858"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1443858"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1443858"
         },
         {
           "id": "SP_SETOSINELLA_PERFLUXA_DI_MARTINO_TAYLOR_2012",
@@ -145,6 +148,32 @@
           },
           "authorityIds": "col:86S9C",
           "children": []
+        },
+        {
+          "id": "SP_SETOSINELLA_PERFLUXA_DI_MARTINO_AND_TAYLOR_2012",
+          "name": "Setosinella perfluxa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Setosinella",
+          "authorship": "Di Martino and Taylor 2012",
+          "sourceIds": {
+            "checklistbank": "txn:329738"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SETOSINELLA_PROLIFICA_CANU_AND_BASSLER_1933",
+          "name": "Setosinella prolifica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Setosinella",
+          "authorship": "Canu and Bassler 1933",
+          "sourceIds": {
+            "checklistbank": "txn:426390"
+          },
+          "children": []
         }
       ]
     },
@@ -170,9 +199,11 @@
             "col": [
               "86QYX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413329"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1413329"
+            ]
           },
-          "authorityIds": "col:86QYX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1413329,col:86QYX",
           "authorship": "(Taylor & McKinney, 2006)",
           "children": []
         },
@@ -194,6 +225,19 @@
             ]
           },
           "authorityIds": "col:868ZM",
+          "children": []
+        },
+        {
+          "id": "SP_PYRISINELLA_PRIMAZELANDIAE_GORDON_AND_TAYLOR_2015",
+          "name": "Pyrisinella primazelandiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrisinella",
+          "authorship": "Gordon and Taylor 2015",
+          "sourceIds": {
+            "checklistbank": "txn:327710"
+          },
           "children": []
         }
       ]
@@ -234,7 +278,8 @@
           "sourceIds": {
             "checklistbank": "ott6335641"
           },
-          "children": []
+          "children": [],
+          "authorship": "Di Martino and Taylor 2012"
         }
       ]
     },
@@ -306,9 +351,12 @@
           "uuid": "c5aa81d9-a88b-52c-804-0f91411582d2aa",
           "authorship": "(Waters, 1925)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1515984"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1515984"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1515984"
         }
       ]
     },
@@ -334,75 +382,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pyrisinellidae"
-    },
-    {
-      "id": "GENUS_PYRISINELLA",
-      "name": "\"Pyrisinella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PYRISINELLA_MENISCACANTHA_TAYLOR_MCKINNEY_2006",
-          "name": "\"Pyrisinella meniscacantha\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pyrisinella",
-          "authorship": "\"(Taylor & McKinney, 2006)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1413329"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pyrisinellidae"
-    },
-    {
-      "id": "GENUS_SETOSINELLA",
-      "name": "\"Setosinella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SETOSINELLA_ORBICULATA_CANU_BASSLER_1920",
-          "name": "\"Setosinella orbiculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Setosinella",
-          "authorship": "\"(Canu & Bassler, 1920)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1443858"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pyrisinellidae"
-    },
-    {
-      "id": "GENUS_PLANOSPINELLA",
-      "name": "\"Planospinella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLANOSPINELLA_TAHITIENSIS_WATERS_1925",
-          "name": "\"Planospinella tahitiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Planospinella",
-          "authorship": "\"(Waters, 1925)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1515984"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pyrisinellidae"
     }
   ],
-  "genusCount": 11,
+  "genusCount": 8,
   "speciesCount": 19,
   "sourceIds": {
     "gbif": {
@@ -412,6 +394,6 @@
       "orderKey": 467,
       "familyKey": 7559085
     },
-    "checklistbank": "ott5301367"
+    "checklistbank": "txn:327706"
   }
 }

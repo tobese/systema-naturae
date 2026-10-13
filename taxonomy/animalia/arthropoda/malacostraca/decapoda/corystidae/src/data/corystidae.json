@@ -38,7 +38,8 @@
           "sourceIds": {
             "col": [
               "BCRFM"
-            ]
+            ],
+            "checklistbank": "txn:224427"
           },
           "authorityIds": "col:BCRFM"
         },
@@ -55,7 +56,8 @@
           "sourceIds": {
             "col": [
               "BKT6C"
-            ]
+            ],
+            "checklistbank": "txn:224426"
           },
           "authorityIds": "col:BKT6C"
         }
@@ -247,7 +249,8 @@
           "sourceIds": {
             "col": [
               "BBWWN"
-            ]
+            ],
+            "checklistbank": "txn:224429"
           },
           "authorityIds": "col:BBWWN"
         }
@@ -276,6 +279,19 @@
             ]
           },
           "authorityIds": "col:BRBY4"
+        },
+        {
+          "id": "SP_MICROMITHRAX_GRIPPI_M_LLER_1974",
+          "name": "Micromithrax grippi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micromithrax",
+          "authorship": "Müller 1974",
+          "sourceIds": {
+            "checklistbank": "txn:404623"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -299,7 +315,8 @@
           "sourceIds": {
             "col": [
               "BHTR5"
-            ]
+            ],
+            "checklistbank": "txn:395630"
           },
           "authorityIds": "col:BHTR5"
         }
@@ -364,7 +381,8 @@
           "sourceIds": {
             "col": [
               "BCZ82"
-            ]
+            ],
+            "checklistbank": "txn:224433"
           },
           "authorityIds": "col:BCZ82"
         }
@@ -459,19 +477,6 @@
           "authorityIds": "itis:98660"
         },
         {
-          "id": "SP_CORYSTES_DENTATUS_LATREILLE_1801",
-          "name": "Corystes dentatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Corystes",
-          "authorship": "Latreille, 1801",
-          "sourceIds": {
-            "checklistbank": "545819"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CORYSTES_HOLSATICUS",
           "name": "Corystes holsaticus",
           "rank": "SPECIES",
@@ -517,7 +522,8 @@
           "sourceIds": {
             "col": [
               "BCNMH"
-            ]
+            ],
+            "checklistbank": "txn:403688"
           },
           "authorityIds": "col:BCNMH"
         }
@@ -690,13 +696,92 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "corystidae"
+    },
+    {
+      "id": "GENUS_PADOCATACTES",
+      "name": "Padocatactes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PADOCATACTES_HAMIFER_ORTMANN_1893",
+          "name": "Padocatactes hamifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Padocatactes",
+          "authorship": "Ortmann 1893",
+          "sourceIds": {
+            "checklistbank": "txn:388906"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PADOCATACTES_UJIHARAI_KARASAWA_1993",
+          "name": "Padocatactes ujiharai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Padocatactes",
+          "authorship": "Karasawa 1993",
+          "sourceIds": {
+            "checklistbank": "txn:388907"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corystidae"
+    },
+    {
+      "id": "GENUS_PSEUDOCORYSTES",
+      "name": "Pseudocorystes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCORYSTES_ARMATUS_MILNE_EDWARDS_1837",
+          "name": "Pseudocorystes armatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocorystes",
+          "authorship": "Milne-Edwards 1837",
+          "sourceIds": {
+            "checklistbank": "txn:389384"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corystidae"
+    },
+    {
+      "id": "GENUS_MICROCORYSTES",
+      "name": "Microcorystes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROCORYSTES_LATIFRONS_LOERENTHY_1929",
+          "name": "Microcorystes latifrons",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microcorystes",
+          "authorship": "Loerenthy 1929",
+          "sourceIds": {
+            "checklistbank": "txn:404621"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corystidae"
     }
   ],
-  "speciesCount": 34,
+  "speciesCount": 38,
   "appSlug": "corystidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 17,
+  "genusCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -705,6 +790,6 @@
       "orderKey": 637,
       "familyKey": 3858
     },
-    "checklistbank": "331393"
+    "checklistbank": "323727af-7132-462e-a7f1-cd06838d14e5"
   }
 }

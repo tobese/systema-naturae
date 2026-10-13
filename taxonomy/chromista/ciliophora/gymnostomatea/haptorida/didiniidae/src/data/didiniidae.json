@@ -103,10 +103,12 @@
             "col": [
               "446SH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341713"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341713"
+            ]
           },
           "uuid": "36ea3d7d-f4f1-5f3-804-d82e619d61f993",
-          "authorityIds": "col:446SH,gbif:7459052",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341713,col:446SH,gbif:7459052",
           "children": [],
           "authorship": "Fabre-Domergue, 1888"
         },
@@ -443,10 +445,12 @@
             "col": [
               "35X85"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341712"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341712"
+            ]
           },
           "uuid": "81933e8e-a720-5ab-82a-a6a5c521aba5bc",
-          "authorityIds": "col:35X85,gbif:7648210",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341712,col:35X85,gbif:7648210",
           "children": [],
           "authorship": "Meunier, 1910"
         },
@@ -579,10 +583,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7471299,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754737"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:754737"
+            ]
           },
           "uuid": "394bbaee-78ab-5de-a08-9931d30c6eb4ff",
-          "authorityIds": "gbif:7471299",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:754737,gbif:7471299",
           "children": [],
           "authorship": "Gaarder, 1938"
         },
@@ -797,19 +803,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DIDINIUM_GARGANTUA_MEUNIER_1910",
-          "name": "\"Didinium gargantua\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Didinium",
-          "authorship": "\"Meunier, 1910\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341712"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DIDINIUM_NASUTUM_M_LLER_1773_STEIN_1859",
           "name": "\"Didinium nasutum\"",
           "rank": "SPECIES",
@@ -821,49 +814,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:417328"
           },
           "children": []
-        },
-        {
-          "id": "SP_DIDINIUM_PARVULUM_GAARDER_1938",
-          "name": "\"Didinium parvulum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Didinium",
-          "authorship": "\"Gaarder, 1938\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:754737"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "didiniidae"
-    },
-    {
-      "id": "GENUS_MONODINIUM",
-      "name": "\"Monodinium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MONODINIUM_BALBIANII_FABRE_DOMERGUE_1888",
-          "name": "\"Monodinium balbianii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Monodinium",
-          "authorship": "\"Fabre-Domergue, 1888\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341713"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "didiniidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 42,
+  "genusCount": 7,
+  "speciesCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

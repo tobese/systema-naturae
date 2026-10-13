@@ -123,9 +123,11 @@
             "col": [
               "CR6K9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782612"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1782612"
+            ]
           },
-          "authorityIds": "col:CR6K9,itis:56729"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1782612,col:CR6K9,itis:56729"
         },
         {
           "id": "SP_XIPHIDIOTREMA_MAGNUM_CHIN_ET_GU_1981",
@@ -195,9 +197,11 @@
             "col": [
               "CR795"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782600"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1782600"
+            ]
           },
-          "authorityIds": "col:CR795,itis:56731"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1782600,col:CR795,itis:56731"
         },
         {
           "id": "SP_TROGLOTREMA_SREBARNI_GENOV_1964",
@@ -230,6 +234,18 @@
           },
           "children": [],
           "uuid": "0d409f78-0fb6-5b0-b26-f5f484ebd28374"
+        },
+        {
+          "id": "SP_TROGLOTREMA_SREBARNI",
+          "name": "Troglotrema srebarni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Troglotrema",
+          "sourceIds": {
+            "checklistbank": "391202"
+          },
+          "children": []
         }
       ]
     },
@@ -805,19 +821,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PARAGONIMUS_WESTERMANI_KERBERT_1878",
-          "name": "Paragonimus westermani",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paragonimus",
-          "authorship": "(Kerbert, 1878)",
-          "sourceIds": {
-            "checklistbank": "34504"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PARAGONIMUS_SKRJABINI_KAMO_NISHIDA_HATSUSHIKA_TOMIMURA_1961",
           "name": "Paragonimus skrjabini",
           "rank": "SPECIES",
@@ -827,19 +830,6 @@
           "authorship": "(Kamo, Nishida, Hatsushika & Tomimura, 1961)",
           "sourceIds": {
             "checklistbank": "59628"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARAGONIMUS_ILOKTSUENENSIS_CHEN_1940",
-          "name": "Paragonimus iloktsuenensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paragonimus",
-          "authorship": "Chen, 1940",
-          "sourceIds": {
-            "checklistbank": "62813"
           },
           "children": []
         },
@@ -1076,18 +1066,6 @@
           "children": []
         },
         {
-          "id": "SP_PARAGONIMUS_MICRORCHIS",
-          "name": "Paragonimus microrchis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Paragonimus",
-          "sourceIds": {
-            "checklistbank": "1049665"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PARAGONIMUS_CALIENSIS",
           "name": "Paragonimus caliensis",
           "rank": "SPECIES",
@@ -1204,49 +1182,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1601271"
           },
           "children": []
-        },
-        {
-          "id": "SP_TROGLOTREMA_MUSTELAE_WALLACE_1932",
-          "name": "\"Troglotrema mustelae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Troglotrema",
-          "authorship": "\"Wallace, 1932\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782600"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "troglotrematidae"
-    },
-    {
-      "id": "GENUS_XIPHIDIOTREMA",
-      "name": "\"Xiphidiotrema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_XIPHIDIOTREMA_LOCKERAE_SENGER_1953",
-          "name": "\"Xiphidiotrema lockerae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Xiphidiotrema",
-          "authorship": "\"Senger, 1953\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782612"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "troglotrematidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 70,
+  "genusCount": 19,
+  "speciesCount": 66,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

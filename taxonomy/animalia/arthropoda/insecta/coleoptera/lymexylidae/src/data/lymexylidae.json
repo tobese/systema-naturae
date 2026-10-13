@@ -470,19 +470,6 @@
           "authorityIds": "gbif:1034650,itis:708293"
         },
         {
-          "id": "SP_ATRACTOCERUS_ANTILLARUM_VITRAC_1913",
-          "name": "Atractocerus antillarum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Atractocerus",
-          "authorship": "Vitrac, 1913",
-          "sourceIds": {
-            "checklistbank": "789960"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ATRACTOCERUS_EMARGINATUS",
           "name": "Atractocerus emarginatus",
           "rank": "SPECIES",
@@ -632,24 +619,6 @@
           },
           "uuid": "fec429a7-2d70-551-bfb-a12e7c06f4397b",
           "authorityIds": "gbif:1034606,itis:708266"
-        },
-        {
-          "id": "SP_ELATEROIDES_DERMESTOIDES_LINNAEUS_1761",
-          "name": "Elateroides dermestoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Elateroides",
-          "authorship": "(Linnaeus, 1761)",
-          "children": [],
-          "uuid": "accd67ca-a2fb-569-93f-2bf0812c6ca185",
-          "sourceIds": {
-            "itis": [
-              "708336"
-            ],
-            "checklistbank": "642714"
-          },
-          "authorityIds": "itis:708336"
         }
       ]
     },
@@ -710,20 +679,6 @@
           "uuid": "a42a9829-5ea6-532-993-8742c2b31aa356",
           "authorityIds": "gbif:1034609",
           "authorship": "(Linnaeus, 1861)"
-        },
-        {
-          "id": "SP_HYLECOETUS_FLABELLICORNIS_SCHNEIDER_1791",
-          "name": "Hylecoetus flabellicornis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hylecoetus",
-          "authorship": "(Schneider, 1791)",
-          "sourceIds": {
-            "checklistbank": "292619"
-          },
-          "children": [],
-          "uuid": "186be2b8-27c9-55d-a77-4a3f3f7c9f9d73"
         },
         {
           "id": "SP_HYLECOETUS_LUGUBRIS",
@@ -1369,18 +1324,6 @@
             "checklistbank": "ott6249705"
           },
           "children": []
-        },
-        {
-          "id": "SP_MELITTOMMA_SP",
-          "name": "Melittomma sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melittomma",
-          "sourceIds": {
-            "checklistbank": "1205634"
-          },
-          "children": []
         }
       ]
     },
@@ -1646,19 +1589,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CANTHARIS_DERMESTOIDES_LINNAEUS_1761",
-          "name": "Cantharis dermestoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cantharis",
-          "authorship": "Linnaeus, 1761",
-          "sourceIds": {
-            "checklistbank": "801452"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CANTHARIS_NAVALIS_LINNAEUS_1758",
           "name": "Cantharis navalis",
           "rank": "SPECIES",
@@ -1746,7 +1676,8 @@
           "sourceIds": {
             "checklistbank": "ott6249704"
           },
-          "children": []
+          "children": [],
+          "authorship": "Wolf-Schwenninger 2011"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1793,10 +1724,137 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lymexylidae"
+    },
+    {
+      "id": "GENUS_VETATRACTOCERUS",
+      "name": "Vetatractocerus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VETATRACTOCERUS_BURMITICUS_YAMAMOTO_2019",
+          "name": "Vetatractocerus burmiticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vetatractocerus",
+          "authorship": "Yamamoto 2019",
+          "sourceIds": {
+            "checklistbank": "txn:383540"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lymexylidae"
+    },
+    {
+      "id": "GENUS_PARATRACTOCERUS",
+      "name": "Paratractocerus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARATRACTOCERUS_GUSAKOVI_NAZARENKO_AND_PERKOVSKY_2020",
+          "name": "Paratractocerus gusakovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paratractocerus",
+          "authorship": "Nazarenko and Perkovsky 2020",
+          "sourceIds": {
+            "checklistbank": "txn:433881"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lymexylidae"
+    },
+    {
+      "id": "GENUS_ANANCITES",
+      "name": "Anancites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANANCITES_HUKAWNGENSIS_CHEN_AND_ZHANG_2020",
+          "name": "Anancites hukawngensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anancites",
+          "authorship": "(Chen and Zhang 2020)",
+          "sourceIds": {
+            "checklistbank": "txn:448081"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lymexylidae"
+    },
+    {
+      "id": "GENUS_CRETOQUADRATUS",
+      "name": "Cretoquadratus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRETOQUADRATUS_FOSSILIS_YAMAMOTO_2019",
+          "name": "Cretoquadratus fossilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretoquadratus",
+          "authorship": "(Yamamoto 2019)",
+          "sourceIds": {
+            "checklistbank": "txn:383543"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRETOQUADRATUS_EXTINCTUS_YAMAMOTO_2019",
+          "name": "Cretoquadratus extinctus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretoquadratus",
+          "authorship": "(Yamamoto 2019)",
+          "sourceIds": {
+            "checklistbank": "txn:383542"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRETOQUADRATUS_BALTICUS_YAMAMOTO_2019",
+          "name": "Cretoquadratus balticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretoquadratus",
+          "authorship": "(Yamamoto 2019)",
+          "sourceIds": {
+            "checklistbank": "txn:383544"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRETOQUADRATUS_SVERLILO_NAZARENKO_ET_AL_2022",
+          "name": "Cretoquadratus sverlilo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretoquadratus",
+          "authorship": "(Nazarenko et al. 2022)",
+          "sourceIds": {
+            "checklistbank": "txn:450951"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lymexylidae"
     }
   ],
-  "genusCount": 20,
-  "speciesCount": 84,
+  "genusCount": 24,
+  "speciesCount": 86,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

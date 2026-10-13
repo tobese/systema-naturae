@@ -26,9 +26,11 @@
             "col": [
               "6J8W8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:887072"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:887072"
+            ]
           },
-          "authorityIds": "col:6J8W8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:887072,col:6J8W8",
           "authorship": "(d'Archiac & Haime, 1854)"
         },
         {
@@ -60,9 +62,11 @@
             "col": [
               "6J97W"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:830028"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:830028"
+            ]
           },
-          "authorityIds": "col:6J97W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:830028,col:6J97W",
           "authorship": "(Ihering, 1907)"
         },
         {
@@ -80,9 +84,11 @@
             "col": [
               "6J988"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:830029"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:830029"
+            ]
           },
-          "authorityIds": "col:6J988",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:830029,col:6J988",
           "authorship": "(H. J. Finlay, 1927)"
         },
         {
@@ -209,9 +215,11 @@
             "col": [
               "8YMZ3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1570297"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1570297"
+            ]
           },
-          "authorityIds": "col:8YMZ3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570297,col:8YMZ3",
           "authorship": "(Defrance, 1832)"
         },
         {
@@ -229,9 +237,11 @@
             "col": [
               "7RXVY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484937"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1484937"
+            ]
           },
-          "authorityIds": "col:7RXVY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1484937,col:7RXVY",
           "authorship": "(Nilsson, 1832)"
         },
         {
@@ -351,9 +361,11 @@
             "col": [
               "8YMZ4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1570296"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1570296"
+            ]
           },
-          "authorityIds": "col:8YMZ4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570296,col:8YMZ4",
           "authorship": "(Deshayes, 1858)"
         },
         {
@@ -371,9 +383,11 @@
             "col": [
               "8YMZ5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1570298"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1570298"
+            ]
           },
-          "authorityIds": "col:8YMZ5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1570298,col:8YMZ5",
           "authorship": "(A. d'Orbigny, 1850)"
         },
         {
@@ -660,9 +674,11 @@
             "col": [
               "9GJPB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599261"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1599261"
+            ]
           },
-          "authorityIds": "col:9GJPB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599261,col:9GJPB",
           "authorship": "(J. Sowerby, 1816)"
         },
         {
@@ -708,9 +724,11 @@
             "col": [
               "9GJC8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599269"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1599269"
+            ]
           },
-          "authorityIds": "col:9GJC8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599269,col:9GJC8",
           "authorship": "(Sharpe, 1850)"
         }
       ]
@@ -784,9 +802,23 @@
           "sourceIds": {
             "col": [
               "CHQ45"
-            ]
+            ],
+            "checklistbank": "txn:354534"
           },
           "authorityIds": "col:CHQ45"
+        },
+        {
+          "id": "SP_AMBIGOSTREA_CLARAE_IHERING_1907",
+          "name": "Ambigostrea clarae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ambigostrea",
+          "authorship": "(Ihering 1907)",
+          "sourceIds": {
+            "checklistbank": "txn:476817"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -879,46 +911,59 @@
       "lineage": "Flemingostreidae"
     },
     {
-      "id": "GENUS_FLEMINGOSTREA",
-      "name": "\"Flemingostrea",
+      "id": "GENUS_AGEROSTREA",
+      "name": "Agerostrea",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_FLEMINGOSTREA_SUTERI_IHERING_1907",
-          "name": "\"Flemingostrea suteri\"",
+          "id": "SP_AGEROSTREA_FALCATA_MORTON_1827",
+          "name": "Agerostrea falcata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Flemingostrea",
-          "authorship": "\"(Ihering, 1907)\"",
+          "lineage": "Agerostrea",
+          "authorship": "(Morton 1827)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:830028"
+            "checklistbank": "txn:61523"
           },
           "children": []
         },
         {
-          "id": "SP_FLEMINGOSTREA_WOLLASTONI_H_J_FINLAY_1927",
-          "name": "\"Flemingostrea wollastoni\"",
+          "id": "SP_AGEROSTREA_ROUXI_DOUVILLE_1910",
+          "name": "Agerostrea rouxi",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Flemingostrea",
-          "authorship": "\"(H. J. Finlay, 1927)\"",
+          "lineage": "Agerostrea",
+          "authorship": "(Douville 1910)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:830029"
+            "checklistbank": "txn:354414"
           },
           "children": []
         },
         {
-          "id": "SP_FLEMINGOSTREA_FLEMINGI_D_ARCHIAC_HAIME_1854",
-          "name": "\"Flemingostrea flemingi\"",
+          "id": "SP_AGEROSTREA_MESENTERICA_MORTON_1834",
+          "name": "Agerostrea mesenterica",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Flemingostrea",
-          "authorship": "\"(d'Archiac & Haime, 1854)\"",
+          "lineage": "Agerostrea",
+          "authorship": "(Morton 1834)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:887072"
+            "checklistbank": "txn:61524"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AGEROSTREA_UNGULATUS_B_HM_1891",
+          "name": "Agerostrea ungulatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Agerostrea",
+          "authorship": "(Böhm 1891)",
+          "sourceIds": {
+            "checklistbank": "txn:352617"
           },
           "children": []
         }
@@ -927,59 +972,20 @@
       "lineage": "flemingostreidae"
     },
     {
-      "id": "GENUS_LIOSTREA",
-      "name": "\"Liostrea",
+      "id": "GENUS_CUBITOSTREA",
+      "name": "Cubitostrea",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LIOSTREA_HISINGERI_NILSSON_1832",
-          "name": "\"Liostrea hisingeri\"",
+          "id": "SP_CUBITOSTREA_TECTICOSTA_GABB_1860",
+          "name": "Cubitostrea tecticosta",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Liostrea",
-          "authorship": "\"(Nilsson, 1832)\"",
+          "lineage": "Cubitostrea",
+          "authorship": "(Gabb 1860)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1484937"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LIOSTREA_RESUPINATA_DESHAYES_1858",
-          "name": "\"Liostrea resupinata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liostrea",
-          "authorship": "\"(Deshayes, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1570296"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LIOSTREA_HETEROCLITA_DEFRANCE_1832",
-          "name": "\"Liostrea heteroclita\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liostrea",
-          "authorship": "\"(Defrance, 1832)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1570297"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LIOSTREA_SUBPLANA_A_D_ORBIGNY_1850",
-          "name": "\"Liostrea subplana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Liostrea",
-          "authorship": "\"(A. d'Orbigny, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1570298"
+            "checklistbank": "txn:61526"
           },
           "children": []
         }
@@ -988,33 +994,20 @@
       "lineage": "flemingostreidae"
     },
     {
-      "id": "GENUS_PRAEEXOGYRA",
-      "name": "\"Praeexogyra",
+      "id": "GENUS_OSTREA",
+      "name": "Ostrea",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PRAEEXOGYRA_ACUMINATA_J_SOWERBY_1816",
-          "name": "\"Praeexogyra acuminata\"",
+          "id": "SP_OSTREA_TECTICOSTA_BORNEMAN_1938",
+          "name": "Ostrea tecticosta",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Praeexogyra",
-          "authorship": "\"(J. Sowerby, 1816)\"",
+          "lineage": "Ostrea",
+          "authorship": "Borneman 1938",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599261"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PRAEEXOGYRA_PUSTULOSA_SHARPE_1850",
-          "name": "\"Praeexogyra pustulosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Praeexogyra",
-          "authorship": "\"(Sharpe, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1599269"
+            "checklistbank": "txn:355785"
           },
           "children": []
         }
@@ -1024,7 +1017,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 62,
+  "speciesCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1032,6 +1025,7 @@
       "classKey": 137,
       "orderKey": 9485611,
       "familyKey": 8446944
-    }
+    },
+    "checklistbank": "txn:244080"
   }
 }

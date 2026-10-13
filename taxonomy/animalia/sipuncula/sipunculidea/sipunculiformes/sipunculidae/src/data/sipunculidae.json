@@ -577,9 +577,11 @@
             "col": [
               "5CBLY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:266882"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:266882"
+            ]
           },
-          "authorityIds": "col:5CBLY,itis:154557"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:266882,col:5CBLY,itis:154557"
         },
         {
           "id": "SP_XENOSIPHON_PORTICUS_HYLLEBERG_2014",
@@ -1701,32 +1703,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sipunculidae"
-    },
-    {
-      "id": "GENUS_XENOSIPHON",
-      "name": "\"Xenosiphon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_XENOSIPHON_BRANCHIATUS_FISCHER_1894",
-          "name": "\"Xenosiphon branchiatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Xenosiphon",
-          "authorship": "\"(Fischer, 1894)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:266882"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sipunculidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 104,
+  "genusCount": 11,
+  "speciesCount": 103,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

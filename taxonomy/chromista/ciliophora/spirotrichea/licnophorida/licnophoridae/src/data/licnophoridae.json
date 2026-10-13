@@ -120,10 +120,12 @@
             "col": [
               "6Q9VK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1889365"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1889365"
+            ]
           },
           "uuid": "d8bace99-1123-58f-a3d-acbd008a0e2391",
-          "authorityIds": "col:6Q9VK,gbif:7713129",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1889365,col:6Q9VK,gbif:7713129",
           "authorship": "Villeneuve-Brachon, 1939",
           "children": []
         },
@@ -209,7 +211,8 @@
             ],
             "col": [
               "729VH"
-            ]
+            ],
+            "checklistbank": "6616"
           },
           "uuid": "0cea0d3a-7aca-5ba-9de-a364ccd2bf51cc",
           "authorityIds": "col:729VH,gbif:7786353",
@@ -256,10 +259,12 @@
             "col": [
               "6PY7F"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1889362"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1889362"
+            ]
           },
           "uuid": "0a67c89a-e52a-5eb-b7c-b20911f3046a4f",
-          "authorityIds": "col:6PY7F,gbif:7406556",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1889362,col:6PY7F,gbif:7406556",
           "authorship": "Van As & Van As, 2001",
           "children": []
         },
@@ -366,45 +371,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "licnophoridae"
-    },
-    {
-      "id": "GENUS_LICNOPHORA",
-      "name": "\"Licnophora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LICNOPHORA_ROSA_VAN_AS_VAN_AS_2001",
-          "name": "\"Licnophora rosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Licnophora",
-          "authorship": "\"Van As & Van As, 2001\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1889362"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LICNOPHORA_CHATTONI_VILLENEUVE_BRACHON_1939",
-          "name": "\"Licnophora chattoni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Licnophora",
-          "authorship": "\"Villeneuve-Brachon, 1939\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1889365"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "licnophoridae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 18,
+  "genusCount": 4,
+  "speciesCount": 16,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

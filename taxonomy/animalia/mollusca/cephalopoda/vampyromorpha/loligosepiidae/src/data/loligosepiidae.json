@@ -22,7 +22,8 @@
               "VPBTD"
             ]
           },
-          "authorityIds": "col:VPBTD"
+          "authorityIds": "col:VPBTD",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -47,24 +48,74 @@
               "VPCML"
             ]
           },
-          "authorityIds": "col:VPCML"
+          "authorityIds": "col:VPCML",
+          "children": []
+        },
+        {
+          "id": "SP_LOLIGOSEPIA_NEIDERNACHENSIS_REITNER_1978",
+          "name": "Loligosepia neidernachensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loligosepia",
+          "authorship": "Reitner 1978",
+          "sourceIds": {
+            "checklistbank": "txn:258582"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LOLIGOSEPIA_BUCKLANDI_VOLTZ_1840",
+          "name": "Loligosepia bucklandi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loligosepia",
+          "authorship": "(Voltz 1840)",
+          "sourceIds": {
+            "checklistbank": "txn:299656"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Loligosepiidae"
+    },
+    {
+      "id": "GENUS_NEOLOLIGOSEPIA",
+      "name": "Neololigosepia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOLOLIGOSEPIA_STAHLECKERI_REITNER_AND_ENGESER_1982",
+          "name": "Neololigosepia stahleckeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neololigosepia",
+          "authorship": "Reitner and Engeser 1982",
+          "sourceIds": {
+            "checklistbank": "txn:424875"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "loligosepiidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 5,
   "appSlug": "loligosepiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4624723
-    }
+    },
+    "checklistbank": "txn:258583"
   }
 }

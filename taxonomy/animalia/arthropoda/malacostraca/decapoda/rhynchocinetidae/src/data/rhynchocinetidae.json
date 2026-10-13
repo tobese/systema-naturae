@@ -387,19 +387,6 @@
           "uuid": "99633a5e-2139-523-b04-d2ca1b36b49a95"
         },
         {
-          "id": "SP_RHYNCHOCINETES_HENDERSONI_KEMP_1925",
-          "name": "Rhynchocinetes hendersoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhynchocinetes",
-          "authorship": "Kemp, 1925",
-          "sourceIds": {
-            "checklistbank": "690174"
-          },
-          "children": []
-        },
-        {
           "id": "SP_RHYNCHOCINETES_INTERMEDIUS_EDMONDSON_1952",
           "name": "Rhynchocinetes intermedius",
           "rank": "SPECIES",
@@ -435,19 +422,6 @@
           "authorship": "Okuno, 1994",
           "sourceIds": {
             "checklistbank": "690306"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_RHYNCHOCINETES_RIGENS_GORDON_1936",
-          "name": "Rhynchocinetes rigens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rhynchocinetes",
-          "authorship": "Gordon, 1936",
-          "sourceIds": {
-            "checklistbank": "1054707"
           },
           "children": []
         },
@@ -656,9 +630,11 @@
             "itis": [
               "1187833"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1374837"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1374837"
+            ]
           },
-          "authorityIds": "col:9CQ6N,itis:1187833",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1374837,col:9CQ6N,itis:1187833",
           "children": []
         },
         {
@@ -755,28 +731,6 @@
       "lineage": "Rhynchocinetidae"
     },
     {
-      "id": "GENUS_HIPPOLYTE",
-      "name": "Hippolyte",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HIPPOLYTE_SERRATUS_H_MILNE_EDWARDS_1837",
-          "name": "Hippolyte serratus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hippolyte",
-          "authorship": "H. Milne Edwards, 1837",
-          "sourceIds": {
-            "checklistbank": "691751"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "rhynchocinetidae"
-    },
-    {
       "id": "GENUS_RHYNCHOCINETIDAE",
       "name": "Rhynchocinetidae",
       "rank": "GENUS",
@@ -796,35 +750,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "rhynchocinetidae"
-    },
-    {
-      "id": "GENUS_CINETORHYNCHUS",
-      "name": "\"Cinetorhynchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CINETORHYNCHUS_GABONENSIS_URI_OB_OV_WIRTZ_2019",
-          "name": "\"Cinetorhynchus gabonensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cinetorhynchus",
-          "authorship": "\"Ďuriš, Šobáňová & Wirtz, 2019\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1374837"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "rhynchocinetidae"
     }
   ],
-  "speciesCount": 43,
+  "speciesCount": 39,
   "appSlug": "rhynchocinetidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 5,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

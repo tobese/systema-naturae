@@ -339,9 +339,11 @@
             "col": [
               "6M2XN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:816863"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:816863"
+            ]
           },
-          "authorityIds": "col:6M2XN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:816863,col:6M2XN",
           "authorship": "(Radha, 1975)"
         },
         {
@@ -359,9 +361,11 @@
             "col": [
               "3L7F2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:816864"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:816864"
+            ]
           },
-          "authorityIds": "col:3L7F2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:816864,col:3L7F2",
           "authorship": "(Sharma & Gupta, 1990)"
         },
         {
@@ -518,45 +522,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_HETERAPTA",
-      "name": "\"Heterapta",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HETERAPTA_ELONGATA_RADHA_1975",
-          "name": "\"Heterapta elongata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heterapta",
-          "authorship": "\"(Radha, 1975)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:816863"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HETERAPTA_GUPTAI_SHARMA_GUPTA_1990",
-          "name": "\"Heterapta guptai\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heterapta",
-          "authorship": "\"(Sharma & Gupta, 1990)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:816864"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "heteromicrocotylidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 33,
+  "genusCount": 3,
+  "speciesCount": 31,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

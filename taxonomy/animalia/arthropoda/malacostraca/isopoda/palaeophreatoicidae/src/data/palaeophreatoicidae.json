@@ -22,7 +22,8 @@
               "849BN"
             ]
           },
-          "authorityIds": "col:849BN"
+          "authorityIds": "col:849BN",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -47,7 +48,21 @@
               "84BVQ"
             ]
           },
-          "authorityIds": "col:84BVQ"
+          "authorityIds": "col:84BVQ",
+          "children": []
+        },
+        {
+          "id": "SP_PALAEOCRANGON_PROBLEMATICUS_SCHLOTHEIM_1820",
+          "name": "Palaeocrangon problematicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeocrangon",
+          "authorship": "(Schlotheim 1820)",
+          "sourceIds": {
+            "checklistbank": "txn:186911"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -70,20 +85,44 @@
           "sourceIds": {
             "col": [
               "84BVV"
-            ]
+            ],
+            "checklistbank": "txn:168991"
           },
-          "authorityIds": "col:84BVV"
+          "authorityIds": "col:84BVV",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Palaeophreatoicidae"
+    },
+    {
+      "id": "GENUS_SOTTYELLA",
+      "name": "Sottyella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SOTTYELLA_MONTCELLENSIS_RACHEBOEUF_ET_AL_2009",
+          "name": "Sottyella montcellensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sottyella",
+          "authorship": "Racheboeuf et al. 2009",
+          "sourceIds": {
+            "checklistbank": "txn:506122"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeophreatoicidae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "palaeophreatoicidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -91,6 +130,7 @@
       "classKey": 229,
       "orderKey": 643,
       "familyKey": 4667526
-    }
+    },
+    "checklistbank": "txn:168988"
   }
 }

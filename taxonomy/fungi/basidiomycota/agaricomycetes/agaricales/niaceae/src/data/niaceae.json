@@ -2237,10 +2237,12 @@
             "col": [
               "47C6J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100479"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:100479"
+            ]
           },
           "uuid": "4de2b0cb-fe13-5f9-9ab-80842fb88823a0",
-          "authorityIds": "col:47C6J,gbif:2530476,mycobank:358356"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:100479,col:47C6J,gbif:2530476,mycobank:358356"
         },
         {
           "id": "NIA_GLOBISPORA",
@@ -2288,10 +2290,12 @@
             "mycobank": [
               "272842"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100480"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:100480"
+            ]
           },
           "uuid": "1ed8585c-3bb9-51b-93d-074d72deacf2cd",
-          "authorityIds": "gbif:3315798,mycobank:272842"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:100480,gbif:3315798,mycobank:272842"
         },
         {
           "id": "NIA_VIBRISSA",
@@ -6532,32 +6536,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NIA_EPIDERMOIDEA_ROSSELLO_DESCALS_1993",
-          "name": "\"Nia epidermoidea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nia",
-          "authorship": "\"Rossello & Descals, 1993\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100479"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NIA_GLOBOSPORA_BARRATA_BASILIO_1997",
-          "name": "\"Nia globospora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nia",
-          "authorship": "\"Barrata & Basilio, 1997\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100480"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NIA_VIBRISSA_R_T_MOORE_MEYERS_1961",
           "name": "\"Nia vibrissa\"",
           "rank": "SPECIES",
@@ -6599,7 +6577,7 @@
   ],
   "authorship": "Jülich",
   "genusCount": 18,
-  "speciesCount": 308,
+  "speciesCount": 306,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

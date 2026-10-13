@@ -20,9 +20,11 @@
           "sourceIds": {
             "col": [
               "4HPKQ"
-            ]
+            ],
+            "checklistbank": "txn:232892"
           },
-          "authorityIds": "col:4HPKQ"
+          "authorityIds": "col:4HPKQ",
+          "children": []
         },
         {
           "id": "SP_PIANASPIS_INSUETUS_LU_ZHU_1980",
@@ -36,9 +38,11 @@
           "sourceIds": {
             "col": [
               "4HPKS"
-            ]
+            ],
+            "checklistbank": "txn:234910"
           },
-          "authorityIds": "col:4HPKS"
+          "authorityIds": "col:4HPKS",
+          "children": []
         },
         {
           "id": "SP_PIANASPIS_DICTYODROMA_YANG_ET_AL_1993",
@@ -54,7 +58,8 @@
               "4HPKR"
             ]
           },
-          "authorityIds": "col:4HPKR"
+          "authorityIds": "col:4HPKR",
+          "children": []
         },
         {
           "id": "SP_PIANASPIS_SINENSIS_YANG_1978",
@@ -70,7 +75,21 @@
               "4HPKT"
             ]
           },
-          "authorityIds": "col:4HPKT"
+          "authorityIds": "col:4HPKT",
+          "children": []
+        },
+        {
+          "id": "SP_PIANASPIS_SORS_PIK_1961",
+          "name": "Pianaspis sors",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pianaspis",
+          "authorship": "(Öpik 1961)",
+          "sourceIds": {
+            "checklistbank": "txn:455343"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -95,18 +114,76 @@
               "7G622"
             ]
           },
-          "authorityIds": "col:7G622"
+          "authorityIds": "col:7G622",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Papyriaspididae"
+    },
+    {
+      "id": "GENUS_PAPYRIASPIS",
+      "name": "Papyriaspis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PAPYRIASPIS_LANCEOLA_WHITEHOUSE_1939",
+          "name": "Papyriaspis lanceola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Papyriaspis",
+          "authorship": "Whitehouse 1939",
+          "sourceIds": {
+            "checklistbank": "txn:455345"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "papyriaspididae"
+    },
+    {
+      "id": "GENUS_NEOHEDINASPIS",
+      "name": "Neohedinaspis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOHEDINASPIS_XINJIANGENSIS_XIANG_AND_ZHANG_1984",
+          "name": "Neohedinaspis xinjiangensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neohedinaspis",
+          "authorship": "Xiang and Zhang 1984",
+          "sourceIds": {
+            "checklistbank": "txn:516893"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOHEDINASPIS_CONICA_XIANG_AND_ZHANG_1984",
+          "name": "Neohedinaspis conica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neohedinaspis",
+          "authorship": "Xiang and Zhang 1984",
+          "sourceIds": {
+            "checklistbank": "txn:516894"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "papyriaspididae"
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 9,
   "appSlug": "papyriaspididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Trilobita",
-  "genusCount": 2,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -114,6 +191,7 @@
       "classKey": 9273948,
       "orderKey": 9583276,
       "familyKey": 3266927
-    }
+    },
+    "checklistbank": "txn:155754"
   }
 }

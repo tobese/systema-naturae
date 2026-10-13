@@ -29,9 +29,11 @@
             "col": [
               "3JNZ5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111378"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:111378"
+            ]
           },
-          "authorityIds": "col:3JNZ5,itis:206742",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:111378,col:3JNZ5,itis:206742",
           "children": [],
           "authorship": "(Moll, 1803)"
         },
@@ -95,9 +97,11 @@
             "itis": [
               "156234"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111380"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:111380"
+            ]
           },
-          "authorityIds": "col:3JNZ7,itis:156234",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:111380,col:3JNZ7,itis:156234",
           "children": [],
           "authorship": "(Audouin, 1826)"
         },
@@ -141,9 +145,11 @@
             "col": [
               "86K47"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411427"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1411427"
+            ]
           },
-          "authorityIds": "col:86K47",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1411427,col:86K47",
           "children": [],
           "authorship": "(Wood, 1844)"
         },
@@ -252,58 +258,10 @@
       "lineage": "haplopomidae"
     },
     {
-      "id": "GENUS_MICROPORELLA",
-      "name": "Microporella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MICROPORELLA_IMPRESSA_AUDOUIN_1826",
-          "name": "Microporella impressa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microporella",
-          "authorship": "(Audouin, 1826)",
-          "sourceIds": {
-            "checklistbank": "1031180"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "haplopomidae"
-    },
-    {
       "id": "GENUS_HAPLOPOMA",
       "name": "\"Haplopoma",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_HAPLOPOMA_BIMUCRONATUM_MOLL_1803",
-          "name": "\"Haplopoma bimucronatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Haplopoma",
-          "authorship": "\"(Moll, 1803)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111378"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HAPLOPOMA_IMPRESSUM_AUDOUIN_1826",
-          "name": "\"Haplopoma impressum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Haplopoma",
-          "authorship": "\"(Audouin, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:111380"
-          },
-          "children": []
-        },
         {
           "id": "SP_HAPLOPOMA_BIMUCRONATUM_WATERS_1879",
           "name": "\"Haplopoma bimucronatum",
@@ -329,27 +287,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:111787"
           },
           "children": []
-        },
-        {
-          "id": "SP_HAPLOPOMA_PYRIFORMIS_WOOD_1844",
-          "name": "\"Haplopoma pyriformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Haplopoma",
-          "authorship": "\"(Wood, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1411427"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "haplopomidae"
     }
   ],
-  "speciesCount": 17,
-  "genusCount": 6,
+  "speciesCount": 13,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

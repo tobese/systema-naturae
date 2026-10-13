@@ -208,11 +208,13 @@
             ],
             "col": [
               "8QDQL"
-            ]
+            ],
+            "checklistbank": "txn:516733"
           },
           "uuid": "5dbb6580-d3b6-50f-a9d-2711b06a0e83b3",
           "authorityIds": "col:8QDQL,gbif:11370313",
-          "children": []
+          "children": [],
+          "authorship": "Marrson 1878"
         },
         {
           "id": "PLANORBULINA_DIFFORMIS",
@@ -815,6 +817,19 @@
           "lineage": "Planorbulina",
           "sourceIds": {
             "checklistbank": "ott5425298"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLANORBULINA_VERMICULATA_D_ORBIGNY_1826",
+          "name": "Planorbulina vermiculata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Planorbulina",
+          "authorship": "(d'Orbigny 1826)",
+          "sourceIds": {
+            "checklistbank": "txn:473887"
           },
           "children": []
         }
@@ -2624,10 +2639,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "planorbulinidae"
+    },
+    {
+      "id": "GENUS_CIBICIDELLA",
+      "name": "Cibicidella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CIBICIDELLA_VARIABILIS_D_ORBIGNY_1826",
+          "name": "Cibicidella variabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cibicidella",
+          "authorship": "(d'Orbigny 1826)",
+          "sourceIds": {
+            "checklistbank": "txn:241484"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planorbulinidae"
+    },
+    {
+      "id": "GENUS_LINDERINA",
+      "name": "Linderina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LINDERINA_VISSERAE_HOFKER_1958",
+          "name": "Linderina visserae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Linderina",
+          "authorship": "(Hofker 1958)",
+          "sourceIds": {
+            "checklistbank": "txn:312444"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "planorbulinidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 139,
+  "genusCount": 21,
+  "speciesCount": 142,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -2636,6 +2695,6 @@
       "orderKey": 7692889,
       "familyKey": 8086226
     },
-    "checklistbank": "203403"
+    "checklistbank": "335718"
   }
 }

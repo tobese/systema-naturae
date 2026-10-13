@@ -3428,20 +3428,6 @@
           "authorityIds": "col:C4KLT"
         },
         {
-          "id": "SP_BIANIUM_PLICITUM_LINTON_1928",
-          "name": "Bianium plicitum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bianium",
-          "authorship": "(Linton, 1928)",
-          "sourceIds": {
-            "checklistbank": "30384"
-          },
-          "children": [],
-          "uuid": "b3da5abb-4ab2-5a9-93d-8bde8a7b8094e8"
-        },
-        {
           "id": "SP_BIANIUM_HEMISTOMA_OZAKI_1928_YAMAGUTI_1934",
           "name": "Bianium hemistoma",
           "rank": "SPECIES",
@@ -4659,9 +4645,11 @@
             "col": [
               "4MQCQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727504"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:727504"
+            ]
           },
-          "authorityIds": "col:4MQCQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:727504,col:4MQCQ",
           "authorship": "(Al-Bassel, 2001)"
         },
         {
@@ -12143,50 +12131,6 @@
       "lineage": "lepocreadiidae"
     },
     {
-      "id": "GENUS_HEMISTOMUM",
-      "name": "Hemistomum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HEMISTOMUM_HAUSTRUM_MACCALLUM_1919",
-          "name": "Hemistomum haustrum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hemistomum",
-          "authorship": "MacCallum, 1919",
-          "sourceIds": {
-            "checklistbank": "908303"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lepocreadiidae"
-    },
-    {
-      "id": "GENUS_ALLOCREADIUM",
-      "name": "Allocreadium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ALLOCREADIUM_PEGORCHIS_STOSSICH_1901",
-          "name": "Allocreadium pegorchis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Allocreadium",
-          "authorship": "Stossich, 1901",
-          "sourceIds": {
-            "checklistbank": "923956"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lepocreadiidae"
-    },
-    {
       "id": "GENUS_DISTOMUM",
       "name": "Distomum",
       "rank": "GENUS",
@@ -13022,19 +12966,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:108994"
           },
           "children": []
-        },
-        {
-          "id": "SP_PRODISTOMUM_LIBYACUM_AL_BASSEL_2001",
-          "name": "\"Prodistomum libyacum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prodistomum",
-          "authorship": "\"(Al-Bassel, 2001)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727504"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -13107,8 +13038,8 @@
       "lineage": "lepocreadiidae"
     }
   ],
-  "genusCount": 92,
-  "speciesCount": 797,
+  "genusCount": 90,
+  "speciesCount": 793,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

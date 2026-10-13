@@ -603,20 +603,6 @@
           },
           "uuid": "3f36987d-3265-5fe-a73-2eeeffa96da44c",
           "authorityIds": "col:VZG9,gbif:1030925"
-        },
-        {
-          "id": "SP_CLEOMIA_GUARESCHI_STEFANI_1953",
-          "name": "Cleomia guareschi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cleomia",
-          "authorship": "Stefani, 1953",
-          "sourceIds": {
-            "checklistbank": "91890"
-          },
-          "children": [],
-          "uuid": "27c79fe8-629e-5b9-9fb-fc82e443ddd1b3"
         }
       ]
     },
@@ -2960,7 +2946,8 @@
           "sourceIds": {
             "col": [
               "CTDB6"
-            ]
+            ],
+            "checklistbank": "txn:499751"
           },
           "authorityIds": "col:CTDB6"
         },
@@ -2976,9 +2963,11 @@
           "sourceIds": {
             "col": [
               "396S8"
-            ]
+            ],
+            "checklistbank": "txn:217444"
           },
-          "authorityIds": "col:396S8"
+          "authorityIds": "col:396S8",
+          "authorship": "(Pictet and Hagen 1856)"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3002,7 +2991,8 @@
           "sourceIds": {
             "col": [
               "9HLXY"
-            ]
+            ],
+            "checklistbank": "txn:442502"
           },
           "authorityIds": "col:9HLXY"
         }
@@ -3126,59 +3116,16 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Embiidae"
-    },
-    {
-      "id": "GENUS_MONOTYLOTA",
-      "name": "Monotylota",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MONOTYLOTA_RAMBURI_RIMSKI_KORSAKOW_1905",
-          "name": "Monotylota ramburi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Monotylota",
-          "authorship": "(Rimski-Korsakow, 1905)",
-          "sourceIds": {
-            "checklistbank": "28908"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "embiidae"
-    },
-    {
-      "id": "GENUS_EMBIIDAE",
-      "name": "Embiidae",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EMBIIDAE_SP",
-          "name": "Embiidae sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Embiidae",
-          "sourceIds": {
-            "checklistbank": "1221056"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "embiidae"
     }
   ],
-  "speciesCount": 154,
+  "speciesCount": 151,
   "appSlug": "embiidae",
   "continents": [
     "Africa",
     "Asia",
     "Europe"
   ],
-  "genusCount": 33,
+  "genusCount": 31,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

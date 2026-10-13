@@ -22,7 +22,8 @@
               "53CHD"
             ]
           },
-          "authorityIds": "col:53CHD"
+          "authorityIds": "col:53CHD",
+          "children": []
         },
         {
           "id": "SP_STYRITES_DAWSONI_TOZER_1994",
@@ -38,7 +39,34 @@
               "7B3VT"
             ]
           },
-          "authorityIds": "col:7B3VT"
+          "authorityIds": "col:7B3VT",
+          "children": []
+        },
+        {
+          "id": "SP_STYRITES_TROPITIFORMIS_MOJSISOVICS_1893",
+          "name": "Styrites tropitiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Styrites",
+          "authorship": "Mojsisovics 1893",
+          "sourceIds": {
+            "checklistbank": "txn:356820"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STYRITES_LILANGENSIS_ARTHABER_1911",
+          "name": "Styrites lilangensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Styrites",
+          "authorship": "Arthaber 1911",
+          "sourceIds": {
+            "checklistbank": "txn:425104"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -63,7 +91,8 @@
               "6CZMY"
             ]
           },
-          "authorityIds": "col:6CZMY"
+          "authorityIds": "col:6CZMY",
+          "children": []
         },
         {
           "id": "SP_DISCOSTYRITES_IRENEANUS_MCLEARN_1940",
@@ -79,7 +108,8 @@
               "6CZMP"
             ]
           },
-          "authorityIds": "col:6CZMP"
+          "authorityIds": "col:6CZMP",
+          "children": []
         },
         {
           "id": "SP_DISCOSTYRITES_DISCIFORMIS_GEMMELLARO_1904",
@@ -95,7 +125,8 @@
               "6CZMZ"
             ]
           },
-          "authorityIds": "col:6CZMZ"
+          "authorityIds": "col:6CZMZ",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -120,7 +151,8 @@
               "57G69"
             ]
           },
-          "authorityIds": "col:57G69"
+          "authorityIds": "col:57G69",
+          "children": []
         },
         {
           "id": "SP_TORNQUISTITES_EVOLUTUS_HYATT_SMITH_1905",
@@ -134,9 +166,11 @@
           "sourceIds": {
             "col": [
               "57G68"
-            ]
+            ],
+            "checklistbank": "txn:265313"
           },
-          "authorityIds": "col:57G68"
+          "authorityIds": "col:57G68",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -161,7 +195,8 @@
               "59B3Z"
             ]
           },
-          "authorityIds": "col:59B3Z"
+          "authorityIds": "col:59B3Z",
+          "children": []
         },
         {
           "id": "SP_TROPICELTITES_PACIFICUS_TOZER_1994",
@@ -177,7 +212,8 @@
               "59B46"
             ]
           },
-          "authorityIds": "col:59B46"
+          "authorityIds": "col:59B46",
+          "children": []
         },
         {
           "id": "SP_TROPICELTITES_INFLATUS_TOZER_1994",
@@ -193,7 +229,8 @@
               "59B45"
             ]
           },
-          "authorityIds": "col:59B45"
+          "authorityIds": "col:59B45",
+          "children": []
         },
         {
           "id": "SP_TROPICELTITES_COLUMBIANUS_MCLEARN_1940",
@@ -209,7 +246,21 @@
               "59B42"
             ]
           },
-          "authorityIds": "col:59B42"
+          "authorityIds": "col:59B42",
+          "children": []
+        },
+        {
+          "id": "SP_TROPICELTITES_COSTATUS_HAUER_1866",
+          "name": "Tropiceltites costatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tropiceltites",
+          "authorship": "(Hauer 1866)",
+          "sourceIds": {
+            "checklistbank": "txn:356823"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -232,20 +283,44 @@
           "sourceIds": {
             "col": [
               "54X7P"
-            ]
+            ],
+            "checklistbank": "txn:252192"
           },
-          "authorityIds": "col:54X7P"
+          "authorityIds": "col:54X7P",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Tropiceltitidae"
+    },
+    {
+      "id": "GENUS_ARNIOCELTITES",
+      "name": "Arnioceltites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARNIOCELTITES_LAEVIS_MOJSISOVICS_1893",
+          "name": "Arnioceltites laevis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arnioceltites",
+          "authorship": "(Mojsisovics 1893)",
+          "sourceIds": {
+            "checklistbank": "txn:356826"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tropiceltitidae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 16,
   "appSlug": "tropiceltitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -253,6 +328,7 @@
       "classKey": 136,
       "orderKey": 12261528,
       "familyKey": 4622974
-    }
+    },
+    "checklistbank": "txn:86950"
   }
 }

@@ -309,31 +309,6 @@
           "authorityIds": "col:3R5HR,itis:646327"
         },
         {
-          "id": "SP_KENTROCAPROS_ACULEATUS_HOUTTUYN_1782",
-          "name": "Kentrocapros aculeatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Kentrocapros",
-          "authorship": "(Houttuyn, 1782)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "177718951",
-              "2408000"
-            ],
-            "itis": [
-              "173263"
-            ],
-            "col": [
-              "3R5HQ"
-            ],
-            "checklistbank": "196863"
-          },
-          "uuid": "66b10379-19f4-512-a7b-e223af58aeb50d",
-          "authorityIds": "col:3R5HQ,gbif:177718951,gbif:2408000,itis:173263"
-        },
-        {
           "id": "SP_KENTROCAPROS_SPILONOTUS_GILBERT_1905",
           "name": "Kentrocapros spilonotus",
           "rank": "SPECIES",
@@ -435,13 +410,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Aracanidae"
+    },
+    {
+      "id": "GENUS_PROARACANA",
+      "name": "Proaracana",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROARACANA_DUBIA_BLAINVILLE_1818",
+          "name": "Proaracana dubia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proaracana",
+          "authorship": "(Blainville 1818)",
+          "sourceIds": {
+            "checklistbank": "txn:353759"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aracanidae"
     }
   ],
   "speciesCount": 18,
   "appSlug": "aracanidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -449,6 +446,6 @@
       "orderKey": 772,
       "familyKey": 5900
     },
-    "checklistbank": "ott908274"
+    "checklistbank": "668451d6-2c80-4638-9a72-5eb78ffba410"
   }
 }

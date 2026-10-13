@@ -321,9 +321,12 @@
           "uuid": "27dcc13c-cb97-5ec-b0b-b37fc76437fab2",
           "authorship": "(Lonsdale, 1839)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823819"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1823819"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1823819"
         },
         {
           "id": "SP_ARACHNOPHYLLUM_KAYI_MERRIAM_1973",
@@ -362,6 +365,45 @@
           "sourcedFrom": "none",
           "uuid": "974e19ec-01a5-5d0-8a8-ba2f093f5a9380",
           "children": []
+        },
+        {
+          "id": "SP_ARACHNOPHYLLUM_PENTAGONUM_GOLDFUSS_1826",
+          "name": "Arachnophyllum pentagonum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnophyllum",
+          "authorship": "(Goldfuss 1826)",
+          "sourceIds": {
+            "checklistbank": "txn:351381"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARACHNOPHYLLUM_APPROXIMATUM_PARKS_1933",
+          "name": "Arachnophyllum approximatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnophyllum",
+          "authorship": "(Parks 1933)",
+          "sourceIds": {
+            "checklistbank": "txn:351414"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARACHNOPHYLLUM_MURCHISONI_EDWARDS_AND_HAIME_1851",
+          "name": "Arachnophyllum murchisoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arachnophyllum",
+          "authorship": "(Edwards and Haime 1851)",
+          "sourceIds": {
+            "checklistbank": "txn:351431"
+          },
+          "children": []
         }
       ]
     },
@@ -389,20 +431,20 @@
       "lineage": "arachnophyllidae"
     },
     {
-      "id": "GENUS_ARACHNOPHYLLUM",
-      "name": "\"Arachnophyllum",
+      "id": "GENUS_CHONOPHYLLUM",
+      "name": "Chonophyllum",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ARACHNOPHYLLUM_BALTICA_LONSDALE_1839",
-          "name": "\"Arachnophyllum baltica\"",
+          "id": "SP_CHONOPHYLLUM_MAGNIFICUM_BILLINGS_1860",
+          "name": "Chonophyllum magnificum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Arachnophyllum",
-          "authorship": "\"(Lonsdale, 1839)\"",
+          "lineage": "Chonophyllum",
+          "authorship": "Billings 1860",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1823819"
+            "checklistbank": "txn:468317"
           },
           "children": []
         }
@@ -412,13 +454,14 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 24,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 43,
       "classKey": 206,
       "familyKey": 3250407
-    }
+    },
+    "checklistbank": "txn:110408"
   }
 }

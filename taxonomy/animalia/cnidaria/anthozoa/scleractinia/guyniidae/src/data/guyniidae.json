@@ -26,9 +26,11 @@
             "col": [
               "8H7PC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1510200"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1510200"
+            ]
           },
-          "authorityIds": "col:8H7PC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1510200,col:8H7PC",
           "authorship": "(Tenison-Woods, 1878)"
         },
         {
@@ -191,6 +193,19 @@
           },
           "children": [],
           "uuid": "ea9d17af-c784-56e-9ed-68412720d9a572"
+        },
+        {
+          "id": "SP_ONCHOTROCHUS_SERPENTINUS_DUNCAN_1870",
+          "name": "Onchotrochus serpentinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Onchotrochus",
+          "authorship": "Duncan 1870",
+          "sourceIds": {
+            "checklistbank": "txn:154282"
+          },
+          "children": []
         }
       ]
     },
@@ -326,20 +341,125 @@
       "lineage": "guyniidae"
     },
     {
-      "id": "GENUS_GUYNIA",
-      "name": "\"Guynia",
+      "id": "GENUS_PALAEOPSAMMIA",
+      "name": "Palaeopsammia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_GUYNIA_ADHERENS_TENISON_WOODS_1878",
-          "name": "\"Guynia adherens\"",
+          "id": "SP_PALAEOPSAMMIA_ZITTELI_VAUGHAN_1900",
+          "name": "Palaeopsammia zitteli",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Guynia",
-          "authorship": "\"(Tenison-Woods, 1878)\"",
+          "lineage": "Palaeopsammia",
+          "authorship": "(Vaughan 1900)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1510200"
+            "checklistbank": "txn:141410"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALAEOPSAMMIA_ZLJEBINENSIS_TURNSEK_AND_MIHAJLOVIC_1981",
+          "name": "Palaeopsammia zljebinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeopsammia",
+          "authorship": "Turnsek and Mihajlovic 1981",
+          "sourceIds": {
+            "checklistbank": "txn:152229"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALAEOPSAMMIA_CARDABIAENSIS_JELL_ET_AL_2011",
+          "name": "Palaeopsammia cardabiaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeopsammia",
+          "authorship": "Jell et al. 2011",
+          "sourceIds": {
+            "checklistbank": "txn:213488"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "guyniidae"
+    },
+    {
+      "id": "GENUS_STENOCYATHUS",
+      "name": "Stenocyathus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STENOCYATHUS_HOFFMEISTERI_WELLS_1976",
+          "name": "Stenocyathus hoffmeisteri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenocyathus",
+          "authorship": "Wells 1976",
+          "sourceIds": {
+            "checklistbank": "txn:148812"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STENOCYATHUS_VERMIFORMIS_POURTALES_1868",
+          "name": "Stenocyathus vermiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenocyathus",
+          "authorship": "(Pourtales 1868)",
+          "sourceIds": {
+            "checklistbank": "txn:219141"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "guyniidae"
+    },
+    {
+      "id": "GENUS_SCHIZOCYATHUS",
+      "name": "Schizocyathus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCHIZOCYATHUS_FISSILIS_POURTALES_1874",
+          "name": "Schizocyathus fissilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizocyathus",
+          "authorship": "Pourtales 1874",
+          "sourceIds": {
+            "checklistbank": "txn:156246"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "guyniidae"
+    },
+    {
+      "id": "GENUS_POURTALOCYATHUS",
+      "name": "Pourtalocyathus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POURTALOCYATHUS_HISPIDUS_POURTALES_1878",
+          "name": "Pourtalocyathus hispidus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pourtalocyathus",
+          "authorship": "(Pourtales 1878)",
+          "sourceIds": {
+            "checklistbank": "txn:162197"
           },
           "children": []
         }
@@ -348,8 +468,8 @@
       "lineage": "guyniidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 16,
+  "genusCount": 10,
+  "speciesCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

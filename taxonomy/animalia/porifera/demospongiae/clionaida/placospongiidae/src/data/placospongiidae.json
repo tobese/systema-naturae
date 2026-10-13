@@ -44,9 +44,11 @@
             "col": [
               "49M5Y"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:170609"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:170609"
+            ]
           },
-          "authorityIds": "col:49M5Y",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:170609,col:49M5Y",
           "authorship": "(Rützler & Hooper, 2000)"
         },
         {
@@ -128,9 +130,11 @@
             "col": [
               "77NC2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:170610"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:170610"
+            ]
           },
-          "authorityIds": "col:77NC2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:170610,col:77NC2",
           "authorship": "(Tanita & Hoshino, 1989)"
         },
         {
@@ -173,9 +177,11 @@
             "itis": [
               "48519"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:170611"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:170611"
+            ]
           },
-          "authorityIds": "col:77NBP,itis:48519",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:170611,col:77NBP,itis:48519",
           "authorship": "(Bowerbank, 1858)"
         },
         {
@@ -233,9 +239,11 @@
             "col": [
               "6VNC4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:134189"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:134189"
+            ]
           },
-          "authorityIds": "col:6VNC4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:134189,col:6VNC4",
           "authorship": "(Hanitsch, 1895)"
         },
         {
@@ -539,80 +547,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "placospongiidae"
-    },
-    {
-      "id": "GENUS_PLACOSPONGIA",
-      "name": "\"Placospongia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLACOSPONGIA_DECORTICANS_HANITSCH_1895",
-          "name": "\"Placospongia decorticans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Placospongia",
-          "authorship": "\"(Hanitsch, 1895)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:134189"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLACOSPONGIA_ANTHOSIGMA_TANITA_HOSHINO_1989",
-          "name": "\"Placospongia anthosigma\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Placospongia",
-          "authorship": "\"(Tanita & Hoshino, 1989)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:170610"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLACOSPONGIA_CARINATA_BOWERBANK_1858",
-          "name": "\"Placospongia carinata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Placospongia",
-          "authorship": "\"(Bowerbank, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:170611"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "placospongiidae"
-    },
-    {
-      "id": "GENUS_ONOTOA",
-      "name": "\"Onotoa",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ONOTOA_CLAUDELEVII_R_TZLER_HOOPER_2000",
-          "name": "\"Onotoa claudelevii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Onotoa",
-          "authorship": "\"(Rützler & Hooper, 2000)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:170609"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "placospongiidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 33,
+  "genusCount": 4,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -621,6 +559,6 @@
       "orderKey": 7431046,
       "familyKey": 3902
     },
-    "checklistbank": "194327"
+    "checklistbank": "811cb7f4-9dbc-4389-9692-1877f409d003"
   }
 }

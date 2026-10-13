@@ -22,7 +22,8 @@
               "4XFKD"
             ]
           },
-          "authorityIds": "col:4XFKD"
+          "authorityIds": "col:4XFKD",
+          "children": []
         },
         {
           "id": "SP_SIMOCERAS_ADMIRANDUM_ZITTEL_1869",
@@ -38,7 +39,34 @@
               "4XFKC"
             ]
           },
-          "authorityIds": "col:4XFKC"
+          "authorityIds": "col:4XFKC",
+          "children": []
+        },
+        {
+          "id": "SP_SIMOCERAS_VOLANENSE_OPPEL_1863",
+          "name": "Simoceras volanense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simoceras",
+          "authorship": "(Oppel 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:379055"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SIMOCERAS_BROILII_SCHNEID_1915",
+          "name": "Simoceras broilii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Simoceras",
+          "authorship": "(Schneid 1915)",
+          "sourceIds": {
+            "checklistbank": "txn:487790"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -63,7 +91,8 @@
               "7FNHC"
             ]
           },
-          "authorityIds": "col:7FNHC"
+          "authorityIds": "col:7FNHC",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -88,24 +117,70 @@
               "3KSKL"
             ]
           },
-          "authorityIds": "col:3KSKL"
+          "authorityIds": "col:3KSKL",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Simoceratidae"
+    },
+    {
+      "id": "GENUS_PSEUDOCLAMBITES",
+      "name": "Pseudoclambites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCLAMBITES_ARAENSE_HOWARTH_1998",
+          "name": "Pseudoclambites araense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoclambites",
+          "authorship": "Howarth 1998",
+          "sourceIds": {
+            "checklistbank": "txn:487755"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "simoceratidae"
+    },
+    {
+      "id": "GENUS_BAETICOCERAS",
+      "name": "Baeticoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BAETICOCERAS_MORRISI_HOWARTH_1998",
+          "name": "Baeticoceras morrisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Baeticoceras",
+          "authorship": "Howarth 1998",
+          "sourceIds": {
+            "checklistbank": "txn:487756"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "simoceratidae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 8,
   "appSlug": "simoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 3,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4621554
-    }
+    },
+    "checklistbank": "txn:249622"
   }
 }

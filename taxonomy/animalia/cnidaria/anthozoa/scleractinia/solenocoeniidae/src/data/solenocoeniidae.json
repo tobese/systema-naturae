@@ -127,9 +127,11 @@
             "col": [
               "BDDS2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662039"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1662039"
+            ]
           },
-          "authorityIds": "col:BDDS2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1662039,col:BDDS2",
           "authorship": "(Goldfuss, 1829)"
         },
         {
@@ -145,9 +147,23 @@
           "sourceIds": {
             "col": [
               "C8FPS"
-            ]
+            ],
+            "checklistbank": "txn:54315"
           },
           "authorityIds": "col:C8FPS"
+        },
+        {
+          "id": "SP_SOLENOCOENIA_BERNENSIS_KOBY_1881",
+          "name": "Solenocoenia bernensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solenocoenia",
+          "authorship": "(Koby 1881)",
+          "sourceIds": {
+            "checklistbank": "txn:160586"
+          },
+          "children": []
         }
       ]
     },
@@ -878,31 +894,9 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Solenocoeniidae"
-    },
-    {
-      "id": "GENUS_SOLENOCOENIA",
-      "name": "\"Solenocoenia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SOLENOCOENIA_SEXRADIATA_GOLDFUSS_1829",
-          "name": "\"Solenocoenia sexradiata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Solenocoenia",
-          "authorship": "\"(Goldfuss, 1829)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662039"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "solenocoeniidae"
     }
   ],
-  "genusCount": 9,
+  "genusCount": 8,
   "speciesCount": 48,
   "sourceIds": {
     "gbif": {
@@ -911,6 +905,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 4879896
-    }
+    },
+    "checklistbank": "txn:142567"
   }
 }

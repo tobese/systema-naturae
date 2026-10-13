@@ -129,7 +129,8 @@
             ],
             "checklistbank": "240742"
           },
-          "authorityIds": "col:DQC7,itis:554299,wikidata:Q874688"
+          "authorityIds": "col:DQC7,itis:554299,wikidata:Q874688",
+          "authorship": "(Gould, 1846)"
         }
       ]
     },
@@ -279,7 +280,8 @@
             ],
             "checklistbank": "488206"
           },
-          "authorityIds": "col:JR55,itis:554280,wikidata:Q886520"
+          "authorityIds": "col:JR55,itis:554280,wikidata:Q886520",
+          "authorship": "(Gould, 1835)"
         },
         {
           "id": "AULACORHYNCHUS_HUALLAGAE",
@@ -366,7 +368,8 @@
             ],
             "checklistbank": "488208"
           },
-          "authorityIds": "col:JR58,itis:554278,wikidata:Q883140"
+          "authorityIds": "col:JR58,itis:554278,wikidata:Q883140",
+          "authorship": "(Swainson, 1820)"
         },
         {
           "id": "AULACORHYNCHUS_WAGLERI",
@@ -387,9 +390,11 @@
             ],
             "itis": [
               "685715"
-            ]
+            ],
+            "checklistbank": "Aulacorhynchus_wagleri"
           },
-          "authorityIds": "col:JR59,itis:685715"
+          "authorityIds": "col:JR59,itis:685715",
+          "authorship": "(Sturm, JHCF & Sturm, JW, 1841)"
         },
         {
           "id": "AULACORHYNCHUS_WHITELIANUS",
@@ -868,28 +873,6 @@
           "authorship": "(Linnaeus, 1766)"
         },
         {
-          "id": "SP_PTEROGLOSSUS_BAILLONI_VIEILLOT_1819",
-          "name": "Pteroglossus bailloni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "authorship": "(Vieillot, 1819)",
-          "children": [],
-          "lineage": "Aracaris",
-          "uuid": "eca5b612-7745-577-b99-cd8a73ac414b2d",
-          "sourceIds": {
-            "col": [
-              "7WP8Q"
-            ],
-            "itis": [
-              "1145221"
-            ],
-            "checklistbank": "381874"
-          },
-          "authorityIds": "col:7WP8Q,itis:1145221",
-          "commonName": "Saffron Toucanet"
-        },
-        {
           "id": "SP_PTEROGLOSSUS_BEAUHARNAISII_WAGLER_1831",
           "name": "Pteroglossus beauharnaisii",
           "rank": "SPECIES",
@@ -940,6 +923,19 @@
           "authorship": "Gould, 1836",
           "sourceIds": {
             "checklistbank": "932118"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTEROGLOSSUS_HUMBOLDTI_WAGLER_1827",
+          "name": "Pteroglossus humboldti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pteroglossus",
+          "authorship": "Wagler 1827",
+          "sourceIds": {
+            "checklistbank": "txn:400026"
           },
           "children": []
         }
@@ -1626,32 +1622,6 @@
           "children": []
         },
         {
-          "id": "SP_CAPITO_FITZPATRICKI_SEEHOLZER_ET_AL_2012",
-          "name": "Capito fitzpatricki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Capito",
-          "authorship": "Seeholzer et al. 2012",
-          "sourceIds": {
-            "checklistbank": "1217883"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CAPITO_BRUNNEIPECTUS_CHAPMAN_1921",
-          "name": "Capito brunneipectus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Capito",
-          "authorship": "Chapman, 1921",
-          "sourceIds": {
-            "checklistbank": "1217884"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CAPITO_HYPOLEUCUS_SALVIN_1897",
           "name": "Capito hypoleucus",
           "rank": "SPECIES",
@@ -1770,9 +1740,53 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ramphastidae"
+    },
+    {
+      "id": "GENUS_CAPITONIDES",
+      "name": "Capitonides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAPITONIDES_EUROPEUS_BALLMANN_1969",
+          "name": "Capitonides europeus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Capitonides",
+          "authorship": "(Ballmann 1969)",
+          "sourceIds": {
+            "checklistbank": "txn:429936"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ramphastidae"
+    },
+    {
+      "id": "GENUS_TRACHYPHONUS",
+      "name": "Trachyphonus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRACHYPHONUS_PROTRACTUS_BALLMANN_1983",
+          "name": "Trachyphonus protractus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trachyphonus",
+          "authorship": "(Ballmann 1983)",
+          "sourceIds": {
+            "checklistbank": "txn:429938"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ramphastidae"
     }
   ],
-  "genusCount": 9,
+  "genusCount": 11,
   "speciesCount": 78,
   "sourceIds": {
     "gbif": {

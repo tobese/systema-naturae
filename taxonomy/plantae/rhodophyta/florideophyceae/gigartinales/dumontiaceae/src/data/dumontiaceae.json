@@ -628,25 +628,6 @@
           }
         },
         {
-          "id": "SP_DILSEA_SOCIALIS",
-          "name": "Dilsea socialis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Dilsea",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "continents": [
-            "Europe"
-          ],
-          "children": [],
-          "uuid": "66c8dafc-412d-582-ac1-0bbfaa13828dad",
-          "authorship": "(Postels & Ruprecht) Perestenko, 1996",
-          "sourceIds": {
-            "checklistbank": "1079999"
-          }
-        },
-        {
           "id": "SP_DILSEA_EDULIS_STACKHOUSE_STACKHOUSE",
           "name": "Dilsea edulis",
           "rank": "SPECIES",
@@ -837,18 +818,6 @@
             "checklistbank": "475976"
           },
           "authorityIds": "itis:12710"
-        },
-        {
-          "id": "SP_WEEKSIA_SP",
-          "name": "Weeksia sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Weeksia",
-          "sourceIds": {
-            "checklistbank": "87834"
-          },
-          "children": []
         }
       ]
     },
@@ -1030,9 +999,15 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Leptocladia",
           "sourceIds": {
-            "checklistbank": "31419"
+            "checklistbank": [
+              "31419"
+            ],
+            "itis": [
+              "12247"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:31419,itis:12247"
         }
       ]
     },
@@ -1291,9 +1266,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Dudresnaya",
           "sourceIds": {
-            "checklistbank": "2770326"
+            "checklistbank": [
+              "2770326"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:2770326"
         },
         {
           "id": "SP_DUDRESNAYA_SP",
@@ -1372,24 +1350,6 @@
           "authorityIds": "itis:12243"
         },
         {
-          "id": "SP_DUMONTIA_INCRASSATA_O_F_MUELLER_LAMOUROUX",
-          "name": "Dumontia incrassata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dumontia",
-          "authorship": "(O. F. Mueller) Lamouroux",
-          "children": [],
-          "uuid": "6e43d024-edea-5a2-88a-a7787a43ac4383",
-          "sourceIds": {
-            "itis": [
-              "12242"
-            ],
-            "checklistbank": "546790"
-          },
-          "authorityIds": "itis:12242"
-        },
-        {
           "id": "SP_DUMONTIA_CANARIENSIS_MONTAGNE",
           "name": "Dumontia canariensis",
           "rank": "SPECIES",
@@ -1443,26 +1403,6 @@
             "checklistbank": "1582992"
           },
           "authorityIds": "itis:12245"
-        },
-        {
-          "id": "SP_FARLOWIA_CONFERTA",
-          "name": "Farlowia conferta",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Farlowia",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "Setch.",
-          "children": [],
-          "uuid": "2be904fa-09b8-5b4-823-3be76e87e73578",
-          "sourceIds": {
-            "itis": [
-              "12247"
-            ],
-            "checklistbank": "31419"
-          },
-          "authorityIds": "itis:12247"
         },
         {
           "id": "SP_FARLOWIA_CRASSA",
@@ -1569,19 +1509,6 @@
       "name": "Fucus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_FUCUS_EDULIS_STACKH_1801",
-          "name": "Fucus edulis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Fucus",
-          "authorship": "Stackh., 1801",
-          "sourceIds": {
-            "checklistbank": "568515"
-          },
-          "children": []
-        },
         {
           "id": "SP_FUCUS_CARNOSUS_SCHMIDEL_1794",
           "name": "Fucus carnosus",
@@ -2058,28 +1985,6 @@
       "lineage": "dumontiaceae"
     },
     {
-      "id": "GENUS_HIMEHIBIRHODIA",
-      "name": "Himehibirhodia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HIMEHIBIRHODIA_MINIMA_OKAMURA_HOSHINO_KITAYAMA_KOGAME_2024",
-          "name": "Himehibirhodia minima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Himehibirhodia",
-          "authorship": "(Okamura) Hoshino, Kitayama & Kogame, 2024",
-          "sourceIds": {
-            "checklistbank": "2770326"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "dumontiaceae"
-    },
-    {
       "id": "GENUS_DUMONTIACEAE",
       "name": "Dumontiaceae",
       "rank": "GENUS",
@@ -2101,8 +2006,8 @@
       "lineage": "dumontiaceae"
     }
   ],
-  "genusCount": 38,
-  "speciesCount": 110,
+  "genusCount": 37,
+  "speciesCount": 104,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

@@ -20,9 +20,11 @@
           "sourceIds": {
             "col": [
               "6F9CV"
-            ]
+            ],
+            "checklistbank": "txn:323030"
           },
-          "authorityIds": "col:6F9CV"
+          "authorityIds": "col:6F9CV",
+          "children": []
         },
         {
           "id": "SP_ENDOSIPHONITES_ENODIS_SCHINDEWOLF_1926",
@@ -38,7 +40,8 @@
               "39SCB"
             ]
           },
-          "authorityIds": "col:39SCB"
+          "authorityIds": "col:39SCB",
+          "children": []
         },
         {
           "id": "SP_ENDOSIPHONITES_MUENSTERI_ANSTED_1838",
@@ -54,18 +57,54 @@
               "39SCC"
             ]
           },
-          "authorityIds": "col:39SCC"
+          "authorityIds": "col:39SCC",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Costaclymeniidae"
+    },
+    {
+      "id": "GENUS_COSTACLYMENIA",
+      "name": "Costaclymenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COSTACLYMENIA_BINODOSA_MUENSTER_1832",
+          "name": "Costaclymenia binodosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Costaclymenia",
+          "authorship": "(Muenster 1832)",
+          "sourceIds": {
+            "checklistbank": "txn:362965"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_COSTACLYMENIA_MULTICOSTATA_BOGOSLOVSKY_1981",
+          "name": "Costaclymenia multicostata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Costaclymenia",
+          "authorship": "Bogoslovsky 1981",
+          "sourceIds": {
+            "checklistbank": "txn:362968"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "costaclymeniidae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 5,
   "appSlug": "costaclymeniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -73,6 +112,7 @@
       "classKey": 136,
       "orderKey": 12198767,
       "familyKey": 4621279
-    }
+    },
+    "checklistbank": "txn:93219"
   }
 }

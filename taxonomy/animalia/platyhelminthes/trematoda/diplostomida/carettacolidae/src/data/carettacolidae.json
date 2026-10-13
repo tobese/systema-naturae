@@ -48,9 +48,11 @@
             "col": [
               "R7VC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:732155"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:732155"
+            ]
           },
-          "authorityIds": "col:R7VC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:732155,col:R7VC",
           "children": [],
           "authorship": "(Wang, 1983)"
         },
@@ -119,32 +121,10 @@
           "uuid": "06faa908-25f3-54e-a8d-f4c5b2a10457b3"
         }
       ]
-    },
-    {
-      "id": "GENUS_CARETTACOLA",
-      "name": "\"Carettacola",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CARETTACOLA_ELONGATUS_WANG_1983",
-          "name": "\"Carettacola elongatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Carettacola",
-          "authorship": "\"(Wang, 1983)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:732155"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "carettacolidae"
     }
   ],
-  "speciesCount": 7,
-  "genusCount": 2,
+  "speciesCount": 6,
+  "genusCount": 1,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

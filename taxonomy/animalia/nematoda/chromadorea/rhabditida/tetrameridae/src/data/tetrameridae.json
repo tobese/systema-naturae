@@ -647,22 +647,6 @@
           "uuid": "8a5942b0-2b47-5d1-bce-ef818418e5926c"
         },
         {
-          "id": "SP_MICROTETRAMERES_INERMIS",
-          "name": "Microtetrameres inermis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Microtetrameres",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "5cfdb3bf-4338-5e1-bfb-a78eafa663b4cf",
-          "authorship": "(Linstow, 1879)",
-          "sourceIds": {
-            "checklistbank": "250946"
-          }
-        },
-        {
           "id": "SP_MICROTETRAMERES_OSHMARINI_SOBOLEV_1963",
           "name": "Microtetrameres oshmarini Sobolev, 1963",
           "rank": "SPECIES",
@@ -1030,6 +1014,30 @@
             "checklistbank": "f791f2ac-ad80-4bfd-832d-8838b1cc17f9"
           },
           "children": []
+        },
+        {
+          "id": "SP_MICROTETRAMERES_AQUILA",
+          "name": "Microtetrameres aquila",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microtetrameres",
+          "sourceIds": {
+            "checklistbank": "391866"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROTETRAMERES_CORDEROI",
+          "name": "Microtetrameres corderoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microtetrameres",
+          "sourceIds": {
+            "checklistbank": "391868"
+          },
+          "children": []
         }
       ]
     },
@@ -1212,22 +1220,6 @@
           "yearPublished": "1846",
           "children": [],
           "uuid": "f08d8124-3a30-583-90b-483f7f4563c45e"
-        },
-        {
-          "id": "SP_TETRAMERES_NOUVELI",
-          "name": "Tetrameres nouveli",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Tetrameres",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "4d2bba3f-2ab9-5b3-82a-e2ea5f8aadf72b",
-          "authorship": "(Seurat, 1914)",
-          "sourceIds": {
-            "checklistbank": "250956"
-          }
         },
         {
           "id": "SP_TETRAMERES_NUMENII_MAMAEV_1959",
@@ -1461,34 +1453,6 @@
           }
         },
         {
-          "id": "SP_TETRAMERES_CONFUSA_TRAVASSOS_1919",
-          "name": "Tetrameres confusa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tetrameres",
-          "authorship": "Travassos, 1919",
-          "sourceIds": {
-            "checklistbank": "27204"
-          },
-          "children": [],
-          "uuid": "43267ebb-9afd-5e4-90e-8938dad8de10bc"
-        },
-        {
-          "id": "SP_TETRAMERES_TETRICA_TRAVASSOS_1917",
-          "name": "Tetrameres tetrica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tetrameres",
-          "authorship": "Travassos, 1917",
-          "sourceIds": {
-            "checklistbank": "27912"
-          },
-          "children": [],
-          "uuid": "f8663d8b-dcd2-5f5-a6b-c419ae1dce3bbb"
-        },
-        {
           "id": "SP_TETRAMERES_GIGAS_TRAVASSOS_1919",
           "name": "Tetrameres gigas",
           "rank": "SPECIES",
@@ -1515,20 +1479,6 @@
           },
           "children": [],
           "uuid": "cbec015e-6a86-529-9eb-e20d7bcdb9913e"
-        },
-        {
-          "id": "SP_TETRAMERES_MICROPENIS_TRAVASSOS_1915",
-          "name": "Tetrameres micropenis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tetrameres",
-          "authorship": "(Travassos, 1915)",
-          "sourceIds": {
-            "checklistbank": "58710"
-          },
-          "children": [],
-          "uuid": "52629f23-efaf-5b2-b06-6ae2f54dca9989"
         },
         {
           "id": "SP_TETRAMERES_PUSILLA_TRAVASSOS_1915",
@@ -1651,10 +1601,13 @@
           "lineage": "Tetrameres",
           "authorship": "Efimov & Rijowa, 1939",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1729268"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1729268"
+            ]
           },
           "children": [],
-          "uuid": "63e3b8ca-4616-5df-909-d61c0f29a212d0"
+          "uuid": "63e3b8ca-4616-5df-909-d61c0f29a212d0",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1729268"
         },
         {
           "id": "SP_TETRAMERES_SKRJABINI_PANOWA_1926",
@@ -2104,19 +2057,6 @@
           "children": []
         },
         {
-          "id": "SP_TETRAMERES_TETRAMERES_EFIMOV_RIJOWA_1939",
-          "name": "\"Tetrameres (Tetrameres)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tetrameres",
-          "authorship": "\"Efimov & Rijowa, 1939\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1729268"
-          },
-          "children": []
-        },
-        {
           "id": "SP_TETRAMERES_PETROWIMERES_TSCHERTKOVA_1953",
           "name": "\"Tetrameres (Petrowimeres)",
           "rank": "SPECIES",
@@ -2209,7 +2149,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 151,
+  "speciesCount": 147,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

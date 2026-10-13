@@ -168,18 +168,6 @@
             "checklistbank": "213180"
           },
           "children": []
-        },
-        {
-          "id": "SP_PAVLOVA_NOCTIVAGA",
-          "name": "Pavlova noctivaga",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pavlova",
-          "sourceIds": {
-            "checklistbank": "349099"
-          },
-          "children": []
         }
       ]
     },
@@ -247,10 +235,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 7940278,
-            "checklistbank": "349099"
+            "checklistbank": [
+              "349099"
+            ]
           },
           "uuid": "128f5413-a2fe-50d-b07-2abd49a4cf09fb",
-          "authorityIds": "gbif:7940278",
+          "authorityIds": "checklistbank:349099,gbif:7940278",
           "authorship": "(Kalina) Bendif & Veron, 2011"
         },
         {
@@ -420,7 +410,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 12229618
+            "gbif": 12229618,
+            "checklistbank": "416042"
           },
           "uuid": "cbd30b86-cc8d-59c-825-1d47e3535eb135",
           "authorityIds": "gbif:12229618"
@@ -541,7 +532,7 @@
     }
   ],
   "genusCount": 8,
-  "speciesCount": 29,
+  "speciesCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

@@ -65,10 +65,25 @@
             "col": [
               "86GVH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410895"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1410895"
+            ]
           },
-          "authorityIds": "col:86GVH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1410895,col:86GVH",
           "authorship": "(White, 1879)",
+          "children": []
+        },
+        {
+          "id": "SP_DYSNOETOPORA_CELLEPOROIDES_CANU_AND_BASSLER_1926",
+          "name": "Dysnoetopora celleporoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dysnoetopora",
+          "authorship": "Canu and Bassler 1926",
+          "sourceIds": {
+            "checklistbank": "txn:509682"
+          },
           "children": []
         }
       ]
@@ -95,31 +110,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dysnoetoporidae"
-    },
-    {
-      "id": "GENUS_DYSNOETOPORA",
-      "name": "\"Dysnoetopora",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DYSNOETOPORA_DIMISSA_WHITE_1879",
-          "name": "\"Dysnoetopora dimissa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dysnoetopora",
-          "authorship": "\"(White, 1879)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1410895"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "dysnoetoporidae"
     }
   ],
-  "genusCount": 3,
+  "genusCount": 2,
   "speciesCount": 5,
   "sourceIds": {
     "gbif": {
@@ -128,6 +121,7 @@
       "classKey": 252,
       "orderKey": 467,
       "familyKey": 4855168
-    }
+    },
+    "checklistbank": "txn:509679"
   }
 }

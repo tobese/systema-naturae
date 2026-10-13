@@ -33,7 +33,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "sinomusca",
-          "uuid": "b78274f5-f080-5f8-90d-7907d61d84ae46"
+          "uuid": "b78274f5-f080-5f8-90d-7907d61d84ae46",
+          "authorship": "Nel 2010",
+          "sourceIds": {
+            "checklistbank": "txn:407382"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -57,7 +61,8 @@
           "sourceIds": {
             "col": [
               "8CF4H"
-            ]
+            ],
+            "checklistbank": "txn:201482"
           },
           "authorityIds": "col:8CF4H"
         },
@@ -74,7 +79,8 @@
           "sourceIds": {
             "col": [
               "8CF4G"
-            ]
+            ],
+            "checklistbank": "txn:201481"
           },
           "authorityIds": "col:8CF4G"
         }
@@ -103,6 +109,19 @@
             ]
           },
           "authorityIds": "col:C2CXP"
+        },
+        {
+          "id": "SP_CRETINEMESTRINUS_EUREMUS_GRIMALDI_2016",
+          "name": "Cretinemestrinus euremus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretinemestrinus",
+          "authorship": "(Grimaldi 2016)",
+          "sourceIds": {
+            "checklistbank": "txn:349470"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -230,20 +249,65 @@
           "sourceIds": {
             "col": [
               "9HLSC"
-            ]
+            ],
+            "checklistbank": "txn:407384"
           },
           "authorityIds": "col:9HLSC"
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Rhagionemestriidae"
+    },
+    {
+      "id": "GENUS_NAGATOMUKHA",
+      "name": "Nagatomukha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NAGATOMUKHA_KARABAS_MOSTOVSKI_AND_MART_NEZ_DELCL_S_2000",
+          "name": "Nagatomukha karabas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nagatomukha",
+          "authorship": "Mostovski and Martínez-Delclòs 2000",
+          "sourceIds": {
+            "checklistbank": "txn:201479"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhagionemestriidae"
+    },
+    {
+      "id": "GENUS_VIRIOSINEMESTRIUS",
+      "name": "Viriosinemestrius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIRIOSINEMESTRIUS_MAI_ZHANG_ET_AL_2020",
+          "name": "Viriosinemestrius mai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Viriosinemestrius",
+          "authorship": "Zhang et al. 2020",
+          "sourceIds": {
+            "checklistbank": "txn:407386"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhagionemestriidae"
     }
   ],
-  "speciesCount": 10,
+  "speciesCount": 13,
   "appSlug": "rhagionemestriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 8,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -251,6 +315,7 @@
       "classKey": 216,
       "orderKey": 811,
       "familyKey": 4794349
-    }
+    },
+    "checklistbank": "txn:201473"
   }
 }

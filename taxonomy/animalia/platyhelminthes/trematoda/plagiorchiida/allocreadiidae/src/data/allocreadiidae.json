@@ -4470,9 +4470,11 @@
             "col": [
               "847VW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1474529"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1474529"
+            ]
           },
-          "authorityIds": "col:847VW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1474529,col:847VW",
           "authorship": "(MacCallum, 1919) Hopkins, 1934"
         },
         {
@@ -5844,18 +5846,6 @@
             "checklistbank": "418526"
           },
           "children": []
-        },
-        {
-          "id": "SP_MARGOTREMA_SP",
-          "name": "Margotrema sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Margotrema",
-          "sourceIds": {
-            "checklistbank": "1335463"
-          },
-          "children": []
         }
       ]
     },
@@ -7157,28 +7147,6 @@
       "lineage": "allocreadiidae"
     },
     {
-      "id": "GENUS_MACROLECITHUS",
-      "name": "Macrolecithus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MACROLECITHUS_PAPILLIGER_REES_1968",
-          "name": "Macrolecithus papilliger",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Macrolecithus",
-          "authorship": "Rees, 1968",
-          "sourceIds": {
-            "checklistbank": "1049099"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "allocreadiidae"
-    },
-    {
       "id": "GENUS_DISTOMUM",
       "name": "Distomum",
       "rank": "GENUS",
@@ -7328,19 +7296,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1337777"
           },
           "children": []
-        },
-        {
-          "id": "SP_CREPIDOSTOMUM_AURITUM_MACCALLUM_1919_HOPKINS_1934",
-          "name": "\"Crepidostomum auritum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Crepidostomum",
-          "authorship": "\"(MacCallum, 1919) Hopkins, 1934\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1474529"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7465,8 +7420,8 @@
       "lineage": "allocreadiidae"
     }
   ],
-  "genusCount": 46,
-  "speciesCount": 438,
+  "genusCount": 45,
+  "speciesCount": 435,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

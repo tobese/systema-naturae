@@ -22,7 +22,8 @@
               "6LPD5"
             ]
           },
-          "authorityIds": "col:6LPD5"
+          "authorityIds": "col:6LPD5",
+          "children": []
         },
         {
           "id": "SP_HEMIHOPLITES_SOULIERI_MATHERON_1878",
@@ -38,7 +39,8 @@
               "3KPBG"
             ]
           },
-          "authorityIds": "col:3KPBG"
+          "authorityIds": "col:3KPBG",
+          "children": []
         },
         {
           "id": "SP_HEMIHOPLITES_FERAUDIANUS_D_ORBIGNY_1841",
@@ -54,7 +56,8 @@
               "3KPBD"
             ]
           },
-          "authorityIds": "col:3KPBD"
+          "authorityIds": "col:3KPBD",
+          "children": []
         },
         {
           "id": "SP_HEMIHOPLITES_PLOSZKIEWICZI_RICCARDI_AGUIRRE_URRETA_1989",
@@ -68,9 +71,11 @@
           "sourceIds": {
             "col": [
               "3KPBF"
-            ]
+            ],
+            "checklistbank": "txn:129660"
           },
-          "authorityIds": "col:3KPBF"
+          "authorityIds": "col:3KPBF",
+          "children": []
         },
         {
           "id": "SP_HEMIHOPLITES_VARICOSTATUS_RICCARDI_AGUIRRE_URRETA_1989",
@@ -84,9 +89,24 @@
           "sourceIds": {
             "col": [
               "3KPBH"
-            ]
+            ],
+            "checklistbank": "txn:129662"
           },
-          "authorityIds": "col:3KPBH"
+          "authorityIds": "col:3KPBH",
+          "children": []
+        },
+        {
+          "id": "SP_HEMIHOPLITES_POPENOEI_MURPHY_1975",
+          "name": "Hemihoplites popenoei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemihoplites",
+          "authorship": "Murphy 1975",
+          "sourceIds": {
+            "checklistbank": "txn:430018"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -111,24 +131,61 @@
               "736P4"
             ]
           },
-          "authorityIds": "col:736P4"
+          "authorityIds": "col:736P4",
+          "children": []
+        },
+        {
+          "id": "SP_MATHERONITES_RIDZEWSKYI_KARAKASH_1897",
+          "name": "Matheronites ridzewskyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Matheronites",
+          "authorship": "(Karakash 1897)",
+          "sourceIds": {
+            "checklistbank": "txn:417376"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Hemihoplitidae"
+    },
+    {
+      "id": "GENUS_CAMEREICERAS",
+      "name": "Camereiceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAMEREICERAS_CORROYI_FABRE_1940",
+          "name": "Camereiceras corroyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Camereiceras",
+          "authorship": "(Fabre 1940)",
+          "sourceIds": {
+            "checklistbank": "txn:130524"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemihoplitidae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 9,
   "appSlug": "hemihoplitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4621514
-    }
+    },
+    "checklistbank": "txn:133073"
   }
 }

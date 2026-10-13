@@ -66,9 +66,11 @@
             "col": [
               "B7SR7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649536"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1649536"
+            ]
           },
-          "authorityIds": "col:B7SR7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1649536,col:B7SR7",
           "authorship": "(de Ryckholt, 1845)"
         },
         {
@@ -86,9 +88,11 @@
             "col": [
               "B7ST5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1648119"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1648119"
+            ]
           },
-          "authorityIds": "col:B7ST5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1648119,col:B7ST5",
           "authorship": "(de Ryckholt, 1845)"
         },
         {
@@ -120,9 +124,11 @@
             "col": [
               "B7TJF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649551"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1649551"
+            ]
           },
-          "authorityIds": "col:B7TJF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1649551,col:B7TJF",
           "authorship": "(Münster, 1839)"
         },
         {
@@ -140,9 +146,11 @@
             "col": [
               "B8T47"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1653979"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1653979"
+            ]
           },
-          "authorityIds": "col:B8T47",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1653979,col:B8T47",
           "authorship": "(Raymond, 1910)"
         },
         {
@@ -160,9 +168,11 @@
             "col": [
               "B7S8M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649508"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1649508"
+            ]
           },
-          "authorityIds": "col:B7S8M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1649508,col:B7S8M",
           "authorship": "(de Ryckholt, 1845)"
         },
         {
@@ -180,9 +190,11 @@
             "col": [
               "B7TB7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649456"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1649456"
+            ]
           },
-          "authorityIds": "col:B7TB7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1649456,col:B7TB7",
           "authorship": "(de Ryckholt, 1845)"
         },
         {
@@ -247,6 +259,19 @@
           },
           "children": [],
           "uuid": "142e549f-4aec-51d-89f-4431d05cfae82c"
+        },
+        {
+          "id": "SP_GRYPHOCHITON_GIRTYI_HOARE_AND_SMITH_1984",
+          "name": "Gryphochiton girtyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gryphochiton",
+          "authorship": "(Hoare and Smith 1984)",
+          "sourceIds": {
+            "checklistbank": "txn:126744"
+          },
+          "children": []
         }
       ]
     },
@@ -292,85 +317,42 @@
       ]
     },
     {
-      "id": "GENUS_GRYPHOCHITON",
-      "name": "\"Gryphochiton",
+      "id": "GENUS_CHAULIOCHITON",
+      "name": "Chauliochiton",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_GRYPHOCHITON_NERVICANUS_DE_RYCKHOLT_1845",
-          "name": "\"Gryphochiton nervicanus\"",
+          "id": "SP_CHAULIOCHITON_KNIGHTI_HOARE_AND_SMITH_1984",
+          "name": "Chauliochiton knighti",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Gryphochiton",
-          "authorship": "\"(de Ryckholt, 1845)\"",
+          "lineage": "Chauliochiton",
+          "authorship": "Hoare and Smith 1984",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1648119"
+            "checklistbank": "txn:126746"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gryphochitonidae"
+    },
+    {
+      "id": "GENUS_CHONECHITON",
+      "name": "Chonechiton",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_GRYPHOCHITON_VISETICOLA_DE_RYCKHOLT_1845",
-          "name": "\"Gryphochiton viseticola\"",
+          "id": "SP_CHONECHITON_VISETICOLA_DE_RYCKHOLT_1845",
+          "name": "Chonechiton viseticola",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Gryphochiton",
-          "authorship": "\"(de Ryckholt, 1845)\"",
+          "lineage": "Chonechiton",
+          "authorship": "(de Ryckholt 1845)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649456"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GRYPHOCHITON_TURNACIANUS_DE_RYCKHOLT_1845",
-          "name": "\"Gryphochiton turnacianus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gryphochiton",
-          "authorship": "\"(de Ryckholt, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649508"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GRYPHOCHITON_MEMPISCUS_DE_RYCKHOLT_1845",
-          "name": "\"Gryphochiton mempiscus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gryphochiton",
-          "authorship": "\"(de Ryckholt, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649536"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GRYPHOCHITON_PRISCUS_M_NSTER_1839",
-          "name": "\"Gryphochiton priscus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gryphochiton",
-          "authorship": "\"(Münster, 1839)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1649551"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GRYPHOCHITON_SIMPLEX_RAYMOND_1910",
-          "name": "\"Gryphochiton simplex\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gryphochiton",
-          "authorship": "\"(Raymond, 1910)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1653979"
+            "checklistbank": "txn:470258"
           },
           "children": []
         }
@@ -379,8 +361,8 @@
       "lineage": "gryphochitonidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 21,
+  "genusCount": 4,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -388,6 +370,7 @@
       "classKey": 346,
       "orderKey": 7601723,
       "familyKey": 4585037
-    }
+    },
+    "checklistbank": "txn:114960"
   }
 }

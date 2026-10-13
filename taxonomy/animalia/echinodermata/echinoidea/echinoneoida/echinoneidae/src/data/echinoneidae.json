@@ -37,7 +37,8 @@
           "sourceIds": {
             "col": [
               "38JM3"
-            ]
+            ],
+            "checklistbank": "txn:294224"
           },
           "authorityIds": "col:38JM3",
           "children": []
@@ -75,7 +76,8 @@
           "sourceIds": {
             "col": [
               "38JLR"
-            ]
+            ],
+            "checklistbank": "txn:392584"
           },
           "authorityIds": "col:38JLR",
           "children": []
@@ -258,19 +260,6 @@
           "children": []
         },
         {
-          "id": "SP_ECHINONEUS_VENTRICOSUS_L_AGASSIZ_DESOR_1847",
-          "name": "Echinoneus ventricosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echinoneus",
-          "authorship": "L. Agassiz & Desor, 1847",
-          "sourceIds": {
-            "checklistbank": "694401"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ECHINONEUS_ARTINI",
           "name": "Echinoneus artini",
           "rank": "SPECIES",
@@ -354,7 +343,8 @@
           "sourceIds": {
             "col": [
               "CNDZ"
-            ]
+            ],
+            "checklistbank": "txn:294231"
           },
           "authorityIds": "col:CNDZ",
           "children": []
@@ -419,6 +409,35 @@
           "lineage": "Amblypygus",
           "authorship": "Tessier & Roman, 1973",
           "uuid": "ccc53547-adcc-58c-aad-93249326853bce",
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "txn:417052"
+          }
+        },
+        {
+          "id": "SP_AMBLYPYGUS_SUBHEMISPHERICUS_ISRAELSKY_1923",
+          "name": "Amblypygus subhemisphericus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amblypygus",
+          "authorship": "Israelsky 1923",
+          "sourceIds": {
+            "checklistbank": "txn:392586"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AMBLYPYGUS_AMERICANUS_DESOR_1858",
+          "name": "Amblypygus americanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amblypygus",
+          "authorship": "Desor 1858",
+          "sourceIds": {
+            "checklistbank": "txn:395708"
+          },
           "children": []
         }
       ],
@@ -451,28 +470,6 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Echinoneidae"
-    },
-    {
-      "id": "GENUS_GALERITES",
-      "name": "Galerites",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GALERITES_ECHINONEA_DES_MOULINS_1837",
-          "name": "Galerites echinonea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Galerites",
-          "authorship": "Des Moulins, 1837",
-          "sourceIds": {
-            "checklistbank": "694389"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "echinoneidae"
     },
     {
       "id": "GENUS_ECHINOCONUS",
@@ -538,13 +535,92 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "echinoneidae"
+    },
+    {
+      "id": "GENUS_PYGOYRINA",
+      "name": "Pygoyrina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PYGOYRINA_DESMOULINSII_ARCHIAC_1847",
+          "name": "Pygoyrina desmoulinsii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pygoyrina",
+          "authorship": "(Archiac 1847)",
+          "sourceIds": {
+            "checklistbank": "txn:310979"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "echinoneidae"
+    },
+    {
+      "id": "GENUS_PYRINA",
+      "name": "Pyrina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PYRINA_MONTAINVILLENSIS_SORIGNET_1850",
+          "name": "Pyrina montainvillensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrina",
+          "authorship": "Sorignet 1850",
+          "sourceIds": {
+            "checklistbank": "txn:373185"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYRINA_PARRYI_HALL_1857",
+          "name": "Pyrina parryi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyrina",
+          "authorship": "Hall 1857",
+          "sourceIds": {
+            "checklistbank": "txn:391876"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "echinoneidae"
+    },
+    {
+      "id": "GENUS_PALEOECHINONEUS",
+      "name": "Paleoechinoneus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALEOECHINONEUS_HANNAI_GRANT_AND_HERTLEIN_1938",
+          "name": "Paleoechinoneus hannai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paleoechinoneus",
+          "authorship": "Grant and Hertlein 1938",
+          "sourceIds": {
+            "checklistbank": "txn:392585"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "echinoneidae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 36,
   "appSlug": "echinoneidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",
-  "genusCount": 8,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -553,6 +629,6 @@
       "orderKey": 5965821,
       "familyKey": 5599
     },
-    "checklistbank": "ott262658"
+    "checklistbank": "5b341d2d-06d1-4cd2-8940-21fc546d8e4e"
   }
 }

@@ -471,6 +471,32 @@
           },
           "children": [],
           "uuid": "17d59987-e546-51a-8d7-30233bcee42dfd"
+        },
+        {
+          "id": "SP_LISSATRYPA_SULCATA_LINDSTR_M_1861",
+          "name": "Lissatrypa sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lissatrypa",
+          "authorship": "(Lindström 1861)",
+          "sourceIds": {
+            "checklistbank": "txn:367501"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LISSATRYPA_OBOLINA_BARRANDE_1847",
+          "name": "Lissatrypa obolina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lissatrypa",
+          "authorship": "(Barrande 1847)",
+          "sourceIds": {
+            "checklistbank": "txn:480178"
+          },
+          "children": []
         }
       ]
     },
@@ -508,9 +534,11 @@
             "col": [
               "VPXBP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1900492"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1900492"
+            ]
           },
-          "authorityIds": "col:VPXBP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1900492,col:VPXBP",
           "authorship": "(M'Coy, 1851)"
         },
         {
@@ -526,6 +554,45 @@
           "yearPublished": "1995",
           "children": [],
           "uuid": "b526d52e-7d6f-5af-828-d1640799b7f11d"
+        },
+        {
+          "id": "SP_MEIFODIA_TULKULENSIS_MODZALEVSKAYA_AND_POPOV_1995",
+          "name": "Meifodia tulkulensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meifodia",
+          "authorship": "Modzalevskaya and Popov 1995",
+          "sourceIds": {
+            "checklistbank": "txn:300719"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEIFODIA_PRIMA_WILLIAMS_1951",
+          "name": "Meifodia prima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meifodia",
+          "authorship": "(Williams 1951)",
+          "sourceIds": {
+            "checklistbank": "txn:308314"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MEIFODIA_OVALIS_WILLIAMS_1951",
+          "name": "Meifodia ovalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meifodia",
+          "authorship": "(Williams 1951)",
+          "sourceIds": {
+            "checklistbank": "txn:502259"
+          },
+          "children": []
         }
       ]
     },
@@ -789,42 +856,73 @@
             ]
           },
           "authorityIds": "col:VPYJ4"
-        }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Lissatrypidae"
-    },
-    {
-      "id": "GENUS_MEIFODIA",
-      "name": "\"Meifodia",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_MEIFODIA_SUBUNDATA_M_COY_1851",
-          "name": "\"Meifodia subundata\"",
+          "id": "SP_CERASINA_ANTIQUATA_NIKIFOROVA_1961",
+          "name": "Cerasina antiquata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Meifodia",
-          "authorship": "\"(M'Coy, 1851)\"",
+          "lineage": "Cerasina",
+          "authorship": "(Nikiforova 1961)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1900492"
+            "checklistbank": "txn:305551"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERASINA_SOLITARIA_BILLINGS_1866",
+          "name": "Cerasina solitaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerasina",
+          "authorship": "(Billings 1866)",
+          "sourceIds": {
+            "checklistbank": "txn:305553"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERASINA_OBLIQUATA_HALL_1852",
+          "name": "Cerasina obliquata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerasina",
+          "authorship": "(Hall 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:305555"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERASINA_DISCOIDALIS_JIN_ET_AL_1993",
+          "name": "Cerasina discoidalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cerasina",
+          "authorship": "(Jin et al. 1993)",
+          "sourceIds": {
+            "checklistbank": "txn:114140"
           },
           "children": []
         }
       ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lissatrypidae"
+      "sourcedFrom": "catalogue of life",
+      "lineage": "Lissatrypidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 48,
+  "genusCount": 13,
+  "speciesCount": 56,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 110,
       "classKey": 210,
       "familyKey": 3252441
-    }
+    },
+    "checklistbank": "txn:127056"
   }
 }

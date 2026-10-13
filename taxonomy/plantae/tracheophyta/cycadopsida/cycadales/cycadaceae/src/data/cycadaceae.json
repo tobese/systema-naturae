@@ -1085,7 +1085,8 @@
             ],
             "wfo": [
               "wfo-1000040912"
-            ]
+            ],
+            "checklistbank": "urn:lsid:ipni.org:names:77306139-1"
           },
           "authorityIds": "col:CGYC3,wfo:wfo-1000040912"
         },
@@ -1263,7 +1264,8 @@
             ],
             "wfo": [
               "wfo-1000031830"
-            ]
+            ],
+            "checklistbank": "urn:lsid:ipni.org:names:77196703-1"
           },
           "authorityIds": "col:CGYC4,wfo:wfo-1000031830"
         },
@@ -1776,7 +1778,8 @@
             ],
             "wfo": [
               "wfo-1000031831"
-            ]
+            ],
+            "checklistbank": "urn:lsid:ipni.org:names:77196702-1"
           },
           "authorityIds": "col:CGYC8,wfo:wfo-1000031831"
         },
@@ -3158,7 +3161,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cycas",
           "children": [],
-          "uuid": "f46dc019-1417-5bd-91c-77ea396e9c0586"
+          "uuid": "f46dc019-1417-5bd-91c-77ea396e9c0586",
+          "authorship": "A.Lindstr. & K.D.Hill",
+          "sourceIds": {
+            "checklistbank": "f3fde10a-772b-5f1e-bf10-567f0b1d561f"
+          }
         },
         {
           "id": "SP_CYCAS_YUNNANENSIS",
@@ -3433,19 +3440,6 @@
           "children": []
         },
         {
-          "id": "SP_CYCAS_LITORALIS_K_D_HILL_1999",
-          "name": "Cycas litoralis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cycas",
-          "authorship": "K.D.Hill, 1999",
-          "sourceIds": {
-            "checklistbank": "1115372"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CYCAS_PARVULA_S_L_YANG_EX_D_YUE_WANG_1996",
           "name": "Cycas parvula",
           "rank": "SPECIES",
@@ -3561,6 +3555,45 @@
             "checklistbank": "3121213"
           },
           "children": []
+        },
+        {
+          "id": "SP_CYCAS_FUJIIANA_YOKOYAMA_1911",
+          "name": "Cycas fujiiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycas",
+          "authorship": "Yokoyama 1911",
+          "sourceIds": {
+            "checklistbank": "txn:344468"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCAS_LONGIPETIOLULA_D_Y_WANG",
+          "name": "Cycas ×longipetiolula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycas",
+          "authorship": "D.Y.Wang",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:ipni.org:names:993113-1"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCAS_MULTIFRONDIS_D_Y_WANG",
+          "name": "Cycas ×multifrondis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycas",
+          "authorship": "D.Y.Wang",
+          "sourceIds": {
+            "checklistbank": "urn:lsid:ipni.org:names:993114-1"
+          },
+          "children": []
         }
       ]
     },
@@ -3620,10 +3653,909 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_DICHOTOZAMITES",
+      "name": "Dichotozamites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DICHOTOZAMITES_CYCADOPSIS_FONTAINE_1889",
+          "name": "Dichotozamites cycadopsis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dichotozamites",
+          "authorship": "(Fontaine 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:56311"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_MENUCOA",
+      "name": "Menucoa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MENUCOA_CAZAUI_PETRIELLA_1969",
+          "name": "Menucoa cazaui",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Menucoa",
+          "authorship": "Petriella 1969",
+          "sourceIds": {
+            "checklistbank": "txn:255059"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_CYCADITES",
+      "name": "Cycadites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCADITES_ACUTUS_EMMONS_1856",
+          "name": "Cycadites acutus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Emmons 1856",
+          "sourceIds": {
+            "checklistbank": "txn:389054"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_MEGALOPHYLLUS_BUCKLAND_1836",
+          "name": "Cycadites megalophyllus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Buckland 1836",
+          "sourceIds": {
+            "checklistbank": "txn:407159"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_PUNGENS_LESQUEREUX_1891",
+          "name": "Cycadites pungens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Lesquereux 1891",
+          "sourceIds": {
+            "checklistbank": "txn:448305"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_TENUINERVIS_FONTAINE_1883",
+          "name": "Cycadites tenuinervis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Fontaine 1883",
+          "sourceIds": {
+            "checklistbank": "txn:448306"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_UNJIGA_DAWSON_1882",
+          "name": "Cycadites unjiga",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Dawson 1882",
+          "sourceIds": {
+            "checklistbank": "txn:448307"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_CUTCHENSIS_FEISTMANTEL_1876",
+          "name": "Cycadites cutchensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Feistmantel 1876",
+          "sourceIds": {
+            "checklistbank": "txn:454633"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_RAJMAHALENSIS_OLDHAM_1863",
+          "name": "Cycadites rajmahalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Oldham 1863",
+          "sourceIds": {
+            "checklistbank": "txn:454634"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADITES_WADIANUS_BOSE_ET_AL_1983",
+          "name": "Cycadites wadianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadites",
+          "authorship": "Bose et al. 1983",
+          "sourceIds": {
+            "checklistbank": "txn:468784"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_BEANIOPSIS",
+      "name": "Beaniopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BEANIOPSIS_RAJMAHALENSIS_GANJU_1944",
+          "name": "Beaniopsis rajmahalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Beaniopsis",
+          "authorship": "Ganju 1944",
+          "sourceIds": {
+            "checklistbank": "txn:405743"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_CTENOPHYLLUM",
+      "name": "Ctenophyllum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CTENOPHYLLUM_BRAUNIANUM_G_PPERT_1844",
+          "name": "Ctenophyllum braunianum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "(Göppert 1844)",
+          "sourceIds": {
+            "checklistbank": "txn:407036"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_ANGUSTIFOLIUM_FONTAINE_1896",
+          "name": "Ctenophyllum angustifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1896",
+          "sourceIds": {
+            "checklistbank": "txn:448151"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_DENSIFOLIUM_FONTAINE_1896",
+          "name": "Ctenophyllum densifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1896",
+          "sourceIds": {
+            "checklistbank": "txn:448159"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_GIGANTEUM_FONTAINE_1883",
+          "name": "Ctenophyllum giganteum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1883",
+          "sourceIds": {
+            "checklistbank": "txn:448160"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_GRANDIFOLIUM_FONTAINE_1883",
+          "name": "Ctenophyllum grandifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1883",
+          "sourceIds": {
+            "checklistbank": "txn:448161"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_LINEARE_EMMONS_1857",
+          "name": "Ctenophyllum lineare",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "(Emmons 1857)",
+          "sourceIds": {
+            "checklistbank": "txn:448162"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_PACHYNERVE_FONTAINE_1905",
+          "name": "Ctenophyllum pachynerve",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1905",
+          "sourceIds": {
+            "checklistbank": "txn:448164"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_ROBUSTUM_EMMONS_1857",
+          "name": "Ctenophyllum robustum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "(Emmons 1857)",
+          "sourceIds": {
+            "checklistbank": "txn:448165"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_TAXINUM_LINDLEY_AND_HUTTON_1835",
+          "name": "Ctenophyllum taxinum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "(Lindley and Hutton 1835)",
+          "sourceIds": {
+            "checklistbank": "txn:411931"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_TRUNCATUM_FONTAINE_1883",
+          "name": "Ctenophyllum truncatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1883",
+          "sourceIds": {
+            "checklistbank": "txn:448169"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_WANNERIANUM_FONTAINE_1900",
+          "name": "Ctenophyllum wannerianum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1900",
+          "sourceIds": {
+            "checklistbank": "txn:448170"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_WARDII_FONTAINE_1896",
+          "name": "Ctenophyllum wardii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1896",
+          "sourceIds": {
+            "checklistbank": "txn:448171"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOPHYLLUM_LATIFOLIUM_FONTAINE_1889",
+          "name": "Ctenophyllum latifolium",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenophyllum",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:448172"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_CTENOPSIS",
+      "name": "Ctenopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CTENOPSIS_LATIFOLIA_FONTAINE_1889",
+          "name": "Ctenopsis latifolia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenopsis",
+          "authorship": "(Fontaine 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:407039"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_CYCADINOCARPUS",
+      "name": "Cycadinocarpus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCADINOCARPUS_KEUPERIANUS_SCHENK_1870",
+          "name": "Cycadinocarpus keuperianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadinocarpus",
+          "authorship": "Schenk 1870",
+          "sourceIds": {
+            "checklistbank": "txn:407149"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADINOCARPUS_CHAPINI_NEWBERRY_1888",
+          "name": "Cycadinocarpus chapini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadinocarpus",
+          "authorship": "Newberry 1888",
+          "sourceIds": {
+            "checklistbank": "txn:448303"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADINOCARPUS_CIRCULARIS_NEWBERRY_1895",
+          "name": "Cycadinocarpus circularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadinocarpus",
+          "authorship": "Newberry 1895",
+          "sourceIds": {
+            "checklistbank": "txn:448304"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYCADINOCARPUS_RAJAMAHALENSIS_FEISTMANTEL_1877",
+          "name": "Cycadinocarpus rajamahalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadinocarpus",
+          "authorship": "Feistmantel 1877",
+          "sourceIds": {
+            "checklistbank": "txn:454632"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_CYCADOSPADIX",
+      "name": "Cycadospadix",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYCADOSPADIX_HENNOCQUEI_POMEL_1870",
+          "name": "Cycadospadix hennocquei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cycadospadix",
+          "authorship": "Pomel 1870",
+          "sourceIds": {
+            "checklistbank": "txn:407193"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_DIOONITES",
+      "name": "Dioonites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIOONITES_FENEONIS_BRONGNIART_1828",
+          "name": "Dioonites feneonis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dioonites",
+          "authorship": "(Brongniart 1828)",
+          "sourceIds": {
+            "checklistbank": "txn:407731"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIOONITES_BOREALIS_DAWSON_1882",
+          "name": "Dioonites borealis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dioonites",
+          "authorship": "Dawson 1882",
+          "sourceIds": {
+            "checklistbank": "txn:448482"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIOONITES_BUCHIANUS_ETTINGSHAUSEN_1852",
+          "name": "Dioonites buchianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dioonites",
+          "authorship": "(Ettingshausen 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:448483"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIOONITES_CARNALLIANUS_G_PPERT_1843",
+          "name": "Dioonites carnallianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dioonites",
+          "authorship": "(Göppert 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:448486"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIOONITES_COLUMBIANUS_DAWSON_1873",
+          "name": "Dioonites columbianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dioonites",
+          "authorship": "Dawson 1873",
+          "sourceIds": {
+            "checklistbank": "txn:448488"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DIOONITES_DUNKERIANUS_G_PPERT_1843",
+          "name": "Dioonites dunkerianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dioonites",
+          "authorship": "(Göppert 1843)",
+          "sourceIds": {
+            "checklistbank": "txn:448489"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_ENCEPHALARTOPSIS",
+      "name": "Encephalartopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENCEPHALARTOPSIS_NERVOSA_FONTAINE_1889",
+          "name": "Encephalartopsis nervosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Encephalartopsis",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:408039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ENCEPHALARTOPSIS_OREGONENSIS_FONTAINE_1905",
+          "name": "Encephalartopsis oregonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Encephalartopsis",
+          "authorship": "Fontaine 1905",
+          "sourceIds": {
+            "checklistbank": "txn:448700"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_GLOSSOZAMITES",
+      "name": "Glossozamites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLOSSOZAMITES_OBLONGIFOLIUS_KURR_1870",
+          "name": "Glossozamites oblongifolius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glossozamites",
+          "authorship": "Kurr 1870",
+          "sourceIds": {
+            "checklistbank": "txn:408864"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOSSOZAMITES_DISTANS_FONTAINE_1889",
+          "name": "Glossozamites distans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glossozamites",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:449230"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLOSSOZAMITES_FONTAINEANUS_WARD_1899",
+          "name": "Glossozamites fontaineanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glossozamites",
+          "authorship": "Ward 1899",
+          "sourceIds": {
+            "checklistbank": "txn:449231"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_LEPROSPERMUM",
+      "name": "Leprospermum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPROSPERMUM_THURMANNI_HEER_1877",
+          "name": "Leprospermum thurmanni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leprospermum",
+          "authorship": "Heer 1877",
+          "sourceIds": {
+            "checklistbank": "txn:410390"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_SPHENOZAMITES",
+      "name": "Sphenozamites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHENOZAMITES_BEANI_LINDLEY_AND_HUTTON_1832",
+          "name": "Sphenozamites beani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenozamites",
+          "authorship": "(Lindley and Hutton 1832)",
+          "sourceIds": {
+            "checklistbank": "txn:414981"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHENOZAMITES_OBLANCEOLATUS_PENHALLOW_1902",
+          "name": "Sphenozamites oblanceolatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenozamites",
+          "authorship": "Penhallow 1902",
+          "sourceIds": {
+            "checklistbank": "txn:452305"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHENOZAMITES_ROGERSIANUS_FONTAINE_1883",
+          "name": "Sphenozamites rogersianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenozamites",
+          "authorship": "Fontaine 1883",
+          "sourceIds": {
+            "checklistbank": "txn:452306"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_ZAMIOSTROBUS",
+      "name": "Zamiostrobus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZAMIOSTROBUS_MACROCEPHALUS_ENDLICHER_1836",
+          "name": "Zamiostrobus macrocephalus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zamiostrobus",
+          "authorship": "Endlicher 1836",
+          "sourceIds": {
+            "checklistbank": "txn:416670"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZAMIOSTROBUS_VIRGINIENSIS_FONTAINE_1883",
+          "name": "Zamiostrobus virginiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zamiostrobus",
+          "authorship": "Fontaine 1883",
+          "sourceIds": {
+            "checklistbank": "txn:452682"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_LEPTOCYCAS",
+      "name": "Leptocycas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPTOCYCAS_GRACILIS_DELEVORYAS_AND_HOPE_1971",
+          "name": "Leptocycas gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptocycas",
+          "authorship": "Delevoryas and Hope 1971",
+          "sourceIds": {
+            "checklistbank": "txn:417656"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_ENCEPHALARTOS",
+      "name": "Encephalartos",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENCEPHALARTOS_CRETACEUS_LESQUEREUX_1891",
+          "name": "Encephalartos cretaceus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Encephalartos",
+          "authorship": "Lesquereux 1891",
+          "sourceIds": {
+            "checklistbank": "txn:448702"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_MICROZAMIA",
+      "name": "Microzamia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROZAMIA_DUBIA_BERRY_1905",
+          "name": "Microzamia dubia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microzamia",
+          "authorship": "Berry 1905",
+          "sourceIds": {
+            "checklistbank": "txn:450093"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROZAMIA_GIBBA_REUSS_1844",
+          "name": "Microzamia gibba",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microzamia",
+          "authorship": "(Reuss 1844)",
+          "sourceIds": {
+            "checklistbank": "txn:450094"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_PLATYPTERYGIUM",
+      "name": "Platypterygium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLATYPTERYGIUM_DENSINERVE_FONTAINE_1889",
+          "name": "Platypterygium densinerve",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platypterygium",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:451173"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLATYPTERYGIUM_ROGERSIANUM_FONTAINE_1889",
+          "name": "Platypterygium rogersianum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platypterygium",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:451174"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
+    },
+    {
+      "id": "GENUS_ZAMIOPSIS",
+      "name": "Zamiopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZAMIOPSIS_DENTATA_FONTAINE_1889",
+          "name": "Zamiopsis dentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zamiopsis",
+          "authorship": "(Fontaine 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:452677"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZAMIOPSIS_LACINIATA_FONTAINE_1889",
+          "name": "Zamiopsis laciniata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zamiopsis",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:452680"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZAMIOPSIS_PETIOLATA_FONTAINE_1889",
+          "name": "Zamiopsis petiolata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zamiopsis",
+          "authorship": "Fontaine 1889",
+          "sourceIds": {
+            "checklistbank": "txn:452681"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cycadaceae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 159,
+  "genusCount": 22,
+  "speciesCount": 217,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

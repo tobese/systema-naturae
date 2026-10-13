@@ -158,9 +158,11 @@
             "col": [
               "4QBJM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796133"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1796133"
+            ]
           },
-          "authorityIds": "col:4QBJM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1796133,col:4QBJM",
           "authorship": "(Murray, 1913)"
         },
         {
@@ -2841,19 +2843,6 @@
             "checklistbank": "904972"
           },
           "children": []
-        },
-        {
-          "id": "SP_MELICERTA_RINGENS_LINNAEUS_1758",
-          "name": "Melicerta ringens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Melicerta",
-          "authorship": "(Linnaeus, 1758)",
-          "sourceIds": {
-            "checklistbank": "1036601"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2948,19 +2937,6 @@
           "authorship": "Davis, 1867",
           "sourceIds": {
             "checklistbank": "1014910"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OECISTES_VELATUS_GOSSE_1851",
-          "name": "Oecistes velatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Oecistes",
-          "authorship": "(Gosse, 1851)",
-          "sourceIds": {
-            "checklistbank": "1036602"
           },
           "children": []
         }
@@ -3571,19 +3547,6 @@
           "children": []
         },
         {
-          "id": "SP_PTYGURA_CRISTATA_MURRAY_1913",
-          "name": "\"Ptygura cristata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ptygura",
-          "authorship": "\"(Murray, 1913)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796133"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PTYGURA_FURCILLATA_KELLICOTT_1889",
           "name": "\"Ptygura furcillata\"",
           "rank": "SPECIES",
@@ -3837,7 +3800,7 @@
     }
   ],
   "genusCount": 25,
-  "speciesCount": 216,
+  "speciesCount": 213,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

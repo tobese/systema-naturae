@@ -3301,33 +3301,6 @@
           "authorityIds": "col:47HKC,gbif:3484727,mycobank:129163"
         },
         {
-          "id": "NIPTERA_TRICHOPHORICOLA",
-          "name": "Niptera trichophoricola",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Niptera",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Graddon) Spooner & Nauta",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "2584571"
-            ],
-            "mycobank": [
-              "467307"
-            ],
-            "col": [
-              "73ZJQ"
-            ],
-            "checklistbank": "1001063"
-          },
-          "uuid": "992111a7-a7d8-5ad-96f-e6f691a6351a20",
-          "authorityIds": "col:73ZJQ,gbif:2584571,mycobank:467307"
-        },
-        {
           "id": "NIPTERA_TRISTIS",
           "name": "Niptera tristis",
           "rank": "SPECIES",
@@ -4223,35 +4196,6 @@
           "authorityIds": "col:4G422,gbif:2581325,mycobank:413792"
         },
         {
-          "id": "PHIALOCEPHALA_DIMORPHOSPORA",
-          "name": "Phialocephala dimorphospora",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Phialocephala",
-          "continents": [
-            "Europe"
-          ],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "authorship": "W.B. Kendrick",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "2581324"
-            ],
-            "mycobank": [
-              "336287"
-            ],
-            "col": [
-              "4G423"
-            ],
-            "checklistbank": "80717"
-          },
-          "uuid": "88a6f6b6-db4a-557-aa3-2f8ab75fa08c04",
-          "authorityIds": "col:4G423,gbif:2581324,mycobank:336287"
-        },
-        {
           "id": "PHIALOCEPHALA_EUROPAEA",
           "name": "Phialocephala europaea",
           "rank": "SPECIES",
@@ -4518,10 +4462,12 @@
             "col": [
               "4G42D"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1838211"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1838211"
+            ]
           },
           "uuid": "9c7d001d-5bf0-5c0-b5f-4533be8ddeeecf",
-          "authorityIds": "col:4G42D,gbif:8395720,mycobank:561688"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1838211,col:4G42D,gbif:8395720,mycobank:561688"
         },
         {
           "id": "PHIALOCEPHALA_LAGERBERGII",
@@ -5964,10 +5910,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 4375011,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100274"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:100274"
+            ]
           },
           "uuid": "e1c97df6-aecf-520-8f5-591ab8ee1a3580",
-          "authorityIds": "gbif:4375011",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:100274,gbif:4375011",
           "authorship": "(Desm.) W. Phillips, 1887"
         },
         {
@@ -10026,10 +9974,12 @@
             "col": [
               "43WCN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100276"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:100276"
+            ]
           },
           "uuid": "d10757a5-8aa4-5c0-8d5-2ca2008b54e50c",
-          "authorityIds": "col:43WCN,gbif:2584998,mycobank:192219"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:100276,col:43WCN,gbif:2584998,mycobank:192219"
         },
         {
           "id": "MOLLISIA_PANICICOLA",
@@ -19665,57 +19615,10 @@
       "lineage": "mollisiaceae"
     },
     {
-      "id": "GENUS_PHIALOCEPHALA",
-      "name": "[Phialocephala]",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHIALOCEPHALA_TRIGONOSPORA",
-          "name": "[Phialocephala] trigonospora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "[Phialocephala]",
-          "sourceIds": {
-            "checklistbank": "519228"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mollisiaceae"
-    },
-    {
       "id": "GENUS_MOLLISIA",
       "name": "\"Mollisia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MOLLISIA_ARENEVAGA_DESM_W_PHILLIPS_1887",
-          "name": "\"Mollisia arenevaga\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mollisia",
-          "authorship": "\"(Desm.) W. Phillips, 1887\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100274"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MOLLISIA_PALUSTRIS_ROBERGE_EX_DESM_P_KARST_1871",
-          "name": "\"Mollisia palustris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mollisia",
-          "authorship": "\"(Roberge ex Desm.) P. Karst, 1871\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:100276"
-          },
-          "children": []
-        },
         {
           "id": "SP_MOLLISIA_CINEREA_BATSCH_P_KARST_1871",
           "name": "\"Mollisia cinerea\"",
@@ -19732,33 +19635,11 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mollisiaceae"
-    },
-    {
-      "id": "GENUS_PHIALOCEPHALA",
-      "name": "\"Phialocephala",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHIALOCEPHALA_HIBERNA_BILLS_M_J_DAY_CURRAH_2012",
-          "name": "\"Phialocephala hiberna\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phialocephala",
-          "authorship": "\"(Bills) M.J. Day & Currah, 2012\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1838211"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "mollisiaceae"
     }
   ],
   "authorship": "Rehm",
-  "genusCount": 43,
-  "speciesCount": 791,
+  "genusCount": 41,
+  "speciesCount": 785,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

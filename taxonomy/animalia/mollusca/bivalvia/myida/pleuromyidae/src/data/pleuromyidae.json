@@ -170,9 +170,11 @@
             "col": [
               "9QCXN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1499716"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1499716"
+            ]
           },
-          "authorityIds": "col:9QCXN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1499716,col:9QCXN",
           "authorship": "(G. Young & Bird, 1828)"
         },
         {
@@ -326,9 +328,11 @@
             "col": [
               "8THMN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1552150"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1552150"
+            ]
           },
-          "authorityIds": "col:8THMN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1552150,col:8THMN",
           "authorship": "(Wilckens, 1927)"
         },
         {
@@ -508,9 +512,11 @@
             "col": [
               "9THTC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610162"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610162"
+            ]
           },
-          "authorityIds": "col:9THTC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610162,col:9THTC",
           "authorship": "(J. Sowerby, 1813)"
         },
         {
@@ -621,60 +627,77 @@
           },
           "children": [],
           "uuid": "62d77f18-1872-5b6-8ba-68dc41322bb97d"
+        },
+        {
+          "id": "SP_PLEUROMYA_ELONGATA_SCHLOTHEIM_1822",
+          "name": "Pleuromya elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleuromya",
+          "authorship": "(Schlotheim 1822)",
+          "sourceIds": {
+            "checklistbank": "txn:179743"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROMYA_PRIMA_HAUTMANN_ET_AL_2013",
+          "name": "Pleuromya prima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleuromya",
+          "authorship": "Hautmann et al. 2013",
+          "sourceIds": {
+            "checklistbank": "txn:264149"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROMYA_UNIOIDES_ROEMER_1835",
+          "name": "Pleuromya unioides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleuromya",
+          "authorship": "(Roemer 1835)",
+          "sourceIds": {
+            "checklistbank": "txn:272567"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROMYA_GIBBOSA_SOWERBY_1823",
+          "name": "Pleuromya gibbosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleuromya",
+          "authorship": "(Sowerby 1823)",
+          "sourceIds": {
+            "checklistbank": "txn:383861"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLEUROMYA_ALDUINI_BRONGNIART_1821",
+          "name": "Pleuromya alduini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleuromya",
+          "authorship": "(Brongniart 1821)",
+          "sourceIds": {
+            "checklistbank": "txn:428608"
+          },
+          "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PLEUROMYA",
-      "name": "\"Pleuromya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLEUROMYA_COSTATA_G_YOUNG_BIRD_1828",
-          "name": "\"Pleuromya costata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleuromya",
-          "authorship": "\"(G. Young & Bird, 1828)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1499716"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROMYA_MARIANA_WILCKENS_1927",
-          "name": "\"Pleuromya mariana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleuromya",
-          "authorship": "\"(Wilckens, 1927)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1552150"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLEUROMYA_UNIFORMIS_J_SOWERBY_1813",
-          "name": "\"Pleuromya uniformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pleuromya",
-          "authorship": "\"(J. Sowerby, 1813)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610162"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pleuromyidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 45,
+  "genusCount": 1,
+  "speciesCount": 47,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -682,6 +705,7 @@
       "classKey": 137,
       "orderKey": 9241244,
       "familyKey": 4587073
-    }
+    },
+    "checklistbank": "txn:61825"
   }
 }

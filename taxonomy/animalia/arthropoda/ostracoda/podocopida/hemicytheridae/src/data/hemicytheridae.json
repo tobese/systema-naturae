@@ -226,7 +226,8 @@
           "sourceIds": {
             "col": [
               "BFPVZ"
-            ]
+            ],
+            "checklistbank": "txn:255414"
           },
           "authorityIds": "col:BFPVZ"
         },
@@ -2135,9 +2136,11 @@
             "col": [
               "BFPW2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:808318"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:808318"
+            ]
           },
-          "authorityIds": "col:BFPW2"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:808318,col:BFPW2"
         },
         {
           "id": "SP_AURILA_OKAYAMENSIS_OKUBO_1988",
@@ -2590,20 +2593,6 @@
           "uuid": "cbb12e97-e07b-540-8f0-cbd3dc7fb2616e"
         },
         {
-          "id": "SP_AURILA_INTERPRETIS_ULICZNY_1969",
-          "name": "Aurila interpretis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aurila",
-          "authorship": "Uliczny, 1969",
-          "sourceIds": {
-            "checklistbank": "48131"
-          },
-          "children": [],
-          "uuid": "a7854186-acba-56e-9f4-8bb167d2181d37"
-        },
-        {
           "id": "SP_AURILA_COVEXA_BAIRD_1850",
           "name": "Aurila covexa",
           "rank": "SPECIES",
@@ -2632,14 +2621,15 @@
           "uuid": "be104ff8-5891-5ef-8d1-de51e9a971b0ad"
         },
         {
-          "id": "SP_AURILA_SP",
-          "name": "Aurila sp.",
+          "id": "SP_AURILA_SOUMMAMENSIS_CAUTELLA_AND_YASSINI_1974",
+          "name": "Aurila soummamensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Aurila",
+          "authorship": "Cautella and Yassini 1974",
           "sourceIds": {
-            "checklistbank": "221306"
+            "checklistbank": "txn:398765"
           },
           "children": []
         }
@@ -3884,7 +3874,8 @@
           "sourceIds": {
             "col": [
               "C2DRD"
-            ]
+            ],
+            "checklistbank": "txn:387283"
           },
           "authorityIds": "col:C2DRD"
         },
@@ -4042,7 +4033,8 @@
           "sourceIds": {
             "col": [
               "C2DRC"
-            ]
+            ],
+            "checklistbank": "txn:387282"
           },
           "authorityIds": "col:C2DRC"
         },
@@ -4096,19 +4088,6 @@
             ]
           },
           "authorityIds": "col:85T4X"
-        },
-        {
-          "id": "SP_JUGOSOCYTHEREIS_DELTOIDES_BRADY_1890",
-          "name": "Jugosocythereis deltoides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Jugosocythereis",
-          "authorship": "(Brady, 1890)",
-          "sourceIds": {
-            "checklistbank": "687414"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7293,9 +7272,11 @@
             "col": [
               "854CY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:461540"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:461540"
+            ]
           },
-          "authorityIds": "col:854CY"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:461540,col:854CY"
         },
         {
           "id": "SP_HEMICYTHERIA_HOTSUNI_HU_TAO_2008",
@@ -8750,6 +8731,32 @@
             "checklistbank": "ott2965168"
           },
           "children": []
+        },
+        {
+          "id": "SP_HEMICYTHERE_SCHMIDTAE_MALKIN_1953",
+          "name": "Hemicythere schmidtae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemicythere",
+          "authorship": "Malkin 1953",
+          "sourceIds": {
+            "checklistbank": "txn:365621"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HEMICYTHERE_KNIFFENI_HOWE_AND_LAW_1936",
+          "name": "Hemicythere kniffeni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemicythere",
+          "authorship": "Howe and Law 1936",
+          "sourceIds": {
+            "checklistbank": "txn:367713"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -9947,27 +9954,6 @@
           "authorityIds": "col:KDBN"
         },
         {
-          "id": "SP_BAFFINICYTHERE_HOWEI_HAZEL_1967_HAZEL_1967",
-          "name": "Baffinicythere howei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Baffinicythere",
-          "authorship": "(Hazel, 1967) Hazel, 1967",
-          "children": [],
-          "uuid": "9ae8c4c5-884b-529-bf3-cd4d4080a1f5b8",
-          "sourceIds": {
-            "itis": [
-              "683945"
-            ],
-            "col": [
-              "KDBP"
-            ],
-            "checklistbank": "48136"
-          },
-          "authorityIds": "col:KDBP,itis:683945"
-        },
-        {
           "id": "SP_BAFFINICYTHERE_RETICULATA_IRIZUKI_1996",
           "name": "Baffinicythere reticulata",
           "rank": "SPECIES",
@@ -10747,10 +10733,13 @@
           "lineage": "Urocythereis",
           "authorship": "Olteanu, 1976",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:797938"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:797938"
+            ]
           },
           "children": [],
-          "uuid": "bebaa12d-2f01-52f-acf-6e366aa03a67f9"
+          "uuid": "bebaa12d-2f01-52f-acf-6e366aa03a67f9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:797938"
         },
         {
           "id": "SP_UROCYTHEREIS_MIRABILIS_OLTEANU_1976",
@@ -10787,6 +10776,19 @@
           "lineage": "Urocythereis",
           "sourceIds": {
             "checklistbank": "ott7700339"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_UROCYTHEREIS_CALIFORNICA_HAZEL_1962",
+          "name": "Urocythereis californica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Urocythereis",
+          "authorship": "Hazel 1962",
+          "sourceIds": {
+            "checklistbank": "txn:432255"
           },
           "children": []
         }
@@ -12187,7 +12189,8 @@
           "sourceIds": {
             "col": [
               "C2FMV"
-            ]
+            ],
+            "checklistbank": "txn:255412"
           },
           "authorityIds": "col:C2FMV"
         },
@@ -12411,6 +12414,19 @@
             ]
           },
           "authorityIds": "col:C2YN7"
+        },
+        {
+          "id": "SP_POKORNYELLA_ITALICA_RUGGIERI_ET_AL_1977",
+          "name": "Pokornyella italica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pokornyella",
+          "authorship": "Ruggieri et al. 1977",
+          "sourceIds": {
+            "checklistbank": "txn:255410"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -13196,24 +13212,6 @@
           "authorityIds": "col:85LS7"
         },
         {
-          "id": "SP_AMBOSTRACON_CRUCICOSTATUM_SANGUINETTI_ORNELLAS_COIMBRA_1991",
-          "name": "Ambostracon crucicostatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Ambostracon",
-          "authorship": "Sanguinetti, Ornellas & Coimbra, 1991",
-          "children": [],
-          "uuid": "f752d02b-1029-564-a82-85b5ac34b2232e",
-          "sourceIds": {
-            "col": [
-              "VC2G6"
-            ],
-            "checklistbank": "187524"
-          },
-          "authorityIds": "col:VC2G6"
-        },
-        {
           "id": "SP_AMBOSTRACON_EXMOUTHENSIS_HARTMANN_1978",
           "name": "Ambostracon exmouthensis",
           "rank": "SPECIES",
@@ -13543,45 +13541,6 @@
           "authorityIds": "itis:683956"
         },
         {
-          "id": "SP_FINMARCHINELLA_ANGULATA_SARS_1866",
-          "name": "Finmarchinella angulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Finmarchinella",
-          "authorship": "(Sars, 1866)",
-          "children": [],
-          "uuid": "e3708448-b957-55b-b0e-36c096e3c7dc90",
-          "sourceIds": {
-            "itis": [
-              "683954"
-            ],
-            "checklistbank": "50135"
-          },
-          "authorityIds": "itis:683954"
-        },
-        {
-          "id": "SP_FINMARCHINELLA_FINMARCHICA_SARS_1866",
-          "name": "Finmarchinella finmarchica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Finmarchinella",
-          "authorship": "(Sars, 1866)",
-          "children": [],
-          "uuid": "427ba605-4a5c-5ab-bff-7fc3226499b603",
-          "sourceIds": {
-            "col": [
-              "6J3C5"
-            ],
-            "itis": [
-              "683957"
-            ],
-            "checklistbank": "50140"
-          },
-          "authorityIds": "col:6J3C5,itis:683957"
-        },
-        {
           "id": "SP_FINMARCHINELLA_CURVICOSTA_NEALE_1974",
           "name": "Finmarchinella curvicosta",
           "rank": "SPECIES",
@@ -13693,34 +13652,6 @@
             ]
           },
           "authorityIds": "itis:683955"
-        },
-        {
-          "id": "SP_FINMARCHINELLA_BARENTZOVENSIS_MANDELSTAM_1957",
-          "name": "Finmarchinella barentzovensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Finmarchinella",
-          "authorship": "(Mandelstam, 1957)",
-          "sourceIds": {
-            "checklistbank": "50136"
-          },
-          "children": [],
-          "uuid": "0268ac91-f85b-5dc-95a-3207d58f505f6c"
-        },
-        {
-          "id": "SP_FINMARCHINELLA_CURVICOSTATA_NEALE_1974",
-          "name": "Finmarchinella curvicostata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Finmarchinella",
-          "authorship": "Neale, 1974",
-          "sourceIds": {
-            "checklistbank": "50137"
-          },
-          "children": [],
-          "uuid": "635ff31a-6780-5b4-868-d2aa68fb90b00f"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -13818,7 +13749,8 @@
           "sourceIds": {
             "col": [
               "85V4L"
-            ]
+            ],
+            "checklistbank": "txn:365573"
           },
           "authorityIds": "col:85V4L"
         }
@@ -13983,6 +13915,19 @@
             ]
           },
           "authorityIds": "col:85SY9"
+        },
+        {
+          "id": "SP_HORNIBROOKELLA_ARCANA_LUBIMOVA_AND_GUHA_1960",
+          "name": "Hornibrookella arcana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hornibrookella",
+          "authorship": "(Lubimova and Guha 1960)",
+          "sourceIds": {
+            "checklistbank": "txn:416618"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -14439,9 +14384,11 @@
             "col": [
               "856MB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:391284"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:391284"
+            ]
           },
-          "authorityIds": "col:856MB"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:391284,col:856MB"
         },
         {
           "id": "SP_PROCYTHEREIS_DENSUIRETICULATA_HARTMANN_1981",
@@ -18920,6 +18867,58 @@
             "checklistbank": "ott7700325"
           },
           "children": []
+        },
+        {
+          "id": "SP_HERMANITES_ASCITUS_HAZEL_1983",
+          "name": "Hermanites ascitus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hermanites",
+          "authorship": "Hazel 1983",
+          "sourceIds": {
+            "checklistbank": "txn:82123"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HERMANITES_BATEQUENSIS_CARRE_O_AND_CRONIN_1993",
+          "name": "Hermanites batequensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hermanites",
+          "authorship": "Carreño and Cronin 1993",
+          "sourceIds": {
+            "checklistbank": "txn:387281"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HERMANITES_HUANTRAICOENSIS_BERTELS_1969",
+          "name": "Hermanites huantraicoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hermanites",
+          "authorship": "Bertels 1969",
+          "sourceIds": {
+            "checklistbank": "txn:478070"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HERMANITES_REGULOSA_CARBONNEL_AND_JOHNSON_1989",
+          "name": "Hermanites regulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hermanites",
+          "authorship": "Carbonnel and Johnson 1989",
+          "sourceIds": {
+            "checklistbank": "txn:509836"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -18966,29 +18965,6 @@
           },
           "children": [],
           "uuid": "c63f6795-528d-5fb-85f-a3b6e29aadbe93"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hemicytheridae"
-    },
-    {
-      "id": "GENUS_THAEROCYTHERE",
-      "name": "Thaerocythere",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_THAEROCYTHERE_CRENULATA_G_O_SARS_1866",
-          "name": "Thaerocythere crenulata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thaerocythere",
-          "authorship": "(G.O. Sars, 1866)",
-          "sourceIds": {
-            "checklistbank": "50153"
-          },
-          "children": [],
-          "uuid": "1dbf0f31-99ec-50d-947-f315ac0c553b91"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -19298,19 +19274,6 @@
           "children": []
         },
         {
-          "id": "SP_CYTHEREIS_EMARGINATA_SARS_1866",
-          "name": "Cythereis emarginata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythereis",
-          "authorship": "Sars, 1866",
-          "sourceIds": {
-            "checklistbank": "1044539"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CYTHEREIS_ANGULATA_SARS_1866",
           "name": "Cythereis angulata",
           "rank": "SPECIES",
@@ -19320,19 +19283,6 @@
           "authorship": "Sars, 1866",
           "sourceIds": {
             "checklistbank": "1046022"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CYTHEREIS_VILLOSA_SARS_1866",
-          "name": "Cythereis villosa",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythereis",
-          "authorship": "Sars, 1866",
-          "sourceIds": {
-            "checklistbank": "1046936"
           },
           "children": []
         }
@@ -19442,19 +19392,6 @@
           "children": []
         },
         {
-          "id": "SP_CYTHERE_KERGUELENENSIS_BRADY_1880",
-          "name": "Cythere kerguelenensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythere",
-          "authorship": "Brady, 1880",
-          "sourceIds": {
-            "checklistbank": "843253"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CYTHERE_PANNOSA_BRADY_1869",
           "name": "Cythere pannosa",
           "rank": "SPECIES",
@@ -19477,32 +19414,6 @@
           "authorship": "Jones, 1857",
           "sourceIds": {
             "checklistbank": "1045773"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CYTHERE_RUBIDA_BRADY_1868",
-          "name": "Cythere rubida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythere",
-          "authorship": "Brady, 1868",
-          "sourceIds": {
-            "checklistbank": "1046935"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CYTHERE_CRENATA_BRADY_1890",
-          "name": "Cythere crenata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cythere",
-          "authorship": "Brady, 1890",
-          "sourceIds": {
-            "checklistbank": "1046937"
           },
           "children": []
         }
@@ -19782,19 +19693,6 @@
           "children": []
         },
         {
-          "id": "SP_UROCYTHEREIS_DROBETIELLA_OLTEANU_1976",
-          "name": "\"Urocythereis (Drobetiella)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Urocythereis",
-          "authorship": "\"Olteanu, 1976\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:797938"
-          },
-          "children": []
-        },
-        {
           "id": "SP_UROCYTHEREIS_SORORCULA_SEGUENZA_1880",
           "name": "\"Urocythereis sororcula",
           "rank": "SPECIES",
@@ -19817,19 +19715,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PROCYTHEREIS_RADIATA_SKOGSBERG_1928",
-          "name": "\"Procythereis radiata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Procythereis",
-          "authorship": "\"Skogsberg, 1928\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:391284"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PROCYTHEREIS_SERRATOCYTHERE_HARTMANN_1980",
           "name": "\"Procythereis (Serratocythere)",
           "rank": "SPECIES",
@@ -19839,28 +19724,6 @@
           "authorship": "\"Hartmann, 1980\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:461620"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "hemicytheridae"
-    },
-    {
-      "id": "GENUS_HEMICYTHERIA",
-      "name": "\"Hemicytheria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HEMICYTHERIA_POKORNYI_HARTMANN_1962",
-          "name": "\"Hemicytheria pokornyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hemicytheria",
-          "authorship": "\"Hartmann, 1962\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:461540"
           },
           "children": []
         }
@@ -19987,19 +19850,6 @@
           "authorship": "\"(Ruggieri, 1953)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:774189"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AURILA_BULLAPUNCTATA_RUGGIERI_1974",
-          "name": "\"Aurila bullapunctata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aurila",
-          "authorship": "\"Ruggieri, 1974\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:808318"
           },
           "children": []
         },
@@ -20322,13 +20172,175 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hemicytheridae"
+    },
+    {
+      "id": "GENUS_PROTEOCONCHA",
+      "name": "Proteoconcha",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTEOCONCHA_JAMESENSIS_HAZEL_1983",
+          "name": "Proteoconcha jamesensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proteoconcha",
+          "authorship": "Hazel 1983",
+          "sourceIds": {
+            "checklistbank": "txn:82125"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemicytheridae"
+    },
+    {
+      "id": "GENUS_ANTICYTHEREIS",
+      "name": "Anticythereis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANTICYTHEREIS_EUGLYPHA_BOSQUET_1854",
+          "name": "Anticythereis euglypha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anticythereis",
+          "authorship": "(Bosquet 1854)",
+          "sourceIds": {
+            "checklistbank": "txn:312473"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemicytheridae"
+    },
+    {
+      "id": "GENUS_POSEIDONAMICUS",
+      "name": "Poseidonamicus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POSEIDONAMICUS_NORRISI_YAMAGUCHI_ET_AL_2017",
+          "name": "Poseidonamicus norrisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poseidonamicus",
+          "authorship": "Yamaguchi et al. 2017",
+          "sourceIds": {
+            "checklistbank": "txn:365705"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POSEIDONAMICUS_PSEUDOROBUSTUS_COLES_AND_WHATLEY_1989",
+          "name": "Poseidonamicus pseudorobustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poseidonamicus",
+          "authorship": "Coles and Whatley 1989",
+          "sourceIds": {
+            "checklistbank": "txn:464442"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POSEIDONAMICUS_RIOGRANDENSIS_BENSON_AND_PEYPOUQUET_1983",
+          "name": "Poseidonamicus riograndensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poseidonamicus",
+          "authorship": "Benson and Peypouquet 1983",
+          "sourceIds": {
+            "checklistbank": "txn:464445"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POSEIDONAMICUS_MIOCENICUS_BENSON_AND_PEYPOUQUET_1983",
+          "name": "Poseidonamicus miocenicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poseidonamicus",
+          "authorship": "Benson and Peypouquet 1983",
+          "sourceIds": {
+            "checklistbank": "txn:464446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POSEIDONAMICUS_PANOPSUS_WHATLEY_AND_DINGLE_1989",
+          "name": "Poseidonamicus panopsus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poseidonamicus",
+          "authorship": "Whatley and Dingle 1989",
+          "sourceIds": {
+            "checklistbank": "txn:464447"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemicytheridae"
+    },
+    {
+      "id": "GENUS_OCCULTOCYTHEREIS",
+      "name": "Occultocythereis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OCCULTOCYTHEREIS_GIOARGAEZI_CARRE_O_AND_CRONIN_1993",
+          "name": "Occultocythereis gioargaezi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Occultocythereis",
+          "authorship": "Carreño and Cronin 1993",
+          "sourceIds": {
+            "checklistbank": "txn:387280"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemicytheridae"
+    },
+    {
+      "id": "GENUS_TONGACYTHERE",
+      "name": "Tongacythere",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TONGACYTHERE_KONDOI_HAZEL_AND_HOLDEN_1971",
+          "name": "Tongacythere kondoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tongacythere",
+          "authorship": "Hazel and Holden 1971",
+          "sourceIds": {
+            "checklistbank": "txn:393214"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemicytheridae"
     }
   ],
   "speciesCount": 1161,
   "appSlug": "hemicytheridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 120,
+  "genusCount": 123,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -20337,6 +20349,6 @@
       "orderKey": 1438,
       "familyKey": 5199
     },
-    "checklistbank": "182592"
+    "checklistbank": "16743"
   }
 }

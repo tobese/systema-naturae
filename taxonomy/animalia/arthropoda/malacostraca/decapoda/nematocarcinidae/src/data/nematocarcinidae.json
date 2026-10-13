@@ -254,9 +254,11 @@
             "col": [
               "9CWNW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:107573"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:107573"
+            ]
           },
-          "authorityIds": "col:9CWNW,itis:96154",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:107573,col:9CWNW,itis:96154",
           "children": []
         },
         {
@@ -1019,19 +1021,6 @@
           "children": []
         },
         {
-          "id": "SP_NEMATOCARCINUS_ACANTHITELSONIS_PEQUEGNAT_1970",
-          "name": "Nematocarcinus acanthitelsonis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nematocarcinus",
-          "authorship": "Pequegnat, 1970",
-          "sourceIds": {
-            "checklistbank": "684479"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NEMATOCARCINUS_SERRATIROSTRIS_BURUKOVSKY_1991",
           "name": "Nematocarcinus serratirostris",
           "rank": "SPECIES",
@@ -1369,35 +1358,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nematocarcinidae"
-    },
-    {
-      "id": "GENUS_NEMATOCARCINUS",
-      "name": "\"Nematocarcinus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEMATOCARCINUS_ENSIFER_SMITH_1882",
-          "name": "\"Nematocarcinus ensifer\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nematocarcinus",
-          "authorship": "\"(Smith, 1882)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:107573"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "nematocarcinidae"
     }
   ],
-  "speciesCount": 69,
+  "speciesCount": 67,
   "appSlug": "nematocarcinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 10,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

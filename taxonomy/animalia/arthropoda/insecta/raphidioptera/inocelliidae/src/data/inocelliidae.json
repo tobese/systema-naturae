@@ -514,19 +514,6 @@
           "children": []
         },
         {
-          "id": "SP_INOCELLIA_KEISERI_ASPOCK_ASPOCK_1965",
-          "name": "Inocellia keiseri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Inocellia",
-          "authorship": "Aspock & Aspock, 1965",
-          "sourceIds": {
-            "checklistbank": "1029403"
-          },
-          "children": []
-        },
-        {
           "id": "SP_INOCELLIA_ASPOUCKORUM",
           "name": "Inocellia aspouckorum",
           "rank": "SPECIES",
@@ -725,7 +712,8 @@
           "sourceIds": {
             "col": [
               "396RT"
-            ]
+            ],
+            "checklistbank": "txn:232416"
           },
           "authorityIds": "col:396RT",
           "children": []
@@ -739,24 +727,6 @@
       "name": "Indianoinocellia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_INDIANOINOCELLIA_PILICORNIS_CARPENTER_1959",
-          "name": "Indianoinocellia pilicornis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "indianoinocellia",
-          "authorship": "(Carpenter, 1959)",
-          "uuid": "92b52119-d0a0-59e-824-a09efbe3762c9f",
-          "sourceIds": {
-            "col": [
-              "3PLP4"
-            ],
-            "checklistbank": "1246640"
-          },
-          "authorityIds": "col:3PLP4",
-          "children": []
-        },
         {
           "id": "SP_INDIANOINOCELLIA_MAYANA_U_ASP_CK_ET_AL_1992",
           "name": "Indianoinocellia mayana",
@@ -1015,7 +985,8 @@
           "sourceIds": {
             "col": [
               "7B3MD"
-            ]
+            ],
+            "checklistbank": "txn:217919"
           },
           "authorityIds": "col:7B3MD",
           "children": []
@@ -1161,13 +1132,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "inocelliidae"
+    },
+    {
+      "id": "GENUS_PARAKSENOCELLIA",
+      "name": "Paraksenocellia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAKSENOCELLIA_BOREALIS_MAKARKIN_ET_AL_2019",
+          "name": "Paraksenocellia borealis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraksenocellia",
+          "authorship": "Makarkin et al. 2019",
+          "sourceIds": {
+            "checklistbank": "txn:394084"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "inocelliidae"
     }
   ],
-  "speciesCount": 63,
+  "speciesCount": 62,
   "appSlug": "inocelliidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

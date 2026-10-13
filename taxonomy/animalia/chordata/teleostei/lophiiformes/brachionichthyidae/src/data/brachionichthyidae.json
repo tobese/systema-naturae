@@ -80,7 +80,8 @@
           "sourceIds": {
             "itis": [
               "690684"
-            ]
+            ],
+            "checklistbank": "txn:352303"
           },
           "authorityIds": "itis:690684"
         }
@@ -359,13 +360,57 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Brachionichthyidae"
+    },
+    {
+      "id": "GENUS_HISTIONOTOPHORUS",
+      "name": "Histionotophorus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HISTIONOTOPHORUS_BASSANI_DE_ZIGNO_1887",
+          "name": "Histionotophorus bassani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histionotophorus",
+          "authorship": "(De Zigno 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:352296"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachionichthyidae"
+    },
+    {
+      "id": "GENUS_ORRICHTHYS",
+      "name": "Orrichthys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORRICHTHYS_LONGIMANUS_CARNEVALE_AND_PIETSCH_2010",
+          "name": "Orrichthys longimanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orrichthys",
+          "authorship": "Carnevale and Pietsch 2010",
+          "sourceIds": {
+            "checklistbank": "txn:352299"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachionichthyidae"
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 19,
   "appSlug": "brachionichthyidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 5,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -373,6 +418,6 @@
       "orderKey": 1305,
       "familyKey": 3717
     },
-    "checklistbank": "412621"
+    "checklistbank": "7c6813aa-2292-4b47-970e-60f2b3e9a8d5"
   }
 }

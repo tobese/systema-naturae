@@ -171,9 +171,11 @@
             "col": [
               "BDZY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:217247"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:217247"
+            ]
           },
-          "authorityIds": "col:BDZY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:217247,col:BDZY",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -211,9 +213,11 @@
             "col": [
               "6675J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:882372"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:882372"
+            ]
           },
-          "authorityIds": "col:6675J",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:882372,col:6675J",
           "authorship": "(Lamarck, 1804)"
         },
         {
@@ -360,6 +364,32 @@
             "checklistbank": "ott7959744"
           },
           "children": []
+        },
+        {
+          "id": "SP_AKERA_NARICA_VREDENBURG_1925",
+          "name": "Akera narica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Akera",
+          "authorship": "(Vredenburg 1925)",
+          "sourceIds": {
+            "checklistbank": "txn:113315"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AKERA_GREGORYI_NEWTON_1917",
+          "name": "Akera gregoryi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Akera",
+          "authorship": "Newton 1917",
+          "sourceIds": {
+            "checklistbank": "txn:421565"
+          },
+          "children": []
         }
       ]
     },
@@ -432,58 +462,6 @@
             "checklistbank": "681325"
           },
           "children": []
-        },
-        {
-          "id": "SP_BULLA_SOLUTA_GMELIN_1791",
-          "name": "Bulla soluta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bulla",
-          "authorship": "Gmelin, 1791",
-          "sourceIds": {
-            "checklistbank": "691117"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BULLA_CEYLANICA_BRUGUI_RE_1792",
-          "name": "Bulla ceylanica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bulla",
-          "authorship": "Bruguière, 1792",
-          "sourceIds": {
-            "checklistbank": "691118"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BULLA_TENUIS_A_ADAMS_1850",
-          "name": "Bulla tenuis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bulla",
-          "authorship": "A. Adams, 1850",
-          "sourceIds": {
-            "checklistbank": "691119"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BULLA_TUMIDA_A_ADAMS_1850",
-          "name": "Bulla tumida",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bulla",
-          "authorship": "A. Adams, 1850",
-          "sourceIds": {
-            "checklistbank": "691120"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -532,45 +510,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "akeridae"
-    },
-    {
-      "id": "GENUS_AKERA",
-      "name": "\"Akera",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AKERA_SOLUTA_GMELIN_1791",
-          "name": "\"Akera soluta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Akera",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:217247"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AKERA_STRIATELLA_LAMARCK_1804",
-          "name": "\"Akera striatella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Akera",
-          "authorship": "\"(Lamarck, 1804)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:882372"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "akeridae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 33,
+  "genusCount": 5,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

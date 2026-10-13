@@ -100,9 +100,11 @@
             "col": [
               "BHGVW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1251772"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1251772"
+            ]
           },
-          "authorityIds": "col:BHGVW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1251772,col:BHGVW",
           "children": []
         },
         {
@@ -310,9 +312,12 @@
           "authorship": "(Chernysheva, 1952)",
           "uuid": "86e3d4d5-8838-543-acc-5f0f8755c2066f",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304420"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1304420"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1304420"
         },
         {
           "id": "SP_QUASIENDOTHYRA_RADIOSA_MALAKHOVA_1959",
@@ -730,19 +735,6 @@
           "children": []
         },
         {
-          "id": "SP_QUASIENDOTHYRA_EOENDOTHYRA_BOGUSH_YUFEREV_1987",
-          "name": "\"Quasiendothyra (Eoendothyra)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Quasiendothyra",
-          "authorship": "\"Bogush & Yuferev, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1251772"
-          },
-          "children": []
-        },
-        {
           "id": "SP_QUASIENDOTHYRA_TURBIDA_GROZDILOVA_1973",
           "name": "\"Quasiendothyra turbida",
           "rank": "SPECIES",
@@ -754,26 +746,13 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1301205"
           },
           "children": []
-        },
-        {
-          "id": "SP_QUASIENDOTHYRA_EOQUASIENDOTHYRA_DURKINA_1984",
-          "name": "\"Quasiendothyra (Eoquasiendothyra)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Quasiendothyra",
-          "authorship": "\"Durkina, 1984\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1304420"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "quasiendothyridae"
     }
   ],
-  "speciesCount": 45,
+  "speciesCount": 43,
   "appSlug": "quasiendothyridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",

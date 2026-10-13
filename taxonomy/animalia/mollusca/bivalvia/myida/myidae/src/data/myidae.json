@@ -343,9 +343,11 @@
             "col": [
               "4YV7C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505905"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505905"
+            ]
           },
-          "authorityIds": "col:4YV7C,itis:81706"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505905,col:4YV7C,itis:81706"
         },
         {
           "id": "SP_SPHENIA_MARCI_KOPERBERG_1931",
@@ -550,9 +552,11 @@
             "col": [
               "8YP65"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569591"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1569591"
+            ]
           },
-          "authorityIds": "col:8YP65",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569591,col:8YP65",
           "authorship": "(Lamarck, 1806)"
         },
         {
@@ -835,24 +839,6 @@
           "authorityIds": "col:V4WGR"
         },
         {
-          "id": "SP_SPHENIA_ANTILLENSIS_DALL_AND_SIMPSON_1901",
-          "name": "Sphenia antillensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sphenia",
-          "authorship": "Dall and Simpson, 1901",
-          "children": [],
-          "uuid": "e6ac765a-7324-54c-805-c49cf99d23291a",
-          "sourceIds": {
-            "itis": [
-              "81705"
-            ],
-            "checklistbank": "676205"
-          },
-          "authorityIds": "itis:81705"
-        },
-        {
           "id": "SP_SPHENIA_OVOIDEA_CARPENTER_1864",
           "name": "Sphenia ovoidea",
           "rank": "SPECIES",
@@ -899,20 +885,6 @@
           "uuid": "bf7644d5-be3d-5c9-b90-a767113c55adef"
         },
         {
-          "id": "SP_SPHENIA_SOWERBYI_E_A_SMITH_1893",
-          "name": "Sphenia sowerbyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sphenia",
-          "authorship": "E. A. Smith, 1893",
-          "sourceIds": {
-            "checklistbank": "219488"
-          },
-          "children": [],
-          "uuid": "42e1ef6a-44d8-506-a72-c0428bba046264"
-        },
-        {
           "id": "SP_SPHENIA_COREANICA_T_HABE_1951",
           "name": "Sphenia coreanica",
           "rank": "SPECIES",
@@ -936,19 +908,6 @@
           "authorship": "W. Turton, 1822",
           "sourceIds": {
             "checklistbank": "575388"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SPHENIA_PACIFICIENSIS_DE_FOLIN_1867",
-          "name": "Sphenia pacificiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sphenia",
-          "authorship": "de Folin, 1867",
-          "sourceIds": {
-            "checklistbank": "676206"
           },
           "children": []
         },
@@ -1154,6 +1113,58 @@
           "lineage": "Sphenia",
           "sourceIds": {
             "checklistbank": "ott7932057"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHENIA_MEGANOSENSIS_CLARK_AND_WOODFORD_1927",
+          "name": "Sphenia meganosensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenia",
+          "authorship": "Clark and Woodford 1927",
+          "sourceIds": {
+            "checklistbank": "txn:66893"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHENIA_DUBIA_LEA_1845",
+          "name": "Sphenia dubia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenia",
+          "authorship": "(Lea 1845)",
+          "sourceIds": {
+            "checklistbank": "txn:97925"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHENIA_ANGUSTATA_SOWERBY_1826",
+          "name": "Sphenia angustata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenia",
+          "authorship": "(Sowerby 1826)",
+          "sourceIds": {
+            "checklistbank": "txn:189647"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SPHENIA_PUSILLA_SORGENFREL_1958",
+          "name": "Sphenia pusilla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenia",
+          "authorship": "(Sorgenfrel 1958)",
+          "sourceIds": {
+            "checklistbank": "txn:190043"
           },
           "children": []
         }
@@ -1520,7 +1531,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "db896218-b08e-5a4-a9e-016e3e61623c64"
+          "uuid": "db896218-b08e-5a4-a9e-016e3e61623c64",
+          "authorship": "(Ilyina 1963)",
+          "sourceIds": {
+            "checklistbank": "txn:101905"
+          }
         },
         {
           "id": "SP_MYA_MANDIBULA_J_SOWERBY_1813",
@@ -1570,7 +1585,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "4aaf041b-a73e-5a4-916-7cc06b8890abc9"
+          "uuid": "4aaf041b-a73e-5a4-916-7cc06b8890abc9",
+          "authorship": "(Wilckens 1911)",
+          "sourceIds": {
+            "checklistbank": "txn:103196"
+          }
         },
         {
           "id": "SP_MYA_OCHOTICA_ILYINA_1957",
@@ -1601,9 +1620,11 @@
             "col": [
               "QWLHY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1818665"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1818665"
+            ]
           },
-          "authorityIds": "col:QWLHY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1818665,col:QWLHY",
           "authorship": "Conrad, 1838"
         },
         {
@@ -1667,9 +1688,11 @@
             "col": [
               "9GJ9M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598496"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1598496"
+            ]
           },
-          "authorityIds": "col:9GJ9M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598496,col:9GJ9M",
           "authorship": "(G. B. Sowerby I, 1846)"
         },
         {
@@ -1706,7 +1729,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2ca76ee1-fa4c-5c6-aa0-8d36cd7c62a0b1"
+          "uuid": "2ca76ee1-fa4c-5c6-aa0-8d36cd7c62a0b1",
+          "authorship": "(Clark 1932)",
+          "sourceIds": {
+            "checklistbank": "txn:96694"
+          }
         },
         {
           "id": "SP_MYA_SIMPLEX",
@@ -1723,9 +1750,11 @@
             "col": [
               "9G5H3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598498"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1598498"
+            ]
           },
-          "authorityIds": "col:9G5H3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1598498,col:9G5H3",
           "authorship": "(Hupé, 1854)"
         },
         {
@@ -2060,32 +2089,6 @@
           "children": []
         },
         {
-          "id": "SP_MYA_ELONGATA_LOCARD_1886",
-          "name": "Mya elongata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mya",
-          "authorship": "Locard, 1886",
-          "sourceIds": {
-            "checklistbank": "574125"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYA_HEMPHILLI_NEWCOMB_1874",
-          "name": "Mya hemphilli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mya",
-          "authorship": "Newcomb, 1874",
-          "sourceIds": {
-            "checklistbank": "574129"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MYA_LATA_J_SOWERBY_1815",
           "name": "Mya lata",
           "rank": "SPECIES",
@@ -2176,19 +2179,6 @@
           "children": []
         },
         {
-          "id": "SP_MYA_BINGHAMI_W_TURTON_1822",
-          "name": "Mya binghami",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mya",
-          "authorship": "(W. Turton, 1822)",
-          "sourceIds": {
-            "checklistbank": "681316"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MYA_PSEUDOARENARIA",
           "name": "Mya pseudoarenaria",
           "rank": "SPECIES",
@@ -2234,7 +2224,8 @@
           "sourceIds": {
             "checklistbank": "ott2863472"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Grant and Gale 1931)"
         },
         {
           "id": "SP_MYA_ARROSIS",
@@ -2246,7 +2237,8 @@
           "sourceIds": {
             "checklistbank": "ott7932040"
           },
-          "children": []
+          "children": [],
+          "authorship": "MacNeil 1965"
         },
         {
           "id": "SP_MYA_DICKERSONI",
@@ -2258,7 +2250,8 @@
           "sourceIds": {
             "checklistbank": "ott7932041"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Clark 1915)"
         },
         {
           "id": "SP_MYA_INCOGNITA",
@@ -2329,6 +2322,123 @@
           "lineage": "Mya",
           "sourceIds": {
             "checklistbank": "2740495"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_MARUJAMENSIS_ZHIDKOVA_1994",
+          "name": "Mya marujamensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "Zhidkova 1994",
+          "sourceIds": {
+            "checklistbank": "txn:96717"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_UGOLNENSIS_DEVJATILOVA_AND_VOLOBUEVA_1981",
+          "name": "Mya ugolnensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "Devjatilova and Volobueva 1981",
+          "sourceIds": {
+            "checklistbank": "txn:101921"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_VIRGO_MARTIN_1879",
+          "name": "Mya virgo",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "Martin 1879",
+          "sourceIds": {
+            "checklistbank": "txn:102036"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_EKELOFI_STILWELL_AND_ZINSMEISTER_1992",
+          "name": "Mya ekelofi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "Stilwell and Zinsmeister 1992",
+          "sourceIds": {
+            "checklistbank": "txn:103199"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_SCHWEINFURTHI_MAYER_EYMAR_1887",
+          "name": "Mya schweinfurthi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "(Mayer-Eymar 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:275699"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_EZOENSIS_NAGAO_AND_INOUE_1941",
+          "name": "Mya ezoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "(Nagao and Inoue 1941)",
+          "sourceIds": {
+            "checklistbank": "txn:101800"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_KUSIROENSIS_NAGAO_AND_INOUE_1941",
+          "name": "Mya kusiroensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "(Nagao and Inoue 1941)",
+          "sourceIds": {
+            "checklistbank": "txn:421404"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_FUJIEI_MACNEIL_1965",
+          "name": "Mya fujiei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "MacNeil 1965",
+          "sourceIds": {
+            "checklistbank": "txn:421410"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYA_ARNOLDI_DICKERSON_1917",
+          "name": "Mya arnoldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mya",
+          "authorship": "(Dickerson 1917)",
+          "sourceIds": {
+            "checklistbank": "txn:489220"
           },
           "children": []
         }
@@ -2440,9 +2550,11 @@
             "col": [
               "ZY72"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505893"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505893"
+            ]
           },
-          "authorityIds": "col:ZY72",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505893,col:ZY72",
           "authorship": "(A. Adams, 1851)"
         },
         {
@@ -2474,9 +2586,11 @@
             "col": [
               "ZY77"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505894"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505894"
+            ]
           },
-          "authorityIds": "col:ZY77",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505894,col:ZY77",
           "authorship": "(A. Adams, 1851)"
         },
         {
@@ -2494,9 +2608,11 @@
             "col": [
               "ZY78"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505895"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505895"
+            ]
           },
-          "authorityIds": "col:ZY78",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505895,col:ZY78",
           "authorship": "(A. Adams, 1851)"
         },
         {
@@ -2514,9 +2630,11 @@
             "col": [
               "6BLV5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505896"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505896"
+            ]
           },
-          "authorityIds": "col:6BLV5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505896,col:6BLV5",
           "authorship": "(Hanley, 1843)"
         },
         {
@@ -2535,9 +2653,11 @@
             "col": [
               "ZY7B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:701706"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:701706"
+            ]
           },
-          "authorityIds": "col:ZY7B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:701706,col:ZY7B",
           "authorship": "(F.-S. Xu, 1987)"
         },
         {
@@ -2631,6 +2751,32 @@
           "lineage": "Cryptomya",
           "sourceIds": {
             "checklistbank": "1206149"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRYPTOMYA_QUADRATA_ARNOLD_1909",
+          "name": "Cryptomya quadrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptomya",
+          "authorship": "Arnold 1909",
+          "sourceIds": {
+            "checklistbank": "txn:400454"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRYPTOMYA_WASHINGTONIANA_WEAVER_1912",
+          "name": "Cryptomya washingtoniana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptomya",
+          "authorship": "Weaver 1912",
+          "sourceIds": {
+            "checklistbank": "txn:421603"
           },
           "children": []
         }
@@ -2776,6 +2922,19 @@
             "checklistbank": "ott7932048"
           },
           "children": []
+        },
+        {
+          "id": "SP_PLATYODON_NIPPONICA_UOZUMI_AND_FUJIE_1956",
+          "name": "Platyodon nipponica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyodon",
+          "authorship": "Uozumi and Fujie 1956",
+          "sourceIds": {
+            "checklistbank": "txn:96706"
+          },
+          "children": []
         }
       ]
     },
@@ -2801,9 +2960,11 @@
             "col": [
               "59KN5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505914"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505914"
+            ]
           },
-          "authorityIds": "col:59KN5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505914,col:59KN5",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -2822,9 +2983,11 @@
             "col": [
               "59KN7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:701711"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:701711"
+            ]
           },
-          "authorityIds": "col:59KN7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:701711,col:59KN7",
           "authorship": "(A. Adams, 1851)"
         },
         {
@@ -2863,9 +3026,11 @@
             "col": [
               "59KNB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505915"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505915"
+            ]
           },
-          "authorityIds": "col:59KNB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505915,col:59KNB",
           "authorship": "(Iredale, 1936)"
         },
         {
@@ -3061,9 +3226,11 @@
             "col": [
               "59KMY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505912"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505912"
+            ]
           },
-          "authorityIds": "col:59KMY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505912,col:59KMY",
           "authorship": "(Deshayes, 1844)"
         },
         {
@@ -3114,9 +3281,11 @@
             "col": [
               "7RQYC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1462038"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1462038"
+            ]
           },
-          "authorityIds": "col:7RQYC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1462038,col:7RQYC",
           "authorship": "(Preston, 1907)"
         },
         {
@@ -3134,9 +3303,11 @@
             "col": [
               "7RQYD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1462043"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1462043"
+            ]
           },
-          "authorityIds": "col:7RQYD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1462043,col:7RQYD",
           "authorship": "(Preston, 1916)"
         },
         {
@@ -3175,9 +3346,11 @@
             "col": [
               "7RQYG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1462041"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1462041"
+            ]
           },
-          "authorityIds": "col:7RQYG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1462041,col:7RQYG",
           "authorship": "(E. A. Smith, 1893)"
         },
         {
@@ -3217,9 +3390,11 @@
             "col": [
               "8RWLY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1547589"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1547589"
+            ]
           },
-          "authorityIds": "col:8RWLY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1547589,col:8RWLY",
           "authorship": "(Merklin, 1961)"
         },
         {
@@ -3237,9 +3412,11 @@
             "col": [
               "8RWYZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1547592"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1547592"
+            ]
           },
-          "authorityIds": "col:8RWYZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1547592,col:8RWYZ",
           "authorship": "(Merklin, 1961)"
         }
       ]
@@ -3392,28 +3569,6 @@
       "lineage": "myidae"
     },
     {
-      "id": "GENUS_TYLERIA",
-      "name": "Tyleria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TYLERIA_FRAGILIS_H_ADAMS_A_ADAMS_1854",
-          "name": "Tyleria fragilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tyleria",
-          "authorship": "H. Adams & A. Adams, 1854",
-          "sourceIds": {
-            "checklistbank": "676204"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myidae"
-    },
-    {
       "id": "GENUS_CRYPTOMYA",
       "name": "\"Cryptomya",
       "rank": "GENUS",
@@ -3428,71 +3583,6 @@
           "authorship": "\"(Conrad, 1837)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:397065"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CRYPTOMYA_ELLIPTICA_A_ADAMS_1851",
-          "name": "\"Cryptomya elliptica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptomya",
-          "authorship": "\"(A. Adams, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505893"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CRYPTOMYA_PHILIPPINARUM_A_ADAMS_1851",
-          "name": "\"Cryptomya philippinarum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptomya",
-          "authorship": "\"(A. Adams, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505894"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CRYPTOMYA_PRINCEPS_A_ADAMS_1851",
-          "name": "\"Cryptomya princeps\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptomya",
-          "authorship": "\"(A. Adams, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505895"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CRYPTOMYA_SEMISTRIATA_HANLEY_1843",
-          "name": "\"Cryptomya semistriata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptomya",
-          "authorship": "\"(Hanley, 1843)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505896"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CRYPTOMYA_SINENSIS_F_S_XU_1987",
-          "name": "\"Cryptomya sinensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptomya",
-          "authorship": "\"(F.-S. Xu, 1987)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:701706"
           },
           "children": []
         }
@@ -3515,32 +3605,6 @@
           "authorship": "\"(H. Adams & A. Adams, 1854)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:420973"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SPHENIA_LUTICOLA_VALENCIENNES_1846",
-          "name": "\"Sphenia luticola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sphenia",
-          "authorship": "\"(Valenciennes, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505905"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SPHENIA_ROSTRATA_LAMARCK_1806",
-          "name": "\"Sphenia rostrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sphenia",
-          "authorship": "\"(Lamarck, 1806)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569591"
           },
           "children": []
         }
@@ -3576,19 +3640,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TUGONELLA_DECUSSATA_DESHAYES_1844",
-          "name": "\"Tugonella decussata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tugonella",
-          "authorship": "\"(Deshayes, 1844)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505912"
-          },
-          "children": []
-        },
-        {
           "id": "SP_TUGONELLA_DIVARICATA_REEVE_1863",
           "name": "\"Tugonella divaricata\"",
           "rank": "SPECIES",
@@ -3606,71 +3657,10 @@
       "lineage": "myidae"
     },
     {
-      "id": "GENUS_TUGONIA",
-      "name": "\"Tugonia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TUGONIA_ANATINA_GMELIN_1791",
-          "name": "\"Tugonia anatina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tugonia",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505914"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TUGONIA_INOPINATA_IREDALE_1936",
-          "name": "\"Tugonia inopinata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tugonia",
-          "authorship": "\"(Iredale, 1936)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505915"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TUGONIA_DECURTATA_A_ADAMS_1851",
-          "name": "\"Tugonia decurtata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tugonia",
-          "authorship": "\"(A. Adams, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:701711"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myidae"
-    },
-    {
       "id": "GENUS_INDOSPHENIA",
       "name": "\"Indosphenia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_INDOSPHENIA_ABBREVIATA_PRESTON_1907",
-          "name": "\"Indosphenia abbreviata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Indosphenia",
-          "authorship": "\"(Preston, 1907)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1462038"
-          },
-          "children": []
-        },
         {
           "id": "SP_INDOSPHENIA_ABBREVIATA_PRESTON_1911",
           "name": "\"Indosphenia abbreviata",
@@ -3683,123 +3673,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1462039"
           },
           "children": []
-        },
-        {
-          "id": "SP_INDOSPHENIA_SOWERBYI_E_A_SMITH_1893",
-          "name": "\"Indosphenia sowerbyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Indosphenia",
-          "authorship": "\"(E. A. Smith, 1893)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1462041"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_INDOSPHENIA_COCHINENSIS_PRESTON_1916",
-          "name": "\"Indosphenia cochinensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Indosphenia",
-          "authorship": "\"(Preston, 1916)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1462043"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myidae"
-    },
-    {
-      "id": "GENUS_JANSCHINELLA",
-      "name": "\"Janschinella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_JANSCHINELLA_GARETZKII_MERKLIN_1961",
-          "name": "\"Janschinella garetzkii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Janschinella",
-          "authorship": "\"(Merklin, 1961)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1547589"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_JANSCHINELLA_VINOGRODSKII_MERKLIN_1961",
-          "name": "\"Janschinella vinogrodskii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Janschinella",
-          "authorship": "\"(Merklin, 1961)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1547592"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "myidae"
-    },
-    {
-      "id": "GENUS_MYA",
-      "name": "\"Mya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MYA_RUGATA_G_B_SOWERBY_I_1846",
-          "name": "\"Mya rugata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mya",
-          "authorship": "\"(G. B. Sowerby I, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598496"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYA_SIMPLEX_HUP_1854",
-          "name": "\"Mya simplex\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mya",
-          "authorship": "\"(Hupé, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1598498"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYA_PRODUCTA_CONRAD_1838",
-          "name": "\"Mya producta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mya",
-          "authorship": "\"Conrad, 1838\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1818665"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "myidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 228,
+  "genusCount": 18,
+  "speciesCount": 218,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

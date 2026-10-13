@@ -323,9 +323,11 @@
             "col": [
               "654T5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796434"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1796434"
+            ]
           },
-          "authorityIds": "col:654T5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1796434,col:654T5",
           "authorship": "(Milne, 1886)"
         },
         {
@@ -413,9 +415,11 @@
             "col": [
               "64ST8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:886583"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:886583"
+            ]
           },
-          "authorityIds": "col:64ST8,itis:58333"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:886583,col:64ST8,itis:58333"
         },
         {
           "id": "SP_ADINETA_RHOMBOIDEA_B_RZI_1950",
@@ -747,9 +751,11 @@
             "col": [
               "N5GB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796536"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1796536"
+            ]
           },
-          "authorityIds": "col:N5GB,itis:58338"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1796536,col:N5GB,itis:58338"
         },
         {
           "id": "SP_BRADYSCELA_GRANULOSA_DE_KONING_1947",
@@ -787,9 +793,11 @@
             "col": [
               "CCVQ3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796367"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1796367"
+            ]
           },
-          "authorityIds": "col:CCVQ3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1796367,col:CCVQ3",
           "authorship": "Song & Min, 2015"
         },
         {
@@ -847,32 +855,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ADINETA_VAGA_DAVIS_1873",
-          "name": "\"Adineta vaga\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Adineta",
-          "authorship": "\"(Davis, 1873)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:886583"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ADINETA_OCULATA_MILNE_1886",
-          "name": "\"Adineta oculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Adineta",
-          "authorship": "\"(Milne, 1886)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796434"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ADINETA_VAGA_BRYCE_1893",
           "name": "\"Adineta vaga",
           "rank": "SPECIES",
@@ -888,45 +870,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "adinetidae"
-    },
-    {
-      "id": "GENUS_BRADYSCELA",
-      "name": "\"Bradyscela",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BRADYSCELA_HOONSOOI_SONG_MIN_2015",
-          "name": "\"Bradyscela hoonsooi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bradyscela",
-          "authorship": "\"Song & Min, 2015\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796367"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BRADYSCELA_CLAUDA_BRYCE_1893",
-          "name": "\"Bradyscela clauda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bradyscela",
-          "authorship": "\"(Bryce, 1893)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1796536"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "adinetidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 53,
+  "genusCount": 4,
+  "speciesCount": 49,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

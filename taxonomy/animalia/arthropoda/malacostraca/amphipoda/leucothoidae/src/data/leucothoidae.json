@@ -526,9 +526,11 @@
             "itis": [
               "206506"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:102466"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:102466"
+            ]
           },
-          "authorityIds": "col:727LH,itis:206506"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:102466,col:727LH,itis:206506"
         },
         {
           "id": "SP_LEUCOTHOE_ALATA_J_L_BARNARD_1959",
@@ -827,20 +829,6 @@
           },
           "children": [],
           "uuid": "1df9b047-7d26-5f4-9b3-7fe787e5648634"
-        },
-        {
-          "id": "SP_LEUCOTHOE_USCHAKOVI_GURJANOVA_1951",
-          "name": "Leucothoe uschakovi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leucothoe",
-          "authorship": "Gurjanova, 1951",
-          "sourceIds": {
-            "checklistbank": "22472"
-          },
-          "children": [],
-          "uuid": "1b136ee8-ae44-5d8-b54-da9c3e55d12286"
         },
         {
           "id": "SP_LEUCOTHOE_VENETIARUM_GIORDANI_SOIKA_1950",
@@ -2911,19 +2899,6 @@
           "children": []
         },
         {
-          "id": "SP_LEUCOTHOE_HORNELLI_WALKER_1904",
-          "name": "Leucothoe hornelli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leucothoe",
-          "authorship": "(Walker, 1904)",
-          "sourceIds": {
-            "checklistbank": "1031615"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LEUCOTHOE_GOOWEERA_BARNARD",
           "name": "Leucothoe gooweera",
           "rank": "SPECIES",
@@ -3374,50 +3349,6 @@
       "lineage": "leucothoidae"
     },
     {
-      "id": "GENUS_LYCESTA",
-      "name": "Lycesta",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LYCESTA_FURINA_SAVIGNY_1816",
-          "name": "Lycesta furina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lycesta",
-          "authorship": "Savigny, 1816",
-          "sourceIds": {
-            "checklistbank": "1031616"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "leucothoidae"
-    },
-    {
-      "id": "GENUS_CANCER",
-      "name": "Cancer",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CANCER_ARTICULOSUS_MONTAGU_1804",
-          "name": "Cancer articulosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cancer",
-          "authorship": "Montagu, 1804",
-          "sourceIds": {
-            "checklistbank": "1047527"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "leucothoidae"
-    },
-    {
       "id": "GENUS_LEUCOTHOIDAE",
       "name": "Leucothoidae",
       "rank": "GENUS",
@@ -3443,19 +3374,6 @@
       "name": "\"Leucothoe",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LEUCOTHOE_PROCERA_SPENCE_BATE_1857",
-          "name": "\"Leucothoe procera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leucothoe",
-          "authorship": "\"Spence Bate, 1857\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:102466"
-          },
-          "children": []
-        },
         {
           "id": "SP_LEUCOTHOE_SPINULOSA_CHEVREUX_1919",
           "name": "\"Leucothoe spinulosa\"",
@@ -3513,11 +3431,11 @@
       "lineage": "leucothoidae"
     }
   ],
-  "speciesCount": 236,
+  "speciesCount": 231,
   "appSlug": "leucothoidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 11,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

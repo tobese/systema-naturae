@@ -1390,9 +1390,11 @@
             "col": [
               "3TB2D"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:956863"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:956863"
+            ]
           },
-          "authorityIds": "col:3TB2D"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:956863,col:3TB2D"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1489,35 +1491,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lepidocharontidae"
-    },
-    {
-      "id": "GENUS_LEPIDOCHARON",
-      "name": "\"Lepidocharon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPIDOCHARON_PRIAPUS_GALASSI_BRUCE_I_IN_I_GALASSI_BRUCE_FIASCA_DOLE_OLIVIER_2016",
-          "name": "\"Lepidocharon priapus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lepidocharon",
-          "authorship": "\"Galassi & Bruce <i>in</i> Galassi, Bruce, Fiasca & Dole-Olivier, 2016\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:956863"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lepidocharontidae"
     }
   ],
-  "speciesCount": 81,
+  "speciesCount": 80,
   "appSlug": "lepidocharontidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 6,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1526,6 +1506,6 @@
       "orderKey": 643,
       "familyKey": 9328661
     },
-    "checklistbank": "ott7121008"
+    "checklistbank": "b39e7851-69a8-4be4-a3c3-2619188346a1"
   }
 }

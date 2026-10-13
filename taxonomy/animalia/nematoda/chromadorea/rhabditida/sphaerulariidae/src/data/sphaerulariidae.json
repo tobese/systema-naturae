@@ -95,8 +95,11 @@
           "uuid": "4e1be345-e07d-56a-ae5-92df8626fd24f9",
           "authorship": "(Wachek, 1955) Siddiqi, 1986",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1762060"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1762060"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1762060"
         },
         {
           "id": "SP_PROTYLENCHUS_HETEROCERI_WACHEK_1955",
@@ -146,8 +149,11 @@
           "uuid": "ff5e5ba7-dbe7-5b2-bff-622450f2d1ae39",
           "authorship": "(Leuckart, 1886) Chitwood, 1935",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763390"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1763390"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1763390"
         },
         {
           "id": "SP_TRIPIUS_GYRALOURA_POINAR_THOMAS_2014",
@@ -179,8 +185,11 @@
           "uuid": "1c739253-6fec-534-9e3-46e9619c726a72",
           "authorship": "(Bovien, 1944) Wachek, 1955",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763393"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1763393"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1763393"
         },
         {
           "id": "SP_TRIPIUS_SP_FISHER",
@@ -277,9 +286,11 @@
             "col": [
               "CHBYH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1762037"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1762037"
+            ]
           },
-          "authorityIds": "col:CHBYH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1762037,col:CHBYH",
           "authorship": "(Fuchs, 1914) Micoletzky, 1922"
         },
         {
@@ -428,10 +439,13 @@
           "lineage": "Parasitylenchus",
           "authorship": "(Fuchs, 1938) Rühm, 1956",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724088"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1724088"
+            ]
           },
           "children": [],
-          "uuid": "f99848d5-8835-559-8b5-73aaa46fee04d1"
+          "uuid": "f99848d5-8835-559-8b5-73aaa46fee04d1",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1724088"
         },
         {
           "id": "SP_PARASITYLENCHUS_COCCINELLINAE_IPERTI_WAEREBEKE_1968",
@@ -1026,102 +1040,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaerulariidae"
-    },
-    {
-      "id": "GENUS_PARASITYLENCHUS",
-      "name": "\"Parasitylenchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARASITYLENCHUS_PARASITYLENCHUS_FUCHS_1938_R_HM_1956",
-          "name": "\"Parasitylenchus (Parasitylenchus)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parasitylenchus",
-          "authorship": "\"(Fuchs, 1938) Rühm, 1956\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724088"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARASITYLENCHUS_CURVIDENTIS_FUCHS_1914_MICOLETZKY_1922",
-          "name": "\"Parasitylenchus curvidentis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parasitylenchus",
-          "authorship": "\"(Fuchs, 1914) Micoletzky, 1922\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1762037"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sphaerulariidae"
-    },
-    {
-      "id": "GENUS_PROTYLENCHUS",
-      "name": "\"Protylenchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROTYLENCHUS_ANOBII_WACHEK_1955_SIDDIQI_1986",
-          "name": "\"Protylenchus anobii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protylenchus",
-          "authorship": "\"(Wachek, 1955) Siddiqi, 1986\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1762060"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sphaerulariidae"
-    },
-    {
-      "id": "GENUS_TRIPIUS",
-      "name": "\"Tripius",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRIPIUS_GIBBOSUS_LEUCKART_1886_CHITWOOD_1935",
-          "name": "\"Tripius gibbosus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tripius",
-          "authorship": "\"(Leuckart, 1886) Chitwood, 1935\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763390"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TRIPIUS_SCIARAE_BOVIEN_1944_WACHEK_1955",
-          "name": "\"Tripius sciarae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tripius",
-          "authorship": "\"(Bovien, 1944) Wachek, 1955\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763393"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "sphaerulariidae"
     }
   ],
-  "genusCount": 18,
-  "speciesCount": 70,
+  "genusCount": 15,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

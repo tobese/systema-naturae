@@ -214,9 +214,11 @@
             "col": [
               "42RXB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1061201"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1061201"
+            ]
           },
-          "authorityIds": "col:42RXB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1061201,col:42RXB",
           "authorship": "(Guiart, 1938)"
         },
         {
@@ -274,20 +276,6 @@
             "checklistbank": "3134899"
           },
           "authorityIds": "col:CTKQ4"
-        },
-        {
-          "id": "SP_MICROBOTHRIUM_CENTROPHORI_BRINKMANN_1940",
-          "name": "Microbothrium centrophori",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Microbothrium",
-          "authorship": "Brinkmann 1940",
-          "sourceIds": {
-            "checklistbank": "39595"
-          },
-          "children": [],
-          "uuid": "56cbe505-946c-509-abf-f4995bfc667eaf"
         },
         {
           "id": "SP_MICROBOTHRIUM_APICULATUM_P_OLSSON_1869",
@@ -666,20 +654,6 @@
           "authorityIds": "col:4NV3R"
         },
         {
-          "id": "SP_PSEUDOCOTYLE_LEPIDORHINI_GUIART_1938",
-          "name": "Pseudocotyle lepidorhini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudocotyle",
-          "authorship": "Guiart, 1938",
-          "sourceIds": {
-            "checklistbank": "39596"
-          },
-          "children": [],
-          "uuid": "14dbbb5a-9e66-59d-a5b-493c0f51574291"
-        },
-        {
           "id": "SP_PSEUDOCOTYLE_SQUATINAE",
           "name": "Pseudocotyle squatinae",
           "rank": "SPECIES",
@@ -1048,29 +1022,6 @@
       "lineage": "microbothriidae"
     },
     {
-      "id": "GENUS_ENOPLOCOTYLE",
-      "name": "Enoplocotyle",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ENOPLOCOTYLE_MINIMA_TAGLIANI_1909",
-          "name": "Enoplocotyle minima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Enoplocotyle",
-          "authorship": "Tagliani, 1909",
-          "sourceIds": {
-            "checklistbank": "39591"
-          },
-          "children": [],
-          "uuid": "ef878e8a-c86b-5ab-98f-29ab7d9876d89c"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "microbothriidae"
-    },
-    {
       "id": "GENUS_MICROPHARYNX",
       "name": "Micropharynx",
       "rank": "GENUS",
@@ -1114,32 +1065,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "microbothriidae"
-    },
-    {
-      "id": "GENUS_MICROBOTHRIUM",
-      "name": "\"Microbothrium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MICROBOTHRIUM_LEPIDORHINI_GUIART_1938",
-          "name": "\"Microbothrium lepidorhini\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Microbothrium",
-          "authorship": "\"(Guiart, 1938)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1061201"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "microbothriidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 62,
+  "genusCount": 15,
+  "speciesCount": 58,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

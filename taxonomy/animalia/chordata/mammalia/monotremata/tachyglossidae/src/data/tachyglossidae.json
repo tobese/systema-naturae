@@ -161,7 +161,8 @@
             ],
             "checklistbank": "ott565578"
           },
-          "authorityIds": "col:7GBTL,itis:552523"
+          "authorityIds": "col:7GBTL,itis:552523",
+          "authorship": "(Peters and Doria 1876)"
         },
         {
           "id": "ZAGLOSSUS_HACKETTI",
@@ -192,6 +193,19 @@
           "lineage": "Zaglossus",
           "uuid": "cfbfcc12-7441-590-9c2-f916a4ec86a861",
           "commonName": "Long-nosed Echidna"
+        },
+        {
+          "id": "SP_ZAGLOSSUS_ROBUSTA_DUN_1894",
+          "name": "Zaglossus robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zaglossus",
+          "authorship": "(Dun 1894)",
+          "sourceIds": {
+            "checklistbank": "txn:166576"
+          },
+          "children": []
         }
       ]
     },
@@ -234,6 +248,19 @@
           "children": [],
           "lineage": "Megalibgwilia",
           "uuid": "79781d2c-c0fa-56c-838-cc798c50b72ffc"
+        },
+        {
+          "id": "SP_MEGALIBGWILIA_RAMSAYI_OWEN_1884",
+          "name": "Megalibgwilia ramsayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megalibgwilia",
+          "authorship": "(Owen 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:166574"
+          },
+          "children": []
         }
       ]
     },
@@ -250,15 +277,41 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Murrayglossus",
-          "uuid": "2d7285c2-1b19-563-87d-872cceeb0194b4"
+          "uuid": "2d7285c2-1b19-563-87d-872cceeb0194b4",
+          "authorship": "(Glauert 1914)",
+          "sourceIds": {
+            "checklistbank": "txn:166763"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Tachyglossidae"
+    },
+    {
+      "id": "GENUS_ACANTHOGLOSSUS",
+      "name": "Acanthoglossus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACANTHOGLOSSUS_GOODFELLOWI_THOMAS_1907",
+          "name": "Acanthoglossus goodfellowi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthoglossus",
+          "authorship": "Thomas 1907",
+          "sourceIds": {
+            "checklistbank": "txn:166660"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tachyglossidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 12,
+  "genusCount": 5,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

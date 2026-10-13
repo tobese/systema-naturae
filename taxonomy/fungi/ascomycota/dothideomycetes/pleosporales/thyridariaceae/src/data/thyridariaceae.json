@@ -164,10 +164,12 @@
             "col": [
               "3YC68"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438150"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:438150"
+            ]
           },
           "uuid": "daf88558-d006-558-a79-f678502832cebf",
-          "authorityIds": "col:3YC68,gbif:3542442,mycobank:436639",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:438150,col:3YC68,gbif:3542442,mycobank:436639",
           "children": []
         },
         {
@@ -1832,10 +1834,12 @@
             "col": [
               "9ZCZS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1838187"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1838187"
+            ]
           },
           "uuid": "6777d637-3c23-5e8-b8d-582bc076e6ae50",
-          "authorityIds": "col:9ZCZS,gbif:11633458,mycobank:832839",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1838187,col:9ZCZS,gbif:11633458,mycobank:832839",
           "children": []
         },
         {
@@ -2021,10 +2025,12 @@
             "col": [
               "9ZCZV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1839034"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1839034"
+            ]
           },
           "uuid": "f95c8b04-3998-5c3-a3b-b828d05a71827d",
-          "authorityIds": "col:9ZCZV,gbif:11691734,mycobank:832838",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1839034,col:9ZCZV,gbif:11691734,mycobank:832838",
           "children": []
         },
         {
@@ -2601,10 +2607,12 @@
             "col": [
               "9ZCZX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1838184"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1838184"
+            ]
           },
           "uuid": "9262952c-4901-5b0-9be-570c9a59268a6c",
-          "authorityIds": "col:9ZCZX,gbif:11541922,mycobank:832837",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1838184,col:9ZCZX,gbif:11541922,mycobank:832837",
           "children": []
         },
         {
@@ -3801,21 +3809,12 @@
           "lineage": "Setoarthopyrenia",
           "authorship": "G.C. Ren & K.D. Hyde, 2024",
           "sourceIds": {
-            "checklistbank": "3017537"
+            "checklistbank": [
+              "3017537"
+            ]
           },
-          "children": []
-        },
-        {
-          "id": "SP_SETOARTHOPYRENIA_SP",
-          "name": "Setoarthopyrenia sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Setoarthopyrenia",
-          "sourceIds": {
-            "checklistbank": "3017537"
-          },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:3017537"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3876,90 +3875,11 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thyridariaceae"
-    },
-    {
-      "id": "GENUS_MASSARIOSPHAERIA",
-      "name": "\"Massariosphaeria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MASSARIOSPHAERIA_ERUCACEA_KOHLM_VOLKM_KOHLM_O_E_ERIKSS_1996",
-          "name": "\"Massariosphaeria erucacea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Massariosphaeria",
-          "authorship": "\"Kohlm., Volkm.-Kohlm. & O.E. Erikss., 1996\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438150"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "thyridariaceae"
-    },
-    {
-      "id": "GENUS_PARATHYRIDARIELLA",
-      "name": "\"Parathyridariella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARATHYRIDARIELLA_DEMATIACEA_PRIGIONE_A_POLI_BOVIO_VARESE_2020",
-          "name": "\"Parathyridariella dematiacea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parathyridariella",
-          "authorship": "\"Prigione, A. Poli, Bovio & Varese, 2020\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1838184"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "thyridariaceae"
-    },
-    {
-      "id": "GENUS_PARATHYRIDARIA",
-      "name": "\"Parathyridaria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARATHYRIDARIA_FLABELLIAE_BOVIO_A_POLI_PRIGIONE_VARESE_2020",
-          "name": "\"Parathyridaria flabelliae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parathyridaria",
-          "authorship": "\"Bovio, A. Poli, Prigione & Varese, 2020\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1838187"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARATHYRIDARIA_TYRRHENICA_A_POLI_PRIGIONE_BOVIO_VARESE_2020",
-          "name": "\"Parathyridaria tyrrhenica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parathyridaria",
-          "authorship": "\"A. Poli, Prigione, Bovio & Varese, 2020\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1839034"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "thyridariaceae"
     }
   ],
   "authorship": "Q. Tian & K.D. Hyde",
-  "genusCount": 25,
-  "speciesCount": 202,
+  "genusCount": 22,
+  "speciesCount": 197,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

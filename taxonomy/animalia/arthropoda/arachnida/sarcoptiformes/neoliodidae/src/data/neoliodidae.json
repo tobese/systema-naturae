@@ -969,10 +969,12 @@
           "children": [],
           "lineage": "neoliodes",
           "sourceIds": {
-            "gbif": 8606485
+            "gbif": 8606485,
+            "checklistbank": "txn:309080"
           },
           "uuid": "1b6566bb-1082-5f1-877-6d3f8556b693fa",
-          "authorityIds": "gbif:8606485"
+          "authorityIds": "gbif:8606485",
+          "authorship": "Heethoff et al. 2009"
         },
         {
           "id": "SP_NEOLIODES_ZIMMERMANI_SELLNICK_1959",
@@ -1020,6 +1022,32 @@
           "lineage": "Neoliodes",
           "sourceIds": {
             "checklistbank": "ott7678823"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOLIODES_BREVITARSUS_WOOLLEY_1971",
+          "name": "Neoliodes brevitarsus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoliodes",
+          "authorship": "(Woolley 1971)",
+          "sourceIds": {
+            "checklistbank": "txn:260496"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOLIODES_QUADRISCUTATUS_SELLNICK_1919",
+          "name": "Neoliodes quadriscutatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoliodes",
+          "authorship": "Sellnick 1919",
+          "sourceIds": {
+            "checklistbank": "txn:309055"
           },
           "children": []
         }
@@ -1105,30 +1133,6 @@
           "authorityIds": "col:4JSD2,gbif:2192893,itis:737312"
         },
         {
-          "id": "SP_PLATYLIODES_SCALIGER_KOCH_1839",
-          "name": "Platyliodes scaliger",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "platyliodes",
-          "authorship": "(Koch, 1839)",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "2192889"
-            ],
-            "itis": [
-              "737318"
-            ],
-            "col": [
-              "4JSD8"
-            ],
-            "checklistbank": "232902"
-          },
-          "uuid": "f7a2453c-e854-5ad-989-f499d08f108a6b",
-          "authorityIds": "col:4JSD8,gbif:2192889,itis:737318"
-        },
-        {
           "id": "SP_PLATYLIODES_LONGISETOSUS_SITNIKOVA_1975",
           "name": "Platyliodes longisetosus",
           "rank": "SPECIES",
@@ -1211,39 +1215,19 @@
             "checklistbank": "ott1003130"
           },
           "children": []
-        }
-      ],
-      "sourcedFrom": "catalogue of life",
-      "lineage": "Neoliodidae"
-    },
-    {
-      "id": "GENUS_POROLIODES",
-      "name": "Poroliodes",
-      "rank": "GENUS",
-      "children": [
+        },
         {
-          "id": "SP_POROLIODES_FARINOSUS_KOCH_1839",
-          "name": "Poroliodes farinosus",
+          "id": "SP_PLATYLIODES_ENSIGERUS_SELLNICK_1919",
+          "name": "Platyliodes ensigerus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "poroliodes",
-          "authorship": "(Koch, 1839)",
-          "children": [],
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyliodes",
+          "authorship": "(Sellnick 1919)",
           "sourceIds": {
-            "gbif": [
-              "2192895"
-            ],
-            "col": [
-              "4LY73"
-            ],
-            "itis": [
-              "737319"
-            ],
-            "checklistbank": "232903"
+            "checklistbank": "txn:309054"
           },
-          "uuid": "aea8aa40-a0a7-5fb-83f-bf1d65f934faf7",
-          "authorityIds": "col:4LY73,gbif:2192895,itis:737319"
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1356,19 +1340,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LIODES_IONICUS_SELLNICK_1931",
-          "name": "Liodes ionicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liodes",
-          "authorship": "(Sellnick, 1931)",
-          "sourceIds": {
-            "checklistbank": "232900"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LIODES_THELEPROCTUS_HERMANN_1804",
           "name": "Liodes theleproctus",
           "rank": "SPECIES",
@@ -1382,31 +1353,6 @@
           "children": []
         },
         {
-          "id": "SP_LIODES_ZIMMERMANI_SELLNICK_1959",
-          "name": "Liodes zimmermani",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liodes",
-          "authorship": "Sellnick, 1959",
-          "sourceIds": {
-            "checklistbank": "939802"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LIODES_BREVITARSUS",
-          "name": "Liodes brevitarsus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Liodes",
-          "sourceIds": {
-            "checklistbank": "262863"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LIODES_NIGRICANS",
           "name": "Liodes nigricans",
           "rank": "SPECIES",
@@ -1415,118 +1361,6 @@
           "lineage": "Liodes",
           "sourceIds": {
             "checklistbank": "391738"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neoliodidae"
-    },
-    {
-      "id": "GENUS_UDETALIODES",
-      "name": "Udetaliodes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_UDETALIODES_HAWAIIENSIS_JACOT_1929",
-          "name": "Udetaliodes hawaiiensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Udetaliodes",
-          "authorship": "Jacot, 1929",
-          "sourceIds": {
-            "checklistbank": "939800"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neoliodidae"
-    },
-    {
-      "id": "GENUS_NOTASPIS",
-      "name": "Notaspis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NOTASPIS_THELEPROCTUS_HERMANN_1804",
-          "name": "Notaspis theleproctus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Notaspis",
-          "authorship": "Hermann, 1804",
-          "sourceIds": {
-            "checklistbank": "953953"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neoliodidae"
-    },
-    {
-      "id": "GENUS_NOTHRUS",
-      "name": "Nothrus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NOTHRUS_SCALIGER_C_L_KOCH_1840",
-          "name": "Nothrus scaliger",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nothrus",
-          "authorship": "C.L. Koch, 1840",
-          "sourceIds": {
-            "checklistbank": "953954"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NOTHRUS_FARINOSUS_C_L_KOCH_1840",
-          "name": "Nothrus farinosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nothrus",
-          "authorship": "C.L. Koch, 1840",
-          "sourceIds": {
-            "checklistbank": "953957"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "neoliodidae"
-    },
-    {
-      "id": "GENUS_TELEIIOLIODES",
-      "name": "Teleiioliodes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TELEIIOLIODES_MADININENSIS",
-          "name": "Teleiioliodes madininensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Teleiioliodes",
-          "sourceIds": {
-            "checklistbank": "262864"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TELEIIOLIODES_ZIKARI",
-          "name": "Teleiioliodes zikari",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Teleiioliodes",
-          "sourceIds": {
-            "checklistbank": "262865"
           },
           "children": []
         }
@@ -1556,11 +1390,11 @@
       "lineage": "neoliodidae"
     }
   ],
-  "speciesCount": 70,
+  "speciesCount": 62,
   "appSlug": "neoliodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 10,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1569,6 +1403,6 @@
       "orderKey": 542,
       "familyKey": 7456
     },
-    "checklistbank": "885434"
+    "checklistbank": "ott952079"
   }
 }

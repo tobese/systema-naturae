@@ -22,7 +22,8 @@
               "VC4KN"
             ]
           },
-          "authorityIds": "col:VC4KN"
+          "authorityIds": "col:VC4KN",
+          "children": []
         },
         {
           "id": "SP_EURYRIZOCERAS_CHADWICKI_FOERSTE_1930",
@@ -38,7 +39,8 @@
               "VC3HH"
             ]
           },
-          "authorityIds": "col:VC3HH"
+          "authorityIds": "col:VC3HH",
+          "children": []
         },
         {
           "id": "SP_EURYRIZOCERAS_CLINOSEPTATUM_FOERSTE_1930",
@@ -54,7 +56,8 @@
               "VCC65"
             ]
           },
-          "authorityIds": "col:VCC65"
+          "authorityIds": "col:VCC65",
+          "children": []
         },
         {
           "id": "SP_EURYRIZOCERAS_PERCURVATUM_FOERSTE_1930",
@@ -70,7 +73,8 @@
               "VCCQB"
             ]
           },
-          "authorityIds": "col:VCCQB"
+          "authorityIds": "col:VCCQB",
+          "children": []
         },
         {
           "id": "SP_EURYRIZOCERAS_PLENUM_FOERSTE_1930",
@@ -86,7 +90,8 @@
               "VC6RD"
             ]
           },
-          "authorityIds": "col:VC6RD"
+          "authorityIds": "col:VC6RD",
+          "children": []
         },
         {
           "id": "SP_EURYRIZOCERAS_DECURIO_BARRANDE_1866",
@@ -102,7 +107,8 @@
               "VC9YD"
             ]
           },
-          "authorityIds": "col:VC9YD"
+          "authorityIds": "col:VC9YD",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -127,7 +133,8 @@
               "VC85N"
             ]
           },
-          "authorityIds": "col:VC85N"
+          "authorityIds": "col:VC85N",
+          "children": []
         },
         {
           "id": "SP_OONOCERAS_IMPATIENS_BARRANDE_1866",
@@ -143,7 +150,21 @@
               "VC4FG"
             ]
           },
-          "authorityIds": "col:VC4FG"
+          "authorityIds": "col:VC4FG",
+          "children": []
+        },
+        {
+          "id": "SP_OONOCERAS_PRISCUM_EICHWALD_1861",
+          "name": "Oonoceras priscum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oonoceras",
+          "authorship": "(Eichwald 1861)",
+          "sourceIds": {
+            "checklistbank": "txn:147777"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -168,7 +189,8 @@
               "VC8GX"
             ]
           },
-          "authorityIds": "col:VC8GX"
+          "authorityIds": "col:VC8GX",
+          "children": []
         },
         {
           "id": "SP_CHROMATOCERAS_VETERANUM_BARRANDE_1866",
@@ -184,7 +206,8 @@
               "VC4G2"
             ]
           },
-          "authorityIds": "col:VC4G2"
+          "authorityIds": "col:VC4G2",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -209,7 +232,8 @@
               "CQFZL"
             ]
           },
-          "authorityIds": "col:CQFZL"
+          "authorityIds": "col:CQFZL",
+          "children": []
         },
         {
           "id": "SP_EURYRIZOCERINA_PULCHRA_MANDA_TUREK_2009",
@@ -225,24 +249,74 @@
               "CRBZR"
             ]
           },
-          "authorityIds": "col:CRBZR"
+          "authorityIds": "col:CRBZR",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Oonoceratidae"
+    },
+    {
+      "id": "GENUS_OOCERAS",
+      "name": "Ooceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OOCERAS_SEELYI_RUEDEMANN_1906",
+          "name": "Ooceras seelyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ooceras",
+          "authorship": "Ruedemann 1906",
+          "sourceIds": {
+            "checklistbank": "txn:325020"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OOCERAS_LATIVENTRUM_RUEDEMANN_1906",
+          "name": "Ooceras lativentrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ooceras",
+          "authorship": "Ruedemann 1906",
+          "sourceIds": {
+            "checklistbank": "txn:325021"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OOCERAS_PERKINSI_RUEDEMANN_1906",
+          "name": "Ooceras perkinsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ooceras",
+          "authorship": "Ruedemann 1906",
+          "sourceIds": {
+            "checklistbank": "txn:325022"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oonoceratidae"
     }
   ],
-  "speciesCount": 12,
+  "speciesCount": 16,
   "appSlug": "oonoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 4946591
-    }
+    },
+    "checklistbank": "txn:147779"
   }
 }

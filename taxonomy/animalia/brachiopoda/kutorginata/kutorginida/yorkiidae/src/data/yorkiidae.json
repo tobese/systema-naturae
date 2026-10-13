@@ -20,9 +20,11 @@
           "sourceIds": {
             "col": [
               "VQ5PJ"
-            ]
+            ],
+            "checklistbank": "txn:217350"
           },
-          "authorityIds": "col:VQ5PJ"
+          "authorityIds": "col:VQ5PJ",
+          "children": []
         },
         {
           "id": "SP_YORKIA_WANNERI_WALCOTT_1897",
@@ -38,23 +40,60 @@
               "VQ87W"
             ]
           },
-          "authorityIds": "col:VQ87W"
+          "authorityIds": "col:VQ87W",
+          "children": []
+        },
+        {
+          "id": "SP_YORKIA_WASHINGTONENSIS_WALCOTT_1897",
+          "name": "Yorkia washingtonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Yorkia",
+          "authorship": "Walcott 1897",
+          "sourceIds": {
+            "checklistbank": "txn:460270"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Yorkiidae"
+    },
+    {
+      "id": "GENUS_QUEBECIA",
+      "name": "Quebecia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_QUEBECIA_CIRCE_BILLINGS_1872",
+          "name": "Quebecia circe",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Quebecia",
+          "authorship": "(Billings 1872)",
+          "sourceIds": {
+            "checklistbank": "txn:460428"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "yorkiidae"
     }
   ],
-  "speciesCount": 2,
+  "speciesCount": 4,
   "appSlug": "yorkiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Brachiopoda > Kutorginata",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 110,
       "familyKey": 3252231
-    }
+    },
+    "checklistbank": "txn:141646"
   }
 }

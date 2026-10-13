@@ -28,9 +28,11 @@
             "col": [
               "6J737"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1047483"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1047483"
+            ]
           },
-          "authorityIds": "col:6J737,itis:78654",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1047483,col:6J737,itis:78654",
           "authorship": "(J. G. Cooper, 1863)",
           "children": []
         },
@@ -69,9 +71,11 @@
             "col": [
               "KC6N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1047764"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1047764"
+            ]
           },
-          "authorityIds": "col:KC6N",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1047764,col:KC6N",
           "authorship": "(García-Gómez, 1984)",
           "children": []
         }
@@ -147,54 +151,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "flabellinopsidae"
-    },
-    {
-      "id": "GENUS_FLABELLINOPSIS",
-      "name": "\"Flabellinopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_FLABELLINOPSIS_IODINEA_J_G_COOPER_1863",
-          "name": "\"Flabellinopsis iodinea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Flabellinopsis",
-          "authorship": "\"(J. G. Cooper, 1863)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1047483"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "flabellinopsidae"
-    },
-    {
-      "id": "GENUS_BAENOPSIS",
-      "name": "\"Baenopsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BAENOPSIS_BAETICA_GARC_A_G_MEZ_1984",
-          "name": "\"Baenopsis baetica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Baenopsis",
-          "authorship": "\"(García-Gómez, 1984)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1047764"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "flabellinopsidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 9,
+  "genusCount": 4,
+  "speciesCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

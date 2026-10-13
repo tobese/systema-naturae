@@ -41,8 +41,11 @@
           "authorship": "(Cable and Quick, 1954)",
           "uuid": "8b8ae033-8a2b-558-860-dd8e75e8e292ae",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:448611"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:448611"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:448611"
         },
         {
           "id": "SP_ACANTHOGYRUS_ADRIATICUS_AMIN_2005",
@@ -1912,8 +1915,11 @@
           "authorship": "(Thapar, 1931)",
           "uuid": "7adb652e-4c75-501-9ad-cf4802bdc4395b",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1907416"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1907416"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1907416"
         },
         {
           "id": "SP_PALLISENTIS_PARANANDAI_AMIN_CHAUDHARY_HECKMANN_RUBTSOVA_SINGH_2021",
@@ -2756,8 +2762,11 @@
           "uuid": "1b8b65ca-82cd-5b4-9d7-192f51119da90f",
           "authorship": "(Harada, 1938)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1424904"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1424904"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1424904"
         },
         {
           "id": "SP_QUADRIGYRUS_GUPTAI_GUPTA_GUNJAN_SINH_1992",
@@ -2915,20 +2924,6 @@
             ]
           },
           "authorityIds": "col:6X27L,itis:198214"
-        },
-        {
-          "id": "SP_QUADRIGYRUS_MACHADOI_F_BIO_1983",
-          "name": "Quadrigyrus machadoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Quadrigyrus",
-          "authorship": "Fábio, 1983",
-          "sourceIds": {
-            "checklistbank": "97870"
-          },
-          "children": [],
-          "uuid": "ac9a68f8-08fe-5d3-8cb-635f12a8240664"
         },
         {
           "id": "SP_QUADRIGYRUS_GUPTAI_GUPTA_SINHA_1992",
@@ -3275,9 +3270,11 @@
             "col": [
               "6TQP5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1326101"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1326101"
+            ]
           },
-          "authorityIds": "col:6TQP5,itis:993658"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1326101,col:6TQP5,itis:993658"
         }
       ]
     },
@@ -3486,28 +3483,6 @@
       "lineage": "quadrigyridae"
     },
     {
-      "id": "GENUS_ACANTHOGYRUS",
-      "name": "\"Acanthogyrus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ACANTHOGYRUS_ACANTHOSENTIS_CABLE_QUICK_1954_DOLLFUS_GOLVAN_1956",
-          "name": "\"Acanthogyrus (Acanthosentis)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Acanthogyrus",
-          "authorship": "\"(Cable & Quick, 1954) Dollfus & Golvan, 1956\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:448611"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "quadrigyridae"
-    },
-    {
       "id": "GENUS_PALLISENTIS",
       "name": "\"Pallisentis",
       "rank": "GENUS",
@@ -3550,71 +3525,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1321504"
           },
           "children": []
-        },
-        {
-          "id": "SP_PALLISENTIS_FARZANDIA_THAPAR_1930_BAYLIS_1933",
-          "name": "\"Pallisentis (Farzandia)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pallisentis",
-          "authorship": "\"(Thapar, 1930) Baylis, 1933\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1907416"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "quadrigyridae"
-    },
-    {
-      "id": "GENUS_PARARAOSENTIS",
-      "name": "\"Pararaosentis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARARAOSENTIS_GOLVANI_TRONCY_VASSILIAD_S_1973_AMIN_HECKMANN_HA_LUC_DOANH_2000",
-          "name": "\"Pararaosentis golvani\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pararaosentis",
-          "authorship": "\"(Troncy & Vassiliadès, 1973) Amin, Heckmann, Ha, Luc & Doanh, 2000\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1326101"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "quadrigyridae"
-    },
-    {
-      "id": "GENUS_QUADRIGYRUS",
-      "name": "\"Quadrigyrus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_QUADRIGYRUS_FORMOSANUS_HARADA_1938",
-          "name": "\"Quadrigyrus formosanus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Quadrigyrus",
-          "authorship": "\"(Harada, 1938)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1424904"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "quadrigyridae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 231,
+  "genusCount": 14,
+  "speciesCount": 226,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

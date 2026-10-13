@@ -64,9 +64,11 @@
             "col": [
               "6NSHZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:712155"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:712155"
+            ]
           },
-          "authorityIds": "col:6NSHZ,itis:65441"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:712155,col:6NSHZ,itis:65441"
         },
         {
           "id": "SP_LACYDONIA_ELIASONI_HARTMANN_SCHR_DER_1996",
@@ -252,9 +254,11 @@
             "col": [
               "3RTPP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:712154"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:712154"
+            ]
           },
-          "authorityIds": "col:3RTPP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:712154,col:3RTPP",
           "authorship": "(Hartman, 1967)"
         },
         {
@@ -334,20 +338,6 @@
           "authorityIds": "col:CNY72"
         },
         {
-          "id": "SP_LACYDONIA_MIRANDA_MARION_BOBRETZKY_1875",
-          "name": "Lacydonia miranda",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lacydonia",
-          "authorship": "Marion & Bobretzky, 1875",
-          "sourceIds": {
-            "checklistbank": "50206"
-          },
-          "children": [],
-          "uuid": "f942f914-4f19-572-ad1-b3f6c2f5a519c9"
-        },
-        {
           "id": "SP_LACYDONIA_HAMPSONI_BLAKE_IN_BLAKE_HILBIG_1994",
           "name": "Lacydonia hampsoni",
           "rank": "SPECIES",
@@ -395,45 +385,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lacydoniidae"
-    },
-    {
-      "id": "GENUS_LACYDONIA",
-      "name": "\"Lacydonia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LACYDONIA_OCULATA_HARTMAN_1967",
-          "name": "\"Lacydonia oculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lacydonia",
-          "authorship": "\"(Hartman, 1967)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:712154"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LACYDONIA_CIRRATA_HARTMAN_FAUCHALD_1971",
-          "name": "\"Lacydonia cirrata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lacydonia",
-          "authorship": "\"(Hartman & Fauchald, 1971)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:712155"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lacydoniidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 22,
+  "genusCount": 2,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -301,9 +301,11 @@
             "col": [
               "V9V2G"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861332"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861332"
+            ]
           },
-          "authorityIds": "col:V9V2G"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1861332,col:V9V2G"
         },
         {
           "id": "SP_ACTINOPTERIA_EPSILON_J_HALL_1883",
@@ -336,9 +338,11 @@
             "col": [
               "V9W7L"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861331"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861331"
+            ]
           },
-          "authorityIds": "col:V9W7L"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1861331,col:V9W7L"
         },
         {
           "id": "SP_ACTINOPTERIA_HOMERIANA_K_1996",
@@ -354,9 +358,11 @@
             "col": [
               "V9Q6N"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861334"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861334"
+            ]
           },
-          "authorityIds": "col:V9Q6N"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1861334,col:V9Q6N"
         },
         {
           "id": "SP_ACTINOPTERIA_MAXIMA_S_F_LIANG_1976",
@@ -405,7 +411,8 @@
           "sourceIds": {
             "col": [
               "C4SSC"
-            ]
+            ],
+            "checklistbank": "txn:513080"
           },
           "authorityIds": "col:C4SSC"
         },
@@ -569,7 +576,8 @@
           "sourceIds": {
             "checklistbank": "1236864"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Conrad 1842)"
         }
       ]
     },
@@ -610,7 +618,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "cabeedcc-570d-52c-8ab-a6f10f79b9a2ce"
+          "uuid": "cabeedcc-570d-52c-8ab-a6f10f79b9a2ce",
+          "authorship": "(Goldfuss 1836)",
+          "sourceIds": {
+            "checklistbank": "txn:95254"
+          }
         },
         {
           "id": "SP_PTYCHOPTERIA_LONGISPINA_H_F_YIN_X_M_GAN_1978",
@@ -814,6 +826,19 @@
           },
           "children": [],
           "uuid": "e95ce681-4999-570-801-c9dded74f39440"
+        },
+        {
+          "id": "SP_PTYCHOPTERIA_PROBLEMATICA_CHEN_AND_LAN_1976",
+          "name": "Ptychopteria problematica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ptychopteria",
+          "authorship": "Chen and Lan 1976",
+          "sourceIds": {
+            "checklistbank": "txn:274197"
+          },
+          "children": []
         }
       ]
     },
@@ -912,7 +937,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a0b27e2a-4ffc-5c3-989-08a95b1bd66045"
+          "uuid": "a0b27e2a-4ffc-5c3-989-08a95b1bd66045",
+          "authorship": "(von Strombeck 1849)",
+          "sourceIds": {
+            "checklistbank": "txn:399124"
+          }
         },
         {
           "id": "SP_PTERINEA_LAEVIS_GOLDFUSS_1832",
@@ -1131,6 +1160,71 @@
           },
           "children": [],
           "uuid": "37c29d15-1be4-510-8b7-5c676fc16510e6"
+        },
+        {
+          "id": "SP_PTERINEA_DEMISSA_CONRAD_1842",
+          "name": "Pterinea demissa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterinea",
+          "authorship": "(Conrad 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:327462"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTERINEA_THISBE_BILLINGS_1866",
+          "name": "Pterinea thisbe",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterinea",
+          "authorship": "Billings 1866",
+          "sourceIds": {
+            "checklistbank": "txn:467447"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTERINEA_FLABELLUM_CONRAD_1842",
+          "name": "Pterinea flabellum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterinea",
+          "authorship": "(Conrad 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:472629"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTERINEA_NEWARKENSIS_WALCOTT_1884",
+          "name": "Pterinea newarkensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterinea",
+          "authorship": "Walcott 1884",
+          "sourceIds": {
+            "checklistbank": "txn:472631"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PTERINEA_PINTOENSIS_WALCOTT_1884",
+          "name": "Pterinea pintoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pterinea",
+          "authorship": "Walcott 1884",
+          "sourceIds": {
+            "checklistbank": "txn:472784"
+          },
+          "children": []
         }
       ]
     },
@@ -1282,9 +1376,11 @@
             "col": [
               "F3S5B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1805928"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1805928"
+            ]
           },
-          "authorityIds": "col:F3S5B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1805928,col:F3S5B",
           "authorship": "Whidborne, 1896"
         },
         {
@@ -1317,7 +1413,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c5d82d66-d76e-597-86e-cebe212b99c367"
+          "uuid": "c5d82d66-d76e-597-86e-cebe212b99c367",
+          "authorship": "(Whidborne 1897)",
+          "sourceIds": {
+            "checklistbank": "txn:306215"
+          }
         },
         {
           "id": "SP_LEPTODESMA_DEKAYI",
@@ -1334,9 +1434,11 @@
             "col": [
               "B8T35"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1653895"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1653895"
+            ]
           },
-          "authorityIds": "col:B8T35",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1653895,col:B8T35",
           "authorship": "(J. Hall, 1883)"
         },
         {
@@ -1486,9 +1588,11 @@
             "col": [
               "VC7QX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1869492"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1869492"
+            ]
           },
-          "authorityIds": "col:VC7QX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1869492,col:VC7QX",
           "authorship": "Elias, 1957"
         },
         {
@@ -1526,9 +1630,11 @@
             "col": [
               "VH9GS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1891463"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1891463"
+            ]
           },
-          "authorityIds": "col:VH9GS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1891463,col:VH9GS",
           "authorship": "Girty, 1927"
         },
         {
@@ -2344,6 +2450,149 @@
           },
           "children": [],
           "uuid": "5f784d55-a63c-532-b5b-3c9562e7424106"
+        },
+        {
+          "id": "SP_LEPTODESMA_CHIDRUENSIS_WAAGEN_1881",
+          "name": "Leptodesma chidruensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Waagen 1881)",
+          "sourceIds": {
+            "checklistbank": "txn:125312"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_GUADALUPENSIS_GIRTY_1909",
+          "name": "Leptodesma guadalupensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Girty 1909)",
+          "sourceIds": {
+            "checklistbank": "txn:184377"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_ZHANGI_LI_1995",
+          "name": "Leptodesma zhangi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "Li 1995",
+          "sourceIds": {
+            "checklistbank": "txn:190468"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_BUHAHEENSIS_LU_1986",
+          "name": "Leptodesma buhaheensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "Lu 1986",
+          "sourceIds": {
+            "checklistbank": "txn:192155"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_AVICULAEFORMIS_STUCKENBERG_1898",
+          "name": "Leptodesma aviculaeformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Stuckenberg 1898)",
+          "sourceIds": {
+            "checklistbank": "txn:194474"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_BAKEWELLIOIDES_YAKOVLEV_1903",
+          "name": "Leptodesma bakewellioides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Yakovlev 1903)",
+          "sourceIds": {
+            "checklistbank": "txn:194473"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_BONAERENSIS_HARRINGTON_1955",
+          "name": "Leptodesma bonaerensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Harrington 1955)",
+          "sourceIds": {
+            "checklistbank": "txn:199371"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_DUTOITI_HARRINGTON_1955",
+          "name": "Leptodesma dutoiti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Harrington 1955)",
+          "sourceIds": {
+            "checklistbank": "txn:199373"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_TRANSVERSA_WALCOTT_1884",
+          "name": "Leptodesma transversa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "Walcott 1884",
+          "sourceIds": {
+            "checklistbank": "txn:472634"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_PROTEXTUM_CONRAD_1842",
+          "name": "Leptodesma protextum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "(Conrad 1842)",
+          "sourceIds": {
+            "checklistbank": "txn:489724"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEPTODESMA_POJETAI_BRADSHAW_1999",
+          "name": "Leptodesma pojetai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodesma",
+          "authorship": "Bradshaw 1999",
+          "sourceIds": {
+            "checklistbank": "txn:513273"
+          },
+          "children": []
         }
       ]
     },
@@ -2581,9 +2830,11 @@
             "col": [
               "BDRNH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1661833"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1661833"
+            ]
           },
-          "authorityIds": "col:BDRNH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1661833,col:BDRNH",
           "authorship": "(Conrad, 1838)"
         },
         {
@@ -2737,6 +2988,19 @@
           },
           "children": [],
           "uuid": "b3530592-9ec8-5de-91c-fb6c0206fc0ff5"
+        },
+        {
+          "id": "SP_LIMOPTERA_SARMENTICIA_WALCOTT_1884",
+          "name": "Limoptera sarmenticia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Limoptera",
+          "authorship": "Walcott 1884",
+          "sourceIds": {
+            "checklistbank": "txn:472635"
+          },
+          "children": []
         }
       ]
     },
@@ -2788,6 +3052,45 @@
           "yearPublished": "1981",
           "children": [],
           "uuid": "b0d70d55-bed3-54f-92a-812fe4ac10d116"
+        },
+        {
+          "id": "SP_GUICHIELLA_ANGULATA_LI_AND_DING_1981",
+          "name": "Guichiella angulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guichiella",
+          "authorship": "Li and Ding 1981",
+          "sourceIds": {
+            "checklistbank": "txn:166018"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GUICHIELLA_STYLIFORMIS_LI_AND_DING_1981",
+          "name": "Guichiella styliformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guichiella",
+          "authorship": "Li and Ding 1981",
+          "sourceIds": {
+            "checklistbank": "txn:166019"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GUICHIELLA_SUBROTUNDA_LI_AND_DING_1981",
+          "name": "Guichiella subrotunda",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guichiella",
+          "authorship": "Li and Ding 1981",
+          "sourceIds": {
+            "checklistbank": "txn:166020"
+          },
+          "children": []
         }
       ]
     },
@@ -2823,6 +3126,45 @@
           "yearPublished": "1913",
           "children": [],
           "uuid": "b5902400-cfdd-594-a73-c82f1c1d0eb844"
+        },
+        {
+          "id": "SP_PSEUDOBAKEWELLIA_TUMIDAEFORMIS_SUVEIZDIS_ET_AL_1975",
+          "name": "Pseudobakewellia tumidaeformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudobakewellia",
+          "authorship": "Suveizdis et al. 1975",
+          "sourceIds": {
+            "checklistbank": "txn:470649"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOBAKEWELLIA_TRIGONALIS_SUVEIZDIS_ET_AL_1975",
+          "name": "Pseudobakewellia trigonalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudobakewellia",
+          "authorship": "Suveizdis et al. 1975",
+          "sourceIds": {
+            "checklistbank": "txn:470650"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOBAKEWELLIA_SEDGWICKIFORMIS_SUVEIZDIS_ET_AL_1975",
+          "name": "Pseudobakewellia sedgwickiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudobakewellia",
+          "authorship": "Suveizdis et al. 1975",
+          "sourceIds": {
+            "checklistbank": "txn:470651"
+          },
+          "children": []
         }
       ]
     },
@@ -2897,9 +3239,11 @@
             "col": [
               "BDKF3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662111"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1662111"
+            ]
           },
-          "authorityIds": "col:BDKF3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1662111,col:BDKF3",
           "authorship": "(Foerste, 1909)"
         },
         {
@@ -3035,9 +3379,11 @@
             "col": [
               "BDRMG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1663269"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1663269"
+            ]
           },
-          "authorityIds": "col:BDRMG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1663269,col:BDRMG",
           "authorship": "(Wahlenberg, 1821)"
         },
         {
@@ -3148,6 +3494,45 @@
             ]
           },
           "authorityIds": "col:KTV69"
+        },
+        {
+          "id": "SP_ACTINODESMA_LAMELLOSA_GOLDFUSS_1840",
+          "name": "Actinodesma lamellosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinodesma",
+          "authorship": "(Goldfuss 1840)",
+          "sourceIds": {
+            "checklistbank": "txn:478529"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACTINODESMA_ANNAE_FRECH_1891",
+          "name": "Actinodesma annae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinodesma",
+          "authorship": "(Frech 1891)",
+          "sourceIds": {
+            "checklistbank": "txn:478539"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ACTINODESMA_OCCIDENTALE_HALL_1883",
+          "name": "Actinodesma occidentale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinodesma",
+          "authorship": "(Hall 1883)",
+          "sourceIds": {
+            "checklistbank": "txn:478647"
+          },
+          "children": []
         }
       ]
     },
@@ -3169,7 +3554,8 @@
           "sourceIds": {
             "col": [
               "VPBDR"
-            ]
+            ],
+            "checklistbank": "txn:478643"
           },
           "authorityIds": "col:VPBDR"
         },
@@ -3255,7 +3641,8 @@
           "sourceIds": {
             "col": [
               "VCBZD"
-            ]
+            ],
+            "checklistbank": "txn:384509"
           },
           "authorityIds": "col:VCBZD"
         },
@@ -3315,7 +3702,8 @@
           "sourceIds": {
             "col": [
               "KW3RR"
-            ]
+            ],
+            "checklistbank": "txn:127122"
           },
           "authorityIds": "col:KW3RR"
         }
@@ -3342,9 +3730,11 @@
             "col": [
               "V9X7H"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861329"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861329"
+            ]
           },
-          "authorityIds": "col:V9X7H"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1861329,col:V9X7H"
         },
         {
           "id": "SP_NENNAPTERIA_OLLICULA_K_2005",
@@ -3360,9 +3750,11 @@
             "col": [
               "V9RKF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861330"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861330"
+            ]
           },
-          "authorityIds": "col:V9RKF"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1861330,col:V9RKF"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3386,7 +3778,8 @@
           "sourceIds": {
             "col": [
               "VPCB3"
-            ]
+            ],
+            "checklistbank": "txn:513261"
           },
           "authorityIds": "col:VPCB3"
         },
@@ -3491,6 +3884,32 @@
             ]
           },
           "authorityIds": "col:VPDJ3"
+        },
+        {
+          "id": "SP_CORNELLITES_FLEMINGI_BRADSHAW_1999",
+          "name": "Cornellites flemingi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornellites",
+          "authorship": "Bradshaw 1999",
+          "sourceIds": {
+            "checklistbank": "txn:513269"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CORNELLITES_JOHNSTONI_BRADSHAW_1999",
+          "name": "Cornellites johnstoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cornellites",
+          "authorship": "Bradshaw 1999",
+          "sourceIds": {
+            "checklistbank": "txn:513270"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3531,7 +3950,8 @@
           "sourceIds": {
             "col": [
               "CVVXT"
-            ]
+            ],
+            "checklistbank": "txn:478929"
           },
           "authorityIds": "col:CVVXT"
         },
@@ -3548,7 +3968,8 @@
           "sourceIds": {
             "col": [
               "CVVXS"
-            ]
+            ],
+            "checklistbank": "txn:478928"
           },
           "authorityIds": "col:CVVXS"
         }
@@ -3592,9 +4013,11 @@
             "col": [
               "V9RFB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861321"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1861321"
+            ]
           },
-          "authorityIds": "col:V9RFB"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1861321,col:V9RFB"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3638,6 +4061,19 @@
             ]
           },
           "authorityIds": "col:VPZZT"
+        },
+        {
+          "id": "SP_GLYPTODESMA_ALLANI_BRADSHAW_1999",
+          "name": "Glyptodesma allani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glyptodesma",
+          "authorship": "Bradshaw 1999",
+          "sourceIds": {
+            "checklistbank": "txn:513274"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3661,7 +4097,8 @@
           "sourceIds": {
             "col": [
               "CS22J"
-            ]
+            ],
+            "checklistbank": "txn:478450"
           },
           "authorityIds": "col:CS22J"
         }
@@ -3713,7 +4150,8 @@
           "sourceIds": {
             "col": [
               "CVHH5"
-            ]
+            ],
+            "checklistbank": "txn:478931"
           },
           "authorityIds": "col:CVHH5"
         }
@@ -3771,59 +4209,46 @@
       "lineage": "pterineidae"
     },
     {
-      "id": "GENUS_LEPTODESMA",
-      "name": "\"Leptodesma",
+      "id": "GENUS_MERISMOPTERIA",
+      "name": "Merismopteria",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LEPTODESMA_DEKAYI_J_HALL_1883",
-          "name": "\"Leptodesma dekayi\"",
+          "id": "SP_MERISMOPTERIA_SALINENSIS_GONZALEZ_1975",
+          "name": "Merismopteria salinensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptodesma",
-          "authorship": "\"(J. Hall, 1883)\"",
+          "lineage": "Merismopteria",
+          "authorship": "Gonzalez 1975",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1653895"
+            "checklistbank": "txn:126373"
           },
           "children": []
         },
         {
-          "id": "SP_LEPTODESMA_ANATINUM_WHIDBORNE_1896",
-          "name": "\"Leptodesma anatinum\"",
+          "id": "SP_MERISMOPTERIA_MACROPTERA_MORRIS_1845",
+          "name": "Merismopteria macroptera",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptodesma",
-          "authorship": "\"Whidborne, 1896\"",
+          "lineage": "Merismopteria",
+          "authorship": "(Morris 1845)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1805928"
+            "checklistbank": "txn:130401"
           },
           "children": []
         },
         {
-          "id": "SP_LEPTODESMA_MATHERI_ELIAS_1957",
-          "name": "\"Leptodesma matheri\"",
+          "id": "SP_MERISMOPTERIA_IMBRICATA_DANA_1847",
+          "name": "Merismopteria imbricata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptodesma",
-          "authorship": "\"Elias, 1957\"",
+          "lineage": "Merismopteria",
+          "authorship": "(Dana 1847)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1869492"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEPTODESMA_OCCIDENTALE_GIRTY_1927",
-          "name": "\"Leptodesma occidentale\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptodesma",
-          "authorship": "\"Girty, 1927\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1891463"
+            "checklistbank": "txn:246870"
           },
           "children": []
         }
@@ -3832,121 +4257,124 @@
       "lineage": "pterineidae"
     },
     {
-      "id": "GENUS_LIMOPTERA",
-      "name": "\"Limoptera",
+      "id": "GENUS_LEIOPTERIA",
+      "name": "Leiopteria",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LIMOPTERA_MACROPTERA_CONRAD_1838",
-          "name": "\"Limoptera macroptera\"",
+          "id": "SP_LEIOPTERIA_ANGUSTICONCHA_GEMMELLARO_1896",
+          "name": "Leiopteria angusticoncha",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Limoptera",
-          "authorship": "\"(Conrad, 1838)\"",
+          "lineage": "Leiopteria",
+          "authorship": "Gemmellaro 1896",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1661833"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pterineidae"
-    },
-    {
-      "id": "GENUS_NEWSOMELLA",
-      "name": "\"Newsomella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEWSOMELLA_ULRICHI_FOERSTE_1909",
-          "name": "\"Newsomella ulrichi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Newsomella",
-          "authorship": "\"(Foerste, 1909)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662111"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pterineidae"
-    },
-    {
-      "id": "GENUS_PTERONITELLA",
-      "name": "\"Pteronitella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PTERONITELLA_RETROFLEXA_WAHLENBERG_1821",
-          "name": "\"Pteronitella retroflexa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pteronitella",
-          "authorship": "\"(Wahlenberg, 1821)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1663269"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pterineidae"
-    },
-    {
-      "id": "GENUS_BOLSOPTERIA",
-      "name": "\"Bolsopteria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BOLSOPTERIA_LENTILKA_KR_2005",
-          "name": "\"Bolsopteria lentilka\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bolsopteria",
-          "authorship": "\"Kříž, 2005\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861321"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pterineidae"
-    },
-    {
-      "id": "GENUS_NENNAPTERIA",
-      "name": "\"Nennapteria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NENNAPTERIA_IBERICOLA_KR_2005",
-          "name": "\"Nennapteria ibericola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Nennapteria",
-          "authorship": "\"Kříž, 2005\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861329"
+            "checklistbank": "txn:184737"
           },
           "children": []
         },
         {
-          "id": "SP_NENNAPTERIA_OLLICULA_KR_2005",
-          "name": "\"Nennapteria ollicula\"",
+          "id": "SP_LEIOPTERIA_CONSIMILIS_GEMMELLARO_1896",
+          "name": "Leiopteria consimilis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Nennapteria",
-          "authorship": "\"Kříž, 2005\"",
+          "lineage": "Leiopteria",
+          "authorship": "Gemmellaro 1896",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861330"
+            "checklistbank": "txn:184738"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_INFLATA_GEMMELLARO_1896",
+          "name": "Leiopteria inflata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "Gemmellaro 1896",
+          "sourceIds": {
+            "checklistbank": "txn:184739"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_CARRANDIBBIENSIS_DICKINS_1957",
+          "name": "Leiopteria carrandibbiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "Dickins 1957",
+          "sourceIds": {
+            "checklistbank": "txn:239100"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_VERRUCOSA_GEMMELLARO_1892",
+          "name": "Leiopteria verrucosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "(Gemmellaro 1892)",
+          "sourceIds": {
+            "checklistbank": "txn:184740"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_AUSTRALIS_ETHERIDGE_1898",
+          "name": "Leiopteria australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "Etheridge 1898",
+          "sourceIds": {
+            "checklistbank": "txn:248633"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_ELEGANS_DE_GREGORIO_1930",
+          "name": "Leiopteria elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "de Gregorio 1930",
+          "sourceIds": {
+            "checklistbank": "txn:280090"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_OPPORTUNA_BARRANDE_1881",
+          "name": "Leiopteria opportuna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "(Barrande 1881)",
+          "sourceIds": {
+            "checklistbank": "txn:384514"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LEIOPTERIA_RAFINESQUII_HALL_1883",
+          "name": "Leiopteria rafinesquii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiopteria",
+          "authorship": "Hall 1883",
+          "sourceIds": {
+            "checklistbank": "txn:472633"
           },
           "children": []
         }
@@ -3955,46 +4383,134 @@
       "lineage": "pterineidae"
     },
     {
-      "id": "GENUS_ACTINOPTERIA",
-      "name": "\"Actinopteria",
+      "id": "GENUS_PTERONITES",
+      "name": "Pteronites",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ACTINOPTERIA_DAKRYODES_KR_2005",
-          "name": "\"Actinopteria dakryodes\"",
+          "id": "SP_PTERONITES_ZHONGSHENGONGENSIS_LU_1986",
+          "name": "Pteronites zhongshengongensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinopteria",
-          "authorship": "\"Kříž, 2005\"",
+          "lineage": "Pteronites",
+          "authorship": "Lu 1986",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861331"
+            "checklistbank": "txn:192163"
           },
           "children": []
         },
         {
-          "id": "SP_ACTINOPTERIA_ISABELAE_KR_2005",
-          "name": "\"Actinopteria isabelae\"",
+          "id": "SP_PTERONITES_TIMANICUS_MASLENNIKOV_1935",
+          "name": "Pteronites timanicus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinopteria",
-          "authorship": "\"Kříž, 2005\"",
+          "lineage": "Pteronites",
+          "authorship": "(Maslennikov 1935)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861332"
+            "checklistbank": "txn:194427"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pterineidae"
+    },
+    {
+      "id": "GENUS_BARBOSAIA",
+      "name": "Barbosaia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BARBOSAIA_ANGULATA_MENDES_1952",
+          "name": "Barbosaia angulata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barbosaia",
+          "authorship": "Mendes 1952",
+          "sourceIds": {
+            "checklistbank": "txn:399070"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pterineidae"
+    },
+    {
+      "id": "GENUS_ASSELBERGHSIA",
+      "name": "Asselberghsia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASSELBERGHSIA_OBSOLETA_GOLDFUSS_1826",
+          "name": "Asselberghsia obsoleta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asselberghsia",
+          "authorship": "(Goldfuss 1826)",
+          "sourceIds": {
+            "checklistbank": "txn:478526"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pterineidae"
+    },
+    {
+      "id": "GENUS_PALAEOPINNA",
+      "name": "Palaeopinna",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEOPINNA_FLABELLUM_HALL_1884",
+          "name": "Palaeopinna flabellum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeopinna",
+          "authorship": "Hall 1884",
+          "sourceIds": {
+            "checklistbank": "txn:482218"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pterineidae"
+    },
+    {
+      "id": "GENUS_DOLICHOPTERON",
+      "name": "Dolichopteron",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DOLICHOPTERON_OBLIQUUS_MAURER_1886",
+          "name": "Dolichopteron obliquus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolichopteron",
+          "authorship": "Maurer 1886",
+          "sourceIds": {
+            "checklistbank": "txn:515528"
           },
           "children": []
         },
         {
-          "id": "SP_ACTINOPTERIA_HOMERIANA_KR_1996",
-          "name": "\"Actinopteria homeriana\"",
+          "id": "SP_DOLICHOPTERON_VESPERTILIO_MAURER_1886",
+          "name": "Dolichopteron vespertilio",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinopteria",
-          "authorship": "\"Kříž, 1996\"",
+          "lineage": "Dolichopteron",
+          "authorship": "Maurer 1886",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1861334"
+            "checklistbank": "txn:515531"
           },
           "children": []
         }
@@ -4004,7 +4520,7 @@
     }
   ],
   "genusCount": 37,
-  "speciesCount": 228,
+  "speciesCount": 264,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4012,6 +4528,7 @@
       "classKey": 137,
       "orderKey": 9485611,
       "familyKey": 3248074
-    }
+    },
+    "checklistbank": "txn:61996"
   }
 }

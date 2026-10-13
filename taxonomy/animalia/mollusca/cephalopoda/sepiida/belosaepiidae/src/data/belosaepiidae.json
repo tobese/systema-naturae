@@ -51,6 +51,19 @@
             ]
           },
           "authorityIds": "col:CPWLG"
+        },
+        {
+          "id": "SP_AEGYPTOSAEPIA_LUGERI_KO_K_ET_AL_2013",
+          "name": "Aegyptosaepia lugeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aegyptosaepia",
+          "authorship": "Košťák et al. 2013",
+          "sourceIds": {
+            "checklistbank": "txn:327734"
+          },
+          "children": []
         }
       ]
     },
@@ -90,9 +103,11 @@
             "col": [
               "8YLDR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571840"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571840"
+            ]
           },
-          "authorityIds": "col:8YLDR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571840,col:8YLDR",
           "authorship": "(Deshayes, 1835)"
         },
         {
@@ -164,9 +179,11 @@
             "col": [
               "8YLDV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571839"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571839"
+            ]
           },
-          "authorityIds": "col:8YLDV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571839,col:8YLDV",
           "authorship": "(Blainville, 1825)"
         },
         {
@@ -184,9 +201,11 @@
             "col": [
               "8YLDW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571841"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571841"
+            ]
           },
-          "authorityIds": "col:8YLDW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571841,col:8YLDW",
           "authorship": "(Watelet, 1851)"
         },
         {
@@ -306,9 +325,11 @@
             "col": [
               "8YP6Y"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571843"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571843"
+            ]
           },
-          "authorityIds": "col:8YP6Y",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571843,col:8YP6Y",
           "authorship": "(Blainville, 1827)"
         }
       ]
@@ -338,80 +359,10 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Belosaepiidae"
-    },
-    {
-      "id": "GENUS_BELOSAEPIA",
-      "name": "\"Belosaepia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BELOSAEPIA_SEPIOIDEA_BLAINVILLE_1825",
-          "name": "\"Belosaepia sepioidea\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Belosaepia",
-          "authorship": "\"(Blainville, 1825)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571839"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BELOSAEPIA_BLAINVILLII_DESHAYES_1835",
-          "name": "\"Belosaepia blainvillii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Belosaepia",
-          "authorship": "\"(Deshayes, 1835)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571840"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BELOSAEPIA_TRICARINATA_WATELET_1851",
-          "name": "\"Belosaepia tricarinata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Belosaepia",
-          "authorship": "\"(Watelet, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571841"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "belosaepiidae"
-    },
-    {
-      "id": "GENUS_STENOSEPIA",
-      "name": "\"Stenosepia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STENOSEPIA_COMPRESSA_BLAINVILLE_1827",
-          "name": "\"Stenosepia compressa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenosepia",
-          "authorship": "\"(Blainville, 1827)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571843"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "belosaepiidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 21,
+  "genusCount": 5,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -419,6 +370,7 @@
       "classKey": 136,
       "orderKey": 989,
       "familyKey": 8611174
-    }
+    },
+    "checklistbank": "txn:327733"
   }
 }

@@ -291,7 +291,8 @@
           "sourceIds": {
             "col": [
               "D53HV"
-            ]
+            ],
+            "checklistbank": "txn:435540"
           },
           "authorityIds": "col:D53HV"
         },
@@ -392,14 +393,15 @@
           "authorship": "(Bleeker, 1863)"
         },
         {
-          "id": "SP_MORINGUA_SP",
-          "name": "Moringua sp.",
+          "id": "SP_MORINGUA_FISSURA_STINTON_AND_NOLF_1970",
+          "name": "Moringua fissura",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Moringua",
+          "authorship": "Stinton and Nolf 1970",
           "sourceIds": {
-            "checklistbank": "1156491"
+            "checklistbank": "txn:437547"
           },
           "children": []
         }
@@ -480,20 +482,6 @@
           },
           "authorityIds": "col:6S8DL,itis:635484",
           "commonName": "Smalleye Spaghetti-eel"
-        },
-        {
-          "id": "SP_NEOCONGER_ANAELISAE_TOMMASI_1950",
-          "name": "Neoconger anaelisae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neoconger",
-          "authorship": "(Tommasi, 1950)",
-          "sourceIds": {
-            "checklistbank": "83904"
-          },
-          "children": [],
-          "uuid": "b84d96a4-bfe8-5c6-bbd-d45a56b169b320"
         },
         {
           "id": "SP_NEOCONGER_HYGOMI_SMITH_2024",
@@ -639,13 +627,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "moringuidae"
+    },
+    {
+      "id": "GENUS_DEUTSCHENCHELYS",
+      "name": "Deutschenchelys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DEUTSCHENCHELYS_MICKLICHI_PROKOFIEV_2012",
+          "name": "Deutschenchelys micklichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deutschenchelys",
+          "authorship": "Prokofiev 2012",
+          "sourceIds": {
+            "checklistbank": "txn:364641"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "moringuidae"
     }
   ],
   "speciesCount": 33,
   "appSlug": "moringuidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

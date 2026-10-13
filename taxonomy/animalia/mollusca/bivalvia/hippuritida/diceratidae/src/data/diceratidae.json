@@ -262,9 +262,11 @@
             "col": [
               "7R2SY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332805"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332805"
+            ]
           },
-          "authorityIds": "col:7R2SY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332805,col:7R2SY",
           "authorship": "(Karczewski, 1969)"
         },
         {
@@ -282,9 +284,11 @@
             "col": [
               "7R2SZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332806"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332806"
+            ]
           },
-          "authorityIds": "col:7R2SZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332806,col:7R2SZ",
           "authorship": "(Karczewski, 1969)"
         },
         {
@@ -316,9 +320,11 @@
             "col": [
               "7R2T3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332807"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332807"
+            ]
           },
-          "authorityIds": "col:7R2T3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332807,col:7R2T3",
           "authorship": "(Karczewski, 1969)"
         },
         {
@@ -396,9 +402,11 @@
             "col": [
               "7R2T9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332809"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332809"
+            ]
           },
-          "authorityIds": "col:7R2T9",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332809,col:7R2T9",
           "authorship": "(Karczewski, 1969)"
         },
         {
@@ -416,9 +424,11 @@
             "col": [
               "7R2TC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332811"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332811"
+            ]
           },
-          "authorityIds": "col:7R2TC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332811,col:7R2TC",
           "authorship": "(Karczewski, 1969)"
         },
         {
@@ -476,9 +486,11 @@
             "col": [
               "7R2TG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332812"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332812"
+            ]
           },
-          "authorityIds": "col:7R2TG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332812,col:7R2TG",
           "authorship": "(Karczewski, 1969)"
         },
         {
@@ -598,18 +610,6 @@
           },
           "children": [],
           "uuid": "6a0faede-3c93-5b0-afa-0fdaf296423fbc"
-        },
-        {
-          "id": "SP_DICERAS_ARIETINUM",
-          "name": "Diceras arietinum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diceras",
-          "sourceIds": {
-            "checklistbank": "1041218"
-          },
-          "children": []
         }
       ]
     },
@@ -675,9 +675,11 @@
             "col": [
               "7FDLN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:873825"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:873825"
+            ]
           },
-          "authorityIds": "col:7FDLN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:873825,col:7FDLN",
           "authorship": "(F.-J. Pictet & Campiche, 1868)"
         },
         {
@@ -714,20 +716,98 @@
       ]
     },
     {
-      "id": "GENUS_VALLETIA",
-      "name": "\"Valletia",
+      "id": "GENUS_MACRODICERAS",
+      "name": "Macrodiceras",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_VALLETIA_GERMANI_F_J_PICTET_CAMPICHE_1868",
-          "name": "\"Valletia germani\"",
+          "id": "SP_MACRODICERAS_LONGUM_KARCZEWSKI_1969",
+          "name": "Macrodiceras longum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Valletia",
-          "authorship": "\"(F.-J. Pictet & Campiche, 1868)\"",
+          "lineage": "Macrodiceras",
+          "authorship": "Karczewski 1969",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:873825"
+            "checklistbank": "txn:171880"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACRODICERAS_BALAKLAVENSE_PCELINCEV_1959",
+          "name": "Macrodiceras balaklavense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodiceras",
+          "authorship": "(Pcelincev 1959)",
+          "sourceIds": {
+            "checklistbank": "txn:171881"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACRODICERAS_KOZLOWSKII_KARCZEWSKI_1969",
+          "name": "Macrodiceras kozlowskii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodiceras",
+          "authorship": "Karczewski 1969",
+          "sourceIds": {
+            "checklistbank": "txn:171883"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACRODICERAS_MAGNUM_KARCZEWSKI_1969",
+          "name": "Macrodiceras magnum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodiceras",
+          "authorship": "Karczewski 1969",
+          "sourceIds": {
+            "checklistbank": "txn:171884"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACRODICERAS_PCELINCEVI_KARCZEWSKI_1969",
+          "name": "Macrodiceras pcelincevi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodiceras",
+          "authorship": "Karczewski 1969",
+          "sourceIds": {
+            "checklistbank": "txn:171885"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACRODICERAS_POLONICUM_KARCZEWSKI_1969",
+          "name": "Macrodiceras polonicum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodiceras",
+          "authorship": "Karczewski 1969",
+          "sourceIds": {
+            "checklistbank": "txn:171886"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MACRODICERAS_SPIRALE_KARCZEWSKI_1969",
+          "name": "Macrodiceras spirale",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macrodiceras",
+          "authorship": "Karczewski 1969",
+          "sourceIds": {
+            "checklistbank": "txn:171887"
           },
           "children": []
         }
@@ -736,85 +816,33 @@
       "lineage": "diceratidae"
     },
     {
-      "id": "GENUS_DICERAS",
-      "name": "\"Diceras",
+      "id": "GENUS_EODICERAS",
+      "name": "Eodiceras",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_DICERAS_KOZLOWSKII_KARCZEWSKI_1969",
-          "name": "\"Diceras kozlowskii\"",
+          "id": "SP_EODICERAS_PLANUM_KARCZEWSKI_1969",
+          "name": "Eodiceras planum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Diceras",
-          "authorship": "\"(Karczewski, 1969)\"",
+          "lineage": "Eodiceras",
+          "authorship": "Karczewski 1969",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332805"
+            "checklistbank": "txn:171888"
           },
           "children": []
         },
         {
-          "id": "SP_DICERAS_LONGUM_KARCZEWSKI_1969",
-          "name": "\"Diceras longum\"",
+          "id": "SP_EODICERAS_SUBEXIMIUM_KARCZEWSKI_1969",
+          "name": "Eodiceras subeximium",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Diceras",
-          "authorship": "\"(Karczewski, 1969)\"",
+          "lineage": "Eodiceras",
+          "authorship": "Karczewski 1969",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332806"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DICERAS_MAGNUM_KARCZEWSKI_1969",
-          "name": "\"Diceras magnum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diceras",
-          "authorship": "\"(Karczewski, 1969)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332807"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DICERAS_PCELINCEVI_KARCZEWSKI_1969",
-          "name": "\"Diceras pcelincevi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diceras",
-          "authorship": "\"(Karczewski, 1969)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332809"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DICERAS_POLONICUM_KARCZEWSKI_1969",
-          "name": "\"Diceras polonicum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diceras",
-          "authorship": "\"(Karczewski, 1969)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332811"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DICERAS_SPIRALE_KARCZEWSKI_1969",
-          "name": "\"Diceras spirale\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Diceras",
-          "authorship": "\"(Karczewski, 1969)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332812"
+            "checklistbank": "txn:171889"
           },
           "children": []
         }
@@ -824,7 +852,7 @@
     }
   ],
   "genusCount": 4,
-  "speciesCount": 45,
+  "speciesCount": 46,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -832,6 +860,7 @@
       "classKey": 137,
       "orderKey": 9280936,
       "familyKey": 3247824
-    }
+    },
+    "checklistbank": "txn:60115"
   }
 }

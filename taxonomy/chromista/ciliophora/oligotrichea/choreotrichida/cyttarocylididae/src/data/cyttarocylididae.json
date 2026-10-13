@@ -23,10 +23,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8401791,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:723504"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:723504"
+            ]
           },
           "uuid": "cc7b308e-5ec4-52c-958-ac96e93c6fa317",
-          "authorityIds": "gbif:8401791",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:723504,gbif:8401791",
           "authorship": "(Fol, 1881) Bachy et al., 2012",
           "children": []
         },
@@ -231,32 +233,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyttarocylididae"
-    },
-    {
-      "id": "GENUS_CYTTAROCYLIS",
-      "name": "\"Cyttarocylis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CYTTAROCYLIS_AMPULLA_FOL_1881_BACHY_ET_AL_2012",
-          "name": "\"Cyttarocylis ampulla\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cyttarocylis",
-          "authorship": "\"(Fol, 1881) Bachy et al., 2012\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:723504"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cyttarocylididae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 15,
+  "genusCount": 2,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

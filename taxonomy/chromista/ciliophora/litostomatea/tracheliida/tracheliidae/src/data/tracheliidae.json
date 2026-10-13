@@ -23,10 +23,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7772826,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426594"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426594"
+            ]
           },
           "uuid": "4b201253-d0d9-56a-b28-55fae761016d15",
-          "authorityIds": "gbif:7772826",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426594,gbif:7772826",
           "authorship": "(O.F. Müller, 1786) Dujardin, 1840",
           "children": []
         },
@@ -42,10 +44,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7418637,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426595"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426595"
+            ]
           },
           "uuid": "edc9ce7d-8621-5c9-baf-aea4154f791257",
-          "authorityIds": "gbif:7418637",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426595,gbif:7418637",
           "authorship": "Claparède & Lachmann, 1859",
           "children": []
         },
@@ -66,10 +70,12 @@
             "itis": [
               "46295"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426600"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426600"
+            ]
           },
           "uuid": "d63a2329-faf5-543-bb6-9b08558a8a64dc",
-          "authorityIds": "gbif:8240921,itis:46295",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426600,gbif:8240921,itis:46295",
           "authorship": "(Stokes, 1886) Kahl, 1931",
           "children": []
         },
@@ -298,10 +304,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7462915,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426604"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426604"
+            ]
           },
           "uuid": "136c8704-264c-5bb-bed-14801dbf50f73e",
-          "authorityIds": "gbif:7462915",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426604,gbif:7462915",
           "authorship": "Sahrhage, 1915",
           "children": []
         },
@@ -533,80 +541,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tracheliidae"
-    },
-    {
-      "id": "GENUS_DILEPTUS",
-      "name": "\"Dileptus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DILEPTUS_BINUCLEATUS_O_F_M_LLER_1786_DUJARDIN_1840",
-          "name": "\"Dileptus binucleatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dileptus",
-          "authorship": "\"(O.F. Müller, 1786) Dujardin, 1840\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426594"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DILEPTUS_CYGNIS_CLAPAR_DE_LACHMANN_1859",
-          "name": "\"Dileptus cygnis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dileptus",
-          "authorship": "\"Claparède & Lachmann, 1859\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426595"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DILEPTUS_MONILATUS_STOKES_1886_KAHL_1931",
-          "name": "\"Dileptus monilatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dileptus",
-          "authorship": "\"(Stokes, 1886) Kahl, 1931\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426600"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tracheliidae"
-    },
-    {
-      "id": "GENUS_TRACHELIUS",
-      "name": "\"Trachelius",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRACHELIUS_GUTTA_SAHRHAGE_1915",
-          "name": "\"Trachelius gutta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trachelius",
-          "authorship": "\"Sahrhage, 1915\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426604"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tracheliidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 34,
+  "genusCount": 9,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

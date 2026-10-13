@@ -104,7 +104,8 @@
             ],
             "checklistbank": "180671"
           },
-          "authorityIds": "col:4WV2S,itis:562929,wikidata:Q777185"
+          "authorityIds": "col:4WV2S,itis:562929,wikidata:Q777185",
+          "authorship": "(Linnaeus, 1758)"
         },
         {
           "id": "SERICULUS_BAKERI",
@@ -133,7 +134,8 @@
             ],
             "checklistbank": "180672"
           },
-          "authorityIds": "col:4WV2T,itis:562930,wikidata:Q1316266"
+          "authorityIds": "col:4WV2T,itis:562930,wikidata:Q1316266",
+          "authorship": "(Chapin, 1929)"
         },
         {
           "id": "SP_SERICULUS_ARDENS_D_ALBERTIS_SALVADORI_1879",
@@ -634,7 +636,8 @@
             ],
             "checklistbank": "180657"
           },
-          "authorityIds": "col:BCDZ,itis:558482,wikidata:Q604182"
+          "authorityIds": "col:BCDZ,itis:558482,wikidata:Q604182",
+          "authorship": "(Gray, 1858)"
         },
         {
           "id": "AILUROEDUS_BUCCoides",
@@ -820,28 +823,6 @@
           },
           "authorityIds": "col:DD9K6,itis:1260195",
           "commonName": "Huon Catbird"
-        },
-        {
-          "id": "SP_AILUROEDUS_MELANOCEPHALUS_E_P_RAMSAY_1883",
-          "name": "Ailuroedus melanocephalus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "authorship": "E. P. Ramsay, 1883",
-          "children": [],
-          "lineage": "Bowerbirds",
-          "uuid": "a57ae545-54e6-5e6-b4d-a53d019cd1dbb2",
-          "sourceIds": {
-            "itis": [
-              "1260196"
-            ],
-            "col": [
-              "DD9K7"
-            ],
-            "checklistbank": "180654"
-          },
-          "authorityIds": "col:DD9K7,itis:1260196",
-          "commonName": "Black-capped Catbird"
         }
       ]
     },
@@ -941,9 +922,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ptilonorhynchidae"
+    },
+    {
+      "id": "GENUS_SERICULOIDES",
+      "name": "Sericuloides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SERICULOIDES_MARYNGUYENAE_NGUYEN_2023",
+          "name": "Sericuloides marynguyenae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sericuloides",
+          "authorship": "Nguyen 2023",
+          "sourceIds": {
+            "checklistbank": "txn:479032"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ptilonorhynchidae"
     }
   ],
-  "genusCount": 10,
+  "genusCount": 11,
   "speciesCount": 34,
   "sourceIds": {
     "gbif": {

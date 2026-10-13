@@ -746,10 +746,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7787109,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172368"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:172368"
+            ]
           },
           "uuid": "0fba3de9-fa26-571-957-f05a0a1fa7c9a3",
-          "authorityIds": "gbif:7787109",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:172368,gbif:7787109",
           "authorship": "Ehrenberg, 1833",
           "children": []
         },
@@ -1421,32 +1423,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "discophryidae"
-    },
-    {
-      "id": "GENUS_DISCOPHRYA",
-      "name": "\"Discophrya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DISCOPHRYA_LYNGBYEI_EHRENBERG_1833",
-          "name": "\"Discophrya lyngbyei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Discophrya",
-          "authorship": "\"Ehrenberg, 1833\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172368"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "discophryidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 66,
+  "genusCount": 6,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

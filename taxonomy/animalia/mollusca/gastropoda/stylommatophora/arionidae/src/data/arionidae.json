@@ -1633,27 +1633,6 @@
       "lineage": "Geomalacus",
       "children": [
         {
-          "id": "SP_GEOMALACUS_ANGUIFORMIS",
-          "name": "Geomalacus anguiformis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Geomalacus",
-          "subspeciesCount": 0,
-          "description": "Geomalacus anguiformis is a species of air-breathing land slug, a terrestrial pulmonate gastropod mollusc in the family Arionidae, the round back slugs.",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Geomalacus anguiformis",
-          "children": [],
-          "uuid": "897ebf6b-2b61-5cc-874-f972d8a506fd88",
-          "sourceIds": {
-            "col": [
-              "3FQ4V"
-            ],
-            "checklistbank": "290661"
-          },
-          "authorityIds": "col:3FQ4V",
-          "authorship": "(Morelet, 1845)"
-        },
-        {
           "id": "SP_GEOMALACUS_INDIFFERENS",
           "name": "Geomalacus indifferens",
           "rank": "SPECIES",
@@ -1668,9 +1647,11 @@
             "col": [
               "7RDQK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338572"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1338572"
+            ]
           },
-          "authorityIds": "col:7RDQK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1338572,col:7RDQK",
           "authorship": "(O. Boettger, 1884)"
         },
         {
@@ -1839,18 +1820,6 @@
           "lineage": "Geomalacus",
           "sourceIds": {
             "checklistbank": "101349"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GEOMALACUS_OLIVEIRAE",
-          "name": "Geomalacus oliveirae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Geomalacus",
-          "sourceIds": {
-            "checklistbank": "1491413"
           },
           "children": []
         },
@@ -2746,19 +2715,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1050241"
           },
           "children": []
-        },
-        {
-          "id": "SP_GEOMALACUS_INDIFFERENS_O_BOETTGER_1884",
-          "name": "\"Geomalacus indifferens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Geomalacus",
-          "authorship": "\"(O. Boettger, 1884)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1338572"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2766,7 +2722,7 @@
     }
   ],
   "genusCount": 18,
-  "speciesCount": 165,
+  "speciesCount": 162,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

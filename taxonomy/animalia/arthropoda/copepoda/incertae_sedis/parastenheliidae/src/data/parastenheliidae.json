@@ -117,9 +117,11 @@
             "col": [
               "762JT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:363636"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:363636"
+            ]
           },
-          "authorityIds": "col:762JT"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:363636,col:762JT"
         },
         {
           "id": "SP_PARASTENHELIA_LITTORALIS_SARS_G_O_1911",
@@ -1103,28 +1105,6 @@
       "lineage": "parastenheliidae"
     },
     {
-      "id": "GENUS_HARPACTICUS",
-      "name": "Harpacticus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HARPACTICUS_SPINOSUS_FISCHER_1860",
-          "name": "Harpacticus spinosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Harpacticus",
-          "authorship": "Fischer, 1860",
-          "sourceIds": {
-            "checklistbank": "1022367"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "parastenheliidae"
-    },
-    {
       "id": "GENUS_PARASTENHELIA",
       "name": "\"Parastenhelia",
       "rank": "GENUS",
@@ -1139,19 +1119,6 @@
           "authorship": "\"Wells, 1963\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:116895"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARASTENHELIA_FORFICULA_G_O_SARS_1911",
-          "name": "\"Parastenhelia forficula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parastenhelia",
-          "authorship": "\"G. O. Sars, 1911\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:363636"
           },
           "children": []
         },
@@ -1186,11 +1153,11 @@
       "lineage": "parastenheliidae"
     }
   ],
-  "speciesCount": 67,
+  "speciesCount": 65,
   "appSlug": "parastenheliidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 14,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

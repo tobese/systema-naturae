@@ -82,8 +82,11 @@
           "uuid": "76a40456-933a-50e-956-2d98742fea4663",
           "authorship": "Holthuis, 1973",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:515220"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:515220"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:515220"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -137,27 +140,6 @@
           "authorityIds": "col:8VKZG,itis:1173180"
         },
         {
-          "id": "SP_PARHIPPOLYTE_ANTIGUENSIS_CHACE_1972",
-          "name": "Parhippolyte antiguensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Parhippolyte",
-          "authorship": "(Chace, 1972)",
-          "children": [],
-          "uuid": "617b195a-d9cb-5dc-b34-cc6f329d91aaaa",
-          "sourceIds": {
-            "col": [
-              "8VLHR"
-            ],
-            "itis": [
-              "1173615"
-            ],
-            "checklistbank": "1155048"
-          },
-          "authorityIds": "col:8VLHR,itis:1173615"
-        },
-        {
           "id": "SP_PARHIPPOLYTE_MISTICA_J_CLARK_1989",
           "name": "Parhippolyte mistica",
           "rank": "SPECIES",
@@ -194,9 +176,11 @@
             "itis": [
               "1173183"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:515210"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:515210"
+            ]
           },
-          "authorityIds": "col:8VKZJ,itis:1173183",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:515210,col:8VKZJ,itis:1173183",
           "commonName": "Sterrer’s cave shrimp"
         },
         {
@@ -384,57 +368,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "barbouriidae"
-    },
-    {
-      "id": "GENUS_PARHIPPOLYTE",
-      "name": "\"Parhippolyte",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARHIPPOLYTE_STERRERI_HART_MANNING_1981",
-          "name": "\"Parhippolyte sterreri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parhippolyte",
-          "authorship": "\"(Hart & Manning, 1981)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:515210"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "barbouriidae"
-    },
-    {
-      "id": "GENUS_CALLIASMATA",
-      "name": "\"Calliasmata",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CALLIASMATA_PHOLIDOTA_HOLTHUIS_1973",
-          "name": "\"Calliasmata pholidota\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Calliasmata",
-          "authorship": "\"Holthuis, 1973\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:515220"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "barbouriidae"
     }
   ],
-  "speciesCount": 21,
+  "speciesCount": 18,
   "appSlug": "barbouriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 8,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -21,7 +21,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "211a419f-37d6-5ca-872-f2848c771380c0"
+          "uuid": "211a419f-37d6-5ca-872-f2848c771380c0",
+          "authorship": "Johnson 1964",
+          "sourceIds": {
+            "checklistbank": "txn:255047"
+          }
         },
         {
           "id": "SP_PEYSSONNELIA_ARMORICA",
@@ -90,7 +94,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "ca5fdae9-72dc-5eb-8dc-d1e434045066b1"
+          "uuid": "ca5fdae9-72dc-5eb-8dc-d1e434045066b1",
+          "authorship": "Badve and Kundal 1986",
+          "sourceIds": {
+            "checklistbank": "txn:428499"
+          }
         },
         {
           "id": "SP_PEYSSONNELIA_BOERGESENII",
@@ -179,8 +187,11 @@
           "uuid": "3f0c8163-90aa-59a-a30-306325a80c7434",
           "authorship": "Okamura, 1899",
           "sourceIds": {
-            "checklistbank": "339600"
-          }
+            "checklistbank": [
+              "339600"
+            ]
+          },
+          "authorityIds": "checklistbank:339600"
         },
         {
           "id": "SP_PEYSSONNELIA_CLARIONENSIS",
@@ -1474,9 +1485,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Peyssonnelia",
           "sourceIds": {
-            "checklistbank": "339595"
+            "checklistbank": [
+              "339595"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:339595"
         }
       ]
     },
@@ -1817,7 +1831,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Polystrata",
           "children": [],
-          "uuid": "e1cb8041-46c7-50f-8be-3305c3b5173645"
+          "uuid": "e1cb8041-46c7-50f-8be-3305c3b5173645",
+          "authorship": "(Pfender 1936)",
+          "sourceIds": {
+            "checklistbank": "txn:104325"
+          }
         },
         {
           "id": "SP_POLYSTRATA_SP",
@@ -1918,22 +1936,6 @@
       "description": "Metapeyssonnelia — a genus of florideophyceaes.",
       "lineage": "Metapeyssonnelia",
       "children": [
-        {
-          "id": "SP_METAPEYSSONNELIA_FELDMANNII",
-          "name": "Metapeyssonnelia feldmannii",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Metapeyssonnelia",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "a2193a41-fea1-5e1-91e-b50e1f57fca4c3",
-          "authorship": "Boudouresque, Coppejans & Marcot",
-          "sourceIds": {
-            "checklistbank": "65272"
-          }
-        },
         {
           "id": "SP_METAPEYSSONNELIA_TANGERINA",
           "name": "Metapeyssonnelia tangerina",
@@ -2535,18 +2537,6 @@
             "checklistbank": "2752742"
           },
           "children": []
-        },
-        {
-          "id": "SP_SONDEROPHYCUS_CAULIFERUS",
-          "name": "Sonderophycus cauliferus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sonderophycus",
-          "sourceIds": {
-            "checklistbank": "339600"
-          },
-          "children": []
         }
       ]
     },
@@ -2926,20 +2916,6 @@
           "authorship": "(Maggs & L.M.Irvine) Pestana, Lyra, Cassano & J.M.C.Nunes, 2021",
           "sourceIds": {
             "checklistbank": "1009611"
-          }
-        },
-        {
-          "id": "SP_OLOKUNIA_JAPONICA",
-          "name": "Olokunia japonica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Olokunia",
-          "children": [],
-          "uuid": "f8fbdc2d-4965-508-aa7-9d22ac7089caae",
-          "authorship": "(Segawa) Pestana, Lyra, Cassano & J.M.C.Nunes, 2021",
-          "sourceIds": {
-            "checklistbank": "339595"
           }
         },
         {
@@ -3609,7 +3585,7 @@
     }
   ],
   "genusCount": 33,
-  "speciesCount": 243,
+  "speciesCount": 240,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

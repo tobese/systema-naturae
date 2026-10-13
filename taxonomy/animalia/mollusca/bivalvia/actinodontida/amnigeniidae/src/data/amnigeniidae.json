@@ -318,6 +318,19 @@
           },
           "children": [],
           "uuid": "0f2e25e0-55ba-5c2-bd0-705543b133a672"
+        },
+        {
+          "id": "SP_TAIMYRIA_XINGNINGENSIS_ZHANG_1977",
+          "name": "Taimyria xingningensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taimyria",
+          "authorship": "Zhang 1977",
+          "sourceIds": {
+            "checklistbank": "txn:174608"
+          },
+          "children": []
         }
       ]
     },
@@ -406,9 +419,11 @@
             "col": [
               "B7SZT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1645273"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1645273"
+            ]
           },
-          "authorityIds": "col:B7SZT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1645273,col:B7SZT",
           "authorship": "(Vanuxem, 1842)"
         },
         {
@@ -450,8 +465,11 @@
           "uuid": "9046280a-79bf-5a2-a84-e26e388ab74d48",
           "authorship": "(W. H. Baily, 1861)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1645277"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1645277"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1645277"
         },
         {
           "id": "SP_ARCHANODON_RHENANA_BEUSHAUSEN_1892",
@@ -500,54 +518,10 @@
           "authorityIds": "col:B7PNF"
         }
       ]
-    },
-    {
-      "id": "GENUS_AMNIGENIA",
-      "name": "\"Amnigenia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_AMNIGENIA_CATSKILLENSIS_VANUXEM_1842",
-          "name": "\"Amnigenia catskillensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Amnigenia",
-          "authorship": "\"(Vanuxem, 1842)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1645273"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "amnigeniidae"
-    },
-    {
-      "id": "GENUS_ARCHANODON",
-      "name": "\"Archanodon",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ARCHANODON_JUKESII_W_H_BAILY_1861",
-          "name": "\"Archanodon jukesii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Archanodon",
-          "authorship": "\"(W. H. Baily, 1861)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1645277"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "amnigeniidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 28,
+  "genusCount": 5,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -555,6 +529,7 @@
       "classKey": 137,
       "orderKey": 11114931,
       "familyKey": 7657686
-    }
+    },
+    "checklistbank": "txn:244310"
   }
 }

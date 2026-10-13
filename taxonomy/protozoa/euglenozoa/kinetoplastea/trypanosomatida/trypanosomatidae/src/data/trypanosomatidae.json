@@ -3517,10 +3517,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8565445
+            "gbif": 8565445,
+            "checklistbank": "txn:228308"
           },
           "uuid": "f58a1165-d0a0-535-b89-770b1d5f64eb6c",
-          "authorityIds": "gbif:8565445"
+          "authorityIds": "gbif:8565445",
+          "authorship": "Poinar 2008"
         }
       ]
     },
@@ -3902,9 +3904,12 @@
           "lineage": "Herpetomonas",
           "authorship": "(F.G.Wallace, S.R.Todd & Wm.E.Rogers, 1965) M.M.G.Teixeira & E.P.Camargo, 2012",
           "sourceIds": {
-            "checklistbank": "1227078"
+            "checklistbank": [
+              "1227078"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:1227078"
         },
         {
           "id": "SP_HERPETOMONAS_SAMUELII_A_L_M_CARVALHO_1973_M_M_G_TEIXEIRA_E_P_CAMARGO_2012",
@@ -3915,7 +3920,22 @@
           "lineage": "Herpetomonas",
           "authorship": "(A.L.M.Carvalho, 1973) M.M.G.Teixeira & E.P.Camargo, 2012",
           "sourceIds": {
-            "checklistbank": "1227083"
+            "checklistbank": [
+              "1227083"
+            ]
+          },
+          "children": [],
+          "authorityIds": "checklistbank:1227083"
+        },
+        {
+          "id": "SP_HERPETOMONAS_MARIADEANEI",
+          "name": "Herpetomonas mariadeanei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Herpetomonas",
+          "sourceIds": {
+            "checklistbank": "407221"
           },
           "children": []
         }
@@ -4246,30 +4266,6 @@
           "authorship": "Podlipaev, Malysheva & Kolesnikov 1991",
           "sourceIds": {
             "checklistbank": "1101367"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEPTOMONAS_COSTORIS",
-          "name": "Leptomonas costoris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leptomonas",
-          "sourceIds": {
-            "checklistbank": "1227078"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LEPTOMONAS_SAMUELI",
-          "name": "Leptomonas samueli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leptomonas",
-          "sourceIds": {
-            "checklistbank": "1227083"
           },
           "children": []
         }
@@ -6480,6 +6476,18 @@
             "checklistbank": "3349237"
           },
           "children": []
+        },
+        {
+          "id": "SP_SERGEIA_PODLIPAEVI",
+          "name": "Sergeia podlipaevi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sergeia",
+          "sourceIds": {
+            "checklistbank": "365851"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6682,6 +6690,18 @@
             "checklistbank": "3041300"
           },
           "children": []
+        },
+        {
+          "id": "SP_WALLACEMONAS_RAVINIAE",
+          "name": "Wallacemonas raviniae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Wallacemonas",
+          "sourceIds": {
+            "checklistbank": "367618"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6735,6 +6755,30 @@
           "lineage": "Trypanozoon",
           "sourceIds": {
             "checklistbank": "2689989"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRYPANOZOON_BRUCEI",
+          "name": "Trypanozoon brucei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trypanozoon",
+          "sourceIds": {
+            "checklistbank": "367469"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRYPANOZOON_EQUIPERDUM",
+          "name": "Trypanozoon equiperdum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trypanozoon",
+          "sourceIds": {
+            "checklistbank": "367478"
           },
           "children": []
         }
@@ -7294,10 +7338,121 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trypanosomatidae"
+    },
+    {
+      "id": "GENUS_DUTTONELLA",
+      "name": "Duttonella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DUTTONELLA_VIVAX",
+          "name": "Duttonella vivax",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Duttonella",
+          "sourceIds": {
+            "checklistbank": "362558"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trypanosomatidae"
+    },
+    {
+      "id": "GENUS_NANNOMONAS",
+      "name": "Nannomonas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NANNOMONAS_CONGOLENSE",
+          "name": "Nannomonas congolense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannomonas",
+          "sourceIds": {
+            "checklistbank": "364737"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NANNOMONAS_GODFREYI",
+          "name": "Nannomonas godfreyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannomonas",
+          "sourceIds": {
+            "checklistbank": "364746"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NANNOMONAS_SIMIAE",
+          "name": "Nannomonas simiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nannomonas",
+          "sourceIds": {
+            "checklistbank": "364755"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trypanosomatidae"
+    },
+    {
+      "id": "GENUS_SCHIZOTRYPANUM",
+      "name": "Schizotrypanum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCHIZOTRYPANUM_CRUZI",
+          "name": "Schizotrypanum cruzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizotrypanum",
+          "sourceIds": {
+            "checklistbank": "365802"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SCHIZOTRYPANUM_DIONISII",
+          "name": "Schizotrypanum dionisii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizotrypanum",
+          "sourceIds": {
+            "checklistbank": "365811"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SCHIZOTRYPANUM_ERNEYI",
+          "name": "Schizotrypanum erneyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schizotrypanum",
+          "sourceIds": {
+            "checklistbank": "365820"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trypanosomatidae"
     }
   ],
-  "genusCount": 42,
-  "speciesCount": 506,
+  "genusCount": 45,
+  "speciesCount": 516,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,

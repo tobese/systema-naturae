@@ -113,9 +113,11 @@
             "itis": [
               "1205637"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1648963"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1648963"
+            ]
           },
-          "authorityIds": "col:BLGJF,itis:1205637",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1648963,col:BLGJF,itis:1205637",
           "children": []
         },
         {
@@ -524,33 +526,6 @@
           "uuid": "a0941dcf-3c03-506-b74-c6840b27b8de5f"
         },
         {
-          "id": "SP_PENTHALEUS_MAIOR_DUG_S_1834",
-          "name": "Penthaleus maior",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Penthaleus",
-          "authorship": "(Dugés, 1834)",
-          "sourceIds": {
-            "checklistbank": "140942"
-          },
-          "children": [],
-          "uuid": "ae522094-682e-57e-a8b-2765600d1b1497"
-        },
-        {
-          "id": "SP_PENTHALEUS_HAEMATOPUS_C_L_KOCH_1836",
-          "name": "Penthaleus haematopus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Penthaleus",
-          "authorship": "C.L. Koch, 1836",
-          "sourceIds": {
-            "checklistbank": "393077"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PENTHALEUS_ERYTHROPUS_C_L_KOCH_1838",
           "name": "Penthaleus erythropus",
           "rank": "SPECIES",
@@ -585,18 +560,6 @@
           "lineage": "Penthaleus",
           "sourceIds": {
             "checklistbank": "ott7681409"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PENTHALEUS_SP",
-          "name": "Penthaleus sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Penthaleus",
-          "sourceIds": {
-            "checklistbank": "708281"
           },
           "children": []
         }
@@ -839,19 +802,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_NOTOPHALLUS_BICOLOR_FROGGATT_1921",
-          "name": "Notophallus bicolor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Notophallus",
-          "authorship": "Froggatt, 1921",
-          "sourceIds": {
-            "checklistbank": "393078"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NOTOPHALLUS_HYDRODROMUS_BERLESE_TROUESSART_1889",
           "name": "Notophallus hydrodromus",
           "rank": "SPECIES",
@@ -891,28 +841,6 @@
       "lineage": "penthaleidae"
     },
     {
-      "id": "GENUS_MEGAMERUS",
-      "name": "Megamerus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MEGAMERUS_FALLAX_DUG_S_1834",
-          "name": "Megamerus fallax",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Megamerus",
-          "authorship": "Dugès, 1834",
-          "sourceIds": {
-            "checklistbank": "1022833"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "penthaleidae"
-    },
-    {
       "id": "GENUS_PENTHALEIDAE",
       "name": "Penthaleidae",
       "rank": "GENUS",
@@ -932,35 +860,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "penthaleidae"
-    },
-    {
-      "id": "GENUS_HALOTYDEUS",
-      "name": "\"Halotydeus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HALOTYDEUS_SIGNIENSIS_STRANDTMANN_TILLBROOK_1968",
-          "name": "\"Halotydeus signiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Halotydeus",
-          "authorship": "\"Strandtmann & Tillbrook, 1968\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1648963"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "penthaleidae"
     }
   ],
-  "speciesCount": 46,
+  "speciesCount": 40,
   "appSlug": "penthaleidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 12,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

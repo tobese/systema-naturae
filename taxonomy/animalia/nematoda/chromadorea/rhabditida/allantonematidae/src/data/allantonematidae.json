@@ -797,8 +797,11 @@
           "uuid": "0fdf7d9d-82e1-536-885-337e6ead6a8066",
           "authorship": "Tipping & Nguen in Tipping, Nguen, Funderburk & Smart, 1998",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763398"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1763398"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1763398"
         },
         {
           "id": "SP_THRIPINEMA_KHRUSTALEVI_CHIZHOV_SUBBOTIN_ZAKHARENKOVA_1995",
@@ -2668,10 +2671,13 @@
           "lineage": "Polymorphotylenchus",
           "authorship": "(Fuchs, 1915) Rühm, 1956",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724180"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1724180"
+            ]
           },
           "children": [],
-          "uuid": "761c3ba9-d68d-550-b87-3e2f45bbff6043"
+          "uuid": "761c3ba9-d68d-550-b87-3e2f45bbff6043",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1724180"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2761,28 +2767,6 @@
           "authorship": "\"(von Linstow, 1890) Rühm, 1956\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1724157"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "allantonematidae"
-    },
-    {
-      "id": "GENUS_POLYMORPHOTYLENCHUS",
-      "name": "\"Polymorphotylenchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_POLYMORPHOTYLENCHUS_POLYMORPHOTYLENCHUS_FUCHS_1915_R_HM_1956",
-          "name": "\"Polymorphotylenchus (Polymorphotylenchus)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Polymorphotylenchus",
-          "authorship": "\"(Fuchs, 1915) Rühm, 1956\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1724180"
           },
           "children": []
         }
@@ -3149,19 +3133,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_THRIPINEMA_FUSCUM_TIPPING_NGUEN_IN_TIPPING_NGUEN_FUNDERBURK_SMART_1998",
-          "name": "\"Thripinema fuscum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Thripinema",
-          "authorship": "\"Tipping & Nguen in Tipping, Nguen, Funderburk & Smart, 1998\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1763398"
-          },
-          "children": []
-        },
-        {
           "id": "SP_THRIPINEMA_APTINI_SHARGA_1932_SIDDIQI_1986",
           "name": "\"Thripinema aptini\"",
           "rank": "SPECIES",
@@ -3179,8 +3150,8 @@
       "lineage": "allantonematidae"
     }
   ],
-  "genusCount": 31,
-  "speciesCount": 201,
+  "genusCount": 30,
+  "speciesCount": 199,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

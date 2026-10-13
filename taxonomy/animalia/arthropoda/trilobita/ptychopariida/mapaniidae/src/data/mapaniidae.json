@@ -22,7 +22,8 @@
               "4P2JP"
             ]
           },
-          "authorityIds": "col:4P2JP"
+          "authorityIds": "col:4P2JP",
+          "children": []
         },
         {
           "id": "SP_PSEUDOMAPANIA_TRUNCATA_YUAN_YIN_1998",
@@ -38,7 +39,8 @@
               "4P2JQ"
             ]
           },
-          "authorityIds": "col:4P2JQ"
+          "authorityIds": "col:4P2JQ",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -63,7 +65,8 @@
               "42BJL"
             ]
           },
-          "authorityIds": "col:42BJL"
+          "authorityIds": "col:42BJL",
+          "children": []
         },
         {
           "id": "SP_METANOMOCARELLA_TUMIDA_RESSER_ENDO_1937",
@@ -77,9 +80,11 @@
           "sourceIds": {
             "col": [
               "42BJM"
-            ]
+            ],
+            "checklistbank": "txn:142244"
           },
-          "authorityIds": "col:42BJM"
+          "authorityIds": "col:42BJM",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -104,18 +109,54 @@
               "4D2FR"
             ]
           },
-          "authorityIds": "col:4D2FR"
+          "authorityIds": "col:4D2FR",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Mapaniidae"
+    },
+    {
+      "id": "GENUS_MAPANOPSIS",
+      "name": "Mapanopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MAPANOPSIS_NIMIS_NAN_AND_CHANG_1982",
+          "name": "Mapanopsis nimis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mapanopsis",
+          "authorship": "(Nan and Chang 1982)",
+          "sourceIds": {
+            "checklistbank": "txn:481204"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MAPANOPSIS_EXPANSUS_CHANG_1963",
+          "name": "Mapanopsis expansus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mapanopsis",
+          "authorship": "Chang 1963",
+          "sourceIds": {
+            "checklistbank": "txn:481206"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mapaniidae"
     }
   ],
-  "speciesCount": 5,
+  "speciesCount": 7,
   "appSlug": "mapaniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Trilobita",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -123,6 +164,7 @@
       "classKey": 9273948,
       "orderKey": 9583276,
       "familyKey": 4635106
-    }
+    },
+    "checklistbank": "txn:142243"
   }
 }

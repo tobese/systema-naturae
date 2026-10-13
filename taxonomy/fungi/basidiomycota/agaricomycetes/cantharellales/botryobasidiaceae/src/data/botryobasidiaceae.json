@@ -1612,33 +1612,6 @@
           "authorityIds": "col:B2ZTF,gbif:12238140,mycobank:837690"
         },
         {
-          "id": "BOTRYOBASIDIUM_RAMOSISSIMUM",
-          "name": "Botryobasidium ramosissimum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Botryobasidium",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Berkeley & M.A. Curtis) G. Langer",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "12261937"
-            ],
-            "mycobank": [
-              "837866"
-            ],
-            "col": [
-              "B2RZH"
-            ],
-            "checklistbank": "56496"
-          },
-          "uuid": "2ff6e1a5-54a9-5c3-a60-bbc3870867fc8e",
-          "authorityIds": "col:B2RZH,gbif:12261937,mycobank:837866"
-        },
-        {
           "id": "BOTRYOBASIDIUM_ROBUSTIUS",
           "name": "Botryobasidium robustius",
           "rank": "SPECIES",
@@ -2359,18 +2332,6 @@
           "children": []
         },
         {
-          "id": "SP_BOTRYOBASIDIUM_AFF",
-          "name": "Botryobasidium aff.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Botryobasidium",
-          "sourceIds": {
-            "checklistbank": "2739840"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BOTRYOBASIDIUM_INCANUM_QIAN_ZHOU_C_L_ZHAO_2024",
           "name": "Botryobasidium incanum",
           "rank": "SPECIES",
@@ -2962,19 +2923,6 @@
           "authorship": "(Fr.) Hol.-Jech., 1976",
           "sourceIds": {
             "checklistbank": "509077"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HAPLOTRICHUM_SPHAEROSPORUM_LINDER_HOL_JECH_1976",
-          "name": "Haplotrichum sphaerosporum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Haplotrichum",
-          "authorship": "(Linder) Hol.-Jech., 1976",
-          "sourceIds": {
-            "checklistbank": "901829"
           },
           "children": []
         },
@@ -3940,10 +3888,12 @@
             "itis": [
               "194567"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438000"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:438000"
+            ]
           },
           "uuid": "dbd5b234-4450-5c1-b8d-67dcca22b7e518",
-          "authorityIds": "col:667HF,gbif:3367523,itis:194567,mycobank:308468"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:438000,col:667HF,gbif:3367523,itis:194567,mycobank:308468"
         },
         {
           "id": "ALLESCHERIELLA_CYNAEA",
@@ -5058,19 +5008,6 @@
           "children": []
         },
         {
-          "id": "SP_PELLICULARIA_SUBCORONATA_H_HN_LITSCH_D_P_ROGERS_1943",
-          "name": "Pellicularia subcoronata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pellicularia",
-          "authorship": "(Höhn. & Litsch.) D.P.Rogers, 1943",
-          "sourceIds": {
-            "checklistbank": "509081"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PELLICULARIA_VAGA_BERK_M_A_CURTIS_D_P_ROGERS_EX_LINDER_1942",
           "name": "Pellicularia vaga",
           "rank": "SPECIES",
@@ -5877,33 +5814,11 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "botryobasidiaceae"
-    },
-    {
-      "id": "GENUS_ALLESCHERIELLA",
-      "name": "\"Allescheriella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ALLESCHERIELLA_BATHYGENA_KOHLM_1977",
-          "name": "\"Allescheriella bathygena\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Allescheriella",
-          "authorship": "\"Kohlm., 1977\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438000"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "botryobasidiaceae"
     }
   ],
   "authorship": "(Parmasto) Jülich",
-  "genusCount": 35,
-  "speciesCount": 314,
+  "genusCount": 34,
+  "speciesCount": 309,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

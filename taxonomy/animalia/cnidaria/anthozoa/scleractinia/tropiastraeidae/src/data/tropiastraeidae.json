@@ -135,9 +135,11 @@
             "col": [
               "8644P"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455173"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1455173"
+            ]
           },
-          "authorityIds": "col:8644P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1455173,col:8644P",
           "authorship": "(Laube, 1865)"
         },
         {
@@ -170,7 +172,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "83b5f2a0-bdba-588-bc0-73c8375ff521e2"
+          "uuid": "83b5f2a0-bdba-588-bc0-73c8375ff521e2",
+          "authorship": "(Smith 1927)",
+          "sourceIds": {
+            "checklistbank": "txn:256488"
+          }
         },
         {
           "id": "SP_GUEMBELASTRAEA_PAMPHYLIENSIS_CUIF_1976",
@@ -197,6 +203,32 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "64b16964-1b56-5ac-bbf-e3ee707183873c"
+        },
+        {
+          "id": "SP_GUEMBELASTRAEA_WHITEAVESI_CLAPP_AND_SHIMER_1911",
+          "name": "Guembelastraea whiteavesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guembelastraea",
+          "authorship": "(Clapp and Shimer 1911)",
+          "sourceIds": {
+            "checklistbank": "txn:249520"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GUEMBELASTRAEA_KANMERAE_STANLEY_AND_ONOUE_2015",
+          "name": "Guembelastraea kanmerae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Guembelastraea",
+          "authorship": "Stanley and Onoue 2015",
+          "sourceIds": {
+            "checklistbank": "txn:312590"
+          },
+          "children": []
         }
       ]
     },
@@ -338,6 +370,84 @@
             ]
           },
           "authorityIds": "col:DW47M"
+        },
+        {
+          "id": "SP_THAMNASTERIAMORPHA_LORETZI_VOLZ_1896",
+          "name": "Thamnasteriamorpha loretzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnasteriamorpha",
+          "authorship": "(Volz 1896)",
+          "sourceIds": {
+            "checklistbank": "txn:152177"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNASTERIAMORPHA_SETTSASSI_VOLZ_1896",
+          "name": "Thamnasteriamorpha settsassi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnasteriamorpha",
+          "authorship": "(Volz 1896)",
+          "sourceIds": {
+            "checklistbank": "txn:304485"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNASTERIAMORPHA_RAKOVECI_TURNSEK_1985",
+          "name": "Thamnasteriamorpha rakoveci",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnasteriamorpha",
+          "authorship": "(Turnsek 1985)",
+          "sourceIds": {
+            "checklistbank": "txn:152242"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNASTERIAMORPHA_RARA_MELNIKOVA_AND_BYCHKOV_1986",
+          "name": "Thamnasteriamorpha rara",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnasteriamorpha",
+          "authorship": "(Melnikova and Bychkov 1986)",
+          "sourceIds": {
+            "checklistbank": "txn:152359"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNASTERIAMORPHA_MEGAXIS_DENG_AND_ZHANG_1984",
+          "name": "Thamnasteriamorpha megaxis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnasteriamorpha",
+          "authorship": "(Deng and Zhang 1984)",
+          "sourceIds": {
+            "checklistbank": "txn:305743"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNASTERIAMORPHA_OKUDAI_STANLEY_AND_ONOUE_2015",
+          "name": "Thamnasteriamorpha okudai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnasteriamorpha",
+          "authorship": "Stanley and Onoue 2015",
+          "sourceIds": {
+            "checklistbank": "txn:312595"
+          },
+          "children": []
         }
       ]
     },
@@ -871,32 +981,10 @@
           "authorityIds": "col:BDKWC"
         }
       ]
-    },
-    {
-      "id": "GENUS_GUEMBELASTRAEA",
-      "name": "\"Guembelastraea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GUEMBELASTRAEA_GUEMBELI_LAUBE_1865",
-          "name": "\"Guembelastraea guembeli\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Guembelastraea",
-          "authorship": "\"(Laube, 1865)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1455173"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "tropiastraeidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 48,
+  "genusCount": 12,
+  "speciesCount": 55,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -904,6 +992,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 8504006
-    }
+    },
+    "checklistbank": "txn:312594"
   }
 }

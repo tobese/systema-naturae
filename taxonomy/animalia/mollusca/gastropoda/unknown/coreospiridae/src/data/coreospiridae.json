@@ -329,9 +329,11 @@
             "col": [
               "7RPW8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1419084"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1419084"
+            ]
           },
-          "authorityIds": "col:7RPW8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1419084,col:7RPW8",
           "authorship": "(B. Zhou & L. Xiao, 1984)",
           "children": []
         }
@@ -378,9 +380,11 @@
             "col": [
               "7RSKL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1461109"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1461109"
+            ]
           },
-          "authorityIds": "col:7RSKL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1461109,col:7RSKL",
           "authorship": "(Lermontova, 1940)",
           "children": []
         }
@@ -404,24 +408,63 @@
           "sourcedFrom": "none",
           "uuid": "b3aafc6e-416f-5d2-aa7-4fbf9c0fb417ed",
           "children": []
+        },
+        {
+          "id": "SP_OWENELLA_ANTIQUATA_WHITFIELD_1878",
+          "name": "Owenella antiquata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Owenella",
+          "authorship": "(Whitfield 1878)",
+          "sourceIds": {
+            "checklistbank": "txn:72571"
+          },
+          "children": []
         }
       ]
     },
     {
-      "id": "GENUS_HUMILISPIRA",
-      "name": "\"Humilispira",
+      "id": "GENUS_TICHKAELLA",
+      "name": "Tichkaella",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_HUMILISPIRA_ADELOCOSMA_B_ZHOU_L_XIAO_1984",
-          "name": "\"Humilispira adelocosma\"",
+          "id": "SP_TICHKAELLA_HAMATA_GEYER_1986",
+          "name": "Tichkaella hamata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Humilispira",
-          "authorship": "\"(B. Zhou & L. Xiao, 1984)\"",
+          "lineage": "Tichkaella",
+          "authorship": "Geyer 1986",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1419084"
+            "checklistbank": "txn:65888"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TICHKAELLA_CARINATA_RASETTI_1957",
+          "name": "Tichkaella carinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tichkaella",
+          "authorship": "(Rasetti 1957)",
+          "sourceIds": {
+            "checklistbank": "txn:68833"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TICHKAELLA_INSULCATA_RASETTI_1957",
+          "name": "Tichkaella insulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tichkaella",
+          "authorship": "(Rasetti 1957)",
+          "sourceIds": {
+            "checklistbank": "txn:68835"
           },
           "children": []
         }
@@ -430,20 +473,20 @@
       "lineage": "coreospiridae"
     },
     {
-      "id": "GENUS_KUTANJIA",
-      "name": "\"Kutanjia",
+      "id": "GENUS_CAMBROSPIRA",
+      "name": "Cambrospira",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_KUTANJIA_RETICULATA_LERMONTOVA_1940",
-          "name": "\"Kutanjia reticulata\"",
+          "id": "SP_CAMBROSPIRA_SINENSIS_Y_1979",
+          "name": "Cambrospira sinensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Kutanjia",
-          "authorship": "\"(Lermontova, 1940)\"",
+          "lineage": "Cambrospira",
+          "authorship": "Yü 1979",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1461109"
+            "checklistbank": "txn:180415"
           },
           "children": []
         }
@@ -453,13 +496,14 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 23,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 4584231
-    }
+    },
+    "checklistbank": "txn:65870"
   }
 }

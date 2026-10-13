@@ -132,9 +132,11 @@
             "col": [
               "4XDL4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506452"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:506452"
+            ]
           },
-          "authorityIds": "col:4XDL4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506452,col:4XDL4",
           "authorship": "(Dall, 1908)",
           "children": []
         },
@@ -250,54 +252,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PHASEOLUS",
-      "name": "Phaseolus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHASEOLUS_ROUCHI_LAMY_1911",
-          "name": "Phaseolus rouchi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phaseolus",
-          "authorship": "(Lamy, 1911)",
-          "sourceIds": {
-            "checklistbank": "815449"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "siliculidae"
-    },
-    {
-      "id": "GENUS_SILICULA",
-      "name": "\"Silicula",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SILICULA_PATAGONICA_DALL_1908",
-          "name": "\"Silicula patagonica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Silicula",
-          "authorship": "\"(Dall, 1908)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506452"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "siliculidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 16,
+  "genusCount": 1,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

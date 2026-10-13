@@ -207,7 +207,8 @@
           "sourceIds": {
             "col": [
               "BC4MJ"
-            ]
+            ],
+            "checklistbank": "txn:403711"
           },
           "authorityIds": "col:BC4MJ",
           "children": []
@@ -342,7 +343,8 @@
           "sourceIds": {
             "col": [
               "BC7GZ"
-            ]
+            ],
+            "checklistbank": "txn:403713"
           },
           "authorityIds": "col:BC7GZ",
           "children": []
@@ -393,7 +395,8 @@
           "sourceIds": {
             "checklistbank": "ott6187287"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Beschin et al. 2001)"
         },
         {
           "id": "SP_JONESIUS_PLANUS",
@@ -405,7 +408,8 @@
           "sourceIds": {
             "checklistbank": "ott6187288"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Muller 1996)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -694,13 +698,61 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "domeciidae"
+    },
+    {
+      "id": "GENUS_EOMALDIVIA",
+      "name": "Eomaldivia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOMALDIVIA_PANNONICA_MULLER_AND_COLLINS_1991",
+          "name": "Eomaldivia pannonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eomaldivia",
+          "authorship": "Muller and Collins 1991",
+          "sourceIds": {
+            "checklistbank": "txn:225435"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOMALDIVIA_TRISPINOSA_MULLER_AND_COLLINS_1991",
+          "name": "Eomaldivia trispinosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eomaldivia",
+          "authorship": "Muller and Collins 1991",
+          "sourceIds": {
+            "checklistbank": "txn:225436"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EOMALDIVIA_LESSINEA_DE_ANGELI_AND_CECCON_2017",
+          "name": "Eomaldivia lessinea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eomaldivia",
+          "authorship": "De Angeli and Ceccon 2017",
+          "sourceIds": {
+            "checklistbank": "txn:460138"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "domeciidae"
     }
   ],
-  "speciesCount": 38,
+  "speciesCount": 41,
   "appSlug": "domeciidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 18,
+  "genusCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -709,6 +761,6 @@
       "orderKey": 637,
       "familyKey": 3254321
     },
-    "checklistbank": "652085"
+    "checklistbank": "9bc80d1b-cd53-481c-ace6-2a7821ed4fb9"
   }
 }

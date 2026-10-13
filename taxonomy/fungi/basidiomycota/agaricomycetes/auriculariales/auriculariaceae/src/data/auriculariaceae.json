@@ -8155,10 +8155,12 @@
             "mycobank": [
               "149704"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988885"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:988885"
+            ]
           },
           "uuid": "3dd1c6e0-5a08-591-9f9-6485d2e3c19e5a",
-          "authorityIds": "gbif:6325879,mycobank:149704"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:988885,gbif:6325879,mycobank:149704"
         },
         {
           "id": "SP_HIRNEOLA_POLYTRICHA_MONT_FR",
@@ -8196,19 +8198,6 @@
           "authorship": "(Fr.) Bres.",
           "sourceIds": {
             "checklistbank": "a3d4e57a-f56d-4674-97f8-843201c8d447"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HIRNEOLA_AURICULA_L_H_KARST_1880",
-          "name": "Hirneola auricula",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hirneola",
-          "authorship": "(L.) H.Karst., 1880",
-          "sourceIds": {
-            "checklistbank": "508778"
           },
           "children": []
         },
@@ -10255,28 +10244,6 @@
       "lineage": "auriculariaceae"
     },
     {
-      "id": "GENUS_HIRNEOLA",
-      "name": "\"Hirneola",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HIRNEOLA_ANTARCTICA_SPEG_1887",
-          "name": "\"Hirneola antarctica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hirneola",
-          "authorship": "\"Speg., 1887\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988885"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "auriculariaceae"
-    },
-    {
       "id": "GENUS_AURICULARIA",
       "name": "\"Auricularia",
       "rank": "GENUS",
@@ -10313,8 +10280,8 @@
     }
   ],
   "authorship": "Fries ex Lindau",
-  "genusCount": 49,
-  "speciesCount": 523,
+  "genusCount": 48,
+  "speciesCount": 521,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

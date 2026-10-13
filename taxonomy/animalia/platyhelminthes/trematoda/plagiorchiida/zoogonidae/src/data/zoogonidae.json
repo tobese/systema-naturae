@@ -581,6 +581,18 @@
             ]
           },
           "authorityIds": "col:6WDMQ,itis:56725"
+        },
+        {
+          "id": "SP_PSEUDOCHETOSOMA_SALMONICOLA",
+          "name": "Pseudochetosoma salmonicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudochetosoma",
+          "sourceIds": {
+            "checklistbank": "391216"
+          },
+          "children": []
         }
       ]
     },
@@ -1165,9 +1177,11 @@
             "col": [
               "4MPRB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:768082"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:768082"
+            ]
           },
-          "authorityIds": "col:4MPRB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:768082,col:4MPRB",
           "authorship": "(Machida, Kamegai & Kuramochi, 2006)"
         },
         {
@@ -1554,20 +1568,6 @@
             ]
           },
           "authorityIds": "col:5X244"
-        },
-        {
-          "id": "SP_BRACHYENTERON_PYCNORGANUM_REES_1953",
-          "name": "Brachyenteron pycnorganum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Brachyenteron",
-          "authorship": "(Rees,  1953)",
-          "sourceIds": {
-            "checklistbank": "29128"
-          },
-          "children": [],
-          "uuid": "625ddaf8-2d5b-599-aa4-f93c1b3e98b976"
         },
         {
           "id": "SP_BRACHYENTERON_MICROVAEI_SHEN_1987_LIU_PENG_GAO_FU_WU_LU_GAO_XIAO_2010",
@@ -2072,20 +2072,6 @@
           "authorityIds": "col:4ZNGZ"
         },
         {
-          "id": "SP_STEGANODERMATOIDES_AGASSIZI_CAMPBELL_1975",
-          "name": "Steganodermatoides agassizi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Steganodermatoides",
-          "authorship": "(Campbell,  1975)",
-          "sourceIds": {
-            "checklistbank": "29145"
-          },
-          "children": [],
-          "uuid": "2ed00fd6-8872-553-8b0-b0b6e5b00e94bc"
-        },
-        {
           "id": "SP_STEGANODERMATOIDES_ALLOCYTTI_TKACHUK_1979_BRAY_1985",
           "name": "Steganodermatoides allocytti",
           "rank": "SPECIES",
@@ -2150,20 +2136,6 @@
             ]
           },
           "authorityIds": "col:4PFCH"
-        },
-        {
-          "id": "SP_PSEUDOZOOGONOIDES_SUBAEQUIPORUS_ODHNER_1911",
-          "name": "Pseudozoogonoides subaequiporus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pseudozoogonoides",
-          "authorship": "(Odhner, 1911)",
-          "sourceIds": {
-            "checklistbank": "29143"
-          },
-          "children": [],
-          "uuid": "1ab30a23-0cb0-5d9-8bb-978b81b116e996"
         }
       ]
     },
@@ -3101,9 +3073,11 @@
             "col": [
               "3SVWD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:767975"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:767975"
+            ]
           },
-          "authorityIds": "col:3SVWD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:767975,col:3SVWD",
           "authorship": "(Ramadan, Morsy & Lashein, 2003)"
         },
         {
@@ -4015,20 +3989,6 @@
           "uuid": "2f68093f-621e-5ef-ba6-8fbf376ec1ac97"
         },
         {
-          "id": "SP_DIPHTHEROSTOMUM_ISRAELENSE_FISCHTHAL_1980",
-          "name": "Diphtherostomum israelense",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diphtherostomum",
-          "authorship": "Fischthal, 1980",
-          "sourceIds": {
-            "checklistbank": "29133"
-          },
-          "children": [],
-          "uuid": "3fbfa820-142c-578-b06-3bdecedace6142"
-        },
-        {
           "id": "SP_DIPHTHEROSTOMUM_LUTEUM_VAN_BENEDEN_1870",
           "name": "Diphtherostomum luteum",
           "rank": "SPECIES",
@@ -4041,43 +4001,6 @@
           },
           "children": [],
           "uuid": "f7e723b1-486d-5d1-85b-1d9e899d2395b6"
-        },
-        {
-          "id": "SP_DIPHTHEROSTOMUM_VIVIDUM_NICOLL_1912",
-          "name": "Diphtherostomum vividum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Diphtherostomum",
-          "authorship": "(Nicoll,  1912)",
-          "sourceIds": {
-            "checklistbank": "29135"
-          },
-          "children": [],
-          "uuid": "af689de1-5f7a-5cf-9fc-bdc434afc5aaea"
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "zoogonidae"
-    },
-    {
-      "id": "GENUS_NEOSTEGANODERMA",
-      "name": "Neosteganoderma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NEOSTEGANODERMA_GLANDULOSUM_BYRD_1964",
-          "name": "Neosteganoderma glandulosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Neosteganoderma",
-          "authorship": "Byrd, 1964",
-          "sourceIds": {
-            "checklistbank": "29139"
-          },
-          "children": [],
-          "uuid": "f6043fe5-df41-5ae-9cb-d09902057a150c"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4702,19 +4625,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:109136"
           },
           "children": []
-        },
-        {
-          "id": "SP_LECITHOSTAPHYLUS_BUCKLEYI_RAMADAN_MORSY_LASHEIN_2003",
-          "name": "\"Lecithostaphylus buckleyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lecithostaphylus",
-          "authorship": "\"(Ramadan, Morsy & Lashein, 2003)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:767975"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4807,32 +4717,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zoogonidae"
-    },
-    {
-      "id": "GENUS_PROCTOPHANTASTES",
-      "name": "\"Proctophantastes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROCTOPHANTASTES_PHYSICULI_MACHIDA_KAMEGAI_KURAMOCHI_2006",
-          "name": "\"Proctophantastes physiculi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Proctophantastes",
-          "authorship": "\"(Machida, Kamegai & Kuramochi, 2006)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:768082"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "zoogonidae"
     }
   ],
-  "genusCount": 61,
-  "speciesCount": 250,
+  "genusCount": 59,
+  "speciesCount": 243,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

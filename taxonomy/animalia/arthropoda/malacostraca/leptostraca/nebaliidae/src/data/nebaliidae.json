@@ -814,19 +814,6 @@
           "children": []
         },
         {
-          "id": "SP_NEBALIA_STRAUS_RISSO_1827",
-          "name": "Nebalia straus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nebalia",
-          "authorship": "Risso, 1827",
-          "sourceIds": {
-            "checklistbank": "1001717"
-          },
-          "children": []
-        },
-        {
           "id": "SP_NEBALIA_LEGARTENSIS",
           "name": "Nebalia legartensis",
           "rank": "SPECIES",
@@ -1037,27 +1024,6 @@
           "authorityIds": "col:6XPBF"
         },
         {
-          "id": "SP_SARSINEBALIA_TYPHLOPS_G_O_SARS_1870",
-          "name": "Sarsinebalia typhlops",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Sarsinebalia",
-          "authorship": "(G. O. Sars, 1870)",
-          "children": [],
-          "uuid": "648bbe3a-9a94-5a4-a48-9885c189c31adf",
-          "sourceIds": {
-            "itis": [
-              "682638"
-            ],
-            "col": [
-              "79PBF"
-            ],
-            "checklistbank": "47885"
-          },
-          "authorityIds": "col:79PBF,itis:682638"
-        },
-        {
           "id": "SP_SARSINEBALIA_KUNYENSIS_LEDOYER_2000",
           "name": "Sarsinebalia kunyensis",
           "rank": "SPECIES",
@@ -1245,13 +1211,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nebaliidae"
+    },
+    {
+      "id": "GENUS_NEBALIOPSIS",
+      "name": "Nebaliopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEBALIOPSIS_TYPICA_SARS_1887",
+          "name": "Nebaliopsis typica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nebaliopsis",
+          "authorship": "Sars 1887",
+          "sourceIds": {
+            "checklistbank": "txn:464087"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nebaliidae"
     }
   ],
-  "speciesCount": 66,
+  "speciesCount": 65,
   "appSlug": "nebaliidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

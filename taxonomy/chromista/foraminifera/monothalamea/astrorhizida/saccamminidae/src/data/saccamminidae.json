@@ -2875,9 +2875,11 @@
             "col": [
               "BHHS4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:114191"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:114191"
+            ]
           },
-          "authorityIds": "col:BHHS4,itis:44117",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:114191,col:BHHS4,itis:44117",
           "children": []
         },
         {
@@ -4001,9 +4003,11 @@
             "col": [
               "BGGVS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1328544"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1328544"
+            ]
           },
-          "authorityIds": "col:BGGVS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1328544,col:BGGVS",
           "children": []
         },
         {
@@ -7004,28 +7008,6 @@
       "lineage": "saccamminidae"
     },
     {
-      "id": "GENUS_SACCAMMINA",
-      "name": "\"Saccammina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SACCAMMINA_SPHAERICA_BRADY_1871",
-          "name": "\"Saccammina sphaerica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Saccammina",
-          "authorship": "\"Brady, 1871\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:114191"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "saccamminidae"
-    },
-    {
       "id": "GENUS_THOLOSINA",
       "name": "\"Tholosina",
       "rank": "GENUS",
@@ -7064,17 +7046,65 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1304093"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "saccamminidae"
+    },
+    {
+      "id": "GENUS_ORYCTODERMA",
+      "name": "Oryctoderma",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_LAGENAMMINA_FUSIFORMIS_KURBATOV_2007",
-          "name": "\"Lagenammina fusiformis",
+          "id": "SP_ORYCTODERMA_ROTUNDATA_CUSHMAN_1910",
+          "name": "Oryctoderma rotundata",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Lagenammina",
-          "authorship": "\"Kurbatov, 2007\"",
+          "lineage": "Oryctoderma",
+          "authorship": "(Cushman 1910)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1328544"
+            "checklistbank": "txn:485044"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORYCTODERMA_PISUM_GO_S_1896",
+          "name": "Oryctoderma pisum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oryctoderma",
+          "authorship": "(Goës 1896)",
+          "sourceIds": {
+            "checklistbank": "txn:485047"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORYCTODERMA_RUGOSA_GO_S_1894",
+          "name": "Oryctoderma rugosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oryctoderma",
+          "authorship": "(Goës 1894)",
+          "sourceIds": {
+            "checklistbank": "txn:485049"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORYCTODERMA_TEICHERTI_PARR_1942",
+          "name": "Oryctoderma teicherti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oryctoderma",
+          "authorship": "(Parr 1942)",
+          "sourceIds": {
+            "checklistbank": "txn:485051"
           },
           "children": []
         }
@@ -7083,7 +7113,7 @@
       "lineage": "saccamminidae"
     }
   ],
-  "speciesCount": 392,
+  "speciesCount": 394,
   "appSlug": "saccamminidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Monothalamea",

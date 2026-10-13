@@ -24,9 +24,11 @@
             "col": [
               "8SN75"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548403"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1548403"
+            ]
           },
-          "authorityIds": "col:8SN75",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1548403,col:8SN75",
           "uuid": "ac12124a-fb5e-55d-a6b-3045c8ba792092",
           "authorship": "(J.-S. Yu & G.-Y. Dong, 1993)",
           "children": []
@@ -44,9 +46,11 @@
             "col": [
               "8SN97"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548396"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1548396"
+            ]
           },
-          "authorityIds": "col:8SN97",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1548396,col:8SN97",
           "uuid": "57032fdd-f843-508-919-9220800a0b2e48",
           "authorship": "(J.-S. Yu & G.-Y. Dong, 1993)",
           "children": []
@@ -64,9 +68,11 @@
             "col": [
               "8SMSL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548395"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1548395"
+            ]
           },
-          "authorityIds": "col:8SMSL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1548395,col:8SMSL",
           "uuid": "2f9e3bb0-a5ad-55b-a6b-fb8ab8a8991640",
           "authorship": "(J.-S. Yu & G.-Y. Dong, 1993)",
           "children": []
@@ -111,46 +117,20 @@
       "lineage": "sibireconchidae"
     },
     {
-      "id": "GENUS_SINOLIAONINGIA",
-      "name": "\"Sinoliaoningia",
+      "id": "GENUS_LIAONINGIA",
+      "name": "Liaoningia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SINOLIAONINGIA_YANGCAOGOUENSIS_J_S_YU_G_Y_DONG_1993",
-          "name": "\"Sinoliaoningia yangcaogouensis\"",
+          "id": "SP_LIAONINGIA_OPIMA_YU_AND_DONG_1993",
+          "name": "Liaoningia opima",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Sinoliaoningia",
-          "authorship": "\"(J.-S. Yu & G.-Y. Dong, 1993)\"",
+          "lineage": "Liaoningia",
+          "authorship": "Yu and Dong 1993",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548395"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SINOLIAONINGIA_SUBROTUNDA_J_S_YU_G_Y_DONG_1993",
-          "name": "\"Sinoliaoningia subrotunda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sinoliaoningia",
-          "authorship": "\"(J.-S. Yu & G.-Y. Dong, 1993)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548396"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SINOLIAONINGIA_OPIMA_J_S_YU_G_Y_DONG_1993",
-          "name": "\"Sinoliaoningia opima\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Sinoliaoningia",
-          "authorship": "\"(J.-S. Yu & G.-Y. Dong, 1993)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1548403"
+            "checklistbank": "txn:386179"
           },
           "children": []
         }
@@ -160,7 +140,7 @@
     }
   ],
   "genusCount": 3,
-  "speciesCount": 8,
+  "speciesCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -168,6 +148,7 @@
       "classKey": 137,
       "orderKey": 10495862,
       "familyKey": 11214055
-    }
+    },
+    "checklistbank": "txn:382551"
   }
 }

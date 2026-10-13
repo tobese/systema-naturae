@@ -30,9 +30,11 @@
             "col": [
               "4DBQP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:368612"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:368612"
+            ]
           },
-          "authorityIds": "col:4DBQP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:368612,col:4DBQP",
           "authorship": "(Claus, 1876)"
         },
         {
@@ -263,32 +265,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "seisonidae"
-    },
-    {
-      "id": "GENUS_PARASEISON",
-      "name": "\"Paraseison",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARASEISON_ANNULATUS_CLAUS_1876",
-          "name": "\"Paraseison annulatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paraseison",
-          "authorship": "\"(Claus, 1876)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:368612"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "seisonidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 15,
+  "genusCount": 3,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -297,6 +277,6 @@
       "orderKey": 1233,
       "familyKey": 8055
     },
-    "checklistbank": "2816133"
+    "checklistbank": "ott5673588"
   }
 }

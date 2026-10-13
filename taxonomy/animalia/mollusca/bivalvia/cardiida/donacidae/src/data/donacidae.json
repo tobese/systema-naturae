@@ -1124,9 +1124,11 @@
             "col": [
               "379R3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494713"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:494713"
+            ]
           },
-          "authorityIds": "col:379R3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:494713,col:379R3",
           "authorship": "(R. A. Philippi, 1847)"
         },
         {
@@ -1527,9 +1529,11 @@
             "col": [
               "8YM7J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569734"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1569734"
+            ]
           },
-          "authorityIds": "col:8YM7J",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569734,col:8YM7J",
           "authorship": "(Chavan, 1936)"
         },
         {
@@ -2134,7 +2138,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "7a04584e-4931-592-867-f4a20a98ee0d4c"
+          "uuid": "7a04584e-4931-592-867-f4a20a98ee0d4c",
+          "authorship": "(Anderson and Martin 1914)",
+          "sourceIds": {
+            "checklistbank": "txn:160677"
+          }
         },
         {
           "id": "SP_DONAX_TRIANGULUS_LOZANO_FRANCISCO_LANDAU_1999",
@@ -2251,9 +2259,11 @@
             "col": [
               "6DDTH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:152220"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:152220"
+            ]
           },
-          "authorityIds": "col:6DDTH,itis:81250"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:152220,col:6DDTH,itis:81250"
         },
         {
           "id": "SP_DONAX_VELLICATUS_REEVE_1855",
@@ -2937,19 +2947,6 @@
           "children": []
         },
         {
-          "id": "SP_DONAX_PALLIDUS_A_GOULD_1850",
-          "name": "Donax pallidus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Donax",
-          "authorship": "A. Gould, 1850",
-          "sourceIds": {
-            "checklistbank": "590485"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DONAX_DENTICULATA_LINNAEUS_1758",
           "name": "Donax denticulata",
           "rank": "SPECIES",
@@ -3002,19 +2999,6 @@
           "children": []
         },
         {
-          "id": "SP_DONAX_TRUNCULATUS_LOCARD_1886",
-          "name": "Donax trunculatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Donax",
-          "authorship": "Locard, 1886",
-          "sourceIds": {
-            "checklistbank": "1077848"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DONAX_BREVIS_REQUIEN_1848",
           "name": "Donax brevis",
           "rank": "SPECIES",
@@ -3024,19 +3008,6 @@
           "authorship": "Requien, 1848",
           "sourceIds": {
             "checklistbank": "1077850"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DONAX_INAEQUALIS_G_B_SOWERBY_II_1866",
-          "name": "Donax inaequalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Donax",
-          "authorship": "G.B. Sowerby II, 1866",
-          "sourceIds": {
-            "checklistbank": "1077853"
           },
           "children": []
         },
@@ -3204,7 +3175,8 @@
           "sourceIds": {
             "checklistbank": "322685"
           },
-          "children": []
+          "children": [],
+          "authorship": "Philippi 1847"
         },
         {
           "id": "SP_DONAX_CALIFORNICUS",
@@ -3252,7 +3224,8 @@
           "sourceIds": {
             "checklistbank": "466906"
           },
-          "children": []
+          "children": [],
+          "authorship": "Roding 1798"
         },
         {
           "id": "SP_DONAX_CARINATUS",
@@ -3304,18 +3277,6 @@
           "children": []
         },
         {
-          "id": "SP_DONAX_DENTICULATUS",
-          "name": "Donax denticulatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Donax",
-          "sourceIds": {
-            "checklistbank": "524356"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DONAX_BIPARTITUS",
           "name": "Donax bipartitus",
           "rank": "SPECIES",
@@ -3338,7 +3299,8 @@
           "sourceIds": {
             "checklistbank": "710342"
           },
-          "children": []
+          "children": [],
+          "authorship": "Olsson 1961"
         },
         {
           "id": "SP_DONAX_VENUSTUS",
@@ -3956,7 +3918,8 @@
           "sourceIds": {
             "checklistbank": "ott2856754"
           },
-          "children": []
+          "children": [],
+          "authorship": "Gould 1853"
         },
         {
           "id": "SP_DONAX_SAIGONENSIS",
@@ -4030,7 +3993,8 @@
           "sourceIds": {
             "checklistbank": "ott7930303"
           },
-          "children": []
+          "children": [],
+          "authorship": "Gardner 1947"
         },
         {
           "id": "SP_DONAX_ATLANTIS",
@@ -4307,6 +4271,84 @@
             "checklistbank": "ott7930331"
           },
           "children": []
+        },
+        {
+          "id": "SP_DONAX_HILAIREA_GUERIN_1832",
+          "name": "Donax hilairea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donax",
+          "authorship": "Guerin 1832",
+          "sourceIds": {
+            "checklistbank": "txn:101253"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DONAX_INCERTA_DESHAYES_1857",
+          "name": "Donax incerta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donax",
+          "authorship": "Deshayes 1857",
+          "sourceIds": {
+            "checklistbank": "txn:106179"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DONAX_PROTOFLEXUOSA_NOETLING_1901",
+          "name": "Donax protoflexuosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donax",
+          "authorship": "(Noetling 1901)",
+          "sourceIds": {
+            "checklistbank": "txn:111634"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DONAX_SECURIFORMIS_DUNKER_1846",
+          "name": "Donax securiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donax",
+          "authorship": "(Dunker 1846)",
+          "sourceIds": {
+            "checklistbank": "txn:395986"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DONAX_HAUGHTONI_CARRINGTON_AND_KENSLEY_1969",
+          "name": "Donax haughtoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donax",
+          "authorship": "Carrington and Kensley 1969",
+          "sourceIds": {
+            "checklistbank": "txn:459241"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DONAX_WIEDENMAYERI_HODSON_AND_HODSON_1931",
+          "name": "Donax wiedenmayeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donax",
+          "authorship": "Hodson and Hodson 1931",
+          "sourceIds": {
+            "checklistbank": "txn:459256"
+          },
+          "children": []
         }
       ]
     },
@@ -4327,7 +4369,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "92a71db8-0aeb-538-b1e-082d26f073229a"
+          "uuid": "92a71db8-0aeb-538-b1e-082d26f073229a",
+          "authorship": "(Tate 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:98219"
+          }
         },
         {
           "id": "SP_DELTACHION_VIRILIS_IREDALE_1930",
@@ -4479,9 +4525,11 @@
             "col": [
               "6MWSG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494753"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:494753"
+            ]
           },
-          "authorityIds": "col:6MWSG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:494753,col:6MWSG",
           "authorship": "(G. B. Sowerby I, 1833)"
         },
         {
@@ -4522,9 +4570,11 @@
             "col": [
               "7RR6Z"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391944"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1391944"
+            ]
           },
-          "authorityIds": "col:7RR6Z",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1391944,col:7RR6Z",
           "authorship": "(Germain, 1904)"
         },
         {
@@ -4542,9 +4592,11 @@
             "col": [
               "7RR72"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1346728"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1346728"
+            ]
           },
-          "authorityIds": "col:7RR72",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1346728,col:7RR72",
           "authorship": "(Dunker, 1867)"
         },
         {
@@ -4562,9 +4614,11 @@
             "col": [
               "7RR73"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225626"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225626"
+            ]
           },
-          "authorityIds": "col:7RR73",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225626,col:7RR73",
           "authorship": "(Bernardi, 1860)"
         },
         {
@@ -4602,9 +4656,11 @@
             "col": [
               "3PV25"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225450"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225450"
+            ]
           },
-          "authorityIds": "col:3PV25",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225450,col:3PV25",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -4622,9 +4678,11 @@
             "col": [
               "7RR74"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1346729"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1346729"
+            ]
           },
-          "authorityIds": "col:7RR74",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1346729,col:7RR74",
           "authorship": "(Preston, 1909)"
         },
         {
@@ -4741,9 +4799,11 @@
             "col": [
               "9WK5R"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610810"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610810"
+            ]
           },
-          "authorityIds": "col:9WK5R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610810,col:9WK5R",
           "authorship": "(Lamarck, 1818)"
         },
         {
@@ -4761,9 +4821,11 @@
             "col": [
               "7RV5W"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476861"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1476861"
+            ]
           },
-          "authorityIds": "col:7RV5W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1476861,col:7RV5W",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -4781,9 +4843,11 @@
             "col": [
               "9WJVW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610811"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610811"
+            ]
           },
-          "authorityIds": "col:9WJVW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610811,col:9WJVW",
           "authorship": "(Lamarck, 1818)"
         },
         {
@@ -4801,9 +4865,11 @@
             "col": [
               "9WJTB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610812"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610812"
+            ]
           },
-          "authorityIds": "col:9WJTB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610812,col:9WJTB",
           "authorship": "(Reeve, 1854)"
         },
         {
@@ -4821,9 +4887,11 @@
             "col": [
               "9WK3T"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610813"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610813"
+            ]
           },
-          "authorityIds": "col:9WK3T",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610813,col:9WK3T",
           "authorship": "(Mawe, 1823)"
         },
         {
@@ -4859,9 +4927,11 @@
             "col": [
               "9WJR6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610816"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610816"
+            ]
           },
-          "authorityIds": "col:9WJR6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610816,col:9WJR6",
           "authorship": "(Römer, 1870)"
         },
         {
@@ -4879,9 +4949,11 @@
             "col": [
               "9WJXQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610815"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610815"
+            ]
           },
-          "authorityIds": "col:9WJXQ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610815,col:9WJXQ",
           "authorship": "(Hanley, 1845)"
         },
         {
@@ -4899,9 +4971,11 @@
             "col": [
               "9WK7C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610814"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610814"
+            ]
           },
-          "authorityIds": "col:9WK7C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610814,col:9WK7C",
           "authorship": "(Gmelin, 1791)"
         },
         {
@@ -4919,9 +4993,11 @@
             "col": [
               "9WJZZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610817"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610817"
+            ]
           },
-          "authorityIds": "col:9WJZZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610817,col:9WJZZ",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -4939,9 +5015,11 @@
             "col": [
               "9WK9F"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610818"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1610818"
+            ]
           },
-          "authorityIds": "col:9WK9F",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610818,col:9WK9F",
           "authorship": "(Fischer-Piette, 1942)"
         },
         {
@@ -5220,9 +5298,11 @@
             "col": [
               "3F2MT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494748"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:494748"
+            ]
           },
-          "authorityIds": "col:3F2MT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:494748,col:3F2MT",
           "authorship": "(Pilsbry & Bequaert, 1927)"
         },
         {
@@ -5240,9 +5320,11 @@
             "col": [
               "6K7RZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494749"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:494749"
+            ]
           },
-          "authorityIds": "col:6K7RZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:494749,col:6K7RZ",
           "authorship": "(Born, 1778)"
         },
         {
@@ -5260,9 +5342,11 @@
             "col": [
               "7RD32"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1460415"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1460415"
+            ]
           },
-          "authorityIds": "col:7RD32",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1460415,col:7RD32",
           "authorship": "(Clench, 1929)"
         },
         {
@@ -5471,9 +5555,11 @@
             "col": [
               "6DXGM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:744768"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:744768"
+            ]
           },
-          "authorityIds": "col:6DXGM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:744768,col:6DXGM",
           "authorship": "(I. Lea, 1833)"
         }
       ]
@@ -5558,9 +5644,11 @@
             "col": [
               "9X8PY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1613515"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1613515"
+            ]
           },
-          "authorityIds": "col:9X8PY",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1613515,col:9X8PY",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -5596,9 +5684,11 @@
             "col": [
               "9X7CS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1602278"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1602278"
+            ]
           },
-          "authorityIds": "col:9X7CS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1602278,col:9X7CS",
           "authorship": "(Linnaeus, 1758)"
         },
         {
@@ -6099,6 +6189,19 @@
             ]
           },
           "authorityIds": "col:VC23H"
+        },
+        {
+          "id": "SP_NOTODONAX_NIGERIANA_ADEGOKE_1977",
+          "name": "Notodonax nigeriana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Notodonax",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480494"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6198,19 +6301,6 @@
       "name": "Capsella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_CAPSELLA_VARIEGATA_GMELIN_1791",
-          "name": "Capsella variegata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Capsella",
-          "authorship": "(Gmelin, 1791)",
-          "sourceIds": {
-            "checklistbank": "388130"
-          },
-          "children": []
-        },
         {
           "id": "SP_CAPSELLA_CANDIDA",
           "name": "Capsella candida",
@@ -6335,28 +6425,6 @@
       "lineage": "donacidae"
     },
     {
-      "id": "GENUS_PSAMMOTELLINA",
-      "name": "Psammotellina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSAMMOTELLINA_NEPTUNI_W_H_TURTON_1932",
-          "name": "Psammotellina neptuni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Psammotellina",
-          "authorship": "W.H. Turton, 1932",
-          "sourceIds": {
-            "checklistbank": "574227"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "donacidae"
-    },
-    {
       "id": "GENUS_SERRULA",
       "name": "Serrula",
       "rank": "GENUS",
@@ -6384,6 +6452,19 @@
           "authorship": "Monterosato, 1884",
           "sourceIds": {
             "checklistbank": "1077864"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SERRULA_VARIABILIS_SAY_1822",
+          "name": "Serrula variabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Serrula",
+          "authorship": "(Say 1822)",
+          "sourceIds": {
+            "checklistbank": "txn:109660"
           },
           "children": []
         }
@@ -6477,45 +6558,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:139604"
           },
           "children": []
-        },
-        {
-          "id": "SP_DONAX_VARIEGATUS_GMELIN_1791",
-          "name": "\"Donax variegatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Donax",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:152220"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DONAX_KINDERMANNI_R_A_PHILIPPI_1847",
-          "name": "\"Donax kindermanni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Donax",
-          "authorship": "\"(R. A. Philippi, 1847)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494713"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_DONAX_PLATEAUI_CHAVAN_1936",
-          "name": "\"Donax plateaui\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Donax",
-          "authorship": "\"(Chavan, 1936)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569734"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6526,32 +6568,6 @@
       "name": "\"Iphigenia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_IPHIGENIA_LAEVIGATA_GMELIN_1791",
-          "name": "\"Iphigenia laevigata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iphigenia",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225450"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_IPHIGENIA_DELESSERTII_BERNARDI_1860",
-          "name": "\"Iphigenia delessertii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iphigenia",
-          "authorship": "\"(Bernardi, 1860)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225626"
-          },
-          "children": []
-        },
         {
           "id": "SP_IPHIGENIA_BRASILIENSIS_LAMARCK_1818",
           "name": "\"Iphigenia brasiliensis\"",
@@ -6564,300 +6580,26 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:420905"
           },
           "children": []
-        },
-        {
-          "id": "SP_IPHIGENIA_ALTIOR_G_B_SOWERBY_I_1833",
-          "name": "\"Iphigenia altior\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iphigenia",
-          "authorship": "\"(G. B. Sowerby I, 1833)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494753"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_IPHIGENIA_CURTA_DUNKER_1867",
-          "name": "\"Iphigenia curta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iphigenia",
-          "authorship": "\"(Dunker, 1867)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1346728"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_IPHIGENIA_MESSAGERI_PRESTON_1909",
-          "name": "\"Iphigenia messageri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iphigenia",
-          "authorship": "\"(Preston, 1909)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1346729"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_IPHIGENIA_CENTRALIS_GERMAIN_1904",
-          "name": "\"Iphigenia centralis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Iphigenia",
-          "authorship": "\"(Germain, 1904)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1391944"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "donacidae"
     },
     {
-      "id": "GENUS_GALATEA",
-      "name": "\"Galatea",
+      "id": "GENUS_PARADONAX",
+      "name": "Paradonax",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_GALATEA_NUX_PILSBRY_BEQUAERT_1927",
-          "name": "\"Galatea nux\"",
+          "id": "SP_PARADONAX_PETERSONI_OLSSON_1931",
+          "name": "Paradonax petersoni",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Galatea",
-          "authorship": "\"(Pilsbry & Bequaert, 1927)\"",
+          "lineage": "Paradonax",
+          "authorship": "Olsson 1931",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494748"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GALATEA_PARADOXA_BORN_1778",
-          "name": "\"Galatea paradoxa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Galatea",
-          "authorship": "\"(Born, 1778)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:494749"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_GALATEA_SCHWABI_CLENCH_1929",
-          "name": "\"Galatea schwabi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Galatea",
-          "authorship": "\"(Clench, 1929)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1460415"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "donacidae"
-    },
-    {
-      "id": "GENUS_EGERELLA",
-      "name": "\"Egerella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EGERELLA_SUBTRIGONIA_I_LEA_1833",
-          "name": "\"Egerella subtrigonia\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Egerella",
-          "authorship": "\"(I. Lea, 1833)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:744768"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "donacidae"
-    },
-    {
-      "id": "GENUS_LATONA",
-      "name": "\"Latona",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LATONA_CUNEATA_LINNAEUS_1758",
-          "name": "\"Latona cuneata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1476861"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_COLUMBELLA_LAMARCK_1818",
-          "name": "\"Latona columbella\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Lamarck, 1818)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610810"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_DELTOIDES_LAMARCK_1818",
-          "name": "\"Latona deltoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Lamarck, 1818)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610811"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_DYSONI_REEVE_1854",
-          "name": "\"Latona dysoni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Reeve, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610812"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_MADAGASCARIENSIS_MAWE_1823",
-          "name": "\"Latona madagascariensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Mawe, 1823)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610813"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_SPINOSA_GMELIN_1791",
-          "name": "\"Latona spinosa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Gmelin, 1791)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610814"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_SORDIDA_HANLEY_1845",
-          "name": "\"Latona sordida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Hanley, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610815"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_SILIQUA_R_MER_1870",
-          "name": "\"Latona siliqua\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Römer, 1870)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610816"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_TRIFASCIATA_LINNAEUS_1758",
-          "name": "\"Latona trifasciata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610817"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LATONA_VICTORIS_FISCHER_PIETTE_1942",
-          "name": "\"Latona victoris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Latona",
-          "authorship": "\"(Fischer-Piette, 1942)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1610818"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "donacidae"
-    },
-    {
-      "id": "GENUS_HECUBA",
-      "name": "\"Hecuba",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HECUBA_SCORTUM_LINNAEUS_1758",
-          "name": "\"Hecuba scortum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hecuba",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1602278"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HECUBA_PUBESCENS_LINNAEUS_1758",
-          "name": "\"Hecuba pubescens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hecuba",
-          "authorship": "\"(Linnaeus, 1758)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1613515"
+            "checklistbank": "txn:71576"
           },
           "children": []
         }
@@ -6866,8 +6608,8 @@
       "lineage": "donacidae"
     }
   ],
-  "genusCount": 26,
-  "speciesCount": 430,
+  "genusCount": 22,
+  "speciesCount": 408,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -24,9 +24,11 @@
             "col": [
               "7TMGW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:431399"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:431399"
+            ]
           },
-          "authorityIds": "col:7TMGW,itis:89853",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:431399,col:7TMGW,itis:89853",
           "children": []
         },
         {
@@ -338,6 +340,19 @@
           },
           "children": [],
           "uuid": "c3050e7b-4d00-58b-aba-0cfa229c3a236f"
+        },
+        {
+          "id": "SP_SCHIMPERELLA_BENECKEI_BILL_1914",
+          "name": "Schimperella beneckei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Schimperella",
+          "authorship": "Bill 1914",
+          "sourceIds": {
+            "checklistbank": "txn:399438"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -424,35 +439,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eucopiidae"
-    },
-    {
-      "id": "GENUS_EUCOPIA",
-      "name": "\"Eucopia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_EUCOPIA_LINGUICAUDA_O_S_TATTERSALL_1955",
-          "name": "\"Eucopia linguicauda\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Eucopia",
-          "authorship": "\"O.S. Tattersall, 1955\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:431399"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eucopiidae"
     }
   ],
   "speciesCount": 23,
   "appSlug": "eucopiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 8,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

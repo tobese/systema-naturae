@@ -469,29 +469,6 @@
           "authorityIds": "col:46VKS,itis:567950"
         },
         {
-          "id": "SP_NEOTRAPEZIUM_SUBLAEVIGATUM",
-          "name": "Neotrapezium sublaevigatum",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Neotrapezium",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "continents": [
-            "Europe"
-          ],
-          "children": [],
-          "uuid": "343ff0f3-0f8f-5b8-9cc-f84741519f0e85",
-          "sourceIds": {
-            "col": [
-              "46VKT"
-            ],
-            "checklistbank": "670378"
-          },
-          "authorityIds": "col:46VKT",
-          "authorship": "(Lamarck, 1819)"
-        },
-        {
           "id": "SP_TRAPEZIUM_KOBE_MATSUBARA_ET_AL_2010",
           "name": "Trapezium kobe Matsubara et al., 2010",
           "rank": "SPECIES",
@@ -772,7 +749,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "61394bcb-bec2-5f2-b87-3960a63db1a009"
+          "uuid": "61394bcb-bec2-5f2-b87-3960a63db1a009",
+          "authorship": "(Gabb 1864)",
+          "sourceIds": {
+            "checklistbank": "txn:402328"
+          }
         },
         {
           "id": "SP_TRAPEZIUM_CLAIBORNENSE_DALL_1903",
@@ -1203,6 +1184,32 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "837fdd37-f682-59f-ad5-cdcd8bf06a17a8"
+        },
+        {
+          "id": "SP_LANGVOPHORUS_GARANDI_MANSUY_1912",
+          "name": "Langvophorus garandi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Langvophorus",
+          "authorship": "(Mansuy 1912)",
+          "sourceIds": {
+            "checklistbank": "txn:383845"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LANGVOPHORUS_CHOVOENSIS_MANSUY_1912",
+          "name": "Langvophorus chovoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Langvophorus",
+          "authorship": "(Mansuy 1912)",
+          "sourceIds": {
+            "checklistbank": "txn:383847"
+          },
+          "children": []
         }
       ]
     },
@@ -1492,19 +1499,6 @@
           "children": []
         },
         {
-          "id": "SP_CYPRICARDIA_VELLICATA_REEVE_1843",
-          "name": "Cypricardia vellicata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cypricardia",
-          "authorship": "Reeve, 1843",
-          "sourceIds": {
-            "checklistbank": "687554"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CYPRICARDIA_GILVUM_MARTENS_1872",
           "name": "Cypricardia gilvum",
           "rank": "SPECIES",
@@ -1529,6 +1523,45 @@
             "checklistbank": "690607"
           },
           "children": []
+        },
+        {
+          "id": "SP_CYPRICARDIA_SILIQUA_DANA_1847",
+          "name": "Cypricardia siliqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypricardia",
+          "authorship": "(Dana 1847)",
+          "sourceIds": {
+            "checklistbank": "txn:246868"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYPRICARDIA_HAGUEI_STANTON_1899",
+          "name": "Cypricardia haguei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypricardia",
+          "authorship": "Stanton 1899",
+          "sourceIds": {
+            "checklistbank": "txn:320389"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYPRICARDIA_DECURTATA_WINCKLER_1861",
+          "name": "Cypricardia decurtata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypricardia",
+          "authorship": "Winckler 1861",
+          "sourceIds": {
+            "checklistbank": "txn:388180"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1549,32 +1582,6 @@
           "authorship": "Lamarck, 1819",
           "sourceIds": {
             "checklistbank": "549639"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LIBITINA_BICARINATUM_SCHUMACHER_1817",
-          "name": "Libitina bicarinatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Libitina",
-          "authorship": "Schumacher, 1817",
-          "sourceIds": {
-            "checklistbank": "573532"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LIBITINA_ROSTRATA_LAMARCK_1819",
-          "name": "Libitina rostrata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Libitina",
-          "authorship": "Lamarck, 1819",
-          "sourceIds": {
-            "checklistbank": "692323"
           },
           "children": []
         }
@@ -2135,10 +2142,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trapezidae"
+    },
+    {
+      "id": "GENUS_KITSONIA",
+      "name": "Kitsonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KITSONIA_PALEOCENICA_ADEGOKE_1977",
+          "name": "Kitsonia paleocenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kitsonia",
+          "authorship": "Adegoke 1977",
+          "sourceIds": {
+            "checklistbank": "txn:480496"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trapezidae"
     }
   ],
-  "genusCount": 25,
-  "speciesCount": 132,
+  "genusCount": 26,
+  "speciesCount": 134,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2147,6 +2176,6 @@
       "orderKey": 9310756,
       "familyKey": 6842
     },
-    "checklistbank": "457865"
+    "checklistbank": "dd4934f9-e314-45f6-8386-cec4ec334346"
   }
 }

@@ -1588,9 +1588,11 @@
             "col": [
               "PS95"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:239398"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:239398"
+            ]
           },
-          "authorityIds": "col:PS95,itis:1137954"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:239398,col:PS95,itis:1137954"
         },
         {
           "id": "SP_CALLIPALLENE_SEYCHELLENSIS_CHILD_1988",
@@ -1991,18 +1993,6 @@
           "authorship": "(Wilson, 1880)",
           "sourceIds": {
             "checklistbank": "587096"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CALLIPALLENE_SP",
-          "name": "Callipallene sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Callipallene",
-          "sourceIds": {
-            "checklistbank": "62002"
           },
           "children": []
         }
@@ -4257,18 +4247,6 @@
           "authorityIds": "itis:1138770"
         },
         {
-          "id": "SP_MERIDIONALE_VARIABILIS",
-          "name": "Meridionale 'variabilis'",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Meridionale",
-          "sourceIds": {
-            "checklistbank": "1221845"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MERIDIONALE_SP",
           "name": "Meridionale sp.",
           "rank": "SPECIES",
@@ -4372,19 +4350,6 @@
           "children": []
         },
         {
-          "id": "SP_PALLENE_EMACIATA_DOHRN_1881",
-          "name": "Pallene emaciata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pallene",
-          "authorship": "Dohrn, 1881",
-          "sourceIds": {
-            "checklistbank": "989828"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PALLENE_SPECTRUM_DOHRN_1881",
           "name": "Pallene spectrum",
           "rank": "SPECIES",
@@ -4407,19 +4372,6 @@
           "authorship": "Wilson, 1878",
           "sourceIds": {
             "checklistbank": "1021618"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PALLENE_TIBERII_DOHRN_1881",
-          "name": "Pallene tiberii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pallene",
-          "authorship": "Dohrn, 1881",
-          "sourceIds": {
-            "checklistbank": "1044673"
           },
           "children": []
         }
@@ -4459,35 +4411,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "callipallenidae"
-    },
-    {
-      "id": "GENUS_CALLIPALLENE",
-      "name": "\"Callipallene",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CALLIPALLENE_GABRIELLAE_CORR_A_1948",
-          "name": "\"Callipallene gabriellae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Callipallene",
-          "authorship": "\"Corrêa, 1948\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:239398"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "callipallenidae"
     }
   ],
-  "speciesCount": 232,
+  "speciesCount": 227,
   "appSlug": "callipallenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Pycnogonida",
-  "genusCount": 25,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

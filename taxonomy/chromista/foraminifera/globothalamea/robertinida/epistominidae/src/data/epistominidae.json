@@ -3105,10 +3105,12 @@
             ],
             "col": [
               "82HB7"
-            ]
+            ],
+            "checklistbank": "txn:355088"
           },
           "uuid": "3aec4a3f-6600-543-a63-5a4ac5c3aa45df",
-          "authorityIds": "col:82HB7,gbif:8860923"
+          "authorityIds": "col:82HB7,gbif:8860923",
+          "authorship": "Cushman and Kleinpell 1934"
         },
         {
           "id": "EPISTOMINA_RASILIS",
@@ -3914,6 +3916,19 @@
           "authorship": "(d'Orbigny, 1826)",
           "sourceIds": {
             "checklistbank": "670437"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EPISTOMINA_EOCENICA_CUSHMAN_AND_HANNA_1927",
+          "name": "Epistomina eocenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Epistomina",
+          "authorship": "Cushman and Hanna 1927",
+          "sourceIds": {
+            "checklistbank": "txn:355087"
           },
           "children": []
         }
@@ -8136,10 +8151,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "epistominidae"
+    },
+    {
+      "id": "GENUS_STREBLUS",
+      "name": "Streblus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STREBLUS_JAPONICUS_UCHIO_1950",
+          "name": "Streblus japonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streblus",
+          "authorship": "(Uchio 1950)",
+          "sourceIds": {
+            "checklistbank": "txn:477855"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epistominidae"
     }
   ],
-  "genusCount": 29,
-  "speciesCount": 452,
+  "genusCount": 30,
+  "speciesCount": 454,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

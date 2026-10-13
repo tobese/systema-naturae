@@ -265,9 +265,11 @@
             "col": [
               "94LVP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1579434"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1579434"
+            ]
           },
-          "authorityIds": "col:94LVP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1579434,col:94LVP",
           "authorship": "(Dunker, 1851)"
         },
         {
@@ -444,32 +446,10 @@
           "uuid": "60dc7284-a981-547-af7-a4d2b6ab56c251"
         }
       ]
-    },
-    {
-      "id": "GENUS_OMPHALOPHYLLIA",
-      "name": "\"Omphalophyllia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OMPHALOPHYLLIA_TRIASINA_DUNKER_1851",
-          "name": "\"Omphalophyllia triasina\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Omphalophyllia",
-          "authorship": "\"(Dunker, 1851)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1579434"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "conophylliidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 26,
+  "genusCount": 5,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

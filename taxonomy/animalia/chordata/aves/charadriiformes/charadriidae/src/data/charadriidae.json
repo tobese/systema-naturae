@@ -184,6 +184,19 @@
           },
           "authorityIds": "col:6T5WM,itis:176559,wikidata:Q731307",
           "authorship": "(Wagler, 1829)"
+        },
+        {
+          "id": "SP_OREOPHOLUS_ORCESI_CAMPBELL_1976",
+          "name": "Oreopholus orcesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oreopholus",
+          "authorship": "Campbell 1976",
+          "sourceIds": {
+            "checklistbank": "txn:373154"
+          },
+          "children": []
         }
       ]
     },
@@ -259,7 +272,8 @@
             ],
             "checklistbank": "175764"
           },
-          "authorityIds": "col:4FY5D,itis:176555,wikidata:Q1273063"
+          "authorityIds": "col:4FY5D,itis:176555,wikidata:Q1273063",
+          "authorship": "(Fraser, 1845)"
         }
       ]
     },
@@ -291,7 +305,8 @@
             ],
             "checklistbank": "1505867"
           },
-          "authorityIds": "wikidata:Q1268668"
+          "authorityIds": "wikidata:Q1268668",
+          "authorship": "(Lichtenstein, 1823)"
         }
       ]
     },
@@ -710,26 +725,6 @@
           "authorityIds": "col:9J2PX,itis:1193053"
         },
         {
-          "id": "SP_CHARADRIUS_ASIATICUS_PALLAS_1773",
-          "name": "Charadrius asiaticus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "authorship": "Pallas, 1773",
-          "children": [],
-          "lineage": "Ringed Plovers",
-          "uuid": "dec336e5-4014-540-8c2-fbd291eb0f9c9c",
-          "sourceIds": {
-            "itis": [
-              "176524"
-            ],
-            "col": [
-              "TMWN"
-            ]
-          },
-          "authorityIds": "col:TMWN,itis:176524"
-        },
-        {
           "id": "SP_CHARADRIUS_MODESTUS_M_H_K_LICHTENSTEIN_1823",
           "name": "Charadrius modestus",
           "rank": "SPECIES",
@@ -1022,7 +1017,8 @@
             ],
             "col": [
               "TMX9"
-            ]
+            ],
+            "checklistbank": "96879"
           },
           "authorityIds": "col:TMX9,itis:176545",
           "commonName": "Eurasian Dotterel"
@@ -1092,27 +1088,6 @@
           "authorityIds": "col:TMXD,itis:176537"
         },
         {
-          "id": "SP_CHARADRIUS_PECUARIUS_TEMMINCK_1823",
-          "name": "Charadrius pecuarius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "wikidata",
-          "authorship": "Temminck, 1823",
-          "children": [],
-          "lineage": "Ringed Plovers",
-          "uuid": "d11012a7-b14d-5c4-aad-e36683ce2719d0",
-          "sourceIds": {
-            "itis": [
-              "176538"
-            ],
-            "col": [
-              "69PL5"
-            ]
-          },
-          "authorityIds": "col:69PL5,itis:176538",
-          "commonName": "Kittlitz's Plover"
-        },
-        {
           "id": "SP_CHARADRIUS_MELANOPS",
           "name": "Charadrius melanops",
           "rank": "SPECIES",
@@ -1120,7 +1095,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Charadrius",
-          "uuid": "cb673170-29b5-507-9f6-9d6d08722f74a4"
+          "uuid": "cb673170-29b5-507-9f6-9d6d08722f74a4",
+          "authorship": "Vieillot, 1818",
+          "sourceIds": {
+            "checklistbank": "Charadrius_melanops"
+          }
         },
         {
           "id": "SP_CHARADRIUS_NOVAESEELANDIAE",
@@ -1131,7 +1110,11 @@
           "children": [],
           "lineage": "Charadrius",
           "uuid": "8e99f6d9-af7c-598-88f-48ba3bf14d87ea",
-          "commonName": "Shore Plover"
+          "commonName": "Shore Plover",
+          "authorship": "Gmelin, JF, 1789",
+          "sourceIds": {
+            "checklistbank": "Charadrius_novaeseelandiae"
+          }
         },
         {
           "id": "SP_CHARADRIUS_CUCULLATUS",
@@ -1141,7 +1124,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Charadrius",
-          "uuid": "310e2333-5fa4-581-997-f7d7658ab13ce1"
+          "uuid": "310e2333-5fa4-581-997-f7d7658ab13ce1",
+          "authorship": "Vieillot, 1818",
+          "sourceIds": {
+            "checklistbank": "Charadrius_cucullatus"
+          }
         },
         {
           "id": "SP_CHARADRIUS_CRISTATUS",
@@ -1323,19 +1310,6 @@
           "children": []
         },
         {
-          "id": "SP_CHARADRIUS_GEOFFROYI_WAGLER_1827",
-          "name": "Charadrius geoffroyi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Charadrius",
-          "authorship": "Wagler, 1827",
-          "sourceIds": {
-            "checklistbank": "1053139"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CHARADRIUS_ALEXANDRINUS",
           "name": "Charadrius ×alexandrinus",
           "rank": "SPECIES",
@@ -1356,6 +1330,19 @@
           "lineage": "Charadrius",
           "sourceIds": {
             "checklistbank": "2699397"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHARADRIUS_SHEPPARDIANUS_COPE_1881",
+          "name": "Charadrius sheppardianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Charadrius",
+          "authorship": "Cope 1881",
+          "sourceIds": {
+            "checklistbank": "txn:308761"
           },
           "children": []
         }
@@ -1464,7 +1451,8 @@
           "sourceIds": {
             "checklistbank": "1580333"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Vieillot, 1818)"
         },
         {
           "id": "SP_THINORNIS_FORBESI",
@@ -1476,7 +1464,8 @@
           "sourceIds": {
             "checklistbank": "1580334"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Shelley, 1883)"
         },
         {
           "id": "SP_THINORNIS_TRICOLLARIS",
@@ -1488,7 +1477,8 @@
           "sourceIds": {
             "checklistbank": "1580335"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Vieillot, 1818)"
         },
         {
           "id": "SP_THINORNIS_PLACIDUS",
@@ -1500,7 +1490,8 @@
           "sourceIds": {
             "checklistbank": "1580337"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Gray & Gray, 1863)"
         }
       ]
     },
@@ -1605,9 +1596,11 @@
             "itis": [
               "176487"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1451019"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1451019"
+            ]
           },
-          "authorityIds": "col:7FFJ6,itis:176487,wikidata:Q686769",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1451019,col:7FFJ6,itis:176487,wikidata:Q686769",
           "authorship": "(Hartlaub, 1855)"
         },
         {
@@ -1698,7 +1691,8 @@
             ],
             "checklistbank": "4854"
           },
-          "authorityIds": "col:7FFJ5,itis:563660,wikidata:Q956855"
+          "authorityIds": "col:7FFJ5,itis:563660,wikidata:Q956855",
+          "authorship": "(Lesson, 1826)"
         },
         {
           "id": "VANELLUS_TECTUS",
@@ -1757,7 +1751,8 @@
             ],
             "checklistbank": "144484"
           },
-          "authorityIds": "col:7FFJG,itis:176492,wikidata:Q979748"
+          "authorityIds": "col:7FFJG,itis:176492,wikidata:Q979748",
+          "authorship": "(Boddaert, 1783)"
         },
         {
           "id": "VANELLUS_ALBICEPS",
@@ -1843,9 +1838,11 @@
             "itis": [
               "176494"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:366838"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:366838"
+            ]
           },
-          "authorityIds": "col:7FFJD,itis:176494,wikidata:Q372606",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:366838,col:7FFJD,itis:176494,wikidata:Q372606",
           "authorship": "(Cretzschmar, 1829)"
         },
         {
@@ -1872,9 +1869,11 @@
             "col": [
               "7FFJ7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:366837"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:366837"
+            ]
           },
-          "authorityIds": "col:7FFJ7,itis:176486,wikidata:Q369800",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:366837,col:7FFJ7,itis:176486,wikidata:Q369800",
           "authorship": "(Boddaert, 1783)"
         },
         {
@@ -1903,7 +1902,8 @@
             ],
             "checklistbank": "4868"
           },
-          "authorityIds": "col:7FFJQ,itis:176498,wikidata:Q875949"
+          "authorityIds": "col:7FFJQ,itis:176498,wikidata:Q875949",
+          "authorship": "(Linnaeus, 1766)"
         },
         {
           "id": "VANELLUS_MELANOCEPHALUS",
@@ -1932,7 +1932,8 @@
             ],
             "checklistbank": "4863"
           },
-          "authorityIds": "col:7FFJF,itis:176493,wikidata:Q480072"
+          "authorityIds": "col:7FFJF,itis:176493,wikidata:Q480072",
+          "authorship": "(Rüppell, 1845)"
         },
         {
           "id": "VANELLUS_SUPERCILIOSUS",
@@ -1961,7 +1962,8 @@
             ],
             "checklistbank": "4869"
           },
-          "authorityIds": "col:7FFJP,itis:176500,wikidata:Q1263241"
+          "authorityIds": "col:7FFJP,itis:176500,wikidata:Q1263241",
+          "authorship": "(Reichenow, 1886)"
         },
         {
           "id": "VANELLUS_CINEREUS",
@@ -2018,9 +2020,11 @@
             "col": [
               "7FFJ3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1443796"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1443796"
+            ]
           },
-          "authorityIds": "col:7FFJ3,itis:176489,wikidata:Q752398",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1443796,col:7FFJ3,itis:176489,wikidata:Q752398",
           "authorship": "(Boddaert, 1783)"
         },
         {
@@ -2049,7 +2053,8 @@
             ],
             "checklistbank": "4865"
           },
-          "authorityIds": "col:7FFJH,itis:563661,wikidata:Q596310"
+          "authorityIds": "col:7FFJH,itis:563661,wikidata:Q596310",
+          "authorship": "(Wagler, 1827)"
         },
         {
           "id": "VANELLUS_TRICOLOR",
@@ -2225,9 +2230,11 @@
             "itis": [
               "176497"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:366840"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:366840"
+            ]
           },
-          "authorityIds": "col:7FFK3,itis:176497,wikidata:Q249290",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:366840,col:7FFK3,itis:176497,wikidata:Q249290",
           "authorship": "(Tschudi, 1843)"
         },
         {
@@ -2267,7 +2274,8 @@
           "sourceIds": {
             "checklistbank": "774496"
           },
-          "children": []
+          "children": [],
+          "authorship": "Goodman 1997"
         },
         {
           "id": "SP_VANELLUS_SP",
@@ -2278,6 +2286,32 @@
           "lineage": "Vanellus",
           "sourceIds": {
             "checklistbank": "2108450"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VANELLUS_SELYSI_VAN_BENEDEN_1871",
+          "name": "Vanellus selysi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vanellus",
+          "authorship": "Van Beneden 1871",
+          "sourceIds": {
+            "checklistbank": "txn:359399"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VANELLUS_LIFFYAE_DE_PIETRI_ET_AL_2018",
+          "name": "Vanellus liffyae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vanellus",
+          "authorship": "De Pietri et al. 2018",
+          "sourceIds": {
+            "checklistbank": "txn:378524"
           },
           "children": []
         }
@@ -2395,30 +2429,6 @@
           "authorship": "Pallas, 1773"
         },
         {
-          "id": "ANARHYNCHUS_VEREDUS",
-          "name": "Anarhynchus veredus",
-          "rank": "SPECIES",
-          "commonName": "Oriental Plover",
-          "lineage": "Sand Plovers",
-          "continents": [
-            "Asia",
-            "Oceania"
-          ],
-          "subspeciesCount": 0,
-          "description": "The oriental plover (Anarhynchus veredus), also known as the oriental dotterel, is a medium-sized plover closely related to the Caspian plover.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "uuid": "29cccebc-0556-587-976-8b9b940dcde9cf",
-          "sourceIds": {
-            "wikidata": [
-              "Q1259404"
-            ],
-            "checklistbank": "227239"
-          },
-          "authorityIds": "wikidata:Q1259404",
-          "authorship": "Gould, 1848"
-        },
-        {
           "id": "ANARHYNCHUS_ATRIFRONS",
           "name": "Anarhynchus atrifrons",
           "rank": "SPECIES",
@@ -2467,32 +2477,6 @@
           },
           "authorityIds": "wikidata:Q137161769",
           "authorship": "Pallas, 1776"
-        },
-        {
-          "id": "ANARHYNCHUS_LESCHENAULTII",
-          "name": "Anarhynchus leschenaultii",
-          "rank": "SPECIES",
-          "commonName": "Greater Sand Plover",
-          "lineage": "Sand Plovers",
-          "continents": [
-            "Asia",
-            "Africa",
-            "Oceania"
-          ],
-          "subspeciesCount": 3,
-          "description": "The greater sand plover (Anarhynchus leschenaultii) is a small wader in the plover family of birds.",
-          "namedAfter": "Leschenault de la Tour",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "uuid": "4839801d-b94a-536-a81-705218f39cd627",
-          "sourceIds": {
-            "wikidata": [
-              "Q137159050"
-            ],
-            "checklistbank": "227242"
-          },
-          "authorityIds": "wikidata:Q137159050",
-          "authorship": "Lesson, 1826"
         },
         {
           "id": "ANARHYNCHUS_BICINCTUS",
@@ -2716,31 +2700,6 @@
           "authorship": "(Richmond, 1896)"
         },
         {
-          "id": "ANARHYNCHUS_PECUARIUS",
-          "name": "Anarhynchus pecuarius",
-          "rank": "SPECIES",
-          "commonName": "Kittlitz's Plover",
-          "lineage": "Sand Plovers",
-          "continents": [
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": "Kittlitz's plover (Anarhynchus pecuarius) is a small shorebird in the family Charadriidae that breeds near coastal and inland saltmarshes, sandy or muddy riverbanks or alkaline grasslands with short vegetation. It is native to much of Sub-Saharan Africa, the Nile Delta and Madagascar. It is thought to be mainly polygamous and has monomorphic plumage.",
-          "namedAfter": "Heinrich von Kittlitz",
-          "sourcedFrom": "wikipedia",
-          "wikipediaTitle": "Kittlitz's plover",
-          "children": [],
-          "uuid": "2acce353-8923-59a-93d-49859866e70642",
-          "sourceIds": {
-            "wikidata": [
-              "Q137162124"
-            ],
-            "checklistbank": "227243"
-          },
-          "authorityIds": "wikidata:Q137162124",
-          "authorship": "Temminck, 1823"
-        },
-        {
           "id": "ANARHYNCHUS_SANCTAEHELENAE",
           "name": "Anarhynchus sanctaehelenae",
           "rank": "SPECIES",
@@ -2907,31 +2866,6 @@
           },
           "authorityIds": "wikidata:Q1270532",
           "authorship": "(Chasen, 1938)"
-        },
-        {
-          "id": "ANARHYNCHUS_ALEXANDRINUS",
-          "name": "Anarhynchus alexandrinus",
-          "rank": "SPECIES",
-          "commonName": "Kentish Plover",
-          "lineage": "Sand Plovers",
-          "continents": [
-            "Europe",
-            "Asia",
-            "Africa"
-          ],
-          "subspeciesCount": 0,
-          "description": "The Kentish plover (Anarhynchus alexandrinus) is a small wader () of the family Charadriidae that breeds on the shores of saline lakes, lagoons, and coasts, populating sand dunes, marshes, semi-arid desert, and tundra.",
-          "sourcedFrom": "wikipedia",
-          "children": [],
-          "uuid": "aed18f5a-5b12-59f-b2e-23ffa6b86627b2",
-          "sourceIds": {
-            "wikidata": [
-              "Q137156829"
-            ],
-            "checklistbank": "227244"
-          },
-          "authorityIds": "wikidata:Q137156829",
-          "authorship": "Linnaeus, 1758"
         },
         {
           "id": "ANARHYNCHUS_DEALBATUS",
@@ -3425,28 +3359,6 @@
       "lineage": "charadriidae"
     },
     {
-      "id": "GENUS_PLUVIANELLUS",
-      "name": "Pluvianellus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLUVIANELLUS_SOCIALIS_GRAY_1846",
-          "name": "Pluvianellus socialis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pluvianellus",
-          "authorship": "Gray, 1846",
-          "sourceIds": {
-            "checklistbank": "227228"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "charadriidae"
-    },
-    {
       "id": "GENUS_IBIDORHYNCHA",
       "name": "Ibidorhyncha",
       "rank": "GENUS",
@@ -3843,32 +3755,6 @@
           "children": []
         },
         {
-          "id": "SP_VANELLUS_CORONATUS_BODDAERT_1783",
-          "name": "\"Vanellus coronatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vanellus",
-          "authorship": "\"(Boddaert, 1783)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:366837"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VANELLUS_MELANOPTERUS_CRETZSCHMAR_1829",
-          "name": "\"Vanellus melanopterus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vanellus",
-          "authorship": "\"(Cretzschmar, 1829)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:366838"
-          },
-          "children": []
-        },
-        {
           "id": "SP_VANELLUS_CHILENSIS_MOLINA_1782",
           "name": "\"Vanellus chilensis\"",
           "rank": "SPECIES",
@@ -3878,19 +3764,6 @@
           "authorship": "\"(Molina, 1782)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:366839"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VANELLUS_RESPLENDENS_TSCHUDI_1843",
-          "name": "\"Vanellus resplendens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vanellus",
-          "authorship": "\"(Tschudi, 1843)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:366840"
           },
           "children": []
         },
@@ -3921,19 +3794,6 @@
           "children": []
         },
         {
-          "id": "SP_VANELLUS_INDICUS_BODDAERT_1783",
-          "name": "\"Vanellus indicus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vanellus",
-          "authorship": "\"(Boddaert, 1783)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1443796"
-          },
-          "children": []
-        },
-        {
           "id": "SP_VANELLUS_CINEREUS_BLYTH_1842",
           "name": "\"Vanellus cinereus\"",
           "rank": "SPECIES",
@@ -3943,19 +3803,6 @@
           "authorship": "\"(Blyth, 1842)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1451016"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VANELLUS_CRASSIROSTRIS_HARTLAUB_1855",
-          "name": "\"Vanellus crassirostris\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Vanellus",
-          "authorship": "\"(Hartlaub, 1855)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1451019"
           },
           "children": []
         }
@@ -4085,10 +3932,167 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "charadriidae"
+    },
+    {
+      "id": "GENUS_JILINIORNIS",
+      "name": "Jiliniornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_JILINIORNIS_HUADIANENSIS_HOU_AND_ERICSON_2002",
+          "name": "Jiliniornis huadianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jiliniornis",
+          "authorship": "Hou and Ericson 2002",
+          "sourceIds": {
+            "checklistbank": "txn:99477"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charadriidae"
+    },
+    {
+      "id": "GENUS_VIATOR",
+      "name": "Viator",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIATOR_PICIS_CAMPBELL_1979",
+          "name": "Viator picis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Viator",
+          "authorship": "Campbell 1979",
+          "sourceIds": {
+            "checklistbank": "txn:289785"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charadriidae"
+    },
+    {
+      "id": "GENUS_BELONOPTERUS",
+      "name": "Belonopterus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BELONOPTERUS_EDMONDI_CAMPBELL_1979",
+          "name": "Belonopterus edmondi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Belonopterus",
+          "authorship": "Campbell 1979",
+          "sourceIds": {
+            "checklistbank": "txn:289787"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BELONOPTERUS_LILLOI_CENIZO_AND_AGNOL_N_2017",
+          "name": "Belonopterus lilloi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Belonopterus",
+          "authorship": "(Cenizo and Agnolín 2017)",
+          "sourceIds": {
+            "checklistbank": "txn:484694"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charadriidae"
+    },
+    {
+      "id": "GENUS_DORYPALTUS",
+      "name": "Dorypaltus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DORYPALTUS_PROPHATUS_BRODKORB_1959",
+          "name": "Dorypaltus prophatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dorypaltus",
+          "authorship": "Brodkorb 1959",
+          "sourceIds": {
+            "checklistbank": "txn:290130"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charadriidae"
+    },
+    {
+      "id": "GENUS_PSEUDOSTERNA",
+      "name": "Pseudosterna",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOSTERNA_DEGENER_MERCERAT_1897",
+          "name": "Pseudosterna degener",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudosterna",
+          "authorship": "Mercerat 1897",
+          "sourceIds": {
+            "checklistbank": "txn:335160"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOSTERNA_PAPEANA_MERCERAT_1897",
+          "name": "Pseudosterna papeana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudosterna",
+          "authorship": "Mercerat 1897",
+          "sourceIds": {
+            "checklistbank": "txn:335161"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charadriidae"
+    },
+    {
+      "id": "GENUS_LOBIVANELLUS",
+      "name": "Lobivanellus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOBIVANELLUS_INDICUS",
+          "name": "Lobivanellus indicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lobivanellus",
+          "sourceIds": {
+            "checklistbank": "96888"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "charadriidae"
     }
   ],
-  "genusCount": 34,
-  "speciesCount": 196,
+  "genusCount": 39,
+  "speciesCount": 195,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

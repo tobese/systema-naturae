@@ -164,9 +164,11 @@
             "itis": [
               "1207074"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:548002"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:548002"
+            ]
           },
-          "authorityIds": "col:BPJ4T,itis:1207074",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:548002,col:BPJ4T,itis:1207074",
           "children": []
         },
         {
@@ -231,6 +233,19 @@
           "lineage": "Gourretia",
           "sourceIds": {
             "checklistbank": "576906"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GOURRETIA_AQUILAE_RATHBUN_1935",
+          "name": "Gourretia aquilae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gourretia",
+          "authorship": "(Rathbun 1935)",
+          "sourceIds": {
+            "checklistbank": "txn:402092"
           },
           "children": []
         }
@@ -339,9 +354,11 @@
             "col": [
               "BMV5J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477686"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:477686"
+            ]
           },
-          "authorityIds": "col:BMV5J,itis:97762",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:477686,col:BMV5J,itis:97762",
           "children": []
         },
         {
@@ -706,6 +723,32 @@
           },
           "children": [],
           "uuid": "b86e1111-8106-53f-bea-61765f8a86dd0d"
+        },
+        {
+          "id": "SP_CTENOCHELES_BALSII_KISHINOUYE_1926",
+          "name": "Ctenocheles balsii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenocheles",
+          "authorship": "Kishinouye 1926",
+          "sourceIds": {
+            "checklistbank": "txn:167325"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CTENOCHELES_CHATTIENSIS_POLKOWSKY_2004",
+          "name": "Ctenocheles chattiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ctenocheles",
+          "authorship": "Polkowsky 2004",
+          "sourceIds": {
+            "checklistbank": "txn:218246"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -752,9 +795,11 @@
             "col": [
               "BPKX9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1398873"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1398873"
+            ]
           },
-          "authorityIds": "col:BPKX9,itis:1207079",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1398873,col:BPKX9,itis:1207079",
           "children": []
         },
         {
@@ -773,9 +818,11 @@
             "col": [
               "BPKX7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1398853"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1398853"
+            ]
           },
-          "authorityIds": "col:BPKX7,itis:1206896",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1398853,col:BPKX7,itis:1206896",
           "children": []
         },
         {
@@ -1268,77 +1315,20 @@
       "lineage": "ctenochelidae"
     },
     {
-      "id": "GENUS_CTENOCHELES",
-      "name": "\"Ctenocheles",
+      "id": "GENUS_ISCHNODACTYLUS",
+      "name": "Ischnodactylus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CTENOCHELES_SERRIFRONS_LE_LOEUFF_INTES_1974",
-          "name": "\"Ctenocheles serrifrons\"",
+          "id": "SP_ISCHNODACTYLUS_COOKEI_RATHBUN_1935",
+          "name": "Ischnodactylus cookei",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Ctenocheles",
-          "authorship": "\"Le Loeuff & Intes, 1974\"",
+          "lineage": "Ischnodactylus",
+          "authorship": "Rathbun 1935",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477686"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ctenochelidae"
-    },
-    {
-      "id": "GENUS_GOURRETIA",
-      "name": "\"Gourretia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GOURRETIA_SINICA_LIU_LIU_2010",
-          "name": "\"Gourretia sinica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gourretia",
-          "authorship": "\"Liu & Liu, 2010\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:548002"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ctenochelidae"
-    },
-    {
-      "id": "GENUS_PARAGOURRETIA",
-      "name": "\"Paragourretia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARAGOURRETIA_CROSNIERI_NGOC_HO_1991",
-          "name": "\"Paragourretia crosnieri\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paragourretia",
-          "authorship": "\"(Ngoc-Ho, 1991)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1398853"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PARAGOURRETIA_LAEVIDACTYLA_LIU_LIU_2010",
-          "name": "\"Paragourretia laevidactyla\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paragourretia",
-          "authorship": "\"(Liu & Liu, 2010)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1398873"
+            "checklistbank": "txn:403390"
           },
           "children": []
         }
@@ -1351,7 +1341,7 @@
   "appSlug": "ctenochelidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 16,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

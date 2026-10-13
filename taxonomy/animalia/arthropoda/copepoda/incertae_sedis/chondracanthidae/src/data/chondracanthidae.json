@@ -1438,9 +1438,11 @@
             "col": [
               "69ZZG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1250437"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1250437"
+            ]
           },
-          "authorityIds": "col:69ZZG"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1250437,col:69ZZG"
         },
         {
           "id": "SP_CHONDRACANTHUS_JANEBENNETTAE_CAUSEY_1953",
@@ -1713,27 +1715,6 @@
             "checklistbank": "ott2945905"
           },
           "authorityIds": "col:5XZP5"
-        },
-        {
-          "id": "SP_CHONDRACANTHUS_ORNATUS_SCOTT_T_1900",
-          "name": "Chondracanthus ornatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "chondracanthus",
-          "authorship": "Scott T., 1900",
-          "children": [],
-          "uuid": "271949e4-63b7-5c4-861-897ff3facf3b6d",
-          "sourceIds": {
-            "itis": [
-              "206236"
-            ],
-            "col": [
-              "5XZNW"
-            ],
-            "checklistbank": "15907"
-          },
-          "authorityIds": "col:5XZNW,itis:206236"
         },
         {
           "id": "SP_CHONDRACANTHUS_BARNARDI_HO_1972",
@@ -4862,19 +4843,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LERNAEA_ASELLINA_LINNAEUS_1758",
-          "name": "Lernaea asellina",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lernaea",
-          "authorship": "Linnaeus, 1758",
-          "sourceIds": {
-            "checklistbank": "582334"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LERNAEA_CORNUTA_O_F_M_LLER_1776",
           "name": "Lernaea cornuta",
           "rank": "SPECIES",
@@ -5090,50 +5058,6 @@
       "lineage": "chondracanthidae"
     },
     {
-      "id": "GENUS_HAEMOBAPHES",
-      "name": "Haemobaphes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HAEMOBAPHES_CORNUTUS_O_F_M_LLER_1776",
-          "name": "Haemobaphes cornutus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Haemobaphes",
-          "authorship": "(O.F. Müller, 1776)",
-          "sourceIds": {
-            "checklistbank": "678251"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "chondracanthidae"
-    },
-    {
-      "id": "GENUS_DISPHAEROCEPHALUS",
-      "name": "Disphaerocephalus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DISPHAEROCEPHALUS_ORNATUS_SCOTT_T_1900",
-          "name": "Disphaerocephalus ornatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Disphaerocephalus",
-          "authorship": "(Scott T., 1900)",
-          "sourceIds": {
-            "checklistbank": "1046970"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "chondracanthidae"
-    },
-    {
       "id": "GENUS_ACANTHOCONDRIA",
       "name": "Acanthocondria",
       "rank": "GENUS",
@@ -5319,19 +5243,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:363031"
           },
           "children": []
-        },
-        {
-          "id": "SP_CHONDRACANTHUS_DIBRANCHI_GO_MEZ_AGUIRRE_VILLASE_OR_MORALES_SERNA_2018",
-          "name": "\"Chondracanthus dibranchi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chondracanthus",
-          "authorship": "\"Gómez, Aguirre-Villaseñor & Morales-Serna, 2018\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1250437"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5382,11 +5293,11 @@
       "lineage": "chondracanthidae"
     }
   ],
-  "speciesCount": 271,
+  "speciesCount": 266,
   "appSlug": "chondracanthidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 74,
+  "genusCount": 72,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

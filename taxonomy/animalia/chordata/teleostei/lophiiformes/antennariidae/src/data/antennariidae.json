@@ -346,7 +346,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Antennarius",
-          "uuid": "df805d3e-f832-5de-a38-0176a0d2917160"
+          "uuid": "df805d3e-f832-5de-a38-0176a0d2917160",
+          "authorship": "Carnevale and Pietsch 2006",
+          "sourceIds": {
+            "checklistbank": "txn:360779"
+          }
         },
         {
           "id": "SP_ANTENNARIUS_COCCINEUS",
@@ -1419,19 +1423,6 @@
           "children": []
         },
         {
-          "id": "SP_ANTENNARIUS_STRIGATUS_GILL_1863",
-          "name": "Antennarius strigatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Antennarius",
-          "authorship": "Gill, 1863",
-          "sourceIds": {
-            "checklistbank": "694362"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ANTENNARIUS_LAYSANIUS_JORDAN_SNYDER_1904",
           "name": "Antennarius laysanius",
           "rank": "SPECIES",
@@ -1453,6 +1444,19 @@
           "lineage": "Antennarius",
           "sourceIds": {
             "checklistbank": "586778"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANTENNARIUS_EXCAVATUS_STINTON_1978",
+          "name": "Antennarius excavatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Antennarius",
+          "authorship": "(Stinton 1978)",
+          "sourceIds": {
+            "checklistbank": "txn:361082"
           },
           "children": []
         }
@@ -1875,19 +1879,6 @@
           "authorship": "(Schultz, 1957)",
           "sourceIds": {
             "checklistbank": "809580"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ANTENNATUS_DUESCUS_SNYDER_1904",
-          "name": "Antennatus duescus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Antennatus",
-          "authorship": "(Snyder, 1904)",
-          "sourceIds": {
-            "checklistbank": "809582"
           },
           "children": []
         },
@@ -2614,19 +2605,6 @@
           "children": []
         },
         {
-          "id": "SP_LOPHIUS_COMMERSON_LATREILLE_1804",
-          "name": "Lophius commerson",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lophius",
-          "authorship": "Latreille, 1804",
-          "sourceIds": {
-            "checklistbank": "555550"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LOPHIUS_COMMERSONII_SHAW_1804",
           "name": "Lophius commersonii",
           "rank": "SPECIES",
@@ -3161,19 +3139,6 @@
           "authorship": "Poey, 1852",
           "sourceIds": {
             "checklistbank": "562239"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CHIRONECTES_TIGRIS_POEY_1852",
-          "name": "Chironectes tigris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chironectes",
-          "authorship": "Poey, 1852",
-          "sourceIds": {
-            "checklistbank": "562240"
           },
           "children": []
         },
@@ -3868,18 +3833,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BRACHIONICHTHYS_HIRSUTUS",
-          "name": "Brachionichthys hirsutus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Brachionichthys",
-          "sourceIds": {
-            "checklistbank": "95962"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BRACHIONICHTHYS_AUSTRALIS",
           "name": "Brachionichthys australis",
           "rank": "SPECIES",
@@ -4146,13 +4099,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "antennariidae"
+    },
+    {
+      "id": "GENUS_EOPHRYNE",
+      "name": "Eophryne",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOPHRYNE_BARBUTII_CARNEVALE_AND_PIETSCH_2009",
+          "name": "Eophryne barbutii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eophryne",
+          "authorship": "Carnevale and Pietsch 2009",
+          "sourceIds": {
+            "checklistbank": "txn:353218"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "antennariidae"
+    },
+    {
+      "id": "GENUS_NEILPEARTIA",
+      "name": "Neilpeartia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEILPEARTIA_CERATOI_CARNEVALE_ET_AL_2020",
+          "name": "Neilpeartia ceratoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neilpeartia",
+          "authorship": "Carnevale et al. 2020",
+          "sourceIds": {
+            "checklistbank": "txn:426090"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "antennariidae"
     }
   ],
-  "speciesCount": 257,
+  "speciesCount": 255,
   "appSlug": "antennariidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 39,
+  "genusCount": 41,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

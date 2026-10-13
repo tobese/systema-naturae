@@ -31,9 +31,11 @@
             "itis": [
               "18060"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634450"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1634450"
+            ]
           },
-          "authorityIds": "col:5BX2Q,itis:18060,wfo:wfo-0000801450",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1634450,col:5BX2Q,itis:18060,wfo:wfo-0000801450",
           "authorship": "Hook.f.",
           "children": []
         },
@@ -53,20 +55,138 @@
       ]
     },
     {
-      "id": "GENUS_WELWITSCHIA",
-      "name": "\"Welwitschia",
+      "id": "GENUS_WELWITSCHIAPITES",
+      "name": "Welwitschiapites",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_WELWITSCHIA_MIRABILIS_HOOK_F",
-          "name": "\"Welwitschia mirabilis\"",
+          "id": "SP_WELWITSCHIAPITES_EXTANSUS_BHARADWAJ_AND_SALUJHA_1964",
+          "name": "Welwitschiapites extansus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Welwitschia",
-          "authorship": "Hook.f.",
+          "lineage": "Welwitschiapites",
+          "authorship": "Bharadwaj and Salujha 1964",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634450"
+            "checklistbank": "txn:461245"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_WELWITSCHIAPITES_MAGNUS_MAITHY_1965",
+          "name": "Welwitschiapites magnus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiapites",
+          "authorship": "Maithy 1965",
+          "sourceIds": {
+            "checklistbank": "txn:461246"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_WELWITSCHIAPITES_MINUTUS_MAITHY_1965",
+          "name": "Welwitschiapites minutus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiapites",
+          "authorship": "Maithy 1965",
+          "sourceIds": {
+            "checklistbank": "txn:461247"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_WELWITSCHIAPITES_TENUIS_BHARADWAJ_AND_SALUJHA_1964",
+          "name": "Welwitschiapites tenuis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiapites",
+          "authorship": "Bharadwaj and Salujha 1964",
+          "sourceIds": {
+            "checklistbank": "txn:461248"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_WELWITSCHIAPITES_CANALICULUS_LELE_AND_KULKARNI_1969",
+          "name": "Welwitschiapites canaliculus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiapites",
+          "authorship": "Lele and Kulkarni 1969",
+          "sourceIds": {
+            "checklistbank": "txn:461249"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "welwitschiaceae"
+    },
+    {
+      "id": "GENUS_WELWITSCHIELLA",
+      "name": "Welwitschiella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WELWITSCHIELLA_AUSTROAMERICANA_DILCHER_ET_AL_2005",
+          "name": "Welwitschiella austroamericana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiella",
+          "authorship": "Dilcher et al. 2005",
+          "sourceIds": {
+            "checklistbank": "txn:513781"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "welwitschiaceae"
+    },
+    {
+      "id": "GENUS_WELWITSCHIOPHYLLUM",
+      "name": "Welwitschiophyllum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WELWITSCHIOPHYLLUM_BRASILIENSE_DILCHER_ET_AL_2005",
+          "name": "Welwitschiophyllum brasiliense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiophyllum",
+          "authorship": "Dilcher et al. 2005",
+          "sourceIds": {
+            "checklistbank": "txn:513783"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "welwitschiaceae"
+    },
+    {
+      "id": "GENUS_WELWITSCHIOSTROBUS",
+      "name": "Welwitschiostrobus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WELWITSCHIOSTROBUS_MURILI_DILCHER_ET_AL_2005",
+          "name": "Welwitschiostrobus murili",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Welwitschiostrobus",
+          "authorship": "Dilcher et al. 2005",
+          "sourceIds": {
+            "checklistbank": "txn:513785"
           },
           "children": []
         }
@@ -75,8 +195,8 @@
       "lineage": "welwitschiaceae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 3,
+  "genusCount": 5,
+  "speciesCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,

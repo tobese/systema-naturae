@@ -216,32 +216,6 @@
           "authorityIds": "col:8GCRX"
         },
         {
-          "id": "SP_METEPSILONEMA_HAGMEIERI",
-          "name": "Metepsilonema hagmeieri",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Metepsilonema",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "gbif",
-          "continents": [
-            "Europe"
-          ],
-          "children": [],
-          "authorship": "(Stauffer, 1925)",
-          "uuid": "32439cce-0d70-56e-b36-a925a65a79f1fc",
-          "sourceIds": {
-            "itis": [
-              "61046"
-            ],
-            "col": [
-              "88NS8"
-            ],
-            "checklistbank": "41059"
-          },
-          "authorityIds": "col:88NS8,itis:61046"
-        },
-        {
           "id": "SP_METEPSILONEMA_HARDYI_DECRAEMER_GOURBAULT_1990",
           "name": "Metepsilonema hardyi Decraemer & Gourbault, 1990",
           "rank": "SPECIES",
@@ -3584,9 +3558,11 @@
             "col": [
               "8G8DH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:230439"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:230439"
+            ]
           },
-          "authorityIds": "col:8G8DH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:230439,col:8G8DH",
           "authorship": "(Murphy, 1963)"
         },
         {
@@ -4073,9 +4049,11 @@
             "col": [
               "8G8F5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:153411"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:153411"
+            ]
           },
-          "authorityIds": "col:8G8F5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:153411,col:8G8F5",
           "authorship": "(Gerlach, 1952)"
         },
         {
@@ -4766,32 +4744,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:121058"
           },
           "children": []
-        },
-        {
-          "id": "SP_EPSILONEMA_PUSTULATUM_GERLACH_1952",
-          "name": "\"Epsilonema pustulatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Epsilonema",
-          "authorship": "\"(Gerlach, 1952)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:153411"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPSILONEMA_COSTERIATUM_MURPHY_1963",
-          "name": "\"Epsilonema costeriatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Epsilonema",
-          "authorship": "\"(Murphy, 1963)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:230439"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4843,7 +4795,7 @@
     }
   ],
   "genusCount": 21,
-  "speciesCount": 290,
+  "speciesCount": 287,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4852,6 +4804,6 @@
       "orderKey": 447,
       "familyKey": 2602
     },
-    "checklistbank": "459070"
+    "checklistbank": "ott786426"
   }
 }

@@ -809,9 +809,11 @@
             "col": [
               "8G3TH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:583756"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:583756"
+            ]
           },
-          "authorityIds": "col:8G3TH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:583756,col:8G3TH",
           "authorship": "(Cobb, 1913)"
         },
         {
@@ -863,19 +865,6 @@
           },
           "children": [],
           "uuid": "0cee3e8f-3b65-547-b5a-32d5ed64af4994"
-        },
-        {
-          "id": "SP_APHELENCHUS_PSEUDOPARIETINUS_MICOLETZKY_1922",
-          "name": "Aphelenchus pseudoparietinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aphelenchus",
-          "authorship": "Micoletzky, 1922",
-          "sourceIds": {
-            "checklistbank": "1048511"
-          },
-          "children": []
         },
         {
           "id": "SP_APHELENCHUS_AVENAE_BASTIAN",
@@ -1412,32 +1401,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aphelenchidae"
-    },
-    {
-      "id": "GENUS_APHELENCHUS",
-      "name": "\"Aphelenchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_APHELENCHUS_RADICICOLUS_COBB_1913",
-          "name": "\"Aphelenchus radicicolus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aphelenchus",
-          "authorship": "\"(Cobb, 1913)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:583756"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "aphelenchidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 84,
+  "genusCount": 13,
+  "speciesCount": 82,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

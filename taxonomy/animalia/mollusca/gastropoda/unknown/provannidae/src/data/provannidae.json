@@ -367,9 +367,11 @@
             "col": [
               "4N7ZN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:450006"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:450006"
+            ]
           },
-          "authorityIds": "col:4N7ZN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:450006,col:4N7ZN",
           "authorship": "(Dall, 1918)"
         },
         {
@@ -504,9 +506,11 @@
             "col": [
               "4N7ZW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:450010"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:450010"
+            ]
           },
-          "authorityIds": "col:4N7ZW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:450010,col:4N7ZW",
           "authorship": "(Dall, 1908)"
         },
         {
@@ -1143,18 +1147,6 @@
           "children": []
         },
         {
-          "id": "SP_PROVANNA_SP",
-          "name": "Provanna sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Provanna",
-          "sourceIds": {
-            "checklistbank": "1312412"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PROVANNA_GLABRA",
           "name": "Provanna glabra",
           "rank": "SPECIES",
@@ -1163,6 +1155,71 @@
           "lineage": "Provanna",
           "sourceIds": {
             "checklistbank": "263137"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROVANNA_FORTIS_HYBERTSEN_AND_KIEL_2018",
+          "name": "Provanna fortis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Provanna",
+          "authorship": "Hybertsen and Kiel 2018",
+          "sourceIds": {
+            "checklistbank": "txn:380491"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROVANNA_HIROKOAE_AMANO_AND_LITTLE_2014",
+          "name": "Provanna hirokoae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Provanna",
+          "authorship": "Amano and Little 2014",
+          "sourceIds": {
+            "checklistbank": "txn:397312"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROVANNA_ALEXI_AMANO_AND_LITTLE_2014",
+          "name": "Provanna alexi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Provanna",
+          "authorship": "Amano and Little 2014",
+          "sourceIds": {
+            "checklistbank": "txn:397313"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROVANNA_MARSHALLI_SAETHER_ET_AL_2010",
+          "name": "Provanna marshalli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Provanna",
+          "authorship": "Saether et al. 2010",
+          "sourceIds": {
+            "checklistbank": "txn:397356"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROVANNA_URAHOROENSIS_AMANO_AND_JENKINS_2013",
+          "name": "Provanna urahoroensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Provanna",
+          "authorship": "Amano and Jenkins 2013",
+          "sourceIds": {
+            "checklistbank": "txn:397916"
           },
           "children": []
         }
@@ -1190,9 +1247,11 @@
             "col": [
               "7SVDM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1415578"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1415578"
+            ]
           },
-          "authorityIds": "col:7SVDM",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1415578,col:7SVDM",
           "authorship": "(Michelotti, 1847)"
         },
         {
@@ -1427,6 +1486,19 @@
             "checklistbank": "2873854"
           },
           "children": []
+        },
+        {
+          "id": "SP_DESBRUYERESIA_BELLIATUS_HYBERTSEN_AND_KIEL_2018",
+          "name": "Desbruyeresia belliatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Desbruyeresia",
+          "authorship": "Hybertsen and Kiel 2018",
+          "sourceIds": {
+            "checklistbank": "txn:380490"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1453,67 +1525,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "provannidae"
-    },
-    {
-      "id": "GENUS_PROVANNA",
-      "name": "\"Provanna",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROVANNA_LOMANA_DALL_1918",
-          "name": "\"Provanna lomana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Provanna",
-          "authorship": "\"(Dall, 1918)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:450006"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROVANNA_PACIFICA_DALL_1908",
-          "name": "\"Provanna pacifica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Provanna",
-          "authorship": "\"(Dall, 1908)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:450010"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "provannidae"
-    },
-    {
-      "id": "GENUS_PSEUDONINA",
-      "name": "\"Pseudonina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDONINA_BELLARDII_MICHELOTTI_1847",
-          "name": "\"Pseudonina bellardii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudonina",
-          "authorship": "\"(Michelotti, 1847)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1415578"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "provannidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 91,
+  "genusCount": 6,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

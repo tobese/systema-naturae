@@ -37,9 +37,12 @@
           "uuid": "d1f5944d-e801-5a3-8f7-c795eebc966263",
           "authorship": "(Linnaeus, 1767)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1597305"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1597305"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1597305"
         },
         {
           "id": "SP_HELIOLITES_POROSUS_GOLDFUSS_1826",
@@ -152,6 +155,32 @@
           },
           "children": [],
           "uuid": "de53cb29-9438-5ed-8cf-2305c6ceeafedb"
+        },
+        {
+          "id": "SP_HELIOLITES_WAICUNENSIS_LIN_AND_CHOW_1977",
+          "name": "Heliolites waicunensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heliolites",
+          "authorship": "Lin and Chow 1977",
+          "sourceIds": {
+            "checklistbank": "txn:422892"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HELIOLITES_OCCIDENTALES_STAUFFER_1930",
+          "name": "Heliolites occidentales",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heliolites",
+          "authorship": "Stauffer 1930",
+          "sourceIds": {
+            "checklistbank": "txn:468320"
+          },
+          "children": []
         }
       ]
     },
@@ -284,32 +313,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "heliolitidae"
-    },
-    {
-      "id": "GENUS_HELIOLITES",
-      "name": "\"Heliolites",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HELIOLITES_INTERSTINCTUS_LINNAEUS_1767",
-          "name": "\"Heliolites interstinctus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliolites",
-          "authorship": "\"(Linnaeus, 1767)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1597305"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "heliolitidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 18,
+  "genusCount": 5,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -317,6 +324,7 @@
       "classKey": 206,
       "orderKey": 903,
       "familyKey": 3250578
-    }
+    },
+    "checklistbank": "txn:87267"
   }
 }

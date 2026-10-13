@@ -557,10 +557,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 8096993,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341623"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341623"
+            ]
           },
           "uuid": "ec71b688-2d1d-508-8d5-ae5d8ed36b317b",
-          "authorityIds": "gbif:8096993"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341623,gbif:8096993"
         },
         {
           "id": "PARVICORBICULA_QUADRICOSTATA",
@@ -1033,10 +1035,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 4378226,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341622"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341622"
+            ]
           },
           "uuid": "d06a1ef7-d549-59b-86f-a08e49bb9e5c77",
-          "authorityIds": "gbif:4378226"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341622,gbif:4378226"
         }
       ]
     },
@@ -1193,10 +1197,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 4378241,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341618"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341618"
+            ]
           },
           "uuid": "a3ee08d2-cf68-5cb-b0c-8f22c6b3f127cc",
-          "authorityIds": "gbif:4378241",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341618,gbif:4378241",
           "authorship": "Marchant, van den Hoff & Burton, 1987"
         },
         {
@@ -1573,10 +1579,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 4378272,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341625"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341625"
+            ]
           },
           "uuid": "703bc61f-39f3-5b3-82b-8d6812e3d8fcc4",
-          "authorityIds": "gbif:4378272"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341625,gbif:4378272"
         }
       ]
     },
@@ -1677,10 +1685,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 5899556,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:580086"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:580086"
+            ]
           },
           "uuid": "ec393203-f3ba-5ce-bfe-dd4d04c9c754c3",
-          "authorityIds": "gbif:5899556",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:580086,gbif:5899556",
           "authorship": "Leadbeater, 2008"
         },
         {
@@ -1785,10 +1795,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 8327387,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341619"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341619"
+            ]
           },
           "uuid": "3cd79386-2295-510-bd8-f9ea888bae0ed8",
-          "authorityIds": "gbif:8327387"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341619,gbif:8327387"
         },
         {
           "id": "COSMOECA_VENTRICOSA",
@@ -2558,18 +2570,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:105580"
           },
           "children": []
-        },
-        {
-          "id": "SP_PARVICORBICULA_ONGULENSIS",
-          "name": "\"Parvicorbicula ongulensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parvicorbicula",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341623"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2659,44 +2659,10 @@
       "lineage": "acanthoecidae"
     },
     {
-      "id": "GENUS_ACANTHOCORBIS",
-      "name": "\"Acanthocorbis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ACANTHOCORBIS_TINTINNABULUM_MARCHANT_VAN_DEN_HOFF_BURTON_1987",
-          "name": "\"Acanthocorbis tintinnabulum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Acanthocorbis",
-          "authorship": "\"Marchant, van den Hoff & Burton, 1987\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341618"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthoecidae"
-    },
-    {
       "id": "GENUS_COSMOECA",
       "name": "\"Cosmoeca",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_COSMOECA_TAKAHASHII",
-          "name": "\"Cosmoeca takahashii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cosmoeca",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341619"
-          },
-          "children": []
-        },
         {
           "id": "SP_COSMOECA_PHUKETENSIS_THOMSEN_1984",
           "name": "\"Cosmoeca phuketensis\"",
@@ -2707,70 +2673,6 @@
           "authorship": "\"Thomsen, 1984\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1774330"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthoecidae"
-    },
-    {
-      "id": "GENUS_KAKOECA",
-      "name": "\"Kakoeca",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_KAKOECA_ANTARCTICA",
-          "name": "\"Kakoeca antarctica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kakoeca",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341622"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthoecidae"
-    },
-    {
-      "id": "GENUS_SPIRALOECION",
-      "name": "\"Spiraloecion",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SPIRALOECION_DIDYMOCOSTATUM",
-          "name": "\"Spiraloecion didymocostatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spiraloecion",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341625"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acanthoecidae"
-    },
-    {
-      "id": "GENUS_HELGOECA",
-      "name": "\"Helgoeca",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HELGOECA_NANA_LEADBEATER_2008",
-          "name": "\"Helgoeca nana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Helgoeca",
-          "authorship": "\"Leadbeater, 2008\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:580086"
           },
           "children": []
         }
@@ -2823,8 +2725,8 @@
       "lineage": "acanthoecidae"
     }
   ],
-  "genusCount": 51,
-  "speciesCount": 138,
+  "genusCount": 47,
+  "speciesCount": 132,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 7,

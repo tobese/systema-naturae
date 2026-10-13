@@ -23,10 +23,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8221814,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:105999"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:105999"
+            ]
           },
           "uuid": "43b1c6d1-c29c-5be-bab-b48c1c307090be",
-          "authorityIds": "gbif:8221814",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:105999,gbif:8221814",
           "authorship": "Jankowski, 1972",
           "children": []
         },
@@ -42,10 +44,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7400628,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:106000"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:106000"
+            ]
           },
           "uuid": "4b68c50f-035e-5be-962-92891e346708dc",
-          "authorityIds": "gbif:7400628",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:106000,gbif:7400628",
           "authorship": "Jankowski, 1972",
           "children": []
         },
@@ -61,10 +65,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7791248,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:106001"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:106001"
+            ]
           },
           "uuid": "f2de811c-c54e-5a7-ada-5420019c5dea48",
-          "authorityIds": "gbif:7791248",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:106001,gbif:7791248",
           "authorship": "Jankowski, 1973",
           "children": []
         },
@@ -85,10 +91,12 @@
             "col": [
               "6LLJS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:427163"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:427163"
+            ]
           },
           "uuid": "dc318e01-86a0-5af-aaa-56ab9b1b638a35",
-          "authorityIds": "col:6LLJS,gbif:7660265",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:427163,col:6LLJS,gbif:7660265",
           "authorship": "Stein, 1854",
           "children": []
         },
@@ -109,10 +117,12 @@
             "col": [
               "6LLK4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:106003"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:106003"
+            ]
           },
           "uuid": "90878900-3cd1-511-be0-12aaaadbaba8d9",
-          "authorityIds": "col:6LLK4,gbif:8172747",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:106003,col:6LLK4,gbif:8172747",
           "authorship": "Plate, 1888",
           "children": []
         }
@@ -224,84 +234,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "heliochonidae"
-    },
-    {
-      "id": "GENUS_HELIOCHONA",
-      "name": "\"Heliochona",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_HELIOCHONA_ALTERNANS_JANKOWSKI_1972",
-          "name": "\"Heliochona alternans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliochona",
-          "authorship": "\"Jankowski, 1972\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:105999"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HELIOCHONA_ELEGANS_JANKOWSKI_1972",
-          "name": "\"Heliochona elegans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliochona",
-          "authorship": "\"Jankowski, 1972\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:106000"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HELIOCHONA_PONTICA_JANKOWSKI_1973",
-          "name": "\"Heliochona pontica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliochona",
-          "authorship": "\"Jankowski, 1973\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:106001"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HELIOCHONA_SESSILIS_PLATE_1888",
-          "name": "\"Heliochona sessilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliochona",
-          "authorship": "\"Plate, 1888\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:106003"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HELIOCHONA_SCHEUTENI_STEIN_1854",
-          "name": "\"Heliochona scheuteni\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Heliochona",
-          "authorship": "\"Stein, 1854\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:427163"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "heliochonidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 17,
+  "genusCount": 2,
+  "speciesCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -310,6 +246,6 @@
       "orderKey": 7964270,
       "familyKey": 8157853
     },
-    "checklistbank": "235193"
+    "checklistbank": "ott4030106"
   }
 }

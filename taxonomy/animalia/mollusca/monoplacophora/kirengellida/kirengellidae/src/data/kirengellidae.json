@@ -146,9 +146,11 @@
             "col": [
               "9GXVF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1601956"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1601956"
+            ]
           },
-          "authorityIds": "col:9GXVF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1601956,col:9GXVF",
           "authorship": "(Berkey, 1898)"
         },
         {
@@ -166,9 +168,11 @@
             "col": [
               "9GXVG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1601954"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1601954"
+            ]
           },
-          "authorityIds": "col:9GXVG",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1601954,col:9GXVG",
           "authorship": "(Berkey, 1898)"
         },
         {
@@ -287,45 +291,10 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Kirengellidae"
-    },
-    {
-      "id": "GENUS_KIRENGELLA",
-      "name": "\"Kirengella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_KIRENGELLA_STABILIS_BERKEY_1898",
-          "name": "\"Kirengella stabilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kirengella",
-          "authorship": "\"(Berkey, 1898)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1601954"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_KIRENGELLA_RECTILATERALIS_BERKEY_1898",
-          "name": "\"Kirengella rectilateralis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Kirengella",
-          "authorship": "\"(Berkey, 1898)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1601956"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "kirengellidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 17,
+  "genusCount": 3,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

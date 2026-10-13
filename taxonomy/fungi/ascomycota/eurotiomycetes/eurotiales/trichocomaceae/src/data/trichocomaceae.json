@@ -2408,6 +2408,19 @@
             "checklistbank": "1043923"
           },
           "children": []
+        },
+        {
+          "id": "SP_ASPERGILLUS_COLLEMBOLORUM_DORFELT_AND_SCHMIDT_2005",
+          "name": "Aspergillus collembolorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aspergillus",
+          "authorship": "Dorfelt and Schmidt 2005",
+          "sourceIds": {
+            "checklistbank": "txn:229071"
+          },
+          "children": []
         }
       ],
       "authorship": "P. Micheli"
@@ -3251,32 +3264,6 @@
           "children": []
         },
         {
-          "id": "SP_TALAROMYCES_DIVERSUS_RAPER_FENNELL_SAMSON_YILMAZ_FRISVAD_2012",
-          "name": "Talaromyces diversus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Talaromyces",
-          "authorship": "(Raper & Fennell) Samson, Yilmaz & Frisvad 2012",
-          "sourceIds": {
-            "checklistbank": "128434"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TALAROMYCES_SIAMENSIS_MANOCH_C_RAMIREZ_EX_SAMSON_N_YILMAZ_FRISVAD_2011",
-          "name": "Talaromyces siamensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Talaromyces",
-          "authorship": "Manoch & C. Ramirez ex Samson, N. Yilmaz & Frisvad, 2011",
-          "sourceIds": {
-            "checklistbank": "128436"
-          },
-          "children": []
-        },
-        {
           "id": "SP_TALAROMYCES_PHIALOSPORUS_UDAGAWA_SAMSON_YILMAZ_FRISVAD_2012",
           "name": "Talaromyces phialosporus",
           "rank": "SPECIES",
@@ -3583,31 +3570,6 @@
           "authorship": "Visagie & K. Jacobs, 2012",
           "sourceIds": {
             "checklistbank": "561226"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TALAROMYCES_ERYTHROMELLIS_A_D_HOCKING_SAMSON_YILMAZ_FRISVAD_SEIFERT_2011",
-          "name": "Talaromyces erythromellis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Talaromyces",
-          "authorship": "(A.D. Hocking) Samson, Yilmaz, Frisvad & Seifert 2011",
-          "sourceIds": {
-            "checklistbank": "861507"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TALAROMYCES_LOLIENSIS",
-          "name": "Talaromyces loliensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Talaromyces",
-          "sourceIds": {
-            "checklistbank": "861508"
           },
           "children": []
         },
@@ -4681,9 +4643,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Talaromyces",
           "sourceIds": {
-            "checklistbank": "2175603"
+            "checklistbank": [
+              "2175603"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:2175603"
         },
         {
           "id": "SP_TALAROMYCES_TABACINUS_JURJEVIC_S_W_PETERSON_G_PERRONE_2018",
@@ -6032,18 +5997,6 @@
             "checklistbank": "3462674"
           },
           "children": []
-        },
-        {
-          "id": "SP_TALAROMYCES_IOWAENSE",
-          "name": "Talaromyces iowaense",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Talaromyces",
-          "sourceIds": {
-            "checklistbank": "2175603"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -6380,19 +6333,6 @@
           "authorship": "Malloch & Cain, 1972",
           "sourceIds": {
             "checklistbank": "866282"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EMERICELLA_QINQIXIANII_Y_HORIE_ABLIZ_R_Y_LI_2000",
-          "name": "Emericella qinqixianii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Emericella",
-          "authorship": "Y.Horie, Abliz & R.Y.Li, 2000",
-          "sourceIds": {
-            "checklistbank": "932933"
           },
           "children": []
         }
@@ -7936,19 +7876,6 @@
           "children": []
         },
         {
-          "id": "SP_PENICILLIUM_SOPPII_K_W_ZALESKI_1927",
-          "name": "Penicillium soppii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Penicillium",
-          "authorship": "K.W.Zaleski, 1927",
-          "sourceIds": {
-            "checklistbank": "876563"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PENICILLIUM_VELUTINUM_J_F_H_BEYMA_1935",
           "name": "Penicillium velutinum",
           "rank": "SPECIES",
@@ -9334,28 +9261,6 @@
       "lineage": "trichocomaceae"
     },
     {
-      "id": "GENUS_MONILIA",
-      "name": "Monilia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MONILIA_DIGITATA_PERS_1801",
-          "name": "Monilia digitata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Monilia",
-          "authorship": "Pers., 1801",
-          "sourceIds": {
-            "checklistbank": "879819"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trichocomaceae"
-    },
-    {
       "id": "GENUS_MUCOR",
       "name": "Mucor",
       "rank": "GENUS",
@@ -9481,58 +9386,6 @@
       "name": "Rasamsonia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_RASAMSONIA_EMERSONII_STOLK_HOUBRAKEN_FRISVAD_2012",
-          "name": "Rasamsonia emersonii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rasamsonia",
-          "authorship": "(Stolk) Houbraken & Frisvad 2012",
-          "sourceIds": {
-            "checklistbank": "68825"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_RASAMSONIA_EBURNEA_YAGUCHI_SOMEYA_UDAGAWA_HOUBRAKEN_FRISVAD_2012",
-          "name": "Rasamsonia eburnea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rasamsonia",
-          "authorship": "(Yaguchi, Someya & Udagawa) Houbraken & Frisvad 2012",
-          "sourceIds": {
-            "checklistbank": "68826"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_RASAMSONIA_CYLINDROSPORA_G_SM_HOUBRAKEN_FRISVAD_2012",
-          "name": "Rasamsonia cylindrospora",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rasamsonia",
-          "authorship": "(G. Sm.) Houbraken & Frisvad 2012",
-          "sourceIds": {
-            "checklistbank": "68829"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_RASAMSONIA_ARGILLACEA_STOLK_EVANS_NILSSON_HOUBRAKEN_FRISVAD_2012",
-          "name": "Rasamsonia argillacea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Rasamsonia",
-          "authorship": "(Stolk, Evans & Nilsson) Houbraken & Frisvad 2012",
-          "sourceIds": {
-            "checklistbank": "69808"
-          },
-          "children": []
-        },
         {
           "id": "SP_RASAMSONIA_BYSSOCHLAMYDOIDES_STOLK_SAMSON_HOUBRAKEN_FRISVAD_2012",
           "name": "Rasamsonia byssochlamydoides",
@@ -10151,8 +10004,8 @@
     }
   ],
   "authorship": "E. Fischer",
-  "genusCount": 44,
-  "speciesCount": 701,
+  "genusCount": 43,
+  "speciesCount": 690,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

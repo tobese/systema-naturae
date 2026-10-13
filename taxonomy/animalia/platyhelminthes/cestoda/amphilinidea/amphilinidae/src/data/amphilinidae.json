@@ -185,9 +185,11 @@
             "col": [
               "3FTT4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:370485"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:370485"
+            ]
           },
-          "authorityIds": "col:3FTT4,itis:1059791"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:370485,col:3FTT4,itis:1059791"
         }
       ]
     },
@@ -254,22 +256,6 @@
       "lineage": "Schizochoerus",
       "children": [
         {
-          "id": "SP_SCHIZOCHOERUS_LIGULOIDES",
-          "name": "Schizochoerus liguloides",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Schizochoerus",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "64790e41-5525-557-a7d-5f63f93eda980f",
-          "authorship": "Diesing, 1850",
-          "sourceIds": {
-            "checklistbank": "180220"
-          }
-        },
-        {
           "id": "SP_SCHIZOCHOERUS_LIGULOIDEUS_DIESING_1850_POCHE_1922",
           "name": "Schizochoerus liguloideus",
           "rank": "SPECIES",
@@ -288,20 +274,6 @@
             ]
           },
           "authorityIds": "col:SNXWQ,itis:1059795"
-        },
-        {
-          "id": "SP_SCHIZOCHOERUS_JANICKI_POCHE_1922",
-          "name": "Schizochoerus janicki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Schizochoerus",
-          "authorship": "(Poche, 1922)",
-          "sourceIds": {
-            "checklistbank": "180219"
-          },
-          "children": [],
-          "uuid": "f269e5f3-761d-579-b08-703badee08f57d"
         }
       ]
     },
@@ -437,32 +409,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "amphilinidae"
-    },
-    {
-      "id": "GENUS_GEPHYROLINA",
-      "name": "\"Gephyrolina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GEPHYROLINA_PARAGONOPORA_WOODLAND_1923_POCHE_1926",
-          "name": "\"Gephyrolina paragonopora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gephyrolina",
-          "authorship": "\"(Woodland, 1923) Poche, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:370485"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "amphilinidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 21,
+  "genusCount": 10,
+  "speciesCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -2243,33 +2243,6 @@
           "authorityIds": "col:7CWB6,gbif:3545290,mycobank:325065"
         },
         {
-          "id": "TRYBLIDARIA_MELAXANTHA",
-          "name": "Tryblidaria melaxantha",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Tryblidaria",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Fries) Saccardo",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "11953785"
-            ],
-            "mycobank": [
-              "414892"
-            ],
-            "col": [
-              "9YPLT"
-            ],
-            "checklistbank": "985961"
-          },
-          "uuid": "1c4d1f90-9578-52e-ad4-f35097acd9f003",
-          "authorityIds": "col:9YPLT,gbif:11953785,mycobank:414892"
-        },
-        {
           "id": "TRYBLIDARIA_NIVALIS",
           "name": "Tryblidaria nivalis",
           "rank": "SPECIES",
@@ -3144,10 +3117,12 @@
             "col": [
               "3SRGG"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988777"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:988777"
+            ]
           },
           "uuid": "267aa8b7-de11-53b-9e1-c01aa014021e38",
-          "authorityIds": "col:3SRGG,gbif:6010408,mycobank:192673"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:988777,col:3SRGG,gbif:6010408,mycobank:192673"
         },
         {
           "id": "LECANIDION_BACHMANNIANUM",
@@ -11063,19 +11038,6 @@
           "children": []
         },
         {
-          "id": "SP_TRYBLIDIUM_INSCULPTUM_COOKE_1876",
-          "name": "Tryblidium insculptum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Tryblidium",
-          "authorship": "Cooke, 1876",
-          "sourceIds": {
-            "checklistbank": "877567"
-          },
-          "children": []
-        },
-        {
           "id": "SP_TRYBLIDIUM_HYSTERINUM_DUFOUR_1828",
           "name": "Tryblidium hysterinum",
           "rank": "SPECIES",
@@ -11637,19 +11599,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LECANIDION_ANTARCTICUM_SPEG_1887",
-          "name": "\"Lecanidion antarcticum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lecanidion",
-          "authorship": "\"Speg., 1887\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:988777"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LECANIDION_ATRATUM_HEDW_ENDL_1830",
           "name": "\"Lecanidion atratum\"",
           "rank": "SPECIES",
@@ -11691,7 +11640,7 @@
   ],
   "authorship": "Corda",
   "genusCount": 53,
-  "speciesCount": 709,
+  "speciesCount": 706,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

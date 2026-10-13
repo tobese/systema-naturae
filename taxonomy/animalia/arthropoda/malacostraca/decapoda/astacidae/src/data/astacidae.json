@@ -46,7 +46,8 @@
             ],
             "itis": [
               "1133567"
-            ]
+            ],
+            "checklistbank": "238440"
           },
           "authorityIds": "col:7RCB7,itis:1133567",
           "commonName": "River Crayfish"
@@ -288,9 +289,11 @@
             "col": [
               "7WKSL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:885113"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:885113"
+            ]
           },
-          "authorityIds": "col:7WKSL,itis:1133591"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:885113,col:7WKSL,itis:1133591"
         },
         {
           "id": "SP_PONTASTACUS_EICHWALDI_BOTT_1950",
@@ -562,6 +565,71 @@
             "checklistbank": "1076145"
           },
           "children": []
+        },
+        {
+          "id": "SP_ASTACUS_LONGIMANUS_SOWERBY_1826",
+          "name": "Astacus longimanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Sowerby 1826",
+          "sourceIds": {
+            "checklistbank": "txn:207127"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_EDWARDSI_VAN_STRAELEN_1928",
+          "name": "Astacus edwardsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Van Straelen 1928",
+          "sourceIds": {
+            "checklistbank": "txn:217935"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_MULTICAVATUS_BELL_1863",
+          "name": "Astacus multicavatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Bell 1863",
+          "sourceIds": {
+            "checklistbank": "txn:217936"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_LAEVISSIMUS_FRITSCH_AND_KAFKA_1887",
+          "name": "Astacus laevissimus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Fritsch and Kafka 1887",
+          "sourceIds": {
+            "checklistbank": "txn:217937"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_CENOMANENSIS_FRITSCH_AND_KAFKA_1887",
+          "name": "Astacus cenomanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Fritsch and Kafka 1887",
+          "sourceIds": {
+            "checklistbank": "txn:517432"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -609,7 +677,8 @@
             ],
             "itis": [
               "97326"
-            ]
+            ],
+            "checklistbank": "238443"
           },
           "authorityIds": "col:7W7FR,itis:97326",
           "commonName": "Signal Crayfish"
@@ -856,28 +925,6 @@
       "lineage": "astacidae"
     },
     {
-      "id": "GENUS_PONTASTACUS",
-      "name": "\"Pontastacus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PONTASTACUS_PACHYPUS_RATHKE_1836",
-          "name": "\"Pontastacus pachypus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pontastacus",
-          "authorship": "\"(Rathke, 1836)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:885113"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "astacidae"
-    },
-    {
       "id": "GENUS_AUSTROPOTAMOBIUS",
       "name": "\"Austropotamobius",
       "rank": "GENUS",
@@ -898,9 +945,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "astacidae"
+    },
+    {
+      "id": "GENUS_ASTYAGES",
+      "name": "Astyages",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTYAGES_EFFOSSUS_COSTA_1855",
+          "name": "Astyages effossus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astyages",
+          "authorship": "(Costa 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:363218"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "astacidae"
     }
   ],
-  "speciesCount": 49,
+  "speciesCount": 54,
   "appSlug": "astacidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",

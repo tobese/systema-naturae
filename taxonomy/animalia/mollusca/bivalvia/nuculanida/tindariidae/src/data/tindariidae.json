@@ -50,9 +50,11 @@
             "col": [
               "56ZXP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420681"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420681"
+            ]
           },
-          "authorityIds": "col:56ZXP",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420681,col:56ZXP",
           "authorship": "(Dall, 1889)"
         },
         {
@@ -171,9 +173,11 @@
             "col": [
               "56ZY2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506461"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:506461"
+            ]
           },
-          "authorityIds": "col:56ZY2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506461,col:56ZY2",
           "authorship": "(Thiele, 1912)"
         },
         {
@@ -191,9 +195,11 @@
             "col": [
               "56ZY3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420682"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420682"
+            ]
           },
-          "authorityIds": "col:56ZY3",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420682,col:56ZY3",
           "authorship": "(Dall, 1881)"
         },
         {
@@ -277,9 +283,11 @@
             "col": [
               "56ZYC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506457"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:506457"
+            ]
           },
-          "authorityIds": "col:56ZYC,itis:79252",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:506457,col:56ZYC,itis:79252",
           "authorship": "(Dall, 1897)"
         },
         {
@@ -436,9 +444,11 @@
             "col": [
               "56ZYN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:367886"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:367886"
+            ]
           },
-          "authorityIds": "col:56ZYN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:367886,col:56ZYN",
           "authorship": "(Dautzenberg & H. Fischer, 1897)"
         },
         {
@@ -479,9 +489,11 @@
             "col": [
               "56ZYS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141682"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:141682"
+            ]
           },
-          "authorityIds": "col:56ZYS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:141682,col:56ZYS",
           "authorship": "(Jeffreys, 1876)"
         },
         {
@@ -517,9 +529,11 @@
             "col": [
               "56ZYW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420683"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420683"
+            ]
           },
-          "authorityIds": "col:56ZYW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420683,col:56ZYW",
           "authorship": "(Dall, 1886)"
         },
         {
@@ -735,7 +749,8 @@
           "sourceIds": {
             "checklistbank": "1178493"
           },
-          "children": []
+          "children": [],
+          "authorship": "Dall 1909"
         },
         {
           "id": "SP_TINDARIA_NUCULIFORMIS",
@@ -860,98 +875,129 @@
       ]
     },
     {
-      "id": "GENUS_TINDARIA",
-      "name": "\"Tindaria",
+      "id": "GENUS_AUSTROTINDARIA",
+      "name": "Austrotindaria",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_TINDARIA_SERICEA_JEFFREYS_1876",
-          "name": "\"Tindaria sericea\"",
+          "id": "SP_AUSTROTINDARIA_WRIGHTI_FLEMING_1948",
+          "name": "Austrotindaria wrighti",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Jeffreys, 1876)\"",
+          "lineage": "Austrotindaria",
+          "authorship": "Fleming 1948",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:141682"
+            "checklistbank": "txn:86078"
           },
           "children": []
         },
         {
-          "id": "SP_TINDARIA_PERRIERI_DAUTZENBERG_H_FISCHER_1897",
-          "name": "\"Tindaria perrieri\"",
+          "id": "SP_AUSTROTINDARIA_GIBBSII_DALL_1897",
+          "name": "Austrotindaria gibbsii",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Dautzenberg & H. Fischer, 1897)\"",
+          "lineage": "Austrotindaria",
+          "authorship": "(Dall 1897)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:367886"
+            "checklistbank": "txn:86079"
           },
           "children": []
         },
         {
-          "id": "SP_TINDARIA_AMABILIS_DALL_1889",
-          "name": "\"Tindaria amabilis\"",
+          "id": "SP_AUSTROTINDARIA_ANTIQUA_FOSTER_ET_AL_2017",
+          "name": "Austrotindaria antiqua",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Dall, 1889)\"",
+          "lineage": "Austrotindaria",
+          "authorship": "Foster et al. 2017",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420681"
+            "checklistbank": "txn:347558"
           },
           "children": []
         },
         {
-          "id": "SP_TINDARIA_CYTHEREA_DALL_1881",
-          "name": "\"Tindaria cytherea\"",
+          "id": "SP_AUSTROTINDARIA_SVALBARDENSIS_FOSTER_ET_AL_2017",
+          "name": "Austrotindaria svalbardensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Dall, 1881)\"",
+          "lineage": "Austrotindaria",
+          "authorship": "Foster et al. 2017",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420682"
+            "checklistbank": "txn:347559"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tindariidae"
+    },
+    {
+      "id": "GENUS_CLENCHARIA",
+      "name": "Clencharia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLENCHARIA_ABYSSICOLA_SMITH_1885",
+          "name": "Clencharia abyssicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Clencharia",
+          "authorship": "(Smith 1885)",
+          "sourceIds": {
+            "checklistbank": "txn:86082"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tindariidae"
+    },
+    {
+      "id": "GENUS_PSEUDOTINDARIA",
+      "name": "Pseudotindaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOTINDARIA_EREBUS_CLARKE_1969",
+          "name": "Pseudotindaria erebus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudotindaria",
+          "authorship": "(Clarke 1969)",
+          "sourceIds": {
+            "checklistbank": "txn:89388"
           },
           "children": []
         },
         {
-          "id": "SP_TINDARIA_SMITHII_DALL_1886",
-          "name": "\"Tindaria smithii\"",
+          "id": "SP_PSEUDOTINDARIA_DELLI_MAXWELL_1992",
+          "name": "Pseudotindaria delli",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Dall, 1886)\"",
+          "lineage": "Pseudotindaria",
+          "authorship": "Maxwell 1992",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420683"
+            "checklistbank": "txn:89390"
           },
           "children": []
         },
         {
-          "id": "SP_TINDARIA_KENNERLYI_DALL_1897",
-          "name": "\"Tindaria kennerlyi\"",
+          "id": "SP_PSEUDOTINDARIA_FLEMINGI_DELL_1956",
+          "name": "Pseudotindaria flemingi",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Dall, 1897)\"",
+          "lineage": "Pseudotindaria",
+          "authorship": "Dell 1956",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506457"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TINDARIA_CONCENTRICA_THIELE_1912",
-          "name": "\"Tindaria concentrica\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Tindaria",
-          "authorship": "\"(Thiele, 1912)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:506461"
+            "checklistbank": "txn:89911"
           },
           "children": []
         }
@@ -960,8 +1006,8 @@
       "lineage": "tindariidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 58,
+  "genusCount": 4,
+  "speciesCount": 59,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -970,6 +1016,6 @@
       "orderKey": 9405932,
       "familyKey": 4305291
     },
-    "checklistbank": "856646"
+    "checklistbank": "0d6a0e1d-22b9-4f54-b1f9-c0f058293f80"
   }
 }

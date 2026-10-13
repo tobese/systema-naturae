@@ -1199,10 +1199,12 @@
             "col": [
               "5XFVQ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1457025"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1457025"
+            ]
           },
           "uuid": "b7c30395-bf8b-5f5-a7d-4810f4723acff1",
-          "authorityIds": "col:5XFVQ,gbif:8088174,mycobank:803295"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1457025,col:5XFVQ,gbif:8088174,mycobank:803295"
         },
         {
           "id": "CATILLARIA_BALIOLA",
@@ -4060,32 +4062,6 @@
           "authorship": "(Nyl.) Arnold, 1887",
           "sourceIds": {
             "checklistbank": "57247"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CATILLARIA_INTERMIXTA_NYL_ARNOLD_1870",
-          "name": "Catillaria intermixta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Catillaria",
-          "authorship": "(Nyl.) Arnold, 1870",
-          "sourceIds": {
-            "checklistbank": "57256"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CATILLARIA_VALLOTII_LAMY_ZAHLBR_1926",
-          "name": "Catillaria vallotii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Catillaria",
-          "authorship": "(Lamy) Zahlbr., 1926",
-          "sourceIds": {
-            "checklistbank": "57261"
           },
           "children": []
         },
@@ -8540,19 +8516,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_LECIDEA_MODESTA_M_LL_ARG_1871",
-          "name": "Lecidea modesta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lecidea",
-          "authorship": "Müll.Arg., 1871",
-          "sourceIds": {
-            "checklistbank": "57191"
-          },
-          "children": []
-        },
-        {
           "id": "SP_LECIDEA_MORIO_AUCT_NON_DUBY_FR",
           "name": "Lecidea morio",
           "rank": "SPECIES",
@@ -10839,33 +10802,11 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "catillariaceae"
-    },
-    {
-      "id": "GENUS_CATILLARIA",
-      "name": "\"Catillaria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CATILLARIA_AUSTROLITTORALIS_KANTVILAS_VAN_DEN_BOOM_2013",
-          "name": "\"Catillaria austrolittoralis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Catillaria",
-          "authorship": "\"Kantvilas & van den Boom, 2013\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1457025"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "catillariaceae"
     }
   ],
   "authorship": "Hafellner",
-  "genusCount": 42,
-  "speciesCount": 687,
+  "genusCount": 41,
+  "speciesCount": 683,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

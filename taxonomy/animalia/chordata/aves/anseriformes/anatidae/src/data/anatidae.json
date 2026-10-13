@@ -78,7 +78,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Aix",
-          "uuid": "40037e95-7030-52b-a0f-6eb75afce9776b"
+          "uuid": "40037e95-7030-52b-a0f-6eb75afce9776b",
+          "authorship": "Zelenkov and Kurochkin 2012",
+          "sourceIds": {
+            "checklistbank": "txn:367850"
+          }
         },
         {
           "id": "SP_AIX_SP",
@@ -182,7 +186,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Alopochen",
-          "uuid": "6625d44e-4cdb-508-acf-80ab7cb4a53992"
+          "uuid": "6625d44e-4cdb-508-acf-80ab7cb4a53992",
+          "authorship": "(Andrews 1897)",
+          "sourceIds": {
+            "checklistbank": "txn:367745"
+          }
         },
         {
           "id": "SP_ALOPOCHEN_TARABUKINI",
@@ -204,6 +212,19 @@
           "authorship": "(Linnaeus, 1766)",
           "sourceIds": {
             "checklistbank": "2763"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALOPOCHEN_MAURITIANUS_NEWTON_AND_GADOW_1893",
+          "name": "Alopochen mauritianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alopochen",
+          "authorship": "(Newton and Gadow 1893)",
+          "sourceIds": {
+            "checklistbank": "txn:367767"
           },
           "children": []
         }
@@ -440,7 +461,8 @@
             ],
             "checklistbank": "174287"
           },
-          "authorityIds": "col:DGN6,itis:175098,wikidata:Q290199"
+          "authorityIds": "col:DGN6,itis:175098,wikidata:Q290199",
+          "authorship": "(Hartlaub 1860)"
         },
         {
           "id": "DGN8",
@@ -697,9 +719,11 @@
             "itis": [
               "553921"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212712"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:212712"
+            ]
           },
-          "authorityIds": "col:DGNK,itis:553921,wikidata:Q387404",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:212712,col:DGNK,itis:553921,wikidata:Q387404",
           "authorship": "Gmelin, 1789"
         },
         {
@@ -1290,7 +1314,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Anas",
-          "uuid": "ae9def29-07d9-51b-825-c539686158e70f"
+          "uuid": "ae9def29-07d9-51b-825-c539686158e70f",
+          "authorship": "Agnolín 2006",
+          "sourceIds": {
+            "checklistbank": "txn:484684"
+          }
         },
         {
           "id": "SP_ANAS_CLYPEATA_LINNAEUS_1758",
@@ -2331,7 +2359,8 @@
           "sourceIds": {
             "checklistbank": "631770"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Oliver 1955)"
         },
         {
           "id": "SP_ANAS_SMITHII",
@@ -2379,7 +2408,8 @@
           "sourceIds": {
             "checklistbank": "ott6151609"
           },
-          "children": []
+          "children": [],
+          "authorship": "Campbell 1979"
         },
         {
           "id": "SP_ANAS_FRETENSIS",
@@ -2415,7 +2445,8 @@
           "sourceIds": {
             "checklistbank": "ott6151617"
           },
-          "children": []
+          "children": [],
+          "authorship": "McCoy 1963"
         },
         {
           "id": "SP_ANAS_KUROCHKINI",
@@ -2427,7 +2458,8 @@
           "sourceIds": {
             "checklistbank": "ott6151618"
           },
-          "children": []
+          "children": [],
+          "authorship": "Zelenkov and Panteleyev 2015"
         },
         {
           "id": "SP_ANAS_PLATYRHYNCHA",
@@ -2463,7 +2495,8 @@
           "sourceIds": {
             "checklistbank": "ott6151625"
           },
-          "children": []
+          "children": [],
+          "authorship": "Campbell 1979"
         },
         {
           "id": "SP_ANAS_SCHNEIDERI",
@@ -2475,7 +2508,8 @@
           "sourceIds": {
             "checklistbank": "ott6151626"
           },
-          "children": []
+          "children": [],
+          "authorship": "Emslie 1985"
         },
         {
           "id": "SP_ANAS_STRENUA",
@@ -2499,7 +2533,8 @@
           "sourceIds": {
             "checklistbank": "ott6151628"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Campbell 1979)"
         },
         {
           "id": "SP_ANAS_CHILOENSIS",
@@ -2586,18 +2621,6 @@
           "children": []
         },
         {
-          "id": "SP_ANAS_SP",
-          "name": "Anas sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Anas",
-          "sourceIds": {
-            "checklistbank": "42806"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ANAS_FULVIGULA",
           "name": "Anas ×fulvigula",
           "rank": "SPECIES",
@@ -2630,6 +2653,162 @@
           "lineage": "Anas",
           "sourceIds": {
             "checklistbank": "3416663"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_BASALTICA_BAYER_1883",
+          "name": "Anas basaltica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Bayer 1883",
+          "sourceIds": {
+            "checklistbank": "txn:367685"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_SKALICENSIS_BAYER_1882",
+          "name": "Anas skalicensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Bayer 1882",
+          "sourceIds": {
+            "checklistbank": "txn:367686"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_LUEDERITZENSIS_LAMBRECHT_1929",
+          "name": "Anas luederitzensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Lambrecht 1929",
+          "sourceIds": {
+            "checklistbank": "txn:367687"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_BLANCHARDI_MILNE_EDWARDS_1863",
+          "name": "Anas blanchardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Milne-Edwards 1863",
+          "sourceIds": {
+            "checklistbank": "txn:367688"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_ISARENSIS_LAMBRECHT_1933",
+          "name": "Anas isarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Lambrecht 1933",
+          "sourceIds": {
+            "checklistbank": "txn:367690"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_ROBUSTA_MILNE_EDWARDS_1867",
+          "name": "Anas robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Milne-Edwards 1867",
+          "sourceIds": {
+            "checklistbank": "txn:367691"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_RISGOVIENSIS_VON_AMMON_1918",
+          "name": "Anas risgoviensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "von Ammon 1918",
+          "sourceIds": {
+            "checklistbank": "txn:367693"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_SOPORATA_KUROCHKIN_1976",
+          "name": "Anas soporata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "(Kurochkin 1976)",
+          "sourceIds": {
+            "checklistbank": "txn:367788"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_CRASSA_MILNE_EDWARDS_1871",
+          "name": "Anas crassa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Milne-Edwards 1871",
+          "sourceIds": {
+            "checklistbank": "txn:370097"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_MACROPTERA_MILNE_EDWARDS_1871",
+          "name": "Anas macroptera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Milne-Edwards 1871",
+          "sourceIds": {
+            "checklistbank": "txn:370098"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_MEYERI_MILNE_EDWARDS_1868",
+          "name": "Anas meyeri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Milne-Edwards 1868",
+          "sourceIds": {
+            "checklistbank": "txn:370099"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANAS_APSCHERONICA_BURCHAK_ABRAMOVICH_1958",
+          "name": "Anas apscheronica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anas",
+          "authorship": "Burchak-Abramovich 1958",
+          "sourceIds": {
+            "checklistbank": "txn:381200"
           },
           "children": []
         }
@@ -2977,7 +3156,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Anser",
-          "uuid": "ba1ef1f2-ee57-512-b58-0dad0bcc6c8358"
+          "uuid": "ba1ef1f2-ee57-512-b58-0dad0bcc6c8358",
+          "authorship": "Kurochkin 1971",
+          "sourceIds": {
+            "checklistbank": "txn:367794"
+          }
         },
         {
           "id": "SP_ANSER_DJUKTAIENSIS",
@@ -2987,7 +3170,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Anser",
-          "uuid": "c2a90959-beb0-55d-969-f3f66ad053886a"
+          "uuid": "c2a90959-beb0-55d-969-f3f66ad053886a",
+          "authorship": "Zelenkov and Kurochkin 2014",
+          "sourceIds": {
+            "checklistbank": "txn:373099"
+          }
         },
         {
           "id": "SP_ANSER_LISKUNAE",
@@ -2997,7 +3184,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Anser",
-          "uuid": "049012e8-90b9-557-b85-d633c8cc026f7e"
+          "uuid": "049012e8-90b9-557-b85-d633c8cc026f7e",
+          "authorship": "(Kurochkin 1976)",
+          "sourceIds": {
+            "checklistbank": "txn:367791"
+          }
         },
         {
           "id": "SP_ANSER_THRACEIENSIS",
@@ -3007,7 +3198,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Anser",
-          "uuid": "d9e80d81-153b-559-848-1c32f057069ca5"
+          "uuid": "d9e80d81-153b-559-848-1c32f057069ca5",
+          "authorship": "Burchak-Abramovich and Nikolov 1984",
+          "sourceIds": {
+            "checklistbank": "txn:429519"
+          }
         },
         {
           "id": "SP_ANSER_TCHIKOICUS",
@@ -3027,7 +3222,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Anser",
-          "uuid": "5acda02f-fad5-567-899-747d3a44b4922f"
+          "uuid": "5acda02f-fad5-567-899-747d3a44b4922f",
+          "authorship": "Serebrovsky 1940",
+          "sourceIds": {
+            "checklistbank": "txn:367729"
+          }
         },
         {
           "id": "SP_ANSER_INDICUS",
@@ -3271,7 +3470,8 @@
           "sourceIds": {
             "checklistbank": "ott3595910"
           },
-          "children": []
+          "children": [],
+          "authorship": "Bickart 1990"
         },
         {
           "id": "SP_ANSER_ARIZONAE",
@@ -3283,7 +3483,8 @@
           "sourceIds": {
             "checklistbank": "ott3595911"
           },
-          "children": []
+          "children": [],
+          "authorship": "Bickart 1990"
         },
         {
           "id": "SP_ANSER_CONDONI",
@@ -3295,7 +3496,8 @@
           "sourceIds": {
             "checklistbank": "ott7659619"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shufeldt 1891"
         },
         {
           "id": "SP_ANSER_INORNATUS",
@@ -3368,6 +3570,84 @@
             "checklistbank": "8847"
           },
           "children": []
+        },
+        {
+          "id": "SP_ANSER_SCALDII_VAN_BENEDEN_1873",
+          "name": "Anser scaldii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anser",
+          "authorship": "Van Beneden 1873",
+          "sourceIds": {
+            "checklistbank": "txn:359405"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANSER_ATAVUS_FRAAS_1870",
+          "name": "Anser atavus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anser",
+          "authorship": "(Fraas 1870)",
+          "sourceIds": {
+            "checklistbank": "txn:367722"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANSER_CYGNIFORMIS_FRAAS_1870",
+          "name": "Anser cygniformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anser",
+          "authorship": "(Fraas 1870)",
+          "sourceIds": {
+            "checklistbank": "txn:367724"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANSER_OENINGENSIS_VON_MEYER_1865",
+          "name": "Anser oeningensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anser",
+          "authorship": "(von Meyer 1865)",
+          "sourceIds": {
+            "checklistbank": "txn:367726"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANSER_PRESSUS_WETMORE_1933",
+          "name": "Anser pressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anser",
+          "authorship": "(Wetmore 1933)",
+          "sourceIds": {
+            "checklistbank": "txn:336381"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANSER_BRUMELI_MILNE_EDWARDS_1871",
+          "name": "Anser brumeli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anser",
+          "authorship": "Milne-Edwards 1871",
+          "sourceIds": {
+            "checklistbank": "txn:370188"
+          },
+          "children": []
         }
       ]
     },
@@ -3405,7 +3685,8 @@
             ],
             "checklistbank": "174298"
           },
-          "authorityIds": "col:H4L6,itis:714067,wikidata:Q25495361"
+          "authorityIds": "col:H4L6,itis:714067,wikidata:Q25495361",
+          "authorship": "(Müller, 1842)"
         }
       ]
     },
@@ -3502,9 +3783,11 @@
             "col": [
               "K56Q"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225997"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225997"
+            ]
           },
-          "authorityIds": "col:K56Q,itis:175136,wikidata:Q781886",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225997,col:K56Q,itis:175136,wikidata:Q781886",
           "authorship": "(Eyton, 1838)"
         },
         {
@@ -3713,9 +3996,11 @@
             "itis": [
               "175138"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225994"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225994"
+            ]
           },
-          "authorityIds": "col:K56X,itis:175138,wikidata:Q646096",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225994,col:K56X,itis:175138,wikidata:Q646096",
           "authorship": "(Gmelin, 1789)"
         },
         {
@@ -3817,6 +4102,71 @@
           },
           "children": [],
           "uuid": "f8b3b4ca-3868-59e-b32-bd8294a16541b6"
+        },
+        {
+          "id": "SP_AYTHYA_ARVERNENSIS_LYDEKKER_1891",
+          "name": "Aythya arvernensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aythya",
+          "authorship": "(Lydekker 1891)",
+          "sourceIds": {
+            "checklistbank": "txn:367771"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AYTHYA_ARETINA_PORTIS_1889",
+          "name": "Aythya aretina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aythya",
+          "authorship": "(Portis 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:367773"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AYTHYA_SEPULTA_PORTIS_1889",
+          "name": "Aythya sepulta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aythya",
+          "authorship": "(Portis 1889)",
+          "sourceIds": {
+            "checklistbank": "txn:367775"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AYTHYA_SPATIOSA_KUROCHKIN_1976",
+          "name": "Aythya spatiosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aythya",
+          "authorship": "Kurochkin 1976",
+          "sourceIds": {
+            "checklistbank": "txn:367798"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_AYTHYA_SHIHUIBAS_HOU_1985",
+          "name": "Aythya shihuibas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aythya",
+          "authorship": "Hou 1985",
+          "sourceIds": {
+            "checklistbank": "txn:424128"
+          },
+          "children": []
         }
       ]
     },
@@ -4189,18 +4539,6 @@
           "authorship": "James & Olson, 1991"
         },
         {
-          "id": "SP_BRANTA_RHUAX",
-          "name": "Branta rhuax",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Branta",
-          "sourceIds": {
-            "checklistbank": "544473"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BRANTA_WOOLFENDENI",
           "name": "Branta woolfendeni",
           "rank": "SPECIES",
@@ -4210,7 +4548,8 @@
           "sourceIds": {
             "checklistbank": "ott3595912"
           },
-          "children": []
+          "children": [],
+          "authorship": "Bickart 1990"
         },
         {
           "id": "SP_BRANTA_DICKEYI",
@@ -4222,7 +4561,8 @@
           "sourceIds": {
             "checklistbank": "ott6151641"
           },
-          "children": []
+          "children": [],
+          "authorship": "Miller 1924"
         },
         {
           "id": "SP_BRANTA_HYPSIBATA",
@@ -4234,7 +4574,8 @@
           "sourceIds": {
             "checklistbank": "ott6151642"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Cope 1878)"
         },
         {
           "id": "SP_BRANTA_PROPINQUA",
@@ -4246,7 +4587,8 @@
           "sourceIds": {
             "checklistbank": "ott6151643"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shufeldt 1891"
         },
         {
           "id": "SP_BRANTA_MINUSCULA",
@@ -4258,17 +4600,32 @@
           "sourceIds": {
             "checklistbank": "ott7659630"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Wetmore 1924)"
         },
         {
-          "id": "SP_BRANTA_SP",
-          "name": "Branta sp.",
+          "id": "SP_BRANTA_ESMERALDA_BURT_1929",
+          "name": "Branta esmeralda",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Branta",
+          "authorship": "Burt 1929",
           "sourceIds": {
-            "checklistbank": "184920"
+            "checklistbank": "txn:367732"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BRANTA_HOWARDAE_MILLER_1930",
+          "name": "Branta howardae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Branta",
+          "authorship": "Miller 1930",
+          "sourceIds": {
+            "checklistbank": "txn:367733"
           },
           "children": []
         }
@@ -4393,7 +4750,8 @@
           "sourceIds": {
             "checklistbank": "ott6151646"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1955"
         },
         {
           "id": "SP_BUCEPHALA_GRAYI",
@@ -4428,6 +4786,19 @@
           "lineage": "Bucephala",
           "sourceIds": {
             "checklistbank": "2823288"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BUCEPHALA_ANGUSTIPES_J_NOSSY_1965",
+          "name": "Bucephala angustipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bucephala",
+          "authorship": "Jánossy 1965",
+          "sourceIds": {
+            "checklistbank": "txn:381201"
           },
           "children": []
         }
@@ -4469,18 +4840,6 @@
           },
           "authorityIds": "col:PBGT,itis:175246,wikidata:Q242851",
           "authorship": "(Linnaeus, 1758)"
-        },
-        {
-          "id": "SP_CAIRINA_SP",
-          "name": "Cairina sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cairina",
-          "sourceIds": {
-            "checklistbank": "8856"
-          },
-          "children": []
         }
       ]
     },
@@ -4515,9 +4874,11 @@
             "col": [
               "QFYD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:159202"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:159202"
+            ]
           },
-          "authorityIds": "col:QFYD,itis:175151,wikidata:Q578813",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:159202,col:QFYD,itis:175151,wikidata:Q578813",
           "authorship": "(Gmelin, 1789)"
         }
       ]
@@ -4718,9 +5079,11 @@
             "col": [
               "5XX7T"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1516509"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1516509"
+            ]
           },
-          "authorityIds": "col:5XX7T,itis:175205,wikidata:Q490327",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1516509,col:5XX7T,itis:175205,wikidata:Q490327",
           "authorship": "(Eyton, 1838)"
         },
         {
@@ -4811,6 +5174,19 @@
           },
           "authorityIds": "col:5Y97T,itis:175208,wikidata:Q923950",
           "authorship": "P.L. Sclater, 1861"
+        },
+        {
+          "id": "SP_CHLOEPHAGA_ROBUSTA_TAMBUSSI_1998",
+          "name": "Chloephaga robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chloephaga",
+          "authorship": "Tambussi 1998",
+          "sourceIds": {
+            "checklistbank": "txn:377271"
+          },
+          "children": []
         }
       ]
     },
@@ -5013,9 +5389,11 @@
             "col": [
               "32ZQ5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:422570"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:422570"
+            ]
           },
-          "authorityIds": "col:32ZQ5,itis:174992,wikidata:Q733375",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:422570,col:32ZQ5,itis:174992,wikidata:Q733375",
           "authorship": "Richardson, 1832"
         },
         {
@@ -5067,9 +5445,11 @@
             "wikidata": [
               "Q50407533"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1037309"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1037309"
+            ]
           },
-          "authorityIds": "wikidata:Q50407533",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1037309,wikidata:Q50407533",
           "authorship": "Yarrell, 1830"
         },
         {
@@ -5172,7 +5552,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Cygnus",
-          "uuid": "cff363f3-2f12-5ab-a87-9d1d2d84842ac7"
+          "uuid": "cff363f3-2f12-5ab-a87-9d1d2d84842ac7",
+          "authorship": "(Bate 1916)",
+          "sourceIds": {
+            "checklistbank": "txn:367730"
+          }
         },
         {
           "id": "SP_CYGNUS_FALCONERI",
@@ -5182,7 +5566,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Cygnus",
-          "uuid": "21318314-ad22-5b9-bdc-78735258536a0a"
+          "uuid": "21318314-ad22-5b9-bdc-78735258536a0a",
+          "authorship": "Parker 1865",
+          "sourceIds": {
+            "checklistbank": "txn:367710"
+          }
         },
         {
           "id": "SP_CYGNUS_PRISTINUS",
@@ -5192,7 +5580,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Cygnus",
-          "uuid": "ad776e67-da25-53e-864-0858d4f101fffd"
+          "uuid": "ad776e67-da25-53e-864-0858d4f101fffd",
+          "authorship": "Kurochkin 1971",
+          "sourceIds": {
+            "checklistbank": "txn:367793"
+          }
         },
         {
           "id": "SP_CYGNUS_CYGNUS",
@@ -5230,7 +5622,8 @@
           "sourceIds": {
             "checklistbank": "850625"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Forbes 1889)"
         },
         {
           "id": "SP_CYGNUS_MARIAE",
@@ -5242,7 +5635,8 @@
           "sourceIds": {
             "checklistbank": "ott3595916"
           },
-          "children": []
+          "children": [],
+          "authorship": "Bickart 1990"
         },
         {
           "id": "SP_CYGNUS_ANATOIDES",
@@ -5266,7 +5660,8 @@
           "sourceIds": {
             "checklistbank": "ott7659633"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Brodkorb 1958)"
         },
         {
           "id": "SP_CYGNUS_MATTHEWI",
@@ -5278,7 +5673,8 @@
           "sourceIds": {
             "checklistbank": "ott7659634"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Shufeldt 1913)"
         },
         {
           "id": "SP_CYGNUS_PALOREGONUS",
@@ -5290,7 +5686,8 @@
           "sourceIds": {
             "checklistbank": "ott7659635"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Cope 1878)"
         },
         {
           "id": "SP_CYGNUS_UNWINI",
@@ -5301,6 +5698,32 @@
           "lineage": "Cygnus",
           "sourceIds": {
             "checklistbank": "ott7659636"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYGNUS_HERENTHALSI_VAN_BENEDEN_1873",
+          "name": "Cygnus herenthalsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cygnus",
+          "authorship": "Van Beneden 1873",
+          "sourceIds": {
+            "checklistbank": "txn:359406"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYGNUS_CSAKVARENSIS_LAMBRECHT_1933",
+          "name": "Cygnus csakvarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cygnus",
+          "authorship": "(Lambrecht 1933)",
+          "sourceIds": {
+            "checklistbank": "txn:367718"
           },
           "children": []
         }
@@ -5577,6 +6000,19 @@
             "checklistbank": "ott7659653"
           },
           "children": []
+        },
+        {
+          "id": "SP_DENDROCYGNA_EVERSA_WETMORE_1924",
+          "name": "Dendrocygna eversa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dendrocygna",
+          "authorship": "Wetmore 1924",
+          "sourceIds": {
+            "checklistbank": "txn:367734"
+          },
+          "children": []
         }
       ]
     },
@@ -5690,7 +6126,8 @@
             ],
             "checklistbank": "174253"
           },
-          "authorityIds": "col:3NJWW,itis:175226,wikidata:Q420499"
+          "authorityIds": "col:3NJWW,itis:175226,wikidata:Q420499",
+          "authorship": "(Gmelin 1789)"
         }
       ]
     },
@@ -6317,7 +6754,8 @@
           "sourceIds": {
             "checklistbank": "ott3595896"
           },
-          "children": []
+          "children": [],
+          "authorship": "Chandler 1990"
         }
       ]
     },
@@ -6439,7 +6877,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mergellus",
-          "uuid": "d7e66e31-c5c3-521-a90-6d99ae3b504c57"
+          "uuid": "d7e66e31-c5c3-521-a90-6d99ae3b504c57",
+          "authorship": "Zelenkov and Kurochkin 2014",
+          "sourceIds": {
+            "checklistbank": "txn:373100"
+          }
         },
         {
           "id": "SP_MERGELLUS_CUCULLATUS_LINNAEUS_1758",
@@ -6609,9 +7051,11 @@
             "col": [
               "3ZTRL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225903"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:225903"
+            ]
           },
-          "authorityIds": "col:3ZTRL,itis:175191,wikidata:Q758668",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:225903,col:3ZTRL,itis:175191,wikidata:Q758668",
           "authorship": "Hombron & Jacquinot, 1841"
         },
         {
@@ -6622,7 +7066,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mergus",
-          "uuid": "6799b271-ca58-5e4-9d1-cb3eb6778d71e0"
+          "uuid": "6799b271-ca58-5e4-9d1-cb3eb6778d71e0",
+          "authorship": "Williams and Tennyson 2014",
+          "sourceIds": {
+            "checklistbank": "txn:379418"
+          }
         },
         {
           "id": "SP_MERGUS_ALBELLUS_LINNAEUS_1758",
@@ -6659,6 +7107,19 @@
           "lineage": "Mergus",
           "sourceIds": {
             "checklistbank": "ott7659614"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MERGUS_MISCELLUS_ALVAREZ_AND_OLSON_1978",
+          "name": "Mergus miscellus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mergus",
+          "authorship": "Alvarez and Olson 1978",
+          "sourceIds": {
+            "checklistbank": "txn:368114"
           },
           "children": []
         }
@@ -6709,6 +7170,20 @@
           "lineage": "Neochen",
           "sourceIds": {
             "checklistbank": "ott6151670"
+          },
+          "children": [],
+          "authorship": "Brodkorb 1965"
+        },
+        {
+          "id": "SP_NEOCHEN_PUGIL_WINGE_1887",
+          "name": "Neochen pugil",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neochen",
+          "authorship": "(Winge 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:367740"
           },
           "children": []
         }
@@ -6960,6 +7435,19 @@
             "checklistbank": "ott7659662"
           },
           "children": []
+        },
+        {
+          "id": "SP_NETTAPUS_ANATOIDES_DEP_RET_1890",
+          "name": "Nettapus anatoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nettapus",
+          "authorship": "(Depéret 1890)",
+          "sourceIds": {
+            "checklistbank": "txn:367764"
+          },
+          "children": []
         }
       ]
     },
@@ -7165,9 +7653,11 @@
             "col": [
               "4BMPK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212676"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:212676"
+            ]
           },
-          "authorityIds": "col:4BMPK,itis:175180,wikidata:Q279939",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:212676,col:4BMPK,itis:175180,wikidata:Q279939",
           "authorship": "(Eyton, 1838)"
         },
         {
@@ -7234,7 +7724,8 @@
           "sourceIds": {
             "checklistbank": "ott6151677"
           },
-          "children": []
+          "children": [],
+          "authorship": "Howard 1963"
         },
         {
           "id": "SP_OXYURA_HULBERTI",
@@ -7246,7 +7737,8 @@
           "sourceIds": {
             "checklistbank": "ott6151678"
           },
-          "children": []
+          "children": [],
+          "authorship": "Emslie 1992"
         },
         {
           "id": "SP_OXYURA_ZAPATANIMA",
@@ -7258,7 +7750,8 @@
           "sourceIds": {
             "checklistbank": "ott6151679"
           },
-          "children": []
+          "children": [],
+          "authorship": "Alvarez 1977"
         },
         {
           "id": "SP_OXYURA_UNIFASCIATA",
@@ -7800,6 +8293,19 @@
           "lineage": "Somateria",
           "sourceIds": {
             "checklistbank": "ott7659616"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SOMATERIA_GRAVIPES_HARRISON_1979",
+          "name": "Somateria gravipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Somateria",
+          "authorship": "Harrison 1979",
+          "sourceIds": {
+            "checklistbank": "txn:431583"
           },
           "children": []
         }
@@ -8673,7 +9179,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Chendytes",
-          "uuid": "6482892e-3232-581-818-750d90b53d8744"
+          "uuid": "6482892e-3232-581-818-750d90b53d8744",
+          "authorship": "Miller 1925",
+          "sourceIds": {
+            "checklistbank": "txn:142718"
+          }
         },
         {
           "id": "SP_CHENDYTES_MILLERI",
@@ -8683,7 +9193,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Chendytes",
-          "uuid": "619c6390-fa71-55b-847-d553bdec6915a3"
+          "uuid": "619c6390-fa71-55b-847-d553bdec6915a3",
+          "authorship": "Howard 1955",
+          "sourceIds": {
+            "checklistbank": "txn:229925"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8702,7 +9216,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Manuherikia",
-          "uuid": "4d96a9e7-98ab-519-b6c-3e5d75084fc0c0"
+          "uuid": "4d96a9e7-98ab-519-b6c-3e5d75084fc0c0",
+          "authorship": "Worthy et al. 2008",
+          "sourceIds": {
+            "checklistbank": "txn:333947"
+          }
         },
         {
           "id": "SP_MANUHERIKIA_LACUSTRINA",
@@ -8712,7 +9230,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Manuherikia",
-          "uuid": "dd1aa485-2757-5ab-969-938b1059bb5817"
+          "uuid": "dd1aa485-2757-5ab-969-938b1059bb5817",
+          "authorship": "Worthy et al. 2007",
+          "sourceIds": {
+            "checklistbank": "txn:230828"
+          }
         },
         {
           "id": "SP_MANUHERIKIA_MINUTA",
@@ -8722,7 +9244,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Manuherikia",
-          "uuid": "060ab46f-c05e-53d-98c-a34c7bb13f5793"
+          "uuid": "060ab46f-c05e-53d-98c-a34c7bb13f5793",
+          "authorship": "Worthy et al. 2007",
+          "sourceIds": {
+            "checklistbank": "txn:230829"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8755,7 +9281,50 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Cnemiornis",
-          "uuid": "925f804c-ca6b-5ba-bc4-89e18c91eb30dc"
+          "uuid": "925f804c-ca6b-5ba-bc4-89e18c91eb30dc",
+          "authorship": "Owen 1865",
+          "sourceIds": {
+            "checklistbank": "txn:143774"
+          }
+        },
+        {
+          "id": "SP_CNEMIORNIS_SEPTENTRIONALIS_OLIVER_1955",
+          "name": "Cnemiornis septentrionalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cnemiornis",
+          "authorship": "Oliver 1955",
+          "sourceIds": {
+            "checklistbank": "txn:367750"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CNEMIORNIS_GRACILLIS_FORBES_1891",
+          "name": "Cnemiornis gracillis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cnemiornis",
+          "authorship": "Forbes 1891",
+          "sourceIds": {
+            "checklistbank": "txn:370195"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CNEMIORNIS_MINOR_FORBES_1891",
+          "name": "Cnemiornis minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cnemiornis",
+          "authorship": "Forbes 1891",
+          "sourceIds": {
+            "checklistbank": "txn:370196"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8774,7 +9343,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Tirarinetta",
-          "uuid": "b16926ae-3ca5-590-93b-5e0e93231fac9a"
+          "uuid": "b16926ae-3ca5-590-93b-5e0e93231fac9a",
+          "authorship": "Worthy 2008",
+          "sourceIds": {
+            "checklistbank": "txn:430486"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8793,7 +9366,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Miotadorna",
-          "uuid": "36a25d79-33a8-5ef-a83-b86fb96cb19db3"
+          "uuid": "36a25d79-33a8-5ef-a83-b86fb96cb19db3",
+          "authorship": "Worthy et al. 2007",
+          "sourceIds": {
+            "checklistbank": "txn:230831"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8812,7 +9389,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Dunstanetta",
-          "uuid": "d4d46cea-eb52-53b-9e8-a1a34651df44f6"
+          "uuid": "d4d46cea-eb52-53b-9e8-a1a34651df44f6",
+          "authorship": "Worthy et al. 2007",
+          "sourceIds": {
+            "checklistbank": "txn:230833"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8831,7 +9412,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Shiriyanetta",
-          "uuid": "80222e00-be0a-51d-b76-49b803d1a0d38b"
+          "uuid": "80222e00-be0a-51d-b76-49b803d1a0d38b",
+          "authorship": "Watanabe and Matsuoka 2015",
+          "sourceIds": {
+            "checklistbank": "txn:333168"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8850,7 +9435,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Pleistoanser",
-          "uuid": "7621034e-1ffb-58d-b76-f6fff5d4953afb"
+          "uuid": "7621034e-1ffb-58d-b76-f6fff5d4953afb",
+          "authorship": "Agnolín 2006",
+          "sourceIds": {
+            "checklistbank": "txn:484683"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8869,7 +9458,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Chenoanas",
-          "uuid": "bcfb7392-47d5-5da-972-73af4e005a0590"
+          "uuid": "bcfb7392-47d5-5da-972-73af4e005a0590",
+          "authorship": "Zelenkov 2012",
+          "sourceIds": {
+            "checklistbank": "txn:367886"
+          }
         },
         {
           "id": "SP_CHENOANAS_ASIATICA",
@@ -8879,7 +9472,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Chenoanas",
-          "uuid": "2d00a694-f73c-5da-856-de4fc0723b8dda"
+          "uuid": "2d00a694-f73c-5da-856-de4fc0723b8dda",
+          "authorship": "Zelenkov et al. 2018",
+          "sourceIds": {
+            "checklistbank": "txn:424137"
+          }
         },
         {
           "id": "SP_CHENOANAS_SANSANIENSIS",
@@ -8889,7 +9486,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Chenoanas",
-          "uuid": "8233f9a2-c9f0-57a-b60-a5626849a1fdec"
+          "uuid": "8233f9a2-c9f0-57a-b60-a5626849a1fdec",
+          "authorship": "(Milne-Edwards 1867)",
+          "sourceIds": {
+            "checklistbank": "txn:367692"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8908,7 +9509,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Australotadorna",
-          "uuid": "189423af-5d4d-565-ab0-772f6535ff64ac"
+          "uuid": "189423af-5d4d-565-ab0-772f6535ff64ac",
+          "authorship": "Worthy 2009",
+          "sourceIds": {
+            "checklistbank": "txn:367892"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8927,7 +9532,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Pinpanetta",
-          "uuid": "869e1684-c69b-5b1-ad8-baf0014b34e9de"
+          "uuid": "869e1684-c69b-5b1-ad8-baf0014b34e9de",
+          "authorship": "Worthy 2009",
+          "sourceIds": {
+            "checklistbank": "txn:367889"
+          }
         },
         {
           "id": "SP_PINPANETTA_VICKERSRICHAE",
@@ -8937,7 +9546,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Pinpanetta",
-          "uuid": "af0d8d00-a0f1-562-aad-3e939d49af6938"
+          "uuid": "af0d8d00-a0f1-562-aad-3e939d49af6938",
+          "authorship": "Worthy 2009",
+          "sourceIds": {
+            "checklistbank": "txn:367890"
+          }
         },
         {
           "id": "SP_PINPANETTA_FROMENSIS",
@@ -8947,7 +9560,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Pinpanetta",
-          "uuid": "b98e1d02-cf88-51c-a7b-d01fda44910803"
+          "uuid": "b98e1d02-cf88-51c-a7b-d01fda44910803",
+          "authorship": "Worthy 2009",
+          "sourceIds": {
+            "checklistbank": "txn:367891"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9004,7 +9621,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mioquerquedula",
-          "uuid": "8fbcdadd-6e27-540-94d-17911719879803"
+          "uuid": "8fbcdadd-6e27-540-94d-17911719879803",
+          "authorship": "Zelenkov and Kurochkin 2012",
+          "sourceIds": {
+            "checklistbank": "txn:367852"
+          }
         },
         {
           "id": "SP_MIOQUERQUEDULA_VELOX",
@@ -9033,7 +9654,50 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Mionetta",
-          "uuid": "4e857bf1-a789-522-8c8-9da4221dec8ac4"
+          "uuid": "4e857bf1-a789-522-8c8-9da4221dec8ac4",
+          "authorship": "(Milne-Edwards 1863)",
+          "sourceIds": {
+            "checklistbank": "txn:366007"
+          }
+        },
+        {
+          "id": "SP_MIONETTA_CONSOBRINA_MILNE_EDWARDS_1867",
+          "name": "Mionetta consobrina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mionetta",
+          "authorship": "(Milne-Edwards 1867)",
+          "sourceIds": {
+            "checklistbank": "txn:367689"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MIONETTA_NATATOR_MILNE_EDWARDS_1867",
+          "name": "Mionetta natator",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mionetta",
+          "authorship": "(Milne-Edwards 1867)",
+          "sourceIds": {
+            "checklistbank": "txn:367751"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MIONETTA_TURGAIENSIS_ZELENKOV_2024",
+          "name": "Mionetta turgaiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mionetta",
+          "authorship": "Zelenkov 2024",
+          "sourceIds": {
+            "checklistbank": "txn:495192"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9052,7 +9716,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Annakacygna",
-          "uuid": "a97db8d0-d307-5e6-afc-2cd45e53e28484"
+          "uuid": "a97db8d0-d307-5e6-afc-2cd45e53e28484",
+          "authorship": "Matsuoka and Hasegawa 2022",
+          "sourceIds": {
+            "checklistbank": "txn:459660"
+          }
         },
         {
           "id": "SP_ANNAKACYGNA_YOSHIIENSIS",
@@ -9172,7 +9840,8 @@
             "checklistbank": "174221"
           },
           "children": [],
-          "uuid": "670e59f4-1182-5b3-b70-ba3295e2a111d0"
+          "uuid": "670e59f4-1182-5b3-b70-ba3295e2a111d0",
+          "authorship": "(Spix, 1825)"
         },
         {
           "id": "SP_ORESSOCHEN_MELANOPTERUS",
@@ -9185,7 +9854,8 @@
             "checklistbank": "174222"
           },
           "children": [],
-          "uuid": "b0e72202-cc2e-549-813-58e8d45098304a"
+          "uuid": "b0e72202-cc2e-549-813-58e8d45098304a",
+          "authorship": "(Eyton 1838)"
         },
         {
           "id": "SP_ORESSOCHEN_BARBADIANUS",
@@ -9196,6 +9866,19 @@
           "lineage": "Oressochen",
           "sourceIds": {
             "checklistbank": "774698"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORESSOCHEN_DEBILIS_AMEGHINO_1891",
+          "name": "Oressochen debilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oressochen",
+          "authorship": "(Ameghino 1891)",
+          "sourceIds": {
+            "checklistbank": "txn:367742"
           },
           "children": []
         }
@@ -9234,19 +9917,6 @@
           "children": []
         },
         {
-          "id": "SP_QUERQUEDULA_HOTTENTOTA_EYTON_1838",
-          "name": "Querquedula hottentota",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Querquedula",
-          "authorship": "Eyton, 1838",
-          "sourceIds": {
-            "checklistbank": "1078563"
-          },
-          "children": []
-        },
-        {
           "id": "SP_QUERQUEDULA_FLORIDIANA",
           "name": "Querquedula floridiana",
           "rank": "SPECIES",
@@ -9256,7 +9926,8 @@
           "sourceIds": {
             "checklistbank": "ott3601290"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shufeldt 1917"
         },
         {
           "id": "SP_QUERQUEDULA_FLORIDANA",
@@ -9280,7 +9951,8 @@
           "sourceIds": {
             "checklistbank": "ott7659678"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Miller 1944)"
         },
         {
           "id": "SP_QUERQUEDULA_PULLULANS",
@@ -9292,7 +9964,8 @@
           "sourceIds": {
             "checklistbank": "ott7659679"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1961"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9386,6 +10059,19 @@
           "authorship": "(Linnaeus, 1758)",
           "sourceIds": {
             "checklistbank": "2718"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OLOR_MATTHEWI_SCHUFELDT_1913",
+          "name": "Olor matthewi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Olor",
+          "authorship": "Schufeldt 1913",
+          "sourceIds": {
+            "checklistbank": "txn:229911"
           },
           "children": []
         }
@@ -9650,6 +10336,19 @@
             "checklistbank": "ott7659655"
           },
           "children": []
+        },
+        {
+          "id": "SP_FULIGULA_ARCTINA_PORTIS_1887",
+          "name": "Fuligula arctina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fuligula",
+          "authorship": "Portis 1887",
+          "sourceIds": {
+            "checklistbank": "txn:210441"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9722,50 +10421,6 @@
       "lineage": "anatidae"
     },
     {
-      "id": "GENUS_CHENALOPEX",
-      "name": "Chenalopex",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHENALOPEX_AEGYPTIACA_LINNAEUS_1766",
-          "name": "Chenalopex aegyptiaca",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chenalopex",
-          "authorship": "(Linnaeus, 1766)",
-          "sourceIds": {
-            "checklistbank": "1036605"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "anatidae"
-    },
-    {
-      "id": "GENUS_LEPTOTARSIS",
-      "name": "Leptotarsis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPTOTARSIS_EYTONI_EYTON_1838",
-          "name": "Leptotarsis eytoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Leptotarsis",
-          "authorship": "Eyton, 1838",
-          "sourceIds": {
-            "checklistbank": "1046928"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "anatidae"
-    },
-    {
       "id": "GENUS_CHELYCHELYNECHEN",
       "name": "Chelychelynechen",
       "rank": "GENUS",
@@ -9780,7 +10435,8 @@
           "sourceIds": {
             "checklistbank": "311538"
           },
-          "children": []
+          "children": [],
+          "authorship": "Olson and James 1991"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9791,31 +10447,6 @@
       "name": "Thambetochen",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_THAMBETOCHEN_CHAULIODOUS",
-          "name": "Thambetochen chauliodous",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thambetochen",
-          "sourceIds": {
-            "checklistbank": "311541"
-          },
-          "children": [],
-          "authorship": "Olson & Wetmore, 1976"
-        },
-        {
-          "id": "SP_THAMBETOCHEN_XANION",
-          "name": "Thambetochen xanion",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Thambetochen",
-          "sourceIds": {
-            "checklistbank": "311542"
-          },
-          "children": []
-        },
         {
           "id": "SP_THAMBETOCHEN_CHAULIOIDES",
           "name": "Thambetochen chaulioides",
@@ -9890,7 +10521,8 @@
           "sourceIds": {
             "checklistbank": "774498"
           },
-          "children": []
+          "children": [],
+          "authorship": "Andrews 1897"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9911,7 +10543,8 @@
           "sourceIds": {
             "checklistbank": "ott3595938"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Wetmore 1944)"
         },
         {
           "id": "SP_NETTION_GREENI",
@@ -9923,7 +10556,8 @@
           "sourceIds": {
             "checklistbank": "ott6151673"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1964"
         },
         {
           "id": "SP_NETTION_OGALLALAE",
@@ -9934,6 +10568,33 @@
           "lineage": "Nettion",
           "sourceIds": {
             "checklistbank": "ott6151674"
+          },
+          "children": [],
+          "authorship": "Brodkorb 1962"
+        },
+        {
+          "id": "SP_NETTION_VELOX_MILNE_EDWARDS_1867",
+          "name": "Nettion velox",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nettion",
+          "authorship": "(Milne-Edwards 1867)",
+          "sourceIds": {
+            "checklistbank": "txn:367756"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NETTION_EPPELSHEIMENSE_LAMBRECHT_1933",
+          "name": "Nettion eppelsheimense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nettion",
+          "authorship": "(Lambrecht 1933)",
+          "sourceIds": {
+            "checklistbank": "txn:367758"
           },
           "children": []
         }
@@ -9968,7 +10629,8 @@
           "sourceIds": {
             "checklistbank": "ott6151607"
           },
-          "children": []
+          "children": [],
+          "authorship": "Ross 1935"
         },
         {
           "id": "SP_ANABERNICULA_OREGONENSIS",
@@ -9979,6 +10641,20 @@
           "lineage": "Anabernicula",
           "sourceIds": {
             "checklistbank": "ott6151608"
+          },
+          "children": [],
+          "authorship": "Howard 1964"
+        },
+        {
+          "id": "SP_ANABERNICULA_ROBUSTA_SHORT_1970",
+          "name": "Anabernicula robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anabernicula",
+          "authorship": "Short 1970",
+          "sourceIds": {
+            "checklistbank": "txn:367961"
           },
           "children": []
         }
@@ -10001,7 +10677,8 @@
           "sourceIds": {
             "checklistbank": "ott6151111"
           },
-          "children": []
+          "children": [],
+          "authorship": "Howard 1966"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10022,7 +10699,8 @@
           "sourceIds": {
             "checklistbank": "ott6151635"
           },
-          "children": []
+          "children": [],
+          "authorship": "(De Vis 1905)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10043,7 +10721,8 @@
           "sourceIds": {
             "checklistbank": "ott6151639"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Portis 1884)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10064,7 +10743,8 @@
           "sourceIds": {
             "checklistbank": "ott6151644"
           },
-          "children": []
+          "children": [],
+          "authorship": "Howard 1963"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10085,7 +10765,8 @@
           "sourceIds": {
             "checklistbank": "ott6151656"
           },
-          "children": []
+          "children": [],
+          "authorship": "Brodkorb 1961"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10106,7 +10787,8 @@
           "sourceIds": {
             "checklistbank": "ott6151658"
           },
-          "children": []
+          "children": [],
+          "authorship": "Wetmore 1943"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10127,7 +10809,8 @@
           "sourceIds": {
             "checklistbank": "ott6151659"
           },
-          "children": []
+          "children": [],
+          "authorship": "Emslie 1992"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10148,7 +10831,8 @@
           "sourceIds": {
             "checklistbank": "ott6151665"
           },
-          "children": []
+          "children": [],
+          "authorship": "Worthy et al. 2007"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10169,7 +10853,8 @@
           "sourceIds": {
             "checklistbank": "ott6151669"
           },
-          "children": []
+          "children": [],
+          "authorship": "Campbell 1979"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10190,7 +10875,8 @@
           "sourceIds": {
             "checklistbank": "ott6151676"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Brodkorb 1961)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10211,7 +10897,8 @@
           "sourceIds": {
             "checklistbank": "ott6151681"
           },
-          "children": []
+          "children": [],
+          "authorship": "Wetmore 1930"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10232,7 +10919,8 @@
           "sourceIds": {
             "checklistbank": "ott7659645"
           },
-          "children": []
+          "children": [],
+          "authorship": "De Vis 1905"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10273,6 +10961,20 @@
           "lineage": "Protomelanitta",
           "sourceIds": {
             "checklistbank": "ott7659674"
+          },
+          "children": [],
+          "authorship": "Stidham and Zelenkov 2016"
+        },
+        {
+          "id": "SP_PROTOMELANITTA_GRACILIS_ZELENKOV_2011",
+          "name": "Protomelanitta gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protomelanitta",
+          "authorship": "Zelenkov 2011",
+          "sourceIds": {
+            "checklistbank": "txn:367899"
           },
           "children": []
         }
@@ -10534,19 +11236,6 @@
           "authorship": "\"Gmelin, 1789\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:212711"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ANAS_ERYTHRORHYNCHA_GMELIN_1789",
-          "name": "\"Anas erythrorhyncha\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Anas",
-          "authorship": "\"Gmelin, 1789\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212712"
           },
           "children": []
         },
@@ -10879,32 +11568,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:225915"
           },
           "children": []
-        },
-        {
-          "id": "SP_CYGNUS_BUCCINATOR_RICHARDSON_1832",
-          "name": "\"Cygnus buccinator\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cygnus",
-          "authorship": "\"Richardson, 1832\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:422570"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CYGNUS_BEWICKII_YARRELL_1830",
-          "name": "\"Cygnus bewickii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cygnus",
-          "authorship": "\"Yarrell, 1830\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1037309"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -10984,19 +11647,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:159098"
           },
           "children": []
-        },
-        {
-          "id": "SP_MERGUS_AUSTRALIS_HOMBRON_JACQUINOT_1841",
-          "name": "\"Mergus australis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mergus",
-          "authorship": "\"Hombron & Jacquinot, 1841\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225903"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -11017,19 +11667,6 @@
           "authorship": "\"(Gmelin, 1789)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:159100"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OXYURA_MACCOA_EYTON_1838",
-          "name": "\"Oxyura maccoa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oxyura",
-          "authorship": "\"(Eyton, 1838)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:212676"
           },
           "children": []
         },
@@ -11325,32 +11962,6 @@
           "children": []
         },
         {
-          "id": "SP_AYTHYA_NOVAESEELANDIAE_GMELIN_1789",
-          "name": "\"Aythya novaeseelandiae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aythya",
-          "authorship": "\"(Gmelin, 1789)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225994"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_AYTHYA_AUSTRALIS_EYTON_1838",
-          "name": "\"Aythya australis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Aythya",
-          "authorship": "\"(Eyton, 1838)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:225997"
-          },
-          "children": []
-        },
-        {
           "id": "SP_AYTHYA_FERINA_LINNAEUS_1758",
           "name": "\"Aythya ferina\"",
           "rank": "SPECIES",
@@ -11547,28 +12158,6 @@
           "authorship": "\"(Bonaparte, 1838)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1481994"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "anatidae"
-    },
-    {
-      "id": "GENUS_CAMPTORHYNCHUS",
-      "name": "\"Camptorhynchus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CAMPTORHYNCHUS_LABRADORIUS_GMELIN_1789",
-          "name": "\"Camptorhynchus labradorius\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Camptorhynchus",
-          "authorship": "\"(Gmelin, 1789)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:159202"
           },
           "children": []
         }
@@ -11774,19 +12363,6 @@
           "authorship": "\"Phillips, 1916\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:226007"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CHLOEPHAGA_MELANOPTERA_EYTON_1838",
-          "name": "\"Chloephaga melanoptera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chloephaga",
-          "authorship": "\"(Eyton, 1838)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1516509"
           },
           "children": []
         }
@@ -12424,10 +13000,507 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_EONEORNIS",
+      "name": "Eoneornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EONEORNIS_AUSTRALIS_AMEGHINO_1894",
+          "name": "Eoneornis australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoneornis",
+          "authorship": "Ameghino 1894",
+          "sourceIds": {
+            "checklistbank": "txn:53638"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_EUTELORNIS",
+      "name": "Eutelornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUTELORNIS_PATAGONICUS_AMEGHINO_1894",
+          "name": "Eutelornis patagonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eutelornis",
+          "authorship": "Ameghino 1894",
+          "sourceIds": {
+            "checklistbank": "txn:53640"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_LOXORNIS",
+      "name": "Loxornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOXORNIS_CLIVUS_AMEGHINO_1894",
+          "name": "Loxornis clivus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Loxornis",
+          "authorship": "Ameghino 1894",
+          "sourceIds": {
+            "checklistbank": "txn:53642"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_EONESSA",
+      "name": "Eonessa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EONESSA_ANATICULA_WETMORE_1938",
+          "name": "Eonessa anaticula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eonessa",
+          "authorship": "Wetmore 1938",
+          "sourceIds": {
+            "checklistbank": "txn:105605"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_DENDROCHEN",
+      "name": "Dendrochen",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DENDROCHEN_ROBUSTA_MILLER_1944",
+          "name": "Dendrochen robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dendrochen",
+          "authorship": "Miller 1944",
+          "sourceIds": {
+            "checklistbank": "txn:290225"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DENDROCHEN_OLIGOCAENA_TUGARINOV_1940",
+          "name": "Dendrochen oligocaena",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dendrochen",
+          "authorship": "(Tugarinov 1940)",
+          "sourceIds": {
+            "checklistbank": "txn:367684"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_AFROCYGNUS",
+      "name": "Afrocygnus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AFROCYGNUS_CHAUVIREAE_LOUCHART_2005",
+          "name": "Afrocygnus chauvireae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Afrocygnus",
+          "authorship": "Louchart 2005",
+          "sourceIds": {
+            "checklistbank": "txn:367454"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_CYGNAVUS",
+      "name": "Cygnavus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYGNAVUS_SENCKENBERGI_LAMBRECHT_1931",
+          "name": "Cygnavus senckenbergi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cygnavus",
+          "authorship": "Lambrecht 1931",
+          "sourceIds": {
+            "checklistbank": "txn:367709"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_TELEORNIS",
+      "name": "Teleornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TELEORNIS_IMPRESSUS_AMEGHINO_1899",
+          "name": "Teleornis impressus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Teleornis",
+          "authorship": "Ameghino 1899",
+          "sourceIds": {
+            "checklistbank": "txn:367738"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_ARCHEOQUERQUEDULA",
+      "name": "Archeoquerquedula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHEOQUERQUEDULA_LAMBRECHTI_SPILLMAN_1942",
+          "name": "Archeoquerquedula lambrechti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archeoquerquedula",
+          "authorship": "(Spillman 1942)",
+          "sourceIds": {
+            "checklistbank": "txn:367754"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_SINANAS",
+      "name": "Sinanas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SINANAS_DIATOMAS_YEH_1980",
+          "name": "Sinanas diatomas",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sinanas",
+          "authorship": "Yeh 1980",
+          "sourceIds": {
+            "checklistbank": "txn:367785"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_SHARGANETTA",
+      "name": "Sharganetta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SHARGANETTA_MONGOLICA_ZELENKOV_2011",
+          "name": "Sharganetta mongolica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sharganetta",
+          "authorship": "Zelenkov 2011",
+          "sourceIds": {
+            "checklistbank": "txn:367896"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_NOGUSUNNA",
+      "name": "Nogusunna",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NOGUSUNNA_CONFLICTOIDES_ZELENKOV_2011",
+          "name": "Nogusunna conflictoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nogusunna",
+          "authorship": "Zelenkov 2011",
+          "sourceIds": {
+            "checklistbank": "txn:367898"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_CAYAOA",
+      "name": "Cayaoa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAYAOA_BRUNETI_TONNI_1979",
+          "name": "Cayaoa bruneti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cayaoa",
+          "authorship": "Tonni 1979",
+          "sourceIds": {
+            "checklistbank": "txn:367901"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_ANKONETTA",
+      "name": "Ankonetta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANKONETTA_LARRIESTRAI_CENIZO_AND_AGNOLI_N_2010",
+          "name": "Ankonetta larriestrai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ankonetta",
+          "authorship": "Cenizo and Agnolín 2010",
+          "sourceIds": {
+            "checklistbank": "txn:367947"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_ALDABRANAS",
+      "name": "Aldabranas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALDABRANAS_CABRI_HARRISON_AND_WALKER_1978",
+          "name": "Aldabranas cabri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aldabranas",
+          "authorship": "Harrison and Walker 1978",
+          "sourceIds": {
+            "checklistbank": "txn:371737"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_AWENGKERE",
+      "name": "Awengkere",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AWENGKERE_MAGNANATIS_WORTHY_AND_YATES_2018",
+          "name": "Awengkere magnanatis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Awengkere",
+          "authorship": "Worthy and Yates 2018",
+          "sourceIds": {
+            "checklistbank": "txn:429008"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_ANSEROBRANTA",
+      "name": "Anserobranta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANSEROBRANTA_TARABUKINI_KUROCHKIN_AND_GANEA_1972",
+          "name": "Anserobranta tarabukini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anserobranta",
+          "authorship": "Kurochkin and Ganea 1972",
+          "sourceIds": {
+            "checklistbank": "txn:429284"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_ALLGOVIACHEN",
+      "name": "Allgoviachen",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALLGOVIACHEN_TORTONICA_MAYR_ET_AL_2023",
+          "name": "Allgoviachen tortonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allgoviachen",
+          "authorship": "Mayr et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:479348"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_LAVANTTALORNIS",
+      "name": "Lavanttalornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LAVANTTALORNIS_HASSLERI_BOCHENSKI_ET_AL_2023",
+          "name": "Lavanttalornis hassleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lavanttalornis",
+          "authorship": "Bochenski et al. 2023",
+          "sourceIds": {
+            "checklistbank": "txn:480842"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_AMINORNIS",
+      "name": "Aminornis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMINORNIS_EXCAVATUS_AMEGHINO_1899",
+          "name": "Aminornis excavatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aminornis",
+          "authorship": "Ameghino 1899",
+          "sourceIds": {
+            "checklistbank": "txn:484681"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_UYREKURA",
+      "name": "Uyrekura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UYREKURA_CHALKARICA_ZELENKOV_2024",
+          "name": "Uyrekura chalkarica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Uyrekura",
+          "authorship": "Zelenkov 2024",
+          "sourceIds": {
+            "checklistbank": "txn:495191"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
+    },
+    {
+      "id": "GENUS_GRACANICANETTA",
+      "name": "Gracanicanetta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GRACANICANETTA_HAPPI_BOCHENSKI_ET_AL_2025",
+          "name": "Gracanicanetta happi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gracanicanetta",
+          "authorship": "Bochenski et al. 2025",
+          "sourceIds": {
+            "checklistbank": "txn:507479"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anatidae"
     }
   ],
-  "genusCount": 151,
-  "speciesCount": 643,
+  "genusCount": 170,
+  "speciesCount": 696,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

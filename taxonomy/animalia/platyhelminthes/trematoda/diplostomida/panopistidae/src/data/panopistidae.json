@@ -84,9 +84,11 @@
             "col": [
               "CBZFW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1748865"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1748865"
+            ]
           },
-          "authorityIds": "col:CBZFW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1748865,col:CBZFW",
           "authorship": "(Soltys, 1952) Pojmanska, 1959"
         },
         {
@@ -318,32 +320,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "panopistidae"
-    },
-    {
-      "id": "GENUS_PSEUDOLEUCOCHLORIDIUM",
-      "name": "\"Pseudoleucochloridium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDOLEUCOCHLORIDIUM_SORICIS_SOLTYS_1952_POJMANSKA_1959",
-          "name": "\"Pseudoleucochloridium soricis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudoleucochloridium",
-          "authorship": "\"(Soltys, 1952) Pojmanska, 1959\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1748865"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "panopistidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 18,
+  "genusCount": 5,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -352,6 +332,6 @@
       "orderKey": 7393567,
       "familyKey": 4860206
     },
-    "checklistbank": "1764129"
+    "checklistbank": "54115"
   }
 }

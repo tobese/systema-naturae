@@ -143,9 +143,11 @@
             "col": [
               "VPFQS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1895290"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1895290"
+            ]
           },
-          "authorityIds": "col:VPFQS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1895290,col:VPFQS",
           "authorship": "Knight, 1931"
         },
         {
@@ -181,9 +183,11 @@
             "col": [
               "8Z9HV"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1576138"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1576138"
+            ]
           },
-          "authorityIds": "col:8Z9HV",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1576138,col:8Z9HV",
           "authorship": "(Beede, 1907)"
         },
         {
@@ -261,9 +265,11 @@
             "col": [
               "VP9HL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1895291"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1895291"
+            ]
           },
-          "authorityIds": "col:VP9HL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1895291,col:VP9HL",
           "authorship": "Knight, 1931"
         },
         {
@@ -281,9 +287,11 @@
             "col": [
               "8Z9HX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1576140"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1576140"
+            ]
           },
-          "authorityIds": "col:8Z9HX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1576140,col:8Z9HX",
           "authorship": "(Nechaev, 1894)"
         },
         {
@@ -438,6 +446,45 @@
           },
           "children": [],
           "uuid": "4dbf3de5-9980-53c-9d1-2292bbba5880de"
+        },
+        {
+          "id": "SP_STREPTACIS_ORIENTALIS_N_TZEL_AND_NAKAZAWA_2012",
+          "name": "Streptacis orientalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streptacis",
+          "authorship": "Nützel and Nakazawa 2012",
+          "sourceIds": {
+            "checklistbank": "txn:223839"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STREPTACIS_KHAOKHADENSIS_KETWETSURIYA_ET_AL_2020",
+          "name": "Streptacis khaokhadensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streptacis",
+          "authorship": "Ketwetsuriya et al. 2020",
+          "sourceIds": {
+            "checklistbank": "txn:415846"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STREPTACIS_VOLGENESIS_MAZAEV_2020",
+          "name": "Streptacis volgenesis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streptacis",
+          "authorship": "Mazaev 2020",
+          "sourceIds": {
+            "checklistbank": "txn:432738"
+          },
+          "children": []
         }
       ]
     },
@@ -483,77 +530,17 @@
           "uuid": "e1cc2d19-a65d-5fb-885-b48f9c8b6c4911"
         }
       ]
-    },
-    {
-      "id": "GENUS_STREPTACIS",
-      "name": "\"Streptacis",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STREPTACIS_PERMIANA_BEEDE_1907",
-          "name": "\"Streptacis permiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Streptacis",
-          "authorship": "\"(Beede, 1907)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1576138"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STREPTACIS_SUBGRACILIS_NECHAEV_1894",
-          "name": "\"Streptacis subgracilis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Streptacis",
-          "authorship": "\"(Nechaev, 1894)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1576140"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STREPTACIS_MEEKI_KNIGHT_1931",
-          "name": "\"Streptacis meeki\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Streptacis",
-          "authorship": "\"Knight, 1931\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1895290"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_STREPTACIS_SCALPTA_KNIGHT_1931",
-          "name": "\"Streptacis scalpta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Streptacis",
-          "authorship": "\"Knight, 1931\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1895291"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "streptacididae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 30,
+  "genusCount": 4,
+  "speciesCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 3243885
-    }
+    },
+    "checklistbank": "txn:58661"
   }
 }

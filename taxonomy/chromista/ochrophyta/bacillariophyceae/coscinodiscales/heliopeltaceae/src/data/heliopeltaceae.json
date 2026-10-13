@@ -2052,10 +2052,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7516969
+            "gbif": 7516969,
+            "checklistbank": "txn:387048"
           },
           "uuid": "290b5a7d-608f-5cf-be1-18eda385d559fe",
-          "authorityIds": "gbif:7516969"
+          "authorityIds": "gbif:7516969",
+          "authorship": "Andrews 1976"
         },
         {
           "id": "ACTINOPTYCHUS_MEAKINII",
@@ -4267,9 +4269,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Actinoptychus",
           "sourceIds": {
-            "checklistbank": "216790"
+            "checklistbank": [
+              "216790"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:216790"
         },
         {
           "id": "SP_ACTINOPTYCHUS_OCTONARIUS_EHRENBERG_KUETZING_1844",
@@ -4285,14 +4290,15 @@
           "children": []
         },
         {
-          "id": "SP_ACTINOPTYCHUS_SINENSIS",
-          "name": "Actinoptychus sinensis",
+          "id": "SP_ACTINOPTYCHUS_VIRGINICUS_GRUNOW_1883",
+          "name": "Actinoptychus virginicus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Actinoptychus",
+          "authorship": "(Grunow 1883)",
           "sourceIds": {
-            "checklistbank": "216790"
+            "checklistbank": "txn:387052"
           },
           "children": []
         }

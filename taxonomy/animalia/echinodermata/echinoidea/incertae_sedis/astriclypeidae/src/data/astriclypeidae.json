@@ -519,9 +519,11 @@
             "col": [
               "BFPN5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:513716"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:513716"
+            ]
           },
-          "authorityIds": "col:BFPN5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:513716,col:BFPN5",
           "children": []
         },
         {
@@ -569,19 +571,6 @@
           },
           "children": [],
           "uuid": "3e21750e-e76a-5f1-a4f-1d911f2e5f8288"
-        },
-        {
-          "id": "SP_ECHINODISCUS_BIFORIS_PFEFFER_1881",
-          "name": "Echinodiscus biforis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Echinodiscus",
-          "authorship": "Pfeffer, 1881",
-          "sourceIds": {
-            "checklistbank": "675945"
-          },
-          "children": []
         },
         {
           "id": "SP_ECHINODISCUS_LAEVIS_A_AGASSIZ_1872_74",
@@ -679,6 +668,19 @@
           "lineage": "Echinodiscus",
           "sourceIds": {
             "checklistbank": "ott7670290"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ECHINODISCUS_FORMOSUS_WANG_1984",
+          "name": "Echinodiscus formosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echinodiscus",
+          "authorship": "Wang 1984",
+          "sourceIds": {
+            "checklistbank": "txn:415033"
           },
           "children": []
         }
@@ -968,19 +970,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_SCUTELLA_AURITA_LESKE_1778",
-          "name": "Scutella aurita",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Scutella",
-          "authorship": "(Leske, 1778)",
-          "sourceIds": {
-            "checklistbank": "677770"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SCUTELLA_BIFISSA_AUDOUIN_1806",
           "name": "Scutella bifissa",
           "rank": "SPECIES",
@@ -1153,28 +1142,6 @@
       "lineage": "astriclypeidae"
     },
     {
-      "id": "GENUS_ECHINODISCUS",
-      "name": "\"Echinodiscus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ECHINODISCUS_AURITUS_MORTENSEN_1948",
-          "name": "\"Echinodiscus auritus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Echinodiscus",
-          "authorship": "\"Mortensen, 1948\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:513716"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "astriclypeidae"
-    },
-    {
       "id": "GENUS_AMPHIOPE",
       "name": "\"Amphiope",
       "rank": "GENUS",
@@ -1241,11 +1208,11 @@
       "lineage": "astriclypeidae"
     }
   ],
-  "speciesCount": 73,
+  "speciesCount": 71,
   "appSlug": "astriclypeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Echinoidea",
-  "genusCount": 16,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1254,6 +1221,6 @@
       "orderKey": 11919486,
       "familyKey": 3249491
     },
-    "checklistbank": "ott3650953"
+    "checklistbank": "a719a0b7-baca-47ad-9b63-32f524efcd8a"
   }
 }

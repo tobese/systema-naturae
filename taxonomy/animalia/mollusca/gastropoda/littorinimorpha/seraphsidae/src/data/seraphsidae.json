@@ -26,9 +26,11 @@
             "col": [
               "8699W"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1497452"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1497452"
+            ]
           },
-          "authorityIds": "col:8699W",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1497452,col:8699W",
           "authorship": "(Lamarck, 1803)"
         },
         {
@@ -42,7 +44,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:4963528",
           "children": [],
-          "uuid": "eb9e507f-9543-5e2-8ef-0727e49ebf3b22"
+          "uuid": "eb9e507f-9543-5e2-8ef-0727e49ebf3b22",
+          "authorship": "(Vredenburg 1925)",
+          "sourceIds": {
+            "checklistbank": "txn:113724"
+          }
         },
         {
           "id": "SP_SERAPHS_PETERJUNGI_CAZE_MERLE_PACAUD",
@@ -68,7 +74,11 @@
           "sourcedFrom": "gbif",
           "wikipediaTitle": "gbif:4941018",
           "children": [],
-          "uuid": "cf7ac614-b7ab-5bf-8fc-fc3cbf098a5046"
+          "uuid": "cf7ac614-b7ab-5bf-8fc-fc3cbf098a5046",
+          "authorship": "(d'Orbigny 1852)",
+          "sourceIds": {
+            "checklistbank": "txn:111189"
+          }
         },
         {
           "id": "SP_SERAPHS_THOMPSONI_DICKERSON_1914",
@@ -100,9 +110,11 @@
             "col": [
               "8YK2C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571178"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1571178"
+            ]
           },
-          "authorityIds": "col:8YK2C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1571178,col:8YK2C",
           "authorship": "(Solander, 1766)"
         },
         {
@@ -675,6 +687,19 @@
             "checklistbank": "3104437"
           },
           "children": []
+        },
+        {
+          "id": "SP_TEREBELLUM_ERATOIDES_COSSMANN_1889",
+          "name": "Terebellum eratoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebellum",
+          "authorship": "Cossmann 1889",
+          "sourceIds": {
+            "checklistbank": "txn:339448"
+          },
+          "children": []
         }
       ]
     },
@@ -766,7 +791,8 @@
           "sourceIds": {
             "col": [
               "RTZM2"
-            ]
+            ],
+            "checklistbank": "txn:383369"
           },
           "authorityIds": "col:RTZM2"
         },
@@ -786,6 +812,32 @@
             ]
           },
           "authorityIds": "col:8YNHR"
+        },
+        {
+          "id": "SP_PARASERAPHS_TETANUS_JUNG_1974",
+          "name": "Paraseraphs tetanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraseraphs",
+          "authorship": "Jung 1974",
+          "sourceIds": {
+            "checklistbank": "txn:339485"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARASERAPHS_CANTAMESSAE_MAXWELL_ET_AL_2018",
+          "name": "Paraseraphs cantamessae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paraseraphs",
+          "authorship": "Maxwell et al. 2018",
+          "sourceIds": {
+            "checklistbank": "txn:397322"
+          },
+          "children": []
         }
       ]
     },
@@ -810,8 +862,11 @@
           "uuid": "5faf3013-7537-52d-af0-047b9cd5bebb90",
           "authorship": "(d'Archiac & Haime, 1854)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1906859"
-          }
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1906859"
+            ]
+          },
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1906859"
         },
         {
           "id": "SP_ROSTELLARIA_BELLARDI",
@@ -957,66 +1012,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "seraphsidae"
-    },
-    {
-      "id": "GENUS_SERAPHS",
-      "name": "\"Seraphs",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SERAPHS_CONVOLUTUS_LAMARCK_1803",
-          "name": "\"Seraphs convolutus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Seraphs",
-          "authorship": "\"(Lamarck, 1803)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1497452"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SERAPHS_VOLUTATUS_SOLANDER_1766",
-          "name": "\"Seraphs volutatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Seraphs",
-          "authorship": "\"(Solander, 1766)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1571178"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "seraphsidae"
-    },
-    {
-      "id": "GENUS_MAURYNA",
-      "name": "\"Mauryna",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_MAURYNA_PLICATA_D_ARCHIAC_HAIME_1854",
-          "name": "\"Mauryna plicata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Mauryna",
-          "authorship": "\"(d'Archiac & Haime, 1854)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1906859"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "seraphsidae"
     }
   ],
-  "genusCount": 10,
+  "genusCount": 8,
   "speciesCount": 58,
   "sourceIds": {
     "gbif": {
@@ -1026,6 +1024,6 @@
       "orderKey": 7390893,
       "familyKey": 4963525
     },
-    "checklistbank": "2821811"
+    "checklistbank": "8f1a0499-a5eb-423e-a89a-4efc9618835c"
   }
 }

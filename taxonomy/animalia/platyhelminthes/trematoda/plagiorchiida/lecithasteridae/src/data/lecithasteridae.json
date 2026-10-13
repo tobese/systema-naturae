@@ -646,20 +646,6 @@
           "uuid": "0df24856-4875-5de-ba7-ca8d2df4657491"
         },
         {
-          "id": "SP_APONURUS_PYRIFORMIS_LINTON_1910",
-          "name": "Aponurus pyriformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aponurus",
-          "authorship": "(Linton, 1910)",
-          "sourceIds": {
-            "checklistbank": "60036"
-          },
-          "children": [],
-          "uuid": "782f5b7b-ff7b-506-be7-56c420c86896da"
-        },
-        {
           "id": "SP_APONURUS_LAGUNCULA_LOOSS",
           "name": "Aponurus laguncula",
           "rank": "SPECIES",
@@ -1324,34 +1310,6 @@
           "authorityIds": "col:V7DJ4"
         },
         {
-          "id": "SP_LECITHASTER_GIBBOSUS_RUDOLPHI_1802",
-          "name": "Lecithaster gibbosus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lecithaster",
-          "authorship": "(Rudolphi, 1802)",
-          "sourceIds": {
-            "checklistbank": "29364"
-          },
-          "children": [],
-          "uuid": "54d46522-d8ac-57b-a08-d0435d21421eb5"
-        },
-        {
-          "id": "SP_LECITHASTER_STELLATUS_LOOSS_1906",
-          "name": "Lecithaster stellatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Lecithaster",
-          "authorship": "Looss, 1906",
-          "sourceIds": {
-            "checklistbank": "29365"
-          },
-          "children": [],
-          "uuid": "a97326f1-4d12-5da-b14-7fec4a21901f83"
-        },
-        {
           "id": "SP_LECITHASTER_SETIPINNAE_QIU_LIANG_IN_SHEN_QIU_1995",
           "name": "Lecithaster setipinnae",
           "rank": "SPECIES",
@@ -1548,9 +1506,11 @@
             "col": [
               "6CSS6"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727115"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:727115"
+            ]
           },
-          "authorityIds": "col:6CSS6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:727115,col:6CSS6",
           "authorship": "(Yamaguti, 1971)"
         },
         {
@@ -2897,19 +2857,6 @@
           "authorityIds": "col:3WYVZ"
         },
         {
-          "id": "SP_MACHIDATREMA_CHILOSTOMA_MACHIDA_1980",
-          "name": "Machidatrema chilostoma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Machidatrema",
-          "authorship": "(Machida, 1980)",
-          "sourceIds": {
-            "checklistbank": "1002227"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MACHIDATREMA_KYPHOSI_YAMAGUTI",
           "name": "Machidatrema kyphosi",
           "rank": "SPECIES",
@@ -3119,9 +3066,11 @@
             "col": [
               "58PM8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727129"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:727129"
+            ]
           },
-          "authorityIds": "col:58PM8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:727129,col:58PM8",
           "authorship": "(Ichihara, 1970)"
         },
         {
@@ -3472,9 +3421,11 @@
             "col": [
               "6VXNN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727121"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:727121"
+            ]
           },
-          "authorityIds": "col:6VXNN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:727121,col:6VXNN",
           "authorship": "(Yamaguti, 1965)"
         },
         {
@@ -4059,28 +4010,6 @@
       "lineage": "lecithasteridae"
     },
     {
-      "id": "GENUS_THELETRUM",
-      "name": "Theletrum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_THELETRUM_FRONTILATUM_MANTER_1969",
-          "name": "Theletrum frontilatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Theletrum",
-          "authorship": "Manter, 1969",
-          "sourceIds": {
-            "checklistbank": "908304"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lecithasteridae"
-    },
-    {
       "id": "GENUS_FASCIOLA",
       "name": "Fasciola",
       "rank": "GENUS",
@@ -4156,76 +4085,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lecithasteridae"
-    },
-    {
-      "id": "GENUS_DICHADENA",
-      "name": "\"Dichadena",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_DICHADENA_LOBATA_YAMAGUTI_1971",
-          "name": "\"Dichadena lobata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Dichadena",
-          "authorship": "\"(Yamaguti, 1971)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727115"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lecithasteridae"
-    },
-    {
-      "id": "GENUS_PROLECITHA",
-      "name": "\"Prolecitha",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PROLECITHA_FUSIFORMIS_YAMAGUTI_1965",
-          "name": "\"Prolecitha fusiformis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prolecitha",
-          "authorship": "\"(Yamaguti, 1965)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727121"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lecithasteridae"
-    },
-    {
-      "id": "GENUS_TRIFOLIOVARIUM",
-      "name": "\"Trifoliovarium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRIFOLIOVARIUM_CALLIONYMI_ICHIHARA_1970",
-          "name": "\"Trifoliovarium callionymi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trifoliovarium",
-          "authorship": "\"(Ichihara, 1970)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:727129"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lecithasteridae"
     }
   ],
-  "genusCount": 32,
-  "speciesCount": 226,
+  "genusCount": 28,
+  "speciesCount": 218,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

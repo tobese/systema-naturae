@@ -555,7 +555,8 @@
           "sourceIds": {
             "itis": [
               "597565"
-            ]
+            ],
+            "checklistbank": "219352"
           },
           "authorityIds": "itis:597565"
         },
@@ -681,13 +682,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tylidae"
+    },
+    {
+      "id": "GENUS_PALAEOARMADILLO",
+      "name": "Palaeoarmadillo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEOARMADILLO_MICROSOMA_POINAR_2020",
+          "name": "Palaeoarmadillo microsoma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeoarmadillo",
+          "authorship": "Poinar 2020",
+          "sourceIds": {
+            "checklistbank": "txn:421145"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tylidae"
     }
   ],
-  "speciesCount": 35,
+  "speciesCount": 36,
   "appSlug": "tylidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

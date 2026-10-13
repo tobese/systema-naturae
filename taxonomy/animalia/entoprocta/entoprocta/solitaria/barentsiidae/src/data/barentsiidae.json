@@ -1015,9 +1015,11 @@
             "col": [
               "KP9F"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:146719"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:146719"
+            ]
           },
-          "authorityIds": "col:KP9F,itis:708742"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:146719,col:KP9F,itis:708742"
         },
         {
           "id": "SP_BARENTSIA_DISCRETA_BUSK_1886",
@@ -1267,9 +1269,11 @@
             "itis": [
               "708915"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1000103"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1000103"
+            ]
           },
-          "authorityIds": "col:KP93,itis:708915"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1000103,col:KP93,itis:708915"
         },
         {
           "id": "SP_BARENTSIA_GENICULATA_HARMER_1915",
@@ -1672,28 +1676,6 @@
       "lineage": "barentsiidae"
     },
     {
-      "id": "GENUS_ASCOPODARIA",
-      "name": "Ascopodaria",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ASCOPODARIA_DISCRETA_BUSK_1886",
-          "name": "Ascopodaria discreta",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascopodaria",
-          "authorship": "Busk, 1886",
-          "sourceIds": {
-            "checklistbank": "1044543"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "barentsiidae"
-    },
-    {
       "id": "GENUS_GULBARENTSIA",
       "name": "Gulbarentsia",
       "rank": "GENUS",
@@ -1752,40 +1734,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:111802"
           },
           "children": []
-        },
-        {
-          "id": "SP_BARENTSIA_MAJOR_HINCKS_1889",
-          "name": "\"Barentsia major\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Barentsia",
-          "authorship": "\"Hincks, 1889\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:146719"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BARENTSIA_BULLATA_FLEMING_1826",
-          "name": "\"Barentsia bullata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Barentsia",
-          "authorship": "\"(Fleming, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1000103"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "barentsiidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 89,
+  "genusCount": 13,
+  "speciesCount": 86,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1793,6 +1749,6 @@
       "orderKey": 10672903,
       "familyKey": 1897
     },
-    "checklistbank": "43124"
+    "checklistbank": "15423"
   }
 }

@@ -26,7 +26,8 @@
               "V4S7R"
             ]
           },
-          "authorityIds": "col:V4S7R"
+          "authorityIds": "col:V4S7R",
+          "children": []
         },
         {
           "id": "SP_EUNEMOPSIS_OBLIQUECOSTATA_ZARDINI_1978",
@@ -37,7 +38,8 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "4c84d66d-af3f-5c0-800-eb08da52e1ad12"
+          "uuid": "4c84d66d-af3f-5c0-800-eb08da52e1ad12",
+          "children": []
         },
         {
           "id": "SP_EUNEMOPSIS_PRAECURRENS_KITTL_1894",
@@ -50,7 +52,8 @@
           "sourcedFrom": "none",
           "authorship": "Kittl",
           "yearPublished": "1894",
-          "uuid": "773f9bc4-7608-5b4-aaa-03bdb4e8942fc3"
+          "uuid": "773f9bc4-7608-5b4-aaa-03bdb4e8942fc3",
+          "children": []
         },
         {
           "id": "SP_TURBO_EPAPHUS",
@@ -61,9 +64,58 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "e4170008-629f-527-a0b-ae7100372ba6d9"
+          "uuid": "e4170008-629f-527-a0b-ae7100372ba6d9",
+          "children": []
+        },
+        {
+          "id": "SP_EUNEMOPSIS_EPAPHUS_LAUBE_1869",
+          "name": "Eunemopsis epaphus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eunemopsis",
+          "authorship": "(Laube 1869)",
+          "sourceIds": {
+            "checklistbank": "txn:253177"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PSEUDOCLANCULUS",
+      "name": "Pseudoclanculus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCLANCULUS_CASSIANUS_WISSMANN_1841",
+          "name": "Pseudoclanculus cassianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoclanculus",
+          "authorship": "(Wissmann 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:253027"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOCLANCULUS_NODOSUS_M_NSTER_1841",
+          "name": "Pseudoclanculus nodosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoclanculus",
+          "authorship": "(Münster 1841)",
+          "sourceIds": {
+            "checklistbank": "txn:253179"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eunemopsidae"
     }
   ],
   "sourceIds": {
@@ -73,6 +125,9 @@
       "classKey": 225,
       "orderKey": 9759304,
       "familyKey": 8471120
-    }
-  }
+    },
+    "checklistbank": "txn:253026"
+  },
+  "genusCount": 2,
+  "speciesCount": 7
 }

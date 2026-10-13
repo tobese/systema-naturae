@@ -2049,31 +2049,6 @@
           "authorityIds": "col:4W7PN,gbif:177731989,gbif:2335437,itis:166771"
         },
         {
-          "id": "SP_SEBASTES_JOYNERI_G_NTHER_1878",
-          "name": "Sebastes joyneri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "catalogue of life",
-          "lineage": "Sebastes",
-          "authorship": "Günther, 1878",
-          "sourceIds": {
-            "gbif": [
-              "177731834",
-              "2335451"
-            ],
-            "col": [
-              "4W7MP"
-            ],
-            "itis": [
-              "644583"
-            ],
-            "checklistbank": "160817"
-          },
-          "children": [],
-          "uuid": "ae829109-472f-51b-8e7-563f79704d5536",
-          "authorityIds": "col:4W7MP,gbif:177731834,gbif:2335451,itis:644583"
-        },
-        {
           "id": "SP_SEBASTES_MELANOPS_GIRARD_1856",
           "name": "Sebastes melanops",
           "rank": "SPECIES",
@@ -2637,20 +2612,6 @@
           "authorityIds": "col:79ZS9"
         },
         {
-          "id": "SP_SEBASTES_MARINUS_LINNAEUS_1758",
-          "name": "Sebastes marinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Sebastes",
-          "authorship": "(Linnaeus, 1758)",
-          "sourceIds": {
-            "checklistbank": "124183"
-          },
-          "children": [],
-          "uuid": "0f12437c-1ab8-54f-8a4-c722ba0a215c26"
-        },
-        {
           "id": "SP_SEBASTES_DACTYLOPTERUS_DELAROCHE_1809",
           "name": "Sebastes dactylopterus",
           "rank": "SPECIES",
@@ -2844,6 +2805,19 @@
           "lineage": "Sebastes",
           "sourceIds": {
             "checklistbank": "51767"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SEBASTES_LONGIROSTRIS_BARSUKOV_1989",
+          "name": "Sebastes longirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sebastes",
+          "authorship": "(Barsukov 1989)",
+          "sourceIds": {
+            "checklistbank": "txn:394926"
           },
           "children": []
         }
@@ -3738,13 +3712,48 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sebastidae"
+    },
+    {
+      "id": "GENUS_SEBASTAVUS",
+      "name": "Sebastavus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SEBASTAVUS_VERTEBRALIS_JORDAN_AND_GILBERT_1919",
+          "name": "Sebastavus vertebralis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sebastavus",
+          "authorship": "Jordan and Gilbert 1919",
+          "sourceIds": {
+            "checklistbank": "txn:354984"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SEBASTAVUS_ELATUS_STEINDACHNER_1860",
+          "name": "Sebastavus elatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sebastavus",
+          "authorship": "Steindachner 1860",
+          "sourceIds": {
+            "checklistbank": "txn:395091"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sebastidae"
     }
   ],
-  "speciesCount": 170,
+  "speciesCount": 171,
   "appSlug": "sebastidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

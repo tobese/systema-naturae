@@ -88,9 +88,11 @@
             "itis": [
               "624246"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740631"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:740631"
+            ]
           },
-          "authorityIds": "col:GVWG,itis:624246"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:740631,col:GVWG,itis:624246"
         },
         {
           "id": "SP_ARTEMIA_MONICA_VERRILL_1869",
@@ -146,22 +148,11 @@
           "uuid": "daea9b77-f937-5d5-b8b-41bc62426b1a90",
           "authorship": "Kellog, 1906",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:717572"
-          }
-        },
-        {
-          "id": "SP_ARTEMIA_PARTHENOGENETICA_BOWEN_STERLING_1978",
-          "name": "Artemia parthenogenetica",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Artemia",
-          "authorship": "Bowen & Sterling, 1978",
-          "sourceIds": {
-            "checklistbank": "314770"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:717572"
+            ]
           },
-          "children": [],
-          "uuid": "6fb6829a-fdb2-541-b6e-a820682e615bbc"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:717572"
         },
         {
           "id": "SP_ARTEMIA_TUNISIANA_BOWEN_STERLING_1978",
@@ -373,48 +364,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "artemiidae"
-    },
-    {
-      "id": "GENUS_ARTEMIA",
-      "name": "\"Artemia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ARTEMIA_FRANCISCANA_KELLOG_1906",
-          "name": "\"Artemia franciscana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Artemia",
-          "authorship": "\"Kellog, 1906\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:717572"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ARTEMIA_URMIANA_G_NTHER_1899",
-          "name": "\"Artemia urmiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Artemia",
-          "authorship": "\"Günther, 1899\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:740631"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "artemiidae"
     }
   ],
-  "speciesCount": 25,
+  "speciesCount": 22,
   "appSlug": "artemiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Branchiopoda",
-  "genusCount": 4,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

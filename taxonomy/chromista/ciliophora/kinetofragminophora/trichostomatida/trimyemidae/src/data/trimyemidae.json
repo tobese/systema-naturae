@@ -94,10 +94,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 7594702,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:427288"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:427288"
+            ]
           },
           "uuid": "ded68255-577d-563-aa1-7892f2a7cf212a",
-          "authorityIds": "gbif:7594702",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:427288,gbif:7594702",
           "authorship": "Kahl, 1928"
         },
         {
@@ -118,10 +120,12 @@
             "col": [
               "58VDM"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:738914"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:738914"
+            ]
           },
           "uuid": "46f06032-0dac-518-b4e-9cd9fd65a69af2",
-          "authorityIds": "col:58VDM,gbif:8043633",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:738914,col:58VDM,gbif:8043633",
           "authorship": "Grolière, de Puytorac & Grain, 1980"
         },
         {
@@ -164,10 +168,12 @@
             "col": [
               "58VDP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417426"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:417426"
+            ]
           },
           "uuid": "081e88ad-e45e-596-b64-4b837869b30bd2",
-          "authorityIds": "col:58VDP,gbif:7651632",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:417426,col:58VDP,gbif:7651632",
           "authorship": "Kahl, 1931"
         },
         {
@@ -308,58 +314,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_TRIMYEMA",
-      "name": "\"Trimyema",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_TRIMYEMA_MARINUM_KAHL_1931",
-          "name": "\"Trimyema marinum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trimyema",
-          "authorship": "\"Kahl, 1931\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417426"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TRIMYEMA_DIFFICILE_KAHL_1928",
-          "name": "\"Trimyema difficile\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trimyema",
-          "authorship": "\"Kahl, 1928\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:427288"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_TRIMYEMA_ECHINOMETRAE_GROLI_RE_DE_PUYTORAC_GRAIN_1980",
-          "name": "\"Trimyema echinometrae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Trimyema",
-          "authorship": "\"Grolière, de Puytorac & Grain, 1980\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:738914"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "trimyemidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 18,
+  "genusCount": 1,
+  "speciesCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

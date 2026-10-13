@@ -440,9 +440,11 @@
             "col": [
               "3J63R"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1390721"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1390721"
+            ]
           },
-          "authorityIds": "col:3J63R",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1390721,col:3J63R",
           "authorship": "(Murray, 1910)"
         },
         {
@@ -4413,19 +4415,6 @@
             "checklistbank": "933743"
           },
           "children": []
-        },
-        {
-          "id": "SP_CALLIDINA_ASPERA_BRYCE_1892",
-          "name": "Callidina aspera",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Callidina",
-          "authorship": "Bryce, 1892",
-          "sourceIds": {
-            "checklistbank": "1047878"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4560,19 +4549,6 @@
       "name": "\"Habrotrocha",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_HABROTROCHA_ANGULARIS_MURRAY_1910",
-          "name": "\"Habrotrocha angularis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Habrotrocha",
-          "authorship": "\"(Murray, 1910)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1390721"
-          },
-          "children": []
-        },
         {
           "id": "SP_HABROTROCHA_CONSTRICTA_DUJARDIN_1841",
           "name": "\"Habrotrocha constricta\"",
@@ -5069,7 +5045,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 310,
+  "speciesCount": 308,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

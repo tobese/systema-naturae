@@ -203,10 +203,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7619861,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:428735"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:428735"
+            ]
           },
           "uuid": "c8e21cbc-c1f4-54f-820-1f063f6ba5889e",
-          "authorityIds": "gbif:7619861",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:428735,gbif:7619861",
           "authorship": "Larsen & Patterson",
           "children": []
         },
@@ -851,6 +853,18 @@
             "checklistbank": "3238150"
           },
           "children": []
+        },
+        {
+          "id": "SP_PETALOMONAS_PLANUS",
+          "name": "Petalomonas planus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petalomonas",
+          "sourceIds": {
+            "checklistbank": "365066"
+          },
+          "children": []
         }
       ]
     },
@@ -1025,31 +1039,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "scytomonadidae"
-    },
-    {
-      "id": "GENUS_NOTOSOLENUS",
-      "name": "\"Notosolenus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_NOTOSOLENUS_URCEOLATUS_LARSEN_PATTERSON",
-          "name": "\"Notosolenus urceolatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Notosolenus",
-          "authorship": "\"Larsen & Patterson\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:428735"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "scytomonadidae"
     }
   ],
-  "genusCount": 7,
+  "genusCount": 6,
   "speciesCount": 50,
   "sourceIds": {
     "gbif": {

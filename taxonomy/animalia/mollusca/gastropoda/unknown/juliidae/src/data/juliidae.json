@@ -142,9 +142,11 @@
             "col": [
               "LMLN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:492590"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:492590"
+            ]
           },
-          "authorityIds": "col:LMLN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:492590,col:LMLN",
           "authorship": "(Burn, 1966)"
         },
         {
@@ -622,9 +624,11 @@
             "col": [
               "3QS4B"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:492584"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:492584"
+            ]
           },
-          "authorityIds": "col:3QS4B",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:492584,col:3QS4B",
           "authorship": "(P. P. Carpenter, 1857)"
         },
         {
@@ -826,7 +830,8 @@
           "sourceIds": {
             "checklistbank": "ott7960507"
           },
-          "children": []
+          "children": [],
+          "authorship": "Cossmann and Peyrot 1914"
         }
       ]
     },
@@ -852,9 +857,11 @@
             "col": [
               "QLML"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1328150"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1328150"
+            ]
           },
-          "authorityIds": "col:QLML",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1328150,col:QLML",
           "authorship": "(Bałuk & Jakubowski, 1968)"
         },
         {
@@ -894,6 +901,19 @@
             ]
           },
           "authorityIds": "col:QLMM"
+        },
+        {
+          "id": "SP_CANDINIA_PLIOCAENICA_LE_RENARD_ET_AL_1996",
+          "name": "Candinia pliocaenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Candinia",
+          "authorship": "Le Renard et al. 1996",
+          "sourceIds": {
+            "checklistbank": "txn:396817"
+          },
+          "children": []
         }
       ]
     },
@@ -1317,6 +1337,32 @@
             ]
           },
           "authorityIds": "col:L2V7M"
+        },
+        {
+          "id": "SP_ANOMALOMYA_CORRUGATA_COSSMANN_1887",
+          "name": "Anomalomya corrugata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomalomya",
+          "authorship": "Cossmann 1887",
+          "sourceIds": {
+            "checklistbank": "txn:118363"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANOMALOMYA_ELATA_COSSMANN_1887",
+          "name": "Anomalomya elata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anomalomya",
+          "authorship": "Cossmann 1887",
+          "sourceIds": {
+            "checklistbank": "txn:118364"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1400,75 +1446,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "juliidae"
-    },
-    {
-      "id": "GENUS_JULIA",
-      "name": "\"Julia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_JULIA_THECAPHORA_P_P_CARPENTER_1857",
-          "name": "\"Julia thecaphora\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Julia",
-          "authorship": "\"(P. P. Carpenter, 1857)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:492584"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "juliidae"
-    },
-    {
-      "id": "GENUS_BERTHELINIA",
-      "name": "\"Berthelinia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BERTHELINIA_FIJIENSIS_BURN_1966",
-          "name": "\"Berthelinia fijiensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Berthelinia",
-          "authorship": "\"(Burn, 1966)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:492590"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "juliidae"
-    },
-    {
-      "id": "GENUS_CANDINIA",
-      "name": "\"Candinia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CANDINIA_KRACHI_BA_UK_JAKUBOWSKI_1968",
-          "name": "\"Candinia krachi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Candinia",
-          "authorship": "\"(Bałuk & Jakubowski, 1968)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1328150"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "juliidae"
     }
   ],
-  "genusCount": 15,
+  "genusCount": 12,
   "speciesCount": 83,
   "sourceIds": {
     "gbif": {

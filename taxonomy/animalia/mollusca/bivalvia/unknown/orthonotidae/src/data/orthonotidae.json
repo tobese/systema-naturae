@@ -126,9 +126,11 @@
             "col": [
               "BDCSZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662119"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1662119"
+            ]
           },
-          "authorityIds": "col:BDCSZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1662119,col:BDCSZ",
           "authorship": "(J. Hall & Whitfield, 1870)"
         },
         {
@@ -225,6 +227,19 @@
             ]
           },
           "authorityIds": "col:CT4M5"
+        },
+        {
+          "id": "SP_SPHENOSOLEN_DRAPERI_POJETA_AND_GILBERT_TOMLINSON_1977",
+          "name": "Sphenosolen draperi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphenosolen",
+          "authorship": "Pojeta and Gilbert-Tomlinson 1977",
+          "sourceIds": {
+            "checklistbank": "txn:106663"
+          },
+          "children": []
         }
       ]
     },
@@ -500,20 +515,42 @@
       "lineage": "orthonotidae"
     },
     {
-      "id": "GENUS_PALAEOSOLEN",
-      "name": "\"Palaeosolen",
+      "id": "GENUS_TERANOTA",
+      "name": "Teranota",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PALAEOSOLEN_SILIQUOIDEA_J_HALL_WHITFIELD_1870",
-          "name": "\"Palaeosolen siliquoidea\"",
+          "id": "SP_TERANOTA_EBBIGHAUSENI_ROGALLA_AND_AMLER_2000",
+          "name": "Teranota ebbighauseni",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Palaeosolen",
-          "authorship": "\"(J. Hall & Whitfield, 1870)\"",
+          "lineage": "Teranota",
+          "authorship": "Rogalla and Amler 2000",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1662119"
+            "checklistbank": "txn:478747"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "orthonotidae"
+    },
+    {
+      "id": "GENUS_BREVIORTHONOTA",
+      "name": "Breviorthonota",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BREVIORTHONOTA_RUGOSA_KRASILOVA_1979",
+          "name": "Breviorthonota rugosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Breviorthonota",
+          "authorship": "Krasilova 1979",
+          "sourceIds": {
+            "checklistbank": "txn:478786"
           },
           "children": []
         }
@@ -522,14 +559,15 @@
       "lineage": "orthonotidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 28,
+  "genusCount": 7,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 137,
       "familyKey": 4593540
-    }
+    },
+    "checklistbank": "txn:61517"
   }
 }

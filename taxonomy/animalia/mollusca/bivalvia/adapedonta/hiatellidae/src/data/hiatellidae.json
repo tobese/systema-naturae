@@ -139,9 +139,11 @@
             "col": [
               "4CG43"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505398"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505398"
+            ]
           },
-          "authorityIds": "col:4CG43,itis:568051"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505398,col:4CG43,itis:568051"
         },
         {
           "id": "SP_PANOMYA_SIMOTOMENSIS_OTUKA_1934",
@@ -269,6 +271,19 @@
           "lineage": "Panomya",
           "sourceIds": {
             "checklistbank": "ott7929892"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOMYA_BERINGIANUS_DALL_1916",
+          "name": "Panomya beringianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panomya",
+          "authorship": "Dall 1916",
+          "sourceIds": {
+            "checklistbank": "txn:489102"
           },
           "children": []
         }
@@ -407,7 +422,8 @@
           "sourceIds": {
             "col": [
               "NC4ZG"
-            ]
+            ],
+            "checklistbank": "txn:224385"
           },
           "authorityIds": "col:NC4ZG"
         },
@@ -438,6 +454,19 @@
           "lineage": "Cyrtodaria",
           "sourceIds": {
             "checklistbank": "1206537"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYRTODARIA_ANGUSTA_NYST_AND_WESTENDORP_1839",
+          "name": "Cyrtodaria angusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtodaria",
+          "authorship": "Nyst and Westendorp 1839",
+          "sourceIds": {
+            "checklistbank": "txn:190053"
           },
           "children": []
         }
@@ -587,9 +616,11 @@
             "col": [
               "PDHTS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:532904"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:532904"
+            ]
           },
-          "authorityIds": "col:PDHTS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:532904,col:PDHTS",
           "authorship": "(A. d'Orbigny, 1846)"
         },
         {
@@ -631,9 +662,11 @@
             "col": [
               "BLH5P"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669431"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1669431"
+            ]
           },
-          "authorityIds": "col:BLH5P",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1669431,col:BLH5P",
           "authorship": "(Wilckens, 1910)"
         },
         {
@@ -665,9 +698,11 @@
             "col": [
               "8YMQN"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569586"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1569586"
+            ]
           },
-          "authorityIds": "col:8YMQN",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569586,col:8YMQN",
           "authorship": "(Deshayes, 1856)"
         },
         {
@@ -1032,14 +1067,93 @@
           "children": []
         },
         {
-          "id": "SP_HIATELLA_SP",
-          "name": "Hiatella sp.",
+          "id": "SP_HIATELLA_SOLIDA_SOWERBY_1834",
+          "name": "Hiatella solida",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Hiatella",
+          "authorship": "Sowerby 1834",
           "sourceIds": {
-            "checklistbank": "183504"
+            "checklistbank": "txn:86798"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIATELLA_ARENICOLA_TERQUEM_1855",
+          "name": "Hiatella arenicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Terquem 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:277750"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIATELLA_SINEMURIENSIS_MARTIN_1895",
+          "name": "Hiatella sinemuriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Martin 1895)",
+          "sourceIds": {
+            "checklistbank": "txn:277752"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIATELLA_FABACEA_TERQUEM_1855",
+          "name": "Hiatella fabacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Terquem 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:277754"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIATELLA_ROTUNDATA_TERQUEM_1855",
+          "name": "Hiatella rotundata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Terquem 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:277756"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIATELLA_TENELLA_STOLICZKA_1870",
+          "name": "Hiatella tenella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Stoliczka 1870)",
+          "sourceIds": {
+            "checklistbank": "txn:464178"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIATELLA_BREONI_MARTIN_1859",
+          "name": "Hiatella breoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Martin 1859)",
+          "sourceIds": {
+            "checklistbank": "txn:516359"
           },
           "children": []
         }
@@ -1412,9 +1526,11 @@
             "col": [
               "4CG5K"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505401"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:505401"
+            ]
           },
-          "authorityIds": "col:4CG5K,itis:81779"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:505401,col:4CG5K,itis:81779"
         },
         {
           "id": "SP_PANOPEA_AGNEWI",
@@ -1431,9 +1547,11 @@
             "col": [
               "B6J9C"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634891"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1634891"
+            ]
           },
-          "authorityIds": "col:B6J9C",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1634891,col:B6J9C",
           "authorship": "(Tenison Woods, 1876)"
         },
         {
@@ -1515,9 +1633,11 @@
             "itis": [
               "81778"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420989"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:420989"
+            ]
           },
-          "authorityIds": "col:4CG5N,itis:81778"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:420989,col:4CG5N,itis:81778"
         },
         {
           "id": "SP_PANOPEA_CHILOENSIS_R_A_PHILIPPI_1897",
@@ -1716,9 +1836,11 @@
             "col": [
               "L2GGT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569587"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1569587"
+            ]
           },
-          "authorityIds": "col:L2GGT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1569587,col:L2GGT",
           "authorship": "(J. Sowerby, 1814)"
         },
         {
@@ -1836,9 +1958,11 @@
             "col": [
               "9J7PD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1605126"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1605126"
+            ]
           },
-          "authorityIds": "col:9J7PD",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1605126,col:9J7PD",
           "authorship": "(Ihering, 1897)"
         },
         {
@@ -1856,9 +1980,11 @@
             "col": [
               "7SLLC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1383430"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1383430"
+            ]
           },
-          "authorityIds": "col:7SLLC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1383430,col:7SLLC",
           "authorship": "H. J. Finlay, 1926"
         },
         {
@@ -1876,9 +2002,11 @@
             "col": [
               "9HM59"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1605122"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1605122"
+            ]
           },
-          "authorityIds": "col:9HM59",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1605122,col:9HM59",
           "authorship": "(Ortmann, 1900)"
         },
         {
@@ -1936,9 +2064,11 @@
             "col": [
               "8YNHF"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1568722"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1568722"
+            ]
           },
-          "authorityIds": "col:8YNHF",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1568722,col:8YNHF",
           "authorship": "(M. A. Hanna, 1927)"
         },
         {
@@ -2032,7 +2162,8 @@
           "sourceIds": {
             "col": [
               "F42CP"
-            ]
+            ],
+            "checklistbank": "txn:155347"
           },
           "authorityIds": "col:F42CP"
         },
@@ -2100,7 +2231,8 @@
           "sourceIds": {
             "col": [
               "BTRZK"
-            ]
+            ],
+            "checklistbank": "txn:97915"
           },
           "authorityIds": "col:BTRZK"
         },
@@ -2117,7 +2249,8 @@
           "sourceIds": {
             "col": [
               "F42DT"
-            ]
+            ],
+            "checklistbank": "txn:99182"
           },
           "authorityIds": "col:F42DT"
         },
@@ -2215,7 +2348,10 @@
           "authorship": "(J. De C. Sowerby, 1823)",
           "children": [],
           "lineage": "Panopea",
-          "uuid": "ab51ce09-2736-568-8f8-d4bbd914540ccb"
+          "uuid": "ab51ce09-2736-568-8f8-d4bbd914540ccb",
+          "sourceIds": {
+            "checklistbank": "txn:163179"
+          }
         },
         {
           "id": "SP_PANOPEA_MENARDII_DESHAYES_1828",
@@ -2264,7 +2400,8 @@
           "sourceIds": {
             "col": [
               "V4STB"
-            ]
+            ],
+            "checklistbank": "txn:103042"
           },
           "authorityIds": "col:V4STB"
         },
@@ -2350,7 +2487,8 @@
           "sourceIds": {
             "col": [
               "V4STC"
-            ]
+            ],
+            "checklistbank": "txn:352529"
           },
           "authorityIds": "col:V4STC"
         },
@@ -2396,7 +2534,11 @@
           "sourcedFrom": "checklistbank",
           "children": [],
           "lineage": "Panopea",
-          "uuid": "81828b87-889f-5f5-ac9-a8216952599399"
+          "uuid": "81828b87-889f-5f5-ac9-a8216952599399",
+          "authorship": "Hayami 1966",
+          "sourceIds": {
+            "checklistbank": "txn:163183"
+          }
         },
         {
           "id": "SP_PANOPEA_GURGITIS",
@@ -2681,6 +2823,292 @@
             "checklistbank": "3382689"
           },
           "children": []
+        },
+        {
+          "id": "SP_PANOPEA_THOMASI_IHERING_1914",
+          "name": "Panopea thomasi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Ihering 1914)",
+          "sourceIds": {
+            "checklistbank": "txn:87485"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_IBARI_PHILIPPI_1887",
+          "name": "Panopea ibari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Philippi 1887",
+          "sourceIds": {
+            "checklistbank": "txn:87487"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_KISSOUMI_MCLEARN_1945",
+          "name": "Panopea kissoumi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(McLearn 1945)",
+          "sourceIds": {
+            "checklistbank": "txn:89672"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_AKERLUNDI_STILWELL_AND_ZINSMEISTER_1992",
+          "name": "Panopea akerlundi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Stilwell and Zinsmeister 1992",
+          "sourceIds": {
+            "checklistbank": "txn:103202"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_EIGHTSI_STILWELL_AND_ZINSMEISTER_1992",
+          "name": "Panopea eightsi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Stilwell and Zinsmeister 1992",
+          "sourceIds": {
+            "checklistbank": "txn:103203"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_UNDATOIDES_ORTMANN_1902",
+          "name": "Panopea undatoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Ortmann 1902)",
+          "sourceIds": {
+            "checklistbank": "txn:106412"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_KAZAKOVAE_GLIBERT_AND_VAN_DE_POEL_1966",
+          "name": "Panopea kazakovae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Glibert and Van de Poel 1966",
+          "sourceIds": {
+            "checklistbank": "txn:115526"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_MENARDI_DESHAYES_1829",
+          "name": "Panopea menardi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Deshayes 1829)",
+          "sourceIds": {
+            "checklistbank": "txn:116486"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_CHILOENSIS_PHILIPPI_1897",
+          "name": "Panopea chiloensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Philippi 1897)",
+          "sourceIds": {
+            "checklistbank": "txn:118821"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_DOCKENSIS_OLSSON_AND_PETIT_1964",
+          "name": "Panopea dockensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Olsson and Petit 1964",
+          "sourceIds": {
+            "checklistbank": "txn:120114"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_BRASILIENSIS_WHITE_1887",
+          "name": "Panopea brasiliensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(White 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:143980"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_RATHBUNI_WHITE_1887",
+          "name": "Panopea rathbuni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(White 1887)",
+          "sourceIds": {
+            "checklistbank": "txn:144087"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_ANABARICA_KURUSHIN_1992",
+          "name": "Panopea anabarica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Kurushin 1992",
+          "sourceIds": {
+            "checklistbank": "txn:169344"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_GASTALDII_MICHELOTTI_1861",
+          "name": "Panopea gastaldii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Michelotti 1861)",
+          "sourceIds": {
+            "checklistbank": "txn:106353"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_ALDROVANDI_M_NARD_DE_LA_GROYE_1807",
+          "name": "Panopea aldrovandi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Ménard de la Groye 1807)",
+          "sourceIds": {
+            "checklistbank": "txn:155346"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_VREDENBURGI_COSSMANN_AND_PISSARRO_1927",
+          "name": "Panopea vredenburgi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Cossmann and Pissarro 1927)",
+          "sourceIds": {
+            "checklistbank": "txn:269926"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_ANDREAE_STUDENCKA_1991",
+          "name": "Panopea andreae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Studencka 1991",
+          "sourceIds": {
+            "checklistbank": "txn:346609"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_INAEQUIVALVIS_D_ORBIGNY_1843",
+          "name": "Panopea inaequivalvis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "d'Orbigny 1843",
+          "sourceIds": {
+            "checklistbank": "txn:346619"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_PORRECTOIDES_ALDRICH_1886",
+          "name": "Panopea porrectoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Aldrich 1886",
+          "sourceIds": {
+            "checklistbank": "txn:379768"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_OBLONGATA_CONRAD_1848",
+          "name": "Panopea oblongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Conrad 1848",
+          "sourceIds": {
+            "checklistbank": "txn:417325"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_SMITHII_HALL_AND_AMBROSE_1916",
+          "name": "Panopea smithii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "Hall and Ambrose 1916",
+          "sourceIds": {
+            "checklistbank": "txn:423056"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPEA_OCCIDENTALIS_MEEK_AND_HAYDEN_1856",
+          "name": "Panopea occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopea",
+          "authorship": "(Meek and Hayden 1856)",
+          "sourceIds": {
+            "checklistbank": "txn:506544"
+          },
+          "children": []
         }
       ]
     },
@@ -2782,6 +3210,188 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "337f4ce1-04bc-554-90d-b7da4118ee7926"
+        },
+        {
+          "id": "SP_PANOPE_ELONGATISSIMA_MCLEARN_1933",
+          "name": "Panope elongatissima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "(McLearn 1933)",
+          "sourceIds": {
+            "checklistbank": "txn:89674"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_AGNEWI_TENISON_WOODS_1876",
+          "name": "Panope agnewi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "(Tenison Woods 1876)",
+          "sourceIds": {
+            "checklistbank": "txn:98625"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_MCLEARNI_WARREN_1934",
+          "name": "Panope mclearni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Warren 1934",
+          "sourceIds": {
+            "checklistbank": "txn:130344"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_BOREALIS_WARREN_1934",
+          "name": "Panope borealis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Warren 1934",
+          "sourceIds": {
+            "checklistbank": "txn:143320"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_WEBBI_WARREN_1933",
+          "name": "Panope webbi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Warren 1933",
+          "sourceIds": {
+            "checklistbank": "txn:143333"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_MURRAYENSIS_WARREN_1933",
+          "name": "Panope murrayensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Warren 1933",
+          "sourceIds": {
+            "checklistbank": "txn:143334"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_GURGITIS_BRONGNIART_1822",
+          "name": "Panope gurgitis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "(Brongniart 1822)",
+          "sourceIds": {
+            "checklistbank": "txn:299890"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_CALIFORNICA_PACKARD_1922",
+          "name": "Panope californica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "(Packard 1922)",
+          "sourceIds": {
+            "checklistbank": "txn:366181"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_TENUIS_WIEDEY_1928",
+          "name": "Panope tenuis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "(Wiedey 1928)",
+          "sourceIds": {
+            "checklistbank": "txn:380341"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_TAYLORENSIS_MANSFIELD_1940",
+          "name": "Panope taylorensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Mansfield 1940",
+          "sourceIds": {
+            "checklistbank": "txn:397203"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_FUEGENSIS_CAMACHO_1957",
+          "name": "Panope fuegensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Camacho 1957",
+          "sourceIds": {
+            "checklistbank": "txn:421595"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_TORREYENSIS_HANNA_1927",
+          "name": "Panope torreyensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "(Hanna 1927)",
+          "sourceIds": {
+            "checklistbank": "txn:422153"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_SUBAEQUILATERALIS_ANDERSON_1938",
+          "name": "Panope subaequilateralis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Anderson 1938",
+          "sourceIds": {
+            "checklistbank": "txn:426913"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPE_SHASTACOLA_ANDERSON_1938",
+          "name": "Panope shastacola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panope",
+          "authorship": "Anderson 1938",
+          "sourceIds": {
+            "checklistbank": "txn:426914"
+          },
+          "children": []
         }
       ]
     },
@@ -3283,19 +3893,6 @@
           "children": []
         },
         {
-          "id": "SP_SAXICAVA_STRIATA_FLEURIAU_DE_BELLEVUE_1802",
-          "name": "Saxicava striata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Saxicava",
-          "authorship": "Fleuriau de Bellevue, 1802",
-          "sourceIds": {
-            "checklistbank": "574750"
-          },
-          "children": []
-        },
-        {
           "id": "SP_SAXICAVA_SUBANTARCTICA_PRESTON_1913",
           "name": "Saxicava subantarctica",
           "rank": "SPECIES",
@@ -3383,6 +3980,32 @@
           "authorship": "Lamarck, 1818",
           "sourceIds": {
             "checklistbank": "574818"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SAXICAVA_ALBERTENSIS_RUSSELL_AND_LANDES_1937",
+          "name": "Saxicava albertensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saxicava",
+          "authorship": "Russell and Landes 1937",
+          "sourceIds": {
+            "checklistbank": "txn:130343"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SAXICAVA_FRAGILIS_HOLMES_1858",
+          "name": "Saxicava fragilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saxicava",
+          "authorship": "Holmes 1858",
+          "sourceIds": {
+            "checklistbank": "txn:392366"
           },
           "children": []
         }
@@ -3576,19 +4199,6 @@
           "authorship": "O. Fabricius, 1780",
           "sourceIds": {
             "checklistbank": "574078"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYA_GIGAS_LIGHTFOOT_1786",
-          "name": "Mya gigas",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Mya",
-          "authorship": "[Lightfoot], 1786",
-          "sourceIds": {
-            "checklistbank": "574127"
           },
           "children": []
         },
@@ -3793,6 +4403,162 @@
           "authorship": "Valenciennes, 1839",
           "sourceIds": {
             "checklistbank": "574171"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_VAUDINI_DESHAYES_1857",
+          "name": "Panopaea vaudini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Deshayes 1857",
+          "sourceIds": {
+            "checklistbank": "txn:105993"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_ELONGATA_CONRAD_1835",
+          "name": "Panopaea elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Conrad 1835",
+          "sourceIds": {
+            "checklistbank": "txn:232205"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_REMONDII_GABB_1864",
+          "name": "Panopaea remondii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "(Gabb 1864)",
+          "sourceIds": {
+            "checklistbank": "txn:265364"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_MONTIGNYANA_MARTIN_1859",
+          "name": "Panopaea montignyana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Martin 1859",
+          "sourceIds": {
+            "checklistbank": "txn:275644"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_DEPRESSA_MARTIN_1859",
+          "name": "Panopaea depressa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Martin 1859",
+          "sourceIds": {
+            "checklistbank": "txn:275645"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_TOULAI_LUNDGREN_1895",
+          "name": "Panopaea toulai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Lundgren 1895",
+          "sourceIds": {
+            "checklistbank": "txn:304601"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_MACKROTHI_GEINITZ_1857",
+          "name": "Panopaea mackrothi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Geinitz 1857",
+          "sourceIds": {
+            "checklistbank": "txn:304979"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_ORIENTALIS_FORBES_1846",
+          "name": "Panopaea orientalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Forbes 1846",
+          "sourceIds": {
+            "checklistbank": "txn:314296"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_CONCENTRICA_GABB_1864",
+          "name": "Panopaea concentrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "(Gabb 1864)",
+          "sourceIds": {
+            "checklistbank": "txn:402303"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_SAHARIENSIS_NEWTON_1905",
+          "name": "Panopaea sahariensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Newton 1905",
+          "sourceIds": {
+            "checklistbank": "txn:417450"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_INFERIOR_WILCKENS_1907",
+          "name": "Panopaea inferior",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Wilckens 1907",
+          "sourceIds": {
+            "checklistbank": "txn:493886"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PANOPAEA_HAUTHALI_WILCKENS_1907",
+          "name": "Panopaea hauthali",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panopaea",
+          "authorship": "Wilckens 1907",
+          "sourceIds": {
+            "checklistbank": "txn:493887"
           },
           "children": []
         }
@@ -4002,19 +4768,6 @@
           "children": []
         },
         {
-          "id": "SP_HIATELLA_MERIDIONALIS_A_D_ORBIGNY_1846",
-          "name": "\"Hiatella meridionalis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hiatella",
-          "authorship": "\"(A. d'Orbigny, 1846)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:532904"
-          },
-          "children": []
-        },
-        {
           "id": "SP_HIATELLA_AUSTRALIS_LAMARCK_1818",
           "name": "\"Hiatella australis\"",
           "rank": "SPECIES",
@@ -4024,32 +4777,6 @@
           "authorship": "\"(Lamarck, 1818)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:545939"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HIATELLA_VERA_DESHAYES_1856",
-          "name": "\"Hiatella vera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hiatella",
-          "authorship": "\"(Deshayes, 1856)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569586"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HIATELLA_TENUIS_WILCKENS_1910",
-          "name": "\"Hiatella tenuis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Hiatella",
-          "authorship": "\"(Wilckens, 1910)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1669431"
           },
           "children": []
         }
@@ -4072,19 +4799,6 @@
           "authorship": "\"(L. Spengler, 1793)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:140105"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOMYA_PRIAPUS_TILESIUS_1822",
-          "name": "\"Panomya priapus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panomya",
-          "authorship": "\"(Tilesius, 1822)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505398"
           },
           "children": []
         }
@@ -4111,110 +4825,6 @@
           "children": []
         },
         {
-          "id": "SP_PANOPEA_BITRUNCATA_CONRAD_1872",
-          "name": "\"Panopea bitruncata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(Conrad, 1872)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:420989"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_ABRUPTA_CONRAD_1849",
-          "name": "\"Panopea abrupta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(Conrad, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:505401"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_RALPHI_H_J_FINLAY_1926",
-          "name": "\"Panopea ralphi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"H. J. Finlay, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1383430"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_TORREYENSIS_M_A_HANNA_1927",
-          "name": "\"Panopea torreyensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(M. A. Hanna, 1927)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1568722"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_INTERMEDIA_J_SOWERBY_1814",
-          "name": "\"Panopea intermedia\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(J. Sowerby, 1814)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1569587"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_REGULARIS_ORTMANN_1900",
-          "name": "\"Panopea regularis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(Ortmann, 1900)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1605122"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_QUEMADENSIS_IHERING_1897",
-          "name": "\"Panopea quemadensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(Ihering, 1897)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1605126"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PANOPEA_AGNEWI_TENISON_WOODS_1876",
-          "name": "\"Panopea agnewi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Panopea",
-          "authorship": "\"(Tenison Woods, 1876)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1634891"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PANOPEA_MYA_J_DE_C_SOWERBY_1823",
           "name": "\"Panopea (Mya)",
           "rank": "SPECIES",
@@ -4233,7 +4843,7 @@
     }
   ],
   "genusCount": 26,
-  "speciesCount": 266,
+  "speciesCount": 310,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

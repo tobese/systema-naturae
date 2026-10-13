@@ -135,10 +135,12 @@
             "col": [
               "GY4D"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438016"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:438016"
+            ]
           },
           "uuid": "718ab475-9d65-5f0-a66-245cb6d413bd21",
-          "authorityIds": "col:GY4D,gbif:5952544,mycobank:535845"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:438016,col:GY4D,gbif:5952544,mycobank:535845"
         },
         {
           "id": "ARTHRINIUM_ARCTOSCOPI",
@@ -440,10 +442,12 @@
             "col": [
               "9YNJT"
             ],
-            "checklistbank": "2874188"
+            "checklistbank": [
+              "2874188"
+            ]
           },
           "uuid": "afb5b94a-61b5-59f-894-4102caba4f419d",
-          "authorityIds": "col:9YNJT,gbif:11691060,mycobank:834596"
+          "authorityIds": "checklistbank:2874188,col:9YNJT,gbif:11691060,mycobank:834596"
         },
         {
           "id": "ARTHRINIUM_LOBATUM",
@@ -1744,9 +1748,21 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Arthrinium",
           "sourceIds": {
-            "checklistbank": "2737764"
+            "checklistbank": [
+              "2737764"
+            ],
+            "gbif": [
+              "12188066"
+            ],
+            "mycobank": [
+              "558561"
+            ],
+            "col": [
+              "B3BBC"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:2737764,col:B3BBC,gbif:12188066,mycobank:558561"
         },
         {
           "id": "SP_ARTHRINIUM_ACUTIAPICUM",
@@ -1756,9 +1772,21 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Arthrinium",
           "sourceIds": {
-            "checklistbank": "2768354"
+            "checklistbank": [
+              "2768354"
+            ],
+            "gbif": [
+              "12198773"
+            ],
+            "mycobank": [
+              "558499"
+            ],
+            "col": [
+              "B38BS"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:2768354,col:B38BS,gbif:12198773,mycobank:558499"
         }
       ],
       "authorship": "Kunze"
@@ -1796,33 +1824,6 @@
           },
           "uuid": "2b723181-a1d2-5e7-9f8-72959fcce12da3",
           "authorityIds": "col:FMRQ,gbif:3464753,mycobank:221025"
-        },
-        {
-          "id": "APIOSPORA_ACUTIAPICA",
-          "name": "Apiospora acutiapica",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Apiospora",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Senanayake & Cheewangkoon) X.G. Tian & Tibpromma",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "12198773"
-            ],
-            "mycobank": [
-              "558499"
-            ],
-            "col": [
-              "B38BS"
-            ],
-            "checklistbank": "2768354"
-          },
-          "uuid": "0552cb56-68c5-5f7-88e-7747f538ca5db0",
-          "authorityIds": "col:B38BS,gbif:12198773,mycobank:558499"
         },
         {
           "id": "APIOSPORA_AQUATICA",
@@ -4183,33 +4184,6 @@
           "authorityIds": "col:9YNDF,gbif:11927159,mycobank:837733"
         },
         {
-          "id": "APIOSPORA_SETARIAE",
-          "name": "Apiospora setariae",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Apiospora",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(C.M. Tian & N. Jiang) X.G. Tian & Tibpromma",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "12188066"
-            ],
-            "mycobank": [
-              "558561"
-            ],
-            "col": [
-              "B3BBC"
-            ],
-            "checklistbank": "2737764"
-          },
-          "uuid": "16e50575-ffc4-5c1-ab5-48f4cece76c72b",
-          "authorityIds": "col:B3BBC,gbif:12188066,mycobank:558561"
-        },
-        {
           "id": "APIOSPORA_SETOSTROMA",
           "name": "Apiospora setostroma",
           "rank": "SPECIES",
@@ -5215,19 +5189,6 @@
           "lineage": "Apiospora",
           "sourceIds": {
             "checklistbank": "2812907"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_APIOSPORA_KOREANA_L_S_DISSAN_K_D_HYDE_J_C_KANG_2024",
-          "name": "Apiospora koreana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Apiospora",
-          "authorship": "L.S. Dissan., K.D. Hyde & J.C. Kang, 2024",
-          "sourceIds": {
-            "checklistbank": "2874188"
           },
           "children": []
         },
@@ -8521,19 +8482,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:146412"
           },
           "children": []
-        },
-        {
-          "id": "SP_ARTHRINIUM_ALGICOLA_N_J_ARTEMCZUK_E_B_G_JONES_SAKAY_SUETRONG_SOMRITH_K_L_PANG_2009",
-          "name": "\"Arthrinium algicola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Arthrinium",
-          "authorship": "\"(N.J. Artemczuk) E.B.G. Jones, Sakay., Suetrong, Somrith. & K.L. Pang, 2009\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:438016"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -8542,7 +8490,7 @@
   ],
   "authorship": "K.D. Hyde, J. Fröhlich, Joanne E. Taylor & M.E. Barr",
   "genusCount": 38,
-  "speciesCount": 418,
+  "speciesCount": 414,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

@@ -308,10 +308,12 @@
             "col": [
               "5ZMMP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417406"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:417406"
+            ]
           },
           "uuid": "69c74bd3-d8c8-5f6-8af-a730d6ff3deadf",
-          "authorityIds": "col:5ZMMP,gbif:7584361",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:417406,col:5ZMMP,gbif:7584361",
           "authorship": "Kahl, 1926",
           "children": []
         },
@@ -542,10 +544,12 @@
             "col": [
               "X94X"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426726"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426726"
+            ]
           },
           "uuid": "b5b0ea35-937a-59c-976-fbfbbc2da89206",
-          "authorityIds": "col:X94X,gbif:7364894,itis:46777",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426726,col:X94X,gbif:7364894,itis:46777",
           "authorship": "O.F. Müller, 1786",
           "children": []
         },
@@ -1940,45 +1944,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "colpodidae"
-    },
-    {
-      "id": "GENUS_COLPODA",
-      "name": "\"Colpoda",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COLPODA_ASPERA_KAHL_1926",
-          "name": "\"Colpoda aspera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Colpoda",
-          "authorship": "\"Kahl, 1926\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:417406"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COLPODA_CUCULLUS_O_F_M_LLER_1786",
-          "name": "\"Colpoda cucullus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Colpoda",
-          "authorship": "\"O.F. Müller, 1786\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426726"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "colpodidae"
     }
   ],
-  "genusCount": 18,
-  "speciesCount": 84,
+  "genusCount": 17,
+  "speciesCount": 82,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

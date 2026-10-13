@@ -268,9 +268,11 @@
             "col": [
               "7T6VJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1342656"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1342656"
+            ]
           },
-          "authorityIds": "col:7T6VJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1342656,col:7T6VJ",
           "authorship": "(Sacco, 1886)"
         }
       ]
@@ -369,9 +371,11 @@
             "col": [
               "72FTT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1116122"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1116122"
+            ]
           },
-          "authorityIds": "col:72FTT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1116122,col:72FTT",
           "authorship": "(J. R. Roth, 1839)"
         },
         {
@@ -603,9 +607,11 @@
             "col": [
               "4MVZJ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934293"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:934293"
+            ]
           },
-          "authorityIds": "col:4MVZJ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934293,col:4MVZJ",
           "authorship": "(Michaud, 1855)"
         },
         {
@@ -623,9 +629,11 @@
             "col": [
               "7STB2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1335355"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1335355"
+            ]
           },
-          "authorityIds": "col:7STB2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1335355,col:7STB2",
           "authorship": "(Schlickum & Strauch, 1970)"
         }
       ]
@@ -770,9 +778,11 @@
             "col": [
               "4N57J"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934285"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:934285"
+            ]
           },
-          "authorityIds": "col:4N57J",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934285,col:4N57J",
           "authorship": "(Michaud, 1862)"
         },
         {
@@ -790,9 +800,11 @@
             "col": [
               "4N57K"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:933852"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:933852"
+            ]
           },
-          "authorityIds": "col:4N57K",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933852,col:4N57K",
           "authorship": "(Klika, 1891)"
         },
         {
@@ -810,9 +822,11 @@
             "col": [
               "4N57L"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:933850"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:933850"
+            ]
           },
-          "authorityIds": "col:4N57L",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:933850,col:4N57L",
           "authorship": "(Thomä, 1845)"
         },
         {
@@ -830,9 +844,11 @@
             "col": [
               "7STDS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1340101"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1340101"
+            ]
           },
-          "authorityIds": "col:7STDS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1340101,col:7STDS",
           "authorship": "(Sacco, 1886)"
         },
         {
@@ -850,9 +866,11 @@
             "col": [
               "4N57M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1082740"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1082740"
+            ]
           },
-          "authorityIds": "col:4N57M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1082740,col:4N57M",
           "authorship": "(Sacco, 1889)"
         },
         {
@@ -864,6 +882,19 @@
           "lineage": "Protodrepanostoma",
           "sourceIds": {
             "checklistbank": "ott7972875"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTODREPANOSTOMA_NORDSIECKI_FALKNER_1986",
+          "name": "Protodrepanostoma nordsiecki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protodrepanostoma",
+          "authorship": "Falkner 1986",
+          "sourceIds": {
+            "checklistbank": "txn:327971"
           },
           "children": []
         }
@@ -1184,19 +1215,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PROTODREPANOSTOMA_INVOLUTUM_THOM_1845",
-          "name": "\"Protodrepanostoma involutum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protodrepanostoma",
-          "authorship": "\"(Thomä, 1845)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:933850"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PROTODREPANOSTOMA_INVOLUTUM_FALKNER_1986",
           "name": "\"Protodrepanostoma involutum",
           "rank": "SPECIES",
@@ -1206,58 +1224,6 @@
           "authorship": "\"Falkner, 1986\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:933851"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROTODREPANOSTOMA_HECKLEI_KLIKA_1891",
-          "name": "\"Protodrepanostoma hecklei\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protodrepanostoma",
-          "authorship": "\"(Klika, 1891)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:933852"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROTODREPANOSTOMA_BERNARDII_MICHAUD_1862",
-          "name": "\"Protodrepanostoma bernardii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protodrepanostoma",
-          "authorship": "\"(Michaud, 1862)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934285"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROTODREPANOSTOMA_PLIOAURICULATUM_SACCO_1889",
-          "name": "\"Protodrepanostoma plioauriculatum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protodrepanostoma",
-          "authorship": "\"(Sacco, 1889)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1082740"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROTODREPANOSTOMA_PLANORBIFORME_SACCO_1886",
-          "name": "\"Protodrepanostoma planorbiforme\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protodrepanostoma",
-          "authorship": "\"(Sacco, 1886)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1340101"
           },
           "children": []
         }
@@ -1270,32 +1236,6 @@
       "name": "\"Prosoosia",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PROSOOSIA_GODARTI_MICHAUD_1855",
-          "name": "\"Prosoosia godarti\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prosoosia",
-          "authorship": "\"(Michaud, 1855)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:934293"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROSOOSIA_MONIKAE_SCHLICKUM_STRAUCH_1970",
-          "name": "\"Prosoosia monikae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Prosoosia",
-          "authorship": "\"(Schlickum & Strauch, 1970)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1335355"
-          },
-          "children": []
-        },
         {
           "id": "SP_PROSOOSIA_GODARTI_WENZ_1924",
           "name": "\"Prosoosia godarti",
@@ -1426,49 +1366,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1002303"
           },
           "children": []
-        },
-        {
-          "id": "SP_LINDHOLMIOLA_GYRIA_J_R_ROTH_1839",
-          "name": "\"Lindholmiola gyria\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lindholmiola",
-          "authorship": "\"(J. R. Roth, 1839)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1116122"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "helicodontidae"
-    },
-    {
-      "id": "GENUS_SOOSIA",
-      "name": "\"Soosia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SOOSIA_TARAMELLII_SACCO_1886",
-          "name": "\"Soosia taramellii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Soosia",
-          "authorship": "\"(Sacco, 1886)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1342656"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "helicodontidae"
     }
   ],
-  "genusCount": 22,
-  "speciesCount": 79,
+  "genusCount": 21,
+  "speciesCount": 71,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -610,7 +610,8 @@
             ],
             "itis": [
               "9956"
-            ]
+            ],
+            "checklistbank": "9626"
           },
           "children": [],
           "uuid": "ebf0364f-e52a-50c-bcd-58fb986c41eb10",
@@ -1855,11 +1856,13 @@
             "itis": [
               "9982"
             ],
-            "checklistbank": "584876"
+            "checklistbank": [
+              "584876"
+            ]
           },
           "children": [],
           "uuid": "ff6e81b5-9d48-57f-a75-e5a989331fdb32",
-          "authorityIds": "gbif:4268097,itis:9982"
+          "authorityIds": "checklistbank:584876,gbif:4268097,itis:9982"
         },
         {
           "id": "SP_DINOPHYSIS_ANTARCTICUM_BALECH_1958",
@@ -2083,19 +2086,6 @@
           "children": []
         },
         {
-          "id": "SP_DINOPHYSIS_WHITTINGIAE_BALECH_1971",
-          "name": "Dinophysis whittingiae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Dinophysis",
-          "authorship": "Balech, 1971",
-          "sourceIds": {
-            "checklistbank": "584876"
-          },
-          "children": []
-        },
-        {
           "id": "SP_DINOPHYSIS_EXPULSA_KOFOID_J_R_MICHENER_1911",
           "name": "Dinophysis expulsa",
           "rank": "SPECIES",
@@ -2214,7 +2204,8 @@
           "description": "",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3205251
+            "gbif": 3205251,
+            "checklistbank": "9208"
           },
           "children": [],
           "uuid": "dd584663-4d5b-538-8bf-dd5b3889222eca",
@@ -4056,10 +4047,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dinophysaceae"
+    },
+    {
+      "id": "GENUS_PSEUDOPHALACROMA",
+      "name": "Pseudophalacroma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOPHALACROMA_NASUTUM",
+          "name": "Pseudophalacroma nasutum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudophalacroma",
+          "sourceIds": {
+            "checklistbank": "9085"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dinophysaceae"
     }
   ],
   "speciesCount": 201,
-  "genusCount": 16,
+  "genusCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

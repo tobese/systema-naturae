@@ -412,10 +412,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7652089,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426525"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426525"
+            ]
           },
           "uuid": "e39898dd-69d1-5ae-b5d-71c0fe6f47fe45",
-          "authorityIds": "gbif:7652089",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426525,gbif:7652089",
           "authorship": "Kahl, 1933",
           "children": []
         },
@@ -448,10 +450,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8367967,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426524"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426524"
+            ]
           },
           "uuid": "1f9d5526-9c18-54f-ab2-1e2ea720e2b421",
-          "authorityIds": "gbif:8367967",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426524,gbif:8367967",
           "authorship": "(Kahl, 1933) Dragesco, 1965",
           "children": []
         },
@@ -849,45 +853,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acropisthiidae"
-    },
-    {
-      "id": "GENUS_CHAENEA",
-      "name": "\"Chaenea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHAENEA_TESSELATA_KAHL_1933_DRAGESCO_1965",
-          "name": "\"Chaenea tesselata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chaenea",
-          "authorship": "\"(Kahl, 1933) Dragesco, 1965\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426524"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CHAENEA_GIGAS_KAHL_1933",
-          "name": "\"Chaenea gigas\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Chaenea",
-          "authorship": "\"Kahl, 1933\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426525"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acropisthiidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 42,
+  "genusCount": 10,
+  "speciesCount": 40,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

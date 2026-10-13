@@ -7,37 +7,6 @@
   "sourcedFrom": "gbif",
   "children": [
     {
-      "id": "GENUS_STENOCOLUS",
-      "name": "Stenocolus",
-      "rank": "GENUS",
-      "lineage": "Stenocolus",
-      "description": "Stenocolus — a genus in the family Eulichadidae.",
-      "children": [
-        {
-          "id": "SP_STENOCOLUS_SCUTELLARIS",
-          "name": "Stenocolus scutellaris",
-          "rank": "SPECIES",
-          "lineage": "Stenocolus",
-          "subspeciesCount": 0,
-          "sourcedFrom": "none",
-          "description": "",
-          "sourceIds": {
-            "gbif": [
-              "1033381"
-            ],
-            "itis": [
-              "114269"
-            ],
-            "checklistbank": "1718914"
-          },
-          "uuid": "76657bcb-7868-518-90c-1ba97ff212ad93",
-          "authorityIds": "gbif:1033381,itis:114269",
-          "children": [],
-          "authorship": "LeConte, 1853"
-        }
-      ]
-    },
-    {
       "id": "GENUS_EULICHAS",
       "name": "Eulichas",
       "rank": "GENUS",
@@ -82,18 +51,6 @@
           "authorship": "Jach, 1995"
         },
         {
-          "id": "SP_EULICHAS_MILLERI",
-          "name": "Eulichas milleri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eulichas",
-          "sourceIds": {
-            "checklistbank": "209768"
-          },
-          "children": []
-        },
-        {
           "id": "SP_EULICHAS_SUBOCELLATA",
           "name": "Eulichas subocellata",
           "rank": "SPECIES",
@@ -102,42 +59,6 @@
           "lineage": "Eulichas",
           "sourceIds": {
             "checklistbank": "1152103"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EULICHAS_ALESBEZDEKI",
-          "name": "Eulichas alesbezdeki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eulichas",
-          "sourceIds": {
-            "checklistbank": "1198264"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EULICHAS_JENDEKI",
-          "name": "Eulichas jendeki",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eulichas",
-          "sourceIds": {
-            "checklistbank": "1198265"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EULICHAS_INCISICOLLIS",
-          "name": "Eulichas incisicollis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eulichas",
-          "sourceIds": {
-            "checklistbank": "1198297"
           },
           "children": []
         },
@@ -534,7 +455,8 @@
           "sourceIds": {
             "checklistbank": "ott6251310"
           },
-          "children": []
+          "children": [],
+          "authorship": "Yan et al. 2013"
         },
         {
           "id": "SP_CRETASYNE_LONGA",
@@ -545,6 +467,51 @@
           "lineage": "Cretasyne",
           "sourceIds": {
             "checklistbank": "ott6251311"
+          },
+          "children": [],
+          "authorship": "Yan et al. 2013"
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eulichadidae"
+    },
+    {
+      "id": "GENUS_MESODASCILLA",
+      "name": "Mesodascilla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MESODASCILLA_JAKOBSONI_MARTYNOV_1926",
+          "name": "Mesodascilla jakobsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesodascilla",
+          "authorship": "Martynov 1926",
+          "sourceIds": {
+            "checklistbank": "txn:239818"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eulichadidae"
+    },
+    {
+      "id": "GENUS_MESAPLUS",
+      "name": "Mesaplus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MESAPLUS_BEIPIAOENSIS_HONG_1983",
+          "name": "Mesaplus beipiaoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesaplus",
+          "authorship": "Hong 1983",
+          "sourceIds": {
+            "checklistbank": "txn:289421"
           },
           "children": []
         }
@@ -563,6 +530,6 @@
     },
     "checklistbank": "186985"
   },
-  "genusCount": 3,
-  "speciesCount": 42
+  "genusCount": 4,
+  "speciesCount": 39
 }

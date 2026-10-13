@@ -190,9 +190,11 @@
             "col": [
               "BZWYK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1665825"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1665825"
+            ]
           },
-          "authorityIds": "col:BZWYK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1665825,col:BZWYK",
           "authorship": "(Leidy, 1858)"
         },
         {
@@ -237,20 +239,6 @@
             ]
           },
           "authorityIds": "col:BZWYL"
-        },
-        {
-          "id": "SP_GNATHOSTOMA_HISPIDUM_FEDSTCHENKO_1872",
-          "name": "Gnathostoma hispidum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gnathostoma",
-          "authorship": "Fedstchenko, 1872",
-          "sourceIds": {
-            "checklistbank": "250891"
-          },
-          "children": [],
-          "uuid": "459b66be-b501-559-833-952a2dbb02e42a"
         },
         {
           "id": "SP_GNATHOSTOMA_GRACILE_DIESING_1839",
@@ -1794,32 +1782,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gnathostomatidae"
-    },
-    {
-      "id": "GENUS_GNATHOSTOMA",
-      "name": "\"Gnathostoma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GNATHOSTOMA_SOCIALE_LEIDY_1858",
-          "name": "\"Gnathostoma sociale\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Gnathostoma",
-          "authorship": "\"(Leidy, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1665825"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "gnathostomatidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 113,
+  "genusCount": 9,
+  "speciesCount": 111,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

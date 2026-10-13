@@ -985,34 +985,6 @@
           "uuid": "311339e8-0a7f-507-bfa-4841ad1f565497"
         },
         {
-          "id": "HISTIOTUS_VELATUS",
-          "name": "Histiotus velatus",
-          "rank": "SPECIES",
-          "commonName": "Sérotine voilée",
-          "lineage": "Histiotus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "The tropical big-eared brown bat (Histiotus velatus), is a bat species found in Bolivia, Peru, Argentina, Brazil and Paraguay.",
-          "sourcedFrom": "gbif",
-          "wikipediaTitle": "Tropical big-eared brown bat",
-          "children": [],
-          "uuid": "33fce676-3928-560-ad5-1a03e1426676f5",
-          "sourceIds": {
-            "wikidata": [
-              "Q307296"
-            ],
-            "col": [
-              "3M5GN"
-            ],
-            "itis": [
-              "631985"
-            ],
-            "checklistbank": "28932"
-          },
-          "authorityIds": "col:3M5GN,itis:631985,wikidata:Q307296",
-          "authorship": "(I. Geoffroy Saint-Hilaire, 1824)"
-        },
-        {
           "id": "SIMONYCTERIS_STOCKI",
           "name": "Simonycteris stocki",
           "rank": "SPECIES",
@@ -1068,6 +1040,19 @@
           "lineage": "Histiotus",
           "sourceIds": {
             "checklistbank": "3044320"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HISTIOTUS_STOCKI_STIRTON_1931",
+          "name": "Histiotus stocki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiotus",
+          "authorship": "(Stirton 1931)",
+          "sourceIds": {
+            "checklistbank": "txn:51573"
           },
           "children": []
         }
@@ -2500,7 +2485,8 @@
             ],
             "checklistbank": "1005352"
           },
-          "authorityIds": "col:44N3K,itis:632173,wikidata:Q1994615"
+          "authorityIds": "col:44N3K,itis:632173,wikidata:Q1994615",
+          "authorship": "(Temminck 1840)"
         },
         {
           "id": "MURINA_TENEBROSA",
@@ -3181,9 +3167,11 @@
             "col": [
               "3SFMP"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1459935"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1459935"
+            ]
           },
-          "authorityIds": "col:3SFMP,itis:180014,wikidata:Q28972",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1459935,col:3SFMP,itis:180014,wikidata:Q28972",
           "authorship": "(La Conte, 1831)"
         }
       ],
@@ -3462,7 +3450,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c5ca29b9-7e89-501-9f6-5565b6dd663388"
+          "uuid": "c5ca29b9-7e89-501-9f6-5565b6dd663388",
+          "authorship": "Ziegler 1993",
+          "sourceIds": {
+            "checklistbank": "txn:92010"
+          }
         },
         {
           "id": "EPTESICUS_BOTTAE",
@@ -3519,7 +3511,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "fff26187-a668-5d8-aac-c692d37ba25507"
+          "uuid": "fff26187-a668-5d8-aac-c692d37ba25507",
+          "authorship": "Baudelot 1970",
+          "sourceIds": {
+            "checklistbank": "txn:56998"
+          }
         },
         {
           "id": "EPTESICUS_CHAPMANI",
@@ -3783,7 +3779,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5c470ce4-eba3-5fa-a59-d646f63f9cf084"
+          "uuid": "5c470ce4-eba3-5fa-a59-d646f63f9cf084",
+          "authorship": "Woloszyn 1987",
+          "sourceIds": {
+            "checklistbank": "txn:94202"
+          }
         },
         {
           "id": "EPTESICUS_LANGERI",
@@ -3828,7 +3828,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "30af5a9f-d601-545-88e-cc36a568ceb995"
+          "uuid": "30af5a9f-d601-545-88e-cc36a568ceb995",
+          "authorship": "Woloszyn 1987",
+          "sourceIds": {
+            "checklistbank": "txn:94203"
+          }
         },
         {
           "id": "EPTESICUS_NILSSONII",
@@ -3864,7 +3868,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d1a7de4c-8a32-5ae-992-d1a0af24709c32"
+          "uuid": "d1a7de4c-8a32-5ae-992-d1a0af24709c32",
+          "authorship": "Lartet 1851",
+          "sourceIds": {
+            "checklistbank": "txn:92009"
+          }
         },
         {
           "id": "EPTESICUS_OGNEVI",
@@ -3958,7 +3966,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d475b21f-f766-573-877-b9c24b255f2974"
+          "uuid": "d475b21f-f766-573-877-b9c24b255f2974",
+          "authorship": "Kormos 1930",
+          "sourceIds": {
+            "checklistbank": "txn:99166"
+          }
         },
         {
           "id": "EPTESICUS_SEROTINUS",
@@ -4073,19 +4085,6 @@
           "uuid": "8b5579d0-3258-5ef-a5f-cca0a9531120a0"
         },
         {
-          "id": "SP_EPTESICUS_NILSSONI_KEYSERLING_BLASIUS_1839",
-          "name": "Eptesicus nilssoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "authorship": "(Keyserling & Blasius, 1839)",
-          "sourceIds": {
-            "checklistbank": "60355"
-          },
-          "children": []
-        },
-        {
           "id": "SP_EPTESICUS_ATRATUS_KOLENATI",
           "name": "Eptesicus atratus",
           "rank": "SPECIES",
@@ -4099,19 +4098,6 @@
           "children": []
         },
         {
-          "id": "SP_EPTESICUS_BOREALIS_NILSSON",
-          "name": "Eptesicus borealis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "authorship": "Nilsson",
-          "sourceIds": {
-            "checklistbank": "60359"
-          },
-          "children": []
-        },
-        {
           "id": "SP_EPTESICUS_BOSCAI",
           "name": "Eptesicus boscai",
           "rank": "SPECIES",
@@ -4120,139 +4106,6 @@
           "lineage": "Eptesicus",
           "sourceIds": {
             "checklistbank": "60363"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_INCISIVUS",
-          "name": "Eptesicus incisivus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60364"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_KUHLII_NILSSON",
-          "name": "Eptesicus kuhlii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "authorship": "Nilsson",
-          "sourceIds": {
-            "checklistbank": "60365"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_INSULARIS",
-          "name": "Eptesicus insularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60366"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_INTERMEDIUS",
-          "name": "Eptesicus intermedius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60367"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_MERIDIONALIS",
-          "name": "Eptesicus meridionalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60369"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_OKENII",
-          "name": "Eptesicus okenii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60370"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_RUFESCENS",
-          "name": "Eptesicus rufescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60371"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_SEROTINE",
-          "name": "Eptesicus serotine",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60372"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_TRANSYLVANUS",
-          "name": "Eptesicus transylvanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60373"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_TYPUS",
-          "name": "Eptesicus typus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60374"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_EPTESICUS_WIEDII",
-          "name": "Eptesicus wiedii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Eptesicus",
-          "sourceIds": {
-            "checklistbank": "60375"
           },
           "children": []
         },
@@ -7930,66 +7783,6 @@
           "uuid": "aaa969c0-4f3b-5cf-a2e-63a47893d57877"
         },
         {
-          "id": "SP_MYOTIS_BULGARICUS",
-          "name": "Myotis bulgaricus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60387"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_COLLARIS",
-          "name": "Myotis collaris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60388"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_HUMERALIS",
-          "name": "Myotis humeralis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60389"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_LUGUBRIS",
-          "name": "Myotis lugubris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60390"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_NIGROFUSCUS",
-          "name": "Myotis nigrofuscus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60391"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MYOTIS_RUFOFUSCUS",
           "name": "Myotis rufofuscus",
           "rank": "SPECIES",
@@ -7998,44 +7791,6 @@
           "lineage": "Myotis",
           "sourceIds": {
             "checklistbank": "60392"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_SCHINZII",
-          "name": "Myotis schinzii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60393"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_SCHRANKII_WAGNER_1843",
-          "name": "Myotis schrankii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Wagner, 1843",
-          "sourceIds": {
-            "checklistbank": "60394"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_BRANDTI_EVERSMANN_1845",
-          "name": "Myotis brandti",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "(Eversmann, 1845)",
-          "sourceIds": {
-            "checklistbank": "60396"
           },
           "children": []
         },
@@ -8064,18 +7819,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOTIS_NEGLECTUS",
-          "name": "Myotis neglectus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60405"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MYOTIS_RUFESCENS_CRESPON",
           "name": "Myotis rufescens",
           "rank": "SPECIES",
@@ -8085,232 +7828,6 @@
           "authorship": "Crespon",
           "sourceIds": {
             "checklistbank": "60406"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_SPELAEUS",
-          "name": "Myotis spelaeus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60412"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_TYPICUS",
-          "name": "Myotis typicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60413"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_BECHSTEINI_KUHL_1817",
-          "name": "Myotis bechsteini",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "(Kuhl, 1817)",
-          "sourceIds": {
-            "checklistbank": "60414"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_FAVONICUS",
-          "name": "Myotis favonicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60416"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_GHIDINII",
-          "name": "Myotis ghidinii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60417"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_ALPINUS_KOCH_1865",
-          "name": "Myotis alpinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Koch, 1865",
-          "sourceIds": {
-            "checklistbank": "60421"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_LATIPENNIS",
-          "name": "Myotis latipennis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60422"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_MURINUS_SCHREBER",
-          "name": "Myotis murinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Schreber",
-          "sourceIds": {
-            "checklistbank": "60423"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_SPELAEA",
-          "name": "Myotis spelaea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60424"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_SUBMARINUS",
-          "name": "Myotis submarinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60425"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_TYPUS",
-          "name": "Myotis typus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60426"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_DAUBENTONI_KUHL_1817",
-          "name": "Myotis daubentoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "(Kuhl, 1817)",
-          "sourceIds": {
-            "checklistbank": "60430"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_AEDILUS_JENYNS_1839",
-          "name": "Myotis aedilus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Jenyns, 1839",
-          "sourceIds": {
-            "checklistbank": "60432"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_ALBUS_FITZINGER_1871",
-          "name": "Myotis albus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Fitzinger, 1871",
-          "sourceIds": {
-            "checklistbank": "60433"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_CAPUCINELLUS_FITZINGER_1871",
-          "name": "Myotis capucinellus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Fitzinger, 1871",
-          "sourceIds": {
-            "checklistbank": "60434"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_LANATUS_CRESPON_1844",
-          "name": "Myotis lanatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Crespon, 1844",
-          "sourceIds": {
-            "checklistbank": "60435"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_MINUTELLUS_FITZINGER_1871",
-          "name": "Myotis minutellus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Fitzinger, 1871",
-          "sourceIds": {
-            "checklistbank": "60436"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_STAUFFERI_FATIO_1890",
-          "name": "Myotis staufferi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Fatio, 1890",
-          "sourceIds": {
-            "checklistbank": "60437"
           },
           "children": []
         },
@@ -8328,91 +7845,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOTIS_BLASII_MAJOR",
-          "name": "Myotis blasii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Major",
-          "sourceIds": {
-            "checklistbank": "60441"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_BURESCHI",
-          "name": "Myotis bureschi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60442"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_DASYPUS",
-          "name": "Myotis dasypus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60443"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_MAJORI",
-          "name": "Myotis majori",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60444"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_MEGAPODIUS",
-          "name": "Myotis megapodius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60445"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_PELLUCENS",
-          "name": "Myotis pellucens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60446"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_LIMNOPHILUS",
-          "name": "Myotis limnophilus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "60449"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MYOTIS_MAJOR",
           "name": "Myotis major",
           "rank": "SPECIES",
@@ -8421,19 +7853,6 @@
           "lineage": "Myotis",
           "sourceIds": {
             "checklistbank": "60450"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYOTIS_NATHALINEA_TUPINIER_1977",
-          "name": "Myotis nathalinea",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "authorship": "Tupinier, 1977",
-          "sourceIds": {
-            "checklistbank": "60451"
           },
           "children": []
         },
@@ -8729,18 +8148,6 @@
           "children": []
         },
         {
-          "id": "SP_MYOTIS_SP",
-          "name": "Myotis sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myotis",
-          "sourceIds": {
-            "checklistbank": "138980"
-          },
-          "children": []
-        },
-        {
           "id": "SP_MYOTIS_CF",
           "name": "Myotis cf.",
           "rank": "SPECIES",
@@ -8852,7 +8259,8 @@
             ],
             "checklistbank": "1005657"
           },
-          "authorityIds": "col:YRRZ,itis:203452,wikidata:Q1190041"
+          "authorityIds": "col:YRRZ,itis:203452,wikidata:Q1190041",
+          "authorship": "Cooper 1837"
         },
         {
           "id": "PLECOTUS_ATAVUS",
@@ -8865,7 +8273,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "daec1452-e0ff-5e8-b52-dda4097f423695"
+          "uuid": "daec1452-e0ff-5e8-b52-dda4097f423695",
+          "authorship": "Topal 1989",
+          "sourceIds": {
+            "checklistbank": "txn:92088"
+          }
         },
         {
           "id": "SP_CORYNORHINUS_LEONPANIAGUAE",
@@ -10631,7 +10043,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "449549e1-76f0-585-ad6-d51649fff4c756"
+          "uuid": "449549e1-76f0-585-ad6-d51649fff4c756",
+          "authorship": "Kormos 1934",
+          "sourceIds": {
+            "checklistbank": "txn:376840"
+          }
         },
         {
           "id": "VESPERTILIO_MONTICOLA",
@@ -10712,7 +10128,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "aa2cb237-d504-544-aac-f06524570eec0d"
+          "uuid": "aa2cb237-d504-544-aac-f06524570eec0d",
+          "authorship": "Kormos 1934",
+          "sourceIds": {
+            "checklistbank": "txn:376841"
+          }
         },
         {
           "id": "VESPERTILIO_SINENSIS",
@@ -10788,18 +10208,6 @@
           "uuid": "c684ffca-ff9e-584-b47-fc121cc5df584d"
         },
         {
-          "id": "SP_VESPERTILIO_ALBOGULARIS",
-          "name": "Vespertilio albogularis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "sourceIds": {
-            "checklistbank": "60540"
-          },
-          "children": []
-        },
-        {
           "id": "SP_VESPERTILIO_DISCOLOR",
           "name": "Vespertilio discolor",
           "rank": "SPECIES",
@@ -10808,30 +10216,6 @@
           "lineage": "Vespertilio",
           "sourceIds": {
             "checklistbank": "60541"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_KRASCHENNIKOVI",
-          "name": "Vespertilio kraschennikovi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "sourceIds": {
-            "checklistbank": "60542"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_MICHNOI",
-          "name": "Vespertilio michnoi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "sourceIds": {
-            "checklistbank": "60543"
           },
           "children": []
         },
@@ -10978,19 +10362,6 @@
           "children": []
         },
         {
-          "id": "SP_VESPERTILIO_MYOTIS_BORKHAUSEN_1797",
-          "name": "Vespertilio myotis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "authorship": "Borkhausen, 1797",
-          "sourceIds": {
-            "checklistbank": "1036544"
-          },
-          "children": []
-        },
-        {
           "id": "SP_VESPERTILIO_BLYTHII_TOMES_1857",
           "name": "Vespertilio blythii",
           "rank": "SPECIES",
@@ -11000,71 +10371,6 @@
           "authorship": "Tomes, 1857",
           "sourceIds": {
             "checklistbank": "1036545"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_NATTERERI_KUHL_1817",
-          "name": "Vespertilio nattereri",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "authorship": "Kuhl, 1817",
-          "sourceIds": {
-            "checklistbank": "1036548"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_CAPACCINII_BONAPARTE_1837",
-          "name": "Vespertilio capaccinii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "authorship": "Bonaparte, 1837",
-          "sourceIds": {
-            "checklistbank": "1036550"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_ALBESCENS_GEOFFROY_SAINT_HILAIRE_1806",
-          "name": "Vespertilio albescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "authorship": "É. Geoffroy Saint-Hilaire, 1806",
-          "sourceIds": {
-            "checklistbank": "1047976"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_NATHUSII_KEYSERLING_BLASIUS_1839",
-          "name": "Vespertilio nathusii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "authorship": "Keyserling & Blasius, 1839",
-          "sourceIds": {
-            "checklistbank": "1049212"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_VESPERTILIO_NILSSONII_KEYSERLING_BLASIUS_1839",
-          "name": "Vespertilio nilssonii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Vespertilio",
-          "authorship": "Keyserling & Blasius, 1839",
-          "sourceIds": {
-            "checklistbank": "1049213"
           },
           "children": []
         },
@@ -11238,6 +10544,45 @@
             "checklistbank": "ott7656478"
           },
           "children": []
+        },
+        {
+          "id": "SP_VESPERTILIO_NILSSONI_KEYSERLING_AND_BLASIUS_1839",
+          "name": "Vespertilio nilssoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vespertilio",
+          "authorship": "Keyserling and Blasius 1839",
+          "sourceIds": {
+            "checklistbank": "txn:376839"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VESPERTILIO_CALIGINOSUS_TOMES_1859",
+          "name": "Vespertilio caliginosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vespertilio",
+          "authorship": "(Tomes 1859)",
+          "sourceIds": {
+            "checklistbank": "txn:476635"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VESPERTILIO_MASTIVUS_VAHL_1797",
+          "name": "Vespertilio mastivus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vespertilio",
+          "authorship": "(Vahl 1797)",
+          "sourceIds": {
+            "checklistbank": "txn:499566"
+          },
+          "children": []
         }
       ],
       "speciesList": []
@@ -11287,7 +10632,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "4a2a6640-dbb0-596-a4d-9479040d9e0ddb"
+          "uuid": "4a2a6640-dbb0-596-a4d-9479040d9e0ddb",
+          "authorship": "Mein and Ginsburg 1997",
+          "sourceIds": {
+            "checklistbank": "txn:234180"
+          }
         }
       ],
       "speciesList": []
@@ -11501,30 +10850,6 @@
           "authorship": "Kruskop, Kawai & Tiunov, 2019"
         },
         {
-          "id": "SP_BARBASTELLA_COMMUNIS",
-          "name": "Barbastella communis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Barbastella",
-          "sourceIds": {
-            "checklistbank": "60347"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BARBASTELLA_DAUBENTONI",
-          "name": "Barbastella daubentoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Barbastella",
-          "sourceIds": {
-            "checklistbank": "60348"
-          },
-          "children": []
-        },
-        {
           "id": "SP_BARBASTELLA_SP",
           "name": "Barbastella sp.",
           "rank": "SPECIES",
@@ -11533,6 +10858,19 @@
           "lineage": "Barbastella",
           "sourceIds": {
             "checklistbank": "ott1061649"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BARBASTELLA_BARBASTELLA_SCHREBER_1775",
+          "name": "Barbastella barbastella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Barbastella",
+          "authorship": "(Schreber 1775)",
+          "sourceIds": {
+            "checklistbank": "txn:376830"
           },
           "children": []
         }
@@ -13316,7 +12654,8 @@
             ],
             "checklistbank": "1005720"
           },
-          "authorityIds": "col:3P4RY,itis:947314,wikidata:Q3788010"
+          "authorityIds": "col:3P4RY,itis:947314,wikidata:Q3788010",
+          "authorship": "Benda and et al 2011"
         },
         {
           "id": "HYPSUGO_LOPHURUS",
@@ -13874,9 +13213,11 @@
           "sourceIds": {
             "wikidata": [
               "Q125623005"
-            ]
+            ],
+            "checklistbank": "txn:92011"
           },
-          "authorityIds": "wikidata:Q125623005"
+          "authorityIds": "wikidata:Q125623005",
+          "authorship": "Zapfe 1950"
         }
       ],
       "speciesList": []
@@ -13899,7 +13240,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "19b6efa9-62bd-547-9a1-e528d3c4e4f2f9"
+          "uuid": "19b6efa9-62bd-547-9a1-e528d3c4e4f2f9",
+          "authorship": "Sigé 1990",
+          "sourceIds": {
+            "checklistbank": "txn:348689"
+          }
         },
         {
           "id": "STEHLINIA_GRACILIS",
@@ -13916,9 +13261,11 @@
           "sourceIds": {
             "wikidata": [
               "Q63975613"
-            ]
+            ],
+            "checklistbank": "txn:136294"
           },
-          "authorityIds": "wikidata:Q63975613"
+          "authorityIds": "wikidata:Q63975613",
+          "authorship": "Revilliod 1919"
         },
         {
           "id": "STEHLINIA_QUERCYI",
@@ -13955,7 +13302,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a1d951de-27b7-59e-b38-9e7ba59995d641"
+          "uuid": "a1d951de-27b7-59e-b38-9e7ba59995d641",
+          "authorship": "Ostrander 1983",
+          "sourceIds": {
+            "checklistbank": "txn:136157"
+          }
         }
       ],
       "speciesList": []
@@ -13978,7 +13329,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "42e3e462-24cf-503-94c-a564d98dd97de6"
+          "uuid": "42e3e462-24cf-503-94c-a564d98dd97de6",
+          "authorship": "Yang 1977",
+          "sourceIds": {
+            "checklistbank": "txn:68707"
+          }
         }
       ],
       "speciesList": []
@@ -14005,9 +13360,11 @@
           "sourceIds": {
             "wikidata": [
               "Q113940322"
-            ]
+            ],
+            "checklistbank": "txn:83781"
           },
-          "authorityIds": "wikidata:Q113940322"
+          "authorityIds": "wikidata:Q113940322",
+          "authorship": "Czaplewski and Morgan 2001"
         }
       ],
       "speciesList": []
@@ -14030,7 +13387,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "638054f1-6242-5fb-8c8-476fd36c6d287a"
+          "uuid": "638054f1-6242-5fb-8c8-476fd36c6d287a",
+          "authorship": "Rachl 1983",
+          "sourceIds": {
+            "checklistbank": "txn:92015"
+          }
         }
       ],
       "speciesList": []
@@ -14053,7 +13414,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "94af4c69-9d4f-51f-9d6-63fdd4049959e4"
+          "uuid": "94af4c69-9d4f-51f-9d6-63fdd4049959e4",
+          "authorship": "Lawrence 1943",
+          "sourceIds": {
+            "checklistbank": "txn:136040"
+          }
         }
       ],
       "speciesList": []
@@ -14076,7 +13441,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "da20fc61-5e0a-589-856-6faebe9f4a198f"
+          "uuid": "da20fc61-5e0a-589-856-6faebe9f4a198f",
+          "authorship": "Lawrence 1943",
+          "sourceIds": {
+            "checklistbank": "txn:136038"
+          }
         }
       ],
       "speciesList": []
@@ -14099,7 +13468,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "527a331d-bc65-54c-867-e32e76f1b85493"
+          "uuid": "527a331d-bc65-54c-867-e32e76f1b85493",
+          "authorship": "Czaplewski 1991",
+          "sourceIds": {
+            "checklistbank": "txn:135920"
+          }
         }
       ],
       "speciesList": []
@@ -14122,7 +13495,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "accfab13-aa60-58d-83e-ff6a27668011dc"
+          "uuid": "accfab13-aa60-58d-83e-ff6a27668011dc",
+          "authorship": "Gunnell et al. 2008",
+          "sourceIds": {
+            "checklistbank": "txn:136276"
+          }
         }
       ],
       "speciesList": []
@@ -14145,7 +13522,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e14d72cf-8d8f-55e-a7a-b2695f1642d811"
+          "uuid": "e14d72cf-8d8f-55e-a7a-b2695f1642d811",
+          "authorship": "White 1969",
+          "sourceIds": {
+            "checklistbank": "txn:44139"
+          }
         }
       ],
       "speciesList": []
@@ -14514,9 +13895,11 @@
             "itis": [
               "946160"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1566251"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1566251"
+            ]
           },
-          "authorityIds": "col:4J6KJ,itis:946160,wikidata:Q1833303",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1566251,col:4J6KJ,itis:946160,wikidata:Q1833303",
           "authorship": "(Temminck, 1840)"
         },
         {
@@ -15158,54 +14541,6 @@
           "uuid": "c86e7a0c-4ef1-562-b86-3deccfbefea630"
         },
         {
-          "id": "SP_PIPISTRELLUS_BRACHYOTOS",
-          "name": "Pipistrellus brachyotos",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60482"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_FLAVESCENS",
-          "name": "Pipistrellus flavescens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60483"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_GENEI",
-          "name": "Pipistrellus genei",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60484"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_LIMBATUS",
-          "name": "Pipistrellus limbatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60485"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PIPISTRELLUS_MELANOPTERUS",
           "name": "Pipistrellus melanopterus",
           "rank": "SPECIES",
@@ -15214,257 +14549,6 @@
           "lineage": "Pipistrellus",
           "sourceIds": {
             "checklistbank": "60486"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_MURINUS_GRAY",
-          "name": "Pipistrellus murinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Gray",
-          "sourceIds": {
-            "checklistbank": "60487"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_NIGRICANS_BONAPARTE",
-          "name": "Pipistrellus nigricans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Bonaparte",
-          "sourceIds": {
-            "checklistbank": "60488"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_UNICOLOR",
-          "name": "Pipistrellus unicolor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60492"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_KUHLI_KUHL_1817",
-          "name": "Pipistrellus kuhli",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "(Kuhl, 1817)",
-          "sourceIds": {
-            "checklistbank": "60493"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_ALBICANS_MONTICELLI_1886",
-          "name": "Pipistrellus albicans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Monticelli, 1886",
-          "sourceIds": {
-            "checklistbank": "60495"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_ALBOLIMBATUS_K_STER_1835",
-          "name": "Pipistrellus albolimbatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Küster, 1835",
-          "sourceIds": {
-            "checklistbank": "60496"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_CALCARATA_GRAY_1838",
-          "name": "Pipistrellus calcarata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Gray, 1838",
-          "sourceIds": {
-            "checklistbank": "60497"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_MARGINATUS_CRETSCHMAR",
-          "name": "Pipistrellus marginatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Cretschmar",
-          "sourceIds": {
-            "checklistbank": "60498"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_PALLIDUS_HEIM_DE_BALSAC_1936",
-          "name": "Pipistrellus pallidus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Heim de Balsac, 1936",
-          "sourceIds": {
-            "checklistbank": "60499"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_PULLATUS_MONTICELLI_1886",
-          "name": "Pipistrellus pullatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Monticelli, 1886",
-          "sourceIds": {
-            "checklistbank": "60500"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_VISPISTRELLUS_BONAPARTE_1837",
-          "name": "Pipistrellus vispistrellus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "Bonaparte, 1837",
-          "sourceIds": {
-            "checklistbank": "60501"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_SAVII_BONAPARTE_1837",
-          "name": "Pipistrellus savii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "authorship": "(Bonaparte, 1837)",
-          "sourceIds": {
-            "checklistbank": "60504"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_AGILIS",
-          "name": "Pipistrellus agilis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60508"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_ARISTIPPE",
-          "name": "Pipistrellus aristippe",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60509"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_BONAPARTII",
-          "name": "Pipistrellus bonapartii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60510"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_LEUCIPPE",
-          "name": "Pipistrellus leucippe",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60511"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_MAURUS",
-          "name": "Pipistrellus maurus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60512"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_NIGRANS",
-          "name": "Pipistrellus nigrans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60513"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_OCHROMIXTUS",
-          "name": "Pipistrellus ochromixtus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60514"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_TAURICUS",
-          "name": "Pipistrellus tauricus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "60516"
           },
           "children": []
         },
@@ -15649,18 +14733,6 @@
           "children": []
         },
         {
-          "id": "SP_PIPISTRELLUS_JAVANICUS",
-          "name": "Pipistrellus ×javanicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pipistrellus",
-          "sourceIds": {
-            "checklistbank": "270778"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PIPISTRELLUS_MIMUS",
           "name": "Pipistrellus mimus",
           "rank": "SPECIES",
@@ -15669,6 +14741,32 @@
           "lineage": "Pipistrellus",
           "sourceIds": {
             "checklistbank": "2748932"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PIPISTRELLUS_HESPERUS_ALLEN_1864",
+          "name": "Pipistrellus hesperus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pipistrellus",
+          "authorship": "(Allen 1864)",
+          "sourceIds": {
+            "checklistbank": "txn:51504"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PIPISTRELLUS_ANEMOPHILUS_COPE_1880",
+          "name": "Pipistrellus anemophilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pipistrellus",
+          "authorship": "(Cope 1880)",
+          "sourceIds": {
+            "checklistbank": "txn:308752"
           },
           "children": []
         }
@@ -15693,7 +14791,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6a38c36f-e5b4-5ff-9c9-25625dfd4fb800"
+          "uuid": "6a38c36f-e5b4-5ff-9c9-25625dfd4fb800",
+          "authorship": "(Gidley and Gazin 1933)",
+          "sourceIds": {
+            "checklistbank": "txn:45286"
+          }
         },
         {
           "id": "CORYNORHINUS_TETRALOPHODON",
@@ -15827,7 +14929,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "846933f9-deac-552-b17-83ebce0d0fe2cb"
+          "uuid": "846933f9-deac-552-b17-83ebce0d0fe2cb",
+          "authorship": "Kormos 1930",
+          "sourceIds": {
+            "checklistbank": "txn:53414"
+          }
         },
         {
           "id": "PLECOTUS_GAISLERI",
@@ -16002,7 +15108,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "f2214251-bc84-5ef-819-a8b285fc3cfda9"
+          "uuid": "f2214251-bc84-5ef-819-a8b285fc3cfda9",
+          "authorship": "Woloszyn 1987",
+          "sourceIds": {
+            "checklistbank": "txn:94204"
+          }
         },
         {
           "id": "PLECOTUS_SACRIMONTIS",
@@ -16222,114 +15332,6 @@
           "uuid": "2625bde4-ef0d-57a-97d-ba1a8ced91e097"
         },
         {
-          "id": "SP_PLECOTUS_BREVIMANUS",
-          "name": "Plecotus brevimanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60521"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_CORNUTUS",
-          "name": "Plecotus cornutus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60522"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_EUROPAEUS",
-          "name": "Plecotus europaeus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60523"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_MONTANUS",
-          "name": "Plecotus montanus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60524"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_OTUS",
-          "name": "Plecotus otus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60525"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_TYPUS",
-          "name": "Plecotus typus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60526"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_BREVIPES",
-          "name": "Plecotus brevipes",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60530"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_KIRSCHBAUMII",
-          "name": "Plecotus kirschbaumii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60531"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PLECOTUS_MERIDIONALIS",
-          "name": "Plecotus meridionalis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotus",
-          "sourceIds": {
-            "checklistbank": "60532"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PLECOTUS_MICRODONTUS_SPITZENBERGER_2002",
           "name": "Plecotus microdontus",
           "rank": "SPECIES",
@@ -16375,6 +15377,45 @@
           "lineage": "Plecotus",
           "sourceIds": {
             "checklistbank": "232091"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLECOTUS_RAFINESQUII_LESSON_1818",
+          "name": "Plecotus rafinesquii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plecotus",
+          "authorship": "(Lesson 1818)",
+          "sourceIds": {
+            "checklistbank": "txn:52647"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLECOTUS_TETRALOPHODON_HANDLEY_1955",
+          "name": "Plecotus tetralophodon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plecotus",
+          "authorship": "(Handley 1955)",
+          "sourceIds": {
+            "checklistbank": "txn:45287"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PLECOTUS_TOWNSENDII_COOPER_1837",
+          "name": "Plecotus townsendii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plecotus",
+          "authorship": "Cooper 1837",
+          "sourceIds": {
+            "checklistbank": "txn:50428"
           },
           "children": []
         }
@@ -16619,126 +15660,6 @@
           "lineage": "Nyctalus",
           "sourceIds": {
             "checklistbank": "60459"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_MAXIMA",
-          "name": "Nyctalus maxima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60460"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_DASYKARPOS",
-          "name": "Nyctalus dasykarpos",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60464"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_PACHYGNATUS",
-          "name": "Nyctalus pachygnatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60465"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_PROTERUS",
-          "name": "Nyctalus proterus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60471"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_ALTIVOLANS",
-          "name": "Nyctalus altivolans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60472"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_LARDARIUS",
-          "name": "Nyctalus lardarius",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60473"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_MAGNUS",
-          "name": "Nyctalus magnus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60474"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_MINIMA",
-          "name": "Nyctalus minima",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60475"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_PALUSTRIS",
-          "name": "Nyctalus palustris",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60476"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_NYCTALUS_PRINCEPS",
-          "name": "Nyctalus princeps",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Nyctalus",
-          "sourceIds": {
-            "checklistbank": "60477"
           },
           "children": []
         },
@@ -17403,7 +16324,8 @@
             ],
             "checklistbank": "1005698"
           },
-          "authorityIds": "col:4VY68,itis:632156,wikidata:Q1833123"
+          "authorityIds": "col:4VY68,itis:632156,wikidata:Q1833123",
+          "authorship": "Peters 1852"
         },
         {
           "id": "SP_SCOTOPHILUS_BORBONICUS",
@@ -17477,18 +16399,6 @@
           "lineage": "Scotophilus",
           "sourceIds": {
             "checklistbank": "ott7656463"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_SCOTOPHILUS_SP",
-          "name": "Scotophilus sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Scotophilus",
-          "sourceIds": {
-            "checklistbank": "1002351"
           },
           "children": []
         }
@@ -17636,9 +16546,11 @@
             "itis": [
               "180016"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1505227"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1505227"
+            ]
           },
-          "authorityIds": "col:3SGVF,itis:180016,wikidata:Q301708",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1505227,col:3SGVF,itis:180016,wikidata:Q301708",
           "authorship": "Müller, 1776"
         },
         {
@@ -17732,7 +16644,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "701f49d1-1cef-598-994-ef11e0ee49b11f"
+          "uuid": "701f49d1-1cef-598-994-ef11e0ee49b11f",
+          "authorship": "Hibbard 1950",
+          "sourceIds": {
+            "checklistbank": "txn:47492"
+          }
         },
         {
           "id": "LASIURUS_FRANTZII",
@@ -17850,9 +16766,11 @@
             "itis": [
               "180020"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1505229"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1505229"
+            ]
           },
-          "authorityIds": "col:3SGVZ,itis:180020,wikidata:Q305676",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1505229,col:3SGVZ,itis:180020,wikidata:Q305676",
           "authorship": "(Rhoads, 1895)"
         },
         {
@@ -17877,9 +16795,11 @@
             "itis": [
               "946133"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603293"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1603293"
+            ]
           },
-          "authorityIds": "col:3SGW2,itis:946133,wikidata:Q169694",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1603293,col:3SGW2,itis:946133,wikidata:Q169694",
           "authorship": "(Poeppig, 1835)"
         },
         {
@@ -18048,6 +16968,19 @@
           "lineage": "Lasiurus",
           "sourceIds": {
             "checklistbank": "ott3613713"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LASIURUS_GOLLIHERI_HIBBARD_1960",
+          "name": "Lasiurus golliheri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lasiurus",
+          "authorship": "(Hibbard 1960)",
+          "sourceIds": {
+            "checklistbank": "txn:45558"
           },
           "children": []
         }
@@ -19321,7 +18254,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "8031e1d0-7982-579-8e0-2242f57d43509c"
+          "uuid": "8031e1d0-7982-579-8e0-2242f57d43509c",
+          "authorship": "Rosina and Rummel 2012",
+          "sourceIds": {
+            "checklistbank": "txn:401452"
+          }
         }
       ],
       "speciesList": []
@@ -19467,7 +18404,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "76ab0f9c-4152-591-b2a-8ca482d20a7116"
+          "uuid": "76ab0f9c-4152-591-b2a-8ca482d20a7116",
+          "authorship": "Butler 1984",
+          "sourceIds": {
+            "checklistbank": "txn:432205"
+          }
         }
       ],
       "speciesList": []
@@ -19618,20 +18559,6 @@
           "authorship": "(Bobrinski, 1918)",
           "sourceIds": {
             "checklistbank": "3371017"
-          }
-        },
-        {
-          "id": "SP_CNEPHAEUS_HOTTENTOTUS",
-          "name": "Cnephaeus hottentotus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "children": [],
-          "lineage": "Cnephaeus",
-          "uuid": "1b28eb5b-311d-5cc-a5d-cdefb6e1acfae2",
-          "authorship": "(Smith, 1833)",
-          "sourceIds": {
-            "checklistbank": "1332047"
           }
         },
         {
@@ -20009,20 +18936,6 @@
           }
         },
         {
-          "id": "SP_NEOEPTESICUS_DIMINUTUS",
-          "name": "Neoeptesicus diminutus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "children": [],
-          "lineage": "Neoeptesicus",
-          "uuid": "5dcec734-0311-574-b04-871cf2bade2332",
-          "authorship": "(Osgood, 1915)",
-          "sourceIds": {
-            "checklistbank": "53434"
-          }
-        },
-        {
           "id": "SP_NEOEPTESICUS_FURINALIS",
           "name": "Neoeptesicus furinalis",
           "rank": "SPECIES",
@@ -20234,20 +19147,6 @@
       "name": "Miniopterus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_MINIOPTERUS_SCHREIBERSII_KUHL_1819",
-          "name": "Miniopterus schreibersii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Miniopterus",
-          "authorship": "(Kuhl, 1819)",
-          "sourceIds": {
-            "checklistbank": "1452"
-          },
-          "children": [],
-          "uuid": "d46ccf24-dea8-587-8a6-f957662d7dfa4e"
-        },
         {
           "id": "SP_MINIOPTERUS_MANAVI",
           "name": "Miniopterus manavi",
@@ -20698,52 +19597,6 @@
       "speciesList": []
     },
     {
-      "id": "GENUS_COMPLEXE",
-      "name": "Complexe",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_COMPLEXE_MYSTACINUS_EVERSMANN_1845",
-          "name": "Complexe mystacinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Complexe",
-          "authorship": "(Eversmann, 1845)",
-          "sourceIds": {
-            "checklistbank": "60399"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "vespertilionidae",
-      "speciesList": []
-    },
-    {
-      "id": "GENUS_PLECOTES",
-      "name": "Plecotes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLECOTES_AURITUS_BAUER_1957",
-          "name": "Plecotes auritus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Plecotes",
-          "authorship": "Bauer, 1957",
-          "sourceIds": {
-            "checklistbank": "60533"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "vespertilionidae",
-      "speciesList": []
-    },
-    {
       "id": "GENUS_PARAHYPSUGO",
       "name": "Parahypsugo",
       "rank": "GENUS",
@@ -20890,29 +19743,6 @@
       "speciesList": []
     },
     {
-      "id": "GENUS_CNEPHAUES",
-      "name": "Cnephaues",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CNEPHAUES_SEROTINUS_VON_SCHREBER_1774",
-          "name": "Cnephaues serotinus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cnephaues",
-          "authorship": "(von Schreber, 1774)",
-          "sourceIds": {
-            "checklistbank": "1332053"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "vespertilionidae",
-      "speciesList": []
-    },
-    {
       "id": "GENUS_PIPISTRELLUS",
       "name": "\"Pipistrellus",
       "rank": "GENUS",
@@ -20966,19 +19796,6 @@
           "authorship": "\"(Kuhl, 1817)\"",
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1049402"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PIPISTRELLUS_HESPERIDUS_TEMMINCK_1840",
-          "name": "\"Pipistrellus hesperidus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pipistrellus",
-          "authorship": "\"(Temminck, 1840)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1566251"
           },
           "children": []
         },
@@ -21297,45 +20114,10 @@
       "lineage": "vespertilionidae"
     },
     {
-      "id": "GENUS_LASIONYCTERIS",
-      "name": "\"Lasionycteris",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LASIONYCTERIS_NOCTIVAGANS_LA_CONTE_1831",
-          "name": "\"Lasionycteris noctivagans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lasionycteris",
-          "authorship": "\"(La Conte, 1831)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1459935"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "vespertilionidae"
-    },
-    {
       "id": "GENUS_LASIURUS",
       "name": "\"Lasiurus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_LASIURUS_BOREALIS_M_LLER_1776",
-          "name": "\"Lasiurus borealis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Lasiurus",
-          "authorship": "\"Müller, 1776\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1505227"
-          },
-          "children": []
-        },
         {
           "id": "SP_LASIURUS_CINEREUS_BEAUVOIS_1796",
           "name": "\"Lasiurus cinereus\"",
@@ -21348,30 +20130,136 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1505228"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vespertilionidae"
+    },
+    {
+      "id": "GENUS_VAMPYRUS",
+      "name": "Vampyrus",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_LASIURUS_SEMINOLUS_RHOADS_1895",
-          "name": "\"Lasiurus seminolus\"",
+          "id": "SP_VAMPYRUS_SPECTRUM_LINNAEUS_1758",
+          "name": "Vampyrus spectrum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Lasiurus",
-          "authorship": "\"(Rhoads, 1895)\"",
+          "lineage": "Vampyrus",
+          "authorship": "(Linnaeus 1758)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1505229"
+            "checklistbank": "txn:104141"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vespertilionidae"
+    },
+    {
+      "id": "GENUS_CYNOPTERUS",
+      "name": "Cynopterus",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_LASIURUS_VARIUS_POEPPIG_1835",
-          "name": "\"Lasiurus varius\"",
+          "id": "SP_CYNOPTERUS_TITTHAECHEILUS_TEMMINCK_1827",
+          "name": "Cynopterus titthaecheilus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Lasiurus",
-          "authorship": "\"(Poeppig, 1835)\"",
+          "lineage": "Cynopterus",
+          "authorship": "(Temminck 1827)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1603293"
+            "checklistbank": "txn:234303"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vespertilionidae"
+    },
+    {
+      "id": "GENUS_MACROGLOSSUS",
+      "name": "Macroglossus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACROGLOSSUS_MINIMUS_GEOFFROY_1810",
+          "name": "Macroglossus minimus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macroglossus",
+          "authorship": "Geoffroy 1810",
+          "sourceIds": {
+            "checklistbank": "txn:385426"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vespertilionidae"
+    },
+    {
+      "id": "GENUS_DIPHYLLA",
+      "name": "Diphylla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIPHYLLA_CENTRALIS_THOMAS_1903",
+          "name": "Diphylla centralis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diphylla",
+          "authorship": "Thomas 1903",
+          "sourceIds": {
+            "checklistbank": "txn:390428"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vespertilionidae"
+    },
+    {
+      "id": "GENUS_SYNEMPORION",
+      "name": "Synemporion",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYNEMPORION_KEANA_ZIEGLER_ET_AL_2016",
+          "name": "Synemporion keana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Synemporion",
+          "authorship": "Ziegler et al. 2016",
+          "sourceIds": {
+            "checklistbank": "txn:476627"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vespertilionidae"
+    },
+    {
+      "id": "GENUS_SONOR",
+      "name": "Sonor",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SONOR_HANDAE_CZAPLEWSKI_ET_AL_2022",
+          "name": "Sonor handae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sonor",
+          "authorship": "Czaplewski et al. 2022",
+          "sourceIds": {
+            "checklistbank": "txn:502748"
           },
           "children": []
         }
@@ -21380,8 +20268,8 @@
       "lineage": "vespertilionidae"
     }
   ],
-  "genusCount": 102,
-  "speciesCount": 1097,
+  "genusCount": 104,
+  "speciesCount": 997,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

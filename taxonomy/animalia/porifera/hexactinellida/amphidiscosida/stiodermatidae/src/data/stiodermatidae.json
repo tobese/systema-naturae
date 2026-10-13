@@ -22,7 +22,8 @@
           "sourcedFrom": "none",
           "authorship": "Finks",
           "yearPublished": "1960",
-          "uuid": "85062112-10c0-58d-a61-7a3ce08c051806"
+          "uuid": "85062112-10c0-58d-a61-7a3ce08c051806",
+          "children": []
         },
         {
           "id": "SP_STIODERMA_HADRA_RIGBY_MANGER_1994",
@@ -35,7 +36,8 @@
           "sourcedFrom": "none",
           "authorship": "Rigby & Manger",
           "yearPublished": "1994",
-          "uuid": "76f361c4-783f-566-860-22ccf0e8624d9b"
+          "uuid": "76f361c4-783f-566-860-22ccf0e8624d9b",
+          "children": []
         },
         {
           "id": "SP_STIODERMA_PERFORATA_GARCIA_BELLIDO_RIGBY_2004",
@@ -46,7 +48,34 @@
           "subspeciesCount": 0,
           "description": "",
           "sourcedFrom": "none",
-          "uuid": "a2f2de4c-2cc4-59c-834-5a39306d51ace2"
+          "uuid": "a2f2de4c-2cc4-59c-834-5a39306d51ace2",
+          "children": []
+        },
+        {
+          "id": "SP_STIODERMA_PERFORATA_GARCIA_BELLIDO_AND_RIGBY_2004",
+          "name": "Stioderma perforata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stioderma",
+          "authorship": "Garcia-Bellido and Rigby 2004",
+          "sourceIds": {
+            "checklistbank": "txn:96215"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STIODERMA_HADRA_RIGBY_AND_MANGER_1994",
+          "name": "Stioderma hadra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stioderma",
+          "authorship": "Rigby and Manger 1994",
+          "sourceIds": {
+            "checklistbank": "txn:190513"
+          },
+          "children": []
         }
       ]
     },
@@ -68,7 +97,8 @@
           "sourcedFrom": "none",
           "authorship": "Rigby et al.",
           "yearPublished": "2008",
-          "uuid": "41afb1b4-f2ba-52e-b9d-1fe9d375522da3"
+          "uuid": "41afb1b4-f2ba-52e-b9d-1fe9d375522da3",
+          "children": []
         }
       ]
     },
@@ -90,7 +120,21 @@
           "sourcedFrom": "none",
           "authorship": "Mostler & Mosleh-Yazdi",
           "yearPublished": "1976",
-          "uuid": "345a85ee-318f-5bc-bc9-7fe6c06f3c6448"
+          "uuid": "345a85ee-318f-5bc-bc9-7fe6c06f3c6448",
+          "children": []
+        },
+        {
+          "id": "SP_RIGBYELLA_RUTTNERI_MOSTLER_AND_MOSLEH_YAZDI_1976",
+          "name": "Rigbyella ruttneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rigbyella",
+          "authorship": "Mostler and Mosleh-Yazdi 1976",
+          "sourceIds": {
+            "checklistbank": "txn:207010"
+          },
+          "children": []
         }
       ]
     },
@@ -112,9 +156,54 @@
           "sourcedFrom": "none",
           "authorship": "Mehl",
           "yearPublished": "1996",
-          "uuid": "77a0cc79-0f0e-5d3-b7f-2a0338d18a89c0"
+          "uuid": "77a0cc79-0f0e-5d3-b7f-2a0338d18a89c0",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DIVARICOSPONGIA",
+      "name": "Divaricospongia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIVARICOSPONGIA_DILATA_RIGBY_AND_MAHER_1995",
+          "name": "Divaricospongia dilata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Divaricospongia",
+          "authorship": "Rigby and Maher 1995",
+          "sourceIds": {
+            "checklistbank": "txn:205796"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stiodermatidae"
+    },
+    {
+      "id": "GENUS_ACANTHACTINELLA",
+      "name": "Acanthactinella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACANTHACTINELLA_BENNEI_HINDE_1884",
+          "name": "Acanthactinella bennei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acanthactinella",
+          "authorship": "(Hinde 1884)",
+          "sourceIds": {
+            "checklistbank": "txn:466542"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stiodermatidae"
     }
   ],
   "sourceIds": {
@@ -124,6 +213,9 @@
       "classKey": 146,
       "orderKey": 514,
       "familyKey": 4581198
-    }
-  }
+    },
+    "checklistbank": "txn:96216"
+  },
+  "genusCount": 6,
+  "speciesCount": 11
 }

@@ -44,9 +44,11 @@
             "col": [
               "BRCT5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674683"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1674683"
+            ]
           },
-          "authorityIds": "col:BRCT5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1674683,col:BRCT5",
           "authorship": "(Lühe, 1909) Dollfus, 1950"
         },
         {
@@ -169,9 +171,11 @@
             "col": [
               "BRBCZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674648"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1674648"
+            ]
           },
-          "authorityIds": "col:BRBCZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1674648,col:BRBCZ",
           "authorship": "(Bellingham, 1844) Lühe, 1909"
         },
         {
@@ -264,54 +268,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "leptophallidae"
-    },
-    {
-      "id": "GENUS_LEPTOPHALLUS",
-      "name": "\"Leptophallus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPTOPHALLUS_NIGROVENOSUS_BELLINGHAM_1844_L_HE_1909",
-          "name": "\"Leptophallus nigrovenosus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptophallus",
-          "authorship": "\"(Bellingham, 1844) Lühe, 1909\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674648"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "leptophallidae"
-    },
-    {
-      "id": "GENUS_PARALEPODERMA",
-      "name": "\"Paralepoderma",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARALEPODERMA_CLOACICOLA_L_HE_1909_DOLLFUS_1950",
-          "name": "\"Paralepoderma cloacicola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paralepoderma",
-          "authorship": "\"(Lühe, 1909) Dollfus, 1950\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1674683"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "leptophallidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 15,
+  "genusCount": 5,
+  "speciesCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

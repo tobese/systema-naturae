@@ -108,10 +108,12 @@
             "col": [
               "38RCY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172162"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:172162"
+            ]
           },
           "uuid": "90c1de04-4d87-5b5-8f0-aa74dd538522fd",
-          "authorityIds": "col:38RCY,gbif:3203440,mycobank:297089",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:172162,col:38RCY,gbif:3203440,mycobank:297089",
           "authorship": "Feldmann & Feldm.-Maz., 1955",
           "children": []
         },
@@ -188,10 +190,12 @@
             "itis": [
               "13903"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172160"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:172160"
+            ]
           },
           "uuid": "ffbe1afa-d402-583-b5b-b4efa79a2479f3",
-          "authorityIds": "col:38RD6,gbif:3203438,itis:13903,mycobank:211033",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:172160,col:38RD6,gbif:3203438,itis:13903,mycobank:211033",
           "authorship": "Petersen, 1905",
           "children": []
         },
@@ -414,45 +418,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ectrogellaceae"
-    },
-    {
-      "id": "GENUS_ECTROGELLA",
-      "name": "\"Ectrogella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ECTROGELLA_PERFORANS_PETERSEN_1905",
-          "name": "\"Ectrogella perforans\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ectrogella",
-          "authorship": "\"Petersen, 1905\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172160"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ECTROGELLA_EURYCHASMOIDES_FELDMANN_FELDM_MAZ_1955",
-          "name": "\"Ectrogella eurychasmoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ectrogella",
-          "authorship": "\"Feldmann & Feldm.-Maz., 1955\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:172162"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ectrogellaceae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 21,
+  "genusCount": 7,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

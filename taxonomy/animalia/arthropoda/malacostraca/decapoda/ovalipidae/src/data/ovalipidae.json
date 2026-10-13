@@ -55,9 +55,11 @@
             "col": [
               "4B9KK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:442760"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:442760"
+            ]
           },
-          "authorityIds": "col:4B9KK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:442760,col:4B9KK",
           "children": []
         },
         {
@@ -391,35 +393,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ovalipidae"
-    },
-    {
-      "id": "GENUS_OVALIPES",
-      "name": "\"Ovalipes",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OVALIPES_IRIDESCENS_MIERS_I_IN_I_TIZARD_MOSELEY_BUCHANAN_MURRAY_1885",
-          "name": "\"Ovalipes iridescens\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ovalipes",
-          "authorship": "\"(Miers <i>in</i> Tizard, Moseley, Buchanan & Murray, 1885)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:442760"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "ovalipidae"
     }
   ],
-  "speciesCount": 25,
+  "speciesCount": 24,
   "appSlug": "ovalipidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 6,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

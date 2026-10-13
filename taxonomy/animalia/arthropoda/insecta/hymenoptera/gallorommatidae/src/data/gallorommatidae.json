@@ -21,7 +21,8 @@
           "sourceIds": {
             "col": [
               "C9XHB"
-            ]
+            ],
+            "checklistbank": "txn:260629"
           },
           "authorityIds": "col:C9XHB"
         },
@@ -89,7 +90,8 @@
           "sourceIds": {
             "col": [
               "C9XHC"
-            ]
+            ],
+            "checklistbank": "txn:185586"
           },
           "authorityIds": "col:C9XHC"
         },
@@ -106,7 +108,8 @@
           "sourceIds": {
             "col": [
               "C9XHG"
-            ]
+            ],
+            "checklistbank": "txn:220053"
           },
           "authorityIds": "col:C9XHG"
         },
@@ -133,13 +136,48 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Gallorommatidae"
+    },
+    {
+      "id": "GENUS_CRETACEOMMA",
+      "name": "Cretaceomma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRETACEOMMA_LIBANENSIS_RASNITSYN_AND_AZAR_2022",
+          "name": "Cretaceomma libanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretaceomma",
+          "authorship": "Rasnitsyn and Azar 2022",
+          "sourceIds": {
+            "checklistbank": "txn:469152"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CRETACEOMMA_TUROLENSIS_ORTEGA_BLANCO_ET_AL_2011",
+          "name": "Cretaceomma turolensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretaceomma",
+          "authorship": "(Ortega-Blanco et al. 2011)",
+          "sourceIds": {
+            "checklistbank": "txn:185587"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gallorommatidae"
     }
   ],
-  "speciesCount": 8,
+  "speciesCount": 10,
   "appSlug": "gallorommatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -147,6 +185,7 @@
       "classKey": 216,
       "orderKey": 1457,
       "familyKey": 8486145
-    }
+    },
+    "checklistbank": "txn:185585"
   }
 }

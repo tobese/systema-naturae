@@ -1101,22 +1101,6 @@
           "authorityIds": "itis:6952"
         },
         {
-          "id": "SP_PENICILLUS_SIBOGAE",
-          "name": "Penicillus sibogae",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Penicillus",
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "children": [],
-          "uuid": "e9c3a6ea-786d-548-ab6-285191706997c2",
-          "authorship": "A.Gepp & E.S.Gepp, 1911",
-          "sourceIds": {
-            "checklistbank": "700621"
-          }
-        },
-        {
           "id": "SP_PENICILLUS_ARBUSCULA_MONT_1842",
           "name": "Penicillus arbuscula",
           "rank": "SPECIES",
@@ -1245,7 +1229,11 @@
           "description": "",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "daa6e729-e2d0-54d-b4a-033a71bc75bfbe"
+          "uuid": "daa6e729-e2d0-54d-b4a-033a71bc75bfbe",
+          "authorship": "Bernier 1984",
+          "sourceIds": {
+            "checklistbank": "txn:274457"
+          }
         }
       ]
     },
@@ -2069,10 +2057,128 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "udoteaceae"
+    },
+    {
+      "id": "GENUS_PALAEOPORELLA",
+      "name": "Palaeoporella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEOPORELLA_VARABILIS_STOLLEY_1893",
+          "name": "Palaeoporella varabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeoporella",
+          "authorship": "Stolley 1893",
+          "sourceIds": {
+            "checklistbank": "txn:297612"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PALAEOPORELLA_VARIABILIS_STOLLEY_1893",
+          "name": "Palaeoporella variabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeoporella",
+          "authorship": "Stolley 1893",
+          "sourceIds": {
+            "checklistbank": "txn:411875"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "udoteaceae"
+    },
+    {
+      "id": "GENUS_OVULITES",
+      "name": "Ovulites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OVULITES_MARGARITULA_LAMARCK_1816",
+          "name": "Ovulites margaritula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovulites",
+          "authorship": "Lamarck 1816",
+          "sourceIds": {
+            "checklistbank": "txn:411714"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OVULITES_ELONGATA_LAMARCK_1883",
+          "name": "Ovulites elongata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovulites",
+          "authorship": "Lamarck 1883",
+          "sourceIds": {
+            "checklistbank": "txn:411715"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OVULITES_ARABICA_PFENDER_1938",
+          "name": "Ovulites arabica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovulites",
+          "authorship": "Pfender 1938",
+          "sourceIds": {
+            "checklistbank": "txn:428229"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OVULITES_PYRIFORMIS_SCHWAGER_1883",
+          "name": "Ovulites pyriformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovulites",
+          "authorship": "Schwager 1883",
+          "sourceIds": {
+            "checklistbank": "txn:428230"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "udoteaceae"
+    },
+    {
+      "id": "GENUS_MELLPORELLA",
+      "name": "Mellporella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELLPORELLA_ANTHRACOPORELLAFORMIS_RACZ_1966",
+          "name": "Mellporella anthracoporellaformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mellporella",
+          "authorship": "Racz 1966",
+          "sourceIds": {
+            "checklistbank": "txn:417735"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "udoteaceae"
     }
   ],
-  "genusCount": 27,
-  "speciesCount": 127,
+  "genusCount": 30,
+  "speciesCount": 133,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
@@ -2081,6 +2187,6 @@
       "orderKey": 625,
       "familyKey": 5272280
     },
-    "checklistbank": "35435"
+    "checklistbank": "ott1068369"
   }
 }

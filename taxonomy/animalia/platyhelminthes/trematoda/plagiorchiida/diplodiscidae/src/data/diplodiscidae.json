@@ -866,20 +866,6 @@
           "authorityIds": "col:V5DWR"
         },
         {
-          "id": "SP_CATADISCUS_PROPINQUUS_FREITAS_DOBBIN_JUNIOR_1956",
-          "name": "Catadiscus propinquus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Catadiscus",
-          "authorship": "Freitas & Dobbin Junior, 1956",
-          "sourceIds": {
-            "checklistbank": "27873"
-          },
-          "children": [],
-          "uuid": "d44fcbde-5058-5e6-b21-4dbd5ea62bdfc3"
-        },
-        {
           "id": "SP_CATADISCUS_ROCHAI_CORREA_ARTIGAS_1979",
           "name": "Catadiscus rochai",
           "rank": "SPECIES",
@@ -1102,9 +1088,11 @@
             "col": [
               "KZDJ9"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1359061"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1359061"
+            ]
           },
-          "authorityIds": "col:KZDJ9"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1359061,col:KZDJ9"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1317,28 +1305,6 @@
       "lineage": "diplodiscidae"
     },
     {
-      "id": "GENUS_PSEUDODIPLODISCOIDES",
-      "name": "\"Pseudodiplodiscoides",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PSEUDODIPLODISCOIDES_MURTYI_RAY_PANDEY_AGRAWAL_2013",
-          "name": "\"Pseudodiplodiscoides murtyi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudodiplodiscoides",
-          "authorship": "\"Ray, Pandey & Agrawal, 2013\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1359061"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "diplodiscidae"
-    },
-    {
       "id": "GENUS_CATADISCUS",
       "name": "\"Catadiscus",
       "rank": "GENUS",
@@ -1422,8 +1388,8 @@
       "lineage": "diplodiscidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 78,
+  "genusCount": 16,
+  "speciesCount": 76,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

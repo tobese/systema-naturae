@@ -90,10 +90,13 @@
           "lineage": "Carcinophyllum",
           "authorship": "(Weissermel, 1935)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1813936"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1813936"
+            ]
           },
           "children": [],
-          "uuid": "bde412f5-848c-58f-b7f-773bc03924020b"
+          "uuid": "bde412f5-848c-58f-b7f-773bc03924020b",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1813936"
         }
       ]
     },
@@ -356,10 +359,13 @@
           "lineage": "Lonsdaleia",
           "authorship": "Yabe & Hayasaka, 1915",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1826342"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1826342"
+            ]
           },
           "children": [],
-          "uuid": "8a9652a5-ceab-521-98e-1af98af36c20b0"
+          "uuid": "8a9652a5-ceab-521-98e-1af98af36c20b0",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1826342"
         },
         {
           "id": "SP_LONSDALEIA_JAPONICA_YABE_HAYASAKA_1915",
@@ -374,6 +380,19 @@
           },
           "children": [],
           "uuid": "cdb4307e-65ce-5ed-9f6-b29509fc84f5eb"
+        },
+        {
+          "id": "SP_LONSDALEIA_PERATROVICHENSIS_ARMSTRONG_1970",
+          "name": "Lonsdaleia peratrovichensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lonsdaleia",
+          "authorship": "(Armstrong 1970)",
+          "sourceIds": {
+            "checklistbank": "txn:438654"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -403,28 +422,6 @@
       "lineage": "lonsdaleiidae"
     },
     {
-      "id": "GENUS_CARCINOPHYLLUM",
-      "name": "\"Carcinophyllum",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CARCINOPHYLLUM_AXOLITHOPHYLLUM_WEISSERMEL_1935",
-          "name": "\"Carcinophyllum (Axolithophyllum)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Carcinophyllum",
-          "authorship": "\"(Weissermel, 1935)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1813936"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "lonsdaleiidae"
-    },
-    {
       "id": "GENUS_LONSDALEIA",
       "name": "\"Lonsdaleia",
       "rank": "GENUS",
@@ -441,17 +438,26 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:1822778"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lonsdaleiidae"
+    },
+    {
+      "id": "GENUS_THYSANOPHYLLUM",
+      "name": "Thysanophyllum",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_LONSDALEIA_WAAGENELLA_YABE_HAYASAKA_1915",
-          "name": "\"Lonsdaleia (Waagenella)",
+          "id": "SP_THYSANOPHYLLUM_ASTRAEIFORME_WARREN_1927",
+          "name": "Thysanophyllum astraeiforme",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Lonsdaleia",
-          "authorship": "\"Yabe & Hayasaka, 1915\"",
+          "lineage": "Thysanophyllum",
+          "authorship": "(Warren 1927)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1826342"
+            "checklistbank": "txn:276763"
           },
           "children": []
         }
@@ -468,6 +474,7 @@
       "phylumKey": 43,
       "classKey": 206,
       "familyKey": 4880863
-    }
+    },
+    "checklistbank": "txn:110478"
   }
 }

@@ -2837,10 +2837,12 @@
             ],
             "col": [
               "825JR"
-            ]
+            ],
+            "checklistbank": "txn:503884"
           },
           "uuid": "0bec3707-8a0c-5e0-b77-ba93f5e4e0c74b",
-          "authorityIds": "col:825JR,gbif:8152821"
+          "authorityIds": "col:825JR,gbif:8152821",
+          "authorship": "Cushman 1926"
         },
         {
           "id": "BULIMINA_JARVISI",
@@ -3097,10 +3099,12 @@
             ],
             "col": [
               "825K6"
-            ]
+            ],
+            "checklistbank": "txn:354862"
           },
           "uuid": "d51094e9-c4a7-5ab-bda-dd10300711bf2b",
-          "authorityIds": "col:825K6,gbif:9197948"
+          "authorityIds": "col:825K6,gbif:9197948",
+          "authorship": "Cushman and Renz 1942"
         },
         {
           "id": "BULIMINA_LADDI",
@@ -3533,10 +3537,12 @@
             ],
             "col": [
               "825KW"
-            ]
+            ],
+            "checklistbank": "txn:354863"
           },
           "uuid": "fad83d1c-7b59-583-917-7b5e1c7baba1a9",
-          "authorityIds": "col:825KW,gbif:8903409"
+          "authorityIds": "col:825KW,gbif:8903409",
+          "authorship": "Cushman and Parker 1936"
         },
         {
           "id": "BULIMINA_MICROLONGISTRIATA",
@@ -3599,10 +3605,12 @@
             ],
             "col": [
               "8VLCK"
-            ]
+            ],
+            "checklistbank": "txn:113294"
           },
           "uuid": "79ad33c5-af5c-5fe-a8c-a1c383ee8f6229",
-          "authorityIds": "col:8VLCK,gbif:8278949"
+          "authorityIds": "col:8VLCK,gbif:8278949",
+          "authorship": "Tedeschi and Zanmatti 1957"
         },
         {
           "id": "BULIMINA_MINSSENI",
@@ -5042,10 +5050,12 @@
             ],
             "col": [
               "825NS"
-            ]
+            ],
+            "checklistbank": "txn:354865"
           },
           "uuid": "55561a76-6cf4-5f2-9ec-c6deb4794d75fd",
-          "authorityIds": "col:825NS,gbif:8747018"
+          "authorityIds": "col:825NS,gbif:8747018",
+          "authorship": "Cushman and Laiming 1931"
         },
         {
           "id": "BULIMINA_RISILLA",
@@ -5674,10 +5684,12 @@
             ],
             "col": [
               "825PX"
-            ]
+            ],
+            "checklistbank": "txn:354868"
           },
           "uuid": "9884bf7c-8026-5de-925-bc644d32d3687e",
-          "authorityIds": "col:825PX,gbif:8805648"
+          "authorityIds": "col:825PX,gbif:8805648",
+          "authorship": "Cushman and Parker 1936"
         },
         {
           "id": "BULIMINA_STOKESI",
@@ -7108,6 +7120,32 @@
             "checklistbank": "473970"
           },
           "children": []
+        },
+        {
+          "id": "SP_BULIMINA_OVATA_D_ORBIGNY_1846",
+          "name": "Bulimina ovata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bulimina",
+          "authorship": "d'Orbigny 1846",
+          "sourceIds": {
+            "checklistbank": "txn:354864"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BULIMINA_PALEOCENICA_BROTZEN_1948",
+          "name": "Bulimina paleocenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bulimina",
+          "authorship": "Brotzen 1948",
+          "sourceIds": {
+            "checklistbank": "txn:478022"
+          },
+          "children": []
         }
       ]
     },
@@ -7991,6 +8029,45 @@
           "lineage": "Angulogerina",
           "sourceIds": {
             "checklistbank": "1365798"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANGULOGERINA_ANGULOSA_WILLIAMSON_1848",
+          "name": "Angulogerina angulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Angulogerina",
+          "authorship": "(Williamson 1848)",
+          "sourceIds": {
+            "checklistbank": "txn:202769"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANGULOGERINA_OCCIDENTALIS_CUSHMAN_1923",
+          "name": "Angulogerina occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Angulogerina",
+          "authorship": "(Cushman 1923)",
+          "sourceIds": {
+            "checklistbank": "txn:355060"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ANGULOGERINA_WILCOXENSIS_CUSHMAN_AND_PONTON_1932",
+          "name": "Angulogerina wilcoxensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Angulogerina",
+          "authorship": "(Cushman and Ponton 1932)",
+          "sourceIds": {
+            "checklistbank": "txn:355062"
           },
           "children": []
         }
@@ -11864,10 +11941,202 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "buliminidae"
+    },
+    {
+      "id": "GENUS_FISSURINA",
+      "name": "Fissurina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FISSURINA_ANNECTENS_BURROWS_AND_HOLLAND_1895",
+          "name": "Fissurina annectens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fissurina",
+          "authorship": "(Burrows and Holland 1895)",
+          "sourceIds": {
+            "checklistbank": "txn:202101"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FISSURINA_PUNCTATA_ALIX_1913",
+          "name": "Fissurina punctata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fissurina",
+          "authorship": "Alix 1913",
+          "sourceIds": {
+            "checklistbank": "txn:202108"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FISSURINA_TIBISCENCIS_POPESCU_1983",
+          "name": "Fissurina tibiscencis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fissurina",
+          "authorship": "Popescu 1983",
+          "sourceIds": {
+            "checklistbank": "txn:202112"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FISSURINA_LAEVIGATA_BUCHNER_1940",
+          "name": "Fissurina laevigata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fissurina",
+          "authorship": "Buchner 1940",
+          "sourceIds": {
+            "checklistbank": "txn:202114"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_FISSURINA_PERFORATA_MOBIUS_1880",
+          "name": "Fissurina perforata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fissurina",
+          "authorship": "Mobius 1880",
+          "sourceIds": {
+            "checklistbank": "txn:240998"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "buliminidae"
+    },
+    {
+      "id": "GENUS_ENTOSOLENIA",
+      "name": "Entosolenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENTOSOLENIA_MARGINATA_WILLIAMSON_1848",
+          "name": "Entosolenia marginata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Entosolenia",
+          "authorship": "Williamson 1848",
+          "sourceIds": {
+            "checklistbank": "txn:202116"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "buliminidae"
+    },
+    {
+      "id": "GENUS_BULIMINELLA",
+      "name": "Buliminella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BULIMINELLA_CURTA_CUSHMAN_1925",
+          "name": "Buliminella curta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Buliminella",
+          "authorship": "Cushman 1925",
+          "sourceIds": {
+            "checklistbank": "txn:354859"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BULIMINELLA_SUBFUSIFORMIS_CUSHMAN_1925",
+          "name": "Buliminella subfusiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Buliminella",
+          "authorship": "Cushman 1925",
+          "sourceIds": {
+            "checklistbank": "txn:354860"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BULIMINELLA_PULCHRA_TERQUEM_1882",
+          "name": "Buliminella pulchra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Buliminella",
+          "authorship": "(Terquem 1882)",
+          "sourceIds": {
+            "checklistbank": "txn:478020"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "buliminidae"
+    },
+    {
+      "id": "GENUS_VIRGULINA",
+      "name": "Virgulina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIRGULINA_BRAMLETTEI_GALLOWAY_AND_MORREY_1929",
+          "name": "Virgulina bramlettei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Virgulina",
+          "authorship": "Galloway and Morrey 1929",
+          "sourceIds": {
+            "checklistbank": "txn:354872"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VIRGULINA_CALIFORNIENSIS_CUSHMAN_1925",
+          "name": "Virgulina californiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Virgulina",
+          "authorship": "Cushman 1925",
+          "sourceIds": {
+            "checklistbank": "txn:354873"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VIRGULINA_DIBOLLENSIS_CUSHMAN_AND_APPLIN_1926",
+          "name": "Virgulina dibollensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Virgulina",
+          "authorship": "Cushman and Applin 1926",
+          "sourceIds": {
+            "checklistbank": "txn:354874"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "buliminidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 678,
+  "genusCount": 19,
+  "speciesCount": 695,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

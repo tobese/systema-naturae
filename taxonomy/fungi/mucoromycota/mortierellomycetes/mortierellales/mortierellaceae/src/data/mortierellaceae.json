@@ -4201,33 +4201,6 @@
           "authorityIds": "col:B2WWS,gbif:12218278,mycobank:558847"
         },
         {
-          "id": "LINNEMANNIA_NANTAHALENSIS",
-          "name": "Linnemannia nantahalensis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Linnemannia",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(C.Y. Chien) Vandepol & Bonito",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "12107878"
-            ],
-            "mycobank": [
-              "835746"
-            ],
-            "col": [
-              "9ZB3X"
-            ],
-            "checklistbank": "979717"
-          },
-          "uuid": "f3b620b1-ce53-532-84a-9a9c841679437b",
-          "authorityIds": "col:9ZB3X,gbif:12107878,mycobank:835746"
-        },
-        {
           "id": "LINNEMANNIA_NIMBOSA",
           "name": "Linnemannia nimbosa",
           "rank": "SPECIES",
@@ -4433,9 +4406,11 @@
             "col": [
               "CB9XK"
             ],
-            "checklistbank": "3062415"
+            "checklistbank": [
+              "3062415"
+            ]
           },
-          "authorityIds": "col:CB9XK,mycobank:663078"
+          "authorityIds": "checklistbank:3062415,col:CB9XK,mycobank:663078"
         },
         {
           "id": "SP_LINNEMANNIA_AFF",
@@ -4458,18 +4433,6 @@
           "lineage": "Linnemannia",
           "sourceIds": {
             "checklistbank": "2810449"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_LINNEMANNIA_ELIZABETHKENNY",
-          "name": "Linnemannia elizabethkenny",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Linnemannia",
-          "sourceIds": {
-            "checklistbank": "3062415"
           },
           "children": []
         }
@@ -5743,7 +5706,7 @@
   ],
   "authorship": "C. Luerssen",
   "genusCount": 25,
-  "speciesCount": 261,
+  "speciesCount": 259,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

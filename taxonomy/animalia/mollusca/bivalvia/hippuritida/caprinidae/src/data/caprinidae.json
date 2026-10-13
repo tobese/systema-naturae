@@ -197,6 +197,19 @@
           },
           "children": [],
           "uuid": "f3709873-a193-536-8f5-3b89a414fa2861"
+        },
+        {
+          "id": "SP_CAPRINA_BAYLEI_GEMMELLARO_1865",
+          "name": "Caprina baylei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caprina",
+          "authorship": "(Gemmellaro 1865)",
+          "sourceIds": {
+            "checklistbank": "txn:304506"
+          },
+          "children": []
         }
       ]
     },
@@ -339,9 +352,11 @@
             "col": [
               "4BVT4"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1249965"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1249965"
+            ]
           },
-          "authorityIds": "col:4BVT4",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1249965,col:4BVT4",
           "authorship": "(F.-J. Pictet & Campiche, 1869)"
         },
         {
@@ -579,20 +594,20 @@
       "lineage": "Caprinidae"
     },
     {
-      "id": "GENUS_PACHYTRAGA",
-      "name": "\"Pachytraga",
+      "id": "GENUS_LITHOCALAMUS",
+      "name": "Lithocalamus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PACHYTRAGA_PARADOXA_F_J_PICTET_CAMPICHE_1869",
-          "name": "\"Pachytraga paradoxa\"",
+          "id": "SP_LITHOCALAMUS_COLONICUS_LUPHER_AND_PACKARD_1930",
+          "name": "Lithocalamus colonicus",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Pachytraga",
-          "authorship": "\"(F.-J. Pictet & Campiche, 1869)\"",
+          "lineage": "Lithocalamus",
+          "authorship": "Lupher and Packard 1930",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1249965"
+            "checklistbank": "txn:462154"
           },
           "children": []
         }
@@ -602,7 +617,7 @@
     }
   ],
   "genusCount": 9,
-  "speciesCount": 31,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -610,6 +625,7 @@
       "classKey": 137,
       "orderKey": 9280936,
       "familyKey": 3247839
-    }
+    },
+    "checklistbank": "txn:59525"
   }
 }

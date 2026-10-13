@@ -967,9 +967,11 @@
               "9WXMR",
               "C4N4Y"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615069"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1615069"
+            ]
           },
-          "authorityIds": "col:9WXMR,col:C4N4Y",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1615069,col:9WXMR,col:C4N4Y",
           "authorship": "(Pchelintsev, 1953)"
         },
         {
@@ -1132,9 +1134,11 @@
             "col": [
               "RN8V"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:844395"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:844395"
+            ]
           },
-          "authorityIds": "col:RN8V",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:844395,col:RN8V",
           "authorship": "(Münster, 1844)"
         },
         {
@@ -2827,6 +2831,19 @@
             ]
           },
           "authorityIds": "col:V4YKS"
+        },
+        {
+          "id": "SP_CASSIOPE_WHITFIELDI_WHITE_1874",
+          "name": "Cassiope whitfieldi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassiope",
+          "authorship": "White 1874",
+          "sourceIds": {
+            "checklistbank": "txn:472126"
+          },
+          "children": []
         }
       ]
     },
@@ -4212,20 +4229,59 @@
       "lineage": "cassiopidae"
     },
     {
-      "id": "GENUS_CASSIOPE",
-      "name": "\"Cassiope",
+      "id": "GENUS_GLAUCONIA",
+      "name": "Glauconia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CASSIOPE_KEFERSTEINII_M_NSTER_1844",
-          "name": "\"Cassiope kefersteinii\"",
+          "id": "SP_GLAUCONIA_PIZCUETANA_VILANOVA_1859",
+          "name": "Glauconia pizcuetana",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Cassiope",
-          "authorship": "\"(Münster, 1844)\"",
+          "lineage": "Glauconia",
+          "authorship": "Vilanova 1859",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:844395"
+            "checklistbank": "txn:58879"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLAUCONIA_DESERTI_DOUVILL_1916",
+          "name": "Glauconia deserti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glauconia",
+          "authorship": "Douvillé 1916",
+          "sourceIds": {
+            "checklistbank": "txn:323129"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLAUCONIA_KEFERSTEINI_GOLDFUSS_1844",
+          "name": "Glauconia kefersteini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glauconia",
+          "authorship": "(Goldfuss 1844)",
+          "sourceIds": {
+            "checklistbank": "txn:421834"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GLAUCONIA_HESPERIA_ANDERSON_1938",
+          "name": "Glauconia hesperia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glauconia",
+          "authorship": "Anderson 1938",
+          "sourceIds": {
+            "checklistbank": "txn:426922"
           },
           "children": []
         }
@@ -4234,20 +4290,20 @@
       "lineage": "cassiopidae"
     },
     {
-      "id": "GENUS_BICARINELLA",
-      "name": "\"Bicarinella",
+      "id": "GENUS_HEXAGLAUCONIA",
+      "name": "Hexaglauconia",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_BICARINELLA_BICARINATA_PCHELINTSEV_1953",
-          "name": "\"Bicarinella bicarinata\"",
+          "id": "SP_HEXAGLAUCONIA_COQUANDIANA_D_ORBIGNY_1842",
+          "name": "Hexaglauconia coquandiana",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Bicarinella",
-          "authorship": "\"(Pchelintsev, 1953)\"",
+          "lineage": "Hexaglauconia",
+          "authorship": "(d'Orbigny 1842)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1615069"
+            "checklistbank": "txn:337925"
           },
           "children": []
         }
@@ -4257,13 +4313,14 @@
     }
   ],
   "genusCount": 12,
-  "speciesCount": 246,
+  "speciesCount": 250,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 3243807
-    }
+    },
+    "checklistbank": "txn:118580"
   }
 }

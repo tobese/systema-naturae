@@ -60,9 +60,11 @@
             "col": [
               "7QZBT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332765"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1332765"
+            ]
           },
-          "authorityIds": "col:7QZBT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1332765,col:7QZBT",
           "authorship": "(Dall, 1896)"
         },
         {
@@ -229,18 +231,6 @@
           "lineage": "Cyrenoida",
           "sourceIds": {
             "checklistbank": "98960"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CYRENOIDA_FLORIDANA",
-          "name": "Cyrenoida floridana",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cyrenoida",
-          "sourceIds": {
-            "checklistbank": "292179"
           },
           "children": []
         },
@@ -1648,28 +1638,6 @@
       "lineage": "cyrenoididae"
     },
     {
-      "id": "GENUS_CYRENOIDA",
-      "name": "\"Cyrenoida",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CYRENOIDA_CALOOSAENSIS_DALL_1896",
-          "name": "\"Cyrenoida caloosaensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cyrenoida",
-          "authorship": "\"(Dall, 1896)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1332765"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cyrenoididae"
-    },
-    {
       "id": "GENUS_POLYMESODA",
       "name": "\"Polymesoda",
       "rank": "GENUS",
@@ -1727,8 +1695,8 @@
       "lineage": "cyrenoididae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 116,
+  "genusCount": 8,
+  "speciesCount": 114,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

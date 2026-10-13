@@ -1193,6 +1193,32 @@
             "checklistbank": "723185"
           },
           "children": []
+        },
+        {
+          "id": "SP_ATLANTA_BULIMOIDES_ORBIGNY_1836",
+          "name": "Atlanta bulimoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atlanta",
+          "authorship": "Orbigny 1836",
+          "sourceIds": {
+            "checklistbank": "txn:326072"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ATLANTA_CORDIFORMIS_GABB_1873",
+          "name": "Atlanta cordiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Atlanta",
+          "authorship": "Gabb 1873",
+          "sourceIds": {
+            "checklistbank": "txn:346563"
+          },
+          "children": []
         }
       ]
     },
@@ -1238,9 +1264,11 @@
             "col": [
               "4N2K5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1298490"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1298490"
+            ]
           },
-          "authorityIds": "col:4N2K5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1298490,col:4N2K5",
           "authorship": "(Woodring, 1928)"
         },
         {
@@ -1258,9 +1286,11 @@
             "col": [
               "4N2K7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:894275"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:894275"
+            ]
           },
-          "authorityIds": "col:4N2K7",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:894275,col:4N2K7",
           "authorship": "(Gabb, 1873)"
         },
         {
@@ -1479,28 +1509,6 @@
       "lineage": "atlantidae"
     },
     {
-      "id": "GENUS_STEIRA",
-      "name": "Steira",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_STEIRA_LAMANONI_ESCHSCHOLTZ_1825",
-          "name": "Steira lamanoni",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Steira",
-          "authorship": "Eschscholtz, 1825",
-          "sourceIds": {
-            "checklistbank": "681202"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "atlantidae"
-    },
-    {
       "id": "GENUS_SCHIZOTROCHUS",
       "name": "Schizotrochus",
       "rank": "GENUS",
@@ -1560,32 +1568,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:138840"
           },
           "children": []
-        },
-        {
-          "id": "SP_PROTATLANTA_ROTUNDATA_GABB_1873",
-          "name": "\"Protatlanta rotundata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protatlanta",
-          "authorship": "\"(Gabb, 1873)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:894275"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PROTATLANTA_LISSA_WOODRING_1928",
-          "name": "\"Protatlanta lissa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Protatlanta",
-          "authorship": "\"(Woodring, 1928)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1298490"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1614,8 +1596,8 @@
       "lineage": "atlantidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 94,
+  "genusCount": 8,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -91,6 +91,19 @@
             ]
           },
           "authorityIds": "col:7SNS2"
+        },
+        {
+          "id": "SP_PETERSIA_TROCHOIDES_COSSMANN_1899",
+          "name": "Petersia trochoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petersia",
+          "authorship": "(Cossmann 1899)",
+          "sourceIds": {
+            "checklistbank": "txn:332366"
+          },
+          "children": []
         }
       ]
     },
@@ -179,9 +192,11 @@
             "col": [
               "7QBRB"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1392481"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1392481"
+            ]
           },
-          "authorityIds": "col:7QBRB",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1392481,col:7QBRB",
           "authorship": "(Lamarck, 1804)"
         },
         {
@@ -615,31 +630,9 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Brachytrematidae"
-    },
-    {
-      "id": "GENUS_BENOISTIA",
-      "name": "\"Benoistia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BENOISTIA_MURICOIDES_LAMARCK_1804",
-          "name": "\"Benoistia muricoides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Benoistia",
-          "authorship": "\"(Lamarck, 1804)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1392481"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "brachytrematidae"
     }
   ],
-  "genusCount": 8,
+  "genusCount": 7,
   "speciesCount": 33,
   "sourceIds": {
     "gbif": {
@@ -647,6 +640,7 @@
       "phylumKey": 52,
       "classKey": 225,
       "familyKey": 3244924
-    }
+    },
+    "checklistbank": "txn:59401"
   }
 }

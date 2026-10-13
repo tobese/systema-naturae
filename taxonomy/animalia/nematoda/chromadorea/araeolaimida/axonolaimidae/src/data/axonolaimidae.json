@@ -1329,20 +1329,6 @@
           "authorityIds": "col:VC5BM"
         },
         {
-          "id": "SP_AXONOLAIMUS_HELGOLANDICUS_LORENZEN_1972",
-          "name": "Axonolaimus helgolandicus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Axonolaimus",
-          "authorship": "Lorenzen, 1972",
-          "sourceIds": {
-            "checklistbank": "41308"
-          },
-          "children": [],
-          "uuid": "b2aa896d-35fa-58a-8b0-a0952e42ceef56"
-        },
-        {
           "id": "SP_AXONOLAIMUS_SPINOSUS_B_TSCHLI_1874",
           "name": "Axonolaimus spinosus",
           "rank": "SPECIES",
@@ -2017,20 +2003,6 @@
             ]
           },
           "authorityIds": "col:V4RRX"
-        },
-        {
-          "id": "SP_ASCOLAIMUS_ELONGATUS_B_TSCHLI_1874",
-          "name": "Ascolaimus elongatus",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ascolaimus",
-          "authorship": "(Bütschli, 1874)",
-          "sourceIds": {
-            "checklistbank": "41303"
-          },
-          "children": [],
-          "uuid": "048500bb-2046-530-b7f-5c876aa3049210"
         },
         {
           "id": "SP_ASCOLAIMUS_AUSTRALIS_HOURSTON_WARWICK",
@@ -2999,9 +2971,11 @@
             "itis": [
               "59542"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:229024"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:229024"
+            ]
           },
-          "authorityIds": "col:88WGZ,itis:59542"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:229024,col:88WGZ,itis:59542"
         },
         {
           "id": "SP_PARODONTOPHORA_BREVIAMPHIDA",
@@ -4058,9 +4032,11 @@
             "col": [
               "8GF2M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:230686"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:230686"
+            ]
           },
-          "authorityIds": "col:8GF2M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:230686,col:8GF2M",
           "authorship": "(Gerlach, 1953)"
         },
         {
@@ -6255,19 +6231,6 @@
           "children": []
         },
         {
-          "id": "SP_PARODONTOPHORA_BREVAMPHIDA_TIMM_1952",
-          "name": "\"Parodontophora brevamphida\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parodontophora",
-          "authorship": "\"(Timm, 1952)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:229024"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PARODONTOPHORA_COBBI_TIMM_1952",
           "name": "\"Parodontophora cobbi\"",
           "rank": "SPECIES",
@@ -6318,32 +6281,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "axonolaimidae"
-    },
-    {
-      "id": "GENUS_ODONTOPHOROIDES",
-      "name": "\"Odontophoroides",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ODONTOPHOROIDES_MONHYSTERA_GERLACH_1953",
-          "name": "\"Odontophoroides monhystera\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Odontophoroides",
-          "authorship": "\"(Gerlach, 1953)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:230686"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "axonolaimidae"
     }
   ],
-  "genusCount": 34,
-  "speciesCount": 379,
+  "genusCount": 33,
+  "speciesCount": 375,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

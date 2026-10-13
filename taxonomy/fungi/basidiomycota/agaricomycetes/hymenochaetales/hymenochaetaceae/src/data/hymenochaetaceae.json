@@ -6727,10 +6727,12 @@
           "children": [],
           "sourceIds": {
             "gbif": 5897708,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426225"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426225"
+            ]
           },
           "uuid": "b4c303a8-a7f8-554-b8a-86662b1584e040",
-          "authorityIds": "gbif:5897708",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426225,gbif:5897708",
           "authorship": "H. Jahn, 1976"
         },
         {
@@ -12994,18 +12996,23 @@
           "children": [],
           "sourceIds": {
             "gbif": [
-              "12211753"
+              "12211753",
+              "8384196"
             ],
             "mycobank": [
-              "839904"
+              "839904",
+              "542992"
             ],
             "col": [
-              "B32PL"
+              "B32PL",
+              "5ZP5Z"
             ],
-            "checklistbank": "2086673"
+            "checklistbank": [
+              "2086673"
+            ]
           },
           "uuid": "6da3c283-67b4-572-bb2-ef5c238957ab1d",
-          "authorityIds": "col:B32PL,gbif:12211753,mycobank:839904"
+          "authorityIds": "checklistbank:2086673,col:5ZP5Z,col:B32PL,gbif:12211753,gbif:8384196,mycobank:542992,mycobank:839904"
         },
         {
           "id": "COLTRICIA_SONORENSIS",
@@ -13193,33 +13200,6 @@
           },
           "uuid": "bd4dfec8-5e71-586-8b2-7c7bc50de0b0bf",
           "authorityIds": "col:B3C52,gbif:12248609,mycobank:839915"
-        },
-        {
-          "id": "COLTRICIA_SUBPERENNIS",
-          "name": "Coltricia subperennis",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Coltricia",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "(Z.S. Bi & G.Y. Zheng) G.Y. Zheng & Z.S. Bi",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "8384196"
-            ],
-            "mycobank": [
-              "542992"
-            ],
-            "col": [
-              "5ZP5Z"
-            ],
-            "checklistbank": "2086673"
-          },
-          "uuid": "ddea0d4a-cfb0-548-8a7-7472f6299e734e",
-          "authorityIds": "col:5ZP5Z,gbif:8384196,mycobank:542992"
         },
         {
           "id": "COLTRICIA_SUBVERRUCATA",
@@ -15204,19 +15184,6 @@
           "lineage": "Coltriciella",
           "sourceIds": {
             "checklistbank": "413699"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_COLTRICIELLA_SONORENSIS_R_VALENZ_ESQUEDA_DECOCK_2012",
-          "name": "Coltriciella sonorensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Coltriciella",
-          "authorship": "R. Valenz., Esqueda & Decock, 2012",
-          "sourceIds": {
-            "checklistbank": "1017017"
           },
           "children": []
         },
@@ -17846,33 +17813,6 @@
           },
           "uuid": "d2a8929d-16b3-545-a44-7a16620b4e88d9",
           "authorityIds": "col:3PRYD,gbif:7914416,mycobank:585187"
-        },
-        {
-          "id": "INONOTUS_CASUARINAE",
-          "name": "Inonotus casuarinae",
-          "rank": "SPECIES",
-          "commonName": "",
-          "lineage": "Inonotus",
-          "continents": [],
-          "subspeciesCount": 0,
-          "description": "",
-          "sourcedFrom": "none",
-          "authorship": "L.S. Bian",
-          "children": [],
-          "sourceIds": {
-            "gbif": [
-              "9676096"
-            ],
-            "mycobank": [
-              "810550"
-            ],
-            "col": [
-              "3PRYF"
-            ],
-            "checklistbank": "1676173"
-          },
-          "uuid": "7012c1ed-55ba-52e-828-fb80df1d743398",
-          "authorityIds": "col:3PRYF,gbif:9676096,mycobank:810550"
         },
         {
           "id": "INONOTUS_CHIHSHANYENUS",
@@ -31586,10 +31526,12 @@
             "col": [
               "4H9YH"
             ],
-            "checklistbank": "1783258"
+            "checklistbank": [
+              "1783258"
+            ]
           },
           "uuid": "4a8c742f-5245-52b-882-37a105dbde1dff",
-          "authorityIds": "col:4H9YH,gbif:9766277,mycobank:815976"
+          "authorityIds": "checklistbank:1783258,col:4H9YH,gbif:9766277,mycobank:815976"
         },
         {
           "id": "PHYLLOPORIA_FLACOURTIAE",
@@ -33419,18 +33361,6 @@
           "authorship": "Decock, Murithi & Amalfi, 2026",
           "sourceIds": {
             "checklistbank": "3447865"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PHYLLOPORIA_FLABELLIFORMA",
-          "name": "Phylloporia flabelliforma",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phylloporia",
-          "sourceIds": {
-            "checklistbank": "1783258"
           },
           "children": []
         }
@@ -42799,19 +42729,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_PHELLINUS_HIPPOPHAECOLA_H_JAHN_1976",
-          "name": "\"Phellinus hippophaecola\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phellinus",
-          "authorship": "\"H. Jahn, 1976\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426225"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PHELLINUS_PACHYPHLOEUS_PAT_PAT_1900",
           "name": "\"Phellinus pachyphloeus\"",
           "rank": "SPECIES",
@@ -42914,7 +42831,7 @@
   ],
   "authorship": "Donk",
   "genusCount": 107,
-  "speciesCount": 2070,
+  "speciesCount": 2065,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,

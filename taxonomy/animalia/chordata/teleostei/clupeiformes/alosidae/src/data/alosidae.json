@@ -666,9 +666,11 @@
             "col": [
               "KV2R2"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:324378"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:324378"
+            ]
           },
-          "authorityIds": "col:KV2R2",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:324378,col:KV2R2",
           "children": []
         }
       ],
@@ -1001,28 +1003,6 @@
       "lineage": "alosidae"
     },
     {
-      "id": "GENUS_ARENGUS",
-      "name": "Arengus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ARENGUS_MINOR_CORNIDE_1788",
-          "name": "Arengus minor",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Arengus",
-          "authorship": "Cornide, 1788",
-          "sourceIds": {
-            "checklistbank": "564796"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "alosidae"
-    },
-    {
       "id": "GENUS_CYPRINUS",
       "name": "Cyprinus",
       "rank": "GENUS",
@@ -1045,19 +1025,20 @@
       "lineage": "alosidae"
     },
     {
-      "id": "GENUS_CASPIALOSA",
-      "name": "\"Caspialosa",
+      "id": "GENUS_SANALOSA",
+      "name": "Sanalosa",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CASPIALOSA_KESSLERI",
-          "name": "\"Caspialosa kessleri",
+          "id": "SP_SANALOSA_JANULOSA_BIENKOWSKA_WASILUK_ET_AL_2024",
+          "name": "Sanalosa janulosa",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Caspialosa",
+          "lineage": "Sanalosa",
+          "authorship": "Bienkowska-Wasiluk et al. 2024",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:324378"
+            "checklistbank": "txn:499496"
           },
           "children": []
         }
@@ -1066,17 +1047,18 @@
       "lineage": "alosidae"
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 67,
   "appSlug": "alosidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 11,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 44,
       "orderKey": 538,
       "familyKey": 12265246
-    }
+    },
+    "checklistbank": "txn:134528"
   }
 }

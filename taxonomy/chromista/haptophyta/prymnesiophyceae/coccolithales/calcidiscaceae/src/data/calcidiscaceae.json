@@ -45,10 +45,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 6878946
+            "gbif": 6878946,
+            "checklistbank": "txn:255451"
           },
           "uuid": "c54fee61-ec02-58c-b3c-57bdf76bd915d9",
-          "authorityIds": "gbif:6878946"
+          "authorityIds": "gbif:6878946",
+          "authorship": "(Bukry and Bramlette 1969)"
         },
         {
           "id": "SP_CALCIDISCUS_QUADRIFORATUS_KAMPTNER_1950",
@@ -657,10 +659,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calcidiscaceae"
+    },
+    {
+      "id": "GENUS_UMBILICOSPHAERA_SIBOGAE_VAR",
+      "name": "Umbilicosphaera_sibogae_var",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UMBILICOSPHAERA_SIBOGAE_VAR_FOLIOSA",
+          "name": "Umbilicosphaera_sibogae_var foliosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Umbilicosphaera_sibogae_var",
+          "sourceIds": {
+            "checklistbank": "53667"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calcidiscaceae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 36,
+  "genusCount": 15,
+  "speciesCount": 37,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

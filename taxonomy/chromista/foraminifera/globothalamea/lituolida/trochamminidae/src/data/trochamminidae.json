@@ -957,10 +957,12 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8475220
+            "gbif": 8475220,
+            "checklistbank": "txn:154113"
           },
           "uuid": "1c040cce-e40f-59e-883-669f5dcda81a91",
-          "authorityIds": "gbif:8475220"
+          "authorityIds": "gbif:8475220",
+          "authorship": "Asano 1949"
         },
         {
           "id": "TROCHAMMINA_ASHIYAENSIS",
@@ -3713,7 +3715,8 @@
             "checklistbank": "ott5674762"
           },
           "uuid": "35a48e4f-24f3-5fe-8f2-b592f9e4bb70c5",
-          "authorityIds": "col:596SY,gbif:7757843"
+          "authorityIds": "col:596SY,gbif:7757843",
+          "authorship": "Govindan and Bhandari 1988"
         },
         {
           "id": "TROCHAMMINA_INFIRMA",
@@ -4102,10 +4105,12 @@
             ],
             "col": [
               "83S64"
-            ]
+            ],
+            "checklistbank": "txn:430959"
           },
           "uuid": "ac6d0183-b8bd-5d5-815-51b96eb8af7068",
-          "authorityIds": "col:83S64,gbif:9413810"
+          "authorityIds": "col:83S64,gbif:9413810",
+          "authorship": "Broennimann  and Page 1966"
         },
         {
           "id": "TROCHAMMINA_JONESI",
@@ -9502,6 +9507,32 @@
             "checklistbank": "37356"
           },
           "children": []
+        },
+        {
+          "id": "SP_TROCHAMMINA_DEFORMIS_GRZYBOWSKI_1898",
+          "name": "Trochammina deformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochammina",
+          "authorship": "Grzybowski 1898",
+          "sourceIds": {
+            "checklistbank": "txn:154109"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TROCHAMMINA_STOMATA_GRZYBOWSKI_1898",
+          "name": "Trochammina stomata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochammina",
+          "authorship": "Grzybowski 1898",
+          "sourceIds": {
+            "checklistbank": "txn:154110"
+          },
+          "children": []
         }
       ]
     },
@@ -13306,7 +13337,8 @@
             "checklistbank": "1182753"
           },
           "uuid": "a2cb55fb-80c9-5fc-b6a-98c19af72ba924",
-          "authorityIds": "col:7ZYCX,gbif:8566920"
+          "authorityIds": "col:7ZYCX,gbif:8566920",
+          "authorship": "Gradstein and Kaminski 1997"
         },
         {
           "id": "AMMOANITA_ROSEA",
@@ -13600,7 +13632,8 @@
             "checklistbank": "1182645"
           },
           "uuid": "76f5f6ed-7cf7-551-9a7-a106a6c0e8269b",
-          "authorityIds": "col:8PS6S,gbif:8444985"
+          "authorityIds": "col:8PS6S,gbif:8444985",
+          "authorship": "(Gradstein and Kaminski 1999)"
         },
         {
           "id": "AMMOGLOBOROTALIA_QUINQUELOBA",
@@ -22484,10 +22517,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trochamminidae"
+    },
+    {
+      "id": "GENUS_INSCULPTARENULA",
+      "name": "Insculptarenula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_INSCULPTARENULA_SUBVESICULARIS_HANZLIKOVA_1955",
+          "name": "Insculptarenula subvesicularis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Insculptarenula",
+          "authorship": "(Hanzlikova 1955)",
+          "sourceIds": {
+            "checklistbank": "txn:154034"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trochamminidae"
+    },
+    {
+      "id": "GENUS_ASTEROTROCHAMMINA",
+      "name": "Asterotrochammina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTEROTROCHAMMINA_DELICATULA_BERMUDEZ_AND_SEIGLIE_1963",
+          "name": "Asterotrochammina delicatula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asterotrochammina",
+          "authorship": "Bermudez and Seiglie 1963",
+          "sourceIds": {
+            "checklistbank": "txn:240809"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trochamminidae"
+    },
+    {
+      "id": "GENUS_CARTERINA",
+      "name": "Carterina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARTERINA_BURGIOI_SENOWBARI_DARYAN_ET_AL_2015",
+          "name": "Carterina burgioi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carterina",
+          "authorship": "Senowbari-Daryan et al. 2015",
+          "sourceIds": {
+            "checklistbank": "txn:322697"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trochamminidae"
     }
   ],
-  "genusCount": 93,
-  "speciesCount": 1236,
+  "genusCount": 96,
+  "speciesCount": 1241,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

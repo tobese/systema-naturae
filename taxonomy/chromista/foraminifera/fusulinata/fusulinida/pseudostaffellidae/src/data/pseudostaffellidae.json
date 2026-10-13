@@ -422,7 +422,8 @@
           "sourceIds": {
             "col": [
               "83F5K"
-            ]
+            ],
+            "checklistbank": "txn:239005"
           },
           "authorityIds": "col:83F5K",
           "children": []
@@ -858,7 +859,8 @@
           "sourceIds": {
             "col": [
               "83F88"
-            ]
+            ],
+            "checklistbank": "txn:239012"
           },
           "authorityIds": "col:83F88",
           "children": []
@@ -1096,7 +1098,8 @@
           "sourceIds": {
             "col": [
               "83F7D"
-            ]
+            ],
+            "checklistbank": "txn:239008"
           },
           "authorityIds": "col:83F7D",
           "children": []
@@ -1590,9 +1593,11 @@
             "col": [
               "83F6M"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:929428"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:929428"
+            ]
           },
-          "authorityIds": "col:83F6M",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:929428,col:83F6M",
           "children": []
         },
         {
@@ -1780,6 +1785,58 @@
             ]
           },
           "authorityIds": "col:83F5Z",
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOSTAFFELLA_VARIABILIS_REITLINGER_1961",
+          "name": "Pseudostaffella variabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudostaffella",
+          "authorship": "(Reitlinger 1961)",
+          "sourceIds": {
+            "checklistbank": "txn:239303"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOSTAFFELLA_CUBOIDES_RAUSER_CHERNOUSOVA_1878",
+          "name": "Pseudostaffella cuboides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudostaffella",
+          "authorship": "Rauser-Chernousova 1878",
+          "sourceIds": {
+            "checklistbank": "txn:398903"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOSTAFFELLA_PANXIANENSIS_ZHANG_1974",
+          "name": "Pseudostaffella panxianensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudostaffella",
+          "authorship": "Zhang 1974",
+          "sourceIds": {
+            "checklistbank": "txn:398906"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOSTAFFELLA_PARADOXA_DUTKEVICH_1934",
+          "name": "Pseudostaffella paradoxa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudostaffella",
+          "authorship": "Dutkevich 1934",
+          "sourceIds": {
+            "checklistbank": "txn:398907"
+          },
           "children": []
         }
       ],
@@ -2605,10 +2662,13 @@
           "lineage": "Parastaffella",
           "authorship": "Liêm, 1967",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1486452"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1486452"
+            ]
           },
           "children": [],
-          "uuid": "6b2de9b5-db9b-5d2-817-275fc99c1448b6"
+          "uuid": "6b2de9b5-db9b-5d2-817-275fc99c1448b6",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1486452"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2619,19 +2679,6 @@
       "name": "\"Pseudostaffella",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_PSEUDOSTAFFELLA_LARIONOVAE_RAUZER_CHERNOUSOVA_1951",
-          "name": "\"Pseudostaffella larionovae",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pseudostaffella",
-          "authorship": "\"Rauzer-Chernousova, 1951\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:929428"
-          },
-          "children": []
-        },
         {
           "id": "SP_PSEUDOSTAFFELLA_PSEUDOSTAFFELLA_POTIEVSKAYA_1974",
           "name": "\"Pseudostaffella (Pseudostaffella)",
@@ -2722,41 +2769,20 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pseudostaffellidae"
-    },
-    {
-      "id": "GENUS_PARASTAFFELLA",
-      "name": "\"Parastaffella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARASTAFFELLA_PARASTAFFELLOIDES_LI_M_1967",
-          "name": "\"Parastaffella (Parastaffelloides)",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Parastaffella",
-          "authorship": "\"Liêm, 1967\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1486452"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pseudostaffellidae"
     }
   ],
-  "speciesCount": 161,
+  "speciesCount": 163,
   "appSlug": "pseudostaffellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Foraminifera > Fusulinata",
-  "genusCount": 13,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
       "phylumKey": 8376456,
       "orderKey": 7861739,
       "familyKey": 8699056
-    }
+    },
+    "checklistbank": "txn:113000"
   }
 }

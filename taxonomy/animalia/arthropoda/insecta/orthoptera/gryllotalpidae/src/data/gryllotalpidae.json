@@ -203,37 +203,6 @@
                   "authorityIds": "col:BT2XK,itis:102371"
                 },
                 {
-                  "id": "SPSUB_GRYLLOTALPA_AFRICANA_AFRICANA_PALISOT_DE_BEAUVOIS_1805",
-                  "name": "Gryllotalpa africana africana",
-                  "rank": "SUBSPECIES",
-                  "authorship": "Palisot de Beauvois",
-                  "yearPublished": "1805",
-                  "continents": [
-                    "Africa",
-                    "Asia",
-                    "Europe"
-                  ],
-                  "commonName": "African mole cricket",
-                  "sourcedFrom": "orthoptera species file",
-                  "subspeciesCount": 0,
-                  "lineage": "Ensifera > Gryllotalpoidea > Gryllotalpa",
-                  "children": []
-                },
-                {
-                  "id": "SPSUB_GRYLLOTALPA_AFRICANA_MICROPHTALMA_CHOPARD_1936",
-                  "name": "Gryllotalpa africana microphtalma",
-                  "rank": "SUBSPECIES",
-                  "authorship": "Chopard",
-                  "yearPublished": "1936",
-                  "continents": [
-                    "Africa"
-                  ],
-                  "sourcedFrom": "orthoptera species file",
-                  "subspeciesCount": 0,
-                  "lineage": "Ensifera > Gryllotalpoidea > Gryllotalpa",
-                  "children": []
-                },
-                {
                   "id": "SP_GRYLLOTALPA_AUSTRALIS_ERICHSON_1842",
                   "name": "Gryllotalpa australis",
                   "rank": "SPECIES",
@@ -1975,19 +1944,6 @@
                   "children": []
                 },
                 {
-                  "id": "SP_GRYLLOTALPA_VINEA_BENNET_CLARK_1970",
-                  "name": "Gryllotalpa vinea",
-                  "rank": "SPECIES",
-                  "subspeciesCount": 0,
-                  "sourcedFrom": "checklistbank",
-                  "lineage": "Gryllotalpa",
-                  "authorship": "Bennet-clark, 1970",
-                  "sourceIds": {
-                    "checklistbank": "65902"
-                  },
-                  "children": []
-                },
-                {
                   "id": "SP_GRYLLOTALPA_HEXADACTYLA_PERTY_1832",
                   "name": "Gryllotalpa hexadactyla",
                   "rank": "SPECIES",
@@ -2527,27 +2483,6 @@
                     "checklistbank": "1042010"
                   },
                   "authorityIds": "col:3PMVT"
-                },
-                {
-                  "id": "SP_INDIOSCAPTOR_SIANGENSIS_TANDON_SHISHODIA_1972",
-                  "name": "Indioscaptor siangensis",
-                  "rank": "SPECIES",
-                  "authorship": "(Tandon & Shishodia, 1972)",
-                  "continents": [
-                    "Asia"
-                  ],
-                  "sourcedFrom": "orthoptera species file",
-                  "subspeciesCount": 0,
-                  "lineage": "Ensifera > Gryllotalpoidea > Indioscaptor",
-                  "children": [],
-                  "uuid": "760c3732-292e-547-9a7-acbb510ee10bdf",
-                  "sourceIds": {
-                    "col": [
-                      "6MW7W"
-                    ],
-                    "checklistbank": "1042011"
-                  },
-                  "authorityIds": "col:6MW7W"
                 }
               ]
             }
@@ -3562,9 +3497,31 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gryllotalpidae"
+    },
+    {
+      "id": "GENUS_MARCHANDIA",
+      "name": "Marchandia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MARCHANDIA_MAGNIFICA_PERRICHOT_ET_AL_2002",
+          "name": "Marchandia magnifica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marchandia",
+          "authorship": "Perrichot et al. 2002",
+          "sourceIds": {
+            "checklistbank": "txn:216219"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gryllotalpidae"
     }
   ],
-  "speciesCount": 164,
+  "speciesCount": 163,
   "appSlug": "gryllotalpidae",
   "lineage": "Ensifera > Gryllotalpoidea",
   "continents": [
@@ -3575,7 +3532,7 @@
     "North America",
     "South America"
   ],
-  "genusCount": 20,
+  "genusCount": 21,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

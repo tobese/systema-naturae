@@ -165,9 +165,11 @@
             "col": [
               "74Z3Q"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:169716"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:169716"
+            ]
           },
-          "authorityIds": "col:74Z3Q",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:169716,col:74Z3Q",
           "authorship": "(Carter, 1876)"
         },
         {
@@ -488,9 +490,11 @@
             "col": [
               "74Z3S"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:169724"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:169724"
+            ]
           },
-          "authorityIds": "col:74Z3S",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:169724,col:74Z3S",
           "authorship": "(Schmidt, 1868)"
         },
         {
@@ -887,67 +891,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oscarellidae"
-    },
-    {
-      "id": "GENUS_CHONDROSIA",
-      "name": "Chondrosia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHONDROSIA_TUBERCULATA_SCHMIDT_1868",
-          "name": "Chondrosia tuberculata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chondrosia",
-          "authorship": "Schmidt, 1868",
-          "sourceIds": {
-            "checklistbank": "678182"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "oscarellidae"
-    },
-    {
-      "id": "GENUS_OSCARELLA",
-      "name": "\"Oscarella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OSCARELLA_CRUENTA_CARTER_1876",
-          "name": "\"Oscarella cruenta\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oscarella",
-          "authorship": "\"(Carter, 1876)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:169716"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_OSCARELLA_TUBERCULATA_SCHMIDT_1868",
-          "name": "\"Oscarella tuberculata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Oscarella",
-          "authorship": "\"(Schmidt, 1868)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:169724"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "oscarellidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 55,
+  "genusCount": 4,
+  "speciesCount": 52,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

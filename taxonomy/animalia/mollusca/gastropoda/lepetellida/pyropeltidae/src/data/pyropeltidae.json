@@ -66,9 +66,11 @@
             "col": [
               "7SYYR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1432463"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1432463"
+            ]
           },
-          "authorityIds": "col:7SYYR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1432463,col:7SYYR",
           "authorship": "(J. H. McLean, 1992)"
         },
         {
@@ -401,32 +403,10 @@
           "children": []
         }
       ]
-    },
-    {
-      "id": "GENUS_PYROPELTA",
-      "name": "\"Pyropelta",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PYROPELTA_CRAIGSMITHI_J_H_MCLEAN_1992",
-          "name": "\"Pyropelta craigsmithi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pyropelta",
-          "authorship": "\"(J. H. McLean, 1992)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1432463"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pyropeltidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 25,
+  "genusCount": 1,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

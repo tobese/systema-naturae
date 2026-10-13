@@ -328,9 +328,11 @@
             "col": [
               "4H5MZ"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:517027"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:517027"
+            ]
           },
-          "authorityIds": "col:4H5MZ",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:517027,col:4H5MZ",
           "authorship": "(Molin, 1858)"
         },
         {
@@ -921,9 +923,11 @@
             "col": [
               "4H5PH"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:517066"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:517066"
+            ]
           },
-          "authorityIds": "col:4H5PH",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:517066,col:4H5PH",
           "authorship": "(Drummond, 1838)"
         },
         {
@@ -961,9 +965,11 @@
             "col": [
               "4H5PK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:517068"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:517068"
+            ]
           },
-          "authorityIds": "col:4H5PK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:517068,col:4H5PK",
           "authorship": "(Van Beneden, 1889)"
         },
         {
@@ -2141,18 +2147,6 @@
           "lineage": "Calyptrobothrium",
           "sourceIds": {
             "checklistbank": "ott5135002"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_CALYPTROBOTHRIUM_SP",
-          "name": "Calyptrobothrium sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calyptrobothrium",
-          "sourceIds": {
-            "checklistbank": "183110"
           },
           "children": []
         }
@@ -3787,20 +3781,6 @@
             ]
           },
           "authorityIds": "col:6TYSC,itis:1061067"
-        },
-        {
-          "id": "SP_PELICHNIBOTHRIUM_SPECIOSUM_MONTICELLI_1899",
-          "name": "Pelichnibothrium speciosum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Pelichnibothrium",
-          "authorship": "Monticelli, 1899",
-          "sourceIds": {
-            "checklistbank": "25327"
-          },
-          "children": [],
-          "uuid": "5d20804b-ef2c-529-852-3b44f3645a988a"
         },
         {
           "id": "SP_PELICHNIBOTHRIUM_CAUDATUM",
@@ -9087,27 +9067,6 @@
       "lineage": "phyllobothriidae"
     },
     {
-      "id": "GENUS_PHYLLOBOTHRIID",
-      "name": "Phyllobothriid",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PHYLLOBOTHRIID_SP",
-          "name": "Phyllobothriid sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Phyllobothriid",
-          "sourceIds": {
-            "checklistbank": "400097"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "phyllobothriidae"
-    },
-    {
       "id": "GENUS_ANINDOBOTHRIUM",
       "name": "Anindobothrium",
       "rank": "GENUS",
@@ -9282,45 +9241,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:105314"
           },
           "children": []
-        },
-        {
-          "id": "SP_PHYLLOBOTHRIUM_CRISPUM_MOLIN_1858",
-          "name": "\"Phyllobothrium crispum\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phyllobothrium",
-          "authorship": "\"(Molin, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:517027"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PHYLLOBOTHRIUM_RUDICORNIS_DRUMMOND_1838",
-          "name": "\"Phyllobothrium rudicornis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phyllobothrium",
-          "authorship": "\"(Drummond, 1838)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:517066"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_PHYLLOBOTHRIUM_SEPTARIA_VAN_BENEDEN_1889",
-          "name": "\"Phyllobothrium septaria\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Phyllobothrium",
-          "authorship": "\"(Van Beneden, 1889)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:517068"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -9384,8 +9304,8 @@
       "lineage": "phyllobothriidae"
     }
   ],
-  "genusCount": 61,
-  "speciesCount": 561,
+  "genusCount": 60,
+  "speciesCount": 555,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

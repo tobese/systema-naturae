@@ -88,9 +88,11 @@
             "col": [
               "3THZ7"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207476"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:207476"
+            ]
           },
-          "authorityIds": "col:3THZ7,itis:53337,wikidata:Q3946074",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:207476,col:3THZ7,itis:53337,wikidata:Q3946074",
           "children": [],
           "authorship": "(Milne Edwards & Haime, 1849)"
         },
@@ -325,7 +327,8 @@
           "sourceIds": {
             "checklistbank": "503780"
           },
-          "children": []
+          "children": [],
+          "authorship": "Veron and Pichon 1977"
         },
         {
           "id": "SP_LEPTASTREA_TRANSVERSA",
@@ -430,32 +433,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "leptastreidae"
-    },
-    {
-      "id": "GENUS_LEPTASTREA",
-      "name": "\"Leptastrea",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_LEPTASTREA_BOTTAE_MILNE_EDWARDS_HAIME_1849",
-          "name": "\"Leptastrea bottae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Leptastrea",
-          "authorship": "\"(Milne Edwards & Haime, 1849)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:207476"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "leptastreidae"
     }
   ],
-  "speciesCount": 25,
-  "genusCount": 5,
+  "speciesCount": 24,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -464,6 +445,6 @@
       "orderKey": 714,
       "familyKey": 11206414
     },
-    "checklistbank": "3687097"
+    "checklistbank": "txn:440274"
   }
 }

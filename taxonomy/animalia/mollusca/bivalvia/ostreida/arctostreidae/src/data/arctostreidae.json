@@ -45,6 +45,19 @@
           "yearPublished": "2011",
           "children": [],
           "uuid": "63dda5e7-b9f2-5f3-a33-9d1007cfa305a2"
+        },
+        {
+          "id": "SP_NACROLOPHA_CAROLAE_CARTER_AND_MALCHUS_2011",
+          "name": "Nacrolopha carolae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nacrolopha",
+          "authorship": "Carter and Malchus 2011",
+          "sourceIds": {
+            "checklistbank": "txn:356312"
+          },
+          "children": []
         }
       ]
     },
@@ -106,9 +119,11 @@
             "col": [
               "9THTW"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1612861"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1612861"
+            ]
           },
-          "authorityIds": "col:9THTW",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1612861,col:9THTW",
           "authorship": "(Linnaeus, 1767)"
         },
         {
@@ -126,9 +141,11 @@
             "col": [
               "9WJZT"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1612870"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1612870"
+            ]
           },
-          "authorityIds": "col:9WJZT",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1612870,col:9WJZT",
           "authorship": "(J. De C. Sowerby, 1824)"
         },
         {
@@ -322,33 +339,33 @@
       "lineage": "Arctostreidae"
     },
     {
-      "id": "GENUS_RASTELLUM",
-      "name": "\"Rastellum",
+      "id": "GENUS_ARCTOSTREA",
+      "name": "Arctostrea",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_RASTELLUM_DILUVIANUM_LINNAEUS_1767",
-          "name": "\"Rastellum diluvianum\"",
+          "id": "SP_ARCTOSTREA_AVITA_DOUVILL_1916",
+          "name": "Arctostrea avita",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Rastellum",
-          "authorship": "\"(Linnaeus, 1767)\"",
+          "lineage": "Arctostrea",
+          "authorship": "Douvillé 1916",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1612861"
+            "checklistbank": "txn:322947"
           },
           "children": []
         },
         {
-          "id": "SP_RASTELLUM_MACROPTERUM_J_DE_C_SOWERBY_1824",
-          "name": "\"Rastellum macropterum\"",
+          "id": "SP_ARCTOSTREA_AMOR_D_ORBIGNY_1850",
+          "name": "Arctostrea amor",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Rastellum",
-          "authorship": "\"(J. De C. Sowerby, 1824)\"",
+          "lineage": "Arctostrea",
+          "authorship": "(d'Orbigny 1850)",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1612870"
+            "checklistbank": "txn:322976"
           },
           "children": []
         }
@@ -358,7 +375,7 @@
     }
   ],
   "genusCount": 7,
-  "speciesCount": 19,
+  "speciesCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -366,6 +383,7 @@
       "classKey": 137,
       "orderKey": 9485611,
       "familyKey": 7712738
-    }
+    },
+    "checklistbank": "txn:244076"
   }
 }

@@ -3,7 +3,30 @@
   "name": "Permanomiidae",
   "rank": "FAMILY",
   "commonName": "Permanomiidae",
-  "children": [],
+  "children": [
+    {
+      "id": "GENUS_PERMANOMIA",
+      "name": "Permanomia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERMANOMIA_TEXANA_NEWELL_AND_BOYD_1970",
+          "name": "Permanomia texana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Permanomia",
+          "authorship": "Newell and Boyd 1970",
+          "sourceIds": {
+            "checklistbank": "txn:82878"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "permanomiidae"
+    }
+  ],
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -11,6 +34,9 @@
       "classKey": 137,
       "orderKey": 9250425,
       "familyKey": 4594764
-    }
-  }
+    },
+    "checklistbank": "txn:244134"
+  },
+  "genusCount": 1,
+  "speciesCount": 1
 }

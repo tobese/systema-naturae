@@ -915,18 +915,6 @@
           },
           "uuid": "abc879f5-22bc-515-888-43d9d31756c167",
           "authorityIds": "col:BRXT,gbif:7495345"
-        },
-        {
-          "id": "SP_ALIATYPUS_SP",
-          "name": "Aliatypus sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Aliatypus",
-          "sourceIds": {
-            "checklistbank": "415142"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1021,13 +1009,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "antrodiaetidae"
+    },
+    {
+      "id": "GENUS_CRETACATTYMA",
+      "name": "Cretacattyma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRETACATTYMA_RAVENI_ESKOV_AND_ZONSHTEIN_1990",
+          "name": "Cretacattyma raveni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cretacattyma",
+          "authorship": "Eskov and Zonshtein 1990",
+          "sourceIds": {
+            "checklistbank": "txn:272321"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "antrodiaetidae"
     }
   ],
   "speciesCount": 44,
   "appSlug": "antrodiaetidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

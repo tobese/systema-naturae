@@ -82,6 +82,19 @@
           },
           "children": [],
           "uuid": "14054c27-07e6-51f-87a-45066c91d80c98"
+        },
+        {
+          "id": "SP_SERIASTRAEA_FURUKAWAI_KANMERA_1964",
+          "name": "Seriastraea furukawai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Seriastraea",
+          "authorship": "(Kanmera 1964)",
+          "sourceIds": {
+            "checklistbank": "txn:312596"
+          },
+          "children": []
         }
       ]
     },
@@ -156,9 +169,11 @@
             "col": [
               "8GMCR"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1512199"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1512199"
+            ]
           },
-          "authorityIds": "col:8GMCR",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1512199,col:8GMCR",
           "authorship": "(Winkler, 1861)"
         },
         {
@@ -297,6 +312,19 @@
             ]
           },
           "authorityIds": "col:BW7JD"
+        },
+        {
+          "id": "SP_ASTRAEOMORPHA_MINIMA_DENG_AND_ZHANG_1984",
+          "name": "Astraeomorpha minima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astraeomorpha",
+          "authorship": "Deng and Zhang 1984",
+          "sourceIds": {
+            "checklistbank": "txn:305738"
+          },
+          "children": []
         }
       ]
     },
@@ -348,32 +376,10 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Astraeomorphidae"
-    },
-    {
-      "id": "GENUS_ASTRAEOMORPHA",
-      "name": "\"Astraeomorpha",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_ASTRAEOMORPHA_CONFUSA_WINKLER_1861",
-          "name": "\"Astraeomorpha confusa\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Astraeomorpha",
-          "authorship": "\"(Winkler, 1861)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1512199"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "astraeomorphidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 18,
+  "genusCount": 5,
+  "speciesCount": 19,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -381,6 +387,7 @@
       "classKey": 206,
       "orderKey": 714,
       "familyKey": 4879853
-    }
+    },
+    "checklistbank": "txn:58370"
   }
 }

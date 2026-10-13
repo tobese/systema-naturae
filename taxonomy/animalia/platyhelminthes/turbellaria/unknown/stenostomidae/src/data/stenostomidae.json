@@ -442,20 +442,6 @@
           "uuid": "621540b4-9268-509-948-3183fd10d5827b"
         },
         {
-          "id": "SP_MYOSTENOSTOMUM_TAURICUM_NASONOV_1923",
-          "name": "Myostenostomum tauricum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myostenostomum",
-          "authorship": "(Nasonov, 1923)",
-          "sourceIds": {
-            "checklistbank": "95976"
-          },
-          "children": [],
-          "uuid": "8d23d613-efef-5ca-963-82f320f7c0723e"
-        },
-        {
           "id": "SP_MYOSTENOSTOMUM_BULBOCAUDATUM",
           "name": "Myostenostomum bulbocaudatum",
           "rank": "SPECIES",
@@ -1385,9 +1371,11 @@
             "col": [
               "525LC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:480419"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:480419"
+            ]
           },
-          "authorityIds": "col:525LC,itis:1042572"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:480419,col:525LC,itis:1042572"
         },
         {
           "id": "SP_STENOSTOMUM_MANDIBULATUM_KEPNER_CARTER_1931",
@@ -3051,19 +3039,6 @@
           "children": []
         },
         {
-          "id": "SP_STENOSTOMUM_MACEDONICUS_PICKEN_1937",
-          "name": "\"Stenostomum macedonicus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Stenostomum",
-          "authorship": "\"(Picken, 1937)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:480419"
-          },
-          "children": []
-        },
-        {
           "id": "SP_STENOSTOMUM_PARAGUAYENSE_MARTIN_1908",
           "name": "\"Stenostomum paraguayense\"",
           "rank": "SPECIES",
@@ -3191,7 +3166,7 @@
     }
   ],
   "genusCount": 11,
-  "speciesCount": 185,
+  "speciesCount": 183,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -22,7 +22,8 @@
               "4XDJM"
             ]
           },
-          "authorityIds": "col:4XDJM"
+          "authorityIds": "col:4XDJM",
+          "children": []
         },
         {
           "id": "SP_SILESITES_NEPOS_DOUVILL_1916",
@@ -38,7 +39,8 @@
               "4XDJK"
             ]
           },
-          "authorityIds": "col:4XDJK"
+          "authorityIds": "col:4XDJK",
+          "children": []
         },
         {
           "id": "SP_SILESITES_SERANONIS_D_ORBIGNY_1841",
@@ -54,7 +56,34 @@
               "4XDJL"
             ]
           },
-          "authorityIds": "col:4XDJL"
+          "authorityIds": "col:4XDJL",
+          "children": []
+        },
+        {
+          "id": "SP_SILESITES_PUZOSIAFORMIS_ANDERSON_1938",
+          "name": "Silesites puzosiaformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Silesites",
+          "authorship": "Anderson 1938",
+          "sourceIds": {
+            "checklistbank": "txn:427012"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SILESITES_VULPES_COQUAND_1878",
+          "name": "Silesites vulpes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Silesites",
+          "authorship": "(Coquand 1878)",
+          "sourceIds": {
+            "checklistbank": "txn:506999"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -79,7 +108,8 @@
               "4DC6R"
             ]
           },
-          "authorityIds": "col:4DC6R"
+          "authorityIds": "col:4DC6R",
+          "children": []
         },
         {
           "id": "SP_PARASILESITES_IRREGULARIS_IMLAY_1960",
@@ -95,7 +125,8 @@
               "4DC6S"
             ]
           },
-          "authorityIds": "col:4DC6S"
+          "authorityIds": "col:4DC6S",
+          "children": []
         },
         {
           "id": "SP_PARASILESITES_LAPEROUSIANUS_WHITEAVES_1876",
@@ -111,7 +142,8 @@
               "4DC6T"
             ]
           },
-          "authorityIds": "col:4DC6T"
+          "authorityIds": "col:4DC6T",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -134,9 +166,11 @@
           "sourceIds": {
             "col": [
               "746NP"
-            ]
+            ],
+            "checklistbank": "txn:84959"
           },
-          "authorityIds": "col:746NP"
+          "authorityIds": "col:746NP",
+          "children": []
         },
         {
           "id": "SP_NEOASTIERIA_RELIQUA_EGOIAN_1969",
@@ -152,7 +186,8 @@
               "6S6NN"
             ]
           },
-          "authorityIds": "col:6S6NN"
+          "authorityIds": "col:6S6NN",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -175,9 +210,11 @@
           "sourceIds": {
             "col": [
               "4HPN6"
-            ]
+            ],
+            "checklistbank": "txn:84961"
           },
-          "authorityIds": "col:4HPN6"
+          "authorityIds": "col:4HPN6",
+          "children": []
         },
         {
           "id": "SP_PIATNITZKYCERAS_INFIRMUM_MEDINA_RICCARDI_2005",
@@ -191,26 +228,108 @@
           "sourceIds": {
             "col": [
               "4HPN7"
-            ]
+            ],
+            "checklistbank": "txn:84962"
           },
-          "authorityIds": "col:4HPN7"
+          "authorityIds": "col:4HPN7",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Silesitidae"
+    },
+    {
+      "id": "GENUS_MIYAKOCERAS",
+      "name": "Miyakoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MIYAKOCERAS_TANOHATENSE_OBATA_1967",
+          "name": "Miyakoceras tanohatense",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Miyakoceras",
+          "authorship": "Obata 1967",
+          "sourceIds": {
+            "checklistbank": "txn:438930"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MIYAKOCERAS_HAYAMII_OBATA_1967",
+          "name": "Miyakoceras hayamii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Miyakoceras",
+          "authorship": "Obata 1967",
+          "sourceIds": {
+            "checklistbank": "txn:438931"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "silesitidae"
+    },
+    {
+      "id": "GENUS_NEOSILESITES",
+      "name": "Neosilesites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOSILESITES_NEPOS_DOUVILL_1916",
+          "name": "Neosilesites nepos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neosilesites",
+          "authorship": "(Douvillé 1916)",
+          "sourceIds": {
+            "checklistbank": "txn:323075"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "silesitidae"
+    },
+    {
+      "id": "GENUS_HAPLOBRANCOCERAS",
+      "name": "Haplobrancoceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HAPLOBRANCOCERAS_SUBQUADRATUM_AVRAM_1990",
+          "name": "Haplobrancoceras subquadratum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haplobrancoceras",
+          "authorship": "Avram 1990",
+          "sourceIds": {
+            "checklistbank": "txn:507002"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "silesitidae"
     }
   ],
-  "speciesCount": 10,
+  "speciesCount": 16,
   "appSlug": "silesitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 4,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
       "phylumKey": 52,
       "classKey": 136,
       "familyKey": 3246034
-    }
+    },
+    "checklistbank": "txn:84955"
   }
 }

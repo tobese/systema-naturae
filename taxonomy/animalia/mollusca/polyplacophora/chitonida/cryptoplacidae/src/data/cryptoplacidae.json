@@ -62,9 +62,11 @@
             "col": [
               "ZYVL"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386448"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:386448"
+            ]
           },
-          "authorityIds": "col:ZYVL",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386448,col:ZYVL",
           "authorship": "(E. A. Smith, 1884)"
         },
         {
@@ -462,9 +464,11 @@
             "col": [
               "ZYW8"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386462"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:386462"
+            ]
           },
-          "authorityIds": "col:ZYW8",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:386462,col:ZYW8",
           "authorship": "(Lamarck, 1819)"
         },
         {
@@ -743,31 +747,6 @@
           "children": []
         },
         {
-          "id": "SP_CRYPTOPLAX_PROPIOR",
-          "name": "Cryptoplax propior",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cryptoplax",
-          "sourceIds": {
-            "checklistbank": "1174923"
-          },
-          "children": [],
-          "authorship": "Taki & Taki, 1930"
-        },
-        {
-          "id": "SP_CRYPTOPLAX_DUPUISI",
-          "name": "Cryptoplax dupuisi",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cryptoplax",
-          "sourceIds": {
-            "checklistbank": "1174924"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CRYPTOPLAX_DAWYDOFFI",
           "name": "Cryptoplax dawydoffi",
           "rank": "SPECIES",
@@ -1033,19 +1012,6 @@
           "children": []
         },
         {
-          "id": "SP_CRYPTOPLAX_BURROWI_E_A_SMITH_1884",
-          "name": "\"Cryptoplax burrowi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptoplax",
-          "authorship": "\"(E. A. Smith, 1884)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386448"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CRYPTOPLAX_OCULATA_QUOY_GAIMARD_1835",
           "name": "\"Cryptoplax oculata\"",
           "rank": "SPECIES",
@@ -1057,19 +1023,6 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:386458"
           },
           "children": []
-        },
-        {
-          "id": "SP_CRYPTOPLAX_STRIATA_LAMARCK_1819",
-          "name": "\"Cryptoplax striata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Cryptoplax",
-          "authorship": "\"(Lamarck, 1819)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:386462"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1077,7 +1030,7 @@
     }
   ],
   "genusCount": 5,
-  "speciesCount": 66,
+  "speciesCount": 62,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

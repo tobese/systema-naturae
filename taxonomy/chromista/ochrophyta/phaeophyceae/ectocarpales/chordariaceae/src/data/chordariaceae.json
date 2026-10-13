@@ -911,10 +911,12 @@
             "itis": [
               "10987"
             ],
-            "checklistbank": "64926"
+            "checklistbank": [
+              "64926"
+            ]
           },
           "uuid": "066e0b28-e7f9-580-bd0-2dcc11c6df541e",
-          "authorityIds": "gbif:3198272,itis:10987"
+          "authorityIds": "checklistbank:64926,gbif:3198272,itis:10987"
         },
         {
           "id": "SP_MYRIOCLADIA_LOVENII_J_AGARDH_1841",
@@ -1019,9 +1021,11 @@
             "itis": [
               "10989"
             ],
-            "checklistbank": "64930"
+            "checklistbank": [
+              "64930"
+            ]
           },
-          "authorityIds": "itis:10989"
+          "authorityIds": "checklistbank:64930,itis:10989"
         },
         {
           "id": "SP_SAUVAGEAUGLOIA_DIVARICATA_CLEMENTE_CREMADES_1990",
@@ -4704,41 +4708,6 @@
       "lineage": "chordariaceae"
     },
     {
-      "id": "GENUS_GIRAUDIA",
-      "name": "Giraudia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_GIRAUDIA_SPHACELARIOIDES_DERB_S_SOLIER_1851",
-          "name": "Giraudia sphacelarioides",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Giraudia",
-          "authorship": "Derbès & Solier, 1851",
-          "sourceIds": {
-            "checklistbank": "65324"
-          },
-          "children": [],
-          "uuid": "52445237-01e2-50b-8d3-4eae3b031bd619"
-        },
-        {
-          "id": "SP_GIRAUDIA_SP",
-          "name": "Giraudia sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Giraudia",
-          "sourceIds": {
-            "checklistbank": "2046626"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "chordariaceae"
-    },
-    {
       "id": "GENUS_DESMOTRICHUM",
       "name": "Desmotrichum",
       "rank": "GENUS",
@@ -5048,18 +5017,6 @@
           "lineage": "Myriotrichia",
           "sourceIds": {
             "checklistbank": "2778796"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYRIOTRICHIA_CLAVIFORMIS",
-          "name": "Myriotrichia claviformis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myriotrichia",
-          "sourceIds": {
-            "checklistbank": "64930"
           },
           "children": []
         }
@@ -9783,19 +9740,6 @@
           "children": []
         },
         {
-          "id": "SP_GONONEMA_PECTINATUM_SKOTTSBERG_KUCKUCK_SKOTTSBERG_1921",
-          "name": "Gononema pectinatum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Gononema",
-          "authorship": "(Skottsberg) Kuckuck & Skottsberg, 1921",
-          "sourceIds": {
-            "checklistbank": "64926"
-          },
-          "children": []
-        },
-        {
           "id": "SP_GONONEMA_SP",
           "name": "Gononema sp.",
           "rank": "SPECIES",
@@ -10565,9 +10509,12 @@
           "lineage": "Myelophycus",
           "authorship": "J.Tanaka & Chihara, 1984",
           "sourceIds": {
-            "checklistbank": "194696"
+            "checklistbank": [
+              "194696"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:194696"
         },
         {
           "id": "SP_MYELOPHYCUS_SIMPLEX_HARVEY_PAPENFUSS_1967",
@@ -10604,18 +10551,6 @@
           "lineage": "Myelophycus",
           "sourceIds": {
             "checklistbank": "2711134"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_MYELOPHYCUS_CAVUM",
-          "name": "Myelophycus cavum",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Myelophycus",
-          "sourceIds": {
-            "checklistbank": "194696"
           },
           "children": []
         }
@@ -10955,8 +10890,8 @@
       "lineage": "chordariaceae"
     }
   ],
-  "genusCount": 168,
-  "speciesCount": 704,
+  "genusCount": 167,
+  "speciesCount": 699,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

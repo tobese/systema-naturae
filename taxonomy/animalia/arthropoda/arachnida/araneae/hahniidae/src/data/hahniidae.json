@@ -2811,7 +2811,8 @@
           "sourceIds": {
             "itis": [
               "880467"
-            ]
+            ],
+            "checklistbank": "349792"
           },
           "authorityIds": "itis:880467"
         },
@@ -2828,7 +2829,8 @@
           "sourceIds": {
             "itis": [
               "880476"
-            ]
+            ],
+            "checklistbank": "349793"
           },
           "authorityIds": "itis:880476"
         },
@@ -2961,19 +2963,6 @@
           "continents": [
             "Asia"
           ]
-        },
-        {
-          "id": "SP_HAHNIA_PROPINQUA_SIMON_1875",
-          "name": "Hahnia propinqua",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Hahnia",
-          "authorship": "Simon, 1875",
-          "sourceIds": {
-            "checklistbank": "791743"
-          },
-          "children": []
         },
         {
           "id": "SP_HAHNIA_MAGNA_KEYSERLING_1887",
@@ -7444,18 +7433,6 @@
             "checklistbank": "ott3561116"
           },
           "children": []
-        },
-        {
-          "id": "SP_CALYMMARIA_SP",
-          "name": "Calymmaria sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Calymmaria",
-          "sourceIds": {
-            "checklistbank": "389035"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7479,6 +7456,18 @@
           },
           "children": [],
           "uuid": "23155a10-8e97-5fa-87e-89767a4cc021a6"
+        },
+        {
+          "id": "SP_TUBERTA_MIRABILIS",
+          "name": "Tuberta mirabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tuberta",
+          "sourceIds": {
+            "checklistbank": "349812"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -7782,13 +7771,113 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hahniidae"
+    },
+    {
+      "id": "GENUS_CYMBIOHAHNIA",
+      "name": "Cymbiohahnia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYMBIOHAHNIA_PARENS_WUNDERLICH_2004",
+          "name": "Cymbiohahnia parens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cymbiohahnia",
+          "authorship": "Wunderlich 2004",
+          "sourceIds": {
+            "checklistbank": "txn:274293"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hahniidae"
+    },
+    {
+      "id": "GENUS_EOHAHNIA",
+      "name": "Eohahnia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOHAHNIA_SUCCINI_PETRUNKEVITCH_1958",
+          "name": "Eohahnia succini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eohahnia",
+          "authorship": "Petrunkevitch 1958",
+          "sourceIds": {
+            "checklistbank": "txn:274443"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hahniidae"
+    },
+    {
+      "id": "GENUS_PROTOHAHNIA",
+      "name": "Protohahnia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTOHAHNIA_ANTIQUA_WUNDERLICH_2004",
+          "name": "Protohahnia antiqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protohahnia",
+          "authorship": "Wunderlich 2004",
+          "sourceIds": {
+            "checklistbank": "txn:275993"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PROTOHAHNIA_TRIPARTITA_WUNDERLICH_2004",
+          "name": "Protohahnia tripartita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protohahnia",
+          "authorship": "Wunderlich 2004",
+          "sourceIds": {
+            "checklistbank": "txn:275994"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hahniidae"
+    },
+    {
+      "id": "GENUS_CRYPHOECINA",
+      "name": "Cryphoecina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPHOECINA_DEELEMANAE",
+          "name": "Cryphoecina deelemanae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryphoecina",
+          "sourceIds": {
+            "checklistbank": "349787"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hahniidae"
     }
   ],
-  "speciesCount": 346,
+  "speciesCount": 350,
   "appSlug": "hahniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 38,
+  "genusCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

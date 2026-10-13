@@ -87,9 +87,11 @@
             "itis": [
               "659882"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:514421"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:514421"
+            ]
           },
-          "authorityIds": "col:9CP8V,itis:659882",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:514421,col:9CP8V,itis:659882",
           "children": []
         },
         {
@@ -215,18 +217,6 @@
             "checklistbank": "691920"
           },
           "children": []
-        },
-        {
-          "id": "SP_BATHYPALAEMONELLA_SP",
-          "name": "Bathypalaemonella sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bathypalaemonella",
-          "sourceIds": {
-            "checklistbank": "576279"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -325,35 +315,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bathypalaemonellidae"
-    },
-    {
-      "id": "GENUS_BATHYPALAEMONELLA",
-      "name": "\"Bathypalaemonella",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BATHYPALAEMONELLA_PANDALOIDES_RATHBUN_1906",
-          "name": "\"Bathypalaemonella pandaloides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bathypalaemonella",
-          "authorship": "\"(Rathbun, 1906)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:514421"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "bathypalaemonellidae"
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 15,
   "appSlug": "bathypalaemonellidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 4,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

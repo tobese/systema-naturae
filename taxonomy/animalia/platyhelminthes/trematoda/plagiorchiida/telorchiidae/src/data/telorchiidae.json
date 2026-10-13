@@ -1729,6 +1729,42 @@
             "checklistbank": "1008879"
           },
           "children": []
+        },
+        {
+          "id": "SP_TELORCHIS_PARVUS",
+          "name": "Telorchis parvus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Telorchis",
+          "sourceIds": {
+            "checklistbank": "391190"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TELORCHIS_SOLIVAGUS",
+          "name": "Telorchis solivagus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Telorchis",
+          "sourceIds": {
+            "checklistbank": "391192"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TELORCHIS_STOSSICHI",
+          "name": "Telorchis stossichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Telorchis",
+          "sourceIds": {
+            "checklistbank": "391193"
+          },
+          "children": []
         }
       ]
     },
@@ -1828,9 +1864,11 @@
             "col": [
               "C7X87"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1742536"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1742536"
+            ]
           },
-          "authorityIds": "col:C7X87",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1742536,col:C7X87",
           "authorship": "(Dujardin, 1845) Looss, 1899"
         },
         {
@@ -2216,20 +2254,6 @@
             "checklistbank": "3417303"
           },
           "authorityIds": "col:KZKK9"
-        },
-        {
-          "id": "SP_ORCHIDASMA_AMPHIORCHIS_BRAUN_1899",
-          "name": "Orchidasma amphiorchis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Orchidasma",
-          "authorship": "(Braun, 1899)",
-          "sourceIds": {
-            "checklistbank": "29098"
-          },
-          "children": [],
-          "uuid": "f59ec1ab-079c-556-a17-f2bde7312ad68c"
         },
         {
           "id": "SP_ORCHIDASMA_CHELONIAE_LIN_1981",
@@ -2973,20 +2997,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_CERCORCHIS_ERCOLANII_MONTICELLI_1893",
-          "name": "Cercorchis ercolanii",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Cercorchis",
-          "authorship": "(Monticelli., 1893)",
-          "sourceIds": {
-            "checklistbank": "242956"
-          },
-          "children": [],
-          "uuid": "93d880d5-60c8-535-aa8-9b4335de0daa4c"
-        },
-        {
           "id": "SP_CERCORCHIS_NEMATOIDES_M_HLING_1898",
           "name": "Cercorchis nematoides",
           "rank": "SPECIES",
@@ -3225,31 +3235,9 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "telorchiidae"
-    },
-    {
-      "id": "GENUS_OPISTHIOGLYPHE",
-      "name": "\"Opisthioglyphe",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_OPISTHIOGLYPHE_ENDOLOBA_DUJARDIN_1845_LOOSS_1899",
-          "name": "\"Opisthioglyphe endoloba\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Opisthioglyphe",
-          "authorship": "\"(Dujardin, 1845) Looss, 1899\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1742536"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "telorchiidae"
     }
   ],
-  "genusCount": 19,
+  "genusCount": 18,
   "speciesCount": 183,
   "sourceIds": {
     "gbif": {

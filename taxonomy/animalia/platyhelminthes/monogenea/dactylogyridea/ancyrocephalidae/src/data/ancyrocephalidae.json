@@ -120,9 +120,11 @@
             "col": [
               "9TRK"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1057134"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1057134"
+            ]
           },
-          "authorityIds": "col:9TRK",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1057134,col:9TRK",
           "authorship": "(Wedl, 1858)"
         },
         {
@@ -2318,9 +2320,11 @@
             "col": [
               "DPQS"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1057999"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1057999"
+            ]
           },
-          "authorityIds": "col:DPQS",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1057999,col:DPQS",
           "authorship": "(Leuckart, 1858)"
         },
         {
@@ -2474,9 +2478,11 @@
             "col": [
               "DPR5"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1307957"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1307957"
+            ]
           },
-          "authorityIds": "col:DPR5",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1307957,col:DPR5",
           "authorship": "(Yamaguti, 1940)"
         },
         {
@@ -6802,18 +6808,6 @@
             "checklistbank": "ott7987795"
           },
           "children": []
-        },
-        {
-          "id": "SP_EURYHALIOTREMA_SP",
-          "name": "Euryhaliotrema sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Euryhaliotrema",
-          "sourceIds": {
-            "checklistbank": "388777"
-          },
-          "children": []
         }
       ]
     },
@@ -10026,19 +10020,6 @@
           "authorship": "Zhang, 2001",
           "sourceIds": {
             "checklistbank": "1025614"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_HALIOTREMA_GRANDIS_MIZELLE_KRITSKY_1969",
-          "name": "Haliotrema grandis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Haliotrema",
-          "authorship": "(Mizelle & Kritsky, 1969)",
-          "sourceIds": {
-            "checklistbank": "1039632"
           },
           "children": []
         },
@@ -14015,6 +13996,18 @@
           "lineage": "Ligophorus",
           "sourceIds": {
             "checklistbank": "ott7987873"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIGOPHORUS_GUSSEVI",
+          "name": "Ligophorus gussevi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ligophorus",
+          "sourceIds": {
+            "checklistbank": "389072"
           },
           "children": []
         }
@@ -19660,18 +19653,6 @@
           "lineage": "Bravohollisia",
           "sourceIds": {
             "checklistbank": "ott5681924"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BRAVOHOLLISIA_SP",
-          "name": "Bravohollisia sp.",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Bravohollisia",
-          "sourceIds": {
-            "checklistbank": "183134"
           },
           "children": []
         }
@@ -48198,19 +48179,6 @@
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ACTINOCLEIDUS_CRUCIATUS_WEDL_1858",
-          "name": "\"Actinocleidus cruciatus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Actinocleidus",
-          "authorship": "\"(Wedl, 1858)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1057134"
-          },
-          "children": []
-        },
-        {
           "id": "SP_ACTINOCLEIDUS_OCULATUS_MUELLER_1934_MUELLER_1937",
           "name": "\"Actinocleidus oculatus\"",
           "rank": "SPECIES",
@@ -48228,33 +48196,19 @@
       "lineage": "ancyrocephalidae"
     },
     {
-      "id": "GENUS_ANCYROCEPHALUS",
-      "name": "\"Ancyrocephalus",
+      "id": "GENUS_PSEUDODACTYLOGYRUS",
+      "name": "Pseudodactylogyrus",
       "rank": "GENUS",
       "children": [
         {
-          "id": "SP_ANCYROCEPHALUS_FORCEPS_LEUCKART_1858",
-          "name": "\"Ancyrocephalus forceps\"",
+          "id": "SP_PSEUDODACTYLOGYRUS_ANGUILLAE",
+          "name": "Pseudodactylogyrus anguillae",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Ancyrocephalus",
-          "authorship": "\"(Leuckart, 1858)\"",
+          "lineage": "Pseudodactylogyrus",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1057999"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_ANCYROCEPHALUS_MOGURNDAE_YAMAGUTI_1940",
-          "name": "\"Ancyrocephalus mogurndae\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Ancyrocephalus",
-          "authorship": "\"(Yamaguti, 1940)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1307957"
+            "checklistbank": "389086"
           },
           "children": []
         }
@@ -48264,7 +48218,7 @@
     }
   ],
   "genusCount": 191,
-  "speciesCount": 2853,
+  "speciesCount": 2849,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

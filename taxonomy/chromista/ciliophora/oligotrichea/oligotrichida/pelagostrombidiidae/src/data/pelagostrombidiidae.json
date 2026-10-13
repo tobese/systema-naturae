@@ -23,10 +23,12 @@
             "col": [
               "75Y3H"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:732818"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:732818"
+            ]
           },
           "uuid": "1c380f3b-5a2a-525-937-8cfe4ff7280954",
-          "authorityIds": "col:75Y3H,gbif:7674859",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:732818,col:75Y3H,gbif:7674859",
           "children": []
         },
         {
@@ -75,35 +77,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pelagostrombidiidae"
-    },
-    {
-      "id": "GENUS_PELAGOSTROMBIDIUM",
-      "name": "\"Pelagostrombidium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PELAGOSTROMBIDIUM_FALLAX_ZACHARIAS_1896_KRAINER_1991",
-          "name": "\"Pelagostrombidium fallax\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Pelagostrombidium",
-          "authorship": "\"(Zacharias, 1896) Krainer, 1991\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:732818"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "pelagostrombidiidae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 3,
   "appSlug": "pelagostrombidiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ciliophora > Oligotrichea",
-  "genusCount": 3,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -111,6 +91,7 @@
       "classKey": 7732358,
       "orderKey": 7885786,
       "familyKey": 8142650
-    }
+    },
+    "checklistbank": "349728"
   }
 }

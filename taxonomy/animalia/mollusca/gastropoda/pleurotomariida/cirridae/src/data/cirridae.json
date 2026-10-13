@@ -65,9 +65,24 @@
             "col": [
               "V4TGY"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1826679"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1826679"
+            ]
           },
-          "authorityIds": "col:V4TGY"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1826679,col:V4TGY"
+        },
+        {
+          "id": "SP_SPIROCIRRUS_WEISI_MONARI_ET_AL_2011",
+          "name": "Spirocirrus weisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spirocirrus",
+          "authorship": "Monari et al. 2011",
+          "sourceIds": {
+            "checklistbank": "txn:276420"
+          },
+          "children": []
         }
       ]
     },
@@ -264,6 +279,19 @@
           },
           "children": [],
           "uuid": "a7c24011-c1f7-5d9-8a2-e566beb6570007"
+        },
+        {
+          "id": "SP_HESPEROCIRRUS_TRIASICUS_COX_1949",
+          "name": "Hesperocirrus triasicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hesperocirrus",
+          "authorship": "(Cox 1949)",
+          "sourceIds": {
+            "checklistbank": "txn:266744"
+          },
+          "children": []
         }
       ]
     },
@@ -449,6 +477,19 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "0c3cc466-245b-508-893-b2887a607eacf0"
+        },
+        {
+          "id": "SP_PLATYACRA_SINISTRORSA_DESHAYES_1855",
+          "name": "Platyacra sinistrorsa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyacra",
+          "authorship": "(Deshayes 1855)",
+          "sourceIds": {
+            "checklistbank": "txn:276301"
+          },
+          "children": []
         }
       ]
     },
@@ -555,32 +596,10 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Cirridae"
-    },
-    {
-      "id": "GENUS_SPIROCIRRUS",
-      "name": "\"Spirocirrus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_SPIROCIRRUS_CALISTO_A_D_ORBIGNY_1850",
-          "name": "\"Spirocirrus calisto\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Spirocirrus",
-          "authorship": "\"(A. d'Orbigny, 1850)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1826679"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "cirridae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 30,
+  "genusCount": 11,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -588,6 +607,7 @@
       "classKey": 225,
       "orderKey": 9684115,
       "familyKey": 4607172
-    }
+    },
+    "checklistbank": "txn:59726"
   }
 }

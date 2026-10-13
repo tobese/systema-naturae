@@ -44,9 +44,11 @@
             "col": [
               "BPKWX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477760"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:477760"
+            ]
           },
-          "authorityIds": "col:BPKWX,itis:1206881",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:477760,col:BPKWX,itis:1206881",
           "children": []
         }
       ],
@@ -386,9 +388,11 @@
             "col": [
               "BPHH3"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:823855"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:823855"
+            ]
           },
-          "authorityIds": "col:BPHH3,itis:1207081",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:823855,col:BPHH3,itis:1207081",
           "children": []
         },
         {
@@ -457,6 +461,19 @@
           "authorship": "de Saint Laurent & Manning, 1982",
           "sourceIds": {
             "checklistbank": "583716"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CALLIAX_WHITEAVESI_WOODWARD_1896",
+          "name": "Calliax whiteavesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliax",
+          "authorship": "(Woodward 1896)",
+          "sourceIds": {
+            "checklistbank": "txn:207122"
           },
           "children": []
         }
@@ -605,9 +622,11 @@
             "col": [
               "BPHHD"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477656"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:477656"
+            ]
           },
-          "authorityIds": "col:BPHHD,itis:1206877",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:477656,col:BPHHD,itis:1206877",
           "children": []
         },
         {
@@ -923,6 +942,19 @@
             "checklistbank": "1001349"
           },
           "children": []
+        },
+        {
+          "id": "SP_EUCALLIAX_AEQUIMANUS_BAKER_1907",
+          "name": "Eucalliax aequimanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucalliax",
+          "authorship": "Baker 1907",
+          "sourceIds": {
+            "checklistbank": "txn:275037"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -985,79 +1017,13 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eucalliacidae"
-    },
-    {
-      "id": "GENUS_CALLIAXINA",
-      "name": "\"Calliaxina",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CALLIAXINA_SAKAII_DE_SAINT_LAURENT_IN_DE_SAINT_LAURENT_LE_LOEUFF_1979",
-          "name": "\"Calliaxina sakaii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Calliaxina",
-          "authorship": "\"(de Saint Laurent in de Saint Laurent & Le Loeuff, 1979)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477656"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eucalliacidae"
-    },
-    {
-      "id": "GENUS_PARAGLYPTURUS",
-      "name": "\"Paraglypturus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PARAGLYPTURUS_CALDERUS_TURKAY_SAKAI_1995",
-          "name": "\"Paraglypturus calderus\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Paraglypturus",
-          "authorship": "\"Turkay & Sakai, 1995\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:477760"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eucalliacidae"
-    },
-    {
-      "id": "GENUS_CALLIAX",
-      "name": "\"Calliax",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CALLIAX_TULEARENSIS_NGOC_HO_2014",
-          "name": "\"Calliax tulearensis\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Calliax",
-          "authorship": "\"Ngoc-Ho, 2014\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:823855"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "eucalliacidae"
     }
   ],
-  "speciesCount": 56,
+  "speciesCount": 55,
   "appSlug": "eucalliacidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 12,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

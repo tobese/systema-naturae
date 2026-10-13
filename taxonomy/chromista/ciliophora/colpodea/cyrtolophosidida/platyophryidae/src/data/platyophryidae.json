@@ -130,10 +130,12 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 8284720,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426519"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:426519"
+            ]
           },
           "uuid": "7c33cad8-a7e7-584-b46-7b6a1ef29bfb35",
-          "authorityIds": "gbif:8284720",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:426519,gbif:8284720",
           "authorship": "Grandori & Grandori, 1934",
           "children": []
         },
@@ -551,32 +553,10 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "platyophryidae"
-    },
-    {
-      "id": "GENUS_PLATYOPHRYA",
-      "name": "\"Platyophrya",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PLATYOPHRYA_FERROI_GRANDORI_GRANDORI_1934",
-          "name": "\"Platyophrya ferroi\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Platyophrya",
-          "authorship": "\"Grandori & Grandori, 1934\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:426519"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "platyophryidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 26,
+  "genusCount": 7,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

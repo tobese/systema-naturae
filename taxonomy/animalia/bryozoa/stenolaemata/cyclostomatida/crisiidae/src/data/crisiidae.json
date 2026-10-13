@@ -217,9 +217,11 @@
             "col": [
               "LRVC"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:173958"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:173958"
+            ]
           },
-          "authorityIds": "col:LRVC",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:173958,col:LRVC",
           "authorship": "(MacGillivray, 1869)"
         },
         {
@@ -241,9 +243,11 @@
             "itis": [
               "155623"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:470749"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:470749"
+            ]
           },
-          "authorityIds": "col:LRVD,itis:155623"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470749,col:LRVD,itis:155623"
         },
         {
           "id": "SP_BICRISIA_ERECTA_MAWATARI_MAWATARI_1973",
@@ -402,9 +406,11 @@
             "col": [
               "6J38V"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:470794"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:470794"
+            ]
           },
-          "authorityIds": "col:6J38V,itis:155626"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470794,col:6J38V,itis:155626"
         },
         {
           "id": "SP_FILICRISIA_GENICULATA",
@@ -2506,9 +2512,11 @@
             "col": [
               "ZHQX"
             ],
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:470756"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:470756"
+            ]
           },
-          "authorityIds": "col:ZHQX",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:470756,col:ZHQX",
           "authorship": "(Audouin, 1826)"
         },
         {
@@ -2865,20 +2873,6 @@
           },
           "children": [],
           "uuid": "099b4ed7-ac6e-510-afc-da2aaff256fa29"
-        },
-        {
-          "id": "SP_CRISIA_BRASILIENSIS_RAMALHO_MORAES_IN_RAMALHO_ET_AL_2021",
-          "name": "Crisia brasiliensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Crisia",
-          "authorship": "Ramalho & Moraes in Ramalho et al., 2021",
-          "sourceIds": {
-            "checklistbank": "220539"
-          },
-          "children": [],
-          "uuid": "36e4619f-3425-51d-881-6c9c309edba625"
         },
         {
           "id": "SP_CRISIA_ROMANICA_ZA_GORS_EK_SILYE_SZAB_2008",
@@ -3971,19 +3965,6 @@
           "children": []
         },
         {
-          "id": "SP_CRISIA_SERTULARIOIDES_AUDOUIN_1826",
-          "name": "\"Crisia sertularioides\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Crisia",
-          "authorship": "\"(Audouin, 1826)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:470756"
-          },
-          "children": []
-        },
-        {
           "id": "SP_CRISIA_EBURNEA_D_HONDT_1988",
           "name": "\"Crisia eburnea",
           "rank": "SPECIES",
@@ -4178,62 +4159,14 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:111709"
           },
           "children": []
-        },
-        {
-          "id": "SP_FILICRISIA_FRANCISCANA_ROBERTSON_1910",
-          "name": "\"Filicrisia franciscana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Filicrisia",
-          "authorship": "\"(Robertson, 1910)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:470794"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "crisiidae"
-    },
-    {
-      "id": "GENUS_BICRISIA",
-      "name": "\"Bicrisia",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_BICRISIA_BICILIATA_MACGILLIVRAY_1869",
-          "name": "\"Bicrisia biciliata\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bicrisia",
-          "authorship": "\"(MacGillivray, 1869)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:173958"
-          },
-          "children": []
-        },
-        {
-          "id": "SP_BICRISIA_EDWARDSIANA_D_ORBIGNY_1841",
-          "name": "\"Bicrisia edwardsiana\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Bicrisia",
-          "authorship": "\"(d'Orbigny, 1841)\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:470749"
-          },
-          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "crisiidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 251,
+  "genusCount": 14,
+  "speciesCount": 246,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

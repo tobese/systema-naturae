@@ -158,11 +158,13 @@
           "sourcedFrom": "gbif",
           "sourceIds": {
             "gbif": 7661792,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:109927"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:109927"
+            ]
           },
           "children": [],
           "uuid": "60850eab-a3a5-518-a98-47f445ab0e83a4",
-          "authorityIds": "gbif:7661792",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:109927,gbif:7661792",
           "authorship": "(Pavillard, 1907) Elbrächter, 1993"
         },
         {
@@ -1556,11 +1558,13 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 7378612,
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341583"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:341583"
+            ]
           },
           "children": [],
           "uuid": "5c7583ef-3ce1-5a7-928-bd47a05a6700c1",
-          "authorityIds": "gbif:7378612"
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:341583,gbif:7378612"
         },
         {
           "id": "PROTOPERIDINIUM_INFLATUM",
@@ -3757,9 +3761,12 @@
           "lineage": "Protoperidinium",
           "authorship": "K.N.Mertens, H.Gu, A.M.Price & K.Matsuoka, 2017",
           "sourceIds": {
-            "checklistbank": "1856636"
+            "checklistbank": [
+              "1856636"
+            ]
           },
-          "children": []
+          "children": [],
+          "authorityIds": "checklistbank:1856636"
         },
         {
           "id": "SP_PROTOPERIDINIUM_CONCAVUM_MANGIN_BALECH_1974",
@@ -3788,14 +3795,14 @@
           "children": []
         },
         {
-          "id": "SP_PROTOPERIDINIUM_LOUSIANENSIS",
-          "name": "Protoperidinium lousianensis",
+          "id": "SP_PROTOPERIDINIUM_TRICINGULATUM",
+          "name": "Protoperidinium tricingulatum",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Protoperidinium",
           "sourceIds": {
-            "checklistbank": "1856636"
+            "checklistbank": "9076"
           },
           "children": []
         }
@@ -4163,11 +4170,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8836659
+            "gbif": 8836659,
+            "checklistbank": "txn:264660"
           },
           "children": [],
           "uuid": "f7313759-b2ad-5cf-bdb-3e5ebed84bba96",
-          "authorityIds": "gbif:8836659"
+          "authorityIds": "gbif:8836659",
+          "authorship": "Matsuoka and Bujak 1988"
         },
         {
           "id": "SELENOPEMPHIX_DIONAEACYSTA",
@@ -4180,11 +4189,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8483010
+            "gbif": 8483010,
+            "checklistbank": "txn:208983"
           },
           "children": [],
           "uuid": "5003e07d-d89d-544-b2b-ab68a26be249ae",
-          "authorityIds": "gbif:8483010"
+          "authorityIds": "gbif:8483010",
+          "authorship": "Head et al. 1989"
         },
         {
           "id": "SELENOPEMPHIX_NEPHROIDES",
@@ -4197,11 +4208,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7520588
+            "gbif": 7520588,
+            "checklistbank": "txn:264662"
           },
           "children": [],
           "uuid": "f1b393ea-bd48-53f-b99-6796a8500c9e0b",
-          "authorityIds": "gbif:7520588"
+          "authorityIds": "gbif:7520588",
+          "authorship": "Benedek 1972"
         },
         {
           "id": "SELENOPEMPHIX_WARRIENSIS",
@@ -4214,11 +4227,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8969874
+            "gbif": 8969874,
+            "checklistbank": "txn:264661"
           },
           "children": [],
           "uuid": "da0483c7-1a4d-570-990-29bbeeab3174c6",
-          "authorityIds": "gbif:8969874"
+          "authorityIds": "gbif:8969874",
+          "authorship": "Biffi and Grignani 1983"
         },
         {
           "id": "SP_SELENOPEMPHIX_UNDULATA_T_J_VERLEYE_V_POSPELOVA_K_N_MERTENS_S_LOUWYE_2011",
@@ -4389,11 +4404,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8600066
+            "gbif": 8600066,
+            "checklistbank": "txn:264655"
           },
           "children": [],
           "uuid": "3d4b9224-9649-5b8-bda-9f9b6af63b1225",
-          "authorityIds": "gbif:8600066"
+          "authorityIds": "gbif:8600066",
+          "authorship": "Biffi and Grignani 1983"
         },
         {
           "id": "PHELODINIUM_EXILICORNUTUM",
@@ -4406,11 +4423,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8472733
+            "gbif": 8472733,
+            "checklistbank": "txn:277100"
           },
           "children": [],
           "uuid": "7bcff948-fac0-5a3-8fb-069cdd3019c2d8",
-          "authorityIds": "gbif:8472733"
+          "authorityIds": "gbif:8472733",
+          "authorship": "Smith 1992"
         },
         {
           "id": "PHELODINIUM_KOZLOWSKII",
@@ -4423,11 +4442,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8681027
+            "gbif": 8681027,
+            "checklistbank": "txn:278503"
           },
           "children": [],
           "uuid": "0427557d-958f-540-bc0-f996ece3d012e6",
-          "authorityIds": "gbif:8681027"
+          "authorityIds": "gbif:8681027",
+          "authorship": "Lindgren 1984"
         },
         {
           "id": "PHELODINIUM_MAGNIFICUM",
@@ -4440,11 +4461,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7863938
+            "gbif": 7863938,
+            "checklistbank": "txn:278504"
           },
           "children": [],
           "uuid": "18ada4db-3223-512-a46-6cc1dd07ed39f3",
-          "authorityIds": "gbif:7863938"
+          "authorityIds": "gbif:7863938",
+          "authorship": "Stover and Evitt 1978"
         },
         {
           "id": "PHELODINIUM_NIGERICUM",
@@ -4457,11 +4480,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8597584
+            "gbif": 8597584,
+            "checklistbank": "txn:264656"
           },
           "children": [],
           "uuid": "40acf874-7034-52d-802-42d71c23848707",
-          "authorityIds": "gbif:8597584"
+          "authorityIds": "gbif:8597584",
+          "authorship": "Biffi and Grignani 1983"
         },
         {
           "id": "PHELODINIUM_TRICUSPE",
@@ -4474,11 +4499,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8521381
+            "gbif": 8521381,
+            "checklistbank": "txn:329436"
           },
           "children": [],
           "uuid": "30bef69c-ed5a-578-9c1-5d166074ceef77",
-          "authorityIds": "gbif:8521381"
+          "authorityIds": "gbif:8521381",
+          "authorship": "Wetzel 1933"
         }
       ]
     },
@@ -4500,11 +4527,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8475390
+            "gbif": 8475390,
+            "checklistbank": "txn:264643"
           },
           "children": [],
           "uuid": "de74416e-640c-5ab-a18-dd1053298e017c",
-          "authorityIds": "gbif:8475390"
+          "authorityIds": "gbif:8475390",
+          "authorship": "Lentin and Williams 1981"
         },
         {
           "id": "LEJEUNECYSTA_COMMUNIS",
@@ -4517,11 +4546,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8597180
+            "gbif": 8597180,
+            "checklistbank": "txn:264644"
           },
           "children": [],
           "uuid": "36f7a4a7-a3a3-51c-8a1-ccc2f807a2bf5a",
-          "authorityIds": "gbif:8597180"
+          "authorityIds": "gbif:8597180",
+          "authorship": "Biffi and Grignani 1983"
         },
         {
           "id": "LEJEUNECYSTA_GLOBOSA",
@@ -4534,11 +4565,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8684142
+            "gbif": 8684142,
+            "checklistbank": "txn:264645"
           },
           "children": [],
           "uuid": "d81315cb-1ef4-5e1-b96-4b12d2a8b75d6c",
-          "authorityIds": "gbif:8684142"
+          "authorityIds": "gbif:8684142",
+          "authorship": "Biffi and Grignani 1983"
         },
         {
           "id": "LEJEUNECYSTA_PULCHRA",
@@ -4551,11 +4584,13 @@
           "description": "",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 8600474
+            "gbif": 8600474,
+            "checklistbank": "txn:264646"
           },
           "children": [],
           "uuid": "66e2e9a1-1ec0-548-ac1-6625517a560851",
-          "authorityIds": "gbif:8600474"
+          "authorityIds": "gbif:8600474",
+          "authorship": "Biffi and Grignani 1983"
         },
         {
           "id": "SP_LEJEUNECYSTA_ROTUNDA_CLOWES_HANNAH_WILSON_WRENN_2016",
@@ -4659,6 +4694,18 @@
           },
           "children": [],
           "uuid": "2dc9611e-f407-567-842-8d9c049d97cdbe"
+        },
+        {
+          "id": "SP_ARCHAEPERIDINIUM_SAANICHI",
+          "name": "Archaeperidinium saanichi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeperidinium",
+          "sourceIds": {
+            "checklistbank": "351490"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5118,19 +5165,6 @@
           "children": []
         },
         {
-          "id": "SP_PERIDINIUM_CLAUDICANS_PAULSEN_1907",
-          "name": "Peridinium claudicans",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Peridinium",
-          "authorship": "Paulsen, 1907",
-          "sourceIds": {
-            "checklistbank": "929565"
-          },
-          "children": []
-        },
-        {
           "id": "SP_PERIDINIUM_CONICOIDES_PAULSEN_1905",
           "name": "Peridinium conicoides",
           "rank": "SPECIES",
@@ -5578,28 +5612,6 @@
       "lineage": "protoperidiniaceae"
     },
     {
-      "id": "GENUS_CERATIUM",
-      "name": "Ceratium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CERATIUM_DIVERGENS_EHRENBERG_CLAP_J_LACHM_1859",
-          "name": "Ceratium divergens",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Ceratium",
-          "authorship": "(Ehrenberg) Clap. & J.Lachm., 1859",
-          "sourceIds": {
-            "checklistbank": "929574"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "protoperidiniaceae"
-    },
-    {
       "id": "GENUS_ISLANDINIUM",
       "name": "Islandinium",
       "rank": "GENUS",
@@ -5749,28 +5761,6 @@
       "lineage": "protoperidiniaceae"
     },
     {
-      "id": "GENUS_PREPERIDINIUM",
-      "name": "\"Preperidinium",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_PREPERIDINIUM_MEUNIERII_PAVILLARD_1907_ELBR_CHTER_1993",
-          "name": "\"Preperidinium meunierii\"",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "\"Preperidinium",
-          "authorship": "\"(Pavillard, 1907) Elbrächter, 1993\"",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:109927"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "protoperidiniaceae"
-    },
-    {
       "id": "GENUS_PROTOPERIDINIUM",
       "name": "\"Protoperidinium",
       "rank": "GENUS",
@@ -5800,16 +5790,26 @@
             "checklistbank": "urn:lsid:marinespecies.org:taxname:110236"
           },
           "children": []
-        },
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protoperidiniaceae"
+    },
+    {
+      "id": "GENUS_MALVINIA",
+      "name": "Malvinia",
+      "rank": "GENUS",
+      "children": [
         {
-          "id": "SP_PROTOPERIDINIUM_INCONGNITUM",
-          "name": "\"Protoperidinium incongnitum\"",
+          "id": "SP_MALVINIA_ESCUTIANA_HOUBEN_ET_AL_2011",
+          "name": "Malvinia escutiana",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "\"Protoperidinium",
+          "lineage": "Malvinia",
+          "authorship": "Houben et al. 2011",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:341583"
+            "checklistbank": "txn:437413"
           },
           "children": []
         }
@@ -5818,8 +5818,8 @@
       "lineage": "protoperidiniaceae"
     }
   ],
-  "speciesCount": 316,
-  "genusCount": 29,
+  "speciesCount": 314,
+  "genusCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
