@@ -134,11 +134,18 @@ def read_store():
 
 
 def write_store(rows):
-    tmp = STORE + ".tmp"
-    with open(tmp, "w", encoding="utf-8") as f:
-        for r in rows:
-            f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
-    os.replace(tmp, STORE)
+    import tempfile
+    fd, tmp = tempfile.mkstemp(dir=os.path.dirname(STORE), prefix="families.jsonl.", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            for r in rows:
+                f.write(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n")
+        os.replace(tmp, STORE)
+    finally:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
 
 
 def cmd_seed(_args):

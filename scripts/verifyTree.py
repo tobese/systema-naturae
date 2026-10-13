@@ -247,10 +247,23 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     # collisions (Didymocyrtis, Fluminicola), plus 6 more Eisenia species under
     # the same earthworm/kelp family pair already confirmed above.
     "SP_DIDYMOCYRTIS_SP", "SP_FLUMINICOLA_SP",
-    "SP_EISENIA_CAROLINENSIS", "SP_EISENIA_MURANYII", "SP_EISENIA_NANA",
-    "SP_EISENIA_OREOPHILA", "SP_EISENIA_SALAIRICA", "SP_EISENIA_TRACTA",
+    "SP_EISENIA_CAROLINENSIS", "SP_EISENIA_MURANYII",
+    "SP_EISENIA_NANA", "SP_EISENIA_OREOPHILA",
+    "SP_EISENIA_SALAIRICA", "SP_EISENIA_TRACTA",
+    # GTDB archaea top-up (2026-10-12): 9 more, every one a
+    # genus that is simultaneously an animal genus and a fungal
+    # genus, each carrying an indeterminate "Genus sp." record in
+    # both kingdoms -- Bactridium (beetle / fungus), Corticium
+    # (sponge / corticioid fungus), Crucibulum (snail / bird's-nest
+    # fungus), Hypoderma (botfly / fungus), Microstoma (fly /
+    # fungus), Scutiger (centipede / fungus), Serpula (tubeworm /
+    # dry rot), Tapinella (rove beetle / fungus), Venturia (fly /
+    # apple scab). Same class as the NCBI placeholders above: two
+    # unrelated real genera that each carry an unidentified record.
+    "SP_BACTRIDIUM_SP", "SP_CORTICIUM_SP", "SP_CRUCIBULUM_SP",
+    "SP_HYPODERMA_SP", "SP_MICROSTOMA_SP", "SP_SCUTIGER_SP",
+    "SP_SERPULA_SP", "SP_TAPINELLA_SP", "SP_VENTURIA_SP",
 }
-
 
 def check_duplicate_species():
     """No species id in two families *within one kingdom*.
@@ -388,7 +401,17 @@ CODE_LIKE_NAME = re.compile(r"^\d+[-_]\d+|^\d+$")
 # "Incertae sedis" would match the project's 103 existing placeholder families,
 # but it moves directories, appSlugs and node ids, so it is a decision rather
 # than a repair. Listed here so the gate is honest instead of permanently red.
-KNOWN_CODE_LIKE_FAMILIES = {"1-14-0-10-31-34", "21-14-0-10-32-9"}
+# GTDB's placeholder family codes, from the GTDB r232 archaea
+# top-up (2026-10-12): GTDB names the families it erects for
+# unnamed clades by their genome placeholder code ("0-14-0-20-30-16")
+# rather than a Latin name -- the same convention the bacteria
+# scaffold's "surf-5"/"jafgav01" families use, but those sit in the
+# undeclared bacteria kingdom this check does not walk. These three
+# are real GTDB family designations, not importer bugs.
+KNOWN_CODE_LIKE_FAMILIES = {
+    "1-14-0-10-31-34", "21-14-0-10-32-9",
+    "0-14-0-20-30-16", "0-14-0-20-34-12", "0-14-0-80-44-23",
+}
 PLACEHOLDER_NAME = re.compile(
     r"^(unknown|incertae\s+sedis|unclassified|unplaced)$", re.I)
 

@@ -186,7 +186,24 @@ SOURCES = {
         "Its value is narrower and real: prokaryote and viral coverage, and the "
         "type material and literature citations the NCBI record carries and no "
         "checklist we hold does. CC0, so licensing is not an obstacle. Not "
-        "downloaded."),
+        "downloaded. "
+        "Bacteria and Viruses domains applied 2026-10-12 by "
+        "scripts/importNcbiBacteriaViruses.py on q-bert (the "
+        "other 2.5M accepted names are the eukaryotic kingdoms "
+        "the main NCBI import of the same date already took): "
+        "Bacteria 603,027 subtree taxa -> 819 family files "
+        "(554 merged into the GTDB scaffold's families with "
+        "19,422 species, 267 new families with 6,634 species, "
+        "722 families parked under 'Incertae sedis'); Viruses "
+        "275,709 subtree taxa -> 298 family files (337 ICTV "
+        "families, 13,019 species, 61 under 'Incertae sedis'). "
+        "Both passes filter to clean binomials (26,295 bacterial "
+        "and 16,740 viral names not already held, measured "
+        "2026-10-12) -- NCBI's species rank is overwhelmingly "
+        "strain/clone/environmental records, which "
+        "looks_binomial() rejects. The ICTV MSL pass "
+        "(see ictv-msl) superseded the virus half the same "
+        "day with the curated authority."),
     "gtdb": (
         "Genome Taxonomy Database r232", "DOI 10.15468/dpzg84 (GBIF dataset "
         "a97f36e5-ded1-49cc-bdec-ac6170fc7b9c); ColDP endpoint "
@@ -209,7 +226,60 @@ SOURCES = {
         "same rule. "
         "Scope note: GTDB covers Bacteria and Archaea only and holds no viral "
         "taxa, so it says nothing about the virus half. See "
-        "docs/bacteria-and-viruses.md."),
+        "docs/bacteria-and-viruses.md. "
+        "APPLIED twice, both on q-bert 2026-10-12: the Bacteria "
+        "domain was scaffolded as inert structures by "
+        "scripts/importGtdbBacteria.py (184,809 species, 3,519 "
+        "families, 571 parked under 'Incertae sedis'), and the "
+        "Archaea domain topped up the DECLARED Archaea kingdom by "
+        "scripts/importGtdbArchaea.py (10,122 in scope, ~3,130 "
+        "genuinely new -- the rest the NCBI/ITIS archaea imports "
+        "already held, both deriving from the same nomenclature -- "
+        "into 248 family files: 112 merged into the 131 existing "
+        "families, 259 new GTDB families, 20 groups parked under "
+        "'Incertae sedis', 13 new orders). Archaea's tree already "
+        "spoke GTDB phylum names (Aenigmatarchaeota, Halobacteriota, "
+        "Thermoproteota ...), so the merge was clean; three of "
+        "GTDB's unnamed-family placeholder codes (0-14-0-20-30-16 "
+        "and siblings) landed as family names and are documented in "
+        "verifyTree's KNOWN_CODE_LIKE_FAMILIES."),
+    "lpsn": (
+        "List of Prokaryotic names with Standing in Nomenclature",
+        "ChecklistBank dataset 2015, nomenclatural, issued "
+        "2026-10-04",
+        "https://www.checklistbank.org/dataset/2015", "CC BY 4.0",
+        "declined",
+        "DECLINED 2026-10-12: a nomenclatural register, not a "
+        "taxonomy. Type is 'nomenclatural', it has no taxon table, "
+        "and paging its species through the ChecklistBank API "
+        "returns zero accepted species -- the same shape that "
+        "declined ZooBank and the Australian Faunal Directory: a "
+        "name register with no accepted/synonym split and no "
+        "hierarchy to place names in. No archive export either "
+        "(both ColDP and DwCA 404)."),
+    "silva-ssu": (
+        "SILVA SSU Taxonomy", "ChecklistBank dataset 315045, DOI "
+        "10.48580/dgxmn, v144 issued 2026-10-04",
+        "https://www.checklistbank.org/dataset/315045", "CC BY 4.0",
+        "declined",
+        "DECLINED 2026-10-12: a genus-level rRNA taxonomy, not a "
+        "species list. 1,497 families of which we hold 430 "
+        "(28.7%), but paging its species through the API returns "
+        "zero accepted species -- SILVA's 16S classification "
+        "resolves to genus for nearly all taxa, and what "
+        "species-level names it carries are the "
+        "uncultured/environmental isolate names (the same class "
+        "the NCBI pass's filter rejects) rather than described "
+        "species. No archive export either (both formats 404)."),
+    "silva-lsu": (
+        "SILVA LSU Taxonomy", "ChecklistBank dataset 315044, DOI "
+        "10.48580/dgxmm, v138.2 issued 2026-08-23",
+        "https://www.checklistbank.org/dataset/315044", "CC BY 4.0",
+        "declined",
+        "DECLINED 2026-10-12: same verdict as SILVA SSU, "
+        "smaller -- 805 families, 204 held (25.3%), zero accepted "
+        "species via the API, no archive export. A genus-level "
+        "23S/28S rRNA taxonomy."),
     "inaturalist": (
         "iNaturalist taxa and names", "iNaturalist API",
         "https://www.inaturalist.org",
@@ -304,20 +374,27 @@ SOURCES = {
     "ictv-msl": (
         "ICTV Master Species List (MSL41)", "DOI 10.5281/zenodo.19154110; "
         "published 2026-03-21; the 2025-2026 ICTV taxonomy, ratified February "
-        "2026",
-        "https://zenodo.org/records/19154110", "CC BY 4.0", "assessed",
-        "NOT DOWNLOADED, and deliberately so: viruses are on hold until further "
-        "notice, so registering the source is the whole of the work for now. "
-        "Recorded because it is the virus authority -- the one source that states "
-        "the official ICTV taxonomy, which COL and Wikidata both decline to give "
-        "at a usable rank. "
-        "Two things to know before anyone does download it. It is an XLSX "
-        "(ICTV_Master_Species_List_2025_MSL41.v1.xlsx, 1.80 MB), a fifth format "
-        "this repo has no reader for, alongside NEWICK and DOT -- see "
-        "docs/archive-formats.md. And sources/archives/ictv-msl/ exists but is "
-        "EMPTY, left by an abandoned download, which is why this entry appears "
-        "now rather than when the archive landed. "
-        "Also CC BY 4.0, so citable with attribution once taken."),
+        "2026; also ChecklistBank dataset 1014 (DOI 10.48580/d37z) and, "
+        "directly, ictv.global/msl/current",
+        "https://ictv.global/msl/current", "CC BY 4.0", "applied",
+        "APPLIED 2026-10-12 by scripts/importIctvMsl.py on q-bert: the "
+        "xlsx is served directly from ictv.global/msl/current (Zenodo "
+        "403s this network range, and ChecklistBank 1014 has no archive "
+        "export -- both export formats 404 -- so the ICTV site is the "
+        "only working download). openpyxl installed on q-bert for it. "
+        "17,554 species -- 13,528 post-2021-reform binomials plus "
+        "4,026 pre-reform legacy names (\"Tobacco mosaic virus\" and "
+        "friends, which the MSL's own Genus column places, so they never "
+        "go through GNparser's binomial parse) -- into 393 family files "
+        "(298 merged with the NCBI pass's files, 130 new), 10 realms, "
+        "11 kingdoms, 22 phyla, 50 classes, 105 orders, and the MSL's "
+        "stable ids (ICTV202420188) stamped as ictvId. Subfamily is "
+        "read (232 of them; the tree's rank vocabulary has it); "
+        "subrealm/subkingdom/subphylum/subclass/suborder/subgenus are "
+        "not -- no such rank exists in the model. "
+        "Wrote portal/data/taxonomy-viruses.json and "
+        "taxonomy/viruses/<realm>/.../src/data/*.json; NOT registered "
+        "in kingdom-config.json, same policy as the bacteria scaffold."),
     "ildis": (
         "ILDIS -- World Database of Legumes", "DOI 10.48580/d382 "
         "(ChecklistBank dataset 1015); version 12, May 2014, issued 2014-05-05",
@@ -1169,6 +1246,196 @@ SOURCES = {
         "https://zenodo.org/records/20272755",
         "mostly non-commercial per image", "refused",
         "nothing. Only 9,703 of 77,404 taxa carry a free-to-reuse licence"),
+    "checklistbank-1130": (
+        "MolluscaBase", "DOI not recorded; version 2026-10-12",
+        "https://www.checklistbank.org/dataset/1130",
+        "CC BY", "assessed",
+        "Major mollusk checklist, 493k species, current. High priority for mollusca gaps."),
+    "checklistbank-2018": (
+        "Germplasm Resources Information Network (GRIN)", "DOI not recorded; version 2026-10-04",
+        "https://www.checklistbank.org/dataset/2018",
+        "CC0", "assessed",
+        "Plant genetic resources, 167k species. USDA-backed, permissive licence."),
+    "checklistbank-2039": (
+        "The Plant List with literature", "DOI not recorded",
+        "https://www.checklistbank.org/dataset/2039",
+        "CC BY", "assessed",
+        "1.3M species, plant literature-linked checklist. Large potential top-up."),
+    "checklistbank-312898": (
+        "Banco Taxonômico Integrado da Biodiversidade Brasileira", "DOI not recorded; version 2025-10-25",
+        "https://www.checklistbank.org/dataset/312898",
+        "CC BY", "assessed",
+        "Brazilian integrated biodiversity bank, 348k species. Complements Brazilian Fauna."),
+    "checklistbank-2317": (
+        "3i World Auchenorrhyncha Database", "DOI not recorded; version Oct 2026",
+        "https://www.checklistbank.org/dataset/2317",
+        "CC0", "assessed",
+        "Hemiptera: Auchenorrhyncha specialist, 129k species. CC0 licence."),
+    "checklistbank-170394": (
+        "Bryophyte Nomenclator", "DOI not recorded; version 7 Oct 2026",
+        "https://www.checklistbank.org/dataset/170394",
+        "CC BY", "assessed",
+        "Bryophyte specialist checklist, 111k species. Fills bryophyte gaps."),
+    "checklistbank-1039": (
+        "Electronic Catalogue of Weevil names (Curculionidae)", "DOI not recorded; version 2021-04",
+        "https://www.checklistbank.org/dataset/1039",
+        "CC BY", "assessed",
+        "Weevil specialist database, 110k species. Large coleoptera family gap."),
+    "checklistbank-307515": (
+        "MELISR Taxonomy", "DOI not recorded; version 9",
+        "https://www.checklistbank.org/dataset/307515",
+        "CC BY", "assessed",
+        "169k species, licence CC BY. Needs measurement."),
+    "checklistbank-312272": (
+        "ZA National list", "DOI not recorded; version 2025-09-13",
+        "https://www.checklistbank.org/dataset/312272",
+        "CC BY", "assessed",
+        "South African national checklist, 137k species. Regional endemic coverage."),
+    "checklistbank-312227": (
+        "South African National Species Checklist", "DOI not recorded; version 2025-09-17",
+        "https://www.checklistbank.org/dataset/312227",
+        "CC BY", "assessed",
+        "South African catalogue, 137k species. Complements ZA National list."),
+    "checklistbank-316038": (
+        "ZOOtest", "DOI not recorded; version 2026-08-11",
+        "https://www.checklistbank.org/dataset/316038",
+        "CC BY", "assessed",
+        "Test dataset, 446k species. Prokaryotes/bacteria/eukaryotes/protists/plants."),
+    "checklistbank-1157": (
+        "World Foraminifera Database", "DOI not recorded; version 2026-10-12",
+        "https://www.checklistbank.org/dataset/1157",
+        "CC BY", "assessed",
+        "Foraminifera specialist database, 90k species. Marine protist coverage."),
+    "checklistbank-2014": (
+        "Checklist Dutch Species Register - Nederlands Soortenregister", "DOI not recorded; version 2026-09-24",
+        "https://www.checklistbank.org/dataset/2014",
+        "CC BY", "assessed",
+        "Dutch national species register, 101k species. European regional coverage."),
+    "checklistbank-2304": (
+        "The World Checklist of Vascular Plants (WCVP): review", "DOI not recorded; version 2026, v.7",
+        "https://www.checklistbank.org/dataset/2304",
+        "CC BY", "assessed",
+        "WCVP review edition, 90k species. Duplicate of 2000/2232 - verify if distinct."),
+    "checklistbank-290762": (
+        "The FinBIF checklist of Finnish species", "DOI not recorded; version 2026-07-29",
+        "https://www.checklistbank.org/dataset/290762",
+        "CC BY", "assessed",
+        "Finnish biodiversity checklist, 79k species. Nordic regional coverage."),
+    "checklistbank-308974": (
+        "The Protist Ribosomal Reference database (PR2)", "DOI not recorded; version 5.1.0",
+        "https://www.checklistbank.org/dataset/308974",
+        "CC0", "assessed",
+        "Protist rRNA reference database, 73k species. CC0 licence, microbial eukaryotes."),
+    "checklistbank-312578": (
+        "Catalogue of Life (main)", "DOI not recorded; version 2025-10-10",
+        "https://www.checklistbank.org/dataset/312578",
+        "CC BY", "assessed",
+        "Main Catalogue of Life, 9.4M species. Largest unified checklist."),
+    "checklistbank-9910": (
+        "Catalogue of Life Checklist", "DOI not recorded; Annual Checklist",
+        "https://www.checklistbank.org/dataset/9910",
+        "CC BY", "assessed",
+        "Catalogue of Life Annual Checklist, 4.9M species. Annual snapshot."),
+    "checklistbank-201890": (
+        "Open Tree of Life reference taxonomy", "DOI not recorded; version 3.7.2",
+        "https://www.checklistbank.org/dataset/201890",
+        "CC0", "assessed",
+        "Open Tree of Life reference taxonomy, 4.5M species. CC0 licence."),
+    "checklistbank-9802": (
+        "The Mammal Diversity Database", "DOI not recorded; version 2.1",
+        "https://www.checklistbank.org/dataset/9802",
+        "CC BY", "assessed",
+        "Mammal specialist database, 95k species. CC BY licence."),
+    "checklistbank-1027": (
+        "World Scarabaeidae Database", "DOI not recorded; version 2026-10-05",
+        "https://www.checklistbank.org/dataset/1027",
+        "CC BY", "assessed",
+        "Scarabaeidae specialist database, 80k species. Coleoptera gap filler."),
+    "checklistbank-1140": (
+        "Checklist of Ferns and Lycophytes of the World", "DOI not recorded; version 26.08",
+        "https://www.checklistbank.org/dataset/1140",
+        "CC BY", "assessed",
+        "Pteridophyte specialist checklist, 70k species. Fern/lycophyte gap filler."),
+    "checklistbank-2013": (
+        "The eBird/Clements Checklist of Birds of the World", "DOI not recorded; version 2025",
+        "https://www.checklistbank.org/dataset/2013",
+        "CC BY", "assessed",
+        "Bird taxonomy from eBird/Clements, 67k species. Avian specialist."),
+    "checklistbank-2017": (
+        "Afromoths, online database of Afrotropical moths", "DOI not recorded; version 2026-10-01",
+        "https://www.checklistbank.org/dataset/2017",
+        "CC BY", "assessed",
+        "Afrotropical Lepidoptera database, 64k species. Regional moth coverage."),
+    "checklistbank-1068": (
+        "Taxapad Ichneumonoidea", "DOI not recorded; version May 2009",
+        "https://www.checklistbank.org/dataset/1068",
+        "CC BY", "assessed",
+        "Ichneumonoidea (Hymenoptera) specialist database, 60k species. Parasitoid wasp coverage."),
+    "checklistbank-310690": (
+        "GlobalTreeSearch", "DOI not recorded; version 2025-07-01",
+        "https://www.checklistbank.org/dataset/310690",
+        "CC BY-NC", "assessed",
+        "Global tree species checklist, 62k species. Non-commercial licence (CC BY-NC)."),
+    "checklistbank-312166": (
+        "South African National Plant Checklist", "DOI not recorded; version 2025-09-13",
+        "https://www.checklistbank.org/dataset/312166",
+        "CC BY", "assessed",
+        "South African plant checklist (COLDP), 63k species. Regional endemic plants."),
+    "checklistbank-1200": (
+        "MilliBase", "DOI not recorded; version 2026-10-12",
+        "https://www.checklistbank.org/dataset/1200",
+        "CC BY", "applied",
+        "Millipede specialist database (Diplopoda), 34k species. Applied on q-bert."),
+    "checklistbank-170809": (
+        "Handbook of the Birds of the World and BirdLife", "DOI not recorded; version 9.1",
+        "https://www.checklistbank.org/dataset/170809",
+        "CC BY", "assessed",
+        "Bird taxonomy from HBW/BirdLife, 34k species. Avian specialist."),
+    "checklistbank-54937": (
+        "An Online Catalog of the Ants of the World", "DOI not recorded; version 2026-10-04",
+        "https://www.checklistbank.org/dataset/54937",
+        "CC BY", "applied",
+        "Ant specialist database (Formicidae), 34k species. Applied on q-bert."),
+    "checklistbank-2012": (
+        "Database of Vascular Plants of Canada (VASCAN)", "DOI not recorded; version 2026-08-04",
+        "https://www.checklistbank.org/dataset/2012",
+        "CC0", "assessed",
+        "Canadian vascular plants database, 33k species. CC0 licence."),
+    "checklistbank-2036": (
+        "IOC World Bird List", "DOI not recorded; version 15.2",
+        "https://www.checklistbank.org/dataset/2036",
+        "CC BY", "assessed",
+        "International Ornithological Congress bird list, 33k species. Avian taxonomy standard."),
+    "checklistbank-1191": (
+        "World of Copepods Database", "DOI not recorded; version 2026-10-12",
+        "https://www.checklistbank.org/dataset/1191",
+        "CC BY", "assessed",
+        "Copepod (Crustacea) specialist database, 31k species. Marine crustacean coverage."),
+    "checklistbank-1175": (
+        "World Ostracoda Database", "DOI not recorded; version 2026-10-12",
+        "https://www.checklistbank.org/dataset/1175",
+        "CC BY", "assessed",
+        "Ostracod (Crustacea) specialist database, 31k species. Marine crustacean coverage."),
+    "checklistbank-1166": (
+        "World Entiminae Database", "DOI not recorded; version Oct 2026",
+        "https://www.checklistbank.org/dataset/1166",
+        "CC BY", "assessed",
+        "Entiminae weevil subfamily specialist database, 30k species. Curculionidae gap filler."),
+    "checklistbank-2042": (
+        "Cichorieae Systematics Portal", "DOI not recorded; version 2024-01-03",
+        "https://www.checklistbank.org/dataset/2042",
+        "CC BY", "assessed",
+        "Cichorieae (dandelion tribe) plant specialist database, 30k species. Asteraceae gap filler."),
+    "checklistbank-1090": (
+        "World Polychaeta Database", "DOI not recorded; version 2026-10-12",
+        "https://www.checklistbank.org/dataset/1090",
+        "CC BY", "assessed",
+        "Polychaete worm specialist database, 30k species. Annelida gap filler."),
+    "checklistbank-1118": (
+        "Hymenoptera Information System", "DOI not recorded; version Jul 2017",
+        "https://www.checklistbank.org/dataset/1118",
+        "CC BY", "assessed",
+        "Hymenoptera specialist database, 30k species. Wasp/bee/ant gap filler."),
 }
 
 
