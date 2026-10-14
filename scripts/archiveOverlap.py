@@ -32,6 +32,7 @@ import json
 import os
 import re
 import sys
+import tarfile
 import urllib.request
 import zipfile
 
@@ -67,9 +68,16 @@ def strip_authorship(n):
     return n
 
 
+def _open_member(z, member):
+    """Open a member from either a zip or a tar archive."""
+    if z._t is not None:
+        return z.extractfile(member)
+    return z.open(member)
+
+
 def _read_table(z, member, delim):
     """-> (header index, row iterator) for one table in an archive."""
-    f = z.open(member)
+    f = _open_member(z, member)
     rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
                     delimiter=delim)
     hdr = next(rd)
@@ -154,8 +162,24 @@ def read_archive(path):
     whole content. That is what the source says; whether a nomenclatural
     register's "accepted" is a taxonomic claim is a separate question this
     script does not answer.
+
+    The endpoint is named archive.zip and answers with content-type
+    application/zip, but ILDIS (1015) and GloBIS (1046) return a gzip'd tar whose
+    members are their own tables. Trusting the name is how a reader ends up
+    raising BadZipFile on a valid download, so the magic decides.
     """
-    z = zipfile.ZipFile(path)
+    with open(path, "rb") as fh:
+        magic = fh.read(2)
+    if magic == b"PK":
+        z = zipfile.ZipFile(path)
+        z._t = None
+    elif magic == b"\x1f\x8b":
+        z = tarfile.open(path, "r:gz")
+        z._z = None
+    else:
+        raise ValueError(f"{path}: not a zip or gzip (magic {magic!r})")
+    if not hasattr(z, "namelist"):
+        z.namelist = z.getnames
     members = z.namelist()
 
     if "NameUsage.tsv" in members:
