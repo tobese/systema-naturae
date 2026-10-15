@@ -152,7 +152,7 @@ class _Container:
 
 def _norm(h):
     """Column name -> comparison key: strip col:, lowercase, drop underscores."""
-    h = h[4:] if h.startswith("col:") else h
+    h = h[4:] if h.startswith(("col:", "dwc:")) else h
     return re.sub(r"[^a-z0-9]", "", h.lower())
 
 

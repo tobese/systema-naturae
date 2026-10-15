@@ -74,9 +74,32 @@ ACCEPTED = {"accepted", "provisionally accepted"}
 
 
 def _columns(header):
-    """col:-stripped name -> index."""
-    return {(h[4:] if h.startswith("col:") else h): i
-            for i, h in enumerate(header)}
+    """index -> column name, with DwCA/ColDP namespaces resolved.
+
+    Species Fungorum (dataset 2073) is a DwCA whose columns are all `dwc:`,
+    not `col:`, so without the second prefix every lookup for ID / parentID /
+    scientificName failed and the import refused the whole source. Strip
+    whichever DwCA namespace prefix is present.
+
+    The DwCA term names also differ from the ColDP names load_core looks up:
+    dwc:taxonID -> ID, dwc:parentNameUsageID -> parentID, dwc:taxonomicStatus
+    -> status, dwc:taxonRank -> rank. Map those too, because the importers
+    index by the ColDP names and would otherwise refuse the source.
+    """
+    DWCA = {
+        "taxonID": "ID",
+        "parentNameUsageID": "parentID",
+        "acceptedNameUsageID": "acceptedID",
+        "taxonomicStatus": "status",
+        "taxonRank": "rank",
+        "scientificName": "scientificName",
+        "scientificNameAuthorship": "authorship",
+    }
+    out = {}
+    for i, h in enumerate(header):
+        bare = h[4:] if h.startswith(("col:", "dwc:")) else h
+        out[DWCA.get(bare, bare)] = i
+    return out
 
 
 def metadata(path):
@@ -127,8 +150,17 @@ def aux_tables(path, names=("VernacularName", "Distribution", "Media",
                     io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
                     delimiter="\t")
                 for row in rd:
-                    yield n, {(k[4:] if k and k.startswith("col:") else k): v
-                              for k, v in row.items()}
+                    # Strip the ColDP/DwCA namespace prefix. load_core used to
+                    # strip only `col:`, which is what ChecklistBank's own
+                    # exports carry -- but Species Fungorum (dataset 2073) is a
+                    # DwCA whose columns are all `dwc:`, so every lookup for
+                    # ID / parentID / scientificName failed and the import
+                    # refused the whole source. Strip whichever prefix is
+                    # present, leaving the bare column name.
+                    yield n, {
+                        (k[4:] if k and k.startswith(("col:", "dwc:")) else k): v
+                        for k, v in row.items()
+                    }
 
 
 def load_core(path, accepted=ACCEPTED, want_authorship=True):
@@ -255,7 +287,7 @@ def load_core_csv(path, accepted=ACCEPTED, want_authorship=True):
             rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8",
                                              errors="replace"), delimiter=delim)
             hdr = next(rd)
-            ix = {(h[4:] if h.startswith("col:") else h): i
+            ix = {(h[4:] if h.startswith(("col:", "dwc:")) else h): i
                   for i, h in enumerate(hdr)}
             ix.update({k.lower(): v for k, v in list(ix.items())})
             return rd, ix

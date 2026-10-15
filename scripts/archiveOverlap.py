@@ -87,7 +87,7 @@ def _read_table(z, member, delim):
     # whose first column is `id` used to raise KeyError on its own header.
     ix = {}
     for i, h in enumerate(hdr):
-        k = h[4:] if h.startswith("col:") else h
+        k = h[4:] if h.startswith(("col:", "dwc:")) else h
         ix[k.lstrip("\ufeff")] = i
         ix.setdefault(k.lstrip("\ufeff").lower(), i)
     return ix, rd
