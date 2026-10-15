@@ -41,6 +41,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import canonicalNames as C  # noqa: E402
 import coldp  # noqa: E402
 import importSpeciesFile as SF  # noqa: E402
+import import_actions as IA  # noqa: E402
 import taxamatch  # noqa: E402
 
 KINGDOM = "Bacteria"
@@ -62,6 +63,13 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--limit-families", type=int, default=0)
     args = ap.parse_args()
+
+    IA.install_interrupt_handlers(KINGDOM.lower())
+    IA.log_action("start", KINGDOM.lower(), {
+        "archive": args.archive, "source": SOURCE,
+        "taxonomyFile": TAXONOMY_FILE, "apply": bool(args.apply),
+        "limitFamilies": args.limit_families or None,
+    })
 
     idx = C._load()
     canon = set(idx.keys()) | set(idx.values())
@@ -243,6 +251,16 @@ def main() -> int:
             with open(target, "w", encoding="utf-8") as fh:
                 json.dump(root, fh, indent=2, ensure_ascii=False)
                 fh.write("\n")
+            # Record per-family what was written. This is the detail that makes
+            # an interrupted import reconstructable: which families got new
+            # species, how many, from which run. Without it, "what produced
+            # the missing species" is a question about a half-written tree.
+            IA.log_action("family-write", KINGDOM.lower(), {
+                "slug": fslug, "path": target, "phylum": phylum,
+                "klass": klass, "order": order, "familyName": fname,
+                "species": n_species, "genera": len(genus_of),
+                "merged": bool(os.path.exists(target)),
+            })
         counters["written"] += 1
 
     incerta = collections.defaultdict(list)
@@ -286,6 +304,13 @@ def main() -> int:
         json.dump(tax, fh, indent=2, ensure_ascii=False)
         fh.write("\n")
     print(f"\n  wrote {TAXONOMY_FILE}  (NOT registered in kingdom-config.json)")
+    IA.log_action("finish", KINGDOM.lower(), {
+        "taxonomyFile": TAXONOMY_FILE,
+        "familiesWritten": counters["written"],
+        "speciesSkipped": counters["skipped"],
+        "unplacedFamilies": counters["unplaced"],
+        "newOrders": len(new_orders),
+    })
     return 0
 
 

@@ -77,6 +77,13 @@ portal/data/non-english-descriptions.jsonl
 portal/data/commons-credits.jsonl
 portal/data/inat-fetch-state.json
 
+# Runtime import/build action log. Append-only JSONL written by
+# portal/scripts/lib/importActions.ts (TS builds) and scripts/import_actions.py
+# (Python imports) — one line per start/finish/error/interrupted/uuid-stamp
+# event, so a killed run leaves a reconstructable record of what it did.
+# Grows unbounded and is regenerated on every run; never version it.
+portal/data/import-actions.jsonl
+
 # Stripped from history 2026-10-10 (exceeded GitHub's 100MB hard limit and
 # were blocking every push since). Both regenerable/downloaded, never meant
 # to be versioned: sanity-queue.json is a scan snapshot

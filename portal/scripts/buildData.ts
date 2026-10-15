@@ -3,6 +3,7 @@ import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { resolveFamilyFile, familySourceStamp } from "./lib/familyPath.js";
 import { createHash } from "crypto";
+import { logAction, installInterruptHandlers } from "./lib/importActions.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "../../");
@@ -165,9 +166,19 @@ function writeFamilyFileWithUuids(
     if (uuids.size > 0) {
       const updatedFamilyData = applyUuidsToFamily(familyData, uuids, slug);
       writeFileSync(dataPath, JSON.stringify(updatedFamilyData, null, 2) + "\n");
+      // Record per-family what was stamped. This is the detail that makes an
+      // interrupted backfill reconstructable: which families got uuids, how
+      // many, from which run. Without it, "what produced the missing uuids"
+      // is a question about a half-written tree with no answer.
+      logAction("uuid-stamp", kingdom, {
+        slug, path: dataPath, phylum, cls, ord, uuidCount: uuids.size,
+      });
+    } else {
+      logAction("uuid-skip", kingdom, { slug, path: dataPath, phylum, cls, ord });
     }
   } catch (e) {
     console.warn(`  Warning: could not write UUIDs to ${dataPath}: ${(e as Error).message}`);
+    logAction("error", kingdom, { slug, path: dataPath, error: (e as Error).message });
   }
 }
 
@@ -428,6 +439,7 @@ function timed<T>(phase: string, fn: () => T): T {
 }
 
 console.log(`Building kingdom ${effectiveKingdom} → ${outputPath} from ${taxonomyPath}…`);
+installInterruptHandlers(effectiveKingdom);
 const taxonomy = timed("read+parse taxonomy.json", () => JSON.parse(readFileSync(taxonomyPath, "utf-8")) as TaxonNode);
 
 let taxonomyStat: ReturnType<typeof statSync> | undefined;
@@ -436,6 +448,10 @@ try {
 } catch {
   // Shouldn't happen — taxonomy.json was just read above.
 }
+logAction("start", effectiveKingdom, {
+  taxonomyPath, outputPath, taxonomyMtimeMs: taxonomyStat?.mtimeMs,
+  taxonomySize: taxonomyStat?.size, cache: NO_CACHE ? "off" : "on",
+});
 let taxonomyUnchanged = false;
 if (!NO_CACHE && taxonomyStat && existsSync(buildStatePath)) {
   try {
@@ -1052,6 +1068,9 @@ if (missingFamilyFiles > 0) {
 // (plantae: 1,259 declared, 1,021 with files). A *total* failure means the
 // resolver itself is wrong, so that aborts.
 if (declared > 0 && resolvedFamilies === 0) {
+  logAction("error", effectiveKingdom, {
+    error: "no family data files resolved", missingFamilyFiles,
+  });
   console.error(
     `\nERROR: none of ${missingFamilyFiles} family data files resolved.\n` +
     `Every family in ${effectiveKingdom} grafted empty, which means the path\n` +
@@ -1059,3 +1078,15 @@ if (declared > 0 && resolvedFamilies === 0) {
   );
   process.exit(1);
 }
+
+logAction("finish", effectiveKingdom, {
+  physicalNodes: physicalCount,
+  compressedSpecies: flatSpeciesCount,
+  totalNodes: physicalCount + flatSpeciesCount,
+  familiesResolved: resolvedFamilies,
+  familiesMissing: missingFamilyFiles,
+  cacheHits: familyCacheHits,
+  cacheMisses: familyCacheMisses,
+  durationMs: Math.round(phaseLog.reduce((s, p) => s + p.ms, 0)),
+  outputPath,
+});
