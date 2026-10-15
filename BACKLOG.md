@@ -51,6 +51,12 @@
   source files (0 of 14,085 contain one), or sample-based checks. `make check`
   is the CI gate and can't stay red on a hung step.
 
+  **Candidate fix:** `make species-parquet` already builds a 47 MB columnar
+  index (2.35M species, full rank path denormalised) in 82s. A parquet-backed
+  `verifyTree` would load once and query in milliseconds instead of re-parsing
+  14,085 JSON files every run. Not yet started — `make species-parquet` exists
+  but `verifyTree` still reads source files directly.
+
 ### Needs a decision
 
 - **PhyloPic icons** — see the item at the end of this file. Still open: rank,
