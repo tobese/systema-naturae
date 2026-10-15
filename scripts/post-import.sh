@@ -72,6 +72,13 @@ for KINGDOM in "${KINGDOMS[@]}"; do
   echo "==> 1. Backfill uuids + build $KINGDOM"
   export SN_KINGDOM="$KINGDOM"
   export NODE_OPTIONS="--max-old-space-size=8192"
+  # bacteria and viruses are not in kingdom-config.json — they resolve their
+  # input via SN_INPUT in buildData.ts.
+  case "$KINGDOM" in
+    bacteria) export SN_INPUT="data/taxonomy-bacteria.json" ;;
+    viruses)  export SN_INPUT="data/taxonomy-viruses.json" ;;
+    *) unset SN_INPUT ;;
+  esac
   cd portal
   if [ -n "$UNIFIED" ]; then export SN_BUILD_UNIFIED=1; fi
   sh scripts/buildData.sh
