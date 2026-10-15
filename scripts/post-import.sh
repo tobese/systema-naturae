@@ -31,8 +31,24 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
-KINGDOMS=("${SN_KINGDOMS:-animalia plantae fungi chromista protozoa archaea}")
+# The six kingdoms declared in portal/data/kingdom-config.json are the source
+# of truth for what to backfill+build. bacteria and viruses are not in that
+# config (they resolve their input via SN_INPUT in buildData.ts), so they are
+# appended explicitly here.
 UNIFIED=""
+if [ -z "${SN_KINGDOMS:-}" ]; then
+  CONFIG_KINGDOMS="$(python3 -c "
+import json,sys
+print(' '.join(json.load(open('portal/data/kingdom-config.json'))['kingdoms'].keys()))
+" 2>/dev/null)"
+  if [ -n "$CONFIG_KINGDOMS" ]; then
+    KINGDOMS=($CONFIG_KINGDOMS bacteria viruses)
+  else
+    KINGDOMS=(animalia plantae fungi chromista protozoa archaea bacteria viruses)
+  fi
+else
+  KINGDOMS=(${SN_KINGDOMS})
+fi
 while [ $# -gt 0 ]; do
   case "$1" in
     --kingdom) KINGDOMS=("$2"); shift 2 ;;
