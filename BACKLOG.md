@@ -44,6 +44,12 @@
   failure because it is widespread and pre-existing; the graph reads genus from
   the tree structure instead. Fixing the field wants its own pass, not a
   drive-by during an import.
+- **Profile `verifyTree.py` check 2** — it hangs past check 1 at the current
+  ~3.8 GB tree (~2.5M species). `iter_family_files('animalia')` alone is 67s
+  across 10,601 family files via recursive glob, and `count_species` re-parses
+  every file. Either cache per-family counts, skip speciesList compression on
+  source files (0 of 14,085 contain one), or sample-based checks. `make check`
+  is the CI gate and can't stay red on a hung step.
 
 ### Needs a decision
 
