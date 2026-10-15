@@ -1,5 +1,6 @@
 import { existsSync, statSync, readFileSync } from "fs";
 import { join } from "path";
+import { readdirSync } from "fs";
 
 /**
  * Where a family's data file lives.
@@ -25,6 +26,15 @@ import { join } from "path";
  * Tardigrada case twice and differently. Divergent copies fail silently: a glob
  * that matches nothing returns [], the loop body never runs, and the script
  * reports success having done nothing.
+ *
+ * The viruses kingdom is the exception that proves the rule: its tree carries
+ * REALM and KINGDOM ranks above PHYLUM, so a family sits at
+ * taxonomy/viruses/<realm>/<kingdom>/<phylum>/<class>/<order>/<family>/ — two
+ * extra levels the candidate paths below do not model. Without the search
+ * fallback those 95 families resolve to nothing, the graft is silently skipped,
+ * and the uuid backfill stamps zero of their species. The fallback is a
+ * filesystem search by slug, which is safe because a slug is unique within a
+ * kingdom.
  */
 
 export type FamilyLayout = "kingdom";
@@ -89,9 +99,47 @@ export function resolveFamilyFile(root: string, loc: FamilyLocation): ResolvedFa
       return { file, dir: file.slice(0, cut), layout: c.layout };
     }
   }
+  // Fallback: search the filesystem. Needed for the viruses kingdom, whose tree
+  // carries REALM and KINGDOM ranks above PHYLUM, so a family sits two levels
+  // deeper than any candidate path models. A slug is unique within a kingdom,
+  // so this search cannot return the wrong family — but it can return a path
+  // that does not match the rank path, which testDataContract.ts would then
+  // flag. That is the correct signal: either the tree or the resolver is wrong,
+  // and the test exists to catch exactly that.
+  const found = searchFamilyFile(root, loc.kingdom, loc.slug);
+  if (found) return found;
   const file = join(root, candidatePaths(loc)[0].rel);
   const cut = file.length - `${loc.slug}.json`.length - 1;
   return { file, dir: file.slice(0, cut), layout: "kingdom" };
+}
+
+/** Filesystem search by slug within a kingdom. Returns null if not found. */
+export function searchFamilyFile(
+  root: string, kingdom: string, slug: string,
+): ResolvedFamily | null {
+  const target = `${slug}.json`;
+  const kingdomDir = join(root, "taxonomy", dirName(kingdom));
+  if (!existsSync(kingdomDir)) return null;
+  const stack: string[] = [kingdomDir];
+  while (stack.length) {
+    const dir = stack.pop()!;
+    let entries: string[];
+    try { entries = readdirSync(dir); } catch { continue; }
+    for (const e of entries) {
+      const full = join(dir, e);
+      if (e === "src" && existsSync(join(full, "data", target))) {
+        const file = join(full, "data", target);
+        return { file, dir: full, layout: "kingdom" };
+      }
+      const stat = statSyncSafe(full);
+      if (stat?.isDirectory()) stack.push(full);
+    }
+  }
+  return null;
+}
+
+function statSyncSafe(p: string): ReturnType<typeof statSync> | null {
+  try { return statSync(p); } catch { return null; }
 }
 
 export function familyFileExists(root: string, loc: FamilyLocation): boolean {
