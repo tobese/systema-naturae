@@ -159,11 +159,58 @@ def main() -> int:
     ap.add_argument("--shard", default="0/1", help="i/n -- parse only slice i of n")
     ap.add_argument("--workers", type=int, default=6, help="concurrent requests")
     ap.add_argument("--apply-authorship", action="store_true")
+    ap.add_argument("--no-cache", action="store_true",
+                    help="re-parse every name even if already in index")
     args = ap.parse_args()
 
     pairs = collect(args.root)
     if args.limit:
         pairs = pairs[: args.limit]
+
+    # ---- Cache: skip (name, rank) pairs already in the index ----
+    cached: set[tuple[str, str]] = set()
+    existing: list[dict] = []
+    if not args.no_cache and os.path.exists(args.out):
+        with open(args.out, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rec = json.loads(line)
+                    cached.add((rec["n"], rec["ourRank"]))
+                    existing.append(rec)
+                except (json.JSONDecodeError, KeyError):
+                    pass
+        print(f"  {len(cached):,} pairs already in index, will skip them", flush=True)
+
+    pairs = [p for p in pairs if p not in cached]
+    if not pairs:
+        print("  nothing new to parse", flush=True)
+        # Rebuild tally from existing records for the report
+        tally = Counter()
+        rank_mismatch = Counter()
+        rank_agree = Counter()
+        rank_absent = Counter()
+        examples: dict[str, list[str]] = {}
+        for rec in existing:
+            t = rec.get("type") or "NO_NAME"
+            tally[t] += 1
+            if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
+                examples[t].append(rec["n"])
+            marker = rec.get("rankMarker")
+            expected = MARKERS.get(rec.get("ourRank"))
+            if expected:
+                if marker is None:
+                    rank_absent[rec.get("ourRank")] += 1
+                elif marker in expected:
+                    rank_agree[rec.get("ourRank")] += 1
+                else:
+                    rank_mismatch[rec.get("ourRank")] += 1
+        _write_report(tally, rank_agree, rank_mismatch, rank_absent, examples, sum(tally.values()), args.report)
+        return 0
+
+    print(f"Parsing {len(pairs):,} distinct (name, rank) pairs\n", flush=True)
 
     # The endpoint sustains ~113 names/s on one connection, which is ~3.2 hours
     # for 1.3M names. Sharding plus concurrency is the only way this is
@@ -176,8 +223,7 @@ def main() -> int:
         sys.exit(f"FATAL: --shard {args.shard} out of range")
     if sn > 1:
         pairs = pairs[si::sn]
-        print(f"shard {si+1}/{sn}: {len(pairs):,} pairs", flush=True)
-    print(f"Parsing {len(pairs):,} distinct (name, rank) pairs\n", flush=True)
+        print(f"shard {si+1}/{sn}: {len(pairs):,} pairs (after cache filter)", flush=True)
 
     tally = Counter()
     rank_mismatch = Counter()
@@ -197,6 +243,10 @@ def main() -> int:
     # index or the new one.
     tmp_out = args.out + ".partial"
     fh = open(tmp_out, "w", encoding="utf-8")
+
+    # Write cached records first so the merged index is complete.
+    for rec in existing:
+        fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
     # Each batch is an independent POST; alignment is asserted inside
     # parse_batch, so concurrency cannot cross-contaminate results.
@@ -243,9 +293,39 @@ def main() -> int:
     os.replace(tmp_out, args.out)
     print(f"\n  moved {tmp_out} into place as {args.out}")
 
+    # Re-tally from the merged index (existing + new) so the report
+    # reflects all pairs, not just the ones parsed this run.
+    tally = Counter()
+    rank_mismatch = Counter()
+    rank_agree = Counter()
+    rank_absent = Counter()
+    examples: dict[str, list[str]] = {}
+    with open(args.out, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rec = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            t = rec.get("type") or "NO_NAME"
+            tally[t] += 1
+            if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
+                examples[t].append(rec["n"])
+            marker = rec.get("rankMarker")
+            expected = MARKERS.get(rec.get("ourRank"))
+            if expected:
+                if marker is None:
+                    rank_absent[rec.get("ourRank")] += 1
+                elif marker in expected:
+                    rank_agree[rec.get("ourRank")] += 1
+                else:
+                    rank_mismatch[rec.get("ourRank")] += 1
+
     total = sum(tally.values())
     print(f"\n{'=' * 70}")
-    print(f"parsed {total:,} names in {time.time()-started:.0f}s\n")
+    print(f"index holds {total:,} distinct (name, rank) pairs\n")
     print("by parser `type`:")
     for k, n in tally.most_common():
         print(f"  {k:<14}{n:>10,}  {n/total*100:>5.2f}%")
@@ -257,8 +337,15 @@ def main() -> int:
             pct = a / (a + m) * 100 if (a + m) else 0
             print(f"  {r:<10}agree {a:>9,} ({pct:>5.1f}%)   disagree {m:>8,}   no marker {z:>8,}")
 
-    os.makedirs(os.path.dirname(args.report) or ".", exist_ok=True)
-    with open(args.report, "w", encoding="utf-8") as rf:
+    _write_report(tally, rank_agree, rank_mismatch, rank_absent, examples, total, args.report)
+    print(f"\n  wrote {args.out}")
+    print(f"  wrote {args.report}")
+    return 0
+
+
+def _write_report(tally, rank_agree, rank_mismatch, rank_absent, examples, total, report_path):
+    os.makedirs(os.path.dirname(report_path) or ".", exist_ok=True)
+    with open(report_path, "w", encoding="utf-8") as rf:
         rf.write("# GBIF name parser over every name in the tree\n\n")
         rf.write(f"`POST /v1/parser/name`, {total:,} distinct (name, rank) pairs. "
                  f"The repeated-`name` GET is unusable (see the script docstring); "
@@ -284,9 +371,6 @@ def main() -> int:
                 for n in ns:
                     rf.write(f"- `{n}`\n")
                 rf.write("\n")
-    print(f"\n  wrote {args.out}")
-    print(f"  wrote {args.report}")
-    return 0
 
 
 if __name__ == "__main__":
