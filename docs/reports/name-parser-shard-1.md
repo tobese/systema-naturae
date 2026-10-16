@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 477,047 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 480,143 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,17 +8,17 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 469,173 | 98.35% |
-| `INFORMAL` | 5,964 | 1.25% |
-| `OTU` | 968 | 0.20% |
-| `PLACEHOLDER` | 377 | 0.08% |
-| `NO_NAME` | 207 | 0.04% |
-| `DOUBTFUL` | 183 | 0.04% |
-| `HYBRID` | 135 | 0.03% |
-| `CULTIVAR` | 21 | 0.00% |
-| `BLACKLISTED` | 10 | 0.00% |
-| `CANDIDATUS` | 5 | 0.00% |
-| `VIRUS` | 4 | 0.00% |
+| `SCIENTIFIC` | 472,421 | 98.39% |
+| `INFORMAL` | 5,828 | 1.21% |
+| `OTU` | 955 | 0.20% |
+| `PLACEHOLDER` | 406 | 0.08% |
+| `NO_NAME` | 202 | 0.04% |
+| `DOUBTFUL` | 177 | 0.04% |
+| `HYBRID` | 127 | 0.03% |
+| `CULTIVAR` | 10 | 0.00% |
+| `BLACKLISTED` | 9 | 0.00% |
+| `CANDIDATUS` | 7 | 0.00% |
+| `VIRUS` | 1 | 0.00% |
 
 ## rankMarker vs our rank
 
@@ -28,97 +28,95 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 438,173 | 336 | 2,455 |
-| GENUS | 0 | 137 | 33,975 |
-| SUBSPECIES | 0 | 13 | 0 |
-| FAMILY | 291 | 9 | 1,465 |
+| SPECIES | 440,988 | 344 | 2,425 |
+| GENUS | 0 | 154 | 34,154 |
+| SUBSPECIES | 0 | 20 | 0 |
+| FAMILY | 305 | 13 | 1,525 |
 
 ## Examples by type
 
 **`INFORMAL`**
 
-- `Antarctodrilus sp.`
-- `Linopherus sp.`
-- `Chloeia sp.`
-- `Ochetostoma sp.`
-- `Thalassema sp.`
-- `Dinophilus sp.`
+- `Cernosvitoviella sp.`
+- `Hemienchytraeus sp.`
+- `Achaeta sp.`
+- `Decimodrilus sp.`
+- `Periscolex sp.`
+- `Lamprodrilus sp.`
 
 **`NO_NAME`**
 
+- `cf.`
+- `cf. Gyptis`
+- `cf. Petaloclymene`
+- `cf. Pseudoscalibregma`
+- `cf. Amphicorina`
 - `cf. Myrmecotypus`
-- `cf. Mallecolobus`
-- `aff. Tenuiphantes`
-- `cf. Saitis`
-- `cf. Synema`
-- `cf. Triaenonyx`
-
-**`BLACKLISTED`**
-
-- `Rhyphelia okay`
-- `Anasillomos unidentified`
-- `Abantis ja`
-- `There clotho`
-- `Dasyatis say`
-- `Clarias nov`
-
-**`PLACEHOLDER`**
-
-- `IncertaeSedis cadaverinus`
-- `IncertaeSedis trojan`
-- `Unplaced`
-- `nr.`
-- `Cephaloleia undetermined`
-- `pr.`
-
-**`DOUBTFUL`**
-
-- `Brancuporus gottwaldi`
-- `[Haplusia] brevipalpis`
-- `[Chironomus] incertus`
-- `[Diaphora] pellucida`
-- `Culicidae P_269_FSTHT`
-- `[Limnophila] pallens`
 
 **`VIRUS`**
 
-- `Euragallia prion`
-- `Potamophylax coronavirus`
-- `Neoaemula vector`
-- `"Neoaemula vector"`
+- `Turkozelotes attavirus`
 
 **`CULTIVAR`**
 
-- `Typhlocybini ('Eupterygini')`
-- `Andrena 'viciae'`
-- `Lunulites 'ligulata'`
-- `Ectodus cv.`
-- `Ptychochromis cv.`
-- `Andinoacara cv.`
+- `Eremochelis 'simplex'`
+- `Paraneetroplus cv.`
+- `Yssichromis cv.`
+- `Tropheus cv.`
+- `Ophthalmotilapia cv.`
+- `Nannacara cv.`
+
+**`PLACEHOLDER`**
+
+- `IncertaeSedis brahma`
+- `IncertaeSedis fimetarioides`
+- `nr. Quasitermes`
+- `nr. Zorilispe`
+- `Unplaced insignicornis`
+- `Unplaced verticalis`
+
+**`DOUBTFUL`**
+
+- `[Chironomus]`
+- `[Microtendipes] truncatus`
+- `[Agromyza]`
+- `Culicidae P_270_FSTHT`
+- `[Limnobia] humeralis`
+- `[Polymoria] tenella`
 
 **`OTU`**
 
-- `Euglossa sp. BOLD:AAC0545`
-- `Euglossa sp. BOLD:AEL8905`
-- `Cichla sp. BOLD:AAF2605`
-- `Sardinella sp. BOLD:AAD1175`
-- `Hyphessobrycon sp. 1 BOLD:AAA7660`
-- `Haplochromis sp. BOLD:AAB6620`
+- `Eufriesea sp. BOLD:AEF4646`
+- `Eulaema sp. BOLD:AAC6324`
+- `Exaerete sp. BOLD:AAD7618`
+- `Euglossa sp. BOLD:AAL4038`
+- `Jenkinsia sp. BOLD:AAA7901`
+- `Astyanax sp. BOLD:AAA7660`
+
+**`BLACKLISTED`**
+
+- `Dysschema on`
+- `Telipna ja`
+- `There pinastrina`
+- `There fukienensis`
+- `Anisogamus nov`
+- `Haploops nov`
 
 **`HYBRID`**
 
-- `Megalobrama skolokovii x Megalobrama amblycephala`
-- `Oreochromis sp. ZW-2018 x Oreochromis mossambicus`
+- `Ctenopharyngodon idellus x Elopichthys bambusa`
+- `Pundamilia sp. 'red head' x Pundamilia pundamilia`
 - `Clanga pomarina x clanga`
-- `Hypnum molle x turgescens`
-- `Mnium punctatum x subglobosum`
-- `Arum italicum x Arum maculatum`
+- `Nidirana sp. x ZTL-2020`
+- `Potamogeton gramineus × lucens`
+- `Sagittaria natans × sagittifolia`
 
 **`CANDIDATUS`**
 
-- `Candidatus Methanofilum`
-- `Candidatus Methanohalarchaeum`
-- `Candidatus Methanovirga`
-- `Candidatus Nitrosopumilus`
-- `Candidatus Nitrososphaera`
+- `Candidatus Zestomicrobium`
+- `Candidatus Nanobsidianus`
+- `Candidatus Methanogranum`
+- `Candidatus Methanomethylophilus`
+- `Candidatus Nitrosoabyssus`
+- `Candidatus Lokiarchaeum`
 

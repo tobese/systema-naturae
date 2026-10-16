@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 477,047 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 480,142 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,16 +8,16 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 469,198 | 98.35% |
-| `INFORMAL` | 5,968 | 1.25% |
-| `OTU` | 956 | 0.20% |
-| `PLACEHOLDER` | 391 | 0.08% |
-| `NO_NAME` | 209 | 0.04% |
-| `DOUBTFUL` | 174 | 0.04% |
-| `HYBRID` | 118 | 0.02% |
-| `CULTIVAR` | 14 | 0.00% |
-| `BLACKLISTED` | 12 | 0.00% |
-| `CANDIDATUS` | 7 | 0.00% |
+| `SCIENTIFIC` | 472,344 | 98.38% |
+| `INFORMAL` | 5,941 | 1.24% |
+| `OTU` | 942 | 0.20% |
+| `PLACEHOLDER` | 365 | 0.08% |
+| `NO_NAME` | 219 | 0.05% |
+| `DOUBTFUL` | 197 | 0.04% |
+| `HYBRID` | 115 | 0.02% |
+| `BLACKLISTED` | 8 | 0.00% |
+| `CULTIVAR` | 8 | 0.00% |
+| `CANDIDATUS` | 3 | 0.00% |
 
 ## rankMarker vs our rank
 
@@ -27,91 +27,88 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 438,300 | 349 | 2,408 |
-| GENUS | 0 | 170 | 33,834 |
-| SUBSPECIES | 0 | 15 | 0 |
-| FAMILY | 295 | 16 | 1,444 |
+| SPECIES | 441,412 | 330 | 2,326 |
+| GENUS | 0 | 154 | 33,944 |
+| SUBSPECIES | 0 | 13 | 0 |
+| FAMILY | 306 | 11 | 1,412 |
 
 ## Examples by type
 
 **`INFORMAL`**
 
-- `Octolasium sp.`
-- `Lumbricid sp.`
-- `Lutodrilus sp.`
-- `Euphrosinopsis sp.`
-- `Protobonellia sp.`
-- `Bonelliidae sp.`
-
-**`PLACEHOLDER`**
-
-- `slender`
-- `IncertaeSedis brahma`
-- `IncertaeSedis justi`
-- `Thalassaphorurini IncertaeSedis`
-- `Termes group`
-- `undetermined Microcerotermes`
+- `Dendrodrilus sp.`
+- `Imetescolex sp.`
+- `Diplocardia sp.`
+- `Microchaetus sp.`
+- `Octochaetus sp.`
+- `Guaranidrilus sp.`
 
 **`NO_NAME`**
 
-- `NIcomache trispinata`
-- `cf. Polynoe`
-- `cf. Gasparia`
-- `cf. Tricongius`
-- `cf. Cyllodania`
-- `cf. Maenola`
+- `NIcomache`
+- `cf. Livius`
+- `cf. Psiloderces`
+- `cf. Mallecolobus`
+- `cf. Thorelliola`
+- `cf. Colopsus`
 
 **`BLACKLISTED`**
 
-- `Speocera none`
-- `say`
-- `Are druryi`
-- `Stoermeriana das`
-- `There pinastrina`
-- `There fukienensis`
+- `Koppe no`
+- `Casinaria xxx`
+- `There clotho`
+- `Halicoides nov`
+- `Gekko nov.`
+- `Trimeresurus nov`
+
+**`PLACEHOLDER`**
+
+- `Unplaced affine`
+- `IncertaeSedis sensitivus`
+- `IncertaeSedis ravanicae`
+- `pr. Oreda`
+- `Unplaced sordidus`
+- `Unplaced quinquenotatus`
 
 **`DOUBTFUL`**
 
-- `Ischnoptera rufa_rufa`
-- `[Cecidomyia] pennicornis`
-- `[Orthocladius] turficola`
-- `Culicidae Ae_JM910`
-- `[Limnobia] humeralis`
-- `[Polymoria] tenella`
-
-**`OTU`**
-
-- `Eufriesea sp. BOLD:AEM5056`
-- `Eulaema sp. BOLD:AAM5237`
-- `Euglossa sp. BOLD:AAD1076`
-- `Euglossa sp. BOLD:AEM3190`
-- `Oligosarcus sp. BOLD:ABZ2120`
-- `Nematalosa sp. BOLD:ACB7545`
+- `Brancuporus pennifoldae`
+- `[Orthocladius]`
+- `[Limnophila] pallens`
+- `[Limnobia] obsoleta`
+- `[Diaphora]`
+- `[Curtonevra]`
 
 **`CULTIVAR`**
 
-- `Aleiodes 'gland'`
-- `Parananochromis cv.`
-- `Telmatochromis cv.`
-- `Orthochromis cv.`
-- `Haplochromis cv.`
-- `Protomelas cv.`
+- `'Ochlerotatus' ('Finlaya')`
+- `Neolamprologus cv.`
+- `Astatotilapia cv.`
+- `Guianacara cv.`
+- `Coregonus cv.`
+- `Heracleum 'Kungsholm'`
+
+**`OTU`**
+
+- `Euglossa sp. BOLD:AAC0547`
+- `Euglossa sp. BOLD:AEL8906`
+- `Hemigrammus cf. gracilis BOLD:AAY2122`
+- `Hyphessobrycon sp. 2 BOLD:AAD0588`
+- `Psalidodon cf. fasciatus BOLD:AAA7660`
+- `Sardinella sp. BOLD:AAD1175`
 
 **`HYBRID`**
 
-- `Pundamilia sp. 'nyererei-like' x Neochromis omnicaeruleus`
-- `Ctenopharyngodon idellus x Elopichthys bambusa`
-- `Quistrachia sp. X MSJ2014`
-- `Alopia straminicollis straminicollis x Alopia livida`
-- `Bryum inclinatum x caespiticium`
-- `Hypnum lycopodioides x revolvens`
+- `Megalobrama skolokovii x Megalobrama amblycephala`
+- `Amblystegium fluitans x aduncum`
+- `Stuckenia chakassiensis   Klinkova × S. macrocarpa  Tzvel.`
+- `Potamogeton alpinus × crispus`
+- `Narcissus poeticus x pseudonarcissus`
+- `Romulea columnae x Romulea ramiflora`
 
 **`CANDIDATUS`**
 
-- `Candidatus Methanomassiliicoccus`
-- `Candidatus Methanomethylophilaceae`
-- `Candidatus Nitrosomaritimum`
-- `Candidatus Tiamatella`
-- `Candidatus Halectosymbiota`
-- `Candidatus Methanimicrococcus`
+- `Candidatus Calypsonella`
+- `Candidatus Aramenus`
+- `Candidatus Methanoflexus`
 

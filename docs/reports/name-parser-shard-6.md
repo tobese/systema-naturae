@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 477,046 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 480,142 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,17 +8,17 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 469,182 | 98.35% |
-| `INFORMAL` | 5,963 | 1.25% |
-| `OTU` | 951 | 0.20% |
-| `PLACEHOLDER` | 394 | 0.08% |
-| `NO_NAME` | 215 | 0.05% |
-| `DOUBTFUL` | 186 | 0.04% |
-| `HYBRID` | 126 | 0.03% |
-| `CULTIVAR` | 10 | 0.00% |
+| `SCIENTIFIC` | 472,293 | 98.37% |
+| `INFORMAL` | 5,953 | 1.24% |
+| `OTU` | 955 | 0.20% |
+| `PLACEHOLDER` | 383 | 0.08% |
+| `NO_NAME` | 214 | 0.04% |
+| `DOUBTFUL` | 194 | 0.04% |
+| `HYBRID` | 123 | 0.03% |
+| `CULTIVAR` | 14 | 0.00% |
 | `BLACKLISTED` | 9 | 0.00% |
-| `CANDIDATUS` | 6 | 0.00% |
-| `VIRUS` | 4 | 0.00% |
+| `CANDIDATUS` | 3 | 0.00% |
+| `VIRUS` | 1 | 0.00% |
 
 ## rankMarker vs our rank
 
@@ -28,98 +28,92 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 438,295 | 346 | 2,411 |
-| GENUS | 0 | 173 | 33,776 |
-| SUBSPECIES | 0 | 16 | 0 |
-| FAMILY | 334 | 12 | 1,461 |
+| SPECIES | 441,232 | 324 | 2,420 |
+| GENUS | 0 | 152 | 34,003 |
+| SUBSPECIES | 0 | 13 | 0 |
+| FAMILY | 315 | 11 | 1,471 |
 
 ## Examples by type
 
 **`INFORMAL`**
 
-- `Dichogaster sp.`
-- `Argilophilini sp.`
-- `Buchholzia sp.`
-- `Urobenus sp.`
-- `Stylodrilus sp.`
-- `Haementeria sp.`
-
-**`NO_NAME`**
-
-- `cf.`
-- `cf. Gyptis`
-- `cf. Amphicorina`
-- `cf. Pseudoscalibregma`
-- `cf. Entychides`
-- `cf. Thorelliola`
-
-**`VIRUS`**
-
-- `Pterodrilus prion`
-- `Cryptops vector`
-- `Exochus virus`
-- `Bolivina prion`
+- `Neoprosthenorchis sp.`
+- `Gorgorhynchoides sp.`
+- `Polymorphus sp.`
+- `Chtonobdella sp.`
+- `Haemadipsa sp.`
+- `Drilocrius sp.`
 
 **`DOUBTFUL`**
 
-- `Lamispina horstii`
-- `[Leucophora]`
-- `[Asilus]`
-- `Culicidae P_278_FSTHT`
-- `[Limnobia] fuscofemorata`
-- `[Gonomyia]`
+- `Stylarioides bengalensis_duplicate`
+- `Brancuporus gottwaldi`
+- `[Orthocladius] turficola`
+- `[Diaphora] pellucida`
+- `[Limnobia]`
+- `[Limnobia] ignobilis`
+
+**`NO_NAME`**
+
+- `NIcomache lumbricalis`
+- `cf. Entychides`
+- `cf. Afrilobus`
+- `cf. Synema`
+- `cf. Capheris`
+- `cf. Coryphasia`
 
 **`BLACKLISTED`**
 
-- `Bisetocreagris que`
-- `Cruzobius type`
-- `Say kirgizicus`
-- `Milocera ja`
-- `There oldenlandiae`
-- `Hypanus say`
+- `Speocera none`
+- `say`
+- `There alecto`
+- `Sturnidoecus mon`
+- `Pungitius type sp.Brackish`
+- `Dasyatis say`
 
 **`PLACEHOLDER`**
 
-- `IncertaeSedis crassicornis`
-- `IncertaeSedis caprariae`
-- `IncertaeSedis justiprovisorius`
-- `undetermined`
-- `Unplaced aberrans`
-- `fossil carabid`
+- `IncertaeSedis cadaverinus`
+- `IncertaeSedis trojan`
+- `Willowsiinae IncertaeSedis`
+- `Subulitermes group`
+- `pr. Perissops`
+- `nr. Ancylocnemis`
 
 **`OTU`**
 
-- `Eulaema sp. BOLD:ABY7873`
-- `Euglossa sp. BOLD:AAL4038`
-- `Astyanax sp. BOLD:AAA7660`
-- `Odontostilbe sp. BOLD:AAE1686`
-- `Jenkinsia sp. BOLD:AAA7901`
-- `Harengula sp. BOLD:AAB1582`
+- `Euglossa sp. BOLD:AAC1673`
+- `Euglossa sp. BOLD:AEL8907`
+- `Epipyropidae BOLD:AAY7260`
+- `Alosa sp. BOLD:ACF3178`
+- `Sardinella sp. BOLD:AAO1626`
+- `Halichoeres sp. BOLD:AAY1850`
+
+**`VIRUS`**
+
+- `Ophion virus`
 
 **`CULTIVAR`**
 
-- `Formica 'micro'`
-- `Yssichromis cv.`
-- `Tropheus cv.`
-- `Ophthalmotilapia cv.`
-- `Nannacara cv.`
-- `Amphilophus cv.`
+- `Paretroplus cv.`
+- `Nanochromis cv.`
+- `Hemichromis cv.`
+- `Rubricatochromis cv.`
+- `Lepidiolamprologus cv.`
+- `Lamprologus cv.`
 
 **`HYBRID`**
 
-- `Pundamilia sp. 'red head' x Pundamilia pundamilia`
-- `Etheostoma sp. x JW-2022`
-- `Bryum pallescens x pohlia crudoides var revolvens`
-- `Amblystegium badium x latifolium`
-- `Amblystegium intermedium x vernicosum`
-- `Stuckenia chakassiensis   Klinkova × S. macrocarpa  Tzvel.`
+- `Alopia straminicollis straminicollis x Alopia livida`
+- `Haemonchus contortus x Haemonchus placei`
+- `Amblystegium glaucum x falcatum`
+- `Hypnum lycopodioides x fluitans`
+- `Weissia crispata x astomum crispum`
+- `Stuckenia filiformis × pectinata`
 
 **`CANDIDATUS`**
 
-- `Candidatus Methanoculleus`
-- `Candidatus Methanovorans`
-- `Candidatus Methanosphaera`
-- `Candidatus Acidianus`
-- `Candidatus Methanomicula`
-- `Candidatus Hestiella`
+- `Candidatus Nitrosocosmicus`
+- `Candidatus Methanorudis`
+- `Candidatus Nitrosarchaeum`
 
