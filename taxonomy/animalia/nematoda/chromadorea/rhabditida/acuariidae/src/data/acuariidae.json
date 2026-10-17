@@ -811,11 +811,14 @@
           "lineage": "\"Synhimantus",
           "authorship": "\"Chandio, Dharejo, Khan & Naz, 2016\"",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1586857"
+            "checklistbank": [
+              "urn:lsid:marinespecies.org:taxname:1586857"
+            ]
           },
           "children": [],
           "uuid": "c350ff5f-4cb1-5b2-92d-f3328daa93993e",
-          "description": "\"Synhimantus (Dispharynx) is a acuariidae species found in its native region."
+          "description": "\"Synhimantus (Dispharynx) is a acuariidae species found in its native region.",
+          "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1586857"
         },
         {
           "id": "SP_SYNHIMANTUS_AFFINIS_SEURAT_1916",
@@ -2536,27 +2539,6 @@
       "lineage": "acuariidae"
     },
     {
-      "id": "GENUS_CHORDOCEPHALUS",
-      "name": "Chordocephalus",
-      "rank": "GENUS",
-      "children": [
-        {
-          "id": "SP_CHORDOCEPHALUS_SQUAMATA",
-          "name": "Chordocephalus squamata",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Chordocephalus",
-          "sourceIds": {
-            "checklistbank": "391245"
-          },
-          "children": []
-        }
-      ],
-      "sourcedFrom": "checklistbank",
-      "lineage": "acuariidae"
-    },
-    {
       "id": "GENUS_SKRJABINOCLAVA",
       "name": "Skrjabinoclava",
       "rank": "GENUS",
@@ -3084,19 +3066,6 @@
       "name": "Synhimantus",
       "rank": "GENUS",
       "children": [
-        {
-          "id": "SP_SYNHIMANTUS_JAMSHORENSIS_CHANDIO_DHAREJO_KHAN_NAZ_2016",
-          "name": "Synhimantus jamshorensis",
-          "rank": "SPECIES",
-          "subspeciesCount": 0,
-          "sourcedFrom": "checklistbank",
-          "lineage": "Synhimantus",
-          "authorship": "Chandio, Dharejo, Khan & Naz, 2016",
-          "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1586857"
-          },
-          "children": []
-        },
         {
           "id": "SP_SYNHIMANTUS_ASTURIS_YORKE_MAPLESTONE_1926_ANDERSON_WONG_1981",
           "name": "Synhimantus asturis",
@@ -3985,8 +3954,8 @@
       "lineage": "acuariidae"
     }
   ],
-  "genusCount": 65,
-  "speciesCount": 241,
+  "genusCount": 64,
+  "speciesCount": 239,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
