@@ -36,6 +36,8 @@ import sys
 import time
 
 INDEX = "portal/data/name-parse-index.jsonl"
+SIDECAR_DIR = "portal/data/name-parse-index"
+MANIFEST = os.path.join(SIDECAR_DIR, "manifest.json")
 # Everything that reads the index, so a stale one is attributable.
 CONSUMERS = (
     "scripts/canonicalNames.py  (every importer that asks 'do we hold this name')",
@@ -61,12 +63,47 @@ def newest_family_file():
     return newest, newest_ts, count
 
 
+def stale_sidecars():
+    """Family files whose sidecar is missing or stale (mtime/size mismatch)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import nameIndexCache  # noqa: E402
+    from tree import iter_family_files  # noqa: E402
+    manifest = nameIndexCache.load_manifest()
+    stale = []
+    for fam in iter_family_files():
+        st = os.stat(fam.path)
+        if not nameIndexCache.family_index_fresh(fam.slug, st.st_mtime_ns, st.st_size, manifest):
+            stale.append(fam)
+    return stale
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", action="store_true",
                     help="count index lines (reads the whole file)")
     args = ap.parse_args()
 
+    # Sidecars take precedence over the monolith.
+    if os.path.isdir(SIDECAR_DIR) and os.path.exists(MANIFEST):
+        stale = stale_sidecars()
+        newest, newest_ts, files = newest_family_file()
+        print(f"  index:   {SIDECAR_DIR}/ (per-family sidecars)")
+        print(f"  manifest: {MANIFEST}")
+        print(f"  tree:    {files:,} family files, newest {time.strftime('%Y-%m-%d %H:%M', time.localtime(newest_ts))}")
+        print(f"           {newest}")
+        if stale:
+            print(f"\n  STALE: {len(stale):,} family files lack a fresh sidecar.")
+            print("  Rebuild:  make name-index ARGS='--split --workers 6'")
+            print("  or migrate:  python3 scripts/splitNameIndex.py --apply")
+            print("  Until it is rebuilt, importers must not treat it as an oracle.")
+            print("\n  reads it:")
+            for c in CONSUMERS:
+                print(f"    {c}")
+            return 1
+        print("\n  current: every family has a fresh sidecar.")
+        return 0
+
+    # Fall back to monolith check.
     if not os.path.exists(INDEX):
         print(f"  MISSING: {INDEX}")
         print("  Nothing depends on it yet, but every importer that asks "
@@ -95,6 +132,8 @@ def main() -> int:
         print(f"\n  STALE: {newer:,} family files are newer than the index "
               f"(index is {age_h:.1f} h old).")
         print("  Rebuild:  make name-index ARGS='--workers 6'")
+        print("  Or migrate to sidecars:  python3 scripts/splitNameIndex.py --apply")
+        print("  then sync:  sh scripts/syncNameIndex.py --to q-bert")
         print("  This is not cosmetic. It has been wrong in both directions:")
         print("    Craneflies  15,563 species scored new, 15,191 already held")
         print("    ILDIS       13,347 of 16,371 scored held, tree holds 64")

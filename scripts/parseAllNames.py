@@ -37,6 +37,18 @@ and asserts alignment per batch rather than trusting it.
     python3 scripts/parseAllNames.py --limit 5000     # probe
     python3 scripts/parseAllNames.py                  # all 1,306,249
     python3 scripts/parseAllNames.py --apply-authorship
+    python3 scripts/parseAllNames.py --split          # write per-family sidecars
+
+On --split
+----------
+Writes per-family sidecars under `portal/data/name-parse-index/<slug>.jsonl`
+plus `portal/data/name-parse-index-manifest.json` instead of (or in addition to)
+the monolith `portal/data/name-parse-index.jsonl`. Sidecars are invalidated by
+the family file's mtime+size, so only changed families are rewritten on a
+rebuild, and `syncNameIndex.py` can diff manifests between Macie and q-bert and
+transfer only changed sidecars instead of the whole 559MB blob.
+
+Without --split, the monolith is written as before (transitional default).
 
 On --apply-authorship
 ---------------------
@@ -61,6 +73,7 @@ from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tree import family_data_files, iter_nodes  # noqa: E402
+import nameIndexCache  # noqa: E402
 
 PARSER_URL = "https://api.gbif.org/v1/parser/name"
 UA = "SystemaNaturae/1.0 (taxonomy portal; https://github.com/tobese/systema-naturae)"
@@ -86,16 +99,20 @@ MARKERS = {
 }
 
 
-def collect(root: str) -> list[tuple[str, str]]:
-    """(name, ourRank) for every named node, deduplicated by (name, rank).
+def collect(root: str) -> dict[tuple[str, str], set[str]]:
+    """(name, ourRank) -> set of family slugs it appears in.
 
     Walks `tree.family_data_files()` rather than globbing `src/data`, which is
     what produced the index's worst-known defect: the bare walk also picked up
     `felidae/src/data/continents.json`, a GeoJSON continent map, and asked GBIF's
     parser to parse it. The list is the canonical one, so a rebuild cannot drift
     from what the other scripts see.
+
+    Returns a mapping from (name, rank) to the set of family slugs that hold it,
+    because a homonym in several families needs its parse record in each
+    family's sidecar when --split is used.
     """
-    seen: dict[tuple[str, str], None] = {}
+    out: dict[tuple[str, str], set[str]] = {}
     for path in family_data_files():
         # `--root` defaults to ".", which covers all six kingdoms. Honour a
         # narrower root rather than silently widening it: the old os.walk did
@@ -106,12 +123,13 @@ def collect(root: str) -> list[tuple[str, str]]:
             continue
         with open(path, encoding="utf-8") as fh:
             doc = json.load(fh)
+        slug = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(path))))
         for node in iter_nodes(doc):
             name = (node.get("name") or "").strip()
             rank = node.get("rank") or ""
             if name and rank:
-                seen.setdefault((name, rank), None)
-    return list(seen)
+                out.setdefault((name, rank), set()).add(slug)
+    return out
 
 
 def parse_batch(names: list[str]) -> list[dict]:
@@ -161,27 +179,40 @@ def main() -> int:
     ap.add_argument("--apply-authorship", action="store_true")
     ap.add_argument("--no-cache", action="store_true",
                     help="re-parse every name even if already in index")
+    ap.add_argument("--split", action="store_true",
+                    help="write per-family sidecars + manifest instead of monolith")
     args = ap.parse_args()
 
-    pairs = collect(args.root)
+    pair_map = collect(args.root)
+    pairs = list(pair_map.keys())
     if args.limit:
         pairs = pairs[: args.limit]
+        pair_map = {p: pair_map[p] for p in pairs}
 
     # ---- Cache: skip (name, rank) pairs already in the index ----
     cached: set[tuple[str, str]] = set()
     existing: list[dict] = []
-    if not args.no_cache and os.path.exists(args.out):
-        with open(args.out, encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    rec = json.loads(line)
-                    cached.add((rec["n"], rec["ourRank"]))
-                    existing.append(rec)
-                except (json.JSONDecodeError, KeyError):
-                    pass
+    if not args.no_cache:
+        if args.split:
+            for slug in nameIndexCache.all_sidecar_slugs():
+                for rec in nameIndexCache.load_family_index(slug):
+                    n = rec.get("n")
+                    r = rec.get("ourRank")
+                    if n and r:
+                        cached.add((n, r))
+                        existing.append(rec)
+        elif os.path.exists(args.out):
+            with open(args.out, encoding="utf-8") as fh:
+                for line in fh:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        rec = json.loads(line)
+                        cached.add((rec["n"], rec["ourRank"]))
+                        existing.append(rec)
+                    except (json.JSONDecodeError, KeyError):
+                        pass
         print(f"  {len(cached):,} pairs already in index, will skip them", flush=True)
 
     pairs = [p for p in pairs if p not in cached]
@@ -232,96 +263,169 @@ def main() -> int:
     examples: dict[str, list[str]] = {}
     started = time.time()
 
-    os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
-    # Written to a sibling and moved into place at the end, never in place.
-    # This run is hours long and the machine it runs on has restarted twice today
-    # (once mid-write, leaving a 0-byte unified-taxonomy.json that read as valid
-    # JSON and reported "0 nodes"). An index truncated that way is worse than a
-    # stale one: it looks well-formed and answers "we do not hold this name" for
-    # every name past the cut, which is precisely the question importers ask it.
-    # os.replace is atomic within a filesystem, so a reader either sees the old
-    # index or the new one.
-    tmp_out = args.out + ".partial"
-    fh = open(tmp_out, "w", encoding="utf-8")
+    if args.split:
+        # ---- Split mode: parse all names, then distribute results to family sidecars ----
+        # Parse results keyed by (name, rank) -> parsed record
+        parsed_results: dict[tuple[str, str], dict] = {}
 
-    # Write cached records first so the merged index is complete.
-    for rec in existing:
-        fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+        batches = [pairs[i : i + BATCH] for i in range(0, len(pairs), BATCH)]
+        done = 0
+        try:
+            with cf.ThreadPoolExecutor(max_workers=args.workers) as pool:
+                futures = {pool.submit(parse_batch, [c[0] for c in ch]): ch for ch in batches}
+                for fut in cf.as_completed(futures):
+                    chunk = futures[fut]
+                    results = fut.result()
+                    for (name, our_rank), r in zip(chunk, results):
+                        t = r.get("type") or "NO_NAME"
+                        tally[t] += 1
+                        if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
+                            examples[t].append(name)
 
-    # Each batch is an independent POST; alignment is asserted inside
-    # parse_batch, so concurrency cannot cross-contaminate results.
-    batches = [pairs[i : i + BATCH] for i in range(0, len(pairs), BATCH)]
-    done = 0
-    try:
-        with cf.ThreadPoolExecutor(max_workers=args.workers) as pool:
-            futures = {pool.submit(parse_batch, [c[0] for c in ch]): ch for ch in batches}
-            for fut in cf.as_completed(futures):
-                chunk = futures[fut]
-                results = fut.result()
-                for (name, our_rank), r in zip(chunk, results):
-                    t = r.get("type") or "NO_NAME"
-                    tally[t] += 1
-                    if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
-                        examples[t].append(name)
+                        marker = r.get("rankMarker")
+                        expected = MARKERS.get(our_rank)
+                        if expected:
+                            if marker is None:
+                                rank_absent[our_rank] += 1
+                            elif marker in expected:
+                                rank_agree[our_rank] += 1
+                            else:
+                                rank_mismatch[our_rank] += 1
 
-                    marker = r.get("rankMarker")
-                    expected = MARKERS.get(our_rank)
-                    if expected:
-                        if marker is None:
-                            rank_absent[our_rank] += 1
-                        elif marker in expected:
-                            rank_agree[our_rank] += 1
-                        else:
-                            rank_mismatch[our_rank] += 1
+                        parsed_results[(name, our_rank)] = {
+                            "n": name, "ourRank": our_rank, "type": t,
+                            "canonical": r.get("canonicalName"),
+                            "authorship": r.get("authorship"), "year": r.get("year"),
+                            "rankMarker": marker,
+                            "parsed": r.get("parsed"), "partial": r.get("parsedPartially"),
+                        }
 
-                    fh.write(json.dumps({
-                        "n": name, "ourRank": our_rank, "type": t,
-                        "canonical": r.get("canonicalName"),
-                        "authorship": r.get("authorship"), "year": r.get("year"),
-                        "rankMarker": marker,
-                        "parsed": r.get("parsed"), "partial": r.get("parsedPartially"),
-                    }, ensure_ascii=False) + "\n")
+                    done += len(chunk)
+                    if done % 100_000 < BATCH:
+                        el = time.time() - started
+                        rate = done / el if el else 0
+                        print(f"  {done:>9,}/{len(pairs):,}  {el:>5.0f}s  {rate:>6.0f}/s  "
+                              f"ETA {(len(pairs)-done)/rate:>4.0f}s", flush=True)
+        finally:
+            pass
 
-                done += len(chunk)
-                if done % 100_000 < BATCH:
-                    el = time.time() - started
-                    rate = done / el if el else 0
-                    print(f"  {done:>9,}/{len(pairs):,}  {el:>5.0f}s  {rate:>6.0f}/s  "
-                          f"ETA {(len(pairs)-done)/rate:>4.0f}s", flush=True)
-    finally:
-        fh.close()
-    os.replace(tmp_out, args.out)
-    print(f"\n  moved {tmp_out} into place as {args.out}")
+        # Distribute parsed results to family sidecars.
+        # For each family, gather all its (name, rank) pairs' results.
+        manifest = nameIndexCache.load_manifest()
+        families = family_data_files()
+        families_written = 0
+        total_rows = 0
 
-    # Re-tally from the merged index (existing + new) so the report
+        # Build a reverse index: (name, rank) -> parsed record (including cached)
+        all_results: dict[tuple[str, str], dict] = {}
+        for rec in existing:
+            n = rec.get("n")
+            r = rec.get("ourRank")
+            if n and r:
+                all_results[(n, r)] = rec
+        all_results.update(parsed_results)
+
+        for fam in families:
+            slug = fam.slug
+            st = os.stat(fam.path)
+            if nameIndexCache.family_index_fresh(slug, st.st_mtime_ns, st.st_size):
+                continue
+            pairs_in_fam = sorted(pair_map.keys())  # all pairs; filter below
+            # Only pairs whose slug set contains this family
+            fam_records = []
+            for (name, rank), slugs in pair_map.items():
+                if slug in slugs:
+                    rec = all_results.get((name, rank))
+                    if rec:
+                        fam_records.append(rec)
+            if fam_records:
+                nameIndexCache.save_family_index(
+                    slug, fam_records, st.st_mtime_ns, st.st_size, manifest)
+                families_written += 1
+                total_rows += len(fam_records)
+
+        nameIndexCache.save_manifest(manifest)
+        print(f"\n  families with sidecars: {families_written:,}")
+        print(f"  rows written: {total_rows:,}")
+    else:
+        # ---- Monolith mode (existing behavior) ----
+        os.makedirs(os.path.dirname(args.out) or ".", exist_ok=True)
+        tmp_out = args.out + ".partial"
+        fh = open(tmp_out, "w", encoding="utf-8")
+
+        # Write cached records first so the merged index is complete.
+        for rec in existing:
+            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+        # Each batch is an independent POST; alignment is asserted inside
+        # parse_batch, so concurrency cannot cross-contaminate results.
+        batches = [pairs[i : i + BATCH] for i in range(0, len(pairs), BATCH)]
+        done = 0
+        try:
+            with cf.ThreadPoolExecutor(max_workers=args.workers) as pool:
+                futures = {pool.submit(parse_batch, [c[0] for c in ch]): ch for ch in batches}
+                for fut in cf.as_completed(futures):
+                    chunk = futures[fut]
+                    results = fut.result()
+                    for (name, our_rank), r in zip(chunk, results):
+                        t = r.get("type") or "NO_NAME"
+                        tally[t] += 1
+                        if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
+                            examples[t].append(name)
+
+                        marker = r.get("rankMarker")
+                        expected = MARKERS.get(our_rank)
+                        if expected:
+                            if marker is None:
+                                rank_absent[our_rank] += 1
+                            elif marker in expected:
+                                rank_agree[our_rank] += 1
+                            else:
+                                rank_mismatch[our_rank] += 1
+
+                        fh.write(json.dumps({
+                            "n": name, "ourRank": our_rank, "type": t,
+                            "canonical": r.get("canonicalName"),
+                            "authorship": r.get("authorship"), "year": r.get("year"),
+                            "rankMarker": marker,
+                            "parsed": r.get("parsed"), "partial": r.get("parsedPartially"),
+                        }, ensure_ascii=False) + "\n")
+
+                    done += len(chunk)
+                    if done % 100_000 < BATCH:
+                        el = time.time() - started
+                        rate = done / el if el else 0
+                        print(f"  {done:>9,}/{len(pairs):,}  {el:>5.0f}s  {rate:>6.0f}/s  "
+                              f"ETA {(len(pairs)-done)/rate:>4.0f}s", flush=True)
+        finally:
+            fh.close()
+        os.replace(tmp_out, args.out)
+        print(f"\n  moved {tmp_out} into place as {args.out}")
+
+    # Re-tally from all records (existing + new) so the report
     # reflects all pairs, not just the ones parsed this run.
     tally = Counter()
     rank_mismatch = Counter()
     rank_agree = Counter()
     rank_absent = Counter()
     examples: dict[str, list[str]] = {}
-    with open(args.out, encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rec = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            t = rec.get("type") or "NO_NAME"
-            tally[t] += 1
-            if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
-                examples[t].append(rec["n"])
-            marker = rec.get("rankMarker")
-            expected = MARKERS.get(rec.get("ourRank"))
-            if expected:
-                if marker is None:
-                    rank_absent[rec.get("ourRank")] += 1
-                elif marker in expected:
-                    rank_agree[rec.get("ourRank")] += 1
-                else:
-                    rank_mismatch[rec.get("ourRank")] += 1
+    all_recs = list(existing) + list(parsed_results.values()) if args.split else existing
+    with (open(args.out, encoding="utf-8") if not args.split else None) as _fh:
+        pass  # placeholder; all_recs already holds everything we need
+    for rec in all_recs:
+        t = rec.get("type") or "NO_NAME"
+        tally[t] += 1
+        if t != "SCIENTIFIC" and len(examples.setdefault(t, [])) < 6:
+            examples[t].append(rec["n"])
+        marker = rec.get("rankMarker")
+        expected = MARKERS.get(rec.get("ourRank"))
+        if expected:
+            if marker is None:
+                rank_absent[rec.get("ourRank")] += 1
+            elif marker in expected:
+                rank_agree[rec.get("ourRank")] += 1
+            else:
+                rank_mismatch[rec.get("ourRank")] += 1
 
     total = sum(tally.values())
     print(f"\n{'=' * 70}")
@@ -338,7 +442,10 @@ def main() -> int:
             print(f"  {r:<10}agree {a:>9,} ({pct:>5.1f}%)   disagree {m:>8,}   no marker {z:>8,}")
 
     _write_report(tally, rank_agree, rank_mismatch, rank_absent, examples, total, args.report)
-    print(f"\n  wrote {args.out}")
+    if args.split:
+        print(f"\n  wrote sidecars + manifest in {nameIndexCache.INDEX_DIR}")
+    else:
+        print(f"\n  wrote {args.out}")
     print(f"  wrote {args.report}")
     return 0
 

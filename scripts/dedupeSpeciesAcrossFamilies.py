@@ -63,6 +63,7 @@ import collections
 import json
 import os
 import sys
+import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tree import (  # noqa: E402
@@ -175,6 +176,21 @@ def _same_taxon(node_name, canonical):
         return True
     return False
 
+
+DEDUPE_LOG = os.path.join("data", "dedupe-log.jsonl")
+
+def append_dedupe_log(sid: str, winner_file: str, loser_file: str, reason: str) -> None:
+    """Append one deduplication decision so machines don't undo each other."""
+    os.makedirs(os.path.dirname(DEDUPE_LOG), exist_ok=True)
+    entry = {
+        "at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "species_id": sid,
+        "winner_file": winner_file,
+        "loser_file": loser_file,
+        "reason": reason,
+    }
+    with open(DEDUPE_LOG, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -296,6 +312,8 @@ def main() -> int:
 
     ranks = collections.Counter()
     renamed = 0
+    drops = collections.defaultdict(set)      # file -> set(species id)
+    keep_report = collections.Counter()
     for kingdom, groups in list(auth_groups.items()):
         survivors = []
         for auth, key, places in groups:
@@ -321,9 +339,6 @@ def main() -> int:
               f"{renamed:,} (a subspecies or hybrid filed under its parent)")
 
 
-
-    drops = collections.defaultdict(set)      # file -> set(species id)
-    keep_report = collections.Counter()
 
     # Fields worth carrying across a merge. A duplicate is the same taxon held
     # twice, so the two records between them hold one taxon's data and deleting
@@ -396,6 +411,7 @@ def main() -> int:
                         merged_fields[field] += 1
                     keep_report[f"merged in-family on {auth} id"] += 1
                 drops[fp[0]].add(fp[1]["id"])
+                append_dedupe_log(fp[1]["id"], winner[0], fp[0], f"collapsed on {auth} id")
             keep_report[f"collapsed on {auth} id"] += 1
 
     for sid, places in dupes.items():
@@ -406,6 +422,7 @@ def main() -> int:
             # keep the copy we already had; drop every import-written one
             for f, _s in imported:
                 drops[f].add(sid)
+                append_dedupe_log(sid, native[0][0], f, "dropped an imported copy, kept the existing one")
             keep_report["dropped an imported copy, kept the existing one"] += 1
             continue
         if len(imported) > 1:
@@ -415,6 +432,7 @@ def main() -> int:
             for f, _s in imported:
                 if f != win:
                     drops[f].add(sid)
+                    append_dedupe_log(sid, win, f, "both imported; the larger family kept it")
             keep_report["both imported; the larger family kept it"] += 1
             continue
         keep_report["left alone (no imported copy)"] += 1

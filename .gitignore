@@ -69,6 +69,11 @@ portal/data/kingdoms/
 # 47 MB for 2.35M species, ~82s to build.
 portal/data/species.parquet
 portal/data/species.parquet.jsonl
+portal/data/species-count-cache.json
+
+# Per-family name-parse-index sidecars — derived from name-parse-index.jsonl
+# by scripts/splitNameIndex.py; regenerated per machine for incremental sync.
+portal/data/name-parse-index/
 
 # (kingdom, authority, key) -> species, for the import-time duplicate gate.
 # Rebuilt from the family files by scripts/authorityIndex.py (and lazily,

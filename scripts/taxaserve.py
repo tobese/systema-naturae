@@ -181,26 +181,21 @@ class Index:
     def _build_parse(self, quiet):
         t0 = time.time()
         parse = self.parse
-        if not os.path.exists(PARSE_INDEX):
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import nameIndexCache  # noqa: E402
+        records = nameIndexCache.load_all_records()
+        if not records:
             if not quiet:
-                print(f"    parse:  {PARSE_INDEX} absent, skipped "
-                      f"(run scripts/parseAllNames.py)", flush=True)
+                print(f"    parse:  no parser index (sidecars or monolith), skipped "
+                      f"(run scripts/parseAllNames.py --split)", flush=True)
             self.build_seconds["parse"] = 0.0
             return
         n = 0
-        with open(PARSE_INDEX, encoding="utf-8") as fh:
-            for line in fh:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    r = json.loads(line)
-                except json.JSONDecodeError:
-                    continue
-                name = r.get("n")
-                if name:
-                    parse[name] = r.get("canonical") or name
-                    n += 1
+        for r in records:
+            name = r.get("n")
+            if name:
+                parse[name] = r.get("canonical") or name
+                n += 1
         self.build_seconds["parse"] = time.time() - t0
         if not quiet:
             print(f"    parse:  {n:,} names in "

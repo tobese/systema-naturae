@@ -119,7 +119,8 @@ LEGACY_ONLY = ALL_CHECKS[:8]
 
 
 # Names that do not denote a taxon, from GBIF's name parser
-# (`portal/data/name-parse-index.jsonl`, built by scripts/parseAllNamesSliced.sh).
+# (`portal/data/name-parse-index.jsonl`, built by scripts/parseAllNamesSliced.sh,
+# or its per-family sidecars under `portal/data/name-parse-index/`).
 #
 # A regex was tried first and is not good enough: `spec.` catches 40% of the
 # INFORMAL cases and `BOLD:` only 7% of the OTU ones, because the rest carry a
@@ -167,8 +168,15 @@ PARSE_INDEX = os.path.join("portal", "data", "name-parse-index.jsonl")
 
 
 def load_parse_verdicts(path: str) -> dict:
-    """(name, rank) -> parser type, from the merged parser index."""
-    if not os.path.exists(path):
+    """(name, rank) -> parser type, from the merged parser index.
+
+    Reads per-family sidecars under `portal/data/name-parse-index/` when they
+    exist, falling back to the monolith `path` for transitional runs.
+    """
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import nameIndexCache  # noqa: E402
+    records = nameIndexCache.load_all_records()
+    if not records and os.path.exists(path):
         sys.exit(
             f"FATAL: UNRESOLVED_TAXON needs the parser index at {path}, which is absent.\n"
             f"       Build it with:  sh scripts/parseAllNamesSliced.sh\n"
@@ -176,13 +184,12 @@ def load_parse_verdicts(path: str) -> dict:
             f"       A regex alternative exists but catches only ~40% of the cases."
         )
     out = {}
-    with open(path, encoding="utf-8") as fh:
-        for line in fh:
-            if not line.startswith("{"):
-                continue
-            d = json.loads(line)
-            if d.get("type") in UNRESOLVED_TYPES:
-                out[(d["n"], d["ourRank"])] = d["type"]
+    for d in records:
+        if d.get("type") in UNRESOLVED_TYPES:
+            n = d.get("n")
+            r = d.get("ourRank")
+            if n and r:
+                out[(n, r)] = d["type"]
     return out
 
 

@@ -129,13 +129,13 @@ def _load(path=INDEX):
     """name.lower() -> canonical.lower(), or None if the index is unusable.
 
     With TAXASERVE set, ask a running scripts/taxaserve.py instead of reading
-    the 544MB index. The index is a snapshot and this has been the wrong side of
-    that fact repeatedly: it scored 13,347 of 16,371 ILDIS legume species as
-    already held when only 64 were, and 15,563 Cranefly species as new when
-    15,191 were held -- two runs in opposite directions, both from the same
-    stale file. The service builds the same table from the family files at
-    startup and can be reloaded with POST /reload after an import, so it is
-    never a snapshot of anything but the current tree.
+    the index. The index (monolith or per-family sidecars) is a snapshot and
+    this has been the wrong side of that fact repeatedly: it scored 13,347 of
+    16,371 ILDIS legume species as already held when only 64 were, and 15,563
+    Cranefly species as new when 15,191 were held -- two runs in opposite
+    directions, both from the same stale file. The service builds the same table
+    from the family files at startup and can be reloaded with POST /reload after
+    an import, so it is never a snapshot of anything but the current tree.
 
     Falls back to the file when the service is not running, so nothing depends
     on it being up.
@@ -157,16 +157,14 @@ def _load(path=INDEX):
               f"falling back to raw-name matching only")
         _cache = table
         return _cache
-    with open(path, encoding="utf-8") as fh:
-        for line in fh:
-            try:
-                rec = json.loads(line)
-            except ValueError:
-                continue
-            raw = (rec.get("n") or "").strip().lower()
-            canon = (rec.get("canonical") or "").strip().lower()
-            if raw and canon:
-                table[raw] = canon
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import nameIndexCache  # noqa: E402
+    records = nameIndexCache.load_all_records()
+    for rec in records:
+        raw = (rec.get("n") or "").strip().lower()
+        canon = (rec.get("canonical") or "").strip().lower()
+        if raw and canon:
+            table[raw] = canon
     print(f"  canonical index: {len(table):,} names "
           f"({sum(1 for v in table.values() if v):,} with a canonical form)")
     _cache = table

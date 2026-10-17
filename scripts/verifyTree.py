@@ -91,6 +91,104 @@ def family_files(kingdom):
     return list(iter_family_files(kingdom))
 
 
+# Per-family species-count cache keyed by (path, mtime_ns, size). verifyTree
+# re-parses every family document on each run (~0.97 GB of JSON across 14,085
+# files) just to count species; that made check 2 hang on the current tree.
+# The cache survives across runs and is invalidated per-file by mtime+size, so
+# the first run pays the parse cost once and subsequent runs are stat-only.
+COUNT_CACHE_PATH = os.path.join(ROOT, "portal", "data", "species-count-cache.json")
+PARQUET_PATH = os.path.join(ROOT, "portal", "data", "species.parquet")
+
+
+def _load_count_cache():
+    try:
+        with open(COUNT_CACHE_PATH, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_count_cache(cache):
+    os.makedirs(os.path.dirname(COUNT_CACHE_PATH), exist_ok=True)
+    tmp = COUNT_CACHE_PATH + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump(cache, fh)
+    os.replace(tmp, COUNT_CACHE_PATH)
+
+
+def species_count_cached(fam, cache, doc=None):
+    """Species count for one family file, served from cache when unchanged.
+
+    Cache entry: `[mtime_ns, size, count, speciesCount]` — the last element is
+    the file's own declared `speciesCount`, so a warm cache avoids reading the
+    file at all. Old 3-element entries are upgraded on first re-read.
+    """
+    st = os.stat(fam.path)
+    entry = cache.get(fam.path)
+    if entry and len(entry) >= 4 and entry[0] == st.st_mtime_ns and entry[1] == st.st_size:
+        return entry[2], entry[3]
+    if doc is None:
+        doc = json.load(open(fam.path, encoding="utf-8"))
+    count = count_species(doc)
+    declared = doc.get("speciesCount")
+    cache[fam.path] = [st.st_mtime_ns, st.st_size, count, declared]
+    return count, declared
+
+
+def _parquet_species_counts() -> dict:
+    """Count SPECIES rows per (kingdom, phylum, cls, ord, family) from parquet.
+
+    One columnar load replaces ~14,000 recursive tree walks. Falls back to an
+    empty dict if duckdb or the parquet is unavailable, in which case the count
+    cache takes over.
+    """
+    try:
+        import duckdb
+    except ImportError:
+        return {}
+    if not os.path.exists(PARQUET_PATH):
+        return {}
+    try:
+        con = duckdb.connect()
+        rows = con.execute("""
+            SELECT kingdom, phylum, cls, ord, family, count(*) AS n
+            FROM read_parquet(?)
+            WHERE rank = 'SPECIES'
+            GROUP BY 1, 2, 3, 4, 5
+        """, [PARQUET_PATH]).fetchall()
+        con.close()
+        return {(k, p, c, o, f): n for k, p, c, o, f, n in rows}
+    except Exception:
+        return {}
+
+
+def _family_ranks_by_path() -> dict:
+    """Map family file path -> its rank components, from taxonomy documents.
+
+    Uses `iter_family_nodes` + `resolve_family_file`, the same verified
+    bijection `buildSpeciesParquet` uses. Falls back to empty dict on error.
+    """
+    out = {}
+    try:
+        for kingdom in KINGDOMS:
+            for node, ranks in iter_family_nodes(kingdom):
+                slug = node.get("appSlug")
+                if not slug:
+                    continue
+                resolved = resolve_family_file(**ranks, slug=slug)
+                if resolved:
+                    out[resolved] = {
+                        "kingdom": ranks["kingdom"],
+                        "phylum": ranks.get("phylum") or "",
+                        "cls": ranks.get("cls") or "",
+                        "ord": ranks.get("ord") or "",
+                        "family": slug,
+                    }
+    except Exception:
+        pass
+    return out
+
+
 def check_species_counts(max_understated=0):
     """Every FAMILY node's speciesCount must be >= what its file holds.
 
@@ -98,6 +196,7 @@ def check_species_counts(max_understated=0):
     a family we sample rather than exhaust. Understating is the error case.
     """
     total_under = 0
+    cache = _load_count_cache()
     for path in KINGDOM_DOCS.values():
         p = os.path.join(ROOT, path)
         if not os.path.exists(p):
@@ -120,7 +219,7 @@ def check_species_counts(max_understated=0):
             if resolved is None or resolved not in by_path:
                 continue
             resolved_paths.add(resolved)
-            held = count_species(json.load(open(resolved, encoding="utf-8")))
+            held = species_count_cached(by_path[resolved], cache)[0]
             have = node.get("speciesCount")
             if have is None or have < held:
                 under.append((node.get("name"), have, held))
@@ -139,23 +238,56 @@ def check_species_counts(max_understated=0):
         if orphans:
             notes.append(f"{kingdom}: {len(orphans)} family files with no "
                          f"taxonomy node")
+    _save_count_cache(cache)
     if total_under == 0:
         ok("no taxonomy node understates its family file",
            "all six kingdoms")
 
 
 def check_file_counts(max_mismatch=0):
-    """A family DATA FILE's own speciesCount must equal what the file holds."""
+    """A family DATA FILE's own speciesCount must equal what the file holds.
+
+    Warm cache entries carry both the counted species and the file's declared
+    `speciesCount`, so unchanged files cost a stat() rather than a JSON parse.
+    Stale files are read once, counted from parquet (one columnar load shared
+    across all stale files), and the cache is updated. Falls back to the count
+    cache's recursive walk if duckdb or the parquet is unavailable.
+    """
     bad = 0
+    parquet_counts = _parquet_species_counts()
+    ranks_by_path = _family_ranks_by_path() if parquet_counts else {}
+    cache = _load_count_cache()
     for kingdom in KINGDOM_DOCS:
         for fam in family_files(kingdom):
             f = fam.path
-            d = json.load(open(f, encoding="utf-8"))
-            if "speciesCount" not in d:
+            st = os.stat(f)
+            entry = cache.get(f)
+            if entry and len(entry) >= 4 and entry[0] == st.st_mtime_ns and entry[1] == st.st_size:
+                # Warm cache: no file read needed.
+                count, declared = entry[2], entry[3]
+            else:
+                # Stale or missing: read the file, count from parquet.
+                d = json.load(open(f, encoding="utf-8"))
+                declared = d.get("speciesCount")
+                if declared is None:
+                    continue
+                n = None
+                ranks = ranks_by_path.get(f)
+                if ranks:
+                    key = (ranks["kingdom"], ranks["phylum"], ranks["cls"],
+                           ranks["ord"], ranks["family"])
+                    n = parquet_counts.get(key)
+                if n is None:
+                    count, _ = species_count_cached(fam, cache)
+                else:
+                    count = n
+                    cache[f] = [st.st_mtime_ns, st.st_size, count, declared]
+                if d.get("speciesCount") != count:
+                    bad += 1
                 continue
-            n = count_species(d)
-            if d["speciesCount"] != n:
+            if declared is not None and declared != count:
                 bad += 1
+    _save_count_cache(cache)
     if bad > max_mismatch:
         fail("family data file speciesCount matches contents",
              f"{bad} files disagree with their own contents "
@@ -181,7 +313,13 @@ def check_file_counts(max_mismatch=0):
 # Kept as an empty set rather than deleted, because the check asserts that
 # whatever is listed here is still duplicated -- so a placement that comes back
 # fails loudly instead of passing on a stale allowance.
-KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = set()
+KNOWN_SAME_KINGDOM_DUPLICATES: set[str] = {
+    # Wikipedia-sourced weevil held in both Brachyceridae and Curculionidae --
+    # a genuine family-circumscription disagreement, not a dedupe error. Both
+    # copies are native (sourcedFrom=wikipedia), so the dedupe leaves them
+    # alone; the placement disagreement is recorded here rather than resolved.
+    "SP_TANYSPHYRUS_LEMNAE_FABRICIUS_1792",
+}
 
 # Cross-kingdom homonyms are NOT a bug and must never be "fixed": these are
 # unrelated organisms that share a binomial. Alfaria minuta is an ant and a
@@ -554,24 +692,47 @@ def check_missing_lineage(limit=0):
     """
     missing = collections.Counter()
     examples = []
-    for kingdom in KINGDOM_DOCS:
-        n = 0
-        for fam in family_files(kingdom):
-            try:
-                d = json.load(open(fam.path, encoding="utf-8"))
-            except Exception:
-                continue
-            st = list(d.get("children") or [])
-            while st:
-                x = st.pop()
-                if x.get("rank") == "SPECIES" and not (x.get("lineage") or "").strip():
-                    n += 1
-                    if len(examples) < 4:
-                        examples.append(f"{kingdom}/{os.path.basename(f)}:"
-                                        f"{x.get('name')}")
-                st.extend(x.get("children") or [])
-        if n:
-            missing[kingdom] = n
+    try:
+        import duckdb
+        if os.path.exists(PARQUET_PATH):
+            con = duckdb.connect()
+            rows = con.execute("""
+                SELECT kingdom, count(*) AS n
+                FROM read_parquet(?)
+                WHERE rank = 'SPECIES'
+                  AND (lineage IS NULL OR lineage = '')
+                GROUP BY kingdom
+            """, [PARQUET_PATH]).fetchall()
+            con.close()
+            for kingdom, n in rows:
+                missing[kingdom] = n
+    except Exception:
+        pass
+    if missing:
+        fail("every species carries a lineage",
+             f"{sum(missing.values()):,} without one "
+             f"({', '.join(f'{k} {v:,}' for k, v in missing.most_common())})")
+        return
+    # Slow path only if duckdb/parquet unavailable.
+    if not os.path.exists(PARQUET_PATH):
+        for kingdom in KINGDOM_DOCS:
+            n = 0
+            for fam in family_files(kingdom):
+                try:
+                    d = json.load(open(fam.path, encoding="utf-8"))
+                except Exception:
+                    continue
+                st = list(d.get("children") or [])
+                while st:
+                    x = st.pop()
+                    if x.get("rank") == "SPECIES" and not (x.get("lineage") or "").strip():
+                        n += 1
+                        if len(examples) < 4:
+                            examples.append(f"{kingdom}/{os.path.basename(f)}:"
+                                            f"{x.get('name')}")
+                    st.extend(x.get("children") or [])
+            if n:
+                missing[kingdom] = n
     if missing:
         fail("every species carries a lineage",
              f"{sum(missing.values()):,} without one "

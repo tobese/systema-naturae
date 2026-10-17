@@ -158,6 +158,20 @@ serve:
 name-index:
 	python3 scripts/parseAllNames.py $(ARGS)
 
+# Migrate the monolith name-parse-index.jsonl into per-family sidecars under
+# portal/data/name-parse-index/, plus a manifest. One-time operation; after this
+# parseAllNames.py --split writes sidecars directly.
+split-name-index:
+	python3 scripts/splitNameIndex.py $(ARGS)
+
+# Sync per-family name-parse-index sidecars between Macie and q-bert over SSH.
+# Only sidecars whose manifest mtime/size differ are transferred.
+sync-name-index-to-qbert:
+	python3 scripts/syncNameIndex.py --to q-bert $(ARGS)
+
+sync-name-index-from-qbert:
+	python3 scripts/syncNameIndex.py --from q-bert $(ARGS)
+
 typecheck:
 	cd portal && npm run typecheck
 

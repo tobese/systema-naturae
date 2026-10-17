@@ -65,26 +65,29 @@ NON_TAXON = {"INFORMAL", "OTU", "NO_NAME", "PLACEHOLDER", "BLACKLISTED"}
 
 
 def load_parse(path: str) -> tuple[dict, set]:
-    """(name -> (authorship, year)), and the set of non-taxon names."""
-    if not os.path.exists(path):
+    """(name -> (authorship, year)), and the set of non-taxon names.
+
+    Reads per-family sidecars under `portal/data/name-parse-index/` when they
+    exist, falling back to the monolith `path` for transitional runs.
+    """
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import nameIndexCache  # noqa: E402
+    records = nameIndexCache.load_all_records()
+    if not records and not os.path.exists(path):
         sys.exit(f"FATAL: no parser index at {path}.\n"
                  f"       Build it with:  sh scripts/parseAllNamesSliced.sh")
     out: dict[str, tuple] = {}
     skip: set[str] = set()
-    with open(path, encoding="utf-8") as fh:
-        for line in fh:
-            if not line.startswith("{"):
-                continue
-            d = json.loads(line)
-            n = d.get("n") or ""
-            if not n:
-                continue
-            if d.get("type") in NON_TAXON:
-                skip.add(n)
-                continue
-            a, y = d.get("authorship"), d.get("year")
-            if a or y:
-                out[n] = (a, y)
+    for d in records:
+        n = d.get("n") or ""
+        if not n:
+            continue
+        if d.get("type") in NON_TAXON:
+            skip.add(n)
+            continue
+        a, y = d.get("authorship"), d.get("year")
+        if a or y:
+            out[n] = (a, y)
     return out, skip
 
 
