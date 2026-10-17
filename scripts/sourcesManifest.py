@@ -1534,8 +1534,18 @@ SOURCES = {
         "NCBI Taxonomy", "DOI not recorded", "https://www.ncbi.nlm.nih.gov/taxonomy",
         "CC0", "applied", "NCBI taxonomy."),
     "checklistbank-2214": (
-        "Genome Taxonomy Database (GTDB) r232", "DOI not recorded", "https://www.checklistbank.org/dataset/2214",
-        "not stated", "applied", "GTDB microbial taxonomy."),
+        "Genome Taxonomy Database (GTDB) r232", "DOI 10.48580/dgz7q; version r232",
+        "https://www.checklistbank.org/dataset/2214",
+        "not stated", "refused",
+        "GTDB microbial taxonomy. Status corrected 2026-10-17 from applied to "
+        "refused: GTDB carries 189,801 bacterial species and the bacteria "
+        "kingdom is on hold by decision (docs/bacteria-and-viruses.md, 2026-10-04), "
+        "so an import of this dataset is out of scope. The q-bert run "
+        "'Import NCBI bacteria/viruses + GTDB' did take it, and left 3,784 "
+        "bacteria families on disk; they are unreachable (not in "
+        "kingdom-config.json) and are documented in that doc as an artefact "
+        "of the hold being honoured rather than lifted. Re-verify before any "
+        "run: this entry is the machine-readable half of that decision."),
     "checklistbank-2256": (
         "World Catalogue of Opiliones", "DOI 10.48580/d4pt", "https://wcolite.com",
         "not stated", "applied", "Harvestmen (Opiliones)."),
