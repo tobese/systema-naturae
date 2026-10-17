@@ -78,6 +78,12 @@ import taxamatch  # noqa: E402
 
 COL = ("/Volumes/MacieExternal/sources/archives/catalogue-of-life-2025/"
        "col2026-base_dwca.zip")
+# Set by --archive. Everything below reads `ARCHIVE` instead of the constant, so
+# the scaffold-and-place path (parts B and C) is not COL's alone: WoRMS and the
+# other ChecklistBank exports carry the same information in other shapes, and
+# `load_col` below reads those too. See `load_col` for what "other shapes" means
+# -- it is most of them, and getting it wrong is silent rather than loud.
+ARCHIVE = COL
 ACCEPTED = {"accepted", "provisionally accepted"}
 SOURCE = "catalogue of life"
 KINGDOM_CONFIG = "portal/data/kingdom-config.json"
@@ -101,9 +107,26 @@ def dirname(name):
     return re.sub(r"\s+", "_", (name or "").lower())
 
 
-def load_col():
+def load_col(path=None):
+    """-> (parent, rank, name, authorship) keyed by taxon id, accepted taxa only.
+
+    Reads COL's own ColDP export directly -- it is the fast path and the shape
+    this script was written against. Anything else goes through
+    `colChecklist.load()`, which already handles DwCA taxon.txt, ColDP
+    NameUsage.tsv, ColDP CSV, quoted TSVs and the EUNIS/ILDIS denormalised
+    shapes.
+
+    Rank is lower-cased on the way out. COL writes "Species"; ChecklistBank's
+    DwCA writes "Species" too; the ColDP-TSV shape writes "species". The species
+    test in main() is an equality check, so leaving either capitalisation in
+    place drops the entire dataset on the floor with a bucket count of zero and
+    no error -- which is exactly what a reader should never do silently.
+    """
+    path = path or ARCHIVE
+    if not _is_col_export(path):
+        return _via_colchecklist(path)
     par, rank, name, auth = {}, {}, {}, {}
-    with zipfile.ZipFile(COL).open("Taxon.tsv") as f:
+    with zipfile.ZipFile(path).open("Taxon.tsv") as f:
         hdr = f.readline().decode("utf-8", "replace").rstrip("\n").split("\t")
         ci = {h: i for i, h in enumerate(hdr)}
         for line in io.TextIOWrapper(f, encoding="utf-8", errors="replace"):
@@ -115,6 +138,37 @@ def load_col():
             rank[t] = p[ci["dwc:taxonRank"]]
             name[t] = p[ci["dwc:scientificName"]]
             auth[t] = p[ci["dwc:scientificNameAuthorship"]]
+    return par, rank, name, auth
+
+
+def _is_col_export(path):
+    """True for COL's own `dwc:`-prefixed ColDP Taxon.tsv, False for anything else.
+
+    Checked by reading the header rather than by filename: ChecklistBank serves
+    several datasets as `Taxon.tsv` and only some of those are COL's.
+    """
+    try:
+        with zipfile.ZipFile(path).open("Taxon.tsv") as f:
+            header = f.readline().decode("utf-8", "replace")
+    except (KeyError, OSError, zipfile.BadZipFile):
+        return False
+    return "dwc:taxonID" in header
+
+
+def _via_colchecklist(path):
+    import colChecklist as CC
+    taxa, _names, _meta = CC.load(path)
+    par, rank, name, auth = {}, {}, {}, {}
+    for t in taxa:
+        if t.get("is_synonym"):
+            continue
+        tid = t.get("id")
+        if not tid or not t.get("name"):
+            continue
+        par[tid] = t.get("parent")
+        rank[tid] = (t.get("rank") or "").strip().lower()
+        name[tid] = t["name"]
+        auth[tid] = t.get("authorship")
     return par, rank, name, auth
 
 
@@ -134,13 +188,25 @@ def index_taxonomy(tax):
 
 
 def main() -> int:
+    global ARCHIVE, SOURCE
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true")
     ap.add_argument("--kingdom", action="append", default=[],
                     help="COL kingdom name; repeatable. Defaults to Fungi and "
                          "Chromista, the smallest pair that exercises the path.")
     ap.add_argument("--limit-families", type=int, default=0)
+    ap.add_argument("--archive", default=COL,
+                    help="ColDP/DwCA archive to scaffold from. Defaults to "
+                         "COL's own export; point it at a ChecklistBank archive "
+                         "(e.g. .../checklistbank-2011/archive.zip for WoRMS) to "
+                         "scaffold that dataset's absent families instead.")
+    ap.add_argument("--source", default=SOURCE,
+                    help="value stamped on every node this run creates as "
+                         "sourcedFrom. Must match docs/data-sources.md.")
     args = ap.parse_args()
+
+    ARCHIVE = args.archive
+    SOURCE = args.source
 
     kingdoms = args.kingdom or ["Fungi", "Chromista"]
     cfg = json.load(open(KINGDOM_CONFIG, encoding="utf-8"))
@@ -156,7 +222,8 @@ def main() -> int:
     idx = C._load()
     canon = set(idx.keys()) | set(idx.values())
     par, rank, name, auth = load_col()
-    print(f"  COL accepted taxa: {len(par):,}")
+    print(f"  {args.archive}")
+    print(f"  accepted taxa: {len(par):,}   sourcedFrom: {SOURCE!r}")
 
     def chain(tid):
         out = {}
@@ -319,7 +386,8 @@ def main() -> int:
     print(f"  C needing an 'Incertae sedis' family: {c_unresolved:,} "
           f"in {len(incerta):,} placements")
 
-    counters = {"written": 0, "skipped": 0, "unplaced": 0}
+    counters = {"written": 0, "skipped": 0, "unplaced": 0,
+                "skipped_no_phylum": 0}
 
     used_ids = set()
 
@@ -369,8 +437,17 @@ def main() -> int:
         leftovers (species we can neither match to a genus nor to a family).
         """
         fslug = SF.slug(fname)
-        if not phylum or not klass:
-            counters["skipped"] += 1
+        # A missing CLASS is not an unplaceable taxon. familyPath.ts says so
+        # explicitly -- Tardigrada is KINGDOM > PHYLUM > ORDER > FAMILY with no
+        # class, and inventing one to make the path uniform would fabricate
+        # taxonomy. This guard used to require `klass` and return, which is how
+        # all 80 of the turbellarian families were dropped in silence on
+        # 2026-10-17: WoRMS records no class for Platyhelminthes, and the
+        # summary then reported the 4,596 species as "unbinominal or already
+        # held", which is how a structural omission gets read as a data fact.
+        # Only a missing PHYLUM is unplaceable.
+        if not phylum:
+            counters["skipped_no_phylum"] += 1
             return
         if not order:
             order = UNPLACED
@@ -458,10 +535,13 @@ def main() -> int:
             existing["speciesCount"] = (existing.get("speciesCount") or 0) + len(nodes)
 
         # the data file
+        # Path mirrors the rank chain, so a phylum with no class contributes no
+        # class directory. See the guard above and familyPath.ts.
         seg = [kingdom.lower()]
         if phylum:
             seg.append(dirname(phylum))
-        seg.append(dirname(klass))
+        if klass:
+            seg.append(dirname(klass))
         seg.append(dirname(order))
         seg.append(fslug)
         d = os.path.join("taxonomy", *seg, "src", "data")
@@ -599,6 +679,8 @@ def main() -> int:
     print(f"  species added:                  {a_added:,}")
     print(f"  already present, merged:        {a_dedup:,}")
     print(f"  species skipped (unbinominal or already held): {skipped + counters['skipped']:,}")
+    if counters["skipped_no_phylum"]:
+        print(f"  families skipped (dataset records no phylum): {counters['skipped_no_phylum']:,}")
     print(f"  families placed under '{UNPLACED}': {counters['unplaced']:,}")
     print(f"  new ORDER nodes:   {len(new_orders):,}")
     if new_orders:
