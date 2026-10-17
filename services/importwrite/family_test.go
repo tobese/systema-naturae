@@ -244,6 +244,63 @@ func TestApply_FallsBackToNameWhenNeitherSideHasAnID(t *testing.T) {
 	}
 }
 
+// TestApply_MergesSourceIdsInsteadOfOverwriting is the regression test for
+// a real bug: running the new ChecklistBank importer against real data
+// (existing "col": ["N5F3"], incoming "col": "N5F3") replaced the array
+// with the bare string. Same ID here, but the same code path would
+// silently drop a genuinely different one.
+func TestApply_MergesSourceIdsInsteadOfOverwriting(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus idem",
+			"sourceIds": nodeFrom(map[string]any{"col": []any{"N5F3"}}),
+		})},
+	})
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus idem",
+			"sourceIds": nodeFrom(map[string]any{"col": "N5F3"}), // same ID, bare string this time
+		})},
+	})
+
+	genus := fs.genusIndex["testus"]
+	merged := genus.children()[0]
+	sourceIds, _ := merged.get("sourceIds").(*onode)
+	if sourceIds == nil {
+		t.Fatal("expected sourceIds to survive the merge")
+	}
+	if idValueStrings(sourceIds.get("col"))[0] != "N5F3" {
+		t.Fatalf("expected col id to survive, got %+v", sourceIds.get("col"))
+	}
+	if _, stillArray := sourceIds.get("col").([]any); !stillArray {
+		t.Fatalf("expected col to stay array-shaped (existing's shape), got %T %+v", sourceIds.get("col"), sourceIds.get("col"))
+	}
+
+	// Now a genuinely different ID under the same key must be kept
+	// alongside the first, not replace it.
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus idem",
+			"sourceIds": nodeFrom(map[string]any{"col": "ANOTHER_ID"}),
+		})},
+	})
+	sourceIds, _ = genus.children()[0].get("sourceIds").(*onode)
+	colIDs := idValueStrings(sourceIds.get("col"))
+	if len(colIDs) != 2 {
+		t.Fatalf("expected both col IDs to survive the merge, got %+v", colIDs)
+	}
+}
+
 func TestApply_PrefersNonOllamaSource(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}

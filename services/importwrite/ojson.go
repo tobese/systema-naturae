@@ -78,8 +78,15 @@ func (n *onode) setChildren(cs []*onode) {
 
 // mergeObjectField merges two object-valued fields (e.g. sourceIds) key by
 // key, existing's keys first in their original order, then any new keys
-// incoming introduces, in incoming's order. Returns nil if there is
-// nothing to merge (incoming isn't an object).
+// incoming introduces, in incoming's order. A key present on both sides has
+// its VALUES unioned (via unionIDValue), not overwritten — found by running
+// the ChecklistBank importer for real: existing had "col": ["N5F3"], the
+// new import sent "col": "N5F3" (same ID, different wrapping — real data is
+// inconsistent about this per key), and a plain overwrite replaced the
+// array with the bare string. Harmless for an identical single ID, but the
+// same code path would silently drop a *different* historical ID the other
+// side didn't happen to resend. Returns nil if there is nothing to merge
+// (incoming isn't an object).
 func mergeObjectField(existing, incoming any) any {
 	incomingObj, ok := incoming.(*onode)
 	if !ok {
@@ -94,9 +101,80 @@ func mergeObjectField(existing, incoming any) any {
 		merged.set(k, existingObj.vals[k])
 	}
 	for _, k := range incomingObj.keys {
-		merged.set(k, incomingObj.vals[k])
+		if existingVal, present := merged.vals[k]; present {
+			merged.set(k, unionIDValue(existingVal, incomingObj.vals[k]))
+		} else {
+			merged.set(k, incomingObj.vals[k])
+		}
 	}
 	return merged
+}
+
+// unionIDValue merges two sourceIds[key] values — each may be a bare
+// string, a string array, or a bare number — into the union of every
+// distinct ID in either, existing's first.
+//
+// Whether a single resulting ID stays a bare value or an array follows
+// EXISTING's own shape, not a fixed rule: col/itis/wikidata are
+// array-only everywhere in the real tree, even for one ID, while
+// checklistbank/worms are usually bare. A universal "collapse to bare
+// when there's only one" (the first version of this function) silently
+// reformatted every col/itis value on a no-op merge — a real bug found by
+// running the ChecklistBank importer for real. There's no per-key rule to
+// hardcode here (this stays dataset-agnostic by design), so the one
+// signal available — what existing already looked like — is what wins.
+func unionIDValue(existing, incoming any) any {
+	seen := map[string]bool{}
+	var out []string
+	for _, s := range idValueStrings(existing) {
+		if !seen[s] {
+			seen[s] = true
+			out = append(out, s)
+		}
+	}
+	for _, s := range idValueStrings(incoming) {
+		if !seen[s] {
+			seen[s] = true
+			out = append(out, s)
+		}
+	}
+	_, existingWasArray := existing.([]any)
+	if len(out) == 1 && !existingWasArray {
+		return out[0]
+	}
+	arr := make([]any, len(out))
+	for i, s := range out {
+		arr[i] = s
+	}
+	return arr
+}
+
+// idValueStrings flattens one sourceIds[key] value to its string ID(s),
+// regardless of whether it's a bare string, a string array, or a number.
+func idValueStrings(v any) []string {
+	switch x := v.(type) {
+	case string:
+		if x == "" {
+			return nil
+		}
+		return []string{x}
+	case float64:
+		return []string{formatNumericID(x)}
+	case []any:
+		out := make([]string, 0, len(x))
+		for _, item := range x {
+			switch s := item.(type) {
+			case string:
+				if s != "" {
+					out = append(out, s)
+				}
+			case float64:
+				out = append(out, formatNumericID(s))
+			}
+		}
+		return out
+	}
+	return nil
 }
 
 // --- JSON decode: a hand-rolled token walk, because the only way to learn
