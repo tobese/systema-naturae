@@ -506,8 +506,8 @@ def _coldp(path):
                "rank": r,
                # Blank is the ordinary accepted case here too, same reason
                # as the load_core() filter above -- not just "not excluded".
-               "is_synonym": e.get("status") not in _C.ACCEPTED and
-                             e.get("status") != "",
+               "is_synonym": (e.get("status") or "").strip().lower() not in _C.ACCEPTED and
+                             (e.get("status") or "").strip() != "",
                "status": e.get("status")}
         # Flat kingdom_name/.../family_name columns, when load_core() found
         # them (col:parentID blank -- MDD -- or just not walked that far).

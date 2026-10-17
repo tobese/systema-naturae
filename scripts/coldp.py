@@ -98,6 +98,7 @@ def _columns(header):
     out = {}
     for i, h in enumerate(header):
         bare = h[4:] if h.startswith(("col:", "dwc:")) else h
+        bare = bare.strip('"')
         out[DWCA.get(bare, bare)] = i
     return out
 
@@ -229,7 +230,8 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
             i_rankcol = {rnk: ix.get(rnk) for rnk in
                          ("kingdom", "phylum", "class", "order", "family")}
             for row in rd:
-                if len(row) <= i_nm or row[i_st] not in accepted:
+                row = [v.strip('"') if v else v for v in row]
+                if len(row) <= i_nm or (row[i_st] or "").strip().lower() not in accepted:
                     continue
                 t = row[i_id]
                 par[t] = row[i_par]

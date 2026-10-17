@@ -38,6 +38,16 @@
   recording refusals instead of counting them.
 - **Rebuild the name index** — 2,989 family files postdate it after the WFO and
   ITIS imports. `make name-index` (hours; it POSTs every name to GBIF's parser).
+- **Sync the name-index cache (`portal/data/name-parse-index.jsonl`) across Macie ↔ q-bert before any script that needs it runs.**
+  `name-parse-index.jsonl` (559MB, ~6.98M names) is gitignored and per-machine, so
+  Macie's copy is stale after COL China + NCBI/GTDB imports and q-bert's copy is
+  stale after Macie imports, and each machine rebuilds it differently (`parseAllNames.py`
+  POSTs to GBIF — expensive). Copy Macie's canonical copy to q-bert at
+  `agent@q-bert.local:/home/agent/src/systema-naturae/portal/data/name-parse-index.jsonl`
+  (or `agent@100.118.201.11`) before sanity scans / `nameIndexStatus` / import re-runs.
+  **Must be possible to split the existing file into per-family sidecar indexes** so sync
+  is incremental instead of shipping one 559MB file every time an import changes a
+  few thousand rows — see `memory/project_name_index_cache_sync.md`.
 - **1.17M plantae species carry a superseded genus in `lineage`** —
   `Gyroporella pauciforata` has `lineage: "Physoporella"`, so the field is not a
   reliable genus source. `verifyTree.py` reports this as a note rather than a

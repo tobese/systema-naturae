@@ -132,7 +132,7 @@ function collectSpecies(node: any, out: any[]) {
 function getAllDataFiles(): Map<string, string> {
   const out = execSync(
     `find ${root} -path "*/src/data/*.json" -not -path "*/node_modules/*" -type f`,
-    { encoding: "utf-8" }
+    { encoding: "utf-8", maxBuffer: 100 * 1024 * 1024 }
   ).trim();
   const files = new Map<string, string>();
   for (const f of out.split("\n").filter(Boolean)) {
@@ -153,7 +153,7 @@ async function main() {
     for (const slug of slugs) {
       const result = execSync(
         `find ${root} -path "*/${slug}/src/data/${slug}.json" -not -path "*/node_modules/*" -type f`,
-        { encoding: "utf-8" }
+        { encoding: "utf-8", maxBuffer: 100 * 1024 * 1024 }
       ).trim();
       if (result) files.set(slug, result.split("\n")[0]);
     }
