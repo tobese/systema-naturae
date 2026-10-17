@@ -1436,6 +1436,82 @@ SOURCES = {
         "https://www.checklistbank.org/dataset/1118",
         "CC BY", "assessed",
         "Hymenoptera specialist database, 30k species. Wasp/bee/ant gap filler."),
+    "catalogue-of-life-2025": (
+        "Catalogue of Life, September 2026 edition", "DOI 10.48580/dgz5n (ChecklistBank 316321)",
+        "https://www.catalogueoflife.org/data/download", "CC BY 4.0", "assessed",
+        "COL base release September 2026; 91 checklists updated including ITIS, ScaleNet, UCD, WCO, WSC."),
+    "checklistbank-1044": (
+        "World Porifera Database", "DOI 10.14284/359", "https://www.marinespecies.org/porifera",
+        "CC BY", "applied", "WoRMS Porifera; sponges, 96% complete."),
+    "checklistbank-1081": (
+        "World List of Bryozoa", "DOI not recorded", "https://www.marinespecies.org",
+        "CC BY", "applied", "WoRMS Bryozoa; moss animals, 100% complete."),
+    "checklistbank-1094": (
+        "World Marine, Freshwater and Terrestrial Isopod Crustaceans database", "DOI 10.14284/365",
+        "https://www.marinespecies.org/isopoda", "CC BY", "applied", "WoRMS Isopoda."),
+    "checklistbank-1101": (
+        "Systema Dipterorum", "DOI 10.48580/d3bz", "https://www.checklistbank.org/dataset/1101",
+        "not stated", "applied", "Diptera nomenclator, ~160k extant + 4.5k extinct species."),
+    "checklistbank-1141": (
+        "Synonymic Checklists of the Vascular Plants of the World", "DOI 10.48580/d3dd",
+        "https://www.checklistbank.org/dataset/1141", "CC BY", "applied", "World Plants; vascular plants."),
+    "checklistbank-1174": (
+        "The Paleobiology Database", "DOI not recorded", "https://www.paleobiodb.org",
+        "CC BY", "assessed", "Fossil occurrences; paleontological data."),
+    "checklistbank-1193": (
+        "World List of turbellarian worms", "DOI not recorded", "https://www.marinespecies.org/turbellarians",
+        "CC BY", "applied", "Acoelomorpha, Catenulida, Rhabditophora; 3,425 accepted species."),
+    "checklistbank-124661": (
+        "Universal Chalcidoidea Database", "DOI 10.48580/d758p", "https://www.checklistbank.org/dataset/124661",
+        "not stated", "applied", "Chalcidoidea; 28,590 valid species."),
+    "checklistbank-139831": (
+        "iNaturalist Taxonomy", "DOI not recorded", "https://www.inaturalist.org/taxa",
+        "no IP restrictions stated", "applied", "iNaturalist taxonomy."),
+    "checklistbank-2000": (
+        "World Checklist of Vascular Plants", "DOI not recorded", "https://powo.science.kew.org",
+        "not stated", "assessed", "WCVP (Kew)."),
+    "checklistbank-2008": (
+        "TAXREF", "DOI not recorded", "https://www.checklistbank.org/dataset/2008",
+        "CC BY 4.0", "applied", "French national taxonomic reference."),
+    "checklistbank-201891": (
+        "Open Tree of Life Synthetic Tree", "DOI not recorded", "https://tree.opentreeoflife.org",
+        "CC0", "applied", "OTL synthetic tree, v13.4."),
+    "checklistbank-2031": (
+        "Flora e Funga do Brasil - Lista Oficial", "DOI not recorded", "https://www.checklistbank.org/dataset/2031",
+        "CC BY 4.0", "applied", "Brazilian flora/funga."),
+    "checklistbank-2130": (
+        "Checklist of the Collembola of the World", "DOI not recorded", "https://www.collembola.org",
+        "CC BY", "applied", "Springtails."),
+    "checklistbank-2169": (
+        "NCBI Taxonomy", "DOI not recorded", "https://www.ncbi.nlm.nih.gov/taxonomy",
+        "CC0", "applied", "NCBI taxonomy."),
+    "checklistbank-2214": (
+        "Genome Taxonomy Database (GTDB) r232", "DOI not recorded", "https://www.checklistbank.org/dataset/2214",
+        "not stated", "applied", "GTDB microbial taxonomy."),
+    "checklistbank-2256": (
+        "World Catalogue of Opiliones", "DOI 10.48580/d4pt", "https://wcolite.com",
+        "not stated", "applied", "Harvestmen (Opiliones)."),
+    "checklistbank-2265": (
+        "The European Nucleotide Archive (ENA) taxonomy", "DOI not recorded", "http://www.ebi.ac.uk/ena",
+        "public", "assessed", "ENA taxonomy."),
+    "checklistbank-56185": (
+        "The World Spider Catalog", "DOI 10.24436/2", "https://www.checklistbank.org/dataset/56185",
+        "not stated", "applied", "Spider taxonomy (WSC)."),
+    "flow": (
+        "FLOW (Fulgoromorpha Lists On the Web)", "DOI not recorded", "https://flow.hemiptera-databases.org",
+        "not stated", "assessed", "Planthoppers; TSV format."),
+    "itis": (
+        "Integrated Taxonomic Information System", "DOI 10.48580/d4ky", "https://www.itis.gov",
+        "not stated", "applied", "ITIS; all seven kingdoms."),
+    "moss-tropicos": (
+        "Moss Tropicos", "DOI not recorded", "https://www.tropicos.org", "not stated", "assessed",
+        "Moss data (gzip)."),
+    "species-file-phasmida-v2": (
+        "Phasmida Species File v2", "DOI not recorded", "https://www.checklistbank.org", "not stated",
+        "assessed", "Stick insects."),
+    "usda-plants-extracted": (
+        "USDA Plants (extracted)", "DOI not recorded", "https://plants.usda.gov", "not stated", "assessed",
+        "USDA plant taxonomy."),
 }
 
 
