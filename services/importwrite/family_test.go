@@ -189,6 +189,39 @@ func TestApply_MatchesByIDFromStringArraySourceIds(t *testing.T) {
 	}
 }
 
+func TestApply_MatchesByBareNumericID(t *testing.T) {
+	// Scanned the real tree: species-level sourceIds.gbif is a bare JSON
+	// number (not a string) in 21,111 cases across animalia alone. Decoded
+	// through encoding/json that's a float64, not a string — a distinct
+	// code path from the string and []any cases already covered above.
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus numericus",
+			"sourceIds": nodeFrom(map[string]any{"gbif": 2436351.0}),
+		})},
+	})
+
+	result := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus renominatus",
+			"sourceIds": nodeFrom(map[string]any{"gbif": 2436351.0}),
+		})},
+	})
+
+	if len(result.Added) != 0 || len(result.Merged) != 1 {
+		t.Fatalf("expected the bare numeric gbif ID to match, got %+v", result)
+	}
+}
+
 func TestApply_FallsBackToNameWhenNeitherSideHasAnID(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
