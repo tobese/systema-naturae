@@ -10,6 +10,54 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Measured 2026-10-17 — the standing queue, and a partial-import pattern
+
+Every archive on q-bert's sources volume re-measured against the current tree
+(81 archives, 34 with a measurable miss), ranked by unheld species. This is the
+queue the pipeline drains next, and it is worth reading for a reason that has
+nothing to do with the numbers.
+
+| key | dataset | offered | unheld | families unheld | manifest |
+|---|---|---:|---:|---:|---|
+| 201891 | Open Tree of Life Synthetic Tree | 2,200,379 | 299,333 | 1,776 | applied |
+| 2214 | GTDB r232 | 199,923 | 190,389 | 3,606 | ~~applied~~ **refused** |
+| 2037 | ZooBank bulk export | 275,636 | 124,450 | 146 | assessed |
+| 2011 | WoRMS | 564,441 | 92,406 | 1,041 | applied 2026-10-17 |
+| 2008 | TAXREF (France) | 526,160 | 83,694 | 958 | applied |
+| 311094 | BOLD Systems Taxonomy — Insecta | 371,044 | 61,247 | 165 | applied |
+| 1101 | Systema Dipterorum | 180,772 | 25,979 | 3 | applied |
+| 281817 | Brazilian Fauna | 131,115 | 24,748 | 409 | applied |
+| 2026 | Fauna Europaea | 131,607 | 24,134 | 0 | assessed |
+| 1141 | World Plants (vascular) | 354,865 | 13,730 | 7 | applied |
+| 55434 | Global Lepidoptera Index | 164,529 | 12,084 | 1 | applied |
+| 1204 | StaphBase | 86,567 | 9,723 | 0 | applied |
+
+**Seven of the top eleven are already marked `applied`.** That is the finding:
+those imports were partial, and for the same reason the 2026-10-17 batch needed
+a scaffolder at all. `importColChecklist.py` refuses any species whose family the
+tree lacks, so an import whose source carries many families we do not hold leaves
+most of its value on the floor while still recording itself as done. TAXREF with
+958 families unheld and BOLD with 165 are the two largest examples.
+
+So "applied" in the manifest means "an import ran", not "the source is in the
+tree". A second pass with `importColStage2.py --archive` is what actually
+drains it, and that is the shape the pipeline should assume from here.
+
+Two entries in that table are not import candidates at all:
+
+- **2214 GTDB** is refused. Bacteria is on hold by decision
+  (`docs/bacteria-and-viruses.md`), GTDB's bacterial half is 189,801 of its
+  199,923 species, and the q-bert run that took it did so after the hold was
+  decided. Its manifest status was corrected from `applied` to `refused` on
+  2026-10-17 — the machine-readable record has to agree with the policy or the
+  next run reads the policy backwards.
+- **201891 Open Tree of Life Synthetic Tree** measures the largest miss on the
+  volume and should still not be imported. It is a *synthetic* tree — a
+  hypothesis about relationships — not a register of described species, and its
+  rows are `accepted` in the nomenclatural sense the WoRMS archives also use,
+  which is what makes its 2.2M "species" unrepresentative. It is already marked
+  `applied`, which deserves its own look.
+
 ## Triaged 2026-10-17 — ten datasets fetched, and the worm gap is mostly gone
 
 Shelf re-read with `scripts/checklistbankShelf.py`: **479** taxonomic datasets
