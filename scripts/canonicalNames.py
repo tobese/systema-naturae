@@ -19,6 +19,7 @@ trying.
 """
 import json
 import os
+import sys
 import time
 
 INDEX = os.path.join("portal", "data", "name-parse-index.jsonl")
