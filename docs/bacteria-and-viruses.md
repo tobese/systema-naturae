@@ -1,13 +1,37 @@
 # Holding bacteria and viruses
 
-> **ON HOLD as of 2026-10-04 until further notice.** Bacteria and viruses are
-> not to be imported, and no rank decision is to be taken. Sources for them are
-> still being registered — `ncbi-taxonomy`, `ictv-msl`, `gtdb` and
-> `wikidata-species` are all on the record — but registration is the only work
-> in scope. Everything below is retained because the measurement is expensive to
-> redo and because the hold may be lifted; none of it is a task list. When the
-> hold lifts, the rank question is settled for bacteria (see *Settled* below) and
-> still open for viruses.
+> **ON HOLD as of 2026-10-04, reaffirmed 2026-10-17. Do not import, scaffold,
+> build or deploy either kingdom.** Bacteria and viruses are not to be imported,
+> and no rank decision is to be taken. Sources for them are still being
+> registered — `ncbi-taxonomy`, `ictv-msl`, `gtdb` and `wikidata-species` are
+> all on the record — but registration is the only work in scope. Everything below
+> is retained because the measurement is expensive to redo and because the hold
+> may be lifted; none of it is a task list. When the hold lifts, the rank
+> question is settled for bacteria (see *Settled* below) and still open for
+> viruses.
+>
+> **What "on hold" means mechanically.** `portal/data/kingdom-config.json`
+> declares six kingdoms and must keep declaring six. It is what
+> `buildAllKingdoms.sh`, `tree.kingdom_names()`, `verifyTree` and `sanity_scan`
+> all read, so the six-kingdom list is the enforcement, not a description.
+> Adding `bacteria` or `viruses` there is not finishing a half-done feature; it
+> is lifting the hold without making the decision.
+>
+> **The family files on disk are a known artefact, not an oversight.** An import
+> ran on q-bert (`Import NCBI bacteria/viruses + GTDB`, commits `d75d600cd1`,
+> `efc0c5f72b`) and left **3,784 bacteria and 393 viruses** families committed
+> under `taxonomy/`. They are unreachable — not in `kingdom-config.json`, so not
+> grafted, not built, not deployed, and invisible to `make check`, which is why
+> `tree.family_data_files()` returns 14,332 while 18,509 family files exist on
+> disk. They are left in place deliberately: the measured material is expensive to
+> regenerate, and *not building it* is the hold being honoured. Deleting them is
+> a separate decision with its own reasons and is not implied by this one.
+>
+> One place names these kingdoms outside this paragraph, on purpose:
+> `scripts/post-import.sh` appends `bacteria viruses` to the config kingdom list
+> so a uuid backfill does not silently skip work already on disk. That is a
+> correctness fix for the backfill, not a build of the kingdoms. Read it before
+> "correcting" it.
 
 The decision this document was written to inform: **the project should hold
 viruses and bacteria** — they are a fifth of the tree's potential and no amount

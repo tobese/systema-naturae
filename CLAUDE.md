@@ -34,6 +34,34 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 > The trees on the machines under the desk still run Ollama for other projects;
 > that is not a licence to use it here.
 
+> ## 🚫 Bacteria and viruses are deliberately on hold
+>
+> Decided **2026-10-04**, reaffirmed 2026-10-17. **Do not import, scaffold,
+> build or deploy either kingdom.** The reasoning and the measurements are in
+> [`docs/bacteria-and-viruses.md`](docs/bacteria-and-viruses.md); it is a
+> decision, not a bug, and the numbers in it are why.
+>
+> - **`kingdom-config.json` declares six kingdoms and must keep declaring six.**
+>   Adding `bacteria` or `viruses` there is not a missing feature to be
+>   completed — it is the hold being lifted without the decision being made. The
+>   config is what `buildAllKingdoms.sh`, `tree.kingdom_names()`, `verifyTree`
+>   and `sanity_scan` all read, so the six-kingdom list *is* the enforcement.
+> - **The family files already on disk are a known artefact, not an oversight.**
+>   An import ran on q-bert (`Import NCBI bacteria/viruses + GTDB`) and left
+>   3,784 bacteria and 393 viruses families committed under `taxonomy/`. They
+>   are unreachable: not in `kingdom-config.json`, so not grafted, not built,
+>   not deployed, and invisible to `make check`. Leaving them is the cheapest
+>   way to keep the measured material without acting on it.
+> - **Sources stay registered while the hold holds.** `ncbi-taxonomy`,
+>   `ictv-msl`, `gtdb` and `wikidata-species` are recorded in the manifest.
+>   Registration is the only work in scope.
+> - The rank question is settled for bacteria and still open for viruses — see
+>   *Settled* in that doc. Lifting the hold means deciding rank first.
+>
+> `scripts/post-import.sh` is the one place that names these two kingdoms
+> explicitly, and it appends them to the config list on purpose so a backfill
+> run does not silently skip work already on disk. Read it before "fixing" it.
+
 > **⚠️ Six kingdoms, one system.** `portal/data/kingdom-config.json` declares
 > `animalia`, `plantae`, `fungi`, `chromista`, `protozoa` and `archaea`. They are
 > peers: each has its own taxonomy input, its own colour registry and its own
