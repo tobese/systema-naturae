@@ -138,7 +138,7 @@ def load_col(path=None):
             rank[t] = p[ci["dwc:taxonRank"]]
             name[t] = p[ci["dwc:scientificName"]]
             auth[t] = p[ci["dwc:scientificNameAuthorship"]]
-    return par, rank, name, auth
+    return par, rank, name, auth, {}
 
 
 def _is_col_export(path):
@@ -155,10 +155,18 @@ def _is_col_export(path):
     return "dwc:taxonID" in header
 
 
+# Column names colChecklist exposes for the denormalised rank path, and the
+# `chain()` rank they answer for. See `_via_colchecklist` for why the parent
+# walk alone is not enough.
+FLAT_COL = {"kingdom_name": "kingdom", "phylum_name": "phylum",
+            "class_name": "class", "order_name": "order",
+            "family_name": "family"}
+
+
 def _via_colchecklist(path):
     import colChecklist as CC
     taxa, _names, _meta = CC.load(path)
-    par, rank, name, auth = {}, {}, {}, {}
+    par, rank, name, auth, flat = {}, {}, {}, {}, {}
     for t in taxa:
         if t.get("is_synonym"):
             continue
@@ -169,7 +177,10 @@ def _via_colchecklist(path):
         rank[tid] = (t.get("rank") or "").strip().lower()
         name[tid] = t["name"]
         auth[tid] = t.get("authorship")
-    return par, rank, name, auth
+        row = {r: t.get(c) for c, r in FLAT_COL.items() if t.get(c)}
+        if row:
+            flat[tid] = row
+    return par, rank, name, auth, flat
 
 
 def index_taxonomy(tax):
@@ -221,11 +232,25 @@ def main() -> int:
 
     idx = C._load()
     canon = set(idx.keys()) | set(idx.values())
-    par, rank, name, auth = load_col()
+    par, rank, name, auth, flat = load_col()
     print(f"  {args.archive}")
     print(f"  accepted taxa: {len(par):,}   sourcedFrom: {SOURCE!r}")
 
     def chain(tid):
+        """Rank path of a taxon: kingdom down to family.
+
+        Two sources, because only one of them is present in any given archive.
+        The parent walk finds a rank when some ancestor row *is* that rank, which
+        is COL's shape. But the WoRMS ColDP exports carry the path as flat
+        columns on every row and have no order, class, phylum or kingdom row at
+        all -- taxon.txt for Brachyura holds species, genus, subfamily, family
+        and superfamily and nothing above. So the walk finds nothing, `kingdom`
+        comes back empty, and every species is skipped by the kingdom test
+        below with no error: 708,685 accepted taxa, zero bucketed, exit 0.
+
+        The flat columns answer first for those archives; the walk fills anything
+        they leave out, so an archive carrying both still resolves.
+        """
         out = {}
         for w in ("kingdom", "superkingdom", "domain") + CHAIN:
             c, n = tid, 0
@@ -235,6 +260,8 @@ def main() -> int:
                     break
                 c = par.get(c)
                 n += 1
+        for w, v in (flat.get(tid) or {}).items():
+            out.setdefault(w, v)
         return out
 
     # Each kingdom has its own taxonomy file; portal/data/taxonomy.json is
@@ -272,6 +299,7 @@ def main() -> int:
                 genus_family.setdefault((king, (g.get("name") or "").strip().lower()), f)
 
     # ---- bucket every in-scope species into A / B / C ----
+    want_kingdoms = {k.lower() for k in kingdoms}
     existing_kids = collections.defaultdict(list)      # A: family we have
     fam_kids = collections.defaultdict(list)           # B: family we lack
     nofam_kids = []                                    # C: COL has no family
@@ -283,7 +311,14 @@ def main() -> int:
             continue
         ch = chain(t)
         k = ch.get("kingdom") or ch.get("superkingdom") or ch.get("domain")
-        if k not in kingdoms:
+        # Case-insensitive, because --kingdom is typed by a human and the
+        # archive is not. Comparing them exactly meant `--kingdom animalia`
+        # against a source that writes "Animalia" dropped every species in the
+        # dataset and reported "A existing families: 0, B new families: 0,
+        # C no family: 0" with exit 0 -- eight datasets in a row on q-bert,
+        # 708,685 accepted taxa read and none of them counted, because nothing
+        # said so.
+        if not k or k.lower() not in want_kingdoms:
             continue
         fam = None
         c, n = t, 0
@@ -293,14 +328,15 @@ def main() -> int:
                 break
             c = par.get(c)
             n += 1
-        if fam is None:
+        fam_name = name.get(fam) if fam else ch.get("family")
+        if fam is None and not fam_name:
             nofam_kids.append(t)                       # C
             continue
-        key = (k.lower(), (name.get(fam) or "").strip().lower())
+        key = (k.lower(), (fam_name or "").strip().lower())
         if key in fam_paths:
             existing_kids[key].append(t)               # A
         else:
-            fam_kids[fam].append(t)                    # B
+            fam_kids[fam_name].append(t)               # B
 
     n_existing = sum(len(v) for v in existing_kids.values())
     n_new = sum(len(v) for v in fam_kids.values())
@@ -663,10 +699,20 @@ def main() -> int:
     if args.limit_families:
         targets = targets[:args.limit_families]
     for fam, kids in targets:
-        fname = (name.get(fam) or "").strip()
+        # fam_kids is keyed by family name now, not by a taxon id, because these
+        # archives often have no family *row* to key on -- only a family column.
+        fname = fam.strip()
         if not fname:
             continue
-        ch = chain(fam)
+        # Any member resolves the same chain; the first one that carries a
+        # kingdom wins, because a family whose members disagree on kingdom is
+        # not one we can place and the chain below is best-effort by design.
+        ch = {}
+        for t in kids:
+            c = chain(t)
+            if c.get("kingdom") or c.get("superkingdom") or c.get("domain"):
+                ch = c
+                break
         place((ch.get("kingdom") or ch.get("superkingdom")
                or ch.get("domain") or "").strip(),
               (ch.get("phylum") or "").strip(),
