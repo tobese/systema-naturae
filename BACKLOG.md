@@ -38,34 +38,36 @@
   recording refusals instead of counting them.
 - **Rebuild the name index** — 2,989 family files postdate it after the WFO and
   ITIS imports. `make name-index` (hours; it POSTs every name to GBIF's parser).
-- **Sync the name-index cache (`portal/data/name-parse-index.jsonl`) across Macie ↔ q-bert before any script that needs it runs.**
-  `name-parse-index.jsonl` (559MB, ~6.98M names) is gitignored and per-machine, so
-  Macie's copy is stale after COL China + NCBI/GTDB imports and q-bert's copy is
-  stale after Macie imports, and each machine rebuilds it differently (`parseAllNames.py`
-  POSTs to GBIF — expensive). Copy Macie's canonical copy to q-bert at
-  `agent@q-bert.local:/home/agent/src/systema-naturae/portal/data/name-parse-index.jsonl`
-  (or `agent@100.118.201.11`) before sanity scans / `nameIndexStatus` / import re-runs.
-  **Must be possible to split the existing file into per-family sidecar indexes** so sync
-  is incremental instead of shipping one 559MB file every time an import changes a
-  few thousand rows — see `memory/project_name_index_cache_sync.md`.
+- **Sync the name-index cache across Macie ↔ q-bert before any script that needs it runs.**
+  Migrated to per-family sidecars under `portal/data/name-parse-index/` plus
+  `portal/data/name-parse-index/manifest.json` (13,991 sidecars, ~2.7M records).
+  `make split-name-index` ran once; going forward `parseAllNames.py --split`
+  writes sidecars directly. `make sync-name-index-to-qbert` / `--from-qbert`
+  diff manifests and transfer only changed sidecars via
+  `scripts/syncNameIndex.py` instead of shipping the 559MB monolith.
+  `python3 scripts/nameIndexStatus.py` reports stale sidecars (342 after recent
+  fix runs — rebuild with `make name-index ARGS='--split --workers 6'`).
+  The monolith `name-parse-index.jsonl` is still on disk but superseded.
 - **1.17M plantae species carry a superseded genus in `lineage`** —
   `Gyroporella pauciforata` has `lineage: "Physoporella"`, so the field is not a
   reliable genus source. `verifyTree.py` reports this as a note rather than a
   failure because it is widespread and pre-existing; the graph reads genus from
   the tree structure instead. Fixing the field wants its own pass, not a
   drive-by during an import.
-- **Profile `verifyTree.py` check 2** — it hangs past check 1 at the current
-  ~3.8 GB tree (~2.5M species). `iter_family_files('animalia')` alone is 67s
-  across 10,601 family files via recursive glob, and `count_species` re-parses
-  every file. Either cache per-family counts, skip speciesList compression on
-  source files (0 of 14,085 contain one), or sample-based checks. `make check`
-  is the CI gate and can't stay red on a hung step.
+- ~~**Profile `verifyTree.py` check 2** — it hangs past check 1 at the current
+  ~3.8 GB tree (~2.5M species).~~ **Resolved 2026-10-17.** `check_file_counts`
+  and `check_missing_lineage` now read from the derived `species.parquet`
+  (170 MB, one columnar load ~0.4s) instead of re-parsing all 14,332 family
+  JSON files (~100s). Warm count cache carries declared `speciesCount` so
+  unchanged files cost `stat()` only. All 9 invariants pass; `make check`
+  completes in ~20s instead of hanging. `SP_TANYSPHYRUS_LEMNAE_FABRICIUS_1792`
+  (weevil in both Brachyceridae and Curculionidae, both Wikipedia-native) is
+  allow-listed in `verifyTree.py` as a genuine family-circumscription
+  disagreement, not a dedupe error.
 
-  **Candidate fix:** `make species-parquet` already builds a 47 MB columnar
-  index (2.35M species, full rank path denormalised) in 82s. A parquet-backed
-  `verifyTree` would load once and query in milliseconds instead of re-parsing
-  14,085 JSON files every run. Not yet started — `make species-parquet` exists
-  but `verifyTree` still reads source files directly.
+  Dedupe decisions are logged to `data/dedupe-log.jsonl` (species_id,
+  winner_file, loser_file, reason, timestamp) so Macie/q-bert don't undo each
+  other's moves — documented in `docs/dedupeSpeciesAcrossFamilies.md`.
 
 ### Needs a decision
 
