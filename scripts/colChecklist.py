@@ -282,6 +282,30 @@ def _meta_positions(z, table):
     return None
 
 
+def _unq(v):
+    """Drop one matched pair of surrounding double quotes.
+
+    The tab-delimited sources are read with `QUOTE_NONE` above, for a real
+    reason: NCBI Taxonomy (2169) has a stray literal `"` in a free-text remarks
+    field, and QUOTE_MINIMAL treats it as an opening quote and merges every
+    following physical line into one field until it finds a closing one.
+
+    But the WoRMS family of ColDP exports (1039 WTaxa, 1128 Trematoda, 1193
+    Turbellarians, 2302 Nemys, 1108 Brachyura, 315880 ScaleNet) *are* quoted
+    TSVs -- RFC4180 quoting on a tab delimiter -- so every field arrives wrapped
+    in literal quotes. That made `rank` read as `"species"` rather than
+    `species`, and since nothing downstream compares ranks by equality, the
+    importer reported "accepted species offered: 0" for all six and looked, to
+    every reading of it, like an empty source rather than a parsing failure.
+
+    Stripping a *matched pair* keeps the NCBI case working: its stray quote is
+    not balanced, so nothing is stripped.
+    """
+    if len(v) > 1 and v[0] == '"' and v[-1] == '"':
+        return v[1:-1].replace('""', '"')
+    return v
+
+
 def _rows(z, table, kind):
     try:
         fh = z.open(table)
@@ -321,7 +345,7 @@ def _rows(z, table, kind):
             ix = _index(header, REQUIRED[kind])
         for row in rd:
             if len(row) > max(ix.values()):
-                yield {k: (row[i] if row[i] else None) for k, i in ix.items()}
+                yield {k: _unq(row[i]) if row[i] else None for k, i in ix.items()}
 
 
 def metadata(path):
