@@ -7,6 +7,10 @@
 # layout `scripts/sourcesManifest.py` indexes, so a manifest regen picks them up
 # without a hand edit. Sizes and sha256 are printed for the manifest entry.
 set -uo pipefail
+# caffeinate is macOS-only; q-bert is Linux. Detected, not assumed:
+# a bare "caffeinate -dimsu" there is `command not found` (rc=127).
+HOLD=""
+command -v caffeinate >/dev/null 2>&1 && HOLD="caffeinate -dimsu"
 
 ROOT="${SN_SOURCES_ROOT:-/Volumes/MacieExternal/sources}"
 UA="systema-naturae-triage/1.0 (+https://github.com/tobese/systema-naturae)"
@@ -30,7 +34,7 @@ for key in "$@"; do
 
   url="https://api.checklistbank.org/dataset/$key/archive.zip"
   echo "== $key  fetching $url"
-  code=$(caffeinate -dimsu curl -sL -m 3600 --retry 3 --retry-delay 5 \
+  code=$("$HOLD" curl -sL -m 3600 --retry 3 --retry-delay 5 \
     -A "$UA" -o "$out.part" -w "%{http_code}" "$url")
 
   if [ "$code" != "200" ] || [ ! -s "$out.part" ]; then

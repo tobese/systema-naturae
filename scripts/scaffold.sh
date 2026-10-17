@@ -14,11 +14,17 @@
 # missing family and places the species in it -- and then commits. Both halves
 # are needed and neither substitutes for the other.
 #
-# caffeinate -dimsu is not optional. The run is tens of thousands of GNparser
-# normalisations and several thousand family-file writes, so it outlives display
-# sleep; without the assertion the Mac sleeps mid-run and the job stops with no
-# error and no log line, which is indistinguishable from a hang.
+# caffeinate -dimsu is not optional *on macOS*. The run is tens of thousands of
+# GNparser normalisations and several thousand family-file writes, so it outlives
+# display sleep; without the assertion the Mac sleeps mid-run and the job stops
+# with no error and no log line, which is indistinguishable from a hang.
 #
+# It is also macOS-only, so it is detected rather than assumed: the first run on
+# q-bert (WSL2) died with rc=127 on every dataset, and `command not found` for a
+# power-management wrapper is a poor way to learn which host you are on.
+HOLD="$(command -v caffeinate || true)"
+if [ -n "$HOLD" ]; then HOLD="$HOLD -dimsu"; else HOLD=""; fi
+
 # Drain the queue in `docs/dataset-inbox.md` ("Measured 2026-10-17") with this.
 set -uo pipefail
 
@@ -40,7 +46,7 @@ fi
 : > "$LOG"
 echo "=== $KEY kingdom=$KINGDOM source=$SOURCE  $(date -u +%H:%M:%S)" >> "$LOG"
 
-caffeinate -dimsu python3 scripts/importColStage2.py \
+$HOLD python3 scripts/importColStage2.py \
   --kingdom "$KINGDOM" --archive "$ARCHIVE" --source "$SOURCE" --apply \
   >> "$LOG" 2>&1
 rc=$?

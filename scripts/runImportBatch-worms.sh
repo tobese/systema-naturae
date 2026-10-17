@@ -10,6 +10,10 @@
 # scale insects and nymphalids share no family with Platyhelminthes, Nematoda
 # or Decapoda, so the two machines touch disjoint files and cannot collide.
 set -uo pipefail
+# caffeinate is macOS-only; q-bert is Linux. Detected, not assumed:
+# a bare "caffeinate -dimsu" there is `command not found` (rc=127).
+HOLD=""
+command -v caffeinate >/dev/null 2>&1 && HOLD="caffeinate -dimsu"
 
 cd "$(dirname "$0")/.."
 ARCH="${SN_SOURCES_ROOT:-/Volumes/MacieExternal/sources}/archives"
@@ -27,7 +31,7 @@ for key in $KEYS; do
   # caffeinate, not a bare invocation: an import that outlives the display
   # sleep otherwise stops mid-family-file with no error and no log line, which
   # reads as a hang rather than a nap.
-  if caffeinate -dimsu python3 scripts/importColChecklist.py "$archive" --apply >> "$LOG" 2>&1; then
+  if $HOLD python3 scripts/importColChecklist.py "$archive" --apply >> "$LOG" 2>&1; then
     echo "=== $key  ok $(date -u +%H:%M:%S)" >> "$LOG"
   else
     echo "=== $key  FAILED rc=$? $(date -u +%H:%M:%S)" >> "$LOG"

@@ -40,7 +40,7 @@ import zipfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from osfLocalities import continent_for  # noqa: E402
-from tree import iter_species  # noqa: E402
+from tree import iter_species, save_json  # noqa: E402
 from sources import archive_dir as _ad, work_dir as _wd  # noqa: E402
 import authorityIndex  # noqa: E402
 
@@ -781,9 +781,9 @@ def main() -> int:
                       f"({m['genera_added']} new genera, "
                       f"{m['genera_merged']} existing genera extended)")
                 root = existing
-        with open(target, "w", encoding="utf-8") as fh:
-            json.dump(root, fh, indent=2, ensure_ascii=False)
-            fh.write("\n")
+        # Atomic. An interrupted write used to truncate the family document and
+        # leave an unterminated JSON file that the next reader could not place.
+        save_json(target, root)
 
         def count(n):
             return 1 + sum(count(c) for c in n.get("children") or [])

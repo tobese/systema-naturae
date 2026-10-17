@@ -441,10 +441,32 @@ def save_json(path: str, doc: Node, indent: int = 2) -> None:
     `ensure_ascii=False` and a trailing newline, because the existing 14,085
     committed family files were written that way and a different format turns
     every one of them into a spurious whole-file diff.
+
+    **Atomic.** The write goes to a sibling temp file and is renamed into place,
+    so an interrupted run cannot leave a half-written family document behind.
+    This is not hypothetical: a `dedupeSpeciesAcrossFamilies.py` run that took a
+    SIGTERM mid-write truncated
+    `lepidoptera/crambidae/src/data/crambidae.json` by 119,337 lines, leaving a
+    file whose last line was an unterminated object. The next run to read it
+    failed on JSONDecodeError at a byte offset, which says nothing about which
+    of the several thousand writes in the run was at fault -- the damage is
+    indistinguishable from bad data until you diff it.
+
+    A rename within the same directory is atomic on POSIX, so a reader either
+    sees the old file or the new one and never a partial one. The `finally`
+    unlinks the temp file on an exception, so a failed write leaves nothing.
     """
-    with open(path, "w", encoding="utf-8") as fh:
-        json.dump(doc, fh, indent=indent, ensure_ascii=False)
-        fh.write("\n")
+    tmp = f"{path}.tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as fh:
+            json.dump(doc, fh, indent=indent, ensure_ascii=False)
+            fh.write("\n")
+            fh.flush()
+            os.fsync(fh.fileno())
+        os.replace(tmp, path)
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
 
 
 def _selftest() -> int:

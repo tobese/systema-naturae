@@ -67,6 +67,7 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from tree import (  # noqa: E402
+    save_json,  # noqa: E402
     KINGDOMS,
     count_rank,
     count_species,
@@ -552,9 +553,10 @@ def main() -> int:
         d["children"] = [g for g in d.get("children") or [] if g.get("children")]
         d["speciesCount"] = count_species(d)
         d["genusCount"] = count_rank(d, "GENUS")
-        with open(f, "w", encoding="utf-8") as fh:
-            json.dump(d, fh, indent=2, ensure_ascii=False)
-            fh.write("\n")
+        # Atomic -- see scripts/tree.py save_json. This loop writes hundreds of
+        # family documents and a SIGTERM part way through used to leave the
+        # first one it had reached truncated.
+        save_json(f, d)
         touched += 1
     # The whole bug in one assertion. The dry run said "species to remove:
     # 8,745" and this line used to print whatever `removed` happened to reach,
