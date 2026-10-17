@@ -53,10 +53,62 @@ this script has authority collisions to resolve:
     python3 scripts/dedupeSpeciesAcrossFamilies.py \\
         --authority-family portal/data/gbif-family-cache.json
 
+One case the provenance rule cannot see
+-------------------------------------
+
+"Added by an import" is the right question about a *duplicate*, but declining to
+answer it is the wrong answer about the tree. On the current tree the provenance
+rule leaves 118 id-groups alone, and every one of them is a documented record
+sitting beside a bare stub:
+
+    SP_ENHYDRIS_ENHYDRIS_SCHNEIDER_1799   homalopsidae  wikidata  desc+common
+                                       colubridae  worms         (bare)
+
+A stub with no description, no common name, no continents and no reference is
+not a second record of the taxon -- it is the absence of one, filed in the wrong
+family by a source whose circumscription differs from ours. Keeping it means
+`verifyTree` stays red on `no species id in two families` forever, and the portal
+shows the same animal twice, once with no information.
+
+So there is a fourth case, narrower than the other three, and it needs no
+external taxonomy and no cache:
+
+    4. one documented copy beside one bare copy -- keep the documented one, and
+       carry the bare one's `sourceIds` across before dropping it.
+
+The payload is provenance rather than description: the documented copy already
+has the description, and what the stub uniquely holds is the external id the
+other source issued, which is exactly what stops the next import re-adding it.
+
+Deliberately narrow, because a stub is only recognisable as one:
+
+  * different families only -- a within-file duplicate is
+    `verifyTree.check_duplicate_species`' business and carries its own
+    allowance, so it is counted and left;
+  * every copy rank SPECIES -- a subspecies filed as a species must never be
+    deleted by a rule about stubs;
+  * exactly one documented copy -- two documented copies are a real tie and are
+    counted for a human, not guessed at;
+  * the documented copy not already marked for removal by the authority rule --
+    undoing that would silently reverse a decision made for a different reason.
+
 Idempotent either way.
 
     python3 scripts/dedupeSpeciesAcrossFamilies.py
     python3 scripts/dedupeSpeciesAcrossFamilies.py --apply
+
+    Precedence
+    ----------
+    The provenance rule runs first and the richness rule second, and that order
+    matters. `sourcedFrom` decides whether a copy is "an import's", but the set
+    is incomplete -- `worms`, `gbif`, `wikipedia` and `itis` are imports too and
+    are not in it. So the provenance rule can keep a bare stub and drop the
+    documented record beside it, which it did on 61 of the 171 groups this pass
+    handled: every documented copy was removed and every bare one kept. When the
+    copy the provenance rule would keep is bare and one it would drop is
+    documented, the call is deferred to the richness rule, so the documented
+    copy wins and the gate stays green. The two rules cannot disagree on which
+    copy is documented, so nothing is double-counted.
 """
 import argparse
 import collections
@@ -233,6 +285,7 @@ def main() -> int:
     # where the family already is; reading it from a node field would mean two
     # sources of truth for the same thing.
     file_family = {}
+    file_kingdom = {}
     for fam in [x for k in kingdoms for x in iter_family_files(k)]:
         f, kingdom = fam.path, fam.kingdom
         try:
@@ -243,6 +296,7 @@ def main() -> int:
         # `slug` is the directory name, so already lower case (`anobiidae`),
         # while GBIF returns display case (`Anobiidae`).
         file_family[f] = fam.slug.lower()
+        file_kingdom[f] = kingdom
         for _parent, s in iter_species_with_parent(d):
             if s.get("id"):
                 where[s["id"]].append((f, s))
@@ -294,13 +348,22 @@ def main() -> int:
     #      continents is worth more than one that does not.
     #   4. path -- deterministic, and the file that is not first alphabetically
     #      keeps, so two runs cannot disagree.
+    #
+    # What counts as data on a node, defined once because two definitions is how
+    # the bare-stub rule below and the scorer above would come to disagree about
+    # which copy is the documented one.
+    RICH_FIELDS = ("description", "commonName", "continents",
+                   "reference", "yearPublished")
+
+    def richness_of(node):
+        return sum(1 for k in RICH_FIELDS if node.get(k))
+
     def score(fp, auth=None, key=None):
         n = fp[1]
         nm = (n.get("name") or "").strip()
         au = (n.get("authorship") or "").strip()
         conforming = not (au and len(nm) > len(au) + 2 and nm.endswith(au))
-        richness = sum(1 for k in ("description", "commonName", "continents",
-                                  "reference", "yearPublished") if n.get(k))
+        rich = richness_of(n)
         if authority_family and auth == "gbif":
             want = authority_family.get(key)
             if want:
@@ -308,8 +371,8 @@ def main() -> int:
                 # directory name, GBIF answers `Anobiidae`.
                 want_n = want.lower().replace(" ", "").replace("-", "")
                 in_family = file_family.get(fp[0], "") == want_n
-                return (in_family, conforming, richness, fp[0])
-        return (False, conforming, richness, fp[0])
+                return (in_family, conforming, rich, fp[0])
+        return (False, conforming, rich, fp[0])
 
     ranks = collections.Counter()
     renamed = 0
@@ -415,28 +478,114 @@ def main() -> int:
                 append_dedupe_log(fp[1]["id"], winner[0], fp[0], f"collapsed on {auth} id")
             keep_report[f"collapsed on {auth} id"] += 1
 
+    merge_touched = set()      # files written only because a merge changed them
+    cross_bare_groups = 0
+    deferred_provenance = 0   # groups the provenance rule would have dropped the
+                              # documented copy for, because the copy it would
+                              # keep was bare -- these are folded into the bare
+                              # count below, so they are NOT a separate category
     for sid, places in dupes.items():
         files = {f for f, _ in places}
         imported = [(f, s) for f, s in places if (s.get("sourcedFrom") or "") in IMPORTED]
         native = [(f, s) for f, s in places if (s.get("sourcedFrom") or "") not in IMPORTED]
         if native and imported:
-            # keep the copy we already had; drop every import-written one
-            for f, _s in imported:
-                drops[f].add(sid)
-                append_dedupe_log(sid, native[0][0], f, "dropped an imported copy, kept the existing one")
-            keep_report["dropped an imported copy, kept the existing one"] += 1
-            continue
+            # keep the copy we already had; drop every import-written one.
+            # But "already had" is decided from `sourcedFrom`, and that set is
+            # incomplete: `worms`, `gbif`, `wikipedia` and `itis` are imports too,
+            # they just are not in IMPORTED. So this rule can keep a bare stub
+            # and drop the documented record beside it -- which is exactly what
+            # happened on 61 of the 171 groups this pass handled, where every
+            # documented copy was removed and every bare one kept. When the copy
+            # this rule would keep is bare and one it would drop is documented,
+            # defer to the richness rule below: the documented copy is the
+            # correctly-filed one (the bare one is the misfiling), and the gate
+            # stays green either way.
+            if richness_of(native[0][1]) == 0 and any(
+                    richness_of(s) > 0 for _f, s in imported):
+                deferred_provenance += 1
+            else:
+                for f, _s in imported:
+                    drops[f].add(sid)
+                    append_dedupe_log(sid, native[0][0], f,
+                                      "dropped an imported copy, kept the existing one")
+                keep_report["dropped an imported copy, kept the existing one"] += 1
+                continue
         if len(imported) > 1:
             # both from imports: the bigger family keeps it
             sizes = {f: count_species(docs[f]) for f, _s in imported}
             win = max(sizes, key=lambda f: sizes[f])
-            for f, _s in imported:
-                if f != win:
+            win_node = next(s for f, s in imported if f == win)
+            losers = [(f, s) for f, s in imported if f != win]
+            if richness_of(win_node) == 0 and any(
+                    richness_of(s) > 0 for _f, s in losers):
+                deferred_provenance += 1
+            else:
+                for f, _s in losers:
                     drops[f].add(sid)
-                    append_dedupe_log(sid, win, f, "both imported; the larger family kept it")
-            keep_report["both imported; the larger family kept it"] += 1
+                    append_dedupe_log(sid, win, f,
+                                      "both imported; the larger family kept it")
+                keep_report["both imported; the larger family kept it"] += 1
+                continue
+        # Nothing above fired, so no copy here is an import's. That settles the
+        # provenance and says nothing about the tree: the group is a documented
+        # record beside a bare stub, and a stub is the absence of a record, not a
+        # second one. See "One case the provenance rule cannot see" in the module
+        # docstring -- why this is narrow, and why the documented copy is also
+        # the correctly-filed one (the bare copy is the one a source with a
+        # different circumscription dropped into the wrong family).
+        #
+        # `merge_touched` exists because the merge below writes into the file
+        # that KEPT the record, and that file is not in `drops` -- so the write
+        # loop would never save it and the sourceIds carried across would be
+        # computed and discarded. That is option (b) wearing option (a)'s label.
+        if len({f for f, _s in places}) < 2:
+            keep_report["left alone (both copies in one family)"] += 1
             continue
-        keep_report["left alone (no imported copy)"] += 1
+        # A cross-kingdom homonym is not a duplicate, and this is the one check
+        # that cannot be left to the richness test. `Graphium sarpedon` is a
+        # butterfly in papilionidae and a fungus in microascaceae; `Diploderma
+        # polygonatum` is an agamid and a diplocystidiid; `Hexagonia bicolor` is
+        # a carabid and a polypore. They share an id because the id is derived
+        # from the name, not because they are one taxon, and verifyTree already
+        # carries a documented allowlist of seven such homonyms. Both copies here
+        # happen to be documented, so the bare-stub test spares them by luck --
+        # and a homonym whose fungal copy had no description would have been
+        # deleted from another kingdom, which is the same class of error as the
+        # 194 subspecies an earlier version of this script destroyed.
+        if len({file_kingdom.get(f) for f, _s in places}) > 1:
+            keep_report["left alone (cross-kingdom homonym)"] += 1
+            continue
+        if any((s.get("rank") or "SPECIES") != "SPECIES" for _f, s in places):
+            keep_report["left alone (a copy is not rank SPECIES)"] += 1
+            continue
+        documented = [t for t in places if richness_of(t[1]) > 0]
+        bare = [t for t in places if richness_of(t[1]) == 0]
+        if not bare:
+            keep_report["left alone (no copy is bare)"] += 1
+            continue
+        if len(documented) != 1:
+            # Two documented copies disagree, or all copies are bare. Either way
+            # this rule has no opinion, and guessing between two real records is
+            # the one thing it must never do.
+            keep_report[f"left alone ({len(documented)} documented copies)"] += 1
+            continue
+        win_f, win_n = documented[0]
+        if win_f in drops and sid in drops[win_f]:
+            # The authority rule already removed this copy. Rescuing it would
+            # silently reverse a decision made for a different reason -- and that
+            # reason (a subspecies filed under its parent's key) is exactly the
+            # one this rule is not able to see.
+            keep_report["left alone (documented copy already marked)"] += 1
+            continue
+        merge_touched.add(win_f)
+        for f, s in bare:
+            for field in merge_into(win_n, s):
+                merged_fields[field] += 1
+            drops[f].add(sid)
+            append_dedupe_log(sid, win_f, f,
+                              "dropped a bare copy, kept the documented one")
+        cross_bare_groups += 1
+        keep_report["dropped a bare copy, kept the documented one"] += 1
 
     # Safety: a dedupe must never delete the last copy of a species. Without
     # this guard the original script emptied 689 families (351,882 species),
@@ -482,11 +631,19 @@ def main() -> int:
 
     for k, v in keep_report.items():
         print(f"    {v:>4}  {k}")
+    if deferred_provenance:
+        print(f"    {deferred_provenance:>4}  provenance deferred: the copy it would "
+              f"keep was bare, so the documented copy wins instead")
     if merged_fields:
         print(f"  merged {merged_groups:,} in-family duplicate groups; fields "
               f"carried across from the copy that was removed:")
         for f, n in merged_fields.most_common():
             print(f"    {n:>7,}  {f}")
+    if cross_bare_groups:
+        merged_only = sorted(f for f in merge_touched if f not in drops)
+        print(f"  collapsed {cross_bare_groups:,} bare copies into the documented "
+              f"copy of the same species, carrying their sourceIds across "
+              f"({len(merged_only)} family files rewritten for the merge alone)")
     print(f"  species to remove: {sum(len(v) for v in drops.values()):,} "
           f"from {len(drops)} files")
 
@@ -558,6 +715,20 @@ def main() -> int:
         # first one it had reached truncated.
         save_json(f, d)
         touched += 1
+    # The file that KEPT a merged record is not in `drops` -- nothing was removed
+    # from it -- so the loop above never reaches it and the sourceIds carried
+    # across from the dropped stub would be recomputed on every run and lost
+    # every time, which also makes the script non-idempotent. No prune here: this
+    # file lost nothing, and pruning would drop empty genera in a file that has
+    # nothing to do with this dedupe.
+    merged_only = sorted(f for f in merge_touched if f not in drops)
+    for f in merged_only:
+        d = docs[f]
+        d["speciesCount"] = count_species(d)
+        d["genusCount"] = count_rank(d, "GENUS")
+        save_json(f, d)
+    if merged_only:
+        touched += len(merged_only)
     # The whole bug in one assertion. The dry run said "species to remove:
     # 8,745" and this line used to print whatever `removed` happened to reach,
     # with nothing comparing the two -- so a prune that dropped every species in
