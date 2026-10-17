@@ -24,7 +24,10 @@ for key in $KEYS; do
     continue
   fi
   echo "=== $key  start $(date -u +%H:%M:%S)" >> "$LOG"
-  if python3 scripts/importColChecklist.py "$archive" --apply >> "$LOG" 2>&1; then
+  # caffeinate, not a bare invocation: an import that outlives the display
+  # sleep otherwise stops mid-family-file with no error and no log line, which
+  # reads as a hang rather than a nap.
+  if caffeinate -dimsu python3 scripts/importColChecklist.py "$archive" --apply >> "$LOG" 2>&1; then
     echo "=== $key  ok $(date -u +%H:%M:%S)" >> "$LOG"
   else
     echo "=== $key  FAILED rc=$? $(date -u +%H:%M:%S)" >> "$LOG"

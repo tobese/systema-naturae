@@ -30,7 +30,7 @@ for key in "$@"; do
 
   url="https://api.checklistbank.org/dataset/$key/archive.zip"
   echo "== $key  fetching $url"
-  code=$(curl -sL -m 3600 --retry 3 --retry-delay 5 \
+  code=$(caffeinate -dimsu curl -sL -m 3600 --retry 3 --retry-delay 5 \
     -A "$UA" -o "$out.part" -w "%{http_code}" "$url")
 
   if [ "$code" != "200" ] || [ ! -s "$out.part" ]; then
