@@ -1,7 +1,7 @@
 .PHONY: dev dev-daemon build data typecheck lint docker enrich species-parquet \
          name-index name-index-status verify verify-import triage \
          triage-sample serve fix-lineage fix-counts fix-duplicates check count \
-         idmap patch-ids fill-authority-ids authority-index
+         idmap patch-ids fill-authority-ids authority-index sources-report
 
 # The pre-commit gate. `tree.py` first because it is a second and fails in
 # milliseconds, then the invariants. Order matters: tree.py's selftest is the
@@ -32,6 +32,20 @@ species-parquet:
 
 count:
 	@$(PARQUET_PY) scripts/countIds.py $(ARGS)
+
+# Recount where the tree's content came from, per kingdom and in total, and
+# write portal/public/data/sources-report.json — the table the portal's Sources
+# modal renders. Two tallies, because the tree records two things:
+# sourcedFrom (provenance of names and descriptions, 4.03M nodes) and sourceIds
+# (which dataset supplied the name, 5.84M entries). Counts come from the tree;
+# licences come from the manifest on the external volume, so an unmounted volume
+# yields counts without licences rather than an error.
+#
+# Costs ~35s, nearly all of it parsing 18,509 family files. Run after an import:
+# docs/data-sources.md counts are transcribed from this output by hand, and the
+# last three imports left them describing a tree that no longer exists.
+sources-report:
+	cd portal && npx tsx scripts/aggregateSources.ts
 
 # Build the species_id_map staging table from GBIF cache + wiki-images.json.
 # One row per (scientific_name, source), deduplicated by confidence.

@@ -10,6 +10,84 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## Triaged 2026-10-17 — ten datasets fetched, and the worm gap is mostly gone
+
+Shelf re-read with `scripts/checklistbankShelf.py`: **479** taxonomic datasets
+against 475 at the last pass, 122 already matched to something we hold, 357
+unmatched. Ten were fetched (`scripts/fetchBatch.sh`, new) and measured exactly
+from their archives against a running `scripts/taxaserve.py`.
+
+### The headline is a retraction, not a take
+
+The 2026-10-05 measurement below says marine worms were 17.9% held and
+**Platyhelminthes 0 of 600**. Both figures are retired. They were taken before
+the COL breadth import, ITIS and Fauna Europaea, and those three have since
+taken most of what WoRMS offered. Measured today, WoRMS is **82.5% held**, not
+17.9% held:
+
+| dataset | key | names offered | not held | % new | families not held |
+|---|---|---:|---:|---:|---:|
+| **WoRMS** | 2011 | 564,441 | **99,018** | **17.5%** | **1,124 of 9,466** |
+| **WTaxa** (weevils) | 1039 | 96,320 | **63,800** | **66.2%** | 0 of 14 |
+| WoRMS Turbellarians | 1193 | 6,507 | 4,765 | 73.2% | **83 of 152** |
+| WoRMS Nemys | 2302 | 20,815 | 3,748 | 18.0% | 6 of 252 |
+| WoRMS Trematoda | 1128 | 12,073 | 3,714 | 30.8% | 7 of 165 |
+| ScaleNet | 315880 | 8,615 | 1,804 | 20.9% | 0 of 57 |
+| Nymphalidae | 309267 | 6,450 | 894 | 13.9% | 0 of 1 |
+| WoRMS Brachyura | 1108 | 10,498 | 325 | 3.1% | 4 of 181 |
+| HymIS | 1118 | — | — | — | not measurable, see below |
+| Jewel Beetles | 1190 | — | — | — | not measurable, see below |
+
+**~177,000 new species and ~1,200 new families** across the eight measurable
+ones, all CC BY, all downloaded. None applied yet.
+
+Three readings worth separating:
+
+- **WoRMS is not the unblock it was described as, but it is still the biggest
+  import available.** 99,018 new species is more than WTaxa and the whole worm
+  cluster combined. The blocker is also gone, and by a route nobody had
+  recorded: GBIF's DwC-A endpoint 403s and marinespecies.org asks for a request
+  form, but `https://api.checklistbank.org/dataset/2011/archive.zip` answers
+  200 with no registration. The 346 MB archive is on disk. **The "request the
+  WoRMS full copy" item in `BACKLOG.md` needs no email to anyone** and should be
+  closed as superseded rather than actioned.
+- **Turbellarians are where the flatworm gap actually survived.** Trematodes
+  are 69% covered already; the turbellarian half was applied at an older version
+  (3,425 species) and never re-run. The new version is 73.2% unheld with 83 of
+  152 families absent — the only entry in this batch that both extends species
+  *and* scaffolds families.
+- **WTaxa corrects its own registry entry.** It was filed as "large coleoptera
+  family gap". All 14 families it offers are in the tree; the gap is 63,800
+  species, not families. It is also a nomenclator, so part of that miss is
+  nomina nuda rather than described species — the miss breakdown shows 2 numeric
+  epithets and 0 parentheses forms, so there is no junk signal either way, but
+  the caveat belongs with the number.
+
+### The sample lied by six points on the biggest decision
+
+`make triage-sample KEYS=2011` put WoRMS at **88.8% held**; the exact tool says
+**82.5%**. On the batch's largest go/no-go that is the difference between
+"mostly redundant" and "99,018 species". Worth remembering next time a sample
+is quoted at that precision — the earlier WFO episode was 23 points.
+
+### Two datasets could not be measured, for a fixable reason
+
+HymIS (1118) and Jewel Beetles (1190) ship the **flat-table ColDP** shape —
+`AcceptedSpecies.tsv`, no Taxon/Name pair — and `scripts/archiveOverlap.py`
+reads only DwCA, ColDP `NameUsage.tsv`, and ColDP CSV tables. Both are already
+downloaded (0.5 MB and 0.6 MB) and both are real gaps (Hymenoptera, 30,259
+names; Buprestidae, 29,976). This needs a fifth reader shape, not a decision.
+
+Measuring the batch also turned up two bugs in the exact tool, both of which had
+been making it useless rather than wrong:
+
+- its readiness probe asked about `Felis catus`, which the tree does not hold, so
+  it refused to run at all against a perfectly healthy `taxaserve`;
+- its ColDP name-table reader was hardcoded to comma while the taxon table
+  derived its delimiter, so a TSV pair parsed into one-field rows and reported
+  **zero names** — an empty report, not an error, for every archive in this
+  batch.
+
 ## Found 2026-10-10 — the sequence number in the URL is a search strategy
 
 Prompted by a simple observation about the pasted links so far: ChecklistBank

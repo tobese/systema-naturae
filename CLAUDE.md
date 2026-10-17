@@ -4,6 +4,36 @@ Interactive taxonomy portal. Each family lives in its own directory under `taxon
 
 > Navigation architecture documented in [`docs/navigation.md`](docs/navigation.md).
 
+> ## 🚫 No LLM-generated content
+>
+> **No language model may write, infer, synthesise or guess anything in this
+> tree — not species, not names, not descriptions, not taxonomy.** Decided
+> 2026-10-17.
+>
+> Every node has to trace to a source a reader can check: a dataset with an
+> identifier, an article, a registry. A model output has none of those, so it
+> cannot be cited, cannot be re-checked when the source is revised, and cannot be
+> told apart from a confident invention. A taxonomy that is wrong in a
+> reproducible way is repairable; one that is wrong in a plausible way is not.
+>
+> In practice:
+>
+> - **Do not run `importFamily.ts`** — the Ollama gap-fill importer. It is the
+>   only LLM writer in the tree and it is retired. `make import`,
+>   `make import-steamie` and `docs/import.md`'s Ollama section are dead ends.
+> - **Do not start Ollama** to fill gaps. Gap-filling is done from sources:
+>   a dataset we have not imported yet, or an `UNRESOLVED_TAXON` that a name-index
+>   rebuild can resolve.
+> - **101 nodes** still carry `sourcedFrom: "ollama"` from the last run before
+>   this decision (in `cardinalidae`, `passerellidae`, `aegothelidae` and others).
+>   They are template-generated boilerplate, not researched text. Removing them
+>   is tracked in `BACKLOG.md`.
+> - Ollama may still be used for **development tooling that never touches the
+>   tree** — nothing in this repo currently relies on that, so prefer not to.
+>
+> The trees on the machines under the desk still run Ollama for other projects;
+> that is not a licence to use it here.
+
 > **⚠️ Six kingdoms, one system.** `portal/data/kingdom-config.json` declares
 > `animalia`, `plantae`, `fungi`, `chromista`, `protozoa` and `archaea`. They are
 > peers: each has its own taxonomy input, its own colour registry and its own
@@ -83,7 +113,7 @@ portal/
     findGaps.ts                ← per-family gap report → gap-report.json (SN_KINGDOM=plantae → gap-report-plantae.json)
     generateGapTasks.ts        ← formats gap-report.json → docs/gap-tasks.md (+ POST to phylumProgressd)
     reportPhyla.ts             ← phylum-level gap roll-up → docs/gap-tasks-phyla.md (+ POST to phylumProgressd)
-    importFamily.ts            ← LLM gap filling via local Ollama (qwen2.5:7b)
+    importFamily.ts            ← RETIRED: LLM gap fill via Ollama. See "No LLM-generated content" above.
     importReport.ts            ← per-import summary
     importSmallGaps.sh         ← batch script for tiny gaps
     scaffoldKingdomTaxonomy.ts ← scaffold a kingdom's taxonomy input from a GBIF cache
@@ -210,7 +240,7 @@ After grafting, a **compression pass** walks every GENUS: minimal SPECIES childr
 | `familySlug` | buildData.ts | Stamped at build time; used for color lookup and navigation |
 | `className`, `orderName` | buildData.ts | Stamped at build time; used by Coverage modal and panels |
 | `extinct` | buildData.ts | Auto-detected from `†` prefix or "extinct"/"fossil" in description |
-| `sourcedFrom` | importer | `"wikipedia"`, `"gbif"`, `"ollama"`, etc. Used by OptionsPanel highlight toggle |
+| `sourcedFrom` | importer | `"wikipedia"`, `"gbif"`, `"checklistbank"`, etc. Used by OptionsPanel highlight toggle. `"ollama"` is retired and being removed |
 | `iucnStatus` | wiki-images.json merge | IUCN red-list status code (e.g. `LC`, `EN`, `CR`) |
 | `speciesCount` | taxonomy.json | Real-world species total for the family (not portal node count) |
 | `continents[]` | family JSON | Either continent codes (`"NA"`, `"EU"`) or full names — both accepted |
@@ -291,7 +321,7 @@ All machines on same switch under desk. **All machines run Ollama.**
 
 | Host | OS | User | Purpose |
 |---|---|---|---|
-| Macie | macOS | tb | Dev machine (this host) + Ollama + offline Wikipedia DB on external volumes |
+| Macie | macOS | tb | Dev machine (this host) + offline Wikipedia DB on external volumes |
 | Steamie | Windows 11 | opencode | Ollama server |
 | Biggie | Windows 10 | — | Ollama |
 | Debbie | Debian | tommy | Ollama + hosts the Docker deploy of this portal (see [`docs/deploy-debbie.md`](docs/deploy-debbie.md)) |

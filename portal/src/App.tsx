@@ -11,6 +11,7 @@ import UnifiedInfoPanel from "./components/UnifiedInfoPanel";
 import SearchBox from "./components/SearchBox";
 import InfoModal from "./components/InfoModal";
 import CoverageModal from "./components/CoverageModal";
+import SourcesModal from "./components/SourcesModal";
 import EponymModal from "./components/EponymModal";
 import InternationalDaysModal from "./components/InternationalDaysModal";
 import TaxonomySidebar from "./components/TaxonomySidebar";
@@ -120,6 +121,7 @@ export default function App({ kingdom = "animalia", colorRegistry }: AppProps) {
   });
   const [showInfo, setShowInfo] = useState(false);
   const [showCoverage, setShowCoverage] = useState(false);
+  const [showSources, setShowSources] = useState(false);
   const [showEponyms, setShowEponyms] = useState(false);
   const [showDays, setShowDays] = useState(false);
   const [showSotd, setShowSotd] = useState(false);
@@ -693,6 +695,13 @@ const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_G
             Coverage
           </button>
           <button
+            onClick={() => setShowSources(o => !o)}
+            title="Data sources"
+            style={{ ...btnBase, borderColor: showSources ? "#3a3d50" : "#1e2030", background: showSources ? "#1e2030" : "transparent", color: showSources ? "#c0c0d8" : "#555" }}
+          >
+            Sources
+          </button>
+          <button
             onClick={() => setShowWheel(true)}
             title="Wheel of Nature"
             style={{
@@ -1091,6 +1100,7 @@ const PROSE_RANKS = new Set(["GENUS", "SPECIES", "SUBSPECIES", "BREED", "BREED_G
           kingdom={kingdom}
         />
       )}
+      {showSources && <SourcesModal key={kingdom} kingdom={kingdom} onClose={() => setShowSources(false)} />}
       {showWheel && (
         <WheelOfNature
           data={taxonomyData}

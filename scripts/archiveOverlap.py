@@ -208,7 +208,11 @@ def read_archive(path):
                      if m.lower().split("/")[-1].startswith("name.")), None)
     nametab = {}
     if namefile:
-        nix, nrd = _read_table(z, namefile, ",")
+        # Same delimiter as the taxon table. It used to be hardcoded to ",",
+        # which silently parsed a ColDP *TSV* pair (Taxon.txt + Name.txt -- the
+        # shape all nine WoRMS-family archives ship) into one-field rows, so the
+        # join found no names and the report came out empty rather than wrong.
+        nix, nrd = _read_table(z, namefile, delim)
         nid, nn, nr = col(nix, "ID"), col(nix, "scientificName"), col(nix, "rank")
         for row in nrd:
             if None in (nid, nn) or len(row) <= max(nid, nn):
@@ -263,7 +267,11 @@ def held_lookup(names, batch=4000):
 def main():
     if not TAXASERVE:
         sys.exit("set TAXASERVE=http://localhost:9882")
-    if len(held_lookup(["Felis catus", "Panthera leo"])) != 2:
+    # Probe on names the tree actually holds. It used to ask about Felis catus
+    # alongside Panthera leo and treat a short answer as "taxaserve is not up" --
+    # but we hold no Felis catus node, so the probe failed on a healthy server
+    # and the tool refused to measure anything.
+    if len(held_lookup(["Panthera leo", "Homo sapiens"])) != 2:
         sys.exit("taxaserve is not answering -- another job is probably "
                  "loading it; retry when idle")
     for arg in sys.argv[1:]:

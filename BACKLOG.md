@@ -13,15 +13,18 @@
 
 ### Blocked on a person — only you can unblock these
 
-- **Request the WoRMS full copy** — <https://www.marinespecies.org/usersrequest.php>.
-  GBIF's DwC-A endpoint for it returns 403 and the dataset's own description
-  points at that form, so this is deliberate rather than technical. It is the
-  largest remaining gap in the animal tree: measured *after* the ITIS import,
-  17.9% of marine worm species are held, and Platyhelminthes is **0 of 600** —
-  the phylum is in the tree with families and no species at all. Manifest
-  `worms`; measurements in `docs/dataset-inbox.md`. Do not work around it by
-  paging GBIF's API: that is ~4,000 requests against an offset ceiling and it
-  sidesteps a form that says to request.
+- ~~**Request the WoRMS full copy**~~ — **Superseded 2026-10-17, no email
+  needed.** Both halves of this item were wrong by the time it was written. The
+  blocker is gone: GBIF's DwC-A endpoint does 403 and marinespecies.org does ask
+  for a request form, but `https://api.checklistbank.org/dataset/2011/archive.zip`
+  answers 200 with no registration — the same register, CC BY, v2026-10-01, and
+  the 346 MB archive is on disk. And the gap it was blocking is largely closed
+  by imports that landed since: WoRMS measures **82.5% held** today, not the
+  17.9% quoted here, and Platyhelminthes is not 0 of 600. What remains is real
+  but different in kind — **99,018 new species and 1,124 absent families**, the
+  largest single import available, now sitting in the manifest as
+  `checklistbank-2011` with status `ready`. Measurements and the retraction are
+  in `docs/dataset-inbox.md`, "Triaged 2026-10-17".
 - **Email Index Fungorum about the licence** — ChecklistBank records *no
   licence* for Species Fungorum (dataset 1028), which makes it unusable on
   evidence rather than merely unattractive. 30.1% of its species are new to us
@@ -31,6 +34,17 @@
 
 ### Queued — decided, not started
 
+- **Purge the 101 `sourcedFrom: "ollama"` nodes.** LLM-generated content is
+  banned from this tree as of 2026-10-17 (CLAUDE.md, "No LLM-generated
+  content"), and these are the residue of the last gap-fill run. They are
+  template boilerplate of the form "*Driophlox cristata* is a cardinalidae
+  species found in its natural habitat" — no researched content, so nothing is
+  lost by removing them. `cardinalidae`, `passerellidae`, `aegothelidae` and
+  others; find the rest with
+  `python3 scripts/stripBoilerplate.py --dry-run`. Drop the nodes or downgrade
+  them to `sourcedFrom: "none"` — decide which when doing it, and prefer
+  dropping, because a species that exists only because a model invented it
+  should not be in a taxonomy at all.
 - **154 pending families are now in the tree** and are therefore scaffoldable or
   importable, worth 108,320 species of scope.
   `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first

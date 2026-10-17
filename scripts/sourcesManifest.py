@@ -1277,10 +1277,17 @@ SOURCES = {
         "CC BY", "assessed",
         "Bryophyte specialist checklist, 111k species. Fills bryophyte gaps."),
     "checklistbank-1039": (
-        "Electronic Catalogue of Weevil names (Curculionidae)", "DOI not recorded; version 2021-04",
+        "Electronic Catalogue of Weevil names (WTaxa)", "DOI 10.48580/d4ft; version 2021-04",
         "https://www.checklistbank.org/dataset/1039",
-        "CC BY", "assessed",
-        "Weevil specialist database, 110k species. Large coleoptera family gap."),
+        "CC BY", "ready",
+        "Curculionidae nomenclator. Measured 2026-10-17 from the archive: 96,320 "
+        "distinct names offered, 32,520 held, 63,800 NOT held (66.2%) -- the "
+        "largest single addition found in this batch. It corrects the entry it "
+        "replaces, which called this a 'large coleoptera family gap': all 14 "
+        "families WTaxa offers are already in the tree, so the gap is species, "
+        "not families. Read the 66.2% with the register's nature in mind -- WTaxa "
+        "is a nomenclator, so part of the miss is nomina nuda rather than "
+        "described species. Measured, not applied."),
     "checklistbank-307515": (
         "MELISR Taxonomy", "DOI not recorded; version 9",
         "https://www.checklistbank.org/dataset/307515",
@@ -1432,14 +1439,46 @@ SOURCES = {
         "CC BY", "assessed",
         "Polychaete worm specialist database, 30k species. Annelida gap filler."),
     "checklistbank-1118": (
-        "Hymenoptera Information System", "DOI not recorded; version Jul 2017",
+        "Hymenoptera Information System", "DOI 10.48580/d3cl; version Jul 2017",
         "https://www.checklistbank.org/dataset/1118",
         "CC BY", "assessed",
-        "Hymenoptera specialist database, 30k species. Wasp/bee/ant gap filler."),
+        "Hymenoptera nomenclature, 30,259 names. Wasp/bee/ant gap filler. Still "
+        "unmeasured as of 2026-10-17, now for a concrete reason rather than "
+        "because nobody looked: the archive is the flat-table ColDP shape "
+        "(AcceptedSpecies.tsv, no Taxon/Name pair) and scripts/archiveOverlap.py "
+        "cannot read it. 0.5 MB on disk. Same for checklistbank-1190."),
     "catalogue-of-life-2025": (
         "Catalogue of Life, September 2026 edition", "DOI 10.48580/dgz5n (ChecklistBank 316321)",
         "https://www.catalogueoflife.org/data/download", "CC BY 4.0", "assessed",
         "COL base release September 2026; 91 checklists updated including ITIS, ScaleNet, UCD, WCO, WSC."),
+    "checklistbank-1108": (
+        "World List of marine Brachyura", "DOI 10.48580/d3g8", "https://www.checklistbank.org/dataset/1108",
+        "CC BY", "ready",
+        "WoRMS Brachyura; crabs. Measured 2026-10-17: 10,498 names offered, 325 not held (3.1%), 4 of 181 families absent. Almost entirely covered already -- taken only because it ships Distribution.txt, which is continent data we otherwise lack for 181 crab families. Measured, not applied."),
+    "checklistbank-1128": (
+        "World List of Trematoda", "DOI 10.48580/d3cx; version 2026-10-12", "https://www.checklistbank.org/dataset/1128",
+        "CC BY", "ready",
+        "WoRMS Trematoda; flukes. Measured 2026-10-17: 12,073 names offered, 3,714 not held (30.8%), 7 of 165 families absent. This is what answers the old 'Platyhelminthes 0 of 600' finding -- the trematode half of the phylum is already 69% covered, so that figure no longer describes the tree. Ships Distribution.txt. Measured, not applied."),
+    "checklistbank-1190": (
+        "The World of Jewel Beetles (Buprestidae)", "DOI 10.48580/d3g5", "https://www.checklistbank.org/dataset/1190",
+        "CC BY", "assessed",
+        "Buprestidae, 29,976 names. NOT measured as of 2026-10-17, for a concrete reason: the archive is the flat-table ColDP shape (AcceptedSpecies.tsv, no Taxon/Name pair) and scripts/archiveOverlap.py cannot read it. Same as checklistbank-1118. 0.6 MB on disk."),
+    "checklistbank-2011": (
+        "World Register of Marine Species (WoRMS)", "DOI 10.48580/d4fd; version 2026-10-01", "https://www.marinespecies.org",
+        "CC BY", "ready",
+        "The standing top item, and the largest single import available: measured 2026-10-17 from the archive, 564,441 distinct names offered, 465,423 held, 99,018 NOT held (17.5%), and 1,124 of its 9,466 families absent from the tree entirely. Two things follow. First, the 2026-10-05 finding that marine worms were 17.9% held and Platyhelminthes 0 of 600 is retired: it predates the COL breadth import, ITIS and Fauna Europaea, which have since taken most of what WoRMS offered. Second, the blocker is gone -- GBIF's DwC-A endpoint 403s and marinespecies.org asks for a request form, but https://api.checklistbank.org/dataset/2011/archive.zip answers 200 with no registration, so the 346 MB archive on disk needs no email to anyone. Worth recording that the 600-name sample put this at 88.8% held against the exact 82.5%, a 6-point gap on the project's biggest go/no-go. Measured, not applied."),
+    "checklistbank-2302": (
+        "Nemys: World Database of Nematodes", "DOI 10.48580/d4rf; version 2026-10-12", "https://www.checklistbank.org/dataset/2302",
+        "CC BY", "ready",
+        "WoRMS Nemys; nematodes. Measured 2026-10-17: 20,815 names offered, 3,748 not held (18.0%), 6 of 252 families absent. Extends families we already hold; worth taking for the 3,748 names plus Distribution.txt."),
+    "checklistbank-309267": (
+        "Nymphalidae", "DOI not recorded", "https://www.checklistbank.org/dataset/309267",
+        "CC BY", "ready",
+        "Brush-footed butterflies. Measured 2026-10-17: 6,450 names offered, 894 not held (13.9%), one family already held. Modest -- recorded because it is already downloaded and measured, not because it is needed."),
+    "checklistbank-315880": (
+        "Systematic Database of the Scale Insects of the World (ScaleNet)", "DOI not recorded", "https://www.checklistbank.org/dataset/315880",
+        "CC BY", "ready",
+        "Scale insects. Measured 2026-10-17: 8,615 names offered, 1,804 not held (20.9%), all 57 families already held. Extension only, no new families."),
     "checklistbank-1044": (
         "World Porifera Database", "DOI 10.14284/359", "https://www.marinespecies.org/porifera",
         "CC BY", "applied", "WoRMS Porifera; sponges, 96% complete."),
@@ -1459,8 +1498,17 @@ SOURCES = {
         "The Paleobiology Database", "DOI not recorded", "https://www.paleobiodb.org",
         "CC BY", "assessed", "Fossil occurrences; paleontological data."),
     "checklistbank-1193": (
-        "World List of turbellarian worms", "DOI not recorded", "https://www.marinespecies.org/turbellarians",
-        "CC BY", "applied", "Acoelomorpha, Catenulida, Rhabditophora; 3,425 accepted species."),
+        "World List of turbellarian worms", "DOI 10.48580/d3g6; version 2026-10-12",
+        "https://www.marinespecies.org/turbellarians",
+        "CC BY", "ready",
+        "Acoelomorpha, Catenulida, Rhabditophora. ALREADY APPLIED at an older "
+        "version (3,425 accepted species); this is the re-version delta, measured "
+        "2026-10-17 against the tree: 6,507 names offered, 1,742 held, 4,765 NOT "
+        "held (73.2%), and 83 of its 152 families are still absent entirely. The "
+        "best ratio in the 2026-10-17 batch and the only entry in it that both "
+        "extends species and scaffolds families -- this is where the flatworm gap "
+        "actually survived, because the trematode half was taken and the "
+        "turbellarian half was not."),
     "checklistbank-124661": (
         "Universal Chalcidoidea Database", "DOI 10.48580/d758p", "https://www.checklistbank.org/dataset/124661",
         "not stated", "applied", "Chalcidoidea; 28,590 valid species."),
