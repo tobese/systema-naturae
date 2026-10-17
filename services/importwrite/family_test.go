@@ -7,7 +7,10 @@ import (
 	"testing"
 )
 
-func writeFixtureFamily(t *testing.T, root string, loc familyLocation, body node) string {
+// writeFixtureFamily writes raw JSON bytes to simulate a pre-existing
+// family file on disk. A plain map is fine here — these are "what's
+// already on disk before the test," not something going through onode.
+func writeFixtureFamily(t *testing.T, root string, loc familyLocation, body map[string]any) string {
 	t.Helper()
 	file, _ := resolveFamilyFile(root, loc)
 	if err := os.MkdirAll(filepath.Dir(file), 0o755); err != nil {
@@ -23,7 +26,7 @@ func writeFixtureFamily(t *testing.T, root string, loc familyLocation, body node
 func TestApply_AddsNewSpecies(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Phylum: "chordata", Class: "mammalia", Order: "carnivora", Slug: "felidae"}
-	writeFixtureFamily(t, root, loc, node{
+	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_FELIDAE", "name": "Felidae", "rank": "FAMILY",
 		"children": []any{},
 	})
@@ -36,8 +39,8 @@ func TestApply_AddsNewSpecies(t *testing.T) {
 	result := fs.apply(importRequest{
 		Kingdom: "animalia", Phylum: "chordata", Class: "mammalia", Order: "carnivora",
 		Genus: genusRef{ID: "GENUS_PANTHERA", Name: "Panthera"},
-		Species: []node{
-			{"id": "SP_PANTHERA_LEO", "name": "Panthera leo", "rank": "SPECIES", "sourcedFrom": "gbif"},
+		Species: []*onode{
+			nodeFrom(map[string]any{"id": "SP_PANTHERA_LEO", "name": "Panthera leo", "rank": "SPECIES", "sourcedFrom": "gbif"}),
 		},
 	})
 
@@ -60,7 +63,7 @@ func TestApply_AddsNewSpecies(t *testing.T) {
 func TestApply_DedupesByNormalizedName(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Phylum: "chordata", Class: "mammalia", Order: "carnivora", Slug: "felidae"}
-	writeFixtureFamily(t, root, loc, node{
+	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_FELIDAE", "name": "Felidae", "rank": "FAMILY",
 		"children": []any{},
 	})
@@ -75,18 +78,22 @@ func TestApply_DedupesByNormalizedName(t *testing.T) {
 	// the scenario that used to produce duplicate copies across a git merge.
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{ID: "GENUS_PANTHERA", Name: "Panthera"},
-		Species: []node{
-			{"id": "SP_PANTHERA_LEO_A", "name": "Panthera leo", "rank": "SPECIES",
-				"sourcedFrom": "gbif", "continents": []any{"Africa"}},
+		Species: []*onode{
+			nodeFrom(map[string]any{
+				"id": "SP_PANTHERA_LEO_A", "name": "Panthera leo", "rank": "SPECIES",
+				"sourcedFrom": "gbif", "continents": []any{"Africa"},
+			}),
 		},
 	})
 
 	result := fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{ID: "GENUS_PANTHERA", Name: "Panthera"},
-		Species: []node{
-			{"id": "SP_PANTHERA_LEO_B", "name": "Panthera leo", "rank": "SPECIES",
+		Species: []*onode{
+			nodeFrom(map[string]any{
+				"id": "SP_PANTHERA_LEO_B", "name": "Panthera leo", "rank": "SPECIES",
 				"sourcedFrom": "checklistbank", "description": "The lion.",
-				"continents": []any{"Asia"}},
+				"continents": []any{"Asia"},
+			}),
 		},
 	})
 
@@ -103,7 +110,7 @@ func TestApply_DedupesByNormalizedName(t *testing.T) {
 	if merged.str("description") != "The lion." {
 		t.Fatalf("expected merged description to survive, got %q", merged.str("description"))
 	}
-	continents, _ := merged["continents"].([]any)
+	continents, _ := merged.get("continents").([]any)
 	if len(continents) != 2 {
 		t.Fatalf("expected continents unioned to 2, got %+v", continents)
 	}
@@ -112,18 +119,18 @@ func TestApply_DedupesByNormalizedName(t *testing.T) {
 func TestApply_PrefersNonOllamaSource(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
-	writeFixtureFamily(t, root, loc, node{
+	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
 	fs, _ := loadFamily(root, loc)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
-		Species: []node{{"name": "Testus ollama-filled", "sourcedFrom": "ollama"}},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus ollama-filled", "sourcedFrom": "ollama"})},
 	})
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
-		Species: []node{{"name": "Testus ollama-filled", "sourcedFrom": "gbif"}},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus ollama-filled", "sourcedFrom": "gbif"})},
 	})
 
 	genus := fs.genusIndex["testus"]
@@ -136,14 +143,14 @@ func TestApply_PrefersNonOllamaSource(t *testing.T) {
 func TestFlush_WritesAndClearsDirty(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
-	writeFixtureFamily(t, root, loc, node{
+	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
 	fs, _ := loadFamily(root, loc)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
-		Species: []node{{"name": "Testus novus"}},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus novus"})},
 	})
 
 	wrote, err := fs.flush()
@@ -178,4 +185,134 @@ func TestFlush_WritesAndClearsDirty(t *testing.T) {
 	if wrote2 {
 		t.Fatalf("expected second flush with no changes to report no write")
 	}
+}
+
+// TestFlush_PreservesKeyOrder is the regression test for the diff-noise bug
+// found by running the real importer against real data: re-flushing a
+// family with no actual data changes must not reorder keys, or every
+// import becomes a whole-file diff. See README's "Known issue found by
+// that test."
+func TestFlush_PreservesKeyOrder(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	original := `{
+  "name": "Testidae",
+  "id": "FAM_TESTIDAE",
+  "rank": "FAMILY",
+  "children": [
+    {
+      "name": "Testus",
+      "id": "GENUS_TESTUS",
+      "rank": "GENUS",
+      "children": [
+        {
+          "name": "Testus existens",
+          "id": "SP_EXISTENS",
+          "rank": "SPECIES",
+          "sourcedFrom": "gbif",
+          "description": "Already here.",
+          "children": []
+        }
+      ]
+    }
+  ]
+}`
+	file, _ := resolveFamilyFile(root, loc)
+	if err := os.MkdirAll(filepath.Dir(file), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(file, []byte(original), 0o644); err != nil {
+		t.Fatal(err)
+	}
+
+	fs, err := loadFamily(root, loc)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// Submit the exact same species again, as a second importer run would.
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{ID: "GENUS_TESTUS", Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name": "Testus existens", "id": "SP_EXISTENS", "rank": "SPECIES", "sourcedFrom": "gbif",
+		})},
+	})
+	fs.dirty = true // force a flush even though nothing actually changed, to check ordering
+	if _, err := fs.flush(); err != nil {
+		t.Fatal(err)
+	}
+
+	out, err := os.ReadFile(file)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	// Spot-check: "name" must still come before "id" at both the family and
+	// species level, exactly as in the original file. encoding/json's
+	// default map-based marshal would alphabetize ("children", "id",
+	// "name", "rank"...) and fail this.
+	text := string(out)
+	nameIdx := indexOfOrFatal(t, text, `"name": "Testidae"`)
+	idIdx := indexOfOrFatal(t, text, `"id": "FAM_TESTIDAE"`)
+	if nameIdx > idIdx {
+		t.Fatalf("expected family's \"name\" key to stay before \"id\", got:\n%s", text)
+	}
+	descIdx := indexOfOrFatal(t, text, `"description": "Already here."`)
+	childrenIdx := indexOfOrFatal(t, text, `"children": []`)
+	if descIdx > childrenIdx {
+		t.Fatalf("expected species' \"description\" to stay before its \"children\", got:\n%s", text)
+	}
+}
+
+// TestFlush_DoesNotHTMLEscape is the regression test for the second
+// diff-noise source found by the same real-data run: Go's default JSON
+// encoding escapes "&" to "&", and real authorship strings (e.g.
+// "Anderson & Handley, 2001") contain literal "&".
+func TestFlush_DoesNotHTMLEscape(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name": "Testus novus", "authorship": "Anderson & Handley, 2001",
+		})},
+	})
+	if _, err := fs.flush(); err != nil {
+		t.Fatal(err)
+	}
+
+	raw, err := os.ReadFile(fs.file)
+	if err != nil {
+		t.Fatal(err)
+	}
+	text := string(raw)
+	if indexOf(text, "\\u0026") >= 0 {
+		t.Fatalf("expected literal \"&\", got HTML-escaped output:\n%s", text)
+	}
+	if indexOf(text, "Anderson & Handley, 2001") < 0 {
+		t.Fatalf("expected literal authorship string, got:\n%s", text)
+	}
+}
+
+func indexOfOrFatal(t *testing.T, haystack, needle string) int {
+	t.Helper()
+	i := indexOf(haystack, needle)
+	if i < 0 {
+		t.Fatalf("expected to find %q in:\n%s", needle, haystack)
+	}
+	return i
+}
+
+func indexOf(s, sub string) int {
+	for i := 0; i+len(sub) <= len(s); i++ {
+		if s[i:i+len(sub)] == sub {
+			return i
+		}
+	}
+	return -1
 }

@@ -88,9 +88,10 @@ GET /healthz
 (mirrors `portal/scripts/lib/familyPath.ts` — see `path.go`'s doc comment on
 why there's exactly one implementation of that resolution logic and this is
 a deliberate, tested port of it, not a second one). Species nodes are
-passed through as opaque JSON objects (`map[string]any` in Go) — any field
-`TaxonNode` supports round-trips untouched; the server only reads the few
-fields it needs for merge decisions.
+passed through as opaque, order-preserving JSON objects (`onode` in Go,
+see `ojson.go`) — any field `TaxonNode` supports round-trips untouched,
+in the order it arrived; the server only reads the few fields it needs
+for merge decisions.
 
 ## Running it
 
@@ -117,12 +118,46 @@ run's worth.
 
 ## Migration path for existing importers
 
-`fetchSpeciesFromApi.ts` and friends already build the exact node shape
-this API expects before they currently `writeFileSync` it. The change at
-each call site is swapping that last step for a `POST`, not touching the
-species-building logic itself. Not done in this POC — this is the service
-alone, with tests (`family_test.go`, `path_test.go`) proving the merge and
-path-resolution behavior, plus a manual end-to-end smoke test against a
-scratch fixture (see branch history / ask for a repeat run). Wiring a real
-importer script to it is the natural next step once the identity rule
-above is confirmed to be enough.
+`portal/scripts/fetchSpeciesFromApi.ts` is wired up: set `IMPORTWRITE_URL`
+and it POSTs each genus to the service (one request per genus, then a
+`/flush`) instead of `writeFileSync`-ing the whole family file; leave it
+unset and the script behaves exactly as before. The change was isolated to
+the last step — the species-building logic (GBIF fetch, Wikipedia
+enrichment, continent inference) didn't move.
+
+Verified against live GBIF, not just the scratch fixture: ran it for real
+against `bradypodidae` (6 species already on disk, real descriptions/uuids/
+sourceIds from wikipedia+col+itis+checklistbank) with the server pointed at
+the real repo root and `IMPORTWRITE_GIT_COMMIT=0`. GBIF matched 4 of the 6
+species; all 4 merged into the existing entries (0 added, 0 duplicates),
+every existing field — `uuid`, `sourceIds`, `description`, `authorship` —
+survived untouched, and the 2 species GBIF didn't return stayed in place.
+That's the concurrent-import collision this service exists to prevent,
+reproduced and fixed end to end. The test write was reverted with `git
+checkout --` afterward; it's not an established workflow yet, just a
+one-off verification.
+
+**Two diff-noise bugs turned up by that test, both fixed (see `ojson.go`):**
+
+- Keys came out alphabetically sorted (`encoding/json` on a `map[string]
+  any` has no memory of input order), while the files on disk have
+  hand/tool-chosen key order. A no-op merge was a 180-line diff for zero
+  actual data changes. Fixed by replacing the plain-map `node` type with
+  `onode`, a small ordered-object type with its own `UnmarshalJSON` (walks
+  tokens, records key order as it reads them) and `MarshalJSON` (writes
+  them back in that same order). `TestFlush_PreservesKeyOrder` is the
+  regression test.
+- `&` (and anything else HTML-sensitive: `<`, `>`, U+2028/U+2029) came out
+  as `&` etc. — `encoding/json`'s default HTML-escaping, which exists
+  for embedding JSON in `<script>` tags and has no reason to apply to a
+  file on disk. Fixed with `marshalNoEscape`/`marshalIndentNoEscape`
+  (`enc.SetEscapeHTML(false)`) — this is the general switch for the whole
+  category, not an `&`-specific patch. `TestFlush_DoesNotHTMLEscape` is the
+  regression test. (Non-ASCII text was never at risk: Go's encoder passes
+  valid UTF-8 through raw by default.)
+
+Both verified against the real `bradypodidae` re-run: the merge diff went
+from 180 lines to **zero** for a request that changed no actual data.
+
+Other importers (`scaffoldKingdomTaxonomy.ts`, the per-machine scripts on
+Steamie/Debbie/q-bert) aren't wired yet — same shape of change, not done.

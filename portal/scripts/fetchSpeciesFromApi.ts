@@ -19,6 +19,13 @@ let _kcfg: KingdomConfig | undefined;
 }
 const TAXONOMY_INPUT = _kcfg?.input ?? process.env.SN_INPUT ?? "data/taxonomy.json";
 const TAXONOMY_PATH = resolve(portalRoot, TAXONOMY_INPUT);
+const KINGDOM = SN_KINGDOM || "animalia";
+
+// When set, species go through services/importwrite instead of a direct
+// writeFileSync — the service serializes concurrent writers per family and
+// merges duplicate species instead of leaving two importer runs to collide
+// in a later git merge. See services/importwrite/README.md.
+const IMPORTWRITE_URL = process.env.IMPORTWRITE_URL || "";
 
 const GBIF_MATCH = "https://api.gbif.org/v1/species/match";
 const GBIF_SEARCH = "https://api.gbif.org/v1/species/search";
@@ -49,6 +56,7 @@ interface FamilyNode {
   commonName: string;
   appSlug: string;
   speciesCount: number;
+  phylumName?: string;
   className?: string;
   orderName?: string;
   notableMembers?: string[];
@@ -60,12 +68,13 @@ function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }
 
 function findFamily(slug: string): FamilyNode | null {
   const tax = JSON.parse(readFileSync(TAXONOMY_PATH, "utf-8"));
-  let cls = "", ord = "";
+  let phy = "", cls = "", ord = "";
   function walk(n: Record<string, unknown>): FamilyNode | null {
-    if (n.rank === "CLASS") cls = (n.name as string).toLowerCase();
+    if (n.rank === "PHYLUM" && n.name) phy = (n.name as string).toLowerCase();
+    if (n.rank === "CLASS" && n.name) cls = (n.name as string).toLowerCase();
     if (n.rank === "ORDER" && n.name) ord = (n.name as string).toLowerCase();
     if (n.rank === "FAMILY" && (n as Record<string, string>).appSlug === slug) {
-      return { ...n as unknown as FamilyNode, className: cls, orderName: ord };
+      return { ...n as unknown as FamilyNode, phylumName: phy, className: cls, orderName: ord };
     }
     for (const c of (n.children ?? []) as Record<string, unknown>[]) {
       const r = walk(c);
@@ -74,6 +83,37 @@ function findFamily(slug: string): FamilyNode | null {
     return null;
   }
   return walk(tax);
+}
+
+// ---------- importwrite client ----------
+
+async function postGenusToImportWrite(
+  slug: string,
+  phylum: string,
+  cls: string,
+  ord: string,
+  genus: { id: string; name: string; description?: string; lineage?: string },
+  species: Record<string, unknown>[],
+): Promise<{ added: string[]; merged: string[]; genusCreated: boolean }> {
+  const res = await fetch(`${IMPORTWRITE_URL}/family/${slug}/species`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      kingdom: KINGDOM,
+      phylum,
+      class: cls,
+      order: ord,
+      genus: { id: genus.id, name: genus.name, description: genus.description, lineage: genus.lineage },
+      species,
+    }),
+  });
+  if (!res.ok) throw new Error(`importwrite POST ${slug}/${genus.name} failed: ${res.status} ${await res.text()}`);
+  return res.json();
+}
+
+async function flushImportWrite(slug: string): Promise<void> {
+  const res = await fetch(`${IMPORTWRITE_URL}/family/${slug}/flush`, { method: "POST" });
+  if (!res.ok) throw new Error(`importwrite flush ${slug} failed: ${res.status} ${await res.text()}`);
 }
 
 function getOrderPath(slug: string, cls?: string, ord?: string): string {
@@ -413,27 +453,43 @@ async function main() {
     });
   }
 
-  // 6. Write data file
-  const familyDir = getOrderPath(slug, family.className, family.orderName);
-  const dataDir = resolve(familyDir, "src/data");
-  const dataFile = resolve(dataDir, `${slug}.json`);
+  // 6. Write data file — either through importwrite (merges with whatever's
+  // already there, no clobbering a concurrent import to the same family) or
+  // directly, as before.
+  const totalSpecies = allSpecies.length;
 
-  if (!existsSync(dataDir)) {
-    mkdirSync(dataDir, { recursive: true });
+  if (IMPORTWRITE_URL) {
+    console.log(`\n📤 Sending ${children.length} genera to importwrite at ${IMPORTWRITE_URL}...`);
+    let added = 0, merged = 0;
+    for (const genus of children) {
+      const g = genus as { id: string; name: string; description?: string; lineage?: string; children: Record<string, unknown>[] };
+      const result = await postGenusToImportWrite(slug, family.phylumName || "", family.className || "", family.orderName || "", g, g.children);
+      added += result.added.length;
+      merged += result.merged.length;
+    }
+    await flushImportWrite(slug);
+    console.log(`   ✅ importwrite: ${added} added, ${merged} merged into existing data`);
+  } else {
+    const familyDir = getOrderPath(slug, family.className, family.orderName);
+    const dataDir = resolve(familyDir, "src/data");
+    const dataFile = resolve(dataDir, `${slug}.json`);
+
+    if (!existsSync(dataDir)) {
+      mkdirSync(dataDir, { recursive: true });
+    }
+
+    const familyData = {
+      id: `FAM_${family.name.toUpperCase()}`,
+      name: family.name,
+      rank: "FAMILY",
+      commonName: family.commonName,
+      children,
+    };
+
+    writeFileSync(dataFile, JSON.stringify(familyData, null, 2) + "\n");
+    console.log(`\n✅ Wrote ${totalSpecies} species to ${dataFile}`);
   }
 
-  const familyData = {
-    id: `FAM_${family.name.toUpperCase()}`,
-    name: family.name,
-    rank: "FAMILY",
-    commonName: family.commonName,
-    children,
-  };
-
-  writeFileSync(dataFile, JSON.stringify(familyData, null, 2) + "\n");
-
-  const totalSpecies = allSpecies.length;
-  console.log(`\n✅ Wrote ${totalSpecies} species to ${dataFile}`);
   console.log(`   ${children.length} genera, ${wikiCount} Wikipedia pages used`);
 
   // 7. Update speciesCount in taxonomy.json
