@@ -116,6 +116,101 @@ func TestApply_DedupesByNormalizedName(t *testing.T) {
 	}
 }
 
+func TestApply_MatchesByGbifIDDespiteNameChange(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus antiquus", // the old, misspelled name
+			"sourceIds": nodeFrom(map[string]any{"gbif": "2436351"}),
+		})},
+	})
+
+	// A later import resolves the correct spelling under the same GBIF
+	// usage key. Name-only matching would see this as a brand-new species
+	// and duplicate it; ID matching must find the existing one instead.
+	result := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":        "Testus correctus",
+			"sourceIds":   nodeFrom(map[string]any{"gbif": "2436351"}),
+			"description": "The corrected name.",
+		})},
+	})
+
+	if len(result.Added) != 0 || len(result.Merged) != 1 {
+		t.Fatalf("expected the ID match to merge, not add, got %+v", result)
+	}
+	genus := fs.genusIndex["testus"]
+	if len(genus.children()) != 1 {
+		t.Fatalf("expected exactly one species after an ID match despite the name change, got %d", len(genus.children()))
+	}
+	merged := genus.children()[0]
+	if merged.str("description") != "The corrected name." {
+		t.Fatalf("expected the merge to carry over the new description, got %q", merged.str("description"))
+	}
+}
+
+func TestApply_MatchesByIDFromStringArraySourceIds(t *testing.T) {
+	// Real data shapes sourceIds inconsistently: col/itis/wikidata are
+	// usually string arrays (a species can carry more than one historical
+	// ID from the same source), checklistbank is usually a bare string.
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus originalis",
+			"sourceIds": nodeFrom(map[string]any{"col": []any{"N5F3"}}),
+		})},
+	})
+
+	result := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name":      "Testus renamed",
+			"sourceIds": nodeFrom(map[string]any{"col": []any{"N5F3"}}),
+		})},
+	})
+
+	if len(result.Added) != 0 || len(result.Merged) != 1 {
+		t.Fatalf("expected the col ID (string array) to match, got %+v", result)
+	}
+}
+
+func TestApply_FallsBackToNameWhenNeitherSideHasAnID(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus plainus"})},
+	})
+	result := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus plainus", "sourcedFrom": "checklistbank"})},
+	})
+
+	if len(result.Added) != 0 || len(result.Merged) != 1 {
+		t.Fatalf("expected name fallback to still dedupe with no IDs on either side, got %+v", result)
+	}
+}
+
 func TestApply_PrefersNonOllamaSource(t *testing.T) {
 	root := t.TempDir()
 	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}

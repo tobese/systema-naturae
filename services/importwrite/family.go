@@ -182,25 +182,44 @@ func (fs *familyState) apply(req importRequest) importResult {
 		result.GenusNew = true
 	}
 
-	speciesIndex := map[string]*onode{}
+	speciesByName := map[string]*onode{}
+	speciesByID := map[string]*onode{}
 	genusChildren := genus.children()
 	for _, sp := range genusChildren {
-		speciesIndex[normalizeName(sp.str("name"))] = sp
+		speciesByName[normalizeName(sp.str("name"))] = sp
+		indexByID(speciesByID, sp)
 	}
 
 	for _, incoming := range req.Species {
-		key := normalizeName(incoming.str("name"))
+		name := incoming.str("name")
+		key := normalizeName(name)
 		if key == "" {
 			continue
 		}
-		if existing, found := speciesIndex[key]; found {
+
+		// A shared external ID (GBIF key, ChecklistBank URN, ...) is a
+		// stronger signal than name and is tried first, so a later import
+		// still finds the right species even if its name changed (a typo
+		// fix, an author's spelling correction, a genus move). Falling
+		// back to name covers the common case where neither side has
+		// resolved any cross-reference ID yet.
+		existing := matchByID(speciesByID, incoming)
+		if existing == nil {
+			existing = speciesByName[key]
+		}
+
+		if existing != nil {
 			mergeSpecies(existing, incoming)
-			result.Merged = append(result.Merged, incoming.str("name"))
+			speciesByName[normalizeName(existing.str("name"))] = existing
+			indexByID(speciesByID, existing)
+			result.Merged = append(result.Merged, name)
 			continue
 		}
+
 		genusChildren = append(genusChildren, incoming)
-		speciesIndex[key] = incoming
-		result.Added = append(result.Added, incoming.str("name"))
+		speciesByName[key] = incoming
+		indexByID(speciesByID, incoming)
+		result.Added = append(result.Added, name)
 	}
 	genus.setChildren(genusChildren)
 

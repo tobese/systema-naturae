@@ -41,28 +41,57 @@ key, instead of twice independently.
   remove. If multiple machines need to import, they should all point at
   one running instance (e.g. over Tailscale), not each run their own.
 
-## Identity / merge rules (the part most likely to need iteration)
+## Identity / merge rules
 
-Species are deduped **by normalized name within a genus**: lowercased,
-trimmed, with stray wrapping quote characters stripped (some existing data
-has them, e.g. `"Prionailurus`). On a match:
+A species is matched against the genus it's being imported into in two
+passes, ID first (`identity.go`), name as the fallback (`family.go`):
+
+1. **By external ID.** Every importer already writes `sourceIds` on a
+   species node — `{"gbif": "2436351"}`, `{"col": ["N5F3"], "itis":
+   ["624887"]}`, etc. (the shape is per-dataset and inconsistent — a bare
+   string for some, a string array for others — both are accepted). Any
+   single shared `(source, id)` pair between the incoming species and an
+   existing one is treated as the same species, even if the name differs
+   entirely. This is the part that survives a spelling fix, an author
+   correction, or a genus move between imports — a name-only match
+   wouldn't.
+2. **By normalized name**, when neither side has a resolvable ID yet (the
+   common case for a first import, or an importer that doesn't resolve
+   cross-reference IDs at all): lowercased, trimmed, with stray wrapping
+   quote characters stripped (some existing data has them, e.g.
+   `"Prionailurus`).
+
+There's deliberately no separate "ImportKey" wire format — `sourceIds` is
+already the contract every importer writes into, on both the Go side
+(`identity.go`'s `sourceIDPairs`, which reads whatever keys are present,
+no fixed list) and the TypeScript side (`fetchSpeciesFromApi.ts`'s
+`SourceIds` interface, which names the keys actually in use today —
+`checklistbank`, `col`, `gbif`, `itis`, `wikidata`, `wfo`, `mycobank`,
+`worms`, per `portal/public/data/sources-report.json` — so an importer
+gets typo protection filling it in, without the Go matcher needing to
+know the list).
+
+On a match (by either pass), fields merge rather than overwrite:
 
 - `description`: kept if existing is empty or shorter than incoming.
 - `sourcedFrom`: incoming replaces existing only if existing is empty or
   `"ollama"` and incoming is a real source — never the reverse, and never
   introduces `"ollama"`.
 - `continents`: unioned.
-- `sourceIds`: maps merged key-by-key (union of sources).
+- `sourceIds`: merged key-by-key (union of sources) — so a species that
+  only had `col`/`itis` picks up `gbif` the first time a GBIF-sourced
+  import resolves it, and can be matched by either from then on.
 - `uuid`, `subspeciesCount`: kept if existing already has one, else taken
   from incoming.
 
-This does **not** currently use `sourceIds` (GBIF key, ChecklistBank URN,
-etc.) as the identity itself — only name. Two sources that disagree on
-spelling/casing in a way normalization doesn't catch will still produce two
-entries. If that turns out to matter in practice, the fix is to also index
-by any `sourceIds` value and treat a shared external ID as the same species
-even if the name differs, falling back to name-matching only when neither
-side has an external ID yet.
+Verified against real data: ran `fetchSpeciesFromApi.ts` for `bradypodidae`
+with `IMPORTWRITE_URL` set, twice. First run merged GBIF's 4 matched
+species into the existing entries and added `sourceIds.gbif` to each (a
+clean, minimal diff — only the new key, nothing reordered or re-escaped).
+Second, identical run produced **zero** further diff. Unit tests cover the
+ID-over-name-change case directly (`TestApply_MatchesByGbifIDDespiteNameChange`,
+`TestApply_MatchesByIDFromStringArraySourceIds`,
+`TestApply_FallsBackToNameWhenNeitherSideHasAnID`).
 
 ## API
 

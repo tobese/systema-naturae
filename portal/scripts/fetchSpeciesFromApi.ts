@@ -33,6 +33,37 @@ const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary";
 
 const RATE_LIMIT_DELAY = 150; // ms between Wikipedia calls
 
+/**
+ * Per-dataset record IDs for a species — which dataset's record a name/ID
+ * came from, keyed by dataset. This is the contract every importer writes
+ * into a species' `sourceIds` field, and what services/importwrite reads
+ * back to match species across imports by ID instead of only by name (a
+ * name can change — a spelling fix, a genus move — the ID it's filed
+ * under usually doesn't).
+ *
+ * Known keys are empirically the ones actually in use across the tree
+ * today (checklistbank, col, gbif, itis, wikidata, wfo, mycobank, worms —
+ * see portal/public/data/sources-report.json's per-kingdom sourceIds
+ * tally, via aggregateSources.ts), not a fixed enum: the index signature
+ * leaves room for a dataset registered in the sources manifest but not yet
+ * producing any sourceIds (ncbi, gtdb, ictv, taxref, bold) without a type
+ * change first. Real data is inconsistent about a bare string vs. a
+ * string array per key (col/itis/wikidata are usually arrays — a species
+ * can carry more than one historical ID from the same source —
+ * checklistbank is usually a bare string); both are valid for any key.
+ */
+interface SourceIds {
+  checklistbank?: string | string[];
+  col?: string | string[];
+  gbif?: string | string[];
+  itis?: string | string[];
+  wikidata?: string | string[];
+  wfo?: string | string[];
+  mycobank?: string | string[];
+  worms?: string | string[];
+  [source: string]: string | string[] | undefined;
+}
+
 interface GbifSpecies {
   scientificName: string;
   species: string;
@@ -327,7 +358,12 @@ async function main() {
   // 1. Try local cache first
   const cacheClass = family.className || "aves";
   const cache = tryLoadCache(cacheClass);
-  let allSpecies: { species: string; genus: string }[] = [];
+  // gbifKey (the per-species usage key, e.g. 2436351) is only available from
+  // the live API, not the cache — it's what lets importwrite match a species
+  // across imports even if the name later changes (a spelling fix, a genus
+  // move). Cache-sourced species fall back to name-only matching, same as
+  // before.
+  let allSpecies: { species: string; genus: string; gbifKey?: number }[] = [];
   let fromCache = false;
 
   if (cache) {
@@ -354,7 +390,11 @@ async function main() {
     console.log("\n📡 Fetching species from GBIF...");
     try {
       const raw = await fetchGbifSpecies(familyKey, maxSpecies ?? 999999);
-      allSpecies = raw.map((s: GbifSpecies) => ({ species: s.species || s.species, genus: s.genus || "" }));
+      allSpecies = raw.map((s: GbifSpecies) => ({
+        species: s.species || s.species,
+        genus: s.genus || "",
+        gbifKey: typeof s.key === "number" ? s.key : undefined,
+      }));
       console.log(`   Found ${allSpecies.length} accepted species`);
     } catch (e) {
       console.error(`   ❌ GBIF error: ${(e as Error).message}`);
@@ -368,7 +408,7 @@ async function main() {
   }
 
   // 3. Group by genus
-  const genusMap = new Map<string, { species: string; genus: string }[]>();
+  const genusMap = new Map<string, { species: string; genus: string; gbifKey?: number }[]>();
   for (const sp of allSpecies) {
     const sciName = sp.species || "";
     const genusName = sp.genus || sciName.split(" ")[0] || "Unknown";
@@ -427,7 +467,7 @@ async function main() {
 
       const sourcedFrom = (useWiki && description && description.length > 40 && !description.startsWith(sciName)) ? "wikipedia" : "none";
 
-      speciesChildren.push({
+      const node: Record<string, unknown> = {
         id: nameToId(sciName),
         name: sciName,
         rank: "SPECIES",
@@ -437,7 +477,14 @@ async function main() {
         subspeciesCount: 0,
         description,
         sourcedFrom,
-      });
+      };
+      // Lets importwrite match this species by GBIF usage key on a later
+      // import, instead of only by name — see services/importwrite/README.md.
+      if (sp.gbifKey) {
+        const sourceIds: SourceIds = { gbif: String(sp.gbifKey) };
+        node.sourceIds = sourceIds;
+      }
+      speciesChildren.push(node);
     }
 
     // Sort species by name
