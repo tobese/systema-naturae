@@ -20,6 +20,7 @@ type store struct {
 	idleEvict time.Duration
 	mu        sync.Mutex
 	families  map[string]*familyState
+	index     *globalIndex
 }
 
 func newStore(root string, gitCommit bool, idleEvict time.Duration) *store {
@@ -28,9 +29,23 @@ func newStore(root string, gitCommit bool, idleEvict time.Duration) *store {
 		gitCommit: gitCommit,
 		idleEvict: idleEvict,
 		families:  map[string]*familyState{},
+		index:     newGlobalIndex(),
 	}
 }
 
+// get is keyed by slug alone, which is NOT globally unique -- 103 families
+// in the real tree are all named "incertae-sedis", sharing a slug across
+// different kingdoms/phyla. A second, differently-located family with the
+// same slug would silently share this one's cache slot. Not fixed here:
+// this service only ever creates/loads families through a single explicit
+// importRequest (kingdom+phylum+class+order+slug), never discovers them by
+// slug search the way the sidecar/name-index system used to, so the
+// collision this guards against hasn't been hit in practice -- but a
+// caller submitting the SAME slug under two different locations in one
+// server lifetime would get this wrong. Flagged, not fixed, pending a
+// decision on whether familyLocation (not just Slug) should be the cache
+// key everywhere, mirroring tree.py's sidecar_key_for fix for the same
+// underlying slug-collision class of bug.
 func (s *store) get(loc familyLocation) (*familyState, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
@@ -41,8 +56,59 @@ func (s *store) get(loc familyLocation) (*familyState, error) {
 	if err != nil {
 		return nil, err
 	}
+	fs.attachIndex(s.index, loc.Kingdom, loc)
 	s.families[loc.Slug] = fs
 	return fs, nil
+}
+
+// applyImport resolves cross-family matches before handing whatever's left
+// to the target family's own apply(). Each family lock is acquired and
+// fully released before the next is touched -- never two held at once by
+// this goroutine -- so two concurrent requests that each find a match in
+// the other's family can't deadlock. See crossfamily.go for why this
+// exists: a species the global index already knows about, in some OTHER
+// family, is merged there instead of being added a second time here, which
+// is the exact failure mode behind the 2026-10-18 incident.
+func (s *store) applyImport(loc familyLocation, req importRequest) (importResult, error) {
+	targetFs, err := s.get(loc)
+	if err != nil {
+		return importResult{}, err
+	}
+
+	result := importResult{Added: []speciesResult{}, Merged: []speciesResult{}}
+	remaining := req.Species[:0:0] // fresh slice; req.Species is the caller's
+
+	for _, sp := range req.Species {
+		other, found := s.index.lookup(req.Kingdom, sp)
+		if !found || other == loc {
+			remaining = append(remaining, sp)
+			continue
+		}
+		otherFs, err := s.get(other)
+		if err != nil {
+			remaining = append(remaining, sp)
+			continue
+		}
+		merged := otherFs.mergeExisting(sp)
+		if merged == nil {
+			// Index said it lived here; it didn't. Stale entry (e.g. the
+			// on-disk record was removed by something outside this
+			// service) -- fall back to local rather than dropping it.
+			remaining = append(remaining, sp)
+			continue
+		}
+		s.index.record(req.Kingdom, merged, other)
+		result.Merged = append(result.Merged, speciesResult{
+			Name: sp.str("name"), ID: merged.str("id"), UUID: merged.str("uuid"), Family: other.Slug,
+		})
+	}
+
+	req.Species = remaining
+	local := targetFs.apply(req)
+	result.Added = append(result.Added, local.Added...)
+	result.Merged = append(result.Merged, local.Merged...)
+	result.GenusNew = local.GenusNew
+	return result, nil
 }
 
 // flushLoop periodically flushes every dirty family to disk and, if

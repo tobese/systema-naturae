@@ -105,6 +105,11 @@ type speciesResult struct {
 	Name string `json:"name"`
 	ID   string `json:"id"`
 	UUID string `json:"uuid,omitempty"`
+	// Family is set only when the species was matched into a DIFFERENT
+	// family than the one requested -- the store-level cross-family step,
+	// not this file's own within-family matching. Empty means "landed where
+	// the request asked."
+	Family string `json:"family,omitempty"`
 }
 
 type importResult struct {
@@ -126,6 +131,34 @@ type familyState struct {
 	// genusIndex maps normalized genus name -> the live genus node, so a
 	// repeat import into the same genus doesn't rescan every write.
 	genusIndex map[string]*onode
+	// idx/kingdom/loc connect this family to the server-wide identity
+	// index (crossfamily.go). idx is nil for a familyState created
+	// directly by loadFamily in isolation (every existing test) -- apply()
+	// guards every use, so cross-family/sibling-genus matching simply
+	// doesn't run until attachIndex is called, which store.get does for
+	// every family it loads.
+	idx     *globalIndex
+	kingdom string
+	loc     familyLocation
+}
+
+// attachIndex connects this family to the server-wide identity index and
+// registers everything already on disk under it, so a LATER import
+// touching a different family can find species that were here before this
+// service ever loaded this file. Called once, right after a family is
+// first loaded (store.get) -- safe to call again, just redundant.
+func (fs *familyState) attachIndex(idx *globalIndex, kingdom string, loc familyLocation) {
+	fs.idx = idx
+	fs.kingdom = kingdom
+	fs.loc = loc
+	if idx == nil {
+		return
+	}
+	for _, g := range fs.genusIndex {
+		for _, sp := range g.children() {
+			idx.record(kingdom, sp, loc)
+		}
+	}
 }
 
 func loadFamily(root string, loc familyLocation) (*familyState, error) {
@@ -157,6 +190,69 @@ func loadFamily(root string, loc familyLocation) (*familyState, error) {
 		fs.genusIndex[normalizeName(g.str("name"))] = g
 	}
 	return fs, nil
+}
+
+// byIdentity builds a (by-id, by-name) lookup over one genus's children,
+// the same shape apply()'s main loop already builds for the target genus --
+// factored out so findInOtherGenera and mergeExisting can reuse it instead
+// of drifting from the matching rules used for the common case.
+func byIdentity(children []*onode) (map[string]*onode, map[string]*onode) {
+	byID := map[string]*onode{}
+	byName := map[string]*onode{}
+	for _, sp := range children {
+		indexByID(byID, sp)
+		byName[normalizeName(sp.str("name"))] = sp
+	}
+	return byID, byName
+}
+
+func matchIn(children []*onode, incoming *onode) *onode {
+	byID, byName := byIdentity(children)
+	if m := matchByID(byID, incoming); m != nil {
+		return m
+	}
+	return byName[normalizeName(incoming.str("name"))]
+}
+
+// findInOtherGenera searches every genus in this family OTHER than the one
+// already checked by apply()'s main loop, for a match by ID then by
+// normalized name. Catches a species submitted under a different genus
+// than the one it's already filed under within the SAME family -- a
+// taxonomic revision moving it between genera, or two importers
+// disagreeing about which genus is right -- the same "two places claim
+// this species" problem a cross-family duplicate is, just one level
+// narrower. Caller already holds fs.mu.
+func (fs *familyState) findInOtherGenera(incoming *onode, skipGenusKey string) *onode {
+	for key, g := range fs.genusIndex {
+		if key == skipGenusKey {
+			continue
+		}
+		if m := matchIn(g.children(), incoming); m != nil {
+			return m
+		}
+	}
+	return nil
+}
+
+// mergeExisting finds incoming's match anywhere in this family (any genus)
+// and merges into it -- used by the store-level cross-family step, where
+// the global index says the species already lives in THIS family but not
+// which genus. Returns the merged node, or nil if the index was stale and
+// nothing was actually found (e.g. the on-disk record was removed by
+// something outside this service) -- the caller falls back to treating
+// the submission as new rather than dropping it.
+func (fs *familyState) mergeExisting(incoming *onode) *onode {
+	fs.mu.Lock()
+	defer fs.mu.Unlock()
+	for _, g := range fs.genusIndex {
+		if existing := matchIn(g.children(), incoming); existing != nil {
+			mergeSpecies(existing, incoming)
+			fs.dirty = true
+			fs.lastWrite = time.Now()
+			return existing
+		}
+	}
+	return nil
 }
 
 // apply runs one importRequest against the family under its lock, merging
@@ -221,7 +317,24 @@ func (fs *familyState) apply(req importRequest) importResult {
 			mergeSpecies(existing, incoming)
 			speciesByName[normalizeName(existing.str("name"))] = existing
 			indexByID(speciesByID, existing)
+			if fs.idx != nil {
+				fs.idx.record(fs.kingdom, existing, fs.loc)
+			}
 			result.Merged = append(result.Merged, speciesResult{Name: name, ID: existing.str("id"), UUID: existing.str("uuid")})
+			continue
+		}
+
+		// Not filed under the target genus. Before concluding it's new,
+		// check every OTHER genus in this same family -- see
+		// findInOtherGenera's doc comment for why that's not redundant with
+		// the store-level cross-family check (a different FAMILY, this is a
+		// different GENUS in the one already loaded and locked here).
+		if sibling := fs.findInOtherGenera(incoming, genusKey); sibling != nil {
+			mergeSpecies(sibling, incoming)
+			if fs.idx != nil {
+				fs.idx.record(fs.kingdom, sibling, fs.loc)
+			}
+			result.Merged = append(result.Merged, speciesResult{Name: name, ID: sibling.str("id"), UUID: sibling.str("uuid")})
 			continue
 		}
 
@@ -235,6 +348,9 @@ func (fs *familyState) apply(req importRequest) importResult {
 		genusChildren = append(genusChildren, incoming)
 		speciesByName[key] = incoming
 		indexByID(speciesByID, incoming)
+		if fs.idx != nil {
+			fs.idx.record(fs.kingdom, incoming, fs.loc)
+		}
 		result.Added = append(result.Added, speciesResult{Name: name, ID: incoming.str("id"), UUID: incoming.str("uuid")})
 	}
 	genus.setChildren(genusChildren)

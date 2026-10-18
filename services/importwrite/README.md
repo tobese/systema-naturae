@@ -40,26 +40,63 @@ key, instead of twice independently.
   the same `IMPORTWRITE_ROOT` reintroduces the exact race this exists to
   remove. If multiple machines need to import, they should all point at
   one running instance (e.g. over Tailscale), not each run their own.
+- **`store.get`'s cache is keyed by slug alone, which the real tree proved
+  is not globally unique** (103 families are all named `incertae-sedis`,
+  sharing a slug across different kingdoms/phyla — the same collision
+  `tree.py`'s `sidecar_key_for` exists to fix for the name-parse index).
+  Not hit in practice: this service only loads a family through an
+  explicit `importRequest` (kingdom+phylum+class+order+slug), never by a
+  slug-only search. But a caller submitting the same slug under two
+  different locations in one server lifetime would collide. Flagged, not
+  fixed, pending a decision on whether `familyLocation` should be the
+  cache key everywhere instead of just `Slug`.
 
 ## Identity / merge rules
 
-A species is matched against the genus it's being imported into in two
-passes, ID first (`identity.go`), name as the fallback (`family.go`):
+A species is matched in three widening scopes, checked in order, ID first
+then name within each (`identity.go`, `family.go`, `crossfamily.go`):
 
-1. **By external ID.** Every importer already writes `sourceIds` on a
-   species node — `{"gbif": "2436351"}`, `{"col": ["N5F3"], "itis":
-   ["624887"]}`, etc. (the shape is per-dataset and inconsistent — a bare
-   string for some, a string array for others — both are accepted). Any
-   single shared `(source, id)` pair between the incoming species and an
-   existing one is treated as the same species, even if the name differs
-   entirely. This is the part that survives a spelling fix, an author
-   correction, or a genus move between imports — a name-only match
-   wouldn't.
-2. **By normalized name**, when neither side has a resolvable ID yet (the
-   common case for a first import, or an importer that doesn't resolve
-   cross-reference IDs at all): lowercased, trimmed, with stray wrapping
-   quote characters stripped (some existing data has them, e.g.
-   `"Prionailurus`).
+0. **Across families.** Before anything else, `store.applyImport` checks a
+   kingdom-scoped, server-wide index of every species identity this
+   process has seen, built incrementally as families load (not a startup
+   walk of the whole tree — see `crossfamily.go`'s doc comment). A match
+   elsewhere merges into that existing record instead of adding a second
+   copy here; `apply()`'s own within-family matching below only ever sees
+   whatever didn't already match a known identity somewhere else. This is
+   the fix for the exact failure mode behind the 2026-10-18 incident: two
+   independent passes each decided a different family should keep a
+   disputed species, and because the edits landed in different files,
+   nothing caught the disagreement before 35 species vanished from both.
+   One family lock is held at a time, never two at once by one goroutine,
+   so two requests that each find their match in the other's family can't
+   deadlock — `TestApplyImport_ConcurrentCrossFamilyLookupsDoNotDeadlock`
+   is the regression test, 200 concurrent pairs shaped exactly like that.
+   Scoped per kingdom, same as `dedupeSpeciesAcrossFamilies.py`'s own
+   `by_authority` index: a name shared across kingdoms is a homonym
+   (`Graphium sarpedon` is a butterfly in one and a fungus in another),
+   never a duplicate.
+1. **Across genera, within the family already being written to.** A
+   species submitted under a different genus than the one it's already
+   filed under in the SAME family — a revision moving it, or two importers
+   disagreeing about which genus is right. One level narrower than #0, and
+   handled inside the already-held family lock (`findInOtherGenera`), not
+   the store-level index.
+2. **Within the target genus** — the original matching this service shipped
+   with, and the shape reused by scopes #0 and #1 above:
+   1. **By external ID.** Every importer already writes `sourceIds` on a
+      species node — `{"gbif": "2436351"}`, `{"col": ["N5F3"], "itis":
+      ["624887"]}`, etc. (the shape is per-dataset and inconsistent — a bare
+      string for some, a string array for others — both are accepted). Any
+      single shared `(source, id)` pair between the incoming species and an
+      existing one is treated as the same species, even if the name differs
+      entirely. This is the part that survives a spelling fix, an author
+      correction, or a genus move between imports — a name-only match
+      wouldn't.
+   2. **By normalized name**, when neither side has a resolvable ID yet
+      (the common case for a first import, or an importer that doesn't
+      resolve cross-reference IDs at all): lowercased, trimmed, with stray
+      wrapping quote characters stripped (some existing data has them, e.g.
+      `"Prionailurus`).
 
 There's deliberately no separate "ImportKey" wire format — `sourceIds` is
 already the contract every importer writes into, on both the Go side
@@ -113,7 +150,7 @@ POST /family/{slug}/species
     "genus": { "id": "GENUS_PANTHERA", "name": "Panthera" },
     "species": [ { "id": "...", "name": "Panthera leo", "rank": "SPECIES", ... } ]
   }
-  -> { "added": [{"name","id","uuid"}], "merged": [{"name","id","uuid"}], "genusCreated": bool }
+  -> { "added": [{"name","id","uuid"}], "merged": [{"name","id","uuid","family"?}], "genusCreated": bool }
 
 GET /family/{slug}?kingdom=animalia&phylum=...&class=...&order=...
   -> the family's current in-memory JSON tree (useful for an importer's dry-run/diff)

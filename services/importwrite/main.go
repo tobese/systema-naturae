@@ -64,12 +64,11 @@ func handleImport(st *store) http.HandlerFunc {
 			return
 		}
 		loc := familyLocation{Kingdom: req.Kingdom, Phylum: req.Phylum, Class: req.Class, Order: req.Order, Slug: slug}
-		fs, err := st.get(loc)
+		result, err := st.applyImport(loc, req)
 		if err != nil {
 			http.Error(w, "loading family: "+err.Error(), http.StatusInternalServerError)
 			return
 		}
-		result := fs.apply(req)
 		writeJSON(w, http.StatusOK, result)
 	}
 }
