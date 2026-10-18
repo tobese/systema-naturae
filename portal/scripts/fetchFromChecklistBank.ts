@@ -166,12 +166,25 @@ async function fetchAcceptedSpecies(familyId: string, limit: number): Promise<Cb
   return all;
 }
 
+interface ImportWriteSpeciesResult {
+  name: string;
+  id: string;
+  uuid?: string;
+  family?: string;
+}
+
+interface ImportWriteResult {
+  added: ImportWriteSpeciesResult[];
+  merged: ImportWriteSpeciesResult[];
+  genusCreated: boolean;
+}
+
 async function postGenusToImportWrite(
   slug: string,
   family: FamilyNode,
   genusName: string,
   rows: CbResult[],
-): Promise<{ added: string[]; merged: string[] }> {
+): Promise<ImportWriteResult> {
   const species = rows.map(r => {
     const sciName = r.usage.name.scientificName;
     // col/itis are arrays everywhere else in the tree (a species can carry
@@ -263,15 +276,27 @@ async function main() {
     genusMap.get(genus)!.push(r);
   }
 
-  let added = 0, merged = 0;
+  let added = 0, merged = 0, newUuids = 0, crossFamily = 0;
   for (const [genusName, rows] of genusMap) {
     const result = await postGenusToImportWrite(slug, family, genusName, rows);
     added += result.added.length;
     merged += result.merged.length;
+    newUuids += result.added.filter((s) => s.uuid).length;
+    // `family` is set only when importwrite's cross-family identity check
+    // (services/importwrite/crossfamily.go) found this species already
+    // living in a DIFFERENT family and merged it there instead of adding
+    // a duplicate here -- the fix for the 2026-10-18 incident. Surfaced so
+    // a run against real data shows it happening, not just the add/merge
+    // counts.
+    for (const m of result.merged) {
+      if (m.family && m.family !== slug) crossFamily++;
+    }
   }
   await flushImportWrite(slug);
 
   console.log(`  importwrite: ${added} added, ${merged} merged`);
+  if (newUuids > 0) console.log(`  🆔 ${newUuids} new species assigned a uuid by importwrite`);
+  if (crossFamily > 0) console.log(`  🔀 ${crossFamily} already existed in a different family -- merged there instead of duplicated`);
 }
 
 main().catch(e => { console.error("Fatal:", e); process.exit(1); });
