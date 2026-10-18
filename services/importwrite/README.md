@@ -81,8 +81,19 @@ On a match (by either pass), fields merge rather than overwrite:
 - `sourceIds`: merged key-by-key (union of sources) — so a species that
   only had `col`/`itis` picks up `gbif` the first time a GBIF-sourced
   import resolves it, and can be matched by either from then on.
-- `uuid`, `subspeciesCount`: kept if existing already has one, else taken
-  from incoming.
+- `uuid`: kept if existing already has one, else taken from incoming if
+  incoming has one, else **assigned fresh** -- a random v4, generated once
+  by the arbiter at the moment a species is first added, never recomputed.
+  Deliberately not `buildData.ts`'s v5-over-rank-path scheme: that formula
+  bakes in placement (kingdom/.../family/genus), so a species later matched
+  into a different family or genus would get a *different* uuid under it,
+  even though it's the same species. A random v4 has nothing to go stale.
+  `POST /family/{slug}/species`'s response carries each species' uuid back
+  (`added`/`merged` are now `{name, id, uuid}` objects, not bare name
+  strings) so a transformer logging its own import run records the
+  identity the arbiter actually assigned, not one it guessed itself.
+- `subspeciesCount`: kept if existing already has one, else taken from
+  incoming.
 
 Verified against real data: ran `fetchSpeciesFromApi.ts` for `bradypodidae`
 with `IMPORTWRITE_URL` set, twice. First run merged GBIF's 4 matched
@@ -102,7 +113,7 @@ POST /family/{slug}/species
     "genus": { "id": "GENUS_PANTHERA", "name": "Panthera" },
     "species": [ { "id": "...", "name": "Panthera leo", "rank": "SPECIES", ... } ]
   }
-  -> { "added": ["..."], "merged": ["..."], "genusCreated": bool }
+  -> { "added": [{"name","id","uuid"}], "merged": [{"name","id","uuid"}], "genusCreated": bool }
 
 GET /family/{slug}?kingdom=animalia&phylum=...&class=...&order=...
   -> the family's current in-memory JSON tree (useful for an importer's dry-run/diff)

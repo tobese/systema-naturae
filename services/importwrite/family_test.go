@@ -44,7 +44,7 @@ func TestApply_AddsNewSpecies(t *testing.T) {
 		},
 	})
 
-	if len(result.Added) != 1 || result.Added[0] != "Panthera leo" {
+	if len(result.Added) != 1 || result.Added[0].Name != "Panthera leo" {
 		t.Fatalf("expected Panthera leo added, got %+v", result)
 	}
 	if !result.GenusNew {
@@ -154,6 +154,101 @@ func TestApply_MatchesByGbifIDDespiteNameChange(t *testing.T) {
 	merged := genus.children()[0]
 	if merged.str("description") != "The corrected name." {
 		t.Fatalf("expected the merge to carry over the new description, got %q", merged.str("description"))
+	}
+}
+
+func TestApply_AssignsUUIDToNewSpecies(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	result := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus novus"})},
+	})
+
+	if len(result.Added) != 1 || result.Added[0].UUID == "" {
+		t.Fatalf("expected the new species to be assigned a uuid, got %+v", result)
+	}
+	genus := fs.genusIndex["testus"]
+	stored := genus.children()[0].str("uuid")
+	if stored != result.Added[0].UUID {
+		t.Fatalf("expected the returned uuid to match what was stored, got returned=%q stored=%q", result.Added[0].UUID, stored)
+	}
+}
+
+func TestApply_IDMatchWithinGenusKeepsUUIDDespiteNameChange(t *testing.T) {
+	// Proves the actual point of a random, placement-independent uuid: an
+	// ID-matched revision (an author's spelling correction, same GBIF key)
+	// keeps the same uuid even though the name on the node changed.
+	//
+	// This is deliberately scoped to one genus, matching what apply() can
+	// actually resolve today -- identity.go/family.go's matching is
+	// genus-scoped, not yet cross-family or cross-genus. A species moved to
+	// a *different* genus or family isn't found as the same species at all
+	// yet (confirmed by hand: submitting into a different genusRef produces
+	// a second Added, not a Merged) -- that's the open gap the Single
+	// Writer plan's phase 1 is for, not something this uuid change touches.
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	first := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name": "Testus revisus", "sourceIds": nodeFrom(map[string]any{"gbif": "99"}),
+		})},
+	})
+	originalUUID := first.Added[0].UUID
+	if originalUUID == "" {
+		t.Fatalf("expected a uuid on first import, got %+v", first)
+	}
+
+	second := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{
+			"name": "Testus revisior", "sourceIds": nodeFrom(map[string]any{"gbif": "99"}),
+		})},
+	})
+
+	if len(second.Merged) != 1 {
+		t.Fatalf("expected the ID match to merge despite the name change, got %+v", second)
+	}
+	if second.Merged[0].UUID != originalUUID {
+		t.Fatalf("expected the uuid to survive the revision unchanged, got original=%q after=%q", originalUUID, second.Merged[0].UUID)
+	}
+}
+
+func TestApply_MergeKeepsExistingUUIDOverIncoming(t *testing.T) {
+	// mergeSpecies' existing rule: existing wins. An incoming submission
+	// that already carries its own (transformer-guessed) uuid must not
+	// overwrite one the arbiter already assigned.
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
+	})
+	fs, _ := loadFamily(root, loc)
+
+	first := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus unicus"})},
+	})
+	originalUUID := first.Added[0].UUID
+
+	result := fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{nodeFrom(map[string]any{"name": "Testus unicus", "uuid": "11111111-1111-4111-8111-111111111111"})},
+	})
+
+	if result.Merged[0].UUID != originalUUID {
+		t.Fatalf("expected existing uuid to survive, got original=%q after=%q", originalUUID, result.Merged[0].UUID)
 	}
 }
 

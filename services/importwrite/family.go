@@ -98,10 +98,19 @@ type importRequest struct {
 	Species []*onode `json:"species"`
 }
 
+// speciesResult reports what a submitted species actually ended up as,
+// uuid included -- so a transformer logging its own import run records the
+// identity the arbiter assigned or confirmed, not the one it guessed.
+type speciesResult struct {
+	Name string `json:"name"`
+	ID   string `json:"id"`
+	UUID string `json:"uuid,omitempty"`
+}
+
 type importResult struct {
-	Added    []string `json:"added"`
-	Merged   []string `json:"merged"`
-	GenusNew bool     `json:"genusCreated"`
+	Added    []speciesResult `json:"added"`
+	Merged   []speciesResult `json:"merged"`
+	GenusNew bool            `json:"genusCreated"`
 }
 
 // familyState is the in-memory working copy of one family's JSON tree. Held
@@ -156,7 +165,7 @@ func (fs *familyState) apply(req importRequest) importResult {
 	fs.mu.Lock()
 	defer fs.mu.Unlock()
 
-	result := importResult{Added: []string{}, Merged: []string{}}
+	result := importResult{Added: []speciesResult{}, Merged: []speciesResult{}}
 
 	genusKey := normalizeName(req.Genus.Name)
 	genus, ok := fs.genusIndex[genusKey]
@@ -212,14 +221,21 @@ func (fs *familyState) apply(req importRequest) importResult {
 			mergeSpecies(existing, incoming)
 			speciesByName[normalizeName(existing.str("name"))] = existing
 			indexByID(speciesByID, existing)
-			result.Merged = append(result.Merged, name)
+			result.Merged = append(result.Merged, speciesResult{Name: name, ID: existing.str("id"), UUID: existing.str("uuid")})
 			continue
 		}
 
+		// A brand-new species gets its permanent identity here, once --
+		// never re-derived from placement, so a later cross-family move
+		// (mergeSpecies above, next time this id/name is submitted) can't
+		// change it. See uuid.go.
+		if incoming.str("uuid") == "" {
+			incoming.set("uuid", newUUIDv4())
+		}
 		genusChildren = append(genusChildren, incoming)
 		speciesByName[key] = incoming
 		indexByID(speciesByID, incoming)
-		result.Added = append(result.Added, name)
+		result.Added = append(result.Added, speciesResult{Name: name, ID: incoming.str("id"), UUID: incoming.str("uuid")})
 	}
 	genus.setChildren(genusChildren)
 

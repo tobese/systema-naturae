@@ -118,6 +118,18 @@ function findFamily(slug: string): FamilyNode | null {
 
 // ---------- importwrite client ----------
 
+interface ImportWriteSpeciesResult {
+  name: string;
+  id: string;
+  uuid?: string;
+}
+
+interface ImportWriteResult {
+  added: ImportWriteSpeciesResult[];
+  merged: ImportWriteSpeciesResult[];
+  genusCreated: boolean;
+}
+
 async function postGenusToImportWrite(
   slug: string,
   phylum: string,
@@ -125,7 +137,7 @@ async function postGenusToImportWrite(
   ord: string,
   genus: { id: string; name: string; description?: string; lineage?: string },
   species: Record<string, unknown>[],
-): Promise<{ added: string[]; merged: string[]; genusCreated: boolean }> {
+): Promise<ImportWriteResult> {
   const res = await fetch(`${IMPORTWRITE_URL}/family/${slug}/species`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -507,14 +519,20 @@ async function main() {
 
   if (IMPORTWRITE_URL) {
     console.log(`\n📤 Sending ${children.length} genera to importwrite at ${IMPORTWRITE_URL}...`);
-    let added = 0, merged = 0;
+    let added = 0, merged = 0, newUuids = 0;
     for (const genus of children) {
       const g = genus as { id: string; name: string; description?: string; lineage?: string; children: Record<string, unknown>[] };
       const result = await postGenusToImportWrite(slug, family.phylumName || "", family.className || "", family.orderName || "", g, g.children);
       added += result.added.length;
       merged += result.merged.length;
+      // The arbiter assigns a species' permanent uuid on first add (never
+      // re-derived from placement, see services/importwrite/uuid.go) and
+      // returns it here so a caller logging its own import run records
+      // the identity actually assigned, not one the transformer guessed.
+      newUuids += result.added.filter((s) => s.uuid).length;
     }
     await flushImportWrite(slug);
+    if (newUuids > 0) console.log(`   🆔 ${newUuids} new species assigned a uuid by importwrite`);
     console.log(`   ✅ importwrite: ${added} added, ${merged} merged into existing data`);
   } else {
     const familyDir = getOrderPath(slug, family.className, family.orderName);
