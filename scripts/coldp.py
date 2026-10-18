@@ -46,6 +46,46 @@ import os
 import zipfile
 
 CORE = "NameUsage.tsv"
+# Spellings of the single core table seen in the wild beyond COL's own
+# "NameUsage.tsv": lowercase (nameusage.csv/.txt), an underscore
+# (name_usage.txt), and any extension -- the content is the deciding
+# factor, not the name. One archive (1051) also has the inverse problem,
+# a .csv extension on an actually tab-delimited file, which is why the
+# delimiter is sniffed from content too (see find_delimiter below) rather
+# than inferred from whichever extension the table happens to carry.
+CORE_STEMS = ("nameusage", "name_usage")
+
+
+def find_core_table(names):
+    """First member whose basename (any case, any extension) is a known
+    spelling of the single-table core, or None.
+
+    Used both to decide whether an archive is ColDP-single-table shaped
+    (colChecklist.py's dispatcher) and to find the actual member to open
+    (load_core below) -- one place names the spellings, not two
+    independently-maintained lists that can drift apart the way the
+    family-path resolution logic once did across six different scripts.
+    """
+    for m in names:
+        base = m.rsplit("/", 1)[-1]
+        if "." in base and base[:base.rindex(".")].lower() in CORE_STEMS:
+            return m
+    return None
+
+
+def find_delimiter(first_line):
+    """Tab, comma, or pipe -- whichever splits `first_line` into the most
+    fields.
+
+    A file's extension is not proof of its delimiter: ChecklistBank
+    dataset 1051 ships "Name.csv"/"Taxon.csv" that are actually
+    tab-delimited, so trusting ".csv" split every row on the wrong
+    character and the header lookup raised KeyError 'id' downstream --
+    a parse failure blamed on the wrong layer entirely. Pipe is WCVP's
+    (2232) own delimiter, declared in its meta.xml as fieldsTerminatedBy="|"
+    -- real DwC-A archives are not limited to tab/comma, so neither is this.
+    """
+    return max(("\t", ",", "|"), key=first_line.count)
 # ColDP rank values are not uniform across datasets. Catalogue of Life's own
 # exports use the English ranks; other ChecklistBank sources use the
 # ziological/Latin ones, which is what Wikispecies (314570) does:
@@ -70,7 +110,19 @@ def norm_rank(r):
         return r
     return RANK_ALIASES.get(r.strip().lower(), r)
 # same set the DwCA importers accept
-ACCEPTED = {"accepted", "provisionally accepted"}
+#
+# "established" is ICZN nomenclatural vocabulary, not COL's taxonomic-status
+# vocabulary -- found on the GLI-shaped name.csv/taxon.csv/synonym.csv split
+# (see load_core_csv's docstring) when the exporting tool is Species File
+# Group software rather than ChecklistBank's own COL pipeline. Confirmed on
+# two independent real checklists (Sesiidae.net/309267, a Lepidoptera site's
+# own export/55353): every row in taxon.csv carries status="established" and
+# nothing else, with the real accepted/synonym split already decided by file
+# membership -- exactly GLI's own "accepted is decided by file membership"
+# design. Without this, load_core_csv's status filter drops every row in the
+# table, which reads as "this dataset is empty" rather than "this reader
+# doesn't know this vocabulary".
+ACCEPTED = {"accepted", "provisionally accepted", "established"}
 
 
 def _columns(header):
@@ -85,6 +137,15 @@ def _columns(header):
     dwc:taxonID -> ID, dwc:parentNameUsageID -> parentID, dwc:taxonomicStatus
     -> status, dwc:taxonRank -> rank. Map those too, because the importers
     index by the ColDP names and would otherwise refuse the source.
+
+    "id"/"parentId" are a third kind of drift, not a DwCA/ColDP vocabulary
+    difference at all: Species File Group's own export tooling (1164)
+    writes col:id and col:parentId where COL's own pipeline writes col:ID
+    and col:parentID -- same field, just lower-cased by whichever tool
+    produced it. load_core()'s column lookup is case-sensitive, so the
+    export was otherwise correct ColDP, carrying every field this reader
+    needs, and still failed with "no column col:ID" over a one-letter
+    casing difference.
     """
     DWCA = {
         "taxonID": "ID",
@@ -94,6 +155,8 @@ def _columns(header):
         "taxonRank": "rank",
         "scientificName": "scientificName",
         "scientificNameAuthorship": "authorship",
+        "id": "ID",
+        "parentId": "parentID",
     }
     out = {}
     for i, h in enumerate(header):
@@ -178,30 +241,50 @@ def load_core(path, accepted=ACCEPTED, want_authorship=True):
     """
     par, rank, name, extra = {}, {}, {}, {}
     with zipfile.ZipFile(path) as z:
-        if CORE not in z.namelist():
-            if any(m.lower().endswith("taxon.csv") for m in z.namelist()):
+        names = z.namelist()
+        core = CORE if CORE in names else find_core_table(names)
+        if core is None:
+            if any(m.lower().endswith("taxon.csv") for m in names):
                 # ColDP's CSV flavour; read by load_core_csv() below.
                 return load_core_csv(path, accepted, want_authorship)
             raise KeyError(f"{CORE} not in {os.path.basename(path)}; "
-                           f"members: {sorted(z.namelist())[:8]}")
-        with z.open(CORE) as f:
-            # NCBI Taxonomy (2169) has a stray literal `"` in a free-text
-            # remarks field. csv's default QUOTE_MINIMAL treats that as the
-            # start of a quoted field and keeps consuming subsequent physical
-            # lines looking for the matching close-quote, merging real rows
-            # together until it either finds one or blows the field-size
-            # limit -- 154,774 rows silently vanished this way before the
-            # limit was even hit. These are plain tab-separated files with no
-            # CSV-style quoting convention of their own; QUOTE_NONE reads each
-            # physical line as its own row, which is what every source here
-            # actually is.
+                           f"members: {sorted(names)[:8]}")
+        # Delimiter and BOM are sniffed from a short-lived peek rather than
+        # a full read: NCBI Taxonomy (2169) decompresses to 418MB, and this
+        # path has to stay streaming-safe for it. Opening the member twice
+        # costs one extra decompression of its first line, not its whole
+        # contents.
+        # utf-8-sig, not plain utf-8: a UTF-8 byte-order-mark on the header
+        # (seen on two of the newly-recognized core-table variants, 290628
+        # and 313711) decodes under plain utf-8 as an invisible extra
+        # character glued onto the first column name, so every lookup for
+        # that column fails. utf-8-sig strips a leading BOM if present and
+        # is identical to utf-8 otherwise.
+        with z.open(core) as probe:
+            first_line = probe.readline().decode("utf-8-sig", errors="replace")
+        delim = find_delimiter(first_line)
+        # NCBI Taxonomy (2169) has a stray literal `"` in a free-text
+        # remarks field. csv's default QUOTE_MINIMAL treats that as the
+        # start of a quoted field and keeps consuming subsequent physical
+        # lines looking for the matching close-quote, merging real rows
+        # together until it either finds one or blows the field-size
+        # limit -- 154,774 rows silently vanished this way before the
+        # limit was even hit. Tab-delimited exports here have no
+        # CSV-style quoting convention of their own, so QUOTE_NONE reads
+        # each physical line as its own row, which is what every
+        # tab-shaped source turned out to actually be. A genuinely
+        # comma-delimited export (1049, 290628, 313711) is ordinary CSV
+        # and is expected to follow CSV's own quoting rules instead, so
+        # QUOTE_NONE only applies to the tab case.
+        quoting = csv.QUOTE_NONE if delim == "\t" else csv.QUOTE_MINIMAL
+        with z.open(core) as f:
             rd = csv.reader(
-                io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
-                delimiter="\t", quoting=csv.QUOTE_NONE)
+                io.TextIOWrapper(f, encoding="utf-8-sig", errors="replace"),
+                delimiter=delim, quoting=quoting)
             ix = _columns(next(rd))
             for col in ("ID", "parentID", "status", "rank", "scientificName"):
                 if col not in ix:
-                    raise KeyError(f"{CORE} has no column col:{col} "
+                    raise KeyError(f"{core} has no column col:{col} "
                                    f"(found: {sorted(ix)[:12]})")
             i_id, i_par = ix["ID"], ix["parentID"]
             i_st, i_rank, i_nm = ix["status"], ix["rank"], ix["scientificName"]
@@ -284,10 +367,25 @@ def load_core_csv(path, accepted=ACCEPTED, want_authorship=True):
                         if m.lower().split("/")[-1].startswith(base + ".")), None)
             if nxt is None:
                 return None, None
-            delim = "," if nxt.lower().endswith(".csv") else "\t"
-            f = z.open(nxt)
-            rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8",
-                                             errors="replace"), delimiter=delim)
+            # The extension lies on some exports -- see find_delimiter's
+            # docstring. Delimiter and BOM are sniffed from a short-lived
+            # peek rather than a full read: the largest name/taxon table
+            # seen on the shelf (GLI, 55434) is ~75MB, and reading that much
+            # into memory just to find a delimiter is needless. Opening the
+            # member twice costs one extra decompression of its first
+            # line, not its whole contents.
+            # utf-8-sig rather than plain utf-8, same reasoning as
+            # load_core()'s own BOM comment above: a UTF-8 byte-order-mark
+            # on the header otherwise decodes as an invisible extra
+            # character glued onto the first column name, so every lookup
+            # for that column fails. utf-8-sig strips a leading BOM if
+            # present and is identical to utf-8 otherwise.
+            with z.open(nxt) as probe:
+                first_line = probe.readline().decode("utf-8-sig", errors="replace")
+            delim = find_delimiter(first_line)
+            rd = csv.reader(
+                io.TextIOWrapper(z.open(nxt), encoding="utf-8-sig", errors="replace"),
+                delimiter=delim)
             hdr = next(rd)
             ix = {(h[4:] if h.startswith(("col:", "dwc:")) else h): i
                   for i, h in enumerate(hdr)}
