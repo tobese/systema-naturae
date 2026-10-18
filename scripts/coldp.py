@@ -74,15 +74,18 @@ def find_core_table(names):
 
 
 def find_delimiter(first_line):
-    """Tab or comma, whichever splits `first_line` into more fields.
+    """Tab, comma, or pipe -- whichever splits `first_line` into the most
+    fields.
 
     A file's extension is not proof of its delimiter: ChecklistBank
     dataset 1051 ships "Name.csv"/"Taxon.csv" that are actually
     tab-delimited, so trusting ".csv" split every row on the wrong
     character and the header lookup raised KeyError 'id' downstream --
-    a parse failure blamed on the wrong layer entirely.
+    a parse failure blamed on the wrong layer entirely. Pipe is WCVP's
+    (2232) own delimiter, declared in its meta.xml as fieldsTerminatedBy="|"
+    -- real DwC-A archives are not limited to tab/comma, so neither is this.
     """
-    return "\t" if first_line.count("\t") > first_line.count(",") else ","
+    return max(("\t", ",", "|"), key=first_line.count)
 # ColDP rank values are not uniform across datasets. Catalogue of Life's own
 # exports use the English ranks; other ChecklistBank sources use the
 # ziological/Latin ones, which is what Wikispecies (314570) does:

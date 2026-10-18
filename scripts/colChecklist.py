@@ -196,6 +196,55 @@ def _find(c, *stems):
     return None
 
 
+def _find_taxon_table(c):
+    """The core taxon table, by filename stem first, by meta.xml's own
+    rowType declaration otherwise.
+
+    WCVP (2232, 507MB) and MSW3 (2019) are both well-formed, standard DwC-A
+    archives -- meta.xml fully and correctly describes every column -- but
+    each names its single core table after the dataset itself
+    ("wcvp_taxon.csv", "msw3-dwc.txt"), which `_find()`'s stem match can't
+    see past: neither basename-minus-extension equals "taxon" or "taxa", so
+    the table was never located at all and `_rows()`/`_meta_positions()`
+    never got a chance to run on it, which is why "this is a header-less
+    DwC-A, read it positionally" looked like a bigger problem than it was --
+    the positional reader already existed and worked, it just never got
+    called. A `<core>` block's own `rowType` ending in ".../Taxon" is
+    unambiguous regardless of what the exporter chose to call the file, so
+    it's checked second, only when the plain stem match already failed
+    (every other archive keeps using that proven path unchanged).
+    """
+    found = _find(c, "taxon", "taxa")
+    if found:
+        return found
+    meta_name = next((n for n in c.names() if n.rsplit("/", 1)[-1] == "meta.xml"), None)
+    if not meta_name:
+        return None
+    try:
+        root = ET.fromstring(c.read(meta_name))
+    except ET.ParseError:
+        return None
+    for block in root:
+        tag = block.tag.rsplit("}", 1)[-1]
+        if tag != "core":
+            continue
+        if not (block.get("rowType") or "").endswith("/Taxon"):
+            continue
+        loc = block.find(".//{*}location")
+        if loc is None or not (loc.text or "").strip():
+            continue
+        # meta.xml's <location> is a bare filename (MSW3: "msw3-dwc.txt"),
+        # but the real archive member carries a directory prefix the
+        # exporter put every file under (MSW3: "msw3/msw3-dwc.txt") --
+        # the same mismatch meta.xml's own lookup above already has to
+        # resolve for meta.xml itself. Resolved against the real member
+        # list the same way, rather than opening the bare name and
+        # getting a KeyError from the zip/tar layer.
+        want = loc.text.strip().lower()
+        return next((n for n in c.names() if n.rsplit("/", 1)[-1].lower() == want), None)
+    return None
+
+
 def _index(header, require):
     key = {}
     for i, h in enumerate(header):
@@ -236,15 +285,35 @@ TERM_TO_FIELD = {
 
 
 def _meta_positions(z, table):
-    """Field positions for `table` from meta.xml, when the file has no header row.
+    """Field positions for `table` from meta.xml, when meta.xml declares them.
 
-    WCVP (2000) declares `ignoreHeaderLines="0"` in meta.xml: taxon.txt starts
-    with data, not a header, so the header-text matching `_index` normally
-    does finds nothing and raises on a row it mistook for column names. A DwCA
-    with ignoreHeaderLines="0" has no header to match -- its field order is
-    only ever recoverable from meta.xml's own <field index="N" term="..."/>
-    declarations, so that is the one shape this reads positionally; every
-    other archive keeps using the proven header-text path unchanged.
+    Two different reasons an archive needs this instead of header-text
+    matching, both via the same mechanism:
+
+    - No header row at all. A different WCVP release (2000) declares
+      `ignoreHeaderLines="0"`: taxon.txt starts with data, not a header, so
+      `_index`'s header-text matching finds nothing and raises on a row it
+      mistook for column names. meta.xml's own `<field index="N"
+      term="..."/>` declarations are the only source of the column mapping
+      left.
+    - A header row that's there but wrong. The 2232 WCVP release has a real
+      header line (`ignoreHeaderLines="1"`) whose own text misspells the
+      scientific-name column "scientfiicname" -- a typo in the archive
+      itself, not a column `_index` failed to recognize. Every row still
+      parsed (id, rank, classification all matched fine), so this didn't
+      raise or come back empty; it silently returned a name-less taxon for
+      100% of 1.4M rows, the kind of wrong answer that reads as success.
+      meta.xml's own field declarations name each column by position, so
+      they're correct regardless of what the header text says.
+
+    `_rows()` therefore prefers this over header-text matching whenever
+    meta.xml declares a mapping for the table at all, not only when
+    `ignoreHeaderLines` is 0 -- the return value's first element tells the
+    caller how many physical lines are still a header to skip, for the
+    archives (like 2232) that have one on disk even though it isn't the
+    column-name source. Returns None when meta.xml has no block naming
+    this table, so every archive without a usable declaration keeps using
+    the header-text path exactly as before.
     """
     names = z.names()
     meta_name = next((n for n in names if n.rsplit("/", 1)[-1] == "meta.xml"), None)
@@ -319,14 +388,18 @@ def _rows(z, table, kind):
     # (1051). Trusting ".csv" read the whole header as one cell, `_index`
     # found no column named "id", and the failure read as "this reader
     # doesn't understand this table" rather than "the extension lied".
-    # Sniffed from the first physical line instead: whichever delimiter
-    # splits it into more fields wins. Opened as a short-lived probe rather
-    # than sniffing off the real stream, so a large file (NCBI Taxonomy,
-    # 2169, is 417MB) is decompressed only as far as its first line twice,
-    # not read fully into memory once.
+    # Sniffed from the first physical line instead via coldp.find_delimiter
+    # -- shared rather than a second copy of "count tab vs comma vs pipe",
+    # so a dataset with a delimiter neither copy expected (WCVP, 2232,
+    # uses pipe, declared in its own meta.xml) needs teaching only once.
+    # Opened as a short-lived probe rather than sniffing off the real
+    # stream, so a large file (NCBI Taxonomy, 2169, is 417MB) is
+    # decompressed only as far as its first line twice, not read fully
+    # into memory once.
+    import coldp as _C
     with probe as f:
         first_line = f.readline().decode("utf-8-sig", "replace")
-    delimiter = "\t" if first_line.count("\t") > first_line.count(",") else ","
+    delimiter = _C.find_delimiter(first_line)
     with z.open(table) as f:
         # Tab-delimited sources here carry no CSV-style quoting convention of
         # their own (NCBI Taxonomy, 2169, has a stray literal `"` in a
@@ -346,13 +419,32 @@ def _rows(z, table, kind):
         rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8-sig", errors="replace"),
                         delimiter=delimiter, quoting=quoting)
         meta = _meta_positions(z, table)
-        if meta and meta[0] == 0:
-            # No header line to read or skip -- meta.xml's own field positions
-            # are the only source of the column mapping (see _meta_positions).
+        if meta:
+            # meta.xml's own field positions win whenever meta.xml declares
+            # them for this table, whether or not the file also carries a
+            # header line to skip (ignoreHeaderLines count, read either
+            # way) -- not only when there's no header line at all. WCVP
+            # (2232) has a real header row (ignoreHeaderLines="1") whose
+            # own text spells the scientific-name column "scientfiicname",
+            # a typo in the archive itself that no header-text matching
+            # could ever recognize; meta.xml's <field term="...
+            # scientificName"/> declaration is unaffected by it, because
+            # it names the column by position, not by re-reading that same
+            # unreliable text. Trusting the header text here produced
+            # 1.4M taxa that all parsed as real rows with a real id, rank,
+            # and classification -- so every structural check downstream
+            # passed -- but a silently empty name on 100% of them, the
+            # kind of wrong answer that looks like success rather than
+            # failure.
             ix = meta[1]
             missing = [k for k in REQUIRED[kind] if k not in ix]
             if missing:
                 raise KeyError(f"no column for {missing} in {table}'s meta.xml")
+            for _ in range(meta[0]):
+                try:
+                    next(rd)
+                except StopIteration:
+                    return None
         else:
             try:
                 header = next(rd)
@@ -624,7 +716,7 @@ def load(path):
                 if r.get("name_id"):
                     synonym_ids.add(r["name_id"])
         taxa = []
-        t = _find(c, "taxon", "taxa")
+        t = _find_taxon_table(c)
         if t:
             for r in _rows(c, t, "taxon"):
                     n = names.get(r.get("name_id"), {}) if r.get("name_id") else {}
