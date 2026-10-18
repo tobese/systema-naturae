@@ -135,18 +135,98 @@ def species_count_cached(fam, cache, doc=None):
     return count, declared
 
 
+_NEWEST = None
+
+
+def _newest_family_file():
+    """`(mtime_ns, path)` of the most recently written family data file.
+
+    Memoised: five checks walk the same ~19,000 paths and a stat() each time is
+    not worth repeating.
+    """
+    global _NEWEST
+    if _NEWEST is None:
+        newest, where = 0, None
+        for kingdom in KINGDOM_DOCS:
+            for fam in family_files(kingdom):
+                try:
+                    m = os.stat(fam.path).st_mtime_ns
+                except OSError:
+                    continue
+                if m > newest:
+                    newest, where = m, fam.path
+        _NEWEST = (newest, where)
+    return _NEWEST
+
+
+def _age(seconds):
+    """A duration short enough to read in a failure line."""
+    m = round(seconds / 60)
+    if m < 60:
+        return f"{m} min"
+    h = round(m / 60)
+    return f"{h} h" if h < 48 else f"{round(h / 24)} d"
+
+
+def _parquet_unusable():
+    """Why `species.parquet` must not be read, or None when it may be.
+
+    The parquet replaced ~14,000 recursive tree walks with one columnar load,
+    which is only a faithful stand-in while it still describes the tree. It is a
+    snapshot, so a family file written after it was built is simply not in it,
+    and nothing downstream can tell the difference.
+    """
+    if not os.path.exists(PARQUET_PATH):
+        return "portal/data/species.parquet is missing"
+    newest, where = _newest_family_file()
+    pq = os.stat(PARQUET_PATH).st_mtime_ns
+    if newest > pq:
+        rel = os.path.relpath(where, ROOT)
+        return (f"portal/data/species.parquet predates {rel} by "
+                f"{_age((newest - pq) / 1e9)}")
+    return None
+
+
+def check_parquet_freshness():
+    """Fail when the parquet no longer describes the tree.
+
+    This is not a formality. `check_file_counts` counts a *changed* family's
+    species out of the parquet rather than by walking the file, then pins that
+    count to the file's new mtime in the warm cache -- so a parquet older than
+    an edit makes the tree compare its declared `speciesCount` against a count
+    taken before the edit, and then remember that answer until the next edit. A
+    gate that certifies numbers it never read is worse than the hang the parquet
+    was added to fix.
+
+    The checks below fall back to reading the files, so they stay correct while
+    this one fails: the report is "your derived file is out of date", not a set
+    of invented failures.
+    """
+    why = _parquet_unusable()
+    if why:
+        fail("species.parquet still describes the tree",
+             f"{why} -- run: make species-parquet")
+        return
+    pq = os.stat(PARQUET_PATH).st_mtime_ns
+    newest, where = _newest_family_file()
+    ok("species.parquet still describes the tree",
+       f"built {_age((pq - newest) / 1e9)} after the newest family file, "
+       f"{os.path.relpath(where, ROOT)}")
+
+
 def _parquet_species_counts() -> dict:
     """Count SPECIES rows per (kingdom, phylum, cls, ord, family) from parquet.
 
     One columnar load replaces ~14,000 recursive tree walks. Falls back to an
-    empty dict if duckdb or the parquet is unavailable, in which case the count
-    cache takes over.
+    empty dict if duckdb or the parquet is unavailable or out of date, in which
+    case the count cache takes over. Staleness matters more than availability:
+    an absent parquet costs time, a stale one costs correctness.
     """
+    if _parquet_unusable():
+        return {}
     try:
         import duckdb
     except ImportError:
-        return {}
-    if not os.path.exists(PARQUET_PATH):
         return {}
     try:
         con = duckdb.connect()
@@ -692,9 +772,10 @@ def check_missing_lineage(limit=0):
     """
     missing = collections.Counter()
     examples = []
+    read_parquet = False
     try:
         import duckdb
-        if os.path.exists(PARQUET_PATH):
+        if not _parquet_unusable():
             con = duckdb.connect()
             rows = con.execute("""
                 SELECT kingdom, count(*) AS n
@@ -704,6 +785,7 @@ def check_missing_lineage(limit=0):
                 GROUP BY kingdom
             """, [PARQUET_PATH]).fetchall()
             con.close()
+            read_parquet = True
             for kingdom, n in rows:
                 missing[kingdom] = n
     except Exception:
@@ -713,8 +795,10 @@ def check_missing_lineage(limit=0):
              f"{sum(missing.values()):,} without one "
              f"({', '.join(f'{k} {v:,}' for k, v in missing.most_common())})")
         return
-    # Slow path only if duckdb/parquet unavailable.
-    if not os.path.exists(PARQUET_PATH):
+    # Slow path whenever the parquet did not answer -- missing, stale, or
+    # duckdb absent. `missing` being empty is not evidence the check passed; it
+    # is only evidence nothing was read.
+    if not read_parquet:
         for kingdom in KINGDOM_DOCS:
             n = 0
             for fam in family_files(kingdom):
@@ -802,6 +886,7 @@ def main() -> int:
     args = ap.parse_args()
     os.chdir(ROOT)
     print("verifying the tree's data invariants")
+    check_parquet_freshness()
     check_species_counts()
     check_file_counts()
     check_duplicate_species()

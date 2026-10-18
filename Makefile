@@ -25,8 +25,16 @@ check:
 # truth. The only thing here that needs duckdb, which is not a project
 # dependency -- PARQUET_PY overrides the interpreter if it lives in a venv.
 #
-#   make species-parquet PARQUET_PY=.venv-parquet/bin/python
-PARQUET_PY ?= python3
+# Probed, not defaulted: duckdb is never in the system python here, it lives in
+# .venv-parquet, so plain `make species-parquet` used to fail on a machine that
+# had it. verifyTree now refuses to read a parquet older than the newest family
+# file, so a rebuild command that does not work by itself means the gate fails
+# and stays failing. Still overridable.
+#
+#   make species-parquet PARQUET_PY=/path/to/python
+PARQUET_PY ?= $(shell test -x .venv-parquet/bin/python && \
+                 .venv-parquet/bin/python -c 'import duckdb' 2>/dev/null && \
+                 echo .venv-parquet/bin/python || echo python3)
 species-parquet:
 	@$(PARQUET_PY) scripts/buildSpeciesParquet.py $(ARGS)
 
