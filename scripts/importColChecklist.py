@@ -112,6 +112,16 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("archive")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--kingdom", default="",
+                     help="override kingdom inference entirely for sources "
+                          "that carry no kingdom in their own rank chain and "
+                          "whose family names don't resolve uniquely (e.g. "
+                          "LCVP -- an all-plant database with no kingdom "
+                          "field at all -- used to default silently to "
+                          "animalia for exactly this reason: a hardcoded "
+                          "constant written for a different, narrower bug, "
+                          "reused here with no actual justification). "
+                          "Pass --kingdom plantae when you know the source.")
     args = ap.parse_args()
 
     meta = K.metadata(args.archive)
@@ -147,9 +157,25 @@ def main() -> int:
     KINDS = {}
     for k in ("animalia", "plantae", "fungi", "chromista", "protozoa", "archaea"):
         KINDS[k] = our_families(k, quiet=True)
-    DEFAULT_K = (src_kingdom or FALLBACK_KINGDOM).lower()
-    if DEFAULT_K not in KINDS:
-        DEFAULT_K = "animalia"
+    # DEFAULT_K used to fall back to the module-level FALLBACK_KINGDOM
+    # ("animalia") whenever neither the source nor a taxon's own chain said
+    # otherwise -- a constant written for a different, narrower bug
+    # (taxonomy_input()'s need for *some* file to open) reused here with no
+    # actual justification. On LCVP (an all-plant database with no kingdom
+    # field anywhere in its chain) that silently routed 4,057 taxa under
+    # plant family names -- Myrsinaceae, Ruscaceae -- through "animalia",
+    # mislabelling an honestly-unresolvable case as a specific wrong one.
+    # It happened to cost nothing there (we hold neither family under any
+    # kingdom, so the refusal was correct either way), but the mechanism
+    # would misplace a real match the moment a family name is ambiguous
+    # across kingdoms rather than absent from all of them. Empty, not a
+    # hardcoded kingdom, when nothing actually resolves it -- --kingdom is
+    # how an operator who knows the source (LCVP is plants) fixes this
+    # properly instead of hoping the guess is harmless.
+    DEFAULT_K = (args.kingdom or src_kingdom or "").lower()
+    if DEFAULT_K and DEFAULT_K not in KINDS:
+        sys.exit(f"FATAL: --kingdom {DEFAULT_K!r} is not one of "
+                  f"{', '.join(sorted(KINDS))}")
 
     # per kingdom: taxonomy doc, family->[slug, node], and every species id on
     # disk, which is what the held-check arbitrates against
@@ -192,7 +218,7 @@ def main() -> int:
     # tree family we matched by name -- the Actinocyclidae/Hemidiscaceae kind
     # of cross-kingdom homonym, visible here before it ever hits disk.
     fam_source_ids = collections.defaultdict(set)
-    held = refused = nonb = 0
+    held = refused = nonb = unresolved = 0
     no_family = collections.Counter()
     missed = collections.Counter()
     routed = collections.Counter()
@@ -239,9 +265,17 @@ def main() -> int:
             if len(owners) == 1:
                 k = next(iter(owners))
                 routed_by_family += 1
-            else:
+            elif DEFAULT_K:
                 k = DEFAULT_K
                 routed_unknown += 1
+            else:
+                # Genuinely unresolvable: no --kingdom given, the source
+                # carries none, and the family name is unknown to us or
+                # ambiguous across kingdoms. Counted on its own rather than
+                # attributed to a kingdom nothing actually said -- see
+                # DEFAULT_K's comment above.
+                unresolved += 1
+                continue
         else:
             routed_by_kingdom += 1
         routed[k] += 1
@@ -265,7 +299,13 @@ def main() -> int:
     print("  routed per taxon: " + ", ".join(f"{k} {v:,}" for k, v in routed.most_common()))
     print(f"      kingdom from the taxon: {routed_by_kingdom:,}"
           f"   from the family name: {routed_by_family:,}"
-          f"   fell back to {DEFAULT_K}: {routed_unknown:,}")
+          f"   fell back to {DEFAULT_K or '(none given)'}: {routed_unknown:,}")
+    if unresolved:
+        print(f"  UNRESOLVED KINGDOM: {unresolved:,} -- no --kingdom given, "
+              f"the source carries none, and the family name is unknown or "
+              f"ambiguous across kingdoms. Not attributed to one and not "
+              f"refused under a specific kingdom either; re-run with "
+              f"--kingdom <name> if you know what this source is.")
     # `held` is the already-on-disk count, not a parse failure. Labelling it
     # "unparseable" made WFO's dry run read "staged 226,683 (+148,381
     # unparseable)", which looks like 40% of the dataset failing to parse. It is
