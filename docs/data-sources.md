@@ -27,6 +27,17 @@ recursively, so the file shows up in `manifest.json` the next time the
 manifest is rebuilt. Like everything else under `work/`, it's overwritten
 on each run, not kept as a history of every past one.
 
+Passing metadata to `record_transformed()` writes a sidecar beside it
+(`transformed.jsonl` → `transformed.meta.json`): the origin's own
+identifiers (`source`, `sourceDatasetId` — e.g. a ChecklistBank dataset
+key or GBIF `datasetKey`, distinct from our own `slug` — and `sourceUrl`),
+where the original download lives (`archive: {path, sha256}`, omitted for
+a live-REST source with no archive file), `fetchedAt` kept separate from
+the auto-set `transformedAt` (a transform can be re-run against an
+already-downloaded archive days later), and a fresh `runId` identifying
+that batch — not any one species, which gets its own uuid from
+`importwrite` at merge time, not here.
+
 This is the machine-checkable companion to
 [`data-sources-attribution.md`](data-sources-attribution.md), which carries the
 prose: required citation strings per source, the share-alike obligations, and the

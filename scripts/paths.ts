@@ -11,6 +11,7 @@
 
 import { existsSync, mkdirSync, writeFileSync } from "fs";
 import { resolve } from "path";
+import { randomUUID } from "crypto";
 
 export const SOURCES_ROOT = "/Volumes/MacieExternal/sources";
 const MANIFEST = resolve(SOURCES_ROOT, "manifest.json");
@@ -70,16 +71,69 @@ export function workDir(slug: string): string {
 }
 
 /**
+ * Metadata for one transform run, written as a sidecar next to its output
+ * (`transformed.jsonl` -> `transformed.meta.json`). `source`/
+ * `sourceDatasetId`/`sourceUrl` are the ORIGIN's own identifiers, not
+ * ours -- `sourceDatasetId` is e.g. a ChecklistBank dataset key or a GBIF
+ * `datasetKey`, distinct from `slug`, which is our naming for it.
+ * `archivePath`/`archiveSha256` point at the original download this batch
+ * came from, when there is one (omit both for a live-REST source).
+ * `fetchedAt` is kept separate from the sidecar's own auto-set
+ * `transformedAt` on purpose: a transform can be re-run against an
+ * already-downloaded archive days later, and conflating the two
+ * timestamps would lose that.
+ */
+export interface TransformMeta {
+  source?: string;
+  sourceDatasetId?: string;
+  sourceUrl?: string;
+  archivePath?: string;
+  archiveSha256?: string;
+  fetchedAt?: string;
+  transformer?: string;
+}
+
+function metaPathFor(dataPath: string): string {
+  return dataPath.endsWith(".jsonl") ? dataPath.slice(0, -".jsonl".length) + ".meta.json" : dataPath + ".meta.json";
+}
+
+/**
  * Write a transformer's output as JSONL into `slug`'s work dir, return the
  * path. See sources.py's `record_transformed` for the full rationale (same
  * function, mirrored for the TypeScript side) -- overwritten on each run,
  * not an audit trail, and picked up automatically next time
  * sourcesManifest.py rescans work/.
+ *
+ * Passing `meta` also writes the sidecar described by `TransformMeta`,
+ * plus `runId` (a fresh UUID -- identifies THIS batch, not any one
+ * species; a species gets its own uuid from importwrite at merge time,
+ * not here), `transformedAt`, and `recordCount`, always set here rather
+ * than by the caller. Omit `meta` entirely for no sidecar.
  */
-export function recordTransformed(slug: string, name: string, records: unknown[]): string {
+export function recordTransformed(slug: string, name: string, records: unknown[], meta?: TransformMeta): string {
   const path = resolve(workDir(slug), name);
   const body = records.map((r) => JSON.stringify(r)).join("\n");
   writeFileSync(path, records.length ? body + "\n" : "", "utf-8");
+
+  if (meta && Object.values(meta).some((v) => v)) {
+    const doc: Record<string, unknown> = {};
+    if (meta.source) doc.source = meta.source;
+    if (meta.sourceDatasetId) doc.sourceDatasetId = meta.sourceDatasetId;
+    if (meta.sourceUrl) doc.sourceUrl = meta.sourceUrl;
+    if (meta.archivePath || meta.archiveSha256) {
+      doc.archive = {
+        ...(meta.archivePath ? { path: meta.archivePath } : {}),
+        ...(meta.archiveSha256 ? { sha256: meta.archiveSha256 } : {}),
+      };
+    }
+    if (meta.fetchedAt) doc.fetchedAt = meta.fetchedAt;
+    if (meta.transformer) doc.transformer = meta.transformer;
+    doc.runId = randomUUID();
+    doc.transformedAt = new Date().toISOString();
+    doc.recordCount = records.length;
+    writeFileSync(metaPathFor(path), JSON.stringify(doc, null, 2) + "\n", "utf-8");
+  }
+
   return path;
 }
 
