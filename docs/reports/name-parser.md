@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 3,904,483 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 3,939,066 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,17 +8,17 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 3,841,980 | 98.40% |
-| `INFORMAL` | 47,303 | 1.21% |
-| `OTU` | 7,659 | 0.20% |
-| `PLACEHOLDER` | 3,086 | 0.08% |
-| `NO_NAME` | 1,690 | 0.04% |
-| `DOUBTFUL` | 1,518 | 0.04% |
-| `HYBRID` | 1,003 | 0.03% |
-| `CULTIVAR` | 109 | 0.00% |
-| `BLACKLISTED` | 76 | 0.00% |
+| `SCIENTIFIC` | 3,878,132 | 98.45% |
+| `INFORMAL` | 44,740 | 1.14% |
+| `OTU` | 7,731 | 0.20% |
+| `PLACEHOLDER` | 3,973 | 0.10% |
+| `NO_NAME` | 2,028 | 0.05% |
+| `DOUBTFUL` | 1,236 | 0.03% |
+| `HYBRID` | 995 | 0.03% |
+| `CULTIVAR` | 91 | 0.00% |
+| `BLACKLISTED` | 80 | 0.00% |
 | `CANDIDATUS` | 44 | 0.00% |
-| `VIRUS` | 15 | 0.00% |
+| `VIRUS` | 16 | 0.00% |
 
 ## rankMarker vs our rank
 
@@ -28,100 +28,100 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 3,591,368 | 2,756 | 19,244 |
-| GENUS | 0 | 1,254 | 273,803 |
+| SPECIES | 3,580,461 | 2,607 | 19,122 |
+| GENUS | 0 | 1,321 | 318,905 |
 | SUBSPECIES | 0 | 115 | 0 |
-| FAMILY | 2,520 | 89 | 11,619 |
+| FAMILY | 2,520 | 92 | 12,208 |
 
 ## Examples by type
 
 **`INFORMAL`**
 
-- `Limnodriloidinae sp.`
-- `Euphrosinopsis sp.`
-- `Protobonellia sp.`
-- `Bonelliidae sp.`
-- `Histriobdella sp.`
-- `Lumbrinerides sp.`
-
-**`NO_NAME`**
-
-- `cf. Polynoe`
-- `cf. Myrmecium`
-- `aff. Novafrontina`
-- `cf. Saitis`
-- `cf. Paramicromerys`
-- `cf. Lamania`
-
-**`DOUBTFUL`**
-
-- `Lamispina horstii`
-- `[Cecidomyia] pennicornis`
-- `Culicidae P_278_FSTHT`
-- `[Microtendipes]`
-- `[Limnobia] gracilis`
-- `[Limnobia] platyptera`
+- `Microthyriaceae sp.`
+- `Paramirandina sp.`
+- `Pseudocorniculariella sp.`
+- `Scolecopeltidium sp.`
+- `Tumidispora sp.`
+- `Asparagobius sp.`
 
 **`PLACEHOLDER`**
 
-- `slender`
-- `IncertaeSedis dubius`
-- `Onychiurini IncertaeSedis`
-- `IncertaeSedis`
-- `Anoplotermes group`
-- `nr. Cavitermes`
-
-**`BLACKLISTED`**
-
-- `Anasillomos unidentified`
-- `There latreillei`
-- `There nessus`
-- `Pungitius type sp.Omono`
-- `Chlorostilbon illeg`
-- `Tous ayamaruensis`
-
-**`CULTIVAR`**
-
-- `Andrena 'viciae'`
-- `Aleiodes 'gland'`
-- `Formica 'micro'`
-- `Cichla cv.`
-- `Parananochromis cv.`
-- `Telmatochromis cv.`
+- `Mesovelia indeterminate`
+- `uncultured`
+- `uncultured Amphiporthe`
+- `uncultured Cryptodiaporthe`
+- `uncultured Cytospora`
+- `uncultured Endothiella`
 
 **`OTU`**
 
-- `Eufriesea sp. BOLD:AEF4645`
-- `Euglossa sp. BOLD:AAD1076`
-- `Euglossa sp. BOLD:AEM3190`
-- `Nematalosa sp. BOLD:ACB7545`
-- `Oligosarcus sp. BOLD:ABZ2120`
-- `Salmo cf. cenerinus BOLD:AAB3872`
+- `UBA12382`
+- `UBA12382`
+- `UBA12382 sp002503845`
+- `UBA12382 sp009889625`
+- `UBA12382 sp009889685`
+- `CAZAFX01`
+
+**`NO_NAME`**
+
+- `ANME1a`
+- `ANME1a sp003194425`
+- `Methanoculleus_A frigidifontis`
+- `Methanoculleus_A taiwanensis`
+- `cf.`
+- `cf. Ototyphlonemertes`
+
+**`DOUBTFUL`**
+
+- `Methanoculleus chikugoensis_A`
+- `Methanoculleus marisnigri_B`
+- `[Dipteracanthus]`
+- `[Dipteracanthus] australasicus`
+- `[Acontia]`
+- `[Acontia] semiatra`
 
 **`HYBRID`**
 
-- `Bufo americanus x hemiophrys`
-- `Pundamilia sp. 'nyererei-like' x Neochromis omnicaeruleus`
-- `Diplostomidae gen. sp. x mag-2019`
-- `Bryum pallescens x pohlia crudoides var revolvens`
-- `Amblystegium badium x latifolium`
-- `Amblystegium intermedium x vernicosum`
+- `Aphelandra gracilis leonard x sinclairiana`
+- `Populus alba x tremula`
+- `Populus deltoides var. monilifera × Populus tremuloides`
+- `Populus laurifolia x nigra var. italica`
+- `Populus maximowiczii x trichocarpa`
+- `Salix aegyptiaca × caprea subsp. caprea`
+
+**`BLACKLISTED`**
+
+- `Avicennia catalog`
+- `Xylosma new`
+- `Stipa ladakhensis M. Nobis, Klichowska, A. Nowak & P. D. Gudkova, nothosp. nov.`
+- `Miconia nov`
+- `unidentified`
+- `unidentified archaeon`
+
+**`CULTIVAR`**
+
+- `Salix 'Brekkavier'`
+- `Andrena 'viciae'`
+- `Pomacentrus sp.'minami-iso-suzumedai'`
+- `Gypsophila ´Rosenschleier´`
+- `Amanita sp.'chiricahuana'`
+- `Echinopsis ×wilkensii  hort.`
 
 **`CANDIDATUS`**
 
-- `Candidatus Methanocorpusculum`
-- `Candidatus Methanocrinis`
-- `Candidatus Nitrosomarinus`
-- `Candidatus Nitrosopolaris`
-- `Candidatus Zestomicrobium`
-- `Candidatus Nanobsidianus`
+- `Candidatus Methanoculleus`
+- `Candidatus Calypsonella`
+- `Candidatus Hestiella`
+- `Candidatus Tiamatella`
+- `Candidatus Acidianus`
+- `Candidatus Aramenus`
 
 **`VIRUS`**
 
-- `Turkozelotes attavirus`
-- `Euragallia prion`
-- `Exochus virus`
-- `Potamophylax coronavirus`
-- `Neoaemula vector`
+- `Bolivina prion`
 - `"Neoaemula vector"`
+- `Neoaemula vector`
+- `Cryptops vector`
+- `Turkozelotes attavirus`
+- `Tidabius vector`
 

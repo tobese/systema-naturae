@@ -21,7 +21,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from tree import iter_family_files  # noqa: E402
+from tree import assert_sidecar_keys_unique, iter_family_files  # noqa: E402
 import nameIndexCache  # noqa: E402
 
 MONOLITH = os.path.join("portal", "data", "name-parse-index.jsonl")
@@ -84,12 +84,16 @@ def main() -> int:
 
     manifest = nameIndexCache.load_manifest() if args.apply else {}
     families = list(iter_family_files())
+    # Keyed on `fam.sidecar_key`, not `fam.slug`: 103 families are called
+    # `incertae-sedis` and two `personidae`, so a slug-keyed split writes all of
+    # them to one file and serves the last writer's records to the rest.
+    assert_sidecar_keys_unique(families)
     total_written = 0
     total_rows = 0
     missing = 0
 
     for fam in families:
-        slug = fam.slug
+        key = fam.sidecar_key
         pairs = family_names(fam.path)
         records = []
         for name, rank in sorted(pairs):
@@ -106,7 +110,7 @@ def main() -> int:
             if args.apply:
                 st = os.stat(fam.path)
                 nameIndexCache.save_family_index(
-                    slug, records, st.st_mtime_ns, st.st_size, manifest)
+                    key, records, st.st_mtime_ns, st.st_size, manifest)
 
     print(f"families with sidecars: {total_written:,} / {len(families):,}")
     print(f"rows written: {total_rows:,}")

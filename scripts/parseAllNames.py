@@ -41,7 +41,7 @@ and asserts alignment per batch rather than trusting it.
 
 On --split
 ----------
-Writes per-family sidecars under `portal/data/name-parse-index/<slug>.jsonl`
+Writes per-family sidecars under `portal/data/name-parse-index/<key>.jsonl`
 plus `portal/data/name-parse-index-manifest.json` instead of (or in addition to)
 the monolith `portal/data/name-parse-index.jsonl`. Sidecars are invalidated by
 the family file's mtime+size, so only changed families are rewritten on a
@@ -72,7 +72,7 @@ import urllib.request
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from tree import family_data_files, iter_nodes  # noqa: E402
+from tree import family_data_files, iter_nodes, sidecar_key_for  # noqa: E402
 import nameIndexCache  # noqa: E402
 
 PARSER_URL = "https://api.gbif.org/v1/parser/name"
@@ -100,7 +100,7 @@ MARKERS = {
 
 
 def collect(root: str) -> dict[tuple[str, str], set[str]]:
-    """(name, ourRank) -> set of family slugs it appears in.
+    """(name, ourRank) -> set of sidecar keys of the families it appears in.
 
     Walks `tree.family_data_files()` rather than globbing `src/data`, which is
     what produced the index's worst-known defect: the bare walk also picked up
@@ -108,9 +108,13 @@ def collect(root: str) -> dict[tuple[str, str], set[str]]:
     parser to parse it. The list is the canonical one, so a rebuild cannot drift
     from what the other scripts see.
 
-    Returns a mapping from (name, rank) to the set of family slugs that hold it,
-    because a homonym in several families needs its parse record in each
-    family's sidecar when --split is used.
+    Returns a mapping from (name, rank) to the set of sidecar keys of the
+    families that hold it, because a homonym in several families needs its parse
+    record in each family's sidecar when --split is used.
+
+    The key is `tree.sidecar_key_for(path)`, not `FamilyFile.slug`. Slugs are
+    not unique -- 103 families are called `incertae-sedis` -- so keying on one
+    would write those 103 families over a single sidecar.
     """
     out: dict[tuple[str, str], set[str]] = {}
     for path in family_data_files():
@@ -123,12 +127,12 @@ def collect(root: str) -> dict[tuple[str, str], set[str]]:
             continue
         with open(path, encoding="utf-8") as fh:
             doc = json.load(fh)
-        slug = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(path))))
+        key = sidecar_key_for(path)
         for node in iter_nodes(doc):
             name = (node.get("name") or "").strip()
             rank = node.get("rank") or ""
             if name and rank:
-                out.setdefault((name, rank), set()).add(slug)
+                out.setdefault((name, rank), set()).add(key)
     return out
 
 
@@ -194,8 +198,8 @@ def main() -> int:
     existing: list[dict] = []
     if not args.no_cache:
         if args.split:
-            for slug in nameIndexCache.all_sidecar_slugs():
-                for rec in nameIndexCache.load_family_index(slug):
+            for key in nameIndexCache.all_sidecar_keys():
+                for rec in nameIndexCache.load_family_index(key):
                     n = rec.get("n")
                     r = rec.get("ourRank")
                     if n and r:
@@ -326,21 +330,21 @@ def main() -> int:
         all_results.update(parsed_results)
 
         for fam in families:
-            slug = fam.slug
+            key = fam.sidecar_key
             st = os.stat(fam.path)
-            if nameIndexCache.family_index_fresh(slug, st.st_mtime_ns, st.st_size):
+            if nameIndexCache.family_index_fresh(key, st.st_mtime_ns, st.st_size):
                 continue
             pairs_in_fam = sorted(pair_map.keys())  # all pairs; filter below
-            # Only pairs whose slug set contains this family
+            # Only pairs whose key set contains this family
             fam_records = []
-            for (name, rank), slugs in pair_map.items():
-                if slug in slugs:
+            for (name, rank), keys in pair_map.items():
+                if key in keys:
                     rec = all_results.get((name, rank))
                     if rec:
                         fam_records.append(rec)
             if fam_records:
                 nameIndexCache.save_family_index(
-                    slug, fam_records, st.st_mtime_ns, st.st_size, manifest)
+                    key, fam_records, st.st_mtime_ns, st.st_size, manifest)
                 families_written += 1
                 total_rows += len(fam_records)
 

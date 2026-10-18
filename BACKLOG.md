@@ -34,17 +34,32 @@
 
 ### Queued — decided, not started
 
-- **Purge the 101 `sourcedFrom: "ollama"` nodes.** LLM-generated content is
-  banned from this tree as of 2026-10-17 (CLAUDE.md, "No LLM-generated
-  content"), and these are the residue of the last gap-fill run. They are
-  template boilerplate of the form "*Driophlox cristata* is a cardinalidae
-  species found in its natural habitat" — no researched content, so nothing is
-  lost by removing them. `cardinalidae`, `passerellidae`, `aegothelidae` and
-  others; find the rest with
-  `python3 scripts/stripBoilerplate.py --dry-run`. Drop the nodes or downgrade
-  them to `sourcedFrom: "none"` — decide which when doing it, and prefer
-  dropping, because a species that exists only because a model invented it
-  should not be in a taxonomy at all.
+- ~~**Purge the 101 `sourcedFrom: "ollama"` nodes.**~~ **Done 2026-10-18.**
+  101 SPECIES nodes across 5 families, 93 of them in `anthribidae`, all of the
+  form "*Araeocerodes elongatus* is a araeocerodes species found in its native
+  region". Dropped rather than relabelled, per the preference recorded here.
+  Zero `sourcedFrom: "ollama"` nodes remain, and none of the 101 names appears
+  anywhere else in the tree, so the species are gone rather than relocated.
+  `scripts/stripBoilerplate.py` did it; it did not exist when this item was
+  written.
+- **`parseAllNames.py --split` cannot write a sidecar, and has never run
+  successfully.** Two independent faults, each of which makes a correct run look
+  like a no-op:
+  (a) `if not pairs: ... return 0` sits *before* the block that distributes
+  parsed records to sidecars, so whenever every name is already cached -- which
+  is every run that does not import new species -- no sidecar is refreshed, ever.
+  A family whose file changed without gaining a new name keeps a stale sidecar
+  indefinitely, and `nameIndexStatus.py` calls it stale with no way to clear it
+  short of a full re-split.
+  (b) The distribution loop iterates `family_data_files()`, which returns
+  `List[str]` of absolute paths, then reads `fam.sidecar_key` and `fam.path` off
+  them. Reaching that line raises `AttributeError`; it is unreachable today only
+  because (a) returns first.
+  This is why this file previously said `parseAllNames.py --split` "writes
+  sidecars directly" -- it does not. `splitNameIndex.py --apply` is the only
+  thing that has ever produced sidecars, which is where Macie's 13,991 came from.
+  Fix (a) is the load-bearing one and is small: hoist the distribution block
+  above the early return, or factor it into a function both paths call.
 - **154 pending families are now in the tree** and are therefore scaffoldable or
   importable, worth 108,320 species of scope.
   `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first

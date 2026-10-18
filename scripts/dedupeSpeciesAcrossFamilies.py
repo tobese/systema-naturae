@@ -127,7 +127,17 @@ from tree import (  # noqa: E402
     iter_species_with_parent,
 )
 
-IMPORTED = {"checklistbank", "catalogue of life"}
+# Which sources count as "written by an import", i.e. a copy that arrived in a
+# family the *source* chose rather than one the tree already held. Set 2026-10-05
+# with only the two sources that had run by then, and not widened when WoRMS
+# landed -- so a wikipedia<->worms pair read as "neither copy is an import" and
+# this script left it alone. Of the 172 same-kingdom cross-family duplicates
+# verifyTree reported afterwards, WoRMS had written 110 of them; they are the
+# same disagreement this docstring describes, one import later.
+#
+# Keep this a named list rather than "any node with a sourcedFrom": see the
+# allow-list note above.
+IMPORTED = {"checklistbank", "catalogue of life", "worms"}
 
 
 def _authority_ids(source_ids: dict) -> str:
