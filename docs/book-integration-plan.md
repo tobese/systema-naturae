@@ -1,7 +1,7 @@
 # Book integration plan — replacing the portal's Book view with the standalone book
 
 Status: **phases 1–4 done** (2026-09-25); only the book-mode right-panel design is open.
-Related: [`navigation.md`](./navigation.md), [`SESSION-2026-09-25.md`](./SESSION-2026-09-25.md).
+Related: [`navigation.md`](./navigation.md), [`SESSION-2026-09-25.md`](./reports/SESSION-2026-09-25.md).
 
 ## The two "books"
 

@@ -8,6 +8,60 @@ The scripts split across two folders:
 
 ---
 
+## 0. The current pipeline: `services/importwrite` + split transform/import
+
+This is the canonical path for importing a prepared dataset today — sections
+1-2 below predate it and cover a different, still-valid use case (building a
+*new* family from GBIF/Wikipedia rather than importing a *prepared checklist*
+into existing families).
+
+**The write path.** `services/importwrite` (Go) is the single writer for
+`taxonomy/<kingdom>/.../<family>/src/data/<family>.json`. Importers POST
+species to it over HTTP instead of writing files directly, so two importers
+touching the same family — or the same species via two different families —
+get one serialized merge decision instead of two independent edits that
+later collide in a git merge. See `services/importwrite/README.md` for the
+identity/merge rules and API. As of this commit it also **refuses to
+silently create a file for a family that isn't registered** in
+`portal/data/kingdom-config.json`'s taxonomy skeleton — a request naming an
+unregistered slug gets back `422`/`404` with the family/kingdom named,
+instead of writing an orphaned file nothing will ever build or graft
+(`registry.go`). `portal/scripts/fetchSpeciesFromApi.ts` is wired to it via
+`IMPORTWRITE_URL`; most per-machine importers (Steamie, Debbie, q-bert) are
+not wired yet.
+
+**The transform/import split.** For bulk checklist imports, one pass
+*transforms* a source into our own intermediary record format
+(`scripts/sources.py`'s `record_transformed()` — flat JSONL + a metadata
+sidecar carrying the original download, org/dataset id, URL, timestamp, and
+a UUID for the set) and writes it to a shared location on the external
+volume, so the machine that ran the transform doesn't have to be the one
+that applies it. A separate pass, `scripts/importTransformed.py`, reads that
+sidecar back and does the actual apply (dry-run by default, `--apply` to
+write). This is deliberately two steps so "did we parse this right" and "is
+it safe to write" are reviewed independently, and so the transform can run
+on whichever machine happens to have the source data staged.
+
+**The careful-apply path for prepared archives.** `scripts/importColChecklist.py`
+is the real importer for an already-downloaded checklist archive (ColDP,
+DwC-A, EUNIS, etc. — see `colChecklist.py`/`coldp.py`/`dwca.py` for the shape
+dispatch). It infers kingdom from the rank chain, then by family-name
+lookup, and — as of the 2026-10-18 fix — reports `UNRESOLVED KINGDOM`
+honestly instead of silently defaulting unresolved cases to animalia (a real
+bug that had mis-flagged ~3,020 plant species as needing a new animal
+family). `--kingdom <name>` overrides the inference when a source is known
+in advance to be single-kingdom (e.g. LCVP is always plantae). Also dry-run
+by default.
+
+**Families it refuses.** When an importer encounters a family that doesn't
+exist in `taxonomy.json`/`taxonomy-<kingdom>.json` yet, that's a taxonomy
+decision (does this family exist at all), not a data decision (where does
+this species go) — see `scripts/pendingFamilies.py`, which records it for
+later triage rather than letting the importer invent one. `importwrite`'s
+refusal above is the same decision enforced at the write layer too.
+
+---
+
 ## 1. Single-family import (GBIF + Wikipedia REST)
 
 ### `portal/scripts/fetchSpeciesFromApi.ts`
@@ -18,21 +72,12 @@ cd portal
 npx tsx scripts/fetchSpeciesFromApi.ts <slug> [limit]
 ```
 
-### `portal/scripts/importFamily.ts` — LLM gap fill
-Uses Ollama to generate descriptions and synthesise missing species for known gaps.
-
-```bash
-cd portal
-OLLAMA_MODEL=qwen2.5:7b npx tsx scripts/importFamily.ts <slug> [count]
-```
-
-Environment:
-- `OLLAMA_HOST` — point at `localhost`, `steamie.taile27c11.ts.net`, `100.95.246.65`, or `100.101.65.92` as needed.
-- `OLLAMA_MODEL` — model to use; `qwen2.5-coder:3b` is the current Biggie default.
-- `OLLAMA_NUM_GPU` — set to `0` for the Biggie import path when using CPU-only generation.
-
-### `portal/scripts/importPapilionidaeWikipedia.ts`
-Template for a **Wikipedia-first** importer that scans GBIF, only keeps species with a Wikipedia article, and enriches inline. Copy + adapt per family.
+### `portal/scripts/importFamily.ts` — **RETIRED, do not run**
+Used Ollama to generate descriptions and synthesise missing species for known
+gaps. Retired 2026-10-17 by the repo's "No LLM-generated content" policy
+(root `CLAUDE.md`) — no model may write taxa, names, or descriptions into
+the tree. Kept on disk, with an in-file banner, for reference only.
+`make import` / `make import-steamie` are dead ends that point here.
 
 ---
 
@@ -62,21 +107,6 @@ npx tsx scripts/bootstrapClass.ts <ClassName> <GbifClassName> <CLASS_ID> <gbifKe
 # Example:
 npx tsx scripts/bootstrapClass.ts Hydrozoa Hydrozoa HYDROZOA 205 4545
 ```
-
-### `scripts/importClass.ts`
-One-pass importer for every family in a class. Reads the GBIF cache and writes all family JSONs.
-
-```bash
-npx tsx scripts/importClass.ts <ClassName> <gbifKey> <CLASS_ID>
-# Example (Anthozoa):
-npx tsx scripts/importClass.ts Anthozoa 206 ANTHOZOA
-```
-
-### `scripts/generateFromCache.ts`
-Regenerates a family JSON from the cached GBIF + Wikipedia data without re-fetching anything. Useful after a sanity fix.
-
-### `scripts/importHydrozoa.ts`
-Class-specific importer kept as a template for new classes.
 
 ---
 
@@ -178,13 +208,11 @@ npx tsx scripts/cacheGbifData.ts <ClassName>
 
 | Script | Purpose |
 |---|---|
-| `portal/scripts/scanInsectWikipediaCoverage.ts` | Estimate Wikipedia coverage density for insect families before deciding import strategy |
 | `portal/scripts/importReport.ts` | Per-import summary (counts, sources, duration) |
 | `portal/scripts/importSmallGaps.sh` | Batch script that loops over small `gap` values from `gap-report.json` |
 | `portal/scripts/scheduleEnrichment.sh` | Cron-style wrapper that runs enrichment in batches |
 | `portal/scripts/testBuild.ts` | Integration sanity test for the unified build |
-| `portal/scripts/mergeNamedAfter.ts`, `backupNamedAfter.ts` | Bulk-merge `namedAfter` (people species are named after); always back up first |
-| `scripts/enrich_*.py` | One-shot enrichment passes (`tier1`, `tier2`, `tier34`, `near_green`, `lap2`, `lap3*`, `final*`) — keep as historical reference |
+| `scripts/enrich_*.py` | One-shot enrichment passes (`tier1`, `tier2`, `tier34`, `near_green`, `lap2`, `lap3*`, `final*`) — done, kept as historical reference, not meant to be re-run |
 | `scripts/fix_*.py` | Sanity fixers (continents, duplicates, empty genera, lineage, subspecies, descriptions) — see CLAUDE.md "Fixing sanity issues" |
 | `scripts/gen_themes.py` | Seed color themes for newly bootstrapped families |
 | `scripts/add_bird_families.py`, `expand_bird_families.{py,js}` | IOC bird family backfill helpers |

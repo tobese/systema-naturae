@@ -1,8 +1,9 @@
 # importwrite
 
 A single-writer HTTP service for `taxonomy/<kingdom>/.../<family>/src/data/
-<family>.json` files, built as a proof of concept on `feature/import-write-
-server`.
+<family>.json` files. Started as a proof of concept on
+`feature/import-write-server`; merged into `main` 2026-10-18 and now the
+canonical write path (see `docs/import.md` §0).
 
 ## Problem this solves
 
@@ -140,6 +141,33 @@ Second, identical run produced **zero** further diff. Unit tests cover the
 ID-over-name-change case directly (`TestApply_MatchesByGbifIDDespiteNameChange`,
 `TestApply_MatchesByIDFromStringArraySourceIds`,
 `TestApply_FallsBackToNameWhenNeitherSideHasAnID`).
+
+## Family registration check
+
+`loadFamily` used to create a new family JSON file for any slug it hadn't
+seen before — fine for the two callers that existed at the time, since both
+pre-validate against `taxonomy.json` before ever calling in, but a latent
+gap for any future caller that doesn't: a typo'd or genuinely new slug would
+get a file silently written for it that nothing builds, grafts, or has a
+colour theme for (see "Scaffolding Gaps" in project memory for an existing
+instance of this exact failure mode).
+
+`registry.go`'s `familyRegistry` closes that gap: before creating a file for
+a slug, `loadFamily` checks it against `portal/data/kingdom-config.json`'s
+taxonomy skeleton for that kingdom (cached per kingdom after the first
+check). An unregistered slug returns `*unregisteredFamilyError` instead of
+creating anything:
+
+- `POST /family/{slug}/species` → `422`, body `{"error", "unregistered":
+  true, "kingdom", "family", "speciesOffered"}` — enough for the caller to
+  record this as a pending family itself (`pendingFamilies.add_family()`,
+  e.g.) without `importwrite` depending on Python to do it directly.
+- `GET /family/{slug}` → `404`.
+
+Passing a `nil` registry (every pre-existing test) skips the check entirely,
+preserving the old unconditional-create behavior — the real `store.go` call
+site is the only one that passes a non-nil registry, since it's the only
+path that can reach a slug nobody has ever written a file for.
 
 ## API
 

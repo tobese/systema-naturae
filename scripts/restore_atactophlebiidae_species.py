@@ -14,7 +14,7 @@ authority for one family and adds only what is missing, which is how the gap
 was confirmed closed rather than assumed closed. Re-running
 `importColStage2.py` would be the wrong tool for it -- that is a whole-kingdom
 run, and the import it would repeat is already applied and verified (see
-docs/SESSION-2026-10-04-col-stage2-animalia.md).
+docs/reports/SESSION-2026-10-04-col-stage2-animalia.md).
 
 Two conventions are read from the file rather than assumed:
 

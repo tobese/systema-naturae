@@ -1,26 +1,7 @@
 # Docs
 
-## Index
+See [`INDEX.md`](./INDEX.md) for the full doc + tooling index, including
+status (active/superseded/obsolete/historical) and what replaced what.
 
-- [**Backlog**](./backlog.md) — Living roadmap and feature queue
-- [**Book View**](./book-view.md) — Alternative text-driven taxonomy browser concept
-- [**Coverage**](./coverage.md) — Taxonomy node coverage, portal statistics & gaps
-- [**Dataset Inbox**](./dataset-inbox.md) — Paste dataset links here for triage
-- [**Data Tiers**](./data-tiers.md) — Graph/book data split, projection sizes, and whether a server is warranted
-- [**Graph UI**](./graph-ui.md) — Layout, node sizing, colors, and side panels
-- [**Import**](./import.md) — Family import workflow and scripts
-- [**Navigation**](./navigation.md) — Portal navigation architecture
-- [**Screen Handling**](./screen-handling.md) — Touch & desktop screen handling
-- [**Statistics Header**](./statistics-header.md) — Statistics header component
-- [**Tooltip**](./tooltip.md) — Tooltip behavior and implementation
-- [**Wheel of Nature**](./wheel-of-nature.md) — Wheel of Nature game component
-
-## Reports
-
-Generated run reports (historical import/enrichment logs), moved out of the
-repo root:
-
-- [enrich-report-2026-07-05.md](./reports/enrich-report-2026-07-05.md)
-- [enrich-family-report-2026-07-06.md](./reports/enrich-family-report-2026-07-06.md)
-- [web-enrich-report-2026-07-06.md](./reports/web-enrich-report-2026-07-06.md)
-- [distribution-notes-2026-07-06.md](./reports/distribution-notes-2026-07-06.md)
+Generated run reports and historical session logs live in
+[`reports/`](./reports/).

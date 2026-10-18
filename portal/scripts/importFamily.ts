@@ -1,3 +1,8 @@
+// RETIRED 2026-10-17 — do not run. This is the Ollama gap-fill importer: it
+// writes LLM-generated species/descriptions into the tree, which the repo's
+// "No LLM-generated content" policy (see root CLAUDE.md) now forbids. Kept
+// on disk for reference only; `make import`/`make import-steamie` are dead
+// ends that point here.
 import { readFileSync, writeFileSync, rmSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
