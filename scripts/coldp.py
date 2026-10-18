@@ -70,7 +70,19 @@ def norm_rank(r):
         return r
     return RANK_ALIASES.get(r.strip().lower(), r)
 # same set the DwCA importers accept
-ACCEPTED = {"accepted", "provisionally accepted"}
+#
+# "established" is ICZN nomenclatural vocabulary, not COL's taxonomic-status
+# vocabulary -- found on the GLI-shaped name.csv/taxon.csv/synonym.csv split
+# (see load_core_csv's docstring) when the exporting tool is Species File
+# Group software rather than ChecklistBank's own COL pipeline. Confirmed on
+# two independent real checklists (Sesiidae.net/309267, a Lepidoptera site's
+# own export/55353): every row in taxon.csv carries status="established" and
+# nothing else, with the real accepted/synonym split already decided by file
+# membership -- exactly GLI's own "accepted is decided by file membership"
+# design. Without this, load_core_csv's status filter drops every row in the
+# table, which reads as "this dataset is empty" rather than "this reader
+# doesn't know this vocabulary".
+ACCEPTED = {"accepted", "provisionally accepted", "established"}
 
 
 def _columns(header):
@@ -284,10 +296,20 @@ def load_core_csv(path, accepted=ACCEPTED, want_authorship=True):
                         if m.lower().split("/")[-1].startswith(base + ".")), None)
             if nxt is None:
                 return None, None
-            delim = "," if nxt.lower().endswith(".csv") else "\t"
-            f = z.open(nxt)
-            rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8",
-                                             errors="replace"), delimiter=delim)
+            # The extension lies on some exports: ChecklistBank dataset 1051
+            # ships "Name.csv"/"Taxon.csv" that are actually tab-delimited, so
+            # trusting ".csv" picked the comma delimiter, split every row on
+            # the wrong character, and the header lookups below raised
+            # KeyError 'id' -- a parse failure blamed on the wrong layer.
+            # Sniffed from the header line instead: whichever delimiter splits
+            # it into more fields wins. Reads the whole member into memory
+            # (a few MB at most for these tables) rather than streaming,
+            # because the sniff needs the first line before the real parse
+            # can start and a zip member isn't seekable.
+            text = z.read(nxt).decode("utf-8", errors="replace")
+            first_line = text.split("\n", 1)[0]
+            delim = "\t" if first_line.count("\t") > first_line.count(",") else ","
+            rd = csv.reader(io.StringIO(text), delimiter=delim)
             hdr = next(rd)
             ix = {(h[4:] if h.startswith(("col:", "dwc:")) else h): i
                   for i, h in enumerate(hdr)}
