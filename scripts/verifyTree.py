@@ -369,9 +369,19 @@ def check_file_counts(max_mismatch=0):
                 bad += 1
     _save_count_cache(cache)
     if bad > max_mismatch:
+        # Not resyncFamilyCounts.py, which is what this used to say. That script
+        # maintains the *taxonomy input*'s speciesCount -- the real-world total
+        # the Coverage modal divides by -- while this check compares the family
+        # *file's* declared count against what the file holds. Two different
+        # numbers written by different code, so following the advice cannot
+        # clear this failure; it reports "would update 0 nodes" and leaves the
+        # gate red. Whoever changed a family file's species set owns updating
+        # that file's declared count.
         fail("family data file speciesCount matches contents",
-             f"{bad} files disagree with their own contents "
-             f"(run scripts/resyncFamilyCounts.py --apply)")
+             f"{bad} files' declared speciesCount disagrees with their own "
+             f"contents -- the script that changed those files' species must "
+             f"update their declared count (resyncFamilyCounts.py maintains a "
+             f"different number: the taxonomy input's real-world total)")
     else:
         ok("every family data file's speciesCount matches its contents")
 
