@@ -37,11 +37,14 @@ collision it finds.
 """
 import argparse
 import collections
+import csv
 import glob
+import io
 import json
 import os
 import re
 import sys
+import zipfile
 
 AUTH_TAIL = re.compile(r"\s+[A-Z][A-Za-z.\-']*(\s+ex\s+.*)?$")
 
@@ -79,6 +82,44 @@ def load_gbif_cache():
     return idx, len(files)
 
 
+def load_archive_index(archive_path: str) -> dict:
+    """scientificName (lower) -> the row's own id, from a zip's name/taxon
+    table.
+
+    Was `idx = {}` with nothing that ever populated it -- `--source
+    archive` validated its `--archive` argument and then ran against an
+    empty index, silently reporting every species "unmatched" rather than
+    reading the file at all. Generic column-name matching rather than
+    DwC-A's exact `taxonID`/`scientificName` so this also reads a
+    nomenclatural-register export like Index Nominum Algarum's `name.tsv`
+    (`ID`, `scientificName`, no `taxon.*` table at all -- see
+    BACKLOG.md's "nomenclatural-register datasets" entry), not just a
+    DwCA.
+    """
+    idx: dict[str, str] = {}
+    name_candidates = ("scientificname", "name", "dwc:scientificname")
+    id_candidates = ("id", "taxonid", "dwc:taxonid")
+    with zipfile.ZipFile(archive_path) as z:
+        members = [n for n in z.namelist()
+                   if os.path.basename(n).lower() in
+                   ("taxon.tsv", "taxon.txt", "name.tsv", "name.txt")]
+        if not members:
+            return idx
+        with z.open(members[0]) as fh:
+            reader = csv.DictReader(io.TextIOWrapper(fh, encoding="utf-8"), delimiter="\t")
+            fieldnames = reader.fieldnames or []
+            name_col = next((c for c in fieldnames if c.lower() in name_candidates), None)
+            id_col = next((c for c in fieldnames if c.lower() in id_candidates), None)
+            if not name_col or not id_col:
+                return idx
+            for row in reader:
+                nm = (row.get(name_col) or "").strip().lower()
+                rid = (row.get(id_col) or "").strip()
+                if nm and rid:
+                    idx.setdefault(nm, rid)
+    return idx
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", default="gbif", choices=("gbif", "archive"))
@@ -95,8 +136,8 @@ def main() -> int:
         if not args.archive:
             sys.exit("  --source archive needs --archive")
         authority = args.authority or "archive"
-        idx = {}
-        print("  archive mode: read the taxon table and key on scientificName")
+        idx = load_archive_index(args.archive)
+        print(f"  archive {args.archive}: {len(idx):,} names indexed")
 
     stamped = 0
     already = 0
