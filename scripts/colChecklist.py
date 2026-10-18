@@ -308,16 +308,26 @@ def _unq(v):
 
 def _rows(z, table, kind):
     try:
-        fh = z.open(table)
+        probe = z.open(table)
     except KeyError:
         return None
-    with fh as f:
-        # iNaturalist (139831) names its taxon table `taxa.csv` -- an actual
-        # comma-delimited CSV, not the tab-delimited .txt/.tsv every other
-        # DwCA/ColDP source here uses regardless of its own extension. Reading
-        # it as tab-delimited put the whole header in one cell, so `_index`
-        # found no column named "id" and raised on a file that plainly has one.
-        delimiter = "," if table.lower().endswith(".csv") else "\t"
+    # Extension alone is not proof of delimiter -- Dyntaxa (2041) names its
+    # single DwCA table "Taxon.csv" and it is genuinely comma-shaped per
+    # iNaturalist's own precedent below, EXCEPT its header line doesn't
+    # split that way: it's actually tab-delimited despite the name, the
+    # same mislabelling coldp.py's load_core_csv hit on a different archive
+    # (1051). Trusting ".csv" read the whole header as one cell, `_index`
+    # found no column named "id", and the failure read as "this reader
+    # doesn't understand this table" rather than "the extension lied".
+    # Sniffed from the first physical line instead: whichever delimiter
+    # splits it into more fields wins. Opened as a short-lived probe rather
+    # than sniffing off the real stream, so a large file (NCBI Taxonomy,
+    # 2169, is 417MB) is decompressed only as far as its first line twice,
+    # not read fully into memory once.
+    with probe as f:
+        first_line = f.readline().decode("utf-8-sig", "replace")
+    delimiter = "\t" if first_line.count("\t") > first_line.count(",") else ","
+    with z.open(table) as f:
         # Tab-delimited sources here carry no CSV-style quoting convention of
         # their own (NCBI Taxonomy, 2169, has a stray literal `"` in a
         # free-text remarks field that QUOTE_MINIMAL reads as an opening
@@ -327,7 +337,13 @@ def _rows(z, table, kind):
         # quoting to escape a comma inside a field, so only disable it for
         # tab.
         quoting = csv.QUOTE_NONE if delimiter == "\t" else csv.QUOTE_MINIMAL
-        rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8", errors="replace"),
+        # utf-8-sig, not plain utf-8: a UTF-8 byte-order-mark on the header
+        # would decode under plain utf-8 as an invisible extra character
+        # glued onto the first column name. _index()/_norm() already strip
+        # it via their own regex (not what originally blocked Dyntaxa --
+        # the delimiter above was), but stripping it here too is strictly
+        # safer and costs nothing.
+        rd = csv.reader(io.TextIOWrapper(f, encoding="utf-8-sig", errors="replace"),
                         delimiter=delimiter, quoting=quoting)
         meta = _meta_positions(z, table)
         if meta and meta[0] == 0:
@@ -570,17 +586,26 @@ def load(path):
         basenames = {m.rsplit("/", 1)[-1].lower() for m in c.namelist()}
         has_taxon_csv = "taxon.csv" in basenames
         has_name_csv = "name.csv" in basenames
-        if "NameUsage.tsv" in c.names() or (has_taxon_csv and has_name_csv):
-            # ColDP arrives in two serialisations: one NameUsage.tsv, or a
-            # name/taxon/synonym CSV split (GLI). Both go through coldp.py,
-            # which reads each; dispatching only on the TSV made the CSV flavour
-            # fall through to the DwCA path, find no `name.tsv`, and report an
-            # empty dataset. `has_name_csv` is required alongside
-            # `has_taxon_csv` because a `taxon.csv` alone is not proof of the
-            # split -- Dyntaxa (2041) ships a single-table DwCA that happens to
-            # use `.csv` instead of `.txt`/`.tsv`, no name table in sight, and
-            # matching on taxon.csv alone sent it into `_coldp`, which failed
-            # outright looking for a name table that was never going to exist.
+        import coldp as _C
+        if _C.find_core_table(c.names()) or (has_taxon_csv and has_name_csv):
+            # ColDP arrives in two serialisations: one single-table core
+            # (COL's own "NameUsage.tsv", or a lowercase/underscore/other-
+            # extension spelling of it -- nameusage.csv, name_usage.txt --
+            # found via coldp.find_core_table rather than the literal
+            # "NameUsage.tsv" string, so the dispatch doesn't drift from
+            # coldp.py's own idea of what counts as this table, the same
+            # divergence-across-copies failure familyPath.ts's own history
+            # warns about), or a name/taxon/synonym CSV split (GLI). All go
+            # through coldp.py, which reads each; dispatching only on the
+            # exact TSV name made the CSV flavour fall through to the DwCA
+            # path, find no `name.tsv`, and report an empty dataset.
+            # `has_name_csv` is required alongside `has_taxon_csv` because a
+            # `taxon.csv` alone is not proof of the split -- Dyntaxa (2041)
+            # ships a single-table DwCA that happens to use `.csv` instead
+            # of `.txt`/`.tsv`, no name table in sight, and matching on
+            # taxon.csv alone sent it into `_coldp`, which failed outright
+            # looking for a name table that was never going to exist (it
+            # goes through the generic DwCA path below instead, correctly).
             # Exact basenames, not `endswith` -- Dyntaxa's own
             # `VernacularName.csv` ends with "name.csv" too, which the first
             # version of this fix matched and made no difference at all.
