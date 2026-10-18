@@ -68,7 +68,7 @@ def work_file(slug: str, name: str) -> str:
     return path
 
 
-def _meta_path_for(data_path: str) -> str:
+def meta_path_for(data_path: str) -> str:
     if data_path.endswith(".jsonl"):
         return data_path[: -len(".jsonl")] + ".meta.json"
     return data_path + ".meta.json"
@@ -148,7 +148,7 @@ def record_transformed(slug: str, name: str, records, *,
         doc["runId"] = str(_uuid.uuid4())
         doc["transformedAt"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
         doc["recordCount"] = count
-        with open(_meta_path_for(path), "w", encoding="utf-8") as fh:
+        with open(meta_path_for(path), "w", encoding="utf-8") as fh:
             json.dump(doc, fh, ensure_ascii=False, indent=2)
             fh.write("\n")
 

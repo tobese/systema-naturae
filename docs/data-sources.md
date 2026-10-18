@@ -38,6 +38,19 @@ already-downloaded archive days later), and a fresh `runId` identifying
 that batch — not any one species, which gets its own uuid from
 `importwrite` at merge time, not here.
 
+The point of writing `transformed.jsonl` rather than POSTing straight to
+`importwrite` is that the two steps can then run separately — on
+different machines, at different times, with the output reviewable in
+between. `scripts/importTransformed.py` is the "apply" side: it reads the
+file back (each record carrying enough placement —
+`kingdom`/`phylum`/`class`/`order`/`family`/`genus` — to route it, since
+one bulk source archive can span many families), groups it by family and
+genus, and POSTs it to the one running `importwrite` instance. A
+transformer that wants this split just writes records in that shape
+instead of POSTing directly; nothing currently does, since every existing
+transformer (`fetchFromChecklistBank.ts`, `fetchSpeciesFromApi.ts`) still
+transforms and POSTs in one step.
+
 This is the machine-checkable companion to
 [`data-sources-attribution.md`](data-sources-attribution.md), which carries the
 prose: required citation strings per source, the share-alike obligations, and the
