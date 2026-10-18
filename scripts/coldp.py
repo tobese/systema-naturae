@@ -134,6 +134,15 @@ def _columns(header):
     dwc:taxonID -> ID, dwc:parentNameUsageID -> parentID, dwc:taxonomicStatus
     -> status, dwc:taxonRank -> rank. Map those too, because the importers
     index by the ColDP names and would otherwise refuse the source.
+
+    "id"/"parentId" are a third kind of drift, not a DwCA/ColDP vocabulary
+    difference at all: Species File Group's own export tooling (1164)
+    writes col:id and col:parentId where COL's own pipeline writes col:ID
+    and col:parentID -- same field, just lower-cased by whichever tool
+    produced it. load_core()'s column lookup is case-sensitive, so the
+    export was otherwise correct ColDP, carrying every field this reader
+    needs, and still failed with "no column col:ID" over a one-letter
+    casing difference.
     """
     DWCA = {
         "taxonID": "ID",
@@ -143,6 +152,8 @@ def _columns(header):
         "taxonRank": "rank",
         "scientificName": "scientificName",
         "scientificNameAuthorship": "authorship",
+        "id": "ID",
+        "parentId": "parentID",
     }
     out = {}
     for i, h in enumerate(header):
