@@ -12,7 +12,7 @@ func TestApply_FindsMatchInSiblingGenusSameFamily(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Oldgenus"},

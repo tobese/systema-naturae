@@ -31,7 +31,7 @@ func TestApply_AddsNewSpecies(t *testing.T) {
 		"children": []any{},
 	})
 
-	fs, err := loadFamily(root, loc)
+	fs, err := loadFamily(root, loc, nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -68,7 +68,7 @@ func TestApply_DedupesByNormalizedName(t *testing.T) {
 		"children": []any{},
 	})
 
-	fs, err := loadFamily(root, loc)
+	fs, err := loadFamily(root, loc, nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -122,7 +122,7 @@ func TestApply_MatchesByGbifIDDespiteNameChange(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -163,7 +163,7 @@ func TestApply_AssignsUUIDToNewSpecies(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	result := fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -197,7 +197,7 @@ func TestApply_IDMatchWithinGenusKeepsUUIDDespiteNameChange(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	first := fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -234,7 +234,7 @@ func TestApply_MergeKeepsExistingUUIDOverIncoming(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	first := fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -261,7 +261,7 @@ func TestApply_MatchesByIDFromStringArraySourceIds(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -294,7 +294,7 @@ func TestApply_MatchesByBareNumericID(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -323,7 +323,7 @@ func TestApply_FallsBackToNameWhenNeitherSideHasAnID(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -350,7 +350,7 @@ func TestApply_MergesSourceIdsInsteadOfOverwriting(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -402,7 +402,7 @@ func TestApply_PrefersNonOllamaSource(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -426,7 +426,7 @@ func TestFlush_WritesAndClearsDirty(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
@@ -505,7 +505,7 @@ func TestFlush_PreservesKeyOrder(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	fs, err := loadFamily(root, loc)
+	fs, err := loadFamily(root, loc, nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -554,7 +554,7 @@ func TestFlush_DoesNotHTMLEscape(t *testing.T) {
 	writeFixtureFamily(t, root, loc, map[string]any{
 		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY", "children": []any{},
 	})
-	fs, _ := loadFamily(root, loc)
+	fs, _ := loadFamily(root, loc, nil)
 
 	fs.apply(importRequest{
 		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},

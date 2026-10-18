@@ -161,7 +161,13 @@ func (fs *familyState) attachIndex(idx *globalIndex, kingdom string, loc familyL
 	}
 }
 
-func loadFamily(root string, loc familyLocation) (*familyState, error) {
+// loadFamily reads (or, for a registered-but-not-yet-written family,
+// creates) one family's root node. `registry` is nil in every existing test
+// (they write their own fixture first, so `existed` is always true there and
+// the check below never runs) -- the real store.go call site is the only
+// one that needs the safety on, since it's the only path that can reach a
+// slug nobody has ever written a file for.
+func loadFamily(root string, loc familyLocation, registry *familyRegistry) (*familyState, error) {
 	file, existed := resolveFamilyFile(root, loc)
 	rootNode := &onode{}
 	if existed {
@@ -173,6 +179,15 @@ func loadFamily(root string, loc familyLocation) (*familyState, error) {
 			return nil, fmt.Errorf("parsing %s: %w", file, err)
 		}
 	} else {
+		if registry != nil {
+			ok, err := registry.isRegistered(root, loc.Kingdom, loc.Slug)
+			if err != nil {
+				return nil, fmt.Errorf("checking registration for %s/%s: %w", loc.Kingdom, loc.Slug, err)
+			}
+			if !ok {
+				return nil, &unregisteredFamilyError{Kingdom: loc.Kingdom, Slug: loc.Slug}
+			}
+		}
 		rootNode = newONode()
 		rootNode.set("id", "FAM_"+strings.ToUpper(loc.Slug))
 		rootNode.set("name", loc.Slug)

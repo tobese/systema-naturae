@@ -21,6 +21,7 @@ type store struct {
 	mu        sync.Mutex
 	families  map[string]*familyState
 	index     *globalIndex
+	registry  *familyRegistry
 }
 
 func newStore(root string, gitCommit bool, idleEvict time.Duration) *store {
@@ -30,6 +31,7 @@ func newStore(root string, gitCommit bool, idleEvict time.Duration) *store {
 		idleEvict: idleEvict,
 		families:  map[string]*familyState{},
 		index:     newGlobalIndex(),
+		registry:  newFamilyRegistry(),
 	}
 }
 
@@ -52,7 +54,7 @@ func (s *store) get(loc familyLocation) (*familyState, error) {
 	if fs, ok := s.families[loc.Slug]; ok {
 		return fs, nil
 	}
-	fs, err := loadFamily(s.root, loc)
+	fs, err := loadFamily(s.root, loc, s.registry)
 	if err != nil {
 		return nil, err
 	}

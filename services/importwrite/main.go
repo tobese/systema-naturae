@@ -13,6 +13,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"log"
 	"net/http"
 	"os"
@@ -66,6 +67,23 @@ func handleImport(st *store) http.HandlerFunc {
 		loc := familyLocation{Kingdom: req.Kingdom, Phylum: req.Phylum, Class: req.Class, Order: req.Order, Slug: slug}
 		result, err := st.applyImport(loc, req)
 		if err != nil {
+			var unreg *unregisteredFamilyError
+			if errors.As(err, &unreg) {
+				// 422, not 500: the request is well-formed, but the taxonomy
+				// decision ("does this family exist") hasn't been made yet.
+				// The body carries what a caller needs to record this as a
+				// pending family itself (pendingFamilies.add_family(), e.g.)
+				// -- importwrite stays dependency-free of Python and doesn't
+				// call into that store directly; see registry.go.
+				writeJSON(w, http.StatusUnprocessableEntity, map[string]any{
+					"error":          err.Error(),
+					"unregistered":   true,
+					"kingdom":        unreg.Kingdom,
+					"family":         unreg.Slug,
+					"speciesOffered": len(req.Species),
+				})
+				return
+			}
 			http.Error(w, "loading family: "+err.Error(), http.StatusInternalServerError)
 			return
 		}
@@ -90,6 +108,11 @@ func handleGet(st *store) http.HandlerFunc {
 		}
 		fs, err := st.get(loc)
 		if err != nil {
+			var unreg *unregisteredFamilyError
+			if errors.As(err, &unreg) {
+				http.Error(w, err.Error(), http.StatusNotFound)
+				return
+			}
 			http.Error(w, "loading family: "+err.Error(), http.StatusInternalServerError)
 			return
 		}
