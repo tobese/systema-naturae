@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 3,904,483 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 2,892,087 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,17 +8,16 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 3,841,980 | 98.40% |
-| `INFORMAL` | 47,303 | 1.21% |
-| `OTU` | 7,659 | 0.20% |
-| `PLACEHOLDER` | 3,086 | 0.08% |
-| `NO_NAME` | 1,690 | 0.04% |
-| `DOUBTFUL` | 1,518 | 0.04% |
-| `HYBRID` | 1,003 | 0.03% |
-| `CULTIVAR` | 109 | 0.00% |
-| `BLACKLISTED` | 76 | 0.00% |
-| `CANDIDATUS` | 44 | 0.00% |
-| `VIRUS` | 15 | 0.00% |
+| `SCIENTIFIC` | 2,883,291 | 99.70% |
+| `INFORMAL` | 4,111 | 0.14% |
+| `HYBRID` | 2,480 | 0.09% |
+| `OTU` | 1,517 | 0.05% |
+| `NO_NAME` | 495 | 0.02% |
+| `CULTIVAR` | 89 | 0.00% |
+| `PLACEHOLDER` | 57 | 0.00% |
+| `BLACKLISTED` | 25 | 0.00% |
+| `VIRUS` | 14 | 0.00% |
+| `DOUBTFUL` | 8 | 0.00% |
 
 ## rankMarker vs our rank
 
@@ -28,100 +27,91 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 3,591,368 | 2,756 | 19,244 |
-| GENUS | 0 | 1,254 | 273,803 |
-| SUBSPECIES | 0 | 115 | 0 |
-| FAMILY | 2,520 | 89 | 11,619 |
+| SPECIES | 2,656,964 | 183 | 5,195 |
+| GENUS | 0 | 268 | 206,110 |
+| SUBSPECIES | 372 | 6,914 | 1 |
+| FAMILY | 2,468 | 89 | 11,423 |
 
 ## Examples by type
 
 **`INFORMAL`**
 
-- `Limnodriloidinae sp.`
-- `Euphrosinopsis sp.`
-- `Protobonellia sp.`
-- `Bonelliidae sp.`
-- `Histriobdella sp.`
-- `Lumbrinerides sp.`
+- `Ulothrix spec`
+- `Ulva spec`
+- `Ulvella spec`
+- `Desmodesmus spec`
+- `Planktococcomyxa spec`
+- `Ankistrodesmus spec`
 
 **`NO_NAME`**
 
-- `cf. Polynoe`
-- `cf. Myrmecium`
-- `aff. Novafrontina`
-- `cf. Saitis`
-- `cf. Paramicromerys`
-- `cf. Lamania`
-
-**`DOUBTFUL`**
-
-- `Lamispina horstii`
-- `[Cecidomyia] pennicornis`
-- `Culicidae P_278_FSTHT`
-- `[Microtendipes]`
-- `[Limnobia] gracilis`
-- `[Limnobia] platyptera`
-
-**`PLACEHOLDER`**
-
-- `slender`
-- `IncertaeSedis dubius`
-- `Onychiurini IncertaeSedis`
-- `IncertaeSedis`
-- `Anoplotermes group`
-- `nr. Cavitermes`
-
-**`BLACKLISTED`**
-
-- `Anasillomos unidentified`
-- `There latreillei`
-- `There nessus`
-- `Pungitius type sp.Omono`
-- `Chlorostilbon illeg`
-- `Tous ayamaruensis`
-
-**`CULTIVAR`**
-
-- `Andrena 'viciae'`
-- `Aleiodes 'gland'`
-- `Formica 'micro'`
-- `Cichla cv.`
-- `Parananochromis cv.`
-- `Telmatochromis cv.`
-
-**`OTU`**
-
-- `Eufriesea sp. BOLD:AEF4645`
-- `Euglossa sp. BOLD:AAD1076`
-- `Euglossa sp. BOLD:AEM3190`
-- `Nematalosa sp. BOLD:ACB7545`
-- `Oligosarcus sp. BOLD:ABZ2120`
-- `Salmo cf. cenerinus BOLD:AAB3872`
+- `×`
+- `× ×Cyclobotrya`
+- `× ×Alpingera`
+- `× ×Cattlianthe`
+- `× ×Neotinarhiza`
+- `× ×Neotinacamptis`
 
 **`HYBRID`**
 
-- `Bufo americanus x hemiophrys`
-- `Pundamilia sp. 'nyererei-like' x Neochromis omnicaeruleus`
-- `Diplostomidae gen. sp. x mag-2019`
-- `Bryum pallescens x pohlia crudoides var revolvens`
-- `Amblystegium badium x latifolium`
-- `Amblystegium intermedium x vernicosum`
+- `Colchicum cilicicum × speciosum`
+- `Colchicum autumnale × speciosum`
+- `Colchicum alpinum x Colchicum autumnale`
+- `Gagea lutea x Gagea pratensis`
+- `Gagea lutea × pratensis`
+- `Anacamptis x Dactylorhiza`
 
-**`CANDIDATUS`**
+**`BLACKLISTED`**
 
-- `Candidatus Methanocorpusculum`
-- `Candidatus Methanocrinis`
-- `Candidatus Nitrosomarinus`
-- `Candidatus Nitrosopolaris`
-- `Candidatus Zestomicrobium`
-- `Candidatus Nanobsidianus`
+- `Stipa ladakhensis M. Nobis, Klichowska, A. Nowak & P. D. Gudkova, nothosp. nov.`
+- `Caryota no`
+- `Hypanus say`
+- `Pungitius type sp.Omono`
+- `Pungitius type sp.Freshwater`
+- `Pungitius type sp.Brackish`
+
+**`CULTIVAR`**
+
+- `Echinopsis ×wilkensii  hort.`
+- `Perca cv.`
+- `Etheostoma cv.`
+- `Paretroplus cv.`
+- `Paratilapia cv.`
+- `Cichla cv.`
 
 **`VIRUS`**
 
-- `Turkozelotes attavirus`
-- `Euragallia prion`
-- `Exochus virus`
-- `Potamophylax coronavirus`
+- `Neoaemula vector Mackinnon, Hiller, Long & Marshall, 2008`
 - `Neoaemula vector`
-- `"Neoaemula vector"`
+- `Microgoneplax prion`
+- `Euragallia prion`
+- `Ophion virus`
+- `Exochus virus`
+
+**`OTU`**
+
+- `Choerodon cf. gymnogenys BOLD:AAJ0249`
+- `Scarus sp. BOLD:AAE9514`
+- `Scarus sp. BOLD:AAD0897`
+- `Scarus sp. BOLD:AAA8751`
+- `Sparisoma sp. BOLD:AAC8879`
+- `Sparisoma sp. BOLD:AAC0186`
+
+**`PLACEHOLDER`**
+
+- `Balaenoptera acutorostrata unnamed`
+- `Actinocyclus polyradiatus Tempère & Peragallo, 1912`
+- `Actinocyclus calix Tempère & Brun, 1889`
+- `Ser sasekumari`
+- `Ser amoyensis`
+- `Ser mikawaensis`
+
+**`DOUBTFUL`**
+
+- `Eudonia viettei_homonym`
+- `Thaumato­grapha`
+- `Thaumato­grapha tamdaoana`
+- `Thaumato­grapha melinhana`
+- `Thaumato­grapha cucphuongana`
+- `Thaumato­grapha carapaceana`
 
