@@ -462,13 +462,22 @@ def metadata(path):
     ChecklistBank serves YAML inside a file called Metadata.json for some
     datasets, so this does not trust the extension: it tries json first and
     falls back to a flat `key: value` scan.
+
+    Matched by basename, not full path: the GitHub-repo-style archives
+    (INA/2003, ALF/294066, BioLib Coccinellidae/54592) nest every file
+    under a `data-<repo>-main/` directory, so the exact name
+    "metadata.yaml" is never in `c.names()` even though
+    "data-ina-master/metadata.yaml" plainly is -- the same directory-
+    prefix mismatch meta.xml's own location lookup and
+    `_find_taxon_table()` already had to resolve.
     """
     c = _Container(path)
     try:
         raw = None
-        for cand in ("Metadata.json", "metadata.yaml", "metadata.json"):
-            if cand in c.names():
-                raw = c.read(cand).decode("utf-8", "replace")
+        candidates = {"metadata.json", "metadata.yaml"}
+        for n in c.names():
+            if n.rsplit("/", 1)[-1].lower() in candidates:
+                raw = c.read(n).decode("utf-8", "replace")
                 break
     finally:
         c.close()
