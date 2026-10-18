@@ -1,6 +1,7 @@
 import { readFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
+import { recordTransformed, type TransformMeta } from "../../scripts/paths.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const portalRoot = resolve(__dirname, "..");
@@ -25,6 +26,18 @@ const KINGDOM = SN_KINGDOM || "animalia";
 // POST it"; whether that species already exists and which fields win on a
 // conflict is importwrite's job, not this script's. See
 // services/importwrite/README.md.
+//
+// SN_WORK_SLUG switches to a third mode: write the shaped species as
+// scripts/importTransformed.py's record shape into that work-dir slug
+// instead of POSTing at all, via scripts/paths.ts's recordTransformed()
+// (the one shared-infrastructure module this file does import from --
+// unlike sourceIds's SourceIds interface above, duplicated on purpose so
+// peer importer scripts don't depend on each other, paths.ts exists
+// specifically to be shared). Splits transformation from import: this
+// process can run anywhere that can fetch ChecklistBank and reach the
+// external volume, with no dependency on importwrite being up at all; see
+// docs/data-sources.md's "split pipeline" paragraph.
+const SN_WORK_SLUG = process.env.SN_WORK_SLUG || "";
 const IMPORTWRITE_URL = process.env.IMPORTWRITE_URL || "";
 
 // COL26.9 base release, the one currently held (see docs / checkColRelease.py).
@@ -179,13 +192,8 @@ interface ImportWriteResult {
   genusCreated: boolean;
 }
 
-async function postGenusToImportWrite(
-  slug: string,
-  family: FamilyNode,
-  genusName: string,
-  rows: CbResult[],
-): Promise<ImportWriteResult> {
-  const species = rows.map(r => {
+function buildSpeciesNodes(rows: CbResult[], genusName: string): Record<string, unknown>[] {
+  return rows.map(r => {
     const sciName = r.usage.name.scientificName;
     // col/itis are arrays everywhere else in the tree (a species can carry
     // more than one historical ID from the same source) — matching that
@@ -213,6 +221,15 @@ async function postGenusToImportWrite(
     if (r.usage.extinct) node.extinct = true;
     return node;
   });
+}
+
+async function postGenusToImportWrite(
+  slug: string,
+  family: FamilyNode,
+  genusName: string,
+  rows: CbResult[],
+): Promise<ImportWriteResult> {
+  const species = buildSpeciesNodes(rows, genusName);
 
   const res = await fetch(`${IMPORTWRITE_URL}/family/${slug}/species`, {
     method: "POST",
@@ -241,13 +258,15 @@ async function main() {
 
   if (!slug) {
     console.log("Usage: npx tsx scripts/fetchFromChecklistBank.ts <appSlug> [maxSpecies]");
-    console.log("  Fetches accepted species from ChecklistBank (Catalogue of Life) and");
-    console.log("  POSTs them to importwrite. Requires IMPORTWRITE_URL — this importer");
-    console.log("  does not write files directly.");
+    console.log("  Fetches accepted species from ChecklistBank (Catalogue of Life).");
+    console.log("  Requires IMPORTWRITE_URL (POSTs to importwrite directly) or");
+    console.log("  SN_WORK_SLUG (writes transformed.jsonl for scripts/importTransformed.py");
+    console.log("  to apply later, possibly on a different machine) — this importer");
+    console.log("  never writes family files directly itself.");
     process.exit(1);
   }
-  if (!IMPORTWRITE_URL) {
-    console.error("IMPORTWRITE_URL is required.");
+  if (!SN_WORK_SLUG && !IMPORTWRITE_URL) {
+    console.error("Either IMPORTWRITE_URL or SN_WORK_SLUG is required.");
     process.exit(1);
   }
 
@@ -274,6 +293,36 @@ async function main() {
     const genus = r.usage.name.genus || r.usage.name.scientificName.split(" ")[0] || "Unknown";
     if (!genusMap.has(genus)) genusMap.set(genus, []);
     genusMap.get(genus)!.push(r);
+  }
+
+  if (SN_WORK_SLUG) {
+    // Split-pipeline mode: write scripts/importTransformed.py's record
+    // shape instead of POSTing. Each record carries its own placement
+    // (kingdom/phylum/class/order/family/genus) because that script's
+    // grouping doesn't assume one file is one family -- this one always
+    // is, but the shape is the same either way.
+    const records = Array.from(genusMap.entries()).flatMap(([genusName, rows]) =>
+      buildSpeciesNodes(rows, genusName).map((species) => ({
+        kingdom: KINGDOM,
+        phylum: family.phylumName || "",
+        class: family.className || "",
+        order: family.orderName || "",
+        family: slug,
+        genus: genusName,
+        species,
+      })),
+    );
+    const meta: TransformMeta = {
+      source: "checklistbank",
+      sourceDatasetId: CB_DATASET,
+      sourceUrl: `${CB_API}/dataset/${CB_DATASET}`,
+      fetchedAt: new Date().toISOString(),
+      transformer: "fetchFromChecklistBank.ts",
+    };
+    const path = recordTransformed(SN_WORK_SLUG, "transformed.jsonl", records, meta);
+    console.log(`  wrote ${records.length} records to ${path}`);
+    console.log(`  apply later with: IMPORTWRITE_URL=... python3 scripts/importTransformed.py ${SN_WORK_SLUG}`);
+    return;
   }
 
   let added = 0, merged = 0, newUuids = 0, crossFamily = 0;
