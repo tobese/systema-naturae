@@ -10,10 +10,18 @@ name: Verify tree invariants
 # ~1 GB of committed family JSON and takes about four minutes, which is the same
 # work `make check` does locally.
 #
-# CAVEAT: this repo's GitHub Actions minutes are billing-locked, which is why
-# `deploy.yml`'s push trigger is commented out. Until that is resolved this
-# workflow will not run on push, and `make check` is the gate that actually
-# holds. Re-enabling deploy.yml and this file are separate decisions.
+# 2026-10-18: this workflow DOES run on push (confirmed via `gh run list` --
+# the "billing-locked" note that used to live here was stale). What was
+# actually failing every run since the parquet-freshness gate landed
+# (05758eb8cb) is that `portal/data/species.parquet` is gitignored and never
+# committed, so a fresh checkout has none -- and a *missing* parquet is a hard
+# FAIL by design (see `check_parquet_freshness` in verifyTree.py), not a silent
+# fall-back like a merely *stale* one. The `species-parquet` step below builds
+# it fresh every run so the gate has something to check freshness against.
+# This is step 1 of the "merge-time recheck" in the Truth Pipeline plan
+# (https://claude.ai/artifact/YADGdp4vS7PNwaXvSLxn1F) -- later steps move the
+# parquet/name-index rebuild to a nightly job that publishes once, so this
+# per-push rebuild (~2 min) isn't duplicated on every push forever.
 
 on:
   push:
@@ -41,6 +49,17 @@ jobs:
       # check that can catch `scripts/tree.py` itself being edited wrongly.
       - name: tree.py selftest
         run: python3 scripts/tree.py
+
+      # duckdb is not a project dependency (buildSpeciesParquet.py says so
+      # explicitly) -- it only needs to exist for this one step.
+      - name: install duckdb
+        run: pip install duckdb
+
+      # verifyTree hard-fails on a *missing* parquet (by design -- see the
+      # note above), and CI never has one since it's gitignored. Build it
+      # fresh so the freshness check has something real to check.
+      - name: build species.parquet
+        run: python3 scripts/buildSpeciesParquet.py
 
       # Nine data invariants across all six kingdoms, non-zero exit on
       # violation.
