@@ -236,12 +236,47 @@ def assert_count_matches(doc: Node, expected: int, label: str = "") -> None:
 # Family files on disk
 # --------------------------------------------------------------------------
 
+def sidecar_key_for(path: str) -> str:
+    """A key that is unique per family *file*, not per family *name*.
+
+    `FamilyFile.slug` is the family directory's basename, and that is not
+    unique: 103 families are called `incertae-sedis` -- the placeholder name
+    reused down dozens of phyla -- and two are called `personidae`, so the tree
+    holds 14,821 family documents under 14,718 distinct slugs.
+
+    Anything keyed on slug therefore collapses those together. The name-parse
+    index did, and the damage was worse than a missing entry: a sidecar keyed by
+    slug is written by all 103 in turn, so the one that survives holds one
+    family's records and the other 102 read it back. A GBIF parse verdict is per
+    *name string*, so those reads return a well-formed answer about the wrong
+    family rather than an obvious miss.
+
+    The rank path is what actually distinguishes them, and it is what the tree
+    already uses to place a family. Derived from the path alone, so the family
+    walker and the name scanner -- which never pass anything to each other --
+    cannot disagree about a family's key.
+    """
+    parts = os.path.relpath(os.path.abspath(path), ROOT).split(os.sep)
+    # taxonomy/<kingdom>/[phylum/][class/]<order>/<family>/src/data/<file>.json
+    try:
+        cut = parts.index("src")
+    except ValueError:
+        cut = len(parts)
+    return "_".join(p for p in parts[1:cut] if p)
+
+
 class FamilyFile(NamedTuple):
     """One family document on disk, with the identity callers keep needing."""
 
     slug: str
     kingdom: str
     path: str
+
+    @property
+    def sidecar_key(self) -> str:
+        """Path-derived and unique per file, unlike `slug`. See
+        `sidecar_key_for` -- 103 families share the slug `incertae-sedis`."""
+        return sidecar_key_for(self.path)
 
     def load(self) -> Node:
         with open(self.path, encoding="utf-8") as fh:
@@ -300,6 +335,31 @@ def iter_family_files(kingdom: Optional[str] = None) -> Iterator[FamilyFile]:
             if "node_modules" in path or not _is_family_file(path):
                 continue
             yield FamilyFile(os.path.basename(path)[:-5], k, path)
+
+
+def assert_sidecar_keys_unique(families=None) -> int:
+    """Raise if two family files would share a sidecar. Returns the count.
+
+    The key joins rank-path segments with `_`, and six directories in this tree
+    already contain `_`, so the join is in principle ambiguous -- it happens not
+    to be for the current 14,821 documents. That is a property of today's
+    directory names, not a guarantee, and a rename could break it silently and
+    in the same way: several families writing one sidecar. So it is checked, and
+    it is checked by callers that are about to key a file on it.
+    """
+    families = list(iter_family_files()) if families is None else list(families)
+    seen = {}
+    for fam in families:
+        key = fam.sidecar_key
+        if key in seen:
+            raise AssertionError(
+                f"sidecar key collision: {seen[key]} and {fam.path} both key "
+                f"as {key!r}. sidecar_key_for joins rank-path segments with "
+                f"'_', so a directory name containing '_' can collide; change "
+                f"the separator rather than letting two families share a "
+                f"sidecar.")
+        seen[key] = fam.path
+    return len(seen)
 
 
 def family_data_files() -> List[str]:

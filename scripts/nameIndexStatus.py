@@ -72,7 +72,7 @@ def stale_sidecars():
     stale = []
     for fam in iter_family_files():
         st = os.stat(fam.path)
-        if not nameIndexCache.family_index_fresh(fam.slug, st.st_mtime_ns, st.st_size, manifest):
+        if not nameIndexCache.family_index_fresh(fam.sidecar_key, st.st_mtime_ns, st.st_size, manifest):
             stale.append(fam)
     return stale
 

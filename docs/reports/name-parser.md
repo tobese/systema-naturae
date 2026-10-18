@@ -1,6 +1,6 @@
 # GBIF name parser over every name in the tree
 
-`POST /v1/parser/name`, 2,892,087 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
+`POST /v1/parser/name`, 4,181,311 distinct (name, rank) pairs. The repeated-`name` GET is unusable (see the script docstring); the POST form was asserted positionally safe on every batch.
 
 ## Parser `type`
 
@@ -8,16 +8,17 @@ The validity signal. `parsed: true` does not mean valid -- `?name=human` is `par
 
 | type | count | share |
 |---|---|---|
-| `SCIENTIFIC` | 2,883,291 | 99.70% |
-| `INFORMAL` | 4,111 | 0.14% |
-| `HYBRID` | 2,480 | 0.09% |
-| `OTU` | 1,517 | 0.05% |
-| `NO_NAME` | 495 | 0.02% |
-| `CULTIVAR` | 89 | 0.00% |
-| `PLACEHOLDER` | 57 | 0.00% |
-| `BLACKLISTED` | 25 | 0.00% |
-| `VIRUS` | 14 | 0.00% |
-| `DOUBTFUL` | 8 | 0.00% |
+| `SCIENTIFIC` | 4,118,712 | 98.50% |
+| `INFORMAL` | 46,216 | 1.11% |
+| `OTU` | 7,659 | 0.18% |
+| `PLACEHOLDER` | 3,092 | 0.07% |
+| `HYBRID` | 2,480 | 0.06% |
+| `NO_NAME` | 1,683 | 0.04% |
+| `DOUBTFUL` | 1,223 | 0.03% |
+| `CULTIVAR` | 107 | 0.00% |
+| `BLACKLISTED` | 77 | 0.00% |
+| `CANDIDATUS` | 44 | 0.00% |
+| `VIRUS` | 18 | 0.00% |
 
 ## rankMarker vs our rank
 
@@ -27,10 +28,10 @@ and is often simply absent -- which is not a disagreement.
 
 | our rank | agree | disagree | no marker |
 |---|---|---|---|
-| SPECIES | 2,656,964 | 183 | 5,195 |
-| GENUS | 0 | 268 | 206,110 |
+| SPECIES | 3,851,175 | 2,657 | 20,585 |
+| GENUS | 0 | 1,260 | 281,530 |
 | SUBSPECIES | 372 | 6,914 | 1 |
-| FAMILY | 2,468 | 89 | 11,423 |
+| FAMILY | 2,520 | 92 | 12,105 |
 
 ## Examples by type
 
@@ -114,4 +115,13 @@ and is often simply absent -- which is not a disagreement.
 - `Thaumato­grapha melinhana`
 - `Thaumato­grapha cucphuongana`
 - `Thaumato­grapha carapaceana`
+
+**`CANDIDATUS`**
+
+- `Candidatus Lokiarchaeum`
+- `Candidatus Harpocratesius`
+- `Candidatus Methanoglobus`
+- `Candidatus Halobonum`
+- `Candidatus Halectosymbiota`
+- `Candidatus Methanocorpusculum`
 

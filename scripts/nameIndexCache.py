@@ -6,11 +6,18 @@ The monolith `portal/data/name-parse-index.jsonl` (559MB) is split into
 plus `portal/data/name-parse-index-manifest.json` tracking each sidecar's
 freshness against its family file's mtime+size.
 
-Reading: `load_family_index(slug)` returns the parse records for one family's
+Reading: `load_family_index(key)` returns the parse records for one family's
 names, invalidated by the family file's mtime+size.
 
-Writing: `save_family_index(slug, records, mtime_ns, size, manifest)` writes one
+Writing: `save_family_index(key, records, mtime_ns, size, manifest)` writes one
 sidecar and updates the manifest atomically (`.tmp` + `os.replace`).
+
+The key is `FamilyFile.sidecar_key` -- derived from the rank path -- and never
+`FamilyFile.slug`. A slug is a family *name*, and 103 families in this tree are
+called `incertae-sedis`, so a slug-keyed sidecar is written 103 times over and
+read back as one family's records by all of them. Sidecars written before this
+distinction existed are keyed by slug and are not readable under it; delete
+`portal/data/name-parse-index/` and re-split rather than mixing the two.
 
 Monolith fallback: `load_monolith()` reads the old `name-parse-index.jsonl` if
 present, for transitional runs where some families haven't been split yet.
@@ -32,8 +39,14 @@ MANIFEST_PATH = os.path.join(INDEX_DIR, "manifest.json")
 MONOLITH_PATH = os.path.join(ROOT, "portal", "data", "name-parse-index.jsonl")
 
 
-def family_sidecar_path(slug: str) -> str:
-    return os.path.join(INDEX_DIR, f"{slug}.jsonl")
+def family_sidecar_path(key: str) -> str:
+    """`key` is a `FamilyFile.sidecar_key`, never a `FamilyFile.slug`.
+
+    A slug is a family *name*, and this tree reuses `incertae-sedis` for 103
+    different families, so keying on one writes every one of them to the same
+    file. See `tree.sidecar_key_for`.
+    """
+    return os.path.join(INDEX_DIR, f"{key}.jsonl")
 
 
 def load_manifest() -> dict:
@@ -52,19 +65,19 @@ def save_manifest(manifest: dict) -> None:
     os.replace(tmp, MANIFEST_PATH)
 
 
-def family_index_fresh(slug: str, mtime_ns: int, size: int, manifest: dict | None = None) -> bool:
-    """True if the sidecar for `slug` matches the family file's mtime+size."""
+def family_index_fresh(key: str, mtime_ns: int, size: int, manifest: dict | None = None) -> bool:
+    """True if the sidecar for `key` matches the family file's mtime+size."""
     if manifest is None:
         manifest = load_manifest()
-    entry = manifest.get(slug)
+    entry = manifest.get(key)
     if not entry:
         return False
     return entry.get("mtime_ns") == mtime_ns and entry.get("size") == size
 
 
-def load_family_index(slug: str) -> list:
+def load_family_index(key: str) -> list:
     """All parse records for one family's names, from its sidecar."""
-    path = family_sidecar_path(slug)
+    path = family_sidecar_path(key)
     if not os.path.exists(path):
         return []
     records = []
@@ -80,18 +93,18 @@ def load_family_index(slug: str) -> list:
     return records
 
 
-def save_family_index(slug: str, records: list, mtime_ns: int, size: int,
+def save_family_index(key: str, records: list, mtime_ns: int, size: int,
                       manifest: dict) -> None:
     """Write one family's sidecar and record it in the manifest."""
-    path = family_sidecar_path(slug)
+    path = family_sidecar_path(key)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as fh:
         for rec in records:
             fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
     os.replace(tmp, path)
-    manifest[slug] = {
-        "path": f"name-parse-index/{slug}.jsonl",
+    manifest[key] = {
+        "path": f"name-parse-index/{key}.jsonl",
         "mtime_ns": mtime_ns,
         "size": size,
         "rows": len(records),
@@ -116,8 +129,8 @@ def load_monolith() -> list:
     return records
 
 
-def all_sidecar_slugs() -> list:
-    """Every family slug that has a sidecar."""
+def all_sidecar_keys() -> list:
+    """Every `FamilyFile.sidecar_key` that has a sidecar."""
     if not os.path.isdir(INDEX_DIR):
         return []
     return [f[:-6] for f in os.listdir(INDEX_DIR)
@@ -131,10 +144,10 @@ def load_all_records() -> list:
     should call this instead. It transparently reads per-family sidecars when
     they exist, falling back to the monolith for transitional runs.
     """
-    slugs = all_sidecar_slugs()
-    if slugs:
+    keys = all_sidecar_keys()
+    if keys:
         records = []
-        for slug in slugs:
-            records.extend(load_family_index(slug))
+        for key in keys:
+            records.extend(load_family_index(key))
         return records
     return load_monolith()
