@@ -66,6 +66,27 @@ def work_file(slug: str, name: str) -> str:
     return path
 
 
+def record_transformed(slug: str, name: str, records) -> str:
+    """Write a transformer's output as JSONL into `slug`'s work dir, return
+    the path.
+
+    This is the materialized output of a transform step -- the species/taxon
+    records produced from the archive, captured before any merge/dedupe
+    decision -- so a bulk import can be reviewed or replayed without
+    re-fetching or re-parsing the source. `sourcesManifest.py` already scans
+    work/ recursively, so rebuilding the manifest after this picks it up
+    with no further registration. Overwritten on each run, same as every
+    other file under work/: regenerable, not an audit trail -- name the file
+    something stable (e.g. "transformed.jsonl"), not timestamped, unless the
+    caller genuinely wants to keep every past run.
+    """
+    path = os.path.join(work_dir(slug), name)
+    with open(path, "w", encoding="utf-8") as fh:
+        for rec in records:
+            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    return path
+
+
 def source_url(slug: str) -> str:
     return _manifest()["sources"][slug]["url"]
 

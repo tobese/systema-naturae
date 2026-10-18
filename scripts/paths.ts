@@ -9,7 +9,7 @@
 // do not exist, and a script reading one should say so rather than fail with a
 // bare ENOENT on a path that no longer means anything.
 
-import { existsSync, mkdirSync } from "fs";
+import { existsSync, mkdirSync, writeFileSync } from "fs";
 import { resolve } from "path";
 
 export const SOURCES_ROOT = "/Volumes/MacieExternal/sources";
@@ -67,6 +67,20 @@ export function workDir(slug: string): string {
   const p = resolve(SOURCES_ROOT, "work", slug);
   if (!existsSync(p)) mkdirSync(p, { recursive: true });
   return p;
+}
+
+/**
+ * Write a transformer's output as JSONL into `slug`'s work dir, return the
+ * path. See sources.py's `record_transformed` for the full rationale (same
+ * function, mirrored for the TypeScript side) -- overwritten on each run,
+ * not an audit trail, and picked up automatically next time
+ * sourcesManifest.py rescans work/.
+ */
+export function recordTransformed(slug: string, name: string, records: unknown[]): string {
+  const path = resolve(workDir(slug), name);
+  const body = records.map((r) => JSON.stringify(r)).join("\n");
+  writeFileSync(path, records.length ? body + "\n" : "", "utf-8");
+  return path;
 }
 
 /** A single derived artifact, erroring clearly if it has not been produced. */

@@ -16,6 +16,17 @@ a sentence rather than an ENOENT.
 can be deleted and regenerated — the importers unpack on demand, so clearing
 `work/` costs disk-time and nothing else.
 
+One specific derived artifact worth naming: a transformer's output -- the
+species/taxon records it produced from a source, before any merge or
+cross-family dedupe decision -- is written as JSONL into that source's own
+`work/<slug>/` via `record_transformed()` (`sources.py` / `paths.ts`), by
+convention named `transformed.jsonl`. This makes a bulk import reviewable
+or replayable without re-fetching or re-parsing the archive, and it needs
+no separate registration: `sourcesManifest.py` already scans `work/`
+recursively, so the file shows up in `manifest.json` the next time the
+manifest is rebuilt. Like everything else under `work/`, it's overwritten
+on each run, not kept as a history of every past one.
+
 This is the machine-checkable companion to
 [`data-sources-attribution.md`](data-sources-attribution.md), which carries the
 prose: required citation strings per source, the share-alike obligations, and the
