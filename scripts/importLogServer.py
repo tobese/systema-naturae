@@ -7,6 +7,14 @@ Reuses importLogView.py's row-loading and problem/note logic directly
 rather than re-deriving it -- the same reason scripts/taxaserve.py exists:
 one place answers the question, everything else asks it.
 
+The "up next / open items" panel reads data/source-queue.json live (see
+scripts/sourceQueue.py) rather than embedding a hand-written list in this
+page's HTML -- the first version of this panel (2026-10-19) hardcoded
+both the completed-today list and the open-items list, and was already
+wrong by the time the next candidate batch finished triaging. The panel
+re-fetches it on the same 3s tick as the run table, so it reflects
+whatever `sourceQueue.py set` last recorded without this file changing.
+
 Usage:
     python3 scripts/importLogServer.py                 # serve on :9883
     python3 scripts/importLogServer.py --port 9883
@@ -22,6 +30,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import importLogView as ilv  # noqa: E402
+import sourceQueue as sq  # noqa: E402
 
 PAGE = """<!doctype html>
 <html lang="en">
@@ -92,9 +101,22 @@ PAGE = """<!doctype html>
   .qs-done { color: var(--ok); }
   .qs-running { color: var(--accent); }
   .qn { font-variant-numeric: tabular-nums; color: var(--dim); white-space: nowrap; }
+  .qi-active { color: var(--accent); font-weight: 600; }
+  .qi-active .qn { color: var(--accent); opacity: .85; }
+  .live-dot {
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); margin-right: 6px; animation: pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
   .open-list { margin: 0; padding: 0 0 0 16px; font-size: 12.5px; color: var(--text); }
   .open-list li { padding: 3px 0; }
   .open-list b { color: var(--text); }
+  .queue-footer {
+    margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
+    color: var(--dim); font-size: 11.5px;
+  }
+  .queue-footer code { color: var(--text); }
+  .queue-empty { color: var(--dim); font-size: 12.5px; }
 </style>
 </head>
 <body>
@@ -102,34 +124,18 @@ PAGE = """<!doctype html>
   <div class="sub" id="asof">loading&hellip;</div>
 
   <div class="queue">
-    <h2>Up next &amp; open items &mdash; see docs/dataset-inbox.md for full detail; today's 14 completed runs are in the table below</h2>
+    <h2 id="queueHeading">source queue &mdash; loading&hellip;</h2>
     <div class="queue-grid">
-      <ul class="queue-list">
-        <li><span>ASEAN KBA Trigger Species Checklist</span> <span class="qn">311726 &middot; 19,723</span></li>
-        <li><span>SF Blattodea</span> <span class="qn">315660 &middot; 17,917</span></li>
-        <li><span>BDJ2305 Brassicaceae update</span> <span class="qn">2305 &middot; 15,761</span></li>
-        <li><span>MOST Moss TROPICOS</span> <span class="qn">1019 &middot; 14,427</span></li>
-        <li><span>ALF All Living Families</span> <span class="qn">294066 &middot; 14,325</span></li>
-        <li><span>Beetles of Canada &amp; Alaska, 2nd ed.</span> <span class="qn">2021 &middot; 14,082</span></li>
-        <li><span>SolanaceaeSource 2025-06</span> <span class="qn">310554 &middot; 13,708</span></li>
-        <li><span>MSW3 Mammal Species of the World</span> <span class="qn">2019 &middot; 13,656</span></li>
-        <li><span>CilCat World Ciliate Catalog</span> <span class="qn">1113 &middot; 13,639</span></li>
-        <li><span>HymIS Pompilidae of the World</span> <span class="qn">2141 &middot; 13,626</span></li>
-        <li><span>WoRMS Oligochaeta</span> <span class="qn">1099 &middot; 13,205</span></li>
-        <li><span>Madeira terrestrial fungi/flora/fauna</span> <span class="qn">2029 &middot; 12,938</span></li>
-        <li><span>ThripsWiki</span> <span class="qn">1203 &middot; 12,250</span></li>
-        <li><span>WOL World Odonata List</span> <span class="qn">125101 &middot; 11,941</span></li>
-        <li><span>Catalogue of World Gelechiidae</span> <span class="qn">2362 &middot; 11,846</span></li>
-      </ul>
-      <ul class="open-list">
-        <li><b>Japan fungi checklist</b> &mdash; 0 family overlap, needs scaffolding first</li>
-        <li><b>WoRMS Scleractinia / Amphipoda</b> &mdash; +4 each, saturated, declined</li>
-        <li><b>Banco Taxonômico Brasileiro</b> &mdash; 404, no archive available</li>
-        <li><b>LepIndex / FishBase</b> &mdash; old hedged leads, not re-examined</li>
-        <li><b>pendingFamilies: 861 families, no archive recorded</b> &mdash; need manual tracing</li>
-        <li><b>pendingFamilies: 15,642 families genuinely absent</b> &mdash; mostly bacteria/GTDB, on hold</li>
-        <li><b>Two tree-wide audits</b> logged in BACKLOG.md (WoRMS name-quoting, historical id collisions)</li>
-      </ul>
+      <ul class="queue-list" id="queueUpNext"></ul>
+      <ul class="open-list" id="queueOpen"></ul>
+    </div>
+    <div class="queue-footer">
+      Cross-cutting, not per-source, so not in this list: the
+      <code>pendingFamilies.py</code> worklist (861 families ready but with
+      no archive recorded, 15,642 still genuinely absent, mostly
+      bacteria/GTDB on hold) and two tree-wide audits logged in
+      <code>BACKLOG.md</code> (WoRMS name-quoting, historical sourceIds
+      collisions). See docs/dataset-inbox.md for the full narrative.
     </div>
   </div>
 
@@ -187,12 +193,58 @@ function render(data) {
     '<tr><td colspan="9" class="empty">No runs recorded yet.</td></tr>';
 }
 
+const UP_NEXT_STAGES = ['candidate', 'downloaded', 'measuring', 'measured', 'queued', 'applying', 'needs-rerun'];
+const ACTIVE_STAGES = ['measuring', 'applying'];
+
+function renderQueue(sources) {
+  const byKey = Object.values(sources);
+  const upNext = byKey.filter(r => UP_NEXT_STAGES.includes(r.stage))
+    .sort((a, b) => {
+      const aActive = ACTIVE_STAGES.includes(a.stage), bActive = ACTIVE_STAGES.includes(b.stage);
+      if (aActive !== bActive) return aActive ? -1 : 1;
+      return (b.size || 0) - (a.size || 0);
+    });
+  const open = byKey.filter(r => r.stage === 'declined' || r.stage === 'blocked');
+  const activeCount = upNext.filter(r => ACTIVE_STAGES.includes(r.stage)).length;
+
+  document.getElementById('queueHeading').textContent =
+    `Up next (${upNext.length}${activeCount ? `, ${activeCount} running now` : ''}) & open items (${open.length}) — today's completed runs are in the table below`;
+
+  document.getElementById('queueUpNext').innerHTML = upNext.length
+    ? upNext.map(r => {
+        const isActive = ACTIVE_STAGES.includes(r.stage);
+        const stage = r.stage === 'candidate' ? 'not yet downloaded'
+          : r.stage === 'downloaded' ? 'downloaded'
+          : r.stage === 'measuring' ? 'measuring now'
+          : r.stage === 'measured' ? 'measured'
+          : r.stage === 'queued' ? 'queued to apply'
+          : r.stage === 'applying' ? 'importing now'
+          : r.stage === 'needs-rerun' ? 'needs re-run'
+          : r.stage;
+        const dot = isActive ? '<span class="live-dot"></span>' : '';
+        return `<li class="${isActive ? 'qi-active' : ''}">${dot}<span>${r.title || r.key}</span> <span class="qn">${r.key} &middot; ${stage} &middot; ${fmt(r.size)}</span></li>`;
+      }).join('')
+    : '<li class="queue-empty">Nothing queued.</li>';
+
+  document.getElementById('queueOpen').innerHTML = open.length
+    ? open.map(r =>
+        `<li><b>${r.title || r.key}</b> (${r.stage}) &mdash; ${r.reason || 'no reason recorded'}</li>`
+      ).join('')
+    : '<li class="queue-empty">Nothing open.</li>';
+}
+
 async function tick() {
   try {
     const res = await fetch('/api/log');
     render(await res.json());
   } catch (e) {
     document.getElementById('asof').textContent = 'connection lost, retrying…';
+  }
+  try {
+    const res = await fetch('/api/queue');
+    renderQueue(await res.json());
+  } catch (e) {
+    document.getElementById('queueHeading').textContent = 'source queue — connection lost';
   }
 }
 tick();
@@ -226,6 +278,14 @@ class Handler(BaseHTTPRequestHandler):
                 row["notes"] = ilv.notes(r)
                 out.append(row)
             body = json.dumps({"rows": out, "ceiling": ceiling}).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if self.path == "/api/queue":
+            body = json.dumps(sq.read_store()).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(body)))
