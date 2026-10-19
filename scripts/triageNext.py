@@ -102,6 +102,14 @@ def main() -> int:
             continue
         if not lic.startswith(OPEN):
             continue
+        # "cc by-nc" and "cc by-nc-sa" both start with "cc by", so the prefix
+        # check above alone lets non-commercial licences through -- exactly
+        # the policy question this project has declined twice already (see
+        # docs/dataset-inbox.md). Split on word boundaries including the
+        # hyphen so "by-nc" is seen as two tokens, not one that fails a
+        # plain substring test differently than "by nc" would.
+        if "nc" in re.split(r"[\s-]+", lic):
+            continue
         # `citation` is a string here, not an object with a doi field.
         doi = norm(d.get("doi") or _doi_in(d.get("citation")))
         if doi and doi in dois:
