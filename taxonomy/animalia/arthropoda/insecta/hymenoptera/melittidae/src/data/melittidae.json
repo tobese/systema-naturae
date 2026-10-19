@@ -2111,7 +2111,8 @@
             "itis": [
               "1077697"
             ],
-            "checklistbank": "695721"
+            "checklistbank": "695721",
+            "wikispecies": "Melitta_avontuurensis"
           },
           "authorityIds": "col:3ZKQV,itis:1077697",
           "description": "Melitta avontuurensis is a apoidea > melitta kirby, 1802 species found in Africa region."
@@ -2307,7 +2308,8 @@
             "itis": [
               "1077699"
             ],
-            "checklistbank": "695720"
+            "checklistbank": "695720",
+            "wikispecies": "Melitta_richtersveldensis"
           },
           "authorityIds": "col:3ZKTL,itis:1077699",
           "description": "Melitta richtersveldensis is a apoidea > melitta kirby, 1802 species found in Africa region."
@@ -5926,12 +5928,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Melittidae"
+    },
+    {
+      "id": "GENUS_HESPERAPIS",
+      "name": "Hesperapis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "melittidae",
+      "children": [
+        {
+          "id": "SP_HESPERAPIS_ELEGANTULA",
+          "name": "Hesperapis elegantula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hesperapis",
+          "sourceIds": {
+            "wikispecies": "Hesperapis_elegantula"
+          },
+          "uuid": "9c7df14f-7ac4-4502-bc90-c316de1b7aa4"
+        }
+      ]
     }
   ],
-  "speciesCount": 295,
+  "speciesCount": 296,
   "appSlug": "melittidae",
   "lineage": "Apoidea",
-  "genusCount": 34,
+  "genusCount": 31,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
