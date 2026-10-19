@@ -319,7 +319,8 @@
             ],
             "col": [
               "KZR8"
-            ]
+            ],
+            "checklistbank": "Batrachostomus_chaseni"
           },
           "authorityIds": "col:KZR8,itis:1077331",
           "commonName": "Palawan Frogmouth",
@@ -341,7 +342,8 @@
             ],
             "itis": [
               "555515"
-            ]
+            ],
+            "checklistbank": "Batrachostomus_septimus"
           },
           "authorityIds": "col:KZRJ,itis:555515",
           "commonName": "Philippine Frogmouth",
@@ -386,7 +388,8 @@
             ],
             "col": [
               "KZRF"
-            ]
+            ],
+            "checklistbank": "Batrachostomus_mixtus"
           },
           "authorityIds": "col:KZRF,itis:555520",
           "commonName": "Bornean Frogmouth",
@@ -481,10 +484,55 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "podargidae"
+    },
+    {
+      "id": "GENUS_PODARGUS",
+      "name": "Podargus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PODARGUS_OCELLATUS",
+          "name": "Podargus ocellatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podargus",
+          "sourceIds": {
+            "checklistbank": "Podargus_ocellatus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODARGUS_PAPUENSIS",
+          "name": "Podargus papuensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podargus",
+          "sourceIds": {
+            "checklistbank": "Podargus_papuensis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PODARGUS_STRIGOIDES",
+          "name": "Podargus strigoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Podargus",
+          "sourceIds": {
+            "checklistbank": "Podargus_strigoides"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "podargidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 19,
+  "genusCount": 5,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -493,6 +541,6 @@
       "orderKey": 8510645,
       "familyKey": 9337
     },
-    "checklistbank": "txn:39414"
+    "checklistbank": "Podargidae"
   }
 }

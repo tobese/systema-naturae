@@ -1094,7 +1094,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7891869
+            "gbif": 7891869,
+            "checklistbank": "Actinoptychus_dives"
           },
           "uuid": "caa0c28e-5ac4-5d4-84c-ac4483e742ef46",
           "authorityIds": "gbif:7891869"
@@ -2122,7 +2123,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3191643
+            "gbif": 3191643,
+            "checklistbank": "Actinoptychus_minutus"
           },
           "uuid": "ace4c01b-ed64-5fb-aad-fc4f1a76965e7d",
           "authorityIds": "gbif:3191643"
@@ -3714,7 +3716,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3191635
+            "gbif": 3191635,
+            "checklistbank": "Actinoptychus_tenuis"
           },
           "uuid": "66b558a5-431d-504-bff-62a0c9f98dd542",
           "authorityIds": "gbif:3191635"
@@ -3973,7 +3976,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 3191640
+            "gbif": 3191640,
+            "checklistbank": "Actinoptychus_tuberculatus"
           },
           "uuid": "861ddf48-6966-584-93e-b043f6d4626ae6",
           "authorityIds": "gbif:3191640"
@@ -4477,7 +4481,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7890300
+            "gbif": 7890300,
+            "checklistbank": "Trossulus_californicus"
           },
           "uuid": "e4174f13-82a8-505-8c1-c12abe9b566485",
           "authorityIds": "gbif:7890300"
@@ -4494,7 +4499,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 7390508
+            "gbif": 7390508,
+            "checklistbank": "Trossulus_elegantulus"
           },
           "uuid": "4f4afe25-eaea-579-b38-a0f7fa1b7d2986",
           "authorityIds": "gbif:7390508"
@@ -4511,7 +4517,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8210724
+            "gbif": 8210724,
+            "checklistbank": "Trossulus_javanicus"
           },
           "uuid": "a2773dbe-8393-5f1-9cc-b150021b0be4d3",
           "authorityIds": "gbif:8210724"
@@ -4528,7 +4535,8 @@
           "sourcedFrom": "none",
           "children": [],
           "sourceIds": {
-            "gbif": 8413367
+            "gbif": 8413367,
+            "checklistbank": "Trossulus_nicobaricus"
           },
           "uuid": "091a158c-80a5-55a-a8d-d857d8f5cac666",
           "authorityIds": "gbif:8413367"
@@ -4556,7 +4564,8 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 7936662
+            "gbif": 7936662,
+            "checklistbank": "Polymyxus_coronalis"
           },
           "uuid": "860d5f2c-5716-574-b64-3a768c84f76a03",
           "authorityIds": "gbif:7936662"
@@ -5320,10 +5329,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "heliopeltaceae"
+    },
+    {
+      "id": "GENUS_RHAPHIDOPHOROPSIS",
+      "name": "Rhaphidophoropsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RHAPHIDOPHOROPSIS_ELEGANS",
+          "name": "Rhaphidophoropsis elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhaphidophoropsis",
+          "sourceIds": {
+            "checklistbank": "Rhaphidophoropsis_elegans"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RHAPHIDOPHOROPSIS_DANICA",
+          "name": "Rhaphidophoropsis danica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhaphidophoropsis",
+          "sourceIds": {
+            "checklistbank": "Rhaphidophoropsis_danica"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "heliopeltaceae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 306,
+  "genusCount": 15,
+  "speciesCount": 308,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,
@@ -5332,6 +5374,6 @@
       "orderKey": 1098,
       "familyKey": 7616644
     },
-    "checklistbank": "txn:71209"
+    "checklistbank": "Heliopeltaceae"
   }
 }

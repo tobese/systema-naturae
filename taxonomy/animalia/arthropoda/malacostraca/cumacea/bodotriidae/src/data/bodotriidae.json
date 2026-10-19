@@ -3779,7 +3779,10 @@
           "sourcedFrom": "worms",
           "lineage": "Cyclaspis",
           "authorship": "Roccatagliata, 1985",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Cyclaspis_jonesi"
+          }
         },
         {
           "id": "SP_CYCLASPIS_SCULPTILIS_ROCCATAGLIATA_MOREIRA_1987",
@@ -3789,7 +3792,10 @@
           "sourcedFrom": "worms",
           "lineage": "Cyclaspis",
           "authorship": "Roccatagliata & Moreira, 1987",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Cyclaspis_sculptilis"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3851,7 +3857,8 @@
           "sourceIds": {
             "col": [
               "BM24K"
-            ]
+            ],
+            "checklistbank": "Cumopsis_sarsi"
           },
           "authorityIds": "col:BM24K",
           "description": "Cumopsis sarsi is a bodotriidae species found in its native region."
@@ -3887,7 +3894,8 @@
           "sourceIds": {
             "col": [
               "BM24L"
-            ]
+            ],
+            "checklistbank": "Cumopsis_andamani"
           },
           "authorityIds": "col:BM24L",
           "description": "Cumopsis andamani is a bodotriidae species found in its native region."
@@ -3965,7 +3973,8 @@
           "sourceIds": {
             "col": [
               "BM24N"
-            ]
+            ],
+            "checklistbank": "Cumopsis_africanum"
           },
           "authorityIds": "col:BM24N",
           "description": "Cumopsis africanum is a bodotriidae species found in its native region."
@@ -4020,7 +4029,8 @@
           "sourceIds": {
             "col": [
               "BM24J"
-            ]
+            ],
+            "checklistbank": "Cumopsis_armatum"
           },
           "authorityIds": "col:BM24J",
           "description": "Cumopsis armatum is a bodotriidae species found in its native region."
@@ -6137,7 +6147,10 @@
           "authorship": "Ledoyer, 1993",
           "children": [],
           "uuid": "00add599-7b52-569-819-3e18405e912b72",
-          "description": "Atlantocuma elongatum is a bodotriidae species found in its native region."
+          "description": "Atlantocuma elongatum is a bodotriidae species found in its native region.",
+          "sourceIds": {
+            "checklistbank": "Atlantocuma_elongatum"
+          }
         },
         {
           "id": "SP_ATLANTOCUMA_CONFUNDA_GERKEN_2012",
@@ -8953,13 +8966,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bodotriidae"
+    },
+    {
+      "id": "GENUS_CORICUMA",
+      "name": "Coricuma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORICUMA_NICOYENSIS",
+          "name": "Coricuma nicoyensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coricuma",
+          "sourceIds": {
+            "checklistbank": "Coricuma_nicoyensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bodotriidae"
     }
   ],
-  "speciesCount": 464,
+  "speciesCount": 465,
   "appSlug": "bodotriidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 41,
+  "genusCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -8968,6 +9002,6 @@
       "orderKey": 1500,
       "familyKey": 9674
     },
-    "checklistbank": "74df6138-5ba8-4f99-87bc-2d831b2ae4d0"
+    "checklistbank": "Bodotriidae"
   }
 }

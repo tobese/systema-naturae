@@ -16,7 +16,10 @@
           "sourcedFrom": "worms",
           "lineage": "Balaena",
           "authorship": "Linnaeus, 1758",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Balaena_mysticetus"
+          }
         },
         {
           "id": "SP_BALAENA_GLACIALIS_M_LLER_1776",
@@ -195,7 +198,10 @@
           "sourcedFrom": "worms",
           "lineage": "Eubalaena",
           "authorship": "(Müller, 1776)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Eubalaena_glacialis"
+          }
         },
         {
           "id": "SP_EUBALAENA_AUSTRALIS_DESMOULINS_1822",
@@ -205,7 +211,10 @@
           "sourcedFrom": "worms",
           "lineage": "Eubalaena",
           "authorship": "(Desmoulins, 1822)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Eubalaena_australis"
+          }
         },
         {
           "id": "SP_EUBALAENA_JAPONICA_LAC_P_DE_1818",
@@ -215,7 +224,10 @@
           "sourcedFrom": "worms",
           "lineage": "Eubalaena",
           "authorship": "(Lacépède, 1818)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Eubalaena_japonica"
+          }
         },
         {
           "id": "SP_EUBALAENA_CAPENSIS_GRAY_1866",
@@ -345,11 +357,68 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Balaenidae"
+    },
+    {
+      "id": "GENUS_ARCHAEOBALAENA",
+      "name": "Archaeobalaena",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAEOBALAENA_DOSANKO",
+          "name": "Archaeobalaena dosanko",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeobalaena",
+          "sourceIds": {
+            "checklistbank": "Archaeobalaena_dosanko"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "balaenidae"
+    },
+    {
+      "id": "GENUS_IDIOCETUS",
+      "name": "Idiocetus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_IDIOCETUS_GUICCIARDINII",
+          "name": "Idiocetus guicciardinii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Idiocetus",
+          "sourceIds": {
+            "checklistbank": "Idiocetus_guicciardinii"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_IDIOCETUS_TSUGARENSIS",
+          "name": "Idiocetus tsugarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Idiocetus",
+          "sourceIds": {
+            "checklistbank": "Idiocetus_tsugarensis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "balaenidae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 31,
   "appSlug": "balaenidae",
   "sourcedFrom": "worms",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank": "Balaenidae"
+  }
 }

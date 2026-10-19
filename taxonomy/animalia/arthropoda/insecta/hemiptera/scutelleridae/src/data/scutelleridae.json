@@ -73,7 +73,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Odontoscelis",
           "authorship": "(Linnaeus, 1761)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Odontoscelis_fuliginosa"
+          }
         },
         {
           "id": "SP_ODONTOSCELIS_LINEOLA_RAMBUR_1839",
@@ -213,7 +216,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Eurygaster",
           "authorship": "(Linnaeus, 1758)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Eurygaster_maura"
+          }
         },
         {
           "id": "SP_EURYGASTER_AUSTRIACA_SCHRANK_1776",
@@ -383,6 +389,18 @@
             "checklistbank": "247149"
           },
           "children": []
+        },
+        {
+          "id": "SP_EURYGASTER_GRANULOSUS",
+          "name": "Eurygaster granulosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eurygaster",
+          "sourceIds": {
+            "checklistbank": "Eurygaster_granulosus"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -401,7 +419,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Odontotarsus",
           "authorship": "(Linnaeus, 1767)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Odontotarsus_grammicus"
+          }
         },
         {
           "id": "SP_ODONTOTARSUS_CALLOSUS_HORV_TH_1896",
@@ -1233,7 +1254,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Calliphara",
           "authorship": "(Fabricius, 1775)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Calliphara_regalis"
+          }
         },
         {
           "id": "SP_CALLIPHARA_NOBILIS",
@@ -1242,6 +1266,18 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Calliphara",
+          "children": []
+        },
+        {
+          "id": "SP_CALLIPHARA_IMPERIALIS",
+          "name": "Calliphara imperialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calliphara",
+          "sourceIds": {
+            "checklistbank": "Calliphara_imperialis"
+          },
           "children": []
         }
       ],
@@ -1424,6 +1460,18 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Chrysocoris",
+          "children": []
+        },
+        {
+          "id": "SP_CHRYSOCORIS_STOCKERUS",
+          "name": "Chrysocoris stockerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chrysocoris",
+          "sourceIds": {
+            "checklistbank": "Chrysocoris_stockerus"
+          },
           "children": []
         }
       ],
@@ -2007,7 +2055,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Choerocoris",
           "authorship": "(Fabricius, 1775)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Choerocoris_paganus"
+          }
         },
         {
           "id": "SP_CHOEROCORIS_VARIEGATUS",
@@ -2111,7 +2162,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Diolcus",
           "authorship": "(Fabricius, 1775)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Diolcus_irroratus"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2632,11 +2686,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Scutelleridae"
+    },
+    {
+      "id": "GENUS_HEISSIPHARA",
+      "name": "Heissiphara",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEISSIPHARA_MINUTA",
+          "name": "Heissiphara minuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Heissiphara",
+          "sourceIds": {
+            "checklistbank": "Heissiphara_minuta"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scutelleridae"
+    },
+    {
+      "id": "GENUS_XEROBIA",
+      "name": "Xerobia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XEROBIA_SCULPTURATA",
+          "name": "Xerobia sculpturata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xerobia",
+          "sourceIds": {
+            "checklistbank": "Xerobia_sculpturata"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scutelleridae"
     }
   ],
-  "speciesCount": 209,
+  "speciesCount": 214,
   "appSlug": "scutelleridae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 54
+  "genusCount": 56,
+  "sourceIds": {
+    "checklistbank": "Scutelleridae"
+  }
 }

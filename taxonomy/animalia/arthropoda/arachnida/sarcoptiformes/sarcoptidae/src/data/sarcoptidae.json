@@ -16,7 +16,10 @@
           "sourcedFrom": "worms",
           "lineage": "Sarcoptes",
           "authorship": "(DeGeer, 1778)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Sarcoptes_scabiei"
+          }
         },
         {
           "id": "SP_SARCOPTES_CATI_HERING_1838",
@@ -75,7 +78,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Notoedres",
           "authorship": "(Hering, 1838)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Notoedres_cati"
+          }
         },
         {
           "id": "SP_NOTOEDRES_CHIROPTERALIS_TROUESSART_1896",
@@ -105,7 +111,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Notoedres",
           "authorship": "Megnin, 1877",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Notoedres_muris"
+          }
         },
         {
           "id": "SP_NOTOEDRES_MINOR_F_RSTENBERG_1861",
@@ -226,11 +235,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Sarcoptidae"
+    },
+    {
+      "id": "GENUS_CHIROPHAGOIDES",
+      "name": "Chirophagoides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHIROPHAGOIDES_MYSTACOPIS",
+          "name": "Chirophagoides mystacopis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chirophagoides",
+          "sourceIds": {
+            "checklistbank": "Chirophagoides_mystacopis"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcoptidae"
     }
   ],
-  "speciesCount": 17,
+  "speciesCount": 18,
   "appSlug": "sarcoptidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 6
+  "genusCount": 7,
+  "sourceIds": {
+    "checklistbank": "Sarcoptidae"
+  }
 }

@@ -235,7 +235,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Prorhynchus",
           "authorship": "Haswell, 1898",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Prorhynchus_putealis"
+          }
         },
         {
           "id": "SP_PRORHYNCHUS_ALPINUS_STEINB_CK_1924",
@@ -422,11 +425,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Prorhynchidae"
+    },
+    {
+      "id": "GENUS_HOFSTENIOPLESIA",
+      "name": "Hofstenioplesia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HOFSTENIOPLESIA_HASWELLI",
+          "name": "Hofstenioplesia haswelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hofstenioplesia",
+          "sourceIds": {
+            "checklistbank": "Hofstenioplesia_haswelli"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prorhynchidae"
     }
   ],
-  "speciesCount": 39,
+  "speciesCount": 40,
   "appSlug": "prorhynchidae",
   "sourcedFrom": "checklistbank",
   "lineage": "Platyhelminthes",
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank": "Prorhynchidae"
+  }
 }

@@ -21,7 +21,8 @@
           "sourceIds": {
             "col": [
               "5VH2Y"
-            ]
+            ],
+            "checklistbank": "Anthracocaris_scotica"
           },
           "authorityIds": "col:5VH2Y",
           "description": "Anthracocaris scotica is a anthracocarididae species found in its native region."
@@ -88,17 +89,50 @@
           },
           "authorityIds": "itis:91280",
           "description": "Ophthalmapseudes giganteus is a anthracocarididae species found in its native region."
+        },
+        {
+          "id": "SP_OPHTHALMAPSEUDES_RHENANUS",
+          "name": "Ophthalmapseudes rhenanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ophthalmapseudes",
+          "sourceIds": {
+            "checklistbank": "Ophthalmapseudes_rhenanus"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Anthracocarididae"
+    },
+    {
+      "id": "GENUS_EUCRYPTOCARIS",
+      "name": "Eucryptocaris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUCRYPTOCARIS_ASHERORUM",
+          "name": "Eucryptocaris asherorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucryptocaris",
+          "sourceIds": {
+            "checklistbank": "Eucryptocaris_asherorum"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anthracocarididae"
     }
   ],
-  "speciesCount": 4,
+  "speciesCount": 6,
   "appSlug": "anthracocarididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -106,6 +140,7 @@
       "classKey": 229,
       "orderKey": 1378,
       "familyKey": 5418
-    }
+    },
+    "checklistbank": "Anthracocarididae"
   }
 }

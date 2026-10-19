@@ -505,6 +505,31 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     #   plantae copy is a duplicate carrying the wrong family context.
     "SP_ALICEATHRIPS_AUSTRALIENSIS",
     "SP_CORTICIUM_TOPSENTI_POULIQUEN_1972",
+    # Wikispecies import (2026-10-19) surfaced 18 new collisions. 11 were
+    # contamination (templated or empty description on one side, GBIF
+    # Backbone confirming exactly one kingdom for the species) and were
+    # removed from the tree rather than allow-listed -- see that commit.
+    # These 3 are genuine homonyms, confirmed against GBIF Backbone (both
+    # kingdoms carry the exact binomial as a real, independently-described
+    # taxon):
+    # SP_CHLORIS_CHLORIS / SP_CHLORIS_SINICA: Chloris Sw. 1788 (a grass
+    #   genus, Poaceae) and Chloris Illiger 1811 (greenfinches, Fringillidae)
+    #   are two independently published genus names; GBIF carries both
+    #   species as "accepted" in their respective kingdom.
+    # SP_HERBERTIA_BRASILIENSIS: Animalia/Pteromalidae (a wasp) is GBIF's
+    #   accepted placement; the Plantae/Iridaceae copy is GBIF's own
+    #   "synonym" entry (an older name for a different, currently-accepted
+    #   Iridaceae species) rather than contamination -- the name genuinely
+    #   was once a published plant name, carried here by wikispecies.
+    "SP_CHLORIS_CHLORIS", "SP_CHLORIS_SINICA", "SP_HERBERTIA_BRASILIENSIS",
+    # UNRESOLVED -- kept provisionally rather than guessed on. Neither GBIF
+    # Backbone nor Catalogue of Life carries these at all, so there is no
+    # authoritative signal for either side, unlike the 11 removed above. Same
+    # "plant-family template vs. empty Pentatomidae description" shape as
+    # several of those, but with zero confirmation either way. Revisit if a
+    # future source (a Pentatomidae-specific checklist, or a fuller COL/GBIF
+    # release) resolves which kingdom each one actually belongs to.
+    "SP_TSHINGISELLA_BELLA", "SP_PHRICODUS_BESSACI", "SP_DESERTOMENIDA_ALBULA",
 }
 
 def check_duplicate_species():

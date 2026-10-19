@@ -2225,6 +2225,30 @@
             "checklistbank": "221116"
           },
           "children": []
+        },
+        {
+          "id": "SP_TRICHORIBATES_TEPETLENSIS",
+          "name": "Trichoribates tepetlensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichoribates",
+          "sourceIds": {
+            "checklistbank": "Trichoribates_tepetlensis"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRICHORIBATES_OCOTLICUS",
+          "name": "Trichoribates ocotlicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichoribates",
+          "sourceIds": {
+            "checklistbank": "Trichoribates_ocotlicus"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6265,7 +6289,8 @@
           "lineage": "macrogena",
           "authorship": "Ermilov & Minor, 2015",
           "sourceIds": {
-            "gbif": 8736832
+            "gbif": 8736832,
+            "checklistbank": "Macrogena_abbreviata"
           },
           "uuid": "7f07d9e5-5a41-5f5-bd0-6aec77675dfc87",
           "authorityIds": "gbif:8736832",
@@ -6348,7 +6373,10 @@
           "uuid": "16bdc361-e1b3-567-a97-301095b3323869",
           "children": [],
           "description": "Macrogena minor is a macrogena species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "sourceIds": {
+            "checklistbank": "Macrogena_minor"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -10585,13 +10613,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ceratozetidae"
+    },
+    {
+      "id": "GENUS_ONYCHOBATES",
+      "name": "Onychobates",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ONYCHOBATES_NIDICOLA",
+          "name": "Onychobates nidicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Onychobates",
+          "sourceIds": {
+            "checklistbank": "Onychobates_nidicola"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ceratozetidae"
     }
   ],
-  "speciesCount": 582,
+  "speciesCount": 585,
   "appSlug": "ceratozetidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 55,
+  "genusCount": 56,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -10600,7 +10649,7 @@
       "orderKey": 542,
       "familyKey": 7412
     },
-    "checklistbank": "15928"
+    "checklistbank": "Ceratozetidae"
   },
   "speciesList": []
 }

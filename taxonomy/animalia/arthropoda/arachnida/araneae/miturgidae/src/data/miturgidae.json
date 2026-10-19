@@ -1023,7 +1023,8 @@
           "sourceIds": {
             "col": [
               "VC5WC"
-            ]
+            ],
+            "checklistbank": "Prochora_shahidi"
           },
           "authorityIds": "col:VC5WC",
           "continents": [
@@ -6430,13 +6431,79 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Miturgidae"
+    },
+    {
+      "id": "GENUS_CORYSSIPHUS",
+      "name": "Coryssiphus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CORYSSIPHUS_PRAEUSTUS",
+          "name": "Coryssiphus praeustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryssiphus",
+          "sourceIds": {
+            "checklistbank": "Coryssiphus_praeustus"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CORYSSIPHUS_CINERASCENS",
+          "name": "Coryssiphus cinerascens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coryssiphus",
+          "sourceIds": {
+            "checklistbank": "Coryssiphus_cinerascens"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "miturgidae"
+    },
+    {
+      "id": "GENUS_SEPTSIGILLA",
+      "name": "Septsigilla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SEPTSIGILLA_TONGBIGUAN",
+          "name": "Septsigilla tongbiguan",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Septsigilla",
+          "sourceIds": {
+            "checklistbank": "Septsigilla_tongbiguan"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SEPTSIGILLA_ZHONGI",
+          "name": "Septsigilla zhongi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Septsigilla",
+          "sourceIds": {
+            "checklistbank": "Septsigilla_zhongi"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "miturgidae"
     }
   ],
-  "speciesCount": 264,
+  "speciesCount": 268,
   "appSlug": "miturgidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 49,
+  "genusCount": 51,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -6445,7 +6512,7 @@
       "orderKey": 1496,
       "familyKey": 5632
     },
-    "checklistbank": "urn:lsid:nmbe.ch:spiderfam:0104"
+    "checklistbank": "Miturgidae"
   },
   "speciesList": []
 }

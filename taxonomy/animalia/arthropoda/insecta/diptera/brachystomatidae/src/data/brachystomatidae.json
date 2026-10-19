@@ -1579,7 +1579,8 @@
           "sourceIds": {
             "col": [
               "8B2DH"
-            ]
+            ],
+            "checklistbank": "Apalocnemis_canadambris"
           },
           "authorityIds": "col:8B2DH",
           "description": "Apalocnemis canadambris is a apalocnemis species found in its native region."
@@ -3582,7 +3583,8 @@
           "sourceIds": {
             "col": [
               "58GMM"
-            ]
+            ],
+            "checklistbank": "Trichopeza_chaomek"
           },
           "authorityIds": "col:58GMM",
           "description": "Trichopeza chaomek is a trichopeza species found in its native region."
@@ -3600,7 +3602,8 @@
           "sourceIds": {
             "col": [
               "58GMN"
-            ]
+            ],
+            "checklistbank": "Trichopeza_liliae"
           },
           "authorityIds": "col:58GMN",
           "description": "Trichopeza liliae is a trichopeza species found in its native region."
@@ -3618,7 +3621,8 @@
           "sourceIds": {
             "col": [
               "58GML"
-            ]
+            ],
+            "checklistbank": "Trichopeza_albocincta"
           },
           "authorityIds": "col:58GML",
           "description": "Trichopeza albocincta is a trichopeza species found in its native region."
@@ -3636,7 +3640,8 @@
           "sourceIds": {
             "col": [
               "58GMS"
-            ]
+            ],
+            "checklistbank": "Trichopeza_pia"
           },
           "authorityIds": "col:58GMS",
           "description": "Trichopeza pia is a trichopeza species found in its native region."
@@ -3673,6 +3678,18 @@
           "lineage": "trichopeza",
           "uuid": "d41f8b91-0f36-50c-a8b-698619dcd0de09",
           "description": "Trichopeza fusca is a trichopeza species found in its native region."
+        },
+        {
+          "id": "SP_TRICHOPEZA_LONGICORNIS",
+          "name": "Trichopeza longicornis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichopeza",
+          "sourceIds": {
+            "checklistbank": "Trichopeza_longicornis"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -4679,13 +4696,46 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "brachystomatidae"
+    },
+    {
+      "id": "GENUS_ADIPSOMYIA",
+      "name": "Adipsomyia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ADIPSOMYIA_GRESSITTI",
+          "name": "Adipsomyia gressitti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adipsomyia",
+          "sourceIds": {
+            "checklistbank": "Adipsomyia_gressitti"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ADIPSOMYIA_STIGMOSA",
+          "name": "Adipsomyia stigmosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Adipsomyia",
+          "sourceIds": {
+            "checklistbank": "Adipsomyia_stigmosa"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachystomatidae"
     }
   ],
-  "speciesCount": 259,
+  "speciesCount": 262,
   "appSlug": "brachystomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 28,
+  "genusCount": 29,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4694,6 +4744,6 @@
       "orderKey": 811,
       "familyKey": 3334
     },
-    "checklistbank": "10060e0a-52a9-4fed-9d73-ade3d0b7504b"
+    "checklistbank": "Brachystomatidae"
   }
 }

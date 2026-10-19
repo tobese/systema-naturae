@@ -85,7 +85,10 @@
           "sourcedFrom": "worms",
           "lineage": "Monodon",
           "authorship": "Linnaeus, 1758",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Monodon_monoceros"
+          }
         }
       ],
       "sourcedFrom": "worms",
@@ -335,11 +338,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Monodontidae"
+    },
+    {
+      "id": "GENUS_DENEBOLA",
+      "name": "Denebola",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DENEBOLA_BRACHYCEPHALA",
+          "name": "Denebola brachycephala",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Denebola",
+          "sourceIds": {
+            "checklistbank": "Denebola_brachycephala"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monodontidae"
+    },
+    {
+      "id": "GENUS_HABORODELPHIS",
+      "name": "Haborodelphis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HABORODELPHIS_JAPONICUS",
+          "name": "Haborodelphis japonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Haborodelphis",
+          "sourceIds": {
+            "checklistbank": "Haborodelphis_japonicus"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "monodontidae"
     }
   ],
-  "speciesCount": 27,
+  "speciesCount": 29,
   "appSlug": "monodontidae",
   "sourcedFrom": "worms",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 7
+  "genusCount": 9,
+  "sourceIds": {
+    "checklistbank": "Monodontidae"
+  }
 }

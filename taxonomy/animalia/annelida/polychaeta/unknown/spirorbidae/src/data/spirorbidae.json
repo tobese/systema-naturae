@@ -3,9 +3,31 @@
   "name": "Spirorbidae",
   "rank": "FAMILY",
   "commonName": "Spirorbidae",
-  "children": [],
-  "genusCount": 0,
-  "speciesCount": 0,
+  "children": [
+    {
+      "id": "GENUS_CIRCEIS",
+      "name": "Circeis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CIRCEIS_ARMORICANA",
+          "name": "Circeis armoricana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Circeis",
+          "sourceIds": {
+            "checklistbank": "Circeis_armoricana"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spirorbidae"
+    }
+  ],
+  "genusCount": 1,
+  "speciesCount": 1,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -13,6 +35,7 @@
       "classKey": 256,
       "orderKey": 1080,
       "familyKey": 4289289
-    }
+    },
+    "checklistbank": "Spirorbidae"
   }
 }

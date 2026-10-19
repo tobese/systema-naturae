@@ -3,9 +3,31 @@
   "name": "Cambarincolidae",
   "rank": "FAMILY",
   "commonName": "Cambarincolidae",
-  "children": [],
-  "genusCount": 0,
-  "speciesCount": 0,
+  "children": [
+    {
+      "id": "GENUS_TRIANNULATA",
+      "name": "Triannulata",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIANNULATA_MAGNA",
+          "name": "Triannulata magna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Triannulata",
+          "sourceIds": {
+            "checklistbank": "Triannulata_magna"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cambarincolidae"
+    }
+  ],
+  "genusCount": 1,
+  "speciesCount": 1,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -14,6 +36,6 @@
       "orderKey": 471,
       "familyKey": 6955
     },
-    "checklistbank": "11257"
+    "checklistbank": "Cambarincolidae"
   }
 }

@@ -16,7 +16,10 @@
           "sourcedFrom": "worms",
           "lineage": "Leporacarus",
           "authorship": "(Pagenstecher, 1861)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Leporacarus_gibbus"
+          }
         }
       ],
       "sourcedFrom": "worms",
@@ -54,7 +57,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Listrophorus",
           "authorship": "Mégnin, 1885",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Listrophorus_mustelae"
+          }
         },
         {
           "id": "SP_LISTROPHORUS_BREVIPES_DUBININA_1968",
@@ -89,11 +95,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Listrophoridae"
+    },
+    {
+      "id": "GENUS_LYNXACARUS",
+      "name": "Lynxacarus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LYNXACARUS_RADOVSKYI",
+          "name": "Lynxacarus radovskyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lynxacarus",
+          "sourceIds": {
+            "checklistbank": "Lynxacarus_radovskyi"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "listrophoridae"
     }
   ],
-  "speciesCount": 6,
+  "speciesCount": 7,
   "appSlug": "listrophoridae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 3
+  "genusCount": 4,
+  "sourceIds": {
+    "checklistbank": "Listrophoridae"
+  }
 }

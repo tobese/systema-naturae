@@ -34,7 +34,8 @@
             ],
             "col": [
               "4HHC2"
-            ]
+            ],
+            "checklistbank": "Physma_ahtianum"
           },
           "uuid": "bf4b0856-c864-5fd-bac-051d78f96f58e6",
           "authorityIds": "col:4HHC2,gbif:3423700,mycobank:362140"
@@ -62,7 +63,8 @@
             ],
             "col": [
               "4HHC5"
-            ]
+            ],
+            "checklistbank": "Physma_boryanum"
           },
           "uuid": "c19de7bc-4004-54a-ad7-b910cc2d12d33b",
           "authorityIds": "col:4HHC5,gbif:3423687,mycobank:400877"
@@ -246,7 +248,8 @@
             ],
             "mycobank": [
               "345643"
-            ]
+            ],
+            "checklistbank": "Physma_hondoanum"
           },
           "uuid": "15985008-0f9d-552-9d9-2d7479af844ff4",
           "authorityIds": "gbif:3423709,mycobank:345643"
@@ -325,7 +328,8 @@
             ],
             "mycobank": [
               "400911"
-            ]
+            ],
+            "checklistbank": "Physma_radians"
           },
           "uuid": "495e738f-cca9-5c2-a73-4c0cda6d62fa2a",
           "authorityIds": "gbif:3423682,mycobank:400911"
@@ -14409,6 +14413,18 @@
           "children": [],
           "uuid": "c56bf35e-8d3f-563-932-b50d578b39eaff",
           "description": "Siphulastrum mammillatum is a pannariaceae species found in its native region."
+        },
+        {
+          "id": "SP_SIPHULASTRUM_ALPINUM",
+          "name": "Siphulastrum alpinum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphulastrum",
+          "sourceIds": {
+            "checklistbank": "Siphulastrum_alpinum"
+          },
+          "children": []
         }
       ],
       "authorship": "Müller Arg."
@@ -15145,7 +15161,8 @@
             ],
             "mycobank": [
               "345758"
-            ]
+            ],
+            "checklistbank": "Ramalodium_japonicum"
           },
           "uuid": "d790c665-d381-5e7-84b-5236e7b1f7f829",
           "authorityIds": "gbif:3423035,mycobank:345758"
@@ -15639,6 +15656,18 @@
           },
           "uuid": "fc4ab166-1771-5b4-b6c-f4c982705c6798",
           "authorityIds": "col:6NPBH,gbif:8136533,mycobank:564664"
+        },
+        {
+          "id": "SP_KROSWIA_EPISPORA",
+          "name": "Kroswia epispora",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kroswia",
+          "sourceIds": {
+            "checklistbank": "Kroswia_epispora"
+          },
+          "children": []
         }
       ],
       "authorship": "P.M. Jørgensen"
@@ -20086,11 +20115,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pannariaceae"
+    },
+    {
+      "id": "GENUS_MOELLEROPSIS",
+      "name": "Moelleropsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MOELLEROPSIS_NEBULOSA",
+          "name": "Moelleropsis nebulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Moelleropsis",
+          "sourceIds": {
+            "checklistbank": "Moelleropsis_nebulosa"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pannariaceae"
     }
   ],
   "authorship": "Tuckerman",
-  "genusCount": 73,
-  "speciesCount": 908,
+  "genusCount": 74,
+  "speciesCount": 911,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
@@ -20099,6 +20149,6 @@
       "orderKey": 1055,
       "familyKey": 4119
     },
-    "checklistbank": "176448"
+    "checklistbank": "Pannariaceae"
   }
 }

@@ -105,7 +105,10 @@
           "sourcedFrom": "worms",
           "lineage": "Eupilema",
           "authorship": "Haeckel, 1880",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Eupilema_scapulare"
+          }
         }
       ]
     },
@@ -408,6 +411,18 @@
           "children": [],
           "uuid": "6ee970b8-e29e-59c-965-ee67cd089c99d7",
           "description": "Rhizostoma aff. is a rhizostomatidae species found in its native region."
+        },
+        {
+          "id": "SP_RHIZOSTOMA_LUTEUM",
+          "name": "Rhizostoma luteum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhizostoma",
+          "sourceIds": {
+            "checklistbank": "Rhizostoma_luteum"
+          },
+          "children": []
         }
       ]
     },
@@ -725,10 +740,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Rhizostomatidae"
+    },
+    {
+      "id": "GENUS_STOMOLOPHUS",
+      "name": "Stomolophus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STOMOLOPHUS_FRITILLARIS",
+          "name": "Stomolophus fritillaris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stomolophus",
+          "sourceIds": {
+            "checklistbank": "Stomolophus_fritillaris"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STOMOLOPHUS_MELEAGRIS",
+          "name": "Stomolophus meleagris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stomolophus",
+          "sourceIds": {
+            "checklistbank": "Stomolophus_meleagris"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "rhizostomatidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 36,
+  "genusCount": 12,
+  "speciesCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -737,6 +785,6 @@
       "orderKey": 1245,
       "familyKey": 3376
     },
-    "checklistbank": "e92a72ec-b73a-400a-9591-89f78a75c596"
+    "checklistbank": "Rhizostomatidae"
   }
 }

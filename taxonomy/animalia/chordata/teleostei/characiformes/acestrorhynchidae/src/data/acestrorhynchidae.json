@@ -510,7 +510,8 @@
             ],
             "itis": [
               "641086"
-            ]
+            ],
+            "checklistbank": "Heterocharax_virgulatus"
           },
           "authorityIds": "col:3L87K,itis:641086",
           "description": "Heterocharax virgulatus is a acestrorhynchidae species found in its native region."
@@ -531,7 +532,8 @@
             ],
             "itis": [
               "641084"
-            ]
+            ],
+            "checklistbank": "Heterocharax_leptogrammus"
           },
           "authorityIds": "col:3L87H,itis:641084",
           "description": "Heterocharax leptogrammus is a acestrorhynchidae species found in its native region."
@@ -576,7 +578,8 @@
             ],
             "col": [
               "3G2JH"
-            ]
+            ],
+            "checklistbank": "Gilbertolus_alatus"
           },
           "authorityIds": "col:3G2JH,itis:640997",
           "description": "Gilbertolus alatus is a acestrorhynchidae species found in its native region."
@@ -597,7 +600,8 @@
             ],
             "col": [
               "3G2JJ"
-            ]
+            ],
+            "checklistbank": "Gilbertolus_atratoensis"
           },
           "authorityIds": "col:3G2JJ,itis:640998",
           "description": "Gilbertolus atratoensis is a acestrorhynchidae species found in its native region."
@@ -751,18 +755,42 @@
           "sourcedFrom": "worms",
           "lineage": "Hoplocharax",
           "authorship": "Géry, 1966",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank": "Hoplocharax_goethei"
+          }
         }
       ],
       "sourcedFrom": "worms",
       "lineage": "Acestrorhynchidae"
+    },
+    {
+      "id": "GENUS_PRIOCHARAX",
+      "name": "Priocharax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PRIOCHARAX_NANUS",
+          "name": "Priocharax nanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Priocharax",
+          "sourceIds": {
+            "checklistbank": "Priocharax_nanus"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acestrorhynchidae"
     }
   ],
-  "speciesCount": 32,
+  "speciesCount": 33,
   "appSlug": "acestrorhynchidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 9,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -770,6 +798,6 @@
       "orderKey": 537,
       "familyKey": 7198
     },
-    "checklistbank": "303968"
+    "checklistbank": "Acestrorhynchidae"
   }
 }
