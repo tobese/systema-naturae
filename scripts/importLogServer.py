@@ -73,11 +73,65 @@ PAGE = """<!doctype html>
   .kingdoms { color: var(--dim); font-size: 12px; }
   .empty { color: var(--dim); padding: 30px 0; }
   .wrap { overflow-x: auto; max-width: 1100px; }
+  .queue {
+    max-width: 1100px; margin-bottom: 26px; background: var(--panel);
+    border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px;
+  }
+  .queue h2 {
+    font-size: 13px; margin: 0 0 10px; color: var(--dim);
+    text-transform: uppercase; letter-spacing: .04em; font-weight: 600;
+  }
+  .queue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 760px) { .queue-grid { grid-template-columns: 1fr; } }
+  .queue-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
+  .queue-list li {
+    display: flex; justify-content: space-between; gap: 10px;
+    padding: 4px 0; border-bottom: 1px solid var(--border);
+  }
+  .queue-list li:last-child { border-bottom: none; }
+  .qs-done { color: var(--ok); }
+  .qs-running { color: var(--accent); }
+  .qn { font-variant-numeric: tabular-nums; color: var(--dim); white-space: nowrap; }
+  .open-list { margin: 0; padding: 0 0 0 16px; font-size: 12.5px; color: var(--text); }
+  .open-list li { padding: 3px 0; }
+  .open-list b { color: var(--text); }
 </style>
 </head>
 <body>
   <h1>Import Log</h1>
   <div class="sub" id="asof">loading&hellip;</div>
+
+  <div class="queue">
+    <h2>2026-10-19 import queue &amp; open items &mdash; see docs/dataset-inbox.md for full detail</h2>
+    <div class="queue-grid">
+      <ul class="queue-list">
+        <li><span>WTaxa weevils</span> <span class="qn qs-done">+251 done</span></li>
+        <li><span>WoRMS Brachyura</span> <span class="qn qs-done">+7 done</span></li>
+        <li><span>WoRMS Trematoda</span> <span class="qn qs-done">+957 done</span></li>
+        <li><span>Nymphalidae</span> <span class="qn qs-done">+422 done</span></li>
+        <li><span>ScaleNet</span> <span class="qn qs-done">+493 done</span></li>
+        <li><span>Nemys nematodes</span> <span class="qn qs-done">+2,127 done</span></li>
+        <li><span>WoRMS full (2011)</span> <span class="qn qs-done">+52,294 done</span></li>
+        <li><span>FLOW</span> <span class="qn qs-done">+290 done</span></li>
+        <li><span>SF Psocodea</span> <span class="qn qs-done">+547 done</span></li>
+        <li><span>AusFungi</span> <span class="qn qs-done">+3,395 done</span></li>
+        <li><span>LDL Neuropterida</span> <span class="qn qs-done">+287 done</span></li>
+        <li><span>MOWD Membracoidea</span> <span class="qn qs-done">+1,904 done</span></li>
+        <li><span>WCVP</span> <span class="qn qs-done">+6,173 done</span></li>
+        <li><span>Wikispecies, pending round</span> <span class="qn qs-done">+9,972 done</span></li>
+      </ul>
+      <ul class="open-list">
+        <li><b>Japan fungi checklist</b> &mdash; 0 family overlap, needs scaffolding first</li>
+        <li><b>WoRMS Scleractinia / Amphipoda</b> &mdash; +4 each, saturated, declined</li>
+        <li><b>Banco Taxonômico Brasileiro</b> &mdash; 404, no archive available</li>
+        <li><b>LepIndex / FishBase</b> &mdash; old hedged leads, not re-examined</li>
+        <li><b>pendingFamilies: 861 families, no archive recorded</b> &mdash; need manual tracing</li>
+        <li><b>pendingFamilies: 15,642 families genuinely absent</b> &mdash; mostly bacteria/GTDB, on hold</li>
+        <li><b>Two tree-wide audits</b> logged in BACKLOG.md (WoRMS name-quoting, historical id collisions)</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="cards" id="cards"></div>
   <div class="wrap"><table id="tbl">
     <thead><tr>

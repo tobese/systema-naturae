@@ -138,6 +138,7 @@ def main() -> int:
 
     path = sources.work_file(work_slug, name)
     meta_file = sources.meta_path_for(path)
+    meta: dict = {}
     if os.path.exists(meta_file):
         with open(meta_file, encoding="utf-8") as fh:
             meta = json.load(fh)
@@ -154,7 +155,51 @@ def main() -> int:
           f" ({summary['crossFamily']} already existed in a different family)")
     fam_count = len(summary['families'])
     print(f"  flushed {fam_count} famil{'y' if fam_count == 1 else 'ies'}")
+
+    kingdoms = sorted({k for (k, *_rest) in groups})
+    record_import_log(work_slug, meta, summary, staged=len(records), kingdoms=kingdoms)
     return 0
+
+
+def record_import_log(work_slug: str, meta: dict, summary: dict, *,
+                       staged: int, kingdoms: list) -> None:
+    """Append one row to data/import-log.jsonl, the same file
+    importColChecklist.py's direct-write path writes -- so the split
+    pipeline shows up in importLogView.py / importLogServer.py too, instead
+    of being invisible to both just because the apply step has no archive
+    to measure offered/held/refused against. transformColChecklist.py
+    carries those numbers through the transform sidecar's `routingStats`
+    (see sources.record_transformed()) precisely so this can fold them
+    back in; a sidecar with no routingStats (an older transform, or a
+    non-ColChecklist source) still gets a row, just without those fields.
+    """
+    import datetime as _dt
+    stats = meta.get("routingStats") or {}
+    archive_path = (meta.get("archive") or {}).get("path", "")
+    row = {
+        "at": _dt.datetime.now().isoformat(timespec="seconds"),
+        "source": meta.get("source") or "transformColChecklist",
+        "archive": os.path.basename(archive_path) or work_slug,
+        "archivePath": archive_path,
+        "slugHint": work_slug,
+        "title": meta.get("source") or work_slug,
+        "offered": stats.get("offered"),
+        "alreadyHeld": stats.get("alreadyHeld"),
+        "nonBinominal": stats.get("nonBinominal"),
+        "staged": staged,
+        "refused": stats.get("refused"),
+        "refusalRate": stats.get("refusalRate"),
+        "added": summary["added"],
+        "deduped": summary["merged"],
+        "families": len(summary["families"]),
+        "kingdoms": kingdoms,
+        "missedFamilies": stats.get("missedFamilies"),
+    }
+    log = os.path.join("data", "import-log.jsonl")
+    os.makedirs(os.path.dirname(log), exist_ok=True)
+    with open(log, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+    print(f"  recorded {log}")
 
 
 def _selftest() -> int:

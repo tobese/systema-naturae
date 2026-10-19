@@ -81,7 +81,8 @@ def record_transformed(slug: str, name: str, records, *,
                         archive_path: str = "",
                         archive_sha256: str = "",
                         fetched_at: str = "",
-                        transformer: str = "") -> str:
+                        transformer: str = "",
+                        routing_stats: dict | None = None) -> str:
     """Write a transformer's output as JSONL into `slug`'s work dir, return
     the path.
 
@@ -116,6 +117,13 @@ def record_transformed(slug: str, name: str, records, *,
     its own uuid from importwrite at merge time, not here),
     `transformedAt`, and `recordCount`.
 
+    `routing_stats`: route_species()'s own numbers (offered/alreadyHeld/
+    refused/refusalRate/missedFamilies) -- only the transform step, which
+    runs where the archive lives, can compute these; importTransformed.py
+    has no archive to measure against. Carried through the sidecar so the
+    apply step can fold them into one complete data/import-log.jsonl row
+    instead of writing a direct-write-shaped row with four blank fields.
+
     No metadata keywords given -> no sidecar, so existing callers are
     unaffected.
     """
@@ -126,7 +134,8 @@ def record_transformed(slug: str, name: str, records, *,
             fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
             count += 1
 
-    if any([source, source_dataset_id, source_url, archive_path, archive_sha256, fetched_at, transformer]):
+    if any([source, source_dataset_id, source_url, archive_path, archive_sha256,
+            fetched_at, transformer, routing_stats]):
         doc: dict = {}
         if source:
             doc["source"] = source
@@ -145,6 +154,8 @@ def record_transformed(slug: str, name: str, records, *,
             doc["fetchedAt"] = fetched_at
         if transformer:
             doc["transformer"] = transformer
+        if routing_stats:
+            doc["routingStats"] = routing_stats
         doc["runId"] = str(_uuid.uuid4())
         doc["transformedAt"] = time.strftime("%Y-%m-%dT%H:%M:%S%z")
         doc["recordCount"] = count

@@ -123,6 +123,14 @@ def main() -> int:
         source_url=meta.get("url") or "",
         archive_path=args.archive,
         transformer="importColChecklist.route_species",
+        routing_stats={
+            "offered": r.cand_count,
+            "alreadyHeld": r.held,
+            "nonBinominal": r.nonb,
+            "refused": r.refused,
+            "refusalRate": round(r.refused / max(1, r.cand_count), 4),
+            "missedFamilies": len({f for _kk, f in r.missed if f}),
+        },
     )
     staged_total = sum(len(v) for v in r.staged.values())
     print(f"\n  wrote {path}  ({staged_total:,} species staged, "
