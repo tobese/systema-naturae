@@ -467,6 +467,48 @@ func TestFlush_WritesAndClearsDirty(t *testing.T) {
 	}
 }
 
+// TestFlush_RecomputesSpeciesCount is the regression test for the first real
+// split-pipeline import (2026-10-19, World List of Turbellarian Worms): this
+// service added and merged species correctly but never touched
+// speciesCount, so 20 family files silently drifted out of sync with their
+// own contents -- caught by verifyTree.py's "family data file speciesCount
+// matches its contents" gate, not by anything in this service. flush() now
+// recomputes it from the actual genus/species tree being written, the same
+// value importColChecklist.py's direct-write path stamps on every apply.
+func TestFlush_RecomputesSpeciesCount(t *testing.T) {
+	root := t.TempDir()
+	loc := familyLocation{Kingdom: "animalia", Slug: "testidae"}
+	writeFixtureFamily(t, root, loc, map[string]any{
+		"id": "FAM_TESTIDAE", "name": "Testidae", "rank": "FAMILY",
+		"speciesCount": 5, // deliberately wrong, to prove it gets corrected
+		"children":     []any{},
+	})
+	fs, _ := loadFamily(root, loc, nil)
+
+	fs.apply(importRequest{
+		Kingdom: "animalia", Genus: genusRef{Name: "Testus"},
+		Species: []*onode{
+			nodeFrom(map[string]any{"name": "Testus novus"}),
+			nodeFrom(map[string]any{"name": "Testus alius"}),
+		},
+	})
+	if _, err := fs.flush(); err != nil {
+		t.Fatal(err)
+	}
+
+	raw, err := os.ReadFile(fs.file)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var reread map[string]any
+	if err := json.Unmarshal(raw, &reread); err != nil {
+		t.Fatal(err)
+	}
+	if n, _ := reread["speciesCount"].(float64); int(n) != 2 {
+		t.Fatalf("expected speciesCount recomputed to 2 (the real genus/species count), got %v", reread["speciesCount"])
+	}
+}
+
 // TestFlush_PreservesKeyOrder is the regression test for the diff-noise bug
 // found by running the real importer against real data: re-flushing a
 // family with no actual data changes must not reorder keys, or every

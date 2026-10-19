@@ -35,7 +35,13 @@ key, instead of twice independently.
   today.
 - **Not touching `portal/data/taxonomy.json`.** Adding a brand-new family
   (new `appSlug`, new colour theme) stays a manual, reviewed edit — it's
-  low-volume and not where the concurrent-write problem happens.
+  low-volume and not where the concurrent-write problem happens. A family
+  *file's own* `speciesCount` is different -- `flush()` recomputes that one
+  on every write (fixed 2026-10-19; see `TestFlush_RecomputesSpeciesCount`),
+  since it's part of the file this service already owns. The node in
+  `taxonomy.json` is the real-world total, a different number by design
+  (`docs/import.md` §0, `scripts/resyncFamilyCounts.py`'s own docstring) --
+  still a separate, manual sync, same as before.
 - **Not yet multi-instance-safe.** This assumes one `importwrite` process
   is the writer for a given repo checkout. Running two instances against
   the same `IMPORTWRITE_ROOT` reintroduces the exact race this exists to

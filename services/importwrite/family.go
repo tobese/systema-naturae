@@ -387,6 +387,29 @@ func (fs *familyState) flush() (bool, error) {
 	if !fs.dirty {
 		return false, nil
 	}
+	// speciesCount is read by the Coverage modal and by verifyTree.py's own
+	// "family data file speciesCount matches its contents" gate --
+	// importColChecklist.py's direct-write path recomputes and stamps it on
+	// every apply, but this service never did, so a family touched only
+	// through importwrite silently drifted out of sync with its own file's
+	// contents (caught 2026-10-19 on the first real split-pipeline import:
+	// 20 files disagreed, worst case Dakuidae declaring 41 against 47 held).
+	// Recomputed here rather than in apply(), so it reflects the species
+	// actually being written, not a running tally that could drift from it.
+	n := 0
+	for _, g := range fs.root.children() {
+		n += len(g.children())
+	}
+	declared := -1 // never equals a real count, so a missing/odd-typed field still gets set
+	switch v := fs.root.get("speciesCount").(type) {
+	case float64:
+		declared = int(v)
+	case int:
+		declared = v
+	}
+	if declared != n {
+		fs.root.set("speciesCount", n)
+	}
 	out, err := marshalIndentNoEscape(fs.root, "  ")
 	if err != nil {
 		return false, err
