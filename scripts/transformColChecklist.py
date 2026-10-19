@@ -56,7 +56,7 @@ def transform_records(r: "ICC.RoutedSpecies"):
             if authorship:
                 species["authorship"] = authorship
             if source_id:
-                species["sourceIds"] = {ICC.SOURCE: source_id}
+                species["sourceIds"] = {r.source_key: source_id}
             yield {
                 "kingdom": kingdom,
                 "family": slug,

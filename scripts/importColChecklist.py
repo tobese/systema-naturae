@@ -118,6 +118,7 @@ class RoutedSpecies:
 
     def __init__(self):
         self.meta = {}
+        self.source_key = SOURCE
         self.staged = collections.defaultdict(list)  # (kingdom, slug) -> [(genus, bare, authorship, source_id, family_name)]
         self.missed = collections.Counter()           # (kingdom, family) -> count
         self.fam_source_ids = collections.defaultdict(set)
@@ -142,6 +143,21 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     r.meta = K.metadata(archive)
     print(f"  {r.meta.get('title') or os.path.basename(archive)}  "
           f"({r.meta.get('version') or 'no version'}, {r.meta.get('license') or 'no licence'})")
+
+    # ChecklistBank's own taxon ids are only unique WITHIN one dataset --
+    # small sequential integers that two unrelated datasets routinely
+    # reuse. A bare "checklistbank" sourceIds key let importwrite's
+    # cross-identity matching (by (source, id) pair, see services/
+    # importwrite/identity.go) treat two different species from different
+    # datasets as the same one whenever their dataset-local ids collided --
+    # found 2026-10-19 when a WTaxa (1039) id collided with an unrelated
+    # species already in curculionidae, silently absorbing the new one
+    # into the old one's node instead of adding it. Scoping the key by
+    # dataset closes that; it only affects the sourceIds identity key, not
+    # the sourcedFrom display field, so it does not change which species we
+    # already consider "held" (that check hashes name+authorship, not this).
+    dataset_key = r.meta.get("key") or r.meta.get("alias")
+    r.source_key = f"{SOURCE}-{dataset_key}" if dataset_key else SOURCE
 
     taxa, _names, _ = K.load(archive)
     by_id = {t["id"]: t for t in taxa}
@@ -346,7 +362,7 @@ def main() -> int:
                 if a:
                     sp["authorship"] = a
                 if sid:
-                    sp["sourceIds"] = {SOURCE: sid}
+                    sp["sourceIds"] = {r.source_key: sid}
                 gnode["children"].append(sp)
         # One index, built once. A recursive glob per family means a full walk
         # of a 14,085-file tree per family: 34 families took 7 minutes, which
@@ -391,12 +407,12 @@ def main() -> int:
         elif len(fids) == 1:
             fid = next(iter(fids))
             doc_ids = doc.setdefault("sourceIds", {})
-            prior = doc_ids.get(SOURCE)
+            prior = doc_ids.get(r.source_key)
             if prior != fid:
                 if prior:
-                    print(f"    ! {slug}: {SOURCE} family id changed "
+                    print(f"    ! {slug}: {r.source_key} family id changed "
                           f"{prior} -> {fid}")
-                doc_ids[SOURCE] = fid
+                doc_ids[r.source_key] = fid
                 fam_id_changed = True
 
         print(f"    {slug:28s} staged {len(rows):>4,}  added {m.get('species_added', 0):>4,}  "
