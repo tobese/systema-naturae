@@ -156,8 +156,16 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     # dataset closes that; it only affects the sourceIds identity key, not
     # the sourcedFrom display field, so it does not change which species we
     # already consider "held" (that check hashes name+authorship, not this).
-    dataset_key = r.meta.get("key") or r.meta.get("alias")
-    r.source_key = f"{SOURCE}-{dataset_key}" if dataset_key else SOURCE
+    #
+    # r.meta (the archive's own metadata.yaml/eml.xml, when it has one) is
+    # NOT used for this -- WTaxa's own archive carries none, metadata() just
+    # returns {}. The archive's containing directory is manifest.json's own
+    # key for this source (every "archive" entry there is "archives/<key>",
+    # confirmed across the whole manifest), on disk whether or not the
+    # archive embeds metadata, so it's the one dataset identifier this
+    # function can always derive.
+    dataset_key = os.path.basename(os.path.dirname(os.path.abspath(archive)))
+    r.source_key = dataset_key or SOURCE
 
     taxa, _names, _ = K.load(archive)
     by_id = {t["id"]: t for t in taxa}
