@@ -530,6 +530,21 @@ KNOWN_CROSS_KINGDOM_HOMONYMS = {
     # future source (a Pentatomidae-specific checklist, or a fuller COL/GBIF
     # release) resolves which kingdom each one actually belongs to.
     "SP_TSHINGISELLA_BELLA", "SP_PHRICODUS_BESSACI", "SP_DESERTOMENIDA_ALBULA",
+    # Wikispecies pending-family re-run (2026-10-19) surfaced 9 more, same
+    # investigation method. 8 were contamination and removed instead of
+    # allow-listed here (a recurrence of the Decaisnella formosa/WoRMS case
+    # already in this tree -- its own structured kingdom column disagrees
+    # with its own citation text; four more carrying a bare sourceIds.ott
+    # id and a templated description, the OTT-merge class of bug already
+    # documented above; and one long-standing ghost, a palm's full
+    # Wikipedia description sitting in geometridae.json under Phoenix
+    # reclinata, which this run's correct Arecaceae placement is what
+    # finally exposed). This one is a genuine homonym:
+    # SP_LEUCOTHOE_VADEROTTI: Animalia/Amphipoda/Leucothoidae (Krapp-
+    #   Schickel, 2018) and Plantae/Ericaceae are both GBIF Backbone
+    #   "accepted" taxa in their own kingdom -- the playful epithet
+    #   ("vaderotti") was evidently used independently for both.
+    "SP_LEUCOTHOE_VADEROTTI",
 }
 
 def check_duplicate_species():
