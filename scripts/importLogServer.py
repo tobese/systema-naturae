@@ -102,23 +102,24 @@ PAGE = """<!doctype html>
   <div class="sub" id="asof">loading&hellip;</div>
 
   <div class="queue">
-    <h2>2026-10-19 import queue &amp; open items &mdash; see docs/dataset-inbox.md for full detail</h2>
+    <h2>Up next &amp; open items &mdash; see docs/dataset-inbox.md for full detail; today's 14 completed runs are in the table below</h2>
     <div class="queue-grid">
       <ul class="queue-list">
-        <li><span>WTaxa weevils</span> <span class="qn qs-done">+251 done</span></li>
-        <li><span>WoRMS Brachyura</span> <span class="qn qs-done">+7 done</span></li>
-        <li><span>WoRMS Trematoda</span> <span class="qn qs-done">+957 done</span></li>
-        <li><span>Nymphalidae</span> <span class="qn qs-done">+422 done</span></li>
-        <li><span>ScaleNet</span> <span class="qn qs-done">+493 done</span></li>
-        <li><span>Nemys nematodes</span> <span class="qn qs-done">+2,127 done</span></li>
-        <li><span>WoRMS full (2011)</span> <span class="qn qs-done">+52,294 done</span></li>
-        <li><span>FLOW</span> <span class="qn qs-done">+290 done</span></li>
-        <li><span>SF Psocodea</span> <span class="qn qs-done">+547 done</span></li>
-        <li><span>AusFungi</span> <span class="qn qs-done">+3,395 done</span></li>
-        <li><span>LDL Neuropterida</span> <span class="qn qs-done">+287 done</span></li>
-        <li><span>MOWD Membracoidea</span> <span class="qn qs-done">+1,904 done</span></li>
-        <li><span>WCVP</span> <span class="qn qs-done">+6,173 done</span></li>
-        <li><span>Wikispecies, pending round</span> <span class="qn qs-done">+9,972 done</span></li>
+        <li><span>ASEAN KBA Trigger Species Checklist</span> <span class="qn">311726 &middot; 19,723</span></li>
+        <li><span>SF Blattodea</span> <span class="qn">315660 &middot; 17,917</span></li>
+        <li><span>BDJ2305 Brassicaceae update</span> <span class="qn">2305 &middot; 15,761</span></li>
+        <li><span>MOST Moss TROPICOS</span> <span class="qn">1019 &middot; 14,427</span></li>
+        <li><span>ALF All Living Families</span> <span class="qn">294066 &middot; 14,325</span></li>
+        <li><span>Beetles of Canada &amp; Alaska, 2nd ed.</span> <span class="qn">2021 &middot; 14,082</span></li>
+        <li><span>SolanaceaeSource 2025-06</span> <span class="qn">310554 &middot; 13,708</span></li>
+        <li><span>MSW3 Mammal Species of the World</span> <span class="qn">2019 &middot; 13,656</span></li>
+        <li><span>CilCat World Ciliate Catalog</span> <span class="qn">1113 &middot; 13,639</span></li>
+        <li><span>HymIS Pompilidae of the World</span> <span class="qn">2141 &middot; 13,626</span></li>
+        <li><span>WoRMS Oligochaeta</span> <span class="qn">1099 &middot; 13,205</span></li>
+        <li><span>Madeira terrestrial fungi/flora/fauna</span> <span class="qn">2029 &middot; 12,938</span></li>
+        <li><span>ThripsWiki</span> <span class="qn">1203 &middot; 12,250</span></li>
+        <li><span>WOL World Odonata List</span> <span class="qn">125101 &middot; 11,941</span></li>
+        <li><span>Catalogue of World Gelechiidae</span> <span class="qn">2362 &middot; 11,846</span></li>
       </ul>
       <ul class="open-list">
         <li><b>Japan fungi checklist</b> &mdash; 0 family overlap, needs scaffolding first</li>

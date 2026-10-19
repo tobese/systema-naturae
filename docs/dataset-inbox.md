@@ -16,36 +16,70 @@ Live status as of this run, kept at the top and updated in place rather than
 appended to — everything below this section is historical log, dated when it
 was written. Superseded entries get struck through here, not rewritten below.
 
-### Queue
+### Up next
+
+The actual queue — real, untriaged candidates `scripts/triageNext.py`
+surfaces right below today's batch (CC0/CC BY, not already held, not a
+reissue). Excludes junk entries on the shelf (`Tutorial Dataset: Moths of
+the World`, `XR Test`, `Markus TEST`) and two old hedged leads already on
+record (LepIndex 1018, FishBase 1010 — see "Open" below). Run
+`python3 scripts/triageNext.py --limit 30` for the full current list;
+sizes are ChecklistBank's own `size` (all name usages, not species count,
+so treat as a rough ranking, not a prediction):
+
+| key | title | size |
+|---|---|---:|
+| 311726 | ASEAN KBA Trigger Species Checklist | 19,723 |
+| 315660 | Blattodea Species File (SF Blattodea) | 17,917 |
+| 2305 | Update on the Brassicaceae Species Checklist (BDJ2305) | 15,761 |
+| 1019 | Moss TROPICOS Database (MOST) | 14,427 |
+| 294066 | All Living Families (ALF) | 14,325 |
+| 2021 | Checklist of Beetles (Coleoptera) of Canada and Alaska, 2nd ed. | 14,082 |
+| 310554 | SolanaceaeSource 2025-06 | 13,708 |
+| 2019 | Mammal Species of the World (MSW3) | 13,656 |
+| 1113 | The World Ciliate Catalog (CilCat) | 13,639 |
+| 2141 | HymIS, Pompilidae of the World | 13,626 |
+| 1099 | World List of Marine Oligochaeta (WoRMS Oligochaeta) | 13,205 |
+| 2029 | Terrestrial fungi, flora and fauna of Madeira and Selvagens | 12,938 |
+| 1203 | ThripsWiki | 12,250 |
+| 125101 | The World Odonata List (WOL) | 11,941 |
+| 2362 | Catalogue of World Gelechiidae | 11,846 |
+
+None of these 15 have been downloaded, measured, or triaged yet — this is
+genuinely "coming imports," not a restatement of what already ran.
+
+### Done today
 
 All via the split pipeline (`scripts/transformColChecklist.py` on Macie,
-`scripts/importTransformed.py` against `services/importwrite` on q-bert).
+`scripts/importTransformed.py` against `services/importwrite` on q-bert) —
+history, not upcoming work; see the table below (or localhost:9883) for
+the authoritative per-run numbers.
 
-| source | status | species added |
-|---|---|---:|
-| WTaxa weevils (checklistbank-1039) | **done** | +251 |
-| WoRMS Brachyura (checklistbank-1108) | **done** | +7 |
-| WoRMS Trematoda (checklistbank-1128) | **done** | +957 |
-| Nymphalidae (checklistbank-309267) | **done** | +422 |
-| ScaleNet (checklistbank-315880) | **done** | +493 |
-| Nemys nematodes (checklistbank-2302) | **done** | +2,127 |
-| WoRMS full (checklistbank-2011) | **done** | +52,294 |
-| WoRMS full, pending-family round 2 | **done** | +0 (re-confirmed identity only — see note) |
-| FLOW (checklistbank-1011) | **done** | +290 |
-| SF Psocodea (checklistbank-1133) | **done** | +547 |
-| AusFungi (checklistbank-285337) | **done** | +3,395 |
-| LDL Neuropterida (checklistbank-1055) | **done** | +287 |
-| MOWD Membracoidea (checklistbank-1096) | **done** | +1,904 |
-| WCVP (checklistbank-2232) | **done** | +6,173 |
-| Wikispecies, pending-family round | **running** | not yet known (173,242 staged) |
+| source | species added |
+|---|---:|
+| WTaxa weevils (checklistbank-1039) | +251 |
+| WoRMS Brachyura (checklistbank-1108) | +7 |
+| WoRMS Trematoda (checklistbank-1128) | +957 |
+| Nymphalidae (checklistbank-309267) | +422 |
+| ScaleNet (checklistbank-315880) | +493 |
+| Nemys nematodes (checklistbank-2302) | +2,127 |
+| WoRMS full (checklistbank-2011) | +52,294 |
+| WoRMS full, pending-family round 2 | +0 (re-confirmed identity only — see note) |
+| FLOW (checklistbank-1011) | +290 |
+| SF Psocodea (checklistbank-1133) | +547 |
+| AusFungi (checklistbank-285337) | +3,395 |
+| LDL Neuropterida (checklistbank-1055) | +287 |
+| MOWD Membracoidea (checklistbank-1096) | +1,904 |
+| WCVP (checklistbank-2232) | +6,173 |
+| Wikispecies, pending-family round | +9,972 |
 
 The "0 added" WoRMS re-run isn't a null result: `route_species()`'s own
 held-check hashes `name+authorship`, which doesn't always match what
 `importwrite`'s identity logic (ID-then-name) already recognized as present
 from the first pass — so a second run safely re-confirms those species
 without duplicating them. Wikispecies hit the same pattern at much larger
-scale (173,242 re-staged against two prior applies), which is why it's
-running rather than skipped.
+scale (173,242 re-staged against two prior applies, finished at +9,972 —
+the rest safely re-confirmed already-present species).
 
 **Found and fixed during this queue, all on `main`:**
 - `importTransformed.py` batched every family's flush to the end of a run
