@@ -10,6 +10,103 @@ here and move each one into the table with a verdict.
 > update the other in the same change — they are meant to stay in sync, not
 > to fork.
 
+## 2026-10-19 — import queue and open items
+
+Live status as of this run, kept at the top and updated in place rather than
+appended to — everything below this section is historical log, dated when it
+was written. Superseded entries get struck through here, not rewritten below.
+
+### Queue
+
+All via the split pipeline (`scripts/transformColChecklist.py` on Macie,
+`scripts/importTransformed.py` against `services/importwrite` on q-bert).
+
+| source | status | species added |
+|---|---|---:|
+| WTaxa weevils (checklistbank-1039) | **done** | +251 |
+| WoRMS Brachyura (checklistbank-1108) | **done** | +7 |
+| WoRMS Trematoda (checklistbank-1128) | **done** | +957 |
+| Nymphalidae (checklistbank-309267) | **done** | +422 |
+| ScaleNet (checklistbank-315880) | **done** | +493 |
+| Nemys nematodes (checklistbank-2302) | **done** | +2,127 |
+| WoRMS full (checklistbank-2011) | **done** | +52,294 |
+| WoRMS full, pending-family round 2 | **done** | +0 (re-confirmed identity only — see note) |
+| FLOW (checklistbank-1011) | **done** | +290 |
+| SF Psocodea (checklistbank-1133) | **done** | +547 |
+| AusFungi (checklistbank-285337) | **done** | +3,395 |
+| LDL Neuropterida (checklistbank-1055) | **done** | +287 |
+| MOWD Membracoidea (checklistbank-1096) | **done** | +1,904 |
+| WCVP (checklistbank-2232) | **done** | +6,173 |
+| Wikispecies, pending-family round | **running** | not yet known (173,242 staged) |
+
+The "0 added" WoRMS re-run isn't a null result: `route_species()`'s own
+held-check hashes `name+authorship`, which doesn't always match what
+`importwrite`'s identity logic (ID-then-name) already recognized as present
+from the first pass — so a second run safely re-confirms those species
+without duplicating them. Wikispecies hit the same pattern at much larger
+scale (173,242 re-staged against two prior applies), which is why it's
+running rather than skipped.
+
+**Found and fixed during this queue, all on `main`:**
+- `importTransformed.py` batched every family's flush to the end of a run
+  instead of per-family; a family idle while a much bigger one was still
+  posting could be evicted before its flush, and one failure there skipped
+  every later family too. Now flushes immediately after each family's posts.
+- ChecklistBank sourceIds used a bare `"checklistbank"` key across every
+  dataset, but the id is only unique per dataset — two unrelated species
+  from different datasets could collide and silently merge. Now scoped by
+  the archive's own source key.
+- `transformColChecklist.py` had no guard for a family name that matches our
+  data but has no file on disk — found via WoRMS routing single species into
+  3 unscaffolded families. Now skips with a warning instead of crashing.
+- Two real cross-kingdom contamination cases, confirmed against GBIF: a
+  fungus WoRMS itself misfiled under a plant family, and an entire
+  misclassified diatom genus sitting under a protozoan family. Both removed.
+- `triageNext.py`'s open-licence filter let CC BY-NC through because
+  `"cc by-nc".startswith("cc by")` — fixed.
+- **Mid-run 2026-10-19:** running WCVP and Wikispecies applies concurrently
+  OOM-killed `importwrite` (13.3GB RSS on a 15GB box) — idle eviction had
+  been disabled earlier as a (now-unnecessary, given the flush-ordering fix
+  above) precaution, so every family touched by every import all day stayed
+  resident with nothing ever freed. No data lost (every flushed file
+  validated as well-formed JSON — `flush()` writes atomically). Restarted
+  with eviction back on; re-ran both, sequentially this time.
+
+### Open
+
+Not acted on this round — listed so the next pass doesn't have to
+re-discover them.
+
+- **Japan fungi checklist (checklistbank-315538)**: 18,817 offered, only
+  1,548 already held, **0 staged** — 17,244 of the 18,817 refused as
+  "no family we hold". Real species, but needs large-scale fungi family
+  scaffolding first, not a normal import. Assessed, not applied.
+- **WoRMS Scleractinia (checklistbank-1196)** and **WoRMS Amphipoda
+  (checklistbank-1202)**: +4 species each against 822/152 already held —
+  effectively saturated. Declined as negligible.
+- **Banco Taxonômico Integrado da Biodiversidade Brasileira (312904)**:
+  `fetchBatch.sh` got HTTP 404, "Archive for dataset 312904 not found" — no
+  downloadable export at all. Blocked, not declined.
+- **LepIndex (1018)** and **FishBase/WoRMS FishBase (1010)**: resurfaced by
+  `triageNext.py` as unheld, but both are old, previously-hedged leads from
+  earlier sessions (see "Taken 2026-10-10" and "Correction, 2026-10-10"
+  below) — not re-examined this round.
+- **`pendingFamilies.py` worklist**: 861 families (241,943 species) are
+  flagged ready but carry no recorded archive — they pre-date the
+  archive-tracking fix in `add_family()`, so closing them means manually
+  tracing each to whichever of ~180 archives offered it. 15,642 families are
+  still genuinely absent from the taxonomy outright, the large majority of
+  them bacteria/GTDB entries that stay unscaffolded by the standing
+  bacteria-and-viruses hold (`docs/bacteria-and-viruses.md`), not an
+  oversight.
+- **Pre-existing WoRMS name-quoting bug** and **a broader audit for older
+  cross-dataset sourceIds collisions** (species merged under the bare key
+  before today's fix) are both logged in `BACKLOG.md`, not here — tree-wide
+  scope, need their own pass.
+- Manifest `took` notes for today's six new-candidate takes (WCVP, FLOW, SF
+  Psocodea, AusFungi, LDL Neuropterida, MOWD) haven't been written yet —
+  only wtaxa-1039's was updated in place today.
+
 ## Measured 2026-10-17 — the standing queue, and a partial-import pattern
 
 Every archive on q-bert's sources volume re-measured against the current tree
