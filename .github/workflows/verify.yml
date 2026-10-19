@@ -7,8 +7,19 @@ name: Verify tree invariants
 # 2026-10-05.
 #
 # Deliberately cheap: Python only, no `npm ci`, no six-kingdom build. It reads
-# ~1 GB of committed family JSON and takes about four minutes, which is the same
+# ~1 GB of committed family JSON and used to take about four minutes, the same
 # work `make check` does locally.
+#
+# 2026-10-19: timed out at the 20-minute ceiling on a single oversized push (8
+# large imports batched into one commit, 4,509 files changed). The actual
+# integrity work was still cheap -- species.parquet built in 79s, verifyTree
+# passed in ~3min -- but `actions/checkout@v4` alone took 13m58s, because it
+# defaults to a full clone and this repo's history has grown alongside the
+# tree itself. Fixed with `fetch-depth: 1`: this workflow only ever needs the
+# current tree, never history, so a shallow clone removes the actual
+# bottleneck rather than just buying a bigger timeout to hide it. Raised
+# timeout-minutes too, as a margin against sanity_scan continuing to grow with
+# the tree -- not the primary fix.
 #
 # 2026-10-18: this workflow DOES run on push (confirmed via `gh run list` --
 # the "billing-locked" note that used to live here was stale). What was
@@ -37,9 +48,11 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - uses: actions/setup-python@v5
         with:
