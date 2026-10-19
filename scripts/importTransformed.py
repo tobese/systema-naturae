@@ -90,8 +90,23 @@ def group_by_family_genus(records: list) -> dict:
 
 
 def apply_groups(groups: dict, *, base_url: str = "") -> dict:
-    """POST every (family, genus) group to importwrite, then flush each
-    family touched exactly once. Returns a summary dict."""
+    """POST every (family, genus) group to importwrite, flushing each
+    family immediately after its own genera are posted. Returns a summary
+    dict.
+
+    Flushing inline (rather than batching all flushes after every family's
+    POSTs, as a prior version did) closes the window a small family can sit
+    idle in server memory while a much bigger one in the same run is still
+    being POSTed -- long enough for IMPORTWRITE_IDLE_EVICT to reclaim it --
+    and it means one family's POST or flush failure can no longer abort the
+    whole run before earlier families get their own flush call at all. Both
+    happened in the same run: the 2026-10-19 wtaxa-1039 import evicted
+    brachyceridae while curculionidae (85k species) was still being posted,
+    then crashed on brachyceridae's end-of-run flush with
+    "404 family not loaded" -- which, in the old structure, also skipped the
+    flush for every family a plain `set`'s iteration order placed after it,
+    silently dropping 252 already-posted species.
+    """
     added = merged = cross_family = 0
     touched = set()
     for (kingdom, phylum, cls, order, family), genera in groups.items():
@@ -104,10 +119,8 @@ def apply_groups(groups: dict, *, base_url: str = "") -> dict:
             for m in result.get("merged", []):
                 if m.get("family") and m["family"] != family:
                     cross_family += 1
-        touched.add(family)
-
-    for family in touched:
         iw.flush(family, base_url=base_url)
+        touched.add(family)
 
     return {"added": added, "merged": merged, "crossFamily": cross_family, "families": touched}
 
