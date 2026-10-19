@@ -108,37 +108,51 @@ def our_families(kingdom=None, quiet=False):
     return tax, out
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("archive")
-    ap.add_argument("--apply", action="store_true")
-    ap.add_argument("--kingdom", default="",
-                     help="override kingdom inference entirely for sources "
-                          "that carry no kingdom in their own rank chain and "
-                          "whose family names don't resolve uniquely (e.g. "
-                          "LCVP -- an all-plant database with no kingdom "
-                          "field at all -- used to default silently to "
-                          "animalia for exactly this reason: a hardcoded "
-                          "constant written for a different, narrower bug, "
-                          "reused here with no actual justification). "
-                          "Pass --kingdom plantae when you know the source.")
-    args = ap.parse_args()
+class RoutedSpecies:
+    """Everything route_species() decided, shared by every caller that
+    reads a ColDP/DwC-A archive -- the direct-write importer below and
+    transformColChecklist.py's split-pipeline transform step. Neither
+    re-derives kingdom routing, family matching, or refusal detection;
+    both get it from here, so the two paths cannot quietly disagree
+    about where a species belongs."""
 
-    meta = K.metadata(args.archive)
-    print(f"  {meta.get('title') or os.path.basename(args.archive)}  "
-          f"({meta.get('version') or 'no version'}, {meta.get('license') or 'no licence'})")
+    def __init__(self):
+        self.meta = {}
+        self.staged = collections.defaultdict(list)  # (kingdom, slug) -> [(genus, bare, authorship, source_id, family_name)]
+        self.missed = collections.Counter()           # (kingdom, family) -> count
+        self.fam_source_ids = collections.defaultdict(set)
+        self.cand_count = 0
+        self.held = self.refused = self.nonb = self.unresolved = 0
+        self.no_family = collections.Counter()
+        self.routed = collections.Counter()
+        self.routed_by_kingdom = self.routed_by_family = self.routed_unknown = 0
+        self.src_kingdom = None
+        self.default_k = ""
+        self.kinds = {}
 
-    taxa, _names, _ = K.load(args.archive)
+
+def route_species(archive, kingdom_override="") -> RoutedSpecies:
+    """Read `archive`, resolve each accepted species/subspecies to a
+    (kingdom, family slug) in our taxonomy or a refusal, same logic for
+    every caller. Pure routing -- no file writes, no pendingFamilies
+    recording (callers decide when a decision is final enough for that:
+    importColChecklist.py's main() only records on --apply, and
+    transformColChecklist.py follows the same rule)."""
+    r = RoutedSpecies()
+    r.meta = K.metadata(archive)
+    print(f"  {r.meta.get('title') or os.path.basename(archive)}  "
+          f"({r.meta.get('version') or 'no version'}, {r.meta.get('license') or 'no licence'})")
+
+    taxa, _names, _ = K.load(archive)
     by_id = {t["id"]: t for t in taxa}
     cand = [t for t in taxa
             if (t["rank"] or "").lower() in ("species", "subspecies")
             and t["name"] and not t["is_synonym"]]
+    r.cand_count = len(cand)
     print(f"  accepted species/subspecies offered: {len(cand):,}")
 
     placed = set()
 
-    # The source's kingdom comes from its own rank chain, read off the first
-    # taxon that carries one.
     src_kingdom = None
     probe = {t["id"]: t for t in taxa}
     for t in cand[:200]:
@@ -146,39 +160,19 @@ def main() -> int:
         if c.get("kingdom"):
             src_kingdom = c["kingdom"]
             break
-    # Kingdom is resolved PER TAXON, not once per source. Reading it off the
-    # first taxon that has one -- which is what this did -- sent every plant and
-    # fungus in a mixed source to animalia, because the first taxon was an
-    # animal: Wikispecies offered 244,078 species and refused 192,372 of them,
-    # nearly all of them plants and fungi that animalia has no family for. The
-    # refusals looked like a coverage problem and were a routing bug. One
-    # kingdom per source is only defensible when the source is single-kingdom,
-    # which is asserted below rather than assumed.
+    r.src_kingdom = src_kingdom
+
     KINDS = {}
     for k in ("animalia", "plantae", "fungi", "chromista", "protozoa", "archaea"):
         KINDS[k] = our_families(k, quiet=True)
-    # DEFAULT_K used to fall back to the module-level FALLBACK_KINGDOM
-    # ("animalia") whenever neither the source nor a taxon's own chain said
-    # otherwise -- a constant written for a different, narrower bug
-    # (taxonomy_input()'s need for *some* file to open) reused here with no
-    # actual justification. On LCVP (an all-plant database with no kingdom
-    # field anywhere in its chain) that silently routed 4,057 taxa under
-    # plant family names -- Myrsinaceae, Ruscaceae -- through "animalia",
-    # mislabelling an honestly-unresolvable case as a specific wrong one.
-    # It happened to cost nothing there (we hold neither family under any
-    # kingdom, so the refusal was correct either way), but the mechanism
-    # would misplace a real match the moment a family name is ambiguous
-    # across kingdoms rather than absent from all of them. Empty, not a
-    # hardcoded kingdom, when nothing actually resolves it -- --kingdom is
-    # how an operator who knows the source (LCVP is plants) fixes this
-    # properly instead of hoping the guess is harmless.
-    DEFAULT_K = (args.kingdom or src_kingdom or "").lower()
+    r.kinds = KINDS
+
+    DEFAULT_K = (kingdom_override or src_kingdom or "").lower()
     if DEFAULT_K and DEFAULT_K not in KINDS:
         sys.exit(f"FATAL: --kingdom {DEFAULT_K!r} is not one of "
                   f"{', '.join(sorted(KINDS))}")
+    r.default_k = DEFAULT_K
 
-    # per kingdom: taxonomy doc, family->[slug, node], and every species id on
-    # disk, which is what the held-check arbitrates against
     import glob as _glob
     ON_DISK = {}
     for k in KINDS:
@@ -200,158 +194,129 @@ def main() -> int:
 
     parsed = taxamatch.parse_names(sorted({t["name"] for t in cand}))
 
-    # Most sources carry no kingdom at all -- Wikispecies offers 458,568 species
-    # and not one of them has a kingdom in its rank chain, so "read the kingdom
-    # off the taxon" degenerates to the animalia fallback and every orchid and
-    # puffball gets looked for in Animalia. The family name is the only signal
-    # a source reliably has, and it is a good one: we hold 14,203 of them and
-    # they are kingdom-specific in practice. So fall back to the family.
     FAM2K = collections.defaultdict(set)
     for k, (_t, fams_k) in KINDS.items():
         for fam in fams_k:
             FAM2K[fam].add(k)
 
-    staged = collections.defaultdict(list)      # (kingdom, slug) -> [(genus, name, auth)]
-    # (kingdom, slug) -> set of the archive's own ids for the family-rank
-    # ancestor feeding it. Normally one id per slug; more than one means this
-    # archive is feeding two of ITS OWN distinct family concepts into the one
-    # tree family we matched by name -- the Actinocyclidae/Hemidiscaceae kind
-    # of cross-kingdom homonym, visible here before it ever hits disk.
-    fam_source_ids = collections.defaultdict(set)
-    held = refused = nonb = unresolved = 0
-    no_family = collections.Counter()
-    missed = collections.Counter()
-    routed = collections.Counter()
-    routed_by_kingdom = routed_by_family = routed_unknown = 0
-
     for t in cand:
         nm = t["name"]
         g, s = taxamatch.bare_binomial(nm, parsed)
         if not g or not s:
-            nonb += 1
+            r.nonb += 1
             continue
         bare = taxamatch.bare_name(nm, parsed)
-        # Deliberately NOT consulting the canonical index here. It is a snapshot
-        # of the tree taken at a point in time, and on ILDIS it is wrong in the
-        # expensive direction: it scored 13,347 of 16,371 legume species as
-        # already held when only 64 are, so an index-driven run would have
-        # staged 3,024 and silently skipped the other 13,283. On Craneflies the
-        # same index erred the other way, scoring 15,563 as new when 15,191
-        # were held. A snapshot disagrees with the tree it indexes in whichever
-        # direction it drifted, so the only arbiter here is merge_family, which
-        # reads the family file it is about to write and reports what it really
-        # added and what was already present.
         if bare.lower() in placed:
             continue
         placed.add(bare.lower())
-        # Held in ANOTHER family. This check has to be against the files, not
-        # the canonical index: the index is a snapshot and was wrong in both
-        # directions, but removing the held-check entirely was worse than a bad
-        # index. Without it this importer wrote a species into whichever family
-        # the source assigned even when we already held it elsewhere -- 236
-        # copies across 57 file pairs, Kinnaridae and Meenoplidae each holding
-        # the other's cixiid relatives, because the source's circumscription
-        # differs from ours. Skipping is the right call and matches
-        # dedupe_genera_across_families.py, which keeps the copy we already had.
         sid = SF.node_id(SF.PREFIX["SPECIES"], bare, (t.get("authorship") or "").strip() or "")
         ch = K.chain(t, by_id)
         fam = (ch.get("family") or "").lower().strip()
         k = (ch.get("kingdom") or "").strip().lower()
         if k not in KINDS:
             k = ""
-            # the family decides. Ambiguous across kingdoms, or unknown to us
-            # entirely, falls back to the source's own kingdom.
             owners = FAM2K.get(fam) or set()
             if len(owners) == 1:
                 k = next(iter(owners))
-                routed_by_family += 1
+                r.routed_by_family += 1
             elif DEFAULT_K:
                 k = DEFAULT_K
-                routed_unknown += 1
+                r.routed_unknown += 1
             else:
-                # Genuinely unresolvable: no --kingdom given, the source
-                # carries none, and the family name is unknown to us or
-                # ambiguous across kingdoms. Counted on its own rather than
-                # attributed to a kingdom nothing actually said -- see
-                # DEFAULT_K's comment above.
-                unresolved += 1
+                r.unresolved += 1
                 continue
         else:
-            routed_by_kingdom += 1
-        routed[k] += 1
+            r.routed_by_kingdom += 1
+        r.routed[k] += 1
         if sid in ON_DISK[k]:
-            held += 1
+            r.held += 1
             continue
         fams_k = KINDS[k][1]
         if fam not in fams_k:
-            no_family[(k, fam or "(no family)")] += 1
-            missed[(k, fam)] += 1
-            refused += 1
+            r.no_family[(k, fam or "(no family)")] += 1
+            r.missed[(k, fam)] += 1
+            r.refused += 1
             continue
         slug = fams_k[fam][0]
-        staged[(k, slug)].append((g, bare,
-                                  (t.get("authorship") or "").strip() or None,
-                                  t.get("id")))
+        r.staged[(k, slug)].append((g, bare,
+                                    (t.get("authorship") or "").strip() or None,
+                                    t.get("id"), fam))
         fid = ch.get("family_id")
         if fid:
-            fam_source_ids[(k, slug)].add(fid)
+            r.fam_source_ids[(k, slug)].add(fid)
 
-    print("  routed per taxon: " + ", ".join(f"{k} {v:,}" for k, v in routed.most_common()))
-    print(f"      kingdom from the taxon: {routed_by_kingdom:,}"
-          f"   from the family name: {routed_by_family:,}"
-          f"   fell back to {DEFAULT_K or '(none given)'}: {routed_unknown:,}")
-    if unresolved:
-        print(f"  UNRESOLVED KINGDOM: {unresolved:,} -- no --kingdom given, "
+    print("  routed per taxon: " + ", ".join(f"{k} {v:,}" for k, v in r.routed.most_common()))
+    print(f"      kingdom from the taxon: {r.routed_by_kingdom:,}"
+          f"   from the family name: {r.routed_by_family:,}"
+          f"   fell back to {DEFAULT_K or '(none given)'}: {r.routed_unknown:,}")
+    if r.unresolved:
+        print(f"  UNRESOLVED KINGDOM: {r.unresolved:,} -- no --kingdom given, "
               f"the source carries none, and the family name is unknown or "
               f"ambiguous across kingdoms. Not attributed to one and not "
               f"refused under a specific kingdom either; re-run with "
               f"--kingdom <name> if you know what this source is.")
-    # `held` is the already-on-disk count, not a parse failure. Labelling it
-    # "unparseable" made WFO's dry run read "staged 226,683 (+148,381
-    # unparseable)", which looks like 40% of the dataset failing to parse. It is
-    # 148,381 species we already hold. A counter with the wrong name on it is
-    # worse than no counter.
-    print(f"\n  already held (skipped): {held:,}")
-    print(f"  staged:              {sum(len(v) for v in staged.values()):,}")
-    print(f"  non-binominal:       {nonb:,}")
-    print(f"  new, into a family we hold: {sum(len(v) for v in staged.values()):,}"
-          f"  across {len(staged)} families in {len({k for k, _ in staged})} kingdoms")
-    print(f"  REFUSED (would need a new family): {refused:,}"
+    print(f"\n  already held (skipped): {r.held:,}")
+    print(f"  staged:              {sum(len(v) for v in r.staged.values()):,}")
+    print(f"  non-binominal:       {r.nonb:,}")
+    print(f"  new, into a family we hold: {sum(len(v) for v in r.staged.values()):,}"
+          f"  across {len(r.staged)} families in {len({k for k, _ in r.staged})} kingdoms")
+    print(f"  REFUSED (would need a new family): {r.refused:,}"
           f"  -- dropped, not placed: no placeholder family, no orphan node")
     print(f"      (these are recorded in the pending-family store; "
           f"see scripts/pendingFamilies.py)")
-    for (k, fam), v in no_family.most_common(10):
+    for (k, fam), v in r.no_family.most_common(10):
         print(f"      {v:>6,}  [{k}] {fam}")
+    return r
 
-    # A refused species is refused because its family is missing. That is a
-    # fact about the world, not about this run, so it goes in the pending-family
-    # store rather than dying with the counter. That store is the whole reason
-    # the misses are recoverable: `pendingFamilies.py report --scaffoldable`
-    # later lists the families that have since been imported.
-    # Only on --apply. A dry run that records its misses leaves the store
-    # describing an import that never happened, and since the rows accumulate
-    # species counts there is no way to tell that apart from a real one later.
-    if missed and args.apply:
+
+def record_misses(r: RoutedSpecies, archive, apply_: bool):
+    """Record refusals into the pending-family store -- shared tail for
+    both main() and transformColChecklist.py, same rule: only on a real
+    apply, never on a dry run (see route_species's docstring)."""
+    if r.missed and apply_:
         try:
             import pendingFamilies as PF
         except ImportError:
             PF = None
         if PF:
             recorded = 0
-            for (k, fam), n in missed.items():
+            for (k, fam), n in r.missed.items():
                 if not fam:
-                    continue          # no family name to record; nothing to scaffold
-                PF.add_family(fam, kingdom=k, species=n, source=f"{SOURCE}:{slug_hint(args.archive)}",
+                    continue
+                PF.add_family(fam, kingdom=k, species=n, source=f"{SOURCE}:{slug_hint(archive)}",
                               reason="offered by source, family not in taxonomy",
-                              archive=args.archive)
+                              archive=archive)
                 recorded += 1
             print(f"  recorded {recorded} families in the pending store")
         else:
             print("  ! pendingFamilies.py not importable, misses NOT recorded")
-    elif missed:
-        print(f"  (dry run: {sum(missed.values()):,} refusals across "
-              f"{len({f for _, f in missed if f}):} families would be recorded "
+    elif r.missed:
+        print(f"  (dry run: {sum(r.missed.values()):,} refusals across "
+              f"{len({f for _, f in r.missed if f}):} families would be recorded "
               f"in the pending store)")
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("archive")
+    ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--kingdom", default="",
+                     help="override kingdom inference entirely for sources "
+                          "that carry no kingdom in their own rank chain and "
+                          "whose family names don't resolve uniquely (e.g. "
+                          "LCVP -- an all-plant database with no kingdom "
+                          "field at all -- used to default silently to "
+                          "animalia for exactly this reason: a hardcoded "
+                          "constant written for a different, narrower bug, "
+                          "reused here with no actual justification). "
+                          "Pass --kingdom plantae when you know the source.")
+    args = ap.parse_args()
+
+    r = route_species(args.archive, kingdom_override=args.kingdom)
+    meta = r.meta
+    record_misses(r, args.archive, args.apply)
+    staged = r.staged
+    KINDS = r.kinds
 
     if not staged:
         print("\n  nothing to do")
@@ -365,18 +330,11 @@ def main() -> int:
         # the family name, needed by the genera loop below for genus lineage
         fname = next((n for n, v in fams_k.items() if v[0] == slug), slug)
         genera = collections.defaultdict(list)
-        for g, nm, a, sid in rows:
+        for g, nm, a, sid, _fam in rows:
             genera[g].append((nm, a, sid))
         new_root = {"id": None, "name": None, "rank": "FAMILY", "children": []}
         touched_path = None
         for g, species in genera.items():
-            # lineage is the PARENT name at each level: the family on a genus
-            # node, the genus on a species node. That is what the 1.45M existing
-            # species do. Writing the family onto species, as this did, is
-            # redundant -- the species already lives in a file named for that
-            # family -- and it stamped 72,270 Wikispecies/ILDIS/FLOW/Moss
-            # species with the wrong value. testDataContract only asserts the
-            # genus case (>=95%), which is why it never caught the other half.
             gnode = {"id": SF.node_id(SF.PREFIX["GENUS"], g), "name": g,
                      "rank": "GENUS", "children": [], "sourcedFrom": SOURCE,
                      "lineage": fname}
@@ -388,14 +346,8 @@ def main() -> int:
                 if a:
                     sp["authorship"] = a
                 if sid:
-                    # the source's own identifier, kept. Our id is derived from
-                    # the name and is deliberately not canonical -- 387,528 of
-                    # them have no prefix at all, because prefixing them would
-                    # collapse GENUS_SCHULZIA across two kingdoms -- so this is
-                    # the only reliable join key to COL, ITIS, WFO or GBIF.
                     sp["sourceIds"] = {SOURCE: sid}
                 gnode["children"].append(sp)
-
         # One index, built once. A recursive glob per family means a full walk
         # of a 14,085-file tree per family: 34 families took 7 minutes, which
         # puts Wikispecies' 736 at over two hours for what is a dict lookup.
@@ -430,7 +382,7 @@ def main() -> int:
         # the archive itself disagrees with our tree about what "this family"
         # is -- the Actinocyclidae/Hemidiscaceae class of bug, visible here
         # before a single species crosses into the file.
-        fids = fam_source_ids.get((kind, slug)) or set()
+        fids = r.fam_source_ids.get((kind, slug)) or set()
         fam_id_changed = False
         if len(fids) > 1:
             print(f"    ! {slug}: archive feeds {len(fids)} distinct family "
@@ -494,17 +446,17 @@ def main() -> int:
             "archivePath": args.archive,
             "slugHint": slug_hint(args.archive),
             "title": meta.get("title") or "",
-            "offered": len(cand),
-            "alreadyHeld": held,
-            "nonBinominal": nonb,
+            "offered": r.cand_count,
+            "alreadyHeld": r.held,
+            "nonBinominal": r.nonb,
             "staged": sum(len(v) for v in staged.values()),
-            "refused": refused,
-            "refusalRate": round(refused / max(1, len(cand)), 4),
+            "refused": r.refused,
+            "refusalRate": round(r.refused / max(1, r.cand_count), 4),
             "added": added_total,
             "deduped": dedup_total,
             "families": len(staged),
             "kingdoms": sorted({k for k, _ in staged}),
-            "missedFamilies": len({f for _kk, f in missed if f}),
+            "missedFamilies": len({f for _kk, f in r.missed if f}),
         }
         log = os.path.join("data", "import-log.jsonl")
         os.makedirs(os.path.dirname(log), exist_ok=True)
