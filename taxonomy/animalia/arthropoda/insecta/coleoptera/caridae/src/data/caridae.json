@@ -29,7 +29,11 @@
             "col": [
               "QTZF"
             ],
-            "checklistbank": "c56a3e8e-e5ef-4ec5-926f-14d745021ed1"
+            "checklistbank": [
+              "c56a3e8e-e5ef-4ec5-926f-14d745021ed1",
+              "30087"
+            ],
+            "checklistbank-1039": "30087"
           },
           "uuid": "484a1d43-d169-5ce-8b4-f0ed04553cb157",
           "authorityIds": "col:QTZF,gbif:1171814",
@@ -51,7 +55,11 @@
             "col": [
               "QTZH"
             ],
-            "checklistbank": "5d79d734-68d0-4c46-83bb-be23fb4a19f4"
+            "checklistbank": [
+              "5d79d734-68d0-4c46-83bb-be23fb4a19f4",
+              "137573"
+            ],
+            "checklistbank-1039": "137573"
           },
           "uuid": "5020a635-6ecc-572-9a7-a0ea1d5cb4f8d3",
           "authorityIds": "col:QTZH,gbif:1171813",
@@ -73,11 +81,29 @@
             "col": [
               "QTZJ"
             ],
-            "checklistbank": "3aa3f1f3-0b40-4cba-8537-07d7a60651c8"
+            "checklistbank": [
+              "3aa3f1f3-0b40-4cba-8537-07d7a60651c8",
+              "136840"
+            ],
+            "checklistbank-1039": "136840"
           },
           "uuid": "285c8ca9-7de4-565-a55-3f1de346b373f0",
           "authorityIds": "col:QTZJ,gbif:1171815",
           "authorship": "Lea"
+        },
+        {
+          "id": "SP_CAR_CYLINDRIROSTRIS_VOSS_1932",
+          "name": "Car cylindrirostris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Car",
+          "authorship": "Voss, 1932",
+          "sourceIds": {
+            "checklistbank": "30089",
+            "checklistbank-1039": "30089"
+          },
+          "uuid": "a179c69e-6e8f-4b22-b61a-9db4e4d35562"
         }
       ]
     },
@@ -1014,10 +1040,33 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "caridae"
+    },
+    {
+      "id": "GENUS_MESOPHYLETIS",
+      "name": "Mesophyletis",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "caridae",
+      "children": [
+        {
+          "id": "SP_MESOPHYLETIS_CALHOUNI_POINAR_G_JR_2006",
+          "name": "Mesophyletis calhouni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mesophyletis",
+          "authorship": "Poinar, G., Jr., 2006",
+          "sourceIds": {
+            "checklistbank": "84648",
+            "checklistbank-1039": "84648"
+          },
+          "uuid": "e4433a60-99aa-471b-8554-fb24f417dc16"
+        }
+      ]
     }
   ],
   "genusCount": 32,
-  "speciesCount": 45,
+  "speciesCount": 47,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
