@@ -42,8 +42,30 @@ import sources  # noqa: E402
 
 
 def transform_records(r: "ICC.RoutedSpecies"):
-    """Yield one importTransformed.py-shaped record per staged species."""
+    """Yield one importTransformed.py-shaped record per staged species.
+
+    route_species() stages by (kingdom, slug) once it has matched a family
+    NAME to one of our known slugs -- it never checks that slug actually
+    has a data file on disk. importColChecklist.py's own direct-write tail
+    does that check itself (see its "one index, built once" comment) before
+    writing; this path has no such tail, so a slug with no file would reach
+    importwrite instead, which has nowhere to apply it and errors the whole
+    run -- found 2026-10-19 on WoRMS 2011, which routes single species into
+    three families (petiveriaceae, umbellinaceae, vermiporellaceae) that
+    exist as names in our family-matching data but were never scaffolded.
+    Skip those here, the same way main() does, rather than crash a run that
+    may have thousands of other species to apply first.
+    """
+    import glob as _glob
+    files = {}
+    for f in _glob.glob("taxonomy/*/**/src/data/*.json", recursive=True):
+        files.setdefault(os.path.basename(f)[:-5], []).append(f)
+
     for (kingdom, slug), rows in sorted(r.staged.items()):
+        if not files.get(slug):
+            print(f"  ! {slug}: no family data file, skipping "
+                  f"{len(rows)} staged species")
+            continue
         for g, bare, authorship, source_id, fam_name in rows:
             species = {
                 "id": ICC.SF.node_id(ICC.SF.PREFIX["SPECIES"], bare, authorship or ""),
