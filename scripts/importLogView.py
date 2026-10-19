@@ -70,9 +70,17 @@ def notes(row: dict) -> list[str]:
     return out
 
 
+def display_name(row: dict) -> str:
+    """The archive's own title when the writer captured one (importColChecklist.py,
+    since the "title" field was added) -- slugHint/source for older rows that
+    predate it, since a title can't be reliably reconstructed after the fact
+    from a generic slugHint like "archive"."""
+    return row.get("title") or row.get("slugHint") or row.get("source") or "?"
+
+
 def fmt_row(row: dict, ceiling: float) -> str:
     at = (row.get("at") or "")[:19].replace("T", " ")
-    slug = row.get("slugHint") or row.get("source") or "?"
+    slug = display_name(row)
     offered = row.get("offered", 0)
     held = row.get("alreadyHeld", 0)
     staged = row.get("staged", 0)
@@ -83,7 +91,7 @@ def fmt_row(row: dict, ceiling: float) -> str:
     issues = problems(row, ceiling)
     flag = "  !!" if issues else ""
 
-    line = (f"{at}  {slug:<28.28} offered {offered:>9,}  held {held:>9,}  "
+    line = (f"{at}  {slug:<40.40} offered {offered:>9,}  held {held:>9,}  "
             f"staged {staged:>7,}  added {added:>7,}  refused {refused:>6,} "
             f"({rate:>5.1%})  [{kingdoms}]{flag}")
     for issue in issues:

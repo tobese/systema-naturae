@@ -342,7 +342,8 @@ def main() -> int:
                 if not fam:
                     continue          # no family name to record; nothing to scaffold
                 PF.add_family(fam, kingdom=k, species=n, source=f"{SOURCE}:{slug_hint(args.archive)}",
-                              reason="offered by source, family not in taxonomy")
+                              reason="offered by source, family not in taxonomy",
+                              archive=args.archive)
                 recorded += 1
             print(f"  recorded {recorded} families in the pending store")
         else:
@@ -490,7 +491,9 @@ def main() -> int:
             "at": _dt.datetime.now().isoformat(timespec="seconds"),
             "source": SOURCE,
             "archive": os.path.basename(args.archive),
+            "archivePath": args.archive,
             "slugHint": slug_hint(args.archive),
+            "title": meta.get("title") or "",
             "offered": len(cand),
             "alreadyHeld": held,
             "nonBinominal": nonb,

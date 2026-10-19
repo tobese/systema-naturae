@@ -27,6 +27,18 @@ The union is the worklist; `report` prints it, and marks rows whose family has
 since appeared in the tree, which is the actionable part: those are ready to be
 scaffolded or imported.
 
+`report --scaffoldable` splits that actionable part further, because a family
+node existing in taxonomy.json is not the same as being importable -- it also
+needs a data file on disk (see `family_data_files()`). Rows missing one are
+printed separately ("registered but no data file yet") instead of being
+lumped in with genuinely ready rows, which otherwise just hit
+importColChecklist.py's "N files found, skipping" silently on re-import --
+the bug that cost the EUNIS import 20 species to xanthorrhoeaceae having no
+file. Genuinely ready rows are grouped by `archive` (the path an importer was
+invoked with, recorded by add_family() since this session) with the literal
+re-import command to run -- closing the loop from "this family is ready" to
+"run this" without manually figuring out which of ~180 archives offered it.
+
     python3 scripts/pendingFamilies.py seed      # rebuild the global gap
     python3 scripts/pendingFamilies.py add --family Abelisauridae --kingdom Animalia
     python3 scripts/pendingFamilies.py report
@@ -119,6 +131,44 @@ def held_families():
     return out
 
 
+def held_family_slugs():
+    """family name (lowercased) -> appSlug, for the families that have one.
+
+    A family can be `held` (its FAMILY node exists in taxonomy.json) without
+    being importable yet -- it also needs a data file on disk, and the node
+    carries the appSlug that names it. Separate from held_families() because
+    most callers only need the kingdom set.
+    """
+    out = {}
+    for f in TAXONOMIES:
+        if not os.path.exists(f):
+            continue
+        tree = json.load(open(f, encoding="utf-8"))
+
+        def walk(n):
+            if n.get("rank") == "FAMILY" and n.get("name") and n.get("appSlug"):
+                out[n["name"].strip().lower()] = n["appSlug"]
+            for c in n.get("children") or []:
+                walk(c)
+        walk(tree)
+    return out
+
+
+def family_data_files():
+    """appSlug (lowercased) -> data file path, for every family file on disk.
+
+    Same index importColChecklist.py builds per run (basename -> path glob
+    over taxonomy/*/**/src/data/*.json) -- built once here too, so
+    report --scaffoldable can tell "family registered, file missing" (the
+    xanthorrhoeaceae/EUNIS class of bug) apart from "genuinely ready".
+    """
+    out = {}
+    for path in glob.glob("taxonomy/*/**/src/data/*.json", recursive=True):
+        slug = os.path.basename(path)[:-5].lower()
+        out.setdefault(slug, []).append(path)
+    return out
+
+
 def read_store():
     rows = []
     if os.path.exists(STORE):
@@ -203,8 +253,17 @@ def cmd_seed(_args):
     print(f"  wrote {len(rows):,} rows to {STORE}")
 
 
-def add_family(family, kingdom="", species=0, source="manual", reason=""):
-    """Record one missed family. Callable from an importer mid-run."""
+def add_family(family, kingdom="", species=0, source="manual", reason="", archive=""):
+    """Record one missed family. Callable from an importer mid-run.
+
+    `archive` is the literal path the importer was invoked with -- not
+    derivable later from `source` (which is often a generic tag like
+    "checklistbank:archive" when the archive's own metadata carries no
+    title/key; see slug_hint() in importColChecklist.py). Without it,
+    closing the loop on a scaffoldable family means manually figuring out
+    which of ~180 archives to re-run; with it, report --scaffoldable can
+    print the exact command.
+    """
     ensure_link()
     fam = family.strip()
     if not fam:
@@ -215,19 +274,23 @@ def add_family(family, kingdom="", species=0, source="manual", reason=""):
             r["species"] = int(r.get("species") or 0) + int(species or 0)
             if not r.get("kingdom") and kingdom:
                 r["kingdom"] = kingdom
+            if not r.get("archive") and archive:
+                r["archive"] = archive
             break
     else:
         rows.append({"family": fam, "kingdom": kingdom or "", "source": source,
                      "species": int(species or 0),
                      "firstSeen": date.today().isoformat(),
-                     "reason": reason or "not in taxonomy"})
+                     "reason": reason or "not in taxonomy",
+                     "archive": archive or ""})
     write_store(rows)
     return True
 
 
 def cmd_add(args):
     add_family(args.family, kingdom=args.kingdom, species=args.species,
-               source=args.source or "manual", reason=args.reason or "")
+               source=args.source or "manual", reason=args.reason or "",
+               archive=args.archive or "")
     print(f"  pending: {args.family} (+{args.species})")
 
 
@@ -249,11 +312,56 @@ def cmd_report(args):
           f"   <- scaffoldable or ready to import")
     tot = sum(int(r.get("species") or 0) for r in rows)
     print(f"  species those families would add: {tot:,}")
-    out = ready if args.scaffoldable else still
-    for r in sorted(out, key=lambda r: -int(r.get("species") or 0))[:args.limit]:
-        print(f"      {int(r.get('species') or 0):>6,}  "
-              f"{(r.get('kingdom') or '?'):10s} {(r.get('family'))}"
-              f"   [{r.get('source')}]")
+
+    if not args.scaffoldable:
+        for r in sorted(still, key=lambda r: -int(r.get("species") or 0))[:args.limit]:
+            print(f"      {int(r.get('species') or 0):>6,}  "
+                  f"{(r.get('kingdom') or '?'):10s} {(r.get('family'))}"
+                  f"   [{r.get('source')}]")
+        return
+
+    # A family node existing in taxonomy.json (held) is not the same as being
+    # importable: the importer also needs a data FILE for it on disk, keyed
+    # by appSlug (see family_data_files()). Without this split, a family that
+    # is "ready" by node alone still gets silently skipped by
+    # importColChecklist.py's own "N files found, skipping" -- the exact
+    # xanthorrhoeaceae/EUNIS bug this report would otherwise have missed.
+    slugs = held_family_slugs()
+    files = family_data_files()
+    importable, needs_file = [], []
+    for r in ready:
+        slug = slugs.get((r.get("family") or "").lower(), "")
+        hits = files.get(slug.lower(), []) if slug else []
+        (importable if len(hits) == 1 else needs_file).append(r)
+
+    if needs_file:
+        print(f"\n  registered but no data file yet ({len(needs_file)}) -- "
+              f"scaffold the file before re-importing, same fix as "
+              f"xanthorrhoeaceae:")
+        for r in sorted(needs_file, key=lambda r: -int(r.get("species") or 0))[:args.limit]:
+            print(f"      {int(r.get('species') or 0):>6,}  "
+                  f"{(r.get('kingdom') or '?'):10s} {(r.get('family'))}")
+
+    if not importable:
+        print("\n  nothing importable yet (every ready family still needs a data file)")
+        return
+
+    by_archive = collections.defaultdict(list)
+    for r in importable:
+        by_archive[r.get("archive") or ""].append(r)
+
+    print(f"\n  importable now ({len(importable)}), grouped by source to re-run:")
+    for archive, group in sorted(by_archive.items(), key=lambda kv: -sum(int(r.get("species") or 0) for r in kv[1])):
+        total = sum(int(r.get("species") or 0) for r in group)
+        fams = ", ".join(sorted({r.get("family") for r in group})[:5])
+        more = f" (+{len(group) - 5} more)" if len(group) > 5 else ""
+        if archive:
+            print(f"      {total:>6,} species across {len(group)} families -- {fams}{more}")
+            print(f"          python3 scripts/importColChecklist.py {archive} --apply")
+        else:
+            print(f"      {total:>6,} species across {len(group)} families -- "
+                  f"{fams}{more}   [no archive recorded -- pre-dates the "
+                  f"archive-tracking fix; re-run whichever source offered these]")
 
 
 def main() -> int:
@@ -267,6 +375,9 @@ def main() -> int:
     p.add_argument("--species", type=int, default=0)
     p.add_argument("--source", default="")
     p.add_argument("--reason", default="")
+    p.add_argument("--archive", default="",
+                   help="path this family was offered from, so report "
+                        "--scaffoldable can print the exact re-import command")
     p = sub.add_parser("report", help="what is pending, and what is now doable")
     p.add_argument("--scaffoldable", action="store_true",
                    help="only rows whose family is now in the taxonomy")

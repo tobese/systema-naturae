@@ -114,9 +114,10 @@ function render(data) {
       ...r.issues.map(i => `<div class="issue">&#9650; ${i}</div>`),
       ...r.notes.map(n => `<div class="note">&middot; ${n}</div>`),
     ].join('');
+    const name = r.title || r.slugHint || r.source || '?';
     return `<tr class="${r.issues.length ? 'flagged' : ''}">
       <td>${(r.at || '').replace('T', ' ').slice(0, 19)}</td>
-      <td><span class="slug">${r.slugHint || r.source || '?'}</span>${extra}</td>
+      <td><span class="slug">${name}</span>${extra}</td>
       <td>${fmt(r.offered)}</td>
       <td>${fmt(r.alreadyHeld)}</td>
       <td>${fmt(r.staged)}</td>
