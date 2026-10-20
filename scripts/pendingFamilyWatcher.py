@@ -1,0 +1,187 @@
+#!/usr/bin/env python3
+"""Pending-family watcher: re-runs sources after families are created.
+
+Closes the loop that `scripts/pendingFamilies.py report --scaffoldable`
+opens: it prints which refused families are now in the taxonomy (and have a
+data file on disk), grouped by archive with the exact re-import command --
+but nothing actually runs those commands. This watcher does.
+
+Every cycle:
+
+  1. Read the pending-family store (families.jsonl on the sources volume).
+  2. Compute which family names the taxonomy now holds, and which have a
+     data file on disk (the same index importColChecklist.py builds).
+  3. Find rows whose family is now "ready" (held + file exists) and that
+     have not been re-imported within the cooldown window.
+  4. Group those rows by their recorded `archive` path.
+  5. For each archive, run `importColChecklist.py <archive> --apply`.
+     Re-running is safe: already-held species are skipped by the importer's
+     dedup, so only newly-placeable species get added.
+  6. Mark every row from that archive with `reimportedAt` so we don't hammer
+     the same archive every cycle while its families are still being
+     scaffolded.
+
+Usage:
+    python3 scripts/pendingFamilyWatcher.py           # one cycle, then exit
+    python3 scripts/pendingFamilyWatcher.py --loop    # keep polling
+    nohup caffeinate -dimsu python3 scripts/pendingFamilyWatcher.py --loop \
+        > /tmp/pendingFamilyWatcher.log 2>&1 &
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+from collections import defaultdict
+from datetime import datetime, timezone, timedelta
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+sys.path.insert(0, SCRIPT_DIR)
+import pendingFamilies as PF  # noqa: E402
+
+COOLDOWN_HOURS = 24
+CYCLE_SECONDS = 300
+
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def recently_reimported(row: dict) -> bool:
+    """True if this row was re-imported within the cooldown window."""
+    ts = row.get("reimportedAt")
+    if not ts:
+        return False
+    try:
+        dt = datetime.fromisoformat(ts)
+    except ValueError:
+        return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return datetime.now(timezone.utc) - dt < timedelta(hours=COOLDOWN_HOURS)
+
+
+def ready_rows(rows: list[dict]) -> list[dict]:
+    """Rows whose family is now in the taxonomy, has a data file, and is
+    outside the re-import cooldown."""
+    held = PF.held_family_slugs()
+    files = PF.family_data_files()
+    out = []
+    for r in rows:
+        fam = (r.get("family") or "").strip().lower()
+        if not fam or fam not in held:
+            continue
+        slug = held[fam]
+        hits = files.get(slug.lower(), [])
+        if len(hits) != 1:
+            continue  # registered but no data file yet -- scaffold first
+        if recently_reimported(r):
+            continue
+        out.append(r)
+    return out
+
+
+def group_by_archive(rows: list[dict]) -> dict[str, list[dict]]:
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for r in rows:
+        groups[r.get("archive") or ""].append(r)
+    return dict(groups)
+
+
+def run_reimport(archive: str, rows: list[dict]) -> bool:
+    """Run importColChecklist.py --apply for one archive. Returns True on
+    success."""
+    total = sum(int(r.get("species") or 0) for r in rows)
+    fams = ", ".join(sorted({r.get("family") for r in rows})[:5])
+    more = f" (+{len(rows) - 5} more)" if len(rows) > 5 else ""
+    print(f"\n== Re-importing {archive}", flush=True)
+    print(f"    {len(rows)} family(s), ~{total:,} pending species: {fams}{more}",
+          flush=True)
+    cmd = ["python3", os.path.join(SCRIPT_DIR, "importColChecklist.py"),
+           archive, "--apply"]
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.stdout:
+        for line in result.stdout.splitlines():
+            if line.strip():
+                print(f"    {line}", flush=True)
+    if result.returncode != 0 and result.stderr:
+        for line in result.stderr.splitlines():
+            if line.strip():
+                print(f"    ! {line}", flush=True)
+    if result.returncode == 0:
+        print(f"    {archive}: re-import OK", flush=True)
+    else:
+        print(f"    {archive}: re-import FAILED (rc={result.returncode})",
+              flush=True)
+    return result.returncode == 0
+
+
+def mark_reimported(rows: list[dict], store_path: str) -> None:
+    """Set reimportedAt on every row whose family matches one of `rows`,
+    then rewrite the store atomically."""
+    now = now_iso()
+    targets = {(r.get("family") or "").strip().lower() for r in rows}
+    all_rows = PF.read_store()
+    changed = 0
+    for r in all_rows:
+        if ((r.get("family") or "").strip().lower() in targets
+                and not r.get("reimportedAt")):
+            r["reimportedAt"] = now
+            changed += 1
+    if changed:
+        PF.write_store(all_rows)
+        print(f"    marked {changed} row(s) reimportedAt={now}", flush=True)
+
+
+def cycle() -> int:
+    rows = PF.read_store()
+    if not rows:
+        print("  pending store is empty", flush=True)
+        return 0
+
+    ready = ready_rows(rows)
+    if not ready:
+        print("  no ready pending families this cycle", flush=True)
+        return 0
+
+    groups = group_by_archive(ready)
+    any_ok = False
+    for archive, group in groups.items():
+        if not archive:
+            print(f"  {len(group)} ready family(ies) have no archive recorded, "
+                  f"skipping (pre-dates archive-tracking fix)", flush=True)
+            continue
+        if run_reimport(archive, group):
+            mark_reimported(group, PF.STORE)
+            any_ok = True
+    return 0
+
+
+def main() -> int:
+    global COOLDOWN_HOURS
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--loop", action="store_true",
+                    help="keep polling every CYCLE_SECONDS seconds")
+    ap.add_argument("--cooldown-hours", type=int, default=COOLDOWN_HOURS,
+                    help="hours to wait before re-importing the same archive")
+    args = ap.parse_args()
+
+    COOLDOWN_HOURS = args.cooldown_hours
+
+    if args.loop:
+        while True:
+            try:
+                cycle()
+            except Exception as e:  # never die the watcher
+                print(f"  cycle error: {e}", flush=True)
+            time.sleep(CYCLE_SECONDS)
+    return cycle()
+
+
+if __name__ == "__main__":
+    sys.exit(main())

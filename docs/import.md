@@ -574,3 +574,62 @@ importQueueDriver`), under `caffeinate -dimsu`, logging to
 | 9883 | importLogServer.py dashboard | macie |
 | 9876 | progressd (gap-task tracking) | macie |
 
+---
+
+## 12. Pending-family watcher (close the loop after family creation)
+
+The split pipeline (§11) refuses species whose family doesn't exist in the
+taxonomy yet — they're recorded in the pending-family store
+(`/Volumes/MacieExternal/sources/pending/families.jsonl`, symlinked at
+`portal/data/pending-families.jsonl`) by `scripts/pendingFamilies.py add`.
+`pendingFamilies.py report --scaffoldable` identifies which refused families
+are now in the taxonomy (and have a data file on disk), grouped by archive
+with the exact re-import command — but it doesn't run them. That's the
+watcher's job.
+
+`scripts/pendingFamilyWatcher.py` closes the loop:
+
+  1. Reads the pending-family store.
+  2. Computes which family names the taxonomy now holds (`held_family_slugs()`)
+     and which have a data file on disk (`family_data_files()`).
+  3. Finds rows whose family is now "ready" (held + file exists) and outside
+     the 24-hour re-import cooldown.
+  4. Groups those rows by their recorded `archive` path.
+  5. Runs `importColChecklist.py <archive> --apply` for each archive.
+     Re-running is safe: already-held species are skipped by dedup, so only
+     newly-placeable species get added.
+  6. Marks every row from that archive with `reimportedAt` so the same
+     archive isn't re-run every cycle while its families are still being
+     scaffolded.
+
+Usage:
+```bash
+# One cycle, then exit:
+python3 scripts/pendingFamilyWatcher.py
+
+# Loop forever, polling every 5 minutes:
+python3 scripts/pendingFamilyWatcher.py --loop
+
+# Run under caffeinate (macOS, holds lid open):
+nohup caffeinate -dimsu python3 scripts/pendingFamilyWatcher.py --loop \
+    > /tmp/pendingFamilyWatcher.log 2>&1 &
+```
+
+The watcher is currently running on macie as PID (see `ps aux | grep
+pendingFamilyWatcher`), under `caffeinate -dimsu`, logging to
+`/tmp/pendingFamilyWatcher.log`.
+
+First cycle results (2026-10-20): re-imported 4 archives with recorded
+paths — checklistbank-2011 (+360 / 37,681 held, 21 families),
+wikispecies (3 families), checklistbank-311726 (+216 / 1,322 held, 59
+families), checklistbank-1113 (+5 / 7,680 held, 1 family). 861 families
+with no archive recorded (pre-date the archive-tracking fix) were skipped.
+
+### Related scripts (added)
+
+| Script | Role |
+|---|---|
+| `scripts/pendingFamilies.py` | Pending-family store: seed / add / report |
+| `scripts/pendingFamilyWatcher.py` | Watches store, re-runs imports when families become ready |
+
+
