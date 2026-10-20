@@ -25,11 +25,13 @@
           "sourcedFrom": "gbif",
           "sourceIds": {
             "gbif": 5425172,
-            "checklistbank": "1711492"
+            "checklistbank": "1711492",
+            "gbif-backbone": "5425172"
           },
           "uuid": "6f2cf360-d380-5d2-9a3-3303ed3e864430",
           "authorityIds": "gbif:5425172",
-          "children": []
+          "children": [],
+          "authorship": "Playfair"
         },
         {
           "id": "PERANEMA_FUSIFORME",
@@ -42,11 +44,13 @@
           "description": "Peranema fusiforme is a peranemidae species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7528232
+            "gbif": 7528232,
+            "gbif-backbone": "7528232"
           },
           "uuid": "f3e8aec6-9032-58c-b86-c1dfa4bfd3be3c",
           "authorityIds": "gbif:7528232",
-          "children": []
+          "children": [],
+          "authorship": "Larsen"
         },
         {
           "id": "PERANEMA_INFLEXUM",
@@ -68,11 +72,13 @@
             "itis": [
               "180880"
             ],
-            "checklistbank": "1589547"
+            "checklistbank": "1589547",
+            "gbif-backbone": "3210127"
           },
           "uuid": "ba095fa5-5e50-5fb-84a-98ae2bc20d1bb9",
           "authorityIds": "gbif:3210127,itis:180880",
-          "children": []
+          "children": [],
+          "authorship": "Skuja"
         },
         {
           "id": "PSEUDOPERANEMA_DOLICHONEMA",
@@ -198,11 +204,13 @@
           "description": "Ploeotia costata is a peranemidae species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 3210205
+            "gbif": 3210205,
+            "gbif-backbone": "3210205"
           },
           "uuid": "481a94ce-e514-5cf-9bc-392923b25e089b",
           "authorityIds": "gbif:3210205",
-          "children": []
+          "children": [],
+          "authorship": "(R.E.Triemer) M.A.Farmer & R.E.Triemer, 1988"
         }
       ]
     },
@@ -231,11 +239,13 @@
             ],
             "itis": [
               "9857"
-            ]
+            ],
+            "gbif-backbone": "5425192"
           },
           "uuid": "310cce18-f604-5e9-b1d-ea1602f2a29191",
           "authorityIds": "gbif:5425192,itis:9857",
-          "children": []
+          "children": [],
+          "authorship": "(Stein) Mereschk."
         },
         {
           "id": "SP_URCEOLUS_SABULOSUS",
@@ -313,11 +323,13 @@
           "description": "Keelungia pulex is a peranemidae species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 7731729
+            "gbif": 7731729,
+            "gbif-backbone": "7731729"
           },
           "uuid": "e780e858-8253-5b1-9f3-a4cdb82427d9f5",
           "authorityIds": "gbif:7731729",
-          "children": []
+          "children": [],
+          "authorship": "Y.-F.Chan & Ø.Moestrup, 2013"
         }
       ]
     },
@@ -452,6 +464,41 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "peranemidae"
+    },
+    {
+      "id": "GENUS_PSEUDOPERANEMA",
+      "name": "Pseudoperanema",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOPERANEMA_FUSIFORME_LARSEN_1987",
+          "name": "Pseudoperanema fusiforme",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoperanema",
+          "authorship": "Larsen, 1987",
+          "sourceIds": {
+            "gbif-backbone": "4380607"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOPERANEMA_DOLICHONEMA_LARSEN_PATTERSON_1990",
+          "name": "Pseudoperanema dolichonema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoperanema",
+          "authorship": "Larsen & Patterson, 1990",
+          "sourceIds": {
+            "gbif-backbone": "4380604"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "peranemidae"
     }
   ],
   "sourceIds": {
@@ -464,6 +511,6 @@
     },
     "checklistbank": "2704085"
   },
-  "genusCount": 6,
-  "speciesCount": 25
+  "genusCount": 7,
+  "speciesCount": 27
 }
