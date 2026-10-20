@@ -358,7 +358,8 @@
           "uuid": "d492c167-5ac6-5a4-bd8-334a9e6bbb7cce",
           "authorship": "Kroh 2003",
           "sourceIds": {
-            "checklistbank": "txn:82662"
+            "checklistbank": "txn:82662",
+            "gbif-backbone": "4975901"
           },
           "description": "Astrodendrum pilleri is a gorgonocephalidae species found in its native region."
         },
@@ -765,7 +766,8 @@
           "sourceIds": {
             "col": [
               "3H37S"
-            ]
+            ],
+            "gbif-backbone": "11423223"
           },
           "authorityIds": "col:3H37S",
           "description": "Gorgonocephalus chilensis is a gorgonocephalidae species found in its native region."
@@ -1132,7 +1134,8 @@
             "itis": [
               "656035"
             ],
-            "checklistbank": "1815081"
+            "checklistbank": "1815081",
+            "gbif-backbone": "2278527"
           },
           "authorityIds": "itis:656035",
           "description": "Asteroporpa annulata is a gorgonocephalidae species found in its native region."
@@ -1531,7 +1534,8 @@
           "uuid": "033506d0-2967-57f-846-6e48b908d1a4c6",
           "authorship": "Doderlein, 1910",
           "sourceIds": {
-            "checklistbank": "2736176"
+            "checklistbank": "2736176",
+            "gbif-backbone": "2278557"
           },
           "description": "Astrocladus dofleini is a gorgonocephalidae species found in its native region."
         },
@@ -1787,6 +1791,32 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Astrothamnus",
           "authorship": "(Bell, 1917)",
+          "children": []
+        },
+        {
+          "id": "SP_ASTROTHAMNUS_LUCAPENSIS_DOMANTAY_1957",
+          "name": "Astrothamnus lucapensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrothamnus",
+          "authorship": "Domantay, 1957",
+          "sourceIds": {
+            "gbif-backbone": "11476010"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTROTHAMNUS_VILLADOLIDI_DOMANTAY_DOMANTAY_1966",
+          "name": "Astrothamnus villadolidi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrothamnus",
+          "authorship": "Domantay & Domantay, 1966",
+          "sourceIds": {
+            "gbif-backbone": "6473720"
+          },
           "children": []
         }
       ],
@@ -2079,6 +2109,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Astrophyton",
           "authorship": "Fleming, 1828",
+          "children": []
+        },
+        {
+          "id": "SP_ASTROPHYTON_ELIZABETHAE_M_INTOSH_1866",
+          "name": "Astrophyton elizabethae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrophyton",
+          "authorship": "M'Intosh, 1866",
+          "sourceIds": {
+            "gbif-backbone": "10726941"
+          },
           "children": []
         }
       ],
@@ -3270,7 +3313,8 @@
           "sourceIds": {
             "wikispecies": "Asteroporpa_pulchra"
           },
-          "uuid": "64b5ef8c-c755-44bf-8587-b876e75132e2"
+          "uuid": "64b5ef8c-c755-44bf-8587-b876e75132e2",
+          "children": []
         },
         {
           "id": "SP_ASTEROPORPA_ANNULATA",
@@ -3282,7 +3326,8 @@
           "sourceIds": {
             "wikispecies": "Asteroporpa_annulata"
           },
-          "uuid": "267504df-df15-44e1-826e-152b87665bad"
+          "uuid": "267504df-df15-44e1-826e-152b87665bad",
+          "children": []
         },
         {
           "id": "SP_ASTEROPORPA_RETICULATA",
@@ -3294,7 +3339,8 @@
           "sourceIds": {
             "wikispecies": "Asteroporpa_reticulata"
           },
-          "uuid": "c81ec943-771b-4b80-83df-606296a233c6"
+          "uuid": "c81ec943-771b-4b80-83df-606296a233c6",
+          "children": []
         },
         {
           "id": "SP_ASTEROPORPA_INDICUS",
@@ -3306,7 +3352,8 @@
           "sourceIds": {
             "wikispecies": "Asteroporpa_indicus"
           },
-          "uuid": "22258cca-1873-4fe3-b287-72f8a2e33419"
+          "uuid": "22258cca-1873-4fe3-b287-72f8a2e33419",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3354,13 +3401,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Gorgonocephalidae"
+    },
+    {
+      "id": "GENUS_ASTROCONUS",
+      "name": "Astroconus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTROCONUS_JOLOENSIS_DOMANTAY_DOMANTAY_1966",
+          "name": "Astroconus joloensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astroconus",
+          "authorship": "Domantay & Domantay, 1966",
+          "sourceIds": {
+            "gbif-backbone": "11707861"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gorgonocephalidae"
+    },
+    {
+      "id": "GENUS_BERTINGIUS",
+      "name": "Bertingius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BERTINGIUS_TYPICUS_DOMANTAY_DOMANTAY_1966",
+          "name": "Bertingius typicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bertingius",
+          "authorship": "Domantay & Domantay, 1966",
+          "sourceIds": {
+            "gbif-backbone": "6473718"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gorgonocephalidae"
     }
   ],
-  "speciesCount": 178,
+  "speciesCount": 183,
   "appSlug": "gorgonocephalidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Echinodermata > Ophiuroidea",
-  "genusCount": 43,
+  "genusCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3369,6 +3460,7 @@
       "orderKey": 702,
       "familyKey": 5678
     },
-    "checklistbank": "Gorgonocephalidae"
+    "checklistbank": "Gorgonocephalidae",
+    "wikispecies": "Gorgonocephalidae"
   }
 }
