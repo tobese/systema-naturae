@@ -26,7 +26,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Monoophorum",
           "authorship": "(Graff, 1878) Böhmig, 1890",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank-2008": "1018130"
+          }
         },
         {
           "id": "SP_MONOOPHORUM_TUBIFERUM_WESTBLAD_1955_KARLING_1993",
@@ -154,7 +157,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Allostoma",
           "authorship": "(Beklemischev, 1927) Mack Fira, 1974",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank-2008": "976318"
+          }
         },
         {
           "id": "SP_ALLOSTOMA_PALLIDUM_BENEDEN_1861",
@@ -164,7 +170,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Allostoma",
           "authorship": "Beneden, 1861",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank-2008": "1055905"
+          }
         },
         {
           "id": "SP_ALLOSTOMA_UTERINUM_WESTBLAD_1952",
@@ -274,6 +283,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Allostoma",
           "authorship": "Levinsen, 1879",
+          "children": []
+        },
+        {
+          "id": "SP_ALLOSTOMA_FLAVIBACILLUM_JENSEN_1878_REISINGER_1926",
+          "name": "Allostoma flavibacillum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allostoma",
+          "authorship": "(Jensen, 1878) Reisinger, 1926",
+          "sourceIds": {
+            "gbif-backbone": "4343946"
+          },
           "children": []
         }
       ],
@@ -552,6 +574,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Einarhelmins",
           "authorship": "(Marcus, 1952)",
+          "children": []
+        },
+        {
+          "id": "SP_EINARHELMINS_STLIFERA_WESTBLAD_1955_1993",
+          "name": "Einarhelmins stlifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Einarhelmins",
+          "authorship": "(Westblad, 1955) , 1993",
+          "sourceIds": {
+            "gbif-backbone": "8457439"
+          },
           "children": []
         }
       ],
@@ -929,7 +964,8 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:480458"
           },
-          "uuid": "ed5b189e-94d1-454d-bde3-c088bbb3c0df"
+          "uuid": "ed5b189e-94d1-454d-bde3-c088bbb3c0df",
+          "children": []
         },
         {
           "id": "SP_ENTEROSTOMULA_RONIS_MARCUS_1954",
@@ -942,7 +978,21 @@
           "sourceIds": {
             "checklistbank": "urn:lsid:marinespecies.org:taxname:480459"
           },
-          "uuid": "cf7e9376-23ab-44c4-abfe-176439860981"
+          "uuid": "cf7e9376-23ab-44c4-abfe-176439860981",
+          "children": []
+        },
+        {
+          "id": "SP_ENTEROSTOMULA_DENSISSIMABURSA_OMI_2020",
+          "name": "Enterostomula densissimabursa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enterostomula",
+          "authorship": "Omi, 2020",
+          "sourceIds": {
+            "gbif-backbone": "11135004"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1072,14 +1122,37 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Pseudostomidae"
+    },
+    {
+      "id": "GENUS_ALLOSTOMUM",
+      "name": "Allostomum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALLOSTOMUM_CATINOSUM_BENEDEN_1861",
+          "name": "Allostomum catinosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allostomum",
+          "authorship": "(Beneden, 1861)",
+          "sourceIds": {
+            "checklistbank-2008": "1055907"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pseudostomidae"
     }
   ],
-  "speciesCount": 88,
+  "speciesCount": 92,
   "appSlug": "pseudostomidae",
   "sourcedFrom": "checklistbank",
   "lineage": "Platyhelminthes",
-  "genusCount": 18,
+  "genusCount": 19,
   "sourceIds": {
-    "checklistbank": "Pseudostomidae"
+    "checklistbank": "Pseudostomidae",
+    "wikispecies": "Pseudostomidae"
   }
 }
