@@ -21,7 +21,11 @@
           "description": "Acrothele spurri (Eothele Spurri) is a acrothelidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3489e82d-8946-5ab-92e-b65fb9ea6ba769"
+          "uuid": "3489e82d-8946-5ab-92e-b65fb9ea6ba769",
+          "authorship": "(Walcott, 1908)",
+          "sourceIds": {
+            "gbif-backbone": "7014045"
+          }
         },
         {
           "id": "SP_EOTHELE_NAPURU_KRUSE_1990",
@@ -295,7 +299,8 @@
           "uuid": "2a844b47-bf64-548-a43-1240037d225d92",
           "authorship": "(Linnarsson 1876)",
           "sourceIds": {
-            "checklistbank": "txn:363492"
+            "checklistbank": "txn:363492",
+            "gbif-backbone": "9370025"
           }
         },
         {
@@ -546,6 +551,18 @@
           "children": [],
           "uuid": "cd3eada4-69e7-549-833-30d6d1128938ef",
           "description": "Acrothele primaeva is a acrothelidae species found in its native region."
+        },
+        {
+          "id": "SP_ACROTHELE_SUBSIDUA",
+          "name": "Acrothele subsidua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acrothele",
+          "sourceIds": {
+            "gbif-backbone": "8789925"
+          },
+          "children": []
         }
       ]
     },
@@ -710,10 +727,67 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Acrothelidae"
+    },
+    {
+      "id": "GENUS_SIPHONOTRETA",
+      "name": "Siphonotreta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIPHONOTRETA_DUBIA_WALCOTT_1912",
+          "name": "Siphonotreta dubia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonotreta",
+          "authorship": "(Walcott, 1912)",
+          "sourceIds": {
+            "gbif-backbone": "9041100"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acrothelidae"
+    },
+    {
+      "id": "GENUS_DISCINA",
+      "name": "Discina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISCINA_PRIMAEVA_DE_VERNEUIL_BARRANDE_1860",
+          "name": "Discina primaeva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discina",
+          "authorship": "(de Verneuil & Barrande, 1860)",
+          "sourceIds": {
+            "gbif-backbone": "9427414"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DISCINA_UNDULOSA_BARRANDE_1879",
+          "name": "Discina undulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discina",
+          "authorship": "(Barrande, 1879)",
+          "sourceIds": {
+            "gbif-backbone": "11196927"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acrothelidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 41,
+  "genusCount": 9,
+  "speciesCount": 45,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

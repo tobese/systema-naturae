@@ -21,7 +21,8 @@
             "col": [
               "F2GSQ"
             ],
-            "checklistbank": "txn:299491"
+            "checklistbank": "txn:299491",
+            "gbif-backbone": "8499251"
           },
           "authorityIds": "col:F2GSQ",
           "children": [],
@@ -76,13 +77,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Trifissuridae"
+    },
+    {
+      "id": "GENUS_OBOLUS",
+      "name": "Obolus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OBOLUS_TRANSVERSUS_DAVIDSON_1866",
+          "name": "Obolus transversus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Obolus",
+          "authorship": "(Davidson, 1866)",
+          "sourceIds": {
+            "gbif-backbone": "7014033"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trifissuridae"
     }
   ],
-  "speciesCount": 3,
+  "speciesCount": 4,
   "appSlug": "trifissuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Brachiopoda > Chileata",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

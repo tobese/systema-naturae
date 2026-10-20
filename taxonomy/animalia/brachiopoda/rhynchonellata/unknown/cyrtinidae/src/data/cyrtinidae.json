@@ -64,7 +64,8 @@
           "uuid": "c0cc013d-edf6-589-a3b-780dbb3dcc30f3",
           "authorship": "(DeFrance 1819)",
           "sourceIds": {
-            "checklistbank": "txn:110356"
+            "checklistbank": "txn:110356",
+            "gbif-backbone": "4868444"
           }
         },
         {
@@ -461,7 +462,11 @@
           "description": "Cyrtina josephinae (Licharewina Josephinae) is a cyrtinidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6ec9d3c7-4275-5ed-9f2-c2dba64c967de7"
+          "uuid": "6ec9d3c7-4275-5ed-9f2-c2dba64c967de7",
+          "authorship": "(Gemmellaro, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "9564229"
+          }
         },
         {
           "id": "SP_GEYERELLA_ARAKII",
@@ -719,10 +724,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyrtinidae"
+    },
+    {
+      "id": "GENUS_CYRTIA",
+      "name": "Cyrtia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYRTIA_HAMILTONENSIS_HALL_1857",
+          "name": "Cyrtia hamiltonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyrtia",
+          "authorship": "(Hall, 1857)",
+          "sourceIds": {
+            "gbif-backbone": "9636820"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyrtinidae"
+    },
+    {
+      "id": "GENUS_GEYERELLA",
+      "name": "Geyerella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GEYERELLA_ARAKII_HAYASAKA_1963",
+          "name": "Geyerella arakii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Geyerella",
+          "authorship": "(Hayasaka, 1963)",
+          "sourceIds": {
+            "gbif-backbone": "9514857"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyrtinidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 39,
+  "genusCount": 11,
+  "speciesCount": 41,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

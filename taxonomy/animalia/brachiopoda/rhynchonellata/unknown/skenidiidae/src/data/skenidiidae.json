@@ -45,7 +45,11 @@
           "description": "Scenidium anthonensis (Skenidioides Anthonensis) is a skenidiidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2f0a0cd6-c25c-541-824-100bd380b652f7"
+          "uuid": "2f0a0cd6-c25c-541-824-100bd380b652f7",
+          "authorship": "(Sardeson, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "11735916"
+          }
         },
         {
           "id": "SP_SCENIDIUM_LEWISI",
@@ -490,7 +494,11 @@
           "description": "Skenidium lewisi is a skenidiidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "c1d2d5db-4340-5be-952-5b4a15e0be1238"
+          "uuid": "c1d2d5db-4340-5be-952-5b4a15e0be1238",
+          "authorship": "(Davidson, 1883)",
+          "sourceIds": {
+            "gbif-backbone": "8438964"
+          }
         },
         {
           "id": "SP_SKENIDIUM_ASELLATUM_VEEVERS_1959",
@@ -555,7 +563,8 @@
           "lineage": "Skenidium",
           "authorship": "Davidson 1882",
           "sourceIds": {
-            "checklistbank": "txn:308322"
+            "checklistbank": "txn:308322",
+            "gbif-backbone": "10716979"
           },
           "children": [],
           "uuid": "bb379064-c368-59d-a06-af140d801507dd",
@@ -700,10 +709,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "skenidiidae"
+    },
+    {
+      "id": "GENUS_ORTHIS",
+      "name": "Orthis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHIS_LEWISII_DAVIDSON_1848",
+          "name": "Orthis lewisii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthis",
+          "authorship": "(Davidson, 1848)",
+          "sourceIds": {
+            "gbif-backbone": "4870576"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORTHIS_ACUTA_LINDSTR_M_1861",
+          "name": "Orthis acuta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthis",
+          "authorship": "(Lindström, 1861)",
+          "sourceIds": {
+            "gbif-backbone": "9723791"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "skenidiidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 42,
+  "genusCount": 7,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

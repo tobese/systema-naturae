@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Orthis exornata (Portranella Exornata) is a portranellidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "c36d43fb-cfa4-534-98f-8baae8b85fb7ac"
+          "uuid": "c36d43fb-cfa4-534-98f-8baae8b85fb7ac",
+          "children": []
         },
         {
           "id": "SP_PORTRANELLA_ANGULOCOSTELLATA_WRIGHT_1964",
@@ -37,9 +38,32 @@
             ]
           },
           "authorityIds": "col:C83VD",
-          "uuid": "1b4fcdad-3c27-506-885-b238fceb21b925"
+          "uuid": "1b4fcdad-3c27-506-885-b238fceb21b925",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_ORTHIS",
+      "name": "Orthis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHIS_EXORNATA_SHARPE_1853",
+          "name": "Orthis exornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthis",
+          "authorship": "(Sharpe, 1853)",
+          "sourceIds": {
+            "gbif-backbone": "9473405"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "portranellidae"
     }
   ],
   "sourceIds": {
@@ -49,5 +73,7 @@
       "classKey": 210,
       "familyKey": 4870388
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

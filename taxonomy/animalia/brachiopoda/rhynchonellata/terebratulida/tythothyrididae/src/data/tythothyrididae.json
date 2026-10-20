@@ -22,7 +22,8 @@
           "sourcedFrom": "none",
           "authorship": "Hall",
           "yearPublished": "1867",
-          "uuid": "57e52fe2-157e-53a-b37-af4e56c996cdaf"
+          "uuid": "57e52fe2-157e-53a-b37-af4e56c996cdaf",
+          "children": []
         },
         {
           "id": "SP_TEREBRATULA_NAVICELLA",
@@ -33,9 +34,32 @@
           "subspeciesCount": 0,
           "description": "Terebratula navicella (Centronella Navicella) is a tythothyrididae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "f956ce88-487d-5c5-bd3-5b84117d02a66c"
+          "uuid": "f956ce88-487d-5c5-bd3-5b84117d02a66c",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_TEREBRATULA",
+      "name": "Terebratula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEREBRATULA_NAVICELLA_HALL_1867",
+          "name": "Terebratula navicella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratula",
+          "authorship": "(Hall, 1867)",
+          "sourceIds": {
+            "gbif-backbone": "9259639"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tythothyrididae"
     }
   ],
   "sourceIds": {
@@ -46,5 +70,7 @@
       "orderKey": 509,
       "familyKey": 3252221
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

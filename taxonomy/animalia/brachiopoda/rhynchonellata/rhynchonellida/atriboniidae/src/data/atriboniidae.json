@@ -22,7 +22,8 @@
           "sourcedFrom": "none",
           "authorship": "Shen et al.",
           "yearPublished": "2000",
-          "uuid": "2a48e1b6-9a6b-55d-920-771dc439bf4c07"
+          "uuid": "2a48e1b6-9a6b-55d-920-771dc439bf4c07",
+          "children": []
         }
       ]
     },
@@ -42,7 +43,8 @@
           "subspeciesCount": 0,
           "description": "Levicamera athyriformis (Psilocamara Athyriformis) is a atriboniidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "0ea8aa87-4883-5a2-8c1-38f6ae2c7ead98"
+          "uuid": "0ea8aa87-4883-5a2-8c1-38f6ae2c7ead98",
+          "children": []
         },
         {
           "id": "SP_PENTAMERUS_SELLA",
@@ -53,7 +55,8 @@
           "subspeciesCount": 0,
           "description": "Pentamerus sella (Psilocamara Sella) is a atriboniidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "9c53bd91-c1e1-54e-932-41d5b051692de8"
+          "uuid": "9c53bd91-c1e1-54e-932-41d5b051692de8",
+          "children": []
         },
         {
           "id": "SP_PSILOCAMARA_HESPERIA_COOPER_GRANT_1976",
@@ -66,7 +69,8 @@
           "sourcedFrom": "none",
           "authorship": "Cooper & Grant",
           "yearPublished": "1976",
-          "uuid": "28d63144-d06b-504-b37-50891d71c1ff0b"
+          "uuid": "28d63144-d06b-504-b37-50891d71c1ff0b",
+          "children": []
         },
         {
           "id": "SP_PSILOCAMARA_RENFROARUM_COOPER_1956",
@@ -85,7 +89,8 @@
               "CG9ZZ"
             ]
           },
-          "authorityIds": "col:CG9ZZ"
+          "authorityIds": "col:CG9ZZ",
+          "children": []
         },
         {
           "id": "SP_PSILOCAMARA_SAGINATUM_WATERHOUSE_1964",
@@ -104,9 +109,54 @@
               "CGB22"
             ]
           },
-          "authorityIds": "col:CGB22"
+          "authorityIds": "col:CGB22",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_LEVICAMERA",
+      "name": "Levicamera",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEVICAMERA_ATHYRIFORMIS_GRABAU_1934",
+          "name": "Levicamera athyriformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levicamera",
+          "authorship": "(Grabau, 1934)",
+          "sourceIds": {
+            "gbif-backbone": "9238798"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atriboniidae"
+    },
+    {
+      "id": "GENUS_PENTAMERUS",
+      "name": "Pentamerus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PENTAMERUS_SELLA_KUTORGA_1844",
+          "name": "Pentamerus sella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pentamerus",
+          "authorship": "(Kutorga, 1844)",
+          "sourceIds": {
+            "gbif-backbone": "9425757"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atriboniidae"
     }
   ],
   "sourceIds": {
@@ -117,5 +167,7 @@
       "orderKey": 510,
       "familyKey": 4865927
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 8
 }

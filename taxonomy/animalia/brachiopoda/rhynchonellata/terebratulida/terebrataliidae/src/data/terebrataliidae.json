@@ -253,7 +253,8 @@
           "sourceIds": {
             "col": [
               "BS9KM"
-            ]
+            ],
+            "gbif-backbone": "2252852"
           },
           "authorityIds": "col:BS9KM",
           "authorship": "(Dall in Davidson, 1871)"
@@ -721,7 +722,8 @@
             ],
             "itis": [
               "203287"
-            ]
+            ],
+            "gbif-backbone": "4282100"
           },
           "authorityIds": "col:BJ67S,itis:203287",
           "authorship": "(Dall, 1891)"
@@ -758,7 +760,8 @@
           "uuid": "61d9ed1f-6dba-5b6-b7f-d0337549879859",
           "authorship": "(Arnold 1903)",
           "sourceIds": {
-            "checklistbank": "txn:364068"
+            "checklistbank": "txn:364068",
+            "gbif-backbone": "9327693"
           }
         }
       ]
@@ -1036,7 +1039,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:235615"
           },
-          "uuid": "8b2b0346-bb3b-4c19-8a91-a55c2b436067"
+          "uuid": "8b2b0346-bb3b-4c19-8a91-a55c2b436067",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1269,10 +1273,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "terebrataliidae"
+    },
+    {
+      "id": "GENUS_TEREBRATULA",
+      "name": "Terebratula",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEREBRATULA_TENUIS_HAYASAKA_1922",
+          "name": "Terebratula tenuis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratula",
+          "authorship": "(Hayasaka, 1922)",
+          "sourceIds": {
+            "gbif-backbone": "9473104"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TEREBRATULA_BEAUMONTI_D_ARCHIAC_1847",
+          "name": "Terebratula beaumonti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratula",
+          "authorship": "(d'Archiac, 1847)",
+          "sourceIds": {
+            "gbif-backbone": "4868991"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "terebrataliidae"
+    },
+    {
+      "id": "GENUS_TEREBRATELLA",
+      "name": "Terebratella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEREBRATELLA_EXCELSA_YOKOYAMA_1923",
+          "name": "Terebratella excelsa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratella",
+          "authorship": "(Yokoyama, 1923)",
+          "sourceIds": {
+            "gbif-backbone": "9596375"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "terebrataliidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 71,
+  "genusCount": 21,
+  "speciesCount": 74,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

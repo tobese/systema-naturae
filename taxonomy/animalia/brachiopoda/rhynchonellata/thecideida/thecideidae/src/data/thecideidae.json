@@ -741,7 +741,8 @@
           "uuid": "64e05786-3d34-5b7-a78-afd0983d2eadc1",
           "authorship": "(Roemer 1839)",
           "sourceIds": {
-            "checklistbank": "txn:297909"
+            "checklistbank": "txn:297909",
+            "gbif-backbone": "8637306"
           }
         }
       ]
@@ -763,7 +764,11 @@
           "description": "Thecidea wetherelli (Praelacazella Wetherelli) is a thecideidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "cc827aa0-7b99-505-bf0-e75db50d3816c6"
+          "uuid": "cc827aa0-7b99-505-bf0-e75db50d3816c6",
+          "authorship": "(Morris, 1851)",
+          "sourceIds": {
+            "gbif-backbone": "9551207"
+          }
         },
         {
           "id": "SP_PRAELACAZELLA_WETHERELLI_MORRIS_1851",
@@ -817,7 +822,11 @@
           "description": "Thecidea sinuata (Davidsonella Sinuata) is a thecideidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "684a7d78-15c5-5e4-b32-245cd132e1bcd2"
+          "uuid": "684a7d78-15c5-5e4-b32-245cd132e1bcd2",
+          "authorship": "(Eudes-Deslongchamps, 1853)",
+          "sourceIds": {
+            "gbif-backbone": "9557968"
+          }
         }
       ]
     },
@@ -1129,10 +1138,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thecideidae"
+    },
+    {
+      "id": "GENUS_TEREBRATULITES",
+      "name": "Terebratulites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TEREBRATULITES_PAPILLATUS_VON_SCHLOTHEIM_1813",
+          "name": "Terebratulites papillatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Terebratulites",
+          "authorship": "(von Schlotheim, 1813)",
+          "sourceIds": {
+            "gbif-backbone": "9482006"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thecideidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 61,
+  "genusCount": 20,
+  "speciesCount": 62,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

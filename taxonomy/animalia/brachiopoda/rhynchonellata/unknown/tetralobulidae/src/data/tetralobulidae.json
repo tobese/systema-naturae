@@ -418,7 +418,8 @@
           "uuid": "ecdca180-7c2e-54f-a17-698583f411cca8",
           "authorship": "(Ross 1971)",
           "sourceIds": {
-            "checklistbank": "txn:446311"
+            "checklistbank": "txn:446311",
+            "gbif-backbone": "8754337"
           }
         },
         {
@@ -443,7 +444,11 @@
           "description": "Syntrophopsis landmani (Cuparius Landmani) is a tetralobulidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "0099f887-1962-5e7-871-875e678c19e550"
+          "uuid": "0099f887-1962-5e7-871-875e678c19e550",
+          "authorship": "(Ulrich & Cooper, 1938)",
+          "sourceIds": {
+            "gbif-backbone": "8974008"
+          }
         },
         {
           "id": "SP_SYNTROPHOPSIS_VETUSTA",
@@ -455,7 +460,11 @@
           "description": "Syntrophopsis vetusta (Cuparius Vetusta) is a tetralobulidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "ca1b6eb9-0b4f-571-b3d-223e1c82c0754a"
+          "uuid": "ca1b6eb9-0b4f-571-b3d-223e1c82c0754a",
+          "authorship": "(Ulrich & Cooper, 1938)",
+          "sourceIds": {
+            "gbif-backbone": "9037981"
+          }
         },
         {
           "id": "SP_CUPARIUS_UMBONATUS_COOPER_1956",
@@ -777,10 +786,80 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tetralobulidae"
+    },
+    {
+      "id": "GENUS_PORAMBONITES",
+      "name": "Porambonites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PORAMBONITES_UMBONATUS_COOPER_1956",
+          "name": "Porambonites umbonatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porambonites",
+          "authorship": "(Cooper, 1956)",
+          "sourceIds": {
+            "gbif-backbone": "8802289"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PORAMBONITES_OBSCURUS_HALL_WHITFIELD_1877",
+          "name": "Porambonites obscurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porambonites",
+          "authorship": "(Hall & Whitfield, 1877)",
+          "sourceIds": {
+            "gbif-backbone": "9083390"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetralobulidae"
+    },
+    {
+      "id": "GENUS_SYNTROPHIA",
+      "name": "Syntrophia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYNTROPHIA_PERILLA_WALCOTT_1924",
+          "name": "Syntrophia perilla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syntrophia",
+          "authorship": "(Walcott, 1924)",
+          "sourceIds": {
+            "gbif-backbone": "9227683"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SYNTROPHIA_ORTHIA_WALCOTT_1906",
+          "name": "Syntrophia orthia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Syntrophia",
+          "authorship": "(Walcott, 1906)",
+          "sourceIds": {
+            "gbif-backbone": "8977859"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tetralobulidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 44,
+  "genusCount": 13,
+  "speciesCount": 48,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
