@@ -152,16 +152,19 @@ PAGE = """<!doctype html>
   .card .num { font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .card .label { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
   .card.flagged .num { color: var(--warn); }
-  table { width: 100%; border-collapse: collapse; max-width: 1100px; }
+  table { width: 100%; border-collapse: collapse; max-width: 1100px; table-layout: fixed; }
   th, td {
     text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border);
-    font-variant-numeric: tabular-nums; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
   }
+  th.num, td.num { text-align: right; white-space: nowrap; }
+  td.source { overflow: hidden; text-overflow: ellipsis; }
   th {
     color: var(--dim); font-size: 11px; text-transform: uppercase;
     letter-spacing: .03em; font-weight: 600; position: sticky; top: 0; background: var(--bg);
   }
-  th.num, td.num { text-align: right; }
+  th.source { width: 34%; }
+  th.num { width: 9%; }
   tr.flagged td { background: rgba(255, 92, 92, 0.08); }
   tr.flagged td:first-child { border-left: 2px solid var(--warn); }
   .slug { color: var(--accent); font-weight: 600; }
@@ -305,7 +308,7 @@ PAGE = """<!doctype html>
   <div class="cards" id="cards"></div>
   <div class="wrap"><table id="tbl">
     <thead><tr>
-      <th>When</th><th>Source</th><th class="num">Offered</th><th class="num">Held</th><th class="num">Staged</th>
+      <th>When</th><th class="source">Source</th><th class="num">Offered</th><th class="num">Held</th><th class="num">Staged</th>
       <th class="num">Added</th><th class="num">Refused</th><th class="num">Rate</th><th>Kingdoms</th>
     </tr></thead>
     <tbody id="rows"></tbody>
@@ -341,7 +344,7 @@ function render(data) {
     const name = r.publisher ? `${r.publisher} ${r.key ? '('+r.key+')' : ''}` : (r.title || r.slugHint || r.source || '?');
     return `<tr class="${r.issues.length ? 'flagged' : ''}">
       <td>${(r.at || '').replace('T', ' ').slice(0, 19)}</td>
-      <td><span class="slug">${name}</span>${extra}</td>
+      <td class="source"><span class="slug">${name}</span>${extra}</td>
       <td class="num">${fmt(r.offered)}</td>
       <td class="num">${fmt(r.alreadyHeld)}</td>
       <td class="num">${fmt(r.staged)}</td>
