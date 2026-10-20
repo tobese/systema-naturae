@@ -44,11 +44,13 @@
           "description": "Dobrogelina angulata is a pfenderinidae species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10543287
+            "gbif": 10543287,
+            "gbif-backbone": "10543287"
           },
           "uuid": "00f208ab-1208-503-948-0628ed7038df79",
           "authorityIds": "gbif:10543287",
-          "children": []
+          "children": [],
+          "authorship": "Calvez, 1988"
         },
         {
           "id": "DOBROGELINA_CARTUSIANA",
@@ -2576,6 +2578,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pfenderinidae"
+    },
+    {
+      "id": "GENUS_ORBITOLINOPSIS",
+      "name": "Orbitolinopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORBITOLINOPSIS_FLANDRINI_BASSOULLET_MOULLADE_1962",
+          "name": "Orbitolinopsis flandrini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orbitolinopsis",
+          "authorship": "Bassoullet & Moullade, 1962",
+          "sourceIds": {
+            "gbif-backbone": "9631085"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pfenderinidae"
     }
   ],
   "sourceIds": {
@@ -2587,6 +2611,6 @@
       "familyKey": 7593658
     }
   },
-  "genusCount": 48,
-  "speciesCount": 116
+  "genusCount": 49,
+  "speciesCount": 117
 }
