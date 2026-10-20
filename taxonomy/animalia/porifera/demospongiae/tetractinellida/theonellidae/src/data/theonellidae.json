@@ -275,7 +275,8 @@
           "uuid": "be0eecda-2945-5d6-8ac-04fce42b93ee6a",
           "authorship": "(Moret 1925)",
           "sourceIds": {
-            "checklistbank": "txn:187535"
+            "checklistbank": "txn:187535",
+            "gbif-backbone": "8531112"
           }
         },
         {
@@ -2605,7 +2606,11 @@
           "description": "Discodermia antiqua (Phyllodermia Antiqua) is a theonellidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2802c206-b929-5f3-808-389b12f7c9cb91"
+          "uuid": "2802c206-b929-5f3-808-389b12f7c9cb91",
+          "authorship": "(Schrammen, 1901)",
+          "sourceIds": {
+            "gbif-backbone": "9382104"
+          }
         },
         {
           "id": "SP_PHYLLODERMIA_KEMPCKEI_WAGNER_1963",
@@ -3105,7 +3110,8 @@
           "sourceIds": {
             "wikispecies": "Theonella_levior"
           },
-          "uuid": "b24bc456-6130-4649-8b18-ef531aa19c2c"
+          "uuid": "b24bc456-6130-4649-8b18-ef531aa19c2c",
+          "children": []
         },
         {
           "id": "SP_THEONELLA_SWINHOEI",
@@ -3117,7 +3123,8 @@
           "sourceIds": {
             "wikispecies": "Theonella_swinhoei"
           },
-          "uuid": "d42ff622-3384-4850-8ed3-12f6d88382cc"
+          "uuid": "d42ff622-3384-4850-8ed3-12f6d88382cc",
+          "children": []
         },
         {
           "id": "SP_THEONELLA_DELIQUA",
@@ -3129,7 +3136,8 @@
           "sourceIds": {
             "wikispecies": "Theonella_deliqua"
           },
-          "uuid": "09282693-895c-4c08-b57a-8ba9fe083f11"
+          "uuid": "09282693-895c-4c08-b57a-8ba9fe083f11",
+          "children": []
         },
         {
           "id": "SP_THEONELLA_MARICAE",
@@ -3141,7 +3149,8 @@
           "sourceIds": {
             "wikispecies": "Theonella_maricae"
           },
-          "uuid": "0cd9a209-4138-441f-9baa-b609695425bc"
+          "uuid": "0cd9a209-4138-441f-9baa-b609695425bc",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3284,10 +3293,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "theonellidae"
+    },
+    {
+      "id": "GENUS_CUPULOSPONGIA",
+      "name": "Cupulospongia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CUPULOSPONGIA_RIMOSA_ROEMER_1864",
+          "name": "Cupulospongia rimosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cupulospongia",
+          "authorship": "(Roemer, 1864)",
+          "sourceIds": {
+            "gbif-backbone": "9483328"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "theonellidae"
+    },
+    {
+      "id": "GENUS_SIPHONIA",
+      "name": "Siphonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIPHONIA_CORONATA_COURTILLER_1861",
+          "name": "Siphonia coronata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siphonia",
+          "authorship": "(Courtiller, 1861)",
+          "sourceIds": {
+            "gbif-backbone": "9500844"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "theonellidae"
+    },
+    {
+      "id": "GENUS_SOLLASELLA",
+      "name": "Sollasella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SOLLASELLA_JEREAEFORMIS_SCHRAMMEN_1901",
+          "name": "Sollasella jereaeformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sollasella",
+          "authorship": "(Schrammen, 1901)",
+          "sourceIds": {
+            "gbif-backbone": "9399188"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "theonellidae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 188,
+  "genusCount": 26,
+  "speciesCount": 191,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

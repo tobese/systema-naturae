@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Scyphia obliqua (Sporadopyle Obliqua) is a calyptrellidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "e42d009b-929b-5ef-865-b90abb30b64bf4"
+          "uuid": "e42d009b-929b-5ef-865-b90abb30b64bf4",
+          "children": []
         },
         {
           "id": "SP_SPORADOPYLE_PUSILLA_SCHRAMMEN_1937",
@@ -31,7 +32,8 @@
           "subspeciesCount": 0,
           "description": "Sporadopyle pusilla Schrammen, 1937 is a calyptrellidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "24f7b5ae-6e79-5f6-9f3-d76e6d7ad5fd0e"
+          "uuid": "24f7b5ae-6e79-5f6-9f3-d76e6d7ad5fd0e",
+          "children": []
         }
       ]
     },
@@ -53,9 +55,32 @@
           "sourcedFrom": "none",
           "authorship": "Schrammen",
           "yearPublished": "1912",
-          "uuid": "a480c3e0-14a3-5ab-b49-ac78adb3fb0c3e"
+          "uuid": "a480c3e0-14a3-5ab-b49-ac78adb3fb0c3e",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SCYPHIA",
+      "name": "Scyphia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCYPHIA_OBLIQUA_GOLDFUSS_1826",
+          "name": "Scyphia obliqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scyphia",
+          "authorship": "(Goldfuss, 1826)",
+          "sourceIds": {
+            "gbif-backbone": "4582373"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calyptrellidae"
     }
   ],
   "sourceIds": {
@@ -66,5 +91,7 @@
       "orderKey": 1114,
       "familyKey": 4580836
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 4
 }

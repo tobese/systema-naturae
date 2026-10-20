@@ -191,7 +191,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:171187"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171187"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171187",
+            "gbif-backbone": "2252230"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:171187,col:435RS",
           "authorship": "(Döderlein, 1884)"
@@ -214,7 +215,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:171188"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171188"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171188",
+            "gbif-backbone": "2252235"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:171188,col:435RT",
           "authorship": "(Dendy, 1905)"
@@ -353,7 +355,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:171191"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171191"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171191",
+            "gbif-backbone": "2252232"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:171191,col:435RX",
           "authorship": "(Lévi, 1960)"
@@ -780,7 +783,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:171175"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171175"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:171175",
+            "gbif-backbone": "5183797"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:171175,col:64HQS",
           "authorship": "(Schmidt, 1880)"
@@ -1228,10 +1232,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "scleritodermidae"
+    },
+    {
+      "id": "GENUS_VERRUCULINA",
+      "name": "Verruculina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VERRUCULINA_CUPULA_SCHRAMMEN_1910",
+          "name": "Verruculina cupula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Verruculina",
+          "authorship": "(Schrammen, 1910)",
+          "sourceIds": {
+            "gbif-backbone": "9441552"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scleritodermidae"
+    },
+    {
+      "id": "GENUS_VERRUCOSPONGIA",
+      "name": "Verrucospongia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VERRUCOSPONGIA_MACROMMATA_ROEMER_1864",
+          "name": "Verrucospongia macrommata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Verrucospongia",
+          "authorship": "(Roemer, 1864)",
+          "sourceIds": {
+            "gbif-backbone": "9561760"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scleritodermidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 69,
+  "genusCount": 10,
+  "speciesCount": 71,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1240,6 +1288,7 @@
       "orderKey": 7544483,
       "familyKey": 3920
     },
-    "checklistbank": "Scleritodermidae"
+    "checklistbank": "Scleritodermidae",
+    "wikispecies": "Scleritodermidae"
   }
 }

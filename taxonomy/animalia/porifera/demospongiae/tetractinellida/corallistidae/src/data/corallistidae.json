@@ -173,7 +173,11 @@
           "description": "Neophrissospongia tubulata is a corallistidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "60436560-83cb-5de-b58-4389ca0c0f5115"
+          "uuid": "60436560-83cb-5de-b58-4389ca0c0f5115",
+          "authorship": "(van Soest & Stentoft, 1988)",
+          "sourceIds": {
+            "gbif-backbone": "5963801"
+          }
         },
         {
           "id": "SP_NEOPHRISSOSPONGIA_SP",
@@ -1098,7 +1102,11 @@
           "description": "Corallistes parasitica is a corallistidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "92fb3bb1-a1dd-5a2-b5f-3a9abeea4c7915"
+          "uuid": "92fb3bb1-a1dd-5a2-b5f-3a9abeea4c7915",
+          "authorship": "(Carter, 1873)",
+          "sourceIds": {
+            "gbif-backbone": "11113674"
+          }
         },
         {
           "id": "SP_CORALLISTES_PARATYPUS_VAN_SOEST_STENTOFT_1988",
@@ -2077,10 +2085,89 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "corallistidae"
+    },
+    {
+      "id": "GENUS_PHALANGIUM",
+      "name": "Phalangium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHALANGIUM_CYLINDRATUM_SCHRAMMEN_1910",
+          "name": "Phalangium cylindratum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalangium",
+          "authorship": "(Schrammen, 1910)",
+          "sourceIds": {
+            "gbif-backbone": "9518629"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHALANGIUM_SCYTALIFORME_SCHRAMMEN_1910",
+          "name": "Phalangium scytaliforme",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phalangium",
+          "authorship": "(Schrammen, 1910)",
+          "sourceIds": {
+            "gbif-backbone": "9327363"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corallistidae"
+    },
+    {
+      "id": "GENUS_NEOHINDIA",
+      "name": "Neohindia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOHINDIA_CYLINDRICA_SCHRAMMEN_1901",
+          "name": "Neohindia cylindrica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neohindia",
+          "authorship": "(Schrammen, 1901)",
+          "sourceIds": {
+            "gbif-backbone": "9547255"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corallistidae"
+    },
+    {
+      "id": "GENUS_JEREA",
+      "name": "Jerea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_JEREA_SCRIPTA_ROEMER_1864",
+          "name": "Jerea scripta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Jerea",
+          "authorship": "(Roemer, 1864)",
+          "sourceIds": {
+            "gbif-backbone": "9354816"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corallistidae"
     }
   ],
-  "genusCount": 26,
-  "speciesCount": 115,
+  "genusCount": 29,
+  "speciesCount": 119,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2089,6 +2176,7 @@
       "orderKey": 7544483,
       "familyKey": 6998
     },
-    "checklistbank": "Corallistidae"
+    "checklistbank": "Corallistidae",
+    "wikispecies": "Corallistidae"
   }
 }

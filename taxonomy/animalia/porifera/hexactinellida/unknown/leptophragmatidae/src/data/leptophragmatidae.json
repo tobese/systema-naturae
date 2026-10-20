@@ -22,7 +22,8 @@
           "sourcedFrom": "none",
           "authorship": "Schrammen",
           "yearPublished": "1912",
-          "uuid": "f6a4d7ec-5ab3-5d2-8b4-660879d83d3721"
+          "uuid": "f6a4d7ec-5ab3-5d2-8b4-660879d83d3721",
+          "children": []
         },
         {
           "id": "SP_POLYSTIGMATIUM_STRIATOPUNCTATUM",
@@ -33,7 +34,8 @@
           "subspeciesCount": 0,
           "description": "Polystigmatium striatopunctatum (Leptophragma Striatopunctatum) is a leptophragmatidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "f350854d-2c3b-578-91c-ca88cc5a8cea21"
+          "uuid": "f350854d-2c3b-578-91c-ca88cc5a8cea21",
+          "children": []
         },
         {
           "id": "SP_SCYPHIA_GLUTINATA",
@@ -44,7 +46,8 @@
           "subspeciesCount": 0,
           "description": "Scyphia glutinata (Leptophragma Glutinata) is a leptophragmatidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "aac8f736-aac9-517-860-134138cc039405"
+          "uuid": "aac8f736-aac9-517-860-134138cc039405",
+          "children": []
         },
         {
           "id": "SP_SCYPHIA_MURCHISONI",
@@ -55,9 +58,67 @@
           "subspeciesCount": 0,
           "description": "Scyphia murchisoni (Leptophragma Murchisoni) is a leptophragmatidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "a8973947-1569-557-91a-60115bfc775ac3"
+          "uuid": "a8973947-1569-557-91a-60115bfc775ac3",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SCYPHIA",
+      "name": "Scyphia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCYPHIA_MURCHISONI_GOLDFUSS_1831",
+          "name": "Scyphia murchisoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scyphia",
+          "authorship": "(Goldfuss, 1831)",
+          "sourceIds": {
+            "gbif-backbone": "9453043"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SCYPHIA_GLUTINATA_QUENSTEDT_1878",
+          "name": "Scyphia glutinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scyphia",
+          "authorship": "(Quenstedt, 1878)",
+          "sourceIds": {
+            "gbif-backbone": "9527103"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptophragmatidae"
+    },
+    {
+      "id": "GENUS_POLYSTIGMATIUM",
+      "name": "Polystigmatium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POLYSTIGMATIUM_STRIATOPUNCTATUM_SCHRAMMEN_1912",
+          "name": "Polystigmatium striatopunctatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polystigmatium",
+          "authorship": "(Schrammen, 1912)",
+          "sourceIds": {
+            "gbif-backbone": "9335656"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leptophragmatidae"
     }
   ],
   "sourceIds": {
@@ -67,5 +128,7 @@
       "classKey": 146,
       "familyKey": 3251435
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 7
 }
