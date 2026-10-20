@@ -22,7 +22,11 @@
           "description": "Polyrhiza homopneusis is a cepheidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6db558d0-6962-5f5-b92-2b41a3fc78c0ba"
+          "uuid": "6db558d0-6962-5f5-b92-2b41a3fc78c0ba",
+          "authorship": "Haeckel",
+          "sourceIds": {
+            "gbif-backbone": "11522060"
+          }
         },
         {
           "id": "POLYRHIZA_ORITHYIA",
@@ -35,7 +39,11 @@
           "description": "Polyrhiza orithyia is a cepheidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2773a03f-c742-50d-99d-bdeba9b70aa8aa"
+          "uuid": "2773a03f-c742-50d-99d-bdeba9b70aa8aa",
+          "authorship": "Haeckel",
+          "sourceIds": {
+            "gbif-backbone": "11697833"
+          }
         },
         {
           "id": "POLYRHIZA_VESICULOSA",
@@ -165,7 +173,11 @@
           "description": "Cephea diplopilus is a cepheidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "4a006174-0b0c-503-b8d-27ab52338b0d5b"
+          "uuid": "4a006174-0b0c-503-b8d-27ab52338b0d5b",
+          "authorship": "Haeckel",
+          "sourceIds": {
+            "gbif-backbone": "11463754"
+          }
         },
         {
           "id": "CEPHEA_FUSCA",
@@ -183,7 +195,8 @@
             "wikidata": [
               "Q111087034"
             ],
-            "checklistbank": "f9f2da1d-1234-471e-b7d1-7b3848d7aa2f"
+            "checklistbank": "f9f2da1d-1234-471e-b7d1-7b3848d7aa2f",
+            "gbif-backbone": "11756162"
           },
           "authorityIds": "wikidata:Q111087034",
           "authorship": "Péron & Lesueur"
@@ -229,7 +242,8 @@
             "itis": [
               "51785"
             ],
-            "checklistbank": "ott5139919"
+            "checklistbank": "ott5139919",
+            "gbif-backbone": "4282364"
           },
           "authorityIds": "itis:51785"
         },
@@ -371,7 +385,8 @@
             "col": [
               "479NX"
             ],
-            "checklistbank": "34808a8e-5c6f-442e-950f-3310e9b67757"
+            "checklistbank": "34808a8e-5c6f-442e-950f-3310e9b67757",
+            "wikispecies": "Netrostoma_setouchianum"
           },
           "authorityIds": "col:479NX,itis:51798,wikidata:Q2269106"
         },
@@ -2468,11 +2483,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cepheidae"
+    },
+    {
+      "id": "GENUS_STYLORHIZA",
+      "name": "Stylorhiza",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYLORHIZA_POLYSTYLA_HAECKEL_1879",
+          "name": "Stylorhiza polystyla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylorhiza",
+          "authorship": "Haeckel, 1879",
+          "sourceIds": {
+            "gbif-backbone": "11710925"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cepheidae"
     }
   ],
-  "genusCount": 28,
-  "speciesCount": 143,
+  "genusCount": 29,
+  "speciesCount": 144,
   "sourceIds": {
-    "checklistbank": "Cepheidae_Agassiz"
+    "checklistbank": "Cepheidae_Agassiz",
+    "wikispecies": "Cepheidae_Agassiz"
   }
 }

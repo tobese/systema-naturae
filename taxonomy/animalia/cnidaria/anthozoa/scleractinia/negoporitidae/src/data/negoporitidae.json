@@ -29,7 +29,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1546716"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1546716"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1546716",
+            "gbif-backbone": "11309161"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1546716,col:8RVSD",
           "authorship": "(Eliášová, 1995)"
@@ -70,7 +71,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1546713"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1546713"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1546713",
+            "gbif-backbone": "11583884"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1546713,col:8RVS8",
           "authorship": "(Felix, 1903)"
@@ -117,7 +119,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1546712"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1546712"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1546712",
+            "gbif-backbone": "8476249"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1546712,col:8RQFJ",
           "authorship": "(Reuss, 1846)"
@@ -249,10 +252,45 @@
           "authorityIds": "col:864NX"
         }
       ]
+    },
+    {
+      "id": "GENUS_PORITES",
+      "name": "Porites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PORITES_SPISSUS_POCTA_1887",
+          "name": "Porites spissus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porites",
+          "authorship": "(Pocta, 1887)",
+          "sourceIds": {
+            "gbif-backbone": "9511457"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PORITES_TEXTILIS_POCTA_1887",
+          "name": "Porites textilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porites",
+          "authorship": "(Pocta, 1887)",
+          "sourceIds": {
+            "gbif-backbone": "9276870"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "negoporitidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 12,
+  "genusCount": 4,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

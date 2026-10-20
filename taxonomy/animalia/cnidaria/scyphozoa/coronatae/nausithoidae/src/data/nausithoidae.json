@@ -658,10 +658,12 @@
             "itis": [
               "51594"
             ],
-            "checklistbank": "ott3680214"
+            "checklistbank": "ott3680214",
+            "gbif-backbone": "4282487"
           },
           "authorityIds": "itis:51594",
-          "children": []
+          "children": [],
+          "authorship": "Haeckel, 1880"
         },
         {
           "id": "PALEPHYRA_ANTIQUA",
@@ -752,7 +754,11 @@
           "description": "Palephyra primigenia is a nausithoidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "a92d7920-02b1-594-bd9-09dfe6862bdf31",
-          "children": []
+          "children": [],
+          "authorship": "Haeckel, 1879",
+          "sourceIds": {
+            "gbif-backbone": "8874729"
+          }
         },
         {
           "id": "ZONEPHYRA_CONNECTENS",
@@ -806,7 +812,8 @@
             "col": [
               "52CNP"
             ],
-            "checklistbank": "7babd3df-0811-4f7a-a0be-0e7d68272b3a"
+            "checklistbank": "7babd3df-0811-4f7a-a0be-0e7d68272b3a",
+            "gbif-backbone": "8793464"
           },
           "authorityIds": "col:52CNP",
           "authorship": "(Kirkpatrick),1890",
@@ -826,10 +833,12 @@
           "sourceIds": {
             "col": [
               "84N37"
-            ]
+            ],
+            "gbif-backbone": "10717940"
           },
           "authorityIds": "col:84N37",
-          "children": []
+          "children": [],
+          "authorship": "(Thiel, 1936)"
         },
         {
           "id": "STEPHANOSCYPHISTOMA_CORNIFORMIS",
@@ -845,10 +854,12 @@
           "sourceIds": {
             "col": [
               "52CNQ"
-            ]
+            ],
+            "gbif-backbone": "9187000"
           },
           "authorityIds": "col:52CNQ",
-          "children": []
+          "children": [],
+          "authorship": "(Komai, 1936)"
         },
         {
           "id": "SP_STEPHANOSCYPHISTOMA_SIMPLEX_KIRKPATRICK_1890",
@@ -1344,10 +1355,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "nausithoidae"
+    },
+    {
+      "id": "GENUS_NAUSICAA",
+      "name": "Nausicaa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NAUSICAA_PHAEACUM_HAECKEL_1880",
+          "name": "Nausicaa phaeacum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nausicaa",
+          "authorship": "Haeckel, 1880",
+          "sourceIds": {
+            "gbif-backbone": "8731204"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nausithoidae"
+    },
+    {
+      "id": "GENUS_ZONEPHYRA",
+      "name": "Zonephyra",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZONEPHYRA_CONNECTENS_HAECKEL_1879",
+          "name": "Zonephyra connectens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zonephyra",
+          "authorship": "Haeckel, 1879",
+          "sourceIds": {
+            "gbif-backbone": "9022984"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "nausithoidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 66,
+  "genusCount": 11,
+  "speciesCount": 68,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

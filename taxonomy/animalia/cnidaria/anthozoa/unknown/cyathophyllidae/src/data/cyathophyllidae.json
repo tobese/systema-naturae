@@ -80,7 +80,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1510750"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510750"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510750",
+            "gbif-backbone": "11136661"
           },
           "children": [],
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1510750"
@@ -132,7 +133,11 @@
           "description": "Cyathophyllum pentagonum is a cyathophyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "122d8a26-1891-55a-afa-7cb245da0cea17",
-          "children": []
+          "children": [],
+          "authorship": "(Goldfuss, 1826)",
+          "sourceIds": {
+            "gbif-backbone": "11220058"
+          }
         },
         {
           "id": "SP_CYATHOPHYLLUM_PLICATUM_GOLDFUSS_1826",
@@ -163,7 +168,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1510740"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510740"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510740",
+            "gbif-backbone": "11138003"
           },
           "children": [],
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1510740"
@@ -183,7 +189,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1510743"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510743"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1510743",
+            "gbif-backbone": "11181093"
           },
           "children": [],
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1510743"
@@ -226,7 +233,11 @@
           "description": "Cyathophyllum regium is a cyathophyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "6b0d6a55-e084-5a3-9fa-fc876b23357bda",
-          "children": []
+          "children": [],
+          "authorship": "(Phillips, 1836)",
+          "sourceIds": {
+            "gbif-backbone": "11527322"
+          }
         },
         {
           "id": "SP_CYATHOPHYLLUM_RUGOSUS",
@@ -238,7 +249,11 @@
           "description": "Cyathophyllum rugosus is a cyathophyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "c6b3758e-0943-560-81f-b1793c5f920308",
-          "children": []
+          "children": [],
+          "authorship": "(Milne Edwards & Haime, 1851)",
+          "sourceIds": {
+            "gbif-backbone": "4881010"
+          }
         },
         {
           "id": "SP_CYATHOPHYLLUM_STUTCHBURYI",
@@ -267,7 +282,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1589856"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1589856"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1589856",
+            "gbif-backbone": "4880998"
           },
           "children": [],
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1589856"
@@ -305,7 +321,8 @@
           "lineage": "Cyathophyllum",
           "authorship": "Goldfuss, 1826",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1563954"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1563954",
+            "gbif-backbone": "11692546"
           },
           "children": [],
           "uuid": "4a5b0323-4e1a-558-bf2-a3f9607e7a58d8",
@@ -1047,10 +1064,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyathophyllidae"
+    },
+    {
+      "id": "GENUS_CAMPOPHYLLUM",
+      "name": "Campophyllum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAMPOPHYLLUM_GREGORII_ETHERIDGE_1892",
+          "name": "Campophyllum gregorii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Campophyllum",
+          "authorship": "(Etheridge, 1892)",
+          "sourceIds": {
+            "gbif-backbone": "4881325"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyathophyllidae"
+    },
+    {
+      "id": "GENUS_DISPHYLLUM",
+      "name": "Disphyllum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISPHYLLUM_EUREKAENSIS_MERRIAM_1974",
+          "name": "Disphyllum eurekaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Disphyllum",
+          "authorship": "(Merriam, 1974)",
+          "sourceIds": {
+            "gbif-backbone": "8881510"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DISPHYLLUM_OCCIDENS_STUMM_1938",
+          "name": "Disphyllum occidens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Disphyllum",
+          "authorship": "(Stumm, 1938)",
+          "sourceIds": {
+            "gbif-backbone": "9116302"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyathophyllidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 67,
+  "genusCount": 10,
+  "speciesCount": 70,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

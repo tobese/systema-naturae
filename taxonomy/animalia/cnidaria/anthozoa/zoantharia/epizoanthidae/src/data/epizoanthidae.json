@@ -405,7 +405,8 @@
             "col": [
               "6FX8C"
             ],
-            "checklistbank": "361437"
+            "checklistbank": "361437",
+            "gbif-backbone": "2258081"
           },
           "authorityIds": "col:6FX8C,itis:204156,wikidata:Q3945442"
         },
@@ -3402,7 +3403,8 @@
           "sourceIds": {
             "wikispecies": "Epizoanthus_karenae"
           },
-          "uuid": "7f38f836-c542-4a9b-9f16-a590a3aa4ece"
+          "uuid": "7f38f836-c542-4a9b-9f16-a590a3aa4ece",
+          "children": []
         },
         {
           "id": "SP_EPIZOANTHUS_RODMANI",
@@ -3414,7 +3416,8 @@
           "sourceIds": {
             "wikispecies": "Epizoanthus_rodmani"
           },
-          "uuid": "2c1a7a9e-f86c-4936-b4a5-17888a24916e"
+          "uuid": "2c1a7a9e-f86c-4936-b4a5-17888a24916e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3433,15 +3436,39 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Zoanthus",
           "authorship": "Johnston in Couch, 1844",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "11583470"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Epizoanthidae"
+    },
+    {
+      "id": "GENUS_SIDISIA",
+      "name": "Sidisia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SIDISIA_INCRUSTATA",
+          "name": "Sidisia incrustata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sidisia",
+          "sourceIds": {
+            "gbif-backbone": "11515677"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "epizoanthidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 198,
+  "genusCount": 9,
+  "speciesCount": 199,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

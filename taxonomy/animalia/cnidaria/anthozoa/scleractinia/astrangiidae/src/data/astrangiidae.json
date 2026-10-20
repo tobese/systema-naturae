@@ -29,7 +29,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1456903"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1456903"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1456903",
+            "gbif-backbone": "10690119"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1456903,col:8636K",
           "authorship": "(Conrad, 1841)"
@@ -299,7 +300,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1455586"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1455586"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1455586",
+            "gbif-backbone": "10691329"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1455586,col:8636N,wikidata:Q105935676",
           "authorship": "(Oppenheim, 1899)"
@@ -485,7 +487,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1456897"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1456897"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1456897",
+            "gbif-backbone": "4944056"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1456897,col:8636S,wikidata:Q106991462",
           "authorship": "(Conrad, 1835)"
@@ -609,7 +612,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:157967"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:157967"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:157967",
+            "gbif-backbone": "2259412"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:157967,col:J3HK,itis:53370,wikidata:Q3943800",
           "authorship": "(Ellis & Solander, 1786)"
@@ -624,7 +628,11 @@
           "description": "Astrangia poculum is a astrangiidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3360dec7-1def-511-abe-62049f2bd6114d"
+          "uuid": "3360dec7-1def-511-abe-62049f2bd6114d",
+          "authorship": "(Ellis & Solander, 1876)",
+          "sourceIds": {
+            "gbif-backbone": "11763605"
+          }
         },
         {
           "id": "SP_ASTRANGIA_POLYGONALIS",
@@ -647,7 +655,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1348288"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1348288"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1348288",
+            "gbif-backbone": "10493313"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1348288,col:85M8W,wikidata:Q106991472",
           "authorship": "(Umbgrove, 1950)"
@@ -697,7 +706,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:287125"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:287125"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:287125",
+            "gbif-backbone": "2259407"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:287125,col:J3HQ,itis:53367,wikidata:Q3942935",
           "authorship": "(Le Sueur, 1817)"
@@ -743,7 +753,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1371135"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1371135"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1371135",
+            "gbif-backbone": "4944061"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1371135,col:85M8X,wikidata:Q105936108",
           "authorship": "(Milne Edwards & Haime, 1850)"
@@ -1152,10 +1163,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "astrangiidae"
+    },
+    {
+      "id": "GENUS_ASTREA",
+      "name": "Astrea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTREA_CRETACEA_B_LSCHE_1870",
+          "name": "Astrea cretacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrea",
+          "authorship": "(Bölsche, 1870)",
+          "sourceIds": {
+            "gbif-backbone": "9273846"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "astrangiidae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 60,
+  "genusCount": 4,
+  "speciesCount": 61,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

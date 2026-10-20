@@ -190,10 +190,12 @@
             ],
             "itis": [
               "51619"
-            ]
+            ],
+            "gbif-backbone": "2264346"
           },
           "authorityIds": "itis:51619,wikidata:Q2791228",
-          "children": []
+          "children": [],
+          "authorship": "Fewkes, 1885"
         }
       ]
     },
@@ -215,7 +217,11 @@
           "description": "Periphylla bicolor is a periphyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "920ccbc4-61b0-51f-80d-f51d14aa736c4b",
-          "children": []
+          "children": [],
+          "authorship": "Haeckel",
+          "sourceIds": {
+            "gbif-backbone": "11495205"
+          }
         },
         {
           "id": "PERIPHYLLA_DODECABOSTRYCHA",
@@ -228,7 +234,11 @@
           "description": "Periphylla dodecabostrycha is a periphyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "6b88802c-5c7e-5f0-9f1-c52bbc203c4824",
-          "children": []
+          "children": [],
+          "authorship": "Haeckel",
+          "sourceIds": {
+            "gbif-backbone": "5711593"
+          }
         },
         {
           "id": "PERIPHYLLA_PERIPHYLLA",
@@ -253,7 +263,8 @@
             "col": [
               "4F2ZZ"
             ],
-            "checklistbank": "929684"
+            "checklistbank": "929684",
+            "wikispecies": "Periphylla_periphylla"
           },
           "authorityIds": "col:4F2ZZ,itis:51612,wikidata:Q445245",
           "authorship": "(Péron & Lesueur, 1810)",
@@ -270,7 +281,11 @@
           "description": "Periphylla peronii is a periphyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "b3f932cf-c3b0-5a1-be1-d33752f2206997",
-          "children": []
+          "children": [],
+          "authorship": "Haeckel",
+          "sourceIds": {
+            "gbif-backbone": "11894655"
+          }
         },
         {
           "id": "SP_PERIPHYLLA_SP",
@@ -482,6 +497,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "periphyllidae"
+    },
+    {
+      "id": "GENUS_PERICRYPTA",
+      "name": "Pericrypta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERICRYPTA_GALEA_HAECKEL_1879",
+          "name": "Pericrypta galea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pericrypta",
+          "authorship": "Haeckel, 1879",
+          "sourceIds": {
+            "gbif-backbone": "9005190"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "periphyllidae"
     }
   ],
   "sourceIds": {
@@ -492,8 +529,9 @@
       "orderKey": 713,
       "familyKey": 5179
     },
-    "checklistbank": "Periphyllidae"
+    "checklistbank": "Periphyllidae",
+    "wikispecies": "Periphyllidae"
   },
-  "genusCount": 10,
-  "speciesCount": 21
+  "genusCount": 11,
+  "speciesCount": 22
 }

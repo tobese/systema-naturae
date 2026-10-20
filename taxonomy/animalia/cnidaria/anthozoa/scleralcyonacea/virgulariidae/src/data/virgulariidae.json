@@ -96,7 +96,8 @@
             "itis": [
               "52403"
             ],
-            "checklistbank": "1150257"
+            "checklistbank": "1150257",
+            "gbif-backbone": "2258840"
           },
           "authorityIds": "itis:52403,wikidata:Q5295568"
         },
@@ -671,7 +672,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:286692"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:286692"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:286692",
+            "gbif-backbone": "2258876"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:286692,col:5394R,wikidata:Q5296118",
           "authorship": "(Gray, 1870)"
@@ -775,7 +777,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:128537"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:128537"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:128537",
+            "gbif-backbone": "2258877"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:128537,col:5394V,itis:52391,wikidata:Q5296274"
         },
@@ -804,7 +807,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:286695"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:286695"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:286695",
+            "gbif-backbone": "2258874"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:286695,col:5394W,itis:52390,wikidata:Q3976400"
         },
@@ -1083,7 +1087,8 @@
           "sourceIds": {
             "itis": [
               "52399"
-            ]
+            ],
+            "gbif-backbone": "5184455"
           },
           "authorityIds": "itis:52399"
         },
@@ -1612,9 +1617,11 @@
           "sourceIds": {
             "wikidata": [
               "Q106992237"
-            ]
+            ],
+            "gbif-backbone": "10784317"
           },
-          "authorityIds": "wikidata:Q106992237"
+          "authorityIds": "wikidata:Q106992237",
+          "authorship": "(Nutting, 1908)"
         },
         {
           "id": "SP_VIRGULARIA_TENUIS",
@@ -1630,9 +1637,11 @@
           "sourceIds": {
             "wikidata": [
               "Q105940315"
-            ]
+            ],
+            "gbif-backbone": "10778578"
           },
-          "authorityIds": "wikidata:Q105940315"
+          "authorityIds": "wikidata:Q105940315",
+          "authorship": "(Roule, 1908)"
         },
         {
           "id": "SP_VIRGULARIA_TUBERCULATA_MARSHALL_1883",
@@ -2380,7 +2389,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:128539"
           },
-          "uuid": "c86a968c-b3f9-42d4-9555-745f465a1251"
+          "uuid": "c86a968c-b3f9-42d4-9555-745f465a1251",
+          "children": []
         },
         {
           "id": "SP_VIRGULARIA_ABIES_K_LLIKER_1870",
@@ -2393,7 +2403,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:286701"
           },
-          "uuid": "9df1b9ab-686c-451c-b18c-602711b5781e"
+          "uuid": "9df1b9ab-686c-451c-b18c-602711b5781e",
+          "children": []
         },
         {
           "id": "SP_VIRGULARIA_ALBA_NUTTING_1912",
@@ -2406,15 +2417,38 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:286703"
           },
-          "uuid": "82f85b29-d7e2-41af-8c75-45c1fe46812d"
+          "uuid": "82f85b29-d7e2-41af-8c75-45c1fe46812d",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "virgulariidae"
+    },
+    {
+      "id": "GENUS_PHYLLOGRAPTUS",
+      "name": "Phyllograptus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHYLLOGRAPTUS_CAMBRIENSIS_WALCOTT_1891",
+          "name": "Phyllograptus cambriensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phyllograptus",
+          "authorship": "(Walcott, 1891)",
+          "sourceIds": {
+            "gbif-backbone": "11746076"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "virgulariidae"
     }
   ],
-  "genusCount": 11,
-  "speciesCount": 136,
+  "genusCount": 12,
+  "speciesCount": 137,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

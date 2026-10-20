@@ -22,7 +22,8 @@
           "sourcedFrom": "none",
           "authorship": "Sytova",
           "yearPublished": "1979",
-          "uuid": "ca0dba7c-fa85-562-b5b-8097098b6e7238"
+          "uuid": "ca0dba7c-fa85-562-b5b-8097098b6e7238",
+          "children": []
         }
       ]
     },
@@ -44,7 +45,8 @@
           "sourcedFrom": "none",
           "authorship": "Burnett",
           "yearPublished": "1998",
-          "uuid": "3859a744-2af5-511-a2b-e2b041ccb3f264"
+          "uuid": "3859a744-2af5-511-a2b-e2b041ccb3f264",
+          "children": []
         },
         {
           "id": "SP_MICULA_CLYPEATA_LEES_BOWN_2005",
@@ -57,7 +59,8 @@
           "sourcedFrom": "none",
           "authorship": "Lees & Bown",
           "yearPublished": "2005",
-          "uuid": "61eacfc5-3752-56e-9f7-5e1fe9c55c2d0c"
+          "uuid": "61eacfc5-3752-56e-9f7-5e1fe9c55c2d0c",
+          "children": []
         },
         {
           "id": "SP_MICULA_PREMOLISILVAE_LEES_BOWN_2005",
@@ -70,7 +73,8 @@
           "sourcedFrom": "none",
           "authorship": "Lees & Bown",
           "yearPublished": "2005",
-          "uuid": "34b3ccd5-7c51-5d6-849-9df2fd7d563c69"
+          "uuid": "34b3ccd5-7c51-5d6-849-9df2fd7d563c69",
+          "children": []
         },
         {
           "id": "SP_MICULA_PRINSII_PERCH_NIELSEN_1979",
@@ -83,7 +87,8 @@
           "sourcedFrom": "none",
           "authorship": "Perch-Nielsen",
           "yearPublished": "1979",
-          "uuid": "1d753a03-8699-548-834-11e50b76be79ba"
+          "uuid": "1d753a03-8699-548-834-11e50b76be79ba",
+          "children": []
         },
         {
           "id": "SP_MICULA_SWASTICA_STRADNER_STEINMETZ_1984",
@@ -94,7 +99,8 @@
           "subspeciesCount": 0,
           "description": "Micula swastica Stradner & Steinmetz, 1984 is a expressophyllidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "5da2b40a-a064-562-841-539d380527368e"
+          "uuid": "5da2b40a-a064-562-841-539d380527368e",
+          "children": []
         },
         {
           "id": "SP_TETRALITHUS_MURUS",
@@ -105,7 +111,8 @@
           "subspeciesCount": 0,
           "description": "Tetralithus murus (Micula Murus) is a expressophyllidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "4cd9804e-3934-5b2-82e-bdab8c1c2b34b0"
+          "uuid": "4cd9804e-3934-5b2-82e-bdab8c1c2b34b0",
+          "children": []
         },
         {
           "id": "SP_TETRALITHUS_PRAEMURUS",
@@ -116,9 +123,45 @@
           "subspeciesCount": 0,
           "description": "Tetralithus praemurus (Micula Praemurus) is a expressophyllidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "54b06923-6297-502-9fe-355f748eeaff40"
+          "uuid": "54b06923-6297-502-9fe-355f748eeaff40",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_TETRALITHUS",
+      "name": "Tetralithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TETRALITHUS_PRAEMURUS_BUKRY_1973",
+          "name": "Tetralithus praemurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetralithus",
+          "authorship": "(Bukry, 1973)",
+          "sourceIds": {
+            "gbif-backbone": "9622118"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TETRALITHUS_MURUS_MARTINI_1961",
+          "name": "Tetralithus murus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tetralithus",
+          "authorship": "(Martini, 1961)",
+          "sourceIds": {
+            "gbif-backbone": "9426769"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "expressophyllidae"
     }
   ],
   "sourceIds": {
@@ -128,5 +171,7 @@
       "classKey": 206,
       "familyKey": 3251092
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 10
 }

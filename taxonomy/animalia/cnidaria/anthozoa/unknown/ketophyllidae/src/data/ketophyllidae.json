@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Cyathophyllum eriphyle (Omphyma Eriphyle) is a ketophyllidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "4a8fe64c-4735-57c-9b6-8a5c76cfaf9ac4"
+          "uuid": "4a8fe64c-4735-57c-9b6-8a5c76cfaf9ac4",
+          "children": []
         },
         {
           "id": "SP_OMPHYMA_TURBINATA",
@@ -31,9 +32,36 @@
           "subspeciesCount": 0,
           "description": "Omphyma turbinata is a ketophyllidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "0cdacf72-ce80-572-8da-07f9cf674689e8"
+          "uuid": "0cdacf72-ce80-572-8da-07f9cf674689e8",
+          "authorship": "(Linnaeus, 1767)",
+          "sourceIds": {
+            "gbif-backbone": "4883192"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CYATHOPHYLLUM",
+      "name": "Cyathophyllum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYATHOPHYLLUM_ERIPHYLE_BILLINGS_1862",
+          "name": "Cyathophyllum eriphyle",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyathophyllum",
+          "authorship": "(Billings, 1862)",
+          "sourceIds": {
+            "gbif-backbone": "9630996"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ketophyllidae"
     }
   ],
   "sourceIds": {
@@ -43,5 +71,7 @@
       "classKey": 206,
       "familyKey": 4883189
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

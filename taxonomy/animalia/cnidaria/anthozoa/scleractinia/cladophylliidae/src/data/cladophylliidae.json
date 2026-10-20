@@ -115,7 +115,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1431657"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1431657"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1431657",
+            "gbif-backbone": "4945134"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1431657,col:86356",
           "authorship": "(Ogilvie, 1897)"
@@ -150,7 +151,11 @@
           "description": "Cladophyllia birleyae (Apocladophyllia Birleyae) is a cladophylliidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "9386cead-6be5-566-bf0-6b1d67ddac955b"
+          "uuid": "9386cead-6be5-566-bf0-6b1d67ddac955b",
+          "authorship": "(Gregory, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "9351865"
+          }
         },
         {
           "id": "SP_STYLOSMILIA_NEOCOMIENSIS",
@@ -306,7 +311,8 @@
           "uuid": "236baeb4-1ae0-59f-8f5-c5147511dbb697",
           "authorship": "(Blanckenhorn 1890)",
           "sourceIds": {
-            "checklistbank": "txn:440801"
+            "checklistbank": "txn:440801",
+            "gbif-backbone": "11305310"
           }
         },
         {
@@ -327,7 +333,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1431666"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1431666"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1431666",
+            "gbif-backbone": "4945137"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1431666,col:863GP",
           "authorship": "(Goldfuss, 1826)"
@@ -350,7 +357,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1431662"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1431662"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1431662",
+            "gbif-backbone": "4945150"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1431662,col:863GQ",
           "authorship": "(Koby, 1888)"
@@ -529,7 +537,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1662864"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1662864"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1662864",
+            "gbif-backbone": "4945140"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1662864,col:BCP3Y",
           "authorship": "(Koby, 1888)"
@@ -1095,10 +1104,111 @@
           "uuid": "0cdbfa38-cabc-5f5-a63-81f495cc374f60"
         }
       ]
+    },
+    {
+      "id": "GENUS_EUNOMIA",
+      "name": "Eunomia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUNOMIA_BABEANA_D_ORBIGNY_1850",
+          "name": "Eunomia babeana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eunomia",
+          "authorship": "(d'Orbigny, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "9023744"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladophylliidae"
+    },
+    {
+      "id": "GENUS_CALAMOPHYLLIA",
+      "name": "Calamophyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALAMOPHYLLIA_STUTZI_KOBY_1897",
+          "name": "Calamophyllia stutzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Calamophyllia",
+          "authorship": "(Koby, 1897)",
+          "sourceIds": {
+            "gbif-backbone": "11183318"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladophylliidae"
+    },
+    {
+      "id": "GENUS_PLEUROPHYLLIA",
+      "name": "Pleurophyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLEUROPHYLLIA_SKUVIENSIS_TURNSEK_1981",
+          "name": "Pleurophyllia skuviensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurophyllia",
+          "authorship": "(Turnsek, 1981)",
+          "sourceIds": {
+            "gbif-backbone": "9293069"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladophylliidae"
+    },
+    {
+      "id": "GENUS_STYLOSMILIA",
+      "name": "Stylosmilia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYLOSMILIA_ORGANISANS_D_ORBIGNY_1850",
+          "name": "Stylosmilia organisans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylosmilia",
+          "authorship": "(d'Orbigny, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "8953310"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STYLOSMILIA_NEOCOMIENSIS_DE_FROMENTEL_1857",
+          "name": "Stylosmilia neocomiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylosmilia",
+          "authorship": "(de Fromentel, 1857)",
+          "sourceIds": {
+            "gbif-backbone": "9058795"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cladophylliidae"
     }
   ],
-  "genusCount": 6,
-  "speciesCount": 61,
+  "genusCount": 10,
+  "speciesCount": 66,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

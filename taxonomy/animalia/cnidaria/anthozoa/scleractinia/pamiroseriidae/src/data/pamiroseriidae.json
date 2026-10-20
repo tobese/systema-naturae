@@ -164,7 +164,8 @@
             ],
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1512202"
-            ]
+            ],
+            "gbif-backbone": "4944401"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1512202,col:8GN2J",
           "authorship": "(Winkler, 1861)"
@@ -201,7 +202,11 @@
           "description": "Thamnastraea borealis (Pamiroseris Borealis) is a pamiroseriidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b6f6b7ba-9a03-52c-b00-8d11a08c353933"
+          "uuid": "b6f6b7ba-9a03-52c-b00-8d11a08c353933",
+          "authorship": "(Smith, 1927)",
+          "sourceIds": {
+            "gbif-backbone": "8765775"
+          }
         },
         {
           "id": "SP_THAMNASTRAEA_ZITTELI",
@@ -213,7 +218,11 @@
           "description": "Thamnastraea zitteli (Pamiroseris Zitteli) is a pamiroseriidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "38a07013-75e6-59e-8fb-20cb71d1c9597c"
+          "uuid": "38a07013-75e6-59e-8fb-20cb71d1c9597c",
+          "authorship": "(von Wöhrmann, 1889)",
+          "sourceIds": {
+            "gbif-backbone": "9352495"
+          }
         },
         {
           "id": "SP_PAMIROSERIS_RECTILAMELLOSA_WINCKLER_1861",
@@ -421,7 +430,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1658524"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658524"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658524",
+            "gbif-backbone": "4944407"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658524,col:BCS4R",
           "authorship": "(Frech, 1890)"
@@ -436,7 +446,11 @@
           "description": "Rhaetiastraea vesiculosa (Crassistella Vesiculosa) is a pamiroseriidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "3a082915-799e-573-ad6-5cb31166519258"
+          "uuid": "3a082915-799e-573-ad6-5cb31166519258",
+          "authorship": "(Melnikova, 1986)",
+          "sourceIds": {
+            "gbif-backbone": "4944406"
+          }
         },
         {
           "id": "SP_CRASSISTELLA_VESICULOSA_MELNIKOVA_1986",
@@ -930,7 +944,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1512200"
           },
-          "uuid": "12263e89-a74e-47c8-b7f5-699c5dbe25ea"
+          "uuid": "12263e89-a74e-47c8-b7f5-699c5dbe25ea",
+          "children": []
         },
         {
           "id": "SP_PAMIROSERIS_SILESIACA_BEYRICH_1852",
@@ -943,7 +958,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1579416"
           },
-          "uuid": "a20881ef-74de-4269-857b-b41ac0853a66"
+          "uuid": "a20881ef-74de-4269-857b-b41ac0853a66",
+          "children": []
         },
         {
           "id": "SP_PAMIROSERIS_MULTISEPTATA_MELNIKOVA_1967",
@@ -956,7 +972,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658523"
           },
-          "uuid": "f24b7973-b7ca-41b1-96cd-8b62317e2797"
+          "uuid": "f24b7973-b7ca-41b1-96cd-8b62317e2797",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -985,10 +1002,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pamiroseriidae"
+    },
+    {
+      "id": "GENUS_ASTROCOENIA",
+      "name": "Astrocoenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTROCOENIA_SHASTENSIS_SMITH_1927",
+          "name": "Astrocoenia shastensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrocoenia",
+          "authorship": "(Smith, 1927)",
+          "sourceIds": {
+            "gbif-backbone": "9191734"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pamiroseriidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 52,
+  "genusCount": 15,
+  "speciesCount": 53,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

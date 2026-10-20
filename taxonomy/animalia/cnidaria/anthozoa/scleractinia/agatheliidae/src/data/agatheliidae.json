@@ -24,7 +24,8 @@
           "uuid": "1bddb6ba-6f6e-5c3-a23-313308d8274ede",
           "authorship": "(Duncan 1865)",
           "sourceIds": {
-            "checklistbank": "txn:143439"
+            "checklistbank": "txn:143439",
+            "gbif-backbone": "4943808"
           }
         }
       ]
@@ -133,7 +134,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1840895"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1840895"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1840895",
+            "gbif-backbone": "11512123"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1840895,col:LBNBM",
           "authorship": "(de Fromentel, 1870)"
@@ -151,7 +153,8 @@
           "uuid": "e3942551-93df-5d0-bab-7b5197501baeab",
           "authorship": "(Dietrich 1926)",
           "sourceIds": {
-            "checklistbank": "txn:137662"
+            "checklistbank": "txn:137662",
+            "gbif-backbone": "8535706"
           }
         },
         {
@@ -434,10 +437,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "agatheliidae"
+    },
+    {
+      "id": "GENUS_PSEUDOCOENIA",
+      "name": "Pseudocoenia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOCOENIA_BANGOINENSIS_LIAO_XIA_1985",
+          "name": "Pseudocoenia bangoinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudocoenia",
+          "authorship": "(Liao & Xia, 1985)",
+          "sourceIds": {
+            "gbif-backbone": "4945062"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "agatheliidae"
+    },
+    {
+      "id": "GENUS_STYLINA",
+      "name": "Stylina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STYLINA_TURBINATA_TRAUTSCHOLD_1886",
+          "name": "Stylina turbinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stylina",
+          "authorship": "(Trautschold, 1886)",
+          "sourceIds": {
+            "gbif-backbone": "9307579"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "agatheliidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 23,
+  "genusCount": 9,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

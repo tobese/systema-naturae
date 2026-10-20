@@ -371,7 +371,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1670407"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1670407"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1670407",
+            "gbif-backbone": "5931790"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1670407,col:BKTJ9",
           "authorship": "(Eguchi, 1936)"
@@ -1753,10 +1754,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyathophoridae"
+    },
+    {
+      "id": "GENUS_ASTREA",
+      "name": "Astrea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTREA_BOURGUETI_DEFRANCE_1826",
+          "name": "Astrea bourgueti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astrea",
+          "authorship": "(Defrance, 1826)",
+          "sourceIds": {
+            "gbif-backbone": "9485709"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyathophoridae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 101,
+  "genusCount": 14,
+  "speciesCount": 102,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

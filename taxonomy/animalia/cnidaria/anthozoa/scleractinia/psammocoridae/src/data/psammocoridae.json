@@ -53,7 +53,11 @@
           "description": "Psammocora australiae is a psammocoridae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "9f921a7e-f801-57d-a54-d6a9512bb1a1aa",
-          "children": []
+          "children": [],
+          "authorship": "(Rousseau, 1854)",
+          "sourceIds": {
+            "gbif-backbone": "11849830"
+          }
         },
         {
           "id": "SP_PSAMMOCORA_COLUMNA_DANA_1846",
@@ -94,7 +98,8 @@
               "52850"
             ],
             "checklistbank": "taicol: 85310",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:207267"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:207267",
+            "gbif-backbone": "2258901"
           },
           "authorityIds": "col:4NC5V,itis:52850,wikidata:Q3942255",
           "authorship": "(Esper, 1794)",
@@ -700,10 +705,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psammocoridae"
+    },
+    {
+      "id": "GENUS_PLESIOSERIS",
+      "name": "Plesioseris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLESIOSERIS_AUSTRALIAE_ROUSSEAU_1854",
+          "name": "Plesioseris australiae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plesioseris",
+          "authorship": "(Rousseau, 1854)",
+          "sourceIds": {
+            "gbif-backbone": "11603181"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "psammocoridae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 41,
+  "genusCount": 3,
+  "speciesCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

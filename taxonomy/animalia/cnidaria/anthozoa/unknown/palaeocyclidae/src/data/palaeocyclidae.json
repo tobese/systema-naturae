@@ -32,7 +32,8 @@
           "lineage": "Palaeocyclus",
           "authorship": "(Linnaeus 1767)",
           "sourceIds": {
-            "checklistbank": "txn:460708"
+            "checklistbank": "txn:460708",
+            "gbif-backbone": "8849359"
           },
           "children": [],
           "uuid": "fc4a4379-98f4-51b-a10-87ba879075f300",
@@ -57,7 +58,11 @@
           "description": "Palaeocyclus fletcheri (Rhabdocyclus Fletcheri) is a palaeocyclidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "c96c0c18-38a1-520-8d8-a5986b7cfc0699",
-          "children": []
+          "children": [],
+          "authorship": "(Milne-Edwards & Haime, 1851)",
+          "sourceIds": {
+            "gbif-backbone": "9624168"
+          }
         },
         {
           "id": "SP_RHABDOCYCLUS_AEQUISPINATUS_REIMAN_1954",
@@ -124,6 +129,28 @@
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PORPITES",
+      "name": "Porpites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PORPITES_PORPITA_LINNAEUS_1767",
+          "name": "Porpites porpita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porpites",
+          "authorship": "(Linnaeus, 1767)",
+          "sourceIds": {
+            "gbif-backbone": "5819096"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "palaeocyclidae"
     }
   ],
   "sourceIds": {
@@ -135,6 +162,6 @@
     },
     "checklistbank": "txn:112992"
   },
-  "genusCount": 3,
-  "speciesCount": 7
+  "genusCount": 4,
+  "speciesCount": 8
 }

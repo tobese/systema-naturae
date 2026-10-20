@@ -76,7 +76,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1658326"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658326"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658326",
+            "gbif-backbone": "4943409"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658326,col:BDCBJ,wikidata:Q135941716",
           "authorship": "(Münster, 1841)"
@@ -203,7 +204,11 @@
           "description": "Margarosmilia septanectes is a margarophylliidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "9b1ccbd4-ac18-54c-9b4-3b2d91ed2d7285"
+          "uuid": "9b1ccbd4-ac18-54c-9b4-3b2d91ed2d7285",
+          "authorship": "(Loretz, 1875)",
+          "sourceIds": {
+            "gbif-backbone": "12184141"
+          }
         },
         {
           "id": "SP_MONTLIVAULTIA_ZIETENI",
@@ -601,7 +606,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1658573"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658573"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1658573",
+            "gbif-backbone": "4943416"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1658573,col:BCV83",
           "authorship": "(Frech, 1890)"
@@ -879,10 +885,120 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "margarophylliidae"
+    },
+    {
+      "id": "GENUS_MONTLIVAULTIA",
+      "name": "Montlivaultia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONTLIVAULTIA_ZIETENI_KLIPSTEIN_1843",
+          "name": "Montlivaultia zieteni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Montlivaultia",
+          "authorship": "(Klipstein, 1843)",
+          "sourceIds": {
+            "gbif-backbone": "9498499"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "margarophylliidae"
+    },
+    {
+      "id": "GENUS_CLADOPHYLLIA",
+      "name": "Cladophyllia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CLADOPHYLLIA_SEPTANECTENS_LORETZ_1875",
+          "name": "Cladophyllia septanectens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cladophyllia",
+          "authorship": "(Loretz, 1875)",
+          "sourceIds": {
+            "gbif-backbone": "9237871"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "margarophylliidae"
+    },
+    {
+      "id": "GENUS_CYATHOPHYLLUM",
+      "name": "Cyathophyllum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYATHOPHYLLUM_GRANULATUM_M_NSTER_1841",
+          "name": "Cyathophyllum granulatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyathophyllum",
+          "authorship": "(Münster, 1841)",
+          "sourceIds": {
+            "gbif-backbone": "4880980"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "margarophylliidae"
+    },
+    {
+      "id": "GENUS_MONTLIVALTIA",
+      "name": "Montlivaltia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONTLIVALTIA_STYLOPHYLLOIDES_VINASSA_DE_REGNY_1915",
+          "name": "Montlivaltia stylophylloides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Montlivaltia",
+          "authorship": "(Vinassa de Regny, 1915)",
+          "sourceIds": {
+            "gbif-backbone": "9590969"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "margarophylliidae"
+    },
+    {
+      "id": "GENUS_THAMNASTRAEA",
+      "name": "Thamnastraea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAMNASTRAEA_DIENERI_HAAS_1909",
+          "name": "Thamnastraea dieneri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnastraea",
+          "authorship": "(Haas, 1909)",
+          "sourceIds": {
+            "gbif-backbone": "9432130"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "margarophylliidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 50,
+  "genusCount": 14,
+  "speciesCount": 55,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

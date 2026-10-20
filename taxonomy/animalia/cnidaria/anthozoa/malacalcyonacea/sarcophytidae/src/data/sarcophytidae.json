@@ -2543,7 +2543,8 @@
           "sourcedFrom": "gbif",
           "lineage": "Sarcophyton",
           "sourceIds": {
-            "checklistbank": "366859"
+            "checklistbank": "366859",
+            "gbif-backbone": "11715706"
           },
           "children": [],
           "uuid": "021f5d31-3174-5e1-bfd-ee2c107892f6df",
@@ -3966,7 +3967,8 @@
             "wikidata": [
               "Q135975884"
             ],
-            "checklistbank": "3286396"
+            "checklistbank": "3286396",
+            "gbif-backbone": "11971938"
           },
           "authorityIds": "wikidata:Q135975884",
           "authorship": "(Tixier-Durivault, 1970)"
@@ -5275,7 +5277,8 @@
             "col": [
               "9J85D"
             ],
-            "checklistbank": "3286458"
+            "checklistbank": "3286458",
+            "gbif-backbone": "11465270"
           },
           "authorityIds": "col:9J85D",
           "authorship": "(Aldersladum, 1983)"
@@ -6568,7 +6571,11 @@
           "description": "Sarcophytum glaucum is a sarcophytidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5c993d02-556e-5ef-b07-3d6c84f18b06b9"
+          "uuid": "5c993d02-556e-5ef-b07-3d6c84f18b06b9",
+          "authorship": "(Quoy & Gaimard, 1833)",
+          "sourceIds": {
+            "gbif-backbone": "8899218"
+          }
         },
         {
           "id": "SP_SARCOPHYTUM_TROCHELIOPHORUM_VON_MARENZELLER_1886",
@@ -6581,6 +6588,18 @@
           "sourcedFrom": "none",
           "children": [],
           "uuid": "4cf18ae2-8b49-592-a04-698d60e3b9d542"
+        },
+        {
+          "id": "SP_SARCOPHYTUM_LATUM",
+          "name": "Sarcophytum latum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sarcophytum",
+          "sourceIds": {
+            "gbif-backbone": "11654314"
+          },
+          "children": []
         }
       ]
     },
@@ -9331,10 +9350,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Sarcophytidae"
+    },
+    {
+      "id": "GENUS_DANELLA",
+      "name": "Danella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DANELLA_FEJEENSIS_DANA_1846",
+          "name": "Danella fejeensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Danella",
+          "authorship": "(Dana, 1846)",
+          "sourceIds": {
+            "gbif-backbone": "11212277"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcophytidae"
+    },
+    {
+      "id": "GENUS_AMOCELLA",
+      "name": "Amocella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMOCELLA_TRICHANTHEMA_DANA_1846",
+          "name": "Amocella trichanthema",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amocella",
+          "authorship": "(Dana, 1846)",
+          "sourceIds": {
+            "gbif-backbone": "11144996"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sarcophytidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 524,
+  "genusCount": 14,
+  "speciesCount": 527,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

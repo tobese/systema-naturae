@@ -104,7 +104,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1458001"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1458001"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1458001",
+            "gbif-backbone": "9241319"
           },
           "children": [],
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458001"
@@ -828,7 +829,11 @@
           "description": "Plerophyllum differentiatum (Ufimia Differentiatum) is a plerophyllidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "ec64bbd0-f53a-5c1-9b9-5e5cc9c4f296f2",
-          "children": []
+          "children": [],
+          "authorship": "(Ilina, 1962)",
+          "sourceIds": {
+            "gbif-backbone": "9332604"
+          }
         },
         {
           "id": "SP_TACHYLASMA_ELONGATUM",
@@ -1082,10 +1087,102 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "plerophyllidae"
+    },
+    {
+      "id": "GENUS_TACHYLASMA",
+      "name": "Tachylasma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TACHYLASMA_ELONGATUM_GRABAU_1922",
+          "name": "Tachylasma elongatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tachylasma",
+          "authorship": "(Grabau, 1922)",
+          "sourceIds": {
+            "gbif-backbone": "9404680"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TACHYLASMA_VANGANENSIS_FOMICHEV_1953",
+          "name": "Tachylasma vanganensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tachylasma",
+          "authorship": "(Fomichev, 1953)",
+          "sourceIds": {
+            "gbif-backbone": "9508825"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plerophyllidae"
+    },
+    {
+      "id": "GENUS_CANINIA",
+      "name": "Caninia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CANINIA_TZUCHIANGENSIS_HUANG_1932",
+          "name": "Caninia tzuchiangensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caninia",
+          "authorship": "(Huang, 1932)",
+          "sourceIds": {
+            "gbif-backbone": "9495689"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CANINIA_LIANGSHANENSIS_HUANG_1932",
+          "name": "Caninia liangshanensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caninia",
+          "authorship": "(Huang, 1932)",
+          "sourceIds": {
+            "gbif-backbone": "9421860"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plerophyllidae"
+    },
+    {
+      "id": "GENUS_PLERAMPLEXUS",
+      "name": "Pleramplexus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLERAMPLEXUS_SIMILIS_SCHINDEWOLF_1942",
+          "name": "Pleramplexus similis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleramplexus",
+          "authorship": "(Schindewolf, 1942)",
+          "sourceIds": {
+            "gbif-backbone": "8872646"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plerophyllidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 72,
+  "genusCount": 10,
+  "speciesCount": 77,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -1012,7 +1012,8 @@
             "col": [
               "4YS4D"
             ],
-            "checklistbank": "40474"
+            "checklistbank": "40474",
+            "gbif-backbone": "5722078"
           },
           "authorityIds": "col:4YS4D",
           "description": "Sphaerospora caspialosae is a sphaerosporidae species found in its native region."
@@ -2009,6 +2010,18 @@
           "lineage": "Sphaerospora",
           "authorship": "(Kovaleva & Gaevskaya, 1979)",
           "children": []
+        },
+        {
+          "id": "SP_SPHAEROSPORA_RENALIS",
+          "name": "Sphaerospora renalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaerospora",
+          "sourceIds": {
+            "gbif-backbone": "5186388"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2105,7 +2118,8 @@
             "col": [
               "4C5HW"
             ],
-            "checklistbank": "40470"
+            "checklistbank": "40470",
+            "gbif-backbone": "4346186"
           },
           "authorityIds": "col:4C5HW",
           "description": "Palliatus mirabilis is a sphaerosporidae species found in its native region."
@@ -2118,7 +2132,10 @@
           "sourcedFrom": "worms",
           "lineage": "Palliatus",
           "authorship": "Schulman, Kovaleva & Dubina, 1979",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "4346187"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2183,7 +2200,8 @@
           "lineage": "Polysporoplasma",
           "authorship": "Sitjà-Bobadilla et Alvarez-Pellitero, 1995",
           "sourceIds": {
-            "checklistbank": "40471"
+            "checklistbank": "40471",
+            "gbif-backbone": "4346183"
           },
           "children": [],
           "uuid": "fc0bcec8-3f6c-5ee-8cd-48574dd185a9b2",
@@ -2198,7 +2216,8 @@
           "lineage": "Polysporoplasma",
           "authorship": "Sitjà-Bobadilla et Alvarez-Pellitero, 1995",
           "sourceIds": {
-            "checklistbank": "40472"
+            "checklistbank": "40472",
+            "gbif-backbone": "4346182"
           },
           "children": [],
           "uuid": "7c13d193-0381-54e-a09-263fa151e13bf3",
@@ -2246,13 +2265,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sphaerosporidae"
+    },
+    {
+      "id": "GENUS_MITRASPORA",
+      "name": "Mitraspora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MITRASPORA_CYPRINI_FUJITA_1912",
+          "name": "Mitraspora cyprini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mitraspora",
+          "authorship": "Fujita, 1912",
+          "sourceIds": {
+            "gbif-backbone": "6880964"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sphaerosporidae"
     }
   ],
-  "speciesCount": 125,
+  "speciesCount": 127,
   "appSlug": "sphaerosporidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Cnidaria > Myxozoa",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2261,6 +2302,7 @@
       "orderKey": 782,
       "familyKey": 3249328
     },
-    "checklistbank": "Sphaerosporidae"
+    "checklistbank": "Sphaerosporidae",
+    "wikispecies": "Sphaerosporidae"
   }
 }

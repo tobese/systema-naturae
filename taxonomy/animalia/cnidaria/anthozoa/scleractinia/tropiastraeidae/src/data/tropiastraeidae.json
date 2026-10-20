@@ -141,7 +141,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1455173"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1455173"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1455173",
+            "gbif-backbone": "4944949"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1455173,col:8644P",
           "authorship": "(Laube, 1865)"
@@ -179,7 +180,8 @@
           "uuid": "83b5f2a0-bdba-588-bc0-73c8375ff521e2",
           "authorship": "(Smith 1927)",
           "sourceIds": {
-            "checklistbank": "txn:256488"
+            "checklistbank": "txn:256488",
+            "gbif-backbone": "8516408"
           }
         },
         {
@@ -1010,10 +1012,115 @@
           "authorityIds": "col:BDKWC"
         }
       ]
+    },
+    {
+      "id": "GENUS_ISASTREA",
+      "name": "Isastrea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ISASTREA_WHITEAVESI_CLAPP_SHIMER_1911",
+          "name": "Isastrea whiteavesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Isastrea",
+          "authorship": "(Clapp & Shimer, 1911)",
+          "sourceIds": {
+            "gbif-backbone": "9619391"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tropiastraeidae"
+    },
+    {
+      "id": "GENUS_THAMNOTROPIS",
+      "name": "Thamnotropis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAMNOTROPIS_RAKOVECI_TURNSEK_1985",
+          "name": "Thamnotropis rakoveci",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnotropis",
+          "authorship": "(Turnsek, 1985)",
+          "sourceIds": {
+            "gbif-backbone": "9458243"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNOTROPIS_RARUS_MELNIKOVA_BYCHKOV_1986",
+          "name": "Thamnotropis rarus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnotropis",
+          "authorship": "(Melnikova & Bychkov, 1986)",
+          "sourceIds": {
+            "gbif-backbone": "9504039"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNOTROPIS_MEGAXIS_DENG_ZHANG_1984",
+          "name": "Thamnotropis megaxis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnotropis",
+          "authorship": "(Deng & Zhang, 1984)",
+          "sourceIds": {
+            "gbif-backbone": "9269831"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tropiastraeidae"
+    },
+    {
+      "id": "GENUS_THAMNASTRAEA",
+      "name": "Thamnastraea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THAMNASTRAEA_LORETZI_VOLZ_1896",
+          "name": "Thamnastraea loretzi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnastraea",
+          "authorship": "(Volz, 1896)",
+          "sourceIds": {
+            "gbif-backbone": "9622013"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_THAMNASTRAEA_SETTSASSI_VOLZ_1896",
+          "name": "Thamnastraea settsassi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thamnastraea",
+          "authorship": "(Volz, 1896)",
+          "sourceIds": {
+            "gbif-backbone": "9575219"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tropiastraeidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 55,
+  "genusCount": 15,
+  "speciesCount": 61,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

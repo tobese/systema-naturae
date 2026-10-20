@@ -1360,10 +1360,12 @@
           "sourcedFrom": "gbif",
           "children": [],
           "sourceIds": {
-            "gbif": 8638376
+            "gbif": 8638376,
+            "gbif-backbone": "8638376"
           },
           "uuid": "c1b18ddd-bd2e-5bb-971-bfc7f8d8285c09",
-          "authorityIds": "gbif:8638376"
+          "authorityIds": "gbif:8638376",
+          "authorship": "Bonnevie, 1898"
         }
       ]
     },
@@ -1973,6 +1975,32 @@
             "checklistbank": "Corymorpha_sagamina"
           },
           "children": []
+        },
+        {
+          "id": "SP_CORYMORPHA_SPEC_FRASER_1941",
+          "name": "Corymorpha spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Corymorpha",
+          "authorship": "Fraser, 1941",
+          "sourceIds": {
+            "gbif-backbone": "11824285"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CORYMORPHA_INTERGONA_HUANG_XU_GUO_2012",
+          "name": "Corymorpha intergona",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Corymorpha",
+          "authorship": "(Huang, Xu & Guo, 2012)",
+          "sourceIds": {
+            "gbif-backbone": "8275199"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2050,6 +2078,19 @@
           "lineage": "Euphysa",
           "sourceIds": {
             "checklistbank": "Euphysa_aurata"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EUPHYSA_AUSTRALIS_VON_LENDENFELD_1885",
+          "name": "Euphysa australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Euphysa",
+          "authorship": "von Lendenfeld, 1885",
+          "sourceIds": {
+            "gbif-backbone": "2265052"
           },
           "children": []
         }
@@ -2281,10 +2322,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "corymorphidae"
+    },
+    {
+      "id": "GENUS_MICROCAMPANA",
+      "name": "Microcampana",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROCAMPANA_CONICA_FEWKES_1889",
+          "name": "Microcampana conica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microcampana",
+          "authorship": "Fewkes, 1889",
+          "sourceIds": {
+            "gbif-backbone": "2266449"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corymorphidae"
+    },
+    {
+      "id": "GENUS_TUBULETTA",
+      "name": "Tubuletta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TUBULETTA_SPLENDIDA_HAECKEL_1899",
+          "name": "Tubuletta splendida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tubuletta",
+          "authorship": "Haeckel, 1899",
+          "sourceIds": {
+            "gbif-backbone": "9035627"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corymorphidae"
     }
   ],
-  "genusCount": 32,
-  "speciesCount": 136,
+  "genusCount": 34,
+  "speciesCount": 141,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
