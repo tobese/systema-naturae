@@ -72,11 +72,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Pandolaimus",
           "sourceIds": {
-            "checklistbank": "ott3583918"
+            "checklistbank": "ott3583918",
+            "gbif-backbone": "4349457"
           },
           "children": [],
           "uuid": "35379c8a-bb13-5ca-804-155d15a5268588",
-          "description": "Pandolaimus arctica is a pandolaimidae species found in its native region."
+          "description": "Pandolaimus arctica is a pandolaimidae species found in its native region.",
+          "authorship": "(Allgén, 1954)"
         },
         {
           "id": "SP_PANDOLAIMUS_KORNOENSIS",
@@ -122,13 +124,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Pandolaimidae"
+    },
+    {
+      "id": "GENUS_FILIPJEVIELLA",
+      "name": "Filipjeviella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FILIPJEVIELLA_ARCTICA_ALLG_N_1954",
+          "name": "Filipjeviella arctica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Filipjeviella",
+          "authorship": "Allgén, 1954",
+          "sourceIds": {
+            "gbif-backbone": "2280117"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pandolaimidae"
     }
   ],
-  "speciesCount": 7,
+  "speciesCount": 8,
   "appSlug": "pandolaimidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Nematoda > Enoplea",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
