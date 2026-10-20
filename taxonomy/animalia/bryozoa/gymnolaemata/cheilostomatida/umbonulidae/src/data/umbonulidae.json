@@ -1541,9 +1541,11 @@
           "sourceIds": {
             "itis": [
               "201714"
-            ]
+            ],
+            "gbif-backbone": "4288557"
           },
-          "authorityIds": "itis:201714"
+          "authorityIds": "itis:201714",
+          "authorship": "(Brown, 1958)"
         },
         {
           "id": "SP_RHAMPHOSTOMELLA_SAKAGAMII_HAYAMI_1975",
@@ -2965,10 +2967,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "umbonulidae"
+    },
+    {
+      "id": "GENUS_COLLETOSIA",
+      "name": "Colletosia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COLLETOSIA_INNOMINATA_COUCH_1844",
+          "name": "Colletosia innominata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Colletosia",
+          "authorship": "(Couch, 1844)",
+          "sourceIds": {
+            "gbif-backbone": "10252511"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "umbonulidae"
     }
   ],
-  "genusCount": 23,
-  "speciesCount": 161,
+  "genusCount": 24,
+  "speciesCount": 162,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
