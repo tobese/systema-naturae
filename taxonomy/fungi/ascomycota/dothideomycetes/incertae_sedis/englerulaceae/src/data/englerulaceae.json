@@ -1604,7 +1604,8 @@
             "col": [
               "6XLXQ"
             ],
-            "checklistbank": "1044744"
+            "checklistbank": "1044744",
+            "checklistbank-2008": "1044744"
           },
           "uuid": "47c12f96-1815-54d-998-33d84e288eb36c",
           "authorityIds": "col:6XLXQ,gbif:5265663,mycobank:216101",
@@ -1668,7 +1669,8 @@
           "lineage": "Sarcinella",
           "authorship": "(Sacc.) Seifert",
           "sourceIds": {
-            "checklistbank": "819044"
+            "checklistbank": "819044",
+            "checklistbank-2008": "983300"
           },
           "children": []
         }
@@ -2265,6 +2267,19 @@
           "authorityIds": "col:4R6L6,gbif:3526718,mycobank:373243",
           "children": [],
           "description": "Questieriella terminaliae is a questieriella species found in its native region."
+        },
+        {
+          "id": "SP_QUESTIERIELLA_RAMUNDI_SACC_G_ARNAUD_1954",
+          "name": "Questieriella ramundi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Questieriella",
+          "authorship": "(Sacc.) G.Arnaud, 1954",
+          "sourceIds": {
+            "gbif-backbone": "3526901"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3325,7 +3340,8 @@
             "col": [
               "4V83Q"
             ],
-            "checklistbank": "1044758"
+            "checklistbank": "1044758",
+            "checklistbank-2008": "1044758"
           },
           "uuid": "ea6b85e6-2db9-58a-8a0-2a26e3df619225",
           "authorityIds": "col:4V83Q,gbif:3526772,mycobank:126845",
@@ -5186,7 +5202,8 @@
           "sourceIds": {
             "checklistbank-285337": "https://id.biodiversity.org.au/instance/fungi/60057898"
           },
-          "uuid": "4781aaba-6e61-4c4f-a2a8-ce69955dedca"
+          "uuid": "4781aaba-6e61-4c4f-a2a8-ce69955dedca",
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5869,13 +5886,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "englerulaceae"
+    },
+    {
+      "id": "GENUS_CONIOTHECIUM",
+      "name": "Coniothecium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CONIOTHECIUM_QUESTIERI_DESM_1857",
+          "name": "Coniothecium questieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Coniothecium",
+          "authorship": "Desm., 1857",
+          "sourceIds": {
+            "checklistbank-2008": "882906"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "englerulaceae"
+    },
+    {
+      "id": "GENUS_DIGITOSARCINELLA",
+      "name": "Digitosarcinella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIGITOSARCINELLA_CASEARIAE_S_HUGHES",
+          "name": "Digitosarcinella caseariae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Digitosarcinella",
+          "authorship": "S.Hughes",
+          "sourceIds": {
+            "gbif-backbone": "2588016"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "englerulaceae"
     }
   ],
-  "speciesCount": 241,
+  "speciesCount": 244,
   "appSlug": "englerulaceae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Ascomycota > Dothideomycetes",
-  "genusCount": 18,
+  "genusCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 5,
