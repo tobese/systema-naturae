@@ -22,10 +22,12 @@
           "description": "B1-G15 sp003662715 is a ba1 species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 10746191
+            "gbif": 10746191,
+            "gbif-backbone": "10746191"
           },
           "uuid": "203a4bd2-2852-577-b90-6743fb299de10d",
-          "authorityIds": "gbif:10746191"
+          "authorityIds": "gbif:10746191",
+          "children": []
         }
       ]
     },
@@ -50,7 +52,8 @@
             "gbif": 10836235
           },
           "uuid": "201afe1b-6249-568-900-90113e437178d8",
-          "authorityIds": "gbif:10836235"
+          "authorityIds": "gbif:10836235",
+          "children": []
         }
       ]
     },
@@ -75,7 +78,8 @@
             "gbif": 10854688
           },
           "uuid": "32ee367e-0f3a-5c9-881-63844a455c7000",
-          "authorityIds": "gbif:10854688"
+          "authorityIds": "gbif:10854688",
+          "children": []
         }
       ]
     },
@@ -100,9 +104,52 @@
             "gbif": 11421778
           },
           "uuid": "9d2dbef1-2f48-50d-b8a-8deb37cddc1388",
-          "authorityIds": "gbif:11421778"
+          "authorityIds": "gbif:11421778",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_BIN_L_1",
+      "name": "BIN-L-1",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BIN_L_1_SP003096235",
+          "name": "BIN-L-1 sp003096235",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "BIN-L-1",
+          "sourceIds": {
+            "gbif-backbone": "12197006"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ba1"
+    },
+    {
+      "id": "GENUS_BA1",
+      "name": "BA1",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BA1_SP001399805",
+          "name": "BA1 sp001399805",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "BA1",
+          "sourceIds": {
+            "gbif-backbone": "10727700"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ba1"
     }
   ],
   "sourceIds": {
@@ -113,5 +160,7 @@
       "orderKey": 10829137,
       "familyKey": 10896118
     }
-  }
+  },
+  "genusCount": 6,
+  "speciesCount": 6
 }
