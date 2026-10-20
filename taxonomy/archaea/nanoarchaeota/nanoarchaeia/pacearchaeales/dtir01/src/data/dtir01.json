@@ -23,7 +23,8 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 11613483,
-            "checklistbank": "s__JACRHU01 sp016211995"
+            "checklistbank": "s__JACRHU01 sp016211995",
+            "gbif-backbone": "11613483"
           },
           "uuid": "1eb71de4-14f8-5d1-831-bcec5fd28b1163",
           "authorityIds": "gbif:11613483",
@@ -50,7 +51,8 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 11766045,
-            "checklistbank": "s__JAGVXL01 sp018303805"
+            "checklistbank": "s__JAGVXL01 sp018303805",
+            "gbif-backbone": "11766045"
           },
           "uuid": "c3417bce-a717-59d-a5f-9fbd250ff8e9d7",
           "authorityIds": "gbif:11766045",
@@ -117,6 +119,27 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dtir01"
+    },
+    {
+      "id": "GENUS_DTIR01",
+      "name": "DTIR01",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DTIR01_SP011362825",
+          "name": "DTIR01 sp011362825",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "DTIR01",
+          "sourceIds": {
+            "gbif-backbone": "11206891"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dtir01"
     }
   ],
   "sourceIds": {
@@ -129,6 +152,6 @@
     },
     "checklistbank": "f__DTIR01"
   },
-  "genusCount": 4,
-  "speciesCount": 5
+  "genusCount": 5,
+  "speciesCount": 6
 }
