@@ -32,6 +32,10 @@ API = "https://api.checklistbank.org/dataset"
 UA = "systema-naturae-triage/1.0 (+https://github.com/tobese/systema-naturae)"
 OPEN = ("cc0", "cc by", "cc-by")
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+QUEUE_PATH = os.path.join(REPO_ROOT, "data", "source-queue.json")
+
 # Titles that are a re-issue of something already registered. Matched on the
 # normalised title, so "Catalogue of Life 2019" and "Catalogue of Life" both hit.
 REISSUE = re.compile(
@@ -74,6 +78,21 @@ def held_keys():
     return keys, dois, titles
 
 
+def queue_keys() -> set[int]:
+    """Every checklistbank key already registered in data/source-queue.json,
+    at any stage — so refill doesn't keep handing back keys we've queued."""
+    out = set()
+    try:
+        q = json.load(open(QUEUE_PATH, encoding="utf-8"))
+    except (OSError, ValueError):
+        return out
+    for slug in q:
+        m = re.match(r"checklistbank-(\d+)$", slug)
+        if m:
+            out.add(int(m.group(1)))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=25)
@@ -83,6 +102,8 @@ def main() -> int:
     args = ap.parse_args()
 
     keys, dois, titles = held_keys()
+    # Never re-triagen an already-queued key, whatever its terminal stage.
+    keys |= queue_keys()
     url = f"{API}?type=taxonomic&limit=1000"
     if args.group:
         url += "&taxonomicGroupScope=" + urllib.parse.quote(args.group)
