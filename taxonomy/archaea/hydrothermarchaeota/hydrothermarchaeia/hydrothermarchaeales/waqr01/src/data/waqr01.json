@@ -22,10 +22,12 @@
           "description": "JACQPM01 sp016207475 is a waqr01 species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11420554
+            "gbif": 11420554,
+            "gbif-backbone": "11420554"
           },
           "uuid": "f4b6ea43-bb40-520-9f9-f77950018c2de1",
-          "authorityIds": "gbif:11420554"
+          "authorityIds": "gbif:11420554",
+          "children": []
         }
       ]
     },
@@ -47,12 +49,35 @@
           "description": "JACRDW01 sp016212785 is a waqr01 species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 11667546
+            "gbif": 11667546,
+            "gbif-backbone": "11667546"
           },
           "uuid": "4703f979-cf1c-5d5-b60-c35089a7914883",
-          "authorityIds": "gbif:11667546"
+          "authorityIds": "gbif:11667546",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_WAQR01",
+      "name": "WAQR01",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WAQR01_SP015520145",
+          "name": "WAQR01 sp015520145",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "WAQR01",
+          "sourceIds": {
+            "gbif-backbone": "11646735"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "waqr01"
     }
   ],
   "sourceIds": {
@@ -63,5 +88,7 @@
       "orderKey": 10792993,
       "familyKey": 11573380
     }
-  }
+  },
+  "genusCount": 3,
+  "speciesCount": 3
 }
