@@ -72,6 +72,7 @@ PAGE = """<!doctype html>
     color: var(--dim); font-size: 11px; text-transform: uppercase;
     letter-spacing: .03em; font-weight: 600; position: sticky; top: 0; background: var(--bg);
   }
+  th.num, td.num { text-align: right; }
   tr.flagged td { background: rgba(255, 92, 92, 0.08); }
   tr.flagged td:first-child { border-left: 2px solid var(--warn); }
   .slug { color: var(--accent); font-weight: 600; }
@@ -90,8 +91,6 @@ PAGE = """<!doctype html>
     font-size: 13px; margin: 0 0 10px; color: var(--dim);
     text-transform: uppercase; letter-spacing: .04em; font-weight: 600;
   }
-  .queue-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 760px) { .queue-grid { grid-template-columns: 1fr; } }
   .queue-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
   .queue-list li {
     display: flex; justify-content: space-between; gap: 10px;
@@ -122,6 +121,21 @@ PAGE = """<!doctype html>
   }
   .queue-footer code { color: var(--text); }
   .queue-empty { color: var(--dim); font-size: 12.5px; }
+  .open-block {
+    border: 1px solid var(--border); border-radius: 10px;
+    background: var(--panel); margin-top: 12px; overflow: hidden;
+  }
+  .open-toggle {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 14px; cursor: pointer; background: var(--bg);
+    font-size: 12.5px; color: var(--dim); font-weight: 600;
+    text-transform: uppercase; letter-spacing: .03em;
+  }
+  .open-toggle[aria-expanded="true"] { background: var(--panel); border-bottom: 1px solid var(--border); }
+  .open-toggle::after { content: "▾"; font-size: 10px; color: var(--dim); }
+  .open-toggle[aria-expanded="true"]::after { content: "▴"; }
+  .open-body { max-height: 0; overflow: hidden; transition: max-height .22s ease; }
+  .open-body.open { max-height: 1000px; }
 </style>
 </head>
 <body>
@@ -130,9 +144,14 @@ PAGE = """<!doctype html>
 
   <div class="queue">
     <h2 id="queueHeading">source queue &mdash; loading&hellip;</h2>
-    <div class="queue-grid">
-      <ul class="queue-list" id="queueUpNext"></ul>
-      <ul class="open-list" id="queueOpen"></ul>
+    <ul class="queue-list" id="queueUpNext"></ul>
+    <div class="open-block" id="openBlock">
+      <div class="open-toggle" id="openToggle" role="button" tabindex="0" aria-expanded="false">
+        Open items &mdash; <span id="openCount">0</span>
+      </div>
+      <div class="open-body" id="openBody">
+        <ul class="open-list" id="queueOpen"></ul>
+      </div>
     </div>
     <div class="queue-footer">
       Cross-cutting, not per-source, so not in this list: the
@@ -147,8 +166,8 @@ PAGE = """<!doctype html>
   <div class="cards" id="cards"></div>
   <div class="wrap"><table id="tbl">
     <thead><tr>
-      <th>When</th><th>Source</th><th>Offered</th><th>Held</th><th>Staged</th>
-      <th>Added</th><th>Refused</th><th>Rate</th><th>Kingdoms</th>
+      <th>When</th><th>Source</th><th class="num">Offered</th><th class="num">Held</th><th class="num">Staged</th>
+      <th class="num">Added</th><th class="num">Refused</th><th class="num">Rate</th><th>Kingdoms</th>
     </tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
@@ -184,12 +203,12 @@ function render(data) {
     return `<tr class="${r.issues.length ? 'flagged' : ''}">
       <td>${(r.at || '').replace('T', ' ').slice(0, 19)}</td>
       <td><span class="slug">${name}</span>${extra}</td>
-      <td>${fmt(r.offered)}</td>
-      <td>${fmt(r.alreadyHeld)}</td>
-      <td>${fmt(r.staged)}</td>
-      <td>${fmt(r.added)}</td>
-      <td>${fmt(r.refused)}</td>
-      <td class="${pctClass}">${(rate * 100).toFixed(1)}%</td>
+      <td class="num">${fmt(r.offered)}</td>
+      <td class="num">${fmt(r.alreadyHeld)}</td>
+      <td class="num">${fmt(r.staged)}</td>
+      <td class="num">${fmt(r.added)}</td>
+      <td class="num">${fmt(r.refused)}</td>
+      <td class="num ${pctClass}">${(rate * 100).toFixed(1)}%</td>
       <td class="kingdoms">${(r.kingdoms || []).join(', ')}</td>
     </tr>`;
   }).join('');
@@ -214,6 +233,8 @@ function renderQueue(sources) {
 
   document.getElementById('queueHeading').textContent =
     `Up next (${upNext.length}${activeCount ? `, ${activeCount} running now` : ''}) & open items (${open.length}) — today's completed runs are in the table below`;
+
+  document.getElementById('openCount').textContent = String(open.length);
 
   document.getElementById('queueUpNext').innerHTML = upNext.length
     ? upNext.map(r => {
@@ -242,6 +263,20 @@ function renderQueue(sources) {
     : '<li class="queue-empty">Nothing open.</li>';
 }
 
+function setupQueueToggle() {
+  const toggle = document.getElementById('openToggle');
+  const body = document.getElementById('openBody');
+  const expand = () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    body.classList.toggle('open', !expanded);
+  };
+  toggle.addEventListener('click', expand);
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); expand(); }
+  });
+}
+
 async function tick() {
   try {
     const res = await fetch('/api/log');
@@ -257,6 +292,7 @@ async function tick() {
   }
 }
 tick();
+setupQueueToggle();
 setInterval(tick, 3000);
 </script>
 </body>
