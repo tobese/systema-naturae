@@ -27,11 +27,80 @@ import json
 import os
 import subprocess
 import sys
+import time
+import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import importLogView as ilv  # noqa: E402
 import sourceQueue as sq  # noqa: E402
+
+CB_API = "https://api.checklistbank.org/dataset"
+CB_UA = "systema-naturae-dashboard/1.0 (+https://github.com/tobese/systema-naturae)"
+_publisher_cache: dict[str, str] = {}
+_publisher_cache_at: dict[str, float] = {}
+
+
+def cb_publisher(key: str) -> str | None:
+    """Publisher entity for a ChecklistBank dataset key — contact.organisation
+    or creator[0].organisation — cached for 10 minutes so the 3s tick doesn't
+    hammer the API. Returns None when the API has nothing usable."""
+    now = time.time()
+    if key in _publisher_cache and now - _publisher_cache_at.get(key, 0) < 600:
+        return _publisher_cache[key]
+    try:
+        req = urllib.request.Request(
+            f"{CB_API}/{key}",
+            headers={"User-Agent": CB_UA},
+        )
+        with urllib.request.urlopen(req, timeout=10) as r:
+            doc = json.load(r)
+    except Exception:
+        _publisher_cache[key] = None
+        _publisher_cache_at[key] = now
+        return None
+    contact = doc.get("contact") or {}
+    org = contact.get("organisation") or ""
+    creators = doc.get("creator") or []
+    if not org and creators:
+        org = creators[0].get("organisation") or ""
+    _publisher_cache[key] = org or None
+    _publisher_cache_at[key] = now
+    return _publisher_cache[key]
+
+
+def pending_summary() -> dict:
+    """Summary of the pending-family worklist — families imports could not
+    place because the tree lacks them. Reads the external-volume store
+    (symlinked at portal/data/pending-families.jsonl) and returns counts
+    plus a per-source breakdown."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import pendingFamilies as PF  # noqa: E402
+
+    rows = PF.read_store()
+    total = len(rows)
+    species_total = sum(int(r.get("species") or 0) for r in rows)
+
+    held = PF.held_families()
+    still, ready = [], []
+    for r in rows:
+        (ready if (r.get("family") or "").lower() in held else still).append(r)
+
+    by_src: dict[str, dict] = {}
+    for r in ready:
+        src = r.get("source") or "?"
+        s = by_src.setdefault(src, {"families": 0, "species": 0})
+        s["families"] += 1
+        s["species"] += int(r.get("species") or 0)
+
+    return {
+        "total": total,
+        "stillMissing": len(still),
+        "ready": len(ready),
+        "speciesTotal": species_total,
+        "readySpeciesTotal": sum(int(r.get("species") or 0) for r in ready),
+        "bySource": dict(sorted(by_src.items(), key=lambda kv: -kv[1]["species"])),
+    }
 
 PAGE = """<!doctype html>
 <html lang="en">
@@ -148,6 +217,31 @@ PAGE = """<!doctype html>
   .open-toggle[aria-expanded="true"]::after { content: "▴"; }
   .open-body { max-height: 0; overflow: hidden; transition: max-height .22s ease; }
   .open-body.open { max-height: 1000px; }
+  .pending {
+    max-width: 1100px; margin-top: 22px; background: var(--panel);
+    border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px;
+  }
+  .pending h2 {
+    font-size: 13px; margin: 0 0 10px; color: var(--dim);
+    text-transform: uppercase; letter-spacing: .04em; font-weight: 600;
+  }
+  .pending-cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; margin-bottom: 12px;
+  }
+  .pending-card {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 12px;
+  }
+  .pending-card .num { font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .pending-card .label { color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+  .pending-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
+  .pending-list li {
+    display: flex; justify-content: space-between; gap: 10px;
+    padding: 4px 0; border-bottom: 1px solid var(--border);
+  }
+  .pending-list li:last-child { border-bottom: none; }
+  .pending-empty { color: var(--dim); font-size: 12.5px; }
 </style>
 </head>
 <body>
@@ -181,6 +275,12 @@ PAGE = """<!doctype html>
       <code>BACKLOG.md</code> (WoRMS name-quoting, historical sourceIds
       collisions). See docs/dataset-inbox.md for the full narrative.
     </div>
+  </div>
+
+  <div class="pending" id="pendingPanel" style="display:none;">
+    <h2 id="pendingHeading">missing families &mdash; loading&hellip;</h2>
+    <div class="pending-cards" id="pendingCards"></div>
+    <ul class="pending-list" id="pendingBySource"></ul>
   </div>
 
   <div class="cards" id="cards"></div>
@@ -270,7 +370,7 @@ function renderQueue(sources) {
           : r.stage === 'needs-rerun' ? 'needs re-run'
           : '';
         return `<li>
-          <span class="qi-title">${r.title || r.key}</span>
+          <span class="qi-title">${r.title || r.key}${r.publisher ? ' <span style="color:var(--dim); font-size:11px;"> &mdash; '+escape(r.publisher)+'</span>' : ''}</span>
           <span class="qn">${badge}${stage}${stage ? ' &middot; ' : ''}${r.key} &middot; ${fmt(r.size)}</span>
         </li>`;
       }).join('')
@@ -278,10 +378,12 @@ function renderQueue(sources) {
 
   document.getElementById('queueOpen').innerHTML = open.length
     ? open.map(r =>
-        `<li><b>${r.title || r.key}</b> (${r.stage}) &mdash; ${r.reason || 'no reason recorded'}</li>`
+        `<li><b>${r.title || r.key}${r.publisher ? ' <span style="color:var(--dim); font-size:11px;"> &mdash; '+escape(r.publisher)+'</span>' : ''}</b> (${r.stage}) &mdash; ${r.reason || 'no reason recorded'}</li>`
       ).join('')
     : '<li class="queue-empty">Nothing open.</li>';
 }
+
+function escape(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
 async function renderDriver() {
   try {
@@ -304,6 +406,38 @@ async function renderDriver() {
     }
   } catch (e) {
     document.getElementById('driverStatus').textContent = 'driver: connection lost';
+  }
+}
+
+async function renderPending() {
+  try {
+    const res = await fetch('/api/pending');
+    const p = await res.json();
+    const panel = document.getElementById('pendingPanel');
+    if (p.total === 0) {
+      panel.style.display = 'none';
+      return;
+    }
+    panel.style.display = 'block';
+    document.getElementById('pendingHeading').textContent =
+      `missing families (${p.ready} now scaffoldable / ${p.stillMissing} still missing)`;
+
+    document.getElementById('pendingCards').innerHTML = `
+      <div class="pending-card"><div class="num">${fmt(p.total)}</div><div class="label">Pending families</div></div>
+      <div class="pending-card"><div class="num">${fmt(p.speciesTotal)}</div><div class="label">Species they would add</div></div>
+      <div class="pending-card"><div class="num">${fmt(p.ready)}</div><div class="label">Now scaffoldable</div></div>
+      <div class="pending-card"><div class="num">${fmt(p.readySpeciesTotal)}</div><div class="label">Species ready adds</div></div>
+    `;
+
+    const list = document.getElementById('pendingBySource');
+    const entries = Object.entries(p.bySource || {});
+    list.innerHTML = entries.length
+      ? entries.map(([src, s]) =>
+          `<li><span>${escape(src)}</span><span>${fmt(s.families)} families &middot; ${fmt(s.species)} species</span></li>`
+        ).join('')
+      : '<li class="pending-empty">No sources with ready families.</li>';
+  } catch (e) {
+    document.getElementById('pendingHeading').textContent = 'missing families — connection lost';
   }
 }
 
@@ -339,10 +473,16 @@ async function tick() {
   } catch (e) {
     document.getElementById('driverStatus').textContent = 'driver: connection lost';
   }
+  try {
+    await renderPending();
+  } catch (e) {
+    document.getElementById('pendingHeading').textContent = 'missing families — connection lost';
+  }
 }
 tick();
 setupQueueToggle();
 renderDriver();
+renderPending();
 setInterval(tick, 3000);
 </script>
 </body>
@@ -380,7 +520,22 @@ class Handler(BaseHTTPRequestHandler):
             self.wfile.write(body)
             return
         if self.path == "/api/queue":
-            body = json.dumps(sq.read_store()).encode("utf-8")
+            q = sq.read_store()
+            out = {}
+            for key, entry in q.items():
+                e = dict(entry)
+                e["publisher"] = cb_publisher(key)
+                out[key] = e
+            body = json.dumps(out).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if self.path == "/api/pending":
+            pending = pending_summary()
+            body = json.dumps(pending).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(body)))
