@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Mastopora concava is a cyclocrinaceae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "6c83c9a0-0002-5c7-824-dd2fa883022c34"
+          "uuid": "6c83c9a0-0002-5c7-824-dd2fa883022c34",
+          "children": []
         },
         {
           "id": "SP_NIDULITES_FAVUS",
@@ -31,9 +32,32 @@
           "subspeciesCount": 0,
           "description": "Nidulites favus is a cyclocrinaceae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "22e60861-cc85-5ef-943-b4d423e4867dc9"
+          "uuid": "22e60861-cc85-5ef-943-b4d423e4867dc9",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_NIDULITES",
+      "name": "Nidulites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NIDULITES_FAVUS_SALTER_1851",
+          "name": "Nidulites favus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nidulites",
+          "authorship": "Salter, 1851",
+          "sourceIds": {
+            "gbif-backbone": "11202388"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclocrinaceae"
     }
   ],
   "sourceIds": {
@@ -44,5 +68,7 @@
       "orderKey": 12243044,
       "familyKey": 10881865
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }
