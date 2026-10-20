@@ -98,16 +98,21 @@ PAGE = """<!doctype html>
     padding: 4px 0; border-bottom: 1px solid var(--border);
   }
   .queue-list li:last-child { border-bottom: none; }
-  .qs-done { color: var(--ok); }
-  .qs-running { color: var(--accent); }
   .qn { font-variant-numeric: tabular-nums; color: var(--dim); white-space: nowrap; }
-  .qi-active { color: var(--accent); font-weight: 600; }
-  .qi-active .qn { color: var(--accent); opacity: .85; }
-  .live-dot {
-    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--accent); margin-right: 6px; animation: pulse 1.4s ease-in-out infinite;
+  .queue-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .queue-list .qi-title { min-width: 0; }
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px;
+    border-radius: 999px; font-size: 10.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .03em; white-space: nowrap;
   }
-  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  .status-measuring { background: rgba(245, 196, 94, 0.15); color: var(--note); }
+  .status-applying { background: rgba(91, 157, 255, 0.18); color: var(--accent); }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
   .open-list { margin: 0; padding: 0 0 0 16px; font-size: 12.5px; color: var(--text); }
   .open-list li { padding: 3px 0; }
   .open-list b { color: var(--text); }
@@ -212,17 +217,21 @@ function renderQueue(sources) {
 
   document.getElementById('queueUpNext').innerHTML = upNext.length
     ? upNext.map(r => {
-        const isActive = ACTIVE_STAGES.includes(r.stage);
+        const badge = r.stage === 'measuring'
+            ? '<span class="status-badge status-measuring"><span class="status-dot"></span>measuring</span>'
+          : r.stage === 'applying'
+            ? '<span class="status-badge status-applying"><span class="status-dot"></span>importing</span>'
+          : '';
         const stage = r.stage === 'candidate' ? 'not yet downloaded'
           : r.stage === 'downloaded' ? 'downloaded'
-          : r.stage === 'measuring' ? 'measuring now'
           : r.stage === 'measured' ? 'measured'
           : r.stage === 'queued' ? 'queued to apply'
-          : r.stage === 'applying' ? 'importing now'
           : r.stage === 'needs-rerun' ? 'needs re-run'
-          : r.stage;
-        const dot = isActive ? '<span class="live-dot"></span>' : '';
-        return `<li class="${isActive ? 'qi-active' : ''}">${dot}<span>${r.title || r.key}</span> <span class="qn">${r.key} &middot; ${stage} &middot; ${fmt(r.size)}</span></li>`;
+          : '';
+        return `<li>
+          <span class="qi-title">${r.title || r.key}</span>
+          <span class="qn">${badge}${stage}${stage ? ' &middot; ' : ''}${r.key} &middot; ${fmt(r.size)}</span>
+        </li>`;
       }).join('')
     : '<li class="queue-empty">Nothing queued.</li>';
 

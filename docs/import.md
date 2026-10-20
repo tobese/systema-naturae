@@ -423,3 +423,154 @@ PY
 
 2. `verifyTree.py` should report the offending path when a family file fails to
 parse, not raise out of `json.load`.
+
+---
+
+## 11. Queue-driven import pipeline (Macie → q-bert via importwrite)
+
+The canonical path for bulk ChecklistBank imports since 2026-10-19 is a
+**three-stage split pipeline** across two machines:
+
+```
+Macie (this host)                      q-bert (WSL2, importwrite host)
+┌─────────────────┐                    ┌──────────────────┐
+│ sourceQueue.json│  stage: downloaded │  importwrite     │
+│                 │ ────────────────► │  :8089 (Go)      │
+│ transform step  │ ────────────────► │  POST /genus     │
+│ (transformCol-  │                    │  POST /flush     │
+│ Checklist.py)   │                    │  per family      │
+│ work/<slug>/    │                    └──────────────────┘
+│ transformed.jsonl│                   ↑
+│                 │                    │  single writer   │
+│ import step     │                    │  for family JSON │
+│ (importTrans-   │                    │  files           │
+| formed.py)      │                    │                  │
+│ IMPORTWRITE_URL │                    │                  │
+│ =http://q-bert: │                    │                  │
+│ 8089            │                    │                  │
+└─────────────────┘                    └──────────────────┘
+```
+
+### Stage machine: `data/source-queue.json`
+
+Every tracked source lives in `data/source-queue.json`, keyed by
+`checklistbank-<key>`, with a `stage` that moves through:
+
+```
+candidate → downloaded → measuring → measured → queued → applying → applied
+                                     ↑                                    ↑
+                                  (dry run)                          (done)
+                                  
+declined / blocked / needs-rerun   (terminal / holding states)
+```
+
+`scripts/sourceQueue.py` is the CLI for moving a source between stages:
+
+```bash
+python3 scripts/sourceQueue.py add   --key checklistbank-1020 \
+    --title "Global Species Database of Odonata" --size 9028 --licence "cc by"
+python3 scripts/sourceQueue.py set   --key checklistbank-1020 --stage downloaded
+python3 scripts/sourceQueue.py set   --key checklistbank-1020 --stage applied \
+    --added 351 --merged 3789 --families 117
+python3 scripts/sourceQueue.py report   # grouped by stage, terminal
+```
+
+### Stage 1 — Transform (Macie)
+
+`scripts/transformColChecklist.py <archive.zip> <work-slug> --apply`
+
+Reads a downloaded ChecklistBank archive, routes each species into its
+family using `importColChecklist.route_species()` (kingdom inference,
+family matching, refusal detection), and writes a JSONL sidecar:
+
+```
+/Volumes/MacieExternal/sources/work/<work-slug>/transformed.jsonl
+/Volumes/MacieExternal/sources/work/<work-slug>/transformed.meta.json
+```
+
+Each record has `kingdom`, `family` (appSlug), `genus` (name + optional
+id/sourcedFrom/lineage), and `species` (full species node). Species whose
+family has no data file on disk are skipped with a warning (found 2026-10-19
+on WoRMS 2011, which routes single species into three unscaffolded families).
+
+Species that would need a brand-new family are **refused** — dropped, not
+placed, no `Incertae sedis` placeholder — and recorded in the pending-family
+store via `scripts/pendingFamilies.py`.
+
+### Stage 2 — Apply (Macie → q-bert)
+
+`IMPORTWRITE_URL=http://q-bert:8089 python3 scripts/importTransformed.py <work-slug>`
+
+Reads the transformed.jsonl sidecar, groups records by (family, genus),
+POSTs each genus's species to importwrite's `/family/<slug>/species`,
+then flushes each family immediately after its own genera are posted
+(per-family flush, not end-of-run — this prevents idle eviction of small
+families while a big one is still posting, which caused data loss on
+2026-10-19).
+
+importwrite responds per genus with `added` and `merged` species lists;
+`importTransformed.py` appends a summary row to `data/import-log.jsonl`
+and returns the aggregate counts.
+
+### Stage 3 — Queue update
+
+`sourceQueue.py set --key <slug> --stage applied --added N --merged M ...`
+
+The source's `applied` block holds the result; `history` is append-only.
+
+### Auto-refill driver: `scripts/importQueueDriver.py`
+
+The macie-side process that was missing from the pipeline — it drains the
+`downloaded` queue and automatically refills when it runs low.
+
+```bash
+# One pass (processes all downloaded, then exits):
+python3 scripts/importQueueDriver.py
+
+# Loop forever, polling every 30s:
+python3 scripts/importQueueDriver.py --loop
+
+# Run under caffeinate (macOS, holds lid open):
+nohup caffeinate -dimsu python3 scripts/importQueueDriver.py --loop \
+    > /tmp/importQueueDriver.log 2>&1 &
+```
+
+On each pass:
+1. **Refill:** if fewer than 5 sources are at stage `downloaded`, triage up
+   to 10 new open-licence ChecklistBank candidates via
+   `scripts/triageNext.py --keys-only --limit 10`, download each archive
+   with `scripts/fetchBatch.sh <key>`, register via
+   `sourceQueue.py add ... --stage candidate`, then set to `downloaded`.
+   Archives that 404 on ChecklistBank (e.g. `Banco Taxonômico Integrado`,
+   `XR Test`) are marked `blocked`.
+2. **Drain:** for each `downloaded` source, run the transform (stage 1),
+   then the apply via importwrite (stage 2), then mark `applied` with the
+   summary stats. Sources where nothing is new ("nothing to do") are marked
+   `applied` with zero stats.
+
+The driver is currently running on macie as PID (see `ps aux | grep
+importQueueDriver`), under `caffeinate -dimsu`, logging to
+`/tmp/importQueueDriver.log`.
+
+### Related scripts
+
+| Script | Role |
+|---|---|
+| `scripts/sourceQueue.py` | Queue state: add / set / report |
+| `scripts/triageNext.py` | List open-licence ChecklistBank datasets we don't hold |
+| `scripts/fetchBatch.sh` | Download a ChecklistBank archive.zip to the sources volume |
+| `scripts/transformColChecklist.py` | Transform archive → transformed.jsonl sidecar |
+| `scripts/importTransformed.py` | Apply sidecar via importwrite (POST per genus, flush per family) |
+| `scripts/importwriteClient.py` | Python HTTP client for importwrite wire contract |
+| `scripts/importLogServer.py` | HTTP dashboard on :9883 serving import-log.jsonl + queue |
+| `services/importwrite` | Go single-writer service on q-bert:8089 |
+| `scripts/pendingFamilies.py` | Pending-family store for refused species |
+
+### Ports in use
+
+| Port | Service | Host |
+|---|---|---|
+| 8089 | importwrite | q-bert |
+| 9883 | importLogServer.py dashboard | macie |
+| 9876 | progressd (gap-task tracking) | macie |
+
