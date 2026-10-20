@@ -25,7 +25,8 @@
             "gbif": 11564702
           },
           "uuid": "c2d5a216-cf37-53e-a54-577355f073b77b",
-          "authorityIds": "gbif:11564702"
+          "authorityIds": "gbif:11564702",
+          "children": []
         },
         {
           "id": "FERMENTIMICRARCHAEUM_SPEC.",
@@ -41,9 +42,31 @@
             "gbif": 12260860
           },
           "uuid": "214740cd-a798-5be-aef-91cef35bc8e525",
-          "authorityIds": "gbif:12260860"
+          "authorityIds": "gbif:12260860",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_DTGH01",
+      "name": "DTGH01",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DTGH01_SP011335015",
+          "name": "DTGH01 sp011335015",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "DTGH01",
+          "sourceIds": {
+            "gbif-backbone": "11123528"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dtgh01"
     }
   ],
   "sourceIds": {
@@ -54,5 +77,7 @@
       "orderKey": 11119020,
       "familyKey": 11207819
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }
