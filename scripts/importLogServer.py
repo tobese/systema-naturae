@@ -161,7 +161,7 @@ PAGE = """<!doctype html>
         <span class="driver-dot" id="driverDot"></span><span id="driverStatus">driver: loading&hellip;</span>
       </span>
       <span id="driverDetail" style="color:var(--dim); font-size:11px; margin-left:8px;">
-        downloaded: <span id="downloadedCount">0</span> / <span id="downloadedThreshold">5</span> refill threshold
+        downloads ChecklistBank &bull; refill below 5 &middot; downloaded: 0
       </span>
     </div>
     <ul class="queue-list" id="queueUpNext"></ul>
@@ -256,10 +256,6 @@ function renderQueue(sources) {
 
   document.getElementById('openCount').textContent = String(open.length);
 
-  const downloadedCount = byKey.filter(r => r.stage === 'downloaded').length;
-  document.getElementById('downloadedCount').textContent = String(downloadedCount);
-  document.getElementById('downloadedThreshold').textContent = '5';
-
   document.getElementById('queueUpNext').innerHTML = upNext.length
     ? upNext.map(r => {
         const badge = r.stage === 'measuring'
@@ -297,9 +293,9 @@ async function renderDriver() {
     const detail = document.getElementById('driverDetail');
     if (d.running) {
       badge.className = 'driver-badge driver-running';
-      status.textContent = 'driver: running';
+      status.textContent = 'driver: running — downloads ChecklistBank';
       dot.style.display = 'inline-block';
-      detail.textContent = `downloaded: ${d.downloadedCount ?? 0} / ${d.refillThreshold ?? 5} refill threshold`;
+      detail.innerHTML = `downloads ChecklistBank &bull; refill below ${d.refillThreshold ?? 5} &middot; downloaded: ${d.downloadedCount ?? 0}`;
     } else {
       badge.className = 'driver-badge driver-stopped';
       status.textContent = 'driver: stopped';
