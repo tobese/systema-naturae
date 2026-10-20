@@ -50,12 +50,14 @@
           "sourcedFrom": "gbif",
           "lineage": "Corcorax",
           "sourceIds": {
-            "checklistbank": "ott3597870"
+            "checklistbank": "ott3597870",
+            "gbif-backbone": "6091753"
           },
           "children": [],
           "uuid": "04b4c282-df09-5da-b6f-2459b84faa77fe",
           "commonName": "White-winged Chough",
-          "description": "Corcorax melanoramphos (White-winged Chough) is a corcoracidae species found in its native region."
+          "description": "Corcorax melanoramphos (White-winged Chough) is a corcoracidae species found in its native region.",
+          "authorship": "Mathews, 1912"
         }
       ]
     },
@@ -90,13 +92,49 @@
             "itis": [
               "563157"
             ],
-            "checklistbank": "99efa69d-fd48-48c4-a3e1-57b6da92352b"
+            "checklistbank": "99efa69d-fd48-48c4-a3e1-57b6da92352b",
+            "gbif-backbone": "2494854"
           },
           "authorityIds": "col:536PR,itis:563157,wikidata:Q1049598",
           "authorship": "Gould",
           "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_MELAMPITTA",
+      "name": "Melampitta",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MELAMPITTA_LUGUBRIS_OGILVIE_GRANT_1913",
+          "name": "Melampitta lugubris",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melampitta",
+          "authorship": "(Ogilvie-Grant, 1913)",
+          "sourceIds": {
+            "gbif-backbone": "6091115"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MELAMPITTA_GIGANTEA_ROTHSCHILD_1899",
+          "name": "Melampitta gigantea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Melampitta",
+          "authorship": "(Rothschild, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "2494902"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corcoracidae"
     }
   ],
   "sourceIds": {
@@ -107,8 +145,9 @@
       "orderKey": 729,
       "familyKey": 5234
     },
-    "checklistbank": "Corcoracidae"
+    "checklistbank": "Corcoracidae",
+    "wikispecies": "Corcoracidae"
   },
-  "genusCount": 2,
-  "speciesCount": 3
+  "genusCount": 3,
+  "speciesCount": 5
 }

@@ -489,7 +489,8 @@
           "lineage": "Branchiostegus",
           "authorship": "Lin et al. 2017",
           "sourceIds": {
-            "checklistbank": "txn:361242"
+            "checklistbank": "txn:361242",
+            "gbif-backbone": "8738823"
           },
           "children": [],
           "uuid": "6bbe4f7a-0004-527-abc-1ca578dc4d71b5",
@@ -1127,6 +1128,19 @@
           "commonName": "Bankslope Tilefish",
           "children": [],
           "description": "Caulolatilus dooleyi (Bankslope Tilefish) is a malacanthidae species found in its native region."
+        },
+        {
+          "id": "SP_CAULOLATILUS_ANOMALUS_GILL_1865",
+          "name": "Caulolatilus anomalus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caulolatilus",
+          "authorship": "Gill, 1865",
+          "sourceIds": {
+            "gbif-backbone": "10726183"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1351,6 +1365,19 @@
           "children": [],
           "uuid": "96dc5116-7a33-542-a2a-e64aaa608ed23f",
           "description": "Malacanthus carosii is a malacanthidae species found in its native region."
+        },
+        {
+          "id": "SP_MALACANTHUS_SPEC_KOKEN_1888_CUVIER_1829",
+          "name": "Malacanthus spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Malacanthus",
+          "authorship": "(Koken, 1888) Cuvier, 1829",
+          "sourceIds": {
+            "gbif-backbone": "11370533"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1424,7 +1451,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Lopholatilus",
           "sourceIds": {
-            "checklistbank": "ott7650509"
+            "checklistbank": "ott7650509",
+            "gbif-backbone": "8744551"
           },
           "children": [],
           "authorship": "Carnevale and Godfrey 2014",
@@ -1638,13 +1666,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "malacanthidae"
+    },
+    {
+      "id": "GENUS_OTOLITHUS",
+      "name": "Otolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOLITHUS_SULCATUM_KOKEN_1888",
+          "name": "Otolithus sulcatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otolithus",
+          "authorship": "(Koken, 1888)",
+          "sourceIds": {
+            "gbif-backbone": "9291789"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "malacanthidae"
     }
   ],
-  "speciesCount": 71,
+  "speciesCount": 74,
   "appSlug": "malacanthidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1652,6 +1702,7 @@
       "orderKey": 587,
       "familyKey": 8543
     },
-    "checklistbank": "Malacanthidae"
+    "checklistbank": "Malacanthidae",
+    "wikispecies": "Malacanthidae"
   }
 }

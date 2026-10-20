@@ -1896,7 +1896,8 @@
             "itis": [
               "164924"
             ],
-            "checklistbank": "1367093"
+            "checklistbank": "1367093",
+            "gbif-backbone": "2346086"
           },
           "uuid": "614c8f10-c0f2-5d7-890-d2e8bb2d7a89a0",
           "authorityIds": "gbif:177724908,gbif:2346086,itis:164924",
@@ -1916,7 +1917,8 @@
             "itis": [
               "164925"
             ],
-            "checklistbank": "ecb1e679b9714a02b50a708a00adf851"
+            "checklistbank": "ecb1e679b9714a02b50a708a00adf851",
+            "gbif-backbone": "2346092"
           },
           "authorityIds": "itis:164925",
           "description": "Diplacanthopoma japonicus is a bythitidae species found in its native region."
@@ -3312,7 +3314,8 @@
           "uuid": "f3f4f984-9ff1-538-880-5e0c6eabb51195",
           "authorship": "Schwarzhans 2013",
           "sourceIds": {
-            "checklistbank": "txn:435430"
+            "checklistbank": "txn:435430",
+            "gbif-backbone": "11184235"
           },
           "description": "Saccogaster batanga is a bythitidae species found in its native region."
         },
@@ -4002,7 +4005,8 @@
           "lineage": "Dinematichthys",
           "authorship": "Nolf and Dockery 1993",
           "sourceIds": {
-            "checklistbank": "txn:301625"
+            "checklistbank": "txn:301625",
+            "gbif-backbone": "8666286"
           },
           "children": [],
           "uuid": "501aebcd-3a9c-55b-837-2ba787235ab6ce",
@@ -4274,7 +4278,8 @@
           "lineage": "Ogilbia",
           "authorship": "Schwarzhans and Bratischko 2011",
           "sourceIds": {
-            "checklistbank": "txn:301421"
+            "checklistbank": "txn:301421",
+            "gbif-backbone": "8460261"
           },
           "children": [],
           "uuid": "d2342aa6-88d3-527-b16-ab70a3366f76d5",
@@ -4309,6 +4314,19 @@
           "children": [],
           "uuid": "1abd7871-e409-593-883-0e2c3e9f3580c9",
           "description": "Ogilbia kokeni is a bythitidae species found in its native region."
+        },
+        {
+          "id": "SP_OGILBIA_LAPIERREI_NOLF_1976",
+          "name": "Ogilbia lapierrei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ogilbia",
+          "authorship": "(Nolf, 1976)",
+          "sourceIds": {
+            "gbif-backbone": "9629050"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -4414,7 +4432,8 @@
             "itis": [
               "690453"
             ],
-            "checklistbank": "5a97e9aa-1639-46f7-a436-b94bc8779d7b"
+            "checklistbank": "5a97e9aa-1639-46f7-a436-b94bc8779d7b",
+            "gbif-backbone": "2346221"
           },
           "authorityIds": "itis:690453",
           "commonName": "Baldhead cusk",
@@ -4994,7 +5013,8 @@
           "lineage": "Dermatopsis",
           "authorship": "Nolf and Steurbaut 2002",
           "sourceIds": {
-            "checklistbank": "txn:438364"
+            "checklistbank": "txn:438364",
+            "gbif-backbone": "11176753"
           },
           "children": [],
           "uuid": "1e544608-ddcc-585-abc-79eab2793fc057",
@@ -5220,6 +5240,19 @@
           "children": [],
           "uuid": "16e42045-b4a7-57d-b07-73a9225b9699a6",
           "description": "Diancistrus typhlops is a bythitidae species found in its native region."
+        },
+        {
+          "id": "SP_DIANCISTRUS_ANTOLLORUM_SCHWARZHANS_M_LLER_NIELSEN_2005",
+          "name": "Diancistrus antollorum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diancistrus",
+          "authorship": "Schwarzhans, Møller & Nielsen, 2005",
+          "sourceIds": {
+            "gbif-backbone": "8952929"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5637,7 +5670,8 @@
           "lineage": "Kalabisia",
           "authorship": "Přikryl and Carnevale 2018",
           "sourceIds": {
-            "checklistbank": "txn:434229"
+            "checklistbank": "txn:434229",
+            "gbif-backbone": "11172033"
           },
           "children": [],
           "uuid": "c4e056ee-d9cc-5b7-92b-1cfc9bbccba9c2",
@@ -5732,13 +5766,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bythitidae"
+    },
+    {
+      "id": "GENUS_OTOLITHUS",
+      "name": "Otolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOLITHUS_OCCULTUS_KOKEN_1891",
+          "name": "Otolithus occultus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otolithus",
+          "authorship": "(Koken, 1891)",
+          "sourceIds": {
+            "gbif-backbone": "9433494"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bythitidae"
     }
   ],
-  "speciesCount": 271,
+  "speciesCount": 274,
   "appSlug": "bythitidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 73,
+  "genusCount": 74,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -5746,6 +5802,7 @@
       "orderKey": 1308,
       "familyKey": 4220
     },
-    "checklistbank": "Bythitidae"
+    "checklistbank": "Bythitidae",
+    "wikispecies": "Bythitidae"
   }
 }

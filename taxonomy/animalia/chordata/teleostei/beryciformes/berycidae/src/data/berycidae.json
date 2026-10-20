@@ -66,7 +66,8 @@
             "col": [
               "D55RG"
             ],
-            "checklistbank": "txn:435580"
+            "checklistbank": "txn:435580",
+            "gbif-backbone": "11158886"
           },
           "authorityIds": "col:D55RG",
           "children": [],
@@ -243,7 +244,8 @@
           "lineage": "Centroberyx",
           "authorship": "Schwarzhans and Bratischko 2011",
           "sourceIds": {
-            "checklistbank": "txn:301426"
+            "checklistbank": "txn:301426",
+            "gbif-backbone": "8489317"
           },
           "children": [],
           "uuid": "e9ba190b-b635-513-92e-abaaee150cfb36",
@@ -547,6 +549,32 @@
           "children": [],
           "uuid": "c419e9aa-b7ab-539-85f-d22b5936bef4b6",
           "description": "Beryx kcli is a berycidae species found in its native region."
+        },
+        {
+          "id": "SP_BERYX_MUELLERI_KLUNZINGER_1879",
+          "name": "Beryx muelleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Beryx",
+          "authorship": "Klunzinger, 1879",
+          "sourceIds": {
+            "gbif-backbone": "4839790"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BERYX_VALENCIENNESI_HEBERT_1855",
+          "name": "Beryx valenciennesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Beryx",
+          "authorship": "Hebert, 1855",
+          "sourceIds": {
+            "gbif-backbone": "8845044"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -574,6 +602,19 @@
           "authorityIds": "col:D55RF",
           "children": [],
           "description": "Egregioberyx erectus is a berycidae species found in its native region."
+        },
+        {
+          "id": "SP_EGREGIOBERYX_PHAEROIDES_STINTON_1957",
+          "name": "Egregioberyx phaeroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Egregioberyx",
+          "authorship": "Stinton, 1957",
+          "sourceIds": {
+            "gbif-backbone": "11217956"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -752,13 +793,79 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "berycidae"
+    },
+    {
+      "id": "GENUS_MONOCENTRIS",
+      "name": "Monocentris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MONOCENTRIS_SPHAEROIDES_STINTON_1957",
+          "name": "Monocentris sphaeroides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Monocentris",
+          "authorship": "(Stinton, 1957)",
+          "sourceIds": {
+            "gbif-backbone": "4839739"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "berycidae"
+    },
+    {
+      "id": "GENUS_OTOLITHUS",
+      "name": "Otolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOLITHUS_INTEGER_KOKEN_1885",
+          "name": "Otolithus integer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otolithus",
+          "authorship": "(Koken, 1885)",
+          "sourceIds": {
+            "gbif-backbone": "9562916"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "berycidae"
+    },
+    {
+      "id": "GENUS_APOGONIDARUM",
+      "name": "Apogonidarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_APOGONIDARUM_INGENS_KOKEN_1884",
+          "name": "Apogonidarum ingens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apogonidarum",
+          "authorship": "(Koken, 1884)",
+          "sourceIds": {
+            "gbif-backbone": "9281309"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "berycidae"
     }
   ],
-  "speciesCount": 36,
+  "speciesCount": 42,
   "appSlug": "berycidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 9,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -766,6 +873,7 @@
       "orderKey": 499,
       "familyKey": 7193
     },
-    "checklistbank": "Berycidae"
+    "checklistbank": "Berycidae",
+    "wikispecies": "Berycidae"
   }
 }

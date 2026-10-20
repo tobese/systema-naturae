@@ -267,7 +267,8 @@
           "sourcedFrom": "gbif",
           "lineage": "Abrocoma",
           "sourceIds": {
-            "checklistbank": "1001300"
+            "checklistbank": "1001300",
+            "gbif-backbone": "11529711"
           },
           "children": [],
           "uuid": "1486bf63-de23-5b7-a20-50a38fdc2aedcf",
@@ -317,13 +318,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "abrocomidae"
+    },
+    {
+      "id": "GENUS_STICHOMYS",
+      "name": "Stichomys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STICHOMYS_CONSTANS_AMEGHINO_1887",
+          "name": "Stichomys constans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stichomys",
+          "authorship": "(Ameghino, 1887)",
+          "sourceIds": {
+            "gbif-backbone": "8661910"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "abrocomidae"
     }
   ],
-  "speciesCount": 14,
+  "speciesCount": 15,
   "appSlug": "abrocomidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -332,6 +355,7 @@
       "orderKey": 1459,
       "familyKey": 5488
     },
-    "checklistbank": "Abrocomidae"
+    "checklistbank": "Abrocomidae",
+    "wikispecies": "Abrocomidae"
   }
 }

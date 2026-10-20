@@ -859,11 +859,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Argentina",
           "sourceIds": {
-            "checklistbank": "ott7652197"
+            "checklistbank": "ott7652197",
+            "gbif-backbone": "8817573"
           },
           "children": [],
           "uuid": "676f3a03-29cc-5c6-bc2-c1f1a7f458a2d6",
-          "description": "Argentina syrtensium is a argentinidae species found in its native region."
+          "description": "Argentina syrtensium is a argentinidae species found in its native region.",
+          "authorship": "Goode & Bean, 1879"
         },
         {
           "id": "SP_ARGENTINA_LONGIROSTRIS_SCHWARZHANS_2003",
@@ -919,7 +921,8 @@
           "lineage": "Argentina",
           "authorship": "Schwarzhans et al. 2017",
           "sourceIds": {
-            "checklistbank": "txn:357872"
+            "checklistbank": "txn:357872",
+            "gbif-backbone": "11185174"
           },
           "children": [],
           "uuid": "c1ff6dc6-8355-5dd-863-7cf10c8fe695b3",
@@ -963,6 +966,32 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Argentina",
           "authorship": "Valenciennes, 1848",
+          "children": []
+        },
+        {
+          "id": "SP_ARGENTINA_IMPERIALIS_RAFINESQUE_1810",
+          "name": "Argentina imperialis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Argentina",
+          "authorship": "Rafinesque, 1810",
+          "sourceIds": {
+            "gbif-backbone": "11153045"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ARGENTINA_DECAGON_CLARKE_1879",
+          "name": "Argentina decagon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Argentina",
+          "authorship": "Clarke, 1879",
+          "sourceIds": {
+            "gbif-backbone": "11205932"
+          },
           "children": []
         }
       ],
@@ -1138,17 +1167,96 @@
           "children": [],
           "uuid": "b7a0998b-c675-541-be4-212378af1988d8",
           "description": "Proargentina nebulosa is a argentinidae species found in its native region."
+        },
+        {
+          "id": "SP_PROARGENTINA_INCLINATA_DANIL_CHENKO_1960",
+          "name": "Proargentina inclinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proargentina",
+          "authorship": "(Danil'chenko, 1960)",
+          "sourceIds": {
+            "gbif-backbone": "9591204"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "argentinidae"
+    },
+    {
+      "id": "GENUS_BERYCIDARUM",
+      "name": "Berycidarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BERYCIDARUM_BALTICUS_ROEDEL_1930",
+          "name": "Berycidarum balticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Berycidarum",
+          "authorship": "(Roedel, 1930)",
+          "sourceIds": {
+            "gbif-backbone": "9470430"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "argentinidae"
+    },
+    {
+      "id": "GENUS_PERCIDARUM",
+      "name": "Percidarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERCIDARUM_ERRATICUS_ROEDEL_1930",
+          "name": "Percidarum erraticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Percidarum",
+          "authorship": "(Roedel, 1930)",
+          "sourceIds": {
+            "gbif-backbone": "9638205"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "argentinidae"
+    },
+    {
+      "id": "GENUS_NEMACHILUS",
+      "name": "Nemachilus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEMACHILUS_MUSCELI_PAUCA_1929",
+          "name": "Nemachilus musceli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nemachilus",
+          "authorship": "(Pauca, 1929)",
+          "sourceIds": {
+            "gbif-backbone": "9562918"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "argentinidae"
     }
   ],
-  "speciesCount": 54,
+  "speciesCount": 60,
   "appSlug": "argentinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 8,
+  "genusCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1156,6 +1264,7 @@
       "orderKey": 1068,
       "familyKey": 4222
     },
-    "checklistbank": "Argentinidae"
+    "checklistbank": "Argentinidae",
+    "wikispecies": "Argentinidae"
   }
 }

@@ -205,7 +205,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Fluviatilavis",
           "sourceIds": {
-            "checklistbank": "ott6151069"
+            "checklistbank": "ott6151069",
+            "gbif-backbone": "8441559"
           },
           "children": [],
           "authorship": "Harrison 1983",
@@ -230,7 +231,8 @@
           "lineage": "Tenuicrus",
           "authorship": "(Harrison and Walker 1976)",
           "sourceIds": {
-            "checklistbank": "txn:428982"
+            "checklistbank": "txn:428982",
+            "gbif-backbone": "11193044"
           },
           "children": [],
           "uuid": "a47d21ce-1561-537-b4f-20e44c62b46ba8",
@@ -315,9 +317,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Himantopus",
           "sourceIds": {
-            "checklistbank": "Himantopus_mexicanus"
+            "checklistbank": "Himantopus_mexicanus",
+            "gbif-backbone": "5229128"
           },
-          "children": []
+          "children": [],
+          "authorship": "(P.L.S.Müller, 1776)"
         },
         {
           "id": "SP_HIMANTOPUS_NOVAEZELANDIAE",
@@ -327,7 +331,34 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Himantopus",
           "sourceIds": {
-            "checklistbank": "Himantopus_novaezelandiae"
+            "checklistbank": "Himantopus_novaezelandiae",
+            "gbif-backbone": "5229125"
+          },
+          "children": [],
+          "authorship": "Gould, 1841"
+        },
+        {
+          "id": "SP_HIMANTOPUS_BREVIPES_MILNE_EDWARDS_1871",
+          "name": "Himantopus brevipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Himantopus",
+          "authorship": "Milne-Edwards, 1871",
+          "sourceIds": {
+            "gbif-backbone": "11141029"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_HIMANTOPUS_WILSONII",
+          "name": "Himantopus wilsonii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Himantopus",
+          "sourceIds": {
+            "gbif-backbone": "11877430"
           },
           "children": []
         }
@@ -348,9 +379,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Recurvirostra",
           "sourceIds": {
-            "checklistbank": "Recurvirostra_americana"
+            "checklistbank": "Recurvirostra_americana",
+            "gbif-backbone": "2480258"
           },
-          "children": []
+          "children": [],
+          "authorship": "J.F.Gmelin, 1789"
         },
         {
           "id": "SP_RECURVIROSTRA_ANDINA",
@@ -387,14 +420,49 @@
             "checklistbank": "Recurvirostra_novaehollandiae"
           },
           "children": []
+        },
+        {
+          "id": "SP_RECURVIROSTRA_SPEC_LINN_US_1758",
+          "name": "Recurvirostra spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Recurvirostra",
+          "authorship": "Linnæus, 1758",
+          "sourceIds": {
+            "gbif-backbone": "9739121"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "recurvirostridae"
+    },
+    {
+      "id": "GENUS_TOTANUS",
+      "name": "Totanus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TOTANUS_TERUELENSIS_DE_VILLALTA_1963",
+          "name": "Totanus teruelensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Totanus",
+          "authorship": "(de Villalta, 1963)",
+          "sourceIds": {
+            "gbif-backbone": "11155334"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "recurvirostridae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 23,
+  "genusCount": 9,
+  "speciesCount": 27,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -403,6 +471,7 @@
       "orderKey": 7192402,
       "familyKey": 4287244
     },
-    "checklistbank": "Recurvirostridae"
+    "checklistbank": "Recurvirostridae",
+    "wikispecies": "Recurvirostridae"
   }
 }

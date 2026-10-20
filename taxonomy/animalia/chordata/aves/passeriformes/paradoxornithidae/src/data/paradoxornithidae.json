@@ -110,7 +110,10 @@
           "description": "The ashy-throated parrotbill is a parrotbill. In old sources, it may be called Alphonse's crow-tit; though superficially resembling a tit it is not a member of the Paridae. The native range of this species extends from south-west China to northern Vietnam, and it might have become naturalised in one area in Italy.",
           "sourcedFrom": "gbif",
           "children": [],
-          "uuid": "30209e99-a477-528-920-975bab38bdf2f9"
+          "uuid": "30209e99-a477-528-920-975bab38bdf2f9",
+          "sourceIds": {
+            "checklistbank-311726": "3942"
+          }
         },
         {
           "id": "PARADOXORNIS_ATROSUPERCILIARIS",
@@ -129,7 +132,8 @@
           "sourceIds": {
             "wikidata": [
               "Q3314324"
-            ]
+            ],
+            "checklistbank-311726": "2995"
           },
           "authorityIds": "wikidata:Q3314324"
         },
@@ -252,7 +256,8 @@
               "561821"
             ],
             "checklistbank": "gyhpar3",
-            "wikispecies": "Paradoxornis_gularis"
+            "wikispecies": "Paradoxornis_gularis",
+            "checklistbank-311726": "2689"
           },
           "authorityIds": "col:6TMX6,itis:561821,wikidata:Q3314311",
           "authorship": "Gray, 1845"
@@ -283,7 +288,8 @@
               "6TN96"
             ],
             "checklistbank": "183263",
-            "wikispecies": "Paradoxornis_guttaticollis"
+            "wikispecies": "Paradoxornis_guttaticollis",
+            "checklistbank-311726": "3941"
           },
           "authorityIds": "col:6TN96,itis:561822,wikidata:Q1588960",
           "authorship": "David,1871"
@@ -468,7 +474,8 @@
               "6TN97"
             ],
             "checklistbank": "Paradoxornis_ruficeps",
-            "wikispecies": "Paradoxornis_ruficeps"
+            "wikispecies": "Paradoxornis_ruficeps",
+            "checklistbank-311726": "2945"
           },
           "authorityIds": "col:6TN97,itis:561827,wikidata:Q110257526"
         },
@@ -640,6 +647,18 @@
           "authorityIds": "col:DDDLN,itis:1257355",
           "commonName": "Rufous-headed Parrotbill",
           "description": "Paradoxornis bakeri (Rufous-headed Parrotbill) is a parrotbills species found in its native region."
+        },
+        {
+          "id": "SP_PARADOXORNIS_VERREAUXI",
+          "name": "Paradoxornis verreauxi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradoxornis",
+          "sourceIds": {
+            "checklistbank-311726": "3770"
+          },
+          "children": []
         }
       ]
     },
@@ -1652,10 +1671,43 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paradoxornithidae"
+    },
+    {
+      "id": "GENUS_ALCIPPE",
+      "name": "Alcippe",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALCIPPE_CHRYSOTIS",
+          "name": "Alcippe chrysotis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alcippe",
+          "sourceIds": {
+            "checklistbank-311726": "2593"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ALCIPPE_VINIPECTUS",
+          "name": "Alcippe vinipectus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alcippe",
+          "sourceIds": {
+            "checklistbank-311726": "3931"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paradoxornithidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 77,
+  "genusCount": 16,
+  "speciesCount": 80,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1664,6 +1716,7 @@
       "orderKey": 729,
       "familyKey": 9579833
     },
-    "checklistbank": "Paradoxornithidae"
+    "checklistbank": "Paradoxornithidae",
+    "wikispecies": "Paradoxornithidae"
   }
 }

@@ -805,6 +805,19 @@
           "authorityIds": "col:5D79D,gbif:177724920,gbif:2347746,itis:646978",
           "commonName": "Tequila Splitfin",
           "description": "Zoogoneticus tequila, Tequila splitfin or simply Tequila fish, is a species of goodeid fish (family Goodeidae) from Mexico."
+        },
+        {
+          "id": "SP_ZOOGONETICUS_CUITZEOENSIS_MEEK_1904",
+          "name": "Zoogoneticus cuitzeoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zoogoneticus",
+          "authorship": "Meek, 1904",
+          "sourceIds": {
+            "gbif-backbone": "8753107"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1766,12 +1779,26 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Tapatia",
           "sourceIds": {
-            "checklistbank": "ott7651490"
+            "checklistbank": "ott7651490",
+            "gbif-backbone": "10620014"
           },
           "children": [],
           "authorship": "Álvarez and Arriola-Longoria 1972",
           "uuid": "e1bebaf9-5c0b-5c6-ba5-475c3df6a37063",
           "description": "Tapatia occidentalis is a goodeidae species found in its native region."
+        },
+        {
+          "id": "SP_TAPATIA_SPEC_ALVAREZ_ARRIOLA_LONGORIA_1972",
+          "name": "Tapatia spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tapatia",
+          "authorship": "Alvarez & Arriola-Longoria, 1972",
+          "sourceIds": {
+            "gbif-backbone": "11708904"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1800,13 +1827,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "goodeidae"
+    },
+    {
+      "id": "GENUS_PARAFUNDULUS",
+      "name": "Parafundulus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARAFUNDULUS_ERDISI_JORDAN_1924",
+          "name": "Parafundulus erdisi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parafundulus",
+          "authorship": "(Jordan, 1924)",
+          "sourceIds": {
+            "gbif-backbone": "9359011"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "goodeidae"
     }
   ],
-  "speciesCount": 67,
+  "speciesCount": 70,
   "appSlug": "goodeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 22,
+  "genusCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1814,6 +1863,7 @@
       "orderKey": 547,
       "familyKey": 7657
     },
-    "checklistbank": "Goodeidae"
+    "checklistbank": "Goodeidae",
+    "wikispecies": "Goodeidae"
   }
 }

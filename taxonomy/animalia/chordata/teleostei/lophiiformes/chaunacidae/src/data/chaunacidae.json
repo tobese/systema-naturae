@@ -607,7 +607,11 @@
           "children": [],
           "lineage": "Chaunax",
           "uuid": "cb55af17-4806-529-b21-8409f341b66474",
-          "description": "Chaunax albatrossae is a chaunacidae species found in its native region."
+          "description": "Chaunax albatrossae is a chaunacidae species found in its native region.",
+          "authorship": "Ho & Ma, 2022",
+          "sourceIds": {
+            "gbif-backbone": "11909171"
+          }
         },
         {
           "id": "SP_CHAUNAX_TOSAENSIS_OKAMURA_AND_ORYUU_IN_OKAMURA_AND_KITAJIMA_1984",
@@ -637,7 +641,8 @@
           "lineage": "Chaunax",
           "authorship": "Ho et Ma, 2022",
           "sourceIds": {
-            "checklistbank": "3c91246a38c6433b9a5297e26168fe67"
+            "checklistbank": "3c91246a38c6433b9a5297e26168fe67",
+            "gbif-backbone": "11509763"
           },
           "children": [],
           "uuid": "e0238f0a-9b16-50c-a04-a4d00f7cd5acf4",
@@ -652,7 +657,8 @@
           "lineage": "Chaunax",
           "authorship": "Ho et Ma, 2022",
           "sourceIds": {
-            "checklistbank": "6a362cab0f2b490e9ce976400b590218"
+            "checklistbank": "6a362cab0f2b490e9ce976400b590218",
+            "gbif-backbone": "11756962"
           },
           "children": [],
           "uuid": "0b8f6d67-21b1-5ca-90d-ba5e68227e8f23",
@@ -667,7 +673,8 @@
           "lineage": "Chaunax",
           "authorship": "Ho et Ma, 2022",
           "sourceIds": {
-            "checklistbank": "d1803dd8c4be494aa3c3cdb5ca246a6c"
+            "checklistbank": "d1803dd8c4be494aa3c3cdb5ca246a6c",
+            "gbif-backbone": "11710164"
           },
           "children": [],
           "uuid": "9b37ee3d-29f7-54b-a40-50d336762c808f",
@@ -942,13 +949,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chaunacidae"
+    },
+    {
+      "id": "GENUS_CHUANAX",
+      "name": "Chuanax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHUANAX_BRACHYSOMUS_HO_SATRIA_2015",
+          "name": "Chuanax brachysomus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chuanax",
+          "authorship": "Ho & Satria, 2015",
+          "sourceIds": {
+            "gbif-backbone": "11147446"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaunacidae"
+    },
+    {
+      "id": "GENUS_OTOLITHUS",
+      "name": "Otolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOLITHUS_LOBATA_BASSOLI_1906",
+          "name": "Otolithus lobata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otolithus",
+          "authorship": "(Bassoli, 1906)",
+          "sourceIds": {
+            "gbif-backbone": "9471973"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaunacidae"
     }
   ],
-  "speciesCount": 45,
+  "speciesCount": 47,
   "appSlug": "chaunacidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 4,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -956,6 +1007,7 @@
       "orderKey": 1305,
       "familyKey": 3873
     },
-    "checklistbank": "Chaunacidae"
+    "checklistbank": "Chaunacidae",
+    "wikispecies": "Chaunacidae"
   }
 }

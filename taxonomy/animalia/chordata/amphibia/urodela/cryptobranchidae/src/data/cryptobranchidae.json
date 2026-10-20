@@ -35,7 +35,9 @@
             "col": [
               "6BKKP"
             ],
-            "checklistbank": "ott534288"
+            "checklistbank": "ott534288",
+            "wikispecies": "Cryptobranchus_alleganiensis",
+            "gbif-backbone": "2432031"
           },
           "authorityIds": "col:6BKKP,itis:173587,wikidata:Q369467",
           "authorship": "(Daudin, 1803)"
@@ -163,7 +165,8 @@
             "itis": [
               "202085"
             ],
-            "checklistbank": "ott424193"
+            "checklistbank": "ott424193",
+            "wikispecies": "Andrias_davidianus"
           },
           "authorityIds": "col:DTJQ,itis:202085,wikidata:Q61312",
           "authorship": "(Blanchard, 1871)"
@@ -208,7 +211,8 @@
             "itis": [
               "1269843"
             ],
-            "checklistbank": "Andrias_jiangxiensis"
+            "checklistbank": "Andrias_jiangxiensis",
+            "gbif-backbone": "11563118"
           },
           "authorityIds": "col:LQGKX,itis:1269843",
           "description": "Andrias jiangxiensis is a giant salamanders species found in its native region."
@@ -352,7 +356,8 @@
           "sourceIds": {
             "wikispecies": "Andrias_jiangxiensis"
           },
-          "uuid": "aa28da5a-a23c-41e4-ba15-db41ee9f155b"
+          "uuid": "aa28da5a-a23c-41e4-ba15-db41ee9f155b",
+          "children": []
         },
         {
           "id": "SP_ANDRIAS_CHENI",
@@ -364,7 +369,8 @@
           "sourceIds": {
             "wikispecies": "Andrias_cheni"
           },
-          "uuid": "9a8a383d-3281-4bbf-8695-2defa996b94f"
+          "uuid": "9a8a383d-3281-4bbf-8695-2defa996b94f",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -481,10 +487,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cryptobranchidae"
+    },
+    {
+      "id": "GENUS_PLICAGNATHUS",
+      "name": "Plicagnathus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLICAGNATHUS_MATTHEWI_COOK_1917",
+          "name": "Plicagnathus matthewi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Plicagnathus",
+          "authorship": "(Cook, 1917)",
+          "sourceIds": {
+            "gbif-backbone": "9248222"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cryptobranchidae"
+    },
+    {
+      "id": "GENUS_CHUNERPETON",
+      "name": "Chunerpeton",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHUNERPETON_TIANYIENSIS_GAO_SHUBIN_2003",
+          "name": "Chunerpeton tianyiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chunerpeton",
+          "authorship": "Gao & Shubin, 2003",
+          "sourceIds": {
+            "gbif-backbone": "4964856"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cryptobranchidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 24,
+  "genusCount": 9,
+  "speciesCount": 26,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -493,6 +543,7 @@
       "orderKey": 953,
       "familyKey": 6747
     },
-    "checklistbank": "Cryptobranchidae"
+    "checklistbank": "Cryptobranchidae",
+    "wikispecies": "Cryptobranchidae"
   }
 }

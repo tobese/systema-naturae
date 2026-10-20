@@ -153,7 +153,8 @@
             "itis": [
               "649704"
             ],
-            "checklistbank": "1120621"
+            "checklistbank": "1120621",
+            "gbif-backbone": "2418766"
           },
           "authorityIds": "itis:649704",
           "commonName": "Slender Weasel Shark",
@@ -428,6 +429,19 @@
           "children": [],
           "uuid": "8e788754-4711-584-bbd-d916b259764f56",
           "description": "Hemipristis unidenticulata is a hemigaleidae species found in its native region."
+        },
+        {
+          "id": "SP_HEMIPRISTIS_SPEC_DAMES_1883",
+          "name": "Hemipristis spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemipristis",
+          "authorship": "Dames, 1883",
+          "sourceIds": {
+            "gbif-backbone": "11488875"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -447,7 +461,8 @@
           "lineage": "Moerigaleus",
           "authorship": "Underwood and Ward 2011",
           "sourceIds": {
-            "checklistbank": "txn:185079"
+            "checklistbank": "txn:185079",
+            "gbif-backbone": "8697794"
           },
           "children": [],
           "uuid": "f2e447a7-a939-5eb-a15-e94ba007137820",
@@ -456,13 +471,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hemigaleidae"
+    },
+    {
+      "id": "GENUS_OXYRHINA",
+      "name": "Oxyrhina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OXYRHINA_CYCLODONTA_PEDRONI_1844",
+          "name": "Oxyrhina cyclodonta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oxyrhina",
+          "authorship": "(Pedroni, 1844)",
+          "sourceIds": {
+            "gbif-backbone": "11180658"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemigaleidae"
+    },
+    {
+      "id": "GENUS_GALEUS",
+      "name": "Galeus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GALEUS_AFFINIS_PROBST_1878",
+          "name": "Galeus affinis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galeus",
+          "authorship": "(Probst, 1878)",
+          "sourceIds": {
+            "gbif-backbone": "9582035"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hemigaleidae"
     }
   ],
-  "speciesCount": 23,
+  "speciesCount": 26,
   "appSlug": "hemigaleidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Elasmobranchii",
-  "genusCount": 5,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -471,6 +530,7 @@
       "orderKey": 887,
       "familyKey": 5892
     },
-    "checklistbank": "Hemigaleidae"
+    "checklistbank": "Hemigaleidae",
+    "wikispecies": "Hemigaleidae"
   }
 }

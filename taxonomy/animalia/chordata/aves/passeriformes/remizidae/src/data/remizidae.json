@@ -37,9 +37,11 @@
               "67FB2"
             ],
             "checklistbank": "Anthoscopus_caroli",
-            "wikispecies": "Anthoscopus_caroli"
+            "wikispecies": "Anthoscopus_caroli",
+            "gbif-backbone": "6092391"
           },
-          "authorityIds": "col:67FB2,itis:558607,wikidata:Q1591099"
+          "authorityIds": "col:67FB2,itis:558607,wikidata:Q1591099",
+          "authorship": "C.M.N.White, 1946"
         },
         {
           "id": "ANTHOSCOPUS_FLAVIFRONS",
@@ -63,7 +65,8 @@
               "558608"
             ],
             "checklistbank": "foptit1",
-            "wikispecies": "Anthoscopus_flavifrons"
+            "wikispecies": "Anthoscopus_flavifrons",
+            "gbif-backbone": "7341725"
           },
           "authorityIds": "col:5VFB8,itis:558608",
           "authorship": "(Cassin, 1855)"
@@ -93,7 +96,8 @@
             "itis": [
               "558609"
             ],
-            "checklistbank": "soptit1"
+            "checklistbank": "soptit1",
+            "gbif-backbone": "6092358"
           },
           "authorityIds": "col:67FB8,itis:558609,wikidata:Q1591110",
           "authorship": "(Shaw, 1812)"
@@ -123,7 +127,8 @@
             "itis": [
               "558610"
             ],
-            "checklistbank": "mcptit1"
+            "checklistbank": "mcptit1",
+            "gbif-backbone": "2487388"
           },
           "authorityIds": "col:5VFB7,itis:558610,wikidata:Q3314694",
           "authorship": "(Hartlaub, 1882)"
@@ -165,7 +170,8 @@
               "67FB7"
             ],
             "checklistbank": "Anthoscopus_parvulus",
-            "wikispecies": "Anthoscopus_parvulus"
+            "wikispecies": "Anthoscopus_parvulus",
+            "gbif-backbone": "6092477"
           },
           "authorityIds": "col:67FB7,itis:558611"
         },
@@ -191,7 +197,8 @@
               "5VFB6"
             ],
             "checklistbank": "septit1",
-            "wikispecies": "Anthoscopus_punctifrons"
+            "wikispecies": "Anthoscopus_punctifrons",
+            "gbif-backbone": "2487387"
           },
           "authorityIds": "col:5VFB6,itis:558612",
           "authorship": "(Sundevall, 1850)"
@@ -217,6 +224,19 @@
             ]
           },
           "authorityIds": "wikidata:Q15727261"
+        },
+        {
+          "id": "SP_ANTHOSCOPUS_PYGMAEA_GRANT_1956",
+          "name": "Anthoscopus pygmaea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anthoscopus",
+          "authorship": "Grant, 1956",
+          "sourceIds": {
+            "gbif-backbone": "7783648"
+          },
+          "children": []
         }
       ]
     },
@@ -282,9 +302,11 @@
               "4RRFT"
             ],
             "checklistbank": "Remiz_coronatus",
-            "wikispecies": "Remiz_coronatus"
+            "wikispecies": "Remiz_coronatus",
+            "gbif-backbone": "8884621"
           },
-          "authorityIds": "col:4RRFT,itis:562701,wikidata:Q2225275"
+          "authorityIds": "col:4RRFT,itis:562701,wikidata:Q2225275",
+          "authorship": "(Hume, 1874)"
         },
         {
           "id": "REMIZ_CONSOBRINUS",
@@ -332,7 +354,8 @@
             ],
             "itis": [
               "916032"
-            ]
+            ],
+            "gbif-backbone": "7341749"
           },
           "authorityIds": "col:6WSMD,itis:916032",
           "commonName": "Black-headed Penduline Tit",
@@ -361,7 +384,8 @@
             ],
             "col": [
               "5W9XC"
-            ]
+            ],
+            "gbif-backbone": "6092608"
           },
           "authorityIds": "col:5W9XC,itis:178759",
           "commonName": "Verdin",
@@ -418,10 +442,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "remizidae"
+    },
+    {
+      "id": "GENUS_CEPHALOPYRUS",
+      "name": "Cephalopyrus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CEPHALOPYRUS_FLAMMICEPS_ROTHSCHILD_1923",
+          "name": "Cephalopyrus flammiceps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cephalopyrus",
+          "authorship": "Rothschild, 1923",
+          "sourceIds": {
+            "gbif-backbone": "6092347"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "remizidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 15,
+  "genusCount": 6,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -430,6 +476,7 @@
       "orderKey": 729,
       "familyKey": 9344
     },
-    "checklistbank": "Remizidae"
+    "checklistbank": "Remizidae",
+    "wikispecies": "Remizidae"
   }
 }

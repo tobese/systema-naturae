@@ -25,7 +25,8 @@
               "P9VT"
             ],
             "checklistbank": "ott3606853",
-            "wikispecies": "Caenolestes_convelatus"
+            "wikispecies": "Caenolestes_convelatus",
+            "gbif-backbone": "6163114"
           },
           "authorityIds": "col:P9VT,itis:552586",
           "commonName": "Northern Caenolestid",
@@ -97,7 +98,8 @@
               "1255470"
             ],
             "checklistbank": "ott5265285",
-            "wikispecies": "Caenolestes_sangay"
+            "wikispecies": "Caenolestes_sangay",
+            "gbif-backbone": "8808055"
           },
           "authorityIds": "col:KSLV7,itis:1255470",
           "children": [],
@@ -156,6 +158,19 @@
           "children": [],
           "uuid": "364bb68c-3290-55b-a04-2fef150356f1e5",
           "description": "Caenolestes tatei is a caenolestidae species found in its native region."
+        },
+        {
+          "id": "SP_CAENOLESTES_OBSCURUS_THOMAS_1895",
+          "name": "Caenolestes obscurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caenolestes",
+          "authorship": "Thomas, 1895",
+          "sourceIds": {
+            "gbif-backbone": "7628750"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -652,7 +667,8 @@
           "lineage": "Perulestes",
           "authorship": "Goin and Candela 2004",
           "sourceIds": {
-            "checklistbank": "txn:276024"
+            "checklistbank": "txn:276024",
+            "gbif-backbone": "8614861"
           },
           "children": [],
           "uuid": "76715542-d39b-5f2-a4e-80e57535093dcc",
@@ -667,7 +683,8 @@
           "lineage": "Perulestes",
           "authorship": "Goin and Candela 2004",
           "sourceIds": {
-            "checklistbank": "txn:276025"
+            "checklistbank": "txn:276025",
+            "gbif-backbone": "8459758"
           },
           "children": [],
           "uuid": "a9f126f9-9ce0-533-91a-e756c3cbf65641",
@@ -889,13 +906,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "caenolestidae"
+    },
+    {
+      "id": "GENUS_EVOLESTES",
+      "name": "Evolestes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EVOLESTES_HADROMMATOS_GOIN_ET_AL_2007",
+          "name": "Evolestes hadrommatos",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Evolestes",
+          "authorship": "Goin et al., 2007",
+          "sourceIds": {
+            "gbif-backbone": "8550941"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caenolestidae"
+    },
+    {
+      "id": "GENUS_HALMARHIPHUS",
+      "name": "Halmarhiphus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HALMARHIPHUS_GUARANITICUS_AMEGHINO_1899",
+          "name": "Halmarhiphus guaraniticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Halmarhiphus",
+          "authorship": "(Ameghino, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "9561680"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caenolestidae"
     }
   ],
-  "speciesCount": 42,
+  "speciesCount": 45,
   "appSlug": "caenolestidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 22,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -904,6 +965,7 @@
       "orderKey": 792,
       "familyKey": 5476
     },
-    "checklistbank": "Caenolestidae"
+    "checklistbank": "Caenolestidae",
+    "wikispecies": "Caenolestidae"
   }
 }

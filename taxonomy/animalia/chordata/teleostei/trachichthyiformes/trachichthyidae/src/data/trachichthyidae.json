@@ -743,7 +743,8 @@
           "uuid": "41246f3b-5883-5be-a7c-9caaa7afc7db1e",
           "authorship": "Su, Lin & Ho, 2022",
           "sourceIds": {
-            "checklistbank": "1020412"
+            "checklistbank": "1020412",
+            "checklistbank-2008": "1020412"
           },
           "description": "Hoplostethus roseus is a trachichthyidae species found in its native region."
         },
@@ -1013,7 +1014,8 @@
             "col": [
               "D57SN"
             ],
-            "checklistbank": "txn:435581"
+            "checklistbank": "txn:435581",
+            "gbif-backbone": "11204651"
           },
           "authorityIds": "col:D57SN",
           "description": "Optivus moko is a trachichthyidae species found in its native region."
@@ -1929,7 +1931,8 @@
           "lineage": "Trachichthyidarum",
           "authorship": "Nolf and Dockery 1990",
           "sourceIds": {
-            "checklistbank": "txn:310833"
+            "checklistbank": "txn:310833",
+            "gbif-backbone": "8647660"
           },
           "children": [],
           "uuid": "09fc6ab2-5f42-5ee-803-55e878781689c8",
@@ -1953,7 +1956,8 @@
           "lineage": "Notoberyx",
           "authorship": "Schwarzhans et al. 2017",
           "sourceIds": {
-            "checklistbank": "txn:357901"
+            "checklistbank": "txn:357901",
+            "gbif-backbone": "8744024"
           },
           "children": [],
           "uuid": "292b7ee0-62c5-558-9d0-99347644bf1a55",
@@ -2034,13 +2038,101 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trachichthyidae"
+    },
+    {
+      "id": "GENUS_LEIOGASTER",
+      "name": "Leiogaster",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEIOGASTER_ATLANTICUS_ROULE_1916",
+          "name": "Leiogaster atlanticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leiogaster",
+          "authorship": "Roule, 1916",
+          "sourceIds": {
+            "checklistbank-2008": "965988"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trachichthyidae"
+    },
+    {
+      "id": "GENUS_PEPEMKAY",
+      "name": "Pepemkay",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PEPEMKAY_MAYA_ALVARADO_ORTEGA_THAN_MARCHESE_2013",
+          "name": "Pepemkay maya",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pepemkay",
+          "authorship": "Alvarado-Ortega & Than-Marchese, 2013",
+          "sourceIds": {
+            "gbif-backbone": "8719217"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trachichthyidae"
+    },
+    {
+      "id": "GENUS_APOGONIDARUM",
+      "name": "Apogonidarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_APOGONIDARUM_LACINATUS_KOKEN_1885",
+          "name": "Apogonidarum lacinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Apogonidarum",
+          "authorship": "(Koken, 1885)",
+          "sourceIds": {
+            "gbif-backbone": "9545183"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trachichthyidae"
+    },
+    {
+      "id": "GENUS_OTOLITHUS",
+      "name": "Otolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOLITHUS_LAWLEYI_KOKEN_1891",
+          "name": "Otolithus lawleyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otolithus",
+          "authorship": "(Koken, 1891)",
+          "sourceIds": {
+            "gbif-backbone": "9342094"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trachichthyidae"
     }
   ],
-  "speciesCount": 95,
+  "speciesCount": 99,
   "appSlug": "trachichthyidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 19,
+  "genusCount": 23,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2048,6 +2140,7 @@
       "orderKey": 499,
       "familyKey": 2972
     },
-    "checklistbank": "Trachichthyidae"
+    "checklistbank": "Trachichthyidae",
+    "wikispecies": "Trachichthyidae"
   }
 }

@@ -109,7 +109,8 @@
           "uuid": "022e0342-7b87-567-893-8d1be7974641c4",
           "authorship": "Adnet 2006",
           "sourceIds": {
-            "checklistbank": "txn:431384"
+            "checklistbank": "txn:431384",
+            "gbif-backbone": "11188553"
           },
           "description": "Deania angoumeensis is a centrophoridae species found in its native region."
         },
@@ -797,6 +798,32 @@
           "lineage": "Centrophorus",
           "authorship": "(Lowe, 1839)",
           "children": []
+        },
+        {
+          "id": "SP_CENTROPHORUS_SQUALOIDEUS_ENGELHARDT_1913",
+          "name": "Centrophorus squaloideus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Centrophorus",
+          "authorship": "Engelhardt, 1913",
+          "sourceIds": {
+            "gbif-backbone": "8916365"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CENTROPHORUS_BALTICUS_DALINKEVI_IUS_1935",
+          "name": "Centrophorus balticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Centrophorus",
+          "authorship": "(Dalinkevičius, 1935)",
+          "sourceIds": {
+            "gbif-backbone": "9367233"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1318,13 +1345,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "centrophoridae"
+    },
+    {
+      "id": "GENUS_SPINAX",
+      "name": "Spinax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPINAX_PRIMAEVUS_PICTET_1850",
+          "name": "Spinax primaevus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spinax",
+          "authorship": "(Pictet, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "9283835"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "centrophoridae"
     }
   ],
-  "speciesCount": 69,
+  "speciesCount": 72,
   "appSlug": "centrophoridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Elasmobranchii",
-  "genusCount": 16,
+  "genusCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1333,6 +1382,7 @@
       "orderKey": 883,
       "familyKey": 2188
     },
-    "checklistbank": "Centrophoridae"
+    "checklistbank": "Centrophoridae",
+    "wikispecies": "Centrophoridae"
   }
 }

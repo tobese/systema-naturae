@@ -48,7 +48,8 @@
             "itis": [
               "180684"
             ],
-            "checklistbank": "ott226178"
+            "checklistbank": "ott226178",
+            "wikispecies": "Trichechus_manatus"
           },
           "authorityIds": "col:58863,itis:180684",
           "commonName": "American Manatee",
@@ -73,7 +74,8 @@
             ],
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:255026"
-            ]
+            ],
+            "wikispecies": "Trichechus_inunguis"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:255026,col:58862,itis:180686",
           "commonName": "Amazon Manatee",
@@ -88,7 +90,50 @@
           "children": [],
           "lineage": "Trichechus",
           "uuid": "23e63091-11ef-591-9a5-616ac8bac68a71",
-          "description": "Trichechus pygmaeus is a trichechidae species found in its native region."
+          "description": "Trichechus pygmaeus is a trichechidae species found in its native region.",
+          "authorship": "Van Roosmalen & Van der Vlist, 2015",
+          "sourceIds": {
+            "gbif-backbone": "9163627"
+          }
+        },
+        {
+          "id": "SP_TRICHECHUS_SPEC_LINN_US_1758",
+          "name": "Trichechus spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichechus",
+          "authorship": "Linnæus, 1758",
+          "sourceIds": {
+            "gbif-backbone": "9718502"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRICHECHUS_INUNGUUS_LINNAEUS_1758",
+          "name": "Trichechus inunguus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichechus",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "gbif-backbone": "11463365"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TRICHECHUS_HESPERAMAZONICUS_PERINI_NASCIMENTO_COZZUOL_2020",
+          "name": "Trichechus hesperamazonicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trichechus",
+          "authorship": "Perini, Nascimento & Cozzuol, 2020",
+          "sourceIds": {
+            "gbif-backbone": "11193306"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -113,7 +158,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1458197"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1458197"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1458197",
+            "gbif-backbone": "4968902"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458197",
           "description": "Ribodon limbatus is a trichechidae species found in its native region."
@@ -141,7 +187,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1458194"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1458194"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1458194",
+            "gbif-backbone": "4968908"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1458194",
           "description": "Potamosiren magdalenensis is a trichechidae species found in its native region."
@@ -270,7 +317,8 @@
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:255026",
             "wikispecies": "Trichechus_inunguis"
           },
-          "uuid": "1b1a75e1-40d4-4aaa-8100-3f6e98686fd6"
+          "uuid": "1b1a75e1-40d4-4aaa-8100-3f6e98686fd6",
+          "children": []
         },
         {
           "id": "SP_TRICHECHUS_SENEGALENSIS",
@@ -282,18 +330,41 @@
           "sourceIds": {
             "wikispecies": "Trichechus_senegalensis"
           },
-          "uuid": "f57d02b5-769f-4f24-8b81-ef3c446aa089"
+          "uuid": "f57d02b5-769f-4f24-8b81-ef3c446aa089",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trichechidae"
+    },
+    {
+      "id": "GENUS_MANATUS",
+      "name": "Manatus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MANATUS_INUNGUIS_PELZELN_1883",
+          "name": "Manatus inunguis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Manatus",
+          "authorship": "Pelzeln, 1883",
+          "sourceIds": {
+            "gbif-backbone": "12210088"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trichechidae"
     }
   ],
-  "speciesCount": 13,
+  "speciesCount": 17,
   "appSlug": "trichechidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -302,6 +373,7 @@
       "orderKey": 802,
       "familyKey": 9463
     },
-    "checklistbank": "Trichechidae"
+    "checklistbank": "Trichechidae",
+    "wikispecies": "Trichechidae"
   }
 }

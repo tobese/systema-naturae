@@ -40,12 +40,14 @@
           "sourcedFrom": "gbif",
           "lineage": "Galeopterus",
           "sourceIds": {
-            "checklistbank": "ott3607464"
+            "checklistbank": "ott3607464",
+            "gbif-backbone": "4266848"
           },
           "children": [],
           "uuid": "047a0bdb-8853-556-8d9-a7f152f51aabbd",
           "commonName": "Sunda Flying Lemur",
-          "description": "Galeopterus variegates (Sunda Flying Lemur) is a cynocephalidae species found in its native region."
+          "description": "Galeopterus variegates (Sunda Flying Lemur) is a cynocephalidae species found in its native region.",
+          "authorship": "Audebert, 1799"
         },
         {
           "id": "SP_GALEOPTERUS_PENINSULAE",
@@ -139,18 +141,57 @@
           "children": [],
           "lineage": "Dermotherium",
           "uuid": "7f265579-8e6e-5af-9ac-60b9dd0da9ae5e",
-          "description": "Dermotherium major is a cynocephalidae species found in its native region."
+          "description": "Dermotherium major is a cynocephalidae species found in its native region.",
+          "authorship": "Ducrocq et al., 1992",
+          "sourceIds": {
+            "gbif-backbone": "8445259"
+          }
+        },
+        {
+          "id": "SP_DERMOTHERIUM_CHIMAERA_MARIVAUX_ET_AL_2006",
+          "name": "Dermotherium chimaera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dermotherium",
+          "authorship": "Marivaux et al., 2006",
+          "sourceIds": {
+            "gbif-backbone": "8648708"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Cynocephalidae"
+    },
+    {
+      "id": "GENUS_GALEOPITHECUS",
+      "name": "Galeopithecus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GALEOPITHECUS_PHILIPPENSIS_WATERHOUSE_1838",
+          "name": "Galeopithecus philippensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galeopithecus",
+          "authorship": "Waterhouse, 1838",
+          "sourceIds": {
+            "gbif-backbone": "8537244"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cynocephalidae"
     }
   ],
-  "speciesCount": 7,
+  "speciesCount": 9,
   "appSlug": "cynocephalidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -159,6 +200,7 @@
       "orderKey": 737,
       "familyKey": 9370
     },
-    "checklistbank": "Cynocephalidae"
+    "checklistbank": "Cynocephalidae",
+    "wikispecies": "Cynocephalidae"
   }
 }

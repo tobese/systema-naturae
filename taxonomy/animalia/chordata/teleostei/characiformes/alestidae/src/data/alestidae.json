@@ -755,12 +755,14 @@
           "sourcedFrom": "itis",
           "lineage": "Brycinus",
           "sourceIds": {
-            "checklistbank": "206485"
+            "checklistbank": "206485",
+            "gbif-backbone": "2356362"
           },
           "children": [],
           "uuid": "bc370b9e-1268-565-af2-ab3e9c093c6685",
           "commonName": "long-finned characin",
-          "description": "Brycinus longipinnis (long-finned characin) is a alestidae species found in its native region."
+          "description": "Brycinus longipinnis (long-finned characin) is a alestidae species found in its native region.",
+          "authorship": "(Günther, 1864)"
         },
         {
           "id": "SP_BRYCINUS_FWAENSIS_G_RY_1995",
@@ -1361,6 +1363,18 @@
           "sourcedFrom": "worms",
           "lineage": "Micralestes",
           "authorship": "Daget, 1965",
+          "children": []
+        },
+        {
+          "id": "SP_MICRALESTES_TANGENSIS",
+          "name": "Micralestes tangensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Micralestes",
+          "sourceIds": {
+            "gbif-backbone": "12221949"
+          },
           "children": []
         }
       ],
@@ -2416,6 +2430,18 @@
           "authorship": "(Herre, 1936)",
           "uuid": "64be9188-5c55-5c5-b9c-38178459d273c0",
           "description": "Rhabdalestes barnardi is a alestidae species found in its native region."
+        },
+        {
+          "id": "SP_RHABDALESTES_AERATUS",
+          "name": "Rhabdalestes aeratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Rhabdalestes",
+          "sourceIds": {
+            "gbif-backbone": "8297643"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3144,6 +3170,19 @@
           "uuid": "bef81a77-38c3-552-a81-76db1d64c8fe72",
           "authorityIds": "col:6V6MY,gbif:217769326,gbif:2356192,itis:641542",
           "description": "Petersius conserialis is a alestidae species found in its native region."
+        },
+        {
+          "id": "SP_PETERSIUS_BAHRSARAE_FOWLER_1949",
+          "name": "Petersius bahrsarae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Petersius",
+          "authorship": "Fowler, 1949",
+          "sourceIds": {
+            "gbif-backbone": "8996813"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3680,13 +3719,34 @@
       ],
       "sourcedFrom": "worms",
       "lineage": "Alestidae"
+    },
+    {
+      "id": "GENUS_ALESTOBRYCON",
+      "name": "Alestobrycon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALESTOBRYCON_TAENIURUS",
+          "name": "Alestobrycon taeniurus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alestobrycon",
+          "sourceIds": {
+            "gbif-backbone": "12217063"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alestidae"
     }
   ],
-  "speciesCount": 171,
+  "speciesCount": 175,
   "appSlug": "alestidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 23,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3694,6 +3754,7 @@
       "orderKey": 537,
       "familyKey": 7199
     },
-    "checklistbank": "Alestidae"
+    "checklistbank": "Alestidae",
+    "wikispecies": "Alestidae"
   }
 }

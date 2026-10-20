@@ -620,6 +620,32 @@
           "authorityIds": "col:6C2PT",
           "description": "Culeolus murrayi is a pyuridae species found in its native region.",
           "speciesList": []
+        },
+        {
+          "id": "SP_CULEOLUS_WYVILLETHOMASI_HERDMAN_1881",
+          "name": "Culeolus wyvillethomasi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Culeolus",
+          "authorship": "Herdman, 1881",
+          "sourceIds": {
+            "gbif-backbone": "9138584"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CULEOLUS_WILLEMOESI_HERDMAN_1886",
+          "name": "Culeolus willemoesi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Culeolus",
+          "authorship": "Herdman, 1886",
+          "sourceIds": {
+            "gbif-backbone": "10420230"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1489,12 +1515,14 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Microcosmus",
           "sourceIds": {
-            "checklistbank": "800238"
+            "checklistbank": "800238",
+            "gbif-backbone": "5723354"
           },
           "children": [],
           "uuid": "5dda3bf7-b118-5c3-b09-bb6382da4a623b",
           "description": "Microcosmus multitentaculatus is a pyuridae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorship": "Tokioka, 1953"
         },
         {
           "id": "SP_MICROCOSMUS_SP",
@@ -1569,6 +1597,19 @@
           "authorship": "Monniot C., Monniot F., Griffiths & Schleyer, 2001",
           "children": [],
           "speciesList": []
+        },
+        {
+          "id": "SP_MICROCOSMUS_ARMATUS_SANAMYAN_SANAMYAN_MOROZOV_2021",
+          "name": "Microcosmus armatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microcosmus",
+          "authorship": "Sanamyan, Sanamyan & Morozov, 2021",
+          "sourceIds": {
+            "gbif-backbone": "12225220"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1711,7 +1752,8 @@
               "8N92H"
             ],
             "checklistbank": "655317",
-            "wikispecies": "Herdmania_columna"
+            "wikispecies": "Herdmania_columna",
+            "checklistbank-2008": "655317"
           },
           "authorityIds": "col:8N92H",
           "description": "Herdmania columna is a pyuridae species found in its native region.",
@@ -3030,7 +3072,8 @@
             "col": [
               "6LTWL"
             ],
-            "checklistbank": "993381"
+            "checklistbank": "993381",
+            "checklistbank-2008": "993381"
           },
           "authorityIds": "col:6LTWL",
           "description": "Heterostigma reptans is a pyuridae species found in its native region.",
@@ -4932,9 +4975,11 @@
           "lineage": "Boltenia",
           "sourceIds": {
             "checklistbank": "Boltenia_yossiloya",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:468218"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:468218",
+            "gbif-backbone": "6486723"
           },
-          "children": []
+          "children": [],
+          "authorship": "Shenkar & Lambert, 2010"
         },
         {
           "id": "SP_BOLTENIA_HIRTA_MONNIOT_C_MONNIOT_F_1977",
@@ -4947,7 +4992,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173823"
           },
-          "uuid": "a7576cfd-1706-4538-bb88-6305691854a5"
+          "uuid": "a7576cfd-1706-4538-bb88-6305691854a5",
+          "children": []
         },
         {
           "id": "SP_BOLTENIA_AFRICANA_MILLAR_1962",
@@ -4960,7 +5006,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:215984"
           },
-          "uuid": "da805ef4-276c-4779-85a9-ed49271edbbf"
+          "uuid": "da805ef4-276c-4779-85a9-ed49271edbbf",
+          "children": []
         },
         {
           "id": "SP_BOLTENIA_POLYPLACODERMA_LAMBERT_1993",
@@ -4973,7 +5020,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:250071"
           },
-          "uuid": "f75125b3-6d5e-4798-b71e-a9b2c53eba6c"
+          "uuid": "f75125b3-6d5e-4798-b71e-a9b2c53eba6c",
+          "children": []
         },
         {
           "id": "SP_BOLTENIA_TRANSVERSARIA_SLUITER_1904",
@@ -4986,7 +5034,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:250072"
           },
-          "uuid": "6457f0e9-288f-4ac1-a7fa-b643cf3b443e"
+          "uuid": "6457f0e9-288f-4ac1-a7fa-b643cf3b443e",
+          "children": []
         },
         {
           "id": "SP_BOLTENIA_VILLOSA_STIMPSON_1864",
@@ -4999,7 +5048,177 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:250073"
           },
-          "uuid": "0ccca972-1a53-4187-9350-4096fea188ee"
+          "uuid": "0ccca972-1a53-4187-9350-4096fea188ee",
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_BERINGI_DALL_1872",
+          "name": "Boltenia beringi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Dall, 1872",
+          "sourceIds": {
+            "checklistbank-2008": "552454"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_BERINGIA_DALL_1872",
+          "name": "Boltenia beringia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Dall, 1872",
+          "sourceIds": {
+            "checklistbank-2008": "552455"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_BOLTENI_LINNAEUS_1771",
+          "name": "Boltenia bolteni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "(Linnaeus, 1771)",
+          "sourceIds": {
+            "checklistbank-2008": "552456"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_BURKHARDTI_BINNEY_1870",
+          "name": "Boltenia burkhardti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Binney, 1870",
+          "sourceIds": {
+            "checklistbank-2008": "552457"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_CILIATA_MOELLER_1842",
+          "name": "Boltenia ciliata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Moeller, 1842",
+          "sourceIds": {
+            "checklistbank-2008": "552458"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_CLAVATA_MUELLER_1776",
+          "name": "Boltenia clavata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Mueller, 1776",
+          "sourceIds": {
+            "checklistbank-2008": "552459"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_ELEGANS_HERDMAN_1881",
+          "name": "Boltenia elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Herdman, 1881",
+          "sourceIds": {
+            "checklistbank-2008": "552460"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_FUSIFORMIS_SAVIGNY_1816",
+          "name": "Boltenia fusiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Savigny, 1816",
+          "sourceIds": {
+            "checklistbank-2008": "552461"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_MICROCOSMUS_AGASSIZ_1850",
+          "name": "Boltenia microcosmus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Agassiz, 1850",
+          "sourceIds": {
+            "checklistbank-2008": "552463"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_OVIFORMIS_LINNAEUS_1767",
+          "name": "Boltenia oviformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "(Linnaeus, 1767)",
+          "sourceIds": {
+            "checklistbank-2008": "552464"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_RENIFORMIS_MACLEAY_1825",
+          "name": "Boltenia reniformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "MacLeay, 1825",
+          "sourceIds": {
+            "checklistbank-2008": "552466"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_RUBRA_STIMPSON_1852",
+          "name": "Boltenia rubra",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Stimpson, 1852",
+          "sourceIds": {
+            "checklistbank-2008": "552467"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BOLTENIA_THOMPSONI_HARTMEYER_1903",
+          "name": "Boltenia thompsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Boltenia",
+          "authorship": "Hartmeyer, 1903",
+          "sourceIds": {
+            "checklistbank-2008": "552468"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -5084,9 +5303,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_praeputialis",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251292"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251292",
+            "gbif-backbone": "2331841"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Heller, 1878)"
         },
         {
           "id": "SP_PYURA_SPINIFERA",
@@ -5097,9 +5318,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_spinifera",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251300"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251300",
+            "gbif-backbone": "2331793"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Quoy & Gaimard, 1834)"
         },
         {
           "id": "SP_PYURA_BETA",
@@ -5110,9 +5333,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_beta",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1326008"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1326008",
+            "gbif-backbone": "10420603"
           },
-          "children": []
+          "children": [],
+          "authorship": "Skinner, Rocha & Counts, 2019"
         },
         {
           "id": "SP_PYURA_CARMANAE",
@@ -5123,9 +5348,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_carmanae",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755029"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755029",
+            "gbif-backbone": "10122969"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rocha & Counts, 2019"
         },
         {
           "id": "SP_PYURA_IMESA",
@@ -5136,9 +5363,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_imesa",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755030"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755030",
+            "gbif-backbone": "10560880"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rocha & Counts, 2019"
         },
         {
           "id": "SP_PYURA_LONGISPINA",
@@ -5149,9 +5378,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_longispina",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755031"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755031",
+            "gbif-backbone": "9921210"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rocha & Counts, 2019"
         },
         {
           "id": "SP_PYURA_LOPEZLEGENTILAE",
@@ -5162,9 +5393,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_lopezlegentilae",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755032"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1755032",
+            "gbif-backbone": "10164759"
           },
-          "children": []
+          "children": [],
+          "authorship": "Rocha & Counts, 2019"
         },
         {
           "id": "SP_PYURA_OCELLATA",
@@ -5175,9 +5408,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_ocellata",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:879814"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:879814",
+            "checklistbank-2008": "823039",
+            "gbif-backbone": "8765167"
           },
-          "children": []
+          "children": [],
+          "authorship": "F. Monniot, 2016"
         },
         {
           "id": "SP_PYURA_ABRADATA",
@@ -5188,9 +5424,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_abradata",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251247"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251247",
+            "gbif-backbone": "2331824"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_CONFRAGOSA",
@@ -5201,9 +5439,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_confragosa",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251258"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251258",
+            "checklistbank-2008": "652639",
+            "gbif-backbone": "2331834"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_CRASSACAPITATA",
@@ -5214,9 +5455,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_crassacapitata",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251259"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251259",
+            "gbif-backbone": "2331808"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_ISOBELLA",
@@ -5227,9 +5470,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_isobella",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251273"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251273",
+            "gbif-backbone": "2331835"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_NAVICULA",
@@ -5240,9 +5485,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_navicula",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251285"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251285",
+            "gbif-backbone": "2331819"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_VIARECTA",
@@ -5253,9 +5500,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_viarecta",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251313"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251313",
+            "checklistbank-2008": "652642",
+            "gbif-backbone": "2331833"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_TASMANENSIS",
@@ -5266,9 +5516,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_tasmanensis",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251307"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251307",
+            "gbif-backbone": "2331842"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_SCORTEA",
@@ -5279,9 +5531,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_scortea",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251298"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251298",
+            "checklistbank-2008": "652640",
+            "gbif-backbone": "2331832"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1985"
         },
         {
           "id": "SP_PYURA_RAPAFORMIS",
@@ -5292,9 +5547,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_rapaformis",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251295"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251295",
+            "gbif-backbone": "2331803"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1990"
         },
         {
           "id": "SP_PYURA_TUNICA",
@@ -5305,9 +5562,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_tunica",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173796"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173796",
+            "gbif-backbone": "2331804"
           },
-          "children": []
+          "children": [],
+          "authorship": "Kott, 1969"
         },
         {
           "id": "SP_PYURA_LITTORALIS",
@@ -5318,9 +5577,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_littoralis",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251278"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251278",
+            "gbif-backbone": "2331840"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Kott, 1956)"
         },
         {
           "id": "SP_PYURA_LUTEA",
@@ -5331,9 +5592,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_lutea",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251279"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251279",
+            "gbif-backbone": "4354476"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1900)"
         },
         {
           "id": "SP_PYURA_TRITA",
@@ -5357,9 +5620,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_subuculata",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251305"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251305",
+            "gbif-backbone": "2331855"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1900)"
         },
         {
           "id": "SP_PYURA_BREVIRAMOSA",
@@ -5370,9 +5635,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_breviramosa",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:266159"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:266159",
+            "gbif-backbone": "2331805"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1904)"
         },
         {
           "id": "SP_PYURA_TURQUETI",
@@ -5383,9 +5650,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_turqueti",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:253759"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:253759",
+            "gbif-backbone": "2331788"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1905)"
         },
         {
           "id": "SP_PYURA_POLYCARPA",
@@ -5396,9 +5665,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_polycarpa",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251655"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251655",
+            "gbif-backbone": "2331854"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1904)"
         },
         {
           "id": "SP_PYURA_PULLA",
@@ -5409,9 +5680,11 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_pulla",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251294"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251294",
+            "gbif-backbone": "4354454"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1900)"
         },
         {
           "id": "SP_PYURA_SETOSA",
@@ -5422,9 +5695,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_setosa",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173779"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173779",
+            "checklistbank-2008": "812284",
+            "gbif-backbone": "2331806"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1905)"
         },
         {
           "id": "SP_PYURA_TORPIDA",
@@ -5435,9 +5711,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_torpida",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251308"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251308",
+            "checklistbank-2008": "528438",
+            "gbif-backbone": "4354437"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1898)"
         },
         {
           "id": "SP_PYURA_DISCREPANS",
@@ -5448,9 +5727,12 @@
           "lineage": "Pyura",
           "sourceIds": {
             "checklistbank": "Pyura_discrepans",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251261"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251261",
+            "checklistbank-2008": "528435",
+            "gbif-backbone": "4354390"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Sluiter, 1898)"
         },
         {
           "id": "SP_PYURA_BOUVETENSIS_MICHAELSEN_1904",
@@ -5463,7 +5745,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173771"
           },
-          "uuid": "0dcc1920-3740-4e19-a7d9-eebd5178201f"
+          "uuid": "0dcc1920-3740-4e19-a7d9-eebd5178201f",
+          "children": []
         },
         {
           "id": "SP_PYURA_DISCOVERYI_HERDMAN_1910",
@@ -5476,7 +5759,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173774"
           },
-          "uuid": "c1b5e34e-8fea-4697-ae98-5274ce3c825e"
+          "uuid": "c1b5e34e-8fea-4697-ae98-5274ce3c825e",
+          "children": []
         },
         {
           "id": "SP_PYURA_MULTIRUGA_MONNIOT_C_MONNIOT_F_1982",
@@ -5489,7 +5773,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173776"
           },
-          "uuid": "c27f62d1-dc71-47fc-ab16-d2a7185ad531"
+          "uuid": "c27f62d1-dc71-47fc-ab16-d2a7185ad531",
+          "children": []
         },
         {
           "id": "SP_PYURA_SQUAMATA_HARTMEYER_1911",
@@ -5502,7 +5787,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173785"
           },
-          "uuid": "dc0845a8-77e8-42ab-a59d-458438edd96c"
+          "uuid": "dc0845a8-77e8-42ab-a59d-458438edd96c",
+          "children": []
         },
         {
           "id": "SP_PYURA_GEORGIANA_MICHAELSEN_1898",
@@ -5515,7 +5801,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173788"
           },
-          "uuid": "93deb2eb-6856-4329-b004-0ff994c274cd"
+          "uuid": "93deb2eb-6856-4329-b004-0ff994c274cd",
+          "children": []
         },
         {
           "id": "SP_PYURA_OBESA_HARTMEYER_1919",
@@ -5528,7 +5815,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:173793"
           },
-          "uuid": "33ca310e-9131-4528-9035-71bac97b1b66"
+          "uuid": "33ca310e-9131-4528-9035-71bac97b1b66",
+          "children": []
         },
         {
           "id": "SP_PYURA_CAPENSIS_HARTMEYER_1911",
@@ -5541,7 +5829,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:215924"
           },
-          "uuid": "7d8683f2-8ded-469a-a531-b42a0af52f72"
+          "uuid": "7d8683f2-8ded-469a-a531-b42a0af52f72",
+          "children": []
         },
         {
           "id": "SP_PYURA_SANSIBARICA_MICHAELSEN_1908",
@@ -5554,7 +5843,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:215926"
           },
-          "uuid": "1bf7021a-bc80-496d-b0a2-6915c406710e"
+          "uuid": "1bf7021a-bc80-496d-b0a2-6915c406710e",
+          "children": []
         },
         {
           "id": "SP_PYURA_STOLONIFERA_HELLER_1878",
@@ -5567,7 +5857,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:215927"
           },
-          "uuid": "c8ec93e9-2b5b-4e69-ab5d-0d7294e693c4"
+          "uuid": "c8ec93e9-2b5b-4e69-ab5d-0d7294e693c4",
+          "children": []
         },
         {
           "id": "SP_PYURA_AMBONENSIS_MILLAR_1975",
@@ -5580,7 +5871,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251248"
           },
-          "uuid": "2f3a0da4-3e55-4936-9191-853230b14944"
+          "uuid": "2f3a0da4-3e55-4936-9191-853230b14944",
+          "children": []
         },
         {
           "id": "SP_PYURA_ANTILLARUM_VAN_NAME_1921",
@@ -5593,7 +5885,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251249"
           },
-          "uuid": "b1bb6848-e0ab-4c9c-bad3-e247a637a8f3"
+          "uuid": "b1bb6848-e0ab-4c9c-bad3-e247a637a8f3",
+          "children": []
         },
         {
           "id": "SP_PYURA_AUSTRALIS_QUOY_GAIMARD_1834",
@@ -5606,7 +5899,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251250"
           },
-          "uuid": "2dd80ab6-ef4f-400f-bd4f-f9927a8d4a5a"
+          "uuid": "2dd80ab6-ef4f-400f-bd4f-f9927a8d4a5a",
+          "children": []
         },
         {
           "id": "SP_PYURA_BALIENSIS_MILLAR_1975",
@@ -5619,7 +5913,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251251"
           },
-          "uuid": "842402d8-ca5b-4ef8-8ae3-4aead0bb157c"
+          "uuid": "842402d8-ca5b-4ef8-8ae3-4aead0bb157c",
+          "children": []
         },
         {
           "id": "SP_PYURA_CADAMOSTOI_MONNIOT_C_1994",
@@ -5632,7 +5927,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251252"
           },
-          "uuid": "ef59d11d-00d7-430a-8e1d-2cec1c27d9af"
+          "uuid": "ef59d11d-00d7-430a-8e1d-2cec1c27d9af",
+          "children": []
         },
         {
           "id": "SP_PYURA_CAMRANICA_VORONTSOVA_COLE_1995",
@@ -5645,7 +5941,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251253"
           },
-          "uuid": "a64ba600-411b-48ac-8fa8-dca7682fde84"
+          "uuid": "a64ba600-411b-48ac-8fa8-dca7682fde84",
+          "children": []
         },
         {
           "id": "SP_PYURA_CANCELLATA_BREWIN_1946",
@@ -5658,7 +5955,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251254"
           },
-          "uuid": "439f66ef-651f-4941-92cf-4f5fd379bbdd"
+          "uuid": "439f66ef-651f-4941-92cf-4f5fd379bbdd",
+          "children": []
         },
         {
           "id": "SP_PYURA_CARNEA_BREWIN_1948",
@@ -5671,7 +5969,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251255"
           },
-          "uuid": "cd503af0-63f0-4fee-8ba8-56caff2eabb7"
+          "uuid": "cd503af0-63f0-4fee-8ba8-56caff2eabb7",
+          "children": []
         },
         {
           "id": "SP_PYURA_CHILENSIS_MOLINA_1782",
@@ -5684,7 +5983,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251256"
           },
-          "uuid": "12a419f5-aaeb-4b69-897b-82ac4cd430ac"
+          "uuid": "12a419f5-aaeb-4b69-897b-82ac4cd430ac",
+          "children": []
         },
         {
           "id": "SP_PYURA_CURVIGONA_TOKIOKA_1950",
@@ -5697,7 +5997,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251260"
           },
-          "uuid": "4404fac0-93ff-4736-8bb8-b8fd71758f97"
+          "uuid": "4404fac0-93ff-4736-8bb8-b8fd71758f97",
+          "children": []
         },
         {
           "id": "SP_PYURA_DUPLICATA_VAN_NAME_1918",
@@ -5710,7 +6011,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251262"
           },
-          "uuid": "49d9549d-dc76-43d6-96a4-25938f19ed95"
+          "uuid": "49d9549d-dc76-43d6-96a4-25938f19ed95",
+          "children": []
         },
         {
           "id": "SP_PYURA_ELONGATA_TOKIOKA_1952",
@@ -5723,7 +6025,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251263"
           },
-          "uuid": "65bb8dff-ab65-4ce4-b803-1edda288101d"
+          "uuid": "65bb8dff-ab65-4ce4-b803-1edda288101d",
+          "children": []
         },
         {
           "id": "SP_PYURA_FISSA_HERDMAN_1881",
@@ -5736,7 +6039,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251264"
           },
-          "uuid": "75b57e7f-839e-4896-8f46-31c42737f114"
+          "uuid": "75b57e7f-839e-4896-8f46-31c42737f114",
+          "children": []
         },
         {
           "id": "SP_PYURA_GIBBOSA_HELLER_1878",
@@ -5747,9 +6051,11 @@
           "lineage": "Pyura",
           "authorship": "(Heller, 1878)",
           "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251265"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251265",
+            "gbif-backbone": "11173379"
           },
-          "uuid": "c37794c6-2f1c-40c6-8819-c6d330d0b10f"
+          "uuid": "c37794c6-2f1c-40c6-8819-c6d330d0b10f",
+          "children": []
         },
         {
           "id": "SP_PYURA_HAUSTOR_STIMPSON_1864",
@@ -5762,7 +6068,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251266"
           },
-          "uuid": "d24c477a-ae14-4fae-9df3-faf6573ef55b"
+          "uuid": "d24c477a-ae14-4fae-9df3-faf6573ef55b",
+          "children": []
         },
         {
           "id": "SP_PYURA_HEBRIDENSIS_MONNIOT_F_MONNIOT_C_2003",
@@ -5775,7 +6082,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251267"
           },
-          "uuid": "f11d450e-9707-42af-8eec-6bb0bca09401"
+          "uuid": "f11d450e-9707-42af-8eec-6bb0bca09401",
+          "children": []
         },
         {
           "id": "SP_PYURA_HERDMANI_DRASCHE_1884",
@@ -5788,7 +6096,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251268"
           },
-          "uuid": "dda376b1-0aa8-4d18-9021-b2932c2b8876"
+          "uuid": "dda376b1-0aa8-4d18-9021-b2932c2b8876",
+          "children": []
         },
         {
           "id": "SP_PYURA_HONU_MONNIOT_C_MONNIOT_F_1987",
@@ -5799,9 +6108,11 @@
           "lineage": "Pyura",
           "authorship": "Monniot C. & Monniot F., 1987",
           "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251269"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251269",
+            "checklistbank-2008": "459207"
           },
-          "uuid": "c5e16ef4-2dbb-42d9-b939-e48cbb993818"
+          "uuid": "c5e16ef4-2dbb-42d9-b939-e48cbb993818",
+          "children": []
         },
         {
           "id": "SP_PYURA_HUPFERI_MICHAELSEN_1908",
@@ -5814,7 +6125,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251270"
           },
-          "uuid": "707ff3c3-661a-47ae-bb0b-15f7d5fdf642"
+          "uuid": "707ff3c3-661a-47ae-bb0b-15f7d5fdf642",
+          "children": []
         },
         {
           "id": "SP_PYURA_INOPINATA_MONNIOT_C_1978",
@@ -5827,7 +6139,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251271"
           },
-          "uuid": "495939ab-8180-4b1e-8990-3e03a34c4922"
+          "uuid": "495939ab-8180-4b1e-8990-3e03a34c4922",
+          "children": []
         },
         {
           "id": "SP_PYURA_IRREGULARIS_HERDMAN_1881",
@@ -5838,9 +6151,11 @@
           "lineage": "Pyura",
           "authorship": "(Herdman, 1881)",
           "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251272"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251272",
+            "checklistbank-2008": "990375"
           },
-          "uuid": "690ab4fb-4e4c-4e02-8b12-7250f91c3d81"
+          "uuid": "690ab4fb-4e4c-4e02-8b12-7250f91c3d81",
+          "children": []
         },
         {
           "id": "SP_PYURA_LANKA_HERDMAN_1906",
@@ -5853,7 +6168,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251274"
           },
-          "uuid": "65cf550a-d4af-4e94-ac75-2915ccfb90fa"
+          "uuid": "65cf550a-d4af-4e94-ac75-2915ccfb90fa",
+          "children": []
         },
         {
           "id": "SP_PYURA_LEGUMEN_LESSON_1830",
@@ -5866,7 +6182,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251275"
           },
-          "uuid": "71a0fe98-aca4-436e-96bf-5afa4c87394d"
+          "uuid": "71a0fe98-aca4-436e-96bf-5afa4c87394d",
+          "children": []
         },
         {
           "id": "SP_PYURA_LEPIDODERMA_TOKIOKA_1949",
@@ -5879,7 +6196,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251276"
           },
-          "uuid": "c42d3abd-2431-44e9-8019-d990944f8fcf"
+          "uuid": "c42d3abd-2431-44e9-8019-d990944f8fcf",
+          "children": []
         },
         {
           "id": "SP_PYURA_LIGNOSA_MICHAELSEN_1908",
@@ -5892,7 +6210,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251277"
           },
-          "uuid": "7d6590bf-13d3-479a-90a9-85541fa017b8"
+          "uuid": "7d6590bf-13d3-479a-90a9-85541fa017b8",
+          "children": []
         },
         {
           "id": "SP_PYURA_LYCOPERDON_MONNIOT_C_MONNIOT_F_1983",
@@ -5905,7 +6224,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251280"
           },
-          "uuid": "5cb9897b-b5ea-4479-ab2f-d22453fe5d99"
+          "uuid": "5cb9897b-b5ea-4479-ab2f-d22453fe5d99",
+          "children": []
         },
         {
           "id": "SP_PYURA_MIRABILIS_DRASCHE_1884",
@@ -5918,7 +6238,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251281"
           },
-          "uuid": "a63fbc4f-1270-4e66-8324-fffb748b4d5b"
+          "uuid": "a63fbc4f-1270-4e66-8324-fffb748b4d5b",
+          "children": []
         },
         {
           "id": "SP_PYURA_MOLGULOIDES_HERDMAN_1899",
@@ -5931,7 +6252,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251282"
           },
-          "uuid": "4043dce8-f140-488b-8d89-fed887b2325a"
+          "uuid": "4043dce8-f140-488b-8d89-fed887b2325a",
+          "children": []
         },
         {
           "id": "SP_PYURA_MUNITA_VAN_NAME_1902",
@@ -5944,7 +6266,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251284"
           },
-          "uuid": "a0a88683-7ca4-400c-836c-c8f0dab70740"
+          "uuid": "a0a88683-7ca4-400c-836c-c8f0dab70740",
+          "children": []
         },
         {
           "id": "SP_PYURA_OSTREOPHILA_HARTMEYER_MICHAELSEN_1928",
@@ -5957,7 +6280,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251286"
           },
-          "uuid": "e39c8da3-9dc8-4adb-a8c0-3867fd46b928"
+          "uuid": "e39c8da3-9dc8-4adb-a8c0-3867fd46b928",
+          "children": []
         },
         {
           "id": "SP_PYURA_PACHYDERMATINA_HERDMAN_1881",
@@ -5970,7 +6294,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251287"
           },
-          "uuid": "ea3366fb-1c26-4469-bdeb-148abca60564"
+          "uuid": "ea3366fb-1c26-4469-bdeb-148abca60564",
+          "children": []
         },
         {
           "id": "SP_PYURA_PAESSLERI_MICHAELSEN_1900",
@@ -5983,7 +6308,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251288"
           },
-          "uuid": "8ce6bd1f-8390-4796-9483-dc80ccb6dc7e"
+          "uuid": "8ce6bd1f-8390-4796-9483-dc80ccb6dc7e",
+          "children": []
         },
         {
           "id": "SP_PYURA_PANTEX_SAVIGNY_1816",
@@ -5996,7 +6322,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251289"
           },
-          "uuid": "58042048-1a85-41e3-9cc2-fb0c85ba0b5c"
+          "uuid": "58042048-1a85-41e3-9cc2-fb0c85ba0b5c",
+          "children": []
         },
         {
           "id": "SP_PYURA_PICTA_BREWIN_1950",
@@ -6009,7 +6336,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251290"
           },
-          "uuid": "969728a7-9f9b-4b18-b2ec-69d1bd50ac11"
+          "uuid": "969728a7-9f9b-4b18-b2ec-69d1bd50ac11",
+          "children": []
         },
         {
           "id": "SP_PYURA_PILOSA_MONNIOT_C_MONNIOT_F_1974",
@@ -6022,7 +6350,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251291"
           },
-          "uuid": "36dc81cf-5f4e-4f75-81ef-732f568b2da0"
+          "uuid": "36dc81cf-5f4e-4f75-81ef-732f568b2da0",
+          "children": []
         },
         {
           "id": "SP_PYURA_PRAIA_MONNIOT_C_MONNIOT_F_1967",
@@ -6035,7 +6364,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251293"
           },
-          "uuid": "f2475b02-c5c0-4a86-ad0a-309930aa53ba"
+          "uuid": "f2475b02-c5c0-4a86-ad0a-309930aa53ba",
+          "children": []
         },
         {
           "id": "SP_PYURA_RUGATA_BREWIN_1948",
@@ -6048,7 +6378,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251296"
           },
-          "uuid": "e91080c3-c416-4714-8e4e-6b3e7540e913"
+          "uuid": "e91080c3-c416-4714-8e4e-6b3e7540e913",
+          "children": []
         },
         {
           "id": "SP_PYURA_SACCIFORMIS_DRASCHE_1884",
@@ -6061,7 +6392,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251297"
           },
-          "uuid": "2bea553d-c5a0-43a6-9632-c614cad494a4"
+          "uuid": "2bea553d-c5a0-43a6-9632-c614cad494a4",
+          "children": []
         },
         {
           "id": "SP_PYURA_SHIINOI_TOKIOKA_1949",
@@ -6074,7 +6406,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251299"
           },
-          "uuid": "ba0a2dd0-48a9-48eb-88cb-9c14d288eace"
+          "uuid": "ba0a2dd0-48a9-48eb-88cb-9c14d288eace",
+          "children": []
         },
         {
           "id": "SP_PYURA_SPINOSA_QUOY_GAIMARD_1834",
@@ -6087,7 +6420,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251301"
           },
-          "uuid": "61bf0c77-e41d-4edf-bf4f-f5b09e362e35"
+          "uuid": "61bf0c77-e41d-4edf-bf4f-f5b09e362e35",
+          "children": []
         },
         {
           "id": "SP_PYURA_SPINOSISSIMA_MICHAELSEN_1922",
@@ -6100,7 +6434,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251302"
           },
-          "uuid": "fe9003f3-8ddd-4936-b674-b2734aed732f"
+          "uuid": "fe9003f3-8ddd-4936-b674-b2734aed732f",
+          "children": []
         },
         {
           "id": "SP_PYURA_STUBENRAUCHI_MICHAELSEN_1900",
@@ -6113,7 +6448,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251303"
           },
-          "uuid": "da1891ea-ad22-4509-ab75-672054ced457"
+          "uuid": "da1891ea-ad22-4509-ab75-672054ced457",
+          "children": []
         },
         {
           "id": "SP_PYURA_STYELIFORMIS_MONNIOT_F_MONNIOT_C_2001",
@@ -6126,7 +6462,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251304"
           },
-          "uuid": "e4bba701-8436-4bd8-abf8-55cb78b7e647"
+          "uuid": "e4bba701-8436-4bd8-abf8-55cb78b7e647",
+          "children": []
         },
         {
           "id": "SP_PYURA_SUTERI_MICHAELSEN_1908",
@@ -6139,7 +6476,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251306"
           },
-          "uuid": "61845f43-7a92-4970-8639-e64913f646f1"
+          "uuid": "61845f43-7a92-4970-8639-e64913f646f1",
+          "children": []
         },
         {
           "id": "SP_PYURA_TRIGAMICA_TOKIOKA_1953",
@@ -6152,7 +6490,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251309"
           },
-          "uuid": "4fc90db4-8247-4cba-a28f-8c7eac0b5a90"
+          "uuid": "4fc90db4-8247-4cba-a28f-8c7eac0b5a90",
+          "children": []
         },
         {
           "id": "SP_PYURA_UATIO_MONNIOT_C_1991",
@@ -6165,7 +6504,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251311"
           },
-          "uuid": "03249e5b-4a85-406a-a628-a6837c588a4e"
+          "uuid": "03249e5b-4a85-406a-a628-a6837c588a4e",
+          "children": []
         },
         {
           "id": "SP_PYURA_VANNAMEI_MONNIOT_C_1994",
@@ -6176,9 +6516,11 @@
           "lineage": "Pyura",
           "authorship": "Monniot C., 1994",
           "sourceIds": {
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251312"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251312",
+            "checklistbank-2008": "528464"
           },
-          "uuid": "d85d5429-b366-4885-800c-f77bfbd8a0a0"
+          "uuid": "d85d5429-b366-4885-800c-f77bfbd8a0a0",
+          "children": []
         },
         {
           "id": "SP_PYURA_VITTATA_STIMPSON_1852",
@@ -6191,7 +6533,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251314"
           },
-          "uuid": "0785ddcd-2e39-48a3-a23c-7dff52723b81"
+          "uuid": "0785ddcd-2e39-48a3-a23c-7dff52723b81",
+          "children": []
         },
         {
           "id": "SP_PYURA_COMMA_HARTMEYER_1906",
@@ -6204,7 +6547,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251723"
           },
-          "uuid": "b9e28f3f-aa53-4ef8-9ded-ef485c0a882e"
+          "uuid": "b9e28f3f-aa53-4ef8-9ded-ef485c0a882e",
+          "children": []
         },
         {
           "id": "SP_PYURA_ARENOSA_HERDMAN_1881",
@@ -6217,7 +6561,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251733"
           },
-          "uuid": "9d0329bb-46d8-4e51-8acf-189dcff96b53"
+          "uuid": "9d0329bb-46d8-4e51-8acf-189dcff96b53",
+          "children": []
         },
         {
           "id": "SP_PYURA_MARISCATA_RODRIGUES_1966",
@@ -6230,7 +6575,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:251735"
           },
-          "uuid": "6b2da529-4506-4501-a807-044b6f07353f"
+          "uuid": "6b2da529-4506-4501-a807-044b6f07353f",
+          "children": []
         },
         {
           "id": "SP_PYURA_BRADLEYI_VAN_NAME_1931",
@@ -6243,7 +6589,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:253723"
           },
-          "uuid": "ea6fc5d8-9f74-4255-9919-0003b4a23e28"
+          "uuid": "ea6fc5d8-9f74-4255-9919-0003b4a23e28",
+          "children": []
         },
         {
           "id": "SP_PYURA_ROBUSTA_HARTMEYER_1922",
@@ -6256,7 +6603,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:253752"
           },
-          "uuid": "7ded77c0-39db-4baa-9b7a-8ba96102d5bc"
+          "uuid": "7ded77c0-39db-4baa-9b7a-8ba96102d5bc",
+          "children": []
         },
         {
           "id": "SP_PYURA_ARIPUENSIS_HERDMAN_1906",
@@ -6269,7 +6617,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:266157"
           },
-          "uuid": "d6cfcf2b-d183-4e14-be0b-c76ce08cbff7"
+          "uuid": "d6cfcf2b-d183-4e14-be0b-c76ce08cbff7",
+          "children": []
         },
         {
           "id": "SP_PYURA_MOZAMBICA_MONNIOT_C_2002",
@@ -6282,7 +6631,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:266161"
           },
-          "uuid": "11537223-3cd0-4aa2-bd36-868275deecd4"
+          "uuid": "11537223-3cd0-4aa2-bd36-868275deecd4",
+          "children": []
         },
         {
           "id": "SP_PYURA_CRINITA_MICHAELSEN_1922",
@@ -6295,7 +6645,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:414520"
           },
-          "uuid": "0cbbff61-e40d-4a41-bb63-2b34269d7b40"
+          "uuid": "0cbbff61-e40d-4a41-bb63-2b34269d7b40",
+          "children": []
         },
         {
           "id": "SP_PYURA_ERYTHROSTOMA_QUOY_GAIMARD_1834",
@@ -6308,7 +6659,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:414521"
           },
-          "uuid": "efd02e5f-bdee-4450-bf6d-357f3f2acaf7"
+          "uuid": "efd02e5f-bdee-4450-bf6d-357f3f2acaf7",
+          "children": []
         },
         {
           "id": "SP_PYURA_DALBYI_RIUS_TESKE_2011",
@@ -6321,7 +6673,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:564381"
           },
-          "uuid": "02a2fe6e-2034-4268-9785-a425d6e5a76a"
+          "uuid": "02a2fe6e-2034-4268-9785-a425d6e5a76a",
+          "children": []
         },
         {
           "id": "SP_PYURA_MILLARI_RODRIGUES_1966",
@@ -6334,7 +6687,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:573359"
           },
-          "uuid": "abbe3e3b-eb89-4fb8-9fc9-80eb82064036"
+          "uuid": "abbe3e3b-eb89-4fb8-9fc9-80eb82064036",
+          "children": []
         },
         {
           "id": "SP_PYURA_DOPPELGANGERA_RIUS_TESKE_2013",
@@ -6347,14 +6701,327 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:734059"
           },
-          "uuid": "62a31058-eaab-4270-a86d-e6492b9d4ed1"
+          "uuid": "62a31058-eaab-4270-a86d-e6492b9d4ed1",
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_SAVIGNYI_PHILIPPI_1843",
+          "name": "Pyura savignyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Philippi, 1843)",
+          "sourceIds": {
+            "checklistbank-2008": "6926"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_MOMUS_SAVIGNY_1816",
+          "name": "Pyura momus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Savigny, 1816)",
+          "sourceIds": {
+            "checklistbank-2008": "459208"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_TONGAEA_MONNIOT_MONNIOT_1976",
+          "name": "Pyura tongaea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Monniot & Monniot, 1976",
+          "sourceIds": {
+            "checklistbank-2008": "549361"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_ALBANYENSIS_MICHAELSEN_1927",
+          "name": "Pyura albanyensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Michaelsen, 1927",
+          "sourceIds": {
+            "checklistbank-2008": "554509"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_ASPERA_TOKIOKA_1949",
+          "name": "Pyura aspera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Tokioka, 1949",
+          "sourceIds": {
+            "checklistbank-2008": "554511"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_ASPERSA_TOKIOKA_1949",
+          "name": "Pyura aspersa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Tokioka, 1949",
+          "sourceIds": {
+            "checklistbank-2008": "554512"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_CAVERNOSA_LESUEUR_1823",
+          "name": "Pyura cavernosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Lesueur, 1823)",
+          "sourceIds": {
+            "checklistbank-2008": "554514"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_CEYLONICA_HERDMAN_1906",
+          "name": "Pyura ceylonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Herdman, 1906)",
+          "sourceIds": {
+            "checklistbank-2008": "554515"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_MASUII_TOKIOKA_1949",
+          "name": "Pyura masuii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Tokioka, 1949",
+          "sourceIds": {
+            "checklistbank-2008": "554517"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_MICHAELSENI_OKA_1906",
+          "name": "Pyura michaelseni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Oka, 1906)",
+          "sourceIds": {
+            "checklistbank-2008": "554518"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_OVIFERA_LINNAEUS_1767",
+          "name": "Pyura ovifera",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Linnaeus, 1767)",
+          "sourceIds": {
+            "checklistbank-2008": "554519"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PALLIDA_HELLER_1878",
+          "name": "Pyura pallida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Heller, 1878)",
+          "sourceIds": {
+            "checklistbank-2008": "554520"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PAPIETENSIS_HERDMAN_1882",
+          "name": "Pyura papietensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Herdman, 1882)",
+          "sourceIds": {
+            "checklistbank-2008": "554521"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PAPILLOSA_GUNNERUS_1765",
+          "name": "Pyura papillosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Gunnerus, 1765)",
+          "sourceIds": {
+            "checklistbank-2008": "554522"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PECTINICOLA_MICHAELSEN_1908",
+          "name": "Pyura pectinicola",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Michaelsen, 1908",
+          "sourceIds": {
+            "checklistbank-2008": "554523"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PLICATA_KOTT_1952",
+          "name": "Pyura plicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Kott, 1952",
+          "sourceIds": {
+            "checklistbank-2008": "554524"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PYRIFORMIS_RATHKE_1806",
+          "name": "Pyura pyriformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Rathke, 1806)",
+          "sourceIds": {
+            "checklistbank-2008": "554525"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_SANDERI_TRAUSTEDT_WELTNER_1894",
+          "name": "Pyura sanderi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Traustedt & Weltner, 1894)",
+          "sourceIds": {
+            "checklistbank-2008": "554526"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_SCORESBIENSIS_KOTT_1972",
+          "name": "Pyura scoresbiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Kott, 1972",
+          "sourceIds": {
+            "checklistbank-2008": "554528"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_THOMPSONI_HARTMEYER_1903",
+          "name": "Pyura thompsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Hartmeyer, 1903)",
+          "sourceIds": {
+            "checklistbank-2008": "554529"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_VARIABILIS_LESUEUR_1823",
+          "name": "Pyura variabilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "(Lesueur, 1823)",
+          "sourceIds": {
+            "checklistbank-2008": "554533"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_VIOLACEA_PERES_1949",
+          "name": "Pyura violacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Peres, 1949",
+          "sourceIds": {
+            "checklistbank-2008": "554534"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_COLUMNA_C_MONNIOT_F_MONNIOT_1991",
+          "name": "Pyura columna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "C. Monniot & F. Monniot, 1991",
+          "sourceIds": {
+            "checklistbank-2008": "652638"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PYURA_PENNATA_MONNIOT_C_MONNIOT_F_1991",
+          "name": "Pyura pennata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pyura",
+          "authorship": "Monniot C. & Monniot F., 1991",
+          "sourceIds": {
+            "checklistbank-2008": "838421"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pyuridae"
     }
   ],
-  "speciesCount": 363,
+  "speciesCount": 403,
   "appSlug": "pyuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Ascidiacea",
@@ -6367,7 +7034,8 @@
       "orderKey": 9469348,
       "familyKey": 7345
     },
-    "checklistbank": "Pyuridae"
+    "checklistbank": "Pyuridae",
+    "wikispecies": "Pyuridae"
   },
   "speciesList": []
 }

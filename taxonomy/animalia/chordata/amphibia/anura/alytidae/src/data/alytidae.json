@@ -74,7 +74,8 @@
               "LLZG2"
             ],
             "checklistbank": "261816",
-            "wikispecies": "Alytes_almogavarii"
+            "wikispecies": "Alytes_almogavarii",
+            "gbif-backbone": "11814167"
           },
           "authorityIds": "col:LLZG2,itis:1269797",
           "description": "Alytes almogavarii is a alytidae species found in its native region."
@@ -234,7 +235,11 @@
           "children": [],
           "lineage": "Latonia",
           "uuid": "3d606649-cd4a-5f9-b8b-85ed5e952809ad",
-          "description": "Latonia seyfriedi is a alytidae species found in its native region."
+          "description": "Latonia seyfriedi is a alytidae species found in its native region.",
+          "authorship": "von Meyer, 1843",
+          "sourceIds": {
+            "gbif-backbone": "5935805"
+          }
         },
         {
           "id": "SP_LATONIA_RAGEI",
@@ -245,7 +250,11 @@
           "children": [],
           "lineage": "Latonia",
           "uuid": "2767c6fa-ba25-54a-ba6-1528d04c221a10",
-          "description": "Latonia ragei is a alytidae species found in its native region."
+          "description": "Latonia ragei is a alytidae species found in its native region.",
+          "authorship": "Hossini, 1993",
+          "sourceIds": {
+            "gbif-backbone": "8625822"
+          }
         },
         {
           "id": "SP_LATONIA_GIGANTEA",
@@ -256,7 +265,11 @@
           "children": [],
           "lineage": "Latonia",
           "uuid": "b4ab5b0a-9b31-5af-83c-8a7fe3eaa47c02",
-          "description": "Latonia gigantea is a alytidae species found in its native region."
+          "description": "Latonia gigantea is a alytidae species found in its native region.",
+          "authorship": "(Lartet, 1851)",
+          "sourceIds": {
+            "gbif-backbone": "8572581"
+          }
         },
         {
           "id": "SP_LATONIA_VERTAIZONI",
@@ -268,6 +281,19 @@
           "lineage": "Latonia",
           "uuid": "15201e89-8205-55d-aa2-6114a908c27602",
           "description": "Latonia vertaizoni is a alytidae species found in its native region."
+        },
+        {
+          "id": "SP_LATONIA_CAUCASICA_SYROMYATNIKOVA_RO_EK_2018",
+          "name": "Latonia caucasica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Latonia",
+          "authorship": "Syromyatnikova & Roček, 2018",
+          "sourceIds": {
+            "gbif-backbone": "9863388"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -392,7 +418,8 @@
               "662331"
             ],
             "checklistbank": "ott233470",
-            "wikispecies": "Discoglossus_sardus"
+            "wikispecies": "Discoglossus_sardus",
+            "gbif-backbone": "2426615"
           },
           "authorityIds": "col:36TMN,itis:662331",
           "commonName": "Tyrrhenian Painted Frog",
@@ -410,7 +437,8 @@
           "commonName": "Spanish Painted Frog",
           "authorship": "Busack, 1986",
           "sourceIds": {
-            "checklistbank": "61614"
+            "checklistbank": "61614",
+            "gbif-backbone": "2426620"
           },
           "description": "Discoglossus jeanneae (Spanish Painted Frog) is a alytidae species found in its native region."
         }
@@ -432,7 +460,8 @@
           "lineage": "Paralatonia",
           "authorship": "Venczel and Csiki 2003",
           "sourceIds": {
-            "checklistbank": "txn:197675"
+            "checklistbank": "txn:197675",
+            "gbif-backbone": "8581128"
           },
           "children": [],
           "uuid": "1be4f0d4-15fb-517-b51-8508aed2748129",
@@ -498,13 +527,334 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Alytidae"
+    },
+    {
+      "id": "GENUS_ZAPHRISSA",
+      "name": "Zaphrissa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZAPHRISSA_EURYPELIS_COPE_1866",
+          "name": "Zaphrissa eurypelis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zaphrissa",
+          "authorship": "Cope, 1866",
+          "sourceIds": {
+            "gbif-backbone": "8462174"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_PRODISCOGLOSSUS",
+      "name": "Prodiscoglossus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PRODISCOGLOSSUS_VERTAIZONI_FRIANT_1944",
+          "name": "Prodiscoglossus vertaizoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prodiscoglossus",
+          "authorship": "(Friant, 1944)",
+          "sourceIds": {
+            "gbif-backbone": "8585827"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_ENNEABATRACHUS",
+      "name": "Enneabatrachus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENNEABATRACHUS_HECHTI_EVANS_MILNER_1993",
+          "name": "Enneabatrachus hechti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Enneabatrachus",
+          "authorship": "Evans & Milner, 1993",
+          "sourceIds": {
+            "gbif-backbone": "4964799"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_SAEVESOEDERBERGHIA",
+      "name": "Saevesoederberghia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SAEVESOEDERBERGHIA_EGREDIA_RO_EC_NESSOV_1993",
+          "name": "Saevesoederberghia egredia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Saevesoederberghia",
+          "authorship": "Ročec & Nessov, 1993",
+          "sourceIds": {
+            "gbif-backbone": "8663520"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_KIZYLKUMA",
+      "name": "Kizylkuma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KIZYLKUMA_ANTIQUA_NESSOV_1981",
+          "name": "Kizylkuma antiqua",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kizylkuma",
+          "authorship": "Nessov, 1981",
+          "sourceIds": {
+            "gbif-backbone": "8616960"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_PROCEROBATRACHUS",
+      "name": "Procerobatrachus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROCEROBATRACHUS_PAULUS_RO_EC_NESSOV_1993",
+          "name": "Procerobatrachus paulus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Procerobatrachus",
+          "authorship": "Ročec & Nessov, 1993",
+          "sourceIds": {
+            "gbif-backbone": "8485794"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_SCOTIOPHRYNE",
+      "name": "Scotiophryne",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCOTIOPHRYNE_PUSTULOSA_ESTES_1969",
+          "name": "Scotiophryne pustulosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scotiophryne",
+          "authorship": "Estes, 1969",
+          "sourceIds": {
+            "gbif-backbone": "4964806"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_ALTANULIA",
+      "name": "Altanulia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALTANULIA_ALIFANOVI_GUBIN_1993",
+          "name": "Altanulia alifanovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Altanulia",
+          "authorship": "Gubin, 1993",
+          "sourceIds": {
+            "gbif-backbone": "11129189"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_ESTESINA",
+      "name": "Estesina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ESTESINA_ELEGANS_RO_EC_NESSOV_1993",
+          "name": "Estesina elegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Estesina",
+          "authorship": "Ročec & Nessov, 1993",
+          "sourceIds": {
+            "gbif-backbone": "8457943"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_ARALOBATRACHUS",
+      "name": "Aralobatrachus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARALOBATRACHUS_ROBUSTUS_NESSOV_1981",
+          "name": "Aralobatrachus robustus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aralobatrachus",
+          "authorship": "Nessov, 1981",
+          "sourceIds": {
+            "gbif-backbone": "8490153"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_BAKONYBATRACHUS",
+      "name": "Bakonybatrachus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BAKONYBATRACHUS_FEDORI_SZENTESI_VENCZEL_2012",
+          "name": "Bakonybatrachus fedori",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bakonybatrachus",
+          "authorship": "Szentesi & Venczel, 2012",
+          "sourceIds": {
+            "gbif-backbone": "8701423"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_PARADISCOGLOSSUS",
+      "name": "Paradiscoglossus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARADISCOGLOSSUS_AMERICANUS_ESTES_SANCH_Z_1982",
+          "name": "Paradiscoglossus americanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradiscoglossus",
+          "authorship": "Estes & Sanchíz, 1982",
+          "sourceIds": {
+            "gbif-backbone": "4964804"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_EODISCOGLOSSUS",
+      "name": "Eodiscoglossus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EODISCOGLOSSUS_OXONIENSIS_EVANS_ET_AL_1990",
+          "name": "Eodiscoglossus oxoniensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eodiscoglossus",
+          "authorship": "Evans et al., 1990",
+          "sourceIds": {
+            "gbif-backbone": "4964803"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_EODISCOGLOSSUS_SANTONJAE_VILLALTA_1957",
+          "name": "Eodiscoglossus santonjae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eodiscoglossus",
+          "authorship": "Villalta, 1957",
+          "sourceIds": {
+            "gbif-backbone": "4964802"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
+    },
+    {
+      "id": "GENUS_ITEMIRELLA",
+      "name": "Itemirella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ITEMIRELLA_CRETACEA_NESSOV_1981",
+          "name": "Itemirella cretacea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Itemirella",
+          "authorship": "Nessov, 1981",
+          "sourceIds": {
+            "gbif-backbone": "9390964"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "alytidae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 40,
   "appSlug": "alytidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Amphibia",
-  "genusCount": 7,
+  "genusCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -513,6 +863,7 @@
       "orderKey": 952,
       "familyKey": 6726
     },
-    "checklistbank": "Alytidae"
+    "checklistbank": "Alytidae",
+    "wikispecies": "Alytidae"
   }
 }

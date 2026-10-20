@@ -26,7 +26,8 @@
               "584734"
             ],
             "checklistbank": "ott848914",
-            "wikispecies": "Dasyprocta_punctata"
+            "wikispecies": "Dasyprocta_punctata",
+            "gbif-backbone": "4264702"
           },
           "authorityIds": "col:349R6,itis:584734",
           "commonName": "Central American Agouti",
@@ -50,7 +51,8 @@
               "349R3"
             ],
             "checklistbank": "ott462286",
-            "wikispecies": "Dasyprocta_leporina"
+            "wikispecies": "Dasyprocta_leporina",
+            "gbif-backbone": "4264709"
           },
           "authorityIds": "col:349R3,itis:584731",
           "commonName": "Brazilian Agouti",
@@ -74,7 +76,8 @@
               "584728"
             ],
             "checklistbank": "ott592588",
-            "wikispecies": "Dasyprocta_fuliginosa"
+            "wikispecies": "Dasyprocta_fuliginosa",
+            "gbif-backbone": "4264713"
           },
           "authorityIds": "col:349QY,itis:584728",
           "commonName": "Black Agouti",
@@ -290,7 +293,8 @@
               "C3KG2"
             ],
             "checklistbank": "Dasyprocta_variegata",
-            "wikispecies": "Dasyprocta_variegata"
+            "wikispecies": "Dasyprocta_variegata",
+            "gbif-backbone": "10751699"
           },
           "authorityIds": "col:C3KG2,itis:1221723",
           "commonName": "Brown Agouti",
@@ -358,12 +362,14 @@
           "sourcedFrom": "gbif",
           "lineage": "Dasyprocta",
           "sourceIds": {
-            "checklistbank": "ott3609681"
+            "checklistbank": "ott3609681",
+            "gbif-backbone": "8984909"
           },
           "children": [],
           "uuid": "8e593bb5-d3f1-5b3-b13-05ce87a19d3a5c",
           "commonName": "Crested Agouti",
-          "description": "Dasyprocta cristata (Crested Agouti) is a dasyproctidae species found in its native region."
+          "description": "Dasyprocta cristata (Crested Agouti) is a dasyproctidae species found in its native region.",
+          "authorship": "(É.Geoffroy Saint-Hilaire, 1803)"
         },
         {
           "id": "SP_DASYPROCTA_SP",
@@ -393,6 +399,32 @@
           "children": [],
           "uuid": "184c6baa-0f08-51e-b9c-84557f7f7acd2c",
           "description": "Dasyprocta kalinowski is a dasyproctidae species found in its native region."
+        },
+        {
+          "id": "SP_DASYPROCTA_GUATNARA_OJASTI_1972",
+          "name": "Dasyprocta guatnara",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dasyprocta",
+          "authorship": "Ojasti, 1972",
+          "sourceIds": {
+            "gbif-backbone": "12186496"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DASYPROCTA_PRYNTNOLOPHA_WAGLER_1831",
+          "name": "Dasyprocta pryntnolopha",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dasyprocta",
+          "authorship": "Wagler, 1831",
+          "sourceIds": {
+            "gbif-backbone": "12174609"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -479,6 +511,19 @@
           "children": [],
           "uuid": "47eb95e0-1d5f-577-bdd-65ef08c1a04b25",
           "description": "Myoprocta milleri is a dasyproctidae species found in its native region."
+        },
+        {
+          "id": "SP_MYOPROCTA_PRATT_THOMAS_1903",
+          "name": "Myoprocta pratt",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myoprocta",
+          "authorship": "Thomas, 1903",
+          "sourceIds": {
+            "gbif-backbone": "11810108"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -498,7 +543,11 @@
           "children": [],
           "lineage": "Andemys",
           "uuid": "dc6a8fba-1f2b-54f-bfa-bfa0b9bde4e7ff",
-          "description": "Andemys termasi is a dasyproctidae species found in its native region."
+          "description": "Andemys termasi is a dasyproctidae species found in its native region.",
+          "authorship": "Bertrand et al., 2012",
+          "sourceIds": {
+            "gbif-backbone": "8486956"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -615,13 +664,219 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_INCAMYS",
+      "name": "Incamys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_INCAMYS_BOLIVIANUS_HOFFSTETTER_LAVOCAT_1970",
+          "name": "Incamys bolivianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Incamys",
+          "authorship": "Hoffstetter & Lavocat, 1970",
+          "sourceIds": {
+            "gbif-backbone": "8615639"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_MICROSCLEROMYS",
+      "name": "Microscleromys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MICROSCLEROMYS_PARADOXALIS_WALTON_1990",
+          "name": "Microscleromys paradoxalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microscleromys",
+          "authorship": "Walton, 1990",
+          "sourceIds": {
+            "gbif-backbone": "8476183"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MICROSCLEROMYS_CRIBRIPHILUS_WALTON_1990",
+          "name": "Microscleromys cribriphilus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microscleromys",
+          "authorship": "Walton, 1990",
+          "sourceIds": {
+            "gbif-backbone": "8596329"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_MEGASTUS",
+      "name": "Megastus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEGASTUS_ELONGATUS_ROTH_1898",
+          "name": "Megastus elongatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Megastus",
+          "authorship": "Roth, 1898",
+          "sourceIds": {
+            "gbif-backbone": "8708496"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_NEOREOMYS",
+      "name": "Neoreomys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOREOMYS_PINTURENSIS_KRAMARZ_2006",
+          "name": "Neoreomys pinturensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoreomys",
+          "authorship": "Kramarz, 2006",
+          "sourceIds": {
+            "gbif-backbone": "8601366"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOREOMYS_LIMATUS_AMEGHINO_1891",
+          "name": "Neoreomys limatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoreomys",
+          "authorship": "Ameghino, 1891",
+          "sourceIds": {
+            "gbif-backbone": "8499842"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOREOMYS_AUSTRALIS_AMEGHINO_1887",
+          "name": "Neoreomys australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoreomys",
+          "authorship": "Ameghino, 1887",
+          "sourceIds": {
+            "gbif-backbone": "8679697"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NEOREOMYS_HUILENSIS_FIELDS_1957",
+          "name": "Neoreomys huilensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoreomys",
+          "authorship": "Fields, 1957",
+          "sourceIds": {
+            "gbif-backbone": "8471606"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_BRANISAMYS",
+      "name": "Branisamys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BRANISAMYS_LURIBAYENSIS_HOFFSTETTER_LAVOCAT_1970",
+          "name": "Branisamys luribayensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Branisamys",
+          "authorship": "Hoffstetter & Lavocat, 1970",
+          "sourceIds": {
+            "gbif-backbone": "8571355"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_LOMOMYS",
+      "name": "Lomomys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LOMOMYS_EVEXUS_AMEGHINO_1891",
+          "name": "Lomomys evexus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lomomys",
+          "authorship": "Ameghino, 1891",
+          "sourceIds": {
+            "gbif-backbone": "8645231"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
+    },
+    {
+      "id": "GENUS_EUSIGMOMYS",
+      "name": "Eusigmomys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUSIGMOMYS_FRIASENSIS_KRAGLIEVICH_1930",
+          "name": "Eusigmomys friasensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eusigmomys",
+          "authorship": "(Kraglievich, 1930)",
+          "sourceIds": {
+            "gbif-backbone": "11179207"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dasyproctidae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 42,
   "appSlug": "dasyproctidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 7,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -630,6 +885,7 @@
       "orderKey": 1459,
       "familyKey": 3240680
     },
-    "checklistbank": "Dasyproctidae"
+    "checklistbank": "Dasyproctidae",
+    "wikispecies": "Dasyproctidae"
   }
 }

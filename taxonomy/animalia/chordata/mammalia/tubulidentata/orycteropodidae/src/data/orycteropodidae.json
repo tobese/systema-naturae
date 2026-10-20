@@ -43,7 +43,8 @@
           "uuid": "b3df686b-7d34-52e-85b-5f66085d376f16",
           "authorship": "Lehmann et al. 2004",
           "sourceIds": {
-            "checklistbank": "txn:166766"
+            "checklistbank": "txn:166766",
+            "gbif-backbone": "8588592"
           },
           "description": "Orycteropus djourabensis is a orycteropodidae species found in its native region."
         },
@@ -58,7 +59,8 @@
           "uuid": "cc64d092-9c63-5ae-841-a262fe943e0ad9",
           "authorship": "Pickford 1975",
           "sourceIds": {
-            "checklistbank": "txn:166839"
+            "checklistbank": "txn:166839",
+            "gbif-backbone": "8511774"
           },
           "description": "Orycteropus chemeldoi is a orycteropodidae species found in its native region."
         },
@@ -73,7 +75,8 @@
           "uuid": "688d373f-5ddf-5e7-adf-96149b1c95904c",
           "authorship": "MacInnes 1955",
           "sourceIds": {
-            "checklistbank": "txn:166388"
+            "checklistbank": "txn:166388",
+            "gbif-backbone": "8640648"
           },
           "description": "Orycteropus crassidens is a orycteropodidae species found in its native region."
         },
@@ -88,7 +91,8 @@
           "uuid": "65fcf14f-01b3-525-959-f259860f41bebf",
           "authorship": "Pickford 1975",
           "sourceIds": {
-            "checklistbank": "txn:166837"
+            "checklistbank": "txn:166837",
+            "gbif-backbone": "8510516"
           },
           "description": "Orycteropus minutus is a orycteropodidae species found in its native region."
         },
@@ -103,7 +107,8 @@
           "uuid": "a4161c54-6ae9-500-839-00066a740d9eef",
           "authorship": "Ozansoy 1965",
           "sourceIds": {
-            "checklistbank": "txn:166387"
+            "checklistbank": "txn:166387",
+            "gbif-backbone": "8483180"
           },
           "description": "Orycteropus pottieri is a orycteropodidae species found in its native region."
         },
@@ -351,7 +356,8 @@
           "uuid": "9cc5046f-5324-56d-933-da675a4ea3306d",
           "authorship": "(MacInnes 1955)",
           "sourceIds": {
-            "checklistbank": "txn:166391"
+            "checklistbank": "txn:166391",
+            "gbif-backbone": "9622774"
           },
           "description": "Myorycteropus africanus is a orycteropodidae species found in its native region."
         }
@@ -382,13 +388,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "orycteropodidae"
+    },
+    {
+      "id": "GENUS_PALAEORYCTEROPUS",
+      "name": "Palaeorycteropus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEORYCTEROPUS_QUERCYI_FIHOL_1894",
+          "name": "Palaeorycteropus quercyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeorycteropus",
+          "authorship": "Fihol, 1894",
+          "sourceIds": {
+            "gbif-backbone": "11136878"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "orycteropodidae"
+    },
+    {
+      "id": "GENUS_ARCHAEORYCTEROPUS",
+      "name": "Archaeorycteropus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCHAEORYCTEROPUS_GALLICUS_AMEGHINO_1905",
+          "name": "Archaeorycteropus gallicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Archaeorycteropus",
+          "authorship": "Ameghino, 1905",
+          "sourceIds": {
+            "gbif-backbone": "8534817"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "orycteropodidae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 26,
   "appSlug": "orycteropodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 4,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -397,6 +447,7 @@
       "orderKey": 804,
       "familyKey": 9470
     },
-    "checklistbank": "Orycteropodidae"
+    "checklistbank": "Orycteropodidae",
+    "wikispecies": "Orycteropodidae"
   }
 }

@@ -212,7 +212,10 @@
           "sourcedFrom": "worms",
           "lineage": "Menidia",
           "authorship": "(Goode & Bean, 1879)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "8827233"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3251,7 +3254,8 @@
           "lineage": "Zanteclites",
           "authorship": "Jordan and Gilbert 1919",
           "sourceIds": {
-            "checklistbank": "txn:354963"
+            "checklistbank": "txn:354963",
+            "gbif-backbone": "9494559"
           },
           "children": [],
           "uuid": "299960e5-c64a-50c-944-2e60a55ab2288d",
@@ -3260,13 +3264,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "atherinopsidae"
+    },
+    {
+      "id": "GENUS_THYRINOPS",
+      "name": "Thyrinops",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_THYRINOPS_PACHYLEPIS",
+          "name": "Thyrinops pachylepis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Thyrinops",
+          "sourceIds": {
+            "gbif-backbone": "11849860"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atherinopsidae"
     }
   ],
-  "speciesCount": 131,
+  "speciesCount": 132,
   "appSlug": "atherinopsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 19,
+  "genusCount": 20,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3274,6 +3299,7 @@
       "orderKey": 496,
       "familyKey": 2957
     },
-    "checklistbank": "Atherinopsidae"
+    "checklistbank": "Atherinopsidae",
+    "wikispecies": "Atherinopsidae"
   }
 }

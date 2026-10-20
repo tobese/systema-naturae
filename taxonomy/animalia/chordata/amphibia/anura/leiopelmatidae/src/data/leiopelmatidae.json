@@ -90,7 +90,11 @@
           "lineage": "Leiopelma",
           "uuid": "f8bf0e4f-9732-554-99d-24e4590c601784",
           "commonName": "Pakeka Frog",
-          "description": "Leiopelma pakeka (Pakeka Frog) is a leiopelmatidae species found in its native region."
+          "description": "Leiopelma pakeka (Pakeka Frog) is a leiopelmatidae species found in its native region.",
+          "authorship": "Bell, Daugherty & Hay, 1998",
+          "sourceIds": {
+            "gbif-backbone": "2429807"
+          }
         },
         {
           "id": "SP_LEIOPELMA_AURORAENSIS",
@@ -104,7 +108,8 @@
           "commonName": "Aurora frog",
           "authorship": "Worthy 1987",
           "sourceIds": {
-            "checklistbank": "txn:409506"
+            "checklistbank": "txn:409506",
+            "gbif-backbone": "4816789"
           },
           "description": "Leiopelma auroraensis, known as the Aurora frog, is an extinct species of frog that was found in New Zealand."
         },
@@ -119,7 +124,8 @@
           "uuid": "521f7ca9-c83e-57a-ba6-9d04cebd2cc6c3",
           "authorship": "Worthy et al. 2013",
           "sourceIds": {
-            "checklistbank": "txn:287444"
+            "checklistbank": "txn:287444",
+            "gbif-backbone": "8528589"
           },
           "description": "Leiopelma acricarina is a leiopelmatidae species found in its native region."
         },
@@ -134,7 +140,8 @@
           "uuid": "d43347b5-83df-59a-a2b-f769b8af125a55",
           "authorship": "Worthy et al. 2013",
           "sourceIds": {
-            "checklistbank": "txn:287443"
+            "checklistbank": "txn:287443",
+            "gbif-backbone": "8541231"
           },
           "description": "Leiopelma miocaenale is a leiopelmatidae species found in its native region."
         },
@@ -146,7 +153,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Leiopelma",
           "sourceIds": {
-            "checklistbank": "ott3617968"
+            "checklistbank": "ott3617968",
+            "gbif-backbone": "4816790"
           },
           "children": [],
           "authorship": "Worthy, 1987",
@@ -171,13 +179,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Leiopelmatidae"
+    },
+    {
+      "id": "GENUS_VIERAELLA",
+      "name": "Vieraella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIERAELLA_HERBSTII_REIG_1961",
+          "name": "Vieraella herbstii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vieraella",
+          "authorship": "Reig, 1961",
+          "sourceIds": {
+            "gbif-backbone": "8567121"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "leiopelmatidae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 10,
   "appSlug": "leiopelmatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Amphibia",
-  "genusCount": 1,
+  "genusCount": 2,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -186,6 +216,7 @@
       "orderKey": 952,
       "familyKey": 3085
     },
-    "checklistbank": "Leiopelmatidae"
+    "checklistbank": "Leiopelmatidae",
+    "wikispecies": "Leiopelmatidae"
   }
 }

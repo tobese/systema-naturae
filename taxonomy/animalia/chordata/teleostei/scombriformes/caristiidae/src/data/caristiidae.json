@@ -329,7 +329,8 @@
             "itis": [
               "168823"
             ],
-            "checklistbank": "ott3634810"
+            "checklistbank": "ott3634810",
+            "gbif-backbone": "2392037"
           },
           "authorityIds": "itis:168823",
           "description": "Caristius japonicus is a caristiidae species found in its native region."
@@ -618,13 +619,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "caristiidae"
+    },
+    {
+      "id": "GENUS_ABANTIS",
+      "name": "Abantis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ABANTIS_VELIFER_JORDAN_1925",
+          "name": "Abantis velifer",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Abantis",
+          "authorship": "(Jordan, 1925)",
+          "sourceIds": {
+            "gbif-backbone": "9257120"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caristiidae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 29,
   "appSlug": "caristiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -632,6 +655,7 @@
       "orderKey": 587,
       "familyKey": 4254
     },
-    "checklistbank": "Caristiidae"
+    "checklistbank": "Caristiidae",
+    "wikispecies": "Caristiidae"
   }
 }

@@ -99,7 +99,8 @@
           "commonName": "Pygmy smelt",
           "authorship": "Cope, 1870",
           "sourceIds": {
-            "checklistbank": "970692"
+            "checklistbank": "970692",
+            "gbif-backbone": "2410853"
           },
           "description": "Osmerus spectrum (Pygmy smelt) is a osmeridae species found in its native region."
         },
@@ -176,6 +177,32 @@
           "children": [],
           "uuid": "ed407874-8428-51f-8b8-3432df4d0706d0",
           "description": "Osmerus lobatus is a osmeridae species found in its native region."
+        },
+        {
+          "id": "SP_OSMERUS_MICRODON_VALENCIENNES_1848",
+          "name": "Osmerus microdon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Osmerus",
+          "authorship": "Valenciennes, 1848",
+          "sourceIds": {
+            "gbif-backbone": "8821949"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OSMERUS_ATTENUATUS_LOCKINGTON_1880",
+          "name": "Osmerus attenuatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Osmerus",
+          "authorship": "Lockington, 1880",
+          "sourceIds": {
+            "gbif-backbone": "9062250"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -276,7 +303,8 @@
           "lineage": "Spirinchus",
           "authorship": "Uyeno and Sakamoto 1999",
           "sourceIds": {
-            "checklistbank": "txn:364553"
+            "checklistbank": "txn:364553",
+            "gbif-backbone": "9354066"
           },
           "children": [],
           "uuid": "44176df5-0993-574-9b7-0647f66ab67eb5",
@@ -659,6 +687,19 @@
           "children": [],
           "uuid": "c9bfa682-f4b3-588-b60-216df45d9da598",
           "description": "Mallotus leucodermis is a osmeridae species found in its native region."
+        },
+        {
+          "id": "SP_MALLOTUS_ELONGATUS_MORI_1930",
+          "name": "Mallotus elongatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mallotus",
+          "authorship": "Mori, 1930",
+          "sourceIds": {
+            "gbif-backbone": "8811255"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -897,13 +938,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "osmeridae"
+    },
+    {
+      "id": "GENUS_OSMEROIDES",
+      "name": "Osmeroides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSMEROIDES_GLARISIANUS_AGASSIZ_1842",
+          "name": "Osmeroides glarisianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Osmeroides",
+          "authorship": "(Agassiz, 1842)",
+          "sourceIds": {
+            "gbif-backbone": "11169746"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "osmeridae"
     }
   ],
-  "speciesCount": 41,
+  "speciesCount": 45,
   "appSlug": "osmeridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -911,6 +974,7 @@
       "orderKey": 1068,
       "familyKey": 8480
     },
-    "checklistbank": "Osmeridae"
+    "checklistbank": "Osmeridae",
+    "wikispecies": "Osmeridae"
   }
 }

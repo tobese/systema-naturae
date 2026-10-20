@@ -87,7 +87,8 @@
             "itis": [
               "690684"
             ],
-            "checklistbank": "txn:352303"
+            "checklistbank": "txn:352303",
+            "gbif-backbone": "9579618"
           },
           "authorityIds": "itis:690684",
           "description": "Sympterichthys verrucosus is a brachionichthyidae species found in its native region."
@@ -432,7 +433,8 @@
           "lineage": "Orrichthys",
           "authorship": "Carnevale and Pietsch 2010",
           "sourceIds": {
-            "checklistbank": "txn:352299"
+            "checklistbank": "txn:352299",
+            "gbif-backbone": "9270536"
           },
           "children": [],
           "uuid": "45234bad-52d8-5ff-949-f3ad6a2511cc84",
@@ -441,13 +443,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "brachionichthyidae"
+    },
+    {
+      "id": "GENUS_CHEIRONECTES",
+      "name": "Cheironectes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHEIRONECTES_BICORNIS_LOWE_1839",
+          "name": "Cheironectes bicornis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheironectes",
+          "authorship": "Lowe, 1839",
+          "sourceIds": {
+            "gbif-backbone": "9228302"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachionichthyidae"
+    },
+    {
+      "id": "GENUS_HISTIOCEPHALUS",
+      "name": "Histiocephalus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HISTIOCEPHALUS_BASSANI_DE_ZIGNO_1887",
+          "name": "Histiocephalus bassani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Histiocephalus",
+          "authorship": "(De Zigno, 1887)",
+          "sourceIds": {
+            "gbif-backbone": "9499711"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachionichthyidae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 21,
   "appSlug": "brachionichthyidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 7,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -455,6 +501,7 @@
       "orderKey": 1305,
       "familyKey": 3717
     },
-    "checklistbank": "Brachionichthyidae"
+    "checklistbank": "Brachionichthyidae",
+    "wikispecies": "Brachionichthyidae"
   }
 }

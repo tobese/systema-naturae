@@ -160,12 +160,14 @@
           "sourcedFrom": "gbif",
           "lineage": "Grahamichthys",
           "sourceIds": {
-            "checklistbank": "ott3640121"
+            "checklistbank": "ott3640121",
+            "gbif-backbone": "2386061"
           },
           "children": [],
           "uuid": "6968da62-012c-5c4-b71-bdec583773c229",
           "commonName": "Graham's gudgeon",
-          "description": "Grahamichthys radiata (Graham's gudgeon) is a thalasseleotrididae species found in its native region."
+          "description": "Grahamichthys radiata (Graham's gudgeon) is a thalasseleotrididae species found in its native region.",
+          "authorship": "(Valenciennes, 1837)"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -194,13 +196,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "thalasseleotrididae"
+    },
+    {
+      "id": "GENUS_GOBIIDARUM",
+      "name": "Gobiidarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GOBIIDARUM_PECTENOIDES_GRENFELL_1984",
+          "name": "Gobiidarum pectenoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gobiidarum",
+          "authorship": "(Grenfell, 1984)",
+          "sourceIds": {
+            "gbif-backbone": "4840593"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thalasseleotrididae"
     }
   ],
-  "speciesCount": 9,
+  "speciesCount": 10,
   "appSlug": "thalasseleotrididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -208,6 +232,7 @@
       "orderKey": 587,
       "familyKey": 7009704
     },
-    "checklistbank": "Thalasseleotrididae"
+    "checklistbank": "Thalasseleotrididae",
+    "wikispecies": "Thalasseleotrididae"
   }
 }

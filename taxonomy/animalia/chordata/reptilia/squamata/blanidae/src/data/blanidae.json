@@ -180,7 +180,8 @@
           "sourceIds": {
             "itis": [
               "1125663"
-            ]
+            ],
+            "gbif-backbone": "9305963"
           },
           "authorityIds": "itis:1125663",
           "commonName": "Vandelli's Worm Lizard",
@@ -214,6 +215,32 @@
           "authorship": "Albert & Fernandez, 2009",
           "uuid": "181350e5-7bc6-582-ae7-e389ec8a5ca901",
           "description": "Blanus mariae is a blanidae species found in its native region."
+        },
+        {
+          "id": "SP_BLANUS_THOMASKELLERI_ER_ANSK_RAGE_KLEMBARA_2014",
+          "name": "Blanus thomaskelleri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blanus",
+          "authorship": "Čerňanský, Rage & Klembara, 2014",
+          "sourceIds": {
+            "gbif-backbone": "8633709"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_BLANUS_MENDEZI_BOLET_DELFINO_FORTUNY_ALM_CIJA_ROBLES_ALBA_2014",
+          "name": "Blanus mendezi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Blanus",
+          "authorship": "Bolet, Delfino, Fortuny, Almécija, Robles & Alba, 2014",
+          "sourceIds": {
+            "gbif-backbone": "8443216"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -257,7 +284,8 @@
           "lineage": "Cuvieribaena",
           "authorship": "Cernansky et al. 2015",
           "sourceIds": {
-            "checklistbank": "txn:335530"
+            "checklistbank": "txn:335530",
+            "gbif-backbone": "8583316"
           },
           "children": [],
           "uuid": "c6b0ad65-51f4-538-a60-334056dc4b6237",
@@ -290,13 +318,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "blanidae"
+    },
+    {
+      "id": "GENUS_OMOIOTYPHLOPS",
+      "name": "Omoiotyphlops",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OMOIOTYPHLOPS_GRACILIS_RO_EK_1984",
+          "name": "Omoiotyphlops gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Omoiotyphlops",
+          "authorship": "(Roček, 1984)",
+          "sourceIds": {
+            "gbif-backbone": "9316155"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "blanidae"
     }
   ],
-  "speciesCount": 13,
+  "speciesCount": 16,
   "appSlug": "blanidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Reptilia",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -304,6 +354,7 @@
       "classKey": 11592253,
       "familyKey": 7564408
     },
-    "checklistbank": "Blanidae"
+    "checklistbank": "Blanidae",
+    "wikispecies": "Blanidae"
   }
 }

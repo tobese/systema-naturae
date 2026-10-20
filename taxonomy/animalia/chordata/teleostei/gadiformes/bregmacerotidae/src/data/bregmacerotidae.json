@@ -384,7 +384,8 @@
             "col": [
               "D54BW"
             ],
-            "checklistbank": "txn:434651"
+            "checklistbank": "txn:434651",
+            "gbif-backbone": "4838717"
           },
           "authorityIds": "col:D54BW",
           "children": [],
@@ -589,11 +590,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Bregmaceros",
           "sourceIds": {
-            "checklistbank": "ott7652023"
+            "checklistbank": "ott7652023",
+            "gbif-backbone": "10219306"
           },
           "children": [],
           "uuid": "1893d6ae-5596-5f6-b60-4cd5e0c0eb54eb",
-          "description": "Bregmaceros stereope is a bregmacerotidae species found in its native region."
+          "description": "Bregmaceros stereope is a bregmacerotidae species found in its native region.",
+          "authorship": "Thompson, 1840"
         },
         {
           "id": "SP_BREGMACEROS_SP",
@@ -618,7 +621,8 @@
           "lineage": "Bregmaceros",
           "authorship": "Frizzell and Dante 1965",
           "sourceIds": {
-            "checklistbank": "txn:133525"
+            "checklistbank": "txn:133525",
+            "gbif-backbone": "4964247"
           },
           "children": [],
           "uuid": "15342ad1-784e-54f-afe-659f0710293378",
@@ -740,6 +744,19 @@
           "authorityIds": "col:D54C3",
           "children": [],
           "description": "Maorigadus anarchicus is a bregmacerotidae species found in its native region."
+        },
+        {
+          "id": "SP_MAORIGADUS_UKRAINICUS_SCHWARZHANS_BRATISCHKO_2011",
+          "name": "Maorigadus ukrainicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Maorigadus",
+          "authorship": "Schwarzhans & Bratischko, 2011",
+          "sourceIds": {
+            "gbif-backbone": "8639375"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -839,13 +856,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "bregmacerotidae"
+    },
+    {
+      "id": "GENUS_PROBLENNIUS",
+      "name": "Problennius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROBLENNIUS_FILAMENTOSUS_PRIEM_1908",
+          "name": "Problennius filamentosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Problennius",
+          "authorship": "(Priem, 1908)",
+          "sourceIds": {
+            "gbif-backbone": "9318548"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "bregmacerotidae"
     }
   ],
-  "speciesCount": 41,
+  "speciesCount": 43,
   "appSlug": "bregmacerotidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

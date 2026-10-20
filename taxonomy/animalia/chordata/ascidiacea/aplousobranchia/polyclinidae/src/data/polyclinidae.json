@@ -3076,7 +3076,8 @@
               "LJ9KL"
             ],
             "checklistbank": "ott7668300",
-            "wikispecies": "Aplidium_marplatensis"
+            "wikispecies": "Aplidium_marplatensis",
+            "gbif-backbone": "10454063"
           },
           "authorityIds": "col:LJ9KL",
           "description": "Aplidium marplatensis is a polyclinidae species found in its native region."
@@ -7251,7 +7252,11 @@
           "children": [],
           "lineage": "Aplidium",
           "uuid": "1c802229-5193-526-aac-849912c7d3ada2",
-          "description": "Aplidium solitarium is a polyclinidae species found in its native region."
+          "description": "Aplidium solitarium is a polyclinidae species found in its native region.",
+          "authorship": "Maggioni & Tatian",
+          "sourceIds": {
+            "gbif-backbone": "9835258"
+          }
         },
         {
           "id": "SP_APLIDIUM_ARGUS_MILNE_EDWARDS_1841",
@@ -8793,6 +8798,32 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Polyclinum",
           "authorship": "Herdman, 1902",
+          "children": []
+        },
+        {
+          "id": "SP_POLYCLINUM_MINUTUM_HERDMAN_1886",
+          "name": "Polyclinum minutum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polyclinum",
+          "authorship": "Herdman, 1886",
+          "sourceIds": {
+            "gbif-backbone": "10207850"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_POLYCLINUM_DEPRESSUM_HERDMAN_1886",
+          "name": "Polyclinum depressum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Polyclinum",
+          "authorship": "Herdman, 1886",
+          "sourceIds": {
+            "gbif-backbone": "10079928"
+          },
           "children": []
         }
       ],
@@ -11175,13 +11206,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Polyclinidae"
+    },
+    {
+      "id": "GENUS_MORCHELLIOIDES",
+      "name": "Morchellioides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MORCHELLIOIDES_AFFINIS_HERDMAN_1886",
+          "name": "Morchellioides affinis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Morchellioides",
+          "authorship": "Herdman, 1886",
+          "sourceIds": {
+            "gbif-backbone": "9858210"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "polyclinidae"
     }
   ],
-  "speciesCount": 609,
+  "speciesCount": 612,
   "appSlug": "polyclinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Ascidiacea",
-  "genusCount": 31,
+  "genusCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -11190,6 +11243,7 @@
       "orderKey": 9589977,
       "familyKey": 7348
     },
-    "checklistbank": "Polyclinidae"
+    "checklistbank": "Polyclinidae",
+    "wikispecies": "Polyclinidae"
   }
 }

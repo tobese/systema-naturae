@@ -169,7 +169,8 @@
           "lineage": "Echinorhinus",
           "authorship": "Antunes and Cappetta 2002",
           "sourceIds": {
-            "checklistbank": "txn:440918"
+            "checklistbank": "txn:440918",
+            "gbif-backbone": "11124248"
           },
           "children": [],
           "uuid": "bd1fa5ac-2254-5cd-9f3-7410b88e7740ee",
@@ -331,13 +332,48 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "echinorhinidae"
+    },
+    {
+      "id": "GENUS_ORTHECHINORHINUS",
+      "name": "Orthechinorhinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHECHINORHINUS_PFEILI_ADNET_2006",
+          "name": "Orthechinorhinus pfeili",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthechinorhinus",
+          "authorship": "Adnet, 2006",
+          "sourceIds": {
+            "gbif-backbone": "11151749"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ORTHECHINORHINUS_DAVIDAE_WELTON_2016",
+          "name": "Orthechinorhinus davidae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthechinorhinus",
+          "authorship": "Welton, 2016",
+          "sourceIds": {
+            "gbif-backbone": "11207275"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "echinorhinidae"
     }
   ],
-  "speciesCount": 19,
+  "speciesCount": 21,
   "appSlug": "echinorhinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Elasmobranchii",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -346,6 +382,7 @@
       "orderKey": 883,
       "familyKey": 5874
     },
-    "checklistbank": "Echinorhinidae"
+    "checklistbank": "Echinorhinidae",
+    "wikispecies": "Echinorhinidae"
   }
 }

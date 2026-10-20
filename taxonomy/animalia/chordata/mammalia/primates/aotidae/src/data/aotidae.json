@@ -82,7 +82,8 @@
           "authorship": "(Humboldt, 1811)",
           "sourceIds": {
             "checklistbank": "50731",
-            "wikispecies": "Aotus_azarae"
+            "wikispecies": "Aotus_azarae",
+            "gbif-backbone": "5707409"
           },
           "children": [],
           "uuid": "94a7bc04-3479-512-9a4-d51fdc0fefd9fb",
@@ -146,7 +147,8 @@
           "sourcedFrom": "itis",
           "lineage": "Aotus",
           "sourceIds": {
-            "checklistbank": "1000745"
+            "checklistbank": "1000745",
+            "gbif-backbone": "5219593"
           },
           "children": [],
           "uuid": "ab33ca4e-30f7-571-bc4-81370d2510327c",
@@ -162,7 +164,8 @@
           "sourcedFrom": "itis",
           "lineage": "Aotus",
           "sourceIds": {
-            "checklistbank": "1000746"
+            "checklistbank": "1000746",
+            "gbif-backbone": "5786069"
           },
           "children": [],
           "uuid": "3fff16df-f3d8-57e-b32-be646bcf25784f",
@@ -178,7 +181,8 @@
           "sourcedFrom": "itis",
           "lineage": "Aotus",
           "sourceIds": {
-            "checklistbank": "1000748"
+            "checklistbank": "1000748",
+            "gbif-backbone": "5219591"
           },
           "children": [],
           "uuid": "d75ee697-1a91-5e5-bcf-b762d7ba2037d9",
@@ -194,12 +198,14 @@
           "sourcedFrom": "itis",
           "lineage": "Aotus",
           "sourceIds": {
-            "checklistbank": "1000749"
+            "checklistbank": "1000749",
+            "gbif-backbone": "5219592"
           },
           "children": [],
           "uuid": "d4ab495d-1334-53f-a1d-cd57b55767e6d1",
           "commonName": "Andean Night Monkey",
-          "description": "Aotus miconax (Andean Night Monkey) is a aotidae species found in its native region."
+          "description": "Aotus miconax (Andean Night Monkey) is a aotidae species found in its native region.",
+          "authorship": "Thomas, 1927"
         },
         {
           "id": "SP_AOTUS_ZONALIS",
@@ -209,7 +215,8 @@
           "sourcedFrom": "itis",
           "lineage": "Aotus",
           "sourceIds": {
-            "checklistbank": "1000754"
+            "checklistbank": "1000754",
+            "gbif-backbone": "5786070"
           },
           "children": [],
           "uuid": "83c74778-760f-535-87b-61f706a9d15884",
@@ -260,6 +267,19 @@
           "children": [],
           "uuid": "1bd6a8c9-0894-5b8-8ae-1d7443ce00eabb",
           "description": "Aotus rufipes is a aotidae species found in its native region."
+        },
+        {
+          "id": "SP_AOTUS_DINDENSIS_SETOGUCHI_ROSENBERGER_1987",
+          "name": "Aotus dindensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aotus",
+          "authorship": "Setoguchi & Rosenberger, 1987",
+          "sourceIds": {
+            "gbif-backbone": "5936372"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -289,13 +309,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aotidae"
+    },
+    {
+      "id": "GENUS_INSULACEBUS",
+      "name": "Insulacebus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_INSULACEBUS_TOUSSAINTIANA_COOKE_ET_AL_2011",
+          "name": "Insulacebus toussaintiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Insulacebus",
+          "authorship": "Cooke et al., 2011",
+          "sourceIds": {
+            "gbif-backbone": "8497510"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aotidae"
     }
   ],
-  "speciesCount": 16,
+  "speciesCount": 18,
   "appSlug": "aotidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -304,6 +346,7 @@
       "orderKey": 798,
       "familyKey": 3239574
     },
-    "checklistbank": "Aotidae"
+    "checklistbank": "Aotidae",
+    "wikispecies": "Aotidae"
   }
 }

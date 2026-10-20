@@ -168,10 +168,12 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Cyclopes",
           "sourceIds": {
-            "checklistbank": "1000438"
+            "checklistbank": "1000438",
+            "gbif-backbone": "10328744"
           },
           "children": [],
-          "uuid": "1c8056cb-84db-54d-b8a-90ca23d7664c3c"
+          "uuid": "1c8056cb-84db-54d-b8a-90ca23d7664c3c",
+          "authorship": "Thomas, 1900"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -235,13 +237,48 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cyclopedidae"
+    },
+    {
+      "id": "GENUS_PSEUDOGLYPTODON",
+      "name": "Pseudoglyptodon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOGLYPTODON_CHILENSIS_MCKENNA_ET_AL_2006",
+          "name": "Pseudoglyptodon chilensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoglyptodon",
+          "authorship": "McKenna et al., 2006",
+          "sourceIds": {
+            "gbif-backbone": "9395645"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PSEUDOGLYPTODON_SALLAENSIS_ENGELMANN_1987",
+          "name": "Pseudoglyptodon sallaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudoglyptodon",
+          "authorship": "Engelmann, 1987",
+          "sourceIds": {
+            "gbif-backbone": "4945237"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cyclopedidae"
     }
   ],
-  "speciesCount": 11,
+  "speciesCount": 13,
   "appSlug": "cyclopedidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Mammalia",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -250,6 +287,7 @@
       "orderKey": 1494,
       "familyKey": 5482
     },
-    "checklistbank": "Cyclopedidae"
+    "checklistbank": "Cyclopedidae",
+    "wikispecies": "Cyclopedidae"
   }
 }

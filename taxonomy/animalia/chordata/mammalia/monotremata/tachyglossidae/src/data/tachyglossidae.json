@@ -34,7 +34,8 @@
               "552522"
             ],
             "checklistbank": "0d4c9c0c-51d3-44e0-a365-fe0f8b791c66",
-            "wikispecies": "Tachyglossus_aculeatus"
+            "wikispecies": "Tachyglossus_aculeatus",
+            "gbif-backbone": "6163205"
           },
           "authorityIds": "col:54CMZ,itis:552522,wikidata:Q193182",
           "authorship": "Shaw"
@@ -54,9 +55,11 @@
           "sourceIds": {
             "wikidata": [
               "Q125498866"
-            ]
+            ],
+            "gbif-backbone": "4832732"
           },
-          "authorityIds": "wikidata:Q125498866"
+          "authorityIds": "wikidata:Q125498866",
+          "authorship": "Ramsay, 1877"
         }
       ]
     },
@@ -110,7 +113,8 @@
               "7GBTK"
             ],
             "checklistbank": "ott3615204",
-            "wikispecies": "Zaglossus_attenboroughi"
+            "wikispecies": "Zaglossus_attenboroughi",
+            "gbif-backbone": "2433390"
           },
           "authorityIds": "col:7GBTK,itis:709357,wikidata:Q757942",
           "authorship": "Flannery & Groves, 1998"
@@ -138,7 +142,8 @@
               "709358"
             ],
             "checklistbank": "ott3615201",
-            "wikispecies": "Zaglossus_bartoni"
+            "wikispecies": "Zaglossus_bartoni",
+            "gbif-backbone": "6163200"
           },
           "authorityIds": "col:7GC5K,itis:709358,wikidata:Q809557",
           "authorship": "(Thomas, 1907)"
@@ -162,7 +167,8 @@
             "itis": [
               "552523"
             ],
-            "checklistbank": "ott565578"
+            "checklistbank": "ott565578",
+            "gbif-backbone": "2433391"
           },
           "authorityIds": "col:7GBTL,itis:552523",
           "authorship": "(Peters and Doria 1876)"
@@ -182,9 +188,11 @@
           "sourceIds": {
             "wikidata": [
               "Q113940404"
-            ]
+            ],
+            "gbif-backbone": "4832730"
           },
-          "authorityIds": "wikidata:Q113940404"
+          "authorityIds": "wikidata:Q113940404",
+          "authorship": "Glauert, 1914"
         },
         {
           "id": "SP_ZAGLOSSUS_BRUIJNII",
@@ -321,10 +329,45 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "tachyglossidae"
+    },
+    {
+      "id": "GENUS_ECHIDNA",
+      "name": "Echidna",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ECHIDNA_RAMSAYI_OWEN_1884",
+          "name": "Echidna ramsayi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echidna",
+          "authorship": "(Owen, 1884)",
+          "sourceIds": {
+            "gbif-backbone": "9395172"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ECHIDNA_ROBUSTA_DUN_1894",
+          "name": "Echidna robusta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Echidna",
+          "authorship": "(Dun, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "9236242"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tachyglossidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 15,
+  "genusCount": 6,
+  "speciesCount": 17,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -333,6 +376,7 @@
       "orderKey": 791,
       "familyKey": 5941
     },
-    "checklistbank": "Tachyglossidae"
+    "checklistbank": "Tachyglossidae",
+    "wikispecies": "Tachyglossidae"
   }
 }

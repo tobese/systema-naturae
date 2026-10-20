@@ -440,6 +440,19 @@
           "lineage": "Acropoma",
           "authorship": "Okamoto & Golani, 2017",
           "children": []
+        },
+        {
+          "id": "SP_ACROPOMA_APOGONOIDES_BLEEKER_1879",
+          "name": "Acropoma apogonoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acropoma",
+          "authorship": "Bleeker, 1879",
+          "sourceIds": {
+            "gbif-backbone": "9067221"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -684,7 +697,8 @@
           "lineage": "Parascombrops",
           "authorship": "Nolf and Brzobohaty 2002",
           "sourceIds": {
-            "checklistbank": "txn:435018"
+            "checklistbank": "txn:435018",
+            "gbif-backbone": "11195016"
           },
           "children": [],
           "uuid": "4f66bcfc-e13d-550-84d-db4a8fee401192",
@@ -699,7 +713,8 @@
           "lineage": "Parascombrops",
           "authorship": "Lin and Nolf 2022",
           "sourceIds": {
-            "checklistbank": "txn:500665"
+            "checklistbank": "txn:500665",
+            "gbif-backbone": "12183791"
           },
           "children": [],
           "uuid": "d201beeb-6182-566-8ae-5ddf456048a497",
@@ -740,6 +755,19 @@
             "checklistbank": "Parascombrops_madagascariensis"
           },
           "children": []
+        },
+        {
+          "id": "SP_PARASCOMBROPS_SCHWARZHANSI_VAN_HINSBERGH_HELWERDA_2019",
+          "name": "Parascombrops schwarzhansi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Parascombrops",
+          "authorship": "Van Hinsbergh & Helwerda, 2019",
+          "sourceIds": {
+            "gbif-backbone": "9866676"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -763,7 +791,8 @@
           "sourceIds": {
             "itis": [
               "641870"
-            ]
+            ],
+            "gbif-backbone": "2381569"
           },
           "authorityIds": "itis:641870",
           "description": "Neoscombrops atlanticus is a acropomatidae species found in its native region."
@@ -1477,13 +1506,79 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Acropomatidae"
+    },
+    {
+      "id": "GENUS_OTOLITHUS",
+      "name": "Otolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OTOLITHUS_MUTINENSIS_BASSOLI_1906",
+          "name": "Otolithus mutinensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Otolithus",
+          "authorship": "(Bassoli, 1906)",
+          "sourceIds": {
+            "gbif-backbone": "9605909"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acropomatidae"
+    },
+    {
+      "id": "GENUS_SERRANIDARUM",
+      "name": "Serranidarum",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SERRANIDARUM_SERRATUS_FROST_1934",
+          "name": "Serranidarum serratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Serranidarum",
+          "authorship": "(Frost, 1934)",
+          "sourceIds": {
+            "gbif-backbone": "11123182"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acropomatidae"
+    },
+    {
+      "id": "GENUS_DENTEX",
+      "name": "Dentex",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DENTEX_NOLFI_STEURBAUT_1979",
+          "name": "Dentex nolfi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dentex",
+          "authorship": "(Steurbaut, 1979)",
+          "sourceIds": {
+            "gbif-backbone": "11175273"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acropomatidae"
     }
   ],
-  "speciesCount": 78,
+  "speciesCount": 83,
   "appSlug": "acropomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Chordata > Teleostei",
-  "genusCount": 13,
+  "genusCount": 16,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1491,6 +1586,7 @@
       "orderKey": 587,
       "familyKey": 8486
     },
-    "checklistbank": "Acropomatidae"
+    "checklistbank": "Acropomatidae",
+    "wikispecies": "Acropomatidae"
   }
 }
