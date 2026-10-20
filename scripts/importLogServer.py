@@ -163,8 +163,9 @@ PAGE = """<!doctype html>
     color: var(--dim); font-size: 11px; text-transform: uppercase;
     letter-spacing: .03em; font-weight: 600; position: sticky; top: 0; background: var(--bg);
   }
-  th.source { width: 34%; }
+  th.source { width: 32%; }
   th.num { width: 9%; }
+  th:first-child { width: 16%; }
   tr.flagged td { background: rgba(255, 92, 92, 0.08); }
   tr.flagged td:first-child { border-left: 2px solid var(--warn); }
   .slug { color: var(--accent); font-weight: 600; }
@@ -263,6 +264,14 @@ PAGE = """<!doctype html>
     padding: 4px 0; border-bottom: 1px solid var(--border);
   }
   .pending-list li:last-child { border-bottom: none; }
+  .pending-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .pending-table th, .pending-table td {
+    text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--border);
+    font-variant-numeric: tabular-nums;
+  }
+  .pending-table th { color: var(--dim); text-transform: uppercase; font-size: 11px; letter-spacing: .03em; }
+  .pending-table td.source { max-width: none; }
+  .pending-table td.num { text-align: right; white-space: nowrap; }
   .pending-empty { color: var(--dim); font-size: 12.5px; }
 </style>
 </head>
@@ -454,10 +463,23 @@ async function renderPending() {
     const list = document.getElementById('pendingBySource');
     const entries = Object.entries(p.bySource || {});
     list.innerHTML = entries.length
-      ? entries.map(([src, s]) =>
-          `<li><span>${escape(src)}</span><span>${fmt(s.families)} families &middot; ${fmt(s.species)} species</span></li>`
-        ).join('')
-      : '<li class="pending-empty">No sources with ready families.</li>';
+      ? `<table class="pending-table">
+           <thead><tr>
+             <th class="source">Source</th>
+             <th class="num">Families</th>
+             <th class="num">Species</th>
+           </tr></thead>
+           <tbody>
+             ${entries.map(([src, s]) =>
+               `<tr>
+                 <td class="source">${escape(src)}</td>
+                 <td class="num">${fmt(s.families)}</td>
+                 <td class="num">${fmt(s.species)}</td>
+               </tr>`
+             ).join('')}
+           </tbody>
+         </table>`
+      : '<p class="pending-empty">No sources with ready families.</p>';
   } catch (e) {
     document.getElementById('pendingHeading').textContent = 'missing families — connection lost';
   }
