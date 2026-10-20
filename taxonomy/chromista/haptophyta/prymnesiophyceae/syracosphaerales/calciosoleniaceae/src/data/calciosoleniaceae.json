@@ -24,11 +24,13 @@
           "description": "Anoplosolenia brasiliensis is a calciosoleniaceae species found in South America region.",
           "sourcedFrom": "gbif",
           "sourceIds": {
-            "gbif": 3201912
+            "gbif": 3201912,
+            "gbif-backbone": "3201912"
           },
           "children": [],
           "uuid": "242a7408-7399-510-aa4-57857479000c9e",
-          "authorityIds": "gbif:3201912"
+          "authorityIds": "gbif:3201912",
+          "authorship": "(Lohmann) Deflandre"
         }
       ]
     },
@@ -56,7 +58,8 @@
             "itis": [
               "2198"
             ],
-            "checklistbank": "1231688"
+            "checklistbank": "1231688",
+            "gbif-backbone": "4267708"
           },
           "children": [],
           "uuid": "42174483-ba09-5d0-8bd-1e82de1b04ba84",
@@ -76,11 +79,13 @@
           "sourcedFrom": "gbif",
           "sourceIds": {
             "gbif": 8066510,
-            "checklistbank": "ott7646328"
+            "checklistbank": "ott7646328",
+            "gbif-backbone": "8066510"
           },
           "children": [],
           "uuid": "6663c432-14bb-579-b2c-acd5f7902f07a8",
-          "authorityIds": "gbif:8066510"
+          "authorityIds": "gbif:8066510",
+          "authorship": "Gran"
         },
         {
           "id": "SCAPHOLITHUS_FOSSILIS",
@@ -193,7 +198,8 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 5822482,
-            "checklistbank": "taicol: 44678"
+            "checklistbank": "taicol: 44678",
+            "gbif-backbone": "5822482"
           },
           "children": [],
           "uuid": "1cff4d30-38db-543-95e-29869dc4c2e83d",
@@ -280,10 +286,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "calciosoleniaceae"
+    },
+    {
+      "id": "GENUS_SCAPHOLITHUS",
+      "name": "Scapholithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCAPHOLITHUS_FOSSILIS_DEFLANDRE_1954",
+          "name": "Scapholithus fossilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scapholithus",
+          "authorship": "(Deflandre, 1954)",
+          "sourceIds": {
+            "gbif-backbone": "6879069"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "calciosoleniaceae"
     }
   ],
-  "speciesCount": 15,
-  "genusCount": 4,
+  "speciesCount": 16,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 4,

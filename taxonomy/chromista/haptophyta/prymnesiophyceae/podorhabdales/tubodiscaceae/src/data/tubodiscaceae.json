@@ -23,7 +23,8 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 4983043,
-            "checklistbank": "txn:88249"
+            "checklistbank": "txn:88249",
+            "gbif-backbone": "4983043"
           },
           "uuid": "83c520d4-3672-511-b06-5d58227651e79a",
           "authorityIds": "gbif:4983043",
@@ -41,11 +42,13 @@
           "description": "Tubodiscus burnettiae is a tubodiscaceae species found in its native region.",
           "sourcedFrom": "none",
           "sourceIds": {
-            "gbif": 4941524
+            "gbif": 4941524,
+            "gbif-backbone": "4941524"
           },
           "uuid": "eb6a135e-4d19-579-b35-b04f35aca7b922",
           "authorityIds": "gbif:4941524",
-          "children": []
+          "children": [],
+          "authorship": "Bown, 2000"
         },
         {
           "id": "TUBODISCUS_FRANKIAE",
@@ -59,7 +62,8 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 4983040,
-            "checklistbank": "txn:88247"
+            "checklistbank": "txn:88247",
+            "gbif-backbone": "4983040"
           },
           "uuid": "8eab10ba-1518-5ac-956-4fa12a4ae171fe",
           "authorityIds": "gbif:4983040",
@@ -78,7 +82,8 @@
           "sourcedFrom": "none",
           "sourceIds": {
             "gbif": 4983041,
-            "checklistbank": "txn:88244"
+            "checklistbank": "txn:88244",
+            "gbif-backbone": "4983041"
           },
           "uuid": "85a05abe-9ec4-543-9da-6c3613150fd58a",
           "authorityIds": "gbif:4983041",
@@ -159,6 +164,50 @@
           "description": "Manivitella pemmatoidea is a tubodiscaceae species found in its native region."
         }
       ]
+    },
+    {
+      "id": "GENUS_WATZNAUERIA",
+      "name": "Watznaueria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_WATZNAUERIA_JURAPELAGICUS_WORSLEY_1971",
+          "name": "Watznaueria jurapelagicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Watznaueria",
+          "authorship": "(Worsley, 1971)",
+          "sourceIds": {
+            "gbif-backbone": "7533524"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tubodiscaceae"
+    },
+    {
+      "id": "GENUS_CRICOLITHUS",
+      "name": "Cricolithus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRICOLITHUS_PEMMATOIDEA_DEFLANDRE_1965",
+          "name": "Cricolithus pemmatoidea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cricolithus",
+          "authorship": "(Deflandre, 1965)",
+          "sourceIds": {
+            "gbif-backbone": "9441848"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tubodiscaceae"
     }
   ],
   "sourceIds": {
@@ -171,6 +220,6 @@
     },
     "checklistbank": "txn:87664"
   },
-  "genusCount": 2,
-  "speciesCount": 8
+  "genusCount": 4,
+  "speciesCount": 10
 }
