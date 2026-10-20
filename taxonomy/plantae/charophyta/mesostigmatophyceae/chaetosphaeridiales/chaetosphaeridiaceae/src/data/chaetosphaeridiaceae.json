@@ -25,9 +25,11 @@
           "sourceIds": {
             "itis": [
               "189552"
-            ]
+            ],
+            "gbif-backbone": "2638411"
           },
-          "authorityIds": "itis:189552"
+          "authorityIds": "itis:189552",
+          "authorship": "(G.S.West) G.S.West"
         }
       ]
     },
@@ -52,9 +54,11 @@
           "sourceIds": {
             "itis": [
               "189554"
-            ]
+            ],
+            "gbif-backbone": "2638416"
           },
-          "authorityIds": "itis:189554"
+          "authorityIds": "itis:189554",
+          "authorship": "W. & G.S.West"
         }
       ]
     },
@@ -84,7 +88,9 @@
             "itis": [
               "9370"
             ],
-            "checklistbank": "73528"
+            "checklistbank": "73528",
+            "checklistbank-2008": "73528",
+            "gbif-backbone": "2638421"
           },
           "authorityIds": "itis:9370"
         },
@@ -107,7 +113,8 @@
             "itis": [
               "9371"
             ],
-            "checklistbank": "1505028"
+            "checklistbank": "1505028",
+            "gbif-backbone": "2638419"
           },
           "authorityIds": "itis:9371"
         },
@@ -152,6 +159,19 @@
           "children": [],
           "uuid": "771ac02b-0729-55e-bb4-09ebe1c16fd736",
           "description": "Chaetosphaeridium gemmatum is a chaetosphaeridiaceae species found in its native region."
+        },
+        {
+          "id": "SP_CHAETOSPHAERIDIUM_OVALIS_G_M_SMITH_1916",
+          "name": "Chaetosphaeridium ovalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chaetosphaeridium",
+          "authorship": "G.M.Smith, 1916",
+          "sourceIds": {
+            "gbif-backbone": "4268549"
+          },
+          "children": []
         }
       ]
     },
@@ -175,7 +195,11 @@
             "Europe"
           ],
           "children": [],
-          "uuid": "8cc58e42-f1bc-5ca-955-98340ad7ee404f"
+          "uuid": "8cc58e42-f1bc-5ca-955-98340ad7ee404f",
+          "authorship": "Klebhan, 1893",
+          "sourceIds": {
+            "gbif-backbone": "2638435"
+          }
         }
       ]
     },
@@ -201,7 +225,8 @@
           "sourceIds": {
             "itis": [
               "6593"
-            ]
+            ],
+            "gbif-backbone": "8072182"
           },
           "authorityIds": "itis:6593"
         }
@@ -257,10 +282,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chaetosphaeridiaceae"
+    },
+    {
+      "id": "GENUS_APHANOCHAETE",
+      "name": "Aphanochaete",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_APHANOCHAETE_GLOBOSUM_NORDST_WOLLE_1887",
+          "name": "Aphanochaete globosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphanochaete",
+          "authorship": "(Nordst.) Wolle, 1887",
+          "sourceIds": {
+            "checklistbank-2008": "1008131"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaetosphaeridiaceae"
+    },
+    {
+      "id": "GENUS_NORDSTEDTIA",
+      "name": "Nordstedtia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NORDSTEDTIA_GLOBOSA_NORDST_BORZ_1892",
+          "name": "Nordstedtia globosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nordstedtia",
+          "authorship": "(Nordst.) Borzì, 1892",
+          "sourceIds": {
+            "checklistbank-2008": "1008134"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chaetosphaeridiaceae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 11,
+  "genusCount": 9,
+  "speciesCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 6,
