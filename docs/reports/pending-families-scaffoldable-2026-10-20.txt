@@ -1,0 +1,33 @@
+  pending families: 16,636
+      gbif-backbone:53147           10,023
+      checklistbank:gtdb             3,173
+      checklistbank:archive          1,658
+      checklistbank:wikispecies        508
+      checklistbank:ncbi               371
+      checklistbank:checklistbank-308974     341
+      checklistbank:otl                174
+      checklistbank:checklistbank-139831     117
+      checklistbank:checklistbank-2031      90
+      checklistbank:checklistbank-127379      65
+      checklistbank:checklistbank-2037      57
+      checklistbank:checklistbank-2008      40
+      checklistbank:colchina-312616      13
+      checklistbank:birdlife             3
+      checklistbank:mdd                  3
+  still missing from the taxonomy: 15,690
+  now present in the taxonomy:     946   <- scaffoldable or ready to import
+  species those families would add: 1,094,656
+
+  registered but no data file yet (1) -- scaffold the file before re-importing, same fix as xanthorrhoeaceae:
+           2  protozoa   incertae sedis
+
+  importable now (945), grouped by source to re-run:
+      241,943 species across 861 families -- 0-14-0-20-30-16, 0-14-0-20-34-12, 0-14-0-80-44-23, 40cm-2-53-6, Acaridae (+856 more)   [no archive recorded -- pre-dates the archive-tracking fix; re-run whichever source offered these]
+         584 species across 59 families -- acanthaceae, achariaceae, akaniaceae, anacardiaceae, annonaceae (+54 more)
+          python3 scripts/importColChecklist.py /Volumes/MacieExternal/sources/archives/checklistbank-311726/archive.zip --apply
+         570 species across 21 families -- amblyosporidae, burenellidae, caudosporidae, cercomonadidae, duboscqiidae (+16 more)
+          python3 scripts/importColChecklist.py /Volumes/MacieExternal/sources/archives/checklistbank-2011/archive.zip --apply
+         485 species across 3 families -- glugeidae, nosematidae, thelohaniidae
+          python3 scripts/importColChecklist.py /Volumes/MacieExternal/sources/archives/wikispecies/archive.zip --apply
+           6 species across 1 families -- sagittariidae
+          python3 scripts/importColChecklist.py /Volumes/MacieExternal/sources/archives/checklistbank-1113/archive.zip --apply
