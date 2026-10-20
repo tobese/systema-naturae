@@ -147,7 +147,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1895290"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1895290"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1895290",
+            "gbif-backbone": "4956411"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1895290,col:VPFQS",
           "authorship": "Knight, 1931"
@@ -188,7 +189,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1576138"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1576138"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1576138",
+            "gbif-backbone": "8591654"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1576138,col:8Z9HV",
           "authorship": "(Beede, 1907)"
@@ -271,7 +273,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1895291"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1895291"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1895291",
+            "gbif-backbone": "4956406"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1895291,col:VP9HL",
           "authorship": "Knight, 1931"
@@ -294,7 +297,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1576140"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1576140"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1576140",
+            "gbif-backbone": "8637544"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1576140,col:8Z9HX",
           "authorship": "(Nechaev, 1894)"
@@ -505,6 +509,19 @@
           "children": [],
           "uuid": "b0db6b1b-34e8-544-b59-5baee200213796",
           "description": "Streptacis volgenesis is a streptacididae species found in its native region."
+        },
+        {
+          "id": "SP_STREPTACIS_SPEC_YOO_1994",
+          "name": "Streptacis spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streptacis",
+          "authorship": "Yoo, 1994",
+          "sourceIds": {
+            "gbif-backbone": "11483989"
+          },
+          "children": []
         }
       ]
     },
@@ -550,10 +567,54 @@
           "uuid": "e1cc2d19-a65d-5fb-885-b48f9c8b6c4911"
         }
       ]
+    },
+    {
+      "id": "GENUS_DONALDINA",
+      "name": "Donaldina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DONALDINA_MINUTISSIMA_YOO_1994",
+          "name": "Donaldina minutissima",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Donaldina",
+          "authorship": "(Yoo, 1994)",
+          "sourceIds": {
+            "gbif-backbone": "9316058"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "streptacididae"
+    },
+    {
+      "id": "GENUS_MURCHISONIA",
+      "name": "Murchisonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MURCHISONIA_MARGARITA_WHIDBORNE_1892",
+          "name": "Murchisonia margarita",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Murchisonia",
+          "authorship": "(Whidborne, 1892)",
+          "sourceIds": {
+            "gbif-backbone": "9334392"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "streptacididae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 29,
+  "genusCount": 6,
+  "speciesCount": 32,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

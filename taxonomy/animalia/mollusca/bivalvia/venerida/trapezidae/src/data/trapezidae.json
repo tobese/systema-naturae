@@ -573,7 +573,11 @@
           "description": "Cypricardia bathonica (Pseudotrapezium Bathonica) is a trapezidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "101e54d8-76af-5a5-b5a-620f957ec586cb"
+          "uuid": "101e54d8-76af-5a5-b5a-620f957ec586cb",
+          "authorship": "(d'Orbigny, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "9119757"
+          }
         },
         {
           "id": "SP_CYPRICARDIA_TRIANGULARIS",
@@ -585,7 +589,11 @@
           "description": "Cypricardia triangularis (Pseudotrapezium Triangularis) is a trapezidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "b038bbfc-f421-592-907-6c32fd86b720a1"
+          "uuid": "b038bbfc-f421-592-907-6c32fd86b720a1",
+          "authorship": "(Terquem, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "11218748"
+          }
         },
         {
           "id": "SP_PSEUDOTRAPEZIUM_DEPRESSUM_NEWTON_1895",
@@ -799,7 +807,8 @@
           "uuid": "61394bcb-bec2-5f2-b87-3960a63db1a009",
           "authorship": "(Gabb 1864)",
           "sourceIds": {
-            "checklistbank": "txn:402328"
+            "checklistbank": "txn:402328",
+            "gbif-backbone": "5793927"
           }
         },
         {
@@ -960,7 +969,8 @@
           "sourceIds": {
             "col": [
               "BM3KR"
-            ]
+            ],
+            "gbif-backbone": "12224252"
           },
           "authorityIds": "col:BM3KR",
           "authorship": "(O. Boettger, 1875)"
@@ -1237,7 +1247,11 @@
           "description": "Aphaea leai is a trapezidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "4f22fa1e-291c-5ed-9ef-72d350c45662c9"
+          "uuid": "4f22fa1e-291c-5ed-9ef-72d350c45662c9",
+          "authorship": "(Salisbury, 1934)",
+          "sourceIds": {
+            "gbif-backbone": "11699507"
+          }
         },
         {
           "id": "SP_APHAEA_LEIA_SALISBURY_1934",
@@ -2407,10 +2421,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "trapezidae"
+    },
+    {
+      "id": "GENUS_TANCREDIA",
+      "name": "Tancredia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TANCREDIA_CHOVOENSIS_MANSUY_1912",
+          "name": "Tancredia chovoensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Tancredia",
+          "authorship": "(Mansuy, 1912)",
+          "sourceIds": {
+            "gbif-backbone": "11173095"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "trapezidae"
     }
   ],
-  "genusCount": 26,
-  "speciesCount": 140,
+  "genusCount": 27,
+  "speciesCount": 141,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -581,7 +581,8 @@
           "lineage": "Gastrioceras",
           "authorship": "Ruan and Zhou 1987",
           "sourceIds": {
-            "checklistbank": "txn:438864"
+            "checklistbank": "txn:438864",
+            "gbif-backbone": "11172838"
           },
           "children": [],
           "uuid": "ba8f21ce-45bd-50a-883-f0d472621bbc3e",
@@ -626,7 +627,8 @@
           "lineage": "Gastrioceras",
           "authorship": "(Patteisky 1964)",
           "sourceIds": {
-            "checklistbank": "txn:466194"
+            "checklistbank": "txn:466194",
+            "gbif-backbone": "12190294"
           },
           "children": [],
           "uuid": "1b82eea5-5ed0-5a9-9d3-3e138fc68ec7d1",
@@ -661,6 +663,19 @@
           "children": [],
           "uuid": "144ec1d6-6e2d-528-b4d-eb02f836fe8241",
           "description": "Gastrioceras kutejnikovense is a gastrioceratidae species found in its native region."
+        },
+        {
+          "id": "SP_GASTRIOCERAS_BEYRICHIANUS_KONINCK_1843",
+          "name": "Gastrioceras beyrichianus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gastrioceras",
+          "authorship": "Koninck, 1843",
+          "sourceIds": {
+            "gbif-backbone": "11162084"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -717,13 +732,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "gastrioceratidae"
+    },
+    {
+      "id": "GENUS_RETICULOCERAS",
+      "name": "Reticuloceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_RETICULOCERAS_PACHYGYRUM_YANG_1987",
+          "name": "Reticuloceras pachygyrum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Reticuloceras",
+          "authorship": "(Yang, 1987)",
+          "sourceIds": {
+            "gbif-backbone": "11206101"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gastrioceratidae"
     }
   ],
-  "speciesCount": 39,
+  "speciesCount": 41,
   "appSlug": "gastrioceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -732,6 +769,7 @@
       "orderKey": 12226851,
       "familyKey": 4623803
     },
-    "checklistbank": "Gastrioceratidae"
+    "checklistbank": "Gastrioceratidae",
+    "wikispecies": "Gastrioceratidae"
   }
 }

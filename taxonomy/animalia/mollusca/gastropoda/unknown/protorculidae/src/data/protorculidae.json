@@ -157,7 +157,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1615681"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1615681"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1615681",
+            "gbif-backbone": "8514851"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1615681,col:9WXYT",
           "authorship": "(Münster, 1841)"
@@ -200,7 +201,11 @@
           "description": "Undularia obliquelineata (Protorcula Obliquelineata) is a protorculidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "fd574cbd-4754-5a2-a36-259e315707a5d1"
+          "uuid": "fd574cbd-4754-5a2-a36-259e315707a5d1",
+          "authorship": "(Kittl, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "9236654"
+          }
         },
         {
           "id": "SP_PROTORCULA_QUADRICSTATA_GR_NDEL_2007",
@@ -670,7 +675,11 @@
           "description": "Protorcula alaskana (Chulitnacula Alaskana) is a protorculidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "71e0d754-d5fe-564-98a-8214d1de90bfc1"
+          "uuid": "71e0d754-d5fe-564-98a-8214d1de90bfc1",
+          "authorship": "(Smith, 1927)",
+          "sourceIds": {
+            "gbif-backbone": "8755007"
+          }
         },
         {
           "id": "SP_CHULITNACULA_ALASKANA_SMITH_1927",
@@ -811,10 +820,133 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "protorculidae"
+    },
+    {
+      "id": "GENUS_TROCHUS",
+      "name": "Trochus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TROCHUS_PASINI_STOPPANI_1858",
+          "name": "Trochus pasini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trochus",
+          "authorship": "(Stoppani, 1858)",
+          "sourceIds": {
+            "gbif-backbone": "9589655"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protorculidae"
+    },
+    {
+      "id": "GENUS_ANGULARIA",
+      "name": "Angularia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANGULARIA_PRAEFECTA_KITTL_1894",
+          "name": "Angularia praefecta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Angularia",
+          "authorship": "(Kittl, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "9489836"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protorculidae"
+    },
+    {
+      "id": "GENUS_ANOPTYCHIA",
+      "name": "Anoptychia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANOPTYCHIA_EOTRIASSICA_BATTEN_STOKES_1986",
+          "name": "Anoptychia eotriassica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anoptychia",
+          "authorship": "(Batten & Stokes, 1986)",
+          "sourceIds": {
+            "gbif-backbone": "9395603"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protorculidae"
+    },
+    {
+      "id": "GENUS_EUSTYLUS",
+      "name": "Eustylus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUSTYLUS_LOXONEMOIDES_KITTL_1894",
+          "name": "Eustylus loxonemoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eustylus",
+          "authorship": "(Kittl, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "9461513"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protorculidae"
+    },
+    {
+      "id": "GENUS_NERINEA",
+      "name": "Nerinea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NERINEA_PUSILLA_STOPPANI_1858",
+          "name": "Nerinea pusilla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nerinea",
+          "authorship": "(Stoppani, 1858)",
+          "sourceIds": {
+            "gbif-backbone": "9272844"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERINEA_MATTHIOLI_STOPPANI_1858",
+          "name": "Nerinea matthioli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nerinea",
+          "authorship": "(Stoppani, 1858)",
+          "sourceIds": {
+            "gbif-backbone": "9334099"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "protorculidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 48,
+  "genusCount": 14,
+  "speciesCount": 54,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

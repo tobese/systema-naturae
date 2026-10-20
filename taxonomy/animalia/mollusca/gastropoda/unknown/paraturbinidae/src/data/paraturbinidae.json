@@ -184,7 +184,8 @@
           "sourceIds": {
             "col": [
               "CRTGY"
-            ]
+            ],
+            "gbif-backbone": "12198086"
           },
           "authorityIds": "col:CRTGY",
           "description": "Chartronella belaensis is a paraturbinidae species found in its native region."
@@ -221,6 +222,19 @@
           "children": [],
           "uuid": "246053be-76c2-5fd-adc-490d81e8acee6c",
           "description": "Chartronella noszkyi is a paraturbinidae species found in its native region."
+        },
+        {
+          "id": "SP_CHARTRONELLA_ATUELENSIS_FERRARI_2014",
+          "name": "Chartronella atuelensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chartronella",
+          "authorship": "Ferrari, 2014",
+          "sourceIds": {
+            "gbif-backbone": "11166764"
+          },
+          "children": []
         }
       ]
     },
@@ -264,7 +278,11 @@
           "description": "Chartronia digoniata is a paraturbinidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5fcb0808-9675-550-929-25d274ecbbfd5e"
+          "uuid": "5fcb0808-9675-550-929-25d274ecbbfd5e",
+          "authorship": "(Ferrari, 2011)",
+          "sourceIds": {
+            "gbif-backbone": "8801910"
+          }
         }
       ]
     },
@@ -375,10 +393,54 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Paraturbinidae"
+    },
+    {
+      "id": "GENUS_TURBO",
+      "name": "Turbo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TURBO_PHILEMON_D_ORBIGNY_1853",
+          "name": "Turbo philemon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turbo",
+          "authorship": "(d'Orbigny, 1853)",
+          "sourceIds": {
+            "gbif-backbone": "9033815"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraturbinidae"
+    },
+    {
+      "id": "GENUS_EUCYCLUS",
+      "name": "Eucyclus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EUCYCLUS_PACIFICUS_JAWORSKI_1922",
+          "name": "Eucyclus pacificus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eucyclus",
+          "authorship": "(Jaworski, 1922)",
+          "sourceIds": {
+            "gbif-backbone": "9331468"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paraturbinidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 21,
+  "genusCount": 7,
+  "speciesCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

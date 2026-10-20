@@ -215,7 +215,8 @@
           "lineage": "Liparoceras",
           "authorship": "Callomon and Grădinaru 2005",
           "sourceIds": {
-            "checklistbank": "txn:439546"
+            "checklistbank": "txn:439546",
+            "gbif-backbone": "11207911"
           },
           "children": [],
           "uuid": "15f10460-1b11-5e5-8df-c464fc4de28507",
@@ -1101,13 +1102,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "liparoceratidae"
+    },
+    {
+      "id": "GENUS_AMMONITES",
+      "name": "Ammonites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMMONITES_STRIATUS_REINECKE_1820",
+          "name": "Ammonites striatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ammonites",
+          "authorship": "(Reinecke, 1820)",
+          "sourceIds": {
+            "gbif-backbone": "8219033"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "liparoceratidae"
     }
   ],
-  "speciesCount": 61,
+  "speciesCount": 62,
   "appSlug": "liparoceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 10,
+  "genusCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

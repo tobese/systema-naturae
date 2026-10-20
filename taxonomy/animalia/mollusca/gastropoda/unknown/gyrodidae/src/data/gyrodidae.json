@@ -129,7 +129,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1639399"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1639399"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1639399",
+            "gbif-backbone": "9818271"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1639399,col:B55HZ",
           "authorship": "(Michelin, 1838)"
@@ -1070,12 +1071,47 @@
           "children": [],
           "uuid": "baecacc6-dfee-5f0-99e-804f0bbe174dfb",
           "description": "Gyrodes greeni is a gyrodidae species found in its native region."
+        },
+        {
+          "id": "SP_GYRODES_GAULTINUS_A_D_ORBIGNY_1842",
+          "name": "Gyrodes gaultinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gyrodes",
+          "authorship": "(A.d'Orbigny, 1842)",
+          "sourceIds": {
+            "gbif-backbone": "12207178"
+          },
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_NATICA",
+      "name": "Natica",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NATICA_BRUNSVICENSIS_MULLER_1898",
+          "name": "Natica brunsvicensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Natica",
+          "authorship": "(Muller, 1898)",
+          "sourceIds": {
+            "gbif-backbone": "11119493"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gyrodidae"
     }
   ],
-  "genusCount": 1,
-  "speciesCount": 58,
+  "genusCount": 2,
+  "speciesCount": 60,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

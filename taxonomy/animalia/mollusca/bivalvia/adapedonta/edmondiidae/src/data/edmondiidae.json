@@ -193,7 +193,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1558527"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1558527"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1558527",
+            "gbif-backbone": "4587021"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1558527,col:8V2LH",
           "authorship": "(J. De C. Sowerby, 1825)"
@@ -447,6 +448,18 @@
           "children": [],
           "uuid": "191ce120-4887-539-80c-6d6b0d8abcadd6",
           "description": "Cardiomorpha obovata is a edmondiidae species found in its native region."
+        },
+        {
+          "id": "SP_CARDIOMORPHA_GYMNITUM",
+          "name": "Cardiomorpha gymnitum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardiomorpha",
+          "sourceIds": {
+            "gbif-backbone": "11866982"
+          },
+          "children": []
         }
       ]
     },
@@ -1059,7 +1072,8 @@
           "uuid": "40677e28-2c84-582-9bd-12da7a0de0a847",
           "authorship": "(Hall 1858)",
           "sourceIds": {
-            "checklistbank": "txn:110393"
+            "checklistbank": "txn:110393",
+            "gbif-backbone": "9557637"
           }
         },
         {
@@ -1174,7 +1188,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1580323"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580323"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580323",
+            "gbif-backbone": "8706650"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1580323,col:94LQK",
           "authorship": "(J. Phillips, 1836)"
@@ -1216,7 +1231,8 @@
           "uuid": "698a6275-ce24-52d-8d4-2ceccc58103416",
           "authorship": "(Grabau 1934)",
           "sourceIds": {
-            "checklistbank": "txn:229540"
+            "checklistbank": "txn:229540",
+            "gbif-backbone": "8560343"
           }
         },
         {
@@ -1727,7 +1743,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1575151"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1575151"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1575151",
+            "gbif-backbone": "11621354"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1575151,col:8ZGTH",
           "authorship": "(Münster, 1841)"
@@ -1870,7 +1887,11 @@
           "description": "Unicardium cardioides is a edmondiidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "d4c3d0bc-b4ff-5de-a4c-6aaf81c4ffd737"
+          "uuid": "d4c3d0bc-b4ff-5de-a4c-6aaf81c4ffd737",
+          "authorship": "(Phillips, 1829)",
+          "sourceIds": {
+            "gbif-backbone": "9468848"
+          }
         },
         {
           "id": "SP_UNICARDIUM_CONCENTRICUM_WADE_1926",
@@ -2350,10 +2371,247 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_ARCA",
+      "name": "Arca",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ARCA_SCHMIDII_GEINITZ_1842",
+          "name": "Arca schmidii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Arca",
+          "authorship": "(Geinitz, 1842)",
+          "sourceIds": {
+            "gbif-backbone": "11150394"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_CARDIUM",
+      "name": "Cardium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARDIUM_VERIOTI_BUVIGNIER_1852",
+          "name": "Cardium verioti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardium",
+          "authorship": "(Buvignier, 1852)",
+          "sourceIds": {
+            "gbif-backbone": "9423408"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CARDIUM_ANNULATUM_GABB_1864",
+          "name": "Cardium annulatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardium",
+          "authorship": "(Gabb, 1864)",
+          "sourceIds": {
+            "gbif-backbone": "11207235"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_BUCARDIA",
+      "name": "Bucardia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BUCARDIA_MOREAUENSIS_MEERK_HAYDEN_1861",
+          "name": "Bucardia moreauensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bucardia",
+          "authorship": "(Meerk & Hayden, 1861)",
+          "sourceIds": {
+            "gbif-backbone": "9497215"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_SPHAERIOLA",
+      "name": "Sphaeriola",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SPHAERIOLA_ENDOTRACHYS_MEEK_1876",
+          "name": "Sphaeriola endotrachys",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sphaeriola",
+          "authorship": "(Meek, 1876)",
+          "sourceIds": {
+            "gbif-backbone": "8971907"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_GLYCIMERIS",
+      "name": "Glycimeris",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GLYCIMERIS_GRANDIS_STUCKENBERG_1905",
+          "name": "Glycimeris grandis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Glycimeris",
+          "authorship": "(Stuckenberg, 1905)",
+          "sourceIds": {
+            "gbif-backbone": "9283658"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_ASTARTE",
+      "name": "Astarte",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ASTARTE_PRIMULA_BARRANDE_1881",
+          "name": "Astarte primula",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astarte",
+          "authorship": "(Barrande, 1881)",
+          "sourceIds": {
+            "gbif-backbone": "11376195"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTARTE_NEBRASCENSIS_GEINITZ_1866",
+          "name": "Astarte nebrascensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astarte",
+          "authorship": "(Geinitz, 1866)",
+          "sourceIds": {
+            "gbif-backbone": "9468214"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_SOLENIMYA",
+      "name": "Solenimya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SOLENIMYA_SOLENIFORMIS_COX_1857",
+          "name": "Solenimya soleniformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solenimya",
+          "authorship": "(Cox, 1857)",
+          "sourceIds": {
+            "gbif-backbone": "11143555"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_HIATELLA",
+      "name": "Hiatella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HIATELLA_SULCATA_FLEMING_1828",
+          "name": "Hiatella sulcata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hiatella",
+          "authorship": "(Fleming, 1828)",
+          "sourceIds": {
+            "gbif-backbone": "11135770"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
+    },
+    {
+      "id": "GENUS_SOLENOMYA",
+      "name": "Solenomya",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SOLENOMYA_ANODONTOIDES_MEEK_1875",
+          "name": "Solenomya anodontoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solenomya",
+          "authorship": "(Meek, 1875)",
+          "sourceIds": {
+            "gbif-backbone": "11151166"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SOLENOMYA_MEEKIANA_HERRICK_1887",
+          "name": "Solenomya meekiana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Solenomya",
+          "authorship": "(Herrick, 1887)",
+          "sourceIds": {
+            "gbif-backbone": "11212456"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "edmondiidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 147,
+  "genusCount": 26,
+  "speciesCount": 160,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

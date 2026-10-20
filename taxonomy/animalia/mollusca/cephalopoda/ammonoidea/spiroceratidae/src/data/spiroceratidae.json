@@ -70,7 +70,8 @@
           "lineage": "Spiroceras",
           "authorship": "Romand and Petouraud 1927",
           "sourceIds": {
-            "checklistbank": "txn:351702"
+            "checklistbank": "txn:351702",
+            "gbif-backbone": "9633528"
           },
           "children": [],
           "uuid": "1a562c2b-fefd-590-93d-7dd37059053a5a",
@@ -195,6 +196,18 @@
           "children": [],
           "uuid": "ea916836-bab3-5bf-924-34080bc6353e69",
           "description": "Spiroceras rarispina is a spiroceratidae species found in its native region."
+        },
+        {
+          "id": "SP_SPIROCERAS_BIFURCATUS",
+          "name": "Spiroceras bifurcatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Spiroceras",
+          "sourceIds": {
+            "gbif-backbone": "9287635"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -271,13 +284,56 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "spiroceratidae"
+    },
+    {
+      "id": "GENUS_HAMITES",
+      "name": "Hamites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HAMITES_BIFURCATI",
+          "name": "Hamites bifurcati",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hamites",
+          "sourceIds": {
+            "gbif-backbone": "10266536"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spiroceratidae"
+    },
+    {
+      "id": "GENUS_ANCYLOCERAS",
+      "name": "Ancyloceras",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANCYLOCERAS_BISPINATUS_BAUGIER_SAUZ_1843",
+          "name": "Ancyloceras bispinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ancyloceras",
+          "authorship": "(Baugier & Sauzé, 1843)",
+          "sourceIds": {
+            "gbif-backbone": "8991069"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "spiroceratidae"
     }
   ],
-  "speciesCount": 15,
+  "speciesCount": 18,
   "appSlug": "spiroceratidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Mollusca > Cephalopoda",
-  "genusCount": 4,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

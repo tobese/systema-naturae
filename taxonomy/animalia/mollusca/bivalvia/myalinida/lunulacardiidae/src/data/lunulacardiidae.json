@@ -255,7 +255,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1435505"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1435505"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1435505",
+            "gbif-backbone": "10813196"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1435505,col:7RPNT",
           "authorship": "(Deshayes, 1857)"
@@ -1530,10 +1531,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "lunulacardiidae"
+    },
+    {
+      "id": "GENUS_PINNOPSIS",
+      "name": "Pinnopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PINNOPSIS_ORNATUS_HALL_1843",
+          "name": "Pinnopsis ornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pinnopsis",
+          "authorship": "(Hall, 1843)",
+          "sourceIds": {
+            "gbif-backbone": "9490599"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lunulacardiidae"
+    },
+    {
+      "id": "GENUS_CYPRICARDITES",
+      "name": "Cypricardites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYPRICARDITES_MARCELLENSIS_VANUXEM_1842",
+          "name": "Cypricardites marcellensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypricardites",
+          "authorship": "(Vanuxem, 1842)",
+          "sourceIds": {
+            "gbif-backbone": "9257017"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lunulacardiidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 78,
+  "genusCount": 19,
+  "speciesCount": 80,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

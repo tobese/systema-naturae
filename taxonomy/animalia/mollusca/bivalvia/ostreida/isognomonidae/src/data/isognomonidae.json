@@ -605,7 +605,8 @@
           "sourceIds": {
             "col": [
               "BDR4S"
-            ]
+            ],
+            "gbif-backbone": "12251343"
           },
           "authorityIds": "col:BDR4S",
           "authorship": "(M. Hörnes, 1867)"
@@ -755,7 +756,11 @@
           "description": "Pedalion panzana (Isognomon Panzana) is a isognomonidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "395ad49e-5307-549-a9a-f1e4b8a0bd8fb2"
+          "uuid": "395ad49e-5307-549-a9a-f1e4b8a0bd8fb2",
+          "authorship": "(Loel & Corey, 1932)",
+          "sourceIds": {
+            "gbif-backbone": "9034285"
+          }
         },
         {
           "id": "SP_PERNA_COOLYENENSIS_FELDTMANN_1963",
@@ -875,7 +880,11 @@
           "description": "Perna quadrisulcata (Isognomon Quadrisulcata) is a isognomonidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "19160a39-3f11-5be-a7c-9e883e8a781113"
+          "uuid": "19160a39-3f11-5be-a7c-9e883e8a781113",
+          "authorship": "(Ihering, 1897)",
+          "sourceIds": {
+            "gbif-backbone": "9431571"
+          }
         },
         {
           "id": "SP_PERNA_RAULINIANA_A_D_ORBIGNY_1846",
@@ -3462,10 +3471,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "isognomonidae"
+    },
+    {
+      "id": "GENUS_GERVILLIA",
+      "name": "Gervillia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GERVILLIA_PLANATA_BROILI_1904",
+          "name": "Gervillia planata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gervillia",
+          "authorship": "(Broili, 1904)",
+          "sourceIds": {
+            "gbif-backbone": "11212469"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GERVILLIA_BATHONICA_MORRIS_LYCETT_1853",
+          "name": "Gervillia bathonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gervillia",
+          "authorship": "(Morris & Lycett, 1853)",
+          "sourceIds": {
+            "gbif-backbone": "9363399"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isognomonidae"
+    },
+    {
+      "id": "GENUS_OSTRACITES",
+      "name": "Ostracites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OSTRACITES_ISOGNOMOIDES_STAHL_1824",
+          "name": "Ostracites isognomoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ostracites",
+          "authorship": "(Stahl, 1824)",
+          "sourceIds": {
+            "gbif-backbone": "9314550"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "isognomonidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 210,
+  "genusCount": 21,
+  "speciesCount": 213,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

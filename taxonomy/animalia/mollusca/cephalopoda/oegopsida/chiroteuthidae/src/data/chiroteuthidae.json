@@ -36,7 +36,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:342249"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:342249"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:342249",
+            "gbif-backbone": "2290560"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:342249,col:4JJPV,itis:556255"
         },
@@ -58,7 +59,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:410392"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:410392"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:410392",
+            "gbif-backbone": "6521526"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:410392,col:4JJPW",
           "authorship": "(Chun, 1908)"
@@ -85,7 +87,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:238753"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:238753"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:238753",
+            "gbif-backbone": "2290562"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:238753,col:4JJPX,itis:556295"
         },
@@ -107,7 +110,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:410393"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:410393"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:410393",
+            "gbif-backbone": "6521525"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:410393,col:4JJPY",
           "authorship": "(Chun, 1908)"
@@ -134,7 +138,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:342250"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:342250"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:342250",
+            "gbif-backbone": "2290566"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:342250,col:4JJPZ,itis:556642"
         },
@@ -462,11 +467,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chiroteuthis",
           "sourceIds": {
-            "checklistbank": "989750"
+            "checklistbank": "989750",
+            "gbif-backbone": "6181249"
           },
           "children": [],
           "uuid": "713dba9c-c100-5c4-a48-d09a681c1f2b48",
-          "description": "Chiroteuthis picteti is a chiroteuthidae species found in its native region."
+          "description": "Chiroteuthis picteti is a chiroteuthidae species found in its native region.",
+          "authorship": "Salcedo-Vargas, 1996"
         },
         {
           "id": "SP_CHIROTEUTHIS_SP",
@@ -509,7 +516,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:342273"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:342273"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:342273",
+            "gbif-backbone": "4357043"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:342273,col:HCHP",
           "authorship": "(Lu, 1977)"
@@ -647,7 +655,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:238742"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:238742"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:238742",
+            "gbif-backbone": "4357041"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:238742,col:3HDYW",
           "authorship": "(Vérany, 1839)"
@@ -1028,7 +1037,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:394999"
           },
-          "uuid": "0d9b844b-0903-4716-9eec-2fdc9581fd97"
+          "uuid": "0d9b844b-0903-4716-9eec-2fdc9581fd97",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1055,10 +1065,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chiroteuthidae"
+    },
+    {
+      "id": "GENUS_XENASPIS",
+      "name": "Xenaspis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XENASPIS_BEEDEI_SMITH_1927",
+          "name": "Xenaspis beedei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xenaspis",
+          "authorship": "(Smith, 1927)",
+          "sourceIds": {
+            "gbif-backbone": "11154908"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chiroteuthidae"
+    },
+    {
+      "id": "GENUS_DANUBITES",
+      "name": "Danubites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DANUBITES_LISSARENSIS_DIENER_1897",
+          "name": "Danubites lissarensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Danubites",
+          "authorship": "(Diener, 1897)",
+          "sourceIds": {
+            "gbif-backbone": "11219375"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chiroteuthidae"
     }
   ],
-  "genusCount": 14,
-  "speciesCount": 56,
+  "genusCount": 16,
+  "speciesCount": 58,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

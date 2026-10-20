@@ -26,7 +26,8 @@
           "sourceIds": {
             "col": [
               "375BM"
-            ]
+            ],
+            "gbif-backbone": "4604210"
           },
           "authorityIds": "col:375BM",
           "authorship": "(Reeve, 1848)"
@@ -98,7 +99,11 @@
           "description": "Dolicholatirus bronni is a dolicholatiridae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "6d3ceff4-f248-59b-86a-5d31a888c0d468"
+          "uuid": "6d3ceff4-f248-59b-86a-5d31a888c0d468",
+          "authorship": "(Michelotti, 1847)",
+          "sourceIds": {
+            "gbif-backbone": "4958964"
+          }
         },
         {
           "id": "SP_DOLICHOLATIRUS_CAYOHUESONICUS",
@@ -304,7 +309,8 @@
             "itis": [
               "74218"
             ],
-            "checklistbank": "605646"
+            "checklistbank": "605646",
+            "gbif-backbone": "2303985"
           },
           "authorityIds": "col:375C3,itis:74218",
           "authorship": "(T.L. McGinty, 1955)"
@@ -364,7 +370,8 @@
           "sourceIds": {
             "col": [
               "7R4L8"
-            ]
+            ],
+            "gbif-backbone": "10817191"
           },
           "authorityIds": "col:7R4L8",
           "authorship": "(H. J. Finlay, 1927)"
@@ -622,6 +629,32 @@
           },
           "authorityIds": "col:V5PHS",
           "description": "Dolicholatirus striatulus is a dolicholatiridae species found in its native region."
+        },
+        {
+          "id": "SP_DOLICHOLATIRUS_SPEC_HANSEN_2019",
+          "name": "Dolicholatirus spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolicholatirus",
+          "authorship": "Hansen, 2019",
+          "sourceIds": {
+            "gbif-backbone": "11652491"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_DOLICHOLATIRUS_FUNICULOSUS_LAMARCK_1803",
+          "name": "Dolicholatirus funiculosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dolicholatirus",
+          "authorship": "(Lamarck, 1803)",
+          "sourceIds": {
+            "gbif-backbone": "11120137"
+          },
+          "children": []
         }
       ]
     },
@@ -1486,10 +1519,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Dolicholatiridae"
+    },
+    {
+      "id": "GENUS_LATHYRUS",
+      "name": "Lathyrus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LATHYRUS_HONTENSIS_CSEPREGHY_MEZNERICS_1956",
+          "name": "Lathyrus hontensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lathyrus",
+          "authorship": "Csepreghy-Meznerics, 1956",
+          "sourceIds": {
+            "gbif-backbone": "12184258"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dolicholatiridae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 80,
+  "genusCount": 14,
+  "speciesCount": 83,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

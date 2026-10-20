@@ -105,7 +105,11 @@
           "description": "Azeca hungarica is a azecidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "cfaf5996-e92e-5ed-942-fad1bacca8dece"
+          "uuid": "cfaf5996-e92e-5ed-942-fad1bacca8dece",
+          "authorship": "(Gaál, 1910)",
+          "sourceIds": {
+            "gbif-backbone": "10260048"
+          }
         },
         {
           "id": "SP_AZECA_LEMOINEI",
@@ -342,7 +346,8 @@
             ],
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:934307"
-            ]
+            ],
+            "gbif-backbone": "9457639"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:934307,col:67YN3",
           "authorship": "(Gottschick, 1911)"
@@ -543,6 +548,19 @@
           "children": [],
           "uuid": "1f9417bd-9b3c-594-ac4-ecc2eb6427122c",
           "description": "Azeca lubricella is a azecidae species found in its native region."
+        },
+        {
+          "id": "SP_AZECA_SPEC_BOETTGER_1870",
+          "name": "Azeca spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Azeca",
+          "authorship": "Boettger, 1870",
+          "sourceIds": {
+            "gbif-backbone": "11740621"
+          },
+          "children": []
         }
       ]
     },
@@ -606,7 +624,9 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1001985"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1001985"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1001985",
+            "checklistbank-2008": "61733",
+            "gbif-backbone": "4568083"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1001985,col:6BLF4",
           "authorship": "(de Folin & Bérillon, 1877)"
@@ -672,7 +692,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1393684"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1393684"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1393684",
+            "gbif-backbone": "4568081"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1393684,col:7QW88",
           "authorship": "(Kobelt, 1894)"
@@ -781,7 +802,8 @@
           "uuid": "d91ddebb-fa09-542-af3-2f13ddc327170c",
           "authorship": "(Calcara, 1840)",
           "sourceIds": {
-            "checklistbank": "286189"
+            "checklistbank": "286189",
+            "gbif-backbone": "9150313"
           }
         },
         {
@@ -949,7 +971,8 @@
           "sourceIds": {
             "col": [
               "87BG8"
-            ]
+            ],
+            "gbif-backbone": "11195140"
           },
           "authorityIds": "col:87BG8",
           "description": "Hypnophila maroccana is a azecidae species found in its native region."
@@ -1169,7 +1192,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1301766"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1301766"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1301766",
+            "gbif-backbone": "10262878"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1301766,col:3GS8T",
           "authorship": "(Esu, 1978)"
@@ -1604,7 +1628,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:933927"
           },
-          "uuid": "6fd70fd8-724a-4453-8162-8e0c90192437"
+          "uuid": "6fd70fd8-724a-4453-8162-8e0c90192437",
+          "children": []
         },
         {
           "id": "SP_HYPNOPHILA_PSATHYROLENA_BOURGUIGNAT_1859",
@@ -1617,7 +1642,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1258668"
           },
-          "uuid": "63e3c7b1-a9b5-40dd-8796-42df76dac532"
+          "uuid": "63e3c7b1-a9b5-40dd-8796-42df76dac532",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1670,15 +1696,59 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1165321"
           },
-          "uuid": "fa514a26-1373-4ab1-94b4-a36581c5bc42"
+          "uuid": "fa514a26-1373-4ab1-94b4-a36581c5bc42",
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "azecidae"
+    },
+    {
+      "id": "GENUS_CARYCHIUM",
+      "name": "Carychium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARYCHIUM_MENKEANUM_C_PFEIFFER_1821",
+          "name": "Carychium menkeanum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Carychium",
+          "authorship": "C. Pfeiffer, 1821",
+          "sourceIds": {
+            "checklistbank-2008": "412614"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "azecidae"
+    },
+    {
+      "id": "GENUS_COCHLICOPA",
+      "name": "Cochlicopa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_COCHLICOPA_SUBRIMATA",
+          "name": "Cochlicopa subrimata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cochlicopa",
+          "sourceIds": {
+            "gbif-backbone": "8881241"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "azecidae"
     }
   ],
-  "genusCount": 12,
-  "speciesCount": 90,
+  "genusCount": 14,
+  "speciesCount": 93,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

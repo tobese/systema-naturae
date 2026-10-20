@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Streblopteria egorovi (Streblopterinella Egorovi) is a streblopterinellidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "177d2fa6-b684-53b-a3e-b6a8e0379edf54"
+          "uuid": "177d2fa6-b684-53b-a3e-b6a8e0379edf54",
+          "children": []
         },
         {
           "id": "SP_STREBLOPTERIA_JAKUTICA",
@@ -31,7 +32,8 @@
           "subspeciesCount": 0,
           "description": "Streblopteria jakutica (Streblopterinella Jakutica) is a streblopterinellidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "28f359ac-b819-55a-b28-8ac86dc9e2cb9e"
+          "uuid": "28f359ac-b819-55a-b28-8ac86dc9e2cb9e",
+          "children": []
         },
         {
           "id": "SP_STREBLOPTERIA_NEWELLI",
@@ -42,9 +44,58 @@
           "subspeciesCount": 0,
           "description": "Streblopteria newelli (Streblopterinella Newelli) is a streblopterinellidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "8cc4328a-a85f-5d8-b68-de2af3d2735c6d"
+          "uuid": "8cc4328a-a85f-5d8-b68-de2af3d2735c6d",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_STREBLOPTERIA",
+      "name": "Streblopteria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STREBLOPTERIA_JAKUTICA_KURUSHIN_1985",
+          "name": "Streblopteria jakutica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streblopteria",
+          "authorship": "(Kurushin, 1985)",
+          "sourceIds": {
+            "gbif-backbone": "9417593"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STREBLOPTERIA_NEWELLI_KURUSHIN_1982",
+          "name": "Streblopteria newelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streblopteria",
+          "authorship": "(Kurushin, 1982)",
+          "sourceIds": {
+            "gbif-backbone": "9467311"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STREBLOPTERIA_EGOROVI_KURUSHIN_1984",
+          "name": "Streblopteria egorovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Streblopteria",
+          "authorship": "(Kurushin, 1984)",
+          "sourceIds": {
+            "gbif-backbone": "9612618"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "streblopterinellidae"
     }
   ],
   "sourceIds": {
@@ -54,5 +105,7 @@
       "classKey": 137,
       "familyKey": 9539087
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 6
 }

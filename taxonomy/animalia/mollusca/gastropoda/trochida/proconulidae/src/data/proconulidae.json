@@ -107,7 +107,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:850488"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:850488"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:850488",
+            "gbif-backbone": "7579715"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:850488,col:4MP63",
           "authorship": "(Cossmann, 1885)"
@@ -156,7 +157,11 @@
           "description": "Trochus arabiensis (Proconulus Arabiensis) is a proconulidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "174ef55b-9986-5f7-83d-6d2b5fa09eac6d"
+          "uuid": "174ef55b-9986-5f7-83d-6d2b5fa09eac6d",
+          "authorship": "(Newton, 1908)",
+          "sourceIds": {
+            "gbif-backbone": "9318644"
+          }
         },
         {
           "id": "SP_TROCHUS_GUISEI",
@@ -168,7 +173,11 @@
           "description": "Trochus guisei (Proconulus Guisei) is a proconulidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "1c340cbd-5f7c-5c3-953-250f192c93e5d1"
+          "uuid": "1c340cbd-5f7c-5c3-953-250f192c93e5d1",
+          "authorship": "(Lycett, 1863)",
+          "sourceIds": {
+            "gbif-backbone": "9569486"
+          }
         },
         {
           "id": "SP_TROCHUS_IBBETSONI",
@@ -180,7 +189,11 @@
           "description": "Trochus ibbetsoni (Proconulus Ibbetsoni) is a proconulidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "4000d7e6-2d68-5d3-b42-dc1ca29cd74ce1"
+          "uuid": "4000d7e6-2d68-5d3-b42-dc1ca29cd74ce1",
+          "authorship": "(Morris & Lycett, 1851)",
+          "sourceIds": {
+            "gbif-backbone": "9275109"
+          }
         },
         {
           "id": "SP_TROCHUS_SCHERINUS",
@@ -192,7 +205,11 @@
           "description": "Trochus scherinus (Proconulus Scherinus) is a proconulidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "a0e01179-b348-5c7-951-3f3d51c5ff9054"
+          "uuid": "a0e01179-b348-5c7-951-3f3d51c5ff9054",
+          "authorship": "(Gemmellaro, 1874)",
+          "sourceIds": {
+            "gbif-backbone": "9463853"
+          }
         },
         {
           "id": "SP_PROCONULUS_JADAVPURIENSIS_S_S_DAS_BARDHAN_LAHIRI_1999",
@@ -297,7 +314,8 @@
           "sourceIds": {
             "col": [
               "7ST5M"
-            ]
+            ],
+            "gbif-backbone": "11111909"
           },
           "authorityIds": "col:7ST5M",
           "description": "Proconulus rouillieri is a proconulidae species found in its native region."
@@ -481,6 +499,19 @@
           "children": [],
           "uuid": "5108a1ce-e8eb-504-aee-d3d53f7efba933",
           "description": "Proconulus galatensis is a proconulidae species found in its native region."
+        },
+        {
+          "id": "SP_PROCONULUS_ARGENTINUS_FERRARI_2014",
+          "name": "Proconulus argentinus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Proconulus",
+          "authorship": "Ferrari, 2014",
+          "sourceIds": {
+            "gbif-backbone": "11179475"
+          },
+          "children": []
         }
       ]
     },
@@ -509,7 +540,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1052735"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1052735"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1052735",
+            "gbif-backbone": "9539011"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1052735,col:7648F",
           "authorship": "(M. Schmidt, 1905)"
@@ -752,10 +784,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "proconulidae"
+    },
+    {
+      "id": "GENUS_CHEMNITZIA",
+      "name": "Chemnitzia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHEMNITZIA_GALATENSIS_GEMMELLARO_1911",
+          "name": "Chemnitzia galatensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chemnitzia",
+          "authorship": "(Gemmellaro, 1911)",
+          "sourceIds": {
+            "gbif-backbone": "9523143"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "proconulidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 42,
+  "genusCount": 9,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

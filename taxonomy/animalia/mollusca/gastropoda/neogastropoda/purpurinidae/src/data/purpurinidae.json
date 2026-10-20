@@ -104,7 +104,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1052749"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1052749"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1052749",
+            "gbif-backbone": "9489481"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1052749,col:4QKQX",
           "authorship": "(A. d'Orbigny, 1850)"
@@ -220,7 +221,8 @@
           "sourceIds": {
             "col": [
               "86YSL"
-            ]
+            ],
+            "gbif-backbone": "11188698"
           },
           "authorityIds": "col:86YSL",
           "description": "Purpurina serrata is a purpurinidae species found in its native region."
@@ -238,7 +240,8 @@
           "sourceIds": {
             "col": [
               "872MC"
-            ]
+            ],
+            "gbif-backbone": "11202357"
           },
           "authorityIds": "col:872MC",
           "description": "Purpurina condensata is a purpurinidae species found in its native region."
@@ -986,6 +989,19 @@
           "children": [],
           "uuid": "915e08bd-151d-5ca-b90-15bea789451b66",
           "description": "Microschiza scalaris is a purpurinidae species found in its native region."
+        },
+        {
+          "id": "SP_MICROSCHIZA_PHILENOR_D_ORBIGNY_1853",
+          "name": "Microschiza philenor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Microschiza",
+          "authorship": "(d'Orbigny, 1853)",
+          "sourceIds": {
+            "gbif-backbone": "12264146"
+          },
+          "children": []
         }
       ]
     },
@@ -1022,6 +1038,19 @@
           "children": [],
           "uuid": "f872b434-fb66-519-9e0-ec7741c58c7402",
           "description": "Pseudalaria etheridgii is a purpurinidae species found in its native region."
+        },
+        {
+          "id": "SP_PSEUDALARIA_UNICARINATA_EUDES_DESLONGCHAMPS_1842",
+          "name": "Pseudalaria unicarinata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudalaria",
+          "authorship": "(Eudes-Deslongchamps, 1842)",
+          "sourceIds": {
+            "gbif-backbone": "11201060"
+          },
+          "children": []
         }
       ]
     },
@@ -1078,7 +1107,11 @@
           "description": "Purpuroidea hungarica (Parangularia Hungarica) is a purpurinidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "98ddbf26-e4fe-581-af7-7aae6359f1536f"
+          "uuid": "98ddbf26-e4fe-581-af7-7aae6359f1536f",
+          "authorship": "(Kutassy, 1933)",
+          "sourceIds": {
+            "gbif-backbone": "9492654"
+          }
         },
         {
           "id": "SP_PARANGULARIA_HUNGARICA_KUTASSY_1933",
@@ -1528,10 +1561,225 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_PTYCHOSTOMA",
+      "name": "Ptychostoma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PTYCHOSTOMA_FASCIATUM_KITTL_1892",
+          "name": "Ptychostoma fasciatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ptychostoma",
+          "authorship": "(Kittl, 1892)",
+          "sourceIds": {
+            "gbif-backbone": "9538688"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_CHEMNITZIA",
+      "name": "Chemnitzia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHEMNITZIA_NOTA_VON_AMMON_1893",
+          "name": "Chemnitzia nota",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chemnitzia",
+          "authorship": "von Ammon, 1893",
+          "sourceIds": {
+            "gbif-backbone": "12236846"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_LITTORINA",
+      "name": "Littorina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LITTORINA_CLATHRATA_DESHAYES_1855",
+          "name": "Littorina clathrata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Littorina",
+          "authorship": "(Deshayes, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "9329684"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_TURBO",
+      "name": "Turbo",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TURBO_SEMIORNATUS_GOLDFUSS_1844",
+          "name": "Turbo semiornatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turbo",
+          "authorship": "(Goldfuss, 1844)",
+          "sourceIds": {
+            "gbif-backbone": "9447076"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TURBO_RECTECOSTATUS_HAUER_1851",
+          "name": "Turbo rectecostatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turbo",
+          "authorship": "(Hauer, 1851)",
+          "sourceIds": {
+            "gbif-backbone": "9540351"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TURBO_PLEUROTOMARIUS_M_NSTER_1841",
+          "name": "Turbo pleurotomarius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turbo",
+          "authorship": "(Münster, 1841)",
+          "sourceIds": {
+            "gbif-backbone": "9179244"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TURBO_ELABORATUS_LYCETT_1850",
+          "name": "Turbo elaboratus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Turbo",
+          "authorship": "(Lycett, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "9481905"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_ALARIA",
+      "name": "Alaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALARIA_ETHERIDGII_TAWNEY_1873",
+          "name": "Alaria etheridgii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alaria",
+          "authorship": "(Tawney, 1873)",
+          "sourceIds": {
+            "gbif-backbone": "9292199"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_CENTROGONIA",
+      "name": "Centrogonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CENTROGONIA_CURETI_COSSMANN_1899",
+          "name": "Centrogonia cureti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Centrogonia",
+          "authorship": "(Cossmann, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "9336246"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_ACTAEONINA",
+      "name": "Actaeonina",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACTAEONINA_ARMATA_STOPPANI_1857",
+          "name": "Actaeonina armata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actaeonina",
+          "authorship": "(Stoppani, 1857)",
+          "sourceIds": {
+            "gbif-backbone": "9408320"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
+    },
+    {
+      "id": "GENUS_PLEUROTOMARIA",
+      "name": "Pleurotomaria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PLEUROTOMARIA_CONCAVA_M_NSTER_1841",
+          "name": "Pleurotomaria concava",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pleurotomaria",
+          "authorship": "(Münster, 1841)",
+          "sourceIds": {
+            "gbif-backbone": "4982030"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "purpurinidae"
     }
   ],
-  "genusCount": 15,
-  "speciesCount": 88,
+  "genusCount": 23,
+  "speciesCount": 101,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

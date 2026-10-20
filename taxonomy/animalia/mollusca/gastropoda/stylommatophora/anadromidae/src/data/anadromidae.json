@@ -266,7 +266,8 @@
           "sourceIds": {
             "col": [
               "7RZ3K"
-            ]
+            ],
+            "gbif-backbone": "11219345"
           },
           "authorityIds": "col:7RZ3K",
           "description": "Lychnus pradoanus is a anadromidae species found in its native region."
@@ -339,6 +340,19 @@
           "children": [],
           "uuid": "3793bc72-bfb3-5fa-b49-96a4997b98a082",
           "description": "Lychnus pangymna is a anadromidae species found in its native region."
+        },
+        {
+          "id": "SP_LYCHNUS_ARAGONENSIS_REPELIN_1920",
+          "name": "Lychnus aragonensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lychnus",
+          "authorship": "Repelin, 1920",
+          "sourceIds": {
+            "gbif-backbone": "11185453"
+          },
+          "children": []
         }
       ]
     },
@@ -379,7 +393,11 @@
           "description": "Anadromus proboscidea is a anadromidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "69de8d9c-4174-585-81c-537c6145cf8a2b"
+          "uuid": "69de8d9c-4174-585-81c-537c6145cf8a2b",
+          "authorship": "(Matheron, 1843)",
+          "sourceIds": {
+            "gbif-backbone": "10580550"
+          }
         },
         {
           "id": "SP_ANADROMUS_PROBOSCIDEUS_MATHERON_1843",
@@ -451,10 +469,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "anadromidae"
+    },
+    {
+      "id": "GENUS_DISCOHELIX",
+      "name": "Discohelix",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DISCOHELIX_PANGYMNA_COSSMANN_1918",
+          "name": "Discohelix pangymna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Discohelix",
+          "authorship": "(Cossmann, 1918)",
+          "sourceIds": {
+            "gbif-backbone": "9546516"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "anadromidae"
     }
   ],
-  "genusCount": 4,
-  "speciesCount": 23,
+  "genusCount": 5,
+  "speciesCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

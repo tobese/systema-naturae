@@ -166,7 +166,8 @@
               "CH4NN"
             ],
             "checklistbank": "Hokkaidoconcha_tanabei",
-            "wikispecies": "Hokkaidoconcha_tanabei"
+            "wikispecies": "Hokkaidoconcha_tanabei",
+            "gbif-backbone": "11198602"
           },
           "authorityIds": "col:CH4NN",
           "description": "Hokkaidoconcha tanabei is a hokkaidoconchidae species found in its native region."
@@ -186,7 +187,8 @@
               "CH4NL"
             ],
             "checklistbank": "txn:397054",
-            "wikispecies": "Hokkaidoconcha_novacula"
+            "wikispecies": "Hokkaidoconcha_novacula",
+            "gbif-backbone": "11131805"
           },
           "authorityIds": "col:CH4NL",
           "description": "Hokkaidoconcha novacula is a hokkaidoconchidae species found in its native region."
@@ -200,7 +202,11 @@
           "children": [],
           "lineage": "Hokkaidoconcha",
           "uuid": "d9ac7a7a-1f36-5d8-85a-d40f92980c9781",
-          "description": "Hokkaidoconcha hikidai is a hokkaidoconchidae species found in its native region."
+          "description": "Hokkaidoconcha hikidai is a hokkaidoconchidae species found in its native region.",
+          "authorship": "Kaim, Jenkins & Warén, 2008",
+          "sourceIds": {
+            "gbif-backbone": "11114421"
+          }
         },
         {
           "id": "SP_HOKKAIDOCONCHA_HIGNALLI",
@@ -369,7 +375,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1432470"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1432470"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1432470",
+            "gbif-backbone": "10834947"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1432470,col:7Q8DT",
           "authorship": "(Olsson, 1931)"
@@ -441,7 +448,8 @@
           "sourceIds": {
             "col": [
               "7Q8DW"
-            ]
+            ],
+            "gbif-backbone": "10856036"
           },
           "authorityIds": "col:7Q8DW",
           "description": "Ascheria gigantea is a hokkaidoconchidae species found in its native region."
@@ -536,10 +544,53 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Hokkaidoconchidae"
+    },
+    {
+      "id": "GENUS_HYPSIPLEURA",
+      "name": "Hypsipleura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYPSIPLEURA_OCCIDENTALIS_STANTON_1895",
+          "name": "Hypsipleura occidentalis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hypsipleura",
+          "authorship": "(Stanton, 1895)",
+          "sourceIds": {
+            "gbif-backbone": "9218760"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hokkaidoconchidae"
+    },
+    {
+      "id": "GENUS_ANCONIA",
+      "name": "Anconia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ANCONIA_ELENENSIS",
+          "name": "Anconia elenensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Anconia",
+          "sourceIds": {
+            "gbif-backbone": "7682401"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hokkaidoconchidae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 28,
+  "genusCount": 7,
+  "speciesCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -547,6 +598,7 @@
       "classKey": 225,
       "familyKey": 6882519
     },
-    "checklistbank": "Hokkaidoconchidae"
+    "checklistbank": "Hokkaidoconchidae",
+    "wikispecies": "Hokkaidoconchidae"
   }
 }

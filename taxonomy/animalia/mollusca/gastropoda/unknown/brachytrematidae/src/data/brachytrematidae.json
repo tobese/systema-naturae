@@ -199,7 +199,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1392481"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1392481"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1392481",
+            "gbif-backbone": "10755909"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1392481,col:7QBRB",
           "authorship": "(Lamarck, 1804)"
@@ -657,10 +658,32 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Brachytrematidae"
+    },
+    {
+      "id": "GENUS_CHILODONTOIDEA",
+      "name": "Chilodontoidea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHILODONTOIDEA_TROCHOIDES_COSSMANN_1899",
+          "name": "Chilodontoidea trochoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chilodontoidea",
+          "authorship": "(Cossmann, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "8807805"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "brachytrematidae"
     }
   ],
-  "genusCount": 7,
-  "speciesCount": 33,
+  "genusCount": 8,
+  "speciesCount": 34,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

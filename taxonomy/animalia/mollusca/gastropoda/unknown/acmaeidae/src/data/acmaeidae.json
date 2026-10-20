@@ -29,7 +29,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:715283"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:715283"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:715283",
+            "gbif-backbone": "7842984"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:715283,col:9DCX",
           "authorship": "(Reeve, 1855)"
@@ -49,7 +50,8 @@
           "sourceIds": {
             "itis": [
               "69675"
-            ]
+            ],
+            "gbif-backbone": "9717627"
           },
           "authorityIds": "itis:69675"
         },
@@ -140,7 +142,8 @@
           "sourceIds": {
             "itis": [
               "69683"
-            ]
+            ],
+            "gbif-backbone": "5191414"
           },
           "authorityIds": "itis:69683"
         },
@@ -383,7 +386,11 @@
           "description": "Acmaea pileolus is a acmaeidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "953f6f41-59fb-5cf-9c1-af6d3f1a93a546"
+          "uuid": "953f6f41-59fb-5cf-9c1-af6d3f1a93a546",
+          "authorship": "(Middendorff, 1848)",
+          "sourceIds": {
+            "gbif-backbone": "8980698"
+          }
         },
         {
           "id": "SP_ACMAEA_POULSENI_RAVN_1939",
@@ -494,7 +501,8 @@
           "sourceIds": {
             "itis": [
               "69664"
-            ]
+            ],
+            "gbif-backbone": "5191417"
           },
           "authorityIds": "itis:69664"
         },
@@ -638,7 +646,8 @@
             "col": [
               "M5BTC"
             ],
-            "checklistbank": "txn:401492"
+            "checklistbank": "txn:401492",
+            "gbif-backbone": "11205461"
           },
           "authorityIds": "col:M5BTC",
           "description": "Acmaea simplex is a acmaeidae species found in its native region."
@@ -1282,7 +1291,8 @@
           "sourcedFrom": "wikipedia",
           "lineage": "Acmaea",
           "sourceIds": {
-            "checklistbank": "47676"
+            "checklistbank": "47676",
+            "gbif-backbone": "8679565"
           },
           "children": [],
           "authorship": "(Eschscholtz 1833)",
@@ -1867,7 +1877,8 @@
           "lineage": "Acmaea",
           "authorship": "Clark and Arnold 1923",
           "sourceIds": {
-            "checklistbank": "txn:400483"
+            "checklistbank": "txn:400483",
+            "gbif-backbone": "11173247"
           },
           "children": [],
           "uuid": "33f40ebd-c4d7-5d0-b00-fa87e433ca8029",
@@ -1887,6 +1898,19 @@
           "children": [],
           "uuid": "e214f7e7-9c5f-5a8-89a-b7ecdb0a967366",
           "description": "Acmaea cassis is a acmaeidae species found in its native region."
+        },
+        {
+          "id": "SP_ACMAEA_GABATELLA_S_S_BERRY_1960",
+          "name": "Acmaea gabatella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acmaea",
+          "authorship": "S.S.Berry, 1960",
+          "sourceIds": {
+            "gbif-backbone": "11482047"
+          },
+          "children": []
         }
       ]
     },
@@ -1915,7 +1939,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1307651"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1307651"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1307651",
+            "gbif-backbone": "10077485"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1307651,col:3Y2MV",
           "authorship": "(Eudes-Deslongchamps, 1843)"
@@ -3012,10 +3037,67 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acmaeidae"
+    },
+    {
+      "id": "GENUS_PATELLA",
+      "name": "Patella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PATELLA_CAMPANAEFORMIS_KLIPSTEIN_1843",
+          "name": "Patella campanaeformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "(Klipstein, 1843)",
+          "sourceIds": {
+            "gbif-backbone": "9527068"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PATELLA_PERSONOIDES_MIDDENDORFF_1849",
+          "name": "Patella personoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "Middendorff, 1849",
+          "sourceIds": {
+            "gbif-backbone": "10883097"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acmaeidae"
+    },
+    {
+      "id": "GENUS_ACMEA",
+      "name": "Acmea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ACMEA_HANNONICA_VINCENT_1930",
+          "name": "Acmea hannonica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acmea",
+          "authorship": "É.Vincent, 1930",
+          "sourceIds": {
+            "gbif-backbone": "12242505"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acmaeidae"
     }
   ],
-  "genusCount": 17,
-  "speciesCount": 178,
+  "genusCount": 19,
+  "speciesCount": 182,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

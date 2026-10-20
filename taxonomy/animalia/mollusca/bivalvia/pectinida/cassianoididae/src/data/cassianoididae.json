@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Aviculopecten crassispinosus (Cassianoides Crassispinosus) is a cassianoididae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "82363d1b-51b9-590-b6a-5cebec8b6d08ea"
+          "uuid": "82363d1b-51b9-590-b6a-5cebec8b6d08ea",
+          "children": []
         },
         {
           "id": "SP_CASSIANELLA_RARA",
@@ -31,7 +32,8 @@
           "subspeciesCount": 0,
           "description": "Cassianella rara (Cassianoides Rara) is a cassianoididae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "c9f32f3d-f224-599-b7e-a0a6b5bf7a8263"
+          "uuid": "c9f32f3d-f224-599-b7e-a0a6b5bf7a8263",
+          "children": []
         },
         {
           "id": "SP_CASSIANOIDES_KINGORUM_NEWELL_BOYD_1995",
@@ -50,7 +52,8 @@
               "C57NM"
             ]
           },
-          "authorityIds": "col:C57NM"
+          "authorityIds": "col:C57NM",
+          "children": []
         },
         {
           "id": "SP_PSEUDOMONOTIS_SEXCOSTATUS",
@@ -61,9 +64,76 @@
           "subspeciesCount": 0,
           "description": "Pseudomonotis sexcostatus (Cassianoides Sexcostatus) is a cassianoididae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "1ef31210-1a5e-53b-b6a-ef5403e938e170"
+          "uuid": "1ef31210-1a5e-53b-b6a-ef5403e938e170",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PSEUDOMONOTIS",
+      "name": "Pseudomonotis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSEUDOMONOTIS_SEXCOSTATUS_STUCKENBERG_1898",
+          "name": "Pseudomonotis sexcostatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pseudomonotis",
+          "authorship": "(Stuckenberg, 1898)",
+          "sourceIds": {
+            "gbif-backbone": "9503323"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cassianoididae"
+    },
+    {
+      "id": "GENUS_CASSIANELLA",
+      "name": "Cassianella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CASSIANELLA_RARA_WATERHOUSE_1987",
+          "name": "Cassianella rara",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cassianella",
+          "authorship": "(Waterhouse, 1987)",
+          "sourceIds": {
+            "gbif-backbone": "9312546"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cassianoididae"
+    },
+    {
+      "id": "GENUS_AVICULOPECTEN",
+      "name": "Aviculopecten",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AVICULOPECTEN_CRASSISPINOSUS_CHRONIC_1949",
+          "name": "Aviculopecten crassispinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aviculopecten",
+          "authorship": "(Chronic, 1949)",
+          "sourceIds": {
+            "gbif-backbone": "9338013"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cassianoididae"
     }
   ],
   "sourceIds": {
@@ -74,5 +144,7 @@
       "orderKey": 9250425,
       "familyKey": 4586882
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 7
 }

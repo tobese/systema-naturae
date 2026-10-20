@@ -186,7 +186,11 @@
           "description": "Levifusus pagoda is a echinofulguridae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "9377e734-e59a-505-a7c-b888cf6172f41d"
+          "uuid": "9377e734-e59a-505-a7c-b888cf6172f41d",
+          "authorship": "(Heilprin, 1880)",
+          "sourceIds": {
+            "gbif-backbone": "8683870"
+          }
         },
         {
           "id": "SP_LEVIFUSUS_QUADRIFUNIFER_DARRAGH_1997",
@@ -244,7 +248,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1398753"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1398753"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1398753",
+            "gbif-backbone": "9087982"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1398753,col:7RWD6",
           "authorship": "(Conrad, 1833)"
@@ -426,7 +431,8 @@
           "sourceIds": {
             "col": [
               "B3DW9"
-            ]
+            ],
+            "gbif-backbone": "12198784"
           },
           "authorityIds": "col:B3DW9",
           "description": "Levifusus moerchi is a echinofulguridae species found in its native region."
@@ -499,6 +505,19 @@
           "children": [],
           "uuid": "814a68bc-bbfc-51f-b3f-d1b695f0edcc77",
           "description": "Levifusus lithae is a echinofulguridae species found in its native region."
+        },
+        {
+          "id": "SP_LEVIFUSUS_SUPERPLANUS_HARRIS_1899",
+          "name": "Levifusus superplanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Levifusus",
+          "authorship": "Harris, 1899",
+          "sourceIds": {
+            "gbif-backbone": "12226827"
+          },
+          "children": []
         }
       ]
     },
@@ -705,10 +724,32 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Echinofulguridae"
+    },
+    {
+      "id": "GENUS_FUSUS",
+      "name": "Fusus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_FUSUS_PAGODIFORMIS_HEILPRIN_1881",
+          "name": "Fusus pagodiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Fusus",
+          "authorship": "(Heilprin, 1881)",
+          "sourceIds": {
+            "gbif-backbone": "9233826"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "echinofulguridae"
     }
   ],
-  "genusCount": 3,
-  "speciesCount": 40,
+  "genusCount": 4,
+  "speciesCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Cardita haliotoidea (Chaenocardiola Haliotoidea) is a lunulicardiidae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "24dcea88-0b41-5fd-9ee-ec9bf2dd4056b8"
+          "uuid": "24dcea88-0b41-5fd-9ee-ec9bf2dd4056b8",
+          "children": []
         },
         {
           "id": "SP_CHAENOCARDIOLA_TRIANGULATA_CAMPBELL_ENGEL_1963",
@@ -33,9 +34,32 @@
           "sourcedFrom": "none",
           "authorship": "Campbell & Engel",
           "yearPublished": "1963",
-          "uuid": "efedec51-b995-547-b60-f5e33f79a1118c"
+          "uuid": "efedec51-b995-547-b60-f5e33f79a1118c",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_CARDITA",
+      "name": "Cardita",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARDITA_HALIOTOIDEA_ROEMER_1850",
+          "name": "Cardita haliotoidea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardita",
+          "authorship": "(Roemer, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "9424984"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lunulicardiidae"
     }
   ],
   "sourceIds": {
@@ -45,5 +69,7 @@
       "classKey": 137,
       "familyKey": 4592725
     }
-  }
+  },
+  "genusCount": 2,
+  "speciesCount": 3
 }

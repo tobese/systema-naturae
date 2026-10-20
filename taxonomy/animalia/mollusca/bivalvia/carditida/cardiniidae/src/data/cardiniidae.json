@@ -647,7 +647,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1610167"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1610167"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1610167",
+            "gbif-backbone": "8536144"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1610167,col:9THLW",
           "authorship": "(J. Sowerby, 1819)"
@@ -670,7 +671,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1580333"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580333"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580333",
+            "gbif-backbone": "11665250"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1580333,col:C6LFC",
           "authorship": "(J. Sowerby, 1817)"
@@ -693,7 +695,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1580334"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580334"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1580334",
+            "gbif-backbone": "11911954"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1580334,col:C6LFD",
           "authorship": "(J. Sowerby, 1817)"
@@ -758,7 +761,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1566177"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1566177"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1566177",
+            "gbif-backbone": "11607108"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1566177,col:9GYG7",
           "authorship": "(Stutchbury, 1842)"
@@ -781,7 +785,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1541740"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1541740"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1541740",
+            "gbif-backbone": "8700334"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1541740,col:8PS7W",
           "authorship": "(J. Sowerby, 1817)"
@@ -804,7 +809,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1599000"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599000"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599000",
+            "gbif-backbone": "11460231"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599000,col:9GJG4",
           "authorship": "(F. C. L. Koch & Dunker, 1837)"
@@ -1331,7 +1337,11 @@
           "description": "Cardinia parva (Arctocardinia Parva) is a cardiniidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "bb56270f-637f-545-978-72319bc383aab8"
+          "uuid": "bb56270f-637f-545-978-72319bc383aab8",
+          "authorship": "(Kurushin, 1992)",
+          "sourceIds": {
+            "gbif-backbone": "9277452"
+          }
         },
         {
           "id": "SP_ARCTOCARDINIA_PARVA_KURUSHIN_1992",
@@ -1367,7 +1377,11 @@
           "description": "Cardinia exigua (Pseudastarte Exigua) is a cardiniidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "bbfff6d2-52ab-53f-87c-331c26fda6561d"
+          "uuid": "bbfff6d2-52ab-53f-87c-331c26fda6561d",
+          "authorship": "(Terquem, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "11150101"
+          }
         },
         {
           "id": "SP_PSEUDASTARTE_EMARGINATA_COSSMANN_1921",
@@ -1515,10 +1529,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "cardiniidae"
+    },
+    {
+      "id": "GENUS_CYPRICARDITES",
+      "name": "Cypricardites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYPRICARDITES_INDENTA_CONRAD_1842",
+          "name": "Cypricardites indenta",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cypricardites",
+          "authorship": "(Conrad, 1842)",
+          "sourceIds": {
+            "gbif-backbone": "9420866"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cardiniidae"
+    },
+    {
+      "id": "GENUS_UNICARDIUM",
+      "name": "Unicardium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_UNICARDIUM_GIBBOSUM_MEEK_1864",
+          "name": "Unicardium gibbosum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Unicardium",
+          "authorship": "(Meek, 1864)",
+          "sourceIds": {
+            "gbif-backbone": "4591413"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cardiniidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 86,
+  "genusCount": 11,
+  "speciesCount": 88,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

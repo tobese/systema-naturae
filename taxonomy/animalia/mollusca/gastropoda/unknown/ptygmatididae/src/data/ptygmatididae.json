@@ -50,7 +50,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1744079"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1744079"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1744079",
+            "gbif-backbone": "8733381"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1744079,col:C6SD9",
           "authorship": "(Münster, 1844)"
@@ -302,7 +303,8 @@
           "sourceIds": {
             "col": [
               "C79BW"
-            ]
+            ],
+            "gbif-backbone": "12257198"
           },
           "authorityIds": "col:C79BW",
           "description": "Bactroptyxis teres is a ptygmatididae species found in its native region."
@@ -338,7 +340,8 @@
           "sourceIds": {
             "col": [
               "C79BV"
-            ]
+            ],
+            "gbif-backbone": "12231179"
           },
           "authorityIds": "col:C79BV",
           "description": "Bactroptyxis subcochlearis is a ptygmatididae species found in its native region."
@@ -378,6 +381,19 @@
           },
           "authorityIds": "col:C79BX",
           "description": "Bactroptyxis tricincta is a ptygmatididae species found in its native region."
+        },
+        {
+          "id": "SP_BACTROPTYXIS_IMPLICATA_D_ORBIGNY_1850",
+          "name": "Bactroptyxis implicata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Bactroptyxis",
+          "authorship": "(d'Orbigny, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "11432630"
+          },
+          "children": []
         }
       ]
     },
@@ -413,7 +429,8 @@
           "sourceIds": {
             "col": [
               "C88N8"
-            ]
+            ],
+            "gbif-backbone": "12201029"
           },
           "authorityIds": "col:C88N8",
           "description": "Ptygmatis tornata is a ptygmatididae species found in its native region."
@@ -449,7 +466,8 @@
           "sourceIds": {
             "col": [
               "C88N6"
-            ]
+            ],
+            "gbif-backbone": "12213820"
           },
           "authorityIds": "col:C88N6",
           "description": "Ptygmatis polyspira is a ptygmatididae species found in its native region."
@@ -539,7 +557,8 @@
           "sourceIds": {
             "col": [
               "C88N4"
-            ]
+            ],
+            "gbif-backbone": "12172884"
           },
           "authorityIds": "col:C88N4",
           "description": "Ptygmatis clio is a ptygmatididae species found in its native region."
@@ -665,7 +684,8 @@
           "sourceIds": {
             "col": [
               "C88N9"
-            ]
+            ],
+            "gbif-backbone": "12259220"
           },
           "authorityIds": "col:C88N9",
           "description": "Ptygmatis ursicina is a ptygmatididae species found in its native region."
@@ -753,7 +773,8 @@
           "sourceIds": {
             "col": [
               "9J8RZ"
-            ]
+            ],
+            "gbif-backbone": "11585521"
           },
           "authorityIds": "col:9J8RZ",
           "description": "Umbonea dilatata is a ptygmatididae species found in its native region."
@@ -761,10 +782,67 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Ptygmatididae"
+    },
+    {
+      "id": "GENUS_ENDIAPLOCUS",
+      "name": "Endiaplocus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENDIAPLOCUS_ROISSYI_D_ARCHIAC_1843",
+          "name": "Endiaplocus roissyi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Endiaplocus",
+          "authorship": "(d'Archiac, 1843)",
+          "sourceIds": {
+            "gbif-backbone": "11621629"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ptygmatididae"
+    },
+    {
+      "id": "GENUS_NERINEA",
+      "name": "Nerinea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NERINEA_PSEUDONOBILIS_CHOFFAT_1901",
+          "name": "Nerinea pseudonobilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nerinea",
+          "authorship": "Choffat, 1901",
+          "sourceIds": {
+            "gbif-backbone": "12248862"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_NERINEA_PSEUDOBRUNTRUTANA_GEMMELLARO_1865",
+          "name": "Nerinea pseudobruntrutana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nerinea",
+          "authorship": "(Gemmellaro, 1865)",
+          "sourceIds": {
+            "gbif-backbone": "9478450"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ptygmatididae"
     }
   ],
-  "genusCount": 5,
-  "speciesCount": 40,
+  "genusCount": 7,
+  "speciesCount": 44,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

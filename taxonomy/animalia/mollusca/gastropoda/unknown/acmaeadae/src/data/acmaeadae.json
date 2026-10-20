@@ -20,7 +20,8 @@
           "subspeciesCount": 0,
           "description": "Conorhytis squammula Eudes-Deslongchamps, 1863 is a acmaeadae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "c4c4689e-921f-5e6-a15-23a79e769366e4"
+          "uuid": "c4c4689e-921f-5e6-a15-23a79e769366e4",
+          "children": []
         }
       ]
     },
@@ -40,7 +41,8 @@
           "subspeciesCount": 0,
           "description": "Patella aureliana (Scurriopsis Aureliana) is a acmaeadae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "99335ce7-f00c-5a2-ab9-0e148ce94cd0f2"
+          "uuid": "99335ce7-f00c-5a2-ab9-0e148ce94cd0f2",
+          "children": []
         },
         {
           "id": "SP_PATELLA_HENNOCQUII",
@@ -51,7 +53,8 @@
           "subspeciesCount": 0,
           "description": "Patella hennocquii (Scurriopsis Hennocquii) is a acmaeadae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "98f758b8-6e2c-5c2-95c-4ca9e19f9d7145"
+          "uuid": "98f758b8-6e2c-5c2-95c-4ca9e19f9d7145",
+          "children": []
         },
         {
           "id": "SP_PATELLA_HETTANGIENSIS",
@@ -62,7 +65,8 @@
           "subspeciesCount": 0,
           "description": "Patella hettangiensis (Scurriopsis Hettangiensis) is a acmaeadae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "c420f5d3-6011-5d4-bd0-7ee44857943a2d"
+          "uuid": "c420f5d3-6011-5d4-bd0-7ee44857943a2d",
+          "children": []
         },
         {
           "id": "SP_PATELLA_SCHMIDTII",
@@ -73,7 +77,8 @@
           "subspeciesCount": 0,
           "description": "Patella schmidtii (Scurriopsis Schmidtii) is a acmaeadae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "1d382841-f22f-5c2-b1f-abcfed4f62a9a3"
+          "uuid": "1d382841-f22f-5c2-b1f-abcfed4f62a9a3",
+          "children": []
         },
         {
           "id": "SP_SCURRIA_TENUISTRIATA",
@@ -84,7 +89,8 @@
           "subspeciesCount": 0,
           "description": "Scurria tenuistriata (Scurriopsis Tenuistriata) is a acmaeadae species found in its native region.",
           "sourcedFrom": "none",
-          "uuid": "3941a4bf-8d0c-513-9d8-e0590eea2a3df0"
+          "uuid": "3941a4bf-8d0c-513-9d8-e0590eea2a3df0",
+          "children": []
         },
         {
           "id": "SP_SCURRIOPSIS_COROMIFORMIS_ZHU_1995",
@@ -101,9 +107,93 @@
             ]
           },
           "authorityIds": "col:CT3SJ",
-          "uuid": "247439eb-352a-5b6-81f-2f179b7d9e7c89"
+          "uuid": "247439eb-352a-5b6-81f-2f179b7d9e7c89",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_PATELLA",
+      "name": "Patella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PATELLA_SCHMIDTII_DUNKER_1847",
+          "name": "Patella schmidtii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "(Dunker, 1847)",
+          "sourceIds": {
+            "gbif-backbone": "9403931"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PATELLA_HENNOCQUII_TERQUEM_1855",
+          "name": "Patella hennocquii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "(Terquem, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "9435706"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PATELLA_AURELIANA_COSSMANN_1899",
+          "name": "Patella aureliana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "(Cossmann, 1899)",
+          "sourceIds": {
+            "gbif-backbone": "9509579"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PATELLA_HETTANGIENSIS_TERQUEM_1855",
+          "name": "Patella hettangiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Patella",
+          "authorship": "(Terquem, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "9631325"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acmaeadae"
+    },
+    {
+      "id": "GENUS_SCURRIA",
+      "name": "Scurria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCURRIA_TENUISTRIATA_ASSMANN_1924",
+          "name": "Scurria tenuistriata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scurria",
+          "authorship": "(Assmann, 1924)",
+          "sourceIds": {
+            "gbif-backbone": "9248263"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acmaeadae"
     }
   ],
   "sourceIds": {
@@ -113,5 +203,7 @@
       "classKey": 225,
       "familyKey": 9598360
     }
-  }
+  },
+  "genusCount": 4,
+  "speciesCount": 12
 }

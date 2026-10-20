@@ -800,7 +800,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1659926"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1659926"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1659926",
+            "gbif-backbone": "12225920"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1659926,col:BDRMV",
           "authorship": "(Conrad, 1842)"
@@ -970,7 +971,11 @@
           "description": "Grammysia neglecta (Cuneamya Neglecta) is a grammysiidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "544230f0-1f38-54f-9b9-a1f084eda64bbd"
+          "uuid": "544230f0-1f38-54f-9b9-a1f084eda64bbd",
+          "authorship": "(Hall & Whitfield, 1875)",
+          "sourceIds": {
+            "gbif-backbone": "9546383"
+          }
         },
         {
           "id": "SP_CUNEAMYA_CATILLOIDES_BARRANDE_1903",
@@ -1050,7 +1055,8 @@
           "lineage": "Cuneamya",
           "authorship": "J. Hall & Whitfield, 1875",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1775008"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1775008",
+            "gbif-backbone": "8688123"
           },
           "children": [],
           "uuid": "0b4444fa-b342-5bf-ab8-c5b8042af6a622",
@@ -1438,7 +1444,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1662196"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1662196"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1662196",
+            "gbif-backbone": "12253890"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1662196,col:BDRBG",
           "authorship": "(H. S. Williams & Breger, 1916)"
@@ -1898,10 +1905,76 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "grammysiidae"
+    },
+    {
+      "id": "GENUS_CARDIUM",
+      "name": "Cardium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CARDIUM_AMYGDALINA_SOWERBY_1827",
+          "name": "Cardium amygdalina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cardium",
+          "authorship": "(Sowerby, 1827)",
+          "sourceIds": {
+            "gbif-backbone": "9517770"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "grammysiidae"
+    },
+    {
+      "id": "GENUS_ALLORISMA",
+      "name": "Allorisma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALLORISMA_HANNIBALENSIS_SHUMARD_SWALLOW_1858",
+          "name": "Allorisma hannibalensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Allorisma",
+          "authorship": "(Shumard & Swallow, 1858)",
+          "sourceIds": {
+            "gbif-backbone": "9561326"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "grammysiidae"
+    },
+    {
+      "id": "GENUS_LEPTODOMUS",
+      "name": "Leptodomus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LEPTODOMUS_TOPEKAENSIS_SHUMARD_1860",
+          "name": "Leptodomus topekaensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Leptodomus",
+          "authorship": "(Shumard, 1860)",
+          "sourceIds": {
+            "gbif-backbone": "9621797"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "grammysiidae"
     }
   ],
-  "genusCount": 19,
-  "speciesCount": 103,
+  "genusCount": 22,
+  "speciesCount": 106,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

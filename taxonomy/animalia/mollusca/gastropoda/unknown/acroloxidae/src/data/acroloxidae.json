@@ -469,7 +469,8 @@
           "sourceIds": {
             "col": [
               "9MYV"
-            ]
+            ],
+            "gbif-backbone": "10436091"
           },
           "authorityIds": "col:9MYV",
           "authorship": "(F. B. Meek & Hayden, 1856)"
@@ -748,11 +749,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Acroloxus",
           "sourceIds": {
-            "checklistbank": "ott191695"
+            "checklistbank": "ott191695",
+            "gbif-backbone": "8297331"
           },
           "children": [],
           "uuid": "755e5387-66a9-515-8b4-7413900dba8b59",
-          "description": "Acroloxus oblongus is a acroloxidae species found in its native region."
+          "description": "Acroloxus oblongus is a acroloxidae species found in its native region.",
+          "authorship": "(Lightfoot) , 1786"
         },
         {
           "id": "SP_ACROLOXUS_SHADINI",
@@ -823,6 +826,19 @@
           "children": [],
           "uuid": "1cd75794-e75e-569-ac1-83a24bab088cac",
           "description": "Acroloxus actinophorus is a acroloxidae species found in its native region."
+        },
+        {
+          "id": "SP_ACROLOXUS_CULICOIDES_D_ORBIGNY_1835",
+          "name": "Acroloxus culicoides",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Acroloxus",
+          "authorship": "(d'Orbigny, 1835)",
+          "sourceIds": {
+            "gbif-backbone": "11613312"
+          },
+          "children": []
         }
       ]
     },
@@ -1115,7 +1131,11 @@
           "description": "Pseudancylastrum troschelii is a acroloxidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "e92b6169-fa34-540-ac0-c37fbb175adfd2"
+          "uuid": "e92b6169-fa34-540-ac0-c37fbb175adfd2",
+          "authorship": "(W.Dybowski, 1875)",
+          "sourceIds": {
+            "gbif-backbone": "8395827"
+          }
         },
         {
           "id": "SP_PSEUDANCYLASTRUM_WERESTSCHAGINI_STAROBOGATOV_1989",
@@ -2224,10 +2244,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "acroloxidae"
+    },
+    {
+      "id": "GENUS_VELLETIA",
+      "name": "Velletia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VELLETIA_FUHRMANNI_PIAGET_1914",
+          "name": "Velletia fuhrmanni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Velletia",
+          "authorship": "Piaget, 1914",
+          "sourceIds": {
+            "gbif-backbone": "11148942"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "acroloxidae"
     }
   ],
-  "genusCount": 13,
-  "speciesCount": 125,
+  "genusCount": 14,
+  "speciesCount": 127,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

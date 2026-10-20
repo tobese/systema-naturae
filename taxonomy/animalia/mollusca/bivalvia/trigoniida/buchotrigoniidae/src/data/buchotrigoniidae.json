@@ -59,7 +59,11 @@
           "description": "Buchotrigonia orbignyana is a buchotrigoniidae species found in its native region.",
           "sourcedFrom": "none",
           "uuid": "a55de6d2-404c-595-ba0-a1c0d770277363",
-          "children": []
+          "children": [],
+          "authorship": "(Lissón, 1930)",
+          "sourceIds": {
+            "gbif-backbone": "11372942"
+          }
         },
         {
           "id": "SP_BUCHOTRIGONIA_PIZCUETANA",
@@ -322,7 +326,8 @@
           "sourceIds": {
             "col": [
               "8QH2C"
-            ]
+            ],
+            "gbif-backbone": "11378934"
           },
           "authorityIds": "col:8QH2C",
           "children": [],
@@ -545,6 +550,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "buchotrigoniidae"
+    },
+    {
+      "id": "GENUS_TRIGONIA",
+      "name": "Trigonia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TRIGONIA_DISTANS_NOETLING_1886",
+          "name": "Trigonia distans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Trigonia",
+          "authorship": "(Noetling, 1886)",
+          "sourceIds": {
+            "gbif-backbone": "8887688"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "buchotrigoniidae"
     }
   ],
   "sourceIds": {
@@ -557,6 +584,6 @@
     },
     "checklistbank": "txn:244241"
   },
-  "genusCount": 8,
-  "speciesCount": 28
+  "genusCount": 9,
+  "speciesCount": 29
 }

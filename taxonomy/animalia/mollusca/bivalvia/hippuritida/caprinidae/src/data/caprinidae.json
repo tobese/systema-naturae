@@ -364,7 +364,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1249965"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1249965"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1249965",
+            "gbif-backbone": "9717773"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1249965,col:4BVT4",
           "authorship": "(F.-J. Pictet & Campiche, 1869)"
@@ -634,10 +635,32 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "caprinidae"
+    },
+    {
+      "id": "GENUS_CAPRINELLA",
+      "name": "Caprinella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CAPRINELLA_BAYLEI_GEMMELLARO_1865",
+          "name": "Caprinella baylei",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Caprinella",
+          "authorship": "(Gemmellaro, 1865)",
+          "sourceIds": {
+            "gbif-backbone": "9307994"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "caprinidae"
     }
   ],
-  "genusCount": 9,
-  "speciesCount": 32,
+  "genusCount": 10,
+  "speciesCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

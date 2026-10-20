@@ -101,7 +101,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1599245"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599245"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1599245",
+            "gbif-backbone": "11425772"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1599245,col:9GJBK",
           "authorship": "(Terquem, 1852)"
@@ -275,7 +276,8 @@
           "lineage": "Tancredia",
           "authorship": "(Meek and Hayden 1857)",
           "sourceIds": {
-            "checklistbank": "txn:130295"
+            "checklistbank": "txn:130295",
+            "gbif-backbone": "4950011"
           },
           "children": [],
           "uuid": "48fbb6f2-7339-534-ad7-31dd67ec5911fc",
@@ -471,7 +473,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1822186"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1822186"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1822186",
+            "gbif-backbone": "5932536"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1822186,col:V47VH",
           "authorship": "Gabb, 1864"
@@ -506,7 +509,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1822185"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1822185"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1822185",
+            "gbif-backbone": "5932534"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1822185,col:L2BXY",
           "authorship": "Gabb, 1864"
@@ -1057,10 +1061,76 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Tancrediidae"
+    },
+    {
+      "id": "GENUS_PERIPLOMA",
+      "name": "Periploma",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PERIPLOMA_CUSPIDATUM_WHITEAVES_1884",
+          "name": "Periploma cuspidatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Periploma",
+          "authorship": "(Whiteaves, 1884)",
+          "sourceIds": {
+            "gbif-backbone": "9624828"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tancrediidae"
+    },
+    {
+      "id": "GENUS_HETTANGIA",
+      "name": "Hettangia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HETTANGIA_AMERICANA_MEEK_HAYDEN_1857",
+          "name": "Hettangia americana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hettangia",
+          "authorship": "(Meek & Hayden, 1857)",
+          "sourceIds": {
+            "gbif-backbone": "9356939"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tancrediidae"
+    },
+    {
+      "id": "GENUS_MYACITES",
+      "name": "Myacites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYACITES_PLANUS_MOORE_1870",
+          "name": "Myacites planus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myacites",
+          "authorship": "(Moore, 1870)",
+          "sourceIds": {
+            "gbif-backbone": "9549433"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "tancrediidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 62,
+  "genusCount": 13,
+  "speciesCount": 65,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

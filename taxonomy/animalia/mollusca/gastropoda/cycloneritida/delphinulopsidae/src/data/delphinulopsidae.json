@@ -65,7 +65,11 @@
           "description": "Delphinulopsis singularis (Platychilina Singularis) is a delphinulopsidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "db5c0518-cded-565-b71-0c20a69ff979ae"
+          "uuid": "db5c0518-cded-565-b71-0c20a69ff979ae",
+          "authorship": "(Kittl, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "9380948"
+          }
         },
         {
           "id": "SP_DELPHINULOPSIS_TUBERCULATA",
@@ -77,7 +81,11 @@
           "description": "Delphinulopsis tuberculata (Platychilina Tuberculata) is a delphinulopsidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2d8cc2d8-d191-518-b40-86413c1fa5f466"
+          "uuid": "2d8cc2d8-d191-518-b40-86413c1fa5f466",
+          "authorship": "(Kittl, 1894)",
+          "sourceIds": {
+            "gbif-backbone": "9545752"
+          }
         },
         {
           "id": "SP_PLATYCHILINA_GERMANICA_PHILIPPI_1898",
@@ -121,7 +129,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1601537"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1601537"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1601537",
+            "gbif-backbone": "8444369"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1601537,col:9GXY6",
           "authorship": "(Münster, 1841)"
@@ -318,7 +327,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1597632"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1597632"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1597632",
+            "gbif-backbone": "8563290"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1597632,col:9G9WV",
           "authorship": "(Münster, 1841)"
@@ -489,7 +499,11 @@
           "description": "Scalites ambiguus is a delphinulopsidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "5df744bc-919d-56c-bff-1a9b2638c84b9d"
+          "uuid": "5df744bc-919d-56c-bff-1a9b2638c84b9d",
+          "authorship": "(Weir, 1925)",
+          "sourceIds": {
+            "gbif-backbone": "9313990"
+          }
         }
       ]
     },
@@ -510,7 +524,11 @@
           "description": "Capulus fenestratus is a delphinulopsidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "2b59f468-c8dc-519-894-5d8548cc03a56f"
+          "uuid": "2b59f468-c8dc-519-894-5d8548cc03a56f",
+          "authorship": "(Laube, 1869)",
+          "sourceIds": {
+            "gbif-backbone": "9510426"
+          }
         }
       ]
     },
@@ -710,10 +728,54 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "delphinulopsidae"
+    },
+    {
+      "id": "GENUS_STOMATIA",
+      "name": "Stomatia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STOMATIA_CAINALLI_STOPPANI_1857",
+          "name": "Stomatia cainalli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stomatia",
+          "authorship": "(Stoppani, 1857)",
+          "sourceIds": {
+            "gbif-backbone": "9425886"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "delphinulopsidae"
+    },
+    {
+      "id": "GENUS_PILEOPSIS",
+      "name": "Pileopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PILEOPSIS_PUSTULOSUS_MUNSTER_1841",
+          "name": "Pileopsis pustulosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Pileopsis",
+          "authorship": "(Munster, 1841)",
+          "sourceIds": {
+            "gbif-backbone": "9233734"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "delphinulopsidae"
     }
   ],
-  "genusCount": 10,
-  "speciesCount": 40,
+  "genusCount": 12,
+  "speciesCount": 42,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

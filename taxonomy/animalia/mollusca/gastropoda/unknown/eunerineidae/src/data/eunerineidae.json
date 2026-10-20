@@ -94,7 +94,8 @@
           "sourceIds": {
             "col": [
               "CD84S"
-            ]
+            ],
+            "gbif-backbone": "12181545"
           },
           "authorityIds": "col:CD84S",
           "description": "Eunerinea sequana is a eunerineidae species found in its native region."
@@ -220,7 +221,8 @@
           "sourceIds": {
             "col": [
               "CD84P"
-            ]
+            ],
+            "gbif-backbone": "12255039"
           },
           "authorityIds": "col:CD84P",
           "description": "Eunerinea biplicata is a eunerineidae species found in its native region."
@@ -397,10 +399,32 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Eunerineidae"
+    },
+    {
+      "id": "GENUS_NERINEA",
+      "name": "Nerinea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NERINEA_PAULI_COQUAND_1862",
+          "name": "Nerinea pauli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nerinea",
+          "authorship": "(Coquand, 1862)",
+          "sourceIds": {
+            "gbif-backbone": "11119403"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eunerineidae"
     }
   ],
-  "genusCount": 2,
-  "speciesCount": 21,
+  "genusCount": 3,
+  "speciesCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

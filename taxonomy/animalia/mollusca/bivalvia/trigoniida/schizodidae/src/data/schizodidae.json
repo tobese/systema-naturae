@@ -113,7 +113,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1616991"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1616991"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1616991",
+            "gbif-backbone": "8599363"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1616991,col:9WRPS",
           "authorship": "(J. Hall, 1858)"
@@ -930,7 +931,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1509770"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1509770"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1509770",
+            "gbif-backbone": "8642913"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1509770,col:8GN4G",
           "authorship": "(J. Sowerby, 1821)"
@@ -1161,7 +1163,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1644987"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1644987"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1644987",
+            "gbif-backbone": "8702188"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1644987,col:B7M3Y",
           "authorship": "(T. Brown, 1841)"
@@ -1360,7 +1363,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1596035"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1596035"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1596035",
+            "gbif-backbone": "11720443"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1596035,col:9FYSD",
           "authorship": "(Airaghi, 1907)"
@@ -1567,7 +1571,11 @@
           "description": "Schizodus ventricosus is a schizodidae species found in its native region.",
           "sourcedFrom": "none",
           "children": [],
-          "uuid": "306a7aca-6e9a-5bf-bf5-9e5f9c82c11c22"
+          "uuid": "306a7aca-6e9a-5bf-bf5-9e5f9c82c11c22",
+          "authorship": "(Conrad, 1867)",
+          "sourceIds": {
+            "gbif-backbone": "11171499"
+          }
         },
         {
           "id": "SP_SCHIZODUS_WHEELERI",
@@ -1587,7 +1595,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1495957"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1495957"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1495957",
+            "gbif-backbone": "8469365"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1495957,col:8698G",
           "authorship": "(Swallow, 1863)"
@@ -2330,7 +2339,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:1245374"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1245374"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1245374",
+            "gbif-backbone": "4950996"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:1245374,col:4MP93",
           "authorship": "(C. C. Branson, 1930)"
@@ -2800,10 +2810,115 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Schizodidae"
+    },
+    {
+      "id": "GENUS_MYOPHORIA",
+      "name": "Myophoria",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MYOPHORIA_PRAECOX_WAAGEN_1881",
+          "name": "Myophoria praecox",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myophoria",
+          "authorship": "(Waagen, 1881)",
+          "sourceIds": {
+            "gbif-backbone": "9567358"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYOPHORIA_TOBAI_HAYASAKA_1925",
+          "name": "Myophoria tobai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myophoria",
+          "authorship": "(Hayasaka, 1925)",
+          "sourceIds": {
+            "gbif-backbone": "9633613"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYOPHORIA_SUBELEGANS_WAAGEN_1881",
+          "name": "Myophoria subelegans",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myophoria",
+          "authorship": "(Waagen, 1881)",
+          "sourceIds": {
+            "gbif-backbone": "9447067"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_MYOPHORIA_CARDISSA_WAAGEN_1881",
+          "name": "Myophoria cardissa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Myophoria",
+          "authorship": "(Waagen, 1881)",
+          "sourceIds": {
+            "gbif-backbone": "9403329"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizodidae"
+    },
+    {
+      "id": "GENUS_GOULDIA",
+      "name": "Gouldia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GOULDIA_PRIMAEVA_WAAGEN_1881",
+          "name": "Gouldia primaeva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gouldia",
+          "authorship": "(Waagen, 1881)",
+          "sourceIds": {
+            "gbif-backbone": "8653279"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizodidae"
+    },
+    {
+      "id": "GENUS_AXINUS",
+      "name": "Axinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AXINUS_SECURUS_SHUMARD_1859",
+          "name": "Axinus securus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Axinus",
+          "authorship": "(Shumard, 1859)",
+          "sourceIds": {
+            "gbif-backbone": "9238693"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "schizodidae"
     }
   ],
-  "genusCount": 8,
-  "speciesCount": 175,
+  "genusCount": 11,
+  "speciesCount": 181,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
