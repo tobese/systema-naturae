@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -49,8 +50,10 @@ def cb_publisher(key: str) -> str | None:
     if key in _publisher_cache and now - _publisher_cache_at.get(key, 0) < 600:
         return _publisher_cache[key]
     try:
+        # ChecklistBank API expects the bare numeric key, not the "checklistbank-" prefix.
+        api_key = key[len("checklistbank-"):] if key.startswith("checklistbank-") else key
         req = urllib.request.Request(
-            f"{CB_API}/{key}",
+            f"{CB_API}/{api_key}",
             headers={"User-Agent": CB_UA},
         )
         with urllib.request.urlopen(req, timeout=10) as r:
@@ -67,6 +70,22 @@ def cb_publisher(key: str) -> str | None:
     _publisher_cache[key] = org or None
     _publisher_cache_at[key] = now
     return _publisher_cache[key]
+
+
+def cb_key_from_slughint(slughint: str | None) -> str | None:
+    """Extract a source-queue key from an import log row's slugHint, when it
+    looks like a ChecklistBank dataset key ("55434" or "checklistbank-55434").
+    Returns the queue-key form ("checklistbank-55434") or None."""
+    if not slughint:
+        return None
+    s = str(slughint).strip()
+    m = re.fullmatch(r"checklistbank-(\d+)", s)
+    if m:
+        return f"checklistbank-{m.group(1)}"
+    m = re.fullmatch(r"(\d+)", s)
+    if m:
+        return f"checklistbank-{m.group(1)}"
+    return None
 
 
 def pending_summary() -> dict:
@@ -319,7 +338,7 @@ function render(data) {
       ...r.issues.map(i => `<div class="issue">&#9650; ${i}</div>`),
       ...r.notes.map(n => `<div class="note">&middot; ${n}</div>`),
     ].join('');
-    const name = r.title || r.slugHint || r.source || '?';
+    const name = r.publisher ? `${r.publisher} ${r.key ? '('+r.key+')' : ''}` : (r.title || r.slugHint || r.source || '?');
     return `<tr class="${r.issues.length ? 'flagged' : ''}">
       <td>${(r.at || '').replace('T', ' ').slice(0, 19)}</td>
       <td><span class="slug">${name}</span>${extra}</td>
@@ -511,6 +530,10 @@ class Handler(BaseHTTPRequestHandler):
                 row = dict(r)
                 row["issues"] = ilv.problems(r, ceiling)
                 row["notes"] = ilv.notes(r)
+                key = cb_key_from_slughint(row.get("slugHint"))
+                if key:
+                    row["key"] = key
+                    row["publisher"] = cb_publisher(key)
                 out.append(row)
             body = json.dumps({"rows": out, "ceiling": ceiling}).encode("utf-8")
             self.send_response(200)
