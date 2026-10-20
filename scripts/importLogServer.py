@@ -25,6 +25,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import subprocess
 import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
@@ -121,6 +122,17 @@ PAGE = """<!doctype html>
   }
   .queue-footer code { color: var(--text); }
   .queue-empty { color: var(--dim); font-size: 12.5px; }
+  .driver-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 2px 8px; border-radius: 999px; font-size: 10.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .03em; white-space: nowrap;
+  }
+  .driver-running { background: rgba(61, 220, 132, 0.15); color: var(--ok); }
+  .driver-stopped { background: rgba(255, 92, 92, 0.15); color: var(--warn); }
+  .driver-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
   .open-block {
     border: 1px solid var(--border); border-radius: 10px;
     background: var(--panel); margin-top: 12px; overflow: hidden;
@@ -144,6 +156,14 @@ PAGE = """<!doctype html>
 
   <div class="queue">
     <h2 id="queueHeading">source queue &mdash; loading&hellip;</h2>
+    <div class="driver-line" id="driverLine" style="margin-bottom:8px;">
+      <span class="driver-badge driver-stopped" id="driverBadge">
+        <span class="driver-dot" id="driverDot"></span><span id="driverStatus">driver: loading&hellip;</span>
+      </span>
+      <span id="driverDetail" style="color:var(--dim); font-size:11px; margin-left:8px;">
+        downloaded: <span id="downloadedCount">0</span> / <span id="downloadedThreshold">5</span> refill threshold
+      </span>
+    </div>
     <ul class="queue-list" id="queueUpNext"></ul>
     <div class="open-block" id="openBlock">
       <div class="open-toggle" id="openToggle" role="button" tabindex="0" aria-expanded="false">
@@ -236,6 +256,10 @@ function renderQueue(sources) {
 
   document.getElementById('openCount').textContent = String(open.length);
 
+  const downloadedCount = byKey.filter(r => r.stage === 'downloaded').length;
+  document.getElementById('downloadedCount').textContent = String(downloadedCount);
+  document.getElementById('downloadedThreshold').textContent = '5';
+
   document.getElementById('queueUpNext').innerHTML = upNext.length
     ? upNext.map(r => {
         const badge = r.stage === 'measuring'
@@ -261,6 +285,30 @@ function renderQueue(sources) {
         `<li><b>${r.title || r.key}</b> (${r.stage}) &mdash; ${r.reason || 'no reason recorded'}</li>`
       ).join('')
     : '<li class="queue-empty">Nothing open.</li>';
+}
+
+async function renderDriver() {
+  try {
+    const res = await fetch('/api/driver');
+    const d = await res.json();
+    const badge = document.getElementById('driverBadge');
+    const status = document.getElementById('driverStatus');
+    const dot = document.getElementById('driverDot');
+    const detail = document.getElementById('driverDetail');
+    if (d.running) {
+      badge.className = 'driver-badge driver-running';
+      status.textContent = 'driver: running';
+      dot.style.display = 'inline-block';
+      detail.textContent = `downloaded: ${d.downloadedCount ?? 0} / ${d.refillThreshold ?? 5} refill threshold`;
+    } else {
+      badge.className = 'driver-badge driver-stopped';
+      status.textContent = 'driver: stopped';
+      dot.style.display = 'none';
+      detail.textContent = 'auto-refill disabled — queue will not refill below 5';
+    }
+  } catch (e) {
+    document.getElementById('driverStatus').textContent = 'driver: connection lost';
+  }
 }
 
 function setupQueueToggle() {
@@ -290,9 +338,15 @@ async function tick() {
   } catch (e) {
     document.getElementById('queueHeading').textContent = 'source queue — connection lost';
   }
+  try {
+    await renderDriver();
+  } catch (e) {
+    document.getElementById('driverStatus').textContent = 'driver: connection lost';
+  }
 }
 tick();
 setupQueueToggle();
+renderDriver();
 setInterval(tick, 3000);
 </script>
 </body>
@@ -331,6 +385,24 @@ class Handler(BaseHTTPRequestHandler):
             return
         if self.path == "/api/queue":
             body = json.dumps(sq.read_store()).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        if self.path == "/api/driver":
+            rc = subprocess.run(
+                ["pgrep", "-f", "importQueueDriver.py"],
+                capture_output=True,
+            ).returncode
+            q = sq.read_store()
+            downloaded = [v for v in q.values() if v.get("stage") == "downloaded"]
+            body = json.dumps({
+                "running": rc == 0,
+                "downloadedCount": len(downloaded),
+                "refillThreshold": 5,
+            }).encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(body)))
