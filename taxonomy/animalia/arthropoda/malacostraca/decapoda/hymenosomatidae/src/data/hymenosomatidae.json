@@ -287,11 +287,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hymenosoma",
           "sourceIds": {
-            "checklistbank": "ott2977638"
+            "checklistbank": "ott2977638",
+            "gbif-backbone": "9168774"
           },
           "children": [],
           "uuid": "09bfa3e2-5b07-5ae-bc6-e9132316412013",
-          "description": "Hymenosoma gaudichaudii is a hymenosomatidae species found in its native region."
+          "description": "Hymenosoma gaudichaudii is a hymenosomatidae species found in its native region.",
+          "authorship": "Guérin, 1830"
         },
         {
           "id": "SP_HYMENOSOMA_SP",
@@ -1054,6 +1056,19 @@
           "children": [],
           "uuid": "f40b4738-66c5-537-8ac-24d24842568e4a",
           "description": "Elamena quoyi is a hymenosomatidae species found in its native region."
+        },
+        {
+          "id": "SP_ELAMENA_MENDOZA_CHUANG_NG_1991",
+          "name": "Elamena mendoza",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Elamena",
+          "authorship": "Chuang & Ng, 1991",
+          "sourceIds": {
+            "gbif-backbone": "10230790"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2784,7 +2799,8 @@
           "sourceIds": {
             "col": [
               "3JBMF"
-            ]
+            ],
+            "gbif-backbone": "8312243"
           },
           "authorityIds": "col:3JBMF",
           "children": [],
@@ -3832,13 +3848,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "hymenosomatidae"
+    },
+    {
+      "id": "GENUS_OCYPODE",
+      "name": "Ocypode",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OCYPODE_UNGUIFORMIS_DE_HANN_1850",
+          "name": "Ocypode unguiformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ocypode",
+          "authorship": "(de Hann, 1850)",
+          "sourceIds": {
+            "gbif-backbone": "11211752"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hymenosomatidae"
     }
   ],
-  "speciesCount": 194,
+  "speciesCount": 196,
   "appSlug": "hymenosomatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 39,
+  "genusCount": 40,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3847,6 +3885,7 @@
       "orderKey": 637,
       "familyKey": 6036
     },
-    "checklistbank": "Hymenosomatidae"
+    "checklistbank": "Hymenosomatidae",
+    "wikispecies": "Hymenosomatidae"
   }
 }

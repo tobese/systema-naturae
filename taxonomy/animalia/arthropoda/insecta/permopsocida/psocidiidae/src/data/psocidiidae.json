@@ -153,7 +153,8 @@
             "col": [
               "CKD6Z"
             ],
-            "checklistbank": "txn:345980"
+            "checklistbank": "txn:345980",
+            "gbif-backbone": "8881676"
           },
           "authorityIds": "col:CKD6Z",
           "children": [],
@@ -328,13 +329,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "psocidiidae"
+    },
+    {
+      "id": "GENUS_PSOCIDIUM",
+      "name": "Psocidium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PSOCIDIUM_MINIMUM_TILLYARD_1926",
+          "name": "Psocidium minimum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Psocidium",
+          "authorship": "(Tillyard, 1926)",
+          "sourceIds": {
+            "gbif-backbone": "9027931"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "psocidiidae"
     }
   ],
-  "speciesCount": 15,
+  "speciesCount": 16,
   "appSlug": "psocidiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

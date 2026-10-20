@@ -462,6 +462,32 @@
           "children": [],
           "uuid": "ead3a48f-5de5-547-9b7-85c35c6d9ad035",
           "description": "Obidosus sp. is a stygnidae species found in its native region."
+        },
+        {
+          "id": "SP_OBIDOSUS_CARNAVAL_VILLARREAL_PINTO_DA_ROCHA_2006",
+          "name": "Obidosus carnaval",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Obidosus",
+          "authorship": "(Villarreal & Pinto-da-Rocha, 2006)",
+          "sourceIds": {
+            "gbif-backbone": "11080336"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_OBIDOSUS_LONGIPALPIS_ROEWER_1943",
+          "name": "Obidosus longipalpis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Obidosus",
+          "authorship": "(Roewer, 1943)",
+          "sourceIds": {
+            "gbif-backbone": "10920110"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1445,6 +1471,19 @@
           "children": [],
           "uuid": "14f0c870-14b4-532-9bc-b8fa0647d0efdc",
           "description": "Stygnus sp. is a stygnidae species found in its native region."
+        },
+        {
+          "id": "SP_STYGNUS_AGGERUM_S_RENSEN_1932",
+          "name": "Stygnus aggerum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stygnus",
+          "authorship": "Sørensen, 1932",
+          "sourceIds": {
+            "gbif-backbone": "6908262"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1513,7 +1552,8 @@
             "col": [
               "7Y7PG"
             ],
-            "checklistbank": "1534704"
+            "checklistbank": "1534704",
+            "gbif-backbone": "11217757"
           },
           "authorityIds": "col:7Y7PG",
           "description": "Pickeliana albimaculata is a pickeliana species found in its native region."
@@ -1688,9 +1728,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Eutimesius",
           "sourceIds": {
-            "checklistbank": "Eutimesius_ornatus"
+            "checklistbank": "Eutimesius_ornatus",
+            "gbif-backbone": "6908283"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Roewer, 1943)"
         },
         {
           "id": "SP_EUTIMESIUS_SIMONI",
@@ -1700,9 +1742,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Eutimesius",
           "sourceIds": {
-            "checklistbank": "Eutimesius_simoni"
+            "checklistbank": "Eutimesius_simoni",
+            "gbif-backbone": "6908288"
           },
-          "children": []
+          "children": [],
+          "authorship": "Roewer, 1913"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1989,9 +2033,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Stygnidius",
           "sourceIds": {
-            "checklistbank": "Stygnidius_inflatus"
+            "checklistbank": "Stygnidius_inflatus",
+            "gbif-backbone": "6908316"
           },
-          "children": []
+          "children": [],
+          "authorship": "(Gervais, 1842)"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2150,7 +2196,8 @@
           "lineage": "Protimesius",
           "authorship": "(Soares, 1978)",
           "sourceIds": {
-            "checklistbank": "100041"
+            "checklistbank": "100041",
+            "gbif-backbone": "11510704"
           },
           "children": [],
           "uuid": "cde965da-0ca8-52d-9b4-e3f30ca00a1823",
@@ -2641,7 +2688,8 @@
               "7WQN6"
             ],
             "checklistbank": "1534542",
-            "wikispecies": "Imeri_lomanhungae"
+            "wikispecies": "Imeri_lomanhungae",
+            "gbif-backbone": "8637051"
           },
           "uuid": "8c38dc42-d294-578-8bb-244630480fbc72",
           "authorityIds": "col:7WQN6,gbif:8637051",
@@ -3191,13 +3239,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "stygnidae"
+    },
+    {
+      "id": "GENUS_KAAPORA",
+      "name": "Kaapora",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_KAAPORA_MINUTISSIMUS_ROEWER_1943",
+          "name": "Kaapora minutissimus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Kaapora",
+          "authorship": "(Roewer, 1943)",
+          "sourceIds": {
+            "gbif-backbone": "6908227"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "stygnidae"
     }
   ],
-  "speciesCount": 146,
+  "speciesCount": 150,
   "appSlug": "stygnidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 32,
+  "genusCount": 33,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3206,6 +3276,7 @@
       "orderKey": 907,
       "familyKey": 3253407
     },
-    "checklistbank": "Stygnidae"
+    "checklistbank": "Stygnidae",
+    "wikispecies": "Stygnidae"
   }
 }

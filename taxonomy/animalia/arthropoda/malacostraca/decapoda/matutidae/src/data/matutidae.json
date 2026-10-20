@@ -225,7 +225,10 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Matuta",
           "authorship": "Miers, 1884",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "12179401"
+          }
         },
         {
           "id": "SP_MATUTA_DORYOPHORA_LATREILLE_1825",
@@ -754,7 +757,8 @@
             "col": [
               "BW3PY"
             ],
-            "checklistbank": "txn:223329"
+            "checklistbank": "txn:223329",
+            "gbif-backbone": "8526827"
           },
           "authorityIds": "col:BW3PY",
           "children": [],
@@ -877,13 +881,70 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "matutidae"
+    },
+    {
+      "id": "GENUS_ERIOSACHILA",
+      "name": "Eriosachila",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ERIOSACHILA_CUVILLIERI_VAN_STRAELEN_1929",
+          "name": "Eriosachila cuvillieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eriosachila",
+          "authorship": "Van Straelen, 1929",
+          "sourceIds": {
+            "gbif-backbone": "8608036"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ERIOSACHILA_CUBENSIS_VARELA_ROJAS_CONSUEGRA_2011",
+          "name": "Eriosachila cubensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eriosachila",
+          "authorship": "Varela & Rojas-Consuegra, 2011",
+          "sourceIds": {
+            "gbif-backbone": "11160466"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "matutidae"
+    },
+    {
+      "id": "GENUS_HEMZUT",
+      "name": "Hemzut",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HEMZUT_SCHWEINFURTHI_NOETLING_1885",
+          "name": "Hemzut schweinfurthi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hemzut",
+          "authorship": "(Noetling, 1885)",
+          "sourceIds": {
+            "gbif-backbone": "12172668"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "matutidae"
     }
   ],
-  "speciesCount": 46,
+  "speciesCount": 49,
   "appSlug": "matutidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 11,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

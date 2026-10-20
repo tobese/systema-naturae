@@ -60,11 +60,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ocyochterus",
           "sourceIds": {
-            "checklistbank": "1672487"
+            "checklistbank": "1672487",
+            "gbif-backbone": "11171886"
           },
           "children": [],
           "uuid": "fefd73b0-6d16-5e9-a53-c900eaf0394d55",
-          "description": "Ocyochterus graziae is a ochteridae species found in its native region."
+          "description": "Ocyochterus graziae is a ochteridae species found in its native region.",
+          "authorship": "Polhemus, 2021"
         },
         {
           "id": "SP_OCYOCHTERUS_GILLOGLYI",
@@ -74,11 +76,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ocyochterus",
           "sourceIds": {
-            "checklistbank": "1672488"
+            "checklistbank": "1672488",
+            "gbif-backbone": "11187015"
           },
           "children": [],
           "uuid": "7935dd20-f56d-5ef-b80-3dffaac4605ac4",
-          "description": "Ocyochterus gilloglyi is a ochteridae species found in its native region."
+          "description": "Ocyochterus gilloglyi is a ochteridae species found in its native region.",
+          "authorship": "Polhemus, 2021"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -965,7 +969,8 @@
               "6SGBL"
             ],
             "checklistbank": "ott6314162",
-            "wikispecies": "Ochterus_santosi"
+            "wikispecies": "Ochterus_santosi",
+            "gbif-backbone": "8497439"
           },
           "authorityIds": "col:6SGBL,itis:1004160",
           "children": [],
@@ -1766,11 +1771,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ochterus",
           "sourceIds": {
-            "checklistbank": "1496737"
+            "checklistbank": "1496737",
+            "gbif-backbone": "9922152"
           },
           "children": [],
           "uuid": "b196110d-9a52-5b5-b23-379010b49aa3b9",
-          "description": "Ochterus strigicollis is a ochteridae species found in its native region."
+          "description": "Ochterus strigicollis is a ochteridae species found in its native region.",
+          "authorship": "Horváth, 1913"
         },
         {
           "id": "SP_OCHTERUS_PAPACEKI",
@@ -1817,6 +1824,19 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Ochterus",
+          "children": []
+        },
+        {
+          "id": "SP_OCHTERUS_BANKSI_BARBER_1913",
+          "name": "Ochterus banksi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ochterus",
+          "authorship": "Barber, 1913",
+          "sourceIds": {
+            "gbif-backbone": "2020219"
+          },
           "children": []
         }
       ],
@@ -1928,7 +1948,8 @@
             "col": [
               "672HZ"
             ],
-            "checklistbank": "ott6314156"
+            "checklistbank": "ott6314156",
+            "gbif-backbone": "8548775"
           },
           "authorityIds": "col:672HZ,itis:1004177",
           "children": [],
@@ -1996,7 +2017,8 @@
             "itis": [
               "1004175"
             ],
-            "checklistbank": "txn:191399"
+            "checklistbank": "txn:191399",
+            "gbif-backbone": "8597772"
           },
           "authorityIds": "col:4MJW5,itis:1004175",
           "children": [],
@@ -2027,7 +2049,8 @@
             "itis": [
               "1004176"
             ],
-            "checklistbank": "ott6314158"
+            "checklistbank": "ott6314158",
+            "gbif-backbone": "8681229"
           },
           "authorityIds": "col:6J9ZJ,itis:1004176",
           "children": [],
@@ -2138,7 +2161,8 @@
           "lineage": "Arcochterus",
           "authorship": "Zhang et al. 2022",
           "sourceIds": {
-            "checklistbank": "txn:459265"
+            "checklistbank": "txn:459265",
+            "gbif-backbone": "11608473"
           },
           "children": [],
           "uuid": "09b03523-f0a5-51d-abf-84b5d5732f72ae",
@@ -2162,7 +2186,8 @@
           "lineage": "Parvochterus",
           "authorship": "Zhang et al. 2022",
           "sourceIds": {
-            "checklistbank": "txn:459267"
+            "checklistbank": "txn:459267",
+            "gbif-backbone": "11513874"
           },
           "children": [],
           "uuid": "91e82cd2-755c-5d5-9dd-70ef70b710c3b3",
@@ -2177,7 +2202,8 @@
           "lineage": "Parvochterus",
           "authorship": "Zhang et al. 2022",
           "sourceIds": {
-            "checklistbank": "txn:459268"
+            "checklistbank": "txn:459268",
+            "gbif-backbone": "11706038"
           },
           "children": [],
           "uuid": "d2884a4d-31af-5aa-9bf-65be27d304217f",
@@ -2249,13 +2275,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ochteridae"
+    },
+    {
+      "id": "GENUS_MEROPACHYS",
+      "name": "Meropachys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MEROPACHYS_DUBIUS_POPOV_1986",
+          "name": "Meropachys dubius",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Meropachys",
+          "authorship": "(Popov, 1986)",
+          "sourceIds": {
+            "gbif-backbone": "8637264"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ochteridae"
     }
   ],
-  "speciesCount": 103,
+  "speciesCount": 105,
   "appSlug": "ochteridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2264,6 +2312,7 @@
       "orderKey": 809,
       "familyKey": 7893
     },
-    "checklistbank": "Ochteridae"
+    "checklistbank": "Ochteridae",
+    "wikispecies": "Ochteridae"
   }
 }

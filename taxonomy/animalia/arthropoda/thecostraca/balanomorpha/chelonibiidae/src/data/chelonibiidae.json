@@ -90,7 +90,8 @@
           "sourceIds": {
             "checklistbank": "Chelonibia_patula",
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:535518",
-            "wikispecies": "Chelonibia_patula"
+            "wikispecies": "Chelonibia_patula",
+            "gbif-backbone": "7260652"
           }
         },
         {
@@ -102,9 +103,11 @@
           "lineage": "Chelonibia",
           "sourceIds": {
             "checklistbank": "Chelonibia_manati",
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:733542"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:733542",
+            "gbif-backbone": "2115662"
           },
-          "children": []
+          "children": [],
+          "authorship": "Pilsbry, 1916"
         },
         {
           "id": "SP_CHELONIBIA_ZANZIBARENSIS",
@@ -114,7 +117,35 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chelonibia",
           "sourceIds": {
-            "checklistbank": "Chelonibia_zanzibarensis"
+            "checklistbank": "Chelonibia_zanzibarensis",
+            "gbif-backbone": "12235162"
+          },
+          "children": [],
+          "authorship": "Collareta, Newman, Bosio & Coletti, 2021"
+        },
+        {
+          "id": "SP_CHELONIBIA_MELLENI_ZULLO_1982",
+          "name": "Chelonibia melleni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonibia",
+          "authorship": "Zullo, 1982",
+          "sourceIds": {
+            "gbif-backbone": "8439979"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHELONIBIA_DUVERGIERI_ALESSANDRI_1922",
+          "name": "Chelonibia duvergieri",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Chelonibia",
+          "authorship": "Alessandri, 1922",
+          "sourceIds": {
+            "gbif-backbone": "8933491"
           },
           "children": []
         }
@@ -233,14 +264,50 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "chelonibiidae"
+    },
+    {
+      "id": "GENUS_CHELONIBA",
+      "name": "Cheloniba",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CHELONIBA_TESTUDINARIA_LINNAEUS_1758",
+          "name": "Cheloniba testudinaria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheloniba",
+          "authorship": "Linnaeus, 1758",
+          "sourceIds": {
+            "gbif-backbone": "6128449"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CHELONIBA_PATULLA_RANZANI_1818",
+          "name": "Cheloniba patulla",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheloniba",
+          "authorship": "Ranzani, 1818",
+          "sourceIds": {
+            "gbif-backbone": "6128448"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "chelonibiidae"
     }
   ],
-  "speciesCount": 14,
+  "speciesCount": 18,
   "appSlug": "chelonibiidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Thecostraca",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
-    "checklistbank": "Chelonibiidae"
+    "checklistbank": "Chelonibiidae",
+    "wikispecies": "Chelonibiidae"
   }
 }

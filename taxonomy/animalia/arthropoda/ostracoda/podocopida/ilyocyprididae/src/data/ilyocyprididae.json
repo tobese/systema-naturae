@@ -91,7 +91,8 @@
           "children": [],
           "uuid": "55387378-0fbd-5b8-884-cc5b8279ab261b",
           "sourceIds": {
-            "checklistbank": "txn:131363"
+            "checklistbank": "txn:131363",
+            "gbif-backbone": "4945448"
           },
           "description": "Neuquenocypris minor is a ilyocyprididae species found in its native region."
         },
@@ -1455,7 +1456,8 @@
           "sourceIds": {
             "wikispecies": "Ilyocypris_alta"
           },
-          "uuid": "d846c78c-e7b8-4f32-aa99-4c7d9a778956"
+          "uuid": "d846c78c-e7b8-4f32-aa99-4c7d9a778956",
+          "children": []
         },
         {
           "id": "SP_ILYOCYPRIS_PROPINQUA",
@@ -1467,7 +1469,8 @@
           "sourceIds": {
             "wikispecies": "Ilyocypris_propinqua"
           },
-          "uuid": "a118551e-63fa-46b8-86b2-60f28b6170b2"
+          "uuid": "a118551e-63fa-46b8-86b2-60f28b6170b2",
+          "children": []
         },
         {
           "id": "SP_ILYOCYPRIS_HANGUK",
@@ -1479,7 +1482,8 @@
           "sourceIds": {
             "wikispecies": "Ilyocypris_hanguk"
           },
-          "uuid": "b835e241-9bb6-408c-b4c5-67da3a2dc620"
+          "uuid": "b835e241-9bb6-408c-b4c5-67da3a2dc620",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1547,13 +1551,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ilyocyprididae"
+    },
+    {
+      "id": "GENUS_MANTELLIANA",
+      "name": "Mantelliana",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MANTELLIANA_SODOVI_SINITSA_1986",
+          "name": "Mantelliana sodovi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mantelliana",
+          "authorship": "Sinitsa, 1986",
+          "sourceIds": {
+            "gbif-backbone": "8677014"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ilyocyprididae"
     }
   ],
-  "speciesCount": 96,
+  "speciesCount": 97,
   "appSlug": "ilyocyprididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Ostracoda",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

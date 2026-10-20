@@ -330,7 +330,8 @@
             ],
             "itis": [
               "1133585"
-            ]
+            ],
+            "gbif-backbone": "8893899"
           },
           "authorityIds": "col:7WKSH,itis:1133585",
           "description": "Pontastacus eichwaldi is a astacidae species found in its native region."
@@ -667,7 +668,8 @@
           "lineage": "Astacus",
           "authorship": "Fritsch and Kafka 1887",
           "sourceIds": {
-            "checklistbank": "txn:217937"
+            "checklistbank": "txn:217937",
+            "gbif-backbone": "8448879"
           },
           "children": [],
           "uuid": "b9e2393a-6dbd-5a4-841-ca0a8dc5545ee9",
@@ -687,6 +689,71 @@
           "children": [],
           "uuid": "90b367fb-f545-5ac-a8a-d4571bea7d6d00",
           "description": "Astacus cenomanensis is a astacidae species found in its native region."
+        },
+        {
+          "id": "SP_ASTACUS_CARINATUS_MEUSCHEN_1778",
+          "name": "Astacus carinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Meuschen, 1778",
+          "sourceIds": {
+            "gbif-backbone": "6454481"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_EDWARDSII_VAN_STRAELEN_1928",
+          "name": "Astacus edwardsii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Van Straelen, 1928",
+          "sourceIds": {
+            "gbif-backbone": "8705897"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_TETTIGONUS_FABRICIUS_1775",
+          "name": "Astacus tettigonus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Fabricius, 1775",
+          "sourceIds": {
+            "gbif-backbone": "6454474"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_MADAGASCARIENSIS_AUDOUIN_MILNE_EDWARDS_1841",
+          "name": "Astacus madagascariensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Audouin & Milne Edwards, 1841",
+          "sourceIds": {
+            "gbif-backbone": "8045992"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTACUS_FULGENS_FABRICIUS_1775",
+          "name": "Astacus fulgens",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Astacus",
+          "authorship": "Fabricius, 1775",
+          "sourceIds": {
+            "gbif-backbone": "11131647"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1043,7 +1110,8 @@
           "sourceIds": {
             "wikispecies": "Austropotamobius_pallipes"
           },
-          "uuid": "b3224c64-cc1e-4ad0-a4e1-35c7683fbcbb"
+          "uuid": "b3224c64-cc1e-4ad0-a4e1-35c7683fbcbb",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1072,13 +1140,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "astacidae"
+    },
+    {
+      "id": "GENUS_AGLAUROS",
+      "name": "Aglauros",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AGLAUROS_EFFOSSA_COSTA_1855",
+          "name": "Aglauros effossa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aglauros",
+          "authorship": "(Costa, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "9378059"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "astacidae"
     }
   ],
-  "speciesCount": 56,
+  "speciesCount": 62,
   "appSlug": "astacidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 10,
+  "genusCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1087,6 +1177,7 @@
       "orderKey": 637,
       "familyKey": 8022
     },
-    "checklistbank": "Astacidae"
+    "checklistbank": "Astacidae",
+    "wikispecies": "Astacidae"
   }
 }

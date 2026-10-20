@@ -204,7 +204,8 @@
                     "col": [
                       "BT2XK"
                     ],
-                    "checklistbank": "1029084"
+                    "checklistbank": "1029084",
+                    "gbif-backbone": "8067965"
                   },
                   "authorityIds": "col:BT2XK,itis:102371",
                   "description": "Gryllotalpa africana, also known as the African mole cricket, is a relatively small mole cricket species, native to Africa, but local populations exist in Asia, and southern Europe."
@@ -2132,6 +2133,19 @@
                   "lineage": "Gryllotalpa",
                   "authorship": "Bennet-clark, 1970",
                   "children": []
+                },
+                {
+                  "id": "SP_GRYLLOTALPA_SPEC_TAN_KAMARUDDIN_2016",
+                  "name": "Gryllotalpa spec",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Gryllotalpa",
+                  "authorship": "Tan & Kamaruddin, 2016",
+                  "sourceIds": {
+                    "gbif-backbone": "11667020"
+                  },
+                  "children": []
                 }
               ],
               "lineage": "Gryllotalpini"
@@ -2621,6 +2635,19 @@
                   },
                   "authorityIds": "col:3PMVT",
                   "description": "Indioscaptor nepalicus is a ensifera > gryllotalpoidea > indioscaptor species found in Asia region."
+                },
+                {
+                  "id": "SP_INDIOSCAPTOR_SIANGENSIS_TANDON_SHISHODIA_1972",
+                  "name": "Indioscaptor siangensis",
+                  "rank": "SPECIES",
+                  "subspeciesCount": 0,
+                  "sourcedFrom": "checklistbank",
+                  "lineage": "Indioscaptor",
+                  "authorship": "(Tandon & Shishodia, 1972)",
+                  "sourceIds": {
+                    "gbif-backbone": "1716225"
+                  },
+                  "children": []
                 }
               ]
             }
@@ -3721,49 +3748,42 @@
       "lineage": "gryllotalpidae"
     },
     {
-      "id": "GENUS_TRIAMESCAPTOR",
-      "name": "Triamescaptor",
+      "id": "GENUS_TRESDIGITUS",
+      "name": "Tresdigitus",
       "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "gryllotalpidae",
       "children": [
         {
-          "id": "SP_TRIAMESCAPTOR_AOTEA",
-          "name": "Triamescaptor aotea",
+          "id": "SP_TRESDIGITUS_RECTANGULI_XU_FANG_WANG_2020",
+          "name": "Tresdigitus rectanguli",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "Triamescaptor",
+          "lineage": "Tresdigitus",
+          "authorship": "Xu, Fang & Wang, 2020",
           "sourceIds": {
-            "wikispecies": "Triamescaptor_aotea"
+            "gbif-backbone": "11169838"
           },
-          "uuid": "0195787b-deb3-4470-8026-7b4f77f60bc7"
-        }
-      ]
-    },
-    {
-      "id": "GENUS_GRYLLOTALPA",
-      "name": "Gryllotalpa",
-      "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "gryllotalpidae",
-      "children": [
+          "children": []
+        },
         {
-          "id": "SP_GRYLLOTALPA_GRYLLOTALPA",
-          "name": "Gryllotalpa gryllotalpa",
+          "id": "SP_TRESDIGITUS_GRACILIS_JIANG_XU_JARZEMBOWSKI_XIAO_2022",
+          "name": "Tresdigitus gracilis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "Gryllotalpa",
+          "lineage": "Tresdigitus",
+          "authorship": "Jiang, Xu, Jarzembowski & Xiao, 2022",
           "sourceIds": {
-            "wikispecies": "Gryllotalpa_gryllotalpa"
+            "gbif-backbone": "12263759"
           },
-          "uuid": "d0c1325e-0067-44f1-9268-3d3c1d9269f6"
+          "children": []
         }
-      ]
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "gryllotalpidae"
     }
   ],
-  "speciesCount": 166,
+  "speciesCount": 168,
   "appSlug": "gryllotalpidae",
   "lineage": "Ensifera > Gryllotalpoidea",
   "continents": [
@@ -3774,7 +3794,7 @@
     "North America",
     "South America"
   ],
-  "genusCount": 13,
+  "genusCount": 22,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

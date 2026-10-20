@@ -983,7 +983,8 @@
           "children": [],
           "sourceIds": {
             "gbif": 5174824,
-            "checklistbank": "ott3527856"
+            "checklistbank": "ott3527856",
+            "gbif-backbone": "5174824"
           },
           "uuid": "75c15e80-43e8-57f-a03-be96fd93e58cb1",
           "authorityIds": "gbif:5174824",
@@ -1916,12 +1917,14 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Hermannia",
           "sourceIds": {
-            "checklistbank": "ott7679334"
+            "checklistbank": "ott7679334",
+            "gbif-backbone": "8416386"
           },
           "children": [],
           "uuid": "b54ebc2b-e8e8-598-a36-ed1ac59530e223",
           "description": "Hermannia grandis is a hermanniidae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorship": "Berlese"
         },
         {
           "id": "SP_HERMANNIA_QUADRATA",
@@ -2518,13 +2521,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Hermanniidae"
+    },
+    {
+      "id": "GENUS_NEOHERMANNIA",
+      "name": "Neohermannia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NEOHERMANNIA_TRICHOSA_BAYOUMI_MAHUNKA_1979",
+          "name": "Neohermannia trichosa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neohermannia",
+          "authorship": "Bayoumi & Mahunka, 1979",
+          "sourceIds": {
+            "gbif-backbone": "2192726"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "hermanniidae"
     }
   ],
-  "speciesCount": 152,
+  "speciesCount": 153,
   "appSlug": "hermanniidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

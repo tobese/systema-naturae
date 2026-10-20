@@ -58,7 +58,8 @@
             "col": [
               "52V55"
             ],
-            "checklistbank": "ott4169944"
+            "checklistbank": "ott4169944",
+            "gbif-backbone": "2232895"
           },
           "authorityIds": "col:52V55,itis:1092991",
           "description": "Straberax morelus is a straberax species found in its native region.",
@@ -446,7 +447,10 @@
           "lineage": "Stigmatogaster",
           "authorship": "(Shaw, 1789)",
           "children": [],
-          "speciesList": []
+          "speciesList": [],
+          "sourceIds": {
+            "checklistbank-2008": "227796"
+          }
         },
         {
           "id": "SP_STIGMATOGASTER_SUBTERRANEUS_SHAW_1789",
@@ -458,6 +462,20 @@
           "authorship": "(Shaw, 1789)",
           "sourceIds": {
             "checklistbank": "202268"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_STIGMATOGASTER_SOULETINA_BR_LEMANN_1907",
+          "name": "Stigmatogaster souletina",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stigmatogaster",
+          "authorship": "(Brölemann, 1907)",
+          "sourceIds": {
+            "checklistbank-2008": "227795",
+            "gbif-backbone": "2232828"
           },
           "children": []
         }
@@ -696,12 +714,14 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Chomatobius",
           "sourceIds": {
-            "checklistbank": "ott6177182"
+            "checklistbank": "ott6177182",
+            "gbif-backbone": "7960461"
           },
           "children": [],
           "uuid": "86c0d8a2-7940-5f9-8d6-e09e6cd4fd707e",
           "description": "Chomatobius brasilianus is a himantariidae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorship": "Humbert & Saussure, 1870"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1261,7 +1281,8 @@
             "itis": [
               "1093032"
             ],
-            "checklistbank": "ott4169970"
+            "checklistbank": "ott4169970",
+            "gbif-backbone": "6185250"
           },
           "authorityIds": "col:3ZZXX,itis:1093032",
           "description": "Mesocanthus albus is a mesocanthus species found in its native region.",
@@ -2641,13 +2662,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Himantariidae"
+    },
+    {
+      "id": "GENUS_NOTOPHILIDES",
+      "name": "Notophilides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NOTOPHILIDES_MAXIMILIANI_HUMBERT_SAUSSURE_1870",
+          "name": "Notophilides maximiliani",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Notophilides",
+          "authorship": "(Humbert & Saussure, 1870)",
+          "sourceIds": {
+            "gbif-backbone": "12251145"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "himantariidae"
     }
   ],
-  "speciesCount": 125,
+  "speciesCount": 127,
   "appSlug": "himantariidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Chilopoda",
-  "genusCount": 27,
+  "genusCount": 28,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2656,7 +2699,8 @@
       "orderKey": 1251,
       "familyKey": 8265
     },
-    "checklistbank": "Himantariidae"
+    "checklistbank": "Himantariidae",
+    "wikispecies": "Himantariidae"
   },
   "speciesList": []
 }

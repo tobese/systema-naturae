@@ -188,6 +188,45 @@
           },
           "children": [],
           "uuid": "13deceae-f994-53f-91b-82051da6dae8a3"
+        },
+        {
+          "id": "SP_VERMIPARDUS_BARRACLOUGHI_STUCKENBERG_1997",
+          "name": "Vermipardus barracloughi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vermipardus",
+          "authorship": "Stuckenberg, 1997",
+          "sourceIds": {
+            "gbif-backbone": "1675341"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VERMIPARDUS_IMMACULATUS_CARLES_TOLRA_CUESTA_SEGURA_2020",
+          "name": "Vermipardus immaculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vermipardus",
+          "authorship": "Carles-Tolra & Cuesta-Segura, 2020",
+          "sourceIds": {
+            "gbif-backbone": "11373492"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_VERMIPARDUS_COMSTOCKI_WHEELER_1918",
+          "name": "Vermipardus comstocki",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vermipardus",
+          "authorship": "Wheeler, 1918",
+          "sourceIds": {
+            "gbif-backbone": "11378375"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -832,11 +871,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Lampromyia",
           "sourceIds": {
-            "checklistbank": "ott6265615"
+            "checklistbank": "ott6265615",
+            "gbif-backbone": "8609919"
           },
           "children": [],
           "uuid": "f25bbe4f-fbbe-56d-89d-b9347424ddd5dc",
-          "description": "Lampromyia bellasiciliae is a vermileonidae species found in its native region."
+          "description": "Lampromyia bellasiciliae is a vermileonidae species found in its native region.",
+          "authorship": "Kehlmaier, 2014"
         },
         {
           "id": "SP_LAMPROMYIA_FUNEBRIS",
@@ -846,7 +887,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Lampromyia",
           "sourceIds": {
-            "checklistbank": "62903"
+            "checklistbank": "62903",
+            "gbif-backbone": "1675370"
           },
           "children": [],
           "uuid": "c6dddeaa-02c4-5e7-aa5-d0491cb046785c",
@@ -1021,11 +1063,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Vermiophis",
           "sourceIds": {
-            "checklistbank": "ott4455234"
+            "checklistbank": "ott4455234",
+            "gbif-backbone": "1675334"
           },
           "children": [],
           "uuid": "73aa44a6-4253-5f4-843-3716f04cfac7fe",
-          "description": "Vermiophis ganguanensis is a vermileonidae species found in its native region."
+          "description": "Vermiophis ganguanensis is a vermileonidae species found in its native region.",
+          "authorship": "Yang, 1979"
         },
         {
           "id": "SP_VERMIOPHIS_SP",
@@ -1155,6 +1199,19 @@
           "authorship": "Shan & Wang, 2026",
           "uuid": "bbe1f6b6-0026-591-a52-5846b7fa49febe",
           "description": "Vermitigris tsangyanggyatso is a species of brachyceran fly that belongs to the family Vermileonidae."
+        },
+        {
+          "id": "SP_VERMITIGRIS_NILOTICUS_EDWARDS_1935",
+          "name": "Vermitigris niloticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Vermitigris",
+          "authorship": "Edwards, 1935",
+          "sourceIds": {
+            "gbif-backbone": "11373928"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1377,13 +1434,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "vermileonidae"
+    },
+    {
+      "id": "GENUS_BATGANA",
+      "name": "Batgana",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_BATGANA_MINOR_KOVALEV_1986",
+          "name": "Batgana minor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Batgana",
+          "authorship": "Kovalev, 1986",
+          "sourceIds": {
+            "gbif-backbone": "4795493"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vermileonidae"
+    },
+    {
+      "id": "GENUS_SHULMAS",
+      "name": "Shulmas",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SHULMAS_GLOBICEPS_KOVALEV_1986",
+          "name": "Shulmas globiceps",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Shulmas",
+          "authorship": "Kovalev, 1986",
+          "sourceIds": {
+            "gbif-backbone": "4795496"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "vermileonidae"
     }
   ],
-  "speciesCount": 78,
+  "speciesCount": 84,
   "appSlug": "vermileonidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 14,
+  "genusCount": 16,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1392,6 +1493,7 @@
       "orderKey": 811,
       "familyKey": 3515
     },
-    "checklistbank": "Vermileonidae"
+    "checklistbank": "Vermileonidae",
+    "wikispecies": "Vermileonidae"
   }
 }

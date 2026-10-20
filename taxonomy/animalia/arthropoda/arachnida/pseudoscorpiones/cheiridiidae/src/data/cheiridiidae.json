@@ -697,7 +697,8 @@
           "lineage": "Apocheiridium",
           "authorship": "(E. Simon, 1879)",
           "sourceIds": {
-            "checklistbank": "92587"
+            "checklistbank": "92587",
+            "gbif-backbone": "2124593"
           },
           "children": []
         }
@@ -1067,7 +1068,8 @@
             ],
             "itis": [
               "1126389"
-            ]
+            ],
+            "gbif-backbone": "10688489"
           },
           "uuid": "92b1a447-328b-5e3-a8a-2fdab647d789b6",
           "authorityIds": "col:46CQR,gbif:10688489,itis:1126389",
@@ -1907,6 +1909,19 @@
           "uuid": "5305164a-89f1-5a5-94c-c57184d4be37e9",
           "description": "Cheiridium hartmanni is a cheiridiidae species found in its native region.",
           "speciesList": []
+        },
+        {
+          "id": "SP_CHEIRIDIUM_FERUM_SIMON_1879",
+          "name": "Cheiridium ferum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cheiridium",
+          "authorship": "Simon, 1879",
+          "sourceIds": {
+            "gbif-backbone": "6884018"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2201,13 +2216,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Cheiridiidae"
+    },
+    {
+      "id": "GENUS_PROCHEIRIDIUM",
+      "name": "Procheiridium",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROCHEIRIDIUM_JUDSONI_PORTA_MICHALIK_PROUD_2020",
+          "name": "Procheiridium judsoni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Procheiridium",
+          "authorship": "Porta, Michalik & Proud, 2020",
+          "sourceIds": {
+            "gbif-backbone": "11194598"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "cheiridiidae"
     }
   ],
-  "speciesCount": 88,
+  "speciesCount": 90,
   "appSlug": "cheiridiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2216,7 +2253,8 @@
       "orderKey": 1161,
       "familyKey": 7654
     },
-    "checklistbank": "Cheiridiidae"
+    "checklistbank": "Cheiridiidae",
+    "wikispecies": "Cheiridiidae"
   },
   "speciesList": []
 }

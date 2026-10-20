@@ -608,7 +608,8 @@
             "col": [
               "6VQZL"
             ],
-            "checklistbank": "ott4686334"
+            "checklistbank": "ott4686334",
+            "gbif-backbone": "6182395"
           },
           "uuid": "cec4feab-3a88-5bd-aec-dcfd9ab5f12e09",
           "authorityIds": "col:6VQZL,gbif:2191209,itis:742414",
@@ -1026,7 +1027,10 @@
           "authorship": "Sanyal, Saha & Chakrabarti, 2006",
           "uuid": "63a0f23e-b4d6-55b-82a-f3bee8576b7507",
           "children": [],
-          "description": "Unguizetes granulatus is a unguizetes species found in its native region."
+          "description": "Unguizetes granulatus is a unguizetes species found in its native region.",
+          "sourceIds": {
+            "gbif-backbone": "11513776"
+          }
         },
         {
           "id": "SP_UNGUIZETES_INCERTUS_BALOGH_MAHUNKA_1969",
@@ -1814,13 +1818,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "mochlozetidae"
+    },
+    {
+      "id": "GENUS_HYDROZETES",
+      "name": "Hydrozetes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_HYDROZETES_SMITHI_WOOLLEY_1971",
+          "name": "Hydrozetes smithi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hydrozetes",
+          "authorship": "(Woolley, 1971)",
+          "sourceIds": {
+            "gbif-backbone": "6896714"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "mochlozetidae"
     }
   ],
-  "speciesCount": 87,
+  "speciesCount": 88,
   "appSlug": "mochlozetidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 17,
+  "genusCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

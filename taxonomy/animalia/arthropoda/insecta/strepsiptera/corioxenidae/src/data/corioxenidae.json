@@ -619,7 +619,8 @@
           "sourceIds": {
             "itis": [
               "955419"
-            ]
+            ],
+            "gbif-backbone": "9549301"
           },
           "authorityIds": "itis:955419",
           "description": "Triozocera buehrheimi is a triozocera species found in its native region."
@@ -638,7 +639,8 @@
             "itis": [
               "666060"
             ],
-            "checklistbank": "ott3013415"
+            "checklistbank": "ott3013415",
+            "gbif-backbone": "2007429"
           },
           "authorityIds": "itis:666060",
           "description": "Triozocera tecpanensis is a corioxenidae species found in its native region."
@@ -794,11 +796,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Triozocera",
           "sourceIds": {
-            "checklistbank": "1620218"
+            "checklistbank": "1620218",
+            "gbif-backbone": "12225487"
           },
           "children": [],
           "uuid": "96f1d766-1e84-565-928-a266e4efc367eb",
-          "description": "Triozocera macrognathus is a corioxenidae species found in its native region."
+          "description": "Triozocera macrognathus is a corioxenidae species found in its native region.",
+          "authorship": "Cook, 2022"
         },
         {
           "id": "SP_TRIOZOCERA_ALBOCCIPUT",
@@ -808,11 +812,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Triozocera",
           "sourceIds": {
-            "checklistbank": "1620221"
+            "checklistbank": "1620221",
+            "gbif-backbone": "12234945"
           },
           "children": [],
           "uuid": "554c04c1-d6bb-589-ae5-7c03db314ec9ea",
-          "description": "Triozocera albocciput is a corioxenidae species found in its native region."
+          "description": "Triozocera albocciput is a corioxenidae species found in its native region.",
+          "authorship": "Cook, 2022"
         },
         {
           "id": "SP_TRIOZOCERA_EURYCHILUS",
@@ -1118,7 +1124,8 @@
             "itis": [
               "955394"
             ],
-            "checklistbank": "ott5031650"
+            "checklistbank": "ott5031650",
+            "gbif-backbone": "6929721"
           },
           "authorityIds": "itis:955394",
           "description": "Dundoxenos breviphlebos is a corioxenidae species found in its native region."
@@ -1393,7 +1400,8 @@
             "itis": [
               "955878"
             ],
-            "checklistbank": "ott6290891"
+            "checklistbank": "ott6290891",
+            "gbif-backbone": "8546469"
           },
           "authorityIds": "col:8L8YS,itis:955878",
           "description": "Eocenoxenos palintropos is a eocenoxenos species found in its native region."
@@ -1486,13 +1494,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "corioxenidae"
+    },
+    {
+      "id": "GENUS_VIRIDOPROMONTORIUS",
+      "name": "Viridopromontorius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_VIRIDOPROMONTORIUS_AEQUUS_ROY_HAZRA_2016",
+          "name": "Viridopromontorius aequus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Viridopromontorius",
+          "authorship": "Roy & Hazra, 2016",
+          "sourceIds": {
+            "gbif-backbone": "8846029"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "corioxenidae"
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 69,
   "appSlug": "corioxenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 15,
+  "genusCount": 16,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

@@ -955,7 +955,8 @@
                 "col": [
                   "C75M3"
                 ],
-                "checklistbank": "1169836"
+                "checklistbank": "1169836",
+                "gbif-backbone": "4394078"
               },
               "authorityIds": "col:C75M3",
               "description": "Forcipula quelchi is a neodermaptera > labiduroidea > forcipula species found in its native region."
@@ -1181,6 +1182,18 @@
               "children": [],
               "uuid": "dfa3e988-8263-572-af0-c7a3930573b966",
               "description": "Forcipula sp. is a labiduridae species found in its native region."
+            },
+            {
+              "id": "SP_FORCIPULA_GARIAZZOI",
+              "name": "Forcipula gariazzoi",
+              "rank": "SPECIES",
+              "subspeciesCount": 0,
+              "sourcedFrom": "checklistbank",
+              "lineage": "Forcipula",
+              "sourceIds": {
+                "gbif-backbone": "10704224"
+              },
+              "children": []
             }
           ],
           "lineage": "Labidurinae"
@@ -2579,11 +2592,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Labiduromma",
           "sourceIds": {
-            "checklistbank": "ott4180429"
+            "checklistbank": "ott4180429",
+            "gbif-backbone": "4394175"
           },
           "children": [],
           "uuid": "0d2f23bc-e68e-5c8-984-dad9f036e2c0a9",
-          "description": "Labiduromma bormansi is a labiduridae species found in its native region."
+          "description": "Labiduromma bormansi is a labiduridae species found in its native region.",
+          "authorship": "Scudder, 1890"
         },
         {
           "id": "SP_LABIDUROMMA_AVIA",
@@ -2593,11 +2608,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Labiduromma",
           "sourceIds": {
-            "checklistbank": "ott4180430"
+            "checklistbank": "ott4180430",
+            "gbif-backbone": "4394179"
           },
           "children": [],
           "uuid": "544ae8b2-5094-5b4-a7f-a5d363acc18bee",
-          "description": "Labiduromma avia is a labiduridae species found in its native region."
+          "description": "Labiduromma avia is a labiduridae species found in its native region.",
+          "authorship": "Scudder, 1890"
         },
         {
           "id": "SP_LABIDUROMMA_TERTIARUM",
@@ -2678,31 +2695,32 @@
       "lineage": "Labiduridae"
     },
     {
-      "id": "GENUS_LABIDURA",
-      "name": "Labidura",
+      "id": "GENUS_CORDULAGOMPHUS",
+      "name": "Cordulagomphus",
       "rank": "GENUS",
-      "sourcedFrom": "checklistbank",
-      "lineage": "labiduridae",
       "children": [
         {
-          "id": "SP_LABIDURA_HERCULEANA",
-          "name": "Labidura herculeana",
+          "id": "SP_CORDULAGOMPHUS_SANTANENSIS_CARLE_WIGHTON_1990",
+          "name": "Cordulagomphus santanensis",
           "rank": "SPECIES",
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
-          "lineage": "Labidura",
+          "lineage": "Cordulagomphus",
+          "authorship": "(Carle & Wighton, 1990)",
           "sourceIds": {
-            "wikispecies": "Labidura_herculeana"
+            "gbif-backbone": "9289340"
           },
-          "uuid": "b762e012-8800-4e71-954c-a9b8364c55c3"
+          "children": []
         }
-      ]
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "labiduridae"
     }
   ],
-  "speciesCount": 146,
+  "speciesCount": 147,
   "appSlug": "labiduridae",
   "lineage": "Neodermaptera > Labiduroidea",
-  "genusCount": 20,
+  "genusCount": 25,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {

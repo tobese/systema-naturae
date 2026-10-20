@@ -569,7 +569,8 @@
             "itis": [
               "738283"
             ],
-            "checklistbank": "ott3529536"
+            "checklistbank": "ott3529536",
+            "gbif-backbone": "2194263"
           },
           "uuid": "a95a7280-a529-597-9b7-a7d441b947c672",
           "authorityIds": "col:4QV8P,gbif:2194263,itis:738283",
@@ -1034,11 +1035,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Ceratoppia",
           "sourceIds": {
-            "checklistbank": "ott4684796"
+            "checklistbank": "ott4684796",
+            "gbif-backbone": "4546356"
           },
           "children": [],
           "uuid": "d71a7372-480b-5ea-904-798002a372acf8",
-          "description": "Ceratoppia badia is a ceratoppiidae species found in its native region."
+          "description": "Ceratoppia badia is a ceratoppiidae species found in its native region.",
+          "authorship": "(C.L.Koch, 1840)"
         },
         {
           "id": "SP_CERATOPPIA_SP",
@@ -1053,6 +1056,72 @@
           "children": [],
           "uuid": "4bfbe010-d2ac-5f9-b41-351f5af1256810",
           "description": "Ceratoppia sp. is a ceratoppiidae species found in its native region."
+        },
+        {
+          "id": "SP_CERATOPPIA_BIPILIS_HERMANN_1904",
+          "name": "Ceratoppia bipilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratoppia",
+          "authorship": "(Hermann, 1904)",
+          "sourceIds": {
+            "checklistbank-2008": "232907",
+            "gbif-backbone": "2194255"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOPPIA_INCISA_KANEKO_AOKI_1982",
+          "name": "Ceratoppia incisa",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratoppia",
+          "authorship": "Kaneko & Aoki, 1982",
+          "sourceIds": {
+            "gbif-backbone": "2194248"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOPPIA_LONGIFILIS_CANESTRINI_1897",
+          "name": "Ceratoppia longifilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratoppia",
+          "authorship": "(Canestrini, 1897)",
+          "sourceIds": {
+            "gbif-backbone": "2194253"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOPPIA_OBLECTATORIA_TSENG_1982",
+          "name": "Ceratoppia oblectatoria",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratoppia",
+          "authorship": "Tseng, 1982",
+          "sourceIds": {
+            "gbif-backbone": "2194260"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CERATOPPIA_QUADRIDENTATA_HALLER_1882",
+          "name": "Ceratoppia quadridentata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratoppia",
+          "authorship": "(Haller, 1882)",
+          "sourceIds": {
+            "gbif-backbone": "2194249"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1439,6 +1508,19 @@
           "uuid": "85d2ff1f-e693-594-94a-9bc41dd9b3b2d0",
           "children": [],
           "description": "Ceratorchestes processus is a ceratorchestes species found in its native region."
+        },
+        {
+          "id": "SP_CERATORCHESTES_BALOGHI_MAHUNKA_1982",
+          "name": "Ceratorchestes baloghi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ceratorchestes",
+          "authorship": "Mahunka, 1982",
+          "sourceIds": {
+            "gbif-backbone": "2194230"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1718,13 +1800,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "ceratoppiidae"
+    },
+    {
+      "id": "GENUS_MACQUARIOPPIA",
+      "name": "Macquarioppia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACQUARIOPPIA_STRIATA_WALLWORK_1963",
+          "name": "Macquarioppia striata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macquarioppia",
+          "authorship": "(Wallwork, 1963)",
+          "sourceIds": {
+            "checklistbank-2008": "842214"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ceratoppiidae"
     }
   ],
-  "speciesCount": 70,
+  "speciesCount": 77,
   "appSlug": "ceratoppiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 17,
+  "genusCount": 18,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1733,6 +1837,7 @@
       "orderKey": 542,
       "familyKey": 3620
     },
-    "checklistbank": "Ceratoppiidae"
+    "checklistbank": "Ceratoppiidae",
+    "wikispecies": "Ceratoppiidae"
   }
 }

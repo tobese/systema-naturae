@@ -93,7 +93,8 @@
           "uuid": "cfb7e97b-9e1d-534-b7d-501f238be151b2",
           "authorship": "Boeck 1827",
           "sourceIds": {
-            "checklistbank": "txn:371130"
+            "checklistbank": "txn:371130",
+            "gbif-backbone": "4636143"
           },
           "description": "Paradoxides gracilis is a paradoxididae species found in its native region."
         },
@@ -106,7 +107,11 @@
           "children": [],
           "lineage": "Paradoxides",
           "uuid": "788ca430-bdd3-58d-87a-7c4fe12ce304a1",
-          "description": "Paradoxides davidis is a paradoxididae species found in its native region."
+          "description": "Paradoxides davidis is a paradoxididae species found in its native region.",
+          "authorship": "Salter, 1863",
+          "sourceIds": {
+            "gbif-backbone": "4636140"
+          }
         },
         {
           "id": "SP_PARADOXIDES_PUSILLUS_BARRANDE_1846",
@@ -182,6 +187,32 @@
           "children": [],
           "uuid": "0aa7efab-ebb2-5d9-8a9-2cf6a16e463641",
           "description": "Paradoxides abenacus is a paradoxididae species found in its native region."
+        },
+        {
+          "id": "SP_PARADOXIDES_TESSINI_BRONGNIART_1822",
+          "name": "Paradoxides tessini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradoxides",
+          "authorship": "Brongniart, 1822",
+          "sourceIds": {
+            "gbif-backbone": "7883497"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PARADOXIDES_QUADRIMUCRONATUS_MURCHISON_1839",
+          "name": "Paradoxides quadrimucronatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paradoxides",
+          "authorship": "Murchison, 1839",
+          "sourceIds": {
+            "gbif-backbone": "7476081"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -281,6 +312,19 @@
           "children": [],
           "uuid": "32bc50ef-6d45-5a6-896-5c801e2f318401",
           "description": "Eccaparadoxides lamellatus is a paradoxididae species found in its native region."
+        },
+        {
+          "id": "SP_ECCAPARADOXIDES_THORSLUNDI_RUSHTON_WEIDNER_EBBESTAD_2016",
+          "name": "Eccaparadoxides thorslundi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eccaparadoxides",
+          "authorship": "Rushton, Weidner & Ebbestad, 2016",
+          "sourceIds": {
+            "gbif-backbone": "11121713"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -632,13 +676,61 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paradoxididae"
+    },
+    {
+      "id": "GENUS_XYSTRIDURA",
+      "name": "Xystridura",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_XYSTRIDURA_JIELINGENSIS_YANG_ET_AL_1993",
+          "name": "Xystridura jielingensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xystridura",
+          "authorship": "Yang et al., 1993",
+          "sourceIds": {
+            "gbif-backbone": "8537384"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_XYSTRIDURA_GLACIA_PALMER_GATEHOUSE_1972",
+          "name": "Xystridura glacia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xystridura",
+          "authorship": "Palmer & Gatehouse, 1972",
+          "sourceIds": {
+            "gbif-backbone": "8532354"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_XYSTRIDURA_MULTILINIA_PALMER_GATEHOUSE_1972",
+          "name": "Xystridura multilinia",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Xystridura",
+          "authorship": "Palmer & Gatehouse, 1972",
+          "sourceIds": {
+            "gbif-backbone": "8668810"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paradoxididae"
     }
   ],
-  "speciesCount": 36,
+  "speciesCount": 42,
   "appSlug": "paradoxididae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Trilobita",
-  "genusCount": 8,
+  "genusCount": 9,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -647,6 +739,7 @@
       "orderKey": 9590575,
       "familyKey": 3267022
     },
-    "checklistbank": "Paradoxididae"
+    "checklistbank": "Paradoxididae",
+    "wikispecies": "Paradoxididae"
   }
 }

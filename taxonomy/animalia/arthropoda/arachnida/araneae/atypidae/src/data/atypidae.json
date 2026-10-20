@@ -1216,7 +1216,8 @@
               "JNY5"
             ],
             "checklistbank": "ott7108523",
-            "wikispecies": "Atypus_baotingensis"
+            "wikispecies": "Atypus_baotingensis",
+            "gbif-backbone": "9759060"
           },
           "uuid": "31511aeb-757a-5e7-9e7-6f634c7ad418c7",
           "authorityIds": "col:JNY5,gbif:9759060",
@@ -1595,7 +1596,8 @@
               "JNYD"
             ],
             "checklistbank": "ott7108525",
-            "wikispecies": "Atypus_jianfengensis"
+            "wikispecies": "Atypus_jianfengensis",
+            "gbif-backbone": "9662543"
           },
           "uuid": "f6354ebf-22a5-57e-970-7c7aa102f70517",
           "authorityIds": "col:JNYD,gbif:9662543",
@@ -1678,7 +1680,8 @@
             "col": [
               "JNYL"
             ],
-            "checklistbank": "ott6174148"
+            "checklistbank": "ott6174148",
+            "gbif-backbone": "8143631"
           },
           "uuid": "a27b44f3-032c-5b2-a61-80a980cdaa9114",
           "authorityIds": "col:JNYL,gbif:8143631",
@@ -1738,9 +1741,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Atypus",
           "sourceIds": {
-            "checklistbank": "Atypus_snetsingeri"
+            "checklistbank": "Atypus_snetsingeri",
+            "gbif-backbone": "5171634"
           },
-          "children": []
+          "children": [],
+          "authorship": "Sarno, 1973"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1818,13 +1823,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Atypidae"
+    },
+    {
+      "id": "GENUS_AMBIORTIPHAGUS",
+      "name": "Ambiortiphagus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMBIORTIPHAGUS_PONOMARENKOI_ESKOV_ZONSHTEIN_1990",
+          "name": "Ambiortiphagus ponomarenkoi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ambiortiphagus",
+          "authorship": "Eskov & Zonshtein, 1990",
+          "sourceIds": {
+            "gbif-backbone": "8617575"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "atypidae"
     }
   ],
-  "speciesCount": 71,
+  "speciesCount": 72,
   "appSlug": "atypidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 5,
+  "genusCount": 6,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1833,6 +1860,7 @@
       "orderKey": 1496,
       "familyKey": 3398
     },
-    "checklistbank": "Atypidae"
+    "checklistbank": "Atypidae",
+    "wikispecies": "Atypidae"
   }
 }

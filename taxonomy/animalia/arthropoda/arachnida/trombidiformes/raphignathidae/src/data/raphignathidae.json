@@ -173,7 +173,8 @@
           "authorship": "C. Hu, Jing & Liang, 1995",
           "sourceIds": {
             "gbif": 8074957,
-            "checklistbank": "ott6166320"
+            "checklistbank": "ott6166320",
+            "gbif-backbone": "8074957"
           },
           "uuid": "cfb4c686-d439-55b-b4b-1e2e8c5d36c08c",
           "authorityIds": "gbif:8074957",
@@ -469,7 +470,8 @@
             "itis": [
               "1224014"
             ],
-            "checklistbank": "ott6166318"
+            "checklistbank": "ott6166318",
+            "gbif-backbone": "7934704"
           },
           "uuid": "7df454dd-80d1-58d-ab3-170b6042bd5458",
           "authorityIds": "col:C3TZC,gbif:7934704,itis:1224014",
@@ -582,7 +584,8 @@
           "authorship": "Koç & Kara, 2005",
           "sourceIds": {
             "gbif": 7494716,
-            "checklistbank": "ott6166319"
+            "checklistbank": "ott6166319",
+            "gbif-backbone": "7494716"
           },
           "uuid": "1caad65f-55a6-540-8b8-3e5d728abeb45b",
           "authorityIds": "gbif:7494716",
@@ -796,7 +799,8 @@
           "authorship": "Akyol & Koç, 2006",
           "sourceIds": {
             "gbif": 8009806,
-            "checklistbank": "ott6166317"
+            "checklistbank": "ott6166317",
+            "gbif-backbone": "8009806"
           },
           "uuid": "5dc8cb8a-7550-53e-a31-7f962ca90a870d",
           "authorityIds": "gbif:8009806",
@@ -1203,11 +1207,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Raphignathus",
           "sourceIds": {
-            "checklistbank": "ott6166315"
+            "checklistbank": "ott6166315",
+            "gbif-backbone": "7722986"
           },
           "children": [],
           "uuid": "7d5c94f7-b247-547-95c-03cc1aa34ef2a9",
-          "description": "Raphignathus cerasinus is a raphignathidae species found in its native region."
+          "description": "Raphignathus cerasinus is a raphignathidae species found in its native region.",
+          "authorship": "Dugès, 1834"
         },
         {
           "id": "SP_RAPHIGNATHUS_SP",
@@ -1231,9 +1237,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Raphignathus",
           "sourceIds": {
-            "checklistbank": "Raphignathus_atomatus"
+            "checklistbank": "Raphignathus_atomatus",
+            "gbif-backbone": "8907658"
           },
-          "children": []
+          "children": [],
+          "authorship": "Fan & Zhang, 2005"
         },
         {
           "id": "SP_RAPHIGNATHUS_CRUSTUS",
@@ -1243,7 +1251,48 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Raphignathus",
           "sourceIds": {
-            "checklistbank": "Raphignathus_crustus"
+            "checklistbank": "Raphignathus_crustus",
+            "gbif-backbone": "9143551"
+          },
+          "children": [],
+          "authorship": "Fan & Zhang, 2005"
+        },
+        {
+          "id": "SP_RAPHIGNATHUS_GRACILIS_RACK_RACK",
+          "name": "Raphignathus gracilis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Raphignathus",
+          "authorship": "(Rack) Rack",
+          "sourceIds": {
+            "gbif-backbone": "6918566"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RAPHIGNATHUS_SPEC_DUG_S_1834",
+          "name": "Raphignathus spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Raphignathus",
+          "authorship": "Dugès, 1834",
+          "sourceIds": {
+            "gbif-backbone": "11655026"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_RAPHIGNATHUS_GISELAE_MEYER_UECKERMANN_1989",
+          "name": "Raphignathus giselae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Raphignathus",
+          "authorship": "Meyer & Ueckermann, 1989",
+          "sourceIds": {
+            "gbif-backbone": "6918539"
           },
           "children": []
         }
@@ -1336,7 +1385,7 @@
       "lineage": "raphignathidae"
     }
   ],
-  "speciesCount": 87,
+  "speciesCount": 90,
   "appSlug": "raphignathidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
@@ -1349,6 +1398,7 @@
       "orderKey": 543,
       "familyKey": 3252827
     },
-    "checklistbank": "Raphignathidae"
+    "checklistbank": "Raphignathidae",
+    "wikispecies": "Raphignathidae"
   }
 }

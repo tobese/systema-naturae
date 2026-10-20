@@ -538,7 +538,8 @@
           "lineage": "Hepomadus",
           "authorship": "Smith",
           "sourceIds": {
-            "checklistbank": "4fc3db1f-7f4c-4b89-a070-9983ec3b1a77"
+            "checklistbank": "4fc3db1f-7f4c-4b89-a070-9983ec3b1a77",
+            "gbif-backbone": "2223118"
           },
           "children": [],
           "uuid": "e40ae62f-d5b0-505-bb5-711634777c954e"
@@ -612,7 +613,8 @@
             "itis": [
               "551521"
             ],
-            "checklistbank": "ott2971400"
+            "checklistbank": "ott2971400",
+            "gbif-backbone": "2223147"
           },
           "authorityIds": "col:9XYYR,itis:551521",
           "children": [],
@@ -723,7 +725,8 @@
             "itis": [
               "96074"
             ],
-            "checklistbank": "100391"
+            "checklistbank": "100391",
+            "wikispecies": "Aristaeopsis_edwardsiana"
           },
           "authorityIds": "col:9XGGW,itis:96074",
           "children": [],
@@ -738,11 +741,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Aristaeopsis",
           "sourceIds": {
-            "checklistbank": "ott6184344"
+            "checklistbank": "ott6184344",
+            "gbif-backbone": "7422043"
           },
           "children": [],
           "uuid": "329201ce-c06a-5c2-bf3-39c345685a08ba",
-          "description": "Aristaeopsis edwarsiana is a aristeidae species found in its native region."
+          "description": "Aristaeopsis edwarsiana is a aristeidae species found in its native region.",
+          "authorship": "(Jonhson, 1867) Jonhson, 1867"
         },
         {
           "id": "SP_ARISTAEOPSIS_EDWARDSIANUS_JOHNSON_1867",
@@ -835,7 +840,8 @@
             ],
             "itis": [
               "96078"
-            ]
+            ],
+            "gbif-backbone": "2223138"
           },
           "authorityIds": "col:9XXJT,itis:96078",
           "children": [],
@@ -985,7 +991,8 @@
           "lineage": "Cerataspis",
           "authorship": "(Wood-Mason in Wood-Mason & Alcock, 1891)",
           "sourceIds": {
-            "checklistbank": "100401"
+            "checklistbank": "100401",
+            "gbif-backbone": "8077777"
           },
           "children": [],
           "uuid": "f9bf0dff-53e3-535-bb0-e8b2e155d5cf1f",
@@ -1347,13 +1354,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aristeidae"
+    },
+    {
+      "id": "GENUS_MULCION",
+      "name": "Mulcion",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MULCION_SPEC_LATREILLE",
+          "name": "Mulcion spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Mulcion",
+          "authorship": "Latreille",
+          "sourceIds": {
+            "gbif-backbone": "11920990"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aristeidae"
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 69,
   "appSlug": "aristeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 20,
+  "genusCount": 21,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1362,6 +1391,7 @@
       "orderKey": 637,
       "familyKey": 8021
     },
-    "checklistbank": "Aristeidae"
+    "checklistbank": "Aristeidae",
+    "wikispecies": "Aristeidae"
   }
 }

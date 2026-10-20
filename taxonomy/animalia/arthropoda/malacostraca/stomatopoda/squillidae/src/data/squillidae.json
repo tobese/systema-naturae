@@ -398,7 +398,10 @@
           "sourcedFrom": "worms",
           "lineage": "Squilla",
           "authorship": "Schlüter <i>in</i> von der Marck & Schlüter, 1868",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "11196660"
+          }
         },
         {
           "id": "SP_SQUILLA_HOLLANDI_F_RSTER_1982",
@@ -768,6 +771,71 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Squilla",
           "authorship": "H. Milne Edwards, 1837",
+          "children": []
+        },
+        {
+          "id": "SP_SQUILLA_CROCEA_RAFINESQUE_1814",
+          "name": "Squilla crocea",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squilla",
+          "authorship": "Rafinesque, 1814",
+          "sourceIds": {
+            "gbif-backbone": "7832427"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SQUILLA_LEWESII_WOODWARD_1879",
+          "name": "Squilla lewesii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squilla",
+          "authorship": "Woodward, 1879",
+          "sourceIds": {
+            "gbif-backbone": "11162100"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SQUILLA_WETHERELLI_WOODWARD_1879",
+          "name": "Squilla wetherelli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squilla",
+          "authorship": "Woodward, 1879",
+          "sourceIds": {
+            "gbif-backbone": "11112446"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SQUILLA_TRIODONA_RAFINESQUE_1814",
+          "name": "Squilla triodona",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squilla",
+          "authorship": "Rafinesque, 1814",
+          "sourceIds": {
+            "gbif-backbone": "7406784"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SQUILLA_ERINI_HAUG_ET_AL_2015",
+          "name": "Squilla erini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squilla",
+          "authorship": "Haug et al., 2015",
+          "sourceIds": {
+            "gbif-backbone": "11194312"
+          },
           "children": []
         }
       ],
@@ -2768,6 +2836,19 @@
           "lineage": "Squilloides",
           "authorship": "Blumstein, 1974",
           "children": []
+        },
+        {
+          "id": "SP_SQUILLOIDES_LATUS_BLUMSTEIN_1970",
+          "name": "Squilloides latus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squilloides",
+          "authorship": "Blumstein, 1970",
+          "sourceIds": {
+            "checklistbank-2008": "690039"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "worms",
@@ -2834,7 +2915,11 @@
           "sourcedFrom": "worms",
           "lineage": "Miyakella",
           "authorship": "(Latreille <i>in</i> Latreille, Le Peletier, Serville & Guérin, 1828)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "checklistbank-2008": "827123",
+            "gbif-backbone": "7621456"
+          }
         }
       ],
       "sourcedFrom": "worms",
@@ -3088,7 +3173,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1026082"
           },
-          "uuid": "b8f74138-eb40-4be1-8394-6f36f47c548d"
+          "uuid": "b8f74138-eb40-4be1-8394-6f36f47c548d",
+          "children": []
         }
       ]
     },
@@ -3110,17 +3196,41 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:1026086"
           },
-          "uuid": "7c9ab163-ce3a-4cfe-a9ca-5a2d5cec4ffd"
+          "uuid": "7c9ab163-ce3a-4cfe-a9ca-5a2d5cec4ffd",
+          "children": []
         }
       ]
+    },
+    {
+      "id": "GENUS_SQUILLITES",
+      "name": "Squillites",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SQUILLITES_SPINOSUS_SCOTT_1938",
+          "name": "Squillites spinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Squillites",
+          "authorship": "Scott, 1938",
+          "sourceIds": {
+            "gbif-backbone": "8642109"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "squillidae"
     }
   ],
-  "speciesCount": 258,
+  "speciesCount": 265,
   "appSlug": "squillidae",
   "sourcedFrom": "worms",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 55,
+  "genusCount": 58,
   "sourceIds": {
-    "checklistbank": "Squillidae"
+    "checklistbank": "Squillidae",
+    "wikispecies": "Squillidae"
   }
 }

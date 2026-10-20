@@ -1665,11 +1665,13 @@
           "sourcedFrom": "wikipedia",
           "lineage": "Aphelocheirus",
           "sourceIds": {
-            "checklistbank": "450461"
+            "checklistbank": "450461",
+            "gbif-backbone": "4485511"
           },
           "children": [],
           "uuid": "dcd00b46-4782-5e9-872-9484b49524c115",
-          "description": "Aphelocheirus aestivalis is a Palearctic species of true bug."
+          "description": "Aphelocheirus aestivalis is a Palearctic species of true bug.",
+          "authorship": "(Fabricius, 1794)"
         },
         {
           "id": "SP_APHELOCHEIRUS_AESTIRALIS",
@@ -1678,6 +1680,32 @@
           "subspeciesCount": 0,
           "sourcedFrom": "checklistbank",
           "lineage": "Aphelocheirus",
+          "children": []
+        },
+        {
+          "id": "SP_APHELOCHEIRUS_VITTATUS_MATSUMURA_1905",
+          "name": "Aphelocheirus vittatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphelocheirus",
+          "authorship": "Matsumura, 1905",
+          "sourceIds": {
+            "gbif-backbone": "9609937"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_APHELOCHEIRUS_BRUNEIENSIS_ZETTEL_LANE_MOORE_2008",
+          "name": "Aphelocheirus bruneiensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aphelocheirus",
+          "authorship": "Zettel, Lane & Moore, 2008",
+          "sourceIds": {
+            "gbif-backbone": "8276933"
+          },
           "children": []
         }
       ],
@@ -1731,13 +1759,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "aphelocheiridae"
+    },
+    {
+      "id": "GENUS_CYDNOPSIS",
+      "name": "Cydnopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CYDNOPSIS_AFFINIS_JORDAN_1967",
+          "name": "Cydnopsis affinis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cydnopsis",
+          "authorship": "(Jordan, 1967)",
+          "sourceIds": {
+            "gbif-backbone": "9530040"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "aphelocheiridae"
     }
   ],
-  "speciesCount": 114,
+  "speciesCount": 117,
   "appSlug": "aphelocheiridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 3,
+  "genusCount": 4,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1746,6 +1796,7 @@
       "orderKey": 809,
       "familyKey": 3265575
     },
-    "checklistbank": "Aphelocheiridae"
+    "checklistbank": "Aphelocheiridae",
+    "wikispecies": "Aphelocheiridae"
   }
 }

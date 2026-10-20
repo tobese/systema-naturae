@@ -1073,7 +1073,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Prochora",
           "sourceIds": {
-            "checklistbank": "351990"
+            "checklistbank": "351990",
+            "gbif-backbone": "2164065"
           },
           "children": [],
           "uuid": "865ae71b-d577-516-977-ee276b4130235d",
@@ -1560,7 +1561,8 @@
             "itis": [
               "874489"
             ],
-            "checklistbank": "3ce538c9-c4dd-4f30-a86b-df97fad85a91"
+            "checklistbank": "3ce538c9-c4dd-4f30-a86b-df97fad85a91",
+            "gbif-backbone": "2161248"
           },
           "uuid": "32f80273-b3da-56b-81f-b4a9c6fbba32d3",
           "authorityIds": "col:GH7J,gbif:2161248,itis:874489",
@@ -1782,7 +1784,8 @@
           "lineage": "Argoctenus",
           "authorship": "Hickman",
           "sourceIds": {
-            "checklistbank": "8e322a2c-96e0-497e-8493-c1b15d41b2c6"
+            "checklistbank": "8e322a2c-96e0-497e-8493-c1b15d41b2c6",
+            "gbif-backbone": "2161252"
           },
           "children": [],
           "uuid": "25a9ed0a-f889-582-a60-35147f1b64216d",
@@ -3431,6 +3434,19 @@
           "authorship": "Simon, 1878",
           "sourceIds": {
             "checklistbank": "urn:lsid:nmbe.ch:spidersp:028557"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ZORA_INORNATA_L_KOCH_1882",
+          "name": "Zora inornata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zora",
+          "authorship": "L.Koch, 1882",
+          "sourceIds": {
+            "gbif-backbone": "4550416"
           },
           "children": []
         }
@@ -6523,13 +6539,48 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "miturgidae"
+    },
+    {
+      "id": "GENUS_SUCCINOMUS",
+      "name": "Succinomus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SUCCINOMUS_GIBBOSUS_WUNDERLICH_2012",
+          "name": "Succinomus gibbosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Succinomus",
+          "authorship": "Wunderlich, 2012",
+          "sourceIds": {
+            "gbif-backbone": "8593022"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_SUCCINOMUS_DUOMAMMILLAE_WUNDERLICH_2008",
+          "name": "Succinomus duomammillae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Succinomus",
+          "authorship": "Wunderlich, 2008",
+          "sourceIds": {
+            "gbif-backbone": "8604727"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "miturgidae"
     }
   ],
-  "speciesCount": 268,
+  "speciesCount": 271,
   "appSlug": "miturgidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 51,
+  "genusCount": 52,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -6538,7 +6589,8 @@
       "orderKey": 1496,
       "familyKey": 5632
     },
-    "checklistbank": "Miturgidae"
+    "checklistbank": "Miturgidae",
+    "wikispecies": "Miturgidae"
   },
   "speciesList": []
 }

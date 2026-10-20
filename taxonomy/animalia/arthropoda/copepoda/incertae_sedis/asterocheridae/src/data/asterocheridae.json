@@ -2058,11 +2058,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Asterocheres",
           "sourceIds": {
-            "checklistbank": "ott2944561"
+            "checklistbank": "ott2944561",
+            "gbif-backbone": "4329096"
           },
           "children": [],
           "uuid": "18389bc1-a6e4-5a9-962-da25ac9037aa8b",
-          "description": "Asterocheres spinulosus is a asterocheridae species found in its native region."
+          "description": "Asterocheres spinulosus is a asterocheridae species found in its native region.",
+          "authorship": "Murnane, 1969"
         },
         {
           "id": "SP_ASTEROCHERES_SERRULATUS",
@@ -2100,11 +2102,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Asterocheres",
           "sourceIds": {
-            "checklistbank": "ott2944637"
+            "checklistbank": "ott2944637",
+            "gbif-backbone": "4329078"
           },
           "children": [],
           "uuid": "f3f363fa-40e0-512-a53-f5a3235d1c31af",
-          "description": "Asterocheres mainensis is a asterocheridae species found in its native region."
+          "description": "Asterocheres mainensis is a asterocheridae species found in its native region.",
+          "authorship": "Murnane, 1969"
         },
         {
           "id": "SP_ASTEROCHERES_DYSIDEAE",
@@ -2230,7 +2234,10 @@
           "sourcedFrom": "worms",
           "lineage": "Asterocheres",
           "authorship": "Johnsson, In: Johnsson, Rocha & Neves, 2002",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "4329050"
+          }
         },
         {
           "id": "SP_ASTEROCHERES_SIPHUNCULUS_BAHIA_CANARIO_NEVES_JOHNSSON_2012",
@@ -2285,6 +2292,19 @@
           "authorship": "(Brian, 1928)",
           "sourceIds": {
             "checklistbank": "55719"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_ASTEROCHERES_FASCICULATUS_MURNANE_1969",
+          "name": "Asterocheres fasciculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Asterocheres",
+          "authorship": "Murnane, 1969",
+          "sourceIds": {
+            "gbif-backbone": "11152864"
           },
           "children": []
         }
@@ -2749,7 +2769,8 @@
               "CNKCF"
             ],
             "checklistbank": "55723",
-            "wikispecies": "Collocheres_elegans"
+            "wikispecies": "Collocheres_elegans",
+            "gbif-backbone": "4329197"
           },
           "authorityIds": "col:CNKCF",
           "description": "Collocheres elegans is a species of copepod in the family Asterocheridae."
@@ -4721,7 +4742,8 @@
             "col": [
               "CPH8R"
             ],
-            "checklistbank": "55731"
+            "checklistbank": "55731",
+            "gbif-backbone": "4329142"
           },
           "authorityIds": "col:CPH8R",
           "description": "Rhynchomyzon rubrovittatum is a rhynchomyzon species found in its native region."
@@ -5010,7 +5032,10 @@
           "sourcedFrom": "worms",
           "lineage": "Setacheres",
           "authorship": "(Johnsson, In: Johnsson, Rocha & Neves, 2001)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "9146686"
+          }
         },
         {
           "id": "SP_SETACHERES_SPINOPAULUS_JOHNSSON_1999",
@@ -5030,7 +5055,10 @@
           "sourcedFrom": "worms",
           "lineage": "Setacheres",
           "authorship": "(Johnsson, In: Johnsson, Rocha & Neves, 2001)",
-          "children": []
+          "children": [],
+          "sourceIds": {
+            "gbif-backbone": "8996517"
+          }
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -6035,6 +6063,19 @@
           },
           "authorityIds": "col:6LC3F",
           "description": "Hammatimyzon zibrowii is a hammatimyzon species found in its native region."
+        },
+        {
+          "id": "SP_HAMMATIMYZON_STOCKII_OGAWA_MATSUZAKI_2015",
+          "name": "Hammatimyzon stockii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Hammatimyzon",
+          "authorship": "Ogawa & Matsuzaki, 2015",
+          "sourceIds": {
+            "gbif-backbone": "8743794"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7612,13 +7653,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Asterocheridae"
+    },
+    {
+      "id": "GENUS_SELENODISCUS",
+      "name": "Selenodiscus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SELENODISCUS_FORMOSUS_BRADY_1910",
+          "name": "Selenodiscus formosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Selenodiscus",
+          "authorship": "Brady, 1910",
+          "sourceIds": {
+            "gbif-backbone": "4328998"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "asterocheridae"
     }
   ],
-  "speciesCount": 382,
+  "speciesCount": 385,
   "appSlug": "asterocheridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Copepoda",
-  "genusCount": 83,
+  "genusCount": 84,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -7627,6 +7690,7 @@
       "orderKey": 1428,
       "familyKey": 5113
     },
-    "checklistbank": "Asterocheridae"
+    "checklistbank": "Asterocheridae",
+    "wikispecies": "Asterocheridae"
   }
 }

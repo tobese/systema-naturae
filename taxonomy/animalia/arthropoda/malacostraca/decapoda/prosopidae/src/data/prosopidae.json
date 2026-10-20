@@ -335,7 +335,8 @@
           "sourceIds": {
             "col": [
               "BM2NN"
-            ]
+            ],
+            "gbif-backbone": "12192811"
           },
           "authorityIds": "col:BM2NN",
           "children": [],
@@ -354,7 +355,8 @@
             "col": [
               "BXHVC"
             ],
-            "checklistbank": "txn:220819"
+            "checklistbank": "txn:220819",
+            "gbif-backbone": "8604771"
           },
           "authorityIds": "col:BXHVC",
           "children": [],
@@ -390,7 +392,8 @@
           "sourceIds": {
             "col": [
               "BVWYL"
-            ]
+            ],
+            "gbif-backbone": "5931861"
           },
           "authorityIds": "col:BVWYL",
           "children": [],
@@ -648,6 +651,19 @@
           "children": [],
           "uuid": "b53f3686-95fb-585-9fc-fc315e2764ff93",
           "description": "Prosopon dzhafarberdensis is a prosopidae species found in its native region."
+        },
+        {
+          "id": "SP_PROSOPON_ICAUNENSIS_VAN_STRAELEN_1936",
+          "name": "Prosopon icaunensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prosopon",
+          "authorship": "Van Straelen, 1936",
+          "sourceIds": {
+            "gbif-backbone": "11814695"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -894,13 +910,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "prosopidae"
+    },
+    {
+      "id": "GENUS_NODOPROSOPON",
+      "name": "Nodoprosopon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_NODOPROSOPON_DZHAFARBERDENSIS_ILYIN_2005",
+          "name": "Nodoprosopon dzhafarberdensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Nodoprosopon",
+          "authorship": "(Ilyin, 2005)",
+          "sourceIds": {
+            "gbif-backbone": "11814674"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prosopidae"
     }
   ],
-  "speciesCount": 47,
+  "speciesCount": 49,
   "appSlug": "prosopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 10,
+  "genusCount": 11,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

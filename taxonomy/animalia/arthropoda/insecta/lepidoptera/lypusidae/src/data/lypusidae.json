@@ -321,7 +321,8 @@
           "lineage": "agnoea",
           "uuid": "4f48853b-6916-539-918-09239a66af7364",
           "sourceIds": {
-            "checklistbank": "1131406"
+            "checklistbank": "1131406",
+            "gbif-backbone": "9717507"
           },
           "commonName": "Straw-coloured Tubic",
           "description": "Agnoea subochreella, the Straw-coloured Tubic, is a species of gelechioid moth in the family Lypusidae."
@@ -525,7 +526,8 @@
           "authorship": "(E. Palm, 1990)",
           "sourceIds": {
             "checklistbank": "903003",
-            "wikispecies": "Agnoea_langohri"
+            "wikispecies": "Agnoea_langohri",
+            "gbif-backbone": "10034457"
           },
           "children": [],
           "uuid": "4b24d034-06ff-544-bbd-ec971014d2427f"
@@ -2090,14 +2092,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Lypusidae"
+    },
+    {
+      "id": "GENUS_DIURNIA",
+      "name": "Diurnia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DIURNIA_FAGELLA",
+          "name": "Diurnia fagella",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Diurnia",
+          "sourceIds": {
+            "gbif-backbone": "11724286"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "lypusidae"
     }
   ],
-  "speciesCount": 126,
+  "speciesCount": 127,
   "appSlug": "lypusidae",
   "authorship": "Herrich-Schäffer",
   "yearPublished": "1857",
   "lineage": "Gelechioidea",
-  "genusCount": 25,
+  "genusCount": 26,
   "enrichmentStatus": "empty",
   "sourceIds": {
     "gbif": {
@@ -2107,6 +2130,7 @@
       "orderKey": 797,
       "familyKey": 4528997
     },
-    "checklistbank": "Lypusidae"
+    "checklistbank": "Lypusidae",
+    "wikispecies": "Lypusidae"
   }
 }

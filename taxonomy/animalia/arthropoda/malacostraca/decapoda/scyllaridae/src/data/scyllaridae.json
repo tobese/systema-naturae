@@ -199,11 +199,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Parribacus",
           "sourceIds": {
-            "checklistbank": "ott6184850"
+            "checklistbank": "ott6184850",
+            "gbif-backbone": "8545621"
           },
           "children": [],
           "uuid": "25afb7bb-a859-594-a35-c8ec35e1cc865d",
-          "description": "Parribacus cristatus is a scyllaridae species found in its native region."
+          "description": "Parribacus cristatus is a scyllaridae species found in its native region.",
+          "authorship": "(Forster, 1984)"
         },
         {
           "id": "SP_PARRIBACUS_COTTREAUI_ROGER_1946",
@@ -1001,7 +1003,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Scyllarus",
           "sourceIds": {
-            "checklistbank": "ott6184860"
+            "checklistbank": "ott6184860",
+            "gbif-backbone": "8625830"
           },
           "children": [],
           "authorship": "Bohm 1922",
@@ -1269,6 +1272,19 @@
           "lineage": "Scyllarus",
           "authorship": "Paulson, 1875",
           "children": []
+        },
+        {
+          "id": "SP_SCYLLARUS_AUSTRALIS_FABRICIUS_1781",
+          "name": "Scyllarus australis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scyllarus",
+          "authorship": "Fabricius, 1781",
+          "sourceIds": {
+            "gbif-backbone": "4644780"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1523,6 +1539,19 @@
           "children": [],
           "uuid": "1dd03638-c3ec-573-9bc-145f8e91a30bf5",
           "description": "Galearctus sp. is a scyllaridae species found in its native region."
+        },
+        {
+          "id": "SP_GALEARCTUS_YANSHI_YANG_CHAN_2020",
+          "name": "Galearctus yanshi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Galearctus",
+          "authorship": "Yang & Chan, 2020",
+          "sourceIds": {
+            "gbif-backbone": "11139857"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3078,7 +3107,8 @@
           "lineage": "Ibacus",
           "authorship": "Audo, 2017",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782371"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1782371",
+            "gbif-backbone": "10277468"
           },
           "children": [],
           "uuid": "0c328f02-600f-536-9d7-524bc08a4a8c08",
@@ -3412,6 +3442,19 @@
           "children": [],
           "uuid": "a11ffba4-8180-53c-934-3802b655c3d3f2",
           "description": "Palibacus praecursor is a scyllaridae species found in its native region."
+        },
+        {
+          "id": "SP_PALIBACUS_CRISTATUS_F_RSTER_1984",
+          "name": "Palibacus cristatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palibacus",
+          "authorship": "Förster, 1984",
+          "sourceIds": {
+            "gbif-backbone": "12195572"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3479,7 +3522,8 @@
           "lineage": "Parsacus",
           "authorship": "Garassino, Bahrami, Yazdi & Vega, 2014",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:1718933"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:1718933",
+            "gbif-backbone": "11509605"
           },
           "children": [],
           "uuid": "2d7929bb-e760-54e-aa7-fe8a9354a9b135",
@@ -3811,7 +3855,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:107712"
           },
-          "uuid": "4735a8ba-1b4c-4ecb-9b4b-cc2243f468c6"
+          "uuid": "4735a8ba-1b4c-4ecb-9b4b-cc2243f468c6",
+          "children": []
         },
         {
           "id": "SP_SCYLLARUS_ARCTUS",
@@ -3823,7 +3868,8 @@
           "sourceIds": {
             "wikispecies": "Scyllarus_arctus"
           },
-          "uuid": "c17efb7c-26ba-4e19-b69f-3b9dec121310"
+          "uuid": "c17efb7c-26ba-4e19-b69f-3b9dec121310",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3884,7 +3930,8 @@
           "sourceIds": {
             "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:382935"
           },
-          "uuid": "3571530e-b817-4fb3-a163-a68dc748d309"
+          "uuid": "3571530e-b817-4fb3-a163-a68dc748d309",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -3976,13 +4023,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "scyllaridae"
+    },
+    {
+      "id": "GENUS_SCYLARELLA",
+      "name": "Scylarella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCYLARELLA_ADINAE_FRAN_ESCU_2013",
+          "name": "Scylarella adinae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scylarella",
+          "authorship": "Franţescu, 2013",
+          "sourceIds": {
+            "gbif-backbone": "12264958"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "scyllaridae"
     }
   ],
-  "speciesCount": 206,
+  "speciesCount": 210,
   "appSlug": "scyllaridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 37,
+  "genusCount": 38,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -3991,6 +4060,7 @@
       "orderKey": 637,
       "familyKey": 9685
     },
-    "checklistbank": "Scyllaridae"
+    "checklistbank": "Scyllaridae",
+    "wikispecies": "Scyllaridae"
   }
 }

@@ -51,7 +51,8 @@
             "col": [
               "KLBP"
             ],
-            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6007954"
+            "checklistbank": "urn:lsid:dyntaxa.se:Taxon:6007954",
+            "gbif-backbone": "6182720"
           },
           "uuid": "5ed82dd5-4284-53f-870-344ed9c2a3920c",
           "authorityIds": "col:KLBP,gbif:2197713,itis:738949",
@@ -471,6 +472,19 @@
           "uuid": "bc54d993-f66d-592-922-d8d35dfc2d1b66",
           "description": "Banksinoma castanea is a thyrisomidae species found in its native region.",
           "speciesList": []
+        },
+        {
+          "id": "SP_BANKSINOMA_OUDEMANSI_FUJIKAWA_1978",
+          "name": "Banksinoma oudemansi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Banksinoma",
+          "authorship": "Fujikawa, 1978",
+          "sourceIds": {
+            "gbif-backbone": "9301690"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -802,13 +816,34 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Thyrisomidae"
+    },
+    {
+      "id": "GENUS_PANTHELOZETES",
+      "name": "Panthelozetes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PANTHELOZETES_PAOLI",
+          "name": "Panthelozetes paoli",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Panthelozetes",
+          "sourceIds": {
+            "gbif-backbone": "11805240"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "thyrisomidae"
     }
   ],
-  "speciesCount": 35,
+  "speciesCount": 37,
   "appSlug": "thyrisomidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 9,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

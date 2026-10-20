@@ -495,7 +495,8 @@
             "col": [
               "3BYGG"
             ],
-            "checklistbank": "dda98163-d4d1-4dda-aed0-a7ab663c1192"
+            "checklistbank": "dda98163-d4d1-4dda-aed0-a7ab663c1192",
+            "gbif-backbone": "5971250"
           },
           "authorityIds": "col:3BYGG",
           "children": [],
@@ -665,7 +666,8 @@
             "col": [
               "BTQD6"
             ],
-            "checklistbank": "txn:225794"
+            "checklistbank": "txn:225794",
+            "gbif-backbone": "8529486"
           },
           "authorityIds": "col:BTQD6",
           "children": [],
@@ -910,7 +912,8 @@
           "sourceIds": {
             "col": [
               "BCMLX"
-            ]
+            ],
+            "gbif-backbone": "12202782"
           },
           "authorityIds": "col:BCMLX",
           "children": [],
@@ -1092,7 +1095,8 @@
             "col": [
               "BRDRP"
             ],
-            "checklistbank": "txn:225809"
+            "checklistbank": "txn:225809",
+            "gbif-backbone": "8465107"
           },
           "authorityIds": "col:BRDRP",
           "children": [],
@@ -1174,7 +1178,8 @@
           "sourceIds": {
             "col": [
               "462VS"
-            ]
+            ],
+            "gbif-backbone": "5969769"
           },
           "authorityIds": "col:462VS",
           "children": [],
@@ -1649,13 +1654,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Euryplacidae"
+    },
+    {
+      "id": "GENUS_PALAEOPSOPHETICUS",
+      "name": "Palaeopsopheticus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PALAEOPSOPHETICUS_SHUJENAE_HU_TAO_1996",
+          "name": "Palaeopsopheticus shujenae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Palaeopsopheticus",
+          "authorship": "Hu & Tao, 1996",
+          "sourceIds": {
+            "gbif-backbone": "8608762"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euryplacidae"
+    },
+    {
+      "id": "GENUS_ALPONELLA",
+      "name": "Alponella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ALPONELLA_PALEOGENICA_BESCHIN_BUSULINI_TESSIER_ZORZIN_2016",
+          "name": "Alponella paleogenica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Alponella",
+          "authorship": "Beschin, Busulini, Tessier & Zorzin, 2016",
+          "sourceIds": {
+            "gbif-backbone": "11149421"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "euryplacidae"
     }
   ],
-  "speciesCount": 74,
+  "speciesCount": 76,
   "appSlug": "euryplacidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 37,
+  "genusCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1664,6 +1713,7 @@
       "orderKey": 637,
       "familyKey": 4375325
     },
-    "checklistbank": "Euryplacidae"
+    "checklistbank": "Euryplacidae",
+    "wikispecies": "Euryplacidae"
   }
 }

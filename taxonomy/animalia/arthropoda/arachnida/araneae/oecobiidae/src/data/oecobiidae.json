@@ -2681,7 +2681,8 @@
             "itis": [
               "863144"
             ],
-            "checklistbank": "ott5126096"
+            "checklistbank": "ott5126096",
+            "gbif-backbone": "6717404"
           },
           "uuid": "0aec040e-acd9-58a-957-50690dbe1041f5",
           "authorityIds": "gbif:6717402,itis:863144",
@@ -2703,7 +2704,8 @@
             "itis": [
               "863205"
             ],
-            "checklistbank": "ott3542770"
+            "checklistbank": "ott3542770",
+            "gbif-backbone": "2162484"
           },
           "uuid": "023671e9-3220-52c-a51-7d69c42a85fa10",
           "authorityIds": "gbif:2162484,itis:863205",
@@ -2762,12 +2764,14 @@
           "sourcedFrom": "wikidata",
           "lineage": "Oecobius",
           "sourceIds": {
-            "checklistbank": "ott7683015"
+            "checklistbank": "ott7683015",
+            "gbif-backbone": "9518778"
           },
           "children": [],
           "uuid": "52faa27e-d609-518-911-6568ce3373d8da",
           "commonName": "wall spider",
-          "description": "Oecobius ferdowsii (wall spider) is a oecobiidae species found in its native region."
+          "description": "Oecobius ferdowsii (wall spider) is a oecobiidae species found in its native region.",
+          "authorship": "Mirshamsi, Zamani & Marusik, 2017"
         },
         {
           "id": "SP_OECOBIUS_SP",
@@ -2806,7 +2810,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Oecobius",
           "sourceIds": {
-            "checklistbank": "352168"
+            "checklistbank": "352168",
+            "gbif-backbone": "2162520"
           },
           "children": [],
           "uuid": "4feed3fc-66b8-5fc-abc-f0b49e58dc5eae",
@@ -2822,7 +2827,8 @@
           "authorship": "Simon",
           "sourceIds": {
             "checklistbank": "66bfbb12-743f-47b5-8786-2f37eedb2737",
-            "wikispecies": "Oecobius_concinnus"
+            "wikispecies": "Oecobius_concinnus",
+            "gbif-backbone": "2162498"
           },
           "children": [],
           "uuid": "80cdd738-c33d-57b-bad-c602e17b974403"
@@ -2835,6 +2841,19 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Oecobius",
           "authorship": "(Duges)",
+          "children": []
+        },
+        {
+          "id": "SP_OECOBIUS_DOMESTICUS_LUCAS_1846",
+          "name": "Oecobius domesticus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Oecobius",
+          "authorship": "Lucas, 1846",
+          "sourceIds": {
+            "gbif-backbone": "9654865"
+          },
           "children": []
         }
       ],
@@ -3555,11 +3574,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Uroctea",
           "sourceIds": {
-            "checklistbank": "ott6168054"
+            "checklistbank": "ott6168054",
+            "gbif-backbone": "7448582"
           },
           "children": [],
           "uuid": "e09a9b90-ea6b-51f-be9-15c7844f86aba7",
-          "description": "Uroctea quinquemaculata is a oecobiidae species found in its native region."
+          "description": "Uroctea quinquemaculata is a oecobiidae species found in its native region.",
+          "authorship": "Dufour, 1820"
         },
         {
           "id": "SP_UROCTEA_SP",
@@ -3921,7 +3942,8 @@
           "lineage": "zamilia",
           "sourceIds": {
             "gbif": 11129904,
-            "checklistbank": "txn:376910"
+            "checklistbank": "txn:376910",
+            "gbif-backbone": "11129904"
           },
           "uuid": "8d0d8cad-133b-58c-ace-c8b3333f02c579",
           "authorityIds": "gbif:11129904",
@@ -3939,7 +3961,8 @@
           "uuid": "c0b376b1-2e21-51a-882-2b070e38becd09",
           "authorship": "Wunderlich 2015",
           "sourceIds": {
-            "checklistbank": "txn:376911"
+            "checklistbank": "txn:376911",
+            "gbif-backbone": "11214199"
           },
           "description": "Zamilia quattuormammillae is a zamilia species found in its native region."
         },
@@ -4126,7 +4149,8 @@
           "lineage": "Mizalia",
           "authorship": "Koch and Berendt 1854",
           "sourceIds": {
-            "checklistbank": "txn:271271"
+            "checklistbank": "txn:271271",
+            "gbif-backbone": "8519151"
           },
           "children": [],
           "uuid": "06832122-ac6f-5cc-a79-9b45bb29c2ceaf",
@@ -4204,13 +4228,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "oecobiidae"
+    },
+    {
+      "id": "GENUS_PARUROCTEA",
+      "name": "Paruroctea",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PARUROCTEA_BLAUVELTI_PETRUNKEVITCH_1942",
+          "name": "Paruroctea blauvelti",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paruroctea",
+          "authorship": "(Petrunkevitch, 1942)",
+          "sourceIds": {
+            "gbif-backbone": "6898953"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "oecobiidae"
     }
   ],
-  "speciesCount": 170,
+  "speciesCount": 172,
   "appSlug": "oecobiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 14,
+  "genusCount": 15,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -4219,6 +4265,7 @@
       "orderKey": 1496,
       "familyKey": 9708
     },
-    "checklistbank": "Oecobiidae"
+    "checklistbank": "Oecobiidae",
+    "wikispecies": "Oecobiidae"
   }
 }

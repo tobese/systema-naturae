@@ -48,7 +48,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:477653"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:477653"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:477653",
+            "gbif-backbone": "2222841"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:477653,col:BMP4D,itis:552885",
           "children": [],
@@ -331,7 +332,8 @@
           "lineage": "Bathycalliax",
           "authorship": "Garassino, Hyžný & Pasini <i>in</i> Baldanza, Bizzarri, Famiani, Garassino, Hyžný & Pasini, 2013",
           "sourceIds": {
-            "checklistbank": "urn:lsid:marinespecies.org:taxname:875713"
+            "checklistbank": "urn:lsid:marinespecies.org:taxname:875713",
+            "gbif-backbone": "8543703"
           },
           "children": [],
           "uuid": "87746b46-409f-56d-ae4-3d7a16aea22c5a",
@@ -379,13 +381,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "callianopsidae"
+    },
+    {
+      "id": "GENUS_CALLIANASSA",
+      "name": "Callianassa",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CALLIANASSA_GONIOPTHALMA_RATHBUN_1902",
+          "name": "Callianassa goniopthalma",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Callianassa",
+          "authorship": "(Rathbun, 1902)",
+          "sourceIds": {
+            "gbif-backbone": "9029343"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "callianopsidae"
     }
   ],
-  "speciesCount": 20,
+  "speciesCount": 21,
   "appSlug": "callianopsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

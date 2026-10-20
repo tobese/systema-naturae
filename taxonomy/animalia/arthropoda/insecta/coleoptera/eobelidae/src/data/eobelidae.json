@@ -200,7 +200,8 @@
           "sourceIds": {
             "col": [
               "LC42"
-            ]
+            ],
+            "gbif-backbone": "6971242"
           },
           "authorityIds": "col:LC42",
           "children": [],
@@ -227,7 +228,8 @@
           "sourceIds": {
             "col": [
               "3R6Z3"
-            ]
+            ],
+            "gbif-backbone": "6942372"
           },
           "authorityIds": "col:3R6Z3",
           "children": [],
@@ -430,11 +432,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Arnoldibelus",
           "sourceIds": {
-            "checklistbank": "ott7731130"
+            "checklistbank": "ott7731130",
+            "gbif-backbone": "9531747"
           },
           "children": [],
           "uuid": "cc5d28c9-6e2e-55b-9e7-6bbd3ab180b44a",
-          "description": "Arnoldibelus zherichini is a eobelidae species found in its native region."
+          "description": "Arnoldibelus zherichini is a eobelidae species found in its native region.",
+          "authorship": "(Legalov, 2010)"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -485,13 +489,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "eobelidae"
+    },
+    {
+      "id": "GENUS_SINOEUGLYPHEUS",
+      "name": "Sinoeuglypheus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SINOEUGLYPHEUS_DAOHUGOUENSIS_YU_ET_AL_2019",
+          "name": "Sinoeuglypheus daohugouensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sinoeuglypheus",
+          "authorship": "(Yu et al., 2019)",
+          "sourceIds": {
+            "gbif-backbone": "11163597"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "eobelidae"
     }
   ],
-  "speciesCount": 24,
+  "speciesCount": 25,
   "appSlug": "eobelidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

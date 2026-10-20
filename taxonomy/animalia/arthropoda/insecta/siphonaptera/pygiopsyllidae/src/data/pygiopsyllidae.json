@@ -171,7 +171,8 @@
             "col": [
               "LR3J"
             ],
-            "checklistbank": "49400703-5d5b-497f-b96f-6028b233bcf5"
+            "checklistbank": "49400703-5d5b-497f-b96f-6028b233bcf5",
+            "gbif-backbone": "6194424"
           },
           "authorityIds": "col:LR3J",
           "children": [],
@@ -772,7 +773,8 @@
             "col": [
               "8ZNY"
             ],
-            "checklistbank": "77589d1c-45cd-40f7-a112-26794da6cef2"
+            "checklistbank": "77589d1c-45cd-40f7-a112-26794da6cef2",
+            "gbif-backbone": "6194418"
           },
           "authorityIds": "col:8ZNY",
           "children": [],
@@ -1268,11 +1270,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Aviostivalus",
           "sourceIds": {
-            "checklistbank": "taicol: 92497"
+            "checklistbank": "taicol: 92497",
+            "gbif-backbone": "5734114"
           },
           "children": [],
           "uuid": "5a68a05a-992a-5e5-940-3f3949410dbf71",
-          "description": "Aviostivalus klossi is a pygiopsyllidae species found in its native region."
+          "description": "Aviostivalus klossi is a pygiopsyllidae species found in its native region.",
+          "authorship": "Lien et al., 1996"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1604,13 +1608,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "pygiopsyllidae"
+    },
+    {
+      "id": "GENUS_TYPHLOPSYLLA",
+      "name": "Typhlopsylla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_TYPHLOPSYLLA_FRATERNA_BAKER_1895_BAKER_1895",
+          "name": "Typhlopsylla fraterna",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Typhlopsylla",
+          "authorship": "(Baker, 1895) Baker, 1895",
+          "sourceIds": {
+            "gbif-backbone": "8344868"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "pygiopsyllidae"
     }
   ],
-  "speciesCount": 80,
+  "speciesCount": 81,
   "appSlug": "pygiopsyllidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 21,
+  "genusCount": 22,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1619,6 +1645,7 @@
       "orderKey": 1366,
       "familyKey": 5329
     },
-    "checklistbank": "Pygiopsyllidae"
+    "checklistbank": "Pygiopsyllidae",
+    "wikispecies": "Pygiopsyllidae"
   }
 }

@@ -970,7 +970,8 @@
               "737294"
             ],
             "checklistbank": "ott4686833",
-            "wikispecies": "Neoliodes_nigricans"
+            "wikispecies": "Neoliodes_nigricans",
+            "gbif-backbone": "2192846"
           },
           "uuid": "6e0ede58-99d1-5f4-82c-e487dcecc8042a",
           "authorityIds": "col:46KZF,gbif:2192846,itis:737294",
@@ -1011,7 +1012,8 @@
           "lineage": "neoliodes",
           "sourceIds": {
             "gbif": 8606485,
-            "checklistbank": "txn:309080"
+            "checklistbank": "txn:309080",
+            "gbif-backbone": "8606485"
           },
           "uuid": "1b6566bb-1082-5f1-877-6d3f8556b693fa",
           "authorityIds": "gbif:8606485",
@@ -1104,6 +1106,19 @@
           "children": [],
           "uuid": "6fa523cd-dedd-529-b00-5b7021bfde4a59",
           "description": "Neoliodes quadriscutatus is a neoliodidae species found in its native region."
+        },
+        {
+          "id": "SP_NEOLIODES_ENSIGERUS_SELLNICK_1919",
+          "name": "Neoliodes ensigerus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Neoliodes",
+          "authorship": "(Sellnick, 1919)",
+          "sourceIds": {
+            "gbif-backbone": "9429081"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1292,6 +1307,20 @@
           "children": [],
           "uuid": "61c496fc-9b17-5b7-932-46e005a756f8f2",
           "description": "Platyliodes ensigerus is a neoliodidae species found in its native region."
+        },
+        {
+          "id": "SP_PLATYLIODES_SCALIGER_C_L_KOCH_1840",
+          "name": "Platyliodes scaliger",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Platyliodes",
+          "authorship": "(C.L. Koch, 1840)",
+          "sourceIds": {
+            "checklistbank-2008": "232902",
+            "gbif-backbone": "2192889"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1455,6 +1484,19 @@
           "lineage": "Liodes",
           "authorship": "Sellnick, 1959",
           "children": []
+        },
+        {
+          "id": "SP_LIODES_VENOSUS_GRUBE_1859",
+          "name": "Liodes venosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Liodes",
+          "authorship": "(Grube, 1859)",
+          "sourceIds": {
+            "gbif-backbone": "8902087"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1549,13 +1591,58 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Neoliodidae"
+    },
+    {
+      "id": "GENUS_POROLIODES",
+      "name": "Poroliodes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_POROLIODES_FARINOSUS_C_L_KOCH_1840",
+          "name": "Poroliodes farinosus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Poroliodes",
+          "authorship": "(C.L. Koch, 1840)",
+          "sourceIds": {
+            "checklistbank-2008": "232903",
+            "gbif-backbone": "2192895"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neoliodidae"
+    },
+    {
+      "id": "GENUS_SCAPHEREMAEUS",
+      "name": "Scapheremaeus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCAPHEREMAEUS_BREVITARSUS_WOOLLEY_1971",
+          "name": "Scapheremaeus brevitarsus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scapheremaeus",
+          "authorship": "(Woolley, 1971)",
+          "sourceIds": {
+            "gbif-backbone": "6898631"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "neoliodidae"
     }
   ],
-  "speciesCount": 68,
+  "speciesCount": 73,
   "appSlug": "neoliodidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 8,
+  "genusCount": 10,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1564,6 +1651,7 @@
       "orderKey": 542,
       "familyKey": 7456
     },
-    "checklistbank": "Neoliodidae"
+    "checklistbank": "Neoliodidae",
+    "wikispecies": "Neoliodidae"
   }
 }

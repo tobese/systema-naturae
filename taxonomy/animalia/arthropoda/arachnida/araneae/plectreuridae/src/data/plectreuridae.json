@@ -902,7 +902,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Plectreurys",
           "sourceIds": {
-            "checklistbank": "ott6173911"
+            "checklistbank": "ott6173911",
+            "gbif-backbone": "8509948"
           },
           "children": [],
           "authorship": "Penney 2009",
@@ -927,11 +928,13 @@
           "children": [],
           "lineage": "montsecarachne",
           "sourceIds": {
-            "gbif": 8496461
+            "gbif": 8496461,
+            "gbif-backbone": "8496461"
           },
           "uuid": "5a3807cc-108a-5d2-9ba-ee4ef2e16bfe84",
           "authorityIds": "gbif:8496461",
-          "description": "Montsecarachne amicorum is a montsecarachne species found in its native region."
+          "description": "Montsecarachne amicorum is a montsecarachne species found in its native region.",
+          "authorship": "Selden, 2014"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -960,13 +963,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "plectreuridae"
+    },
+    {
+      "id": "GENUS_EOPLECTREURYS",
+      "name": "Eoplectreurys",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOPLECTREURYS_GERTSCHI_SELDEN_HUANG_2010",
+          "name": "Eoplectreurys gertschi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eoplectreurys",
+          "authorship": "Selden & Huang, 2010",
+          "sourceIds": {
+            "gbif-backbone": "8497044"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "plectreuridae"
     }
   ],
-  "speciesCount": 37,
+  "speciesCount": 38,
   "appSlug": "plectreuridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 4,
+  "genusCount": 5,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -975,6 +1000,7 @@
       "orderKey": 1496,
       "familyKey": 5642
     },
-    "checklistbank": "Plectreuridae"
+    "checklistbank": "Plectreuridae",
+    "wikispecies": "Plectreuridae"
   }
 }

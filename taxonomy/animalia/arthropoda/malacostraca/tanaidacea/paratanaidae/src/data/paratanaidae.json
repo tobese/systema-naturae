@@ -1181,7 +1181,8 @@
             "itis": [
               "91712"
             ],
-            "checklistbank": "ott2989157"
+            "checklistbank": "ott2989157",
+            "gbif-backbone": "2228567"
           },
           "authorityIds": "col:73CMV,itis:91712",
           "description": "Metatanais cylindricus is a paratanaidae species found in its native region."
@@ -1437,13 +1438,47 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paratanaidae"
+    },
+    {
+      "id": "GENUS_GAMMARUS",
+      "name": "Gammarus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_GAMMARUS_SPEC_VIVIANI_1805",
+          "name": "Gammarus spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gammarus",
+          "authorship": "Viviani, 1805",
+          "sourceIds": {
+            "gbif-backbone": "9734744"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_GAMMARUS_HETEROCLITUS",
+          "name": "Gammarus heteroclitus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Gammarus",
+          "sourceIds": {
+            "gbif-backbone": "12195825"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paratanaidae"
     }
   ],
-  "speciesCount": 67,
+  "speciesCount": 69,
   "appSlug": "paratanaidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 13,
+  "genusCount": 14,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1452,6 +1487,7 @@
       "orderKey": 1378,
       "familyKey": 5426
     },
-    "checklistbank": "Paratanaidae"
+    "checklistbank": "Paratanaidae",
+    "wikispecies": "Paratanaidae"
   }
 }

@@ -137,12 +137,14 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Carcinus",
           "sourceIds": {
-            "checklistbank": "ott6187055"
+            "checklistbank": "ott6187055",
+            "gbif-backbone": "8439128"
           },
           "children": [],
           "uuid": "f47e0e6e-4e37-514-9ac-da23c7754cb63f",
           "description": "Carcinus maenus is a carcinidae species found in its native region.",
-          "speciesList": []
+          "speciesList": [],
+          "authorship": "Linnaeus, 1767"
         },
         {
           "id": "SP_CARCINUS_SP",
@@ -260,7 +262,8 @@
           "sourceIds": {
             "checklistbank-1108": "urn:lsid:marinespecies.org:taxname:107401"
           },
-          "uuid": "fe6084fe-9f26-4f3b-a5e0-6073b87b5272"
+          "uuid": "fe6084fe-9f26-4f3b-a5e0-6073b87b5272",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2423,13 +2426,61 @@
       "sourcedFrom": "checklistbank",
       "lineage": "carcinidae",
       "speciesList": []
+    },
+    {
+      "id": "GENUS_PORTUMNUS",
+      "name": "Portumnus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PORTUMNUS_VARIEGATUS_LEACH_1814",
+          "name": "Portumnus variegatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Portumnus",
+          "authorship": "Leach, 1814",
+          "sourceIds": {
+            "checklistbank-2008": "545740"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PORTUMNUS_MONODON_LEACH_1816",
+          "name": "Portumnus monodon",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Portumnus",
+          "authorship": "Leach, 1816",
+          "sourceIds": {
+            "checklistbank-2008": "577507"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PORTUMNUS_TRICARINATUS_L_RENTHEY_1929",
+          "name": "Portumnus tricarinatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Portumnus",
+          "authorship": "Lőrenthey, 1929",
+          "sourceIds": {
+            "gbif-backbone": "8587763"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "carcinidae"
     }
   ],
-  "speciesCount": 127,
+  "speciesCount": 130,
   "appSlug": "carcinidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 38,
+  "genusCount": 39,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

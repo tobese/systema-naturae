@@ -344,7 +344,8 @@
             ],
             "col": [
               "C8DWM"
-            ]
+            ],
+            "gbif-backbone": "1023568"
           },
           "authorityIds": "col:C8DWM,itis:570537",
           "description": "Taiyutyla trifurca is a taiyutyla species found in its native region."
@@ -670,6 +671,32 @@
           "sourcedFrom": "worms",
           "lineage": "Taiyutyla",
           "authorship": "(Shear, 1971)",
+          "children": []
+        },
+        {
+          "id": "SP_TAIYUTYLA_LUPUS_SHEAR_2004",
+          "name": "Taiyutyla lupus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taiyutyla",
+          "authorship": "Shear, 2004",
+          "sourceIds": {
+            "gbif-backbone": "6186726"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TAIYUTYLA_SHAWI_SHEAR_2004",
+          "name": "Taiyutyla shawi",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Taiyutyla",
+          "authorship": "Shear, 2004",
+          "sourceIds": {
+            "gbif-backbone": "6186727"
+          },
           "children": []
         }
       ],
@@ -1589,6 +1616,19 @@
           "lineage": "Brunsonia",
           "authorship": "(Chamberlin, 1920)",
           "children": []
+        },
+        {
+          "id": "SP_BRUNSONIA_COMPLEXIPES_LOOMIS_SCHMITT_1971",
+          "name": "Brunsonia complexipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Brunsonia",
+          "authorship": "Loomis & Schmitt, 1971",
+          "sourceIds": {
+            "gbif-backbone": "1023523"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1920,6 +1960,19 @@
           "lineage": "Lophomus",
           "authorship": "Loomis & Schmitt, 1971",
           "children": []
+        },
+        {
+          "id": "SP_LOPHOMUS_SAKAMANIA_CAUSEY_1972",
+          "name": "Lophomus sakamania",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lophomus",
+          "authorship": "(Causey, 1972)",
+          "sourceIds": {
+            "gbif-backbone": "1023589"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1967,6 +2020,18 @@
           "sourcedFrom": "worms",
           "lineage": "Yasudatyla",
           "authorship": "Shear & Tsurusaki, 1995",
+          "children": []
+        },
+        {
+          "id": "SP_YASUDATYLA_KURILENSIS",
+          "name": "Yasudatyla kurilensis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Yasudatyla",
+          "sourceIds": {
+            "gbif-backbone": "8469552"
+          },
           "children": []
         }
       ],
@@ -2121,7 +2186,11 @@
           "children": [],
           "lineage": "cookella",
           "uuid": "fa8a2d92-7e59-541-b9f-33b49c8ecb09a6",
-          "description": "Cookella leibergi is a cookella species found in its native region."
+          "description": "Cookella leibergi is a cookella species found in its native region.",
+          "authorship": "(Cook & Collins, 1895)",
+          "sourceIds": {
+            "gbif-backbone": "8242813"
+          }
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -2164,13 +2233,79 @@
       ],
       "sourcedFrom": "worms",
       "lineage": "Conotylidae"
+    },
+    {
+      "id": "GENUS_ENDOPUS",
+      "name": "Endopus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ENDOPUS_PARVIPES_LOOMIS_SCHMITT_1971",
+          "name": "Endopus parvipes",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Endopus",
+          "authorship": "Loomis & Schmitt, 1971",
+          "sourceIds": {
+            "gbif-backbone": "1023586"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conotylidae"
+    },
+    {
+      "id": "GENUS_ZYGOTYLA",
+      "name": "Zygotyla",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ZYGOTYLA_PHANA_CHAMBERLIN_1951",
+          "name": "Zygotyla phana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Zygotyla",
+          "authorship": "Chamberlin, 1951",
+          "sourceIds": {
+            "gbif-backbone": "1023537"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conotylidae"
+    },
+    {
+      "id": "GENUS_ORTHOGMUS",
+      "name": "Orthogmus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_ORTHOGMUS_OCULATUS_LOOMIS_SCHMITT_1971",
+          "name": "Orthogmus oculatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Orthogmus",
+          "authorship": "Loomis & Schmitt, 1971",
+          "sourceIds": {
+            "gbif-backbone": "1023535"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "conotylidae"
     }
   ],
-  "speciesCount": 105,
+  "speciesCount": 113,
   "appSlug": "conotylidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Diplopoda",
-  "genusCount": 22,
+  "genusCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

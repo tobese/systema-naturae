@@ -463,11 +463,13 @@
             ],
             "itis": [
               "893007"
-            ]
+            ],
+            "gbif-backbone": "2164833"
           },
           "uuid": "2dc80802-14a6-564-b0b-be67df57175a0b",
           "authorityIds": "gbif:2164833,itis:893007",
-          "description": "Zimirina spinicymbia is a zimirina species found in its native region."
+          "description": "Zimirina spinicymbia is a zimirina species found in its native region.",
+          "authorship": "Wunderlich, 1992"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1098,11 +1100,13 @@
             ],
             "itis": [
               "1123020"
-            ]
+            ],
+            "gbif-backbone": "10200598"
           },
           "uuid": "464b2825-e2a9-5b7-b74-989bba2926e090",
           "authorityIds": "gbif:10200598,itis:1123020",
-          "description": "Paracymbiomma caecus is a paracymbiomma species found in its native region."
+          "description": "Paracymbiomma caecus is a paracymbiomma species found in its native region.",
+          "authorship": "Rodrigues, Cizauskas & Rheims, 2018"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2774,11 +2778,13 @@
             ],
             "itis": [
               "887548"
-            ]
+            ],
+            "gbif-backbone": "2164804"
           },
           "uuid": "99ea7e85-9e1c-53f-830-416c21d6f1c518",
           "authorityIds": "gbif:2164804,itis:887548",
-          "description": "Prodidomus clarki is a prodidomus species found in its native region."
+          "description": "Prodidomus clarki is a prodidomus species found in its native region.",
+          "authorship": "Cooke, 1964"
         },
         {
           "id": "SP_PRODIDOMUS_EMIRATUS",
@@ -5333,11 +5339,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Zimiris",
           "sourceIds": {
-            "checklistbank": "352505"
+            "checklistbank": "352505",
+            "gbif-backbone": "2164669"
           },
           "children": [],
           "uuid": "f68ef979-2c5c-5ec-81c-75a144c3e89e3c",
-          "description": "Zimiris doriai is a prodidomidae species found in its native region."
+          "description": "Zimiris doriai is a prodidomidae species found in its native region.",
+          "authorship": "Simon, 1882"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -7962,13 +7970,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "prodidomidae"
+    },
+    {
+      "id": "GENUS_PRODIDA",
+      "name": "Prodida",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PRODIDA_SPEC_STELLA",
+          "name": "Prodida spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Prodida",
+          "authorship": "Stella",
+          "sourceIds": {
+            "gbif-backbone": "11508763"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "prodidomidae"
     }
   ],
-  "speciesCount": 353,
+  "speciesCount": 354,
   "appSlug": "prodidomidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 35,
+  "genusCount": 36,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -7977,6 +8007,7 @@
       "orderKey": 1496,
       "familyKey": 5643
     },
-    "checklistbank": "Prodidomidae"
+    "checklistbank": "Prodidomidae",
+    "wikispecies": "Prodidomidae"
   }
 }

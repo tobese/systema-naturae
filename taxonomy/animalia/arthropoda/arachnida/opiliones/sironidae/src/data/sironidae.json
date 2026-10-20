@@ -672,6 +672,31 @@
           "children": [],
           "uuid": "23debddf-268c-5f2-a84-30d0af50ef96a4",
           "description": "Cyphophthalmus sp. is a sironidae species found in its native region."
+        },
+        {
+          "id": "SP_CYPHOPHTHALMUS_ERE_KARAMAN_2008",
+          "name": "Cyphophthalmus ere",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyphophthalmus",
+          "authorship": "Karaman, 2008",
+          "sourceIds": {
+            "gbif-backbone": "10151579"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_CYPHOPHTHALMUS_OGNJANOVICI",
+          "name": "Cyphophthalmus ognjanovici",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cyphophthalmus",
+          "sourceIds": {
+            "gbif-backbone": "9985628"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -899,9 +924,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Iberosiro",
           "sourceIds": {
-            "checklistbank": "Iberosiro_rosae"
+            "checklistbank": "Iberosiro_rosae",
+            "gbif-backbone": "9567970"
           },
-          "children": []
+          "children": [],
+          "authorship": "Giribet, Merino-Sáinz & Benavides, 2017"
         },
         {
           "id": "SP_IBEROSIRO_DISTYLOS",
@@ -911,9 +938,11 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Iberosiro",
           "sourceIds": {
-            "checklistbank": "Iberosiro_distylos"
+            "checklistbank": "Iberosiro_distylos",
+            "gbif-backbone": "8896635"
           },
-          "children": []
+          "children": [],
+          "authorship": "de Bivort & Giribet, 2004"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1361,7 +1390,8 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Siro",
           "sourceIds": {
-            "checklistbank": "278401"
+            "checklistbank": "278401",
+            "gbif-backbone": "5776537"
           },
           "children": [],
           "uuid": "c3ffef49-3786-5d9-8cb-6633c76607f2f2",
@@ -1375,11 +1405,25 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Siro",
           "sourceIds": {
-            "checklistbank": "278396"
+            "checklistbank": "278396",
+            "gbif-backbone": "5776538"
           },
           "children": [],
           "uuid": "5b2cb0df-f147-530-900-3fcde56ce921ff",
           "authorship": "Chemini, 1989"
+        },
+        {
+          "id": "SP_SIRO_CRASSUS_NOVAK_GIRIBET_2006",
+          "name": "Siro crassus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Siro",
+          "authorship": "Novak & Giribet, 2006",
+          "sourceIds": {
+            "gbif-backbone": "8412973"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1728,13 +1772,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "sironidae"
+    },
+    {
+      "id": "GENUS_MARWE",
+      "name": "Marwe",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MARWE_COARCTATA_SHEAR_1985",
+          "name": "Marwe coarctata",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Marwe",
+          "authorship": "Shear, 1985",
+          "sourceIds": {
+            "gbif-backbone": "6908061"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sironidae"
     }
   ],
-  "speciesCount": 89,
+  "speciesCount": 93,
   "appSlug": "sironidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1743,6 +1809,7 @@
       "orderKey": 907,
       "familyKey": 3253444
     },
-    "checklistbank": "Sironidae"
+    "checklistbank": "Sironidae",
+    "wikispecies": "Sironidae"
   }
 }

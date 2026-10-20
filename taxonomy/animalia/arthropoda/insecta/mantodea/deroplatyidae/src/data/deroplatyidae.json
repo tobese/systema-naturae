@@ -394,11 +394,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Euchomenella",
           "sourceIds": {
-            "checklistbank": "1582003"
+            "checklistbank": "1582003",
+            "gbif-backbone": "11120105"
           },
           "children": [],
           "uuid": "d42d08c5-db96-59c-baf-c9818f7ccd0b4d",
-          "description": "Euchomenella kasetsart is a deroplatyidae species found in its native region."
+          "description": "Euchomenella kasetsart is a deroplatyidae species found in its native region.",
+          "authorship": "Unnahachote, Samung & Jaitrong, 2020"
         },
         {
           "id": "SP_EUCHOMENELLA_BREVIS",
@@ -699,13 +701,48 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "deroplatyidae"
+    },
+    {
+      "id": "GENUS_PHASMOMANTELLA",
+      "name": "Phasmomantella",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHASMOMANTELLA_PALLIDA_ROY_2001",
+          "name": "Phasmomantella pallida",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phasmomantella",
+          "authorship": "Roy, 2001",
+          "sourceIds": {
+            "gbif-backbone": "10838297"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHASMOMANTELLA_NUICHUANA_VERMEERSCH_2018",
+          "name": "Phasmomantella nuichuana",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phasmomantella",
+          "authorship": "Vermeersch, 2018",
+          "sourceIds": {
+            "gbif-backbone": "9803730"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "deroplatyidae"
     }
   ],
-  "speciesCount": 42,
+  "speciesCount": 44,
   "appSlug": "deroplatyidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 12,
+  "genusCount": 13,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

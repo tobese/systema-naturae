@@ -1716,11 +1716,13 @@
             ],
             "itis": [
               "893262"
-            ]
+            ],
+            "gbif-backbone": "2153285"
           },
           "uuid": "567d7829-9904-52c-a4a-2669843b58c041",
           "authorityIds": "gbif:2153285,itis:893262",
-          "description": "Zoropsis coreana is a zoropsis species found in its native region."
+          "description": "Zoropsis coreana is a zoropsis species found in its native region.",
+          "authorship": "Paik, 1978"
         },
         {
           "id": "SP_ZOROPSIS_SPINIMANUS_DUFOUR_1820",
@@ -2749,7 +2751,8 @@
             "itis": [
               "891663"
             ],
-            "checklistbank": "cc8a632c-ec98-4794-aedc-c800c4043652"
+            "checklistbank": "cc8a632c-ec98-4794-aedc-c800c4043652",
+            "gbif-backbone": "2153278"
           },
           "uuid": "4e3286c8-7dd8-59f-8f8-c2ff7017ab5cf8",
           "authorityIds": "gbif:2153278,itis:891663",
@@ -3072,6 +3075,19 @@
           "authorship": "Platnick & Ubick, 2008",
           "sourceIds": {
             "checklistbank": "urn:lsid:nmbe.ch:spidersp:041609"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_TITIOTUS_HANSII_SCHENKEL_1950",
+          "name": "Titiotus hansii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Titiotus",
+          "authorship": "(Schenkel, 1950)",
+          "sourceIds": {
+            "gbif-backbone": "6719220"
           },
           "children": []
         }
@@ -4094,14 +4110,16 @@
             ],
             "itis": [
               "889951"
-            ]
+            ],
+            "gbif-backbone": "2153275"
           },
           "uuid": "ee1b54ce-e015-506-ab9-1689bab794c8f6",
           "authorityIds": "gbif:2153275,itis:889951",
           "continents": [
             "Asia"
           ],
-          "description": "Takeoa huangshan is a takeoa species found in Asia region."
+          "description": "Takeoa huangshan is a takeoa species found in Asia region.",
+          "authorship": "Tang, Xu & Zhu, 2004"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -5573,13 +5591,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "zoropsidae"
+    },
+    {
+      "id": "GENUS_LYCOSOIDES",
+      "name": "Lycosoides",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LYCOSOIDES_ALGIRICA_LUCAS_1846",
+          "name": "Lycosoides algirica",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lycosoides",
+          "authorship": "Lucas, 1846",
+          "sourceIds": {
+            "checklistbank-2008": "1048993"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zoropsidae"
+    },
+    {
+      "id": "GENUS_AUPOLPUS",
+      "name": "Aupolpus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AUPOLPUS_ASSOCIATUS_BANKS",
+          "name": "Aupolpus associatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Aupolpus",
+          "authorship": "(Banks)",
+          "sourceIds": {
+            "gbif-backbone": "10892094"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "zoropsidae"
     }
   ],
-  "speciesCount": 222,
+  "speciesCount": 225,
   "appSlug": "zoropsidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 36,
+  "genusCount": 38,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -5588,6 +5650,7 @@
       "orderKey": 1496,
       "familyKey": 3324
     },
-    "checklistbank": "Zoropsidae"
+    "checklistbank": "Zoropsidae",
+    "wikispecies": "Zoropsidae"
   }
 }

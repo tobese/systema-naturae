@@ -76,7 +76,8 @@
           "authorship": "Schatz, 2004",
           "sourceIds": {
             "gbif": 2194058,
-            "checklistbank": "ott4684730"
+            "checklistbank": "ott4684730",
+            "gbif-backbone": "2194058"
           },
           "uuid": "41eb9b4c-d777-5e2-9e3-805bb29fb5e263",
           "authorityIds": "gbif:2194058",
@@ -491,7 +492,8 @@
           "authorship": "Csiszár, 1961",
           "sourceIds": {
             "gbif": 2194096,
-            "checklistbank": "ott4684779"
+            "checklistbank": "ott4684779",
+            "gbif-backbone": "2194096"
           },
           "uuid": "9f74525c-f2cf-516-ba8-a75f1c34d0e906",
           "authorityIds": "gbif:2194096",
@@ -1066,7 +1068,8 @@
           "authorship": "Golosova & Ljaschev, 1984",
           "sourceIds": {
             "gbif": 2194093,
-            "checklistbank": "ott4684758"
+            "checklistbank": "ott4684758",
+            "gbif-backbone": "2194093"
           },
           "uuid": "864e0376-530d-523-9e7-5599d8ea7e6bac",
           "authorityIds": "gbif:2194093",
@@ -1694,13 +1697,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Xenillidae"
+    },
+    {
+      "id": "GENUS_STENOXENILLUS",
+      "name": "Stenoxenillus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STENOXENILLUS_INCISUS_GROBLER_2013",
+          "name": "Stenoxenillus incisus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stenoxenillus",
+          "authorship": "Grobler, 2013",
+          "sourceIds": {
+            "gbif-backbone": "6895716"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "xenillidae"
+    },
+    {
+      "id": "GENUS_CEPHEUS",
+      "name": "Cepheus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CEPHEUS_TEGEOCRANIFORMIS_SELLNICK_1919",
+          "name": "Cepheus tegeocraniformis",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cepheus",
+          "authorship": "(Sellnick, 1919)",
+          "sourceIds": {
+            "gbif-backbone": "9492081"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "xenillidae"
     }
   ],
-  "speciesCount": 100,
+  "speciesCount": 102,
   "appSlug": "xenillidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 6,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

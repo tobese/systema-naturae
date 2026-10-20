@@ -68,7 +68,8 @@
             ],
             "itis": [
               "1207714"
-            ]
+            ],
+            "gbif-backbone": "9353741"
           },
           "uuid": "7fce480b-8ae9-58c-889-18a03145cc6230",
           "authorityIds": "col:BRDMW,gbif:9353741,itis:1207714",
@@ -159,7 +160,8 @@
             ],
             "itis": [
               "1207715"
-            ]
+            ],
+            "gbif-backbone": "9546106"
           },
           "uuid": "3279cab6-f80c-5c7-a77-7881ffb635fc92",
           "authorityIds": "col:BRDMY,gbif:9546106,itis:1207715",
@@ -183,7 +185,8 @@
             ],
             "col": [
               "BRDMX"
-            ]
+            ],
+            "gbif-backbone": "9413359"
           },
           "uuid": "be2b2bd8-f824-592-9a4-c21e804456f5df",
           "authorityIds": "col:BRDMX,gbif:9413359,itis:1207716",
@@ -423,7 +426,8 @@
             "col": [
               "BRDVS"
             ],
-            "checklistbank": "ott7679803"
+            "checklistbank": "ott7679803",
+            "gbif-backbone": "9471661"
           },
           "uuid": "730cc4f2-da31-586-b6f-bad9edd4bda2a9",
           "authorityIds": "col:BRDVS,gbif:9471661,itis:1207717",
@@ -648,13 +652,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paratydeidae"
+    },
+    {
+      "id": "GENUS_SCOLOTYDEUS",
+      "name": "Scolotydeus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCOLOTYDEUS_BACILLUS_BERIESE_1910",
+          "name": "Scolotydeus bacillus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scolotydeus",
+          "authorship": "BerIese, 1910",
+          "sourceIds": {
+            "gbif-backbone": "6927012"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "paratydeidae"
     }
   ],
-  "speciesCount": 28,
+  "speciesCount": 29,
   "appSlug": "paratydeidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -663,6 +689,7 @@
       "orderKey": 543,
       "familyKey": 4541746
     },
-    "checklistbank": "Paratydeidae"
+    "checklistbank": "Paratydeidae",
+    "wikispecies": "Paratydeidae"
   }
 }

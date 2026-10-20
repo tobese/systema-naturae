@@ -945,7 +945,8 @@
             "checklistbank": [
               "urn:lsid:marinespecies.org:taxname:514125"
             ],
-            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:514125"
+            "checklistbank-2011": "urn:lsid:marinespecies.org:taxname:514125",
+            "gbif-backbone": "6454154"
           },
           "authorityIds": "checklistbank:urn:lsid:marinespecies.org:taxname:514125,col:9XJYL,itis:1195579",
           "description": "Deosergestes rubroguttatus is a sergestidae species found in its native region."
@@ -1101,6 +1102,19 @@
           "children": [],
           "uuid": "14945fd5-8529-540-a02-2b223faeae7cf5",
           "description": "Deosergestes curvatus is a sergestidae species found in its native region."
+        },
+        {
+          "id": "SP_DEOSERGESTES_SPEC_KROYER_1855",
+          "name": "Deosergestes spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Deosergestes",
+          "authorship": "(Kroyer, 1855)",
+          "sourceIds": {
+            "gbif-backbone": "11622741"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2175,6 +2189,19 @@
           },
           "children": [],
           "uuid": "f71a2ec9-e38e-574-bb6-d094de71a1dd3a"
+        },
+        {
+          "id": "SP_SERGIA_SPEC_GORDON_1939",
+          "name": "Sergia spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Sergia",
+          "authorship": "(Gordon, 1939)",
+          "sourceIds": {
+            "gbif-backbone": "11444584"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -2365,6 +2392,19 @@
           },
           "authorityIds": "col:9XL73,itis:1195581",
           "description": "Eusergestes antarcticus is a sergestidae species found in its native region."
+        },
+        {
+          "id": "SP_EUSERGESTES_SPEC_VERESHCHAKA_2009",
+          "name": "Eusergestes spec",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eusergestes",
+          "authorship": "(Vereshchaka, 2009)",
+          "sourceIds": {
+            "gbif-backbone": "11528141"
+          },
+          "children": []
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -3978,7 +4018,8 @@
           "lineage": "Mokaya",
           "authorship": "Garassino et al. 2013",
           "sourceIds": {
-            "checklistbank": "txn:492737"
+            "checklistbank": "txn:492737",
+            "gbif-backbone": "12225619"
           },
           "children": [],
           "uuid": "0643d788-f9df-572-947-10676a0afbd3dc",
@@ -4025,13 +4066,92 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Sergestidae"
+    },
+    {
+      "id": "GENUS_PHASMATOCARCINUS",
+      "name": "Phasmatocarcinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PHASMATOCARCINUS_DISCOPHTHALMUS_TILESIUS_1819",
+          "name": "Phasmatocarcinus discophthalmus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phasmatocarcinus",
+          "authorship": "Tilesius, 1819",
+          "sourceIds": {
+            "gbif-backbone": "6454236"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_PHASMATOCARCINUS_GLAUCUS_TILESIUS_1819",
+          "name": "Phasmatocarcinus glaucus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Phasmatocarcinus",
+          "authorship": "Tilesius, 1819",
+          "sourceIds": {
+            "gbif-backbone": "6454235"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sergestidae"
+    },
+    {
+      "id": "GENUS_CASERTANUS",
+      "name": "Casertanus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CASERTANUS_SABELLICUS_BRAVI_GARASSINO_BARTIROMO_AUDO_CHARBONNIER_SCHWEIGERT_TH_VENARD_LONGOBARDI_2014",
+          "name": "Casertanus sabellicus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Casertanus",
+          "authorship": "Bravi, Garassino, Bartiromo, Audo, Charbonnier, Schweigert, Thévenard & Longobardi, 2014",
+          "sourceIds": {
+            "gbif-backbone": "12182662"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sergestidae"
+    },
+    {
+      "id": "GENUS_SYMPHYSOPUS",
+      "name": "Symphysopus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SYMPHYSOPUS_HIRTUS_TILESIUS_1819",
+          "name": "Symphysopus hirtus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Symphysopus",
+          "authorship": "Tilesius, 1819",
+          "sourceIds": {
+            "gbif-backbone": "6454246"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "sergestidae"
     }
   ],
-  "speciesCount": 227,
+  "speciesCount": 234,
   "appSlug": "sergestidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 27,
+  "genusCount": 30,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,

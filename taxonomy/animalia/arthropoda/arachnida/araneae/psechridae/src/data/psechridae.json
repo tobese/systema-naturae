@@ -262,7 +262,8 @@
             "col": [
               "S8RDD"
             ],
-            "checklistbank": "ott608495"
+            "checklistbank": "ott608495",
+            "gbif-backbone": "2138941"
           },
           "uuid": "3b21087a-34b7-56d-8d2-8e52e1bca6e8e5",
           "authorityIds": "col:S8RDD,gbif:2138941,itis:887652",
@@ -1097,7 +1098,8 @@
             "itis": [
               "887653"
             ],
-            "checklistbank": "ott3556464"
+            "checklistbank": "ott3556464",
+            "gbif-backbone": "2138935"
           },
           "uuid": "818368c4-33f4-565-9eb-7a7ac318755f7a",
           "authorityIds": "col:S8RDW,gbif:2138935,itis:887653",
@@ -1703,11 +1705,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Psechrus",
           "sourceIds": {
-            "checklistbank": "ott7687429"
+            "checklistbank": "ott7687429",
+            "gbif-backbone": "9025097"
           },
           "children": [],
           "uuid": "1b6856ed-25fa-555-a21-e98f309996d387",
-          "description": "Psechrus mimus is a psechridae species found in its native region."
+          "description": "Psechrus mimus is a psechridae species found in its native region.",
+          "authorship": "Chamberlin, 1924"
         },
         {
           "id": "SP_PSECHRUS_SP",
@@ -1827,7 +1831,8 @@
             "itis": [
               "879826"
             ],
-            "checklistbank": "ott3556474"
+            "checklistbank": "ott3556474",
+            "gbif-backbone": "2138956"
           },
           "uuid": "ce5c6ad2-8a63-5e7-828-99f4164fbefb5d",
           "authorityIds": "col:3DX5W,gbif:2138956,itis:879826",
@@ -1879,13 +1884,35 @@
       ],
       "sourcedFrom": "catalogue of life",
       "lineage": "Psechridae"
+    },
+    {
+      "id": "GENUS_AMAUROBIUS",
+      "name": "Amaurobius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_AMAUROBIUS_SUCCINI_PETRUNKEVITCH_1942",
+          "name": "Amaurobius succini",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Amaurobius",
+          "authorship": "(Petrunkevitch, 1942)",
+          "sourceIds": {
+            "gbif-backbone": "6899114"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "psechridae"
     }
   ],
-  "speciesCount": 77,
+  "speciesCount": 78,
   "appSlug": "psechridae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 2,
+  "genusCount": 3,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1894,6 +1921,7 @@
       "orderKey": 1496,
       "familyKey": 9572
     },
-    "checklistbank": "Psechridae"
+    "checklistbank": "Psechridae",
+    "wikispecies": "Psechridae"
   }
 }

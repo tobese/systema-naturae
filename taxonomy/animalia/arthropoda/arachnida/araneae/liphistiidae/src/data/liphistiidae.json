@@ -5677,7 +5677,8 @@
           "lineage": "Sinothela",
           "authorship": "(Bishop & Crosby, 1932)",
           "sourceIds": {
-            "checklistbank": "0a934789565b4038a1e3d055ed21c84c"
+            "checklistbank": "0a934789565b4038a1e3d055ed21c84c",
+            "gbif-backbone": "8256644"
           },
           "children": [],
           "uuid": "78afcbae-432d-587-b48-4128f09fe7ad61",
@@ -5692,7 +5693,8 @@
           "lineage": "Sinothela",
           "authorship": "(Zhu & Wang, 1984)",
           "sourceIds": {
-            "checklistbank": "1cc634defb8e42ab98665fc4387f2ec7"
+            "checklistbank": "1cc634defb8e42ab98665fc4387f2ec7",
+            "gbif-backbone": "7361879"
           },
           "children": [],
           "uuid": "3011fb12-818b-560-aeb-fde83ddbcaaa1a",
@@ -5768,13 +5770,47 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "liphistiidae"
+    },
+    {
+      "id": "GENUS_LIPISTIUS",
+      "name": "Lipistius",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_LIPISTIUS_MALAYANUS",
+          "name": "Lipistius malayanus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lipistius",
+          "sourceIds": {
+            "gbif-backbone": "9373128"
+          },
+          "children": []
+        },
+        {
+          "id": "SP_LIPISTIUS_DESULTOR_SCHI_DTE_1849",
+          "name": "Lipistius desultor",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Lipistius",
+          "authorship": "Schiødte, 1849",
+          "sourceIds": {
+            "gbif-backbone": "7593355"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "liphistiidae"
     }
   ],
-  "speciesCount": 240,
+  "speciesCount": 242,
   "appSlug": "liphistiidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 11,
+  "genusCount": 12,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -5783,6 +5819,7 @@
       "orderKey": 1496,
       "familyKey": 3416
     },
-    "checklistbank": "Liphistiidae"
+    "checklistbank": "Liphistiidae",
+    "wikispecies": "Liphistiidae"
   }
 }

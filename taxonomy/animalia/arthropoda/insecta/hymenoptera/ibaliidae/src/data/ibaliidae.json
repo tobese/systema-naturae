@@ -405,7 +405,8 @@
           "lineage": "Ibalia",
           "authorship": "Engel and Liu 2012",
           "sourceIds": {
-            "checklistbank": "txn:250414"
+            "checklistbank": "txn:250414",
+            "gbif-backbone": "8588122"
           },
           "children": [],
           "uuid": "68b34999-9ca6-513-b1b-03ce1bee9f54d8",
@@ -523,7 +524,8 @@
           "lineage": "Archaeibalia",
           "authorship": "Liu and Engel 2010",
           "sourceIds": {
-            "checklistbank": "txn:217609"
+            "checklistbank": "txn:217609",
+            "gbif-backbone": "8609690"
           },
           "children": [],
           "uuid": "d7774f25-661d-5d1-a96-3c2ad878151a47",
@@ -561,13 +563,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Ibaliidae"
+    },
+    {
+      "id": "GENUS_PROTOIBALIA",
+      "name": "Protoibalia",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PROTOIBALIA_CONNEXIVA_BRUES_1910",
+          "name": "Protoibalia connexiva",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Protoibalia",
+          "authorship": "Brues, 1910",
+          "sourceIds": {
+            "gbif-backbone": "8658667"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "ibaliidae"
     }
   ],
-  "speciesCount": 33,
+  "speciesCount": 34,
   "appSlug": "ibaliidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -576,6 +600,7 @@
       "orderKey": 1457,
       "familyKey": 4343
     },
-    "checklistbank": "Ibaliidae"
+    "checklistbank": "Ibaliidae",
+    "wikispecies": "Ibaliidae"
   }
 }

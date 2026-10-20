@@ -41,7 +41,8 @@
             "col": [
               "9THQV"
             ],
-            "checklistbank": "txn:404210"
+            "checklistbank": "txn:404210",
+            "gbif-backbone": "11189465"
           },
           "authorityIds": "col:9THQV",
           "description": "Kromtitis tergospinosus is a dynomenidae species found in its native region."
@@ -862,7 +863,9 @@
             "itis": [
               "660445"
             ],
-            "checklistbank": "taicol: 71067"
+            "checklistbank": "taicol: 71067",
+            "wikispecies": "Dynomene_hispida",
+            "gbif-backbone": "2221859"
           },
           "authorityIds": "col:6DPYR,itis:660445",
           "description": "Dynomene hispida is a dynomenidae species found in its native region."
@@ -903,7 +906,8 @@
             "col": [
               "BW3M4"
             ],
-            "checklistbank": "ott6187645"
+            "checklistbank": "ott6187645",
+            "gbif-backbone": "8646691"
           },
           "authorityIds": "col:BW3M4",
           "description": "Dynomene emiliae is a dynomenidae species found in its native region."
@@ -936,7 +940,11 @@
           "children": [],
           "lineage": "Dynomene",
           "uuid": "ae55aebb-c971-5bb-93b-9ee482e11558ba",
-          "description": "Dynomene guamensis is a dynomenidae species found in its native region."
+          "description": "Dynomene guamensis is a dynomenidae species found in its native region.",
+          "authorship": "McLay, 2001",
+          "sourceIds": {
+            "gbif-backbone": "5970867"
+          }
         },
         {
           "id": "SP_DYNOMENE_KROPPI",
@@ -947,7 +955,11 @@
           "children": [],
           "lineage": "Dynomene",
           "uuid": "ee5a8aae-6c34-5f8-a5a-184cad60d84878",
-          "description": "Dynomene kroppi is a dynomenidae species found in its native region."
+          "description": "Dynomene kroppi is a dynomenidae species found in its native region.",
+          "authorship": "McLay, 2001",
+          "sourceIds": {
+            "gbif-backbone": "5970866"
+          }
         },
         {
           "id": "SP_DYNOMENE_PUGNATRIX",
@@ -958,7 +970,11 @@
           "children": [],
           "lineage": "Dynomene",
           "uuid": "4acc1361-fd08-55b-853-dbce4322f587d6",
-          "description": "Dynomene pugnatrix is a dynomenidae species found in its native region."
+          "description": "Dynomene pugnatrix is a dynomenidae species found in its native region.",
+          "authorship": "De Man, 1889",
+          "sourceIds": {
+            "gbif-backbone": "4377890"
+          }
         },
         {
           "id": "SP_DYNOMENE_URSULA_STIMPSON_1860",
@@ -1113,7 +1129,8 @@
           "sourceIds": {
             "col": [
               "9THPW"
-            ]
+            ],
+            "gbif-backbone": "11184000"
           },
           "authorityIds": "col:9THPW",
           "description": "Gemmellarocarcinus disalvoi is a dynomenidae species found in its native region."
@@ -1577,7 +1594,8 @@
           "sourceIds": {
             "wikispecies": "Dynomene_filholi"
           },
-          "uuid": "b0d58e52-9b64-4595-a0c8-fc67aeb4373d"
+          "uuid": "b0d58e52-9b64-4595-a0c8-fc67aeb4373d",
+          "children": []
         },
         {
           "id": "SP_DYNOMENE_PILUMNOIDES",
@@ -1589,7 +1607,8 @@
           "sourceIds": {
             "wikispecies": "Dynomene_pilumnoides"
           },
-          "uuid": "a5e98177-f94e-49e3-a6a3-2d7f327b4bd4"
+          "uuid": "a5e98177-f94e-49e3-a6a3-2d7f327b4bd4",
+          "children": []
         },
         {
           "id": "SP_DYNOMENE_PRAEDATOR",
@@ -1601,7 +1620,8 @@
           "sourceIds": {
             "wikispecies": "Dynomene_praedator"
           },
-          "uuid": "d5076fe6-f944-43bc-8567-70d583ece04e"
+          "uuid": "d5076fe6-f944-43bc-8567-70d583ece04e",
+          "children": []
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -1654,13 +1674,101 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "dynomenidae"
+    },
+    {
+      "id": "GENUS_OVAMENE",
+      "name": "Ovamene",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_OVAMENE_FRANCIAE_M_LLER_COLLINS_1991",
+          "name": "Ovamene franciae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Ovamene",
+          "authorship": "Müller & Collins, 1991",
+          "sourceIds": {
+            "gbif-backbone": "8478860"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dynomenidae"
+    },
+    {
+      "id": "GENUS_EOTRACHYNOTOCARCINUS",
+      "name": "Eotrachynotocarcinus",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_EOTRACHYNOTOCARCINUS_AIRAGHII_BESCHIN_BUSULINI_DE_ANGELI_TESSIER_2007",
+          "name": "Eotrachynotocarcinus airaghii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Eotrachynotocarcinus",
+          "authorship": "Beschin, Busulini, De Angeli & Tessier, 2007",
+          "sourceIds": {
+            "gbif-backbone": "8555059"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dynomenidae"
+    },
+    {
+      "id": "GENUS_STEPHANOMETOPON",
+      "name": "Stephanometopon",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_STEPHANOMETOPON_GRANULATUM_BOSQUET_1854",
+          "name": "Stephanometopon granulatum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Stephanometopon",
+          "authorship": "Bosquet, 1854",
+          "sourceIds": {
+            "gbif-backbone": "8593399"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dynomenidae"
+    },
+    {
+      "id": "GENUS_DYNOMENOPSIS",
+      "name": "Dynomenopsis",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_DYNOMENOPSIS_BRANISAI_SECRETAN_1972",
+          "name": "Dynomenopsis branisai",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Dynomenopsis",
+          "authorship": "Secretan, 1972",
+          "sourceIds": {
+            "gbif-backbone": "8593353"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "dynomenidae"
     }
   ],
-  "speciesCount": 84,
+  "speciesCount": 88,
   "appSlug": "dynomenidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Malacostraca",
-  "genusCount": 20,
+  "genusCount": 24,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -1669,6 +1777,7 @@
       "orderKey": 637,
       "familyKey": 3864
     },
-    "checklistbank": "Dynomenidae"
+    "checklistbank": "Dynomenidae",
+    "wikispecies": "Dynomenidae"
   }
 }

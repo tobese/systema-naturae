@@ -241,7 +241,8 @@
           "lineage": "mycobates",
           "authorship": "Behan-Pelletier, Eamer & Clayton, 2001",
           "sourceIds": {
-            "gbif": 2198894
+            "gbif": 2198894,
+            "gbif-backbone": "2198894"
           },
           "uuid": "d19f418c-7a68-5ac-bef-5eb32e60c4fe7a",
           "authorityIds": "gbif:2198894",
@@ -1084,11 +1085,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Punctoribates",
           "sourceIds": {
-            "checklistbank": "ott3531425"
+            "checklistbank": "ott3531425",
+            "gbif-backbone": "2198925"
           },
           "children": [],
           "uuid": "dc9dc753-90da-503-b3a-26b3c77a3f4b33",
-          "description": "Punctoribates selgae is a punctoribatidae species found in its native region."
+          "description": "Punctoribates selgae is a punctoribatidae species found in its native region.",
+          "authorship": "(Pérez-Íñigo, 1976)"
         },
         {
           "id": "SP_PUNCTORIBATES_ARMIPES",
@@ -1140,11 +1143,13 @@
           "sourcedFrom": "checklistbank",
           "lineage": "Punctoribates",
           "sourceIds": {
-            "checklistbank": "ott7678586"
+            "checklistbank": "ott7678586",
+            "gbif-backbone": "9373463"
           },
           "children": [],
           "uuid": "1c8674d9-93f9-50d-b19-bdaf9c1804385e",
-          "description": "Punctoribates hexogonus is a punctoribatidae species found in its native region."
+          "description": "Punctoribates hexogonus is a punctoribatidae species found in its native region.",
+          "authorship": "Berlese, 1908"
         }
       ],
       "sourcedFrom": "catalogue of life",
@@ -1546,7 +1551,8 @@
           "lineage": "Zachvatkinibates",
           "authorship": "A. Seniczak et S. Seniczak, 2023",
           "sourceIds": {
-            "checklistbank": "226935"
+            "checklistbank": "226935",
+            "gbif-backbone": "12190918"
           },
           "children": [],
           "uuid": "6b97eb9f-1766-53e-a73-fece3048cd81b1",
@@ -2388,13 +2394,57 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "punctoribatidae"
+    },
+    {
+      "id": "GENUS_SCOTIAZETES",
+      "name": "Scotiazetes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_SCOTIAZETES_AELLENI_MAHUNKA_1979",
+          "name": "Scotiazetes aelleni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Scotiazetes",
+          "authorship": "(Mahunka, 1979)",
+          "sourceIds": {
+            "gbif-backbone": "2198635"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "punctoribatidae"
+    },
+    {
+      "id": "GENUS_PORALLOZETES",
+      "name": "Porallozetes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_PORALLOZETES_BADAMDORJI_ERMILOV_MINOR_2016",
+          "name": "Porallozetes badamdorji",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Porallozetes",
+          "authorship": "Ermilov & Minor, 2016",
+          "sourceIds": {
+            "gbif-backbone": "8307910"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "punctoribatidae"
     }
   ],
-  "speciesCount": 136,
+  "speciesCount": 138,
   "appSlug": "punctoribatidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 23,
+  "genusCount": 25,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2403,6 +2453,7 @@
       "orderKey": 542,
       "familyKey": 3645
     },
-    "checklistbank": "Punctoribatidae"
+    "checklistbank": "Punctoribatidae",
+    "wikispecies": "Punctoribatidae"
   }
 }

@@ -587,11 +587,13 @@
           "children": [],
           "lineage": "deinopis",
           "sourceIds": {
-            "gbif": 10280599
+            "gbif": 10280599,
+            "gbif-backbone": "10280599"
           },
           "uuid": "78a3f187-d510-5ae-b00-fbb3adb766befd",
           "authorityIds": "gbif:10280599",
-          "description": "Deinopis labangan is a deinopis species found in its native region."
+          "description": "Deinopis labangan is a deinopis species found in its native region.",
+          "authorship": "Barrion-Dupo & Barrion, 2018"
         },
         {
           "id": "SP_DEINOPIS_LUZONENSIS",
@@ -602,11 +604,13 @@
           "children": [],
           "lineage": "deinopis",
           "sourceIds": {
-            "gbif": 9886045
+            "gbif": 9886045,
+            "gbif-backbone": "9886045"
           },
           "uuid": "b6426e55-b182-525-9bd-35bedde8d2723b",
           "authorityIds": "gbif:9886045",
-          "description": "Deinopis luzonensis is a deinopis species found in its native region."
+          "description": "Deinopis luzonensis is a deinopis species found in its native region.",
+          "authorship": "Barrion-Dupo & Barrion, 2018"
         },
         {
           "id": "SP_DEINOPIS_ANCHIETAE_BRITO_CAPELLO_1867",
@@ -665,7 +669,8 @@
             "itis": [
               "854760"
             ],
-            "checklistbank": "ott3572961"
+            "checklistbank": "ott3572961",
+            "gbif-backbone": "2141992"
           },
           "uuid": "69301827-270f-541-954-c45d3965808be4",
           "authorityIds": "gbif:2141992,itis:854760",
@@ -687,7 +692,8 @@
             "itis": [
               "854761"
             ],
-            "checklistbank": "ott3572964"
+            "checklistbank": "ott3572964",
+            "gbif-backbone": "2141993"
           },
           "uuid": "a7c07392-a5ed-560-b67-be725ccb833d54",
           "authorityIds": "gbif:2141993,itis:854761",
@@ -750,7 +756,8 @@
             "itis": [
               "854767"
             ],
-            "checklistbank": "ott3572978"
+            "checklistbank": "ott3572978",
+            "gbif-backbone": "2141971"
           },
           "uuid": "6d3d5add-3544-561-874-4033d2719acb28",
           "authorityIds": "gbif:2141971,itis:854767",
@@ -986,7 +993,8 @@
             "itis": [
               "854786"
             ],
-            "checklistbank": "ott3572965"
+            "checklistbank": "ott3572965",
+            "gbif-backbone": "2141977"
           },
           "uuid": "d5367f02-7b00-550-b34-c655f29e92639b",
           "authorityIds": "gbif:2141977,itis:854786",
@@ -1030,7 +1038,8 @@
             "itis": [
               "854791"
             ],
-            "checklistbank": "ott3572949"
+            "checklistbank": "ott3572949",
+            "gbif-backbone": "2141987"
           },
           "uuid": "5d1e0f9b-3dbe-546-89c-87ee7cfa35dc5d",
           "authorityIds": "gbif:2141987,itis:854791",
@@ -1118,7 +1127,8 @@
             "itis": [
               "854798"
             ],
-            "checklistbank": "c63b023d-4808-47a8-a34e-1296d04fbf08"
+            "checklistbank": "c63b023d-4808-47a8-a34e-1296d04fbf08",
+            "gbif-backbone": "2142001"
           },
           "uuid": "e5588613-1098-59d-98f-b67fece46816e5",
           "authorityIds": "gbif:2142001,itis:854798",
@@ -1162,7 +1172,8 @@
             "itis": [
               "854801"
             ],
-            "checklistbank": "994624d1-f781-4248-91e1-16b0a018f104"
+            "checklistbank": "994624d1-f781-4248-91e1-16b0a018f104",
+            "gbif-backbone": "2142013"
           },
           "uuid": "a57fa34a-992f-54b-9bb-ce062d3432d1b8",
           "authorityIds": "gbif:2142013,itis:854801",
@@ -2287,7 +2298,8 @@
             "col": [
               "3ZQZT"
             ],
-            "checklistbank": "811272"
+            "checklistbank": "811272",
+            "gbif-backbone": "2142016"
           },
           "uuid": "f2d7d4a9-0db6-505-a6c-ce08f87a8d64ed",
           "authorityIds": "col:3ZQZT,gbif:2142016,itis:860935",
@@ -2687,13 +2699,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "deinopidae"
+    },
+    {
+      "id": "GENUS_MACRYPHANTES",
+      "name": "Macryphantes",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_MACRYPHANTES_COWDENI_SELDEN_1990",
+          "name": "Macryphantes cowdeni",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Macryphantes",
+          "authorship": "(Selden, 1990)",
+          "sourceIds": {
+            "gbif-backbone": "6899141"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "deinopidae"
     }
   ],
-  "speciesCount": 119,
+  "speciesCount": 120,
   "appSlug": "deinopidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Arachnida",
-  "genusCount": 6,
+  "genusCount": 7,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -2702,6 +2736,7 @@
       "orderKey": 1496,
       "familyKey": 7365
     },
-    "checklistbank": "Deinopidae"
+    "checklistbank": "Deinopidae",
+    "wikispecies": "Deinopidae"
   }
 }

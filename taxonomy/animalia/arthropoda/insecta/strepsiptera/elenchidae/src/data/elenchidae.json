@@ -432,7 +432,8 @@
             "itis": [
               "955477"
             ],
-            "checklistbank": "ott5031634"
+            "checklistbank": "ott5031634",
+            "gbif-backbone": "6929736"
           },
           "authorityIds": "itis:955477",
           "description": "Elenchus delicatus is a elenchidae species found in its native region."
@@ -740,7 +741,8 @@
           "lineage": "Elencholax",
           "authorship": "Kogan and Poinar 2019",
           "sourceIds": {
-            "checklistbank": "txn:427847"
+            "checklistbank": "txn:427847",
+            "gbif-backbone": "11185250"
           },
           "children": [],
           "uuid": "1dcbcf1d-d979-5a0-bef-61ac0bd71b55ec",
@@ -852,13 +854,35 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "Elenchidae"
+    },
+    {
+      "id": "GENUS_CRYPTELENCHOLAX",
+      "name": "Cryptelencholax",
+      "rank": "GENUS",
+      "children": [
+        {
+          "id": "SP_CRYPTELENCHOLAX_POINARI_KOGAN_2020",
+          "name": "Cryptelencholax poinari",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Cryptelencholax",
+          "authorship": "Kogan, 2020",
+          "sourceIds": {
+            "gbif-backbone": "11205842"
+          },
+          "children": []
+        }
+      ],
+      "sourcedFrom": "checklistbank",
+      "lineage": "elenchidae"
     }
   ],
-  "speciesCount": 39,
+  "speciesCount": 40,
   "appSlug": "elenchidae",
   "sourcedFrom": "catalogue of life",
   "lineage": "Arthropoda > Insecta",
-  "genusCount": 7,
+  "genusCount": 8,
   "sourceIds": {
     "gbif": {
       "kingdomKey": 1,
@@ -867,6 +891,7 @@
       "orderKey": 1227,
       "familyKey": 7948
     },
-    "checklistbank": "Elenchidae"
+    "checklistbank": "Elenchidae",
+    "wikispecies": "Elenchidae"
   }
 }
