@@ -65,6 +65,14 @@
   `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first
   time that report has had anything to say, and it is the whole payoff of
   recording refusals instead of counting them.
+- **`checklistbank-2008` misclassifies `Stictis radiata` as a slime mould.** The
+  archive files it under Protozoa > Mycetozoa > Myxomycetes > Physarales >
+  Didymiaceae, and scaffolding Didymiaceae on 2026-10-21 unlocked it as a
+  protozoan duplicate of the lichen fungus we already hold in
+  fungi/Stictidaceae (GBIF Backbone says Fungi). Removed the copy rather than
+  allow-list it, the same call made on the EUNIS and OTT cases. Unexamined is
+  whether 2008 does this to other ascomycetes; it predates the dataset-scoping
+  fix, so check its kingdom column before its next import.
 - **Review the GBIF placement diffs.** 34,044 species sit in a different family
   than the GBIF backbone puts them in (4,008 family pairs), logged per species by
   `scripts/importColChecklist.py --diff-log` and grouped in

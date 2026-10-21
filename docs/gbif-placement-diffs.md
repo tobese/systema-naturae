@@ -1,6 +1,6 @@
 # Placement diffs against the GBIF backbone
 
-34,044 species, 4,008 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
+34,057 species, 4,017 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
 
 | species | our family | GBIF family | kingdom | example |
 |---:|---|---|---|---|
@@ -1140,6 +1140,7 @@
 | 4 | Flabellinidae | Paracoryphellidae | animalia | *Chlamylla intermedia* |
 | 4 | Mycosphaerellaceae | Dothideaceae | fungi | *Scirrhia silvatica* |
 | 4 | Sactoceratidae | Nautilidae | animalia | *Sactoceras westonense* |
+| 4 | Paramoebidae | Mayorellidae | protozoa | *Mayorella dactylifera* |
 | 4 | Erythracaridae | Anystidae | animalia | *Tarsolarkus articulosus* |
 | 4 | Tremellaceae | Cryptococcaceae | fungi | *Filobasidiella xianghuijun* |
 | 4 | Empididae | Brachystomatidae | animalia | *Trichopeza longicornis* |
@@ -2043,6 +2044,7 @@
 | 2 | Woodsiaceae | Athyriaceae | plantae | *Diplazium acanthopus* |
 | 2 | Rutstroemiaceae | Sclerotiniaceae | fungi | *Scleromitrula rubicola* |
 | 2 | Spirofilidae | Strongylidiidae | chromista | *Strongylidium pseudocrassum* |
+| 2 | Thecamoebidae | Stenamoebidae | protozoa | *Sappinia pedata* |
 | 2 | Planispirillinidae | Spirillinidae | chromista | *Spirillina denticulogranulata* |
 | 2 | Hypnaceae | Amblystegiaceae | plantae | *Campylophyllum montanum* |
 | 2 | Romancheinidae | Phidoloporidae | animalia | *Psilosecos muralis* |
@@ -2359,6 +2361,7 @@
 | 1 | Thymelaeaceae | Erpodiaceae | plantae | *Solmsiella biseriata* |
 | 1 | Plexauridae | Gorgoniidae | animalia | *Psammogorgia flabellum* |
 | 1 | Phoreiobothriidae | Onchobothriidae | animalia | *Triloculatum triloculatum* |
+| 1 | Microchlamyiidae | Microcoryciidae | protozoa | *Microcorycia bryophila* |
 | 1 | Tityridae | Tyrannidae | animalia | *Myiobius villosus* |
 | 1 | Polyphysaceae | Dasycladaceae | plantae | *Radoiciciella subtilis* |
 | 1 | Phacidiaceae | Mniaeciaceae | fungi | *Epithamnolia xanthoriae* |
@@ -2588,6 +2591,7 @@
 | 1 | Ochnaceae | Quiinaceae | plantae | *Lacunaria crenata* |
 | 1 | Leptophlebiidae | Oniscigastridae | animalia | *Tasmanophlebia lotis* |
 | 1 | Allantonematidae | Sphaerulariidae | animalia | *Protylenchus anobii* |
+| 1 | Astasiidae | Astasiaceae | protozoa | *Cyclidiopsis acus* |
 | 1 | Victoriellidae | Rosalinidae | chromista | *Rupertina stabilis* |
 | 1 | Dictynidae | Cybaeidae | animalia | *Vectaraneus yulei* |
 | 1 | Massalongiaceae | Pannariaceae | fungi | *Leptogidium permesina* |
@@ -2598,6 +2602,7 @@
 | 1 | Diadesmidaceae | Lyrellaceae | chromista | *Lyrella cohnii* |
 | 1 | Megateuthidae | Passaloteuthidae | animalia | *Brevibelus breviformis* |
 | 1 | Spirulirostridae | Passaloteuthidae | animalia | *Spirulirostra curta* |
+| 1 | Didymiaceae | Didymiidae | protozoa | *Didymium verrucosporum* |
 | 1 | Lichinaceae | Pannariaceae | fungi | *Staurolemma omphalarioides* |
 | 1 | Hartmannulidae | Dysteriidae | chromista | *Aegyria oliva* |
 | 1 | Chaetothyriaceae | Cyphellophoraceae | fungi | *Cyphellophora eucalypti* |
@@ -2799,6 +2804,7 @@
 | 1 | Eucalanidae | Rhincalanidae | animalia | *Rhincalanus rostrifrons* |
 | 1 | Empididae | Iteaphilidae | animalia | *Iteaphila orchestris* |
 | 1 | Biddulphiaceae | Hemiaulaceae | chromista | *Hemiaulus polymorphus* |
+| 1 | Trichiaceae | Trichiidae | protozoa | *Hemitrichia favoginea* |
 | 1 | Phragmorthidae | Chilcorthidae | animalia | *Phragmorthis mucronata* |
 | 1 | Nemertodermatidae | Ascopariidae | animalia | *Flagellophora apelti* |
 | 1 | Pulleniidae | Melonidae | chromista | *Melonis affinis* |
@@ -2816,6 +2822,7 @@
 | 1 | Ochyroceratidae | Psilodercidae | animalia | *Althepus leucosternus* |
 | 1 | Cecidomyiidae | Syrphidae | animalia | *Lepidomyia strigosellacola* |
 | 1 | Scenopinidae | Syrphidae | animalia | *Psilota tabidosa* |
+| 1 | Hartmannellidae | Nolandellidae | protozoa | *Nolandella hibernica* |
 | 1 | Bacillariaceae | Prorocentraceae | chromista | *Prorocentrum bidens* |
 | 1 | Conidae | Drilliidae | animalia | *Spirotropis modiolus* |
 | 1 | Baetidae | Prosopistomatidae | animalia | *Myanmarella rossi* |
@@ -3455,6 +3462,7 @@
 | 1 | Dasycladaceae | Coelosphaeridiaceae | plantae | *Coelosphaeridium cyclocrinophilum* |
 | 1 | Halobacteriaceae | Haloferacaceae | archaea | *Halorubrum cibi* |
 | 1 | Acrididae | Tetrigidae | animalia | *Acridium barthelemyi* |
+| 1 | Amoebidae | Corallomyxidae | protozoa | *Stygamoeba polymorpha* |
 | 1 | Ditrichaceae | Saelaniaceae | plantae | *Saelania glaucescens* |
 | 1 | Ctenodrilidae | Cirratulidae | animalia | *Ctenodrilus serratus* |
 | 1 | Gelechiidae | Gracillariidae | animalia | *Phyllocnistis spilota* |
@@ -3886,6 +3894,7 @@
 | 1 | Pristilomatidae | Gastrodontidae | animalia | *Vermetum festinans* |
 | 1 | Strophochonetidae | Chonetidae | animalia | *Strophochonetes newlandensis* |
 | 1 | Muridae | Gliridae | animalia | *Glis sackdillingensis* |
+| 1 | Cercomonadidae | Bodonaceae | protozoa | *Cercomonas ovata* |
 | 1 | Brachycytheridae | Speluncellidae | animalia | *Rhombocythere dimorphica* |
 | 1 | Asterolecaniidae | Lecanodiaspididae | animalia | *Amorphococcus mesuae* |
 | 1 | Celotheliaceae | Naetrocymbaceae | fungi | *Leptorhaphis dominicana* |
