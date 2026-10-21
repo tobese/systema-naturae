@@ -1,6 +1,6 @@
 # Placement diffs against the GBIF backbone
 
-34,057 species, 4,017 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
+34,067 species, 4,024 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
 
 | species | our family | GBIF family | kingdom | example |
 |---:|---|---|---|---|
@@ -1185,6 +1185,7 @@
 | 4 | Punctidae | Charopidae | animalia | *Penescosta sororcula* |
 | 4 | Gosseletinidae | Plethospiridae | animalia | *Pithodea depressa* |
 | 4 | Glabropelmatidae | Theraphosidae | animalia | *Melloina gracilis* |
+| 4 | Taxaceae | Palissyaceae | plantae | *Palissya oldhamii* |
 | 4 | Aphaniidae | Cyprinodontidae | animalia | *Aphanius kavirensis* |
 | 4 | Hypnaceae | Symphyodontaceae | plantae | *Phyllodon lingulatus* |
 | 4 | Siphogenerinoididae | Bolivinitidae | chromista | *Euloxostomum tobagoensis* |
@@ -2477,6 +2478,7 @@
 | 1 | Stephanodiscaceae | Melosiraceae | chromista | *Melosira oestrupi* |
 | 1 | Pseudokeronopsidae | Keronidae | chromista | *Keronopsis ovalis* |
 | 1 | Holostichidae | Keronidae | chromista | *Keronopsis gracilis* |
+| 1 | Taxaceae | Cheirolepidiaceae | plantae | *Moriconia americana* |
 | 1 | Timaliidae | Pnoepygidae | animalia | *Pnoepyga formosana* |
 | 1 | Lygaeidae | Heterogastridae | animalia | *Heterogaster affinis* |
 | 1 | Ophiocamacidae | Ophiacanthidae | animalia | *Leadagmara gracilispina* |
@@ -2614,6 +2616,7 @@
 | 1 | Brissidae | Micrasteridae | animalia | *Cyclaster jacksoni* |
 | 1 | Ceramoporidae | Anolotichiidae | animalia | *Scenellopora socialis* |
 | 1 | Ochrolechiaceae | Varicellariaceae | fungi | *Varicellaria rhodocarpa* |
+| 1 | Schizaeaceae | Tedeleaceae | plantae | *Senftenbergia elegans* |
 | 1 | Blenniidae | Labrisomidae | animalia | *Clinus pronughipinnis* |
 | 1 | Aulacigastridae | Periscelididae | animalia | *Periscelis winnertzii* |
 | 1 | Cassiopidae | Pleuroceridae | animalia | *Cassiopella turricula* |
@@ -2639,9 +2642,11 @@
 | 1 | Erinaceidae | Soricidae | animalia | *Galerix socialis* |
 | 1 | Retariidae | Marginiferidae | animalia | *Kutorginella mosquensis* |
 | 1 | Atomodesmatidae | Inoceramidae | animalia | *Intomodesma costatum* |
+| 1 | Solenoporaceae | Ungdarellaceae | plantae | *Komia abundans* |
 | 1 | Hemiarthrumidae | Hemiarthridae | animalia | *Weedingia exigua* |
 | 1 | Parapirnodidae | Pseudoppiidae | animalia | *Pontiobates denigratus* |
 | 1 | Scortechiniaceae | Coronophoraceae | fungi | *Cryptosphaerella populina* |
+| 1 | Archaeolithophyllaceae | Ungdarellaceae | plantae | *Petschoria elegans* |
 | 1 | Yoldiidae | Glossiphoniidae | animalia | *Helobdella stagnalis* |
 | 1 | Protorhyphidae | Heterorhyphidae | animalia | *Heterorhyphus triangularis* |
 | 1 | Irenidae | Chloropseidae | animalia | *Chloropsis hardwickii* |
@@ -3163,6 +3168,7 @@
 | 1 | Trentepohliaceae | Ctenocladaceae | plantae | *Ctenocladus circinnatus* |
 | 1 | Synarachnactidae | Cerianthidae | animalia | *Synarachnactis brachiolata* |
 | 1 | Gelatinodiscaceae | Tricladiaceae | fungi | *Cudoniella rubicunda* |
+| 1 | Seletonellaceae | Moniliporellaceae | plantae | *Moniliporella camerata* |
 | 1 | Sarcophagidae | Muscidae | animalia | *Musca moneta* |
 | 1 | Bythocyprididae | Pontocyprididae | animalia | *Bythocypris fabaeformis* |
 | 1 | Selachinematidae | Richtersiidae | animalia | *Richtersia tenuis* |
@@ -3931,6 +3937,7 @@
 | 1 | Tubeufiaceae | Amphisphaeriaceae | fungi | *Melioliphila melioloides* |
 | 1 | Cyaneidae | Drymonematidae | animalia | *Drymonema dalmatinum* |
 | 1 | Mathildidae | Purpurinidae | animalia | *Pseudalaria aspera* |
+| 1 | Marattiaceae | Stauropteridaceae | plantae | *Zeilleria delicatula* |
 | 1 | Hypnaceae | Myuriaceae | plantae | *Ctenidium lychnitens* |
 | 1 | Allostethidae | Labiduridae | animalia | *Gonolabidura extima* |
 | 1 | Paguridae | Parapaguridae | animalia | *Vounopagurus kaikata* |

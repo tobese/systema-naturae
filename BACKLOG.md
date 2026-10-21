@@ -60,8 +60,10 @@
   thing that has ever produced sidecars, which is where Macie's 13,991 came from.
   Fix (a) is the load-bearing one and is small: hoist the distribution block
   above the early return, or factor it into a function both paths call.
-- **626 pending families are now in the tree** and are therefore scaffoldable or
-  importable (re-seeded 2026-10-21; was 154 on 2026-10-18).
+- **1,188 pending families are now in the tree** and are therefore scaffoldable
+  or importable (1,067 of them are gbif-backbone:53147; store re-seeded
+  2026-10-21, and 311 plantae families were scaffolded and populated the same
+  day; was 154 on 2026-10-18).
   `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first
   time that report has had anything to say, and it is the whole payoff of
   recording refusals instead of counting them.
