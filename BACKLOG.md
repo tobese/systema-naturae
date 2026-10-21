@@ -60,13 +60,23 @@
   thing that has ever produced sidecars, which is where Macie's 13,991 came from.
   Fix (a) is the load-bearing one and is small: hoist the distribution block
   above the early return, or factor it into a function both paths call.
-- **2,150 pending families are now in the tree** and are therefore scaffoldable
-  or importable (1,408 of them are gbif-backbone:53147; store re-seeded
-  2026-10-21, and 311 plantae plus 877 chromista families were scaffolded and
-  populated the same day; was 154 on 2026-10-18).
+- **3,413 pending families are now in the tree** and are therefore scaffoldable
+  or importable (2,642 of them are gbif-backbone:53147; store re-seeded
+  2026-10-21, and 311 plantae, 877 chromista and 1,234 fungi families were
+  scaffolded the same day -- the last mostly as empty name-only shells, see
+  below; was 154 on 2026-10-18).
   `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first
   time that report has had anything to say, and it is the whole payoff of
   recording refusals instead of counting them.
+- **1,091 of the 1,234 fungal families scaffolded on 2026-10-21 are
+  name-only shells with no species and no ancestor chain** -- the backbone
+  carries a family-rank row (usually an older or alternate family name whose
+  species it files elsewhere) but nothing beneath it. They are real names from
+  a real source, so they are kept, but they sit directly under kingdom Fungi,
+  which is not where mycology would place them. Decide whether to keep
+  accepting empty families at the kingdom root, drop them, or require a
+  placement before scaffolding; the same question applies to the 105 plantae
+  and 6 chromista shells.
 - **`checklistbank-2008` misclassifies `Stictis radiata` as a slime mould.** The
   archive files it under Protozoa > Mycetozoa > Myxomycetes > Physarales >
   Didymiaceae, and scaffolding Didymiaceae on 2026-10-21 unlocked it as a

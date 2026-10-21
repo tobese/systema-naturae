@@ -1,6 +1,6 @@
 # Placement diffs against the GBIF backbone
 
-34,118 species, 4,047 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
+34,135 species, 4,057 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
 
 | species | our family | GBIF family | kingdom | example |
 |---:|---|---|---|---|
@@ -938,6 +938,7 @@
 | 5 | Tergipedidae | Cuthonidae | animalia | *Cuthona norvegica* |
 | 5 | Ctenomyidae | Octodontidae | animalia | *Xenodontomys ellipticus* |
 | 5 | Brachodidae | Cossidae | animalia | *Pseudocossus olsoufieffae* |
+| 5 | Incertae sedis | Heitmaniaceae | fungi | *Heitmania elaeocarpi* |
 | 5 | Aechminellidae | Aechminidae | animalia | *Cornigella parva* |
 | 5 | Antipathidae | Myriopathidae | animalia | *Myriopathes japonica* |
 | 5 | Ulmaceae | Cannabaceae | plantae | *Ampelocera edentula* |
@@ -1481,6 +1482,7 @@
 | 3 | Synaptidae | Chiridotidae | animalia | *Chirodota vetusa* |
 | 3 | Aspergillaceae | Trichocomaceae | fungi | *Aspergillus chungii* |
 | 3 | Planorbidae | Geomitridae | animalia | *Obelus despreauxii* |
+| 3 | Stomatogenaceae | Stomatogeneceae | fungi | *Stomatogene yuccae* |
 | 3 | Buxtoniidae | Productidae | animalia | *Kochiproductus plexicostatus* |
 | 3 | Dicranaceae | Rhabdoweisiaceae | plantae | *Symblepharis angustata* |
 | 3 | Athyrididae | Productidae | animalia | *Cryptospirifer omeishanensis* |
@@ -1851,6 +1853,7 @@
 | 2 | Dasycladaceae | Diploporaceae | plantae | *Albertaporella involuta* |
 | 2 | Prionodontidae | Viverridae | animalia | *Prionodon pardicolor* |
 | 2 | Kahliellidae | Oxytrichidae | chromista | *Perisincirra longicirrata* |
+| 2 | Incertae sedis | Bulgariaceae | fungi | *Holwaya mucida* |
 | 2 | Incertae sedis | Longiostiolaceae | fungi | *Crassiperidium quadrisporum* |
 | 2 | Ceratostomataceae | Stachybotryaceae | fungi | *Scopinella caulincola* |
 | 2 | Pelagonemertidae | Balaenanemertidae | animalia | *Balaenanemertes lobata* |
@@ -2235,6 +2238,7 @@
 | 1 | Pholadidae | Teredinidae | animalia | *Teredina personata* |
 | 1 | Phengodidae | Rhagophthalmidae | animalia | *Cydistus reitteri* |
 | 1 | Notommatidae | Epiphanidae | animalia | *Microcodides robustus* |
+| 1 | Rhytismataceae | Triblidiaceae | fungi | *Pseudographis pinicola* |
 | 1 | Graviidae | Primitiopsidae | animalia | *Gravia schallreuteri* |
 | 1 | Eponididae | Discorbidae | chromista | *Neoeponides bradyi* |
 | 1 | Characidae | Alestidae | animalia | *Alestopetersius hilgendorfi* |
@@ -2378,6 +2382,7 @@
 | 1 | Podolampadaceae | Lessardiaceae | chromista | *Lessardia elongata* |
 | 1 | Cephalothecaceae | Ceratocystidaceae | fungi | *Fragosphaeria purpurea* |
 | 1 | Damaeidae | Hungarobelbidae | animalia | *Tokukobelba compta* |
+| 1 | Graphidaceae | Thelotremataceae | fungi | *Enterostigma montagnaei* |
 | 1 | Rhinocricidae | Julidae | animalia | *Iulus beauvoisii* |
 | 1 | Schizaeaceae | Klukiaceae | plantae | *Ruffordia goepperti* |
 | 1 | Xeniidae | Clavulariidae | animalia | *Moolabalia nevillecolemani* |
@@ -2595,6 +2600,7 @@
 | 1 | Productellidae | Sentosiidae | animalia | *Productellana bifaria* |
 | 1 | Auriscalpiaceae | Clavariaceae | fungi | *Clavicorona taxophila* |
 | 1 | Hemispeiridae | Boveriidae | chromista | *Boveria labialis* |
+| 1 | Incertae sedis | Appendicosporaceae | fungi | *Neoamphisphaeria hyalinospora* |
 | 1 | Montezumellidae | Cheiragonidae | animalia | *Karasawaia markgrafi* |
 | 1 | Assimineidae | Pupinidae | animalia | *Realia ventricosa* |
 | 1 | Ochnaceae | Quiinaceae | plantae | *Lacunaria crenata* |
@@ -3169,6 +3175,7 @@
 | 1 | Coelostylinidae | Protoculidae | animalia | *Undularia transitoria* |
 | 1 | Sigmoilopsidae | Miliolidae | chromista | *Ammosigmoilinella eximia* |
 | 1 | Anthracosiidae | Pleuromyidae | animalia | *Myacites subcompressa* |
+| 1 | Incertae sedis | Neomelanconiellaceae | fungi | *Neomelanconiella combreti* |
 | 1 | Leptoomidae | Eupelmidae | animalia | *Neanaperiallus masneri* |
 | 1 | Fringillidae | Calcariidae | animalia | *Plectrophenax hyperboreus* |
 | 1 | Formicariidae | Conopophagidae | animalia | *Pittasoma rufopileatum* |
@@ -3454,6 +3461,7 @@
 | 1 | Cyathophyllidae | Stylophyllidae | animalia | *Cyathophyllum gracile* |
 | 1 | Ophiuridae | Hemieuryalidae | animalia | *Ophioplocus imbricatus* |
 | 1 | Calyptrosphaeraceae | Syracosphaeraceae | chromista | *Crystallolithus cyclopspilus* |
+| 1 | Herpotrichiellaceae | Racodiaceae | fungi | *Racodium vulgare* |
 | 1 | Laqueidae | Frenulinidae | animalia | *Pictothyris picta* |
 | 1 | Helminthosphaeriaceae | Mollisiaceae | fungi | *Diplococcium spicatum* |
 | 1 | Cyperaceae | Ephedraceae | plantae | *Liaoxia chenii* |
@@ -3906,6 +3914,7 @@
 | 1 | Merliniidae | Telotylenchidae | animalia | *Scutylenchus brevidens* |
 | 1 | Gonyaulacaceae | Cladopyxidaceae | chromista | *Fibradinium annetorpense* |
 | 1 | Triticellidae | Farrellidae | animalia | *Farrella repens* |
+| 1 | Incertae sedis | Myeloconidiaceae | fungi | *Amphorothecium occultum* |
 | 1 | Cerambycidae | Dermestidae | animalia | *Homodontus formonsus* |
 | 1 | Attelabidae | Belidae | animalia | *Gratshevbelus erici* |
 | 1 | Discidae | Helicodiscidae | animalia | *Speleodiscoides spirellum* |
@@ -3958,6 +3967,7 @@
 | 1 | Plantaginaceae | Euphorbiaceae | plantae | *Falconeria insignis* |
 | 1 | Tubeufiaceae | Amphisphaeriaceae | fungi | *Melioliphila melioloides* |
 | 1 | Cyaneidae | Drymonematidae | animalia | *Drymonema dalmatinum* |
+| 1 | Filobasidiaceae | Carcinomycetaceae | fungi | *Carcinomyces nordestinensis* |
 | 1 | Mathildidae | Purpurinidae | animalia | *Pseudalaria aspera* |
 | 1 | Marattiaceae | Stauropteridaceae | plantae | *Zeilleria delicatula* |
 | 1 | Hypnaceae | Myuriaceae | plantae | *Ctenidium lychnitens* |
