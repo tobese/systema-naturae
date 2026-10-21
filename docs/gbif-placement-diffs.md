@@ -1,6 +1,6 @@
 # Placement diffs against the GBIF backbone
 
-34,067 species, 4,024 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
+34,118 species, 4,047 (our family -> GBIF family) pairs. Source: `data/gbif-placement-diffs.jsonl`.
 
 | species | our family | GBIF family | kingdom | example |
 |---:|---|---|---|---|
@@ -240,6 +240,7 @@
 | 23 | Stenosemusidae | Ischnochitonidae | animalia | *Stenosemus merveae* |
 | 23 | Agyriaceae | Trapeliaceae | fungi | *Trapeliopsis steppica* |
 | 23 | Gosseletinidae | Eotomariidae | animalia | *Pleurotomaria hunica* |
+| 23 | Gymnodiniaceae | Amphidiniaceae | chromista | *Amphidinium inflatum* |
 | 23 | Dothioraceae | Saccotheciaceae | fungi | *Metasphaeria miscanthi* |
 | 23 | Methanospirillaceae | Methanoregulaceae | archaea | *Methanoregula sp003157895* |
 | 23 | Meessiidae | Tineidae | animalia | *Minicorona tricarpa* |
@@ -1119,6 +1120,7 @@
 | 4 | Plectosphaerellaceae | Hypocreaceae | fungi | *Acrostalagmus niveus* |
 | 4 | Mermithidae | Tetradonematidae | animalia | *Nanomermis tripylae* |
 | 4 | Cyphocallipodidae | Dorypetalidae | animalia | *Cyphocallipus excavatus* |
+| 4 | Variostomatidae | Asymmetrinidae | chromista | *Involvina obliqua* |
 | 4 | Schizoporellidae | Lacernidae | animalia | *Nimba terraenovae* |
 | 4 | Condylocardiidae | Carditidae | animalia | *Carditella semen* |
 | 4 | Marattiaceae | Asterothecaceae | plantae | *Psaronius helmintholithus* |
@@ -1749,6 +1751,7 @@
 | 2 | Sisoridae | Erethistidae | animalia | *Ayarnangra estuarius* |
 | 2 | Hollinidae | Tetradellidae | animalia | *Ctenobolbina ciliata* |
 | 2 | Halopterididae | Schizotrichidae | animalia | *Schizotricha frutescens* |
+| 2 | Chrysocapsaceae | Hydruraceae | chromista | *Celloniella woroniniana* |
 | 2 | Trichuridae | Trichinellidae | animalia | *Trichocephalus concolor* |
 | 2 | Acrochaetiaceae | Audouinellaceae | plantae | *Audouinella boryana* |
 | 2 | Hypsibiidae | Ramazzottiidae | animalia | *Ramazzottius rupeus* |
@@ -1966,6 +1969,7 @@
 | 2 | Gryllidae | Gryllotalpidae | animalia | *Burmagryllotalpa longa* |
 | 2 | Chromodorididae | Cadlinidae | animalia | *Cadlina excavata* |
 | 2 | Reophacidae | Hormosinidae | chromista | *Reophax delicatula* |
+| 2 | Glenodiniaceae | Hemidiniaceae | chromista | *Hemidinium nasutum* |
 | 2 | Curculionidae | Attelabidae | animalia | *Steganus barrandei* |
 | 2 | Beyrichiidae | Treposellidae | animalia | *Phlyctiscapha apleta* |
 | 2 | Montlivaltiidae | Placosmiliidae | animalia | *Peplosmilia fromenteli* |
@@ -2053,6 +2057,7 @@
 | 2 | Charadriidae | Laridae | animalia | *Pseudosterna degener* |
 | 2 | Scapaniaceae | Lophoziaceae | plantae | *Lophozia lacerata* |
 | 2 | Jungermanniaceae | Lophoziaceae | plantae | *Andrewsianthus marionensis* |
+| 2 | Chordariaceae | Dictyosiphonaceae | chromista | *Dictyosiphon sinicola* |
 | 2 | Diplopodiidae | Pseudodiadematidae | animalia | *Pseudodiadema emersoni* |
 | 2 | Plagiorchiidae | Leptophallidae | animalia | *Leptophallus nigrovenosus* |
 | 2 | Hysteriaceae | Acrogenosporaceae | fungi | *Acrogenospora carmichaeliana* |
@@ -2370,6 +2375,7 @@
 | 1 | Chelodesmidae | Julidae | animalia | *Stenonia fusca* |
 | 1 | Scenedesmaceae | Chlorellaceae | plantae | *Coronastrum ellipsoideum* |
 | 1 | Halechiniscidae | Styraconyxidae | animalia | *Raiarctus aureolatus* |
+| 1 | Podolampadaceae | Lessardiaceae | chromista | *Lessardia elongata* |
 | 1 | Cephalothecaceae | Ceratocystidaceae | fungi | *Fragosphaeria purpurea* |
 | 1 | Damaeidae | Hungarobelbidae | animalia | *Tokukobelba compta* |
 | 1 | Rhinocricidae | Julidae | animalia | *Iulus beauvoisii* |
@@ -2541,6 +2547,7 @@
 | 1 | Aporpiaceae | Auriculariaceae | fungi | *Elmerina cladophora* |
 | 1 | †Mesotitanidae | Deinotitanidae | animalia | *Deinotitan orenburgensis* |
 | 1 | Nototanaidae | Typhlotanaidae | animalia | *Typhlotanais angulatus* |
+| 1 | Thraustochytriidae | Thraustochytriaceae | chromista | *Phycophthorum isakeiti* |
 | 1 | Hoffmaneumatidae | Paradoxosomatidae | animalia | *Hoffmaneuma exiguum* |
 | 1 | Curtoseriidae | Thamnasteriidae | animalia | *Ahrdorffia chaetetoides* |
 | 1 | Melanopsidae | Zemelanopsidae | animalia | *Zemelanopsis trifasciata* |
@@ -2611,6 +2618,7 @@
 | 1 | Sphaeropleaceae | Characiaceae | plantae | *Ankyra ancora* |
 | 1 | Fissurellidae | Marginellidae | animalia | *Dentimargo makiyamai* |
 | 1 | Verneuilinidae | Pseudogaudryinidae | chromista | *Connemarella rudis* |
+| 1 | Rhabdamminidae | Rhizamminidae | chromista | *Rhizammina algaeformis* |
 | 1 | Flabellinopsidae | Flabellinidae | animalia | *Paraflabellina gabinierei* |
 | 1 | Cymbellaceae | Gomphonemataceae | chromista | *Gomphonema opimum* |
 | 1 | Brissidae | Micrasteridae | animalia | *Cyclaster jacksoni* |
@@ -3015,6 +3023,7 @@
 | 1 | Jungermanniaceae | Cephaloziellaceae | plantae | *Gottschelia schizopleura* |
 | 1 | Chernetidae | Cheliferidae | animalia | *Chelifer funafutensis* |
 | 1 | Spirofilidae | Hypotrichidiidae | chromista | *Hypotrichidium conicum* |
+| 1 | Protoperidiniaceae | Kolkwitziellaceae | chromista | *Kolkwitziella acuta* |
 | 1 | Irvingiaceae | Ixonanthaceae | plantae | *Allantospermum borneense* |
 | 1 | Malleidae | Pteriidae | animalia | *Vulsellina lediensis* |
 | 1 | Georginakingiidae | Trigonotretidae | animalia | *Sulciplica subglobosa* |
@@ -3089,6 +3098,7 @@
 | 1 | Corvidae | Pachycephalidae | animalia | *Coracornis raveni* |
 | 1 | Methanonatronarchaeaceae | Methanohalarchaeaceae | archaea | *Methanohalarchaeum thermophilum* |
 | 1 | Pertusariaceae | Megasporaceae | fungi | *Sagedia zonata* |
+| 1 | Pleurochloridaceae | Botrydiopsidaceae | chromista | *Perone dimorpha* |
 | 1 | Tineidae | Noctuidae | animalia | *Phalaena auratella* |
 | 1 | Coleophoridae | Noctuidae | animalia | *Phalaena kuehnella* |
 | 1 | Sylviidae | Panuridae | animalia | *Panurus biarmicus* |
@@ -3096,6 +3106,7 @@
 | 1 | Anomodontaceae | Brachytheciaceae | plantae | *Claopodium whippleanum* |
 | 1 | Symphyodontaceae | Brachytheciaceae | plantae | *Unclejackia longisetula* |
 | 1 | Portulacaceae | Talinaceae | plantae | *Talinum paniculatum* |
+| 1 | Rhizosoleniaceae | Radialiplicataceae | chromista | *Henseniella baltica* |
 | 1 | Xylariaceae | Clypeosphaeriaceae | fungi | *Magnostiolata mucida* |
 | 1 | Pseudoleskeaceae | Brachytheciaceae | plantae | *Pseudopleuropus morrisonensis* |
 | 1 | Vacunellidae | Sanguinolitidae | animalia | *Vacunella dawsonensis* |
@@ -3136,6 +3147,7 @@
 | 1 | Leucodontaceae | Lembophyllaceae | plantae | *Nogopterium gracile* |
 | 1 | Hypnaceae | Lembophyllaceae | plantae | *Tripterocladium leucocladulum* |
 | 1 | Eulichadidae | Dascillidae | animalia | *Mesodascilla jakobsoni* |
+| 1 | Philasteridae | Entodiscidae | chromista | *Entodiscus borealis* |
 | 1 | Anthroleucosomatidae | Neoatractosomatidae | animalia | *Paeonisoma faucium* |
 | 1 | Glareolidae | Haematopodidae | animalia | *Paractiornis perpusillus* |
 | 1 | Melanconidaceae | Phyllachoraceae | fungi | *Gibellia dothideoides* |
@@ -3174,6 +3186,7 @@
 | 1 | Selachinematidae | Richtersiidae | animalia | *Richtersia tenuis* |
 | 1 | Trochidae | Planitrochidae | animalia | *Planitrochus disculus* |
 | 1 | Steindachneriidae | Merlucciidae | animalia | *Steindachneria argentea* |
+| 1 | Peridiniaceae | Dinosphaeraceae | chromista | *Diplosalis acuta* |
 | 1 | Heleoperidae | Difflugiidae | protozoa | *Difflugia lucida* |
 | 1 | Hyalospheniidae | Difflugiidae | protozoa | *Difflugia bidens* |
 | 1 | Dacampiaceae | Celotheliaceae | fungi | *Moristroma quercinum* |
@@ -3310,6 +3323,7 @@
 | 1 | Microcystidae | Helicidae | animalia | *Helix planulata* |
 | 1 | Gastrodontidae | Helicidae | animalia | *Helix lenticula* |
 | 1 | Plagiocampidae | Enchelyidae | chromista | *Chilophrya utahensis* |
+| 1 | Epistylididae | Epistylidae | chromista | *Apisoma piscola* |
 | 1 | Bugulidae | Candidae | animalia | *Bugulopsis peachii* |
 | 1 | Dysteriidae | Euplotidae | chromista | *Euplotes monostylus* |
 | 1 | Asteriidae | Compsasteridae | animalia | *Uraster spiniger* |
@@ -3372,6 +3386,7 @@
 | 1 | Astrocoeniidae | Pamiroseriidae | animalia | *Astrocoenia martini* |
 | 1 | Chlorococcaceae | Chlorocystidaceae | plantae | *Neohalochloris marina* |
 | 1 | Cochlicopidae | Azecidae | animalia | *Hypnophila loxostoma* |
+| 1 | Trochosiphoniidae | Involutinidae | chromista | *Pragsoconulus robustus* |
 | 1 | Glyceridae | Nereididae | animalia | *Nereis teres* |
 | 1 | Holopeidae | Straparollinidae | animalia | *Raphispira martinensis* |
 | 1 | Latomeandridae | Pamiroseriidae | animalia | *Chorisastraea cassiana* |
@@ -3426,6 +3441,7 @@
 | 1 | Ellipsosmiliidae | Stylophyllidae | animalia | *Macgeopsis grandidieri* |
 | 1 | Azecidae | Ellobiidae | animalia | *Carychium menkeanum* |
 | 1 | Lumbrineridae | Oenonidae | animalia | *Arabelloneris janeirensis* |
+| 1 | Glenodiniaceae | Glenodiniopsidaceae | chromista | *Glenodiniopsis steinii* |
 | 1 | Bulimulidae | Orthalicidae | animalia | *Aposcutalus atlanticus* |
 | 1 | Suberitidae | Tethyidae | animalia | *Tethya aurantium* |
 | 1 | Lesueurillidae | Maclureadae | animalia | *Lesueurilla zonata* |
@@ -3444,6 +3460,7 @@
 | 1 | Limacinidae | Thieleidae | animalia | *Thielea helicoides* |
 | 1 | Chilodontidae | Seguenzioidea | animalia | *Vetulonia paucivaricosa* |
 | 1 | Sagartiidae | Aiptasiidae | animalia | *Paraiptasia radiata* |
+| 1 | Bakhtiariellidae | Bakhtiarellidae | chromista | *Persiacyclammina maastrichtiana* |
 | 1 | Chaetopleuridae | Callistoplacidae | animalia | *Calloplax janeirensis* |
 | 1 | Tornidae | Vitrinellidae | animalia | *Circulus cinguliferus* |
 | 1 | Ischnochitonidae | Callistoplacidae | animalia | *Callistochiton asthenes* |
@@ -3696,6 +3713,7 @@
 | 1 | Thorniidae | Qudsianematidae | animalia | *Sphaeroamphis azoricus* |
 | 1 | Dermateaceae | Pezizellaceae | fungi | *Micropeziza verrucosa* |
 | 1 | Thrakosphaeridae | Tendosphaeridae | animalia | *Thrakosphaera schawalleri* |
+| 1 | Glaucomidae | Bromeliophryidae | chromista | *Bromeliophrya brasiliensis* |
 | 1 | Zygopleuridae | Goniospiridae | animalia | *Goniospira armata* |
 | 1 | Moreidae | Tudiclidae | animalia | *Hercorhyncus tippanus* |
 | 1 | Sclerotiniaceae | Pezizellaceae | fungi | *Poculinia nothofagi* |
@@ -3751,6 +3769,7 @@
 | 1 | Pseudoziidae | Xanthidae | animalia | *Priabonocarcinus gallicus* |
 | 1 | Pilumnidae | Xanthidae | animalia | *Budapanopeus denticulatus* |
 | 1 | Ectaesthesiidae | Xanthidae | animalia | *Ectaesthesius bifrons* |
+| 1 | Ralfsiaceae | Lithodermataceae | chromista | *Pseudolithoderma roscoffense* |
 | 1 | Spathidiidae | Lagenophryidae | chromista | *Legendrea loyezae* |
 | 1 | Gyronitidae | Proptychitidae | animalia | *Gyronites dubius* |
 | 1 | Linnaeoxanthidae | Xanthidae | animalia | *Linnaeoxanthus acanthomerus* |
@@ -3830,8 +3849,10 @@
 | 1 | Pangrolaimidae | Panagrolaimidae | animalia | *Panagrolaimus subelongatus* |
 | 1 | Pseudobistonidae | Geometridae | animalia | *Pseudobiston pinratanai* |
 | 1 | Calcivertellidae | Pseudolituotubidae | chromista | *Warnantella flexuosa* |
+| 1 | Porosporidae | Dactylophoridae | chromista | *Rhopalonia geophili* |
 | 1 | Dictyopharidae | Fulgoridae | animalia | *Diacira obliquata* |
 | 1 | Ditrichaceae | Chrysoblastellaceae | plantae | *Chrysoblastella chilensis* |
+| 1 | Ochromonadaceae | Chrysosphaeraceae | chromista | *Chrysobotriella spondylomorum* |
 | 1 | Mastigiidae | Versurigidae | animalia | *Versuriga anadyomene* |
 | 1 | Thyrisomidae | Oribellidae | animalia | *Oribella borealis* |
 | 1 | Andvakiidae | Sagartiidae | animalia | *Octophellia timida* |
@@ -3911,6 +3932,7 @@
 | 1 | Incertae sedis | Jianyuniaceae | fungi | *Jianyunia sakaguchii* |
 | 1 | Cletodidae | Canthocamptidae | animalia | *Parepactophanes minuta* |
 | 1 | Mactromyidae | Edmondiidae | animalia | *Clisocolus dubius* |
+| 1 | Ataxophragmiidae | Anatoliellidae | chromista | *Anatoliella ozalpiensis* |
 | 1 | Fischerinidae | Hauerinidae | chromista | *Articulina sulcata* |
 | 1 | Cotingidae | Pipridae | animalia | *Pipra rupicola* |
 | 1 | Cyatholaimidae | Achromadoridae | animalia | *Achromadora papuana* |
@@ -3942,6 +3964,7 @@
 | 1 | Allostethidae | Labiduridae | animalia | *Gonolabidura extima* |
 | 1 | Paguridae | Parapaguridae | animalia | *Vounopagurus kaikata* |
 | 1 | Ephydridae | Empididae | animalia | *Hilara haennii* |
+| 1 | Philasteridae | Thyrophylacidae | chromista | *Plagiopyliella pacifica* |
 | 1 | Calliotropidae | Eucyclidae | animalia | *Tibatrochus incertus* |
 | 1 | Asteromonadaceae | Dunaliellaceae | plantae | *Aulacomonas hyalina* |
 | 1 | Panopeidae | Grapsidae | animalia | *Palaeograpsus inflatus* |
