@@ -253,8 +253,14 @@ def cmd_seed(_args):
     print(f"  wrote {len(rows):,} rows to {STORE}")
 
 
-def add_family(family, kingdom="", species=0, source="manual", reason="", archive=""):
-    """Record one missed family. Callable from an importer mid-run.
+def add_families(records, source="manual", reason="", archive=""):
+    """Record many missed families in one read/write of the store.
+
+    `records` is an iterable of `(family, kingdom, species)`. Importers refuse
+    thousands of families in a single run; calling `add_family` per family
+    rewrote the whole 17.8k-row store each time (GBIF backbone: 7,211 rewrites
+    of ~4 MB, tens of minutes of pure JSON encoding). This reads once, applies
+    every record, and writes once.
 
     `archive` is the literal path the importer was invoked with -- not
     derivable later from `source` (which is often a generic tag like
@@ -265,26 +271,40 @@ def add_family(family, kingdom="", species=0, source="manual", reason="", archiv
     print the exact command.
     """
     ensure_link()
-    fam = family.strip()
-    if not fam:
-        return False
     rows = read_store()
+    index = {}
     for r in rows:
-        if (r.get("family") or "").lower() == fam.lower():
+        index.setdefault((r.get("family") or "").lower(), r)
+    added = 0
+    for family, kingdom, species in records:
+        fam = (family or "").strip()
+        if not fam:
+            continue
+        r = index.get(fam.lower())
+        if r is not None:
             r["species"] = int(r.get("species") or 0) + int(species or 0)
             if not r.get("kingdom") and kingdom:
                 r["kingdom"] = kingdom
             if not r.get("archive") and archive:
                 r["archive"] = archive
-            break
-    else:
-        rows.append({"family": fam, "kingdom": kingdom or "", "source": source,
-                     "species": int(species or 0),
-                     "firstSeen": date.today().isoformat(),
-                     "reason": reason or "not in taxonomy",
-                     "archive": archive or ""})
-    write_store(rows)
-    return True
+        else:
+            r = {"family": fam, "kingdom": kingdom or "", "source": source,
+                 "species": int(species or 0),
+                 "firstSeen": date.today().isoformat(),
+                 "reason": reason or "not in taxonomy",
+                 "archive": archive or ""}
+            rows.append(r)
+            index[fam.lower()] = r
+        added += 1
+    if added:
+        write_store(rows)
+    return added
+
+
+def add_family(family, kingdom="", species=0, source="manual", reason="", archive=""):
+    """Record one missed family. Thin wrapper over `add_families`."""
+    return add_families([(family, kingdom, species)], source=source,
+                        reason=reason, archive=archive) == 1
 
 
 def cmd_add(args):

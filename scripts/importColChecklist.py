@@ -303,14 +303,11 @@ def record_misses(r: RoutedSpecies, archive, apply_: bool):
         except ImportError:
             PF = None
         if PF:
-            recorded = 0
-            for (k, fam), n in r.missed.items():
-                if not fam:
-                    continue
-                PF.add_family(fam, kingdom=k, species=n, source=f"{SOURCE}:{slug_hint(archive)}",
-                              reason="offered by source, family not in taxonomy",
-                              archive=archive)
-                recorded += 1
+            recorded = PF.add_families(
+                [(fam, k, n) for (k, fam), n in r.missed.items() if fam],
+                source=f"{SOURCE}:{slug_hint(archive)}",
+                reason="offered by source, family not in taxonomy",
+                archive=archive)
             print(f"  recorded {recorded} families in the pending store")
         else:
             print("  ! pendingFamilies.py not importable, misses NOT recorded")
