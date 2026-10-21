@@ -125,6 +125,7 @@ class RoutedSpecies:
         self.cand_count = 0
         self.held = self.refused = self.nonb = self.unresolved = 0
         self.no_family = collections.Counter()
+        self.diffs = []                               # (kingdom, id, name, our_slug, source_slug, source_family, source_id)
         self.routed = collections.Counter()
         self.routed_by_kingdom = self.routed_by_family = self.routed_unknown = 0
         self.src_kingdom = None
@@ -200,8 +201,9 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
     import glob as _glob
     ON_DISK = {}
     for k in KINDS:
-        ids = set()
+        ids = {}
         for f in _glob.glob(f"taxonomy/{k}/**/src/data/*.json", recursive=True):
+            slug = os.path.basename(f)[:-5]
             try:
                 d = json.load(open(f, encoding="utf-8"))
             except Exception:
@@ -210,7 +212,7 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
             while st:
                 nd = st.pop()
                 if nd.get("rank") == "SPECIES" and nd.get("id"):
-                    ids.add(nd["id"])
+                    ids[nd["id"]] = slug
                 st.extend(nd.get("children") or [])
         ON_DISK[k] = ids
         print(f"  {k:10s} families {len(KINDS[k][1]):>7,}   species on disk {len(ids):>9,}")
@@ -235,7 +237,8 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
         placed.add(bare.lower())
         sid = SF.node_id(SF.PREFIX["SPECIES"], bare, (t.get("authorship") or "").strip() or "")
         ch = K.chain(t, by_id)
-        fam = (ch.get("family") or "").lower().strip()
+        fam_raw = (ch.get("family") or "").strip()
+        fam = fam_raw.lower()
         k = (ch.get("kingdom") or "").strip().lower()
         if k not in KINDS:
             k = ""
@@ -252,10 +255,15 @@ def route_species(archive, kingdom_override="") -> RoutedSpecies:
         else:
             r.routed_by_kingdom += 1
         r.routed[k] += 1
-        if sid in ON_DISK[k]:
-            r.held += 1
-            continue
         fams_k = KINDS[k][1]
+        ours = ON_DISK[k].get(sid)
+        if ours is not None:
+            r.held += 1
+            theirs = (fams_k.get(fam) or (None,))[0] if fam else None
+            if theirs and ours != theirs:
+                r.diffs.append((k, sid, bare, ours, theirs, fam_raw,
+                                (t.get("id") or "")))
+            continue
         if fam not in fams_k:
             r.no_family[(k, fam or "(no family)")] += 1
             r.missed[(k, fam)] += 1
@@ -317,6 +325,44 @@ def record_misses(r: RoutedSpecies, archive, apply_: bool):
               f"in the pending store)")
 
 
+def write_placement_diffs(r: RoutedSpecies, path, archive):
+    """Write the species this source places in a different family than we do.
+
+    A species already in the tree is skipped by the importer, so an archive's
+    classification is normally never compared with ours: the 2026-10 GBIF
+    backbone run reported 1,815,344 held species and discarded all of their
+    placements unread. That hides real disagreements (a specialist checklist
+    puts a species in family A, GBIF in family B) behind an aggregate count.
+
+    The log is per species so the disagreements can be reviewed later; it does
+    not change the tree. Not written unless `--diff-log PATH` is passed.
+    """
+    import datetime as _dt
+    names = {}
+    for k, (_tax, fams) in r.kinds.items():
+        names[k] = {slug: (node.get("name") or name)
+                    for name, (slug, node) in fams.items()}
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    source = f"{SOURCE}:{slug_hint(archive)}"
+    at = _dt.datetime.now().isoformat(timespec="seconds")
+    with open(path, "w", encoding="utf-8") as fh:
+        for k, sid, bare, ours, theirs, fam_raw, fid in r.diffs:
+            fh.write(json.dumps({
+                "at": at,
+                "source": source,
+                "archive": os.path.basename(archive),
+                "kingdom": k,
+                "speciesId": sid,
+                "name": bare,
+                "ourFamily": ours,
+                "ourFamilyName": names.get(k, {}).get(ours, ""),
+                "sourceFamily": fam_raw,
+                "sourceFamilySlug": theirs,
+                "sourceFamilyId": fid,
+            }, ensure_ascii=False) + "\n")
+    print(f"  placement diffs vs our tree: {len(r.diffs):,} -> {path}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("archive")
@@ -331,11 +377,17 @@ def main() -> int:
                           "constant written for a different, narrower bug, "
                           "reused here with no actual justification). "
                           "Pass --kingdom plantae when you know the source.")
+    ap.add_argument("--diff-log", default="",
+                    help="write one JSON line per species already held under a "
+                         "different family than this archive classifies it in "
+                         "(read-only; works on dry runs too)")
     args = ap.parse_args()
 
     r = route_species(args.archive, kingdom_override=args.kingdom)
     meta = r.meta
     record_misses(r, args.archive, args.apply)
+    if args.diff_log:
+        write_placement_diffs(r, args.diff_log, args.archive)
     staged = r.staged
     KINDS = r.kinds
 

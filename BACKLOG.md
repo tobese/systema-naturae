@@ -60,11 +60,22 @@
   thing that has ever produced sidecars, which is where Macie's 13,991 came from.
   Fix (a) is the load-bearing one and is small: hoist the distribution block
   above the early return, or factor it into a function both paths call.
-- **154 pending families are now in the tree** and are therefore scaffoldable or
-  importable, worth 108,320 species of scope.
+- **626 pending families are now in the tree** and are therefore scaffoldable or
+  importable (re-seeded 2026-10-21; was 154 on 2026-10-18).
   `python3 scripts/pendingFamilies.py report --scaffoldable`. This is the first
   time that report has had anything to say, and it is the whole payoff of
   recording refusals instead of counting them.
+- **Review the GBIF placement diffs.** 34,044 species sit in a different family
+  than the GBIF backbone puts them in (4,008 family pairs), logged per species by
+  `scripts/importColChecklist.py --diff-log` and grouped in
+  [`docs/gbif-placement-diffs.md`](docs/gbif-placement-diffs.md). Not a correctness
+  claim either way: our placements mostly come from specialist checklists (COL,
+  WoRMS) that split families differently, so each pair is a review question, not
+  an error to overwrite. Start with the big ones — Polypodiaceae→Dryopteridaceae
+  (1,335), Erebidae→Noctuidae (939), Strabomantidae→Craugastoridae (701) — and
+  check whether any is an artefact of our import rather than a source dispute.
+  Regenerate with `python3 scripts/placementDiffsReport.py --markdown
+  docs/gbif-placement-diffs.md` after re-running the backbone import.
 - **Rebuild the name index** — 2,989 family files postdate it after the WFO and
   ITIS imports. `make name-index` (hours; it POSTs every name to GBIF's parser).
 - **Sync the name-index cache across Macie ↔ q-bert before any script that needs it runs.**

@@ -22,6 +22,15 @@ Species are NOT imported here. The scaffold only adds a FAMILY node with
     python3 scripts/scaffoldFamilies.py --kingdom archaea --apply
     python3 scripts/importColChecklist.py <backbone.zip> --apply
 
+The species count is read from the backbone in the same streaming pass that
+finds the family rows, not from the pending store: the store is seeded by hand
+(`pendingFamilies.py seed`) and goes stale as imports reshape the tree. The
+archaea run on 2026-10-21 was scaffolded from 16-day-old rows claiming 17-63
+species for families the current backbone gives 0-1, so re-seed the store when
+the worklist itself starts looking wrong:
+
+    python3 scripts/pendingFamilies.py seed
+
 Bacteria and viruses are deliberately on hold (see CLAUDE.md), so a run that
 would touch either kingdom exits non-zero instead of scaffolding it.
 """
@@ -113,17 +122,24 @@ def pending_rows(kingdom: str) -> dict[str, dict]:
     return out
 
 
-def backbone_chains(wanted: set[str]) -> dict[str, dict]:
-    """Stream Taxon.tsv once and return family-name-lower -> chain.
+def backbone_chains(wanted: set[str]) -> tuple[dict[str, dict], dict[str, int]]:
+    """Stream Taxon.tsv once and return family-name-lower -> chain, plus the
+    number of accepted species/subspecies the backbone assigns to each family.
 
-    The DwCA carries the whole chain on the taxon row itself, so no parent-id
-    walk is needed. When a family has several rows, an accepted one with a
-    populated chain wins.
+    The species count is counted here rather than taken from the pending store
+    because that store is seeded by hand (`pendingFamilies.py seed`): the
+    archaea rows used on 2026-10-21 were 16 days old and claimed 17-63 species
+    for families the current backbone gives 0-1. A family was scaffolded on a
+    number nobody had re-checked since the COL import reshaped the tree.
+
+    When a family has several rows, an accepted one with a populated chain
+    wins.
     """
     if not os.path.exists(BACKBONE):
         sys.exit(f"FATAL: backbone archive not found at {BACKBONE}")
     csv.field_size_limit(10**9)
     out: dict[str, dict] = {}
+    counts: dict[str, int] = {}
     z = zipfile.ZipFile(BACKBONE)
     try:
         fh = io.TextIOWrapper(z.open("Taxon.tsv"), encoding="utf-8")
@@ -132,7 +148,13 @@ def backbone_chains(wanted: set[str]) -> dict[str, dict]:
             fam = (row.get("family") or "").strip()
             if not fam or fam.lower() not in wanted:
                 continue
-            if (row.get("taxonRank") or "").strip().lower() != "family":
+            rank = (row.get("taxonRank") or "").strip().lower()
+            status = (row.get("taxonomicStatus") or "").strip().lower()
+            if rank in ("species", "subspecies") and status in (
+                    "accepted", "provisionally accepted"):
+                counts[fam.lower()] = counts.get(fam.lower(), 0) + 1
+                continue
+            if rank != "family":
                 continue
             rec = {
                 "family": fam,
@@ -140,7 +162,7 @@ def backbone_chains(wanted: set[str]) -> dict[str, dict]:
                 "phylum": (row.get("phylum") or "").strip(),
                 "class": (row.get("class") or "").strip(),
                 "order": (row.get("order") or "").strip(),
-                "status": (row.get("taxonomicStatus") or "").strip().lower(),
+                "status": status,
                 "id": (row.get("taxonID") or "").strip(),
             }
             key = fam.lower()
@@ -153,7 +175,7 @@ def backbone_chains(wanted: set[str]) -> dict[str, dict]:
                 out[key] = rec
     finally:
         z.close()
-    return out
+    return out, counts
 
 
 def ensure_path(root: dict, chain: dict) -> tuple[dict, list[str]]:
@@ -220,7 +242,7 @@ def main() -> int:
         print("  nothing to scaffold")
         return 0
 
-    chains = backbone_chains(wanted)
+    chains, spp = backbone_chains(wanted)
     missing_chain = sorted(wanted - set(chains))
     if missing_chain:
         print(f"  ! {len(missing_chain):,} pending families have no family-rank "
@@ -244,7 +266,7 @@ def main() -> int:
             "name": rec["family"],
             "rank": "FAMILY",
             "appSlug": app_slug,
-            "speciesCount": int(pend[key].get("species") or 0),
+            "speciesCount": spp.get(key, 0),
             "children": [],
         })
         chain_names = [r for r in (rec.get("phylum"), rec.get("class"),
@@ -252,8 +274,11 @@ def main() -> int:
         rel = write_family_file(kingdom, chain_names, rec["family"], fid,
                                 app_slug, dry_run=not args.apply)
         added.append((rec["family"], " > ".join(chain_names) or "(no chain)",
-                      int(pend[key].get("species") or 0), rel,
-                      created))
+                      spp.get(key, 0), rel, created))
+        stale = int(pend[key].get("species") or 0)
+        if stale and stale != spp.get(key, 0):
+            print(f"  ! {rec['family']}: pending store says {stale:,} species, "
+                  f"current backbone says {spp.get(key, 0):,} -- using the backbone")
 
     for fam, chain, n, rel, created in added:
         print(f"  + {fam:28s} {n:>7,} spp  {chain}")
