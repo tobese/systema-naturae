@@ -3,7 +3,7 @@
   "name": "Paleolimulidae",
   "rank": "FAMILY",
   "appSlug": "paleolimulidae",
-  "speciesCount": 8,
+  "speciesCount": 10,
   "children": [
     {
       "id": "GENUS_PANDURALIMULUS",
@@ -63,7 +63,8 @@
           "lineage": "Xaniopyramis",
           "authorship": "Siveter & Selden, 1987",
           "sourceIds": {
-            "gbif-backbone": "11205371"
+            "gbif-backbone": "11205371",
+            "checklistbank-1174": "txn:429853"
           },
           "children": []
         }
@@ -120,7 +121,8 @@
           "lineage": "Paleolimulus",
           "authorship": "Bicknell, Naugolnykh & Mckenzie, 2022",
           "sourceIds": {
-            "gbif-backbone": "12225454"
+            "gbif-backbone": "12225454",
+            "checklistbank-1174": "txn:462270"
           },
           "children": []
         },
@@ -136,6 +138,19 @@
             "gbif-backbone": "11121082"
           },
           "children": []
+        },
+        {
+          "id": "SP_PALEOLIMULUS_SIGNATUS_BEECHER_1904",
+          "name": "Paleolimulus signatus",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Paleolimulus",
+          "authorship": "(Beecher 1904)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:145432"
+          },
+          "uuid": "f9e71932-4c51-4745-b5e5-0860996b290c"
         }
       ],
       "sourcedFrom": "checklistbank",
@@ -162,6 +177,28 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "paleolimulidae"
+    },
+    {
+      "id": "GENUS_NORILIMULUS",
+      "name": "Norilimulus",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "paleolimulidae",
+      "children": [
+        {
+          "id": "SP_NORILIMULUS_WOODAE_LERNER_ET_AL_2016",
+          "name": "Norilimulus woodae",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Norilimulus",
+          "authorship": "(Lerner et al. 2016)",
+          "sourceIds": {
+            "checklistbank-1174": "txn:429849"
+          },
+          "uuid": "88873981-859d-4063-a895-b37f9d890c83"
+        }
+      ]
     }
   ],
   "genusCount": 6
