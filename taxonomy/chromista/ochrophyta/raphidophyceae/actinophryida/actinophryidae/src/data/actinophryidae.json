@@ -3,7 +3,7 @@
   "name": "Actinophryidae",
   "rank": "FAMILY",
   "appSlug": "actinophryidae",
-  "speciesCount": 2,
+  "speciesCount": 4,
   "children": [
     {
       "id": "GENUS_ACTINOPHRYS",
@@ -33,7 +33,8 @@
           "lineage": "Actinophrys",
           "authorship": "Ehrenberg",
           "sourceIds": {
-            "gbif-backbone": "3210524"
+            "gbif-backbone": "3210524",
+            "checklistbank-139831": "997205"
           },
           "children": [],
           "uuid": "f75c6cf6-a602-58a-b45-abe0f91d35a635"
@@ -41,6 +42,39 @@
       ],
       "sourcedFrom": "checklistbank",
       "lineage": "actinophryidae"
+    },
+    {
+      "id": "GENUS_ACTINOSPHAERIUM",
+      "name": "Actinosphaerium",
+      "rank": "GENUS",
+      "sourcedFrom": "checklistbank",
+      "lineage": "actinophryidae",
+      "children": [
+        {
+          "id": "SP_ACTINOSPHAERIUM_EICHHORNII",
+          "name": "Actinosphaerium eichhornii",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinosphaerium",
+          "sourceIds": {
+            "checklistbank-139831": "1098180"
+          },
+          "uuid": "59df564b-6437-4949-a2fc-0b39561f04ef"
+        },
+        {
+          "id": "SP_ACTINOSPHAERIUM_NUCLEOFILUM",
+          "name": "Actinosphaerium nucleofilum",
+          "rank": "SPECIES",
+          "subspeciesCount": 0,
+          "sourcedFrom": "checklistbank",
+          "lineage": "Actinosphaerium",
+          "sourceIds": {
+            "checklistbank-139831": "1349376"
+          },
+          "uuid": "a347eaea-5540-4b51-9ea8-7e8283d52e9c"
+        }
+      ]
     }
   ],
   "genusCount": 1
